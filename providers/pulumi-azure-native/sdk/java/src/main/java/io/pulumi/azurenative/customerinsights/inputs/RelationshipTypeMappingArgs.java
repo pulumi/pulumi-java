@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipTypeFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
     @Import(name="fieldMappings", required=true)
       private final Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
 
-    public Output<List<RelationshipTypeFieldMappingArgs>> getFieldMappings() {
+    public Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings;
     }
 
@@ -34,7 +35,7 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
     }
 
     private RelationshipTypeMappingArgs() {
-        this.fieldMappings = Output.empty();
+        this.fieldMappings = Codegen.empty();
     }
 
     public static Builder builder() {

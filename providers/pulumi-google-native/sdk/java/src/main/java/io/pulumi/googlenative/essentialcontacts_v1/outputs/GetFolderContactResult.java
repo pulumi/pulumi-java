@@ -61,42 +61,42 @@ public final class GetFolderContactResult {
      * The email address to send notifications to. This does not need to be a Google account.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
      * 
     */
-    public String getLanguageTag() {
+    public String languageTag() {
         return this.languageTag;
     }
     /**
      * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The categories of notifications that the contact will receive communications for.
      * 
     */
-    public List<String> getNotificationCategorySubscriptions() {
+    public List<String> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
     /**
      * The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
      * 
     */
-    public String getValidateTime() {
+    public String validateTime() {
         return this.validateTime;
     }
     /**
      * The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
      * 
     */
-    public String getValidationState() {
+    public String validationState() {
         return this.validationState;
     }
 

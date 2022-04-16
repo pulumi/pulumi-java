@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1alpha.inputs.CertificateRawDataArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -29,8 +30,8 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="certificateRawData")
       private final @Nullable Output<CertificateRawDataArgs> certificateRawData;
 
-    public Output<CertificateRawDataArgs> getCertificateRawData() {
-        return this.certificateRawData == null ? Output.empty() : this.certificateRawData;
+    public Output<CertificateRawDataArgs> certificateRawData() {
+        return this.certificateRawData == null ? Codegen.empty() : this.certificateRawData;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     public AuthorizedCertificateArgs(
@@ -54,9 +55,9 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     }
 
     private AuthorizedCertificateArgs() {
-        this.appId = Output.empty();
-        this.certificateRawData = Output.empty();
-        this.displayName = Output.empty();
+        this.appId = Codegen.empty();
+        this.certificateRawData = Codegen.empty();
+        this.displayName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificateRawData(@Nullable CertificateRawDataArgs certificateRawData) {
-            this.certificateRawData = Output.ofNullable(certificateRawData);
+            this.certificateRawData = Codegen.ofNullable(certificateRawData);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -104,7 +105,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }        public AuthorizedCertificateArgs build() {
             return new AuthorizedCertificateArgs(appId, certificateRawData, displayName);

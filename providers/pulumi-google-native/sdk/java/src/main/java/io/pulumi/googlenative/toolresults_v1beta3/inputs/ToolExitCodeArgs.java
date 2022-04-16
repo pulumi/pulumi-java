@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+    public Output<Integer> number() {
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     public ToolExitCodeArgs(@Nullable Output<Integer> number) {
@@ -34,7 +35,7 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ToolExitCodeArgs() {
-        this.number = Output.empty();
+        this.number = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder number(@Nullable Integer number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }        public ToolExitCodeArgs build() {
             return new ToolExitCodeArgs(number);

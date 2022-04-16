@@ -19,7 +19,7 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
     @Import(name="globalReachConnectionName", required=true)
       private final String globalReachConnectionName;
 
-    public String getGlobalReachConnectionName() {
+    public String globalReachConnectionName() {
         return this.globalReachConnectionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,7 +41,7 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

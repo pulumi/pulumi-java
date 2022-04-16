@@ -28,7 +28,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
     @Import(name="containerNetworkInterfaces")
       private final @Nullable List<SubResourceResponse> containerNetworkInterfaces;
 
-    public List<SubResourceResponse> getContainerNetworkInterfaces() {
+    public List<SubResourceResponse> containerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? List.of() : this.containerNetworkInterfaces;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -61,7 +61,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
     @Import(name="ipConfigurations")
       private final @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
 
-    public List<IPConfigurationProfileResponse> getIpConfigurations() {
+    public List<IPConfigurationProfileResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
@@ -72,7 +72,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -83,7 +83,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -94,7 +94,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

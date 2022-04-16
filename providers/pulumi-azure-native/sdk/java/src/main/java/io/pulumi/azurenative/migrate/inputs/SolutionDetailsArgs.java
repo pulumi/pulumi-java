@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="assessmentCount")
       private final @Nullable Output<Integer> assessmentCount;
 
-    public Output<Integer> getAssessmentCount() {
-        return this.assessmentCount == null ? Output.empty() : this.assessmentCount;
+    public Output<Integer> assessmentCount() {
+        return this.assessmentCount == null ? Codegen.empty() : this.assessmentCount;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="extendedDetails")
       private final @Nullable Output<Map<String,String>> extendedDetails;
 
-    public Output<Map<String,String>> getExtendedDetails() {
-        return this.extendedDetails == null ? Output.empty() : this.extendedDetails;
+    public Output<Map<String,String>> extendedDetails() {
+        return this.extendedDetails == null ? Codegen.empty() : this.extendedDetails;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="groupCount")
       private final @Nullable Output<Integer> groupCount;
 
-    public Output<Integer> getGroupCount() {
-        return this.groupCount == null ? Output.empty() : this.groupCount;
+    public Output<Integer> groupCount() {
+        return this.groupCount == null ? Codegen.empty() : this.groupCount;
     }
 
     public SolutionDetailsArgs(
@@ -63,9 +64,9 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SolutionDetailsArgs() {
-        this.assessmentCount = Output.empty();
-        this.extendedDetails = Output.empty();
-        this.groupCount = Output.empty();
+        this.assessmentCount = Codegen.empty();
+        this.extendedDetails = Codegen.empty();
+        this.groupCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder assessmentCount(@Nullable Integer assessmentCount) {
-            this.assessmentCount = Output.ofNullable(assessmentCount);
+            this.assessmentCount = Codegen.ofNullable(assessmentCount);
             return this;
         }
         public Builder extendedDetails(@Nullable Output<Map<String,String>> extendedDetails) {
@@ -105,7 +106,7 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
-            this.extendedDetails = Output.ofNullable(extendedDetails);
+            this.extendedDetails = Codegen.ofNullable(extendedDetails);
             return this;
         }
         public Builder groupCount(@Nullable Output<Integer> groupCount) {
@@ -113,7 +114,7 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder groupCount(@Nullable Integer groupCount) {
-            this.groupCount = Output.ofNullable(groupCount);
+            this.groupCount = Codegen.ofNullable(groupCount);
             return this;
         }        public SolutionDetailsArgs build() {
             return new SolutionDetailsArgs(assessmentCount, extendedDetails, groupCount);

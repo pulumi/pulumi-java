@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.enums.TextFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<TextFormat> format;
 
-    public Output<TextFormat> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<TextFormat> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     public TextArgs(
@@ -49,8 +50,8 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TextArgs() {
-        this.content = Output.empty();
-        this.format = Output.empty();
+        this.content = Codegen.empty();
+        this.format = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder format(@Nullable Output<TextFormat> format) {
@@ -88,7 +89,7 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable TextFormat format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }        public TextArgs build() {
             return new TextArgs(content, format);

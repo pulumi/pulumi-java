@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="bucketName", required=true)
       private final Output<Object> bucketName;
 
-    public Output<Object> getBucketName() {
+    public Output<Object> bucketName() {
         return this.bucketName;
     }
 
@@ -36,7 +37,7 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="s3LinkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getS3LinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> s3LinkedServiceName() {
         return this.s3LinkedServiceName;
     }
 
@@ -48,8 +49,8 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private RedshiftUnloadSettingsArgs() {
-        this.bucketName = Output.empty();
-        this.s3LinkedServiceName = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.s3LinkedServiceName = Codegen.empty();
     }
 
     public static Builder builder() {

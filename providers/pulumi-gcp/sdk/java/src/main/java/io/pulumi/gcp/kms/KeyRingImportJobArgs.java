@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="importJobId", required=true)
       private final Output<String> importJobId;
 
-    public Output<String> getImportJobId() {
+    public Output<String> importJobId() {
         return this.importJobId;
     }
 
@@ -32,7 +33,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="importMethod", required=true)
       private final Output<String> importMethod;
 
-    public Output<String> getImportMethod() {
+    public Output<String> importMethod() {
         return this.importMethod;
     }
 
@@ -44,7 +45,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="keyRing", required=true)
       private final Output<String> keyRing;
 
-    public Output<String> getKeyRing() {
+    public Output<String> keyRing() {
         return this.keyRing;
     }
 
@@ -57,7 +58,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="protectionLevel", required=true)
       private final Output<String> protectionLevel;
 
-    public Output<String> getProtectionLevel() {
+    public Output<String> protectionLevel() {
         return this.protectionLevel;
     }
 
@@ -73,10 +74,10 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private KeyRingImportJobArgs() {
-        this.importJobId = Output.empty();
-        this.importMethod = Output.empty();
-        this.keyRing = Output.empty();
-        this.protectionLevel = Output.empty();
+        this.importJobId = Codegen.empty();
+        this.importMethod = Codegen.empty();
+        this.keyRing = Codegen.empty();
+        this.protectionLevel = Codegen.empty();
     }
 
     public static Builder builder() {

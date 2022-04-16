@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
     @Import(name="appYamlPath", required=true)
       private final Output<String> appYamlPath;
 
-    public Output<String> getAppYamlPath() {
+    public Output<String> appYamlPath() {
         return this.appYamlPath;
     }
 
@@ -33,8 +34,8 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
     @Import(name="cloudBuildTimeout")
       private final @Nullable Output<String> cloudBuildTimeout;
 
-    public Output<String> getCloudBuildTimeout() {
-        return this.cloudBuildTimeout == null ? Output.empty() : this.cloudBuildTimeout;
+    public Output<String> cloudBuildTimeout() {
+        return this.cloudBuildTimeout == null ? Codegen.empty() : this.cloudBuildTimeout;
     }
 
     public FlexibleAppVersionDeploymentCloudBuildOptionsArgs(
@@ -45,8 +46,8 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
     }
 
     private FlexibleAppVersionDeploymentCloudBuildOptionsArgs() {
-        this.appYamlPath = Output.empty();
-        this.cloudBuildTimeout = Output.empty();
+        this.appYamlPath = Codegen.empty();
+        this.cloudBuildTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
             return this;
         }
         public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
-            this.cloudBuildTimeout = Output.ofNullable(cloudBuildTimeout);
+            this.cloudBuildTimeout = Codegen.ofNullable(cloudBuildTimeout);
             return this;
         }        public FlexibleAppVersionDeploymentCloudBuildOptionsArgs build() {
             return new FlexibleAppVersionDeploymentCloudBuildOptionsArgs(appYamlPath, cloudBuildTimeout);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<List<String>> value;
 
-    public Output<List<String>> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<List<String>> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TxtRecordArgs(@Nullable Output<List<String>> value) {
@@ -35,7 +36,7 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TxtRecordArgs() {
-        this.value = Output.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable List<String> value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder value(String... value) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.spanner_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.InstanceArgs;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the instance's configuration. Values are of the form `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
      * 
      */
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config;
     }
     /**
@@ -44,7 +45,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -58,7 +59,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer's organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `a-z{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `[a-z0-9_-]{0,63}`. * No more than 64 labels can be associated with a given resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn't rely upon specific characters being disallowed. For example, representing labels as the string: name + "_" + value would prove problematic if we were to allow "_" in a future release.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -72,7 +73,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the instance, which cannot be changed after the instance is created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the name must be between 2 and 64 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The number of nodes allocated to this instance. At most one of either node_count or processing_units should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
      * 
      */
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -100,7 +101,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The number of processing units allocated to this instance. At most one of processing_units or node_count should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
      * 
      */
-    public Output<Integer> getProcessingUnits() {
+    public Output<Integer> processingUnits() {
         return this.processingUnits;
     }
     /**
@@ -114,7 +115,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The current instance state. For CreateInstance, the state must be either omitted or set to `CREATING`. For UpdateInstance, the state must be either omitted or set to `READY`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -140,7 +141,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:spanner/v1:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:spanner/v1:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

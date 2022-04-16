@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
-        return this.targetArn == null ? Output.empty() : this.targetArn;
+    public Output<String> targetArn() {
+        return this.targetArn == null ? Codegen.empty() : this.targetArn;
     }
 
     public LogDestinationState(
@@ -70,10 +71,10 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     }
 
     private LogDestinationState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.targetArn = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -115,7 +116,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -123,7 +124,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder targetArn(@Nullable Output<String> targetArn) {
@@ -131,7 +132,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Output.ofNullable(targetArn);
+            this.targetArn = Codegen.ofNullable(targetArn);
             return this;
         }        public LogDestinationState build() {
             return new LogDestinationState(arn, name, roleArn, targetArn);

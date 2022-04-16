@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
     @Import(name="onlyExcludeIfSingleVolume")
       private final @Nullable Output<String> onlyExcludeIfSingleVolume;
 
-    public Output<String> getOnlyExcludeIfSingleVolume() {
-        return this.onlyExcludeIfSingleVolume == null ? Output.empty() : this.onlyExcludeIfSingleVolume;
+    public Output<String> onlyExcludeIfSingleVolume() {
+        return this.onlyExcludeIfSingleVolume == null ? Codegen.empty() : this.onlyExcludeIfSingleVolume;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
     @Import(name="volumeLabel")
       private final @Nullable Output<String> volumeLabel;
 
-    public Output<String> getVolumeLabel() {
-        return this.volumeLabel == null ? Output.empty() : this.volumeLabel;
+    public Output<String> volumeLabel() {
+        return this.volumeLabel == null ? Codegen.empty() : this.volumeLabel;
     }
 
     public InMageVolumeExclusionOptionsArgs(
@@ -48,8 +49,8 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
     }
 
     private InMageVolumeExclusionOptionsArgs() {
-        this.onlyExcludeIfSingleVolume = Output.empty();
-        this.volumeLabel = Output.empty();
+        this.onlyExcludeIfSingleVolume = Codegen.empty();
+        this.volumeLabel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder onlyExcludeIfSingleVolume(@Nullable String onlyExcludeIfSingleVolume) {
-            this.onlyExcludeIfSingleVolume = Output.ofNullable(onlyExcludeIfSingleVolume);
+            this.onlyExcludeIfSingleVolume = Codegen.ofNullable(onlyExcludeIfSingleVolume);
             return this;
         }
         public Builder volumeLabel(@Nullable Output<String> volumeLabel) {
@@ -87,7 +88,7 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder volumeLabel(@Nullable String volumeLabel) {
-            this.volumeLabel = Output.ofNullable(volumeLabel);
+            this.volumeLabel = Codegen.ofNullable(volumeLabel);
             return this;
         }        public InMageVolumeExclusionOptionsArgs build() {
             return new InMageVolumeExclusionOptionsArgs(onlyExcludeIfSingleVolume, volumeLabel);

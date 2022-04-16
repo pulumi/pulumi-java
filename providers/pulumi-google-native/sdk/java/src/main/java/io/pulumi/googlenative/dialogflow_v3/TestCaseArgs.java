@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TestCaseResultArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TestConfigArgs;
@@ -21,7 +22,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -32,7 +33,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -43,15 +44,15 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastTestResult")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
 
-    public Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> getLastTestResult() {
-        return this.lastTestResult == null ? Output.empty() : this.lastTestResult;
+    public Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult() {
+        return this.lastTestResult == null ? Codegen.empty() : this.lastTestResult;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,15 +73,15 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+    public Output<String> notes() {
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testCaseConversationTurns")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
 
-    public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> getTestCaseConversationTurns() {
-        return this.testCaseConversationTurns == null ? Output.empty() : this.testCaseConversationTurns;
+    public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns() {
+        return this.testCaseConversationTurns == null ? Codegen.empty() : this.testCaseConversationTurns;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testConfig")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
 
-    public Output<GoogleCloudDialogflowCxV3TestConfigArgs> getTestConfig() {
-        return this.testConfig == null ? Output.empty() : this.testConfig;
+    public Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig() {
+        return this.testConfig == null ? Codegen.empty() : this.testConfig;
     }
 
     public TestCaseArgs(
@@ -140,16 +141,16 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestCaseArgs() {
-        this.agentId = Output.empty();
-        this.displayName = Output.empty();
-        this.lastTestResult = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.notes = Output.empty();
-        this.project = Output.empty();
-        this.tags = Output.empty();
-        this.testCaseConversationTurns = Output.empty();
-        this.testConfig = Output.empty();
+        this.agentId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.lastTestResult = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.testCaseConversationTurns = Codegen.empty();
+        this.testConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastTestResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultArgs lastTestResult) {
-            this.lastTestResult = Output.ofNullable(lastTestResult);
+            this.lastTestResult = Codegen.ofNullable(lastTestResult);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -219,7 +220,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -227,7 +228,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notes(@Nullable Output<String> notes) {
@@ -235,7 +236,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -243,7 +244,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -251,7 +252,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -262,7 +263,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testCaseConversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> testCaseConversationTurns) {
-            this.testCaseConversationTurns = Output.ofNullable(testCaseConversationTurns);
+            this.testCaseConversationTurns = Codegen.ofNullable(testCaseConversationTurns);
             return this;
         }
         public Builder testCaseConversationTurns(GoogleCloudDialogflowCxV3ConversationTurnArgs... testCaseConversationTurns) {
@@ -273,7 +274,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testConfig(@Nullable GoogleCloudDialogflowCxV3TestConfigArgs testConfig) {
-            this.testConfig = Output.ofNullable(testConfig);
+            this.testConfig = Codegen.ofNullable(testConfig);
             return this;
         }        public TestCaseArgs build() {
             return new TestCaseArgs(agentId, displayName, lastTestResult, location, name, notes, project, tags, testCaseConversationTurns, testConfig);

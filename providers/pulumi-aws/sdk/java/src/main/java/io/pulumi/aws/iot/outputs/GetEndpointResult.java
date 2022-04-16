@@ -47,17 +47,17 @@ public final class GetEndpointResult {
      * * `iot:Jobs`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
      * 
     */
-    public String getEndpointAddress() {
+    public String endpointAddress() {
         return this.endpointAddress;
     }
-    public Optional<String> getEndpointType() {
+    public Optional<String> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

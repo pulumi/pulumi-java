@@ -5,6 +5,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endInclusive")
       private final @Nullable Output<Integer> endInclusive;
 
-    public Output<Integer> getEndInclusive() {
-        return this.endInclusive == null ? Output.empty() : this.endInclusive;
+    public Output<Integer> endInclusive() {
+        return this.endInclusive == null ? Codegen.empty() : this.endInclusive;
     }
 
     @Import(name="startInclusive")
       private final @Nullable Output<Integer> startInclusive;
 
-    public Output<Integer> getStartInclusive() {
-        return this.startInclusive == null ? Output.empty() : this.startInclusive;
+    public Output<Integer> startInclusive() {
+        return this.startInclusive == null ? Codegen.empty() : this.startInclusive;
     }
 
     public FilterDateFilterArgs(
@@ -36,8 +37,8 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FilterDateFilterArgs() {
-        this.endInclusive = Output.empty();
-        this.startInclusive = Output.empty();
+        this.endInclusive = Codegen.empty();
+        this.startInclusive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = Output.ofNullable(endInclusive);
+            this.endInclusive = Codegen.ofNullable(endInclusive);
             return this;
         }
         public Builder startInclusive(@Nullable Output<Integer> startInclusive) {
@@ -75,7 +76,7 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startInclusive(@Nullable Integer startInclusive) {
-            this.startInclusive = Output.ofNullable(startInclusive);
+            this.startInclusive = Codegen.ofNullable(startInclusive);
             return this;
         }        public FilterDateFilterArgs build() {
             return new FilterDateFilterArgs(endInclusive, startInclusive);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreColumnArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     @Import(name="columns")
       private final @Nullable Output<List<DatastoreColumnArgs>> columns;
 
-    public Output<List<DatastoreColumnArgs>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+    public Output<List<DatastoreColumnArgs>> columns() {
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     public DatastoreSchemaDefinitionArgs(@Nullable Output<List<DatastoreColumnArgs>> columns) {
@@ -27,7 +28,7 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     }
 
     private DatastoreSchemaDefinitionArgs() {
-        this.columns = Output.empty();
+        this.columns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder columns(@Nullable List<DatastoreColumnArgs> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(DatastoreColumnArgs... columns) {

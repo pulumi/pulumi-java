@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +19,28 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="errorHandlingConfig")
       private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
-    public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Output.empty() : this.errorHandlingConfig;
+    public Output<FlowErrorHandlingConfigArgs> errorHandlingConfig() {
+        return this.errorHandlingConfig == null ? Codegen.empty() : this.errorHandlingConfig;
     }
 
     @Import(name="intermediateBucketName", required=true)
       private final Output<String> intermediateBucketName;
 
-    public Output<String> getIntermediateBucketName() {
+    public Output<String> intermediateBucketName() {
         return this.intermediateBucketName;
     }
 
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 
@@ -55,10 +56,10 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
     }
 
     private FlowRedshiftDestinationPropertiesArgs() {
-        this.bucketPrefix = Output.empty();
-        this.errorHandlingConfig = Output.empty();
-        this.intermediateBucketName = Output.empty();
-        this.object = Output.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.errorHandlingConfig = Codegen.empty();
+        this.intermediateBucketName = Codegen.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder errorHandlingConfig(@Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
@@ -100,7 +101,7 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
-            this.errorHandlingConfig = Output.ofNullable(errorHandlingConfig);
+            this.errorHandlingConfig = Codegen.ofNullable(errorHandlingConfig);
             return this;
         }
         public Builder intermediateBucketName(Output<String> intermediateBucketName) {

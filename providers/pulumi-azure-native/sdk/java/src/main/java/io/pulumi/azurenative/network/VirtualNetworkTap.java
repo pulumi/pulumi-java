@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return The reference to the private IP address on the internal Load Balancer that will receive the tap.
      * 
      */
-    public Output</* @Nullable */ FrontendIPConfigurationResponse> getDestinationLoadBalancerFrontEndIPConfiguration() {
+    public Output</* @Nullable */ FrontendIPConfigurationResponse> destinationLoadBalancerFrontEndIPConfiguration() {
         return this.destinationLoadBalancerFrontEndIPConfiguration;
     }
     /**
@@ -60,7 +61,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return The reference to the private IP Address of the collector nic that will receive the tap.
      * 
      */
-    public Output</* @Nullable */ NetworkInterfaceIPConfigurationResponse> getDestinationNetworkInterfaceIPConfiguration() {
+    public Output</* @Nullable */ NetworkInterfaceIPConfigurationResponse> destinationNetworkInterfaceIPConfiguration() {
         return this.destinationNetworkInterfaceIPConfiguration;
     }
     /**
@@ -74,7 +75,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return The VXLAN destination port that will receive the tapped traffic.
      * 
      */
-    public Output</* @Nullable */ Integer> getDestinationPort() {
+    public Output</* @Nullable */ Integer> destinationPort() {
         return this.destinationPort;
     }
     /**
@@ -88,7 +89,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -102,7 +103,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -116,7 +117,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +131,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
      * 
      */
-    public Output<List<NetworkInterfaceTapConfigurationResponse>> getNetworkInterfaceTapConfigurations() {
+    public Output<List<NetworkInterfaceTapConfigurationResponse>> networkInterfaceTapConfigurations() {
         return this.networkInterfaceTapConfigurations;
     }
     /**
@@ -144,7 +145,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the virtual network tap resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -158,7 +159,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the virtual network tap resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -172,7 +173,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +187,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -212,7 +213,7 @@ public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetworkTap(String name, VirtualNetworkTapArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualNetworkTap", name, args == null ? VirtualNetworkTapArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualNetworkTap", name, args == null ? VirtualNetworkTapArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualNetworkTap(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

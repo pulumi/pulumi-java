@@ -6,6 +6,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.ReleaseArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.BuildArtifactResponse;
@@ -36,7 +37,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -50,7 +51,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return List of artifacts to pass through to Skaffold command.
      * 
      */
-    public Output<List<BuildArtifactResponse>> getBuildArtifacts() {
+    public Output<List<BuildArtifactResponse>> buildArtifacts() {
         return this.buildArtifacts;
     }
     /**
@@ -64,7 +65,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time at which the `Release` was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -78,7 +79,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Snapshot of the parent pipeline taken at release creation time.
      * 
      */
-    public Output<DeliveryPipelineResponse> getDeliveryPipelineSnapshot() {
+    public Output<DeliveryPipelineResponse> deliveryPipelineSnapshot() {
         return this.deliveryPipelineSnapshot;
     }
     /**
@@ -92,7 +93,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Description of the `Release`. Max length is 255 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -106,7 +107,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -120,7 +121,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -134,7 +135,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -148,7 +149,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time at which the render completed.
      * 
      */
-    public Output<String> getRenderEndTime() {
+    public Output<String> renderEndTime() {
         return this.renderEndTime;
     }
     /**
@@ -162,7 +163,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time at which the render began.
      * 
      */
-    public Output<String> getRenderStartTime() {
+    public Output<String> renderStartTime() {
         return this.renderStartTime;
     }
     /**
@@ -176,7 +177,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Current state of the render operation.
      * 
      */
-    public Output<String> getRenderState() {
+    public Output<String> renderState() {
         return this.renderState;
     }
     /**
@@ -190,7 +191,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Filepath of the Skaffold config inside of the config URI.
      * 
      */
-    public Output<String> getSkaffoldConfigPath() {
+    public Output<String> skaffoldConfigPath() {
         return this.skaffoldConfigPath;
     }
     /**
@@ -204,7 +205,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Cloud Storage URI of tar.gz archive containing Skaffold configuration.
      * 
      */
-    public Output<String> getSkaffoldConfigUri() {
+    public Output<String> skaffoldConfigUri() {
         return this.skaffoldConfigUri;
     }
     /**
@@ -218,7 +219,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
      * 
      */
-    public Output<String> getSkaffoldVersion() {
+    public Output<String> skaffoldVersion() {
         return this.skaffoldVersion;
     }
     /**
@@ -232,7 +233,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Map from target ID to the target artifacts created during the render operation.
      * 
      */
-    public Output<Map<String,String>> getTargetArtifacts() {
+    public Output<Map<String,String>> targetArtifacts() {
         return this.targetArtifacts;
     }
     /**
@@ -246,7 +247,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Map from target ID to details of the render operation for that target.
      * 
      */
-    public Output<Map<String,String>> getTargetRenders() {
+    public Output<Map<String,String>> targetRenders() {
         return this.targetRenders;
     }
     /**
@@ -260,7 +261,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Snapshot of the targets taken at release creation time.
      * 
      */
-    public Output<List<TargetResponse>> getTargetSnapshots() {
+    public Output<List<TargetResponse>> targetSnapshots() {
         return this.targetSnapshots;
     }
     /**
@@ -274,7 +275,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the `Release`.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
 
@@ -300,7 +301,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Release(String name, ReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:clouddeploy/v1:Release", name, args == null ? ReleaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:clouddeploy/v1:Release", name, args == null ? ReleaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Release(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

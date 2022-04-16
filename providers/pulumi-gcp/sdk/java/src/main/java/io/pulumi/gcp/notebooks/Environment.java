@@ -6,6 +6,7 @@ package io.pulumi.gcp.notebooks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.EnvironmentArgs;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentState;
@@ -57,7 +58,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EnvironmentContainerImage> getContainerImage() {
+    public Output</* @Nullable */ EnvironmentContainerImage> containerImage() {
         return this.containerImage;
     }
     /**
@@ -71,7 +72,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Instance creation time
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -85,7 +86,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return A brief description of this environment.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -99,7 +100,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Display name of this environment for the UI.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -113,7 +114,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return A reference to the zone where the machine resides.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -129,7 +130,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
      * 
      */
-    public Output</* @Nullable */ String> getPostStartupScript() {
+    public Output</* @Nullable */ String> postStartupScript() {
         return this.postStartupScript;
     }
     /**
@@ -161,7 +162,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -177,7 +178,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EnvironmentVmImage> getVmImage() {
+    public Output</* @Nullable */ EnvironmentVmImage> vmImage() {
         return this.vmImage;
     }
 
@@ -203,7 +204,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/environment:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:notebooks/environment:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Environment(String name, Output<String> id, @Nullable EnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

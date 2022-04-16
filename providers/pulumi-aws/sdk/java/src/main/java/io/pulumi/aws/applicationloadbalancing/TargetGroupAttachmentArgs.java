@@ -5,6 +5,7 @@ package io.pulumi.aws.applicationloadbalancing;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="targetGroupArn", required=true)
       private final Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn;
     }
 
@@ -55,7 +56,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -71,10 +72,10 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     }
 
     private TargetGroupAttachmentArgs() {
-        this.availabilityZone = Output.empty();
-        this.port = Output.empty();
-        this.targetGroupArn = Output.empty();
-        this.targetId = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.port = Codegen.empty();
+        this.targetGroupArn = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -116,7 +117,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder targetGroupArn(Output<String> targetGroupArn) {

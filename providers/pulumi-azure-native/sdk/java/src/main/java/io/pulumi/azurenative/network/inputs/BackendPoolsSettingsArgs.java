@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.EnforceCertificateNameCheckEnabledSta
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="enforceCertificateNameCheck")
       private final @Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
 
-    public Output<Either<String,EnforceCertificateNameCheckEnabledState>> getEnforceCertificateNameCheck() {
-        return this.enforceCertificateNameCheck == null ? Output.empty() : this.enforceCertificateNameCheck;
+    public Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck() {
+        return this.enforceCertificateNameCheck == null ? Codegen.empty() : this.enforceCertificateNameCheck;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="sendRecvTimeoutSeconds")
       private final @Nullable Output<Integer> sendRecvTimeoutSeconds;
 
-    public Output<Integer> getSendRecvTimeoutSeconds() {
-        return this.sendRecvTimeoutSeconds == null ? Output.empty() : this.sendRecvTimeoutSeconds;
+    public Output<Integer> sendRecvTimeoutSeconds() {
+        return this.sendRecvTimeoutSeconds == null ? Codegen.empty() : this.sendRecvTimeoutSeconds;
     }
 
     public BackendPoolsSettingsArgs(
@@ -51,8 +52,8 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
     }
 
     private BackendPoolsSettingsArgs() {
-        this.enforceCertificateNameCheck = Output.empty();
-        this.sendRecvTimeoutSeconds = Output.empty();
+        this.enforceCertificateNameCheck = Codegen.empty();
+        this.sendRecvTimeoutSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enforceCertificateNameCheck(@Nullable Either<String,EnforceCertificateNameCheckEnabledState> enforceCertificateNameCheck) {
-            this.enforceCertificateNameCheck = Output.ofNullable(enforceCertificateNameCheck);
+            this.enforceCertificateNameCheck = Codegen.ofNullable(enforceCertificateNameCheck);
             return this;
         }
         public Builder sendRecvTimeoutSeconds(@Nullable Output<Integer> sendRecvTimeoutSeconds) {
@@ -90,7 +91,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
-            this.sendRecvTimeoutSeconds = Output.ofNullable(sendRecvTimeoutSeconds);
+            this.sendRecvTimeoutSeconds = Codegen.ofNullable(sendRecvTimeoutSeconds);
             return this;
         }        public BackendPoolsSettingsArgs build() {
             return new BackendPoolsSettingsArgs(enforceCertificateNameCheck, sendRecvTimeoutSeconds);

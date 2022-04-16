@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     public EmailIdentityState(
@@ -44,8 +45,8 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EmailIdentityState() {
-        this.arn = Output.empty();
-        this.email = Output.empty();
+        this.arn = Codegen.empty();
+        this.email = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -83,7 +84,7 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }        public EmailIdentityState build() {
             return new EmailIdentityState(arn, email);

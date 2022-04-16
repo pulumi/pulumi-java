@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.Hl7StoreIamBindingArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingState;
@@ -63,7 +64,7 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=Hl7StoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ Hl7StoreIamBindingCondition> condition;
 
-    public Output</* @Nullable */ Hl7StoreIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ Hl7StoreIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -77,7 +78,7 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the HL7v2 store's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -97,13 +98,13 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -121,7 +122,7 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -147,7 +148,7 @@ public class Hl7StoreIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hl7StoreIamBinding(String name, Hl7StoreIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding", name, args == null ? Hl7StoreIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/hl7StoreIamBinding:Hl7StoreIamBinding", name, args == null ? Hl7StoreIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Hl7StoreIamBinding(String name, Output<String> id, @Nullable Hl7StoreIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

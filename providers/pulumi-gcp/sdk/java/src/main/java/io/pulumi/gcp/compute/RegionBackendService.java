@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionBackendServiceArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceState;
@@ -81,7 +82,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * When the load balancing scheme is INTERNAL, this field is not used.
      * 
      */
-    public Output</* @Nullable */ Integer> getAffinityCookieTtlSec() {
+    public Output</* @Nullable */ Integer> affinityCookieTtlSec() {
         return this.affinityCookieTtlSec;
     }
     /**
@@ -97,7 +98,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegionBackendServiceBackend>> getBackends() {
+    public Output</* @Nullable */ List<RegionBackendServiceBackend>> backends() {
         return this.backends;
     }
     /**
@@ -113,7 +114,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<RegionBackendServiceCdnPolicy> getCdnPolicy() {
+    public Output<RegionBackendServiceCdnPolicy> cdnPolicy() {
         return this.cdnPolicy;
     }
     /**
@@ -133,7 +134,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceCircuitBreakers> getCircuitBreakers() {
+    public Output</* @Nullable */ RegionBackendServiceCircuitBreakers> circuitBreakers() {
         return this.circuitBreakers;
     }
     /**
@@ -149,7 +150,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * connections, but still work to finish started).
      * 
      */
-    public Output</* @Nullable */ Integer> getConnectionDrainingTimeoutSec() {
+    public Output</* @Nullable */ Integer> connectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec;
     }
     /**
@@ -169,7 +170,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceConnectionTrackingPolicy> getConnectionTrackingPolicy() {
+    public Output</* @Nullable */ RegionBackendServiceConnectionTrackingPolicy> connectionTrackingPolicy() {
         return this.connectionTrackingPolicy;
     }
     /**
@@ -195,7 +196,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * This field only applies when all of the following are true -
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceConsistentHash> getConsistentHash() {
+    public Output</* @Nullable */ RegionBackendServiceConsistentHash> consistentHash() {
         return this.consistentHash;
     }
     /**
@@ -209,7 +210,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -225,7 +226,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -239,7 +240,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @return If true, enable Cloud CDN for this RegionBackendService.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableCdn() {
+    public Output</* @Nullable */ Boolean> enableCdn() {
         return this.enableCdn;
     }
     /**
@@ -255,7 +256,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceFailoverPolicy> getFailoverPolicy() {
+    public Output</* @Nullable */ RegionBackendServiceFailoverPolicy> failoverPolicy() {
         return this.failoverPolicy;
     }
     /**
@@ -269,7 +270,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -291,7 +292,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * or serverless NEG as a backend.
      * 
      */
-    public Output</* @Nullable */ String> getHealthChecks() {
+    public Output</* @Nullable */ String> healthChecks() {
         return this.healthChecks;
     }
     /**
@@ -307,7 +308,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceIap> getIap() {
+    public Output</* @Nullable */ RegionBackendServiceIap> iap() {
         return this.iap;
     }
     /**
@@ -331,7 +332,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> getLoadBalancingScheme() {
+    public Output</* @Nullable */ String> loadBalancingScheme() {
         return this.loadBalancingScheme;
     }
     /**
@@ -383,7 +384,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      *   Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
-    public Output</* @Nullable */ String> getLocalityLbPolicy() {
+    public Output</* @Nullable */ String> localityLbPolicy() {
         return this.localityLbPolicy;
     }
     /**
@@ -401,7 +402,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<RegionBackendServiceLogConfig> getLogConfig() {
+    public Output<RegionBackendServiceLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -415,7 +416,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @return Name of the cookie.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -431,7 +432,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * This field can only be specified when the load balancing scheme is set to INTERNAL.
      * 
      */
-    public Output</* @Nullable */ String> getNetwork() {
+    public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
@@ -451,7 +452,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceOutlierDetection> getOutlierDetection() {
+    public Output</* @Nullable */ RegionBackendServiceOutlierDetection> outlierDetection() {
         return this.outlierDetection;
     }
     /**
@@ -477,7 +478,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
      * 
      */
-    public Output<String> getPortName() {
+    public Output<String> portName() {
         return this.portName;
     }
     /**
@@ -493,7 +494,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -513,7 +514,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, `GRPC`, and `UNSPECIFIED`.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -529,7 +530,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -543,7 +544,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -561,7 +562,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
      * 
      */
-    public Output<String> getSessionAffinity() {
+    public Output<String> sessionAffinity() {
         return this.sessionAffinity;
     }
     /**
@@ -577,7 +578,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * failed request. Default is 30 seconds. Valid range is [1, 86400].
      * 
      */
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec;
     }
 
@@ -603,7 +604,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionBackendService(String name, @Nullable RegionBackendServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionBackendService:RegionBackendService", name, args == null ? RegionBackendServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionBackendService:RegionBackendService", name, args == null ? RegionBackendServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionBackendService(String name, Output<String> id, @Nullable RegionBackendServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

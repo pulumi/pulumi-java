@@ -9,6 +9,7 @@ import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     @Import(name="certificateType", required=true)
       private final Output<Either<String,AfdCertificateType>> certificateType;
 
-    public Output<Either<String,AfdCertificateType>> getCertificateType() {
+    public Output<Either<String,AfdCertificateType>> certificateType() {
         return this.certificateType;
     }
 
@@ -40,8 +41,8 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
 
-    public Output<AfdMinimumTlsVersion> getMinimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Output.empty() : this.minimumTlsVersion;
+    public Output<AfdMinimumTlsVersion> minimumTlsVersion() {
+        return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     @Import(name="secret")
       private final @Nullable Output<ResourceReferenceArgs> secret;
 
-    public Output<ResourceReferenceArgs> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<ResourceReferenceArgs> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public AFDDomainHttpsParametersArgs(
@@ -65,9 +66,9 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     }
 
     private AFDDomainHttpsParametersArgs() {
-        this.certificateType = Output.empty();
-        this.minimumTlsVersion = Output.empty();
-        this.secret = Output.empty();
+        this.certificateType = Codegen.empty();
+        this.minimumTlsVersion = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder minimumTlsVersion(@Nullable AfdMinimumTlsVersion minimumTlsVersion) {
-            this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
+            this.minimumTlsVersion = Codegen.ofNullable(minimumTlsVersion);
             return this;
         }
         public Builder secret(@Nullable Output<ResourceReferenceArgs> secret) {
@@ -115,7 +116,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder secret(@Nullable ResourceReferenceArgs secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public AFDDomainHttpsParametersArgs build() {
             return new AFDDomainHttpsParametersArgs(certificateType, minimumTlsVersion, secret);

@@ -63,21 +63,21 @@ public final class RuleMetricDataSourceResponse {
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
     */
-    public Optional<String> getLegacyResourceId() {
+    public Optional<String> legacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
     /**
      * the name of the metric that defines what the rule monitors.
      * 
     */
-    public Optional<String> getMetricName() {
+    public Optional<String> metricName() {
         return Optional.ofNullable(this.metricName);
     }
     /**
      * the namespace of the metric.
      * 
     */
-    public Optional<String> getMetricNamespace() {
+    public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
@@ -85,21 +85,21 @@ public final class RuleMetricDataSourceResponse {
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * the location of the resource.
      * 
     */
-    public Optional<String> getResourceLocation() {
+    public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
      * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
     */
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     @Import(name="peerAsn")
       private final @Nullable Output<Double> peerAsn;
 
-    public Output<Double> getPeerAsn() {
-        return this.peerAsn == null ? Output.empty() : this.peerAsn;
+    public Output<Double> peerAsn() {
+        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
 
-    public Output<String> getPeerIp() {
-        return this.peerIp == null ? Output.empty() : this.peerIp;
+    public Output<String> peerIp() {
+        return this.peerIp == null ? Codegen.empty() : this.peerIp;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
 
-    public Output<String> getPeeringName() {
-        return this.peeringName == null ? Output.empty() : this.peeringName;
+    public Output<String> peeringName() {
+        return this.peeringName == null ? Codegen.empty() : this.peeringName;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +89,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     @Import(name="virtualRouterName", required=true)
       private final Output<String> virtualRouterName;
 
-    public Output<String> getVirtualRouterName() {
+    public Output<String> virtualRouterName() {
         return this.virtualRouterName;
     }
 
@@ -110,13 +111,13 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     }
 
     private VirtualRouterPeeringArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.peerAsn = Output.empty();
-        this.peerIp = Output.empty();
-        this.peeringName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.virtualRouterName = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.peerAsn = Codegen.empty();
+        this.peerIp = Codegen.empty();
+        this.peeringName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.virtualRouterName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -164,7 +165,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder peerAsn(@Nullable Output<Double> peerAsn) {
@@ -172,7 +173,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder peerAsn(@Nullable Double peerAsn) {
-            this.peerAsn = Output.ofNullable(peerAsn);
+            this.peerAsn = Codegen.ofNullable(peerAsn);
             return this;
         }
         public Builder peerIp(@Nullable Output<String> peerIp) {
@@ -180,7 +181,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder peerIp(@Nullable String peerIp) {
-            this.peerIp = Output.ofNullable(peerIp);
+            this.peerIp = Codegen.ofNullable(peerIp);
             return this;
         }
         public Builder peeringName(@Nullable Output<String> peeringName) {
@@ -188,7 +189,7 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Output.ofNullable(peeringName);
+            this.peeringName = Codegen.ofNullable(peeringName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

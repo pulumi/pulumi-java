@@ -19,7 +19,7 @@ public final class GetPolicySetDefinitionArgs extends io.pulumi.resources.Invoke
     @Import(name="policySetDefinitionName", required=true)
       private final String policySetDefinitionName;
 
-    public String getPolicySetDefinitionName() {
+    public String policySetDefinitionName() {
         return this.policySetDefinitionName;
     }
 

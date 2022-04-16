@@ -15,14 +15,14 @@ public final class GetGroupsGroupGroupKey extends io.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

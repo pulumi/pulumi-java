@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificateContextArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsValidationContextArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateContext")
       private final @Nullable Output<TlsCertificateContextArgs> certificateContext;
 
-    public Output<TlsCertificateContextArgs> getCertificateContext() {
-        return this.certificateContext == null ? Output.empty() : this.certificateContext;
+    public Output<TlsCertificateContextArgs> certificateContext() {
+        return this.certificateContext == null ? Codegen.empty() : this.certificateContext;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationContext")
       private final @Nullable Output<TlsValidationContextArgs> validationContext;
 
-    public Output<TlsValidationContextArgs> getValidationContext() {
-        return this.validationContext == null ? Output.empty() : this.validationContext;
+    public Output<TlsValidationContextArgs> validationContext() {
+        return this.validationContext == null ? Codegen.empty() : this.validationContext;
     }
 
     public TlsContextArgs(
@@ -49,8 +50,8 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TlsContextArgs() {
-        this.certificateContext = Output.empty();
-        this.validationContext = Output.empty();
+        this.certificateContext = Codegen.empty();
+        this.validationContext = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateContext(@Nullable TlsCertificateContextArgs certificateContext) {
-            this.certificateContext = Output.ofNullable(certificateContext);
+            this.certificateContext = Codegen.ofNullable(certificateContext);
             return this;
         }
         public Builder validationContext(@Nullable Output<TlsValidationContextArgs> validationContext) {
@@ -88,7 +89,7 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validationContext(@Nullable TlsValidationContextArgs validationContext) {
-            this.validationContext = Output.ofNullable(validationContext);
+            this.validationContext = Codegen.ofNullable(validationContext);
             return this;
         }        public TlsContextArgs build() {
             return new TlsContextArgs(certificateContext, validationContext);

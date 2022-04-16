@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.CatArgs;
 import io.pulumi.example.God;
 import io.pulumi.example.Utilities;
@@ -20,31 +21,31 @@ public class Cat extends io.pulumi.resources.CustomResource {
     @Export(name="foes", type=Map.class, parameters={String.class, Toy.class})
     private Output</* @Nullable */ Map<String,Toy>> foes;
 
-    public Output</* @Nullable */ Map<String,Toy>> getFoes() {
+    public Output</* @Nullable */ Map<String,Toy>> foes() {
         return this.foes;
     }
     @Export(name="friends", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> friends;
 
-    public Output</* @Nullable */ List<Toy>> getFriends() {
+    public Output</* @Nullable */ List<Toy>> friends() {
         return this.friends;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="other", type=God.class, parameters={})
     private Output</* @Nullable */ God> other;
 
-    public Output</* @Nullable */ God> getOther() {
+    public Output</* @Nullable */ God> other() {
         return this.other;
     }
     @Export(name="toy", type=Toy.class, parameters={})
     private Output</* @Nullable */ Toy> toy;
 
-    public Output</* @Nullable */ Toy> getToy() {
+    public Output</* @Nullable */ Toy> toy() {
         return this.toy;
     }
 
@@ -70,7 +71,7 @@ public class Cat extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cat(String name, @Nullable CatArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Cat", name, args == null ? CatArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::Cat", name, args == null ? CatArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cat(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

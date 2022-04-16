@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="pathPrefix")
       private final @Nullable Output<String> pathPrefix;
 
-    public Output<String> getPathPrefix() {
-        return this.pathPrefix == null ? Output.empty() : this.pathPrefix;
+    public Output<String> pathPrefix() {
+        return this.pathPrefix == null ? Codegen.empty() : this.pathPrefix;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     public AllowedHostPathArgs(
@@ -51,8 +52,8 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AllowedHostPathArgs() {
-        this.pathPrefix = Output.empty();
-        this.readOnly = Output.empty();
+        this.pathPrefix = Codegen.empty();
+        this.readOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder pathPrefix(@Nullable String pathPrefix) {
-            this.pathPrefix = Output.ofNullable(pathPrefix);
+            this.pathPrefix = Codegen.ofNullable(pathPrefix);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -90,7 +91,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }        public AllowedHostPathArgs build() {
             return new AllowedHostPathArgs(pathPrefix, readOnly);

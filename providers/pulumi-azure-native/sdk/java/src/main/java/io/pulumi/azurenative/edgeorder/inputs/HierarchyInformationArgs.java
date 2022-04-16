@@ -5,6 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
-        return this.configurationName == null ? Output.empty() : this.configurationName;
+    public Output<String> configurationName() {
+        return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="productFamilyName")
       private final @Nullable Output<String> productFamilyName;
 
-    public Output<String> getProductFamilyName() {
-        return this.productFamilyName == null ? Output.empty() : this.productFamilyName;
+    public Output<String> productFamilyName() {
+        return this.productFamilyName == null ? Codegen.empty() : this.productFamilyName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="productLineName")
       private final @Nullable Output<String> productLineName;
 
-    public Output<String> getProductLineName() {
-        return this.productLineName == null ? Output.empty() : this.productLineName;
+    public Output<String> productLineName() {
+        return this.productLineName == null ? Codegen.empty() : this.productLineName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
-        return this.productName == null ? Output.empty() : this.productName;
+    public Output<String> productName() {
+        return this.productName == null ? Codegen.empty() : this.productName;
     }
 
     public HierarchyInformationArgs(
@@ -74,10 +75,10 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     }
 
     private HierarchyInformationArgs() {
-        this.configurationName = Output.empty();
-        this.productFamilyName = Output.empty();
-        this.productLineName = Output.empty();
-        this.productName = Output.empty();
+        this.configurationName = Codegen.empty();
+        this.productFamilyName = Codegen.empty();
+        this.productLineName = Codegen.empty();
+        this.productName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Output.ofNullable(configurationName);
+            this.configurationName = Codegen.ofNullable(configurationName);
             return this;
         }
         public Builder productFamilyName(@Nullable Output<String> productFamilyName) {
@@ -119,7 +120,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder productFamilyName(@Nullable String productFamilyName) {
-            this.productFamilyName = Output.ofNullable(productFamilyName);
+            this.productFamilyName = Codegen.ofNullable(productFamilyName);
             return this;
         }
         public Builder productLineName(@Nullable Output<String> productLineName) {
@@ -127,7 +128,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder productLineName(@Nullable String productLineName) {
-            this.productLineName = Output.ofNullable(productLineName);
+            this.productLineName = Codegen.ofNullable(productLineName);
             return this;
         }
         public Builder productName(@Nullable Output<String> productName) {
@@ -135,7 +136,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder productName(@Nullable String productName) {
-            this.productName = Output.ofNullable(productName);
+            this.productName = Codegen.ofNullable(productName);
             return this;
         }        public HierarchyInformationArgs build() {
             return new HierarchyInformationArgs(configurationName, productFamilyName, productLineName, productName);

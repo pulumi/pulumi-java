@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
     @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
-        return this.clusterArn == null ? Output.empty() : this.clusterArn;
+    public Output<String> clusterArn() {
+        return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
     @Import(name="secretArnLists")
       private final @Nullable Output<List<String>> secretArnLists;
 
-    public Output<List<String>> getSecretArnLists() {
-        return this.secretArnLists == null ? Output.empty() : this.secretArnLists;
+    public Output<List<String>> secretArnLists() {
+        return this.secretArnLists == null ? Codegen.empty() : this.secretArnLists;
     }
 
     public ScramSecretAssociationState(
@@ -45,8 +46,8 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
     }
 
     private ScramSecretAssociationState() {
-        this.clusterArn = Output.empty();
-        this.secretArnLists = Output.empty();
+        this.clusterArn = Codegen.empty();
+        this.secretArnLists = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Output.ofNullable(clusterArn);
+            this.clusterArn = Codegen.ofNullable(clusterArn);
             return this;
         }
         public Builder secretArnLists(@Nullable Output<List<String>> secretArnLists) {
@@ -84,7 +85,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder secretArnLists(@Nullable List<String> secretArnLists) {
-            this.secretArnLists = Output.ofNullable(secretArnLists);
+            this.secretArnLists = Codegen.ofNullable(secretArnLists);
             return this;
         }
         public Builder secretArnLists(String... secretArnLists) {

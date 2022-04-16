@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="versionHeaderName")
       private final @Nullable Output<String> versionHeaderName;
 
-    public Output<String> getVersionHeaderName() {
-        return this.versionHeaderName == null ? Output.empty() : this.versionHeaderName;
+    public Output<String> versionHeaderName() {
+        return this.versionHeaderName == null ? Codegen.empty() : this.versionHeaderName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="versionQueryName")
       private final @Nullable Output<String> versionQueryName;
 
-    public Output<String> getVersionQueryName() {
-        return this.versionQueryName == null ? Output.empty() : this.versionQueryName;
+    public Output<String> versionQueryName() {
+        return this.versionQueryName == null ? Codegen.empty() : this.versionQueryName;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     @Import(name="versioningScheme")
       private final @Nullable Output<String> versioningScheme;
 
-    public Output<String> getVersioningScheme() {
-        return this.versioningScheme == null ? Output.empty() : this.versioningScheme;
+    public Output<String> versioningScheme() {
+        return this.versioningScheme == null ? Codegen.empty() : this.versioningScheme;
     }
 
     public ApiVersionSetContractDetailsArgs(
@@ -100,12 +101,12 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     }
 
     private ApiVersionSetContractDetailsArgs() {
-        this.description = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.versionHeaderName = Output.empty();
-        this.versionQueryName = Output.empty();
-        this.versioningScheme = Output.empty();
+        this.description = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.versionHeaderName = Codegen.empty();
+        this.versionQueryName = Codegen.empty();
+        this.versioningScheme = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -151,7 +152,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -159,7 +160,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder versionHeaderName(@Nullable Output<String> versionHeaderName) {
@@ -167,7 +168,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
-            this.versionHeaderName = Output.ofNullable(versionHeaderName);
+            this.versionHeaderName = Codegen.ofNullable(versionHeaderName);
             return this;
         }
         public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
@@ -175,7 +176,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder versionQueryName(@Nullable String versionQueryName) {
-            this.versionQueryName = Output.ofNullable(versionQueryName);
+            this.versionQueryName = Codegen.ofNullable(versionQueryName);
             return this;
         }
         public Builder versioningScheme(@Nullable Output<String> versioningScheme) {
@@ -183,7 +184,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder versioningScheme(@Nullable String versioningScheme) {
-            this.versioningScheme = Output.ofNullable(versioningScheme);
+            this.versioningScheme = Codegen.ofNullable(versioningScheme);
             return this;
         }        public ApiVersionSetContractDetailsArgs build() {
             return new ApiVersionSetContractDetailsArgs(description, id, name, versionHeaderName, versionQueryName, versioningScheme);

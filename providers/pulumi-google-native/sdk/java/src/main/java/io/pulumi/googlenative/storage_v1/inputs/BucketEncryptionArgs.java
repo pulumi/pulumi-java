@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="defaultKmsKeyName")
       private final @Nullable Output<String> defaultKmsKeyName;
 
-    public Output<String> getDefaultKmsKeyName() {
-        return this.defaultKmsKeyName == null ? Output.empty() : this.defaultKmsKeyName;
+    public Output<String> defaultKmsKeyName() {
+        return this.defaultKmsKeyName == null ? Codegen.empty() : this.defaultKmsKeyName;
     }
 
     public BucketEncryptionArgs(@Nullable Output<String> defaultKmsKeyName) {
@@ -34,7 +35,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketEncryptionArgs() {
-        this.defaultKmsKeyName = Output.empty();
+        this.defaultKmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder defaultKmsKeyName(@Nullable String defaultKmsKeyName) {
-            this.defaultKmsKeyName = Output.ofNullable(defaultKmsKeyName);
+            this.defaultKmsKeyName = Codegen.ofNullable(defaultKmsKeyName);
             return this;
         }        public BucketEncryptionArgs build() {
             return new BucketEncryptionArgs(defaultKmsKeyName);

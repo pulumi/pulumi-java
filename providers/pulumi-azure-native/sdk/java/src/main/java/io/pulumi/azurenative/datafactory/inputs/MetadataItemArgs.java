@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Object> name;
 
-    public Output<Object> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<Object> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Object> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public MetadataItemArgs(
@@ -48,8 +49,8 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataItemArgs() {
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable Object name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder value(@Nullable Output<Object> value) {
@@ -87,7 +88,7 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable Object value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public MetadataItemArgs build() {
             return new MetadataItemArgs(name, value);

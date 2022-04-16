@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -28,8 +29,8 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ApplicationPackageReferenceArgs(
@@ -40,8 +41,8 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
     }
 
     private ApplicationPackageReferenceArgs() {
-        this.id = Output.empty();
-        this.version = Output.empty();
+        this.id = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ApplicationPackageReferenceArgs build() {
             return new ApplicationPackageReferenceArgs(id, version);

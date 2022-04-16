@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesCaOptionsGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageGetArgs;
@@ -26,8 +27,8 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
+    public Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions() {
+        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
+    public Output<List<String>> aiaOcspServers() {
+        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="caOptions")
       private final @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions;
 
-    public Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> getCaOptions() {
-        return this.caOptions == null ? Output.empty() : this.caOptions;
+    public Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions() {
+        return this.caOptions == null ? Codegen.empty() : this.caOptions;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="keyUsage")
       private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage;
 
-    public Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> getKeyUsage() {
-        return this.keyUsage == null ? Output.empty() : this.keyUsage;
+    public Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage() {
+        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="policyIds")
       private final @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds;
 
-    public Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> getPolicyIds() {
-        return this.policyIds == null ? Output.empty() : this.policyIds;
+    public Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds() {
+        return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 
     public CertificateTemplatePredefinedValuesGetArgs(
@@ -88,11 +89,11 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     }
 
     private CertificateTemplatePredefinedValuesGetArgs() {
-        this.additionalExtensions = Output.empty();
-        this.aiaOcspServers = Output.empty();
-        this.caOptions = Output.empty();
-        this.keyUsage = Output.empty();
-        this.policyIds = Output.empty();
+        this.additionalExtensions = Codegen.empty();
+        this.aiaOcspServers = Codegen.empty();
+        this.caOptions = Codegen.empty();
+        this.keyUsage = Codegen.empty();
+        this.policyIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
             return this;
         }
         public Builder additionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs> additionalExtensions) {
-            this.additionalExtensions = Output.ofNullable(additionalExtensions);
+            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
             return this;
         }
         public Builder additionalExtensions(CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs... additionalExtensions) {
@@ -139,7 +140,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
             return this;
         }
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
             return this;
         }
         public Builder aiaOcspServers(String... aiaOcspServers) {
@@ -150,7 +151,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
             return this;
         }
         public Builder caOptions(@Nullable CertificateTemplatePredefinedValuesCaOptionsGetArgs caOptions) {
-            this.caOptions = Output.ofNullable(caOptions);
+            this.caOptions = Codegen.ofNullable(caOptions);
             return this;
         }
         public Builder keyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage) {
@@ -158,7 +159,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
             return this;
         }
         public Builder keyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageGetArgs keyUsage) {
-            this.keyUsage = Output.ofNullable(keyUsage);
+            this.keyUsage = Codegen.ofNullable(keyUsage);
             return this;
         }
         public Builder policyIds(@Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds) {
@@ -166,7 +167,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
             return this;
         }
         public Builder policyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyIdGetArgs> policyIds) {
-            this.policyIds = Output.ofNullable(policyIds);
+            this.policyIds = Codegen.ofNullable(policyIds);
             return this;
         }
         public Builder policyIds(CertificateTemplatePredefinedValuesPolicyIdGetArgs... policyIds) {

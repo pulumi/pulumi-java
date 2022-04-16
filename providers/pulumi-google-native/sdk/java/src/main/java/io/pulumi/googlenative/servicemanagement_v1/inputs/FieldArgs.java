@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.enums.FieldCardinality;
 import io.pulumi.googlenative.servicemanagement_v1.enums.FieldKind;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -31,8 +32,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cardinality")
       private final @Nullable Output<FieldCardinality> cardinality;
 
-    public Output<FieldCardinality> getCardinality() {
-        return this.cardinality == null ? Output.empty() : this.cardinality;
+    public Output<FieldCardinality> cardinality() {
+        return this.cardinality == null ? Codegen.empty() : this.cardinality;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<String> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jsonName")
       private final @Nullable Output<String> jsonName;
 
-    public Output<String> getJsonName() {
-        return this.jsonName == null ? Output.empty() : this.jsonName;
+    public Output<String> jsonName() {
+        return this.jsonName == null ? Codegen.empty() : this.jsonName;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<FieldKind> kind;
 
-    public Output<FieldKind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<FieldKind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+    public Output<Integer> number() {
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oneofIndex")
       private final @Nullable Output<Integer> oneofIndex;
 
-    public Output<Integer> getOneofIndex() {
-        return this.oneofIndex == null ? Output.empty() : this.oneofIndex;
+    public Output<Integer> oneofIndex() {
+        return this.oneofIndex == null ? Codegen.empty() : this.oneofIndex;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<List<OptionArgs>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packed")
       private final @Nullable Output<Boolean> packed;
 
-    public Output<Boolean> getPacked() {
-        return this.packed == null ? Output.empty() : this.packed;
+    public Output<Boolean> packed() {
+        return this.packed == null ? Codegen.empty() : this.packed;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeUrl")
       private final @Nullable Output<String> typeUrl;
 
-    public Output<String> getTypeUrl() {
-        return this.typeUrl == null ? Output.empty() : this.typeUrl;
+    public Output<String> typeUrl() {
+        return this.typeUrl == null ? Codegen.empty() : this.typeUrl;
     }
 
     public FieldArgs(
@@ -158,16 +159,16 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FieldArgs() {
-        this.cardinality = Output.empty();
-        this.defaultValue = Output.empty();
-        this.jsonName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.number = Output.empty();
-        this.oneofIndex = Output.empty();
-        this.options = Output.empty();
-        this.packed = Output.empty();
-        this.typeUrl = Output.empty();
+        this.cardinality = Codegen.empty();
+        this.defaultValue = Codegen.empty();
+        this.jsonName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.number = Codegen.empty();
+        this.oneofIndex = Codegen.empty();
+        this.options = Codegen.empty();
+        this.packed = Codegen.empty();
+        this.typeUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cardinality(@Nullable FieldCardinality cardinality) {
-            this.cardinality = Output.ofNullable(cardinality);
+            this.cardinality = Codegen.ofNullable(cardinality);
             return this;
         }
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
@@ -221,7 +222,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder jsonName(@Nullable Output<String> jsonName) {
@@ -229,7 +230,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jsonName(@Nullable String jsonName) {
-            this.jsonName = Output.ofNullable(jsonName);
+            this.jsonName = Codegen.ofNullable(jsonName);
             return this;
         }
         public Builder kind(@Nullable Output<FieldKind> kind) {
@@ -237,7 +238,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable FieldKind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -245,7 +246,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder number(@Nullable Output<Integer> number) {
@@ -253,7 +254,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder number(@Nullable Integer number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }
         public Builder oneofIndex(@Nullable Output<Integer> oneofIndex) {
@@ -261,7 +262,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oneofIndex(@Nullable Integer oneofIndex) {
-            this.oneofIndex = Output.ofNullable(oneofIndex);
+            this.oneofIndex = Codegen.ofNullable(oneofIndex);
             return this;
         }
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
@@ -269,7 +270,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(OptionArgs... options) {
@@ -280,7 +281,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packed(@Nullable Boolean packed) {
-            this.packed = Output.ofNullable(packed);
+            this.packed = Codegen.ofNullable(packed);
             return this;
         }
         public Builder typeUrl(@Nullable Output<String> typeUrl) {
@@ -288,7 +289,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeUrl(@Nullable String typeUrl) {
-            this.typeUrl = Output.ofNullable(typeUrl);
+            this.typeUrl = Codegen.ofNullable(typeUrl);
             return this;
         }        public FieldArgs build() {
             return new FieldArgs(cardinality, defaultValue, jsonName, kind, name, number, oneofIndex, options, packed, typeUrl);

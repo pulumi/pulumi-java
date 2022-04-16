@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2SuggestionFeatureType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulum
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type;
 
-    public Output<GoogleCloudDialogflowV2SuggestionFeatureType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<GoogleCloudDialogflowV2SuggestionFeatureType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GoogleCloudDialogflowV2SuggestionFeatureArgs(@Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowV2SuggestionFeatureArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulum
             return this;
         }
         public Builder type(@Nullable GoogleCloudDialogflowV2SuggestionFeatureType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GoogleCloudDialogflowV2SuggestionFeatureArgs build() {
             return new GoogleCloudDialogflowV2SuggestionFeatureArgs(type);

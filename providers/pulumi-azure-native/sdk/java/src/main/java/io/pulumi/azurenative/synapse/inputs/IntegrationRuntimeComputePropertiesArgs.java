@@ -7,6 +7,7 @@ import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeDataFlowProperties
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeVNetPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     @Import(name="dataFlowProperties")
       private final @Nullable Output<IntegrationRuntimeDataFlowPropertiesArgs> dataFlowProperties;
 
-    public Output<IntegrationRuntimeDataFlowPropertiesArgs> getDataFlowProperties() {
-        return this.dataFlowProperties == null ? Output.empty() : this.dataFlowProperties;
+    public Output<IntegrationRuntimeDataFlowPropertiesArgs> dataFlowProperties() {
+        return this.dataFlowProperties == null ? Codegen.empty() : this.dataFlowProperties;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     @Import(name="maxParallelExecutionsPerNode")
       private final @Nullable Output<Integer> maxParallelExecutionsPerNode;
 
-    public Output<Integer> getMaxParallelExecutionsPerNode() {
-        return this.maxParallelExecutionsPerNode == null ? Output.empty() : this.maxParallelExecutionsPerNode;
+    public Output<Integer> maxParallelExecutionsPerNode() {
+        return this.maxParallelExecutionsPerNode == null ? Codegen.empty() : this.maxParallelExecutionsPerNode;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     @Import(name="nodeSize")
       private final @Nullable Output<String> nodeSize;
 
-    public Output<String> getNodeSize() {
-        return this.nodeSize == null ? Output.empty() : this.nodeSize;
+    public Output<String> nodeSize() {
+        return this.nodeSize == null ? Codegen.empty() : this.nodeSize;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> getNumberOfNodes() {
-        return this.numberOfNodes == null ? Output.empty() : this.numberOfNodes;
+    public Output<Integer> numberOfNodes() {
+        return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     @Import(name="vNetProperties")
       private final @Nullable Output<IntegrationRuntimeVNetPropertiesArgs> vNetProperties;
 
-    public Output<IntegrationRuntimeVNetPropertiesArgs> getVNetProperties() {
-        return this.vNetProperties == null ? Output.empty() : this.vNetProperties;
+    public Output<IntegrationRuntimeVNetPropertiesArgs> vNetProperties() {
+        return this.vNetProperties == null ? Codegen.empty() : this.vNetProperties;
     }
 
     public IntegrationRuntimeComputePropertiesArgs(
@@ -103,12 +104,12 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     }
 
     private IntegrationRuntimeComputePropertiesArgs() {
-        this.dataFlowProperties = Output.empty();
-        this.location = Output.empty();
-        this.maxParallelExecutionsPerNode = Output.empty();
-        this.nodeSize = Output.empty();
-        this.numberOfNodes = Output.empty();
-        this.vNetProperties = Output.empty();
+        this.dataFlowProperties = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxParallelExecutionsPerNode = Codegen.empty();
+        this.nodeSize = Codegen.empty();
+        this.numberOfNodes = Codegen.empty();
+        this.vNetProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder dataFlowProperties(@Nullable IntegrationRuntimeDataFlowPropertiesArgs dataFlowProperties) {
-            this.dataFlowProperties = Output.ofNullable(dataFlowProperties);
+            this.dataFlowProperties = Codegen.ofNullable(dataFlowProperties);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -154,7 +155,7 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxParallelExecutionsPerNode(@Nullable Output<Integer> maxParallelExecutionsPerNode) {
@@ -162,7 +163,7 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder maxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
-            this.maxParallelExecutionsPerNode = Output.ofNullable(maxParallelExecutionsPerNode);
+            this.maxParallelExecutionsPerNode = Codegen.ofNullable(maxParallelExecutionsPerNode);
             return this;
         }
         public Builder nodeSize(@Nullable Output<String> nodeSize) {
@@ -170,7 +171,7 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder nodeSize(@Nullable String nodeSize) {
-            this.nodeSize = Output.ofNullable(nodeSize);
+            this.nodeSize = Codegen.ofNullable(nodeSize);
             return this;
         }
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
@@ -178,7 +179,7 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Output.ofNullable(numberOfNodes);
+            this.numberOfNodes = Codegen.ofNullable(numberOfNodes);
             return this;
         }
         public Builder vNetProperties(@Nullable Output<IntegrationRuntimeVNetPropertiesArgs> vNetProperties) {
@@ -186,7 +187,7 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder vNetProperties(@Nullable IntegrationRuntimeVNetPropertiesArgs vNetProperties) {
-            this.vNetProperties = Output.ofNullable(vNetProperties);
+            this.vNetProperties = Codegen.ofNullable(vNetProperties);
             return this;
         }        public IntegrationRuntimeComputePropertiesArgs build() {
             return new IntegrationRuntimeComputePropertiesArgs(dataFlowProperties, location, maxParallelExecutionsPerNode, nodeSize, numberOfNodes, vNetProperties);

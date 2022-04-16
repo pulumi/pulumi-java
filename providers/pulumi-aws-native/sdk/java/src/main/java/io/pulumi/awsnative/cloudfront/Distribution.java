@@ -10,6 +10,7 @@ import io.pulumi.awsnative.cloudfront.outputs.DistributionTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -25,19 +26,19 @@ public class Distribution extends io.pulumi.resources.CustomResource {
     @Export(name="distributionConfig", type=DistributionConfig.class, parameters={})
     private Output<DistributionConfig> distributionConfig;
 
-    public Output<DistributionConfig> getDistributionConfig() {
+    public Output<DistributionConfig> distributionConfig() {
         return this.distributionConfig;
     }
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     @Export(name="tags", type=List.class, parameters={DistributionTag.class})
     private Output</* @Nullable */ List<DistributionTag>> tags;
 
-    public Output</* @Nullable */ List<DistributionTag>> getTags() {
+    public Output</* @Nullable */ List<DistributionTag>> tags() {
         return this.tags;
     }
 
@@ -63,7 +64,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Distribution(String name, DistributionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudfront:Distribution", name, args == null ? DistributionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudfront:Distribution", name, args == null ? DistributionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Distribution(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

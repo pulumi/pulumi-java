@@ -10,6 +10,7 @@ import io.pulumi.aws.appsync.outputs.FunctionSyncConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated AppSync API.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -55,7 +56,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Function object.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -69,7 +70,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Function DataSource name.
      * 
      */
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
     /**
@@ -83,7 +84,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Function description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -97,7 +98,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A unique ID representing the Function object.
      * 
      */
-    public Output<String> getFunctionId() {
+    public Output<String> functionId() {
         return this.functionId;
     }
     /**
@@ -111,7 +112,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The version of the request mapping template. Currently the supported value is `2018-05-29`.
      * 
      */
-    public Output</* @Nullable */ String> getFunctionVersion() {
+    public Output</* @Nullable */ String> functionVersion() {
         return this.functionVersion;
     }
     /**
@@ -125,7 +126,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxBatchSize() {
+    public Output</* @Nullable */ Integer> maxBatchSize() {
         return this.maxBatchSize;
     }
     /**
@@ -139,7 +140,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Function name. The function name does not have to be unique.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -153,7 +154,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
      * 
      */
-    public Output<String> getRequestMappingTemplate() {
+    public Output<String> requestMappingTemplate() {
         return this.requestMappingTemplate;
     }
     /**
@@ -167,7 +168,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Function response mapping template.
      * 
      */
-    public Output<String> getResponseMappingTemplate() {
+    public Output<String> responseMappingTemplate() {
         return this.responseMappingTemplate;
     }
     /**
@@ -181,7 +182,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    public Output</* @Nullable */ FunctionSyncConfig> getSyncConfig() {
+    public Output</* @Nullable */ FunctionSyncConfig> syncConfig() {
         return this.syncConfig;
     }
 
@@ -207,7 +208,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Function(String name, FunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/function:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/function:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Function(String name, Output<String> id, @Nullable FunctionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

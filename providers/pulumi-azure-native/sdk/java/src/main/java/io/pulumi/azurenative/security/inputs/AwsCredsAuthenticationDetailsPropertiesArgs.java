@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -36,7 +37,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
     @Import(name="awsAccessKeyId", required=true)
       private final Output<String> awsAccessKeyId;
 
-    public Output<String> getAwsAccessKeyId() {
+    public Output<String> awsAccessKeyId() {
         return this.awsAccessKeyId;
     }
 
@@ -47,7 +48,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
     @Import(name="awsSecretAccessKey", required=true)
       private final Output<String> awsSecretAccessKey;
 
-    public Output<String> getAwsSecretAccessKey() {
+    public Output<String> awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
 
@@ -61,9 +62,9 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
     }
 
     private AwsCredsAuthenticationDetailsPropertiesArgs() {
-        this.authenticationType = Output.empty();
-        this.awsAccessKeyId = Output.empty();
-        this.awsSecretAccessKey = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.awsAccessKeyId = Codegen.empty();
+        this.awsSecretAccessKey = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
     @Import(name="isCa", required=true)
       private final Output<Boolean> isCa;
 
-    public Output<Boolean> getIsCa() {
+    public Output<Boolean> isCa() {
         return this.isCa;
     }
 
@@ -34,8 +35,8 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
     @Import(name="maxIssuerPathLength")
       private final @Nullable Output<Integer> maxIssuerPathLength;
 
-    public Output<Integer> getMaxIssuerPathLength() {
-        return this.maxIssuerPathLength == null ? Output.empty() : this.maxIssuerPathLength;
+    public Output<Integer> maxIssuerPathLength() {
+        return this.maxIssuerPathLength == null ? Codegen.empty() : this.maxIssuerPathLength;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
     @Import(name="nonCa")
       private final @Nullable Output<Boolean> nonCa;
 
-    public Output<Boolean> getNonCa() {
-        return this.nonCa == null ? Output.empty() : this.nonCa;
+    public Output<Boolean> nonCa() {
+        return this.nonCa == null ? Codegen.empty() : this.nonCa;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
     @Import(name="zeroMaxIssuerPathLength")
       private final @Nullable Output<Boolean> zeroMaxIssuerPathLength;
 
-    public Output<Boolean> getZeroMaxIssuerPathLength() {
-        return this.zeroMaxIssuerPathLength == null ? Output.empty() : this.zeroMaxIssuerPathLength;
+    public Output<Boolean> zeroMaxIssuerPathLength() {
+        return this.zeroMaxIssuerPathLength == null ? Codegen.empty() : this.zeroMaxIssuerPathLength;
     }
 
     public AuthorityConfigX509ConfigCaOptionsArgs(
@@ -75,10 +76,10 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
     }
 
     private AuthorityConfigX509ConfigCaOptionsArgs() {
-        this.isCa = Output.empty();
-        this.maxIssuerPathLength = Output.empty();
-        this.nonCa = Output.empty();
-        this.zeroMaxIssuerPathLength = Output.empty();
+        this.isCa = Codegen.empty();
+        this.maxIssuerPathLength = Codegen.empty();
+        this.nonCa = Codegen.empty();
+        this.zeroMaxIssuerPathLength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
             return this;
         }
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
-            this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
+            this.maxIssuerPathLength = Codegen.ofNullable(maxIssuerPathLength);
             return this;
         }
         public Builder nonCa(@Nullable Output<Boolean> nonCa) {
@@ -128,7 +129,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
             return this;
         }
         public Builder nonCa(@Nullable Boolean nonCa) {
-            this.nonCa = Output.ofNullable(nonCa);
+            this.nonCa = Codegen.ofNullable(nonCa);
             return this;
         }
         public Builder zeroMaxIssuerPathLength(@Nullable Output<Boolean> zeroMaxIssuerPathLength) {
@@ -136,7 +137,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
             return this;
         }
         public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
-            this.zeroMaxIssuerPathLength = Output.ofNullable(zeroMaxIssuerPathLength);
+            this.zeroMaxIssuerPathLength = Codegen.ofNullable(zeroMaxIssuerPathLength);
             return this;
         }        public AuthorityConfigX509ConfigCaOptionsArgs build() {
             return new AuthorityConfigX509ConfigCaOptionsArgs(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
     @Import(name="layer7DdosDefenseConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> getLayer7DdosDefenseConfig() {
-        return this.layer7DdosDefenseConfig == null ? Output.empty() : this.layer7DdosDefenseConfig;
+    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig() {
+        return this.layer7DdosDefenseConfig == null ? Codegen.empty() : this.layer7DdosDefenseConfig;
     }
 
     public SecurityPolicyAdaptiveProtectionConfigArgs(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig) {
@@ -34,7 +35,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
     }
 
     private SecurityPolicyAdaptiveProtectionConfigArgs() {
-        this.layer7DdosDefenseConfig = Output.empty();
+        this.layer7DdosDefenseConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
             return this;
         }
         public Builder layer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs layer7DdosDefenseConfig) {
-            this.layer7DdosDefenseConfig = Output.ofNullable(layer7DdosDefenseConfig);
+            this.layer7DdosDefenseConfig = Codegen.ofNullable(layer7DdosDefenseConfig);
             return this;
         }        public SecurityPolicyAdaptiveProtectionConfigArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigArgs(layer7DdosDefenseConfig);

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Kind of service endpoint policy. This is metadata used for the Azure portal experience.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +73,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the service endpoint policy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the service endpoint policy resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -128,7 +129,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return A collection of service endpoint policy definitions of the service endpoint policy.
      * 
      */
-    public Output</* @Nullable */ List<ServiceEndpointPolicyDefinitionResponse>> getServiceEndpointPolicyDefinitions() {
+    public Output</* @Nullable */ List<ServiceEndpointPolicyDefinitionResponse>> serviceEndpointPolicyDefinitions() {
         return this.serviceEndpointPolicyDefinitions;
     }
     /**
@@ -142,7 +143,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return A collection of references to subnets.
      * 
      */
-    public Output<List<SubnetResponse>> getSubnets() {
+    public Output<List<SubnetResponse>> subnets() {
         return this.subnets;
     }
     /**
@@ -156,7 +157,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -170,7 +171,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -196,7 +197,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceEndpointPolicy(String name, ServiceEndpointPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ServiceEndpointPolicy", name, args == null ? ServiceEndpointPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ServiceEndpointPolicy", name, args == null ? ServiceEndpointPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceEndpointPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

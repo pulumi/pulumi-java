@@ -57,21 +57,21 @@ public final class AmazonS3LocationResponse {
      * Specify the bucketName of amazon S3. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getBucketName() {
+    public Optional<Object> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
@@ -79,14 +79,14 @@ public final class AmazonS3LocationResponse {
      * Expected value is 'AmazonS3Location'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Specify the version of amazon S3. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getVersion() {
+    public Optional<Object> version() {
         return Optional.ofNullable(this.version);
     }
 

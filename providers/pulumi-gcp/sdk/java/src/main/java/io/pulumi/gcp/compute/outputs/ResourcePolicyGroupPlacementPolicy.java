@@ -48,7 +48,7 @@ public final class ResourcePolicyGroupPlacementPolicy {
      * availability domain, they will not be put in the same low latency network
      * 
     */
-    public Optional<Integer> getAvailabilityDomainCount() {
+    public Optional<Integer> availabilityDomainCount() {
         return Optional.ofNullable(this.availabilityDomainCount);
     }
     /**
@@ -59,14 +59,14 @@ public final class ResourcePolicyGroupPlacementPolicy {
      * Possible values are `COLLOCATED`.
      * 
     */
-    public Optional<String> getCollocation() {
+    public Optional<String> collocation() {
         return Optional.ofNullable(this.collocation);
     }
     /**
      * Number of vms in this placement group.
      * 
     */
-    public Optional<Integer> getVmCount() {
+    public Optional<Integer> vmCount() {
         return Optional.ofNullable(this.vmCount);
     }
 

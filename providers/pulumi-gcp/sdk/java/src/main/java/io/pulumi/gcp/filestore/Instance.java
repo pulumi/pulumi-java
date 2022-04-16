@@ -6,6 +6,7 @@ package io.pulumi.gcp.filestore;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.filestore.InstanceArgs;
 import io.pulumi.gcp.filestore.inputs.InstanceState;
@@ -59,7 +60,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -73,7 +74,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A description of the instance.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +88,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -105,7 +106,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<InstanceFileShares> getFileShares() {
+    public Output<InstanceFileShares> fileShares() {
         return this.fileShares;
     }
     /**
@@ -119,7 +120,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -133,7 +134,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -147,7 +148,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the fileshare (16 characters or less)
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -165,7 +166,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<InstanceNetwork>> getNetworks() {
+    public Output<List<InstanceNetwork>> networks() {
         return this.networks;
     }
     /**
@@ -181,7 +182,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -197,7 +198,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
      * 
      */
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
     /**
@@ -219,7 +220,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the Filestore zone of the instance.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -245,7 +246,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:filestore/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:filestore/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable InstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

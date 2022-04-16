@@ -9,6 +9,7 @@ import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProduc
 import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProductTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,85 +23,85 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
     @Import(name="acceptLanguage")
       private final @Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
-    public Output<CloudFormationProvisionedProductAcceptLanguage> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+    public Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage() {
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> getNotificationArns() {
-        return this.notificationArns == null ? Output.empty() : this.notificationArns;
+    public Output<List<String>> notificationArns() {
+        return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
     }
 
     @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
-    public Output<String> getPathId() {
-        return this.pathId == null ? Output.empty() : this.pathId;
+    public Output<String> pathId() {
+        return this.pathId == null ? Codegen.empty() : this.pathId;
     }
 
     @Import(name="pathName")
       private final @Nullable Output<String> pathName;
 
-    public Output<String> getPathName() {
-        return this.pathName == null ? Output.empty() : this.pathName;
+    public Output<String> pathName() {
+        return this.pathName == null ? Codegen.empty() : this.pathName;
     }
 
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
-        return this.productId == null ? Output.empty() : this.productId;
+    public Output<String> productId() {
+        return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
-        return this.productName == null ? Output.empty() : this.productName;
+    public Output<String> productName() {
+        return this.productName == null ? Codegen.empty() : this.productName;
     }
 
     @Import(name="provisionedProductName")
       private final @Nullable Output<String> provisionedProductName;
 
-    public Output<String> getProvisionedProductName() {
-        return this.provisionedProductName == null ? Output.empty() : this.provisionedProductName;
+    public Output<String> provisionedProductName() {
+        return this.provisionedProductName == null ? Codegen.empty() : this.provisionedProductName;
     }
 
     @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
-        return this.provisioningArtifactId == null ? Output.empty() : this.provisioningArtifactId;
+    public Output<String> provisioningArtifactId() {
+        return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
     }
 
     @Import(name="provisioningArtifactName")
       private final @Nullable Output<String> provisioningArtifactName;
 
-    public Output<String> getProvisioningArtifactName() {
-        return this.provisioningArtifactName == null ? Output.empty() : this.provisioningArtifactName;
+    public Output<String> provisioningArtifactName() {
+        return this.provisioningArtifactName == null ? Codegen.empty() : this.provisioningArtifactName;
     }
 
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
-    public Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
-        return this.provisioningParameters == null ? Output.empty() : this.provisioningParameters;
+    public Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters() {
+        return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
     }
 
     @Import(name="provisioningPreferences")
       private final @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
 
-    public Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> getProvisioningPreferences() {
-        return this.provisioningPreferences == null ? Output.empty() : this.provisioningPreferences;
+    public Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences() {
+        return this.provisioningPreferences == null ? Codegen.empty() : this.provisioningPreferences;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags;
 
-    public Output<List<CloudFormationProvisionedProductTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<CloudFormationProvisionedProductTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CloudFormationProvisionedProductArgs(
@@ -131,18 +132,18 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
     }
 
     private CloudFormationProvisionedProductArgs() {
-        this.acceptLanguage = Output.empty();
-        this.notificationArns = Output.empty();
-        this.pathId = Output.empty();
-        this.pathName = Output.empty();
-        this.productId = Output.empty();
-        this.productName = Output.empty();
-        this.provisionedProductName = Output.empty();
-        this.provisioningArtifactId = Output.empty();
-        this.provisioningArtifactName = Output.empty();
-        this.provisioningParameters = Output.empty();
-        this.provisioningPreferences = Output.empty();
-        this.tags = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.notificationArns = Codegen.empty();
+        this.pathId = Codegen.empty();
+        this.pathName = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.productName = Codegen.empty();
+        this.provisionedProductName = Codegen.empty();
+        this.provisioningArtifactId = Codegen.empty();
+        this.provisioningArtifactName = Codegen.empty();
+        this.provisioningParameters = Codegen.empty();
+        this.provisioningPreferences = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder acceptLanguage(@Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
@@ -200,7 +201,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder notificationArns(@Nullable List<String> notificationArns) {
-            this.notificationArns = Output.ofNullable(notificationArns);
+            this.notificationArns = Codegen.ofNullable(notificationArns);
             return this;
         }
         public Builder notificationArns(String... notificationArns) {
@@ -211,7 +212,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder pathId(@Nullable String pathId) {
-            this.pathId = Output.ofNullable(pathId);
+            this.pathId = Codegen.ofNullable(pathId);
             return this;
         }
         public Builder pathName(@Nullable Output<String> pathName) {
@@ -219,7 +220,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder pathName(@Nullable String pathName) {
-            this.pathName = Output.ofNullable(pathName);
+            this.pathName = Codegen.ofNullable(pathName);
             return this;
         }
         public Builder productId(@Nullable Output<String> productId) {
@@ -227,7 +228,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder productId(@Nullable String productId) {
-            this.productId = Output.ofNullable(productId);
+            this.productId = Codegen.ofNullable(productId);
             return this;
         }
         public Builder productName(@Nullable Output<String> productName) {
@@ -235,7 +236,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder productName(@Nullable String productName) {
-            this.productName = Output.ofNullable(productName);
+            this.productName = Codegen.ofNullable(productName);
             return this;
         }
         public Builder provisionedProductName(@Nullable Output<String> provisionedProductName) {
@@ -243,7 +244,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder provisionedProductName(@Nullable String provisionedProductName) {
-            this.provisionedProductName = Output.ofNullable(provisionedProductName);
+            this.provisionedProductName = Codegen.ofNullable(provisionedProductName);
             return this;
         }
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
@@ -251,7 +252,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
-            this.provisioningArtifactId = Output.ofNullable(provisioningArtifactId);
+            this.provisioningArtifactId = Codegen.ofNullable(provisioningArtifactId);
             return this;
         }
         public Builder provisioningArtifactName(@Nullable Output<String> provisioningArtifactName) {
@@ -259,7 +260,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
-            this.provisioningArtifactName = Output.ofNullable(provisioningArtifactName);
+            this.provisioningArtifactName = Codegen.ofNullable(provisioningArtifactName);
             return this;
         }
         public Builder provisioningParameters(@Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
@@ -267,7 +268,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder provisioningParameters(@Nullable List<CloudFormationProvisionedProductProvisioningParameterArgs> provisioningParameters) {
-            this.provisioningParameters = Output.ofNullable(provisioningParameters);
+            this.provisioningParameters = Codegen.ofNullable(provisioningParameters);
             return this;
         }
         public Builder provisioningParameters(CloudFormationProvisionedProductProvisioningParameterArgs... provisioningParameters) {
@@ -278,7 +279,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder provisioningPreferences(@Nullable CloudFormationProvisionedProductProvisioningPreferencesArgs provisioningPreferences) {
-            this.provisioningPreferences = Output.ofNullable(provisioningPreferences);
+            this.provisioningPreferences = Codegen.ofNullable(provisioningPreferences);
             return this;
         }
         public Builder tags(@Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags) {
@@ -286,7 +287,7 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
             return this;
         }
         public Builder tags(@Nullable List<CloudFormationProvisionedProductTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(CloudFormationProvisionedProductTagArgs... tags) {

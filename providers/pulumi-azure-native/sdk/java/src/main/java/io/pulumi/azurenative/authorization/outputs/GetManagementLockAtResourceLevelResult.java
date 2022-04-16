@@ -64,42 +64,42 @@ public final class GetManagementLockAtResourceLevelResult {
      * The resource ID of the lock.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
      * 
     */
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
     /**
      * The name of the lock.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Notes about the lock. Maximum of 512 characters.
      * 
     */
-    public Optional<String> getNotes() {
+    public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * The owners of the lock.
      * 
     */
-    public List<ManagementLockOwnerResponse> getOwners() {
+    public List<ManagementLockOwnerResponse> owners() {
         return this.owners == null ? List.of() : this.owners;
     }
     /**
      * The resource type of the lock - Microsoft.Authorization/locks.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.gcp.tags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagBindingArgs;
 import io.pulumi.gcp.tags.inputs.TagBindingState;
@@ -49,7 +50,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * @return The generated id for the TagBinding. This is a string of the form: 'tagBindings/{full-resource-name}/{tag-value-name}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -63,7 +64,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * @return The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -77,7 +78,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * @return The TagValue of the TagBinding. Must be of the form tagValues/456.
      * 
      */
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 
@@ -103,7 +104,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagBinding(String name, TagBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:tags/tagBinding:TagBinding", name, args == null ? TagBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:tags/tagBinding:TagBinding", name, args == null ? TagBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagBinding(String name, Output<String> id, @Nullable TagBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

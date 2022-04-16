@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicySchemaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,8 +34,8 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="blobInventoryPolicyName")
       private final @Nullable Output<String> blobInventoryPolicyName;
 
-    public Output<String> getBlobInventoryPolicyName() {
-        return this.blobInventoryPolicyName == null ? Output.empty() : this.blobInventoryPolicyName;
+    public Output<String> blobInventoryPolicyName() {
+        return this.blobInventoryPolicyName == null ? Codegen.empty() : this.blobInventoryPolicyName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="policy", required=true)
       private final Output<BlobInventoryPolicySchemaArgs> policy;
 
-    public Output<BlobInventoryPolicySchemaArgs> getPolicy() {
+    public Output<BlobInventoryPolicySchemaArgs> policy() {
         return this.policy;
     }
 
@@ -55,7 +56,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,10 +72,10 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private BlobInventoryPolicyArgs() {
-        this.accountName = Output.empty();
-        this.blobInventoryPolicyName = Output.empty();
-        this.policy = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.blobInventoryPolicyName = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder blobInventoryPolicyName(@Nullable String blobInventoryPolicyName) {
-            this.blobInventoryPolicyName = Output.ofNullable(blobInventoryPolicyName);
+            this.blobInventoryPolicyName = Codegen.ofNullable(blobInventoryPolicyName);
             return this;
         }
         public Builder policy(Output<BlobInventoryPolicySchemaArgs> policy) {

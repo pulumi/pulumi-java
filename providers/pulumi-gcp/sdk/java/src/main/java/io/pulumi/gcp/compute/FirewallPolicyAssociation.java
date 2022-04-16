@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.FirewallPolicyAssociationArgs;
 import io.pulumi.gcp.compute.inputs.FirewallPolicyAssociationState;
@@ -45,7 +46,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The target that the firewall policy is attached to.
      * 
      */
-    public Output<String> getAttachmentTarget() {
+    public Output<String> attachmentTarget() {
         return this.attachmentTarget;
     }
     /**
@@ -59,7 +60,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The firewall policy ID of the association.
      * 
      */
-    public Output<String> getFirewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy;
     }
     /**
@@ -73,7 +74,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The name for an association.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The short name of the firewall policy of the association.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
 
@@ -113,7 +114,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallPolicyAssociation(String name, FirewallPolicyAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/firewallPolicyAssociation:FirewallPolicyAssociation", name, args == null ? FirewallPolicyAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/firewallPolicyAssociation:FirewallPolicyAssociation", name, args == null ? FirewallPolicyAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirewallPolicyAssociation(String name, Output<String> id, @Nullable FirewallPolicyAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

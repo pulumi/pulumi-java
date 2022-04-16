@@ -32,14 +32,14 @@ public final class LinkResponse {
      * Type of link
      * 
     */
-    public String getLinkType() {
+    public String linkType() {
         return this.linkType;
     }
     /**
      * Url of the link
      * 
     */
-    public String getLinkUrl() {
+    public String linkUrl() {
         return this.linkUrl;
     }
 

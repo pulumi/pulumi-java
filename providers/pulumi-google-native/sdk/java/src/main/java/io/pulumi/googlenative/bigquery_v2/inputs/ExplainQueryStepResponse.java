@@ -20,7 +20,7 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -31,7 +31,7 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
     @Import(name="substeps", required=true)
       private final List<String> substeps;
 
-    public List<String> getSubsteps() {
+    public List<String> substeps() {
         return this.substeps;
     }
 

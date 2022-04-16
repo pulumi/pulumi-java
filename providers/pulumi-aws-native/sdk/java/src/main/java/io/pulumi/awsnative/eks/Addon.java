@@ -10,6 +10,7 @@ import io.pulumi.awsnative.eks.outputs.AddonTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Name of Addon
      * 
      */
-    public Output<String> getAddonName() {
+    public Output<String> addonName() {
         return this.addonName;
     }
     /**
@@ -45,7 +46,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Version of Addon
      * 
      */
-    public Output</* @Nullable */ String> getAddonVersion() {
+    public Output</* @Nullable */ String> addonVersion() {
         return this.addonVersion;
     }
     /**
@@ -59,7 +60,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the add-on
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -73,7 +74,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Name of Cluster
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -87,7 +88,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Resolve parameter value conflicts
      * 
      */
-    public Output</* @Nullable */ AddonResolveConflicts> getResolveConflicts() {
+    public Output</* @Nullable */ AddonResolveConflicts> resolveConflicts() {
         return this.resolveConflicts;
     }
     /**
@@ -101,7 +102,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return IAM role to bind to the add-on's service account
      * 
      */
-    public Output</* @Nullable */ String> getServiceAccountRoleArn() {
+    public Output</* @Nullable */ String> serviceAccountRoleArn() {
         return this.serviceAccountRoleArn;
     }
     /**
@@ -115,7 +116,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<AddonTag>> getTags() {
+    public Output</* @Nullable */ List<AddonTag>> tags() {
         return this.tags;
     }
 
@@ -141,7 +142,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Addon(String name, AddonArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:eks:Addon", name, args == null ? AddonArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:eks:Addon", name, args == null ? AddonArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Addon(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -12,6 +12,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLTagArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLVisibilityConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,36 +26,36 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="captchaConfig")
       private final @Nullable Output<WebACLCaptchaConfigArgs> captchaConfig;
 
-    public Output<WebACLCaptchaConfigArgs> getCaptchaConfig() {
-        return this.captchaConfig == null ? Output.empty() : this.captchaConfig;
+    public Output<WebACLCaptchaConfigArgs> captchaConfig() {
+        return this.captchaConfig == null ? Codegen.empty() : this.captchaConfig;
     }
 
     @Import(name="customResponseBodies")
       private final @Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies;
 
-    public Output<WebACLCustomResponseBodiesArgs> getCustomResponseBodies() {
-        return this.customResponseBodies == null ? Output.empty() : this.customResponseBodies;
+    public Output<WebACLCustomResponseBodiesArgs> customResponseBodies() {
+        return this.customResponseBodies == null ? Codegen.empty() : this.customResponseBodies;
     }
 
     @Import(name="defaultAction", required=true)
       private final Output<WebACLDefaultActionArgs> defaultAction;
 
-    public Output<WebACLDefaultActionArgs> getDefaultAction() {
+    public Output<WebACLDefaultActionArgs> defaultAction() {
         return this.defaultAction;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -64,28 +65,28 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<WebACLRuleArgs>> rules;
 
-    public Output<List<WebACLRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<WebACLRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     @Import(name="scope", required=true)
       private final Output<WebACLScope> scope;
 
-    public Output<WebACLScope> getScope() {
+    public Output<WebACLScope> scope() {
         return this.scope;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<WebACLTagArgs>> tags;
 
-    public Output<List<WebACLTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<WebACLTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="visibilityConfig", required=true)
       private final Output<WebACLVisibilityConfigArgs> visibilityConfig;
 
-    public Output<WebACLVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<WebACLVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 
@@ -111,15 +112,15 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebACLArgs() {
-        this.captchaConfig = Output.empty();
-        this.customResponseBodies = Output.empty();
-        this.defaultAction = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.rules = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
-        this.visibilityConfig = Output.empty();
+        this.captchaConfig = Codegen.empty();
+        this.customResponseBodies = Codegen.empty();
+        this.defaultAction = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.visibilityConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder captchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
-            this.captchaConfig = Output.ofNullable(captchaConfig);
+            this.captchaConfig = Codegen.ofNullable(captchaConfig);
             return this;
         }
         public Builder customResponseBodies(@Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies) {
@@ -171,7 +172,7 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customResponseBodies(@Nullable WebACLCustomResponseBodiesArgs customResponseBodies) {
-            this.customResponseBodies = Output.ofNullable(customResponseBodies);
+            this.customResponseBodies = Codegen.ofNullable(customResponseBodies);
             return this;
         }
         public Builder defaultAction(Output<WebACLDefaultActionArgs> defaultAction) {
@@ -187,7 +188,7 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -195,7 +196,7 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rules(@Nullable Output<List<WebACLRuleArgs>> rules) {
@@ -203,7 +204,7 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<WebACLRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(WebACLRuleArgs... rules) {
@@ -222,7 +223,7 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<WebACLTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(WebACLTagArgs... tags) {

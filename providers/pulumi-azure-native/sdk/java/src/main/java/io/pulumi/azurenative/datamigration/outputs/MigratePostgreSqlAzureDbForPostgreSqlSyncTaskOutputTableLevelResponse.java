@@ -125,77 +125,77 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Number of applied deletes
      * 
     */
-    public Double getCdcDeleteCounter() {
+    public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
     /**
      * Number of applied inserts
      * 
     */
-    public Double getCdcInsertCounter() {
+    public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
     }
     /**
      * Number of applied updates
      * 
     */
-    public Double getCdcUpdateCounter() {
+    public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
     /**
      * Number of data errors occurred
      * 
     */
-    public Double getDataErrorsCounter() {
+    public Double dataErrorsCounter() {
         return this.dataErrorsCounter;
     }
     /**
      * Name of the database
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * Full load end time
      * 
     */
-    public String getFullLoadEndedOn() {
+    public String fullLoadEndedOn() {
         return this.fullLoadEndedOn;
     }
     /**
      * Estimate to finish full load
      * 
     */
-    public String getFullLoadEstFinishTime() {
+    public String fullLoadEstFinishTime() {
         return this.fullLoadEstFinishTime;
     }
     /**
      * Full load start time
      * 
     */
-    public String getFullLoadStartedOn() {
+    public String fullLoadStartedOn() {
         return this.fullLoadStartedOn;
     }
     /**
      * Number of rows applied in full load
      * 
     */
-    public Double getFullLoadTotalRows() {
+    public Double fullLoadTotalRows() {
         return this.fullLoadTotalRows;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Last modified time on target
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -203,28 +203,28 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * Expected value is 'TableLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Current state of the table migration
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Name of the table
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
     /**
      * Total number of applied changes
      * 
     */
-    public Double getTotalChangesApplied() {
+    public Double totalChangesApplied() {
         return this.totalChangesApplied;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway;
 import io.pulumi.aws.apigateway.inputs.StageAccessLogSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessLogSettings")
       private final @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
-    public Output<StageAccessLogSettingsArgs> getAccessLogSettings() {
-        return this.accessLogSettings == null ? Output.empty() : this.accessLogSettings;
+    public Output<StageAccessLogSettingsArgs> accessLogSettings() {
+        return this.accessLogSettings == null ? Codegen.empty() : this.accessLogSettings;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
-    public Output<Boolean> getCacheClusterEnabled() {
-        return this.cacheClusterEnabled == null ? Output.empty() : this.cacheClusterEnabled;
+    public Output<Boolean> cacheClusterEnabled() {
+        return this.cacheClusterEnabled == null ? Codegen.empty() : this.cacheClusterEnabled;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
 
-    public Output<String> getCacheClusterSize() {
-        return this.cacheClusterSize == null ? Output.empty() : this.cacheClusterSize;
+    public Output<String> cacheClusterSize() {
+        return this.cacheClusterSize == null ? Codegen.empty() : this.cacheClusterSize;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
-    public Output<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
+    public Output<String> clientCertificateId() {
+        return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployment", required=true)
       private final Output<String> deployment;
 
-    public Output<String> getDeployment() {
+    public Output<String> deployment() {
         return this.deployment;
     }
 
@@ -79,8 +80,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
 
-    public Output<String> getDocumentationVersion() {
-        return this.documentationVersion == null ? Output.empty() : this.documentationVersion;
+    public Output<String> documentationVersion() {
+        return this.documentationVersion == null ? Codegen.empty() : this.documentationVersion;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -112,7 +113,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageName", required=true)
       private final Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
 
@@ -123,8 +124,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+    public Output<Map<String,String>> variables() {
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xrayTracingEnabled")
       private final @Nullable Output<Boolean> xrayTracingEnabled;
 
-    public Output<Boolean> getXrayTracingEnabled() {
-        return this.xrayTracingEnabled == null ? Output.empty() : this.xrayTracingEnabled;
+    public Output<Boolean> xrayTracingEnabled() {
+        return this.xrayTracingEnabled == null ? Codegen.empty() : this.xrayTracingEnabled;
     }
 
     public StageArgs(
@@ -177,18 +178,18 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StageArgs() {
-        this.accessLogSettings = Output.empty();
-        this.cacheClusterEnabled = Output.empty();
-        this.cacheClusterSize = Output.empty();
-        this.clientCertificateId = Output.empty();
-        this.deployment = Output.empty();
-        this.description = Output.empty();
-        this.documentationVersion = Output.empty();
-        this.restApi = Output.empty();
-        this.stageName = Output.empty();
-        this.tags = Output.empty();
-        this.variables = Output.empty();
-        this.xrayTracingEnabled = Output.empty();
+        this.accessLogSettings = Codegen.empty();
+        this.cacheClusterEnabled = Codegen.empty();
+        this.cacheClusterSize = Codegen.empty();
+        this.clientCertificateId = Codegen.empty();
+        this.deployment = Codegen.empty();
+        this.description = Codegen.empty();
+        this.documentationVersion = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.stageName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.variables = Codegen.empty();
+        this.xrayTracingEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -238,7 +239,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessLogSettings(@Nullable StageAccessLogSettingsArgs accessLogSettings) {
-            this.accessLogSettings = Output.ofNullable(accessLogSettings);
+            this.accessLogSettings = Codegen.ofNullable(accessLogSettings);
             return this;
         }
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
@@ -246,7 +247,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
-            this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
+            this.cacheClusterEnabled = Codegen.ofNullable(cacheClusterEnabled);
             return this;
         }
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
@@ -254,7 +255,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
-            this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
+            this.cacheClusterSize = Codegen.ofNullable(cacheClusterSize);
             return this;
         }
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
@@ -262,7 +263,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Output.ofNullable(clientCertificateId);
+            this.clientCertificateId = Codegen.ofNullable(clientCertificateId);
             return this;
         }
         public Builder deployment(Output<String> deployment) {
@@ -274,7 +275,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
@@ -282,7 +283,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentationVersion(@Nullable String documentationVersion) {
-            this.documentationVersion = Output.ofNullable(documentationVersion);
+            this.documentationVersion = Codegen.ofNullable(documentationVersion);
             return this;
         }
         public Builder restApi(Output<String> restApi) {
@@ -302,7 +303,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
@@ -310,7 +311,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }
         public Builder xrayTracingEnabled(@Nullable Output<Boolean> xrayTracingEnabled) {
@@ -318,7 +319,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
-            this.xrayTracingEnabled = Output.ofNullable(xrayTracingEnabled);
+            this.xrayTracingEnabled = Codegen.ofNullable(xrayTracingEnabled);
             return this;
         }        public StageArgs build() {
             return new StageArgs(accessLogSettings, cacheClusterEnabled, cacheClusterSize, clientCertificateId, deployment, description, documentationVersion, restApi, stageName, tags, variables, xrayTracingEnabled);

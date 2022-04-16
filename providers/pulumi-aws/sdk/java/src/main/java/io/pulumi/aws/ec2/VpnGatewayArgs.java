@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
-    public Output<String> getAmazonSideAsn() {
-        return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
+    public Output<String> amazonSideAsn() {
+        return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public VpnGatewayArgs(
@@ -71,10 +72,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnGatewayArgs() {
-        this.amazonSideAsn = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.amazonSideAsn = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
-            this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
+            this.amazonSideAsn = Codegen.ofNullable(amazonSideAsn);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -116,7 +117,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -124,7 +125,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -132,7 +133,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public VpnGatewayArgs build() {
             return new VpnGatewayArgs(amazonSideAsn, availabilityZone, tags, vpcId);

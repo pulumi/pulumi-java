@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
     @Import(name="classic")
       private final @Nullable Output<Boolean> classic;
 
-    public Output<Boolean> getClassic() {
-        return this.classic == null ? Output.empty() : this.classic;
+    public Output<Boolean> classic() {
+        return this.classic == null ? Codegen.empty() : this.classic;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -45,8 +46,8 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
     @Import(name="clusterType")
       private final @Nullable Output<String> clusterType;
 
-    public Output<String> getClusterType() {
-        return this.clusterType == null ? Output.empty() : this.clusterType;
+    public Output<String> clusterType() {
+        return this.clusterType == null ? Codegen.empty() : this.clusterType;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
     @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
-    public Output<String> getNodeType() {
-        return this.nodeType == null ? Output.empty() : this.nodeType;
+    public Output<String> nodeType() {
+        return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
     @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> getNumberOfNodes() {
-        return this.numberOfNodes == null ? Output.empty() : this.numberOfNodes;
+    public Output<Integer> numberOfNodes() {
+        return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
     }
 
     public ScheduledActionTargetActionResizeClusterGetArgs(
@@ -85,11 +86,11 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
     }
 
     private ScheduledActionTargetActionResizeClusterGetArgs() {
-        this.classic = Output.empty();
-        this.clusterIdentifier = Output.empty();
-        this.clusterType = Output.empty();
-        this.nodeType = Output.empty();
-        this.numberOfNodes = Output.empty();
+        this.classic = Codegen.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.clusterType = Codegen.empty();
+        this.nodeType = Codegen.empty();
+        this.numberOfNodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
             return this;
         }
         public Builder classic(@Nullable Boolean classic) {
-            this.classic = Output.ofNullable(classic);
+            this.classic = Codegen.ofNullable(classic);
             return this;
         }
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
@@ -141,7 +142,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
             return this;
         }
         public Builder clusterType(@Nullable String clusterType) {
-            this.clusterType = Output.ofNullable(clusterType);
+            this.clusterType = Codegen.ofNullable(clusterType);
             return this;
         }
         public Builder nodeType(@Nullable Output<String> nodeType) {
@@ -149,7 +150,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
             return this;
         }
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Output.ofNullable(nodeType);
+            this.nodeType = Codegen.ofNullable(nodeType);
             return this;
         }
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
@@ -157,7 +158,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
             return this;
         }
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Output.ofNullable(numberOfNodes);
+            this.numberOfNodes = Codegen.ofNullable(numberOfNodes);
             return this;
         }        public ScheduledActionTargetActionResizeClusterGetArgs build() {
             return new ScheduledActionTargetActionResizeClusterGetArgs(classic, clusterIdentifier, clusterType, nodeType, numberOfNodes);

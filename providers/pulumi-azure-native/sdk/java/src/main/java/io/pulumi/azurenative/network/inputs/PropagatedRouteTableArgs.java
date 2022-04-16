@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
     @Import(name="ids")
       private final @Nullable Output<List<SubResourceArgs>> ids;
 
-    public Output<List<SubResourceArgs>> getIds() {
-        return this.ids == null ? Output.empty() : this.ids;
+    public Output<List<SubResourceArgs>> ids() {
+        return this.ids == null ? Codegen.empty() : this.ids;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public PropagatedRouteTableArgs(
@@ -50,8 +51,8 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
     }
 
     private PropagatedRouteTableArgs() {
-        this.ids = Output.empty();
-        this.labels = Output.empty();
+        this.ids = Codegen.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ids(@Nullable List<SubResourceArgs> ids) {
-            this.ids = Output.ofNullable(ids);
+            this.ids = Codegen.ofNullable(ids);
             return this;
         }
         public Builder ids(SubResourceArgs... ids) {
@@ -92,7 +93,7 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(String... labels) {

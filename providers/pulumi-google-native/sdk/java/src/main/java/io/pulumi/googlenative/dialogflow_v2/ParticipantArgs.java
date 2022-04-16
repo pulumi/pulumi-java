@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.enums.ParticipantRole;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +20,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationId", required=true)
       private final Output<String> conversationId;
 
-    public Output<String> getConversationId() {
+    public Output<String> conversationId() {
         return this.conversationId;
     }
 
@@ -30,15 +31,15 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentsMetadataFilters")
       private final @Nullable Output<Map<String,String>> documentsMetadataFilters;
 
-    public Output<Map<String,String>> getDocumentsMetadataFilters() {
-        return this.documentsMetadataFilters == null ? Output.empty() : this.documentsMetadataFilters;
+    public Output<Map<String,String>> documentsMetadataFilters() {
+        return this.documentsMetadataFilters == null ? Codegen.empty() : this.documentsMetadataFilters;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,15 +49,15 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<ParticipantRole> role;
 
-    public Output<ParticipantRole> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<ParticipantRole> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sipRecordingMediaLabel")
       private final @Nullable Output<String> sipRecordingMediaLabel;
 
-    public Output<String> getSipRecordingMediaLabel() {
-        return this.sipRecordingMediaLabel == null ? Output.empty() : this.sipRecordingMediaLabel;
+    public Output<String> sipRecordingMediaLabel() {
+        return this.sipRecordingMediaLabel == null ? Codegen.empty() : this.sipRecordingMediaLabel;
     }
 
     public ParticipantArgs(
@@ -99,13 +100,13 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParticipantArgs() {
-        this.conversationId = Output.empty();
-        this.documentsMetadataFilters = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.sipRecordingMediaLabel = Output.empty();
+        this.conversationId = Codegen.empty();
+        this.documentsMetadataFilters = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.sipRecordingMediaLabel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentsMetadataFilters(@Nullable Map<String,String> documentsMetadataFilters) {
-            this.documentsMetadataFilters = Output.ofNullable(documentsMetadataFilters);
+            this.documentsMetadataFilters = Codegen.ofNullable(documentsMetadataFilters);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -161,7 +162,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -169,7 +170,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -177,7 +178,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<ParticipantRole> role) {
@@ -185,7 +186,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable ParticipantRole role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder sipRecordingMediaLabel(@Nullable Output<String> sipRecordingMediaLabel) {
@@ -193,7 +194,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sipRecordingMediaLabel(@Nullable String sipRecordingMediaLabel) {
-            this.sipRecordingMediaLabel = Output.ofNullable(sipRecordingMediaLabel);
+            this.sipRecordingMediaLabel = Codegen.ofNullable(sipRecordingMediaLabel);
             return this;
         }        public ParticipantArgs build() {
             return new ParticipantArgs(conversationId, documentsMetadataFilters, location, name, project, role, sipRecordingMediaLabel);

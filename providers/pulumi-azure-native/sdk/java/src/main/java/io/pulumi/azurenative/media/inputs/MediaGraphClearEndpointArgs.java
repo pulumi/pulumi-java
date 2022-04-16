@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentialsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     @Import(name="credentials")
       private final @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
-    public Output<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+    public Output<MediaGraphUsernamePasswordCredentialsArgs> credentials() {
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -49,7 +50,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -63,9 +64,9 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     }
 
     private MediaGraphClearEndpointArgs() {
-        this.credentials = Output.empty();
-        this.odataType = Output.empty();
-        this.url = Output.empty();
+        this.credentials = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

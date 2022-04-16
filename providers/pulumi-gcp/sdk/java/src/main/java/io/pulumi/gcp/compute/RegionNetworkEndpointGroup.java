@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionNetworkEndpointGroupArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupState;
@@ -64,7 +65,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionNetworkEndpointGroupAppEngine> getAppEngine() {
+    public Output</* @Nullable */ RegionNetworkEndpointGroupAppEngine> appEngine() {
         return this.appEngine;
     }
     /**
@@ -82,7 +83,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionNetworkEndpointGroupCloudFunction> getCloudFunction() {
+    public Output</* @Nullable */ RegionNetworkEndpointGroupCloudFunction> cloudFunction() {
         return this.cloudFunction;
     }
     /**
@@ -100,7 +101,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionNetworkEndpointGroupCloudRun> getCloudRun() {
+    public Output</* @Nullable */ RegionNetworkEndpointGroupCloudRun> cloudRun() {
         return this.cloudRun;
     }
     /**
@@ -116,7 +117,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -142,7 +143,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +161,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Possible values are `SERVERLESS`.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkEndpointType() {
+    public Output</* @Nullable */ String> networkEndpointType() {
         return this.networkEndpointType;
     }
     /**
@@ -176,7 +177,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -190,7 +191,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return A reference to the region where the Serverless NEGs Reside.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -204,7 +205,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -230,7 +231,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionNetworkEndpointGroup(String name, RegionNetworkEndpointGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup", name, args == null ? RegionNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup", name, args == null ? RegionNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionNetworkEndpointGroup(String name, Output<String> id, @Nullable RegionNetworkEndpointGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

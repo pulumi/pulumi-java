@@ -7,6 +7,7 @@ import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationNfsExpor
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="copyTagsToSnapshots")
       private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
-    public Output<Boolean> getCopyTagsToSnapshots() {
-        return this.copyTagsToSnapshots == null ? Output.empty() : this.copyTagsToSnapshots;
+    public Output<Boolean> copyTagsToSnapshots() {
+        return this.copyTagsToSnapshots == null ? Codegen.empty() : this.copyTagsToSnapshots;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="dataCompressionType")
       private final @Nullable Output<String> dataCompressionType;
 
-    public Output<String> getDataCompressionType() {
-        return this.dataCompressionType == null ? Output.empty() : this.dataCompressionType;
+    public Output<String> dataCompressionType() {
+        return this.dataCompressionType == null ? Codegen.empty() : this.dataCompressionType;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="nfsExports")
       private final @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports;
 
-    public Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> getNfsExports() {
-        return this.nfsExports == null ? Output.empty() : this.nfsExports;
+    public Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports() {
+        return this.nfsExports == null ? Codegen.empty() : this.nfsExports;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="userAndGroupQuotas")
       private final @Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
-    public Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> getUserAndGroupQuotas() {
-        return this.userAndGroupQuotas == null ? Output.empty() : this.userAndGroupQuotas;
+    public Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas() {
+        return this.userAndGroupQuotas == null ? Codegen.empty() : this.userAndGroupQuotas;
     }
 
     public OpenZfsFileSystemRootVolumeConfigurationArgs(
@@ -87,11 +88,11 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     }
 
     private OpenZfsFileSystemRootVolumeConfigurationArgs() {
-        this.copyTagsToSnapshots = Output.empty();
-        this.dataCompressionType = Output.empty();
-        this.nfsExports = Output.empty();
-        this.readOnly = Output.empty();
-        this.userAndGroupQuotas = Output.empty();
+        this.copyTagsToSnapshots = Codegen.empty();
+        this.dataCompressionType = Codegen.empty();
+        this.nfsExports = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.userAndGroupQuotas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
             return this;
         }
         public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
-            this.copyTagsToSnapshots = Output.ofNullable(copyTagsToSnapshots);
+            this.copyTagsToSnapshots = Codegen.ofNullable(copyTagsToSnapshots);
             return this;
         }
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
@@ -135,7 +136,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
             return this;
         }
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
-            this.dataCompressionType = Output.ofNullable(dataCompressionType);
+            this.dataCompressionType = Codegen.ofNullable(dataCompressionType);
             return this;
         }
         public Builder nfsExports(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports) {
@@ -143,7 +144,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
             return this;
         }
         public Builder nfsExports(@Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs nfsExports) {
-            this.nfsExports = Output.ofNullable(nfsExports);
+            this.nfsExports = Codegen.ofNullable(nfsExports);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -151,7 +152,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas) {
@@ -159,7 +160,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
             return this;
         }
         public Builder userAndGroupQuotas(@Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs> userAndGroupQuotas) {
-            this.userAndGroupQuotas = Output.ofNullable(userAndGroupQuotas);
+            this.userAndGroupQuotas = Codegen.ofNullable(userAndGroupQuotas);
             return this;
         }
         public Builder userAndGroupQuotas(OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs... userAndGroupQuotas) {

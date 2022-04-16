@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2RestrictionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,29 +23,29 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+    public Output<String> keyId() {
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restrictions")
       private final @Nullable Output<V2RestrictionsArgs> restrictions;
 
-    public Output<V2RestrictionsArgs> getRestrictions() {
-        return this.restrictions == null ? Output.empty() : this.restrictions;
+    public Output<V2RestrictionsArgs> restrictions() {
+        return this.restrictions == null ? Codegen.empty() : this.restrictions;
     }
 
     public KeyArgs(
@@ -72,11 +73,11 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.displayName = Output.empty();
-        this.keyId = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.restrictions = Output.empty();
+        this.displayName = Codegen.empty();
+        this.keyId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.restrictions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder keyId(@Nullable Output<String> keyId) {
@@ -120,7 +121,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -128,7 +129,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -136,7 +137,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder restrictions(@Nullable Output<V2RestrictionsArgs> restrictions) {
@@ -144,7 +145,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restrictions(@Nullable V2RestrictionsArgs restrictions) {
-            this.restrictions = Output.ofNullable(restrictions);
+            this.restrictions = Codegen.ofNullable(restrictions);
             return this;
         }        public KeyArgs build() {
             return new KeyArgs(displayName, keyId, location, project, restrictions);

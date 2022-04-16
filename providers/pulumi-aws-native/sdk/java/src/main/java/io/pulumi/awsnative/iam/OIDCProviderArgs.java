@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iam;
 import io.pulumi.awsnative.iam.inputs.OIDCProviderTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,29 +20,29 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientIdList")
       private final @Nullable Output<List<String>> clientIdList;
 
-    public Output<List<String>> getClientIdList() {
-        return this.clientIdList == null ? Output.empty() : this.clientIdList;
+    public Output<List<String>> clientIdList() {
+        return this.clientIdList == null ? Codegen.empty() : this.clientIdList;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<OIDCProviderTagArgs>> tags;
 
-    public Output<List<OIDCProviderTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<OIDCProviderTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="thumbprintList", required=true)
       private final Output<List<String>> thumbprintList;
 
-    public Output<List<String>> getThumbprintList() {
+    public Output<List<String>> thumbprintList() {
         return this.thumbprintList;
     }
 
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public OIDCProviderArgs(
@@ -56,10 +57,10 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OIDCProviderArgs() {
-        this.clientIdList = Output.empty();
-        this.tags = Output.empty();
-        this.thumbprintList = Output.empty();
-        this.url = Output.empty();
+        this.clientIdList = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.thumbprintList = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientIdList(@Nullable List<String> clientIdList) {
-            this.clientIdList = Output.ofNullable(clientIdList);
+            this.clientIdList = Codegen.ofNullable(clientIdList);
             return this;
         }
         public Builder clientIdList(String... clientIdList) {
@@ -104,7 +105,7 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<OIDCProviderTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(OIDCProviderTagArgs... tags) {
@@ -126,7 +127,7 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public OIDCProviderArgs build() {
             return new OIDCProviderArgs(clientIdList, tags, thumbprintList, url);

@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClusterOpenMonitoringPrometheusNodeExporterGetArgs extends io
     @Import(name="enabledInBroker", required=true)
       private final Output<Boolean> enabledInBroker;
 
-    public Output<Boolean> getEnabledInBroker() {
+    public Output<Boolean> enabledInBroker() {
         return this.enabledInBroker;
     }
 
@@ -29,7 +30,7 @@ public final class ClusterOpenMonitoringPrometheusNodeExporterGetArgs extends io
     }
 
     private ClusterOpenMonitoringPrometheusNodeExporterGetArgs() {
-        this.enabledInBroker = Output.empty();
+        this.enabledInBroker = Codegen.empty();
     }
 
     public static Builder builder() {

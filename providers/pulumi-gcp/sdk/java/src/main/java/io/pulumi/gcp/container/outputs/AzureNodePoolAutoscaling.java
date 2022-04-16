@@ -32,14 +32,14 @@ public final class AzureNodePoolAutoscaling {
      * Required. Maximum number of nodes in the node pool. Must be >= min_node_count.
      * 
     */
-    public Integer getMaxNodeCount() {
+    public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
     /**
      * Required. Minimum number of nodes in the node pool. Must be >= 1 and <= max_node_count.
      * 
     */
-    public Integer getMinNodeCount() {
+    public Integer minNodeCount() {
         return this.minNodeCount;
     }
 

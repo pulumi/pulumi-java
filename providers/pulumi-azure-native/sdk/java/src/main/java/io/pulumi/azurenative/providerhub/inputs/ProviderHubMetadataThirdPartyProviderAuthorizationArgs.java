@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.LightHouseAuthorizationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     @Import(name="authorizations")
       private final @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations;
 
-    public Output<List<LightHouseAuthorizationArgs>> getAuthorizations() {
-        return this.authorizations == null ? Output.empty() : this.authorizations;
+    public Output<List<LightHouseAuthorizationArgs>> authorizations() {
+        return this.authorizations == null ? Codegen.empty() : this.authorizations;
     }
 
     @Import(name="managedByTenantId")
       private final @Nullable Output<String> managedByTenantId;
 
-    public Output<String> getManagedByTenantId() {
-        return this.managedByTenantId == null ? Output.empty() : this.managedByTenantId;
+    public Output<String> managedByTenantId() {
+        return this.managedByTenantId == null ? Codegen.empty() : this.managedByTenantId;
     }
 
     public ProviderHubMetadataThirdPartyProviderAuthorizationArgs(
@@ -38,8 +39,8 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     }
 
     private ProviderHubMetadataThirdPartyProviderAuthorizationArgs() {
-        this.authorizations = Output.empty();
-        this.managedByTenantId = Output.empty();
+        this.authorizations = Codegen.empty();
+        this.managedByTenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
             return this;
         }
         public Builder authorizations(@Nullable List<LightHouseAuthorizationArgs> authorizations) {
-            this.authorizations = Output.ofNullable(authorizations);
+            this.authorizations = Codegen.ofNullable(authorizations);
             return this;
         }
         public Builder authorizations(LightHouseAuthorizationArgs... authorizations) {
@@ -80,7 +81,7 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
             return this;
         }
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
-            this.managedByTenantId = Output.ofNullable(managedByTenantId);
+            this.managedByTenantId = Codegen.ofNullable(managedByTenantId);
             return this;
         }        public ProviderHubMetadataThirdPartyProviderAuthorizationArgs build() {
             return new ProviderHubMetadataThirdPartyProviderAuthorizationArgs(authorizations, managedByTenantId);

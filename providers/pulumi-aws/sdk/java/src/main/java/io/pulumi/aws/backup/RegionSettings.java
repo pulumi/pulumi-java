@@ -9,6 +9,7 @@ import io.pulumi.aws.backup.inputs.RegionSettingsState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class RegionSettings extends io.pulumi.resources.CustomResource {
      * @return A map of services along with the management preferences for the Region.
      * 
      */
-    public Output<Map<String,Boolean>> getResourceTypeManagementPreference() {
+    public Output<Map<String,Boolean>> resourceTypeManagementPreference() {
         return this.resourceTypeManagementPreference;
     }
     /**
@@ -55,7 +56,7 @@ public class RegionSettings extends io.pulumi.resources.CustomResource {
      * @return A map of services along with the opt-in preferences for the Region.
      * 
      */
-    public Output<Map<String,Boolean>> getResourceTypeOptInPreference() {
+    public Output<Map<String,Boolean>> resourceTypeOptInPreference() {
         return this.resourceTypeOptInPreference;
     }
 
@@ -81,7 +82,7 @@ public class RegionSettings extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionSettings(String name, RegionSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/regionSettings:RegionSettings", name, args == null ? RegionSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/regionSettings:RegionSettings", name, args == null ? RegionSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionSettings(String name, Output<String> id, @Nullable RegionSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

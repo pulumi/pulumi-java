@@ -7,6 +7,7 @@ import io.pulumi.aws.ssm.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedPattern")
       private final @Nullable Output<String> allowedPattern;
 
-    public Output<String> getAllowedPattern() {
-        return this.allowedPattern == null ? Output.empty() : this.allowedPattern;
+    public Output<String> allowedPattern() {
+        return this.allowedPattern == null ? Codegen.empty() : this.allowedPattern;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+    public Output<String> dataType() {
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+    public Output<String> keyId() {
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
-        return this.overwrite == null ? Output.empty() : this.overwrite;
+    public Output<Boolean> overwrite() {
+        return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
 
@@ -136,7 +137,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -166,17 +167,17 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParameterArgs() {
-        this.allowedPattern = Output.empty();
-        this.arn = Output.empty();
-        this.dataType = Output.empty();
-        this.description = Output.empty();
-        this.keyId = Output.empty();
-        this.name = Output.empty();
-        this.overwrite = Output.empty();
-        this.tags = Output.empty();
-        this.tier = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.allowedPattern = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.dataType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.keyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.overwrite = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedPattern(@Nullable String allowedPattern) {
-            this.allowedPattern = Output.ofNullable(allowedPattern);
+            this.allowedPattern = Codegen.ofNullable(allowedPattern);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -232,7 +233,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder dataType(@Nullable Output<String> dataType) {
@@ -240,7 +241,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -248,7 +249,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder keyId(@Nullable Output<String> keyId) {
@@ -256,7 +257,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -264,7 +265,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
@@ -272,7 +273,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Output.ofNullable(overwrite);
+            this.overwrite = Codegen.ofNullable(overwrite);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -280,7 +281,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -288,7 +289,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }
         public Builder type(Output<Either<String,ParameterType>> type) {

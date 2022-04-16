@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="discoverySiteId")
       private final @Nullable Output<String> discoverySiteId;
 
-    public Output<String> getDiscoverySiteId() {
-        return this.discoverySiteId == null ? Output.empty() : this.discoverySiteId;
+    public Output<String> discoverySiteId() {
+        return this.discoverySiteId == null ? Codegen.empty() : this.discoverySiteId;
     }
 
     public ImportCollectorPropertiesArgs(@Nullable Output<String> discoverySiteId) {
@@ -26,7 +27,7 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ImportCollectorPropertiesArgs() {
-        this.discoverySiteId = Output.empty();
+        this.discoverySiteId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
-            this.discoverySiteId = Output.ofNullable(discoverySiteId);
+            this.discoverySiteId = Codegen.ofNullable(discoverySiteId);
             return this;
         }        public ImportCollectorPropertiesArgs build() {
             return new ImportCollectorPropertiesArgs(discoverySiteId);

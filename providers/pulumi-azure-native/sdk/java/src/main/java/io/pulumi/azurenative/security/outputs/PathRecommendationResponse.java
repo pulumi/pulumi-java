@@ -79,55 +79,55 @@ public final class PathRecommendationResponse {
      * The recommendation action of the machine or rule
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Whether the application is commonly run on the machine
      * 
     */
-    public Optional<Boolean> getCommon() {
+    public Optional<Boolean> common() {
         return Optional.ofNullable(this.common);
     }
     /**
      * The configuration status of the machines group or machine or rule
      * 
     */
-    public Optional<String> getConfigurationStatus() {
+    public Optional<String> configurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
     /**
      * The type of the file (for Linux files - Executable is used)
      * 
     */
-    public Optional<String> getFileType() {
+    public Optional<String> fileType() {
         return Optional.ofNullable(this.fileType);
     }
     /**
      * The full path of the file, or an identifier of the application
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Represents the publisher information of a process/rule
      * 
     */
-    public Optional<PublisherInfoResponse> getPublisherInfo() {
+    public Optional<PublisherInfoResponse> publisherInfo() {
         return Optional.ofNullable(this.publisherInfo);
     }
     /**
      * The type of the rule to be allowed
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
-    public List<String> getUserSids() {
+    public List<String> userSids() {
         return this.userSids == null ? List.of() : this.userSids;
     }
-    public List<UserRecommendationResponse> getUsernames() {
+    public List<UserRecommendationResponse> usernames() {
         return this.usernames == null ? List.of() : this.usernames;
     }
 

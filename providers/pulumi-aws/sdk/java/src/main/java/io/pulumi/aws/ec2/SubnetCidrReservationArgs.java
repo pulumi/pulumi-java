@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
 
@@ -32,8 +33,8 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     @Import(name="reservationType", required=true)
       private final Output<String> reservationType;
 
-    public Output<String> getReservationType() {
+    public Output<String> reservationType() {
         return this.reservationType;
     }
 
@@ -54,7 +55,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -70,10 +71,10 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     }
 
     private SubnetCidrReservationArgs() {
-        this.cidrBlock = Output.empty();
-        this.description = Output.empty();
-        this.reservationType = Output.empty();
-        this.subnetId = Output.empty();
+        this.cidrBlock = Codegen.empty();
+        this.description = Codegen.empty();
+        this.reservationType = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder reservationType(Output<String> reservationType) {

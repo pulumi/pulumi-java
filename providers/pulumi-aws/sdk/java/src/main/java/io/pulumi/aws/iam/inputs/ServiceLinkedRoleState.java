@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="awsServiceName")
       private final @Nullable Output<String> awsServiceName;
 
-    public Output<String> getAwsServiceName() {
-        return this.awsServiceName == null ? Output.empty() : this.awsServiceName;
+    public Output<String> awsServiceName() {
+        return this.awsServiceName == null ? Codegen.empty() : this.awsServiceName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
-    public Output<String> getCreateDate() {
-        return this.createDate == null ? Output.empty() : this.createDate;
+    public Output<String> createDate() {
+        return this.createDate == null ? Codegen.empty() : this.createDate;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="customSuffix")
       private final @Nullable Output<String> customSuffix;
 
-    public Output<String> getCustomSuffix() {
-        return this.customSuffix == null ? Output.empty() : this.customSuffix;
+    public Output<String> customSuffix() {
+        return this.customSuffix == null ? Codegen.empty() : this.customSuffix;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
-    public Output<String> getUniqueId() {
-        return this.uniqueId == null ? Output.empty() : this.uniqueId;
+    public Output<String> uniqueId() {
+        return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
     }
 
     public ServiceLinkedRoleState(
@@ -149,16 +150,16 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     }
 
     private ServiceLinkedRoleState() {
-        this.arn = Output.empty();
-        this.awsServiceName = Output.empty();
-        this.createDate = Output.empty();
-        this.customSuffix = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uniqueId = Output.empty();
+        this.arn = Codegen.empty();
+        this.awsServiceName = Codegen.empty();
+        this.createDate = Codegen.empty();
+        this.customSuffix = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uniqueId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -204,7 +205,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder awsServiceName(@Nullable Output<String> awsServiceName) {
@@ -212,7 +213,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder awsServiceName(@Nullable String awsServiceName) {
-            this.awsServiceName = Output.ofNullable(awsServiceName);
+            this.awsServiceName = Codegen.ofNullable(awsServiceName);
             return this;
         }
         public Builder createDate(@Nullable Output<String> createDate) {
@@ -220,7 +221,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createDate(@Nullable String createDate) {
-            this.createDate = Output.ofNullable(createDate);
+            this.createDate = Codegen.ofNullable(createDate);
             return this;
         }
         public Builder customSuffix(@Nullable Output<String> customSuffix) {
@@ -228,7 +229,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder customSuffix(@Nullable String customSuffix) {
-            this.customSuffix = Output.ofNullable(customSuffix);
+            this.customSuffix = Codegen.ofNullable(customSuffix);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -236,7 +237,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -244,7 +245,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -252,7 +253,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -260,7 +261,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -268,7 +269,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
@@ -276,7 +277,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Output.ofNullable(uniqueId);
+            this.uniqueId = Codegen.ofNullable(uniqueId);
             return this;
         }        public ServiceLinkedRoleState build() {
             return new ServiceLinkedRoleState(arn, awsServiceName, createDate, customSuffix, description, name, path, tags, tagsAll, uniqueId);

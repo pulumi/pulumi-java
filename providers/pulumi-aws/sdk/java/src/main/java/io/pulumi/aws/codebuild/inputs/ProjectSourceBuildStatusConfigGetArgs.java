@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+    public Output<String> context() {
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
     @Import(name="targetUrl")
       private final @Nullable Output<String> targetUrl;
 
-    public Output<String> getTargetUrl() {
-        return this.targetUrl == null ? Output.empty() : this.targetUrl;
+    public Output<String> targetUrl() {
+        return this.targetUrl == null ? Codegen.empty() : this.targetUrl;
     }
 
     public ProjectSourceBuildStatusConfigGetArgs(
@@ -44,8 +45,8 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
     }
 
     private ProjectSourceBuildStatusConfigGetArgs() {
-        this.context = Output.empty();
-        this.targetUrl = Output.empty();
+        this.context = Codegen.empty();
+        this.targetUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder context(@Nullable String context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder targetUrl(@Nullable Output<String> targetUrl) {
@@ -83,7 +84,7 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder targetUrl(@Nullable String targetUrl) {
-            this.targetUrl = Output.ofNullable(targetUrl);
+            this.targetUrl = Codegen.ofNullable(targetUrl);
             return this;
         }        public ProjectSourceBuildStatusConfigGetArgs build() {
             return new ProjectSourceBuildStatusConfigGetArgs(context, targetUrl);

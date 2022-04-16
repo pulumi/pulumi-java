@@ -23,7 +23,7 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="osLicense", required=true)
       private final String osLicense;
 
-    public String getOsLicense() {
+    public String osLicense() {
         return this.osLicense;
     }
 
@@ -34,7 +34,7 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

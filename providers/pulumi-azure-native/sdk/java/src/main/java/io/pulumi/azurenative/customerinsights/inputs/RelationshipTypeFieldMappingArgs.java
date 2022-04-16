@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
     @Import(name="profileFieldName", required=true)
       private final Output<String> profileFieldName;
 
-    public Output<String> getProfileFieldName() {
+    public Output<String> profileFieldName() {
         return this.profileFieldName;
     }
 
@@ -35,7 +36,7 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
     @Import(name="relatedProfileKeyProperty", required=true)
       private final Output<String> relatedProfileKeyProperty;
 
-    public Output<String> getRelatedProfileKeyProperty() {
+    public Output<String> relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
 
@@ -47,8 +48,8 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
     }
 
     private RelationshipTypeFieldMappingArgs() {
-        this.profileFieldName = Output.empty();
-        this.relatedProfileKeyProperty = Output.empty();
+        this.profileFieldName = Codegen.empty();
+        this.relatedProfileKeyProperty = Codegen.empty();
     }
 
     public static Builder builder() {

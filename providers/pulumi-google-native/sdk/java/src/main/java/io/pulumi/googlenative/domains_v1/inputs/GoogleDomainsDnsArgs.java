@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1.enums.GoogleDomainsDnsDsState;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dsState", required=true)
       private final Output<GoogleDomainsDnsDsState> dsState;
 
-    public Output<GoogleDomainsDnsDsState> getDsState() {
+    public Output<GoogleDomainsDnsDsState> dsState() {
         return this.dsState;
     }
 
@@ -33,7 +34,7 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GoogleDomainsDnsArgs() {
-        this.dsState = Output.empty();
+        this.dsState = Codegen.empty();
     }
 
     public static Builder builder() {

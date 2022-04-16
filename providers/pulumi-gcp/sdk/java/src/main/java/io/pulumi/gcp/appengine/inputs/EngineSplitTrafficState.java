@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.EngineSplitTrafficSplitGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="migrateTraffic")
       private final @Nullable Output<Boolean> migrateTraffic;
 
-    public Output<Boolean> getMigrateTraffic() {
-        return this.migrateTraffic == null ? Output.empty() : this.migrateTraffic;
+    public Output<Boolean> migrateTraffic() {
+        return this.migrateTraffic == null ? Codegen.empty() : this.migrateTraffic;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="split")
       private final @Nullable Output<EngineSplitTrafficSplitGetArgs> split;
 
-    public Output<EngineSplitTrafficSplitGetArgs> getSplit() {
-        return this.split == null ? Output.empty() : this.split;
+    public Output<EngineSplitTrafficSplitGetArgs> split() {
+        return this.split == null ? Codegen.empty() : this.split;
     }
 
     public EngineSplitTrafficState(
@@ -74,10 +75,10 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     }
 
     private EngineSplitTrafficState() {
-        this.migrateTraffic = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
-        this.split = Output.empty();
+        this.migrateTraffic = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
+        this.split = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder migrateTraffic(@Nullable Boolean migrateTraffic) {
-            this.migrateTraffic = Output.ofNullable(migrateTraffic);
+            this.migrateTraffic = Codegen.ofNullable(migrateTraffic);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -119,7 +120,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -127,7 +128,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder split(@Nullable Output<EngineSplitTrafficSplitGetArgs> split) {
@@ -135,7 +136,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder split(@Nullable EngineSplitTrafficSplitGetArgs split) {
-            this.split = Output.ofNullable(split);
+            this.split = Codegen.ofNullable(split);
             return this;
         }        public EngineSplitTrafficState build() {
             return new EngineSplitTrafficState(migrateTraffic, project, service, split);

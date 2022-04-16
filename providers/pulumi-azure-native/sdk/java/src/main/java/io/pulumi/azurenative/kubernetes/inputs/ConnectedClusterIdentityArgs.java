@@ -6,6 +6,7 @@ package io.pulumi.azurenative.kubernetes.inputs;
 import io.pulumi.azurenative.kubernetes.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,16 +25,16 @@ public final class ConnectedClusterIdentityArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type;
     }
 
     public ConnectedClusterIdentityArgs(Output<ResourceIdentityType> type) {
-        this.type = type == null ? Output.ofNullable(io.pulumi.azurenative.kubernetes.enums.ResourceIdentityType.SystemAssigned) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = type == null ? Codegen.ofNullable(io.pulumi.azurenative.kubernetes.enums.ResourceIdentityType.SystemAssigned) : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ConnectedClusterIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

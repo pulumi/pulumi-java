@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.FrontDoorQuery;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cacheDuration")
       private final @Nullable Output<String> cacheDuration;
 
-    public Output<String> getCacheDuration() {
-        return this.cacheDuration == null ? Output.empty() : this.cacheDuration;
+    public Output<String> cacheDuration() {
+        return this.cacheDuration == null ? Codegen.empty() : this.cacheDuration;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dynamicCompression")
       private final @Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression;
 
-    public Output<Either<String,DynamicCompressionEnabled>> getDynamicCompression() {
-        return this.dynamicCompression == null ? Output.empty() : this.dynamicCompression;
+    public Output<Either<String,DynamicCompressionEnabled>> dynamicCompression() {
+        return this.dynamicCompression == null ? Codegen.empty() : this.dynamicCompression;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryParameterStripDirective")
       private final @Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective;
 
-    public Output<Either<String,FrontDoorQuery>> getQueryParameterStripDirective() {
-        return this.queryParameterStripDirective == null ? Output.empty() : this.queryParameterStripDirective;
+    public Output<Either<String,FrontDoorQuery>> queryParameterStripDirective() {
+        return this.queryParameterStripDirective == null ? Codegen.empty() : this.queryParameterStripDirective;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryParameters")
       private final @Nullable Output<String> queryParameters;
 
-    public Output<String> getQueryParameters() {
-        return this.queryParameters == null ? Output.empty() : this.queryParameters;
+    public Output<String> queryParameters() {
+        return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
     }
 
     public CacheConfigurationArgs(
@@ -77,10 +78,10 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CacheConfigurationArgs() {
-        this.cacheDuration = Output.empty();
-        this.dynamicCompression = Output.empty();
-        this.queryParameterStripDirective = Output.empty();
-        this.queryParameters = Output.empty();
+        this.cacheDuration = Codegen.empty();
+        this.dynamicCompression = Codegen.empty();
+        this.queryParameterStripDirective = Codegen.empty();
+        this.queryParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cacheDuration(@Nullable String cacheDuration) {
-            this.cacheDuration = Output.ofNullable(cacheDuration);
+            this.cacheDuration = Codegen.ofNullable(cacheDuration);
             return this;
         }
         public Builder dynamicCompression(@Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression) {
@@ -122,7 +123,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dynamicCompression(@Nullable Either<String,DynamicCompressionEnabled> dynamicCompression) {
-            this.dynamicCompression = Output.ofNullable(dynamicCompression);
+            this.dynamicCompression = Codegen.ofNullable(dynamicCompression);
             return this;
         }
         public Builder queryParameterStripDirective(@Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective) {
@@ -130,7 +131,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queryParameterStripDirective(@Nullable Either<String,FrontDoorQuery> queryParameterStripDirective) {
-            this.queryParameterStripDirective = Output.ofNullable(queryParameterStripDirective);
+            this.queryParameterStripDirective = Codegen.ofNullable(queryParameterStripDirective);
             return this;
         }
         public Builder queryParameters(@Nullable Output<String> queryParameters) {
@@ -138,7 +139,7 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queryParameters(@Nullable String queryParameters) {
-            this.queryParameters = Output.ofNullable(queryParameters);
+            this.queryParameters = Codegen.ofNullable(queryParameters);
             return this;
         }        public CacheConfigurationArgs build() {
             return new CacheConfigurationArgs(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);

@@ -6,6 +6,7 @@ package io.pulumi.aws.rds.inputs;
 import io.pulumi.aws.rds.inputs.OptionGroupOptionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineName")
       private final @Nullable Output<String> engineName;
 
-    public Output<String> getEngineName() {
-        return this.engineName == null ? Output.empty() : this.engineName;
+    public Output<String> engineName() {
+        return this.engineName == null ? Codegen.empty() : this.engineName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="majorEngineVersion")
       private final @Nullable Output<String> majorEngineVersion;
 
-    public Output<String> getMajorEngineVersion() {
-        return this.majorEngineVersion == null ? Output.empty() : this.majorEngineVersion;
+    public Output<String> majorEngineVersion() {
+        return this.majorEngineVersion == null ? Codegen.empty() : this.majorEngineVersion;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="optionGroupDescription")
       private final @Nullable Output<String> optionGroupDescription;
 
-    public Output<String> getOptionGroupDescription() {
-        return this.optionGroupDescription == null ? Output.empty() : this.optionGroupDescription;
+    public Output<String> optionGroupDescription() {
+        return this.optionGroupDescription == null ? Codegen.empty() : this.optionGroupDescription;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionGroupOptionGetArgs>> options;
 
-    public Output<List<OptionGroupOptionGetArgs>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<List<OptionGroupOptionGetArgs>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public OptionGroupState(
@@ -131,22 +132,22 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
         this.majorEngineVersion = majorEngineVersion;
         this.name = name;
         this.namePrefix = namePrefix;
-        this.optionGroupDescription = optionGroupDescription == null ? Output.ofNullable("Managed by Pulumi") : optionGroupDescription;
+        this.optionGroupDescription = optionGroupDescription == null ? Codegen.ofNullable("Managed by Pulumi") : optionGroupDescription;
         this.options = options;
         this.tags = tags;
         this.tagsAll = tagsAll;
     }
 
     private OptionGroupState() {
-        this.arn = Output.empty();
-        this.engineName = Output.empty();
-        this.majorEngineVersion = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.optionGroupDescription = Output.empty();
-        this.options = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.engineName = Codegen.empty();
+        this.majorEngineVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.optionGroupDescription = Codegen.empty();
+        this.options = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder engineName(@Nullable Output<String> engineName) {
@@ -198,7 +199,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineName(@Nullable String engineName) {
-            this.engineName = Output.ofNullable(engineName);
+            this.engineName = Codegen.ofNullable(engineName);
             return this;
         }
         public Builder majorEngineVersion(@Nullable Output<String> majorEngineVersion) {
@@ -206,7 +207,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder majorEngineVersion(@Nullable String majorEngineVersion) {
-            this.majorEngineVersion = Output.ofNullable(majorEngineVersion);
+            this.majorEngineVersion = Codegen.ofNullable(majorEngineVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -214,7 +215,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -222,7 +223,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder optionGroupDescription(@Nullable Output<String> optionGroupDescription) {
@@ -230,7 +231,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder optionGroupDescription(@Nullable String optionGroupDescription) {
-            this.optionGroupDescription = Output.ofNullable(optionGroupDescription);
+            this.optionGroupDescription = Codegen.ofNullable(optionGroupDescription);
             return this;
         }
         public Builder options(@Nullable Output<List<OptionGroupOptionGetArgs>> options) {
@@ -238,7 +239,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<OptionGroupOptionGetArgs> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(OptionGroupOptionGetArgs... options) {
@@ -249,7 +250,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -257,7 +258,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public OptionGroupState build() {
             return new OptionGroupState(arn, engineName, majorEngineVersion, name, namePrefix, optionGroupDescription, options, tags, tagsAll);

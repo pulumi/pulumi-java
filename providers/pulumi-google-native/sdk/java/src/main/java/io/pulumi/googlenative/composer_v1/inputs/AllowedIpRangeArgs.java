@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public AllowedIpRangeArgs(
@@ -48,8 +49,8 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AllowedIpRangeArgs() {
-        this.description = Output.empty();
-        this.value = Output.empty();
+        this.description = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -87,7 +88,7 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public AllowedIpRangeArgs build() {
             return new AllowedIpRangeArgs(description, value);

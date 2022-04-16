@@ -9,6 +9,7 @@ import io.pulumi.aws.codeartifact.inputs.RepositoryPermissionsPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
      * @return The name of the domain on which to set the resource policy.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -53,7 +54,7 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
      * @return The account number of the AWS account that owns the domain.
      * 
      */
-    public Output<String> getDomainOwner() {
+    public Output<String> domainOwner() {
         return this.domainOwner;
     }
     /**
@@ -67,7 +68,7 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
      * @return A JSON policy string to be set as the access control resource policy on the provided domain.
      * 
      */
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument;
     }
     /**
@@ -81,7 +82,7 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
      * @return The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
      * 
      */
-    public Output<String> getPolicyRevision() {
+    public Output<String> policyRevision() {
         return this.policyRevision;
     }
     /**
@@ -95,7 +96,7 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
      * @return The name of the repository to set the resource policy on.
      * 
      */
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
     /**
@@ -109,7 +110,7 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
      * @return The ARN of the resource associated with the resource policy.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -135,7 +136,7 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public RepositoryPermissionsPolicy(String name, RepositoryPermissionsPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy", name, args == null ? RepositoryPermissionsPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy", name, args == null ? RepositoryPermissionsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RepositoryPermissionsPolicy(String name, Output<String> id, @Nullable RepositoryPermissionsPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

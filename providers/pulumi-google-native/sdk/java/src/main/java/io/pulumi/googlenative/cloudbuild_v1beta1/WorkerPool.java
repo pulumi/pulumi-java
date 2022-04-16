@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudbuild_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1beta1.WorkerPoolArgs;
 import io.pulumi.googlenative.cloudbuild_v1beta1.outputs.NetworkConfigResponse;
@@ -32,7 +33,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -46,7 +47,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Time at which the request to create the `WorkerPool` was received.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +61,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Time at which the request to delete the `WorkerPool` was received.
      * 
      */
-    public Output<String> getDeleteTime() {
+    public Output<String> deleteTime() {
         return this.deleteTime;
     }
     /**
@@ -74,7 +75,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +89,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -102,7 +103,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return The resource name of the `WorkerPool`, with format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. The value of `{worker_pool}` is provided by `worker_pool_id` in `CreateWorkerPool` request and the value of `{location}` is determined by the endpoint accessed.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Network configuration for the `WorkerPool`.
      * 
      */
-    public Output<NetworkConfigResponse> getNetworkConfig() {
+    public Output<NetworkConfigResponse> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -130,7 +131,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return `WorkerPool` state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -144,7 +145,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the `WorkerPool`.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -158,7 +159,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Time at which the request to update the `WorkerPool` was received.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -172,7 +173,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Worker configuration for the `WorkerPool`.
      * 
      */
-    public Output<WorkerConfigResponse> getWorkerConfig() {
+    public Output<WorkerConfigResponse> workerConfig() {
         return this.workerConfig;
     }
 
@@ -198,7 +199,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkerPool(String name, WorkerPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudbuild/v1beta1:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudbuild/v1beta1:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkerPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

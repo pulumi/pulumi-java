@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -45,8 +46,8 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     @Import(name="transitGatewayDefaultRouteTableAssociation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
-    public Output<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation == null ? Output.empty() : this.transitGatewayDefaultRouteTableAssociation;
+    public Output<Boolean> transitGatewayDefaultRouteTableAssociation() {
+        return this.transitGatewayDefaultRouteTableAssociation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTableAssociation;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     @Import(name="transitGatewayDefaultRouteTablePropagation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
-    public Output<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation == null ? Output.empty() : this.transitGatewayDefaultRouteTablePropagation;
+    public Output<Boolean> transitGatewayDefaultRouteTablePropagation() {
+        return this.transitGatewayDefaultRouteTablePropagation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTablePropagation;
     }
 
     public VpcAttachmentAccepterArgs(
@@ -72,10 +73,10 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     }
 
     private VpcAttachmentAccepterArgs() {
-        this.tags = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayDefaultRouteTableAssociation = Output.empty();
-        this.transitGatewayDefaultRouteTablePropagation = Output.empty();
+        this.tags = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayDefaultRouteTableAssociation = Codegen.empty();
+        this.transitGatewayDefaultRouteTablePropagation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
@@ -125,7 +126,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = Output.ofNullable(transitGatewayDefaultRouteTableAssociation);
+            this.transitGatewayDefaultRouteTableAssociation = Codegen.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
@@ -133,7 +134,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = Output.ofNullable(transitGatewayDefaultRouteTablePropagation);
+            this.transitGatewayDefaultRouteTablePropagation = Codegen.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
         }        public VpcAttachmentAccepterArgs build() {
             return new VpcAttachmentAccepterArgs(tags, transitGatewayAttachmentId, transitGatewayDefaultRouteTableAssociation, transitGatewayDefaultRouteTablePropagation);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
-    public Output<String> getAuthorizationKey() {
-        return this.authorizationKey == null ? Output.empty() : this.authorizationKey;
+    public Output<String> authorizationKey() {
+        return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="globalReachConnectionName")
       private final @Nullable Output<String> globalReachConnectionName;
 
-    public Output<String> getGlobalReachConnectionName() {
-        return this.globalReachConnectionName == null ? Output.empty() : this.globalReachConnectionName;
+    public Output<String> globalReachConnectionName() {
+        return this.globalReachConnectionName == null ? Codegen.empty() : this.globalReachConnectionName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="peerExpressRouteCircuit")
       private final @Nullable Output<String> peerExpressRouteCircuit;
 
-    public Output<String> getPeerExpressRouteCircuit() {
-        return this.peerExpressRouteCircuit == null ? Output.empty() : this.peerExpressRouteCircuit;
+    public Output<String> peerExpressRouteCircuit() {
+        return this.peerExpressRouteCircuit == null ? Codegen.empty() : this.peerExpressRouteCircuit;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -65,7 +66,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -83,11 +84,11 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     }
 
     private GlobalReachConnectionArgs() {
-        this.authorizationKey = Output.empty();
-        this.globalReachConnectionName = Output.empty();
-        this.peerExpressRouteCircuit = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.authorizationKey = Codegen.empty();
+        this.globalReachConnectionName = Codegen.empty();
+        this.peerExpressRouteCircuit = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Output.ofNullable(authorizationKey);
+            this.authorizationKey = Codegen.ofNullable(authorizationKey);
             return this;
         }
         public Builder globalReachConnectionName(@Nullable Output<String> globalReachConnectionName) {
@@ -131,7 +132,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder globalReachConnectionName(@Nullable String globalReachConnectionName) {
-            this.globalReachConnectionName = Output.ofNullable(globalReachConnectionName);
+            this.globalReachConnectionName = Codegen.ofNullable(globalReachConnectionName);
             return this;
         }
         public Builder peerExpressRouteCircuit(@Nullable Output<String> peerExpressRouteCircuit) {
@@ -139,7 +140,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder peerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
-            this.peerExpressRouteCircuit = Output.ofNullable(peerExpressRouteCircuit);
+            this.peerExpressRouteCircuit = Codegen.ofNullable(peerExpressRouteCircuit);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {

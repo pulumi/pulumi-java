@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class AliasRoutingConfigGetArgs extends io.pulumi.resources.Resourc
     @Import(name="additionalVersionWeights")
       private final @Nullable Output<Map<String,Double>> additionalVersionWeights;
 
-    public Output<Map<String,Double>> getAdditionalVersionWeights() {
-        return this.additionalVersionWeights == null ? Output.empty() : this.additionalVersionWeights;
+    public Output<Map<String,Double>> additionalVersionWeights() {
+        return this.additionalVersionWeights == null ? Codegen.empty() : this.additionalVersionWeights;
     }
 
     public AliasRoutingConfigGetArgs(@Nullable Output<Map<String,Double>> additionalVersionWeights) {
@@ -32,7 +33,7 @@ public final class AliasRoutingConfigGetArgs extends io.pulumi.resources.Resourc
     }
 
     private AliasRoutingConfigGetArgs() {
-        this.additionalVersionWeights = Output.empty();
+        this.additionalVersionWeights = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class AliasRoutingConfigGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder additionalVersionWeights(@Nullable Map<String,Double> additionalVersionWeights) {
-            this.additionalVersionWeights = Output.ofNullable(additionalVersionWeights);
+            this.additionalVersionWeights = Codegen.ofNullable(additionalVersionWeights);
             return this;
         }        public AliasRoutingConfigGetArgs build() {
             return new AliasRoutingConfigGetArgs(additionalVersionWeights);

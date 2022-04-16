@@ -9,6 +9,7 @@ import io.pulumi.aws.cognito.inputs.UserGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The description of the user group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -54,7 +55,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the user group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +69,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The precedence of the user group.
      * 
      */
-    public Output</* @Nullable */ Integer> getPrecedence() {
+    public Output</* @Nullable */ Integer> precedence() {
         return this.precedence;
     }
     /**
@@ -82,7 +83,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role to be associated with the user group.
      * 
      */
-    public Output</* @Nullable */ String> getRoleArn() {
+    public Output</* @Nullable */ String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -96,7 +97,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The user pool ID.
      * 
      */
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -122,7 +123,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserGroup(String name, UserGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/userGroup:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/userGroup:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserGroup(String name, Output<String> id, @Nullable UserGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

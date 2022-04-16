@@ -7,6 +7,7 @@ import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationBlockDeviceMapp
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationMetadataOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
+    public Output<Boolean> associatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Output<List<LaunchConfigurationBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
+    public Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings() {
+        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="classicLinkVPCId")
       private final @Nullable Output<String> classicLinkVPCId;
 
-    public Output<String> getClassicLinkVPCId() {
-        return this.classicLinkVPCId == null ? Output.empty() : this.classicLinkVPCId;
+    public Output<String> classicLinkVPCId() {
+        return this.classicLinkVPCId == null ? Codegen.empty() : this.classicLinkVPCId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="classicLinkVPCSecurityGroups")
       private final @Nullable Output<List<String>> classicLinkVPCSecurityGroups;
 
-    public Output<List<String>> getClassicLinkVPCSecurityGroups() {
-        return this.classicLinkVPCSecurityGroups == null ? Output.empty() : this.classicLinkVPCSecurityGroups;
+    public Output<List<String>> classicLinkVPCSecurityGroups() {
+        return this.classicLinkVPCSecurityGroups == null ? Codegen.empty() : this.classicLinkVPCSecurityGroups;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+    public Output<Boolean> ebsOptimized() {
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
-    public Output<String> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
+    public Output<String> iamInstanceProfile() {
+        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
@@ -102,8 +103,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+    public Output<String> instanceId() {
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="instanceMonitoring")
       private final @Nullable Output<Boolean> instanceMonitoring;
 
-    public Output<Boolean> getInstanceMonitoring() {
-        return this.instanceMonitoring == null ? Output.empty() : this.instanceMonitoring;
+    public Output<Boolean> instanceMonitoring() {
+        return this.instanceMonitoring == null ? Codegen.empty() : this.instanceMonitoring;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -135,8 +136,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
-    public Output<String> getKernelId() {
-        return this.kernelId == null ? Output.empty() : this.kernelId;
+    public Output<String> kernelId() {
+        return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="launchConfigurationName")
       private final @Nullable Output<String> launchConfigurationName;
 
-    public Output<String> getLaunchConfigurationName() {
-        return this.launchConfigurationName == null ? Output.empty() : this.launchConfigurationName;
+    public Output<String> launchConfigurationName() {
+        return this.launchConfigurationName == null ? Codegen.empty() : this.launchConfigurationName;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="metadataOptions")
       private final @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
 
-    public Output<LaunchConfigurationMetadataOptionsArgs> getMetadataOptions() {
-        return this.metadataOptions == null ? Output.empty() : this.metadataOptions;
+    public Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions() {
+        return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="placementTenancy")
       private final @Nullable Output<String> placementTenancy;
 
-    public Output<String> getPlacementTenancy() {
-        return this.placementTenancy == null ? Output.empty() : this.placementTenancy;
+    public Output<String> placementTenancy() {
+        return this.placementTenancy == null ? Codegen.empty() : this.placementTenancy;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="ramDiskId")
       private final @Nullable Output<String> ramDiskId;
 
-    public Output<String> getRamDiskId() {
-        return this.ramDiskId == null ? Output.empty() : this.ramDiskId;
+    public Output<String> ramDiskId() {
+        return this.ramDiskId == null ? Codegen.empty() : this.ramDiskId;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+    public Output<List<String>> securityGroups() {
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -212,8 +213,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
-        return this.spotPrice == null ? Output.empty() : this.spotPrice;
+    public Output<String> spotPrice() {
+        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     /**
@@ -223,8 +224,8 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+    public Output<String> userData() {
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     public LaunchConfigurationArgs(
@@ -269,25 +270,25 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private LaunchConfigurationArgs() {
-        this.associatePublicIpAddress = Output.empty();
-        this.blockDeviceMappings = Output.empty();
-        this.classicLinkVPCId = Output.empty();
-        this.classicLinkVPCSecurityGroups = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.iamInstanceProfile = Output.empty();
-        this.imageId = Output.empty();
-        this.instanceId = Output.empty();
-        this.instanceMonitoring = Output.empty();
-        this.instanceType = Output.empty();
-        this.kernelId = Output.empty();
-        this.keyName = Output.empty();
-        this.launchConfigurationName = Output.empty();
-        this.metadataOptions = Output.empty();
-        this.placementTenancy = Output.empty();
-        this.ramDiskId = Output.empty();
-        this.securityGroups = Output.empty();
-        this.spotPrice = Output.empty();
-        this.userData = Output.empty();
+        this.associatePublicIpAddress = Codegen.empty();
+        this.blockDeviceMappings = Codegen.empty();
+        this.classicLinkVPCId = Codegen.empty();
+        this.classicLinkVPCSecurityGroups = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.iamInstanceProfile = Codegen.empty();
+        this.imageId = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.instanceMonitoring = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.kernelId = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.launchConfigurationName = Codegen.empty();
+        this.metadataOptions = Codegen.empty();
+        this.placementTenancy = Codegen.empty();
+        this.ramDiskId = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.spotPrice = Codegen.empty();
+        this.userData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -351,7 +352,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
             return this;
         }
         public Builder blockDeviceMappings(@Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings) {
@@ -359,7 +360,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder blockDeviceMappings(@Nullable List<LaunchConfigurationBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
             return this;
         }
         public Builder blockDeviceMappings(LaunchConfigurationBlockDeviceMappingArgs... blockDeviceMappings) {
@@ -370,7 +371,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder classicLinkVPCId(@Nullable String classicLinkVPCId) {
-            this.classicLinkVPCId = Output.ofNullable(classicLinkVPCId);
+            this.classicLinkVPCId = Codegen.ofNullable(classicLinkVPCId);
             return this;
         }
         public Builder classicLinkVPCSecurityGroups(@Nullable Output<List<String>> classicLinkVPCSecurityGroups) {
@@ -378,7 +379,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder classicLinkVPCSecurityGroups(@Nullable List<String> classicLinkVPCSecurityGroups) {
-            this.classicLinkVPCSecurityGroups = Output.ofNullable(classicLinkVPCSecurityGroups);
+            this.classicLinkVPCSecurityGroups = Codegen.ofNullable(classicLinkVPCSecurityGroups);
             return this;
         }
         public Builder classicLinkVPCSecurityGroups(String... classicLinkVPCSecurityGroups) {
@@ -389,7 +390,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
@@ -397,7 +398,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
-            this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
+            this.iamInstanceProfile = Codegen.ofNullable(iamInstanceProfile);
             return this;
         }
         public Builder imageId(Output<String> imageId) {
@@ -413,7 +414,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder instanceMonitoring(@Nullable Output<Boolean> instanceMonitoring) {
@@ -421,7 +422,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceMonitoring(@Nullable Boolean instanceMonitoring) {
-            this.instanceMonitoring = Output.ofNullable(instanceMonitoring);
+            this.instanceMonitoring = Codegen.ofNullable(instanceMonitoring);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {
@@ -437,7 +438,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Output.ofNullable(kernelId);
+            this.kernelId = Codegen.ofNullable(kernelId);
             return this;
         }
         public Builder keyName(@Nullable Output<String> keyName) {
@@ -445,7 +446,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder launchConfigurationName(@Nullable Output<String> launchConfigurationName) {
@@ -453,7 +454,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder launchConfigurationName(@Nullable String launchConfigurationName) {
-            this.launchConfigurationName = Output.ofNullable(launchConfigurationName);
+            this.launchConfigurationName = Codegen.ofNullable(launchConfigurationName);
             return this;
         }
         public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
@@ -461,7 +462,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder metadataOptions(@Nullable LaunchConfigurationMetadataOptionsArgs metadataOptions) {
-            this.metadataOptions = Output.ofNullable(metadataOptions);
+            this.metadataOptions = Codegen.ofNullable(metadataOptions);
             return this;
         }
         public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
@@ -469,7 +470,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder placementTenancy(@Nullable String placementTenancy) {
-            this.placementTenancy = Output.ofNullable(placementTenancy);
+            this.placementTenancy = Codegen.ofNullable(placementTenancy);
             return this;
         }
         public Builder ramDiskId(@Nullable Output<String> ramDiskId) {
@@ -477,7 +478,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ramDiskId(@Nullable String ramDiskId) {
-            this.ramDiskId = Output.ofNullable(ramDiskId);
+            this.ramDiskId = Codegen.ofNullable(ramDiskId);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -485,7 +486,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -496,7 +497,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Output.ofNullable(spotPrice);
+            this.spotPrice = Codegen.ofNullable(spotPrice);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -504,7 +505,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }        public LaunchConfigurationArgs build() {
             return new LaunchConfigurationArgs(associatePublicIpAddress, blockDeviceMappings, classicLinkVPCId, classicLinkVPCSecurityGroups, ebsOptimized, iamInstanceProfile, imageId, instanceId, instanceMonitoring, instanceType, kernelId, keyName, launchConfigurationName, metadataOptions, placementTenancy, ramDiskId, securityGroups, spotPrice, userData);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +18,21 @@ public final class TopicRuleSnsActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
-    public Output<String> getMessageFormat() {
-        return this.messageFormat == null ? Output.empty() : this.messageFormat;
+    public Output<String> messageFormat() {
+        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 
@@ -45,9 +46,9 @@ public final class TopicRuleSnsActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TopicRuleSnsActionArgs() {
-        this.messageFormat = Output.empty();
-        this.roleArn = Output.empty();
-        this.targetArn = Output.empty();
+        this.messageFormat = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class TopicRuleSnsActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Output.ofNullable(messageFormat);
+            this.messageFormat = Codegen.ofNullable(messageFormat);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

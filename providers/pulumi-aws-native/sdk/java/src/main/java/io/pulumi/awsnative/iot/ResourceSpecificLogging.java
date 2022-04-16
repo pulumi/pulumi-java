@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * @return The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
      */
-    public Output<ResourceSpecificLoggingLogLevel> getLogLevel() {
+    public Output<ResourceSpecificLoggingLogLevel> logLevel() {
         return this.logLevel;
     }
     /**
@@ -44,7 +45,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * @return Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
     /**
@@ -58,7 +59,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * @return The target name.
      * 
      */
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
     /**
@@ -72,7 +73,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * @return The target type. Value must be THING_GROUP.
      * 
      */
-    public Output<ResourceSpecificLoggingTargetType> getTargetType() {
+    public Output<ResourceSpecificLoggingTargetType> targetType() {
         return this.targetType;
     }
 
@@ -98,7 +99,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceSpecificLogging(String name, ResourceSpecificLoggingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:ResourceSpecificLogging", name, args == null ? ResourceSpecificLoggingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:ResourceSpecificLogging", name, args == null ? ResourceSpecificLoggingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceSpecificLogging(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

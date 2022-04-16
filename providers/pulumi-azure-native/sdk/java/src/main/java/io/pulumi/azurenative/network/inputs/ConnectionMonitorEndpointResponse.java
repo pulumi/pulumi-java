@@ -27,7 +27,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
     @Import(name="address")
       private final @Nullable String address;
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
     @Import(name="coverageLevel")
       private final @Nullable String coverageLevel;
 
-    public Optional<String> getCoverageLevel() {
+    public Optional<String> coverageLevel() {
         return this.coverageLevel == null ? Optional.empty() : Optional.ofNullable(this.coverageLevel);
     }
 
@@ -49,7 +49,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
     @Import(name="filter")
       private final @Nullable ConnectionMonitorEndpointFilterResponse filter;
 
-    public Optional<ConnectionMonitorEndpointFilterResponse> getFilter() {
+    public Optional<ConnectionMonitorEndpointFilterResponse> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -60,7 +60,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -71,7 +71,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
@@ -82,7 +82,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
     @Import(name="scope")
       private final @Nullable ConnectionMonitorEndpointScopeResponse scope;
 
-    public Optional<ConnectionMonitorEndpointScopeResponse> getScope() {
+    public Optional<ConnectionMonitorEndpointScopeResponse> scope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
@@ -93,7 +93,7 @@ public final class ConnectionMonitorEndpointResponse extends io.pulumi.resources
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

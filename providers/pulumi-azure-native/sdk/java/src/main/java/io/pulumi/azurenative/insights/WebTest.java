@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -46,7 +47,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return An XML configuration specification for a WebTest.
      * 
      */
-    public Output</* @Nullable */ WebTestPropertiesResponseConfiguration> getConfiguration() {
+    public Output</* @Nullable */ WebTestPropertiesResponseConfiguration> configuration() {
         return this.configuration;
     }
     /**
@@ -60,7 +61,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Purpose/user defined descriptive test for this WebTest.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -74,7 +75,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Is the test actively being monitored.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -88,7 +89,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
      */
-    public Output</* @Nullable */ Integer> getFrequency() {
+    public Output</* @Nullable */ Integer> frequency() {
         return this.frequency;
     }
     /**
@@ -102,7 +103,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return The kind of web test that this web test watches. Choices are ping and multistep.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -116,7 +117,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -130,7 +131,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return A list of where to physically run the tests from to give global coverage for accessibility of your application.
      * 
      */
-    public Output<List<WebTestGeolocationResponse>> getLocations() {
+    public Output<List<WebTestGeolocationResponse>> locations() {
         return this.locations;
     }
     /**
@@ -144,7 +145,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -158,7 +159,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -172,7 +173,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Allow for retries should this WebTest fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRetryEnabled() {
+    public Output</* @Nullable */ Boolean> retryEnabled() {
         return this.retryEnabled;
     }
     /**
@@ -186,7 +187,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
      */
-    public Output<String> getSyntheticMonitorId() {
+    public Output<String> syntheticMonitorId() {
         return this.syntheticMonitorId;
     }
     /**
@@ -200,7 +201,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -214,7 +215,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -228,7 +229,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -242,7 +243,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return The kind of web test this is, valid choices are ping and multistep.
      * 
      */
-    public Output<String> getWebTestKind() {
+    public Output<String> webTestKind() {
         return this.webTestKind;
     }
     /**
@@ -256,7 +257,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @return User defined name if this WebTest.
      * 
      */
-    public Output<String> getWebTestName() {
+    public Output<String> webTestName() {
         return this.webTestName;
     }
 
@@ -282,7 +283,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebTest(String name, WebTestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:WebTest", name, args == null ? WebTestArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:WebTest", name, args == null ? WebTestArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebTest(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

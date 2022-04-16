@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.NatGatewaySkuArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,8 +31,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
+    public Output<Integer> idleTimeoutInMinutes() {
+        return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicIpAddresses")
       private final @Nullable Output<List<SubResourceArgs>> publicIpAddresses;
 
-    public Output<List<SubResourceArgs>> getPublicIpAddresses() {
-        return this.publicIpAddresses == null ? Output.empty() : this.publicIpAddresses;
+    public Output<List<SubResourceArgs>> publicIpAddresses() {
+        return this.publicIpAddresses == null ? Codegen.empty() : this.publicIpAddresses;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicIpPrefixes")
       private final @Nullable Output<List<SubResourceArgs>> publicIpPrefixes;
 
-    public Output<List<SubResourceArgs>> getPublicIpPrefixes() {
-        return this.publicIpPrefixes == null ? Output.empty() : this.publicIpPrefixes;
+    public Output<List<SubResourceArgs>> publicIpPrefixes() {
+        return this.publicIpPrefixes == null ? Codegen.empty() : this.publicIpPrefixes;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<NatGatewaySkuArgs> sku;
 
-    public Output<NatGatewaySkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<NatGatewaySkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+    public Output<List<String>> zones() {
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public NatGatewayArgs(
@@ -131,14 +132,14 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NatGatewayArgs() {
-        this.id = Output.empty();
-        this.idleTimeoutInMinutes = Output.empty();
-        this.location = Output.empty();
-        this.publicIpAddresses = Output.empty();
-        this.publicIpPrefixes = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.zones = Output.empty();
+        this.id = Codegen.empty();
+        this.idleTimeoutInMinutes = Codegen.empty();
+        this.location = Codegen.empty();
+        this.publicIpAddresses = Codegen.empty();
+        this.publicIpPrefixes = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
@@ -188,7 +189,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Codegen.ofNullable(idleTimeoutInMinutes);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -196,7 +197,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder publicIpAddresses(@Nullable Output<List<SubResourceArgs>> publicIpAddresses) {
@@ -204,7 +205,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicIpAddresses(@Nullable List<SubResourceArgs> publicIpAddresses) {
-            this.publicIpAddresses = Output.ofNullable(publicIpAddresses);
+            this.publicIpAddresses = Codegen.ofNullable(publicIpAddresses);
             return this;
         }
         public Builder publicIpAddresses(SubResourceArgs... publicIpAddresses) {
@@ -215,7 +216,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicIpPrefixes(@Nullable List<SubResourceArgs> publicIpPrefixes) {
-            this.publicIpPrefixes = Output.ofNullable(publicIpPrefixes);
+            this.publicIpPrefixes = Codegen.ofNullable(publicIpPrefixes);
             return this;
         }
         public Builder publicIpPrefixes(SubResourceArgs... publicIpPrefixes) {
@@ -226,7 +227,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable NatGatewaySkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -234,7 +235,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -242,7 +243,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

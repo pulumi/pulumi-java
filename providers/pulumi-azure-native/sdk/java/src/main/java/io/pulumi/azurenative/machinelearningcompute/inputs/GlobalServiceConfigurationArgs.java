@@ -8,6 +8,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.ServiceAuthConfigurat
 import io.pulumi.azurenative.machinelearningcompute.inputs.SslConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="autoScale")
       private final @Nullable Output<AutoScaleConfigurationArgs> autoScale;
 
-    public Output<AutoScaleConfigurationArgs> getAutoScale() {
-        return this.autoScale == null ? Output.empty() : this.autoScale;
+    public Output<AutoScaleConfigurationArgs> autoScale() {
+        return this.autoScale == null ? Codegen.empty() : this.autoScale;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="serviceAuth")
       private final @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth;
 
-    public Output<ServiceAuthConfigurationArgs> getServiceAuth() {
-        return this.serviceAuth == null ? Output.empty() : this.serviceAuth;
+    public Output<ServiceAuthConfigurationArgs> serviceAuth() {
+        return this.serviceAuth == null ? Codegen.empty() : this.serviceAuth;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="ssl")
       private final @Nullable Output<SslConfigurationArgs> ssl;
 
-    public Output<SslConfigurationArgs> getSsl() {
-        return this.ssl == null ? Output.empty() : this.ssl;
+    public Output<SslConfigurationArgs> ssl() {
+        return this.ssl == null ? Codegen.empty() : this.ssl;
     }
 
     public GlobalServiceConfigurationArgs(
@@ -77,10 +78,10 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private GlobalServiceConfigurationArgs() {
-        this.autoScale = Output.empty();
-        this.etag = Output.empty();
-        this.serviceAuth = Output.empty();
-        this.ssl = Output.empty();
+        this.autoScale = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.serviceAuth = Codegen.empty();
+        this.ssl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder autoScale(@Nullable AutoScaleConfigurationArgs autoScale) {
-            this.autoScale = Output.ofNullable(autoScale);
+            this.autoScale = Codegen.ofNullable(autoScale);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -122,7 +123,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder serviceAuth(@Nullable Output<ServiceAuthConfigurationArgs> serviceAuth) {
@@ -130,7 +131,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serviceAuth(@Nullable ServiceAuthConfigurationArgs serviceAuth) {
-            this.serviceAuth = Output.ofNullable(serviceAuth);
+            this.serviceAuth = Codegen.ofNullable(serviceAuth);
             return this;
         }
         public Builder ssl(@Nullable Output<SslConfigurationArgs> ssl) {
@@ -138,7 +139,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder ssl(@Nullable SslConfigurationArgs ssl) {
-            this.ssl = Output.ofNullable(ssl);
+            this.ssl = Codegen.ofNullable(ssl);
             return this;
         }        public GlobalServiceConfigurationArgs build() {
             return new GlobalServiceConfigurationArgs(autoScale, etag, serviceAuth, ssl);

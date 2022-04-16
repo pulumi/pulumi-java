@@ -12,6 +12,7 @@ import io.pulumi.awsnative.sagemaker.outputs.ServiceCatalogProvisioningDetailsPr
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -35,31 +36,31 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The time at which the project was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     @Export(name="projectDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectDescription;
 
-    public Output</* @Nullable */ String> getProjectDescription() {
+    public Output</* @Nullable */ String> projectDescription() {
         return this.projectDescription;
     }
     @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
     /**
@@ -73,7 +74,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The status of a project.
      * 
      */
-    public Output<ProjectStatus> getProjectStatus() {
+    public Output<ProjectStatus> projectStatus() {
         return this.projectStatus;
     }
     /**
@@ -87,7 +88,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Provisioned ServiceCatalog  Details
      * 
      */
-    public Output<ServiceCatalogProvisionedProductDetailsProperties> getServiceCatalogProvisionedProductDetails() {
+    public Output<ServiceCatalogProvisionedProductDetailsProperties> serviceCatalogProvisionedProductDetails() {
         return this.serviceCatalogProvisionedProductDetails;
     }
     /**
@@ -101,7 +102,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Input ServiceCatalog Provisioning Details
      * 
      */
-    public Output<ServiceCatalogProvisioningDetailsProperties> getServiceCatalogProvisioningDetails() {
+    public Output<ServiceCatalogProvisioningDetailsProperties> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
     /**
@@ -115,7 +116,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ProjectTag>> getTags() {
+    public Output</* @Nullable */ List<ProjectTag>> tags() {
         return this.tags;
     }
 
@@ -141,7 +142,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

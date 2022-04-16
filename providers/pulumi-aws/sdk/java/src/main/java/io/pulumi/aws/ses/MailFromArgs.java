@@ -5,6 +5,7 @@ package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="behaviorOnMxFailure")
       private final @Nullable Output<String> behaviorOnMxFailure;
 
-    public Output<String> getBehaviorOnMxFailure() {
-        return this.behaviorOnMxFailure == null ? Output.empty() : this.behaviorOnMxFailure;
+    public Output<String> behaviorOnMxFailure() {
+        return this.behaviorOnMxFailure == null ? Codegen.empty() : this.behaviorOnMxFailure;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -43,7 +44,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mailFromDomain", required=true)
       private final Output<String> mailFromDomain;
 
-    public Output<String> getMailFromDomain() {
+    public Output<String> mailFromDomain() {
         return this.mailFromDomain;
     }
 
@@ -57,9 +58,9 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MailFromArgs() {
-        this.behaviorOnMxFailure = Output.empty();
-        this.domain = Output.empty();
-        this.mailFromDomain = Output.empty();
+        this.behaviorOnMxFailure = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.mailFromDomain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = Output.ofNullable(behaviorOnMxFailure);
+            this.behaviorOnMxFailure = Codegen.ofNullable(behaviorOnMxFailure);
             return this;
         }
         public Builder domain(Output<String> domain) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
     @Import(name="configuration")
       private final @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
 
-    public Output<ObjectLambdaAccessPointConfigurationGetArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+    public Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration() {
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ObjectLambdaAccessPointState(
@@ -67,10 +68,10 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
     }
 
     private ObjectLambdaAccessPointState() {
-        this.accountId = Output.empty();
-        this.arn = Output.empty();
-        this.configuration = Output.empty();
-        this.name = Output.empty();
+        this.accountId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.configuration = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -112,7 +113,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder configuration(@Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration) {
@@ -120,7 +121,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder configuration(@Nullable ObjectLambdaAccessPointConfigurationGetArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -128,7 +129,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ObjectLambdaAccessPointState build() {
             return new ObjectLambdaAccessPointState(accountId, arn, configuration, name);

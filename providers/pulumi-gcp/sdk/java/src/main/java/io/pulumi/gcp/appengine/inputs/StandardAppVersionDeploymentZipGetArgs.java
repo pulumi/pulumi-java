@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
     @Import(name="filesCount")
       private final @Nullable Output<Integer> filesCount;
 
-    public Output<Integer> getFilesCount() {
-        return this.filesCount == null ? Output.empty() : this.filesCount;
+    public Output<Integer> filesCount() {
+        return this.filesCount == null ? Codegen.empty() : this.filesCount;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
     @Import(name="sourceUrl", required=true)
       private final Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
+    public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
 
@@ -45,8 +46,8 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
     }
 
     private StandardAppVersionDeploymentZipGetArgs() {
-        this.filesCount = Output.empty();
-        this.sourceUrl = Output.empty();
+        this.filesCount = Codegen.empty();
+        this.sourceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder filesCount(@Nullable Integer filesCount) {
-            this.filesCount = Output.ofNullable(filesCount);
+            this.filesCount = Codegen.ofNullable(filesCount);
             return this;
         }
         public Builder sourceUrl(Output<String> sourceUrl) {

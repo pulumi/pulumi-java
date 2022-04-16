@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return The etag of the zone.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getMaxNumberOfRecordSets() {
+    public Output<Double> maxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
@@ -86,7 +87,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getMaxNumberOfRecordsPerRecordSet() {
+    public Output<Double> maxNumberOfRecordsPerRecordSet() {
         return this.maxNumberOfRecordsPerRecordSet;
     }
     /**
@@ -100,7 +101,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     /**
@@ -128,7 +129,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getNumberOfRecordSets() {
+    public Output<Double> numberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
@@ -142,7 +143,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> getRegistrationVirtualNetworks() {
+    public Output</* @Nullable */ List<SubResourceResponse>> registrationVirtualNetworks() {
         return this.registrationVirtualNetworks;
     }
     /**
@@ -156,7 +157,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> getResolutionVirtualNetworks() {
+    public Output</* @Nullable */ List<SubResourceResponse>> resolutionVirtualNetworks() {
         return this.resolutionVirtualNetworks;
     }
     /**
@@ -170,7 +171,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -184,7 +185,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -198,7 +199,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @return The type of this DNS zone (Public or Private).
      * 
      */
-    public Output</* @Nullable */ String> getZoneType() {
+    public Output</* @Nullable */ String> zoneType() {
         return this.zoneType;
     }
 
@@ -224,7 +225,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Zone(String name, ZoneArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:Zone", name, args == null ? ZoneArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:Zone", name, args == null ? ZoneArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Zone(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

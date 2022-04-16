@@ -17,28 +17,28 @@ public final class AppCustomRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="condition")
       private final @Nullable String condition;
 
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
     }
 
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

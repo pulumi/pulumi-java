@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="externalIp")
       private final @Nullable Output<String> externalIp;
 
-    public Output<String> getExternalIp() {
-        return this.externalIp == null ? Output.empty() : this.externalIp;
+    public Output<String> externalIp() {
+        return this.externalIp == null ? Codegen.empty() : this.externalIp;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="internalIp")
       private final @Nullable Output<String> internalIp;
 
-    public Output<String> getInternalIp() {
-        return this.internalIp == null ? Output.empty() : this.internalIp;
+    public Output<String> internalIp() {
+        return this.internalIp == null ? Codegen.empty() : this.internalIp;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+    public Output<String> subnetwork() {
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public NetworkInterfaceArgs(
@@ -74,10 +75,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.externalIp = Output.empty();
-        this.internalIp = Output.empty();
-        this.network = Output.empty();
-        this.subnetwork = Output.empty();
+        this.externalIp = Codegen.empty();
+        this.internalIp = Codegen.empty();
+        this.network = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder externalIp(@Nullable String externalIp) {
-            this.externalIp = Output.ofNullable(externalIp);
+            this.externalIp = Codegen.ofNullable(externalIp);
             return this;
         }
         public Builder internalIp(@Nullable Output<String> internalIp) {
@@ -119,7 +120,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder internalIp(@Nullable String internalIp) {
-            this.internalIp = Output.ofNullable(internalIp);
+            this.internalIp = Codegen.ofNullable(internalIp);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -127,7 +128,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -135,7 +136,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(externalIp, internalIp, network, subnetwork);

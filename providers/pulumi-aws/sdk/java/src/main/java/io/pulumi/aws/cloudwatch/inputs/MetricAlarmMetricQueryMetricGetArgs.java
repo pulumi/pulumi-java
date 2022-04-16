@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<Map<String,String>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -47,8 +48,8 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     @Import(name="period", required=true)
       private final Output<Integer> period;
 
-    public Output<Integer> getPeriod() {
+    public Output<Integer> period() {
         return this.period;
     }
 
@@ -70,7 +71,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     @Import(name="stat", required=true)
       private final Output<String> stat;
 
-    public Output<String> getStat() {
+    public Output<String> stat() {
         return this.stat;
     }
 
@@ -81,8 +82,8 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public MetricAlarmMetricQueryMetricGetArgs(
@@ -101,12 +102,12 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     }
 
     private MetricAlarmMetricQueryMetricGetArgs() {
-        this.dimensions = Output.empty();
-        this.metricName = Output.empty();
-        this.namespace = Output.empty();
-        this.period = Output.empty();
-        this.stat = Output.empty();
-        this.unit = Output.empty();
+        this.dimensions = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.period = Codegen.empty();
+        this.stat = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder metricName(Output<String> metricName) {
@@ -160,7 +161,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder period(Output<Integer> period) {
@@ -184,7 +185,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public MetricAlarmMetricQueryMetricGetArgs build() {
             return new MetricAlarmMetricQueryMetricGetArgs(dimensions, metricName, namespace, period, stat, unit);

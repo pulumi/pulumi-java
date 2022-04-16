@@ -19,7 +19,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
     @Import(name="timeSeriesDatabaseConnectionName", required=true)
       private final String timeSeriesDatabaseConnectionName;
 
-    public String getTimeSeriesDatabaseConnectionName() {
+    public String timeSeriesDatabaseConnectionName() {
         return this.timeSeriesDatabaseConnectionName;
     }
 

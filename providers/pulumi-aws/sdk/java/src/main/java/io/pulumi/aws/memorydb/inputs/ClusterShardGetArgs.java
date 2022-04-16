@@ -6,6 +6,7 @@ package io.pulumi.aws.memorydb.inputs;
 import io.pulumi.aws.memorydb.inputs.ClusterShardNodeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nodes")
       private final @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
 
-    public Output<List<ClusterShardNodeGetArgs>> getNodes() {
-        return this.nodes == null ? Output.empty() : this.nodes;
+    public Output<List<ClusterShardNodeGetArgs>> nodes() {
+        return this.nodes == null ? Codegen.empty() : this.nodes;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> getNumNodes() {
-        return this.numNodes == null ? Output.empty() : this.numNodes;
+    public Output<Integer> numNodes() {
+        return this.numNodes == null ? Codegen.empty() : this.numNodes;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="slots")
       private final @Nullable Output<String> slots;
 
-    public Output<String> getSlots() {
-        return this.slots == null ? Output.empty() : this.slots;
+    public Output<String> slots() {
+        return this.slots == null ? Codegen.empty() : this.slots;
     }
 
     public ClusterShardGetArgs(
@@ -74,10 +75,10 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterShardGetArgs() {
-        this.name = Output.empty();
-        this.nodes = Output.empty();
-        this.numNodes = Output.empty();
-        this.slots = Output.empty();
+        this.name = Codegen.empty();
+        this.nodes = Codegen.empty();
+        this.numNodes = Codegen.empty();
+        this.slots = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nodes(@Nullable Output<List<ClusterShardNodeGetArgs>> nodes) {
@@ -119,7 +120,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder nodes(@Nullable List<ClusterShardNodeGetArgs> nodes) {
-            this.nodes = Output.ofNullable(nodes);
+            this.nodes = Codegen.ofNullable(nodes);
             return this;
         }
         public Builder nodes(ClusterShardNodeGetArgs... nodes) {
@@ -130,7 +131,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Output.ofNullable(numNodes);
+            this.numNodes = Codegen.ofNullable(numNodes);
             return this;
         }
         public Builder slots(@Nullable Output<String> slots) {
@@ -138,7 +139,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder slots(@Nullable String slots) {
-            this.slots = Output.ofNullable(slots);
+            this.slots = Codegen.ofNullable(slots);
             return this;
         }        public ClusterShardGetArgs build() {
             return new ClusterShardGetArgs(name, nodes, numNodes, slots);

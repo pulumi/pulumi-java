@@ -19,7 +19,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends io.pu
     @Import(name="isReached", required=true)
       private final Boolean isReached;
 
-    public Boolean getIsReached() {
+    public Boolean isReached() {
         return this.isReached;
     }
 

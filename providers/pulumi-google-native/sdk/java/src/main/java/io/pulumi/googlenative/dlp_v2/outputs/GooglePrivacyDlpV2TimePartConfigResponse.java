@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
      * The part of the time to keep.
      * 
     */
-    public String getPartToExtract() {
+    public String partToExtract() {
         return this.partToExtract;
     }
 

@@ -11,6 +11,7 @@ import io.pulumi.awsnative.signer.outputs.SigningProfileTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified signing profile.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @return The ID of the target signing platform.
      * 
      */
-    public Output<SigningProfilePlatformId> getPlatformId() {
+    public Output<SigningProfilePlatformId> platformId() {
         return this.platformId;
     }
     /**
@@ -60,7 +61,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @return A name for the signing profile. AWS CloudFormation generates a unique physical ID and uses that ID for the signing profile name.
      * 
      */
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
     /**
@@ -74,7 +75,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @return A version for the signing profile. AWS Signer generates a unique version for each profile of the same profile name.
      * 
      */
-    public Output<String> getProfileVersion() {
+    public Output<String> profileVersion() {
         return this.profileVersion;
     }
     /**
@@ -88,7 +89,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified signing profile version.
      * 
      */
-    public Output<String> getProfileVersionArn() {
+    public Output<String> profileVersionArn() {
         return this.profileVersionArn;
     }
     /**
@@ -102,7 +103,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @return Signature validity period of the profile.
      * 
      */
-    public Output</* @Nullable */ SigningProfileSignatureValidityPeriod> getSignatureValidityPeriod() {
+    public Output</* @Nullable */ SigningProfileSignatureValidityPeriod> signatureValidityPeriod() {
         return this.signatureValidityPeriod;
     }
     /**
@@ -116,7 +117,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @return A list of tags associated with the signing profile.
      * 
      */
-    public Output</* @Nullable */ List<SigningProfileTag>> getTags() {
+    public Output</* @Nullable */ List<SigningProfileTag>> tags() {
         return this.tags;
     }
 
@@ -142,7 +143,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SigningProfile(String name, SigningProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:signer:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:signer:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SigningProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

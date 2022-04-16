@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ColumnSchemaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
     @Import(name="columns")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns;
 
-    public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+    public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns() {
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     public GoogleCloudDatacatalogV1SchemaArgs(@Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> columns) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
     }
 
     private GoogleCloudDatacatalogV1SchemaArgs() {
-        this.columns = Output.empty();
+        this.columns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDatacatalogV1SchemaArgs extends io.pulumi.resource
             return this;
         }
         public Builder columns(@Nullable List<GoogleCloudDatacatalogV1ColumnSchemaArgs> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(GoogleCloudDatacatalogV1ColumnSchemaArgs... columns) {

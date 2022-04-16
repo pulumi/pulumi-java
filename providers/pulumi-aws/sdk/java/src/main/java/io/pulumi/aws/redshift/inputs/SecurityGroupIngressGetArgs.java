@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
-        return this.cidr == null ? Output.empty() : this.cidr;
+    public Output<String> cidr() {
+        return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     @Import(name="securityGroupName")
       private final @Nullable Output<String> securityGroupName;
 
-    public Output<String> getSecurityGroupName() {
-        return this.securityGroupName == null ? Output.empty() : this.securityGroupName;
+    public Output<String> securityGroupName() {
+        return this.securityGroupName == null ? Codegen.empty() : this.securityGroupName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     @Import(name="securityGroupOwnerId")
       private final @Nullable Output<String> securityGroupOwnerId;
 
-    public Output<String> getSecurityGroupOwnerId() {
-        return this.securityGroupOwnerId == null ? Output.empty() : this.securityGroupOwnerId;
+    public Output<String> securityGroupOwnerId() {
+        return this.securityGroupOwnerId == null ? Codegen.empty() : this.securityGroupOwnerId;
     }
 
     public SecurityGroupIngressGetArgs(
@@ -58,9 +59,9 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     }
 
     private SecurityGroupIngressGetArgs() {
-        this.cidr = Output.empty();
-        this.securityGroupName = Output.empty();
-        this.securityGroupOwnerId = Output.empty();
+        this.cidr = Codegen.empty();
+        this.securityGroupName = Codegen.empty();
+        this.securityGroupOwnerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Output.ofNullable(cidr);
+            this.cidr = Codegen.ofNullable(cidr);
             return this;
         }
         public Builder securityGroupName(@Nullable Output<String> securityGroupName) {
@@ -100,7 +101,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder securityGroupName(@Nullable String securityGroupName) {
-            this.securityGroupName = Output.ofNullable(securityGroupName);
+            this.securityGroupName = Codegen.ofNullable(securityGroupName);
             return this;
         }
         public Builder securityGroupOwnerId(@Nullable Output<String> securityGroupOwnerId) {
@@ -108,7 +109,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
-            this.securityGroupOwnerId = Output.ofNullable(securityGroupOwnerId);
+            this.securityGroupOwnerId = Codegen.ofNullable(securityGroupOwnerId);
             return this;
         }        public SecurityGroupIngressGetArgs build() {
             return new SecurityGroupIngressGetArgs(cidr, securityGroupName, securityGroupOwnerId);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.networkmanager.CustomerGatewayAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * @return The Amazon Resource Name (ARN) of the customer gateway.
      * 
      */
-    public Output<String> getCustomerGatewayArn() {
+    public Output<String> customerGatewayArn() {
         return this.customerGatewayArn;
     }
     /**
@@ -42,7 +43,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * @return The ID of the device
      * 
      */
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
     /**
@@ -56,7 +57,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -70,7 +71,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * @return The ID of the link
      * 
      */
-    public Output</* @Nullable */ String> getLinkId() {
+    public Output</* @Nullable */ String> linkId() {
         return this.linkId;
     }
 
@@ -96,7 +97,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomerGatewayAssociation(String name, CustomerGatewayAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkmanager:CustomerGatewayAssociation", name, args == null ? CustomerGatewayAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkmanager:CustomerGatewayAssociation", name, args == null ? CustomerGatewayAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomerGatewayAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

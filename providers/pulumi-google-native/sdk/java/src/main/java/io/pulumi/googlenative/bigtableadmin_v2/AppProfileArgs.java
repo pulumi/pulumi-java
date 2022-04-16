@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.MultiClusterRoutingUseAnyArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SingleClusterRoutingArgs;
 import java.lang.String;
@@ -19,7 +20,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appProfileId", required=true)
       private final Output<String> appProfileId;
 
-    public Output<String> getAppProfileId() {
+    public Output<String> appProfileId() {
         return this.appProfileId;
     }
 
@@ -30,8 +31,8 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -41,21 +42,21 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="ignoreWarnings")
       private final @Nullable Output<String> ignoreWarnings;
 
-    public Output<String> getIgnoreWarnings() {
-        return this.ignoreWarnings == null ? Output.empty() : this.ignoreWarnings;
+    public Output<String> ignoreWarnings() {
+        return this.ignoreWarnings == null ? Codegen.empty() : this.ignoreWarnings;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -66,8 +67,8 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiClusterRoutingUseAny")
       private final @Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
 
-    public Output<MultiClusterRoutingUseAnyArgs> getMultiClusterRoutingUseAny() {
-        return this.multiClusterRoutingUseAny == null ? Output.empty() : this.multiClusterRoutingUseAny;
+    public Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny() {
+        return this.multiClusterRoutingUseAny == null ? Codegen.empty() : this.multiClusterRoutingUseAny;
     }
 
     /**
@@ -77,15 +78,15 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="singleClusterRouting")
       private final @Nullable Output<SingleClusterRoutingArgs> singleClusterRouting;
 
-    public Output<SingleClusterRoutingArgs> getSingleClusterRouting() {
-        return this.singleClusterRouting == null ? Output.empty() : this.singleClusterRouting;
+    public Output<SingleClusterRoutingArgs> singleClusterRouting() {
+        return this.singleClusterRouting == null ? Codegen.empty() : this.singleClusterRouting;
     }
 
     public AppProfileArgs(
@@ -121,15 +122,15 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppProfileArgs() {
-        this.appProfileId = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.ignoreWarnings = Output.empty();
-        this.instanceId = Output.empty();
-        this.multiClusterRoutingUseAny = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.singleClusterRouting = Output.empty();
+        this.appProfileId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.ignoreWarnings = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.multiClusterRoutingUseAny = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.singleClusterRouting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -189,7 +190,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder ignoreWarnings(@Nullable Output<String> ignoreWarnings) {
@@ -197,7 +198,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreWarnings(@Nullable String ignoreWarnings) {
-            this.ignoreWarnings = Output.ofNullable(ignoreWarnings);
+            this.ignoreWarnings = Codegen.ofNullable(ignoreWarnings);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {
@@ -213,7 +214,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multiClusterRoutingUseAny(@Nullable MultiClusterRoutingUseAnyArgs multiClusterRoutingUseAny) {
-            this.multiClusterRoutingUseAny = Output.ofNullable(multiClusterRoutingUseAny);
+            this.multiClusterRoutingUseAny = Codegen.ofNullable(multiClusterRoutingUseAny);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -229,7 +230,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder singleClusterRouting(@Nullable Output<SingleClusterRoutingArgs> singleClusterRouting) {
@@ -237,7 +238,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder singleClusterRouting(@Nullable SingleClusterRoutingArgs singleClusterRouting) {
-            this.singleClusterRouting = Output.ofNullable(singleClusterRouting);
+            this.singleClusterRouting = Codegen.ofNullable(singleClusterRouting);
             return this;
         }        public AppProfileArgs build() {
             return new AppProfileArgs(appProfileId, description, etag, ignoreWarnings, instanceId, multiClusterRoutingUseAny, name, project, singleClusterRouting);

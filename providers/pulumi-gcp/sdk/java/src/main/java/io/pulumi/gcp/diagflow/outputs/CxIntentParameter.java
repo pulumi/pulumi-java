@@ -52,21 +52,21 @@ public final class CxIntentParameter {
      * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
      * 
     */
-    public String getEntityType() {
+    public String entityType() {
         return this.entityType;
     }
     /**
      * The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Indicates whether the parameter represents a list of values.
      * 
     */
-    public Optional<Boolean> getIsList() {
+    public Optional<Boolean> isList() {
         return Optional.ofNullable(this.isList);
     }
     /**
@@ -74,7 +74,7 @@ public final class CxIntentParameter {
      * Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
     */
-    public Optional<Boolean> getRedact() {
+    public Optional<Boolean> redact() {
         return Optional.ofNullable(this.redact);
     }
 

@@ -12,6 +12,7 @@ import io.pulumi.aws.gamelift.outputs.FleetRuntimeConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Fleet ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return ID of the Gamelift Build to be deployed on the fleet.
      * 
      */
-    public Output<String> getBuildId() {
+    public Output<String> buildId() {
         return this.buildId;
     }
     /**
@@ -68,7 +69,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Human-readable description of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +83,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
      * 
      */
-    public Output</* @Nullable */ List<FleetEc2InboundPermission>> getEc2InboundPermissions() {
+    public Output</* @Nullable */ List<FleetEc2InboundPermission>> ec2InboundPermissions() {
         return this.ec2InboundPermissions;
     }
     /**
@@ -96,7 +97,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Name of an EC2 instance typeE.g., `t2.micro`
      * 
      */
-    public Output<String> getEc2InstanceType() {
+    public Output<String> ec2InstanceType() {
         return this.ec2InstanceType;
     }
     /**
@@ -110,7 +111,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
      * 
      */
-    public Output</* @Nullable */ String> getFleetType() {
+    public Output</* @Nullable */ String> fleetType() {
         return this.fleetType;
     }
     /**
@@ -124,13 +125,13 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return ARN of an IAM role that instances in the fleet can assume.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceRoleArn() {
+    public Output</* @Nullable */ String> instanceRoleArn() {
         return this.instanceRoleArn;
     }
     @Export(name="logPaths", type=List.class, parameters={String.class})
     private Output<List<String>> logPaths;
 
-    public Output<List<String>> getLogPaths() {
+    public Output<List<String>> logPaths() {
         return this.logPaths;
     }
     /**
@@ -144,7 +145,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
      * 
      */
-    public Output<List<String>> getMetricGroups() {
+    public Output<List<String>> metricGroups() {
         return this.metricGroups;
     }
     /**
@@ -158,7 +159,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The name of the fleet.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -172,7 +173,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
      * 
      */
-    public Output</* @Nullable */ String> getNewGameSessionProtectionPolicy() {
+    public Output</* @Nullable */ String> newGameSessionProtectionPolicy() {
         return this.newGameSessionProtectionPolicy;
     }
     /**
@@ -186,7 +187,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Operating system of the fleet's computing resources.
      * 
      */
-    public Output<String> getOperatingSystem() {
+    public Output<String> operatingSystem() {
         return this.operatingSystem;
     }
     /**
@@ -200,7 +201,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
      * 
      */
-    public Output</* @Nullable */ FleetResourceCreationLimitPolicy> getResourceCreationLimitPolicy() {
+    public Output</* @Nullable */ FleetResourceCreationLimitPolicy> resourceCreationLimitPolicy() {
         return this.resourceCreationLimitPolicy;
     }
     /**
@@ -214,7 +215,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Instructions for launching server processes on each instance in the fleet. See below.
      * 
      */
-    public Output</* @Nullable */ FleetRuntimeConfiguration> getRuntimeConfiguration() {
+    public Output</* @Nullable */ FleetRuntimeConfiguration> runtimeConfiguration() {
         return this.runtimeConfiguration;
     }
     /**
@@ -228,7 +229,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -242,7 +243,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -268,7 +269,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fleet(String name, FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:gamelift/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:gamelift/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Fleet(String name, Output<String> id, @Nullable FleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

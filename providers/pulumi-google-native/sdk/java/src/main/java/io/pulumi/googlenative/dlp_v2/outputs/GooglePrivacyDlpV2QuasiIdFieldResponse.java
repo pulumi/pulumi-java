@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
      * A auxiliary field.
      * 
     */
-    public String getCustomTag() {
+    public String customTag() {
         return this.customTag;
     }
     /**
      * Identifies the column.
      * 
     */
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 

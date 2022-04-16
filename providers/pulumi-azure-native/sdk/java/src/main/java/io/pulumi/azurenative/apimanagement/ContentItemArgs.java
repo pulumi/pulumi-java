@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentItemId")
       private final @Nullable Output<String> contentItemId;
 
-    public Output<String> getContentItemId() {
-        return this.contentItemId == null ? Output.empty() : this.contentItemId;
+    public Output<String> contentItemId() {
+        return this.contentItemId == null ? Codegen.empty() : this.contentItemId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentTypeId", required=true)
       private final Output<String> contentTypeId;
 
-    public Output<String> getContentTypeId() {
+    public Output<String> contentTypeId() {
         return this.contentTypeId;
     }
 
@@ -43,7 +44,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -70,10 +71,10 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentItemArgs() {
-        this.contentItemId = Output.empty();
-        this.contentTypeId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.contentItemId = Codegen.empty();
+        this.contentTypeId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentItemId(@Nullable String contentItemId) {
-            this.contentItemId = Output.ofNullable(contentItemId);
+            this.contentItemId = Codegen.ofNullable(contentItemId);
             return this;
         }
         public Builder contentTypeId(Output<String> contentTypeId) {

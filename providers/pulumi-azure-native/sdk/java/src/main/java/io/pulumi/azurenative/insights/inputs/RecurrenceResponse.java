@@ -24,7 +24,7 @@ public final class RecurrenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="frequency", required=true)
       private final String frequency;
 
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
 
@@ -35,7 +35,7 @@ public final class RecurrenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="schedule", required=true)
       private final RecurrentScheduleResponse schedule;
 
-    public RecurrentScheduleResponse getSchedule() {
+    public RecurrentScheduleResponse schedule() {
         return this.schedule;
     }
 

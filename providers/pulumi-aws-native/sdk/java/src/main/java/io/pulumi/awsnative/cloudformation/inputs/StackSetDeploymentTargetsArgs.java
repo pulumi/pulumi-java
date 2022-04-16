@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
     @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> getAccounts() {
-        return this.accounts == null ? Output.empty() : this.accounts;
+    public Output<List<String>> accounts() {
+        return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
     @Import(name="organizationalUnitIds")
       private final @Nullable Output<List<String>> organizationalUnitIds;
 
-    public Output<List<String>> getOrganizationalUnitIds() {
-        return this.organizationalUnitIds == null ? Output.empty() : this.organizationalUnitIds;
+    public Output<List<String>> organizationalUnitIds() {
+        return this.organizationalUnitIds == null ? Codegen.empty() : this.organizationalUnitIds;
     }
 
     public StackSetDeploymentTargetsArgs(
@@ -49,8 +50,8 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
     }
 
     private StackSetDeploymentTargetsArgs() {
-        this.accounts = Output.empty();
-        this.organizationalUnitIds = Output.empty();
+        this.accounts = Codegen.empty();
+        this.organizationalUnitIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Output.ofNullable(accounts);
+            this.accounts = Codegen.ofNullable(accounts);
             return this;
         }
         public Builder accounts(String... accounts) {
@@ -91,7 +92,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
-            this.organizationalUnitIds = Output.ofNullable(organizationalUnitIds);
+            this.organizationalUnitIds = Codegen.ofNullable(organizationalUnitIds);
             return this;
         }
         public Builder organizationalUnitIds(String... organizationalUnitIds) {

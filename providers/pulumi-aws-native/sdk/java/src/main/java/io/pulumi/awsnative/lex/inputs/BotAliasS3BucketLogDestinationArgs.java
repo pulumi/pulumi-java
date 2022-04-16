@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
     @Import(name="logPrefix", required=true)
       private final Output<String> logPrefix;
 
-    public Output<String> getLogPrefix() {
+    public Output<String> logPrefix() {
         return this.logPrefix;
     }
 
@@ -47,7 +48,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
     @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;
 
-    public Output<String> getS3BucketArn() {
+    public Output<String> s3BucketArn() {
         return this.s3BucketArn;
     }
 
@@ -61,9 +62,9 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
     }
 
     private BotAliasS3BucketLogDestinationArgs() {
-        this.kmsKeyArn = Output.empty();
-        this.logPrefix = Output.empty();
-        this.s3BucketArn = Output.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.logPrefix = Codegen.empty();
+        this.s3BucketArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder logPrefix(Output<String> logPrefix) {

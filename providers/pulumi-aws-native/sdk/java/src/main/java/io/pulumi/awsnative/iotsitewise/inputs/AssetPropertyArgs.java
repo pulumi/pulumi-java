@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.enums.AssetPropertyNotificationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+    public Output<String> alias() {
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
 
-    public Output<String> getLogicalId() {
+    public Output<String> logicalId() {
         return this.logicalId;
     }
 
@@ -48,8 +49,8 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationState")
       private final @Nullable Output<AssetPropertyNotificationState> notificationState;
 
-    public Output<AssetPropertyNotificationState> getNotificationState() {
-        return this.notificationState == null ? Output.empty() : this.notificationState;
+    public Output<AssetPropertyNotificationState> notificationState() {
+        return this.notificationState == null ? Codegen.empty() : this.notificationState;
     }
 
     public AssetPropertyArgs(
@@ -62,9 +63,9 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetPropertyArgs() {
-        this.alias = Output.empty();
-        this.logicalId = Output.empty();
-        this.notificationState = Output.empty();
+        this.alias = Codegen.empty();
+        this.logicalId = Codegen.empty();
+        this.notificationState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder logicalId(Output<String> logicalId) {
@@ -112,7 +113,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationState(@Nullable AssetPropertyNotificationState notificationState) {
-            this.notificationState = Output.ofNullable(notificationState);
+            this.notificationState = Codegen.ofNullable(notificationState);
             return this;
         }        public AssetPropertyArgs build() {
             return new AssetPropertyArgs(alias, logicalId, notificationState);

@@ -8,6 +8,7 @@ import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationGetArgs;
 import io.pulumi.aws.wafregional.inputs.WebAclRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAction")
       private final @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
 
-    public Output<WebAclDefaultActionGetArgs> getDefaultAction() {
-        return this.defaultAction == null ? Output.empty() : this.defaultAction;
+    public Output<WebAclDefaultActionGetArgs> defaultAction() {
+        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfiguration")
       private final @Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Output<WebAclLoggingConfigurationGetArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
+    public Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration() {
+        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
-    public Output<String> getMetricName() {
-        return this.metricName == null ? Output.empty() : this.metricName;
+    public Output<String> metricName() {
+        return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<WebAclRuleGetArgs>> rules;
 
-    public Output<List<WebAclRuleGetArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<WebAclRuleGetArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public WebAclState(
@@ -127,14 +128,14 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAclState() {
-        this.arn = Output.empty();
-        this.defaultAction = Output.empty();
-        this.loggingConfiguration = Output.empty();
-        this.metricName = Output.empty();
-        this.name = Output.empty();
-        this.rules = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.defaultAction = Codegen.empty();
+        this.loggingConfiguration = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder defaultAction(@Nullable Output<WebAclDefaultActionGetArgs> defaultAction) {
@@ -184,7 +185,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultAction(@Nullable WebAclDefaultActionGetArgs defaultAction) {
-            this.defaultAction = Output.ofNullable(defaultAction);
+            this.defaultAction = Codegen.ofNullable(defaultAction);
             return this;
         }
         public Builder loggingConfiguration(@Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration) {
@@ -192,7 +193,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingConfiguration(@Nullable WebAclLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
             return this;
         }
         public Builder metricName(@Nullable Output<String> metricName) {
@@ -200,7 +201,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Output.ofNullable(metricName);
+            this.metricName = Codegen.ofNullable(metricName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -208,7 +209,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rules(@Nullable Output<List<WebAclRuleGetArgs>> rules) {
@@ -216,7 +217,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<WebAclRuleGetArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(WebAclRuleGetArgs... rules) {
@@ -227,7 +228,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -235,7 +236,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public WebAclState build() {
             return new WebAclState(arn, defaultAction, loggingConfiguration, metricName, name, rules, tags, tagsAll);

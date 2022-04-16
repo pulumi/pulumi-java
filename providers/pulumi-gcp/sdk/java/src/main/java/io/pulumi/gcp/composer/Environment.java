@@ -6,6 +6,7 @@ package io.pulumi.gcp.composer;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.composer.EnvironmentArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentState;
@@ -45,7 +46,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Configuration parameters for this environment.
      * 
      */
-    public Output<EnvironmentConfig> getConfig() {
+    public Output<EnvironmentConfig> config() {
         return this.config;
     }
     /**
@@ -67,7 +68,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * associated with a given environment. Both keys and values must be <= 128 bytes in size.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -81,7 +82,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Name of the environment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +96,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -109,7 +110,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The location or Compute Engine region for the environment.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
 
@@ -135,7 +136,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Environment(String name, @Nullable EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:composer/environment:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:composer/environment:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Environment(String name, Output<String> id, @Nullable EnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

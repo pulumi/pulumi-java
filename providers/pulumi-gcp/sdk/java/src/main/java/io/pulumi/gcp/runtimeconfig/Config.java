@@ -6,6 +6,7 @@ package io.pulumi.gcp.runtimeconfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.runtimeconfig.ConfigArgs;
 import io.pulumi.gcp.runtimeconfig.inputs.ConfigState;
@@ -43,7 +44,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * config.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The name of the runtime config.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -99,7 +100,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Config(String name, @Nullable ConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:runtimeconfig/config:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:runtimeconfig/config:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Config(String name, Output<String> id, @Nullable ConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
     @Import(name="directoryId", required=true)
       private final Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
 
@@ -32,7 +33,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
     @Import(name="dnsIps", required=true)
       private final Output<List<String>> dnsIps;
 
-    public Output<List<String>> getDnsIps() {
+    public Output<List<String>> dnsIps() {
         return this.dnsIps;
     }
 
@@ -43,7 +44,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
     @Import(name="remoteDomainName", required=true)
       private final Output<String> remoteDomainName;
 
-    public Output<String> getRemoteDomainName() {
+    public Output<String> remoteDomainName() {
         return this.remoteDomainName;
     }
 
@@ -57,9 +58,9 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
     }
 
     private ConditionalForwaderArgs() {
-        this.directoryId = Output.empty();
-        this.dnsIps = Output.empty();
-        this.remoteDomainName = Output.empty();
+        this.directoryId = Codegen.empty();
+        this.dnsIps = Codegen.empty();
+        this.remoteDomainName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +50,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A list that describes the correlation of the service with other services.
      * 
      */
-    public Output</* @Nullable */ List<ServiceCorrelationDescriptionResponse>> getCorrelationScheme() {
+    public Output</* @Nullable */ List<ServiceCorrelationDescriptionResponse>> correlationScheme() {
         return this.correlationScheme;
     }
     /**
@@ -63,7 +64,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Specifies the move cost for the service.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultMoveCost() {
+    public Output</* @Nullable */ String> defaultMoveCost() {
         return this.defaultMoveCost;
     }
     /**
@@ -77,7 +78,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Azure resource etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -91,7 +92,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -105,7 +106,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Azure resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +120,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Describes how the service is partitioned.
      * 
      */
-    public Output</* @Nullable */ Object> getPartitionDescription() {
+    public Output</* @Nullable */ Object> partitionDescription() {
         return this.partitionDescription;
     }
     /**
@@ -133,7 +134,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
      * 
      */
-    public Output</* @Nullable */ String> getPlacementConstraints() {
+    public Output</* @Nullable */ String> placementConstraints() {
         return this.placementConstraints;
     }
     /**
@@ -147,7 +148,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The current deployment or provisioning state, which only appears in the response
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -161,7 +162,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
      * 
      */
-    public Output</* @Nullable */ String> getServiceDnsName() {
+    public Output</* @Nullable */ String> serviceDnsName() {
         return this.serviceDnsName;
     }
     /**
@@ -175,7 +176,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The kind of service (Stateless or Stateful).
      * 
      */
-    public Output<String> getServiceKind() {
+    public Output<String> serviceKind() {
         return this.serviceKind;
     }
     /**
@@ -189,7 +190,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The service load metrics is given as an array of ServiceLoadMetricDescription objects.
      * 
      */
-    public Output</* @Nullable */ List<ServiceLoadMetricDescriptionResponse>> getServiceLoadMetrics() {
+    public Output</* @Nullable */ List<ServiceLoadMetricDescriptionResponse>> serviceLoadMetrics() {
         return this.serviceLoadMetrics;
     }
     /**
@@ -203,7 +204,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The activation Mode of the service package
      * 
      */
-    public Output</* @Nullable */ String> getServicePackageActivationMode() {
+    public Output</* @Nullable */ String> servicePackageActivationMode() {
         return this.servicePackageActivationMode;
     }
     /**
@@ -217,7 +218,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A list that describes the correlation of the service with other services.
      * 
      */
-    public Output</* @Nullable */ List<ServicePlacementPolicyDescriptionResponse>> getServicePlacementPolicies() {
+    public Output</* @Nullable */ List<ServicePlacementPolicyDescriptionResponse>> servicePlacementPolicies() {
         return this.servicePlacementPolicies;
     }
     /**
@@ -231,7 +232,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The name of the service type
      * 
      */
-    public Output</* @Nullable */ String> getServiceTypeName() {
+    public Output</* @Nullable */ String> serviceTypeName() {
         return this.serviceTypeName;
     }
     /**
@@ -245,7 +246,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -259,7 +260,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Azure resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -285,7 +286,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabric:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:servicefabric:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

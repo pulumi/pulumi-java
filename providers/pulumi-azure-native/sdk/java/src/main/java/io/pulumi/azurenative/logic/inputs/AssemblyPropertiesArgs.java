@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="assemblyCulture")
       private final @Nullable Output<String> assemblyCulture;
 
-    public Output<String> getAssemblyCulture() {
-        return this.assemblyCulture == null ? Output.empty() : this.assemblyCulture;
+    public Output<String> assemblyCulture() {
+        return this.assemblyCulture == null ? Codegen.empty() : this.assemblyCulture;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="assemblyName", required=true)
       private final Output<String> assemblyName;
 
-    public Output<String> getAssemblyName() {
+    public Output<String> assemblyName() {
         return this.assemblyName;
     }
 
@@ -49,8 +50,8 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="assemblyPublicKeyToken")
       private final @Nullable Output<String> assemblyPublicKeyToken;
 
-    public Output<String> getAssemblyPublicKeyToken() {
-        return this.assemblyPublicKeyToken == null ? Output.empty() : this.assemblyPublicKeyToken;
+    public Output<String> assemblyPublicKeyToken() {
+        return this.assemblyPublicKeyToken == null ? Codegen.empty() : this.assemblyPublicKeyToken;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="assemblyVersion")
       private final @Nullable Output<String> assemblyVersion;
 
-    public Output<String> getAssemblyVersion() {
-        return this.assemblyVersion == null ? Output.empty() : this.assemblyVersion;
+    public Output<String> assemblyVersion() {
+        return this.assemblyVersion == null ? Codegen.empty() : this.assemblyVersion;
     }
 
     /**
@@ -71,15 +72,15 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
 
-    public Output<String> getChangedTime() {
-        return this.changedTime == null ? Output.empty() : this.changedTime;
+    public Output<String> changedTime() {
+        return this.changedTime == null ? Codegen.empty() : this.changedTime;
     }
 
     @Import(name="content")
       private final @Nullable Output<Object> content;
 
-    public Output<Object> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<Object> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="contentLink")
       private final @Nullable Output<ContentLinkArgs> contentLink;
 
-    public Output<ContentLinkArgs> getContentLink() {
-        return this.contentLink == null ? Output.empty() : this.contentLink;
+    public Output<ContentLinkArgs> contentLink() {
+        return this.contentLink == null ? Codegen.empty() : this.contentLink;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<String> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -111,15 +112,15 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+    public Output<String> createdTime() {
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Object> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public AssemblyPropertiesArgs(
@@ -146,16 +147,16 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AssemblyPropertiesArgs() {
-        this.assemblyCulture = Output.empty();
-        this.assemblyName = Output.empty();
-        this.assemblyPublicKeyToken = Output.empty();
-        this.assemblyVersion = Output.empty();
-        this.changedTime = Output.empty();
-        this.content = Output.empty();
-        this.contentLink = Output.empty();
-        this.contentType = Output.empty();
-        this.createdTime = Output.empty();
-        this.metadata = Output.empty();
+        this.assemblyCulture = Codegen.empty();
+        this.assemblyName = Codegen.empty();
+        this.assemblyPublicKeyToken = Codegen.empty();
+        this.assemblyVersion = Codegen.empty();
+        this.changedTime = Codegen.empty();
+        this.content = Codegen.empty();
+        this.contentLink = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -201,7 +202,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder assemblyCulture(@Nullable String assemblyCulture) {
-            this.assemblyCulture = Output.ofNullable(assemblyCulture);
+            this.assemblyCulture = Codegen.ofNullable(assemblyCulture);
             return this;
         }
         public Builder assemblyName(Output<String> assemblyName) {
@@ -217,7 +218,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
-            this.assemblyPublicKeyToken = Output.ofNullable(assemblyPublicKeyToken);
+            this.assemblyPublicKeyToken = Codegen.ofNullable(assemblyPublicKeyToken);
             return this;
         }
         public Builder assemblyVersion(@Nullable Output<String> assemblyVersion) {
@@ -225,7 +226,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder assemblyVersion(@Nullable String assemblyVersion) {
-            this.assemblyVersion = Output.ofNullable(assemblyVersion);
+            this.assemblyVersion = Codegen.ofNullable(assemblyVersion);
             return this;
         }
         public Builder changedTime(@Nullable Output<String> changedTime) {
@@ -233,7 +234,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = Output.ofNullable(changedTime);
+            this.changedTime = Codegen.ofNullable(changedTime);
             return this;
         }
         public Builder content(@Nullable Output<Object> content) {
@@ -241,7 +242,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder content(@Nullable Object content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentLink(@Nullable Output<ContentLinkArgs> contentLink) {
@@ -249,7 +250,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder contentLink(@Nullable ContentLinkArgs contentLink) {
-            this.contentLink = Output.ofNullable(contentLink);
+            this.contentLink = Codegen.ofNullable(contentLink);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -257,7 +258,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -265,7 +266,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -273,7 +274,7 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public AssemblyPropertiesArgs build() {
             return new AssemblyPropertiesArgs(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);

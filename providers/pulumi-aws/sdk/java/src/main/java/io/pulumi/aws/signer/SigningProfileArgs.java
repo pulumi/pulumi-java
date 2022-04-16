@@ -6,6 +6,7 @@ package io.pulumi.aws.signer;
 import io.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformId", required=true)
       private final Output<String> platformId;
 
-    public Output<String> getPlatformId() {
+    public Output<String> platformId() {
         return this.platformId;
     }
 
@@ -56,8 +57,8 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatureValidityPeriod")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
-    public Output<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
-        return this.signatureValidityPeriod == null ? Output.empty() : this.signatureValidityPeriod;
+    public Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod() {
+        return this.signatureValidityPeriod == null ? Codegen.empty() : this.signatureValidityPeriod;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SigningProfileArgs(
@@ -85,11 +86,11 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SigningProfileArgs() {
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.platformId = Output.empty();
-        this.signatureValidityPeriod = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.platformId = Codegen.empty();
+        this.signatureValidityPeriod = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -133,7 +134,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder platformId(Output<String> platformId) {
@@ -149,7 +150,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
-            this.signatureValidityPeriod = Output.ofNullable(signatureValidityPeriod);
+            this.signatureValidityPeriod = Codegen.ofNullable(signatureValidityPeriod);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -157,7 +158,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SigningProfileArgs build() {
             return new SigningProfileArgs(name, namePrefix, platformId, signatureValidityPeriod, tags);

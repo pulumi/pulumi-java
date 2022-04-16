@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidAppInfoArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidInstrumentationTestArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidRoboTestArgs;
@@ -29,8 +30,8 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidAppInfo")
       private final @Nullable Output<AndroidAppInfoArgs> androidAppInfo;
 
-    public Output<AndroidAppInfoArgs> getAndroidAppInfo() {
-        return this.androidAppInfo == null ? Output.empty() : this.androidAppInfo;
+    public Output<AndroidAppInfoArgs> androidAppInfo() {
+        return this.androidAppInfo == null ? Codegen.empty() : this.androidAppInfo;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidInstrumentationTest")
       private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
-    public Output<AndroidInstrumentationTestArgs> getAndroidInstrumentationTest() {
-        return this.androidInstrumentationTest == null ? Output.empty() : this.androidInstrumentationTest;
+    public Output<AndroidInstrumentationTestArgs> androidInstrumentationTest() {
+        return this.androidInstrumentationTest == null ? Codegen.empty() : this.androidInstrumentationTest;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidRoboTest")
       private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
 
-    public Output<AndroidRoboTestArgs> getAndroidRoboTest() {
-        return this.androidRoboTest == null ? Output.empty() : this.androidRoboTest;
+    public Output<AndroidRoboTestArgs> androidRoboTest() {
+        return this.androidRoboTest == null ? Codegen.empty() : this.androidRoboTest;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidTestLoop")
       private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
 
-    public Output<AndroidTestLoopArgs> getAndroidTestLoop() {
-        return this.androidTestLoop == null ? Output.empty() : this.androidTestLoop;
+    public Output<AndroidTestLoopArgs> androidTestLoop() {
+        return this.androidTestLoop == null ? Codegen.empty() : this.androidTestLoop;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;
 
-    public Output<DurationArgs> getTestTimeout() {
-        return this.testTimeout == null ? Output.empty() : this.testTimeout;
+    public Output<DurationArgs> testTimeout() {
+        return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
     }
 
     public AndroidTestArgs(
@@ -91,11 +92,11 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AndroidTestArgs() {
-        this.androidAppInfo = Output.empty();
-        this.androidInstrumentationTest = Output.empty();
-        this.androidRoboTest = Output.empty();
-        this.androidTestLoop = Output.empty();
-        this.testTimeout = Output.empty();
+        this.androidAppInfo = Codegen.empty();
+        this.androidInstrumentationTest = Codegen.empty();
+        this.androidRoboTest = Codegen.empty();
+        this.androidTestLoop = Codegen.empty();
+        this.testTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidAppInfo(@Nullable AndroidAppInfoArgs androidAppInfo) {
-            this.androidAppInfo = Output.ofNullable(androidAppInfo);
+            this.androidAppInfo = Codegen.ofNullable(androidAppInfo);
             return this;
         }
         public Builder androidInstrumentationTest(@Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
@@ -139,7 +140,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
-            this.androidInstrumentationTest = Output.ofNullable(androidInstrumentationTest);
+            this.androidInstrumentationTest = Codegen.ofNullable(androidInstrumentationTest);
             return this;
         }
         public Builder androidRoboTest(@Nullable Output<AndroidRoboTestArgs> androidRoboTest) {
@@ -147,7 +148,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
-            this.androidRoboTest = Output.ofNullable(androidRoboTest);
+            this.androidRoboTest = Codegen.ofNullable(androidRoboTest);
             return this;
         }
         public Builder androidTestLoop(@Nullable Output<AndroidTestLoopArgs> androidTestLoop) {
@@ -155,7 +156,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
-            this.androidTestLoop = Output.ofNullable(androidTestLoop);
+            this.androidTestLoop = Codegen.ofNullable(androidTestLoop);
             return this;
         }
         public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
@@ -163,7 +164,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testTimeout(@Nullable DurationArgs testTimeout) {
-            this.testTimeout = Output.ofNullable(testTimeout);
+            this.testTimeout = Codegen.ofNullable(testTimeout);
             return this;
         }        public AndroidTestArgs build() {
             return new AndroidTestArgs(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);

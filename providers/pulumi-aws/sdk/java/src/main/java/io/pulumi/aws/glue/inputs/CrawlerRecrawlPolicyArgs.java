@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CrawlerRecrawlPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="recrawlBehavior")
       private final @Nullable Output<String> recrawlBehavior;
 
-    public Output<String> getRecrawlBehavior() {
-        return this.recrawlBehavior == null ? Output.empty() : this.recrawlBehavior;
+    public Output<String> recrawlBehavior() {
+        return this.recrawlBehavior == null ? Codegen.empty() : this.recrawlBehavior;
     }
 
     public CrawlerRecrawlPolicyArgs(@Nullable Output<String> recrawlBehavior) {
@@ -30,7 +31,7 @@ public final class CrawlerRecrawlPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private CrawlerRecrawlPolicyArgs() {
-        this.recrawlBehavior = Output.empty();
+        this.recrawlBehavior = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CrawlerRecrawlPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder recrawlBehavior(@Nullable String recrawlBehavior) {
-            this.recrawlBehavior = Output.ofNullable(recrawlBehavior);
+            this.recrawlBehavior = Codegen.ofNullable(recrawlBehavior);
             return this;
         }        public CrawlerRecrawlPolicyArgs build() {
             return new CrawlerRecrawlPolicyArgs(recrawlBehavior);

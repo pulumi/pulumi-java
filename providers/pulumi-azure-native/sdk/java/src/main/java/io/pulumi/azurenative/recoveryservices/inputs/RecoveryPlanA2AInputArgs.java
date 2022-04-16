@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     @Import(name="primaryZone")
       private final @Nullable Output<String> primaryZone;
 
-    public Output<String> getPrimaryZone() {
-        return this.primaryZone == null ? Output.empty() : this.primaryZone;
+    public Output<String> primaryZone() {
+        return this.primaryZone == null ? Codegen.empty() : this.primaryZone;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     @Import(name="recoveryZone")
       private final @Nullable Output<String> recoveryZone;
 
-    public Output<String> getRecoveryZone() {
-        return this.recoveryZone == null ? Output.empty() : this.recoveryZone;
+    public Output<String> recoveryZone() {
+        return this.recoveryZone == null ? Codegen.empty() : this.recoveryZone;
     }
 
     public RecoveryPlanA2AInputArgs(
@@ -62,9 +63,9 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     }
 
     private RecoveryPlanA2AInputArgs() {
-        this.instanceType = Output.empty();
-        this.primaryZone = Output.empty();
-        this.recoveryZone = Output.empty();
+        this.instanceType = Codegen.empty();
+        this.primaryZone = Codegen.empty();
+        this.recoveryZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder primaryZone(@Nullable Output<String> primaryZone) {
@@ -104,7 +105,7 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder primaryZone(@Nullable String primaryZone) {
-            this.primaryZone = Output.ofNullable(primaryZone);
+            this.primaryZone = Codegen.ofNullable(primaryZone);
             return this;
         }
         public Builder recoveryZone(@Nullable Output<String> recoveryZone) {
@@ -112,7 +113,7 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder recoveryZone(@Nullable String recoveryZone) {
-            this.recoveryZone = Output.ofNullable(recoveryZone);
+            this.recoveryZone = Codegen.ofNullable(recoveryZone);
             return this;
         }        public RecoveryPlanA2AInputArgs build() {
             return new RecoveryPlanA2AInputArgs(instanceType, primaryZone, recoveryZone);

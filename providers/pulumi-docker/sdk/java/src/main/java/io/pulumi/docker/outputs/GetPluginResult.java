@@ -39,25 +39,25 @@ public final class GetPluginResult {
         this.pluginReference = pluginReference;
     }
 
-    public Optional<String> getAlias() {
+    public Optional<String> alias() {
         return Optional.ofNullable(this.alias);
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public List<String> getEnvs() {
+    public List<String> envs() {
         return this.envs;
     }
-    public Boolean getGrantAllPermissions() {
+    public Boolean grantAllPermissions() {
         return this.grantAllPermissions;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getPluginReference() {
+    public String pluginReference() {
         return this.pluginReference;
     }
 

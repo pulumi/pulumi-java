@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,8 +26,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="direction")
       private final @Nullable Output<String> direction;
 
-    public Output<String> getDirection() {
-        return this.direction == null ? Output.empty() : this.direction;
+    public Output<String> direction() {
+        return this.direction == null ? Codegen.empty() : this.direction;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Output.empty() : this.enableLogging;
+    public Output<Boolean> enableLogging() {
+        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="firewallPolicy")
       private final @Nullable Output<String> firewallPolicy;
 
-    public Output<String> getFirewallPolicy() {
-        return this.firewallPolicy == null ? Output.empty() : this.firewallPolicy;
+    public Output<String> firewallPolicy() {
+        return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="match")
       private final @Nullable Output<FirewallPolicyRuleMatchGetArgs> match;
 
-    public Output<FirewallPolicyRuleMatchGetArgs> getMatch() {
-        return this.match == null ? Output.empty() : this.match;
+    public Output<FirewallPolicyRuleMatchGetArgs> match() {
+        return this.match == null ? Codegen.empty() : this.match;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="ruleTupleCount")
       private final @Nullable Output<Integer> ruleTupleCount;
 
-    public Output<Integer> getRuleTupleCount() {
-        return this.ruleTupleCount == null ? Output.empty() : this.ruleTupleCount;
+    public Output<Integer> ruleTupleCount() {
+        return this.ruleTupleCount == null ? Codegen.empty() : this.ruleTupleCount;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="targetResources")
       private final @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> getTargetResources() {
-        return this.targetResources == null ? Output.empty() : this.targetResources;
+    public Output<List<String>> targetResources() {
+        return this.targetResources == null ? Codegen.empty() : this.targetResources;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> getTargetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Output.empty() : this.targetServiceAccounts;
+    public Output<List<String>> targetServiceAccounts() {
+        return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
     }
 
     public FirewallPolicyRuleState(
@@ -178,18 +179,18 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     }
 
     private FirewallPolicyRuleState() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.direction = Output.empty();
-        this.disabled = Output.empty();
-        this.enableLogging = Output.empty();
-        this.firewallPolicy = Output.empty();
-        this.kind = Output.empty();
-        this.match = Output.empty();
-        this.priority = Output.empty();
-        this.ruleTupleCount = Output.empty();
-        this.targetResources = Output.empty();
-        this.targetServiceAccounts = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.enableLogging = Codegen.empty();
+        this.firewallPolicy = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.match = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleTupleCount = Codegen.empty();
+        this.targetResources = Codegen.empty();
+        this.targetServiceAccounts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -247,7 +248,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder direction(@Nullable Output<String> direction) {
@@ -255,7 +256,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder direction(@Nullable String direction) {
-            this.direction = Output.ofNullable(direction);
+            this.direction = Codegen.ofNullable(direction);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -263,7 +264,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
@@ -271,7 +272,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Output.ofNullable(enableLogging);
+            this.enableLogging = Codegen.ofNullable(enableLogging);
             return this;
         }
         public Builder firewallPolicy(@Nullable Output<String> firewallPolicy) {
@@ -279,7 +280,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder firewallPolicy(@Nullable String firewallPolicy) {
-            this.firewallPolicy = Output.ofNullable(firewallPolicy);
+            this.firewallPolicy = Codegen.ofNullable(firewallPolicy);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -287,7 +288,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder match(@Nullable Output<FirewallPolicyRuleMatchGetArgs> match) {
@@ -295,7 +296,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder match(@Nullable FirewallPolicyRuleMatchGetArgs match) {
-            this.match = Output.ofNullable(match);
+            this.match = Codegen.ofNullable(match);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -303,7 +304,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder ruleTupleCount(@Nullable Output<Integer> ruleTupleCount) {
@@ -311,7 +312,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ruleTupleCount(@Nullable Integer ruleTupleCount) {
-            this.ruleTupleCount = Output.ofNullable(ruleTupleCount);
+            this.ruleTupleCount = Codegen.ofNullable(ruleTupleCount);
             return this;
         }
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
@@ -319,7 +320,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Output.ofNullable(targetResources);
+            this.targetResources = Codegen.ofNullable(targetResources);
             return this;
         }
         public Builder targetResources(String... targetResources) {
@@ -330,7 +331,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
+            this.targetServiceAccounts = Codegen.ofNullable(targetServiceAccounts);
             return this;
         }
         public Builder targetServiceAccounts(String... targetServiceAccounts) {

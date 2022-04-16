@@ -35,16 +35,16 @@ public final class GetTableLocalSecondaryIndex {
      * The name of the DynamoDB table.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<String> getNonKeyAttributes() {
+    public List<String> nonKeyAttributes() {
         return this.nonKeyAttributes;
     }
-    public String getProjectionType() {
+    public String projectionType() {
         return this.projectionType;
     }
-    public String getRangeKey() {
+    public String rangeKey() {
         return this.rangeKey;
     }
 

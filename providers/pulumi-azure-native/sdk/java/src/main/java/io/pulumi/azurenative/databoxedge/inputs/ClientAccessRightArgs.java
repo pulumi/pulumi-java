@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.ClientPermissionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accessPermission", required=true)
       private final Output<Either<String,ClientPermissionType>> accessPermission;
 
-    public Output<Either<String,ClientPermissionType>> getAccessPermission() {
+    public Output<Either<String,ClientPermissionType>> accessPermission() {
         return this.accessPermission;
     }
 
@@ -37,7 +38,7 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
     @Import(name="client", required=true)
       private final Output<String> client;
 
-    public Output<String> getClient() {
+    public Output<String> client() {
         return this.client;
     }
 
@@ -49,8 +50,8 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ClientAccessRightArgs() {
-        this.accessPermission = Output.empty();
-        this.client = Output.empty();
+        this.accessPermission = Codegen.empty();
+        this.client = Codegen.empty();
     }
 
     public static Builder builder() {

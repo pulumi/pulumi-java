@@ -5,6 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     public ThrottlingInformationArgs(@Nullable Output<String> duration) {
@@ -34,7 +35,7 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
     }
 
     private ThrottlingInformationArgs() {
-        this.duration = Output.empty();
+        this.duration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }        public ThrottlingInformationArgs build() {
             return new ThrottlingInformationArgs(duration);

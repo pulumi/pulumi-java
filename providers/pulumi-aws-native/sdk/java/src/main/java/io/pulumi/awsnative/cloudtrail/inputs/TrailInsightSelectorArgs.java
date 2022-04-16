@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudtrail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
     @Import(name="insightType")
       private final @Nullable Output<String> insightType;
 
-    public Output<String> getInsightType() {
-        return this.insightType == null ? Output.empty() : this.insightType;
+    public Output<String> insightType() {
+        return this.insightType == null ? Codegen.empty() : this.insightType;
     }
 
     public TrailInsightSelectorArgs(@Nullable Output<String> insightType) {
@@ -34,7 +35,7 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
     }
 
     private TrailInsightSelectorArgs() {
-        this.insightType = Output.empty();
+        this.insightType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder insightType(@Nullable String insightType) {
-            this.insightType = Output.ofNullable(insightType);
+            this.insightType = Codegen.ofNullable(insightType);
             return this;
         }        public TrailInsightSelectorArgs build() {
             return new TrailInsightSelectorArgs(insightType);

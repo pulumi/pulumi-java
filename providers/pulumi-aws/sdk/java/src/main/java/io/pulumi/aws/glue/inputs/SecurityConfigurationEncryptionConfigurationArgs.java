@@ -8,6 +8,7 @@ import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationJob
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -18,14 +19,14 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
     @Import(name="cloudwatchEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> getCloudwatchEncryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption() {
         return this.cloudwatchEncryption;
     }
 
     @Import(name="jobBookmarksEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> getJobBookmarksEncryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption() {
         return this.jobBookmarksEncryption;
     }
 
@@ -36,7 +37,7 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
     @Import(name="s3Encryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> getS3Encryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption() {
         return this.s3Encryption;
     }
 
@@ -50,9 +51,9 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
     }
 
     private SecurityConfigurationEncryptionConfigurationArgs() {
-        this.cloudwatchEncryption = Output.empty();
-        this.jobBookmarksEncryption = Output.empty();
-        this.s3Encryption = Output.empty();
+        this.cloudwatchEncryption = Codegen.empty();
+        this.jobBookmarksEncryption = Codegen.empty();
+        this.s3Encryption = Codegen.empty();
     }
 
     public static Builder builder() {

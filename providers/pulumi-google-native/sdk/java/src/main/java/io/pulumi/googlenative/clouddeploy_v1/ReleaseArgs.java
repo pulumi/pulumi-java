@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.BuildArtifactArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildArtifacts")
       private final @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
 
-    public Output<List<BuildArtifactArgs>> getBuildArtifacts() {
-        return this.buildArtifacts == null ? Output.empty() : this.buildArtifacts;
+    public Output<List<BuildArtifactArgs>> buildArtifacts() {
+        return this.buildArtifacts == null ? Codegen.empty() : this.buildArtifacts;
     }
 
     @Import(name="deliveryPipelineId", required=true)
       private final Output<String> deliveryPipelineId;
 
-    public Output<String> getDeliveryPipelineId() {
+    public Output<String> deliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
@@ -53,8 +54,8 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -75,15 +76,15 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -93,29 +94,29 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="releaseId", required=true)
       private final Output<String> releaseId;
 
-    public Output<String> getReleaseId() {
+    public Output<String> releaseId() {
         return this.releaseId;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skaffoldConfigPath")
       private final @Nullable Output<String> skaffoldConfigPath;
 
-    public Output<String> getSkaffoldConfigPath() {
-        return this.skaffoldConfigPath == null ? Output.empty() : this.skaffoldConfigPath;
+    public Output<String> skaffoldConfigPath() {
+        return this.skaffoldConfigPath == null ? Codegen.empty() : this.skaffoldConfigPath;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skaffoldConfigUri")
       private final @Nullable Output<String> skaffoldConfigUri;
 
-    public Output<String> getSkaffoldConfigUri() {
-        return this.skaffoldConfigUri == null ? Output.empty() : this.skaffoldConfigUri;
+    public Output<String> skaffoldConfigUri() {
+        return this.skaffoldConfigUri == null ? Codegen.empty() : this.skaffoldConfigUri;
     }
 
     /**
@@ -147,15 +148,15 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skaffoldVersion")
       private final @Nullable Output<String> skaffoldVersion;
 
-    public Output<String> getSkaffoldVersion() {
-        return this.skaffoldVersion == null ? Output.empty() : this.skaffoldVersion;
+    public Output<String> skaffoldVersion() {
+        return this.skaffoldVersion == null ? Codegen.empty() : this.skaffoldVersion;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+    public Output<String> validateOnly() {
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public ReleaseArgs(
@@ -192,21 +193,21 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReleaseArgs() {
-        this.annotations = Output.empty();
-        this.buildArtifacts = Output.empty();
-        this.deliveryPipelineId = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.releaseId = Output.empty();
-        this.requestId = Output.empty();
-        this.skaffoldConfigPath = Output.empty();
-        this.skaffoldConfigUri = Output.empty();
-        this.skaffoldVersion = Output.empty();
-        this.validateOnly = Output.empty();
+        this.annotations = Codegen.empty();
+        this.buildArtifacts = Codegen.empty();
+        this.deliveryPipelineId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.releaseId = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.skaffoldConfigPath = Codegen.empty();
+        this.skaffoldConfigUri = Codegen.empty();
+        this.skaffoldVersion = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -262,7 +263,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder buildArtifacts(@Nullable Output<List<BuildArtifactArgs>> buildArtifacts) {
@@ -270,7 +271,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildArtifacts(@Nullable List<BuildArtifactArgs> buildArtifacts) {
-            this.buildArtifacts = Output.ofNullable(buildArtifacts);
+            this.buildArtifacts = Codegen.ofNullable(buildArtifacts);
             return this;
         }
         public Builder buildArtifacts(BuildArtifactArgs... buildArtifacts) {
@@ -289,7 +290,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -297,7 +298,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -305,7 +306,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -313,7 +314,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -321,7 +322,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -329,7 +330,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder releaseId(Output<String> releaseId) {
@@ -345,7 +346,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder skaffoldConfigPath(@Nullable Output<String> skaffoldConfigPath) {
@@ -353,7 +354,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skaffoldConfigPath(@Nullable String skaffoldConfigPath) {
-            this.skaffoldConfigPath = Output.ofNullable(skaffoldConfigPath);
+            this.skaffoldConfigPath = Codegen.ofNullable(skaffoldConfigPath);
             return this;
         }
         public Builder skaffoldConfigUri(@Nullable Output<String> skaffoldConfigUri) {
@@ -361,7 +362,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skaffoldConfigUri(@Nullable String skaffoldConfigUri) {
-            this.skaffoldConfigUri = Output.ofNullable(skaffoldConfigUri);
+            this.skaffoldConfigUri = Codegen.ofNullable(skaffoldConfigUri);
             return this;
         }
         public Builder skaffoldVersion(@Nullable Output<String> skaffoldVersion) {
@@ -369,7 +370,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skaffoldVersion(@Nullable String skaffoldVersion) {
-            this.skaffoldVersion = Output.ofNullable(skaffoldVersion);
+            this.skaffoldVersion = Codegen.ofNullable(skaffoldVersion);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -377,7 +378,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public ReleaseArgs build() {
             return new ReleaseArgs(annotations, buildArtifacts, deliveryPipelineId, description, etag, labels, location, name, project, releaseId, requestId, skaffoldConfigPath, skaffoldConfigUri, skaffoldVersion, validateOnly);

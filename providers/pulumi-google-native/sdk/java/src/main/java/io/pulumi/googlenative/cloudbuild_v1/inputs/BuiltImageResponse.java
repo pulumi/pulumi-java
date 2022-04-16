@@ -24,7 +24,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="digest", required=true)
       private final String digest;
 
-    public String getDigest() {
+    public String digest() {
         return this.digest;
     }
 
@@ -35,7 +35,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pushTiming", required=true)
       private final TimeSpanResponse pushTiming;
 
-    public TimeSpanResponse getPushTiming() {
+    public TimeSpanResponse pushTiming() {
         return this.pushTiming;
     }
 

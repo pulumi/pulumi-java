@@ -11,6 +11,7 @@ import io.pulumi.aws.s3.outputs.AnalyticsConfigurationStorageClassAnalysis;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket this analytics configuration is associated with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -55,7 +56,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * @return Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    public Output</* @Nullable */ AnalyticsConfigurationFilter> getFilter() {
+    public Output</* @Nullable */ AnalyticsConfigurationFilter> filter() {
         return this.filter;
     }
     /**
@@ -69,7 +70,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the analytics configuration for the bucket.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * @return Configuration for the analytics data export (documented below).
      * 
      */
-    public Output</* @Nullable */ AnalyticsConfigurationStorageClassAnalysis> getStorageClassAnalysis() {
+    public Output</* @Nullable */ AnalyticsConfigurationStorageClassAnalysis> storageClassAnalysis() {
         return this.storageClassAnalysis;
     }
 
@@ -109,7 +110,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AnalyticsConfiguration(String name, AnalyticsConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/analyticsConfiguration:AnalyticsConfiguration", name, args == null ? AnalyticsConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3/analyticsConfiguration:AnalyticsConfiguration", name, args == null ? AnalyticsConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AnalyticsConfiguration(String name, Output<String> id, @Nullable AnalyticsConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

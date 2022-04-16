@@ -5,6 +5,7 @@ package io.pulumi.awsnative.athena;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="queryStatement", required=true)
       private final Output<String> queryStatement;
 
-    public Output<String> getQueryStatement() {
+    public Output<String> queryStatement() {
         return this.queryStatement;
     }
 
@@ -43,7 +44,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="statementName", required=true)
       private final Output<String> statementName;
 
-    public Output<String> getStatementName() {
+    public Output<String> statementName() {
         return this.statementName;
     }
 
@@ -54,7 +55,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workGroup", required=true)
       private final Output<String> workGroup;
 
-    public Output<String> getWorkGroup() {
+    public Output<String> workGroup() {
         return this.workGroup;
     }
 
@@ -70,10 +71,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PreparedStatementArgs() {
-        this.description = Output.empty();
-        this.queryStatement = Output.empty();
-        this.statementName = Output.empty();
-        this.workGroup = Output.empty();
+        this.description = Codegen.empty();
+        this.queryStatement = Codegen.empty();
+        this.statementName = Codegen.empty();
+        this.workGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder queryStatement(Output<String> queryStatement) {

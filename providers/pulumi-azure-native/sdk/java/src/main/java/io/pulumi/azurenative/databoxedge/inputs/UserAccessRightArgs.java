@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.ShareAccessType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="accessType", required=true)
       private final Output<Either<String,ShareAccessType>> accessType;
 
-    public Output<Either<String,ShareAccessType>> getAccessType() {
+    public Output<Either<String,ShareAccessType>> accessType() {
         return this.accessType;
     }
 
@@ -37,7 +38,7 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -49,8 +50,8 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UserAccessRightArgs() {
-        this.accessType = Output.empty();
-        this.userId = Output.empty();
+        this.accessType = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {

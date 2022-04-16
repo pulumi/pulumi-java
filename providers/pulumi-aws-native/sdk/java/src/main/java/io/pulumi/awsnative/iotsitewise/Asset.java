@@ -11,6 +11,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.AssetTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,13 +33,13 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * @return The ARN of the asset
      * 
      */
-    public Output<String> getAssetArn() {
+    public Output<String> assetArn() {
         return this.assetArn;
     }
     @Export(name="assetHierarchies", type=List.class, parameters={AssetHierarchy.class})
     private Output</* @Nullable */ List<AssetHierarchy>> assetHierarchies;
 
-    public Output</* @Nullable */ List<AssetHierarchy>> getAssetHierarchies() {
+    public Output</* @Nullable */ List<AssetHierarchy>> assetHierarchies() {
         return this.assetHierarchies;
     }
     /**
@@ -52,7 +53,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * @return The ID of the asset
      * 
      */
-    public Output<String> getAssetId() {
+    public Output<String> assetId() {
         return this.assetId;
     }
     /**
@@ -66,7 +67,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * @return The ID of the asset model from which to create the asset.
      * 
      */
-    public Output<String> getAssetModelId() {
+    public Output<String> assetModelId() {
         return this.assetModelId;
     }
     /**
@@ -80,13 +81,13 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * @return A unique, friendly name for the asset.
      * 
      */
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
     @Export(name="assetProperties", type=List.class, parameters={AssetProperty.class})
     private Output</* @Nullable */ List<AssetProperty>> assetProperties;
 
-    public Output</* @Nullable */ List<AssetProperty>> getAssetProperties() {
+    public Output</* @Nullable */ List<AssetProperty>> assetProperties() {
         return this.assetProperties;
     }
     /**
@@ -100,7 +101,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset.
      * 
      */
-    public Output</* @Nullable */ List<AssetTag>> getTags() {
+    public Output</* @Nullable */ List<AssetTag>> tags() {
         return this.tags;
     }
 
@@ -126,7 +127,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Asset(String name, AssetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotsitewise:Asset", name, args == null ? AssetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotsitewise:Asset", name, args == null ? AssetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Asset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

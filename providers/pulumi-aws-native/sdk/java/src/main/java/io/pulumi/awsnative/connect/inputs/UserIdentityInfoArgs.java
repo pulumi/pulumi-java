@@ -5,6 +5,7 @@ package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,22 +22,22 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
-        return this.firstName == null ? Output.empty() : this.firstName;
+    public Output<String> firstName() {
+        return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
-        return this.lastName == null ? Output.empty() : this.lastName;
+    public Output<String> lastName() {
+        return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 
     public UserIdentityInfoArgs(
@@ -49,9 +50,9 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private UserIdentityInfoArgs() {
-        this.email = Output.empty();
-        this.firstName = Output.empty();
-        this.lastName = Output.empty();
+        this.email = Codegen.empty();
+        this.firstName = Codegen.empty();
+        this.lastName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder firstName(@Nullable Output<String> firstName) {
@@ -91,7 +92,7 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Output.ofNullable(firstName);
+            this.firstName = Codegen.ofNullable(firstName);
             return this;
         }
         public Builder lastName(@Nullable Output<String> lastName) {
@@ -99,7 +100,7 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Output.ofNullable(lastName);
+            this.lastName = Codegen.ofNullable(lastName);
             return this;
         }        public UserIdentityInfoArgs build() {
             return new UserIdentityInfoArgs(email, firstName, lastName);

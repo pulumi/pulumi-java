@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="validationStatus")
       private final @Nullable Output<String> validationStatus;
 
-    public Output<String> getValidationStatus() {
-        return this.validationStatus == null ? Output.empty() : this.validationStatus;
+    public Output<String> validationStatus() {
+        return this.validationStatus == null ? Codegen.empty() : this.validationStatus;
     }
 
     public ResolverDnsSecConfigState(
@@ -70,10 +71,10 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     }
 
     private ResolverDnsSecConfigState() {
-        this.arn = Output.empty();
-        this.ownerId = Output.empty();
-        this.resourceId = Output.empty();
-        this.validationStatus = Output.empty();
+        this.arn = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.validationStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -115,7 +116,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -123,7 +124,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder validationStatus(@Nullable Output<String> validationStatus) {
@@ -131,7 +132,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder validationStatus(@Nullable String validationStatus) {
-            this.validationStatus = Output.ofNullable(validationStatus);
+            this.validationStatus = Codegen.ofNullable(validationStatus);
             return this;
         }        public ResolverDnsSecConfigState build() {
             return new ResolverDnsSecConfigState(arn, ownerId, resourceId, validationStatus);

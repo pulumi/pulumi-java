@@ -9,6 +9,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteRetryPolicyGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="action", required=true)
       private final Output<RouteSpecGrpcRouteActionGetArgs> action;
 
-    public Output<RouteSpecGrpcRouteActionGetArgs> getAction() {
+    public Output<RouteSpecGrpcRouteActionGetArgs> action() {
         return this.action;
     }
 
@@ -35,8 +36,8 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="match")
       private final @Nullable Output<RouteSpecGrpcRouteMatchGetArgs> match;
 
-    public Output<RouteSpecGrpcRouteMatchGetArgs> getMatch() {
-        return this.match == null ? Output.empty() : this.match;
+    public Output<RouteSpecGrpcRouteMatchGetArgs> match() {
+        return this.match == null ? Codegen.empty() : this.match;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="retryPolicy")
       private final @Nullable Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy;
 
-    public Output<RouteSpecGrpcRouteRetryPolicyGetArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
+    public Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy() {
+        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="timeout")
       private final @Nullable Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout;
 
-    public Output<RouteSpecGrpcRouteTimeoutGetArgs> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public RouteSpecGrpcRouteGetArgs(
@@ -73,10 +74,10 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
     }
 
     private RouteSpecGrpcRouteGetArgs() {
-        this.action = Output.empty();
-        this.match = Output.empty();
-        this.retryPolicy = Output.empty();
-        this.timeout = Output.empty();
+        this.action = Codegen.empty();
+        this.match = Codegen.empty();
+        this.retryPolicy = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder match(@Nullable RouteSpecGrpcRouteMatchGetArgs match) {
-            this.match = Output.ofNullable(match);
+            this.match = Codegen.ofNullable(match);
             return this;
         }
         public Builder retryPolicy(@Nullable Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy) {
@@ -126,7 +127,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder retryPolicy(@Nullable RouteSpecGrpcRouteRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Output.ofNullable(retryPolicy);
+            this.retryPolicy = Codegen.ofNullable(retryPolicy);
             return this;
         }
         public Builder timeout(@Nullable Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout) {
@@ -134,7 +135,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timeout(@Nullable RouteSpecGrpcRouteTimeoutGetArgs timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public RouteSpecGrpcRouteGetArgs build() {
             return new RouteSpecGrpcRouteGetArgs(action, match, retryPolicy, timeout);

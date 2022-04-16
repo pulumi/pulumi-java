@@ -12,6 +12,7 @@ import io.pulumi.awsnative.codeguruprofiler.outputs.ProfilingGroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * @return The agent permissions attached to this profiling group.
      * 
      */
-    public Output</* @Nullable */ AgentPermissionsProperties> getAgentPermissions() {
+    public Output</* @Nullable */ AgentPermissionsProperties> agentPermissions() {
         return this.agentPermissions;
     }
     /**
@@ -47,7 +48,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
      * 
      */
-    public Output</* @Nullable */ List<ProfilingGroupChannel>> getAnomalyDetectionNotificationConfiguration() {
+    public Output</* @Nullable */ List<ProfilingGroupChannel>> anomalyDetectionNotificationConfiguration() {
         return this.anomalyDetectionNotificationConfiguration;
     }
     /**
@@ -61,7 +62,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified profiling group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -75,7 +76,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * @return The compute platform of the profiling group.
      * 
      */
-    public Output</* @Nullable */ ProfilingGroupComputePlatform> getComputePlatform() {
+    public Output</* @Nullable */ ProfilingGroupComputePlatform> computePlatform() {
         return this.computePlatform;
     }
     /**
@@ -89,7 +90,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the profiling group.
      * 
      */
-    public Output<String> getProfilingGroupName() {
+    public Output<String> profilingGroupName() {
         return this.profilingGroupName;
     }
     /**
@@ -103,7 +104,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * @return The tags associated with a profiling group.
      * 
      */
-    public Output</* @Nullable */ List<ProfilingGroupTag>> getTags() {
+    public Output</* @Nullable */ List<ProfilingGroupTag>> tags() {
         return this.tags;
     }
 
@@ -129,7 +130,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProfilingGroup(String name, @Nullable ProfilingGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:codeguruprofiler:ProfilingGroup", name, args == null ? ProfilingGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:codeguruprofiler:ProfilingGroup", name, args == null ? ProfilingGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProfilingGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

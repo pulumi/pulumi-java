@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty.inputs;
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesS3LogsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
     @Import(name="s3Logs")
       private final @Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs;
 
-    public Output<DetectorDatasourcesS3LogsArgs> getS3Logs() {
-        return this.s3Logs == null ? Output.empty() : this.s3Logs;
+    public Output<DetectorDatasourcesS3LogsArgs> s3Logs() {
+        return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
     }
 
     public DetectorDatasourcesArgs(@Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs) {
@@ -30,7 +31,7 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
     }
 
     private DetectorDatasourcesArgs() {
-        this.s3Logs = Output.empty();
+        this.s3Logs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder s3Logs(@Nullable DetectorDatasourcesS3LogsArgs s3Logs) {
-            this.s3Logs = Output.ofNullable(s3Logs);
+            this.s3Logs = Codegen.ofNullable(s3Logs);
             return this;
         }        public DetectorDatasourcesArgs build() {
             return new DetectorDatasourcesArgs(s3Logs);

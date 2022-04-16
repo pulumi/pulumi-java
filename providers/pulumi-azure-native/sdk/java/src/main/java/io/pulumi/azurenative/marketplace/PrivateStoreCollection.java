@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -44,7 +45,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Indicating whether all subscriptions are selected (=true) or not (=false).
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllSubscriptions() {
+    public Output</* @Nullable */ Boolean> allSubscriptions() {
         return this.allSubscriptions;
     }
     /**
@@ -58,7 +59,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the association with Commercial's Billing Account.
      * 
      */
-    public Output</* @Nullable */ String> getClaim() {
+    public Output</* @Nullable */ String> claim() {
         return this.claim;
     }
     /**
@@ -72,7 +73,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Gets collection Id.
      * 
      */
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
     /**
@@ -86,7 +87,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets collection name.
      * 
      */
-    public Output</* @Nullable */ String> getCollectionName() {
+    public Output</* @Nullable */ String> collectionName() {
         return this.collectionName;
     }
     /**
@@ -100,7 +101,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Indicating whether the collection is enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -114,7 +115,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Gets the number of offers associated with the collection.
      * 
      */
-    public Output<Double> getNumberOfOffers() {
+    public Output<Double> numberOfOffers() {
         return this.numberOfOffers;
     }
     /**
@@ -142,7 +143,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
      * 
      */
-    public Output</* @Nullable */ List<String>> getSubscriptionsList() {
+    public Output</* @Nullable */ List<String>> subscriptionsList() {
         return this.subscriptionsList;
     }
     /**
@@ -156,7 +157,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -170,7 +171,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -196,7 +197,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateStoreCollection(String name, PrivateStoreCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:marketplace:PrivateStoreCollection", name, args == null ? PrivateStoreCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:marketplace:PrivateStoreCollection", name, args == null ? PrivateStoreCollectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateStoreCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

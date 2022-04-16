@@ -10,6 +10,7 @@ import io.pulumi.awsnative.groundstation.outputs.ConfigTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,31 +24,31 @@ public class Config extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="configData", type=ConfigData.class, parameters={})
     private Output<ConfigData> configData;
 
-    public Output<ConfigData> getConfigData() {
+    public Output<ConfigData> configData() {
         return this.configData;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={ConfigTag.class})
     private Output</* @Nullable */ List<ConfigTag>> tags;
 
-    public Output</* @Nullable */ List<ConfigTag>> getTags() {
+    public Output</* @Nullable */ List<ConfigTag>> tags() {
         return this.tags;
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -73,7 +74,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Config(String name, ConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:groundstation:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:groundstation:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Config(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

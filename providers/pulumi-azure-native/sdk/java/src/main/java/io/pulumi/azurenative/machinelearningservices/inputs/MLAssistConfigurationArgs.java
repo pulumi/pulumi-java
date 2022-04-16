@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ComputeBindingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="inferencingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> inferencingComputeBinding;
 
-    public Output<ComputeBindingArgs> getInferencingComputeBinding() {
+    public Output<ComputeBindingArgs> inferencingComputeBinding() {
         return this.inferencingComputeBinding;
     }
 
@@ -39,8 +40,8 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="mlAssistEnabled")
       private final @Nullable Output<Boolean> mlAssistEnabled;
 
-    public Output<Boolean> getMlAssistEnabled() {
-        return this.mlAssistEnabled == null ? Output.empty() : this.mlAssistEnabled;
+    public Output<Boolean> mlAssistEnabled() {
+        return this.mlAssistEnabled == null ? Codegen.empty() : this.mlAssistEnabled;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="modelNamePrefix", required=true)
       private final Output<String> modelNamePrefix;
 
-    public Output<String> getModelNamePrefix() {
+    public Output<String> modelNamePrefix() {
         return this.modelNamePrefix;
     }
 
@@ -61,8 +62,8 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="prelabelAccuracyThreshold")
       private final @Nullable Output<Double> prelabelAccuracyThreshold;
 
-    public Output<Double> getPrelabelAccuracyThreshold() {
-        return this.prelabelAccuracyThreshold == null ? Output.empty() : this.prelabelAccuracyThreshold;
+    public Output<Double> prelabelAccuracyThreshold() {
+        return this.prelabelAccuracyThreshold == null ? Codegen.empty() : this.prelabelAccuracyThreshold;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="trainingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> trainingComputeBinding;
 
-    public Output<ComputeBindingArgs> getTrainingComputeBinding() {
+    public Output<ComputeBindingArgs> trainingComputeBinding() {
         return this.trainingComputeBinding;
     }
 
@@ -90,11 +91,11 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private MLAssistConfigurationArgs() {
-        this.inferencingComputeBinding = Output.empty();
-        this.mlAssistEnabled = Output.empty();
-        this.modelNamePrefix = Output.empty();
-        this.prelabelAccuracyThreshold = Output.empty();
-        this.trainingComputeBinding = Output.empty();
+        this.inferencingComputeBinding = Codegen.empty();
+        this.mlAssistEnabled = Codegen.empty();
+        this.modelNamePrefix = Codegen.empty();
+        this.prelabelAccuracyThreshold = Codegen.empty();
+        this.trainingComputeBinding = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder mlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
-            this.mlAssistEnabled = Output.ofNullable(mlAssistEnabled);
+            this.mlAssistEnabled = Codegen.ofNullable(mlAssistEnabled);
             return this;
         }
         public Builder modelNamePrefix(Output<String> modelNamePrefix) {
@@ -154,7 +155,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder prelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
-            this.prelabelAccuracyThreshold = Output.ofNullable(prelabelAccuracyThreshold);
+            this.prelabelAccuracyThreshold = Codegen.ofNullable(prelabelAccuracyThreshold);
             return this;
         }
         public Builder trainingComputeBinding(Output<ComputeBindingArgs> trainingComputeBinding) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> getAllowedExitCodes() {
-        return this.allowedExitCodes == null ? Output.empty() : this.allowedExitCodes;
+    public Output<List<Integer>> allowedExitCodes() {
+        return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
     @Import(name="artifactId")
       private final @Nullable Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
-        return this.artifactId == null ? Output.empty() : this.artifactId;
+    public Output<String> artifactId() {
+        return this.artifactId == null ? Codegen.empty() : this.artifactId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
-        return this.localPath == null ? Output.empty() : this.localPath;
+    public Output<String> localPath() {
+        return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 
     public GuestPoliciesRecipeUpdateStepFileExecArgs(
@@ -72,10 +73,10 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
     }
 
     private GuestPoliciesRecipeUpdateStepFileExecArgs() {
-        this.allowedExitCodes = Output.empty();
-        this.args = Output.empty();
-        this.artifactId = Output.empty();
-        this.localPath = Output.empty();
+        this.allowedExitCodes = Codegen.empty();
+        this.args = Codegen.empty();
+        this.artifactId = Codegen.empty();
+        this.localPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
             return this;
         }
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
+            this.allowedExitCodes = Codegen.ofNullable(allowedExitCodes);
             return this;
         }
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
@@ -120,7 +121,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -131,7 +132,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
             return this;
         }
         public Builder artifactId(@Nullable String artifactId) {
-            this.artifactId = Output.ofNullable(artifactId);
+            this.artifactId = Codegen.ofNullable(artifactId);
             return this;
         }
         public Builder localPath(@Nullable Output<String> localPath) {
@@ -139,7 +140,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
             return this;
         }
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Output.ofNullable(localPath);
+            this.localPath = Codegen.ofNullable(localPath);
             return this;
         }        public GuestPoliciesRecipeUpdateStepFileExecArgs build() {
             return new GuestPoliciesRecipeUpdateStepFileExecArgs(allowedExitCodes, args, artifactId, localPath);

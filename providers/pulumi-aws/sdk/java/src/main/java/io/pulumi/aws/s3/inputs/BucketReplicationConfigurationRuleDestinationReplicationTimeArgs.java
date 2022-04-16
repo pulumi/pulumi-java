@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
     @Import(name="minutes")
       private final @Nullable Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
-        return this.minutes == null ? Output.empty() : this.minutes;
+    public Output<Integer> minutes() {
+        return this.minutes == null ? Codegen.empty() : this.minutes;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public BucketReplicationConfigurationRuleDestinationReplicationTimeArgs(
@@ -45,8 +46,8 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
     }
 
     private BucketReplicationConfigurationRuleDestinationReplicationTimeArgs() {
-        this.minutes = Output.empty();
-        this.status = Output.empty();
+        this.minutes = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
             return this;
         }
         public Builder minutes(@Nullable Integer minutes) {
-            this.minutes = Output.ofNullable(minutes);
+            this.minutes = Codegen.ofNullable(minutes);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -84,7 +85,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public BucketReplicationConfigurationRuleDestinationReplicationTimeArgs build() {
             return new BucketReplicationConfigurationRuleDestinationReplicationTimeArgs(minutes, status);

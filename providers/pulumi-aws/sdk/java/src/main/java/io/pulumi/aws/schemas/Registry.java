@@ -9,6 +9,7 @@ import io.pulumi.aws.schemas.inputs.RegistryState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the discoverer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The description of the discoverer. Maximum of 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +71,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The name of the custom event schema registry. Maximum of 64 characters consisting of lower case letters, upper case letters, 0-9, ., -, _.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +99,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -124,7 +125,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Registry(String name, @Nullable RegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:schemas/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:schemas/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Registry(String name, Output<String> id, @Nullable RegistryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

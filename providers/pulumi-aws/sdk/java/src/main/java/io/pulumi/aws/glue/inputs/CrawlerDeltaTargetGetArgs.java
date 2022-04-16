@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -33,7 +34,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
     @Import(name="deltaTables", required=true)
       private final Output<List<String>> deltaTables;
 
-    public Output<List<String>> getDeltaTables() {
+    public Output<List<String>> deltaTables() {
         return this.deltaTables;
     }
 
@@ -44,7 +45,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
     @Import(name="writeManifest", required=true)
       private final Output<Boolean> writeManifest;
 
-    public Output<Boolean> getWriteManifest() {
+    public Output<Boolean> writeManifest() {
         return this.writeManifest;
     }
 
@@ -58,9 +59,9 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
     }
 
     private CrawlerDeltaTargetGetArgs() {
-        this.connectionName = Output.empty();
-        this.deltaTables = Output.empty();
-        this.writeManifest = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.deltaTables = Codegen.empty();
+        this.writeManifest = Codegen.empty();
     }
 
     public static Builder builder() {

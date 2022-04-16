@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigGetArgs;
@@ -23,7 +24,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="publicKey", required=true)
       private final Output<CertificateConfigPublicKeyGetArgs> publicKey;
 
-    public Output<CertificateConfigPublicKeyGetArgs> getPublicKey() {
+    public Output<CertificateConfigPublicKeyGetArgs> publicKey() {
         return this.publicKey;
     }
 
@@ -35,7 +36,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="subjectConfig", required=true)
       private final Output<CertificateConfigSubjectConfigGetArgs> subjectConfig;
 
-    public Output<CertificateConfigSubjectConfigGetArgs> getSubjectConfig() {
+    public Output<CertificateConfigSubjectConfigGetArgs> subjectConfig() {
         return this.subjectConfig;
     }
 
@@ -47,7 +48,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="x509Config", required=true)
       private final Output<CertificateConfigX509ConfigGetArgs> x509Config;
 
-    public Output<CertificateConfigX509ConfigGetArgs> getX509Config() {
+    public Output<CertificateConfigX509ConfigGetArgs> x509Config() {
         return this.x509Config;
     }
 
@@ -61,9 +62,9 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateConfigGetArgs() {
-        this.publicKey = Output.empty();
-        this.subjectConfig = Output.empty();
-        this.x509Config = Output.empty();
+        this.publicKey = Codegen.empty();
+        this.subjectConfig = Codegen.empty();
+        this.x509Config = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<LabelDescriptorArgs>> labels;
 
-    public Output<List<LabelDescriptorArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<LabelDescriptorArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public LogDescriptorArgs(
@@ -76,10 +77,10 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogDescriptorArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -121,7 +122,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<List<LabelDescriptorArgs>> labels) {
@@ -129,7 +130,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<LabelDescriptorArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(LabelDescriptorArgs... labels) {
@@ -140,7 +141,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public LogDescriptorArgs build() {
             return new LogDescriptorArgs(description, displayName, labels, name);

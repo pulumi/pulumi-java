@@ -9,6 +9,7 @@ import io.pulumi.awsnative.amplify.inputs.BranchEnvironmentVariableArgs;
 import io.pulumi.awsnative.amplify.inputs.BranchTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,85 +24,85 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="basicAuthConfig")
       private final @Nullable Output<BranchBasicAuthConfigArgs> basicAuthConfig;
 
-    public Output<BranchBasicAuthConfigArgs> getBasicAuthConfig() {
-        return this.basicAuthConfig == null ? Output.empty() : this.basicAuthConfig;
+    public Output<BranchBasicAuthConfigArgs> basicAuthConfig() {
+        return this.basicAuthConfig == null ? Codegen.empty() : this.basicAuthConfig;
     }
 
     @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
-    public Output<String> getBranchName() {
-        return this.branchName == null ? Output.empty() : this.branchName;
+    public Output<String> branchName() {
+        return this.branchName == null ? Codegen.empty() : this.branchName;
     }
 
     @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
-    public Output<String> getBuildSpec() {
-        return this.buildSpec == null ? Output.empty() : this.buildSpec;
+    public Output<String> buildSpec() {
+        return this.buildSpec == null ? Codegen.empty() : this.buildSpec;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="enableAutoBuild")
       private final @Nullable Output<Boolean> enableAutoBuild;
 
-    public Output<Boolean> getEnableAutoBuild() {
-        return this.enableAutoBuild == null ? Output.empty() : this.enableAutoBuild;
+    public Output<Boolean> enableAutoBuild() {
+        return this.enableAutoBuild == null ? Codegen.empty() : this.enableAutoBuild;
     }
 
     @Import(name="enablePerformanceMode")
       private final @Nullable Output<Boolean> enablePerformanceMode;
 
-    public Output<Boolean> getEnablePerformanceMode() {
-        return this.enablePerformanceMode == null ? Output.empty() : this.enablePerformanceMode;
+    public Output<Boolean> enablePerformanceMode() {
+        return this.enablePerformanceMode == null ? Codegen.empty() : this.enablePerformanceMode;
     }
 
     @Import(name="enablePullRequestPreview")
       private final @Nullable Output<Boolean> enablePullRequestPreview;
 
-    public Output<Boolean> getEnablePullRequestPreview() {
-        return this.enablePullRequestPreview == null ? Output.empty() : this.enablePullRequestPreview;
+    public Output<Boolean> enablePullRequestPreview() {
+        return this.enablePullRequestPreview == null ? Codegen.empty() : this.enablePullRequestPreview;
     }
 
     @Import(name="environmentVariables")
       private final @Nullable Output<List<BranchEnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<BranchEnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+    public Output<List<BranchEnvironmentVariableArgs>> environmentVariables() {
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     @Import(name="pullRequestEnvironmentName")
       private final @Nullable Output<String> pullRequestEnvironmentName;
 
-    public Output<String> getPullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName == null ? Output.empty() : this.pullRequestEnvironmentName;
+    public Output<String> pullRequestEnvironmentName() {
+        return this.pullRequestEnvironmentName == null ? Codegen.empty() : this.pullRequestEnvironmentName;
     }
 
     @Import(name="stage")
       private final @Nullable Output<BranchStage> stage;
 
-    public Output<BranchStage> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+    public Output<BranchStage> stage() {
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<BranchTagArgs>> tags;
 
-    public Output<List<BranchTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<BranchTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public BranchArgs(
@@ -132,18 +133,18 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BranchArgs() {
-        this.appId = Output.empty();
-        this.basicAuthConfig = Output.empty();
-        this.branchName = Output.empty();
-        this.buildSpec = Output.empty();
-        this.description = Output.empty();
-        this.enableAutoBuild = Output.empty();
-        this.enablePerformanceMode = Output.empty();
-        this.enablePullRequestPreview = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.pullRequestEnvironmentName = Output.empty();
-        this.stage = Output.empty();
-        this.tags = Output.empty();
+        this.appId = Codegen.empty();
+        this.basicAuthConfig = Codegen.empty();
+        this.branchName = Codegen.empty();
+        this.buildSpec = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableAutoBuild = Codegen.empty();
+        this.enablePerformanceMode = Codegen.empty();
+        this.enablePullRequestPreview = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.pullRequestEnvironmentName = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -201,7 +202,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder basicAuthConfig(@Nullable BranchBasicAuthConfigArgs basicAuthConfig) {
-            this.basicAuthConfig = Output.ofNullable(basicAuthConfig);
+            this.basicAuthConfig = Codegen.ofNullable(basicAuthConfig);
             return this;
         }
         public Builder branchName(@Nullable Output<String> branchName) {
@@ -209,7 +210,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = Output.ofNullable(branchName);
+            this.branchName = Codegen.ofNullable(branchName);
             return this;
         }
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
@@ -217,7 +218,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildSpec(@Nullable String buildSpec) {
-            this.buildSpec = Output.ofNullable(buildSpec);
+            this.buildSpec = Codegen.ofNullable(buildSpec);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -225,7 +226,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
@@ -233,7 +234,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
-            this.enableAutoBuild = Output.ofNullable(enableAutoBuild);
+            this.enableAutoBuild = Codegen.ofNullable(enableAutoBuild);
             return this;
         }
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
@@ -241,7 +242,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
-            this.enablePerformanceMode = Output.ofNullable(enablePerformanceMode);
+            this.enablePerformanceMode = Codegen.ofNullable(enablePerformanceMode);
             return this;
         }
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
@@ -249,7 +250,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
-            this.enablePullRequestPreview = Output.ofNullable(enablePullRequestPreview);
+            this.enablePullRequestPreview = Codegen.ofNullable(enablePullRequestPreview);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<List<BranchEnvironmentVariableArgs>> environmentVariables) {
@@ -257,7 +258,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable List<BranchEnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(BranchEnvironmentVariableArgs... environmentVariables) {
@@ -268,7 +269,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = Output.ofNullable(pullRequestEnvironmentName);
+            this.pullRequestEnvironmentName = Codegen.ofNullable(pullRequestEnvironmentName);
             return this;
         }
         public Builder stage(@Nullable Output<BranchStage> stage) {
@@ -276,7 +277,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stage(@Nullable BranchStage stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }
         public Builder tags(@Nullable Output<List<BranchTagArgs>> tags) {
@@ -284,7 +285,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<BranchTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(BranchTagArgs... tags) {

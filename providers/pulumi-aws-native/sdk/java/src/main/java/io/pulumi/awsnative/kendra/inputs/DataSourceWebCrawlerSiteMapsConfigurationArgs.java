@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
     @Import(name="siteMaps", required=true)
       private final Output<List<String>> siteMaps;
 
-    public Output<List<String>> getSiteMaps() {
+    public Output<List<String>> siteMaps() {
         return this.siteMaps;
     }
 
@@ -26,7 +27,7 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
     }
 
     private DataSourceWebCrawlerSiteMapsConfigurationArgs() {
-        this.siteMaps = Output.empty();
+        this.siteMaps = Codegen.empty();
     }
 
     public static Builder builder() {

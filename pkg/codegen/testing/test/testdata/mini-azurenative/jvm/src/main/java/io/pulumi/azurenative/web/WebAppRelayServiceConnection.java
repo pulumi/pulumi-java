@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.WebAppRelayServiceConnectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -16,7 +17,7 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
     @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
-    public Output</* @Nullable */ String> getPropResourceType() {
+    public Output</* @Nullable */ String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -30,7 +31,7 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -56,7 +57,7 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppRelayServiceConnection(String name, @Nullable WebAppRelayServiceConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppRelayServiceConnection", name, args == null ? WebAppRelayServiceConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppRelayServiceConnection", name, args == null ? WebAppRelayServiceConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppRelayServiceConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

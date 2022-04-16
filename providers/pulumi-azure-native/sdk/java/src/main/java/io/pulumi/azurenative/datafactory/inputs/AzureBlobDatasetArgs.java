@@ -14,6 +14,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParquetFormatArgs;
 import io.pulumi.azurenative.datafactory.inputs.TextFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -37,8 +38,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
-    public Output<DatasetCompressionArgs> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+    public Output<DatasetCompressionArgs> compression() {
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
-    public Output<Object> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+    public Output<Object> fileName() {
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+    public Output<DatasetFolderArgs> folder() {
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+    public Output<Object> folderPath() {
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="format")
       private final @Nullable Output<Object> format;
 
-    public Output<Object> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<Object> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -125,8 +126,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Output<Object> getModifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Output.empty() : this.modifiedDatetimeEnd;
+    public Output<Object> modifiedDatetimeEnd() {
+        return this.modifiedDatetimeEnd == null ? Codegen.empty() : this.modifiedDatetimeEnd;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Output<Object> getModifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Output.empty() : this.modifiedDatetimeStart;
+    public Output<Object> modifiedDatetimeStart() {
+        return this.modifiedDatetimeStart == null ? Codegen.empty() : this.modifiedDatetimeStart;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<Object> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
-        return this.structure == null ? Output.empty() : this.structure;
+    public Output<Object> structure() {
+        return this.structure == null ? Codegen.empty() : this.structure;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tableRootLocation")
       private final @Nullable Output<Object> tableRootLocation;
 
-    public Output<Object> getTableRootLocation() {
-        return this.tableRootLocation == null ? Output.empty() : this.tableRootLocation;
+    public Output<Object> tableRootLocation() {
+        return this.tableRootLocation == null ? Codegen.empty() : this.tableRootLocation;
     }
 
     /**
@@ -192,7 +193,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -230,21 +231,21 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AzureBlobDatasetArgs() {
-        this.annotations = Output.empty();
-        this.compression = Output.empty();
-        this.description = Output.empty();
-        this.fileName = Output.empty();
-        this.folder = Output.empty();
-        this.folderPath = Output.empty();
-        this.format = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.modifiedDatetimeEnd = Output.empty();
-        this.modifiedDatetimeStart = Output.empty();
-        this.parameters = Output.empty();
-        this.schema = Output.empty();
-        this.structure = Output.empty();
-        this.tableRootLocation = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.format = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.modifiedDatetimeEnd = Codegen.empty();
+        this.modifiedDatetimeStart = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.structure = Codegen.empty();
+        this.tableRootLocation = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -300,7 +301,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -311,7 +312,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder compression(@Nullable DatasetCompressionArgs compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -319,7 +320,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fileName(@Nullable Output<Object> fileName) {
@@ -327,7 +328,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
@@ -335,7 +336,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder folderPath(@Nullable Output<Object> folderPath) {
@@ -343,7 +344,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder format(@Nullable Output<Object> format) {
@@ -351,7 +352,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder format(@Nullable Object format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -367,7 +368,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = Output.ofNullable(modifiedDatetimeEnd);
+            this.modifiedDatetimeEnd = Codegen.ofNullable(modifiedDatetimeEnd);
             return this;
         }
         public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
@@ -375,7 +376,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = Output.ofNullable(modifiedDatetimeStart);
+            this.modifiedDatetimeStart = Codegen.ofNullable(modifiedDatetimeStart);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -383,7 +384,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder schema(@Nullable Output<Object> schema) {
@@ -391,7 +392,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder schema(@Nullable Object schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder structure(@Nullable Output<Object> structure) {
@@ -399,7 +400,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder structure(@Nullable Object structure) {
-            this.structure = Output.ofNullable(structure);
+            this.structure = Codegen.ofNullable(structure);
             return this;
         }
         public Builder tableRootLocation(@Nullable Output<Object> tableRootLocation) {
@@ -407,7 +408,7 @@ public final class AzureBlobDatasetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tableRootLocation(@Nullable Object tableRootLocation) {
-            this.tableRootLocation = Output.ofNullable(tableRootLocation);
+            this.tableRootLocation = Codegen.ofNullable(tableRootLocation);
             return this;
         }
         public Builder type(Output<String> type) {

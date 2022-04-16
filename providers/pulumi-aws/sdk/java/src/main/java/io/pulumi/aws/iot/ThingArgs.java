@@ -5,6 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<Map<String,String>> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thingTypeName")
       private final @Nullable Output<String> thingTypeName;
 
-    public Output<String> getThingTypeName() {
-        return this.thingTypeName == null ? Output.empty() : this.thingTypeName;
+    public Output<String> thingTypeName() {
+        return this.thingTypeName == null ? Codegen.empty() : this.thingTypeName;
     }
 
     public ThingArgs(
@@ -58,9 +59,9 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingArgs() {
-        this.attributes = Output.empty();
-        this.name = Output.empty();
-        this.thingTypeName = Output.empty();
+        this.attributes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.thingTypeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -100,7 +101,7 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
@@ -108,7 +109,7 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thingTypeName(@Nullable String thingTypeName) {
-            this.thingTypeName = Output.ofNullable(thingTypeName);
+            this.thingTypeName = Codegen.ofNullable(thingTypeName);
             return this;
         }        public ThingArgs build() {
             return new ThingArgs(attributes, name, thingTypeName);

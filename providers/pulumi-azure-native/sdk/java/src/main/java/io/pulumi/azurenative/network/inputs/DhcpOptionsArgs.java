@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+    public Output<List<String>> dnsServers() {
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     public DhcpOptionsArgs(@Nullable Output<List<String>> dnsServers) {
@@ -35,7 +36,7 @@ public final class DhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DhcpOptionsArgs() {
-        this.dnsServers = Output.empty();
+        this.dnsServers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {

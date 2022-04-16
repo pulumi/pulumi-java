@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +48,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The unique identifier associated with this Data Lake Store account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -61,7 +62,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The account creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -75,7 +76,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The commitment tier in use for the current month.
      * 
      */
-    public Output<String> getCurrentTier() {
+    public Output<String> currentTier() {
         return this.currentTier;
     }
     /**
@@ -89,7 +90,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The default owner group for all new folders and files created in the Data Lake Store account.
      * 
      */
-    public Output<String> getDefaultGroup() {
+    public Output<String> defaultGroup() {
         return this.defaultGroup;
     }
     /**
@@ -103,7 +104,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The Key Vault encryption configuration.
      * 
      */
-    public Output<EncryptionConfigResponse> getEncryptionConfig() {
+    public Output<EncryptionConfigResponse> encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
@@ -117,7 +118,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The current state of encryption provisioning for this Data Lake Store account.
      * 
      */
-    public Output<String> getEncryptionProvisioningState() {
+    public Output<String> encryptionProvisioningState() {
         return this.encryptionProvisioningState;
     }
     /**
@@ -131,7 +132,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The current state of encryption for this Data Lake Store account.
      * 
      */
-    public Output<String> getEncryptionState() {
+    public Output<String> encryptionState() {
         return this.encryptionState;
     }
     /**
@@ -145,7 +146,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The full CName endpoint for this account.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -159,7 +160,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
-    public Output<String> getFirewallAllowAzureIps() {
+    public Output<String> firewallAllowAzureIps() {
         return this.firewallAllowAzureIps;
     }
     /**
@@ -173,7 +174,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The list of firewall rules associated with this Data Lake Store account.
      * 
      */
-    public Output<List<FirewallRuleResponse>> getFirewallRules() {
+    public Output<List<FirewallRuleResponse>> firewallRules() {
         return this.firewallRules;
     }
     /**
@@ -187,7 +188,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The current state of the IP address firewall for this Data Lake Store account.
      * 
      */
-    public Output<String> getFirewallState() {
+    public Output<String> firewallState() {
         return this.firewallState;
     }
     /**
@@ -201,7 +202,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The Key Vault encryption identity, if any.
      * 
      */
-    public Output<EncryptionIdentityResponse> getIdentity() {
+    public Output<EncryptionIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -215,7 +216,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The account last modified time.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -229,7 +230,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -243,7 +244,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -257,7 +258,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The commitment tier to use for next month.
      * 
      */
-    public Output<String> getNewTier() {
+    public Output<String> newTier() {
         return this.newTier;
     }
     /**
@@ -271,7 +272,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the Data Lake Store account.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -285,7 +286,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The state of the Data Lake Store account.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -299,7 +300,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -313,7 +314,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The current state of the trusted identity provider feature for this Data Lake Store account.
      * 
      */
-    public Output<String> getTrustedIdProviderState() {
+    public Output<String> trustedIdProviderState() {
         return this.trustedIdProviderState;
     }
     /**
@@ -327,7 +328,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The list of trusted identity providers associated with this Data Lake Store account.
      * 
      */
-    public Output<List<TrustedIdProviderResponse>> getTrustedIdProviders() {
+    public Output<List<TrustedIdProviderResponse>> trustedIdProviders() {
         return this.trustedIdProviders;
     }
     /**
@@ -341,7 +342,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -355,7 +356,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The list of virtual network rules associated with this Data Lake Store account.
      * 
      */
-    public Output<List<VirtualNetworkRuleResponse>> getVirtualNetworkRules() {
+    public Output<List<VirtualNetworkRuleResponse>> virtualNetworkRules() {
         return this.virtualNetworkRules;
     }
 
@@ -381,7 +382,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datalakestore:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:datalakestore:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

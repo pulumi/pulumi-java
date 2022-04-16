@@ -10,6 +10,7 @@ import io.pulumi.awsnative.macie.enums.SessionStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return AWS account ID of customer
      * 
      */
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -44,7 +45,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return A enumeration value that specifies how frequently finding updates are published.
      * 
      */
-    public Output</* @Nullable */ SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
+    public Output</* @Nullable */ SessionFindingPublishingFrequency> findingPublishingFrequency() {
         return this.findingPublishingFrequency;
     }
     /**
@@ -58,7 +59,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return Service role used by Macie
      * 
      */
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
     /**
@@ -72,7 +73,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return A enumeration value that specifies the status of the Macie Session.
      * 
      */
-    public Output</* @Nullable */ SessionStatus> getStatus() {
+    public Output</* @Nullable */ SessionStatus> status() {
         return this.status;
     }
 
@@ -98,7 +99,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Session(String name, @Nullable SessionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:macie:Session", name, args == null ? SessionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:macie:Session", name, args == null ? SessionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Session(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

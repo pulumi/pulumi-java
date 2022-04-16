@@ -8,6 +8,7 @@ import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersC
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,36 +21,36 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="corsConfig")
       private final @Nullable Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig;
 
-    public Output<ResponseHeadersPolicyCorsConfigArgs> getCorsConfig() {
-        return this.corsConfig == null ? Output.empty() : this.corsConfig;
+    public Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig() {
+        return this.corsConfig == null ? Codegen.empty() : this.corsConfig;
     }
 
     @Import(name="customHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig;
 
-    public Output<ResponseHeadersPolicyCustomHeadersConfigArgs> getCustomHeadersConfig() {
-        return this.customHeadersConfig == null ? Output.empty() : this.customHeadersConfig;
+    public Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig() {
+        return this.customHeadersConfig == null ? Codegen.empty() : this.customHeadersConfig;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="securityHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigArgs> getSecurityHeadersConfig() {
-        return this.securityHeadersConfig == null ? Output.empty() : this.securityHeadersConfig;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig() {
+        return this.securityHeadersConfig == null ? Codegen.empty() : this.securityHeadersConfig;
     }
 
     public ResponseHeadersPolicyConfigArgs(
@@ -66,11 +67,11 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
     }
 
     private ResponseHeadersPolicyConfigArgs() {
-        this.comment = Output.empty();
-        this.corsConfig = Output.empty();
-        this.customHeadersConfig = Output.empty();
-        this.name = Output.empty();
-        this.securityHeadersConfig = Output.empty();
+        this.comment = Codegen.empty();
+        this.corsConfig = Codegen.empty();
+        this.customHeadersConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.securityHeadersConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder corsConfig(@Nullable Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig) {
@@ -114,7 +115,7 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder corsConfig(@Nullable ResponseHeadersPolicyCorsConfigArgs corsConfig) {
-            this.corsConfig = Output.ofNullable(corsConfig);
+            this.corsConfig = Codegen.ofNullable(corsConfig);
             return this;
         }
         public Builder customHeadersConfig(@Nullable Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig) {
@@ -122,7 +123,7 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfigArgs customHeadersConfig) {
-            this.customHeadersConfig = Output.ofNullable(customHeadersConfig);
+            this.customHeadersConfig = Codegen.ofNullable(customHeadersConfig);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -138,7 +139,7 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder securityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfigArgs securityHeadersConfig) {
-            this.securityHeadersConfig = Output.ofNullable(securityHeadersConfig);
+            this.securityHeadersConfig = Codegen.ofNullable(securityHeadersConfig);
             return this;
         }        public ResponseHeadersPolicyConfigArgs build() {
             return new ResponseHeadersPolicyConfigArgs(comment, corsConfig, customHeadersConfig, name, securityHeadersConfig);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.Hl7V2StoreArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.Hl7V2NotificationConfigResponse;
@@ -34,7 +35,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @return User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -48,7 +49,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @return Resource name of the HL7v2 store, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -62,7 +63,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @return The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.
      * 
      */
-    public Output<NotificationConfigResponse> getNotificationConfig() {
+    public Output<NotificationConfigResponse> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -76,7 +77,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @return A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.
      * 
      */
-    public Output<List<Hl7V2NotificationConfigResponse>> getNotificationConfigs() {
+    public Output<List<Hl7V2NotificationConfigResponse>> notificationConfigs() {
         return this.notificationConfigs;
     }
     /**
@@ -90,7 +91,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @return The configuration for the parser. It determines how the server parses the messages.
      * 
      */
-    public Output<ParserConfigResponse> getParserConfig() {
+    public Output<ParserConfigResponse> parserConfig() {
         return this.parserConfig;
     }
     /**
@@ -104,7 +105,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @return Determines whether to reject duplicate messages. A duplicate message is a message with the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The default value is false, meaning that the store accepts the duplicate messages and it also returns the same ACK message in the IngestMessageResponse as has been returned previously. Note that only one resource is created in the store. When this field is set to true, CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store, and IngestMessageErrorDetail returns a NACK message upon rejection.
      * 
      */
-    public Output<Boolean> getRejectDuplicateMessage() {
+    public Output<Boolean> rejectDuplicateMessage() {
         return this.rejectDuplicateMessage;
     }
 
@@ -130,7 +131,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hl7V2Store(String name, Hl7V2StoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:Hl7V2Store", name, args == null ? Hl7V2StoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:Hl7V2Store", name, args == null ? Hl7V2StoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Hl7V2Store(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

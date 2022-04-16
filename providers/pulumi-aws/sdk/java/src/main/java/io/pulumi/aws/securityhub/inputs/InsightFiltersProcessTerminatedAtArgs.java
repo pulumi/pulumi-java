@@ -6,6 +6,7 @@ package io.pulumi.aws.securityhub.inputs;
 import io.pulumi.aws.securityhub.inputs.InsightFiltersProcessTerminatedAtDateRangeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class InsightFiltersProcessTerminatedAtArgs extends io.pulumi.resou
     @Import(name="dateRange")
       private final @Nullable Output<InsightFiltersProcessTerminatedAtDateRangeArgs> dateRange;
 
-    public Output<InsightFiltersProcessTerminatedAtDateRangeArgs> getDateRange() {
-        return this.dateRange == null ? Output.empty() : this.dateRange;
+    public Output<InsightFiltersProcessTerminatedAtDateRangeArgs> dateRange() {
+        return this.dateRange == null ? Codegen.empty() : this.dateRange;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InsightFiltersProcessTerminatedAtArgs extends io.pulumi.resou
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+    public Output<String> end() {
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InsightFiltersProcessTerminatedAtArgs extends io.pulumi.resou
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+    public Output<String> start() {
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public InsightFiltersProcessTerminatedAtArgs(
@@ -58,9 +59,9 @@ public final class InsightFiltersProcessTerminatedAtArgs extends io.pulumi.resou
     }
 
     private InsightFiltersProcessTerminatedAtArgs() {
-        this.dateRange = Output.empty();
-        this.end = Output.empty();
-        this.start = Output.empty();
+        this.dateRange = Codegen.empty();
+        this.end = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class InsightFiltersProcessTerminatedAtArgs extends io.pulumi.resou
             return this;
         }
         public Builder dateRange(@Nullable InsightFiltersProcessTerminatedAtDateRangeArgs dateRange) {
-            this.dateRange = Output.ofNullable(dateRange);
+            this.dateRange = Codegen.ofNullable(dateRange);
             return this;
         }
         public Builder end(@Nullable Output<String> end) {
@@ -100,7 +101,7 @@ public final class InsightFiltersProcessTerminatedAtArgs extends io.pulumi.resou
             return this;
         }
         public Builder end(@Nullable String end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder start(@Nullable Output<String> start) {
@@ -108,7 +109,7 @@ public final class InsightFiltersProcessTerminatedAtArgs extends io.pulumi.resou
             return this;
         }
         public Builder start(@Nullable String start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public InsightFiltersProcessTerminatedAtArgs build() {
             return new InsightFiltersProcessTerminatedAtArgs(dateRange, end, start);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudtasks_v2.enums.HttpRequestHttpMethod;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.OAuthTokenArgs;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.OidcTokenArgs;
@@ -29,8 +30,8 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<String> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<Map<String,String>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod")
       private final @Nullable Output<HttpRequestHttpMethod> httpMethod;
 
-    public Output<HttpRequestHttpMethod> getHttpMethod() {
-        return this.httpMethod == null ? Output.empty() : this.httpMethod;
+    public Output<HttpRequestHttpMethod> httpMethod() {
+        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oauthToken")
       private final @Nullable Output<OAuthTokenArgs> oauthToken;
 
-    public Output<OAuthTokenArgs> getOauthToken() {
-        return this.oauthToken == null ? Output.empty() : this.oauthToken;
+    public Output<OAuthTokenArgs> oauthToken() {
+        return this.oauthToken == null ? Codegen.empty() : this.oauthToken;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcToken")
       private final @Nullable Output<OidcTokenArgs> oidcToken;
 
-    public Output<OidcTokenArgs> getOidcToken() {
-        return this.oidcToken == null ? Output.empty() : this.oidcToken;
+    public Output<OidcTokenArgs> oidcToken() {
+        return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -104,12 +105,12 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpRequestArgs() {
-        this.body = Output.empty();
-        this.headers = Output.empty();
-        this.httpMethod = Output.empty();
-        this.oauthToken = Output.empty();
-        this.oidcToken = Output.empty();
-        this.url = Output.empty();
+        this.body = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.oauthToken = Codegen.empty();
+        this.oidcToken = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
@@ -155,7 +156,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder httpMethod(@Nullable Output<HttpRequestHttpMethod> httpMethod) {
@@ -163,7 +164,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpMethod(@Nullable HttpRequestHttpMethod httpMethod) {
-            this.httpMethod = Output.ofNullable(httpMethod);
+            this.httpMethod = Codegen.ofNullable(httpMethod);
             return this;
         }
         public Builder oauthToken(@Nullable Output<OAuthTokenArgs> oauthToken) {
@@ -171,7 +172,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oauthToken(@Nullable OAuthTokenArgs oauthToken) {
-            this.oauthToken = Output.ofNullable(oauthToken);
+            this.oauthToken = Codegen.ofNullable(oauthToken);
             return this;
         }
         public Builder oidcToken(@Nullable Output<OidcTokenArgs> oidcToken) {
@@ -179,7 +180,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oidcToken(@Nullable OidcTokenArgs oidcToken) {
-            this.oidcToken = Output.ofNullable(oidcToken);
+            this.oidcToken = Codegen.ofNullable(oidcToken);
             return this;
         }
         public Builder url(Output<String> url) {

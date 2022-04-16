@@ -7,6 +7,7 @@ import io.pulumi.azurenative.testbase.enums.Tier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+    public Output<List<String>> locations() {
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,8 +51,8 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tier", required=true)
       private final Output<Either<String,Tier>> tier;
 
-    public Output<Either<String,Tier>> getTier() {
+    public Output<Either<String,Tier>> tier() {
         return this.tier;
     }
 
@@ -77,10 +78,10 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TestBaseAccountSKUArgs() {
-        this.locations = Output.empty();
-        this.name = Output.empty();
-        this.resourceType = Output.empty();
-        this.tier = Output.empty();
+        this.locations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -133,7 +134,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder tier(Output<Either<String,Tier>> tier) {

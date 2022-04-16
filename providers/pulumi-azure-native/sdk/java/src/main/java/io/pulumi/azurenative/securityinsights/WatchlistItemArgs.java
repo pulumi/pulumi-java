@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.inputs.WatchlistUserInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="created")
       private final @Nullable Output<String> created;
 
-    public Output<String> getCreated() {
-        return this.created == null ? Output.empty() : this.created;
+    public Output<String> created() {
+        return this.created == null ? Codegen.empty() : this.created;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<WatchlistUserInfoArgs> createdBy;
 
-    public Output<WatchlistUserInfoArgs> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+    public Output<WatchlistUserInfoArgs> createdBy() {
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityMapping")
       private final @Nullable Output<Object> entityMapping;
 
-    public Output<Object> getEntityMapping() {
-        return this.entityMapping == null ? Output.empty() : this.entityMapping;
+    public Output<Object> entityMapping() {
+        return this.entityMapping == null ? Codegen.empty() : this.entityMapping;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDeleted")
       private final @Nullable Output<Boolean> isDeleted;
 
-    public Output<Boolean> getIsDeleted() {
-        return this.isDeleted == null ? Output.empty() : this.isDeleted;
+    public Output<Boolean> isDeleted() {
+        return this.isDeleted == null ? Codegen.empty() : this.isDeleted;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="itemsKeyValue", required=true)
       private final Output<Object> itemsKeyValue;
 
-    public Output<Object> getItemsKeyValue() {
+    public Output<Object> itemsKeyValue() {
         return this.itemsKeyValue;
     }
 
@@ -79,7 +80,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -90,7 +91,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,8 +102,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updated")
       private final @Nullable Output<String> updated;
 
-    public Output<String> getUpdated() {
-        return this.updated == null ? Output.empty() : this.updated;
+    public Output<String> updated() {
+        return this.updated == null ? Codegen.empty() : this.updated;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updatedBy")
       private final @Nullable Output<WatchlistUserInfoArgs> updatedBy;
 
-    public Output<WatchlistUserInfoArgs> getUpdatedBy() {
-        return this.updatedBy == null ? Output.empty() : this.updatedBy;
+    public Output<WatchlistUserInfoArgs> updatedBy() {
+        return this.updatedBy == null ? Codegen.empty() : this.updatedBy;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="watchlistAlias", required=true)
       private final Output<String> watchlistAlias;
 
-    public Output<String> getWatchlistAlias() {
+    public Output<String> watchlistAlias() {
         return this.watchlistAlias;
     }
 
@@ -145,8 +146,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="watchlistItemId")
       private final @Nullable Output<String> watchlistItemId;
 
-    public Output<String> getWatchlistItemId() {
-        return this.watchlistItemId == null ? Output.empty() : this.watchlistItemId;
+    public Output<String> watchlistItemId() {
+        return this.watchlistItemId == null ? Codegen.empty() : this.watchlistItemId;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="watchlistItemType")
       private final @Nullable Output<String> watchlistItemType;
 
-    public Output<String> getWatchlistItemType() {
-        return this.watchlistItemType == null ? Output.empty() : this.watchlistItemType;
+    public Output<String> watchlistItemType() {
+        return this.watchlistItemType == null ? Codegen.empty() : this.watchlistItemType;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -203,20 +204,20 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WatchlistItemArgs() {
-        this.created = Output.empty();
-        this.createdBy = Output.empty();
-        this.entityMapping = Output.empty();
-        this.isDeleted = Output.empty();
-        this.itemsKeyValue = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tenantId = Output.empty();
-        this.updated = Output.empty();
-        this.updatedBy = Output.empty();
-        this.watchlistAlias = Output.empty();
-        this.watchlistItemId = Output.empty();
-        this.watchlistItemType = Output.empty();
-        this.workspaceName = Output.empty();
+        this.created = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.entityMapping = Codegen.empty();
+        this.isDeleted = Codegen.empty();
+        this.itemsKeyValue = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.updated = Codegen.empty();
+        this.updatedBy = Codegen.empty();
+        this.watchlistAlias = Codegen.empty();
+        this.watchlistItemId = Codegen.empty();
+        this.watchlistItemType = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -270,7 +271,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder created(@Nullable String created) {
-            this.created = Output.ofNullable(created);
+            this.created = Codegen.ofNullable(created);
             return this;
         }
         public Builder createdBy(@Nullable Output<WatchlistUserInfoArgs> createdBy) {
@@ -278,7 +279,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdBy(@Nullable WatchlistUserInfoArgs createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder entityMapping(@Nullable Output<Object> entityMapping) {
@@ -286,7 +287,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entityMapping(@Nullable Object entityMapping) {
-            this.entityMapping = Output.ofNullable(entityMapping);
+            this.entityMapping = Codegen.ofNullable(entityMapping);
             return this;
         }
         public Builder isDeleted(@Nullable Output<Boolean> isDeleted) {
@@ -294,7 +295,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDeleted(@Nullable Boolean isDeleted) {
-            this.isDeleted = Output.ofNullable(isDeleted);
+            this.isDeleted = Codegen.ofNullable(isDeleted);
             return this;
         }
         public Builder itemsKeyValue(Output<Object> itemsKeyValue) {
@@ -326,7 +327,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder updated(@Nullable Output<String> updated) {
@@ -334,7 +335,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updated(@Nullable String updated) {
-            this.updated = Output.ofNullable(updated);
+            this.updated = Codegen.ofNullable(updated);
             return this;
         }
         public Builder updatedBy(@Nullable Output<WatchlistUserInfoArgs> updatedBy) {
@@ -342,7 +343,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedBy(@Nullable WatchlistUserInfoArgs updatedBy) {
-            this.updatedBy = Output.ofNullable(updatedBy);
+            this.updatedBy = Codegen.ofNullable(updatedBy);
             return this;
         }
         public Builder watchlistAlias(Output<String> watchlistAlias) {
@@ -358,7 +359,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder watchlistItemId(@Nullable String watchlistItemId) {
-            this.watchlistItemId = Output.ofNullable(watchlistItemId);
+            this.watchlistItemId = Codegen.ofNullable(watchlistItemId);
             return this;
         }
         public Builder watchlistItemType(@Nullable Output<String> watchlistItemType) {
@@ -366,7 +367,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder watchlistItemType(@Nullable String watchlistItemType) {
-            this.watchlistItemType = Output.ofNullable(watchlistItemType);
+            this.watchlistItemType = Codegen.ofNullable(watchlistItemType);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

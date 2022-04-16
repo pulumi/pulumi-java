@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementGetArgs ex
     @Import(name="statements", required=true)
       private final Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs>> statements;
 
-    public Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 
@@ -30,7 +31,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementGetArgs ex
     }
 
     private WebAclRuleStatementAndStatementStatementOrStatementGetArgs() {
-        this.statements = Output.empty();
+        this.statements = Codegen.empty();
     }
 
     public static Builder builder() {

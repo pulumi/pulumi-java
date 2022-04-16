@@ -7,6 +7,7 @@ import io.pulumi.azurenative.migrate.enums.TargetAvailabilityZone;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -39,8 +40,8 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> getTargetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Output.empty() : this.targetAvailabilitySetId;
+    public Output<String> targetAvailabilitySetId() {
+        return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     @Import(name="targetAvailabilityZone")
       private final @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
 
-    public Output<Either<String,TargetAvailabilityZone>> getTargetAvailabilityZone() {
-        return this.targetAvailabilityZone == null ? Output.empty() : this.targetAvailabilityZone;
+    public Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone() {
+        return this.targetAvailabilityZone == null ? Codegen.empty() : this.targetAvailabilityZone;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -72,8 +73,8 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
 
-    public Output<String> getTargetVmSize() {
-        return this.targetVmSize == null ? Output.empty() : this.targetVmSize;
+    public Output<String> targetVmSize() {
+        return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
     }
 
     public VirtualMachineResourceSettingsArgs(
@@ -90,11 +91,11 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     }
 
     private VirtualMachineResourceSettingsArgs() {
-        this.resourceType = Output.empty();
-        this.targetAvailabilitySetId = Output.empty();
-        this.targetAvailabilityZone = Output.empty();
-        this.targetResourceName = Output.empty();
-        this.targetVmSize = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.targetAvailabilitySetId = Codegen.empty();
+        this.targetAvailabilityZone = Codegen.empty();
+        this.targetResourceName = Codegen.empty();
+        this.targetVmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Output.ofNullable(targetAvailabilitySetId);
+            this.targetAvailabilitySetId = Codegen.ofNullable(targetAvailabilitySetId);
             return this;
         }
         public Builder targetAvailabilityZone(@Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone) {
@@ -146,7 +147,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder targetAvailabilityZone(@Nullable Either<String,TargetAvailabilityZone> targetAvailabilityZone) {
-            this.targetAvailabilityZone = Output.ofNullable(targetAvailabilityZone);
+            this.targetAvailabilityZone = Codegen.ofNullable(targetAvailabilityZone);
             return this;
         }
         public Builder targetResourceName(Output<String> targetResourceName) {
@@ -162,7 +163,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = Output.ofNullable(targetVmSize);
+            this.targetVmSize = Codegen.ofNullable(targetVmSize);
             return this;
         }        public VirtualMachineResourceSettingsArgs build() {
             return new VirtualMachineResourceSettingsArgs(resourceType, targetAvailabilitySetId, targetAvailabilityZone, targetResourceName, targetVmSize);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,22 +18,22 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
     @Import(name="identityProvider")
       private final @Nullable Output<String> identityProvider;
 
-    public Output<String> getIdentityProvider() {
-        return this.identityProvider == null ? Output.empty() : this.identityProvider;
+    public Output<String> identityProvider() {
+        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
     @Import(name="issuerUri")
       private final @Nullable Output<String> issuerUri;
 
-    public Output<String> getIssuerUri() {
-        return this.issuerUri == null ? Output.empty() : this.issuerUri;
+    public Output<String> issuerUri() {
+        return this.issuerUri == null ? Codegen.empty() : this.issuerUri;
     }
 
     @Import(name="workloadPool")
       private final @Nullable Output<String> workloadPool;
 
-    public Output<String> getWorkloadPool() {
-        return this.workloadPool == null ? Output.empty() : this.workloadPool;
+    public Output<String> workloadPool() {
+        return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
     }
 
     public AwsClusterWorkloadIdentityConfigArgs(
@@ -45,9 +46,9 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
     }
 
     private AwsClusterWorkloadIdentityConfigArgs() {
-        this.identityProvider = Output.empty();
-        this.issuerUri = Output.empty();
-        this.workloadPool = Output.empty();
+        this.identityProvider = Codegen.empty();
+        this.issuerUri = Codegen.empty();
+        this.workloadPool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = Output.ofNullable(identityProvider);
+            this.identityProvider = Codegen.ofNullable(identityProvider);
             return this;
         }
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
@@ -87,7 +88,7 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder issuerUri(@Nullable String issuerUri) {
-            this.issuerUri = Output.ofNullable(issuerUri);
+            this.issuerUri = Codegen.ofNullable(issuerUri);
             return this;
         }
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
@@ -95,7 +96,7 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Output.ofNullable(workloadPool);
+            this.workloadPool = Codegen.ofNullable(workloadPool);
             return this;
         }        public AwsClusterWorkloadIdentityConfigArgs build() {
             return new AwsClusterWorkloadIdentityConfigArgs(identityProvider, issuerUri, workloadPool);

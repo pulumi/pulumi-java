@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CompletenessArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildFinishedOn")
       private final @Nullable Output<String> buildFinishedOn;
 
-    public Output<String> getBuildFinishedOn() {
-        return this.buildFinishedOn == null ? Output.empty() : this.buildFinishedOn;
+    public Output<String> buildFinishedOn() {
+        return this.buildFinishedOn == null ? Codegen.empty() : this.buildFinishedOn;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildInvocationId")
       private final @Nullable Output<String> buildInvocationId;
 
-    public Output<String> getBuildInvocationId() {
-        return this.buildInvocationId == null ? Output.empty() : this.buildInvocationId;
+    public Output<String> buildInvocationId() {
+        return this.buildInvocationId == null ? Codegen.empty() : this.buildInvocationId;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildStartedOn")
       private final @Nullable Output<String> buildStartedOn;
 
-    public Output<String> getBuildStartedOn() {
-        return this.buildStartedOn == null ? Output.empty() : this.buildStartedOn;
+    public Output<String> buildStartedOn() {
+        return this.buildStartedOn == null ? Codegen.empty() : this.buildStartedOn;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completeness")
       private final @Nullable Output<CompletenessArgs> completeness;
 
-    public Output<CompletenessArgs> getCompleteness() {
-        return this.completeness == null ? Output.empty() : this.completeness;
+    public Output<CompletenessArgs> completeness() {
+        return this.completeness == null ? Codegen.empty() : this.completeness;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reproducible")
       private final @Nullable Output<Boolean> reproducible;
 
-    public Output<Boolean> getReproducible() {
-        return this.reproducible == null ? Output.empty() : this.reproducible;
+    public Output<Boolean> reproducible() {
+        return this.reproducible == null ? Codegen.empty() : this.reproducible;
     }
 
     public MetadataArgs(
@@ -89,11 +90,11 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataArgs() {
-        this.buildFinishedOn = Output.empty();
-        this.buildInvocationId = Output.empty();
-        this.buildStartedOn = Output.empty();
-        this.completeness = Output.empty();
-        this.reproducible = Output.empty();
+        this.buildFinishedOn = Codegen.empty();
+        this.buildInvocationId = Codegen.empty();
+        this.buildStartedOn = Codegen.empty();
+        this.completeness = Codegen.empty();
+        this.reproducible = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildFinishedOn(@Nullable String buildFinishedOn) {
-            this.buildFinishedOn = Output.ofNullable(buildFinishedOn);
+            this.buildFinishedOn = Codegen.ofNullable(buildFinishedOn);
             return this;
         }
         public Builder buildInvocationId(@Nullable Output<String> buildInvocationId) {
@@ -137,7 +138,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildInvocationId(@Nullable String buildInvocationId) {
-            this.buildInvocationId = Output.ofNullable(buildInvocationId);
+            this.buildInvocationId = Codegen.ofNullable(buildInvocationId);
             return this;
         }
         public Builder buildStartedOn(@Nullable Output<String> buildStartedOn) {
@@ -145,7 +146,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildStartedOn(@Nullable String buildStartedOn) {
-            this.buildStartedOn = Output.ofNullable(buildStartedOn);
+            this.buildStartedOn = Codegen.ofNullable(buildStartedOn);
             return this;
         }
         public Builder completeness(@Nullable Output<CompletenessArgs> completeness) {
@@ -153,7 +154,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder completeness(@Nullable CompletenessArgs completeness) {
-            this.completeness = Output.ofNullable(completeness);
+            this.completeness = Codegen.ofNullable(completeness);
             return this;
         }
         public Builder reproducible(@Nullable Output<Boolean> reproducible) {
@@ -161,7 +162,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reproducible(@Nullable Boolean reproducible) {
-            this.reproducible = Output.ofNullable(reproducible);
+            this.reproducible = Codegen.ofNullable(reproducible);
             return this;
         }        public MetadataArgs build() {
             return new MetadataArgs(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);

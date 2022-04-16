@@ -10,6 +10,7 @@ import io.pulumi.awsnative.forecast.outputs.DatasetGroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * @return An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDatasetArns() {
+    public Output</* @Nullable */ List<String>> datasetArns() {
         return this.datasetArns;
     }
     /**
@@ -45,7 +46,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the dataset group to delete.
      * 
      */
-    public Output<String> getDatasetGroupArn() {
+    public Output<String> datasetGroupArn() {
         return this.datasetGroupArn;
     }
     /**
@@ -59,7 +60,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * @return A name for the dataset group.
      * 
      */
-    public Output<String> getDatasetGroupName() {
+    public Output<String> datasetGroupName() {
         return this.datasetGroupName;
     }
     /**
@@ -73,7 +74,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * @return The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
      * 
      */
-    public Output<DatasetGroupDomain> getDomain() {
+    public Output<DatasetGroupDomain> domain() {
         return this.domain;
     }
     /**
@@ -87,7 +88,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * @return The tags of Application Insights application.
      * 
      */
-    public Output</* @Nullable */ List<DatasetGroupTag>> getTags() {
+    public Output</* @Nullable */ List<DatasetGroupTag>> tags() {
         return this.tags;
     }
 
@@ -113,7 +114,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatasetGroup(String name, DatasetGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:forecast:DatasetGroup", name, args == null ? DatasetGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:forecast:DatasetGroup", name, args == null ? DatasetGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatasetGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

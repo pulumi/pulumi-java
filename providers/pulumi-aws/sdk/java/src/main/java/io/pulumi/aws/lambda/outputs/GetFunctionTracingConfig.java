@@ -16,7 +16,7 @@ public final class GetFunctionTracingConfig {
         this.mode = mode;
     }
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
     @Import(name="jsonPath", required=true)
       private final Output<String> jsonPath;
 
-    public Output<String> getJsonPath() {
+    public Output<String> jsonPath() {
         return this.jsonPath;
     }
 
@@ -29,7 +30,7 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
     }
 
     private ClassifierJsonClassifierGetArgs() {
-        this.jsonPath = Output.empty();
+        this.jsonPath = Codegen.empty();
     }
 
     public static Builder builder() {

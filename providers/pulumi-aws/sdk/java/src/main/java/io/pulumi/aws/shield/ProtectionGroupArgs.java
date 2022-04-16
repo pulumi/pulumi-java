@@ -5,6 +5,7 @@ package io.pulumi.aws.shield;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="aggregation", required=true)
       private final Output<String> aggregation;
 
-    public Output<String> getAggregation() {
+    public Output<String> aggregation() {
         return this.aggregation;
     }
 
@@ -34,8 +35,8 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 
@@ -56,7 +57,7 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="protectionGroupId", required=true)
       private final Output<String> protectionGroupId;
 
-    public Output<String> getProtectionGroupId() {
+    public Output<String> protectionGroupId() {
         return this.protectionGroupId;
     }
 
@@ -67,8 +68,8 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ProtectionGroupArgs(
@@ -98,12 +99,12 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ProtectionGroupArgs() {
-        this.aggregation = Output.empty();
-        this.members = Output.empty();
-        this.pattern = Output.empty();
-        this.protectionGroupId = Output.empty();
-        this.resourceType = Output.empty();
-        this.tags = Output.empty();
+        this.aggregation = Codegen.empty();
+        this.members = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.protectionGroupId = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -176,7 +177,7 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -184,7 +185,7 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ProtectionGroupArgs build() {
             return new ProtectionGroupArgs(aggregation, members, pattern, protectionGroupId, resourceType, tags);

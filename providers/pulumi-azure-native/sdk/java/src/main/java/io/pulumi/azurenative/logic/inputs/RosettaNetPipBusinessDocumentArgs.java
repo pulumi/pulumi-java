@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,7 +48,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -61,9 +62,9 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
     }
 
     private RosettaNetPipBusinessDocumentArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.version = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {

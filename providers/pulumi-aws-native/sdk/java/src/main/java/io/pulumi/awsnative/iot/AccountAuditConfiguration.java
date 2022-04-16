@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditNotificatio
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,19 +31,19 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
      * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     @Export(name="auditCheckConfigurations", type=AccountAuditConfigurationAuditCheckConfigurations.class, parameters={})
     private Output<AccountAuditConfigurationAuditCheckConfigurations> auditCheckConfigurations;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurations> getAuditCheckConfigurations() {
+    public Output<AccountAuditConfigurationAuditCheckConfigurations> auditCheckConfigurations() {
         return this.auditCheckConfigurations;
     }
     @Export(name="auditNotificationTargetConfigurations", type=AccountAuditConfigurationAuditNotificationTargetConfigurations.class, parameters={})
     private Output</* @Nullable */ AccountAuditConfigurationAuditNotificationTargetConfigurations> auditNotificationTargetConfigurations;
 
-    public Output</* @Nullable */ AccountAuditConfigurationAuditNotificationTargetConfigurations> getAuditNotificationTargetConfigurations() {
+    public Output</* @Nullable */ AccountAuditConfigurationAuditNotificationTargetConfigurations> auditNotificationTargetConfigurations() {
         return this.auditNotificationTargetConfigurations;
     }
     /**
@@ -56,7 +57,7 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
      * @return The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -82,7 +83,7 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountAuditConfiguration(String name, AccountAuditConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:AccountAuditConfiguration", name, args == null ? AccountAuditConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:AccountAuditConfiguration", name, args == null ? AccountAuditConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountAuditConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

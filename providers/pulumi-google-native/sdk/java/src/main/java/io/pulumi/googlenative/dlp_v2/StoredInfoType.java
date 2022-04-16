@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dlp_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dlp_v2.StoredInfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeVersionResponse;
@@ -31,7 +32,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @return Current version of the stored info type.
      * 
      */
-    public Output<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> getCurrentVersion() {
+    public Output<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> currentVersion() {
         return this.currentVersion;
     }
     /**
@@ -45,7 +46,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +60,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @return Pending versions of the stored info type. Empty if no versions are pending.
      * 
      */
-    public Output<List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse>> getPendingVersions() {
+    public Output<List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse>> pendingVersions() {
         return this.pendingVersions;
     }
 
@@ -85,7 +86,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StoredInfoType(String name, StoredInfoTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dlp/v2:StoredInfoType", name, args == null ? StoredInfoTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dlp/v2:StoredInfoType", name, args == null ? StoredInfoTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StoredInfoType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

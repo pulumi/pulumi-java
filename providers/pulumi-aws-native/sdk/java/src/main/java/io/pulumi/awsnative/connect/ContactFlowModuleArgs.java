@@ -7,6 +7,7 @@ import io.pulumi.awsnative.connect.enums.ContactFlowModuleState;
 import io.pulumi.awsnative.connect.inputs.ContactFlowModuleTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -35,8 +36,8 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -57,8 +58,8 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<ContactFlowModuleState> state;
 
-    public Output<ContactFlowModuleState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<ContactFlowModuleState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<List<ContactFlowModuleTagArgs>> tags;
 
-    public Output<List<ContactFlowModuleTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ContactFlowModuleTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ContactFlowModuleArgs(
@@ -99,12 +100,12 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ContactFlowModuleArgs() {
-        this.content = Output.empty();
-        this.description = Output.empty();
-        this.instanceArn = Output.empty();
-        this.name = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
+        this.content = Codegen.empty();
+        this.description = Codegen.empty();
+        this.instanceArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instanceArn(Output<String> instanceArn) {
@@ -166,7 +167,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder state(@Nullable Output<ContactFlowModuleState> state) {
@@ -174,7 +175,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder state(@Nullable ContactFlowModuleState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<List<ContactFlowModuleTagArgs>> tags) {
@@ -182,7 +183,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable List<ContactFlowModuleTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ContactFlowModuleTagArgs... tags) {

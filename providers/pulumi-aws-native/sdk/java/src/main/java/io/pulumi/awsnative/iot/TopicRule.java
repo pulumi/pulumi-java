@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.outputs.TopicRuleTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,25 +24,25 @@ public class TopicRule extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
-    public Output</* @Nullable */ String> getRuleName() {
+    public Output</* @Nullable */ String> ruleName() {
         return this.ruleName;
     }
     @Export(name="tags", type=List.class, parameters={TopicRuleTag.class})
     private Output</* @Nullable */ List<TopicRuleTag>> tags;
 
-    public Output</* @Nullable */ List<TopicRuleTag>> getTags() {
+    public Output</* @Nullable */ List<TopicRuleTag>> tags() {
         return this.tags;
     }
     @Export(name="topicRulePayload", type=TopicRulePayload.class, parameters={})
     private Output<TopicRulePayload> topicRulePayload;
 
-    public Output<TopicRulePayload> getTopicRulePayload() {
+    public Output<TopicRulePayload> topicRulePayload() {
         return this.topicRulePayload;
     }
 
@@ -67,7 +68,7 @@ public class TopicRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicRule(String name, TopicRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:TopicRule", name, args == null ? TopicRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:TopicRule", name, args == null ? TopicRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TopicRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

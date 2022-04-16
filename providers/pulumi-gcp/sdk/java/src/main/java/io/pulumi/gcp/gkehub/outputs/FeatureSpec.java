@@ -28,7 +28,7 @@ public final class FeatureSpec {
      * The `multiclusteringress` block supports:
      * 
     */
-    public Optional<FeatureSpecMulticlusteringress> getMulticlusteringress() {
+    public Optional<FeatureSpecMulticlusteringress> multiclusteringress() {
         return Optional.ofNullable(this.multiclusteringress);
     }
 

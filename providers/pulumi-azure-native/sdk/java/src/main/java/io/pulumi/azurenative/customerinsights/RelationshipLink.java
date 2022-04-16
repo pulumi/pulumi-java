@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return Localized descriptions for the Relationship Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDescription() {
+    public Output</* @Nullable */ Map<String,String>> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return Localized display name for the Relationship Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +73,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The InteractionType associated with the Relationship Link.
      * 
      */
-    public Output<String> getInteractionType() {
+    public Output<String> interactionType() {
         return this.interactionType;
     }
     /**
@@ -86,7 +87,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The name of the Relationship Link.
      * 
      */
-    public Output<String> getLinkName() {
+    public Output<String> linkName() {
         return this.linkName;
     }
     /**
@@ -100,7 +101,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The mappings between Interaction and Relationship fields.
      * 
      */
-    public Output</* @Nullable */ List<RelationshipLinkFieldMappingResponse>> getMappings() {
+    public Output</* @Nullable */ List<RelationshipLinkFieldMappingResponse>> mappings() {
         return this.mappings;
     }
     /**
@@ -114,7 +115,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The property references for the Profile of the Relationship.
      * 
      */
-    public Output<List<ParticipantProfilePropertyReferenceResponse>> getProfilePropertyReferences() {
+    public Output<List<ParticipantProfilePropertyReferenceResponse>> profilePropertyReferences() {
         return this.profilePropertyReferences;
     }
     /**
@@ -142,7 +143,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -156,7 +157,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The property references for the Related Profile of the Relationship.
      * 
      */
-    public Output<List<ParticipantProfilePropertyReferenceResponse>> getRelatedProfilePropertyReferences() {
+    public Output<List<ParticipantProfilePropertyReferenceResponse>> relatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
     }
     /**
@@ -170,7 +171,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The relationship guid id.
      * 
      */
-    public Output<String> getRelationshipGuidId() {
+    public Output<String> relationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
@@ -184,7 +185,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The Relationship associated with the Link.
      * 
      */
-    public Output<String> getRelationshipName() {
+    public Output<String> relationshipName() {
         return this.relationshipName;
     }
     /**
@@ -198,7 +199,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -212,7 +213,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -238,7 +239,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RelationshipLink(String name, RelationshipLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customerinsights:RelationshipLink", name, args == null ? RelationshipLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customerinsights:RelationshipLink", name, args == null ? RelationshipLinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RelationshipLink(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

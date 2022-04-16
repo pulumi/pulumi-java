@@ -10,6 +10,7 @@ import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseSourceConfigurationArgs;
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,50 +24,50 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="knowledgeBaseType", required=true)
       private final Output<KnowledgeBaseType> knowledgeBaseType;
 
-    public Output<KnowledgeBaseType> getKnowledgeBaseType() {
+    public Output<KnowledgeBaseType> knowledgeBaseType() {
         return this.knowledgeBaseType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="renderingConfiguration")
       private final @Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
 
-    public Output<KnowledgeBaseRenderingConfigurationArgs> getRenderingConfiguration() {
-        return this.renderingConfiguration == null ? Output.empty() : this.renderingConfiguration;
+    public Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration() {
+        return this.renderingConfiguration == null ? Codegen.empty() : this.renderingConfiguration;
     }
 
     @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
+    public Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration() {
+        return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
     }
 
     @Import(name="sourceConfiguration")
       private final @Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
 
-    public Output<KnowledgeBaseSourceConfigurationArgs> getSourceConfiguration() {
-        return this.sourceConfiguration == null ? Output.empty() : this.sourceConfiguration;
+    public Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration() {
+        return this.sourceConfiguration == null ? Codegen.empty() : this.sourceConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<KnowledgeBaseTagArgs>> tags;
 
-    public Output<List<KnowledgeBaseTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<KnowledgeBaseTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public KnowledgeBaseArgs(
@@ -87,13 +88,13 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KnowledgeBaseArgs() {
-        this.description = Output.empty();
-        this.knowledgeBaseType = Output.empty();
-        this.name = Output.empty();
-        this.renderingConfiguration = Output.empty();
-        this.serverSideEncryptionConfiguration = Output.empty();
-        this.sourceConfiguration = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.knowledgeBaseType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.renderingConfiguration = Codegen.empty();
+        this.serverSideEncryptionConfiguration = Codegen.empty();
+        this.sourceConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder knowledgeBaseType(Output<KnowledgeBaseType> knowledgeBaseType) {
@@ -149,7 +150,7 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder renderingConfiguration(@Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration) {
@@ -157,7 +158,7 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder renderingConfiguration(@Nullable KnowledgeBaseRenderingConfigurationArgs renderingConfiguration) {
-            this.renderingConfiguration = Output.ofNullable(renderingConfiguration);
+            this.renderingConfiguration = Codegen.ofNullable(renderingConfiguration);
             return this;
         }
         public Builder serverSideEncryptionConfiguration(@Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
@@ -165,7 +166,7 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverSideEncryptionConfiguration(@Nullable KnowledgeBaseServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
+            this.serverSideEncryptionConfiguration = Codegen.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
         public Builder sourceConfiguration(@Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration) {
@@ -173,7 +174,7 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceConfiguration(@Nullable KnowledgeBaseSourceConfigurationArgs sourceConfiguration) {
-            this.sourceConfiguration = Output.ofNullable(sourceConfiguration);
+            this.sourceConfiguration = Codegen.ofNullable(sourceConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<List<KnowledgeBaseTagArgs>> tags) {
@@ -181,7 +182,7 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<KnowledgeBaseTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(KnowledgeBaseTagArgs... tags) {

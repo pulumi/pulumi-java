@@ -5,6 +5,7 @@ package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<String> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverId")
       private final @Nullable Output<String> serverId;
 
-    public Output<String> getServerId() {
-        return this.serverId == null ? Output.empty() : this.serverId;
+    public Output<String> serverId() {
+        return this.serverId == null ? Codegen.empty() : this.serverId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public SshKeyState(
@@ -57,9 +58,9 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshKeyState() {
-        this.body = Output.empty();
-        this.serverId = Output.empty();
-        this.userName = Output.empty();
+        this.body = Codegen.empty();
+        this.serverId = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder serverId(@Nullable Output<String> serverId) {
@@ -99,7 +100,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverId(@Nullable String serverId) {
-            this.serverId = Output.ofNullable(serverId);
+            this.serverId = Codegen.ofNullable(serverId);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -107,7 +108,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public SshKeyState build() {
             return new SshKeyState(body, serverId, userName);

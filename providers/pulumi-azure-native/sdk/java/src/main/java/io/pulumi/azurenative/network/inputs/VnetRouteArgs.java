@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.StaticRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticRoutes")
       private final @Nullable Output<List<StaticRouteArgs>> staticRoutes;
 
-    public Output<List<StaticRouteArgs>> getStaticRoutes() {
-        return this.staticRoutes == null ? Output.empty() : this.staticRoutes;
+    public Output<List<StaticRouteArgs>> staticRoutes() {
+        return this.staticRoutes == null ? Codegen.empty() : this.staticRoutes;
     }
 
     public VnetRouteArgs(@Nullable Output<List<StaticRouteArgs>> staticRoutes) {
@@ -35,7 +36,7 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VnetRouteArgs() {
-        this.staticRoutes = Output.empty();
+        this.staticRoutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticRoutes(@Nullable List<StaticRouteArgs> staticRoutes) {
-            this.staticRoutes = Output.ofNullable(staticRoutes);
+            this.staticRoutes = Codegen.ofNullable(staticRoutes);
             return this;
         }
         public Builder staticRoutes(StaticRouteArgs... staticRoutes) {

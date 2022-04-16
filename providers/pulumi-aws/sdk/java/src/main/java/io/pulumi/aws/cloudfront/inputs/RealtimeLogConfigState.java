@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="endpoint")
       private final @Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint;
 
-    public Output<RealtimeLogConfigEndpointGetArgs> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<RealtimeLogConfigEndpointGetArgs> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="fields")
       private final @Nullable Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+    public Output<List<String>> fields() {
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> getSamplingRate() {
-        return this.samplingRate == null ? Output.empty() : this.samplingRate;
+    public Output<Integer> samplingRate() {
+        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 
     public RealtimeLogConfigState(
@@ -86,11 +87,11 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
     }
 
     private RealtimeLogConfigState() {
-        this.arn = Output.empty();
-        this.endpoint = Output.empty();
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.samplingRate = Output.empty();
+        this.arn = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.samplingRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder endpoint(@Nullable Output<RealtimeLogConfigEndpointGetArgs> endpoint) {
@@ -134,7 +135,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder endpoint(@Nullable RealtimeLogConfigEndpointGetArgs endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder fields(@Nullable Output<List<String>> fields) {
@@ -142,7 +143,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fields(@Nullable List<String> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(String... fields) {
@@ -153,7 +154,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
@@ -161,7 +162,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Output.ofNullable(samplingRate);
+            this.samplingRate = Codegen.ofNullable(samplingRate);
             return this;
         }        public RealtimeLogConfigState build() {
             return new RealtimeLogConfigState(arn, endpoint, fields, name, samplingRate);

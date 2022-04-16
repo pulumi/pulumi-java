@@ -25,7 +25,7 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="basicAuth", required=true)
       private final BasicAuthResponse basicAuth;
 
-    public BasicAuthResponse getBasicAuth() {
+    public BasicAuthResponse basicAuth() {
         return this.basicAuth;
     }
 
@@ -36,7 +36,7 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
       private final ServiceAccountResponse serviceAccount;
 
-    public ServiceAccountResponse getServiceAccount() {
+    public ServiceAccountResponse serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -47,7 +47,7 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="useProjectDefault", required=true)
       private final Boolean useProjectDefault;
 
-    public Boolean getUseProjectDefault() {
+    public Boolean useProjectDefault() {
         return this.useProjectDefault;
     }
 

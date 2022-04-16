@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class ListenerCertificate extends io.pulumi.resources.CustomResource {
      * @return The ARN of the certificate to attach to the listener.
      * 
      */
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -59,7 +60,7 @@ public class ListenerCertificate extends io.pulumi.resources.CustomResource {
      * @return The ARN of the listener to which to attach the certificate.
      * 
      */
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
@@ -85,7 +86,7 @@ public class ListenerCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ListenerCertificate(String name, ListenerCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:alb/listenerCertificate:ListenerCertificate", name, args == null ? ListenerCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:alb/listenerCertificate:ListenerCertificate", name, args == null ? ListenerCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ListenerCertificate(String name, Output<String> id, @Nullable ListenerCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

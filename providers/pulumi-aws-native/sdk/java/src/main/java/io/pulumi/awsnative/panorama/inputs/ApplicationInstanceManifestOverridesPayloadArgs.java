@@ -5,6 +5,7 @@ package io.pulumi.awsnative.panorama.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
     @Import(name="payloadData")
       private final @Nullable Output<String> payloadData;
 
-    public Output<String> getPayloadData() {
-        return this.payloadData == null ? Output.empty() : this.payloadData;
+    public Output<String> payloadData() {
+        return this.payloadData == null ? Codegen.empty() : this.payloadData;
     }
 
     public ApplicationInstanceManifestOverridesPayloadArgs(@Nullable Output<String> payloadData) {
@@ -26,7 +27,7 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
     }
 
     private ApplicationInstanceManifestOverridesPayloadArgs() {
-        this.payloadData = Output.empty();
+        this.payloadData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
             return this;
         }
         public Builder payloadData(@Nullable String payloadData) {
-            this.payloadData = Output.ofNullable(payloadData);
+            this.payloadData = Codegen.ofNullable(payloadData);
             return this;
         }        public ApplicationInstanceManifestOverridesPayloadArgs build() {
             return new ApplicationInstanceManifestOverridesPayloadArgs(payloadData);

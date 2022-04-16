@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,22 +18,22 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="datacenterConnectorId", required=true)
       private final Output<String> datacenterConnectorId;
 
-    public Output<String> getDatacenterConnectorId() {
+    public Output<String> datacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -42,15 +43,15 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="registrationId")
       private final @Nullable Output<String> registrationId;
 
-    public Output<String> getRegistrationId() {
-        return this.registrationId == null ? Output.empty() : this.registrationId;
+    public Output<String> registrationId() {
+        return this.registrationId == null ? Codegen.empty() : this.registrationId;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -60,14 +61,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
@@ -78,8 +79,8 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public DatacenterConnectorArgs(
@@ -102,14 +103,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     }
 
     private DatacenterConnectorArgs() {
-        this.datacenterConnectorId = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.registrationId = Output.empty();
-        this.requestId = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.sourceId = Output.empty();
-        this.version = Output.empty();
+        this.datacenterConnectorId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.registrationId = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.sourceId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -167,7 +168,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder registrationId(@Nullable Output<String> registrationId) {
@@ -175,7 +176,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder registrationId(@Nullable String registrationId) {
-            this.registrationId = Output.ofNullable(registrationId);
+            this.registrationId = Codegen.ofNullable(registrationId);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -183,7 +184,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -191,7 +192,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder sourceId(Output<String> sourceId) {
@@ -207,7 +208,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public DatacenterConnectorArgs build() {
             return new DatacenterConnectorArgs(datacenterConnectorId, location, project, registrationId, requestId, serviceAccount, sourceId, version);

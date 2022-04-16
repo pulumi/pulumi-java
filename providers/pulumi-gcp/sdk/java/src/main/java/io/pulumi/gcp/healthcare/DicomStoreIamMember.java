@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DicomStoreIamMemberArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberState;
@@ -62,7 +63,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=DicomStoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DicomStoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ DicomStoreIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ DicomStoreIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -82,7 +83,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getDicomStoreId() {
+    public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
     /**
@@ -96,13 +97,13 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the DICOM store's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -120,7 +121,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -146,7 +147,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DicomStoreIamMember(String name, DicomStoreIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/dicomStoreIamMember:DicomStoreIamMember", name, args == null ? DicomStoreIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/dicomStoreIamMember:DicomStoreIamMember", name, args == null ? DicomStoreIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DicomStoreIamMember(String name, Output<String> id, @Nullable DicomStoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

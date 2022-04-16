@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends io.pulumi.r
     @Import(name="enableFailureEmail", required=true)
       private final Output<Boolean> enableFailureEmail;
 
-    public Output<Boolean> getEnableFailureEmail() {
+    public Output<Boolean> enableFailureEmail() {
         return this.enableFailureEmail;
     }
 
@@ -29,7 +30,7 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends io.pulumi.r
     }
 
     private DataTransferConfigEmailPreferencesGetArgs() {
-        this.enableFailureEmail = Output.empty();
+        this.enableFailureEmail = Codegen.empty();
     }
 
     public static Builder builder() {

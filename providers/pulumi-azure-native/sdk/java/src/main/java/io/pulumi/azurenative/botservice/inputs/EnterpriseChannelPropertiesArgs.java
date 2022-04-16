@@ -8,6 +8,7 @@ import io.pulumi.azurenative.botservice.inputs.EnterpriseChannelNodeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     @Import(name="nodes", required=true)
       private final Output<List<EnterpriseChannelNodeArgs>> nodes;
 
-    public Output<List<EnterpriseChannelNodeArgs>> getNodes() {
+    public Output<List<EnterpriseChannelNodeArgs>> nodes() {
         return this.nodes;
     }
 
@@ -40,8 +41,8 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     @Import(name="state")
       private final @Nullable Output<Either<String,EnterpriseChannelState>> state;
 
-    public Output<Either<String,EnterpriseChannelState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,EnterpriseChannelState>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public EnterpriseChannelPropertiesArgs(
@@ -52,8 +53,8 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     }
 
     private EnterpriseChannelPropertiesArgs() {
-        this.nodes = Output.empty();
-        this.state = Output.empty();
+        this.nodes = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder state(@Nullable Either<String,EnterpriseChannelState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public EnterpriseChannelPropertiesArgs build() {
             return new EnterpriseChannelPropertiesArgs(nodes, state);

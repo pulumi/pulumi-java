@@ -5,6 +5,7 @@ package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class OrganizationPolicyRestorePolicyArgs extends io.pulumi.resourc
     @Import(name="default", required=true)
       private final Output<Boolean> default_;
 
-    public Output<Boolean> getDefault_() {
+    public Output<Boolean> default_() {
         return this.default_;
     }
 
@@ -29,7 +30,7 @@ public final class OrganizationPolicyRestorePolicyArgs extends io.pulumi.resourc
     }
 
     private OrganizationPolicyRestorePolicyArgs() {
-        this.default_ = Output.empty();
+        this.default_ = Codegen.empty();
     }
 
     public static Builder builder() {

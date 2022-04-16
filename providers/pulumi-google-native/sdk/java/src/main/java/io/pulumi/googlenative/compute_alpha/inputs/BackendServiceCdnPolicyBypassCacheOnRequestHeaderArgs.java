@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
     @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
-    public Output<String> getHeaderName() {
-        return this.headerName == null ? Output.empty() : this.headerName;
+    public Output<String> headerName() {
+        return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 
     public BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(@Nullable Output<String> headerName) {
@@ -34,7 +35,7 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
     }
 
     private BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs() {
-        this.headerName = Output.empty();
+        this.headerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
             return this;
         }
         public Builder headerName(@Nullable String headerName) {
-            this.headerName = Output.ofNullable(headerName);
+            this.headerName = Codegen.ofNullable(headerName);
             return this;
         }        public BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs build() {
             return new BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(headerName);

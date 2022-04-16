@@ -6,6 +6,7 @@ package io.pulumi.aws.eks.inputs;
 import io.pulumi.aws.eks.inputs.ClusterIdentityOidcGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ClusterIdentityGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="oidcs")
       private final @Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs;
 
-    public Output<List<ClusterIdentityOidcGetArgs>> getOidcs() {
-        return this.oidcs == null ? Output.empty() : this.oidcs;
+    public Output<List<ClusterIdentityOidcGetArgs>> oidcs() {
+        return this.oidcs == null ? Codegen.empty() : this.oidcs;
     }
 
     public ClusterIdentityGetArgs(@Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs) {
@@ -31,7 +32,7 @@ public final class ClusterIdentityGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ClusterIdentityGetArgs() {
-        this.oidcs = Output.empty();
+        this.oidcs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ClusterIdentityGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder oidcs(@Nullable List<ClusterIdentityOidcGetArgs> oidcs) {
-            this.oidcs = Output.ofNullable(oidcs);
+            this.oidcs = Codegen.ofNullable(oidcs);
             return this;
         }
         public Builder oidcs(ClusterIdentityOidcGetArgs... oidcs) {

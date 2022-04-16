@@ -24,7 +24,7 @@ public final class MHSMPrivateEndpointResponse {
      * Full identifier of the private endpoint resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

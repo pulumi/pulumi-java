@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.AdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     @Import(name="administratorName")
       private final @Nullable Output<String> administratorName;
 
-    public Output<String> getAdministratorName() {
-        return this.administratorName == null ? Output.empty() : this.administratorName;
+    public Output<String> administratorName() {
+        return this.administratorName == null ? Codegen.empty() : this.administratorName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
 
-    public Output<Either<String,AdministratorType>> getAdministratorType() {
+    public Output<Either<String,AdministratorType>> administratorType() {
         return this.administratorType;
     }
 
@@ -45,7 +46,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     @Import(name="login", required=true)
       private final Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
 
@@ -56,7 +57,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -78,7 +79,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     @Import(name="sid", required=true)
       private final Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
 
@@ -89,8 +90,8 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public ServerAzureADAdministratorArgs(
@@ -111,13 +112,13 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     }
 
     private ServerAzureADAdministratorArgs() {
-        this.administratorName = Output.empty();
-        this.administratorType = Output.empty();
-        this.login = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.sid = Output.empty();
-        this.tenantId = Output.empty();
+        this.administratorName = Codegen.empty();
+        this.administratorType = Codegen.empty();
+        this.login = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.sid = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder administratorName(@Nullable String administratorName) {
-            this.administratorName = Output.ofNullable(administratorName);
+            this.administratorName = Codegen.ofNullable(administratorName);
             return this;
         }
         public Builder administratorType(Output<Either<String,AdministratorType>> administratorType) {
@@ -205,7 +206,7 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public ServerAzureADAdministratorArgs build() {
             return new ServerAzureADAdministratorArgs(administratorName, administratorType, login, resourceGroupName, serverName, sid, tenantId);

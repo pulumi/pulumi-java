@@ -26,13 +26,13 @@ public final class ConnectorProfileOAuthProperties {
         this.tokenUrl = tokenUrl;
     }
 
-    public Optional<String> getAuthCodeUrl() {
+    public Optional<String> authCodeUrl() {
         return Optional.ofNullable(this.authCodeUrl);
     }
-    public List<String> getOAuthScopes() {
+    public List<String> oAuthScopes() {
         return this.oAuthScopes == null ? List.of() : this.oAuthScopes;
     }
-    public Optional<String> getTokenUrl() {
+    public Optional<String> tokenUrl() {
         return Optional.ofNullable(this.tokenUrl);
     }
 

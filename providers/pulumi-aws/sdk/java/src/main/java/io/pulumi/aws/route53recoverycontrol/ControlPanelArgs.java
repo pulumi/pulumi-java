@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoverycontrol;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterArn", required=true)
       private final Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
 
@@ -32,8 +33,8 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ControlPanelArgs(
@@ -44,8 +45,8 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControlPanelArgs() {
-        this.clusterArn = Output.empty();
-        this.name = Output.empty();
+        this.clusterArn = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ControlPanelArgs build() {
             return new ControlPanelArgs(clusterArn, name);

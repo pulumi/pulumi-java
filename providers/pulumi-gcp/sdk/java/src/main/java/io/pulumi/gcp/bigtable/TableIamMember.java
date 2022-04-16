@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigtable;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.TableIamMemberArgs;
 import io.pulumi.gcp.bigtable.inputs.TableIamMemberState;
@@ -56,7 +57,7 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=TableIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TableIamMemberCondition> condition;
 
-    public Output</* @Nullable */ TableIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ TableIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -70,7 +71,7 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the tables's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -84,13 +85,13 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
      * @return The name or relative resource id of the instance that owns the table.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -106,7 +107,7 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
      * is not provided, this provider will use the provider default.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -124,7 +125,7 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -138,7 +139,7 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
      * @return The name or relative resource id of the table to manage IAM policies for.
      * 
      */
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table;
     }
 
@@ -164,7 +165,7 @@ public class TableIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableIamMember(String name, TableIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigtable/tableIamMember:TableIamMember", name, args == null ? TableIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigtable/tableIamMember:TableIamMember", name, args == null ? TableIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TableIamMember(String name, Output<String> id, @Nullable TableIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

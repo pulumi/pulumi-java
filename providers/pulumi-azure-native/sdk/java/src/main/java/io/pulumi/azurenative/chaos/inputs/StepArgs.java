@@ -6,6 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.inputs.BranchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branches", required=true)
       private final Output<List<BranchArgs>> branches;
 
-    public Output<List<BranchArgs>> getBranches() {
+    public Output<List<BranchArgs>> branches() {
         return this.branches;
     }
 
@@ -37,7 +38,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,8 +50,8 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StepArgs() {
-        this.branches = Output.empty();
-        this.name = Output.empty();
+        this.branches = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

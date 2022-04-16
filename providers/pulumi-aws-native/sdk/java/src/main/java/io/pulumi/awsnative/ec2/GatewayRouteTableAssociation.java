@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * @return The route table association ID.
      * 
      */
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -42,7 +43,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * @return The ID of the gateway.
      * 
      */
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -56,7 +57,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * @return The ID of the route table.
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -82,7 +83,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayRouteTableAssociation(String name, GatewayRouteTableAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:GatewayRouteTableAssociation", name, args == null ? GatewayRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:GatewayRouteTableAssociation", name, args == null ? GatewayRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GatewayRouteTableAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.fms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class PolicyResourceTagArgs extends io.pulumi.resources.ResourceArg
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public PolicyResourceTagArgs(
@@ -40,8 +41,8 @@ public final class PolicyResourceTagArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PolicyResourceTagArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PolicyResourceTagArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public PolicyResourceTagArgs build() {
             return new PolicyResourceTagArgs(key, value);

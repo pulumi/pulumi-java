@@ -6,6 +6,7 @@ package io.pulumi.gcp.monitoring;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.SloArgs;
 import io.pulumi.gcp.monitoring.inputs.SloState;
@@ -69,7 +70,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SloBasicSli> getBasicSli() {
+    public Output</* @Nullable */ SloBasicSli> basicSli() {
         return this.basicSli;
     }
     /**
@@ -87,7 +88,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
      * 
      */
-    public Output</* @Nullable */ String> getCalendarPeriod() {
+    public Output</* @Nullable */ String> calendarPeriod() {
         return this.calendarPeriod;
     }
     /**
@@ -101,7 +102,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * @return Name used for UI elements listing this SLO.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -117,7 +118,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * to be met. 0 < goal <= 0.999
      * 
      */
-    public Output<Double> getGoal() {
+    public Output<Double> goal() {
         return this.goal;
     }
     /**
@@ -133,7 +134,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -149,7 +150,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -177,7 +178,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SloRequestBasedSli> getRequestBasedSli() {
+    public Output</* @Nullable */ SloRequestBasedSli> requestBasedSli() {
         return this.requestBasedSli;
     }
     /**
@@ -193,7 +194,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Must be between 1 to 30 days, inclusive.
      * 
      */
-    public Output</* @Nullable */ Integer> getRollingPeriodDays() {
+    public Output</* @Nullable */ Integer> rollingPeriodDays() {
         return this.rollingPeriodDays;
     }
     /**
@@ -207,7 +208,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * @return ID of the service to which this SLO belongs.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -221,7 +222,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * @return The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
      * 
      */
-    public Output<String> getSloId() {
+    public Output<String> sloId() {
         return this.sloId;
     }
     /**
@@ -251,7 +252,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SloWindowsBasedSli> getWindowsBasedSli() {
+    public Output</* @Nullable */ SloWindowsBasedSli> windowsBasedSli() {
         return this.windowsBasedSli;
     }
 
@@ -277,7 +278,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Slo(String name, SloArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:monitoring/slo:Slo", name, args == null ? SloArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:monitoring/slo:Slo", name, args == null ? SloArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Slo(String name, Output<String> id, @Nullable SloState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

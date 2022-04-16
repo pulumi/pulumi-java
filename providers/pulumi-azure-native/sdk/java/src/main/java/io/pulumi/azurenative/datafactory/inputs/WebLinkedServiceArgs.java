@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebBasicAuthenticationArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebClientCertificateAuthenticationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,8 +34,8 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -89,7 +90,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="typeProperties", required=true)
       private final Output<Object> typeProperties;
 
-    public Output<Object> getTypeProperties() {
+    public Output<Object> typeProperties() {
         return this.typeProperties;
     }
 
@@ -109,12 +110,12 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WebLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.parameters = Output.empty();
-        this.type = Output.empty();
-        this.typeProperties = Output.empty();
+        this.annotations = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -163,7 +164,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -171,7 +172,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -179,7 +180,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder type(Output<String> type) {

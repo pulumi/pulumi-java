@@ -5,6 +5,7 @@ package io.pulumi.aws.inspector;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupArn")
       private final @Nullable Output<String> resourceGroupArn;
 
-    public Output<String> getResourceGroupArn() {
-        return this.resourceGroupArn == null ? Output.empty() : this.resourceGroupArn;
+    public Output<String> resourceGroupArn() {
+        return this.resourceGroupArn == null ? Codegen.empty() : this.resourceGroupArn;
     }
 
     public AssessmentTargetArgs(
@@ -44,8 +45,8 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AssessmentTargetArgs() {
-        this.name = Output.empty();
-        this.resourceGroupArn = Output.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupArn(@Nullable Output<String> resourceGroupArn) {
@@ -83,7 +84,7 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
-            this.resourceGroupArn = Output.ofNullable(resourceGroupArn);
+            this.resourceGroupArn = Codegen.ofNullable(resourceGroupArn);
             return this;
         }        public AssessmentTargetArgs build() {
             return new AssessmentTargetArgs(name, resourceGroupArn);

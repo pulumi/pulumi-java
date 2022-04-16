@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
-        return this.jobId == null ? Output.empty() : this.jobId;
+    public Output<String> jobId() {
+        return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public JobReferenceArgs(
@@ -48,8 +49,8 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobReferenceArgs() {
-        this.jobId = Output.empty();
-        this.project = Output.empty();
+        this.jobId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Output.ofNullable(jobId);
+            this.jobId = Codegen.ofNullable(jobId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -87,7 +88,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public JobReferenceArgs build() {
             return new JobReferenceArgs(jobId, project);

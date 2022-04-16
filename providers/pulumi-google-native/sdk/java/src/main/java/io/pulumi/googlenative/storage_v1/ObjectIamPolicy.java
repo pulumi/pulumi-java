@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storage_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.ObjectIamPolicyArgs;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectIamPolicyBindingsItemResponse;
@@ -33,7 +34,7 @@ public class ObjectIamPolicy extends io.pulumi.resources.CustomResource {
      * @return An association between a role, which comes with a set of permissions, and members who may assume that role.
      * 
      */
-    public Output<List<ObjectIamPolicyBindingsItemResponse>> getBindings() {
+    public Output<List<ObjectIamPolicyBindingsItemResponse>> bindings() {
         return this.bindings;
     }
     /**
@@ -47,7 +48,7 @@ public class ObjectIamPolicy extends io.pulumi.resources.CustomResource {
      * @return HTTP 1.1  Entity tag for the policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -61,7 +62,7 @@ public class ObjectIamPolicy extends io.pulumi.resources.CustomResource {
      * @return The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -75,7 +76,7 @@ public class ObjectIamPolicy extends io.pulumi.resources.CustomResource {
      * @return The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -89,7 +90,7 @@ public class ObjectIamPolicy extends io.pulumi.resources.CustomResource {
      * @return The IAM policy format version.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 
@@ -115,7 +116,7 @@ public class ObjectIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectIamPolicy(String name, ObjectIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storage/v1:ObjectIamPolicy", name, args == null ? ObjectIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storage/v1:ObjectIamPolicy", name, args == null ? ObjectIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

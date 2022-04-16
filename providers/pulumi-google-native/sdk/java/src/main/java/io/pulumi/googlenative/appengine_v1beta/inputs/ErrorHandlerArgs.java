@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1beta.enums.ErrorHandlerErrorCode;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorCode")
       private final @Nullable Output<ErrorHandlerErrorCode> errorCode;
 
-    public Output<ErrorHandlerErrorCode> getErrorCode() {
-        return this.errorCode == null ? Output.empty() : this.errorCode;
+    public Output<ErrorHandlerErrorCode> errorCode() {
+        return this.errorCode == null ? Codegen.empty() : this.errorCode;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
-    public Output<String> getMimeType() {
-        return this.mimeType == null ? Output.empty() : this.mimeType;
+    public Output<String> mimeType() {
+        return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticFile")
       private final @Nullable Output<String> staticFile;
 
-    public Output<String> getStaticFile() {
-        return this.staticFile == null ? Output.empty() : this.staticFile;
+    public Output<String> staticFile() {
+        return this.staticFile == null ? Codegen.empty() : this.staticFile;
     }
 
     public ErrorHandlerArgs(
@@ -62,9 +63,9 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ErrorHandlerArgs() {
-        this.errorCode = Output.empty();
-        this.mimeType = Output.empty();
-        this.staticFile = Output.empty();
+        this.errorCode = Codegen.empty();
+        this.mimeType = Codegen.empty();
+        this.staticFile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errorCode(@Nullable ErrorHandlerErrorCode errorCode) {
-            this.errorCode = Output.ofNullable(errorCode);
+            this.errorCode = Codegen.ofNullable(errorCode);
             return this;
         }
         public Builder mimeType(@Nullable Output<String> mimeType) {
@@ -104,7 +105,7 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Output.ofNullable(mimeType);
+            this.mimeType = Codegen.ofNullable(mimeType);
             return this;
         }
         public Builder staticFile(@Nullable Output<String> staticFile) {
@@ -112,7 +113,7 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticFile(@Nullable String staticFile) {
-            this.staticFile = Output.ofNullable(staticFile);
+            this.staticFile = Codegen.ofNullable(staticFile);
             return this;
         }        public ErrorHandlerArgs build() {
             return new ErrorHandlerArgs(errorCode, mimeType, staticFile);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources
      * @return A description of the scope connection.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -70,7 +71,7 @@ public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources
      * @return Network Manager Id.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkManagerId() {
+    public Output</* @Nullable */ String> networkManagerId() {
         return this.networkManagerId;
     }
     /**
@@ -98,7 +99,7 @@ public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -112,7 +113,7 @@ public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +139,7 @@ public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagementGroupNetworkManagerConnection(String name, ManagementGroupNetworkManagerConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ManagementGroupNetworkManagerConnection", name, args == null ? ManagementGroupNetworkManagerConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ManagementGroupNetworkManagerConnection", name, args == null ? ManagementGroupNetworkManagerConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagementGroupNetworkManagerConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

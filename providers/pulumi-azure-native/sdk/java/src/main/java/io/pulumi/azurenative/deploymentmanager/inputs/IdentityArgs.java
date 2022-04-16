@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityIds", required=true)
       private final Output<List<String>> identityIds;
 
-    public Output<List<String>> getIdentityIds() {
+    public Output<List<String>> identityIds() {
         return this.identityIds;
     }
 
@@ -36,7 +37,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -48,8 +49,8 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentityArgs() {
-        this.identityIds = Output.empty();
-        this.type = Output.empty();
+        this.identityIds = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

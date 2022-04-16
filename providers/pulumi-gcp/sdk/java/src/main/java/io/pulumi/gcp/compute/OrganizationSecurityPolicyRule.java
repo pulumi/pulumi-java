@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.OrganizationSecurityPolicyRuleArgs;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleState;
@@ -51,7 +52,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * "allow", "deny" or "goto_next".
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -65,7 +66,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * @return A description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -81,7 +82,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * Possible values are `INGRESS` and `EGRESS`.
      * 
      */
-    public Output</* @Nullable */ String> getDirection() {
+    public Output</* @Nullable */ String> direction() {
         return this.direction;
     }
     /**
@@ -99,7 +100,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * configured export destination in Stackdriver.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableLogging() {
+    public Output</* @Nullable */ Boolean> enableLogging() {
         return this.enableLogging;
     }
     /**
@@ -115,7 +116,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * Structure is documented below.
      * 
      */
-    public Output<OrganizationSecurityPolicyRuleMatch> getMatch() {
+    public Output<OrganizationSecurityPolicyRuleMatch> match() {
         return this.match;
     }
     /**
@@ -129,7 +130,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * @return The ID of the OrganizationSecurityPolicy this rule applies to.
      * 
      */
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
     /**
@@ -143,7 +144,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * @return If set to true, the specified action is not enforced.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPreview() {
+    public Output</* @Nullable */ Boolean> preview() {
         return this.preview;
     }
     /**
@@ -161,7 +162,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * highest priority and 2147483647 is the lowest prority.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -181,7 +182,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * within the organization will receive the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetResources() {
+    public Output</* @Nullable */ List<String>> targetResources() {
         return this.targetResources;
     }
     /**
@@ -197,7 +198,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * instances that are applied with this rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetServiceAccounts() {
+    public Output</* @Nullable */ List<String>> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }
 
@@ -223,7 +224,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationSecurityPolicyRule(String name, OrganizationSecurityPolicyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule", name, args == null ? OrganizationSecurityPolicyRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/organizationSecurityPolicyRule:OrganizationSecurityPolicyRule", name, args == null ? OrganizationSecurityPolicyRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationSecurityPolicyRule(String name, Output<String> id, @Nullable OrganizationSecurityPolicyRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.ExperimentEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,State>> enabledState;
 
-    public Output<Either<String,State>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+    public Output<Either<String,State>> enabledState() {
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointA")
       private final @Nullable Output<ExperimentEndpointArgs> endpointA;
 
-    public Output<ExperimentEndpointArgs> getEndpointA() {
-        return this.endpointA == null ? Output.empty() : this.endpointA;
+    public Output<ExperimentEndpointArgs> endpointA() {
+        return this.endpointA == null ? Codegen.empty() : this.endpointA;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointB")
       private final @Nullable Output<ExperimentEndpointArgs> endpointB;
 
-    public Output<ExperimentEndpointArgs> getEndpointB() {
-        return this.endpointB == null ? Output.empty() : this.endpointB;
+    public Output<ExperimentEndpointArgs> endpointB() {
+        return this.endpointB == null ? Codegen.empty() : this.endpointB;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
-    public Output<String> getExperimentName() {
-        return this.experimentName == null ? Output.empty() : this.experimentName;
+    public Output<String> experimentName() {
+        return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -102,7 +103,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,8 +114,8 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ExperimentArgs(
@@ -139,15 +140,15 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExperimentArgs() {
-        this.description = Output.empty();
-        this.enabledState = Output.empty();
-        this.endpointA = Output.empty();
-        this.endpointB = Output.empty();
-        this.experimentName = Output.empty();
-        this.location = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.endpointA = Codegen.empty();
+        this.endpointB = Codegen.empty();
+        this.experimentName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabledState(@Nullable Output<Either<String,State>> enabledState) {
@@ -199,7 +200,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,State> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder endpointA(@Nullable Output<ExperimentEndpointArgs> endpointA) {
@@ -207,7 +208,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointA(@Nullable ExperimentEndpointArgs endpointA) {
-            this.endpointA = Output.ofNullable(endpointA);
+            this.endpointA = Codegen.ofNullable(endpointA);
             return this;
         }
         public Builder endpointB(@Nullable Output<ExperimentEndpointArgs> endpointB) {
@@ -215,7 +216,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointB(@Nullable ExperimentEndpointArgs endpointB) {
-            this.endpointB = Output.ofNullable(endpointB);
+            this.endpointB = Codegen.ofNullable(endpointB);
             return this;
         }
         public Builder experimentName(@Nullable Output<String> experimentName) {
@@ -223,7 +224,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Output.ofNullable(experimentName);
+            this.experimentName = Codegen.ofNullable(experimentName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -231,7 +232,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder profileName(Output<String> profileName) {
@@ -255,7 +256,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ExperimentArgs build() {
             return new ExperimentArgs(description, enabledState, endpointA, endpointB, experimentName, location, profileName, resourceGroupName, tags);

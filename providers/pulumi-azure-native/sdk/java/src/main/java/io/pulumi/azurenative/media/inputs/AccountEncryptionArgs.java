@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
+        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<Either<String,AccountEncryptionKeyType>> type;
 
-    public Output<Either<String,AccountEncryptionKeyType>> getType() {
+    public Output<Either<String,AccountEncryptionKeyType>> type() {
         return this.type;
     }
 
@@ -47,8 +48,8 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccountEncryptionArgs() {
-        this.keyVaultProperties = Output.empty();
-        this.type = Output.empty();
+        this.keyVaultProperties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
             return this;
         }
         public Builder type(Output<Either<String,AccountEncryptionKeyType>> type) {

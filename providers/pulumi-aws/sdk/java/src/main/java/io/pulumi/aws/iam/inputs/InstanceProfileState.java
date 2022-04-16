@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
-    public Output<String> getCreateDate() {
-        return this.createDate == null ? Output.empty() : this.createDate;
+    public Output<String> createDate() {
+        return this.createDate == null ? Codegen.empty() : this.createDate;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
-    public Output<String> getUniqueId() {
-        return this.uniqueId == null ? Output.empty() : this.uniqueId;
+    public Output<String> uniqueId() {
+        return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
     }
 
     public InstanceProfileState(
@@ -136,15 +137,15 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceProfileState() {
-        this.arn = Output.empty();
-        this.createDate = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.path = Output.empty();
-        this.role = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uniqueId = Output.empty();
+        this.arn = Codegen.empty();
+        this.createDate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.path = Codegen.empty();
+        this.role = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uniqueId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createDate(@Nullable Output<String> createDate) {
@@ -196,7 +197,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder createDate(@Nullable String createDate) {
-            this.createDate = Output.ofNullable(createDate);
+            this.createDate = Codegen.ofNullable(createDate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -204,7 +205,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -212,7 +213,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -220,7 +221,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -232,7 +233,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -240,7 +241,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
@@ -248,7 +249,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Output.ofNullable(uniqueId);
+            this.uniqueId = Codegen.ofNullable(uniqueId);
             return this;
         }        public InstanceProfileState build() {
             return new InstanceProfileState(arn, createDate, name, namePrefix, path, role, tags, tagsAll, uniqueId);

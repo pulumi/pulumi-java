@@ -22,7 +22,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="contactFlowId")
       private final @Nullable String contactFlowId;
 
-    public Optional<String> getContactFlowId() {
+    public Optional<String> contactFlowId() {
         return this.contactFlowId == null ? Optional.empty() : Optional.ofNullable(this.contactFlowId);
     }
 
@@ -33,7 +33,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -44,7 +44,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -55,7 +55,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -66,7 +66,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

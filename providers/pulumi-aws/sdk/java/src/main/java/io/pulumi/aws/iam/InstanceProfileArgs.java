@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public InstanceProfileArgs(
@@ -84,11 +85,11 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InstanceProfileArgs() {
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.path = Output.empty();
-        this.role = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.path = Codegen.empty();
+        this.role = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -132,7 +133,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -140,7 +141,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -152,7 +153,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public InstanceProfileArgs build() {
             return new InstanceProfileArgs(name, namePrefix, path, role, tags);

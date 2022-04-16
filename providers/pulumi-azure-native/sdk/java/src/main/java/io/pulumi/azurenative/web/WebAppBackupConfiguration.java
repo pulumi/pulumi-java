@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +42,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return Name of the backup.
      * 
      */
-    public Output</* @Nullable */ String> getBackupName() {
+    public Output</* @Nullable */ String> backupName() {
         return this.backupName;
     }
     /**
@@ -55,7 +56,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return Schedule for the backup if it is executed periodically.
      * 
      */
-    public Output</* @Nullable */ BackupScheduleResponse> getBackupSchedule() {
+    public Output</* @Nullable */ BackupScheduleResponse> backupSchedule() {
         return this.backupSchedule;
     }
     /**
@@ -69,7 +70,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return Databases included in the backup.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseBackupSettingResponse>> getDatabases() {
+    public Output</* @Nullable */ List<DatabaseBackupSettingResponse>> databases() {
         return this.databases;
     }
     /**
@@ -83,7 +84,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -97,7 +98,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -111,7 +112,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +126,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return SAS URL to the container.
      * 
      */
-    public Output<String> getStorageAccountUrl() {
+    public Output<String> storageAccountUrl() {
         return this.storageAccountUrl;
     }
     /**
@@ -139,7 +140,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -165,7 +166,7 @@ public class WebAppBackupConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppBackupConfiguration(String name, WebAppBackupConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppBackupConfiguration", name, args == null ? WebAppBackupConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppBackupConfiguration", name, args == null ? WebAppBackupConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppBackupConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

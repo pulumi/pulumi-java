@@ -23,7 +23,7 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -34,7 +34,7 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fingerprint", required=true)
       private final String fingerprint;
 
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
 
@@ -45,7 +45,7 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

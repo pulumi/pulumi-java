@@ -6,6 +6,7 @@ package io.pulumi.aws.acmpca.inputs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
     @Import(name="keyAlgorithm", required=true)
       private final Output<String> keyAlgorithm;
 
-    public Output<String> getKeyAlgorithm() {
+    public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
 
@@ -32,7 +33,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
     @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
-    public Output<String> getSigningAlgorithm() {
+    public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
 
@@ -43,7 +44,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
     @Import(name="subject", required=true)
       private final Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs> subject;
 
-    public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs> getSubject() {
+    public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs> subject() {
         return this.subject;
     }
 
@@ -57,9 +58,9 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
     }
 
     private CertificateAuthorityCertificateAuthorityConfigurationArgs() {
-        this.keyAlgorithm = Output.empty();
-        this.signingAlgorithm = Output.empty();
-        this.subject = Output.empty();
+        this.keyAlgorithm = Codegen.empty();
+        this.signingAlgorithm = Codegen.empty();
+        this.subject = Codegen.empty();
     }
 
     public static Builder builder() {

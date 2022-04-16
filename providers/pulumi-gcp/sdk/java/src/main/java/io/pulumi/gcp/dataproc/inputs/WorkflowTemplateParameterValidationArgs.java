@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationRegexArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationValuesArgs;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
     @Import(name="regex")
       private final @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex;
 
-    public Output<WorkflowTemplateParameterValidationRegexArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+    public Output<WorkflowTemplateParameterValidationRegexArgs> regex() {
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
     @Import(name="values")
       private final @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values;
 
-    public Output<WorkflowTemplateParameterValidationValuesArgs> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<WorkflowTemplateParameterValidationValuesArgs> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public WorkflowTemplateParameterValidationArgs(
@@ -45,8 +46,8 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
     }
 
     private WorkflowTemplateParameterValidationArgs() {
-        this.regex = Output.empty();
-        this.values = Output.empty();
+        this.regex = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
             return this;
         }
         public Builder regex(@Nullable WorkflowTemplateParameterValidationRegexArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }
         public Builder values(@Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values) {
@@ -84,7 +85,7 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
             return this;
         }
         public Builder values(@Nullable WorkflowTemplateParameterValidationValuesArgs values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }        public WorkflowTemplateParameterValidationArgs build() {
             return new WorkflowTemplateParameterValidationArgs(regex, values);

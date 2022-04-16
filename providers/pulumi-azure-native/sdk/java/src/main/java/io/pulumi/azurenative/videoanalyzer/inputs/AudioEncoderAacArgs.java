@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bitrateKbps")
       private final @Nullable Output<String> bitrateKbps;
 
-    public Output<String> getBitrateKbps() {
-        return this.bitrateKbps == null ? Output.empty() : this.bitrateKbps;
+    public Output<String> bitrateKbps() {
+        return this.bitrateKbps == null ? Codegen.empty() : this.bitrateKbps;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -49,8 +50,8 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AudioEncoderAacArgs() {
-        this.bitrateKbps = Output.empty();
-        this.type = Output.empty();
+        this.bitrateKbps = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = Output.ofNullable(bitrateKbps);
+            this.bitrateKbps = Codegen.ofNullable(bitrateKbps);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyDdosProtectionConfigDdosProtection;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
     @Import(name="ddosProtection")
       private final @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
 
-    public Output<SecurityPolicyDdosProtectionConfigDdosProtection> getDdosProtection() {
-        return this.ddosProtection == null ? Output.empty() : this.ddosProtection;
+    public Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection() {
+        return this.ddosProtection == null ? Codegen.empty() : this.ddosProtection;
     }
 
     public SecurityPolicyDdosProtectionConfigArgs(@Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
@@ -26,7 +27,7 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
     }
 
     private SecurityPolicyDdosProtectionConfigArgs() {
-        this.ddosProtection = Output.empty();
+        this.ddosProtection = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder ddosProtection(@Nullable SecurityPolicyDdosProtectionConfigDdosProtection ddosProtection) {
-            this.ddosProtection = Output.ofNullable(ddosProtection);
+            this.ddosProtection = Codegen.ofNullable(ddosProtection);
             return this;
         }        public SecurityPolicyDdosProtectionConfigArgs build() {
             return new SecurityPolicyDdosProtectionConfigArgs(ddosProtection);

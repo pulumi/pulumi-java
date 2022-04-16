@@ -33,14 +33,14 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptions {
      * The value of the `X-Frame-Options` HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
      * 
     */
-    public String getFrameOption() {
+    public String frameOption() {
         return this.frameOption;
     }
     /**
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
     */
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

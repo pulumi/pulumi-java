@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.inputs.FeedbackPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="defaultTtlAsIso8601")
       private final @Nullable Output<String> defaultTtlAsIso8601;
 
-    public Output<String> getDefaultTtlAsIso8601() {
-        return this.defaultTtlAsIso8601 == null ? Output.empty() : this.defaultTtlAsIso8601;
+    public Output<String> defaultTtlAsIso8601() {
+        return this.defaultTtlAsIso8601 == null ? Codegen.empty() : this.defaultTtlAsIso8601;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="feedback")
       private final @Nullable Output<FeedbackPropertiesArgs> feedback;
 
-    public Output<FeedbackPropertiesArgs> getFeedback() {
-        return this.feedback == null ? Output.empty() : this.feedback;
+    public Output<FeedbackPropertiesArgs> feedback() {
+        return this.feedback == null ? Codegen.empty() : this.feedback;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> getMaxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Output.empty() : this.maxDeliveryCount;
+    public Output<Integer> maxDeliveryCount() {
+        return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
     }
 
     public CloudToDevicePropertiesArgs(
@@ -63,9 +64,9 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private CloudToDevicePropertiesArgs() {
-        this.defaultTtlAsIso8601 = Output.empty();
-        this.feedback = Output.empty();
-        this.maxDeliveryCount = Output.empty();
+        this.defaultTtlAsIso8601 = Codegen.empty();
+        this.feedback = Codegen.empty();
+        this.maxDeliveryCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder defaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
-            this.defaultTtlAsIso8601 = Output.ofNullable(defaultTtlAsIso8601);
+            this.defaultTtlAsIso8601 = Codegen.ofNullable(defaultTtlAsIso8601);
             return this;
         }
         public Builder feedback(@Nullable Output<FeedbackPropertiesArgs> feedback) {
@@ -105,7 +106,7 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder feedback(@Nullable FeedbackPropertiesArgs feedback) {
-            this.feedback = Output.ofNullable(feedback);
+            this.feedback = Codegen.ofNullable(feedback);
             return this;
         }
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
@@ -113,7 +114,7 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = Output.ofNullable(maxDeliveryCount);
+            this.maxDeliveryCount = Codegen.ofNullable(maxDeliveryCount);
             return this;
         }        public CloudToDevicePropertiesArgs build() {
             return new CloudToDevicePropertiesArgs(defaultTtlAsIso8601, feedback, maxDeliveryCount);

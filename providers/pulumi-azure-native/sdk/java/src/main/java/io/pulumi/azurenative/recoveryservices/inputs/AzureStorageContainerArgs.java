@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
+        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
-    public Output<String> getContainerType() {
+    public Output<String> containerType() {
         return this.containerType;
     }
 
@@ -54,8 +55,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
-    public Output<String> getHealthStatus() {
-        return this.healthStatus == null ? Output.empty() : this.healthStatus;
+    public Output<String> healthStatus() {
+        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="protectedItemCount")
       private final @Nullable Output<Double> protectedItemCount;
 
-    public Output<Double> getProtectedItemCount() {
-        return this.protectedItemCount == null ? Output.empty() : this.protectedItemCount;
+    public Output<Double> protectedItemCount() {
+        return this.protectedItemCount == null ? Codegen.empty() : this.protectedItemCount;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
-    public Output<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
+    public Output<String> registrationStatus() {
+        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
-        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
+    public Output<String> resourceGroup() {
+        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
+    public Output<String> sourceResourceId() {
+        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="storageAccountVersion")
       private final @Nullable Output<String> storageAccountVersion;
 
-    public Output<String> getStorageAccountVersion() {
-        return this.storageAccountVersion == null ? Output.empty() : this.storageAccountVersion;
+    public Output<String> storageAccountVersion() {
+        return this.storageAccountVersion == null ? Codegen.empty() : this.storageAccountVersion;
     }
 
     public AzureStorageContainerArgs(
@@ -146,15 +147,15 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureStorageContainerArgs() {
-        this.backupManagementType = Output.empty();
-        this.containerType = Output.empty();
-        this.friendlyName = Output.empty();
-        this.healthStatus = Output.empty();
-        this.protectedItemCount = Output.empty();
-        this.registrationStatus = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.sourceResourceId = Output.empty();
-        this.storageAccountVersion = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.containerType = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.healthStatus = Codegen.empty();
+        this.protectedItemCount = Codegen.empty();
+        this.registrationStatus = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.sourceResourceId = Codegen.empty();
+        this.storageAccountVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Output.ofNullable(backupManagementType);
+            this.backupManagementType = Codegen.ofNullable(backupManagementType);
             return this;
         }
         public Builder containerType(Output<String> containerType) {
@@ -214,7 +215,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
@@ -222,7 +223,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Output.ofNullable(healthStatus);
+            this.healthStatus = Codegen.ofNullable(healthStatus);
             return this;
         }
         public Builder protectedItemCount(@Nullable Output<Double> protectedItemCount) {
@@ -230,7 +231,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = Output.ofNullable(protectedItemCount);
+            this.protectedItemCount = Codegen.ofNullable(protectedItemCount);
             return this;
         }
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
@@ -238,7 +239,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Output.ofNullable(registrationStatus);
+            this.registrationStatus = Codegen.ofNullable(registrationStatus);
             return this;
         }
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
@@ -246,7 +247,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Output.ofNullable(resourceGroup);
+            this.resourceGroup = Codegen.ofNullable(resourceGroup);
             return this;
         }
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
@@ -254,7 +255,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Output.ofNullable(sourceResourceId);
+            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
             return this;
         }
         public Builder storageAccountVersion(@Nullable Output<String> storageAccountVersion) {
@@ -262,7 +263,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder storageAccountVersion(@Nullable String storageAccountVersion) {
-            this.storageAccountVersion = Output.ofNullable(storageAccountVersion);
+            this.storageAccountVersion = Codegen.ofNullable(storageAccountVersion);
             return this;
         }        public AzureStorageContainerArgs build() {
             return new AzureStorageContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, protectedItemCount, registrationStatus, resourceGroup, sourceResourceId, storageAccountVersion);

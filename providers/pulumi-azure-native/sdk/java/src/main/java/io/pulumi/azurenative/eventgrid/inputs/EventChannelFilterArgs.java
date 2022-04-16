@@ -24,6 +24,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StringNotEndsWithAdvancedFilterArg
 import io.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;
@@ -46,8 +47,8 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="advancedFilters")
       private final @Nullable Output<List<Object>> advancedFilters;
 
-    public Output<List<Object>> getAdvancedFilters() {
-        return this.advancedFilters == null ? Output.empty() : this.advancedFilters;
+    public Output<List<Object>> advancedFilters() {
+        return this.advancedFilters == null ? Codegen.empty() : this.advancedFilters;
     }
 
     /**
@@ -57,20 +58,20 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableAdvancedFilteringOnArrays")
       private final @Nullable Output<Boolean> enableAdvancedFilteringOnArrays;
 
-    public Output<Boolean> getEnableAdvancedFilteringOnArrays() {
-        return this.enableAdvancedFilteringOnArrays == null ? Output.empty() : this.enableAdvancedFilteringOnArrays;
+    public Output<Boolean> enableAdvancedFilteringOnArrays() {
+        return this.enableAdvancedFilteringOnArrays == null ? Codegen.empty() : this.enableAdvancedFilteringOnArrays;
     }
 
     public EventChannelFilterArgs(
         @Nullable Output<List<Object>> advancedFilters,
         @Nullable Output<Boolean> enableAdvancedFilteringOnArrays) {
         this.advancedFilters = advancedFilters;
-        this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays == null ? Output.ofNullable(false) : enableAdvancedFilteringOnArrays;
+        this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays == null ? Codegen.ofNullable(false) : enableAdvancedFilteringOnArrays;
     }
 
     private EventChannelFilterArgs() {
-        this.advancedFilters = Output.empty();
-        this.enableAdvancedFilteringOnArrays = Output.empty();
+        this.advancedFilters = Codegen.empty();
+        this.enableAdvancedFilteringOnArrays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
-            this.advancedFilters = Output.ofNullable(advancedFilters);
+            this.advancedFilters = Codegen.ofNullable(advancedFilters);
             return this;
         }
         public Builder advancedFilters(Object... advancedFilters) {
@@ -111,7 +112,7 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
-            this.enableAdvancedFilteringOnArrays = Output.ofNullable(enableAdvancedFilteringOnArrays);
+            this.enableAdvancedFilteringOnArrays = Codegen.ofNullable(enableAdvancedFilteringOnArrays);
             return this;
         }        public EventChannelFilterArgs build() {
             return new EventChannelFilterArgs(advancedFilters, enableAdvancedFilteringOnArrays);

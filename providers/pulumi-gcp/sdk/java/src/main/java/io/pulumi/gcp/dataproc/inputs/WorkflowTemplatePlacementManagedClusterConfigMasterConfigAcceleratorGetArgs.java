@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
     @Import(name="acceleratorCount")
       private final @Nullable Output<Integer> acceleratorCount;
 
-    public Output<Integer> getAcceleratorCount() {
-        return this.acceleratorCount == null ? Output.empty() : this.acceleratorCount;
+    public Output<Integer> acceleratorCount() {
+        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
+    public Output<String> acceleratorType() {
+        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs(
@@ -45,8 +46,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs() {
-        this.acceleratorCount = Output.empty();
-        this.acceleratorType = Output.empty();
+        this.acceleratorCount = Codegen.empty();
+        this.acceleratorType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
             return this;
         }
         public Builder acceleratorCount(@Nullable Integer acceleratorCount) {
-            this.acceleratorCount = Output.ofNullable(acceleratorCount);
+            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
             return this;
         }
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
@@ -84,7 +85,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
             return this;
         }
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Output.ofNullable(acceleratorType);
+            this.acceleratorType = Codegen.ofNullable(acceleratorType);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs(acceleratorCount, acceleratorType);

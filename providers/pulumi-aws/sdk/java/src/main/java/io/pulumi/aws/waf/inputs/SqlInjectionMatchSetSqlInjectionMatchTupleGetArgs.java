@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs extends io.
     @Import(name="fieldToMatch", required=true)
       private final Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -36,7 +37,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs extends io.
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
@@ -48,8 +49,8 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs extends io.
     }
 
     private SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs() {
-        this.fieldToMatch = Output.empty();
-        this.textTransformation = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformation = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="expireAfterSeconds")
       private final @Nullable Output<Integer> expireAfterSeconds;
 
-    public Output<Integer> getExpireAfterSeconds() {
-        return this.expireAfterSeconds == null ? Output.empty() : this.expireAfterSeconds;
+    public Output<Integer> expireAfterSeconds() {
+        return this.expireAfterSeconds == null ? Codegen.empty() : this.expireAfterSeconds;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="unique")
       private final @Nullable Output<Boolean> unique;
 
-    public Output<Boolean> getUnique() {
-        return this.unique == null ? Output.empty() : this.unique;
+    public Output<Boolean> unique() {
+        return this.unique == null ? Codegen.empty() : this.unique;
     }
 
     public MongoIndexOptionsArgs(
@@ -49,8 +50,8 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MongoIndexOptionsArgs() {
-        this.expireAfterSeconds = Output.empty();
-        this.unique = Output.empty();
+        this.expireAfterSeconds = Codegen.empty();
+        this.unique = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder expireAfterSeconds(@Nullable Integer expireAfterSeconds) {
-            this.expireAfterSeconds = Output.ofNullable(expireAfterSeconds);
+            this.expireAfterSeconds = Codegen.ofNullable(expireAfterSeconds);
             return this;
         }
         public Builder unique(@Nullable Output<Boolean> unique) {
@@ -88,7 +89,7 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder unique(@Nullable Boolean unique) {
-            this.unique = Output.ofNullable(unique);
+            this.unique = Codegen.ofNullable(unique);
             return this;
         }        public MongoIndexOptionsArgs build() {
             return new MongoIndexOptionsArgs(expireAfterSeconds, unique);

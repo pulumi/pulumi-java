@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -65,15 +66,15 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortName", required=true)
       private final Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+    public Output<String> validateOnly() {
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public TagValueArgs(
@@ -92,12 +93,12 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagValueArgs() {
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.shortName = Output.empty();
-        this.validateOnly = Output.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.shortName = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -143,7 +144,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -151,7 +152,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -159,7 +160,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder shortName(Output<String> shortName) {
@@ -175,7 +176,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public TagValueArgs build() {
             return new TagValueArgs(description, etag, name, parent, shortName, validateOnly);

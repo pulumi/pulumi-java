@@ -35,20 +35,20 @@ public final class MonitoringScheduleConfig {
         this.scheduleConfig = scheduleConfig;
     }
 
-    public Optional<MonitoringScheduleMonitoringJobDefinition> getMonitoringJobDefinition() {
+    public Optional<MonitoringScheduleMonitoringJobDefinition> monitoringJobDefinition() {
         return Optional.ofNullable(this.monitoringJobDefinition);
     }
     /**
      * Name of the job definition
      * 
     */
-    public Optional<String> getMonitoringJobDefinitionName() {
+    public Optional<String> monitoringJobDefinitionName() {
         return Optional.ofNullable(this.monitoringJobDefinitionName);
     }
-    public Optional<MonitoringScheduleMonitoringType> getMonitoringType() {
+    public Optional<MonitoringScheduleMonitoringType> monitoringType() {
         return Optional.ofNullable(this.monitoringType);
     }
-    public Optional<MonitoringScheduleScheduleConfig> getScheduleConfig() {
+    public Optional<MonitoringScheduleScheduleConfig> scheduleConfig() {
         return Optional.ofNullable(this.scheduleConfig);
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.ProviderRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     @Import(name="properties")
       private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
-    public Output<ProviderRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ProviderRegistrationPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public DefaultRolloutSpecificationProviderRegistrationArgs(@Nullable Output<ProviderRegistrationPropertiesArgs> properties) {
@@ -26,7 +27,7 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     }
 
     private DefaultRolloutSpecificationProviderRegistrationArgs() {
-        this.properties = Output.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
             return this;
         }
         public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public DefaultRolloutSpecificationProviderRegistrationArgs build() {
             return new DefaultRolloutSpecificationProviderRegistrationArgs(properties);

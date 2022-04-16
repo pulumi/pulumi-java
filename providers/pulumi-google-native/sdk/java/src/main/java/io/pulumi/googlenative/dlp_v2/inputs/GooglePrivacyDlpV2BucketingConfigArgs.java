@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BucketArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
     @Import(name="buckets")
       private final @Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets;
 
-    public Output<List<GooglePrivacyDlpV2BucketArgs>> getBuckets() {
-        return this.buckets == null ? Output.empty() : this.buckets;
+    public Output<List<GooglePrivacyDlpV2BucketArgs>> buckets() {
+        return this.buckets == null ? Codegen.empty() : this.buckets;
     }
 
     public GooglePrivacyDlpV2BucketingConfigArgs(@Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets) {
@@ -35,7 +36,7 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
     }
 
     private GooglePrivacyDlpV2BucketingConfigArgs() {
-        this.buckets = Output.empty();
+        this.buckets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder buckets(@Nullable List<GooglePrivacyDlpV2BucketArgs> buckets) {
-            this.buckets = Output.ofNullable(buckets);
+            this.buckets = Codegen.ofNullable(buckets);
             return this;
         }
         public Builder buckets(GooglePrivacyDlpV2BucketArgs... buckets) {

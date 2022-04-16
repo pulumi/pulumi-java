@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTCPFlag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
     @Import(name="flags", required=true)
       private final Output<List<RuleGroupTCPFlag>> flags;
 
-    public Output<List<RuleGroupTCPFlag>> getFlags() {
+    public Output<List<RuleGroupTCPFlag>> flags() {
         return this.flags;
     }
 
     @Import(name="masks")
       private final @Nullable Output<List<RuleGroupTCPFlag>> masks;
 
-    public Output<List<RuleGroupTCPFlag>> getMasks() {
-        return this.masks == null ? Output.empty() : this.masks;
+    public Output<List<RuleGroupTCPFlag>> masks() {
+        return this.masks == null ? Codegen.empty() : this.masks;
     }
 
     public RuleGroupTCPFlagFieldArgs(
@@ -37,8 +38,8 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
     }
 
     private RuleGroupTCPFlagFieldArgs() {
-        this.flags = Output.empty();
-        this.masks = Output.empty();
+        this.flags = Codegen.empty();
+        this.masks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder masks(@Nullable List<RuleGroupTCPFlag> masks) {
-            this.masks = Output.ofNullable(masks);
+            this.masks = Codegen.ofNullable(masks);
             return this;
         }
         public Builder masks(RuleGroupTCPFlag... masks) {

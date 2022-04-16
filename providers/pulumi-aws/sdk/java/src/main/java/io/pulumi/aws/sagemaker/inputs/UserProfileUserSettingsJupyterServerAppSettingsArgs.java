@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsArgs extends i
     @Import(name="defaultResourceSpec", required=true)
       private final Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
-    public Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
@@ -34,8 +35,8 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsArgs extends i
     @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> getLifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Output.empty() : this.lifecycleConfigArns;
+    public Output<List<String>> lifecycleConfigArns() {
+        return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 
     public UserProfileUserSettingsJupyterServerAppSettingsArgs(
@@ -46,8 +47,8 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsArgs extends i
     }
 
     private UserProfileUserSettingsJupyterServerAppSettingsArgs() {
-        this.defaultResourceSpec = Output.empty();
-        this.lifecycleConfigArns = Output.empty();
+        this.defaultResourceSpec = Codegen.empty();
+        this.lifecycleConfigArns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsArgs extends i
             return this;
         }
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
+            this.lifecycleConfigArns = Codegen.ofNullable(lifecycleConfigArns);
             return this;
         }
         public Builder lifecycleConfigArns(String... lifecycleConfigArns) {

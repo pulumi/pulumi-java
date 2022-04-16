@@ -7,6 +7,7 @@ import io.pulumi.awsnative.athena.enums.DataCatalogType;
 import io.pulumi.awsnative.athena.inputs.DataCatalogTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
-    public Output<Object> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Object> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DataCatalogTagArgs>> tags;
 
-    public Output<List<DataCatalogTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DataCatalogTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<DataCatalogType> type;
 
-    public Output<DataCatalogType> getType() {
+    public Output<DataCatalogType> type() {
         return this.type;
     }
 
@@ -87,11 +88,11 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataCatalogArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -135,7 +136,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Object> parameters) {
@@ -143,7 +144,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder tags(@Nullable Output<List<DataCatalogTagArgs>> tags) {
@@ -151,7 +152,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DataCatalogTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DataCatalogTagArgs... tags) {

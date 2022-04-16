@@ -54,35 +54,35 @@ public final class GetStudyResult {
      * Time at which the study was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
      * 
     */
-    public String getInactiveReason() {
+    public String inactiveReason() {
         return this.inactiveReason;
     }
     /**
      * The name of a study.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The detailed state of a study.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Configuration of the study.
      * 
     */
-    public GoogleCloudMlV1__StudyConfigResponse getStudyConfig() {
+    public GoogleCloudMlV1__StudyConfigResponse studyConfig() {
         return this.studyConfig;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PermissionsDatabaseArgs extends io.pulumi.resources.ResourceA
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class PermissionsDatabaseArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,8 +45,8 @@ public final class PermissionsDatabaseArgs extends io.pulumi.resources.ResourceA
     }
 
     private PermissionsDatabaseArgs() {
-        this.catalogId = Output.empty();
-        this.name = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PermissionsDatabaseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder name(Output<String> name) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="alarmRoleArn")
       private final @Nullable Output<String> alarmRoleArn;
 
-    public Output<String> getAlarmRoleArn() {
-        return this.alarmRoleArn == null ? Output.empty() : this.alarmRoleArn;
+    public Output<String> alarmRoleArn() {
+        return this.alarmRoleArn == null ? Codegen.empty() : this.alarmRoleArn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="notificationLambdaArn")
       private final @Nullable Output<String> notificationLambdaArn;
 
-    public Output<String> getNotificationLambdaArn() {
-        return this.notificationLambdaArn == null ? Output.empty() : this.notificationLambdaArn;
+    public Output<String> notificationLambdaArn() {
+        return this.notificationLambdaArn == null ? Codegen.empty() : this.notificationLambdaArn;
     }
 
     public AlarmsPropertiesArgs(
@@ -48,8 +49,8 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AlarmsPropertiesArgs() {
-        this.alarmRoleArn = Output.empty();
-        this.notificationLambdaArn = Output.empty();
+        this.alarmRoleArn = Codegen.empty();
+        this.notificationLambdaArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
-            this.alarmRoleArn = Output.ofNullable(alarmRoleArn);
+            this.alarmRoleArn = Codegen.ofNullable(alarmRoleArn);
             return this;
         }
         public Builder notificationLambdaArn(@Nullable Output<String> notificationLambdaArn) {
@@ -87,7 +88,7 @@ public final class AlarmsPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder notificationLambdaArn(@Nullable String notificationLambdaArn) {
-            this.notificationLambdaArn = Output.ofNullable(notificationLambdaArn);
+            this.notificationLambdaArn = Codegen.ofNullable(notificationLambdaArn);
             return this;
         }        public AlarmsPropertiesArgs build() {
             return new AlarmsPropertiesArgs(alarmRoleArn, notificationLambdaArn);

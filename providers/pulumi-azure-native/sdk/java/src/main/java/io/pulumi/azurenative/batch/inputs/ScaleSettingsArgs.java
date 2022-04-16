@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.inputs.AutoScaleSettingsArgs;
 import io.pulumi.azurenative.batch.inputs.FixedScaleSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoScale")
       private final @Nullable Output<AutoScaleSettingsArgs> autoScale;
 
-    public Output<AutoScaleSettingsArgs> getAutoScale() {
-        return this.autoScale == null ? Output.empty() : this.autoScale;
+    public Output<AutoScaleSettingsArgs> autoScale() {
+        return this.autoScale == null ? Codegen.empty() : this.autoScale;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedScale")
       private final @Nullable Output<FixedScaleSettingsArgs> fixedScale;
 
-    public Output<FixedScaleSettingsArgs> getFixedScale() {
-        return this.fixedScale == null ? Output.empty() : this.fixedScale;
+    public Output<FixedScaleSettingsArgs> fixedScale() {
+        return this.fixedScale == null ? Codegen.empty() : this.fixedScale;
     }
 
     public ScaleSettingsArgs(
@@ -49,8 +50,8 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScaleSettingsArgs() {
-        this.autoScale = Output.empty();
-        this.fixedScale = Output.empty();
+        this.autoScale = Codegen.empty();
+        this.fixedScale = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoScale(@Nullable AutoScaleSettingsArgs autoScale) {
-            this.autoScale = Output.ofNullable(autoScale);
+            this.autoScale = Codegen.ofNullable(autoScale);
             return this;
         }
         public Builder fixedScale(@Nullable Output<FixedScaleSettingsArgs> fixedScale) {
@@ -88,7 +89,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedScale(@Nullable FixedScaleSettingsArgs fixedScale) {
-            this.fixedScale = Output.ofNullable(fixedScale);
+            this.fixedScale = Codegen.ofNullable(fixedScale);
             return this;
         }        public ScaleSettingsArgs build() {
             return new ScaleSettingsArgs(autoScale, fixedScale);

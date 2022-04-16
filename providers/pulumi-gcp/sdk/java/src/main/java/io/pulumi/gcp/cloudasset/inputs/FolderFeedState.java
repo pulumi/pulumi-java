@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudasset.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedConditionGetArgs;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigGetArgs;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetNames")
       private final @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> getAssetNames() {
-        return this.assetNames == null ? Output.empty() : this.assetNames;
+    public Output<List<String>> assetNames() {
+        return this.assetNames == null ? Codegen.empty() : this.assetNames;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetTypes")
       private final @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> getAssetTypes() {
-        return this.assetTypes == null ? Output.empty() : this.assetTypes;
+    public Output<List<String>> assetTypes() {
+        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingProject")
       private final @Nullable Output<String> billingProject;
 
-    public Output<String> getBillingProject() {
-        return this.billingProject == null ? Output.empty() : this.billingProject;
+    public Output<String> billingProject() {
+        return this.billingProject == null ? Codegen.empty() : this.billingProject;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<FolderFeedConditionGetArgs> condition;
 
-    public Output<FolderFeedConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<FolderFeedConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<String> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedId")
       private final @Nullable Output<String> feedId;
 
-    public Output<String> getFeedId() {
-        return this.feedId == null ? Output.empty() : this.feedId;
+    public Output<String> feedId() {
+        return this.feedId == null ? Codegen.empty() : this.feedId;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedOutputConfig")
       private final @Nullable Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig;
 
-    public Output<FolderFeedFeedOutputConfigGetArgs> getFeedOutputConfig() {
-        return this.feedOutputConfig == null ? Output.empty() : this.feedOutputConfig;
+    public Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig() {
+        return this.feedOutputConfig == null ? Codegen.empty() : this.feedOutputConfig;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
-    public Output<String> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+    public Output<String> folder() {
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderId")
       private final @Nullable Output<String> folderId;
 
-    public Output<String> getFolderId() {
-        return this.folderId == null ? Output.empty() : this.folderId;
+    public Output<String> folderId() {
+        return this.folderId == null ? Codegen.empty() : this.folderId;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FolderFeedState(
@@ -167,16 +168,16 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderFeedState() {
-        this.assetNames = Output.empty();
-        this.assetTypes = Output.empty();
-        this.billingProject = Output.empty();
-        this.condition = Output.empty();
-        this.contentType = Output.empty();
-        this.feedId = Output.empty();
-        this.feedOutputConfig = Output.empty();
-        this.folder = Output.empty();
-        this.folderId = Output.empty();
-        this.name = Output.empty();
+        this.assetNames = Codegen.empty();
+        this.assetTypes = Codegen.empty();
+        this.billingProject = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.feedId = Codegen.empty();
+        this.feedOutputConfig = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.folderId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Output.ofNullable(assetNames);
+            this.assetNames = Codegen.ofNullable(assetNames);
             return this;
         }
         public Builder assetNames(String... assetNames) {
@@ -233,7 +234,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Output.ofNullable(assetTypes);
+            this.assetTypes = Codegen.ofNullable(assetTypes);
             return this;
         }
         public Builder assetTypes(String... assetTypes) {
@@ -244,7 +245,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingProject(@Nullable String billingProject) {
-            this.billingProject = Output.ofNullable(billingProject);
+            this.billingProject = Codegen.ofNullable(billingProject);
             return this;
         }
         public Builder condition(@Nullable Output<FolderFeedConditionGetArgs> condition) {
@@ -252,7 +253,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable FolderFeedConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -260,7 +261,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder feedId(@Nullable Output<String> feedId) {
@@ -268,7 +269,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder feedId(@Nullable String feedId) {
-            this.feedId = Output.ofNullable(feedId);
+            this.feedId = Codegen.ofNullable(feedId);
             return this;
         }
         public Builder feedOutputConfig(@Nullable Output<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig) {
@@ -276,7 +277,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder feedOutputConfig(@Nullable FolderFeedFeedOutputConfigGetArgs feedOutputConfig) {
-            this.feedOutputConfig = Output.ofNullable(feedOutputConfig);
+            this.feedOutputConfig = Codegen.ofNullable(feedOutputConfig);
             return this;
         }
         public Builder folder(@Nullable Output<String> folder) {
@@ -284,7 +285,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folder(@Nullable String folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder folderId(@Nullable Output<String> folderId) {
@@ -292,7 +293,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folderId(@Nullable String folderId) {
-            this.folderId = Output.ofNullable(folderId);
+            this.folderId = Codegen.ofNullable(folderId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -300,7 +301,7 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FolderFeedState build() {
             return new FolderFeedState(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, folder, folderId, name);

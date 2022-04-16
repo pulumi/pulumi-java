@@ -34,14 +34,14 @@ public final class EndpointAccessVpcSecurityGroup {
      * The status of the VPC security group.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The identifier of the VPC security group.
      * 
     */
-    public Optional<String> getVpcSecurityGroupId() {
+    public Optional<String> vpcSecurityGroupId() {
         return Optional.ofNullable(this.vpcSecurityGroupId);
     }
 

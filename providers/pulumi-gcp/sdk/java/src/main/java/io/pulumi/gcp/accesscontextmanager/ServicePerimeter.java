@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.ServicePerimeterArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterState;
@@ -62,7 +63,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Time the AccessPolicy was created in UTC.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -78,7 +79,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * behavior.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -96,7 +97,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -156,7 +157,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
      */
-    public Output</* @Nullable */ String> getPerimeterType() {
+    public Output</* @Nullable */ String> perimeterType() {
         return this.perimeterType;
     }
     /**
@@ -178,7 +179,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ServicePerimeterSpec> getSpec() {
+    public Output</* @Nullable */ ServicePerimeterSpec> spec() {
         return this.spec;
     }
     /**
@@ -198,7 +199,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ServicePerimeterStatus> getStatus() {
+    public Output</* @Nullable */ ServicePerimeterStatus> status() {
         return this.status;
     }
     /**
@@ -212,7 +213,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Human readable title. Must be unique within the Policy.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -226,7 +227,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Time the AccessPolicy was updated in UTC.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -256,7 +257,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseExplicitDryRunSpec() {
+    public Output</* @Nullable */ Boolean> useExplicitDryRunSpec() {
         return this.useExplicitDryRunSpec;
     }
 
@@ -282,7 +283,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServicePerimeter(String name, ServicePerimeterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/servicePerimeter:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/servicePerimeter:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServicePerimeter(String name, Output<String> id, @Nullable ServicePerimeterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

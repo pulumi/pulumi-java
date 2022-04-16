@@ -10,6 +10,7 @@ import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointPolicyDetails;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -32,7 +33,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -46,7 +47,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    public Output<MultiRegionAccessPointPolicyDetails> getDetails() {
+    public Output<MultiRegionAccessPointPolicyDetails> details() {
         return this.details;
     }
     /**
@@ -60,7 +61,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return The last established policy for the Multi-Region Access Point.
      * 
      */
-    public Output<String> getEstablished() {
+    public Output<String> established() {
         return this.established;
     }
     /**
@@ -74,7 +75,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return The proposed policy for the Multi-Region Access Point.
      * 
      */
-    public Output<String> getProposed() {
+    public Output<String> proposed() {
         return this.proposed;
     }
 
@@ -100,7 +101,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public MultiRegionAccessPointPolicy(String name, MultiRegionAccessPointPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/multiRegionAccessPointPolicy:MultiRegionAccessPointPolicy", name, args == null ? MultiRegionAccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/multiRegionAccessPointPolicy:MultiRegionAccessPointPolicy", name, args == null ? MultiRegionAccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MultiRegionAccessPointPolicy(String name, Output<String> id, @Nullable MultiRegionAccessPointPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

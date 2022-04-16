@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="required")
       private final @Nullable Output<NodeSelectorArgs> required;
 
-    public Output<NodeSelectorArgs> getRequired() {
-        return this.required == null ? Output.empty() : this.required;
+    public Output<NodeSelectorArgs> required() {
+        return this.required == null ? Codegen.empty() : this.required;
     }
 
     public VolumeNodeAffinityArgs(@Nullable Output<NodeSelectorArgs> required) {
@@ -34,7 +35,7 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VolumeNodeAffinityArgs() {
-        this.required = Output.empty();
+        this.required = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder required(@Nullable NodeSelectorArgs required) {
-            this.required = Output.ofNullable(required);
+            this.required = Codegen.ofNullable(required);
             return this;
         }        public VolumeNodeAffinityArgs build() {
             return new VolumeNodeAffinityArgs(required);

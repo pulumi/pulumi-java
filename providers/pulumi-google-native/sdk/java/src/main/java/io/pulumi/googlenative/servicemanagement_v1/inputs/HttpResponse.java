@@ -25,7 +25,7 @@ public final class HttpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fullyDecodeReservedExpansion", required=true)
       private final Boolean fullyDecodeReservedExpansion;
 
-    public Boolean getFullyDecodeReservedExpansion() {
+    public Boolean fullyDecodeReservedExpansion() {
         return this.fullyDecodeReservedExpansion;
     }
 
@@ -36,7 +36,7 @@ public final class HttpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
       private final List<HttpRuleResponse> rules;
 
-    public List<HttpRuleResponse> getRules() {
+    public List<HttpRuleResponse> rules() {
         return this.rules;
     }
 

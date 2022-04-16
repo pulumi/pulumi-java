@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 
@@ -33,7 +34,7 @@ public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleSinkInfoArgs() {
-        this.roleId = Output.empty();
+        this.roleId = Codegen.empty();
     }
 
     public static Builder builder() {

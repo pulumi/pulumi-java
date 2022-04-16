@@ -21,7 +21,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="currentKeyIdentifier", required=true)
       private final String currentKeyIdentifier;
 
-    public String getCurrentKeyIdentifier() {
+    public String currentKeyIdentifier() {
         return this.currentKeyIdentifier;
     }
 
@@ -32,7 +32,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="keyIdentifier")
       private final @Nullable String keyIdentifier;
 
-    public Optional<String> getKeyIdentifier() {
+    public Optional<String> keyIdentifier() {
         return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
     }
 

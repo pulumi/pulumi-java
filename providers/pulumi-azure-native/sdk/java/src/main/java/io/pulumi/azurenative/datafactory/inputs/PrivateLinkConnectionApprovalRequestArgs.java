@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.PrivateLinkConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+    public Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     public PrivateLinkConnectionApprovalRequestArgs(@Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -34,7 +35,7 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
     }
 
     private PrivateLinkConnectionApprovalRequestArgs() {
-        this.privateLinkServiceConnectionState = Output.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }        public PrivateLinkConnectionApprovalRequestArgs build() {
             return new PrivateLinkConnectionApprovalRequestArgs(privateLinkServiceConnectionState);

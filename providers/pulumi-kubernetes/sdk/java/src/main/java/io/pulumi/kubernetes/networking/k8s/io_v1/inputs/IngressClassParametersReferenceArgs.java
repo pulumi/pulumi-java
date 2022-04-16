@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="apiGroup")
       private final @Nullable Output<String> apiGroup;
 
-    public Output<String> getApiGroup() {
-        return this.apiGroup == null ? Output.empty() : this.apiGroup;
+    public Output<String> apiGroup() {
+        return this.apiGroup == null ? Codegen.empty() : this.apiGroup;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -47,7 +48,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -58,8 +59,8 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<String> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public IngressClassParametersReferenceArgs(
@@ -87,11 +88,11 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     }
 
     private IngressClassParametersReferenceArgs() {
-        this.apiGroup = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.scope = Output.empty();
+        this.apiGroup = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder apiGroup(@Nullable String apiGroup) {
-            this.apiGroup = Output.ofNullable(apiGroup);
+            this.apiGroup = Codegen.ofNullable(apiGroup);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -151,7 +152,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -159,7 +160,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public IngressClassParametersReferenceArgs build() {
             return new IngressClassParametersReferenceArgs(apiGroup, kind, name, namespace, scope);

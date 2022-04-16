@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.KeystoreArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class Keystore extends io.pulumi.resources.CustomResource {
      * @return Aliases in this keystore.
      * 
      */
-    public Output<List<String>> getAliases() {
+    public Output<List<String>> aliases() {
         return this.aliases;
     }
     /**
@@ -43,7 +44,7 @@ public class Keystore extends io.pulumi.resources.CustomResource {
      * @return Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -69,7 +70,7 @@ public class Keystore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Keystore(String name, KeystoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Keystore", name, args == null ? KeystoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Keystore", name, args == null ? KeystoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Keystore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

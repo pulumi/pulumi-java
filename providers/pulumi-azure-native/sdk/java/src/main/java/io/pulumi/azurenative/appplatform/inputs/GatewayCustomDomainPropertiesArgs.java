@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GatewayCustomDomainPropertiesArgs extends io.pulumi.resources
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+    public Output<String> thumbprint() {
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public GatewayCustomDomainPropertiesArgs(@Nullable Output<String> thumbprint) {
@@ -34,7 +35,7 @@ public final class GatewayCustomDomainPropertiesArgs extends io.pulumi.resources
     }
 
     private GatewayCustomDomainPropertiesArgs() {
-        this.thumbprint = Output.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GatewayCustomDomainPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public GatewayCustomDomainPropertiesArgs build() {
             return new GatewayCustomDomainPropertiesArgs(thumbprint);

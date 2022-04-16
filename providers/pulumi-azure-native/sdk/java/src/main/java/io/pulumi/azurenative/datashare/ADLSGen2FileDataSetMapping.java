@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return The id of the source data set.
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -56,7 +57,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Gets the status of the data set mapping.
      * 
      */
-    public Output<String> getDataSetMappingStatus() {
+    public Output<String> dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
@@ -70,7 +71,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return File path within the file system.
      * 
      */
-    public Output<String> getFilePath() {
+    public Output<String> filePath() {
         return this.filePath;
     }
     /**
@@ -84,7 +85,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return File system to which the file belongs.
      * 
      */
-    public Output<String> getFileSystem() {
+    public Output<String> fileSystem() {
         return this.fileSystem;
     }
     /**
@@ -100,7 +101,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * Expected value is 'AdlsGen2File'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -114,7 +115,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Type of output file
      * 
      */
-    public Output</* @Nullable */ String> getOutputType() {
+    public Output</* @Nullable */ String> outputType() {
         return this.outputType;
     }
     /**
@@ -142,7 +143,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Provisioning state of the data set mapping.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -156,7 +157,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Resource group of storage account.
      * 
      */
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -170,7 +171,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Storage account name of the source data set.
      * 
      */
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
     /**
@@ -184,7 +185,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Subscription id of storage account.
      * 
      */
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -198,7 +199,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -212,7 +213,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -238,7 +239,7 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public ADLSGen2FileDataSetMapping(String name, ADLSGen2FileDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:ADLSGen2FileDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:ADLSGen2FileDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ADLSGen2FileDataSetMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

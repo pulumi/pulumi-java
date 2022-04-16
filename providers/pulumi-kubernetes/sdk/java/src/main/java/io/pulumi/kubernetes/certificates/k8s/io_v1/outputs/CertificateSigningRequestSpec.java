@@ -138,28 +138,28 @@ public final class CertificateSigningRequestSpec {
      * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
      * 
     */
-    public Optional<Integer> getExpirationSeconds() {
+    public Optional<Integer> expirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
     /**
      * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
     */
-    public Map<String,List<String>> getExtra() {
+    public Map<String,List<String>> extra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
     */
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * request contains an x509 certificate signing request encoded in a "CERTIFICATE REQUEST" PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
      * 
     */
-    public String getRequest() {
+    public String request() {
         return this.request;
     }
     /**
@@ -186,14 +186,14 @@ public final class CertificateSigningRequestSpec {
      *  6. Whether or not requests for CA certificates are allowed.
      * 
     */
-    public String getSignerName() {
+    public String signerName() {
         return this.signerName;
     }
     /**
      * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
@@ -213,14 +213,14 @@ public final class CertificateSigningRequestSpec {
      *  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
      * 
     */
-    public List<String> getUsages() {
+    public List<String> usages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
      * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

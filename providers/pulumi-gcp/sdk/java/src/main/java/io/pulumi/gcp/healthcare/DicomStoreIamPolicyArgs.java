@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +24,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="dicomStoreId", required=true)
       private final Output<String> dicomStoreId;
 
-    public Output<String> getDicomStoreId() {
+    public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
 
@@ -35,7 +36,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -47,8 +48,8 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private DicomStoreIamPolicyArgs() {
-        this.dicomStoreId = Output.empty();
-        this.policyData = Output.empty();
+        this.dicomStoreId = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

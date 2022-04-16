@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.enums.ManagedRuleEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
     @Import(name="action")
       private final @Nullable Output<Either<String,ActionType>> action;
 
-    public Output<Either<String,ActionType>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<Either<String,ActionType>> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
-    public Output<Either<String,ManagedRuleEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+    public Output<Either<String,ManagedRuleEnabledState>> enabledState() {
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -64,9 +65,9 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
     }
 
     private ManagedRuleOverrideArgs() {
-        this.action = Output.empty();
-        this.enabledState = Output.empty();
-        this.ruleId = Output.empty();
+        this.action = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.ruleId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder action(@Nullable Either<String,ActionType> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder enabledState(@Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState) {
@@ -106,7 +107,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enabledState(@Nullable Either<String,ManagedRuleEnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder ruleId(Output<String> ruleId) {

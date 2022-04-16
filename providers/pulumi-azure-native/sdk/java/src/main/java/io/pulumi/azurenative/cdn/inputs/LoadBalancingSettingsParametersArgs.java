@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
     @Import(name="additionalLatencyInMilliseconds")
       private final @Nullable Output<Integer> additionalLatencyInMilliseconds;
 
-    public Output<Integer> getAdditionalLatencyInMilliseconds() {
-        return this.additionalLatencyInMilliseconds == null ? Output.empty() : this.additionalLatencyInMilliseconds;
+    public Output<Integer> additionalLatencyInMilliseconds() {
+        return this.additionalLatencyInMilliseconds == null ? Codegen.empty() : this.additionalLatencyInMilliseconds;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
     @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
 
-    public Output<Integer> getSampleSize() {
-        return this.sampleSize == null ? Output.empty() : this.sampleSize;
+    public Output<Integer> sampleSize() {
+        return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
     @Import(name="successfulSamplesRequired")
       private final @Nullable Output<Integer> successfulSamplesRequired;
 
-    public Output<Integer> getSuccessfulSamplesRequired() {
-        return this.successfulSamplesRequired == null ? Output.empty() : this.successfulSamplesRequired;
+    public Output<Integer> successfulSamplesRequired() {
+        return this.successfulSamplesRequired == null ? Codegen.empty() : this.successfulSamplesRequired;
     }
 
     public LoadBalancingSettingsParametersArgs(
@@ -61,9 +62,9 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
     }
 
     private LoadBalancingSettingsParametersArgs() {
-        this.additionalLatencyInMilliseconds = Output.empty();
-        this.sampleSize = Output.empty();
-        this.successfulSamplesRequired = Output.empty();
+        this.additionalLatencyInMilliseconds = Codegen.empty();
+        this.sampleSize = Codegen.empty();
+        this.successfulSamplesRequired = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
             return this;
         }
         public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
-            this.additionalLatencyInMilliseconds = Output.ofNullable(additionalLatencyInMilliseconds);
+            this.additionalLatencyInMilliseconds = Codegen.ofNullable(additionalLatencyInMilliseconds);
             return this;
         }
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
@@ -103,7 +104,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = Output.ofNullable(sampleSize);
+            this.sampleSize = Codegen.ofNullable(sampleSize);
             return this;
         }
         public Builder successfulSamplesRequired(@Nullable Output<Integer> successfulSamplesRequired) {
@@ -111,7 +112,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
             return this;
         }
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
-            this.successfulSamplesRequired = Output.ofNullable(successfulSamplesRequired);
+            this.successfulSamplesRequired = Codegen.ofNullable(successfulSamplesRequired);
             return this;
         }        public LoadBalancingSettingsParametersArgs build() {
             return new LoadBalancingSettingsParametersArgs(additionalLatencyInMilliseconds, sampleSize, successfulSamplesRequired);

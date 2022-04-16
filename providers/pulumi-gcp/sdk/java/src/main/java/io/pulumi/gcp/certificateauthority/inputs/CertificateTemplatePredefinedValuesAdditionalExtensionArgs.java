@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
     @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
-        return this.critical == null ? Output.empty() : this.critical;
+    public Output<Boolean> critical() {
+        return this.critical == null ? Codegen.empty() : this.critical;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
     @Import(name="objectId", required=true)
       private final Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId;
 
-    public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> getObjectId() {
+    public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId() {
         return this.objectId;
     }
 
@@ -45,7 +46,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -59,9 +60,9 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
     }
 
     private CertificateTemplatePredefinedValuesAdditionalExtensionArgs() {
-        this.critical = Output.empty();
-        this.objectId = Output.empty();
-        this.value = Output.empty();
+        this.critical = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionArgs ex
             return this;
         }
         public Builder critical(@Nullable Boolean critical) {
-            this.critical = Output.ofNullable(critical);
+            this.critical = Codegen.ofNullable(critical);
             return this;
         }
         public Builder objectId(Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdArgs> objectId) {

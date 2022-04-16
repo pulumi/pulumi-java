@@ -6,6 +6,7 @@ package io.pulumi.awsnative.stepfunctions.inputs;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineCloudWatchLogsLogGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
     @Import(name="cloudWatchLogsLogGroup")
       private final @Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
 
-    public Output<StateMachineCloudWatchLogsLogGroupArgs> getCloudWatchLogsLogGroup() {
-        return this.cloudWatchLogsLogGroup == null ? Output.empty() : this.cloudWatchLogsLogGroup;
+    public Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup() {
+        return this.cloudWatchLogsLogGroup == null ? Codegen.empty() : this.cloudWatchLogsLogGroup;
     }
 
     public StateMachineLogDestinationArgs(@Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup) {
@@ -26,7 +27,7 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
     }
 
     private StateMachineLogDestinationArgs() {
-        this.cloudWatchLogsLogGroup = Output.empty();
+        this.cloudWatchLogsLogGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroupArgs cloudWatchLogsLogGroup) {
-            this.cloudWatchLogsLogGroup = Output.ofNullable(cloudWatchLogsLogGroup);
+            this.cloudWatchLogsLogGroup = Codegen.ofNullable(cloudWatchLogsLogGroup);
             return this;
         }        public StateMachineLogDestinationArgs build() {
             return new StateMachineLogDestinationArgs(cloudWatchLogsLogGroup);

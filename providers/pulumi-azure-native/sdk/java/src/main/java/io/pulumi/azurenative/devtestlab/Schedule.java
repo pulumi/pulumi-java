@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The creation date of the schedule.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -60,7 +61,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return If the schedule will occur once each day of the week, specify the daily recurrence.
      * 
      */
-    public Output</* @Nullable */ DayDetailsResponse> getDailyRecurrence() {
+    public Output</* @Nullable */ DayDetailsResponse> dailyRecurrence() {
         return this.dailyRecurrence;
     }
     /**
@@ -74,7 +75,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
      * 
      */
-    public Output</* @Nullable */ HourDetailsResponse> getHourlyRecurrence() {
+    public Output</* @Nullable */ HourDetailsResponse> hourlyRecurrence() {
         return this.hourlyRecurrence;
     }
     /**
@@ -88,7 +89,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -102,7 +103,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Notification settings.
      * 
      */
-    public Output</* @Nullable */ NotificationSettingsResponse> getNotificationSettings() {
+    public Output</* @Nullable */ NotificationSettingsResponse> notificationSettings() {
         return this.notificationSettings;
     }
     /**
@@ -130,7 +131,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -144,7 +145,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The status of the schedule (i.e. Enabled, Disabled)
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -158,7 +159,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +173,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The resource ID to which the schedule belongs
      * 
      */
-    public Output</* @Nullable */ String> getTargetResourceId() {
+    public Output</* @Nullable */ String> targetResourceId() {
         return this.targetResourceId;
     }
     /**
@@ -186,7 +187,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
      * 
      */
-    public Output</* @Nullable */ String> getTaskType() {
+    public Output</* @Nullable */ String> taskType() {
         return this.taskType;
     }
     /**
@@ -200,7 +201,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The time zone ID (e.g. Pacific Standard time).
      * 
      */
-    public Output</* @Nullable */ String> getTimeZoneId() {
+    public Output</* @Nullable */ String> timeZoneId() {
         return this.timeZoneId;
     }
     /**
@@ -214,7 +215,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -228,7 +229,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -242,7 +243,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
      * 
      */
-    public Output</* @Nullable */ WeekDetailsResponse> getWeeklyRecurrence() {
+    public Output</* @Nullable */ WeekDetailsResponse> weeklyRecurrence() {
         return this.weeklyRecurrence;
     }
 
@@ -268,7 +269,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schedule(String name, ScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devtestlab:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Schedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

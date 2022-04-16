@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,43 +19,43 @@ public final class ServiceTaskSpecContainerSpecConfigArgs extends io.pulumi.reso
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
     @Import(name="configName")
       private final @Nullable Output<String> configName;
 
-    public Output<String> getConfigName() {
-        return this.configName == null ? Output.empty() : this.configName;
+    public Output<String> configName() {
+        return this.configName == null ? Codegen.empty() : this.configName;
     }
 
     @Import(name="fileGid")
       private final @Nullable Output<String> fileGid;
 
-    public Output<String> getFileGid() {
-        return this.fileGid == null ? Output.empty() : this.fileGid;
+    public Output<String> fileGid() {
+        return this.fileGid == null ? Codegen.empty() : this.fileGid;
     }
 
     @Import(name="fileMode")
       private final @Nullable Output<Integer> fileMode;
 
-    public Output<Integer> getFileMode() {
-        return this.fileMode == null ? Output.empty() : this.fileMode;
+    public Output<Integer> fileMode() {
+        return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
     @Import(name="fileName", required=true)
       private final Output<String> fileName;
 
-    public Output<String> getFileName() {
+    public Output<String> fileName() {
         return this.fileName;
     }
 
     @Import(name="fileUid")
       private final @Nullable Output<String> fileUid;
 
-    public Output<String> getFileUid() {
-        return this.fileUid == null ? Output.empty() : this.fileUid;
+    public Output<String> fileUid() {
+        return this.fileUid == null ? Codegen.empty() : this.fileUid;
     }
 
     public ServiceTaskSpecContainerSpecConfigArgs(
@@ -73,12 +74,12 @@ public final class ServiceTaskSpecContainerSpecConfigArgs extends io.pulumi.reso
     }
 
     private ServiceTaskSpecContainerSpecConfigArgs() {
-        this.configId = Output.empty();
-        this.configName = Output.empty();
-        this.fileGid = Output.empty();
-        this.fileMode = Output.empty();
-        this.fileName = Output.empty();
-        this.fileUid = Output.empty();
+        this.configId = Codegen.empty();
+        this.configName = Codegen.empty();
+        this.fileGid = Codegen.empty();
+        this.fileMode = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.fileUid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ServiceTaskSpecContainerSpecConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder configName(@Nullable String configName) {
-            this.configName = Output.ofNullable(configName);
+            this.configName = Codegen.ofNullable(configName);
             return this;
         }
         public Builder fileGid(@Nullable Output<String> fileGid) {
@@ -132,7 +133,7 @@ public final class ServiceTaskSpecContainerSpecConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder fileGid(@Nullable String fileGid) {
-            this.fileGid = Output.ofNullable(fileGid);
+            this.fileGid = Codegen.ofNullable(fileGid);
             return this;
         }
         public Builder fileMode(@Nullable Output<Integer> fileMode) {
@@ -140,7 +141,7 @@ public final class ServiceTaskSpecContainerSpecConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder fileMode(@Nullable Integer fileMode) {
-            this.fileMode = Output.ofNullable(fileMode);
+            this.fileMode = Codegen.ofNullable(fileMode);
             return this;
         }
         public Builder fileName(Output<String> fileName) {
@@ -156,7 +157,7 @@ public final class ServiceTaskSpecContainerSpecConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder fileUid(@Nullable String fileUid) {
-            this.fileUid = Output.ofNullable(fileUid);
+            this.fileUid = Codegen.ofNullable(fileUid);
             return this;
         }        public ServiceTaskSpecContainerSpecConfigArgs build() {
             return new ServiceTaskSpecContainerSpecConfigArgs(configId, configName, fileGid, fileMode, fileName, fileUid);

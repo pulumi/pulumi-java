@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return ETag from NRP.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -57,7 +58,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return The provisioning state of the private endpoint connection proxy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -85,7 +86,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return Remote private endpoint details.
      * 
      */
-    public Output</* @Nullable */ RemotePrivateEndpointResponse> getRemotePrivateEndpoint() {
+    public Output</* @Nullable */ RemotePrivateEndpointResponse> remotePrivateEndpoint() {
         return this.remotePrivateEndpoint;
     }
     /**
@@ -99,7 +100,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return Operation status.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -113,7 +114,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -127,7 +128,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -153,7 +154,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnectionProxy(String name, PrivateEndpointConnectionProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:deviceupdate:PrivateEndpointConnectionProxy", name, args == null ? PrivateEndpointConnectionProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:deviceupdate:PrivateEndpointConnectionProxy", name, args == null ? PrivateEndpointConnectionProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateEndpointConnectionProxy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

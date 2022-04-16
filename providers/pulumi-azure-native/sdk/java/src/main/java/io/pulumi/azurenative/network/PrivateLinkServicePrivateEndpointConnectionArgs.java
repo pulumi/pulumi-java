@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     @Import(name="peConnectionName")
       private final @Nullable Output<String> peConnectionName;
 
-    public Output<String> getPeConnectionName() {
-        return this.peConnectionName == null ? Output.empty() : this.peConnectionName;
+    public Output<String> peConnectionName() {
+        return this.peConnectionName == null ? Codegen.empty() : this.peConnectionName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -97,12 +98,12 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     }
 
     private PrivateLinkServicePrivateEndpointConnectionArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.peConnectionName = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.peConnectionName = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -148,7 +149,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder peConnectionName(@Nullable Output<String> peConnectionName) {
@@ -156,7 +157,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder peConnectionName(@Nullable String peConnectionName) {
-            this.peConnectionName = Output.ofNullable(peConnectionName);
+            this.peConnectionName = Codegen.ofNullable(peConnectionName);
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -164,7 +165,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

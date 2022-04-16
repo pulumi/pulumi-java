@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.providerhub.inputs.SkuResourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<SkuResourcePropertiesArgs> properties;
 
-    public Output<SkuResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<SkuResourcePropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -40,7 +41,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -51,8 +52,8 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<String> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     public SkusArgs(
@@ -67,10 +68,10 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkusArgs() {
-        this.properties = Output.empty();
-        this.providerNamespace = Output.empty();
-        this.resourceType = Output.empty();
-        this.sku = Output.empty();
+        this.properties = Codegen.empty();
+        this.providerNamespace = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable SkuResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerNamespace(Output<String> providerNamespace) {
@@ -128,7 +129,7 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable String sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }        public SkusArgs build() {
             return new SkusArgs(properties, providerNamespace, resourceType, sku);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class BucketEncryptionGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="defaultKmsKeyName", required=true)
       private final Output<String> defaultKmsKeyName;
 
-    public Output<String> getDefaultKmsKeyName() {
+    public Output<String> defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
 
@@ -25,7 +26,7 @@ public final class BucketEncryptionGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private BucketEncryptionGetArgs() {
-        this.defaultKmsKeyName = Output.empty();
+        this.defaultKmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {

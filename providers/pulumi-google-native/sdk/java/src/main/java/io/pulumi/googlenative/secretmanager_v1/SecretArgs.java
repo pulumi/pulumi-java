@@ -5,6 +5,7 @@ package io.pulumi.googlenative.secretmanager_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.secretmanager_v1.inputs.ReplicationArgs;
 import io.pulumi.googlenative.secretmanager_v1.inputs.RotationArgs;
 import io.pulumi.googlenative.secretmanager_v1.inputs.TopicArgs;
@@ -26,8 +27,8 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+    public Output<String> expireTime() {
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     /**
@@ -48,15 +49,15 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replication", required=true)
       private final Output<ReplicationArgs> replication;
 
-    public Output<ReplicationArgs> getReplication() {
+    public Output<ReplicationArgs> replication() {
         return this.replication;
     }
 
@@ -77,14 +78,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotation")
       private final @Nullable Output<RotationArgs> rotation;
 
-    public Output<RotationArgs> getRotation() {
-        return this.rotation == null ? Output.empty() : this.rotation;
+    public Output<RotationArgs> rotation() {
+        return this.rotation == null ? Codegen.empty() : this.rotation;
     }
 
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -95,8 +96,8 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topics")
       private final @Nullable Output<List<TopicArgs>> topics;
 
-    public Output<List<TopicArgs>> getTopics() {
-        return this.topics == null ? Output.empty() : this.topics;
+    public Output<List<TopicArgs>> topics() {
+        return this.topics == null ? Codegen.empty() : this.topics;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<String> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public SecretArgs(
@@ -132,15 +133,15 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.etag = Output.empty();
-        this.expireTime = Output.empty();
-        this.labels = Output.empty();
-        this.project = Output.empty();
-        this.replication = Output.empty();
-        this.rotation = Output.empty();
-        this.secretId = Output.empty();
-        this.topics = Output.empty();
-        this.ttl = Output.empty();
+        this.etag = Codegen.empty();
+        this.expireTime = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.project = Codegen.empty();
+        this.replication = Codegen.empty();
+        this.rotation = Codegen.empty();
+        this.secretId = Codegen.empty();
+        this.topics = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -184,7 +185,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder expireTime(@Nullable Output<String> expireTime) {
@@ -192,7 +193,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -200,7 +201,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -208,7 +209,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder replication(Output<ReplicationArgs> replication) {
@@ -224,7 +225,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rotation(@Nullable RotationArgs rotation) {
-            this.rotation = Output.ofNullable(rotation);
+            this.rotation = Codegen.ofNullable(rotation);
             return this;
         }
         public Builder secretId(Output<String> secretId) {
@@ -240,7 +241,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topics(@Nullable List<TopicArgs> topics) {
-            this.topics = Output.ofNullable(topics);
+            this.topics = Codegen.ofNullable(topics);
             return this;
         }
         public Builder topics(TopicArgs... topics) {
@@ -251,7 +252,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public SecretArgs build() {
             return new SecretArgs(etag, expireTime, labels, project, replication, rotation, secretId, topics, ttl);

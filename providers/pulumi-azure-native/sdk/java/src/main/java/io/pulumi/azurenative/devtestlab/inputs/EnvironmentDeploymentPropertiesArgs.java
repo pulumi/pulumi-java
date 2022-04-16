@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.inputs.ArmTemplateParameterPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
     @Import(name="armTemplateId")
       private final @Nullable Output<String> armTemplateId;
 
-    public Output<String> getArmTemplateId() {
-        return this.armTemplateId == null ? Output.empty() : this.armTemplateId;
+    public Output<String> armTemplateId() {
+        return this.armTemplateId == null ? Codegen.empty() : this.armTemplateId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
     @Import(name="parameters")
       private final @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters;
 
-    public Output<List<ArmTemplateParameterPropertiesArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<ArmTemplateParameterPropertiesArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public EnvironmentDeploymentPropertiesArgs(
@@ -50,8 +51,8 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
     }
 
     private EnvironmentDeploymentPropertiesArgs() {
-        this.armTemplateId = Output.empty();
-        this.parameters = Output.empty();
+        this.armTemplateId = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder armTemplateId(@Nullable String armTemplateId) {
-            this.armTemplateId = Output.ofNullable(armTemplateId);
+            this.armTemplateId = Codegen.ofNullable(armTemplateId);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters) {
@@ -89,7 +90,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder parameters(@Nullable List<ArmTemplateParameterPropertiesArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ArmTemplateParameterPropertiesArgs... parameters) {

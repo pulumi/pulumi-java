@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     @Import(name="failed")
       private final @Nullable Output<List<String>> failed;
 
-    public Output<List<String>> getFailed() {
-        return this.failed == null ? Output.empty() : this.failed;
+    public Output<List<String>> failed() {
+        return this.failed == null ? Codegen.empty() : this.failed;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     @Import(name="succeeded")
       private final @Nullable Output<List<String>> succeeded;
 
-    public Output<List<String>> getSucceeded() {
-        return this.succeeded == null ? Output.empty() : this.succeeded;
+    public Output<List<String>> succeeded() {
+        return this.succeeded == null ? Codegen.empty() : this.succeeded;
     }
 
     public UncountedTerminatedPodsArgs(
@@ -49,8 +50,8 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     }
 
     private UncountedTerminatedPodsArgs() {
-        this.failed = Output.empty();
-        this.succeeded = Output.empty();
+        this.failed = Codegen.empty();
+        this.succeeded = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder failed(@Nullable List<String> failed) {
-            this.failed = Output.ofNullable(failed);
+            this.failed = Codegen.ofNullable(failed);
             return this;
         }
         public Builder failed(String... failed) {
@@ -91,7 +92,7 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder succeeded(@Nullable List<String> succeeded) {
-            this.succeeded = Output.ofNullable(succeeded);
+            this.succeeded = Codegen.ofNullable(succeeded);
             return this;
         }
         public Builder succeeded(String... succeeded) {

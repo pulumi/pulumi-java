@@ -12,6 +12,7 @@ import io.pulumi.aws.dynamodb.inputs.TableServerSideEncryptionArgs;
 import io.pulumi.aws.dynamodb.inputs.TableTtlArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,8 +33,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<List<TableAttributeArgs>> attributes;
 
-    public Output<List<TableAttributeArgs>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<List<TableAttributeArgs>> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingMode")
       private final @Nullable Output<String> billingMode;
 
-    public Output<String> getBillingMode() {
-        return this.billingMode == null ? Output.empty() : this.billingMode;
+    public Output<String> billingMode() {
+        return this.billingMode == null ? Codegen.empty() : this.billingMode;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalSecondaryIndexes")
       private final @Nullable Output<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
-    public Output<List<TableGlobalSecondaryIndexArgs>> getGlobalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? Output.empty() : this.globalSecondaryIndexes;
+    public Output<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes() {
+        return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hashKey")
       private final @Nullable Output<String> hashKey;
 
-    public Output<String> getHashKey() {
-        return this.hashKey == null ? Output.empty() : this.hashKey;
+    public Output<String> hashKey() {
+        return this.hashKey == null ? Codegen.empty() : this.hashKey;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localSecondaryIndexes")
       private final @Nullable Output<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
-    public Output<List<TableLocalSecondaryIndexArgs>> getLocalSecondaryIndexes() {
-        return this.localSecondaryIndexes == null ? Output.empty() : this.localSecondaryIndexes;
+    public Output<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes() {
+        return this.localSecondaryIndexes == null ? Codegen.empty() : this.localSecondaryIndexes;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pointInTimeRecovery")
       private final @Nullable Output<TablePointInTimeRecoveryArgs> pointInTimeRecovery;
 
-    public Output<TablePointInTimeRecoveryArgs> getPointInTimeRecovery() {
-        return this.pointInTimeRecovery == null ? Output.empty() : this.pointInTimeRecovery;
+    public Output<TablePointInTimeRecoveryArgs> pointInTimeRecovery() {
+        return this.pointInTimeRecovery == null ? Codegen.empty() : this.pointInTimeRecovery;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
-    public Output<String> getRangeKey() {
-        return this.rangeKey == null ? Output.empty() : this.rangeKey;
+    public Output<String> rangeKey() {
+        return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readCapacity")
       private final @Nullable Output<Integer> readCapacity;
 
-    public Output<Integer> getReadCapacity() {
-        return this.readCapacity == null ? Output.empty() : this.readCapacity;
+    public Output<Integer> readCapacity() {
+        return this.readCapacity == null ? Codegen.empty() : this.readCapacity;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicas")
       private final @Nullable Output<List<TableReplicaArgs>> replicas;
 
-    public Output<List<TableReplicaArgs>> getReplicas() {
-        return this.replicas == null ? Output.empty() : this.replicas;
+    public Output<List<TableReplicaArgs>> replicas() {
+        return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restoreDateTime")
       private final @Nullable Output<String> restoreDateTime;
 
-    public Output<String> getRestoreDateTime() {
-        return this.restoreDateTime == null ? Output.empty() : this.restoreDateTime;
+    public Output<String> restoreDateTime() {
+        return this.restoreDateTime == null ? Codegen.empty() : this.restoreDateTime;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restoreSourceName")
       private final @Nullable Output<String> restoreSourceName;
 
-    public Output<String> getRestoreSourceName() {
-        return this.restoreSourceName == null ? Output.empty() : this.restoreSourceName;
+    public Output<String> restoreSourceName() {
+        return this.restoreSourceName == null ? Codegen.empty() : this.restoreSourceName;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restoreToLatestTime")
       private final @Nullable Output<Boolean> restoreToLatestTime;
 
-    public Output<Boolean> getRestoreToLatestTime() {
-        return this.restoreToLatestTime == null ? Output.empty() : this.restoreToLatestTime;
+    public Output<Boolean> restoreToLatestTime() {
+        return this.restoreToLatestTime == null ? Codegen.empty() : this.restoreToLatestTime;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryption")
       private final @Nullable Output<TableServerSideEncryptionArgs> serverSideEncryption;
 
-    public Output<TableServerSideEncryptionArgs> getServerSideEncryption() {
-        return this.serverSideEncryption == null ? Output.empty() : this.serverSideEncryption;
+    public Output<TableServerSideEncryptionArgs> serverSideEncryption() {
+        return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
     }
 
     /**
@@ -191,8 +192,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamEnabled")
       private final @Nullable Output<Boolean> streamEnabled;
 
-    public Output<Boolean> getStreamEnabled() {
-        return this.streamEnabled == null ? Output.empty() : this.streamEnabled;
+    public Output<Boolean> streamEnabled() {
+        return this.streamEnabled == null ? Codegen.empty() : this.streamEnabled;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamViewType")
       private final @Nullable Output<String> streamViewType;
 
-    public Output<String> getStreamViewType() {
-        return this.streamViewType == null ? Output.empty() : this.streamViewType;
+    public Output<String> streamViewType() {
+        return this.streamViewType == null ? Codegen.empty() : this.streamViewType;
     }
 
     /**
@@ -213,8 +214,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableClass")
       private final @Nullable Output<String> tableClass;
 
-    public Output<String> getTableClass() {
-        return this.tableClass == null ? Output.empty() : this.tableClass;
+    public Output<String> tableClass() {
+        return this.tableClass == null ? Codegen.empty() : this.tableClass;
     }
 
     /**
@@ -224,8 +225,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -235,8 +236,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<TableTtlArgs> ttl;
 
-    public Output<TableTtlArgs> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<TableTtlArgs> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -246,8 +247,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeCapacity")
       private final @Nullable Output<Integer> writeCapacity;
 
-    public Output<Integer> getWriteCapacity() {
-        return this.writeCapacity == null ? Output.empty() : this.writeCapacity;
+    public Output<Integer> writeCapacity() {
+        return this.writeCapacity == null ? Codegen.empty() : this.writeCapacity;
     }
 
     public TableArgs(
@@ -294,26 +295,26 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.attributes = Output.empty();
-        this.billingMode = Output.empty();
-        this.globalSecondaryIndexes = Output.empty();
-        this.hashKey = Output.empty();
-        this.localSecondaryIndexes = Output.empty();
-        this.name = Output.empty();
-        this.pointInTimeRecovery = Output.empty();
-        this.rangeKey = Output.empty();
-        this.readCapacity = Output.empty();
-        this.replicas = Output.empty();
-        this.restoreDateTime = Output.empty();
-        this.restoreSourceName = Output.empty();
-        this.restoreToLatestTime = Output.empty();
-        this.serverSideEncryption = Output.empty();
-        this.streamEnabled = Output.empty();
-        this.streamViewType = Output.empty();
-        this.tableClass = Output.empty();
-        this.tags = Output.empty();
-        this.ttl = Output.empty();
-        this.writeCapacity = Output.empty();
+        this.attributes = Codegen.empty();
+        this.billingMode = Codegen.empty();
+        this.globalSecondaryIndexes = Codegen.empty();
+        this.hashKey = Codegen.empty();
+        this.localSecondaryIndexes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pointInTimeRecovery = Codegen.empty();
+        this.rangeKey = Codegen.empty();
+        this.readCapacity = Codegen.empty();
+        this.replicas = Codegen.empty();
+        this.restoreDateTime = Codegen.empty();
+        this.restoreSourceName = Codegen.empty();
+        this.restoreToLatestTime = Codegen.empty();
+        this.serverSideEncryption = Codegen.empty();
+        this.streamEnabled = Codegen.empty();
+        this.streamViewType = Codegen.empty();
+        this.tableClass = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.writeCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -379,7 +380,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable List<TableAttributeArgs> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder attributes(TableAttributeArgs... attributes) {
@@ -390,7 +391,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingMode(@Nullable String billingMode) {
-            this.billingMode = Output.ofNullable(billingMode);
+            this.billingMode = Codegen.ofNullable(billingMode);
             return this;
         }
         public Builder globalSecondaryIndexes(@Nullable Output<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
@@ -398,7 +399,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder globalSecondaryIndexes(@Nullable List<TableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = Output.ofNullable(globalSecondaryIndexes);
+            this.globalSecondaryIndexes = Codegen.ofNullable(globalSecondaryIndexes);
             return this;
         }
         public Builder globalSecondaryIndexes(TableGlobalSecondaryIndexArgs... globalSecondaryIndexes) {
@@ -409,7 +410,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hashKey(@Nullable String hashKey) {
-            this.hashKey = Output.ofNullable(hashKey);
+            this.hashKey = Codegen.ofNullable(hashKey);
             return this;
         }
         public Builder localSecondaryIndexes(@Nullable Output<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
@@ -417,7 +418,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localSecondaryIndexes(@Nullable List<TableLocalSecondaryIndexArgs> localSecondaryIndexes) {
-            this.localSecondaryIndexes = Output.ofNullable(localSecondaryIndexes);
+            this.localSecondaryIndexes = Codegen.ofNullable(localSecondaryIndexes);
             return this;
         }
         public Builder localSecondaryIndexes(TableLocalSecondaryIndexArgs... localSecondaryIndexes) {
@@ -428,7 +429,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pointInTimeRecovery(@Nullable Output<TablePointInTimeRecoveryArgs> pointInTimeRecovery) {
@@ -436,7 +437,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pointInTimeRecovery(@Nullable TablePointInTimeRecoveryArgs pointInTimeRecovery) {
-            this.pointInTimeRecovery = Output.ofNullable(pointInTimeRecovery);
+            this.pointInTimeRecovery = Codegen.ofNullable(pointInTimeRecovery);
             return this;
         }
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
@@ -444,7 +445,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Output.ofNullable(rangeKey);
+            this.rangeKey = Codegen.ofNullable(rangeKey);
             return this;
         }
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
@@ -452,7 +453,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readCapacity(@Nullable Integer readCapacity) {
-            this.readCapacity = Output.ofNullable(readCapacity);
+            this.readCapacity = Codegen.ofNullable(readCapacity);
             return this;
         }
         public Builder replicas(@Nullable Output<List<TableReplicaArgs>> replicas) {
@@ -460,7 +461,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicas(@Nullable List<TableReplicaArgs> replicas) {
-            this.replicas = Output.ofNullable(replicas);
+            this.replicas = Codegen.ofNullable(replicas);
             return this;
         }
         public Builder replicas(TableReplicaArgs... replicas) {
@@ -471,7 +472,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restoreDateTime(@Nullable String restoreDateTime) {
-            this.restoreDateTime = Output.ofNullable(restoreDateTime);
+            this.restoreDateTime = Codegen.ofNullable(restoreDateTime);
             return this;
         }
         public Builder restoreSourceName(@Nullable Output<String> restoreSourceName) {
@@ -479,7 +480,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restoreSourceName(@Nullable String restoreSourceName) {
-            this.restoreSourceName = Output.ofNullable(restoreSourceName);
+            this.restoreSourceName = Codegen.ofNullable(restoreSourceName);
             return this;
         }
         public Builder restoreToLatestTime(@Nullable Output<Boolean> restoreToLatestTime) {
@@ -487,7 +488,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restoreToLatestTime(@Nullable Boolean restoreToLatestTime) {
-            this.restoreToLatestTime = Output.ofNullable(restoreToLatestTime);
+            this.restoreToLatestTime = Codegen.ofNullable(restoreToLatestTime);
             return this;
         }
         public Builder serverSideEncryption(@Nullable Output<TableServerSideEncryptionArgs> serverSideEncryption) {
@@ -495,7 +496,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverSideEncryption(@Nullable TableServerSideEncryptionArgs serverSideEncryption) {
-            this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
+            this.serverSideEncryption = Codegen.ofNullable(serverSideEncryption);
             return this;
         }
         public Builder streamEnabled(@Nullable Output<Boolean> streamEnabled) {
@@ -503,7 +504,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamEnabled(@Nullable Boolean streamEnabled) {
-            this.streamEnabled = Output.ofNullable(streamEnabled);
+            this.streamEnabled = Codegen.ofNullable(streamEnabled);
             return this;
         }
         public Builder streamViewType(@Nullable Output<String> streamViewType) {
@@ -511,7 +512,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamViewType(@Nullable String streamViewType) {
-            this.streamViewType = Output.ofNullable(streamViewType);
+            this.streamViewType = Codegen.ofNullable(streamViewType);
             return this;
         }
         public Builder tableClass(@Nullable Output<String> tableClass) {
@@ -519,7 +520,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableClass(@Nullable String tableClass) {
-            this.tableClass = Output.ofNullable(tableClass);
+            this.tableClass = Codegen.ofNullable(tableClass);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -527,7 +528,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder ttl(@Nullable Output<TableTtlArgs> ttl) {
@@ -535,7 +536,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable TableTtlArgs ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
@@ -543,7 +544,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeCapacity(@Nullable Integer writeCapacity) {
-            this.writeCapacity = Output.ofNullable(writeCapacity);
+            this.writeCapacity = Codegen.ofNullable(writeCapacity);
             return this;
         }        public TableArgs build() {
             return new TableArgs(attributes, billingMode, globalSecondaryIndexes, hashKey, localSecondaryIndexes, name, pointInTimeRecovery, rangeKey, readCapacity, replicas, restoreDateTime, restoreSourceName, restoreToLatestTime, serverSideEncryption, streamEnabled, streamViewType, tableClass, tags, ttl, writeCapacity);

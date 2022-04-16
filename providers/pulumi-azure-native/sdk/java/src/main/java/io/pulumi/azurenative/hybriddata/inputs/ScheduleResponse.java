@@ -26,7 +26,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -37,7 +37,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="policyList")
       private final @Nullable List<String> policyList;
 
-    public List<String> getPolicyList() {
+    public List<String> policyList() {
         return this.policyList == null ? List.of() : this.policyList;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.GitHubActionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+    public Output<String> branch() {
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="deploymentRollbackEnabled")
       private final @Nullable Output<Boolean> deploymentRollbackEnabled;
 
-    public Output<Boolean> getDeploymentRollbackEnabled() {
-        return this.deploymentRollbackEnabled == null ? Output.empty() : this.deploymentRollbackEnabled;
+    public Output<Boolean> deploymentRollbackEnabled() {
+        return this.deploymentRollbackEnabled == null ? Codegen.empty() : this.deploymentRollbackEnabled;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="gitHubActionConfiguration")
       private final @Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration;
 
-    public Output<GitHubActionConfigurationArgs> getGitHubActionConfiguration() {
-        return this.gitHubActionConfiguration == null ? Output.empty() : this.gitHubActionConfiguration;
+    public Output<GitHubActionConfigurationArgs> gitHubActionConfiguration() {
+        return this.gitHubActionConfiguration == null ? Codegen.empty() : this.gitHubActionConfiguration;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="isGitHubAction")
       private final @Nullable Output<Boolean> isGitHubAction;
 
-    public Output<Boolean> getIsGitHubAction() {
-        return this.isGitHubAction == null ? Output.empty() : this.isGitHubAction;
+    public Output<Boolean> isGitHubAction() {
+        return this.isGitHubAction == null ? Codegen.empty() : this.isGitHubAction;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="isManualIntegration")
       private final @Nullable Output<Boolean> isManualIntegration;
 
-    public Output<Boolean> getIsManualIntegration() {
-        return this.isManualIntegration == null ? Output.empty() : this.isManualIntegration;
+    public Output<Boolean> isManualIntegration() {
+        return this.isManualIntegration == null ? Codegen.empty() : this.isManualIntegration;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="isMercurial")
       private final @Nullable Output<Boolean> isMercurial;
 
-    public Output<Boolean> getIsMercurial() {
-        return this.isMercurial == null ? Output.empty() : this.isMercurial;
+    public Output<Boolean> isMercurial() {
+        return this.isMercurial == null ? Codegen.empty() : this.isMercurial;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -111,8 +112,8 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="repoUrl")
       private final @Nullable Output<String> repoUrl;
 
-    public Output<String> getRepoUrl() {
-        return this.repoUrl == null ? Output.empty() : this.repoUrl;
+    public Output<String> repoUrl() {
+        return this.repoUrl == null ? Codegen.empty() : this.repoUrl;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -133,7 +134,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -163,17 +164,17 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     }
 
     private WebAppSourceControlSlotArgs() {
-        this.branch = Output.empty();
-        this.deploymentRollbackEnabled = Output.empty();
-        this.gitHubActionConfiguration = Output.empty();
-        this.isGitHubAction = Output.empty();
-        this.isManualIntegration = Output.empty();
-        this.isMercurial = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.repoUrl = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.slot = Output.empty();
+        this.branch = Codegen.empty();
+        this.deploymentRollbackEnabled = Codegen.empty();
+        this.gitHubActionConfiguration = Codegen.empty();
+        this.isGitHubAction = Codegen.empty();
+        this.isManualIntegration = Codegen.empty();
+        this.isMercurial = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.repoUrl = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.slot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder deploymentRollbackEnabled(@Nullable Output<Boolean> deploymentRollbackEnabled) {
@@ -229,7 +230,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder deploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
-            this.deploymentRollbackEnabled = Output.ofNullable(deploymentRollbackEnabled);
+            this.deploymentRollbackEnabled = Codegen.ofNullable(deploymentRollbackEnabled);
             return this;
         }
         public Builder gitHubActionConfiguration(@Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration) {
@@ -237,7 +238,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder gitHubActionConfiguration(@Nullable GitHubActionConfigurationArgs gitHubActionConfiguration) {
-            this.gitHubActionConfiguration = Output.ofNullable(gitHubActionConfiguration);
+            this.gitHubActionConfiguration = Codegen.ofNullable(gitHubActionConfiguration);
             return this;
         }
         public Builder isGitHubAction(@Nullable Output<Boolean> isGitHubAction) {
@@ -245,7 +246,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder isGitHubAction(@Nullable Boolean isGitHubAction) {
-            this.isGitHubAction = Output.ofNullable(isGitHubAction);
+            this.isGitHubAction = Codegen.ofNullable(isGitHubAction);
             return this;
         }
         public Builder isManualIntegration(@Nullable Output<Boolean> isManualIntegration) {
@@ -253,7 +254,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder isManualIntegration(@Nullable Boolean isManualIntegration) {
-            this.isManualIntegration = Output.ofNullable(isManualIntegration);
+            this.isManualIntegration = Codegen.ofNullable(isManualIntegration);
             return this;
         }
         public Builder isMercurial(@Nullable Output<Boolean> isMercurial) {
@@ -261,7 +262,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder isMercurial(@Nullable Boolean isMercurial) {
-            this.isMercurial = Output.ofNullable(isMercurial);
+            this.isMercurial = Codegen.ofNullable(isMercurial);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -269,7 +270,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -285,7 +286,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder repoUrl(@Nullable String repoUrl) {
-            this.repoUrl = Output.ofNullable(repoUrl);
+            this.repoUrl = Codegen.ofNullable(repoUrl);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

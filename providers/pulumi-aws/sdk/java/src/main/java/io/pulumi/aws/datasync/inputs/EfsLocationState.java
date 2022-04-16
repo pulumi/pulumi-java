@@ -6,6 +6,7 @@ package io.pulumi.aws.datasync.inputs;
 import io.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ec2Config")
       private final @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
 
-    public Output<EfsLocationEc2ConfigGetArgs> getEc2Config() {
-        return this.ec2Config == null ? Output.empty() : this.ec2Config;
+    public Output<EfsLocationEc2ConfigGetArgs> ec2Config() {
+        return this.ec2Config == null ? Codegen.empty() : this.ec2Config;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="efsFileSystemArn")
       private final @Nullable Output<String> efsFileSystemArn;
 
-    public Output<String> getEfsFileSystemArn() {
-        return this.efsFileSystemArn == null ? Output.empty() : this.efsFileSystemArn;
+    public Output<String> efsFileSystemArn() {
+        return this.efsFileSystemArn == null ? Codegen.empty() : this.efsFileSystemArn;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+    public Output<String> subdirectory() {
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -78,15 +79,15 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public EfsLocationState(
@@ -107,13 +108,13 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EfsLocationState() {
-        this.arn = Output.empty();
-        this.ec2Config = Output.empty();
-        this.efsFileSystemArn = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uri = Output.empty();
+        this.arn = Codegen.empty();
+        this.ec2Config = Codegen.empty();
+        this.efsFileSystemArn = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder ec2Config(@Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config) {
@@ -161,7 +162,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ec2Config(@Nullable EfsLocationEc2ConfigGetArgs ec2Config) {
-            this.ec2Config = Output.ofNullable(ec2Config);
+            this.ec2Config = Codegen.ofNullable(ec2Config);
             return this;
         }
         public Builder efsFileSystemArn(@Nullable Output<String> efsFileSystemArn) {
@@ -169,7 +170,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder efsFileSystemArn(@Nullable String efsFileSystemArn) {
-            this.efsFileSystemArn = Output.ofNullable(efsFileSystemArn);
+            this.efsFileSystemArn = Codegen.ofNullable(efsFileSystemArn);
             return this;
         }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
@@ -177,7 +178,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -185,7 +186,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -193,7 +194,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -201,7 +202,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public EfsLocationState build() {
             return new EfsLocationState(arn, ec2Config, efsFileSystemArn, subdirectory, tags, tagsAll, uri);

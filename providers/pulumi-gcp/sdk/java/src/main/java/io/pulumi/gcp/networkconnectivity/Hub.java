@@ -6,6 +6,7 @@ package io.pulumi.gcp.networkconnectivity;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkconnectivity.HubArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.HubState;
@@ -50,7 +51,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Output only. The time the hub was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -64,7 +65,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return An optional description of the hub.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -78,7 +79,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -92,7 +93,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -106,7 +107,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -124,7 +125,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
-    public Output<List<HubRoutingVpc>> getRoutingVpcs() {
+    public Output<List<HubRoutingVpc>> routingVpcs() {
         return this.routingVpcs;
     }
     /**
@@ -138,7 +139,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Output only. The current lifecycle state of this hub. Possible values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -154,7 +155,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * and another with the same name is created, the new hub is assigned a different unique_id.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -168,7 +169,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Output only. The time the hub was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -194,7 +195,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hub(String name, @Nullable HubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:networkconnectivity/hub:Hub", name, args == null ? HubArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:networkconnectivity/hub:Hub", name, args == null ? HubArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Hub(String name, Output<String> id, @Nullable HubState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

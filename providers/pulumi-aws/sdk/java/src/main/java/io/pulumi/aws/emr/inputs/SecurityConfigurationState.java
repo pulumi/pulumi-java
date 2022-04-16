@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     @Import(name="configuration")
       private final @Nullable Output<String> configuration;
 
-    public Output<String> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+    public Output<String> configuration() {
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
-        return this.creationDate == null ? Output.empty() : this.creationDate;
+    public Output<String> creationDate() {
+        return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     public SecurityConfigurationState(
@@ -71,10 +72,10 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     }
 
     private SecurityConfigurationState() {
-        this.configuration = Output.empty();
-        this.creationDate = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
+        this.configuration = Codegen.empty();
+        this.creationDate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder configuration(@Nullable String configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder creationDate(@Nullable Output<String> creationDate) {
@@ -116,7 +117,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Output.ofNullable(creationDate);
+            this.creationDate = Codegen.ofNullable(creationDate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -124,7 +125,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -132,7 +133,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }        public SecurityConfigurationState build() {
             return new SecurityConfigurationState(configuration, creationDate, name, namePrefix);

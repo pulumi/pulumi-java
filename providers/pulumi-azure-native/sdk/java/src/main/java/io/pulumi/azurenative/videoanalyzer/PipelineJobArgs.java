@@ -6,6 +6,7 @@ package io.pulumi.azurenative.videoanalyzer;
 import io.pulumi.azurenative.videoanalyzer.inputs.ParameterDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,8 +35,8 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
 
-    public Output<List<ParameterDefinitionArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<ParameterDefinitionArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelineJobName")
       private final @Nullable Output<String> pipelineJobName;
 
-    public Output<String> getPipelineJobName() {
-        return this.pipelineJobName == null ? Output.empty() : this.pipelineJobName;
+    public Output<String> pipelineJobName() {
+        return this.pipelineJobName == null ? Codegen.empty() : this.pipelineJobName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +79,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topologyName", required=true)
       private final Output<String> topologyName;
 
-    public Output<String> getTopologyName() {
+    public Output<String> topologyName() {
         return this.topologyName;
     }
 
@@ -98,12 +99,12 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineJobArgs() {
-        this.accountName = Output.empty();
-        this.description = Output.empty();
-        this.parameters = Output.empty();
-        this.pipelineJobName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.topologyName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.pipelineJobName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.topologyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ParameterDefinitionArgs>> parameters) {
@@ -157,7 +158,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<ParameterDefinitionArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ParameterDefinitionArgs... parameters) {
@@ -168,7 +169,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineJobName(@Nullable String pipelineJobName) {
-            this.pipelineJobName = Output.ofNullable(pipelineJobName);
+            this.pipelineJobName = Codegen.ofNullable(pipelineJobName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

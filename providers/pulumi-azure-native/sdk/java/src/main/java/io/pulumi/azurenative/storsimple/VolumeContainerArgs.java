@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bandWidthRateInMbps")
       private final @Nullable Output<Integer> bandWidthRateInMbps;
 
-    public Output<Integer> getBandWidthRateInMbps() {
-        return this.bandWidthRateInMbps == null ? Output.empty() : this.bandWidthRateInMbps;
+    public Output<Integer> bandWidthRateInMbps() {
+        return this.bandWidthRateInMbps == null ? Codegen.empty() : this.bandWidthRateInMbps;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bandwidthSettingId")
       private final @Nullable Output<String> bandwidthSettingId;
 
-    public Output<String> getBandwidthSettingId() {
-        return this.bandwidthSettingId == null ? Output.empty() : this.bandwidthSettingId;
+    public Output<String> bandwidthSettingId() {
+        return this.bandwidthSettingId == null ? Codegen.empty() : this.bandwidthSettingId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -57,8 +58,8 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encryptionKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey;
 
-    public Output<AsymmetricEncryptedSecretArgs> getEncryptionKey() {
-        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
+    public Output<AsymmetricEncryptedSecretArgs> encryptionKey() {
+        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<Kind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -90,7 +91,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +102,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountCredentialId", required=true)
       private final Output<String> storageAccountCredentialId;
 
-    public Output<String> getStorageAccountCredentialId() {
+    public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 
@@ -112,8 +113,8 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="volumeContainerName")
       private final @Nullable Output<String> volumeContainerName;
 
-    public Output<String> getVolumeContainerName() {
-        return this.volumeContainerName == null ? Output.empty() : this.volumeContainerName;
+    public Output<String> volumeContainerName() {
+        return this.volumeContainerName == null ? Codegen.empty() : this.volumeContainerName;
     }
 
     public VolumeContainerArgs(
@@ -138,15 +139,15 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VolumeContainerArgs() {
-        this.bandWidthRateInMbps = Output.empty();
-        this.bandwidthSettingId = Output.empty();
-        this.deviceName = Output.empty();
-        this.encryptionKey = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountCredentialId = Output.empty();
-        this.volumeContainerName = Output.empty();
+        this.bandWidthRateInMbps = Codegen.empty();
+        this.bandwidthSettingId = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.encryptionKey = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountCredentialId = Codegen.empty();
+        this.volumeContainerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder bandWidthRateInMbps(@Nullable Integer bandWidthRateInMbps) {
-            this.bandWidthRateInMbps = Output.ofNullable(bandWidthRateInMbps);
+            this.bandWidthRateInMbps = Codegen.ofNullable(bandWidthRateInMbps);
             return this;
         }
         public Builder bandwidthSettingId(@Nullable Output<String> bandwidthSettingId) {
@@ -198,7 +199,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder bandwidthSettingId(@Nullable String bandwidthSettingId) {
-            this.bandwidthSettingId = Output.ofNullable(bandwidthSettingId);
+            this.bandwidthSettingId = Codegen.ofNullable(bandwidthSettingId);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -214,7 +215,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder encryptionKey(@Nullable AsymmetricEncryptedSecretArgs encryptionKey) {
-            this.encryptionKey = Output.ofNullable(encryptionKey);
+            this.encryptionKey = Codegen.ofNullable(encryptionKey);
             return this;
         }
         public Builder kind(@Nullable Output<Kind> kind) {
@@ -222,7 +223,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {
@@ -254,7 +255,7 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder volumeContainerName(@Nullable String volumeContainerName) {
-            this.volumeContainerName = Output.ofNullable(volumeContainerName);
+            this.volumeContainerName = Codegen.ofNullable(volumeContainerName);
             return this;
         }        public VolumeContainerArgs build() {
             return new VolumeContainerArgs(bandWidthRateInMbps, bandwidthSettingId, deviceName, encryptionKey, kind, managerName, resourceGroupName, storageAccountCredentialId, volumeContainerName);

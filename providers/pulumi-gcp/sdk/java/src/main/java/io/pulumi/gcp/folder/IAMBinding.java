@@ -6,6 +6,7 @@ package io.pulumi.gcp.folder;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IAMBindingArgs;
 import io.pulumi.gcp.folder.inputs.IAMBindingState;
@@ -48,7 +49,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=IAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ IAMBindingCondition> condition;
 
-    public Output</* @Nullable */ IAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ IAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -62,7 +63,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the folder's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -76,7 +77,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
      * 
      */
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -102,7 +103,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -120,7 +121,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -146,7 +147,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMBinding(String name, IAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:folder/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:folder/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMBinding(String name, Output<String> id, @Nullable IAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

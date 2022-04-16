@@ -42,7 +42,7 @@ public final class InstanceServiceAccount {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
@@ -52,7 +52,7 @@ public final class InstanceServiceAccount {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
 

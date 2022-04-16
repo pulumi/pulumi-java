@@ -34,14 +34,14 @@ public final class CrossSiteAccessPoliciesResponse {
      * The content of clientaccesspolicy.xml used by Silverlight.
      * 
     */
-    public Optional<String> getClientAccessPolicy() {
+    public Optional<String> clientAccessPolicy() {
         return Optional.ofNullable(this.clientAccessPolicy);
     }
     /**
      * The content of crossdomain.xml used by Silverlight.
      * 
     */
-    public Optional<String> getCrossDomainPolicy() {
+    public Optional<String> crossDomainPolicy() {
         return Optional.ofNullable(this.crossDomainPolicy);
     }
 

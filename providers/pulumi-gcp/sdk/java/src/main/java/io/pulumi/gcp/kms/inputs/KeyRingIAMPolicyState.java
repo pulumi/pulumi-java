@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="keyRingId")
       private final @Nullable Output<String> keyRingId;
 
-    public Output<String> getKeyRingId() {
-        return this.keyRingId == null ? Output.empty() : this.keyRingId;
+    public Output<String> keyRingId() {
+        return this.keyRingId == null ? Codegen.empty() : this.keyRingId;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     public KeyRingIAMPolicyState(
@@ -61,9 +62,9 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     private KeyRingIAMPolicyState() {
-        this.etag = Output.empty();
-        this.keyRingId = Output.empty();
-        this.policyData = Output.empty();
+        this.etag = Codegen.empty();
+        this.keyRingId = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder keyRingId(@Nullable Output<String> keyRingId) {
@@ -103,7 +104,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keyRingId(@Nullable String keyRingId) {
-            this.keyRingId = Output.ofNullable(keyRingId);
+            this.keyRingId = Codegen.ofNullable(keyRingId);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -111,7 +112,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }        public KeyRingIAMPolicyState build() {
             return new KeyRingIAMPolicyState(etag, keyRingId, policyData);

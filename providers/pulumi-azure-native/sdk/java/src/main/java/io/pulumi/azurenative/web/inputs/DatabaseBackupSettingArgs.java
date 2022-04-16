@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.enums.DatabaseType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+    public Output<String> connectionString() {
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionStringName")
       private final @Nullable Output<String> connectionStringName;
 
-    public Output<String> getConnectionStringName() {
-        return this.connectionStringName == null ? Output.empty() : this.connectionStringName;
+    public Output<String> connectionStringName() {
+        return this.connectionStringName == null ? Codegen.empty() : this.connectionStringName;
     }
 
     /**
@@ -50,15 +51,15 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     @Import(name="databaseType", required=true)
       private final Output<Either<String,DatabaseType>> databaseType;
 
-    public Output<Either<String,DatabaseType>> getDatabaseType() {
+    public Output<Either<String,DatabaseType>> databaseType() {
         return this.databaseType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public DatabaseBackupSettingArgs(
@@ -73,10 +74,10 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     }
 
     private DatabaseBackupSettingArgs() {
-        this.connectionString = Output.empty();
-        this.connectionStringName = Output.empty();
-        this.databaseType = Output.empty();
-        this.name = Output.empty();
+        this.connectionString = Codegen.empty();
+        this.connectionStringName = Codegen.empty();
+        this.databaseType = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder connectionStringName(@Nullable Output<String> connectionStringName) {
@@ -118,7 +119,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionStringName(@Nullable String connectionStringName) {
-            this.connectionStringName = Output.ofNullable(connectionStringName);
+            this.connectionStringName = Codegen.ofNullable(connectionStringName);
             return this;
         }
         public Builder databaseType(Output<Either<String,DatabaseType>> databaseType) {
@@ -134,7 +135,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public DatabaseBackupSettingArgs build() {
             return new DatabaseBackupSettingArgs(connectionString, connectionStringName, databaseType, name);

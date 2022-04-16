@@ -9,6 +9,7 @@ import io.pulumi.aws.ram.inputs.ResourceShareAccepterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return The ARN of the resource share invitation.
      * 
      */
-    public Output<String> getInvitationArn() {
+    public Output<String> invitationArn() {
         return this.invitationArn;
     }
     /**
@@ -56,7 +57,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return The account ID of the receiver account which accepts the invitation.
      * 
      */
-    public Output<String> getReceiverAccountId() {
+    public Output<String> receiverAccountId() {
         return this.receiverAccountId;
     }
     /**
@@ -70,7 +71,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return A list of the resource ARNs shared via the resource share.
      * 
      */
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources;
     }
     /**
@@ -84,7 +85,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return The account ID of the sender account which submits the invitation.
      * 
      */
-    public Output<String> getSenderAccountId() {
+    public Output<String> senderAccountId() {
         return this.senderAccountId;
     }
     /**
@@ -98,7 +99,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return The ARN of the resource share.
      * 
      */
-    public Output<String> getShareArn() {
+    public Output<String> shareArn() {
         return this.shareArn;
     }
     /**
@@ -112,7 +113,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return The ID of the resource share as displayed in the console.
      * 
      */
-    public Output<String> getShareId() {
+    public Output<String> shareId() {
         return this.shareId;
     }
     /**
@@ -126,7 +127,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return The name of the resource share.
      * 
      */
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
     /**
@@ -140,7 +141,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @return The status of the resource share (ACTIVE, PENDING, FAILED, DELETING, DELETED).
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -166,7 +167,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceShareAccepter(String name, ResourceShareAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ram/resourceShareAccepter:ResourceShareAccepter", name, args == null ? ResourceShareAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ram/resourceShareAccepter:ResourceShareAccepter", name, args == null ? ResourceShareAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceShareAccepter(String name, Output<String> id, @Nullable ResourceShareAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -147,119 +147,119 @@ public final class GetApplicationResult {
      * Azure resource etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Azure resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Describes the managed identities for an Azure resource.
      * 
     */
-    public Optional<ManagedIdentityResponse> getIdentity() {
+    public Optional<ManagedIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * List of user assigned identities for the application, each mapped to a friendly name.
      * 
     */
-    public List<ApplicationUserAssignedIdentityResponse> getManagedIdentities() {
+    public List<ApplicationUserAssignedIdentityResponse> managedIdentities() {
         return this.managedIdentities == null ? List.of() : this.managedIdentities;
     }
     /**
      * The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
      * 
     */
-    public Optional<Double> getMaximumNodes() {
+    public Optional<Double> maximumNodes() {
         return Optional.ofNullable(this.maximumNodes);
     }
     /**
      * List of application capacity metric description.
      * 
     */
-    public List<ApplicationMetricDescriptionResponse> getMetrics() {
+    public List<ApplicationMetricDescriptionResponse> metrics() {
         return this.metrics == null ? List.of() : this.metrics;
     }
     /**
      * The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
      * 
     */
-    public Optional<Double> getMinimumNodes() {
+    public Optional<Double> minimumNodes() {
         return Optional.ofNullable(this.minimumNodes);
     }
     /**
      * Azure resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of application parameters with overridden values from their default values specified in the application manifest.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Remove the current application capacity settings.
      * 
     */
-    public Optional<Boolean> getRemoveApplicationCapacity() {
+    public Optional<Boolean> removeApplicationCapacity() {
         return Optional.ofNullable(this.removeApplicationCapacity);
     }
     /**
      * Azure resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The application type name as defined in the application manifest.
      * 
     */
-    public Optional<String> getTypeName() {
+    public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }
     /**
      * The version of the application type as defined in the application manifest.
      * 
     */
-    public Optional<String> getTypeVersion() {
+    public Optional<String> typeVersion() {
         return Optional.ofNullable(this.typeVersion);
     }
     /**
      * Describes the policy for a monitored application upgrade.
      * 
     */
-    public Optional<ApplicationUpgradePolicyResponse> getUpgradePolicy() {
+    public Optional<ApplicationUpgradePolicyResponse> upgradePolicy() {
         return Optional.ofNullable(this.upgradePolicy);
     }
 

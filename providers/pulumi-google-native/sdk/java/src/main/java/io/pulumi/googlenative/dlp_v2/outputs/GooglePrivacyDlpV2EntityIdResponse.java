@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
      * Composite key indicating which field contains the entity identifier.
      * 
     */
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 

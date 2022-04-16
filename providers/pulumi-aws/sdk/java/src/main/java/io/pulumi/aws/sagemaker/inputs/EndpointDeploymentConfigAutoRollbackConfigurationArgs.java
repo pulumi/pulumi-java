@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
     @Import(name="alarms")
       private final @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
 
-    public Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> getAlarms() {
-        return this.alarms == null ? Output.empty() : this.alarms;
+    public Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms() {
+        return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 
     public EndpointDeploymentConfigAutoRollbackConfigurationArgs(@Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms) {
@@ -31,7 +32,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
     }
 
     private EndpointDeploymentConfigAutoRollbackConfigurationArgs() {
-        this.alarms = Output.empty();
+        this.alarms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
             return this;
         }
         public Builder alarms(@Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs> alarms) {
-            this.alarms = Output.ofNullable(alarms);
+            this.alarms = Codegen.ofNullable(alarms);
             return this;
         }
         public Builder alarms(EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs... alarms) {

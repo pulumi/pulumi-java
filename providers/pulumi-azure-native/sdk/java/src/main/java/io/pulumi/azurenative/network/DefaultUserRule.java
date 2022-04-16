@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return A description for this rule. Restricted to 140 chars.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return The destination port ranges.
      * 
      */
-    public Output<List<String>> getDestinationPortRanges() {
+    public Output<List<String>> destinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
@@ -71,7 +72,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
-    public Output<List<AddressPrefixItemResponse>> getDestinations() {
+    public Output<List<AddressPrefixItemResponse>> destinations() {
         return this.destinations;
     }
     /**
@@ -85,7 +86,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return Indicates if the traffic matched against the rule in inbound or outbound.
      * 
      */
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
     /**
@@ -99,7 +100,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return A friendly name for the rule.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -113,7 +114,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -127,7 +128,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return Default rule flag.
      * 
      */
-    public Output</* @Nullable */ String> getFlag() {
+    public Output</* @Nullable */ String> flag() {
         return this.flag;
     }
     /**
@@ -143,7 +144,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * Expected value is 'Default'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -157,7 +158,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -171,7 +172,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return Network protocol this rule applies to.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -185,7 +186,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the security configuration user rule resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -199,7 +200,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return The source port ranges.
      * 
      */
-    public Output<List<String>> getSourcePortRanges() {
+    public Output<List<String>> sourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
@@ -213,7 +214,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return The CIDR or source IP ranges.
      * 
      */
-    public Output<List<AddressPrefixItemResponse>> getSources() {
+    public Output<List<AddressPrefixItemResponse>> sources() {
         return this.sources;
     }
     /**
@@ -227,7 +228,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -241,7 +242,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -267,7 +268,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultUserRule(String name, DefaultUserRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:DefaultUserRule", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:DefaultUserRule", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private DefaultUserRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

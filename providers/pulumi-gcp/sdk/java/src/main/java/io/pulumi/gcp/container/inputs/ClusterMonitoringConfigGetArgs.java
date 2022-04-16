@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ClusterMonitoringConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="enableComponents", required=true)
       private final Output<List<String>> enableComponents;
 
-    public Output<List<String>> getEnableComponents() {
+    public Output<List<String>> enableComponents() {
         return this.enableComponents;
     }
 
@@ -30,7 +31,7 @@ public final class ClusterMonitoringConfigGetArgs extends io.pulumi.resources.Re
     }
 
     private ClusterMonitoringConfigGetArgs() {
-        this.enableComponents = Output.empty();
+        this.enableComponents = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subnet", required=true)
       private final Output<String> subnet;
 
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet;
     }
 
@@ -35,7 +36,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="vpcName", required=true)
       private final Output<String> vpcName;
 
-    public Output<String> getVpcName() {
+    public Output<String> vpcName() {
         return this.vpcName;
     }
 
@@ -47,8 +48,8 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VpcPeeringConfigArgs() {
-        this.subnet = Output.empty();
-        this.vpcName = Output.empty();
+        this.subnet = Codegen.empty();
+        this.vpcName = Codegen.empty();
     }
 
     public static Builder builder() {

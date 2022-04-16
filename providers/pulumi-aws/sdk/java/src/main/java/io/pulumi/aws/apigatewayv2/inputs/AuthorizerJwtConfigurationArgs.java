@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> getAudiences() {
-        return this.audiences == null ? Output.empty() : this.audiences;
+    public Output<List<String>> audiences() {
+        return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
-        return this.issuer == null ? Output.empty() : this.issuer;
+    public Output<String> issuer() {
+        return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
     public AuthorizerJwtConfigurationArgs(
@@ -45,8 +46,8 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private AuthorizerJwtConfigurationArgs() {
-        this.audiences = Output.empty();
-        this.issuer = Output.empty();
+        this.audiences = Codegen.empty();
+        this.issuer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Output.ofNullable(audiences);
+            this.audiences = Codegen.ofNullable(audiences);
             return this;
         }
         public Builder audiences(String... audiences) {
@@ -87,7 +88,7 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Output.ofNullable(issuer);
+            this.issuer = Codegen.ofNullable(issuer);
             return this;
         }        public AuthorizerJwtConfigurationArgs build() {
             return new AuthorizerJwtConfigurationArgs(audiences, issuer);

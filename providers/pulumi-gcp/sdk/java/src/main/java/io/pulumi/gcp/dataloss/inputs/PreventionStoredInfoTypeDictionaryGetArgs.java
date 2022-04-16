@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryWordListGetArgs;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
     @Import(name="cloudStoragePath")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
 
-    public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> getCloudStoragePath() {
-        return this.cloudStoragePath == null ? Output.empty() : this.cloudStoragePath;
+    public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath() {
+        return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
     @Import(name="wordList")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
 
-    public Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> getWordList() {
-        return this.wordList == null ? Output.empty() : this.wordList;
+    public Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList() {
+        return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 
     public PreventionStoredInfoTypeDictionaryGetArgs(
@@ -47,8 +48,8 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
     }
 
     private PreventionStoredInfoTypeDictionaryGetArgs() {
-        this.cloudStoragePath = Output.empty();
-        this.wordList = Output.empty();
+        this.cloudStoragePath = Codegen.empty();
+        this.wordList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
             return this;
         }
         public Builder cloudStoragePath(@Nullable PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
-            this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
+            this.cloudStoragePath = Codegen.ofNullable(cloudStoragePath);
             return this;
         }
         public Builder wordList(@Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList) {
@@ -86,7 +87,7 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
             return this;
         }
         public Builder wordList(@Nullable PreventionStoredInfoTypeDictionaryWordListGetArgs wordList) {
-            this.wordList = Output.ofNullable(wordList);
+            this.wordList = Codegen.ofNullable(wordList);
             return this;
         }        public PreventionStoredInfoTypeDictionaryGetArgs build() {
             return new PreventionStoredInfoTypeDictionaryGetArgs(cloudStoragePath, wordList);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyBooleanPolicyGetArgs;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyListPolicyGetArgs;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyRestorePolicyGetArgs;
@@ -25,8 +26,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="booleanPolicy")
       private final @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
 
-    public Output<OrganizationPolicyBooleanPolicyGetArgs> getBooleanPolicy() {
-        return this.booleanPolicy == null ? Output.empty() : this.booleanPolicy;
+    public Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy() {
+        return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="constraint")
       private final @Nullable Output<String> constraint;
 
-    public Output<String> getConstraint() {
-        return this.constraint == null ? Output.empty() : this.constraint;
+    public Output<String> constraint() {
+        return this.constraint == null ? Codegen.empty() : this.constraint;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
-    public Output<String> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+    public Output<String> folder() {
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="listPolicy")
       private final @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
 
-    public Output<OrganizationPolicyListPolicyGetArgs> getListPolicy() {
-        return this.listPolicy == null ? Output.empty() : this.listPolicy;
+    public Output<OrganizationPolicyListPolicyGetArgs> listPolicy() {
+        return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="restorePolicy")
       private final @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
 
-    public Output<OrganizationPolicyRestorePolicyGetArgs> getRestorePolicy() {
-        return this.restorePolicy == null ? Output.empty() : this.restorePolicy;
+    public Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy() {
+        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public OrganizationPolicyState(
@@ -127,14 +128,14 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     }
 
     private OrganizationPolicyState() {
-        this.booleanPolicy = Output.empty();
-        this.constraint = Output.empty();
-        this.etag = Output.empty();
-        this.folder = Output.empty();
-        this.listPolicy = Output.empty();
-        this.restorePolicy = Output.empty();
-        this.updateTime = Output.empty();
-        this.version = Output.empty();
+        this.booleanPolicy = Codegen.empty();
+        this.constraint = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.listPolicy = Codegen.empty();
+        this.restorePolicy = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder booleanPolicy(@Nullable OrganizationPolicyBooleanPolicyGetArgs booleanPolicy) {
-            this.booleanPolicy = Output.ofNullable(booleanPolicy);
+            this.booleanPolicy = Codegen.ofNullable(booleanPolicy);
             return this;
         }
         public Builder constraint(@Nullable Output<String> constraint) {
@@ -184,7 +185,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder constraint(@Nullable String constraint) {
-            this.constraint = Output.ofNullable(constraint);
+            this.constraint = Codegen.ofNullable(constraint);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -192,7 +193,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder folder(@Nullable Output<String> folder) {
@@ -200,7 +201,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder folder(@Nullable String folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder listPolicy(@Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy) {
@@ -208,7 +209,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder listPolicy(@Nullable OrganizationPolicyListPolicyGetArgs listPolicy) {
-            this.listPolicy = Output.ofNullable(listPolicy);
+            this.listPolicy = Codegen.ofNullable(listPolicy);
             return this;
         }
         public Builder restorePolicy(@Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy) {
@@ -216,7 +217,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder restorePolicy(@Nullable OrganizationPolicyRestorePolicyGetArgs restorePolicy) {
-            this.restorePolicy = Output.ofNullable(restorePolicy);
+            this.restorePolicy = Codegen.ofNullable(restorePolicy);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -224,7 +225,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -232,7 +233,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public OrganizationPolicyState build() {
             return new OrganizationPolicyState(booleanPolicy, constraint, etag, folder, listPolicy, restorePolicy, updateTime, version);

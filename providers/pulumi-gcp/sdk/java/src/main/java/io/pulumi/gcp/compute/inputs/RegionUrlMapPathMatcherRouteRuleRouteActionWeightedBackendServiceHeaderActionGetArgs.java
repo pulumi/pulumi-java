@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs>> getRequestHeadersToAdds() {
-        return this.requestHeadersToAdds == null ? Output.empty() : this.requestHeadersToAdds;
+    public Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds() {
+        return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="requestHeadersToRemoves")
       private final @Nullable Output<List<String>> requestHeadersToRemoves;
 
-    public Output<List<String>> getRequestHeadersToRemoves() {
-        return this.requestHeadersToRemoves == null ? Output.empty() : this.requestHeadersToRemoves;
+    public Output<List<String>> requestHeadersToRemoves() {
+        return this.requestHeadersToRemoves == null ? Codegen.empty() : this.requestHeadersToRemoves;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="responseHeadersToAdds")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs>> getResponseHeadersToAdds() {
-        return this.responseHeadersToAdds == null ? Output.empty() : this.responseHeadersToAdds;
+    public Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds() {
+        return this.responseHeadersToAdds == null ? Codegen.empty() : this.responseHeadersToAdds;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="responseHeadersToRemoves")
       private final @Nullable Output<List<String>> responseHeadersToRemoves;
 
-    public Output<List<String>> getResponseHeadersToRemoves() {
-        return this.responseHeadersToRemoves == null ? Output.empty() : this.responseHeadersToRemoves;
+    public Output<List<String>> responseHeadersToRemoves() {
+        return this.responseHeadersToRemoves == null ? Codegen.empty() : this.responseHeadersToRemoves;
     }
 
     public RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs(
@@ -78,10 +79,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     }
 
     private RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs() {
-        this.requestHeadersToAdds = Output.empty();
-        this.requestHeadersToRemoves = Output.empty();
-        this.responseHeadersToAdds = Output.empty();
-        this.responseHeadersToRemoves = Output.empty();
+        this.requestHeadersToAdds = Codegen.empty();
+        this.requestHeadersToRemoves = Codegen.empty();
+        this.responseHeadersToAdds = Codegen.empty();
+        this.responseHeadersToRemoves = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             return this;
         }
         public Builder requestHeadersToAdds(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs> requestHeadersToAdds) {
-            this.requestHeadersToAdds = Output.ofNullable(requestHeadersToAdds);
+            this.requestHeadersToAdds = Codegen.ofNullable(requestHeadersToAdds);
             return this;
         }
         public Builder requestHeadersToAdds(RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs... requestHeadersToAdds) {
@@ -126,7 +127,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             return this;
         }
         public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
-            this.requestHeadersToRemoves = Output.ofNullable(requestHeadersToRemoves);
+            this.requestHeadersToRemoves = Codegen.ofNullable(requestHeadersToRemoves);
             return this;
         }
         public Builder requestHeadersToRemoves(String... requestHeadersToRemoves) {
@@ -137,7 +138,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             return this;
         }
         public Builder responseHeadersToAdds(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs> responseHeadersToAdds) {
-            this.responseHeadersToAdds = Output.ofNullable(responseHeadersToAdds);
+            this.responseHeadersToAdds = Codegen.ofNullable(responseHeadersToAdds);
             return this;
         }
         public Builder responseHeadersToAdds(RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddGetArgs... responseHeadersToAdds) {
@@ -148,7 +149,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             return this;
         }
         public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
-            this.responseHeadersToRemoves = Output.ofNullable(responseHeadersToRemoves);
+            this.responseHeadersToRemoves = Codegen.ofNullable(responseHeadersToRemoves);
             return this;
         }
         public Builder responseHeadersToRemoves(String... responseHeadersToRemoves) {

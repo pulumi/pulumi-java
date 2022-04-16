@@ -7,6 +7,7 @@ import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoExportPolicyArgs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoImportPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
     @Import(name="autoExportPolicy")
       private final @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy;
 
-    public Output<DataRepositoryAssociationS3AutoExportPolicyArgs> getAutoExportPolicy() {
-        return this.autoExportPolicy == null ? Output.empty() : this.autoExportPolicy;
+    public Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy() {
+        return this.autoExportPolicy == null ? Codegen.empty() : this.autoExportPolicy;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
     @Import(name="autoImportPolicy")
       private final @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy;
 
-    public Output<DataRepositoryAssociationS3AutoImportPolicyArgs> getAutoImportPolicy() {
-        return this.autoImportPolicy == null ? Output.empty() : this.autoImportPolicy;
+    public Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy() {
+        return this.autoImportPolicy == null ? Codegen.empty() : this.autoImportPolicy;
     }
 
     public DataRepositoryAssociationS3Args(
@@ -45,8 +46,8 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
     }
 
     private DataRepositoryAssociationS3Args() {
-        this.autoExportPolicy = Output.empty();
-        this.autoImportPolicy = Output.empty();
+        this.autoExportPolicy = Codegen.empty();
+        this.autoImportPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
             return this;
         }
         public Builder autoExportPolicy(@Nullable DataRepositoryAssociationS3AutoExportPolicyArgs autoExportPolicy) {
-            this.autoExportPolicy = Output.ofNullable(autoExportPolicy);
+            this.autoExportPolicy = Codegen.ofNullable(autoExportPolicy);
             return this;
         }
         public Builder autoImportPolicy(@Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy) {
@@ -84,7 +85,7 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
             return this;
         }
         public Builder autoImportPolicy(@Nullable DataRepositoryAssociationS3AutoImportPolicyArgs autoImportPolicy) {
-            this.autoImportPolicy = Output.ofNullable(autoImportPolicy);
+            this.autoImportPolicy = Codegen.ofNullable(autoImportPolicy);
             return this;
         }        public DataRepositoryAssociationS3Args build() {
             return new DataRepositoryAssociationS3Args(autoExportPolicy, autoImportPolicy);

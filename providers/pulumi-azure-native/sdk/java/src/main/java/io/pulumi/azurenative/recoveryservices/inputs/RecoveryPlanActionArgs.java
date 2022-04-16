@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.enums.ReplicationProtectedItemOper
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 
@@ -39,7 +40,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="failoverDirections", required=true)
       private final Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
 
-    public Output<List<Either<String,PossibleOperationsDirections>>> getFailoverDirections() {
+    public Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections() {
         return this.failoverDirections;
     }
 
@@ -50,7 +51,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="failoverTypes", required=true)
       private final Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
-    public Output<List<Either<String,ReplicationProtectedItemOperation>>> getFailoverTypes() {
+    public Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes() {
         return this.failoverTypes;
     }
 
@@ -64,9 +65,9 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RecoveryPlanActionArgs() {
-        this.actionName = Output.empty();
-        this.failoverDirections = Output.empty();
-        this.failoverTypes = Output.empty();
+        this.actionName = Codegen.empty();
+        this.failoverDirections = Codegen.empty();
+        this.failoverTypes = Codegen.empty();
     }
 
     public static Builder builder() {

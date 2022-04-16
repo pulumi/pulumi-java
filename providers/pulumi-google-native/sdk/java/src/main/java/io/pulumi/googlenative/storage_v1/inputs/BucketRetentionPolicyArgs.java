@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="effectiveTime")
       private final @Nullable Output<String> effectiveTime;
 
-    public Output<String> getEffectiveTime() {
-        return this.effectiveTime == null ? Output.empty() : this.effectiveTime;
+    public Output<String> effectiveTime() {
+        return this.effectiveTime == null ? Codegen.empty() : this.effectiveTime;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="isLocked")
       private final @Nullable Output<Boolean> isLocked;
 
-    public Output<Boolean> getIsLocked() {
-        return this.isLocked == null ? Output.empty() : this.isLocked;
+    public Output<Boolean> isLocked() {
+        return this.isLocked == null ? Codegen.empty() : this.isLocked;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="retentionPeriod")
       private final @Nullable Output<String> retentionPeriod;
 
-    public Output<String> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
+    public Output<String> retentionPeriod() {
+        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     public BucketRetentionPolicyArgs(
@@ -62,9 +63,9 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private BucketRetentionPolicyArgs() {
-        this.effectiveTime = Output.empty();
-        this.isLocked = Output.empty();
-        this.retentionPeriod = Output.empty();
+        this.effectiveTime = Codegen.empty();
+        this.isLocked = Codegen.empty();
+        this.retentionPeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder effectiveTime(@Nullable String effectiveTime) {
-            this.effectiveTime = Output.ofNullable(effectiveTime);
+            this.effectiveTime = Codegen.ofNullable(effectiveTime);
             return this;
         }
         public Builder isLocked(@Nullable Output<Boolean> isLocked) {
@@ -104,7 +105,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder isLocked(@Nullable Boolean isLocked) {
-            this.isLocked = Output.ofNullable(isLocked);
+            this.isLocked = Codegen.ofNullable(isLocked);
             return this;
         }
         public Builder retentionPeriod(@Nullable Output<String> retentionPeriod) {
@@ -112,7 +113,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder retentionPeriod(@Nullable String retentionPeriod) {
-            this.retentionPeriod = Output.ofNullable(retentionPeriod);
+            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
             return this;
         }        public BucketRetentionPolicyArgs build() {
             return new BucketRetentionPolicyArgs(effectiveTime, isLocked, retentionPeriod);

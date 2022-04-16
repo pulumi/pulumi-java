@@ -1,10 +1,10 @@
 package io.pulumi.deployment;
 
-import io.pulumi.Stack;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.exceptions.RunException;
+import io.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static java.util.Objects.requireNonNull;
@@ -37,7 +38,9 @@ public class DeploymentExceptionTest {
 
     @Test
     void testUrnFutureDoesNotHangOnException() {
-        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack.class).join())
+        mock.standardLogger.setLevel(Level.OFF);
+
+        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack::new).join())
                 .getRootCause()
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining(DeliberateException.class.getName());

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
     @Import(name="selectedSourceDatabases", required=true)
       private final Output<List<String>> selectedSourceDatabases;
 
-    public Output<List<String>> getSelectedSourceDatabases() {
+    public Output<List<String>> selectedSourceDatabases() {
         return this.selectedSourceDatabases;
     }
 
@@ -37,7 +38,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
     @Import(name="selectedTargetDatabases", required=true)
       private final Output<List<String>> selectedTargetDatabases;
 
-    public Output<List<String>> getSelectedTargetDatabases() {
+    public Output<List<String>> selectedTargetDatabases() {
         return this.selectedTargetDatabases;
     }
 
@@ -48,7 +49,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -59,7 +60,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -75,10 +76,10 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
     }
 
     private GetUserTablesSqlSyncTaskInputArgs() {
-        this.selectedSourceDatabases = Output.empty();
-        this.selectedTargetDatabases = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.selectedSourceDatabases = Codegen.empty();
+        this.selectedTargetDatabases = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {

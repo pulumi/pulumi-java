@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The immutable id of the team account which contains this workspace.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -56,7 +57,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The creation date of the machine learning workspace in ISO8601 format.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -70,7 +71,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The description of this workspace.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,7 +85,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -98,7 +99,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -112,7 +113,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +127,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -140,7 +141,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +155,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -168,7 +169,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The immutable id of this workspace.
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -194,7 +195,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningexperimentation:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningexperimentation:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

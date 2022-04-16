@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
     @Import(name="captureMode", required=true)
       private final Output<String> captureMode;
 
-    public Output<String> getCaptureMode() {
+    public Output<String> captureMode() {
         return this.captureMode;
     }
 
@@ -29,7 +30,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
     }
 
     private EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs() {
-        this.captureMode = Output.empty();
+        this.captureMode = Codegen.empty();
     }
 
     public static Builder builder() {

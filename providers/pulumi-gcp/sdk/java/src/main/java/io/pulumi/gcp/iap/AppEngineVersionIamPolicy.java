@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineVersionIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamPolicyState;
@@ -71,7 +72,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * @return Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -85,7 +86,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -101,7 +102,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -117,7 +118,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -131,7 +132,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * @return Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -145,7 +146,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * @return Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 
@@ -171,7 +172,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineVersionIamPolicy(String name, AppEngineVersionIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineVersionIamPolicy:AppEngineVersionIamPolicy", name, args == null ? AppEngineVersionIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/appEngineVersionIamPolicy:AppEngineVersionIamPolicy", name, args == null ? AppEngineVersionIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppEngineVersionIamPolicy(String name, Output<String> id, @Nullable AppEngineVersionIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

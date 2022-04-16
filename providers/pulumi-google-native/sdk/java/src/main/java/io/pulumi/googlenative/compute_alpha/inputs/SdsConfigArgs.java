@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.GrpcServiceConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grpcServiceConfig")
       private final @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
 
-    public Output<GrpcServiceConfigArgs> getGrpcServiceConfig() {
-        return this.grpcServiceConfig == null ? Output.empty() : this.grpcServiceConfig;
+    public Output<GrpcServiceConfigArgs> grpcServiceConfig() {
+        return this.grpcServiceConfig == null ? Codegen.empty() : this.grpcServiceConfig;
     }
 
     public SdsConfigArgs(@Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig) {
@@ -34,7 +35,7 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SdsConfigArgs() {
-        this.grpcServiceConfig = Output.empty();
+        this.grpcServiceConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grpcServiceConfig(@Nullable GrpcServiceConfigArgs grpcServiceConfig) {
-            this.grpcServiceConfig = Output.ofNullable(grpcServiceConfig);
+            this.grpcServiceConfig = Codegen.ofNullable(grpcServiceConfig);
             return this;
         }        public SdsConfigArgs build() {
             return new SdsConfigArgs(grpcServiceConfig);

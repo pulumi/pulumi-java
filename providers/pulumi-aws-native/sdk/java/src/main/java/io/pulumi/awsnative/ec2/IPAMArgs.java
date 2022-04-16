@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.IPAMIpamOperatingRegionArgs;
 import io.pulumi.awsnative.ec2.inputs.IPAMTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,8 +21,8 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -31,8 +32,8 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatingRegions")
       private final @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
 
-    public Output<List<IPAMIpamOperatingRegionArgs>> getOperatingRegions() {
-        return this.operatingRegions == null ? Output.empty() : this.operatingRegions;
+    public Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions() {
+        return this.operatingRegions == null ? Codegen.empty() : this.operatingRegions;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<IPAMTagArgs>> tags;
 
-    public Output<List<IPAMTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<IPAMTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IPAMArgs(
@@ -56,9 +57,9 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPAMArgs() {
-        this.description = Output.empty();
-        this.operatingRegions = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.operatingRegions = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder operatingRegions(@Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions) {
@@ -98,7 +99,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operatingRegions(@Nullable List<IPAMIpamOperatingRegionArgs> operatingRegions) {
-            this.operatingRegions = Output.ofNullable(operatingRegions);
+            this.operatingRegions = Codegen.ofNullable(operatingRegions);
             return this;
         }
         public Builder operatingRegions(IPAMIpamOperatingRegionArgs... operatingRegions) {
@@ -109,7 +110,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<IPAMTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(IPAMTagArgs... tags) {

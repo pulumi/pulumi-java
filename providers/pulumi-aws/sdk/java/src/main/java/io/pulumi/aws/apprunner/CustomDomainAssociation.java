@@ -10,6 +10,7 @@ import io.pulumi.aws.apprunner.outputs.CustomDomainAssociationCertificateValidat
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
      * @return A set of certificate CNAME records used for this domain name. See Certificate Validation Records below for more details.
      * 
      */
-    public Output<List<CustomDomainAssociationCertificateValidationRecord>> getCertificateValidationRecords() {
+    public Output<List<CustomDomainAssociationCertificateValidationRecord>> certificateValidationRecords() {
         return this.certificateValidationRecords;
     }
     /**
@@ -60,7 +61,7 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
      * @return The App Runner subdomain of the App Runner service. The custom domain name is mapped to this target name. Attribute only available if resource created (not imported) with this provider.
      * 
      */
-    public Output<String> getDnsTarget() {
+    public Output<String> dnsTarget() {
         return this.dnsTarget;
     }
     /**
@@ -74,7 +75,7 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
      * @return The custom domain endpoint to association. Specify a base domain e.g., `example.com` or a subdomain e.g., `subdomain.example.com`.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -88,7 +89,7 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
      * @return Whether to associate the subdomain with the App Runner service in addition to the base domain. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableWwwSubdomain() {
+    public Output</* @Nullable */ Boolean> enableWwwSubdomain() {
         return this.enableWwwSubdomain;
     }
     /**
@@ -102,7 +103,7 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
      * @return The ARN of the App Runner service.
      * 
      */
-    public Output<String> getServiceArn() {
+    public Output<String> serviceArn() {
         return this.serviceArn;
     }
     /**
@@ -116,7 +117,7 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
      * @return The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -142,7 +143,7 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomDomainAssociation(String name, CustomDomainAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apprunner/customDomainAssociation:CustomDomainAssociation", name, args == null ? CustomDomainAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apprunner/customDomainAssociation:CustomDomainAssociation", name, args == null ? CustomDomainAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomDomainAssociation(String name, Output<String> id, @Nullable CustomDomainAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

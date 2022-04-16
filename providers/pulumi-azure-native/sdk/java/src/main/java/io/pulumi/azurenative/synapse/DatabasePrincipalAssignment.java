@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -70,7 +71,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return The principal name
      * 
      */
-    public Output<String> getPrincipalName() {
+    public Output<String> principalName() {
         return this.principalName;
     }
     /**
@@ -84,7 +85,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return Principal type.
      * 
      */
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType;
     }
     /**
@@ -98,7 +99,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -112,7 +113,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return Database principal role.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -126,7 +127,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -140,7 +141,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return The tenant id of the principal
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -154,7 +155,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return The tenant name of the principal
      * 
      */
-    public Output<String> getTenantName() {
+    public Output<String> tenantName() {
         return this.tenantName;
     }
     /**
@@ -168,7 +169,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -194,7 +195,7 @@ public class DatabasePrincipalAssignment extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabasePrincipalAssignment(String name, DatabasePrincipalAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:DatabasePrincipalAssignment", name, args == null ? DatabasePrincipalAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:synapse:DatabasePrincipalAssignment", name, args == null ? DatabasePrincipalAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatabasePrincipalAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

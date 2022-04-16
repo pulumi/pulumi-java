@@ -13,6 +13,7 @@ import io.pulumi.azurenative.network.inputs.VpnClientRootCertificateArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,8 +35,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="aadAudience")
       private final @Nullable Output<String> aadAudience;
 
-    public Output<String> getAadAudience() {
-        return this.aadAudience == null ? Output.empty() : this.aadAudience;
+    public Output<String> aadAudience() {
+        return this.aadAudience == null ? Codegen.empty() : this.aadAudience;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="aadIssuer")
       private final @Nullable Output<String> aadIssuer;
 
-    public Output<String> getAadIssuer() {
-        return this.aadIssuer == null ? Output.empty() : this.aadIssuer;
+    public Output<String> aadIssuer() {
+        return this.aadIssuer == null ? Codegen.empty() : this.aadIssuer;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="aadTenant")
       private final @Nullable Output<String> aadTenant;
 
-    public Output<String> getAadTenant() {
-        return this.aadTenant == null ? Output.empty() : this.aadTenant;
+    public Output<String> aadTenant() {
+        return this.aadTenant == null ? Codegen.empty() : this.aadTenant;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="radiusServerAddress")
       private final @Nullable Output<String> radiusServerAddress;
 
-    public Output<String> getRadiusServerAddress() {
-        return this.radiusServerAddress == null ? Output.empty() : this.radiusServerAddress;
+    public Output<String> radiusServerAddress() {
+        return this.radiusServerAddress == null ? Codegen.empty() : this.radiusServerAddress;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
 
-    public Output<String> getRadiusServerSecret() {
-        return this.radiusServerSecret == null ? Output.empty() : this.radiusServerSecret;
+    public Output<String> radiusServerSecret() {
+        return this.radiusServerSecret == null ? Codegen.empty() : this.radiusServerSecret;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="radiusServers")
       private final @Nullable Output<List<RadiusServerArgs>> radiusServers;
 
-    public Output<List<RadiusServerArgs>> getRadiusServers() {
-        return this.radiusServers == null ? Output.empty() : this.radiusServers;
+    public Output<List<RadiusServerArgs>> radiusServers() {
+        return this.radiusServers == null ? Codegen.empty() : this.radiusServers;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="vpnAuthenticationTypes")
       private final @Nullable Output<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes;
 
-    public Output<List<Either<String,VpnAuthenticationType>>> getVpnAuthenticationTypes() {
-        return this.vpnAuthenticationTypes == null ? Output.empty() : this.vpnAuthenticationTypes;
+    public Output<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes() {
+        return this.vpnAuthenticationTypes == null ? Codegen.empty() : this.vpnAuthenticationTypes;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="vpnClientAddressPool")
       private final @Nullable Output<AddressSpaceArgs> vpnClientAddressPool;
 
-    public Output<AddressSpaceArgs> getVpnClientAddressPool() {
-        return this.vpnClientAddressPool == null ? Output.empty() : this.vpnClientAddressPool;
+    public Output<AddressSpaceArgs> vpnClientAddressPool() {
+        return this.vpnClientAddressPool == null ? Codegen.empty() : this.vpnClientAddressPool;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="vpnClientIpsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
-    public Output<List<IpsecPolicyArgs>> getVpnClientIpsecPolicies() {
-        return this.vpnClientIpsecPolicies == null ? Output.empty() : this.vpnClientIpsecPolicies;
+    public Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies() {
+        return this.vpnClientIpsecPolicies == null ? Codegen.empty() : this.vpnClientIpsecPolicies;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="vpnClientProtocols")
       private final @Nullable Output<List<Either<String,VpnClientProtocol>>> vpnClientProtocols;
 
-    public Output<List<Either<String,VpnClientProtocol>>> getVpnClientProtocols() {
-        return this.vpnClientProtocols == null ? Output.empty() : this.vpnClientProtocols;
+    public Output<List<Either<String,VpnClientProtocol>>> vpnClientProtocols() {
+        return this.vpnClientProtocols == null ? Codegen.empty() : this.vpnClientProtocols;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="vpnClientRevokedCertificates")
       private final @Nullable Output<List<VpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates;
 
-    public Output<List<VpnClientRevokedCertificateArgs>> getVpnClientRevokedCertificates() {
-        return this.vpnClientRevokedCertificates == null ? Output.empty() : this.vpnClientRevokedCertificates;
+    public Output<List<VpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates() {
+        return this.vpnClientRevokedCertificates == null ? Codegen.empty() : this.vpnClientRevokedCertificates;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="vpnClientRootCertificates")
       private final @Nullable Output<List<VpnClientRootCertificateArgs>> vpnClientRootCertificates;
 
-    public Output<List<VpnClientRootCertificateArgs>> getVpnClientRootCertificates() {
-        return this.vpnClientRootCertificates == null ? Output.empty() : this.vpnClientRootCertificates;
+    public Output<List<VpnClientRootCertificateArgs>> vpnClientRootCertificates() {
+        return this.vpnClientRootCertificates == null ? Codegen.empty() : this.vpnClientRootCertificates;
     }
 
     public VpnClientConfigurationArgs(
@@ -187,18 +188,18 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private VpnClientConfigurationArgs() {
-        this.aadAudience = Output.empty();
-        this.aadIssuer = Output.empty();
-        this.aadTenant = Output.empty();
-        this.radiusServerAddress = Output.empty();
-        this.radiusServerSecret = Output.empty();
-        this.radiusServers = Output.empty();
-        this.vpnAuthenticationTypes = Output.empty();
-        this.vpnClientAddressPool = Output.empty();
-        this.vpnClientIpsecPolicies = Output.empty();
-        this.vpnClientProtocols = Output.empty();
-        this.vpnClientRevokedCertificates = Output.empty();
-        this.vpnClientRootCertificates = Output.empty();
+        this.aadAudience = Codegen.empty();
+        this.aadIssuer = Codegen.empty();
+        this.aadTenant = Codegen.empty();
+        this.radiusServerAddress = Codegen.empty();
+        this.radiusServerSecret = Codegen.empty();
+        this.radiusServers = Codegen.empty();
+        this.vpnAuthenticationTypes = Codegen.empty();
+        this.vpnClientAddressPool = Codegen.empty();
+        this.vpnClientIpsecPolicies = Codegen.empty();
+        this.vpnClientProtocols = Codegen.empty();
+        this.vpnClientRevokedCertificates = Codegen.empty();
+        this.vpnClientRootCertificates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder aadAudience(@Nullable String aadAudience) {
-            this.aadAudience = Output.ofNullable(aadAudience);
+            this.aadAudience = Codegen.ofNullable(aadAudience);
             return this;
         }
         public Builder aadIssuer(@Nullable Output<String> aadIssuer) {
@@ -256,7 +257,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder aadIssuer(@Nullable String aadIssuer) {
-            this.aadIssuer = Output.ofNullable(aadIssuer);
+            this.aadIssuer = Codegen.ofNullable(aadIssuer);
             return this;
         }
         public Builder aadTenant(@Nullable Output<String> aadTenant) {
@@ -264,7 +265,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder aadTenant(@Nullable String aadTenant) {
-            this.aadTenant = Output.ofNullable(aadTenant);
+            this.aadTenant = Codegen.ofNullable(aadTenant);
             return this;
         }
         public Builder radiusServerAddress(@Nullable Output<String> radiusServerAddress) {
@@ -272,7 +273,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder radiusServerAddress(@Nullable String radiusServerAddress) {
-            this.radiusServerAddress = Output.ofNullable(radiusServerAddress);
+            this.radiusServerAddress = Codegen.ofNullable(radiusServerAddress);
             return this;
         }
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
@@ -280,7 +281,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
-            this.radiusServerSecret = Output.ofNullable(radiusServerSecret);
+            this.radiusServerSecret = Codegen.ofNullable(radiusServerSecret);
             return this;
         }
         public Builder radiusServers(@Nullable Output<List<RadiusServerArgs>> radiusServers) {
@@ -288,7 +289,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder radiusServers(@Nullable List<RadiusServerArgs> radiusServers) {
-            this.radiusServers = Output.ofNullable(radiusServers);
+            this.radiusServers = Codegen.ofNullable(radiusServers);
             return this;
         }
         public Builder radiusServers(RadiusServerArgs... radiusServers) {
@@ -299,7 +300,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpnAuthenticationTypes(@Nullable List<Either<String,VpnAuthenticationType>> vpnAuthenticationTypes) {
-            this.vpnAuthenticationTypes = Output.ofNullable(vpnAuthenticationTypes);
+            this.vpnAuthenticationTypes = Codegen.ofNullable(vpnAuthenticationTypes);
             return this;
         }
         public Builder vpnAuthenticationTypes(Either<String,VpnAuthenticationType>... vpnAuthenticationTypes) {
@@ -310,7 +311,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpnClientAddressPool(@Nullable AddressSpaceArgs vpnClientAddressPool) {
-            this.vpnClientAddressPool = Output.ofNullable(vpnClientAddressPool);
+            this.vpnClientAddressPool = Codegen.ofNullable(vpnClientAddressPool);
             return this;
         }
         public Builder vpnClientIpsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies) {
@@ -318,7 +319,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpnClientIpsecPolicies(@Nullable List<IpsecPolicyArgs> vpnClientIpsecPolicies) {
-            this.vpnClientIpsecPolicies = Output.ofNullable(vpnClientIpsecPolicies);
+            this.vpnClientIpsecPolicies = Codegen.ofNullable(vpnClientIpsecPolicies);
             return this;
         }
         public Builder vpnClientIpsecPolicies(IpsecPolicyArgs... vpnClientIpsecPolicies) {
@@ -329,7 +330,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpnClientProtocols(@Nullable List<Either<String,VpnClientProtocol>> vpnClientProtocols) {
-            this.vpnClientProtocols = Output.ofNullable(vpnClientProtocols);
+            this.vpnClientProtocols = Codegen.ofNullable(vpnClientProtocols);
             return this;
         }
         public Builder vpnClientProtocols(Either<String,VpnClientProtocol>... vpnClientProtocols) {
@@ -340,7 +341,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpnClientRevokedCertificates(@Nullable List<VpnClientRevokedCertificateArgs> vpnClientRevokedCertificates) {
-            this.vpnClientRevokedCertificates = Output.ofNullable(vpnClientRevokedCertificates);
+            this.vpnClientRevokedCertificates = Codegen.ofNullable(vpnClientRevokedCertificates);
             return this;
         }
         public Builder vpnClientRevokedCertificates(VpnClientRevokedCertificateArgs... vpnClientRevokedCertificates) {
@@ -351,7 +352,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpnClientRootCertificates(@Nullable List<VpnClientRootCertificateArgs> vpnClientRootCertificates) {
-            this.vpnClientRootCertificates = Output.ofNullable(vpnClientRootCertificates);
+            this.vpnClientRootCertificates = Codegen.ofNullable(vpnClientRootCertificates);
             return this;
         }
         public Builder vpnClientRootCertificates(VpnClientRootCertificateArgs... vpnClientRootCertificates) {

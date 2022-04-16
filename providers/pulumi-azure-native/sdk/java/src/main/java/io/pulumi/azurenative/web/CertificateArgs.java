@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="canonicalName")
       private final @Nullable Output<String> canonicalName;
 
-    public Output<String> getCanonicalName() {
-        return this.canonicalName == null ? Output.empty() : this.canonicalName;
+    public Output<String> canonicalName() {
+        return this.canonicalName == null ? Codegen.empty() : this.canonicalName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainValidationMethod")
       private final @Nullable Output<String> domainValidationMethod;
 
-    public Output<String> getDomainValidationMethod() {
-        return this.domainValidationMethod == null ? Output.empty() : this.domainValidationMethod;
+    public Output<String> domainValidationMethod() {
+        return this.domainValidationMethod == null ? Codegen.empty() : this.domainValidationMethod;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostNames")
       private final @Nullable Output<List<String>> hostNames;
 
-    public Output<List<String>> getHostNames() {
-        return this.hostNames == null ? Output.empty() : this.hostNames;
+    public Output<List<String>> hostNames() {
+        return this.hostNames == null ? Codegen.empty() : this.hostNames;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
+    public Output<String> keyVaultId() {
+        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
 
-    public Output<String> getKeyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Output.empty() : this.keyVaultSecretName;
+    public Output<String> keyVaultSecretName() {
+        return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pfxBlob")
       private final @Nullable Output<String> pfxBlob;
 
-    public Output<String> getPfxBlob() {
-        return this.pfxBlob == null ? Output.empty() : this.pfxBlob;
+    public Output<String> pfxBlob() {
+        return this.pfxBlob == null ? Codegen.empty() : this.pfxBlob;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -144,8 +145,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
 
-    public Output<String> getServerFarmId() {
-        return this.serverFarmId == null ? Output.empty() : this.serverFarmId;
+    public Output<String> serverFarmId() {
+        return this.serverFarmId == null ? Codegen.empty() : this.serverFarmId;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CertificateArgs(
@@ -189,19 +190,19 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.canonicalName = Output.empty();
-        this.domainValidationMethod = Output.empty();
-        this.hostNames = Output.empty();
-        this.keyVaultId = Output.empty();
-        this.keyVaultSecretName = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.pfxBlob = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverFarmId = Output.empty();
-        this.tags = Output.empty();
+        this.canonicalName = Codegen.empty();
+        this.domainValidationMethod = Codegen.empty();
+        this.hostNames = Codegen.empty();
+        this.keyVaultId = Codegen.empty();
+        this.keyVaultSecretName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.pfxBlob = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverFarmId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -253,7 +254,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder canonicalName(@Nullable String canonicalName) {
-            this.canonicalName = Output.ofNullable(canonicalName);
+            this.canonicalName = Codegen.ofNullable(canonicalName);
             return this;
         }
         public Builder domainValidationMethod(@Nullable Output<String> domainValidationMethod) {
@@ -261,7 +262,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainValidationMethod(@Nullable String domainValidationMethod) {
-            this.domainValidationMethod = Output.ofNullable(domainValidationMethod);
+            this.domainValidationMethod = Codegen.ofNullable(domainValidationMethod);
             return this;
         }
         public Builder hostNames(@Nullable Output<List<String>> hostNames) {
@@ -269,7 +270,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostNames(@Nullable List<String> hostNames) {
-            this.hostNames = Output.ofNullable(hostNames);
+            this.hostNames = Codegen.ofNullable(hostNames);
             return this;
         }
         public Builder hostNames(String... hostNames) {
@@ -280,7 +281,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Output.ofNullable(keyVaultId);
+            this.keyVaultId = Codegen.ofNullable(keyVaultId);
             return this;
         }
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
@@ -288,7 +289,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = Output.ofNullable(keyVaultSecretName);
+            this.keyVaultSecretName = Codegen.ofNullable(keyVaultSecretName);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -296,7 +297,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -304,7 +305,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -312,7 +313,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -320,7 +321,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder pfxBlob(@Nullable Output<String> pfxBlob) {
@@ -328,7 +329,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pfxBlob(@Nullable String pfxBlob) {
-            this.pfxBlob = Output.ofNullable(pfxBlob);
+            this.pfxBlob = Codegen.ofNullable(pfxBlob);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -344,7 +345,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverFarmId(@Nullable String serverFarmId) {
-            this.serverFarmId = Output.ofNullable(serverFarmId);
+            this.serverFarmId = Codegen.ofNullable(serverFarmId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -352,7 +353,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CertificateArgs build() {
             return new CertificateArgs(canonicalName, domainValidationMethod, hostNames, keyVaultId, keyVaultSecretName, kind, location, name, password, pfxBlob, resourceGroupName, serverFarmId, tags);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.azurestack.enums.Location;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="linkedSubscriptionId", required=true)
       private final Output<String> linkedSubscriptionId;
 
-    public Output<String> getLinkedSubscriptionId() {
+    public Output<String> linkedSubscriptionId() {
         return this.linkedSubscriptionId;
     }
 
@@ -34,8 +35,8 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="linkedSubscriptionName")
       private final @Nullable Output<String> linkedSubscriptionName;
 
-    public Output<String> getLinkedSubscriptionName() {
-        return this.linkedSubscriptionName == null ? Output.empty() : this.linkedSubscriptionName;
+    public Output<String> linkedSubscriptionName() {
+        return this.linkedSubscriptionName == null ? Codegen.empty() : this.linkedSubscriptionName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<Either<String,Location>> location;
 
-    public Output<Either<String,Location>> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<Either<String,Location>> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="registrationResourceId", required=true)
       private final Output<String> registrationResourceId;
 
-    public Output<String> getRegistrationResourceId() {
+    public Output<String> registrationResourceId() {
         return this.registrationResourceId;
     }
 
@@ -67,7 +68,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -85,11 +86,11 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinkedSubscriptionArgs() {
-        this.linkedSubscriptionId = Output.empty();
-        this.linkedSubscriptionName = Output.empty();
-        this.location = Output.empty();
-        this.registrationResourceId = Output.empty();
-        this.resourceGroup = Output.empty();
+        this.linkedSubscriptionId = Codegen.empty();
+        this.linkedSubscriptionName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.registrationResourceId = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder linkedSubscriptionName(@Nullable String linkedSubscriptionName) {
-            this.linkedSubscriptionName = Output.ofNullable(linkedSubscriptionName);
+            this.linkedSubscriptionName = Codegen.ofNullable(linkedSubscriptionName);
             return this;
         }
         public Builder location(@Nullable Output<Either<String,Location>> location) {
@@ -141,7 +142,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable Either<String,Location> location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder registrationResourceId(Output<String> registrationResourceId) {

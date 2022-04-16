@@ -6,6 +6,7 @@ package io.pulumi.googlenative.policysimulator_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.policysimulator_v1.FolderReplayArgs;
 import io.pulumi.googlenative.policysimulator_v1.outputs.GoogleCloudPolicysimulatorV1ReplayConfigResponse;
@@ -33,7 +34,7 @@ public class FolderReplay extends io.pulumi.resources.CustomResource {
      * @return The configuration used for the `Replay`.
      * 
      */
-    public Output<GoogleCloudPolicysimulatorV1ReplayConfigResponse> getConfig() {
+    public Output<GoogleCloudPolicysimulatorV1ReplayConfigResponse> config() {
         return this.config;
     }
     /**
@@ -47,7 +48,7 @@ public class FolderReplay extends io.pulumi.resources.CustomResource {
      * @return The resource name of the `Replay`, which has the following format: `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where `{resource-id}` is the ID of the project, folder, or organization that owns the Replay. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -61,7 +62,7 @@ public class FolderReplay extends io.pulumi.resources.CustomResource {
      * @return Summary statistics about the replayed log entries.
      * 
      */
-    public Output<GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse> getResultsSummary() {
+    public Output<GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse> resultsSummary() {
         return this.resultsSummary;
     }
     /**
@@ -75,7 +76,7 @@ public class FolderReplay extends io.pulumi.resources.CustomResource {
      * @return The current state of the `Replay`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -101,7 +102,7 @@ public class FolderReplay extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderReplay(String name, FolderReplayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:policysimulator/v1:FolderReplay", name, args == null ? FolderReplayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:policysimulator/v1:FolderReplay", name, args == null ? FolderReplayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FolderReplay(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

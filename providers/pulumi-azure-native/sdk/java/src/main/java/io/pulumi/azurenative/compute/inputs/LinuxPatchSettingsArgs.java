@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.enums.LinuxVMGuestPatchMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="assessmentMode")
       private final @Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
 
-    public Output<Either<String,LinuxPatchAssessmentMode>> getAssessmentMode() {
-        return this.assessmentMode == null ? Output.empty() : this.assessmentMode;
+    public Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode() {
+        return this.assessmentMode == null ? Codegen.empty() : this.assessmentMode;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="patchMode")
       private final @Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode;
 
-    public Output<Either<String,LinuxVMGuestPatchMode>> getPatchMode() {
-        return this.patchMode == null ? Output.empty() : this.patchMode;
+    public Output<Either<String,LinuxVMGuestPatchMode>> patchMode() {
+        return this.patchMode == null ? Codegen.empty() : this.patchMode;
     }
 
     public LinuxPatchSettingsArgs(
@@ -51,8 +52,8 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinuxPatchSettingsArgs() {
-        this.assessmentMode = Output.empty();
-        this.patchMode = Output.empty();
+        this.assessmentMode = Codegen.empty();
+        this.patchMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder assessmentMode(@Nullable Either<String,LinuxPatchAssessmentMode> assessmentMode) {
-            this.assessmentMode = Output.ofNullable(assessmentMode);
+            this.assessmentMode = Codegen.ofNullable(assessmentMode);
             return this;
         }
         public Builder patchMode(@Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode) {
@@ -90,7 +91,7 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder patchMode(@Nullable Either<String,LinuxVMGuestPatchMode> patchMode) {
-            this.patchMode = Output.ofNullable(patchMode);
+            this.patchMode = Codegen.ofNullable(patchMode);
             return this;
         }        public LinuxPatchSettingsArgs build() {
             return new LinuxPatchSettingsArgs(assessmentMode, patchMode);

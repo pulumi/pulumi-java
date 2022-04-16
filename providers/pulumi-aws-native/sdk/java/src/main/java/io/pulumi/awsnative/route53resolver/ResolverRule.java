@@ -11,6 +11,7 @@ import io.pulumi.awsnative.route53resolver.outputs.ResolverRuleTargetAddress;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the resolver rule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -60,7 +61,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return The name for the Resolver rule
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return The ID of the endpoint that the rule is associated with.
      * 
      */
-    public Output</* @Nullable */ String> getResolverEndpointId() {
+    public Output</* @Nullable */ String> resolverEndpointId() {
         return this.resolverEndpointId;
     }
     /**
@@ -88,7 +89,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return The ID of the endpoint that the rule is associated with.
      * 
      */
-    public Output<String> getResolverRuleId() {
+    public Output<String> resolverRuleId() {
         return this.resolverRuleId;
     }
     /**
@@ -102,7 +103,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return When you want to forward DNS queries for specified domain name to resolvers on your network, specify FORWARD. When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify SYSTEM.
      * 
      */
-    public Output<ResolverRuleRuleType> getRuleType() {
+    public Output<ResolverRuleRuleType> ruleType() {
         return this.ruleType;
     }
     /**
@@ -116,7 +117,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ResolverRuleTag>> getTags() {
+    public Output</* @Nullable */ List<ResolverRuleTag>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +131,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @return An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
      * 
      */
-    public Output</* @Nullable */ List<ResolverRuleTargetAddress>> getTargetIps() {
+    public Output</* @Nullable */ List<ResolverRuleTargetAddress>> targetIps() {
         return this.targetIps;
     }
 
@@ -156,7 +157,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverRule(String name, ResolverRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:ResolverRule", name, args == null ? ResolverRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53resolver:ResolverRule", name, args == null ? ResolverRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

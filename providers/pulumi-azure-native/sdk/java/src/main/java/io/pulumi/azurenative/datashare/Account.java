@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Time at which the account was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -58,7 +59,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Identity Info on the Account
      * 
      */
-    public Output<IdentityResponse> getIdentity() {
+    public Output<IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -72,7 +73,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Location of the azure resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the Account
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -128,7 +129,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Tags on the azure resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -156,7 +157,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Email of the user who created the resource
      * 
      */
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail;
     }
     /**
@@ -170,7 +171,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Name of the user who created the resource
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -196,7 +197,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

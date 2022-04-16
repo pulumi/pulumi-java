@@ -17,14 +17,14 @@ public final class GetHistoryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="historyId", required=true)
       private final String historyId;
 
-    public String getHistoryId() {
+    public String historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

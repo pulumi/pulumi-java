@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.IntegrationResponseState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
      * 
      */
-    public Output</* @Nullable */ String> getContentHandling() {
+    public Output</* @Nullable */ String> contentHandling() {
         return this.contentHandling;
     }
     /**
@@ -57,7 +58,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -71,7 +72,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The API resource ID
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -87,7 +88,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseParameters() {
+    public Output</* @Nullable */ Map<String,String>> responseParameters() {
         return this.responseParameters;
     }
     /**
@@ -101,7 +102,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return A map specifying the templates used to transform the integration response body
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseTemplates() {
+    public Output</* @Nullable */ Map<String,String>> responseTemplates() {
         return this.responseTemplates;
     }
     /**
@@ -115,7 +116,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -135,7 +136,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
      * 
      */
-    public Output</* @Nullable */ String> getSelectionPattern() {
+    public Output</* @Nullable */ String> selectionPattern() {
         return this.selectionPattern;
     }
     /**
@@ -149,7 +150,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The HTTP status code
      * 
      */
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 
@@ -175,7 +176,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationResponse(String name, IntegrationResponseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/integrationResponse:IntegrationResponse", name, args == null ? IntegrationResponseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/integrationResponse:IntegrationResponse", name, args == null ? IntegrationResponseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IntegrationResponse(String name, Output<String> id, @Nullable IntegrationResponseState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

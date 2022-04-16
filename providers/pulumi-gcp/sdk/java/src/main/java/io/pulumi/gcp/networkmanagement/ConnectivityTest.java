@@ -6,6 +6,7 @@ package io.pulumi.gcp.networkmanagement;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkmanagement.ConnectivityTestArgs;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestState;
@@ -61,7 +62,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +104,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ConnectivityTestDestination> getDestination() {
+    public Output<ConnectivityTestDestination> destination() {
         return this.destination;
     }
     /**
@@ -117,7 +118,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -131,7 +132,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return Unique name for the connectivity test.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +148,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -161,7 +162,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return IP Protocol of the test. When not provided, "TCP" is assumed.
      * 
      */
-    public Output</* @Nullable */ String> getProtocol() {
+    public Output</* @Nullable */ String> protocol() {
         return this.protocol;
     }
     /**
@@ -179,7 +180,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * boundaries.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRelatedProjects() {
+    public Output</* @Nullable */ List<String>> relatedProjects() {
         return this.relatedProjects;
     }
     /**
@@ -229,7 +230,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ConnectivityTestSource> getSource() {
+    public Output<ConnectivityTestSource> source() {
         return this.source;
     }
 
@@ -255,7 +256,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectivityTest(String name, ConnectivityTestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:networkmanagement/connectivityTest:ConnectivityTest", name, args == null ? ConnectivityTestArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:networkmanagement/connectivityTest:ConnectivityTest", name, args == null ? ConnectivityTestArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectivityTest(String name, Output<String> id, @Nullable ConnectivityTestState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     @Import(name="accessPointId")
       private final @Nullable Output<String> accessPointId;
 
-    public Output<String> getAccessPointId() {
-        return this.accessPointId == null ? Output.empty() : this.accessPointId;
+    public Output<String> accessPointId() {
+        return this.accessPointId == null ? Codegen.empty() : this.accessPointId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     @Import(name="iam")
       private final @Nullable Output<String> iam;
 
-    public Output<String> getIam() {
-        return this.iam == null ? Output.empty() : this.iam;
+    public Output<String> iam() {
+        return this.iam == null ? Codegen.empty() : this.iam;
     }
 
     public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(
@@ -44,8 +45,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     }
 
     private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs() {
-        this.accessPointId = Output.empty();
-        this.iam = Output.empty();
+        this.accessPointId = Codegen.empty();
+        this.iam = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
             return this;
         }
         public Builder accessPointId(@Nullable String accessPointId) {
-            this.accessPointId = Output.ofNullable(accessPointId);
+            this.accessPointId = Codegen.ofNullable(accessPointId);
             return this;
         }
         public Builder iam(@Nullable Output<String> iam) {
@@ -83,7 +84,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
             return this;
         }
         public Builder iam(@Nullable String iam) {
-            this.iam = Output.ofNullable(iam);
+            this.iam = Codegen.ofNullable(iam);
             return this;
         }        public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs build() {
             return new TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(accessPointId, iam);

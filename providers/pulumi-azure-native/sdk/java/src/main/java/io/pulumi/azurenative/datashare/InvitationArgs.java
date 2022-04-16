@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+    public Output<String> expirationDate() {
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="invitationName")
       private final @Nullable Output<String> invitationName;
 
-    public Output<String> getInvitationName() {
-        return this.invitationName == null ? Output.empty() : this.invitationName;
+    public Output<String> invitationName() {
+        return this.invitationName == null ? Codegen.empty() : this.invitationName;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +66,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -76,8 +77,8 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetActiveDirectoryId")
       private final @Nullable Output<String> targetActiveDirectoryId;
 
-    public Output<String> getTargetActiveDirectoryId() {
-        return this.targetActiveDirectoryId == null ? Output.empty() : this.targetActiveDirectoryId;
+    public Output<String> targetActiveDirectoryId() {
+        return this.targetActiveDirectoryId == null ? Codegen.empty() : this.targetActiveDirectoryId;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetEmail")
       private final @Nullable Output<String> targetEmail;
 
-    public Output<String> getTargetEmail() {
-        return this.targetEmail == null ? Output.empty() : this.targetEmail;
+    public Output<String> targetEmail() {
+        return this.targetEmail == null ? Codegen.empty() : this.targetEmail;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetObjectId")
       private final @Nullable Output<String> targetObjectId;
 
-    public Output<String> getTargetObjectId() {
-        return this.targetObjectId == null ? Output.empty() : this.targetObjectId;
+    public Output<String> targetObjectId() {
+        return this.targetObjectId == null ? Codegen.empty() : this.targetObjectId;
     }
 
     public InvitationArgs(
@@ -124,14 +125,14 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InvitationArgs() {
-        this.accountName = Output.empty();
-        this.expirationDate = Output.empty();
-        this.invitationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareName = Output.empty();
-        this.targetActiveDirectoryId = Output.empty();
-        this.targetEmail = Output.empty();
-        this.targetObjectId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.invitationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.targetActiveDirectoryId = Codegen.empty();
+        this.targetEmail = Codegen.empty();
+        this.targetObjectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder invitationName(@Nullable Output<String> invitationName) {
@@ -189,7 +190,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invitationName(@Nullable String invitationName) {
-            this.invitationName = Output.ofNullable(invitationName);
+            this.invitationName = Codegen.ofNullable(invitationName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -213,7 +214,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
-            this.targetActiveDirectoryId = Output.ofNullable(targetActiveDirectoryId);
+            this.targetActiveDirectoryId = Codegen.ofNullable(targetActiveDirectoryId);
             return this;
         }
         public Builder targetEmail(@Nullable Output<String> targetEmail) {
@@ -221,7 +222,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetEmail(@Nullable String targetEmail) {
-            this.targetEmail = Output.ofNullable(targetEmail);
+            this.targetEmail = Codegen.ofNullable(targetEmail);
             return this;
         }
         public Builder targetObjectId(@Nullable Output<String> targetObjectId) {
@@ -229,7 +230,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetObjectId(@Nullable String targetObjectId) {
-            this.targetObjectId = Output.ofNullable(targetObjectId);
+            this.targetObjectId = Codegen.ofNullable(targetObjectId);
             return this;
         }        public InvitationArgs build() {
             return new InvitationArgs(accountName, expirationDate, invitationName, resourceGroupName, shareName, targetActiveDirectoryId, targetEmail, targetObjectId);

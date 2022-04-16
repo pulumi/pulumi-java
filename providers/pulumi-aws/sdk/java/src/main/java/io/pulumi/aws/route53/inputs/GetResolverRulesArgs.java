@@ -21,7 +21,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ownerId")
       private final @Nullable String ownerId;
 
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
     }
 
@@ -32,7 +32,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resolverEndpointId")
       private final @Nullable String resolverEndpointId;
 
-    public Optional<String> getResolverEndpointId() {
+    public Optional<String> resolverEndpointId() {
         return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
     }
 
@@ -43,7 +43,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ruleType")
       private final @Nullable String ruleType;
 
-    public Optional<String> getRuleType() {
+    public Optional<String> ruleType() {
         return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
     }
 
@@ -54,7 +54,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="shareStatus")
       private final @Nullable String shareStatus;
 
-    public Optional<String> getShareStatus() {
+    public Optional<String> shareStatus() {
         return this.shareStatus == null ? Optional.empty() : Optional.ofNullable(this.shareStatus);
     }
 

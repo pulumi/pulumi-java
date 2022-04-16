@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.TargetRegionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,8 +32,8 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> getEndOfLifeDate() {
-        return this.endOfLifeDate == null ? Output.empty() : this.endOfLifeDate;
+    public Output<String> endOfLifeDate() {
+        return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
 
-    public Output<Boolean> getExcludeFromLatest() {
-        return this.excludeFromLatest == null ? Output.empty() : this.excludeFromLatest;
+    public Output<Boolean> excludeFromLatest() {
+        return this.excludeFromLatest == null ? Codegen.empty() : this.excludeFromLatest;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Output.empty() : this.replicaCount;
+    public Output<Integer> replicaCount() {
+        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountType>> storageAccountType() {
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="targetRegions")
       private final @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
-    public Output<List<TargetRegionArgs>> getTargetRegions() {
-        return this.targetRegions == null ? Output.empty() : this.targetRegions;
+    public Output<List<TargetRegionArgs>> targetRegions() {
+        return this.targetRegions == null ? Codegen.empty() : this.targetRegions;
     }
 
     public GalleryImageVersionPublishingProfileArgs(
@@ -93,11 +94,11 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     }
 
     private GalleryImageVersionPublishingProfileArgs() {
-        this.endOfLifeDate = Output.empty();
-        this.excludeFromLatest = Output.empty();
-        this.replicaCount = Output.empty();
-        this.storageAccountType = Output.empty();
-        this.targetRegions = Output.empty();
+        this.endOfLifeDate = Codegen.empty();
+        this.excludeFromLatest = Codegen.empty();
+        this.replicaCount = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
+        this.targetRegions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
+            this.endOfLifeDate = Codegen.ofNullable(endOfLifeDate);
             return this;
         }
         public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
@@ -141,7 +142,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
-            this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
+            this.excludeFromLatest = Codegen.ofNullable(excludeFromLatest);
             return this;
         }
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
@@ -149,7 +150,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Output.ofNullable(replicaCount);
+            this.replicaCount = Codegen.ofNullable(replicaCount);
             return this;
         }
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
@@ -157,7 +158,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }
         public Builder targetRegions(@Nullable Output<List<TargetRegionArgs>> targetRegions) {
@@ -165,7 +166,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder targetRegions(@Nullable List<TargetRegionArgs> targetRegions) {
-            this.targetRegions = Output.ofNullable(targetRegions);
+            this.targetRegions = Codegen.ofNullable(targetRegions);
             return this;
         }
         public Builder targetRegions(TargetRegionArgs... targetRegions) {

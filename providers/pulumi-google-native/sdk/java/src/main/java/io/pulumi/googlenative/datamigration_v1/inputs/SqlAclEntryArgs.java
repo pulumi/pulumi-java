@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+    public Output<String> expireTime() {
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<String> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public SqlAclEntryArgs(
@@ -74,10 +75,10 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlAclEntryArgs() {
-        this.expireTime = Output.empty();
-        this.label = Output.empty();
-        this.ttl = Output.empty();
-        this.value = Output.empty();
+        this.expireTime = Codegen.empty();
+        this.label = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -119,7 +120,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder ttl(@Nullable Output<String> ttl) {
@@ -127,7 +128,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -135,7 +136,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public SqlAclEntryArgs build() {
             return new SqlAclEntryArgs(expireTime, label, ttl, value);

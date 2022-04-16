@@ -6,6 +6,7 @@ package io.pulumi.googlenative.speech_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.speech_v1.CustomClassArgs;
 import io.pulumi.googlenative.speech_v1.outputs.ClassItemResponse;
@@ -30,7 +31,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * @return If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
      * 
      */
-    public Output<String> getCustomClassId() {
+    public Output<String> customClassId() {
         return this.customClassId;
     }
     /**
@@ -44,7 +45,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * @return A collection of class items.
      * 
      */
-    public Output<List<ClassItemResponse>> getItems() {
+    public Output<List<ClassItemResponse>> items() {
         return this.items;
     }
     /**
@@ -58,7 +59,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * @return The resource name of the custom class.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -84,7 +85,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomClass(String name, CustomClassArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:speech/v1:CustomClass", name, args == null ? CustomClassArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:speech/v1:CustomClass", name, args == null ? CustomClassArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomClass(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventgrid.enums.IpActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<Either<String,IpActionType>> action;
 
-    public Output<Either<String,IpActionType>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<Either<String,IpActionType>> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;
 
-    public Output<String> getIpMask() {
-        return this.ipMask == null ? Output.empty() : this.ipMask;
+    public Output<String> ipMask() {
+        return this.ipMask == null ? Codegen.empty() : this.ipMask;
     }
 
     public InboundIpRuleArgs(
@@ -46,8 +47,8 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InboundIpRuleArgs() {
-        this.action = Output.empty();
-        this.ipMask = Output.empty();
+        this.action = Codegen.empty();
+        this.ipMask = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable Either<String,IpActionType> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder ipMask(@Nullable Output<String> ipMask) {
@@ -85,7 +86,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Output.ofNullable(ipMask);
+            this.ipMask = Codegen.ofNullable(ipMask);
             return this;
         }        public InboundIpRuleArgs build() {
             return new InboundIpRuleArgs(action, ipMask);

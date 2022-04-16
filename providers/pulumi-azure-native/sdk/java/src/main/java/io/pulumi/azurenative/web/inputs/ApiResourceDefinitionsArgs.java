@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     @Import(name="modifiedSwaggerUrl")
       private final @Nullable Output<String> modifiedSwaggerUrl;
 
-    public Output<String> getModifiedSwaggerUrl() {
-        return this.modifiedSwaggerUrl == null ? Output.empty() : this.modifiedSwaggerUrl;
+    public Output<String> modifiedSwaggerUrl() {
+        return this.modifiedSwaggerUrl == null ? Codegen.empty() : this.modifiedSwaggerUrl;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     @Import(name="originalSwaggerUrl")
       private final @Nullable Output<String> originalSwaggerUrl;
 
-    public Output<String> getOriginalSwaggerUrl() {
-        return this.originalSwaggerUrl == null ? Output.empty() : this.originalSwaggerUrl;
+    public Output<String> originalSwaggerUrl() {
+        return this.originalSwaggerUrl == null ? Codegen.empty() : this.originalSwaggerUrl;
     }
 
     public ApiResourceDefinitionsArgs(
@@ -48,8 +49,8 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     }
 
     private ApiResourceDefinitionsArgs() {
-        this.modifiedSwaggerUrl = Output.empty();
-        this.originalSwaggerUrl = Output.empty();
+        this.modifiedSwaggerUrl = Codegen.empty();
+        this.originalSwaggerUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder modifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
-            this.modifiedSwaggerUrl = Output.ofNullable(modifiedSwaggerUrl);
+            this.modifiedSwaggerUrl = Codegen.ofNullable(modifiedSwaggerUrl);
             return this;
         }
         public Builder originalSwaggerUrl(@Nullable Output<String> originalSwaggerUrl) {
@@ -87,7 +88,7 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
-            this.originalSwaggerUrl = Output.ofNullable(originalSwaggerUrl);
+            this.originalSwaggerUrl = Codegen.ofNullable(originalSwaggerUrl);
             return this;
         }        public ApiResourceDefinitionsArgs build() {
             return new ApiResourceDefinitionsArgs(modifiedSwaggerUrl, originalSwaggerUrl);

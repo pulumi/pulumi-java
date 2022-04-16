@@ -7,6 +7,7 @@ import io.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationGetArg
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiMappingSelectionExpression")
       private final @Nullable Output<String> apiMappingSelectionExpression;
 
-    public Output<String> getApiMappingSelectionExpression() {
-        return this.apiMappingSelectionExpression == null ? Output.empty() : this.apiMappingSelectionExpression;
+    public Output<String> apiMappingSelectionExpression() {
+        return this.apiMappingSelectionExpression == null ? Codegen.empty() : this.apiMappingSelectionExpression;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainNameConfiguration")
       private final @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
 
-    public Output<DomainNameDomainNameConfigurationGetArgs> getDomainNameConfiguration() {
-        return this.domainNameConfiguration == null ? Output.empty() : this.domainNameConfiguration;
+    public Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration() {
+        return this.domainNameConfiguration == null ? Codegen.empty() : this.domainNameConfiguration;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
-    public Output<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
-        return this.mutualTlsAuthentication == null ? Output.empty() : this.mutualTlsAuthentication;
+    public Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication() {
+        return this.mutualTlsAuthentication == null ? Codegen.empty() : this.mutualTlsAuthentication;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public DomainNameState(
@@ -112,13 +113,13 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainNameState() {
-        this.apiMappingSelectionExpression = Output.empty();
-        this.arn = Output.empty();
-        this.domainName = Output.empty();
-        this.domainNameConfiguration = Output.empty();
-        this.mutualTlsAuthentication = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.apiMappingSelectionExpression = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.domainNameConfiguration = Codegen.empty();
+        this.mutualTlsAuthentication = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiMappingSelectionExpression(@Nullable String apiMappingSelectionExpression) {
-            this.apiMappingSelectionExpression = Output.ofNullable(apiMappingSelectionExpression);
+            this.apiMappingSelectionExpression = Codegen.ofNullable(apiMappingSelectionExpression);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -166,7 +167,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -174,7 +175,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder domainNameConfiguration(@Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
@@ -182,7 +183,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainNameConfiguration(@Nullable DomainNameDomainNameConfigurationGetArgs domainNameConfiguration) {
-            this.domainNameConfiguration = Output.ofNullable(domainNameConfiguration);
+            this.domainNameConfiguration = Codegen.ofNullable(domainNameConfiguration);
             return this;
         }
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
@@ -190,7 +191,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
-            this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
+            this.mutualTlsAuthentication = Codegen.ofNullable(mutualTlsAuthentication);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -198,7 +199,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -206,7 +207,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public DomainNameState build() {
             return new DomainNameState(apiMappingSelectionExpression, arn, domainName, domainNameConfiguration, mutualTlsAuthentication, tags, tagsAll);

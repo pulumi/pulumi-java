@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +50,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
      * 
      */
-    public Output</* @Nullable */ String> getArguments() {
+    public Output</* @Nullable */ String> arguments() {
         return this.arguments;
     }
     /**
@@ -63,7 +64,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Azure PowerShell module version to be used.
      * 
      */
-    public Output<String> getAzPowerShellVersion() {
+    public Output<String> azPowerShellVersion() {
         return this.azPowerShellVersion;
     }
     /**
@@ -77,7 +78,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
      * 
      */
-    public Output</* @Nullable */ String> getCleanupPreference() {
+    public Output</* @Nullable */ String> cleanupPreference() {
         return this.cleanupPreference;
     }
     /**
@@ -91,7 +92,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Container settings.
      * 
      */
-    public Output</* @Nullable */ ContainerConfigurationResponse> getContainerSettings() {
+    public Output</* @Nullable */ ContainerConfigurationResponse> containerSettings() {
         return this.containerSettings;
     }
     /**
@@ -105,7 +106,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return The environment variables to pass over to the script.
      * 
      */
-    public Output</* @Nullable */ List<EnvironmentVariableResponse>> getEnvironmentVariables() {
+    public Output</* @Nullable */ List<EnvironmentVariableResponse>> environmentVariables() {
         return this.environmentVariables;
     }
     /**
@@ -119,7 +120,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
      * 
      */
-    public Output</* @Nullable */ String> getForceUpdateTag() {
+    public Output</* @Nullable */ String> forceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
@@ -133,7 +134,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -149,7 +150,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * Expected value is 'AzurePowerShell'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -163,7 +164,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return The location of the ACI and the storage account for the deployment script.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -177,7 +178,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -191,7 +192,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return List of script outputs.
      * 
      */
-    public Output<Map<String,Object>> getOutputs() {
+    public Output<Map<String,Object>> outputs() {
         return this.outputs;
     }
     /**
@@ -205,7 +206,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Uri for the script. This is the entry point for the external script.
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryScriptUri() {
+    public Output</* @Nullable */ String> primaryScriptUri() {
         return this.primaryScriptUri;
     }
     /**
@@ -219,7 +220,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return State of the script execution. This only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -233,7 +234,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
      * 
      */
-    public Output<String> getRetentionInterval() {
+    public Output<String> retentionInterval() {
         return this.retentionInterval;
     }
     /**
@@ -247,7 +248,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Script body.
      * 
      */
-    public Output</* @Nullable */ String> getScriptContent() {
+    public Output</* @Nullable */ String> scriptContent() {
         return this.scriptContent;
     }
     /**
@@ -261,7 +262,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Contains the results of script execution.
      * 
      */
-    public Output<ScriptStatusResponse> getStatus() {
+    public Output<ScriptStatusResponse> status() {
         return this.status;
     }
     /**
@@ -275,7 +276,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Storage Account settings.
      * 
      */
-    public Output</* @Nullable */ StorageAccountConfigurationResponse> getStorageAccountSettings() {
+    public Output</* @Nullable */ StorageAccountConfigurationResponse> storageAccountSettings() {
         return this.storageAccountSettings;
     }
     /**
@@ -289,7 +290,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Supporting files for the external script.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSupportingScriptUris() {
+    public Output</* @Nullable */ List<String>> supportingScriptUris() {
         return this.supportingScriptUris;
     }
     /**
@@ -303,7 +304,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -317,7 +318,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -331,7 +332,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
      * 
      */
-    public Output</* @Nullable */ String> getTimeout() {
+    public Output</* @Nullable */ String> timeout() {
         return this.timeout;
     }
     /**
@@ -345,7 +346,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -371,7 +372,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AzurePowerShellScript(String name, AzurePowerShellScriptArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:AzurePowerShellScript", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:resources:AzurePowerShellScript", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AzurePowerShellScript(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

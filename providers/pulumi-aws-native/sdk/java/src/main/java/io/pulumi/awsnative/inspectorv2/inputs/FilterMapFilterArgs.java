@@ -6,6 +6,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 import io.pulumi.awsnative.inspectorv2.enums.FilterMapComparison;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,22 +19,22 @@ public final class FilterMapFilterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="comparison", required=true)
       private final Output<FilterMapComparison> comparison;
 
-    public Output<FilterMapComparison> getComparison() {
+    public Output<FilterMapComparison> comparison() {
         return this.comparison;
     }
 
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public FilterMapFilterArgs(
@@ -46,9 +47,9 @@ public final class FilterMapFilterArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FilterMapFilterArgs() {
-        this.comparison = Output.empty();
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.comparison = Codegen.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class FilterMapFilterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -96,7 +97,7 @@ public final class FilterMapFilterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public FilterMapFilterArgs build() {
             return new FilterMapFilterArgs(comparison, key, value);

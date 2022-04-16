@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -31,7 +32,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -43,8 +44,8 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     }
 
     private EventSourceMappingSourceAccessConfigurationArgs() {
-        this.type = Output.empty();
-        this.uri = Output.empty();
+        this.type = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

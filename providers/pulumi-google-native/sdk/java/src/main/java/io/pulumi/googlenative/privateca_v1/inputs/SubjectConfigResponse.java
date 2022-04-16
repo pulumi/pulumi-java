@@ -24,7 +24,7 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="subject", required=true)
       private final SubjectResponse subject;
 
-    public SubjectResponse getSubject() {
+    public SubjectResponse subject() {
         return this.subject;
     }
 
@@ -35,7 +35,7 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="subjectAltName", required=true)
       private final SubjectAltNamesResponse subjectAltName;
 
-    public SubjectAltNamesResponse getSubjectAltName() {
+    public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 

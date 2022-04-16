@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkJobLoggingConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> getArchiveUris() {
-        return this.archiveUris == null ? Output.empty() : this.archiveUris;
+    public Output<List<String>> archiveUris() {
+        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> getFileUris() {
-        return this.fileUris == null ? Output.empty() : this.fileUris;
+    public Output<List<String>> fileUris() {
+        return this.fileUris == null ? Codegen.empty() : this.fileUris;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+    public Output<List<String>> jarFileUris() {
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="loggingConfig")
       private final @Nullable Output<WorkflowTemplateJobSparkJobLoggingConfigGetArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobSparkJobLoggingConfigGetArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+    public Output<WorkflowTemplateJobSparkJobLoggingConfigGetArgs> loggingConfig() {
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="mainClass")
       private final @Nullable Output<String> mainClass;
 
-    public Output<String> getMainClass() {
-        return this.mainClass == null ? Output.empty() : this.mainClass;
+    public Output<String> mainClass() {
+        return this.mainClass == null ? Codegen.empty() : this.mainClass;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="mainJarFileUri")
       private final @Nullable Output<String> mainJarFileUri;
 
-    public Output<String> getMainJarFileUri() {
-        return this.mainJarFileUri == null ? Output.empty() : this.mainJarFileUri;
+    public Output<String> mainJarFileUri() {
+        return this.mainJarFileUri == null ? Codegen.empty() : this.mainJarFileUri;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public WorkflowTemplateJobSparkJobGetArgs(
@@ -125,14 +126,14 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     }
 
     private WorkflowTemplateJobSparkJobGetArgs() {
-        this.archiveUris = Output.empty();
-        this.args = Output.empty();
-        this.fileUris = Output.empty();
-        this.jarFileUris = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.mainClass = Output.empty();
-        this.mainJarFileUri = Output.empty();
-        this.properties = Output.empty();
+        this.archiveUris = Codegen.empty();
+        this.args = Codegen.empty();
+        this.fileUris = Codegen.empty();
+        this.jarFileUris = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.mainClass = Codegen.empty();
+        this.mainJarFileUri = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Output.ofNullable(archiveUris);
+            this.archiveUris = Codegen.ofNullable(archiveUris);
             return this;
         }
         public Builder archiveUris(String... archiveUris) {
@@ -185,7 +186,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -196,7 +197,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Output.ofNullable(fileUris);
+            this.fileUris = Codegen.ofNullable(fileUris);
             return this;
         }
         public Builder fileUris(String... fileUris) {
@@ -207,7 +208,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -218,7 +219,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkJobLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder mainClass(@Nullable Output<String> mainClass) {
@@ -226,7 +227,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder mainClass(@Nullable String mainClass) {
-            this.mainClass = Output.ofNullable(mainClass);
+            this.mainClass = Codegen.ofNullable(mainClass);
             return this;
         }
         public Builder mainJarFileUri(@Nullable Output<String> mainJarFileUri) {
@@ -234,7 +235,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
-            this.mainJarFileUri = Output.ofNullable(mainJarFileUri);
+            this.mainJarFileUri = Codegen.ofNullable(mainJarFileUri);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -242,7 +243,7 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public WorkflowTemplateJobSparkJobGetArgs build() {
             return new WorkflowTemplateJobSparkJobGetArgs(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);

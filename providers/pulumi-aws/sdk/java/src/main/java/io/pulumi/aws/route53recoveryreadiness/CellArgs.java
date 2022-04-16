@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cellName", required=true)
       private final Output<String> cellName;
 
-    public Output<String> getCellName() {
+    public Output<String> cellName() {
         return this.cellName;
     }
 
@@ -34,8 +35,8 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
-    public Output<List<String>> getCells() {
-        return this.cells == null ? Output.empty() : this.cells;
+    public Output<List<String>> cells() {
+        return this.cells == null ? Codegen.empty() : this.cells;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CellArgs(
@@ -59,9 +60,9 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CellArgs() {
-        this.cellName = Output.empty();
-        this.cells = Output.empty();
-        this.tags = Output.empty();
+        this.cellName = Codegen.empty();
+        this.cells = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cells(@Nullable List<String> cells) {
-            this.cells = Output.ofNullable(cells);
+            this.cells = Codegen.ofNullable(cells);
             return this;
         }
         public Builder cells(String... cells) {
@@ -112,7 +113,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CellArgs build() {
             return new CellArgs(cellName, cells, tags);

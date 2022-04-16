@@ -6,6 +6,7 @@ package io.pulumi.googlenative.pubsub_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1.SchemaArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
      * 
      */
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
     /**
@@ -42,7 +43,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Name of the schema. Format is `projects/{project}/schemas/{schema}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The type of the schema definition.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,7 +83,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schema(String name, @Nullable SchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:pubsub/v1:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:pubsub/v1:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Schema(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

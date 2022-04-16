@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dbformysql.enums.AdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
 
-    public Output<Either<String,AdministratorType>> getAdministratorType() {
+    public Output<Either<String,AdministratorType>> administratorType() {
         return this.administratorType;
     }
 
@@ -33,7 +34,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="login", required=true)
       private final Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
 
@@ -44,7 +45,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +56,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -66,7 +67,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="sid", required=true)
       private final Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
 
@@ -77,7 +78,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -97,12 +98,12 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServerAdministratorArgs() {
-        this.administratorType = Output.empty();
-        this.login = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.sid = Output.empty();
-        this.tenantId = Output.empty();
+        this.administratorType = Codegen.empty();
+        this.login = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.sid = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {

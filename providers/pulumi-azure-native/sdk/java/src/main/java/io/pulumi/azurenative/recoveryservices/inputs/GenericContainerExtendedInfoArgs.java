@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.ContainerIdentityInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     @Import(name="containerIdentityInfo")
       private final @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
 
-    public Output<ContainerIdentityInfoArgs> getContainerIdentityInfo() {
-        return this.containerIdentityInfo == null ? Output.empty() : this.containerIdentityInfo;
+    public Output<ContainerIdentityInfoArgs> containerIdentityInfo() {
+        return this.containerIdentityInfo == null ? Codegen.empty() : this.containerIdentityInfo;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     @Import(name="rawCertData")
       private final @Nullable Output<String> rawCertData;
 
-    public Output<String> getRawCertData() {
-        return this.rawCertData == null ? Output.empty() : this.rawCertData;
+    public Output<String> rawCertData() {
+        return this.rawCertData == null ? Codegen.empty() : this.rawCertData;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     @Import(name="serviceEndpoints")
       private final @Nullable Output<Map<String,String>> serviceEndpoints;
 
-    public Output<Map<String,String>> getServiceEndpoints() {
-        return this.serviceEndpoints == null ? Output.empty() : this.serviceEndpoints;
+    public Output<Map<String,String>> serviceEndpoints() {
+        return this.serviceEndpoints == null ? Codegen.empty() : this.serviceEndpoints;
     }
 
     public GenericContainerExtendedInfoArgs(
@@ -63,9 +64,9 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     }
 
     private GenericContainerExtendedInfoArgs() {
-        this.containerIdentityInfo = Output.empty();
-        this.rawCertData = Output.empty();
-        this.serviceEndpoints = Output.empty();
+        this.containerIdentityInfo = Codegen.empty();
+        this.rawCertData = Codegen.empty();
+        this.serviceEndpoints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoArgs containerIdentityInfo) {
-            this.containerIdentityInfo = Output.ofNullable(containerIdentityInfo);
+            this.containerIdentityInfo = Codegen.ofNullable(containerIdentityInfo);
             return this;
         }
         public Builder rawCertData(@Nullable Output<String> rawCertData) {
@@ -105,7 +106,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = Output.ofNullable(rawCertData);
+            this.rawCertData = Codegen.ofNullable(rawCertData);
             return this;
         }
         public Builder serviceEndpoints(@Nullable Output<Map<String,String>> serviceEndpoints) {
@@ -113,7 +114,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
-            this.serviceEndpoints = Output.ofNullable(serviceEndpoints);
+            this.serviceEndpoints = Codegen.ofNullable(serviceEndpoints);
             return this;
         }        public GenericContainerExtendedInfoArgs build() {
             return new GenericContainerExtendedInfoArgs(containerIdentityInfo, rawCertData, serviceEndpoints);

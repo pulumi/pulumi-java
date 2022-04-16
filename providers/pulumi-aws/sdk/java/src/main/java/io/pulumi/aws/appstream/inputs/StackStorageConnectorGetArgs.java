@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
     @Import(name="connectorType", required=true)
       private final Output<String> connectorType;
 
-    public Output<String> getConnectorType() {
+    public Output<String> connectorType() {
         return this.connectorType;
     }
 
@@ -33,8 +34,8 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
-        return this.domains == null ? Output.empty() : this.domains;
+    public Output<List<String>> domains() {
+        return this.domains == null ? Codegen.empty() : this.domains;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
     @Import(name="resourceIdentifier")
       private final @Nullable Output<String> resourceIdentifier;
 
-    public Output<String> getResourceIdentifier() {
-        return this.resourceIdentifier == null ? Output.empty() : this.resourceIdentifier;
+    public Output<String> resourceIdentifier() {
+        return this.resourceIdentifier == null ? Codegen.empty() : this.resourceIdentifier;
     }
 
     public StackStorageConnectorGetArgs(
@@ -58,9 +59,9 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
     }
 
     private StackStorageConnectorGetArgs() {
-        this.connectorType = Output.empty();
-        this.domains = Output.empty();
-        this.resourceIdentifier = Output.empty();
+        this.connectorType = Codegen.empty();
+        this.domains = Codegen.empty();
+        this.resourceIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Output.ofNullable(domains);
+            this.domains = Codegen.ofNullable(domains);
             return this;
         }
         public Builder domains(String... domains) {
@@ -111,7 +112,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
-            this.resourceIdentifier = Output.ofNullable(resourceIdentifier);
+            this.resourceIdentifier = Codegen.ofNullable(resourceIdentifier);
             return this;
         }        public StackStorageConnectorGetArgs build() {
             return new StackStorageConnectorGetArgs(connectorType, domains, resourceIdentifier);

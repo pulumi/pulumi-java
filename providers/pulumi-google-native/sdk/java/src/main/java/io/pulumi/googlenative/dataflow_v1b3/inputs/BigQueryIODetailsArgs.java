@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+    public Output<String> dataset() {
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<String> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+    public Output<String> table() {
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     public BigQueryIODetailsArgs(
@@ -74,10 +75,10 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BigQueryIODetailsArgs() {
-        this.dataset = Output.empty();
-        this.project = Output.empty();
-        this.query = Output.empty();
-        this.table = Output.empty();
+        this.dataset = Codegen.empty();
+        this.project = Codegen.empty();
+        this.query = Codegen.empty();
+        this.table = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -119,7 +120,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -127,7 +128,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder table(@Nullable Output<String> table) {
@@ -135,7 +136,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder table(@Nullable String table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }        public BigQueryIODetailsArgs build() {
             return new BigQueryIODetailsArgs(dataset, project, query, table);

@@ -39,21 +39,21 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
      * Name of the category.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Name of the portal.
      * 
     */
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
     /**
      * Time the category was last modified in milliseconds since epoch.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

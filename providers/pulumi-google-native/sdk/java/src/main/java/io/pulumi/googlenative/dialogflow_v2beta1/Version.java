@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.VersionArgs;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +45,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Optional. The developer-provided description of this version.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The status of this version. This field is read-only and cannot be set by create and update methods.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -86,7 +87,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
      * 
      */
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber;
     }
 
@@ -112,7 +113,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Version(String name, @Nullable VersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2beta1:Version", name, args == null ? VersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2beta1:Version", name, args == null ? VersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Version(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

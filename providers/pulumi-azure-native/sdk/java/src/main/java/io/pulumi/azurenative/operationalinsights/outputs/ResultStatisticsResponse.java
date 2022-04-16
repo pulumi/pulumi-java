@@ -33,14 +33,14 @@ public final class ResultStatisticsResponse {
      * The number of rows that were returned by the search job.
      * 
     */
-    public Integer getIngestedRecords() {
+    public Integer ingestedRecords() {
         return this.ingestedRecords;
     }
     /**
      * Search job completion percentage.
      * 
     */
-    public Double getProgress() {
+    public Double progress() {
         return this.progress;
     }
 

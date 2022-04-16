@@ -6,6 +6,7 @@ package io.pulumi.azurenative.attestation;
 import io.pulumi.azurenative.attestation.inputs.AttestationServiceCreationSpecificParamsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     @Import(name="properties", required=true)
       private final Output<AttestationServiceCreationSpecificParamsArgs> properties;
 
-    public Output<AttestationServiceCreationSpecificParamsArgs> getProperties() {
+    public Output<AttestationServiceCreationSpecificParamsArgs> properties() {
         return this.properties;
     }
 
@@ -45,8 +46,8 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+    public Output<String> providerName() {
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AttestationProviderArgs(
@@ -85,11 +86,11 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     }
 
     private AttestationProviderArgs() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.providerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<AttestationServiceCreationSpecificParamsArgs> properties) {
@@ -141,7 +142,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -157,7 +158,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AttestationProviderArgs build() {
             return new AttestationProviderArgs(location, properties, providerName, resourceGroupName, tags);

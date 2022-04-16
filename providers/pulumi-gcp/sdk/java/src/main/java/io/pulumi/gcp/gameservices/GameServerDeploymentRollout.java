@@ -6,6 +6,7 @@ package io.pulumi.gcp.gameservices;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerDeploymentRolloutArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutState;
@@ -60,7 +61,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
-    public Output<String> getDefaultGameServerConfig() {
+    public Output<String> defaultGameServerConfig() {
         return this.defaultGameServerConfig;
     }
     /**
@@ -74,7 +75,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * @return The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -96,7 +97,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GameServerDeploymentRolloutGameServerConfigOverride>> getGameServerConfigOverrides() {
+    public Output</* @Nullable */ List<GameServerDeploymentRolloutGameServerConfigOverride>> gameServerConfigOverrides() {
         return this.gameServerConfigOverrides;
     }
     /**
@@ -112,7 +113,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -154,7 +155,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerDeploymentRollout(String name, GameServerDeploymentRolloutArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, args == null ? GameServerDeploymentRolloutArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, args == null ? GameServerDeploymentRolloutArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GameServerDeploymentRollout(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

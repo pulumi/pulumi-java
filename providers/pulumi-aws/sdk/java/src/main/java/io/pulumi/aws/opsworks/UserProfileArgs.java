@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowSelfManagement")
       private final @Nullable Output<Boolean> allowSelfManagement;
 
-    public Output<Boolean> getAllowSelfManagement() {
-        return this.allowSelfManagement == null ? Output.empty() : this.allowSelfManagement;
+    public Output<Boolean> allowSelfManagement() {
+        return this.allowSelfManagement == null ? Codegen.empty() : this.allowSelfManagement;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKey")
       private final @Nullable Output<String> sshPublicKey;
 
-    public Output<String> getSshPublicKey() {
-        return this.sshPublicKey == null ? Output.empty() : this.sshPublicKey;
+    public Output<String> sshPublicKey() {
+        return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sshUsername", required=true)
       private final Output<String> sshUsername;
 
-    public Output<String> getSshUsername() {
+    public Output<String> sshUsername() {
         return this.sshUsername;
     }
 
@@ -55,7 +56,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 
@@ -71,10 +72,10 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserProfileArgs() {
-        this.allowSelfManagement = Output.empty();
-        this.sshPublicKey = Output.empty();
-        this.sshUsername = Output.empty();
-        this.userArn = Output.empty();
+        this.allowSelfManagement = Codegen.empty();
+        this.sshPublicKey = Codegen.empty();
+        this.sshUsername = Codegen.empty();
+        this.userArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
-            this.allowSelfManagement = Output.ofNullable(allowSelfManagement);
+            this.allowSelfManagement = Codegen.ofNullable(allowSelfManagement);
             return this;
         }
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
@@ -116,7 +117,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Output.ofNullable(sshPublicKey);
+            this.sshPublicKey = Codegen.ofNullable(sshPublicKey);
             return this;
         }
         public Builder sshUsername(Output<String> sshUsername) {

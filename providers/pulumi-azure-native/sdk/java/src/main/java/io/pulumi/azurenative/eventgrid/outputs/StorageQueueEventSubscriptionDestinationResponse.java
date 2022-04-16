@@ -43,21 +43,21 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
      * Expected value is 'StorageQueue'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The name of the Storage queue under a storage account that is the destination of an event subscription.
      * 
     */
-    public Optional<String> getQueueName() {
+    public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
      * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

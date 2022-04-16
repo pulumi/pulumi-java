@@ -9,6 +9,7 @@ import io.pulumi.aws.mskconnect.inputs.WorkerConfigurationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * @return the Amazon Resource Name (ARN) of the worker configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * @return A summary description of the worker configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +69,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * @return an ID of the latest successfully created revision of the worker configuration.
      * 
      */
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision;
     }
     /**
@@ -82,7 +83,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the worker configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -96,7 +97,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.
      * 
      */
-    public Output<String> getPropertiesFileContent() {
+    public Output<String> propertiesFileContent() {
         return this.propertiesFileContent;
     }
 
@@ -122,7 +123,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkerConfiguration(String name, WorkerConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mskconnect/workerConfiguration:WorkerConfiguration", name, args == null ? WorkerConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mskconnect/workerConfiguration:WorkerConfiguration", name, args == null ? WorkerConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkerConfiguration(String name, Output<String> id, @Nullable WorkerConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

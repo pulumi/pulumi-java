@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
     @Import(name="imageRepositoryUrl", required=true)
       private final Output<String> imageRepositoryUrl;
 
-    public Output<String> getImageRepositoryUrl() {
+    public Output<String> imageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
 
@@ -37,8 +38,8 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
     @Import(name="password")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> password;
 
-    public Output<AsymmetricEncryptedSecretArgs> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<AsymmetricEncryptedSecretArgs> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -62,9 +63,9 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
     }
 
     private ImageRepositoryCredentialArgs() {
-        this.imageRepositoryUrl = Output.empty();
-        this.password = Output.empty();
-        this.userName = Output.empty();
+        this.imageRepositoryUrl = Codegen.empty();
+        this.password = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder password(@Nullable AsymmetricEncryptedSecretArgs password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder userName(Output<String> userName) {

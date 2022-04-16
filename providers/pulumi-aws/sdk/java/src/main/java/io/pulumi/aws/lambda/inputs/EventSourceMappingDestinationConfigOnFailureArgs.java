@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EventSourceMappingDestinationConfigOnFailureArgs extends io.p
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
@@ -29,7 +30,7 @@ public final class EventSourceMappingDestinationConfigOnFailureArgs extends io.p
     }
 
     private EventSourceMappingDestinationConfigOnFailureArgs() {
-        this.destinationArn = Output.empty();
+        this.destinationArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="directory")
       private final @Nullable Output<String> directory;
 
-    public Output<String> getDirectory() {
-        return this.directory == null ? Output.empty() : this.directory;
+    public Output<String> directory() {
+        return this.directory == null ? Codegen.empty() : this.directory;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repository", required=true)
       private final Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -47,8 +48,8 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revision")
       private final @Nullable Output<String> revision;
 
-    public Output<String> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+    public Output<String> revision() {
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     public GitRepoVolumeArgs(
@@ -61,9 +62,9 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GitRepoVolumeArgs() {
-        this.directory = Output.empty();
-        this.repository = Output.empty();
-        this.revision = Output.empty();
+        this.directory = Codegen.empty();
+        this.repository = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directory(@Nullable String directory) {
-            this.directory = Output.ofNullable(directory);
+            this.directory = Codegen.ofNullable(directory);
             return this;
         }
         public Builder repository(Output<String> repository) {
@@ -111,7 +112,7 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revision(@Nullable String revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }        public GitRepoVolumeArgs build() {
             return new GitRepoVolumeArgs(directory, repository, revision);

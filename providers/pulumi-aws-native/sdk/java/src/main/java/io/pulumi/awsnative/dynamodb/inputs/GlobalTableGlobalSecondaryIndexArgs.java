@@ -8,6 +8,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableProjectionArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableWriteProvisionedThroughputSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,29 +22,29 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="keySchema", required=true)
       private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
-    public Output<List<GlobalTableKeySchemaArgs>> getKeySchema() {
+    public Output<List<GlobalTableKeySchemaArgs>> keySchema() {
         return this.keySchema;
     }
 
     @Import(name="projection", required=true)
       private final Output<GlobalTableProjectionArgs> projection;
 
-    public Output<GlobalTableProjectionArgs> getProjection() {
+    public Output<GlobalTableProjectionArgs> projection() {
         return this.projection;
     }
 
     @Import(name="writeProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
-    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
-        return this.writeProvisionedThroughputSettings == null ? Output.empty() : this.writeProvisionedThroughputSettings;
+    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings() {
+        return this.writeProvisionedThroughputSettings == null ? Codegen.empty() : this.writeProvisionedThroughputSettings;
     }
 
     public GlobalTableGlobalSecondaryIndexArgs(
@@ -58,10 +59,10 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     }
 
     private GlobalTableGlobalSecondaryIndexArgs() {
-        this.indexName = Output.empty();
-        this.keySchema = Output.empty();
-        this.projection = Output.empty();
-        this.writeProvisionedThroughputSettings = Output.empty();
+        this.indexName = Codegen.empty();
+        this.keySchema = Codegen.empty();
+        this.projection = Codegen.empty();
+        this.writeProvisionedThroughputSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
             return this;
         }
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
-            this.writeProvisionedThroughputSettings = Output.ofNullable(writeProvisionedThroughputSettings);
+            this.writeProvisionedThroughputSettings = Codegen.ofNullable(writeProvisionedThroughputSettings);
             return this;
         }        public GlobalTableGlobalSecondaryIndexArgs build() {
             return new GlobalTableGlobalSecondaryIndexArgs(indexName, keySchema, projection, writeProvisionedThroughputSettings);

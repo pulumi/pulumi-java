@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.inputs.ManagedPrometheusConfigArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.MonitoringComponentConfigArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="componentConfig")
       private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
-    public Output<MonitoringComponentConfigArgs> getComponentConfig() {
-        return this.componentConfig == null ? Output.empty() : this.componentConfig;
+    public Output<MonitoringComponentConfigArgs> componentConfig() {
+        return this.componentConfig == null ? Codegen.empty() : this.componentConfig;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="managedPrometheusConfig")
       private final @Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig;
 
-    public Output<ManagedPrometheusConfigArgs> getManagedPrometheusConfig() {
-        return this.managedPrometheusConfig == null ? Output.empty() : this.managedPrometheusConfig;
+    public Output<ManagedPrometheusConfigArgs> managedPrometheusConfig() {
+        return this.managedPrometheusConfig == null ? Codegen.empty() : this.managedPrometheusConfig;
     }
 
     public MonitoringConfigArgs(
@@ -49,8 +50,8 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MonitoringConfigArgs() {
-        this.componentConfig = Output.empty();
-        this.managedPrometheusConfig = Output.empty();
+        this.componentConfig = Codegen.empty();
+        this.managedPrometheusConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder componentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
-            this.componentConfig = Output.ofNullable(componentConfig);
+            this.componentConfig = Codegen.ofNullable(componentConfig);
             return this;
         }
         public Builder managedPrometheusConfig(@Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
@@ -88,7 +89,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder managedPrometheusConfig(@Nullable ManagedPrometheusConfigArgs managedPrometheusConfig) {
-            this.managedPrometheusConfig = Output.ofNullable(managedPrometheusConfig);
+            this.managedPrometheusConfig = Codegen.ofNullable(managedPrometheusConfig);
             return this;
         }        public MonitoringConfigArgs build() {
             return new MonitoringConfigArgs(componentConfig, managedPrometheusConfig);

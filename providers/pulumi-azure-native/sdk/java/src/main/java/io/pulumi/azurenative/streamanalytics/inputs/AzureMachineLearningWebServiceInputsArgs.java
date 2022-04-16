@@ -6,6 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputColumnArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
     @Import(name="columnNames")
       private final @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
 
-    public Output<List<AzureMachineLearningWebServiceInputColumnArgs>> getColumnNames() {
-        return this.columnNames == null ? Output.empty() : this.columnNames;
+    public Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames() {
+        return this.columnNames == null ? Codegen.empty() : this.columnNames;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AzureMachineLearningWebServiceInputsArgs(
@@ -50,8 +51,8 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
     }
 
     private AzureMachineLearningWebServiceInputsArgs() {
-        this.columnNames = Output.empty();
-        this.name = Output.empty();
+        this.columnNames = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
             return this;
         }
         public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnArgs> columnNames) {
-            this.columnNames = Output.ofNullable(columnNames);
+            this.columnNames = Codegen.ofNullable(columnNames);
             return this;
         }
         public Builder columnNames(AzureMachineLearningWebServiceInputColumnArgs... columnNames) {
@@ -92,7 +93,7 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AzureMachineLearningWebServiceInputsArgs build() {
             return new AzureMachineLearningWebServiceInputsArgs(columnNames, name);

@@ -6,6 +6,7 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.random.RandomUuidArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomUuidState;
@@ -43,7 +44,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -57,7 +58,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * @return The generated uuid presented in string format.
      * 
      */
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result;
     }
 
@@ -83,7 +84,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomUuid(String name, @Nullable RandomUuidArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomUuid:RandomUuid", name, args == null ? RandomUuidArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("random:index/randomUuid:RandomUuid", name, args == null ? RandomUuidArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RandomUuid(String name, Output<String> id, @Nullable RandomUuidState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

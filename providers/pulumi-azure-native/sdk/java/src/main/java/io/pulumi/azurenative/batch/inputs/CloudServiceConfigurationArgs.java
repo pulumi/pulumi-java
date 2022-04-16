@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="osFamily", required=true)
       private final Output<String> osFamily;
 
-    public Output<String> getOsFamily() {
+    public Output<String> osFamily() {
         return this.osFamily;
     }
 
@@ -32,8 +33,8 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
-        return this.osVersion == null ? Output.empty() : this.osVersion;
+    public Output<String> osVersion() {
+        return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 
     public CloudServiceConfigurationArgs(
@@ -44,8 +45,8 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private CloudServiceConfigurationArgs() {
-        this.osFamily = Output.empty();
-        this.osVersion = Output.empty();
+        this.osFamily = Codegen.empty();
+        this.osVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Output.ofNullable(osVersion);
+            this.osVersion = Codegen.ofNullable(osVersion);
             return this;
         }        public CloudServiceConfigurationArgs build() {
             return new CloudServiceConfigurationArgs(osFamily, osVersion);

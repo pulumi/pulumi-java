@@ -5,6 +5,7 @@ package io.pulumi.aws.s3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -31,7 +32,7 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -43,8 +44,8 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketPolicyArgs() {
-        this.bucket = Output.empty();
-        this.policy = Output.empty();
+        this.bucket = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {

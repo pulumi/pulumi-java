@@ -6,6 +6,7 @@ package io.pulumi.aws.batch.inputs;
 import io.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyEvaluateOnExitArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class JobDefinitionRetryStrategyArgs extends io.pulumi.resources.Re
     @Import(name="attempts")
       private final @Nullable Output<Integer> attempts;
 
-    public Output<Integer> getAttempts() {
-        return this.attempts == null ? Output.empty() : this.attempts;
+    public Output<Integer> attempts() {
+        return this.attempts == null ? Codegen.empty() : this.attempts;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class JobDefinitionRetryStrategyArgs extends io.pulumi.resources.Re
     @Import(name="evaluateOnExits")
       private final @Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits;
 
-    public Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> getEvaluateOnExits() {
-        return this.evaluateOnExits == null ? Output.empty() : this.evaluateOnExits;
+    public Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits() {
+        return this.evaluateOnExits == null ? Codegen.empty() : this.evaluateOnExits;
     }
 
     public JobDefinitionRetryStrategyArgs(
@@ -46,8 +47,8 @@ public final class JobDefinitionRetryStrategyArgs extends io.pulumi.resources.Re
     }
 
     private JobDefinitionRetryStrategyArgs() {
-        this.attempts = Output.empty();
-        this.evaluateOnExits = Output.empty();
+        this.attempts = Codegen.empty();
+        this.evaluateOnExits = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class JobDefinitionRetryStrategyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder attempts(@Nullable Integer attempts) {
-            this.attempts = Output.ofNullable(attempts);
+            this.attempts = Codegen.ofNullable(attempts);
             return this;
         }
         public Builder evaluateOnExits(@Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits) {
@@ -85,7 +86,7 @@ public final class JobDefinitionRetryStrategyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder evaluateOnExits(@Nullable List<JobDefinitionRetryStrategyEvaluateOnExitArgs> evaluateOnExits) {
-            this.evaluateOnExits = Output.ofNullable(evaluateOnExits);
+            this.evaluateOnExits = Codegen.ofNullable(evaluateOnExits);
             return this;
         }
         public Builder evaluateOnExits(JobDefinitionRetryStrategyEvaluateOnExitArgs... evaluateOnExits) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="root")
       private final @Nullable Output<String> root;
 
-    public Output<String> getRoot() {
-        return this.root == null ? Output.empty() : this.root;
+    public Output<String> root() {
+        return this.root == null ? Codegen.empty() : this.root;
     }
 
     public MixinArgs(
@@ -48,8 +49,8 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MixinArgs() {
-        this.name = Output.empty();
-        this.root = Output.empty();
+        this.name = Codegen.empty();
+        this.root = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder root(@Nullable Output<String> root) {
@@ -87,7 +88,7 @@ public final class MixinArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder root(@Nullable String root) {
-            this.root = Output.ofNullable(root);
+            this.root = Codegen.ofNullable(root);
             return this;
         }        public MixinArgs build() {
             return new MixinArgs(name, root);

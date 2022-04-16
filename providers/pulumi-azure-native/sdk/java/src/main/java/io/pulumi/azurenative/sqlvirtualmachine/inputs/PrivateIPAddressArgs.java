@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subnetResourceId")
       private final @Nullable Output<String> subnetResourceId;
 
-    public Output<String> getSubnetResourceId() {
-        return this.subnetResourceId == null ? Output.empty() : this.subnetResourceId;
+    public Output<String> subnetResourceId() {
+        return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
     }
 
     public PrivateIPAddressArgs(
@@ -48,8 +49,8 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PrivateIPAddressArgs() {
-        this.ipAddress = Output.empty();
-        this.subnetResourceId = Output.empty();
+        this.ipAddress = Codegen.empty();
+        this.subnetResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
@@ -87,7 +88,7 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = Output.ofNullable(subnetResourceId);
+            this.subnetResourceId = Codegen.ofNullable(subnetResourceId);
             return this;
         }        public PrivateIPAddressArgs build() {
             return new PrivateIPAddressArgs(ipAddress, subnetResourceId);

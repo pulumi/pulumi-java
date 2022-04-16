@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     public DefaultSnatStatusArgs(@Nullable Output<Boolean> disabled) {
@@ -34,7 +35,7 @@ public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DefaultSnatStatusArgs() {
-        this.disabled = Output.empty();
+        this.disabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DefaultSnatStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }        public DefaultSnatStatusArgs build() {
             return new DefaultSnatStatusArgs(disabled);

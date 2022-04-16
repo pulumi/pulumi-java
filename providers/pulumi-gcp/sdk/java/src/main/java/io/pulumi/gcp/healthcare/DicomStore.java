@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DicomStoreArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreState;
@@ -56,7 +57,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
     /**
@@ -84,7 +85,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -100,7 +101,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the Dicom store (removing all data) **
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DicomStoreNotificationConfig> getNotificationConfig() {
+    public Output</* @Nullable */ DicomStoreNotificationConfig> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -130,7 +131,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return The fully qualified name of this dataset
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -148,7 +149,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DicomStoreStreamConfig>> getStreamConfigs() {
+    public Output</* @Nullable */ List<DicomStoreStreamConfig>> streamConfigs() {
         return this.streamConfigs;
     }
 
@@ -174,7 +175,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DicomStore(String name, DicomStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/dicomStore:DicomStore", name, args == null ? DicomStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/dicomStore:DicomStore", name, args == null ? DicomStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DicomStore(String name, Output<String> id, @Nullable DicomStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

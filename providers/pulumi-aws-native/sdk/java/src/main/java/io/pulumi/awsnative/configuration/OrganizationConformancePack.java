@@ -9,6 +9,7 @@ import io.pulumi.awsnative.configuration.outputs.OrganizationConformancePackConf
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return A list of ConformancePackInputParameter objects.
      * 
      */
-    public Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> getConformancePackInputParameters() {
+    public Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> conformancePackInputParameters() {
         return this.conformancePackInputParameters;
     }
     /**
@@ -46,7 +47,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3Bucket() {
+    public Output</* @Nullable */ String> deliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
     /**
@@ -60,7 +61,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return The prefix for the delivery S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
+    public Output</* @Nullable */ String> deliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
     /**
@@ -74,7 +75,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
      * 
      */
-    public Output</* @Nullable */ List<String>> getExcludedAccounts() {
+    public Output</* @Nullable */ List<String>> excludedAccounts() {
         return this.excludedAccounts;
     }
     /**
@@ -88,7 +89,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return The name of the organization conformance pack.
      * 
      */
-    public Output<String> getOrganizationConformancePackName() {
+    public Output<String> organizationConformancePackName() {
         return this.organizationConformancePackName;
     }
     /**
@@ -102,7 +103,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return A string containing full conformance pack template body.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateBody() {
+    public Output</* @Nullable */ String> templateBody() {
         return this.templateBody;
     }
     /**
@@ -116,7 +117,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return Location of file containing the template body.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateS3Uri() {
+    public Output</* @Nullable */ String> templateS3Uri() {
         return this.templateS3Uri;
     }
 
@@ -142,7 +143,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationConformancePack(String name, @Nullable OrganizationConformancePackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:configuration:OrganizationConformancePack", name, args == null ? OrganizationConformancePackArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:configuration:OrganizationConformancePack", name, args == null ? OrganizationConformancePackArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationConformancePack(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

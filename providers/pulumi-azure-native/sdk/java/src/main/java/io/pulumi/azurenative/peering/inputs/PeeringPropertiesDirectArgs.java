@@ -9,6 +9,7 @@ import io.pulumi.azurenative.peering.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
     @Import(name="connections")
       private final @Nullable Output<List<DirectConnectionArgs>> connections;
 
-    public Output<List<DirectConnectionArgs>> getConnections() {
-        return this.connections == null ? Output.empty() : this.connections;
+    public Output<List<DirectConnectionArgs>> connections() {
+        return this.connections == null ? Codegen.empty() : this.connections;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
     @Import(name="directPeeringType")
       private final @Nullable Output<Either<String,DirectPeeringType>> directPeeringType;
 
-    public Output<Either<String,DirectPeeringType>> getDirectPeeringType() {
-        return this.directPeeringType == null ? Output.empty() : this.directPeeringType;
+    public Output<Either<String,DirectPeeringType>> directPeeringType() {
+        return this.directPeeringType == null ? Codegen.empty() : this.directPeeringType;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
     @Import(name="peerAsn")
       private final @Nullable Output<SubResourceArgs> peerAsn;
 
-    public Output<SubResourceArgs> getPeerAsn() {
-        return this.peerAsn == null ? Output.empty() : this.peerAsn;
+    public Output<SubResourceArgs> peerAsn() {
+        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 
     public PeeringPropertiesDirectArgs(
@@ -66,9 +67,9 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
     }
 
     private PeeringPropertiesDirectArgs() {
-        this.connections = Output.empty();
-        this.directPeeringType = Output.empty();
-        this.peerAsn = Output.empty();
+        this.connections = Codegen.empty();
+        this.directPeeringType = Codegen.empty();
+        this.peerAsn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connections(@Nullable List<DirectConnectionArgs> connections) {
-            this.connections = Output.ofNullable(connections);
+            this.connections = Codegen.ofNullable(connections);
             return this;
         }
         public Builder connections(DirectConnectionArgs... connections) {
@@ -111,7 +112,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder directPeeringType(@Nullable Either<String,DirectPeeringType> directPeeringType) {
-            this.directPeeringType = Output.ofNullable(directPeeringType);
+            this.directPeeringType = Codegen.ofNullable(directPeeringType);
             return this;
         }
         public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
@@ -119,7 +120,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder peerAsn(@Nullable SubResourceArgs peerAsn) {
-            this.peerAsn = Output.ofNullable(peerAsn);
+            this.peerAsn = Codegen.ofNullable(peerAsn);
             return this;
         }        public PeeringPropertiesDirectArgs build() {
             return new PeeringPropertiesDirectArgs(connections, directPeeringType, peerAsn);

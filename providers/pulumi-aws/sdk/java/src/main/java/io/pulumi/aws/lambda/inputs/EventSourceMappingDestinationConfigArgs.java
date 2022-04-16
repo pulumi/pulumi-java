@@ -6,6 +6,7 @@ package io.pulumi.aws.lambda.inputs;
 import io.pulumi.aws.lambda.inputs.EventSourceMappingDestinationConfigOnFailureArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
     @Import(name="onFailure")
       private final @Nullable Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure;
 
-    public Output<EventSourceMappingDestinationConfigOnFailureArgs> getOnFailure() {
-        return this.onFailure == null ? Output.empty() : this.onFailure;
+    public Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure() {
+        return this.onFailure == null ? Codegen.empty() : this.onFailure;
     }
 
     public EventSourceMappingDestinationConfigArgs(@Nullable Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure) {
@@ -30,7 +31,7 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
     }
 
     private EventSourceMappingDestinationConfigArgs() {
-        this.onFailure = Output.empty();
+        this.onFailure = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder onFailure(@Nullable EventSourceMappingDestinationConfigOnFailureArgs onFailure) {
-            this.onFailure = Output.ofNullable(onFailure);
+            this.onFailure = Codegen.ofNullable(onFailure);
             return this;
         }        public EventSourceMappingDestinationConfigArgs build() {
             return new EventSourceMappingDestinationConfigArgs(onFailure);

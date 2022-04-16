@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudfunctions_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudfunctions_v1.FunctionArgs;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.EventTriggerResponse;
@@ -36,7 +37,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The amount of memory in MB available for a function. Defaults to 256MB.
      * 
      */
-    public Output<Integer> getAvailableMemoryMb() {
+    public Output<Integer> availableMemoryMb() {
         return this.availableMemoryMb;
     }
     /**
@@ -50,7 +51,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Build environment variables that shall be available during build time.
      * 
      */
-    public Output<Map<String,String>> getBuildEnvironmentVariables() {
+    public Output<Map<String,String>> buildEnvironmentVariables() {
         return this.buildEnvironmentVariables;
     }
     /**
@@ -64,7 +65,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Cloud Build ID of the latest successful deployment of the function.
      * 
      */
-    public Output<String> getBuildId() {
+    public Output<String> buildId() {
         return this.buildId;
     }
     /**
@@ -78,7 +79,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Cloud Build Name of the function deployment. `projects//locations//builds/`.
      * 
      */
-    public Output<String> getBuildName() {
+    public Output<String> buildName() {
         return this.buildName;
     }
     /**
@@ -92,7 +93,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and `{region}` are the project id and region respectively where the worker pool is defined and `{workerPool}` is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-robot.iam.gserviceaccount.com`) must be granted the role Cloud Build Custom Workers Builder (`roles/cloudbuild.customworkers.builder`) in the project.
      * 
      */
-    public Output<String> getBuildWorkerPool() {
+    public Output<String> buildWorkerPool() {
         return this.buildWorkerPool;
     }
     /**
@@ -106,7 +107,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return User-provided description of a function.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -120,7 +121,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named 'gcf-artifacts' for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be 'DOCKER'.
      * 
      */
-    public Output<String> getDockerRepository() {
+    public Output<String> dockerRepository() {
         return this.dockerRepository;
     }
     /**
@@ -134,7 +135,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function". For Node.js this is name of a function exported by the module specified in `source_location`.
      * 
      */
-    public Output<String> getEntryPoint() {
+    public Output<String> entryPoint() {
         return this.entryPoint;
     }
     /**
@@ -148,7 +149,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Environment variables that shall be available during function execution.
      * 
      */
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables;
     }
     /**
@@ -162,7 +163,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A source that fires events in response to a condition in another service.
      * 
      */
-    public Output<EventTriggerResponse> getEventTrigger() {
+    public Output<EventTriggerResponse> eventTrigger() {
         return this.eventTrigger;
     }
     /**
@@ -176,7 +177,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return An HTTPS endpoint type of source that can be triggered via URL.
      * 
      */
-    public Output<HttpsTriggerResponse> getHttpsTrigger() {
+    public Output<HttpsTriggerResponse> httpsTrigger() {
         return this.httpsTrigger;
     }
     /**
@@ -190,7 +191,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The ingress settings for the function, controlling what traffic can reach it.
      * 
      */
-    public Output<String> getIngressSettings() {
+    public Output<String> ingressSettings() {
         return this.ingressSettings;
     }
     /**
@@ -204,7 +205,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If specified, you must also provide an artifact registry repository using the `docker_repository` field that was created with the same KMS crypto key. The following service accounts need to be granted the role 'Cloud KMS CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)' on the Key/KeyRing/Project/Organization (least access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) - Required to protect the function's image. 2. Google Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com) - Required to protect the function's source code. If this service account does not exist, deploying a function without a KMS key or retrieving the service agent name provisions it. For more information, see https://cloud.google.com/storage/docs/projects#service-agents and https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions delegates access to service agents to protect function resources in internal projects that are not accessible by the end user.
      * 
      */
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -218,7 +219,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Labels associated with this Cloud Function.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -232,7 +233,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
      * 
      */
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances;
     }
     /**
@@ -246,7 +247,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A lower bound for the number function instances that may coexist at a given time.
      * 
      */
-    public Output<Integer> getMinInstances() {
+    public Output<Integer> minInstances() {
         return this.minInstances;
     }
     /**
@@ -260,7 +261,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -274,7 +275,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where `{project}` is a project id where the network is defined, and `{network}` is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -288,7 +289,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
      * 
      */
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
     /**
@@ -302,7 +303,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Secret environment variables configuration.
      * 
      */
-    public Output<List<SecretEnvVarResponse>> getSecretEnvironmentVariables() {
+    public Output<List<SecretEnvVarResponse>> secretEnvironmentVariables() {
         return this.secretEnvironmentVariables;
     }
     /**
@@ -316,7 +317,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Secret volumes configuration.
      * 
      */
-    public Output<List<SecretVolumeResponse>> getSecretVolumes() {
+    public Output<List<SecretVolumeResponse>> secretVolumes() {
         return this.secretVolumes;
     }
     /**
@@ -330,7 +331,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The email of the function's service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.
      * 
      */
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
@@ -344,7 +345,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Google Cloud Storage URL, starting with `gs://`, pointing to the zip archive which contains the function.
      * 
      */
-    public Output<String> getSourceArchiveUrl() {
+    public Output<String> sourceArchiveUrl() {
         return this.sourceArchiveUrl;
     }
     /**
@@ -358,7 +359,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return **Beta Feature** The source repository where a function is hosted.
      * 
      */
-    public Output<SourceRepositoryResponse> getSourceRepository() {
+    public Output<SourceRepositoryResponse> sourceRepository() {
         return this.sourceRepository;
     }
     /**
@@ -372,7 +373,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.
      * 
      */
-    public Output<String> getSourceToken() {
+    public Output<String> sourceToken() {
         return this.sourceToken;
     }
     /**
@@ -386,7 +387,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Google Cloud Storage signed URL used for source uploading, generated by calling [google.cloud.functions.v1.GenerateUploadUrl]. The signature is validated on write methods (Create, Update) The signature is stripped from the Function object on read methods (Get, List)
      * 
      */
-    public Output<String> getSourceUploadUrl() {
+    public Output<String> sourceUploadUrl() {
         return this.sourceUploadUrl;
     }
     /**
@@ -400,7 +401,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Status of the function deployment.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -414,7 +415,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
      * 
      */
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout;
     }
     /**
@@ -428,7 +429,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The last update timestamp of a Cloud Function.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -442,7 +443,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The version identifier of the Cloud Function. Each deployment attempt results in a new version of a function being created.
      * 
      */
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
     /**
@@ -456,7 +457,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
      */
-    public Output<String> getVpcConnector() {
+    public Output<String> vpcConnector() {
         return this.vpcConnector;
     }
     /**
@@ -470,7 +471,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The egress settings for the connector, controlling what traffic is diverted through it.
      * 
      */
-    public Output<String> getVpcConnectorEgressSettings() {
+    public Output<String> vpcConnectorEgressSettings() {
         return this.vpcConnectorEgressSettings;
     }
 
@@ -496,7 +497,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Function(String name, @Nullable FunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudfunctions/v1:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudfunctions/v1:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Function(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

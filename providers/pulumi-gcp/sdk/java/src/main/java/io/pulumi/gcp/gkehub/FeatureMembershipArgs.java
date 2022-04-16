@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="configmanagement", required=true)
       private final Output<FeatureMembershipConfigmanagementArgs> configmanagement;
 
-    public Output<FeatureMembershipConfigmanagementArgs> getConfigmanagement() {
+    public Output<FeatureMembershipConfigmanagementArgs> configmanagement() {
         return this.configmanagement;
     }
 
@@ -33,7 +34,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="feature", required=true)
       private final Output<String> feature;
 
-    public Output<String> getFeature() {
+    public Output<String> feature() {
         return this.feature;
     }
 
@@ -44,7 +45,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -55,7 +56,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="membership", required=true)
       private final Output<String> membership;
 
-    public Output<String> getMembership() {
+    public Output<String> membership() {
         return this.membership;
     }
 
@@ -66,8 +67,8 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public FeatureMembershipArgs(
@@ -84,11 +85,11 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FeatureMembershipArgs() {
-        this.configmanagement = Output.empty();
-        this.feature = Output.empty();
-        this.location = Output.empty();
-        this.membership = Output.empty();
-        this.project = Output.empty();
+        this.configmanagement = Codegen.empty();
+        this.feature = Codegen.empty();
+        this.location = Codegen.empty();
+        this.membership = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public FeatureMembershipArgs build() {
             return new FeatureMembershipArgs(configmanagement, feature, location, membership, project);

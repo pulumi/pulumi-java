@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+    public Output<String> kmsKeyName() {
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
     @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
-    public Output<String> getRawKey() {
-        return this.rawKey == null ? Output.empty() : this.rawKey;
+    public Output<String> rawKey() {
+        return this.rawKey == null ? Codegen.empty() : this.rawKey;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
     @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
-    public Output<String> getSha256() {
-        return this.sha256 == null ? Output.empty() : this.sha256;
+    public Output<String> sha256() {
+        return this.sha256 == null ? Codegen.empty() : this.sha256;
     }
 
     public RegionDiskSourceSnapshotEncryptionKeyArgs(
@@ -60,9 +61,9 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
     }
 
     private RegionDiskSourceSnapshotEncryptionKeyArgs() {
-        this.kmsKeyName = Output.empty();
-        this.rawKey = Output.empty();
-        this.sha256 = Output.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.rawKey = Codegen.empty();
+        this.sha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder rawKey(@Nullable Output<String> rawKey) {
@@ -102,7 +103,7 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
             return this;
         }
         public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Output.ofNullable(rawKey);
+            this.rawKey = Codegen.ofNullable(rawKey);
             return this;
         }
         public Builder sha256(@Nullable Output<String> sha256) {
@@ -110,7 +111,7 @@ public final class RegionDiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.r
             return this;
         }
         public Builder sha256(@Nullable String sha256) {
-            this.sha256 = Output.ofNullable(sha256);
+            this.sha256 = Codegen.ofNullable(sha256);
             return this;
         }        public RegionDiskSourceSnapshotEncryptionKeyArgs build() {
             return new RegionDiskSourceSnapshotEncryptionKeyArgs(kmsKeyName, rawKey, sha256);

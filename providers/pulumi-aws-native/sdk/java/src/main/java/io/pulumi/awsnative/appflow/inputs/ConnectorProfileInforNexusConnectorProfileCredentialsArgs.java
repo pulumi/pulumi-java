@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="accessKeyId", required=true)
       private final Output<String> accessKeyId;
 
-    public Output<String> getAccessKeyId() {
+    public Output<String> accessKeyId() {
         return this.accessKeyId;
     }
 
@@ -31,7 +32,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="datakey", required=true)
       private final Output<String> datakey;
 
-    public Output<String> getDatakey() {
+    public Output<String> datakey() {
         return this.datakey;
     }
 
@@ -42,7 +43,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="secretAccessKey", required=true)
       private final Output<String> secretAccessKey;
 
-    public Output<String> getSecretAccessKey() {
+    public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
 
@@ -53,7 +54,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -69,10 +70,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     }
 
     private ConnectorProfileInforNexusConnectorProfileCredentialsArgs() {
-        this.accessKeyId = Output.empty();
-        this.datakey = Output.empty();
-        this.secretAccessKey = Output.empty();
-        this.userId = Output.empty();
+        this.accessKeyId = Codegen.empty();
+        this.datakey = Codegen.empty();
+        this.secretAccessKey = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {

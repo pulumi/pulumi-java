@@ -19,7 +19,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
     @Import(name="dnsZoneId", required=true)
       private final String dnsZoneId;
 
-    public String getDnsZoneId() {
+    public String dnsZoneId() {
         return this.dnsZoneId;
     }
 
@@ -30,7 +30,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

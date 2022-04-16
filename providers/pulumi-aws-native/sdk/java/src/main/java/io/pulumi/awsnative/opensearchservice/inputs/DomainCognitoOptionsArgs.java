@@ -5,6 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,29 +19,29 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="identityPoolId")
       private final @Nullable Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
-        return this.identityPoolId == null ? Output.empty() : this.identityPoolId;
+    public Output<String> identityPoolId() {
+        return this.identityPoolId == null ? Codegen.empty() : this.identityPoolId;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
-        return this.userPoolId == null ? Output.empty() : this.userPoolId;
+    public Output<String> userPoolId() {
+        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
     }
 
     public DomainCognitoOptionsArgs(
@@ -55,10 +56,10 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
     }
 
     private DomainCognitoOptionsArgs() {
-        this.enabled = Output.empty();
-        this.identityPoolId = Output.empty();
-        this.roleArn = Output.empty();
-        this.userPoolId = Output.empty();
+        this.enabled = Codegen.empty();
+        this.identityPoolId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder identityPoolId(@Nullable Output<String> identityPoolId) {
@@ -100,7 +101,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder identityPoolId(@Nullable String identityPoolId) {
-            this.identityPoolId = Output.ofNullable(identityPoolId);
+            this.identityPoolId = Codegen.ofNullable(identityPoolId);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -108,7 +109,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
@@ -116,7 +117,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Output.ofNullable(userPoolId);
+            this.userPoolId = Codegen.ofNullable(userPoolId);
             return this;
         }        public DomainCognitoOptionsArgs build() {
             return new DomainCognitoOptionsArgs(enabled, identityPoolId, roleArn, userPoolId);

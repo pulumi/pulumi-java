@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
 
@@ -31,7 +32,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pathPart", required=true)
       private final Output<String> pathPart;
 
-    public Output<String> getPathPart() {
+    public Output<String> pathPart() {
         return this.pathPart;
     }
 
@@ -42,7 +43,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -56,9 +57,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceArgs() {
-        this.parentId = Output.empty();
-        this.pathPart = Output.empty();
-        this.restApiId = Output.empty();
+        this.parentId = Codegen.empty();
+        this.pathPart = Codegen.empty();
+        this.restApiId = Codegen.empty();
     }
 
     public static Builder builder() {

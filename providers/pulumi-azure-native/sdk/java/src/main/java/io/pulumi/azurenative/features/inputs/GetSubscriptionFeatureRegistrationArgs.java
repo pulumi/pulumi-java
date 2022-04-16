@@ -19,7 +19,7 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
     @Import(name="featureName", required=true)
       private final String featureName;
 
-    public String getFeatureName() {
+    public String featureName() {
         return this.featureName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
-    public String getProviderNamespace() {
+    public String providerNamespace() {
         return this.providerNamespace;
     }
 

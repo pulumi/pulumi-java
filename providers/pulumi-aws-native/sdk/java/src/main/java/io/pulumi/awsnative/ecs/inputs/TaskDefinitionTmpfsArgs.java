@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,21 +20,21 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
-        return this.containerPath == null ? Output.empty() : this.containerPath;
+    public Output<String> containerPath() {
+        return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="mountOptions")
       private final @Nullable Output<List<String>> mountOptions;
 
-    public Output<List<String>> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+    public Output<List<String>> mountOptions() {
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -47,9 +48,9 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
     }
 
     private TaskDefinitionTmpfsArgs() {
-        this.containerPath = Output.empty();
-        this.mountOptions = Output.empty();
-        this.size = Output.empty();
+        this.containerPath = Codegen.empty();
+        this.mountOptions = Codegen.empty();
+        this.size = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Output.ofNullable(containerPath);
+            this.containerPath = Codegen.ofNullable(containerPath);
             return this;
         }
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
@@ -89,7 +90,7 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder mountOptions(@Nullable List<String> mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder mountOptions(String... mountOptions) {

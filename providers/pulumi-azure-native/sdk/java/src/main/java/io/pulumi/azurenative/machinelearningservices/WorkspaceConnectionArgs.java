@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.ValueFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="authType")
       private final @Nullable Output<String> authType;
 
-    public Output<String> getAuthType() {
-        return this.authType == null ? Output.empty() : this.authType;
+    public Output<String> authType() {
+        return this.authType == null ? Codegen.empty() : this.authType;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+    public Output<String> category() {
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+    public Output<String> connectionName() {
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,8 +79,8 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="valueFormat")
       private final @Nullable Output<Either<String,ValueFormat>> valueFormat;
 
-    public Output<Either<String,ValueFormat>> getValueFormat() {
-        return this.valueFormat == null ? Output.empty() : this.valueFormat;
+    public Output<Either<String,ValueFormat>> valueFormat() {
+        return this.valueFormat == null ? Codegen.empty() : this.valueFormat;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -137,15 +138,15 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkspaceConnectionArgs() {
-        this.authType = Output.empty();
-        this.category = Output.empty();
-        this.connectionName = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.target = Output.empty();
-        this.value = Output.empty();
-        this.valueFormat = Output.empty();
-        this.workspaceName = Output.empty();
+        this.authType = Codegen.empty();
+        this.category = Codegen.empty();
+        this.connectionName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.target = Codegen.empty();
+        this.value = Codegen.empty();
+        this.valueFormat = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder authType(@Nullable String authType) {
-            this.authType = Output.ofNullable(authType);
+            this.authType = Codegen.ofNullable(authType);
             return this;
         }
         public Builder category(@Nullable Output<String> category) {
@@ -197,7 +198,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder category(@Nullable String category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder connectionName(@Nullable Output<String> connectionName) {
@@ -205,7 +206,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -213,7 +214,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -229,7 +230,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -237,7 +238,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder valueFormat(@Nullable Output<Either<String,ValueFormat>> valueFormat) {
@@ -245,7 +246,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder valueFormat(@Nullable Either<String,ValueFormat> valueFormat) {
-            this.valueFormat = Output.ofNullable(valueFormat);
+            this.valueFormat = Codegen.ofNullable(valueFormat);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

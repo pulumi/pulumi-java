@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
-        return this.secretVersion == null ? Output.empty() : this.secretVersion;
+    public Output<String> secretVersion() {
+        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 
     public SecretArgs(@Nullable Output<String> secretVersion) {
@@ -34,7 +35,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.secretVersion = Output.empty();
+        this.secretVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Output.ofNullable(secretVersion);
+            this.secretVersion = Codegen.ofNullable(secretVersion);
             return this;
         }        public SecretArgs build() {
             return new SecretArgs(secretVersion);

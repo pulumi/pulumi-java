@@ -6,6 +6,7 @@ package io.pulumi.awsnative.customerprofiles;
 import io.pulumi.awsnative.customerprofiles.inputs.DomainTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterQueueUrl")
       private final @Nullable Output<String> deadLetterQueueUrl;
 
-    public Output<String> getDeadLetterQueueUrl() {
-        return this.deadLetterQueueUrl == null ? Output.empty() : this.deadLetterQueueUrl;
+    public Output<String> deadLetterQueueUrl() {
+        return this.deadLetterQueueUrl == null ? Codegen.empty() : this.deadLetterQueueUrl;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionKey")
       private final @Nullable Output<String> defaultEncryptionKey;
 
-    public Output<String> getDefaultEncryptionKey() {
-        return this.defaultEncryptionKey == null ? Output.empty() : this.defaultEncryptionKey;
+    public Output<String> defaultEncryptionKey() {
+        return this.defaultEncryptionKey == null ? Codegen.empty() : this.defaultEncryptionKey;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultExpirationDays")
       private final @Nullable Output<Integer> defaultExpirationDays;
 
-    public Output<Integer> getDefaultExpirationDays() {
-        return this.defaultExpirationDays == null ? Output.empty() : this.defaultExpirationDays;
+    public Output<Integer> defaultExpirationDays() {
+        return this.defaultExpirationDays == null ? Codegen.empty() : this.defaultExpirationDays;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Output<List<DomainTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DomainTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DomainArgs(
@@ -86,11 +87,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.deadLetterQueueUrl = Output.empty();
-        this.defaultEncryptionKey = Output.empty();
-        this.defaultExpirationDays = Output.empty();
-        this.domainName = Output.empty();
-        this.tags = Output.empty();
+        this.deadLetterQueueUrl = Codegen.empty();
+        this.defaultEncryptionKey = Codegen.empty();
+        this.defaultExpirationDays = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
-            this.deadLetterQueueUrl = Output.ofNullable(deadLetterQueueUrl);
+            this.deadLetterQueueUrl = Codegen.ofNullable(deadLetterQueueUrl);
             return this;
         }
         public Builder defaultEncryptionKey(@Nullable Output<String> defaultEncryptionKey) {
@@ -134,7 +135,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultEncryptionKey(@Nullable String defaultEncryptionKey) {
-            this.defaultEncryptionKey = Output.ofNullable(defaultEncryptionKey);
+            this.defaultEncryptionKey = Codegen.ofNullable(defaultEncryptionKey);
             return this;
         }
         public Builder defaultExpirationDays(@Nullable Output<Integer> defaultExpirationDays) {
@@ -142,7 +143,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultExpirationDays(@Nullable Integer defaultExpirationDays) {
-            this.defaultExpirationDays = Output.ofNullable(defaultExpirationDays);
+            this.defaultExpirationDays = Codegen.ofNullable(defaultExpirationDays);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -150,7 +151,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
@@ -158,7 +159,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DomainTagArgs... tags) {

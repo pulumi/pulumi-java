@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="amiTags")
       private final @Nullable Output<Object> amiTags;
 
-    public Output<Object> getAmiTags() {
-        return this.amiTags == null ? Output.empty() : this.amiTags;
+    public Output<Object> amiTags() {
+        return this.amiTags == null ? Codegen.empty() : this.amiTags;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="launchPermissionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> launchPermissionConfiguration;
 
-    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> getLaunchPermissionConfiguration() {
-        return this.launchPermissionConfiguration == null ? Output.empty() : this.launchPermissionConfiguration;
+    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> launchPermissionConfiguration() {
+        return this.launchPermissionConfiguration == null ? Codegen.empty() : this.launchPermissionConfiguration;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="targetAccountIds")
       private final @Nullable Output<List<String>> targetAccountIds;
 
-    public Output<List<String>> getTargetAccountIds() {
-        return this.targetAccountIds == null ? Output.empty() : this.targetAccountIds;
+    public Output<List<String>> targetAccountIds() {
+        return this.targetAccountIds == null ? Codegen.empty() : this.targetAccountIds;
     }
 
     public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs(
@@ -103,12 +104,12 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs() {
-        this.amiTags = Output.empty();
-        this.description = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.launchPermissionConfiguration = Output.empty();
-        this.name = Output.empty();
-        this.targetAccountIds = Output.empty();
+        this.amiTags = Codegen.empty();
+        this.description = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.launchPermissionConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.targetAccountIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder amiTags(@Nullable Object amiTags) {
-            this.amiTags = Output.ofNullable(amiTags);
+            this.amiTags = Codegen.ofNullable(amiTags);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -154,7 +155,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -162,7 +163,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder launchPermissionConfiguration(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs> launchPermissionConfiguration) {
@@ -170,7 +171,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder launchPermissionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs launchPermissionConfiguration) {
-            this.launchPermissionConfiguration = Output.ofNullable(launchPermissionConfiguration);
+            this.launchPermissionConfiguration = Codegen.ofNullable(launchPermissionConfiguration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -178,7 +179,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder targetAccountIds(@Nullable Output<List<String>> targetAccountIds) {
@@ -186,7 +187,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
-            this.targetAccountIds = Output.ofNullable(targetAccountIds);
+            this.targetAccountIds = Codegen.ofNullable(targetAccountIds);
             return this;
         }
         public Builder targetAccountIds(String... targetAccountIds) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotFulfillmentStartResponseSpecificationAr
 import io.pulumi.awsnative.lex.inputs.BotFulfillmentUpdateResponseSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -28,15 +29,15 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
     @Import(name="active", required=true)
       private final Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active;
     }
 
     @Import(name="startResponse")
       private final @Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse;
 
-    public Output<BotFulfillmentStartResponseSpecificationArgs> getStartResponse() {
-        return this.startResponse == null ? Output.empty() : this.startResponse;
+    public Output<BotFulfillmentStartResponseSpecificationArgs> startResponse() {
+        return this.startResponse == null ? Codegen.empty() : this.startResponse;
     }
 
     /**
@@ -46,15 +47,15 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
+    public Output<Integer> timeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     @Import(name="updateResponse")
       private final @Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
 
-    public Output<BotFulfillmentUpdateResponseSpecificationArgs> getUpdateResponse() {
-        return this.updateResponse == null ? Output.empty() : this.updateResponse;
+    public Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse() {
+        return this.updateResponse == null ? Codegen.empty() : this.updateResponse;
     }
 
     public BotFulfillmentUpdatesSpecificationArgs(
@@ -69,10 +70,10 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
     }
 
     private BotFulfillmentUpdatesSpecificationArgs() {
-        this.active = Output.empty();
-        this.startResponse = Output.empty();
-        this.timeoutInSeconds = Output.empty();
-        this.updateResponse = Output.empty();
+        this.active = Codegen.empty();
+        this.startResponse = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
+        this.updateResponse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
             return this;
         }
         public Builder startResponse(@Nullable BotFulfillmentStartResponseSpecificationArgs startResponse) {
-            this.startResponse = Output.ofNullable(startResponse);
+            this.startResponse = Codegen.ofNullable(startResponse);
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
@@ -122,7 +123,7 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
             return this;
         }
         public Builder updateResponse(@Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse) {
@@ -130,7 +131,7 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
             return this;
         }
         public Builder updateResponse(@Nullable BotFulfillmentUpdateResponseSpecificationArgs updateResponse) {
-            this.updateResponse = Output.ofNullable(updateResponse);
+            this.updateResponse = Codegen.ofNullable(updateResponse);
             return this;
         }        public BotFulfillmentUpdatesSpecificationArgs build() {
             return new BotFulfillmentUpdatesSpecificationArgs(active, startResponse, timeoutInSeconds, updateResponse);

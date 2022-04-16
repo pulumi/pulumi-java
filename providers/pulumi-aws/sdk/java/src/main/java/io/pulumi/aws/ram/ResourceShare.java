@@ -9,6 +9,7 @@ import io.pulumi.aws.ram.inputs.ResourceShareState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @return Indicates whether principals outside your organization can be associated with a resource share.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowExternalPrincipals() {
+    public Output</* @Nullable */ Boolean> allowExternalPrincipals() {
         return this.allowExternalPrincipals;
     }
     /**
@@ -55,7 +56,7 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the resource share.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -69,7 +70,7 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @return The name of the resource share.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -97,7 +98,7 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -123,7 +124,7 @@ public class ResourceShare extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceShare(String name, @Nullable ResourceShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ram/resourceShare:ResourceShare", name, args == null ? ResourceShareArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ram/resourceShare:ResourceShare", name, args == null ? ResourceShareArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceShare(String name, Output<String> id, @Nullable ResourceShareState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

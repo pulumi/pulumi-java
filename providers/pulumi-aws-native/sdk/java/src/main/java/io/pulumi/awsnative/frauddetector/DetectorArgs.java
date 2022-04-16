@@ -11,6 +11,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorRuleArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associatedModels")
       private final @Nullable Output<List<DetectorModelArgs>> associatedModels;
 
-    public Output<List<DetectorModelArgs>> getAssociatedModels() {
-        return this.associatedModels == null ? Output.empty() : this.associatedModels;
+    public Output<List<DetectorModelArgs>> associatedModels() {
+        return this.associatedModels == null ? Codegen.empty() : this.associatedModels;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -61,8 +62,8 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorVersionStatus")
       private final @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
 
-    public Output<DetectorVersionStatus> getDetectorVersionStatus() {
-        return this.detectorVersionStatus == null ? Output.empty() : this.detectorVersionStatus;
+    public Output<DetectorVersionStatus> detectorVersionStatus() {
+        return this.detectorVersionStatus == null ? Codegen.empty() : this.detectorVersionStatus;
     }
 
     /**
@@ -72,21 +73,21 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventType", required=true)
       private final Output<DetectorEventTypeArgs> eventType;
 
-    public Output<DetectorEventTypeArgs> getEventType() {
+    public Output<DetectorEventTypeArgs> eventType() {
         return this.eventType;
     }
 
     @Import(name="ruleExecutionMode")
       private final @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
 
-    public Output<DetectorRuleExecutionMode> getRuleExecutionMode() {
-        return this.ruleExecutionMode == null ? Output.empty() : this.ruleExecutionMode;
+    public Output<DetectorRuleExecutionMode> ruleExecutionMode() {
+        return this.ruleExecutionMode == null ? Codegen.empty() : this.ruleExecutionMode;
     }
 
     @Import(name="rules", required=true)
       private final Output<List<DetectorRuleArgs>> rules;
 
-    public Output<List<DetectorRuleArgs>> getRules() {
+    public Output<List<DetectorRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -97,8 +98,8 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DetectorTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DetectorArgs(
@@ -121,14 +122,14 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorArgs() {
-        this.associatedModels = Output.empty();
-        this.description = Output.empty();
-        this.detectorId = Output.empty();
-        this.detectorVersionStatus = Output.empty();
-        this.eventType = Output.empty();
-        this.ruleExecutionMode = Output.empty();
-        this.rules = Output.empty();
-        this.tags = Output.empty();
+        this.associatedModels = Codegen.empty();
+        this.description = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.detectorVersionStatus = Codegen.empty();
+        this.eventType = Codegen.empty();
+        this.ruleExecutionMode = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder associatedModels(@Nullable List<DetectorModelArgs> associatedModels) {
-            this.associatedModels = Output.ofNullable(associatedModels);
+            this.associatedModels = Codegen.ofNullable(associatedModels);
             return this;
         }
         public Builder associatedModels(DetectorModelArgs... associatedModels) {
@@ -181,7 +182,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder detectorId(Output<String> detectorId) {
@@ -197,7 +198,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
-            this.detectorVersionStatus = Output.ofNullable(detectorVersionStatus);
+            this.detectorVersionStatus = Codegen.ofNullable(detectorVersionStatus);
             return this;
         }
         public Builder eventType(Output<DetectorEventTypeArgs> eventType) {
@@ -213,7 +214,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
-            this.ruleExecutionMode = Output.ofNullable(ruleExecutionMode);
+            this.ruleExecutionMode = Codegen.ofNullable(ruleExecutionMode);
             return this;
         }
         public Builder rules(Output<List<DetectorRuleArgs>> rules) {
@@ -232,7 +233,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DetectorTagArgs... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceReservationAffinitySpecificReservationGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
     @Import(name="specificReservation")
       private final @Nullable Output<InstanceReservationAffinitySpecificReservationGetArgs> specificReservation;
 
-    public Output<InstanceReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
-        return this.specificReservation == null ? Output.empty() : this.specificReservation;
+    public Output<InstanceReservationAffinitySpecificReservationGetArgs> specificReservation() {
+        return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -46,8 +47,8 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
     }
 
     private InstanceReservationAffinityGetArgs() {
-        this.specificReservation = Output.empty();
-        this.type = Output.empty();
+        this.specificReservation = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder specificReservation(@Nullable InstanceReservationAffinitySpecificReservationGetArgs specificReservation) {
-            this.specificReservation = Output.ofNullable(specificReservation);
+            this.specificReservation = Codegen.ofNullable(specificReservation);
             return this;
         }
         public Builder type(Output<String> type) {

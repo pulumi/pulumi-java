@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.RemoteAddressMatchConditionParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +38,7 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
     @Import(name="parameters", required=true)
       private final Output<RemoteAddressMatchConditionParametersArgs> parameters;
 
-    public Output<RemoteAddressMatchConditionParametersArgs> getParameters() {
+    public Output<RemoteAddressMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 
@@ -49,8 +50,8 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
     }
 
     private DeliveryRuleRemoteAddressConditionArgs() {
-        this.name = Output.empty();
-        this.parameters = Output.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {

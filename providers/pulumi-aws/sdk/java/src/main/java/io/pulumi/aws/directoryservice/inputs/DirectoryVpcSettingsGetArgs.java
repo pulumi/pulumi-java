@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
+    public Output<List<String>> availabilityZones() {
+        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -40,7 +41,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -54,9 +55,9 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
     }
 
     private DirectoryVpcSettingsGetArgs() {
-        this.availabilityZones = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.availabilityZones = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Output.ofNullable(availabilityZones);
+            this.availabilityZones = Codegen.ofNullable(availabilityZones);
             return this;
         }
         public Builder availabilityZones(String... availabilityZones) {

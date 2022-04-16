@@ -6,6 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaEventSourceType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     @Import(name="type")
       private final @Nullable Output<ComponentVersionLambdaEventSourceType> type;
 
-    public Output<ComponentVersionLambdaEventSourceType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ComponentVersionLambdaEventSourceType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ComponentVersionLambdaEventSourceArgs(
@@ -37,8 +38,8 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
     }
 
     private ComponentVersionLambdaEventSourceArgs() {
-        this.topic = Output.empty();
-        this.type = Output.empty();
+        this.topic = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }
         public Builder type(@Nullable Output<ComponentVersionLambdaEventSourceType> type) {
@@ -76,7 +77,7 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
             return this;
         }
         public Builder type(@Nullable ComponentVersionLambdaEventSourceType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ComponentVersionLambdaEventSourceArgs build() {
             return new ComponentVersionLambdaEventSourceArgs(topic, type);

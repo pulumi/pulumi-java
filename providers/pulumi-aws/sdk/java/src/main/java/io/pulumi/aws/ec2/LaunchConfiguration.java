@@ -13,6 +13,7 @@ import io.pulumi.aws.ec2.outputs.LaunchConfigurationRootBlockDevice;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -126,7 +127,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of the launch configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -140,7 +141,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return Associate a public ip address with an instance in a VPC.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAssociatePublicIpAddress() {
+    public Output</* @Nullable */ Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress;
     }
     /**
@@ -156,7 +157,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * instance.  See Block Devices below for details.
      * 
      */
-    public Output<List<LaunchConfigurationEbsBlockDevice>> getEbsBlockDevices() {
+    public Output<List<LaunchConfigurationEbsBlockDevice>> ebsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
@@ -170,7 +171,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return If true, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
@@ -184,7 +185,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return Enables/disables detailed monitoring. This is enabled by default.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableMonitoring() {
+    public Output</* @Nullable */ Boolean> enableMonitoring() {
         return this.enableMonitoring;
     }
     /**
@@ -200,7 +201,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * "Instance Store") volumes on the instance. See Block Devices below for details.
      * 
      */
-    public Output</* @Nullable */ List<LaunchConfigurationEphemeralBlockDevice>> getEphemeralBlockDevices() {
+    public Output</* @Nullable */ List<LaunchConfigurationEphemeralBlockDevice>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
@@ -216,7 +217,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * with launched instances.
      * 
      */
-    public Output</* @Nullable */ String> getIamInstanceProfile() {
+    public Output</* @Nullable */ String> iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
@@ -230,7 +231,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The EC2 image ID to launch.
      * 
      */
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
     /**
@@ -244,7 +245,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The size of instance to launch.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -258,7 +259,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The key name that should be used for the instance.
      * 
      */
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
     /**
@@ -272,7 +273,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The metadata options for the instance.
      * 
      */
-    public Output<LaunchConfigurationMetadataOptions> getMetadataOptions() {
+    public Output<LaunchConfigurationMetadataOptions> metadataOptions() {
         return this.metadataOptions;
     }
     /**
@@ -288,7 +289,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -304,7 +305,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -322,7 +323,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * for more details
      * 
      */
-    public Output</* @Nullable */ String> getPlacementTenancy() {
+    public Output</* @Nullable */ String> placementTenancy() {
         return this.placementTenancy;
     }
     /**
@@ -338,7 +339,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * device of the instance. See Block Devices below for details.
      * 
      */
-    public Output<LaunchConfigurationRootBlockDevice> getRootBlockDevice() {
+    public Output<LaunchConfigurationRootBlockDevice> rootBlockDevice() {
         return this.rootBlockDevice;
     }
     /**
@@ -352,7 +353,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return A list of associated security group IDS.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSecurityGroups() {
+    public Output</* @Nullable */ List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -366,7 +367,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The maximum price to use for reserving spot instances.
      * 
      */
-    public Output</* @Nullable */ String> getSpotPrice() {
+    public Output</* @Nullable */ String> spotPrice() {
         return this.spotPrice;
     }
     /**
@@ -380,7 +381,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
      * 
      */
-    public Output</* @Nullable */ String> getUserData() {
+    public Output</* @Nullable */ String> userData() {
         return this.userData;
     }
     /**
@@ -394,7 +395,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
      * 
      */
-    public Output</* @Nullable */ String> getUserDataBase64() {
+    public Output</* @Nullable */ String> userDataBase64() {
         return this.userDataBase64;
     }
     /**
@@ -408,7 +409,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
      * 
      */
-    public Output</* @Nullable */ String> getVpcClassicLinkId() {
+    public Output</* @Nullable */ String> vpcClassicLinkId() {
         return this.vpcClassicLinkId;
     }
     /**
@@ -422,7 +423,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @return The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
      * 
      */
-    public Output</* @Nullable */ List<String>> getVpcClassicLinkSecurityGroups() {
+    public Output</* @Nullable */ List<String>> vpcClassicLinkSecurityGroups() {
         return this.vpcClassicLinkSecurityGroups;
     }
 
@@ -448,7 +449,7 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LaunchConfiguration(String name, LaunchConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/launchConfiguration:LaunchConfiguration", name, args == null ? LaunchConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/launchConfiguration:LaunchConfiguration", name, args == null ? LaunchConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LaunchConfiguration(String name, Output<String> id, @Nullable LaunchConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

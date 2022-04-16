@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+    public Output<String> groupId() {
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public UptimeCheckConfigResourceGroupArgs(
@@ -45,8 +46,8 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
     }
 
     private UptimeCheckConfigResourceGroupArgs() {
-        this.groupId = Output.empty();
-        this.resourceType = Output.empty();
+        this.groupId = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -84,7 +85,7 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public UptimeCheckConfigResourceGroupArgs build() {
             return new UptimeCheckConfigResourceGroupArgs(groupId, resourceType);

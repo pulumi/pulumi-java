@@ -5,6 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class HoursOfOperationConfigStartTimeArgs extends io.pulumi.resourc
     @Import(name="hours", required=true)
       private final Output<Integer> hours;
 
-    public Output<Integer> getHours() {
+    public Output<Integer> hours() {
         return this.hours;
     }
 
@@ -31,7 +32,7 @@ public final class HoursOfOperationConfigStartTimeArgs extends io.pulumi.resourc
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes;
     }
 
@@ -43,8 +44,8 @@ public final class HoursOfOperationConfigStartTimeArgs extends io.pulumi.resourc
     }
 
     private HoursOfOperationConfigStartTimeArgs() {
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="consumerGroupName", required=true)
       private final Output<String> consumerGroupName;
 
-    public Output<String> getConsumerGroupName() {
+    public Output<String> consumerGroupName() {
         return this.consumerGroupName;
     }
 
@@ -36,7 +37,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -47,8 +48,8 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventSourceName")
       private final @Nullable Output<String> eventSourceName;
 
-    public Output<String> getEventSourceName() {
-        return this.eventSourceName == null ? Output.empty() : this.eventSourceName;
+    public Output<String> eventSourceName() {
+        return this.eventSourceName == null ? Codegen.empty() : this.eventSourceName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventSourceResourceId", required=true)
       private final Output<String> eventSourceResourceId;
 
-    public Output<String> getEventSourceResourceId() {
+    public Output<String> eventSourceResourceId() {
         return this.eventSourceResourceId;
     }
 
@@ -69,7 +70,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iotHubName", required=true)
       private final Output<String> iotHubName;
 
-    public Output<String> getIotHubName() {
+    public Output<String> iotHubName() {
         return this.iotHubName;
     }
 
@@ -80,7 +81,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -92,7 +93,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -103,8 +104,8 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="localTimestamp")
       private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Output<LocalTimestampArgs> getLocalTimestamp() {
-        return this.localTimestamp == null ? Output.empty() : this.localTimestamp;
+    public Output<LocalTimestampArgs> localTimestamp() {
+        return this.localTimestamp == null ? Codegen.empty() : this.localTimestamp;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -136,7 +137,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sharedAccessKey", required=true)
       private final Output<String> sharedAccessKey;
 
-    public Output<String> getSharedAccessKey() {
+    public Output<String> sharedAccessKey() {
         return this.sharedAccessKey;
     }
 
@@ -147,8 +148,8 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
-        return this.time == null ? Output.empty() : this.time;
+    public Output<String> time() {
+        return this.time == null ? Codegen.empty() : this.time;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timestampPropertyName")
       private final @Nullable Output<String> timestampPropertyName;
 
-    public Output<String> getTimestampPropertyName() {
-        return this.timestampPropertyName == null ? Output.empty() : this.timestampPropertyName;
+    public Output<String> timestampPropertyName() {
+        return this.timestampPropertyName == null ? Codegen.empty() : this.timestampPropertyName;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<Either<String,IngressStartAtType>> type;
 
-    public Output<Either<String,IngressStartAtType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,IngressStartAtType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public IoTHubEventSourceArgs(
@@ -218,21 +219,21 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IoTHubEventSourceArgs() {
-        this.consumerGroupName = Output.empty();
-        this.environmentName = Output.empty();
-        this.eventSourceName = Output.empty();
-        this.eventSourceResourceId = Output.empty();
-        this.iotHubName = Output.empty();
-        this.keyName = Output.empty();
-        this.kind = Output.empty();
-        this.localTimestamp = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sharedAccessKey = Output.empty();
-        this.tags = Output.empty();
-        this.time = Output.empty();
-        this.timestampPropertyName = Output.empty();
-        this.type = Output.empty();
+        this.consumerGroupName = Codegen.empty();
+        this.environmentName = Codegen.empty();
+        this.eventSourceName = Codegen.empty();
+        this.eventSourceResourceId = Codegen.empty();
+        this.iotHubName = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.localTimestamp = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sharedAccessKey = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.time = Codegen.empty();
+        this.timestampPropertyName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -304,7 +305,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder eventSourceName(@Nullable String eventSourceName) {
-            this.eventSourceName = Output.ofNullable(eventSourceName);
+            this.eventSourceName = Codegen.ofNullable(eventSourceName);
             return this;
         }
         public Builder eventSourceResourceId(Output<String> eventSourceResourceId) {
@@ -344,7 +345,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
-            this.localTimestamp = Output.ofNullable(localTimestamp);
+            this.localTimestamp = Codegen.ofNullable(localTimestamp);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -352,7 +353,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -376,7 +377,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder time(@Nullable Output<String> time) {
@@ -384,7 +385,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder time(@Nullable String time) {
-            this.time = Output.ofNullable(time);
+            this.time = Codegen.ofNullable(time);
             return this;
         }
         public Builder timestampPropertyName(@Nullable Output<String> timestampPropertyName) {
@@ -392,7 +393,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder timestampPropertyName(@Nullable String timestampPropertyName) {
-            this.timestampPropertyName = Output.ofNullable(timestampPropertyName);
+            this.timestampPropertyName = Codegen.ofNullable(timestampPropertyName);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,IngressStartAtType>> type) {
@@ -400,7 +401,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable Either<String,IngressStartAtType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public IoTHubEventSourceArgs build() {
             return new IoTHubEventSourceArgs(consumerGroupName, environmentName, eventSourceName, eventSourceResourceId, iotHubName, keyName, kind, localTimestamp, location, resourceGroupName, sharedAccessKey, tags, time, timestampPropertyName, type);

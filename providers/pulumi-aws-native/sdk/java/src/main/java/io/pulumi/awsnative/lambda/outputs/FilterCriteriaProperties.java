@@ -26,7 +26,7 @@ public final class FilterCriteriaProperties {
      * List of filters of this FilterCriteria
      * 
     */
-    public List<EventSourceMappingFilter> getFilters() {
+    public List<EventSourceMappingFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

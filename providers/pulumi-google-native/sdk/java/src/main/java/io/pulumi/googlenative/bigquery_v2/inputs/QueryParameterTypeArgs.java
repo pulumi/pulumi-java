@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeStructTypesItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="arrayType")
       private final @Nullable Output<QueryParameterTypeArgs> arrayType;
 
-    public Output<QueryParameterTypeArgs> getArrayType() {
-        return this.arrayType == null ? Output.empty() : this.arrayType;
+    public Output<QueryParameterTypeArgs> arrayType() {
+        return this.arrayType == null ? Codegen.empty() : this.arrayType;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="structTypes")
       private final @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
 
-    public Output<List<QueryParameterTypeStructTypesItemArgs>> getStructTypes() {
-        return this.structTypes == null ? Output.empty() : this.structTypes;
+    public Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes() {
+        return this.structTypes == null ? Codegen.empty() : this.structTypes;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public QueryParameterTypeArgs(
@@ -59,9 +60,9 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     }
 
     private QueryParameterTypeArgs() {
-        this.arrayType = Output.empty();
-        this.structTypes = Output.empty();
-        this.type = Output.empty();
+        this.arrayType = Codegen.empty();
+        this.structTypes = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arrayType(@Nullable QueryParameterTypeArgs arrayType) {
-            this.arrayType = Output.ofNullable(arrayType);
+            this.arrayType = Codegen.ofNullable(arrayType);
             return this;
         }
         public Builder structTypes(@Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes) {
@@ -101,7 +102,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder structTypes(@Nullable List<QueryParameterTypeStructTypesItemArgs> structTypes) {
-            this.structTypes = Output.ofNullable(structTypes);
+            this.structTypes = Codegen.ofNullable(structTypes);
             return this;
         }
         public Builder structTypes(QueryParameterTypeStructTypesItemArgs... structTypes) {
@@ -112,7 +113,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public QueryParameterTypeArgs build() {
             return new QueryParameterTypeArgs(arrayType, structTypes, type);

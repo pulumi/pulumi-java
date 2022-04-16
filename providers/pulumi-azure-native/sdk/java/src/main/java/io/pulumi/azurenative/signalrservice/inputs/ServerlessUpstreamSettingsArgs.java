@@ -6,6 +6,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 import io.pulumi.azurenative.signalrservice.inputs.UpstreamTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
     @Import(name="templates")
       private final @Nullable Output<List<UpstreamTemplateArgs>> templates;
 
-    public Output<List<UpstreamTemplateArgs>> getTemplates() {
-        return this.templates == null ? Output.empty() : this.templates;
+    public Output<List<UpstreamTemplateArgs>> templates() {
+        return this.templates == null ? Codegen.empty() : this.templates;
     }
 
     public ServerlessUpstreamSettingsArgs(@Nullable Output<List<UpstreamTemplateArgs>> templates) {
@@ -35,7 +36,7 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
     }
 
     private ServerlessUpstreamSettingsArgs() {
-        this.templates = Output.empty();
+        this.templates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder templates(@Nullable List<UpstreamTemplateArgs> templates) {
-            this.templates = Output.ofNullable(templates);
+            this.templates = Codegen.ofNullable(templates);
             return this;
         }
         public Builder templates(UpstreamTemplateArgs... templates) {

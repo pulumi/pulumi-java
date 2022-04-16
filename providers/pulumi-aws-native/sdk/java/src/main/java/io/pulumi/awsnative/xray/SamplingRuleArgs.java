@@ -8,6 +8,7 @@ import io.pulumi.awsnative.xray.inputs.SamplingRuleUpdateArgs;
 import io.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,36 +22,36 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     @Import(name="samplingRule")
       private final @Nullable Output<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule;
 
-    public Output<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> getSamplingRule() {
-        return this.samplingRule == null ? Output.empty() : this.samplingRule;
+    public Output<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule() {
+        return this.samplingRule == null ? Codegen.empty() : this.samplingRule;
     }
 
     @Import(name="samplingRuleRecord")
       private final @Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord;
 
-    public Output<SamplingRuleRecordArgs> getSamplingRuleRecord() {
-        return this.samplingRuleRecord == null ? Output.empty() : this.samplingRuleRecord;
+    public Output<SamplingRuleRecordArgs> samplingRuleRecord() {
+        return this.samplingRuleRecord == null ? Codegen.empty() : this.samplingRuleRecord;
     }
 
     @Import(name="samplingRuleUpdate")
       private final @Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate;
 
-    public Output<SamplingRuleUpdateArgs> getSamplingRuleUpdate() {
-        return this.samplingRuleUpdate == null ? Output.empty() : this.samplingRuleUpdate;
+    public Output<SamplingRuleUpdateArgs> samplingRuleUpdate() {
+        return this.samplingRuleUpdate == null ? Codegen.empty() : this.samplingRuleUpdate;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Output<List<TagsItemPropertiesArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<TagsItemPropertiesArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SamplingRuleArgs(
@@ -67,11 +68,11 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SamplingRuleArgs() {
-        this.ruleName = Output.empty();
-        this.samplingRule = Output.empty();
-        this.samplingRuleRecord = Output.empty();
-        this.samplingRuleUpdate = Output.empty();
-        this.tags = Output.empty();
+        this.ruleName = Codegen.empty();
+        this.samplingRule = Codegen.empty();
+        this.samplingRuleRecord = Codegen.empty();
+        this.samplingRuleUpdate = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder samplingRule(@Nullable Output<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule) {
@@ -115,7 +116,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingRule(@Nullable io.pulumi.awsnative.xray.inputs.SamplingRuleArgs samplingRule) {
-            this.samplingRule = Output.ofNullable(samplingRule);
+            this.samplingRule = Codegen.ofNullable(samplingRule);
             return this;
         }
         public Builder samplingRuleRecord(@Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord) {
@@ -123,7 +124,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingRuleRecord(@Nullable SamplingRuleRecordArgs samplingRuleRecord) {
-            this.samplingRuleRecord = Output.ofNullable(samplingRuleRecord);
+            this.samplingRuleRecord = Codegen.ofNullable(samplingRuleRecord);
             return this;
         }
         public Builder samplingRuleUpdate(@Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate) {
@@ -131,7 +132,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingRuleUpdate(@Nullable SamplingRuleUpdateArgs samplingRuleUpdate) {
-            this.samplingRuleUpdate = Output.ofNullable(samplingRuleUpdate);
+            this.samplingRuleUpdate = Codegen.ofNullable(samplingRuleUpdate);
             return this;
         }
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
@@ -139,7 +140,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TagsItemPropertiesArgs... tags) {

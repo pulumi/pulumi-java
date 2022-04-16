@@ -12,6 +12,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementSqliMatchStatementFieldT
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,8 +28,8 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
+    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments() {
+        return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchBodyArgs> body;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchBodyArgs> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchBodyArgs> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchMethodArgs> method;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchMethodArgs> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchMethodArgs> method() {
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString() {
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
-        return this.singleHeader == null ? Output.empty() : this.singleHeader;
+    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader() {
+        return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
+    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument() {
+        return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPathArgs> getUriPath() {
-        return this.uriPath == null ? Output.empty() : this.uriPath;
+    public Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath() {
+        return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 
     public RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs(
@@ -115,13 +116,13 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
     }
 
     private RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs() {
-        this.allQueryArguments = Output.empty();
-        this.body = Output.empty();
-        this.method = Output.empty();
-        this.queryString = Output.empty();
-        this.singleHeader = Output.empty();
-        this.singleQueryArgument = Output.empty();
-        this.uriPath = Output.empty();
+        this.allQueryArguments = Codegen.empty();
+        this.body = Codegen.empty();
+        this.method = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.singleHeader = Codegen.empty();
+        this.singleQueryArgument = Codegen.empty();
+        this.uriPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
             return this;
         }
         public Builder allQueryArguments(@Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
-            this.allQueryArguments = Output.ofNullable(allQueryArguments);
+            this.allQueryArguments = Codegen.ofNullable(allQueryArguments);
             return this;
         }
         public Builder body(@Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchBodyArgs> body) {
@@ -169,7 +170,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
             return this;
         }
         public Builder body(@Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchBodyArgs body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder method(@Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchMethodArgs> method) {
@@ -177,7 +178,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
             return this;
         }
         public Builder method(@Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchMethodArgs method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder queryString(@Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString) {
@@ -185,7 +186,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
             return this;
         }
         public Builder queryString(@Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryStringArgs queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder singleHeader(@Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
@@ -193,7 +194,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
             return this;
         }
         public Builder singleHeader(@Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
-            this.singleHeader = Output.ofNullable(singleHeader);
+            this.singleHeader = Codegen.ofNullable(singleHeader);
             return this;
         }
         public Builder singleQueryArgument(@Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
@@ -201,7 +202,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
             return this;
         }
         public Builder singleQueryArgument(@Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
-            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Codegen.ofNullable(singleQueryArgument);
             return this;
         }
         public Builder uriPath(@Nullable Output<RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
@@ -209,7 +210,7 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs exte
             return this;
         }
         public Builder uriPath(@Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPathArgs uriPath) {
-            this.uriPath = Output.ofNullable(uriPath);
+            this.uriPath = Codegen.ofNullable(uriPath);
             return this;
         }        public RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs build() {
             return new RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudscheduler;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudscheduler.JobArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobState;
@@ -72,7 +73,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobAppEngineHttpTarget> getAppEngineHttpTarget() {
+    public Output</* @Nullable */ JobAppEngineHttpTarget> appEngineHttpTarget() {
         return this.appEngineHttpTarget;
     }
     /**
@@ -100,7 +101,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
-    public Output</* @Nullable */ String> getAttemptDeadline() {
+    public Output</* @Nullable */ String> attemptDeadline() {
         return this.attemptDeadline;
     }
     /**
@@ -116,7 +117,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * This string must not contain more than 500 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -136,7 +137,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobHttpTarget> getHttpTarget() {
+    public Output</* @Nullable */ JobHttpTarget> httpTarget() {
         return this.httpTarget;
     }
     /**
@@ -150,7 +151,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The name of the job.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -166,7 +167,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -186,7 +187,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobPubsubTarget> getPubsubTarget() {
+    public Output</* @Nullable */ JobPubsubTarget> pubsubTarget() {
         return this.pubsubTarget;
     }
     /**
@@ -200,7 +201,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -220,7 +221,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobRetryConfig> getRetryConfig() {
+    public Output</* @Nullable */ JobRetryConfig> retryConfig() {
         return this.retryConfig;
     }
     /**
@@ -234,7 +235,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Describes the schedule on which the job will be executed.
      * 
      */
-    public Output</* @Nullable */ String> getSchedule() {
+    public Output</* @Nullable */ String> schedule() {
         return this.schedule;
     }
     /**
@@ -250,7 +251,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The value of this field must be a time zone name from the tz database.
      * 
      */
-    public Output</* @Nullable */ String> getTimeZone() {
+    public Output</* @Nullable */ String> timeZone() {
         return this.timeZone;
     }
 
@@ -276,7 +277,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, @Nullable JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudscheduler/job:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudscheduler/job:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable JobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

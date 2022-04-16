@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty;
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="autoEnable", required=true)
       private final Output<Boolean> autoEnable;
 
-    public Output<Boolean> getAutoEnable() {
+    public Output<Boolean> autoEnable() {
         return this.autoEnable;
     }
 
@@ -34,8 +35,8 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="datasources")
       private final @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
 
-    public Output<OrganizationConfigurationDatasourcesArgs> getDatasources() {
-        return this.datasources == null ? Output.empty() : this.datasources;
+    public Output<OrganizationConfigurationDatasourcesArgs> datasources() {
+        return this.datasources == null ? Codegen.empty() : this.datasources;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -59,9 +60,9 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private OrganizationConfigurationArgs() {
-        this.autoEnable = Output.empty();
-        this.datasources = Output.empty();
-        this.detectorId = Output.empty();
+        this.autoEnable = Codegen.empty();
+        this.datasources = Codegen.empty();
+        this.detectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder datasources(@Nullable OrganizationConfigurationDatasourcesArgs datasources) {
-            this.datasources = Output.ofNullable(datasources);
+            this.datasources = Codegen.ofNullable(datasources);
             return this;
         }
         public Builder detectorId(Output<String> detectorId) {

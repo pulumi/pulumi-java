@@ -7,6 +7,7 @@ import io.pulumi.aws.opsworks.inputs.MysqlLayerCloudwatchConfigurationArgs;
 import io.pulumi.aws.opsworks.inputs.MysqlLayerEbsVolumeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoAssignElasticIps")
       private final @Nullable Output<Boolean> autoAssignElasticIps;
 
-    public Output<Boolean> getAutoAssignElasticIps() {
-        return this.autoAssignElasticIps == null ? Output.empty() : this.autoAssignElasticIps;
+    public Output<Boolean> autoAssignElasticIps() {
+        return this.autoAssignElasticIps == null ? Codegen.empty() : this.autoAssignElasticIps;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoAssignPublicIps")
       private final @Nullable Output<Boolean> autoAssignPublicIps;
 
-    public Output<Boolean> getAutoAssignPublicIps() {
-        return this.autoAssignPublicIps == null ? Output.empty() : this.autoAssignPublicIps;
+    public Output<Boolean> autoAssignPublicIps() {
+        return this.autoAssignPublicIps == null ? Codegen.empty() : this.autoAssignPublicIps;
     }
 
     /**
@@ -49,29 +50,29 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoHealing")
       private final @Nullable Output<Boolean> autoHealing;
 
-    public Output<Boolean> getAutoHealing() {
-        return this.autoHealing == null ? Output.empty() : this.autoHealing;
+    public Output<Boolean> autoHealing() {
+        return this.autoHealing == null ? Codegen.empty() : this.autoHealing;
     }
 
     @Import(name="cloudwatchConfiguration")
       private final @Nullable Output<MysqlLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Output<MysqlLayerCloudwatchConfigurationArgs> getCloudwatchConfiguration() {
-        return this.cloudwatchConfiguration == null ? Output.empty() : this.cloudwatchConfiguration;
+    public Output<MysqlLayerCloudwatchConfigurationArgs> cloudwatchConfiguration() {
+        return this.cloudwatchConfiguration == null ? Codegen.empty() : this.cloudwatchConfiguration;
     }
 
     @Import(name="customConfigureRecipes")
       private final @Nullable Output<List<String>> customConfigureRecipes;
 
-    public Output<List<String>> getCustomConfigureRecipes() {
-        return this.customConfigureRecipes == null ? Output.empty() : this.customConfigureRecipes;
+    public Output<List<String>> customConfigureRecipes() {
+        return this.customConfigureRecipes == null ? Codegen.empty() : this.customConfigureRecipes;
     }
 
     @Import(name="customDeployRecipes")
       private final @Nullable Output<List<String>> customDeployRecipes;
 
-    public Output<List<String>> getCustomDeployRecipes() {
-        return this.customDeployRecipes == null ? Output.empty() : this.customDeployRecipes;
+    public Output<List<String>> customDeployRecipes() {
+        return this.customDeployRecipes == null ? Codegen.empty() : this.customDeployRecipes;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customInstanceProfileArn")
       private final @Nullable Output<String> customInstanceProfileArn;
 
-    public Output<String> getCustomInstanceProfileArn() {
-        return this.customInstanceProfileArn == null ? Output.empty() : this.customInstanceProfileArn;
+    public Output<String> customInstanceProfileArn() {
+        return this.customInstanceProfileArn == null ? Codegen.empty() : this.customInstanceProfileArn;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customJson")
       private final @Nullable Output<String> customJson;
 
-    public Output<String> getCustomJson() {
-        return this.customJson == null ? Output.empty() : this.customJson;
+    public Output<String> customJson() {
+        return this.customJson == null ? Codegen.empty() : this.customJson;
     }
 
     /**
@@ -103,29 +104,29 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customSecurityGroupIds")
       private final @Nullable Output<List<String>> customSecurityGroupIds;
 
-    public Output<List<String>> getCustomSecurityGroupIds() {
-        return this.customSecurityGroupIds == null ? Output.empty() : this.customSecurityGroupIds;
+    public Output<List<String>> customSecurityGroupIds() {
+        return this.customSecurityGroupIds == null ? Codegen.empty() : this.customSecurityGroupIds;
     }
 
     @Import(name="customSetupRecipes")
       private final @Nullable Output<List<String>> customSetupRecipes;
 
-    public Output<List<String>> getCustomSetupRecipes() {
-        return this.customSetupRecipes == null ? Output.empty() : this.customSetupRecipes;
+    public Output<List<String>> customSetupRecipes() {
+        return this.customSetupRecipes == null ? Codegen.empty() : this.customSetupRecipes;
     }
 
     @Import(name="customShutdownRecipes")
       private final @Nullable Output<List<String>> customShutdownRecipes;
 
-    public Output<List<String>> getCustomShutdownRecipes() {
-        return this.customShutdownRecipes == null ? Output.empty() : this.customShutdownRecipes;
+    public Output<List<String>> customShutdownRecipes() {
+        return this.customShutdownRecipes == null ? Codegen.empty() : this.customShutdownRecipes;
     }
 
     @Import(name="customUndeployRecipes")
       private final @Nullable Output<List<String>> customUndeployRecipes;
 
-    public Output<List<String>> getCustomUndeployRecipes() {
-        return this.customUndeployRecipes == null ? Output.empty() : this.customUndeployRecipes;
+    public Output<List<String>> customUndeployRecipes() {
+        return this.customUndeployRecipes == null ? Codegen.empty() : this.customUndeployRecipes;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="drainElbOnShutdown")
       private final @Nullable Output<Boolean> drainElbOnShutdown;
 
-    public Output<Boolean> getDrainElbOnShutdown() {
-        return this.drainElbOnShutdown == null ? Output.empty() : this.drainElbOnShutdown;
+    public Output<Boolean> drainElbOnShutdown() {
+        return this.drainElbOnShutdown == null ? Codegen.empty() : this.drainElbOnShutdown;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ebsVolumes")
       private final @Nullable Output<List<MysqlLayerEbsVolumeArgs>> ebsVolumes;
 
-    public Output<List<MysqlLayerEbsVolumeArgs>> getEbsVolumes() {
-        return this.ebsVolumes == null ? Output.empty() : this.ebsVolumes;
+    public Output<List<MysqlLayerEbsVolumeArgs>> ebsVolumes() {
+        return this.ebsVolumes == null ? Codegen.empty() : this.ebsVolumes;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticLoadBalancer")
       private final @Nullable Output<String> elasticLoadBalancer;
 
-    public Output<String> getElasticLoadBalancer() {
-        return this.elasticLoadBalancer == null ? Output.empty() : this.elasticLoadBalancer;
+    public Output<String> elasticLoadBalancer() {
+        return this.elasticLoadBalancer == null ? Codegen.empty() : this.elasticLoadBalancer;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="installUpdatesOnBoot")
       private final @Nullable Output<Boolean> installUpdatesOnBoot;
 
-    public Output<Boolean> getInstallUpdatesOnBoot() {
-        return this.installUpdatesOnBoot == null ? Output.empty() : this.installUpdatesOnBoot;
+    public Output<Boolean> installUpdatesOnBoot() {
+        return this.installUpdatesOnBoot == null ? Codegen.empty() : this.installUpdatesOnBoot;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceShutdownTimeout")
       private final @Nullable Output<Integer> instanceShutdownTimeout;
 
-    public Output<Integer> getInstanceShutdownTimeout() {
-        return this.instanceShutdownTimeout == null ? Output.empty() : this.instanceShutdownTimeout;
+    public Output<Integer> instanceShutdownTimeout() {
+        return this.instanceShutdownTimeout == null ? Codegen.empty() : this.instanceShutdownTimeout;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootPassword")
       private final @Nullable Output<String> rootPassword;
 
-    public Output<String> getRootPassword() {
-        return this.rootPassword == null ? Output.empty() : this.rootPassword;
+    public Output<String> rootPassword() {
+        return this.rootPassword == null ? Codegen.empty() : this.rootPassword;
     }
 
     /**
@@ -212,8 +213,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootPasswordOnAllInstances")
       private final @Nullable Output<Boolean> rootPasswordOnAllInstances;
 
-    public Output<Boolean> getRootPasswordOnAllInstances() {
-        return this.rootPasswordOnAllInstances == null ? Output.empty() : this.rootPasswordOnAllInstances;
+    public Output<Boolean> rootPasswordOnAllInstances() {
+        return this.rootPasswordOnAllInstances == null ? Codegen.empty() : this.rootPasswordOnAllInstances;
     }
 
     /**
@@ -223,7 +224,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackId", required=true)
       private final Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
 
@@ -234,8 +235,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemPackages")
       private final @Nullable Output<List<String>> systemPackages;
 
-    public Output<List<String>> getSystemPackages() {
-        return this.systemPackages == null ? Output.empty() : this.systemPackages;
+    public Output<List<String>> systemPackages() {
+        return this.systemPackages == null ? Codegen.empty() : this.systemPackages;
     }
 
     /**
@@ -245,8 +246,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -256,8 +257,8 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useEbsOptimizedInstances")
       private final @Nullable Output<Boolean> useEbsOptimizedInstances;
 
-    public Output<Boolean> getUseEbsOptimizedInstances() {
-        return this.useEbsOptimizedInstances == null ? Output.empty() : this.useEbsOptimizedInstances;
+    public Output<Boolean> useEbsOptimizedInstances() {
+        return this.useEbsOptimizedInstances == null ? Codegen.empty() : this.useEbsOptimizedInstances;
     }
 
     public MysqlLayerArgs(
@@ -312,30 +313,30 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MysqlLayerArgs() {
-        this.autoAssignElasticIps = Output.empty();
-        this.autoAssignPublicIps = Output.empty();
-        this.autoHealing = Output.empty();
-        this.cloudwatchConfiguration = Output.empty();
-        this.customConfigureRecipes = Output.empty();
-        this.customDeployRecipes = Output.empty();
-        this.customInstanceProfileArn = Output.empty();
-        this.customJson = Output.empty();
-        this.customSecurityGroupIds = Output.empty();
-        this.customSetupRecipes = Output.empty();
-        this.customShutdownRecipes = Output.empty();
-        this.customUndeployRecipes = Output.empty();
-        this.drainElbOnShutdown = Output.empty();
-        this.ebsVolumes = Output.empty();
-        this.elasticLoadBalancer = Output.empty();
-        this.installUpdatesOnBoot = Output.empty();
-        this.instanceShutdownTimeout = Output.empty();
-        this.name = Output.empty();
-        this.rootPassword = Output.empty();
-        this.rootPasswordOnAllInstances = Output.empty();
-        this.stackId = Output.empty();
-        this.systemPackages = Output.empty();
-        this.tags = Output.empty();
-        this.useEbsOptimizedInstances = Output.empty();
+        this.autoAssignElasticIps = Codegen.empty();
+        this.autoAssignPublicIps = Codegen.empty();
+        this.autoHealing = Codegen.empty();
+        this.cloudwatchConfiguration = Codegen.empty();
+        this.customConfigureRecipes = Codegen.empty();
+        this.customDeployRecipes = Codegen.empty();
+        this.customInstanceProfileArn = Codegen.empty();
+        this.customJson = Codegen.empty();
+        this.customSecurityGroupIds = Codegen.empty();
+        this.customSetupRecipes = Codegen.empty();
+        this.customShutdownRecipes = Codegen.empty();
+        this.customUndeployRecipes = Codegen.empty();
+        this.drainElbOnShutdown = Codegen.empty();
+        this.ebsVolumes = Codegen.empty();
+        this.elasticLoadBalancer = Codegen.empty();
+        this.installUpdatesOnBoot = Codegen.empty();
+        this.instanceShutdownTimeout = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rootPassword = Codegen.empty();
+        this.rootPasswordOnAllInstances = Codegen.empty();
+        this.stackId = Codegen.empty();
+        this.systemPackages = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.useEbsOptimizedInstances = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -409,7 +410,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
-            this.autoAssignElasticIps = Output.ofNullable(autoAssignElasticIps);
+            this.autoAssignElasticIps = Codegen.ofNullable(autoAssignElasticIps);
             return this;
         }
         public Builder autoAssignPublicIps(@Nullable Output<Boolean> autoAssignPublicIps) {
@@ -417,7 +418,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
-            this.autoAssignPublicIps = Output.ofNullable(autoAssignPublicIps);
+            this.autoAssignPublicIps = Codegen.ofNullable(autoAssignPublicIps);
             return this;
         }
         public Builder autoHealing(@Nullable Output<Boolean> autoHealing) {
@@ -425,7 +426,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoHealing(@Nullable Boolean autoHealing) {
-            this.autoHealing = Output.ofNullable(autoHealing);
+            this.autoHealing = Codegen.ofNullable(autoHealing);
             return this;
         }
         public Builder cloudwatchConfiguration(@Nullable Output<MysqlLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
@@ -433,7 +434,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchConfiguration(@Nullable MysqlLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
-            this.cloudwatchConfiguration = Output.ofNullable(cloudwatchConfiguration);
+            this.cloudwatchConfiguration = Codegen.ofNullable(cloudwatchConfiguration);
             return this;
         }
         public Builder customConfigureRecipes(@Nullable Output<List<String>> customConfigureRecipes) {
@@ -441,7 +442,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
-            this.customConfigureRecipes = Output.ofNullable(customConfigureRecipes);
+            this.customConfigureRecipes = Codegen.ofNullable(customConfigureRecipes);
             return this;
         }
         public Builder customConfigureRecipes(String... customConfigureRecipes) {
@@ -452,7 +453,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDeployRecipes(@Nullable List<String> customDeployRecipes) {
-            this.customDeployRecipes = Output.ofNullable(customDeployRecipes);
+            this.customDeployRecipes = Codegen.ofNullable(customDeployRecipes);
             return this;
         }
         public Builder customDeployRecipes(String... customDeployRecipes) {
@@ -463,7 +464,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customInstanceProfileArn(@Nullable String customInstanceProfileArn) {
-            this.customInstanceProfileArn = Output.ofNullable(customInstanceProfileArn);
+            this.customInstanceProfileArn = Codegen.ofNullable(customInstanceProfileArn);
             return this;
         }
         public Builder customJson(@Nullable Output<String> customJson) {
@@ -471,7 +472,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customJson(@Nullable String customJson) {
-            this.customJson = Output.ofNullable(customJson);
+            this.customJson = Codegen.ofNullable(customJson);
             return this;
         }
         public Builder customSecurityGroupIds(@Nullable Output<List<String>> customSecurityGroupIds) {
@@ -479,7 +480,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
-            this.customSecurityGroupIds = Output.ofNullable(customSecurityGroupIds);
+            this.customSecurityGroupIds = Codegen.ofNullable(customSecurityGroupIds);
             return this;
         }
         public Builder customSecurityGroupIds(String... customSecurityGroupIds) {
@@ -490,7 +491,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customSetupRecipes(@Nullable List<String> customSetupRecipes) {
-            this.customSetupRecipes = Output.ofNullable(customSetupRecipes);
+            this.customSetupRecipes = Codegen.ofNullable(customSetupRecipes);
             return this;
         }
         public Builder customSetupRecipes(String... customSetupRecipes) {
@@ -501,7 +502,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
-            this.customShutdownRecipes = Output.ofNullable(customShutdownRecipes);
+            this.customShutdownRecipes = Codegen.ofNullable(customShutdownRecipes);
             return this;
         }
         public Builder customShutdownRecipes(String... customShutdownRecipes) {
@@ -512,7 +513,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
-            this.customUndeployRecipes = Output.ofNullable(customUndeployRecipes);
+            this.customUndeployRecipes = Codegen.ofNullable(customUndeployRecipes);
             return this;
         }
         public Builder customUndeployRecipes(String... customUndeployRecipes) {
@@ -523,7 +524,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder drainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
-            this.drainElbOnShutdown = Output.ofNullable(drainElbOnShutdown);
+            this.drainElbOnShutdown = Codegen.ofNullable(drainElbOnShutdown);
             return this;
         }
         public Builder ebsVolumes(@Nullable Output<List<MysqlLayerEbsVolumeArgs>> ebsVolumes) {
@@ -531,7 +532,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ebsVolumes(@Nullable List<MysqlLayerEbsVolumeArgs> ebsVolumes) {
-            this.ebsVolumes = Output.ofNullable(ebsVolumes);
+            this.ebsVolumes = Codegen.ofNullable(ebsVolumes);
             return this;
         }
         public Builder ebsVolumes(MysqlLayerEbsVolumeArgs... ebsVolumes) {
@@ -542,7 +543,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elasticLoadBalancer(@Nullable String elasticLoadBalancer) {
-            this.elasticLoadBalancer = Output.ofNullable(elasticLoadBalancer);
+            this.elasticLoadBalancer = Codegen.ofNullable(elasticLoadBalancer);
             return this;
         }
         public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
@@ -550,7 +551,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
-            this.installUpdatesOnBoot = Output.ofNullable(installUpdatesOnBoot);
+            this.installUpdatesOnBoot = Codegen.ofNullable(installUpdatesOnBoot);
             return this;
         }
         public Builder instanceShutdownTimeout(@Nullable Output<Integer> instanceShutdownTimeout) {
@@ -558,7 +559,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
-            this.instanceShutdownTimeout = Output.ofNullable(instanceShutdownTimeout);
+            this.instanceShutdownTimeout = Codegen.ofNullable(instanceShutdownTimeout);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -566,7 +567,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
@@ -574,7 +575,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Output.ofNullable(rootPassword);
+            this.rootPassword = Codegen.ofNullable(rootPassword);
             return this;
         }
         public Builder rootPasswordOnAllInstances(@Nullable Output<Boolean> rootPasswordOnAllInstances) {
@@ -582,7 +583,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootPasswordOnAllInstances(@Nullable Boolean rootPasswordOnAllInstances) {
-            this.rootPasswordOnAllInstances = Output.ofNullable(rootPasswordOnAllInstances);
+            this.rootPasswordOnAllInstances = Codegen.ofNullable(rootPasswordOnAllInstances);
             return this;
         }
         public Builder stackId(Output<String> stackId) {
@@ -598,7 +599,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemPackages(@Nullable List<String> systemPackages) {
-            this.systemPackages = Output.ofNullable(systemPackages);
+            this.systemPackages = Codegen.ofNullable(systemPackages);
             return this;
         }
         public Builder systemPackages(String... systemPackages) {
@@ -609,7 +610,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder useEbsOptimizedInstances(@Nullable Output<Boolean> useEbsOptimizedInstances) {
@@ -617,7 +618,7 @@ public final class MysqlLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
-            this.useEbsOptimizedInstances = Output.ofNullable(useEbsOptimizedInstances);
+            this.useEbsOptimizedInstances = Codegen.ofNullable(useEbsOptimizedInstances);
             return this;
         }        public MysqlLayerArgs build() {
             return new MysqlLayerArgs(autoAssignElasticIps, autoAssignPublicIps, autoHealing, cloudwatchConfiguration, customConfigureRecipes, customDeployRecipes, customInstanceProfileArn, customJson, customSecurityGroupIds, customSetupRecipes, customShutdownRecipes, customUndeployRecipes, drainElbOnShutdown, ebsVolumes, elasticLoadBalancer, installUpdatesOnBoot, instanceShutdownTimeout, name, rootPassword, rootPasswordOnAllInstances, stackId, systemPackages, tags, useEbsOptimizedInstances);

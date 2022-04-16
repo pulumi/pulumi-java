@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,21 +19,21 @@ public final class TopicRuleRepublishActionArgs extends io.pulumi.resources.Reso
     @Import(name="qos")
       private final @Nullable Output<Integer> qos;
 
-    public Output<Integer> getQos() {
-        return this.qos == null ? Output.empty() : this.qos;
+    public Output<Integer> qos() {
+        return this.qos == null ? Codegen.empty() : this.qos;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -46,9 +47,9 @@ public final class TopicRuleRepublishActionArgs extends io.pulumi.resources.Reso
     }
 
     private TopicRuleRepublishActionArgs() {
-        this.qos = Output.empty();
-        this.roleArn = Output.empty();
-        this.topic = Output.empty();
+        this.qos = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TopicRuleRepublishActionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder qos(@Nullable Integer qos) {
-            this.qos = Output.ofNullable(qos);
+            this.qos = Codegen.ofNullable(qos);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

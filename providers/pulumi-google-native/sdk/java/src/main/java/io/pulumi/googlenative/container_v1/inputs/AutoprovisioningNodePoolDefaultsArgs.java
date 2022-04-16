@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementArgs;
 import io.pulumi.googlenative.container_v1.inputs.ShieldedInstanceConfigArgs;
 import io.pulumi.googlenative.container_v1.inputs.UpgradeSettingsArgs;
@@ -30,8 +31,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> getBootDiskKmsKey() {
-        return this.bootDiskKmsKey == null ? Output.empty() : this.bootDiskKmsKey;
+    public Output<String> bootDiskKmsKey() {
+        return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<Integer> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+    public Output<String> diskType() {
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
-        return this.imageType == null ? Output.empty() : this.imageType;
+    public Output<String> imageType() {
+        return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="management")
       private final @Nullable Output<NodeManagementArgs> management;
 
-    public Output<NodeManagementArgs> getManagement() {
-        return this.management == null ? Output.empty() : this.management;
+    public Output<NodeManagementArgs> management() {
+        return this.management == null ? Codegen.empty() : this.management;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
+    public Output<String> minCpuPlatform() {
+        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
+    public Output<List<String>> oauthScopes() {
+        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="upgradeSettings")
       private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
-    public Output<UpgradeSettingsArgs> getUpgradeSettings() {
-        return this.upgradeSettings == null ? Output.empty() : this.upgradeSettings;
+    public Output<UpgradeSettingsArgs> upgradeSettings() {
+        return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
     }
 
     public AutoprovisioningNodePoolDefaultsArgs(
@@ -157,16 +158,16 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     }
 
     private AutoprovisioningNodePoolDefaultsArgs() {
-        this.bootDiskKmsKey = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.diskType = Output.empty();
-        this.imageType = Output.empty();
-        this.management = Output.empty();
-        this.minCpuPlatform = Output.empty();
-        this.oauthScopes = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.upgradeSettings = Output.empty();
+        this.bootDiskKmsKey = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.imageType = Codegen.empty();
+        this.management = Codegen.empty();
+        this.minCpuPlatform = Codegen.empty();
+        this.oauthScopes = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.upgradeSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -212,7 +213,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Output.ofNullable(bootDiskKmsKey);
+            this.bootDiskKmsKey = Codegen.ofNullable(bootDiskKmsKey);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
@@ -220,7 +221,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder diskType(@Nullable Output<String> diskType) {
@@ -228,7 +229,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder imageType(@Nullable Output<String> imageType) {
@@ -236,7 +237,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Output.ofNullable(imageType);
+            this.imageType = Codegen.ofNullable(imageType);
             return this;
         }
         public Builder management(@Nullable Output<NodeManagementArgs> management) {
@@ -244,7 +245,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder management(@Nullable NodeManagementArgs management) {
-            this.management = Output.ofNullable(management);
+            this.management = Codegen.ofNullable(management);
             return this;
         }
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
@@ -252,7 +253,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
             return this;
         }
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
@@ -260,7 +261,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Output.ofNullable(oauthScopes);
+            this.oauthScopes = Codegen.ofNullable(oauthScopes);
             return this;
         }
         public Builder oauthScopes(String... oauthScopes) {
@@ -271,7 +272,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
@@ -279,7 +280,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder upgradeSettings(@Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
@@ -287,7 +288,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             return this;
         }
         public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Output.ofNullable(upgradeSettings);
+            this.upgradeSettings = Codegen.ofNullable(upgradeSettings);
             return this;
         }        public AutoprovisioningNodePoolDefaultsArgs build() {
             return new AutoprovisioningNodePoolDefaultsArgs(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);

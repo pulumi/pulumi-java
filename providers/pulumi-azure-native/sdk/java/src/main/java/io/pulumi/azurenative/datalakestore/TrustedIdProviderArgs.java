@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakestore;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +33,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="idProvider", required=true)
       private final Output<String> idProvider;
 
-    public Output<String> getIdProvider() {
+    public Output<String> idProvider() {
         return this.idProvider;
     }
 
@@ -43,7 +44,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,8 +55,8 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="trustedIdProviderName")
       private final @Nullable Output<String> trustedIdProviderName;
 
-    public Output<String> getTrustedIdProviderName() {
-        return this.trustedIdProviderName == null ? Output.empty() : this.trustedIdProviderName;
+    public Output<String> trustedIdProviderName() {
+        return this.trustedIdProviderName == null ? Codegen.empty() : this.trustedIdProviderName;
     }
 
     public TrustedIdProviderArgs(
@@ -70,10 +71,10 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TrustedIdProviderArgs() {
-        this.accountName = Output.empty();
-        this.idProvider = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.trustedIdProviderName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.idProvider = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.trustedIdProviderName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder trustedIdProviderName(@Nullable String trustedIdProviderName) {
-            this.trustedIdProviderName = Output.ofNullable(trustedIdProviderName);
+            this.trustedIdProviderName = Codegen.ofNullable(trustedIdProviderName);
             return this;
         }        public TrustedIdProviderArgs build() {
             return new TrustedIdProviderArgs(accountName, idProvider, resourceGroupName, trustedIdProviderName);

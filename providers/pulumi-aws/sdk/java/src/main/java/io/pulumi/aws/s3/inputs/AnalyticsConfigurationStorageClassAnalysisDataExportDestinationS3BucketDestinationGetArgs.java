@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="bucketAccountId")
       private final @Nullable Output<String> bucketAccountId;
 
-    public Output<String> getBucketAccountId() {
-        return this.bucketAccountId == null ? Output.empty() : this.bucketAccountId;
+    public Output<String> bucketAccountId() {
+        return this.bucketAccountId == null ? Codegen.empty() : this.bucketAccountId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -43,8 +44,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<String> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs(
@@ -70,10 +71,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     }
 
     private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs() {
-        this.bucketAccountId = Output.empty();
-        this.bucketArn = Output.empty();
-        this.format = Output.empty();
-        this.prefix = Output.empty();
+        this.bucketAccountId = Codegen.empty();
+        this.bucketArn = Codegen.empty();
+        this.format = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
             return this;
         }
         public Builder bucketAccountId(@Nullable String bucketAccountId) {
-            this.bucketAccountId = Output.ofNullable(bucketAccountId);
+            this.bucketAccountId = Codegen.ofNullable(bucketAccountId);
             return this;
         }
         public Builder bucketArn(Output<String> bucketArn) {
@@ -123,7 +124,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -131,7 +132,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs build() {
             return new AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs(bucketAccountId, bucketArn, format, prefix);

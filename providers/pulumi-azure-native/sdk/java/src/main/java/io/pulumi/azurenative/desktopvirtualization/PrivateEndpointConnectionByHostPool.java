@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +59,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @return The resource of private end point.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +73,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @return A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +87,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @return The provisioning state of the private endpoint connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +115,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +141,7 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnectionByHostPool(String name, PrivateEndpointConnectionByHostPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool", name, args == null ? PrivateEndpointConnectionByHostPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool", name, args == null ? PrivateEndpointConnectionByHostPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateEndpointConnectionByHostPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -32,7 +33,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationId", required=true)
       private final Output<String> operationId;
 
-    public Output<String> getOperationId() {
+    public Output<String> operationId() {
         return this.operationId;
     }
 
@@ -43,7 +44,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -65,8 +66,8 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagId")
       private final @Nullable Output<String> tagId;
 
-    public Output<String> getTagId() {
-        return this.tagId == null ? Output.empty() : this.tagId;
+    public Output<String> tagId() {
+        return this.tagId == null ? Codegen.empty() : this.tagId;
     }
 
     public TagByOperationArgs(
@@ -83,11 +84,11 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagByOperationArgs() {
-        this.apiId = Output.empty();
-        this.operationId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.tagId = Output.empty();
+        this.apiId = Codegen.empty();
+        this.operationId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.tagId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagId(@Nullable String tagId) {
-            this.tagId = Output.ofNullable(tagId);
+            this.tagId = Codegen.ofNullable(tagId);
             return this;
         }        public TagByOperationArgs build() {
             return new TagByOperationArgs(apiId, operationId, resourceGroupName, serviceName, tagId);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.RatePlanArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1RateRangeResponse;
@@ -34,7 +35,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Name of the API product that the rate plan is associated with.
      * 
      */
-    public Output<String> getApiproduct() {
+    public Output<String> apiproduct() {
         return this.apiproduct;
     }
     /**
@@ -48,7 +49,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Frequency at which the customer will be billed.
      * 
      */
-    public Output<String> getBillingPeriod() {
+    public Output<String> billingPeriod() {
         return this.billingPeriod;
     }
     /**
@@ -62,7 +63,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
      */
-    public Output<List<GoogleCloudApigeeV1RateRangeResponse>> getConsumptionPricingRates() {
+    public Output<List<GoogleCloudApigeeV1RateRangeResponse>> consumptionPricingRates() {
         return this.consumptionPricingRates;
     }
     /**
@@ -76,7 +77,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Pricing model used for consumption-based charges.
      * 
      */
-    public Output<String> getConsumptionPricingType() {
+    public Output<String> consumptionPricingType() {
         return this.consumptionPricingType;
     }
     /**
@@ -90,7 +91,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Time that the rate plan was created in milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -104,7 +105,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
      * 
      */
-    public Output<String> getCurrencyCode() {
+    public Output<String> currencyCode() {
         return this.currencyCode;
     }
     /**
@@ -118,7 +119,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Description of the rate plan.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -132,7 +133,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Display name of the rate plan.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -146,7 +147,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -160,7 +161,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Frequency at which the fixed fee is charged.
      * 
      */
-    public Output<Integer> getFixedFeeFrequency() {
+    public Output<Integer> fixedFeeFrequency() {
         return this.fixedFeeFrequency;
     }
     /**
@@ -174,7 +175,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
      * 
      */
-    public Output<GoogleTypeMoneyResponse> getFixedRecurringFee() {
+    public Output<GoogleTypeMoneyResponse> fixedRecurringFee() {
         return this.fixedRecurringFee;
     }
     /**
@@ -188,7 +189,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Time the rate plan was last modified in milliseconds since epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -202,7 +203,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Name of the rate plan.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -216,7 +217,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Details of the revenue sharing model.
      * 
      */
-    public Output<List<GoogleCloudApigeeV1RevenueShareRangeResponse>> getRevenueShareRates() {
+    public Output<List<GoogleCloudApigeeV1RevenueShareRangeResponse>> revenueShareRates() {
         return this.revenueShareRates;
     }
     /**
@@ -230,7 +231,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Method used to calculate the revenue that is shared with developers.
      * 
      */
-    public Output<String> getRevenueShareType() {
+    public Output<String> revenueShareType() {
         return this.revenueShareType;
     }
     /**
@@ -244,7 +245,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Initial, one-time fee paid when purchasing the API product.
      * 
      */
-    public Output<GoogleTypeMoneyResponse> getSetupFee() {
+    public Output<GoogleTypeMoneyResponse> setupFee() {
         return this.setupFee;
     }
     /**
@@ -258,7 +259,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Time when the rate plan becomes active in milliseconds since epoch.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -272,7 +273,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @return Current state of the rate plan (draft or published).
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -298,7 +299,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RatePlan(String name, RatePlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:RatePlan", name, args == null ? RatePlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:RatePlan", name, args == null ? RatePlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RatePlan(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

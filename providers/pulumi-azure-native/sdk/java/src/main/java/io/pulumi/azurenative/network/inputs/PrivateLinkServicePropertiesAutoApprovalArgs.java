@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
     @Import(name="subscriptions")
       private final @Nullable Output<List<String>> subscriptions;
 
-    public Output<List<String>> getSubscriptions() {
-        return this.subscriptions == null ? Output.empty() : this.subscriptions;
+    public Output<List<String>> subscriptions() {
+        return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
     }
 
     public PrivateLinkServicePropertiesAutoApprovalArgs(@Nullable Output<List<String>> subscriptions) {
@@ -35,7 +36,7 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
     }
 
     private PrivateLinkServicePropertiesAutoApprovalArgs() {
-        this.subscriptions = Output.empty();
+        this.subscriptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
             return this;
         }
         public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = Output.ofNullable(subscriptions);
+            this.subscriptions = Codegen.ofNullable(subscriptions);
             return this;
         }
         public Builder subscriptions(String... subscriptions) {

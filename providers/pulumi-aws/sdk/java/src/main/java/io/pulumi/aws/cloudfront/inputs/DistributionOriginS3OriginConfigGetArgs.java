@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class DistributionOriginS3OriginConfigGetArgs extends io.pulumi.res
     @Import(name="originAccessIdentity", required=true)
       private final Output<String> originAccessIdentity;
 
-    public Output<String> getOriginAccessIdentity() {
+    public Output<String> originAccessIdentity() {
         return this.originAccessIdentity;
     }
 
@@ -30,7 +31,7 @@ public final class DistributionOriginS3OriginConfigGetArgs extends io.pulumi.res
     }
 
     private DistributionOriginS3OriginConfigGetArgs() {
-        this.originAccessIdentity = Output.empty();
+        this.originAccessIdentity = Codegen.empty();
     }
 
     public static Builder builder() {

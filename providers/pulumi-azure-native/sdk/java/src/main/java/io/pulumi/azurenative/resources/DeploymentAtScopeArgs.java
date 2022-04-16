@@ -6,6 +6,7 @@ package io.pulumi.azurenative.resources;
 import io.pulumi.azurenative.resources.inputs.DeploymentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
-        return this.deploymentName == null ? Output.empty() : this.deploymentName;
+    public Output<String> deploymentName() {
+        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties", required=true)
       private final Output<DeploymentPropertiesArgs> properties;
 
-    public Output<DeploymentPropertiesArgs> getProperties() {
+    public Output<DeploymentPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -56,7 +57,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -67,8 +68,8 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeploymentAtScopeArgs(
@@ -85,11 +86,11 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DeploymentAtScopeArgs() {
-        this.deploymentName = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
+        this.deploymentName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Output.ofNullable(deploymentName);
+            this.deploymentName = Codegen.ofNullable(deploymentName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -133,7 +134,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<DeploymentPropertiesArgs> properties) {
@@ -157,7 +158,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DeploymentAtScopeArgs build() {
             return new DeploymentAtScopeArgs(deploymentName, location, properties, scope, tags);

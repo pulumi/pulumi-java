@@ -10,6 +10,7 @@ import io.pulumi.aws.lightsail.outputs.InstancePublicPortsPortInfo;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public class InstancePublicPorts extends io.pulumi.resources.CustomResource {
      * @return Name of the Lightsail Instance.
      * 
      */
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
     /**
@@ -51,7 +52,7 @@ public class InstancePublicPorts extends io.pulumi.resources.CustomResource {
      * @return Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
      * 
      */
-    public Output<List<InstancePublicPortsPortInfo>> getPortInfos() {
+    public Output<List<InstancePublicPortsPortInfo>> portInfos() {
         return this.portInfos;
     }
 
@@ -77,7 +78,7 @@ public class InstancePublicPorts extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstancePublicPorts(String name, InstancePublicPortsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lightsail/instancePublicPorts:InstancePublicPorts", name, args == null ? InstancePublicPortsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lightsail/instancePublicPorts:InstancePublicPorts", name, args == null ? InstancePublicPortsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstancePublicPorts(String name, Output<String> id, @Nullable InstancePublicPortsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

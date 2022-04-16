@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,21 +22,21 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<String> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -49,9 +50,9 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceAttachmentArgs() {
-        this.environment = Output.empty();
-        this.instanceId = Output.empty();
-        this.organizationId = Output.empty();
+        this.environment = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder environment(@Nullable String environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {

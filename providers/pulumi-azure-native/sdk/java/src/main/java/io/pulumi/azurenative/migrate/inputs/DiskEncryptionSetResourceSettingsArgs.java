@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resou
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -36,7 +37,7 @@ public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resou
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -48,8 +49,8 @@ public final class DiskEncryptionSetResourceSettingsArgs extends io.pulumi.resou
     }
 
     private DiskEncryptionSetResourceSettingsArgs() {
-        this.resourceType = Output.empty();
-        this.targetResourceName = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.targetResourceName = Codegen.empty();
     }
 
     public static Builder builder() {

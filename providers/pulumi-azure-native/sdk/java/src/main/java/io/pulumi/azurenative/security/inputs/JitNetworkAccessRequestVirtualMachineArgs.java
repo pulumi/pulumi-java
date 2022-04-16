@@ -6,6 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestPortArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -33,7 +34,7 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
     @Import(name="ports", required=true)
       private final Output<List<JitNetworkAccessRequestPortArgs>> ports;
 
-    public Output<List<JitNetworkAccessRequestPortArgs>> getPorts() {
+    public Output<List<JitNetworkAccessRequestPortArgs>> ports() {
         return this.ports;
     }
 
@@ -45,8 +46,8 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
     }
 
     private JitNetworkAccessRequestVirtualMachineArgs() {
-        this.id = Output.empty();
-        this.ports = Output.empty();
+        this.id = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {

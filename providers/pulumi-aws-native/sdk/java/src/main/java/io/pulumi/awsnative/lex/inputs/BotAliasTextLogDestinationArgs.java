@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotAliasCloudWatchLogGroupLogDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
     @Import(name="cloudWatch")
       private final @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
-    public Output<BotAliasCloudWatchLogGroupLogDestinationArgs> getCloudWatch() {
-        return this.cloudWatch == null ? Output.empty() : this.cloudWatch;
+    public Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch() {
+        return this.cloudWatch == null ? Codegen.empty() : this.cloudWatch;
     }
 
     public BotAliasTextLogDestinationArgs(@Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
@@ -30,7 +31,7 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
     }
 
     private BotAliasTextLogDestinationArgs() {
-        this.cloudWatch = Output.empty();
+        this.cloudWatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestinationArgs cloudWatch) {
-            this.cloudWatch = Output.ofNullable(cloudWatch);
+            this.cloudWatch = Codegen.ofNullable(cloudWatch);
             return this;
         }        public BotAliasTextLogDestinationArgs build() {
             return new BotAliasTextLogDestinationArgs(cloudWatch);

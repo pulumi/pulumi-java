@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     @Import(name="notificationName", required=true)
       private final Output<String> notificationName;
 
-    public Output<String> getNotificationName() {
+    public Output<String> notificationName() {
         return this.notificationName;
     }
 
@@ -43,7 +44,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -70,10 +71,10 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     }
 
     private NotificationRecipientEmailArgs() {
-        this.email = Output.empty();
-        this.notificationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.email = Codegen.empty();
+        this.notificationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder notificationName(Output<String> notificationName) {

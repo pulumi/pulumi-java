@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appProtocol")
       private final @Nullable Output<String> appProtocol;
 
-    public Output<String> getAppProtocol() {
-        return this.appProtocol == null ? Output.empty() : this.appProtocol;
+    public Output<String> appProtocol() {
+        return this.appProtocol == null ? Codegen.empty() : this.appProtocol;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public EndpointPortArgs(
@@ -75,10 +76,10 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointPortArgs() {
-        this.appProtocol = Output.empty();
-        this.name = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
+        this.appProtocol = Codegen.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appProtocol(@Nullable String appProtocol) {
-            this.appProtocol = Output.ofNullable(appProtocol);
+            this.appProtocol = Codegen.ofNullable(appProtocol);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -120,7 +121,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -128,7 +129,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -136,7 +137,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public EndpointPortArgs build() {
             return new EndpointPortArgs(appProtocol, name, port, protocol);

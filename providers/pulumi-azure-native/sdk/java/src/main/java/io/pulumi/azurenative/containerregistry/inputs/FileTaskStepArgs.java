@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
 
-    public Output<String> getContextAccessToken() {
-        return this.contextAccessToken == null ? Output.empty() : this.contextAccessToken;
+    public Output<String> contextAccessToken() {
+        return this.contextAccessToken == null ? Codegen.empty() : this.contextAccessToken;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
-    public Output<String> getContextPath() {
-        return this.contextPath == null ? Output.empty() : this.contextPath;
+    public Output<String> contextPath() {
+        return this.contextPath == null ? Codegen.empty() : this.contextPath;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskFilePath", required=true)
       private final Output<String> taskFilePath;
 
-    public Output<String> getTaskFilePath() {
+    public Output<String> taskFilePath() {
         return this.taskFilePath;
     }
 
@@ -61,7 +62,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -72,8 +73,8 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<SetValueArgs>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="valuesFilePath")
       private final @Nullable Output<String> valuesFilePath;
 
-    public Output<String> getValuesFilePath() {
-        return this.valuesFilePath == null ? Output.empty() : this.valuesFilePath;
+    public Output<String> valuesFilePath() {
+        return this.valuesFilePath == null ? Codegen.empty() : this.valuesFilePath;
     }
 
     public FileTaskStepArgs(
@@ -103,12 +104,12 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileTaskStepArgs() {
-        this.contextAccessToken = Output.empty();
-        this.contextPath = Output.empty();
-        this.taskFilePath = Output.empty();
-        this.type = Output.empty();
-        this.values = Output.empty();
-        this.valuesFilePath = Output.empty();
+        this.contextAccessToken = Codegen.empty();
+        this.contextPath = Codegen.empty();
+        this.taskFilePath = Codegen.empty();
+        this.type = Codegen.empty();
+        this.values = Codegen.empty();
+        this.valuesFilePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = Output.ofNullable(contextAccessToken);
+            this.contextAccessToken = Codegen.ofNullable(contextAccessToken);
             return this;
         }
         public Builder contextPath(@Nullable Output<String> contextPath) {
@@ -154,7 +155,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Output.ofNullable(contextPath);
+            this.contextPath = Codegen.ofNullable(contextPath);
             return this;
         }
         public Builder taskFilePath(Output<String> taskFilePath) {
@@ -178,7 +179,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(SetValueArgs... values) {
@@ -189,7 +190,7 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valuesFilePath(@Nullable String valuesFilePath) {
-            this.valuesFilePath = Output.ofNullable(valuesFilePath);
+            this.valuesFilePath = Codegen.ofNullable(valuesFilePath);
             return this;
         }        public FileTaskStepArgs build() {
             return new FileTaskStepArgs(contextAccessToken, contextPath, taskFilePath, type, values, valuesFilePath);

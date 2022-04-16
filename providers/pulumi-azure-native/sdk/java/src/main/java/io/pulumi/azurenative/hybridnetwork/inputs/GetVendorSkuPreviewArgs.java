@@ -19,7 +19,7 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
     @Import(name="previewSubscription", required=true)
       private final String previewSubscription;
 
-    public String getPreviewSubscription() {
+    public String previewSubscription() {
         return this.previewSubscription;
     }
 
@@ -30,7 +30,7 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
     @Import(name="skuName", required=true)
       private final String skuName;
 
-    public String getSkuName() {
+    public String skuName() {
         return this.skuName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
     @Import(name="vendorName", required=true)
       private final String vendorName;
 
-    public String getVendorName() {
+    public String vendorName() {
         return this.vendorName;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
-        return this.firstName == null ? Output.empty() : this.firstName;
+    public Output<String> firstName() {
+        return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
-        return this.lastName == null ? Output.empty() : this.lastName;
+    public Output<String> lastName() {
+        return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="phone")
       private final @Nullable Output<String> phone;
 
-    public Output<String> getPhone() {
-        return this.phone == null ? Output.empty() : this.phone;
+    public Output<String> phone() {
+        return this.phone == null ? Codegen.empty() : this.phone;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public GoogleCloudChannelV1ContactInfoArgs(
@@ -87,11 +88,11 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudChannelV1ContactInfoArgs() {
-        this.email = Output.empty();
-        this.firstName = Output.empty();
-        this.lastName = Output.empty();
-        this.phone = Output.empty();
-        this.title = Output.empty();
+        this.email = Codegen.empty();
+        this.firstName = Codegen.empty();
+        this.lastName = Codegen.empty();
+        this.phone = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder firstName(@Nullable Output<String> firstName) {
@@ -135,7 +136,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
             return this;
         }
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Output.ofNullable(firstName);
+            this.firstName = Codegen.ofNullable(firstName);
             return this;
         }
         public Builder lastName(@Nullable Output<String> lastName) {
@@ -143,7 +144,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
             return this;
         }
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Output.ofNullable(lastName);
+            this.lastName = Codegen.ofNullable(lastName);
             return this;
         }
         public Builder phone(@Nullable Output<String> phone) {
@@ -151,7 +152,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
             return this;
         }
         public Builder phone(@Nullable String phone) {
-            this.phone = Output.ofNullable(phone);
+            this.phone = Codegen.ofNullable(phone);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -159,7 +160,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public GoogleCloudChannelV1ContactInfoArgs build() {
             return new GoogleCloudChannelV1ContactInfoArgs(email, firstName, lastName, phone, title);

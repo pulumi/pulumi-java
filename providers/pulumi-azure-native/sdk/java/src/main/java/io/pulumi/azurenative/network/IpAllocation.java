@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return IpAllocation tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAllocationTags() {
+    public Output</* @Nullable */ Map<String,String>> allocationTags() {
         return this.allocationTags;
     }
     /**
@@ -58,7 +59,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -72,7 +73,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return The IPAM allocation ID.
      * 
      */
-    public Output</* @Nullable */ String> getIpamAllocationId() {
+    public Output</* @Nullable */ String> ipamAllocationId() {
         return this.ipamAllocationId;
     }
     /**
@@ -86,7 +87,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -100,7 +101,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return The address prefix for the IpAllocation.
      * 
      */
-    public Output</* @Nullable */ String> getPrefix() {
+    public Output</* @Nullable */ String> prefix() {
         return this.prefix;
     }
     /**
@@ -128,7 +129,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return The address prefix length for the IpAllocation.
      * 
      */
-    public Output</* @Nullable */ Integer> getPrefixLength() {
+    public Output</* @Nullable */ Integer> prefixLength() {
         return this.prefixLength;
     }
     /**
@@ -142,7 +143,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return The address prefix Type for the IpAllocation.
      * 
      */
-    public Output</* @Nullable */ String> getPrefixType() {
+    public Output</* @Nullable */ String> prefixType() {
         return this.prefixType;
     }
     /**
@@ -156,7 +157,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return The Subnet that using the prefix of this IpAllocation resource.
      * 
      */
-    public Output<SubResourceResponse> getSubnet() {
+    public Output<SubResourceResponse> subnet() {
         return this.subnet;
     }
     /**
@@ -170,7 +171,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -184,7 +185,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -198,7 +199,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @return The VirtualNetwork that using the prefix of this IpAllocation resource.
      * 
      */
-    public Output<SubResourceResponse> getVirtualNetwork() {
+    public Output<SubResourceResponse> virtualNetwork() {
         return this.virtualNetwork;
     }
 
@@ -224,7 +225,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IpAllocation(String name, IpAllocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:IpAllocation", name, args == null ? IpAllocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:IpAllocation", name, args == null ? IpAllocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IpAllocation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

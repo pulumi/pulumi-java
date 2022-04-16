@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     @Import(name="podAffinityTerm", required=true)
       private final Output<PodAffinityTermArgs> podAffinityTerm;
 
-    public Output<PodAffinityTermArgs> getPodAffinityTerm() {
+    public Output<PodAffinityTermArgs> podAffinityTerm() {
         return this.podAffinityTerm;
     }
 
@@ -36,7 +37,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 
@@ -48,8 +49,8 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     }
 
     private WeightedPodAffinityTermArgs() {
-        this.podAffinityTerm = Output.empty();
-        this.weight = Output.empty();
+        this.podAffinityTerm = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {

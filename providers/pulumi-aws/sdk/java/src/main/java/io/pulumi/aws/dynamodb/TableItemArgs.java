@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hashKey", required=true)
       private final Output<String> hashKey;
 
-    public Output<String> getHashKey() {
+    public Output<String> hashKey() {
         return this.hashKey;
     }
 
@@ -33,7 +34,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="item", required=true)
       private final Output<String> item;
 
-    public Output<String> getItem() {
+    public Output<String> item() {
         return this.item;
     }
 
@@ -44,8 +45,8 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
-    public Output<String> getRangeKey() {
-        return this.rangeKey == null ? Output.empty() : this.rangeKey;
+    public Output<String> rangeKey() {
+        return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -71,10 +72,10 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableItemArgs() {
-        this.hashKey = Output.empty();
-        this.item = Output.empty();
-        this.rangeKey = Output.empty();
-        this.tableName = Output.empty();
+        this.hashKey = Codegen.empty();
+        this.item = Codegen.empty();
+        this.rangeKey = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Output.ofNullable(rangeKey);
+            this.rangeKey = Codegen.ofNullable(rangeKey);
             return this;
         }
         public Builder tableName(Output<String> tableName) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+    public Output<String> dataset() {
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> getShardCount() {
-        return this.shardCount == null ? Output.empty() : this.shardCount;
+    public Output<Integer> shardCount() {
+        return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
     @Import(name="tablePrefix")
       private final @Nullable Output<String> tablePrefix;
 
-    public Output<String> getTablePrefix() {
-        return this.tablePrefix == null ? Output.empty() : this.tablePrefix;
+    public Output<String> tablePrefix() {
+        return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
     }
 
     public EntryBigqueryDateShardedSpecArgs(
@@ -46,9 +47,9 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
     }
 
     private EntryBigqueryDateShardedSpecArgs() {
-        this.dataset = Output.empty();
-        this.shardCount = Output.empty();
-        this.tablePrefix = Output.empty();
+        this.dataset = Codegen.empty();
+        this.shardCount = Codegen.empty();
+        this.tablePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
@@ -88,7 +89,7 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Output.ofNullable(shardCount);
+            this.shardCount = Codegen.ofNullable(shardCount);
             return this;
         }
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
@@ -96,7 +97,7 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Output.ofNullable(tablePrefix);
+            this.tablePrefix = Codegen.ofNullable(tablePrefix);
             return this;
         }        public EntryBigqueryDateShardedSpecArgs build() {
             return new EntryBigqueryDateShardedSpecArgs(dataset, shardCount, tablePrefix);

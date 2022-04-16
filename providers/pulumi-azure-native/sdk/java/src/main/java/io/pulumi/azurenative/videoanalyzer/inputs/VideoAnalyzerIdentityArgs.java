@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -38,8 +39,8 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+    public Output<Map<String,Object>> userAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public VideoAnalyzerIdentityArgs(
@@ -50,8 +51,8 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
     }
 
     private VideoAnalyzerIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public VideoAnalyzerIdentityArgs build() {
             return new VideoAnalyzerIdentityArgs(type, userAssignedIdentities);

@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TopicRuleErrorActionIotEventsGetArgs extends io.pulumi.resour
     @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
-    public Output<String> getInputName() {
+    public Output<String> inputName() {
         return this.inputName;
     }
 
@@ -32,8 +33,8 @@ public final class TopicRuleErrorActionIotEventsGetArgs extends io.pulumi.resour
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
-        return this.messageId == null ? Output.empty() : this.messageId;
+    public Output<String> messageId() {
+        return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class TopicRuleErrorActionIotEventsGetArgs extends io.pulumi.resour
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -57,9 +58,9 @@ public final class TopicRuleErrorActionIotEventsGetArgs extends io.pulumi.resour
     }
 
     private TopicRuleErrorActionIotEventsGetArgs() {
-        this.inputName = Output.empty();
-        this.messageId = Output.empty();
-        this.roleArn = Output.empty();
+        this.inputName = Codegen.empty();
+        this.messageId = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class TopicRuleErrorActionIotEventsGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Output.ofNullable(messageId);
+            this.messageId = Codegen.ofNullable(messageId);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

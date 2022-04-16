@@ -5,6 +5,7 @@ package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceId")
       private final @Nullable Output<Integer> resourceId;
 
-    public Output<Integer> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<Integer> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public WorkloadResourceGetArgs(
@@ -45,8 +46,8 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkloadResourceGetArgs() {
-        this.resourceId = Output.empty();
-        this.resourceType = Output.empty();
+        this.resourceId = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder resourceId(@Nullable Integer resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -84,7 +85,7 @@ public final class WorkloadResourceGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public WorkloadResourceGetArgs build() {
             return new WorkloadResourceGetArgs(resourceId, resourceType);

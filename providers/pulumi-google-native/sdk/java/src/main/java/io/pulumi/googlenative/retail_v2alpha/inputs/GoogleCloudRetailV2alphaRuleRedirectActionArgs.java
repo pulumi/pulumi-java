@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pul
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;
 
-    public Output<String> getRedirectUri() {
-        return this.redirectUri == null ? Output.empty() : this.redirectUri;
+    public Output<String> redirectUri() {
+        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
     }
 
     public GoogleCloudRetailV2alphaRuleRedirectActionArgs(@Nullable Output<String> redirectUri) {
@@ -34,7 +35,7 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pul
     }
 
     private GoogleCloudRetailV2alphaRuleRedirectActionArgs() {
-        this.redirectUri = Output.empty();
+        this.redirectUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionArgs extends io.pul
             return this;
         }
         public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Output.ofNullable(redirectUri);
+            this.redirectUri = Codegen.ofNullable(redirectUri);
             return this;
         }        public GoogleCloudRetailV2alphaRuleRedirectActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleRedirectActionArgs(redirectUri);

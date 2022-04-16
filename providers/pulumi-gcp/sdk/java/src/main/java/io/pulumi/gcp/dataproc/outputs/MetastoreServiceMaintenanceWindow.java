@@ -35,14 +35,14 @@ public final class MetastoreServiceMaintenanceWindow {
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
     */
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * The hour of day (0-23) when the window starts.
      * 
     */
-    public Integer getHourOfDay() {
+    public Integer hourOfDay() {
         return this.hourOfDay;
     }
 

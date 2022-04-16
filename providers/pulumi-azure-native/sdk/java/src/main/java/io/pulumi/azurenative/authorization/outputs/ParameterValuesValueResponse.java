@@ -26,7 +26,7 @@ public final class ParameterValuesValueResponse {
      * The value of the parameter.
      * 
     */
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
 

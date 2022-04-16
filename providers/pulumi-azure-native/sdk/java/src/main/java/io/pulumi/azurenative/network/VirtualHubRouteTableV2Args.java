@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteV2Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     @Import(name="attachedConnections")
       private final @Nullable Output<List<String>> attachedConnections;
 
-    public Output<List<String>> getAttachedConnections() {
-        return this.attachedConnections == null ? Output.empty() : this.attachedConnections;
+    public Output<List<String>> attachedConnections() {
+        return this.attachedConnections == null ? Codegen.empty() : this.attachedConnections;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     @Import(name="routeTableName")
       private final @Nullable Output<String> routeTableName;
 
-    public Output<String> getRouteTableName() {
-        return this.routeTableName == null ? Output.empty() : this.routeTableName;
+    public Output<String> routeTableName() {
+        return this.routeTableName == null ? Codegen.empty() : this.routeTableName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     @Import(name="routes")
       private final @Nullable Output<List<VirtualHubRouteV2Args>> routes;
 
-    public Output<List<VirtualHubRouteV2Args>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+    public Output<List<VirtualHubRouteV2Args>> routes() {
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
-    public Output<String> getVirtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
@@ -111,13 +112,13 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     }
 
     private VirtualHubRouteTableV2Args() {
-        this.attachedConnections = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routeTableName = Output.empty();
-        this.routes = Output.empty();
-        this.virtualHubName = Output.empty();
+        this.attachedConnections = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routeTableName = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.virtualHubName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
             return this;
         }
         public Builder attachedConnections(@Nullable List<String> attachedConnections) {
-            this.attachedConnections = Output.ofNullable(attachedConnections);
+            this.attachedConnections = Codegen.ofNullable(attachedConnections);
             return this;
         }
         public Builder attachedConnections(String... attachedConnections) {
@@ -168,7 +169,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -176,7 +177,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -192,7 +193,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
             return this;
         }
         public Builder routeTableName(@Nullable String routeTableName) {
-            this.routeTableName = Output.ofNullable(routeTableName);
+            this.routeTableName = Codegen.ofNullable(routeTableName);
             return this;
         }
         public Builder routes(@Nullable Output<List<VirtualHubRouteV2Args>> routes) {
@@ -200,7 +201,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
             return this;
         }
         public Builder routes(@Nullable List<VirtualHubRouteV2Args> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(VirtualHubRouteV2Args... routes) {

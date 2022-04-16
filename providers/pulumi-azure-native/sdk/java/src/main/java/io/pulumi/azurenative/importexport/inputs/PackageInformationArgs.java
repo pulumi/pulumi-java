@@ -5,6 +5,7 @@ package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="carrierName", required=true)
       private final Output<String> carrierName;
 
-    public Output<String> getCarrierName() {
+    public Output<String> carrierName() {
         return this.carrierName;
     }
 
@@ -36,7 +37,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="driveCount", required=true)
       private final Output<Double> driveCount;
 
-    public Output<Double> getDriveCount() {
+    public Output<Double> driveCount() {
         return this.driveCount;
     }
 
@@ -47,7 +48,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="shipDate", required=true)
       private final Output<String> shipDate;
 
-    public Output<String> getShipDate() {
+    public Output<String> shipDate() {
         return this.shipDate;
     }
 
@@ -58,7 +59,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="trackingNumber", required=true)
       private final Output<String> trackingNumber;
 
-    public Output<String> getTrackingNumber() {
+    public Output<String> trackingNumber() {
         return this.trackingNumber;
     }
 
@@ -74,10 +75,10 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PackageInformationArgs() {
-        this.carrierName = Output.empty();
-        this.driveCount = Output.empty();
-        this.shipDate = Output.empty();
-        this.trackingNumber = Output.empty();
+        this.carrierName = Codegen.empty();
+        this.driveCount = Codegen.empty();
+        this.shipDate = Codegen.empty();
+        this.trackingNumber = Codegen.empty();
     }
 
     public static Builder builder() {

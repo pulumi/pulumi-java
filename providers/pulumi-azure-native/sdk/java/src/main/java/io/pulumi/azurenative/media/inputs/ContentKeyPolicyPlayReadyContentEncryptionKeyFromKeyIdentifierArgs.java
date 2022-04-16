@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -36,7 +37,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -48,8 +49,8 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     }
 
     private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs() {
-        this.keyId = Output.empty();
-        this.odataType = Output.empty();
+        this.keyId = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {

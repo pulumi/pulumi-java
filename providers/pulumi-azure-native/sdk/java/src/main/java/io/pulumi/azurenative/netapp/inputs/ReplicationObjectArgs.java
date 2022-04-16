@@ -8,6 +8,7 @@ import io.pulumi.azurenative.netapp.enums.ReplicationSchedule;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endpointType")
       private final @Nullable Output<Either<String,EndpointType>> endpointType;
 
-    public Output<Either<String,EndpointType>> getEndpointType() {
-        return this.endpointType == null ? Output.empty() : this.endpointType;
+    public Output<Either<String,EndpointType>> endpointType() {
+        return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     @Import(name="remoteVolumeRegion")
       private final @Nullable Output<String> remoteVolumeRegion;
 
-    public Output<String> getRemoteVolumeRegion() {
-        return this.remoteVolumeRegion == null ? Output.empty() : this.remoteVolumeRegion;
+    public Output<String> remoteVolumeRegion() {
+        return this.remoteVolumeRegion == null ? Codegen.empty() : this.remoteVolumeRegion;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     @Import(name="remoteVolumeResourceId", required=true)
       private final Output<String> remoteVolumeResourceId;
 
-    public Output<String> getRemoteVolumeResourceId() {
+    public Output<String> remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
 
@@ -61,8 +62,8 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     @Import(name="replicationId")
       private final @Nullable Output<String> replicationId;
 
-    public Output<String> getReplicationId() {
-        return this.replicationId == null ? Output.empty() : this.replicationId;
+    public Output<String> replicationId() {
+        return this.replicationId == null ? Codegen.empty() : this.replicationId;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     @Import(name="replicationSchedule", required=true)
       private final Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
-    public Output<Either<String,ReplicationSchedule>> getReplicationSchedule() {
+    public Output<Either<String,ReplicationSchedule>> replicationSchedule() {
         return this.replicationSchedule;
     }
 
@@ -90,11 +91,11 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReplicationObjectArgs() {
-        this.endpointType = Output.empty();
-        this.remoteVolumeRegion = Output.empty();
-        this.remoteVolumeResourceId = Output.empty();
-        this.replicationId = Output.empty();
-        this.replicationSchedule = Output.empty();
+        this.endpointType = Codegen.empty();
+        this.remoteVolumeRegion = Codegen.empty();
+        this.remoteVolumeResourceId = Codegen.empty();
+        this.replicationId = Codegen.empty();
+        this.replicationSchedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder endpointType(@Nullable Either<String,EndpointType> endpointType) {
-            this.endpointType = Output.ofNullable(endpointType);
+            this.endpointType = Codegen.ofNullable(endpointType);
             return this;
         }
         public Builder remoteVolumeRegion(@Nullable Output<String> remoteVolumeRegion) {
@@ -138,7 +139,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
-            this.remoteVolumeRegion = Output.ofNullable(remoteVolumeRegion);
+            this.remoteVolumeRegion = Codegen.ofNullable(remoteVolumeRegion);
             return this;
         }
         public Builder remoteVolumeResourceId(Output<String> remoteVolumeResourceId) {
@@ -154,7 +155,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder replicationId(@Nullable String replicationId) {
-            this.replicationId = Output.ofNullable(replicationId);
+            this.replicationId = Codegen.ofNullable(replicationId);
             return this;
         }
         public Builder replicationSchedule(Output<Either<String,ReplicationSchedule>> replicationSchedule) {

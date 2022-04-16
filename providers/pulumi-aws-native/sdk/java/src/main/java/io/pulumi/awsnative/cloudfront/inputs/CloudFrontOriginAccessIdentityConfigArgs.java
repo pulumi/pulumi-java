@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends io.pulumi.re
     @Import(name="comment", required=true)
       private final Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment;
     }
 
@@ -25,7 +26,7 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends io.pulumi.re
     }
 
     private CloudFrontOriginAccessIdentityConfigArgs() {
-        this.comment = Output.empty();
+        this.comment = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -35,14 +35,14 @@ public final class CostAllocationRuleDetailsResponse {
      * Source resources for cost allocation. At this time, this list can contain no more than one element.
      * 
     */
-    public List<SourceCostAllocationResourceResponse> getSourceResources() {
+    public List<SourceCostAllocationResourceResponse> sourceResources() {
         return this.sourceResources == null ? List.of() : this.sourceResources;
     }
     /**
      * Target resources for cost allocation. At this time, this list can contain no more than one element.
      * 
     */
-    public List<TargetCostAllocationResourceResponse> getTargetResources() {
+    public List<TargetCostAllocationResourceResponse> targetResources() {
         return this.targetResources == null ? List.of() : this.targetResources;
     }
 

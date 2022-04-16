@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exchange")
       private final @Nullable Output<String> exchange;
 
-    public Output<String> getExchange() {
-        return this.exchange == null ? Output.empty() : this.exchange;
+    public Output<String> exchange() {
+        return this.exchange == null ? Codegen.empty() : this.exchange;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preference")
       private final @Nullable Output<Integer> preference;
 
-    public Output<Integer> getPreference() {
-        return this.preference == null ? Output.empty() : this.preference;
+    public Output<Integer> preference() {
+        return this.preference == null ? Codegen.empty() : this.preference;
     }
 
     public MxRecordArgs(
@@ -49,8 +50,8 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MxRecordArgs() {
-        this.exchange = Output.empty();
-        this.preference = Output.empty();
+        this.exchange = Codegen.empty();
+        this.preference = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exchange(@Nullable String exchange) {
-            this.exchange = Output.ofNullable(exchange);
+            this.exchange = Codegen.ofNullable(exchange);
             return this;
         }
         public Builder preference(@Nullable Output<Integer> preference) {
@@ -88,7 +89,7 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preference(@Nullable Integer preference) {
-            this.preference = Output.ofNullable(preference);
+            this.preference = Codegen.ofNullable(preference);
             return this;
         }        public MxRecordArgs build() {
             return new MxRecordArgs(exchange, preference);

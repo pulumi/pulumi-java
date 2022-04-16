@@ -7,6 +7,7 @@ import io.pulumi.awsnative.backup.inputs.BackupVaultLockConfigurationTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupVaultNotificationObjectTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,43 +21,43 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicy")
       private final @Nullable Output<Object> accessPolicy;
 
-    public Output<Object> getAccessPolicy() {
-        return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
+    public Output<Object> accessPolicy() {
+        return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
     @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
-        return this.backupVaultName == null ? Output.empty() : this.backupVaultName;
+    public Output<String> backupVaultName() {
+        return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
     }
 
     @Import(name="backupVaultTags")
       private final @Nullable Output<Object> backupVaultTags;
 
-    public Output<Object> getBackupVaultTags() {
-        return this.backupVaultTags == null ? Output.empty() : this.backupVaultTags;
+    public Output<Object> backupVaultTags() {
+        return this.backupVaultTags == null ? Codegen.empty() : this.backupVaultTags;
     }
 
     @Import(name="encryptionKeyArn")
       private final @Nullable Output<String> encryptionKeyArn;
 
-    public Output<String> getEncryptionKeyArn() {
-        return this.encryptionKeyArn == null ? Output.empty() : this.encryptionKeyArn;
+    public Output<String> encryptionKeyArn() {
+        return this.encryptionKeyArn == null ? Codegen.empty() : this.encryptionKeyArn;
     }
 
     @Import(name="lockConfiguration")
       private final @Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
 
-    public Output<BackupVaultLockConfigurationTypeArgs> getLockConfiguration() {
-        return this.lockConfiguration == null ? Output.empty() : this.lockConfiguration;
+    public Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration() {
+        return this.lockConfiguration == null ? Codegen.empty() : this.lockConfiguration;
     }
 
     @Import(name="notifications")
       private final @Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications;
 
-    public Output<BackupVaultNotificationObjectTypeArgs> getNotifications() {
-        return this.notifications == null ? Output.empty() : this.notifications;
+    public Output<BackupVaultNotificationObjectTypeArgs> notifications() {
+        return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
     public BackupVaultArgs(
@@ -75,12 +76,12 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupVaultArgs() {
-        this.accessPolicy = Output.empty();
-        this.backupVaultName = Output.empty();
-        this.backupVaultTags = Output.empty();
-        this.encryptionKeyArn = Output.empty();
-        this.lockConfiguration = Output.empty();
-        this.notifications = Output.empty();
+        this.accessPolicy = Codegen.empty();
+        this.backupVaultName = Codegen.empty();
+        this.backupVaultTags = Codegen.empty();
+        this.encryptionKeyArn = Codegen.empty();
+        this.lockConfiguration = Codegen.empty();
+        this.notifications = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessPolicy(@Nullable Object accessPolicy) {
-            this.accessPolicy = Output.ofNullable(accessPolicy);
+            this.accessPolicy = Codegen.ofNullable(accessPolicy);
             return this;
         }
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
@@ -126,7 +127,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Output.ofNullable(backupVaultName);
+            this.backupVaultName = Codegen.ofNullable(backupVaultName);
             return this;
         }
         public Builder backupVaultTags(@Nullable Output<Object> backupVaultTags) {
@@ -134,7 +135,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupVaultTags(@Nullable Object backupVaultTags) {
-            this.backupVaultTags = Output.ofNullable(backupVaultTags);
+            this.backupVaultTags = Codegen.ofNullable(backupVaultTags);
             return this;
         }
         public Builder encryptionKeyArn(@Nullable Output<String> encryptionKeyArn) {
@@ -142,7 +143,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
-            this.encryptionKeyArn = Output.ofNullable(encryptionKeyArn);
+            this.encryptionKeyArn = Codegen.ofNullable(encryptionKeyArn);
             return this;
         }
         public Builder lockConfiguration(@Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration) {
@@ -150,7 +151,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lockConfiguration(@Nullable BackupVaultLockConfigurationTypeArgs lockConfiguration) {
-            this.lockConfiguration = Output.ofNullable(lockConfiguration);
+            this.lockConfiguration = Codegen.ofNullable(lockConfiguration);
             return this;
         }
         public Builder notifications(@Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications) {
@@ -158,7 +159,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notifications(@Nullable BackupVaultNotificationObjectTypeArgs notifications) {
-            this.notifications = Output.ofNullable(notifications);
+            this.notifications = Codegen.ofNullable(notifications);
             return this;
         }        public BackupVaultArgs build() {
             return new BackupVaultArgs(accessPolicy, backupVaultName, backupVaultTags, encryptionKeyArn, lockConfiguration, notifications);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,14 +22,14 @@ public final class ServiceIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -40,8 +41,8 @@ public final class ServiceIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServiceIamPolicyArgs() {
-        this.policyData = Output.empty();
-        this.serviceName = Output.empty();
+        this.policyData = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {

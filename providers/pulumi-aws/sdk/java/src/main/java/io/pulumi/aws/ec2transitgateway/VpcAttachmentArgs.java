@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applianceModeSupport")
       private final @Nullable Output<String> applianceModeSupport;
 
-    public Output<String> getApplianceModeSupport() {
-        return this.applianceModeSupport == null ? Output.empty() : this.applianceModeSupport;
+    public Output<String> applianceModeSupport() {
+        return this.applianceModeSupport == null ? Codegen.empty() : this.applianceModeSupport;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
-    public Output<String> getDnsSupport() {
-        return this.dnsSupport == null ? Output.empty() : this.dnsSupport;
+    public Output<String> dnsSupport() {
+        return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6Support")
       private final @Nullable Output<String> ipv6Support;
 
-    public Output<String> getIpv6Support() {
-        return this.ipv6Support == null ? Output.empty() : this.ipv6Support;
+    public Output<String> ipv6Support() {
+        return this.ipv6Support == null ? Codegen.empty() : this.ipv6Support;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -68,8 +69,8 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayDefaultRouteTableAssociation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
-    public Output<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation == null ? Output.empty() : this.transitGatewayDefaultRouteTableAssociation;
+    public Output<Boolean> transitGatewayDefaultRouteTableAssociation() {
+        return this.transitGatewayDefaultRouteTableAssociation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTableAssociation;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayDefaultRouteTablePropagation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
-    public Output<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation == null ? Output.empty() : this.transitGatewayDefaultRouteTablePropagation;
+    public Output<Boolean> transitGatewayDefaultRouteTablePropagation() {
+        return this.transitGatewayDefaultRouteTablePropagation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTablePropagation;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 
@@ -112,7 +113,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -138,15 +139,15 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcAttachmentArgs() {
-        this.applianceModeSupport = Output.empty();
-        this.dnsSupport = Output.empty();
-        this.ipv6Support = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.transitGatewayDefaultRouteTableAssociation = Output.empty();
-        this.transitGatewayDefaultRouteTablePropagation = Output.empty();
-        this.transitGatewayId = Output.empty();
-        this.vpcId = Output.empty();
+        this.applianceModeSupport = Codegen.empty();
+        this.dnsSupport = Codegen.empty();
+        this.ipv6Support = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transitGatewayDefaultRouteTableAssociation = Codegen.empty();
+        this.transitGatewayDefaultRouteTablePropagation = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
-            this.applianceModeSupport = Output.ofNullable(applianceModeSupport);
+            this.applianceModeSupport = Codegen.ofNullable(applianceModeSupport);
             return this;
         }
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
@@ -198,7 +199,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Output.ofNullable(dnsSupport);
+            this.dnsSupport = Codegen.ofNullable(dnsSupport);
             return this;
         }
         public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
@@ -206,7 +207,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6Support(@Nullable String ipv6Support) {
-            this.ipv6Support = Output.ofNullable(ipv6Support);
+            this.ipv6Support = Codegen.ofNullable(ipv6Support);
             return this;
         }
         public Builder subnetIds(Output<List<String>> subnetIds) {
@@ -225,7 +226,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
@@ -233,7 +234,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
-            this.transitGatewayDefaultRouteTableAssociation = Output.ofNullable(transitGatewayDefaultRouteTableAssociation);
+            this.transitGatewayDefaultRouteTableAssociation = Codegen.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
@@ -241,7 +242,7 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
-            this.transitGatewayDefaultRouteTablePropagation = Output.ofNullable(transitGatewayDefaultRouteTablePropagation);
+            this.transitGatewayDefaultRouteTablePropagation = Codegen.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
         }
         public Builder transitGatewayId(Output<String> transitGatewayId) {

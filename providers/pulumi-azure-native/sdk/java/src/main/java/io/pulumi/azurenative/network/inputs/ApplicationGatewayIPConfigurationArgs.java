@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<SubResourceArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public ApplicationGatewayIPConfigurationArgs(
@@ -62,9 +63,9 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
     }
 
     private ApplicationGatewayIPConfigurationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.subnet = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
@@ -112,7 +113,7 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public ApplicationGatewayIPConfigurationArgs build() {
             return new ApplicationGatewayIPConfigurationArgs(id, name, subnet);

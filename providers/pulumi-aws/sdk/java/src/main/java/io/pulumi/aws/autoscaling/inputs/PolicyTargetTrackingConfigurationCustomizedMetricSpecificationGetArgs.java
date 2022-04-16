@@ -6,6 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="metricDimensions")
       private final @Nullable Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs>> metricDimensions;
 
-    public Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs>> getMetricDimensions() {
-        return this.metricDimensions == null ? Output.empty() : this.metricDimensions;
+    public Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs>> metricDimensions() {
+        return this.metricDimensions == null ? Codegen.empty() : this.metricDimensions;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -45,7 +46,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -56,7 +57,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="statistic", required=true)
       private final Output<String> statistic;
 
-    public Output<String> getStatistic() {
+    public Output<String> statistic() {
         return this.statistic;
     }
 
@@ -67,8 +68,8 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs(
@@ -85,11 +86,11 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     }
 
     private PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs() {
-        this.metricDimensions = Output.empty();
-        this.metricName = Output.empty();
-        this.namespace = Output.empty();
-        this.statistic = Output.empty();
-        this.unit = Output.empty();
+        this.metricDimensions = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.statistic = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
             return this;
         }
         public Builder metricDimensions(@Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs> metricDimensions) {
-            this.metricDimensions = Output.ofNullable(metricDimensions);
+            this.metricDimensions = Codegen.ofNullable(metricDimensions);
             return this;
         }
         public Builder metricDimensions(PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs... metricDimensions) {
@@ -160,7 +161,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs build() {
             return new PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs(metricDimensions, metricName, namespace, statistic, unit);

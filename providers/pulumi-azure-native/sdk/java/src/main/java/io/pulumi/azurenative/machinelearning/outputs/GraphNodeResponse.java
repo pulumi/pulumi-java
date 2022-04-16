@@ -50,28 +50,28 @@ public final class GraphNodeResponse {
      * The id of the asset represented by this node.
      * 
     */
-    public Optional<String> getAssetId() {
+    public Optional<String> assetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
      * The id of the input element represented by this node.
      * 
     */
-    public Optional<String> getInputId() {
+    public Optional<String> inputId() {
         return Optional.ofNullable(this.inputId);
     }
     /**
      * The id of the output element represented by this node.
      * 
     */
-    public Optional<String> getOutputId() {
+    public Optional<String> outputId() {
         return Optional.ofNullable(this.outputId);
     }
     /**
      * If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
      * 
     */
-    public Map<String,WebServiceParameterResponse> getParameters() {
+    public Map<String,WebServiceParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 

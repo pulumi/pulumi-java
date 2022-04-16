@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
-        return this.certificateName == null ? Output.empty() : this.certificateName;
+    public Output<String> certificateName() {
+        return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -46,8 +47,8 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="key")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> key;
 
-    public Output<KeyVaultKeyReferenceArgs> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<KeyVaultKeyReferenceArgs> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Object> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="publicCertificate")
       private final @Nullable Output<String> publicCertificate;
 
-    public Output<String> getPublicCertificate() {
-        return this.publicCertificate == null ? Output.empty() : this.publicCertificate;
+    public Output<String> publicCertificate() {
+        return this.publicCertificate == null ? Codegen.empty() : this.publicCertificate;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,8 +102,8 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountCertificateArgs(
@@ -125,14 +126,14 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     }
 
     private IntegrationAccountCertificateArgs() {
-        this.certificateName = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.key = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.publicCertificate = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.certificateName = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.key = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.publicCertificate = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
             return this;
         }
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Output.ofNullable(certificateName);
+            this.certificateName = Codegen.ofNullable(certificateName);
             return this;
         }
         public Builder integrationAccountName(Output<String> integrationAccountName) {
@@ -190,7 +191,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
             return this;
         }
         public Builder key(@Nullable KeyVaultKeyReferenceArgs key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -198,7 +199,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -206,7 +207,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder publicCertificate(@Nullable Output<String> publicCertificate) {
@@ -214,7 +215,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
             return this;
         }
         public Builder publicCertificate(@Nullable String publicCertificate) {
-            this.publicCertificate = Output.ofNullable(publicCertificate);
+            this.publicCertificate = Codegen.ofNullable(publicCertificate);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -230,7 +231,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountCertificateArgs build() {
             return new IntegrationAccountCertificateArgs(certificateName, integrationAccountName, key, location, metadata, publicCertificate, resourceGroupName, tags);

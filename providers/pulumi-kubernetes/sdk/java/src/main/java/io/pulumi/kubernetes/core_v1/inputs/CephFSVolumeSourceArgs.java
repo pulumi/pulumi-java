@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monitors", required=true)
       private final Output<List<String>> monitors;
 
-    public Output<List<String>> getMonitors() {
+    public Output<List<String>> monitors() {
         return this.monitors;
     }
 
@@ -39,8 +40,8 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="secretFile")
       private final @Nullable Output<String> secretFile;
 
-    public Output<String> getSecretFile() {
-        return this.secretFile == null ? Output.empty() : this.secretFile;
+    public Output<String> secretFile() {
+        return this.secretFile == null ? Codegen.empty() : this.secretFile;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="secretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
-    public Output<LocalObjectReferenceArgs> getSecretRef() {
-        return this.secretRef == null ? Output.empty() : this.secretRef;
+    public Output<LocalObjectReferenceArgs> secretRef() {
+        return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public CephFSVolumeSourceArgs(
@@ -103,12 +104,12 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CephFSVolumeSourceArgs() {
-        this.monitors = Output.empty();
-        this.path = Output.empty();
-        this.readOnly = Output.empty();
-        this.secretFile = Output.empty();
-        this.secretRef = Output.empty();
-        this.user = Output.empty();
+        this.monitors = Codegen.empty();
+        this.path = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secretFile = Codegen.empty();
+        this.secretRef = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -165,7 +166,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretFile(@Nullable Output<String> secretFile) {
@@ -173,7 +174,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder secretFile(@Nullable String secretFile) {
-            this.secretFile = Output.ofNullable(secretFile);
+            this.secretFile = Codegen.ofNullable(secretFile);
             return this;
         }
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
@@ -181,7 +182,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
-            this.secretRef = Output.ofNullable(secretRef);
+            this.secretRef = Codegen.ofNullable(secretRef);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -189,7 +190,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public CephFSVolumeSourceArgs build() {
             return new CephFSVolumeSourceArgs(monitors, path, readOnly, secretFile, secretRef, user);

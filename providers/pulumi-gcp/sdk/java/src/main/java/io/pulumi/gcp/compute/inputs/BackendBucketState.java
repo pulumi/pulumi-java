@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.BackendBucketCdnPolicyGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+    public Output<String> bucketName() {
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cdnPolicy")
       private final @Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy;
 
-    public Output<BackendBucketCdnPolicyGetArgs> getCdnPolicy() {
-        return this.cdnPolicy == null ? Output.empty() : this.cdnPolicy;
+    public Output<BackendBucketCdnPolicyGetArgs> cdnPolicy() {
+        return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="customResponseHeaders")
       private final @Nullable Output<List<String>> customResponseHeaders;
 
-    public Output<List<String>> getCustomResponseHeaders() {
-        return this.customResponseHeaders == null ? Output.empty() : this.customResponseHeaders;
+    public Output<List<String>> customResponseHeaders() {
+        return this.customResponseHeaders == null ? Codegen.empty() : this.customResponseHeaders;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableCdn")
       private final @Nullable Output<Boolean> enableCdn;
 
-    public Output<Boolean> getEnableCdn() {
-        return this.enableCdn == null ? Output.empty() : this.enableCdn;
+    public Output<Boolean> enableCdn() {
+        return this.enableCdn == null ? Codegen.empty() : this.enableCdn;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public BackendBucketState(
@@ -147,15 +148,15 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendBucketState() {
-        this.bucketName = Output.empty();
-        this.cdnPolicy = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.customResponseHeaders = Output.empty();
-        this.description = Output.empty();
-        this.enableCdn = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.cdnPolicy = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.customResponseHeaders = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableCdn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy) {
@@ -207,7 +208,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyGetArgs cdnPolicy) {
-            this.cdnPolicy = Output.ofNullable(cdnPolicy);
+            this.cdnPolicy = Codegen.ofNullable(cdnPolicy);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -215,7 +216,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
@@ -223,7 +224,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
-            this.customResponseHeaders = Output.ofNullable(customResponseHeaders);
+            this.customResponseHeaders = Codegen.ofNullable(customResponseHeaders);
             return this;
         }
         public Builder customResponseHeaders(String... customResponseHeaders) {
@@ -234,7 +235,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
@@ -242,7 +243,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableCdn(@Nullable Boolean enableCdn) {
-            this.enableCdn = Output.ofNullable(enableCdn);
+            this.enableCdn = Codegen.ofNullable(enableCdn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -250,7 +251,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -258,7 +259,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -266,7 +267,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public BackendBucketState build() {
             return new BackendBucketState(bucketName, cdnPolicy, creationTimestamp, customResponseHeaders, description, enableCdn, name, project, selfLink);

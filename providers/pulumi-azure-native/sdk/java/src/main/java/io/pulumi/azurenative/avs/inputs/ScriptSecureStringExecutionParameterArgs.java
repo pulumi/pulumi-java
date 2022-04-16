@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,8 +37,8 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     @Import(name="secureValue")
       private final @Nullable Output<String> secureValue;
 
-    public Output<String> getSecureValue() {
-        return this.secureValue == null ? Output.empty() : this.secureValue;
+    public Output<String> secureValue() {
+        return this.secureValue == null ? Codegen.empty() : this.secureValue;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -62,9 +63,9 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     }
 
     private ScriptSecureStringExecutionParameterArgs() {
-        this.name = Output.empty();
-        this.secureValue = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.secureValue = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
             return this;
         }
         public Builder secureValue(@Nullable String secureValue) {
-            this.secureValue = Output.ofNullable(secureValue);
+            this.secureValue = Codegen.ofNullable(secureValue);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,22 +22,22 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+    public Output<String> address() {
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public ModelDockerSectionBaseImageRegistryArgs(
@@ -49,9 +50,9 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
     }
 
     private ModelDockerSectionBaseImageRegistryArgs() {
-        this.address = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.address = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -91,7 +92,7 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -99,7 +100,7 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public ModelDockerSectionBaseImageRegistryArgs build() {
             return new ModelDockerSectionBaseImageRegistryArgs(address, password, username);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
     @Import(name="cpuUtilizationPercentage", required=true)
       private final Output<Integer> cpuUtilizationPercentage;
 
-    public Output<Integer> getCpuUtilizationPercentage() {
+    public Output<Integer> cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 
@@ -33,7 +34,7 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private ConnectorScaleInPolicyArgs() {
-        this.cpuUtilizationPercentage = Output.empty();
+        this.cpuUtilizationPercentage = Codegen.empty();
     }
 
     public static Builder builder() {

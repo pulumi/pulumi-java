@@ -8,6 +8,7 @@ import io.pulumi.azurenative.policyinsights.inputs.RemediationFiltersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="filters")
       private final @Nullable Output<RemediationFiltersArgs> filters;
 
-    public Output<RemediationFiltersArgs> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+    public Output<RemediationFiltersArgs> filters() {
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="policyAssignmentId")
       private final @Nullable Output<String> policyAssignmentId;
 
-    public Output<String> getPolicyAssignmentId() {
-        return this.policyAssignmentId == null ? Output.empty() : this.policyAssignmentId;
+    public Output<String> policyAssignmentId() {
+        return this.policyAssignmentId == null ? Codegen.empty() : this.policyAssignmentId;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> getPolicyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Output.empty() : this.policyDefinitionReferenceId;
+    public Output<String> policyDefinitionReferenceId() {
+        return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="remediationName")
       private final @Nullable Output<String> remediationName;
 
-    public Output<String> getRemediationName() {
-        return this.remediationName == null ? Output.empty() : this.remediationName;
+    public Output<String> remediationName() {
+        return this.remediationName == null ? Codegen.empty() : this.remediationName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="resourceDiscoveryMode")
       private final @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
-    public Output<Either<String,ResourceDiscoveryMode>> getResourceDiscoveryMode() {
-        return this.resourceDiscoveryMode == null ? Output.empty() : this.resourceDiscoveryMode;
+    public Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode() {
+        return this.resourceDiscoveryMode == null ? Codegen.empty() : this.resourceDiscoveryMode;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,12 +100,12 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
     }
 
     private RemediationAtResourceGroupArgs() {
-        this.filters = Output.empty();
-        this.policyAssignmentId = Output.empty();
-        this.policyDefinitionReferenceId = Output.empty();
-        this.remediationName = Output.empty();
-        this.resourceDiscoveryMode = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.filters = Codegen.empty();
+        this.policyAssignmentId = Codegen.empty();
+        this.policyDefinitionReferenceId = Codegen.empty();
+        this.remediationName = Codegen.empty();
+        this.resourceDiscoveryMode = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder filters(@Nullable RemediationFiltersArgs filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder policyAssignmentId(@Nullable Output<String> policyAssignmentId) {
@@ -150,7 +151,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder policyAssignmentId(@Nullable String policyAssignmentId) {
-            this.policyAssignmentId = Output.ofNullable(policyAssignmentId);
+            this.policyAssignmentId = Codegen.ofNullable(policyAssignmentId);
             return this;
         }
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
@@ -158,7 +159,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
+            this.policyDefinitionReferenceId = Codegen.ofNullable(policyDefinitionReferenceId);
             return this;
         }
         public Builder remediationName(@Nullable Output<String> remediationName) {
@@ -166,7 +167,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder remediationName(@Nullable String remediationName) {
-            this.remediationName = Output.ofNullable(remediationName);
+            this.remediationName = Codegen.ofNullable(remediationName);
             return this;
         }
         public Builder resourceDiscoveryMode(@Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
@@ -174,7 +175,7 @@ public final class RemediationAtResourceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceDiscoveryMode(@Nullable Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
-            this.resourceDiscoveryMode = Output.ofNullable(resourceDiscoveryMode);
+            this.resourceDiscoveryMode = Codegen.ofNullable(resourceDiscoveryMode);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

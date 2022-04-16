@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataSourceParametersS3ManifestFileLocationArgs extends io.pul
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -31,7 +32,7 @@ public final class DataSourceParametersS3ManifestFileLocationArgs extends io.pul
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -43,8 +44,8 @@ public final class DataSourceParametersS3ManifestFileLocationArgs extends io.pul
     }
 
     private DataSourceParametersS3ManifestFileLocationArgs() {
-        this.bucket = Output.empty();
-        this.key = Output.empty();
+        this.bucket = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {

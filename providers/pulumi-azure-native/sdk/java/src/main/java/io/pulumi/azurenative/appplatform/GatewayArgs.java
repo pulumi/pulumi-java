@@ -7,6 +7,7 @@ import io.pulumi.azurenative.appplatform.inputs.GatewayPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
-        return this.gatewayName == null ? Output.empty() : this.gatewayName;
+    public Output<String> gatewayName() {
+        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<GatewayPropertiesArgs> properties;
 
-    public Output<GatewayPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<GatewayPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +57,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -67,8 +68,8 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     public GatewayArgs(
@@ -85,11 +86,11 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayArgs() {
-        this.gatewayName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.sku = Output.empty();
+        this.gatewayName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Output.ofNullable(gatewayName);
+            this.gatewayName = Codegen.ofNullable(gatewayName);
             return this;
         }
         public Builder properties(@Nullable Output<GatewayPropertiesArgs> properties) {
@@ -133,7 +134,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable GatewayPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -157,7 +158,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }        public GatewayArgs build() {
             return new GatewayArgs(gatewayName, properties, resourceGroupName, serviceName, sku);

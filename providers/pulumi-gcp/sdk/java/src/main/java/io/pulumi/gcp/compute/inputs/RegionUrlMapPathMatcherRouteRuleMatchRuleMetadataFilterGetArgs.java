@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
     @Import(name="filterLabels", required=true)
       private final Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> getFilterLabels() {
+    public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels() {
         return this.filterLabels;
     }
 
@@ -42,7 +43,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
     @Import(name="filterMatchCriteria", required=true)
       private final Output<String> filterMatchCriteria;
 
-    public Output<String> getFilterMatchCriteria() {
+    public Output<String> filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 
@@ -54,8 +55,8 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
     }
 
     private RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs() {
-        this.filterLabels = Output.empty();
-        this.filterMatchCriteria = Output.empty();
+        this.filterLabels = Codegen.empty();
+        this.filterMatchCriteria = Codegen.empty();
     }
 
     public static Builder builder() {

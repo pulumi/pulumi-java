@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -61,7 +62,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -75,7 +76,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return List of references to P2SVpnGateways.
      * 
      */
-    public Output<List<SubResourceResponse>> getP2SVpnGateways() {
+    public Output<List<SubResourceResponse>> p2SVpnGateways() {
         return this.p2SVpnGateways;
     }
     /**
@@ -89,7 +90,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return Radius client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigRadiusClientRootCertificateResponse>> getP2SVpnServerConfigRadiusClientRootCertificates() {
+    public Output</* @Nullable */ List<P2SVpnServerConfigRadiusClientRootCertificateResponse>> p2SVpnServerConfigRadiusClientRootCertificates() {
         return this.p2SVpnServerConfigRadiusClientRootCertificates;
     }
     /**
@@ -103,7 +104,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return Radius Server root certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigRadiusServerRootCertificateResponse>> getP2SVpnServerConfigRadiusServerRootCertificates() {
+    public Output</* @Nullable */ List<P2SVpnServerConfigRadiusServerRootCertificateResponse>> p2SVpnServerConfigRadiusServerRootCertificates() {
         return this.p2SVpnServerConfigRadiusServerRootCertificates;
     }
     /**
@@ -117,7 +118,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return VPN client revoked certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRevokedCertificateResponse>> getP2SVpnServerConfigVpnClientRevokedCertificates() {
+    public Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRevokedCertificateResponse>> p2SVpnServerConfigVpnClientRevokedCertificates() {
         return this.p2SVpnServerConfigVpnClientRevokedCertificates;
     }
     /**
@@ -131,7 +132,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return VPN client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRootCertificateResponse>> getP2SVpnServerConfigVpnClientRootCertificates() {
+    public Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRootCertificateResponse>> p2SVpnServerConfigVpnClientRootCertificates() {
         return this.p2SVpnServerConfigVpnClientRootCertificates;
     }
     /**
@@ -145,7 +146,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return The provisioning state of the P2S VPN server configuration resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -159,7 +160,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> getRadiusServerAddress() {
+    public Output</* @Nullable */ String> radiusServerAddress() {
         return this.radiusServerAddress;
     }
     /**
@@ -173,7 +174,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> getRadiusServerSecret() {
+    public Output</* @Nullable */ String> radiusServerSecret() {
         return this.radiusServerSecret;
     }
     /**
@@ -187,7 +188,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return VpnClientIpsecPolicies for P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> getVpnClientIpsecPolicies() {
+    public Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies;
     }
     /**
@@ -201,7 +202,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @return VPN protocols for the P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVpnProtocols() {
+    public Output</* @Nullable */ List<String>> vpnProtocols() {
         return this.vpnProtocols;
     }
 
@@ -227,7 +228,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public P2sVpnServerConfiguration(String name, P2sVpnServerConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:P2sVpnServerConfiguration", name, args == null ? P2sVpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:P2sVpnServerConfiguration", name, args == null ? P2sVpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private P2sVpnServerConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

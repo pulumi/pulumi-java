@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryEncryptionOption;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,22 +23,22 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="encryptionOption")
       private final @Nullable Output<ScheduledQueryEncryptionOption> encryptionOption;
 
-    public Output<ScheduledQueryEncryptionOption> getEncryptionOption() {
-        return this.encryptionOption == null ? Output.empty() : this.encryptionOption;
+    public Output<ScheduledQueryEncryptionOption> encryptionOption() {
+        return this.encryptionOption == null ? Codegen.empty() : this.encryptionOption;
     }
 
     @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
-    public Output<String> getObjectKeyPrefix() {
-        return this.objectKeyPrefix == null ? Output.empty() : this.objectKeyPrefix;
+    public Output<String> objectKeyPrefix() {
+        return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
     }
 
     public ScheduledQueryS3ConfigurationArgs(
@@ -50,9 +51,9 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     }
 
     private ScheduledQueryS3ConfigurationArgs() {
-        this.bucketName = Output.empty();
-        this.encryptionOption = Output.empty();
-        this.objectKeyPrefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.encryptionOption = Codegen.empty();
+        this.objectKeyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder encryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
-            this.encryptionOption = Output.ofNullable(encryptionOption);
+            this.encryptionOption = Codegen.ofNullable(encryptionOption);
             return this;
         }
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
@@ -100,7 +101,7 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
-            this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
+            this.objectKeyPrefix = Codegen.ofNullable(objectKeyPrefix);
             return this;
         }        public ScheduledQueryS3ConfigurationArgs build() {
             return new ScheduledQueryS3ConfigurationArgs(bucketName, encryptionOption, objectKeyPrefix);

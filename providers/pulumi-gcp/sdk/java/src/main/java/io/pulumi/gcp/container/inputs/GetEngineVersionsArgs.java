@@ -24,7 +24,7 @@ public final class GetEngineVersionsArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -36,7 +36,7 @@ public final class GetEngineVersionsArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -52,7 +52,7 @@ public final class GetEngineVersionsArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="versionPrefix")
       private final @Nullable String versionPrefix;
 
-    public Optional<String> getVersionPrefix() {
+    public Optional<String> versionPrefix() {
         return this.versionPrefix == null ? Optional.empty() : Optional.ofNullable(this.versionPrefix);
     }
 

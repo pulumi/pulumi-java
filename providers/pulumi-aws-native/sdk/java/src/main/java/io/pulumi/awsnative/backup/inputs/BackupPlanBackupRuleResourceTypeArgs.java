@@ -7,6 +7,7 @@ import io.pulumi.awsnative.backup.inputs.BackupPlanCopyActionResourceTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -23,63 +24,63 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
     @Import(name="completionWindowMinutes")
       private final @Nullable Output<Double> completionWindowMinutes;
 
-    public Output<Double> getCompletionWindowMinutes() {
-        return this.completionWindowMinutes == null ? Output.empty() : this.completionWindowMinutes;
+    public Output<Double> completionWindowMinutes() {
+        return this.completionWindowMinutes == null ? Codegen.empty() : this.completionWindowMinutes;
     }
 
     @Import(name="copyActions")
       private final @Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
 
-    public Output<List<BackupPlanCopyActionResourceTypeArgs>> getCopyActions() {
-        return this.copyActions == null ? Output.empty() : this.copyActions;
+    public Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions() {
+        return this.copyActions == null ? Codegen.empty() : this.copyActions;
     }
 
     @Import(name="enableContinuousBackup")
       private final @Nullable Output<Boolean> enableContinuousBackup;
 
-    public Output<Boolean> getEnableContinuousBackup() {
-        return this.enableContinuousBackup == null ? Output.empty() : this.enableContinuousBackup;
+    public Output<Boolean> enableContinuousBackup() {
+        return this.enableContinuousBackup == null ? Codegen.empty() : this.enableContinuousBackup;
     }
 
     @Import(name="lifecycle")
       private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
-    public Output<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
-        return this.lifecycle == null ? Output.empty() : this.lifecycle;
+    public Output<BackupPlanLifecycleResourceTypeArgs> lifecycle() {
+        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
     @Import(name="recoveryPointTags")
       private final @Nullable Output<Object> recoveryPointTags;
 
-    public Output<Object> getRecoveryPointTags() {
-        return this.recoveryPointTags == null ? Output.empty() : this.recoveryPointTags;
+    public Output<Object> recoveryPointTags() {
+        return this.recoveryPointTags == null ? Codegen.empty() : this.recoveryPointTags;
     }
 
     @Import(name="ruleName", required=true)
       private final Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
     @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
-        return this.scheduleExpression == null ? Output.empty() : this.scheduleExpression;
+    public Output<String> scheduleExpression() {
+        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
     }
 
     @Import(name="startWindowMinutes")
       private final @Nullable Output<Double> startWindowMinutes;
 
-    public Output<Double> getStartWindowMinutes() {
-        return this.startWindowMinutes == null ? Output.empty() : this.startWindowMinutes;
+    public Output<Double> startWindowMinutes() {
+        return this.startWindowMinutes == null ? Codegen.empty() : this.startWindowMinutes;
     }
 
     @Import(name="targetBackupVault", required=true)
       private final Output<String> targetBackupVault;
 
-    public Output<String> getTargetBackupVault() {
+    public Output<String> targetBackupVault() {
         return this.targetBackupVault;
     }
 
@@ -105,15 +106,15 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
     }
 
     private BackupPlanBackupRuleResourceTypeArgs() {
-        this.completionWindowMinutes = Output.empty();
-        this.copyActions = Output.empty();
-        this.enableContinuousBackup = Output.empty();
-        this.lifecycle = Output.empty();
-        this.recoveryPointTags = Output.empty();
-        this.ruleName = Output.empty();
-        this.scheduleExpression = Output.empty();
-        this.startWindowMinutes = Output.empty();
-        this.targetBackupVault = Output.empty();
+        this.completionWindowMinutes = Codegen.empty();
+        this.copyActions = Codegen.empty();
+        this.enableContinuousBackup = Codegen.empty();
+        this.lifecycle = Codegen.empty();
+        this.recoveryPointTags = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.scheduleExpression = Codegen.empty();
+        this.startWindowMinutes = Codegen.empty();
+        this.targetBackupVault = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder completionWindowMinutes(@Nullable Double completionWindowMinutes) {
-            this.completionWindowMinutes = Output.ofNullable(completionWindowMinutes);
+            this.completionWindowMinutes = Codegen.ofNullable(completionWindowMinutes);
             return this;
         }
         public Builder copyActions(@Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions) {
@@ -165,7 +166,7 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder copyActions(@Nullable List<BackupPlanCopyActionResourceTypeArgs> copyActions) {
-            this.copyActions = Output.ofNullable(copyActions);
+            this.copyActions = Codegen.ofNullable(copyActions);
             return this;
         }
         public Builder copyActions(BackupPlanCopyActionResourceTypeArgs... copyActions) {
@@ -176,7 +177,7 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
-            this.enableContinuousBackup = Output.ofNullable(enableContinuousBackup);
+            this.enableContinuousBackup = Codegen.ofNullable(enableContinuousBackup);
             return this;
         }
         public Builder lifecycle(@Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
@@ -184,7 +185,7 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder lifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
-            this.lifecycle = Output.ofNullable(lifecycle);
+            this.lifecycle = Codegen.ofNullable(lifecycle);
             return this;
         }
         public Builder recoveryPointTags(@Nullable Output<Object> recoveryPointTags) {
@@ -192,7 +193,7 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder recoveryPointTags(@Nullable Object recoveryPointTags) {
-            this.recoveryPointTags = Output.ofNullable(recoveryPointTags);
+            this.recoveryPointTags = Codegen.ofNullable(recoveryPointTags);
             return this;
         }
         public Builder ruleName(Output<String> ruleName) {
@@ -208,7 +209,7 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Output.ofNullable(scheduleExpression);
+            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
             return this;
         }
         public Builder startWindowMinutes(@Nullable Output<Double> startWindowMinutes) {
@@ -216,7 +217,7 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder startWindowMinutes(@Nullable Double startWindowMinutes) {
-            this.startWindowMinutes = Output.ofNullable(startWindowMinutes);
+            this.startWindowMinutes = Codegen.ofNullable(startWindowMinutes);
             return this;
         }
         public Builder targetBackupVault(Output<String> targetBackupVault) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class AccessLevelBasicArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="combiningFunction")
       private final @Nullable Output<String> combiningFunction;
 
-    public Output<String> getCombiningFunction() {
-        return this.combiningFunction == null ? Output.empty() : this.combiningFunction;
+    public Output<String> combiningFunction() {
+        return this.combiningFunction == null ? Codegen.empty() : this.combiningFunction;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AccessLevelBasicArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="conditions", required=true)
       private final Output<List<AccessLevelBasicConditionArgs>> conditions;
 
-    public Output<List<AccessLevelBasicConditionArgs>> getConditions() {
+    public Output<List<AccessLevelBasicConditionArgs>> conditions() {
         return this.conditions;
     }
 
@@ -53,8 +54,8 @@ public final class AccessLevelBasicArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AccessLevelBasicArgs() {
-        this.combiningFunction = Output.empty();
-        this.conditions = Output.empty();
+        this.combiningFunction = Codegen.empty();
+        this.conditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class AccessLevelBasicArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder combiningFunction(@Nullable String combiningFunction) {
-            this.combiningFunction = Output.ofNullable(combiningFunction);
+            this.combiningFunction = Codegen.ofNullable(combiningFunction);
             return this;
         }
         public Builder conditions(Output<List<AccessLevelBasicConditionArgs>> conditions) {

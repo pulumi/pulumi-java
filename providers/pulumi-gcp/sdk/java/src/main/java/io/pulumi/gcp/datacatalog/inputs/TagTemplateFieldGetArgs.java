@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,8 +25,8 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="fieldId", required=true)
       private final Output<String> fieldId;
 
-    public Output<String> getFieldId() {
+    public Output<String> fieldId() {
         return this.fieldId;
     }
 
@@ -57,8 +58,8 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="isRequired")
       private final @Nullable Output<Boolean> isRequired;
 
-    public Output<Boolean> getIsRequired() {
-        return this.isRequired == null ? Output.empty() : this.isRequired;
+    public Output<Boolean> isRequired() {
+        return this.isRequired == null ? Codegen.empty() : this.isRequired;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+    public Output<Integer> order() {
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<TagTemplateFieldTypeGetArgs> type;
 
-    public Output<TagTemplateFieldTypeGetArgs> getType() {
+    public Output<TagTemplateFieldTypeGetArgs> type() {
         return this.type;
     }
 
@@ -116,13 +117,13 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private TagTemplateFieldGetArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.fieldId = Output.empty();
-        this.isRequired = Output.empty();
-        this.name = Output.empty();
-        this.order = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.fieldId = Codegen.empty();
+        this.isRequired = Codegen.empty();
+        this.name = Codegen.empty();
+        this.order = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -170,7 +171,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder fieldId(Output<String> fieldId) {
@@ -186,7 +187,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder isRequired(@Nullable Boolean isRequired) {
-            this.isRequired = Output.ofNullable(isRequired);
+            this.isRequired = Codegen.ofNullable(isRequired);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -194,7 +195,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder order(@Nullable Output<Integer> order) {
@@ -202,7 +203,7 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder order(@Nullable Integer order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder type(Output<TagTemplateFieldTypeGetArgs> type) {

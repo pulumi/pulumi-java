@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesPatchArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
     @Import(name="properties")
       private final @Nullable Output<InstancePropertiesPatchArgs> properties;
 
-    public Output<InstancePropertiesPatchArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<InstancePropertiesPatchArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public InstanceGroupManagerAllInstancesConfigArgs(@Nullable Output<InstancePropertiesPatchArgs> properties) {
@@ -30,7 +31,7 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
     }
 
     private InstanceGroupManagerAllInstancesConfigArgs() {
-        this.properties = Output.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
             return this;
         }
         public Builder properties(@Nullable InstancePropertiesPatchArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public InstanceGroupManagerAllInstancesConfigArgs build() {
             return new InstanceGroupManagerAllInstancesConfigArgs(properties);

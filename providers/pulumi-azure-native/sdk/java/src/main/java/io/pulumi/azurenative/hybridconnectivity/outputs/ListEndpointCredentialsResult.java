@@ -56,35 +56,35 @@ public final class ListEndpointCredentialsResult {
      * Access key for hybrid connection.
      * 
     */
-    public String getAccessKey() {
+    public String accessKey() {
         return this.accessKey;
     }
     /**
      * The expiration of access key in unix time.
      * 
     */
-    public Optional<Double> getExpiresOn() {
+    public Optional<Double> expiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
     /**
      * Azure Relay hybrid connection name for the resource.
      * 
     */
-    public String getHybridConnectionName() {
+    public String hybridConnectionName() {
         return this.hybridConnectionName;
     }
     /**
      * The namespace name.
      * 
     */
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
     /**
      * The suffix domain name of relay namespace.
      * 
     */
-    public String getNamespaceNameSuffix() {
+    public String namespaceNameSuffix() {
         return this.namespaceNameSuffix;
     }
 

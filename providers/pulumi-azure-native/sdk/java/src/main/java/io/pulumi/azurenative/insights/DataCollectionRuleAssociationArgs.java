@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
-    public Output<String> getAssociationName() {
-        return this.associationName == null ? Output.empty() : this.associationName;
+    public Output<String> associationName() {
+        return this.associationName == null ? Codegen.empty() : this.associationName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     @Import(name="dataCollectionRuleId")
       private final @Nullable Output<String> dataCollectionRuleId;
 
-    public Output<String> getDataCollectionRuleId() {
-        return this.dataCollectionRuleId == null ? Output.empty() : this.dataCollectionRuleId;
+    public Output<String> dataCollectionRuleId() {
+        return this.dataCollectionRuleId == null ? Codegen.empty() : this.dataCollectionRuleId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -70,10 +71,10 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     }
 
     private DataCollectionRuleAssociationArgs() {
-        this.associationName = Output.empty();
-        this.dataCollectionRuleId = Output.empty();
-        this.description = Output.empty();
-        this.resourceUri = Output.empty();
+        this.associationName = Codegen.empty();
+        this.dataCollectionRuleId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
             return this;
         }
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Output.ofNullable(associationName);
+            this.associationName = Codegen.ofNullable(associationName);
             return this;
         }
         public Builder dataCollectionRuleId(@Nullable Output<String> dataCollectionRuleId) {
@@ -115,7 +116,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
             return this;
         }
         public Builder dataCollectionRuleId(@Nullable String dataCollectionRuleId) {
-            this.dataCollectionRuleId = Output.ofNullable(dataCollectionRuleId);
+            this.dataCollectionRuleId = Codegen.ofNullable(dataCollectionRuleId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -123,7 +124,7 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder resourceUri(Output<String> resourceUri) {

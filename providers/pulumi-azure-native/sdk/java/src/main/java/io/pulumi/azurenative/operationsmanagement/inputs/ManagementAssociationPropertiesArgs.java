@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationsmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -33,7 +34,7 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
     }
 
     private ManagementAssociationPropertiesArgs() {
-        this.applicationId = Output.empty();
+        this.applicationId = Codegen.empty();
     }
 
     public static Builder builder() {

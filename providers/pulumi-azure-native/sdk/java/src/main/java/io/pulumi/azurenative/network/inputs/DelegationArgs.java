@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DelegationArgs(
@@ -74,10 +75,10 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DelegationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.serviceName = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -119,7 +120,7 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -127,7 +128,7 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -135,7 +136,7 @@ public final class DelegationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DelegationArgs build() {
             return new DelegationArgs(id, name, serviceName, type);

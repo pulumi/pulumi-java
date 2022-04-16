@@ -12,6 +12,7 @@ import io.pulumi.azurenative.scheduler.inputs.ServiceBusTopicMessageArgs;
 import io.pulumi.azurenative.scheduler.inputs.StorageQueueMessageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,8 +28,8 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorAction")
       private final @Nullable Output<JobErrorActionArgs> errorAction;
 
-    public Output<JobErrorActionArgs> getErrorAction() {
-        return this.errorAction == null ? Output.empty() : this.errorAction;
+    public Output<JobErrorActionArgs> errorAction() {
+        return this.errorAction == null ? Codegen.empty() : this.errorAction;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queueMessage")
       private final @Nullable Output<StorageQueueMessageArgs> queueMessage;
 
-    public Output<StorageQueueMessageArgs> getQueueMessage() {
-        return this.queueMessage == null ? Output.empty() : this.queueMessage;
+    public Output<StorageQueueMessageArgs> queueMessage() {
+        return this.queueMessage == null ? Codegen.empty() : this.queueMessage;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="request")
       private final @Nullable Output<HttpRequestArgs> request;
 
-    public Output<HttpRequestArgs> getRequest() {
-        return this.request == null ? Output.empty() : this.request;
+    public Output<HttpRequestArgs> request() {
+        return this.request == null ? Codegen.empty() : this.request;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
+    public Output<RetryPolicyArgs> retryPolicy() {
+        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceBusQueueMessage")
       private final @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
 
-    public Output<ServiceBusQueueMessageArgs> getServiceBusQueueMessage() {
-        return this.serviceBusQueueMessage == null ? Output.empty() : this.serviceBusQueueMessage;
+    public Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage() {
+        return this.serviceBusQueueMessage == null ? Codegen.empty() : this.serviceBusQueueMessage;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceBusTopicMessage")
       private final @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
 
-    public Output<ServiceBusTopicMessageArgs> getServiceBusTopicMessage() {
-        return this.serviceBusTopicMessage == null ? Output.empty() : this.serviceBusTopicMessage;
+    public Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage() {
+        return this.serviceBusTopicMessage == null ? Codegen.empty() : this.serviceBusTopicMessage;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<JobActionType> type;
 
-    public Output<JobActionType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<JobActionType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public JobActionArgs(
@@ -115,13 +116,13 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobActionArgs() {
-        this.errorAction = Output.empty();
-        this.queueMessage = Output.empty();
-        this.request = Output.empty();
-        this.retryPolicy = Output.empty();
-        this.serviceBusQueueMessage = Output.empty();
-        this.serviceBusTopicMessage = Output.empty();
-        this.type = Output.empty();
+        this.errorAction = Codegen.empty();
+        this.queueMessage = Codegen.empty();
+        this.request = Codegen.empty();
+        this.retryPolicy = Codegen.empty();
+        this.serviceBusQueueMessage = Codegen.empty();
+        this.serviceBusTopicMessage = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errorAction(@Nullable JobErrorActionArgs errorAction) {
-            this.errorAction = Output.ofNullable(errorAction);
+            this.errorAction = Codegen.ofNullable(errorAction);
             return this;
         }
         public Builder queueMessage(@Nullable Output<StorageQueueMessageArgs> queueMessage) {
@@ -169,7 +170,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueMessage(@Nullable StorageQueueMessageArgs queueMessage) {
-            this.queueMessage = Output.ofNullable(queueMessage);
+            this.queueMessage = Codegen.ofNullable(queueMessage);
             return this;
         }
         public Builder request(@Nullable Output<HttpRequestArgs> request) {
@@ -177,7 +178,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder request(@Nullable HttpRequestArgs request) {
-            this.request = Output.ofNullable(request);
+            this.request = Codegen.ofNullable(request);
             return this;
         }
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
@@ -185,7 +186,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Output.ofNullable(retryPolicy);
+            this.retryPolicy = Codegen.ofNullable(retryPolicy);
             return this;
         }
         public Builder serviceBusQueueMessage(@Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage) {
@@ -193,7 +194,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageArgs serviceBusQueueMessage) {
-            this.serviceBusQueueMessage = Output.ofNullable(serviceBusQueueMessage);
+            this.serviceBusQueueMessage = Codegen.ofNullable(serviceBusQueueMessage);
             return this;
         }
         public Builder serviceBusTopicMessage(@Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage) {
@@ -201,7 +202,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageArgs serviceBusTopicMessage) {
-            this.serviceBusTopicMessage = Output.ofNullable(serviceBusTopicMessage);
+            this.serviceBusTopicMessage = Codegen.ofNullable(serviceBusTopicMessage);
             return this;
         }
         public Builder type(@Nullable Output<JobActionType> type) {
@@ -209,7 +210,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable JobActionType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public JobActionArgs build() {
             return new JobActionArgs(errorAction, queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);

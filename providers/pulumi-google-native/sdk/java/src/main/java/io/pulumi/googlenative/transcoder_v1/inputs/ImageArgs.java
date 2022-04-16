@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.Double;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alpha")
       private final @Nullable Output<Double> alpha;
 
-    public Output<Double> getAlpha() {
-        return this.alpha == null ? Output.empty() : this.alpha;
+    public Output<Double> alpha() {
+        return this.alpha == null ? Codegen.empty() : this.alpha;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolution")
       private final @Nullable Output<NormalizedCoordinateArgs> resolution;
 
-    public Output<NormalizedCoordinateArgs> getResolution() {
-        return this.resolution == null ? Output.empty() : this.resolution;
+    public Output<NormalizedCoordinateArgs> resolution() {
+        return this.resolution == null ? Codegen.empty() : this.resolution;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -63,9 +64,9 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.alpha = Output.empty();
-        this.resolution = Output.empty();
-        this.uri = Output.empty();
+        this.alpha = Codegen.empty();
+        this.resolution = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alpha(@Nullable Double alpha) {
-            this.alpha = Output.ofNullable(alpha);
+            this.alpha = Codegen.ofNullable(alpha);
             return this;
         }
         public Builder resolution(@Nullable Output<NormalizedCoordinateArgs> resolution) {
@@ -105,7 +106,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resolution(@Nullable NormalizedCoordinateArgs resolution) {
-            this.resolution = Output.ofNullable(resolution);
+            this.resolution = Codegen.ofNullable(resolution);
             return this;
         }
         public Builder uri(Output<String> uri) {

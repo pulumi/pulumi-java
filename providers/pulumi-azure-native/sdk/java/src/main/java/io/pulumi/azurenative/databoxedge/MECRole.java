@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @return Activation key of the MEC.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getConnectionString() {
+    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> connectionString() {
         return this.connectionString;
     }
     /**
@@ -59,7 +60,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * Expected value is 'MEC'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -73,7 +74,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @return Role status.
      * 
      */
-    public Output<String> getRoleStatus() {
+    public Output<String> roleStatus() {
         return this.roleStatus;
     }
     /**
@@ -101,7 +102,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @return Role configured on ASE resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +116,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -141,7 +142,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MECRole(String name, MECRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:MECRole", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:databoxedge:MECRole", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private MECRole(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

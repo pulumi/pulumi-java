@@ -8,6 +8,7 @@ import io.pulumi.azurenative.deploymentmanager.inputs.WaitStepPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties;
 
-    public Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> getProperties() {
+    public Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties() {
         return this.properties;
     }
 
@@ -47,7 +48,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,8 +59,8 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepName")
       private final @Nullable Output<String> stepName;
 
-    public Output<String> getStepName() {
-        return this.stepName == null ? Output.empty() : this.stepName;
+    public Output<String> stepName() {
+        return this.stepName == null ? Codegen.empty() : this.stepName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StepArgs(
@@ -87,11 +88,11 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StepArgs() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.stepName = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.stepName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties) {
@@ -151,7 +152,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stepName(@Nullable String stepName) {
-            this.stepName = Output.ofNullable(stepName);
+            this.stepName = Codegen.ofNullable(stepName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -159,7 +160,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public StepArgs build() {
             return new StepArgs(location, properties, resourceGroupName, stepName, tags);

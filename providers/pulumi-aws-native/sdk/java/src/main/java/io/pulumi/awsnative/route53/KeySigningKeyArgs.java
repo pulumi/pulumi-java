@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId", required=true)
       private final Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -33,7 +34,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyManagementServiceArn", required=true)
       private final Output<String> keyManagementServiceArn;
 
-    public Output<String> getKeyManagementServiceArn() {
+    public Output<String> keyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
 
@@ -44,8 +45,8 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<KeySigningKeyStatus> status;
 
-    public Output<KeySigningKeyStatus> getStatus() {
+    public Output<KeySigningKeyStatus> status() {
         return this.status;
     }
 
@@ -71,10 +72,10 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeySigningKeyArgs() {
-        this.hostedZoneId = Output.empty();
-        this.keyManagementServiceArn = Output.empty();
-        this.name = Output.empty();
-        this.status = Output.empty();
+        this.hostedZoneId = Codegen.empty();
+        this.keyManagementServiceArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder status(Output<KeySigningKeyStatus> status) {

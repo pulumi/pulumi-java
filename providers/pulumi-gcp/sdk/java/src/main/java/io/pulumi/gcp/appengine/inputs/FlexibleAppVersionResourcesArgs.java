@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesVolumeArgs;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,8 +25,8 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
-    public Output<Integer> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+    public Output<Integer> cpu() {
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="diskGb")
       private final @Nullable Output<Integer> diskGb;
 
-    public Output<Integer> getDiskGb() {
-        return this.diskGb == null ? Output.empty() : this.diskGb;
+    public Output<Integer> diskGb() {
+        return this.diskGb == null ? Codegen.empty() : this.diskGb;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
-    public Output<Double> getMemoryGb() {
-        return this.memoryGb == null ? Output.empty() : this.memoryGb;
+    public Output<Double> memoryGb() {
+        return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     @Import(name="volumes")
       private final @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
 
-    public Output<List<FlexibleAppVersionResourcesVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public FlexibleAppVersionResourcesArgs(
@@ -74,10 +75,10 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
     }
 
     private FlexibleAppVersionResourcesArgs() {
-        this.cpu = Output.empty();
-        this.diskGb = Output.empty();
-        this.memoryGb = Output.empty();
-        this.volumes = Output.empty();
+        this.cpu = Codegen.empty();
+        this.diskGb = Codegen.empty();
+        this.memoryGb = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder diskGb(@Nullable Output<Integer> diskGb) {
@@ -119,7 +120,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder diskGb(@Nullable Integer diskGb) {
-            this.diskGb = Output.ofNullable(diskGb);
+            this.diskGb = Codegen.ofNullable(diskGb);
             return this;
         }
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
@@ -127,7 +128,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Output.ofNullable(memoryGb);
+            this.memoryGb = Codegen.ofNullable(memoryGb);
             return this;
         }
         public Builder volumes(@Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes) {
@@ -135,7 +136,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder volumes(@Nullable List<FlexibleAppVersionResourcesVolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(FlexibleAppVersionResourcesVolumeArgs... volumes) {

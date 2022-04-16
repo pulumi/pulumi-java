@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +38,7 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 
@@ -48,8 +49,8 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Output.empty() : this.useCommonAlertSchema;
+    public Output<Boolean> useCommonAlertSchema() {
+        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 
     public ArmRoleReceiverArgs(
@@ -58,13 +59,13 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
         @Nullable Output<Boolean> useCommonAlertSchema) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Output.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
     }
 
     private ArmRoleReceiverArgs() {
-        this.name = Output.empty();
-        this.roleId = Output.empty();
-        this.useCommonAlertSchema = Output.empty();
+        this.name = Codegen.empty();
+        this.roleId = Codegen.empty();
+        this.useCommonAlertSchema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
+            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
             return this;
         }        public ArmRoleReceiverArgs build() {
             return new ArmRoleReceiverArgs(name, roleId, useCommonAlertSchema);

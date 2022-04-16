@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.GlobalAddressArgs;
 import io.pulumi.gcp.compute.inputs.GlobalAddressState;
@@ -60,7 +61,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * address or omitted to allow GCP to choose a valid one for you.
      * 
      */
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
     /**
@@ -82,7 +83,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      *   Possible values are `EXTERNAL` and `INTERNAL`.
      * 
      */
-    public Output</* @Nullable */ String> getAddressType() {
+    public Output</* @Nullable */ String> addressType() {
         return this.addressType;
     }
     /**
@@ -96,7 +97,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -110,7 +111,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -126,7 +127,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    public Output</* @Nullable */ String> getIpVersion() {
+    public Output</* @Nullable */ String> ipVersion() {
         return this.ipVersion;
     }
     /**
@@ -140,7 +141,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -154,7 +155,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this address.  A list of key->value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -180,7 +181,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -200,7 +201,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * This should only be set when using an Internal address.
      * 
      */
-    public Output</* @Nullable */ String> getNetwork() {
+    public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
@@ -220,7 +221,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
      * 
      */
-    public Output</* @Nullable */ Integer> getPrefixLength() {
+    public Output</* @Nullable */ Integer> prefixLength() {
         return this.prefixLength;
     }
     /**
@@ -236,7 +237,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -254,7 +255,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
      * 
      */
-    public Output</* @Nullable */ String> getPurpose() {
+    public Output</* @Nullable */ String> purpose() {
         return this.purpose;
     }
     /**
@@ -268,7 +269,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -294,7 +295,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GlobalAddress(String name, @Nullable GlobalAddressArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/globalAddress:GlobalAddress", name, args == null ? GlobalAddressArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/globalAddress:GlobalAddress", name, args == null ? GlobalAddressArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GlobalAddress(String name, Output<String> id, @Nullable GlobalAddressState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

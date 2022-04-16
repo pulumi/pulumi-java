@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionInstanceGroupManagerArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.DistributionPolicyResponse;
@@ -41,7 +42,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Specifies the instances configs overrides that should be applied for all instances in the MIG.
      * 
      */
-    public Output<InstanceGroupManagerAllInstancesConfigResponse> getAllInstancesConfig() {
+    public Output<InstanceGroupManagerAllInstancesConfigResponse> allInstancesConfig() {
         return this.allInstancesConfig;
     }
     /**
@@ -55,7 +56,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The autohealing policy for this managed instance group. You can specify only one value.
      * 
      */
-    public Output<List<InstanceGroupManagerAutoHealingPolicyResponse>> getAutoHealingPolicies() {
+    public Output<List<InstanceGroupManagerAutoHealingPolicyResponse>> autoHealingPolicies() {
         return this.autoHealingPolicies;
     }
     /**
@@ -69,7 +70,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
      * 
      */
-    public Output<String> getBaseInstanceName() {
+    public Output<String> baseInstanceName() {
         return this.baseInstanceName;
     }
     /**
@@ -83,7 +84,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The creation timestamp for this managed instance group in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -97,7 +98,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.
      * 
      */
-    public Output<InstanceGroupManagerActionsSummaryResponse> getCurrentActions() {
+    public Output<InstanceGroupManagerActionsSummaryResponse> currentActions() {
         return this.currentActions;
     }
     /**
@@ -111,7 +112,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return An optional description of this resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -125,7 +126,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
      * 
      */
-    public Output<DistributionPolicyResponse> getDistributionPolicy() {
+    public Output<DistributionPolicyResponse> distributionPolicy() {
         return this.distributionPolicy;
     }
     /**
@@ -139,7 +140,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.
      * 
      */
-    public Output<String> getFailoverAction() {
+    public Output<String> failoverAction() {
         return this.failoverAction;
     }
     /**
@@ -153,7 +154,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -167,7 +168,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The URL of the Instance Group resource.
      * 
      */
-    public Output<String> getInstanceGroup() {
+    public Output<String> instanceGroup() {
         return this.instanceGroup;
     }
     /**
@@ -181,7 +182,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Instance lifecycle policy for this Instance Group Manager.
      * 
      */
-    public Output<InstanceGroupManagerInstanceLifecyclePolicyResponse> getInstanceLifecyclePolicy() {
+    public Output<InstanceGroupManagerInstanceLifecyclePolicyResponse> instanceLifecyclePolicy() {
         return this.instanceLifecyclePolicy;
     }
     /**
@@ -195,7 +196,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
      * 
      */
-    public Output<String> getInstanceTemplate() {
+    public Output<String> instanceTemplate() {
         return this.instanceTemplate;
     }
     /**
@@ -209,7 +210,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The resource type, which is always compute#instanceGroupManager for managed instance groups.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -223,7 +224,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -237,7 +238,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Named ports configured for the Instance Groups complementary to this Instance Group Manager.
      * 
      */
-    public Output<List<NamedPortResponse>> getNamedPorts() {
+    public Output<List<NamedPortResponse>> namedPorts() {
         return this.namedPorts;
     }
     /**
@@ -251,7 +252,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The URL of the region where the managed instance group resides (for regional resources).
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -265,7 +266,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The URL for this managed instance group. The server defines this URL.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -279,7 +280,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -293,7 +294,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -307,7 +308,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Standby policy for stopped and suspended instances.
      * 
      */
-    public Output<InstanceGroupManagerStandbyPolicyResponse> getStandbyPolicy() {
+    public Output<InstanceGroupManagerStandbyPolicyResponse> standbyPolicy() {
         return this.standbyPolicy;
     }
     /**
@@ -321,7 +322,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Stateful configuration for this Instanced Group Manager
      * 
      */
-    public Output<StatefulPolicyResponse> getStatefulPolicy() {
+    public Output<StatefulPolicyResponse> statefulPolicy() {
         return this.statefulPolicy;
     }
     /**
@@ -335,7 +336,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The status of this managed instance group.
      * 
      */
-    public Output<InstanceGroupManagerStatusResponse> getStatus() {
+    public Output<InstanceGroupManagerStatusResponse> status() {
         return this.status;
     }
     /**
@@ -349,7 +350,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
      * 
      */
-    public Output<List<String>> getTargetPools() {
+    public Output<List<String>> targetPools() {
         return this.targetPools;
     }
     /**
@@ -363,7 +364,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
      * 
      */
-    public Output<Integer> getTargetSize() {
+    public Output<Integer> targetSize() {
         return this.targetSize;
     }
     /**
@@ -377,7 +378,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The target number of stopped instances for this managed instance group. This number changes when you: - Stop instance using the stopInstances method or start instances using the startInstances method. - Manually change the targetStoppedSize using the update method.
      * 
      */
-    public Output<Integer> getTargetStoppedSize() {
+    public Output<Integer> targetStoppedSize() {
         return this.targetStoppedSize;
     }
     /**
@@ -391,7 +392,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The target number of suspended instances for this managed instance group. This number changes when you: - Suspend instance using the suspendInstances method or resume instances using the resumeInstances method. - Manually change the targetSuspendedSize using the update method.
      * 
      */
-    public Output<Integer> getTargetSuspendedSize() {
+    public Output<Integer> targetSuspendedSize() {
         return this.targetSuspendedSize;
     }
     /**
@@ -405,7 +406,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The update policy for this managed instance group.
      * 
      */
-    public Output<InstanceGroupManagerUpdatePolicyResponse> getUpdatePolicy() {
+    public Output<InstanceGroupManagerUpdatePolicyResponse> updatePolicy() {
         return this.updatePolicy;
     }
     /**
@@ -419,7 +420,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
      * 
      */
-    public Output<List<InstanceGroupManagerVersionResponse>> getVersions() {
+    public Output<List<InstanceGroupManagerVersionResponse>> versions() {
         return this.versions;
     }
     /**
@@ -433,7 +434,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The URL of a zone where the managed instance group is located (for zonal resources).
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -459,7 +460,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionInstanceGroupManager(String name, RegionInstanceGroupManagerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionInstanceGroupManager", name, args == null ? RegionInstanceGroupManagerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionInstanceGroupManager", name, args == null ? RegionInstanceGroupManagerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionInstanceGroupManager(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

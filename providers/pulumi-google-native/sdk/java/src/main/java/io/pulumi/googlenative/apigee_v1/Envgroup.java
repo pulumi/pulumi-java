@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.EnvgroupArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return The time at which the environment group was created as milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -43,7 +44,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return Host names for this environment group.
      * 
      */
-    public Output<List<String>> getHostnames() {
+    public Output<List<String>> hostnames() {
         return this.hostnames;
     }
     /**
@@ -57,7 +58,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return The time at which the environment group was last updated as milliseconds since epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -71,7 +72,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return ID of the environment group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return State of the environment group. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -111,7 +112,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Envgroup(String name, EnvgroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Envgroup", name, args == null ? EnvgroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Envgroup", name, args == null ? EnvgroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Envgroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

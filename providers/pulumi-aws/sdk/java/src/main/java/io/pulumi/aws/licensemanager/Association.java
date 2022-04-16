@@ -9,6 +9,7 @@ import io.pulumi.aws.licensemanager.inputs.AssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return ARN of the license configuration.
      * 
      */
-    public Output<String> getLicenseConfigurationArn() {
+    public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
     /**
@@ -55,7 +56,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return ARN of the resource associated with the license configuration.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -81,7 +82,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Association(String name, AssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:licensemanager/association:Association", name, args == null ? AssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:licensemanager/association:Association", name, args == null ? AssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Association(String name, Output<String> id, @Nullable AssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

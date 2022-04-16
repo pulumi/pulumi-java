@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
-        return this.groups == null ? Output.empty() : this.groups;
+    public Output<List<String>> groups() {
+        return this.groups == null ? Codegen.empty() : this.groups;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public UserGroupMembershipState(
@@ -45,8 +46,8 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
     }
 
     private UserGroupMembershipState() {
-        this.groups = Output.empty();
-        this.user = Output.empty();
+        this.groups = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Output.ofNullable(groups);
+            this.groups = Codegen.ofNullable(groups);
             return this;
         }
         public Builder groups(String... groups) {
@@ -87,7 +88,7 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public UserGroupMembershipState build() {
             return new UserGroupMembershipState(groups, user);

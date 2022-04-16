@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.ResolverQueryLogConfigState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @return The ARN (Amazon Resource Name) of the Route 53 Resolver query logging configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * You can send query logs to an S3 bucket, a CloudWatch Logs log group, or a Kinesis Data Firehose delivery stream.
      * 
      */
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
     /**
@@ -70,7 +71,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the Route 53 Resolver query logging configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the account that created the query logging configuration.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -102,7 +103,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
-    public Output<String> getShareStatus() {
+    public Output<String> shareStatus() {
         return this.shareStatus;
     }
     /**
@@ -116,7 +117,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +131,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -156,7 +157,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverQueryLogConfig(String name, ResolverQueryLogConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig", name, args == null ? ResolverQueryLogConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig", name, args == null ? ResolverQueryLogConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverQueryLogConfig(String name, Output<String> id, @Nullable ResolverQueryLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

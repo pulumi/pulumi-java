@@ -5,6 +5,7 @@ package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
     @Import(name="clientIpPreservationEnabled")
       private final @Nullable Output<Boolean> clientIpPreservationEnabled;
 
-    public Output<Boolean> getClientIpPreservationEnabled() {
-        return this.clientIpPreservationEnabled == null ? Output.empty() : this.clientIpPreservationEnabled;
+    public Output<Boolean> clientIpPreservationEnabled() {
+        return this.clientIpPreservationEnabled == null ? Codegen.empty() : this.clientIpPreservationEnabled;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
     @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
-    public Output<String> getEndpointId() {
-        return this.endpointId == null ? Output.empty() : this.endpointId;
+    public Output<String> endpointId() {
+        return this.endpointId == null ? Codegen.empty() : this.endpointId;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+    public Output<Integer> weight() {
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public EndpointGroupEndpointConfigurationArgs(
@@ -60,9 +61,9 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
     }
 
     private EndpointGroupEndpointConfigurationArgs() {
-        this.clientIpPreservationEnabled = Output.empty();
-        this.endpointId = Output.empty();
-        this.weight = Output.empty();
+        this.clientIpPreservationEnabled = Codegen.empty();
+        this.endpointId = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder clientIpPreservationEnabled(@Nullable Boolean clientIpPreservationEnabled) {
-            this.clientIpPreservationEnabled = Output.ofNullable(clientIpPreservationEnabled);
+            this.clientIpPreservationEnabled = Codegen.ofNullable(clientIpPreservationEnabled);
             return this;
         }
         public Builder endpointId(@Nullable Output<String> endpointId) {
@@ -102,7 +103,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder endpointId(@Nullable String endpointId) {
-            this.endpointId = Output.ofNullable(endpointId);
+            this.endpointId = Codegen.ofNullable(endpointId);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -110,7 +111,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public EndpointGroupEndpointConfigurationArgs build() {
             return new EndpointGroupEndpointConfigurationArgs(clientIpPreservationEnabled, endpointId, weight);

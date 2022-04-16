@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ServiceAttachmentArgs;
 import io.pulumi.gcp.compute.inputs.ServiceAttachmentState;
@@ -61,7 +62,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return An array of the consumer forwarding rules connected to this service attachment.
      * 
      */
-    public Output<List<ServiceAttachmentConnectedEndpoint>> getConnectedEndpoints() {
+    public Output<List<ServiceAttachmentConnectedEndpoint>> connectedEndpoints() {
         return this.connectedEndpoints;
     }
     /**
@@ -77,7 +78,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
      * 
      */
-    public Output<String> getConnectionPreference() {
+    public Output<String> connectionPreference() {
         return this.connectionPreference;
     }
     /**
@@ -95,7 +96,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ServiceAttachmentConsumerAcceptList>> getConsumerAcceptLists() {
+    public Output</* @Nullable */ List<ServiceAttachmentConsumerAcceptList>> consumerAcceptLists() {
         return this.consumerAcceptLists;
     }
     /**
@@ -111,7 +112,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * attachment.
      * 
      */
-    public Output</* @Nullable */ List<String>> getConsumerRejectLists() {
+    public Output</* @Nullable */ List<String>> consumerRejectLists() {
         return this.consumerRejectLists;
     }
     /**
@@ -125,7 +126,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -143,7 +144,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * destination servers.
      * 
      */
-    public Output<Boolean> getEnableProxyProtocol() {
+    public Output<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol;
     }
     /**
@@ -157,7 +158,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -181,7 +182,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -195,7 +196,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return An array of subnets that is provided for NAT in this service attachment.
      * 
      */
-    public Output<List<String>> getNatSubnets() {
+    public Output<List<String>> natSubnets() {
         return this.natSubnets;
     }
     /**
@@ -211,7 +212,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -225,7 +226,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return URL of the region where the resource resides.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -239,7 +240,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -255,7 +256,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * this service attachment.
      * 
      */
-    public Output<String> getTargetService() {
+    public Output<String> targetService() {
         return this.targetService;
     }
 
@@ -281,7 +282,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceAttachment(String name, ServiceAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/serviceAttachment:ServiceAttachment", name, args == null ? ServiceAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/serviceAttachment:ServiceAttachment", name, args == null ? ServiceAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceAttachment(String name, Output<String> id, @Nullable ServiceAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return Date time when view was last modified.
      * 
      */
-    public Output<String> getChanged() {
+    public Output<String> changed() {
         return this.changed;
     }
     /**
@@ -56,7 +57,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return Date time when view was created.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -70,7 +71,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return View definition.
      * 
      */
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
     /**
@@ -84,7 +85,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return Localized display name for the view.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -98,7 +99,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return the hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -126,7 +127,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -140,7 +141,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return the user ID.
      * 
      */
-    public Output</* @Nullable */ String> getUserId() {
+    public Output</* @Nullable */ String> userId() {
         return this.userId;
     }
     /**
@@ -154,7 +155,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return Name of the view.
      * 
      */
-    public Output<String> getViewName() {
+    public Output<String> viewName() {
         return this.viewName;
     }
 
@@ -180,7 +181,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public View(String name, ViewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customerinsights:View", name, args == null ? ViewArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customerinsights:View", name, args == null ? ViewArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private View(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

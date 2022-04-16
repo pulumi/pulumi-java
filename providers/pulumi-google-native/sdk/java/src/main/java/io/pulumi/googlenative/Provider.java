@@ -6,6 +6,7 @@ package io.pulumi.googlenative;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ProviderArgs;
 import io.pulumi.googlenative.Utilities;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The default project to manage resources in. If another project is specified on a resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> getProject() {
+    public Output</* @Nullable */ String> project() {
         return this.project;
     }
     /**
@@ -42,7 +43,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -56,7 +57,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> getZone() {
+    public Output</* @Nullable */ String> zone() {
         return this.zone;
     }
 
@@ -82,7 +83,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

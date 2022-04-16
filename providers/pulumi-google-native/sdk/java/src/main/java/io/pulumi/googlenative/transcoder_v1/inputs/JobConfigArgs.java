@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.AdBreakArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.EditAtomArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.ElementaryStreamArgs;
@@ -35,8 +36,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adBreaks")
       private final @Nullable Output<List<AdBreakArgs>> adBreaks;
 
-    public Output<List<AdBreakArgs>> getAdBreaks() {
-        return this.adBreaks == null ? Output.empty() : this.adBreaks;
+    public Output<List<AdBreakArgs>> adBreaks() {
+        return this.adBreaks == null ? Codegen.empty() : this.adBreaks;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="editList")
       private final @Nullable Output<List<EditAtomArgs>> editList;
 
-    public Output<List<EditAtomArgs>> getEditList() {
-        return this.editList == null ? Output.empty() : this.editList;
+    public Output<List<EditAtomArgs>> editList() {
+        return this.editList == null ? Codegen.empty() : this.editList;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elementaryStreams")
       private final @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
 
-    public Output<List<ElementaryStreamArgs>> getElementaryStreams() {
-        return this.elementaryStreams == null ? Output.empty() : this.elementaryStreams;
+    public Output<List<ElementaryStreamArgs>> elementaryStreams() {
+        return this.elementaryStreams == null ? Codegen.empty() : this.elementaryStreams;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
       private final @Nullable Output<List<InputArgs>> inputs;
 
-    public Output<List<InputArgs>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+    public Output<List<InputArgs>> inputs() {
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manifests")
       private final @Nullable Output<List<ManifestArgs>> manifests;
 
-    public Output<List<ManifestArgs>> getManifests() {
-        return this.manifests == null ? Output.empty() : this.manifests;
+    public Output<List<ManifestArgs>> manifests() {
+        return this.manifests == null ? Codegen.empty() : this.manifests;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="muxStreams")
       private final @Nullable Output<List<MuxStreamArgs>> muxStreams;
 
-    public Output<List<MuxStreamArgs>> getMuxStreams() {
-        return this.muxStreams == null ? Output.empty() : this.muxStreams;
+    public Output<List<MuxStreamArgs>> muxStreams() {
+        return this.muxStreams == null ? Codegen.empty() : this.muxStreams;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="output")
       private final @Nullable Output<OutputArgs> output;
 
-    public Output<OutputArgs> getOutput() {
-        return this.output == null ? Output.empty() : this.output;
+    public Output<OutputArgs> output() {
+        return this.output == null ? Codegen.empty() : this.output;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overlays")
       private final @Nullable Output<List<OverlayArgs>> overlays;
 
-    public Output<List<OverlayArgs>> getOverlays() {
-        return this.overlays == null ? Output.empty() : this.overlays;
+    public Output<List<OverlayArgs>> overlays() {
+        return this.overlays == null ? Codegen.empty() : this.overlays;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubDestination")
       private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
-    public Output<PubsubDestinationArgs> getPubsubDestination() {
-        return this.pubsubDestination == null ? Output.empty() : this.pubsubDestination;
+    public Output<PubsubDestinationArgs> pubsubDestination() {
+        return this.pubsubDestination == null ? Codegen.empty() : this.pubsubDestination;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spriteSheets")
       private final @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
 
-    public Output<List<SpriteSheetArgs>> getSpriteSheets() {
-        return this.spriteSheets == null ? Output.empty() : this.spriteSheets;
+    public Output<List<SpriteSheetArgs>> spriteSheets() {
+        return this.spriteSheets == null ? Codegen.empty() : this.spriteSheets;
     }
 
     public JobConfigArgs(
@@ -162,16 +163,16 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobConfigArgs() {
-        this.adBreaks = Output.empty();
-        this.editList = Output.empty();
-        this.elementaryStreams = Output.empty();
-        this.inputs = Output.empty();
-        this.manifests = Output.empty();
-        this.muxStreams = Output.empty();
-        this.output = Output.empty();
-        this.overlays = Output.empty();
-        this.pubsubDestination = Output.empty();
-        this.spriteSheets = Output.empty();
+        this.adBreaks = Codegen.empty();
+        this.editList = Codegen.empty();
+        this.elementaryStreams = Codegen.empty();
+        this.inputs = Codegen.empty();
+        this.manifests = Codegen.empty();
+        this.muxStreams = Codegen.empty();
+        this.output = Codegen.empty();
+        this.overlays = Codegen.empty();
+        this.pubsubDestination = Codegen.empty();
+        this.spriteSheets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -217,7 +218,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adBreaks(@Nullable List<AdBreakArgs> adBreaks) {
-            this.adBreaks = Output.ofNullable(adBreaks);
+            this.adBreaks = Codegen.ofNullable(adBreaks);
             return this;
         }
         public Builder adBreaks(AdBreakArgs... adBreaks) {
@@ -228,7 +229,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder editList(@Nullable List<EditAtomArgs> editList) {
-            this.editList = Output.ofNullable(editList);
+            this.editList = Codegen.ofNullable(editList);
             return this;
         }
         public Builder editList(EditAtomArgs... editList) {
@@ -239,7 +240,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elementaryStreams(@Nullable List<ElementaryStreamArgs> elementaryStreams) {
-            this.elementaryStreams = Output.ofNullable(elementaryStreams);
+            this.elementaryStreams = Codegen.ofNullable(elementaryStreams);
             return this;
         }
         public Builder elementaryStreams(ElementaryStreamArgs... elementaryStreams) {
@@ -250,7 +251,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputs(@Nullable List<InputArgs> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(InputArgs... inputs) {
@@ -261,7 +262,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifests(@Nullable List<ManifestArgs> manifests) {
-            this.manifests = Output.ofNullable(manifests);
+            this.manifests = Codegen.ofNullable(manifests);
             return this;
         }
         public Builder manifests(ManifestArgs... manifests) {
@@ -272,7 +273,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder muxStreams(@Nullable List<MuxStreamArgs> muxStreams) {
-            this.muxStreams = Output.ofNullable(muxStreams);
+            this.muxStreams = Codegen.ofNullable(muxStreams);
             return this;
         }
         public Builder muxStreams(MuxStreamArgs... muxStreams) {
@@ -283,7 +284,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder output(@Nullable OutputArgs output) {
-            this.output = Output.ofNullable(output);
+            this.output = Codegen.ofNullable(output);
             return this;
         }
         public Builder overlays(@Nullable Output<List<OverlayArgs>> overlays) {
@@ -291,7 +292,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overlays(@Nullable List<OverlayArgs> overlays) {
-            this.overlays = Output.ofNullable(overlays);
+            this.overlays = Codegen.ofNullable(overlays);
             return this;
         }
         public Builder overlays(OverlayArgs... overlays) {
@@ -302,7 +303,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
-            this.pubsubDestination = Output.ofNullable(pubsubDestination);
+            this.pubsubDestination = Codegen.ofNullable(pubsubDestination);
             return this;
         }
         public Builder spriteSheets(@Nullable Output<List<SpriteSheetArgs>> spriteSheets) {
@@ -310,7 +311,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spriteSheets(@Nullable List<SpriteSheetArgs> spriteSheets) {
-            this.spriteSheets = Output.ofNullable(spriteSheets);
+            this.spriteSheets = Codegen.ofNullable(spriteSheets);
             return this;
         }
         public Builder spriteSheets(SpriteSheetArgs... spriteSheets) {

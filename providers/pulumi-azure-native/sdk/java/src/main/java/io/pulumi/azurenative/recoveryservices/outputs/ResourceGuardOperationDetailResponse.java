@@ -22,10 +22,10 @@ public final class ResourceGuardOperationDetailResponse {
         this.vaultCriticalOperation = vaultCriticalOperation;
     }
 
-    public Optional<String> getDefaultResourceRequest() {
+    public Optional<String> defaultResourceRequest() {
         return Optional.ofNullable(this.defaultResourceRequest);
     }
-    public Optional<String> getVaultCriticalOperation() {
+    public Optional<String> vaultCriticalOperation() {
         return Optional.ofNullable(this.vaultCriticalOperation);
     }
 

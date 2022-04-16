@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketNoncurrentVersionTransitionStorageClass;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
     @Import(name="newerNoncurrentVersions")
       private final @Nullable Output<Integer> newerNoncurrentVersions;
 
-    public Output<Integer> getNewerNoncurrentVersions() {
-        return this.newerNoncurrentVersions == null ? Output.empty() : this.newerNoncurrentVersions;
+    public Output<Integer> newerNoncurrentVersions() {
+        return this.newerNoncurrentVersions == null ? Codegen.empty() : this.newerNoncurrentVersions;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
     @Import(name="storageClass", required=true)
       private final Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
 
-    public Output<BucketNoncurrentVersionTransitionStorageClass> getStorageClass() {
+    public Output<BucketNoncurrentVersionTransitionStorageClass> storageClass() {
         return this.storageClass;
     }
 
@@ -48,7 +49,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
     @Import(name="transitionInDays", required=true)
       private final Output<Integer> transitionInDays;
 
-    public Output<Integer> getTransitionInDays() {
+    public Output<Integer> transitionInDays() {
         return this.transitionInDays;
     }
 
@@ -62,9 +63,9 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
     }
 
     private BucketNoncurrentVersionTransitionArgs() {
-        this.newerNoncurrentVersions = Output.empty();
-        this.storageClass = Output.empty();
-        this.transitionInDays = Output.empty();
+        this.newerNoncurrentVersions = Codegen.empty();
+        this.storageClass = Codegen.empty();
+        this.transitionInDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
             return this;
         }
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = Output.ofNullable(newerNoncurrentVersions);
+            this.newerNoncurrentVersions = Codegen.ofNullable(newerNoncurrentVersions);
             return this;
         }
         public Builder storageClass(Output<BucketNoncurrentVersionTransitionStorageClass> storageClass) {

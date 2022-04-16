@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
     @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
-    public Output<String> getPathId() {
-        return this.pathId == null ? Output.empty() : this.pathId;
+    public Output<String> pathId() {
+        return this.pathId == null ? Codegen.empty() : this.pathId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
@@ -45,8 +46,8 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
     @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
-        return this.provisioningArtifactId == null ? Output.empty() : this.provisioningArtifactId;
+    public Output<String> provisioningArtifactId() {
+        return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters;
 
-    public Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> getProvisioningParameters() {
-        return this.provisioningParameters == null ? Output.empty() : this.provisioningParameters;
+    public Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters() {
+        return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
     }
 
     public ProjectServiceCatalogProvisioningDetailsArgs(
@@ -72,10 +73,10 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
     }
 
     private ProjectServiceCatalogProvisioningDetailsArgs() {
-        this.pathId = Output.empty();
-        this.productId = Output.empty();
-        this.provisioningArtifactId = Output.empty();
-        this.provisioningParameters = Output.empty();
+        this.pathId = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.provisioningArtifactId = Codegen.empty();
+        this.provisioningParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
             return this;
         }
         public Builder pathId(@Nullable String pathId) {
-            this.pathId = Output.ofNullable(pathId);
+            this.pathId = Codegen.ofNullable(pathId);
             return this;
         }
         public Builder productId(Output<String> productId) {
@@ -125,7 +126,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
             return this;
         }
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
-            this.provisioningArtifactId = Output.ofNullable(provisioningArtifactId);
+            this.provisioningArtifactId = Codegen.ofNullable(provisioningArtifactId);
             return this;
         }
         public Builder provisioningParameters(@Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters) {
@@ -133,7 +134,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
             return this;
         }
         public Builder provisioningParameters(@Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs> provisioningParameters) {
-            this.provisioningParameters = Output.ofNullable(provisioningParameters);
+            this.provisioningParameters = Codegen.ofNullable(provisioningParameters);
             return this;
         }
         public Builder provisioningParameters(ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs... provisioningParameters) {

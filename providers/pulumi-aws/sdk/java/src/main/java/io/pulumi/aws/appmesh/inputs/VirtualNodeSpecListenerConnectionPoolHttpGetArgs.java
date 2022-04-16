@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends io.p
     @Import(name="maxConnections", required=true)
       private final Output<Integer> maxConnections;
 
-    public Output<Integer> getMaxConnections() {
+    public Output<Integer> maxConnections() {
         return this.maxConnections;
     }
 
@@ -32,8 +33,8 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends io.p
     @Import(name="maxPendingRequests")
       private final @Nullable Output<Integer> maxPendingRequests;
 
-    public Output<Integer> getMaxPendingRequests() {
-        return this.maxPendingRequests == null ? Output.empty() : this.maxPendingRequests;
+    public Output<Integer> maxPendingRequests() {
+        return this.maxPendingRequests == null ? Codegen.empty() : this.maxPendingRequests;
     }
 
     public VirtualNodeSpecListenerConnectionPoolHttpGetArgs(
@@ -44,8 +45,8 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends io.p
     }
 
     private VirtualNodeSpecListenerConnectionPoolHttpGetArgs() {
-        this.maxConnections = Output.empty();
-        this.maxPendingRequests = Output.empty();
+        this.maxConnections = Codegen.empty();
+        this.maxPendingRequests = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends io.p
             return this;
         }
         public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
-            this.maxPendingRequests = Output.ofNullable(maxPendingRequests);
+            this.maxPendingRequests = Codegen.ofNullable(maxPendingRequests);
             return this;
         }        public VirtualNodeSpecListenerConnectionPoolHttpGetArgs build() {
             return new VirtualNodeSpecListenerConnectionPoolHttpGetArgs(maxConnections, maxPendingRequests);

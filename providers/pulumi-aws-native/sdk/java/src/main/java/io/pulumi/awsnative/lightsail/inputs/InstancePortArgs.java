@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessDirection")
       private final @Nullable Output<String> accessDirection;
 
-    public Output<String> getAccessDirection() {
-        return this.accessDirection == null ? Output.empty() : this.accessDirection;
+    public Output<String> accessDirection() {
+        return this.accessDirection == null ? Codegen.empty() : this.accessDirection;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessFrom")
       private final @Nullable Output<String> accessFrom;
 
-    public Output<String> getAccessFrom() {
-        return this.accessFrom == null ? Output.empty() : this.accessFrom;
+    public Output<String> accessFrom() {
+        return this.accessFrom == null ? Codegen.empty() : this.accessFrom;
     }
 
     /**
@@ -49,22 +50,22 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
-    public Output<String> getAccessType() {
-        return this.accessType == null ? Output.empty() : this.accessType;
+    public Output<String> accessType() {
+        return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
     @Import(name="cidrListAliases")
       private final @Nullable Output<List<String>> cidrListAliases;
 
-    public Output<List<String>> getCidrListAliases() {
-        return this.cidrListAliases == null ? Output.empty() : this.cidrListAliases;
+    public Output<List<String>> cidrListAliases() {
+        return this.cidrListAliases == null ? Codegen.empty() : this.cidrListAliases;
     }
 
     @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
-    public Output<List<String>> getCidrs() {
-        return this.cidrs == null ? Output.empty() : this.cidrs;
+    public Output<List<String>> cidrs() {
+        return this.cidrs == null ? Codegen.empty() : this.cidrs;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
-        return this.commonName == null ? Output.empty() : this.commonName;
+    public Output<String> commonName() {
+        return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
     /**
@@ -85,15 +86,15 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
-        return this.fromPort == null ? Output.empty() : this.fromPort;
+    public Output<Integer> fromPort() {
+        return this.fromPort == null ? Codegen.empty() : this.fromPort;
     }
 
     @Import(name="ipv6Cidrs")
       private final @Nullable Output<List<String>> ipv6Cidrs;
 
-    public Output<List<String>> getIpv6Cidrs() {
-        return this.ipv6Cidrs == null ? Output.empty() : this.ipv6Cidrs;
+    public Output<List<String>> ipv6Cidrs() {
+        return this.ipv6Cidrs == null ? Codegen.empty() : this.ipv6Cidrs;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
-        return this.toPort == null ? Output.empty() : this.toPort;
+    public Output<Integer> toPort() {
+        return this.toPort == null ? Codegen.empty() : this.toPort;
     }
 
     public InstancePortArgs(
@@ -142,16 +143,16 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstancePortArgs() {
-        this.accessDirection = Output.empty();
-        this.accessFrom = Output.empty();
-        this.accessType = Output.empty();
-        this.cidrListAliases = Output.empty();
-        this.cidrs = Output.empty();
-        this.commonName = Output.empty();
-        this.fromPort = Output.empty();
-        this.ipv6Cidrs = Output.empty();
-        this.protocol = Output.empty();
-        this.toPort = Output.empty();
+        this.accessDirection = Codegen.empty();
+        this.accessFrom = Codegen.empty();
+        this.accessType = Codegen.empty();
+        this.cidrListAliases = Codegen.empty();
+        this.cidrs = Codegen.empty();
+        this.commonName = Codegen.empty();
+        this.fromPort = Codegen.empty();
+        this.ipv6Cidrs = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessDirection(@Nullable String accessDirection) {
-            this.accessDirection = Output.ofNullable(accessDirection);
+            this.accessDirection = Codegen.ofNullable(accessDirection);
             return this;
         }
         public Builder accessFrom(@Nullable Output<String> accessFrom) {
@@ -205,7 +206,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessFrom(@Nullable String accessFrom) {
-            this.accessFrom = Output.ofNullable(accessFrom);
+            this.accessFrom = Codegen.ofNullable(accessFrom);
             return this;
         }
         public Builder accessType(@Nullable Output<String> accessType) {
@@ -213,7 +214,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessType(@Nullable String accessType) {
-            this.accessType = Output.ofNullable(accessType);
+            this.accessType = Codegen.ofNullable(accessType);
             return this;
         }
         public Builder cidrListAliases(@Nullable Output<List<String>> cidrListAliases) {
@@ -221,7 +222,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidrListAliases(@Nullable List<String> cidrListAliases) {
-            this.cidrListAliases = Output.ofNullable(cidrListAliases);
+            this.cidrListAliases = Codegen.ofNullable(cidrListAliases);
             return this;
         }
         public Builder cidrListAliases(String... cidrListAliases) {
@@ -232,7 +233,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Output.ofNullable(cidrs);
+            this.cidrs = Codegen.ofNullable(cidrs);
             return this;
         }
         public Builder cidrs(String... cidrs) {
@@ -243,7 +244,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Output.ofNullable(commonName);
+            this.commonName = Codegen.ofNullable(commonName);
             return this;
         }
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
@@ -251,7 +252,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Output.ofNullable(fromPort);
+            this.fromPort = Codegen.ofNullable(fromPort);
             return this;
         }
         public Builder ipv6Cidrs(@Nullable Output<List<String>> ipv6Cidrs) {
@@ -259,7 +260,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6Cidrs(@Nullable List<String> ipv6Cidrs) {
-            this.ipv6Cidrs = Output.ofNullable(ipv6Cidrs);
+            this.ipv6Cidrs = Codegen.ofNullable(ipv6Cidrs);
             return this;
         }
         public Builder ipv6Cidrs(String... ipv6Cidrs) {
@@ -270,7 +271,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder toPort(@Nullable Output<Integer> toPort) {
@@ -278,7 +279,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Output.ofNullable(toPort);
+            this.toPort = Codegen.ofNullable(toPort);
             return this;
         }        public InstancePortArgs build() {
             return new InstancePortArgs(accessDirection, accessFrom, accessType, cidrListAliases, cidrs, commonName, fromPort, ipv6Cidrs, protocol, toPort);

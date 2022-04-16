@@ -18,7 +18,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="fqdn")
       private final @Nullable String fqdn;
 
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
@@ -29,7 +29,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="notebookPreparationError")
       private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
 
-    public Optional<NotebookPreparationErrorResponse> getNotebookPreparationError() {
+    public Optional<NotebookPreparationErrorResponse> notebookPreparationError() {
         return this.notebookPreparationError == null ? Optional.empty() : Optional.ofNullable(this.notebookPreparationError);
     }
 
@@ -40,7 +40,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     @Import(name="groupIndexes")
       private final @Nullable Output<List<Integer>> groupIndexes;
 
-    public Output<List<Integer>> getGroupIndexes() {
-        return this.groupIndexes == null ? Output.empty() : this.groupIndexes;
+    public Output<List<Integer>> groupIndexes() {
+        return this.groupIndexes == null ? Codegen.empty() : this.groupIndexes;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+    public Output<String> pattern() {
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     public GooglePrivacyDlpV2RegexArgs(
@@ -50,8 +51,8 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     }
 
     private GooglePrivacyDlpV2RegexArgs() {
-        this.groupIndexes = Output.empty();
-        this.pattern = Output.empty();
+        this.groupIndexes = Codegen.empty();
+        this.pattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
-            this.groupIndexes = Output.ofNullable(groupIndexes);
+            this.groupIndexes = Codegen.ofNullable(groupIndexes);
             return this;
         }
         public Builder groupIndexes(Integer... groupIndexes) {
@@ -92,7 +93,7 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }        public GooglePrivacyDlpV2RegexArgs build() {
             return new GooglePrivacyDlpV2RegexArgs(groupIndexes, pattern);

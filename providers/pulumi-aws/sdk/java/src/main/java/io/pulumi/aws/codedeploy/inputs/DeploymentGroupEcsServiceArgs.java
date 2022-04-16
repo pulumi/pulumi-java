@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DeploymentGroupEcsServiceArgs extends io.pulumi.resources.Res
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -31,7 +32,7 @@ public final class DeploymentGroupEcsServiceArgs extends io.pulumi.resources.Res
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -43,8 +44,8 @@ public final class DeploymentGroupEcsServiceArgs extends io.pulumi.resources.Res
     }
 
     private DeploymentGroupEcsServiceArgs() {
-        this.clusterName = Output.empty();
-        this.serviceName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {

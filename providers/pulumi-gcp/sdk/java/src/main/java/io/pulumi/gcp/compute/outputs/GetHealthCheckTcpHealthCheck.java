@@ -33,22 +33,22 @@ public final class GetHealthCheckTcpHealthCheck {
         this.response = response;
     }
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
-    public String getProxyHeader() {
+    public String proxyHeader() {
         return this.proxyHeader;
     }
-    public String getRequest() {
+    public String request() {
         return this.request;
     }
-    public String getResponse() {
+    public String response() {
         return this.response;
     }
 

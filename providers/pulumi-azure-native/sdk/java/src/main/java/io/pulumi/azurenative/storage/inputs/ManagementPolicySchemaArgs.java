@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
     @Import(name="rules", required=true)
       private final Output<List<ManagementPolicyRuleArgs>> rules;
 
-    public Output<List<ManagementPolicyRuleArgs>> getRules() {
+    public Output<List<ManagementPolicyRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -34,7 +35,7 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
     }
 
     private ManagementPolicySchemaArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.datasync;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fsxFilesystemArn", required=true)
       private final Output<String> fsxFilesystemArn;
 
-    public Output<String> getFsxFilesystemArn() {
+    public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
 
@@ -34,7 +35,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
 
@@ -45,8 +46,8 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+    public Output<String> subdirectory() {
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public LocationFsxLustreArgs(
@@ -85,11 +86,11 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LocationFsxLustreArgs() {
-        this.fsxFilesystemArn = Output.empty();
-        this.securityGroupArns = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.fsxFilesystemArn = Codegen.empty();
+        this.securityGroupArns = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -152,7 +153,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -160,7 +161,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public LocationFsxLustreArgs build() {
             return new LocationFsxLustreArgs(fsxFilesystemArn, securityGroupArns, subdirectory, tags, tagsAll);

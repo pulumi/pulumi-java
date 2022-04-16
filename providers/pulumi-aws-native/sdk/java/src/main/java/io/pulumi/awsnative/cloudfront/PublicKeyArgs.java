@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.cloudfront.inputs.PublicKeyConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -16,7 +17,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyConfig", required=true)
       private final Output<PublicKeyConfigArgs> publicKeyConfig;
 
-    public Output<PublicKeyConfigArgs> getPublicKeyConfig() {
+    public Output<PublicKeyConfigArgs> publicKeyConfig() {
         return this.publicKeyConfig;
     }
 
@@ -25,7 +26,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublicKeyArgs() {
-        this.publicKeyConfig = Output.empty();
+        this.publicKeyConfig = Codegen.empty();
     }
 
     public static Builder builder() {

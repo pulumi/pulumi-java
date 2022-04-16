@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskBlobName")
       private final @Nullable Output<String> diskBlobName;
 
-    public Output<String> getDiskBlobName() {
-        return this.diskBlobName == null ? Output.empty() : this.diskBlobName;
+    public Output<String> diskBlobName() {
+        return this.diskBlobName == null ? Codegen.empty() : this.diskBlobName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGiB")
       private final @Nullable Output<Integer> diskSizeGiB;
 
-    public Output<Integer> getDiskSizeGiB() {
-        return this.diskSizeGiB == null ? Output.empty() : this.diskSizeGiB;
+    public Output<Integer> diskSizeGiB() {
+        return this.diskSizeGiB == null ? Codegen.empty() : this.diskSizeGiB;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
       private final @Nullable Output<Either<String,StorageType>> diskType;
 
-    public Output<Either<String,StorageType>> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+    public Output<Either<String,StorageType>> diskType() {
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskUri")
       private final @Nullable Output<String> diskUri;
 
-    public Output<String> getDiskUri() {
-        return this.diskUri == null ? Output.empty() : this.diskUri;
+    public Output<String> diskUri() {
+        return this.diskUri == null ? Codegen.empty() : this.diskUri;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostCaching")
       private final @Nullable Output<String> hostCaching;
 
-    public Output<String> getHostCaching() {
-        return this.hostCaching == null ? Output.empty() : this.hostCaching;
+    public Output<String> hostCaching() {
+        return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -91,8 +92,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="leasedByLabVmId")
       private final @Nullable Output<String> leasedByLabVmId;
 
-    public Output<String> getLeasedByLabVmId() {
-        return this.leasedByLabVmId == null ? Output.empty() : this.leasedByLabVmId;
+    public Output<String> leasedByLabVmId() {
+        return this.leasedByLabVmId == null ? Codegen.empty() : this.leasedByLabVmId;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedDiskId")
       private final @Nullable Output<String> managedDiskId;
 
-    public Output<String> getManagedDiskId() {
-        return this.managedDiskId == null ? Output.empty() : this.managedDiskId;
+    public Output<String> managedDiskId() {
+        return this.managedDiskId == null ? Codegen.empty() : this.managedDiskId;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -146,8 +147,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
-        return this.storageAccountId == null ? Output.empty() : this.storageAccountId;
+    public Output<String> storageAccountId() {
+        return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -204,20 +205,20 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.diskBlobName = Output.empty();
-        this.diskSizeGiB = Output.empty();
-        this.diskType = Output.empty();
-        this.diskUri = Output.empty();
-        this.hostCaching = Output.empty();
-        this.labName = Output.empty();
-        this.leasedByLabVmId = Output.empty();
-        this.location = Output.empty();
-        this.managedDiskId = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountId = Output.empty();
-        this.tags = Output.empty();
-        this.userName = Output.empty();
+        this.diskBlobName = Codegen.empty();
+        this.diskSizeGiB = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.diskUri = Codegen.empty();
+        this.hostCaching = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.leasedByLabVmId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedDiskId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -271,7 +272,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskBlobName(@Nullable String diskBlobName) {
-            this.diskBlobName = Output.ofNullable(diskBlobName);
+            this.diskBlobName = Codegen.ofNullable(diskBlobName);
             return this;
         }
         public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
@@ -279,7 +280,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
-            this.diskSizeGiB = Output.ofNullable(diskSizeGiB);
+            this.diskSizeGiB = Codegen.ofNullable(diskSizeGiB);
             return this;
         }
         public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
@@ -287,7 +288,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskType(@Nullable Either<String,StorageType> diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder diskUri(@Nullable Output<String> diskUri) {
@@ -295,7 +296,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskUri(@Nullable String diskUri) {
-            this.diskUri = Output.ofNullable(diskUri);
+            this.diskUri = Codegen.ofNullable(diskUri);
             return this;
         }
         public Builder hostCaching(@Nullable Output<String> hostCaching) {
@@ -303,7 +304,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostCaching(@Nullable String hostCaching) {
-            this.hostCaching = Output.ofNullable(hostCaching);
+            this.hostCaching = Codegen.ofNullable(hostCaching);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -319,7 +320,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder leasedByLabVmId(@Nullable String leasedByLabVmId) {
-            this.leasedByLabVmId = Output.ofNullable(leasedByLabVmId);
+            this.leasedByLabVmId = Codegen.ofNullable(leasedByLabVmId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -327,7 +328,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedDiskId(@Nullable Output<String> managedDiskId) {
@@ -335,7 +336,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedDiskId(@Nullable String managedDiskId) {
-            this.managedDiskId = Output.ofNullable(managedDiskId);
+            this.managedDiskId = Codegen.ofNullable(managedDiskId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -343,7 +344,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -359,7 +360,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Output.ofNullable(storageAccountId);
+            this.storageAccountId = Codegen.ofNullable(storageAccountId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -367,7 +368,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userName(Output<String> userName) {

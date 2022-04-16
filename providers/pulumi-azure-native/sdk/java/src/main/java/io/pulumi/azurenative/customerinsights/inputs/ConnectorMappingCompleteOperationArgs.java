@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 import io.pulumi.azurenative.customerinsights.enums.CompletionOperationTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
     @Import(name="completionOperationType")
       private final @Nullable Output<CompletionOperationTypes> completionOperationType;
 
-    public Output<CompletionOperationTypes> getCompletionOperationType() {
-        return this.completionOperationType == null ? Output.empty() : this.completionOperationType;
+    public Output<CompletionOperationTypes> completionOperationType() {
+        return this.completionOperationType == null ? Codegen.empty() : this.completionOperationType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
     @Import(name="destinationFolder")
       private final @Nullable Output<String> destinationFolder;
 
-    public Output<String> getDestinationFolder() {
-        return this.destinationFolder == null ? Output.empty() : this.destinationFolder;
+    public Output<String> destinationFolder() {
+        return this.destinationFolder == null ? Codegen.empty() : this.destinationFolder;
     }
 
     public ConnectorMappingCompleteOperationArgs(
@@ -49,8 +50,8 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
     }
 
     private ConnectorMappingCompleteOperationArgs() {
-        this.completionOperationType = Output.empty();
-        this.destinationFolder = Output.empty();
+        this.completionOperationType = Codegen.empty();
+        this.destinationFolder = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
             return this;
         }
         public Builder completionOperationType(@Nullable CompletionOperationTypes completionOperationType) {
-            this.completionOperationType = Output.ofNullable(completionOperationType);
+            this.completionOperationType = Codegen.ofNullable(completionOperationType);
             return this;
         }
         public Builder destinationFolder(@Nullable Output<String> destinationFolder) {
@@ -88,7 +89,7 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
             return this;
         }
         public Builder destinationFolder(@Nullable String destinationFolder) {
-            this.destinationFolder = Output.ofNullable(destinationFolder);
+            this.destinationFolder = Codegen.ofNullable(destinationFolder);
             return this;
         }        public ConnectorMappingCompleteOperationArgs build() {
             return new ConnectorMappingCompleteOperationArgs(completionOperationType, destinationFolder);

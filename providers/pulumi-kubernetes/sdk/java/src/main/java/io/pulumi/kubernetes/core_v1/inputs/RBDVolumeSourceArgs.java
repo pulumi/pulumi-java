@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -50,8 +51,8 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyring")
       private final @Nullable Output<String> keyring;
 
-    public Output<String> getKeyring() {
-        return this.keyring == null ? Output.empty() : this.keyring;
+    public Output<String> keyring() {
+        return this.keyring == null ? Codegen.empty() : this.keyring;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="monitors", required=true)
       private final Output<List<String>> monitors;
 
-    public Output<List<String>> getMonitors() {
+    public Output<List<String>> monitors() {
         return this.monitors;
     }
 
@@ -72,8 +73,8 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="pool")
       private final @Nullable Output<String> pool;
 
-    public Output<String> getPool() {
-        return this.pool == null ? Output.empty() : this.pool;
+    public Output<String> pool() {
+        return this.pool == null ? Codegen.empty() : this.pool;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="secretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
-    public Output<LocalObjectReferenceArgs> getSecretRef() {
-        return this.secretRef == null ? Output.empty() : this.secretRef;
+    public Output<LocalObjectReferenceArgs> secretRef() {
+        return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public RBDVolumeSourceArgs(
@@ -129,14 +130,14 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RBDVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.image = Output.empty();
-        this.keyring = Output.empty();
-        this.monitors = Output.empty();
-        this.pool = Output.empty();
-        this.readOnly = Output.empty();
-        this.secretRef = Output.empty();
-        this.user = Output.empty();
+        this.fsType = Codegen.empty();
+        this.image = Codegen.empty();
+        this.keyring = Codegen.empty();
+        this.monitors = Codegen.empty();
+        this.pool = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secretRef = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder image(Output<String> image) {
@@ -194,7 +195,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder keyring(@Nullable String keyring) {
-            this.keyring = Output.ofNullable(keyring);
+            this.keyring = Codegen.ofNullable(keyring);
             return this;
         }
         public Builder monitors(Output<List<String>> monitors) {
@@ -213,7 +214,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder pool(@Nullable String pool) {
-            this.pool = Output.ofNullable(pool);
+            this.pool = Codegen.ofNullable(pool);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -221,7 +222,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
@@ -229,7 +230,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
-            this.secretRef = Output.ofNullable(secretRef);
+            this.secretRef = Codegen.ofNullable(secretRef);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -237,7 +238,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public RBDVolumeSourceArgs build() {
             return new RBDVolumeSourceArgs(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);

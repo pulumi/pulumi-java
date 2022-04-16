@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotAliasLambdaCodeHookArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     @Import(name="lambdaCodeHook", required=true)
       private final Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
 
-    public Output<BotAliasLambdaCodeHookArgs> getLambdaCodeHook() {
+    public Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook() {
         return this.lambdaCodeHook;
     }
 
@@ -29,7 +30,7 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     }
 
     private BotAliasCodeHookSpecificationArgs() {
-        this.lambdaCodeHook = Output.empty();
+        this.lambdaCodeHook = Codegen.empty();
     }
 
     public static Builder builder() {

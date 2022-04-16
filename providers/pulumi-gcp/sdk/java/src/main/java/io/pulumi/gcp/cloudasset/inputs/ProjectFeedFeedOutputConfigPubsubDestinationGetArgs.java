@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudasset.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ProjectFeedFeedOutputConfigPubsubDestinationGetArgs extends i
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -29,7 +30,7 @@ public final class ProjectFeedFeedOutputConfigPubsubDestinationGetArgs extends i
     }
 
     private ProjectFeedFeedOutputConfigPubsubDestinationGetArgs() {
-        this.topic = Output.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {

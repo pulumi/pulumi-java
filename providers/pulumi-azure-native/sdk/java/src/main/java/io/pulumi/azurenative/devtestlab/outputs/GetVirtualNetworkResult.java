@@ -116,91 +116,91 @@ public final class GetVirtualNetworkResult {
      * The allowed subnets of the virtual network.
      * 
     */
-    public List<SubnetResponse> getAllowedSubnets() {
+    public List<SubnetResponse> allowedSubnets() {
         return this.allowedSubnets == null ? List.of() : this.allowedSubnets;
     }
     /**
      * The creation date of the virtual network.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The description of the virtual network.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Microsoft.Network resource identifier of the virtual network.
      * 
     */
-    public Optional<String> getExternalProviderResourceId() {
+    public Optional<String> externalProviderResourceId() {
         return Optional.ofNullable(this.externalProviderResourceId);
     }
     /**
      * The external subnet properties.
      * 
     */
-    public List<ExternalSubnetResponse> getExternalSubnets() {
+    public List<ExternalSubnetResponse> externalSubnets() {
         return this.externalSubnets;
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The subnet overrides of the virtual network.
      * 
     */
-    public List<SubnetOverrideResponse> getSubnetOverrides() {
+    public List<SubnetOverrideResponse> subnetOverrides() {
         return this.subnetOverrides == null ? List.of() : this.subnetOverrides;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

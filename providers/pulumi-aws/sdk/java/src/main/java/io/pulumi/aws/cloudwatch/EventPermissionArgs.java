@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.cloudwatch.inputs.EventPermissionConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="condition")
       private final @Nullable Output<EventPermissionConditionArgs> condition;
 
-    public Output<EventPermissionConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<EventPermissionConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
-    public Output<String> getEventBusName() {
-        return this.eventBusName == null ? Output.empty() : this.eventBusName;
+    public Output<String> eventBusName() {
+        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -66,7 +67,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="statementId", required=true)
       private final Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 
@@ -84,11 +85,11 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EventPermissionArgs() {
-        this.action = Output.empty();
-        this.condition = Output.empty();
-        this.eventBusName = Output.empty();
-        this.principal = Output.empty();
-        this.statementId = Output.empty();
+        this.action = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.eventBusName = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.statementId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder condition(@Nullable Output<EventPermissionConditionArgs> condition) {
@@ -132,7 +133,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder condition(@Nullable EventPermissionConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
@@ -140,7 +141,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Output.ofNullable(eventBusName);
+            this.eventBusName = Codegen.ofNullable(eventBusName);
             return this;
         }
         public Builder principal(Output<String> principal) {

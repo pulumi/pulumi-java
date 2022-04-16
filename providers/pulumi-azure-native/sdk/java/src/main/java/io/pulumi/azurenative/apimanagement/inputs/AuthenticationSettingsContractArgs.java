@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.inputs.OAuth2AuthenticationSettingsCo
 import io.pulumi.azurenative.apimanagement.inputs.OpenIdAuthenticationSettingsContractArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
     @Import(name="oAuth2")
       private final @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
 
-    public Output<OAuth2AuthenticationSettingsContractArgs> getOAuth2() {
-        return this.oAuth2 == null ? Output.empty() : this.oAuth2;
+    public Output<OAuth2AuthenticationSettingsContractArgs> oAuth2() {
+        return this.oAuth2 == null ? Codegen.empty() : this.oAuth2;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
     @Import(name="openid")
       private final @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
 
-    public Output<OpenIdAuthenticationSettingsContractArgs> getOpenid() {
-        return this.openid == null ? Output.empty() : this.openid;
+    public Output<OpenIdAuthenticationSettingsContractArgs> openid() {
+        return this.openid == null ? Codegen.empty() : this.openid;
     }
 
     public AuthenticationSettingsContractArgs(
@@ -49,8 +50,8 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
     }
 
     private AuthenticationSettingsContractArgs() {
-        this.oAuth2 = Output.empty();
-        this.openid = Output.empty();
+        this.oAuth2 = Codegen.empty();
+        this.openid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
             return this;
         }
         public Builder oAuth2(@Nullable OAuth2AuthenticationSettingsContractArgs oAuth2) {
-            this.oAuth2 = Output.ofNullable(oAuth2);
+            this.oAuth2 = Codegen.ofNullable(oAuth2);
             return this;
         }
         public Builder openid(@Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid) {
@@ -88,7 +89,7 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
             return this;
         }
         public Builder openid(@Nullable OpenIdAuthenticationSettingsContractArgs openid) {
-            this.openid = Output.ofNullable(openid);
+            this.openid = Codegen.ofNullable(openid);
             return this;
         }        public AuthenticationSettingsContractArgs build() {
             return new AuthenticationSettingsContractArgs(oAuth2, openid);

@@ -25,7 +25,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="addr")
       private final @Nullable String addr;
 
-    public Optional<String> getAddr() {
+    public Optional<String> addr() {
         return this.addr == null ? Optional.empty() : Optional.ofNullable(this.addr);
     }
 
@@ -36,7 +36,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="host")
       private final @Nullable String host;
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
@@ -47,7 +47,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -58,7 +58,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="method")
       private final @Nullable String method;
 
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
@@ -69,7 +69,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="useragent")
       private final @Nullable String useragent;
 
-    public Optional<String> getUseragent() {
+    public Optional<String> useragent() {
         return this.useragent == null ? Optional.empty() : Optional.ofNullable(this.useragent);
     }
 

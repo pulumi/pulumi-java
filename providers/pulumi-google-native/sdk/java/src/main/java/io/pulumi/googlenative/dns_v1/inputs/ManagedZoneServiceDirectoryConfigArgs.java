@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     @Import(name="namespace")
       private final @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
-    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public ManagedZoneServiceDirectoryConfigArgs(
@@ -45,8 +46,8 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     }
 
     private ManagedZoneServiceDirectoryConfigArgs() {
-        this.kind = Output.empty();
-        this.namespace = Output.empty();
+        this.kind = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder namespace(@Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
@@ -84,7 +85,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder namespace(@Nullable ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public ManagedZoneServiceDirectoryConfigArgs build() {
             return new ManagedZoneServiceDirectoryConfigArgs(kind, namespace);

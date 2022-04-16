@@ -28,7 +28,7 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="baseImageTrigger")
       private final @Nullable BaseImageTriggerResponse baseImageTrigger;
 
-    public Optional<BaseImageTriggerResponse> getBaseImageTrigger() {
+    public Optional<BaseImageTriggerResponse> baseImageTrigger() {
         return this.baseImageTrigger == null ? Optional.empty() : Optional.ofNullable(this.baseImageTrigger);
     }
 
@@ -39,7 +39,7 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="sourceTriggers")
       private final @Nullable List<SourceTriggerResponse> sourceTriggers;
 
-    public List<SourceTriggerResponse> getSourceTriggers() {
+    public List<SourceTriggerResponse> sourceTriggers() {
         return this.sourceTriggers == null ? List.of() : this.sourceTriggers;
     }
 
@@ -50,7 +50,7 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="timerTriggers")
       private final @Nullable List<TimerTriggerResponse> timerTriggers;
 
-    public List<TimerTriggerResponse> getTimerTriggers() {
+    public List<TimerTriggerResponse> timerTriggers() {
         return this.timerTriggers == null ? List.of() : this.timerTriggers;
     }
 

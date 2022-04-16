@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dynamics365fraudprotection.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     public DFPInstanceAdministratorsArgs(@Nullable Output<List<String>> members) {
@@ -35,7 +36,7 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
     }
 
     private DFPInstanceAdministratorsArgs() {
-        this.members = Output.empty();
+        this.members = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {

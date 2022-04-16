@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
      * 
      */
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories;
     }
     /**
@@ -57,7 +58,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
      * 
      */
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations;
     }
     /**
@@ -85,7 +86,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return the retention policy for the events in the log.
      * 
      */
-    public Output<RetentionPolicyResponse> getRetentionPolicy() {
+    public Output<RetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
@@ -113,7 +114,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
      * 
      */
-    public Output</* @Nullable */ String> getServiceBusRuleId() {
+    public Output</* @Nullable */ String> serviceBusRuleId() {
         return this.serviceBusRuleId;
     }
     /**
@@ -127,7 +128,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return the resource id of the storage account to which you would like to send the Activity Log.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountId() {
+    public Output</* @Nullable */ String> storageAccountId() {
         return this.storageAccountId;
     }
     /**
@@ -141,7 +142,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -155,7 +156,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +182,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LogProfile(String name, LogProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:LogProfile", name, args == null ? LogProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:LogProfile", name, args == null ? LogProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LogProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

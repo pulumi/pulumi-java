@@ -19,7 +19,7 @@ public final class GetRepositoryAssociationArgs extends io.pulumi.resources.Invo
     @Import(name="associationArn", required=true)
       private final String associationArn;
 
-    public String getAssociationArn() {
+    public String associationArn() {
         return this.associationArn;
     }
 

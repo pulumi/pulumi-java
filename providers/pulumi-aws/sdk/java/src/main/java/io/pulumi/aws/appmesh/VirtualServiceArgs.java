@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh;
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshName", required=true)
       private final Output<String> meshName;
 
-    public Output<String> getMeshName() {
+    public Output<String> meshName() {
         return this.meshName;
     }
 
@@ -34,8 +35,8 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshOwner")
       private final @Nullable Output<String> meshOwner;
 
-    public Output<String> getMeshOwner() {
-        return this.meshOwner == null ? Output.empty() : this.meshOwner;
+    public Output<String> meshOwner() {
+        return this.meshOwner == null ? Codegen.empty() : this.meshOwner;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec", required=true)
       private final Output<VirtualServiceSpecArgs> spec;
 
-    public Output<VirtualServiceSpecArgs> getSpec() {
+    public Output<VirtualServiceSpecArgs> spec() {
         return this.spec;
     }
 
@@ -67,8 +68,8 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VirtualServiceArgs(
@@ -85,11 +86,11 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualServiceArgs() {
-        this.meshName = Output.empty();
-        this.meshOwner = Output.empty();
-        this.name = Output.empty();
-        this.spec = Output.empty();
-        this.tags = Output.empty();
+        this.meshName = Codegen.empty();
+        this.meshOwner = Codegen.empty();
+        this.name = Codegen.empty();
+        this.spec = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder meshOwner(@Nullable String meshOwner) {
-            this.meshOwner = Output.ofNullable(meshOwner);
+            this.meshOwner = Codegen.ofNullable(meshOwner);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -141,7 +142,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder spec(Output<VirtualServiceSpecArgs> spec) {
@@ -157,7 +158,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public VirtualServiceArgs build() {
             return new VirtualServiceArgs(meshName, meshOwner, name, spec, tags);

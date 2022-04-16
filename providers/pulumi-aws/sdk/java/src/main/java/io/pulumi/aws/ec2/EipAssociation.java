@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.EipAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * @return The allocation ID. This is required for EC2-VPC.
      * 
      */
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId;
     }
     /**
@@ -62,7 +63,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * be re-associated. Defaults to `true` in VPC.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowReassociation() {
+    public Output</* @Nullable */ Boolean> allowReassociation() {
         return this.allowReassociation;
     }
     /**
@@ -82,7 +83,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * instance ID unless exactly one network interface is attached.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -100,7 +101,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * interface ID.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -120,7 +121,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * address.
      * 
      */
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
@@ -134,7 +135,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * @return The Elastic IP address. This is required for EC2-Classic.
      * 
      */
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp;
     }
 
@@ -160,7 +161,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EipAssociation(String name, @Nullable EipAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/eipAssociation:EipAssociation", name, args == null ? EipAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/eipAssociation:EipAssociation", name, args == null ? EipAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EipAssociation(String name, Output<String> id, @Nullable EipAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

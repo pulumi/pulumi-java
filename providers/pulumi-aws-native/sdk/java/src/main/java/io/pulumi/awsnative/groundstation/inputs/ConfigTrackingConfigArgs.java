@@ -6,6 +6,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 import io.pulumi.awsnative.groundstation.enums.ConfigTrackingConfigAutotrack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="autotrack")
       private final @Nullable Output<ConfigTrackingConfigAutotrack> autotrack;
 
-    public Output<ConfigTrackingConfigAutotrack> getAutotrack() {
-        return this.autotrack == null ? Output.empty() : this.autotrack;
+    public Output<ConfigTrackingConfigAutotrack> autotrack() {
+        return this.autotrack == null ? Codegen.empty() : this.autotrack;
     }
 
     public ConfigTrackingConfigArgs(@Nullable Output<ConfigTrackingConfigAutotrack> autotrack) {
@@ -26,7 +27,7 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
     }
 
     private ConfigTrackingConfigArgs() {
-        this.autotrack = Output.empty();
+        this.autotrack = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder autotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
-            this.autotrack = Output.ofNullable(autotrack);
+            this.autotrack = Codegen.ofNullable(autotrack);
             return this;
         }        public ConfigTrackingConfigArgs build() {
             return new ConfigTrackingConfigArgs(autotrack);

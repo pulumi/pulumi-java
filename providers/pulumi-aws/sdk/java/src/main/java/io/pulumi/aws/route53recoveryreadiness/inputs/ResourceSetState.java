@@ -6,6 +6,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
-        return this.resourceSetName == null ? Output.empty() : this.resourceSetName;
+    public Output<String> resourceSetName() {
+        return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetType")
       private final @Nullable Output<String> resourceSetType;
 
-    public Output<String> getResourceSetType() {
-        return this.resourceSetType == null ? Output.empty() : this.resourceSetType;
+    public Output<String> resourceSetType() {
+        return this.resourceSetType == null ? Codegen.empty() : this.resourceSetType;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<ResourceSetResourceGetArgs>> resources;
 
-    public Output<List<ResourceSetResourceGetArgs>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<ResourceSetResourceGetArgs>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ResourceSetState(
@@ -99,12 +100,12 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceSetState() {
-        this.arn = Output.empty();
-        this.resourceSetName = Output.empty();
-        this.resourceSetType = Output.empty();
-        this.resources = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.resourceSetName = Codegen.empty();
+        this.resourceSetType = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
@@ -150,7 +151,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSetName(@Nullable String resourceSetName) {
-            this.resourceSetName = Output.ofNullable(resourceSetName);
+            this.resourceSetName = Codegen.ofNullable(resourceSetName);
             return this;
         }
         public Builder resourceSetType(@Nullable Output<String> resourceSetType) {
@@ -158,7 +159,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSetType(@Nullable String resourceSetType) {
-            this.resourceSetType = Output.ofNullable(resourceSetType);
+            this.resourceSetType = Codegen.ofNullable(resourceSetType);
             return this;
         }
         public Builder resources(@Nullable Output<List<ResourceSetResourceGetArgs>> resources) {
@@ -166,7 +167,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable List<ResourceSetResourceGetArgs> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(ResourceSetResourceGetArgs... resources) {
@@ -177,7 +178,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -185,7 +186,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ResourceSetState build() {
             return new ResourceSetState(arn, resourceSetName, resourceSetType, resources, tags, tagsAll);

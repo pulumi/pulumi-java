@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.EntryArgs;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse;
@@ -35,7 +36,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse> getBigqueryDateShardedSpec() {
+    public Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse> bigqueryDateShardedSpec() {
         return this.bigqueryDateShardedSpec;
     }
     /**
@@ -49,7 +50,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse> getBigqueryTableSpec() {
+    public Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse> bigqueryTableSpec() {
         return this.bigqueryTableSpec;
     }
     /**
@@ -63,7 +64,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -77,7 +78,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -91,7 +92,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse> getGcsFilesetSpec() {
+    public Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse> gcsFilesetSpec() {
         return this.gcsFilesetSpec;
     }
     /**
@@ -105,7 +106,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
-    public Output<String> getIntegratedSystem() {
+    public Output<String> integratedSystem() {
         return this.integratedSystem;
     }
     /**
@@ -119,7 +120,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.
      * 
      */
-    public Output<String> getLinkedResource() {
+    public Output<String> linkedResource() {
         return this.linkedResource;
     }
     /**
@@ -133,7 +134,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return The Data Catalog resource name of the entry in URL format. Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note that this Entry and its child resources may not actually be stored in the location in this name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +148,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Schema of the entry. An entry might not have any schema attached to it.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1beta1SchemaResponse> getSchema() {
+    public Output<GoogleCloudDatacatalogV1beta1SchemaResponse> schema() {
         return this.schema;
     }
     /**
@@ -161,7 +162,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Timestamps about the underlying resource, not about this Data Catalog entry. Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty timestamp.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> getSourceSystemTimestamps() {
+    public Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> sourceSystemTimestamps() {
         return this.sourceSystemTimestamps;
     }
     /**
@@ -175,7 +176,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return The type of the entry. Only used for Entries with types in the EntryType enum.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -189,7 +190,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Statistics on the usage level of the resource.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1beta1UsageSignalResponse> getUsageSignal() {
+    public Output<GoogleCloudDatacatalogV1beta1UsageSignalResponse> usageSignal() {
         return this.usageSignal;
     }
     /**
@@ -203,7 +204,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    public Output<String> getUserSpecifiedSystem() {
+    public Output<String> userSpecifiedSystem() {
         return this.userSpecifiedSystem;
     }
     /**
@@ -217,7 +218,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
      */
-    public Output<String> getUserSpecifiedType() {
+    public Output<String> userSpecifiedType() {
         return this.userSpecifiedType;
     }
 
@@ -243,7 +244,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Entry(String name, EntryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datacatalog/v1beta1:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datacatalog/v1beta1:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Entry(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

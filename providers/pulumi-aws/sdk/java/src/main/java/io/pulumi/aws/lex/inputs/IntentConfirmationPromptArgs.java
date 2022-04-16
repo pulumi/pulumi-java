@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.IntentConfirmationPromptMessageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class IntentConfirmationPromptArgs extends io.pulumi.resources.Reso
     @Import(name="maxAttempts", required=true)
       private final Output<Integer> maxAttempts;
 
-    public Output<Integer> getMaxAttempts() {
+    public Output<Integer> maxAttempts() {
         return this.maxAttempts;
     }
 
@@ -37,7 +38,7 @@ public final class IntentConfirmationPromptArgs extends io.pulumi.resources.Reso
     @Import(name="messages", required=true)
       private final Output<List<IntentConfirmationPromptMessageArgs>> messages;
 
-    public Output<List<IntentConfirmationPromptMessageArgs>> getMessages() {
+    public Output<List<IntentConfirmationPromptMessageArgs>> messages() {
         return this.messages;
     }
 
@@ -50,8 +51,8 @@ public final class IntentConfirmationPromptArgs extends io.pulumi.resources.Reso
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
-        return this.responseCard == null ? Output.empty() : this.responseCard;
+    public Output<String> responseCard() {
+        return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 
     public IntentConfirmationPromptArgs(
@@ -64,9 +65,9 @@ public final class IntentConfirmationPromptArgs extends io.pulumi.resources.Reso
     }
 
     private IntentConfirmationPromptArgs() {
-        this.maxAttempts = Output.empty();
-        this.messages = Output.empty();
-        this.responseCard = Output.empty();
+        this.maxAttempts = Codegen.empty();
+        this.messages = Codegen.empty();
+        this.responseCard = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class IntentConfirmationPromptArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Output.ofNullable(responseCard);
+            this.responseCard = Codegen.ofNullable(responseCard);
             return this;
         }        public IntentConfirmationPromptArgs build() {
             return new IntentConfirmationPromptArgs(maxAttempts, messages, responseCard);

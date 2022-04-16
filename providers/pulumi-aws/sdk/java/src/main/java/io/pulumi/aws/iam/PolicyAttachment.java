@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.PolicyAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The group(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> getGroups() {
+    public Output</* @Nullable */ List<String>> groups() {
         return this.groups;
     }
     /**
@@ -52,7 +53,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The name of the attachment. This cannot be an empty string.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -66,7 +67,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The ARN of the policy you want to apply
      * 
      */
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
     /**
@@ -80,7 +81,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The role(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> getRoles() {
+    public Output</* @Nullable */ List<String>> roles() {
         return this.roles;
     }
     /**
@@ -94,7 +95,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The user(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> getUsers() {
+    public Output</* @Nullable */ List<String>> users() {
         return this.users;
     }
 
@@ -120,7 +121,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyAttachment(String name, PolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/policyAttachment:PolicyAttachment", name, args == null ? PolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/policyAttachment:PolicyAttachment", name, args == null ? PolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PolicyAttachment(String name, Output<String> id, @Nullable PolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

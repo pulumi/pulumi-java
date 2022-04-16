@@ -5,6 +5,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,8 +31,8 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="categoryPattern")
       private final @Nullable Output<String> categoryPattern;
 
-    public Output<String> getCategoryPattern() {
-        return this.categoryPattern == null ? Output.empty() : this.categoryPattern;
+    public Output<String> categoryPattern() {
+        return this.categoryPattern == null ? Codegen.empty() : this.categoryPattern;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eventPattern")
       private final @Nullable Output<String> eventPattern;
 
-    public Output<String> getEventPattern() {
-        return this.eventPattern == null ? Output.empty() : this.eventPattern;
+    public Output<String> eventPattern() {
+        return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hubPattern")
       private final @Nullable Output<String> hubPattern;
 
-    public Output<String> getHubPattern() {
-        return this.hubPattern == null ? Output.empty() : this.hubPattern;
+    public Output<String> hubPattern() {
+        return this.hubPattern == null ? Codegen.empty() : this.hubPattern;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
-    public Output<String> getUrlTemplate() {
+    public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 
@@ -88,10 +89,10 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private UpstreamTemplateArgs() {
-        this.categoryPattern = Output.empty();
-        this.eventPattern = Output.empty();
-        this.hubPattern = Output.empty();
-        this.urlTemplate = Output.empty();
+        this.categoryPattern = Codegen.empty();
+        this.eventPattern = Codegen.empty();
+        this.hubPattern = Codegen.empty();
+        this.urlTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder categoryPattern(@Nullable String categoryPattern) {
-            this.categoryPattern = Output.ofNullable(categoryPattern);
+            this.categoryPattern = Codegen.ofNullable(categoryPattern);
             return this;
         }
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
@@ -133,7 +134,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Output.ofNullable(eventPattern);
+            this.eventPattern = Codegen.ofNullable(eventPattern);
             return this;
         }
         public Builder hubPattern(@Nullable Output<String> hubPattern) {
@@ -141,7 +142,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder hubPattern(@Nullable String hubPattern) {
-            this.hubPattern = Output.ofNullable(hubPattern);
+            this.hubPattern = Codegen.ofNullable(hubPattern);
             return this;
         }
         public Builder urlTemplate(Output<String> urlTemplate) {

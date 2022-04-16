@@ -26,7 +26,7 @@ public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="recurrenceType", required=true)
       private final String recurrenceType;
 
-    public String getRecurrenceType() {
+    public String recurrenceType() {
         return this.recurrenceType;
     }
 
@@ -37,7 +37,7 @@ public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="schedule")
       private final @Nullable SuppressionScheduleResponse schedule;
 
-    public Optional<SuppressionScheduleResponse> getSchedule() {
+    public Optional<SuppressionScheduleResponse> schedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
     }
 

@@ -32,14 +32,14 @@ public final class ParticipantPropertyReferenceResponse {
      * The source property that maps to the target property.
      * 
     */
-    public String getSourcePropertyName() {
+    public String sourcePropertyName() {
         return this.sourcePropertyName;
     }
     /**
      * The target property that maps to the source property.
      * 
     */
-    public String getTargetPropertyName() {
+    public String targetPropertyName() {
         return this.targetPropertyName;
     }
 

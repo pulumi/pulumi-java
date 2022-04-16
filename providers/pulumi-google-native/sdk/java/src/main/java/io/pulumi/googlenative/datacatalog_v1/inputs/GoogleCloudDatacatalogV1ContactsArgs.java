@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsPersonArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
     @Import(name="people")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
-    public Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> getPeople() {
-        return this.people == null ? Output.empty() : this.people;
+    public Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people() {
+        return this.people == null ? Codegen.empty() : this.people;
     }
 
     public GoogleCloudDatacatalogV1ContactsArgs(@Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
     }
 
     private GoogleCloudDatacatalogV1ContactsArgs() {
-        this.people = Output.empty();
+        this.people = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
             return this;
         }
         public Builder people(@Nullable List<GoogleCloudDatacatalogV1ContactsPersonArgs> people) {
-            this.people = Output.ofNullable(people);
+            this.people = Codegen.ofNullable(people);
             return this;
         }
         public Builder people(GoogleCloudDatacatalogV1ContactsPersonArgs... people) {

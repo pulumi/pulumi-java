@@ -10,6 +10,7 @@ import io.pulumi.aws.route53recoverycontrol.outputs.ClusterClusterEndpoint;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return ARN of the cluster
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return List of 5 endpoints in 5 regions that can be used to talk to the cluster. See below.
      * 
      */
-    public Output<List<ClusterClusterEndpoint>> getClusterEndpoints() {
+    public Output<List<ClusterClusterEndpoint>> clusterEndpoints() {
         return this.clusterEndpoints;
     }
     /**
@@ -69,7 +70,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Unique name describing the cluster.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Status of cluster. `PENDING` when it is being created, `PENDING_DELETION` when it is being deleted and `DEPLOYED` otherwise.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -109,7 +110,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53recoverycontrol/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53recoverycontrol/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

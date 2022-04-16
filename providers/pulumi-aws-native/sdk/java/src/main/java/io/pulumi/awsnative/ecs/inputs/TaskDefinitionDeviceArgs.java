@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
-        return this.containerPath == null ? Output.empty() : this.containerPath;
+    public Output<String> containerPath() {
+        return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
-    public Output<String> getHostPath() {
-        return this.hostPath == null ? Output.empty() : this.hostPath;
+    public Output<String> hostPath() {
+        return this.hostPath == null ? Codegen.empty() : this.hostPath;
     }
 
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<List<String>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     public TaskDefinitionDeviceArgs(
@@ -46,9 +47,9 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
     }
 
     private TaskDefinitionDeviceArgs() {
-        this.containerPath = Output.empty();
-        this.hostPath = Output.empty();
-        this.permissions = Output.empty();
+        this.containerPath = Codegen.empty();
+        this.hostPath = Codegen.empty();
+        this.permissions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Output.ofNullable(containerPath);
+            this.containerPath = Codegen.ofNullable(containerPath);
             return this;
         }
         public Builder hostPath(@Nullable Output<String> hostPath) {
@@ -88,7 +89,7 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder hostPath(@Nullable String hostPath) {
-            this.hostPath = Output.ofNullable(hostPath);
+            this.hostPath = Codegen.ofNullable(hostPath);
             return this;
         }
         public Builder permissions(@Nullable Output<List<String>> permissions) {
@@ -96,7 +97,7 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(String... permissions) {

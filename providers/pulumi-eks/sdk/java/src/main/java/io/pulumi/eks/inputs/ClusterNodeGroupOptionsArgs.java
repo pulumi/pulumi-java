@@ -8,6 +8,7 @@ import io.pulumi.aws.ec2.SecurityGroupRule;
 import io.pulumi.aws.iam.InstanceProfile;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.inputs.TaintArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -40,8 +41,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="amiId")
       private final @Nullable Output<String> amiId;
 
-    public Output<String> getAmiId() {
-        return this.amiId == null ? Output.empty() : this.amiId;
+    public Output<String> amiId() {
+        return this.amiId == null ? Codegen.empty() : this.amiId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="autoScalingGroupTags")
       private final @Nullable Output<Map<String,String>> autoScalingGroupTags;
 
-    public Output<Map<String,String>> getAutoScalingGroupTags() {
-        return this.autoScalingGroupTags == null ? Output.empty() : this.autoScalingGroupTags;
+    public Output<Map<String,String>> autoScalingGroupTags() {
+        return this.autoScalingGroupTags == null ? Codegen.empty() : this.autoScalingGroupTags;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="bootstrapExtraArgs")
       private final @Nullable Output<String> bootstrapExtraArgs;
 
-    public Output<String> getBootstrapExtraArgs() {
-        return this.bootstrapExtraArgs == null ? Output.empty() : this.bootstrapExtraArgs;
+    public Output<String> bootstrapExtraArgs() {
+        return this.bootstrapExtraArgs == null ? Codegen.empty() : this.bootstrapExtraArgs;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="cloudFormationTags")
       private final @Nullable Output<Map<String,String>> cloudFormationTags;
 
-    public Output<Map<String,String>> getCloudFormationTags() {
-        return this.cloudFormationTags == null ? Output.empty() : this.cloudFormationTags;
+    public Output<Map<String,String>> cloudFormationTags() {
+        return this.cloudFormationTags == null ? Codegen.empty() : this.cloudFormationTags;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="clusterIngressRule")
       private final @Nullable Output<SecurityGroupRule> clusterIngressRule;
 
-    public Output<SecurityGroupRule> getClusterIngressRule() {
-        return this.clusterIngressRule == null ? Output.empty() : this.clusterIngressRule;
+    public Output<SecurityGroupRule> clusterIngressRule() {
+        return this.clusterIngressRule == null ? Codegen.empty() : this.clusterIngressRule;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
 
-    public Output<Integer> getDesiredCapacity() {
-        return this.desiredCapacity == null ? Output.empty() : this.desiredCapacity;
+    public Output<Integer> desiredCapacity() {
+        return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="encryptRootBlockDevice")
       private final @Nullable Output<Boolean> encryptRootBlockDevice;
 
-    public Output<Boolean> getEncryptRootBlockDevice() {
-        return this.encryptRootBlockDevice == null ? Output.empty() : this.encryptRootBlockDevice;
+    public Output<Boolean> encryptRootBlockDevice() {
+        return this.encryptRootBlockDevice == null ? Codegen.empty() : this.encryptRootBlockDevice;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="extraNodeSecurityGroups")
       private final @Nullable Output<List<SecurityGroup>> extraNodeSecurityGroups;
 
-    public Output<List<SecurityGroup>> getExtraNodeSecurityGroups() {
-        return this.extraNodeSecurityGroups == null ? Output.empty() : this.extraNodeSecurityGroups;
+    public Output<List<SecurityGroup>> extraNodeSecurityGroups() {
+        return this.extraNodeSecurityGroups == null ? Codegen.empty() : this.extraNodeSecurityGroups;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="gpu")
       private final @Nullable Output<Boolean> gpu;
 
-    public Output<Boolean> getGpu() {
-        return this.gpu == null ? Output.empty() : this.gpu;
+    public Output<Boolean> gpu() {
+        return this.gpu == null ? Codegen.empty() : this.gpu;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="instanceProfile")
       private final @Nullable Output<InstanceProfile> instanceProfile;
 
-    public Output<InstanceProfile> getInstanceProfile() {
-        return this.instanceProfile == null ? Output.empty() : this.instanceProfile;
+    public Output<InstanceProfile> instanceProfile() {
+        return this.instanceProfile == null ? Codegen.empty() : this.instanceProfile;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="kubeletExtraArgs")
       private final @Nullable Output<String> kubeletExtraArgs;
 
-    public Output<String> getKubeletExtraArgs() {
-        return this.kubeletExtraArgs == null ? Output.empty() : this.kubeletExtraArgs;
+    public Output<String> kubeletExtraArgs() {
+        return this.kubeletExtraArgs == null ? Codegen.empty() : this.kubeletExtraArgs;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -210,8 +211,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
-        return this.maxSize == null ? Output.empty() : this.maxSize;
+    public Output<Integer> maxSize() {
+        return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
     /**
@@ -221,8 +222,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
-        return this.minSize == null ? Output.empty() : this.minSize;
+    public Output<Integer> minSize() {
+        return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     /**
@@ -232,8 +233,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="nodeAssociatePublicIpAddress")
       private final @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
 
-    public Output<Boolean> getNodeAssociatePublicIpAddress() {
-        return this.nodeAssociatePublicIpAddress == null ? Output.empty() : this.nodeAssociatePublicIpAddress;
+    public Output<Boolean> nodeAssociatePublicIpAddress() {
+        return this.nodeAssociatePublicIpAddress == null ? Codegen.empty() : this.nodeAssociatePublicIpAddress;
     }
 
     /**
@@ -245,8 +246,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="nodePublicKey")
       private final @Nullable Output<String> nodePublicKey;
 
-    public Output<String> getNodePublicKey() {
-        return this.nodePublicKey == null ? Output.empty() : this.nodePublicKey;
+    public Output<String> nodePublicKey() {
+        return this.nodePublicKey == null ? Codegen.empty() : this.nodePublicKey;
     }
 
     /**
@@ -256,8 +257,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="nodeRootVolumeSize")
       private final @Nullable Output<Integer> nodeRootVolumeSize;
 
-    public Output<Integer> getNodeRootVolumeSize() {
-        return this.nodeRootVolumeSize == null ? Output.empty() : this.nodeRootVolumeSize;
+    public Output<Integer> nodeRootVolumeSize() {
+        return this.nodeRootVolumeSize == null ? Codegen.empty() : this.nodeRootVolumeSize;
     }
 
     /**
@@ -274,8 +275,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="nodeSecurityGroup")
       private final @Nullable Output<SecurityGroup> nodeSecurityGroup;
 
-    public Output<SecurityGroup> getNodeSecurityGroup() {
-        return this.nodeSecurityGroup == null ? Output.empty() : this.nodeSecurityGroup;
+    public Output<SecurityGroup> nodeSecurityGroup() {
+        return this.nodeSecurityGroup == null ? Codegen.empty() : this.nodeSecurityGroup;
     }
 
     /**
@@ -287,8 +288,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="nodeSubnetIds")
       private final @Nullable Output<List<String>> nodeSubnetIds;
 
-    public Output<List<String>> getNodeSubnetIds() {
-        return this.nodeSubnetIds == null ? Output.empty() : this.nodeSubnetIds;
+    public Output<List<String>> nodeSubnetIds() {
+        return this.nodeSubnetIds == null ? Codegen.empty() : this.nodeSubnetIds;
     }
 
     /**
@@ -298,8 +299,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="nodeUserData")
       private final @Nullable Output<String> nodeUserData;
 
-    public Output<String> getNodeUserData() {
-        return this.nodeUserData == null ? Output.empty() : this.nodeUserData;
+    public Output<String> nodeUserData() {
+        return this.nodeUserData == null ? Codegen.empty() : this.nodeUserData;
     }
 
     /**
@@ -311,8 +312,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="nodeUserDataOverride")
       private final @Nullable Output<String> nodeUserDataOverride;
 
-    public Output<String> getNodeUserDataOverride() {
-        return this.nodeUserDataOverride == null ? Output.empty() : this.nodeUserDataOverride;
+    public Output<String> nodeUserDataOverride() {
+        return this.nodeUserDataOverride == null ? Codegen.empty() : this.nodeUserDataOverride;
     }
 
     /**
@@ -322,8 +323,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
-        return this.spotPrice == null ? Output.empty() : this.spotPrice;
+    public Output<String> spotPrice() {
+        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     /**
@@ -333,8 +334,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="taints")
       private final @Nullable Output<Map<String,TaintArgs>> taints;
 
-    public Output<Map<String,TaintArgs>> getTaints() {
-        return this.taints == null ? Output.empty() : this.taints;
+    public Output<Map<String,TaintArgs>> taints() {
+        return this.taints == null ? Codegen.empty() : this.taints;
     }
 
     /**
@@ -344,8 +345,8 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ClusterNodeGroupOptionsArgs(
@@ -404,32 +405,32 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private ClusterNodeGroupOptionsArgs() {
-        this.amiId = Output.empty();
-        this.autoScalingGroupTags = Output.empty();
-        this.bootstrapExtraArgs = Output.empty();
-        this.cloudFormationTags = Output.empty();
-        this.clusterIngressRule = Output.empty();
-        this.desiredCapacity = Output.empty();
-        this.encryptRootBlockDevice = Output.empty();
-        this.extraNodeSecurityGroups = Output.empty();
-        this.gpu = Output.empty();
-        this.instanceProfile = Output.empty();
-        this.instanceType = Output.empty();
-        this.keyName = Output.empty();
-        this.kubeletExtraArgs = Output.empty();
-        this.labels = Output.empty();
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
-        this.nodeAssociatePublicIpAddress = Output.empty();
-        this.nodePublicKey = Output.empty();
-        this.nodeRootVolumeSize = Output.empty();
-        this.nodeSecurityGroup = Output.empty();
-        this.nodeSubnetIds = Output.empty();
-        this.nodeUserData = Output.empty();
-        this.nodeUserDataOverride = Output.empty();
-        this.spotPrice = Output.empty();
-        this.taints = Output.empty();
-        this.version = Output.empty();
+        this.amiId = Codegen.empty();
+        this.autoScalingGroupTags = Codegen.empty();
+        this.bootstrapExtraArgs = Codegen.empty();
+        this.cloudFormationTags = Codegen.empty();
+        this.clusterIngressRule = Codegen.empty();
+        this.desiredCapacity = Codegen.empty();
+        this.encryptRootBlockDevice = Codegen.empty();
+        this.extraNodeSecurityGroups = Codegen.empty();
+        this.gpu = Codegen.empty();
+        this.instanceProfile = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.kubeletExtraArgs = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
+        this.nodeAssociatePublicIpAddress = Codegen.empty();
+        this.nodePublicKey = Codegen.empty();
+        this.nodeRootVolumeSize = Codegen.empty();
+        this.nodeSecurityGroup = Codegen.empty();
+        this.nodeSubnetIds = Codegen.empty();
+        this.nodeUserData = Codegen.empty();
+        this.nodeUserDataOverride = Codegen.empty();
+        this.spotPrice = Codegen.empty();
+        this.taints = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -507,7 +508,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder amiId(@Nullable String amiId) {
-            this.amiId = Output.ofNullable(amiId);
+            this.amiId = Codegen.ofNullable(amiId);
             return this;
         }
         public Builder autoScalingGroupTags(@Nullable Output<Map<String,String>> autoScalingGroupTags) {
@@ -515,7 +516,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder autoScalingGroupTags(@Nullable Map<String,String> autoScalingGroupTags) {
-            this.autoScalingGroupTags = Output.ofNullable(autoScalingGroupTags);
+            this.autoScalingGroupTags = Codegen.ofNullable(autoScalingGroupTags);
             return this;
         }
         public Builder bootstrapExtraArgs(@Nullable Output<String> bootstrapExtraArgs) {
@@ -523,7 +524,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder bootstrapExtraArgs(@Nullable String bootstrapExtraArgs) {
-            this.bootstrapExtraArgs = Output.ofNullable(bootstrapExtraArgs);
+            this.bootstrapExtraArgs = Codegen.ofNullable(bootstrapExtraArgs);
             return this;
         }
         public Builder cloudFormationTags(@Nullable Output<Map<String,String>> cloudFormationTags) {
@@ -531,7 +532,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder cloudFormationTags(@Nullable Map<String,String> cloudFormationTags) {
-            this.cloudFormationTags = Output.ofNullable(cloudFormationTags);
+            this.cloudFormationTags = Codegen.ofNullable(cloudFormationTags);
             return this;
         }
         public Builder clusterIngressRule(@Nullable Output<SecurityGroupRule> clusterIngressRule) {
@@ -539,7 +540,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clusterIngressRule(@Nullable SecurityGroupRule clusterIngressRule) {
-            this.clusterIngressRule = Output.ofNullable(clusterIngressRule);
+            this.clusterIngressRule = Codegen.ofNullable(clusterIngressRule);
             return this;
         }
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
@@ -547,7 +548,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
-            this.desiredCapacity = Output.ofNullable(desiredCapacity);
+            this.desiredCapacity = Codegen.ofNullable(desiredCapacity);
             return this;
         }
         public Builder encryptRootBlockDevice(@Nullable Output<Boolean> encryptRootBlockDevice) {
@@ -555,7 +556,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encryptRootBlockDevice(@Nullable Boolean encryptRootBlockDevice) {
-            this.encryptRootBlockDevice = Output.ofNullable(encryptRootBlockDevice);
+            this.encryptRootBlockDevice = Codegen.ofNullable(encryptRootBlockDevice);
             return this;
         }
         public Builder extraNodeSecurityGroups(@Nullable Output<List<SecurityGroup>> extraNodeSecurityGroups) {
@@ -563,7 +564,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder extraNodeSecurityGroups(@Nullable List<SecurityGroup> extraNodeSecurityGroups) {
-            this.extraNodeSecurityGroups = Output.ofNullable(extraNodeSecurityGroups);
+            this.extraNodeSecurityGroups = Codegen.ofNullable(extraNodeSecurityGroups);
             return this;
         }
         public Builder extraNodeSecurityGroups(SecurityGroup... extraNodeSecurityGroups) {
@@ -574,7 +575,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder gpu(@Nullable Boolean gpu) {
-            this.gpu = Output.ofNullable(gpu);
+            this.gpu = Codegen.ofNullable(gpu);
             return this;
         }
         public Builder instanceProfile(@Nullable Output<InstanceProfile> instanceProfile) {
@@ -582,7 +583,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder instanceProfile(@Nullable InstanceProfile instanceProfile) {
-            this.instanceProfile = Output.ofNullable(instanceProfile);
+            this.instanceProfile = Codegen.ofNullable(instanceProfile);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -590,7 +591,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder keyName(@Nullable Output<String> keyName) {
@@ -598,7 +599,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder kubeletExtraArgs(@Nullable Output<String> kubeletExtraArgs) {
@@ -606,7 +607,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kubeletExtraArgs(@Nullable String kubeletExtraArgs) {
-            this.kubeletExtraArgs = Output.ofNullable(kubeletExtraArgs);
+            this.kubeletExtraArgs = Codegen.ofNullable(kubeletExtraArgs);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -614,7 +615,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
@@ -622,7 +623,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Output.ofNullable(maxSize);
+            this.maxSize = Codegen.ofNullable(maxSize);
             return this;
         }
         public Builder minSize(@Nullable Output<Integer> minSize) {
@@ -630,7 +631,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Output.ofNullable(minSize);
+            this.minSize = Codegen.ofNullable(minSize);
             return this;
         }
         public Builder nodeAssociatePublicIpAddress(@Nullable Output<Boolean> nodeAssociatePublicIpAddress) {
@@ -638,7 +639,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nodeAssociatePublicIpAddress(@Nullable Boolean nodeAssociatePublicIpAddress) {
-            this.nodeAssociatePublicIpAddress = Output.ofNullable(nodeAssociatePublicIpAddress);
+            this.nodeAssociatePublicIpAddress = Codegen.ofNullable(nodeAssociatePublicIpAddress);
             return this;
         }
         public Builder nodePublicKey(@Nullable Output<String> nodePublicKey) {
@@ -646,7 +647,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nodePublicKey(@Nullable String nodePublicKey) {
-            this.nodePublicKey = Output.ofNullable(nodePublicKey);
+            this.nodePublicKey = Codegen.ofNullable(nodePublicKey);
             return this;
         }
         public Builder nodeRootVolumeSize(@Nullable Output<Integer> nodeRootVolumeSize) {
@@ -654,7 +655,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nodeRootVolumeSize(@Nullable Integer nodeRootVolumeSize) {
-            this.nodeRootVolumeSize = Output.ofNullable(nodeRootVolumeSize);
+            this.nodeRootVolumeSize = Codegen.ofNullable(nodeRootVolumeSize);
             return this;
         }
         public Builder nodeSecurityGroup(@Nullable Output<SecurityGroup> nodeSecurityGroup) {
@@ -662,7 +663,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nodeSecurityGroup(@Nullable SecurityGroup nodeSecurityGroup) {
-            this.nodeSecurityGroup = Output.ofNullable(nodeSecurityGroup);
+            this.nodeSecurityGroup = Codegen.ofNullable(nodeSecurityGroup);
             return this;
         }
         public Builder nodeSubnetIds(@Nullable Output<List<String>> nodeSubnetIds) {
@@ -670,7 +671,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nodeSubnetIds(@Nullable List<String> nodeSubnetIds) {
-            this.nodeSubnetIds = Output.ofNullable(nodeSubnetIds);
+            this.nodeSubnetIds = Codegen.ofNullable(nodeSubnetIds);
             return this;
         }
         public Builder nodeSubnetIds(String... nodeSubnetIds) {
@@ -681,7 +682,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nodeUserData(@Nullable String nodeUserData) {
-            this.nodeUserData = Output.ofNullable(nodeUserData);
+            this.nodeUserData = Codegen.ofNullable(nodeUserData);
             return this;
         }
         public Builder nodeUserDataOverride(@Nullable Output<String> nodeUserDataOverride) {
@@ -689,7 +690,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nodeUserDataOverride(@Nullable String nodeUserDataOverride) {
-            this.nodeUserDataOverride = Output.ofNullable(nodeUserDataOverride);
+            this.nodeUserDataOverride = Codegen.ofNullable(nodeUserDataOverride);
             return this;
         }
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
@@ -697,7 +698,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Output.ofNullable(spotPrice);
+            this.spotPrice = Codegen.ofNullable(spotPrice);
             return this;
         }
         public Builder taints(@Nullable Output<Map<String,TaintArgs>> taints) {
@@ -705,7 +706,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder taints(@Nullable Map<String,TaintArgs> taints) {
-            this.taints = Output.ofNullable(taints);
+            this.taints = Codegen.ofNullable(taints);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -713,7 +714,7 @@ public final class ClusterNodeGroupOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ClusterNodeGroupOptionsArgs build() {
             return new ClusterNodeGroupOptionsArgs(amiId, autoScalingGroupTags, bootstrapExtraArgs, cloudFormationTags, clusterIngressRule, desiredCapacity, encryptRootBlockDevice, extraNodeSecurityGroups, gpu, instanceProfile, instanceType, keyName, kubeletExtraArgs, labels, maxSize, minSize, nodeAssociatePublicIpAddress, nodePublicKey, nodeRootVolumeSize, nodeSecurityGroup, nodeSubnetIds, nodeUserData, nodeUserDataOverride, spotPrice, taints, version);

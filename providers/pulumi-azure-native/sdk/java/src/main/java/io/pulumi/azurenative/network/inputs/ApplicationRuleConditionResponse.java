@@ -27,7 +27,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="fqdnTags")
       private final @Nullable List<String> fqdnTags;
 
-    public List<String> getFqdnTags() {
+    public List<String> fqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="protocols")
       private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
 
-    public List<FirewallPolicyRuleConditionApplicationProtocolResponse> getProtocols() {
+    public List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="ruleConditionType", required=true)
       private final String ruleConditionType;
 
-    public String getRuleConditionType() {
+    public String ruleConditionType() {
         return this.ruleConditionType;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
@@ -105,7 +105,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
 
-    public List<String> getSourceIpGroups() {
+    public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 
@@ -116,7 +116,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     @Import(name="targetFqdns")
       private final @Nullable List<String> targetFqdns;
 
-    public List<String> getTargetFqdns() {
+    public List<String> targetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }
 

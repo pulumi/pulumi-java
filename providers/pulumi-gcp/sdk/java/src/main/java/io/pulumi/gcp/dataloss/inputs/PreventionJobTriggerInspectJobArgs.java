@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigArgs;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     @Import(name="actions", required=true)
       private final Output<List<PreventionJobTriggerInspectJobActionArgs>> actions;
 
-    public Output<List<PreventionJobTriggerInspectJobActionArgs>> getActions() {
+    public Output<List<PreventionJobTriggerInspectJobActionArgs>> actions() {
         return this.actions;
     }
 
@@ -35,7 +36,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     @Import(name="inspectTemplateName", required=true)
       private final Output<String> inspectTemplateName;
 
-    public Output<String> getInspectTemplateName() {
+    public Output<String> inspectTemplateName() {
         return this.inspectTemplateName;
     }
 
@@ -47,7 +48,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     @Import(name="storageConfig", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigArgs> getStorageConfig() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig() {
         return this.storageConfig;
     }
 
@@ -61,9 +62,9 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     }
 
     private PreventionJobTriggerInspectJobArgs() {
-        this.actions = Output.empty();
-        this.inspectTemplateName = Output.empty();
-        this.storageConfig = Output.empty();
+        this.actions = Codegen.empty();
+        this.inspectTemplateName = Codegen.empty();
+        this.storageConfig = Codegen.empty();
     }
 
     public static Builder builder() {

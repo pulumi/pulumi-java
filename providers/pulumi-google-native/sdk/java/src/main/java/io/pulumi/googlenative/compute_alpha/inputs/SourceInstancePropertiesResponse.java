@@ -33,7 +33,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="canIpForward", required=true)
       private final Boolean canIpForward;
 
-    public Boolean getCanIpForward() {
+    public Boolean canIpForward() {
         return this.canIpForward;
     }
 
@@ -44,7 +44,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="deletionProtection", required=true)
       private final Boolean deletionProtection;
 
-    public Boolean getDeletionProtection() {
+    public Boolean deletionProtection() {
         return this.deletionProtection;
     }
 
@@ -55,7 +55,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -66,7 +66,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="disks", required=true)
       private final List<SavedAttachedDiskResponse> disks;
 
-    public List<SavedAttachedDiskResponse> getDisks() {
+    public List<SavedAttachedDiskResponse> disks() {
         return this.disks;
     }
 
@@ -77,7 +77,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="guestAccelerators", required=true)
       private final List<AcceleratorConfigResponse> guestAccelerators;
 
-    public List<AcceleratorConfigResponse> getGuestAccelerators() {
+    public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
 
@@ -88,7 +88,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="keyRevocationActionType", required=true)
       private final String keyRevocationActionType;
 
-    public String getKeyRevocationActionType() {
+    public String keyRevocationActionType() {
         return this.keyRevocationActionType;
     }
 
@@ -99,7 +99,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -110,7 +110,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -121,7 +121,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="metadata", required=true)
       private final MetadataResponse metadata;
 
-    public MetadataResponse getMetadata() {
+    public MetadataResponse metadata() {
         return this.metadata;
     }
 
@@ -132,7 +132,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
@@ -143,7 +143,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
 
@@ -154,7 +154,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="postKeyRevocationActionType", required=true)
       private final String postKeyRevocationActionType;
 
-    public String getPostKeyRevocationActionType() {
+    public String postKeyRevocationActionType() {
         return this.postKeyRevocationActionType;
     }
 
@@ -165,7 +165,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="scheduling", required=true)
       private final SchedulingResponse scheduling;
 
-    public SchedulingResponse getScheduling() {
+    public SchedulingResponse scheduling() {
         return this.scheduling;
     }
 
@@ -176,7 +176,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="serviceAccounts", required=true)
       private final List<ServiceAccountResponse> serviceAccounts;
 
-    public List<ServiceAccountResponse> getServiceAccounts() {
+    public List<ServiceAccountResponse> serviceAccounts() {
         return this.serviceAccounts;
     }
 
@@ -187,7 +187,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
     @Import(name="tags", required=true)
       private final TagsResponse tags;
 
-    public TagsResponse getTags() {
+    public TagsResponse tags() {
         return this.tags;
     }
 

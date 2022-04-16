@@ -23,7 +23,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 

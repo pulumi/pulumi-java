@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> getBoolValue() {
-        return this.boolValue == null ? Output.empty() : this.boolValue;
+    public Output<Boolean> boolValue() {
+        return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
-    public Output<Double> getDoubleValue() {
-        return this.doubleValue == null ? Output.empty() : this.doubleValue;
+    public Output<Double> doubleValue() {
+        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="int64Value")
       private final @Nullable Output<String> int64Value;
 
-    public Output<String> getInt64Value() {
-        return this.int64Value == null ? Output.empty() : this.int64Value;
+    public Output<String> int64Value() {
+        return this.int64Value == null ? Codegen.empty() : this.int64Value;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="protoValue")
       private final @Nullable Output<Map<String,String>> protoValue;
 
-    public Output<Map<String,String>> getProtoValue() {
-        return this.protoValue == null ? Output.empty() : this.protoValue;
+    public Output<Map<String,String>> protoValue() {
+        return this.protoValue == null ? Codegen.empty() : this.protoValue;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+    public Output<String> stringValue() {
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     public GoogleCloudChannelV1ValueArgs(
@@ -90,11 +91,11 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     }
 
     private GoogleCloudChannelV1ValueArgs() {
-        this.boolValue = Output.empty();
-        this.doubleValue = Output.empty();
-        this.int64Value = Output.empty();
-        this.protoValue = Output.empty();
-        this.stringValue = Output.empty();
+        this.boolValue = Codegen.empty();
+        this.doubleValue = Codegen.empty();
+        this.int64Value = Codegen.empty();
+        this.protoValue = Codegen.empty();
+        this.stringValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Output.ofNullable(boolValue);
+            this.boolValue = Codegen.ofNullable(boolValue);
             return this;
         }
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
@@ -138,7 +139,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Output.ofNullable(doubleValue);
+            this.doubleValue = Codegen.ofNullable(doubleValue);
             return this;
         }
         public Builder int64Value(@Nullable Output<String> int64Value) {
@@ -146,7 +147,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder int64Value(@Nullable String int64Value) {
-            this.int64Value = Output.ofNullable(int64Value);
+            this.int64Value = Codegen.ofNullable(int64Value);
             return this;
         }
         public Builder protoValue(@Nullable Output<Map<String,String>> protoValue) {
@@ -154,7 +155,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder protoValue(@Nullable Map<String,String> protoValue) {
-            this.protoValue = Output.ofNullable(protoValue);
+            this.protoValue = Codegen.ofNullable(protoValue);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -162,7 +163,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }        public GoogleCloudChannelV1ValueArgs build() {
             return new GoogleCloudChannelV1ValueArgs(boolValue, doubleValue, int64Value, protoValue, stringValue);

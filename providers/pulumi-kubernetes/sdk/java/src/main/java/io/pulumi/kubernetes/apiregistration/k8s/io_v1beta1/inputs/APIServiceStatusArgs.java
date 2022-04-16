@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.APIServiceConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="conditions")
       private final @Nullable Output<List<APIServiceConditionArgs>> conditions;
 
-    public Output<List<APIServiceConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<APIServiceConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     public APIServiceStatusArgs(@Nullable Output<List<APIServiceConditionArgs>> conditions) {
@@ -35,7 +36,7 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private APIServiceStatusArgs() {
-        this.conditions = Output.empty();
+        this.conditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder conditions(@Nullable List<APIServiceConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(APIServiceConditionArgs... conditions) {

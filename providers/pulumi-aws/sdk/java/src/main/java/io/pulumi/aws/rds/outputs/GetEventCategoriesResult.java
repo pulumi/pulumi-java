@@ -38,17 +38,17 @@ public final class GetEventCategoriesResult {
      * A list of the event categories.
      * 
     */
-    public List<String> getEventCategories() {
+    public List<String> eventCategories() {
         return this.eventCategories;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getSourceType() {
+    public Optional<String> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
 

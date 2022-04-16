@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -54,7 +55,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,8 +66,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
-    public Output<String> getSnapshotName() {
-        return this.snapshotName == null ? Output.empty() : this.snapshotName;
+    public Output<String> snapshotName() {
+        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeName", required=true)
       private final Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName;
     }
 
@@ -96,12 +97,12 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.accountName = Output.empty();
-        this.location = Output.empty();
-        this.poolName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.snapshotName = Output.empty();
-        this.volumeName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.poolName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.snapshotName = Codegen.empty();
+        this.volumeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder poolName(Output<String> poolName) {
@@ -171,7 +172,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Output.ofNullable(snapshotName);
+            this.snapshotName = Codegen.ofNullable(snapshotName);
             return this;
         }
         public Builder volumeName(Output<String> volumeName) {

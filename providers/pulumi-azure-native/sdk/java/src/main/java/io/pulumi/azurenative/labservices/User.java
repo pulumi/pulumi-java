@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The user email address, as it was specified during registration.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -54,7 +55,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The user family name, as it was specified during registration.
      * 
      */
-    public Output<String> getFamilyName() {
+    public Output<String> familyName() {
         return this.familyName;
     }
     /**
@@ -68,7 +69,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The user given name, as it was specified during registration.
      * 
      */
-    public Output<String> getGivenName() {
+    public Output<String> givenName() {
         return this.givenName;
     }
     /**
@@ -82,7 +83,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The details of the latest operation. ex: status, error
      * 
      */
-    public Output<LatestOperationResultResponse> getLatestOperationResult() {
+    public Output<LatestOperationResultResponse> latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
@@ -96,7 +97,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -110,7 +111,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -124,7 +125,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -138,7 +139,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -152,7 +153,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The user tenant ID, as it was specified during registration.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -166,7 +167,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return How long the user has used his VMs in this lab
      * 
      */
-    public Output<String> getTotalUsage() {
+    public Output<String> totalUsage() {
         return this.totalUsage;
     }
     /**
@@ -180,7 +181,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -194,7 +195,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> getUniqueIdentifier() {
+    public Output</* @Nullable */ String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
@@ -220,7 +221,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:labservices:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:labservices:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private User(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

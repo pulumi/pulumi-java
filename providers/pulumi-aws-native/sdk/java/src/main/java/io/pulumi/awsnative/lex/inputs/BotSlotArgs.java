@@ -8,6 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotObfuscationSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueElicitationSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,42 +25,42 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="multipleValuesSetting")
       private final @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
 
-    public Output<BotMultipleValuesSettingArgs> getMultipleValuesSetting() {
-        return this.multipleValuesSetting == null ? Output.empty() : this.multipleValuesSetting;
+    public Output<BotMultipleValuesSettingArgs> multipleValuesSetting() {
+        return this.multipleValuesSetting == null ? Codegen.empty() : this.multipleValuesSetting;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="obfuscationSetting")
       private final @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
 
-    public Output<BotObfuscationSettingArgs> getObfuscationSetting() {
-        return this.obfuscationSetting == null ? Output.empty() : this.obfuscationSetting;
+    public Output<BotObfuscationSettingArgs> obfuscationSetting() {
+        return this.obfuscationSetting == null ? Codegen.empty() : this.obfuscationSetting;
     }
 
     @Import(name="slotTypeName", required=true)
       private final Output<String> slotTypeName;
 
-    public Output<String> getSlotTypeName() {
+    public Output<String> slotTypeName() {
         return this.slotTypeName;
     }
 
     @Import(name="valueElicitationSetting", required=true)
       private final Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
 
-    public Output<BotSlotValueElicitationSettingArgs> getValueElicitationSetting() {
+    public Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting() {
         return this.valueElicitationSetting;
     }
 
@@ -79,12 +80,12 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotSlotArgs() {
-        this.description = Output.empty();
-        this.multipleValuesSetting = Output.empty();
-        this.name = Output.empty();
-        this.obfuscationSetting = Output.empty();
-        this.slotTypeName = Output.empty();
-        this.valueElicitationSetting = Output.empty();
+        this.description = Codegen.empty();
+        this.multipleValuesSetting = Codegen.empty();
+        this.name = Codegen.empty();
+        this.obfuscationSetting = Codegen.empty();
+        this.slotTypeName = Codegen.empty();
+        this.valueElicitationSetting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder multipleValuesSetting(@Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting) {
@@ -130,7 +131,7 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multipleValuesSetting(@Nullable BotMultipleValuesSettingArgs multipleValuesSetting) {
-            this.multipleValuesSetting = Output.ofNullable(multipleValuesSetting);
+            this.multipleValuesSetting = Codegen.ofNullable(multipleValuesSetting);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -146,7 +147,7 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder obfuscationSetting(@Nullable BotObfuscationSettingArgs obfuscationSetting) {
-            this.obfuscationSetting = Output.ofNullable(obfuscationSetting);
+            this.obfuscationSetting = Codegen.ofNullable(obfuscationSetting);
             return this;
         }
         public Builder slotTypeName(Output<String> slotTypeName) {

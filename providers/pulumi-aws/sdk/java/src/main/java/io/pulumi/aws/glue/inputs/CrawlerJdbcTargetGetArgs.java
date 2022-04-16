@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -33,8 +34,8 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     @Import(name="exclusions")
       private final @Nullable Output<List<String>> exclusions;
 
-    public Output<List<String>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+    public Output<List<String>> exclusions() {
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -58,9 +59,9 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     }
 
     private CrawlerJdbcTargetGetArgs() {
-        this.connectionName = Output.empty();
-        this.exclusions = Output.empty();
-        this.path = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder exclusions(@Nullable List<String> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(String... exclusions) {

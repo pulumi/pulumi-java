@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return gateway Subnet for the account. It will collect the subnet address and always treat it as /28
      * 
      */
-    public Output<String> getGatewaySubnet() {
+    public Output<String> gatewaySubnet() {
         return this.gatewaySubnet;
     }
     /**
@@ -57,7 +58,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return indicates whether account onboarded or not in a given region
      * 
      */
-    public Output<String> getIsAccountOnboarded() {
+    public Output<String> isAccountOnboarded() {
         return this.isAccountOnboarded;
     }
     /**
@@ -71,7 +72,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return Azure region
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -85,7 +86,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return {dedicatedCloudServiceName}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return total nodes purchased
      * 
      */
-    public Output<Integer> getNodes() {
+    public Output<Integer> nodes() {
         return this.nodes;
     }
     /**
@@ -113,7 +114,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return link to a service management web portal
      * 
      */
-    public Output<String> getServiceURL() {
+    public Output<String> serviceURL() {
         return this.serviceURL;
     }
     /**
@@ -127,7 +128,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return The list of tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +142,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @return {resourceProviderNamespace}/{resourceType}
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DedicatedCloudService(String name, DedicatedCloudServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:vmwarecloudsimple:DedicatedCloudService", name, args == null ? DedicatedCloudServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:vmwarecloudsimple:DedicatedCloudService", name, args == null ? DedicatedCloudServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DedicatedCloudService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

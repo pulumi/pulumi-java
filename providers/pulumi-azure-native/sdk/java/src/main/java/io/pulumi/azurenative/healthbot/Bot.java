@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -59,7 +60,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @return The set of properties specific to Healthbot resource.
      * 
      */
-    public Output<HealthBotPropertiesResponse> getProperties() {
+    public Output<HealthBotPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -87,7 +88,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @return SKU of the HealthBot.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -101,7 +102,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +116,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +130,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,7 +156,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bot(String name, BotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:healthbot:Bot", name, args == null ? BotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:healthbot:Bot", name, args == null ? BotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Bot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

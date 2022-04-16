@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerFailurePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -35,8 +36,8 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="failurePolicy")
       private final @Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy;
 
-    public Output<FunctionEventTriggerFailurePolicyArgs> getFailurePolicy() {
-        return this.failurePolicy == null ? Output.empty() : this.failurePolicy;
+    public Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy() {
+        return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -61,9 +62,9 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
     }
 
     private FunctionEventTriggerArgs() {
-        this.eventType = Output.empty();
-        this.failurePolicy = Output.empty();
-        this.resource = Output.empty();
+        this.eventType = Codegen.empty();
+        this.failurePolicy = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class FunctionEventTriggerArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder failurePolicy(@Nullable FunctionEventTriggerFailurePolicyArgs failurePolicy) {
-            this.failurePolicy = Output.ofNullable(failurePolicy);
+            this.failurePolicy = Codegen.ofNullable(failurePolicy);
             return this;
         }
         public Builder resource(Output<String> resource) {

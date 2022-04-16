@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filesCount")
       private final @Nullable Output<Integer> filesCount;
 
-    public Output<Integer> getFilesCount() {
-        return this.filesCount == null ? Output.empty() : this.filesCount;
+    public Output<Integer> filesCount() {
+        return this.filesCount == null ? Codegen.empty() : this.filesCount;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceUrl")
       private final @Nullable Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
-        return this.sourceUrl == null ? Output.empty() : this.sourceUrl;
+    public Output<String> sourceUrl() {
+        return this.sourceUrl == null ? Codegen.empty() : this.sourceUrl;
     }
 
     public ZipInfoArgs(
@@ -49,8 +50,8 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ZipInfoArgs() {
-        this.filesCount = Output.empty();
-        this.sourceUrl = Output.empty();
+        this.filesCount = Codegen.empty();
+        this.sourceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filesCount(@Nullable Integer filesCount) {
-            this.filesCount = Output.ofNullable(filesCount);
+            this.filesCount = Codegen.ofNullable(filesCount);
             return this;
         }
         public Builder sourceUrl(@Nullable Output<String> sourceUrl) {
@@ -88,7 +89,7 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceUrl(@Nullable String sourceUrl) {
-            this.sourceUrl = Output.ofNullable(sourceUrl);
+            this.sourceUrl = Codegen.ofNullable(sourceUrl);
             return this;
         }        public ZipInfoArgs build() {
             return new ZipInfoArgs(filesCount, sourceUrl);

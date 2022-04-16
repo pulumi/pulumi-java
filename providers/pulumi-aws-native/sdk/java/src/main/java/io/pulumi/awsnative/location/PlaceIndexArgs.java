@@ -7,6 +7,7 @@ import io.pulumi.awsnative.location.enums.PlaceIndexPricingPlan;
 import io.pulumi.awsnative.location.inputs.PlaceIndexDataSourceConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,36 +20,36 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
 
     @Import(name="dataSourceConfiguration")
       private final @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
 
-    public Output<PlaceIndexDataSourceConfigurationArgs> getDataSourceConfiguration() {
-        return this.dataSourceConfiguration == null ? Output.empty() : this.dataSourceConfiguration;
+    public Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration() {
+        return this.dataSourceConfiguration == null ? Codegen.empty() : this.dataSourceConfiguration;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
 
-    public Output<PlaceIndexPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
+    public Output<PlaceIndexPricingPlan> pricingPlan() {
+        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     public PlaceIndexArgs(
@@ -65,11 +66,11 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlaceIndexArgs() {
-        this.dataSource = Output.empty();
-        this.dataSourceConfiguration = Output.empty();
-        this.description = Output.empty();
-        this.indexName = Output.empty();
-        this.pricingPlan = Output.empty();
+        this.dataSource = Codegen.empty();
+        this.dataSourceConfiguration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.indexName = Codegen.empty();
+        this.pricingPlan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSourceConfiguration(@Nullable PlaceIndexDataSourceConfigurationArgs dataSourceConfiguration) {
-            this.dataSourceConfiguration = Output.ofNullable(dataSourceConfiguration);
+            this.dataSourceConfiguration = Codegen.ofNullable(dataSourceConfiguration);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -121,7 +122,7 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder indexName(Output<String> indexName) {
@@ -137,7 +138,7 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pricingPlan(@Nullable PlaceIndexPricingPlan pricingPlan) {
-            this.pricingPlan = Output.ofNullable(pricingPlan);
+            this.pricingPlan = Codegen.ofNullable(pricingPlan);
             return this;
         }        public PlaceIndexArgs build() {
             return new PlaceIndexArgs(dataSource, dataSourceConfiguration, description, indexName, pricingPlan);

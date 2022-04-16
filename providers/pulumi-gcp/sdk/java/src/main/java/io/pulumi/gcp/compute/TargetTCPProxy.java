@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetTCPProxyArgs;
 import io.pulumi.gcp.compute.inputs.TargetTCPProxyState;
@@ -57,7 +58,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * @return A reference to the BackendService resource.
      * 
      */
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
     /**
@@ -71,7 +72,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -85,7 +86,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -111,7 +112,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -143,7 +144,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * 
      */
-    public Output<Boolean> getProxyBind() {
+    public Output<Boolean> proxyBind() {
         return this.proxyBind;
     }
     /**
@@ -163,7 +164,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `PROXY_V1`.
      * 
      */
-    public Output</* @Nullable */ String> getProxyHeader() {
+    public Output</* @Nullable */ String> proxyHeader() {
         return this.proxyHeader;
     }
     /**
@@ -177,7 +178,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getProxyId() {
+    public Output<Integer> proxyId() {
         return this.proxyId;
     }
     /**
@@ -191,7 +192,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -217,7 +218,7 @@ public class TargetTCPProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetTCPProxy(String name, TargetTCPProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/targetTCPProxy:TargetTCPProxy", name, args == null ? TargetTCPProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/targetTCPProxy:TargetTCPProxy", name, args == null ? TargetTCPProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetTCPProxy(String name, Output<String> id, @Nullable TargetTCPProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

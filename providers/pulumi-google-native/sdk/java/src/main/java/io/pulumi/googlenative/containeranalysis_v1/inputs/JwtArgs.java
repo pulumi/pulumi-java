@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compactJwt")
       private final @Nullable Output<String> compactJwt;
 
-    public Output<String> getCompactJwt() {
-        return this.compactJwt == null ? Output.empty() : this.compactJwt;
+    public Output<String> compactJwt() {
+        return this.compactJwt == null ? Codegen.empty() : this.compactJwt;
     }
 
     public JwtArgs(@Nullable Output<String> compactJwt) {
@@ -30,7 +31,7 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JwtArgs() {
-        this.compactJwt = Output.empty();
+        this.compactJwt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compactJwt(@Nullable String compactJwt) {
-            this.compactJwt = Output.ofNullable(compactJwt);
+            this.compactJwt = Codegen.ofNullable(compactJwt);
             return this;
         }        public JwtArgs build() {
             return new JwtArgs(compactJwt);

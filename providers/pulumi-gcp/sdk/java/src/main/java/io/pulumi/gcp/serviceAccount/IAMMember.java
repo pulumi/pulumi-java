@@ -6,6 +6,7 @@ package io.pulumi.gcp.serviceAccount;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.IAMMemberArgs;
 import io.pulumi.gcp.serviceAccount.inputs.IAMMemberState;
@@ -78,7 +79,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ IAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ IAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -92,13 +93,13 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the service account IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -116,7 +117,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -130,7 +131,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified name of the service account to apply policy to.
      * 
      */
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 
@@ -156,7 +157,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMMember(String name, IAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:serviceAccount/iAMMember:IAMMember", name, args == null ? IAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:serviceAccount/iAMMember:IAMMember", name, args == null ? IAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMMember(String name, Output<String> id, @Nullable IAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

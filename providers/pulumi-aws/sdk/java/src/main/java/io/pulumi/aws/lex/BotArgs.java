@@ -8,6 +8,7 @@ import io.pulumi.aws.lex.inputs.BotClarificationPromptArgs;
 import io.pulumi.aws.lex.inputs.BotIntentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -28,7 +29,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="abortStatement", required=true)
       private final Output<BotAbortStatementArgs> abortStatement;
 
-    public Output<BotAbortStatementArgs> getAbortStatement() {
+    public Output<BotAbortStatementArgs> abortStatement() {
         return this.abortStatement;
     }
 
@@ -39,7 +40,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="childDirected", required=true)
       private final Output<Boolean> childDirected;
 
-    public Output<Boolean> getChildDirected() {
+    public Output<Boolean> childDirected() {
         return this.childDirected;
     }
 
@@ -50,8 +51,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clarificationPrompt")
       private final @Nullable Output<BotClarificationPromptArgs> clarificationPrompt;
 
-    public Output<BotClarificationPromptArgs> getClarificationPrompt() {
-        return this.clarificationPrompt == null ? Output.empty() : this.clarificationPrompt;
+    public Output<BotClarificationPromptArgs> clarificationPrompt() {
+        return this.clarificationPrompt == null ? Codegen.empty() : this.clarificationPrompt;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> getCreateVersion() {
-        return this.createVersion == null ? Output.empty() : this.createVersion;
+    public Output<Boolean> createVersion() {
+        return this.createVersion == null ? Codegen.empty() : this.createVersion;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectSentiment")
       private final @Nullable Output<Boolean> detectSentiment;
 
-    public Output<Boolean> getDetectSentiment() {
-        return this.detectSentiment == null ? Output.empty() : this.detectSentiment;
+    public Output<Boolean> detectSentiment() {
+        return this.detectSentiment == null ? Codegen.empty() : this.detectSentiment;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableModelImprovements")
       private final @Nullable Output<Boolean> enableModelImprovements;
 
-    public Output<Boolean> getEnableModelImprovements() {
-        return this.enableModelImprovements == null ? Output.empty() : this.enableModelImprovements;
+    public Output<Boolean> enableModelImprovements() {
+        return this.enableModelImprovements == null ? Codegen.empty() : this.enableModelImprovements;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleSessionTtlInSeconds")
       private final @Nullable Output<Integer> idleSessionTtlInSeconds;
 
-    public Output<Integer> getIdleSessionTtlInSeconds() {
-        return this.idleSessionTtlInSeconds == null ? Output.empty() : this.idleSessionTtlInSeconds;
+    public Output<Integer> idleSessionTtlInSeconds() {
+        return this.idleSessionTtlInSeconds == null ? Codegen.empty() : this.idleSessionTtlInSeconds;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intents", required=true)
       private final Output<List<BotIntentArgs>> intents;
 
-    public Output<List<BotIntentArgs>> getIntents() {
+    public Output<List<BotIntentArgs>> intents() {
         return this.intents;
     }
 
@@ -127,8 +128,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locale")
       private final @Nullable Output<String> locale;
 
-    public Output<String> getLocale() {
-        return this.locale == null ? Output.empty() : this.locale;
+    public Output<String> locale() {
+        return this.locale == null ? Codegen.empty() : this.locale;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nluIntentConfidenceThreshold")
       private final @Nullable Output<Double> nluIntentConfidenceThreshold;
 
-    public Output<Double> getNluIntentConfidenceThreshold() {
-        return this.nluIntentConfidenceThreshold == null ? Output.empty() : this.nluIntentConfidenceThreshold;
+    public Output<Double> nluIntentConfidenceThreshold() {
+        return this.nluIntentConfidenceThreshold == null ? Codegen.empty() : this.nluIntentConfidenceThreshold;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="processBehavior")
       private final @Nullable Output<String> processBehavior;
 
-    public Output<String> getProcessBehavior() {
-        return this.processBehavior == null ? Output.empty() : this.processBehavior;
+    public Output<String> processBehavior() {
+        return this.processBehavior == null ? Codegen.empty() : this.processBehavior;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="voiceId")
       private final @Nullable Output<String> voiceId;
 
-    public Output<String> getVoiceId() {
-        return this.voiceId == null ? Output.empty() : this.voiceId;
+    public Output<String> voiceId() {
+        return this.voiceId == null ? Codegen.empty() : this.voiceId;
     }
 
     public BotArgs(
@@ -207,20 +208,20 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotArgs() {
-        this.abortStatement = Output.empty();
-        this.childDirected = Output.empty();
-        this.clarificationPrompt = Output.empty();
-        this.createVersion = Output.empty();
-        this.description = Output.empty();
-        this.detectSentiment = Output.empty();
-        this.enableModelImprovements = Output.empty();
-        this.idleSessionTtlInSeconds = Output.empty();
-        this.intents = Output.empty();
-        this.locale = Output.empty();
-        this.name = Output.empty();
-        this.nluIntentConfidenceThreshold = Output.empty();
-        this.processBehavior = Output.empty();
-        this.voiceId = Output.empty();
+        this.abortStatement = Codegen.empty();
+        this.childDirected = Codegen.empty();
+        this.clarificationPrompt = Codegen.empty();
+        this.createVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.detectSentiment = Codegen.empty();
+        this.enableModelImprovements = Codegen.empty();
+        this.idleSessionTtlInSeconds = Codegen.empty();
+        this.intents = Codegen.empty();
+        this.locale = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nluIntentConfidenceThreshold = Codegen.empty();
+        this.processBehavior = Codegen.empty();
+        this.voiceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -290,7 +291,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clarificationPrompt(@Nullable BotClarificationPromptArgs clarificationPrompt) {
-            this.clarificationPrompt = Output.ofNullable(clarificationPrompt);
+            this.clarificationPrompt = Codegen.ofNullable(clarificationPrompt);
             return this;
         }
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
@@ -298,7 +299,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Output.ofNullable(createVersion);
+            this.createVersion = Codegen.ofNullable(createVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -306,7 +307,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder detectSentiment(@Nullable Output<Boolean> detectSentiment) {
@@ -314,7 +315,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detectSentiment(@Nullable Boolean detectSentiment) {
-            this.detectSentiment = Output.ofNullable(detectSentiment);
+            this.detectSentiment = Codegen.ofNullable(detectSentiment);
             return this;
         }
         public Builder enableModelImprovements(@Nullable Output<Boolean> enableModelImprovements) {
@@ -322,7 +323,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableModelImprovements(@Nullable Boolean enableModelImprovements) {
-            this.enableModelImprovements = Output.ofNullable(enableModelImprovements);
+            this.enableModelImprovements = Codegen.ofNullable(enableModelImprovements);
             return this;
         }
         public Builder idleSessionTtlInSeconds(@Nullable Output<Integer> idleSessionTtlInSeconds) {
@@ -330,7 +331,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleSessionTtlInSeconds(@Nullable Integer idleSessionTtlInSeconds) {
-            this.idleSessionTtlInSeconds = Output.ofNullable(idleSessionTtlInSeconds);
+            this.idleSessionTtlInSeconds = Codegen.ofNullable(idleSessionTtlInSeconds);
             return this;
         }
         public Builder intents(Output<List<BotIntentArgs>> intents) {
@@ -349,7 +350,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locale(@Nullable String locale) {
-            this.locale = Output.ofNullable(locale);
+            this.locale = Codegen.ofNullable(locale);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -357,7 +358,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nluIntentConfidenceThreshold(@Nullable Output<Double> nluIntentConfidenceThreshold) {
@@ -365,7 +366,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nluIntentConfidenceThreshold(@Nullable Double nluIntentConfidenceThreshold) {
-            this.nluIntentConfidenceThreshold = Output.ofNullable(nluIntentConfidenceThreshold);
+            this.nluIntentConfidenceThreshold = Codegen.ofNullable(nluIntentConfidenceThreshold);
             return this;
         }
         public Builder processBehavior(@Nullable Output<String> processBehavior) {
@@ -373,7 +374,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder processBehavior(@Nullable String processBehavior) {
-            this.processBehavior = Output.ofNullable(processBehavior);
+            this.processBehavior = Codegen.ofNullable(processBehavior);
             return this;
         }
         public Builder voiceId(@Nullable Output<String> voiceId) {
@@ -381,7 +382,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder voiceId(@Nullable String voiceId) {
-            this.voiceId = Output.ofNullable(voiceId);
+            this.voiceId = Codegen.ofNullable(voiceId);
             return this;
         }        public BotArgs build() {
             return new BotArgs(abortStatement, childDirected, clarificationPrompt, createVersion, description, detectSentiment, enableModelImprovements, idleSessionTtlInSeconds, intents, locale, name, nluIntentConfidenceThreshold, processBehavior, voiceId);

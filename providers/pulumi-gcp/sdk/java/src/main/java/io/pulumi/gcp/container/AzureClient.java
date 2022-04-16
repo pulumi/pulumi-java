@@ -6,6 +6,7 @@ package io.pulumi.gcp.container;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.AzureClientArgs;
 import io.pulumi.gcp.container.inputs.AzureClientState;
@@ -49,7 +50,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return Required. The Azure Active Directory Application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -63,7 +64,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return Output only. The PEM encoded x509 certificate.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -77,7 +78,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this resource was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -91,7 +92,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -105,7 +106,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return The name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +120,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -133,7 +134,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return Required. The Azure Active Directory Tenant ID.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -147,7 +148,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @return Output only. A globally unique identifier for the client.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
 
@@ -173,7 +174,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AzureClient(String name, AzureClientArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/azureClient:AzureClient", name, args == null ? AzureClientArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:container/azureClient:AzureClient", name, args == null ? AzureClientArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AzureClient(String name, Output<String> id, @Nullable AzureClientState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

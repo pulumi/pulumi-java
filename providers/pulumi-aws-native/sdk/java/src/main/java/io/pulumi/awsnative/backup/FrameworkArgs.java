@@ -7,6 +7,7 @@ import io.pulumi.awsnative.backup.inputs.FrameworkControlArgs;
 import io.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkControls", required=true)
       private final Output<List<FrameworkControlArgs>> frameworkControls;
 
-    public Output<List<FrameworkControlArgs>> getFrameworkControls() {
+    public Output<List<FrameworkControlArgs>> frameworkControls() {
         return this.frameworkControls;
     }
 
@@ -35,8 +36,8 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkDescription")
       private final @Nullable Output<String> frameworkDescription;
 
-    public Output<String> getFrameworkDescription() {
-        return this.frameworkDescription == null ? Output.empty() : this.frameworkDescription;
+    public Output<String> frameworkDescription() {
+        return this.frameworkDescription == null ? Codegen.empty() : this.frameworkDescription;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkName")
       private final @Nullable Output<String> frameworkName;
 
-    public Output<String> getFrameworkName() {
-        return this.frameworkName == null ? Output.empty() : this.frameworkName;
+    public Output<String> frameworkName() {
+        return this.frameworkName == null ? Codegen.empty() : this.frameworkName;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkTags")
       private final @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
 
-    public Output<List<FrameworkTagArgs>> getFrameworkTags() {
-        return this.frameworkTags == null ? Output.empty() : this.frameworkTags;
+    public Output<List<FrameworkTagArgs>> frameworkTags() {
+        return this.frameworkTags == null ? Codegen.empty() : this.frameworkTags;
     }
 
     public FrameworkArgs(
@@ -73,10 +74,10 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FrameworkArgs() {
-        this.frameworkControls = Output.empty();
-        this.frameworkDescription = Output.empty();
-        this.frameworkName = Output.empty();
-        this.frameworkTags = Output.empty();
+        this.frameworkControls = Codegen.empty();
+        this.frameworkDescription = Codegen.empty();
+        this.frameworkName = Codegen.empty();
+        this.frameworkTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frameworkDescription(@Nullable String frameworkDescription) {
-            this.frameworkDescription = Output.ofNullable(frameworkDescription);
+            this.frameworkDescription = Codegen.ofNullable(frameworkDescription);
             return this;
         }
         public Builder frameworkName(@Nullable Output<String> frameworkName) {
@@ -129,7 +130,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frameworkName(@Nullable String frameworkName) {
-            this.frameworkName = Output.ofNullable(frameworkName);
+            this.frameworkName = Codegen.ofNullable(frameworkName);
             return this;
         }
         public Builder frameworkTags(@Nullable Output<List<FrameworkTagArgs>> frameworkTags) {
@@ -137,7 +138,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frameworkTags(@Nullable List<FrameworkTagArgs> frameworkTags) {
-            this.frameworkTags = Output.ofNullable(frameworkTags);
+            this.frameworkTags = Codegen.ofNullable(frameworkTags);
             return this;
         }
         public Builder frameworkTags(FrameworkTagArgs... frameworkTags) {

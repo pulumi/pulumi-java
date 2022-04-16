@@ -107,84 +107,84 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Include path in the redirected url.
      * 
     */
-    public Optional<Boolean> getIncludePath() {
+    public Optional<Boolean> includePath() {
         return Optional.ofNullable(this.includePath);
     }
     /**
      * Include query string in the redirected url.
      * 
     */
-    public Optional<Boolean> getIncludeQueryString() {
+    public Optional<Boolean> includeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
     /**
      * Name of the redirect configuration that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path rules specifying redirect configuration.
      * 
     */
-    public List<SubResourceResponse> getPathRules() {
+    public List<SubResourceResponse> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
      * HTTP redirection type.
      * 
     */
-    public Optional<String> getRedirectType() {
+    public Optional<String> redirectType() {
         return Optional.ofNullable(this.redirectType);
     }
     /**
      * Request routing specifying redirect configuration.
      * 
     */
-    public List<SubResourceResponse> getRequestRoutingRules() {
+    public List<SubResourceResponse> requestRoutingRules() {
         return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
     }
     /**
      * Reference to a listener to redirect the request to.
      * 
     */
-    public Optional<SubResourceResponse> getTargetListener() {
+    public Optional<SubResourceResponse> targetListener() {
         return Optional.ofNullable(this.targetListener);
     }
     /**
      * Url to redirect the request to.
      * 
     */
-    public Optional<String> getTargetUrl() {
+    public Optional<String> targetUrl() {
         return Optional.ofNullable(this.targetUrl);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Url path maps specifying default redirect configuration.
      * 
     */
-    public List<SubResourceResponse> getUrlPathMaps() {
+    public List<SubResourceResponse> urlPathMaps() {
         return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
     }
 

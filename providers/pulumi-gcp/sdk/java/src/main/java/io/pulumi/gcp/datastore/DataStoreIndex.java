@@ -6,6 +6,7 @@ package io.pulumi.gcp.datastore;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datastore.DataStoreIndexArgs;
 import io.pulumi.gcp.datastore.inputs.DataStoreIndexState;
@@ -65,7 +66,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `ALL_ANCESTORS`.
      * 
      */
-    public Output</* @Nullable */ String> getAncestor() {
+    public Output</* @Nullable */ String> ancestor() {
         return this.ancestor;
     }
     /**
@@ -79,7 +80,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * @return The index id.
      * 
      */
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
     /**
@@ -93,7 +94,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * @return The entity kind which the index applies to.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -109,7 +110,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -125,7 +126,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DataStoreIndexProperty>> getProperties() {
+    public Output</* @Nullable */ List<DataStoreIndexProperty>> properties() {
         return this.properties;
     }
 
@@ -151,7 +152,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataStoreIndex(String name, DataStoreIndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datastore/dataStoreIndex:DataStoreIndex", name, args == null ? DataStoreIndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datastore/dataStoreIndex:DataStoreIndex", name, args == null ? DataStoreIndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataStoreIndex(String name, Output<String> id, @Nullable DataStoreIndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

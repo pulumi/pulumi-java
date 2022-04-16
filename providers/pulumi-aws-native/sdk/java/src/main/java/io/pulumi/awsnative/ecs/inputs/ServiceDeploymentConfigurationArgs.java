@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.inputs.ServiceDeploymentCircuitBreakerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,22 +19,22 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
     @Import(name="deploymentCircuitBreaker")
       private final @Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker;
 
-    public Output<ServiceDeploymentCircuitBreakerArgs> getDeploymentCircuitBreaker() {
-        return this.deploymentCircuitBreaker == null ? Output.empty() : this.deploymentCircuitBreaker;
+    public Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker() {
+        return this.deploymentCircuitBreaker == null ? Codegen.empty() : this.deploymentCircuitBreaker;
     }
 
     @Import(name="maximumPercent")
       private final @Nullable Output<Integer> maximumPercent;
 
-    public Output<Integer> getMaximumPercent() {
-        return this.maximumPercent == null ? Output.empty() : this.maximumPercent;
+    public Output<Integer> maximumPercent() {
+        return this.maximumPercent == null ? Codegen.empty() : this.maximumPercent;
     }
 
     @Import(name="minimumHealthyPercent")
       private final @Nullable Output<Integer> minimumHealthyPercent;
 
-    public Output<Integer> getMinimumHealthyPercent() {
-        return this.minimumHealthyPercent == null ? Output.empty() : this.minimumHealthyPercent;
+    public Output<Integer> minimumHealthyPercent() {
+        return this.minimumHealthyPercent == null ? Codegen.empty() : this.minimumHealthyPercent;
     }
 
     public ServiceDeploymentConfigurationArgs(
@@ -46,9 +47,9 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
     }
 
     private ServiceDeploymentConfigurationArgs() {
-        this.deploymentCircuitBreaker = Output.empty();
-        this.maximumPercent = Output.empty();
-        this.minimumHealthyPercent = Output.empty();
+        this.deploymentCircuitBreaker = Codegen.empty();
+        this.maximumPercent = Codegen.empty();
+        this.minimumHealthyPercent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerArgs deploymentCircuitBreaker) {
-            this.deploymentCircuitBreaker = Output.ofNullable(deploymentCircuitBreaker);
+            this.deploymentCircuitBreaker = Codegen.ofNullable(deploymentCircuitBreaker);
             return this;
         }
         public Builder maximumPercent(@Nullable Output<Integer> maximumPercent) {
@@ -88,7 +89,7 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder maximumPercent(@Nullable Integer maximumPercent) {
-            this.maximumPercent = Output.ofNullable(maximumPercent);
+            this.maximumPercent = Codegen.ofNullable(maximumPercent);
             return this;
         }
         public Builder minimumHealthyPercent(@Nullable Output<Integer> minimumHealthyPercent) {
@@ -96,7 +97,7 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder minimumHealthyPercent(@Nullable Integer minimumHealthyPercent) {
-            this.minimumHealthyPercent = Output.ofNullable(minimumHealthyPercent);
+            this.minimumHealthyPercent = Codegen.ofNullable(minimumHealthyPercent);
             return this;
         }        public ServiceDeploymentConfigurationArgs build() {
             return new ServiceDeploymentConfigurationArgs(deploymentCircuitBreaker, maximumPercent, minimumHealthyPercent);

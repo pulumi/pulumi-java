@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="componentId")
       private final @Nullable Output<String> componentId;
 
-    public Output<String> getComponentId() {
-        return this.componentId == null ? Output.empty() : this.componentId;
+    public Output<String> componentId() {
+        return this.componentId == null ? Codegen.empty() : this.componentId;
     }
 
     @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
-    public Output<String> getServiceId() {
-        return this.serviceId == null ? Output.empty() : this.serviceId;
+    public Output<String> serviceId() {
+        return this.serviceId == null ? Codegen.empty() : this.serviceId;
     }
 
     public ServiceTreeInfoArgs(
@@ -36,8 +37,8 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceTreeInfoArgs() {
-        this.componentId = Output.empty();
-        this.serviceId = Output.empty();
+        this.componentId = Codegen.empty();
+        this.serviceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder componentId(@Nullable String componentId) {
-            this.componentId = Output.ofNullable(componentId);
+            this.componentId = Codegen.ofNullable(componentId);
             return this;
         }
         public Builder serviceId(@Nullable Output<String> serviceId) {
@@ -75,7 +76,7 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Output.ofNullable(serviceId);
+            this.serviceId = Codegen.ofNullable(serviceId);
             return this;
         }        public ServiceTreeInfoArgs build() {
             return new ServiceTreeInfoArgs(componentId, serviceId);

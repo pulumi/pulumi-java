@@ -10,6 +10,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleRuleCondit
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,37 +26,37 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
     @Export(name="actions", type=List.class, parameters={ListenerRuleAction.class})
     private Output<List<ListenerRuleAction>> actions;
 
-    public Output<List<ListenerRuleAction>> getActions() {
+    public Output<List<ListenerRuleAction>> actions() {
         return this.actions;
     }
     @Export(name="conditions", type=List.class, parameters={ListenerRuleRuleCondition.class})
     private Output<List<ListenerRuleRuleCondition>> conditions;
 
-    public Output<List<ListenerRuleRuleCondition>> getConditions() {
+    public Output<List<ListenerRuleRuleCondition>> conditions() {
         return this.conditions;
     }
     @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
     @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
     @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     @Export(name="ruleArn", type=String.class, parameters={})
     private Output<String> ruleArn;
 
-    public Output<String> getRuleArn() {
+    public Output<String> ruleArn() {
         return this.ruleArn;
     }
 
@@ -81,7 +82,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ListenerRule(String name, ListenerRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:elasticloadbalancingv2:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:elasticloadbalancingv2:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ListenerRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

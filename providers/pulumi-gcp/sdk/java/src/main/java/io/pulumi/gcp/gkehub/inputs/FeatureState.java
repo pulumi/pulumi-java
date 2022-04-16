@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.FeatureResourceStateGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureSpecGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureStateGetArgs;
@@ -26,8 +27,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteTime")
       private final @Nullable Output<String> deleteTime;
 
-    public Output<String> getDeleteTime() {
-        return this.deleteTime == null ? Output.empty() : this.deleteTime;
+    public Output<String> deleteTime() {
+        return this.deleteTime == null ? Codegen.empty() : this.deleteTime;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceStates")
       private final @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
 
-    public Output<List<FeatureResourceStateGetArgs>> getResourceStates() {
-        return this.resourceStates == null ? Output.empty() : this.resourceStates;
+    public Output<List<FeatureResourceStateGetArgs>> resourceStates() {
+        return this.resourceStates == null ? Codegen.empty() : this.resourceStates;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<FeatureSpecGetArgs> spec;
 
-    public Output<FeatureSpecGetArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<FeatureSpecGetArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="states")
       private final @Nullable Output<List<FeatureStateGetArgs>> states;
 
-    public Output<List<FeatureStateGetArgs>> getStates() {
-        return this.states == null ? Output.empty() : this.states;
+    public Output<List<FeatureStateGetArgs>> states() {
+        return this.states == null ? Codegen.empty() : this.states;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public FeatureState(
@@ -153,16 +154,16 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureState() {
-        this.createTime = Output.empty();
-        this.deleteTime = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.resourceStates = Output.empty();
-        this.spec = Output.empty();
-        this.states = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.deleteTime = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.resourceStates = Codegen.empty();
+        this.spec = Codegen.empty();
+        this.states = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder deleteTime(@Nullable Output<String> deleteTime) {
@@ -216,7 +217,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteTime(@Nullable String deleteTime) {
-            this.deleteTime = Output.ofNullable(deleteTime);
+            this.deleteTime = Codegen.ofNullable(deleteTime);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -224,7 +225,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -232,7 +233,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -240,7 +241,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -248,7 +249,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder resourceStates(@Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates) {
@@ -256,7 +257,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceStates(@Nullable List<FeatureResourceStateGetArgs> resourceStates) {
-            this.resourceStates = Output.ofNullable(resourceStates);
+            this.resourceStates = Codegen.ofNullable(resourceStates);
             return this;
         }
         public Builder resourceStates(FeatureResourceStateGetArgs... resourceStates) {
@@ -267,7 +268,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spec(@Nullable FeatureSpecGetArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }
         public Builder states(@Nullable Output<List<FeatureStateGetArgs>> states) {
@@ -275,7 +276,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder states(@Nullable List<FeatureStateGetArgs> states) {
-            this.states = Output.ofNullable(states);
+            this.states = Codegen.ofNullable(states);
             return this;
         }
         public Builder states(FeatureStateGetArgs... states) {
@@ -286,7 +287,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public FeatureState build() {
             return new FeatureState(createTime, deleteTime, labels, location, name, project, resourceStates, spec, states, updateTime);

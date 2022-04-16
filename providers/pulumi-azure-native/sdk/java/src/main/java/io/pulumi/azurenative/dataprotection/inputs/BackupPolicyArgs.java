@@ -8,6 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.AzureRetentionRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasourceTypes", required=true)
       private final Output<List<String>> datasourceTypes;
 
-    public Output<List<String>> getDatasourceTypes() {
+    public Output<List<String>> datasourceTypes() {
         return this.datasourceTypes;
     }
 
@@ -39,7 +40,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -50,7 +51,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyRules", required=true)
       private final Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
 
-    public Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> getPolicyRules() {
+    public Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules() {
         return this.policyRules;
     }
 
@@ -64,9 +65,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.datasourceTypes = Output.empty();
-        this.objectType = Output.empty();
-        this.policyRules = Output.empty();
+        this.datasourceTypes = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.policyRules = Codegen.empty();
     }
 
     public static Builder builder() {

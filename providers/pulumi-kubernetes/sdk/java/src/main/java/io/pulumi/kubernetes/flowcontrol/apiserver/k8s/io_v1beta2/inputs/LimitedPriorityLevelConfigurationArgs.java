@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.LimitResponseArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -32,8 +33,8 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     @Import(name="assuredConcurrencyShares")
       private final @Nullable Output<Integer> assuredConcurrencyShares;
 
-    public Output<Integer> getAssuredConcurrencyShares() {
-        return this.assuredConcurrencyShares == null ? Output.empty() : this.assuredConcurrencyShares;
+    public Output<Integer> assuredConcurrencyShares() {
+        return this.assuredConcurrencyShares == null ? Codegen.empty() : this.assuredConcurrencyShares;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     @Import(name="limitResponse")
       private final @Nullable Output<LimitResponseArgs> limitResponse;
 
-    public Output<LimitResponseArgs> getLimitResponse() {
-        return this.limitResponse == null ? Output.empty() : this.limitResponse;
+    public Output<LimitResponseArgs> limitResponse() {
+        return this.limitResponse == null ? Codegen.empty() : this.limitResponse;
     }
 
     public LimitedPriorityLevelConfigurationArgs(
@@ -55,8 +56,8 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     }
 
     private LimitedPriorityLevelConfigurationArgs() {
-        this.assuredConcurrencyShares = Output.empty();
-        this.limitResponse = Output.empty();
+        this.assuredConcurrencyShares = Codegen.empty();
+        this.limitResponse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder assuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
-            this.assuredConcurrencyShares = Output.ofNullable(assuredConcurrencyShares);
+            this.assuredConcurrencyShares = Codegen.ofNullable(assuredConcurrencyShares);
             return this;
         }
         public Builder limitResponse(@Nullable Output<LimitResponseArgs> limitResponse) {
@@ -94,7 +95,7 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder limitResponse(@Nullable LimitResponseArgs limitResponse) {
-            this.limitResponse = Output.ofNullable(limitResponse);
+            this.limitResponse = Codegen.ofNullable(limitResponse);
             return this;
         }        public LimitedPriorityLevelConfigurationArgs build() {
             return new LimitedPriorityLevelConfigurationArgs(assuredConcurrencyShares, limitResponse);

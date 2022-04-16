@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return List of applicationGroup resource Ids.
      * 
      */
-    public Output</* @Nullable */ List<String>> getApplicationGroupReferences() {
+    public Output</* @Nullable */ List<String>> applicationGroupReferences() {
         return this.applicationGroupReferences;
     }
     /**
@@ -60,7 +61,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Is cloud pc resource.
      * 
      */
-    public Output<Boolean> getCloudPcResource() {
+    public Output<Boolean> cloudPcResource() {
         return this.cloudPcResource;
     }
     /**
@@ -74,7 +75,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Description of Workspace.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -102,13 +103,13 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Friendly name of Workspace.
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     @Export(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity;
 
-    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> getIdentity() {
+    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity() {
         return this.identity;
     }
     /**
@@ -122,7 +123,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -136,7 +137,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -150,7 +151,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
      */
-    public Output</* @Nullable */ String> getManagedBy() {
+    public Output</* @Nullable */ String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -164,7 +165,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -178,19 +179,19 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return ObjectId of Workspace. (internal use)
      * 
      */
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
     @Export(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan;
 
-    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> getPlan() {
+    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan() {
         return this.plan;
     }
     @Export(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku;
 
-    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> getSku() {
+    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku() {
         return this.sku;
     }
     /**
@@ -204,7 +205,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -218,7 +219,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -244,7 +245,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:desktopvirtualization:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:desktopvirtualization:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

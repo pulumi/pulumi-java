@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Host OS supported by the Arc addon.
      * 
      */
-    public Output<String> getHostPlatform() {
+    public Output<String> hostPlatform() {
         return this.hostPlatform;
     }
     /**
@@ -56,7 +57,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Platform where the runtime is hosted.
      * 
      */
-    public Output<String> getHostPlatformType() {
+    public Output<String> hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
@@ -72,7 +73,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Expected value is 'ArcForKubernetes'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -86,7 +87,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Addon Provisioning State
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Arc resource group name
      * 
      */
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
@@ -128,7 +129,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Arc resource location
      * 
      */
-    public Output<String> getResourceLocation() {
+    public Output<String> resourceLocation() {
         return this.resourceLocation;
     }
     /**
@@ -142,7 +143,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Arc resource Name
      * 
      */
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
     /**
@@ -156,7 +157,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Arc resource subscription Id
      * 
      */
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -170,7 +171,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Addon type
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -184,7 +185,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -198,7 +199,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @return Arc resource version
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -224,7 +225,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ArcAddon(String name, ArcAddonArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:ArcAddon", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:databoxedge:ArcAddon", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ArcAddon(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

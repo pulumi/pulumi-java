@@ -6,6 +6,7 @@ package io.pulumi.aws.efs;
 import io.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicy", required=true)
       private final Output<BackupPolicyBackupPolicyArgs> backupPolicy;
 
-    public Output<BackupPolicyBackupPolicyArgs> getBackupPolicy() {
+    public Output<BackupPolicyBackupPolicyArgs> backupPolicy() {
         return this.backupPolicy;
     }
 
@@ -32,7 +33,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -44,8 +45,8 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.backupPolicy = Output.empty();
-        this.fileSystemId = Output.empty();
+        this.backupPolicy = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
     }
 
     public static Builder builder() {

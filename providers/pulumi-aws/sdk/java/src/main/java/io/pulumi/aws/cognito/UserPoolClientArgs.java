@@ -7,6 +7,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolClientAnalyticsConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolClientTokenValidityUnitsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessTokenValidity")
       private final @Nullable Output<Integer> accessTokenValidity;
 
-    public Output<Integer> getAccessTokenValidity() {
-        return this.accessTokenValidity == null ? Output.empty() : this.accessTokenValidity;
+    public Output<Integer> accessTokenValidity() {
+        return this.accessTokenValidity == null ? Codegen.empty() : this.accessTokenValidity;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOauthFlows")
       private final @Nullable Output<List<String>> allowedOauthFlows;
 
-    public Output<List<String>> getAllowedOauthFlows() {
-        return this.allowedOauthFlows == null ? Output.empty() : this.allowedOauthFlows;
+    public Output<List<String>> allowedOauthFlows() {
+        return this.allowedOauthFlows == null ? Codegen.empty() : this.allowedOauthFlows;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOauthFlowsUserPoolClient")
       private final @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
 
-    public Output<Boolean> getAllowedOauthFlowsUserPoolClient() {
-        return this.allowedOauthFlowsUserPoolClient == null ? Output.empty() : this.allowedOauthFlowsUserPoolClient;
+    public Output<Boolean> allowedOauthFlowsUserPoolClient() {
+        return this.allowedOauthFlowsUserPoolClient == null ? Codegen.empty() : this.allowedOauthFlowsUserPoolClient;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOauthScopes")
       private final @Nullable Output<List<String>> allowedOauthScopes;
 
-    public Output<List<String>> getAllowedOauthScopes() {
-        return this.allowedOauthScopes == null ? Output.empty() : this.allowedOauthScopes;
+    public Output<List<String>> allowedOauthScopes() {
+        return this.allowedOauthScopes == null ? Codegen.empty() : this.allowedOauthScopes;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsConfiguration")
       private final @Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
 
-    public Output<UserPoolClientAnalyticsConfigurationArgs> getAnalyticsConfiguration() {
-        return this.analyticsConfiguration == null ? Output.empty() : this.analyticsConfiguration;
+    public Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration() {
+        return this.analyticsConfiguration == null ? Codegen.empty() : this.analyticsConfiguration;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="callbackUrls")
       private final @Nullable Output<List<String>> callbackUrls;
 
-    public Output<List<String>> getCallbackUrls() {
-        return this.callbackUrls == null ? Output.empty() : this.callbackUrls;
+    public Output<List<String>> callbackUrls() {
+        return this.callbackUrls == null ? Codegen.empty() : this.callbackUrls;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRedirectUri")
       private final @Nullable Output<String> defaultRedirectUri;
 
-    public Output<String> getDefaultRedirectUri() {
-        return this.defaultRedirectUri == null ? Output.empty() : this.defaultRedirectUri;
+    public Output<String> defaultRedirectUri() {
+        return this.defaultRedirectUri == null ? Codegen.empty() : this.defaultRedirectUri;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableTokenRevocation")
       private final @Nullable Output<Boolean> enableTokenRevocation;
 
-    public Output<Boolean> getEnableTokenRevocation() {
-        return this.enableTokenRevocation == null ? Output.empty() : this.enableTokenRevocation;
+    public Output<Boolean> enableTokenRevocation() {
+        return this.enableTokenRevocation == null ? Codegen.empty() : this.enableTokenRevocation;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="explicitAuthFlows")
       private final @Nullable Output<List<String>> explicitAuthFlows;
 
-    public Output<List<String>> getExplicitAuthFlows() {
-        return this.explicitAuthFlows == null ? Output.empty() : this.explicitAuthFlows;
+    public Output<List<String>> explicitAuthFlows() {
+        return this.explicitAuthFlows == null ? Codegen.empty() : this.explicitAuthFlows;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="generateSecret")
       private final @Nullable Output<Boolean> generateSecret;
 
-    public Output<Boolean> getGenerateSecret() {
-        return this.generateSecret == null ? Output.empty() : this.generateSecret;
+    public Output<Boolean> generateSecret() {
+        return this.generateSecret == null ? Codegen.empty() : this.generateSecret;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idTokenValidity")
       private final @Nullable Output<Integer> idTokenValidity;
 
-    public Output<Integer> getIdTokenValidity() {
-        return this.idTokenValidity == null ? Output.empty() : this.idTokenValidity;
+    public Output<Integer> idTokenValidity() {
+        return this.idTokenValidity == null ? Codegen.empty() : this.idTokenValidity;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logoutUrls")
       private final @Nullable Output<List<String>> logoutUrls;
 
-    public Output<List<String>> getLogoutUrls() {
-        return this.logoutUrls == null ? Output.empty() : this.logoutUrls;
+    public Output<List<String>> logoutUrls() {
+        return this.logoutUrls == null ? Codegen.empty() : this.logoutUrls;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preventUserExistenceErrors")
       private final @Nullable Output<String> preventUserExistenceErrors;
 
-    public Output<String> getPreventUserExistenceErrors() {
-        return this.preventUserExistenceErrors == null ? Output.empty() : this.preventUserExistenceErrors;
+    public Output<String> preventUserExistenceErrors() {
+        return this.preventUserExistenceErrors == null ? Codegen.empty() : this.preventUserExistenceErrors;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readAttributes")
       private final @Nullable Output<List<String>> readAttributes;
 
-    public Output<List<String>> getReadAttributes() {
-        return this.readAttributes == null ? Output.empty() : this.readAttributes;
+    public Output<List<String>> readAttributes() {
+        return this.readAttributes == null ? Codegen.empty() : this.readAttributes;
     }
 
     /**
@@ -191,8 +192,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="refreshTokenValidity")
       private final @Nullable Output<Integer> refreshTokenValidity;
 
-    public Output<Integer> getRefreshTokenValidity() {
-        return this.refreshTokenValidity == null ? Output.empty() : this.refreshTokenValidity;
+    public Output<Integer> refreshTokenValidity() {
+        return this.refreshTokenValidity == null ? Codegen.empty() : this.refreshTokenValidity;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportedIdentityProviders")
       private final @Nullable Output<List<String>> supportedIdentityProviders;
 
-    public Output<List<String>> getSupportedIdentityProviders() {
-        return this.supportedIdentityProviders == null ? Output.empty() : this.supportedIdentityProviders;
+    public Output<List<String>> supportedIdentityProviders() {
+        return this.supportedIdentityProviders == null ? Codegen.empty() : this.supportedIdentityProviders;
     }
 
     /**
@@ -213,8 +214,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenValidityUnits")
       private final @Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
 
-    public Output<UserPoolClientTokenValidityUnitsArgs> getTokenValidityUnits() {
-        return this.tokenValidityUnits == null ? Output.empty() : this.tokenValidityUnits;
+    public Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits() {
+        return this.tokenValidityUnits == null ? Codegen.empty() : this.tokenValidityUnits;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -235,8 +236,8 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeAttributes")
       private final @Nullable Output<List<String>> writeAttributes;
 
-    public Output<List<String>> getWriteAttributes() {
-        return this.writeAttributes == null ? Output.empty() : this.writeAttributes;
+    public Output<List<String>> writeAttributes() {
+        return this.writeAttributes == null ? Codegen.empty() : this.writeAttributes;
     }
 
     public UserPoolClientArgs(
@@ -283,26 +284,26 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPoolClientArgs() {
-        this.accessTokenValidity = Output.empty();
-        this.allowedOauthFlows = Output.empty();
-        this.allowedOauthFlowsUserPoolClient = Output.empty();
-        this.allowedOauthScopes = Output.empty();
-        this.analyticsConfiguration = Output.empty();
-        this.callbackUrls = Output.empty();
-        this.defaultRedirectUri = Output.empty();
-        this.enableTokenRevocation = Output.empty();
-        this.explicitAuthFlows = Output.empty();
-        this.generateSecret = Output.empty();
-        this.idTokenValidity = Output.empty();
-        this.logoutUrls = Output.empty();
-        this.name = Output.empty();
-        this.preventUserExistenceErrors = Output.empty();
-        this.readAttributes = Output.empty();
-        this.refreshTokenValidity = Output.empty();
-        this.supportedIdentityProviders = Output.empty();
-        this.tokenValidityUnits = Output.empty();
-        this.userPoolId = Output.empty();
-        this.writeAttributes = Output.empty();
+        this.accessTokenValidity = Codegen.empty();
+        this.allowedOauthFlows = Codegen.empty();
+        this.allowedOauthFlowsUserPoolClient = Codegen.empty();
+        this.allowedOauthScopes = Codegen.empty();
+        this.analyticsConfiguration = Codegen.empty();
+        this.callbackUrls = Codegen.empty();
+        this.defaultRedirectUri = Codegen.empty();
+        this.enableTokenRevocation = Codegen.empty();
+        this.explicitAuthFlows = Codegen.empty();
+        this.generateSecret = Codegen.empty();
+        this.idTokenValidity = Codegen.empty();
+        this.logoutUrls = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preventUserExistenceErrors = Codegen.empty();
+        this.readAttributes = Codegen.empty();
+        this.refreshTokenValidity = Codegen.empty();
+        this.supportedIdentityProviders = Codegen.empty();
+        this.tokenValidityUnits = Codegen.empty();
+        this.userPoolId = Codegen.empty();
+        this.writeAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -368,7 +369,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessTokenValidity(@Nullable Integer accessTokenValidity) {
-            this.accessTokenValidity = Output.ofNullable(accessTokenValidity);
+            this.accessTokenValidity = Codegen.ofNullable(accessTokenValidity);
             return this;
         }
         public Builder allowedOauthFlows(@Nullable Output<List<String>> allowedOauthFlows) {
@@ -376,7 +377,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedOauthFlows(@Nullable List<String> allowedOauthFlows) {
-            this.allowedOauthFlows = Output.ofNullable(allowedOauthFlows);
+            this.allowedOauthFlows = Codegen.ofNullable(allowedOauthFlows);
             return this;
         }
         public Builder allowedOauthFlows(String... allowedOauthFlows) {
@@ -387,7 +388,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedOauthFlowsUserPoolClient(@Nullable Boolean allowedOauthFlowsUserPoolClient) {
-            this.allowedOauthFlowsUserPoolClient = Output.ofNullable(allowedOauthFlowsUserPoolClient);
+            this.allowedOauthFlowsUserPoolClient = Codegen.ofNullable(allowedOauthFlowsUserPoolClient);
             return this;
         }
         public Builder allowedOauthScopes(@Nullable Output<List<String>> allowedOauthScopes) {
@@ -395,7 +396,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedOauthScopes(@Nullable List<String> allowedOauthScopes) {
-            this.allowedOauthScopes = Output.ofNullable(allowedOauthScopes);
+            this.allowedOauthScopes = Codegen.ofNullable(allowedOauthScopes);
             return this;
         }
         public Builder allowedOauthScopes(String... allowedOauthScopes) {
@@ -406,7 +407,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder analyticsConfiguration(@Nullable UserPoolClientAnalyticsConfigurationArgs analyticsConfiguration) {
-            this.analyticsConfiguration = Output.ofNullable(analyticsConfiguration);
+            this.analyticsConfiguration = Codegen.ofNullable(analyticsConfiguration);
             return this;
         }
         public Builder callbackUrls(@Nullable Output<List<String>> callbackUrls) {
@@ -414,7 +415,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder callbackUrls(@Nullable List<String> callbackUrls) {
-            this.callbackUrls = Output.ofNullable(callbackUrls);
+            this.callbackUrls = Codegen.ofNullable(callbackUrls);
             return this;
         }
         public Builder callbackUrls(String... callbackUrls) {
@@ -425,7 +426,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRedirectUri(@Nullable String defaultRedirectUri) {
-            this.defaultRedirectUri = Output.ofNullable(defaultRedirectUri);
+            this.defaultRedirectUri = Codegen.ofNullable(defaultRedirectUri);
             return this;
         }
         public Builder enableTokenRevocation(@Nullable Output<Boolean> enableTokenRevocation) {
@@ -433,7 +434,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableTokenRevocation(@Nullable Boolean enableTokenRevocation) {
-            this.enableTokenRevocation = Output.ofNullable(enableTokenRevocation);
+            this.enableTokenRevocation = Codegen.ofNullable(enableTokenRevocation);
             return this;
         }
         public Builder explicitAuthFlows(@Nullable Output<List<String>> explicitAuthFlows) {
@@ -441,7 +442,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder explicitAuthFlows(@Nullable List<String> explicitAuthFlows) {
-            this.explicitAuthFlows = Output.ofNullable(explicitAuthFlows);
+            this.explicitAuthFlows = Codegen.ofNullable(explicitAuthFlows);
             return this;
         }
         public Builder explicitAuthFlows(String... explicitAuthFlows) {
@@ -452,7 +453,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder generateSecret(@Nullable Boolean generateSecret) {
-            this.generateSecret = Output.ofNullable(generateSecret);
+            this.generateSecret = Codegen.ofNullable(generateSecret);
             return this;
         }
         public Builder idTokenValidity(@Nullable Output<Integer> idTokenValidity) {
@@ -460,7 +461,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idTokenValidity(@Nullable Integer idTokenValidity) {
-            this.idTokenValidity = Output.ofNullable(idTokenValidity);
+            this.idTokenValidity = Codegen.ofNullable(idTokenValidity);
             return this;
         }
         public Builder logoutUrls(@Nullable Output<List<String>> logoutUrls) {
@@ -468,7 +469,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logoutUrls(@Nullable List<String> logoutUrls) {
-            this.logoutUrls = Output.ofNullable(logoutUrls);
+            this.logoutUrls = Codegen.ofNullable(logoutUrls);
             return this;
         }
         public Builder logoutUrls(String... logoutUrls) {
@@ -479,7 +480,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder preventUserExistenceErrors(@Nullable Output<String> preventUserExistenceErrors) {
@@ -487,7 +488,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preventUserExistenceErrors(@Nullable String preventUserExistenceErrors) {
-            this.preventUserExistenceErrors = Output.ofNullable(preventUserExistenceErrors);
+            this.preventUserExistenceErrors = Codegen.ofNullable(preventUserExistenceErrors);
             return this;
         }
         public Builder readAttributes(@Nullable Output<List<String>> readAttributes) {
@@ -495,7 +496,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readAttributes(@Nullable List<String> readAttributes) {
-            this.readAttributes = Output.ofNullable(readAttributes);
+            this.readAttributes = Codegen.ofNullable(readAttributes);
             return this;
         }
         public Builder readAttributes(String... readAttributes) {
@@ -506,7 +507,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder refreshTokenValidity(@Nullable Integer refreshTokenValidity) {
-            this.refreshTokenValidity = Output.ofNullable(refreshTokenValidity);
+            this.refreshTokenValidity = Codegen.ofNullable(refreshTokenValidity);
             return this;
         }
         public Builder supportedIdentityProviders(@Nullable Output<List<String>> supportedIdentityProviders) {
@@ -514,7 +515,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportedIdentityProviders(@Nullable List<String> supportedIdentityProviders) {
-            this.supportedIdentityProviders = Output.ofNullable(supportedIdentityProviders);
+            this.supportedIdentityProviders = Codegen.ofNullable(supportedIdentityProviders);
             return this;
         }
         public Builder supportedIdentityProviders(String... supportedIdentityProviders) {
@@ -525,7 +526,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tokenValidityUnits(@Nullable UserPoolClientTokenValidityUnitsArgs tokenValidityUnits) {
-            this.tokenValidityUnits = Output.ofNullable(tokenValidityUnits);
+            this.tokenValidityUnits = Codegen.ofNullable(tokenValidityUnits);
             return this;
         }
         public Builder userPoolId(Output<String> userPoolId) {
@@ -541,7 +542,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeAttributes(@Nullable List<String> writeAttributes) {
-            this.writeAttributes = Output.ofNullable(writeAttributes);
+            this.writeAttributes = Codegen.ofNullable(writeAttributes);
             return this;
         }
         public Builder writeAttributes(String... writeAttributes) {

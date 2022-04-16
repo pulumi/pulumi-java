@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,7 +33,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     @Import(name="hybridRunbookWorkerGroupName", required=true)
       private final Output<String> hybridRunbookWorkerGroupName;
 
-    public Output<String> getHybridRunbookWorkerGroupName() {
+    public Output<String> hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
     }
 
@@ -43,8 +44,8 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     @Import(name="hybridRunbookWorkerId")
       private final @Nullable Output<String> hybridRunbookWorkerId;
 
-    public Output<String> getHybridRunbookWorkerId() {
-        return this.hybridRunbookWorkerId == null ? Output.empty() : this.hybridRunbookWorkerId;
+    public Output<String> hybridRunbookWorkerId() {
+        return this.hybridRunbookWorkerId == null ? Codegen.empty() : this.hybridRunbookWorkerId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,8 +77,8 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     @Import(name="vmResourceId")
       private final @Nullable Output<String> vmResourceId;
 
-    public Output<String> getVmResourceId() {
-        return this.vmResourceId == null ? Output.empty() : this.vmResourceId;
+    public Output<String> vmResourceId() {
+        return this.vmResourceId == null ? Codegen.empty() : this.vmResourceId;
     }
 
     public HybridRunbookWorkerArgs(
@@ -96,12 +97,12 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     }
 
     private HybridRunbookWorkerArgs() {
-        this.automationAccountName = Output.empty();
-        this.hybridRunbookWorkerGroupName = Output.empty();
-        this.hybridRunbookWorkerId = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.vmResourceId = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.hybridRunbookWorkerGroupName = Codegen.empty();
+        this.hybridRunbookWorkerId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.vmResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder hybridRunbookWorkerId(@Nullable String hybridRunbookWorkerId) {
-            this.hybridRunbookWorkerId = Output.ofNullable(hybridRunbookWorkerId);
+            this.hybridRunbookWorkerId = Codegen.ofNullable(hybridRunbookWorkerId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -163,7 +164,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -179,7 +180,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder vmResourceId(@Nullable String vmResourceId) {
-            this.vmResourceId = Output.ofNullable(vmResourceId);
+            this.vmResourceId = Codegen.ofNullable(vmResourceId);
             return this;
         }        public HybridRunbookWorkerArgs build() {
             return new HybridRunbookWorkerArgs(automationAccountName, hybridRunbookWorkerGroupName, hybridRunbookWorkerId, name, resourceGroupName, vmResourceId);

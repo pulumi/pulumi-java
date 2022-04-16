@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.container_v1.inputs.AdvancedMachineFeaturesArgs;
 import io.pulumi.googlenative.container_v1.inputs.GcfsConfigArgs;
@@ -40,8 +41,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
-    public Output<List<AcceleratorConfigArgs>> getAccelerators() {
-        return this.accelerators == null ? Output.empty() : this.accelerators;
+    public Output<List<AcceleratorConfigArgs>> accelerators() {
+        return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advancedMachineFeatures")
       private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Output<AdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Output.empty() : this.advancedMachineFeatures;
+    public Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures() {
+        return this.advancedMachineFeatures == null ? Codegen.empty() : this.advancedMachineFeatures;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> getBootDiskKmsKey() {
-        return this.bootDiskKmsKey == null ? Output.empty() : this.bootDiskKmsKey;
+    public Output<String> bootDiskKmsKey() {
+        return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<Integer> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+    public Output<String> diskType() {
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcfsConfig")
       private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
-    public Output<GcfsConfigArgs> getGcfsConfig() {
-        return this.gcfsConfig == null ? Output.empty() : this.gcfsConfig;
+    public Output<GcfsConfigArgs> gcfsConfig() {
+        return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gvnic")
       private final @Nullable Output<VirtualNICArgs> gvnic;
 
-    public Output<VirtualNICArgs> getGvnic() {
-        return this.gvnic == null ? Output.empty() : this.gvnic;
+    public Output<VirtualNICArgs> gvnic() {
+        return this.gvnic == null ? Codegen.empty() : this.gvnic;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
-        return this.imageType == null ? Output.empty() : this.imageType;
+    public Output<String> imageType() {
+        return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeletConfig")
       private final @Nullable Output<NodeKubeletConfigArgs> kubeletConfig;
 
-    public Output<NodeKubeletConfigArgs> getKubeletConfig() {
-        return this.kubeletConfig == null ? Output.empty() : this.kubeletConfig;
+    public Output<NodeKubeletConfigArgs> kubeletConfig() {
+        return this.kubeletConfig == null ? Codegen.empty() : this.kubeletConfig;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linuxNodeConfig")
       private final @Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig;
 
-    public Output<LinuxNodeConfigArgs> getLinuxNodeConfig() {
-        return this.linuxNodeConfig == null ? Output.empty() : this.linuxNodeConfig;
+    public Output<LinuxNodeConfigArgs> linuxNodeConfig() {
+        return this.linuxNodeConfig == null ? Codegen.empty() : this.linuxNodeConfig;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
-        return this.localSsdCount == null ? Output.empty() : this.localSsdCount;
+    public Output<Integer> localSsdCount() {
+        return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<String> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -183,8 +184,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -194,8 +195,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
+    public Output<String> minCpuPlatform() {
+        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -205,8 +206,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeGroup")
       private final @Nullable Output<String> nodeGroup;
 
-    public Output<String> getNodeGroup() {
-        return this.nodeGroup == null ? Output.empty() : this.nodeGroup;
+    public Output<String> nodeGroup() {
+        return this.nodeGroup == null ? Codegen.empty() : this.nodeGroup;
     }
 
     /**
@@ -216,8 +217,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
+    public Output<List<String>> oauthScopes() {
+        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
     /**
@@ -227,8 +228,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
-        return this.preemptible == null ? Output.empty() : this.preemptible;
+    public Output<Boolean> preemptible() {
+        return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservationAffinity")
       private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
-    public Output<ReservationAffinityArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
+    public Output<ReservationAffinityArgs> reservationAffinity() {
+        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
     }
 
     /**
@@ -249,8 +250,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sandboxConfig")
       private final @Nullable Output<SandboxConfigArgs> sandboxConfig;
 
-    public Output<SandboxConfigArgs> getSandboxConfig() {
-        return this.sandboxConfig == null ? Output.empty() : this.sandboxConfig;
+    public Output<SandboxConfigArgs> sandboxConfig() {
+        return this.sandboxConfig == null ? Codegen.empty() : this.sandboxConfig;
     }
 
     /**
@@ -260,8 +261,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -271,8 +272,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -282,8 +283,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -293,8 +294,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taints")
       private final @Nullable Output<List<NodeTaintArgs>> taints;
 
-    public Output<List<NodeTaintArgs>> getTaints() {
-        return this.taints == null ? Output.empty() : this.taints;
+    public Output<List<NodeTaintArgs>> taints() {
+        return this.taints == null ? Codegen.empty() : this.taints;
     }
 
     /**
@@ -304,8 +305,8 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workloadMetadataConfig")
       private final @Nullable Output<WorkloadMetadataConfigArgs> workloadMetadataConfig;
 
-    public Output<WorkloadMetadataConfigArgs> getWorkloadMetadataConfig() {
-        return this.workloadMetadataConfig == null ? Output.empty() : this.workloadMetadataConfig;
+    public Output<WorkloadMetadataConfigArgs> workloadMetadataConfig() {
+        return this.workloadMetadataConfig == null ? Codegen.empty() : this.workloadMetadataConfig;
     }
 
     public NodeConfigArgs(
@@ -362,31 +363,31 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeConfigArgs() {
-        this.accelerators = Output.empty();
-        this.advancedMachineFeatures = Output.empty();
-        this.bootDiskKmsKey = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.diskType = Output.empty();
-        this.gcfsConfig = Output.empty();
-        this.gvnic = Output.empty();
-        this.imageType = Output.empty();
-        this.kubeletConfig = Output.empty();
-        this.labels = Output.empty();
-        this.linuxNodeConfig = Output.empty();
-        this.localSsdCount = Output.empty();
-        this.machineType = Output.empty();
-        this.metadata = Output.empty();
-        this.minCpuPlatform = Output.empty();
-        this.nodeGroup = Output.empty();
-        this.oauthScopes = Output.empty();
-        this.preemptible = Output.empty();
-        this.reservationAffinity = Output.empty();
-        this.sandboxConfig = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.tags = Output.empty();
-        this.taints = Output.empty();
-        this.workloadMetadataConfig = Output.empty();
+        this.accelerators = Codegen.empty();
+        this.advancedMachineFeatures = Codegen.empty();
+        this.bootDiskKmsKey = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.gcfsConfig = Codegen.empty();
+        this.gvnic = Codegen.empty();
+        this.imageType = Codegen.empty();
+        this.kubeletConfig = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.linuxNodeConfig = Codegen.empty();
+        this.localSsdCount = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.minCpuPlatform = Codegen.empty();
+        this.nodeGroup = Codegen.empty();
+        this.oauthScopes = Codegen.empty();
+        this.preemptible = Codegen.empty();
+        this.reservationAffinity = Codegen.empty();
+        this.sandboxConfig = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.taints = Codegen.empty();
+        this.workloadMetadataConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -462,7 +463,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
-            this.accelerators = Output.ofNullable(accelerators);
+            this.accelerators = Codegen.ofNullable(accelerators);
             return this;
         }
         public Builder accelerators(AcceleratorConfigArgs... accelerators) {
@@ -473,7 +474,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advancedMachineFeatures(@Nullable AdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Output.ofNullable(advancedMachineFeatures);
+            this.advancedMachineFeatures = Codegen.ofNullable(advancedMachineFeatures);
             return this;
         }
         public Builder bootDiskKmsKey(@Nullable Output<String> bootDiskKmsKey) {
@@ -481,7 +482,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Output.ofNullable(bootDiskKmsKey);
+            this.bootDiskKmsKey = Codegen.ofNullable(bootDiskKmsKey);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
@@ -489,7 +490,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder diskType(@Nullable Output<String> diskType) {
@@ -497,7 +498,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder gcfsConfig(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
@@ -505,7 +506,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcfsConfig(@Nullable GcfsConfigArgs gcfsConfig) {
-            this.gcfsConfig = Output.ofNullable(gcfsConfig);
+            this.gcfsConfig = Codegen.ofNullable(gcfsConfig);
             return this;
         }
         public Builder gvnic(@Nullable Output<VirtualNICArgs> gvnic) {
@@ -513,7 +514,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gvnic(@Nullable VirtualNICArgs gvnic) {
-            this.gvnic = Output.ofNullable(gvnic);
+            this.gvnic = Codegen.ofNullable(gvnic);
             return this;
         }
         public Builder imageType(@Nullable Output<String> imageType) {
@@ -521,7 +522,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Output.ofNullable(imageType);
+            this.imageType = Codegen.ofNullable(imageType);
             return this;
         }
         public Builder kubeletConfig(@Nullable Output<NodeKubeletConfigArgs> kubeletConfig) {
@@ -529,7 +530,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubeletConfig(@Nullable NodeKubeletConfigArgs kubeletConfig) {
-            this.kubeletConfig = Output.ofNullable(kubeletConfig);
+            this.kubeletConfig = Codegen.ofNullable(kubeletConfig);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -537,7 +538,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder linuxNodeConfig(@Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig) {
@@ -545,7 +546,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linuxNodeConfig(@Nullable LinuxNodeConfigArgs linuxNodeConfig) {
-            this.linuxNodeConfig = Output.ofNullable(linuxNodeConfig);
+            this.linuxNodeConfig = Codegen.ofNullable(linuxNodeConfig);
             return this;
         }
         public Builder localSsdCount(@Nullable Output<Integer> localSsdCount) {
@@ -553,7 +554,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localSsdCount(@Nullable Integer localSsdCount) {
-            this.localSsdCount = Output.ofNullable(localSsdCount);
+            this.localSsdCount = Codegen.ofNullable(localSsdCount);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -561,7 +562,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -569,7 +570,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
@@ -577,7 +578,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
             return this;
         }
         public Builder nodeGroup(@Nullable Output<String> nodeGroup) {
@@ -585,7 +586,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeGroup(@Nullable String nodeGroup) {
-            this.nodeGroup = Output.ofNullable(nodeGroup);
+            this.nodeGroup = Codegen.ofNullable(nodeGroup);
             return this;
         }
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
@@ -593,7 +594,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Output.ofNullable(oauthScopes);
+            this.oauthScopes = Codegen.ofNullable(oauthScopes);
             return this;
         }
         public Builder oauthScopes(String... oauthScopes) {
@@ -604,7 +605,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Output.ofNullable(preemptible);
+            this.preemptible = Codegen.ofNullable(preemptible);
             return this;
         }
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
@@ -612,7 +613,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Output.ofNullable(reservationAffinity);
+            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
             return this;
         }
         public Builder sandboxConfig(@Nullable Output<SandboxConfigArgs> sandboxConfig) {
@@ -620,7 +621,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sandboxConfig(@Nullable SandboxConfigArgs sandboxConfig) {
-            this.sandboxConfig = Output.ofNullable(sandboxConfig);
+            this.sandboxConfig = Codegen.ofNullable(sandboxConfig);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -628,7 +629,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
@@ -636,7 +637,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -644,7 +645,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -655,7 +656,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taints(@Nullable List<NodeTaintArgs> taints) {
-            this.taints = Output.ofNullable(taints);
+            this.taints = Codegen.ofNullable(taints);
             return this;
         }
         public Builder taints(NodeTaintArgs... taints) {
@@ -666,7 +667,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workloadMetadataConfig(@Nullable WorkloadMetadataConfigArgs workloadMetadataConfig) {
-            this.workloadMetadataConfig = Output.ofNullable(workloadMetadataConfig);
+            this.workloadMetadataConfig = Codegen.ofNullable(workloadMetadataConfig);
             return this;
         }        public NodeConfigArgs build() {
             return new NodeConfigArgs(accelerators, advancedMachineFeatures, bootDiskKmsKey, diskSizeGb, diskType, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, tags, taints, workloadMetadataConfig);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
     @Import(name="domainNameLabel", required=true)
       private final Output<String> domainNameLabel;
 
-    public Output<String> getDomainNameLabel() {
+    public Output<String> domainNameLabel() {
         return this.domainNameLabel;
     }
 
@@ -33,7 +34,7 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
     }
 
     private VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs() {
-        this.domainNameLabel = Output.empty();
+        this.domainNameLabel = Codegen.empty();
     }
 
     public static Builder builder() {

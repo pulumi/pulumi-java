@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -32,8 +33,8 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
     @Import(name="roleSessionName")
       private final @Nullable Output<String> roleSessionName;
 
-    public Output<String> getRoleSessionName() {
-        return this.roleSessionName == null ? Output.empty() : this.roleSessionName;
+    public Output<String> roleSessionName() {
+        return this.roleSessionName == null ? Codegen.empty() : this.roleSessionName;
     }
 
     public AwsClusterControlPlaneAwsServicesAuthenticationArgs(
@@ -44,8 +45,8 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
     }
 
     private AwsClusterControlPlaneAwsServicesAuthenticationArgs() {
-        this.roleArn = Output.empty();
-        this.roleSessionName = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.roleSessionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
             return this;
         }
         public Builder roleSessionName(@Nullable String roleSessionName) {
-            this.roleSessionName = Output.ofNullable(roleSessionName);
+            this.roleSessionName = Codegen.ofNullable(roleSessionName);
             return this;
         }        public AwsClusterControlPlaneAwsServicesAuthenticationArgs build() {
             return new AwsClusterControlPlaneAwsServicesAuthenticationArgs(roleArn, roleSessionName);

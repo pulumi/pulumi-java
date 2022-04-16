@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArg
     @Import(name="mappingParameters")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs> getMappingParameters() {
-        return this.mappingParameters == null ? Output.empty() : this.mappingParameters;
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs> mappingParameters() {
+        return this.mappingParameters == null ? Codegen.empty() : this.mappingParameters;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArg
     @Import(name="recordFormatType")
       private final @Nullable Output<String> recordFormatType;
 
-    public Output<String> getRecordFormatType() {
-        return this.recordFormatType == null ? Output.empty() : this.recordFormatType;
+    public Output<String> recordFormatType() {
+        return this.recordFormatType == null ? Codegen.empty() : this.recordFormatType;
     }
 
     public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs(
@@ -46,8 +47,8 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArg
     }
 
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs() {
-        this.mappingParameters = Output.empty();
-        this.recordFormatType = Output.empty();
+        this.mappingParameters = Codegen.empty();
+        this.recordFormatType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArg
             return this;
         }
         public Builder mappingParameters(@Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs mappingParameters) {
-            this.mappingParameters = Output.ofNullable(mappingParameters);
+            this.mappingParameters = Codegen.ofNullable(mappingParameters);
             return this;
         }
         public Builder recordFormatType(@Nullable Output<String> recordFormatType) {
@@ -85,7 +86,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArg
             return this;
         }
         public Builder recordFormatType(@Nullable String recordFormatType) {
-            this.recordFormatType = Output.ofNullable(recordFormatType);
+            this.recordFormatType = Codegen.ofNullable(recordFormatType);
             return this;
         }        public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs build() {
             return new AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs(mappingParameters, recordFormatType);

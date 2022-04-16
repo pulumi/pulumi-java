@@ -10,6 +10,7 @@ import io.pulumi.awsnative.appintegrations.outputs.DataIntegrationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the data integration.
      * 
      */
-    public Output<String> getDataIntegrationArn() {
+    public Output<String> dataIntegrationArn() {
         return this.dataIntegrationArn;
     }
     /**
@@ -45,7 +46,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @return The data integration description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @return The KMS key of the data integration.
      * 
      */
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey;
     }
     /**
@@ -73,7 +74,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @return The name of the data integration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @return The name of the data and how often it should be pulled from the source.
      * 
      */
-    public Output<DataIntegrationScheduleConfig> getScheduleConfig() {
+    public Output<DataIntegrationScheduleConfig> scheduleConfig() {
         return this.scheduleConfig;
     }
     /**
@@ -101,7 +102,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @return The URI of the data source.
      * 
      */
-    public Output<String> getSourceURI() {
+    public Output<String> sourceURI() {
         return this.sourceURI;
     }
     /**
@@ -115,7 +116,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the data integration.
      * 
      */
-    public Output</* @Nullable */ List<DataIntegrationTag>> getTags() {
+    public Output</* @Nullable */ List<DataIntegrationTag>> tags() {
         return this.tags;
     }
 
@@ -141,7 +142,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataIntegration(String name, DataIntegrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appintegrations:DataIntegration", name, args == null ? DataIntegrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:appintegrations:DataIntegration", name, args == null ? DataIntegrationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataIntegration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

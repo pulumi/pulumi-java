@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class VirtualNetworkBgpCommunitiesArgs extends io.pulumi.resources.
     @Import(name="virtualNetworkCommunity", required=true)
       private final Output<String> virtualNetworkCommunity;
 
-    public Output<String> getVirtualNetworkCommunity() {
+    public Output<String> virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }
 
@@ -33,7 +34,7 @@ public final class VirtualNetworkBgpCommunitiesArgs extends io.pulumi.resources.
     }
 
     private VirtualNetworkBgpCommunitiesArgs() {
-        this.virtualNetworkCommunity = Output.empty();
+        this.virtualNetworkCommunity = Codegen.empty();
     }
 
     public static Builder builder() {

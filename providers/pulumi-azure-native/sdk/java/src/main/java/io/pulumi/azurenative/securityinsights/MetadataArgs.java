@@ -12,6 +12,7 @@ import io.pulumi.azurenative.securityinsights.inputs.MetadataSupportArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="author")
       private final @Nullable Output<MetadataAuthorArgs> author;
 
-    public Output<MetadataAuthorArgs> getAuthor() {
-        return this.author == null ? Output.empty() : this.author;
+    public Output<MetadataAuthorArgs> author() {
+        return this.author == null ? Codegen.empty() : this.author;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categories")
       private final @Nullable Output<MetadataCategoriesArgs> categories;
 
-    public Output<MetadataCategoriesArgs> getCategories() {
-        return this.categories == null ? Output.empty() : this.categories;
+    public Output<MetadataCategoriesArgs> categories() {
+        return this.categories == null ? Codegen.empty() : this.categories;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentId")
       private final @Nullable Output<String> contentId;
 
-    public Output<String> getContentId() {
-        return this.contentId == null ? Output.empty() : this.contentId;
+    public Output<String> contentId() {
+        return this.contentId == null ? Codegen.empty() : this.contentId;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependencies")
       private final @Nullable Output<MetadataDependenciesArgs> dependencies;
 
-    public Output<MetadataDependenciesArgs> getDependencies() {
-        return this.dependencies == null ? Output.empty() : this.dependencies;
+    public Output<MetadataDependenciesArgs> dependencies() {
+        return this.dependencies == null ? Codegen.empty() : this.dependencies;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstPublishDate")
       private final @Nullable Output<String> firstPublishDate;
 
-    public Output<String> getFirstPublishDate() {
-        return this.firstPublishDate == null ? Output.empty() : this.firstPublishDate;
+    public Output<String> firstPublishDate() {
+        return this.firstPublishDate == null ? Codegen.empty() : this.firstPublishDate;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
 
@@ -95,8 +96,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastPublishDate")
       private final @Nullable Output<String> lastPublishDate;
 
-    public Output<String> getLastPublishDate() {
-        return this.lastPublishDate == null ? Output.empty() : this.lastPublishDate;
+    public Output<String> lastPublishDate() {
+        return this.lastPublishDate == null ? Codegen.empty() : this.lastPublishDate;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
 
-    public Output<String> getMetadataName() {
-        return this.metadataName == null ? Output.empty() : this.metadataName;
+    public Output<String> metadataName() {
+        return this.metadataName == null ? Codegen.empty() : this.metadataName;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -128,7 +129,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
 
@@ -139,8 +140,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providers")
       private final @Nullable Output<List<String>> providers;
 
-    public Output<List<String>> getProviders() {
-        return this.providers == null ? Output.empty() : this.providers;
+    public Output<List<String>> providers() {
+        return this.providers == null ? Codegen.empty() : this.providers;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -161,8 +162,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<MetadataSourceArgs> source;
 
-    public Output<MetadataSourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<MetadataSourceArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="support")
       private final @Nullable Output<MetadataSupportArgs> support;
 
-    public Output<MetadataSupportArgs> getSupport() {
-        return this.support == null ? Output.empty() : this.support;
+    public Output<MetadataSupportArgs> support() {
+        return this.support == null ? Codegen.empty() : this.support;
     }
 
     /**
@@ -183,8 +184,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -194,7 +195,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -234,22 +235,22 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataArgs() {
-        this.author = Output.empty();
-        this.categories = Output.empty();
-        this.contentId = Output.empty();
-        this.dependencies = Output.empty();
-        this.firstPublishDate = Output.empty();
-        this.kind = Output.empty();
-        this.lastPublishDate = Output.empty();
-        this.metadataName = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.parentId = Output.empty();
-        this.providers = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.support = Output.empty();
-        this.version = Output.empty();
-        this.workspaceName = Output.empty();
+        this.author = Codegen.empty();
+        this.categories = Codegen.empty();
+        this.contentId = Codegen.empty();
+        this.dependencies = Codegen.empty();
+        this.firstPublishDate = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.lastPublishDate = Codegen.empty();
+        this.metadataName = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.parentId = Codegen.empty();
+        this.providers = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.support = Codegen.empty();
+        this.version = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -307,7 +308,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder author(@Nullable MetadataAuthorArgs author) {
-            this.author = Output.ofNullable(author);
+            this.author = Codegen.ofNullable(author);
             return this;
         }
         public Builder categories(@Nullable Output<MetadataCategoriesArgs> categories) {
@@ -315,7 +316,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder categories(@Nullable MetadataCategoriesArgs categories) {
-            this.categories = Output.ofNullable(categories);
+            this.categories = Codegen.ofNullable(categories);
             return this;
         }
         public Builder contentId(@Nullable Output<String> contentId) {
@@ -323,7 +324,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentId(@Nullable String contentId) {
-            this.contentId = Output.ofNullable(contentId);
+            this.contentId = Codegen.ofNullable(contentId);
             return this;
         }
         public Builder dependencies(@Nullable Output<MetadataDependenciesArgs> dependencies) {
@@ -331,7 +332,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dependencies(@Nullable MetadataDependenciesArgs dependencies) {
-            this.dependencies = Output.ofNullable(dependencies);
+            this.dependencies = Codegen.ofNullable(dependencies);
             return this;
         }
         public Builder firstPublishDate(@Nullable Output<String> firstPublishDate) {
@@ -339,7 +340,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstPublishDate(@Nullable String firstPublishDate) {
-            this.firstPublishDate = Output.ofNullable(firstPublishDate);
+            this.firstPublishDate = Codegen.ofNullable(firstPublishDate);
             return this;
         }
         public Builder kind(Output<Either<String,Kind>> kind) {
@@ -355,7 +356,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastPublishDate(@Nullable String lastPublishDate) {
-            this.lastPublishDate = Output.ofNullable(lastPublishDate);
+            this.lastPublishDate = Codegen.ofNullable(lastPublishDate);
             return this;
         }
         public Builder metadataName(@Nullable Output<String> metadataName) {
@@ -363,7 +364,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadataName(@Nullable String metadataName) {
-            this.metadataName = Output.ofNullable(metadataName);
+            this.metadataName = Codegen.ofNullable(metadataName);
             return this;
         }
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
@@ -387,7 +388,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providers(@Nullable List<String> providers) {
-            this.providers = Output.ofNullable(providers);
+            this.providers = Codegen.ofNullable(providers);
             return this;
         }
         public Builder providers(String... providers) {
@@ -406,7 +407,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable MetadataSourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder support(@Nullable Output<MetadataSupportArgs> support) {
@@ -414,7 +415,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder support(@Nullable MetadataSupportArgs support) {
-            this.support = Output.ofNullable(support);
+            this.support = Codegen.ofNullable(support);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -422,7 +423,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

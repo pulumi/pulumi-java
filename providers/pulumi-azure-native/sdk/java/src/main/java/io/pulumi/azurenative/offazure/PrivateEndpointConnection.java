@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Gets the tag for optimistic concurrency control.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -57,7 +58,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Gets the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Gets the properties of the object.
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +86,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -99,7 +100,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -125,7 +126,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:offazure:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:offazure:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -1,21 +1,30 @@
 package io.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.collect.*;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
-import io.pulumi.Stack;
-import io.pulumi.Stack.StackInternal;
 import io.pulumi.core.Output;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple4;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.CompletableFutures;
+import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.Environment;
+import io.pulumi.core.internal.Exceptions;
+import io.pulumi.core.internal.GlobalLogging;
+import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.*;
+import io.pulumi.core.internal.OutputCompletionSource;
+import io.pulumi.core.internal.OutputData;
+import io.pulumi.core.internal.OutputInternal;
+import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.Deployment;
@@ -23,10 +32,26 @@ import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.exceptions.LogException;
 import io.pulumi.exceptions.ResourceException;
 import io.pulumi.exceptions.RunException;
-import io.pulumi.resources.*;
+import io.pulumi.resources.CallArgs;
+import io.pulumi.resources.ComponentResource;
+import io.pulumi.resources.ComponentResourceOptions;
+import io.pulumi.resources.CustomResource;
+import io.pulumi.resources.CustomResourceOptions;
+import io.pulumi.resources.CustomTimeouts;
+import io.pulumi.resources.DependencyResource;
+import io.pulumi.resources.InvokeArgs;
+import io.pulumi.resources.ProviderResource;
+import io.pulumi.resources.Resource;
+import io.pulumi.resources.ResourceArgs;
+import io.pulumi.resources.ResourceOptions;
+import io.pulumi.resources.Stack;
+import io.pulumi.resources.Stack.StackInternal;
+import io.pulumi.resources.StackOptions;
 import io.pulumi.serialization.internal.Converter;
+import io.pulumi.serialization.internal.Deserializer;
 import io.pulumi.serialization.internal.JsonFormatter;
 import io.pulumi.serialization.internal.PropertiesSerializer;
+import io.pulumi.serialization.internal.PropertiesSerializer.SerializationResult;
 import io.pulumi.serialization.internal.Structs;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
@@ -42,9 +67,21 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.time.Duration;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.Optional;
+import java.util.Queue;
+import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -56,18 +93,22 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
-import static io.pulumi.core.internal.Environment.*;
+import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
+import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
+import static io.pulumi.core.internal.Environment.getIntegerEnvironmentVariable;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
 import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
+@InternalUse
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
 
     private final DeploymentState state;
     private final Log log;
     private final FeatureSupport featureSupport;
     private final PropertiesSerializer serialization;
+    private final Deserializer deserializer;
     private final Converter converter;
     private final Invoke invoke;
     private final Call call;
@@ -78,70 +119,46 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final RegisterResourceOutputs registerResourceOutputs;
     private final RootResource rootResource;
 
+    @InternalUse
     DeploymentImpl() {
-        this(fromEnvironment());
+        this(DeploymentState.fromEnvironment());
     }
 
     // TODO private Deployment(InlineDeploymentSettings settings)
 
     @InternalUse
     @VisibleForTesting
-    DeploymentImpl(
+    public DeploymentImpl(
             DeploymentState state
     ) {
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
         this.serialization = new PropertiesSerializer(this.log);
-        this.converter = new Converter(this.log);
+        this.deserializer = new Deserializer();
+        this.converter = new Converter(this.log, this.deserializer);
         this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
         this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
         this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
         this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
-        this.readOrRegisterResource = new ReadOrRegisterResource(state.runner, this.invoke, this.readResource, this.registerResource, this.converter, state.isDryRun);
-        this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, state.monitor, this.featureSupport, this.serialization);
+        this.readOrRegisterResource = new ReadOrRegisterResource(
+                this.log, state.runner, this.invoke, this.readResource,
+                this.registerResource, this.converter, state.isDryRun
+        );
+        this.registerResourceOutputs = new RegisterResourceOutputs(
+                this.log, state.runner, state.monitor, this.featureSupport, this.serialization
+        );
     }
 
-    /**
-     * @throws IllegalArgumentException if an environment variable is not found
-     */
-    private static DeploymentState fromEnvironment() {
-        var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
-        standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
-
-        Function<Exception, RuntimeException> startErrorSupplier = (Exception e) ->
-                new IllegalArgumentException("Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e);
-
-        try {
-            var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
-            var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
-            var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
-            var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
-//            var pwd = getEnvironmentVariable("PULUMI_PWD");
-            var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
-//            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
-//            var parallel = getIntegerEnvironmentVariable("PULUMI_PARALLEL");
-//            var tracing = getEnvironmentVariable("PULUMI_TRACING");
-            // TODO what to do with all the unused envvars?
-
-            var config = Config.parse();
-            standardLogger.setLevel(GlobalLogging.GlobalLevel);
-
-            standardLogger.log(Level.FINEST, "Creating deployment engine");
-            var engine = new GrpcEngine(engineTarget);
-            standardLogger.log(Level.FINEST, "Created deployment engine");
-
-            standardLogger.log(Level.FINEST, "Creating deployment monitor");
-            var monitor = new GrpcMonitor(monitorTarget);
-            standardLogger.log(Level.FINEST, "Created deployment monitor");
-
-            return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
-        } catch (NullPointerException ex) {
-            throw new IllegalStateException(
-                    "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);
-        }
+    @InternalUse
+    @VisibleForTesting
+    public static DeploymentImpl fromEnvironment() {
+        var state = DeploymentState.fromEnvironment();
+        var impl = new DeploymentImpl(state);
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
+        return impl;
     }
 
     @Override
@@ -161,9 +178,20 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.state.isDryRun;
     }
 
+    @Override
     @InternalUse
     public Runner getRunner() {
         return this.state.runner;
+    }
+
+    public Log getLog() {
+        return this.log;
+    }
+
+    @Override
+    @InternalUse
+    public Config getConfig() {
+        return this.state.config;
     }
 
     public Optional<String> getConfig(String fullKey) {
@@ -223,8 +251,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @ParametersAreNonnullByDefault
     @InternalUse
-    @VisibleForTesting
-    static class Config {
+    public static class Config {
 
         /**
          * The environment variable key that the language plugin uses to set configuration values.
@@ -358,11 +385,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          * remove this function.
          */
         private static String cleanKey(String key) {
+            final var prefix = "config:";
             var idx = key.indexOf(":");
-            if (idx > 0 && key.substring(idx + 1).startsWith("config:")) {
-                return key.substring(0, idx) + ":" + key.substring(idx + 1 + "config:".length());
+            if (idx > 0 && key.substring(idx + 1).startsWith(prefix)) {
+                return key.substring(0, idx) + ":" + key.substring(idx + 1 + prefix.length());
             }
-
             return key;
         }
     }
@@ -494,17 +521,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
             return invokeRawAsync(token, args, options).thenApply(
-                    result -> this.converter.convertValue(
-                            String.format("%s result", token),
-                            Value.newBuilder()
-                                    .setStructValue(result.serialized)
-                                    .build(),
-                            targetType
-                    ))
+                            result -> this.converter.convertValue(
+                                    String.format("%s result", token),
+                                    Value.newBuilder()
+                                            .setStructValue(result.serialized)
+                                            .build(),
+                                    targetType
+                            ))
                     .thenApply(OutputData::getValueNullable);
         }
 
-        private CompletableFuture<PropertiesSerializer.SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
+        private CompletableFuture<SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
@@ -554,7 +581,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                 throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
                             }
-                            return new PropertiesSerializer.SerializationResult(response.getReturn(), serialized.propertyToDependentResources);
+                            return new SerializationResult(response.getReturn(), serialized.propertyToDependentResources);
                         });
                     });
         }
@@ -823,12 +850,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                 //       It would be great to add more tests and maybe remove 'provider' in favour of 'providers' only
 
                                                                                 providerFutures = CompletableFutures.allOf(
-                                                                                        componentOpts.getProviders().stream()
-                                                                                                .map(Internal::from)
-                                                                                                .collect(toMap(
-                                                                                                        ProviderResource.ProviderResourceInternal::getPackage,
-                                                                                                        ProviderResource.ProviderResourceInternal::getRegistrationId
-                                                                                                )))
+                                                                                                componentOpts.getProviders().stream()
+                                                                                                        .map(Internal::from)
+                                                                                                        .collect(toMap(
+                                                                                                                ProviderResource.ProviderResourceInternal::getPackage,
+                                                                                                                ProviderResource.ProviderResourceInternal::getRegistrationId
+                                                                                                        )))
                                                                                         .thenApply(ImmutableMap::copyOf);
                                                                             } else {
                                                                                 providerFutures = CompletableFuture.completedFuture(ImmutableMap.of());
@@ -870,9 +897,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                     // the former has been processed in the Resource constructor prior to calling
                                                                                                     // 'registerResource' - both adding new inherited aliases and simplifying aliases down to URNs.
                                                                                                     var aliasesFuture = CompletableFutures.allOf(
-                                                                                                            Internal.from(res).getAliases().stream()
-                                                                                                                    .map(alias -> Internal.of(alias).getValueOrDefault(""))
-                                                                                                                    .collect(toSet()))
+                                                                                                                    Internal.from(res).getAliases().stream()
+                                                                                                                            .map(alias -> Internal.of(alias).getValueOrDefault(""))
+                                                                                                                            .collect(toSet()))
                                                                                                             .thenApply(completed -> completed.stream()
                                                                                                                     .filter(Strings::isNonEmptyOrNull)
                                                                                                                     .collect(toImmutableSet())); // the Set will make sure the aliases de-duplicated
@@ -1012,12 +1039,30 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
-    public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options) {
-        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options);
+    public void readOrRegisterResource(
+            Resource resource, boolean remote, Function<String, Resource> newDependency,
+            ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy
+    ) {
+        this.readOrRegisterResource.readOrRegisterResource(resource, remote, newDependency, args, options, lazy);
+    }
+
+    private static final class RawResourceResult {
+        public final String urn;
+        public final String id;
+        public final Struct data;
+        public final ImmutableMap<String, ImmutableSet<Resource>> dependencies;
+
+        private RawResourceResult(String urn, String id, Struct data, ImmutableMap<String, ImmutableSet<Resource>> dependencies) {
+            this.urn = Objects.requireNonNull(urn, "RegisterResourceAsyncResult expected non-null 'urn'");
+            this.id = Objects.requireNonNull(id, "RegisterResourceAsyncResult expected non-null 'id'");
+            this.data = Objects.requireNonNull(data, "RegisterResourceAsyncResult expected non-null 'data'");
+            this.dependencies = Objects.requireNonNull(dependencies, "RegisterResourceAsyncResult expected non-null 'dependencies'");
+        }
     }
 
     private static final class ReadOrRegisterResource {
 
+        private final Log log;
         private final Runner runner;
         private final Invoke invoke;
         private final ReadResource readResource;
@@ -1026,6 +1071,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final boolean isDryRun;
 
         private ReadOrRegisterResource(
+                Log log,
                 Runner runner,
                 Invoke invoke,
                 ReadResource readResource,
@@ -1033,6 +1079,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 Converter converter,
                 boolean isDryRun
         ) {
+            this.log = Objects.requireNonNull(log);
             this.runner = Objects.requireNonNull(runner);
             this.invoke = Objects.requireNonNull(invoke);
             this.readResource = Objects.requireNonNull(readResource);
@@ -1041,7 +1088,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.isDryRun = isDryRun;
         }
 
-        public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options) {
+        public void readOrRegisterResource(
+                Resource resource, boolean remote, Function<String, Resource> newDependency,
+                ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy
+        ) {
             // readOrRegisterResource is called in a fire-and-forget manner. Make sure we keep
             // track of this task so that the application will not quit until this async work
             // completes.
@@ -1060,31 +1110,32 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             this.runner.registerTask(
                     String.format("readOrRegisterResource: %s-%s", resource.getResourceType(), resource.getResourceName()),
-                    completeResourceAsync(resource, remote, newDependency, args, options, completionSources));
+                    completeResourceAsync(resource, remote, newDependency, args, options, completionSources, lazy)
+            );
         }
 
         /**
-         * Calls @see {@link #readOrRegisterResource(Resource, boolean, Function, ResourceArgs, ResourceOptions)}"
+         * Calls @see {@link #readOrRegisterResource(Resource, boolean, Function, ResourceArgs, ResourceOptions, Resource.LazyFields)}"
          * then completes all the @see {@link OutputCompletionSource} sources on the {@code resource}
          * with the results of it.
          */
         private CompletableFuture<Void> completeResourceAsync(
-                Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
-                ResourceOptions options, ImmutableMap<String, OutputCompletionSource<?>> completionSources
+                Resource resource, boolean remote, Function<String, Resource> newDependency,
+                ResourceArgs args, ResourceOptions options,
+                ImmutableMap<String, OutputCompletionSource<?>> completionSources,
+                Resource.LazyFields lazy
         ) {
             return readOrRegisterResourceAsync(resource, remote, newDependency, args, options)
                     .thenApplyAsync(response -> {
-                        var urn = response.t1;
-                        var id = response.t2;
-                        var data = response.t3;
-                        var dependencies = response.t4;
+                        var urn = response.urn;
+                        var id = response.id;
+                        var data = response.data;
+                        var dependencies = response.dependencies;
 
-                        Internal.from(resource).setUrn(Output.of(urn));
-
+                        lazy.urn().completeOrThrow(Output.of(urn));
                         if (resource instanceof CustomResource) {
-                            var customResource = (CustomResource) resource;
                             var isKnown = isNonEmptyOrNull(id);
-                            Internal.from(customResource).setId(isKnown
+                            lazy.id().orElseThrow().completeOrThrow(isKnown
                                     ? Output.of(id)
                                     : new OutputInternal<>(OutputData.unknown()));
                         }
@@ -1095,7 +1146,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             var fieldName = entry.getKey();
                             OutputCompletionSource<?> completionSource = entry.getValue();
 
-                            // We process and deserialize each field (instead of bulk processing
+                            // We process and deserialize each field instead of bulk processing
                             // 'response.data' so that each field can have independent isKnown/isSecret values.
                             // We do not want to bubble up isKnown/isSecret from one field to the rest.
                             var value = Structs.tryGetValue(data, fieldName);
@@ -1110,13 +1161,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 );
                             }
                         }
-                        //noinspection RedundantCast
                         return (Void) null;
                     })
                     // Wrap with `whenComplete` so that we always resolve all the outputs of the resource
                     // regardless of whether we encounter an errors computing the action.
                     .whenComplete((__, throwable) -> {
-                        if (throwable != null && throwable instanceof Exception) {
+                        if (throwable instanceof Exception) {
                             var e = (Exception) throwable;
                             // Mark any unresolved output properties with this exception. That way we don't
                             // leave any outstanding tasks sitting around which might cause hangs.
@@ -1125,10 +1175,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             }
                         }
                         if (throwable != null) {
-                            Output<String> failed = Output.of(CompletableFuture.failedFuture(throwable));
-                            Internal.from(resource).trySetUrn(failed);
+                            lazy.urn().fail(throwable);
                             if (resource instanceof CustomResource) {
-                                Internal.from((CustomResource) resource).trySetId(failed);
+                                lazy.id().orElseThrow().fail(throwable);
                             }
                         }
                         // Ensure that we've at least resolved all our completion sources. That way we
@@ -1142,19 +1191,25 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         Output<String> defaultValue = this.isDryRun
                                 ? new OutputInternal<>(OutputData.unknown())
                                 : Output.of("");
-                        Internal.from(resource).trySetUrn(defaultValue);
+                        lazy.urn().complete(defaultValue);
                         if (resource instanceof CustomResource) {
-                            Internal.from((CustomResource) resource).trySetId(defaultValue);
+                            lazy.id().orElseThrow().complete(defaultValue);
                         }
                     });
         }
 
-        private CompletableFuture<Tuple4<String /* urn */, String /* id */, Struct, ImmutableMap<String, ImmutableSet<Resource>>>> readOrRegisterResourceAsync(
+        private CompletableFuture<RawResourceResult> readOrRegisterResourceAsync(
                 Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
                 ResourceOptions options
         ) {
             if (options.getUrn().isPresent()) {
                 // This is a resource that already exists. Read its state from the engine.
+
+                // Before we can proceed, all our dependencies must be finished.
+                log.excessive(
+                        "Reading existing resource: t=%s, name=%s, urn=%s, remote=%s",
+                        resource.getResourceType(), resource.getResourceName(), options.getUrn().get(), remote
+                );
                 return this.invoke.invokeRawAsync(
                         "pulumi:pulumi:getResource",
                         new GetResourceInvokeArgs(options.getUrn().get()),
@@ -1164,7 +1219,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     var urn = result.getFieldsMap().get(Constants.UrnPropertyName).getStringValue();
                     var id = result.getFieldsMap().get(Constants.IdPropertyName).getStringValue();
                     var state = result.getFieldsMap().get(Constants.StatePropertyName).getStructValue();
-                    return Tuples.of(urn, id, state, ImmutableMap.of());
+                    return new RawResourceResult(urn, id, state, ImmutableMap.of());
                 });
             }
 
@@ -1220,7 +1275,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.monitor = Objects.requireNonNull(monitor);
         }
 
-        private CompletableFuture<Tuple4<String /* urn */, String /* id */, Struct, ImmutableMap<String, ImmutableSet<Resource>>>> readResourceAsync(
+        private CompletableFuture<RawResourceResult> readResourceAsync(
                 Resource resource, String id, ResourceArgs args, ResourceOptions options
         ) {
             var name = resource.getResourceName();
@@ -1252,7 +1307,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                         // Now run the operation, serializing the invocation if necessary.
                         return this.monitor.readResourceAsync(resource, request.build())
-                                .thenApply(response -> Tuples.of(
+                                .thenApply(response -> new RawResourceResult(
                                         response.getUrn(), id, response.getProperties(), ImmutableMap.of()
                                 ));
 
@@ -1272,7 +1327,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.monitor = Objects.requireNonNull(monitor);
         }
 
-        private CompletableFuture<Tuple4<String /* urn */, String /* id */, Struct, ImmutableMap<String, ImmutableSet<Resource>>>> registerResourceAsync(
+        private CompletableFuture<RawResourceResult> registerResourceAsync(
                 Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
                 ResourceOptions options) {
             var name = resource.getResourceName();
@@ -1314,7 +1369,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                             .collect(toImmutableSet())
                                             ));
 
-                                    return Tuples.of(result.getUrn(), result.getId(), result.getObject(), dependencies);
+                                    return new RawResourceResult(result.getUrn(), result.getId(), result.getObject(), dependencies);
                                 });
                     });
         }
@@ -1514,8 +1569,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @ParametersAreNonnullByDefault
     @InternalUse
-    @VisibleForTesting
-    static class DeploymentState {
+    public static class DeploymentState {
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
         public static final int TaskTimeoutInMillis = getIntegerEnvironmentVariable("PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS").or(-1);
@@ -1552,6 +1606,46 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.logger = new DefaultEngineLogger(standardLogger, () -> this.runner, () -> this.engine);
             this.runner = new DefaultRunner(standardLogger, this.logger);
         }
+
+        /**
+         * @throws IllegalArgumentException if an environment variable is not found
+         */
+        public static DeploymentState fromEnvironment() {
+            var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
+            standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
+
+            Function<Exception, RuntimeException> startErrorSupplier = (Exception e) ->
+                    new IllegalArgumentException("Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e);
+
+            try {
+                var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
+                var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
+                var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
+                var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
+//            var pwd = getEnvironmentVariable("PULUMI_PWD");
+                var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
+//            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
+//            var parallel = getIntegerEnvironmentVariable("PULUMI_PARALLEL");
+//            var tracing = getEnvironmentVariable("PULUMI_TRACING");
+                // TODO what to do with all the unused envvars?
+
+                var config = Config.parse();
+                standardLogger.setLevel(GlobalLogging.GlobalLevel);
+
+                standardLogger.log(Level.FINEST, "Creating deployment engine");
+                var engine = new GrpcEngine(engineTarget);
+                standardLogger.log(Level.FINEST, "Created deployment engine");
+
+                standardLogger.log(Level.FINEST, "Creating deployment monitor");
+                var monitor = new GrpcMonitor(monitorTarget);
+                standardLogger.log(Level.FINEST, "Created deployment monitor");
+
+                return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
+            } catch (NullPointerException ex) {
+                throw new IllegalStateException(
+                        "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);
+            }
+        }
     }
 
     @ParametersAreNonnullByDefault
@@ -1564,7 +1658,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // If so, we end with a different exit code. The language host recognizes this and will not print
         // any further messages to the user since we already took care of it.
         //
-        // 32 was picked so as to be very unlikely to collide with any other error codes.
+        // 32 was picked to be very unlikely to collide with any other error codes.
         private static final int ProcessExitedAfterLoggingUserActionableMessage = 32;
 
         private final Logger standardLogger;
@@ -1594,31 +1688,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return ImmutableList.copyOf(this.swallowedExceptions);
         }
 
-        /**
-         * @param stackType the Stack type class instance, if class is nested it must be static
-         * @param <T>       the Stack type, if class is nested it must be static
-         */
-        @Override
-        public <T extends Stack> CompletableFuture<Integer> runAsync(Class<T> stackType) {
-            Objects.requireNonNull(stackType);
-            if (Reflection.isNestedClass(stackType)) {
-                throw new IllegalArgumentException(String.format(
-                        "runAsync(Class<T>) cannot be used with nested classes, make class '%s' static, standalone or use runAsync(Supplier<T extends Stack>)",
-                        stackType.getTypeName()
-                ));
-            }
-            return runAsync(() -> {
-                try {
-                    return stackType.newInstance();
-                } catch (InstantiationException | IllegalAccessException e) {
-                    throw new IllegalArgumentException(String.format(
-                            "Couldn't create an instance of the stack type: '%s', error: %s",
-                            stackType.getTypeName(), e
-                    ), e);
-                }
-            });
-        }
-
         @Override
         public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
             try {
@@ -1642,9 +1711,15 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @Override
         public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-            var stack = StackInternal.of(callback, options);
-            registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                    Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+            try {
+                var stack = StackInternal.of(callback, options);
+                // no outputs to register here
+                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
+                        Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
+            } catch (Exception ex) {
+                return handleExceptionAsync(ex);
+            }
+
             return whileRunningAsync();
         }
 

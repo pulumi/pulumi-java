@@ -10,6 +10,7 @@ import io.pulumi.aws.s3control.outputs.BucketLifecycleConfigurationRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class BucketLifecycleConfiguration extends io.pulumi.resources.CustomReso
      * @return Amazon Resource Name (ARN) of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -59,7 +60,7 @@ public class BucketLifecycleConfiguration extends io.pulumi.resources.CustomReso
      * @return Configuration block(s) containing lifecycle rules for the bucket.
      * 
      */
-    public Output<List<BucketLifecycleConfigurationRule>> getRules() {
+    public Output<List<BucketLifecycleConfigurationRule>> rules() {
         return this.rules;
     }
 
@@ -85,7 +86,7 @@ public class BucketLifecycleConfiguration extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketLifecycleConfiguration(String name, BucketLifecycleConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/bucketLifecycleConfiguration:BucketLifecycleConfiguration", name, args == null ? BucketLifecycleConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/bucketLifecycleConfiguration:BucketLifecycleConfiguration", name, args == null ? BucketLifecycleConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketLifecycleConfiguration(String name, Output<String> id, @Nullable BucketLifecycleConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

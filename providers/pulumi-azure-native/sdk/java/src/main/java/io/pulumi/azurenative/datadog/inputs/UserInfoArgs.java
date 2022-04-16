@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
-        return this.emailAddress == null ? Output.empty() : this.emailAddress;
+    public Output<String> emailAddress() {
+        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phoneNumber")
       private final @Nullable Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
-        return this.phoneNumber == null ? Output.empty() : this.phoneNumber;
+    public Output<String> phoneNumber() {
+        return this.phoneNumber == null ? Codegen.empty() : this.phoneNumber;
     }
 
     public UserInfoArgs(
@@ -61,9 +62,9 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserInfoArgs() {
-        this.emailAddress = Output.empty();
-        this.name = Output.empty();
-        this.phoneNumber = Output.empty();
+        this.emailAddress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.phoneNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Output.ofNullable(emailAddress);
+            this.emailAddress = Codegen.ofNullable(emailAddress);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -103,7 +104,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
@@ -111,7 +112,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Output.ofNullable(phoneNumber);
+            this.phoneNumber = Codegen.ofNullable(phoneNumber);
             return this;
         }        public UserInfoArgs build() {
             return new UserInfoArgs(emailAddress, name, phoneNumber);

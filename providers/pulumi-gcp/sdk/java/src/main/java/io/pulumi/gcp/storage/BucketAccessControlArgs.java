@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -46,7 +47,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="entity", required=true)
       private final Output<String> entity;
 
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity;
     }
 
@@ -58,8 +59,8 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public BucketAccessControlArgs(
@@ -72,9 +73,9 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     private BucketAccessControlArgs() {
-        this.bucket = Output.empty();
-        this.entity = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.entity = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public BucketAccessControlArgs build() {
             return new BucketAccessControlArgs(bucket, entity, role);

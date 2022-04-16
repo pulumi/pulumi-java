@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.enums.AxisScale;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scale")
       private final @Nullable Output<AxisScale> scale;
 
-    public Output<AxisScale> getScale() {
-        return this.scale == null ? Output.empty() : this.scale;
+    public Output<AxisScale> scale() {
+        return this.scale == null ? Codegen.empty() : this.scale;
     }
 
     public AxisArgs(
@@ -49,8 +50,8 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AxisArgs() {
-        this.label = Output.empty();
-        this.scale = Output.empty();
+        this.label = Codegen.empty();
+        this.scale = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder scale(@Nullable Output<AxisScale> scale) {
@@ -88,7 +89,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scale(@Nullable AxisScale scale) {
-            this.scale = Output.ofNullable(scale);
+            this.scale = Codegen.ofNullable(scale);
             return this;
         }        public AxisArgs build() {
             return new AxisArgs(label, scale);

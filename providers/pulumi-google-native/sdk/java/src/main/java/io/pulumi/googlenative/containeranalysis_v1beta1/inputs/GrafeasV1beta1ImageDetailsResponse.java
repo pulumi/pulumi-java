@@ -23,7 +23,7 @@ public final class GrafeasV1beta1ImageDetailsResponse extends io.pulumi.resource
     @Import(name="derivedImage", required=true)
       private final DerivedResponse derivedImage;
 
-    public DerivedResponse getDerivedImage() {
+    public DerivedResponse derivedImage() {
         return this.derivedImage;
     }
 

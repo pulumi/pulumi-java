@@ -27,7 +27,7 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -38,7 +38,7 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
     @Import(name="referenceName", required=true)
       private final String referenceName;
 
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
 
@@ -49,7 +49,7 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

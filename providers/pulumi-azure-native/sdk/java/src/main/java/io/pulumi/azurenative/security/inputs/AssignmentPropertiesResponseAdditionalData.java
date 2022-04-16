@@ -25,7 +25,7 @@ public final class AssignmentPropertiesResponseAdditionalData extends io.pulumi.
     @Import(name="exemptionCategory")
       private final @Nullable String exemptionCategory;
 
-    public Optional<String> getExemptionCategory() {
+    public Optional<String> exemptionCategory() {
         return this.exemptionCategory == null ? Optional.empty() : Optional.ofNullable(this.exemptionCategory);
     }
 

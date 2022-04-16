@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -49,7 +50,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return Local network gateway's BGP speaker settings.
      * 
      */
-    public Output</* @Nullable */ BgpSettingsResponse> getBgpSettings() {
+    public Output</* @Nullable */ BgpSettingsResponse> bgpSettings() {
         return this.bgpSettings;
     }
     /**
@@ -63,7 +64,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return List of all vpn connections to the gateway.
      * 
      */
-    public Output</* @Nullable */ List<VpnConnectionResponse>> getConnections() {
+    public Output</* @Nullable */ List<VpnConnectionResponse>> connections() {
         return this.connections;
     }
     /**
@@ -77,7 +78,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -91,7 +92,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return List of all IPs configured on the gateway.
      * 
      */
-    public Output<List<VpnGatewayIpConfigurationResponse>> getIpConfigurations() {
+    public Output<List<VpnGatewayIpConfigurationResponse>> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
@@ -105,7 +106,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return Enable Routing Preference property for the Public IP Interface of the VpnGateway.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsRoutingPreferenceInternet() {
+    public Output</* @Nullable */ Boolean> isRoutingPreferenceInternet() {
         return this.isRoutingPreferenceInternet;
     }
     /**
@@ -119,7 +120,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -133,7 +134,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +148,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return List of all the nat Rules associated with the gateway.
      * 
      */
-    public Output</* @Nullable */ List<VpnGatewayNatRuleResponse>> getNatRules() {
+    public Output</* @Nullable */ List<VpnGatewayNatRuleResponse>> natRules() {
         return this.natRules;
     }
     /**
@@ -161,7 +162,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the VPN gateway resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -175,7 +176,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -189,7 +190,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -203,7 +204,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return The VirtualHub to which the gateway belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
+    public Output</* @Nullable */ SubResourceResponse> virtualHub() {
         return this.virtualHub;
     }
     /**
@@ -217,7 +218,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @return The scale unit for this vpn gateway.
      * 
      */
-    public Output</* @Nullable */ Integer> getVpnGatewayScaleUnit() {
+    public Output</* @Nullable */ Integer> vpnGatewayScaleUnit() {
         return this.vpnGatewayScaleUnit;
     }
 
@@ -243,7 +244,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnGateway(String name, VpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VpnGateway", name, args == null ? VpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VpnGateway", name, args == null ? VpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpnGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class DiskAccessAPrivateEndpointConnection extends io.pulumi.resources.Cu
      * @return private endpoint connection name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class DiskAccessAPrivateEndpointConnection extends io.pulumi.resources.Cu
      * @return The resource of private end point.
      * 
      */
-    public Output<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -71,7 +72,7 @@ public class DiskAccessAPrivateEndpointConnection extends io.pulumi.resources.Cu
      * @return A collection of information about the state of the connection between DiskAccess and Virtual Network.
      * 
      */
-    public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -85,7 +86,7 @@ public class DiskAccessAPrivateEndpointConnection extends io.pulumi.resources.Cu
      * @return The provisioning state of the private endpoint connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +100,7 @@ public class DiskAccessAPrivateEndpointConnection extends io.pulumi.resources.Cu
      * @return private endpoint connection type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -125,7 +126,7 @@ public class DiskAccessAPrivateEndpointConnection extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public DiskAccessAPrivateEndpointConnection(String name, DiskAccessAPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:DiskAccessAPrivateEndpointConnection", name, args == null ? DiskAccessAPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:DiskAccessAPrivateEndpointConnection", name, args == null ? DiskAccessAPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DiskAccessAPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

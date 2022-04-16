@@ -56,7 +56,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
      * created. Enabled by default.
      * 
     */
-    public Optional<Boolean> getEnableIntegrityMonitoring() {
+    public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
@@ -67,7 +67,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
      * Disabled by default.
      * 
     */
-    public Optional<Boolean> getEnableSecureBoot() {
+    public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
     /**
@@ -75,7 +75,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
      * default.
      * 
     */
-    public Optional<Boolean> getEnableVtpm() {
+    public Optional<Boolean> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
 

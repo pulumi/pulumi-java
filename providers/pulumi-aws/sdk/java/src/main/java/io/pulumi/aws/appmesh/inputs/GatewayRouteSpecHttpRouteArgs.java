@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteMatchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -21,7 +22,7 @@ public final class GatewayRouteSpecHttpRouteArgs extends io.pulumi.resources.Res
     @Import(name="action", required=true)
       private final Output<GatewayRouteSpecHttpRouteActionArgs> action;
 
-    public Output<GatewayRouteSpecHttpRouteActionArgs> getAction() {
+    public Output<GatewayRouteSpecHttpRouteActionArgs> action() {
         return this.action;
     }
 
@@ -32,7 +33,7 @@ public final class GatewayRouteSpecHttpRouteArgs extends io.pulumi.resources.Res
     @Import(name="match", required=true)
       private final Output<GatewayRouteSpecHttpRouteMatchArgs> match;
 
-    public Output<GatewayRouteSpecHttpRouteMatchArgs> getMatch() {
+    public Output<GatewayRouteSpecHttpRouteMatchArgs> match() {
         return this.match;
     }
 
@@ -44,8 +45,8 @@ public final class GatewayRouteSpecHttpRouteArgs extends io.pulumi.resources.Res
     }
 
     private GatewayRouteSpecHttpRouteArgs() {
-        this.action = Output.empty();
-        this.match = Output.empty();
+        this.action = Codegen.empty();
+        this.match = Codegen.empty();
     }
 
     public static Builder builder() {

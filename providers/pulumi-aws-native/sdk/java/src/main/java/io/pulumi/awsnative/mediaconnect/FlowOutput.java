@@ -11,6 +11,7 @@ import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputVpcInterfaceAttachment
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCidrAllowList() {
+    public Output</* @Nullable */ List<String>> cidrAllowList() {
         return this.cidrAllowList;
     }
     /**
@@ -47,7 +48,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return A description of the output.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -61,7 +62,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The address where you want to send the output.
      * 
      */
-    public Output</* @Nullable */ String> getDestination() {
+    public Output</* @Nullable */ String> destination() {
         return this.destination;
     }
     /**
@@ -75,7 +76,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
      */
-    public Output</* @Nullable */ FlowOutputEncryption> getEncryption() {
+    public Output</* @Nullable */ FlowOutputEncryption> encryption() {
         return this.encryption;
     }
     /**
@@ -89,7 +90,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -103,7 +104,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxLatency() {
+    public Output</* @Nullable */ Integer> maxLatency() {
         return this.maxLatency;
     }
     /**
@@ -117,7 +118,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The minimum latency in milliseconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinLatency() {
+    public Output</* @Nullable */ Integer> minLatency() {
         return this.minLatency;
     }
     /**
@@ -131,7 +132,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The name of the output. This value must be unique within the current flow.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The ARN of the output.
      * 
      */
-    public Output<String> getOutputArn() {
+    public Output<String> outputArn() {
         return this.outputArn;
     }
     /**
@@ -159,7 +160,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The port to use when content is distributed to this output.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -173,7 +174,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The protocol that is used by the source or output.
      * 
      */
-    public Output<FlowOutputProtocol> getProtocol() {
+    public Output<FlowOutputProtocol> protocol() {
         return this.protocol;
     }
     /**
@@ -187,7 +188,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The remote ID for the Zixi-pull stream.
      * 
      */
-    public Output</* @Nullable */ String> getRemoteId() {
+    public Output</* @Nullable */ String> remoteId() {
         return this.remoteId;
     }
     /**
@@ -201,7 +202,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
      * 
      */
-    public Output</* @Nullable */ Integer> getSmoothingLatency() {
+    public Output</* @Nullable */ Integer> smoothingLatency() {
         return this.smoothingLatency;
     }
     /**
@@ -215,7 +216,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
      */
-    public Output</* @Nullable */ String> getStreamId() {
+    public Output</* @Nullable */ String> streamId() {
         return this.streamId;
     }
     /**
@@ -229,7 +230,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @return The name of the VPC interface attachment to use for this output.
      * 
      */
-    public Output</* @Nullable */ FlowOutputVpcInterfaceAttachment> getVpcInterfaceAttachment() {
+    public Output</* @Nullable */ FlowOutputVpcInterfaceAttachment> vpcInterfaceAttachment() {
         return this.vpcInterfaceAttachment;
     }
 
@@ -255,7 +256,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlowOutput(String name, FlowOutputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediaconnect:FlowOutput", name, args == null ? FlowOutputArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediaconnect:FlowOutput", name, args == null ? FlowOutputArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FlowOutput(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

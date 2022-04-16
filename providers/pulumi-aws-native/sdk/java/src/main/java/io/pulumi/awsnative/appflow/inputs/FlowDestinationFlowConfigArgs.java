@@ -7,6 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowDestinationConnectorPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
     @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
 
-    public Output<String> getConnectorProfileName() {
-        return this.connectorProfileName == null ? Output.empty() : this.connectorProfileName;
+    public Output<String> connectorProfileName() {
+        return this.connectorProfileName == null ? Codegen.empty() : this.connectorProfileName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
     @Import(name="connectorType", required=true)
       private final Output<FlowConnectorType> connectorType;
 
-    public Output<FlowConnectorType> getConnectorType() {
+    public Output<FlowConnectorType> connectorType() {
         return this.connectorType;
     }
 
@@ -49,7 +50,7 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
     @Import(name="destinationConnectorProperties", required=true)
       private final Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
 
-    public Output<FlowDestinationConnectorPropertiesArgs> getDestinationConnectorProperties() {
+    public Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
 
@@ -63,9 +64,9 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
     }
 
     private FlowDestinationFlowConfigArgs() {
-        this.connectorProfileName = Output.empty();
-        this.connectorType = Output.empty();
-        this.destinationConnectorProperties = Output.empty();
+        this.connectorProfileName = Codegen.empty();
+        this.connectorType = Codegen.empty();
+        this.destinationConnectorProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = Output.ofNullable(connectorProfileName);
+            this.connectorProfileName = Codegen.ofNullable(connectorProfileName);
             return this;
         }
         public Builder connectorType(Output<FlowConnectorType> connectorType) {

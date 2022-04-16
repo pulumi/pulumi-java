@@ -5,6 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
     @Import(name="conditionKey")
       private final @Nullable Output<String> conditionKey;
 
-    public Output<String> getConditionKey() {
-        return this.conditionKey == null ? Output.empty() : this.conditionKey;
+    public Output<String> conditionKey() {
+        return this.conditionKey == null ? Codegen.empty() : this.conditionKey;
     }
 
     @Import(name="conditionValue")
       private final @Nullable Output<String> conditionValue;
 
-    public Output<String> getConditionValue() {
-        return this.conditionValue == null ? Output.empty() : this.conditionValue;
+    public Output<String> conditionValue() {
+        return this.conditionValue == null ? Codegen.empty() : this.conditionValue;
     }
 
     public BackupSelectionConditionParameterArgs(
@@ -36,8 +37,8 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
     }
 
     private BackupSelectionConditionParameterArgs() {
-        this.conditionKey = Output.empty();
-        this.conditionValue = Output.empty();
+        this.conditionKey = Codegen.empty();
+        this.conditionValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
             return this;
         }
         public Builder conditionKey(@Nullable String conditionKey) {
-            this.conditionKey = Output.ofNullable(conditionKey);
+            this.conditionKey = Codegen.ofNullable(conditionKey);
             return this;
         }
         public Builder conditionValue(@Nullable Output<String> conditionValue) {
@@ -75,7 +76,7 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
             return this;
         }
         public Builder conditionValue(@Nullable String conditionValue) {
-            this.conditionValue = Output.ofNullable(conditionValue);
+            this.conditionValue = Codegen.ofNullable(conditionValue);
             return this;
         }        public BackupSelectionConditionParameterArgs build() {
             return new BackupSelectionConditionParameterArgs(conditionKey, conditionValue);

@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordColumns", required=true)
       private final Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs>> recordColumns;
 
-    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs>> getRecordColumns() {
+    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs>> recordColumns() {
         return this.recordColumns;
     }
 
@@ -35,8 +36,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordEncoding")
       private final @Nullable Output<String> recordEncoding;
 
-    public Output<String> getRecordEncoding() {
-        return this.recordEncoding == null ? Output.empty() : this.recordEncoding;
+    public Output<String> recordEncoding() {
+        return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordFormat", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs> recordFormat;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs> getRecordFormat() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs> recordFormat() {
         return this.recordFormat;
     }
 
@@ -60,9 +61,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs() {
-        this.recordColumns = Output.empty();
-        this.recordEncoding = Output.empty();
-        this.recordFormat = Output.empty();
+        this.recordColumns = Codegen.empty();
+        this.recordEncoding = Codegen.empty();
+        this.recordFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Output.ofNullable(recordEncoding);
+            this.recordEncoding = Codegen.ofNullable(recordEncoding);
             return this;
         }
         public Builder recordFormat(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs> recordFormat) {

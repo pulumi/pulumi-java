@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.P2SConnectionConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customDnsServers")
       private final @Nullable Output<List<String>> customDnsServers;
 
-    public Output<List<String>> getCustomDnsServers() {
-        return this.customDnsServers == null ? Output.empty() : this.customDnsServers;
+    public Output<List<String>> customDnsServers() {
+        return this.customDnsServers == null ? Codegen.empty() : this.customDnsServers;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
-        return this.gatewayName == null ? Output.empty() : this.gatewayName;
+    public Output<String> gatewayName() {
+        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isRoutingPreferenceInternet")
       private final @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
-    public Output<Boolean> getIsRoutingPreferenceInternet() {
-        return this.isRoutingPreferenceInternet == null ? Output.empty() : this.isRoutingPreferenceInternet;
+    public Output<Boolean> isRoutingPreferenceInternet() {
+        return this.isRoutingPreferenceInternet == null ? Codegen.empty() : this.isRoutingPreferenceInternet;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="p2SConnectionConfigurations")
       private final @Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations;
 
-    public Output<List<P2SConnectionConfigurationArgs>> getP2SConnectionConfigurations() {
-        return this.p2SConnectionConfigurations == null ? Output.empty() : this.p2SConnectionConfigurations;
+    public Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations() {
+        return this.p2SConnectionConfigurations == null ? Codegen.empty() : this.p2SConnectionConfigurations;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,8 +105,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> getVirtualHub() {
-        return this.virtualHub == null ? Output.empty() : this.virtualHub;
+    public Output<SubResourceArgs> virtualHub() {
+        return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnGatewayScaleUnit")
       private final @Nullable Output<Integer> vpnGatewayScaleUnit;
 
-    public Output<Integer> getVpnGatewayScaleUnit() {
-        return this.vpnGatewayScaleUnit == null ? Output.empty() : this.vpnGatewayScaleUnit;
+    public Output<Integer> vpnGatewayScaleUnit() {
+        return this.vpnGatewayScaleUnit == null ? Codegen.empty() : this.vpnGatewayScaleUnit;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnServerConfiguration")
       private final @Nullable Output<SubResourceArgs> vpnServerConfiguration;
 
-    public Output<SubResourceArgs> getVpnServerConfiguration() {
-        return this.vpnServerConfiguration == null ? Output.empty() : this.vpnServerConfiguration;
+    public Output<SubResourceArgs> vpnServerConfiguration() {
+        return this.vpnServerConfiguration == null ? Codegen.empty() : this.vpnServerConfiguration;
     }
 
     public P2sVpnGatewayArgs(
@@ -167,17 +168,17 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private P2sVpnGatewayArgs() {
-        this.customDnsServers = Output.empty();
-        this.gatewayName = Output.empty();
-        this.id = Output.empty();
-        this.isRoutingPreferenceInternet = Output.empty();
-        this.location = Output.empty();
-        this.p2SConnectionConfigurations = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.virtualHub = Output.empty();
-        this.vpnGatewayScaleUnit = Output.empty();
-        this.vpnServerConfiguration = Output.empty();
+        this.customDnsServers = Codegen.empty();
+        this.gatewayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.isRoutingPreferenceInternet = Codegen.empty();
+        this.location = Codegen.empty();
+        this.p2SConnectionConfigurations = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualHub = Codegen.empty();
+        this.vpnGatewayScaleUnit = Codegen.empty();
+        this.vpnServerConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDnsServers(@Nullable List<String> customDnsServers) {
-            this.customDnsServers = Output.ofNullable(customDnsServers);
+            this.customDnsServers = Codegen.ofNullable(customDnsServers);
             return this;
         }
         public Builder customDnsServers(String... customDnsServers) {
@@ -236,7 +237,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Output.ofNullable(gatewayName);
+            this.gatewayName = Codegen.ofNullable(gatewayName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -244,7 +245,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder isRoutingPreferenceInternet(@Nullable Output<Boolean> isRoutingPreferenceInternet) {
@@ -252,7 +253,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
-            this.isRoutingPreferenceInternet = Output.ofNullable(isRoutingPreferenceInternet);
+            this.isRoutingPreferenceInternet = Codegen.ofNullable(isRoutingPreferenceInternet);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -260,7 +261,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder p2SConnectionConfigurations(@Nullable Output<List<P2SConnectionConfigurationArgs>> p2SConnectionConfigurations) {
@@ -268,7 +269,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder p2SConnectionConfigurations(@Nullable List<P2SConnectionConfigurationArgs> p2SConnectionConfigurations) {
-            this.p2SConnectionConfigurations = Output.ofNullable(p2SConnectionConfigurations);
+            this.p2SConnectionConfigurations = Codegen.ofNullable(p2SConnectionConfigurations);
             return this;
         }
         public Builder p2SConnectionConfigurations(P2SConnectionConfigurationArgs... p2SConnectionConfigurations) {
@@ -287,7 +288,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
@@ -295,7 +296,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
-            this.virtualHub = Output.ofNullable(virtualHub);
+            this.virtualHub = Codegen.ofNullable(virtualHub);
             return this;
         }
         public Builder vpnGatewayScaleUnit(@Nullable Output<Integer> vpnGatewayScaleUnit) {
@@ -303,7 +304,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
-            this.vpnGatewayScaleUnit = Output.ofNullable(vpnGatewayScaleUnit);
+            this.vpnGatewayScaleUnit = Codegen.ofNullable(vpnGatewayScaleUnit);
             return this;
         }
         public Builder vpnServerConfiguration(@Nullable Output<SubResourceArgs> vpnServerConfiguration) {
@@ -311,7 +312,7 @@ public final class P2sVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnServerConfiguration(@Nullable SubResourceArgs vpnServerConfiguration) {
-            this.vpnServerConfiguration = Output.ofNullable(vpnServerConfiguration);
+            this.vpnServerConfiguration = Codegen.ofNullable(vpnServerConfiguration);
             return this;
         }        public P2sVpnGatewayArgs build() {
             return new P2sVpnGatewayArgs(customDnsServers, gatewayName, id, isRoutingPreferenceInternet, location, p2SConnectionConfigurations, resourceGroupName, tags, virtualHub, vpnGatewayScaleUnit, vpnServerConfiguration);

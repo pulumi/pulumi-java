@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
     @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
+    public Output<String> diskEncryptionSetId() {
+        return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -49,8 +50,8 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
     }
 
     private DataDiskImageEncryptionArgs() {
-        this.diskEncryptionSetId = Output.empty();
-        this.lun = Output.empty();
+        this.diskEncryptionSetId = Codegen.empty();
+        this.lun = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Codegen.ofNullable(diskEncryptionSetId);
             return this;
         }
         public Builder lun(Output<Integer> lun) {

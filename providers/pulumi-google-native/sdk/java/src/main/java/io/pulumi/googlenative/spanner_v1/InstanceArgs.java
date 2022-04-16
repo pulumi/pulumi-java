@@ -5,6 +5,7 @@ package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
       private final Output<String> config;
 
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config;
     }
 
@@ -34,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -45,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -56,8 +57,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
-        return this.nodeCount == null ? Output.empty() : this.nodeCount;
+    public Output<Integer> nodeCount() {
+        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
     /**
@@ -89,15 +90,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="processingUnits")
       private final @Nullable Output<Integer> processingUnits;
 
-    public Output<Integer> getProcessingUnits() {
-        return this.processingUnits == null ? Output.empty() : this.processingUnits;
+    public Output<Integer> processingUnits() {
+        return this.processingUnits == null ? Codegen.empty() : this.processingUnits;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public InstanceArgs(
@@ -120,14 +121,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.config = Output.empty();
-        this.displayName = Output.empty();
-        this.instanceId = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.nodeCount = Output.empty();
-        this.processingUnits = Output.empty();
-        this.project = Output.empty();
+        this.config = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodeCount = Codegen.empty();
+        this.processingUnits = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -201,7 +202,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
@@ -209,7 +210,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Output.ofNullable(nodeCount);
+            this.nodeCount = Codegen.ofNullable(nodeCount);
             return this;
         }
         public Builder processingUnits(@Nullable Output<Integer> processingUnits) {
@@ -217,7 +218,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder processingUnits(@Nullable Integer processingUnits) {
-            this.processingUnits = Output.ofNullable(processingUnits);
+            this.processingUnits = Codegen.ofNullable(processingUnits);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -225,7 +226,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(config, displayName, instanceId, labels, name, nodeCount, processingUnits, project);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.securitycenter_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     public StreamingConfigArgs(@Nullable Output<String> filter) {
@@ -34,7 +35,7 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private StreamingConfigArgs() {
-        this.filter = Output.empty();
+        this.filter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }        public StreamingConfigArgs build() {
             return new StreamingConfigArgs(filter);

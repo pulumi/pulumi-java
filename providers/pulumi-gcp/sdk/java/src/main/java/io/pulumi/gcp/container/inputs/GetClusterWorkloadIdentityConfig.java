@@ -15,7 +15,7 @@ public final class GetClusterWorkloadIdentityConfig extends io.pulumi.resources.
     @Import(name="workloadPool", required=true)
       private final String workloadPool;
 
-    public String getWorkloadPool() {
+    public String workloadPool() {
         return this.workloadPool;
     }
 

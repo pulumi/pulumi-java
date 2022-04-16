@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public StandardAppVersionLibraryArgs(
@@ -44,8 +45,8 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
     }
 
     private StandardAppVersionLibraryArgs() {
-        this.name = Output.empty();
-        this.version = Output.empty();
+        this.name = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -83,7 +84,7 @@ public final class StandardAppVersionLibraryArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public StandardAppVersionLibraryArgs build() {
             return new StandardAppVersionLibraryArgs(name, version);

@@ -26,7 +26,7 @@ public final class WebAclDefaultActionBlock {
      * Defines a custom response for the web request. See Custom Response below for details.
      * 
     */
-    public Optional<WebAclDefaultActionBlockCustomResponse> getCustomResponse() {
+    public Optional<WebAclDefaultActionBlockCustomResponse> customResponse() {
         return Optional.ofNullable(this.customResponse);
     }
 

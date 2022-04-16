@@ -16,14 +16,14 @@ public final class GetWorkloadIdentityPoolProviderOidc extends io.pulumi.resourc
     @Import(name="allowedAudiences", required=true)
       private final List<String> allowedAudiences;
 
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 
     @Import(name="issuerUri", required=true)
       private final String issuerUri;
 
-    public String getIssuerUri() {
+    public String issuerUri() {
         return this.issuerUri;
     }
 

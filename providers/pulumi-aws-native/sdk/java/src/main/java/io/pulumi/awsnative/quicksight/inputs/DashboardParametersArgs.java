@@ -9,6 +9,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardIntegerParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardStringParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     @Import(name="dateTimeParameters")
       private final @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
 
-    public Output<List<DashboardDateTimeParameterArgs>> getDateTimeParameters() {
-        return this.dateTimeParameters == null ? Output.empty() : this.dateTimeParameters;
+    public Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters() {
+        return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     @Import(name="decimalParameters")
       private final @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
 
-    public Output<List<DashboardDecimalParameterArgs>> getDecimalParameters() {
-        return this.decimalParameters == null ? Output.empty() : this.decimalParameters;
+    public Output<List<DashboardDecimalParameterArgs>> decimalParameters() {
+        return this.decimalParameters == null ? Codegen.empty() : this.decimalParameters;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     @Import(name="integerParameters")
       private final @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
 
-    public Output<List<DashboardIntegerParameterArgs>> getIntegerParameters() {
-        return this.integerParameters == null ? Output.empty() : this.integerParameters;
+    public Output<List<DashboardIntegerParameterArgs>> integerParameters() {
+        return this.integerParameters == null ? Codegen.empty() : this.integerParameters;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     @Import(name="stringParameters")
       private final @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
 
-    public Output<List<DashboardStringParameterArgs>> getStringParameters() {
-        return this.stringParameters == null ? Output.empty() : this.stringParameters;
+    public Output<List<DashboardStringParameterArgs>> stringParameters() {
+        return this.stringParameters == null ? Codegen.empty() : this.stringParameters;
     }
 
     public DashboardParametersArgs(
@@ -78,10 +79,10 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     }
 
     private DashboardParametersArgs() {
-        this.dateTimeParameters = Output.empty();
-        this.decimalParameters = Output.empty();
-        this.integerParameters = Output.empty();
-        this.stringParameters = Output.empty();
+        this.dateTimeParameters = Codegen.empty();
+        this.decimalParameters = Codegen.empty();
+        this.integerParameters = Codegen.empty();
+        this.stringParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dateTimeParameters(@Nullable List<DashboardDateTimeParameterArgs> dateTimeParameters) {
-            this.dateTimeParameters = Output.ofNullable(dateTimeParameters);
+            this.dateTimeParameters = Codegen.ofNullable(dateTimeParameters);
             return this;
         }
         public Builder dateTimeParameters(DashboardDateTimeParameterArgs... dateTimeParameters) {
@@ -126,7 +127,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder decimalParameters(@Nullable List<DashboardDecimalParameterArgs> decimalParameters) {
-            this.decimalParameters = Output.ofNullable(decimalParameters);
+            this.decimalParameters = Codegen.ofNullable(decimalParameters);
             return this;
         }
         public Builder decimalParameters(DashboardDecimalParameterArgs... decimalParameters) {
@@ -137,7 +138,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder integerParameters(@Nullable List<DashboardIntegerParameterArgs> integerParameters) {
-            this.integerParameters = Output.ofNullable(integerParameters);
+            this.integerParameters = Codegen.ofNullable(integerParameters);
             return this;
         }
         public Builder integerParameters(DashboardIntegerParameterArgs... integerParameters) {
@@ -148,7 +149,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder stringParameters(@Nullable List<DashboardStringParameterArgs> stringParameters) {
-            this.stringParameters = Output.ofNullable(stringParameters);
+            this.stringParameters = Codegen.ofNullable(stringParameters);
             return this;
         }
         public Builder stringParameters(DashboardStringParameterArgs... stringParameters) {

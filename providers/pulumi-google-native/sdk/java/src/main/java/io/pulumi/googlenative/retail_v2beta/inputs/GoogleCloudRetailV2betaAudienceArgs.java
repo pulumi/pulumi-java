@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends io.pulumi.resourc
     @Import(name="ageGroups")
       private final @Nullable Output<List<String>> ageGroups;
 
-    public Output<List<String>> getAgeGroups() {
-        return this.ageGroups == null ? Output.empty() : this.ageGroups;
+    public Output<List<String>> ageGroups() {
+        return this.ageGroups == null ? Codegen.empty() : this.ageGroups;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends io.pulumi.resourc
     @Import(name="genders")
       private final @Nullable Output<List<String>> genders;
 
-    public Output<List<String>> getGenders() {
-        return this.genders == null ? Output.empty() : this.genders;
+    public Output<List<String>> genders() {
+        return this.genders == null ? Codegen.empty() : this.genders;
     }
 
     public GoogleCloudRetailV2betaAudienceArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudRetailV2betaAudienceArgs() {
-        this.ageGroups = Output.empty();
-        this.genders = Output.empty();
+        this.ageGroups = Codegen.empty();
+        this.genders = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ageGroups(@Nullable List<String> ageGroups) {
-            this.ageGroups = Output.ofNullable(ageGroups);
+            this.ageGroups = Codegen.ofNullable(ageGroups);
             return this;
         }
         public Builder ageGroups(String... ageGroups) {
@@ -91,7 +92,7 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder genders(@Nullable List<String> genders) {
-            this.genders = Output.ofNullable(genders);
+            this.genders = Codegen.ofNullable(genders);
             return this;
         }
         public Builder genders(String... genders) {

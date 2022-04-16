@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ecs.inputs.ClusterCapacityProviderAssociationsCapacit
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,21 +21,21 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     @Import(name="capacityProviders", required=true)
       private final Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
 
-    public Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> getCapacityProviders() {
+    public Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders() {
         return this.capacityProviders;
     }
 
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
     @Import(name="defaultCapacityProviderStrategy", required=true)
       private final Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
 
-    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategy() {
+    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
     }
 
@@ -48,9 +49,9 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     }
 
     private ClusterCapacityProviderAssociationsArgs() {
-        this.capacityProviders = Output.empty();
-        this.cluster = Output.empty();
-        this.defaultCapacityProviderStrategy = Output.empty();
+        this.capacityProviders = Codegen.empty();
+        this.cluster = Codegen.empty();
+        this.defaultCapacityProviderStrategy = Codegen.empty();
     }
 
     public static Builder builder() {

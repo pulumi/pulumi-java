@@ -10,6 +10,7 @@ import io.pulumi.aws.rds.outputs.ProxyDefaultTargetGroupConnectionPoolConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -42,7 +43,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * @return The Amazon Resource Name (ARN) representing the target group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * @return The settings that determine the size and behavior of the connection pool for the target group.
      * 
      */
-    public Output<ProxyDefaultTargetGroupConnectionPoolConfig> getConnectionPoolConfig() {
+    public Output<ProxyDefaultTargetGroupConnectionPoolConfig> connectionPoolConfig() {
         return this.connectionPoolConfig;
     }
     /**
@@ -70,7 +71,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * @return Name of the RDS DB Proxy.
      * 
      */
-    public Output<String> getDbProxyName() {
+    public Output<String> dbProxyName() {
         return this.dbProxyName;
     }
     /**
@@ -84,7 +85,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * @return The name of the default target group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -110,7 +111,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ProxyDefaultTargetGroup(String name, ProxyDefaultTargetGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/proxyDefaultTargetGroup:ProxyDefaultTargetGroup", name, args == null ? ProxyDefaultTargetGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/proxyDefaultTargetGroup:ProxyDefaultTargetGroup", name, args == null ? ProxyDefaultTargetGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProxyDefaultTargetGroup(String name, Output<String> id, @Nullable ProxyDefaultTargetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

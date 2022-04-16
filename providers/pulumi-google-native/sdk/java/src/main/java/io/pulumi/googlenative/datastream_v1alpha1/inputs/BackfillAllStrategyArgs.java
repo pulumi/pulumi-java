@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlRdbmsArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
     @Import(name="mysqlExcludedObjects")
       private final @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
 
-    public Output<MysqlRdbmsArgs> getMysqlExcludedObjects() {
-        return this.mysqlExcludedObjects == null ? Output.empty() : this.mysqlExcludedObjects;
+    public Output<MysqlRdbmsArgs> mysqlExcludedObjects() {
+        return this.mysqlExcludedObjects == null ? Codegen.empty() : this.mysqlExcludedObjects;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
     @Import(name="oracleExcludedObjects")
       private final @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
 
-    public Output<OracleRdbmsArgs> getOracleExcludedObjects() {
-        return this.oracleExcludedObjects == null ? Output.empty() : this.oracleExcludedObjects;
+    public Output<OracleRdbmsArgs> oracleExcludedObjects() {
+        return this.oracleExcludedObjects == null ? Codegen.empty() : this.oracleExcludedObjects;
     }
 
     public BackfillAllStrategyArgs(
@@ -49,8 +50,8 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
     }
 
     private BackfillAllStrategyArgs() {
-        this.mysqlExcludedObjects = Output.empty();
-        this.oracleExcludedObjects = Output.empty();
+        this.mysqlExcludedObjects = Codegen.empty();
+        this.oracleExcludedObjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder mysqlExcludedObjects(@Nullable MysqlRdbmsArgs mysqlExcludedObjects) {
-            this.mysqlExcludedObjects = Output.ofNullable(mysqlExcludedObjects);
+            this.mysqlExcludedObjects = Codegen.ofNullable(mysqlExcludedObjects);
             return this;
         }
         public Builder oracleExcludedObjects(@Nullable Output<OracleRdbmsArgs> oracleExcludedObjects) {
@@ -88,7 +89,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder oracleExcludedObjects(@Nullable OracleRdbmsArgs oracleExcludedObjects) {
-            this.oracleExcludedObjects = Output.ofNullable(oracleExcludedObjects);
+            this.oracleExcludedObjects = Codegen.ofNullable(oracleExcludedObjects);
             return this;
         }        public BackfillAllStrategyArgs build() {
             return new BackfillAllStrategyArgs(mysqlExcludedObjects, oracleExcludedObjects);

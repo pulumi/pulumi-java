@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementXssMatchStatementFieldToMat
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementXssMatchStatementTextTransformationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class WebAclRuleStatementXssMatchStatementGetArgs extends io.pulumi
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch() {
+        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WebAclRuleStatementXssMatchStatementGetArgs extends io.pulumi
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementXssMatchStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementXssMatchStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementXssMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 
@@ -46,8 +47,8 @@ public final class WebAclRuleStatementXssMatchStatementGetArgs extends io.pulumi
     }
 
     private WebAclRuleStatementXssMatchStatementGetArgs() {
-        this.fieldToMatch = Output.empty();
-        this.textTransformations = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class WebAclRuleStatementXssMatchStatementGetArgs extends io.pulumi
             return this;
         }
         public Builder fieldToMatch(@Nullable WebAclRuleStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Output.ofNullable(fieldToMatch);
+            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
             return this;
         }
         public Builder textTransformations(Output<List<WebAclRuleStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {

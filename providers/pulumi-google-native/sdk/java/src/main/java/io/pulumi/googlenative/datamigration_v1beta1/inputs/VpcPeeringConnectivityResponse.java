@@ -23,7 +23,7 @@ public final class VpcPeeringConnectivityResponse extends io.pulumi.resources.In
     @Import(name="vpc", required=true)
       private final String vpc;
 
-    public String getVpc() {
+    public String vpc() {
         return this.vpc;
     }
 

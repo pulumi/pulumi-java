@@ -7,6 +7,7 @@ import io.pulumi.azurenative.appplatform.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+    public Output<String> principalId() {
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;
 
-    public Output<Either<String,ManagedIdentityType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,ManagedIdentityType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ManagedIdentityPropertiesArgs(
@@ -63,9 +64,9 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ManagedIdentityPropertiesArgs() {
-        this.principalId = Output.empty();
-        this.tenantId = Output.empty();
-        this.type = Output.empty();
+        this.principalId = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -105,7 +106,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,ManagedIdentityType>> type) {
@@ -113,7 +114,7 @@ public final class ManagedIdentityPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder type(@Nullable Either<String,ManagedIdentityType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ManagedIdentityPropertiesArgs build() {
             return new ManagedIdentityPropertiesArgs(principalId, tenantId, type);

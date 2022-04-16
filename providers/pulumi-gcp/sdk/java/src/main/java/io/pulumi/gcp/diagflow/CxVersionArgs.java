@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -44,8 +45,8 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     public CxVersionArgs(
@@ -58,9 +59,9 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxVersionArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.parent = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -108,7 +109,7 @@ public final class CxVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }        public CxVersionArgs build() {
             return new CxVersionArgs(description, displayName, parent);

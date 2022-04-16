@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,8 +38,8 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public EndpointPropertiesArgs(
@@ -49,8 +50,8 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EndpointPropertiesArgs() {
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public EndpointPropertiesArgs build() {
             return new EndpointPropertiesArgs(name, port);

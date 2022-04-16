@@ -7,6 +7,7 @@ import io.pulumi.azurenative.costmanagement.inputs.SourceCostAllocationResourceA
 import io.pulumi.azurenative.costmanagement.inputs.TargetCostAllocationResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     @Import(name="sourceResources")
       private final @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
 
-    public Output<List<SourceCostAllocationResourceArgs>> getSourceResources() {
-        return this.sourceResources == null ? Output.empty() : this.sourceResources;
+    public Output<List<SourceCostAllocationResourceArgs>> sourceResources() {
+        return this.sourceResources == null ? Codegen.empty() : this.sourceResources;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     @Import(name="targetResources")
       private final @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
 
-    public Output<List<TargetCostAllocationResourceArgs>> getTargetResources() {
-        return this.targetResources == null ? Output.empty() : this.targetResources;
+    public Output<List<TargetCostAllocationResourceArgs>> targetResources() {
+        return this.targetResources == null ? Codegen.empty() : this.targetResources;
     }
 
     public CostAllocationRuleDetailsArgs(
@@ -50,8 +51,8 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     }
 
     private CostAllocationRuleDetailsArgs() {
-        this.sourceResources = Output.empty();
-        this.targetResources = Output.empty();
+        this.sourceResources = Codegen.empty();
+        this.targetResources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sourceResources(@Nullable List<SourceCostAllocationResourceArgs> sourceResources) {
-            this.sourceResources = Output.ofNullable(sourceResources);
+            this.sourceResources = Codegen.ofNullable(sourceResources);
             return this;
         }
         public Builder sourceResources(SourceCostAllocationResourceArgs... sourceResources) {
@@ -92,7 +93,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder targetResources(@Nullable List<TargetCostAllocationResourceArgs> targetResources) {
-            this.targetResources = Output.ofNullable(targetResources);
+            this.targetResources = Codegen.ofNullable(targetResources);
             return this;
         }
         public Builder targetResources(TargetCostAllocationResourceArgs... targetResources) {

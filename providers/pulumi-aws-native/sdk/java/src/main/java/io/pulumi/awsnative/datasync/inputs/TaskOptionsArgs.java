@@ -18,6 +18,7 @@ import io.pulumi.awsnative.datasync.enums.TaskOptionsUid;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsVerifyMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,8 +39,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="atime")
       private final @Nullable Output<TaskOptionsAtime> atime;
 
-    public Output<TaskOptionsAtime> getAtime() {
-        return this.atime == null ? Output.empty() : this.atime;
+    public Output<TaskOptionsAtime> atime() {
+        return this.atime == null ? Codegen.empty() : this.atime;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bytesPerSecond")
       private final @Nullable Output<Integer> bytesPerSecond;
 
-    public Output<Integer> getBytesPerSecond() {
-        return this.bytesPerSecond == null ? Output.empty() : this.bytesPerSecond;
+    public Output<Integer> bytesPerSecond() {
+        return this.bytesPerSecond == null ? Codegen.empty() : this.bytesPerSecond;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gid")
       private final @Nullable Output<TaskOptionsGid> gid;
 
-    public Output<TaskOptionsGid> getGid() {
-        return this.gid == null ? Output.empty() : this.gid;
+    public Output<TaskOptionsGid> gid() {
+        return this.gid == null ? Codegen.empty() : this.gid;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<TaskOptionsLogLevel> logLevel;
 
-    public Output<TaskOptionsLogLevel> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+    public Output<TaskOptionsLogLevel> logLevel() {
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mtime")
       private final @Nullable Output<TaskOptionsMtime> mtime;
 
-    public Output<TaskOptionsMtime> getMtime() {
-        return this.mtime == null ? Output.empty() : this.mtime;
+    public Output<TaskOptionsMtime> mtime() {
+        return this.mtime == null ? Codegen.empty() : this.mtime;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overwriteMode")
       private final @Nullable Output<TaskOptionsOverwriteMode> overwriteMode;
 
-    public Output<TaskOptionsOverwriteMode> getOverwriteMode() {
-        return this.overwriteMode == null ? Output.empty() : this.overwriteMode;
+    public Output<TaskOptionsOverwriteMode> overwriteMode() {
+        return this.overwriteMode == null ? Codegen.empty() : this.overwriteMode;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixPermissions")
       private final @Nullable Output<TaskOptionsPosixPermissions> posixPermissions;
 
-    public Output<TaskOptionsPosixPermissions> getPosixPermissions() {
-        return this.posixPermissions == null ? Output.empty() : this.posixPermissions;
+    public Output<TaskOptionsPosixPermissions> posixPermissions() {
+        return this.posixPermissions == null ? Codegen.empty() : this.posixPermissions;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preserveDeletedFiles")
       private final @Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles;
 
-    public Output<TaskOptionsPreserveDeletedFiles> getPreserveDeletedFiles() {
-        return this.preserveDeletedFiles == null ? Output.empty() : this.preserveDeletedFiles;
+    public Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles() {
+        return this.preserveDeletedFiles == null ? Codegen.empty() : this.preserveDeletedFiles;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preserveDevices")
       private final @Nullable Output<TaskOptionsPreserveDevices> preserveDevices;
 
-    public Output<TaskOptionsPreserveDevices> getPreserveDevices() {
-        return this.preserveDevices == null ? Output.empty() : this.preserveDevices;
+    public Output<TaskOptionsPreserveDevices> preserveDevices() {
+        return this.preserveDevices == null ? Codegen.empty() : this.preserveDevices;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityDescriptorCopyFlags")
       private final @Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags;
 
-    public Output<TaskOptionsSecurityDescriptorCopyFlags> getSecurityDescriptorCopyFlags() {
-        return this.securityDescriptorCopyFlags == null ? Output.empty() : this.securityDescriptorCopyFlags;
+    public Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags() {
+        return this.securityDescriptorCopyFlags == null ? Codegen.empty() : this.securityDescriptorCopyFlags;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskQueueing")
       private final @Nullable Output<TaskOptionsTaskQueueing> taskQueueing;
 
-    public Output<TaskOptionsTaskQueueing> getTaskQueueing() {
-        return this.taskQueueing == null ? Output.empty() : this.taskQueueing;
+    public Output<TaskOptionsTaskQueueing> taskQueueing() {
+        return this.taskQueueing == null ? Codegen.empty() : this.taskQueueing;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferMode")
       private final @Nullable Output<TaskOptionsTransferMode> transferMode;
 
-    public Output<TaskOptionsTransferMode> getTransferMode() {
-        return this.transferMode == null ? Output.empty() : this.transferMode;
+    public Output<TaskOptionsTransferMode> transferMode() {
+        return this.transferMode == null ? Codegen.empty() : this.transferMode;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<TaskOptionsUid> uid;
 
-    public Output<TaskOptionsUid> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+    public Output<TaskOptionsUid> uid() {
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verifyMode")
       private final @Nullable Output<TaskOptionsVerifyMode> verifyMode;
 
-    public Output<TaskOptionsVerifyMode> getVerifyMode() {
-        return this.verifyMode == null ? Output.empty() : this.verifyMode;
+    public Output<TaskOptionsVerifyMode> verifyMode() {
+        return this.verifyMode == null ? Codegen.empty() : this.verifyMode;
     }
 
     public TaskOptionsArgs(
@@ -217,20 +218,20 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskOptionsArgs() {
-        this.atime = Output.empty();
-        this.bytesPerSecond = Output.empty();
-        this.gid = Output.empty();
-        this.logLevel = Output.empty();
-        this.mtime = Output.empty();
-        this.overwriteMode = Output.empty();
-        this.posixPermissions = Output.empty();
-        this.preserveDeletedFiles = Output.empty();
-        this.preserveDevices = Output.empty();
-        this.securityDescriptorCopyFlags = Output.empty();
-        this.taskQueueing = Output.empty();
-        this.transferMode = Output.empty();
-        this.uid = Output.empty();
-        this.verifyMode = Output.empty();
+        this.atime = Codegen.empty();
+        this.bytesPerSecond = Codegen.empty();
+        this.gid = Codegen.empty();
+        this.logLevel = Codegen.empty();
+        this.mtime = Codegen.empty();
+        this.overwriteMode = Codegen.empty();
+        this.posixPermissions = Codegen.empty();
+        this.preserveDeletedFiles = Codegen.empty();
+        this.preserveDevices = Codegen.empty();
+        this.securityDescriptorCopyFlags = Codegen.empty();
+        this.taskQueueing = Codegen.empty();
+        this.transferMode = Codegen.empty();
+        this.uid = Codegen.empty();
+        this.verifyMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -284,7 +285,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder atime(@Nullable TaskOptionsAtime atime) {
-            this.atime = Output.ofNullable(atime);
+            this.atime = Codegen.ofNullable(atime);
             return this;
         }
         public Builder bytesPerSecond(@Nullable Output<Integer> bytesPerSecond) {
@@ -292,7 +293,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
-            this.bytesPerSecond = Output.ofNullable(bytesPerSecond);
+            this.bytesPerSecond = Codegen.ofNullable(bytesPerSecond);
             return this;
         }
         public Builder gid(@Nullable Output<TaskOptionsGid> gid) {
@@ -300,7 +301,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gid(@Nullable TaskOptionsGid gid) {
-            this.gid = Output.ofNullable(gid);
+            this.gid = Codegen.ofNullable(gid);
             return this;
         }
         public Builder logLevel(@Nullable Output<TaskOptionsLogLevel> logLevel) {
@@ -308,7 +309,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logLevel(@Nullable TaskOptionsLogLevel logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }
         public Builder mtime(@Nullable Output<TaskOptionsMtime> mtime) {
@@ -316,7 +317,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mtime(@Nullable TaskOptionsMtime mtime) {
-            this.mtime = Output.ofNullable(mtime);
+            this.mtime = Codegen.ofNullable(mtime);
             return this;
         }
         public Builder overwriteMode(@Nullable Output<TaskOptionsOverwriteMode> overwriteMode) {
@@ -324,7 +325,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overwriteMode(@Nullable TaskOptionsOverwriteMode overwriteMode) {
-            this.overwriteMode = Output.ofNullable(overwriteMode);
+            this.overwriteMode = Codegen.ofNullable(overwriteMode);
             return this;
         }
         public Builder posixPermissions(@Nullable Output<TaskOptionsPosixPermissions> posixPermissions) {
@@ -332,7 +333,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder posixPermissions(@Nullable TaskOptionsPosixPermissions posixPermissions) {
-            this.posixPermissions = Output.ofNullable(posixPermissions);
+            this.posixPermissions = Codegen.ofNullable(posixPermissions);
             return this;
         }
         public Builder preserveDeletedFiles(@Nullable Output<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles) {
@@ -340,7 +341,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preserveDeletedFiles(@Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles) {
-            this.preserveDeletedFiles = Output.ofNullable(preserveDeletedFiles);
+            this.preserveDeletedFiles = Codegen.ofNullable(preserveDeletedFiles);
             return this;
         }
         public Builder preserveDevices(@Nullable Output<TaskOptionsPreserveDevices> preserveDevices) {
@@ -348,7 +349,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preserveDevices(@Nullable TaskOptionsPreserveDevices preserveDevices) {
-            this.preserveDevices = Output.ofNullable(preserveDevices);
+            this.preserveDevices = Codegen.ofNullable(preserveDevices);
             return this;
         }
         public Builder securityDescriptorCopyFlags(@Nullable Output<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags) {
@@ -356,7 +357,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityDescriptorCopyFlags(@Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags) {
-            this.securityDescriptorCopyFlags = Output.ofNullable(securityDescriptorCopyFlags);
+            this.securityDescriptorCopyFlags = Codegen.ofNullable(securityDescriptorCopyFlags);
             return this;
         }
         public Builder taskQueueing(@Nullable Output<TaskOptionsTaskQueueing> taskQueueing) {
@@ -364,7 +365,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskQueueing(@Nullable TaskOptionsTaskQueueing taskQueueing) {
-            this.taskQueueing = Output.ofNullable(taskQueueing);
+            this.taskQueueing = Codegen.ofNullable(taskQueueing);
             return this;
         }
         public Builder transferMode(@Nullable Output<TaskOptionsTransferMode> transferMode) {
@@ -372,7 +373,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transferMode(@Nullable TaskOptionsTransferMode transferMode) {
-            this.transferMode = Output.ofNullable(transferMode);
+            this.transferMode = Codegen.ofNullable(transferMode);
             return this;
         }
         public Builder uid(@Nullable Output<TaskOptionsUid> uid) {
@@ -380,7 +381,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uid(@Nullable TaskOptionsUid uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }
         public Builder verifyMode(@Nullable Output<TaskOptionsVerifyMode> verifyMode) {
@@ -388,7 +389,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder verifyMode(@Nullable TaskOptionsVerifyMode verifyMode) {
-            this.verifyMode = Output.ofNullable(verifyMode);
+            this.verifyMode = Codegen.ofNullable(verifyMode);
             return this;
         }        public TaskOptionsArgs build() {
             return new TaskOptionsArgs(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, securityDescriptorCopyFlags, taskQueueing, transferMode, uid, verifyMode);

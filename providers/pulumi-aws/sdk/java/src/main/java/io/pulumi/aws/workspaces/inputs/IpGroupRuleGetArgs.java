@@ -5,6 +5,7 @@ package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class IpGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class IpGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -44,8 +45,8 @@ public final class IpGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpGroupRuleGetArgs() {
-        this.description = Output.empty();
-        this.source = Output.empty();
+        this.description = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class IpGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder source(Output<String> source) {

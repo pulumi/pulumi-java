@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="individualSegments", required=true)
       private final Output<Boolean> individualSegments;
 
-    public Output<Boolean> getIndividualSegments() {
+    public Output<Boolean> individualSegments() {
         return this.individualSegments;
     }
 
@@ -37,8 +38,8 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="segmentDuration")
       private final @Nullable Output<String> segmentDuration;
 
-    public Output<String> getSegmentDuration() {
-        return this.segmentDuration == null ? Output.empty() : this.segmentDuration;
+    public Output<String> segmentDuration() {
+        return this.segmentDuration == null ? Codegen.empty() : this.segmentDuration;
     }
 
     public SegmentSettingsArgs(
@@ -49,8 +50,8 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SegmentSettingsArgs() {
-        this.individualSegments = Output.empty();
-        this.segmentDuration = Output.empty();
+        this.individualSegments = Codegen.empty();
+        this.segmentDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder segmentDuration(@Nullable String segmentDuration) {
-            this.segmentDuration = Output.ofNullable(segmentDuration);
+            this.segmentDuration = Codegen.ofNullable(segmentDuration);
             return this;
         }        public SegmentSettingsArgs build() {
             return new SegmentSettingsArgs(individualSegments, segmentDuration);

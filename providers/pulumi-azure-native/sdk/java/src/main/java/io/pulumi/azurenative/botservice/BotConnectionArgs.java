@@ -9,6 +9,7 @@ import io.pulumi.azurenative.botservice.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+    public Output<String> connectionName() {
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<Either<String,Kind>> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ConnectionSettingPropertiesArgs> properties;
 
-    public Output<ConnectionSettingPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ConnectionSettingPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +82,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -92,8 +93,8 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public BotConnectionArgs(
@@ -127,14 +128,14 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotConnectionArgs() {
-        this.connectionName = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
@@ -184,7 +185,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -192,7 +193,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<ConnectionSettingPropertiesArgs> properties) {
@@ -200,7 +201,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ConnectionSettingPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -224,7 +225,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -232,7 +233,7 @@ public final class BotConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public BotConnectionArgs build() {
             return new BotConnectionArgs(connectionName, kind, location, properties, resourceGroupName, resourceName, sku, tags);

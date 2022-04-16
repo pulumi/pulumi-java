@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
+    public Output<String> acceleratorType() {
+        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
     @Import(name="initialInstanceCount", required=true)
       private final Output<Integer> initialInstanceCount;
 
-    public Output<Integer> getInitialInstanceCount() {
+    public Output<Integer> initialInstanceCount() {
         return this.initialInstanceCount;
     }
 
@@ -45,8 +46,8 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
     @Import(name="initialVariantWeight")
       private final @Nullable Output<Double> initialVariantWeight;
 
-    public Output<Double> getInitialVariantWeight() {
-        return this.initialVariantWeight == null ? Output.empty() : this.initialVariantWeight;
+    public Output<Double> initialVariantWeight() {
+        return this.initialVariantWeight == null ? Codegen.empty() : this.initialVariantWeight;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -67,7 +68,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
     @Import(name="modelName", required=true)
       private final Output<String> modelName;
 
-    public Output<String> getModelName() {
+    public Output<String> modelName() {
         return this.modelName;
     }
 
@@ -78,8 +79,8 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
     @Import(name="variantName")
       private final @Nullable Output<String> variantName;
 
-    public Output<String> getVariantName() {
-        return this.variantName == null ? Output.empty() : this.variantName;
+    public Output<String> variantName() {
+        return this.variantName == null ? Codegen.empty() : this.variantName;
     }
 
     public EndpointConfigurationProductionVariantGetArgs(
@@ -98,12 +99,12 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
     }
 
     private EndpointConfigurationProductionVariantGetArgs() {
-        this.acceleratorType = Output.empty();
-        this.initialInstanceCount = Output.empty();
-        this.initialVariantWeight = Output.empty();
-        this.instanceType = Output.empty();
-        this.modelName = Output.empty();
-        this.variantName = Output.empty();
+        this.acceleratorType = Codegen.empty();
+        this.initialInstanceCount = Codegen.empty();
+        this.initialVariantWeight = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.modelName = Codegen.empty();
+        this.variantName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
             return this;
         }
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Output.ofNullable(acceleratorType);
+            this.acceleratorType = Codegen.ofNullable(acceleratorType);
             return this;
         }
         public Builder initialInstanceCount(Output<Integer> initialInstanceCount) {
@@ -157,7 +158,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
             return this;
         }
         public Builder initialVariantWeight(@Nullable Double initialVariantWeight) {
-            this.initialVariantWeight = Output.ofNullable(initialVariantWeight);
+            this.initialVariantWeight = Codegen.ofNullable(initialVariantWeight);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {
@@ -181,7 +182,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
             return this;
         }
         public Builder variantName(@Nullable String variantName) {
-            this.variantName = Output.ofNullable(variantName);
+            this.variantName = Codegen.ofNullable(variantName);
             return this;
         }        public EndpointConfigurationProductionVariantGetArgs build() {
             return new EndpointConfigurationProductionVariantGetArgs(acceleratorType, initialInstanceCount, initialVariantWeight, instanceType, modelName, variantName);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.web.inputs.StatusCodesBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.StatusCodesRangeBasedTriggerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="privateBytesInKB")
       private final @Nullable Output<Integer> privateBytesInKB;
 
-    public Output<Integer> getPrivateBytesInKB() {
-        return this.privateBytesInKB == null ? Output.empty() : this.privateBytesInKB;
+    public Output<Integer> privateBytesInKB() {
+        return this.privateBytesInKB == null ? Codegen.empty() : this.privateBytesInKB;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="requests")
       private final @Nullable Output<RequestsBasedTriggerArgs> requests;
 
-    public Output<RequestsBasedTriggerArgs> getRequests() {
-        return this.requests == null ? Output.empty() : this.requests;
+    public Output<RequestsBasedTriggerArgs> requests() {
+        return this.requests == null ? Codegen.empty() : this.requests;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="slowRequests")
       private final @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests;
 
-    public Output<SlowRequestsBasedTriggerArgs> getSlowRequests() {
-        return this.slowRequests == null ? Output.empty() : this.slowRequests;
+    public Output<SlowRequestsBasedTriggerArgs> slowRequests() {
+        return this.slowRequests == null ? Codegen.empty() : this.slowRequests;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="slowRequestsWithPath")
       private final @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
 
-    public Output<List<SlowRequestsBasedTriggerArgs>> getSlowRequestsWithPath() {
-        return this.slowRequestsWithPath == null ? Output.empty() : this.slowRequestsWithPath;
+    public Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath() {
+        return this.slowRequestsWithPath == null ? Codegen.empty() : this.slowRequestsWithPath;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="statusCodes")
       private final @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes;
 
-    public Output<List<StatusCodesBasedTriggerArgs>> getStatusCodes() {
-        return this.statusCodes == null ? Output.empty() : this.statusCodes;
+    public Output<List<StatusCodesBasedTriggerArgs>> statusCodes() {
+        return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="statusCodesRange")
       private final @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 
-    public Output<List<StatusCodesRangeBasedTriggerArgs>> getStatusCodesRange() {
-        return this.statusCodesRange == null ? Output.empty() : this.statusCodesRange;
+    public Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange() {
+        return this.statusCodesRange == null ? Codegen.empty() : this.statusCodesRange;
     }
 
     public AutoHealTriggersArgs(
@@ -105,12 +106,12 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AutoHealTriggersArgs() {
-        this.privateBytesInKB = Output.empty();
-        this.requests = Output.empty();
-        this.slowRequests = Output.empty();
-        this.slowRequestsWithPath = Output.empty();
-        this.statusCodes = Output.empty();
-        this.statusCodesRange = Output.empty();
+        this.privateBytesInKB = Codegen.empty();
+        this.requests = Codegen.empty();
+        this.slowRequests = Codegen.empty();
+        this.slowRequestsWithPath = Codegen.empty();
+        this.statusCodes = Codegen.empty();
+        this.statusCodesRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateBytesInKB(@Nullable Integer privateBytesInKB) {
-            this.privateBytesInKB = Output.ofNullable(privateBytesInKB);
+            this.privateBytesInKB = Codegen.ofNullable(privateBytesInKB);
             return this;
         }
         public Builder requests(@Nullable Output<RequestsBasedTriggerArgs> requests) {
@@ -156,7 +157,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requests(@Nullable RequestsBasedTriggerArgs requests) {
-            this.requests = Output.ofNullable(requests);
+            this.requests = Codegen.ofNullable(requests);
             return this;
         }
         public Builder slowRequests(@Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests) {
@@ -164,7 +165,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder slowRequests(@Nullable SlowRequestsBasedTriggerArgs slowRequests) {
-            this.slowRequests = Output.ofNullable(slowRequests);
+            this.slowRequests = Codegen.ofNullable(slowRequests);
             return this;
         }
         public Builder slowRequestsWithPath(@Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath) {
@@ -172,7 +173,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder slowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerArgs> slowRequestsWithPath) {
-            this.slowRequestsWithPath = Output.ofNullable(slowRequestsWithPath);
+            this.slowRequestsWithPath = Codegen.ofNullable(slowRequestsWithPath);
             return this;
         }
         public Builder slowRequestsWithPath(SlowRequestsBasedTriggerArgs... slowRequestsWithPath) {
@@ -183,7 +184,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder statusCodes(@Nullable List<StatusCodesBasedTriggerArgs> statusCodes) {
-            this.statusCodes = Output.ofNullable(statusCodes);
+            this.statusCodes = Codegen.ofNullable(statusCodes);
             return this;
         }
         public Builder statusCodes(StatusCodesBasedTriggerArgs... statusCodes) {
@@ -194,7 +195,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder statusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerArgs> statusCodesRange) {
-            this.statusCodesRange = Output.ofNullable(statusCodesRange);
+            this.statusCodesRange = Codegen.ofNullable(statusCodesRange);
             return this;
         }
         public Builder statusCodesRange(StatusCodesRangeBasedTriggerArgs... statusCodesRange) {

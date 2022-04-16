@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
     @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
+    public Output<Integer> maxCapacity() {
+        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
     @Import(name="minCapacity", required=true)
       private final Output<Integer> minCapacity;
 
-    public Output<Integer> getMinCapacity() {
+    public Output<Integer> minCapacity() {
         return this.minCapacity;
     }
 
@@ -48,8 +49,8 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
     }
 
     private ApplicationGatewayAutoscaleConfigurationArgs() {
-        this.maxCapacity = Output.empty();
-        this.minCapacity = Output.empty();
+        this.maxCapacity = Codegen.empty();
+        this.minCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
             return this;
         }
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Output.ofNullable(maxCapacity);
+            this.maxCapacity = Codegen.ofNullable(maxCapacity);
             return this;
         }
         public Builder minCapacity(Output<Integer> minCapacity) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+    public Output<String> group() {
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="registry", required=true)
       private final Output<String> registry;
 
-    public Output<String> getRegistry() {
+    public Output<String> registry() {
         return this.registry;
     }
 
@@ -59,8 +60,8 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
-    public Output<String> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+    public Output<String> tenant() {
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="volume", required=true)
       private final Output<String> volume;
 
-    public Output<String> getVolume() {
+    public Output<String> volume() {
         return this.volume;
     }
 
@@ -101,12 +102,12 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private QuobyteVolumeSourceArgs() {
-        this.group = Output.empty();
-        this.readOnly = Output.empty();
-        this.registry = Output.empty();
-        this.tenant = Output.empty();
-        this.user = Output.empty();
-        this.volume = Output.empty();
+        this.group = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.registry = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.user = Codegen.empty();
+        this.volume = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder group(@Nullable String group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -152,7 +153,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder registry(Output<String> registry) {
@@ -168,7 +169,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tenant(@Nullable String tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -176,7 +177,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }
         public Builder volume(Output<String> volume) {

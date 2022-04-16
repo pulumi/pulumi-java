@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
     @Import(name="allow")
       private final @Nullable Output<Boolean> allow;
 
-    public Output<Boolean> getAllow() {
-        return this.allow == null ? Output.empty() : this.allow;
+    public Output<Boolean> allow() {
+        return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
     @Import(name="default")
       private final @Nullable Output<Boolean> default_;
 
-    public Output<Boolean> getDefault_() {
-        return this.default_ == null ? Output.empty() : this.default_;
+    public Output<Boolean> default_() {
+        return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
     @Import(name="optimize")
       private final @Nullable Output<Boolean> optimize;
 
-    public Output<Boolean> getOptimize() {
-        return this.optimize == null ? Output.empty() : this.optimize;
+    public Output<Boolean> optimize() {
+        return this.optimize == null ? Codegen.empty() : this.optimize;
     }
 
     public O365BreakOutCategoryPoliciesArgs(
@@ -61,9 +62,9 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
     }
 
     private O365BreakOutCategoryPoliciesArgs() {
-        this.allow = Output.empty();
-        this.default_ = Output.empty();
-        this.optimize = Output.empty();
+        this.allow = Codegen.empty();
+        this.default_ = Codegen.empty();
+        this.optimize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allow(@Nullable Boolean allow) {
-            this.allow = Output.ofNullable(allow);
+            this.allow = Codegen.ofNullable(allow);
             return this;
         }
         public Builder default_(@Nullable Output<Boolean> default_) {
@@ -103,7 +104,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder default_(@Nullable Boolean default_) {
-            this.default_ = Output.ofNullable(default_);
+            this.default_ = Codegen.ofNullable(default_);
             return this;
         }
         public Builder optimize(@Nullable Output<Boolean> optimize) {
@@ -111,7 +112,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder optimize(@Nullable Boolean optimize) {
-            this.optimize = Output.ofNullable(optimize);
+            this.optimize = Codegen.ofNullable(optimize);
             return this;
         }        public O365BreakOutCategoryPoliciesArgs build() {
             return new O365BreakOutCategoryPoliciesArgs(allow, default_, optimize);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.enums.SchedulerAcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
     @Import(name="coreCount")
       private final @Nullable Output<String> coreCount;
 
-    public Output<String> getCoreCount() {
-        return this.coreCount == null ? Output.empty() : this.coreCount;
+    public Output<String> coreCount() {
+        return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
     @Import(name="type")
       private final @Nullable Output<SchedulerAcceleratorConfigType> type;
 
-    public Output<SchedulerAcceleratorConfigType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<SchedulerAcceleratorConfigType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SchedulerAcceleratorConfigArgs(
@@ -49,8 +50,8 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
     }
 
     private SchedulerAcceleratorConfigArgs() {
-        this.coreCount = Output.empty();
-        this.type = Output.empty();
+        this.coreCount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder coreCount(@Nullable String coreCount) {
-            this.coreCount = Output.ofNullable(coreCount);
+            this.coreCount = Codegen.ofNullable(coreCount);
             return this;
         }
         public Builder type(@Nullable Output<SchedulerAcceleratorConfigType> type) {
@@ -88,7 +89,7 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder type(@Nullable SchedulerAcceleratorConfigType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SchedulerAcceleratorConfigArgs build() {
             return new SchedulerAcceleratorConfigArgs(coreCount, type);

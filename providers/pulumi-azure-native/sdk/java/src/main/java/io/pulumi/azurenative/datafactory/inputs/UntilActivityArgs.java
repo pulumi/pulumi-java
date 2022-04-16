@@ -45,6 +45,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -67,7 +68,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activities", required=true)
       private final Output<List<Object>> activities;
 
-    public Output<List<Object>> getActivities() {
+    public Output<List<Object>> activities() {
         return this.activities;
     }
 
@@ -78,8 +79,8 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
       private final Output<ExpressionArgs> expression;
 
-    public Output<ExpressionArgs> getExpression() {
+    public Output<ExpressionArgs> expression() {
         return this.expression;
     }
 
@@ -111,7 +112,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -122,8 +123,8 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Object> timeout;
 
-    public Output<Object> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<Object> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -145,8 +146,8 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> userProperties() {
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public UntilActivityArgs(
@@ -169,14 +170,14 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UntilActivityArgs() {
-        this.activities = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.expression = Output.empty();
-        this.name = Output.empty();
-        this.timeout = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.activities = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.name = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -229,7 +230,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -240,7 +241,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expression(Output<ExpressionArgs> expression) {
@@ -264,7 +265,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -280,7 +281,7 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

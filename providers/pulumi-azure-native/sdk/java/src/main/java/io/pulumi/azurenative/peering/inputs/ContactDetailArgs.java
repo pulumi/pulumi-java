@@ -7,6 +7,7 @@ import io.pulumi.azurenative.peering.enums.Role;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phone")
       private final @Nullable Output<String> phone;
 
-    public Output<String> getPhone() {
-        return this.phone == null ? Output.empty() : this.phone;
+    public Output<String> phone() {
+        return this.phone == null ? Codegen.empty() : this.phone;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<Either<String,Role>> role;
 
-    public Output<Either<String,Role>> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<Either<String,Role>> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public ContactDetailArgs(
@@ -63,9 +64,9 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactDetailArgs() {
-        this.email = Output.empty();
-        this.phone = Output.empty();
-        this.role = Output.empty();
+        this.email = Codegen.empty();
+        this.phone = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder phone(@Nullable Output<String> phone) {
@@ -105,7 +106,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder phone(@Nullable String phone) {
-            this.phone = Output.ofNullable(phone);
+            this.phone = Codegen.ofNullable(phone);
             return this;
         }
         public Builder role(@Nullable Output<Either<String,Role>> role) {
@@ -113,7 +114,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable Either<String,Role> role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public ContactDetailArgs build() {
             return new ContactDetailArgs(email, phone, role);

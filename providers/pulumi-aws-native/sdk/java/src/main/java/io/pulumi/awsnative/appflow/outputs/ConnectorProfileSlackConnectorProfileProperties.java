@@ -24,7 +24,7 @@ public final class ConnectorProfileSlackConnectorProfileProperties {
      * The location of the Slack resource
      * 
     */
-    public String getInstanceUrl() {
+    public String instanceUrl() {
         return this.instanceUrl;
     }
 

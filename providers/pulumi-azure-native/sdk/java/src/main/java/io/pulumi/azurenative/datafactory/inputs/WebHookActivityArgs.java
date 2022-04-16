@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebActivityAuthenticationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,8 +33,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="authentication")
       private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
-    public Output<WebActivityAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<WebActivityAuthenticationArgs> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="body")
       private final @Nullable Output<Object> body;
 
-    public Output<Object> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<Object> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="headers")
       private final @Nullable Output<Object> headers;
 
-    public Output<Object> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<Object> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="method", required=true)
       private final Output<Either<String,WebHookActivityMethod>> method;
 
-    public Output<Either<String,WebHookActivityMethod>> getMethod() {
+    public Output<Either<String,WebHookActivityMethod>> method() {
         return this.method;
     }
 
@@ -98,7 +99,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -109,8 +110,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="reportStatusOnCallBack")
       private final @Nullable Output<Object> reportStatusOnCallBack;
 
-    public Output<Object> getReportStatusOnCallBack() {
-        return this.reportStatusOnCallBack == null ? Output.empty() : this.reportStatusOnCallBack;
+    public Output<Object> reportStatusOnCallBack() {
+        return this.reportStatusOnCallBack == null ? Codegen.empty() : this.reportStatusOnCallBack;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -143,7 +144,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -154,8 +155,8 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> userProperties() {
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public WebHookActivityArgs(
@@ -186,18 +187,18 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private WebHookActivityArgs() {
-        this.authentication = Output.empty();
-        this.body = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.headers = Output.empty();
-        this.method = Output.empty();
-        this.name = Output.empty();
-        this.reportStatusOnCallBack = Output.empty();
-        this.timeout = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
-        this.userProperties = Output.empty();
+        this.authentication = Codegen.empty();
+        this.body = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.method = Codegen.empty();
+        this.name = Codegen.empty();
+        this.reportStatusOnCallBack = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -247,7 +248,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder body(@Nullable Output<Object> body) {
@@ -255,7 +256,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder body(@Nullable Object body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
@@ -263,7 +264,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -274,7 +275,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headers(@Nullable Output<Object> headers) {
@@ -282,7 +283,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder headers(@Nullable Object headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder method(Output<Either<String,WebHookActivityMethod>> method) {
@@ -306,7 +307,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder reportStatusOnCallBack(@Nullable Object reportStatusOnCallBack) {
-            this.reportStatusOnCallBack = Output.ofNullable(reportStatusOnCallBack);
+            this.reportStatusOnCallBack = Codegen.ofNullable(reportStatusOnCallBack);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -314,7 +315,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -338,7 +339,7 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

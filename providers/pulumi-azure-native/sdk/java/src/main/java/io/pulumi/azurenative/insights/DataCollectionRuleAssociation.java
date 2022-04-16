@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The resource ID of the data collection rule that is to be associated.
      * 
      */
-    public Output</* @Nullable */ String> getDataCollectionRuleId() {
+    public Output</* @Nullable */ String> dataCollectionRuleId() {
         return this.dataCollectionRuleId;
     }
     /**
@@ -55,7 +56,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return Description of the association.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +70,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return Resource entity tag (ETag).
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -83,7 +84,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +98,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The resource provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -111,7 +112,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -137,7 +138,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public DataCollectionRuleAssociation(String name, DataCollectionRuleAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:DataCollectionRuleAssociation", name, args == null ? DataCollectionRuleAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:DataCollectionRuleAssociation", name, args == null ? DataCollectionRuleAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataCollectionRuleAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return The column name.
      * 
      */
-    public Output<String> getColumnName() {
+    public Output<String> columnName() {
         return this.columnName;
     }
     /**
@@ -56,7 +57,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return The information type.
      * 
      */
-    public Output</* @Nullable */ String> getInformationType() {
+    public Output</* @Nullable */ String> informationType() {
         return this.informationType;
     }
     /**
@@ -70,7 +71,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return The information type ID.
      * 
      */
-    public Output</* @Nullable */ String> getInformationTypeId() {
+    public Output</* @Nullable */ String> informationTypeId() {
         return this.informationTypeId;
     }
     /**
@@ -84,7 +85,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
      */
-    public Output<Boolean> getIsDisabled() {
+    public Output<Boolean> isDisabled() {
         return this.isDisabled;
     }
     /**
@@ -98,7 +99,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return The label ID.
      * 
      */
-    public Output</* @Nullable */ String> getLabelId() {
+    public Output</* @Nullable */ String> labelId() {
         return this.labelId;
     }
     /**
@@ -112,7 +113,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return The label name.
      * 
      */
-    public Output</* @Nullable */ String> getLabelName() {
+    public Output</* @Nullable */ String> labelName() {
         return this.labelName;
     }
     /**
@@ -126,7 +127,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return Resource that manages the sensitivity label.
      * 
      */
-    public Output<String> getManagedBy() {
+    public Output<String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -140,13 +141,13 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="rank", type=String.class, parameters={})
     private Output</* @Nullable */ String> rank;
 
-    public Output</* @Nullable */ String> getRank() {
+    public Output</* @Nullable */ String> rank() {
         return this.rank;
     }
     /**
@@ -160,7 +161,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return The schema name.
      * 
      */
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
     /**
@@ -174,7 +175,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return The table name.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
     /**
@@ -188,7 +189,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -214,7 +215,7 @@ public class SensitivityLabel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SensitivityLabel(String name, SensitivityLabelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:SensitivityLabel", name, args == null ? SensitivityLabelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:SensitivityLabel", name, args == null ? SensitivityLabelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SensitivityLabel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

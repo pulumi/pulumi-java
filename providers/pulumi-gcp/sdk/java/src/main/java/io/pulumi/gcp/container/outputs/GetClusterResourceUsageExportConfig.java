@@ -25,13 +25,13 @@ public final class GetClusterResourceUsageExportConfig {
         this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
     }
 
-    public List<GetClusterResourceUsageExportConfigBigqueryDestination> getBigqueryDestinations() {
+    public List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations() {
         return this.bigqueryDestinations;
     }
-    public Boolean getEnableNetworkEgressMetering() {
+    public Boolean enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
-    public Boolean getEnableResourceConsumptionMetering() {
+    public Boolean enableResourceConsumptionMetering() {
         return this.enableResourceConsumptionMetering;
     }
 

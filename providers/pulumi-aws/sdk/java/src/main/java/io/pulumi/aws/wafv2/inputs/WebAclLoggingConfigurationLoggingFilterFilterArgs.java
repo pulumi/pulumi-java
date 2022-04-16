@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
     @Import(name="behavior", required=true)
       private final Output<String> behavior;
 
-    public Output<String> getBehavior() {
+    public Output<String> behavior() {
         return this.behavior;
     }
 
@@ -33,7 +34,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
     @Import(name="conditions", required=true)
       private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions;
 
-    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> getConditions() {
+    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions() {
         return this.conditions;
     }
 
@@ -44,7 +45,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
     @Import(name="requirement", required=true)
       private final Output<String> requirement;
 
-    public Output<String> getRequirement() {
+    public Output<String> requirement() {
         return this.requirement;
     }
 
@@ -58,9 +59,9 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
     }
 
     private WebAclLoggingConfigurationLoggingFilterFilterArgs() {
-        this.behavior = Output.empty();
-        this.conditions = Output.empty();
-        this.requirement = Output.empty();
+        this.behavior = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.requirement = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpecArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
-    public Output<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
+    public Output<UserProfileResourceSpecArgs> defaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
     public UserProfileJupyterServerAppSettingsArgs(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
@@ -30,7 +31,7 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
     }
 
     private UserProfileJupyterServerAppSettingsArgs() {
-        this.defaultResourceSpec = Output.empty();
+        this.defaultResourceSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
             return this;
         }
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
             return this;
         }        public UserProfileJupyterServerAppSettingsArgs build() {
             return new UserProfileJupyterServerAppSettingsArgs(defaultResourceSpec);

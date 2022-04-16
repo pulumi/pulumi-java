@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class GatewayRouteSpecHttpRouteActionTargetArgs extends io.pulumi.r
     @Import(name="virtualService", required=true)
       private final Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs> virtualService;
 
-    public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs> getVirtualService() {
+    public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs> virtualService() {
         return this.virtualService;
     }
 
@@ -29,7 +30,7 @@ public final class GatewayRouteSpecHttpRouteActionTargetArgs extends io.pulumi.r
     }
 
     private GatewayRouteSpecHttpRouteActionTargetArgs() {
-        this.virtualService = Output.empty();
+        this.virtualService = Codegen.empty();
     }
 
     public static Builder builder() {

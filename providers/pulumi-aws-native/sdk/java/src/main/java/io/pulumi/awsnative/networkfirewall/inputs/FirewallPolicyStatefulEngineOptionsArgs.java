@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.enums.FirewallPolicyRuleOrder;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
     @Import(name="ruleOrder")
       private final @Nullable Output<FirewallPolicyRuleOrder> ruleOrder;
 
-    public Output<FirewallPolicyRuleOrder> getRuleOrder() {
-        return this.ruleOrder == null ? Output.empty() : this.ruleOrder;
+    public Output<FirewallPolicyRuleOrder> ruleOrder() {
+        return this.ruleOrder == null ? Codegen.empty() : this.ruleOrder;
     }
 
     public FirewallPolicyStatefulEngineOptionsArgs(@Nullable Output<FirewallPolicyRuleOrder> ruleOrder) {
@@ -26,7 +27,7 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
     }
 
     private FirewallPolicyStatefulEngineOptionsArgs() {
-        this.ruleOrder = Output.empty();
+        this.ruleOrder = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class FirewallPolicyStatefulEngineOptionsArgs extends io.pulumi.res
             return this;
         }
         public Builder ruleOrder(@Nullable FirewallPolicyRuleOrder ruleOrder) {
-            this.ruleOrder = Output.ofNullable(ruleOrder);
+            this.ruleOrder = Codegen.ofNullable(ruleOrder);
             return this;
         }        public FirewallPolicyStatefulEngineOptionsArgs build() {
             return new FirewallPolicyStatefulEngineOptionsArgs(ruleOrder);

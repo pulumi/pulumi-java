@@ -12,6 +12,7 @@ import io.pulumi.awsnative.ec2.inputs.EC2FleetTagSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTargetCapacitySpecificationRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,85 +27,85 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+    public Output<String> context() {
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
-    public Output<EC2FleetExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
-        return this.excessCapacityTerminationPolicy == null ? Output.empty() : this.excessCapacityTerminationPolicy;
+    public Output<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
+        return this.excessCapacityTerminationPolicy == null ? Codegen.empty() : this.excessCapacityTerminationPolicy;
     }
 
     @Import(name="launchTemplateConfigs", required=true)
       private final Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs;
 
-    public Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> getLaunchTemplateConfigs() {
+    public Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs() {
         return this.launchTemplateConfigs;
     }
 
     @Import(name="onDemandOptions")
       private final @Nullable Output<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions;
 
-    public Output<EC2FleetOnDemandOptionsRequestArgs> getOnDemandOptions() {
-        return this.onDemandOptions == null ? Output.empty() : this.onDemandOptions;
+    public Output<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions() {
+        return this.onDemandOptions == null ? Codegen.empty() : this.onDemandOptions;
     }
 
     @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
-    public Output<Boolean> getReplaceUnhealthyInstances() {
-        return this.replaceUnhealthyInstances == null ? Output.empty() : this.replaceUnhealthyInstances;
+    public Output<Boolean> replaceUnhealthyInstances() {
+        return this.replaceUnhealthyInstances == null ? Codegen.empty() : this.replaceUnhealthyInstances;
     }
 
     @Import(name="spotOptions")
       private final @Nullable Output<EC2FleetSpotOptionsRequestArgs> spotOptions;
 
-    public Output<EC2FleetSpotOptionsRequestArgs> getSpotOptions() {
-        return this.spotOptions == null ? Output.empty() : this.spotOptions;
+    public Output<EC2FleetSpotOptionsRequestArgs> spotOptions() {
+        return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
     }
 
     @Import(name="tagSpecifications")
       private final @Nullable Output<List<EC2FleetTagSpecificationArgs>> tagSpecifications;
 
-    public Output<List<EC2FleetTagSpecificationArgs>> getTagSpecifications() {
-        return this.tagSpecifications == null ? Output.empty() : this.tagSpecifications;
+    public Output<List<EC2FleetTagSpecificationArgs>> tagSpecifications() {
+        return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
     @Import(name="targetCapacitySpecification", required=true)
       private final Output<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification;
 
-    public Output<EC2FleetTargetCapacitySpecificationRequestArgs> getTargetCapacitySpecification() {
+    public Output<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
 
     @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
-    public Output<Boolean> getTerminateInstancesWithExpiration() {
-        return this.terminateInstancesWithExpiration == null ? Output.empty() : this.terminateInstancesWithExpiration;
+    public Output<Boolean> terminateInstancesWithExpiration() {
+        return this.terminateInstancesWithExpiration == null ? Codegen.empty() : this.terminateInstancesWithExpiration;
     }
 
     @Import(name="type")
       private final @Nullable Output<EC2FleetType> type;
 
-    public Output<EC2FleetType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<EC2FleetType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
-    public Output<String> getValidFrom() {
-        return this.validFrom == null ? Output.empty() : this.validFrom;
+    public Output<String> validFrom() {
+        return this.validFrom == null ? Codegen.empty() : this.validFrom;
     }
 
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
-    public Output<String> getValidUntil() {
-        return this.validUntil == null ? Output.empty() : this.validUntil;
+    public Output<String> validUntil() {
+        return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 
     public EC2FleetArgs(
@@ -135,18 +136,18 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EC2FleetArgs() {
-        this.context = Output.empty();
-        this.excessCapacityTerminationPolicy = Output.empty();
-        this.launchTemplateConfigs = Output.empty();
-        this.onDemandOptions = Output.empty();
-        this.replaceUnhealthyInstances = Output.empty();
-        this.spotOptions = Output.empty();
-        this.tagSpecifications = Output.empty();
-        this.targetCapacitySpecification = Output.empty();
-        this.terminateInstancesWithExpiration = Output.empty();
-        this.type = Output.empty();
-        this.validFrom = Output.empty();
-        this.validUntil = Output.empty();
+        this.context = Codegen.empty();
+        this.excessCapacityTerminationPolicy = Codegen.empty();
+        this.launchTemplateConfigs = Codegen.empty();
+        this.onDemandOptions = Codegen.empty();
+        this.replaceUnhealthyInstances = Codegen.empty();
+        this.spotOptions = Codegen.empty();
+        this.tagSpecifications = Codegen.empty();
+        this.targetCapacitySpecification = Codegen.empty();
+        this.terminateInstancesWithExpiration = Codegen.empty();
+        this.type = Codegen.empty();
+        this.validFrom = Codegen.empty();
+        this.validUntil = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder context(@Nullable String context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder excessCapacityTerminationPolicy(@Nullable Output<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy) {
@@ -204,7 +205,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excessCapacityTerminationPolicy(@Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy) {
-            this.excessCapacityTerminationPolicy = Output.ofNullable(excessCapacityTerminationPolicy);
+            this.excessCapacityTerminationPolicy = Codegen.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
         public Builder launchTemplateConfigs(Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs) {
@@ -223,7 +224,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onDemandOptions(@Nullable EC2FleetOnDemandOptionsRequestArgs onDemandOptions) {
-            this.onDemandOptions = Output.ofNullable(onDemandOptions);
+            this.onDemandOptions = Codegen.ofNullable(onDemandOptions);
             return this;
         }
         public Builder replaceUnhealthyInstances(@Nullable Output<Boolean> replaceUnhealthyInstances) {
@@ -231,7 +232,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
-            this.replaceUnhealthyInstances = Output.ofNullable(replaceUnhealthyInstances);
+            this.replaceUnhealthyInstances = Codegen.ofNullable(replaceUnhealthyInstances);
             return this;
         }
         public Builder spotOptions(@Nullable Output<EC2FleetSpotOptionsRequestArgs> spotOptions) {
@@ -239,7 +240,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spotOptions(@Nullable EC2FleetSpotOptionsRequestArgs spotOptions) {
-            this.spotOptions = Output.ofNullable(spotOptions);
+            this.spotOptions = Codegen.ofNullable(spotOptions);
             return this;
         }
         public Builder tagSpecifications(@Nullable Output<List<EC2FleetTagSpecificationArgs>> tagSpecifications) {
@@ -247,7 +248,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagSpecifications(@Nullable List<EC2FleetTagSpecificationArgs> tagSpecifications) {
-            this.tagSpecifications = Output.ofNullable(tagSpecifications);
+            this.tagSpecifications = Codegen.ofNullable(tagSpecifications);
             return this;
         }
         public Builder tagSpecifications(EC2FleetTagSpecificationArgs... tagSpecifications) {
@@ -266,7 +267,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
-            this.terminateInstancesWithExpiration = Output.ofNullable(terminateInstancesWithExpiration);
+            this.terminateInstancesWithExpiration = Codegen.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
         public Builder type(@Nullable Output<EC2FleetType> type) {
@@ -274,7 +275,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable EC2FleetType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder validFrom(@Nullable Output<String> validFrom) {
@@ -282,7 +283,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validFrom(@Nullable String validFrom) {
-            this.validFrom = Output.ofNullable(validFrom);
+            this.validFrom = Codegen.ofNullable(validFrom);
             return this;
         }
         public Builder validUntil(@Nullable Output<String> validUntil) {
@@ -290,7 +291,7 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = Output.ofNullable(validUntil);
+            this.validUntil = Codegen.ofNullable(validUntil);
             return this;
         }        public EC2FleetArgs build() {
             return new EC2FleetArgs(context, excessCapacityTerminationPolicy, launchTemplateConfigs, onDemandOptions, replaceUnhealthyInstances, spotOptions, tagSpecifications, targetCapacitySpecification, terminateInstancesWithExpiration, type, validFrom, validUntil);

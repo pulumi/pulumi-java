@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.ResolverFirewallRuleGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @return The ARN (Amazon Resource Name) of the rule group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @return A name that lets you identify the rule group, to manage and use it.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +69,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @return The AWS account ID for the account that created the rule group. When a rule group is shared with your account, this is the account that has shared the rule group with you.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -82,7 +83,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @return Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM). Valid values: `NOT_SHARED`, `SHARED_BY_ME`, `SHARED_WITH_ME`
      * 
      */
-    public Output<String> getShareStatus() {
+    public Output<String> shareStatus() {
         return this.shareStatus;
     }
     /**
@@ -96,7 +97,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -110,7 +111,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -136,7 +137,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverFirewallRuleGroup(String name, @Nullable ResolverFirewallRuleGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup", name, args == null ? ResolverFirewallRuleGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup", name, args == null ? ResolverFirewallRuleGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverFirewallRuleGroup(String name, Output<String> id, @Nullable ResolverFirewallRuleGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.AccessRights;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
 
-    public Output<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
+    public Output<String> authorizationRuleName() {
+        return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="eventHubName", required=true)
       private final Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName;
     }
 
@@ -46,7 +47,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -57,7 +58,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +69,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="rights", required=true)
       private final Output<List<Either<String,AccessRights>>> rights;
 
-    public Output<List<Either<String,AccessRights>>> getRights() {
+    public Output<List<Either<String,AccessRights>>> rights() {
         return this.rights;
     }
 
@@ -86,11 +87,11 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     }
 
     private EventHubAuthorizationRuleArgs() {
-        this.authorizationRuleName = Output.empty();
-        this.eventHubName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rights = Output.empty();
+        this.authorizationRuleName = Codegen.empty();
+        this.eventHubName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rights = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Codegen.ofNullable(authorizationRuleName);
             return this;
         }
         public Builder eventHubName(Output<String> eventHubName) {

@@ -40,7 +40,7 @@ public final class PatchDeploymentRecurringScheduleMonthly {
      * will not run in February, April, June, etc.
      * 
     */
-    public Optional<Integer> getMonthDay() {
+    public Optional<Integer> monthDay() {
         return Optional.ofNullable(this.monthDay);
     }
     /**
@@ -48,7 +48,7 @@ public final class PatchDeploymentRecurringScheduleMonthly {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth> getWeekDayOfMonth() {
+    public Optional<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth> weekDayOfMonth() {
         return Optional.ofNullable(this.weekDayOfMonth);
     }
 

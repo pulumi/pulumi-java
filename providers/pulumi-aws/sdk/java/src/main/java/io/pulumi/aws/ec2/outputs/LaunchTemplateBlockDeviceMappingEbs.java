@@ -81,7 +81,7 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      * Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
      * 
     */
-    public Optional<String> getDeleteOnTermination() {
+    public Optional<String> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
@@ -89,7 +89,7 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      * on the volume (Default: `false`). Cannot be used with `snapshot_id`.
      * 
     */
-    public Optional<String> getEncrypted() {
+    public Optional<String> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
@@ -98,7 +98,7 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      * This must be set with a `volume_type` of `"io1/io2"`.
      * 
     */
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
@@ -106,35 +106,35 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      * `encrypted` must be set to `true` when this is set.
      * 
     */
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The Snapshot ID to mount.
      * 
     */
-    public Optional<String> getSnapshotId() {
+    public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
      * 
     */
-    public Optional<Integer> getThroughput() {
+    public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
      * The size of the volume in gigabytes.
      * 
     */
-    public Optional<Integer> getVolumeSize() {
+    public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
      * The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
     */
-    public Optional<String> getVolumeType() {
+    public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

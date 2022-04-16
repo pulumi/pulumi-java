@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudidentity_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1.GroupArgs;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.DynamicGroupMetadataResponse;
@@ -32,7 +33,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The time when the `Group` was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +47,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The display name of the `Group`.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +75,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Optional. Dynamic group metadata like queries and status.
      * 
      */
-    public Output<DynamicGroupMetadataResponse> getDynamicGroupMetadata() {
+    public Output<DynamicGroupMetadataResponse> dynamicGroupMetadata() {
         return this.dynamicGroupMetadata;
     }
     /**
@@ -88,7 +89,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The `EntityKey` of the `Group`.
      * 
      */
-    public Output<EntityKeyResponse> getGroupKey() {
+    public Output<EntityKeyResponse> groupKey() {
         return this.groupKey;
     }
     /**
@@ -102,7 +103,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -116,7 +117,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`. Shall be of the form `groups/{group}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +131,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example, 'C046psxkn').
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -144,7 +145,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The time when the `Group` was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -170,7 +171,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudidentity/v1:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudidentity/v1:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -23,7 +23,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends io.pulu
     @Import(name="fieldPath", required=true)
       private final String fieldPath;
 
-    public String getFieldPath() {
+    public String fieldPath() {
         return this.fieldPath;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends io.pulu
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

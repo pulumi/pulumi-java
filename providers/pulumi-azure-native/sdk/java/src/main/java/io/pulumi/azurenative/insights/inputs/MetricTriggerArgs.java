@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.enums.TimeAggregationType;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleMetricDimensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -32,8 +33,8 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<ScaleRuleMetricDimensionArgs>> dimensions;
 
-    public Output<List<ScaleRuleMetricDimensionArgs>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<List<ScaleRuleMetricDimensionArgs>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dividePerInstance")
       private final @Nullable Output<Boolean> dividePerInstance;
 
-    public Output<Boolean> getDividePerInstance() {
-        return this.dividePerInstance == null ? Output.empty() : this.dividePerInstance;
+    public Output<Boolean> dividePerInstance() {
+        return this.dividePerInstance == null ? Codegen.empty() : this.dividePerInstance;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -65,8 +66,8 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
-        return this.metricNamespace == null ? Output.empty() : this.metricNamespace;
+    public Output<String> metricNamespace() {
+        return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricResourceLocation")
       private final @Nullable Output<String> metricResourceLocation;
 
-    public Output<String> getMetricResourceLocation() {
-        return this.metricResourceLocation == null ? Output.empty() : this.metricResourceLocation;
+    public Output<String> metricResourceLocation() {
+        return this.metricResourceLocation == null ? Codegen.empty() : this.metricResourceLocation;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricResourceUri", required=true)
       private final Output<String> metricResourceUri;
 
-    public Output<String> getMetricResourceUri() {
+    public Output<String> metricResourceUri() {
         return this.metricResourceUri;
     }
 
@@ -98,7 +99,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operator", required=true)
       private final Output<ComparisonOperationType> operator;
 
-    public Output<ComparisonOperationType> getOperator() {
+    public Output<ComparisonOperationType> operator() {
         return this.operator;
     }
 
@@ -109,7 +110,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="statistic", required=true)
       private final Output<MetricStatisticType> statistic;
 
-    public Output<MetricStatisticType> getStatistic() {
+    public Output<MetricStatisticType> statistic() {
         return this.statistic;
     }
 
@@ -120,7 +121,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -131,7 +132,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeAggregation", required=true)
       private final Output<TimeAggregationType> timeAggregation;
 
-    public Output<TimeAggregationType> getTimeAggregation() {
+    public Output<TimeAggregationType> timeAggregation() {
         return this.timeAggregation;
     }
 
@@ -142,7 +143,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeGrain", required=true)
       private final Output<String> timeGrain;
 
-    public Output<String> getTimeGrain() {
+    public Output<String> timeGrain() {
         return this.timeGrain;
     }
 
@@ -153,7 +154,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeWindow", required=true)
       private final Output<String> timeWindow;
 
-    public Output<String> getTimeWindow() {
+    public Output<String> timeWindow() {
         return this.timeWindow;
     }
 
@@ -185,18 +186,18 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricTriggerArgs() {
-        this.dimensions = Output.empty();
-        this.dividePerInstance = Output.empty();
-        this.metricName = Output.empty();
-        this.metricNamespace = Output.empty();
-        this.metricResourceLocation = Output.empty();
-        this.metricResourceUri = Output.empty();
-        this.operator = Output.empty();
-        this.statistic = Output.empty();
-        this.threshold = Output.empty();
-        this.timeAggregation = Output.empty();
-        this.timeGrain = Output.empty();
-        this.timeWindow = Output.empty();
+        this.dimensions = Codegen.empty();
+        this.dividePerInstance = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.metricNamespace = Codegen.empty();
+        this.metricResourceLocation = Codegen.empty();
+        this.metricResourceUri = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.statistic = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.timeAggregation = Codegen.empty();
+        this.timeGrain = Codegen.empty();
+        this.timeWindow = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensions(@Nullable List<ScaleRuleMetricDimensionArgs> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder dimensions(ScaleRuleMetricDimensionArgs... dimensions) {
@@ -257,7 +258,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
-            this.dividePerInstance = Output.ofNullable(dividePerInstance);
+            this.dividePerInstance = Codegen.ofNullable(dividePerInstance);
             return this;
         }
         public Builder metricName(Output<String> metricName) {
@@ -273,7 +274,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Output.ofNullable(metricNamespace);
+            this.metricNamespace = Codegen.ofNullable(metricNamespace);
             return this;
         }
         public Builder metricResourceLocation(@Nullable Output<String> metricResourceLocation) {
@@ -281,7 +282,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
-            this.metricResourceLocation = Output.ofNullable(metricResourceLocation);
+            this.metricResourceLocation = Codegen.ofNullable(metricResourceLocation);
             return this;
         }
         public Builder metricResourceUri(Output<String> metricResourceUri) {

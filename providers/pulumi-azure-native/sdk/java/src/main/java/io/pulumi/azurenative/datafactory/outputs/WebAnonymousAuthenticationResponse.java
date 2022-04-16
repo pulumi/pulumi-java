@@ -35,14 +35,14 @@ public final class WebAnonymousAuthenticationResponse {
      * Expected value is 'Anonymous'.
      * 
     */
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
     */
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 

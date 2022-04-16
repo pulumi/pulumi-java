@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The account's data-plane ID
      * 
      */
-    public Output</* @Nullable */ String> getAccountId() {
+    public Output</* @Nullable */ String> accountId() {
         return this.accountId;
     }
     /**
@@ -59,7 +60,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The account's name
      * 
      */
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
     /**
@@ -73,7 +74,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Managed service identity (system assigned and/or user assigned identities)
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -87,7 +88,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -101,7 +102,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The media services details
      * 
      */
-    public Output</* @Nullable */ MediaServicesForPutRequestResponse> getMediaServices() {
+    public Output</* @Nullable */ MediaServicesForPutRequestResponse> mediaServices() {
         return this.mediaServices;
     }
     /**
@@ -115,7 +116,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +130,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets the status of the account at the time the operation was called.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +144,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -157,7 +158,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +172,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The account's tenant id
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -185,7 +186,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -211,7 +212,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:videoindexer:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:videoindexer:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

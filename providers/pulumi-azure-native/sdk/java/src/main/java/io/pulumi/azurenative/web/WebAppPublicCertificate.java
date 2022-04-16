@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * @return Public Certificate byte array
      * 
      */
-    public Output</* @Nullable */ String> getBlob() {
+    public Output</* @Nullable */ String> blob() {
         return this.blob;
     }
     /**
@@ -52,7 +53,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -66,7 +67,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -80,7 +81,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * @return Public Certificate Location
      * 
      */
-    public Output</* @Nullable */ String> getPublicCertificateLocation() {
+    public Output</* @Nullable */ String> publicCertificateLocation() {
         return this.publicCertificateLocation;
     }
     /**
@@ -94,7 +95,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * @return Certificate Thumbprint
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -108,7 +109,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -134,7 +135,7 @@ public class WebAppPublicCertificate extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppPublicCertificate(String name, WebAppPublicCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppPublicCertificate", name, args == null ? WebAppPublicCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppPublicCertificate", name, args == null ? WebAppPublicCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppPublicCertificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

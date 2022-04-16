@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Used to activate the workspace after a customer managed key is provided.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsActiveCMK() {
+    public Output</* @Nullable */ Boolean> isActiveCMK() {
         return this.isActiveCMK;
     }
     /**
@@ -56,7 +57,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The Key Vault Url of the workspace key.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultUrl() {
+    public Output</* @Nullable */ String> keyVaultUrl() {
         return this.keyVaultUrl;
     }
     /**
@@ -70,7 +71,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -110,7 +111,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Key(String name, KeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:Key", name, args == null ? KeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:synapse:Key", name, args == null ? KeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Key(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

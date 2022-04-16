@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nodeId", required=true)
       private final Output<String> nodeId;
 
-    public Output<String> getNodeId() {
+    public Output<String> nodeId() {
         return this.nodeId;
     }
 
@@ -35,7 +36,7 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parameterKey", required=true)
       private final Output<String> parameterKey;
 
-    public Output<String> getParameterKey() {
+    public Output<String> parameterKey() {
         return this.parameterKey;
     }
 
@@ -47,8 +48,8 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GraphParameterLinkArgs() {
-        this.nodeId = Output.empty();
-        this.parameterKey = Output.empty();
+        this.nodeId = Codegen.empty();
+        this.parameterKey = Codegen.empty();
     }
 
     public static Builder builder() {

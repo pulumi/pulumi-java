@@ -14,6 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ProbeSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -33,8 +34,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
-    public Output<Boolean> getAppInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Output.empty() : this.appInsightsEnabled;
+    public Output<Boolean> appInsightsEnabled() {
+        return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="codeConfiguration")
       private final @Nullable Output<CodeConfigurationArgs> codeConfiguration;
 
-    public Output<CodeConfigurationArgs> getCodeConfiguration() {
-        return this.codeConfiguration == null ? Output.empty() : this.codeConfiguration;
+    public Output<CodeConfigurationArgs> codeConfiguration() {
+        return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="endpointComputeType", required=true)
       private final Output<String> endpointComputeType;
 
-    public Output<String> getEndpointComputeType() {
+    public Output<String> endpointComputeType() {
         return this.endpointComputeType;
     }
 
@@ -78,8 +79,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+    public Output<String> environmentId() {
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+    public Output<Map<String,String>> environmentVariables() {
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="livenessProbe")
       private final @Nullable Output<ProbeSettingsArgs> livenessProbe;
 
-    public Output<ProbeSettingsArgs> getLivenessProbe() {
-        return this.livenessProbe == null ? Output.empty() : this.livenessProbe;
+    public Output<ProbeSettingsArgs> livenessProbe() {
+        return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="model")
       private final @Nullable Output<Object> model;
 
-    public Output<Object> getModel() {
-        return this.model == null ? Output.empty() : this.model;
+    public Output<Object> model() {
+        return this.model == null ? Codegen.empty() : this.model;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="readinessProbe")
       private final @Nullable Output<ProbeSettingsArgs> readinessProbe;
 
-    public Output<ProbeSettingsArgs> getReadinessProbe() {
-        return this.readinessProbe == null ? Output.empty() : this.readinessProbe;
+    public Output<ProbeSettingsArgs> readinessProbe() {
+        return this.readinessProbe == null ? Codegen.empty() : this.readinessProbe;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="requestSettings")
       private final @Nullable Output<OnlineRequestSettingsArgs> requestSettings;
 
-    public Output<OnlineRequestSettingsArgs> getRequestSettings() {
-        return this.requestSettings == null ? Output.empty() : this.requestSettings;
+    public Output<OnlineRequestSettingsArgs> requestSettings() {
+        return this.requestSettings == null ? Codegen.empty() : this.requestSettings;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="scaleSettings")
       private final @Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
-    public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> getScaleSettings() {
-        return this.scaleSettings == null ? Output.empty() : this.scaleSettings;
+    public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings() {
+        return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 
     public ManagedOnlineDeploymentArgs(
@@ -200,19 +201,19 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     }
 
     private ManagedOnlineDeploymentArgs() {
-        this.appInsightsEnabled = Output.empty();
-        this.codeConfiguration = Output.empty();
-        this.description = Output.empty();
-        this.endpointComputeType = Output.empty();
-        this.environmentId = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.instanceType = Output.empty();
-        this.livenessProbe = Output.empty();
-        this.model = Output.empty();
-        this.properties = Output.empty();
-        this.readinessProbe = Output.empty();
-        this.requestSettings = Output.empty();
-        this.scaleSettings = Output.empty();
+        this.appInsightsEnabled = Codegen.empty();
+        this.codeConfiguration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.endpointComputeType = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.livenessProbe = Codegen.empty();
+        this.model = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.readinessProbe = Codegen.empty();
+        this.requestSettings = Codegen.empty();
+        this.scaleSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -264,7 +265,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = Output.ofNullable(appInsightsEnabled);
+            this.appInsightsEnabled = Codegen.ofNullable(appInsightsEnabled);
             return this;
         }
         public Builder codeConfiguration(@Nullable Output<CodeConfigurationArgs> codeConfiguration) {
@@ -272,7 +273,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder codeConfiguration(@Nullable CodeConfigurationArgs codeConfiguration) {
-            this.codeConfiguration = Output.ofNullable(codeConfiguration);
+            this.codeConfiguration = Codegen.ofNullable(codeConfiguration);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -280,7 +281,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endpointComputeType(Output<String> endpointComputeType) {
@@ -296,7 +297,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
@@ -304,7 +305,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -312,7 +313,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder livenessProbe(@Nullable Output<ProbeSettingsArgs> livenessProbe) {
@@ -320,7 +321,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder livenessProbe(@Nullable ProbeSettingsArgs livenessProbe) {
-            this.livenessProbe = Output.ofNullable(livenessProbe);
+            this.livenessProbe = Codegen.ofNullable(livenessProbe);
             return this;
         }
         public Builder model(@Nullable Output<Object> model) {
@@ -328,7 +329,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder model(@Nullable Object model) {
-            this.model = Output.ofNullable(model);
+            this.model = Codegen.ofNullable(model);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -336,7 +337,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder readinessProbe(@Nullable Output<ProbeSettingsArgs> readinessProbe) {
@@ -344,7 +345,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder readinessProbe(@Nullable ProbeSettingsArgs readinessProbe) {
-            this.readinessProbe = Output.ofNullable(readinessProbe);
+            this.readinessProbe = Codegen.ofNullable(readinessProbe);
             return this;
         }
         public Builder requestSettings(@Nullable Output<OnlineRequestSettingsArgs> requestSettings) {
@@ -352,7 +353,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder requestSettings(@Nullable OnlineRequestSettingsArgs requestSettings) {
-            this.requestSettings = Output.ofNullable(requestSettings);
+            this.requestSettings = Codegen.ofNullable(requestSettings);
             return this;
         }
         public Builder scaleSettings(@Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings) {
@@ -360,7 +361,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder scaleSettings(@Nullable Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs> scaleSettings) {
-            this.scaleSettings = Output.ofNullable(scaleSettings);
+            this.scaleSettings = Codegen.ofNullable(scaleSettings);
             return this;
         }        public ManagedOnlineDeploymentArgs build() {
             return new ManagedOnlineDeploymentArgs(appInsightsEnabled, codeConfiguration, description, endpointComputeType, environmentId, environmentVariables, instanceType, livenessProbe, model, properties, readinessProbe, requestSettings, scaleSettings);

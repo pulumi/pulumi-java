@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.DataCollectorArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return The time at which the data collector was created in milliseconds since the epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -42,7 +43,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return A description of the data collector.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return The time at which the Data Collector was last updated in milliseconds since the epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -70,7 +71,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return ID of the data collector. Must begin with `dc_`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return Immutable. The type of data this data collector will collect.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -110,7 +111,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataCollector(String name, DataCollectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:DataCollector", name, args == null ? DataCollectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:DataCollector", name, args == null ? DataCollectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataCollector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
     @Import(name="keyid")
       private final @Nullable Output<String> keyid;
 
-    public Output<String> getKeyid() {
-        return this.keyid == null ? Output.empty() : this.keyid;
+    public Output<String> keyid() {
+        return this.keyid == null ? Codegen.empty() : this.keyid;
     }
 
     @Import(name="sig")
       private final @Nullable Output<String> sig;
 
-    public Output<String> getSig() {
-        return this.sig == null ? Output.empty() : this.sig;
+    public Output<String> sig() {
+        return this.sig == null ? Codegen.empty() : this.sig;
     }
 
     public GrafeasV1beta1IntotoSignatureArgs(
@@ -40,8 +41,8 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
     }
 
     private GrafeasV1beta1IntotoSignatureArgs() {
-        this.keyid = Output.empty();
-        this.sig = Output.empty();
+        this.keyid = Codegen.empty();
+        this.sig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
             return this;
         }
         public Builder keyid(@Nullable String keyid) {
-            this.keyid = Output.ofNullable(keyid);
+            this.keyid = Codegen.ofNullable(keyid);
             return this;
         }
         public Builder sig(@Nullable Output<String> sig) {
@@ -79,7 +80,7 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
             return this;
         }
         public Builder sig(@Nullable String sig) {
-            this.sig = Output.ofNullable(sig);
+            this.sig = Codegen.ofNullable(sig);
             return this;
         }        public GrafeasV1beta1IntotoSignatureArgs build() {
             return new GrafeasV1beta1IntotoSignatureArgs(keyid, sig);

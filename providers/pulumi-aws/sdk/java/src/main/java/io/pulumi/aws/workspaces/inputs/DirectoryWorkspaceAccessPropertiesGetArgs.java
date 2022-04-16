@@ -5,6 +5,7 @@ package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeAndroid")
       private final @Nullable Output<String> deviceTypeAndroid;
 
-    public Output<String> getDeviceTypeAndroid() {
-        return this.deviceTypeAndroid == null ? Output.empty() : this.deviceTypeAndroid;
+    public Output<String> deviceTypeAndroid() {
+        return this.deviceTypeAndroid == null ? Codegen.empty() : this.deviceTypeAndroid;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeChromeos")
       private final @Nullable Output<String> deviceTypeChromeos;
 
-    public Output<String> getDeviceTypeChromeos() {
-        return this.deviceTypeChromeos == null ? Output.empty() : this.deviceTypeChromeos;
+    public Output<String> deviceTypeChromeos() {
+        return this.deviceTypeChromeos == null ? Codegen.empty() : this.deviceTypeChromeos;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeIos")
       private final @Nullable Output<String> deviceTypeIos;
 
-    public Output<String> getDeviceTypeIos() {
-        return this.deviceTypeIos == null ? Output.empty() : this.deviceTypeIos;
+    public Output<String> deviceTypeIos() {
+        return this.deviceTypeIos == null ? Codegen.empty() : this.deviceTypeIos;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeLinux")
       private final @Nullable Output<String> deviceTypeLinux;
 
-    public Output<String> getDeviceTypeLinux() {
-        return this.deviceTypeLinux == null ? Output.empty() : this.deviceTypeLinux;
+    public Output<String> deviceTypeLinux() {
+        return this.deviceTypeLinux == null ? Codegen.empty() : this.deviceTypeLinux;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeOsx")
       private final @Nullable Output<String> deviceTypeOsx;
 
-    public Output<String> getDeviceTypeOsx() {
-        return this.deviceTypeOsx == null ? Output.empty() : this.deviceTypeOsx;
+    public Output<String> deviceTypeOsx() {
+        return this.deviceTypeOsx == null ? Codegen.empty() : this.deviceTypeOsx;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeWeb")
       private final @Nullable Output<String> deviceTypeWeb;
 
-    public Output<String> getDeviceTypeWeb() {
-        return this.deviceTypeWeb == null ? Output.empty() : this.deviceTypeWeb;
+    public Output<String> deviceTypeWeb() {
+        return this.deviceTypeWeb == null ? Codegen.empty() : this.deviceTypeWeb;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeWindows")
       private final @Nullable Output<String> deviceTypeWindows;
 
-    public Output<String> getDeviceTypeWindows() {
-        return this.deviceTypeWindows == null ? Output.empty() : this.deviceTypeWindows;
+    public Output<String> deviceTypeWindows() {
+        return this.deviceTypeWindows == null ? Codegen.empty() : this.deviceTypeWindows;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     @Import(name="deviceTypeZeroclient")
       private final @Nullable Output<String> deviceTypeZeroclient;
 
-    public Output<String> getDeviceTypeZeroclient() {
-        return this.deviceTypeZeroclient == null ? Output.empty() : this.deviceTypeZeroclient;
+    public Output<String> deviceTypeZeroclient() {
+        return this.deviceTypeZeroclient == null ? Codegen.empty() : this.deviceTypeZeroclient;
     }
 
     public DirectoryWorkspaceAccessPropertiesGetArgs(
@@ -122,14 +123,14 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     }
 
     private DirectoryWorkspaceAccessPropertiesGetArgs() {
-        this.deviceTypeAndroid = Output.empty();
-        this.deviceTypeChromeos = Output.empty();
-        this.deviceTypeIos = Output.empty();
-        this.deviceTypeLinux = Output.empty();
-        this.deviceTypeOsx = Output.empty();
-        this.deviceTypeWeb = Output.empty();
-        this.deviceTypeWindows = Output.empty();
-        this.deviceTypeZeroclient = Output.empty();
+        this.deviceTypeAndroid = Codegen.empty();
+        this.deviceTypeChromeos = Codegen.empty();
+        this.deviceTypeIos = Codegen.empty();
+        this.deviceTypeLinux = Codegen.empty();
+        this.deviceTypeOsx = Codegen.empty();
+        this.deviceTypeWeb = Codegen.empty();
+        this.deviceTypeWindows = Codegen.empty();
+        this.deviceTypeZeroclient = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -171,7 +172,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeAndroid(@Nullable String deviceTypeAndroid) {
-            this.deviceTypeAndroid = Output.ofNullable(deviceTypeAndroid);
+            this.deviceTypeAndroid = Codegen.ofNullable(deviceTypeAndroid);
             return this;
         }
         public Builder deviceTypeChromeos(@Nullable Output<String> deviceTypeChromeos) {
@@ -179,7 +180,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeChromeos(@Nullable String deviceTypeChromeos) {
-            this.deviceTypeChromeos = Output.ofNullable(deviceTypeChromeos);
+            this.deviceTypeChromeos = Codegen.ofNullable(deviceTypeChromeos);
             return this;
         }
         public Builder deviceTypeIos(@Nullable Output<String> deviceTypeIos) {
@@ -187,7 +188,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeIos(@Nullable String deviceTypeIos) {
-            this.deviceTypeIos = Output.ofNullable(deviceTypeIos);
+            this.deviceTypeIos = Codegen.ofNullable(deviceTypeIos);
             return this;
         }
         public Builder deviceTypeLinux(@Nullable Output<String> deviceTypeLinux) {
@@ -195,7 +196,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeLinux(@Nullable String deviceTypeLinux) {
-            this.deviceTypeLinux = Output.ofNullable(deviceTypeLinux);
+            this.deviceTypeLinux = Codegen.ofNullable(deviceTypeLinux);
             return this;
         }
         public Builder deviceTypeOsx(@Nullable Output<String> deviceTypeOsx) {
@@ -203,7 +204,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeOsx(@Nullable String deviceTypeOsx) {
-            this.deviceTypeOsx = Output.ofNullable(deviceTypeOsx);
+            this.deviceTypeOsx = Codegen.ofNullable(deviceTypeOsx);
             return this;
         }
         public Builder deviceTypeWeb(@Nullable Output<String> deviceTypeWeb) {
@@ -211,7 +212,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeWeb(@Nullable String deviceTypeWeb) {
-            this.deviceTypeWeb = Output.ofNullable(deviceTypeWeb);
+            this.deviceTypeWeb = Codegen.ofNullable(deviceTypeWeb);
             return this;
         }
         public Builder deviceTypeWindows(@Nullable Output<String> deviceTypeWindows) {
@@ -219,7 +220,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeWindows(@Nullable String deviceTypeWindows) {
-            this.deviceTypeWindows = Output.ofNullable(deviceTypeWindows);
+            this.deviceTypeWindows = Codegen.ofNullable(deviceTypeWindows);
             return this;
         }
         public Builder deviceTypeZeroclient(@Nullable Output<String> deviceTypeZeroclient) {
@@ -227,7 +228,7 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder deviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
-            this.deviceTypeZeroclient = Output.ofNullable(deviceTypeZeroclient);
+            this.deviceTypeZeroclient = Codegen.ofNullable(deviceTypeZeroclient);
             return this;
         }        public DirectoryWorkspaceAccessPropertiesGetArgs build() {
             return new DirectoryWorkspaceAccessPropertiesGetArgs(deviceTypeAndroid, deviceTypeChromeos, deviceTypeIos, deviceTypeLinux, deviceTypeOsx, deviceTypeWeb, deviceTypeWindows, deviceTypeZeroclient);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.iotsecurity.inputs.DefenderSettingsPropertiesMdeInt
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deviceQuota", required=true)
       private final Output<Integer> deviceQuota;
 
-    public Output<Integer> getDeviceQuota() {
+    public Output<Integer> deviceQuota() {
         return this.deviceQuota;
     }
 
@@ -36,7 +37,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="mdeIntegration", required=true)
       private final Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
 
-    public Output<DefenderSettingsPropertiesMdeIntegrationArgs> getMdeIntegration() {
+    public Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration() {
         return this.mdeIntegration;
     }
 
@@ -47,7 +48,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="onboardingKind", required=true)
       private final Output<Either<String,OnboardingKind>> onboardingKind;
 
-    public Output<Either<String,OnboardingKind>> getOnboardingKind() {
+    public Output<Either<String,OnboardingKind>> onboardingKind() {
         return this.onboardingKind;
     }
 
@@ -58,7 +59,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sentinelWorkspaceResourceIds", required=true)
       private final Output<List<String>> sentinelWorkspaceResourceIds;
 
-    public Output<List<String>> getSentinelWorkspaceResourceIds() {
+    public Output<List<String>> sentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
     }
 
@@ -74,10 +75,10 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DefenderSettingArgs() {
-        this.deviceQuota = Output.empty();
-        this.mdeIntegration = Output.empty();
-        this.onboardingKind = Output.empty();
-        this.sentinelWorkspaceResourceIds = Output.empty();
+        this.deviceQuota = Codegen.empty();
+        this.mdeIntegration = Codegen.empty();
+        this.onboardingKind = Codegen.empty();
+        this.sentinelWorkspaceResourceIds = Codegen.empty();
     }
 
     public static Builder builder() {

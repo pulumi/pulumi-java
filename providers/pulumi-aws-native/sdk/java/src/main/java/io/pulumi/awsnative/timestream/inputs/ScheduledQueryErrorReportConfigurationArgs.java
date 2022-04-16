@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryS3ConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
     @Import(name="s3Configuration", required=true)
       private final Output<ScheduledQueryS3ConfigurationArgs> s3Configuration;
 
-    public Output<ScheduledQueryS3ConfigurationArgs> getS3Configuration() {
+    public Output<ScheduledQueryS3ConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 
@@ -29,7 +30,7 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
     }
 
     private ScheduledQueryErrorReportConfigurationArgs() {
-        this.s3Configuration = Output.empty();
+        this.s3Configuration = Codegen.empty();
     }
 
     public static Builder builder() {

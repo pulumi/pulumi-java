@@ -10,6 +10,7 @@ import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The filter expression defining criteria by which to group traces.
      * 
      */
-    public Output</* @Nullable */ String> getFilterExpression() {
+    public Output</* @Nullable */ String> filterExpression() {
         return this.filterExpression;
     }
     /**
@@ -47,7 +48,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The ARN of the group that was generated on creation.
      * 
      */
-    public Output<String> getGroupARN() {
+    public Output<String> groupARN() {
         return this.groupARN;
     }
     /**
@@ -61,19 +62,19 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The case-sensitive name of the new group. Names must be unique.
      * 
      */
-    public Output</* @Nullable */ String> getGroupName() {
+    public Output</* @Nullable */ String> groupName() {
         return this.groupName;
     }
     @Export(name="insightsConfiguration", type=GroupInsightsConfiguration.class, parameters={})
     private Output</* @Nullable */ GroupInsightsConfiguration> insightsConfiguration;
 
-    public Output</* @Nullable */ GroupInsightsConfiguration> getInsightsConfiguration() {
+    public Output</* @Nullable */ GroupInsightsConfiguration> insightsConfiguration() {
         return this.insightsConfiguration;
     }
     @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
-    public Output</* @Nullable */ List<TagsItemProperties>> getTags() {
+    public Output</* @Nullable */ List<TagsItemProperties>> tags() {
         return this.tags;
     }
 
@@ -99,7 +100,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, @Nullable GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:xray:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:xray:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

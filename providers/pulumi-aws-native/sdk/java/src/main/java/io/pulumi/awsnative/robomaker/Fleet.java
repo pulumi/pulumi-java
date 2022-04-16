@@ -9,6 +9,7 @@ import io.pulumi.awsnative.robomaker.outputs.FleetTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -37,13 +38,13 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The name of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="tags", type=FleetTags.class, parameters={})
     private Output</* @Nullable */ FleetTags> tags;
 
-    public Output</* @Nullable */ FleetTags> getTags() {
+    public Output</* @Nullable */ FleetTags> tags() {
         return this.tags;
     }
 
@@ -69,7 +70,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fleet(String name, @Nullable FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:robomaker:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:robomaker:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Fleet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

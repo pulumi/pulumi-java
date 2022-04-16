@@ -7,6 +7,7 @@ import io.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import io.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
     @Import(name="column", required=true)
       private final Output<TableColumnArgs> column;
 
-    public Output<TableColumnArgs> getColumn() {
+    public Output<TableColumnArgs> column() {
         return this.column;
     }
 
     @Import(name="orderBy")
       private final @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
 
-    public Output<TableClusteringKeyColumnOrderBy> getOrderBy() {
-        return this.orderBy == null ? Output.empty() : this.orderBy;
+    public Output<TableClusteringKeyColumnOrderBy> orderBy() {
+        return this.orderBy == null ? Codegen.empty() : this.orderBy;
     }
 
     public TableClusteringKeyColumnArgs(
@@ -37,8 +38,8 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
     }
 
     private TableClusteringKeyColumnArgs() {
-        this.column = Output.empty();
-        this.orderBy = Output.empty();
+        this.column = Codegen.empty();
+        this.orderBy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder orderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
-            this.orderBy = Output.ofNullable(orderBy);
+            this.orderBy = Codegen.ofNullable(orderBy);
             return this;
         }        public TableClusteringKeyColumnArgs build() {
             return new TableClusteringKeyColumnArgs(column, orderBy);

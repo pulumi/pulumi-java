@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecTableSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecViewSpecGetArgs;
 import java.lang.String;
@@ -20,22 +21,22 @@ public final class EntryBigqueryTableSpecGetArgs extends io.pulumi.resources.Res
     @Import(name="tableSourceType")
       private final @Nullable Output<String> tableSourceType;
 
-    public Output<String> getTableSourceType() {
-        return this.tableSourceType == null ? Output.empty() : this.tableSourceType;
+    public Output<String> tableSourceType() {
+        return this.tableSourceType == null ? Codegen.empty() : this.tableSourceType;
     }
 
     @Import(name="tableSpecs")
       private final @Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs;
 
-    public Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> getTableSpecs() {
-        return this.tableSpecs == null ? Output.empty() : this.tableSpecs;
+    public Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs() {
+        return this.tableSpecs == null ? Codegen.empty() : this.tableSpecs;
     }
 
     @Import(name="viewSpecs")
       private final @Nullable Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs;
 
-    public Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> getViewSpecs() {
-        return this.viewSpecs == null ? Output.empty() : this.viewSpecs;
+    public Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs() {
+        return this.viewSpecs == null ? Codegen.empty() : this.viewSpecs;
     }
 
     public EntryBigqueryTableSpecGetArgs(
@@ -48,9 +49,9 @@ public final class EntryBigqueryTableSpecGetArgs extends io.pulumi.resources.Res
     }
 
     private EntryBigqueryTableSpecGetArgs() {
-        this.tableSourceType = Output.empty();
-        this.tableSpecs = Output.empty();
-        this.viewSpecs = Output.empty();
+        this.tableSourceType = Codegen.empty();
+        this.tableSpecs = Codegen.empty();
+        this.viewSpecs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class EntryBigqueryTableSpecGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tableSourceType(@Nullable String tableSourceType) {
-            this.tableSourceType = Output.ofNullable(tableSourceType);
+            this.tableSourceType = Codegen.ofNullable(tableSourceType);
             return this;
         }
         public Builder tableSpecs(@Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs) {
@@ -90,7 +91,7 @@ public final class EntryBigqueryTableSpecGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpecGetArgs> tableSpecs) {
-            this.tableSpecs = Output.ofNullable(tableSpecs);
+            this.tableSpecs = Codegen.ofNullable(tableSpecs);
             return this;
         }
         public Builder tableSpecs(EntryBigqueryTableSpecTableSpecGetArgs... tableSpecs) {
@@ -101,7 +102,7 @@ public final class EntryBigqueryTableSpecGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder viewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpecGetArgs> viewSpecs) {
-            this.viewSpecs = Output.ofNullable(viewSpecs);
+            this.viewSpecs = Codegen.ofNullable(viewSpecs);
             return this;
         }
         public Builder viewSpecs(EntryBigqueryTableSpecViewSpecGetArgs... viewSpecs) {

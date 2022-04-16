@@ -25,7 +25,7 @@ public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArg
     @Import(name="properties")
       private final @Nullable ServiceProviderPropertiesResponse properties;
 
-    public Optional<ServiceProviderPropertiesResponse> getProperties() {
+    public Optional<ServiceProviderPropertiesResponse> properties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 

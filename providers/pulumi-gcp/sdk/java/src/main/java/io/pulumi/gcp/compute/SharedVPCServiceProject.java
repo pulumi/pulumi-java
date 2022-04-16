@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SharedVPCServiceProjectArgs;
 import io.pulumi.gcp.compute.inputs.SharedVPCServiceProjectState;
@@ -48,7 +49,7 @@ public class SharedVPCServiceProject extends io.pulumi.resources.CustomResource 
      * @return The ID of a host project to associate.
      * 
      */
-    public Output<String> getHostProject() {
+    public Output<String> hostProject() {
         return this.hostProject;
     }
     /**
@@ -62,7 +63,7 @@ public class SharedVPCServiceProject extends io.pulumi.resources.CustomResource 
      * @return The ID of the project that will serve as a Shared VPC service project.
      * 
      */
-    public Output<String> getServiceProject() {
+    public Output<String> serviceProject() {
         return this.serviceProject;
     }
 
@@ -88,7 +89,7 @@ public class SharedVPCServiceProject extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public SharedVPCServiceProject(String name, SharedVPCServiceProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/sharedVPCServiceProject:SharedVPCServiceProject", name, args == null ? SharedVPCServiceProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/sharedVPCServiceProject:SharedVPCServiceProject", name, args == null ? SharedVPCServiceProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SharedVPCServiceProject(String name, Output<String> id, @Nullable SharedVPCServiceProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

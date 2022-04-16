@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.billing.inputs.AccountIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,28 +19,28 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="condition")
       private final @Nullable Output<AccountIamMemberConditionArgs> condition;
 
-    public Output<AccountIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<AccountIamMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -55,10 +56,10 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AccountIamMemberArgs() {
-        this.billingAccountId = Output.empty();
-        this.condition = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.billingAccountId = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable AccountIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder member(Output<String> member) {

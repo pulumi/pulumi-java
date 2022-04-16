@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
-    public Output<List<String>> getCidrs() {
-        return this.cidrs == null ? Output.empty() : this.cidrs;
+    public Output<List<String>> cidrs() {
+        return this.cidrs == null ? Codegen.empty() : this.cidrs;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
@@ -45,7 +46,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -56,7 +57,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort;
     }
 
@@ -72,10 +73,10 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     }
 
     private InstancePublicPortsPortInfoArgs() {
-        this.cidrs = Output.empty();
-        this.fromPort = Output.empty();
-        this.protocol = Output.empty();
-        this.toPort = Output.empty();
+        this.cidrs = Codegen.empty();
+        this.fromPort = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Output.ofNullable(cidrs);
+            this.cidrs = Codegen.ofNullable(cidrs);
             return this;
         }
         public Builder cidrs(String... cidrs) {

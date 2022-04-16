@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enableCertificates")
       private final @Nullable Output<Boolean> enableCertificates;
 
-    public Output<Boolean> getEnableCertificates() {
-        return this.enableCertificates == null ? Output.empty() : this.enableCertificates;
+    public Output<Boolean> enableCertificates() {
+        return this.enableCertificates == null ? Codegen.empty() : this.enableCertificates;
     }
 
     public MeshCertificatesArgs(@Nullable Output<Boolean> enableCertificates) {
@@ -34,7 +35,7 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MeshCertificatesArgs() {
-        this.enableCertificates = Output.empty();
+        this.enableCertificates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enableCertificates(@Nullable Boolean enableCertificates) {
-            this.enableCertificates = Output.ofNullable(enableCertificates);
+            this.enableCertificates = Codegen.ofNullable(enableCertificates);
             return this;
         }        public MeshCertificatesArgs build() {
             return new MeshCertificatesArgs(enableCertificates);

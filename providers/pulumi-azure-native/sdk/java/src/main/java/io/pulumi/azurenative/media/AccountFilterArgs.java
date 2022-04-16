@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.inputs.FirstQualityArgs;
 import io.pulumi.azurenative.media.inputs.PresentationTimeRangeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,8 +37,8 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterName")
       private final @Nullable Output<String> filterName;
 
-    public Output<String> getFilterName() {
-        return this.filterName == null ? Output.empty() : this.filterName;
+    public Output<String> filterName() {
+        return this.filterName == null ? Codegen.empty() : this.filterName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstQuality")
       private final @Nullable Output<FirstQualityArgs> firstQuality;
 
-    public Output<FirstQualityArgs> getFirstQuality() {
-        return this.firstQuality == null ? Output.empty() : this.firstQuality;
+    public Output<FirstQualityArgs> firstQuality() {
+        return this.firstQuality == null ? Codegen.empty() : this.firstQuality;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="presentationTimeRange")
       private final @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
 
-    public Output<PresentationTimeRangeArgs> getPresentationTimeRange() {
-        return this.presentationTimeRange == null ? Output.empty() : this.presentationTimeRange;
+    public Output<PresentationTimeRangeArgs> presentationTimeRange() {
+        return this.presentationTimeRange == null ? Codegen.empty() : this.presentationTimeRange;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,8 +81,8 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracks")
       private final @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
 
-    public Output<List<FilterTrackSelectionArgs>> getTracks() {
-        return this.tracks == null ? Output.empty() : this.tracks;
+    public Output<List<FilterTrackSelectionArgs>> tracks() {
+        return this.tracks == null ? Codegen.empty() : this.tracks;
     }
 
     public AccountFilterArgs(
@@ -100,12 +101,12 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountFilterArgs() {
-        this.accountName = Output.empty();
-        this.filterName = Output.empty();
-        this.firstQuality = Output.empty();
-        this.presentationTimeRange = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tracks = Output.empty();
+        this.accountName = Codegen.empty();
+        this.filterName = Codegen.empty();
+        this.firstQuality = Codegen.empty();
+        this.presentationTimeRange = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tracks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterName(@Nullable String filterName) {
-            this.filterName = Output.ofNullable(filterName);
+            this.filterName = Codegen.ofNullable(filterName);
             return this;
         }
         public Builder firstQuality(@Nullable Output<FirstQualityArgs> firstQuality) {
@@ -159,7 +160,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstQuality(@Nullable FirstQualityArgs firstQuality) {
-            this.firstQuality = Output.ofNullable(firstQuality);
+            this.firstQuality = Codegen.ofNullable(firstQuality);
             return this;
         }
         public Builder presentationTimeRange(@Nullable Output<PresentationTimeRangeArgs> presentationTimeRange) {
@@ -167,7 +168,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder presentationTimeRange(@Nullable PresentationTimeRangeArgs presentationTimeRange) {
-            this.presentationTimeRange = Output.ofNullable(presentationTimeRange);
+            this.presentationTimeRange = Codegen.ofNullable(presentationTimeRange);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -183,7 +184,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tracks(@Nullable List<FilterTrackSelectionArgs> tracks) {
-            this.tracks = Output.ofNullable(tracks);
+            this.tracks = Codegen.ofNullable(tracks);
             return this;
         }
         public Builder tracks(FilterTrackSelectionArgs... tracks) {

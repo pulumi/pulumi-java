@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +40,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the storage account location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -53,7 +54,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the job collection resource name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -67,7 +68,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the job collection properties.
      * 
      */
-    public Output<JobCollectionPropertiesResponse> getProperties() {
+    public Output<JobCollectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -81,7 +82,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -95,7 +96,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @return Gets the job collection resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -121,7 +122,7 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobCollection(String name, JobCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:scheduler:JobCollection", name, args == null ? JobCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:scheduler:JobCollection", name, args == null ? JobCollectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private JobCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

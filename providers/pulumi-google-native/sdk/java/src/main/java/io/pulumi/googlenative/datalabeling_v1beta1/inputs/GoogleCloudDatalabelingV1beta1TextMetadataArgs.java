@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+    public Output<String> languageCode() {
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     public GoogleCloudDatalabelingV1beta1TextMetadataArgs(@Nullable Output<String> languageCode) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
     }
 
     private GoogleCloudDatalabelingV1beta1TextMetadataArgs() {
-        this.languageCode = Output.empty();
+        this.languageCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }        public GoogleCloudDatalabelingV1beta1TextMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1TextMetadataArgs(languageCode);

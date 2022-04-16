@@ -5,6 +5,7 @@ package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -37,8 +38,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public AccountArgs(
@@ -91,11 +92,11 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountId = Output.empty();
-        this.description = Output.empty();
-        this.disabled = Output.empty();
-        this.displayName = Output.empty();
-        this.project = Output.empty();
+        this.accountId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -147,7 +148,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -155,7 +156,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -163,7 +164,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(accountId, description, disabled, displayName, project);

@@ -43,14 +43,14 @@ public final class DistributedNodesInfoResponse {
      * Error Details if the Status is non-success.
      * 
     */
-    public Optional<ErrorDetailResponse> getErrorDetail() {
+    public Optional<ErrorDetailResponse> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
     /**
      * Name of the node under a distributed container.
      * 
     */
-    public Optional<String> getNodeName() {
+    public Optional<String> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
     /**
@@ -58,7 +58,7 @@ public final class DistributedNodesInfoResponse {
      * Failed | Succeeded
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

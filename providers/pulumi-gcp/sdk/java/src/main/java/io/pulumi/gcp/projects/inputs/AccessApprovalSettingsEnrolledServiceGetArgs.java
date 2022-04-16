@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
     @Import(name="cloudProduct", required=true)
       private final Output<String> cloudProduct;
 
-    public Output<String> getCloudProduct() {
+    public Output<String> cloudProduct() {
         return this.cloudProduct;
     }
 
@@ -44,8 +45,8 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
     @Import(name="enrollmentLevel")
       private final @Nullable Output<String> enrollmentLevel;
 
-    public Output<String> getEnrollmentLevel() {
-        return this.enrollmentLevel == null ? Output.empty() : this.enrollmentLevel;
+    public Output<String> enrollmentLevel() {
+        return this.enrollmentLevel == null ? Codegen.empty() : this.enrollmentLevel;
     }
 
     public AccessApprovalSettingsEnrolledServiceGetArgs(
@@ -56,8 +57,8 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
     }
 
     private AccessApprovalSettingsEnrolledServiceGetArgs() {
-        this.cloudProduct = Output.empty();
-        this.enrollmentLevel = Output.empty();
+        this.cloudProduct = Codegen.empty();
+        this.enrollmentLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
             return this;
         }
         public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
-            this.enrollmentLevel = Output.ofNullable(enrollmentLevel);
+            this.enrollmentLevel = Codegen.ofNullable(enrollmentLevel);
             return this;
         }        public AccessApprovalSettingsEnrolledServiceGetArgs build() {
             return new AccessApprovalSettingsEnrolledServiceGetArgs(cloudProduct, enrollmentLevel);

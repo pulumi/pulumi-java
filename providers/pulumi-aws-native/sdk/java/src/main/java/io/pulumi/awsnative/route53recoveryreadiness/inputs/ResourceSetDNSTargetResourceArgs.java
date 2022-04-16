@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     @Import(name="hostedZoneArn")
       private final @Nullable Output<String> hostedZoneArn;
 
-    public Output<String> getHostedZoneArn() {
-        return this.hostedZoneArn == null ? Output.empty() : this.hostedZoneArn;
+    public Output<String> hostedZoneArn() {
+        return this.hostedZoneArn == null ? Codegen.empty() : this.hostedZoneArn;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     @Import(name="recordSetId")
       private final @Nullable Output<String> recordSetId;
 
-    public Output<String> getRecordSetId() {
-        return this.recordSetId == null ? Output.empty() : this.recordSetId;
+    public Output<String> recordSetId() {
+        return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
     }
 
     /**
@@ -59,15 +60,15 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     @Import(name="recordType")
       private final @Nullable Output<String> recordType;
 
-    public Output<String> getRecordType() {
-        return this.recordType == null ? Output.empty() : this.recordType;
+    public Output<String> recordType() {
+        return this.recordType == null ? Codegen.empty() : this.recordType;
     }
 
     @Import(name="targetResource")
       private final @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
 
-    public Output<ResourceSetTargetResourceArgs> getTargetResource() {
-        return this.targetResource == null ? Output.empty() : this.targetResource;
+    public Output<ResourceSetTargetResourceArgs> targetResource() {
+        return this.targetResource == null ? Codegen.empty() : this.targetResource;
     }
 
     public ResourceSetDNSTargetResourceArgs(
@@ -84,11 +85,11 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     }
 
     private ResourceSetDNSTargetResourceArgs() {
-        this.domainName = Output.empty();
-        this.hostedZoneArn = Output.empty();
-        this.recordSetId = Output.empty();
-        this.recordType = Output.empty();
-        this.targetResource = Output.empty();
+        this.domainName = Codegen.empty();
+        this.hostedZoneArn = Codegen.empty();
+        this.recordSetId = Codegen.empty();
+        this.recordType = Codegen.empty();
+        this.targetResource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
@@ -132,7 +133,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
-            this.hostedZoneArn = Output.ofNullable(hostedZoneArn);
+            this.hostedZoneArn = Codegen.ofNullable(hostedZoneArn);
             return this;
         }
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
@@ -140,7 +141,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Output.ofNullable(recordSetId);
+            this.recordSetId = Codegen.ofNullable(recordSetId);
             return this;
         }
         public Builder recordType(@Nullable Output<String> recordType) {
@@ -148,7 +149,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder recordType(@Nullable String recordType) {
-            this.recordType = Output.ofNullable(recordType);
+            this.recordType = Codegen.ofNullable(recordType);
             return this;
         }
         public Builder targetResource(@Nullable Output<ResourceSetTargetResourceArgs> targetResource) {
@@ -156,7 +157,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder targetResource(@Nullable ResourceSetTargetResourceArgs targetResource) {
-            this.targetResource = Output.ofNullable(targetResource);
+            this.targetResource = Codegen.ofNullable(targetResource);
             return this;
         }        public ResourceSetDNSTargetResourceArgs build() {
             return new ResourceSetDNSTargetResourceArgs(domainName, hostedZoneArn, recordSetId, recordType, targetResource);

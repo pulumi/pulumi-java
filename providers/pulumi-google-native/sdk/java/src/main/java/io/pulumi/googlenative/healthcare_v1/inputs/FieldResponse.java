@@ -24,7 +24,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxOccurs", required=true)
       private final Integer maxOccurs;
 
-    public Integer getMaxOccurs() {
+    public Integer maxOccurs() {
         return this.maxOccurs;
     }
 
@@ -35,7 +35,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minOccurs", required=true)
       private final Integer minOccurs;
 
-    public Integer getMinOccurs() {
+    public Integer minOccurs() {
         return this.minOccurs;
     }
 
@@ -46,7 +46,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -57,7 +57,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="table", required=true)
       private final String table;
 
-    public String getTable() {
+    public String table() {
         return this.table;
     }
 
@@ -68,7 +68,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

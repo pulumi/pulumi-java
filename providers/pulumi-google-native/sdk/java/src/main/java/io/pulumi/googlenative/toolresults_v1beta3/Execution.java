@@ -6,6 +6,7 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.ExecutionArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.MatrixDimensionDefinitionResponse;
@@ -36,7 +37,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return The time when the Execution status transitioned to COMPLETE. This value will be set automatically when state transitions to COMPLETE. - In response: set if the execution state is COMPLETE. - In create/update request: never set
      * 
      */
-    public Output<TimestampResponse> getCompletionTime() {
+    public Output<TimestampResponse> completionTime() {
         return this.completionTime;
     }
     /**
@@ -50,7 +51,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return The time when the Execution was created. This value will be set automatically when CreateExecution is called. - In response: always set - In create/update request: never set
      * 
      */
-    public Output<TimestampResponse> getCreationTime() {
+    public Output<TimestampResponse> creationTime() {
         return this.creationTime;
     }
     /**
@@ -64,7 +65,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return The dimensions along which different steps in this execution may vary. This must remain fixed over the life of the execution. Returns INVALID_ARGUMENT if this field is set in an update request. Returns INVALID_ARGUMENT if the same name occurs in more than one dimension_definition. Returns INVALID_ARGUMENT if the size of the list is over 100. - In response: present if set by create - In create request: optional - In update request: never set
      * 
      */
-    public Output<List<MatrixDimensionDefinitionResponse>> getDimensionDefinitions() {
+    public Output<List<MatrixDimensionDefinitionResponse>> dimensionDefinitions() {
         return this.dimensionDefinitions;
     }
     /**
@@ -78,7 +79,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return A unique identifier within a History for this Execution. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create/update request: never set
      * 
      */
-    public Output<String> getExecutionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
     /**
@@ -92,7 +93,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Classify the result, for example into SUCCESS or FAILURE - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    public Output<OutcomeResponse> getOutcome() {
+    public Output<OutcomeResponse> outcome() {
         return this.outcome;
     }
     /**
@@ -106,7 +107,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Lightweight information about execution request. - In response: present if set by create - In create: optional - In update: optional
      * 
      */
-    public Output<SpecificationResponse> getSpecification() {
+    public Output<SpecificationResponse> specification() {
         return this.specification;
     }
     /**
@@ -120,7 +121,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return The initial state is IN_PROGRESS. The only legal state transitions is from IN_PROGRESS to COMPLETE. A PRECONDITION_FAILED will be returned if an invalid transition is requested. The state can only be set to COMPLETE once. A FAILED_PRECONDITION will be returned if the state is set to COMPLETE multiple times. If the state is set to COMPLETE, all the in-progress steps within the execution will be set as COMPLETE. If the outcome of the step is not set, the outcome will be set to INCONCLUSIVE. - In response always set - In create/update request: optional
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -134,7 +135,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return TestExecution Matrix ID that the TestExecutionService uses. - In response: present if set by create - In create: optional - In update: never set
      * 
      */
-    public Output<String> getTestExecutionMatrixId() {
+    public Output<String> testExecutionMatrixId() {
         return this.testExecutionMatrixId;
     }
 
@@ -160,7 +161,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Execution(String name, ExecutionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:toolresults/v1beta3:Execution", name, args == null ? ExecutionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:toolresults/v1beta3:Execution", name, args == null ? ExecutionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Execution(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

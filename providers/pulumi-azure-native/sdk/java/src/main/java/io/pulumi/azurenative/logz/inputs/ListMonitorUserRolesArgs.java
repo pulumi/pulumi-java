@@ -21,7 +21,7 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;
 
-    public Optional<String> getEmailAddress() {
+    public Optional<String> emailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 
@@ -32,7 +32,7 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="monitorName", required=true)
       private final String monitorName;
 
-    public String getMonitorName() {
+    public String monitorName() {
         return this.monitorName;
     }
 
@@ -43,7 +43,7 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

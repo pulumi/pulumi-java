@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
     @Import(name="dataSize")
       private final @Nullable Output<String> dataSize;
 
-    public Output<String> getDataSize() {
-        return this.dataSize == null ? Output.empty() : this.dataSize;
+    public Output<String> dataSize() {
+        return this.dataSize == null ? Codegen.empty() : this.dataSize;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+    public Output<String> dataType() {
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
     @Import(name="quotedName")
       private final @Nullable Output<String> quotedName;
 
-    public Output<String> getQuotedName() {
-        return this.quotedName == null ? Output.empty() : this.quotedName;
+    public Output<String> quotedName() {
+        return this.quotedName == null ? Codegen.empty() : this.quotedName;
     }
 
     public SyncGroupSchemaTableColumnArgs(
@@ -61,9 +62,9 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
     }
 
     private SyncGroupSchemaTableColumnArgs() {
-        this.dataSize = Output.empty();
-        this.dataType = Output.empty();
-        this.quotedName = Output.empty();
+        this.dataSize = Codegen.empty();
+        this.dataType = Codegen.empty();
+        this.quotedName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dataSize(@Nullable String dataSize) {
-            this.dataSize = Output.ofNullable(dataSize);
+            this.dataSize = Codegen.ofNullable(dataSize);
             return this;
         }
         public Builder dataType(@Nullable Output<String> dataType) {
@@ -103,7 +104,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder quotedName(@Nullable Output<String> quotedName) {
@@ -111,7 +112,7 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder quotedName(@Nullable String quotedName) {
-            this.quotedName = Output.ofNullable(quotedName);
+            this.quotedName = Codegen.ofNullable(quotedName);
             return this;
         }        public SyncGroupSchemaTableColumnArgs build() {
             return new SyncGroupSchemaTableColumnArgs(dataSize, dataType, quotedName);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.resources.enums.ExpressionEvaluationOptionsScopeTyp
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
     @Import(name="scope")
       private final @Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
 
-    public Output<Either<String,ExpressionEvaluationOptionsScopeType>> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public ExpressionEvaluationOptionsArgs(@Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
@@ -36,7 +37,7 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
     }
 
     private ExpressionEvaluationOptionsArgs() {
-        this.scope = Output.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder scope(@Nullable Either<String,ExpressionEvaluationOptionsScopeType> scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public ExpressionEvaluationOptionsArgs build() {
             return new ExpressionEvaluationOptionsArgs(scope);

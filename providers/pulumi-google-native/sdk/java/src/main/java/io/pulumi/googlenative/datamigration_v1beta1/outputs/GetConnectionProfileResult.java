@@ -92,70 +92,70 @@ public final class GetConnectionProfileResult {
      * A CloudSQL database connection profile.
      * 
     */
-    public CloudSqlConnectionProfileResponse getCloudsql() {
+    public CloudSqlConnectionProfileResponse cloudsql() {
         return this.cloudsql;
     }
     /**
      * The timestamp when the resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The connection profile display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The error details in case of state FAILED.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * A MySQL database connection profile.
      * 
     */
-    public MySqlConnectionProfileResponse getMysql() {
+    public MySqlConnectionProfileResponse mysql() {
         return this.mysql;
     }
     /**
      * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The database provider.
      * 
     */
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
     /**
      * The current connection profile state (e.g. DRAFT, READY, or FAILED).
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The timestamp when the resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

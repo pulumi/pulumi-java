@@ -111,7 +111,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * will be launched in.
      * 
     */
-    public Optional<Boolean> getInternalIpOnly() {
+    public Optional<Boolean> internalIpOnly() {
         return Optional.ofNullable(this.internalIpOnly);
     }
     /**
@@ -119,7 +119,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
@@ -128,7 +128,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * If neither is specified, this defaults to the "default" network.
      * 
     */
-    public Optional<String> getNetwork() {
+    public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
@@ -136,7 +136,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * If not specified, the "default" service account is used.
      * 
     */
-    public Optional<String> getServiceAccount() {
+    public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
     /**
@@ -147,14 +147,14 @@ public final class ClusterClusterConfigGceClusterConfig {
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
     */
-    public List<String> getServiceAccountScopes() {
+    public List<String> serviceAccountScopes() {
         return this.serviceAccountScopes == null ? List.of() : this.serviceAccountScopes;
     }
     /**
      * Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
      * 
     */
-    public Optional<ClusterClusterConfigGceClusterConfigShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Optional<ClusterClusterConfigGceClusterConfigShieldedInstanceConfig> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
     /**
@@ -162,7 +162,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * subnetwork the cluster will be part of. Conflicts with `network`.
      * 
     */
-    public Optional<String> getSubnetwork() {
+    public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
     /**
@@ -170,7 +170,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * Tags are used to identify valid sources or targets for network firewalls.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
@@ -183,7 +183,7 @@ public final class ClusterClusterConfigGceClusterConfig {
      * `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
      * 
     */
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

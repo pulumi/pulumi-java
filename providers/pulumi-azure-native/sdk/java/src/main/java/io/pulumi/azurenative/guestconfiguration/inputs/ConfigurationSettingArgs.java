@@ -8,6 +8,7 @@ import io.pulumi.azurenative.guestconfiguration.enums.ConfigurationMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -30,8 +31,8 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
     @Import(name="actionAfterReboot")
       private final @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot;
 
-    public Output<Either<String,ActionAfterReboot>> getActionAfterReboot() {
-        return this.actionAfterReboot == null ? Output.empty() : this.actionAfterReboot;
+    public Output<Either<String,ActionAfterReboot>> actionAfterReboot() {
+        return this.actionAfterReboot == null ? Codegen.empty() : this.actionAfterReboot;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
     @Import(name="allowModuleOverwrite")
       private final @Nullable Output<Boolean> allowModuleOverwrite;
 
-    public Output<Boolean> getAllowModuleOverwrite() {
-        return this.allowModuleOverwrite == null ? Output.empty() : this.allowModuleOverwrite;
+    public Output<Boolean> allowModuleOverwrite() {
+        return this.allowModuleOverwrite == null ? Codegen.empty() : this.allowModuleOverwrite;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
     @Import(name="configurationMode")
       private final @Nullable Output<Either<String,ConfigurationMode>> configurationMode;
 
-    public Output<Either<String,ConfigurationMode>> getConfigurationMode() {
-        return this.configurationMode == null ? Output.empty() : this.configurationMode;
+    public Output<Either<String,ConfigurationMode>> configurationMode() {
+        return this.configurationMode == null ? Codegen.empty() : this.configurationMode;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
     @Import(name="configurationModeFrequencyMins")
       private final @Nullable Output<Double> configurationModeFrequencyMins;
 
-    public Output<Double> getConfigurationModeFrequencyMins() {
-        return this.configurationModeFrequencyMins == null ? Output.empty() : this.configurationModeFrequencyMins;
+    public Output<Double> configurationModeFrequencyMins() {
+        return this.configurationModeFrequencyMins == null ? Codegen.empty() : this.configurationModeFrequencyMins;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
     @Import(name="rebootIfNeeded")
       private final @Nullable Output<Boolean> rebootIfNeeded;
 
-    public Output<Boolean> getRebootIfNeeded() {
-        return this.rebootIfNeeded == null ? Output.empty() : this.rebootIfNeeded;
+    public Output<Boolean> rebootIfNeeded() {
+        return this.rebootIfNeeded == null ? Codegen.empty() : this.rebootIfNeeded;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
     @Import(name="refreshFrequencyMins")
       private final @Nullable Output<Double> refreshFrequencyMins;
 
-    public Output<Double> getRefreshFrequencyMins() {
-        return this.refreshFrequencyMins == null ? Output.empty() : this.refreshFrequencyMins;
+    public Output<Double> refreshFrequencyMins() {
+        return this.refreshFrequencyMins == null ? Codegen.empty() : this.refreshFrequencyMins;
     }
 
     public ConfigurationSettingArgs(
@@ -99,18 +100,18 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
         this.actionAfterReboot = actionAfterReboot;
         this.allowModuleOverwrite = allowModuleOverwrite;
         this.configurationMode = configurationMode;
-        this.configurationModeFrequencyMins = configurationModeFrequencyMins == null ? Output.ofNullable(1.5e+01) : configurationModeFrequencyMins;
+        this.configurationModeFrequencyMins = configurationModeFrequencyMins == null ? Codegen.ofNullable(1.5e+01) : configurationModeFrequencyMins;
         this.rebootIfNeeded = rebootIfNeeded;
-        this.refreshFrequencyMins = refreshFrequencyMins == null ? Output.ofNullable(3e+01) : refreshFrequencyMins;
+        this.refreshFrequencyMins = refreshFrequencyMins == null ? Codegen.ofNullable(3e+01) : refreshFrequencyMins;
     }
 
     private ConfigurationSettingArgs() {
-        this.actionAfterReboot = Output.empty();
-        this.allowModuleOverwrite = Output.empty();
-        this.configurationMode = Output.empty();
-        this.configurationModeFrequencyMins = Output.empty();
-        this.rebootIfNeeded = Output.empty();
-        this.refreshFrequencyMins = Output.empty();
+        this.actionAfterReboot = Codegen.empty();
+        this.allowModuleOverwrite = Codegen.empty();
+        this.configurationMode = Codegen.empty();
+        this.configurationModeFrequencyMins = Codegen.empty();
+        this.rebootIfNeeded = Codegen.empty();
+        this.refreshFrequencyMins = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder actionAfterReboot(@Nullable Either<String,ActionAfterReboot> actionAfterReboot) {
-            this.actionAfterReboot = Output.ofNullable(actionAfterReboot);
+            this.actionAfterReboot = Codegen.ofNullable(actionAfterReboot);
             return this;
         }
         public Builder allowModuleOverwrite(@Nullable Output<Boolean> allowModuleOverwrite) {
@@ -156,7 +157,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder allowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
-            this.allowModuleOverwrite = Output.ofNullable(allowModuleOverwrite);
+            this.allowModuleOverwrite = Codegen.ofNullable(allowModuleOverwrite);
             return this;
         }
         public Builder configurationMode(@Nullable Output<Either<String,ConfigurationMode>> configurationMode) {
@@ -164,7 +165,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder configurationMode(@Nullable Either<String,ConfigurationMode> configurationMode) {
-            this.configurationMode = Output.ofNullable(configurationMode);
+            this.configurationMode = Codegen.ofNullable(configurationMode);
             return this;
         }
         public Builder configurationModeFrequencyMins(@Nullable Output<Double> configurationModeFrequencyMins) {
@@ -172,7 +173,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder configurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
-            this.configurationModeFrequencyMins = Output.ofNullable(configurationModeFrequencyMins);
+            this.configurationModeFrequencyMins = Codegen.ofNullable(configurationModeFrequencyMins);
             return this;
         }
         public Builder rebootIfNeeded(@Nullable Output<Boolean> rebootIfNeeded) {
@@ -180,7 +181,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder rebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
-            this.rebootIfNeeded = Output.ofNullable(rebootIfNeeded);
+            this.rebootIfNeeded = Codegen.ofNullable(rebootIfNeeded);
             return this;
         }
         public Builder refreshFrequencyMins(@Nullable Output<Double> refreshFrequencyMins) {
@@ -188,7 +189,7 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder refreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
-            this.refreshFrequencyMins = Output.ofNullable(refreshFrequencyMins);
+            this.refreshFrequencyMins = Codegen.ofNullable(refreshFrequencyMins);
             return this;
         }        public ConfigurationSettingArgs build() {
             return new ConfigurationSettingArgs(actionAfterReboot, allowModuleOverwrite, configurationMode, configurationModeFrequencyMins, rebootIfNeeded, refreshFrequencyMins);

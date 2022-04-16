@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RecipeS3LocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -44,15 +45,15 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<String> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     @Import(name="tempDirectory")
       private final @Nullable Output<RecipeS3LocationArgs> tempDirectory;
 
-    public Output<RecipeS3LocationArgs> getTempDirectory() {
-        return this.tempDirectory == null ? Output.empty() : this.tempDirectory;
+    public Output<RecipeS3LocationArgs> tempDirectory() {
+        return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
     }
 
     public RecipeDataCatalogInputDefinitionArgs(
@@ -67,10 +68,10 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
     }
 
     private RecipeDataCatalogInputDefinitionArgs() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.tableName = Output.empty();
-        this.tempDirectory = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.tempDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -112,7 +113,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder tableName(@Nullable Output<String> tableName) {
@@ -120,7 +121,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder tempDirectory(@Nullable Output<RecipeS3LocationArgs> tempDirectory) {
@@ -128,7 +129,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder tempDirectory(@Nullable RecipeS3LocationArgs tempDirectory) {
-            this.tempDirectory = Output.ofNullable(tempDirectory);
+            this.tempDirectory = Codegen.ofNullable(tempDirectory);
             return this;
         }        public RecipeDataCatalogInputDefinitionArgs build() {
             return new RecipeDataCatalogInputDefinitionArgs(catalogId, databaseName, tableName, tempDirectory);

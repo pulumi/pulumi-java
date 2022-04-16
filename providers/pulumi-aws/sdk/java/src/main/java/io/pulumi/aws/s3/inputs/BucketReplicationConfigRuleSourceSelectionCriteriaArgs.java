@@ -7,6 +7,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteri
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
     @Import(name="replicaModifications")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications;
 
-    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> getReplicaModifications() {
-        return this.replicaModifications == null ? Output.empty() : this.replicaModifications;
+    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications() {
+        return this.replicaModifications == null ? Codegen.empty() : this.replicaModifications;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
     @Import(name="sseKmsEncryptedObjects")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
-    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Output.empty() : this.sseKmsEncryptedObjects;
+    public Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects() {
+        return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
     }
 
     public BucketReplicationConfigRuleSourceSelectionCriteriaArgs(
@@ -45,8 +46,8 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
     }
 
     private BucketReplicationConfigRuleSourceSelectionCriteriaArgs() {
-        this.replicaModifications = Output.empty();
-        this.sseKmsEncryptedObjects = Output.empty();
+        this.replicaModifications = Codegen.empty();
+        this.sseKmsEncryptedObjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
             return this;
         }
         public Builder replicaModifications(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs replicaModifications) {
-            this.replicaModifications = Output.ofNullable(replicaModifications);
+            this.replicaModifications = Codegen.ofNullable(replicaModifications);
             return this;
         }
         public Builder sseKmsEncryptedObjects(@Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
@@ -84,7 +85,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
             return this;
         }
         public Builder sseKmsEncryptedObjects(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = Output.ofNullable(sseKmsEncryptedObjects);
+            this.sseKmsEncryptedObjects = Codegen.ofNullable(sseKmsEncryptedObjects);
             return this;
         }        public BucketReplicationConfigRuleSourceSelectionCriteriaArgs build() {
             return new BucketReplicationConfigRuleSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);

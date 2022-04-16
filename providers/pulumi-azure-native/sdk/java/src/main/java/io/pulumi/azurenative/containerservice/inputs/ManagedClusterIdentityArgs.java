@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class ManagedClusterIdentityArgs extends io.pulumi.resources.Resour
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ResourceIdentityType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ManagedClusterIdentityArgs extends io.pulumi.resources.Resour
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+    public Output<Map<String,Object>> userAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public ManagedClusterIdentityArgs(
@@ -51,8 +52,8 @@ public final class ManagedClusterIdentityArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedClusterIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ManagedClusterIdentityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
@@ -90,7 +91,7 @@ public final class ManagedClusterIdentityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public ManagedClusterIdentityArgs build() {
             return new ManagedClusterIdentityArgs(type, userAssignedIdentities);

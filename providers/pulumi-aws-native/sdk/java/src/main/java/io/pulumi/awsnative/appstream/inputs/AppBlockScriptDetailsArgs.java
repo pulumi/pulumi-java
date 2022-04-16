@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appstream.inputs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockS3LocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,28 +20,28 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
     @Import(name="executableParameters")
       private final @Nullable Output<String> executableParameters;
 
-    public Output<String> getExecutableParameters() {
-        return this.executableParameters == null ? Output.empty() : this.executableParameters;
+    public Output<String> executableParameters() {
+        return this.executableParameters == null ? Codegen.empty() : this.executableParameters;
     }
 
     @Import(name="executablePath", required=true)
       private final Output<String> executablePath;
 
-    public Output<String> getExecutablePath() {
+    public Output<String> executablePath() {
         return this.executablePath;
     }
 
     @Import(name="scriptS3Location", required=true)
       private final Output<AppBlockS3LocationArgs> scriptS3Location;
 
-    public Output<AppBlockS3LocationArgs> getScriptS3Location() {
+    public Output<AppBlockS3LocationArgs> scriptS3Location() {
         return this.scriptS3Location;
     }
 
     @Import(name="timeoutInSeconds", required=true)
       private final Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 
@@ -56,10 +57,10 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
     }
 
     private AppBlockScriptDetailsArgs() {
-        this.executableParameters = Output.empty();
-        this.executablePath = Output.empty();
-        this.scriptS3Location = Output.empty();
-        this.timeoutInSeconds = Output.empty();
+        this.executableParameters = Codegen.empty();
+        this.executablePath = Codegen.empty();
+        this.scriptS3Location = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder executableParameters(@Nullable String executableParameters) {
-            this.executableParameters = Output.ofNullable(executableParameters);
+            this.executableParameters = Codegen.ofNullable(executableParameters);
             return this;
         }
         public Builder executablePath(Output<String> executablePath) {

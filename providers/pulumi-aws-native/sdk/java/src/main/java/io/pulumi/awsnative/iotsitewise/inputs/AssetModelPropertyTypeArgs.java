@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTransformArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,28 +25,28 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     @Import(name="attribute")
       private final @Nullable Output<AssetModelAttributeArgs> attribute;
 
-    public Output<AssetModelAttributeArgs> getAttribute() {
-        return this.attribute == null ? Output.empty() : this.attribute;
+    public Output<AssetModelAttributeArgs> attribute() {
+        return this.attribute == null ? Codegen.empty() : this.attribute;
     }
 
     @Import(name="metric")
       private final @Nullable Output<AssetModelMetricArgs> metric;
 
-    public Output<AssetModelMetricArgs> getMetric() {
-        return this.metric == null ? Output.empty() : this.metric;
+    public Output<AssetModelMetricArgs> metric() {
+        return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     @Import(name="transform")
       private final @Nullable Output<AssetModelTransformArgs> transform;
 
-    public Output<AssetModelTransformArgs> getTransform() {
-        return this.transform == null ? Output.empty() : this.transform;
+    public Output<AssetModelTransformArgs> transform() {
+        return this.transform == null ? Codegen.empty() : this.transform;
     }
 
     @Import(name="typeName", required=true)
       private final Output<AssetModelTypeName> typeName;
 
-    public Output<AssetModelTypeName> getTypeName() {
+    public Output<AssetModelTypeName> typeName() {
         return this.typeName;
     }
 
@@ -61,10 +62,10 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     }
 
     private AssetModelPropertyTypeArgs() {
-        this.attribute = Output.empty();
-        this.metric = Output.empty();
-        this.transform = Output.empty();
-        this.typeName = Output.empty();
+        this.attribute = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.transform = Codegen.empty();
+        this.typeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder attribute(@Nullable AssetModelAttributeArgs attribute) {
-            this.attribute = Output.ofNullable(attribute);
+            this.attribute = Codegen.ofNullable(attribute);
             return this;
         }
         public Builder metric(@Nullable Output<AssetModelMetricArgs> metric) {
@@ -106,7 +107,7 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder metric(@Nullable AssetModelMetricArgs metric) {
-            this.metric = Output.ofNullable(metric);
+            this.metric = Codegen.ofNullable(metric);
             return this;
         }
         public Builder transform(@Nullable Output<AssetModelTransformArgs> transform) {
@@ -114,7 +115,7 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder transform(@Nullable AssetModelTransformArgs transform) {
-            this.transform = Output.ofNullable(transform);
+            this.transform = Codegen.ofNullable(transform);
             return this;
         }
         public Builder typeName(Output<AssetModelTypeName> typeName) {

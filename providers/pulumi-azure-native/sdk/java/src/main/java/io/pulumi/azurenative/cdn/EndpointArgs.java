@@ -15,6 +15,7 @@ import io.pulumi.azurenative.cdn.inputs.UrlSigningKeyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentTypesToCompress")
       private final @Nullable Output<List<String>> contentTypesToCompress;
 
-    public Output<List<String>> getContentTypesToCompress() {
-        return this.contentTypesToCompress == null ? Output.empty() : this.contentTypesToCompress;
+    public Output<List<String>> contentTypesToCompress() {
+        return this.contentTypesToCompress == null ? Codegen.empty() : this.contentTypesToCompress;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultOriginGroup")
       private final @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
 
-    public Output<ResourceReferenceArgs> getDefaultOriginGroup() {
-        return this.defaultOriginGroup == null ? Output.empty() : this.defaultOriginGroup;
+    public Output<ResourceReferenceArgs> defaultOriginGroup() {
+        return this.defaultOriginGroup == null ? Codegen.empty() : this.defaultOriginGroup;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryPolicy")
       private final @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
 
-    public Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> getDeliveryPolicy() {
-        return this.deliveryPolicy == null ? Output.empty() : this.deliveryPolicy;
+    public Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy() {
+        return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
-        return this.endpointName == null ? Output.empty() : this.endpointName;
+    public Output<String> endpointName() {
+        return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="geoFilters")
       private final @Nullable Output<List<GeoFilterArgs>> geoFilters;
 
-    public Output<List<GeoFilterArgs>> getGeoFilters() {
-        return this.geoFilters == null ? Output.empty() : this.geoFilters;
+    public Output<List<GeoFilterArgs>> geoFilters() {
+        return this.geoFilters == null ? Codegen.empty() : this.geoFilters;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isCompressionEnabled")
       private final @Nullable Output<Boolean> isCompressionEnabled;
 
-    public Output<Boolean> getIsCompressionEnabled() {
-        return this.isCompressionEnabled == null ? Output.empty() : this.isCompressionEnabled;
+    public Output<Boolean> isCompressionEnabled() {
+        return this.isCompressionEnabled == null ? Codegen.empty() : this.isCompressionEnabled;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isHttpAllowed")
       private final @Nullable Output<Boolean> isHttpAllowed;
 
-    public Output<Boolean> getIsHttpAllowed() {
-        return this.isHttpAllowed == null ? Output.empty() : this.isHttpAllowed;
+    public Output<Boolean> isHttpAllowed() {
+        return this.isHttpAllowed == null ? Codegen.empty() : this.isHttpAllowed;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isHttpsAllowed")
       private final @Nullable Output<Boolean> isHttpsAllowed;
 
-    public Output<Boolean> getIsHttpsAllowed() {
-        return this.isHttpsAllowed == null ? Output.empty() : this.isHttpsAllowed;
+    public Output<Boolean> isHttpsAllowed() {
+        return this.isHttpsAllowed == null ? Codegen.empty() : this.isHttpsAllowed;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="optimizationType")
       private final @Nullable Output<Either<String,OptimizationType>> optimizationType;
 
-    public Output<Either<String,OptimizationType>> getOptimizationType() {
-        return this.optimizationType == null ? Output.empty() : this.optimizationType;
+    public Output<Either<String,OptimizationType>> optimizationType() {
+        return this.optimizationType == null ? Codegen.empty() : this.optimizationType;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originGroups")
       private final @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
 
-    public Output<List<DeepCreatedOriginGroupArgs>> getOriginGroups() {
-        return this.originGroups == null ? Output.empty() : this.originGroups;
+    public Output<List<DeepCreatedOriginGroupArgs>> originGroups() {
+        return this.originGroups == null ? Codegen.empty() : this.originGroups;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
-    public Output<String> getOriginHostHeader() {
-        return this.originHostHeader == null ? Output.empty() : this.originHostHeader;
+    public Output<String> originHostHeader() {
+        return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
-    public Output<String> getOriginPath() {
-        return this.originPath == null ? Output.empty() : this.originPath;
+    public Output<String> originPath() {
+        return this.originPath == null ? Codegen.empty() : this.originPath;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="origins", required=true)
       private final Output<List<DeepCreatedOriginArgs>> origins;
 
-    public Output<List<DeepCreatedOriginArgs>> getOrigins() {
+    public Output<List<DeepCreatedOriginArgs>> origins() {
         return this.origins;
     }
 
@@ -188,8 +189,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="probePath")
       private final @Nullable Output<String> probePath;
 
-    public Output<String> getProbePath() {
-        return this.probePath == null ? Output.empty() : this.probePath;
+    public Output<String> probePath() {
+        return this.probePath == null ? Codegen.empty() : this.probePath;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -210,8 +211,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryStringCachingBehavior")
       private final @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
 
-    public Output<QueryStringCachingBehavior> getQueryStringCachingBehavior() {
-        return this.queryStringCachingBehavior == null ? Output.empty() : this.queryStringCachingBehavior;
+    public Output<QueryStringCachingBehavior> queryStringCachingBehavior() {
+        return this.queryStringCachingBehavior == null ? Codegen.empty() : this.queryStringCachingBehavior;
     }
 
     /**
@@ -221,7 +222,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -232,8 +233,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -243,8 +244,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlSigningKeys")
       private final @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
 
-    public Output<List<UrlSigningKeyArgs>> getUrlSigningKeys() {
-        return this.urlSigningKeys == null ? Output.empty() : this.urlSigningKeys;
+    public Output<List<UrlSigningKeyArgs>> urlSigningKeys() {
+        return this.urlSigningKeys == null ? Codegen.empty() : this.urlSigningKeys;
     }
 
     /**
@@ -254,8 +255,8 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Output.empty() : this.webApplicationFirewallPolicyLink;
+    public Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink() {
+        return this.webApplicationFirewallPolicyLink == null ? Codegen.empty() : this.webApplicationFirewallPolicyLink;
     }
 
     public EndpointArgs(
@@ -304,27 +305,27 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.contentTypesToCompress = Output.empty();
-        this.defaultOriginGroup = Output.empty();
-        this.deliveryPolicy = Output.empty();
-        this.endpointName = Output.empty();
-        this.geoFilters = Output.empty();
-        this.isCompressionEnabled = Output.empty();
-        this.isHttpAllowed = Output.empty();
-        this.isHttpsAllowed = Output.empty();
-        this.location = Output.empty();
-        this.optimizationType = Output.empty();
-        this.originGroups = Output.empty();
-        this.originHostHeader = Output.empty();
-        this.originPath = Output.empty();
-        this.origins = Output.empty();
-        this.probePath = Output.empty();
-        this.profileName = Output.empty();
-        this.queryStringCachingBehavior = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.urlSigningKeys = Output.empty();
-        this.webApplicationFirewallPolicyLink = Output.empty();
+        this.contentTypesToCompress = Codegen.empty();
+        this.defaultOriginGroup = Codegen.empty();
+        this.deliveryPolicy = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.geoFilters = Codegen.empty();
+        this.isCompressionEnabled = Codegen.empty();
+        this.isHttpAllowed = Codegen.empty();
+        this.isHttpsAllowed = Codegen.empty();
+        this.location = Codegen.empty();
+        this.optimizationType = Codegen.empty();
+        this.originGroups = Codegen.empty();
+        this.originHostHeader = Codegen.empty();
+        this.originPath = Codegen.empty();
+        this.origins = Codegen.empty();
+        this.probePath = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.queryStringCachingBehavior = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.urlSigningKeys = Codegen.empty();
+        this.webApplicationFirewallPolicyLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -392,7 +393,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
-            this.contentTypesToCompress = Output.ofNullable(contentTypesToCompress);
+            this.contentTypesToCompress = Codegen.ofNullable(contentTypesToCompress);
             return this;
         }
         public Builder contentTypesToCompress(String... contentTypesToCompress) {
@@ -403,7 +404,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultOriginGroup(@Nullable ResourceReferenceArgs defaultOriginGroup) {
-            this.defaultOriginGroup = Output.ofNullable(defaultOriginGroup);
+            this.defaultOriginGroup = Codegen.ofNullable(defaultOriginGroup);
             return this;
         }
         public Builder deliveryPolicy(@Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy) {
@@ -411,7 +412,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryPolicy(@Nullable EndpointPropertiesUpdateParametersDeliveryPolicyArgs deliveryPolicy) {
-            this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
+            this.deliveryPolicy = Codegen.ofNullable(deliveryPolicy);
             return this;
         }
         public Builder endpointName(@Nullable Output<String> endpointName) {
@@ -419,7 +420,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Output.ofNullable(endpointName);
+            this.endpointName = Codegen.ofNullable(endpointName);
             return this;
         }
         public Builder geoFilters(@Nullable Output<List<GeoFilterArgs>> geoFilters) {
@@ -427,7 +428,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder geoFilters(@Nullable List<GeoFilterArgs> geoFilters) {
-            this.geoFilters = Output.ofNullable(geoFilters);
+            this.geoFilters = Codegen.ofNullable(geoFilters);
             return this;
         }
         public Builder geoFilters(GeoFilterArgs... geoFilters) {
@@ -438,7 +439,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
-            this.isCompressionEnabled = Output.ofNullable(isCompressionEnabled);
+            this.isCompressionEnabled = Codegen.ofNullable(isCompressionEnabled);
             return this;
         }
         public Builder isHttpAllowed(@Nullable Output<Boolean> isHttpAllowed) {
@@ -446,7 +447,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isHttpAllowed(@Nullable Boolean isHttpAllowed) {
-            this.isHttpAllowed = Output.ofNullable(isHttpAllowed);
+            this.isHttpAllowed = Codegen.ofNullable(isHttpAllowed);
             return this;
         }
         public Builder isHttpsAllowed(@Nullable Output<Boolean> isHttpsAllowed) {
@@ -454,7 +455,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
-            this.isHttpsAllowed = Output.ofNullable(isHttpsAllowed);
+            this.isHttpsAllowed = Codegen.ofNullable(isHttpsAllowed);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -462,7 +463,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder optimizationType(@Nullable Output<Either<String,OptimizationType>> optimizationType) {
@@ -470,7 +471,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder optimizationType(@Nullable Either<String,OptimizationType> optimizationType) {
-            this.optimizationType = Output.ofNullable(optimizationType);
+            this.optimizationType = Codegen.ofNullable(optimizationType);
             return this;
         }
         public Builder originGroups(@Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups) {
@@ -478,7 +479,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originGroups(@Nullable List<DeepCreatedOriginGroupArgs> originGroups) {
-            this.originGroups = Output.ofNullable(originGroups);
+            this.originGroups = Codegen.ofNullable(originGroups);
             return this;
         }
         public Builder originGroups(DeepCreatedOriginGroupArgs... originGroups) {
@@ -489,7 +490,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = Output.ofNullable(originHostHeader);
+            this.originHostHeader = Codegen.ofNullable(originHostHeader);
             return this;
         }
         public Builder originPath(@Nullable Output<String> originPath) {
@@ -497,7 +498,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originPath(@Nullable String originPath) {
-            this.originPath = Output.ofNullable(originPath);
+            this.originPath = Codegen.ofNullable(originPath);
             return this;
         }
         public Builder origins(Output<List<DeepCreatedOriginArgs>> origins) {
@@ -516,7 +517,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder probePath(@Nullable String probePath) {
-            this.probePath = Output.ofNullable(probePath);
+            this.probePath = Codegen.ofNullable(probePath);
             return this;
         }
         public Builder profileName(Output<String> profileName) {
@@ -532,7 +533,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryStringCachingBehavior(@Nullable QueryStringCachingBehavior queryStringCachingBehavior) {
-            this.queryStringCachingBehavior = Output.ofNullable(queryStringCachingBehavior);
+            this.queryStringCachingBehavior = Codegen.ofNullable(queryStringCachingBehavior);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -548,7 +549,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder urlSigningKeys(@Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys) {
@@ -556,7 +557,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder urlSigningKeys(@Nullable List<UrlSigningKeyArgs> urlSigningKeys) {
-            this.urlSigningKeys = Output.ofNullable(urlSigningKeys);
+            this.urlSigningKeys = Codegen.ofNullable(urlSigningKeys);
             return this;
         }
         public Builder urlSigningKeys(UrlSigningKeyArgs... urlSigningKeys) {
@@ -567,7 +568,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
+            this.webApplicationFirewallPolicyLink = Codegen.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }        public EndpointArgs build() {
             return new EndpointArgs(contentTypesToCompress, defaultOriginGroup, deliveryPolicy, endpointName, geoFilters, isCompressionEnabled, isHttpAllowed, isHttpsAllowed, location, optimizationType, originGroups, originHostHeader, originPath, origins, probePath, profileName, queryStringCachingBehavior, resourceGroupName, tags, urlSigningKeys, webApplicationFirewallPolicyLink);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.fms.NotificationChannelArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,13 +21,13 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
     @Export(name="snsRoleName", type=String.class, parameters={})
     private Output<String> snsRoleName;
 
-    public Output<String> getSnsRoleName() {
+    public Output<String> snsRoleName() {
         return this.snsRoleName;
     }
     @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 
@@ -52,7 +53,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationChannel(String name, NotificationChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:fms:NotificationChannel", name, args == null ? NotificationChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:fms:NotificationChannel", name, args == null ? NotificationChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationChannel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

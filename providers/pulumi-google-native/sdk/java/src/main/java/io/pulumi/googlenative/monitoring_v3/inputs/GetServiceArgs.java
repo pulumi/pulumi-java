@@ -15,21 +15,21 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceId", required=true)
       private final String serviceId;
 
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
 
     @Import(name="v3Id", required=true)
       private final String v3Id;
 
-    public String getV3Id() {
+    public String v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
       private final String v3Id1;
 
-    public String getV3Id1() {
+    public String v3Id1() {
         return this.v3Id1;
     }
 

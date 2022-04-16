@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerAutoHealingPolicyUpdateInstances;
 import io.pulumi.googlenative.compute_alpha.inputs.FixedOrPercentArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs;
@@ -25,8 +26,8 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="autoHealingTriggers")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers;
 
-    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> getAutoHealingTriggers() {
-        return this.autoHealingTriggers == null ? Output.empty() : this.autoHealingTriggers;
+    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers() {
+        return this.autoHealingTriggers == null ? Codegen.empty() : this.autoHealingTriggers;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="healthCheck")
       private final @Nullable Output<String> healthCheck;
 
-    public Output<String> getHealthCheck() {
-        return this.healthCheck == null ? Output.empty() : this.healthCheck;
+    public Output<String> healthCheck() {
+        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="initialDelaySec")
       private final @Nullable Output<Integer> initialDelaySec;
 
-    public Output<Integer> getInitialDelaySec() {
-        return this.initialDelaySec == null ? Output.empty() : this.initialDelaySec;
+    public Output<Integer> initialDelaySec() {
+        return this.initialDelaySec == null ? Codegen.empty() : this.initialDelaySec;
     }
 
     /**
@@ -58,15 +59,15 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="maxUnavailable")
       private final @Nullable Output<FixedOrPercentArgs> maxUnavailable;
 
-    public Output<FixedOrPercentArgs> getMaxUnavailable() {
-        return this.maxUnavailable == null ? Output.empty() : this.maxUnavailable;
+    public Output<FixedOrPercentArgs> maxUnavailable() {
+        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
     @Import(name="updateInstances")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances;
 
-    public Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> getUpdateInstances() {
-        return this.updateInstances == null ? Output.empty() : this.updateInstances;
+    public Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances() {
+        return this.updateInstances == null ? Codegen.empty() : this.updateInstances;
     }
 
     public InstanceGroupManagerAutoHealingPolicyArgs(
@@ -83,11 +84,11 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     }
 
     private InstanceGroupManagerAutoHealingPolicyArgs() {
-        this.autoHealingTriggers = Output.empty();
-        this.healthCheck = Output.empty();
-        this.initialDelaySec = Output.empty();
-        this.maxUnavailable = Output.empty();
-        this.updateInstances = Output.empty();
+        this.autoHealingTriggers = Codegen.empty();
+        this.healthCheck = Codegen.empty();
+        this.initialDelaySec = Codegen.empty();
+        this.maxUnavailable = Codegen.empty();
+        this.updateInstances = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             return this;
         }
         public Builder autoHealingTriggers(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs autoHealingTriggers) {
-            this.autoHealingTriggers = Output.ofNullable(autoHealingTriggers);
+            this.autoHealingTriggers = Codegen.ofNullable(autoHealingTriggers);
             return this;
         }
         public Builder healthCheck(@Nullable Output<String> healthCheck) {
@@ -131,7 +132,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             return this;
         }
         public Builder healthCheck(@Nullable String healthCheck) {
-            this.healthCheck = Output.ofNullable(healthCheck);
+            this.healthCheck = Codegen.ofNullable(healthCheck);
             return this;
         }
         public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
@@ -139,7 +140,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             return this;
         }
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Output.ofNullable(initialDelaySec);
+            this.initialDelaySec = Codegen.ofNullable(initialDelaySec);
             return this;
         }
         public Builder maxUnavailable(@Nullable Output<FixedOrPercentArgs> maxUnavailable) {
@@ -147,7 +148,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             return this;
         }
         public Builder maxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
-            this.maxUnavailable = Output.ofNullable(maxUnavailable);
+            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
             return this;
         }
         public Builder updateInstances(@Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
@@ -155,7 +156,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             return this;
         }
         public Builder updateInstances(@Nullable InstanceGroupManagerAutoHealingPolicyUpdateInstances updateInstances) {
-            this.updateInstances = Output.ofNullable(updateInstances);
+            this.updateInstances = Codegen.ofNullable(updateInstances);
             return this;
         }        public InstanceGroupManagerAutoHealingPolicyArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyArgs(autoHealingTriggers, healthCheck, initialDelaySec, maxUnavailable, updateInstances);

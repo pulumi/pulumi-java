@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.InlineSecretArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.SecretManagerSecretArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inline")
       private final @Nullable Output<List<InlineSecretArgs>> inline;
 
-    public Output<List<InlineSecretArgs>> getInline() {
-        return this.inline == null ? Output.empty() : this.inline;
+    public Output<List<InlineSecretArgs>> inline() {
+        return this.inline == null ? Codegen.empty() : this.inline;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretManager")
       private final @Nullable Output<List<SecretManagerSecretArgs>> secretManager;
 
-    public Output<List<SecretManagerSecretArgs>> getSecretManager() {
-        return this.secretManager == null ? Output.empty() : this.secretManager;
+    public Output<List<SecretManagerSecretArgs>> secretManager() {
+        return this.secretManager == null ? Codegen.empty() : this.secretManager;
     }
 
     public SecretsArgs(
@@ -50,8 +51,8 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretsArgs() {
-        this.inline = Output.empty();
-        this.secretManager = Output.empty();
+        this.inline = Codegen.empty();
+        this.secretManager = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inline(@Nullable List<InlineSecretArgs> inline) {
-            this.inline = Output.ofNullable(inline);
+            this.inline = Codegen.ofNullable(inline);
             return this;
         }
         public Builder inline(InlineSecretArgs... inline) {
@@ -92,7 +93,7 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretManager(@Nullable List<SecretManagerSecretArgs> secretManager) {
-            this.secretManager = Output.ofNullable(secretManager);
+            this.secretManager = Codegen.ofNullable(secretManager);
             return this;
         }
         public Builder secretManager(SecretManagerSecretArgs... secretManager) {

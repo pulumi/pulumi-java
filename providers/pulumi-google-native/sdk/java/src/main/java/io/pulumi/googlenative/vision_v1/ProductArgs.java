@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vision_v1.inputs.KeyValueArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,15 +35,15 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -63,15 +64,15 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="productCategory")
       private final @Nullable Output<String> productCategory;
 
-    public Output<String> getProductCategory() {
-        return this.productCategory == null ? Output.empty() : this.productCategory;
+    public Output<String> productCategory() {
+        return this.productCategory == null ? Codegen.empty() : this.productCategory;
     }
 
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
-        return this.productId == null ? Output.empty() : this.productId;
+    public Output<String> productId() {
+        return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     /**
@@ -81,15 +82,15 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="productLabels")
       private final @Nullable Output<List<KeyValueArgs>> productLabels;
 
-    public Output<List<KeyValueArgs>> getProductLabels() {
-        return this.productLabels == null ? Output.empty() : this.productLabels;
+    public Output<List<KeyValueArgs>> productLabels() {
+        return this.productLabels == null ? Codegen.empty() : this.productLabels;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ProductArgs(
@@ -112,14 +113,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.productCategory = Output.empty();
-        this.productId = Output.empty();
-        this.productLabels = Output.empty();
-        this.project = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.productCategory = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.productLabels = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -169,7 +170,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -177,7 +178,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -185,7 +186,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder productCategory(@Nullable Output<String> productCategory) {
@@ -193,7 +194,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productCategory(@Nullable String productCategory) {
-            this.productCategory = Output.ofNullable(productCategory);
+            this.productCategory = Codegen.ofNullable(productCategory);
             return this;
         }
         public Builder productId(@Nullable Output<String> productId) {
@@ -201,7 +202,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productId(@Nullable String productId) {
-            this.productId = Output.ofNullable(productId);
+            this.productId = Codegen.ofNullable(productId);
             return this;
         }
         public Builder productLabels(@Nullable Output<List<KeyValueArgs>> productLabels) {
@@ -209,7 +210,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productLabels(@Nullable List<KeyValueArgs> productLabels) {
-            this.productLabels = Output.ofNullable(productLabels);
+            this.productLabels = Codegen.ofNullable(productLabels);
             return this;
         }
         public Builder productLabels(KeyValueArgs... productLabels) {
@@ -220,7 +221,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ProductArgs build() {
             return new ProductArgs(description, displayName, location, name, productCategory, productId, productLabels, project);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.appengine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.EngineSplitTrafficArgs;
 import io.pulumi.gcp.appengine.inputs.EngineSplitTrafficState;
@@ -53,7 +54,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * @return If set to true traffic will be migrated to this version.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMigrateTraffic() {
+    public Output</* @Nullable */ Boolean> migrateTraffic() {
         return this.migrateTraffic;
     }
     /**
@@ -69,7 +70,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -83,7 +84,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * @return The name of the service these settings apply to.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -99,7 +100,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<EngineSplitTrafficSplit> getSplit() {
+    public Output<EngineSplitTrafficSplit> split() {
         return this.split;
     }
 
@@ -125,7 +126,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EngineSplitTraffic(String name, EngineSplitTrafficArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/engineSplitTraffic:EngineSplitTraffic", name, args == null ? EngineSplitTrafficArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:appengine/engineSplitTraffic:EngineSplitTraffic", name, args == null ? EngineSplitTrafficArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EngineSplitTraffic(String name, Output<String> id, @Nullable EngineSplitTrafficState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

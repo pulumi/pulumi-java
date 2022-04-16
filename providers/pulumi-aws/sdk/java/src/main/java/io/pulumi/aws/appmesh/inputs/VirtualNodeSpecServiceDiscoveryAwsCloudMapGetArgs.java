@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<Map<String,String>> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -45,7 +46,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -59,9 +60,9 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
     }
 
     private VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs() {
-        this.attributes = Output.empty();
-        this.namespaceName = Output.empty();
-        this.serviceName = Output.empty();
+        this.attributes = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {

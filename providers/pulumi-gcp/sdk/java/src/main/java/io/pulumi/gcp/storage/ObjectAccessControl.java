@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.ObjectAccessControlArgs;
 import io.pulumi.gcp.storage.inputs.ObjectAccessControlState;
@@ -59,7 +60,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -73,7 +74,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @return The domain associated with the entity.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -87,7 +88,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @return The email address associated with the entity.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -117,7 +118,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * * allAuthenticatedUsers
      * 
      */
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity;
     }
     /**
@@ -131,7 +132,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @return The ID for the entity
      * 
      */
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
     /**
@@ -145,7 +146,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @return The content generation of the object, if applied to an object.
      * 
      */
-    public Output<Integer> getGeneration() {
+    public Output<Integer> generation() {
         return this.generation;
     }
     /**
@@ -159,7 +160,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @return The name of the object to apply the access control to.
      * 
      */
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
     /**
@@ -173,7 +174,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @return The project team associated with the entity
      * 
      */
-    public Output<List<ObjectAccessControlProjectTeam>> getProjectTeams() {
+    public Output<List<ObjectAccessControlProjectTeam>> projectTeams() {
         return this.projectTeams;
     }
     /**
@@ -189,7 +190,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * Possible values are `OWNER` and `READER`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -215,7 +216,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectAccessControl(String name, ObjectAccessControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/objectAccessControl:ObjectAccessControl", name, args == null ? ObjectAccessControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/objectAccessControl:ObjectAccessControl", name, args == null ? ObjectAccessControlArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectAccessControl(String name, Output<String> id, @Nullable ObjectAccessControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

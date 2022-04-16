@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+    public Output<String> audience() {
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+    public Output<String> serviceAccountEmail() {
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     public OidcTokenArgs(
@@ -48,8 +49,8 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OidcTokenArgs() {
-        this.audience = Output.empty();
-        this.serviceAccountEmail = Output.empty();
+        this.audience = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
@@ -87,7 +88,7 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }        public OidcTokenArgs build() {
             return new OidcTokenArgs(audience, serviceAccountEmail);

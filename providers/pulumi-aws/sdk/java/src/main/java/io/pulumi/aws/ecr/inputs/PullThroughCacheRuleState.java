@@ -5,6 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
     @Import(name="ecrRepositoryPrefix")
       private final @Nullable Output<String> ecrRepositoryPrefix;
 
-    public Output<String> getEcrRepositoryPrefix() {
-        return this.ecrRepositoryPrefix == null ? Output.empty() : this.ecrRepositoryPrefix;
+    public Output<String> ecrRepositoryPrefix() {
+        return this.ecrRepositoryPrefix == null ? Codegen.empty() : this.ecrRepositoryPrefix;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
-        return this.registryId == null ? Output.empty() : this.registryId;
+    public Output<String> registryId() {
+        return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
     @Import(name="upstreamRegistryUrl")
       private final @Nullable Output<String> upstreamRegistryUrl;
 
-    public Output<String> getUpstreamRegistryUrl() {
-        return this.upstreamRegistryUrl == null ? Output.empty() : this.upstreamRegistryUrl;
+    public Output<String> upstreamRegistryUrl() {
+        return this.upstreamRegistryUrl == null ? Codegen.empty() : this.upstreamRegistryUrl;
     }
 
     public PullThroughCacheRuleState(
@@ -57,9 +58,9 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
     }
 
     private PullThroughCacheRuleState() {
-        this.ecrRepositoryPrefix = Output.empty();
-        this.registryId = Output.empty();
-        this.upstreamRegistryUrl = Output.empty();
+        this.ecrRepositoryPrefix = Codegen.empty();
+        this.registryId = Codegen.empty();
+        this.upstreamRegistryUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ecrRepositoryPrefix(@Nullable String ecrRepositoryPrefix) {
-            this.ecrRepositoryPrefix = Output.ofNullable(ecrRepositoryPrefix);
+            this.ecrRepositoryPrefix = Codegen.ofNullable(ecrRepositoryPrefix);
             return this;
         }
         public Builder registryId(@Nullable Output<String> registryId) {
@@ -99,7 +100,7 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Output.ofNullable(registryId);
+            this.registryId = Codegen.ofNullable(registryId);
             return this;
         }
         public Builder upstreamRegistryUrl(@Nullable Output<String> upstreamRegistryUrl) {
@@ -107,7 +108,7 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder upstreamRegistryUrl(@Nullable String upstreamRegistryUrl) {
-            this.upstreamRegistryUrl = Output.ofNullable(upstreamRegistryUrl);
+            this.upstreamRegistryUrl = Codegen.ofNullable(upstreamRegistryUrl);
             return this;
         }        public PullThroughCacheRuleState build() {
             return new PullThroughCacheRuleState(ecrRepositoryPrefix, registryId, upstreamRegistryUrl);

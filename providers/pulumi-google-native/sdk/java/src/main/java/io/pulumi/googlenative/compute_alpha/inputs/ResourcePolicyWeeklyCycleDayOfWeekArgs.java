@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicyWeeklyCycleDayOfWeekDay;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
     @Import(name="day")
       private final @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
 
-    public Output<ResourcePolicyWeeklyCycleDayOfWeekDay> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+    public Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day() {
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public ResourcePolicyWeeklyCycleDayOfWeekArgs(
@@ -45,8 +46,8 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
     }
 
     private ResourcePolicyWeeklyCycleDayOfWeekArgs() {
-        this.day = Output.empty();
-        this.startTime = Output.empty();
+        this.day = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
             return this;
         }
         public Builder day(@Nullable ResourcePolicyWeeklyCycleDayOfWeekDay day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -84,7 +85,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public ResourcePolicyWeeklyCycleDayOfWeekArgs build() {
             return new ResourcePolicyWeeklyCycleDayOfWeekArgs(day, startTime);

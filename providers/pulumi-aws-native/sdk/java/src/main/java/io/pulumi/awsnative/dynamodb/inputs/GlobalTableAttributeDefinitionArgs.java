@@ -5,6 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class GlobalTableAttributeDefinitionArgs extends io.pulumi.resource
     @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
-    public Output<String> getAttributeName() {
+    public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeType", required=true)
       private final Output<String> attributeType;
 
-    public Output<String> getAttributeType() {
+    public Output<String> attributeType() {
         return this.attributeType;
     }
 
@@ -35,8 +36,8 @@ public final class GlobalTableAttributeDefinitionArgs extends io.pulumi.resource
     }
 
     private GlobalTableAttributeDefinitionArgs() {
-        this.attributeName = Output.empty();
-        this.attributeType = Output.empty();
+        this.attributeName = Codegen.empty();
+        this.attributeType = Codegen.empty();
     }
 
     public static Builder builder() {

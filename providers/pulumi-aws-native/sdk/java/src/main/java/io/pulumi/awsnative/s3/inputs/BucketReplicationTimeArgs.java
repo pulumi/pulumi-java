@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.enums.BucketReplicationTimeStatus;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -17,14 +18,14 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
     @Import(name="status", required=true)
       private final Output<BucketReplicationTimeStatus> status;
 
-    public Output<BucketReplicationTimeStatus> getStatus() {
+    public Output<BucketReplicationTimeStatus> status() {
         return this.status;
     }
 
     @Import(name="time", required=true)
       private final Output<BucketReplicationTimeValueArgs> time;
 
-    public Output<BucketReplicationTimeValueArgs> getTime() {
+    public Output<BucketReplicationTimeValueArgs> time() {
         return this.time;
     }
 
@@ -36,8 +37,8 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
     }
 
     private BucketReplicationTimeArgs() {
-        this.status = Output.empty();
-        this.time = Output.empty();
+        this.status = Codegen.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {

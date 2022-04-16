@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Boolean;
@@ -29,8 +30,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activeDeadlineSeconds")
       private final @Nullable Output<Integer> activeDeadlineSeconds;
 
-    public Output<Integer> getActiveDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Output.empty() : this.activeDeadlineSeconds;
+    public Output<Integer> activeDeadlineSeconds() {
+        return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backoffLimit")
       private final @Nullable Output<Integer> backoffLimit;
 
-    public Output<Integer> getBackoffLimit() {
-        return this.backoffLimit == null ? Output.empty() : this.backoffLimit;
+    public Output<Integer> backoffLimit() {
+        return this.backoffLimit == null ? Codegen.empty() : this.backoffLimit;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completionMode")
       private final @Nullable Output<String> completionMode;
 
-    public Output<String> getCompletionMode() {
-        return this.completionMode == null ? Output.empty() : this.completionMode;
+    public Output<String> completionMode() {
+        return this.completionMode == null ? Codegen.empty() : this.completionMode;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completions")
       private final @Nullable Output<Integer> completions;
 
-    public Output<Integer> getCompletions() {
-        return this.completions == null ? Output.empty() : this.completions;
+    public Output<Integer> completions() {
+        return this.completions == null ? Codegen.empty() : this.completions;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manualSelector")
       private final @Nullable Output<Boolean> manualSelector;
 
-    public Output<Boolean> getManualSelector() {
-        return this.manualSelector == null ? Output.empty() : this.manualSelector;
+    public Output<Boolean> manualSelector() {
+        return this.manualSelector == null ? Codegen.empty() : this.manualSelector;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> getParallelism() {
-        return this.parallelism == null ? Output.empty() : this.parallelism;
+    public Output<Integer> parallelism() {
+        return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+    public Output<LabelSelectorArgs> selector() {
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;
 
-    public Output<Boolean> getSuspend() {
-        return this.suspend == null ? Output.empty() : this.suspend;
+    public Output<Boolean> suspend() {
+        return this.suspend == null ? Codegen.empty() : this.suspend;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
@@ -136,8 +137,8 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttlSecondsAfterFinished")
       private final @Nullable Output<Integer> ttlSecondsAfterFinished;
 
-    public Output<Integer> getTtlSecondsAfterFinished() {
-        return this.ttlSecondsAfterFinished == null ? Output.empty() : this.ttlSecondsAfterFinished;
+    public Output<Integer> ttlSecondsAfterFinished() {
+        return this.ttlSecondsAfterFinished == null ? Codegen.empty() : this.ttlSecondsAfterFinished;
     }
 
     public JobSpecArgs(
@@ -164,16 +165,16 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobSpecArgs() {
-        this.activeDeadlineSeconds = Output.empty();
-        this.backoffLimit = Output.empty();
-        this.completionMode = Output.empty();
-        this.completions = Output.empty();
-        this.manualSelector = Output.empty();
-        this.parallelism = Output.empty();
-        this.selector = Output.empty();
-        this.suspend = Output.empty();
-        this.template = Output.empty();
-        this.ttlSecondsAfterFinished = Output.empty();
+        this.activeDeadlineSeconds = Codegen.empty();
+        this.backoffLimit = Codegen.empty();
+        this.completionMode = Codegen.empty();
+        this.completions = Codegen.empty();
+        this.manualSelector = Codegen.empty();
+        this.parallelism = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.suspend = Codegen.empty();
+        this.template = Codegen.empty();
+        this.ttlSecondsAfterFinished = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
+            this.activeDeadlineSeconds = Codegen.ofNullable(activeDeadlineSeconds);
             return this;
         }
         public Builder backoffLimit(@Nullable Output<Integer> backoffLimit) {
@@ -227,7 +228,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backoffLimit(@Nullable Integer backoffLimit) {
-            this.backoffLimit = Output.ofNullable(backoffLimit);
+            this.backoffLimit = Codegen.ofNullable(backoffLimit);
             return this;
         }
         public Builder completionMode(@Nullable Output<String> completionMode) {
@@ -235,7 +236,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder completionMode(@Nullable String completionMode) {
-            this.completionMode = Output.ofNullable(completionMode);
+            this.completionMode = Codegen.ofNullable(completionMode);
             return this;
         }
         public Builder completions(@Nullable Output<Integer> completions) {
@@ -243,7 +244,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder completions(@Nullable Integer completions) {
-            this.completions = Output.ofNullable(completions);
+            this.completions = Codegen.ofNullable(completions);
             return this;
         }
         public Builder manualSelector(@Nullable Output<Boolean> manualSelector) {
@@ -251,7 +252,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manualSelector(@Nullable Boolean manualSelector) {
-            this.manualSelector = Output.ofNullable(manualSelector);
+            this.manualSelector = Codegen.ofNullable(manualSelector);
             return this;
         }
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
@@ -259,7 +260,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Output.ofNullable(parallelism);
+            this.parallelism = Codegen.ofNullable(parallelism);
             return this;
         }
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
@@ -267,7 +268,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }
         public Builder suspend(@Nullable Output<Boolean> suspend) {
@@ -275,7 +276,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suspend(@Nullable Boolean suspend) {
-            this.suspend = Output.ofNullable(suspend);
+            this.suspend = Codegen.ofNullable(suspend);
             return this;
         }
         public Builder template(Output<PodTemplateSpecArgs> template) {
@@ -291,7 +292,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
-            this.ttlSecondsAfterFinished = Output.ofNullable(ttlSecondsAfterFinished);
+            this.ttlSecondsAfterFinished = Codegen.ofNullable(ttlSecondsAfterFinished);
             return this;
         }        public JobSpecArgs build() {
             return new JobSpecArgs(activeDeadlineSeconds, backoffLimit, completionMode, completions, manualSelector, parallelism, selector, suspend, template, ttlSecondsAfterFinished);

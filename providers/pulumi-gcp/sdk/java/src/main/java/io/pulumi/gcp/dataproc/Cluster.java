@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.ClusterArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterState;
@@ -47,7 +48,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure defined below.
      * 
      */
-    public Output<ClusterClusterConfig> getClusterConfig() {
+    public Output<ClusterClusterConfig> clusterConfig() {
         return this.clusterConfig;
     }
     /**
@@ -63,7 +64,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * terraform apply
      * 
      */
-    public Output</* @Nullable */ String> getGracefulDecommissionTimeout() {
+    public Output</* @Nullable */ String> gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
     /**
@@ -81,7 +82,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * which is the name of the cluster.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -97,7 +98,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * zone.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -129,7 +130,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Defaults to `global`.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
 
@@ -155,7 +156,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

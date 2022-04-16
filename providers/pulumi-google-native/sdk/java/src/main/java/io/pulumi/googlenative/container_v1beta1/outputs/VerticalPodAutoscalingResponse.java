@@ -24,7 +24,7 @@ public final class VerticalPodAutoscalingResponse {
      * Enables vertical pod autoscaling.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

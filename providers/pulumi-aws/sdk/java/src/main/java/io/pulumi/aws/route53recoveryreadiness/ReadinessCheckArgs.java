@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readinessCheckName", required=true)
       private final Output<String> readinessCheckName;
 
-    public Output<String> getReadinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName;
     }
 
@@ -33,7 +34,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetName", required=true)
       private final Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName;
     }
 
@@ -44,8 +45,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ReadinessCheckArgs(
@@ -58,9 +59,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReadinessCheckArgs() {
-        this.readinessCheckName = Output.empty();
-        this.resourceSetName = Output.empty();
-        this.tags = Output.empty();
+        this.readinessCheckName = Codegen.empty();
+        this.resourceSetName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ReadinessCheckArgs build() {
             return new ReadinessCheckArgs(readinessCheckName, resourceSetName, tags);

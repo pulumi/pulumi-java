@@ -8,6 +8,7 @@ import io.pulumi.azurenative.streamanalytics.enums.JsonOutputSerializationFormat
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="encoding")
       private final @Nullable Output<Either<String,Encoding>> encoding;
 
-    public Output<Either<String,Encoding>> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<Either<String,Encoding>> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="format")
       private final @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
 
-    public Output<Either<String,JsonOutputSerializationFormat>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<Either<String,JsonOutputSerializationFormat>> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -65,9 +66,9 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private JsonSerializationArgs() {
-        this.encoding = Output.empty();
-        this.format = Output.empty();
-        this.type = Output.empty();
+        this.encoding = Codegen.empty();
+        this.format = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder encoding(@Nullable Either<String,Encoding> encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder format(@Nullable Output<Either<String,JsonOutputSerializationFormat>> format) {
@@ -107,7 +108,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder format(@Nullable Either<String,JsonOutputSerializationFormat> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelingJobId")
       private final @Nullable Output<String> labelingJobId;
 
-    public Output<String> getLabelingJobId() {
-        return this.labelingJobId == null ? Output.empty() : this.labelingJobId;
+    public Output<String> labelingJobId() {
+        return this.labelingJobId == null ? Codegen.empty() : this.labelingJobId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<LabelingJobPropertiesArgs> properties;
 
-    public Output<LabelingJobPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<LabelingJobPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +56,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -71,10 +72,10 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabelingJobArgs() {
-        this.labelingJobId = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.labelingJobId = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labelingJobId(@Nullable String labelingJobId) {
-            this.labelingJobId = Output.ofNullable(labelingJobId);
+            this.labelingJobId = Codegen.ofNullable(labelingJobId);
             return this;
         }
         public Builder properties(@Nullable Output<LabelingJobPropertiesArgs> properties) {
@@ -116,7 +117,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable LabelingJobPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

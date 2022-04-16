@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional;
 import io.pulumi.aws.wafregional.inputs.RulePredicateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -35,8 +36,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predicates")
       private final @Nullable Output<List<RulePredicateArgs>> predicates;
 
-    public Output<List<RulePredicateArgs>> getPredicates() {
-        return this.predicates == null ? Output.empty() : this.predicates;
+    public Output<List<RulePredicateArgs>> predicates() {
+        return this.predicates == null ? Codegen.empty() : this.predicates;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RuleArgs(
@@ -73,10 +74,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleArgs() {
-        this.metricName = Output.empty();
-        this.name = Output.empty();
-        this.predicates = Output.empty();
-        this.tags = Output.empty();
+        this.metricName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.predicates = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder predicates(@Nullable Output<List<RulePredicateArgs>> predicates) {
@@ -126,7 +127,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predicates(@Nullable List<RulePredicateArgs> predicates) {
-            this.predicates = Output.ofNullable(predicates);
+            this.predicates = Codegen.ofNullable(predicates);
             return this;
         }
         public Builder predicates(RulePredicateArgs... predicates) {
@@ -137,7 +138,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RuleArgs build() {
             return new RuleArgs(metricName, name, predicates, tags);

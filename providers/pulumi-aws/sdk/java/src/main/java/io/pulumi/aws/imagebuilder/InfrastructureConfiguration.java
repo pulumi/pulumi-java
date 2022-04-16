@@ -10,6 +10,7 @@ import io.pulumi.aws.imagebuilder.outputs.InfrastructureConfigurationLogging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Amazon Resource Name (ARN) of the configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Date when the configuration was created.
      * 
      */
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated;
     }
     /**
@@ -71,7 +72,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Date when the configuration was updated.
      * 
      */
-    public Output<String> getDateUpdated() {
+    public Output<String> dateUpdated() {
         return this.dateUpdated;
     }
     /**
@@ -85,7 +86,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Description for the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -99,7 +100,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Name of IAM Instance Profile.
      * 
      */
-    public Output<String> getInstanceProfileName() {
+    public Output<String> instanceProfileName() {
         return this.instanceProfileName;
     }
     /**
@@ -113,7 +114,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Set of EC2 Instance Types.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInstanceTypes() {
+    public Output</* @Nullable */ List<String>> instanceTypes() {
         return this.instanceTypes;
     }
     /**
@@ -127,7 +128,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Name of EC2 Key Pair.
      * 
      */
-    public Output</* @Nullable */ String> getKeyPair() {
+    public Output</* @Nullable */ String> keyPair() {
         return this.keyPair;
     }
     /**
@@ -141,7 +142,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Configuration block with logging settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ InfrastructureConfigurationLogging> getLogging() {
+    public Output</* @Nullable */ InfrastructureConfigurationLogging> logging() {
         return this.logging;
     }
     /**
@@ -155,7 +156,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Name for the configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -169,7 +170,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Key-value map of resource tags to assign to infrastructure created by the configuration.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResourceTags() {
+    public Output</* @Nullable */ Map<String,String>> resourceTags() {
         return this.resourceTags;
     }
     /**
@@ -183,7 +184,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Set of EC2 Security Group identifiers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -197,7 +198,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Amazon Resource Name (ARN) of SNS Topic.
      * 
      */
-    public Output</* @Nullable */ String> getSnsTopicArn() {
+    public Output</* @Nullable */ String> snsTopicArn() {
         return this.snsTopicArn;
     }
     /**
@@ -211,7 +212,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return EC2 Subnet identifier. Also requires `security_group_ids` argument.
      * 
      */
-    public Output</* @Nullable */ String> getSubnetId() {
+    public Output</* @Nullable */ String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -225,7 +226,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Key-value map of resource tags to assign to the configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -239,7 +240,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -253,7 +254,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @return Enable if the instance should be terminated when the pipeline fails. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTerminateInstanceOnFailure() {
+    public Output</* @Nullable */ Boolean> terminateInstanceOnFailure() {
         return this.terminateInstanceOnFailure;
     }
 
@@ -279,7 +280,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public InfrastructureConfiguration(String name, InfrastructureConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:imagebuilder/infrastructureConfiguration:InfrastructureConfiguration", name, args == null ? InfrastructureConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:imagebuilder/infrastructureConfiguration:InfrastructureConfiguration", name, args == null ? InfrastructureConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InfrastructureConfiguration(String name, Output<String> id, @Nullable InfrastructureConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

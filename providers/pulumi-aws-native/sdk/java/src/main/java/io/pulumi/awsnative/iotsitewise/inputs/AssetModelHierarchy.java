@@ -23,7 +23,7 @@ public final class AssetModelHierarchy extends io.pulumi.resources.InvokeArgs {
     @Import(name="childAssetModelId", required=true)
       private final String childAssetModelId;
 
-    public String getChildAssetModelId() {
+    public String childAssetModelId() {
         return this.childAssetModelId;
     }
 
@@ -34,7 +34,7 @@ public final class AssetModelHierarchy extends io.pulumi.resources.InvokeArgs {
     @Import(name="logicalId", required=true)
       private final String logicalId;
 
-    public String getLogicalId() {
+    public String logicalId() {
         return this.logicalId;
     }
 
@@ -45,7 +45,7 @@ public final class AssetModelHierarchy extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

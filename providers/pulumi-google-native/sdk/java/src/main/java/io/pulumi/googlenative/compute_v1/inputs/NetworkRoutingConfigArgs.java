@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.NetworkRoutingConfigRoutingMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="routingMode")
       private final @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
 
-    public Output<NetworkRoutingConfigRoutingMode> getRoutingMode() {
-        return this.routingMode == null ? Output.empty() : this.routingMode;
+    public Output<NetworkRoutingConfigRoutingMode> routingMode() {
+        return this.routingMode == null ? Codegen.empty() : this.routingMode;
     }
 
     public NetworkRoutingConfigArgs(@Nullable Output<NetworkRoutingConfigRoutingMode> routingMode) {
@@ -34,7 +35,7 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkRoutingConfigArgs() {
-        this.routingMode = Output.empty();
+        this.routingMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder routingMode(@Nullable NetworkRoutingConfigRoutingMode routingMode) {
-            this.routingMode = Output.ofNullable(routingMode);
+            this.routingMode = Codegen.ofNullable(routingMode);
             return this;
         }        public NetworkRoutingConfigArgs build() {
             return new NetworkRoutingConfigArgs(routingMode);

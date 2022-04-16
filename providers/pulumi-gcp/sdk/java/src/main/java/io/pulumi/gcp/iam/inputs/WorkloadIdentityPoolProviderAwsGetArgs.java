@@ -5,6 +5,7 @@ package io.pulumi.gcp.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class WorkloadIdentityPoolProviderAwsGetArgs extends io.pulumi.reso
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -29,7 +30,7 @@ public final class WorkloadIdentityPoolProviderAwsGetArgs extends io.pulumi.reso
     }
 
     private WorkloadIdentityPoolProviderAwsGetArgs() {
-        this.accountId = Output.empty();
+        this.accountId = Codegen.empty();
     }
 
     public static Builder builder() {

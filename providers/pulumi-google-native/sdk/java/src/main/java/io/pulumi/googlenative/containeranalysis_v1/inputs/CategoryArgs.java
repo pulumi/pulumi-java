@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categoryId")
       private final @Nullable Output<String> categoryId;
 
-    public Output<String> getCategoryId() {
-        return this.categoryId == null ? Output.empty() : this.categoryId;
+    public Output<String> categoryId() {
+        return this.categoryId == null ? Codegen.empty() : this.categoryId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public CategoryArgs(
@@ -48,8 +49,8 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CategoryArgs() {
-        this.categoryId = Output.empty();
-        this.name = Output.empty();
+        this.categoryId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder categoryId(@Nullable String categoryId) {
-            this.categoryId = Output.ofNullable(categoryId);
+            this.categoryId = Codegen.ofNullable(categoryId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public CategoryArgs build() {
             return new CategoryArgs(categoryId, name);

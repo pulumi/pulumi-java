@@ -5,6 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -31,7 +32,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -43,8 +44,8 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolicyAttachmentArgs() {
-        this.policy = Output.empty();
-        this.target = Output.empty();
+        this.policy = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

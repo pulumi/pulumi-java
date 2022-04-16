@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,21 +17,21 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
     @Import(name="exclusionName", required=true)
       private final Output<String> exclusionName;
 
-    public Output<String> getExclusionName() {
+    public Output<String> exclusionName() {
         return this.exclusionName;
     }
 
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -44,9 +45,9 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
     }
 
     private ClusterMaintenancePolicyMaintenanceExclusionGetArgs() {
-        this.endTime = Output.empty();
-        this.exclusionName = Output.empty();
-        this.startTime = Output.empty();
+        this.endTime = Codegen.empty();
+        this.exclusionName = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

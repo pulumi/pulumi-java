@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ApiOperationArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operations")
       private final @Nullable Output<List<ApiOperationArgs>> operations;
 
-    public Output<List<ApiOperationArgs>> getOperations() {
-        return this.operations == null ? Output.empty() : this.operations;
+    public Output<List<ApiOperationArgs>> operations() {
+        return this.operations == null ? Codegen.empty() : this.operations;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<String>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     public IngressToArgs(
@@ -50,8 +51,8 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressToArgs() {
-        this.operations = Output.empty();
-        this.resources = Output.empty();
+        this.operations = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operations(@Nullable List<ApiOperationArgs> operations) {
-            this.operations = Output.ofNullable(operations);
+            this.operations = Codegen.ofNullable(operations);
             return this;
         }
         public Builder operations(ApiOperationArgs... operations) {
@@ -92,7 +93,7 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {

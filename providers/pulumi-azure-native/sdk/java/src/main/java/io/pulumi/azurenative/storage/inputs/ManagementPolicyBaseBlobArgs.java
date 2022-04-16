@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.DateAfterModificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     @Import(name="delete")
       private final @Nullable Output<DateAfterModificationArgs> delete;
 
-    public Output<DateAfterModificationArgs> getDelete() {
-        return this.delete == null ? Output.empty() : this.delete;
+    public Output<DateAfterModificationArgs> delete() {
+        return this.delete == null ? Codegen.empty() : this.delete;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     @Import(name="enableAutoTierToHotFromCool")
       private final @Nullable Output<Boolean> enableAutoTierToHotFromCool;
 
-    public Output<Boolean> getEnableAutoTierToHotFromCool() {
-        return this.enableAutoTierToHotFromCool == null ? Output.empty() : this.enableAutoTierToHotFromCool;
+    public Output<Boolean> enableAutoTierToHotFromCool() {
+        return this.enableAutoTierToHotFromCool == null ? Codegen.empty() : this.enableAutoTierToHotFromCool;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     @Import(name="tierToArchive")
       private final @Nullable Output<DateAfterModificationArgs> tierToArchive;
 
-    public Output<DateAfterModificationArgs> getTierToArchive() {
-        return this.tierToArchive == null ? Output.empty() : this.tierToArchive;
+    public Output<DateAfterModificationArgs> tierToArchive() {
+        return this.tierToArchive == null ? Codegen.empty() : this.tierToArchive;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     @Import(name="tierToCool")
       private final @Nullable Output<DateAfterModificationArgs> tierToCool;
 
-    public Output<DateAfterModificationArgs> getTierToCool() {
-        return this.tierToCool == null ? Output.empty() : this.tierToCool;
+    public Output<DateAfterModificationArgs> tierToCool() {
+        return this.tierToCool == null ? Codegen.empty() : this.tierToCool;
     }
 
     public ManagementPolicyBaseBlobArgs(
@@ -75,10 +76,10 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     }
 
     private ManagementPolicyBaseBlobArgs() {
-        this.delete = Output.empty();
-        this.enableAutoTierToHotFromCool = Output.empty();
-        this.tierToArchive = Output.empty();
-        this.tierToCool = Output.empty();
+        this.delete = Codegen.empty();
+        this.enableAutoTierToHotFromCool = Codegen.empty();
+        this.tierToArchive = Codegen.empty();
+        this.tierToCool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder delete(@Nullable DateAfterModificationArgs delete) {
-            this.delete = Output.ofNullable(delete);
+            this.delete = Codegen.ofNullable(delete);
             return this;
         }
         public Builder enableAutoTierToHotFromCool(@Nullable Output<Boolean> enableAutoTierToHotFromCool) {
@@ -120,7 +121,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
-            this.enableAutoTierToHotFromCool = Output.ofNullable(enableAutoTierToHotFromCool);
+            this.enableAutoTierToHotFromCool = Codegen.ofNullable(enableAutoTierToHotFromCool);
             return this;
         }
         public Builder tierToArchive(@Nullable Output<DateAfterModificationArgs> tierToArchive) {
@@ -128,7 +129,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tierToArchive(@Nullable DateAfterModificationArgs tierToArchive) {
-            this.tierToArchive = Output.ofNullable(tierToArchive);
+            this.tierToArchive = Codegen.ofNullable(tierToArchive);
             return this;
         }
         public Builder tierToCool(@Nullable Output<DateAfterModificationArgs> tierToCool) {
@@ -136,7 +137,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tierToCool(@Nullable DateAfterModificationArgs tierToCool) {
-            this.tierToCool = Output.ofNullable(tierToCool);
+            this.tierToCool = Codegen.ofNullable(tierToCool);
             return this;
         }        public ManagementPolicyBaseBlobArgs build() {
             return new ManagementPolicyBaseBlobArgs(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);

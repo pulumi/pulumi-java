@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.CutoverJobArgs;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDetailsResponse;
@@ -34,7 +35,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return Details of the target VM in Compute Engine.
      * 
      */
-    public Output<ComputeEngineTargetDetailsResponse> getComputeEngineTargetDetails() {
+    public Output<ComputeEngineTargetDetailsResponse> computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
     /**
@@ -48,7 +49,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return The time the cutover job was created (as an API call, not when it was actually created in the target).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -62,7 +63,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return Provides details for the errors that led to the Cutover Job's state.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -76,7 +77,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return The name of the cutover job.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +91,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return The current progress in percentage of the cutover job.
      * 
      */
-    public Output<Integer> getProgressPercent() {
+    public Output<Integer> progressPercent() {
         return this.progressPercent;
     }
     /**
@@ -104,7 +105,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return State of the cutover job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -118,7 +119,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return A message providing possible extra details about the current state.
      * 
      */
-    public Output<String> getStateMessage() {
+    public Output<String> stateMessage() {
         return this.stateMessage;
     }
     /**
@@ -132,7 +133,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @return The time the state was last updated.
      * 
      */
-    public Output<String> getStateTime() {
+    public Output<String> stateTime() {
         return this.stateTime;
     }
 
@@ -158,7 +159,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CutoverJob(String name, CutoverJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1:CutoverJob", name, args == null ? CutoverJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1:CutoverJob", name, args == null ? CutoverJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CutoverJob(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

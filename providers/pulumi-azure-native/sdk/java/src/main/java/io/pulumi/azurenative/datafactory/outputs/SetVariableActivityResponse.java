@@ -74,21 +74,21 @@ public final class SetVariableActivityResponse {
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -96,28 +96,28 @@ public final class SetVariableActivityResponse {
      * Expected value is 'SetVariable'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Value to be set. Could be a static value or Expression
      * 
     */
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Name of the variable whose value needs to be set.
      * 
     */
-    public Optional<String> getVariableName() {
+    public Optional<String> variableName() {
         return Optional.ofNullable(this.variableName);
     }
 

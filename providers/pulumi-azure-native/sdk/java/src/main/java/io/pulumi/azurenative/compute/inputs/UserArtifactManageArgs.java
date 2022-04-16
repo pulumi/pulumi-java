@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="install", required=true)
       private final Output<String> install;
 
-    public Output<String> getInstall() {
+    public Output<String> install() {
         return this.install;
     }
 
@@ -32,7 +33,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="remove", required=true)
       private final Output<String> remove;
 
-    public Output<String> getRemove() {
+    public Output<String> remove() {
         return this.remove;
     }
 
@@ -43,8 +44,8 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="update")
       private final @Nullable Output<String> update;
 
-    public Output<String> getUpdate() {
-        return this.update == null ? Output.empty() : this.update;
+    public Output<String> update() {
+        return this.update == null ? Codegen.empty() : this.update;
     }
 
     public UserArtifactManageArgs(
@@ -57,9 +58,9 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     }
 
     private UserArtifactManageArgs() {
-        this.install = Output.empty();
-        this.remove = Output.empty();
-        this.update = Output.empty();
+        this.install = Codegen.empty();
+        this.remove = Codegen.empty();
+        this.update = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder update(@Nullable String update) {
-            this.update = Output.ofNullable(update);
+            this.update = Codegen.ofNullable(update);
             return this;
         }        public UserArtifactManageArgs build() {
             return new UserArtifactManageArgs(install, remove, update);

@@ -24,7 +24,7 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
     @Import(name="allowedIps", required=true)
       private final List<String> allowedIps;
 
-    public List<String> getAllowedIps() {
+    public List<String> allowedIps() {
         return this.allowedIps;
     }
 

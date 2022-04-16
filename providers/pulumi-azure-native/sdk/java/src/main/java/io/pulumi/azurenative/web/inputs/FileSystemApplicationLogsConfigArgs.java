@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.LogLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,16 +26,16 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
     @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+    public Output<LogLevel> level() {
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     public FileSystemApplicationLogsConfigArgs(@Nullable Output<LogLevel> level) {
-        this.level = level == null ? Output.ofNullable(io.pulumi.azurenative.web.enums.LogLevel.Off) : level;
+        this.level = level == null ? Codegen.ofNullable(io.pulumi.azurenative.web.enums.LogLevel.Off) : level;
     }
 
     private FileSystemApplicationLogsConfigArgs() {
-        this.level = Output.empty();
+        this.level = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder level(@Nullable LogLevel level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }        public FileSystemApplicationLogsConfigArgs build() {
             return new FileSystemApplicationLogsConfigArgs(level);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.FileContentBufferArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dbs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbs;
 
-    public Output<List<FileContentBufferArgs>> getDbs() {
-        return this.dbs == null ? Output.empty() : this.dbs;
+    public Output<List<FileContentBufferArgs>> dbs() {
+        return this.dbs == null ? Codegen.empty() : this.dbs;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dbxs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbxs;
 
-    public Output<List<FileContentBufferArgs>> getDbxs() {
-        return this.dbxs == null ? Output.empty() : this.dbxs;
+    public Output<List<FileContentBufferArgs>> dbxs() {
+        return this.dbxs == null ? Codegen.empty() : this.dbxs;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keks")
       private final @Nullable Output<List<FileContentBufferArgs>> keks;
 
-    public Output<List<FileContentBufferArgs>> getKeks() {
-        return this.keks == null ? Output.empty() : this.keks;
+    public Output<List<FileContentBufferArgs>> keks() {
+        return this.keks == null ? Codegen.empty() : this.keks;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pk")
       private final @Nullable Output<FileContentBufferArgs> pk;
 
-    public Output<FileContentBufferArgs> getPk() {
-        return this.pk == null ? Output.empty() : this.pk;
+    public Output<FileContentBufferArgs> pk() {
+        return this.pk == null ? Codegen.empty() : this.pk;
     }
 
     public InitialStateConfigArgs(
@@ -75,10 +76,10 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InitialStateConfigArgs() {
-        this.dbs = Output.empty();
-        this.dbxs = Output.empty();
-        this.keks = Output.empty();
-        this.pk = Output.empty();
+        this.dbs = Codegen.empty();
+        this.dbxs = Codegen.empty();
+        this.keks = Codegen.empty();
+        this.pk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dbs(@Nullable List<FileContentBufferArgs> dbs) {
-            this.dbs = Output.ofNullable(dbs);
+            this.dbs = Codegen.ofNullable(dbs);
             return this;
         }
         public Builder dbs(FileContentBufferArgs... dbs) {
@@ -123,7 +124,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dbxs(@Nullable List<FileContentBufferArgs> dbxs) {
-            this.dbxs = Output.ofNullable(dbxs);
+            this.dbxs = Codegen.ofNullable(dbxs);
             return this;
         }
         public Builder dbxs(FileContentBufferArgs... dbxs) {
@@ -134,7 +135,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keks(@Nullable List<FileContentBufferArgs> keks) {
-            this.keks = Output.ofNullable(keks);
+            this.keks = Codegen.ofNullable(keks);
             return this;
         }
         public Builder keks(FileContentBufferArgs... keks) {
@@ -145,7 +146,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pk(@Nullable FileContentBufferArgs pk) {
-            this.pk = Output.ofNullable(pk);
+            this.pk = Codegen.ofNullable(pk);
             return this;
         }        public InitialStateConfigArgs build() {
             return new InitialStateConfigArgs(dbs, dbxs, keks, pk);

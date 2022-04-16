@@ -16,7 +16,7 @@ public final class RecordingConfigurationDestinationConfiguration {
         this.s3 = s3;
     }
 
-    public RecordingConfigurationS3DestinationConfiguration getS3() {
+    public RecordingConfigurationS3DestinationConfiguration s3() {
         return this.s3;
     }
 

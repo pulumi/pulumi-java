@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datashare.enums.SynchronizationMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +37,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -47,7 +48,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="recurrenceInterval", required=true)
       private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
-    public Output<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
+    public Output<Either<String,RecurrenceInterval>> recurrenceInterval() {
         return this.recurrenceInterval;
     }
 
@@ -58,7 +59,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +70,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -80,8 +81,8 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="synchronizationMode")
       private final @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
 
-    public Output<Either<String,SynchronizationMode>> getSynchronizationMode() {
-        return this.synchronizationMode == null ? Output.empty() : this.synchronizationMode;
+    public Output<Either<String,SynchronizationMode>> synchronizationMode() {
+        return this.synchronizationMode == null ? Codegen.empty() : this.synchronizationMode;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="synchronizationTime", required=true)
       private final Output<String> synchronizationTime;
 
-    public Output<String> getSynchronizationTime() {
+    public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
 
@@ -102,8 +103,8 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="triggerName")
       private final @Nullable Output<String> triggerName;
 
-    public Output<String> getTriggerName() {
-        return this.triggerName == null ? Output.empty() : this.triggerName;
+    public Output<String> triggerName() {
+        return this.triggerName == null ? Codegen.empty() : this.triggerName;
     }
 
     public ScheduledTriggerArgs(
@@ -126,14 +127,14 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ScheduledTriggerArgs() {
-        this.accountName = Output.empty();
-        this.kind = Output.empty();
-        this.recurrenceInterval = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
-        this.synchronizationMode = Output.empty();
-        this.synchronizationTime = Output.empty();
-        this.triggerName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.recurrenceInterval = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
+        this.synchronizationMode = Codegen.empty();
+        this.synchronizationTime = Codegen.empty();
+        this.triggerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder synchronizationMode(@Nullable Either<String,SynchronizationMode> synchronizationMode) {
-            this.synchronizationMode = Output.ofNullable(synchronizationMode);
+            this.synchronizationMode = Codegen.ofNullable(synchronizationMode);
             return this;
         }
         public Builder synchronizationTime(Output<String> synchronizationTime) {
@@ -231,7 +232,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder triggerName(@Nullable String triggerName) {
-            this.triggerName = Output.ofNullable(triggerName);
+            this.triggerName = Codegen.ofNullable(triggerName);
             return this;
         }        public ScheduledTriggerArgs build() {
             return new ScheduledTriggerArgs(accountName, kind, recurrenceInterval, resourceGroupName, shareSubscriptionName, synchronizationMode, synchronizationTime, triggerName);

@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -43,7 +44,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -57,9 +58,9 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     }
 
     private DocumentationVersionArgs() {
-        this.description = Output.empty();
-        this.restApiId = Output.empty();
-        this.version = Output.empty();
+        this.description = Codegen.empty();
+        this.restApiId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder restApiId(Output<String> restApiId) {

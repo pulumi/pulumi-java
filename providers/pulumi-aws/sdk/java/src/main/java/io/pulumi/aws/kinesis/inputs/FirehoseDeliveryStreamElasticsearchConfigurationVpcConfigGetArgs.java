@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -33,7 +34,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -44,15 +45,15 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs(
@@ -67,10 +68,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
     }
 
     private FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs() {
-        this.roleArn = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetA
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs build() {
             return new FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs(roleArn, securityGroupIds, subnetIds, vpcId);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="keyVaultId", required=true)
       private final Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
 
@@ -48,7 +49,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
+    public Output<String> keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -59,7 +60,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="serviceBusConnectionStringSecretName", required=true)
       private final Output<String> serviceBusConnectionStringSecretName;
 
-    public Output<String> getServiceBusConnectionStringSecretName() {
+    public Output<String> serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
 
@@ -70,7 +71,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="storageAccountId", required=true)
       private final Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 
@@ -81,7 +82,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="storageAccountSasSecretName", required=true)
       private final Output<String> storageAccountSasSecretName;
 
-    public Output<String> getStorageAccountSasSecretName() {
+    public Output<String> storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
 
@@ -92,7 +93,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="targetLocation", required=true)
       private final Output<String> targetLocation;
 
-    public Output<String> getTargetLocation() {
+    public Output<String> targetLocation() {
         return this.targetLocation;
     }
 
@@ -114,13 +115,13 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     }
 
     private VMwareCbtContainerMappingInputArgs() {
-        this.instanceType = Output.empty();
-        this.keyVaultId = Output.empty();
-        this.keyVaultUri = Output.empty();
-        this.serviceBusConnectionStringSecretName = Output.empty();
-        this.storageAccountId = Output.empty();
-        this.storageAccountSasSecretName = Output.empty();
-        this.targetLocation = Output.empty();
+        this.instanceType = Codegen.empty();
+        this.keyVaultId = Codegen.empty();
+        this.keyVaultUri = Codegen.empty();
+        this.serviceBusConnectionStringSecretName = Codegen.empty();
+        this.storageAccountId = Codegen.empty();
+        this.storageAccountSasSecretName = Codegen.empty();
+        this.targetLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder keyVaultId(Output<String> keyVaultId) {

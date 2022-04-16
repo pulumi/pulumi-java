@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
     @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
-    public Output<String> getDayOfWeek() {
+    public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -33,7 +34,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
     @Import(name="weekOrdinal", required=true)
       private final Output<Integer> weekOrdinal;
 
-    public Output<Integer> getWeekOrdinal() {
+    public Output<Integer> weekOrdinal() {
         return this.weekOrdinal;
     }
 
@@ -45,8 +46,8 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
     }
 
     private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs() {
-        this.dayOfWeek = Output.empty();
-        this.weekOrdinal = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.weekOrdinal = Codegen.empty();
     }
 
     public static Builder builder() {

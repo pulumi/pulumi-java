@@ -5,6 +5,7 @@ package io.pulumi.awsnative.configuration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,21 +20,21 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="allAwsRegions")
       private final @Nullable Output<Boolean> allAwsRegions;
 
-    public Output<Boolean> getAllAwsRegions() {
-        return this.allAwsRegions == null ? Output.empty() : this.allAwsRegions;
+    public Output<Boolean> allAwsRegions() {
+        return this.allAwsRegions == null ? Codegen.empty() : this.allAwsRegions;
     }
 
     @Import(name="awsRegions")
       private final @Nullable Output<List<String>> awsRegions;
 
-    public Output<List<String>> getAwsRegions() {
-        return this.awsRegions == null ? Output.empty() : this.awsRegions;
+    public Output<List<String>> awsRegions() {
+        return this.awsRegions == null ? Codegen.empty() : this.awsRegions;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -47,9 +48,9 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     }
 
     private ConfigurationAggregatorOrganizationAggregationSourceArgs() {
-        this.allAwsRegions = Output.empty();
-        this.awsRegions = Output.empty();
-        this.roleArn = Output.empty();
+        this.allAwsRegions = Codegen.empty();
+        this.awsRegions = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
             return this;
         }
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = Output.ofNullable(allAwsRegions);
+            this.allAwsRegions = Codegen.ofNullable(allAwsRegions);
             return this;
         }
         public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
@@ -89,7 +90,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
             return this;
         }
         public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = Output.ofNullable(awsRegions);
+            this.awsRegions = Codegen.ofNullable(awsRegions);
             return this;
         }
         public Builder awsRegions(String... awsRegions) {

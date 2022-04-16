@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="decryption")
       private final @Nullable Output<FlowEncryptionArgs> decryption;
 
-    public Output<FlowEncryptionArgs> getDecryption() {
-        return this.decryption == null ? Output.empty() : this.decryption;
+    public Output<FlowEncryptionArgs> decryption() {
+        return this.decryption == null ? Codegen.empty() : this.decryption;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entitlementArn")
       private final @Nullable Output<String> entitlementArn;
 
-    public Output<String> getEntitlementArn() {
-        return this.entitlementArn == null ? Output.empty() : this.entitlementArn;
+    public Output<String> entitlementArn() {
+        return this.entitlementArn == null ? Codegen.empty() : this.entitlementArn;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingestIp")
       private final @Nullable Output<String> ingestIp;
 
-    public Output<String> getIngestIp() {
-        return this.ingestIp == null ? Output.empty() : this.ingestIp;
+    public Output<String> ingestIp() {
+        return this.ingestIp == null ? Codegen.empty() : this.ingestIp;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingestPort")
       private final @Nullable Output<Integer> ingestPort;
 
-    public Output<Integer> getIngestPort() {
-        return this.ingestPort == null ? Output.empty() : this.ingestPort;
+    public Output<Integer> ingestPort() {
+        return this.ingestPort == null ? Codegen.empty() : this.ingestPort;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxBitrate")
       private final @Nullable Output<Integer> maxBitrate;
 
-    public Output<Integer> getMaxBitrate() {
-        return this.maxBitrate == null ? Output.empty() : this.maxBitrate;
+    public Output<Integer> maxBitrate() {
+        return this.maxBitrate == null ? Codegen.empty() : this.maxBitrate;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxLatency")
       private final @Nullable Output<Integer> maxLatency;
 
-    public Output<Integer> getMaxLatency() {
-        return this.maxLatency == null ? Output.empty() : this.maxLatency;
+    public Output<Integer> maxLatency() {
+        return this.maxLatency == null ? Codegen.empty() : this.maxLatency;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minLatency")
       private final @Nullable Output<Integer> minLatency;
 
-    public Output<Integer> getMinLatency() {
-        return this.minLatency == null ? Output.empty() : this.minLatency;
+    public Output<Integer> minLatency() {
+        return this.minLatency == null ? Codegen.empty() : this.minLatency;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<FlowSourceProtocol> protocol;
 
-    public Output<FlowSourceProtocol> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<FlowSourceProtocol> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceArn")
       private final @Nullable Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
-        return this.sourceArn == null ? Output.empty() : this.sourceArn;
+    public Output<String> sourceArn() {
+        return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceIngestPort")
       private final @Nullable Output<String> sourceIngestPort;
 
-    public Output<String> getSourceIngestPort() {
-        return this.sourceIngestPort == null ? Output.empty() : this.sourceIngestPort;
+    public Output<String> sourceIngestPort() {
+        return this.sourceIngestPort == null ? Codegen.empty() : this.sourceIngestPort;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamId")
       private final @Nullable Output<String> streamId;
 
-    public Output<String> getStreamId() {
-        return this.streamId == null ? Output.empty() : this.streamId;
+    public Output<String> streamId() {
+        return this.streamId == null ? Codegen.empty() : this.streamId;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcInterfaceName")
       private final @Nullable Output<String> vpcInterfaceName;
 
-    public Output<String> getVpcInterfaceName() {
-        return this.vpcInterfaceName == null ? Output.empty() : this.vpcInterfaceName;
+    public Output<String> vpcInterfaceName() {
+        return this.vpcInterfaceName == null ? Codegen.empty() : this.vpcInterfaceName;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="whitelistCidr")
       private final @Nullable Output<String> whitelistCidr;
 
-    public Output<String> getWhitelistCidr() {
-        return this.whitelistCidr == null ? Output.empty() : this.whitelistCidr;
+    public Output<String> whitelistCidr() {
+        return this.whitelistCidr == null ? Codegen.empty() : this.whitelistCidr;
     }
 
     public FlowSourceArgs(
@@ -220,21 +221,21 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowSourceArgs() {
-        this.decryption = Output.empty();
-        this.description = Output.empty();
-        this.entitlementArn = Output.empty();
-        this.ingestIp = Output.empty();
-        this.ingestPort = Output.empty();
-        this.maxBitrate = Output.empty();
-        this.maxLatency = Output.empty();
-        this.minLatency = Output.empty();
-        this.name = Output.empty();
-        this.protocol = Output.empty();
-        this.sourceArn = Output.empty();
-        this.sourceIngestPort = Output.empty();
-        this.streamId = Output.empty();
-        this.vpcInterfaceName = Output.empty();
-        this.whitelistCidr = Output.empty();
+        this.decryption = Codegen.empty();
+        this.description = Codegen.empty();
+        this.entitlementArn = Codegen.empty();
+        this.ingestIp = Codegen.empty();
+        this.ingestPort = Codegen.empty();
+        this.maxBitrate = Codegen.empty();
+        this.maxLatency = Codegen.empty();
+        this.minLatency = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.sourceArn = Codegen.empty();
+        this.sourceIngestPort = Codegen.empty();
+        this.streamId = Codegen.empty();
+        this.vpcInterfaceName = Codegen.empty();
+        this.whitelistCidr = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -290,7 +291,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder decryption(@Nullable FlowEncryptionArgs decryption) {
-            this.decryption = Output.ofNullable(decryption);
+            this.decryption = Codegen.ofNullable(decryption);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -298,7 +299,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder entitlementArn(@Nullable Output<String> entitlementArn) {
@@ -306,7 +307,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entitlementArn(@Nullable String entitlementArn) {
-            this.entitlementArn = Output.ofNullable(entitlementArn);
+            this.entitlementArn = Codegen.ofNullable(entitlementArn);
             return this;
         }
         public Builder ingestIp(@Nullable Output<String> ingestIp) {
@@ -314,7 +315,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingestIp(@Nullable String ingestIp) {
-            this.ingestIp = Output.ofNullable(ingestIp);
+            this.ingestIp = Codegen.ofNullable(ingestIp);
             return this;
         }
         public Builder ingestPort(@Nullable Output<Integer> ingestPort) {
@@ -322,7 +323,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingestPort(@Nullable Integer ingestPort) {
-            this.ingestPort = Output.ofNullable(ingestPort);
+            this.ingestPort = Codegen.ofNullable(ingestPort);
             return this;
         }
         public Builder maxBitrate(@Nullable Output<Integer> maxBitrate) {
@@ -330,7 +331,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
-            this.maxBitrate = Output.ofNullable(maxBitrate);
+            this.maxBitrate = Codegen.ofNullable(maxBitrate);
             return this;
         }
         public Builder maxLatency(@Nullable Output<Integer> maxLatency) {
@@ -338,7 +339,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxLatency(@Nullable Integer maxLatency) {
-            this.maxLatency = Output.ofNullable(maxLatency);
+            this.maxLatency = Codegen.ofNullable(maxLatency);
             return this;
         }
         public Builder minLatency(@Nullable Output<Integer> minLatency) {
@@ -346,7 +347,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minLatency(@Nullable Integer minLatency) {
-            this.minLatency = Output.ofNullable(minLatency);
+            this.minLatency = Codegen.ofNullable(minLatency);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -354,7 +355,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocol(@Nullable Output<FlowSourceProtocol> protocol) {
@@ -362,7 +363,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable FlowSourceProtocol protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
@@ -370,7 +371,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Output.ofNullable(sourceArn);
+            this.sourceArn = Codegen.ofNullable(sourceArn);
             return this;
         }
         public Builder sourceIngestPort(@Nullable Output<String> sourceIngestPort) {
@@ -378,7 +379,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceIngestPort(@Nullable String sourceIngestPort) {
-            this.sourceIngestPort = Output.ofNullable(sourceIngestPort);
+            this.sourceIngestPort = Codegen.ofNullable(sourceIngestPort);
             return this;
         }
         public Builder streamId(@Nullable Output<String> streamId) {
@@ -386,7 +387,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamId(@Nullable String streamId) {
-            this.streamId = Output.ofNullable(streamId);
+            this.streamId = Codegen.ofNullable(streamId);
             return this;
         }
         public Builder vpcInterfaceName(@Nullable Output<String> vpcInterfaceName) {
@@ -394,7 +395,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
-            this.vpcInterfaceName = Output.ofNullable(vpcInterfaceName);
+            this.vpcInterfaceName = Codegen.ofNullable(vpcInterfaceName);
             return this;
         }
         public Builder whitelistCidr(@Nullable Output<String> whitelistCidr) {
@@ -402,7 +403,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder whitelistCidr(@Nullable String whitelistCidr) {
-            this.whitelistCidr = Output.ofNullable(whitelistCidr);
+            this.whitelistCidr = Codegen.ofNullable(whitelistCidr);
             return this;
         }        public FlowSourceArgs build() {
             return new FlowSourceArgs(decryption, description, entitlementArn, ingestIp, ingestPort, maxBitrate, maxLatency, minLatency, name, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);

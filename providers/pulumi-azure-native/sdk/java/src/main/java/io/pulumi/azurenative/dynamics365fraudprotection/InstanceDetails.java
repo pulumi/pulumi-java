@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return A collection of DFP instance administrators
      * 
      */
-    public Output</* @Nullable */ DFPInstanceAdministratorsResponse> getAdministration() {
+    public Output</* @Nullable */ DFPInstanceAdministratorsResponse> administration() {
         return this.administration;
     }
     /**
@@ -58,7 +59,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return Location of the DFP resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return The current deployment state of DFP resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +115,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +129,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -154,7 +155,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceDetails(String name, InstanceDetailsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dynamics365fraudprotection:InstanceDetails", name, args == null ? InstanceDetailsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dynamics365fraudprotection:InstanceDetails", name, args == null ? InstanceDetailsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceDetails(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.memorydb.inputs;
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessString")
       private final @Nullable Output<String> accessString;
 
-    public Output<String> getAccessString() {
-        return this.accessString == null ? Output.empty() : this.accessString;
+    public Output<String> accessString() {
+        return this.accessString == null ? Codegen.empty() : this.accessString;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationMode")
       private final @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode;
 
-    public Output<UserAuthenticationModeGetArgs> getAuthenticationMode() {
-        return this.authenticationMode == null ? Output.empty() : this.authenticationMode;
+    public Output<UserAuthenticationModeGetArgs> authenticationMode() {
+        return this.authenticationMode == null ? Codegen.empty() : this.authenticationMode;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumEngineVersion")
       private final @Nullable Output<String> minimumEngineVersion;
 
-    public Output<String> getMinimumEngineVersion() {
-        return this.minimumEngineVersion == null ? Output.empty() : this.minimumEngineVersion;
+    public Output<String> minimumEngineVersion() {
+        return this.minimumEngineVersion == null ? Codegen.empty() : this.minimumEngineVersion;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public UserState(
@@ -112,13 +113,13 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.accessString = Output.empty();
-        this.arn = Output.empty();
-        this.authenticationMode = Output.empty();
-        this.minimumEngineVersion = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userName = Output.empty();
+        this.accessString = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.authenticationMode = Codegen.empty();
+        this.minimumEngineVersion = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessString(@Nullable String accessString) {
-            this.accessString = Output.ofNullable(accessString);
+            this.accessString = Codegen.ofNullable(accessString);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -166,7 +167,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authenticationMode(@Nullable Output<UserAuthenticationModeGetArgs> authenticationMode) {
@@ -174,7 +175,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationMode(@Nullable UserAuthenticationModeGetArgs authenticationMode) {
-            this.authenticationMode = Output.ofNullable(authenticationMode);
+            this.authenticationMode = Codegen.ofNullable(authenticationMode);
             return this;
         }
         public Builder minimumEngineVersion(@Nullable Output<String> minimumEngineVersion) {
@@ -182,7 +183,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumEngineVersion(@Nullable String minimumEngineVersion) {
-            this.minimumEngineVersion = Output.ofNullable(minimumEngineVersion);
+            this.minimumEngineVersion = Codegen.ofNullable(minimumEngineVersion);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -190,7 +191,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -198,7 +199,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -206,7 +207,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public UserState build() {
             return new UserState(accessString, arn, authenticationMode, minimumEngineVersion, tags, tagsAll, userName);

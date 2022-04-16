@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
-        return this.autoscalingGroupName == null ? Output.empty() : this.autoscalingGroupName;
+    public Output<String> autoscalingGroupName() {
+        return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
 
-    public Output<Integer> getDesiredCapacity() {
-        return this.desiredCapacity == null ? Output.empty() : this.desiredCapacity;
+    public Output<Integer> desiredCapacity() {
+        return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
-        return this.maxSize == null ? Output.empty() : this.maxSize;
+    public Output<Integer> maxSize() {
+        return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
-        return this.minSize == null ? Output.empty() : this.minSize;
+    public Output<Integer> minSize() {
+        return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="recurrence")
       private final @Nullable Output<String> recurrence;
 
-    public Output<String> getRecurrence() {
-        return this.recurrence == null ? Output.empty() : this.recurrence;
+    public Output<String> recurrence() {
+        return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduledActionName")
       private final @Nullable Output<String> scheduledActionName;
 
-    public Output<String> getScheduledActionName() {
-        return this.scheduledActionName == null ? Output.empty() : this.scheduledActionName;
+    public Output<String> scheduledActionName() {
+        return this.scheduledActionName == null ? Codegen.empty() : this.scheduledActionName;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public ScheduleState(
@@ -153,16 +154,16 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleState() {
-        this.arn = Output.empty();
-        this.autoscalingGroupName = Output.empty();
-        this.desiredCapacity = Output.empty();
-        this.endTime = Output.empty();
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
-        this.recurrence = Output.empty();
-        this.scheduledActionName = Output.empty();
-        this.startTime = Output.empty();
-        this.timeZone = Output.empty();
+        this.arn = Codegen.empty();
+        this.autoscalingGroupName = Codegen.empty();
+        this.desiredCapacity = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
+        this.recurrence = Codegen.empty();
+        this.scheduledActionName = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
@@ -216,7 +217,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
-            this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
+            this.autoscalingGroupName = Codegen.ofNullable(autoscalingGroupName);
             return this;
         }
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
@@ -224,7 +225,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
-            this.desiredCapacity = Output.ofNullable(desiredCapacity);
+            this.desiredCapacity = Codegen.ofNullable(desiredCapacity);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -232,7 +233,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
@@ -240,7 +241,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Output.ofNullable(maxSize);
+            this.maxSize = Codegen.ofNullable(maxSize);
             return this;
         }
         public Builder minSize(@Nullable Output<Integer> minSize) {
@@ -248,7 +249,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Output.ofNullable(minSize);
+            this.minSize = Codegen.ofNullable(minSize);
             return this;
         }
         public Builder recurrence(@Nullable Output<String> recurrence) {
@@ -256,7 +257,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recurrence(@Nullable String recurrence) {
-            this.recurrence = Output.ofNullable(recurrence);
+            this.recurrence = Codegen.ofNullable(recurrence);
             return this;
         }
         public Builder scheduledActionName(@Nullable Output<String> scheduledActionName) {
@@ -264,7 +265,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduledActionName(@Nullable String scheduledActionName) {
-            this.scheduledActionName = Output.ofNullable(scheduledActionName);
+            this.scheduledActionName = Codegen.ofNullable(scheduledActionName);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -272,7 +273,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -280,7 +281,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public ScheduleState build() {
             return new ScheduleState(arn, autoscalingGroupName, desiredCapacity, endTime, maxSize, minSize, recurrence, scheduledActionName, startTime, timeZone);

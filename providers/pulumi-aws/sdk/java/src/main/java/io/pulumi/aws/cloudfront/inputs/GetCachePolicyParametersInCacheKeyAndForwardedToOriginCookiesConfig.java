@@ -21,7 +21,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     @Import(name="cookieBehavior", required=true)
       private final String cookieBehavior;
 
-    public String getCookieBehavior() {
+    public String cookieBehavior() {
         return this.cookieBehavior;
     }
 
@@ -32,7 +32,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     @Import(name="cookies", required=true)
       private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
 
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> getCookies() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies() {
         return this.cookies;
     }
 

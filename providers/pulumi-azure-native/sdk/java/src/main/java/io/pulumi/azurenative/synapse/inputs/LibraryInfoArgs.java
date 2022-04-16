@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+    public Output<String> containerName() {
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public LibraryInfoArgs(
@@ -74,10 +75,10 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LibraryInfoArgs() {
-        this.containerName = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.type = Output.empty();
+        this.containerName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -119,7 +120,7 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -127,7 +128,7 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -135,7 +136,7 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public LibraryInfoArgs build() {
             return new LibraryInfoArgs(containerName, name, path, type);

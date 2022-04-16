@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     @Import(name="modifiedPath")
       private final @Nullable Output<String> modifiedPath;
 
-    public Output<String> getModifiedPath() {
-        return this.modifiedPath == null ? Output.empty() : this.modifiedPath;
+    public Output<String> modifiedPath() {
+        return this.modifiedPath == null ? Codegen.empty() : this.modifiedPath;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     @Import(name="modifiedQueryString")
       private final @Nullable Output<String> modifiedQueryString;
 
-    public Output<String> getModifiedQueryString() {
-        return this.modifiedQueryString == null ? Output.empty() : this.modifiedQueryString;
+    public Output<String> modifiedQueryString() {
+        return this.modifiedQueryString == null ? Codegen.empty() : this.modifiedQueryString;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     @Import(name="reroute")
       private final @Nullable Output<Boolean> reroute;
 
-    public Output<Boolean> getReroute() {
-        return this.reroute == null ? Output.empty() : this.reroute;
+    public Output<Boolean> reroute() {
+        return this.reroute == null ? Codegen.empty() : this.reroute;
     }
 
     public ApplicationGatewayUrlConfigurationArgs(
@@ -62,9 +63,9 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     }
 
     private ApplicationGatewayUrlConfigurationArgs() {
-        this.modifiedPath = Output.empty();
-        this.modifiedQueryString = Output.empty();
-        this.reroute = Output.empty();
+        this.modifiedPath = Codegen.empty();
+        this.modifiedQueryString = Codegen.empty();
+        this.reroute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder modifiedPath(@Nullable String modifiedPath) {
-            this.modifiedPath = Output.ofNullable(modifiedPath);
+            this.modifiedPath = Codegen.ofNullable(modifiedPath);
             return this;
         }
         public Builder modifiedQueryString(@Nullable Output<String> modifiedQueryString) {
@@ -104,7 +105,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
-            this.modifiedQueryString = Output.ofNullable(modifiedQueryString);
+            this.modifiedQueryString = Codegen.ofNullable(modifiedQueryString);
             return this;
         }
         public Builder reroute(@Nullable Output<Boolean> reroute) {
@@ -112,7 +113,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder reroute(@Nullable Boolean reroute) {
-            this.reroute = Output.ofNullable(reroute);
+            this.reroute = Codegen.ofNullable(reroute);
             return this;
         }        public ApplicationGatewayUrlConfigurationArgs build() {
             return new ApplicationGatewayUrlConfigurationArgs(modifiedPath, modifiedQueryString, reroute);

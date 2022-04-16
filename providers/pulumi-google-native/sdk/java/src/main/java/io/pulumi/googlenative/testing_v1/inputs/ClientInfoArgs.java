@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.ClientInfoDetailArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientInfoDetails")
       private final @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
 
-    public Output<List<ClientInfoDetailArgs>> getClientInfoDetails() {
-        return this.clientInfoDetails == null ? Output.empty() : this.clientInfoDetails;
+    public Output<List<ClientInfoDetailArgs>> clientInfoDetails() {
+        return this.clientInfoDetails == null ? Codegen.empty() : this.clientInfoDetails;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,8 +51,8 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClientInfoArgs() {
-        this.clientInfoDetails = Output.empty();
-        this.name = Output.empty();
+        this.clientInfoDetails = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientInfoDetails(@Nullable List<ClientInfoDetailArgs> clientInfoDetails) {
-            this.clientInfoDetails = Output.ofNullable(clientInfoDetails);
+            this.clientInfoDetails = Codegen.ofNullable(clientInfoDetails);
             return this;
         }
         public Builder clientInfoDetails(ClientInfoDetailArgs... clientInfoDetails) {

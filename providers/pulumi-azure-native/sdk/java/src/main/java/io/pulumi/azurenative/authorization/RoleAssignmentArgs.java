@@ -7,6 +7,7 @@ import io.pulumi.azurenative.authorization.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<String> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditionVersion")
       private final @Nullable Output<String> conditionVersion;
 
-    public Output<String> getConditionVersion() {
-        return this.conditionVersion == null ? Output.empty() : this.conditionVersion;
+    public Output<String> conditionVersion() {
+        return this.conditionVersion == null ? Codegen.empty() : this.conditionVersion;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delegatedManagedIdentityResourceId")
       private final @Nullable Output<String> delegatedManagedIdentityResourceId;
 
-    public Output<String> getDelegatedManagedIdentityResourceId() {
-        return this.delegatedManagedIdentityResourceId == null ? Output.empty() : this.delegatedManagedIdentityResourceId;
+    public Output<String> delegatedManagedIdentityResourceId() {
+        return this.delegatedManagedIdentityResourceId == null ? Codegen.empty() : this.delegatedManagedIdentityResourceId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -78,8 +79,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalType")
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
 
-    public Output<Either<String,PrincipalType>> getPrincipalType() {
-        return this.principalType == null ? Output.empty() : this.principalType;
+    public Output<Either<String,PrincipalType>> principalType() {
+        return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleAssignmentName")
       private final @Nullable Output<String> roleAssignmentName;
 
-    public Output<String> getRoleAssignmentName() {
-        return this.roleAssignmentName == null ? Output.empty() : this.roleAssignmentName;
+    public Output<String> roleAssignmentName() {
+        return this.roleAssignmentName == null ? Codegen.empty() : this.roleAssignmentName;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
@@ -111,7 +112,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -137,15 +138,15 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleAssignmentArgs() {
-        this.condition = Output.empty();
-        this.conditionVersion = Output.empty();
-        this.delegatedManagedIdentityResourceId = Output.empty();
-        this.description = Output.empty();
-        this.principalId = Output.empty();
-        this.principalType = Output.empty();
-        this.roleAssignmentName = Output.empty();
-        this.roleDefinitionId = Output.empty();
-        this.scope = Output.empty();
+        this.condition = Codegen.empty();
+        this.conditionVersion = Codegen.empty();
+        this.delegatedManagedIdentityResourceId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.roleAssignmentName = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder conditionVersion(@Nullable Output<String> conditionVersion) {
@@ -197,7 +198,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditionVersion(@Nullable String conditionVersion) {
-            this.conditionVersion = Output.ofNullable(conditionVersion);
+            this.conditionVersion = Codegen.ofNullable(conditionVersion);
             return this;
         }
         public Builder delegatedManagedIdentityResourceId(@Nullable Output<String> delegatedManagedIdentityResourceId) {
@@ -205,7 +206,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
-            this.delegatedManagedIdentityResourceId = Output.ofNullable(delegatedManagedIdentityResourceId);
+            this.delegatedManagedIdentityResourceId = Codegen.ofNullable(delegatedManagedIdentityResourceId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -213,7 +214,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder principalId(Output<String> principalId) {
@@ -229,7 +230,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
-            this.principalType = Output.ofNullable(principalType);
+            this.principalType = Codegen.ofNullable(principalType);
             return this;
         }
         public Builder roleAssignmentName(@Nullable Output<String> roleAssignmentName) {
@@ -237,7 +238,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleAssignmentName(@Nullable String roleAssignmentName) {
-            this.roleAssignmentName = Output.ofNullable(roleAssignmentName);
+            this.roleAssignmentName = Codegen.ofNullable(roleAssignmentName);
             return this;
         }
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {

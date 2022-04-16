@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
     @Import(name="allowedPersistenceRegions")
       private final @Nullable Output<List<String>> allowedPersistenceRegions;
 
-    public Output<List<String>> getAllowedPersistenceRegions() {
-        return this.allowedPersistenceRegions == null ? Output.empty() : this.allowedPersistenceRegions;
+    public Output<List<String>> allowedPersistenceRegions() {
+        return this.allowedPersistenceRegions == null ? Codegen.empty() : this.allowedPersistenceRegions;
     }
 
     public MessageStoragePolicyArgs(@Nullable Output<List<String>> allowedPersistenceRegions) {
@@ -35,7 +36,7 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
     }
 
     private MessageStoragePolicyArgs() {
-        this.allowedPersistenceRegions = Output.empty();
+        this.allowedPersistenceRegions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder allowedPersistenceRegions(@Nullable List<String> allowedPersistenceRegions) {
-            this.allowedPersistenceRegions = Output.ofNullable(allowedPersistenceRegions);
+            this.allowedPersistenceRegions = Codegen.ofNullable(allowedPersistenceRegions);
             return this;
         }
         public Builder allowedPersistenceRegions(String... allowedPersistenceRegions) {

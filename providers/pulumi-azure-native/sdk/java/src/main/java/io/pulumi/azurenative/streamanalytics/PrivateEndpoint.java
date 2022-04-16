@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +57,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The properties associated with a private endpoint.
      * 
      */
-    public Output<PrivateEndpointPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -84,7 +85,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -110,7 +111,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpoint(String name, PrivateEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:streamanalytics:PrivateEndpoint", name, args == null ? PrivateEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:streamanalytics:PrivateEndpoint", name, args == null ? PrivateEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateEndpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

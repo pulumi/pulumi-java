@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends io.pulumi.reso
     @Import(name="principalArn", required=true)
       private final Output<String> principalArn;
 
-    public Output<String> getPrincipalArn() {
+    public Output<String> principalArn() {
         return this.principalArn;
     }
 
@@ -31,7 +32,7 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends io.pulumi.reso
     @Import(name="vpcEndpointServiceId", required=true)
       private final Output<String> vpcEndpointServiceId;
 
-    public Output<String> getVpcEndpointServiceId() {
+    public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 
@@ -43,8 +44,8 @@ public final class VpcEndpointServiceAllowedPrincipleArgs extends io.pulumi.reso
     }
 
     private VpcEndpointServiceAllowedPrincipleArgs() {
-        this.principalArn = Output.empty();
-        this.vpcEndpointServiceId = Output.empty();
+        this.principalArn = Codegen.empty();
+        this.vpcEndpointServiceId = Codegen.empty();
     }
 
     public static Builder builder() {

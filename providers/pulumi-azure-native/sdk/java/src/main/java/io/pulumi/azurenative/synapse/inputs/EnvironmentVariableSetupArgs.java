@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -36,7 +37,7 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
     @Import(name="variableName", required=true)
       private final Output<String> variableName;
 
-    public Output<String> getVariableName() {
+    public Output<String> variableName() {
         return this.variableName;
     }
 
@@ -47,7 +48,7 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
     @Import(name="variableValue", required=true)
       private final Output<String> variableValue;
 
-    public Output<String> getVariableValue() {
+    public Output<String> variableValue() {
         return this.variableValue;
     }
 
@@ -61,9 +62,9 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
     }
 
     private EnvironmentVariableSetupArgs() {
-        this.type = Output.empty();
-        this.variableName = Output.empty();
-        this.variableValue = Output.empty();
+        this.type = Codegen.empty();
+        this.variableName = Codegen.empty();
+        this.variableValue = Codegen.empty();
     }
 
     public static Builder builder() {

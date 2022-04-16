@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoDeployed")
       private final @Nullable Output<Boolean> autoDeployed;
 
-    public Output<Boolean> getAutoDeployed() {
-        return this.autoDeployed == null ? Output.empty() : this.autoDeployed;
+    public Output<Boolean> autoDeployed() {
+        return this.autoDeployed == null ? Codegen.empty() : this.autoDeployed;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+    public Output<Map<String,String>> triggers() {
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public DeploymentState(
@@ -72,10 +73,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentState() {
-        this.apiId = Output.empty();
-        this.autoDeployed = Output.empty();
-        this.description = Output.empty();
-        this.triggers = Output.empty();
+        this.apiId = Codegen.empty();
+        this.autoDeployed = Codegen.empty();
+        this.description = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder autoDeployed(@Nullable Output<Boolean> autoDeployed) {
@@ -117,7 +118,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoDeployed(@Nullable Boolean autoDeployed) {
-            this.autoDeployed = Output.ofNullable(autoDeployed);
+            this.autoDeployed = Codegen.ofNullable(autoDeployed);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -125,7 +126,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
@@ -133,7 +134,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }        public DeploymentState build() {
             return new DeploymentState(apiId, autoDeployed, description, triggers);

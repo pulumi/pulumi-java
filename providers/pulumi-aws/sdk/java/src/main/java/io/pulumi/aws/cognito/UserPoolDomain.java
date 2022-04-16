@@ -9,6 +9,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolDomainState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID for the user pool owner.
      * 
      */
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -53,7 +54,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @return The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateArn() {
+    public Output</* @Nullable */ String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -67,7 +68,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @return The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
      * 
      */
-    public Output<String> getCloudfrontDistributionArn() {
+    public Output<String> cloudfrontDistributionArn() {
         return this.cloudfrontDistributionArn;
     }
     /**
@@ -81,7 +82,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @return The domain string.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -95,7 +96,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @return The S3 bucket where the static files for this domain are stored.
      * 
      */
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
     /**
@@ -109,7 +110,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @return The user pool ID.
      * 
      */
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
     /**
@@ -123,7 +124,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @return The app version.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -149,7 +150,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserPoolDomain(String name, UserPoolDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/userPoolDomain:UserPoolDomain", name, args == null ? UserPoolDomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/userPoolDomain:UserPoolDomain", name, args == null ? UserPoolDomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserPoolDomain(String name, Output<String> id, @Nullable UserPoolDomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

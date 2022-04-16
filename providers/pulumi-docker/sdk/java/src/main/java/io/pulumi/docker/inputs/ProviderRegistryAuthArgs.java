@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,36 +18,36 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
     @Import(name="address", required=true)
       private final Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
 
     @Import(name="configFile")
       private final @Nullable Output<String> configFile;
 
-    public Output<String> getConfigFile() {
-        return this.configFile == null ? Output.empty() : this.configFile;
+    public Output<String> configFile() {
+        return this.configFile == null ? Codegen.empty() : this.configFile;
     }
 
     @Import(name="configFileContent")
       private final @Nullable Output<String> configFileContent;
 
-    public Output<String> getConfigFileContent() {
-        return this.configFileContent == null ? Output.empty() : this.configFileContent;
+    public Output<String> configFileContent() {
+        return this.configFileContent == null ? Codegen.empty() : this.configFileContent;
     }
 
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public ProviderRegistryAuthArgs(
@@ -63,11 +64,11 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
     }
 
     private ProviderRegistryAuthArgs() {
-        this.address = Output.empty();
-        this.configFile = Output.empty();
-        this.configFileContent = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.address = Codegen.empty();
+        this.configFile = Codegen.empty();
+        this.configFileContent = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder configFile(@Nullable String configFile) {
-            this.configFile = Output.ofNullable(configFile);
+            this.configFile = Codegen.ofNullable(configFile);
             return this;
         }
         public Builder configFileContent(@Nullable Output<String> configFileContent) {
@@ -119,7 +120,7 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder configFileContent(@Nullable String configFileContent) {
-            this.configFileContent = Output.ofNullable(configFileContent);
+            this.configFileContent = Codegen.ofNullable(configFileContent);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -127,7 +128,7 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -135,7 +136,7 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public ProviderRegistryAuthArgs build() {
             return new ProviderRegistryAuthArgs(address, configFile, configFileContent, password, username);

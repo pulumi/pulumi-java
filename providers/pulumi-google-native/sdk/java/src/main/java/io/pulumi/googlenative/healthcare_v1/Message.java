@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.MessageArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.ParsedDataResponse;
@@ -33,7 +34,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return The datetime when the message was created. Set by the server.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +48,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return Raw message bytes.
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -61,7 +62,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -75,7 +76,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return The message type for this message. MSH-9.1.
      * 
      */
-    public Output<String> getMessageType() {
+    public Output<String> messageType() {
         return this.messageType;
     }
     /**
@@ -89,7 +90,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +104,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return The parsed version of the raw message data.
      * 
      */
-    public Output<ParsedDataResponse> getParsedData() {
+    public Output<ParsedDataResponse> parsedData() {
         return this.parsedData;
     }
     /**
@@ -117,7 +118,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
      * 
      */
-    public Output<List<PatientIdResponse>> getPatientIds() {
+    public Output<List<PatientIdResponse>> patientIds() {
         return this.patientIds;
     }
     /**
@@ -131,7 +132,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return The parsed version of the raw message data schematized according to this store's schemas and type definitions.
      * 
      */
-    public Output<SchematizedDataResponse> getSchematizedData() {
+    public Output<SchematizedDataResponse> schematizedData() {
         return this.schematizedData;
     }
     /**
@@ -145,7 +146,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return The hospital that this message came from. MSH-4.
      * 
      */
-    public Output<String> getSendFacility() {
+    public Output<String> sendFacility() {
         return this.sendFacility;
     }
     /**
@@ -159,7 +160,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @return The datetime the sending application sent this message. MSH-7.
      * 
      */
-    public Output<String> getSendTime() {
+    public Output<String> sendTime() {
         return this.sendTime;
     }
 
@@ -185,7 +186,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Message(String name, MessageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1:Message", name, args == null ? MessageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1:Message", name, args == null ? MessageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Message(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

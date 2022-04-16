@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.NonCompliantFileArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,15 +24,15 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="nonComplianceReason")
       private final @Nullable Output<String> nonComplianceReason;
 
-    public Output<String> getNonComplianceReason() {
-        return this.nonComplianceReason == null ? Output.empty() : this.nonComplianceReason;
+    public Output<String> nonComplianceReason() {
+        return this.nonComplianceReason == null ? Codegen.empty() : this.nonComplianceReason;
     }
 
     @Import(name="nonCompliantFiles")
       private final @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
 
-    public Output<List<NonCompliantFileArgs>> getNonCompliantFiles() {
-        return this.nonCompliantFiles == null ? Output.empty() : this.nonCompliantFiles;
+    public Output<List<NonCompliantFileArgs>> nonCompliantFiles() {
+        return this.nonCompliantFiles == null ? Codegen.empty() : this.nonCompliantFiles;
     }
 
     public ComplianceOccurrenceArgs(
@@ -42,8 +43,8 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     }
 
     private ComplianceOccurrenceArgs() {
-        this.nonComplianceReason = Output.empty();
-        this.nonCompliantFiles = Output.empty();
+        this.nonComplianceReason = Codegen.empty();
+        this.nonCompliantFiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder nonComplianceReason(@Nullable String nonComplianceReason) {
-            this.nonComplianceReason = Output.ofNullable(nonComplianceReason);
+            this.nonComplianceReason = Codegen.ofNullable(nonComplianceReason);
             return this;
         }
         public Builder nonCompliantFiles(@Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles) {
@@ -81,7 +82,7 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder nonCompliantFiles(@Nullable List<NonCompliantFileArgs> nonCompliantFiles) {
-            this.nonCompliantFiles = Output.ofNullable(nonCompliantFiles);
+            this.nonCompliantFiles = Codegen.ofNullable(nonCompliantFiles);
             return this;
         }
         public Builder nonCompliantFiles(NonCompliantFileArgs... nonCompliantFiles) {

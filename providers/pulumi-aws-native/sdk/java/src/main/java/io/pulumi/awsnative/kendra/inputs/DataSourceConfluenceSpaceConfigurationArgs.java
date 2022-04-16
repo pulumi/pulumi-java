@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceSpaceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,36 +21,36 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
     @Import(name="crawlArchivedSpaces")
       private final @Nullable Output<Boolean> crawlArchivedSpaces;
 
-    public Output<Boolean> getCrawlArchivedSpaces() {
-        return this.crawlArchivedSpaces == null ? Output.empty() : this.crawlArchivedSpaces;
+    public Output<Boolean> crawlArchivedSpaces() {
+        return this.crawlArchivedSpaces == null ? Codegen.empty() : this.crawlArchivedSpaces;
     }
 
     @Import(name="crawlPersonalSpaces")
       private final @Nullable Output<Boolean> crawlPersonalSpaces;
 
-    public Output<Boolean> getCrawlPersonalSpaces() {
-        return this.crawlPersonalSpaces == null ? Output.empty() : this.crawlPersonalSpaces;
+    public Output<Boolean> crawlPersonalSpaces() {
+        return this.crawlPersonalSpaces == null ? Codegen.empty() : this.crawlPersonalSpaces;
     }
 
     @Import(name="excludeSpaces")
       private final @Nullable Output<List<String>> excludeSpaces;
 
-    public Output<List<String>> getExcludeSpaces() {
-        return this.excludeSpaces == null ? Output.empty() : this.excludeSpaces;
+    public Output<List<String>> excludeSpaces() {
+        return this.excludeSpaces == null ? Codegen.empty() : this.excludeSpaces;
     }
 
     @Import(name="includeSpaces")
       private final @Nullable Output<List<String>> includeSpaces;
 
-    public Output<List<String>> getIncludeSpaces() {
-        return this.includeSpaces == null ? Output.empty() : this.includeSpaces;
+    public Output<List<String>> includeSpaces() {
+        return this.includeSpaces == null ? Codegen.empty() : this.includeSpaces;
     }
 
     @Import(name="spaceFieldMappings")
       private final @Nullable Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings;
 
-    public Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> getSpaceFieldMappings() {
-        return this.spaceFieldMappings == null ? Output.empty() : this.spaceFieldMappings;
+    public Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings() {
+        return this.spaceFieldMappings == null ? Codegen.empty() : this.spaceFieldMappings;
     }
 
     public DataSourceConfluenceSpaceConfigurationArgs(
@@ -66,11 +67,11 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
     }
 
     private DataSourceConfluenceSpaceConfigurationArgs() {
-        this.crawlArchivedSpaces = Output.empty();
-        this.crawlPersonalSpaces = Output.empty();
-        this.excludeSpaces = Output.empty();
-        this.includeSpaces = Output.empty();
-        this.spaceFieldMappings = Output.empty();
+        this.crawlArchivedSpaces = Codegen.empty();
+        this.crawlPersonalSpaces = Codegen.empty();
+        this.excludeSpaces = Codegen.empty();
+        this.includeSpaces = Codegen.empty();
+        this.spaceFieldMappings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder crawlArchivedSpaces(@Nullable Boolean crawlArchivedSpaces) {
-            this.crawlArchivedSpaces = Output.ofNullable(crawlArchivedSpaces);
+            this.crawlArchivedSpaces = Codegen.ofNullable(crawlArchivedSpaces);
             return this;
         }
         public Builder crawlPersonalSpaces(@Nullable Output<Boolean> crawlPersonalSpaces) {
@@ -114,7 +115,7 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder crawlPersonalSpaces(@Nullable Boolean crawlPersonalSpaces) {
-            this.crawlPersonalSpaces = Output.ofNullable(crawlPersonalSpaces);
+            this.crawlPersonalSpaces = Codegen.ofNullable(crawlPersonalSpaces);
             return this;
         }
         public Builder excludeSpaces(@Nullable Output<List<String>> excludeSpaces) {
@@ -122,7 +123,7 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder excludeSpaces(@Nullable List<String> excludeSpaces) {
-            this.excludeSpaces = Output.ofNullable(excludeSpaces);
+            this.excludeSpaces = Codegen.ofNullable(excludeSpaces);
             return this;
         }
         public Builder excludeSpaces(String... excludeSpaces) {
@@ -133,7 +134,7 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder includeSpaces(@Nullable List<String> includeSpaces) {
-            this.includeSpaces = Output.ofNullable(includeSpaces);
+            this.includeSpaces = Codegen.ofNullable(includeSpaces);
             return this;
         }
         public Builder includeSpaces(String... includeSpaces) {
@@ -144,7 +145,7 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder spaceFieldMappings(@Nullable List<DataSourceConfluenceSpaceToIndexFieldMappingArgs> spaceFieldMappings) {
-            this.spaceFieldMappings = Output.ofNullable(spaceFieldMappings);
+            this.spaceFieldMappings = Codegen.ofNullable(spaceFieldMappings);
             return this;
         }
         public Builder spaceFieldMappings(DataSourceConfluenceSpaceToIndexFieldMappingArgs... spaceFieldMappings) {

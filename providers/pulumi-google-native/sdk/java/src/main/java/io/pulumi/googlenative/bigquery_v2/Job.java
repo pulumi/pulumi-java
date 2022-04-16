@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigquery_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigquery_v2.JobArgs;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationResponse;
@@ -33,7 +34,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return [Required] Describes the job configuration.
      * 
      */
-    public Output<JobConfigurationResponse> getConfiguration() {
+    public Output<JobConfigurationResponse> configuration() {
         return this.configuration;
     }
     /**
@@ -47,7 +48,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return A hash of this resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -61,7 +62,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return [Optional] Reference describing the unique-per-user name of the job.
      * 
      */
-    public Output<JobReferenceResponse> getJobReference() {
+    public Output<JobReferenceResponse> jobReference() {
         return this.jobReference;
     }
     /**
@@ -75,7 +76,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -89,7 +90,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return A URL that can be used to access this resource again.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -103,7 +104,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Information about the job, including starting time and ending time of the job.
      * 
      */
-    public Output<JobStatisticsResponse> getStatistics() {
+    public Output<JobStatisticsResponse> statistics() {
         return this.statistics;
     }
     /**
@@ -117,7 +118,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
      */
-    public Output<JobStatusResponse> getStatus() {
+    public Output<JobStatusResponse> status() {
         return this.status;
     }
     /**
@@ -131,7 +132,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Email address of the user who ran the job.
      * 
      */
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail;
     }
 
@@ -157,7 +158,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, @Nullable JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigquery/v2:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigquery/v2:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

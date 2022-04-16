@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingPurgeDataTypesItem;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingRedactionScope;
 import io.pulumi.googlenative.dialogflow_v3.enums.SecuritySettingRedactionStrategy;
@@ -27,8 +28,8 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deidentifyTemplate")
       private final @Nullable Output<String> deidentifyTemplate;
 
-    public Output<String> getDeidentifyTemplate() {
-        return this.deidentifyTemplate == null ? Output.empty() : this.deidentifyTemplate;
+    public Output<String> deidentifyTemplate() {
+        return this.deidentifyTemplate == null ? Codegen.empty() : this.deidentifyTemplate;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -49,8 +50,8 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="insightsExportSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
 
-    public Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> getInsightsExportSettings() {
-        return this.insightsExportSettings == null ? Output.empty() : this.insightsExportSettings;
+    public Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings() {
+        return this.insightsExportSettings == null ? Codegen.empty() : this.insightsExportSettings;
     }
 
     /**
@@ -60,15 +61,15 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="inspectTemplate")
       private final @Nullable Output<String> inspectTemplate;
 
-    public Output<String> getInspectTemplate() {
-        return this.inspectTemplate == null ? Output.empty() : this.inspectTemplate;
+    public Output<String> inspectTemplate() {
+        return this.inspectTemplate == null ? Codegen.empty() : this.inspectTemplate;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -78,15 +79,15 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="purgeDataTypes")
       private final @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
 
-    public Output<List<SecuritySettingPurgeDataTypesItem>> getPurgeDataTypes() {
-        return this.purgeDataTypes == null ? Output.empty() : this.purgeDataTypes;
+    public Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes() {
+        return this.purgeDataTypes == null ? Codegen.empty() : this.purgeDataTypes;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="redactionScope")
       private final @Nullable Output<SecuritySettingRedactionScope> redactionScope;
 
-    public Output<SecuritySettingRedactionScope> getRedactionScope() {
-        return this.redactionScope == null ? Output.empty() : this.redactionScope;
+    public Output<SecuritySettingRedactionScope> redactionScope() {
+        return this.redactionScope == null ? Codegen.empty() : this.redactionScope;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="redactionStrategy")
       private final @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
 
-    public Output<SecuritySettingRedactionStrategy> getRedactionStrategy() {
-        return this.redactionStrategy == null ? Output.empty() : this.redactionStrategy;
+    public Output<SecuritySettingRedactionStrategy> redactionStrategy() {
+        return this.redactionStrategy == null ? Codegen.empty() : this.redactionStrategy;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="retentionWindowDays")
       private final @Nullable Output<Integer> retentionWindowDays;
 
-    public Output<Integer> getRetentionWindowDays() {
-        return this.retentionWindowDays == null ? Output.empty() : this.retentionWindowDays;
+    public Output<Integer> retentionWindowDays() {
+        return this.retentionWindowDays == null ? Codegen.empty() : this.retentionWindowDays;
     }
 
     public SecuritySettingArgs(
@@ -159,17 +160,17 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecuritySettingArgs() {
-        this.deidentifyTemplate = Output.empty();
-        this.displayName = Output.empty();
-        this.insightsExportSettings = Output.empty();
-        this.inspectTemplate = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.purgeDataTypes = Output.empty();
-        this.redactionScope = Output.empty();
-        this.redactionStrategy = Output.empty();
-        this.retentionWindowDays = Output.empty();
+        this.deidentifyTemplate = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.insightsExportSettings = Codegen.empty();
+        this.inspectTemplate = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.purgeDataTypes = Codegen.empty();
+        this.redactionScope = Codegen.empty();
+        this.redactionStrategy = Codegen.empty();
+        this.retentionWindowDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -217,7 +218,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder deidentifyTemplate(@Nullable String deidentifyTemplate) {
-            this.deidentifyTemplate = Output.ofNullable(deidentifyTemplate);
+            this.deidentifyTemplate = Codegen.ofNullable(deidentifyTemplate);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -233,7 +234,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder insightsExportSettings(@Nullable GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs insightsExportSettings) {
-            this.insightsExportSettings = Output.ofNullable(insightsExportSettings);
+            this.insightsExportSettings = Codegen.ofNullable(insightsExportSettings);
             return this;
         }
         public Builder inspectTemplate(@Nullable Output<String> inspectTemplate) {
@@ -241,7 +242,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder inspectTemplate(@Nullable String inspectTemplate) {
-            this.inspectTemplate = Output.ofNullable(inspectTemplate);
+            this.inspectTemplate = Codegen.ofNullable(inspectTemplate);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -249,7 +250,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -257,7 +258,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -265,7 +266,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder purgeDataTypes(@Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes) {
@@ -273,7 +274,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder purgeDataTypes(@Nullable List<SecuritySettingPurgeDataTypesItem> purgeDataTypes) {
-            this.purgeDataTypes = Output.ofNullable(purgeDataTypes);
+            this.purgeDataTypes = Codegen.ofNullable(purgeDataTypes);
             return this;
         }
         public Builder purgeDataTypes(SecuritySettingPurgeDataTypesItem... purgeDataTypes) {
@@ -284,7 +285,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder redactionScope(@Nullable SecuritySettingRedactionScope redactionScope) {
-            this.redactionScope = Output.ofNullable(redactionScope);
+            this.redactionScope = Codegen.ofNullable(redactionScope);
             return this;
         }
         public Builder redactionStrategy(@Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy) {
@@ -292,7 +293,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder redactionStrategy(@Nullable SecuritySettingRedactionStrategy redactionStrategy) {
-            this.redactionStrategy = Output.ofNullable(redactionStrategy);
+            this.redactionStrategy = Codegen.ofNullable(redactionStrategy);
             return this;
         }
         public Builder retentionWindowDays(@Nullable Output<Integer> retentionWindowDays) {
@@ -300,7 +301,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder retentionWindowDays(@Nullable Integer retentionWindowDays) {
-            this.retentionWindowDays = Output.ofNullable(retentionWindowDays);
+            this.retentionWindowDays = Codegen.ofNullable(retentionWindowDays);
             return this;
         }        public SecuritySettingArgs build() {
             return new SecuritySettingArgs(deidentifyTemplate, displayName, insightsExportSettings, inspectTemplate, location, name, project, purgeDataTypes, redactionScope, redactionStrategy, retentionWindowDays);

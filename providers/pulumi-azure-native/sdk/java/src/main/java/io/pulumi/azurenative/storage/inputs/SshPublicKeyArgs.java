@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public SshPublicKeyArgs(
@@ -44,8 +45,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshPublicKeyArgs() {
-        this.description = Output.empty();
-        this.key = Output.empty();
+        this.description = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -83,7 +84,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(description, key);

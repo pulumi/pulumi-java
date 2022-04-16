@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class PrivateEndpointConnectionRequestPropertiesArgs extends io.pul
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     public PrivateEndpointConnectionRequestPropertiesArgs(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -34,7 +35,7 @@ public final class PrivateEndpointConnectionRequestPropertiesArgs extends io.pul
     }
 
     private PrivateEndpointConnectionRequestPropertiesArgs() {
-        this.privateLinkServiceConnectionState = Output.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PrivateEndpointConnectionRequestPropertiesArgs extends io.pul
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }        public PrivateEndpointConnectionRequestPropertiesArgs build() {
             return new PrivateEndpointConnectionRequestPropertiesArgs(privateLinkServiceConnectionState);

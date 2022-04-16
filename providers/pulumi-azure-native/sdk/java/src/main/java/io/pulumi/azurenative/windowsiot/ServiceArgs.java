@@ -5,6 +5,7 @@ package io.pulumi.azurenative.windowsiot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminDomainName")
       private final @Nullable Output<String> adminDomainName;
 
-    public Output<String> getAdminDomainName() {
-        return this.adminDomainName == null ? Output.empty() : this.adminDomainName;
+    public Output<String> adminDomainName() {
+        return this.adminDomainName == null ? Codegen.empty() : this.adminDomainName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingDomainName")
       private final @Nullable Output<String> billingDomainName;
 
-    public Output<String> getBillingDomainName() {
-        return this.billingDomainName == null ? Output.empty() : this.billingDomainName;
+    public Output<String> billingDomainName() {
+        return this.billingDomainName == null ? Codegen.empty() : this.billingDomainName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+    public Output<String> deviceName() {
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+    public Output<String> notes() {
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quantity")
       private final @Nullable Output<Double> quantity;
 
-    public Output<Double> getQuantity() {
-        return this.quantity == null ? Output.empty() : this.quantity;
+    public Output<Double> quantity() {
+        return this.quantity == null ? Codegen.empty() : this.quantity;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,8 +101,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServiceArgs(
@@ -124,14 +125,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.adminDomainName = Output.empty();
-        this.billingDomainName = Output.empty();
-        this.deviceName = Output.empty();
-        this.location = Output.empty();
-        this.notes = Output.empty();
-        this.quantity = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.adminDomainName = Codegen.empty();
+        this.billingDomainName = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.quantity = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminDomainName(@Nullable String adminDomainName) {
-            this.adminDomainName = Output.ofNullable(adminDomainName);
+            this.adminDomainName = Codegen.ofNullable(adminDomainName);
             return this;
         }
         public Builder billingDomainName(@Nullable Output<String> billingDomainName) {
@@ -181,7 +182,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingDomainName(@Nullable String billingDomainName) {
-            this.billingDomainName = Output.ofNullable(billingDomainName);
+            this.billingDomainName = Codegen.ofNullable(billingDomainName);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -189,7 +190,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -197,7 +198,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder notes(@Nullable Output<String> notes) {
@@ -205,7 +206,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder quantity(@Nullable Output<Double> quantity) {
@@ -213,7 +214,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quantity(@Nullable Double quantity) {
-            this.quantity = Output.ofNullable(quantity);
+            this.quantity = Codegen.ofNullable(quantity);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -229,7 +230,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(adminDomainName, billingDomainName, deviceName, location, notes, quantity, resourceGroupName, tags);

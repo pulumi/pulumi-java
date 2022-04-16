@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
     @Import(name="continent")
       private final @Nullable Output<String> continent;
 
-    public Output<String> getContinent() {
-        return this.continent == null ? Output.empty() : this.continent;
+    public Output<String> continent() {
+        return this.continent == null ? Codegen.empty() : this.continent;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
     @Import(name="country")
       private final @Nullable Output<String> country;
 
-    public Output<String> getCountry() {
-        return this.country == null ? Output.empty() : this.country;
+    public Output<String> country() {
+        return this.country == null ? Codegen.empty() : this.country;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
     @Import(name="subdivision")
       private final @Nullable Output<String> subdivision;
 
-    public Output<String> getSubdivision() {
-        return this.subdivision == null ? Output.empty() : this.subdivision;
+    public Output<String> subdivision() {
+        return this.subdivision == null ? Codegen.empty() : this.subdivision;
     }
 
     public RecordGeolocationRoutingPolicyGetArgs(
@@ -57,9 +58,9 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
     }
 
     private RecordGeolocationRoutingPolicyGetArgs() {
-        this.continent = Output.empty();
-        this.country = Output.empty();
-        this.subdivision = Output.empty();
+        this.continent = Codegen.empty();
+        this.country = Codegen.empty();
+        this.subdivision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder continent(@Nullable String continent) {
-            this.continent = Output.ofNullable(continent);
+            this.continent = Codegen.ofNullable(continent);
             return this;
         }
         public Builder country(@Nullable Output<String> country) {
@@ -99,7 +100,7 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder country(@Nullable String country) {
-            this.country = Output.ofNullable(country);
+            this.country = Codegen.ofNullable(country);
             return this;
         }
         public Builder subdivision(@Nullable Output<String> subdivision) {
@@ -107,7 +108,7 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder subdivision(@Nullable String subdivision) {
-            this.subdivision = Output.ofNullable(subdivision);
+            this.subdivision = Codegen.ofNullable(subdivision);
             return this;
         }        public RecordGeolocationRoutingPolicyGetArgs build() {
             return new RecordGeolocationRoutingPolicyGetArgs(continent, country, subdivision);

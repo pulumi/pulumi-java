@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeProtocol;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,50 +20,50 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
+    public Output<List<String>> destinationAddresses() {
+        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> getDestinationPorts() {
-        return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
+    public Output<List<String>> destinationPorts() {
+        return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
     @Import(name="destinationPrefixLists")
       private final @Nullable Output<List<String>> destinationPrefixLists;
 
-    public Output<List<String>> getDestinationPrefixLists() {
-        return this.destinationPrefixLists == null ? Output.empty() : this.destinationPrefixLists;
+    public Output<List<String>> destinationPrefixLists() {
+        return this.destinationPrefixLists == null ? Codegen.empty() : this.destinationPrefixLists;
     }
 
     @Import(name="protocols")
       private final @Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols;
 
-    public Output<List<NetworkInsightsAccessScopeProtocol>> getProtocols() {
-        return this.protocols == null ? Output.empty() : this.protocols;
+    public Output<List<NetworkInsightsAccessScopeProtocol>> protocols() {
+        return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
+    public Output<List<String>> sourceAddresses() {
+        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
     @Import(name="sourcePorts")
       private final @Nullable Output<List<String>> sourcePorts;
 
-    public Output<List<String>> getSourcePorts() {
-        return this.sourcePorts == null ? Output.empty() : this.sourcePorts;
+    public Output<List<String>> sourcePorts() {
+        return this.sourcePorts == null ? Codegen.empty() : this.sourcePorts;
     }
 
     @Import(name="sourcePrefixLists")
       private final @Nullable Output<List<String>> sourcePrefixLists;
 
-    public Output<List<String>> getSourcePrefixLists() {
-        return this.sourcePrefixLists == null ? Output.empty() : this.sourcePrefixLists;
+    public Output<List<String>> sourcePrefixLists() {
+        return this.sourcePrefixLists == null ? Codegen.empty() : this.sourcePrefixLists;
     }
 
     public NetworkInsightsAccessScopePacketHeaderStatementRequestArgs(
@@ -83,13 +84,13 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
     }
 
     private NetworkInsightsAccessScopePacketHeaderStatementRequestArgs() {
-        this.destinationAddresses = Output.empty();
-        this.destinationPorts = Output.empty();
-        this.destinationPrefixLists = Output.empty();
-        this.protocols = Output.empty();
-        this.sourceAddresses = Output.empty();
-        this.sourcePorts = Output.empty();
-        this.sourcePrefixLists = Output.empty();
+        this.destinationAddresses = Codegen.empty();
+        this.destinationPorts = Codegen.empty();
+        this.destinationPrefixLists = Codegen.empty();
+        this.protocols = Codegen.empty();
+        this.sourceAddresses = Codegen.empty();
+        this.sourcePorts = Codegen.empty();
+        this.sourcePrefixLists = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             return this;
         }
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Output.ofNullable(destinationAddresses);
+            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
             return this;
         }
         public Builder destinationAddresses(String... destinationAddresses) {
@@ -140,7 +141,7 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             return this;
         }
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Output.ofNullable(destinationPorts);
+            this.destinationPorts = Codegen.ofNullable(destinationPorts);
             return this;
         }
         public Builder destinationPorts(String... destinationPorts) {
@@ -151,7 +152,7 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             return this;
         }
         public Builder destinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
-            this.destinationPrefixLists = Output.ofNullable(destinationPrefixLists);
+            this.destinationPrefixLists = Codegen.ofNullable(destinationPrefixLists);
             return this;
         }
         public Builder destinationPrefixLists(String... destinationPrefixLists) {
@@ -162,7 +163,7 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             return this;
         }
         public Builder protocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
-            this.protocols = Output.ofNullable(protocols);
+            this.protocols = Codegen.ofNullable(protocols);
             return this;
         }
         public Builder protocols(NetworkInsightsAccessScopeProtocol... protocols) {
@@ -173,7 +174,7 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             return this;
         }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Output.ofNullable(sourceAddresses);
+            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
             return this;
         }
         public Builder sourceAddresses(String... sourceAddresses) {
@@ -184,7 +185,7 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             return this;
         }
         public Builder sourcePorts(@Nullable List<String> sourcePorts) {
-            this.sourcePorts = Output.ofNullable(sourcePorts);
+            this.sourcePorts = Codegen.ofNullable(sourcePorts);
             return this;
         }
         public Builder sourcePorts(String... sourcePorts) {
@@ -195,7 +196,7 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             return this;
         }
         public Builder sourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
-            this.sourcePrefixLists = Output.ofNullable(sourcePrefixLists);
+            this.sourcePrefixLists = Codegen.ofNullable(sourcePrefixLists);
             return this;
         }
         public Builder sourcePrefixLists(String... sourcePrefixLists) {

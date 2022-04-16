@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="humanTaskUiArn", required=true)
       private final Output<String> humanTaskUiArn;
 
-    public Output<String> getHumanTaskUiArn() {
+    public Output<String> humanTaskUiArn() {
         return this.humanTaskUiArn;
     }
 
@@ -35,8 +36,8 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="publicWorkforceTaskPrice")
       private final @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs> publicWorkforceTaskPrice;
 
-    public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs> getPublicWorkforceTaskPrice() {
-        return this.publicWorkforceTaskPrice == null ? Output.empty() : this.publicWorkforceTaskPrice;
+    public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs> publicWorkforceTaskPrice() {
+        return this.publicWorkforceTaskPrice == null ? Codegen.empty() : this.publicWorkforceTaskPrice;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="taskAvailabilityLifetimeInSeconds")
       private final @Nullable Output<Integer> taskAvailabilityLifetimeInSeconds;
 
-    public Output<Integer> getTaskAvailabilityLifetimeInSeconds() {
-        return this.taskAvailabilityLifetimeInSeconds == null ? Output.empty() : this.taskAvailabilityLifetimeInSeconds;
+    public Output<Integer> taskAvailabilityLifetimeInSeconds() {
+        return this.taskAvailabilityLifetimeInSeconds == null ? Codegen.empty() : this.taskAvailabilityLifetimeInSeconds;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="taskCount", required=true)
       private final Output<Integer> taskCount;
 
-    public Output<Integer> getTaskCount() {
+    public Output<Integer> taskCount() {
         return this.taskCount;
     }
 
@@ -68,7 +69,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="taskDescription", required=true)
       private final Output<String> taskDescription;
 
-    public Output<String> getTaskDescription() {
+    public Output<String> taskDescription() {
         return this.taskDescription;
     }
 
@@ -79,8 +80,8 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="taskKeywords")
       private final @Nullable Output<List<String>> taskKeywords;
 
-    public Output<List<String>> getTaskKeywords() {
-        return this.taskKeywords == null ? Output.empty() : this.taskKeywords;
+    public Output<List<String>> taskKeywords() {
+        return this.taskKeywords == null ? Codegen.empty() : this.taskKeywords;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="taskTimeLimitInSeconds")
       private final @Nullable Output<Integer> taskTimeLimitInSeconds;
 
-    public Output<Integer> getTaskTimeLimitInSeconds() {
-        return this.taskTimeLimitInSeconds == null ? Output.empty() : this.taskTimeLimitInSeconds;
+    public Output<Integer> taskTimeLimitInSeconds() {
+        return this.taskTimeLimitInSeconds == null ? Codegen.empty() : this.taskTimeLimitInSeconds;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="taskTitle", required=true)
       private final Output<String> taskTitle;
 
-    public Output<String> getTaskTitle() {
+    public Output<String> taskTitle() {
         return this.taskTitle;
     }
 
@@ -112,7 +113,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     @Import(name="workteamArn", required=true)
       private final Output<String> workteamArn;
 
-    public Output<String> getWorkteamArn() {
+    public Output<String> workteamArn() {
         return this.workteamArn;
     }
 
@@ -138,15 +139,15 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
     }
 
     private FlowDefinitionHumanLoopConfigGetArgs() {
-        this.humanTaskUiArn = Output.empty();
-        this.publicWorkforceTaskPrice = Output.empty();
-        this.taskAvailabilityLifetimeInSeconds = Output.empty();
-        this.taskCount = Output.empty();
-        this.taskDescription = Output.empty();
-        this.taskKeywords = Output.empty();
-        this.taskTimeLimitInSeconds = Output.empty();
-        this.taskTitle = Output.empty();
-        this.workteamArn = Output.empty();
+        this.humanTaskUiArn = Codegen.empty();
+        this.publicWorkforceTaskPrice = Codegen.empty();
+        this.taskAvailabilityLifetimeInSeconds = Codegen.empty();
+        this.taskCount = Codegen.empty();
+        this.taskDescription = Codegen.empty();
+        this.taskKeywords = Codegen.empty();
+        this.taskTimeLimitInSeconds = Codegen.empty();
+        this.taskTitle = Codegen.empty();
+        this.workteamArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder publicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs publicWorkforceTaskPrice) {
-            this.publicWorkforceTaskPrice = Output.ofNullable(publicWorkforceTaskPrice);
+            this.publicWorkforceTaskPrice = Codegen.ofNullable(publicWorkforceTaskPrice);
             return this;
         }
         public Builder taskAvailabilityLifetimeInSeconds(@Nullable Output<Integer> taskAvailabilityLifetimeInSeconds) {
@@ -206,7 +207,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder taskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
-            this.taskAvailabilityLifetimeInSeconds = Output.ofNullable(taskAvailabilityLifetimeInSeconds);
+            this.taskAvailabilityLifetimeInSeconds = Codegen.ofNullable(taskAvailabilityLifetimeInSeconds);
             return this;
         }
         public Builder taskCount(Output<Integer> taskCount) {
@@ -230,7 +231,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder taskKeywords(@Nullable List<String> taskKeywords) {
-            this.taskKeywords = Output.ofNullable(taskKeywords);
+            this.taskKeywords = Codegen.ofNullable(taskKeywords);
             return this;
         }
         public Builder taskKeywords(String... taskKeywords) {
@@ -241,7 +242,7 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder taskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
-            this.taskTimeLimitInSeconds = Output.ofNullable(taskTimeLimitInSeconds);
+            this.taskTimeLimitInSeconds = Codegen.ofNullable(taskTimeLimitInSeconds);
             return this;
         }
         public Builder taskTitle(Output<String> taskTitle) {

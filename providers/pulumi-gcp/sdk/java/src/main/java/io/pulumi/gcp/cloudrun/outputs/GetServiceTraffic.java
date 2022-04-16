@@ -25,13 +25,13 @@ public final class GetServiceTraffic {
         this.revisionName = revisionName;
     }
 
-    public Boolean getLatestRevision() {
+    public Boolean latestRevision() {
         return this.latestRevision;
     }
-    public Integer getPercent() {
+    public Integer percent() {
         return this.percent;
     }
-    public String getRevisionName() {
+    public String revisionName() {
         return this.revisionName;
     }
 

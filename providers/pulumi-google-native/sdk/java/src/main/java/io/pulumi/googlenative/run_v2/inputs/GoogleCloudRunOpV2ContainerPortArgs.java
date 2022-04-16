@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
-        return this.containerPort == null ? Output.empty() : this.containerPort;
+    public Output<Integer> containerPort() {
+        return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public GoogleCloudRunOpV2ContainerPortArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudRunOpV2ContainerPortArgs() {
-        this.containerPort = Output.empty();
-        this.name = Output.empty();
+        this.containerPort = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
             return this;
         }
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Output.ofNullable(containerPort);
+            this.containerPort = Codegen.ofNullable(containerPort);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public GoogleCloudRunOpV2ContainerPortArgs build() {
             return new GoogleCloudRunOpV2ContainerPortArgs(containerPort, name);

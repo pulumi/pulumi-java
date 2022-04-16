@@ -20,6 +20,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowVeevaSourcePropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowZendeskSourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -35,106 +36,106 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
     @Import(name="amplitude")
       private final @Nullable Output<FlowAmplitudeSourcePropertiesArgs> amplitude;
 
-    public Output<FlowAmplitudeSourcePropertiesArgs> getAmplitude() {
-        return this.amplitude == null ? Output.empty() : this.amplitude;
+    public Output<FlowAmplitudeSourcePropertiesArgs> amplitude() {
+        return this.amplitude == null ? Codegen.empty() : this.amplitude;
     }
 
     @Import(name="datadog")
       private final @Nullable Output<FlowDatadogSourcePropertiesArgs> datadog;
 
-    public Output<FlowDatadogSourcePropertiesArgs> getDatadog() {
-        return this.datadog == null ? Output.empty() : this.datadog;
+    public Output<FlowDatadogSourcePropertiesArgs> datadog() {
+        return this.datadog == null ? Codegen.empty() : this.datadog;
     }
 
     @Import(name="dynatrace")
       private final @Nullable Output<FlowDynatraceSourcePropertiesArgs> dynatrace;
 
-    public Output<FlowDynatraceSourcePropertiesArgs> getDynatrace() {
-        return this.dynatrace == null ? Output.empty() : this.dynatrace;
+    public Output<FlowDynatraceSourcePropertiesArgs> dynatrace() {
+        return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
     }
 
     @Import(name="googleAnalytics")
       private final @Nullable Output<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics;
 
-    public Output<FlowGoogleAnalyticsSourcePropertiesArgs> getGoogleAnalytics() {
-        return this.googleAnalytics == null ? Output.empty() : this.googleAnalytics;
+    public Output<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics() {
+        return this.googleAnalytics == null ? Codegen.empty() : this.googleAnalytics;
     }
 
     @Import(name="inforNexus")
       private final @Nullable Output<FlowInforNexusSourcePropertiesArgs> inforNexus;
 
-    public Output<FlowInforNexusSourcePropertiesArgs> getInforNexus() {
-        return this.inforNexus == null ? Output.empty() : this.inforNexus;
+    public Output<FlowInforNexusSourcePropertiesArgs> inforNexus() {
+        return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
     }
 
     @Import(name="marketo")
       private final @Nullable Output<FlowMarketoSourcePropertiesArgs> marketo;
 
-    public Output<FlowMarketoSourcePropertiesArgs> getMarketo() {
-        return this.marketo == null ? Output.empty() : this.marketo;
+    public Output<FlowMarketoSourcePropertiesArgs> marketo() {
+        return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="s3")
       private final @Nullable Output<FlowS3SourcePropertiesArgs> s3;
 
-    public Output<FlowS3SourcePropertiesArgs> getS3() {
-        return this.s3 == null ? Output.empty() : this.s3;
+    public Output<FlowS3SourcePropertiesArgs> s3() {
+        return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="sAPOData")
       private final @Nullable Output<FlowSAPODataSourcePropertiesArgs> sAPOData;
 
-    public Output<FlowSAPODataSourcePropertiesArgs> getSAPOData() {
-        return this.sAPOData == null ? Output.empty() : this.sAPOData;
+    public Output<FlowSAPODataSourcePropertiesArgs> sAPOData() {
+        return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<FlowSalesforceSourcePropertiesArgs> salesforce;
 
-    public Output<FlowSalesforceSourcePropertiesArgs> getSalesforce() {
-        return this.salesforce == null ? Output.empty() : this.salesforce;
+    public Output<FlowSalesforceSourcePropertiesArgs> salesforce() {
+        return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<FlowServiceNowSourcePropertiesArgs> serviceNow;
 
-    public Output<FlowServiceNowSourcePropertiesArgs> getServiceNow() {
-        return this.serviceNow == null ? Output.empty() : this.serviceNow;
+    public Output<FlowServiceNowSourcePropertiesArgs> serviceNow() {
+        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="singular")
       private final @Nullable Output<FlowSingularSourcePropertiesArgs> singular;
 
-    public Output<FlowSingularSourcePropertiesArgs> getSingular() {
-        return this.singular == null ? Output.empty() : this.singular;
+    public Output<FlowSingularSourcePropertiesArgs> singular() {
+        return this.singular == null ? Codegen.empty() : this.singular;
     }
 
     @Import(name="slack")
       private final @Nullable Output<FlowSlackSourcePropertiesArgs> slack;
 
-    public Output<FlowSlackSourcePropertiesArgs> getSlack() {
-        return this.slack == null ? Output.empty() : this.slack;
+    public Output<FlowSlackSourcePropertiesArgs> slack() {
+        return this.slack == null ? Codegen.empty() : this.slack;
     }
 
     @Import(name="trendmicro")
       private final @Nullable Output<FlowTrendmicroSourcePropertiesArgs> trendmicro;
 
-    public Output<FlowTrendmicroSourcePropertiesArgs> getTrendmicro() {
-        return this.trendmicro == null ? Output.empty() : this.trendmicro;
+    public Output<FlowTrendmicroSourcePropertiesArgs> trendmicro() {
+        return this.trendmicro == null ? Codegen.empty() : this.trendmicro;
     }
 
     @Import(name="veeva")
       private final @Nullable Output<FlowVeevaSourcePropertiesArgs> veeva;
 
-    public Output<FlowVeevaSourcePropertiesArgs> getVeeva() {
-        return this.veeva == null ? Output.empty() : this.veeva;
+    public Output<FlowVeevaSourcePropertiesArgs> veeva() {
+        return this.veeva == null ? Codegen.empty() : this.veeva;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<FlowZendeskSourcePropertiesArgs> zendesk;
 
-    public Output<FlowZendeskSourcePropertiesArgs> getZendesk() {
-        return this.zendesk == null ? Output.empty() : this.zendesk;
+    public Output<FlowZendeskSourcePropertiesArgs> zendesk() {
+        return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 
     public FlowSourceConnectorPropertiesArgs(
@@ -171,21 +172,21 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
     }
 
     private FlowSourceConnectorPropertiesArgs() {
-        this.amplitude = Output.empty();
-        this.datadog = Output.empty();
-        this.dynatrace = Output.empty();
-        this.googleAnalytics = Output.empty();
-        this.inforNexus = Output.empty();
-        this.marketo = Output.empty();
-        this.s3 = Output.empty();
-        this.sAPOData = Output.empty();
-        this.salesforce = Output.empty();
-        this.serviceNow = Output.empty();
-        this.singular = Output.empty();
-        this.slack = Output.empty();
-        this.trendmicro = Output.empty();
-        this.veeva = Output.empty();
-        this.zendesk = Output.empty();
+        this.amplitude = Codegen.empty();
+        this.datadog = Codegen.empty();
+        this.dynatrace = Codegen.empty();
+        this.googleAnalytics = Codegen.empty();
+        this.inforNexus = Codegen.empty();
+        this.marketo = Codegen.empty();
+        this.s3 = Codegen.empty();
+        this.sAPOData = Codegen.empty();
+        this.salesforce = Codegen.empty();
+        this.serviceNow = Codegen.empty();
+        this.singular = Codegen.empty();
+        this.slack = Codegen.empty();
+        this.trendmicro = Codegen.empty();
+        this.veeva = Codegen.empty();
+        this.zendesk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder amplitude(@Nullable FlowAmplitudeSourcePropertiesArgs amplitude) {
-            this.amplitude = Output.ofNullable(amplitude);
+            this.amplitude = Codegen.ofNullable(amplitude);
             return this;
         }
         public Builder datadog(@Nullable Output<FlowDatadogSourcePropertiesArgs> datadog) {
@@ -249,7 +250,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder datadog(@Nullable FlowDatadogSourcePropertiesArgs datadog) {
-            this.datadog = Output.ofNullable(datadog);
+            this.datadog = Codegen.ofNullable(datadog);
             return this;
         }
         public Builder dynatrace(@Nullable Output<FlowDynatraceSourcePropertiesArgs> dynatrace) {
@@ -257,7 +258,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder dynatrace(@Nullable FlowDynatraceSourcePropertiesArgs dynatrace) {
-            this.dynatrace = Output.ofNullable(dynatrace);
+            this.dynatrace = Codegen.ofNullable(dynatrace);
             return this;
         }
         public Builder googleAnalytics(@Nullable Output<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics) {
@@ -265,7 +266,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsSourcePropertiesArgs googleAnalytics) {
-            this.googleAnalytics = Output.ofNullable(googleAnalytics);
+            this.googleAnalytics = Codegen.ofNullable(googleAnalytics);
             return this;
         }
         public Builder inforNexus(@Nullable Output<FlowInforNexusSourcePropertiesArgs> inforNexus) {
@@ -273,7 +274,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder inforNexus(@Nullable FlowInforNexusSourcePropertiesArgs inforNexus) {
-            this.inforNexus = Output.ofNullable(inforNexus);
+            this.inforNexus = Codegen.ofNullable(inforNexus);
             return this;
         }
         public Builder marketo(@Nullable Output<FlowMarketoSourcePropertiesArgs> marketo) {
@@ -281,7 +282,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder marketo(@Nullable FlowMarketoSourcePropertiesArgs marketo) {
-            this.marketo = Output.ofNullable(marketo);
+            this.marketo = Codegen.ofNullable(marketo);
             return this;
         }
         public Builder s3(@Nullable Output<FlowS3SourcePropertiesArgs> s3) {
@@ -289,7 +290,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder s3(@Nullable FlowS3SourcePropertiesArgs s3) {
-            this.s3 = Output.ofNullable(s3);
+            this.s3 = Codegen.ofNullable(s3);
             return this;
         }
         public Builder sAPOData(@Nullable Output<FlowSAPODataSourcePropertiesArgs> sAPOData) {
@@ -297,7 +298,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder sAPOData(@Nullable FlowSAPODataSourcePropertiesArgs sAPOData) {
-            this.sAPOData = Output.ofNullable(sAPOData);
+            this.sAPOData = Codegen.ofNullable(sAPOData);
             return this;
         }
         public Builder salesforce(@Nullable Output<FlowSalesforceSourcePropertiesArgs> salesforce) {
@@ -305,7 +306,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder salesforce(@Nullable FlowSalesforceSourcePropertiesArgs salesforce) {
-            this.salesforce = Output.ofNullable(salesforce);
+            this.salesforce = Codegen.ofNullable(salesforce);
             return this;
         }
         public Builder serviceNow(@Nullable Output<FlowServiceNowSourcePropertiesArgs> serviceNow) {
@@ -313,7 +314,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder serviceNow(@Nullable FlowServiceNowSourcePropertiesArgs serviceNow) {
-            this.serviceNow = Output.ofNullable(serviceNow);
+            this.serviceNow = Codegen.ofNullable(serviceNow);
             return this;
         }
         public Builder singular(@Nullable Output<FlowSingularSourcePropertiesArgs> singular) {
@@ -321,7 +322,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder singular(@Nullable FlowSingularSourcePropertiesArgs singular) {
-            this.singular = Output.ofNullable(singular);
+            this.singular = Codegen.ofNullable(singular);
             return this;
         }
         public Builder slack(@Nullable Output<FlowSlackSourcePropertiesArgs> slack) {
@@ -329,7 +330,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder slack(@Nullable FlowSlackSourcePropertiesArgs slack) {
-            this.slack = Output.ofNullable(slack);
+            this.slack = Codegen.ofNullable(slack);
             return this;
         }
         public Builder trendmicro(@Nullable Output<FlowTrendmicroSourcePropertiesArgs> trendmicro) {
@@ -337,7 +338,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder trendmicro(@Nullable FlowTrendmicroSourcePropertiesArgs trendmicro) {
-            this.trendmicro = Output.ofNullable(trendmicro);
+            this.trendmicro = Codegen.ofNullable(trendmicro);
             return this;
         }
         public Builder veeva(@Nullable Output<FlowVeevaSourcePropertiesArgs> veeva) {
@@ -345,7 +346,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder veeva(@Nullable FlowVeevaSourcePropertiesArgs veeva) {
-            this.veeva = Output.ofNullable(veeva);
+            this.veeva = Codegen.ofNullable(veeva);
             return this;
         }
         public Builder zendesk(@Nullable Output<FlowZendeskSourcePropertiesArgs> zendesk) {
@@ -353,7 +354,7 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder zendesk(@Nullable FlowZendeskSourcePropertiesArgs zendesk) {
-            this.zendesk = Output.ofNullable(zendesk);
+            this.zendesk = Codegen.ofNullable(zendesk);
             return this;
         }        public FlowSourceConnectorPropertiesArgs build() {
             return new FlowSourceConnectorPropertiesArgs(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);

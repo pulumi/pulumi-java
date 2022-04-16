@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
-    public Output<Either<String,EnableStatus>> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Either<String,EnableStatus>> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="markdown")
       private final @Nullable Output<String> markdown;
 
-    public Output<String> getMarkdown() {
-        return this.markdown == null ? Output.empty() : this.markdown;
+    public Output<String> markdown() {
+        return this.markdown == null ? Codegen.empty() : this.markdown;
     }
 
     public LabSupportPropertiesArgs(
@@ -50,8 +51,8 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private LabSupportPropertiesArgs() {
-        this.enabled = Output.empty();
-        this.markdown = Output.empty();
+        this.enabled = Codegen.empty();
+        this.markdown = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder markdown(@Nullable Output<String> markdown) {
@@ -89,7 +90,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder markdown(@Nullable String markdown) {
-            this.markdown = Output.ofNullable(markdown);
+            this.markdown = Codegen.ofNullable(markdown);
             return this;
         }        public LabSupportPropertiesArgs build() {
             return new LabSupportPropertiesArgs(enabled, markdown);

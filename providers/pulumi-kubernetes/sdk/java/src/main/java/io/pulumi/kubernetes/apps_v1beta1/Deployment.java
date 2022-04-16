@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta1.DeploymentArgs;
 import io.pulumi.kubernetes.apps_v1beta1.outputs.DeploymentSpec;
@@ -59,7 +60,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -73,7 +74,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +88,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Standard object metadata.
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -101,7 +102,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Specification of the desired behavior of the Deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentSpec> getSpec() {
+    public Output</* @Nullable */ DeploymentSpec> spec() {
         return this.spec;
     }
     /**
@@ -115,7 +116,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Most recently observed status of the Deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentStatus> getStatus() {
+    public Output</* @Nullable */ DeploymentStatus> status() {
         return this.status;
     }
 
@@ -141,7 +142,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Deployment(String name, @Nullable DeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:apps/v1beta1:Deployment", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:apps/v1beta1:Deployment", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Deployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

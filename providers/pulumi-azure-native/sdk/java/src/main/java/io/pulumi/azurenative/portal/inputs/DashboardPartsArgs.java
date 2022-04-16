@@ -7,6 +7,7 @@ import io.pulumi.azurenative.portal.inputs.DashboardPartsPositionArgs;
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<MarkdownPartMetadataArgs> metadata;
 
-    public Output<MarkdownPartMetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<MarkdownPartMetadataArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="position", required=true)
       private final Output<DashboardPartsPositionArgs> position;
 
-    public Output<DashboardPartsPositionArgs> getPosition() {
+    public Output<DashboardPartsPositionArgs> position() {
         return this.position;
     }
 
@@ -49,8 +50,8 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardPartsArgs() {
-        this.metadata = Output.empty();
-        this.position = Output.empty();
+        this.metadata = Codegen.empty();
+        this.position = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable MarkdownPartMetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder position(Output<DashboardPartsPositionArgs> position) {

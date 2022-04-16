@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 import io.pulumi.azurenative.storsimple.enums.ManagerSkuType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<ManagerSkuType> name;
 
-    public Output<ManagerSkuType> getName() {
+    public Output<ManagerSkuType> name() {
         return this.name;
     }
 
@@ -33,7 +34,7 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagerSkuArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

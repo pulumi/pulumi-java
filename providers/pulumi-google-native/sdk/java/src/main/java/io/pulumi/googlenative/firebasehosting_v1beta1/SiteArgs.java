@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+    public Output<String> appId() {
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -33,21 +34,21 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -63,10 +64,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SiteArgs() {
-        this.appId = Output.empty();
-        this.labels = Output.empty();
-        this.project = Output.empty();
-        this.siteId = Output.empty();
+        this.appId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.project = Codegen.empty();
+        this.siteId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -108,7 +109,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -116,7 +117,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder siteId(Output<String> siteId) {

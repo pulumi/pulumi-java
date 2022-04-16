@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs;
@@ -26,8 +27,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     @Import(name="headerAction")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Output.empty() : this.headerAction;
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction() {
+        return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     @Import(name="matchRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules;
 
-    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> getMatchRules() {
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules() {
         return this.matchRules;
     }
 
@@ -63,8 +64,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     @Import(name="origin")
       private final @Nullable Output<String> origin;
 
-    public Output<String> getOrigin() {
-        return this.origin == null ? Output.empty() : this.origin;
+    public Output<String> origin() {
+        return this.origin == null ? Codegen.empty() : this.origin;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     @Import(name="priority", required=true)
       private final Output<String> priority;
 
-    public Output<String> getPriority() {
+    public Output<String> priority() {
         return this.priority;
     }
 
@@ -89,8 +90,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     @Import(name="routeAction")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> getRouteAction() {
-        return this.routeAction == null ? Output.empty() : this.routeAction;
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction() {
+        return this.routeAction == null ? Codegen.empty() : this.routeAction;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     @Import(name="urlRedirect")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> getUrlRedirect() {
-        return this.urlRedirect == null ? Output.empty() : this.urlRedirect;
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect() {
+        return this.urlRedirect == null ? Codegen.empty() : this.urlRedirect;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(
@@ -123,13 +124,13 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleArgs() {
-        this.description = Output.empty();
-        this.headerAction = Output.empty();
-        this.matchRules = Output.empty();
-        this.origin = Output.empty();
-        this.priority = Output.empty();
-        this.routeAction = Output.empty();
-        this.urlRedirect = Output.empty();
+        this.description = Codegen.empty();
+        this.headerAction = Codegen.empty();
+        this.matchRules = Codegen.empty();
+        this.origin = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.routeAction = Codegen.empty();
+        this.urlRedirect = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -169,7 +170,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headerAction(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction) {
@@ -177,7 +178,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
             return this;
         }
         public Builder headerAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs headerAction) {
-            this.headerAction = Output.ofNullable(headerAction);
+            this.headerAction = Codegen.ofNullable(headerAction);
             return this;
         }
         public Builder matchRules(Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules) {
@@ -196,7 +197,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
             return this;
         }
         public Builder origin(@Nullable String origin) {
-            this.origin = Output.ofNullable(origin);
+            this.origin = Codegen.ofNullable(origin);
             return this;
         }
         public Builder priority(Output<String> priority) {
@@ -212,7 +213,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
             return this;
         }
         public Builder routeAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs routeAction) {
-            this.routeAction = Output.ofNullable(routeAction);
+            this.routeAction = Codegen.ofNullable(routeAction);
             return this;
         }
         public Builder urlRedirect(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
@@ -220,7 +221,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
             return this;
         }
         public Builder urlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs urlRedirect) {
-            this.urlRedirect = Output.ofNullable(urlRedirect);
+            this.urlRedirect = Codegen.ofNullable(urlRedirect);
             return this;
         }        public EdgeCacheServiceRoutingPathMatcherRouteRuleArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleArgs(description, headerAction, matchRules, origin, priority, routeAction, urlRedirect);

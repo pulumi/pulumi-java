@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
+    public Output<String> hostedZoneId() {
+        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
     @Import(name="signingStatus")
       private final @Nullable Output<String> signingStatus;
 
-    public Output<String> getSigningStatus() {
-        return this.signingStatus == null ? Output.empty() : this.signingStatus;
+    public Output<String> signingStatus() {
+        return this.signingStatus == null ? Codegen.empty() : this.signingStatus;
     }
 
     public HostedZoneDnsSecState(
@@ -44,8 +45,8 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
     }
 
     private HostedZoneDnsSecState() {
-        this.hostedZoneId = Output.empty();
-        this.signingStatus = Output.empty();
+        this.hostedZoneId = Codegen.empty();
+        this.signingStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Output.ofNullable(hostedZoneId);
+            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
             return this;
         }
         public Builder signingStatus(@Nullable Output<String> signingStatus) {
@@ -83,7 +84,7 @@ public final class HostedZoneDnsSecState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder signingStatus(@Nullable String signingStatus) {
-            this.signingStatus = Output.ofNullable(signingStatus);
+            this.signingStatus = Codegen.ofNullable(signingStatus);
             return this;
         }        public HostedZoneDnsSecState build() {
             return new HostedZoneDnsSecState(hostedZoneId, signingStatus);

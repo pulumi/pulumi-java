@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -33,8 +34,8 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
     @Import(name="dbUser")
       private final @Nullable Output<String> dbUser;
 
-    public Output<String> getDbUser() {
-        return this.dbUser == null ? Output.empty() : this.dbUser;
+    public Output<String> dbUser() {
+        return this.dbUser == null ? Codegen.empty() : this.dbUser;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
     @Import(name="secretsManagerArn")
       private final @Nullable Output<String> secretsManagerArn;
 
-    public Output<String> getSecretsManagerArn() {
-        return this.secretsManagerArn == null ? Output.empty() : this.secretsManagerArn;
+    public Output<String> secretsManagerArn() {
+        return this.secretsManagerArn == null ? Codegen.empty() : this.secretsManagerArn;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
     @Import(name="sql")
       private final @Nullable Output<String> sql;
 
-    public Output<String> getSql() {
-        return this.sql == null ? Output.empty() : this.sql;
+    public Output<String> sql() {
+        return this.sql == null ? Codegen.empty() : this.sql;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
     @Import(name="statementName")
       private final @Nullable Output<String> statementName;
 
-    public Output<String> getStatementName() {
-        return this.statementName == null ? Output.empty() : this.statementName;
+    public Output<String> statementName() {
+        return this.statementName == null ? Codegen.empty() : this.statementName;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
     @Import(name="withEvent")
       private final @Nullable Output<Boolean> withEvent;
 
-    public Output<Boolean> getWithEvent() {
-        return this.withEvent == null ? Output.empty() : this.withEvent;
+    public Output<Boolean> withEvent() {
+        return this.withEvent == null ? Codegen.empty() : this.withEvent;
     }
 
     public EventTargetRedshiftTargetArgs(
@@ -97,12 +98,12 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
     }
 
     private EventTargetRedshiftTargetArgs() {
-        this.database = Output.empty();
-        this.dbUser = Output.empty();
-        this.secretsManagerArn = Output.empty();
-        this.sql = Output.empty();
-        this.statementName = Output.empty();
-        this.withEvent = Output.empty();
+        this.database = Codegen.empty();
+        this.dbUser = Codegen.empty();
+        this.secretsManagerArn = Codegen.empty();
+        this.sql = Codegen.empty();
+        this.statementName = Codegen.empty();
+        this.withEvent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder dbUser(@Nullable String dbUser) {
-            this.dbUser = Output.ofNullable(dbUser);
+            this.dbUser = Codegen.ofNullable(dbUser);
             return this;
         }
         public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
@@ -156,7 +157,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
-            this.secretsManagerArn = Output.ofNullable(secretsManagerArn);
+            this.secretsManagerArn = Codegen.ofNullable(secretsManagerArn);
             return this;
         }
         public Builder sql(@Nullable Output<String> sql) {
@@ -164,7 +165,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sql(@Nullable String sql) {
-            this.sql = Output.ofNullable(sql);
+            this.sql = Codegen.ofNullable(sql);
             return this;
         }
         public Builder statementName(@Nullable Output<String> statementName) {
@@ -172,7 +173,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder statementName(@Nullable String statementName) {
-            this.statementName = Output.ofNullable(statementName);
+            this.statementName = Codegen.ofNullable(statementName);
             return this;
         }
         public Builder withEvent(@Nullable Output<Boolean> withEvent) {
@@ -180,7 +181,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder withEvent(@Nullable Boolean withEvent) {
-            this.withEvent = Output.ofNullable(withEvent);
+            this.withEvent = Codegen.ofNullable(withEvent);
             return this;
         }        public EventTargetRedshiftTargetArgs build() {
             return new EventTargetRedshiftTargetArgs(database, dbUser, secretsManagerArn, sql, statementName, withEvent);

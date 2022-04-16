@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
     @Import(name="tableReference", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> getTableReference() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference() {
         return this.tableReference;
     }
 
@@ -30,7 +31,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
     }
 
     private PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs() {
-        this.tableReference = Output.empty();
+        this.tableReference = Codegen.empty();
     }
 
     public static Builder builder() {

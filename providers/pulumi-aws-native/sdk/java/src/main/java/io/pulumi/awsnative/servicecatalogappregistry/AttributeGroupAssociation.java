@@ -8,6 +8,7 @@ import io.pulumi.awsnative.servicecatalogappregistry.AttributeGroupAssociationAr
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,13 +29,13 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
      * @return The name or the Id of the Application.
      * 
      */
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
-    public Output<String> getApplicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn;
     }
     /**
@@ -48,13 +49,13 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
      * @return The name or the Id of the AttributeGroup.
      * 
      */
-    public Output<String> getAttributeGroup() {
+    public Output<String> attributeGroup() {
         return this.attributeGroup;
     }
     @Export(name="attributeGroupArn", type=String.class, parameters={})
     private Output<String> attributeGroupArn;
 
-    public Output<String> getAttributeGroupArn() {
+    public Output<String> attributeGroupArn() {
         return this.attributeGroupArn;
     }
 
@@ -80,7 +81,7 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AttributeGroupAssociation(String name, AttributeGroupAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalogappregistry:AttributeGroupAssociation", name, args == null ? AttributeGroupAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:servicecatalogappregistry:AttributeGroupAssociation", name, args == null ? AttributeGroupAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AttributeGroupAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

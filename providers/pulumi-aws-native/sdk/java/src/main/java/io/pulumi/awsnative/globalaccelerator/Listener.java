@@ -11,6 +11,7 @@ import io.pulumi.awsnative.globalaccelerator.outputs.ListenerPortRange;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the accelerator.
      * 
      */
-    public Output<String> getAcceleratorArn() {
+    public Output<String> acceleratorArn() {
         return this.acceleratorArn;
     }
     /**
@@ -46,7 +47,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return Client affinity lets you direct all requests from a user to the same endpoint.
      * 
      */
-    public Output</* @Nullable */ ListenerClientAffinity> getClientAffinity() {
+    public Output</* @Nullable */ ListenerClientAffinity> clientAffinity() {
         return this.clientAffinity;
     }
     /**
@@ -60,13 +61,13 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the listener.
      * 
      */
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
     @Export(name="portRanges", type=List.class, parameters={ListenerPortRange.class})
     private Output<List<ListenerPortRange>> portRanges;
 
-    public Output<List<ListenerPortRange>> getPortRanges() {
+    public Output<List<ListenerPortRange>> portRanges() {
         return this.portRanges;
     }
     /**
@@ -80,7 +81,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return The protocol for the listener.
      * 
      */
-    public Output<ListenerProtocol> getProtocol() {
+    public Output<ListenerProtocol> protocol() {
         return this.protocol;
     }
 
@@ -106,7 +107,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Listener(String name, ListenerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:globalaccelerator:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:globalaccelerator:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Listener(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

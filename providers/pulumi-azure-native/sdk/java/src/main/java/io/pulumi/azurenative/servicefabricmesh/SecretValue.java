@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class SecretValue extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -56,7 +57,7 @@ public class SecretValue extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class SecretValue extends io.pulumi.resources.CustomResource {
      * @return State of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -84,7 +85,7 @@ public class SecretValue extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +99,7 @@ public class SecretValue extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -112,7 +113,7 @@ public class SecretValue extends io.pulumi.resources.CustomResource {
      * @return The actual value of the secret.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 
@@ -138,7 +139,7 @@ public class SecretValue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecretValue(String name, SecretValueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabricmesh:SecretValue", name, args == null ? SecretValueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:servicefabricmesh:SecretValue", name, args == null ? SecretValueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecretValue(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

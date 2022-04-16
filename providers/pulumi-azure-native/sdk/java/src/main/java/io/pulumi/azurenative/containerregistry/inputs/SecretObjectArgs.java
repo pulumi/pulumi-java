@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.SecretObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,SecretObjectType>> type;
 
-    public Output<Either<String,SecretObjectType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,SecretObjectType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public SecretObjectArgs(
@@ -53,8 +54,8 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretObjectArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,SecretObjectType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -92,7 +93,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public SecretObjectArgs build() {
             return new SecretObjectArgs(type, value);

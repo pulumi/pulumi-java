@@ -34,7 +34,7 @@ public final class PemCertificateListResponse {
      * PEM formatted public certificates. One certificate per entry.
      * 
     */
-    public List<String> getCertificates() {
+    public List<String> certificates() {
         return this.certificates;
     }
     /**
@@ -42,7 +42,7 @@ public final class PemCertificateListResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

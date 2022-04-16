@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -45,15 +46,15 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="secretId")
       private final @Nullable Output<String> secretId;
 
-    public Output<String> getSecretId() {
-        return this.secretId == null ? Output.empty() : this.secretId;
+    public Output<String> secretId() {
+        return this.secretId == null ? Codegen.empty() : this.secretId;
     }
 
     public SecretIamPolicyState(
@@ -68,10 +69,10 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     private SecretIamPolicyState() {
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.secretId = Output.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.secretId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -113,7 +114,7 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -121,7 +122,7 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder secretId(@Nullable Output<String> secretId) {
@@ -129,7 +130,7 @@ public final class SecretIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secretId(@Nullable String secretId) {
-            this.secretId = Output.ofNullable(secretId);
+            this.secretId = Codegen.ofNullable(secretId);
             return this;
         }        public SecretIamPolicyState build() {
             return new SecretIamPolicyState(etag, policyData, project, secretId);

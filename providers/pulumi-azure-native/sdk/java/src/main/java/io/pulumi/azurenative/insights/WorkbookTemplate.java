@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -46,7 +47,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Information about the author of the workbook template.
      * 
      */
-    public Output</* @Nullable */ String> getAuthor() {
+    public Output</* @Nullable */ String> author() {
         return this.author;
     }
     /**
@@ -60,7 +61,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Workbook galleries supported by the template.
      * 
      */
-    public Output<List<WorkbookTemplateGalleryResponse>> getGalleries() {
+    public Output<List<WorkbookTemplateGalleryResponse>> galleries() {
         return this.galleries;
     }
     /**
@@ -74,7 +75,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
      */
-    public Output</* @Nullable */ Map<String,List<WorkbookTemplateLocalizedGalleryResponse>>> getLocalized() {
+    public Output</* @Nullable */ Map<String,List<WorkbookTemplateLocalizedGalleryResponse>>> localized() {
         return this.localized;
     }
     /**
@@ -88,7 +89,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -102,7 +103,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Azure resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
      */
-    public Output</* @Nullable */ Integer> getPriority() {
+    public Output</* @Nullable */ Integer> priority() {
         return this.priority;
     }
     /**
@@ -130,7 +131,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +145,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Valid JSON object containing workbook template payload.
      * 
      */
-    public Output<Object> getTemplateData() {
+    public Output<Object> templateData() {
         return this.templateData;
     }
     /**
@@ -158,7 +159,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -184,7 +185,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkbookTemplate(String name, WorkbookTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:WorkbookTemplate", name, args == null ? WorkbookTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:WorkbookTemplate", name, args == null ? WorkbookTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkbookTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.IamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<IamBindingConditionGetArgs> condition;
 
-    public Output<IamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<IamBindingConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,8 +31,8 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -41,15 +42,15 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public IamBindingState(
@@ -106,13 +107,13 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IamBindingState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.service = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable IamBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -160,7 +161,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -168,7 +169,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -176,7 +177,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -187,7 +188,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -195,7 +196,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -203,7 +204,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public IamBindingState build() {
             return new IamBindingState(condition, etag, location, members, project, role, service);

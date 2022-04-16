@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.ClusterIAMMemberArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterIAMMemberState;
@@ -64,13 +65,13 @@ public class ClusterIAMMember extends io.pulumi.resources.CustomResource {
      * @return The name or relative resource id of the cluster to manage IAM policies for.
      * 
      */
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     @Export(name="condition", type=ClusterIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ ClusterIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ ClusterIAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ ClusterIAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -84,13 +85,13 @@ public class ClusterIAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the clusters's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -106,7 +107,7 @@ public class ClusterIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -122,7 +123,7 @@ public class ClusterIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -140,7 +141,7 @@ public class ClusterIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -166,7 +167,7 @@ public class ClusterIAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterIAMMember(String name, ClusterIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/clusterIAMMember:ClusterIAMMember", name, args == null ? ClusterIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/clusterIAMMember:ClusterIAMMember", name, args == null ? ClusterIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterIAMMember(String name, Output<String> id, @Nullable ClusterIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

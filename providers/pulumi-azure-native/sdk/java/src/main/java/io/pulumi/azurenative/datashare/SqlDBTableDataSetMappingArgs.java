@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +33,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -43,8 +44,8 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
+    public Output<String> dataSetMappingName() {
+        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -66,7 +67,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -77,7 +78,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +89,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -99,7 +100,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -110,7 +111,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="sqlServerResourceId", required=true)
       private final Output<String> sqlServerResourceId;
 
-    public Output<String> getSqlServerResourceId() {
+    public Output<String> sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
 
@@ -121,7 +122,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -149,16 +150,16 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     }
 
     private SqlDBTableDataSetMappingArgs() {
-        this.accountName = Output.empty();
-        this.dataSetId = Output.empty();
-        this.dataSetMappingName = Output.empty();
-        this.databaseName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
-        this.sqlServerResourceId = Output.empty();
-        this.tableName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetId = Codegen.empty();
+        this.dataSetMappingName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
+        this.sqlServerResourceId = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {

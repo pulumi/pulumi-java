@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.batch_v2alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="active")
       private final @Nullable Output<List<ObjectReferenceArgs>> active;
 
-    public Output<List<ObjectReferenceArgs>> getActive() {
-        return this.active == null ? Output.empty() : this.active;
+    public Output<List<ObjectReferenceArgs>> active() {
+        return this.active == null ? Codegen.empty() : this.active;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastScheduleTime")
       private final @Nullable Output<String> lastScheduleTime;
 
-    public Output<String> getLastScheduleTime() {
-        return this.lastScheduleTime == null ? Output.empty() : this.lastScheduleTime;
+    public Output<String> lastScheduleTime() {
+        return this.lastScheduleTime == null ? Codegen.empty() : this.lastScheduleTime;
     }
 
     public CronJobStatusArgs(
@@ -50,8 +51,8 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CronJobStatusArgs() {
-        this.active = Output.empty();
-        this.lastScheduleTime = Output.empty();
+        this.active = Codegen.empty();
+        this.lastScheduleTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder active(@Nullable List<ObjectReferenceArgs> active) {
-            this.active = Output.ofNullable(active);
+            this.active = Codegen.ofNullable(active);
             return this;
         }
         public Builder active(ObjectReferenceArgs... active) {
@@ -92,7 +93,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
-            this.lastScheduleTime = Output.ofNullable(lastScheduleTime);
+            this.lastScheduleTime = Codegen.ofNullable(lastScheduleTime);
             return this;
         }        public CronJobStatusArgs build() {
             return new CronJobStatusArgs(active, lastScheduleTime);

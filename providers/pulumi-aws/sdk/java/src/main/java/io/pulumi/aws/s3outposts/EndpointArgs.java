@@ -5,6 +5,7 @@ package io.pulumi.aws.s3outposts;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
 
@@ -31,7 +32,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 
@@ -42,7 +43,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -56,9 +57,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.outpostId = Output.empty();
-        this.securityGroupId = Output.empty();
-        this.subnetId = Output.empty();
+        this.outpostId = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

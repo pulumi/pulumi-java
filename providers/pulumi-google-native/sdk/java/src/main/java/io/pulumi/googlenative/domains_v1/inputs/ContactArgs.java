@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1.inputs.PostalAddressArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -37,8 +38,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="faxNumber")
       private final @Nullable Output<String> faxNumber;
 
-    public Output<String> getFaxNumber() {
-        return this.faxNumber == null ? Output.empty() : this.faxNumber;
+    public Output<String> faxNumber() {
+        return this.faxNumber == null ? Codegen.empty() : this.faxNumber;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 
@@ -59,7 +60,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postalAddress", required=true)
       private final Output<PostalAddressArgs> postalAddress;
 
-    public Output<PostalAddressArgs> getPostalAddress() {
+    public Output<PostalAddressArgs> postalAddress() {
         return this.postalAddress;
     }
 
@@ -75,10 +76,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.email = Output.empty();
-        this.faxNumber = Output.empty();
-        this.phoneNumber = Output.empty();
-        this.postalAddress = Output.empty();
+        this.email = Codegen.empty();
+        this.faxNumber = Codegen.empty();
+        this.phoneNumber = Codegen.empty();
+        this.postalAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder faxNumber(@Nullable String faxNumber) {
-            this.faxNumber = Output.ofNullable(faxNumber);
+            this.faxNumber = Codegen.ofNullable(faxNumber);
             return this;
         }
         public Builder phoneNumber(Output<String> phoneNumber) {

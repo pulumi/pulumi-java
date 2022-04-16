@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetModelCompositeModels")
       private final @Nullable Output<List<AssetModelCompositeModelArgs>> assetModelCompositeModels;
 
-    public Output<List<AssetModelCompositeModelArgs>> getAssetModelCompositeModels() {
-        return this.assetModelCompositeModels == null ? Output.empty() : this.assetModelCompositeModels;
+    public Output<List<AssetModelCompositeModelArgs>> assetModelCompositeModels() {
+        return this.assetModelCompositeModels == null ? Codegen.empty() : this.assetModelCompositeModels;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetModelDescription")
       private final @Nullable Output<String> assetModelDescription;
 
-    public Output<String> getAssetModelDescription() {
-        return this.assetModelDescription == null ? Output.empty() : this.assetModelDescription;
+    public Output<String> assetModelDescription() {
+        return this.assetModelDescription == null ? Codegen.empty() : this.assetModelDescription;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetModelHierarchies")
       private final @Nullable Output<List<AssetModelHierarchyArgs>> assetModelHierarchies;
 
-    public Output<List<AssetModelHierarchyArgs>> getAssetModelHierarchies() {
-        return this.assetModelHierarchies == null ? Output.empty() : this.assetModelHierarchies;
+    public Output<List<AssetModelHierarchyArgs>> assetModelHierarchies() {
+        return this.assetModelHierarchies == null ? Codegen.empty() : this.assetModelHierarchies;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetModelName")
       private final @Nullable Output<String> assetModelName;
 
-    public Output<String> getAssetModelName() {
-        return this.assetModelName == null ? Output.empty() : this.assetModelName;
+    public Output<String> assetModelName() {
+        return this.assetModelName == null ? Codegen.empty() : this.assetModelName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetModelProperties")
       private final @Nullable Output<List<AssetModelPropertyArgs>> assetModelProperties;
 
-    public Output<List<AssetModelPropertyArgs>> getAssetModelProperties() {
-        return this.assetModelProperties == null ? Output.empty() : this.assetModelProperties;
+    public Output<List<AssetModelPropertyArgs>> assetModelProperties() {
+        return this.assetModelProperties == null ? Codegen.empty() : this.assetModelProperties;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AssetModelTagArgs>> tags;
 
-    public Output<List<AssetModelTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<AssetModelTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AssetModelArgs(
@@ -101,12 +102,12 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetModelArgs() {
-        this.assetModelCompositeModels = Output.empty();
-        this.assetModelDescription = Output.empty();
-        this.assetModelHierarchies = Output.empty();
-        this.assetModelName = Output.empty();
-        this.assetModelProperties = Output.empty();
-        this.tags = Output.empty();
+        this.assetModelCompositeModels = Codegen.empty();
+        this.assetModelDescription = Codegen.empty();
+        this.assetModelHierarchies = Codegen.empty();
+        this.assetModelName = Codegen.empty();
+        this.assetModelProperties = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetModelCompositeModels(@Nullable List<AssetModelCompositeModelArgs> assetModelCompositeModels) {
-            this.assetModelCompositeModels = Output.ofNullable(assetModelCompositeModels);
+            this.assetModelCompositeModels = Codegen.ofNullable(assetModelCompositeModels);
             return this;
         }
         public Builder assetModelCompositeModels(AssetModelCompositeModelArgs... assetModelCompositeModels) {
@@ -155,7 +156,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetModelDescription(@Nullable String assetModelDescription) {
-            this.assetModelDescription = Output.ofNullable(assetModelDescription);
+            this.assetModelDescription = Codegen.ofNullable(assetModelDescription);
             return this;
         }
         public Builder assetModelHierarchies(@Nullable Output<List<AssetModelHierarchyArgs>> assetModelHierarchies) {
@@ -163,7 +164,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetModelHierarchies(@Nullable List<AssetModelHierarchyArgs> assetModelHierarchies) {
-            this.assetModelHierarchies = Output.ofNullable(assetModelHierarchies);
+            this.assetModelHierarchies = Codegen.ofNullable(assetModelHierarchies);
             return this;
         }
         public Builder assetModelHierarchies(AssetModelHierarchyArgs... assetModelHierarchies) {
@@ -174,7 +175,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetModelName(@Nullable String assetModelName) {
-            this.assetModelName = Output.ofNullable(assetModelName);
+            this.assetModelName = Codegen.ofNullable(assetModelName);
             return this;
         }
         public Builder assetModelProperties(@Nullable Output<List<AssetModelPropertyArgs>> assetModelProperties) {
@@ -182,7 +183,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetModelProperties(@Nullable List<AssetModelPropertyArgs> assetModelProperties) {
-            this.assetModelProperties = Output.ofNullable(assetModelProperties);
+            this.assetModelProperties = Codegen.ofNullable(assetModelProperties);
             return this;
         }
         public Builder assetModelProperties(AssetModelPropertyArgs... assetModelProperties) {
@@ -193,7 +194,7 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<AssetModelTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AssetModelTagArgs... tags) {

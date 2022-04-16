@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelStorageMetricsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
     @Import(name="storageMetrics", required=true)
       private final Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
 
-    public Output<StorageLensPrefixLevelStorageMetricsArgs> getStorageMetrics() {
+    public Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics() {
         return this.storageMetrics;
     }
 
@@ -29,7 +30,7 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
     }
 
     private StorageLensPrefixLevelArgs() {
-        this.storageMetrics = Output.empty();
+        this.storageMetrics = Codegen.empty();
     }
 
     public static Builder builder() {

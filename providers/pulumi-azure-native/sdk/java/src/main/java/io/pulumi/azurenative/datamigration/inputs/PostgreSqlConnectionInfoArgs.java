@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -59,7 +60,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -71,7 +72,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,8 +83,8 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public PostgreSqlConnectionInfoArgs(
@@ -102,12 +103,12 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
     }
 
     private PostgreSqlConnectionInfoArgs() {
-        this.databaseName = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.serverName = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -153,7 +154,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(Output<Integer> port) {
@@ -185,7 +186,7 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public PostgreSqlConnectionInfoArgs build() {
             return new PostgreSqlConnectionInfoArgs(databaseName, password, port, serverName, type, userName);

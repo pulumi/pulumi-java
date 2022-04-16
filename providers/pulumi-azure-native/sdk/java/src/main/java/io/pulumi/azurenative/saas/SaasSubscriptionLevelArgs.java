@@ -6,6 +6,7 @@ package io.pulumi.azurenative.saas;
 import io.pulumi.azurenative.saas.inputs.SaasCreationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<SaasCreationPropertiesArgs> properties;
 
-    public Output<SaasCreationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<SaasCreationPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SaasSubscriptionLevelArgs(
@@ -98,12 +99,12 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     }
 
     private SaasSubscriptionLevelArgs() {
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -149,7 +150,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<SaasCreationPropertiesArgs> properties) {
@@ -157,7 +158,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder properties(@Nullable SaasCreationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -173,7 +174,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -181,7 +182,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SaasSubscriptionLevelArgs build() {
             return new SaasSubscriptionLevelArgs(location, name, properties, resourceGroupName, resourceName, tags);

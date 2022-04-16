@@ -47,28 +47,28 @@ public final class GetQueueAuthorizationRuleResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
      * 
     */
-    public List<String> getRights() {
+    public List<String> rights() {
         return this.rights;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

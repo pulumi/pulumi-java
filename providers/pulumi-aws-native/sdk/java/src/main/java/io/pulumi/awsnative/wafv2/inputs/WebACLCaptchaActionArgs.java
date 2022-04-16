@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomRequestHandlingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="customRequestHandling")
       private final @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {
-        return this.customRequestHandling == null ? Output.empty() : this.customRequestHandling;
+    public Output<WebACLCustomRequestHandlingArgs> customRequestHandling() {
+        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 
     public WebACLCaptchaActionArgs(@Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling) {
@@ -30,7 +31,7 @@ public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private WebACLCaptchaActionArgs() {
-        this.customRequestHandling = Output.empty();
+        this.customRequestHandling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Output.ofNullable(customRequestHandling);
+            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
             return this;
         }        public WebACLCaptchaActionArgs build() {
             return new WebACLCaptchaActionArgs(customRequestHandling);

@@ -28,16 +28,16 @@ public final class AppCustomRule {
         this.target = target;
     }
 
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
-    public String getSource() {
+    public String source() {
         return this.source;
     }
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

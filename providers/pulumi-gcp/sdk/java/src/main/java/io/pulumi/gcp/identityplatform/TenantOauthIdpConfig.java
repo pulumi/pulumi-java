@@ -6,6 +6,7 @@ package io.pulumi.gcp.identityplatform;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.TenantOauthIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantOauthIdpConfigState;
@@ -52,7 +53,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return The client id of an OAuth client.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -66,7 +67,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return The client secret of the OAuth client, to enable OIDC code flow.
      * 
      */
-    public Output</* @Nullable */ String> getClientSecret() {
+    public Output</* @Nullable */ String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -80,7 +81,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return Human friendly display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -94,7 +95,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return If this config allows users to sign in with the provider.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -108,7 +109,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return For OIDC Idps, the issuer identifier.
      * 
      */
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
     /**
@@ -122,7 +123,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the OauthIdpConfig. Must start with `oidc.`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -138,7 +139,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -152,7 +153,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the tenant where this OIDC IDP configuration resource exists
      * 
      */
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant;
     }
 
@@ -178,7 +179,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TenantOauthIdpConfig(String name, TenantOauthIdpConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig", name, args == null ? TenantOauthIdpConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig", name, args == null ? TenantOauthIdpConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TenantOauthIdpConfig(String name, Output<String> id, @Nullable TenantOauthIdpConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

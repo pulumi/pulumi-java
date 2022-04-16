@@ -9,6 +9,7 @@ import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
      * @return The countries to which calls are allowed, in ISO 3166-1 alpha-2 format.
      * 
      */
-    public Output<List<String>> getCallingRegions() {
+    public Output<List<String>> callingRegions() {
         return this.callingRegions;
     }
     /**
@@ -56,7 +57,7 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
      * @return The IP addresses allowed to make calls, in CIDR format.
      * 
      */
-    public Output<List<String>> getCidrAllowLists() {
+    public Output<List<String>> cidrAllowLists() {
         return this.cidrAllowLists;
     }
     /**
@@ -70,7 +71,7 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
      * @return The limit on calls per second. Max value based on account service quota. Default value of `1`.
      * 
      */
-    public Output</* @Nullable */ Integer> getCpsLimit() {
+    public Output</* @Nullable */ Integer> cpsLimit() {
         return this.cpsLimit;
     }
     /**
@@ -84,7 +85,7 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
      * @return The default caller ID phone number.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultPhoneNumber() {
+    public Output</* @Nullable */ String> defaultPhoneNumber() {
         return this.defaultPhoneNumber;
     }
     /**
@@ -98,7 +99,7 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
      * @return When termination settings are disabled, outbound calls can not be made.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -112,7 +113,7 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
      * @return The Amazon Chime Voice Connector ID.
      * 
      */
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 
@@ -138,7 +139,7 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public VoiceConnectorTermination(String name, VoiceConnectorTerminationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:chime/voiceConnectorTermination:VoiceConnectorTermination", name, args == null ? VoiceConnectorTerminationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:chime/voiceConnectorTermination:VoiceConnectorTermination", name, args == null ? VoiceConnectorTerminationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VoiceConnectorTermination(String name, Output<String> id, @Nullable VoiceConnectorTerminationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

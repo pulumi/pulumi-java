@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.CriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="criteria", required=true)
       private final Output<List<CriteriaArgs>> criteria;
 
-    public Output<List<CriteriaArgs>> getCriteria() {
+    public Output<List<CriteriaArgs>> criteria() {
         return this.criteria;
     }
 
@@ -38,7 +39,7 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -50,8 +51,8 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LogToMetricActionArgs() {
-        this.criteria = Output.empty();
-        this.odataType = Output.empty();
+        this.criteria = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {

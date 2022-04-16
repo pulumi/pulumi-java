@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.PageArgs;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EventHandlerResponse;
@@ -33,7 +34,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the page, unique within the agent.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -47,7 +48,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @return The fulfillment to call when the session is entering the page.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3FulfillmentResponse> getEntryFulfillment() {
+    public Output<GoogleCloudDialogflowCxV3FulfillmentResponse> entryFulfillment() {
         return this.entryFulfillment;
     }
     /**
@@ -61,7 +62,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @return Handlers associated with the page to handle events such as webhook errors, no match or no input.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3EventHandlerResponse>> getEventHandlers() {
+    public Output<List<GoogleCloudDialogflowCxV3EventHandlerResponse>> eventHandlers() {
         return this.eventHandlers;
     }
     /**
@@ -75,7 +76,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @return The form associated with the page, used for collecting parameters relevant to the page.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3FormResponse> getForm() {
+    public Output<GoogleCloudDialogflowCxV3FormResponse> form() {
         return this.form;
     }
     /**
@@ -89,7 +90,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +104,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @return Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
      * 
      */
-    public Output<List<String>> getTransitionRouteGroups() {
+    public Output<List<String>> transitionRouteGroups() {
         return this.transitionRouteGroups;
     }
     /**
@@ -117,7 +118,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @return A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3TransitionRouteResponse>> getTransitionRoutes() {
+    public Output<List<GoogleCloudDialogflowCxV3TransitionRouteResponse>> transitionRoutes() {
         return this.transitionRoutes;
     }
 
@@ -143,7 +144,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Page(String name, PageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3:Page", name, args == null ? PageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3:Page", name, args == null ? PageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Page(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

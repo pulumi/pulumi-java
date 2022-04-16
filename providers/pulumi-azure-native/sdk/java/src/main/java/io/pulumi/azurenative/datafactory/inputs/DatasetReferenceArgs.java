@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,Object>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName;
     }
 
@@ -49,7 +50,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -63,9 +64,9 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatasetReferenceArgs() {
-        this.parameters = Output.empty();
-        this.referenceName = Output.empty();
-        this.type = Output.empty();
+        this.parameters = Codegen.empty();
+        this.referenceName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder referenceName(Output<String> referenceName) {

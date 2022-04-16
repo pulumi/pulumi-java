@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,14 +19,14 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<TaxonomyIamMemberConditionArgs> condition;
 
-    public Output<TaxonomyIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<TaxonomyIamMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -37,15 +38,15 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -68,7 +69,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="taxonomy", required=true)
       private final Output<String> taxonomy;
 
-    public Output<String> getTaxonomy() {
+    public Output<String> taxonomy() {
         return this.taxonomy;
     }
 
@@ -88,12 +89,12 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TaxonomyIamMemberArgs() {
-        this.condition = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.role = Output.empty();
-        this.taxonomy = Output.empty();
+        this.condition = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.role = Codegen.empty();
+        this.taxonomy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable TaxonomyIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder member(Output<String> member) {
@@ -147,7 +148,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -155,7 +156,7 @@ public final class TaxonomyIamMemberArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder role(Output<String> role) {

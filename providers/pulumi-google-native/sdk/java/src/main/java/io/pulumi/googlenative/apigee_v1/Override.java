@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.OverrideArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TraceSamplingConfigResponse;
@@ -29,7 +30,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @return ID of the API proxy that will have its trace configuration overridden.
      * 
      */
-    public Output<String> getApiProxy() {
+    public Output<String> apiProxy() {
         return this.apiProxy;
     }
     /**
@@ -43,7 +44,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @return ID of the trace configuration override specified as a system-generated UUID.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @return Trace configuration to override.
      * 
      */
-    public Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> getSamplingConfig() {
+    public Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> samplingConfig() {
         return this.samplingConfig;
     }
 
@@ -83,7 +84,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Override(String name, OverrideArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Override", name, args == null ? OverrideArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Override", name, args == null ? OverrideArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Override(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

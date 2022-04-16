@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupNames", required=true)
       private final Output<List<String>> groupNames;
 
-    public Output<List<String>> getGroupNames() {
+    public Output<List<String>> groupNames() {
         return this.groupNames;
     }
 
@@ -33,7 +34,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notifications", required=true)
       private final Output<List<String>> notifications;
 
-    public Output<List<String>> getNotifications() {
+    public Output<List<String>> notifications() {
         return this.notifications;
     }
 
@@ -44,7 +45,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 
@@ -58,9 +59,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationArgs() {
-        this.groupNames = Output.empty();
-        this.notifications = Output.empty();
-        this.topicArn = Output.empty();
+        this.groupNames = Codegen.empty();
+        this.notifications = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {

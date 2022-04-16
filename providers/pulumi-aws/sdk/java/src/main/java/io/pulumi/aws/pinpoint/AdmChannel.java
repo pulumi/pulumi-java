@@ -9,6 +9,7 @@ import io.pulumi.aws.pinpoint.inputs.AdmChannelState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -54,7 +55,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * @return Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -68,7 +69,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * @return Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
      * 
      */
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -82,7 +83,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies whether to enable the channel. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
 
@@ -108,7 +109,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AdmChannel(String name, AdmChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:pinpoint/admChannel:AdmChannel", name, args == null ? AdmChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:pinpoint/admChannel:AdmChannel", name, args == null ? AdmChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AdmChannel(String name, Output<String> id, @Nullable AdmChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

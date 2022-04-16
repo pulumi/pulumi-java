@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.apigateway.inputs.ApiIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,21 +20,21 @@ public final class ApiIamBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="api", required=true)
       private final Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
 
     @Import(name="condition")
       private final @Nullable Output<ApiIamBindingConditionArgs> condition;
 
-    public Output<ApiIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<ApiIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -45,8 +46,8 @@ public final class ApiIamBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ApiIamBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -76,11 +77,11 @@ public final class ApiIamBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiIamBindingArgs() {
-        this.api = Output.empty();
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.api = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ApiIamBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable ApiIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -143,7 +144,7 @@ public final class ApiIamBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

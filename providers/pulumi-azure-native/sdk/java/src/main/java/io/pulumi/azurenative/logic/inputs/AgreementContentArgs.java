@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.inputs.EdifactAgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.X12AgreementContentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,8 +28,8 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="aS2")
       private final @Nullable Output<AS2AgreementContentArgs> aS2;
 
-    public Output<AS2AgreementContentArgs> getAS2() {
-        return this.aS2 == null ? Output.empty() : this.aS2;
+    public Output<AS2AgreementContentArgs> aS2() {
+        return this.aS2 == null ? Codegen.empty() : this.aS2;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="edifact")
       private final @Nullable Output<EdifactAgreementContentArgs> edifact;
 
-    public Output<EdifactAgreementContentArgs> getEdifact() {
-        return this.edifact == null ? Output.empty() : this.edifact;
+    public Output<EdifactAgreementContentArgs> edifact() {
+        return this.edifact == null ? Codegen.empty() : this.edifact;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="x12")
       private final @Nullable Output<X12AgreementContentArgs> x12;
 
-    public Output<X12AgreementContentArgs> getX12() {
-        return this.x12 == null ? Output.empty() : this.x12;
+    public Output<X12AgreementContentArgs> x12() {
+        return this.x12 == null ? Codegen.empty() : this.x12;
     }
 
     public AgreementContentArgs(
@@ -63,9 +64,9 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AgreementContentArgs() {
-        this.aS2 = Output.empty();
-        this.edifact = Output.empty();
-        this.x12 = Output.empty();
+        this.aS2 = Codegen.empty();
+        this.edifact = Codegen.empty();
+        this.x12 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder aS2(@Nullable AS2AgreementContentArgs aS2) {
-            this.aS2 = Output.ofNullable(aS2);
+            this.aS2 = Codegen.ofNullable(aS2);
             return this;
         }
         public Builder edifact(@Nullable Output<EdifactAgreementContentArgs> edifact) {
@@ -105,7 +106,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder edifact(@Nullable EdifactAgreementContentArgs edifact) {
-            this.edifact = Output.ofNullable(edifact);
+            this.edifact = Codegen.ofNullable(edifact);
             return this;
         }
         public Builder x12(@Nullable Output<X12AgreementContentArgs> x12) {
@@ -113,7 +114,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder x12(@Nullable X12AgreementContentArgs x12) {
-            this.x12 = Output.ofNullable(x12);
+            this.x12 = Codegen.ofNullable(x12);
             return this;
         }        public AgreementContentArgs build() {
             return new AgreementContentArgs(aS2, edifact, x12);

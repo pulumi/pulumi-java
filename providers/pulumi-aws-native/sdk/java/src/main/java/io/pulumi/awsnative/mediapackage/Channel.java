@@ -11,6 +11,7 @@ import io.pulumi.awsnative.mediapackage.outputs.ChannelTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned to the Channel.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A short text description of the Channel.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ ChannelLogConfiguration> getEgressAccessLogs() {
+    public Output</* @Nullable */ ChannelLogConfiguration> egressAccessLogs() {
         return this.egressAccessLogs;
     }
     /**
@@ -74,7 +75,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A short text description of the Channel.
      * 
      */
-    public Output<ChannelHlsIngest> getHlsIngest() {
+    public Output<ChannelHlsIngest> hlsIngest() {
         return this.hlsIngest;
     }
     /**
@@ -88,7 +89,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ ChannelLogConfiguration> getIngressAccessLogs() {
+    public Output</* @Nullable */ ChannelLogConfiguration> ingressAccessLogs() {
         return this.ingressAccessLogs;
     }
     /**
@@ -102,7 +103,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<ChannelTag>> getTags() {
+    public Output</* @Nullable */ List<ChannelTag>> tags() {
         return this.tags;
     }
 
@@ -128,7 +129,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Channel(String name, @Nullable ChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediapackage:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediapackage:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Channel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

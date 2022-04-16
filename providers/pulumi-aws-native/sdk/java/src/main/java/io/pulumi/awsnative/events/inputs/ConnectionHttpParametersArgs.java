@@ -6,6 +6,7 @@ package io.pulumi.awsnative.events.inputs;
 import io.pulumi.awsnative.events.inputs.ConnectionParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,22 +19,22 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
     @Import(name="bodyParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> bodyParameters;
 
-    public Output<List<ConnectionParameterArgs>> getBodyParameters() {
-        return this.bodyParameters == null ? Output.empty() : this.bodyParameters;
+    public Output<List<ConnectionParameterArgs>> bodyParameters() {
+        return this.bodyParameters == null ? Codegen.empty() : this.bodyParameters;
     }
 
     @Import(name="headerParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> headerParameters;
 
-    public Output<List<ConnectionParameterArgs>> getHeaderParameters() {
-        return this.headerParameters == null ? Output.empty() : this.headerParameters;
+    public Output<List<ConnectionParameterArgs>> headerParameters() {
+        return this.headerParameters == null ? Codegen.empty() : this.headerParameters;
     }
 
     @Import(name="queryStringParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> queryStringParameters;
 
-    public Output<List<ConnectionParameterArgs>> getQueryStringParameters() {
-        return this.queryStringParameters == null ? Output.empty() : this.queryStringParameters;
+    public Output<List<ConnectionParameterArgs>> queryStringParameters() {
+        return this.queryStringParameters == null ? Codegen.empty() : this.queryStringParameters;
     }
 
     public ConnectionHttpParametersArgs(
@@ -46,9 +47,9 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
     }
 
     private ConnectionHttpParametersArgs() {
-        this.bodyParameters = Output.empty();
-        this.headerParameters = Output.empty();
-        this.queryStringParameters = Output.empty();
+        this.bodyParameters = Codegen.empty();
+        this.headerParameters = Codegen.empty();
+        this.queryStringParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder bodyParameters(@Nullable List<ConnectionParameterArgs> bodyParameters) {
-            this.bodyParameters = Output.ofNullable(bodyParameters);
+            this.bodyParameters = Codegen.ofNullable(bodyParameters);
             return this;
         }
         public Builder bodyParameters(ConnectionParameterArgs... bodyParameters) {
@@ -91,7 +92,7 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder headerParameters(@Nullable List<ConnectionParameterArgs> headerParameters) {
-            this.headerParameters = Output.ofNullable(headerParameters);
+            this.headerParameters = Codegen.ofNullable(headerParameters);
             return this;
         }
         public Builder headerParameters(ConnectionParameterArgs... headerParameters) {
@@ -102,7 +103,7 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder queryStringParameters(@Nullable List<ConnectionParameterArgs> queryStringParameters) {
-            this.queryStringParameters = Output.ofNullable(queryStringParameters);
+            this.queryStringParameters = Codegen.ofNullable(queryStringParameters);
             return this;
         }
         public Builder queryStringParameters(ConnectionParameterArgs... queryStringParameters) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class CachePolicyCookiesConfigArgs extends io.pulumi.resources.Reso
     @Import(name="cookieBehavior", required=true)
       private final Output<String> cookieBehavior;
 
-    public Output<String> getCookieBehavior() {
+    public Output<String> cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
       private final @Nullable Output<List<String>> cookies;
 
-    public Output<List<String>> getCookies() {
-        return this.cookies == null ? Output.empty() : this.cookies;
+    public Output<List<String>> cookies() {
+        return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 
     public CachePolicyCookiesConfigArgs(
@@ -37,8 +38,8 @@ public final class CachePolicyCookiesConfigArgs extends io.pulumi.resources.Reso
     }
 
     private CachePolicyCookiesConfigArgs() {
-        this.cookieBehavior = Output.empty();
-        this.cookies = Output.empty();
+        this.cookieBehavior = Codegen.empty();
+        this.cookies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CachePolicyCookiesConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder cookies(@Nullable List<String> cookies) {
-            this.cookies = Output.ofNullable(cookies);
+            this.cookies = Codegen.ofNullable(cookies);
             return this;
         }
         public Builder cookies(String... cookies) {

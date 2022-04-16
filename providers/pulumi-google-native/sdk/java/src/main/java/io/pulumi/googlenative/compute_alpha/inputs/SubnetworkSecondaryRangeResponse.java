@@ -23,7 +23,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
     @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -34,7 +34,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
     @Import(name="rangeName", required=true)
       private final String rangeName;
 
-    public String getRangeName() {
+    public String rangeName() {
         return this.rangeName;
     }
 
@@ -45,7 +45,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
     @Import(name="reservedInternalRange", required=true)
       private final String reservedInternalRange;
 
-    public String getReservedInternalRange() {
+    public String reservedInternalRange() {
         return this.reservedInternalRange;
     }
 

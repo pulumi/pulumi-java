@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="snapshotPolicyId")
       private final @Nullable Output<String> snapshotPolicyId;
 
-    public Output<String> getSnapshotPolicyId() {
-        return this.snapshotPolicyId == null ? Output.empty() : this.snapshotPolicyId;
+    public Output<String> snapshotPolicyId() {
+        return this.snapshotPolicyId == null ? Codegen.empty() : this.snapshotPolicyId;
     }
 
     public VolumeSnapshotPropertiesArgs(@Nullable Output<String> snapshotPolicyId) {
@@ -34,7 +35,7 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private VolumeSnapshotPropertiesArgs() {
-        this.snapshotPolicyId = Output.empty();
+        this.snapshotPolicyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
-            this.snapshotPolicyId = Output.ofNullable(snapshotPolicyId);
+            this.snapshotPolicyId = Codegen.ofNullable(snapshotPolicyId);
             return this;
         }        public VolumeSnapshotPropertiesArgs build() {
             return new VolumeSnapshotPropertiesArgs(snapshotPolicyId);

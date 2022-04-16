@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsRegion")
       private final @Nullable Output<String> analyticsRegion;
 
-    public Output<String> getAnalyticsRegion() {
-        return this.analyticsRegion == null ? Output.empty() : this.analyticsRegion;
+    public Output<String> analyticsRegion() {
+        return this.analyticsRegion == null ? Codegen.empty() : this.analyticsRegion;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
+    public Output<String> authorizedNetwork() {
+        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -81,8 +82,8 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Output.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Output<String> runtimeDatabaseEncryptionKeyName() {
+        return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeType")
       private final @Nullable Output<String> runtimeType;
 
-    public Output<String> getRuntimeType() {
-        return this.runtimeType == null ? Output.empty() : this.runtimeType;
+    public Output<String> runtimeType() {
+        return this.runtimeType == null ? Codegen.empty() : this.runtimeType;
     }
 
     public OrganizationArgs(
@@ -116,13 +117,13 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationArgs() {
-        this.analyticsRegion = Output.empty();
-        this.authorizedNetwork = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.projectId = Output.empty();
-        this.runtimeDatabaseEncryptionKeyName = Output.empty();
-        this.runtimeType = Output.empty();
+        this.analyticsRegion = Codegen.empty();
+        this.authorizedNetwork = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.runtimeDatabaseEncryptionKeyName = Codegen.empty();
+        this.runtimeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder analyticsRegion(@Nullable String analyticsRegion) {
-            this.analyticsRegion = Output.ofNullable(analyticsRegion);
+            this.analyticsRegion = Codegen.ofNullable(analyticsRegion);
             return this;
         }
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
@@ -170,7 +171,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -178,7 +179,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -186,7 +187,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder projectId(Output<String> projectId) {
@@ -202,7 +203,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
+            this.runtimeDatabaseEncryptionKeyName = Codegen.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
         public Builder runtimeType(@Nullable Output<String> runtimeType) {
@@ -210,7 +211,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeType(@Nullable String runtimeType) {
-            this.runtimeType = Output.ofNullable(runtimeType);
+            this.runtimeType = Codegen.ofNullable(runtimeType);
             return this;
         }        public OrganizationArgs build() {
             return new OrganizationArgs(analyticsRegion, authorizedNetwork, description, displayName, projectId, runtimeDatabaseEncryptionKeyName, runtimeType);

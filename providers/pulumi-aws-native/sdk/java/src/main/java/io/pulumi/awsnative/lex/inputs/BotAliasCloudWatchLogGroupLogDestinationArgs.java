@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
     @Import(name="cloudWatchLogGroupArn", required=true)
       private final Output<String> cloudWatchLogGroupArn;
 
-    public Output<String> getCloudWatchLogGroupArn() {
+    public Output<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
 
@@ -31,7 +32,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
     @Import(name="logPrefix", required=true)
       private final Output<String> logPrefix;
 
-    public Output<String> getLogPrefix() {
+    public Output<String> logPrefix() {
         return this.logPrefix;
     }
 
@@ -43,8 +44,8 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
     }
 
     private BotAliasCloudWatchLogGroupLogDestinationArgs() {
-        this.cloudWatchLogGroupArn = Output.empty();
-        this.logPrefix = Output.empty();
+        this.cloudWatchLogGroupArn = Codegen.empty();
+        this.logPrefix = Codegen.empty();
     }
 
     public static Builder builder() {

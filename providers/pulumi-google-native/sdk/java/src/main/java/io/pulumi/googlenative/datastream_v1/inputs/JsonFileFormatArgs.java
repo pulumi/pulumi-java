@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatCompression;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatSchemaFileFormat;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compression")
       private final @Nullable Output<JsonFileFormatCompression> compression;
 
-    public Output<JsonFileFormatCompression> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+    public Output<JsonFileFormatCompression> compression() {
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaFileFormat")
       private final @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 
-    public Output<JsonFileFormatSchemaFileFormat> getSchemaFileFormat() {
-        return this.schemaFileFormat == null ? Output.empty() : this.schemaFileFormat;
+    public Output<JsonFileFormatSchemaFileFormat> schemaFileFormat() {
+        return this.schemaFileFormat == null ? Codegen.empty() : this.schemaFileFormat;
     }
 
     public JsonFileFormatArgs(
@@ -49,8 +50,8 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JsonFileFormatArgs() {
-        this.compression = Output.empty();
-        this.schemaFileFormat = Output.empty();
+        this.compression = Codegen.empty();
+        this.schemaFileFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compression(@Nullable JsonFileFormatCompression compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder schemaFileFormat(@Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat) {
@@ -88,7 +89,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaFileFormat(@Nullable JsonFileFormatSchemaFileFormat schemaFileFormat) {
-            this.schemaFileFormat = Output.ofNullable(schemaFileFormat);
+            this.schemaFileFormat = Codegen.ofNullable(schemaFileFormat);
             return this;
         }        public JsonFileFormatArgs build() {
             return new JsonFileFormatArgs(compression, schemaFileFormat);

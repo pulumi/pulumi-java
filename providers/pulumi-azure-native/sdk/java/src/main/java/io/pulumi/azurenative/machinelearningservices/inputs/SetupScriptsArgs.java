@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ScriptsToExecuteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scripts")
       private final @Nullable Output<ScriptsToExecuteArgs> scripts;
 
-    public Output<ScriptsToExecuteArgs> getScripts() {
-        return this.scripts == null ? Output.empty() : this.scripts;
+    public Output<ScriptsToExecuteArgs> scripts() {
+        return this.scripts == null ? Codegen.empty() : this.scripts;
     }
 
     public SetupScriptsArgs(@Nullable Output<ScriptsToExecuteArgs> scripts) {
@@ -34,7 +35,7 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SetupScriptsArgs() {
-        this.scripts = Output.empty();
+        this.scripts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scripts(@Nullable ScriptsToExecuteArgs scripts) {
-            this.scripts = Output.ofNullable(scripts);
+            this.scripts = Codegen.ofNullable(scripts);
             return this;
         }        public SetupScriptsArgs build() {
             return new SetupScriptsArgs(scripts);

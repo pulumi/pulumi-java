@@ -25,7 +25,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
       private final List<FieldResponse> fields;
 
-    public List<FieldResponse> getFields() {
+    public List<FieldResponse> fields() {
         return this.fields;
     }
 
@@ -36,7 +36,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="primitive", required=true)
       private final String primitive;
 
-    public String getPrimitive() {
+    public String primitive() {
         return this.primitive;
     }
 

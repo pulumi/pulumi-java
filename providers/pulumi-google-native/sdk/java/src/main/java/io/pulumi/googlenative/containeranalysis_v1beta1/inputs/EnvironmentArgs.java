@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customValues")
       private final @Nullable Output<Map<String,String>> customValues;
 
-    public Output<Map<String,String>> getCustomValues() {
-        return this.customValues == null ? Output.empty() : this.customValues;
+    public Output<Map<String,String>> customValues() {
+        return this.customValues == null ? Codegen.empty() : this.customValues;
     }
 
     public EnvironmentArgs(@Nullable Output<Map<String,String>> customValues) {
@@ -31,7 +32,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.customValues = Output.empty();
+        this.customValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customValues(@Nullable Map<String,String> customValues) {
-            this.customValues = Output.ofNullable(customValues);
+            this.customValues = Codegen.ofNullable(customValues);
             return this;
         }        public EnvironmentArgs build() {
             return new EnvironmentArgs(customValues);

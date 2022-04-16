@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotfleethub;
 import io.pulumi.awsnative.iotfleethub.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationDescription")
       private final @Nullable Output<String> applicationDescription;
 
-    public Output<String> getApplicationDescription() {
-        return this.applicationDescription == null ? Output.empty() : this.applicationDescription;
+    public Output<String> applicationDescription() {
+        return this.applicationDescription == null ? Codegen.empty() : this.applicationDescription;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+    public Output<String> applicationName() {
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -56,8 +57,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ApplicationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationArgs(
@@ -72,10 +73,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationDescription = Output.empty();
-        this.applicationName = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.applicationDescription = Codegen.empty();
+        this.applicationName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationDescription(@Nullable String applicationDescription) {
-            this.applicationDescription = Output.ofNullable(applicationDescription);
+            this.applicationDescription = Codegen.ofNullable(applicationDescription);
             return this;
         }
         public Builder applicationName(@Nullable Output<String> applicationName) {
@@ -117,7 +118,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -133,7 +134,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ApplicationTagArgs... tags) {

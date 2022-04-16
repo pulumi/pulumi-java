@@ -6,6 +6,7 @@ package io.pulumi.azurenative.domainregistration.inputs;
 import io.pulumi.azurenative.domainregistration.inputs.AddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressMailing")
       private final @Nullable Output<AddressArgs> addressMailing;
 
-    public Output<AddressArgs> getAddressMailing() {
-        return this.addressMailing == null ? Output.empty() : this.addressMailing;
+    public Output<AddressArgs> addressMailing() {
+        return this.addressMailing == null ? Codegen.empty() : this.addressMailing;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -49,8 +50,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fax")
       private final @Nullable Output<String> fax;
 
-    public Output<String> getFax() {
-        return this.fax == null ? Output.empty() : this.fax;
+    public Output<String> fax() {
+        return this.fax == null ? Codegen.empty() : this.fax;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobTitle")
       private final @Nullable Output<String> jobTitle;
 
-    public Output<String> getJobTitle() {
-        return this.jobTitle == null ? Output.empty() : this.jobTitle;
+    public Output<String> jobTitle() {
+        return this.jobTitle == null ? Codegen.empty() : this.jobTitle;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameFirst", required=true)
       private final Output<String> nameFirst;
 
-    public Output<String> getNameFirst() {
+    public Output<String> nameFirst() {
         return this.nameFirst;
     }
 
@@ -82,7 +83,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameLast", required=true)
       private final Output<String> nameLast;
 
-    public Output<String> getNameLast() {
+    public Output<String> nameLast() {
         return this.nameLast;
     }
 
@@ -93,8 +94,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameMiddle")
       private final @Nullable Output<String> nameMiddle;
 
-    public Output<String> getNameMiddle() {
-        return this.nameMiddle == null ? Output.empty() : this.nameMiddle;
+    public Output<String> nameMiddle() {
+        return this.nameMiddle == null ? Codegen.empty() : this.nameMiddle;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
-        return this.organization == null ? Output.empty() : this.organization;
+    public Output<String> organization() {
+        return this.organization == null ? Codegen.empty() : this.organization;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phone", required=true)
       private final Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone;
     }
 
@@ -141,15 +142,15 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.addressMailing = Output.empty();
-        this.email = Output.empty();
-        this.fax = Output.empty();
-        this.jobTitle = Output.empty();
-        this.nameFirst = Output.empty();
-        this.nameLast = Output.empty();
-        this.nameMiddle = Output.empty();
-        this.organization = Output.empty();
-        this.phone = Output.empty();
+        this.addressMailing = Codegen.empty();
+        this.email = Codegen.empty();
+        this.fax = Codegen.empty();
+        this.jobTitle = Codegen.empty();
+        this.nameFirst = Codegen.empty();
+        this.nameLast = Codegen.empty();
+        this.nameMiddle = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.phone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressMailing(@Nullable AddressArgs addressMailing) {
-            this.addressMailing = Output.ofNullable(addressMailing);
+            this.addressMailing = Codegen.ofNullable(addressMailing);
             return this;
         }
         public Builder email(Output<String> email) {
@@ -209,7 +210,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fax(@Nullable String fax) {
-            this.fax = Output.ofNullable(fax);
+            this.fax = Codegen.ofNullable(fax);
             return this;
         }
         public Builder jobTitle(@Nullable Output<String> jobTitle) {
@@ -217,7 +218,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobTitle(@Nullable String jobTitle) {
-            this.jobTitle = Output.ofNullable(jobTitle);
+            this.jobTitle = Codegen.ofNullable(jobTitle);
             return this;
         }
         public Builder nameFirst(Output<String> nameFirst) {
@@ -241,7 +242,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nameMiddle(@Nullable String nameMiddle) {
-            this.nameMiddle = Output.ofNullable(nameMiddle);
+            this.nameMiddle = Codegen.ofNullable(nameMiddle);
             return this;
         }
         public Builder organization(@Nullable Output<String> organization) {
@@ -249,7 +250,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder organization(@Nullable String organization) {
-            this.organization = Output.ofNullable(organization);
+            this.organization = Codegen.ofNullable(organization);
             return this;
         }
         public Builder phone(Output<String> phone) {

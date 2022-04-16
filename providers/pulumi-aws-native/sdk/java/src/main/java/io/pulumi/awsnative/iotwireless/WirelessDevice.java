@@ -11,6 +11,7 @@ import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return Wireless device arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return Wireless device description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return Wireless device destination name
      * 
      */
-    public Output<String> getDestinationName() {
+    public Output<String> destinationName() {
         return this.destinationName;
     }
     /**
@@ -74,7 +75,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return The date and time when the most recent uplink was received.
      * 
      */
-    public Output</* @Nullable */ String> getLastUplinkReceivedAt() {
+    public Output</* @Nullable */ String> lastUplinkReceivedAt() {
         return this.lastUplinkReceivedAt;
     }
     /**
@@ -88,7 +89,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
      * 
      */
-    public Output</* @Nullable */ WirelessDeviceLoRaWANDevice> getLoRaWAN() {
+    public Output</* @Nullable */ WirelessDeviceLoRaWANDevice> loRaWAN() {
         return this.loRaWAN;
     }
     /**
@@ -102,7 +103,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return Wireless device name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
      * 
      */
-    public Output</* @Nullable */ List<WirelessDeviceTag>> getTags() {
+    public Output</* @Nullable */ List<WirelessDeviceTag>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +131,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return Thing arn. Passed into update to associate Thing with Wireless device.
      * 
      */
-    public Output</* @Nullable */ String> getThingArn() {
+    public Output</* @Nullable */ String> thingArn() {
         return this.thingArn;
     }
     /**
@@ -144,7 +145,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return Thing Arn. If there is a Thing created, this can be returned with a Get call.
      * 
      */
-    public Output<String> getThingName() {
+    public Output<String> thingName() {
         return this.thingName;
     }
     /**
@@ -158,7 +159,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @return Wireless device type, currently only Sidewalk and LoRa
      * 
      */
-    public Output<WirelessDeviceType> getType() {
+    public Output<WirelessDeviceType> type() {
         return this.type;
     }
 
@@ -184,7 +185,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessDevice(String name, WirelessDeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotwireless:WirelessDevice", name, args == null ? WirelessDeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotwireless:WirelessDevice", name, args == null ? WirelessDeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessDevice(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

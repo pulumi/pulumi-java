@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields", required=true)
       private final Output<List<TagTemplateFieldArgs>> fields;
 
-    public Output<List<TagTemplateFieldArgs>> getFields() {
+    public Output<List<TagTemplateFieldArgs>> fields() {
         return this.fields;
     }
 
@@ -47,8 +48,8 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Output.empty() : this.forceDelete;
+    public Output<Boolean> forceDelete() {
+        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagTemplateId", required=true)
       private final Output<String> tagTemplateId;
 
-    public Output<String> getTagTemplateId() {
+    public Output<String> tagTemplateId() {
         return this.tagTemplateId;
     }
 
@@ -101,12 +102,12 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagTemplateArgs() {
-        this.displayName = Output.empty();
-        this.fields = Output.empty();
-        this.forceDelete = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.tagTemplateId = Output.empty();
+        this.displayName = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.forceDelete = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.tagTemplateId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder fields(Output<List<TagTemplateFieldArgs>> fields) {
@@ -163,7 +164,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Output.ofNullable(forceDelete);
+            this.forceDelete = Codegen.ofNullable(forceDelete);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -171,7 +172,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -179,7 +180,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder tagTemplateId(Output<String> tagTemplateId) {

@@ -100,7 +100,7 @@ public final class URLMapDefaultRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionCorsPolicy> getCorsPolicy() {
+    public Optional<URLMapDefaultRouteActionCorsPolicy> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
     /**
@@ -112,7 +112,7 @@ public final class URLMapDefaultRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionFaultInjectionPolicy> getFaultInjectionPolicy() {
+    public Optional<URLMapDefaultRouteActionFaultInjectionPolicy> faultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
     /**
@@ -122,7 +122,7 @@ public final class URLMapDefaultRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionRequestMirrorPolicy> getRequestMirrorPolicy() {
+    public Optional<URLMapDefaultRouteActionRequestMirrorPolicy> requestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
     /**
@@ -130,7 +130,7 @@ public final class URLMapDefaultRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionRetryPolicy> getRetryPolicy() {
+    public Optional<URLMapDefaultRouteActionRetryPolicy> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
@@ -140,7 +140,7 @@ public final class URLMapDefaultRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionTimeout> getTimeout() {
+    public Optional<URLMapDefaultRouteActionTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -148,7 +148,7 @@ public final class URLMapDefaultRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionUrlRewrite> getUrlRewrite() {
+    public Optional<URLMapDefaultRouteActionUrlRewrite> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
     /**
@@ -162,7 +162,7 @@ public final class URLMapDefaultRouteAction {
      * Structure is documented below.
      * 
     */
-    public List<URLMapDefaultRouteActionWeightedBackendService> getWeightedBackendServices() {
+    public List<URLMapDefaultRouteActionWeightedBackendService> weightedBackendServices() {
         return this.weightedBackendServices == null ? List.of() : this.weightedBackendServices;
     }
 

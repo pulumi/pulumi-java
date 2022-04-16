@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datacatalog_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1.EntryGroupArgs;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1SystemTimestampsResponse;
@@ -29,7 +30,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @return Timestamps of the entry group. Default value is empty.
      * 
      */
-    public Output<GoogleCloudDatacatalogV1SystemTimestampsResponse> getDataCatalogTimestamps() {
+    public Output<GoogleCloudDatacatalogV1SystemTimestampsResponse> dataCatalogTimestamps() {
         return this.dataCatalogTimestamps;
     }
     /**
@@ -43,7 +44,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @return Entry group description. Can consist of several sentences or paragraphs that describe the entry group contents. Default value is an empty string.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @return A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +72,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @return The resource name of the entry group in URL format. Note: The entry group itself and its child resources might not be stored in the location specified in its name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -97,7 +98,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntryGroup(String name, EntryGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datacatalog/v1:EntryGroup", name, args == null ? EntryGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datacatalog/v1:EntryGroup", name, args == null ? EntryGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EntryGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

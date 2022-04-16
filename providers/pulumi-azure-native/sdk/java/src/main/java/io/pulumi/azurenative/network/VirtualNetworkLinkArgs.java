@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privateZoneName", required=true)
       private final Output<String> privateZoneName;
 
-    public Output<String> getPrivateZoneName() {
+    public Output<String> privateZoneName() {
         return this.privateZoneName;
     }
 
@@ -46,8 +47,8 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="registrationEnabled")
       private final @Nullable Output<Boolean> registrationEnabled;
 
-    public Output<Boolean> getRegistrationEnabled() {
-        return this.registrationEnabled == null ? Output.empty() : this.registrationEnabled;
+    public Output<Boolean> registrationEnabled() {
+        return this.registrationEnabled == null ? Codegen.empty() : this.registrationEnabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,8 +69,8 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetwork")
       private final @Nullable Output<SubResourceArgs> virtualNetwork;
 
-    public Output<SubResourceArgs> getVirtualNetwork() {
-        return this.virtualNetwork == null ? Output.empty() : this.virtualNetwork;
+    public Output<SubResourceArgs> virtualNetwork() {
+        return this.virtualNetwork == null ? Codegen.empty() : this.virtualNetwork;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetworkLinkName")
       private final @Nullable Output<String> virtualNetworkLinkName;
 
-    public Output<String> getVirtualNetworkLinkName() {
-        return this.virtualNetworkLinkName == null ? Output.empty() : this.virtualNetworkLinkName;
+    public Output<String> virtualNetworkLinkName() {
+        return this.virtualNetworkLinkName == null ? Codegen.empty() : this.virtualNetworkLinkName;
     }
 
     public VirtualNetworkLinkArgs(
@@ -112,13 +113,13 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VirtualNetworkLinkArgs() {
-        this.location = Output.empty();
-        this.privateZoneName = Output.empty();
-        this.registrationEnabled = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.virtualNetwork = Output.empty();
-        this.virtualNetworkLinkName = Output.empty();
+        this.location = Codegen.empty();
+        this.privateZoneName = Codegen.empty();
+        this.registrationEnabled = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualNetwork = Codegen.empty();
+        this.virtualNetworkLinkName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder privateZoneName(Output<String> privateZoneName) {
@@ -174,7 +175,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder registrationEnabled(@Nullable Boolean registrationEnabled) {
-            this.registrationEnabled = Output.ofNullable(registrationEnabled);
+            this.registrationEnabled = Codegen.ofNullable(registrationEnabled);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -190,7 +191,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualNetwork(@Nullable Output<SubResourceArgs> virtualNetwork) {
@@ -198,7 +199,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder virtualNetwork(@Nullable SubResourceArgs virtualNetwork) {
-            this.virtualNetwork = Output.ofNullable(virtualNetwork);
+            this.virtualNetwork = Codegen.ofNullable(virtualNetwork);
             return this;
         }
         public Builder virtualNetworkLinkName(@Nullable Output<String> virtualNetworkLinkName) {
@@ -206,7 +207,7 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder virtualNetworkLinkName(@Nullable String virtualNetworkLinkName) {
-            this.virtualNetworkLinkName = Output.ofNullable(virtualNetworkLinkName);
+            this.virtualNetworkLinkName = Codegen.ofNullable(virtualNetworkLinkName);
             return this;
         }        public VirtualNetworkLinkArgs build() {
             return new VirtualNetworkLinkArgs(location, privateZoneName, registrationEnabled, resourceGroupName, tags, virtualNetwork, virtualNetworkLinkName);

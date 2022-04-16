@@ -10,6 +10,7 @@ import io.pulumi.aws.cognito.outputs.ResourceServerScope;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * @return An identifier for the resource server.
      * 
      */
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier;
     }
     /**
@@ -55,7 +56,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * @return A name for the resource server.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * @return A list of all scopes configured for this resource server in the format identifier/scope_name.
      * 
      */
-    public Output<List<String>> getScopeIdentifiers() {
+    public Output<List<String>> scopeIdentifiers() {
         return this.scopeIdentifiers;
     }
     /**
@@ -83,13 +84,13 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * @return A list of Authorization Scope.
      * 
      */
-    public Output</* @Nullable */ List<ResourceServerScope>> getScopes() {
+    public Output</* @Nullable */ List<ResourceServerScope>> scopes() {
         return this.scopes;
     }
     @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -115,7 +116,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceServer(String name, ResourceServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/resourceServer:ResourceServer", name, args == null ? ResourceServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/resourceServer:ResourceServer", name, args == null ? ResourceServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceServer(String name, Output<String> id, @Nullable ResourceServerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

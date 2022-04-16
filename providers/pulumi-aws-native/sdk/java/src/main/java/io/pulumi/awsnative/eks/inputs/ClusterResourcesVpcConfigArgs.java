@@ -5,6 +5,7 @@ package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="endpointPrivateAccess")
       private final @Nullable Output<Boolean> endpointPrivateAccess;
 
-    public Output<Boolean> getEndpointPrivateAccess() {
-        return this.endpointPrivateAccess == null ? Output.empty() : this.endpointPrivateAccess;
+    public Output<Boolean> endpointPrivateAccess() {
+        return this.endpointPrivateAccess == null ? Codegen.empty() : this.endpointPrivateAccess;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="endpointPublicAccess")
       private final @Nullable Output<Boolean> endpointPublicAccess;
 
-    public Output<Boolean> getEndpointPublicAccess() {
-        return this.endpointPublicAccess == null ? Output.empty() : this.endpointPublicAccess;
+    public Output<Boolean> endpointPublicAccess() {
+        return this.endpointPublicAccess == null ? Codegen.empty() : this.endpointPublicAccess;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="publicAccessCidrs")
       private final @Nullable Output<List<String>> publicAccessCidrs;
 
-    public Output<List<String>> getPublicAccessCidrs() {
-        return this.publicAccessCidrs == null ? Output.empty() : this.publicAccessCidrs;
+    public Output<List<String>> publicAccessCidrs() {
+        return this.publicAccessCidrs == null ? Codegen.empty() : this.publicAccessCidrs;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+    public Output<List<String>> securityGroupIds() {
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -89,11 +90,11 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     }
 
     private ClusterResourcesVpcConfigArgs() {
-        this.endpointPrivateAccess = Output.empty();
-        this.endpointPublicAccess = Output.empty();
-        this.publicAccessCidrs = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
+        this.endpointPrivateAccess = Codegen.empty();
+        this.endpointPublicAccess = Codegen.empty();
+        this.publicAccessCidrs = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder endpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
-            this.endpointPrivateAccess = Output.ofNullable(endpointPrivateAccess);
+            this.endpointPrivateAccess = Codegen.ofNullable(endpointPrivateAccess);
             return this;
         }
         public Builder endpointPublicAccess(@Nullable Output<Boolean> endpointPublicAccess) {
@@ -137,7 +138,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
-            this.endpointPublicAccess = Output.ofNullable(endpointPublicAccess);
+            this.endpointPublicAccess = Codegen.ofNullable(endpointPublicAccess);
             return this;
         }
         public Builder publicAccessCidrs(@Nullable Output<List<String>> publicAccessCidrs) {
@@ -145,7 +146,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
-            this.publicAccessCidrs = Output.ofNullable(publicAccessCidrs);
+            this.publicAccessCidrs = Codegen.ofNullable(publicAccessCidrs);
             return this;
         }
         public Builder publicAccessCidrs(String... publicAccessCidrs) {
@@ -156,7 +157,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {

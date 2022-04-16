@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.RouteFilterRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,8 +58,8 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeFilterName")
       private final @Nullable Output<String> routeFilterName;
 
-    public Output<String> getRouteFilterName() {
-        return this.routeFilterName == null ? Output.empty() : this.routeFilterName;
+    public Output<String> routeFilterName() {
+        return this.routeFilterName == null ? Codegen.empty() : this.routeFilterName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<RouteFilterRuleArgs>> rules;
 
-    public Output<List<RouteFilterRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<RouteFilterRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RouteFilterArgs(
@@ -99,12 +100,12 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteFilterArgs() {
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routeFilterName = Output.empty();
-        this.rules = Output.empty();
-        this.tags = Output.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routeFilterName = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -150,7 +151,7 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -166,7 +167,7 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeFilterName(@Nullable String routeFilterName) {
-            this.routeFilterName = Output.ofNullable(routeFilterName);
+            this.routeFilterName = Codegen.ofNullable(routeFilterName);
             return this;
         }
         public Builder rules(@Nullable Output<List<RouteFilterRuleArgs>> rules) {
@@ -174,7 +175,7 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<RouteFilterRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RouteFilterRuleArgs... rules) {
@@ -185,7 +186,7 @@ public final class RouteFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RouteFilterArgs build() {
             return new RouteFilterArgs(id, location, resourceGroupName, routeFilterName, rules, tags);

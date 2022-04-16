@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The date and time on which the custom domain was created for the static site.
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -55,13 +56,13 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The domain name for the static site custom domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -75,7 +76,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -89,7 +90,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +104,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The status of the custom domain
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -117,7 +118,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -131,7 +132,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The TXT record validation token
      * 
      */
-    public Output<String> getValidationToken() {
+    public Output<String> validationToken() {
         return this.validationToken;
     }
 
@@ -157,7 +158,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StaticSiteCustomDomain(String name, StaticSiteCustomDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:StaticSiteCustomDomain", name, args == null ? StaticSiteCustomDomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:StaticSiteCustomDomain", name, args == null ? StaticSiteCustomDomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StaticSiteCustomDomain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

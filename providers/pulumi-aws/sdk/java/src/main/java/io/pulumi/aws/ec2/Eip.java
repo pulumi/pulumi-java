@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.EipState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -53,7 +54,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
      * 
      */
-    public Output</* @Nullable */ String> getAddress() {
+    public Output</* @Nullable */ String> address() {
         return this.address;
     }
     /**
@@ -67,7 +68,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
      * 
      */
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId;
     }
     /**
@@ -81,7 +82,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
      * 
      */
-    public Output</* @Nullable */ String> getAssociateWithPrivateIp() {
+    public Output</* @Nullable */ String> associateWithPrivateIp() {
         return this.associateWithPrivateIp;
     }
     /**
@@ -95,7 +96,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return ID representing the association of the address with an instance in a VPC.
      * 
      */
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -109,7 +110,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Carrier IP address.
      * 
      */
-    public Output<String> getCarrierIp() {
+    public Output<String> carrierIp() {
         return this.carrierIp;
     }
     /**
@@ -123,7 +124,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Customer owned IP.
      * 
      */
-    public Output<String> getCustomerOwnedIp() {
+    public Output<String> customerOwnedIp() {
         return this.customerOwnedIp;
     }
     /**
@@ -137,7 +138,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
      * 
      */
-    public Output</* @Nullable */ String> getCustomerOwnedIpv4Pool() {
+    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     /**
@@ -151,7 +152,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -165,7 +166,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return EC2 instance ID.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -179,7 +180,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Location from which the IP address is advertised. Use this parameter to limit the address to this location.
      * 
      */
-    public Output<String> getNetworkBorderGroup() {
+    public Output<String> networkBorderGroup() {
         return this.networkBorderGroup;
     }
     /**
@@ -193,7 +194,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Network interface ID to associate with.
      * 
      */
-    public Output<String> getNetworkInterface() {
+    public Output<String> networkInterface() {
         return this.networkInterface;
     }
     /**
@@ -207,7 +208,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return The Private DNS associated with the Elastic IP address (if in VPC).
      * 
      */
-    public Output<String> getPrivateDns() {
+    public Output<String> privateDns() {
         return this.privateDns;
     }
     /**
@@ -221,7 +222,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Contains the private IP address (if in VPC).
      * 
      */
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp;
     }
     /**
@@ -235,7 +236,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Public DNS associated with the Elastic IP address.
      * 
      */
-    public Output<String> getPublicDns() {
+    public Output<String> publicDns() {
         return this.publicDns;
     }
     /**
@@ -249,7 +250,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Contains the public IP address.
      * 
      */
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp;
     }
     /**
@@ -263,7 +264,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
      * 
      */
-    public Output<String> getPublicIpv4Pool() {
+    public Output<String> publicIpv4Pool() {
         return this.publicIpv4Pool;
     }
     /**
@@ -277,7 +278,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -291,7 +292,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -305,7 +306,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @return Boolean if the EIP is in a VPC or not.
      * 
      */
-    public Output<Boolean> getVpc() {
+    public Output<Boolean> vpc() {
         return this.vpc;
     }
 
@@ -331,7 +332,7 @@ public class Eip extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Eip(String name, @Nullable EipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/eip:Eip", name, args == null ? EipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/eip:Eip", name, args == null ? EipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Eip(String name, Output<String> id, @Nullable EipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

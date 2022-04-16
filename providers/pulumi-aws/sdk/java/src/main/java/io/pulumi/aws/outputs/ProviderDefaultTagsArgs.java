@@ -19,7 +19,7 @@ public final class ProviderDefaultTagsArgs {
         this.tags = tags;
     }
 
-    public @Nullable Output<Map<String,String>> getTags() {
+    public @Nullable Output<Map<String,String>> tags() {
         return this.tags;
     }
 

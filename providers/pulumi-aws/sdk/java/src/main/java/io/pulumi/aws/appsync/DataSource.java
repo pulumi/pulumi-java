@@ -14,6 +14,7 @@ import io.pulumi.aws.appsync.outputs.DataSourceRelationalDatabaseConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -44,7 +45,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return The API ID for the GraphQL API for the DataSource.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -58,7 +59,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return The ARN
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +73,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return A description of the DataSource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -86,7 +87,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return DynamoDB settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceDynamodbConfig> getDynamodbConfig() {
+    public Output</* @Nullable */ DataSourceDynamodbConfig> dynamodbConfig() {
         return this.dynamodbConfig;
     }
     /**
@@ -100,7 +101,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return Amazon Elasticsearch settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceElasticsearchConfig> getElasticsearchConfig() {
+    public Output</* @Nullable */ DataSourceElasticsearchConfig> elasticsearchConfig() {
         return this.elasticsearchConfig;
     }
     /**
@@ -114,7 +115,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return HTTP settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceHttpConfig> getHttpConfig() {
+    public Output</* @Nullable */ DataSourceHttpConfig> httpConfig() {
         return this.httpConfig;
     }
     /**
@@ -128,7 +129,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return AWS Lambda settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceLambdaConfig> getLambdaConfig() {
+    public Output</* @Nullable */ DataSourceLambdaConfig> lambdaConfig() {
         return this.lambdaConfig;
     }
     /**
@@ -142,7 +143,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return A user-supplied name for the DataSource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +157,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return AWS RDS settings. See Relational Database Config
      * 
      */
-    public Output</* @Nullable */ DataSourceRelationalDatabaseConfig> getRelationalDatabaseConfig() {
+    public Output</* @Nullable */ DataSourceRelationalDatabaseConfig> relationalDatabaseConfig() {
         return this.relationalDatabaseConfig;
     }
     /**
@@ -170,7 +171,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return The IAM service role ARN for the data source.
      * 
      */
-    public Output</* @Nullable */ String> getServiceRoleArn() {
+    public Output</* @Nullable */ String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
     /**
@@ -184,7 +185,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -210,7 +211,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataSource(String name, DataSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/dataSource:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/dataSource:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataSource(String name, Output<String> id, @Nullable DataSourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

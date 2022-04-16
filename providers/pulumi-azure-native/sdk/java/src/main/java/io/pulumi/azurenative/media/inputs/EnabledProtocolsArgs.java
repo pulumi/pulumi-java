@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dash", required=true)
       private final Output<Boolean> dash;
 
-    public Output<Boolean> getDash() {
+    public Output<Boolean> dash() {
         return this.dash;
     }
 
@@ -35,7 +36,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="download", required=true)
       private final Output<Boolean> download;
 
-    public Output<Boolean> getDownload() {
+    public Output<Boolean> download() {
         return this.download;
     }
 
@@ -46,7 +47,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hls", required=true)
       private final Output<Boolean> hls;
 
-    public Output<Boolean> getHls() {
+    public Output<Boolean> hls() {
         return this.hls;
     }
 
@@ -57,7 +58,7 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="smoothStreaming", required=true)
       private final Output<Boolean> smoothStreaming;
 
-    public Output<Boolean> getSmoothStreaming() {
+    public Output<Boolean> smoothStreaming() {
         return this.smoothStreaming;
     }
 
@@ -73,10 +74,10 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EnabledProtocolsArgs() {
-        this.dash = Output.empty();
-        this.download = Output.empty();
-        this.hls = Output.empty();
-        this.smoothStreaming = Output.empty();
+        this.dash = Codegen.empty();
+        this.download = Codegen.empty();
+        this.hls = Codegen.empty();
+        this.smoothStreaming = Codegen.empty();
     }
 
     public static Builder builder() {

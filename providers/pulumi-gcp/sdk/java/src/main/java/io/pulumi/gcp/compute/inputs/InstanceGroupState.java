@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceGroupNamedPortGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+    public Output<List<String>> instances() {
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namedPorts")
       private final @Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts;
 
-    public Output<List<InstanceGroupNamedPortGetArgs>> getNamedPorts() {
-        return this.namedPorts == null ? Output.empty() : this.namedPorts;
+    public Output<List<InstanceGroupNamedPortGetArgs>> namedPorts() {
+        return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<Integer> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceGroupState(
@@ -146,15 +147,15 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceGroupState() {
-        this.description = Output.empty();
-        this.instances = Output.empty();
-        this.name = Output.empty();
-        this.namedPorts = Output.empty();
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.size = Output.empty();
-        this.zone = Output.empty();
+        this.description = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namedPorts = Codegen.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.size = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instances(@Nullable Output<List<String>> instances) {
@@ -206,7 +207,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(String... instances) {
@@ -217,7 +218,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namedPorts(@Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts) {
@@ -225,7 +226,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namedPorts(@Nullable List<InstanceGroupNamedPortGetArgs> namedPorts) {
-            this.namedPorts = Output.ofNullable(namedPorts);
+            this.namedPorts = Codegen.ofNullable(namedPorts);
             return this;
         }
         public Builder namedPorts(InstanceGroupNamedPortGetArgs... namedPorts) {
@@ -236,7 +237,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -244,7 +245,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -252,7 +253,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder size(@Nullable Output<Integer> size) {
@@ -260,7 +261,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable Integer size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -268,7 +269,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceGroupState build() {
             return new InstanceGroupState(description, instances, name, namedPorts, network, project, selfLink, size, zone);

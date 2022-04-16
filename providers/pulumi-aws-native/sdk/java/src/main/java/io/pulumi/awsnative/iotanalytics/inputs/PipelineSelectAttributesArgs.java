@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class PipelineSelectAttributesArgs extends io.pulumi.resources.Reso
     @Import(name="attributes", required=true)
       private final Output<List<String>> attributes;
 
-    public Output<List<String>> getAttributes() {
+    public Output<List<String>> attributes() {
         return this.attributes;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable Output<String> next;
 
-    public Output<String> getNext() {
-        return this.next == null ? Output.empty() : this.next;
+    public Output<String> next() {
+        return this.next == null ? Codegen.empty() : this.next;
     }
 
     public PipelineSelectAttributesArgs(
@@ -46,9 +47,9 @@ public final class PipelineSelectAttributesArgs extends io.pulumi.resources.Reso
     }
 
     private PipelineSelectAttributesArgs() {
-        this.attributes = Output.empty();
-        this.name = Output.empty();
-        this.next = Output.empty();
+        this.attributes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.next = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class PipelineSelectAttributesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder next(@Nullable String next) {
-            this.next = Output.ofNullable(next);
+            this.next = Codegen.ofNullable(next);
             return this;
         }        public PipelineSelectAttributesArgs build() {
             return new PipelineSelectAttributesArgs(attributes, name, next);

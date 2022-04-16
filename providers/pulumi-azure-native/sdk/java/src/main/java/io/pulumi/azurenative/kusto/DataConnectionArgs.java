@@ -7,6 +7,7 @@ import io.pulumi.azurenative.kusto.enums.DataConnectionKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -34,8 +35,8 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
-    public Output<String> getDataConnectionName() {
-        return this.dataConnectionName == null ? Output.empty() : this.dataConnectionName;
+    public Output<String> dataConnectionName() {
+        return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -56,7 +57,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectionKind>> kind;
 
-    public Output<Either<String,DataConnectionKind>> getKind() {
+    public Output<Either<String,DataConnectionKind>> kind() {
         return this.kind;
     }
 
@@ -67,8 +68,8 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -98,12 +99,12 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataConnectionArgs() {
-        this.clusterName = Output.empty();
-        this.dataConnectionName = Output.empty();
-        this.databaseName = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.dataConnectionName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
-            this.dataConnectionName = Output.ofNullable(dataConnectionName);
+            this.dataConnectionName = Codegen.ofNullable(dataConnectionName);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -173,7 +174,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

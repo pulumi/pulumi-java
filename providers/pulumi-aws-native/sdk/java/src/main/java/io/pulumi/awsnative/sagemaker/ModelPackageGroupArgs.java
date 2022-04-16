@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.ModelPackageGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,22 +21,22 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="modelPackageGroupDescription")
       private final @Nullable Output<String> modelPackageGroupDescription;
 
-    public Output<String> getModelPackageGroupDescription() {
-        return this.modelPackageGroupDescription == null ? Output.empty() : this.modelPackageGroupDescription;
+    public Output<String> modelPackageGroupDescription() {
+        return this.modelPackageGroupDescription == null ? Codegen.empty() : this.modelPackageGroupDescription;
     }
 
     @Import(name="modelPackageGroupName")
       private final @Nullable Output<String> modelPackageGroupName;
 
-    public Output<String> getModelPackageGroupName() {
-        return this.modelPackageGroupName == null ? Output.empty() : this.modelPackageGroupName;
+    public Output<String> modelPackageGroupName() {
+        return this.modelPackageGroupName == null ? Codegen.empty() : this.modelPackageGroupName;
     }
 
     @Import(name="modelPackageGroupPolicy")
       private final @Nullable Output<Object> modelPackageGroupPolicy;
 
-    public Output<Object> getModelPackageGroupPolicy() {
-        return this.modelPackageGroupPolicy == null ? Output.empty() : this.modelPackageGroupPolicy;
+    public Output<Object> modelPackageGroupPolicy() {
+        return this.modelPackageGroupPolicy == null ? Codegen.empty() : this.modelPackageGroupPolicy;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
 
-    public Output<List<ModelPackageGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ModelPackageGroupTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ModelPackageGroupArgs(
@@ -61,10 +62,10 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ModelPackageGroupArgs() {
-        this.modelPackageGroupDescription = Output.empty();
-        this.modelPackageGroupName = Output.empty();
-        this.modelPackageGroupPolicy = Output.empty();
-        this.tags = Output.empty();
+        this.modelPackageGroupDescription = Codegen.empty();
+        this.modelPackageGroupName = Codegen.empty();
+        this.modelPackageGroupPolicy = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
-            this.modelPackageGroupDescription = Output.ofNullable(modelPackageGroupDescription);
+            this.modelPackageGroupDescription = Codegen.ofNullable(modelPackageGroupDescription);
             return this;
         }
         public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
@@ -106,7 +107,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
-            this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
+            this.modelPackageGroupName = Codegen.ofNullable(modelPackageGroupName);
             return this;
         }
         public Builder modelPackageGroupPolicy(@Nullable Output<Object> modelPackageGroupPolicy) {
@@ -114,7 +115,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder modelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
-            this.modelPackageGroupPolicy = Output.ofNullable(modelPackageGroupPolicy);
+            this.modelPackageGroupPolicy = Codegen.ofNullable(modelPackageGroupPolicy);
             return this;
         }
         public Builder tags(@Nullable Output<List<ModelPackageGroupTagArgs>> tags) {
@@ -122,7 +123,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable List<ModelPackageGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ModelPackageGroupTagArgs... tags) {

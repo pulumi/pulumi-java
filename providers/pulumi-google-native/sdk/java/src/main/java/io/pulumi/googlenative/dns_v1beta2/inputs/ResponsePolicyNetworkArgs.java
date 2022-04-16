@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -28,8 +29,8 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
     @Import(name="networkUrl")
       private final @Nullable Output<String> networkUrl;
 
-    public Output<String> getNetworkUrl() {
-        return this.networkUrl == null ? Output.empty() : this.networkUrl;
+    public Output<String> networkUrl() {
+        return this.networkUrl == null ? Codegen.empty() : this.networkUrl;
     }
 
     public ResponsePolicyNetworkArgs(
@@ -40,8 +41,8 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
     }
 
     private ResponsePolicyNetworkArgs() {
-        this.kind = Output.empty();
-        this.networkUrl = Output.empty();
+        this.kind = Codegen.empty();
+        this.networkUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder networkUrl(@Nullable Output<String> networkUrl) {
@@ -79,7 +80,7 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder networkUrl(@Nullable String networkUrl) {
-            this.networkUrl = Output.ofNullable(networkUrl);
+            this.networkUrl = Codegen.ofNullable(networkUrl);
             return this;
         }        public ResponsePolicyNetworkArgs build() {
             return new ResponsePolicyNetworkArgs(kind, networkUrl);

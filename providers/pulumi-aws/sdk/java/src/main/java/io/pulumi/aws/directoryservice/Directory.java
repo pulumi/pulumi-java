@@ -11,6 +11,7 @@ import io.pulumi.aws.directoryservice.outputs.DirectoryVpcSettings;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The access URL for the directory, such as `http://alias.awsapps.com`.
      * 
      */
-    public Output<String> getAccessUrl() {
+    public Output<String> accessUrl() {
         return this.accessUrl;
     }
     /**
@@ -58,7 +59,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -72,7 +73,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return Connector related information about the directory. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ DirectoryConnectSettings> getConnectSettings() {
+    public Output</* @Nullable */ DirectoryConnectSettings> connectSettings() {
         return this.connectSettings;
     }
     /**
@@ -86,7 +87,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return A textual description for the directory.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -100,7 +101,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return A list of IP addresses of the DNS servers for the directory or connector.
      * 
      */
-    public Output<List<String>> getDnsIpAddresses() {
+    public Output<List<String>> dnsIpAddresses() {
         return this.dnsIpAddresses;
     }
     /**
@@ -114,7 +115,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
      * 
      */
-    public Output<String> getEdition() {
+    public Output<String> edition() {
         return this.edition;
     }
     /**
@@ -128,7 +129,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableSso() {
+    public Output</* @Nullable */ Boolean> enableSso() {
         return this.enableSso;
     }
     /**
@@ -142,7 +143,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The fully qualified name for the directory, such as `corp.example.com`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +157,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The password for the directory administrator or connector user.
      * 
      */
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
     /**
@@ -170,7 +171,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The ID of the security group created by the directory.
      * 
      */
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
     /**
@@ -184,7 +185,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The short name of the directory, such as `CORP`.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
     /**
@@ -198,7 +199,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The size of the directory (`Small` or `Large` are accepted values).
      * 
      */
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size;
     }
     /**
@@ -212,7 +213,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -226,7 +227,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -240,7 +241,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -254,7 +255,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @return VPC related information about the directory. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ DirectoryVpcSettings> getVpcSettings() {
+    public Output</* @Nullable */ DirectoryVpcSettings> vpcSettings() {
         return this.vpcSettings;
     }
 
@@ -280,7 +281,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Directory(String name, DirectoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directoryservice/directory:Directory", name, args == null ? DirectoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directoryservice/directory:Directory", name, args == null ? DirectoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Directory(String name, Output<String> id, @Nullable DirectoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

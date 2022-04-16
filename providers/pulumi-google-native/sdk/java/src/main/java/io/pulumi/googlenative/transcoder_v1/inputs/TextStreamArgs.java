@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextMappingArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="codec")
       private final @Nullable Output<String> codec;
 
-    public Output<String> getCodec() {
-        return this.codec == null ? Output.empty() : this.codec;
+    public Output<String> codec() {
+        return this.codec == null ? Codegen.empty() : this.codec;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mapping")
       private final @Nullable Output<List<TextMappingArgs>> mapping;
 
-    public Output<List<TextMappingArgs>> getMapping() {
-        return this.mapping == null ? Output.empty() : this.mapping;
+    public Output<List<TextMappingArgs>> mapping() {
+        return this.mapping == null ? Codegen.empty() : this.mapping;
     }
 
     public TextStreamArgs(
@@ -50,8 +51,8 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TextStreamArgs() {
-        this.codec = Output.empty();
-        this.mapping = Output.empty();
+        this.codec = Codegen.empty();
+        this.mapping = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder codec(@Nullable String codec) {
-            this.codec = Output.ofNullable(codec);
+            this.codec = Codegen.ofNullable(codec);
             return this;
         }
         public Builder mapping(@Nullable Output<List<TextMappingArgs>> mapping) {
@@ -89,7 +90,7 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mapping(@Nullable List<TextMappingArgs> mapping) {
-            this.mapping = Output.ofNullable(mapping);
+            this.mapping = Codegen.ofNullable(mapping);
             return this;
         }
         public Builder mapping(TextMappingArgs... mapping) {

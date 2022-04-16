@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     @Import(name="keyPath")
       private final @Nullable Output<String> keyPath;
 
-    public Output<String> getKeyPath() {
-        return this.keyPath == null ? Output.empty() : this.keyPath;
+    public Output<String> keyPath() {
+        return this.keyPath == null ? Codegen.empty() : this.keyPath;
     }
 
     public DataSourceAccessControlListConfigurationArgs(@Nullable Output<String> keyPath) {
@@ -26,7 +27,7 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     }
 
     private DataSourceAccessControlListConfigurationArgs() {
-        this.keyPath = Output.empty();
+        this.keyPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
             return this;
         }
         public Builder keyPath(@Nullable String keyPath) {
-            this.keyPath = Output.ofNullable(keyPath);
+            this.keyPath = Codegen.ofNullable(keyPath);
             return this;
         }        public DataSourceAccessControlListConfigurationArgs build() {
             return new DataSourceAccessControlListConfigurationArgs(keyPath);

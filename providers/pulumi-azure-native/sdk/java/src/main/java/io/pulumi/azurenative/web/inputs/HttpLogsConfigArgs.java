@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.AzureBlobStorageHttpLogsConfigArgs;
 import io.pulumi.azurenative.web.inputs.FileSystemHttpLogsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureBlobStorage")
       private final @Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
 
-    public Output<AzureBlobStorageHttpLogsConfigArgs> getAzureBlobStorage() {
-        return this.azureBlobStorage == null ? Output.empty() : this.azureBlobStorage;
+    public Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage() {
+        return this.azureBlobStorage == null ? Codegen.empty() : this.azureBlobStorage;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystem")
       private final @Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem;
 
-    public Output<FileSystemHttpLogsConfigArgs> getFileSystem() {
-        return this.fileSystem == null ? Output.empty() : this.fileSystem;
+    public Output<FileSystemHttpLogsConfigArgs> fileSystem() {
+        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
     public HttpLogsConfigArgs(
@@ -49,8 +50,8 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpLogsConfigArgs() {
-        this.azureBlobStorage = Output.empty();
-        this.fileSystem = Output.empty();
+        this.azureBlobStorage = Codegen.empty();
+        this.fileSystem = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigArgs azureBlobStorage) {
-            this.azureBlobStorage = Output.ofNullable(azureBlobStorage);
+            this.azureBlobStorage = Codegen.ofNullable(azureBlobStorage);
             return this;
         }
         public Builder fileSystem(@Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem) {
@@ -88,7 +89,7 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystem(@Nullable FileSystemHttpLogsConfigArgs fileSystem) {
-            this.fileSystem = Output.ofNullable(fileSystem);
+            this.fileSystem = Codegen.ofNullable(fileSystem);
             return this;
         }        public HttpLogsConfigArgs build() {
             return new HttpLogsConfigArgs(azureBlobStorage, fileSystem);

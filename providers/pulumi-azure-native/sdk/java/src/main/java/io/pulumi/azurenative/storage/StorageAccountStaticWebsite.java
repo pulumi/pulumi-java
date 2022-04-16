@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -35,7 +36,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * @return The name of the container to upload blobs to.
      * 
      */
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
     /**
@@ -49,7 +50,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * @return The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
      * 
      */
-    public Output</* @Nullable */ String> getError404Document() {
+    public Output</* @Nullable */ String> error404Document() {
         return this.error404Document;
     }
     /**
@@ -63,7 +64,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
      * 
      */
-    public Output</* @Nullable */ String> getIndexDocument() {
+    public Output</* @Nullable */ String> indexDocument() {
         return this.indexDocument;
     }
 
@@ -89,7 +90,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public StorageAccountStaticWebsite(String name, StorageAccountStaticWebsiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:StorageAccountStaticWebsite", name, args == null ? StorageAccountStaticWebsiteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storage:StorageAccountStaticWebsite", name, args == null ? StorageAccountStaticWebsiteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StorageAccountStaticWebsite(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

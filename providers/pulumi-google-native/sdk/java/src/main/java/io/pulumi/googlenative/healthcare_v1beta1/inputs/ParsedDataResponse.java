@@ -20,7 +20,7 @@ public final class ParsedDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="segments", required=true)
       private final List<SegmentResponse> segments;
 
-    public List<SegmentResponse> getSegments() {
+    public List<SegmentResponse> segments() {
         return this.segments;
     }
 

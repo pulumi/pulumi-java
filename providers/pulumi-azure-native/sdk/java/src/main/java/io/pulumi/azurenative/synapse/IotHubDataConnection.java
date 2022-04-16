@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The iot hub consumer group.
      * 
      */
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
     /**
@@ -56,7 +57,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getDataFormat() {
+    public Output</* @Nullable */ String> dataFormat() {
         return this.dataFormat;
     }
     /**
@@ -70,7 +71,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return System properties of the iot hub
      * 
      */
-    public Output</* @Nullable */ List<String>> getEventSystemProperties() {
+    public Output</* @Nullable */ List<String>> eventSystemProperties() {
         return this.eventSystemProperties;
     }
     /**
@@ -84,7 +85,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the Iot hub to be used to create a data connection.
      * 
      */
-    public Output<String> getIotHubResourceId() {
+    public Output<String> iotHubResourceId() {
         return this.iotHubResourceId;
     }
     /**
@@ -100,7 +101,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * Expected value is 'IotHub'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -114,7 +115,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -128,7 +129,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getMappingRuleName() {
+    public Output</* @Nullable */ String> mappingRuleName() {
         return this.mappingRuleName;
     }
     /**
@@ -142,7 +143,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +157,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -170,7 +171,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the share access policy
      * 
      */
-    public Output<String> getSharedAccessPolicyName() {
+    public Output<String> sharedAccessPolicyName() {
         return this.sharedAccessPolicyName;
     }
     /**
@@ -184,7 +185,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -198,7 +199,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getTableName() {
+    public Output</* @Nullable */ String> tableName() {
         return this.tableName;
     }
     /**
@@ -212,7 +213,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -238,7 +239,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IotHubDataConnection(String name, IotHubDataConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:IotHubDataConnection", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:synapse:IotHubDataConnection", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private IotHubDataConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationMetr
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="accessControlTranslation")
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
 
-    public Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> getAccessControlTranslation() {
-        return this.accessControlTranslation == null ? Output.empty() : this.accessControlTranslation;
+    public Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation() {
+        return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -57,8 +58,8 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="metrics")
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics;
 
-    public Output<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+    public Output<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics() {
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="replicaKmsKeyId")
       private final @Nullable Output<String> replicaKmsKeyId;
 
-    public Output<String> getReplicaKmsKeyId() {
-        return this.replicaKmsKeyId == null ? Output.empty() : this.replicaKmsKeyId;
+    public Output<String> replicaKmsKeyId() {
+        return this.replicaKmsKeyId == null ? Codegen.empty() : this.replicaKmsKeyId;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="replicationTime")
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime;
 
-    public Output<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> getReplicationTime() {
-        return this.replicationTime == null ? Output.empty() : this.replicationTime;
+    public Output<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime() {
+        return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+    public Output<String> storageClass() {
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     public BucketReplicationConfigurationRuleDestinationGetArgs(
@@ -113,13 +114,13 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     }
 
     private BucketReplicationConfigurationRuleDestinationGetArgs() {
-        this.accessControlTranslation = Output.empty();
-        this.accountId = Output.empty();
-        this.bucket = Output.empty();
-        this.metrics = Output.empty();
-        this.replicaKmsKeyId = Output.empty();
-        this.replicationTime = Output.empty();
-        this.storageClass = Output.empty();
+        this.accessControlTranslation = Codegen.empty();
+        this.accountId = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.replicaKmsKeyId = Codegen.empty();
+        this.replicationTime = Codegen.empty();
+        this.storageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
             return this;
         }
         public Builder accessControlTranslation(@Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs accessControlTranslation) {
-            this.accessControlTranslation = Output.ofNullable(accessControlTranslation);
+            this.accessControlTranslation = Codegen.ofNullable(accessControlTranslation);
             return this;
         }
         public Builder accountId(@Nullable Output<String> accountId) {
@@ -167,7 +168,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder bucket(Output<String> bucket) {
@@ -183,7 +184,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
             return this;
         }
         public Builder metrics(@Nullable BucketReplicationConfigurationRuleDestinationMetricsGetArgs metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder replicaKmsKeyId(@Nullable Output<String> replicaKmsKeyId) {
@@ -191,7 +192,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
             return this;
         }
         public Builder replicaKmsKeyId(@Nullable String replicaKmsKeyId) {
-            this.replicaKmsKeyId = Output.ofNullable(replicaKmsKeyId);
+            this.replicaKmsKeyId = Codegen.ofNullable(replicaKmsKeyId);
             return this;
         }
         public Builder replicationTime(@Nullable Output<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime) {
@@ -199,7 +200,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
             return this;
         }
         public Builder replicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs replicationTime) {
-            this.replicationTime = Output.ofNullable(replicationTime);
+            this.replicationTime = Codegen.ofNullable(replicationTime);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -207,7 +208,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }        public BucketReplicationConfigurationRuleDestinationGetArgs build() {
             return new BucketReplicationConfigurationRuleDestinationGetArgs(accessControlTranslation, accountId, bucket, metrics, replicaKmsKeyId, replicationTime, storageClass);

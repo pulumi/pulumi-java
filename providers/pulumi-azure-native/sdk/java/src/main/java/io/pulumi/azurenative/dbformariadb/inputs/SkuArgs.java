@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dbformariadb.enums.SkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<Integer> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
-        return this.family == null ? Output.empty() : this.family;
+    public Output<String> family() {
+        return this.family == null ? Codegen.empty() : this.family;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,8 +62,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<String> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<Either<String,SkuTier>> tier;
 
-    public Output<Either<String,SkuTier>> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<Either<String,SkuTier>> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public SkuArgs(
@@ -90,11 +91,11 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.capacity = Output.empty();
-        this.family = Output.empty();
-        this.name = Output.empty();
-        this.size = Output.empty();
-        this.tier = Output.empty();
+        this.capacity = Codegen.empty();
+        this.family = Codegen.empty();
+        this.name = Codegen.empty();
+        this.size = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder family(@Nullable Output<String> family) {
@@ -138,7 +139,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder family(@Nullable String family) {
-            this.family = Output.ofNullable(family);
+            this.family = Codegen.ofNullable(family);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -154,7 +155,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable String size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder tier(@Nullable Output<Either<String,SkuTier>> tier) {
@@ -162,7 +163,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable Either<String,SkuTier> tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public SkuArgs build() {
             return new SkuArgs(capacity, family, name, size, tier);

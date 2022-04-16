@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="botName")
       private final @Nullable Output<String> botName;
 
-    public Output<String> getBotName() {
-        return this.botName == null ? Output.empty() : this.botName;
+    public Output<String> botName() {
+        return this.botName == null ? Codegen.empty() : this.botName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="botVersion")
       private final @Nullable Output<String> botVersion;
 
-    public Output<String> getBotVersion() {
-        return this.botVersion == null ? Output.empty() : this.botVersion;
+    public Output<String> botVersion() {
+        return this.botVersion == null ? Codegen.empty() : this.botVersion;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
-        return this.checksum == null ? Output.empty() : this.checksum;
+    public Output<String> checksum() {
+        return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationLogs")
       private final @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
 
-    public Output<BotAliasConversationLogsGetArgs> getConversationLogs() {
-        return this.conversationLogs == null ? Output.empty() : this.conversationLogs;
+    public Output<BotAliasConversationLogsGetArgs> conversationLogs() {
+        return this.conversationLogs == null ? Codegen.empty() : this.conversationLogs;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+    public Output<String> createdDate() {
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> getLastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Output.empty() : this.lastUpdatedDate;
+    public Output<String> lastUpdatedDate() {
+        return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public BotAliasState(
@@ -136,15 +137,15 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotAliasState() {
-        this.arn = Output.empty();
-        this.botName = Output.empty();
-        this.botVersion = Output.empty();
-        this.checksum = Output.empty();
-        this.conversationLogs = Output.empty();
-        this.createdDate = Output.empty();
-        this.description = Output.empty();
-        this.lastUpdatedDate = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.botName = Codegen.empty();
+        this.botVersion = Codegen.empty();
+        this.checksum = Codegen.empty();
+        this.conversationLogs = Codegen.empty();
+        this.createdDate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.lastUpdatedDate = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder botName(@Nullable Output<String> botName) {
@@ -196,7 +197,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder botName(@Nullable String botName) {
-            this.botName = Output.ofNullable(botName);
+            this.botName = Codegen.ofNullable(botName);
             return this;
         }
         public Builder botVersion(@Nullable Output<String> botVersion) {
@@ -204,7 +205,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder botVersion(@Nullable String botVersion) {
-            this.botVersion = Output.ofNullable(botVersion);
+            this.botVersion = Codegen.ofNullable(botVersion);
             return this;
         }
         public Builder checksum(@Nullable Output<String> checksum) {
@@ -212,7 +213,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Output.ofNullable(checksum);
+            this.checksum = Codegen.ofNullable(checksum);
             return this;
         }
         public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs) {
@@ -220,7 +221,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conversationLogs(@Nullable BotAliasConversationLogsGetArgs conversationLogs) {
-            this.conversationLogs = Output.ofNullable(conversationLogs);
+            this.conversationLogs = Codegen.ofNullable(conversationLogs);
             return this;
         }
         public Builder createdDate(@Nullable Output<String> createdDate) {
@@ -228,7 +229,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -236,7 +237,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
@@ -244,7 +245,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
+            this.lastUpdatedDate = Codegen.ofNullable(lastUpdatedDate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -252,7 +253,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public BotAliasState build() {
             return new BotAliasState(arn, botName, botVersion, checksum, conversationLogs, createdDate, description, lastUpdatedDate, name);

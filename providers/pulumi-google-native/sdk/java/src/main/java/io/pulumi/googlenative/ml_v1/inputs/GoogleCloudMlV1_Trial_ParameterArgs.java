@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
-    public Output<Double> getFloatValue() {
-        return this.floatValue == null ? Output.empty() : this.floatValue;
+    public Output<Double> floatValue() {
+        return this.floatValue == null ? Codegen.empty() : this.floatValue;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="intValue")
       private final @Nullable Output<String> intValue;
 
-    public Output<String> getIntValue() {
-        return this.intValue == null ? Output.empty() : this.intValue;
+    public Output<String> intValue() {
+        return this.intValue == null ? Codegen.empty() : this.intValue;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="parameter")
       private final @Nullable Output<String> parameter;
 
-    public Output<String> getParameter() {
-        return this.parameter == null ? Output.empty() : this.parameter;
+    public Output<String> parameter() {
+        return this.parameter == null ? Codegen.empty() : this.parameter;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+    public Output<String> stringValue() {
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     public GoogleCloudMlV1_Trial_ParameterArgs(
@@ -75,10 +76,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudMlV1_Trial_ParameterArgs() {
-        this.floatValue = Output.empty();
-        this.intValue = Output.empty();
-        this.parameter = Output.empty();
-        this.stringValue = Output.empty();
+        this.floatValue = Codegen.empty();
+        this.intValue = Codegen.empty();
+        this.parameter = Codegen.empty();
+        this.stringValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
             return this;
         }
         public Builder floatValue(@Nullable Double floatValue) {
-            this.floatValue = Output.ofNullable(floatValue);
+            this.floatValue = Codegen.ofNullable(floatValue);
             return this;
         }
         public Builder intValue(@Nullable Output<String> intValue) {
@@ -120,7 +121,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
             return this;
         }
         public Builder intValue(@Nullable String intValue) {
-            this.intValue = Output.ofNullable(intValue);
+            this.intValue = Codegen.ofNullable(intValue);
             return this;
         }
         public Builder parameter(@Nullable Output<String> parameter) {
@@ -128,7 +129,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
             return this;
         }
         public Builder parameter(@Nullable String parameter) {
-            this.parameter = Output.ofNullable(parameter);
+            this.parameter = Codegen.ofNullable(parameter);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -136,7 +137,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }        public GoogleCloudMlV1_Trial_ParameterArgs build() {
             return new GoogleCloudMlV1_Trial_ParameterArgs(floatValue, intValue, parameter, stringValue);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="carrierName", required=true)
       private final Output<String> carrierName;
 
-    public Output<String> getCarrierName() {
+    public Output<String> carrierName() {
         return this.carrierName;
     }
 
@@ -37,8 +38,8 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="driveCount")
       private final @Nullable Output<Double> driveCount;
 
-    public Output<Double> getDriveCount() {
-        return this.driveCount == null ? Output.empty() : this.driveCount;
+    public Output<Double> driveCount() {
+        return this.driveCount == null ? Codegen.empty() : this.driveCount;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="shipDate")
       private final @Nullable Output<String> shipDate;
 
-    public Output<String> getShipDate() {
-        return this.shipDate == null ? Output.empty() : this.shipDate;
+    public Output<String> shipDate() {
+        return this.shipDate == null ? Codegen.empty() : this.shipDate;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="trackingNumber", required=true)
       private final Output<String> trackingNumber;
 
-    public Output<String> getTrackingNumber() {
+    public Output<String> trackingNumber() {
         return this.trackingNumber;
     }
 
@@ -75,10 +76,10 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     }
 
     private DeliveryPackageInformationArgs() {
-        this.carrierName = Output.empty();
-        this.driveCount = Output.empty();
-        this.shipDate = Output.empty();
-        this.trackingNumber = Output.empty();
+        this.carrierName = Codegen.empty();
+        this.driveCount = Codegen.empty();
+        this.shipDate = Codegen.empty();
+        this.trackingNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder driveCount(@Nullable Double driveCount) {
-            this.driveCount = Output.ofNullable(driveCount);
+            this.driveCount = Codegen.ofNullable(driveCount);
             return this;
         }
         public Builder shipDate(@Nullable Output<String> shipDate) {
@@ -128,7 +129,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder shipDate(@Nullable String shipDate) {
-            this.shipDate = Output.ofNullable(shipDate);
+            this.shipDate = Codegen.ofNullable(shipDate);
             return this;
         }
         public Builder trackingNumber(Output<String> trackingNumber) {

@@ -11,6 +11,7 @@ import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleCondition;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @return An Action block. Action blocks are documented below.
      * 
      */
-    public Output<List<ListenerRuleAction>> getActions() {
+    public Output<List<ListenerRuleAction>> actions() {
         return this.actions;
     }
     /**
@@ -64,7 +65,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the target group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -78,7 +79,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @return A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
      * 
      */
-    public Output<List<ListenerRuleCondition>> getConditions() {
+    public Output<List<ListenerRuleCondition>> conditions() {
         return this.conditions;
     }
     /**
@@ -92,7 +93,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @return The ARN of the listener to which to attach the rule.
      * 
      */
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
     /**
@@ -106,7 +107,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @return The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -120,7 +121,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -134,7 +135,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -160,7 +161,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ListenerRule(String name, ListenerRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticloadbalancingv2/listenerRule:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticloadbalancingv2/listenerRule:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ListenerRule(String name, Output<String> id, @Nullable ListenerRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

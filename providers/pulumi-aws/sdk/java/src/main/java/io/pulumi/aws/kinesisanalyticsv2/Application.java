@@ -11,6 +11,7 @@ import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationCloudwatchLoggingOpti
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,7 +48,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The application's configuration
      * 
      */
-    public Output<ApplicationApplicationConfiguration> getApplicationConfiguration() {
+    public Output<ApplicationApplicationConfiguration> applicationConfiguration() {
         return this.applicationConfiguration;
     }
     /**
@@ -61,7 +62,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The ARN of the application.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -75,7 +76,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A CloudWatch log stream to monitor application configuration errors.
      * 
      */
-    public Output</* @Nullable */ ApplicationCloudwatchLoggingOptions> getCloudwatchLoggingOptions() {
+    public Output</* @Nullable */ ApplicationCloudwatchLoggingOptions> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions;
     }
     /**
@@ -89,7 +90,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The current timestamp when the application was created.
      * 
      */
-    public Output<String> getCreateTimestamp() {
+    public Output<String> createTimestamp() {
         return this.createTimestamp;
     }
     /**
@@ -103,7 +104,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A summary description of the application.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -117,7 +118,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Whether to force stop an unresponsive Flink-based application.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceStop() {
+    public Output</* @Nullable */ Boolean> forceStop() {
         return this.forceStop;
     }
     /**
@@ -131,7 +132,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The current timestamp when the application was last updated.
      * 
      */
-    public Output<String> getLastUpdateTimestamp() {
+    public Output<String> lastUpdateTimestamp() {
         return this.lastUpdateTimestamp;
     }
     /**
@@ -145,7 +146,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the application.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +160,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
      * 
      */
-    public Output<String> getRuntimeEnvironment() {
+    public Output<String> runtimeEnvironment() {
         return this.runtimeEnvironment;
     }
     /**
@@ -173,7 +174,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
      * 
      */
-    public Output<String> getServiceExecutionRole() {
+    public Output<String> serviceExecutionRole() {
         return this.serviceExecutionRole;
     }
     /**
@@ -187,7 +188,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Whether to start or stop the application.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStartApplication() {
+    public Output</* @Nullable */ Boolean> startApplication() {
         return this.startApplication;
     }
     /**
@@ -201,7 +202,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The status of the application.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -215,7 +216,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -229,7 +230,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -243,7 +244,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
      * 
      */
-    public Output<Integer> getVersionId() {
+    public Output<Integer> versionId() {
         return this.versionId;
     }
 
@@ -269,7 +270,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesisanalyticsv2/application:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesisanalyticsv2/application:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Application(String name, Output<String> id, @Nullable ApplicationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

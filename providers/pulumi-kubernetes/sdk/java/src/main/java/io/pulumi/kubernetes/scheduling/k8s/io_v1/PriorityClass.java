@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.scheduling.k8s.io_v1.PriorityClassArgs;
@@ -33,7 +34,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -47,7 +48,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @return description is an arbitrary string that usually provides guidelines on when this priority class should be used.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -61,7 +62,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @return globalDefault specifies whether this PriorityClass should be considered as the default priority for pods that do not have any priority class. Only one PriorityClass can be marked as `globalDefault`. However, if more than one PriorityClasses exists with their `globalDefault` field set to true, the smallest value of such global default PriorityClasses will be used as the default priority.
      * 
      */
-    public Output</* @Nullable */ Boolean> getGlobalDefault() {
+    public Output</* @Nullable */ Boolean> globalDefault() {
         return this.globalDefault;
     }
     /**
@@ -75,7 +76,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -89,7 +90,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -103,7 +104,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @return PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
      * 
      */
-    public Output</* @Nullable */ String> getPreemptionPolicy() {
+    public Output</* @Nullable */ String> preemptionPolicy() {
         return this.preemptionPolicy;
     }
     /**
@@ -117,7 +118,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @return The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
      * 
      */
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 
@@ -143,7 +144,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PriorityClass(String name, PriorityClassArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:scheduling.k8s.io/v1:PriorityClass", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:scheduling.k8s.io/v1:PriorityClass", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private PriorityClass(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

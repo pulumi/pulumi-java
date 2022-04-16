@@ -7,6 +7,7 @@ import io.pulumi.azurenative.customerinsights.enums.ConnectorTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
-    public Output<String> getConnectorName() {
-        return this.connectorName == null ? Output.empty() : this.connectorName;
+    public Output<String> connectorName() {
+        return this.connectorName == null ? Codegen.empty() : this.connectorName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorProperties", required=true)
       private final Output<Map<String,Object>> connectorProperties;
 
-    public Output<Map<String,Object>> getConnectorProperties() {
+    public Output<Map<String,Object>> connectorProperties() {
         return this.connectorProperties;
     }
 
@@ -48,7 +49,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorType", required=true)
       private final Output<Either<String,ConnectorTypes>> connectorType;
 
-    public Output<Either<String,ConnectorTypes>> getConnectorType() {
+    public Output<Either<String,ConnectorTypes>> connectorType() {
         return this.connectorType;
     }
 
@@ -59,8 +60,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -92,8 +93,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isInternal")
       private final @Nullable Output<Boolean> isInternal;
 
-    public Output<Boolean> getIsInternal() {
-        return this.isInternal == null ? Output.empty() : this.isInternal;
+    public Output<Boolean> isInternal() {
+        return this.isInternal == null ? Codegen.empty() : this.isInternal;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -127,14 +128,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectorArgs() {
-        this.connectorName = Output.empty();
-        this.connectorProperties = Output.empty();
-        this.connectorType = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.hubName = Output.empty();
-        this.isInternal = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.connectorName = Codegen.empty();
+        this.connectorProperties = Codegen.empty();
+        this.connectorType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.isInternal = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Output.ofNullable(connectorName);
+            this.connectorName = Codegen.ofNullable(connectorName);
             return this;
         }
         public Builder connectorProperties(Output<Map<String,Object>> connectorProperties) {
@@ -200,7 +201,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -208,7 +209,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hubName(Output<String> hubName) {
@@ -224,7 +225,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isInternal(@Nullable Boolean isInternal) {
-            this.isInternal = Output.ofNullable(isInternal);
+            this.isInternal = Codegen.ofNullable(isInternal);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.configuration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,22 +20,22 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     @Import(name="accountIds", required=true)
       private final Output<List<String>> accountIds;
 
-    public Output<List<String>> getAccountIds() {
+    public Output<List<String>> accountIds() {
         return this.accountIds;
     }
 
     @Import(name="allAwsRegions")
       private final @Nullable Output<Boolean> allAwsRegions;
 
-    public Output<Boolean> getAllAwsRegions() {
-        return this.allAwsRegions == null ? Output.empty() : this.allAwsRegions;
+    public Output<Boolean> allAwsRegions() {
+        return this.allAwsRegions == null ? Codegen.empty() : this.allAwsRegions;
     }
 
     @Import(name="awsRegions")
       private final @Nullable Output<List<String>> awsRegions;
 
-    public Output<List<String>> getAwsRegions() {
-        return this.awsRegions == null ? Output.empty() : this.awsRegions;
+    public Output<List<String>> awsRegions() {
+        return this.awsRegions == null ? Codegen.empty() : this.awsRegions;
     }
 
     public ConfigurationAggregatorAccountAggregationSourceArgs(
@@ -47,9 +48,9 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     }
 
     private ConfigurationAggregatorAccountAggregationSourceArgs() {
-        this.accountIds = Output.empty();
-        this.allAwsRegions = Output.empty();
-        this.awsRegions = Output.empty();
+        this.accountIds = Codegen.empty();
+        this.allAwsRegions = Codegen.empty();
+        this.awsRegions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
             return this;
         }
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = Output.ofNullable(allAwsRegions);
+            this.allAwsRegions = Codegen.ofNullable(allAwsRegions);
             return this;
         }
         public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
@@ -100,7 +101,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
             return this;
         }
         public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = Output.ofNullable(awsRegions);
+            this.awsRegions = Codegen.ofNullable(awsRegions);
             return this;
         }
         public Builder awsRegions(String... awsRegions) {

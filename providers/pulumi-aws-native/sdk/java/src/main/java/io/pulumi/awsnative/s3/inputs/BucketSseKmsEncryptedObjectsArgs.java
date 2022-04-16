@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketSseKmsEncryptedObjectsStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
     @Import(name="status", required=true)
       private final Output<BucketSseKmsEncryptedObjectsStatus> status;
 
-    public Output<BucketSseKmsEncryptedObjectsStatus> getStatus() {
+    public Output<BucketSseKmsEncryptedObjectsStatus> status() {
         return this.status;
     }
 
@@ -33,7 +34,7 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
     }
 
     private BucketSseKmsEncryptedObjectsArgs() {
-        this.status = Output.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

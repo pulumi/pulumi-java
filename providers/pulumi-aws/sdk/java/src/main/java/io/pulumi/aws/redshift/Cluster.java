@@ -12,6 +12,7 @@ import io.pulumi.aws.redshift.outputs.ClusterSnapshotCopy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -46,7 +47,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowVersionUpgrade() {
+    public Output</* @Nullable */ Boolean> allowVersionUpgrade() {
         return this.allowVersionUpgrade;
     }
     /**
@@ -60,7 +61,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of cluster
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -74,7 +75,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
      * 
      */
-    public Output</* @Nullable */ Integer> getAutomatedSnapshotRetentionPeriod() {
+    public Output</* @Nullable */ Integer> automatedSnapshotRetentionPeriod() {
         return this.automatedSnapshotRetentionPeriod;
     }
     /**
@@ -88,7 +89,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -104,7 +105,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * string.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -118,7 +119,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The nodes in the cluster. Cluster node blocks are documented below
      * 
      */
-    public Output<List<ClusterClusterNode>> getClusterNodes() {
+    public Output<List<ClusterClusterNode>> clusterNodes() {
         return this.clusterNodes;
     }
     /**
@@ -132,7 +133,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the parameter group to be associated with this cluster.
      * 
      */
-    public Output<String> getClusterParameterGroupName() {
+    public Output<String> clusterParameterGroupName() {
         return this.clusterParameterGroupName;
     }
     /**
@@ -146,7 +147,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The public key for the cluster
      * 
      */
-    public Output<String> getClusterPublicKey() {
+    public Output<String> clusterPublicKey() {
         return this.clusterPublicKey;
     }
     /**
@@ -160,7 +161,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The specific revision number of the database in the cluster
      * 
      */
-    public Output<String> getClusterRevisionNumber() {
+    public Output<String> clusterRevisionNumber() {
         return this.clusterRevisionNumber;
     }
     /**
@@ -174,7 +175,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A list of security groups to be associated with this cluster.
      * 
      */
-    public Output<List<String>> getClusterSecurityGroups() {
+    public Output<List<String>> clusterSecurityGroups() {
         return this.clusterSecurityGroups;
     }
     /**
@@ -188,7 +189,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
      * 
      */
-    public Output<String> getClusterSubnetGroupName() {
+    public Output<String> clusterSubnetGroupName() {
         return this.clusterSubnetGroupName;
     }
     /**
@@ -202,7 +203,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster type to use. Either `single-node` or `multi-node`.
      * 
      */
-    public Output<String> getClusterType() {
+    public Output<String> clusterType() {
         return this.clusterType;
     }
     /**
@@ -218,7 +219,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The version selected runs on all the nodes in the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getClusterVersion() {
+    public Output</* @Nullable */ String> clusterVersion() {
         return this.clusterVersion;
     }
     /**
@@ -234,7 +235,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * If you do not provide a name, Amazon Redshift will create a default database called `dev`.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -248,7 +249,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The DNS name of the cluster
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -262,7 +263,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The Elastic IP (EIP) address for the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getElasticIp() {
+    public Output</* @Nullable */ String> elasticIp() {
         return this.elasticIp;
     }
     /**
@@ -276,7 +277,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return If true , the data in the cluster is encrypted at rest.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEncrypted() {
+    public Output</* @Nullable */ Boolean> encrypted() {
         return this.encrypted;
     }
     /**
@@ -290,7 +291,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The connection endpoint
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -304,7 +305,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return If true , enhanced VPC routing is enabled.
      * 
      */
-    public Output<Boolean> getEnhancedVpcRouting() {
+    public Output<Boolean> enhancedVpcRouting() {
         return this.enhancedVpcRouting;
     }
     /**
@@ -318,7 +319,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skip_final_snapshot` must be false.
      * 
      */
-    public Output</* @Nullable */ String> getFinalSnapshotIdentifier() {
+    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier;
     }
     /**
@@ -332,7 +333,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
      * 
      */
-    public Output<List<String>> getIamRoles() {
+    public Output<List<String>> iamRoles() {
         return this.iamRoles;
     }
     /**
@@ -346,7 +347,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -360,7 +361,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Logging, documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterLogging> getLogging() {
+    public Output</* @Nullable */ ClusterLogging> logging() {
         return this.logging;
     }
     /**
@@ -378,7 +379,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * contain at least one uppercase letter, one lowercase letter, and one number.
      * 
      */
-    public Output</* @Nullable */ String> getMasterPassword() {
+    public Output</* @Nullable */ String> masterPassword() {
         return this.masterPassword;
     }
     /**
@@ -392,7 +393,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Username for the master DB user.
      * 
      */
-    public Output</* @Nullable */ String> getMasterUsername() {
+    public Output</* @Nullable */ String> masterUsername() {
         return this.masterUsername;
     }
     /**
@@ -406,7 +407,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The node type to be provisioned for the cluster.
      * 
      */
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType;
     }
     /**
@@ -420,7 +421,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
      * 
      */
-    public Output</* @Nullable */ Integer> getNumberOfNodes() {
+    public Output</* @Nullable */ Integer> numberOfNodes() {
         return this.numberOfNodes;
     }
     /**
@@ -434,7 +435,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
      * 
      */
-    public Output</* @Nullable */ String> getOwnerAccount() {
+    public Output</* @Nullable */ String> ownerAccount() {
         return this.ownerAccount;
     }
     /**
@@ -450,7 +451,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -466,7 +467,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Format: ddd:hh24:mi-ddd:hh24:mi
      * 
      */
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
@@ -480,7 +481,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return If true, the cluster can be accessed from a public network. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPubliclyAccessible() {
+    public Output</* @Nullable */ Boolean> publiclyAccessible() {
         return this.publiclyAccessible;
     }
     /**
@@ -494,7 +495,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipFinalSnapshot() {
+    public Output</* @Nullable */ Boolean> skipFinalSnapshot() {
         return this.skipFinalSnapshot;
     }
     /**
@@ -508,7 +509,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the cluster the source snapshot was created from.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotClusterIdentifier() {
+    public Output</* @Nullable */ String> snapshotClusterIdentifier() {
         return this.snapshotClusterIdentifier;
     }
     /**
@@ -522,7 +523,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration of automatic copy of snapshots from one region to another. Documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterSnapshotCopy> getSnapshotCopy() {
+    public Output</* @Nullable */ ClusterSnapshotCopy> snapshotCopy() {
         return this.snapshotCopy;
     }
     /**
@@ -536,7 +537,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the snapshot from which to create the new cluster.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotIdentifier() {
+    public Output</* @Nullable */ String> snapshotIdentifier() {
         return this.snapshotIdentifier;
     }
     /**
@@ -550,7 +551,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -564,7 +565,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -578,7 +579,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
      * 
      */
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 
@@ -604,7 +605,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:redshift/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:redshift/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

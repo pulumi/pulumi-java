@@ -9,6 +9,7 @@ import io.pulumi.azurenative.media.inputs.MediaGraphTlsEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -28,7 +29,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     @Import(name="endpoint", required=true)
       private final Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
 
-    public Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> getEndpoint() {
+    public Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint() {
         return this.endpoint;
     }
 
@@ -39,7 +40,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,7 +52,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -62,7 +63,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     @Import(name="transport", required=true)
       private final Output<Either<String,MediaGraphRtspTransport>> transport;
 
-    public Output<Either<String,MediaGraphRtspTransport>> getTransport() {
+    public Output<Either<String,MediaGraphRtspTransport>> transport() {
         return this.transport;
     }
 
@@ -78,10 +79,10 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     }
 
     private MediaGraphRtspSourceArgs() {
-        this.endpoint = Output.empty();
-        this.name = Output.empty();
-        this.odataType = Output.empty();
-        this.transport = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.transport = Codegen.empty();
     }
 
     public static Builder builder() {

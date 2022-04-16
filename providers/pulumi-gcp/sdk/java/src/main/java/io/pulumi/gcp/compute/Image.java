@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ImageArgs;
 import io.pulumi.gcp.compute.inputs.ImageState;
@@ -73,7 +74,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
      * 
      */
-    public Output<Integer> getArchiveSizeBytes() {
+    public Output<Integer> archiveSizeBytes() {
         return this.archiveSizeBytes;
     }
     /**
@@ -87,7 +88,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -103,7 +104,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -117,7 +118,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return Size of the image when restored onto a persistent disk (in GB).
      * 
      */
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
@@ -139,7 +140,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * RFC1035.
      * 
      */
-    public Output</* @Nullable */ String> getFamily() {
+    public Output</* @Nullable */ String> family() {
         return this.family;
     }
     /**
@@ -157,7 +158,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<ImageGuestOsFeature>> getGuestOsFeatures() {
+    public Output<List<ImageGuestOsFeature>> guestOsFeatures() {
         return this.guestOsFeatures;
     }
     /**
@@ -171,7 +172,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -185,7 +186,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this Image.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -199,7 +200,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return Any applicable license URI.
      * 
      */
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses;
     }
     /**
@@ -225,7 +226,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -241,7 +242,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -257,7 +258,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ImageRawDisk> getRawDisk() {
+    public Output</* @Nullable */ ImageRawDisk> rawDisk() {
         return this.rawDisk;
     }
     /**
@@ -271,7 +272,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -289,7 +290,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * rawDisk.source property but not both to create an image.
      * 
      */
-    public Output</* @Nullable */ String> getSourceDisk() {
+    public Output</* @Nullable */ String> sourceDisk() {
         return this.sourceDisk;
     }
     /**
@@ -313,7 +314,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * * The sourceDisk URL
      * 
      */
-    public Output</* @Nullable */ String> getSourceImage() {
+    public Output</* @Nullable */ String> sourceImage() {
         return this.sourceImage;
     }
     /**
@@ -339,7 +340,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * * The sourceDisk URL
      * 
      */
-    public Output</* @Nullable */ String> getSourceSnapshot() {
+    public Output</* @Nullable */ String> sourceSnapshot() {
         return this.sourceSnapshot;
     }
 
@@ -365,7 +366,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Image(String name, @Nullable ImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/image:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/image:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Image(String name, Output<String> id, @Nullable ImageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

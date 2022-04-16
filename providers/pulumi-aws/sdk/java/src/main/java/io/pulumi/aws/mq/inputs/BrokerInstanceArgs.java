@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consoleUrl")
       private final @Nullable Output<String> consoleUrl;
 
-    public Output<String> getConsoleUrl() {
-        return this.consoleUrl == null ? Output.empty() : this.consoleUrl;
+    public Output<String> consoleUrl() {
+        return this.consoleUrl == null ? Codegen.empty() : this.consoleUrl;
     }
 
     @Import(name="endpoints")
       private final @Nullable Output<List<String>> endpoints;
 
-    public Output<List<String>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+    public Output<List<String>> endpoints() {
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     public BrokerInstanceArgs(
@@ -46,9 +47,9 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BrokerInstanceArgs() {
-        this.consoleUrl = Output.empty();
-        this.endpoints = Output.empty();
-        this.ipAddress = Output.empty();
+        this.consoleUrl = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.ipAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consoleUrl(@Nullable String consoleUrl) {
-            this.consoleUrl = Output.ofNullable(consoleUrl);
+            this.consoleUrl = Codegen.ofNullable(consoleUrl);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<String>> endpoints) {
@@ -88,7 +89,7 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoints(@Nullable List<String> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(String... endpoints) {
@@ -99,7 +100,7 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }        public BrokerInstanceArgs build() {
             return new BrokerInstanceArgs(consoleUrl, endpoints, ipAddress);

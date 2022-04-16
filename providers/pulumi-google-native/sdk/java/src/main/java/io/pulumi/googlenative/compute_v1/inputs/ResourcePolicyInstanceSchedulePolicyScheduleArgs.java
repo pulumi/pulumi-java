@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<String> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     public ResourcePolicyInstanceSchedulePolicyScheduleArgs(@Nullable Output<String> schedule) {
@@ -34,7 +35,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
     }
 
     private ResourcePolicyInstanceSchedulePolicyScheduleArgs() {
-        this.schedule = Output.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }        public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleArgs(schedule);

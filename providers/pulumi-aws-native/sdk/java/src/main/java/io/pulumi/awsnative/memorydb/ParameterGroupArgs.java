@@ -6,6 +6,7 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.memorydb.inputs.ParameterGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
       private final Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
 
@@ -46,8 +47,8 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
-    public Output<String> getParameterGroupName() {
-        return this.parameterGroupName == null ? Output.empty() : this.parameterGroupName;
+    public Output<String> parameterGroupName() {
+        return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
-    public Output<Object> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Object> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ParameterGroupTagArgs>> tags;
 
-    public Output<List<ParameterGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ParameterGroupTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ParameterGroupArgs(
@@ -86,11 +87,11 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParameterGroupArgs() {
-        this.description = Output.empty();
-        this.family = Output.empty();
-        this.parameterGroupName = Output.empty();
-        this.parameters = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.family = Codegen.empty();
+        this.parameterGroupName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder family(Output<String> family) {
@@ -142,7 +143,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Output.ofNullable(parameterGroupName);
+            this.parameterGroupName = Codegen.ofNullable(parameterGroupName);
             return this;
         }
         public Builder parameters(@Nullable Output<Object> parameters) {
@@ -150,7 +151,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder tags(@Nullable Output<List<ParameterGroupTagArgs>> tags) {
@@ -158,7 +159,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ParameterGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ParameterGroupTagArgs... tags) {

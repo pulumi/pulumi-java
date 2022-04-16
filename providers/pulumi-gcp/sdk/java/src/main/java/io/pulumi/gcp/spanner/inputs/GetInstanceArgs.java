@@ -17,14 +17,14 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="config")
       private final @Nullable String config;
 
-    public Optional<String> getConfig() {
+    public Optional<String> config() {
         return this.config == null ? Optional.empty() : Optional.ofNullable(this.config);
     }
 
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -35,7 +35,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

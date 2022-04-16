@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ GlobalValidationResponse> getGlobalValidation() {
+    public Output</* @Nullable */ GlobalValidationResponse> globalValidation() {
         return this.globalValidation;
     }
     /**
@@ -57,7 +58,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ HttpSettingsResponse> getHttpSettings() {
+    public Output</* @Nullable */ HttpSettingsResponse> httpSettings() {
         return this.httpSettings;
     }
     /**
@@ -71,7 +72,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ IdentityProvidersResponse> getIdentityProviders() {
+    public Output</* @Nullable */ IdentityProvidersResponse> identityProviders() {
         return this.identityProviders;
     }
     /**
@@ -85,7 +86,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -99,7 +100,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return The configuration settings of the login flow of users using App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ LoginResponse> getLogin() {
+    public Output</* @Nullable */ LoginResponse> login() {
         return this.login;
     }
     /**
@@ -113,7 +114,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return The configuration settings of the platform of App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ AuthPlatformResponse> getPlatform() {
+    public Output</* @Nullable */ AuthPlatformResponse> platform() {
         return this.platform;
     }
     /**
@@ -141,7 +142,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppAuthSettingsV2Slot(String name, WebAppAuthSettingsV2SlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppAuthSettingsV2Slot", name, args == null ? WebAppAuthSettingsV2SlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppAuthSettingsV2Slot", name, args == null ? WebAppAuthSettingsV2SlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppAuthSettingsV2Slot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

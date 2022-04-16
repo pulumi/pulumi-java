@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsIdpGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     @Import(name="idp")
       private final @Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp;
 
-    public Output<DomainSamlOptionsSamlOptionsIdpGetArgs> getIdp() {
-        return this.idp == null ? Output.empty() : this.idp;
+    public Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp() {
+        return this.idp == null ? Codegen.empty() : this.idp;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     @Import(name="masterBackendRole")
       private final @Nullable Output<String> masterBackendRole;
 
-    public Output<String> getMasterBackendRole() {
-        return this.masterBackendRole == null ? Output.empty() : this.masterBackendRole;
+    public Output<String> masterBackendRole() {
+        return this.masterBackendRole == null ? Codegen.empty() : this.masterBackendRole;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
-    public Output<String> getMasterUserName() {
-        return this.masterUserName == null ? Output.empty() : this.masterUserName;
+    public Output<String> masterUserName() {
+        return this.masterUserName == null ? Codegen.empty() : this.masterUserName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     @Import(name="rolesKey")
       private final @Nullable Output<String> rolesKey;
 
-    public Output<String> getRolesKey() {
-        return this.rolesKey == null ? Output.empty() : this.rolesKey;
+    public Output<String> rolesKey() {
+        return this.rolesKey == null ? Codegen.empty() : this.rolesKey;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     @Import(name="sessionTimeoutMinutes")
       private final @Nullable Output<Integer> sessionTimeoutMinutes;
 
-    public Output<Integer> getSessionTimeoutMinutes() {
-        return this.sessionTimeoutMinutes == null ? Output.empty() : this.sessionTimeoutMinutes;
+    public Output<Integer> sessionTimeoutMinutes() {
+        return this.sessionTimeoutMinutes == null ? Codegen.empty() : this.sessionTimeoutMinutes;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     @Import(name="subjectKey")
       private final @Nullable Output<String> subjectKey;
 
-    public Output<String> getSubjectKey() {
-        return this.subjectKey == null ? Output.empty() : this.subjectKey;
+    public Output<String> subjectKey() {
+        return this.subjectKey == null ? Codegen.empty() : this.subjectKey;
     }
 
     public DomainSamlOptionsSamlOptionsGetArgs(
@@ -112,13 +113,13 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     }
 
     private DomainSamlOptionsSamlOptionsGetArgs() {
-        this.enabled = Output.empty();
-        this.idp = Output.empty();
-        this.masterBackendRole = Output.empty();
-        this.masterUserName = Output.empty();
-        this.rolesKey = Output.empty();
-        this.sessionTimeoutMinutes = Output.empty();
-        this.subjectKey = Output.empty();
+        this.enabled = Codegen.empty();
+        this.idp = Codegen.empty();
+        this.masterBackendRole = Codegen.empty();
+        this.masterUserName = Codegen.empty();
+        this.rolesKey = Codegen.empty();
+        this.sessionTimeoutMinutes = Codegen.empty();
+        this.subjectKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder idp(@Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp) {
@@ -166,7 +167,7 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder idp(@Nullable DomainSamlOptionsSamlOptionsIdpGetArgs idp) {
-            this.idp = Output.ofNullable(idp);
+            this.idp = Codegen.ofNullable(idp);
             return this;
         }
         public Builder masterBackendRole(@Nullable Output<String> masterBackendRole) {
@@ -174,7 +175,7 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder masterBackendRole(@Nullable String masterBackendRole) {
-            this.masterBackendRole = Output.ofNullable(masterBackendRole);
+            this.masterBackendRole = Codegen.ofNullable(masterBackendRole);
             return this;
         }
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
@@ -182,7 +183,7 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder masterUserName(@Nullable String masterUserName) {
-            this.masterUserName = Output.ofNullable(masterUserName);
+            this.masterUserName = Codegen.ofNullable(masterUserName);
             return this;
         }
         public Builder rolesKey(@Nullable Output<String> rolesKey) {
@@ -190,7 +191,7 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rolesKey(@Nullable String rolesKey) {
-            this.rolesKey = Output.ofNullable(rolesKey);
+            this.rolesKey = Codegen.ofNullable(rolesKey);
             return this;
         }
         public Builder sessionTimeoutMinutes(@Nullable Output<Integer> sessionTimeoutMinutes) {
@@ -198,7 +199,7 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
-            this.sessionTimeoutMinutes = Output.ofNullable(sessionTimeoutMinutes);
+            this.sessionTimeoutMinutes = Codegen.ofNullable(sessionTimeoutMinutes);
             return this;
         }
         public Builder subjectKey(@Nullable Output<String> subjectKey) {
@@ -206,7 +207,7 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder subjectKey(@Nullable String subjectKey) {
-            this.subjectKey = Output.ofNullable(subjectKey);
+            this.subjectKey = Codegen.ofNullable(subjectKey);
             return this;
         }        public DomainSamlOptionsSamlOptionsGetArgs build() {
             return new DomainSamlOptionsSamlOptionsGetArgs(enabled, idp, masterBackendRole, masterUserName, rolesKey, sessionTimeoutMinutes, subjectKey);

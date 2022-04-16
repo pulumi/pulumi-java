@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -36,13 +37,13 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
     @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
-    public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
         return this.identity;
     }
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -56,7 +57,7 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
      * @return Name of the monitor resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
      * @return Properties specific to the monitor resource.
      * 
      */
-    public Output<MonitorPropertiesResponse> getProperties() {
+    public Output<MonitorPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -84,13 +85,13 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -104,7 +105,7 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
      * @return The type of the monitor resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -130,7 +131,7 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetricsSource(String name, MetricsSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logz:MetricsSource", name, args == null ? MetricsSourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:logz:MetricsSource", name, args == null ? MetricsSourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MetricsSource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

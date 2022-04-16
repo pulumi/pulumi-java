@@ -99,77 +99,77 @@ public final class GetRemediationAtSubscriptionResult {
      * The time at which the remediation was created.
      * 
     */
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
     /**
      * The deployment status summary for all deployments created by the remediation.
      * 
     */
-    public RemediationDeploymentSummaryResponse getDeploymentStatus() {
+    public RemediationDeploymentSummaryResponse deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * The filters that will be applied to determine which resources to remediate.
      * 
     */
-    public Optional<RemediationFiltersResponse> getFilters() {
+    public Optional<RemediationFiltersResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
     /**
      * The ID of the remediation.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The time at which the remediation was last updated.
      * 
     */
-    public String getLastUpdatedOn() {
+    public String lastUpdatedOn() {
         return this.lastUpdatedOn;
     }
     /**
      * The name of the remediation.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource ID of the policy assignment that should be remediated.
      * 
     */
-    public Optional<String> getPolicyAssignmentId() {
+    public Optional<String> policyAssignmentId() {
         return Optional.ofNullable(this.policyAssignmentId);
     }
     /**
      * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
      * 
     */
-    public Optional<String> getPolicyDefinitionReferenceId() {
+    public Optional<String> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
     /**
      * The status of the remediation.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
      * 
     */
-    public Optional<String> getResourceDiscoveryMode() {
+    public Optional<String> resourceDiscoveryMode() {
         return Optional.ofNullable(this.resourceDiscoveryMode);
     }
     /**
      * The type of the remediation.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

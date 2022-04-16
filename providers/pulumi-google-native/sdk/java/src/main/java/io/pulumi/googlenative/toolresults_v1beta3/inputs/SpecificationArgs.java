@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidTestArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosTestArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidTest")
       private final @Nullable Output<AndroidTestArgs> androidTest;
 
-    public Output<AndroidTestArgs> getAndroidTest() {
-        return this.androidTest == null ? Output.empty() : this.androidTest;
+    public Output<AndroidTestArgs> androidTest() {
+        return this.androidTest == null ? Codegen.empty() : this.androidTest;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosTest")
       private final @Nullable Output<IosTestArgs> iosTest;
 
-    public Output<IosTestArgs> getIosTest() {
-        return this.iosTest == null ? Output.empty() : this.iosTest;
+    public Output<IosTestArgs> iosTest() {
+        return this.iosTest == null ? Codegen.empty() : this.iosTest;
     }
 
     public SpecificationArgs(
@@ -49,8 +50,8 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpecificationArgs() {
-        this.androidTest = Output.empty();
-        this.iosTest = Output.empty();
+        this.androidTest = Codegen.empty();
+        this.iosTest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidTest(@Nullable AndroidTestArgs androidTest) {
-            this.androidTest = Output.ofNullable(androidTest);
+            this.androidTest = Codegen.ofNullable(androidTest);
             return this;
         }
         public Builder iosTest(@Nullable Output<IosTestArgs> iosTest) {
@@ -88,7 +89,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosTest(@Nullable IosTestArgs iosTest) {
-            this.iosTest = Output.ofNullable(iosTest);
+            this.iosTest = Codegen.ofNullable(iosTest);
             return this;
         }        public SpecificationArgs build() {
             return new SpecificationArgs(androidTest, iosTest);

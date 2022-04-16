@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public TcpCheckArgs(@Nullable Output<Integer> port) {
@@ -34,7 +35,7 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TcpCheckArgs() {
-        this.port = Output.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public TcpCheckArgs build() {
             return new TcpCheckArgs(port);

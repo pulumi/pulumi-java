@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepId", required=true)
       private final Output<String> stepId;
 
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId;
     }
 
@@ -33,7 +34,7 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrePostStepArgs() {
-        this.stepId = Output.empty();
+        this.stepId = Codegen.empty();
     }
 
     public static Builder builder() {

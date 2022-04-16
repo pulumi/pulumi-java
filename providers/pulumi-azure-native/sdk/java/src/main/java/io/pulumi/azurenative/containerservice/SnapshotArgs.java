@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerservice.inputs.CreationDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationData")
       private final @Nullable Output<CreationDataArgs> creationData;
 
-    public Output<CreationDataArgs> getCreationData() {
-        return this.creationData == null ? Output.empty() : this.creationData;
+    public Output<CreationDataArgs> creationData() {
+        return this.creationData == null ? Codegen.empty() : this.creationData;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,8 +59,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotType")
       private final @Nullable Output<Either<String,SnapshotType>> snapshotType;
 
-    public Output<Either<String,SnapshotType>> getSnapshotType() {
-        return this.snapshotType == null ? Output.empty() : this.snapshotType;
+    public Output<Either<String,SnapshotType>> snapshotType() {
+        return this.snapshotType == null ? Codegen.empty() : this.snapshotType;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SnapshotArgs(
@@ -100,12 +101,12 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.creationData = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.snapshotType = Output.empty();
-        this.tags = Output.empty();
+        this.creationData = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.snapshotType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationData(@Nullable CreationDataArgs creationData) {
-            this.creationData = Output.ofNullable(creationData);
+            this.creationData = Codegen.ofNullable(creationData);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -151,7 +152,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -167,7 +168,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder snapshotType(@Nullable Output<Either<String,SnapshotType>> snapshotType) {
@@ -175,7 +176,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotType(@Nullable Either<String,SnapshotType> snapshotType) {
-            this.snapshotType = Output.ofNullable(snapshotType);
+            this.snapshotType = Codegen.ofNullable(snapshotType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -183,7 +184,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SnapshotArgs build() {
             return new SnapshotArgs(creationData, location, resourceGroupName, resourceName, snapshotType, tags);

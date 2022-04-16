@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<String> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
     @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<Map<String,String>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -55,7 +56,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -66,8 +67,8 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -97,12 +98,12 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
     }
 
     private LogMetricFilterMetricTransformationGetArgs() {
-        this.defaultValue = Output.empty();
-        this.dimensions = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
@@ -148,7 +149,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
             return this;
         }
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -172,7 +173,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder value(Output<String> value) {

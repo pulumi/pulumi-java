@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class RouteSpecHttpRouteActionWeightedTargetArgs extends io.pulumi.
     @Import(name="virtualNode", required=true)
       private final Output<String> virtualNode;
 
-    public Output<String> getVirtualNode() {
+    public Output<String> virtualNode() {
         return this.virtualNode;
     }
 
@@ -32,7 +33,7 @@ public final class RouteSpecHttpRouteActionWeightedTargetArgs extends io.pulumi.
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 
@@ -44,8 +45,8 @@ public final class RouteSpecHttpRouteActionWeightedTargetArgs extends io.pulumi.
     }
 
     private RouteSpecHttpRouteActionWeightedTargetArgs() {
-        this.virtualNode = Output.empty();
-        this.weight = Output.empty();
+        this.virtualNode = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {

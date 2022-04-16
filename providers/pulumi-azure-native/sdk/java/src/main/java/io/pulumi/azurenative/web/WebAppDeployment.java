@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +41,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return True if deployment is currently active, false if completed and null if not started.
      * 
      */
-    public Output</* @Nullable */ Boolean> getActive() {
+    public Output</* @Nullable */ Boolean> active() {
         return this.active;
     }
     /**
@@ -54,7 +55,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Who authored the deployment.
      * 
      */
-    public Output</* @Nullable */ String> getAuthor() {
+    public Output</* @Nullable */ String> author() {
         return this.author;
     }
     /**
@@ -68,7 +69,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Author email.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorEmail() {
+    public Output</* @Nullable */ String> authorEmail() {
         return this.authorEmail;
     }
     /**
@@ -82,7 +83,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Who performed the deployment.
      * 
      */
-    public Output</* @Nullable */ String> getDeployer() {
+    public Output</* @Nullable */ String> deployer() {
         return this.deployer;
     }
     /**
@@ -96,7 +97,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Details on deployment.
      * 
      */
-    public Output</* @Nullable */ String> getDetails() {
+    public Output</* @Nullable */ String> details() {
         return this.details;
     }
     /**
@@ -110,7 +111,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return End time.
      * 
      */
-    public Output</* @Nullable */ String> getEndTime() {
+    public Output</* @Nullable */ String> endTime() {
         return this.endTime;
     }
     /**
@@ -124,7 +125,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -138,7 +139,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Details about deployment status.
      * 
      */
-    public Output</* @Nullable */ String> getMessage() {
+    public Output</* @Nullable */ String> message() {
         return this.message;
     }
     /**
@@ -152,7 +153,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -166,7 +167,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Start time.
      * 
      */
-    public Output</* @Nullable */ String> getStartTime() {
+    public Output</* @Nullable */ String> startTime() {
         return this.startTime;
     }
     /**
@@ -180,7 +181,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Deployment status.
      * 
      */
-    public Output</* @Nullable */ Integer> getStatus() {
+    public Output</* @Nullable */ Integer> status() {
         return this.status;
     }
     /**
@@ -194,7 +195,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -220,7 +221,7 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppDeployment(String name, WebAppDeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppDeployment", name, args == null ? WebAppDeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppDeployment", name, args == null ? WebAppDeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppDeployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

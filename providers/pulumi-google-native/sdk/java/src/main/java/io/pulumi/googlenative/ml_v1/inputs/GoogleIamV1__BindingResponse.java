@@ -25,7 +25,7 @@ public final class GoogleIamV1__BindingResponse extends io.pulumi.resources.Invo
     @Import(name="condition", required=true)
       private final GoogleType__ExprResponse condition;
 
-    public GoogleType__ExprResponse getCondition() {
+    public GoogleType__ExprResponse condition() {
         return this.condition;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleIamV1__BindingResponse extends io.pulumi.resources.Invo
     @Import(name="members", required=true)
       private final List<String> members;
 
-    public List<String> getMembers() {
+    public List<String> members() {
         return this.members;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleIamV1__BindingResponse extends io.pulumi.resources.Invo
     @Import(name="role", required=true)
       private final String role;
 
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 

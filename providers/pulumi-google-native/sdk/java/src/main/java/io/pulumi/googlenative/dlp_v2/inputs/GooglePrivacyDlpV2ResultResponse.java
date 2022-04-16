@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
     @Import(name="hybridStats", required=true)
       private final GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
 
-    public GooglePrivacyDlpV2HybridInspectStatisticsResponse getHybridStats() {
+    public GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats() {
         return this.hybridStats;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
     @Import(name="infoTypeStats", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
 
-    public List<GooglePrivacyDlpV2InfoTypeStatsResponse> getInfoTypeStats() {
+    public List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats() {
         return this.infoTypeStats;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
     @Import(name="processedBytes", required=true)
       private final String processedBytes;
 
-    public String getProcessedBytes() {
+    public String processedBytes() {
         return this.processedBytes;
     }
 
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
     @Import(name="totalEstimatedBytes", required=true)
       private final String totalEstimatedBytes;
 
-    public String getTotalEstimatedBytes() {
+    public String totalEstimatedBytes() {
         return this.totalEstimatedBytes;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,8 +33,8 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
     @Import(name="sha1Sum")
       private final @Nullable Output<String> sha1Sum;
 
-    public Output<String> getSha1Sum() {
-        return this.sha1Sum == null ? Output.empty() : this.sha1Sum;
+    public Output<String> sha1Sum() {
+        return this.sha1Sum == null ? Codegen.empty() : this.sha1Sum;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
     @Import(name="sourceUrl", required=true)
       private final Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
+    public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
 
@@ -57,9 +58,9 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
     }
 
     private StandardAppVersionDeploymentFileGetArgs() {
-        this.name = Output.empty();
-        this.sha1Sum = Output.empty();
-        this.sourceUrl = Output.empty();
+        this.name = Codegen.empty();
+        this.sha1Sum = Codegen.empty();
+        this.sourceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class StandardAppVersionDeploymentFileGetArgs extends io.pulumi.res
             return this;
         }
         public Builder sha1Sum(@Nullable String sha1Sum) {
-            this.sha1Sum = Output.ofNullable(sha1Sum);
+            this.sha1Sum = Codegen.ofNullable(sha1Sum);
             return this;
         }
         public Builder sourceUrl(Output<String> sourceUrl) {

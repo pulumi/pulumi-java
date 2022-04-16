@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
-    public Output<String> getProjectDescription() {
-        return this.projectDescription == null ? Output.empty() : this.projectDescription;
+    public Output<String> projectDescription() {
+        return this.projectDescription == null ? Codegen.empty() : this.projectDescription;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+    public Output<String> projectId() {
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
-        return this.projectName == null ? Output.empty() : this.projectName;
+    public Output<String> projectName() {
+        return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceCatalogProvisioningDetails")
       private final @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
 
-    public Output<ProjectServiceCatalogProvisioningDetailsGetArgs> getServiceCatalogProvisioningDetails() {
-        return this.serviceCatalogProvisioningDetails == null ? Output.empty() : this.serviceCatalogProvisioningDetails;
+    public Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails() {
+        return this.serviceCatalogProvisioningDetails == null ? Codegen.empty() : this.serviceCatalogProvisioningDetails;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ProjectState(
@@ -111,13 +112,13 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectState() {
-        this.arn = Output.empty();
-        this.projectDescription = Output.empty();
-        this.projectId = Output.empty();
-        this.projectName = Output.empty();
-        this.serviceCatalogProvisioningDetails = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.projectDescription = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.serviceCatalogProvisioningDetails = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder projectDescription(@Nullable Output<String> projectDescription) {
@@ -165,7 +166,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectDescription(@Nullable String projectDescription) {
-            this.projectDescription = Output.ofNullable(projectDescription);
+            this.projectDescription = Codegen.ofNullable(projectDescription);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -173,7 +174,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }
         public Builder projectName(@Nullable Output<String> projectName) {
@@ -181,7 +182,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Output.ofNullable(projectName);
+            this.projectName = Codegen.ofNullable(projectName);
             return this;
         }
         public Builder serviceCatalogProvisioningDetails(@Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
@@ -189,7 +190,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceCatalogProvisioningDetails(@Nullable ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
-            this.serviceCatalogProvisioningDetails = Output.ofNullable(serviceCatalogProvisioningDetails);
+            this.serviceCatalogProvisioningDetails = Codegen.ofNullable(serviceCatalogProvisioningDetails);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -197,7 +198,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -205,7 +206,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ProjectState build() {
             return new ProjectState(arn, projectDescription, projectId, projectName, serviceCatalogProvisioningDetails, tags, tagsAll);

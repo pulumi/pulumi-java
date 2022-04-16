@@ -25,7 +25,7 @@ public final class WebServerNetworkAccessControlResponse {
      * A collection of allowed IP ranges with descriptions.
      * 
     */
-    public List<AllowedIpRangeResponse> getAllowedIpRanges() {
+    public List<AllowedIpRangeResponse> allowedIpRanges() {
         return this.allowedIpRanges;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="automatedSnapshotStartHour", required=true)
       private final Output<Integer> automatedSnapshotStartHour;
 
-    public Output<Integer> getAutomatedSnapshotStartHour() {
+    public Output<Integer> automatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour;
     }
 
@@ -29,7 +30,7 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainSnapshotOptionsArgs() {
-        this.automatedSnapshotStartHour = Output.empty();
+        this.automatedSnapshotStartHour = Codegen.empty();
     }
 
     public static Builder builder() {

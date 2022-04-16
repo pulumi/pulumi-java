@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
     @Import(name="policies")
       private final @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
-    public Output<Map<String,OpenAuthenticationAccessPolicyArgs>> getPolicies() {
-        return this.policies == null ? Output.empty() : this.policies;
+    public Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies() {
+        return this.policies == null ? Codegen.empty() : this.policies;
     }
 
     public OpenAuthenticationAccessPoliciesArgs(@Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
@@ -36,7 +37,7 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
     }
 
     private OpenAuthenticationAccessPoliciesArgs() {
-        this.policies = Output.empty();
+        this.policies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
             return this;
         }
         public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyArgs> policies) {
-            this.policies = Output.ofNullable(policies);
+            this.policies = Codegen.ofNullable(policies);
             return this;
         }        public OpenAuthenticationAccessPoliciesArgs build() {
             return new OpenAuthenticationAccessPoliciesArgs(policies);

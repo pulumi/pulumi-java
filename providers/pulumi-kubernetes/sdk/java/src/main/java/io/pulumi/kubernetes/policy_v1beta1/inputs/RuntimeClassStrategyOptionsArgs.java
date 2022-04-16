@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
     @Import(name="allowedRuntimeClassNames", required=true)
       private final Output<List<String>> allowedRuntimeClassNames;
 
-    public Output<List<String>> getAllowedRuntimeClassNames() {
+    public Output<List<String>> allowedRuntimeClassNames() {
         return this.allowedRuntimeClassNames;
     }
 
@@ -37,8 +38,8 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
     @Import(name="defaultRuntimeClassName")
       private final @Nullable Output<String> defaultRuntimeClassName;
 
-    public Output<String> getDefaultRuntimeClassName() {
-        return this.defaultRuntimeClassName == null ? Output.empty() : this.defaultRuntimeClassName;
+    public Output<String> defaultRuntimeClassName() {
+        return this.defaultRuntimeClassName == null ? Codegen.empty() : this.defaultRuntimeClassName;
     }
 
     public RuntimeClassStrategyOptionsArgs(
@@ -49,8 +50,8 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
     }
 
     private RuntimeClassStrategyOptionsArgs() {
-        this.allowedRuntimeClassNames = Output.empty();
-        this.defaultRuntimeClassName = Output.empty();
+        this.allowedRuntimeClassNames = Codegen.empty();
+        this.defaultRuntimeClassName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder defaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
-            this.defaultRuntimeClassName = Output.ofNullable(defaultRuntimeClassName);
+            this.defaultRuntimeClassName = Codegen.ofNullable(defaultRuntimeClassName);
             return this;
         }        public RuntimeClassStrategyOptionsArgs build() {
             return new RuntimeClassStrategyOptionsArgs(allowedRuntimeClassNames, defaultRuntimeClassName);

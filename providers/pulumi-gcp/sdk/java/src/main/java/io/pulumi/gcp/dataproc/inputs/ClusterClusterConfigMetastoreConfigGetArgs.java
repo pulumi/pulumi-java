@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
     @Import(name="dataprocMetastoreService", required=true)
       private final Output<String> dataprocMetastoreService;
 
-    public Output<String> getDataprocMetastoreService() {
+    public Output<String> dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
 
@@ -29,7 +30,7 @@ public final class ClusterClusterConfigMetastoreConfigGetArgs extends io.pulumi.
     }
 
     private ClusterClusterConfigMetastoreConfigGetArgs() {
-        this.dataprocMetastoreService = Output.empty();
+        this.dataprocMetastoreService = Codegen.empty();
     }
 
     public static Builder builder() {

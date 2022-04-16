@@ -8,6 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.UserAssignedIdentity
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
 
-    public Output<Either<String,ResourceIdentityAssignment>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,ResourceIdentityAssignment>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
 
-    public Output<Map<String,UserAssignedIdentityMetaArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+    public Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public ResourceIdentityArgs(
@@ -52,8 +53,8 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable Either<String,ResourceIdentityAssignment> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
@@ -91,7 +92,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityMetaArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public ResourceIdentityArgs build() {
             return new ResourceIdentityArgs(type, userAssignedIdentities);

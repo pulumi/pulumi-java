@@ -6,6 +6,7 @@ package io.pulumi.azurenative.keyvault;
 import io.pulumi.azurenative.keyvault.inputs.KeyPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<KeyPropertiesArgs> properties;
 
-    public Output<KeyPropertiesArgs> getProperties() {
+    public Output<KeyPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -45,7 +46,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,8 +57,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -85,11 +86,11 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.keyName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vaultName = Output.empty();
+        this.keyName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder properties(Output<KeyPropertiesArgs> properties) {
@@ -149,7 +150,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vaultName(Output<String> vaultName) {

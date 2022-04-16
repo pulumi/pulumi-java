@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
     @Import(name="networkTier", required=true)
       private final Output<String> networkTier;
 
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier;
     }
 
@@ -34,8 +35,8 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ProjectDefaultNetworkTierArgs(
@@ -46,8 +47,8 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
     }
 
     private ProjectDefaultNetworkTierArgs() {
-        this.networkTier = Output.empty();
-        this.project = Output.empty();
+        this.networkTier = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ProjectDefaultNetworkTierArgs build() {
             return new ProjectDefaultNetworkTierArgs(networkTier, project);

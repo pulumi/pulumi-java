@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return The hostname of the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getHostname() {
+    public Output</* @Nullable */ String> hostname() {
         return this.hostname;
     }
     /**
@@ -53,7 +54,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -67,7 +68,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -81,7 +82,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return The port of the endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -95,7 +96,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return The ARM URI to the Service Bus relay.
      * 
      */
-    public Output</* @Nullable */ String> getRelayArmUri() {
+    public Output</* @Nullable */ String> relayArmUri() {
         return this.relayArmUri;
     }
     /**
@@ -109,7 +110,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return The name of the Service Bus relay.
      * 
      */
-    public Output</* @Nullable */ String> getRelayName() {
+    public Output</* @Nullable */ String> relayName() {
         return this.relayName;
     }
     /**
@@ -123,7 +124,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
      * 
      */
-    public Output</* @Nullable */ String> getSendKeyName() {
+    public Output</* @Nullable */ String> sendKeyName() {
         return this.sendKeyName;
     }
     /**
@@ -139,7 +140,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * normally, use the POST /listKeys API instead.
      * 
      */
-    public Output</* @Nullable */ String> getSendKeyValue() {
+    public Output</* @Nullable */ String> sendKeyValue() {
         return this.sendKeyValue;
     }
     /**
@@ -153,7 +154,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return The name of the Service Bus namespace.
      * 
      */
-    public Output</* @Nullable */ String> getServiceBusNamespace() {
+    public Output</* @Nullable */ String> serviceBusNamespace() {
         return this.serviceBusNamespace;
     }
     /**
@@ -167,7 +168,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return The suffix for the service bus endpoint. By default this is .servicebus.windows.net
      * 
      */
-    public Output</* @Nullable */ String> getServiceBusSuffix() {
+    public Output</* @Nullable */ String> serviceBusSuffix() {
         return this.serviceBusSuffix;
     }
     /**
@@ -181,7 +182,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -207,7 +208,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppHybridConnectionSlot(String name, WebAppHybridConnectionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppHybridConnectionSlot", name, args == null ? WebAppHybridConnectionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppHybridConnectionSlot", name, args == null ? WebAppHybridConnectionSlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppHybridConnectionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

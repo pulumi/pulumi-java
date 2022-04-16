@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deliveryConfig")
       private final @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
 
-    public Output<LiteSubscriptionDeliveryConfigArgs> getDeliveryConfig() {
-        return this.deliveryConfig == null ? Output.empty() : this.deliveryConfig;
+    public Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig() {
+        return this.deliveryConfig == null ? Codegen.empty() : this.deliveryConfig;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -79,8 +80,8 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public LiteSubscriptionArgs(
@@ -99,12 +100,12 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LiteSubscriptionArgs() {
-        this.deliveryConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.topic = Output.empty();
-        this.zone = Output.empty();
+        this.deliveryConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.topic = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deliveryConfig(@Nullable LiteSubscriptionDeliveryConfigArgs deliveryConfig) {
-            this.deliveryConfig = Output.ofNullable(deliveryConfig);
+            this.deliveryConfig = Codegen.ofNullable(deliveryConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -150,7 +151,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -158,7 +159,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -166,7 +167,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder topic(Output<String> topic) {
@@ -182,7 +183,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public LiteSubscriptionArgs build() {
             return new LiteSubscriptionArgs(deliveryConfig, name, project, region, topic, zone);

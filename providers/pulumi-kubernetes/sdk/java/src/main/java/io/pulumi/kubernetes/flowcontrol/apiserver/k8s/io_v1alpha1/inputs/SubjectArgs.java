@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.GroupSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.ServiceAccountSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.UserSubjectArgs;
@@ -24,8 +25,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="group")
       private final @Nullable Output<GroupSubjectArgs> group;
 
-    public Output<GroupSubjectArgs> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+    public Output<GroupSubjectArgs> group() {
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -35,22 +36,22 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
 
-    public Output<ServiceAccountSubjectArgs> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<ServiceAccountSubjectArgs> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="user")
       private final @Nullable Output<UserSubjectArgs> user;
 
-    public Output<UserSubjectArgs> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<UserSubjectArgs> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public SubjectArgs(
@@ -65,10 +66,10 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubjectArgs() {
-        this.group = Output.empty();
-        this.kind = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.user = Output.empty();
+        this.group = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder group(@Nullable GroupSubjectArgs group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -118,7 +119,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable ServiceAccountSubjectArgs serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder user(@Nullable Output<UserSubjectArgs> user) {
@@ -126,7 +127,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder user(@Nullable UserSubjectArgs user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public SubjectArgs build() {
             return new SubjectArgs(group, kind, serviceAccount, user);

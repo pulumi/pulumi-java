@@ -15,6 +15,7 @@ import io.pulumi.azurenative.compute.inputs.SnapshotSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +35,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationData", required=true)
       private final Output<CreationDataArgs> creationData;
 
-    public Output<CreationDataArgs> getCreationData() {
+    public Output<CreationDataArgs> creationData() {
         return this.creationData;
     }
 
@@ -45,8 +46,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskAccessId")
       private final @Nullable Output<String> diskAccessId;
 
-    public Output<String> getDiskAccessId() {
-        return this.diskAccessId == null ? Output.empty() : this.diskAccessId;
+    public Output<String> diskAccessId() {
+        return this.diskAccessId == null ? Codegen.empty() : this.diskAccessId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+    public Output<Integer> diskSizeGB() {
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<EncryptionArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSettingsCollection")
       private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
-    public Output<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
-        return this.encryptionSettingsCollection == null ? Output.empty() : this.encryptionSettingsCollection;
+    public Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection() {
+        return this.encryptionSettingsCollection == null ? Codegen.empty() : this.encryptionSettingsCollection;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> extendedLocation() {
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Output<Either<String,HyperVGeneration>> getHyperVGeneration() {
-        return this.hyperVGeneration == null ? Output.empty() : this.hyperVGeneration;
+    public Output<Either<String,HyperVGeneration>> hyperVGeneration() {
+        return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="incremental")
       private final @Nullable Output<Boolean> incremental;
 
-    public Output<Boolean> getIncremental() {
-        return this.incremental == null ? Output.empty() : this.incremental;
+    public Output<Boolean> incremental() {
+        return this.incremental == null ? Codegen.empty() : this.incremental;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkAccessPolicy")
       private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
-    public Output<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
-        return this.networkAccessPolicy == null ? Output.empty() : this.networkAccessPolicy;
+    public Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy() {
+        return this.networkAccessPolicy == null ? Codegen.empty() : this.networkAccessPolicy;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<OperatingSystemTypes> osType;
 
-    public Output<OperatingSystemTypes> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+    public Output<OperatingSystemTypes> osType() {
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="purchasePlan")
       private final @Nullable Output<PurchasePlanArgs> purchasePlan;
 
-    public Output<PurchasePlanArgs> getPurchasePlan() {
-        return this.purchasePlan == null ? Output.empty() : this.purchasePlan;
+    public Output<PurchasePlanArgs> purchasePlan() {
+        return this.purchasePlan == null ? Codegen.empty() : this.purchasePlan;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -177,8 +178,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SnapshotSkuArgs> sku;
 
-    public Output<SnapshotSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SnapshotSkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
-    public Output<String> getSnapshotName() {
-        return this.snapshotName == null ? Output.empty() : this.snapshotName;
+    public Output<String> snapshotName() {
+        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportsHibernation")
       private final @Nullable Output<Boolean> supportsHibernation;
 
-    public Output<Boolean> getSupportsHibernation() {
-        return this.supportsHibernation == null ? Output.empty() : this.supportsHibernation;
+    public Output<Boolean> supportsHibernation() {
+        return this.supportsHibernation == null ? Codegen.empty() : this.supportsHibernation;
     }
 
     /**
@@ -210,8 +211,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SnapshotArgs(
@@ -252,23 +253,23 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.creationData = Output.empty();
-        this.diskAccessId = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.encryption = Output.empty();
-        this.encryptionSettingsCollection = Output.empty();
-        this.extendedLocation = Output.empty();
-        this.hyperVGeneration = Output.empty();
-        this.incremental = Output.empty();
-        this.location = Output.empty();
-        this.networkAccessPolicy = Output.empty();
-        this.osType = Output.empty();
-        this.purchasePlan = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.snapshotName = Output.empty();
-        this.supportsHibernation = Output.empty();
-        this.tags = Output.empty();
+        this.creationData = Codegen.empty();
+        this.diskAccessId = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.encryptionSettingsCollection = Codegen.empty();
+        this.extendedLocation = Codegen.empty();
+        this.hyperVGeneration = Codegen.empty();
+        this.incremental = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkAccessPolicy = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.purchasePlan = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.snapshotName = Codegen.empty();
+        this.supportsHibernation = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -336,7 +337,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskAccessId(@Nullable String diskAccessId) {
-            this.diskAccessId = Output.ofNullable(diskAccessId);
+            this.diskAccessId = Codegen.ofNullable(diskAccessId);
             return this;
         }
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
@@ -344,7 +345,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
@@ -352,7 +353,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder encryptionSettingsCollection(@Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
@@ -360,7 +361,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
-            this.encryptionSettingsCollection = Output.ofNullable(encryptionSettingsCollection);
+            this.encryptionSettingsCollection = Codegen.ofNullable(encryptionSettingsCollection);
             return this;
         }
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
@@ -368,7 +369,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
@@ -376,7 +377,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
-            this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
+            this.hyperVGeneration = Codegen.ofNullable(hyperVGeneration);
             return this;
         }
         public Builder incremental(@Nullable Output<Boolean> incremental) {
@@ -384,7 +385,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incremental(@Nullable Boolean incremental) {
-            this.incremental = Output.ofNullable(incremental);
+            this.incremental = Codegen.ofNullable(incremental);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -392,7 +393,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkAccessPolicy(@Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
@@ -400,7 +401,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
-            this.networkAccessPolicy = Output.ofNullable(networkAccessPolicy);
+            this.networkAccessPolicy = Codegen.ofNullable(networkAccessPolicy);
             return this;
         }
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
@@ -408,7 +409,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osType(@Nullable OperatingSystemTypes osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder purchasePlan(@Nullable Output<PurchasePlanArgs> purchasePlan) {
@@ -416,7 +417,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder purchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
-            this.purchasePlan = Output.ofNullable(purchasePlan);
+            this.purchasePlan = Codegen.ofNullable(purchasePlan);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -432,7 +433,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SnapshotSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
@@ -440,7 +441,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Output.ofNullable(snapshotName);
+            this.snapshotName = Codegen.ofNullable(snapshotName);
             return this;
         }
         public Builder supportsHibernation(@Nullable Output<Boolean> supportsHibernation) {
@@ -448,7 +449,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
-            this.supportsHibernation = Output.ofNullable(supportsHibernation);
+            this.supportsHibernation = Codegen.ofNullable(supportsHibernation);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -456,7 +457,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SnapshotArgs build() {
             return new SnapshotArgs(creationData, diskAccessId, diskSizeGB, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, incremental, location, networkAccessPolicy, osType, purchasePlan, resourceGroupName, sku, snapshotName, supportsHibernation, tags);

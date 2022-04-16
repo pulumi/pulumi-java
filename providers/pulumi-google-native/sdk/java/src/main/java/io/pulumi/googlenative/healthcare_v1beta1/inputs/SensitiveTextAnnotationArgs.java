@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
     @Import(name="details")
       private final @Nullable Output<Map<String,String>> details;
 
-    public Output<Map<String,String>> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<Map<String,String>> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     public SensitiveTextAnnotationArgs(@Nullable Output<Map<String,String>> details) {
@@ -35,7 +36,7 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
     }
 
     private SensitiveTextAnnotationArgs() {
-        this.details = Output.empty();
+        this.details = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SensitiveTextAnnotationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder details(@Nullable Map<String,String> details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }        public SensitiveTextAnnotationArgs build() {
             return new SensitiveTextAnnotationArgs(details);

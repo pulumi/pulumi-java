@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
     @Import(name="defaultGid")
       private final @Nullable Output<Integer> defaultGid;
 
-    public Output<Integer> getDefaultGid() {
-        return this.defaultGid == null ? Output.empty() : this.defaultGid;
+    public Output<Integer> defaultGid() {
+        return this.defaultGid == null ? Codegen.empty() : this.defaultGid;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
     @Import(name="defaultUid")
       private final @Nullable Output<Integer> defaultUid;
 
-    public Output<Integer> getDefaultUid() {
-        return this.defaultUid == null ? Output.empty() : this.defaultUid;
+    public Output<Integer> defaultUid() {
+        return this.defaultUid == null ? Codegen.empty() : this.defaultUid;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
-    public Output<String> getMountPath() {
-        return this.mountPath == null ? Output.empty() : this.mountPath;
+    public Output<String> mountPath() {
+        return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
     public AppImageConfigFileSystemConfigArgs(
@@ -62,9 +63,9 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
     }
 
     private AppImageConfigFileSystemConfigArgs() {
-        this.defaultGid = Output.empty();
-        this.defaultUid = Output.empty();
-        this.mountPath = Output.empty();
+        this.defaultGid = Codegen.empty();
+        this.defaultUid = Codegen.empty();
+        this.mountPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder defaultGid(@Nullable Integer defaultGid) {
-            this.defaultGid = Output.ofNullable(defaultGid);
+            this.defaultGid = Codegen.ofNullable(defaultGid);
             return this;
         }
         public Builder defaultUid(@Nullable Output<Integer> defaultUid) {
@@ -104,7 +105,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder defaultUid(@Nullable Integer defaultUid) {
-            this.defaultUid = Output.ofNullable(defaultUid);
+            this.defaultUid = Codegen.ofNullable(defaultUid);
             return this;
         }
         public Builder mountPath(@Nullable Output<String> mountPath) {
@@ -112,7 +113,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Output.ofNullable(mountPath);
+            this.mountPath = Codegen.ofNullable(mountPath);
             return this;
         }        public AppImageConfigFileSystemConfigArgs build() {
             return new AppImageConfigFileSystemConfigArgs(defaultGid, defaultUid, mountPath);

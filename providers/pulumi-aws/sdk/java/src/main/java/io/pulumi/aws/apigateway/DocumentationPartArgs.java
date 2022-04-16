@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway;
 import io.pulumi.aws.apigateway.inputs.DocumentationPartLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location", required=true)
       private final Output<DocumentationPartLocationArgs> location;
 
-    public Output<DocumentationPartLocationArgs> getLocation() {
+    public Output<DocumentationPartLocationArgs> location() {
         return this.location;
     }
 
@@ -32,7 +33,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties", required=true)
       private final Output<String> properties;
 
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties;
     }
 
@@ -43,7 +44,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -57,9 +58,9 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DocumentationPartArgs() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.restApiId = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.restApiId = Codegen.empty();
     }
 
     public static Builder builder() {

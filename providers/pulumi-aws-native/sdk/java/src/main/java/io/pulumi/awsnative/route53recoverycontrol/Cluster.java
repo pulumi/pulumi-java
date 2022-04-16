@@ -11,6 +11,7 @@ import io.pulumi.awsnative.route53recoverycontrol.outputs.ClusterTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the cluster.
      * 
      */
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -46,7 +47,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Endpoints for the cluster.
      * 
      */
-    public Output<List<ClusterEndpoint>> getClusterEndpoints() {
+    public Output<List<ClusterEndpoint>> clusterEndpoints() {
         return this.clusterEndpoints;
     }
     /**
@@ -60,7 +61,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Name of a Cluster. You can use any non-white space character in the name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    public Output<ClusterStatus> getStatus() {
+    public Output<ClusterStatus> status() {
         return this.status;
     }
     /**
@@ -88,7 +89,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<ClusterTag>> getTags() {
+    public Output</* @Nullable */ List<ClusterTag>> tags() {
         return this.tags;
     }
 
@@ -114,7 +115,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoverycontrol:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoverycontrol:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.TargetProjectArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The time this target project resource was created (not related to when the Compute Engine project it points to was created).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -42,7 +43,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The target project's description.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The name of the target project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The target project ID (number) or project name.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -84,7 +85,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @return The last time the target project resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -110,7 +111,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetProject(String name, TargetProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1:TargetProject", name, args == null ? TargetProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1:TargetProject", name, args == null ? TargetProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetProject(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

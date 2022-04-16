@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.NodeGroupArgs;
 import io.pulumi.googlenative.compute_beta.outputs.NodeGroupAutoscalingPolicyResponse;
@@ -31,7 +32,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Specifies how autoscaling should behave.
      * 
      */
-    public Output<NodeGroupAutoscalingPolicyResponse> getAutoscalingPolicy() {
+    public Output<NodeGroupAutoscalingPolicyResponse> autoscalingPolicy() {
         return this.autoscalingPolicy;
     }
     /**
@@ -45,7 +46,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -59,13 +60,13 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -79,7 +80,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Always compute#nodeGroup for node group.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -93,7 +94,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
      * 
      */
-    public Output<String> getLocationHint() {
+    public Output<String> locationHint() {
         return this.locationHint;
     }
     /**
@@ -107,13 +108,13 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
      * 
      */
-    public Output<String> getMaintenancePolicy() {
+    public Output<String> maintenancePolicy() {
         return this.maintenancePolicy;
     }
     @Export(name="maintenanceWindow", type=NodeGroupMaintenanceWindowResponse.class, parameters={})
     private Output<NodeGroupMaintenanceWindowResponse> maintenanceWindow;
 
-    public Output<NodeGroupMaintenanceWindowResponse> getMaintenanceWindow() {
+    public Output<NodeGroupMaintenanceWindowResponse> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -127,7 +128,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +142,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return URL of the node template to create the node group from.
      * 
      */
-    public Output<String> getNodeTemplate() {
+    public Output<String> nodeTemplate() {
         return this.nodeTemplate;
     }
     /**
@@ -155,7 +156,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -169,13 +170,13 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The total number of nodes in the node group.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -189,7 +190,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the zone where the node group resides, such as us-central1-a.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -215,7 +216,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeGroup(String name, NodeGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NodeGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

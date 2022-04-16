@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.enums.SupportedCloudEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="compressedQuery")
       private final @Nullable Output<String> compressedQuery;
 
-    public Output<String> getCompressedQuery() {
-        return this.compressedQuery == null ? Output.empty() : this.compressedQuery;
+    public Output<String> compressedQuery() {
+        return this.compressedQuery == null ? Codegen.empty() : this.compressedQuery;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="customAssessmentAutomationName")
       private final @Nullable Output<String> customAssessmentAutomationName;
 
-    public Output<String> getCustomAssessmentAutomationName() {
-        return this.customAssessmentAutomationName == null ? Output.empty() : this.customAssessmentAutomationName;
+    public Output<String> customAssessmentAutomationName() {
+        return this.customAssessmentAutomationName == null ? Codegen.empty() : this.customAssessmentAutomationName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="remediationDescription")
       private final @Nullable Output<String> remediationDescription;
 
-    public Output<String> getRemediationDescription() {
-        return this.remediationDescription == null ? Output.empty() : this.remediationDescription;
+    public Output<String> remediationDescription() {
+        return this.remediationDescription == null ? Codegen.empty() : this.remediationDescription;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,8 +91,8 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="severity")
       private final @Nullable Output<Either<String,SeverityEnum>> severity;
 
-    public Output<Either<String,SeverityEnum>> getSeverity() {
-        return this.severity == null ? Output.empty() : this.severity;
+    public Output<Either<String,SeverityEnum>> severity() {
+        return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     @Import(name="supportedCloud")
       private final @Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud;
 
-    public Output<Either<String,SupportedCloudEnum>> getSupportedCloud() {
-        return this.supportedCloud == null ? Output.empty() : this.supportedCloud;
+    public Output<Either<String,SupportedCloudEnum>> supportedCloud() {
+        return this.supportedCloud == null ? Codegen.empty() : this.supportedCloud;
     }
 
     public CustomAssessmentAutomationArgs(
@@ -125,14 +126,14 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     }
 
     private CustomAssessmentAutomationArgs() {
-        this.compressedQuery = Output.empty();
-        this.customAssessmentAutomationName = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.remediationDescription = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.severity = Output.empty();
-        this.supportedCloud = Output.empty();
+        this.compressedQuery = Codegen.empty();
+        this.customAssessmentAutomationName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.remediationDescription = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.supportedCloud = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder compressedQuery(@Nullable String compressedQuery) {
-            this.compressedQuery = Output.ofNullable(compressedQuery);
+            this.compressedQuery = Codegen.ofNullable(compressedQuery);
             return this;
         }
         public Builder customAssessmentAutomationName(@Nullable Output<String> customAssessmentAutomationName) {
@@ -182,7 +183,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder customAssessmentAutomationName(@Nullable String customAssessmentAutomationName) {
-            this.customAssessmentAutomationName = Output.ofNullable(customAssessmentAutomationName);
+            this.customAssessmentAutomationName = Codegen.ofNullable(customAssessmentAutomationName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -190,7 +191,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -198,7 +199,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder remediationDescription(@Nullable Output<String> remediationDescription) {
@@ -206,7 +207,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder remediationDescription(@Nullable String remediationDescription) {
-            this.remediationDescription = Output.ofNullable(remediationDescription);
+            this.remediationDescription = Codegen.ofNullable(remediationDescription);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -222,7 +223,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder severity(@Nullable Either<String,SeverityEnum> severity) {
-            this.severity = Output.ofNullable(severity);
+            this.severity = Codegen.ofNullable(severity);
             return this;
         }
         public Builder supportedCloud(@Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud) {
@@ -230,7 +231,7 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder supportedCloud(@Nullable Either<String,SupportedCloudEnum> supportedCloud) {
-            this.supportedCloud = Output.ofNullable(supportedCloud);
+            this.supportedCloud = Codegen.ofNullable(supportedCloud);
             return this;
         }        public CustomAssessmentAutomationArgs build() {
             return new CustomAssessmentAutomationArgs(compressedQuery, customAssessmentAutomationName, description, displayName, remediationDescription, resourceGroupName, severity, supportedCloud);

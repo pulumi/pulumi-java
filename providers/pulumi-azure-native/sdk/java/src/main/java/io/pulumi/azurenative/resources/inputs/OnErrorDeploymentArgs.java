@@ -6,6 +6,7 @@ package io.pulumi.azurenative.resources.inputs;
 import io.pulumi.azurenative.resources.enums.OnErrorDeploymentType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
-        return this.deploymentName == null ? Output.empty() : this.deploymentName;
+    public Output<String> deploymentName() {
+        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<OnErrorDeploymentType> type;
 
-    public Output<OnErrorDeploymentType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<OnErrorDeploymentType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public OnErrorDeploymentArgs(
@@ -49,8 +50,8 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private OnErrorDeploymentArgs() {
-        this.deploymentName = Output.empty();
-        this.type = Output.empty();
+        this.deploymentName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Output.ofNullable(deploymentName);
+            this.deploymentName = Codegen.ofNullable(deploymentName);
             return this;
         }
         public Builder type(@Nullable Output<OnErrorDeploymentType> type) {
@@ -88,7 +89,7 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable OnErrorDeploymentType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public OnErrorDeploymentArgs build() {
             return new OnErrorDeploymentArgs(deploymentName, type);

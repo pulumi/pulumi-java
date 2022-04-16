@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends io.pulumi.
     @Import(name="driverLogLevels")
       private final @Nullable Output<Map<String,String>> driverLogLevels;
 
-    public Output<Map<String,String>> getDriverLogLevels() {
-        return this.driverLogLevels == null ? Output.empty() : this.driverLogLevels;
+    public Output<Map<String,String>> driverLogLevels() {
+        return this.driverLogLevels == null ? Codegen.empty() : this.driverLogLevels;
     }
 
     public WorkflowTemplateJobPigJobLoggingConfigArgs(@Nullable Output<Map<String,String>> driverLogLevels) {
@@ -31,7 +32,7 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends io.pulumi.
     }
 
     private WorkflowTemplateJobPigJobLoggingConfigArgs() {
-        this.driverLogLevels = Output.empty();
+        this.driverLogLevels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends io.pulumi.
             return this;
         }
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Output.ofNullable(driverLogLevels);
+            this.driverLogLevels = Codegen.ofNullable(driverLogLevels);
             return this;
         }        public WorkflowTemplateJobPigJobLoggingConfigArgs build() {
             return new WorkflowTemplateJobPigJobLoggingConfigArgs(driverLogLevels);

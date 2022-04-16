@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataSourceVpcConnectionPropertiesGetArgs extends io.pulumi.re
     @Import(name="vpcConnectionArn", required=true)
       private final Output<String> vpcConnectionArn;
 
-    public Output<String> getVpcConnectionArn() {
+    public Output<String> vpcConnectionArn() {
         return this.vpcConnectionArn;
     }
 
@@ -29,7 +30,7 @@ public final class DataSourceVpcConnectionPropertiesGetArgs extends io.pulumi.re
     }
 
     private DataSourceVpcConnectionPropertiesGetArgs() {
-        this.vpcConnectionArn = Output.empty();
+        this.vpcConnectionArn = Codegen.empty();
     }
 
     public static Builder builder() {

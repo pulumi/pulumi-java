@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return The protocol-specific DDoS policy customization parameters.
      * 
      */
-    public Output</* @Nullable */ List<ProtocolCustomSettingsFormatResponse>> getProtocolCustomSettings() {
+    public Output</* @Nullable */ List<ProtocolCustomSettingsFormatResponse>> protocolCustomSettings() {
         return this.protocolCustomSettings;
     }
     /**
@@ -100,7 +101,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the DDoS custom policy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
      * 
      */
-    public Output<List<SubResourceResponse>> getPublicIPAddresses() {
+    public Output<List<SubResourceResponse>> publicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
@@ -128,7 +129,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -142,7 +143,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class DdosCustomPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DdosCustomPolicy(String name, DdosCustomPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:DdosCustomPolicy", name, args == null ? DdosCustomPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:DdosCustomPolicy", name, args == null ? DdosCustomPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DdosCustomPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

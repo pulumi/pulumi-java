@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceS3PathArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class DataSourceOneDriveUsersArgs extends io.pulumi.resources.Resou
     @Import(name="oneDriveUserList")
       private final @Nullable Output<List<String>> oneDriveUserList;
 
-    public Output<List<String>> getOneDriveUserList() {
-        return this.oneDriveUserList == null ? Output.empty() : this.oneDriveUserList;
+    public Output<List<String>> oneDriveUserList() {
+        return this.oneDriveUserList == null ? Codegen.empty() : this.oneDriveUserList;
     }
 
     @Import(name="oneDriveUserS3Path")
       private final @Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path;
 
-    public Output<DataSourceS3PathArgs> getOneDriveUserS3Path() {
-        return this.oneDriveUserS3Path == null ? Output.empty() : this.oneDriveUserS3Path;
+    public Output<DataSourceS3PathArgs> oneDriveUserS3Path() {
+        return this.oneDriveUserS3Path == null ? Codegen.empty() : this.oneDriveUserS3Path;
     }
 
     public DataSourceOneDriveUsersArgs(
@@ -38,8 +39,8 @@ public final class DataSourceOneDriveUsersArgs extends io.pulumi.resources.Resou
     }
 
     private DataSourceOneDriveUsersArgs() {
-        this.oneDriveUserList = Output.empty();
-        this.oneDriveUserS3Path = Output.empty();
+        this.oneDriveUserList = Codegen.empty();
+        this.oneDriveUserS3Path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class DataSourceOneDriveUsersArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder oneDriveUserList(@Nullable List<String> oneDriveUserList) {
-            this.oneDriveUserList = Output.ofNullable(oneDriveUserList);
+            this.oneDriveUserList = Codegen.ofNullable(oneDriveUserList);
             return this;
         }
         public Builder oneDriveUserList(String... oneDriveUserList) {
@@ -80,7 +81,7 @@ public final class DataSourceOneDriveUsersArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder oneDriveUserS3Path(@Nullable DataSourceS3PathArgs oneDriveUserS3Path) {
-            this.oneDriveUserS3Path = Output.ofNullable(oneDriveUserS3Path);
+            this.oneDriveUserS3Path = Codegen.ofNullable(oneDriveUserS3Path);
             return this;
         }        public DataSourceOneDriveUsersArgs build() {
             return new DataSourceOneDriveUsersArgs(oneDriveUserList, oneDriveUserS3Path);

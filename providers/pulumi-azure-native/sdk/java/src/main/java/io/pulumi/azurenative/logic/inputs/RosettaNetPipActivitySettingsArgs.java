@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.inputs.RosettaNetPipAcknowledgmentOfReceiptSe
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipActivityBehaviorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -26,7 +27,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
     @Import(name="acknowledgmentOfReceiptSettings", required=true)
       private final Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings;
 
-    public Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> getAcknowledgmentOfReceiptSettings() {
+    public Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
     }
 
@@ -37,7 +38,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
     @Import(name="activityBehavior", required=true)
       private final Output<RosettaNetPipActivityBehaviorArgs> activityBehavior;
 
-    public Output<RosettaNetPipActivityBehaviorArgs> getActivityBehavior() {
+    public Output<RosettaNetPipActivityBehaviorArgs> activityBehavior() {
         return this.activityBehavior;
     }
 
@@ -48,7 +49,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
     @Import(name="activityType", required=true)
       private final Output<RosettaNetPipActivityType> activityType;
 
-    public Output<RosettaNetPipActivityType> getActivityType() {
+    public Output<RosettaNetPipActivityType> activityType() {
         return this.activityType;
     }
 
@@ -62,9 +63,9 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
     }
 
     private RosettaNetPipActivitySettingsArgs() {
-        this.acknowledgmentOfReceiptSettings = Output.empty();
-        this.activityBehavior = Output.empty();
-        this.activityType = Output.empty();
+        this.acknowledgmentOfReceiptSettings = Codegen.empty();
+        this.activityBehavior = Codegen.empty();
+        this.activityType = Codegen.empty();
     }
 
     public static Builder builder() {

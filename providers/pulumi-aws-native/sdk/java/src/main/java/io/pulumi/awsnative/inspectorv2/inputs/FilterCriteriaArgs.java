@@ -11,6 +11,7 @@ import io.pulumi.awsnative.inspectorv2.inputs.FilterPortRangeFilterArgs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,218 +24,218 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId")
       private final @Nullable Output<List<FilterStringFilterArgs>> awsAccountId;
 
-    public Output<List<FilterStringFilterArgs>> getAwsAccountId() {
-        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
+    public Output<List<FilterStringFilterArgs>> awsAccountId() {
+        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     @Import(name="componentId")
       private final @Nullable Output<List<FilterStringFilterArgs>> componentId;
 
-    public Output<List<FilterStringFilterArgs>> getComponentId() {
-        return this.componentId == null ? Output.empty() : this.componentId;
+    public Output<List<FilterStringFilterArgs>> componentId() {
+        return this.componentId == null ? Codegen.empty() : this.componentId;
     }
 
     @Import(name="componentType")
       private final @Nullable Output<List<FilterStringFilterArgs>> componentType;
 
-    public Output<List<FilterStringFilterArgs>> getComponentType() {
-        return this.componentType == null ? Output.empty() : this.componentType;
+    public Output<List<FilterStringFilterArgs>> componentType() {
+        return this.componentType == null ? Codegen.empty() : this.componentType;
     }
 
     @Import(name="ec2InstanceImageId")
       private final @Nullable Output<List<FilterStringFilterArgs>> ec2InstanceImageId;
 
-    public Output<List<FilterStringFilterArgs>> getEc2InstanceImageId() {
-        return this.ec2InstanceImageId == null ? Output.empty() : this.ec2InstanceImageId;
+    public Output<List<FilterStringFilterArgs>> ec2InstanceImageId() {
+        return this.ec2InstanceImageId == null ? Codegen.empty() : this.ec2InstanceImageId;
     }
 
     @Import(name="ec2InstanceSubnetId")
       private final @Nullable Output<List<FilterStringFilterArgs>> ec2InstanceSubnetId;
 
-    public Output<List<FilterStringFilterArgs>> getEc2InstanceSubnetId() {
-        return this.ec2InstanceSubnetId == null ? Output.empty() : this.ec2InstanceSubnetId;
+    public Output<List<FilterStringFilterArgs>> ec2InstanceSubnetId() {
+        return this.ec2InstanceSubnetId == null ? Codegen.empty() : this.ec2InstanceSubnetId;
     }
 
     @Import(name="ec2InstanceVpcId")
       private final @Nullable Output<List<FilterStringFilterArgs>> ec2InstanceVpcId;
 
-    public Output<List<FilterStringFilterArgs>> getEc2InstanceVpcId() {
-        return this.ec2InstanceVpcId == null ? Output.empty() : this.ec2InstanceVpcId;
+    public Output<List<FilterStringFilterArgs>> ec2InstanceVpcId() {
+        return this.ec2InstanceVpcId == null ? Codegen.empty() : this.ec2InstanceVpcId;
     }
 
     @Import(name="ecrImageArchitecture")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageArchitecture;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageArchitecture() {
-        return this.ecrImageArchitecture == null ? Output.empty() : this.ecrImageArchitecture;
+    public Output<List<FilterStringFilterArgs>> ecrImageArchitecture() {
+        return this.ecrImageArchitecture == null ? Codegen.empty() : this.ecrImageArchitecture;
     }
 
     @Import(name="ecrImageHash")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageHash;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageHash() {
-        return this.ecrImageHash == null ? Output.empty() : this.ecrImageHash;
+    public Output<List<FilterStringFilterArgs>> ecrImageHash() {
+        return this.ecrImageHash == null ? Codegen.empty() : this.ecrImageHash;
     }
 
     @Import(name="ecrImagePushedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> ecrImagePushedAt;
 
-    public Output<List<FilterDateFilterArgs>> getEcrImagePushedAt() {
-        return this.ecrImagePushedAt == null ? Output.empty() : this.ecrImagePushedAt;
+    public Output<List<FilterDateFilterArgs>> ecrImagePushedAt() {
+        return this.ecrImagePushedAt == null ? Codegen.empty() : this.ecrImagePushedAt;
     }
 
     @Import(name="ecrImageRegistry")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageRegistry;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageRegistry() {
-        return this.ecrImageRegistry == null ? Output.empty() : this.ecrImageRegistry;
+    public Output<List<FilterStringFilterArgs>> ecrImageRegistry() {
+        return this.ecrImageRegistry == null ? Codegen.empty() : this.ecrImageRegistry;
     }
 
     @Import(name="ecrImageRepositoryName")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageRepositoryName;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageRepositoryName() {
-        return this.ecrImageRepositoryName == null ? Output.empty() : this.ecrImageRepositoryName;
+    public Output<List<FilterStringFilterArgs>> ecrImageRepositoryName() {
+        return this.ecrImageRepositoryName == null ? Codegen.empty() : this.ecrImageRepositoryName;
     }
 
     @Import(name="ecrImageTags")
       private final @Nullable Output<List<FilterStringFilterArgs>> ecrImageTags;
 
-    public Output<List<FilterStringFilterArgs>> getEcrImageTags() {
-        return this.ecrImageTags == null ? Output.empty() : this.ecrImageTags;
+    public Output<List<FilterStringFilterArgs>> ecrImageTags() {
+        return this.ecrImageTags == null ? Codegen.empty() : this.ecrImageTags;
     }
 
     @Import(name="findingArn")
       private final @Nullable Output<List<FilterStringFilterArgs>> findingArn;
 
-    public Output<List<FilterStringFilterArgs>> getFindingArn() {
-        return this.findingArn == null ? Output.empty() : this.findingArn;
+    public Output<List<FilterStringFilterArgs>> findingArn() {
+        return this.findingArn == null ? Codegen.empty() : this.findingArn;
     }
 
     @Import(name="findingStatus")
       private final @Nullable Output<List<FilterStringFilterArgs>> findingStatus;
 
-    public Output<List<FilterStringFilterArgs>> getFindingStatus() {
-        return this.findingStatus == null ? Output.empty() : this.findingStatus;
+    public Output<List<FilterStringFilterArgs>> findingStatus() {
+        return this.findingStatus == null ? Codegen.empty() : this.findingStatus;
     }
 
     @Import(name="findingType")
       private final @Nullable Output<List<FilterStringFilterArgs>> findingType;
 
-    public Output<List<FilterStringFilterArgs>> getFindingType() {
-        return this.findingType == null ? Output.empty() : this.findingType;
+    public Output<List<FilterStringFilterArgs>> findingType() {
+        return this.findingType == null ? Codegen.empty() : this.findingType;
     }
 
     @Import(name="firstObservedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> firstObservedAt;
 
-    public Output<List<FilterDateFilterArgs>> getFirstObservedAt() {
-        return this.firstObservedAt == null ? Output.empty() : this.firstObservedAt;
+    public Output<List<FilterDateFilterArgs>> firstObservedAt() {
+        return this.firstObservedAt == null ? Codegen.empty() : this.firstObservedAt;
     }
 
     @Import(name="inspectorScore")
       private final @Nullable Output<List<FilterNumberFilterArgs>> inspectorScore;
 
-    public Output<List<FilterNumberFilterArgs>> getInspectorScore() {
-        return this.inspectorScore == null ? Output.empty() : this.inspectorScore;
+    public Output<List<FilterNumberFilterArgs>> inspectorScore() {
+        return this.inspectorScore == null ? Codegen.empty() : this.inspectorScore;
     }
 
     @Import(name="lastObservedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> lastObservedAt;
 
-    public Output<List<FilterDateFilterArgs>> getLastObservedAt() {
-        return this.lastObservedAt == null ? Output.empty() : this.lastObservedAt;
+    public Output<List<FilterDateFilterArgs>> lastObservedAt() {
+        return this.lastObservedAt == null ? Codegen.empty() : this.lastObservedAt;
     }
 
     @Import(name="networkProtocol")
       private final @Nullable Output<List<FilterStringFilterArgs>> networkProtocol;
 
-    public Output<List<FilterStringFilterArgs>> getNetworkProtocol() {
-        return this.networkProtocol == null ? Output.empty() : this.networkProtocol;
+    public Output<List<FilterStringFilterArgs>> networkProtocol() {
+        return this.networkProtocol == null ? Codegen.empty() : this.networkProtocol;
     }
 
     @Import(name="portRange")
       private final @Nullable Output<List<FilterPortRangeFilterArgs>> portRange;
 
-    public Output<List<FilterPortRangeFilterArgs>> getPortRange() {
-        return this.portRange == null ? Output.empty() : this.portRange;
+    public Output<List<FilterPortRangeFilterArgs>> portRange() {
+        return this.portRange == null ? Codegen.empty() : this.portRange;
     }
 
     @Import(name="relatedVulnerabilities")
       private final @Nullable Output<List<FilterStringFilterArgs>> relatedVulnerabilities;
 
-    public Output<List<FilterStringFilterArgs>> getRelatedVulnerabilities() {
-        return this.relatedVulnerabilities == null ? Output.empty() : this.relatedVulnerabilities;
+    public Output<List<FilterStringFilterArgs>> relatedVulnerabilities() {
+        return this.relatedVulnerabilities == null ? Codegen.empty() : this.relatedVulnerabilities;
     }
 
     @Import(name="resourceId")
       private final @Nullable Output<List<FilterStringFilterArgs>> resourceId;
 
-    public Output<List<FilterStringFilterArgs>> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<List<FilterStringFilterArgs>> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     @Import(name="resourceTags")
       private final @Nullable Output<List<FilterMapFilterArgs>> resourceTags;
 
-    public Output<List<FilterMapFilterArgs>> getResourceTags() {
-        return this.resourceTags == null ? Output.empty() : this.resourceTags;
+    public Output<List<FilterMapFilterArgs>> resourceTags() {
+        return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
     }
 
     @Import(name="resourceType")
       private final @Nullable Output<List<FilterStringFilterArgs>> resourceType;
 
-    public Output<List<FilterStringFilterArgs>> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<List<FilterStringFilterArgs>> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="severity")
       private final @Nullable Output<List<FilterStringFilterArgs>> severity;
 
-    public Output<List<FilterStringFilterArgs>> getSeverity() {
-        return this.severity == null ? Output.empty() : this.severity;
+    public Output<List<FilterStringFilterArgs>> severity() {
+        return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     @Import(name="title")
       private final @Nullable Output<List<FilterStringFilterArgs>> title;
 
-    public Output<List<FilterStringFilterArgs>> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<List<FilterStringFilterArgs>> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     @Import(name="updatedAt")
       private final @Nullable Output<List<FilterDateFilterArgs>> updatedAt;
 
-    public Output<List<FilterDateFilterArgs>> getUpdatedAt() {
-        return this.updatedAt == null ? Output.empty() : this.updatedAt;
+    public Output<List<FilterDateFilterArgs>> updatedAt() {
+        return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
     }
 
     @Import(name="vendorSeverity")
       private final @Nullable Output<List<FilterStringFilterArgs>> vendorSeverity;
 
-    public Output<List<FilterStringFilterArgs>> getVendorSeverity() {
-        return this.vendorSeverity == null ? Output.empty() : this.vendorSeverity;
+    public Output<List<FilterStringFilterArgs>> vendorSeverity() {
+        return this.vendorSeverity == null ? Codegen.empty() : this.vendorSeverity;
     }
 
     @Import(name="vulnerabilityId")
       private final @Nullable Output<List<FilterStringFilterArgs>> vulnerabilityId;
 
-    public Output<List<FilterStringFilterArgs>> getVulnerabilityId() {
-        return this.vulnerabilityId == null ? Output.empty() : this.vulnerabilityId;
+    public Output<List<FilterStringFilterArgs>> vulnerabilityId() {
+        return this.vulnerabilityId == null ? Codegen.empty() : this.vulnerabilityId;
     }
 
     @Import(name="vulnerabilitySource")
       private final @Nullable Output<List<FilterStringFilterArgs>> vulnerabilitySource;
 
-    public Output<List<FilterStringFilterArgs>> getVulnerabilitySource() {
-        return this.vulnerabilitySource == null ? Output.empty() : this.vulnerabilitySource;
+    public Output<List<FilterStringFilterArgs>> vulnerabilitySource() {
+        return this.vulnerabilitySource == null ? Codegen.empty() : this.vulnerabilitySource;
     }
 
     @Import(name="vulnerablePackages")
       private final @Nullable Output<List<FilterPackageFilterArgs>> vulnerablePackages;
 
-    public Output<List<FilterPackageFilterArgs>> getVulnerablePackages() {
-        return this.vulnerablePackages == null ? Output.empty() : this.vulnerablePackages;
+    public Output<List<FilterPackageFilterArgs>> vulnerablePackages() {
+        return this.vulnerablePackages == null ? Codegen.empty() : this.vulnerablePackages;
     }
 
     public FilterCriteriaArgs(
@@ -303,37 +304,37 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterCriteriaArgs() {
-        this.awsAccountId = Output.empty();
-        this.componentId = Output.empty();
-        this.componentType = Output.empty();
-        this.ec2InstanceImageId = Output.empty();
-        this.ec2InstanceSubnetId = Output.empty();
-        this.ec2InstanceVpcId = Output.empty();
-        this.ecrImageArchitecture = Output.empty();
-        this.ecrImageHash = Output.empty();
-        this.ecrImagePushedAt = Output.empty();
-        this.ecrImageRegistry = Output.empty();
-        this.ecrImageRepositoryName = Output.empty();
-        this.ecrImageTags = Output.empty();
-        this.findingArn = Output.empty();
-        this.findingStatus = Output.empty();
-        this.findingType = Output.empty();
-        this.firstObservedAt = Output.empty();
-        this.inspectorScore = Output.empty();
-        this.lastObservedAt = Output.empty();
-        this.networkProtocol = Output.empty();
-        this.portRange = Output.empty();
-        this.relatedVulnerabilities = Output.empty();
-        this.resourceId = Output.empty();
-        this.resourceTags = Output.empty();
-        this.resourceType = Output.empty();
-        this.severity = Output.empty();
-        this.title = Output.empty();
-        this.updatedAt = Output.empty();
-        this.vendorSeverity = Output.empty();
-        this.vulnerabilityId = Output.empty();
-        this.vulnerabilitySource = Output.empty();
-        this.vulnerablePackages = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.componentId = Codegen.empty();
+        this.componentType = Codegen.empty();
+        this.ec2InstanceImageId = Codegen.empty();
+        this.ec2InstanceSubnetId = Codegen.empty();
+        this.ec2InstanceVpcId = Codegen.empty();
+        this.ecrImageArchitecture = Codegen.empty();
+        this.ecrImageHash = Codegen.empty();
+        this.ecrImagePushedAt = Codegen.empty();
+        this.ecrImageRegistry = Codegen.empty();
+        this.ecrImageRepositoryName = Codegen.empty();
+        this.ecrImageTags = Codegen.empty();
+        this.findingArn = Codegen.empty();
+        this.findingStatus = Codegen.empty();
+        this.findingType = Codegen.empty();
+        this.firstObservedAt = Codegen.empty();
+        this.inspectorScore = Codegen.empty();
+        this.lastObservedAt = Codegen.empty();
+        this.networkProtocol = Codegen.empty();
+        this.portRange = Codegen.empty();
+        this.relatedVulnerabilities = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.resourceTags = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.title = Codegen.empty();
+        this.updatedAt = Codegen.empty();
+        this.vendorSeverity = Codegen.empty();
+        this.vulnerabilityId = Codegen.empty();
+        this.vulnerabilitySource = Codegen.empty();
+        this.vulnerablePackages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -421,7 +422,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsAccountId(@Nullable List<FilterStringFilterArgs> awsAccountId) {
-            this.awsAccountId = Output.ofNullable(awsAccountId);
+            this.awsAccountId = Codegen.ofNullable(awsAccountId);
             return this;
         }
         public Builder awsAccountId(FilterStringFilterArgs... awsAccountId) {
@@ -432,7 +433,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder componentId(@Nullable List<FilterStringFilterArgs> componentId) {
-            this.componentId = Output.ofNullable(componentId);
+            this.componentId = Codegen.ofNullable(componentId);
             return this;
         }
         public Builder componentId(FilterStringFilterArgs... componentId) {
@@ -443,7 +444,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder componentType(@Nullable List<FilterStringFilterArgs> componentType) {
-            this.componentType = Output.ofNullable(componentType);
+            this.componentType = Codegen.ofNullable(componentType);
             return this;
         }
         public Builder componentType(FilterStringFilterArgs... componentType) {
@@ -454,7 +455,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ec2InstanceImageId(@Nullable List<FilterStringFilterArgs> ec2InstanceImageId) {
-            this.ec2InstanceImageId = Output.ofNullable(ec2InstanceImageId);
+            this.ec2InstanceImageId = Codegen.ofNullable(ec2InstanceImageId);
             return this;
         }
         public Builder ec2InstanceImageId(FilterStringFilterArgs... ec2InstanceImageId) {
@@ -465,7 +466,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ec2InstanceSubnetId(@Nullable List<FilterStringFilterArgs> ec2InstanceSubnetId) {
-            this.ec2InstanceSubnetId = Output.ofNullable(ec2InstanceSubnetId);
+            this.ec2InstanceSubnetId = Codegen.ofNullable(ec2InstanceSubnetId);
             return this;
         }
         public Builder ec2InstanceSubnetId(FilterStringFilterArgs... ec2InstanceSubnetId) {
@@ -476,7 +477,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ec2InstanceVpcId(@Nullable List<FilterStringFilterArgs> ec2InstanceVpcId) {
-            this.ec2InstanceVpcId = Output.ofNullable(ec2InstanceVpcId);
+            this.ec2InstanceVpcId = Codegen.ofNullable(ec2InstanceVpcId);
             return this;
         }
         public Builder ec2InstanceVpcId(FilterStringFilterArgs... ec2InstanceVpcId) {
@@ -487,7 +488,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ecrImageArchitecture(@Nullable List<FilterStringFilterArgs> ecrImageArchitecture) {
-            this.ecrImageArchitecture = Output.ofNullable(ecrImageArchitecture);
+            this.ecrImageArchitecture = Codegen.ofNullable(ecrImageArchitecture);
             return this;
         }
         public Builder ecrImageArchitecture(FilterStringFilterArgs... ecrImageArchitecture) {
@@ -498,7 +499,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ecrImageHash(@Nullable List<FilterStringFilterArgs> ecrImageHash) {
-            this.ecrImageHash = Output.ofNullable(ecrImageHash);
+            this.ecrImageHash = Codegen.ofNullable(ecrImageHash);
             return this;
         }
         public Builder ecrImageHash(FilterStringFilterArgs... ecrImageHash) {
@@ -509,7 +510,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ecrImagePushedAt(@Nullable List<FilterDateFilterArgs> ecrImagePushedAt) {
-            this.ecrImagePushedAt = Output.ofNullable(ecrImagePushedAt);
+            this.ecrImagePushedAt = Codegen.ofNullable(ecrImagePushedAt);
             return this;
         }
         public Builder ecrImagePushedAt(FilterDateFilterArgs... ecrImagePushedAt) {
@@ -520,7 +521,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ecrImageRegistry(@Nullable List<FilterStringFilterArgs> ecrImageRegistry) {
-            this.ecrImageRegistry = Output.ofNullable(ecrImageRegistry);
+            this.ecrImageRegistry = Codegen.ofNullable(ecrImageRegistry);
             return this;
         }
         public Builder ecrImageRegistry(FilterStringFilterArgs... ecrImageRegistry) {
@@ -531,7 +532,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ecrImageRepositoryName(@Nullable List<FilterStringFilterArgs> ecrImageRepositoryName) {
-            this.ecrImageRepositoryName = Output.ofNullable(ecrImageRepositoryName);
+            this.ecrImageRepositoryName = Codegen.ofNullable(ecrImageRepositoryName);
             return this;
         }
         public Builder ecrImageRepositoryName(FilterStringFilterArgs... ecrImageRepositoryName) {
@@ -542,7 +543,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ecrImageTags(@Nullable List<FilterStringFilterArgs> ecrImageTags) {
-            this.ecrImageTags = Output.ofNullable(ecrImageTags);
+            this.ecrImageTags = Codegen.ofNullable(ecrImageTags);
             return this;
         }
         public Builder ecrImageTags(FilterStringFilterArgs... ecrImageTags) {
@@ -553,7 +554,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingArn(@Nullable List<FilterStringFilterArgs> findingArn) {
-            this.findingArn = Output.ofNullable(findingArn);
+            this.findingArn = Codegen.ofNullable(findingArn);
             return this;
         }
         public Builder findingArn(FilterStringFilterArgs... findingArn) {
@@ -564,7 +565,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingStatus(@Nullable List<FilterStringFilterArgs> findingStatus) {
-            this.findingStatus = Output.ofNullable(findingStatus);
+            this.findingStatus = Codegen.ofNullable(findingStatus);
             return this;
         }
         public Builder findingStatus(FilterStringFilterArgs... findingStatus) {
@@ -575,7 +576,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingType(@Nullable List<FilterStringFilterArgs> findingType) {
-            this.findingType = Output.ofNullable(findingType);
+            this.findingType = Codegen.ofNullable(findingType);
             return this;
         }
         public Builder findingType(FilterStringFilterArgs... findingType) {
@@ -586,7 +587,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstObservedAt(@Nullable List<FilterDateFilterArgs> firstObservedAt) {
-            this.firstObservedAt = Output.ofNullable(firstObservedAt);
+            this.firstObservedAt = Codegen.ofNullable(firstObservedAt);
             return this;
         }
         public Builder firstObservedAt(FilterDateFilterArgs... firstObservedAt) {
@@ -597,7 +598,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inspectorScore(@Nullable List<FilterNumberFilterArgs> inspectorScore) {
-            this.inspectorScore = Output.ofNullable(inspectorScore);
+            this.inspectorScore = Codegen.ofNullable(inspectorScore);
             return this;
         }
         public Builder inspectorScore(FilterNumberFilterArgs... inspectorScore) {
@@ -608,7 +609,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastObservedAt(@Nullable List<FilterDateFilterArgs> lastObservedAt) {
-            this.lastObservedAt = Output.ofNullable(lastObservedAt);
+            this.lastObservedAt = Codegen.ofNullable(lastObservedAt);
             return this;
         }
         public Builder lastObservedAt(FilterDateFilterArgs... lastObservedAt) {
@@ -619,7 +620,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkProtocol(@Nullable List<FilterStringFilterArgs> networkProtocol) {
-            this.networkProtocol = Output.ofNullable(networkProtocol);
+            this.networkProtocol = Codegen.ofNullable(networkProtocol);
             return this;
         }
         public Builder networkProtocol(FilterStringFilterArgs... networkProtocol) {
@@ -630,7 +631,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portRange(@Nullable List<FilterPortRangeFilterArgs> portRange) {
-            this.portRange = Output.ofNullable(portRange);
+            this.portRange = Codegen.ofNullable(portRange);
             return this;
         }
         public Builder portRange(FilterPortRangeFilterArgs... portRange) {
@@ -641,7 +642,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relatedVulnerabilities(@Nullable List<FilterStringFilterArgs> relatedVulnerabilities) {
-            this.relatedVulnerabilities = Output.ofNullable(relatedVulnerabilities);
+            this.relatedVulnerabilities = Codegen.ofNullable(relatedVulnerabilities);
             return this;
         }
         public Builder relatedVulnerabilities(FilterStringFilterArgs... relatedVulnerabilities) {
@@ -652,7 +653,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable List<FilterStringFilterArgs> resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder resourceId(FilterStringFilterArgs... resourceId) {
@@ -663,7 +664,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceTags(@Nullable List<FilterMapFilterArgs> resourceTags) {
-            this.resourceTags = Output.ofNullable(resourceTags);
+            this.resourceTags = Codegen.ofNullable(resourceTags);
             return this;
         }
         public Builder resourceTags(FilterMapFilterArgs... resourceTags) {
@@ -674,7 +675,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceType(@Nullable List<FilterStringFilterArgs> resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder resourceType(FilterStringFilterArgs... resourceType) {
@@ -685,7 +686,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder severity(@Nullable List<FilterStringFilterArgs> severity) {
-            this.severity = Output.ofNullable(severity);
+            this.severity = Codegen.ofNullable(severity);
             return this;
         }
         public Builder severity(FilterStringFilterArgs... severity) {
@@ -696,7 +697,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable List<FilterStringFilterArgs> title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder title(FilterStringFilterArgs... title) {
@@ -707,7 +708,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedAt(@Nullable List<FilterDateFilterArgs> updatedAt) {
-            this.updatedAt = Output.ofNullable(updatedAt);
+            this.updatedAt = Codegen.ofNullable(updatedAt);
             return this;
         }
         public Builder updatedAt(FilterDateFilterArgs... updatedAt) {
@@ -718,7 +719,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vendorSeverity(@Nullable List<FilterStringFilterArgs> vendorSeverity) {
-            this.vendorSeverity = Output.ofNullable(vendorSeverity);
+            this.vendorSeverity = Codegen.ofNullable(vendorSeverity);
             return this;
         }
         public Builder vendorSeverity(FilterStringFilterArgs... vendorSeverity) {
@@ -729,7 +730,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vulnerabilityId(@Nullable List<FilterStringFilterArgs> vulnerabilityId) {
-            this.vulnerabilityId = Output.ofNullable(vulnerabilityId);
+            this.vulnerabilityId = Codegen.ofNullable(vulnerabilityId);
             return this;
         }
         public Builder vulnerabilityId(FilterStringFilterArgs... vulnerabilityId) {
@@ -740,7 +741,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vulnerabilitySource(@Nullable List<FilterStringFilterArgs> vulnerabilitySource) {
-            this.vulnerabilitySource = Output.ofNullable(vulnerabilitySource);
+            this.vulnerabilitySource = Codegen.ofNullable(vulnerabilitySource);
             return this;
         }
         public Builder vulnerabilitySource(FilterStringFilterArgs... vulnerabilitySource) {
@@ -751,7 +752,7 @@ public final class FilterCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vulnerablePackages(@Nullable List<FilterPackageFilterArgs> vulnerablePackages) {
-            this.vulnerablePackages = Output.ofNullable(vulnerablePackages);
+            this.vulnerablePackages = Codegen.ofNullable(vulnerablePackages);
             return this;
         }
         public Builder vulnerablePackages(FilterPackageFilterArgs... vulnerablePackages) {

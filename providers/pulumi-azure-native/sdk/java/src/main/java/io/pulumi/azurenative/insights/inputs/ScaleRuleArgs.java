@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.inputs.MetricTriggerArgs;
 import io.pulumi.azurenative.insights.inputs.ScaleActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,7 +26,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricTrigger", required=true)
       private final Output<MetricTriggerArgs> metricTrigger;
 
-    public Output<MetricTriggerArgs> getMetricTrigger() {
+    public Output<MetricTriggerArgs> metricTrigger() {
         return this.metricTrigger;
     }
 
@@ -36,7 +37,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scaleAction", required=true)
       private final Output<ScaleActionArgs> scaleAction;
 
-    public Output<ScaleActionArgs> getScaleAction() {
+    public Output<ScaleActionArgs> scaleAction() {
         return this.scaleAction;
     }
 
@@ -48,8 +49,8 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScaleRuleArgs() {
-        this.metricTrigger = Output.empty();
-        this.scaleAction = Output.empty();
+        this.metricTrigger = Codegen.empty();
+        this.scaleAction = Codegen.empty();
     }
 
     public static Builder builder() {

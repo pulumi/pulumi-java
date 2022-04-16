@@ -17,6 +17,7 @@ import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestProperti
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,106 +32,106 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     @Import(name="capabilities")
       private final @Nullable Output<List<ResourceProviderCapabilitiesArgs>> capabilities;
 
-    public Output<List<ResourceProviderCapabilitiesArgs>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<List<ResourceProviderCapabilitiesArgs>> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="featuresRule")
       private final @Nullable Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
 
-    public Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> getFeaturesRule() {
-        return this.featuresRule == null ? Output.empty() : this.featuresRule;
+    public Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule() {
+        return this.featuresRule == null ? Codegen.empty() : this.featuresRule;
     }
 
     @Import(name="management")
       private final @Nullable Output<ResourceProviderManifestPropertiesManagementArgs> management;
 
-    public Output<ResourceProviderManifestPropertiesManagementArgs> getManagement() {
-        return this.management == null ? Output.empty() : this.management;
+    public Output<ResourceProviderManifestPropertiesManagementArgs> management() {
+        return this.management == null ? Codegen.empty() : this.management;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Object> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     @Import(name="providerAuthentication")
       private final @Nullable Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
 
-    public Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> getProviderAuthentication() {
-        return this.providerAuthentication == null ? Output.empty() : this.providerAuthentication;
+    public Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication() {
+        return this.providerAuthentication == null ? Codegen.empty() : this.providerAuthentication;
     }
 
     @Import(name="providerAuthorizations")
       private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
-    public Output<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
-        return this.providerAuthorizations == null ? Output.empty() : this.providerAuthorizations;
+    public Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations() {
+        return this.providerAuthorizations == null ? Codegen.empty() : this.providerAuthorizations;
     }
 
     @Import(name="providerHubMetadata")
       private final @Nullable Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
 
-    public Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> getProviderHubMetadata() {
-        return this.providerHubMetadata == null ? Output.empty() : this.providerHubMetadata;
+    public Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata() {
+        return this.providerHubMetadata == null ? Codegen.empty() : this.providerHubMetadata;
     }
 
     @Import(name="providerType")
       private final @Nullable Output<Either<String,ResourceProviderType>> providerType;
 
-    public Output<Either<String,ResourceProviderType>> getProviderType() {
-        return this.providerType == null ? Output.empty() : this.providerType;
+    public Output<Either<String,ResourceProviderType>> providerType() {
+        return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
     @Import(name="providerVersion")
       private final @Nullable Output<String> providerVersion;
 
-    public Output<String> getProviderVersion() {
-        return this.providerVersion == null ? Output.empty() : this.providerVersion;
+    public Output<String> providerVersion() {
+        return this.providerVersion == null ? Codegen.empty() : this.providerVersion;
     }
 
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="requestHeaderOptions")
       private final @Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
-    public Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
-        return this.requestHeaderOptions == null ? Output.empty() : this.requestHeaderOptions;
+    public Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions() {
+        return this.requestHeaderOptions == null ? Codegen.empty() : this.requestHeaderOptions;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
+    public Output<List<String>> requiredFeatures() {
+        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="subscriptionLifecycleNotificationSpecifications")
       private final @Nullable Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
-    public Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
-        return this.subscriptionLifecycleNotificationSpecifications == null ? Output.empty() : this.subscriptionLifecycleNotificationSpecifications;
+    public Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications() {
+        return this.subscriptionLifecycleNotificationSpecifications == null ? Codegen.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
     @Import(name="templateDeploymentOptions")
       private final @Nullable Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
-    public Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
-        return this.templateDeploymentOptions == null ? Output.empty() : this.templateDeploymentOptions;
+    public Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions() {
+        return this.templateDeploymentOptions == null ? Codegen.empty() : this.templateDeploymentOptions;
     }
 
     public ProviderRegistrationPropertiesArgs(
@@ -167,21 +168,21 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     }
 
     private ProviderRegistrationPropertiesArgs() {
-        this.capabilities = Output.empty();
-        this.featuresRule = Output.empty();
-        this.management = Output.empty();
-        this.metadata = Output.empty();
-        this.namespace = Output.empty();
-        this.providerAuthentication = Output.empty();
-        this.providerAuthorizations = Output.empty();
-        this.providerHubMetadata = Output.empty();
-        this.providerType = Output.empty();
-        this.providerVersion = Output.empty();
-        this.provisioningState = Output.empty();
-        this.requestHeaderOptions = Output.empty();
-        this.requiredFeatures = Output.empty();
-        this.subscriptionLifecycleNotificationSpecifications = Output.empty();
-        this.templateDeploymentOptions = Output.empty();
+        this.capabilities = Codegen.empty();
+        this.featuresRule = Codegen.empty();
+        this.management = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.providerAuthentication = Codegen.empty();
+        this.providerAuthorizations = Codegen.empty();
+        this.providerHubMetadata = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.providerVersion = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.requestHeaderOptions = Codegen.empty();
+        this.requiredFeatures = Codegen.empty();
+        this.subscriptionLifecycleNotificationSpecifications = Codegen.empty();
+        this.templateDeploymentOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -237,7 +238,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder capabilities(@Nullable List<ResourceProviderCapabilitiesArgs> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(ResourceProviderCapabilitiesArgs... capabilities) {
@@ -248,7 +249,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder featuresRule(@Nullable ResourceProviderManifestPropertiesFeaturesRuleArgs featuresRule) {
-            this.featuresRule = Output.ofNullable(featuresRule);
+            this.featuresRule = Codegen.ofNullable(featuresRule);
             return this;
         }
         public Builder management(@Nullable Output<ResourceProviderManifestPropertiesManagementArgs> management) {
@@ -256,7 +257,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder management(@Nullable ResourceProviderManifestPropertiesManagementArgs management) {
-            this.management = Output.ofNullable(management);
+            this.management = Codegen.ofNullable(management);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -264,7 +265,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -272,7 +273,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder providerAuthentication(@Nullable Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication) {
@@ -280,7 +281,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder providerAuthentication(@Nullable ResourceProviderManifestPropertiesProviderAuthenticationArgs providerAuthentication) {
-            this.providerAuthentication = Output.ofNullable(providerAuthentication);
+            this.providerAuthentication = Codegen.ofNullable(providerAuthentication);
             return this;
         }
         public Builder providerAuthorizations(@Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
@@ -288,7 +289,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
-            this.providerAuthorizations = Output.ofNullable(providerAuthorizations);
+            this.providerAuthorizations = Codegen.ofNullable(providerAuthorizations);
             return this;
         }
         public Builder providerAuthorizations(ResourceProviderAuthorizationArgs... providerAuthorizations) {
@@ -299,7 +300,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder providerHubMetadata(@Nullable ProviderRegistrationPropertiesProviderHubMetadataArgs providerHubMetadata) {
-            this.providerHubMetadata = Output.ofNullable(providerHubMetadata);
+            this.providerHubMetadata = Codegen.ofNullable(providerHubMetadata);
             return this;
         }
         public Builder providerType(@Nullable Output<Either<String,ResourceProviderType>> providerType) {
@@ -307,7 +308,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder providerType(@Nullable Either<String,ResourceProviderType> providerType) {
-            this.providerType = Output.ofNullable(providerType);
+            this.providerType = Codegen.ofNullable(providerType);
             return this;
         }
         public Builder providerVersion(@Nullable Output<String> providerVersion) {
@@ -315,7 +316,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder providerVersion(@Nullable String providerVersion) {
-            this.providerVersion = Output.ofNullable(providerVersion);
+            this.providerVersion = Codegen.ofNullable(providerVersion);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
@@ -323,7 +324,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder requestHeaderOptions(@Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
@@ -331,7 +332,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder requestHeaderOptions(@Nullable ResourceProviderManifestPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
-            this.requestHeaderOptions = Output.ofNullable(requestHeaderOptions);
+            this.requestHeaderOptions = Codegen.ofNullable(requestHeaderOptions);
             return this;
         }
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
@@ -339,7 +340,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Output.ofNullable(requiredFeatures);
+            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
             return this;
         }
         public Builder requiredFeatures(String... requiredFeatures) {
@@ -350,7 +351,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
-            this.subscriptionLifecycleNotificationSpecifications = Output.ofNullable(subscriptionLifecycleNotificationSpecifications);
+            this.subscriptionLifecycleNotificationSpecifications = Codegen.ofNullable(subscriptionLifecycleNotificationSpecifications);
             return this;
         }
         public Builder templateDeploymentOptions(@Nullable Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
@@ -358,7 +359,7 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder templateDeploymentOptions(@Nullable ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
-            this.templateDeploymentOptions = Output.ofNullable(templateDeploymentOptions);
+            this.templateDeploymentOptions = Codegen.ofNullable(templateDeploymentOptions);
             return this;
         }        public ProviderRegistrationPropertiesArgs build() {
             return new ProviderRegistrationPropertiesArgs(capabilities, featuresRule, management, metadata, namespace, providerAuthentication, providerAuthorizations, providerHubMetadata, providerType, providerVersion, provisioningState, requestHeaderOptions, requiredFeatures, subscriptionLifecycleNotificationSpecifications, templateDeploymentOptions);

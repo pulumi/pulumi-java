@@ -26,7 +26,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="computeEngineTargetDetails", required=true)
       private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
 
-    public ComputeEngineTargetDetailsResponse getComputeEngineTargetDetails() {
+    public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
 
@@ -37,7 +37,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -48,7 +48,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="error", required=true)
       private final StatusResponse error;
 
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
 
@@ -59,7 +59,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -70,7 +70,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="progress", required=true)
       private final Integer progress;
 
-    public Integer getProgress() {
+    public Integer progress() {
         return this.progress;
     }
 
@@ -81,7 +81,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
 
-    public Integer getProgressPercent() {
+    public Integer progressPercent() {
         return this.progressPercent;
     }
 
@@ -92,7 +92,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -103,7 +103,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stateMessage", required=true)
       private final String stateMessage;
 
-    public String getStateMessage() {
+    public String stateMessage() {
         return this.stateMessage;
     }
 
@@ -114,7 +114,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stateTime", required=true)
       private final String stateTime;
 
-    public String getStateTime() {
+    public String stateTime() {
         return this.stateTime;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends io.pulum
     @Import(name="allowClassicLinkToRemoteVpc")
       private final @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
 
-    public Output<Boolean> getAllowClassicLinkToRemoteVpc() {
-        return this.allowClassicLinkToRemoteVpc == null ? Output.empty() : this.allowClassicLinkToRemoteVpc;
+    public Output<Boolean> allowClassicLinkToRemoteVpc() {
+        return this.allowClassicLinkToRemoteVpc == null ? Codegen.empty() : this.allowClassicLinkToRemoteVpc;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends io.pulum
     @Import(name="allowRemoteVpcDnsResolution")
       private final @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
 
-    public Output<Boolean> getAllowRemoteVpcDnsResolution() {
-        return this.allowRemoteVpcDnsResolution == null ? Output.empty() : this.allowRemoteVpcDnsResolution;
+    public Output<Boolean> allowRemoteVpcDnsResolution() {
+        return this.allowRemoteVpcDnsResolution == null ? Codegen.empty() : this.allowRemoteVpcDnsResolution;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends io.pulum
     @Import(name="allowVpcToRemoteClassicLink")
       private final @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
 
-    public Output<Boolean> getAllowVpcToRemoteClassicLink() {
-        return this.allowVpcToRemoteClassicLink == null ? Output.empty() : this.allowVpcToRemoteClassicLink;
+    public Output<Boolean> allowVpcToRemoteClassicLink() {
+        return this.allowVpcToRemoteClassicLink == null ? Codegen.empty() : this.allowVpcToRemoteClassicLink;
     }
 
     public VpcPeeringConnectionAccepterRequesterGetArgs(
@@ -60,9 +61,9 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends io.pulum
     }
 
     private VpcPeeringConnectionAccepterRequesterGetArgs() {
-        this.allowClassicLinkToRemoteVpc = Output.empty();
-        this.allowRemoteVpcDnsResolution = Output.empty();
-        this.allowVpcToRemoteClassicLink = Output.empty();
+        this.allowClassicLinkToRemoteVpc = Codegen.empty();
+        this.allowRemoteVpcDnsResolution = Codegen.empty();
+        this.allowVpcToRemoteClassicLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends io.pulum
             return this;
         }
         public Builder allowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
-            this.allowClassicLinkToRemoteVpc = Output.ofNullable(allowClassicLinkToRemoteVpc);
+            this.allowClassicLinkToRemoteVpc = Codegen.ofNullable(allowClassicLinkToRemoteVpc);
             return this;
         }
         public Builder allowRemoteVpcDnsResolution(@Nullable Output<Boolean> allowRemoteVpcDnsResolution) {
@@ -102,7 +103,7 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends io.pulum
             return this;
         }
         public Builder allowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
-            this.allowRemoteVpcDnsResolution = Output.ofNullable(allowRemoteVpcDnsResolution);
+            this.allowRemoteVpcDnsResolution = Codegen.ofNullable(allowRemoteVpcDnsResolution);
             return this;
         }
         public Builder allowVpcToRemoteClassicLink(@Nullable Output<Boolean> allowVpcToRemoteClassicLink) {
@@ -110,7 +111,7 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends io.pulum
             return this;
         }
         public Builder allowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
-            this.allowVpcToRemoteClassicLink = Output.ofNullable(allowVpcToRemoteClassicLink);
+            this.allowVpcToRemoteClassicLink = Codegen.ofNullable(allowVpcToRemoteClassicLink);
             return this;
         }        public VpcPeeringConnectionAccepterRequesterGetArgs build() {
             return new VpcPeeringConnectionAccepterRequesterGetArgs(allowClassicLinkToRemoteVpc, allowRemoteVpcDnsResolution, allowVpcToRemoteClassicLink);

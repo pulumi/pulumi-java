@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
     @Import(name="maximumEventAgeInSeconds")
       private final @Nullable Output<Integer> maximumEventAgeInSeconds;
 
-    public Output<Integer> getMaximumEventAgeInSeconds() {
-        return this.maximumEventAgeInSeconds == null ? Output.empty() : this.maximumEventAgeInSeconds;
+    public Output<Integer> maximumEventAgeInSeconds() {
+        return this.maximumEventAgeInSeconds == null ? Codegen.empty() : this.maximumEventAgeInSeconds;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
     @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Output<Integer> getMaximumRetryAttempts() {
-        return this.maximumRetryAttempts == null ? Output.empty() : this.maximumRetryAttempts;
+    public Output<Integer> maximumRetryAttempts() {
+        return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
     }
 
     public EventTargetRetryPolicyGetArgs(
@@ -44,8 +45,8 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
     }
 
     private EventTargetRetryPolicyGetArgs() {
-        this.maximumEventAgeInSeconds = Output.empty();
-        this.maximumRetryAttempts = Output.empty();
+        this.maximumEventAgeInSeconds = Codegen.empty();
+        this.maximumRetryAttempts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = Output.ofNullable(maximumEventAgeInSeconds);
+            this.maximumEventAgeInSeconds = Codegen.ofNullable(maximumEventAgeInSeconds);
             return this;
         }
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
@@ -83,7 +84,7 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
-            this.maximumRetryAttempts = Output.ofNullable(maximumRetryAttempts);
+            this.maximumRetryAttempts = Codegen.ofNullable(maximumRetryAttempts);
             return this;
         }        public EventTargetRetryPolicyGetArgs build() {
             return new EventTargetRetryPolicyGetArgs(maximumEventAgeInSeconds, maximumRetryAttempts);

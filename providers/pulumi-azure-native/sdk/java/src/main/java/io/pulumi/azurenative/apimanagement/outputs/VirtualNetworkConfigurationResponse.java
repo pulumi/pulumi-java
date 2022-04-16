@@ -41,21 +41,21 @@ public final class VirtualNetworkConfigurationResponse {
      * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
      * 
     */
-    public Optional<String> getSubnetResourceId() {
+    public Optional<String> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
     /**
      * The name of the subnet.
      * 
     */
-    public String getSubnetname() {
+    public String subnetname() {
         return this.subnetname;
     }
     /**
      * The virtual network ID. This is typically a GUID. Expect a null GUID by default.
      * 
     */
-    public String getVnetid() {
+    public String vnetid() {
         return this.vnetid;
     }
 

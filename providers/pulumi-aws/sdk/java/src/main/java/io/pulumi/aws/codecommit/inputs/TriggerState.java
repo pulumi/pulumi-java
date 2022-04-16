@@ -6,6 +6,7 @@ package io.pulumi.aws.codecommit.inputs;
 import io.pulumi.aws.codecommit.inputs.TriggerTriggerGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationId")
       private final @Nullable Output<String> configurationId;
 
-    public Output<String> getConfigurationId() {
-        return this.configurationId == null ? Output.empty() : this.configurationId;
+    public Output<String> configurationId() {
+        return this.configurationId == null ? Codegen.empty() : this.configurationId;
     }
 
     /**
@@ -34,15 +35,15 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+    public Output<String> repositoryName() {
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     @Import(name="triggers")
       private final @Nullable Output<List<TriggerTriggerGetArgs>> triggers;
 
-    public Output<List<TriggerTriggerGetArgs>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+    public Output<List<TriggerTriggerGetArgs>> triggers() {
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public TriggerState(
@@ -55,9 +56,9 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerState() {
-        this.configurationId = Output.empty();
-        this.repositoryName = Output.empty();
-        this.triggers = Output.empty();
+        this.configurationId = Codegen.empty();
+        this.repositoryName = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationId(@Nullable String configurationId) {
-            this.configurationId = Output.ofNullable(configurationId);
+            this.configurationId = Codegen.ofNullable(configurationId);
             return this;
         }
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
@@ -97,7 +98,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }
         public Builder triggers(@Nullable Output<List<TriggerTriggerGetArgs>> triggers) {
@@ -105,7 +106,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable List<TriggerTriggerGetArgs> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }
         public Builder triggers(TriggerTriggerGetArgs... triggers) {

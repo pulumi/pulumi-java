@@ -9,6 +9,7 @@ import io.pulumi.aws.chime.inputs.VoiceConnectorState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class VoiceConnector extends io.pulumi.resources.CustomResource {
      * @return The AWS Region in which the Amazon Chime Voice Connector is created. Default value: `us-east-1`
      * 
      */
-    public Output</* @Nullable */ String> getAwsRegion() {
+    public Output</* @Nullable */ String> awsRegion() {
         return this.awsRegion;
     }
     /**
@@ -54,7 +55,7 @@ public class VoiceConnector extends io.pulumi.resources.CustomResource {
      * @return The name of the Amazon Chime Voice Connector.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +69,7 @@ public class VoiceConnector extends io.pulumi.resources.CustomResource {
      * @return The outbound host name for the Amazon Chime Voice Connector.
      * 
      */
-    public Output<String> getOutboundHostName() {
+    public Output<String> outboundHostName() {
         return this.outboundHostName;
     }
     /**
@@ -82,7 +83,7 @@ public class VoiceConnector extends io.pulumi.resources.CustomResource {
      * @return When enabled, requires encryption for the Amazon Chime Voice Connector.
      * 
      */
-    public Output<Boolean> getRequireEncryption() {
+    public Output<Boolean> requireEncryption() {
         return this.requireEncryption;
     }
 
@@ -108,7 +109,7 @@ public class VoiceConnector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VoiceConnector(String name, VoiceConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:chime/voiceConnector:VoiceConnector", name, args == null ? VoiceConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:chime/voiceConnector:VoiceConnector", name, args == null ? VoiceConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VoiceConnector(String name, Output<String> id, @Nullable VoiceConnectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

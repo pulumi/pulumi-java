@@ -6,6 +6,7 @@ package io.pulumi.aws.neptune;
 import io.pulumi.aws.neptune.inputs.ClusterParameterGroupParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="family", required=true)
       private final Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
 
@@ -46,8 +47,8 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="parameters")
       private final @Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters;
 
-    public Output<List<ClusterParameterGroupParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<ClusterParameterGroupParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterParameterGroupArgs(
@@ -99,12 +100,12 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
     }
 
     private ClusterParameterGroupArgs() {
-        this.description = Output.empty();
-        this.family = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.parameters = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.family = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder family(Output<String> family) {
@@ -158,7 +159,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -166,7 +167,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ClusterParameterGroupParameterArgs>> parameters) {
@@ -174,7 +175,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder parameters(@Nullable List<ClusterParameterGroupParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ClusterParameterGroupParameterArgs... parameters) {
@@ -185,7 +186,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterParameterGroupArgs build() {
             return new ClusterParameterGroupArgs(description, family, name, namePrefix, parameters, tags);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.firebase;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firebase.WebAppArgs;
 import io.pulumi.gcp.firebase.inputs.WebAppState;
@@ -55,7 +56,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * token, as the data format is not specified.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -69,7 +70,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return The user-assigned display name of the App.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -83,7 +84,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return The fully qualified resource name of the App, for example: projects/projectId/webApps/appId
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -125,7 +126,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebApp(String name, WebAppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:firebase/webApp:WebApp", name, args == null ? WebAppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:firebase/webApp:WebApp", name, args == null ? WebAppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebApp(String name, Output<String> id, @Nullable WebAppState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

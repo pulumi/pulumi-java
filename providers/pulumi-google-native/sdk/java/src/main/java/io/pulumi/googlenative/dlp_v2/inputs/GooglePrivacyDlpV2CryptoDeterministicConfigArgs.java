@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
@@ -27,8 +28,8 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     @Import(name="context")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> context() {
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     @Import(name="cryptoKey")
       private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey() {
+        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     @Import(name="surrogateInfoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> getSurrogateInfoType() {
-        return this.surrogateInfoType == null ? Output.empty() : this.surrogateInfoType;
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType() {
+        return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
     }
 
     public GooglePrivacyDlpV2CryptoDeterministicConfigArgs(
@@ -63,9 +64,9 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     }
 
     private GooglePrivacyDlpV2CryptoDeterministicConfigArgs() {
-        this.context = Output.empty();
-        this.cryptoKey = Output.empty();
-        this.surrogateInfoType = Output.empty();
+        this.context = Codegen.empty();
+        this.cryptoKey = Codegen.empty();
+        this.surrogateInfoType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
             return this;
         }
         public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
@@ -105,7 +106,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
             return this;
         }
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Output.ofNullable(cryptoKey);
+            this.cryptoKey = Codegen.ofNullable(cryptoKey);
             return this;
         }
         public Builder surrogateInfoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
@@ -113,7 +114,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
             return this;
         }
         public Builder surrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
-            this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
+            this.surrogateInfoType = Codegen.ofNullable(surrogateInfoType);
             return this;
         }        public GooglePrivacyDlpV2CryptoDeterministicConfigArgs build() {
             return new GooglePrivacyDlpV2CryptoDeterministicConfigArgs(context, cryptoKey, surrogateInfoType);

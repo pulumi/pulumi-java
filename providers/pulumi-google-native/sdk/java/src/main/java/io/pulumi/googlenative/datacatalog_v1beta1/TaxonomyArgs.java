@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1beta1.enums.TaxonomyActivatedPolicyTypesItem;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activatedPolicyTypes")
       private final @Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
 
-    public Output<List<TaxonomyActivatedPolicyTypesItem>> getActivatedPolicyTypes() {
-        return this.activatedPolicyTypes == null ? Output.empty() : this.activatedPolicyTypes;
+    public Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes() {
+        return this.activatedPolicyTypes == null ? Codegen.empty() : this.activatedPolicyTypes;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,22 +46,22 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public TaxonomyArgs(
@@ -77,11 +78,11 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaxonomyArgs() {
-        this.activatedPolicyTypes = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
+        this.activatedPolicyTypes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activatedPolicyTypes(@Nullable List<TaxonomyActivatedPolicyTypesItem> activatedPolicyTypes) {
-            this.activatedPolicyTypes = Output.ofNullable(activatedPolicyTypes);
+            this.activatedPolicyTypes = Codegen.ofNullable(activatedPolicyTypes);
             return this;
         }
         public Builder activatedPolicyTypes(TaxonomyActivatedPolicyTypesItem... activatedPolicyTypes) {
@@ -128,7 +129,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -144,7 +145,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -152,7 +153,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public TaxonomyArgs build() {
             return new TaxonomyArgs(activatedPolicyTypes, description, displayName, location, project);

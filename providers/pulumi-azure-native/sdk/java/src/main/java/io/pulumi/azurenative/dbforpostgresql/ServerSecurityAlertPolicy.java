@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
      * 
      */
-    public Output</* @Nullable */ List<String>> getDisabledAlerts() {
+    public Output</* @Nullable */ List<String>> disabledAlerts() {
         return this.disabledAlerts;
     }
     /**
@@ -57,7 +58,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return Specifies that the alert is sent to the account administrators.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEmailAccountAdmins() {
+    public Output</* @Nullable */ Boolean> emailAccountAdmins() {
         return this.emailAccountAdmins;
     }
     /**
@@ -71,7 +72,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return Specifies an array of e-mail addresses to which the alert is sent.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEmailAddresses() {
+    public Output</* @Nullable */ List<String>> emailAddresses() {
         return this.emailAddresses;
     }
     /**
@@ -85,7 +86,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return Specifies the number of days to keep in the Threat Detection audit logs.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
     /**
@@ -113,7 +114,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return Specifies the state of the policy, whether it is enabled or disabled.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -127,7 +128,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return Specifies the identifier key of the Threat Detection audit storage account.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountAccessKey() {
+    public Output</* @Nullable */ String> storageAccountAccessKey() {
         return this.storageAccountAccessKey;
     }
     /**
@@ -141,7 +142,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
      */
-    public Output</* @Nullable */ String> getStorageEndpoint() {
+    public Output</* @Nullable */ String> storageEndpoint() {
         return this.storageEndpoint;
     }
     /**
@@ -155,7 +156,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +182,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerSecurityAlertPolicy(String name, ServerSecurityAlertPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dbforpostgresql:ServerSecurityAlertPolicy", name, args == null ? ServerSecurityAlertPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dbforpostgresql:ServerSecurityAlertPolicy", name, args == null ? ServerSecurityAlertPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerSecurityAlertPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

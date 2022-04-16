@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     @Import(name="env")
       private final @Nullable Output<String> env;
 
-    public Output<String> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+    public Output<String> env() {
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
-        return this.versionName == null ? Output.empty() : this.versionName;
+    public Output<String> versionName() {
+        return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 
     public SecretManagerSecretArgs(
@@ -48,8 +49,8 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     }
 
     private SecretManagerSecretArgs() {
-        this.env = Output.empty();
-        this.versionName = Output.empty();
+        this.env = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder env(@Nullable String env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder versionName(@Nullable Output<String> versionName) {
@@ -87,7 +88,7 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Output.ofNullable(versionName);
+            this.versionName = Codegen.ofNullable(versionName);
             return this;
         }        public SecretManagerSecretArgs build() {
             return new SecretManagerSecretArgs(env, versionName);

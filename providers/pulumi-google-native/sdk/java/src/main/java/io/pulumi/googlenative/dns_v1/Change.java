@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dns_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1.ChangeArgs;
 import io.pulumi.googlenative.dns_v1.outputs.ResourceRecordSetResponse;
@@ -34,7 +35,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * @return Which ResourceRecordSets to add?
      * 
      */
-    public Output<List<ResourceRecordSetResponse>> getAdditions() {
+    public Output<List<ResourceRecordSetResponse>> additions() {
         return this.additions;
     }
     /**
@@ -48,7 +49,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * @return Which ResourceRecordSets to remove? Must match existing data exactly.
      * 
      */
-    public Output<List<ResourceRecordSetResponse>> getDeletions() {
+    public Output<List<ResourceRecordSetResponse>> deletions() {
         return this.deletions;
     }
     /**
@@ -62,13 +63,13 @@ public class Change extends io.pulumi.resources.CustomResource {
      * @return If the DNS queries for the zone will be served.
      * 
      */
-    public Output<Boolean> getIsServing() {
+    public Output<Boolean> isServing() {
         return this.isServing;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -82,7 +83,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * @return The time that this operation was started by the server (output only). This is in RFC3339 text format.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -96,7 +97,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * @return Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -122,7 +123,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Change(String name, ChangeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dns/v1:Change", name, args == null ? ChangeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dns/v1:Change", name, args == null ? ChangeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Change(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

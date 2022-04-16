@@ -25,7 +25,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="architecture")
       private final @Nullable String architecture;
 
-    public Optional<String> getArchitecture() {
+    public Optional<String> architecture() {
         return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
     }
 
@@ -36,7 +36,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="os", required=true)
       private final String os;
 
-    public String getOs() {
+    public String os() {
         return this.os;
     }
 
@@ -47,7 +47,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="variant")
       private final @Nullable String variant;
 
-    public Optional<String> getVariant() {
+    public Optional<String> variant() {
         return this.variant == null ? Optional.empty() : Optional.ofNullable(this.variant);
     }
 

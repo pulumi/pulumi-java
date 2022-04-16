@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -33,8 +34,8 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+    public Output<List<String>> scopes() {
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -58,9 +59,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPolicyArgs() {
-        this.parent = Output.empty();
-        this.scopes = Output.empty();
-        this.title = Output.empty();
+        this.parent = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {

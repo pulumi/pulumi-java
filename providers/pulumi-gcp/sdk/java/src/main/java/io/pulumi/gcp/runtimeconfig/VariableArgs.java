@@ -5,6 +5,7 @@ package io.pulumi.gcp.runtimeconfig;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -46,8 +47,8 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -60,15 +61,15 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<String> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public VariableArgs(
@@ -85,11 +86,11 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VariableArgs() {
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.project = Output.empty();
-        this.text = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.project = Codegen.empty();
+        this.text = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(Output<String> parent) {
@@ -141,7 +142,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder text(@Nullable Output<String> text) {
@@ -149,7 +150,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder text(@Nullable String text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -157,7 +158,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public VariableArgs build() {
             return new VariableArgs(name, parent, project, text, value);

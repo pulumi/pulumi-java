@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -49,7 +50,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Expected bandwidth in MBPS.
      * 
      */
-    public Output</* @Nullable */ Integer> getConnectionBandwidth() {
+    public Output</* @Nullable */ Integer> connectionBandwidth() {
         return this.connectionBandwidth;
     }
     /**
@@ -63,7 +64,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The connection status.
      * 
      */
-    public Output<String> getConnectionStatus() {
+    public Output<String> connectionStatus() {
         return this.connectionStatus;
     }
     /**
@@ -77,7 +78,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return DPD timeout in seconds for vpn connection.
      * 
      */
-    public Output</* @Nullable */ Integer> getDpdTimeoutSeconds() {
+    public Output</* @Nullable */ Integer> dpdTimeoutSeconds() {
         return this.dpdTimeoutSeconds;
     }
     /**
@@ -91,7 +92,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Egress bytes transferred.
      * 
      */
-    public Output<Double> getEgressBytesTransferred() {
+    public Output<Double> egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
@@ -105,7 +106,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return EnableBgp flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBgp() {
+    public Output</* @Nullable */ Boolean> enableBgp() {
         return this.enableBgp;
     }
     /**
@@ -119,7 +120,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Enable internet security.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableInternetSecurity() {
+    public Output</* @Nullable */ Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity;
     }
     /**
@@ -133,7 +134,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return EnableBgp flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableRateLimiting() {
+    public Output</* @Nullable */ Boolean> enableRateLimiting() {
         return this.enableRateLimiting;
     }
     /**
@@ -147,7 +148,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -161,7 +162,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Ingress bytes transferred.
      * 
      */
-    public Output<Double> getIngressBytesTransferred() {
+    public Output<Double> ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
@@ -175,7 +176,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The IPSec Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> getIpsecPolicies() {
+    public Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies() {
         return this.ipsecPolicies;
     }
     /**
@@ -189,7 +190,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -203,7 +204,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the VPN connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -217,7 +218,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Id of the connected vpn site.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getRemoteVpnSite() {
+    public Output</* @Nullable */ SubResourceResponse> remoteVpnSite() {
         return this.remoteVpnSite;
     }
     /**
@@ -231,7 +232,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    public Output</* @Nullable */ RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration() {
         return this.routingConfiguration;
     }
     /**
@@ -245,7 +246,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Routing weight for vpn connection.
      * 
      */
-    public Output</* @Nullable */ Integer> getRoutingWeight() {
+    public Output</* @Nullable */ Integer> routingWeight() {
         return this.routingWeight;
     }
     /**
@@ -259,7 +260,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return SharedKey for the vpn connection.
      * 
      */
-    public Output</* @Nullable */ String> getSharedKey() {
+    public Output</* @Nullable */ String> sharedKey() {
         return this.sharedKey;
     }
     /**
@@ -273,7 +274,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The Traffic Selector Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> getTrafficSelectorPolicies() {
+    public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies() {
         return this.trafficSelectorPolicies;
     }
     /**
@@ -287,7 +288,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Use local azure ip to initiate connection.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseLocalAzureIpAddress() {
+    public Output</* @Nullable */ Boolean> useLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress;
     }
     /**
@@ -301,7 +302,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Enable policy-based traffic selectors.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUsePolicyBasedTrafficSelectors() {
+    public Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors;
     }
     /**
@@ -315,7 +316,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Connection protocol used for this connection.
      * 
      */
-    public Output</* @Nullable */ String> getVpnConnectionProtocolType() {
+    public Output</* @Nullable */ String> vpnConnectionProtocolType() {
         return this.vpnConnectionProtocolType;
     }
     /**
@@ -329,7 +330,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of all vpn site link connections to the gateway.
      * 
      */
-    public Output</* @Nullable */ List<VpnSiteLinkConnectionResponse>> getVpnLinkConnections() {
+    public Output</* @Nullable */ List<VpnSiteLinkConnectionResponse>> vpnLinkConnections() {
         return this.vpnLinkConnections;
     }
 
@@ -355,7 +356,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnConnection(String name, VpnConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VpnConnection", name, args == null ? VpnConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VpnConnection", name, args == null ? VpnConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpnConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

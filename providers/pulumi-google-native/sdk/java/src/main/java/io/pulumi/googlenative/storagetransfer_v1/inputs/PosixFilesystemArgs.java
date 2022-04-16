@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;
 
-    public Output<String> getRootDirectory() {
-        return this.rootDirectory == null ? Output.empty() : this.rootDirectory;
+    public Output<String> rootDirectory() {
+        return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
     public PosixFilesystemArgs(@Nullable Output<String> rootDirectory) {
@@ -34,7 +35,7 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PosixFilesystemArgs() {
-        this.rootDirectory = Output.empty();
+        this.rootDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rootDirectory(@Nullable String rootDirectory) {
-            this.rootDirectory = Output.ofNullable(rootDirectory);
+            this.rootDirectory = Codegen.ofNullable(rootDirectory);
             return this;
         }        public PosixFilesystemArgs build() {
             return new PosixFilesystemArgs(rootDirectory);

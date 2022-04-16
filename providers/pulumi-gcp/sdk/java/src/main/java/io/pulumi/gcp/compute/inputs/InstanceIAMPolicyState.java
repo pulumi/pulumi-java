@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+    public Output<String> instanceName() {
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceIAMPolicyState(
@@ -87,11 +88,11 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceIAMPolicyState() {
-        this.etag = Output.empty();
-        this.instanceName = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.etag = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instanceName(@Nullable Output<String> instanceName) {
@@ -135,7 +136,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -143,7 +144,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -151,7 +152,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -159,7 +160,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceIAMPolicyState build() {
             return new InstanceIAMPolicyState(etag, instanceName, policyData, project, zone);

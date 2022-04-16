@@ -16,7 +16,7 @@ public final class BucketAccessControlTranslation {
         this.owner = owner;
     }
 
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
 

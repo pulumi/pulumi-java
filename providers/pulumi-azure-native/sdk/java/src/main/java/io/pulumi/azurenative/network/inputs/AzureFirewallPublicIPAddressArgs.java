@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AzureFirewallPublicIPAddressArgs extends io.pulumi.resources.
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+    public Output<String> address() {
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     public AzureFirewallPublicIPAddressArgs(@Nullable Output<String> address) {
@@ -34,7 +35,7 @@ public final class AzureFirewallPublicIPAddressArgs extends io.pulumi.resources.
     }
 
     private AzureFirewallPublicIPAddressArgs() {
-        this.address = Output.empty();
+        this.address = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AzureFirewallPublicIPAddressArgs extends io.pulumi.resources.
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }        public AzureFirewallPublicIPAddressArgs build() {
             return new AzureFirewallPublicIPAddressArgs(address);

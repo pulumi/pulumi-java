@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeId")
       private final @Nullable Output<String> computeId;
 
-    public Output<String> getComputeId() {
-        return this.computeId == null ? Output.empty() : this.computeId;
+    public Output<String> computeId() {
+        return this.computeId == null ? Codegen.empty() : this.computeId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
-        return this.nodeCount == null ? Output.empty() : this.nodeCount;
+    public Output<Integer> nodeCount() {
+        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
     public ComputeBindingArgs(
@@ -49,8 +50,8 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComputeBindingArgs() {
-        this.computeId = Output.empty();
-        this.nodeCount = Output.empty();
+        this.computeId = Codegen.empty();
+        this.nodeCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computeId(@Nullable String computeId) {
-            this.computeId = Output.ofNullable(computeId);
+            this.computeId = Codegen.ofNullable(computeId);
             return this;
         }
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
@@ -88,7 +89,7 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Output.ofNullable(nodeCount);
+            this.nodeCount = Codegen.ofNullable(nodeCount);
             return this;
         }        public ComputeBindingArgs build() {
             return new ComputeBindingArgs(computeId, nodeCount);

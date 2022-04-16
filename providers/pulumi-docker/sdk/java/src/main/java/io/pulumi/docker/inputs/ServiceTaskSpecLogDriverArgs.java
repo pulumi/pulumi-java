@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ServiceTaskSpecLogDriverArgs extends io.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<Map<String,String>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     public ServiceTaskSpecLogDriverArgs(
@@ -37,8 +38,8 @@ public final class ServiceTaskSpecLogDriverArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceTaskSpecLogDriverArgs() {
-        this.name = Output.empty();
-        this.options = Output.empty();
+        this.name = Codegen.empty();
+        this.options = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ServiceTaskSpecLogDriverArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder options(@Nullable Map<String,String> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }        public ServiceTaskSpecLogDriverArgs build() {
             return new ServiceTaskSpecLogDriverArgs(name, options);

@@ -5,6 +5,7 @@ package io.pulumi.aws.serverlessrepository.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<List<String>> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="outputs")
       private final @Nullable Output<Map<String,String>> outputs;
 
-    public Output<Map<String,String>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+    public Output<Map<String,String>> outputs() {
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="semanticVersion")
       private final @Nullable Output<String> semanticVersion;
 
-    public Output<String> getSemanticVersion() {
-        return this.semanticVersion == null ? Output.empty() : this.semanticVersion;
+    public Output<String> semanticVersion() {
+        return this.semanticVersion == null ? Codegen.empty() : this.semanticVersion;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public CloudFormationStackState(
@@ -124,14 +125,14 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
     }
 
     private CloudFormationStackState() {
-        this.applicationId = Output.empty();
-        this.capabilities = Output.empty();
-        this.name = Output.empty();
-        this.outputs = Output.empty();
-        this.parameters = Output.empty();
-        this.semanticVersion = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.capabilities = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.semanticVersion = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
@@ -181,7 +182,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(String... capabilities) {
@@ -192,7 +193,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputs(@Nullable Output<Map<String,String>> outputs) {
@@ -200,7 +201,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder outputs(@Nullable Map<String,String> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -208,7 +209,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
@@ -216,7 +217,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder semanticVersion(@Nullable String semanticVersion) {
-            this.semanticVersion = Output.ofNullable(semanticVersion);
+            this.semanticVersion = Codegen.ofNullable(semanticVersion);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -224,7 +225,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -232,7 +233,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public CloudFormationStackState build() {
             return new CloudFormationStackState(applicationId, capabilities, name, outputs, parameters, semanticVersion, tags, tagsAll);

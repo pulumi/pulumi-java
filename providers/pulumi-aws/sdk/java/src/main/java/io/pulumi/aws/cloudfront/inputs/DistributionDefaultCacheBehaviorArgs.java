@@ -8,6 +8,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionDefaultCacheBehaviorFunctionA
 import io.pulumi.aws.cloudfront.inputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="allowedMethods", required=true)
       private final Output<List<String>> allowedMethods;
 
-    public Output<List<String>> getAllowedMethods() {
+    public Output<List<String>> allowedMethods() {
         return this.allowedMethods;
     }
 
@@ -40,8 +41,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="cachePolicyId")
       private final @Nullable Output<String> cachePolicyId;
 
-    public Output<String> getCachePolicyId() {
-        return this.cachePolicyId == null ? Output.empty() : this.cachePolicyId;
+    public Output<String> cachePolicyId() {
+        return this.cachePolicyId == null ? Codegen.empty() : this.cachePolicyId;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="cachedMethods", required=true)
       private final Output<List<String>> cachedMethods;
 
-    public Output<List<String>> getCachedMethods() {
+    public Output<List<String>> cachedMethods() {
         return this.cachedMethods;
     }
 
@@ -65,8 +66,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="compress")
       private final @Nullable Output<Boolean> compress;
 
-    public Output<Boolean> getCompress() {
-        return this.compress == null ? Output.empty() : this.compress;
+    public Output<Boolean> compress() {
+        return this.compress == null ? Codegen.empty() : this.compress;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
+    public Output<Integer> defaultTtl() {
+        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="fieldLevelEncryptionId")
       private final @Nullable Output<String> fieldLevelEncryptionId;
 
-    public Output<String> getFieldLevelEncryptionId() {
-        return this.fieldLevelEncryptionId == null ? Output.empty() : this.fieldLevelEncryptionId;
+    public Output<String> fieldLevelEncryptionId() {
+        return this.fieldLevelEncryptionId == null ? Codegen.empty() : this.fieldLevelEncryptionId;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="forwardedValues")
       private final @Nullable Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues;
 
-    public Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> getForwardedValues() {
-        return this.forwardedValues == null ? Output.empty() : this.forwardedValues;
+    public Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues() {
+        return this.forwardedValues == null ? Codegen.empty() : this.forwardedValues;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="functionAssociations")
       private final @Nullable Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations;
 
-    public Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> getFunctionAssociations() {
-        return this.functionAssociations == null ? Output.empty() : this.functionAssociations;
+    public Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations() {
+        return this.functionAssociations == null ? Codegen.empty() : this.functionAssociations;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="lambdaFunctionAssociations")
       private final @Nullable Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
 
-    public Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> getLambdaFunctionAssociations() {
-        return this.lambdaFunctionAssociations == null ? Output.empty() : this.lambdaFunctionAssociations;
+    public Output<List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations() {
+        return this.lambdaFunctionAssociations == null ? Codegen.empty() : this.lambdaFunctionAssociations;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> getMaxTtl() {
-        return this.maxTtl == null ? Output.empty() : this.maxTtl;
+    public Output<Integer> maxTtl() {
+        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="minTtl")
       private final @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> getMinTtl() {
-        return this.minTtl == null ? Output.empty() : this.minTtl;
+    public Output<Integer> minTtl() {
+        return this.minTtl == null ? Codegen.empty() : this.minTtl;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="originRequestPolicyId")
       private final @Nullable Output<String> originRequestPolicyId;
 
-    public Output<String> getOriginRequestPolicyId() {
-        return this.originRequestPolicyId == null ? Output.empty() : this.originRequestPolicyId;
+    public Output<String> originRequestPolicyId() {
+        return this.originRequestPolicyId == null ? Codegen.empty() : this.originRequestPolicyId;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="realtimeLogConfigArn")
       private final @Nullable Output<String> realtimeLogConfigArn;
 
-    public Output<String> getRealtimeLogConfigArn() {
-        return this.realtimeLogConfigArn == null ? Output.empty() : this.realtimeLogConfigArn;
+    public Output<String> realtimeLogConfigArn() {
+        return this.realtimeLogConfigArn == null ? Codegen.empty() : this.realtimeLogConfigArn;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="responseHeadersPolicyId")
       private final @Nullable Output<String> responseHeadersPolicyId;
 
-    public Output<String> getResponseHeadersPolicyId() {
-        return this.responseHeadersPolicyId == null ? Output.empty() : this.responseHeadersPolicyId;
+    public Output<String> responseHeadersPolicyId() {
+        return this.responseHeadersPolicyId == null ? Codegen.empty() : this.responseHeadersPolicyId;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="smoothStreaming")
       private final @Nullable Output<Boolean> smoothStreaming;
 
-    public Output<Boolean> getSmoothStreaming() {
-        return this.smoothStreaming == null ? Output.empty() : this.smoothStreaming;
+    public Output<Boolean> smoothStreaming() {
+        return this.smoothStreaming == null ? Codegen.empty() : this.smoothStreaming;
     }
 
     /**
@@ -214,7 +215,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="targetOriginId", required=true)
       private final Output<String> targetOriginId;
 
-    public Output<String> getTargetOriginId() {
+    public Output<String> targetOriginId() {
         return this.targetOriginId;
     }
 
@@ -226,8 +227,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="trustedKeyGroups")
       private final @Nullable Output<List<String>> trustedKeyGroups;
 
-    public Output<List<String>> getTrustedKeyGroups() {
-        return this.trustedKeyGroups == null ? Output.empty() : this.trustedKeyGroups;
+    public Output<List<String>> trustedKeyGroups() {
+        return this.trustedKeyGroups == null ? Codegen.empty() : this.trustedKeyGroups;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="trustedSigners")
       private final @Nullable Output<List<String>> trustedSigners;
 
-    public Output<List<String>> getTrustedSigners() {
-        return this.trustedSigners == null ? Output.empty() : this.trustedSigners;
+    public Output<List<String>> trustedSigners() {
+        return this.trustedSigners == null ? Codegen.empty() : this.trustedSigners;
     }
 
     /**
@@ -252,7 +253,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     @Import(name="viewerProtocolPolicy", required=true)
       private final Output<String> viewerProtocolPolicy;
 
-    public Output<String> getViewerProtocolPolicy() {
+    public Output<String> viewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }
 
@@ -298,25 +299,25 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
     }
 
     private DistributionDefaultCacheBehaviorArgs() {
-        this.allowedMethods = Output.empty();
-        this.cachePolicyId = Output.empty();
-        this.cachedMethods = Output.empty();
-        this.compress = Output.empty();
-        this.defaultTtl = Output.empty();
-        this.fieldLevelEncryptionId = Output.empty();
-        this.forwardedValues = Output.empty();
-        this.functionAssociations = Output.empty();
-        this.lambdaFunctionAssociations = Output.empty();
-        this.maxTtl = Output.empty();
-        this.minTtl = Output.empty();
-        this.originRequestPolicyId = Output.empty();
-        this.realtimeLogConfigArn = Output.empty();
-        this.responseHeadersPolicyId = Output.empty();
-        this.smoothStreaming = Output.empty();
-        this.targetOriginId = Output.empty();
-        this.trustedKeyGroups = Output.empty();
-        this.trustedSigners = Output.empty();
-        this.viewerProtocolPolicy = Output.empty();
+        this.allowedMethods = Codegen.empty();
+        this.cachePolicyId = Codegen.empty();
+        this.cachedMethods = Codegen.empty();
+        this.compress = Codegen.empty();
+        this.defaultTtl = Codegen.empty();
+        this.fieldLevelEncryptionId = Codegen.empty();
+        this.forwardedValues = Codegen.empty();
+        this.functionAssociations = Codegen.empty();
+        this.lambdaFunctionAssociations = Codegen.empty();
+        this.maxTtl = Codegen.empty();
+        this.minTtl = Codegen.empty();
+        this.originRequestPolicyId = Codegen.empty();
+        this.realtimeLogConfigArn = Codegen.empty();
+        this.responseHeadersPolicyId = Codegen.empty();
+        this.smoothStreaming = Codegen.empty();
+        this.targetOriginId = Codegen.empty();
+        this.trustedKeyGroups = Codegen.empty();
+        this.trustedSigners = Codegen.empty();
+        this.viewerProtocolPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -391,7 +392,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder cachePolicyId(@Nullable String cachePolicyId) {
-            this.cachePolicyId = Output.ofNullable(cachePolicyId);
+            this.cachePolicyId = Codegen.ofNullable(cachePolicyId);
             return this;
         }
         public Builder cachedMethods(Output<List<String>> cachedMethods) {
@@ -410,7 +411,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder compress(@Nullable Boolean compress) {
-            this.compress = Output.ofNullable(compress);
+            this.compress = Codegen.ofNullable(compress);
             return this;
         }
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
@@ -418,7 +419,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Output.ofNullable(defaultTtl);
+            this.defaultTtl = Codegen.ofNullable(defaultTtl);
             return this;
         }
         public Builder fieldLevelEncryptionId(@Nullable Output<String> fieldLevelEncryptionId) {
@@ -426,7 +427,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder fieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
-            this.fieldLevelEncryptionId = Output.ofNullable(fieldLevelEncryptionId);
+            this.fieldLevelEncryptionId = Codegen.ofNullable(fieldLevelEncryptionId);
             return this;
         }
         public Builder forwardedValues(@Nullable Output<DistributionDefaultCacheBehaviorForwardedValuesArgs> forwardedValues) {
@@ -434,7 +435,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder forwardedValues(@Nullable DistributionDefaultCacheBehaviorForwardedValuesArgs forwardedValues) {
-            this.forwardedValues = Output.ofNullable(forwardedValues);
+            this.forwardedValues = Codegen.ofNullable(forwardedValues);
             return this;
         }
         public Builder functionAssociations(@Nullable Output<List<DistributionDefaultCacheBehaviorFunctionAssociationArgs>> functionAssociations) {
@@ -442,7 +443,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder functionAssociations(@Nullable List<DistributionDefaultCacheBehaviorFunctionAssociationArgs> functionAssociations) {
-            this.functionAssociations = Output.ofNullable(functionAssociations);
+            this.functionAssociations = Codegen.ofNullable(functionAssociations);
             return this;
         }
         public Builder functionAssociations(DistributionDefaultCacheBehaviorFunctionAssociationArgs... functionAssociations) {
@@ -453,7 +454,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder lambdaFunctionAssociations(@Nullable List<DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs> lambdaFunctionAssociations) {
-            this.lambdaFunctionAssociations = Output.ofNullable(lambdaFunctionAssociations);
+            this.lambdaFunctionAssociations = Codegen.ofNullable(lambdaFunctionAssociations);
             return this;
         }
         public Builder lambdaFunctionAssociations(DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs... lambdaFunctionAssociations) {
@@ -464,7 +465,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Output.ofNullable(maxTtl);
+            this.maxTtl = Codegen.ofNullable(maxTtl);
             return this;
         }
         public Builder minTtl(@Nullable Output<Integer> minTtl) {
@@ -472,7 +473,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder minTtl(@Nullable Integer minTtl) {
-            this.minTtl = Output.ofNullable(minTtl);
+            this.minTtl = Codegen.ofNullable(minTtl);
             return this;
         }
         public Builder originRequestPolicyId(@Nullable Output<String> originRequestPolicyId) {
@@ -480,7 +481,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder originRequestPolicyId(@Nullable String originRequestPolicyId) {
-            this.originRequestPolicyId = Output.ofNullable(originRequestPolicyId);
+            this.originRequestPolicyId = Codegen.ofNullable(originRequestPolicyId);
             return this;
         }
         public Builder realtimeLogConfigArn(@Nullable Output<String> realtimeLogConfigArn) {
@@ -488,7 +489,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder realtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
-            this.realtimeLogConfigArn = Output.ofNullable(realtimeLogConfigArn);
+            this.realtimeLogConfigArn = Codegen.ofNullable(realtimeLogConfigArn);
             return this;
         }
         public Builder responseHeadersPolicyId(@Nullable Output<String> responseHeadersPolicyId) {
@@ -496,7 +497,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder responseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
-            this.responseHeadersPolicyId = Output.ofNullable(responseHeadersPolicyId);
+            this.responseHeadersPolicyId = Codegen.ofNullable(responseHeadersPolicyId);
             return this;
         }
         public Builder smoothStreaming(@Nullable Output<Boolean> smoothStreaming) {
@@ -504,7 +505,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder smoothStreaming(@Nullable Boolean smoothStreaming) {
-            this.smoothStreaming = Output.ofNullable(smoothStreaming);
+            this.smoothStreaming = Codegen.ofNullable(smoothStreaming);
             return this;
         }
         public Builder targetOriginId(Output<String> targetOriginId) {
@@ -520,7 +521,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder trustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
-            this.trustedKeyGroups = Output.ofNullable(trustedKeyGroups);
+            this.trustedKeyGroups = Codegen.ofNullable(trustedKeyGroups);
             return this;
         }
         public Builder trustedKeyGroups(String... trustedKeyGroups) {
@@ -531,7 +532,7 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             return this;
         }
         public Builder trustedSigners(@Nullable List<String> trustedSigners) {
-            this.trustedSigners = Output.ofNullable(trustedSigners);
+            this.trustedSigners = Codegen.ofNullable(trustedSigners);
             return this;
         }
         public Builder trustedSigners(String... trustedSigners) {

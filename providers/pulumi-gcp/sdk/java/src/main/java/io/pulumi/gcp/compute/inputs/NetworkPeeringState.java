@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="exportCustomRoutes")
       private final @Nullable Output<Boolean> exportCustomRoutes;
 
-    public Output<Boolean> getExportCustomRoutes() {
-        return this.exportCustomRoutes == null ? Output.empty() : this.exportCustomRoutes;
+    public Output<Boolean> exportCustomRoutes() {
+        return this.exportCustomRoutes == null ? Codegen.empty() : this.exportCustomRoutes;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="exportSubnetRoutesWithPublicIp")
       private final @Nullable Output<Boolean> exportSubnetRoutesWithPublicIp;
 
-    public Output<Boolean> getExportSubnetRoutesWithPublicIp() {
-        return this.exportSubnetRoutesWithPublicIp == null ? Output.empty() : this.exportSubnetRoutesWithPublicIp;
+    public Output<Boolean> exportSubnetRoutesWithPublicIp() {
+        return this.exportSubnetRoutesWithPublicIp == null ? Codegen.empty() : this.exportSubnetRoutesWithPublicIp;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="importCustomRoutes")
       private final @Nullable Output<Boolean> importCustomRoutes;
 
-    public Output<Boolean> getImportCustomRoutes() {
-        return this.importCustomRoutes == null ? Output.empty() : this.importCustomRoutes;
+    public Output<Boolean> importCustomRoutes() {
+        return this.importCustomRoutes == null ? Codegen.empty() : this.importCustomRoutes;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="importSubnetRoutesWithPublicIp")
       private final @Nullable Output<Boolean> importSubnetRoutesWithPublicIp;
 
-    public Output<Boolean> getImportSubnetRoutesWithPublicIp() {
-        return this.importSubnetRoutesWithPublicIp == null ? Output.empty() : this.importSubnetRoutesWithPublicIp;
+    public Output<Boolean> importSubnetRoutesWithPublicIp() {
+        return this.importSubnetRoutesWithPublicIp == null ? Codegen.empty() : this.importSubnetRoutesWithPublicIp;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="peerNetwork")
       private final @Nullable Output<String> peerNetwork;
 
-    public Output<String> getPeerNetwork() {
-        return this.peerNetwork == null ? Output.empty() : this.peerNetwork;
+    public Output<String> peerNetwork() {
+        return this.peerNetwork == null ? Codegen.empty() : this.peerNetwork;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     @Import(name="stateDetails")
       private final @Nullable Output<String> stateDetails;
 
-    public Output<String> getStateDetails() {
-        return this.stateDetails == null ? Output.empty() : this.stateDetails;
+    public Output<String> stateDetails() {
+        return this.stateDetails == null ? Codegen.empty() : this.stateDetails;
     }
 
     public NetworkPeeringState(
@@ -138,15 +139,15 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     }
 
     private NetworkPeeringState() {
-        this.exportCustomRoutes = Output.empty();
-        this.exportSubnetRoutesWithPublicIp = Output.empty();
-        this.importCustomRoutes = Output.empty();
-        this.importSubnetRoutesWithPublicIp = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.peerNetwork = Output.empty();
-        this.state = Output.empty();
-        this.stateDetails = Output.empty();
+        this.exportCustomRoutes = Codegen.empty();
+        this.exportSubnetRoutesWithPublicIp = Codegen.empty();
+        this.importCustomRoutes = Codegen.empty();
+        this.importSubnetRoutesWithPublicIp = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.peerNetwork = Codegen.empty();
+        this.state = Codegen.empty();
+        this.stateDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder exportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
-            this.exportCustomRoutes = Output.ofNullable(exportCustomRoutes);
+            this.exportCustomRoutes = Codegen.ofNullable(exportCustomRoutes);
             return this;
         }
         public Builder exportSubnetRoutesWithPublicIp(@Nullable Output<Boolean> exportSubnetRoutesWithPublicIp) {
@@ -198,7 +199,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder exportSubnetRoutesWithPublicIp(@Nullable Boolean exportSubnetRoutesWithPublicIp) {
-            this.exportSubnetRoutesWithPublicIp = Output.ofNullable(exportSubnetRoutesWithPublicIp);
+            this.exportSubnetRoutesWithPublicIp = Codegen.ofNullable(exportSubnetRoutesWithPublicIp);
             return this;
         }
         public Builder importCustomRoutes(@Nullable Output<Boolean> importCustomRoutes) {
@@ -206,7 +207,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder importCustomRoutes(@Nullable Boolean importCustomRoutes) {
-            this.importCustomRoutes = Output.ofNullable(importCustomRoutes);
+            this.importCustomRoutes = Codegen.ofNullable(importCustomRoutes);
             return this;
         }
         public Builder importSubnetRoutesWithPublicIp(@Nullable Output<Boolean> importSubnetRoutesWithPublicIp) {
@@ -214,7 +215,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder importSubnetRoutesWithPublicIp(@Nullable Boolean importSubnetRoutesWithPublicIp) {
-            this.importSubnetRoutesWithPublicIp = Output.ofNullable(importSubnetRoutesWithPublicIp);
+            this.importSubnetRoutesWithPublicIp = Codegen.ofNullable(importSubnetRoutesWithPublicIp);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -222,7 +223,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -230,7 +231,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder peerNetwork(@Nullable Output<String> peerNetwork) {
@@ -238,7 +239,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder peerNetwork(@Nullable String peerNetwork) {
-            this.peerNetwork = Output.ofNullable(peerNetwork);
+            this.peerNetwork = Codegen.ofNullable(peerNetwork);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -246,7 +247,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder stateDetails(@Nullable Output<String> stateDetails) {
@@ -254,7 +255,7 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder stateDetails(@Nullable String stateDetails) {
-            this.stateDetails = Output.ofNullable(stateDetails);
+            this.stateDetails = Codegen.ofNullable(stateDetails);
             return this;
         }        public NetworkPeeringState build() {
             return new NetworkPeeringState(exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerNetwork, state, stateDetails);

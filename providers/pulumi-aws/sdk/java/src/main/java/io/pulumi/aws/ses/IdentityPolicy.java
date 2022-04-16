@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.IdentityPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class IdentityPolicy extends io.pulumi.resources.CustomResource {
      * @return Name or Amazon Resource Name (ARN) of the SES Identity.
      * 
      */
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
     /**
@@ -53,7 +54,7 @@ public class IdentityPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -67,7 +68,7 @@ public class IdentityPolicy extends io.pulumi.resources.CustomResource {
      * @return JSON string of the policy.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -93,7 +94,7 @@ public class IdentityPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityPolicy(String name, IdentityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/identityPolicy:IdentityPolicy", name, args == null ? IdentityPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/identityPolicy:IdentityPolicy", name, args == null ? IdentityPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityPolicy(String name, Output<String> id, @Nullable IdentityPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

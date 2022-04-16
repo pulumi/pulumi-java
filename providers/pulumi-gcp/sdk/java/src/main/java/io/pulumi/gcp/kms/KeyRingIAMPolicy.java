@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingIAMPolicyArgs;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMPolicyState;
@@ -75,7 +76,7 @@ public class KeyRingIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the key ring's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -95,7 +96,7 @@ public class KeyRingIAMPolicy extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getKeyRingId() {
+    public Output<String> keyRingId() {
         return this.keyRingId;
     }
     /**
@@ -111,7 +112,7 @@ public class KeyRingIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -137,7 +138,7 @@ public class KeyRingIAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRingIAMPolicy(String name, KeyRingIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy", name, args == null ? KeyRingIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy", name, args == null ? KeyRingIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRingIAMPolicy(String name, Output<String> id, @Nullable KeyRingIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,15 +23,15 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
     @Import(name="closingResponse", required=true)
       private final Output<BotResponseSpecificationArgs> closingResponse;
 
-    public Output<BotResponseSpecificationArgs> getClosingResponse() {
+    public Output<BotResponseSpecificationArgs> closingResponse() {
         return this.closingResponse;
     }
 
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
-        return this.isActive == null ? Output.empty() : this.isActive;
+    public Output<Boolean> isActive() {
+        return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
     public BotIntentClosingSettingArgs(
@@ -41,8 +42,8 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
     }
 
     private BotIntentClosingSettingArgs() {
-        this.closingResponse = Output.empty();
-        this.isActive = Output.empty();
+        this.closingResponse = Codegen.empty();
+        this.isActive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Output.ofNullable(isActive);
+            this.isActive = Codegen.ofNullable(isActive);
             return this;
         }        public BotIntentClosingSettingArgs build() {
             return new BotIntentClosingSettingArgs(closingResponse, isActive);

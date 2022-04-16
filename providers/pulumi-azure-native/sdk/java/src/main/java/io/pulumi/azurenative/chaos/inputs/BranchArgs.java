@@ -8,6 +8,7 @@ import io.pulumi.azurenative.chaos.inputs.DelayActionArgs;
 import io.pulumi.azurenative.chaos.inputs.DiscreteActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<Object>> actions;
 
-    public Output<List<Object>> getActions() {
+    public Output<List<Object>> actions() {
         return this.actions;
     }
 
@@ -40,7 +41,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -52,8 +53,8 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BranchArgs() {
-        this.actions = Output.empty();
-        this.name = Output.empty();
+        this.actions = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

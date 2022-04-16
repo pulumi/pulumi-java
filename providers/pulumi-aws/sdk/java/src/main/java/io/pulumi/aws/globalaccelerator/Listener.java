@@ -10,6 +10,7 @@ import io.pulumi.aws.globalaccelerator.outputs.ListenerPortRange;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of your accelerator.
      * 
      */
-    public Output<String> getAcceleratorArn() {
+    public Output<String> acceleratorArn() {
         return this.acceleratorArn;
     }
     /**
@@ -55,7 +56,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
      * 
      */
-    public Output</* @Nullable */ String> getClientAffinity() {
+    public Output</* @Nullable */ String> clientAffinity() {
         return this.clientAffinity;
     }
     /**
@@ -69,7 +70,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return The list of port ranges for the connections from clients to the accelerator. Fields documented below.
      * 
      */
-    public Output<List<ListenerPortRange>> getPortRanges() {
+    public Output<List<ListenerPortRange>> portRanges() {
         return this.portRanges;
     }
     /**
@@ -83,7 +84,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -109,7 +110,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Listener(String name, ListenerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:globalaccelerator/listener:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:globalaccelerator/listener:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Listener(String name, Output<String> id, @Nullable ListenerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

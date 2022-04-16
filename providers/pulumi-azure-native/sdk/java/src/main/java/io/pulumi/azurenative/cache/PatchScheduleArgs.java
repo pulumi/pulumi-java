@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.cache.inputs.ScheduleEntryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="default")
       private final @Nullable Output<String> default_;
 
-    public Output<String> getDefault_() {
-        return this.default_ == null ? Output.empty() : this.default_;
+    public Output<String> default_() {
+        return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -45,7 +46,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +57,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleEntries", required=true)
       private final Output<List<ScheduleEntryArgs>> scheduleEntries;
 
-    public Output<List<ScheduleEntryArgs>> getScheduleEntries() {
+    public Output<List<ScheduleEntryArgs>> scheduleEntries() {
         return this.scheduleEntries;
     }
 
@@ -72,10 +73,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchScheduleArgs() {
-        this.default_ = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scheduleEntries = Output.empty();
+        this.default_ = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scheduleEntries = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder default_(@Nullable String default_) {
-            this.default_ = Output.ofNullable(default_);
+            this.default_ = Codegen.ofNullable(default_);
             return this;
         }
         public Builder name(Output<String> name) {

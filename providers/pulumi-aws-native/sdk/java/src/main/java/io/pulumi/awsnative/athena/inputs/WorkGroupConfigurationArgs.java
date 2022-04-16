@@ -7,6 +7,7 @@ import io.pulumi.awsnative.athena.inputs.WorkGroupEngineVersionArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupResultConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,43 +21,43 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="bytesScannedCutoffPerQuery")
       private final @Nullable Output<Integer> bytesScannedCutoffPerQuery;
 
-    public Output<Integer> getBytesScannedCutoffPerQuery() {
-        return this.bytesScannedCutoffPerQuery == null ? Output.empty() : this.bytesScannedCutoffPerQuery;
+    public Output<Integer> bytesScannedCutoffPerQuery() {
+        return this.bytesScannedCutoffPerQuery == null ? Codegen.empty() : this.bytesScannedCutoffPerQuery;
     }
 
     @Import(name="enforceWorkGroupConfiguration")
       private final @Nullable Output<Boolean> enforceWorkGroupConfiguration;
 
-    public Output<Boolean> getEnforceWorkGroupConfiguration() {
-        return this.enforceWorkGroupConfiguration == null ? Output.empty() : this.enforceWorkGroupConfiguration;
+    public Output<Boolean> enforceWorkGroupConfiguration() {
+        return this.enforceWorkGroupConfiguration == null ? Codegen.empty() : this.enforceWorkGroupConfiguration;
     }
 
     @Import(name="engineVersion")
       private final @Nullable Output<WorkGroupEngineVersionArgs> engineVersion;
 
-    public Output<WorkGroupEngineVersionArgs> getEngineVersion() {
-        return this.engineVersion == null ? Output.empty() : this.engineVersion;
+    public Output<WorkGroupEngineVersionArgs> engineVersion() {
+        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     @Import(name="publishCloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> publishCloudWatchMetricsEnabled;
 
-    public Output<Boolean> getPublishCloudWatchMetricsEnabled() {
-        return this.publishCloudWatchMetricsEnabled == null ? Output.empty() : this.publishCloudWatchMetricsEnabled;
+    public Output<Boolean> publishCloudWatchMetricsEnabled() {
+        return this.publishCloudWatchMetricsEnabled == null ? Codegen.empty() : this.publishCloudWatchMetricsEnabled;
     }
 
     @Import(name="requesterPaysEnabled")
       private final @Nullable Output<Boolean> requesterPaysEnabled;
 
-    public Output<Boolean> getRequesterPaysEnabled() {
-        return this.requesterPaysEnabled == null ? Output.empty() : this.requesterPaysEnabled;
+    public Output<Boolean> requesterPaysEnabled() {
+        return this.requesterPaysEnabled == null ? Codegen.empty() : this.requesterPaysEnabled;
     }
 
     @Import(name="resultConfiguration")
       private final @Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration;
 
-    public Output<WorkGroupResultConfigurationArgs> getResultConfiguration() {
-        return this.resultConfiguration == null ? Output.empty() : this.resultConfiguration;
+    public Output<WorkGroupResultConfigurationArgs> resultConfiguration() {
+        return this.resultConfiguration == null ? Codegen.empty() : this.resultConfiguration;
     }
 
     public WorkGroupConfigurationArgs(
@@ -75,12 +76,12 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private WorkGroupConfigurationArgs() {
-        this.bytesScannedCutoffPerQuery = Output.empty();
-        this.enforceWorkGroupConfiguration = Output.empty();
-        this.engineVersion = Output.empty();
-        this.publishCloudWatchMetricsEnabled = Output.empty();
-        this.requesterPaysEnabled = Output.empty();
-        this.resultConfiguration = Output.empty();
+        this.bytesScannedCutoffPerQuery = Codegen.empty();
+        this.enforceWorkGroupConfiguration = Codegen.empty();
+        this.engineVersion = Codegen.empty();
+        this.publishCloudWatchMetricsEnabled = Codegen.empty();
+        this.requesterPaysEnabled = Codegen.empty();
+        this.resultConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
-            this.bytesScannedCutoffPerQuery = Output.ofNullable(bytesScannedCutoffPerQuery);
+            this.bytesScannedCutoffPerQuery = Codegen.ofNullable(bytesScannedCutoffPerQuery);
             return this;
         }
         public Builder enforceWorkGroupConfiguration(@Nullable Output<Boolean> enforceWorkGroupConfiguration) {
@@ -126,7 +127,7 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
-            this.enforceWorkGroupConfiguration = Output.ofNullable(enforceWorkGroupConfiguration);
+            this.enforceWorkGroupConfiguration = Codegen.ofNullable(enforceWorkGroupConfiguration);
             return this;
         }
         public Builder engineVersion(@Nullable Output<WorkGroupEngineVersionArgs> engineVersion) {
@@ -134,7 +135,7 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder engineVersion(@Nullable WorkGroupEngineVersionArgs engineVersion) {
-            this.engineVersion = Output.ofNullable(engineVersion);
+            this.engineVersion = Codegen.ofNullable(engineVersion);
             return this;
         }
         public Builder publishCloudWatchMetricsEnabled(@Nullable Output<Boolean> publishCloudWatchMetricsEnabled) {
@@ -142,7 +143,7 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder publishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
-            this.publishCloudWatchMetricsEnabled = Output.ofNullable(publishCloudWatchMetricsEnabled);
+            this.publishCloudWatchMetricsEnabled = Codegen.ofNullable(publishCloudWatchMetricsEnabled);
             return this;
         }
         public Builder requesterPaysEnabled(@Nullable Output<Boolean> requesterPaysEnabled) {
@@ -150,7 +151,7 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
-            this.requesterPaysEnabled = Output.ofNullable(requesterPaysEnabled);
+            this.requesterPaysEnabled = Codegen.ofNullable(requesterPaysEnabled);
             return this;
         }
         public Builder resultConfiguration(@Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration) {
@@ -158,7 +159,7 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resultConfiguration(@Nullable WorkGroupResultConfigurationArgs resultConfiguration) {
-            this.resultConfiguration = Output.ofNullable(resultConfiguration);
+            this.resultConfiguration = Codegen.ofNullable(resultConfiguration);
             return this;
         }        public WorkGroupConfigurationArgs build() {
             return new WorkGroupConfigurationArgs(bytesScannedCutoffPerQuery, enforceWorkGroupConfiguration, engineVersion, publishCloudWatchMetricsEnabled, requesterPaysEnabled, resultConfiguration);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class UptimeCheckConfigTcpCheckArgs extends io.pulumi.resources.Res
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -29,7 +30,7 @@ public final class UptimeCheckConfigTcpCheckArgs extends io.pulumi.resources.Res
     }
 
     private UptimeCheckConfigTcpCheckArgs() {
-        this.port = Output.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

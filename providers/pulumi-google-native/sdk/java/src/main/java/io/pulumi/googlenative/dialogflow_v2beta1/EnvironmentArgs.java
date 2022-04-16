@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1FulfillmentArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
-        return this.agentVersion == null ? Output.empty() : this.agentVersion;
+    public Output<String> agentVersion() {
+        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
     /**
@@ -34,14 +35,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -52,22 +53,22 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fulfillment")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
 
-    public Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> getFulfillment() {
-        return this.fulfillment == null ? Output.empty() : this.fulfillment;
+    public Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment() {
+        return this.fulfillment == null ? Codegen.empty() : this.fulfillment;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="textToSpeechSettings")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;
 
-    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> getTextToSpeechSettings() {
-        return this.textToSpeechSettings == null ? Output.empty() : this.textToSpeechSettings;
+    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings() {
+        return this.textToSpeechSettings == null ? Codegen.empty() : this.textToSpeechSettings;
     }
 
     public EnvironmentArgs(
@@ -99,13 +100,13 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.agentVersion = Output.empty();
-        this.description = Output.empty();
-        this.environmentId = Output.empty();
-        this.fulfillment = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.textToSpeechSettings = Output.empty();
+        this.agentVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.fulfillment = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.textToSpeechSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Output.ofNullable(agentVersion);
+            this.agentVersion = Codegen.ofNullable(agentVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -153,7 +154,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -169,7 +170,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fulfillment(@Nullable GoogleCloudDialogflowV2beta1FulfillmentArgs fulfillment) {
-            this.fulfillment = Output.ofNullable(fulfillment);
+            this.fulfillment = Codegen.ofNullable(fulfillment);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -177,7 +178,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -185,7 +186,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder textToSpeechSettings(@Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings) {
@@ -193,7 +194,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder textToSpeechSettings(@Nullable GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs textToSpeechSettings) {
-            this.textToSpeechSettings = Output.ofNullable(textToSpeechSettings);
+            this.textToSpeechSettings = Codegen.ofNullable(textToSpeechSettings);
             return this;
         }        public EnvironmentArgs build() {
             return new EnvironmentArgs(agentVersion, description, environmentId, fulfillment, location, project, textToSpeechSettings);

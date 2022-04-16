@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerPortMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
     @Import(name="portMapping", required=true)
       private final Output<VirtualRouterSpecListenerPortMappingArgs> portMapping;
 
-    public Output<VirtualRouterSpecListenerPortMappingArgs> getPortMapping() {
+    public Output<VirtualRouterSpecListenerPortMappingArgs> portMapping() {
         return this.portMapping;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
     }
 
     private VirtualRouterSpecListenerArgs() {
-        this.portMapping = Output.empty();
+        this.portMapping = Codegen.empty();
     }
 
     public static Builder builder() {

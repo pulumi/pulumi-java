@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     @Import(name="dlClass", required=true)
       private final Output<String> dlClass;
 
-    public Output<String> getDlClass() {
+    public Output<String> dlClass() {
         return this.dlClass;
     }
 
@@ -33,8 +34,8 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     @Import(name="numberOfDevicesInGroup")
       private final @Nullable Output<Integer> numberOfDevicesInGroup;
 
-    public Output<Integer> getNumberOfDevicesInGroup() {
-        return this.numberOfDevicesInGroup == null ? Output.empty() : this.numberOfDevicesInGroup;
+    public Output<Integer> numberOfDevicesInGroup() {
+        return this.numberOfDevicesInGroup == null ? Codegen.empty() : this.numberOfDevicesInGroup;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     @Import(name="numberOfDevicesRequested")
       private final @Nullable Output<Integer> numberOfDevicesRequested;
 
-    public Output<Integer> getNumberOfDevicesRequested() {
-        return this.numberOfDevicesRequested == null ? Output.empty() : this.numberOfDevicesRequested;
+    public Output<Integer> numberOfDevicesRequested() {
+        return this.numberOfDevicesRequested == null ? Codegen.empty() : this.numberOfDevicesRequested;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     @Import(name="rfRegion", required=true)
       private final Output<String> rfRegion;
 
-    public Output<String> getRfRegion() {
+    public Output<String> rfRegion() {
         return this.rfRegion;
     }
 
@@ -71,10 +72,10 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     }
 
     private MulticastGroupLoRaWANArgs() {
-        this.dlClass = Output.empty();
-        this.numberOfDevicesInGroup = Output.empty();
-        this.numberOfDevicesRequested = Output.empty();
-        this.rfRegion = Output.empty();
+        this.dlClass = Codegen.empty();
+        this.numberOfDevicesInGroup = Codegen.empty();
+        this.numberOfDevicesRequested = Codegen.empty();
+        this.rfRegion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
-            this.numberOfDevicesInGroup = Output.ofNullable(numberOfDevicesInGroup);
+            this.numberOfDevicesInGroup = Codegen.ofNullable(numberOfDevicesInGroup);
             return this;
         }
         public Builder numberOfDevicesRequested(@Nullable Output<Integer> numberOfDevicesRequested) {
@@ -124,7 +125,7 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
-            this.numberOfDevicesRequested = Output.ofNullable(numberOfDevicesRequested);
+            this.numberOfDevicesRequested = Codegen.ofNullable(numberOfDevicesRequested);
             return this;
         }
         public Builder rfRegion(Output<String> rfRegion) {

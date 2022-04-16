@@ -39,17 +39,17 @@ public final class DataSetGeoSpatialColumnGroup {
      * <p>Columns in this hierarchy.</p>
      * 
     */
-    public List<String> getColumns() {
+    public List<String> columns() {
         return this.columns;
     }
-    public Optional<DataSetGeoSpatialCountryCode> getCountryCode() {
+    public Optional<DataSetGeoSpatialCountryCode> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
     /**
      * <p>A display name for the hierarchy.</p>
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

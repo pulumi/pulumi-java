@@ -5,6 +5,7 @@ package io.pulumi.random;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+    public Output<Map<String,Object>> keepers() {
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="max", required=true)
       private final Output<Integer> max;
 
-    public Output<Integer> getMax() {
+    public Output<Integer> max() {
         return this.max;
     }
 
@@ -46,7 +47,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="min", required=true)
       private final Output<Integer> min;
 
-    public Output<Integer> getMin() {
+    public Output<Integer> min() {
         return this.min;
     }
 
@@ -57,8 +58,8 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="seed")
       private final @Nullable Output<String> seed;
 
-    public Output<String> getSeed() {
-        return this.seed == null ? Output.empty() : this.seed;
+    public Output<String> seed() {
+        return this.seed == null ? Codegen.empty() : this.seed;
     }
 
     public RandomIntegerArgs(
@@ -73,10 +74,10 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomIntegerArgs() {
-        this.keepers = Output.empty();
-        this.max = Output.empty();
-        this.min = Output.empty();
-        this.seed = Output.empty();
+        this.keepers = Codegen.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
+        this.seed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder max(Output<Integer> max) {
@@ -134,7 +135,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder seed(@Nullable String seed) {
-            this.seed = Output.ofNullable(seed);
+            this.seed = Codegen.ofNullable(seed);
             return this;
         }        public RandomIntegerArgs build() {
             return new RandomIntegerArgs(keepers, max, min, seed);

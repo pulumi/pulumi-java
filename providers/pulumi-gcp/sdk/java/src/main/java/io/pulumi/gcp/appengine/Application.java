@@ -6,6 +6,7 @@ package io.pulumi.gcp.appengine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ApplicationArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationState;
@@ -51,7 +52,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Identifier of the app, usually `{PROJECT_ID}`
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -65,7 +66,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The domain to authenticate users with when using App Engine's User API.
      * 
      */
-    public Output<String> getAuthDomain() {
+    public Output<String> authDomain() {
         return this.authDomain;
     }
     /**
@@ -79,7 +80,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The GCS bucket code is being stored in for this app.
      * 
      */
-    public Output<String> getCodeBucket() {
+    public Output<String> codeBucket() {
         return this.codeBucket;
     }
     /**
@@ -99,7 +100,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * by the provider, but will be rejected by the API.
      * 
      */
-    public Output<String> getDatabaseType() {
+    public Output<String> databaseType() {
         return this.databaseType;
     }
     /**
@@ -113,7 +114,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The GCS bucket content is being stored in for this app.
      * 
      */
-    public Output<String> getDefaultBucket() {
+    public Output<String> defaultBucket() {
         return this.defaultBucket;
     }
     /**
@@ -127,7 +128,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The default hostname for this app.
      * 
      */
-    public Output<String> getDefaultHostname() {
+    public Output<String> defaultHostname() {
         return this.defaultHostname;
     }
     /**
@@ -141,7 +142,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A block of optional settings to configure specific App Engine features:
      * 
      */
-    public Output<ApplicationFeatureSettings> getFeatureSettings() {
+    public Output<ApplicationFeatureSettings> featureSettings() {
         return this.featureSettings;
     }
     /**
@@ -155,7 +156,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The GCR domain used for storing managed Docker images for this app.
      * 
      */
-    public Output<String> getGcrDomain() {
+    public Output<String> gcrDomain() {
         return this.gcrDomain;
     }
     /**
@@ -169,7 +170,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Settings for enabling Cloud Identity Aware Proxy
      * 
      */
-    public Output<ApplicationIap> getIap() {
+    public Output<ApplicationIap> iap() {
         return this.iap;
     }
     /**
@@ -185,7 +186,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * to serve the app from.
      * 
      */
-    public Output<String> getLocationId() {
+    public Output<String> locationId() {
         return this.locationId;
     }
     /**
@@ -199,7 +200,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Unique name of the app, usually `apps/{PROJECT_ID}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -217,7 +218,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * you may get a "Permission denied" error.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -231,7 +232,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The serving status of the app.
      * 
      */
-    public Output<String> getServingStatus() {
+    public Output<String> servingStatus() {
         return this.servingStatus;
     }
     /**
@@ -245,7 +246,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
      * 
      */
-    public Output<List<ApplicationUrlDispatchRule>> getUrlDispatchRules() {
+    public Output<List<ApplicationUrlDispatchRule>> urlDispatchRules() {
         return this.urlDispatchRules;
     }
 
@@ -271,7 +272,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/application:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:appengine/application:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Application(String name, Output<String> id, @Nullable ApplicationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

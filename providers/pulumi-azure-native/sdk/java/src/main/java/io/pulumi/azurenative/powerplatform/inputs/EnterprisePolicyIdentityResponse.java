@@ -25,7 +25,7 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
     @Import(name="systemAssignedIdentityPrincipalId", required=true)
       private final String systemAssignedIdentityPrincipalId;
 
-    public String getSystemAssignedIdentityPrincipalId() {
+    public String systemAssignedIdentityPrincipalId() {
         return this.systemAssignedIdentityPrincipalId;
     }
 
@@ -36,7 +36,7 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 
@@ -47,7 +47,7 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     @Import(name="customerGatewayArn", required=true)
       private final Output<String> customerGatewayArn;
 
-    public Output<String> getCustomerGatewayArn() {
+    public Output<String> customerGatewayArn() {
         return this.customerGatewayArn;
     }
 
@@ -32,7 +33,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -43,7 +44,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -54,8 +55,8 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     @Import(name="linkId")
       private final @Nullable Output<String> linkId;
 
-    public Output<String> getLinkId() {
-        return this.linkId == null ? Output.empty() : this.linkId;
+    public Output<String> linkId() {
+        return this.linkId == null ? Codegen.empty() : this.linkId;
     }
 
     public CustomerGatewayAssociationArgs(
@@ -70,10 +71,10 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     }
 
     private CustomerGatewayAssociationArgs() {
-        this.customerGatewayArn = Output.empty();
-        this.deviceId = Output.empty();
-        this.globalNetworkId = Output.empty();
-        this.linkId = Output.empty();
+        this.customerGatewayArn = Codegen.empty();
+        this.deviceId = Codegen.empty();
+        this.globalNetworkId = Codegen.empty();
+        this.linkId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder linkId(@Nullable String linkId) {
-            this.linkId = Output.ofNullable(linkId);
+            this.linkId = Codegen.ofNullable(linkId);
             return this;
         }        public CustomerGatewayAssociationArgs build() {
             return new CustomerGatewayAssociationArgs(customerGatewayArn, deviceId, globalNetworkId, linkId);

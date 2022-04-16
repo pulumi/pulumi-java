@@ -65,42 +65,42 @@ public final class GatewayCorsPropertiesResponse {
      * Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
      * 
     */
-    public Optional<Boolean> getAllowCredentials() {
+    public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
      * Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
      * 
     */
-    public List<String> getAllowedHeaders() {
+    public List<String> allowedHeaders() {
         return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
     }
     /**
      * Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
      * 
     */
-    public List<String> getAllowedMethods() {
+    public List<String> allowedMethods() {
         return this.allowedMethods == null ? List.of() : this.allowedMethods;
     }
     /**
      * Allowed origins to make cross-site requests. The special value `*` allows all domains.
      * 
     */
-    public List<String> getAllowedOrigins() {
+    public List<String> allowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
     /**
      * HTTP response headers to expose for cross-site requests.
      * 
     */
-    public List<String> getExposedHeaders() {
+    public List<String> exposedHeaders() {
         return this.exposedHeaders == null ? List.of() : this.exposedHeaders;
     }
     /**
      * How long, in seconds, the response from a pre-flight request can be cached by clients.
      * 
     */
-    public Optional<Integer> getMaxAge() {
+    public Optional<Integer> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
 

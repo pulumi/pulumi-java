@@ -23,7 +23,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     @Import(name="maxSize", required=true)
       private final String maxSize;
 
-    public String getMaxSize() {
+    public String maxSize() {
         return this.maxSize;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     @Import(name="minSize", required=true)
       private final String minSize;
 
-    public String getMinSize() {
+    public String minSize() {
         return this.minSize;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
     @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
-    public Output<Double> getTargetValue() {
+    public Output<Double> targetValue() {
         return this.targetValue;
     }
 
@@ -29,7 +30,7 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
     }
 
     private GameServerGroupTargetTrackingConfigurationArgs() {
-        this.targetValue = Output.empty();
+        this.targetValue = Codegen.empty();
     }
 
     public static Builder builder() {

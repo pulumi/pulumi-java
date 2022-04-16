@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.GkeClusterArgs;
@@ -27,8 +28,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="anthosCluster")
       private final @Nullable Output<AnthosClusterArgs> anthosCluster;
 
-    public Output<AnthosClusterArgs> getAnthosCluster() {
-        return this.anthosCluster == null ? Output.empty() : this.anthosCluster;
+    public Output<AnthosClusterArgs> anthosCluster() {
+        return this.anthosCluster == null ? Codegen.empty() : this.anthosCluster;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionConfigs")
       private final @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
 
-    public Output<List<ExecutionConfigArgs>> getExecutionConfigs() {
-        return this.executionConfigs == null ? Output.empty() : this.executionConfigs;
+    public Output<List<ExecutionConfigArgs>> executionConfigs() {
+        return this.executionConfigs == null ? Codegen.empty() : this.executionConfigs;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gke")
       private final @Nullable Output<GkeClusterArgs> gke;
 
-    public Output<GkeClusterArgs> getGke() {
-        return this.gke == null ? Output.empty() : this.gke;
+    public Output<GkeClusterArgs> gke() {
+        return this.gke == null ? Codegen.empty() : this.gke;
     }
 
     /**
@@ -93,15 +94,15 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -111,22 +112,22 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -136,22 +137,22 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireApproval")
       private final @Nullable Output<Boolean> requireApproval;
 
-    public Output<Boolean> getRequireApproval() {
-        return this.requireApproval == null ? Output.empty() : this.requireApproval;
+    public Output<Boolean> requireApproval() {
+        return this.requireApproval == null ? Codegen.empty() : this.requireApproval;
     }
 
     @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+    public Output<String> validateOnly() {
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public TargetArgs(
@@ -186,20 +187,20 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetArgs() {
-        this.annotations = Output.empty();
-        this.anthosCluster = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.executionConfigs = Output.empty();
-        this.gke = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.requireApproval = Output.empty();
-        this.targetId = Output.empty();
-        this.validateOnly = Output.empty();
+        this.annotations = Codegen.empty();
+        this.anthosCluster = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.executionConfigs = Codegen.empty();
+        this.gke = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.requireApproval = Codegen.empty();
+        this.targetId = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -253,7 +254,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder anthosCluster(@Nullable Output<AnthosClusterArgs> anthosCluster) {
@@ -261,7 +262,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder anthosCluster(@Nullable AnthosClusterArgs anthosCluster) {
-            this.anthosCluster = Output.ofNullable(anthosCluster);
+            this.anthosCluster = Codegen.ofNullable(anthosCluster);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -269,7 +270,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -277,7 +278,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder executionConfigs(@Nullable Output<List<ExecutionConfigArgs>> executionConfigs) {
@@ -285,7 +286,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionConfigs(@Nullable List<ExecutionConfigArgs> executionConfigs) {
-            this.executionConfigs = Output.ofNullable(executionConfigs);
+            this.executionConfigs = Codegen.ofNullable(executionConfigs);
             return this;
         }
         public Builder executionConfigs(ExecutionConfigArgs... executionConfigs) {
@@ -296,7 +297,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gke(@Nullable GkeClusterArgs gke) {
-            this.gke = Output.ofNullable(gke);
+            this.gke = Codegen.ofNullable(gke);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -304,7 +305,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -312,7 +313,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -320,7 +321,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -328,7 +329,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -336,7 +337,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder requireApproval(@Nullable Output<Boolean> requireApproval) {
@@ -344,7 +345,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireApproval(@Nullable Boolean requireApproval) {
-            this.requireApproval = Output.ofNullable(requireApproval);
+            this.requireApproval = Codegen.ofNullable(requireApproval);
             return this;
         }
         public Builder targetId(Output<String> targetId) {
@@ -360,7 +361,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public TargetArgs build() {
             return new TargetArgs(annotations, anthosCluster, description, etag, executionConfigs, gke, labels, location, name, project, requestId, requireApproval, targetId, validateOnly);

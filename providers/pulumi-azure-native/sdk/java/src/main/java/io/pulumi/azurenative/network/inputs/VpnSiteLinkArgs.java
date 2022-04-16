@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.VpnLinkBgpSettingsArgs;
 import io.pulumi.azurenative.network.inputs.VpnLinkProviderPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpProperties")
       private final @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
 
-    public Output<VpnLinkBgpSettingsArgs> getBgpProperties() {
-        return this.bgpProperties == null ? Output.empty() : this.bgpProperties;
+    public Output<VpnLinkBgpSettingsArgs> bgpProperties() {
+        return this.bgpProperties == null ? Codegen.empty() : this.bgpProperties;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+    public Output<String> fqdn() {
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkProperties")
       private final @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
 
-    public Output<VpnLinkProviderPropertiesArgs> getLinkProperties() {
-        return this.linkProperties == null ? Output.empty() : this.linkProperties;
+    public Output<VpnLinkProviderPropertiesArgs> linkProperties() {
+        return this.linkProperties == null ? Codegen.empty() : this.linkProperties;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public VpnSiteLinkArgs(
@@ -102,12 +103,12 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnSiteLinkArgs() {
-        this.bgpProperties = Output.empty();
-        this.fqdn = Output.empty();
-        this.id = Output.empty();
-        this.ipAddress = Output.empty();
-        this.linkProperties = Output.empty();
-        this.name = Output.empty();
+        this.bgpProperties = Codegen.empty();
+        this.fqdn = Codegen.empty();
+        this.id = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.linkProperties = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bgpProperties(@Nullable VpnLinkBgpSettingsArgs bgpProperties) {
-            this.bgpProperties = Output.ofNullable(bgpProperties);
+            this.bgpProperties = Codegen.ofNullable(bgpProperties);
             return this;
         }
         public Builder fqdn(@Nullable Output<String> fqdn) {
@@ -153,7 +154,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -161,7 +162,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -169,7 +170,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder linkProperties(@Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties) {
@@ -177,7 +178,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkProperties(@Nullable VpnLinkProviderPropertiesArgs linkProperties) {
-            this.linkProperties = Output.ofNullable(linkProperties);
+            this.linkProperties = Codegen.ofNullable(linkProperties);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -185,7 +186,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public VpnSiteLinkArgs build() {
             return new VpnSiteLinkArgs(bgpProperties, fqdn, id, ipAddress, linkProperties, name);

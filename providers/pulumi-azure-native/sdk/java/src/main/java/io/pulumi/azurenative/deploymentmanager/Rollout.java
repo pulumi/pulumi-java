@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The reference to the artifact source resource Id where the payload is located.
      * 
      */
-    public Output</* @Nullable */ String> getArtifactSourceId() {
+    public Output</* @Nullable */ String> artifactSourceId() {
         return this.artifactSourceId;
     }
     /**
@@ -58,7 +59,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The version of the build being deployed.
      * 
      */
-    public Output<String> getBuildVersion() {
+    public Output<String> buildVersion() {
         return this.buildVersion;
     }
     /**
@@ -72,7 +73,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output<IdentityResponse> getIdentity() {
+    public Output<IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -86,7 +87,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -100,7 +101,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The list of step groups that define the orchestration.
      * 
      */
-    public Output<List<StepGroupResponse>> getStepGroups() {
+    public Output<List<StepGroupResponse>> stepGroups() {
         return this.stepGroups;
     }
     /**
@@ -128,7 +129,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
      * 
      */
-    public Output<String> getTargetServiceTopologyId() {
+    public Output<String> targetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
     /**
@@ -156,7 +157,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Rollout(String name, RolloutArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:deploymentmanager:Rollout", name, args == null ? RolloutArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:deploymentmanager:Rollout", name, args == null ? RolloutArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Rollout(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

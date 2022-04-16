@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="logDestination", required=true)
       private final Output<String> logDestination;
 
-    public Output<String> getLogDestination() {
+    public Output<String> logDestination() {
         return this.logDestination;
     }
 
@@ -33,8 +34,8 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="redactedFields")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldsArgs> redactedFields;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldsArgs> getRedactedFields() {
-        return this.redactedFields == null ? Output.empty() : this.redactedFields;
+    public Output<WebAclLoggingConfigurationRedactedFieldsArgs> redactedFields() {
+        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
     }
 
     public WebAclLoggingConfigurationArgs(
@@ -45,8 +46,8 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private WebAclLoggingConfigurationArgs() {
-        this.logDestination = Output.empty();
-        this.redactedFields = Output.empty();
+        this.logDestination = Codegen.empty();
+        this.redactedFields = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder redactedFields(@Nullable WebAclLoggingConfigurationRedactedFieldsArgs redactedFields) {
-            this.redactedFields = Output.ofNullable(redactedFields);
+            this.redactedFields = Codegen.ofNullable(redactedFields);
             return this;
         }        public WebAclLoggingConfigurationArgs build() {
             return new WebAclLoggingConfigurationArgs(logDestination, redactedFields);

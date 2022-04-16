@@ -5,6 +5,7 @@ package io.pulumi.aws.mediaconvert.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     @Import(name="commitment", required=true)
       private final Output<String> commitment;
 
-    public Output<String> getCommitment() {
+    public Output<String> commitment() {
         return this.commitment;
     }
 
@@ -32,7 +33,7 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     @Import(name="renewalType", required=true)
       private final Output<String> renewalType;
 
-    public Output<String> getRenewalType() {
+    public Output<String> renewalType() {
         return this.renewalType;
     }
 
@@ -43,7 +44,7 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     @Import(name="reservedSlots", required=true)
       private final Output<Integer> reservedSlots;
 
-    public Output<Integer> getReservedSlots() {
+    public Output<Integer> reservedSlots() {
         return this.reservedSlots;
     }
 
@@ -57,9 +58,9 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     }
 
     private QueueReservationPlanSettingsGetArgs() {
-        this.commitment = Output.empty();
-        this.renewalType = Output.empty();
-        this.reservedSlots = Output.empty();
+        this.commitment = Codegen.empty();
+        this.renewalType = Codegen.empty();
+        this.reservedSlots = Codegen.empty();
     }
 
     public static Builder builder() {

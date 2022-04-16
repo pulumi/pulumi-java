@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.ReadOnlyEndpointFailoverPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
     @Import(name="failoverPolicy")
       private final @Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
 
-    public Output<Either<String,ReadOnlyEndpointFailoverPolicy>> getFailoverPolicy() {
-        return this.failoverPolicy == null ? Output.empty() : this.failoverPolicy;
+    public Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy() {
+        return this.failoverPolicy == null ? Codegen.empty() : this.failoverPolicy;
     }
 
     public FailoverGroupReadOnlyEndpointArgs(@Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
@@ -36,7 +37,7 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
     }
 
     private FailoverGroupReadOnlyEndpointArgs() {
-        this.failoverPolicy = Output.empty();
+        this.failoverPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
             return this;
         }
         public Builder failoverPolicy(@Nullable Either<String,ReadOnlyEndpointFailoverPolicy> failoverPolicy) {
-            this.failoverPolicy = Output.ofNullable(failoverPolicy);
+            this.failoverPolicy = Codegen.ofNullable(failoverPolicy);
             return this;
         }        public FailoverGroupReadOnlyEndpointArgs build() {
             return new FailoverGroupReadOnlyEndpointArgs(failoverPolicy);

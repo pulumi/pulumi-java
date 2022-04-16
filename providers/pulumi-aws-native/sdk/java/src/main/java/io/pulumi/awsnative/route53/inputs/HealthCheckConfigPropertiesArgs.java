@@ -8,6 +8,7 @@ import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesType;
 import io.pulumi.awsnative.route53.inputs.HealthCheckAlarmIdentifierArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,119 +28,119 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     @Import(name="alarmIdentifier")
       private final @Nullable Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier;
 
-    public Output<HealthCheckAlarmIdentifierArgs> getAlarmIdentifier() {
-        return this.alarmIdentifier == null ? Output.empty() : this.alarmIdentifier;
+    public Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier() {
+        return this.alarmIdentifier == null ? Codegen.empty() : this.alarmIdentifier;
     }
 
     @Import(name="childHealthChecks")
       private final @Nullable Output<List<String>> childHealthChecks;
 
-    public Output<List<String>> getChildHealthChecks() {
-        return this.childHealthChecks == null ? Output.empty() : this.childHealthChecks;
+    public Output<List<String>> childHealthChecks() {
+        return this.childHealthChecks == null ? Codegen.empty() : this.childHealthChecks;
     }
 
     @Import(name="enableSNI")
       private final @Nullable Output<Boolean> enableSNI;
 
-    public Output<Boolean> getEnableSNI() {
-        return this.enableSNI == null ? Output.empty() : this.enableSNI;
+    public Output<Boolean> enableSNI() {
+        return this.enableSNI == null ? Codegen.empty() : this.enableSNI;
     }
 
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
+    public Output<Integer> failureThreshold() {
+        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     @Import(name="fullyQualifiedDomainName")
       private final @Nullable Output<String> fullyQualifiedDomainName;
 
-    public Output<String> getFullyQualifiedDomainName() {
-        return this.fullyQualifiedDomainName == null ? Output.empty() : this.fullyQualifiedDomainName;
+    public Output<String> fullyQualifiedDomainName() {
+        return this.fullyQualifiedDomainName == null ? Codegen.empty() : this.fullyQualifiedDomainName;
     }
 
     @Import(name="healthThreshold")
       private final @Nullable Output<Integer> healthThreshold;
 
-    public Output<Integer> getHealthThreshold() {
-        return this.healthThreshold == null ? Output.empty() : this.healthThreshold;
+    public Output<Integer> healthThreshold() {
+        return this.healthThreshold == null ? Codegen.empty() : this.healthThreshold;
     }
 
     @Import(name="iPAddress")
       private final @Nullable Output<String> iPAddress;
 
-    public Output<String> getIPAddress() {
-        return this.iPAddress == null ? Output.empty() : this.iPAddress;
+    public Output<String> iPAddress() {
+        return this.iPAddress == null ? Codegen.empty() : this.iPAddress;
     }
 
     @Import(name="insufficientDataHealthStatus")
       private final @Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus;
 
-    public Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> getInsufficientDataHealthStatus() {
-        return this.insufficientDataHealthStatus == null ? Output.empty() : this.insufficientDataHealthStatus;
+    public Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus() {
+        return this.insufficientDataHealthStatus == null ? Codegen.empty() : this.insufficientDataHealthStatus;
     }
 
     @Import(name="inverted")
       private final @Nullable Output<Boolean> inverted;
 
-    public Output<Boolean> getInverted() {
-        return this.inverted == null ? Output.empty() : this.inverted;
+    public Output<Boolean> inverted() {
+        return this.inverted == null ? Codegen.empty() : this.inverted;
     }
 
     @Import(name="measureLatency")
       private final @Nullable Output<Boolean> measureLatency;
 
-    public Output<Boolean> getMeasureLatency() {
-        return this.measureLatency == null ? Output.empty() : this.measureLatency;
+    public Output<Boolean> measureLatency() {
+        return this.measureLatency == null ? Codegen.empty() : this.measureLatency;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+    public Output<List<String>> regions() {
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     @Import(name="requestInterval")
       private final @Nullable Output<Integer> requestInterval;
 
-    public Output<Integer> getRequestInterval() {
-        return this.requestInterval == null ? Output.empty() : this.requestInterval;
+    public Output<Integer> requestInterval() {
+        return this.requestInterval == null ? Codegen.empty() : this.requestInterval;
     }
 
     @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
-    public Output<String> getResourcePath() {
-        return this.resourcePath == null ? Output.empty() : this.resourcePath;
+    public Output<String> resourcePath() {
+        return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
     }
 
     @Import(name="routingControlArn")
       private final @Nullable Output<String> routingControlArn;
 
-    public Output<String> getRoutingControlArn() {
-        return this.routingControlArn == null ? Output.empty() : this.routingControlArn;
+    public Output<String> routingControlArn() {
+        return this.routingControlArn == null ? Codegen.empty() : this.routingControlArn;
     }
 
     @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
-    public Output<String> getSearchString() {
-        return this.searchString == null ? Output.empty() : this.searchString;
+    public Output<String> searchString() {
+        return this.searchString == null ? Codegen.empty() : this.searchString;
     }
 
     @Import(name="type", required=true)
       private final Output<HealthCheckConfigPropertiesType> type;
 
-    public Output<HealthCheckConfigPropertiesType> getType() {
+    public Output<HealthCheckConfigPropertiesType> type() {
         return this.type;
     }
 
@@ -181,23 +182,23 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     }
 
     private HealthCheckConfigPropertiesArgs() {
-        this.alarmIdentifier = Output.empty();
-        this.childHealthChecks = Output.empty();
-        this.enableSNI = Output.empty();
-        this.failureThreshold = Output.empty();
-        this.fullyQualifiedDomainName = Output.empty();
-        this.healthThreshold = Output.empty();
-        this.iPAddress = Output.empty();
-        this.insufficientDataHealthStatus = Output.empty();
-        this.inverted = Output.empty();
-        this.measureLatency = Output.empty();
-        this.port = Output.empty();
-        this.regions = Output.empty();
-        this.requestInterval = Output.empty();
-        this.resourcePath = Output.empty();
-        this.routingControlArn = Output.empty();
-        this.searchString = Output.empty();
-        this.type = Output.empty();
+        this.alarmIdentifier = Codegen.empty();
+        this.childHealthChecks = Codegen.empty();
+        this.enableSNI = Codegen.empty();
+        this.failureThreshold = Codegen.empty();
+        this.fullyQualifiedDomainName = Codegen.empty();
+        this.healthThreshold = Codegen.empty();
+        this.iPAddress = Codegen.empty();
+        this.insufficientDataHealthStatus = Codegen.empty();
+        this.inverted = Codegen.empty();
+        this.measureLatency = Codegen.empty();
+        this.port = Codegen.empty();
+        this.regions = Codegen.empty();
+        this.requestInterval = Codegen.empty();
+        this.resourcePath = Codegen.empty();
+        this.routingControlArn = Codegen.empty();
+        this.searchString = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -257,7 +258,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder alarmIdentifier(@Nullable HealthCheckAlarmIdentifierArgs alarmIdentifier) {
-            this.alarmIdentifier = Output.ofNullable(alarmIdentifier);
+            this.alarmIdentifier = Codegen.ofNullable(alarmIdentifier);
             return this;
         }
         public Builder childHealthChecks(@Nullable Output<List<String>> childHealthChecks) {
@@ -265,7 +266,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder childHealthChecks(@Nullable List<String> childHealthChecks) {
-            this.childHealthChecks = Output.ofNullable(childHealthChecks);
+            this.childHealthChecks = Codegen.ofNullable(childHealthChecks);
             return this;
         }
         public Builder childHealthChecks(String... childHealthChecks) {
@@ -276,7 +277,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enableSNI(@Nullable Boolean enableSNI) {
-            this.enableSNI = Output.ofNullable(enableSNI);
+            this.enableSNI = Codegen.ofNullable(enableSNI);
             return this;
         }
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
@@ -284,7 +285,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Output.ofNullable(failureThreshold);
+            this.failureThreshold = Codegen.ofNullable(failureThreshold);
             return this;
         }
         public Builder fullyQualifiedDomainName(@Nullable Output<String> fullyQualifiedDomainName) {
@@ -292,7 +293,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
-            this.fullyQualifiedDomainName = Output.ofNullable(fullyQualifiedDomainName);
+            this.fullyQualifiedDomainName = Codegen.ofNullable(fullyQualifiedDomainName);
             return this;
         }
         public Builder healthThreshold(@Nullable Output<Integer> healthThreshold) {
@@ -300,7 +301,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder healthThreshold(@Nullable Integer healthThreshold) {
-            this.healthThreshold = Output.ofNullable(healthThreshold);
+            this.healthThreshold = Codegen.ofNullable(healthThreshold);
             return this;
         }
         public Builder iPAddress(@Nullable Output<String> iPAddress) {
@@ -308,7 +309,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder iPAddress(@Nullable String iPAddress) {
-            this.iPAddress = Output.ofNullable(iPAddress);
+            this.iPAddress = Codegen.ofNullable(iPAddress);
             return this;
         }
         public Builder insufficientDataHealthStatus(@Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus) {
@@ -316,7 +317,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder insufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
-            this.insufficientDataHealthStatus = Output.ofNullable(insufficientDataHealthStatus);
+            this.insufficientDataHealthStatus = Codegen.ofNullable(insufficientDataHealthStatus);
             return this;
         }
         public Builder inverted(@Nullable Output<Boolean> inverted) {
@@ -324,7 +325,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder inverted(@Nullable Boolean inverted) {
-            this.inverted = Output.ofNullable(inverted);
+            this.inverted = Codegen.ofNullable(inverted);
             return this;
         }
         public Builder measureLatency(@Nullable Output<Boolean> measureLatency) {
@@ -332,7 +333,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder measureLatency(@Nullable Boolean measureLatency) {
-            this.measureLatency = Output.ofNullable(measureLatency);
+            this.measureLatency = Codegen.ofNullable(measureLatency);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -340,7 +341,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder regions(@Nullable Output<List<String>> regions) {
@@ -348,7 +349,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {
@@ -359,7 +360,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder requestInterval(@Nullable Integer requestInterval) {
-            this.requestInterval = Output.ofNullable(requestInterval);
+            this.requestInterval = Codegen.ofNullable(requestInterval);
             return this;
         }
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
@@ -367,7 +368,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Output.ofNullable(resourcePath);
+            this.resourcePath = Codegen.ofNullable(resourcePath);
             return this;
         }
         public Builder routingControlArn(@Nullable Output<String> routingControlArn) {
@@ -375,7 +376,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder routingControlArn(@Nullable String routingControlArn) {
-            this.routingControlArn = Output.ofNullable(routingControlArn);
+            this.routingControlArn = Codegen.ofNullable(routingControlArn);
             return this;
         }
         public Builder searchString(@Nullable Output<String> searchString) {
@@ -383,7 +384,7 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = Output.ofNullable(searchString);
+            this.searchString = Codegen.ofNullable(searchString);
             return this;
         }
         public Builder type(Output<HealthCheckConfigPropertiesType> type) {

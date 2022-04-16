@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastorePartitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="partitions")
       private final @Nullable Output<List<DatastorePartitionArgs>> partitions;
 
-    public Output<List<DatastorePartitionArgs>> getPartitions() {
-        return this.partitions == null ? Output.empty() : this.partitions;
+    public Output<List<DatastorePartitionArgs>> partitions() {
+        return this.partitions == null ? Codegen.empty() : this.partitions;
     }
 
     public DatastorePartitionsArgs(@Nullable Output<List<DatastorePartitionArgs>> partitions) {
@@ -27,7 +28,7 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
     }
 
     private DatastorePartitionsArgs() {
-        this.partitions = Output.empty();
+        this.partitions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partitions(@Nullable List<DatastorePartitionArgs> partitions) {
-            this.partitions = Output.ofNullable(partitions);
+            this.partitions = Codegen.ofNullable(partitions);
             return this;
         }
         public Builder partitions(DatastorePartitionArgs... partitions) {

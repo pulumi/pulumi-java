@@ -5,6 +5,7 @@ package io.pulumi.aws.fms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AdminAccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     public AdminAccountState(@Nullable Output<String> accountId) {
@@ -30,7 +31,7 @@ public final class AdminAccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AdminAccountState() {
-        this.accountId = Output.empty();
+        this.accountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AdminAccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }        public AdminAccountState build() {
             return new AdminAccountState(accountId);

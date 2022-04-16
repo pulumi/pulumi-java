@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -31,7 +32,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -42,7 +43,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -53,7 +54,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     @Import(name="secretVersion", required=true)
       private final Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
+    public Output<String> secretVersion() {
         return this.secretVersion;
     }
 
@@ -64,7 +65,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -75,7 +76,7 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -95,12 +96,12 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     }
 
     private KeyVaultSigningKeyParametersArgs() {
-        this.odataType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.secretName = Output.empty();
-        this.secretVersion = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.vaultName = Output.empty();
+        this.odataType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.secretName = Codegen.empty();
+        this.secretVersion = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {

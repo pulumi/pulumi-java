@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshUid")
       private final @Nullable Output<String> meshUid;
 
-    public Output<String> getMeshUid() {
-        return this.meshUid == null ? Output.empty() : this.meshUid;
+    public Output<String> meshUid() {
+        return this.meshUid == null ? Codegen.empty() : this.meshUid;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;
 
-    public Output<String> getServiceNamespace() {
-        return this.serviceNamespace == null ? Output.empty() : this.serviceNamespace;
+    public Output<String> serviceNamespace() {
+        return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
     }
 
     public MeshIstioArgs(
@@ -61,9 +62,9 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MeshIstioArgs() {
-        this.meshUid = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceNamespace = Output.empty();
+        this.meshUid = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder meshUid(@Nullable String meshUid) {
-            this.meshUid = Output.ofNullable(meshUid);
+            this.meshUid = Codegen.ofNullable(meshUid);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -103,7 +104,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
@@ -111,7 +112,7 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Output.ofNullable(serviceNamespace);
+            this.serviceNamespace = Codegen.ofNullable(serviceNamespace);
             return this;
         }        public MeshIstioArgs build() {
             return new MeshIstioArgs(meshUid, serviceName, serviceNamespace);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.notebooks_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.InstanceArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.AcceleratorConfigResponse;
@@ -39,7 +40,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
      * 
      */
-    public Output<AcceleratorConfigResponse> getAcceleratorConfig() {
+    public Output<AcceleratorConfigResponse> acceleratorConfig() {
         return this.acceleratorConfig;
     }
     /**
@@ -53,7 +54,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100.
      * 
      */
-    public Output<String> getBootDiskSizeGb() {
+    public Output<String> bootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
     /**
@@ -67,7 +68,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
      * 
      */
-    public Output<String> getBootDiskType() {
+    public Output<String> bootDiskType() {
         return this.bootDiskType;
     }
     /**
@@ -81,7 +82,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Use a container image to start the notebook instance.
      * 
      */
-    public Output<ContainerImageResponse> getContainerImage() {
+    public Output<ContainerImageResponse> containerImage() {
         return this.containerImage;
     }
     /**
@@ -95,7 +96,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Instance creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -109,7 +110,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
      * 
      */
-    public Output<String> getCustomGpuDriverPath() {
+    public Output<String> customGpuDriverPath() {
         return this.customGpuDriverPath;
     }
     /**
@@ -123,7 +124,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). You can choose the size of the data disk based on how big your notebooks and data are. If not specified, this defaults to 100.
      * 
      */
-    public Output<String> getDataDiskSizeGb() {
+    public Output<String> dataDiskSizeGb() {
         return this.dataDiskSizeGb;
     }
     /**
@@ -137,7 +138,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
      * 
      */
-    public Output<String> getDataDiskType() {
+    public Output<String> dataDiskType() {
         return this.dataDiskType;
     }
     /**
@@ -151,7 +152,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
      * 
      */
-    public Output<String> getDiskEncryption() {
+    public Output<String> diskEncryption() {
         return this.diskEncryption;
     }
     /**
@@ -165,7 +166,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Attached disks to notebook instance.
      * 
      */
-    public Output<List<DiskResponse>> getDisks() {
+    public Output<List<DiskResponse>> disks() {
         return this.disks;
     }
     /**
@@ -179,7 +180,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
      * 
      */
-    public Output<Boolean> getInstallGpuDriver() {
+    public Output<Boolean> installGpuDriver() {
         return this.installGpuDriver;
     }
     /**
@@ -193,7 +194,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance's service account can use the instance.
      * 
      */
-    public Output<List<String>> getInstanceOwners() {
+    public Output<List<String>> instanceOwners() {
         return this.instanceOwners;
     }
     /**
@@ -207,7 +208,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK. Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn more about [using your own encryption keys](/kms/docs/quickstart).
      * 
      */
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey;
     }
     /**
@@ -221,7 +222,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this instance. These can be later modified by the setLabels method.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -235,7 +236,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
      * 
      */
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
     /**
@@ -249,7 +250,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Custom metadata to apply to this instance.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -263,7 +264,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of this notebook instance. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -277,7 +278,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the VPC that this instance is in. Format: `projects/{project_id}/global/networks/{network_id}`
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -291,7 +292,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
      * 
      */
-    public Output<String> getNicType() {
+    public Output<String> nicType() {
         return this.nicType;
     }
     /**
@@ -305,7 +306,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, the notebook instance will not register with the proxy.
      * 
      */
-    public Output<Boolean> getNoProxyAccess() {
+    public Output<Boolean> noProxyAccess() {
         return this.noProxyAccess;
     }
     /**
@@ -319,7 +320,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, no public IP will be assigned to this instance.
      * 
      */
-    public Output<Boolean> getNoPublicIp() {
+    public Output<Boolean> noPublicIp() {
         return this.noPublicIp;
     }
     /**
@@ -333,7 +334,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Input only. If true, the data disk will not be auto deleted when deleting the instance.
      * 
      */
-    public Output<Boolean> getNoRemoveDataDisk() {
+    public Output<Boolean> noRemoveDataDisk() {
         return this.noRemoveDataDisk;
     }
     /**
@@ -347,7 +348,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
      * 
      */
-    public Output<String> getPostStartupScript() {
+    public Output<String> postStartupScript() {
         return this.postStartupScript;
     }
     /**
@@ -361,7 +362,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The proxy endpoint that is used to access the Jupyter notebook.
      * 
      */
-    public Output<String> getProxyUri() {
+    public Output<String> proxyUri() {
         return this.proxyUri;
     }
     /**
@@ -375,7 +376,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.
      * 
      */
-    public Output<ReservationAffinityResponse> getReservationAffinity() {
+    public Output<ReservationAffinityResponse> reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
@@ -389,7 +390,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -403,7 +404,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
      * 
      */
-    public Output<List<String>> getServiceAccountScopes() {
+    public Output<List<String>> serviceAccountScopes() {
         return this.serviceAccountScopes;
     }
     /**
@@ -417,7 +418,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
      * 
      */
-    public Output<ShieldedInstanceConfigResponse> getShieldedInstanceConfig() {
+    public Output<ShieldedInstanceConfigResponse> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
@@ -431,7 +432,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The state of this instance.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -445,7 +446,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the subnet that this instance is in. Format: `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
      * 
      */
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet;
     }
     /**
@@ -459,7 +460,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
     /**
@@ -473,7 +474,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Instance update time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -487,7 +488,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The upgrade history of this instance.
      * 
      */
-    public Output<List<UpgradeHistoryEntryResponse>> getUpgradeHistory() {
+    public Output<List<UpgradeHistoryEntryResponse>> upgradeHistory() {
         return this.upgradeHistory;
     }
     /**
@@ -501,7 +502,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Use a Compute Engine VM image to start the notebook instance.
      * 
      */
-    public Output<VmImageResponse> getVmImage() {
+    public Output<VmImageResponse> vmImage() {
         return this.vmImage;
     }
 
@@ -527,7 +528,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:notebooks/v1:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:notebooks/v1:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

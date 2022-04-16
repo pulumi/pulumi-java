@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,35 +18,35 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     @Import(name="databaseHost", required=true)
       private final Output<String> databaseHost;
 
-    public Output<String> getDatabaseHost() {
+    public Output<String> databaseHost() {
         return this.databaseHost;
     }
 
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databasePort", required=true)
       private final Output<Integer> databasePort;
 
-    public Output<Integer> getDatabasePort() {
+    public Output<Integer> databasePort() {
         return this.databasePort;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -63,11 +64,11 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceConnectionConfigurationArgs() {
-        this.databaseHost = Output.empty();
-        this.databaseName = Output.empty();
-        this.databasePort = Output.empty();
-        this.secretArn = Output.empty();
-        this.tableName = Output.empty();
+        this.databaseHost = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.databasePort = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {

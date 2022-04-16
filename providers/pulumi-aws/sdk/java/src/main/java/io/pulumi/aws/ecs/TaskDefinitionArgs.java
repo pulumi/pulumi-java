@@ -11,6 +11,7 @@ import io.pulumi.aws.ecs.inputs.TaskDefinitionRuntimePlatformArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerDefinitions", required=true)
       private final Output<String> containerDefinitions;
 
-    public Output<String> getContainerDefinitions() {
+    public Output<String> containerDefinitions() {
         return this.containerDefinitions;
     }
 
@@ -41,8 +42,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
-    public Output<String> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+    public Output<String> cpu() {
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralStorage")
       private final @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
 
-    public Output<TaskDefinitionEphemeralStorageArgs> getEphemeralStorage() {
-        return this.ephemeralStorage == null ? Output.empty() : this.ephemeralStorage;
+    public Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage() {
+        return this.ephemeralStorage == null ? Codegen.empty() : this.ephemeralStorage;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
+    public Output<String> executionRoleArn() {
+        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
       private final Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
 
@@ -85,8 +86,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inferenceAccelerators")
       private final @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
 
-    public Output<List<TaskDefinitionInferenceAcceleratorArgs>> getInferenceAccelerators() {
-        return this.inferenceAccelerators == null ? Output.empty() : this.inferenceAccelerators;
+    public Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators() {
+        return this.inferenceAccelerators == null ? Codegen.empty() : this.inferenceAccelerators;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipcMode")
       private final @Nullable Output<String> ipcMode;
 
-    public Output<String> getIpcMode() {
-        return this.ipcMode == null ? Output.empty() : this.ipcMode;
+    public Output<String> ipcMode() {
+        return this.ipcMode == null ? Codegen.empty() : this.ipcMode;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+    public Output<String> memory() {
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
-    public Output<String> getNetworkMode() {
-        return this.networkMode == null ? Output.empty() : this.networkMode;
+    public Output<String> networkMode() {
+        return this.networkMode == null ? Codegen.empty() : this.networkMode;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pidMode")
       private final @Nullable Output<String> pidMode;
 
-    public Output<String> getPidMode() {
-        return this.pidMode == null ? Output.empty() : this.pidMode;
+    public Output<String> pidMode() {
+        return this.pidMode == null ? Codegen.empty() : this.pidMode;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="placementConstraints")
       private final @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
 
-    public Output<List<TaskDefinitionPlacementConstraintArgs>> getPlacementConstraints() {
-        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
+    public Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints() {
+        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="proxyConfiguration")
       private final @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
 
-    public Output<TaskDefinitionProxyConfigurationArgs> getProxyConfiguration() {
-        return this.proxyConfiguration == null ? Output.empty() : this.proxyConfiguration;
+    public Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration() {
+        return this.proxyConfiguration == null ? Codegen.empty() : this.proxyConfiguration;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiresCompatibilities")
       private final @Nullable Output<List<String>> requiresCompatibilities;
 
-    public Output<List<String>> getRequiresCompatibilities() {
-        return this.requiresCompatibilities == null ? Output.empty() : this.requiresCompatibilities;
+    public Output<List<String>> requiresCompatibilities() {
+        return this.requiresCompatibilities == null ? Codegen.empty() : this.requiresCompatibilities;
     }
 
     /**
@@ -173,15 +174,15 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimePlatform")
       private final @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
 
-    public Output<TaskDefinitionRuntimePlatformArgs> getRuntimePlatform() {
-        return this.runtimePlatform == null ? Output.empty() : this.runtimePlatform;
+    public Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform() {
+        return this.runtimePlatform == null ? Codegen.empty() : this.runtimePlatform;
     }
 
     @Import(name="skipDestroy")
       private final @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> getSkipDestroy() {
-        return this.skipDestroy == null ? Output.empty() : this.skipDestroy;
+    public Output<Boolean> skipDestroy() {
+        return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
     }
 
     /**
@@ -191,8 +192,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskRoleArn")
       private final @Nullable Output<String> taskRoleArn;
 
-    public Output<String> getTaskRoleArn() {
-        return this.taskRoleArn == null ? Output.empty() : this.taskRoleArn;
+    public Output<String> taskRoleArn() {
+        return this.taskRoleArn == null ? Codegen.empty() : this.taskRoleArn;
     }
 
     /**
@@ -213,8 +214,8 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
-    public Output<List<TaskDefinitionVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<TaskDefinitionVolumeArgs>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public TaskDefinitionArgs(
@@ -257,24 +258,24 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskDefinitionArgs() {
-        this.containerDefinitions = Output.empty();
-        this.cpu = Output.empty();
-        this.ephemeralStorage = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.family = Output.empty();
-        this.inferenceAccelerators = Output.empty();
-        this.ipcMode = Output.empty();
-        this.memory = Output.empty();
-        this.networkMode = Output.empty();
-        this.pidMode = Output.empty();
-        this.placementConstraints = Output.empty();
-        this.proxyConfiguration = Output.empty();
-        this.requiresCompatibilities = Output.empty();
-        this.runtimePlatform = Output.empty();
-        this.skipDestroy = Output.empty();
-        this.tags = Output.empty();
-        this.taskRoleArn = Output.empty();
-        this.volumes = Output.empty();
+        this.containerDefinitions = Codegen.empty();
+        this.cpu = Codegen.empty();
+        this.ephemeralStorage = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.family = Codegen.empty();
+        this.inferenceAccelerators = Codegen.empty();
+        this.ipcMode = Codegen.empty();
+        this.memory = Codegen.empty();
+        this.networkMode = Codegen.empty();
+        this.pidMode = Codegen.empty();
+        this.placementConstraints = Codegen.empty();
+        this.proxyConfiguration = Codegen.empty();
+        this.requiresCompatibilities = Codegen.empty();
+        this.runtimePlatform = Codegen.empty();
+        this.skipDestroy = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.taskRoleArn = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -344,7 +345,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder ephemeralStorage(@Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage) {
@@ -352,7 +353,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ephemeralStorage(@Nullable TaskDefinitionEphemeralStorageArgs ephemeralStorage) {
-            this.ephemeralStorage = Output.ofNullable(ephemeralStorage);
+            this.ephemeralStorage = Codegen.ofNullable(ephemeralStorage);
             return this;
         }
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
@@ -360,7 +361,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Output.ofNullable(executionRoleArn);
+            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
             return this;
         }
         public Builder family(Output<String> family) {
@@ -376,7 +377,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inferenceAccelerators(@Nullable List<TaskDefinitionInferenceAcceleratorArgs> inferenceAccelerators) {
-            this.inferenceAccelerators = Output.ofNullable(inferenceAccelerators);
+            this.inferenceAccelerators = Codegen.ofNullable(inferenceAccelerators);
             return this;
         }
         public Builder inferenceAccelerators(TaskDefinitionInferenceAcceleratorArgs... inferenceAccelerators) {
@@ -387,7 +388,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipcMode(@Nullable String ipcMode) {
-            this.ipcMode = Output.ofNullable(ipcMode);
+            this.ipcMode = Codegen.ofNullable(ipcMode);
             return this;
         }
         public Builder memory(@Nullable Output<String> memory) {
@@ -395,7 +396,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memory(@Nullable String memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }
         public Builder networkMode(@Nullable Output<String> networkMode) {
@@ -403,7 +404,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Output.ofNullable(networkMode);
+            this.networkMode = Codegen.ofNullable(networkMode);
             return this;
         }
         public Builder pidMode(@Nullable Output<String> pidMode) {
@@ -411,7 +412,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pidMode(@Nullable String pidMode) {
-            this.pidMode = Output.ofNullable(pidMode);
+            this.pidMode = Codegen.ofNullable(pidMode);
             return this;
         }
         public Builder placementConstraints(@Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints) {
@@ -419,7 +420,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder placementConstraints(@Nullable List<TaskDefinitionPlacementConstraintArgs> placementConstraints) {
-            this.placementConstraints = Output.ofNullable(placementConstraints);
+            this.placementConstraints = Codegen.ofNullable(placementConstraints);
             return this;
         }
         public Builder placementConstraints(TaskDefinitionPlacementConstraintArgs... placementConstraints) {
@@ -430,7 +431,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder proxyConfiguration(@Nullable TaskDefinitionProxyConfigurationArgs proxyConfiguration) {
-            this.proxyConfiguration = Output.ofNullable(proxyConfiguration);
+            this.proxyConfiguration = Codegen.ofNullable(proxyConfiguration);
             return this;
         }
         public Builder requiresCompatibilities(@Nullable Output<List<String>> requiresCompatibilities) {
@@ -438,7 +439,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiresCompatibilities(@Nullable List<String> requiresCompatibilities) {
-            this.requiresCompatibilities = Output.ofNullable(requiresCompatibilities);
+            this.requiresCompatibilities = Codegen.ofNullable(requiresCompatibilities);
             return this;
         }
         public Builder requiresCompatibilities(String... requiresCompatibilities) {
@@ -449,7 +450,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimePlatform(@Nullable TaskDefinitionRuntimePlatformArgs runtimePlatform) {
-            this.runtimePlatform = Output.ofNullable(runtimePlatform);
+            this.runtimePlatform = Codegen.ofNullable(runtimePlatform);
             return this;
         }
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
@@ -457,7 +458,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Output.ofNullable(skipDestroy);
+            this.skipDestroy = Codegen.ofNullable(skipDestroy);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -465,7 +466,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder taskRoleArn(@Nullable Output<String> taskRoleArn) {
@@ -473,7 +474,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskRoleArn(@Nullable String taskRoleArn) {
-            this.taskRoleArn = Output.ofNullable(taskRoleArn);
+            this.taskRoleArn = Codegen.ofNullable(taskRoleArn);
             return this;
         }
         public Builder volumes(@Nullable Output<List<TaskDefinitionVolumeArgs>> volumes) {
@@ -481,7 +482,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumes(@Nullable List<TaskDefinitionVolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(TaskDefinitionVolumeArgs... volumes) {

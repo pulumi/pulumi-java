@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyNotificationRateLimitArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
     @Import(name="autoClose")
       private final @Nullable Output<String> autoClose;
 
-    public Output<String> getAutoClose() {
-        return this.autoClose == null ? Output.empty() : this.autoClose;
+    public Output<String> autoClose() {
+        return this.autoClose == null ? Codegen.empty() : this.autoClose;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
     @Import(name="notificationRateLimit")
       private final @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
 
-    public Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> getNotificationRateLimit() {
-        return this.notificationRateLimit == null ? Output.empty() : this.notificationRateLimit;
+    public Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit() {
+        return this.notificationRateLimit == null ? Codegen.empty() : this.notificationRateLimit;
     }
 
     public AlertPolicyAlertStrategyArgs(
@@ -47,8 +48,8 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
     }
 
     private AlertPolicyAlertStrategyArgs() {
-        this.autoClose = Output.empty();
-        this.notificationRateLimit = Output.empty();
+        this.autoClose = Codegen.empty();
+        this.notificationRateLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder autoClose(@Nullable String autoClose) {
-            this.autoClose = Output.ofNullable(autoClose);
+            this.autoClose = Codegen.ofNullable(autoClose);
             return this;
         }
         public Builder notificationRateLimit(@Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
@@ -86,7 +87,7 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder notificationRateLimit(@Nullable AlertPolicyAlertStrategyNotificationRateLimitArgs notificationRateLimit) {
-            this.notificationRateLimit = Output.ofNullable(notificationRateLimit);
+            this.notificationRateLimit = Codegen.ofNullable(notificationRateLimit);
             return this;
         }        public AlertPolicyAlertStrategyArgs build() {
             return new AlertPolicyAlertStrategyArgs(autoClose, notificationRateLimit);

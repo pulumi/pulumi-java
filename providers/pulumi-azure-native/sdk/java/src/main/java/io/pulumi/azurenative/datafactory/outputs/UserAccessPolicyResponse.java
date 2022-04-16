@@ -55,35 +55,35 @@ public final class UserAccessPolicyResponse {
      * The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
      * 
     */
-    public Optional<String> getAccessResourcePath() {
+    public Optional<String> accessResourcePath() {
         return Optional.ofNullable(this.accessResourcePath);
     }
     /**
      * Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
      * 
     */
-    public Optional<String> getExpireTime() {
+    public Optional<String> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
     /**
      * The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.
      * 
     */
-    public Optional<String> getPermissions() {
+    public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }
     /**
      * The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
      * 
     */
-    public Optional<String> getProfileName() {
+    public Optional<String> profileName() {
         return Optional.ofNullable(this.profileName);
     }
     /**
      * Start time for the token. If not specified the current time will be used.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

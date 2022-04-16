@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.ConnectionTypeAssociationPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -34,8 +35,8 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+    public Output<String> connectionName() {
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionType", required=true)
       private final Output<ConnectionTypeAssociationPropertyArgs> connectionType;
 
-    public Output<ConnectionTypeAssociationPropertyArgs> getConnectionType() {
+    public Output<ConnectionTypeAssociationPropertyArgs> connectionType() {
         return this.connectionType;
     }
 
@@ -56,8 +57,8 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldDefinitionValues")
       private final @Nullable Output<Map<String,String>> fieldDefinitionValues;
 
-    public Output<Map<String,String>> getFieldDefinitionValues() {
-        return this.fieldDefinitionValues == null ? Output.empty() : this.fieldDefinitionValues;
+    public Output<Map<String,String>> fieldDefinitionValues() {
+        return this.fieldDefinitionValues == null ? Codegen.empty() : this.fieldDefinitionValues;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -89,7 +90,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,13 +112,13 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.automationAccountName = Output.empty();
-        this.connectionName = Output.empty();
-        this.connectionType = Output.empty();
-        this.description = Output.empty();
-        this.fieldDefinitionValues = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.connectionName = Codegen.empty();
+        this.connectionType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fieldDefinitionValues = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder connectionType(Output<ConnectionTypeAssociationPropertyArgs> connectionType) {
@@ -181,7 +182,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fieldDefinitionValues(@Nullable Output<Map<String,String>> fieldDefinitionValues) {
@@ -189,7 +190,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fieldDefinitionValues(@Nullable Map<String,String> fieldDefinitionValues) {
-            this.fieldDefinitionValues = Output.ofNullable(fieldDefinitionValues);
+            this.fieldDefinitionValues = Codegen.ofNullable(fieldDefinitionValues);
             return this;
         }
         public Builder name(Output<String> name) {

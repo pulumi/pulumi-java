@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="authority")
       private final @Nullable Output<String> authority;
 
-    public Output<String> getAuthority() {
-        return this.authority == null ? Output.empty() : this.authority;
+    public Output<String> authority() {
+        return this.authority == null ? Codegen.empty() : this.authority;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<String> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="payloadName")
       private final @Nullable Output<String> payloadName;
 
-    public Output<String> getPayloadName() {
-        return this.payloadName == null ? Output.empty() : this.payloadName;
+    public Output<String> payloadName() {
+        return this.payloadName == null ? Codegen.empty() : this.payloadName;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="resendInterval")
       private final @Nullable Output<DurationArgs> resendInterval;
 
-    public Output<DurationArgs> getResendInterval() {
-        return this.resendInterval == null ? Output.empty() : this.resendInterval;
+    public Output<DurationArgs> resendInterval() {
+        return this.resendInterval == null ? Codegen.empty() : this.resendInterval;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="retryDurationSec")
       private final @Nullable Output<Integer> retryDurationSec;
 
-    public Output<Integer> getRetryDurationSec() {
-        return this.retryDurationSec == null ? Output.empty() : this.retryDurationSec;
+    public Output<Integer> retryDurationSec() {
+        return this.retryDurationSec == null ? Codegen.empty() : this.retryDurationSec;
     }
 
     public NotificationEndpointGrpcSettingsArgs(
@@ -89,11 +90,11 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     }
 
     private NotificationEndpointGrpcSettingsArgs() {
-        this.authority = Output.empty();
-        this.endpoint = Output.empty();
-        this.payloadName = Output.empty();
-        this.resendInterval = Output.empty();
-        this.retryDurationSec = Output.empty();
+        this.authority = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.payloadName = Codegen.empty();
+        this.resendInterval = Codegen.empty();
+        this.retryDurationSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
             return this;
         }
         public Builder authority(@Nullable String authority) {
-            this.authority = Output.ofNullable(authority);
+            this.authority = Codegen.ofNullable(authority);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -137,7 +138,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder payloadName(@Nullable Output<String> payloadName) {
@@ -145,7 +146,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
             return this;
         }
         public Builder payloadName(@Nullable String payloadName) {
-            this.payloadName = Output.ofNullable(payloadName);
+            this.payloadName = Codegen.ofNullable(payloadName);
             return this;
         }
         public Builder resendInterval(@Nullable Output<DurationArgs> resendInterval) {
@@ -153,7 +154,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
             return this;
         }
         public Builder resendInterval(@Nullable DurationArgs resendInterval) {
-            this.resendInterval = Output.ofNullable(resendInterval);
+            this.resendInterval = Codegen.ofNullable(resendInterval);
             return this;
         }
         public Builder retryDurationSec(@Nullable Output<Integer> retryDurationSec) {
@@ -161,7 +162,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
             return this;
         }
         public Builder retryDurationSec(@Nullable Integer retryDurationSec) {
-            this.retryDurationSec = Output.ofNullable(retryDurationSec);
+            this.retryDurationSec = Codegen.ofNullable(retryDurationSec);
             return this;
         }        public NotificationEndpointGrpcSettingsArgs build() {
             return new NotificationEndpointGrpcSettingsArgs(authority, endpoint, payloadName, resendInterval, retryDurationSec);

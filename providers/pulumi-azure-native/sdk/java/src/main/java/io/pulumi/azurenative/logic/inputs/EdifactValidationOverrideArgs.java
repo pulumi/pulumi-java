@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
-    public Output<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
+    public Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -38,7 +39,7 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     @Import(name="enforceCharacterSet", required=true)
       private final Output<Boolean> enforceCharacterSet;
 
-    public Output<Boolean> getEnforceCharacterSet() {
+    public Output<Boolean> enforceCharacterSet() {
         return this.enforceCharacterSet;
     }
 
@@ -49,7 +50,7 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId;
     }
 
@@ -60,7 +61,7 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     @Import(name="trailingSeparatorPolicy", required=true)
       private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
-    public Output<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
+    public Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
 
@@ -71,7 +72,7 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
-    public Output<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
+    public Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -82,7 +83,7 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     @Import(name="validateEDITypes", required=true)
       private final Output<Boolean> validateEDITypes;
 
-    public Output<Boolean> getValidateEDITypes() {
+    public Output<Boolean> validateEDITypes() {
         return this.validateEDITypes;
     }
 
@@ -93,7 +94,7 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     @Import(name="validateXSDTypes", required=true)
       private final Output<Boolean> validateXSDTypes;
 
-    public Output<Boolean> getValidateXSDTypes() {
+    public Output<Boolean> validateXSDTypes() {
         return this.validateXSDTypes;
     }
 
@@ -115,13 +116,13 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     }
 
     private EdifactValidationOverrideArgs() {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Output.empty();
-        this.enforceCharacterSet = Output.empty();
-        this.messageId = Output.empty();
-        this.trailingSeparatorPolicy = Output.empty();
-        this.trimLeadingAndTrailingSpacesAndZeroes = Output.empty();
-        this.validateEDITypes = Output.empty();
-        this.validateXSDTypes = Output.empty();
+        this.allowLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
+        this.enforceCharacterSet = Codegen.empty();
+        this.messageId = Codegen.empty();
+        this.trailingSeparatorPolicy = Codegen.empty();
+        this.trimLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
+        this.validateEDITypes = Codegen.empty();
+        this.validateXSDTypes = Codegen.empty();
     }
 
     public static Builder builder() {

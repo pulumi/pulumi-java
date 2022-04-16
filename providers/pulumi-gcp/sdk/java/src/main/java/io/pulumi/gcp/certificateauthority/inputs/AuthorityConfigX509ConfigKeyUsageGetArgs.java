@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs;
@@ -25,7 +26,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
     @Import(name="baseKeyUsage", required=true)
       private final Output<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
-    public Output<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
+    public Output<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage() {
         return this.baseKeyUsage;
     }
 
@@ -37,7 +38,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
     @Import(name="extendedKeyUsage", required=true)
       private final Output<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
-    public Output<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
+    public Output<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
 
@@ -49,8 +50,8 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
     @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
-        return this.unknownExtendedKeyUsages == null ? Output.empty() : this.unknownExtendedKeyUsages;
+    public Output<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages() {
+        return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
     }
 
     public AuthorityConfigX509ConfigKeyUsageGetArgs(
@@ -63,9 +64,9 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
     }
 
     private AuthorityConfigX509ConfigKeyUsageGetArgs() {
-        this.baseKeyUsage = Output.empty();
-        this.extendedKeyUsage = Output.empty();
-        this.unknownExtendedKeyUsages = Output.empty();
+        this.baseKeyUsage = Codegen.empty();
+        this.extendedKeyUsage = Codegen.empty();
+        this.unknownExtendedKeyUsages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
             return this;
         }
         public Builder unknownExtendedKeyUsages(@Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
+            this.unknownExtendedKeyUsages = Codegen.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
         public Builder unknownExtendedKeyUsages(AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs... unknownExtendedKeyUsages) {

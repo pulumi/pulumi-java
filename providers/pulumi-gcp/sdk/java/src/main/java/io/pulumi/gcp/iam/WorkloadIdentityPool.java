@@ -6,6 +6,7 @@ package io.pulumi.gcp.iam;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iam.WorkloadIdentityPoolArgs;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolState;
@@ -55,7 +56,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * access again.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -87,7 +88,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -103,7 +104,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +120,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -141,7 +142,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * tokens to access resources. If the pool is undeleted, existing tokens grant access again.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -159,7 +160,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    public Output<String> getWorkloadIdentityPoolId() {
+    public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
@@ -185,7 +186,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkloadIdentityPool(String name, WorkloadIdentityPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iam/workloadIdentityPool:WorkloadIdentityPool", name, args == null ? WorkloadIdentityPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iam/workloadIdentityPool:WorkloadIdentityPool", name, args == null ? WorkloadIdentityPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkloadIdentityPool(String name, Output<String> id, @Nullable WorkloadIdentityPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

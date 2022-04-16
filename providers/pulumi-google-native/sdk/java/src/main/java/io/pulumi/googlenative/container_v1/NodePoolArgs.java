@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.MaxPodsConstraintArgs;
 import io.pulumi.googlenative.container_v1.inputs.NodeConfigArgs;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementArgs;
@@ -30,14 +31,14 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling")
       private final @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
 
-    public Output<NodePoolAutoscalingArgs> getAutoscaling() {
-        return this.autoscaling == null ? Output.empty() : this.autoscaling;
+    public Output<NodePoolAutoscalingArgs> autoscaling() {
+        return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -48,8 +49,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<StatusConditionArgs>> conditions;
 
-    public Output<List<StatusConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<StatusConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<NodeConfigArgs> config;
 
-    public Output<NodeConfigArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<NodeConfigArgs> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -70,15 +71,15 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialNodeCount")
       private final @Nullable Output<Integer> initialNodeCount;
 
-    public Output<Integer> getInitialNodeCount() {
-        return this.initialNodeCount == null ? Output.empty() : this.initialNodeCount;
+    public Output<Integer> initialNodeCount() {
+        return this.initialNodeCount == null ? Codegen.empty() : this.initialNodeCount;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+    public Output<List<String>> locations() {
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="management")
       private final @Nullable Output<NodeManagementArgs> management;
 
-    public Output<NodeManagementArgs> getManagement() {
-        return this.management == null ? Output.empty() : this.management;
+    public Output<NodeManagementArgs> management() {
+        return this.management == null ? Codegen.empty() : this.management;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsConstraint")
       private final @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint;
 
-    public Output<MaxPodsConstraintArgs> getMaxPodsConstraint() {
-        return this.maxPodsConstraint == null ? Output.empty() : this.maxPodsConstraint;
+    public Output<MaxPodsConstraintArgs> maxPodsConstraint() {
+        return this.maxPodsConstraint == null ? Codegen.empty() : this.maxPodsConstraint;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<NodeNetworkConfigArgs> networkConfig;
 
-    public Output<NodeNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+    public Output<NodeNetworkConfigArgs> networkConfig() {
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -143,15 +144,15 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgradeSettings")
       private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
-    public Output<UpgradeSettingsArgs> getUpgradeSettings() {
-        return this.upgradeSettings == null ? Output.empty() : this.upgradeSettings;
+    public Output<UpgradeSettingsArgs> upgradeSettings() {
+        return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public NodePoolArgs(
@@ -210,21 +211,21 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodePoolArgs() {
-        this.autoscaling = Output.empty();
-        this.clusterId = Output.empty();
-        this.conditions = Output.empty();
-        this.config = Output.empty();
-        this.initialNodeCount = Output.empty();
-        this.location = Output.empty();
-        this.locations = Output.empty();
-        this.management = Output.empty();
-        this.maxPodsConstraint = Output.empty();
-        this.name = Output.empty();
-        this.networkConfig = Output.empty();
-        this.parent = Output.empty();
-        this.project = Output.empty();
-        this.upgradeSettings = Output.empty();
-        this.version = Output.empty();
+        this.autoscaling = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.config = Codegen.empty();
+        this.initialNodeCount = Codegen.empty();
+        this.location = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.management = Codegen.empty();
+        this.maxPodsConstraint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.project = Codegen.empty();
+        this.upgradeSettings = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -280,7 +281,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscaling(@Nullable NodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Output.ofNullable(autoscaling);
+            this.autoscaling = Codegen.ofNullable(autoscaling);
             return this;
         }
         public Builder clusterId(Output<String> clusterId) {
@@ -296,7 +297,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<StatusConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(StatusConditionArgs... conditions) {
@@ -307,7 +308,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable NodeConfigArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
@@ -315,7 +316,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
-            this.initialNodeCount = Output.ofNullable(initialNodeCount);
+            this.initialNodeCount = Codegen.ofNullable(initialNodeCount);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -323,7 +324,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder locations(@Nullable Output<List<String>> locations) {
@@ -331,7 +332,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -342,7 +343,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder management(@Nullable NodeManagementArgs management) {
-            this.management = Output.ofNullable(management);
+            this.management = Codegen.ofNullable(management);
             return this;
         }
         public Builder maxPodsConstraint(@Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint) {
@@ -350,7 +351,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxPodsConstraint(@Nullable MaxPodsConstraintArgs maxPodsConstraint) {
-            this.maxPodsConstraint = Output.ofNullable(maxPodsConstraint);
+            this.maxPodsConstraint = Codegen.ofNullable(maxPodsConstraint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -358,7 +359,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkConfig(@Nullable Output<NodeNetworkConfigArgs> networkConfig) {
@@ -366,7 +367,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfig(@Nullable NodeNetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -374,7 +375,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -382,7 +383,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder upgradeSettings(@Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
@@ -390,7 +391,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Output.ofNullable(upgradeSettings);
+            this.upgradeSettings = Codegen.ofNullable(upgradeSettings);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -398,7 +399,7 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public NodePoolArgs build() {
             return new NodePoolArgs(autoscaling, clusterId, conditions, config, initialNodeCount, location, locations, management, maxPodsConstraint, name, networkConfig, parent, project, upgradeSettings, version);

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
      * @return Private IPAddresses mapped to the remote private endpoint
      * 
      */
-    public Output</* @Nullable */ List<String>> getIpAddresses() {
+    public Output</* @Nullable */ List<String>> ipAddresses() {
         return this.ipAddresses;
     }
     /**
@@ -57,7 +58,7 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -71,7 +72,7 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
      * @return PrivateEndpoint of a remote private endpoint connection
      * 
      */
-    public Output</* @Nullable */ ArmIdWrapperResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ ArmIdWrapperResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -99,13 +100,13 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
      * @return The state of a private link connection
      * 
      */
-    public Output</* @Nullable */ PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -119,7 +120,7 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -145,7 +146,7 @@ public class WebAppPrivateEndpointConnection extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppPrivateEndpointConnection(String name, WebAppPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppPrivateEndpointConnection", name, args == null ? WebAppPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppPrivateEndpointConnection", name, args == null ? WebAppPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

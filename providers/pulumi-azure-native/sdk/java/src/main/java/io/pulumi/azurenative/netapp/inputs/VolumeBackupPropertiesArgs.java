@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="backupEnabled")
       private final @Nullable Output<Boolean> backupEnabled;
 
-    public Output<Boolean> getBackupEnabled() {
-        return this.backupEnabled == null ? Output.empty() : this.backupEnabled;
+    public Output<Boolean> backupEnabled() {
+        return this.backupEnabled == null ? Codegen.empty() : this.backupEnabled;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="backupPolicyId")
       private final @Nullable Output<String> backupPolicyId;
 
-    public Output<String> getBackupPolicyId() {
-        return this.backupPolicyId == null ? Output.empty() : this.backupPolicyId;
+    public Output<String> backupPolicyId() {
+        return this.backupPolicyId == null ? Codegen.empty() : this.backupPolicyId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="policyEnforced")
       private final @Nullable Output<Boolean> policyEnforced;
 
-    public Output<Boolean> getPolicyEnforced() {
-        return this.policyEnforced == null ? Output.empty() : this.policyEnforced;
+    public Output<Boolean> policyEnforced() {
+        return this.policyEnforced == null ? Codegen.empty() : this.policyEnforced;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="vaultId")
       private final @Nullable Output<String> vaultId;
 
-    public Output<String> getVaultId() {
-        return this.vaultId == null ? Output.empty() : this.vaultId;
+    public Output<String> vaultId() {
+        return this.vaultId == null ? Codegen.empty() : this.vaultId;
     }
 
     public VolumeBackupPropertiesArgs(
@@ -75,10 +76,10 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private VolumeBackupPropertiesArgs() {
-        this.backupEnabled = Output.empty();
-        this.backupPolicyId = Output.empty();
-        this.policyEnforced = Output.empty();
-        this.vaultId = Output.empty();
+        this.backupEnabled = Codegen.empty();
+        this.backupPolicyId = Codegen.empty();
+        this.policyEnforced = Codegen.empty();
+        this.vaultId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder backupEnabled(@Nullable Boolean backupEnabled) {
-            this.backupEnabled = Output.ofNullable(backupEnabled);
+            this.backupEnabled = Codegen.ofNullable(backupEnabled);
             return this;
         }
         public Builder backupPolicyId(@Nullable Output<String> backupPolicyId) {
@@ -120,7 +121,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
-            this.backupPolicyId = Output.ofNullable(backupPolicyId);
+            this.backupPolicyId = Codegen.ofNullable(backupPolicyId);
             return this;
         }
         public Builder policyEnforced(@Nullable Output<Boolean> policyEnforced) {
@@ -128,7 +129,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder policyEnforced(@Nullable Boolean policyEnforced) {
-            this.policyEnforced = Output.ofNullable(policyEnforced);
+            this.policyEnforced = Codegen.ofNullable(policyEnforced);
             return this;
         }
         public Builder vaultId(@Nullable Output<String> vaultId) {
@@ -136,7 +137,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vaultId(@Nullable String vaultId) {
-            this.vaultId = Output.ofNullable(vaultId);
+            this.vaultId = Codegen.ofNullable(vaultId);
             return this;
         }        public VolumeBackupPropertiesArgs build() {
             return new VolumeBackupPropertiesArgs(backupEnabled, backupPolicyId, policyEnforced, vaultId);

@@ -19,14 +19,14 @@ public final class DeliveryStreamProcessingConfiguration extends io.pulumi.resou
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="processors")
       private final @Nullable List<DeliveryStreamProcessor> processors;
 
-    public List<DeliveryStreamProcessor> getProcessors() {
+    public List<DeliveryStreamProcessor> processors() {
         return this.processors == null ? List.of() : this.processors;
     }
 

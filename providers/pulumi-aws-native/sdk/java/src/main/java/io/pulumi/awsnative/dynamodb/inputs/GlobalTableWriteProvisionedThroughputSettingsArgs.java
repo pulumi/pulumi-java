@@ -6,6 +6,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableCapacityAutoScalingSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
     @Import(name="writeCapacityAutoScalingSettings")
       private final @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
 
-    public Output<GlobalTableCapacityAutoScalingSettingsArgs> getWriteCapacityAutoScalingSettings() {
-        return this.writeCapacityAutoScalingSettings == null ? Output.empty() : this.writeCapacityAutoScalingSettings;
+    public Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings() {
+        return this.writeCapacityAutoScalingSettings == null ? Codegen.empty() : this.writeCapacityAutoScalingSettings;
     }
 
     public GlobalTableWriteProvisionedThroughputSettingsArgs(@Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings) {
@@ -26,7 +27,7 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
     }
 
     private GlobalTableWriteProvisionedThroughputSettingsArgs() {
-        this.writeCapacityAutoScalingSettings = Output.empty();
+        this.writeCapacityAutoScalingSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
             return this;
         }
         public Builder writeCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs writeCapacityAutoScalingSettings) {
-            this.writeCapacityAutoScalingSettings = Output.ofNullable(writeCapacityAutoScalingSettings);
+            this.writeCapacityAutoScalingSettings = Codegen.ofNullable(writeCapacityAutoScalingSettings);
             return this;
         }        public GlobalTableWriteProvisionedThroughputSettingsArgs build() {
             return new GlobalTableWriteProvisionedThroughputSettingsArgs(writeCapacityAutoScalingSettings);

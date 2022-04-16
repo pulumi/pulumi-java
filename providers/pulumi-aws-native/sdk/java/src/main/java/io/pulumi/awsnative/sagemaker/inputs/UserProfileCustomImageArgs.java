@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
     @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
 
-    public Output<String> getAppImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
 
@@ -37,7 +38,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 
@@ -48,8 +49,8 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
     @Import(name="imageVersionNumber")
       private final @Nullable Output<Integer> imageVersionNumber;
 
-    public Output<Integer> getImageVersionNumber() {
-        return this.imageVersionNumber == null ? Output.empty() : this.imageVersionNumber;
+    public Output<Integer> imageVersionNumber() {
+        return this.imageVersionNumber == null ? Codegen.empty() : this.imageVersionNumber;
     }
 
     public UserProfileCustomImageArgs(
@@ -62,9 +63,9 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
     }
 
     private UserProfileCustomImageArgs() {
-        this.appImageConfigName = Output.empty();
-        this.imageName = Output.empty();
-        this.imageVersionNumber = Output.empty();
+        this.appImageConfigName = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.imageVersionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
-            this.imageVersionNumber = Output.ofNullable(imageVersionNumber);
+            this.imageVersionNumber = Codegen.ofNullable(imageVersionNumber);
             return this;
         }        public UserProfileCustomImageArgs build() {
             return new UserProfileCustomImageArgs(appImageConfigName, imageName, imageVersionNumber);

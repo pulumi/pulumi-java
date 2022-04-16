@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.enums.EcKeyTypeSignatureAlgorithm;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatureAlgorithm")
       private final @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
-    public Output<EcKeyTypeSignatureAlgorithm> getSignatureAlgorithm() {
-        return this.signatureAlgorithm == null ? Output.empty() : this.signatureAlgorithm;
+    public Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm() {
+        return this.signatureAlgorithm == null ? Codegen.empty() : this.signatureAlgorithm;
     }
 
     public EcKeyTypeArgs(@Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
@@ -34,7 +35,7 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EcKeyTypeArgs() {
-        this.signatureAlgorithm = Output.empty();
+        this.signatureAlgorithm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signatureAlgorithm(@Nullable EcKeyTypeSignatureAlgorithm signatureAlgorithm) {
-            this.signatureAlgorithm = Output.ofNullable(signatureAlgorithm);
+            this.signatureAlgorithm = Codegen.ofNullable(signatureAlgorithm);
             return this;
         }        public EcKeyTypeArgs build() {
             return new EcKeyTypeArgs(signatureAlgorithm);

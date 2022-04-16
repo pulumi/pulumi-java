@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @return The error message for the validation state
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -57,7 +58,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @return The Autonomous System Number (ASN) of the peer.
      * 
      */
-    public Output</* @Nullable */ Integer> getPeerAsn() {
+    public Output</* @Nullable */ Integer> peerAsn() {
         return this.peerAsn;
     }
     /**
@@ -85,7 +86,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @return The contact details of the peer.
      * 
      */
-    public Output</* @Nullable */ List<ContactDetailResponse>> getPeerContactDetail() {
+    public Output</* @Nullable */ List<ContactDetailResponse>> peerContactDetail() {
         return this.peerContactDetail;
     }
     /**
@@ -99,7 +100,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @return The name of the peer.
      * 
      */
-    public Output</* @Nullable */ String> getPeerName() {
+    public Output</* @Nullable */ String> peerName() {
         return this.peerName;
     }
     /**
@@ -113,7 +114,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -127,7 +128,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @return The validation state of the ASN associated with the peer.
      * 
      */
-    public Output</* @Nullable */ String> getValidationState() {
+    public Output</* @Nullable */ String> validationState() {
         return this.validationState;
     }
 
@@ -153,7 +154,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PeerAsn(String name, @Nullable PeerAsnArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:PeerAsn", name, args == null ? PeerAsnArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:peering:PeerAsn", name, args == null ? PeerAsnArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PeerAsn(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

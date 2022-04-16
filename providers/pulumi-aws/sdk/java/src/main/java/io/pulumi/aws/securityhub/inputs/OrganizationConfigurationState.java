@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     @Import(name="autoEnable")
       private final @Nullable Output<Boolean> autoEnable;
 
-    public Output<Boolean> getAutoEnable() {
-        return this.autoEnable == null ? Output.empty() : this.autoEnable;
+    public Output<Boolean> autoEnable() {
+        return this.autoEnable == null ? Codegen.empty() : this.autoEnable;
     }
 
     public OrganizationConfigurationState(@Nullable Output<Boolean> autoEnable) {
@@ -30,7 +31,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     }
 
     private OrganizationConfigurationState() {
-        this.autoEnable = Output.empty();
+        this.autoEnable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder autoEnable(@Nullable Boolean autoEnable) {
-            this.autoEnable = Output.ofNullable(autoEnable);
+            this.autoEnable = Codegen.ofNullable(autoEnable);
             return this;
         }        public OrganizationConfigurationState build() {
             return new OrganizationConfigurationState(autoEnable);

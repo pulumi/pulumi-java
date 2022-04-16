@@ -6,6 +6,7 @@ package io.pulumi.aws.eks.inputs;
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     @Import(name="oidc")
       private final @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
 
-    public Output<IdentityProviderConfigOidcGetArgs> getOidc() {
-        return this.oidc == null ? Output.empty() : this.oidc;
+    public Output<IdentityProviderConfigOidcGetArgs> oidc() {
+        return this.oidc == null ? Codegen.empty() : this.oidc;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public IdentityProviderConfigState(
@@ -98,12 +99,12 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     }
 
     private IdentityProviderConfigState() {
-        this.arn = Output.empty();
-        this.clusterName = Output.empty();
-        this.oidc = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.oidc = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -149,7 +150,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder oidc(@Nullable Output<IdentityProviderConfigOidcGetArgs> oidc) {
@@ -157,7 +158,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder oidc(@Nullable IdentityProviderConfigOidcGetArgs oidc) {
-            this.oidc = Output.ofNullable(oidc);
+            this.oidc = Codegen.ofNullable(oidc);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -165,7 +166,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -173,7 +174,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -181,7 +182,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public IdentityProviderConfigState build() {
             return new IdentityProviderConfigState(arn, clusterName, oidc, status, tags, tagsAll);

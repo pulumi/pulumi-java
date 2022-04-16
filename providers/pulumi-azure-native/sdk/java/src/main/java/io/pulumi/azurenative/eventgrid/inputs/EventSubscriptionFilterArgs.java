@@ -17,6 +17,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StringInAdvancedFilterArgs;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -40,8 +41,8 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
     @Import(name="advancedFilters")
       private final @Nullable Output<List<Object>> advancedFilters;
 
-    public Output<List<Object>> getAdvancedFilters() {
-        return this.advancedFilters == null ? Output.empty() : this.advancedFilters;
+    public Output<List<Object>> advancedFilters() {
+        return this.advancedFilters == null ? Codegen.empty() : this.advancedFilters;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
     @Import(name="includedEventTypes")
       private final @Nullable Output<List<String>> includedEventTypes;
 
-    public Output<List<String>> getIncludedEventTypes() {
-        return this.includedEventTypes == null ? Output.empty() : this.includedEventTypes;
+    public Output<List<String>> includedEventTypes() {
+        return this.includedEventTypes == null ? Codegen.empty() : this.includedEventTypes;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
     @Import(name="isSubjectCaseSensitive")
       private final @Nullable Output<Boolean> isSubjectCaseSensitive;
 
-    public Output<Boolean> getIsSubjectCaseSensitive() {
-        return this.isSubjectCaseSensitive == null ? Output.empty() : this.isSubjectCaseSensitive;
+    public Output<Boolean> isSubjectCaseSensitive() {
+        return this.isSubjectCaseSensitive == null ? Codegen.empty() : this.isSubjectCaseSensitive;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
     @Import(name="subjectBeginsWith")
       private final @Nullable Output<String> subjectBeginsWith;
 
-    public Output<String> getSubjectBeginsWith() {
-        return this.subjectBeginsWith == null ? Output.empty() : this.subjectBeginsWith;
+    public Output<String> subjectBeginsWith() {
+        return this.subjectBeginsWith == null ? Codegen.empty() : this.subjectBeginsWith;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
     @Import(name="subjectEndsWith")
       private final @Nullable Output<String> subjectEndsWith;
 
-    public Output<String> getSubjectEndsWith() {
-        return this.subjectEndsWith == null ? Output.empty() : this.subjectEndsWith;
+    public Output<String> subjectEndsWith() {
+        return this.subjectEndsWith == null ? Codegen.empty() : this.subjectEndsWith;
     }
 
     public EventSubscriptionFilterArgs(
@@ -100,17 +101,17 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
         @Nullable Output<String> subjectEndsWith) {
         this.advancedFilters = advancedFilters;
         this.includedEventTypes = includedEventTypes;
-        this.isSubjectCaseSensitive = isSubjectCaseSensitive == null ? Output.ofNullable(false) : isSubjectCaseSensitive;
+        this.isSubjectCaseSensitive = isSubjectCaseSensitive == null ? Codegen.ofNullable(false) : isSubjectCaseSensitive;
         this.subjectBeginsWith = subjectBeginsWith;
         this.subjectEndsWith = subjectEndsWith;
     }
 
     private EventSubscriptionFilterArgs() {
-        this.advancedFilters = Output.empty();
-        this.includedEventTypes = Output.empty();
-        this.isSubjectCaseSensitive = Output.empty();
-        this.subjectBeginsWith = Output.empty();
-        this.subjectEndsWith = Output.empty();
+        this.advancedFilters = Codegen.empty();
+        this.includedEventTypes = Codegen.empty();
+        this.isSubjectCaseSensitive = Codegen.empty();
+        this.subjectBeginsWith = Codegen.empty();
+        this.subjectEndsWith = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
-            this.advancedFilters = Output.ofNullable(advancedFilters);
+            this.advancedFilters = Codegen.ofNullable(advancedFilters);
             return this;
         }
         public Builder advancedFilters(Object... advancedFilters) {
@@ -157,7 +158,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
-            this.includedEventTypes = Output.ofNullable(includedEventTypes);
+            this.includedEventTypes = Codegen.ofNullable(includedEventTypes);
             return this;
         }
         public Builder includedEventTypes(String... includedEventTypes) {
@@ -168,7 +169,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder isSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
-            this.isSubjectCaseSensitive = Output.ofNullable(isSubjectCaseSensitive);
+            this.isSubjectCaseSensitive = Codegen.ofNullable(isSubjectCaseSensitive);
             return this;
         }
         public Builder subjectBeginsWith(@Nullable Output<String> subjectBeginsWith) {
@@ -176,7 +177,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
-            this.subjectBeginsWith = Output.ofNullable(subjectBeginsWith);
+            this.subjectBeginsWith = Codegen.ofNullable(subjectBeginsWith);
             return this;
         }
         public Builder subjectEndsWith(@Nullable Output<String> subjectEndsWith) {
@@ -184,7 +185,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
-            this.subjectEndsWith = Output.ofNullable(subjectEndsWith);
+            this.subjectEndsWith = Codegen.ofNullable(subjectEndsWith);
             return this;
         }        public EventSubscriptionFilterArgs build() {
             return new EventSubscriptionFilterArgs(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
     @Import(name="keyVaultSecretId")
       private final @Nullable Output<String> keyVaultSecretId;
 
-    public Output<String> getKeyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Output.empty() : this.keyVaultSecretId;
+    public Output<String> keyVaultSecretId() {
+        return this.keyVaultSecretId == null ? Codegen.empty() : this.keyVaultSecretId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FirewallPolicyCertificateAuthorityArgs(
@@ -48,8 +49,8 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
     }
 
     private FirewallPolicyCertificateAuthorityArgs() {
-        this.keyVaultSecretId = Output.empty();
-        this.name = Output.empty();
+        this.keyVaultSecretId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
             return this;
         }
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = Output.ofNullable(keyVaultSecretId);
+            this.keyVaultSecretId = Codegen.ofNullable(keyVaultSecretId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FirewallPolicyCertificateAuthorityArgs build() {
             return new FirewallPolicyCertificateAuthorityArgs(keyVaultSecretId, name);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsS3DataArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AzureBlobStorageDataArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.GcsDataArgs;
@@ -33,8 +34,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsS3DataSource")
       private final @Nullable Output<AwsS3DataArgs> awsS3DataSource;
 
-    public Output<AwsS3DataArgs> getAwsS3DataSource() {
-        return this.awsS3DataSource == null ? Output.empty() : this.awsS3DataSource;
+    public Output<AwsS3DataArgs> awsS3DataSource() {
+        return this.awsS3DataSource == null ? Codegen.empty() : this.awsS3DataSource;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureBlobStorageDataSource")
       private final @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
 
-    public Output<AzureBlobStorageDataArgs> getAzureBlobStorageDataSource() {
-        return this.azureBlobStorageDataSource == null ? Output.empty() : this.azureBlobStorageDataSource;
+    public Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource() {
+        return this.azureBlobStorageDataSource == null ? Codegen.empty() : this.azureBlobStorageDataSource;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsDataSink")
       private final @Nullable Output<GcsDataArgs> gcsDataSink;
 
-    public Output<GcsDataArgs> getGcsDataSink() {
-        return this.gcsDataSink == null ? Output.empty() : this.gcsDataSink;
+    public Output<GcsDataArgs> gcsDataSink() {
+        return this.gcsDataSink == null ? Codegen.empty() : this.gcsDataSink;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsDataSource")
       private final @Nullable Output<GcsDataArgs> gcsDataSource;
 
-    public Output<GcsDataArgs> getGcsDataSource() {
-        return this.gcsDataSource == null ? Output.empty() : this.gcsDataSource;
+    public Output<GcsDataArgs> gcsDataSource() {
+        return this.gcsDataSource == null ? Codegen.empty() : this.gcsDataSource;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsIntermediateDataLocation")
       private final @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation;
 
-    public Output<GcsDataArgs> getGcsIntermediateDataLocation() {
-        return this.gcsIntermediateDataLocation == null ? Output.empty() : this.gcsIntermediateDataLocation;
+    public Output<GcsDataArgs> gcsIntermediateDataLocation() {
+        return this.gcsIntermediateDataLocation == null ? Codegen.empty() : this.gcsIntermediateDataLocation;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpDataSource")
       private final @Nullable Output<HttpDataArgs> httpDataSource;
 
-    public Output<HttpDataArgs> getHttpDataSource() {
-        return this.httpDataSource == null ? Output.empty() : this.httpDataSource;
+    public Output<HttpDataArgs> httpDataSource() {
+        return this.httpDataSource == null ? Codegen.empty() : this.httpDataSource;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectConditions")
       private final @Nullable Output<ObjectConditionsArgs> objectConditions;
 
-    public Output<ObjectConditionsArgs> getObjectConditions() {
-        return this.objectConditions == null ? Output.empty() : this.objectConditions;
+    public Output<ObjectConditionsArgs> objectConditions() {
+        return this.objectConditions == null ? Codegen.empty() : this.objectConditions;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixDataSink")
       private final @Nullable Output<PosixFilesystemArgs> posixDataSink;
 
-    public Output<PosixFilesystemArgs> getPosixDataSink() {
-        return this.posixDataSink == null ? Output.empty() : this.posixDataSink;
+    public Output<PosixFilesystemArgs> posixDataSink() {
+        return this.posixDataSink == null ? Codegen.empty() : this.posixDataSink;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixDataSource")
       private final @Nullable Output<PosixFilesystemArgs> posixDataSource;
 
-    public Output<PosixFilesystemArgs> getPosixDataSource() {
-        return this.posixDataSource == null ? Output.empty() : this.posixDataSource;
+    public Output<PosixFilesystemArgs> posixDataSource() {
+        return this.posixDataSource == null ? Codegen.empty() : this.posixDataSource;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinkAgentPoolName")
       private final @Nullable Output<String> sinkAgentPoolName;
 
-    public Output<String> getSinkAgentPoolName() {
-        return this.sinkAgentPoolName == null ? Output.empty() : this.sinkAgentPoolName;
+    public Output<String> sinkAgentPoolName() {
+        return this.sinkAgentPoolName == null ? Codegen.empty() : this.sinkAgentPoolName;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceAgentPoolName")
       private final @Nullable Output<String> sourceAgentPoolName;
 
-    public Output<String> getSourceAgentPoolName() {
-        return this.sourceAgentPoolName == null ? Output.empty() : this.sourceAgentPoolName;
+    public Output<String> sourceAgentPoolName() {
+        return this.sourceAgentPoolName == null ? Codegen.empty() : this.sourceAgentPoolName;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferManifest")
       private final @Nullable Output<TransferManifestArgs> transferManifest;
 
-    public Output<TransferManifestArgs> getTransferManifest() {
-        return this.transferManifest == null ? Output.empty() : this.transferManifest;
+    public Output<TransferManifestArgs> transferManifest() {
+        return this.transferManifest == null ? Codegen.empty() : this.transferManifest;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferOptions")
       private final @Nullable Output<TransferOptionsArgs> transferOptions;
 
-    public Output<TransferOptionsArgs> getTransferOptions() {
-        return this.transferOptions == null ? Output.empty() : this.transferOptions;
+    public Output<TransferOptionsArgs> transferOptions() {
+        return this.transferOptions == null ? Codegen.empty() : this.transferOptions;
     }
 
     public TransferSpecArgs(
@@ -199,19 +200,19 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransferSpecArgs() {
-        this.awsS3DataSource = Output.empty();
-        this.azureBlobStorageDataSource = Output.empty();
-        this.gcsDataSink = Output.empty();
-        this.gcsDataSource = Output.empty();
-        this.gcsIntermediateDataLocation = Output.empty();
-        this.httpDataSource = Output.empty();
-        this.objectConditions = Output.empty();
-        this.posixDataSink = Output.empty();
-        this.posixDataSource = Output.empty();
-        this.sinkAgentPoolName = Output.empty();
-        this.sourceAgentPoolName = Output.empty();
-        this.transferManifest = Output.empty();
-        this.transferOptions = Output.empty();
+        this.awsS3DataSource = Codegen.empty();
+        this.azureBlobStorageDataSource = Codegen.empty();
+        this.gcsDataSink = Codegen.empty();
+        this.gcsDataSource = Codegen.empty();
+        this.gcsIntermediateDataLocation = Codegen.empty();
+        this.httpDataSource = Codegen.empty();
+        this.objectConditions = Codegen.empty();
+        this.posixDataSink = Codegen.empty();
+        this.posixDataSource = Codegen.empty();
+        this.sinkAgentPoolName = Codegen.empty();
+        this.sourceAgentPoolName = Codegen.empty();
+        this.transferManifest = Codegen.empty();
+        this.transferOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -263,7 +264,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsS3DataSource(@Nullable AwsS3DataArgs awsS3DataSource) {
-            this.awsS3DataSource = Output.ofNullable(awsS3DataSource);
+            this.awsS3DataSource = Codegen.ofNullable(awsS3DataSource);
             return this;
         }
         public Builder azureBlobStorageDataSource(@Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource) {
@@ -271,7 +272,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureBlobStorageDataSource(@Nullable AzureBlobStorageDataArgs azureBlobStorageDataSource) {
-            this.azureBlobStorageDataSource = Output.ofNullable(azureBlobStorageDataSource);
+            this.azureBlobStorageDataSource = Codegen.ofNullable(azureBlobStorageDataSource);
             return this;
         }
         public Builder gcsDataSink(@Nullable Output<GcsDataArgs> gcsDataSink) {
@@ -279,7 +280,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsDataSink(@Nullable GcsDataArgs gcsDataSink) {
-            this.gcsDataSink = Output.ofNullable(gcsDataSink);
+            this.gcsDataSink = Codegen.ofNullable(gcsDataSink);
             return this;
         }
         public Builder gcsDataSource(@Nullable Output<GcsDataArgs> gcsDataSource) {
@@ -287,7 +288,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsDataSource(@Nullable GcsDataArgs gcsDataSource) {
-            this.gcsDataSource = Output.ofNullable(gcsDataSource);
+            this.gcsDataSource = Codegen.ofNullable(gcsDataSource);
             return this;
         }
         public Builder gcsIntermediateDataLocation(@Nullable Output<GcsDataArgs> gcsIntermediateDataLocation) {
@@ -295,7 +296,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsIntermediateDataLocation(@Nullable GcsDataArgs gcsIntermediateDataLocation) {
-            this.gcsIntermediateDataLocation = Output.ofNullable(gcsIntermediateDataLocation);
+            this.gcsIntermediateDataLocation = Codegen.ofNullable(gcsIntermediateDataLocation);
             return this;
         }
         public Builder httpDataSource(@Nullable Output<HttpDataArgs> httpDataSource) {
@@ -303,7 +304,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpDataSource(@Nullable HttpDataArgs httpDataSource) {
-            this.httpDataSource = Output.ofNullable(httpDataSource);
+            this.httpDataSource = Codegen.ofNullable(httpDataSource);
             return this;
         }
         public Builder objectConditions(@Nullable Output<ObjectConditionsArgs> objectConditions) {
@@ -311,7 +312,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectConditions(@Nullable ObjectConditionsArgs objectConditions) {
-            this.objectConditions = Output.ofNullable(objectConditions);
+            this.objectConditions = Codegen.ofNullable(objectConditions);
             return this;
         }
         public Builder posixDataSink(@Nullable Output<PosixFilesystemArgs> posixDataSink) {
@@ -319,7 +320,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder posixDataSink(@Nullable PosixFilesystemArgs posixDataSink) {
-            this.posixDataSink = Output.ofNullable(posixDataSink);
+            this.posixDataSink = Codegen.ofNullable(posixDataSink);
             return this;
         }
         public Builder posixDataSource(@Nullable Output<PosixFilesystemArgs> posixDataSource) {
@@ -327,7 +328,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder posixDataSource(@Nullable PosixFilesystemArgs posixDataSource) {
-            this.posixDataSource = Output.ofNullable(posixDataSource);
+            this.posixDataSource = Codegen.ofNullable(posixDataSource);
             return this;
         }
         public Builder sinkAgentPoolName(@Nullable Output<String> sinkAgentPoolName) {
@@ -335,7 +336,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkAgentPoolName(@Nullable String sinkAgentPoolName) {
-            this.sinkAgentPoolName = Output.ofNullable(sinkAgentPoolName);
+            this.sinkAgentPoolName = Codegen.ofNullable(sinkAgentPoolName);
             return this;
         }
         public Builder sourceAgentPoolName(@Nullable Output<String> sourceAgentPoolName) {
@@ -343,7 +344,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceAgentPoolName(@Nullable String sourceAgentPoolName) {
-            this.sourceAgentPoolName = Output.ofNullable(sourceAgentPoolName);
+            this.sourceAgentPoolName = Codegen.ofNullable(sourceAgentPoolName);
             return this;
         }
         public Builder transferManifest(@Nullable Output<TransferManifestArgs> transferManifest) {
@@ -351,7 +352,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transferManifest(@Nullable TransferManifestArgs transferManifest) {
-            this.transferManifest = Output.ofNullable(transferManifest);
+            this.transferManifest = Codegen.ofNullable(transferManifest);
             return this;
         }
         public Builder transferOptions(@Nullable Output<TransferOptionsArgs> transferOptions) {
@@ -359,7 +360,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transferOptions(@Nullable TransferOptionsArgs transferOptions) {
-            this.transferOptions = Output.ofNullable(transferOptions);
+            this.transferOptions = Codegen.ofNullable(transferOptions);
             return this;
         }        public TransferSpecArgs build() {
             return new TransferSpecArgs(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);

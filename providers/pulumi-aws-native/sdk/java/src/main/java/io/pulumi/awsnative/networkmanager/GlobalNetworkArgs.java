@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.networkmanager.inputs.GlobalNetworkTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<GlobalNetworkTagArgs>> tags;
 
-    public Output<List<GlobalNetworkTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<GlobalNetworkTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GlobalNetworkArgs(
@@ -46,8 +47,8 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalNetworkArgs() {
-        this.description = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder tags(@Nullable Output<List<GlobalNetworkTagArgs>> tags) {
@@ -85,7 +86,7 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<GlobalNetworkTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(GlobalNetworkTagArgs... tags) {

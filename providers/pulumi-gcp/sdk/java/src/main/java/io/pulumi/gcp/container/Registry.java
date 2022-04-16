@@ -6,6 +6,7 @@ package io.pulumi.gcp.container;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.RegistryArgs;
 import io.pulumi.gcp.container.inputs.RegistryState;
@@ -37,7 +38,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getBucketSelfLink() {
+    public Output<String> bucketSelfLink() {
         return this.bucketSelfLink;
     }
     /**
@@ -51,7 +52,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [the official documentation](https://cloud.google.com/container-registry/docs/pushing-and-pulling#pushing_an_image_to_a_registry) for more information on registry locations.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -65,7 +66,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -91,7 +92,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Registry(String name, @Nullable RegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:container/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Registry(String name, Output<String> id, @Nullable RegistryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -27,7 +27,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
@@ -38,7 +38,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
     @Import(name="required")
       private final @Nullable Boolean required;
 
-    public Optional<Boolean> getRequired() {
+    public Optional<Boolean> required() {
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
     }
 
@@ -71,7 +71,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -82,7 +82,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

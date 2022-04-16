@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -32,7 +33,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -44,8 +45,8 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public ClusterIAMPolicyArgs(
@@ -72,10 +73,10 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ClusterIAMPolicyArgs() {
-        this.cluster = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.cluster = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -133,7 +134,7 @@ public final class ClusterIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public ClusterIAMPolicyArgs build() {
             return new ClusterIAMPolicyArgs(cluster, policyData, project, region);

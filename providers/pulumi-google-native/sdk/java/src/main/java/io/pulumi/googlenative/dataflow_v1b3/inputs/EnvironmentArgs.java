@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataflow_v1b3.enums.EnvironmentFlexResourceSchedulingGoal;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DebugOptionsArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.WorkerPoolArgs;
@@ -30,8 +31,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterManagerApiService")
       private final @Nullable Output<String> clusterManagerApiService;
 
-    public Output<String> getClusterManagerApiService() {
-        return this.clusterManagerApiService == null ? Output.empty() : this.clusterManagerApiService;
+    public Output<String> clusterManagerApiService() {
+        return this.clusterManagerApiService == null ? Codegen.empty() : this.clusterManagerApiService;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+    public Output<String> dataset() {
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="debugOptions")
       private final @Nullable Output<DebugOptionsArgs> debugOptions;
 
-    public Output<DebugOptionsArgs> getDebugOptions() {
-        return this.debugOptions == null ? Output.empty() : this.debugOptions;
+    public Output<DebugOptionsArgs> debugOptions() {
+        return this.debugOptions == null ? Codegen.empty() : this.debugOptions;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="experiments")
       private final @Nullable Output<List<String>> experiments;
 
-    public Output<List<String>> getExperiments() {
-        return this.experiments == null ? Output.empty() : this.experiments;
+    public Output<List<String>> experiments() {
+        return this.experiments == null ? Codegen.empty() : this.experiments;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flexResourceSchedulingGoal")
       private final @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
 
-    public Output<EnvironmentFlexResourceSchedulingGoal> getFlexResourceSchedulingGoal() {
-        return this.flexResourceSchedulingGoal == null ? Output.empty() : this.flexResourceSchedulingGoal;
+    public Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal() {
+        return this.flexResourceSchedulingGoal == null ? Codegen.empty() : this.flexResourceSchedulingGoal;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="internalExperiments")
       private final @Nullable Output<Map<String,String>> internalExperiments;
 
-    public Output<Map<String,String>> getInternalExperiments() {
-        return this.internalExperiments == null ? Output.empty() : this.internalExperiments;
+    public Output<Map<String,String>> internalExperiments() {
+        return this.internalExperiments == null ? Codegen.empty() : this.internalExperiments;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sdkPipelineOptions")
       private final @Nullable Output<Map<String,String>> sdkPipelineOptions;
 
-    public Output<Map<String,String>> getSdkPipelineOptions() {
-        return this.sdkPipelineOptions == null ? Output.empty() : this.sdkPipelineOptions;
+    public Output<Map<String,String>> sdkPipelineOptions() {
+        return this.sdkPipelineOptions == null ? Codegen.empty() : this.sdkPipelineOptions;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+    public Output<String> serviceAccountEmail() {
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceKmsKeyName")
       private final @Nullable Output<String> serviceKmsKeyName;
 
-    public Output<String> getServiceKmsKeyName() {
-        return this.serviceKmsKeyName == null ? Output.empty() : this.serviceKmsKeyName;
+    public Output<String> serviceKmsKeyName() {
+        return this.serviceKmsKeyName == null ? Codegen.empty() : this.serviceKmsKeyName;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceOptions")
       private final @Nullable Output<List<String>> serviceOptions;
 
-    public Output<List<String>> getServiceOptions() {
-        return this.serviceOptions == null ? Output.empty() : this.serviceOptions;
+    public Output<List<String>> serviceOptions() {
+        return this.serviceOptions == null ? Codegen.empty() : this.serviceOptions;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tempStoragePrefix")
       private final @Nullable Output<String> tempStoragePrefix;
 
-    public Output<String> getTempStoragePrefix() {
-        return this.tempStoragePrefix == null ? Output.empty() : this.tempStoragePrefix;
+    public Output<String> tempStoragePrefix() {
+        return this.tempStoragePrefix == null ? Codegen.empty() : this.tempStoragePrefix;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAgent")
       private final @Nullable Output<Map<String,String>> userAgent;
 
-    public Output<Map<String,String>> getUserAgent() {
-        return this.userAgent == null ? Output.empty() : this.userAgent;
+    public Output<Map<String,String>> userAgent() {
+        return this.userAgent == null ? Codegen.empty() : this.userAgent;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Map<String,String>> version;
 
-    public Output<Map<String,String>> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Map<String,String>> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerPools")
       private final @Nullable Output<List<WorkerPoolArgs>> workerPools;
 
-    public Output<List<WorkerPoolArgs>> getWorkerPools() {
-        return this.workerPools == null ? Output.empty() : this.workerPools;
+    public Output<List<WorkerPoolArgs>> workerPools() {
+        return this.workerPools == null ? Codegen.empty() : this.workerPools;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerRegion")
       private final @Nullable Output<String> workerRegion;
 
-    public Output<String> getWorkerRegion() {
-        return this.workerRegion == null ? Output.empty() : this.workerRegion;
+    public Output<String> workerRegion() {
+        return this.workerRegion == null ? Codegen.empty() : this.workerRegion;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerZone")
       private final @Nullable Output<String> workerZone;
 
-    public Output<String> getWorkerZone() {
-        return this.workerZone == null ? Output.empty() : this.workerZone;
+    public Output<String> workerZone() {
+        return this.workerZone == null ? Codegen.empty() : this.workerZone;
     }
 
     public EnvironmentArgs(
@@ -235,22 +236,22 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.clusterManagerApiService = Output.empty();
-        this.dataset = Output.empty();
-        this.debugOptions = Output.empty();
-        this.experiments = Output.empty();
-        this.flexResourceSchedulingGoal = Output.empty();
-        this.internalExperiments = Output.empty();
-        this.sdkPipelineOptions = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.serviceKmsKeyName = Output.empty();
-        this.serviceOptions = Output.empty();
-        this.tempStoragePrefix = Output.empty();
-        this.userAgent = Output.empty();
-        this.version = Output.empty();
-        this.workerPools = Output.empty();
-        this.workerRegion = Output.empty();
-        this.workerZone = Output.empty();
+        this.clusterManagerApiService = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.debugOptions = Codegen.empty();
+        this.experiments = Codegen.empty();
+        this.flexResourceSchedulingGoal = Codegen.empty();
+        this.internalExperiments = Codegen.empty();
+        this.sdkPipelineOptions = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.serviceKmsKeyName = Codegen.empty();
+        this.serviceOptions = Codegen.empty();
+        this.tempStoragePrefix = Codegen.empty();
+        this.userAgent = Codegen.empty();
+        this.version = Codegen.empty();
+        this.workerPools = Codegen.empty();
+        this.workerRegion = Codegen.empty();
+        this.workerZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -308,7 +309,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterManagerApiService(@Nullable String clusterManagerApiService) {
-            this.clusterManagerApiService = Output.ofNullable(clusterManagerApiService);
+            this.clusterManagerApiService = Codegen.ofNullable(clusterManagerApiService);
             return this;
         }
         public Builder dataset(@Nullable Output<String> dataset) {
@@ -316,7 +317,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder debugOptions(@Nullable Output<DebugOptionsArgs> debugOptions) {
@@ -324,7 +325,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder debugOptions(@Nullable DebugOptionsArgs debugOptions) {
-            this.debugOptions = Output.ofNullable(debugOptions);
+            this.debugOptions = Codegen.ofNullable(debugOptions);
             return this;
         }
         public Builder experiments(@Nullable Output<List<String>> experiments) {
@@ -332,7 +333,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder experiments(@Nullable List<String> experiments) {
-            this.experiments = Output.ofNullable(experiments);
+            this.experiments = Codegen.ofNullable(experiments);
             return this;
         }
         public Builder experiments(String... experiments) {
@@ -343,7 +344,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flexResourceSchedulingGoal(@Nullable EnvironmentFlexResourceSchedulingGoal flexResourceSchedulingGoal) {
-            this.flexResourceSchedulingGoal = Output.ofNullable(flexResourceSchedulingGoal);
+            this.flexResourceSchedulingGoal = Codegen.ofNullable(flexResourceSchedulingGoal);
             return this;
         }
         public Builder internalExperiments(@Nullable Output<Map<String,String>> internalExperiments) {
@@ -351,7 +352,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder internalExperiments(@Nullable Map<String,String> internalExperiments) {
-            this.internalExperiments = Output.ofNullable(internalExperiments);
+            this.internalExperiments = Codegen.ofNullable(internalExperiments);
             return this;
         }
         public Builder sdkPipelineOptions(@Nullable Output<Map<String,String>> sdkPipelineOptions) {
@@ -359,7 +360,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sdkPipelineOptions(@Nullable Map<String,String> sdkPipelineOptions) {
-            this.sdkPipelineOptions = Output.ofNullable(sdkPipelineOptions);
+            this.sdkPipelineOptions = Codegen.ofNullable(sdkPipelineOptions);
             return this;
         }
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
@@ -367,7 +368,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder serviceKmsKeyName(@Nullable Output<String> serviceKmsKeyName) {
@@ -375,7 +376,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceKmsKeyName(@Nullable String serviceKmsKeyName) {
-            this.serviceKmsKeyName = Output.ofNullable(serviceKmsKeyName);
+            this.serviceKmsKeyName = Codegen.ofNullable(serviceKmsKeyName);
             return this;
         }
         public Builder serviceOptions(@Nullable Output<List<String>> serviceOptions) {
@@ -383,7 +384,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceOptions(@Nullable List<String> serviceOptions) {
-            this.serviceOptions = Output.ofNullable(serviceOptions);
+            this.serviceOptions = Codegen.ofNullable(serviceOptions);
             return this;
         }
         public Builder serviceOptions(String... serviceOptions) {
@@ -394,7 +395,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
-            this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
+            this.tempStoragePrefix = Codegen.ofNullable(tempStoragePrefix);
             return this;
         }
         public Builder userAgent(@Nullable Output<Map<String,String>> userAgent) {
@@ -402,7 +403,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAgent(@Nullable Map<String,String> userAgent) {
-            this.userAgent = Output.ofNullable(userAgent);
+            this.userAgent = Codegen.ofNullable(userAgent);
             return this;
         }
         public Builder version(@Nullable Output<Map<String,String>> version) {
@@ -410,7 +411,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable Map<String,String> version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder workerPools(@Nullable Output<List<WorkerPoolArgs>> workerPools) {
@@ -418,7 +419,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerPools(@Nullable List<WorkerPoolArgs> workerPools) {
-            this.workerPools = Output.ofNullable(workerPools);
+            this.workerPools = Codegen.ofNullable(workerPools);
             return this;
         }
         public Builder workerPools(WorkerPoolArgs... workerPools) {
@@ -429,7 +430,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerRegion(@Nullable String workerRegion) {
-            this.workerRegion = Output.ofNullable(workerRegion);
+            this.workerRegion = Codegen.ofNullable(workerRegion);
             return this;
         }
         public Builder workerZone(@Nullable Output<String> workerZone) {
@@ -437,7 +438,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerZone(@Nullable String workerZone) {
-            this.workerZone = Output.ofNullable(workerZone);
+            this.workerZone = Codegen.ofNullable(workerZone);
             return this;
         }        public EnvironmentArgs build() {
             return new EnvironmentArgs(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ivs.inputs;
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
     @Import(name="s3", required=true)
       private final Output<RecordingConfigurationS3DestinationConfigurationArgs> s3;
 
-    public Output<RecordingConfigurationS3DestinationConfigurationArgs> getS3() {
+    public Output<RecordingConfigurationS3DestinationConfigurationArgs> s3() {
         return this.s3;
     }
 
@@ -29,7 +30,7 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
     }
 
     private RecordingConfigurationDestinationConfigurationArgs() {
-        this.s3 = Output.empty();
+        this.s3 = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class RealtimeLogConfigKinesisStreamConfigArgs extends io.pulumi.re
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamArn", required=true)
       private final Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
 
@@ -35,8 +36,8 @@ public final class RealtimeLogConfigKinesisStreamConfigArgs extends io.pulumi.re
     }
 
     private RealtimeLogConfigKinesisStreamConfigArgs() {
-        this.roleArn = Output.empty();
-        this.streamArn = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.streamArn = Codegen.empty();
     }
 
     public static Builder builder() {

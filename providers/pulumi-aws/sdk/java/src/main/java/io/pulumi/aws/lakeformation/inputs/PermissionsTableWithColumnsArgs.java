@@ -5,6 +5,7 @@ package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
     @Import(name="columnNames")
       private final @Nullable Output<List<String>> columnNames;
 
-    public Output<List<String>> getColumnNames() {
-        return this.columnNames == null ? Output.empty() : this.columnNames;
+    public Output<List<String>> columnNames() {
+        return this.columnNames == null ? Codegen.empty() : this.columnNames;
     }
 
     /**
@@ -45,15 +46,15 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="excludedColumnNames")
       private final @Nullable Output<List<String>> excludedColumnNames;
 
-    public Output<List<String>> getExcludedColumnNames() {
-        return this.excludedColumnNames == null ? Output.empty() : this.excludedColumnNames;
+    public Output<List<String>> excludedColumnNames() {
+        return this.excludedColumnNames == null ? Codegen.empty() : this.excludedColumnNames;
     }
 
     /**
@@ -63,15 +64,15 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="wildcard")
       private final @Nullable Output<Boolean> wildcard;
 
-    public Output<Boolean> getWildcard() {
-        return this.wildcard == null ? Output.empty() : this.wildcard;
+    public Output<Boolean> wildcard() {
+        return this.wildcard == null ? Codegen.empty() : this.wildcard;
     }
 
     public PermissionsTableWithColumnsArgs(
@@ -90,12 +91,12 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
     }
 
     private PermissionsTableWithColumnsArgs() {
-        this.catalogId = Output.empty();
-        this.columnNames = Output.empty();
-        this.databaseName = Output.empty();
-        this.excludedColumnNames = Output.empty();
-        this.name = Output.empty();
-        this.wildcard = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.columnNames = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.excludedColumnNames = Codegen.empty();
+        this.name = Codegen.empty();
+        this.wildcard = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder columnNames(@Nullable Output<List<String>> columnNames) {
@@ -141,7 +142,7 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder columnNames(@Nullable List<String> columnNames) {
-            this.columnNames = Output.ofNullable(columnNames);
+            this.columnNames = Codegen.ofNullable(columnNames);
             return this;
         }
         public Builder columnNames(String... columnNames) {
@@ -160,7 +161,7 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder excludedColumnNames(@Nullable List<String> excludedColumnNames) {
-            this.excludedColumnNames = Output.ofNullable(excludedColumnNames);
+            this.excludedColumnNames = Codegen.ofNullable(excludedColumnNames);
             return this;
         }
         public Builder excludedColumnNames(String... excludedColumnNames) {
@@ -179,7 +180,7 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder wildcard(@Nullable Boolean wildcard) {
-            this.wildcard = Output.ofNullable(wildcard);
+            this.wildcard = Codegen.ofNullable(wildcard);
             return this;
         }        public PermissionsTableWithColumnsArgs build() {
             return new PermissionsTableWithColumnsArgs(catalogId, columnNames, databaseName, excludedColumnNames, name, wildcard);

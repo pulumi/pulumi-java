@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerLogDeliveryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
     @Import(name="workerLogDelivery", required=true)
       private final Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
 
-    public Output<ConnectorWorkerLogDeliveryArgs> getWorkerLogDelivery() {
+    public Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery() {
         return this.workerLogDelivery;
     }
 
@@ -29,7 +30,7 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
     }
 
     private ConnectorLogDeliveryArgs() {
-        this.workerLogDelivery = Output.empty();
+        this.workerLogDelivery = Codegen.empty();
     }
 
     public static Builder builder() {

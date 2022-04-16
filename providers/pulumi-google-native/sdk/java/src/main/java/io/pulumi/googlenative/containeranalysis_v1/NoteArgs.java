@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AttestationNoteArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.BuildNoteArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.ComplianceNoteArgs;
@@ -33,8 +34,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attestation")
       private final @Nullable Output<AttestationNoteArgs> attestation;
 
-    public Output<AttestationNoteArgs> getAttestation() {
-        return this.attestation == null ? Output.empty() : this.attestation;
+    public Output<AttestationNoteArgs> attestation() {
+        return this.attestation == null ? Codegen.empty() : this.attestation;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="build")
       private final @Nullable Output<BuildNoteArgs> build;
 
-    public Output<BuildNoteArgs> getBuild() {
-        return this.build == null ? Output.empty() : this.build;
+    public Output<BuildNoteArgs> build() {
+        return this.build == null ? Codegen.empty() : this.build;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compliance")
       private final @Nullable Output<ComplianceNoteArgs> compliance;
 
-    public Output<ComplianceNoteArgs> getCompliance() {
-        return this.compliance == null ? Output.empty() : this.compliance;
+    public Output<ComplianceNoteArgs> compliance() {
+        return this.compliance == null ? Codegen.empty() : this.compliance;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployment")
       private final @Nullable Output<DeploymentNoteArgs> deployment;
 
-    public Output<DeploymentNoteArgs> getDeployment() {
-        return this.deployment == null ? Output.empty() : this.deployment;
+    public Output<DeploymentNoteArgs> deployment() {
+        return this.deployment == null ? Codegen.empty() : this.deployment;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="discovery")
       private final @Nullable Output<DiscoveryNoteArgs> discovery;
 
-    public Output<DiscoveryNoteArgs> getDiscovery() {
-        return this.discovery == null ? Output.empty() : this.discovery;
+    public Output<DiscoveryNoteArgs> discovery() {
+        return this.discovery == null ? Codegen.empty() : this.discovery;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dsseAttestation")
       private final @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
 
-    public Output<DSSEAttestationNoteArgs> getDsseAttestation() {
-        return this.dsseAttestation == null ? Output.empty() : this.dsseAttestation;
+    public Output<DSSEAttestationNoteArgs> dsseAttestation() {
+        return this.dsseAttestation == null ? Codegen.empty() : this.dsseAttestation;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+    public Output<String> expirationTime() {
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<ImageNoteArgs> image;
 
-    public Output<ImageNoteArgs> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<ImageNoteArgs> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -121,14 +122,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
-    public Output<String> getLongDescription() {
-        return this.longDescription == null ? Output.empty() : this.longDescription;
+    public Output<String> longDescription() {
+        return this.longDescription == null ? Codegen.empty() : this.longDescription;
     }
 
     @Import(name="noteId", required=true)
       private final Output<String> noteId;
 
-    public Output<String> getNoteId() {
+    public Output<String> noteId() {
         return this.noteId;
     }
 
@@ -139,15 +140,15 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="package")
       private final @Nullable Output<PackageNoteArgs> package_;
 
-    public Output<PackageNoteArgs> getPackage_() {
-        return this.package_ == null ? Output.empty() : this.package_;
+    public Output<PackageNoteArgs> package_() {
+        return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relatedNoteNames")
       private final @Nullable Output<List<String>> relatedNoteNames;
 
-    public Output<List<String>> getRelatedNoteNames() {
-        return this.relatedNoteNames == null ? Output.empty() : this.relatedNoteNames;
+    public Output<List<String>> relatedNoteNames() {
+        return this.relatedNoteNames == null ? Codegen.empty() : this.relatedNoteNames;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relatedUrl")
       private final @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
 
-    public Output<List<RelatedUrlArgs>> getRelatedUrl() {
-        return this.relatedUrl == null ? Output.empty() : this.relatedUrl;
+    public Output<List<RelatedUrlArgs>> relatedUrl() {
+        return this.relatedUrl == null ? Codegen.empty() : this.relatedUrl;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
 
-    public Output<String> getShortDescription() {
-        return this.shortDescription == null ? Output.empty() : this.shortDescription;
+    public Output<String> shortDescription() {
+        return this.shortDescription == null ? Codegen.empty() : this.shortDescription;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgrade")
       private final @Nullable Output<UpgradeNoteArgs> upgrade;
 
-    public Output<UpgradeNoteArgs> getUpgrade() {
-        return this.upgrade == null ? Output.empty() : this.upgrade;
+    public Output<UpgradeNoteArgs> upgrade() {
+        return this.upgrade == null ? Codegen.empty() : this.upgrade;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vulnerability")
       private final @Nullable Output<VulnerabilityNoteArgs> vulnerability;
 
-    public Output<VulnerabilityNoteArgs> getVulnerability() {
-        return this.vulnerability == null ? Output.empty() : this.vulnerability;
+    public Output<VulnerabilityNoteArgs> vulnerability() {
+        return this.vulnerability == null ? Codegen.empty() : this.vulnerability;
     }
 
     public NoteArgs(
@@ -243,23 +244,23 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NoteArgs() {
-        this.attestation = Output.empty();
-        this.build = Output.empty();
-        this.compliance = Output.empty();
-        this.deployment = Output.empty();
-        this.discovery = Output.empty();
-        this.dsseAttestation = Output.empty();
-        this.expirationTime = Output.empty();
-        this.image = Output.empty();
-        this.longDescription = Output.empty();
-        this.noteId = Output.empty();
-        this.package_ = Output.empty();
-        this.project = Output.empty();
-        this.relatedNoteNames = Output.empty();
-        this.relatedUrl = Output.empty();
-        this.shortDescription = Output.empty();
-        this.upgrade = Output.empty();
-        this.vulnerability = Output.empty();
+        this.attestation = Codegen.empty();
+        this.build = Codegen.empty();
+        this.compliance = Codegen.empty();
+        this.deployment = Codegen.empty();
+        this.discovery = Codegen.empty();
+        this.dsseAttestation = Codegen.empty();
+        this.expirationTime = Codegen.empty();
+        this.image = Codegen.empty();
+        this.longDescription = Codegen.empty();
+        this.noteId = Codegen.empty();
+        this.package_ = Codegen.empty();
+        this.project = Codegen.empty();
+        this.relatedNoteNames = Codegen.empty();
+        this.relatedUrl = Codegen.empty();
+        this.shortDescription = Codegen.empty();
+        this.upgrade = Codegen.empty();
+        this.vulnerability = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -319,7 +320,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attestation(@Nullable AttestationNoteArgs attestation) {
-            this.attestation = Output.ofNullable(attestation);
+            this.attestation = Codegen.ofNullable(attestation);
             return this;
         }
         public Builder build(@Nullable Output<BuildNoteArgs> build) {
@@ -327,7 +328,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder build(@Nullable BuildNoteArgs build) {
-            this.build = Output.ofNullable(build);
+            this.build = Codegen.ofNullable(build);
             return this;
         }
         public Builder compliance(@Nullable Output<ComplianceNoteArgs> compliance) {
@@ -335,7 +336,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compliance(@Nullable ComplianceNoteArgs compliance) {
-            this.compliance = Output.ofNullable(compliance);
+            this.compliance = Codegen.ofNullable(compliance);
             return this;
         }
         public Builder deployment(@Nullable Output<DeploymentNoteArgs> deployment) {
@@ -343,7 +344,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deployment(@Nullable DeploymentNoteArgs deployment) {
-            this.deployment = Output.ofNullable(deployment);
+            this.deployment = Codegen.ofNullable(deployment);
             return this;
         }
         public Builder discovery(@Nullable Output<DiscoveryNoteArgs> discovery) {
@@ -351,7 +352,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder discovery(@Nullable DiscoveryNoteArgs discovery) {
-            this.discovery = Output.ofNullable(discovery);
+            this.discovery = Codegen.ofNullable(discovery);
             return this;
         }
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationNoteArgs> dsseAttestation) {
@@ -359,7 +360,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dsseAttestation(@Nullable DSSEAttestationNoteArgs dsseAttestation) {
-            this.dsseAttestation = Output.ofNullable(dsseAttestation);
+            this.dsseAttestation = Codegen.ofNullable(dsseAttestation);
             return this;
         }
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
@@ -367,7 +368,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder image(@Nullable Output<ImageNoteArgs> image) {
@@ -375,7 +376,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable ImageNoteArgs image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder longDescription(@Nullable Output<String> longDescription) {
@@ -383,7 +384,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder longDescription(@Nullable String longDescription) {
-            this.longDescription = Output.ofNullable(longDescription);
+            this.longDescription = Codegen.ofNullable(longDescription);
             return this;
         }
         public Builder noteId(Output<String> noteId) {
@@ -399,7 +400,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder package_(@Nullable PackageNoteArgs package_) {
-            this.package_ = Output.ofNullable(package_);
+            this.package_ = Codegen.ofNullable(package_);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -407,7 +408,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
@@ -415,7 +416,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
-            this.relatedNoteNames = Output.ofNullable(relatedNoteNames);
+            this.relatedNoteNames = Codegen.ofNullable(relatedNoteNames);
             return this;
         }
         public Builder relatedNoteNames(String... relatedNoteNames) {
@@ -426,7 +427,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
-            this.relatedUrl = Output.ofNullable(relatedUrl);
+            this.relatedUrl = Codegen.ofNullable(relatedUrl);
             return this;
         }
         public Builder relatedUrl(RelatedUrlArgs... relatedUrl) {
@@ -437,7 +438,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortDescription(@Nullable String shortDescription) {
-            this.shortDescription = Output.ofNullable(shortDescription);
+            this.shortDescription = Codegen.ofNullable(shortDescription);
             return this;
         }
         public Builder upgrade(@Nullable Output<UpgradeNoteArgs> upgrade) {
@@ -445,7 +446,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upgrade(@Nullable UpgradeNoteArgs upgrade) {
-            this.upgrade = Output.ofNullable(upgrade);
+            this.upgrade = Codegen.ofNullable(upgrade);
             return this;
         }
         public Builder vulnerability(@Nullable Output<VulnerabilityNoteArgs> vulnerability) {
@@ -453,7 +454,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vulnerability(@Nullable VulnerabilityNoteArgs vulnerability) {
-            this.vulnerability = Output.ofNullable(vulnerability);
+            this.vulnerability = Codegen.ofNullable(vulnerability);
             return this;
         }        public NoteArgs build() {
             return new NoteArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, expirationTime, image, longDescription, noteId, package_, project, relatedNoteNames, relatedUrl, shortDescription, upgrade, vulnerability);

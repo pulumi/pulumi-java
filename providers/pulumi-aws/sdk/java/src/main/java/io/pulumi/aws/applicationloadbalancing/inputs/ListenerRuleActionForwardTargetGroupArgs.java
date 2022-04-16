@@ -5,6 +5,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ListenerRuleActionForwardTargetGroupArgs extends io.pulumi.re
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -33,8 +34,8 @@ public final class ListenerRuleActionForwardTargetGroupArgs extends io.pulumi.re
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+    public Output<Integer> weight() {
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public ListenerRuleActionForwardTargetGroupArgs(
@@ -45,8 +46,8 @@ public final class ListenerRuleActionForwardTargetGroupArgs extends io.pulumi.re
     }
 
     private ListenerRuleActionForwardTargetGroupArgs() {
-        this.arn = Output.empty();
-        this.weight = Output.empty();
+        this.arn = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ListenerRuleActionForwardTargetGroupArgs extends io.pulumi.re
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public ListenerRuleActionForwardTargetGroupArgs build() {
             return new ListenerRuleActionForwardTargetGroupArgs(arn, weight);

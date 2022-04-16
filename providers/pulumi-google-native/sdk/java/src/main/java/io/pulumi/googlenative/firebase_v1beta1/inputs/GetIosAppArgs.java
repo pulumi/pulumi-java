@@ -17,14 +17,14 @@ public final class GetIosAppArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="iosAppId", required=true)
       private final String iosAppId;
 
-    public String getIosAppId() {
+    public String iosAppId() {
         return this.iosAppId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

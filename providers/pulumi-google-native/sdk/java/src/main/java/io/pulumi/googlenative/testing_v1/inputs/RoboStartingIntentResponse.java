@@ -25,7 +25,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
     @Import(name="launcherActivity", required=true)
       private final LauncherActivityIntentResponse launcherActivity;
 
-    public LauncherActivityIntentResponse getLauncherActivity() {
+    public LauncherActivityIntentResponse launcherActivity() {
         return this.launcherActivity;
     }
 
@@ -36,7 +36,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
     @Import(name="startActivity", required=true)
       private final StartActivityIntentResponse startActivity;
 
-    public StartActivityIntentResponse getStartActivity() {
+    public StartActivityIntentResponse startActivity() {
         return this.startActivity;
     }
 
@@ -47,7 +47,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
     @Import(name="timeout", required=true)
       private final String timeout;
 
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
 

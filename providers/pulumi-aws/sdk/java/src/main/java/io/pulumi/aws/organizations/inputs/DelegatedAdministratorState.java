@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="delegationEnabledDate")
       private final @Nullable Output<String> delegationEnabledDate;
 
-    public Output<String> getDelegationEnabledDate() {
-        return this.delegationEnabledDate == null ? Output.empty() : this.delegationEnabledDate;
+    public Output<String> delegationEnabledDate() {
+        return this.delegationEnabledDate == null ? Codegen.empty() : this.delegationEnabledDate;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="joinedMethod")
       private final @Nullable Output<String> joinedMethod;
 
-    public Output<String> getJoinedMethod() {
-        return this.joinedMethod == null ? Output.empty() : this.joinedMethod;
+    public Output<String> joinedMethod() {
+        return this.joinedMethod == null ? Codegen.empty() : this.joinedMethod;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="joinedTimestamp")
       private final @Nullable Output<String> joinedTimestamp;
 
-    public Output<String> getJoinedTimestamp() {
-        return this.joinedTimestamp == null ? Output.empty() : this.joinedTimestamp;
+    public Output<String> joinedTimestamp() {
+        return this.joinedTimestamp == null ? Codegen.empty() : this.joinedTimestamp;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="servicePrincipal")
       private final @Nullable Output<String> servicePrincipal;
 
-    public Output<String> getServicePrincipal() {
-        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
+    public Output<String> servicePrincipal() {
+        return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public DelegatedAdministratorState(
@@ -135,15 +136,15 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     }
 
     private DelegatedAdministratorState() {
-        this.accountId = Output.empty();
-        this.arn = Output.empty();
-        this.delegationEnabledDate = Output.empty();
-        this.email = Output.empty();
-        this.joinedMethod = Output.empty();
-        this.joinedTimestamp = Output.empty();
-        this.name = Output.empty();
-        this.servicePrincipal = Output.empty();
-        this.status = Output.empty();
+        this.accountId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.delegationEnabledDate = Codegen.empty();
+        this.email = Codegen.empty();
+        this.joinedMethod = Codegen.empty();
+        this.joinedTimestamp = Codegen.empty();
+        this.name = Codegen.empty();
+        this.servicePrincipal = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -187,7 +188,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -195,7 +196,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder delegationEnabledDate(@Nullable Output<String> delegationEnabledDate) {
@@ -203,7 +204,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder delegationEnabledDate(@Nullable String delegationEnabledDate) {
-            this.delegationEnabledDate = Output.ofNullable(delegationEnabledDate);
+            this.delegationEnabledDate = Codegen.ofNullable(delegationEnabledDate);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -211,7 +212,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder joinedMethod(@Nullable Output<String> joinedMethod) {
@@ -219,7 +220,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder joinedMethod(@Nullable String joinedMethod) {
-            this.joinedMethod = Output.ofNullable(joinedMethod);
+            this.joinedMethod = Codegen.ofNullable(joinedMethod);
             return this;
         }
         public Builder joinedTimestamp(@Nullable Output<String> joinedTimestamp) {
@@ -227,7 +228,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
-            this.joinedTimestamp = Output.ofNullable(joinedTimestamp);
+            this.joinedTimestamp = Codegen.ofNullable(joinedTimestamp);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -235,7 +236,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
@@ -243,7 +244,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
-            this.servicePrincipal = Output.ofNullable(servicePrincipal);
+            this.servicePrincipal = Codegen.ofNullable(servicePrincipal);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -251,7 +252,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public DelegatedAdministratorState build() {
             return new DelegatedAdministratorState(accountId, arn, delegationEnabledDate, email, joinedMethod, joinedTimestamp, name, servicePrincipal, status);

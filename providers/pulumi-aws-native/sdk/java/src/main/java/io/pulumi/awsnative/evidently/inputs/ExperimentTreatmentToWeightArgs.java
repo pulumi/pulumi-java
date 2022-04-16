@@ -5,6 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class ExperimentTreatmentToWeightArgs extends io.pulumi.resources.R
     @Import(name="splitWeight", required=true)
       private final Output<Integer> splitWeight;
 
-    public Output<Integer> getSplitWeight() {
+    public Output<Integer> splitWeight() {
         return this.splitWeight;
     }
 
     @Import(name="treatment", required=true)
       private final Output<String> treatment;
 
-    public Output<String> getTreatment() {
+    public Output<String> treatment() {
         return this.treatment;
     }
 
@@ -36,8 +37,8 @@ public final class ExperimentTreatmentToWeightArgs extends io.pulumi.resources.R
     }
 
     private ExperimentTreatmentToWeightArgs() {
-        this.splitWeight = Output.empty();
-        this.treatment = Output.empty();
+        this.splitWeight = Codegen.empty();
+        this.treatment = Codegen.empty();
     }
 
     public static Builder builder() {

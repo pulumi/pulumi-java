@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.JwtLocationArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audiences")
       private final @Nullable Output<String> audiences;
 
-    public Output<String> getAudiences() {
-        return this.audiences == null ? Output.empty() : this.audiences;
+    public Output<String> audiences() {
+        return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationUrl")
       private final @Nullable Output<String> authorizationUrl;
 
-    public Output<String> getAuthorizationUrl() {
-        return this.authorizationUrl == null ? Output.empty() : this.authorizationUrl;
+    public Output<String> authorizationUrl() {
+        return this.authorizationUrl == null ? Codegen.empty() : this.authorizationUrl;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
-        return this.issuer == null ? Output.empty() : this.issuer;
+    public Output<String> issuer() {
+        return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jwksUri")
       private final @Nullable Output<String> jwksUri;
 
-    public Output<String> getJwksUri() {
-        return this.jwksUri == null ? Output.empty() : this.jwksUri;
+    public Output<String> jwksUri() {
+        return this.jwksUri == null ? Codegen.empty() : this.jwksUri;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jwtLocations")
       private final @Nullable Output<List<JwtLocationArgs>> jwtLocations;
 
-    public Output<List<JwtLocationArgs>> getJwtLocations() {
-        return this.jwtLocations == null ? Output.empty() : this.jwtLocations;
+    public Output<List<JwtLocationArgs>> jwtLocations() {
+        return this.jwtLocations == null ? Codegen.empty() : this.jwtLocations;
     }
 
     public AuthProviderArgs(
@@ -102,12 +103,12 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthProviderArgs() {
-        this.audiences = Output.empty();
-        this.authorizationUrl = Output.empty();
-        this.id = Output.empty();
-        this.issuer = Output.empty();
-        this.jwksUri = Output.empty();
-        this.jwtLocations = Output.empty();
+        this.audiences = Codegen.empty();
+        this.authorizationUrl = Codegen.empty();
+        this.id = Codegen.empty();
+        this.issuer = Codegen.empty();
+        this.jwksUri = Codegen.empty();
+        this.jwtLocations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder audiences(@Nullable String audiences) {
-            this.audiences = Output.ofNullable(audiences);
+            this.audiences = Codegen.ofNullable(audiences);
             return this;
         }
         public Builder authorizationUrl(@Nullable Output<String> authorizationUrl) {
@@ -153,7 +154,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizationUrl(@Nullable String authorizationUrl) {
-            this.authorizationUrl = Output.ofNullable(authorizationUrl);
+            this.authorizationUrl = Codegen.ofNullable(authorizationUrl);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -161,7 +162,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder issuer(@Nullable Output<String> issuer) {
@@ -169,7 +170,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Output.ofNullable(issuer);
+            this.issuer = Codegen.ofNullable(issuer);
             return this;
         }
         public Builder jwksUri(@Nullable Output<String> jwksUri) {
@@ -177,7 +178,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jwksUri(@Nullable String jwksUri) {
-            this.jwksUri = Output.ofNullable(jwksUri);
+            this.jwksUri = Codegen.ofNullable(jwksUri);
             return this;
         }
         public Builder jwtLocations(@Nullable Output<List<JwtLocationArgs>> jwtLocations) {
@@ -185,7 +186,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jwtLocations(@Nullable List<JwtLocationArgs> jwtLocations) {
-            this.jwtLocations = Output.ofNullable(jwtLocations);
+            this.jwtLocations = Codegen.ofNullable(jwtLocations);
             return this;
         }
         public Builder jwtLocations(JwtLocationArgs... jwtLocations) {

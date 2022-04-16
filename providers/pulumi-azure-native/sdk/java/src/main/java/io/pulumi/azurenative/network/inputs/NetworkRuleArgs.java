@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.FirewallPolicyRuleNetworkProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
+    public Output<List<String>> destinationAddresses() {
+        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationFqdns")
       private final @Nullable Output<List<String>> destinationFqdns;
 
-    public Output<List<String>> getDestinationFqdns() {
-        return this.destinationFqdns == null ? Output.empty() : this.destinationFqdns;
+    public Output<List<String>> destinationFqdns() {
+        return this.destinationFqdns == null ? Codegen.empty() : this.destinationFqdns;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationIpGroups")
       private final @Nullable Output<List<String>> destinationIpGroups;
 
-    public Output<List<String>> getDestinationIpGroups() {
-        return this.destinationIpGroups == null ? Output.empty() : this.destinationIpGroups;
+    public Output<List<String>> destinationIpGroups() {
+        return this.destinationIpGroups == null ? Codegen.empty() : this.destinationIpGroups;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> getDestinationPorts() {
-        return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
+    public Output<List<String>> destinationPorts() {
+        return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipProtocols")
       private final @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
 
-    public Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> getIpProtocols() {
-        return this.ipProtocols == null ? Output.empty() : this.ipProtocols;
+    public Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols() {
+        return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -117,8 +118,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
+    public Output<List<String>> sourceAddresses() {
+        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
+    public Output<List<String>> sourceIpGroups() {
+        return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 
     public NetworkRuleArgs(
@@ -156,16 +157,16 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkRuleArgs() {
-        this.description = Output.empty();
-        this.destinationAddresses = Output.empty();
-        this.destinationFqdns = Output.empty();
-        this.destinationIpGroups = Output.empty();
-        this.destinationPorts = Output.empty();
-        this.ipProtocols = Output.empty();
-        this.name = Output.empty();
-        this.ruleType = Output.empty();
-        this.sourceAddresses = Output.empty();
-        this.sourceIpGroups = Output.empty();
+        this.description = Codegen.empty();
+        this.destinationAddresses = Codegen.empty();
+        this.destinationFqdns = Codegen.empty();
+        this.destinationIpGroups = Codegen.empty();
+        this.destinationPorts = Codegen.empty();
+        this.ipProtocols = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ruleType = Codegen.empty();
+        this.sourceAddresses = Codegen.empty();
+        this.sourceIpGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
@@ -219,7 +220,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Output.ofNullable(destinationAddresses);
+            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
             return this;
         }
         public Builder destinationAddresses(String... destinationAddresses) {
@@ -230,7 +231,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
-            this.destinationFqdns = Output.ofNullable(destinationFqdns);
+            this.destinationFqdns = Codegen.ofNullable(destinationFqdns);
             return this;
         }
         public Builder destinationFqdns(String... destinationFqdns) {
@@ -241,7 +242,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
-            this.destinationIpGroups = Output.ofNullable(destinationIpGroups);
+            this.destinationIpGroups = Codegen.ofNullable(destinationIpGroups);
             return this;
         }
         public Builder destinationIpGroups(String... destinationIpGroups) {
@@ -252,7 +253,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Output.ofNullable(destinationPorts);
+            this.destinationPorts = Codegen.ofNullable(destinationPorts);
             return this;
         }
         public Builder destinationPorts(String... destinationPorts) {
@@ -263,7 +264,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipProtocols(@Nullable List<Either<String,FirewallPolicyRuleNetworkProtocol>> ipProtocols) {
-            this.ipProtocols = Output.ofNullable(ipProtocols);
+            this.ipProtocols = Codegen.ofNullable(ipProtocols);
             return this;
         }
         public Builder ipProtocols(Either<String,FirewallPolicyRuleNetworkProtocol>... ipProtocols) {
@@ -274,7 +275,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ruleType(Output<String> ruleType) {
@@ -290,7 +291,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Output.ofNullable(sourceAddresses);
+            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
             return this;
         }
         public Builder sourceAddresses(String... sourceAddresses) {
@@ -301,7 +302,7 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Codegen.ofNullable(sourceIpGroups);
             return this;
         }
         public Builder sourceIpGroups(String... sourceIpGroups) {

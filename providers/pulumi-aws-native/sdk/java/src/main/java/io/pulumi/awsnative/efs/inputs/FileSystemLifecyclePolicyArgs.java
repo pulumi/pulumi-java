@@ -5,6 +5,7 @@ package io.pulumi.awsnative.efs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
     @Import(name="transitionToIA")
       private final @Nullable Output<String> transitionToIA;
 
-    public Output<String> getTransitionToIA() {
-        return this.transitionToIA == null ? Output.empty() : this.transitionToIA;
+    public Output<String> transitionToIA() {
+        return this.transitionToIA == null ? Codegen.empty() : this.transitionToIA;
     }
 
     @Import(name="transitionToPrimaryStorageClass")
       private final @Nullable Output<String> transitionToPrimaryStorageClass;
 
-    public Output<String> getTransitionToPrimaryStorageClass() {
-        return this.transitionToPrimaryStorageClass == null ? Output.empty() : this.transitionToPrimaryStorageClass;
+    public Output<String> transitionToPrimaryStorageClass() {
+        return this.transitionToPrimaryStorageClass == null ? Codegen.empty() : this.transitionToPrimaryStorageClass;
     }
 
     public FileSystemLifecyclePolicyArgs(
@@ -36,8 +37,8 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
     }
 
     private FileSystemLifecyclePolicyArgs() {
-        this.transitionToIA = Output.empty();
-        this.transitionToPrimaryStorageClass = Output.empty();
+        this.transitionToIA = Codegen.empty();
+        this.transitionToPrimaryStorageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder transitionToIA(@Nullable String transitionToIA) {
-            this.transitionToIA = Output.ofNullable(transitionToIA);
+            this.transitionToIA = Codegen.ofNullable(transitionToIA);
             return this;
         }
         public Builder transitionToPrimaryStorageClass(@Nullable Output<String> transitionToPrimaryStorageClass) {
@@ -75,7 +76,7 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
-            this.transitionToPrimaryStorageClass = Output.ofNullable(transitionToPrimaryStorageClass);
+            this.transitionToPrimaryStorageClass = Codegen.ofNullable(transitionToPrimaryStorageClass);
             return this;
         }        public FileSystemLifecyclePolicyArgs build() {
             return new FileSystemLifecyclePolicyArgs(transitionToIA, transitionToPrimaryStorageClass);

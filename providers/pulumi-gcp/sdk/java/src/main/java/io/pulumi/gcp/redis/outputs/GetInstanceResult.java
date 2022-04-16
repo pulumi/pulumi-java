@@ -121,101 +121,101 @@ public final class GetInstanceResult {
         this.transitEncryptionMode = transitEncryptionMode;
     }
 
-    public String getAlternativeLocationId() {
+    public String alternativeLocationId() {
         return this.alternativeLocationId;
     }
-    public Boolean getAuthEnabled() {
+    public Boolean authEnabled() {
         return this.authEnabled;
     }
-    public String getAuthString() {
+    public String authString() {
         return this.authString;
     }
-    public String getAuthorizedNetwork() {
+    public String authorizedNetwork() {
         return this.authorizedNetwork;
     }
-    public String getConnectMode() {
+    public String connectMode() {
         return this.connectMode;
     }
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public String getCurrentLocationId() {
+    public String currentLocationId() {
         return this.currentLocationId;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getLocationId() {
+    public String locationId() {
         return this.locationId;
     }
-    public List<GetInstanceMaintenancePolicy> getMaintenancePolicies() {
+    public List<GetInstanceMaintenancePolicy> maintenancePolicies() {
         return this.maintenancePolicies;
     }
-    public List<GetInstanceMaintenanceSchedule> getMaintenanceSchedules() {
+    public List<GetInstanceMaintenanceSchedule> maintenanceSchedules() {
         return this.maintenanceSchedules;
     }
-    public Integer getMemorySizeGb() {
+    public Integer memorySizeGb() {
         return this.memorySizeGb;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<GetInstanceNode> getNodes() {
+    public List<GetInstanceNode> nodes() {
         return this.nodes;
     }
-    public String getPersistenceIamIdentity() {
+    public String persistenceIamIdentity() {
         return this.persistenceIamIdentity;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getReadEndpoint() {
+    public String readEndpoint() {
         return this.readEndpoint;
     }
-    public Integer getReadEndpointPort() {
+    public Integer readEndpointPort() {
         return this.readEndpointPort;
     }
-    public String getReadReplicasMode() {
+    public String readReplicasMode() {
         return this.readReplicasMode;
     }
-    public Map<String,String> getRedisConfigs() {
+    public Map<String,String> redisConfigs() {
         return this.redisConfigs;
     }
-    public String getRedisVersion() {
+    public String redisVersion() {
         return this.redisVersion;
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
-    public Integer getReplicaCount() {
+    public Integer replicaCount() {
         return this.replicaCount;
     }
-    public String getReservedIpRange() {
+    public String reservedIpRange() {
         return this.reservedIpRange;
     }
-    public List<GetInstanceServerCaCert> getServerCaCerts() {
+    public List<GetInstanceServerCaCert> serverCaCerts() {
         return this.serverCaCerts;
     }
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
-    public String getTransitEncryptionMode() {
+    public String transitEncryptionMode() {
         return this.transitEncryptionMode;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
+    public Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+    public Output<String> code() {
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="createTimestamp")
       private final @Nullable Output<String> createTimestamp;
 
-    public Output<String> getCreateTimestamp() {
-        return this.createTimestamp == null ? Output.empty() : this.createTimestamp;
+    public Output<String> createTimestamp() {
+        return this.createTimestamp == null ? Codegen.empty() : this.createTimestamp;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="inputs")
       private final @Nullable Output<AnalyticsApplicationInputsGetArgs> inputs;
 
-    public Output<AnalyticsApplicationInputsGetArgs> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+    public Output<AnalyticsApplicationInputsGetArgs> inputs() {
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="lastUpdateTimestamp")
       private final @Nullable Output<String> lastUpdateTimestamp;
 
-    public Output<String> getLastUpdateTimestamp() {
-        return this.lastUpdateTimestamp == null ? Output.empty() : this.lastUpdateTimestamp;
+    public Output<String> lastUpdateTimestamp() {
+        return this.lastUpdateTimestamp == null ? Codegen.empty() : this.lastUpdateTimestamp;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="outputs")
       private final @Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs;
 
-    public Output<List<AnalyticsApplicationOutputGetArgs>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+    public Output<List<AnalyticsApplicationOutputGetArgs>> outputs() {
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="referenceDataSources")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesGetArgs> getReferenceDataSources() {
-        return this.referenceDataSources == null ? Output.empty() : this.referenceDataSources;
+    public Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources() {
+        return this.referenceDataSources == null ? Codegen.empty() : this.referenceDataSources;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="startApplication")
       private final @Nullable Output<Boolean> startApplication;
 
-    public Output<Boolean> getStartApplication() {
-        return this.startApplication == null ? Output.empty() : this.startApplication;
+    public Output<Boolean> startApplication() {
+        return this.startApplication == null ? Codegen.empty() : this.startApplication;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public AnalyticsApplicationState(
@@ -224,21 +225,21 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     }
 
     private AnalyticsApplicationState() {
-        this.arn = Output.empty();
-        this.cloudwatchLoggingOptions = Output.empty();
-        this.code = Output.empty();
-        this.createTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.inputs = Output.empty();
-        this.lastUpdateTimestamp = Output.empty();
-        this.name = Output.empty();
-        this.outputs = Output.empty();
-        this.referenceDataSources = Output.empty();
-        this.startApplication = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.version = Output.empty();
+        this.arn = Codegen.empty();
+        this.cloudwatchLoggingOptions = Codegen.empty();
+        this.code = Codegen.empty();
+        this.createTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.inputs = Codegen.empty();
+        this.lastUpdateTimestamp = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.referenceDataSources = Codegen.empty();
+        this.startApplication = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -294,7 +295,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
@@ -302,7 +303,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
         public Builder code(@Nullable Output<String> code) {
@@ -310,7 +311,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder createTimestamp(@Nullable Output<String> createTimestamp) {
@@ -318,7 +319,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder createTimestamp(@Nullable String createTimestamp) {
-            this.createTimestamp = Output.ofNullable(createTimestamp);
+            this.createTimestamp = Codegen.ofNullable(createTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -326,7 +327,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder inputs(@Nullable Output<AnalyticsApplicationInputsGetArgs> inputs) {
@@ -334,7 +335,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder inputs(@Nullable AnalyticsApplicationInputsGetArgs inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder lastUpdateTimestamp(@Nullable Output<String> lastUpdateTimestamp) {
@@ -342,7 +343,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder lastUpdateTimestamp(@Nullable String lastUpdateTimestamp) {
-            this.lastUpdateTimestamp = Output.ofNullable(lastUpdateTimestamp);
+            this.lastUpdateTimestamp = Codegen.ofNullable(lastUpdateTimestamp);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -350,7 +351,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs) {
@@ -358,7 +359,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder outputs(@Nullable List<AnalyticsApplicationOutputGetArgs> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder outputs(AnalyticsApplicationOutputGetArgs... outputs) {
@@ -369,7 +370,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesGetArgs referenceDataSources) {
-            this.referenceDataSources = Output.ofNullable(referenceDataSources);
+            this.referenceDataSources = Codegen.ofNullable(referenceDataSources);
             return this;
         }
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
@@ -377,7 +378,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Output.ofNullable(startApplication);
+            this.startApplication = Codegen.ofNullable(startApplication);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -385,7 +386,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -393,7 +394,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -401,7 +402,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -409,7 +410,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public AnalyticsApplicationState build() {
             return new AnalyticsApplicationState(arn, cloudwatchLoggingOptions, code, createTimestamp, description, inputs, lastUpdateTimestamp, name, outputs, referenceDataSources, startApplication, status, tags, tagsAll, version);

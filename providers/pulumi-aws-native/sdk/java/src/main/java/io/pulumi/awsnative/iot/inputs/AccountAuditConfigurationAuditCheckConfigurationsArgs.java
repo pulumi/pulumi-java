@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditCheckConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,99 +22,99 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
     @Import(name="authenticatedCognitoRoleOverlyPermissiveCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> authenticatedCognitoRoleOverlyPermissiveCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getAuthenticatedCognitoRoleOverlyPermissiveCheck() {
-        return this.authenticatedCognitoRoleOverlyPermissiveCheck == null ? Output.empty() : this.authenticatedCognitoRoleOverlyPermissiveCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> authenticatedCognitoRoleOverlyPermissiveCheck() {
+        return this.authenticatedCognitoRoleOverlyPermissiveCheck == null ? Codegen.empty() : this.authenticatedCognitoRoleOverlyPermissiveCheck;
     }
 
     @Import(name="caCertificateExpiringCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> caCertificateExpiringCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getCaCertificateExpiringCheck() {
-        return this.caCertificateExpiringCheck == null ? Output.empty() : this.caCertificateExpiringCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> caCertificateExpiringCheck() {
+        return this.caCertificateExpiringCheck == null ? Codegen.empty() : this.caCertificateExpiringCheck;
     }
 
     @Import(name="caCertificateKeyQualityCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> caCertificateKeyQualityCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getCaCertificateKeyQualityCheck() {
-        return this.caCertificateKeyQualityCheck == null ? Output.empty() : this.caCertificateKeyQualityCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> caCertificateKeyQualityCheck() {
+        return this.caCertificateKeyQualityCheck == null ? Codegen.empty() : this.caCertificateKeyQualityCheck;
     }
 
     @Import(name="conflictingClientIdsCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> conflictingClientIdsCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getConflictingClientIdsCheck() {
-        return this.conflictingClientIdsCheck == null ? Output.empty() : this.conflictingClientIdsCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> conflictingClientIdsCheck() {
+        return this.conflictingClientIdsCheck == null ? Codegen.empty() : this.conflictingClientIdsCheck;
     }
 
     @Import(name="deviceCertificateExpiringCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateExpiringCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getDeviceCertificateExpiringCheck() {
-        return this.deviceCertificateExpiringCheck == null ? Output.empty() : this.deviceCertificateExpiringCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateExpiringCheck() {
+        return this.deviceCertificateExpiringCheck == null ? Codegen.empty() : this.deviceCertificateExpiringCheck;
     }
 
     @Import(name="deviceCertificateKeyQualityCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateKeyQualityCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getDeviceCertificateKeyQualityCheck() {
-        return this.deviceCertificateKeyQualityCheck == null ? Output.empty() : this.deviceCertificateKeyQualityCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateKeyQualityCheck() {
+        return this.deviceCertificateKeyQualityCheck == null ? Codegen.empty() : this.deviceCertificateKeyQualityCheck;
     }
 
     @Import(name="deviceCertificateSharedCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateSharedCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getDeviceCertificateSharedCheck() {
-        return this.deviceCertificateSharedCheck == null ? Output.empty() : this.deviceCertificateSharedCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateSharedCheck() {
+        return this.deviceCertificateSharedCheck == null ? Codegen.empty() : this.deviceCertificateSharedCheck;
     }
 
     @Import(name="iotPolicyOverlyPermissiveCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotPolicyOverlyPermissiveCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getIotPolicyOverlyPermissiveCheck() {
-        return this.iotPolicyOverlyPermissiveCheck == null ? Output.empty() : this.iotPolicyOverlyPermissiveCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotPolicyOverlyPermissiveCheck() {
+        return this.iotPolicyOverlyPermissiveCheck == null ? Codegen.empty() : this.iotPolicyOverlyPermissiveCheck;
     }
 
     @Import(name="iotRoleAliasAllowsAccessToUnusedServicesCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotRoleAliasAllowsAccessToUnusedServicesCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getIotRoleAliasAllowsAccessToUnusedServicesCheck() {
-        return this.iotRoleAliasAllowsAccessToUnusedServicesCheck == null ? Output.empty() : this.iotRoleAliasAllowsAccessToUnusedServicesCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotRoleAliasAllowsAccessToUnusedServicesCheck() {
+        return this.iotRoleAliasAllowsAccessToUnusedServicesCheck == null ? Codegen.empty() : this.iotRoleAliasAllowsAccessToUnusedServicesCheck;
     }
 
     @Import(name="iotRoleAliasOverlyPermissiveCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotRoleAliasOverlyPermissiveCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getIotRoleAliasOverlyPermissiveCheck() {
-        return this.iotRoleAliasOverlyPermissiveCheck == null ? Output.empty() : this.iotRoleAliasOverlyPermissiveCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotRoleAliasOverlyPermissiveCheck() {
+        return this.iotRoleAliasOverlyPermissiveCheck == null ? Codegen.empty() : this.iotRoleAliasOverlyPermissiveCheck;
     }
 
     @Import(name="loggingDisabledCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> loggingDisabledCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getLoggingDisabledCheck() {
-        return this.loggingDisabledCheck == null ? Output.empty() : this.loggingDisabledCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> loggingDisabledCheck() {
+        return this.loggingDisabledCheck == null ? Codegen.empty() : this.loggingDisabledCheck;
     }
 
     @Import(name="revokedCaCertificateStillActiveCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> revokedCaCertificateStillActiveCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getRevokedCaCertificateStillActiveCheck() {
-        return this.revokedCaCertificateStillActiveCheck == null ? Output.empty() : this.revokedCaCertificateStillActiveCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> revokedCaCertificateStillActiveCheck() {
+        return this.revokedCaCertificateStillActiveCheck == null ? Codegen.empty() : this.revokedCaCertificateStillActiveCheck;
     }
 
     @Import(name="revokedDeviceCertificateStillActiveCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> revokedDeviceCertificateStillActiveCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getRevokedDeviceCertificateStillActiveCheck() {
-        return this.revokedDeviceCertificateStillActiveCheck == null ? Output.empty() : this.revokedDeviceCertificateStillActiveCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> revokedDeviceCertificateStillActiveCheck() {
+        return this.revokedDeviceCertificateStillActiveCheck == null ? Codegen.empty() : this.revokedDeviceCertificateStillActiveCheck;
     }
 
     @Import(name="unauthenticatedCognitoRoleOverlyPermissiveCheck")
       private final @Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> unauthenticatedCognitoRoleOverlyPermissiveCheck;
 
-    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> getUnauthenticatedCognitoRoleOverlyPermissiveCheck() {
-        return this.unauthenticatedCognitoRoleOverlyPermissiveCheck == null ? Output.empty() : this.unauthenticatedCognitoRoleOverlyPermissiveCheck;
+    public Output<AccountAuditConfigurationAuditCheckConfigurationArgs> unauthenticatedCognitoRoleOverlyPermissiveCheck() {
+        return this.unauthenticatedCognitoRoleOverlyPermissiveCheck == null ? Codegen.empty() : this.unauthenticatedCognitoRoleOverlyPermissiveCheck;
     }
 
     public AccountAuditConfigurationAuditCheckConfigurationsArgs(
@@ -148,20 +149,20 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
     }
 
     private AccountAuditConfigurationAuditCheckConfigurationsArgs() {
-        this.authenticatedCognitoRoleOverlyPermissiveCheck = Output.empty();
-        this.caCertificateExpiringCheck = Output.empty();
-        this.caCertificateKeyQualityCheck = Output.empty();
-        this.conflictingClientIdsCheck = Output.empty();
-        this.deviceCertificateExpiringCheck = Output.empty();
-        this.deviceCertificateKeyQualityCheck = Output.empty();
-        this.deviceCertificateSharedCheck = Output.empty();
-        this.iotPolicyOverlyPermissiveCheck = Output.empty();
-        this.iotRoleAliasAllowsAccessToUnusedServicesCheck = Output.empty();
-        this.iotRoleAliasOverlyPermissiveCheck = Output.empty();
-        this.loggingDisabledCheck = Output.empty();
-        this.revokedCaCertificateStillActiveCheck = Output.empty();
-        this.revokedDeviceCertificateStillActiveCheck = Output.empty();
-        this.unauthenticatedCognitoRoleOverlyPermissiveCheck = Output.empty();
+        this.authenticatedCognitoRoleOverlyPermissiveCheck = Codegen.empty();
+        this.caCertificateExpiringCheck = Codegen.empty();
+        this.caCertificateKeyQualityCheck = Codegen.empty();
+        this.conflictingClientIdsCheck = Codegen.empty();
+        this.deviceCertificateExpiringCheck = Codegen.empty();
+        this.deviceCertificateKeyQualityCheck = Codegen.empty();
+        this.deviceCertificateSharedCheck = Codegen.empty();
+        this.iotPolicyOverlyPermissiveCheck = Codegen.empty();
+        this.iotRoleAliasAllowsAccessToUnusedServicesCheck = Codegen.empty();
+        this.iotRoleAliasOverlyPermissiveCheck = Codegen.empty();
+        this.loggingDisabledCheck = Codegen.empty();
+        this.revokedCaCertificateStillActiveCheck = Codegen.empty();
+        this.revokedDeviceCertificateStillActiveCheck = Codegen.empty();
+        this.unauthenticatedCognitoRoleOverlyPermissiveCheck = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder authenticatedCognitoRoleOverlyPermissiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs authenticatedCognitoRoleOverlyPermissiveCheck) {
-            this.authenticatedCognitoRoleOverlyPermissiveCheck = Output.ofNullable(authenticatedCognitoRoleOverlyPermissiveCheck);
+            this.authenticatedCognitoRoleOverlyPermissiveCheck = Codegen.ofNullable(authenticatedCognitoRoleOverlyPermissiveCheck);
             return this;
         }
         public Builder caCertificateExpiringCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> caCertificateExpiringCheck) {
@@ -223,7 +224,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder caCertificateExpiringCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs caCertificateExpiringCheck) {
-            this.caCertificateExpiringCheck = Output.ofNullable(caCertificateExpiringCheck);
+            this.caCertificateExpiringCheck = Codegen.ofNullable(caCertificateExpiringCheck);
             return this;
         }
         public Builder caCertificateKeyQualityCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> caCertificateKeyQualityCheck) {
@@ -231,7 +232,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder caCertificateKeyQualityCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs caCertificateKeyQualityCheck) {
-            this.caCertificateKeyQualityCheck = Output.ofNullable(caCertificateKeyQualityCheck);
+            this.caCertificateKeyQualityCheck = Codegen.ofNullable(caCertificateKeyQualityCheck);
             return this;
         }
         public Builder conflictingClientIdsCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> conflictingClientIdsCheck) {
@@ -239,7 +240,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder conflictingClientIdsCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs conflictingClientIdsCheck) {
-            this.conflictingClientIdsCheck = Output.ofNullable(conflictingClientIdsCheck);
+            this.conflictingClientIdsCheck = Codegen.ofNullable(conflictingClientIdsCheck);
             return this;
         }
         public Builder deviceCertificateExpiringCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateExpiringCheck) {
@@ -247,7 +248,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder deviceCertificateExpiringCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs deviceCertificateExpiringCheck) {
-            this.deviceCertificateExpiringCheck = Output.ofNullable(deviceCertificateExpiringCheck);
+            this.deviceCertificateExpiringCheck = Codegen.ofNullable(deviceCertificateExpiringCheck);
             return this;
         }
         public Builder deviceCertificateKeyQualityCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateKeyQualityCheck) {
@@ -255,7 +256,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder deviceCertificateKeyQualityCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs deviceCertificateKeyQualityCheck) {
-            this.deviceCertificateKeyQualityCheck = Output.ofNullable(deviceCertificateKeyQualityCheck);
+            this.deviceCertificateKeyQualityCheck = Codegen.ofNullable(deviceCertificateKeyQualityCheck);
             return this;
         }
         public Builder deviceCertificateSharedCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> deviceCertificateSharedCheck) {
@@ -263,7 +264,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder deviceCertificateSharedCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs deviceCertificateSharedCheck) {
-            this.deviceCertificateSharedCheck = Output.ofNullable(deviceCertificateSharedCheck);
+            this.deviceCertificateSharedCheck = Codegen.ofNullable(deviceCertificateSharedCheck);
             return this;
         }
         public Builder iotPolicyOverlyPermissiveCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotPolicyOverlyPermissiveCheck) {
@@ -271,7 +272,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder iotPolicyOverlyPermissiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs iotPolicyOverlyPermissiveCheck) {
-            this.iotPolicyOverlyPermissiveCheck = Output.ofNullable(iotPolicyOverlyPermissiveCheck);
+            this.iotPolicyOverlyPermissiveCheck = Codegen.ofNullable(iotPolicyOverlyPermissiveCheck);
             return this;
         }
         public Builder iotRoleAliasAllowsAccessToUnusedServicesCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotRoleAliasAllowsAccessToUnusedServicesCheck) {
@@ -279,7 +280,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder iotRoleAliasAllowsAccessToUnusedServicesCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs iotRoleAliasAllowsAccessToUnusedServicesCheck) {
-            this.iotRoleAliasAllowsAccessToUnusedServicesCheck = Output.ofNullable(iotRoleAliasAllowsAccessToUnusedServicesCheck);
+            this.iotRoleAliasAllowsAccessToUnusedServicesCheck = Codegen.ofNullable(iotRoleAliasAllowsAccessToUnusedServicesCheck);
             return this;
         }
         public Builder iotRoleAliasOverlyPermissiveCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> iotRoleAliasOverlyPermissiveCheck) {
@@ -287,7 +288,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder iotRoleAliasOverlyPermissiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs iotRoleAliasOverlyPermissiveCheck) {
-            this.iotRoleAliasOverlyPermissiveCheck = Output.ofNullable(iotRoleAliasOverlyPermissiveCheck);
+            this.iotRoleAliasOverlyPermissiveCheck = Codegen.ofNullable(iotRoleAliasOverlyPermissiveCheck);
             return this;
         }
         public Builder loggingDisabledCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> loggingDisabledCheck) {
@@ -295,7 +296,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder loggingDisabledCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs loggingDisabledCheck) {
-            this.loggingDisabledCheck = Output.ofNullable(loggingDisabledCheck);
+            this.loggingDisabledCheck = Codegen.ofNullable(loggingDisabledCheck);
             return this;
         }
         public Builder revokedCaCertificateStillActiveCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> revokedCaCertificateStillActiveCheck) {
@@ -303,7 +304,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder revokedCaCertificateStillActiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs revokedCaCertificateStillActiveCheck) {
-            this.revokedCaCertificateStillActiveCheck = Output.ofNullable(revokedCaCertificateStillActiveCheck);
+            this.revokedCaCertificateStillActiveCheck = Codegen.ofNullable(revokedCaCertificateStillActiveCheck);
             return this;
         }
         public Builder revokedDeviceCertificateStillActiveCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> revokedDeviceCertificateStillActiveCheck) {
@@ -311,7 +312,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder revokedDeviceCertificateStillActiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs revokedDeviceCertificateStillActiveCheck) {
-            this.revokedDeviceCertificateStillActiveCheck = Output.ofNullable(revokedDeviceCertificateStillActiveCheck);
+            this.revokedDeviceCertificateStillActiveCheck = Codegen.ofNullable(revokedDeviceCertificateStillActiveCheck);
             return this;
         }
         public Builder unauthenticatedCognitoRoleOverlyPermissiveCheck(@Nullable Output<AccountAuditConfigurationAuditCheckConfigurationArgs> unauthenticatedCognitoRoleOverlyPermissiveCheck) {
@@ -319,7 +320,7 @@ public final class AccountAuditConfigurationAuditCheckConfigurationsArgs extends
             return this;
         }
         public Builder unauthenticatedCognitoRoleOverlyPermissiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfigurationArgs unauthenticatedCognitoRoleOverlyPermissiveCheck) {
-            this.unauthenticatedCognitoRoleOverlyPermissiveCheck = Output.ofNullable(unauthenticatedCognitoRoleOverlyPermissiveCheck);
+            this.unauthenticatedCognitoRoleOverlyPermissiveCheck = Codegen.ofNullable(unauthenticatedCognitoRoleOverlyPermissiveCheck);
             return this;
         }        public AccountAuditConfigurationAuditCheckConfigurationsArgs build() {
             return new AccountAuditConfigurationAuditCheckConfigurationsArgs(authenticatedCognitoRoleOverlyPermissiveCheck, caCertificateExpiringCheck, caCertificateKeyQualityCheck, conflictingClientIdsCheck, deviceCertificateExpiringCheck, deviceCertificateKeyQualityCheck, deviceCertificateSharedCheck, iotPolicyOverlyPermissiveCheck, iotRoleAliasAllowsAccessToUnusedServicesCheck, iotRoleAliasOverlyPermissiveCheck, loggingDisabledCheck, revokedCaCertificateStillActiveCheck, revokedDeviceCertificateStillActiveCheck, unauthenticatedCognitoRoleOverlyPermissiveCheck);

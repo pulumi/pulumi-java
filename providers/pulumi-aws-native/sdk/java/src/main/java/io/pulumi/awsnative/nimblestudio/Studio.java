@@ -10,6 +10,7 @@ import io.pulumi.awsnative.nimblestudio.outputs.StudioTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @return <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
      * 
      */
-    public Output<String> getAdminRoleArn() {
+    public Output<String> adminRoleArn() {
         return this.adminRoleArn;
     }
     /**
@@ -44,7 +45,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @return <p>A friendly name for the studio.</p>
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -58,7 +59,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @return <p>The Amazon Web Services Region where the studio resource is located.</p>
      * 
      */
-    public Output<String> getHomeRegion() {
+    public Output<String> homeRegion() {
         return this.homeRegion;
     }
     /**
@@ -72,19 +73,19 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @return <p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.</p>
      * 
      */
-    public Output<String> getSsoClientId() {
+    public Output<String> ssoClientId() {
         return this.ssoClientId;
     }
     @Export(name="studioEncryptionConfiguration", type=StudioEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ StudioEncryptionConfiguration> studioEncryptionConfiguration;
 
-    public Output</* @Nullable */ StudioEncryptionConfiguration> getStudioEncryptionConfiguration() {
+    public Output</* @Nullable */ StudioEncryptionConfiguration> studioEncryptionConfiguration() {
         return this.studioEncryptionConfiguration;
     }
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
     /**
@@ -98,7 +99,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @return <p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>
      * 
      */
-    public Output<String> getStudioName() {
+    public Output<String> studioName() {
         return this.studioName;
     }
     /**
@@ -112,13 +113,13 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @return <p>The address of the web page for the studio.</p>
      * 
      */
-    public Output<String> getStudioUrl() {
+    public Output<String> studioUrl() {
         return this.studioUrl;
     }
     @Export(name="tags", type=StudioTags.class, parameters={})
     private Output</* @Nullable */ StudioTags> tags;
 
-    public Output</* @Nullable */ StudioTags> getTags() {
+    public Output</* @Nullable */ StudioTags> tags() {
         return this.tags;
     }
     /**
@@ -132,7 +133,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @return <p>The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>
      * 
      */
-    public Output<String> getUserRoleArn() {
+    public Output<String> userRoleArn() {
         return this.userRoleArn;
     }
 
@@ -158,7 +159,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Studio(String name, StudioArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:nimblestudio:Studio", name, args == null ? StudioArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:nimblestudio:Studio", name, args == null ? StudioArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Studio(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

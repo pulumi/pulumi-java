@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class DistributionOriginGroupMemberArgs extends io.pulumi.resources
     @Import(name="originId", required=true)
       private final Output<String> originId;
 
-    public Output<String> getOriginId() {
+    public Output<String> originId() {
         return this.originId;
     }
 
@@ -25,7 +26,7 @@ public final class DistributionOriginGroupMemberArgs extends io.pulumi.resources
     }
 
     private DistributionOriginGroupMemberArgs() {
-        this.originId = Output.empty();
+        this.originId = Codegen.empty();
     }
 
     public static Builder builder() {

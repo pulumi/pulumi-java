@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -32,7 +33,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultLogLevel", required=true)
       private final Output<LoggingDefaultLogLevel> defaultLogLevel;
 
-    public Output<LoggingDefaultLogLevel> getDefaultLogLevel() {
+    public Output<LoggingDefaultLogLevel> defaultLogLevel() {
         return this.defaultLogLevel;
     }
 
@@ -43,7 +44,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -57,9 +58,9 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggingArgs() {
-        this.accountId = Output.empty();
-        this.defaultLogLevel = Output.empty();
-        this.roleArn = Output.empty();
+        this.accountId = Codegen.empty();
+        this.defaultLogLevel = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

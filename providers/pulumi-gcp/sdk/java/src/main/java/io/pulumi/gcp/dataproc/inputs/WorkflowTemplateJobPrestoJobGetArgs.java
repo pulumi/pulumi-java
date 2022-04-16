@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPrestoJobLoggingConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPrestoJobQueryListGetArgs;
 import java.lang.Boolean;
@@ -26,8 +27,8 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     @Import(name="clientTags")
       private final @Nullable Output<List<String>> clientTags;
 
-    public Output<List<String>> getClientTags() {
-        return this.clientTags == null ? Output.empty() : this.clientTags;
+    public Output<List<String>> clientTags() {
+        return this.clientTags == null ? Codegen.empty() : this.clientTags;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
 
-    public Output<Boolean> getContinueOnFailure() {
-        return this.continueOnFailure == null ? Output.empty() : this.continueOnFailure;
+    public Output<Boolean> continueOnFailure() {
+        return this.continueOnFailure == null ? Codegen.empty() : this.continueOnFailure;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     @Import(name="loggingConfig")
       private final @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+    public Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig() {
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
-        return this.outputFormat == null ? Output.empty() : this.outputFormat;
+    public Output<String> outputFormat() {
+        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
-    public Output<String> getQueryFileUri() {
-        return this.queryFileUri == null ? Output.empty() : this.queryFileUri;
+    public Output<String> queryFileUri() {
+        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     @Import(name="queryList")
       private final @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
 
-    public Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> getQueryList() {
-        return this.queryList == null ? Output.empty() : this.queryList;
+    public Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList() {
+        return this.queryList == null ? Codegen.empty() : this.queryList;
     }
 
     public WorkflowTemplateJobPrestoJobGetArgs(
@@ -114,13 +115,13 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     }
 
     private WorkflowTemplateJobPrestoJobGetArgs() {
-        this.clientTags = Output.empty();
-        this.continueOnFailure = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.outputFormat = Output.empty();
-        this.properties = Output.empty();
-        this.queryFileUri = Output.empty();
-        this.queryList = Output.empty();
+        this.clientTags = Codegen.empty();
+        this.continueOnFailure = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.outputFormat = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.queryFileUri = Codegen.empty();
+        this.queryList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder clientTags(@Nullable List<String> clientTags) {
-            this.clientTags = Output.ofNullable(clientTags);
+            this.clientTags = Codegen.ofNullable(clientTags);
             return this;
         }
         public Builder clientTags(String... clientTags) {
@@ -171,7 +172,7 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
-            this.continueOnFailure = Output.ofNullable(continueOnFailure);
+            this.continueOnFailure = Codegen.ofNullable(continueOnFailure);
             return this;
         }
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig) {
@@ -179,7 +180,7 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder loggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
@@ -187,7 +188,7 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Output.ofNullable(outputFormat);
+            this.outputFormat = Codegen.ofNullable(outputFormat);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -195,7 +196,7 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
@@ -203,7 +204,7 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Output.ofNullable(queryFileUri);
+            this.queryFileUri = Codegen.ofNullable(queryFileUri);
             return this;
         }
         public Builder queryList(@Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
@@ -211,7 +212,7 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder queryList(@Nullable WorkflowTemplateJobPrestoJobQueryListGetArgs queryList) {
-            this.queryList = Output.ofNullable(queryList);
+            this.queryList = Codegen.ofNullable(queryList);
             return this;
         }        public WorkflowTemplateJobPrestoJobGetArgs build() {
             return new WorkflowTemplateJobPrestoJobGetArgs(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);

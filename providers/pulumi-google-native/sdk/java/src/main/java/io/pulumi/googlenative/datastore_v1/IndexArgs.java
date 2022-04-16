@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastore_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastore_v1.enums.IndexAncestor;
 import io.pulumi.googlenative.datastore_v1.inputs.GoogleDatastoreAdminV1IndexedPropertyArgs;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ancestor", required=true)
       private final Output<IndexAncestor> ancestor;
 
-    public Output<IndexAncestor> getAncestor() {
+    public Output<IndexAncestor> ancestor() {
         return this.ancestor;
     }
 
@@ -35,15 +36,15 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
-    public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> getProperties() {
+    public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties() {
         return this.properties;
     }
 
@@ -69,10 +70,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.ancestor = Output.empty();
-        this.kind = Output.empty();
-        this.project = Output.empty();
-        this.properties = Output.empty();
+        this.ancestor = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.project = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder properties(Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {

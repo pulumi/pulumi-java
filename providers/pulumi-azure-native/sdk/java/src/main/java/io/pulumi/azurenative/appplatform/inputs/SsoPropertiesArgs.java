@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<String> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuerUri")
       private final @Nullable Output<String> issuerUri;
 
-    public Output<String> getIssuerUri() {
-        return this.issuerUri == null ? Output.empty() : this.issuerUri;
+    public Output<String> issuerUri() {
+        return this.issuerUri == null ? Codegen.empty() : this.issuerUri;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<List<String>> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public SsoPropertiesArgs(
@@ -75,10 +76,10 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SsoPropertiesArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.issuerUri = Output.empty();
-        this.scope = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.issuerUri = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -120,7 +121,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
@@ -128,7 +129,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder issuerUri(@Nullable String issuerUri) {
-            this.issuerUri = Output.ofNullable(issuerUri);
+            this.issuerUri = Codegen.ofNullable(issuerUri);
             return this;
         }
         public Builder scope(@Nullable Output<List<String>> scope) {
@@ -136,7 +137,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder scope(String... scope) {

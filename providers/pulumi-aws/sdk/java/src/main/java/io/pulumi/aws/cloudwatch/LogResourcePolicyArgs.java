@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyDocument", required=true)
       private final Output<String> policyDocument;
 
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument;
     }
 
@@ -31,7 +32,7 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyName", required=true)
       private final Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 
@@ -43,8 +44,8 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LogResourcePolicyArgs() {
-        this.policyDocument = Output.empty();
-        this.policyName = Output.empty();
+        this.policyDocument = Codegen.empty();
+        this.policyName = Codegen.empty();
     }
 
     public static Builder builder() {

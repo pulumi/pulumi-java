@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.enums.TransferJobStatus;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.LoggingConfigArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.NotificationConfigArgs;
@@ -26,8 +27,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestOperationName")
       private final @Nullable Output<String> latestOperationName;
 
-    public Output<String> getLatestOperationName() {
-        return this.latestOperationName == null ? Output.empty() : this.latestOperationName;
+    public Output<String> latestOperationName() {
+        return this.latestOperationName == null ? Codegen.empty() : this.latestOperationName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Output<LoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+    public Output<LoggingConfigArgs> loggingConfig() {
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Output<NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+    public Output<NotificationConfigArgs> notificationConfig() {
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ScheduleArgs> schedule;
 
-    public Output<ScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<ScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<TransferJobStatus> status;
 
-    public Output<TransferJobStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<TransferJobStatus> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferSpec")
       private final @Nullable Output<TransferSpecArgs> transferSpec;
 
-    public Output<TransferSpecArgs> getTransferSpec() {
-        return this.transferSpec == null ? Output.empty() : this.transferSpec;
+    public Output<TransferSpecArgs> transferSpec() {
+        return this.transferSpec == null ? Codegen.empty() : this.transferSpec;
     }
 
     public TransferJobArgs(
@@ -140,15 +141,15 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransferJobArgs() {
-        this.description = Output.empty();
-        this.latestOperationName = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.name = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.project = Output.empty();
-        this.schedule = Output.empty();
-        this.status = Output.empty();
-        this.transferSpec = Output.empty();
+        this.description = Codegen.empty();
+        this.latestOperationName = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.status = Codegen.empty();
+        this.transferSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder latestOperationName(@Nullable Output<String> latestOperationName) {
@@ -200,7 +201,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latestOperationName(@Nullable String latestOperationName) {
-            this.latestOperationName = Output.ofNullable(latestOperationName);
+            this.latestOperationName = Codegen.ofNullable(latestOperationName);
             return this;
         }
         public Builder loggingConfig(@Nullable Output<LoggingConfigArgs> loggingConfig) {
@@ -208,7 +209,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingConfig(@Nullable LoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -216,7 +217,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
@@ -224,7 +225,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -232,7 +233,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
@@ -240,7 +241,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable ScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder status(@Nullable Output<TransferJobStatus> status) {
@@ -248,7 +249,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable TransferJobStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder transferSpec(@Nullable Output<TransferSpecArgs> transferSpec) {
@@ -256,7 +257,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transferSpec(@Nullable TransferSpecArgs transferSpec) {
-            this.transferSpec = Output.ofNullable(transferSpec);
+            this.transferSpec = Codegen.ofNullable(transferSpec);
             return this;
         }        public TransferJobArgs build() {
             return new TransferJobArgs(description, latestOperationName, loggingConfig, name, notificationConfig, project, schedule, status, transferSpec);

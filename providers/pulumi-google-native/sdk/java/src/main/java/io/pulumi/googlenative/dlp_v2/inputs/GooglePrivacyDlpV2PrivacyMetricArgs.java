@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CategoricalStatsConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KAnonymityConfigArgs;
@@ -30,8 +31,8 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     @Import(name="categoricalStatsConfig")
       private final @Nullable Output<GooglePrivacyDlpV2CategoricalStatsConfigArgs> categoricalStatsConfig;
 
-    public Output<GooglePrivacyDlpV2CategoricalStatsConfigArgs> getCategoricalStatsConfig() {
-        return this.categoricalStatsConfig == null ? Output.empty() : this.categoricalStatsConfig;
+    public Output<GooglePrivacyDlpV2CategoricalStatsConfigArgs> categoricalStatsConfig() {
+        return this.categoricalStatsConfig == null ? Codegen.empty() : this.categoricalStatsConfig;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     @Import(name="deltaPresenceEstimationConfig")
       private final @Nullable Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig;
 
-    public Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> getDeltaPresenceEstimationConfig() {
-        return this.deltaPresenceEstimationConfig == null ? Output.empty() : this.deltaPresenceEstimationConfig;
+    public Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig() {
+        return this.deltaPresenceEstimationConfig == null ? Codegen.empty() : this.deltaPresenceEstimationConfig;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     @Import(name="kAnonymityConfig")
       private final @Nullable Output<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig;
 
-    public Output<GooglePrivacyDlpV2KAnonymityConfigArgs> getKAnonymityConfig() {
-        return this.kAnonymityConfig == null ? Output.empty() : this.kAnonymityConfig;
+    public Output<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig() {
+        return this.kAnonymityConfig == null ? Codegen.empty() : this.kAnonymityConfig;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     @Import(name="kMapEstimationConfig")
       private final @Nullable Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig;
 
-    public Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> getKMapEstimationConfig() {
-        return this.kMapEstimationConfig == null ? Output.empty() : this.kMapEstimationConfig;
+    public Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig() {
+        return this.kMapEstimationConfig == null ? Codegen.empty() : this.kMapEstimationConfig;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     @Import(name="lDiversityConfig")
       private final @Nullable Output<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig;
 
-    public Output<GooglePrivacyDlpV2LDiversityConfigArgs> getLDiversityConfig() {
-        return this.lDiversityConfig == null ? Output.empty() : this.lDiversityConfig;
+    public Output<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig() {
+        return this.lDiversityConfig == null ? Codegen.empty() : this.lDiversityConfig;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     @Import(name="numericalStatsConfig")
       private final @Nullable Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig;
 
-    public Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> getNumericalStatsConfig() {
-        return this.numericalStatsConfig == null ? Output.empty() : this.numericalStatsConfig;
+    public Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig() {
+        return this.numericalStatsConfig == null ? Codegen.empty() : this.numericalStatsConfig;
     }
 
     public GooglePrivacyDlpV2PrivacyMetricArgs(
@@ -105,12 +106,12 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2PrivacyMetricArgs() {
-        this.categoricalStatsConfig = Output.empty();
-        this.deltaPresenceEstimationConfig = Output.empty();
-        this.kAnonymityConfig = Output.empty();
-        this.kMapEstimationConfig = Output.empty();
-        this.lDiversityConfig = Output.empty();
-        this.numericalStatsConfig = Output.empty();
+        this.categoricalStatsConfig = Codegen.empty();
+        this.deltaPresenceEstimationConfig = Codegen.empty();
+        this.kAnonymityConfig = Codegen.empty();
+        this.kMapEstimationConfig = Codegen.empty();
+        this.lDiversityConfig = Codegen.empty();
+        this.numericalStatsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
             return this;
         }
         public Builder categoricalStatsConfig(@Nullable GooglePrivacyDlpV2CategoricalStatsConfigArgs categoricalStatsConfig) {
-            this.categoricalStatsConfig = Output.ofNullable(categoricalStatsConfig);
+            this.categoricalStatsConfig = Codegen.ofNullable(categoricalStatsConfig);
             return this;
         }
         public Builder deltaPresenceEstimationConfig(@Nullable Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig) {
@@ -156,7 +157,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
             return this;
         }
         public Builder deltaPresenceEstimationConfig(@Nullable GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs deltaPresenceEstimationConfig) {
-            this.deltaPresenceEstimationConfig = Output.ofNullable(deltaPresenceEstimationConfig);
+            this.deltaPresenceEstimationConfig = Codegen.ofNullable(deltaPresenceEstimationConfig);
             return this;
         }
         public Builder kAnonymityConfig(@Nullable Output<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig) {
@@ -164,7 +165,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
             return this;
         }
         public Builder kAnonymityConfig(@Nullable GooglePrivacyDlpV2KAnonymityConfigArgs kAnonymityConfig) {
-            this.kAnonymityConfig = Output.ofNullable(kAnonymityConfig);
+            this.kAnonymityConfig = Codegen.ofNullable(kAnonymityConfig);
             return this;
         }
         public Builder kMapEstimationConfig(@Nullable Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig) {
@@ -172,7 +173,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
             return this;
         }
         public Builder kMapEstimationConfig(@Nullable GooglePrivacyDlpV2KMapEstimationConfigArgs kMapEstimationConfig) {
-            this.kMapEstimationConfig = Output.ofNullable(kMapEstimationConfig);
+            this.kMapEstimationConfig = Codegen.ofNullable(kMapEstimationConfig);
             return this;
         }
         public Builder lDiversityConfig(@Nullable Output<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig) {
@@ -180,7 +181,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
             return this;
         }
         public Builder lDiversityConfig(@Nullable GooglePrivacyDlpV2LDiversityConfigArgs lDiversityConfig) {
-            this.lDiversityConfig = Output.ofNullable(lDiversityConfig);
+            this.lDiversityConfig = Codegen.ofNullable(lDiversityConfig);
             return this;
         }
         public Builder numericalStatsConfig(@Nullable Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig) {
@@ -188,7 +189,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
             return this;
         }
         public Builder numericalStatsConfig(@Nullable GooglePrivacyDlpV2NumericalStatsConfigArgs numericalStatsConfig) {
-            this.numericalStatsConfig = Output.ofNullable(numericalStatsConfig);
+            this.numericalStatsConfig = Codegen.ofNullable(numericalStatsConfig);
             return this;
         }        public GooglePrivacyDlpV2PrivacyMetricArgs build() {
             return new GooglePrivacyDlpV2PrivacyMetricArgs(categoricalStatsConfig, deltaPresenceEstimationConfig, kAnonymityConfig, kMapEstimationConfig, lDiversityConfig, numericalStatsConfig);

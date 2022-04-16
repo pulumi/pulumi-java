@@ -9,6 +9,7 @@ import io.pulumi.azurenative.servicebus.inputs.NWRuleSetVirtualNetworkRulesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="defaultAction")
       private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
-    public Output<Either<String,DefaultAction>> getDefaultAction() {
-        return this.defaultAction == null ? Output.empty() : this.defaultAction;
+    public Output<Either<String,DefaultAction>> defaultAction() {
+        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="ipRules")
       private final @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
 
-    public Output<List<NWRuleSetIpRulesArgs>> getIpRules() {
-        return this.ipRules == null ? Output.empty() : this.ipRules;
+    public Output<List<NWRuleSetIpRulesArgs>> ipRules() {
+        return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -59,7 +60,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,8 +71,8 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
-    public Output<List<NWRuleSetVirtualNetworkRulesArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
+    public Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules() {
+        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 
     public NamespaceNetworkRuleSetArgs(
@@ -88,11 +89,11 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     }
 
     private NamespaceNetworkRuleSetArgs() {
-        this.defaultAction = Output.empty();
-        this.ipRules = Output.empty();
-        this.namespaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.virtualNetworkRules = Output.empty();
+        this.defaultAction = Codegen.empty();
+        this.ipRules = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.virtualNetworkRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
-            this.defaultAction = Output.ofNullable(defaultAction);
+            this.defaultAction = Codegen.ofNullable(defaultAction);
             return this;
         }
         public Builder ipRules(@Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules) {
@@ -136,7 +137,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipRules(@Nullable List<NWRuleSetIpRulesArgs> ipRules) {
-            this.ipRules = Output.ofNullable(ipRules);
+            this.ipRules = Codegen.ofNullable(ipRules);
             return this;
         }
         public Builder ipRules(NWRuleSetIpRulesArgs... ipRules) {
@@ -163,7 +164,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder virtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
             return this;
         }
         public Builder virtualNetworkRules(NWRuleSetVirtualNetworkRulesArgs... virtualNetworkRules) {

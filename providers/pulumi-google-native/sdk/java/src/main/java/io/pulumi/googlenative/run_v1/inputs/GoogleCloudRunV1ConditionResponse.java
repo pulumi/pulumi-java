@@ -23,7 +23,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
     @Import(name="lastTransitionTime", required=true)
       private final String lastTransitionTime;
 
-    public String getLastTransitionTime() {
+    public String lastTransitionTime() {
         return this.lastTransitionTime;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
@@ -67,7 +67,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -78,7 +78,7 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 import io.pulumi.azurenative.virtualmachineimages.inputs.VirtualNetworkConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ImageTemplateVmProfileArgs extends io.pulumi.resources.Resour
     @Import(name="osDiskSizeGB")
       private final @Nullable Output<Integer> osDiskSizeGB;
 
-    public Output<Integer> getOsDiskSizeGB() {
-        return this.osDiskSizeGB == null ? Output.empty() : this.osDiskSizeGB;
+    public Output<Integer> osDiskSizeGB() {
+        return this.osDiskSizeGB == null ? Codegen.empty() : this.osDiskSizeGB;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ImageTemplateVmProfileArgs extends io.pulumi.resources.Resour
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+    public Output<String> vmSize() {
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     /**
@@ -49,23 +50,23 @@ public final class ImageTemplateVmProfileArgs extends io.pulumi.resources.Resour
     @Import(name="vnetConfig")
       private final @Nullable Output<VirtualNetworkConfigArgs> vnetConfig;
 
-    public Output<VirtualNetworkConfigArgs> getVnetConfig() {
-        return this.vnetConfig == null ? Output.empty() : this.vnetConfig;
+    public Output<VirtualNetworkConfigArgs> vnetConfig() {
+        return this.vnetConfig == null ? Codegen.empty() : this.vnetConfig;
     }
 
     public ImageTemplateVmProfileArgs(
         @Nullable Output<Integer> osDiskSizeGB,
         @Nullable Output<String> vmSize,
         @Nullable Output<VirtualNetworkConfigArgs> vnetConfig) {
-        this.osDiskSizeGB = osDiskSizeGB == null ? Output.ofNullable(0) : osDiskSizeGB;
-        this.vmSize = vmSize == null ? Output.ofNullable("") : vmSize;
+        this.osDiskSizeGB = osDiskSizeGB == null ? Codegen.ofNullable(0) : osDiskSizeGB;
+        this.vmSize = vmSize == null ? Codegen.ofNullable("") : vmSize;
         this.vnetConfig = vnetConfig;
     }
 
     private ImageTemplateVmProfileArgs() {
-        this.osDiskSizeGB = Output.empty();
-        this.vmSize = Output.empty();
-        this.vnetConfig = Output.empty();
+        this.osDiskSizeGB = Codegen.empty();
+        this.vmSize = Codegen.empty();
+        this.vnetConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ImageTemplateVmProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
-            this.osDiskSizeGB = Output.ofNullable(osDiskSizeGB);
+            this.osDiskSizeGB = Codegen.ofNullable(osDiskSizeGB);
             return this;
         }
         public Builder vmSize(@Nullable Output<String> vmSize) {
@@ -105,7 +106,7 @@ public final class ImageTemplateVmProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }
         public Builder vnetConfig(@Nullable Output<VirtualNetworkConfigArgs> vnetConfig) {
@@ -113,7 +114,7 @@ public final class ImageTemplateVmProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vnetConfig(@Nullable VirtualNetworkConfigArgs vnetConfig) {
-            this.vnetConfig = Output.ofNullable(vnetConfig);
+            this.vnetConfig = Codegen.ofNullable(vnetConfig);
             return this;
         }        public ImageTemplateVmProfileArgs build() {
             return new ImageTemplateVmProfileArgs(osDiskSizeGB, vmSize, vnetConfig);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.servicebus.inputs.PrivateEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -36,8 +37,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> getPrivateEndpoint() {
-        return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
+    public Output<PrivateEndpointArgs> privateEndpoint() {
+        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Output.empty() : this.privateEndpointConnectionName;
+    public Output<String> privateEndpointConnectionName() {
+        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+    public Output<ConnectionStateArgs> privateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,EndPointProvisioningState>> provisioningState;
 
-    public Output<Either<String,EndPointProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,EndPointProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,12 +101,12 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.namespaceName = Output.empty();
-        this.privateEndpoint = Output.empty();
-        this.privateEndpointConnectionName = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.namespaceName = Codegen.empty();
+        this.privateEndpoint = Codegen.empty();
+        this.privateEndpointConnectionName = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
-            this.privateEndpoint = Output.ofNullable(privateEndpoint);
+            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
@@ -159,7 +160,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
+            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -167,7 +168,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,EndPointProvisioningState>> provisioningState) {
@@ -175,7 +176,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,EndPointProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

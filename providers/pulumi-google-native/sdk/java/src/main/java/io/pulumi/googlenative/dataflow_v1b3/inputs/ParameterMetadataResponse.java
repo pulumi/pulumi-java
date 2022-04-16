@@ -26,7 +26,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
     @Import(name="customMetadata", required=true)
       private final Map<String,String> customMetadata;
 
-    public Map<String,String> getCustomMetadata() {
+    public Map<String,String> customMetadata() {
         return this.customMetadata;
     }
 
@@ -37,7 +37,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
     @Import(name="helpText", required=true)
       private final String helpText;
 
-    public String getHelpText() {
+    public String helpText() {
         return this.helpText;
     }
 
@@ -48,7 +48,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
     @Import(name="isOptional", required=true)
       private final Boolean isOptional;
 
-    public Boolean getIsOptional() {
+    public Boolean isOptional() {
         return this.isOptional;
     }
 
@@ -59,7 +59,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -70,7 +70,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -81,7 +81,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
     @Import(name="paramType", required=true)
       private final String paramType;
 
-    public String getParamType() {
+    public String paramType() {
         return this.paramType;
     }
 
@@ -92,7 +92,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
     @Import(name="regexes", required=true)
       private final List<String> regexes;
 
-    public List<String> getRegexes() {
+    public List<String> regexes() {
         return this.regexes;
     }
 

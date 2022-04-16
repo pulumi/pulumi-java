@@ -6,6 +6,17 @@ on:
   push:
     branches:
       - main
+    tags:
+      - sdk/v*.*.*
+      - aws-native/v*.*.*
+      - aws/v*.*.*
+      - azure-native/v*.*.*
+      - docker/v*.*.*
+      - eks/v*.*.*
+      - gcp/v*.*.*
+      - google-native/v*.*.*
+      - kubernetes/v*.*.*
+      - random/v*.*.*
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
@@ -19,6 +30,7 @@ env:
   PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS: 300000
   GPR_USER: ${{ secrets.GPR_USER }}
   GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
 
@@ -27,6 +39,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
+      - name: Fetch Tags
+        run: git fetch --quiet --prune --unshallow --tags
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v1.3.1
+        with:
+          repo: pulumi/pulumictl
+      - run: ./scripts/versions.sh | tee versions.txt
+      - name: Setup versioning env vars
+        run: cat versions.txt | tee $GITHUB_ENV
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -52,28 +74,48 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
       - name: Build and unit-test Pulumi Java SDK
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
-      - name: Test Pulumi JVM Language Provider and Codegen
-        run: make test_go
-      - name: Integration tests
-        run: make integration_tests
+      - name: Publish Pulumi Java SDK locally to enable codegen tests
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: publishToMavenLocal
+          build-root-directory: sdk/jvm
+      - run: make build_go
+      - run: make test_go
+      - run: make bin/pulumi-java-gen
+      - run: make bin/pulumi-language-jvm
+      - uses: actions/upload-artifact@v3
+        with:
+          name: versions.txt
+          path: versions.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: go-binaries
+          path: bin/
+      - name: Publish Pulumi Java SDK
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        # Note 1: Ignore errors. Since this publishes on push and tag
+        # triggers, it is possible for the same commit (and
+        # -alpha-$commithash version) to be published twice, yiedling
+        # `Could not PUT Received 409 from server: Conflict`. Ignoring
+        # errors works around this. If the cause of the error is
+        # different, that is it is a real substantial error,
+        # downstream tests should fail to find the JAR in the repo.
+        continue-on-error: true
+        with:
+          arguments: publish
+          build-root-directory: sdk/jvm
     strategy:
       fail-fast: true
 
   providers:
+    needs: prerequisites
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     strategy:
       fail-fast: false
       matrix:
@@ -86,83 +128,92 @@ jobs:
         - aws-native
         - kubernetes
         - docker
-        - eks
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
+      - name: Download versions.txt
+        uses: actions/download-artifact@v2
         with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
+          name: versions.txt
+          path: artifacts
+      - name: Setup versioning env vars
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
+      - name: Download go-binaries
+        uses: actions/download-artifact@v2
+        with:
+          name: go-binaries
+          path: ~/bin
+      - name: Activate go-binaries
         run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
+          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-java-gen
+      - name: Codegen the provider code
+        run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
+      - name: Build and unit-test
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: build
-          build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      # build original
-      - uses: actions/checkout@v2
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+          gradle-version: 7.4.1
+      - name: Publish
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        # See Note 1.
+        continue-on-error: true
         with:
-          ref: ${{ github.event.pull_request.base.ref }}
-      - name: Build JVM SDK provider
-        run: make provider.${PROVIDER}.install
-        env:
-          PROVIDER: ${{ matrix.provider }}
-      - name: Get old JAR size
-        id: oldJar
-        run: |
-          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
-          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
-          echo ::set-output name=size::${size}
-          echo ::set-output name=sizeHuman::${sizeHuman}
-      # clean up
-      - name: Remove old JARs
-        run: |
-          rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
-      # build new
-      - uses: actions/checkout@v2
-      - name: Build JVM SDK provider
-        run: make provider.${PROVIDER}.install
-        env:
-          PROVIDER: ${{ matrix.provider }}
+          arguments: publish
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+          gradle-version: 7.4.1
+
+      # Below: compute JAR size diff of the current version compared to PR base.
       - name: Get new JAR size
         id: newJar
         run: |
           size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
-          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # clean up
+      - name: Remove new JARs
+        continue-on-error: true
+        run: |
+          rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
+      # build old
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+      - run: make submodule_update
+      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        continue-on-error: true
+        run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
+      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        continue-on-error: true
+        with:
+          gradle-version: 7.4.1
+          arguments: build
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+      - name: Get old JAR size
+        id: oldJar
+        continue-on-error: true
+        run: |
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
           echo ::set-output name=size::${size}
           echo ::set-output name=sizeHuman::${sizeHuman}
       # prepare output
       - name: Get JAR size diff
+        continue-on-error: true
         id: diffJar
         run: |
           size=$((${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }}))
           sizePct=$(( 100 * ( ${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }} ) / ${{ steps.oldJar.outputs.size }} ))
-          sizeHuman=$(numfmt --to=iec-i --suffix=B $size)
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
           echo ::set-output name=size::${size}
           echo ::set-output name=sizePct::${sizePct}
           echo ::set-output name=sizeHuman::${sizeHuman}
@@ -173,11 +224,133 @@ jobs:
           echo "Old Size : ${{ steps.oldJar.outputs.sizeHuman }}"
           echo "Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}"
           echo "Change(%): ${{ steps.diffJar.outputs.sizePct }}%"
-  example-aws-java-webserver:
+
+  # Copied from providers task to build providers that depend on other providers.
+  providers2:
+    needs: providers
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        provider:
+        - eks
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: 'gradle'
+      - name: Download versions.txt
+        uses: actions/download-artifact@v2
+        with:
+          name: versions.txt
+          path: artifacts
+      - name: Setup versioning env vars
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
+      - name: Download go-binaries
+        uses: actions/download-artifact@v2
+        with:
+          name: go-binaries
+          path: ~/bin
+      - name: Activate go-binaries
+        run: |
+          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-java-gen
+      - name: Codegen the provider code
+        run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
+      - name: Build and unit-test
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: build
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+          gradle-version: 7.4.1
+      - name: Publish
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        # See Note 1.
+        continue-on-error: true
+        with:
+          arguments: publish
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+          gradle-version: 7.4.1
+
+      # Below: compute JAR size diff of the current version compared to PR base.
+      - name: Get new JAR size
+        id: newJar
+        run: |
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # clean up
+      - name: Remove new JARs
+        continue-on-error: true
+        run: |
+          rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
+      # build old
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+      - run: make submodule_update
+      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        continue-on-error: true
+        run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
+      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        continue-on-error: true
+        with:
+          gradle-version: 7.4.1
+          arguments: build
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+      - name: Get old JAR size
+        id: oldJar
+        continue-on-error: true
+        run: |
+          size=$(du -sb providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/ | awk '{ print $1 }')
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      # prepare output
+      - name: Get JAR size diff
+        continue-on-error: true
+        id: diffJar
+        run: |
+          size=$((${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }}))
+          sizePct=$(( 100 * ( ${{ steps.newJar.outputs.size }} - ${{ steps.oldJar.outputs.size }} ) / ${{ steps.oldJar.outputs.size }} ))
+          sizeHuman=$(numfmt --to=iec-i --suffix=B $(echo $size | sed 's/-//g'))
+          echo ::set-output name=size::${size}
+          echo ::set-output name=sizePct::${sizePct}
+          echo ::set-output name=sizeHuman::${sizeHuman}
+      - name: Display provider size summary
+        run: |
+          echo "Provider : ${{ matrix.provider }}"
+          echo "New Size : ${{ steps.newJar.outputs.sizeHuman }}"
+          echo "Old Size : ${{ steps.oldJar.outputs.sizeHuman }}"
+          echo "Size Diff: ${{ steps.diffJar.outputs.sizeHuman }}"
+          echo "Change(%): ${{ steps.diffJar.outputs.sizePct }}%"
+
+  examples:
+    runs-on: ubuntu-latest
+    needs: providers2
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+        - aws-java-webserver
+        - aws-native-java-s3-folder
+        - azure-java-appservice-sql
+        - azure-java-static-website
+        - gcp-java-gke-hello-world
+        - minimal
+        - random
+        - eks-minimal
+    steps:
+      - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -202,14 +375,16 @@ jobs:
           path: |
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
+          key: go-cache-examples-${{ hashFiles('**/go.sum') }}
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
+      - name: Download versions.txt
+        uses: actions/download-artifact@v2
+        with:
+          name: versions.txt
+          path: artifacts
+      - name: Setup versioning env vars
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -219,367 +394,21 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Build AWS resource provider
-        run: make provider.aws.build provider.aws.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run aws-java-webserver example
-        run: make test_example.aws-java-webserver
-
-  example-azure-java-appservice-sql:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      #- name: Auth
-      #  uses: azure/login@v1
-      #  with:
-      #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
-      - name: Build Azure Native resource provider
-        run: make provider.azure-native.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example azure-java-appservice-sql
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        run: make test_example.azure-java-appservice-sql
-
-  example-gcp-java-gke-hello-world:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
       - uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: pulumi-development
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-      - name: Build GCP resource provider
-        run: make provider.gcp.install
-      - name: Build Kubernetes resource provider
-        run: make provider.kubernetes.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example gcp-java-gke-hello-world
-        run: make test_example.gcp-java-gke-hello-world
-
-  example-minimal:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'maven'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example minimal
-        run: make test_example.minimal
-
-  example-aws-native-java-s3-folder:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'maven'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ env.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-duration-seconds: 3600
-          role-session-name: ${{ env.PROVIDER }}@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Build AWS provider
-        run: make provider.aws.install
-      - name: Build AWS Native provider
-        run: make provider.aws-native.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example aws-native-java-s3-folder
-        run: make test_example.aws-native-java-s3-folder
-
-  example-azure-java-static-website:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      #- name: Auth
-      #  uses: azure/login@v1
-      #  with:
-      #    creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
-      - name: Build AWS provider
-        run: make provider.aws.install
-      - name: Build Azure Native provider
-        run: make provider.azure-native.install
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Run example azure-java-static-website
+      - name: Configure maven
+        run: cp maven/settings.xml ~/.m2/settings.xml
+      - name: Run ${{ matrix.example }} example
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        run: make test_example.azure-java-static-website
-
-  example-random:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'maven'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Build random provider
-        run: make provider.random.install
-      - name: Run random example
-        run: make test_example.random
-    strategy:
-      fail-fast: true
-
-  example-eks-minimal:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Build Java language provider
-        run: make bin/pulumi-language-jvm
-      - name: Build AWS provider
-        run: make provider.aws.install
-      - name: Build EKS provider
-        run: make provider.eks.install
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ env.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-duration-seconds: 3600
-          role-session-name: ${{ env.PROVIDER }}@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Run eks-minimal example
-        run: make test_example.eks-minimal
-    strategy:
-      fail-fast: true
+        run: make test_example.${{ matrix.example }}
 
   go-lint:
     runs-on: ubuntu-latest
@@ -594,31 +423,71 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ env.PR_COMMIT_SHA }}
+      - run: make submodule_update
       - name: Lint ${{ matrix.directory }}
         run: |
           cd ${{ matrix.directory }} && golangci-lint run -c ../.golangci.yml
 
-  publish-java-sdk-snapshot:
-    if: github.ref_name == 'main'
+  test_templates:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    needs: providers
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
-      # Delete SNAPSHOT version before adding a new one, otherwise
-      # jars with different date stamps keep accumulating under the
-      # SNAPSHOT version.
-      - uses: actions/delete-package-versions@v3
+      - name: Set up Go 1.17.x
+        uses: actions/setup-go@v2
         with:
-          package-name: 'io.pulumi.pulumi'
-          delete-only-pre-release-versions: "true"
-      - name: Publish sdk/jvm SNAPSHOT to Maven Repo
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+          go-version: 1.17.x
+      - name: Configure Go cache
+        id: go-cache-paths
+        run: |
+          echo "::set-output name=go-build::$(go env GOCACHE)"
+          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+      - name: Set up Go cache
+        uses: actions/cache@v2
+        id: go-cache
         with:
-          arguments: publish
-          build-root-directory: sdk/jvm
+          path: |
+              ${{ steps.go-cache-paths.outputs.go-build }}
+              ${{ steps.go-cache-paths.outputs.go-mod }}
+          key: go-cache-templates-${{ hashFiles('**/go.sum') }}
+      - name: Download versions.txt
+        uses: actions/download-artifact@v2
+        with:
+          name: versions.txt
+          path: artifacts
+      - name: Setup versioning env vars
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
+      - name: Configure maven
+        run: cp maven/settings.xml ~/.m2/settings.xml
+      - name: Prefetch provider builds
+        run: cd maven/dummy && mvn -q compile
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-duration-seconds: 3600
+          role-session-name: ${{ env.PROVIDER }}@githubActions
+          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+      - name: Configure GCP Credentials
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: pulumi-development
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      - env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+        run: make test_templates

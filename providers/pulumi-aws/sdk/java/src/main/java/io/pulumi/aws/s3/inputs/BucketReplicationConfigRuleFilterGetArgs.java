@@ -7,6 +7,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterAndGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterTagGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
     @Import(name="and")
       private final @Nullable Output<BucketReplicationConfigRuleFilterAndGetArgs> and;
 
-    public Output<BucketReplicationConfigRuleFilterAndGetArgs> getAnd() {
-        return this.and == null ? Output.empty() : this.and;
+    public Output<BucketReplicationConfigRuleFilterAndGetArgs> and() {
+        return this.and == null ? Codegen.empty() : this.and;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
     @Import(name="tag")
       private final @Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag;
 
-    public Output<BucketReplicationConfigRuleFilterTagGetArgs> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<BucketReplicationConfigRuleFilterTagGetArgs> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public BucketReplicationConfigRuleFilterGetArgs(
@@ -59,9 +60,9 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
     }
 
     private BucketReplicationConfigRuleFilterGetArgs() {
-        this.and = Output.empty();
-        this.prefix = Output.empty();
-        this.tag = Output.empty();
+        this.and = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
             return this;
         }
         public Builder and(@Nullable BucketReplicationConfigRuleFilterAndGetArgs and) {
-            this.and = Output.ofNullable(and);
+            this.and = Codegen.ofNullable(and);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -101,7 +102,7 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder tag(@Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag) {
@@ -109,7 +110,7 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
             return this;
         }
         public Builder tag(@Nullable BucketReplicationConfigRuleFilterTagGetArgs tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public BucketReplicationConfigRuleFilterGetArgs build() {
             return new BucketReplicationConfigRuleFilterGetArgs(and, prefix, tag);

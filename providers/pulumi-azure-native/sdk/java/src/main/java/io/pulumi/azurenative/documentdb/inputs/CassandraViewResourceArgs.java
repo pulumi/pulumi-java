@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -35,7 +36,7 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
     @Import(name="viewDefinition", required=true)
       private final Output<String> viewDefinition;
 
-    public Output<String> getViewDefinition() {
+    public Output<String> viewDefinition() {
         return this.viewDefinition;
     }
 
@@ -47,8 +48,8 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
     }
 
     private CassandraViewResourceArgs() {
-        this.id = Output.empty();
-        this.viewDefinition = Output.empty();
+        this.id = Codegen.empty();
+        this.viewDefinition = Codegen.empty();
     }
 
     public static Builder builder() {

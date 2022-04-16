@@ -22,6 +22,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -57,7 +58,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    public Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> getDeadLetterDestination() {
+    public Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return this.deadLetterDestination;
     }
     /**
@@ -73,7 +74,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    public Output</* @Nullable */ DeadLetterWithResourceIdentityResponse> getDeadLetterWithResourceIdentity() {
+    public Output</* @Nullable */ DeadLetterWithResourceIdentityResponse> deadLetterWithResourceIdentity() {
         return this.deadLetterWithResourceIdentity;
     }
     /**
@@ -89,7 +90,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    public Output</* @Nullable */ DeliveryWithResourceIdentityResponse> getDeliveryWithResourceIdentity() {
+    public Output</* @Nullable */ DeliveryWithResourceIdentityResponse> deliveryWithResourceIdentity() {
         return this.deliveryWithResourceIdentity;
     }
     /**
@@ -105,7 +106,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    public Output</* @Nullable */ Object> getDestination() {
+    public Output</* @Nullable */ Object> destination() {
         return this.destination;
     }
     /**
@@ -119,7 +120,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return The event delivery schema for the event subscription.
      * 
      */
-    public Output</* @Nullable */ String> getEventDeliverySchema() {
+    public Output</* @Nullable */ String> eventDeliverySchema() {
         return this.eventDeliverySchema;
     }
     /**
@@ -133,7 +134,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return Expiration time of the event subscription.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationTimeUtc() {
+    public Output</* @Nullable */ String> expirationTimeUtc() {
         return this.expirationTimeUtc;
     }
     /**
@@ -147,7 +148,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return Information about the filter for the event subscription.
      * 
      */
-    public Output</* @Nullable */ EventSubscriptionFilterResponse> getFilter() {
+    public Output</* @Nullable */ EventSubscriptionFilterResponse> filter() {
         return this.filter;
     }
     /**
@@ -161,7 +162,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return List of user defined labels.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLabels() {
+    public Output</* @Nullable */ List<String>> labels() {
         return this.labels;
     }
     /**
@@ -175,7 +176,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -189,7 +190,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return Provisioning state of the event subscription.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -203,7 +204,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
      */
-    public Output</* @Nullable */ RetryPolicyResponse> getRetryPolicy() {
+    public Output</* @Nullable */ RetryPolicyResponse> retryPolicy() {
         return this.retryPolicy;
     }
     /**
@@ -217,7 +218,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return The system metadata relating to Event Subscription resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -231,7 +232,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return Name of the topic of the event subscription.
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
     /**
@@ -245,7 +246,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -271,7 +272,7 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public SystemTopicEventSubscription(String name, SystemTopicEventSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:SystemTopicEventSubscription", name, args == null ? SystemTopicEventSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventgrid:SystemTopicEventSubscription", name, args == null ? SystemTopicEventSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SystemTopicEventSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

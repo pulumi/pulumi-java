@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.DataMaskingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mode")
       private final @Nullable Output<Either<String,DataMaskingMode>> mode;
 
-    public Output<Either<String,DataMaskingMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<Either<String,DataMaskingMode>> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public DataMaskingEntityArgs(
@@ -46,8 +47,8 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataMaskingEntityArgs() {
-        this.mode = Output.empty();
-        this.value = Output.empty();
+        this.mode = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mode(@Nullable Either<String,DataMaskingMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -85,7 +86,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public DataMaskingEntityArgs build() {
             return new DataMaskingEntityArgs(mode, value);

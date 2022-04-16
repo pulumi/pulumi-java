@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storage_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.BucketArgs;
 import io.pulumi.googlenative.storage_v1.outputs.BucketAccessControlResponse;
@@ -45,7 +46,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Access controls on the bucket.
      * 
      */
-    public Output<List<BucketAccessControlResponse>> getAcl() {
+    public Output<List<BucketAccessControlResponse>> acl() {
         return this.acl;
     }
     /**
@@ -59,7 +60,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's Autoclass configuration.
      * 
      */
-    public Output<BucketAutoclassResponse> getAutoclass() {
+    public Output<BucketAutoclassResponse> autoclass() {
         return this.autoclass;
     }
     /**
@@ -73,7 +74,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's billing configuration.
      * 
      */
-    public Output<BucketBillingResponse> getBilling() {
+    public Output<BucketBillingResponse> billing() {
         return this.billing;
     }
     /**
@@ -87,7 +88,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's Cross-Origin Resource Sharing (CORS) configuration.
      * 
      */
-    public Output<List<BucketCorsItemResponse>> getCors() {
+    public Output<List<BucketCorsItemResponse>> cors() {
         return this.cors;
     }
     /**
@@ -101,7 +102,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's custom placement configuration for Custom Dual Regions.
      * 
      */
-    public Output<BucketCustomPlacementConfigResponse> getCustomPlacementConfig() {
+    public Output<BucketCustomPlacementConfigResponse> customPlacementConfig() {
         return this.customPlacementConfig;
     }
     /**
@@ -115,7 +116,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold's release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
      * 
      */
-    public Output<Boolean> getDefaultEventBasedHold() {
+    public Output<Boolean> defaultEventBasedHold() {
         return this.defaultEventBasedHold;
     }
     /**
@@ -129,7 +130,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Default access controls to apply to new objects when no ACL is provided.
      * 
      */
-    public Output<List<ObjectAccessControlResponse>> getDefaultObjectAcl() {
+    public Output<List<ObjectAccessControlResponse>> defaultObjectAcl() {
         return this.defaultObjectAcl;
     }
     /**
@@ -143,7 +144,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Encryption configuration for a bucket.
      * 
      */
-    public Output<BucketEncryptionResponse> getEncryption() {
+    public Output<BucketEncryptionResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -157,7 +158,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return HTTP 1.1 Entity tag for the bucket.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -171,7 +172,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's IAM configuration.
      * 
      */
-    public Output<BucketIamConfigurationResponse> getIamConfiguration() {
+    public Output<BucketIamConfigurationResponse> iamConfiguration() {
         return this.iamConfiguration;
     }
     /**
@@ -185,7 +186,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The kind of item this is. For buckets, this is always storage#bucket.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -199,7 +200,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return User-provided labels, in key/value pairs.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -213,7 +214,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's lifecycle configuration. See lifecycle management for more information.
      * 
      */
-    public Output<BucketLifecycleResponse> getLifecycle() {
+    public Output<BucketLifecycleResponse> lifecycle() {
         return this.lifecycle;
     }
     /**
@@ -227,7 +228,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer's guide for the authoritative list.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -241,7 +242,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The type of the bucket location.
      * 
      */
-    public Output<String> getLocationType() {
+    public Output<String> locationType() {
         return this.locationType;
     }
     /**
@@ -255,7 +256,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.
      * 
      */
-    public Output<BucketLoggingResponse> getLogging() {
+    public Output<BucketLoggingResponse> logging() {
         return this.logging;
     }
     /**
@@ -269,7 +270,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The metadata generation of this bucket.
      * 
      */
-    public Output<String> getMetageneration() {
+    public Output<String> metageneration() {
         return this.metageneration;
     }
     /**
@@ -283,7 +284,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -297,7 +298,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The owner of the bucket. This is always the project team's owner group.
      * 
      */
-    public Output<BucketOwnerResponse> getOwner() {
+    public Output<BucketOwnerResponse> owner() {
         return this.owner;
     }
     /**
@@ -311,7 +312,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The project number of the project the bucket belongs to.
      * 
      */
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber;
     }
     /**
@@ -325,7 +326,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
      * 
      */
-    public Output<BucketRetentionPolicyResponse> getRetentionPolicy() {
+    public Output<BucketRetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
@@ -339,7 +340,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.
      * 
      */
-    public Output<String> getRpo() {
+    public Output<String> rpo() {
         return this.rpo;
     }
     /**
@@ -353,7 +354,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Reserved for future use.
      * 
      */
-    public Output<Boolean> getSatisfiesPZS() {
+    public Output<Boolean> satisfiesPZS() {
         return this.satisfiesPZS;
     }
     /**
@@ -367,7 +368,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The URI of this bucket.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -381,7 +382,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.
      * 
      */
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
     /**
@@ -395,7 +396,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The creation time of the bucket in RFC 3339 format.
      * 
      */
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -409,7 +410,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The modification time of the bucket in RFC 3339 format.
      * 
      */
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated;
     }
     /**
@@ -423,7 +424,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's versioning configuration.
      * 
      */
-    public Output<BucketVersioningResponse> getVersioning() {
+    public Output<BucketVersioningResponse> versioning() {
         return this.versioning;
     }
     /**
@@ -437,7 +438,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
      * 
      */
-    public Output<BucketWebsiteResponse> getWebsite() {
+    public Output<BucketWebsiteResponse> website() {
         return this.website;
     }
 
@@ -463,7 +464,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bucket(String name, @Nullable BucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storage/v1:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storage/v1:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Bucket(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

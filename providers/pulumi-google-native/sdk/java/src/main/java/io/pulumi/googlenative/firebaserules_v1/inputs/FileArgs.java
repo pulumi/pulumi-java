@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebaserules_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -36,8 +37,8 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+    public Output<String> fingerprint() {
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,9 +62,9 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileArgs() {
-        this.content = Output.empty();
-        this.fingerprint = Output.empty();
-        this.name = Output.empty();
+        this.content = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder name(Output<String> name) {

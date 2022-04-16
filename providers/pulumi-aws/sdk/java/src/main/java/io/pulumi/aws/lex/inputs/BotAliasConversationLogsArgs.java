@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsLogSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BotAliasConversationLogsArgs extends io.pulumi.resources.Reso
     @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
 
@@ -34,8 +35,8 @@ public final class BotAliasConversationLogsArgs extends io.pulumi.resources.Reso
     @Import(name="logSettings")
       private final @Nullable Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings;
 
-    public Output<List<BotAliasConversationLogsLogSettingArgs>> getLogSettings() {
-        return this.logSettings == null ? Output.empty() : this.logSettings;
+    public Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings() {
+        return this.logSettings == null ? Codegen.empty() : this.logSettings;
     }
 
     public BotAliasConversationLogsArgs(
@@ -46,8 +47,8 @@ public final class BotAliasConversationLogsArgs extends io.pulumi.resources.Reso
     }
 
     private BotAliasConversationLogsArgs() {
-        this.iamRoleArn = Output.empty();
-        this.logSettings = Output.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.logSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class BotAliasConversationLogsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder logSettings(@Nullable List<BotAliasConversationLogsLogSettingArgs> logSettings) {
-            this.logSettings = Output.ofNullable(logSettings);
+            this.logSettings = Codegen.ofNullable(logSettings);
             return this;
         }
         public Builder logSettings(BotAliasConversationLogsLogSettingArgs... logSettings) {

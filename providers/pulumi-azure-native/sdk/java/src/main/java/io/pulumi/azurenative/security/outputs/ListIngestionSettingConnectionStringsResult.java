@@ -25,7 +25,7 @@ public final class ListIngestionSettingConnectionStringsResult {
      * Connection strings
      * 
     */
-    public List<IngestionConnectionStringResponse> getValue() {
+    public List<IngestionConnectionStringResponse> value() {
         return this.value;
     }
 

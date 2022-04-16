@@ -13,6 +13,7 @@ import io.pulumi.aws.apprunner.outputs.ServiceSourceConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return ARN of the App Runner service.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.
      * 
      */
-    public Output<String> getAutoScalingConfigurationArn() {
+    public Output<String> autoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn;
     }
     /**
@@ -72,7 +73,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
      * 
      */
-    public Output</* @Nullable */ ServiceEncryptionConfiguration> getEncryptionConfiguration() {
+    public Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     /**
@@ -86,7 +87,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
      * 
      */
-    public Output<ServiceHealthCheckConfiguration> getHealthCheckConfiguration() {
+    public Output<ServiceHealthCheckConfiguration> healthCheckConfiguration() {
         return this.healthCheckConfiguration;
     }
     /**
@@ -100,7 +101,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
      * 
      */
-    public Output<ServiceInstanceConfiguration> getInstanceConfiguration() {
+    public Output<ServiceInstanceConfiguration> instanceConfiguration() {
         return this.instanceConfiguration;
     }
     /**
@@ -114,7 +115,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
      * 
      */
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
     /**
@@ -128,7 +129,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Name of the service.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -142,7 +143,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A subdomain URL that App Runner generated for this service. You can use this URL to access your service web application.
      * 
      */
-    public Output<String> getServiceUrl() {
+    public Output<String> serviceUrl() {
         return this.serviceUrl;
     }
     /**
@@ -156,7 +157,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
      * 
      */
-    public Output<ServiceSourceConfiguration> getSourceConfiguration() {
+    public Output<ServiceSourceConfiguration> sourceConfiguration() {
         return this.sourceConfiguration;
     }
     /**
@@ -170,7 +171,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The current state of the App Runner service.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -184,7 +185,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -198,7 +199,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -224,7 +225,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apprunner/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apprunner/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable ServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

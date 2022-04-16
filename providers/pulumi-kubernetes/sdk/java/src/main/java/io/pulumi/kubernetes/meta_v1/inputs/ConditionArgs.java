@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastTransitionTime", required=true)
       private final Output<String> lastTransitionTime;
 
-    public Output<String> getLastTransitionTime() {
+    public Output<String> lastTransitionTime() {
         return this.lastTransitionTime;
     }
 
@@ -37,7 +38,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message", required=true)
       private final Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
 
@@ -48,8 +49,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+    public Output<Integer> observedGeneration() {
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason", required=true)
       private final Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
 
@@ -70,7 +71,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -81,7 +82,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -101,12 +102,12 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionArgs() {
-        this.lastTransitionTime = Output.empty();
-        this.message = Output.empty();
-        this.observedGeneration = Output.empty();
-        this.reason = Output.empty();
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.lastTransitionTime = Codegen.empty();
+        this.message = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }
         public Builder reason(Output<String> reason) {

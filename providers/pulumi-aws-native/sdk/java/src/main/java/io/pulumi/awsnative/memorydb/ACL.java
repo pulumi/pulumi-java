@@ -9,6 +9,7 @@ import io.pulumi.awsnative.memorydb.outputs.ACLTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return The name of the acl.
      * 
      */
-    public Output<String> getACLName() {
+    public Output<String> aCLName() {
         return this.aCLName;
     }
     /**
@@ -44,7 +45,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the acl.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return Indicates acl status. Can be "creating", "active", "modifying", "deleting".
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -72,7 +73,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this cluster.
      * 
      */
-    public Output</* @Nullable */ List<ACLTag>> getTags() {
+    public Output</* @Nullable */ List<ACLTag>> tags() {
         return this.tags;
     }
     /**
@@ -86,7 +87,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @return List of users associated to this acl.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUserNames() {
+    public Output</* @Nullable */ List<String>> userNames() {
         return this.userNames;
     }
 
@@ -112,7 +113,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ACL(String name, @Nullable ACLArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:memorydb:ACL", name, args == null ? ACLArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:memorydb:ACL", name, args == null ? ACLArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ACL(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

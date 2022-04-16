@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.Custom
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -55,7 +56,7 @@ public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.Custom
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.Custom
      * @return The status of the database transparent data encryption.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -83,7 +84,7 @@ public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.Custom
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlPoolTransparentDataEncryption(String name, SqlPoolTransparentDataEncryptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:SqlPoolTransparentDataEncryption", name, args == null ? SqlPoolTransparentDataEncryptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:synapse:SqlPoolTransparentDataEncryption", name, args == null ? SqlPoolTransparentDataEncryptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SqlPoolTransparentDataEncryption(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

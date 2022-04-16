@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The time the bookmark was created
      * 
      */
-    public Output</* @Nullable */ String> getCreated() {
+    public Output</* @Nullable */ String> created() {
         return this.created;
     }
     /**
@@ -57,7 +58,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return Describes a user that created the bookmark
      * 
      */
-    public Output</* @Nullable */ UserInfoResponse> getCreatedBy() {
+    public Output</* @Nullable */ UserInfoResponse> createdBy() {
         return this.createdBy;
     }
     /**
@@ -71,7 +72,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The display name of the bookmark
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +86,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -99,7 +100,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The bookmark event time
      * 
      */
-    public Output</* @Nullable */ String> getEventTime() {
+    public Output</* @Nullable */ String> eventTime() {
         return this.eventTime;
     }
     /**
@@ -113,7 +114,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return Describes an incident that relates to bookmark
      * 
      */
-    public Output</* @Nullable */ IncidentInfoResponse> getIncidentInfo() {
+    public Output</* @Nullable */ IncidentInfoResponse> incidentInfo() {
         return this.incidentInfo;
     }
     /**
@@ -127,7 +128,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return List of labels relevant to this bookmark
      * 
      */
-    public Output</* @Nullable */ List<String>> getLabels() {
+    public Output</* @Nullable */ List<String>> labels() {
         return this.labels;
     }
     /**
@@ -141,7 +142,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +156,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The notes of the bookmark
      * 
      */
-    public Output</* @Nullable */ String> getNotes() {
+    public Output</* @Nullable */ String> notes() {
         return this.notes;
     }
     /**
@@ -169,7 +170,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The query of the bookmark.
      * 
      */
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
     /**
@@ -183,7 +184,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The end time for the query
      * 
      */
-    public Output</* @Nullable */ String> getQueryEndTime() {
+    public Output</* @Nullable */ String> queryEndTime() {
         return this.queryEndTime;
     }
     /**
@@ -197,7 +198,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The query result of the bookmark.
      * 
      */
-    public Output</* @Nullable */ String> getQueryResult() {
+    public Output</* @Nullable */ String> queryResult() {
         return this.queryResult;
     }
     /**
@@ -211,7 +212,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The start time for the query
      * 
      */
-    public Output</* @Nullable */ String> getQueryStartTime() {
+    public Output</* @Nullable */ String> queryStartTime() {
         return this.queryStartTime;
     }
     /**
@@ -225,7 +226,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -239,7 +240,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return The last time the bookmark was updated
      * 
      */
-    public Output</* @Nullable */ String> getUpdated() {
+    public Output</* @Nullable */ String> updated() {
         return this.updated;
     }
     /**
@@ -253,7 +254,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @return Describes a user that updated the bookmark
      * 
      */
-    public Output</* @Nullable */ UserInfoResponse> getUpdatedBy() {
+    public Output</* @Nullable */ UserInfoResponse> updatedBy() {
         return this.updatedBy;
     }
 
@@ -279,7 +280,7 @@ public class Bookmark extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bookmark(String name, BookmarkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:Bookmark", name, args == null ? BookmarkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:Bookmark", name, args == null ? BookmarkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Bookmark(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

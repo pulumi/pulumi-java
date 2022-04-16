@@ -26,7 +26,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowedDeviceManagementLevels", required=true)
       private final List<String> allowedDeviceManagementLevels;
 
-    public List<String> getAllowedDeviceManagementLevels() {
+    public List<String> allowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels;
     }
 
@@ -37,7 +37,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowedEncryptionStatuses", required=true)
       private final List<String> allowedEncryptionStatuses;
 
-    public List<String> getAllowedEncryptionStatuses() {
+    public List<String> allowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses;
     }
 
@@ -48,7 +48,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="osConstraints", required=true)
       private final List<OsConstraintResponse> osConstraints;
 
-    public List<OsConstraintResponse> getOsConstraints() {
+    public List<OsConstraintResponse> osConstraints() {
         return this.osConstraints;
     }
 
@@ -59,7 +59,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requireAdminApproval", required=true)
       private final Boolean requireAdminApproval;
 
-    public Boolean getRequireAdminApproval() {
+    public Boolean requireAdminApproval() {
         return this.requireAdminApproval;
     }
 
@@ -70,7 +70,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requireCorpOwned", required=true)
       private final Boolean requireCorpOwned;
 
-    public Boolean getRequireCorpOwned() {
+    public Boolean requireCorpOwned() {
         return this.requireCorpOwned;
     }
 
@@ -81,7 +81,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requireScreenlock", required=true)
       private final Boolean requireScreenlock;
 
-    public Boolean getRequireScreenlock() {
+    public Boolean requireScreenlock() {
         return this.requireScreenlock;
     }
 

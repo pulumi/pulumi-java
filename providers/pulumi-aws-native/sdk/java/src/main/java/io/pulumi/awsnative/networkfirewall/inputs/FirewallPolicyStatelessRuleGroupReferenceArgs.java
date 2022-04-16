@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class FirewallPolicyStatelessRuleGroupReferenceArgs extends io.pulu
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -36,8 +37,8 @@ public final class FirewallPolicyStatelessRuleGroupReferenceArgs extends io.pulu
     }
 
     private FirewallPolicyStatelessRuleGroupReferenceArgs() {
-        this.priority = Output.empty();
-        this.resourceArn = Output.empty();
+        this.priority = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {

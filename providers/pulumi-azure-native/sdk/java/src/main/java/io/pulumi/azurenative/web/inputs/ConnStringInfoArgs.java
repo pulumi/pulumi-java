@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+    public Output<String> connectionString() {
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<ConnectionStringType> type;
 
-    public Output<ConnectionStringType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ConnectionStringType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ConnStringInfoArgs(
@@ -62,9 +63,9 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnStringInfoArgs() {
-        this.connectionString = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.connectionString = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<ConnectionStringType> type) {
@@ -112,7 +113,7 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable ConnectionStringType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ConnStringInfoArgs build() {
             return new ConnStringInfoArgs(connectionString, name, type);

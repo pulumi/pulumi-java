@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverseFlag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autodefinedReverseFlag", required=true)
       private final Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
-    public Output<ResolverConfigAutodefinedReverseFlag> getAutodefinedReverseFlag() {
+    public Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag() {
         return this.autodefinedReverseFlag;
     }
 
@@ -32,7 +33,7 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -44,8 +45,8 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResolverConfigArgs() {
-        this.autodefinedReverseFlag = Output.empty();
-        this.resourceId = Output.empty();
+        this.autodefinedReverseFlag = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {

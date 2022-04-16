@@ -22,10 +22,10 @@ public final class InstanceFromTemplateNetworkInterfaceAliasIpRange {
         this.subnetworkRangeName = subnetworkRangeName;
     }
 
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
-    public Optional<String> getSubnetworkRangeName() {
+    public Optional<String> subnetworkRangeName() {
         return Optional.ofNullable(this.subnetworkRangeName);
     }
 

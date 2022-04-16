@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
     @Import(name="checkPermissionsGroup")
       private final @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup;
 
-    public Output<Either<String,ServerLevelPermissionsGroup>> getCheckPermissionsGroup() {
-        return this.checkPermissionsGroup == null ? Output.empty() : this.checkPermissionsGroup;
+    public Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup() {
+        return this.checkPermissionsGroup == null ? Codegen.empty() : this.checkPermissionsGroup;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
     @Import(name="collectAgentJobs")
       private final @Nullable Output<Boolean> collectAgentJobs;
 
-    public Output<Boolean> getCollectAgentJobs() {
-        return this.collectAgentJobs == null ? Output.empty() : this.collectAgentJobs;
+    public Output<Boolean> collectAgentJobs() {
+        return this.collectAgentJobs == null ? Codegen.empty() : this.collectAgentJobs;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
     @Import(name="collectLogins")
       private final @Nullable Output<Boolean> collectLogins;
 
-    public Output<Boolean> getCollectLogins() {
-        return this.collectLogins == null ? Output.empty() : this.collectLogins;
+    public Output<Boolean> collectLogins() {
+        return this.collectLogins == null ? Codegen.empty() : this.collectLogins;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -72,16 +73,16 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
         @Nullable Output<Boolean> collectLogins,
         Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
         this.checkPermissionsGroup = checkPermissionsGroup;
-        this.collectAgentJobs = collectAgentJobs == null ? Output.ofNullable(false) : collectAgentJobs;
-        this.collectLogins = collectLogins == null ? Output.ofNullable(false) : collectLogins;
+        this.collectAgentJobs = collectAgentJobs == null ? Codegen.ofNullable(false) : collectAgentJobs;
+        this.collectLogins = collectLogins == null ? Codegen.ofNullable(false) : collectLogins;
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
     }
 
     private ConnectToSourceSqlServerTaskInputArgs() {
-        this.checkPermissionsGroup = Output.empty();
-        this.collectAgentJobs = Output.empty();
-        this.collectLogins = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
+        this.checkPermissionsGroup = Codegen.empty();
+        this.collectAgentJobs = Codegen.empty();
+        this.collectLogins = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
             return this;
         }
         public Builder checkPermissionsGroup(@Nullable Either<String,ServerLevelPermissionsGroup> checkPermissionsGroup) {
-            this.checkPermissionsGroup = Output.ofNullable(checkPermissionsGroup);
+            this.checkPermissionsGroup = Codegen.ofNullable(checkPermissionsGroup);
             return this;
         }
         public Builder collectAgentJobs(@Nullable Output<Boolean> collectAgentJobs) {
@@ -123,7 +124,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
             return this;
         }
         public Builder collectAgentJobs(@Nullable Boolean collectAgentJobs) {
-            this.collectAgentJobs = Output.ofNullable(collectAgentJobs);
+            this.collectAgentJobs = Codegen.ofNullable(collectAgentJobs);
             return this;
         }
         public Builder collectLogins(@Nullable Output<Boolean> collectLogins) {
@@ -131,7 +132,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
             return this;
         }
         public Builder collectLogins(@Nullable Boolean collectLogins) {
-            this.collectLogins = Output.ofNullable(collectLogins);
+            this.collectLogins = Codegen.ofNullable(collectLogins);
             return this;
         }
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudidentity;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudidentity.GroupMembershipArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipState;
@@ -55,7 +56,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The time when the Membership was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -69,7 +70,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the Group to create this membership in.
      * 
      */
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
     /**
@@ -85,7 +86,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<GroupMembershipMemberKey> getMemberKey() {
+    public Output<GroupMembershipMemberKey> memberKey() {
         return this.memberKey;
     }
     /**
@@ -101,7 +102,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +118,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<GroupMembershipPreferredMemberKey> getPreferredMemberKey() {
+    public Output<GroupMembershipPreferredMemberKey> preferredMemberKey() {
         return this.preferredMemberKey;
     }
     /**
@@ -135,7 +136,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<GroupMembershipRole>> getRoles() {
+    public Output<List<GroupMembershipRole>> roles() {
         return this.roles;
     }
     /**
@@ -149,7 +150,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The type of the membership.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -163,7 +164,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The time when the Membership was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -189,7 +190,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GroupMembership(String name, GroupMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudidentity/groupMembership:GroupMembership", name, args == null ? GroupMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudidentity/groupMembership:GroupMembership", name, args == null ? GroupMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GroupMembership(String name, Output<String> id, @Nullable GroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.serverlessrepository;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -34,7 +35,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     @Import(name="capabilities", required=true)
       private final Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
+    public Output<List<String>> capabilities() {
         return this.capabilities;
     }
 
@@ -45,8 +46,8 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     @Import(name="semanticVersion")
       private final @Nullable Output<String> semanticVersion;
 
-    public Output<String> getSemanticVersion() {
-        return this.semanticVersion == null ? Output.empty() : this.semanticVersion;
+    public Output<String> semanticVersion() {
+        return this.semanticVersion == null ? Codegen.empty() : this.semanticVersion;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CloudFormationStackArgs(
@@ -98,12 +99,12 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     }
 
     private CloudFormationStackArgs() {
-        this.applicationId = Output.empty();
-        this.capabilities = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.semanticVersion = Output.empty();
-        this.tags = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.capabilities = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.semanticVersion = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -168,7 +169,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
@@ -176,7 +177,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder semanticVersion(@Nullable String semanticVersion) {
-            this.semanticVersion = Output.ofNullable(semanticVersion);
+            this.semanticVersion = Codegen.ofNullable(semanticVersion);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -184,7 +185,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CloudFormationStackArgs build() {
             return new CloudFormationStackArgs(applicationId, capabilities, name, parameters, semanticVersion, tags);

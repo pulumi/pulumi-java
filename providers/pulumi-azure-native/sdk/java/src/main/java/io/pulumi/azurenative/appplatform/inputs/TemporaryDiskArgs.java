@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
-    public Output<String> getMountPath() {
-        return this.mountPath == null ? Output.empty() : this.mountPath;
+    public Output<String> mountPath() {
+        return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
     /**
@@ -37,20 +38,20 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeInGB")
       private final @Nullable Output<Integer> sizeInGB;
 
-    public Output<Integer> getSizeInGB() {
-        return this.sizeInGB == null ? Output.empty() : this.sizeInGB;
+    public Output<Integer> sizeInGB() {
+        return this.sizeInGB == null ? Codegen.empty() : this.sizeInGB;
     }
 
     public TemporaryDiskArgs(
         @Nullable Output<String> mountPath,
         @Nullable Output<Integer> sizeInGB) {
-        this.mountPath = mountPath == null ? Output.ofNullable("/tmp") : mountPath;
+        this.mountPath = mountPath == null ? Codegen.ofNullable("/tmp") : mountPath;
         this.sizeInGB = sizeInGB;
     }
 
     private TemporaryDiskArgs() {
-        this.mountPath = Output.empty();
-        this.sizeInGB = Output.empty();
+        this.mountPath = Codegen.empty();
+        this.sizeInGB = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Output.ofNullable(mountPath);
+            this.mountPath = Codegen.ofNullable(mountPath);
             return this;
         }
         public Builder sizeInGB(@Nullable Output<Integer> sizeInGB) {
@@ -88,7 +89,7 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
-            this.sizeInGB = Output.ofNullable(sizeInGB);
+            this.sizeInGB = Codegen.ofNullable(sizeInGB);
             return this;
         }        public TemporaryDiskArgs build() {
             return new TemporaryDiskArgs(mountPath, sizeInGB);

@@ -9,6 +9,7 @@ import io.pulumi.aws.amplify.inputs.BackendEnvironmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The unique ID for an Amplify app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -53,7 +54,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +68,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The name of deployment artifacts.
      * 
      */
-    public Output<String> getDeploymentArtifacts() {
+    public Output<String> deploymentArtifacts() {
         return this.deploymentArtifacts;
     }
     /**
@@ -81,7 +82,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The name for the backend environment.
      * 
      */
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
     /**
@@ -95,7 +96,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @return The AWS CloudFormation stack name of a backend environment.
      * 
      */
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -121,7 +122,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendEnvironment(String name, BackendEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amplify/backendEnvironment:BackendEnvironment", name, args == null ? BackendEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:amplify/backendEnvironment:BackendEnvironment", name, args == null ? BackendEnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendEnvironment(String name, Output<String> id, @Nullable BackendEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

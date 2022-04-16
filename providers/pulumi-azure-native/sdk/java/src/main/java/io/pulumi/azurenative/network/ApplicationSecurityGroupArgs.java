@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="applicationSecurityGroupName")
       private final @Nullable Output<String> applicationSecurityGroupName;
 
-    public Output<String> getApplicationSecurityGroupName() {
-        return this.applicationSecurityGroupName == null ? Output.empty() : this.applicationSecurityGroupName;
+    public Output<String> applicationSecurityGroupName() {
+        return this.applicationSecurityGroupName == null ? Codegen.empty() : this.applicationSecurityGroupName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,8 +67,8 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationSecurityGroupArgs(
@@ -84,11 +85,11 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
     }
 
     private ApplicationSecurityGroupArgs() {
-        this.applicationSecurityGroupName = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.applicationSecurityGroupName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder applicationSecurityGroupName(@Nullable String applicationSecurityGroupName) {
-            this.applicationSecurityGroupName = Output.ofNullable(applicationSecurityGroupName);
+            this.applicationSecurityGroupName = Codegen.ofNullable(applicationSecurityGroupName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -132,7 +133,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -140,7 +141,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ApplicationSecurityGroupArgs build() {
             return new ApplicationSecurityGroupArgs(applicationSecurityGroupName, id, location, resourceGroupName, tags);

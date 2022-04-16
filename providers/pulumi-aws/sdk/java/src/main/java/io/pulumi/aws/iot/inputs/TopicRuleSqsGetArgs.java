@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class TopicRuleSqsGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
@@ -32,7 +33,7 @@ public final class TopicRuleSqsGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -43,7 +44,7 @@ public final class TopicRuleSqsGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useBase64", required=true)
       private final Output<Boolean> useBase64;
 
-    public Output<Boolean> getUseBase64() {
+    public Output<Boolean> useBase64() {
         return this.useBase64;
     }
 
@@ -57,9 +58,9 @@ public final class TopicRuleSqsGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TopicRuleSqsGetArgs() {
-        this.queueUrl = Output.empty();
-        this.roleArn = Output.empty();
-        this.useBase64 = Output.empty();
+        this.queueUrl = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.useBase64 = Codegen.empty();
     }
 
     public static Builder builder() {

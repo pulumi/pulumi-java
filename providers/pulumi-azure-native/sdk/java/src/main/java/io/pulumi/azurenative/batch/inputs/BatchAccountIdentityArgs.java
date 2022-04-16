@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type;
     }
 
@@ -39,8 +40,8 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+    public Output<Map<String,Object>> userAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public BatchAccountIdentityArgs(
@@ -51,8 +52,8 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
     }
 
     private BatchAccountIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public BatchAccountIdentityArgs build() {
             return new BatchAccountIdentityArgs(type, userAssignedIdentities);

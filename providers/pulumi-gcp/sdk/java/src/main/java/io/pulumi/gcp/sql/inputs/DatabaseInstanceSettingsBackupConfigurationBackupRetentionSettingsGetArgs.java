@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     @Import(name="retainedBackups", required=true)
       private final Output<Integer> retainedBackups;
 
-    public Output<Integer> getRetainedBackups() {
+    public Output<Integer> retainedBackups() {
         return this.retainedBackups;
     }
 
@@ -34,8 +35,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     @Import(name="retentionUnit")
       private final @Nullable Output<String> retentionUnit;
 
-    public Output<String> getRetentionUnit() {
-        return this.retentionUnit == null ? Output.empty() : this.retentionUnit;
+    public Output<String> retentionUnit() {
+        return this.retentionUnit == null ? Codegen.empty() : this.retentionUnit;
     }
 
     public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(
@@ -46,8 +47,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     }
 
     private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs() {
-        this.retainedBackups = Output.empty();
-        this.retentionUnit = Output.empty();
+        this.retainedBackups = Codegen.empty();
+        this.retentionUnit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             return this;
         }
         public Builder retentionUnit(@Nullable String retentionUnit) {
-            this.retentionUnit = Output.ofNullable(retentionUnit);
+            this.retentionUnit = Codegen.ofNullable(retentionUnit);
             return this;
         }        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs build() {
             return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(retainedBackups, retentionUnit);

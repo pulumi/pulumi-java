@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -33,8 +34,8 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
     @Import(name="invocationType")
       private final @Nullable Output<String> invocationType;
 
-    public Output<String> getInvocationType() {
-        return this.invocationType == null ? Output.empty() : this.invocationType;
+    public Output<String> invocationType() {
+        return this.invocationType == null ? Codegen.empty() : this.invocationType;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -55,8 +56,8 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+    public Output<String> topicArn() {
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public ReceiptRuleLambdaActionArgs(
@@ -71,10 +72,10 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
     }
 
     private ReceiptRuleLambdaActionArgs() {
-        this.functionArn = Output.empty();
-        this.invocationType = Output.empty();
-        this.position = Output.empty();
-        this.topicArn = Output.empty();
+        this.functionArn = Codegen.empty();
+        this.invocationType = Codegen.empty();
+        this.position = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder invocationType(@Nullable String invocationType) {
-            this.invocationType = Output.ofNullable(invocationType);
+            this.invocationType = Codegen.ofNullable(invocationType);
             return this;
         }
         public Builder position(Output<Integer> position) {
@@ -132,7 +133,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public ReceiptRuleLambdaActionArgs build() {
             return new ReceiptRuleLambdaActionArgs(functionArn, invocationType, position, topicArn);

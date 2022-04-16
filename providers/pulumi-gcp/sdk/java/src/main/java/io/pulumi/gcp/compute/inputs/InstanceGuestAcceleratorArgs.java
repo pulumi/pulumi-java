@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class InstanceGuestAcceleratorArgs extends io.pulumi.resources.Reso
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -32,7 +33,7 @@ public final class InstanceGuestAcceleratorArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -44,8 +45,8 @@ public final class InstanceGuestAcceleratorArgs extends io.pulumi.resources.Reso
     }
 
     private InstanceGuestAcceleratorArgs() {
-        this.count = Output.empty();
-        this.type = Output.empty();
+        this.count = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

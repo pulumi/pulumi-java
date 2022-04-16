@@ -7,6 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.enums.HealthStateName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthStateName", required=true)
       private final Output<Either<String,HealthStateName>> healthStateName;
 
-    public Output<Either<String,HealthStateName>> getHealthStateName() {
+    public Output<Either<String,HealthStateName>> healthStateName() {
         return this.healthStateName;
     }
 
@@ -38,7 +39,7 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
       private final Output<Double> severity;
 
-    public Output<Double> getSeverity() {
+    public Output<Double> severity() {
         return this.severity;
     }
 
@@ -50,8 +51,8 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthStateArgs() {
-        this.healthStateName = Output.empty();
-        this.severity = Output.empty();
+        this.healthStateName = Codegen.empty();
+        this.severity = Codegen.empty();
     }
 
     public static Builder builder() {

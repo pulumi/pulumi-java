@@ -8,6 +8,7 @@ import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="managementGroupId", required=true)
       private final Output<String> managementGroupId;
 
-    public Output<String> getManagementGroupId() {
+    public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -59,8 +60,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Object> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterDefinitionsValueArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="policyDefinitionName")
       private final @Nullable Output<String> policyDefinitionName;
 
-    public Output<String> getPolicyDefinitionName() {
-        return this.policyDefinitionName == null ? Output.empty() : this.policyDefinitionName;
+    public Output<String> policyDefinitionName() {
+        return this.policyDefinitionName == null ? Codegen.empty() : this.policyDefinitionName;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="policyRule")
       private final @Nullable Output<Object> policyRule;
 
-    public Output<Object> getPolicyRule() {
-        return this.policyRule == null ? Output.empty() : this.policyRule;
+    public Output<Object> policyRule() {
+        return this.policyRule == null ? Codegen.empty() : this.policyRule;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Output<Either<String,PolicyType>> getPolicyType() {
-        return this.policyType == null ? Output.empty() : this.policyType;
+    public Output<Either<String,PolicyType>> policyType() {
+        return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 
     public PolicyDefinitionAtManagementGroupArgs(
@@ -132,7 +133,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
         this.displayName = displayName;
         this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
         this.metadata = metadata;
-        this.mode = mode == null ? Output.ofNullable("Indexed") : mode;
+        this.mode = mode == null ? Codegen.ofNullable("Indexed") : mode;
         this.parameters = parameters;
         this.policyDefinitionName = policyDefinitionName;
         this.policyRule = policyRule;
@@ -140,15 +141,15 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     }
 
     private PolicyDefinitionAtManagementGroupArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.managementGroupId = Output.empty();
-        this.metadata = Output.empty();
-        this.mode = Output.empty();
-        this.parameters = Output.empty();
-        this.policyDefinitionName = Output.empty();
-        this.policyRule = Output.empty();
-        this.policyType = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.managementGroupId = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policyDefinitionName = Codegen.empty();
+        this.policyRule = Codegen.empty();
+        this.policyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -200,7 +201,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder managementGroupId(Output<String> managementGroupId) {
@@ -216,7 +217,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -224,7 +225,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters) {
@@ -232,7 +233,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder policyDefinitionName(@Nullable Output<String> policyDefinitionName) {
@@ -240,7 +241,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder policyDefinitionName(@Nullable String policyDefinitionName) {
-            this.policyDefinitionName = Output.ofNullable(policyDefinitionName);
+            this.policyDefinitionName = Codegen.ofNullable(policyDefinitionName);
             return this;
         }
         public Builder policyRule(@Nullable Output<Object> policyRule) {
@@ -248,7 +249,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder policyRule(@Nullable Object policyRule) {
-            this.policyRule = Output.ofNullable(policyRule);
+            this.policyRule = Codegen.ofNullable(policyRule);
             return this;
         }
         public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
@@ -256,7 +257,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             return this;
         }
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Output.ofNullable(policyType);
+            this.policyType = Codegen.ofNullable(policyType);
             return this;
         }        public PolicyDefinitionAtManagementGroupArgs build() {
             return new PolicyDefinitionAtManagementGroupArgs(description, displayName, managementGroupId, metadata, mode, parameters, policyDefinitionName, policyRule, policyType);

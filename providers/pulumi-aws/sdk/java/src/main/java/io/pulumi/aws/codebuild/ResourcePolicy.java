@@ -9,6 +9,7 @@ import io.pulumi.aws.codebuild.inputs.ResourcePolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return A JSON-formatted resource policy. For more information, see [Sharing a Projec](https://docs.aws.amazon.com/codebuild/latest/userguide/project-sharing.html#project-sharing-share) and [Sharing a Report Group](https://docs.aws.amazon.com/codebuild/latest/userguide/report-groups-sharing.html#report-groups-sharing-share).
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -53,7 +54,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Project or ReportGroup resource you want to associate with a resource policy.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -79,7 +80,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourcePolicy(String name, ResourcePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codebuild/resourcePolicy:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codebuild/resourcePolicy:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourcePolicy(String name, Output<String> id, @Nullable ResourcePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

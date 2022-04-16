@@ -32,19 +32,19 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
         this.refreshToken = refreshToken;
     }
 
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
-    public Optional<ConnectorProfileConnectorOAuthRequest> getConnectorOAuthRequest() {
+    public Optional<ConnectorProfileConnectorOAuthRequest> connectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);
     }
-    public Optional<String> getRefreshToken() {
+    public Optional<String> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
 

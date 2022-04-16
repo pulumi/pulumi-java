@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
     @Import(name="daysAfterInitiation", required=true)
       private final Output<Integer> daysAfterInitiation;
 
-    public Output<Integer> getDaysAfterInitiation() {
+    public Output<Integer> daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 
@@ -29,7 +30,7 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
     }
 
     private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs() {
-        this.daysAfterInitiation = Output.empty();
+        this.daysAfterInitiation = Codegen.empty();
     }
 
     public static Builder builder() {

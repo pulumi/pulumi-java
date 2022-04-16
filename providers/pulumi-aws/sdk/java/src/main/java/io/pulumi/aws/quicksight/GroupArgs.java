@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
+    public Output<String> awsAccountId() {
+        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -54,8 +55,8 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public GroupArgs(
@@ -70,10 +71,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.awsAccountId = Output.empty();
-        this.description = Output.empty();
-        this.groupName = Output.empty();
-        this.namespace = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Output.ofNullable(awsAccountId);
+            this.awsAccountId = Codegen.ofNullable(awsAccountId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -115,7 +116,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder groupName(Output<String> groupName) {
@@ -131,7 +132,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public GroupArgs build() {
             return new GroupArgs(awsAccountId, description, groupName, namespace);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
     @Import(name="minimalSeverity")
       private final @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
 
-    public Output<Either<String,MinimalSeverity>> getMinimalSeverity() {
-        return this.minimalSeverity == null ? Output.empty() : this.minimalSeverity;
+    public Output<Either<String,MinimalSeverity>> minimalSeverity() {
+        return this.minimalSeverity == null ? Codegen.empty() : this.minimalSeverity;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,State>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public SecurityContactPropertiesAlertNotificationsArgs(
@@ -51,8 +52,8 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
     }
 
     private SecurityContactPropertiesAlertNotificationsArgs() {
-        this.minimalSeverity = Output.empty();
-        this.state = Output.empty();
+        this.minimalSeverity = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
             return this;
         }
         public Builder minimalSeverity(@Nullable Either<String,MinimalSeverity> minimalSeverity) {
-            this.minimalSeverity = Output.ofNullable(minimalSeverity);
+            this.minimalSeverity = Codegen.ofNullable(minimalSeverity);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,State>> state) {
@@ -90,7 +91,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
             return this;
         }
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public SecurityContactPropertiesAlertNotificationsArgs build() {
             return new SecurityContactPropertiesAlertNotificationsArgs(minimalSeverity, state);

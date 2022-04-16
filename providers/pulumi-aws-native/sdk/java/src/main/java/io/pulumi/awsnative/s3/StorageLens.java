@@ -10,6 +10,7 @@ import io.pulumi.awsnative.s3.outputs.StorageLensTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public class StorageLens extends io.pulumi.resources.CustomResource {
     @Export(name="storageLensConfiguration", type=StorageLensConfiguration.class, parameters={})
     private Output<StorageLensConfiguration> storageLensConfiguration;
 
-    public Output<StorageLensConfiguration> getStorageLensConfiguration() {
+    public Output<StorageLensConfiguration> storageLensConfiguration() {
         return this.storageLensConfiguration;
     }
     /**
@@ -36,7 +37,7 @@ public class StorageLens extends io.pulumi.resources.CustomResource {
      * @return A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
      * 
      */
-    public Output</* @Nullable */ List<StorageLensTag>> getTags() {
+    public Output</* @Nullable */ List<StorageLensTag>> tags() {
         return this.tags;
     }
 
@@ -62,7 +63,7 @@ public class StorageLens extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StorageLens(String name, StorageLensArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:s3:StorageLens", name, args == null ? StorageLensArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:s3:StorageLens", name, args == null ? StorageLensArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StorageLens(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs ext
     @Import(name="contentTypeProfiles", required=true)
       private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> contentTypeProfiles;
 
-    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> getContentTypeProfiles() {
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> contentTypeProfiles() {
         return this.contentTypeProfiles;
     }
 
@@ -32,7 +33,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs ext
     @Import(name="forwardWhenContentTypeIsUnknown", required=true)
       private final Output<Boolean> forwardWhenContentTypeIsUnknown;
 
-    public Output<Boolean> getForwardWhenContentTypeIsUnknown() {
+    public Output<Boolean> forwardWhenContentTypeIsUnknown() {
         return this.forwardWhenContentTypeIsUnknown;
     }
 
@@ -44,8 +45,8 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs ext
     }
 
     private FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs() {
-        this.contentTypeProfiles = Output.empty();
-        this.forwardWhenContentTypeIsUnknown = Output.empty();
+        this.contentTypeProfiles = Codegen.empty();
+        this.forwardWhenContentTypeIsUnknown = Codegen.empty();
     }
 
     public static Builder builder() {

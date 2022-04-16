@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.inputs.MediaGraphAssetSinkArgs;
 import io.pulumi.azurenative.media.inputs.MediaGraphRtspSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,8 +36,8 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mediaGraphName")
       private final @Nullable Output<String> mediaGraphName;
 
-    public Output<String> getMediaGraphName() {
-        return this.mediaGraphName == null ? Output.empty() : this.mediaGraphName;
+    public Output<String> mediaGraphName() {
+        return this.mediaGraphName == null ? Codegen.empty() : this.mediaGraphName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +69,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinks", required=true)
       private final Output<List<MediaGraphAssetSinkArgs>> sinks;
 
-    public Output<List<MediaGraphAssetSinkArgs>> getSinks() {
+    public Output<List<MediaGraphAssetSinkArgs>> sinks() {
         return this.sinks;
     }
 
@@ -79,7 +80,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sources", required=true)
       private final Output<List<MediaGraphRtspSourceArgs>> sources;
 
-    public Output<List<MediaGraphRtspSourceArgs>> getSources() {
+    public Output<List<MediaGraphRtspSourceArgs>> sources() {
         return this.sources;
     }
 
@@ -99,12 +100,12 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MediaGraphArgs() {
-        this.accountName = Output.empty();
-        this.description = Output.empty();
-        this.mediaGraphName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sinks = Output.empty();
-        this.sources = Output.empty();
+        this.accountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.mediaGraphName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sinks = Codegen.empty();
+        this.sources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder mediaGraphName(@Nullable Output<String> mediaGraphName) {
@@ -158,7 +159,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mediaGraphName(@Nullable String mediaGraphName) {
-            this.mediaGraphName = Output.ofNullable(mediaGraphName);
+            this.mediaGraphName = Codegen.ofNullable(mediaGraphName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

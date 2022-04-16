@@ -5,6 +5,7 @@ package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="asn")
       private final @Nullable Output<Integer> asn;
 
-    public Output<Integer> getAsn() {
-        return this.asn == null ? Output.empty() : this.asn;
+    public Output<Integer> asn() {
+        return this.asn == null ? Codegen.empty() : this.asn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringName", required=true)
       private final Output<String> peeringName;
 
-    public Output<String> getPeeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -44,8 +45,8 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registeredAsnName")
       private final @Nullable Output<String> registeredAsnName;
 
-    public Output<String> getRegisteredAsnName() {
-        return this.registeredAsnName == null ? Output.empty() : this.registeredAsnName;
+    public Output<String> registeredAsnName() {
+        return this.registeredAsnName == null ? Codegen.empty() : this.registeredAsnName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,10 +72,10 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegisteredAsnArgs() {
-        this.asn = Output.empty();
-        this.peeringName = Output.empty();
-        this.registeredAsnName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.asn = Codegen.empty();
+        this.peeringName = Codegen.empty();
+        this.registeredAsnName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder asn(@Nullable Integer asn) {
-            this.asn = Output.ofNullable(asn);
+            this.asn = Codegen.ofNullable(asn);
             return this;
         }
         public Builder peeringName(Output<String> peeringName) {
@@ -124,7 +125,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registeredAsnName(@Nullable String registeredAsnName) {
-            this.registeredAsnName = Output.ofNullable(registeredAsnName);
+            this.registeredAsnName = Codegen.ofNullable(registeredAsnName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

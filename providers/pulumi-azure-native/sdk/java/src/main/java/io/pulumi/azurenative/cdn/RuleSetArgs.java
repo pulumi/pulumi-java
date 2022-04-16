@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -32,7 +33,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,8 +44,8 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
-        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
+    public Output<String> ruleSetName() {
+        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 
     public RuleSetArgs(
@@ -57,9 +58,9 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleSetArgs() {
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleSetName = Output.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Output.ofNullable(ruleSetName);
+            this.ruleSetName = Codegen.ofNullable(ruleSetName);
             return this;
         }        public RuleSetArgs build() {
             return new RuleSetArgs(profileName, resourceGroupName, ruleSetName);

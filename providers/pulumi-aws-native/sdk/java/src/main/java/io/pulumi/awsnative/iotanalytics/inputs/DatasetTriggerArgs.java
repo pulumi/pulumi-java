@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetScheduleArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetTriggeringDatasetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class DatasetTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<DatasetScheduleArgs> schedule;
 
-    public Output<DatasetScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<DatasetScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     @Import(name="triggeringDataset")
       private final @Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset;
 
-    public Output<DatasetTriggeringDatasetArgs> getTriggeringDataset() {
-        return this.triggeringDataset == null ? Output.empty() : this.triggeringDataset;
+    public Output<DatasetTriggeringDatasetArgs> triggeringDataset() {
+        return this.triggeringDataset == null ? Codegen.empty() : this.triggeringDataset;
     }
 
     public DatasetTriggerArgs(
@@ -37,8 +38,8 @@ public final class DatasetTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetTriggerArgs() {
-        this.schedule = Output.empty();
-        this.triggeringDataset = Output.empty();
+        this.schedule = Codegen.empty();
+        this.triggeringDataset = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DatasetTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable DatasetScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder triggeringDataset(@Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset) {
@@ -76,7 +77,7 @@ public final class DatasetTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggeringDataset(@Nullable DatasetTriggeringDatasetArgs triggeringDataset) {
-            this.triggeringDataset = Output.ofNullable(triggeringDataset);
+            this.triggeringDataset = Codegen.ofNullable(triggeringDataset);
             return this;
         }        public DatasetTriggerArgs build() {
             return new DatasetTriggerArgs(schedule, triggeringDataset);

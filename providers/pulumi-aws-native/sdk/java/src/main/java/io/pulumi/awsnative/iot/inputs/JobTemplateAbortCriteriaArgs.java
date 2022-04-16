@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.enums.JobTemplateAction;
 import io.pulumi.awsnative.iot.enums.JobTemplateFailureType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="action", required=true)
       private final Output<JobTemplateAction> action;
 
-    public Output<JobTemplateAction> getAction() {
+    public Output<JobTemplateAction> action() {
         return this.action;
     }
 
@@ -38,7 +39,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="failureType", required=true)
       private final Output<JobTemplateFailureType> failureType;
 
-    public Output<JobTemplateFailureType> getFailureType() {
+    public Output<JobTemplateFailureType> failureType() {
         return this.failureType;
     }
 
@@ -49,7 +50,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="minNumberOfExecutedThings", required=true)
       private final Output<Integer> minNumberOfExecutedThings;
 
-    public Output<Integer> getMinNumberOfExecutedThings() {
+    public Output<Integer> minNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
     }
 
@@ -60,7 +61,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="thresholdPercentage", required=true)
       private final Output<Double> thresholdPercentage;
 
-    public Output<Double> getThresholdPercentage() {
+    public Output<Double> thresholdPercentage() {
         return this.thresholdPercentage;
     }
 
@@ -76,10 +77,10 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     }
 
     private JobTemplateAbortCriteriaArgs() {
-        this.action = Output.empty();
-        this.failureType = Output.empty();
-        this.minNumberOfExecutedThings = Output.empty();
-        this.thresholdPercentage = Output.empty();
+        this.action = Codegen.empty();
+        this.failureType = Codegen.empty();
+        this.minNumberOfExecutedThings = Codegen.empty();
+        this.thresholdPercentage = Codegen.empty();
     }
 
     public static Builder builder() {

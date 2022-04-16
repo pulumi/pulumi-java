@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
      * 
      */
-    public Output<String> getAgentPublicKeyCertificate() {
+    public Output<String> agentPublicKeyCertificate() {
         return this.agentPublicKeyCertificate;
     }
     /**
@@ -59,7 +60,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Version of the agent running on the connected cluster resource
      * 
      */
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion;
     }
     /**
@@ -73,7 +74,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Represents the connectivity status of the connected cluster.
      * 
      */
-    public Output<String> getConnectivityStatus() {
+    public Output<String> connectivityStatus() {
         return this.connectivityStatus;
     }
     /**
@@ -87,7 +88,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return The Kubernetes distribution running on this connected cluster.
      * 
      */
-    public Output</* @Nullable */ String> getDistribution() {
+    public Output</* @Nullable */ String> distribution() {
         return this.distribution;
     }
     /**
@@ -101,7 +102,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return The identity of the connected cluster.
      * 
      */
-    public Output<ConnectedClusterIdentityResponse> getIdentity() {
+    public Output<ConnectedClusterIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -115,7 +116,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
      * 
      */
-    public Output</* @Nullable */ String> getInfrastructure() {
+    public Output</* @Nullable */ String> infrastructure() {
         return this.infrastructure;
     }
     /**
@@ -129,7 +130,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return The Kubernetes version of the connected cluster resource
      * 
      */
-    public Output<String> getKubernetesVersion() {
+    public Output<String> kubernetesVersion() {
         return this.kubernetesVersion;
     }
     /**
@@ -143,7 +144,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Time representing the last instance when heart beat was received from the cluster
      * 
      */
-    public Output<String> getLastConnectivityTime() {
+    public Output<String> lastConnectivityTime() {
         return this.lastConnectivityTime;
     }
     /**
@@ -157,7 +158,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -171,7 +172,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Expiration time of the managed identity certificate
      * 
      */
-    public Output<String> getManagedIdentityCertificateExpirationTime() {
+    public Output<String> managedIdentityCertificateExpirationTime() {
         return this.managedIdentityCertificateExpirationTime;
     }
     /**
@@ -185,7 +186,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -199,7 +200,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Connected cluster offering
      * 
      */
-    public Output<String> getOffering() {
+    public Output<String> offering() {
         return this.offering;
     }
     /**
@@ -213,7 +214,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the connected cluster resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -227,7 +228,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -241,7 +242,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -255,7 +256,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Number of CPU cores present in the connected cluster resource
      * 
      */
-    public Output<Integer> getTotalCoreCount() {
+    public Output<Integer> totalCoreCount() {
         return this.totalCoreCount;
     }
     /**
@@ -269,7 +270,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return Number of nodes present in the connected cluster resource
      * 
      */
-    public Output<Integer> getTotalNodeCount() {
+    public Output<Integer> totalNodeCount() {
         return this.totalNodeCount;
     }
     /**
@@ -283,7 +284,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -309,7 +310,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectedCluster(String name, ConnectedClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kubernetes:ConnectedCluster", name, args == null ? ConnectedClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:kubernetes:ConnectedCluster", name, args == null ? ConnectedClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectedCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

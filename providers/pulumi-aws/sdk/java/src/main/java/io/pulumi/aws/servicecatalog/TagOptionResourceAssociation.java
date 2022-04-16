@@ -9,6 +9,7 @@ import io.pulumi.aws.servicecatalog.inputs.TagOptionResourceAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * @return ARN of the resource.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -55,7 +56,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * @return Creation time of the resource.
      * 
      */
-    public Output<String> getResourceCreatedTime() {
+    public Output<String> resourceCreatedTime() {
         return this.resourceCreatedTime;
     }
     /**
@@ -69,7 +70,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * @return Description of the resource.
      * 
      */
-    public Output<String> getResourceDescription() {
+    public Output<String> resourceDescription() {
         return this.resourceDescription;
     }
     /**
@@ -83,7 +84,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * @return Resource identifier.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -97,7 +98,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * @return Description of the resource.
      * 
      */
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
     /**
@@ -111,7 +112,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * @return Tag Option identifier.
      * 
      */
-    public Output<String> getTagOptionId() {
+    public Output<String> tagOptionId() {
         return this.tagOptionId;
     }
 
@@ -137,7 +138,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public TagOptionResourceAssociation(String name, TagOptionResourceAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/tagOptionResourceAssociation:TagOptionResourceAssociation", name, args == null ? TagOptionResourceAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/tagOptionResourceAssociation:TagOptionResourceAssociation", name, args == null ? TagOptionResourceAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagOptionResourceAssociation(String name, Output<String> id, @Nullable TagOptionResourceAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

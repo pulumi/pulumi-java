@@ -10,6 +10,7 @@ import io.pulumi.awsnative.rum.outputs.AppMonitorTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
     @Export(name="appMonitorConfiguration", type=AppMonitorConfiguration.class, parameters={})
     private Output</* @Nullable */ AppMonitorConfiguration> appMonitorConfiguration;
 
-    public Output</* @Nullable */ AppMonitorConfiguration> getAppMonitorConfiguration() {
+    public Output</* @Nullable */ AppMonitorConfiguration> appMonitorConfiguration() {
         return this.appMonitorConfiguration;
     }
     /**
@@ -38,7 +39,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
      * @return Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
      * 
      */
-    public Output</* @Nullable */ Boolean> getCwLogEnabled() {
+    public Output</* @Nullable */ Boolean> cwLogEnabled() {
         return this.cwLogEnabled;
     }
     /**
@@ -52,7 +53,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
      * @return The top-level internet domain name for which your application has administrative authority.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -66,13 +67,13 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
      * @return A name for the app monitor
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={AppMonitorTag.class})
     private Output</* @Nullable */ List<AppMonitorTag>> tags;
 
-    public Output</* @Nullable */ List<AppMonitorTag>> getTags() {
+    public Output</* @Nullable */ List<AppMonitorTag>> tags() {
         return this.tags;
     }
 
@@ -98,7 +99,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppMonitor(String name, AppMonitorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:rum:AppMonitor", name, args == null ? AppMonitorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:rum:AppMonitor", name, args == null ? AppMonitorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppMonitor(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

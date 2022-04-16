@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     @Import(name="header")
       private final @Nullable Output<String> header;
 
-    public Output<String> getHeader() {
-        return this.header == null ? Output.empty() : this.header;
+    public Output<String> header() {
+        return this.header == null ? Codegen.empty() : this.header;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<String> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     public SubscriptionKeyParameterNamesContractArgs(
@@ -48,8 +49,8 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     }
 
     private SubscriptionKeyParameterNamesContractArgs() {
-        this.header = Output.empty();
-        this.query = Output.empty();
+        this.header = Codegen.empty();
+        this.query = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
             return this;
         }
         public Builder header(@Nullable String header) {
-            this.header = Output.ofNullable(header);
+            this.header = Codegen.ofNullable(header);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -87,7 +88,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }        public SubscriptionKeyParameterNamesContractArgs build() {
             return new SubscriptionKeyParameterNamesContractArgs(header, query);

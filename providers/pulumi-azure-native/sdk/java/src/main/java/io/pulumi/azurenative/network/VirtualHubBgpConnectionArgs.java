@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+    public Output<String> connectionName() {
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="peerAsn")
       private final @Nullable Output<Double> peerAsn;
 
-    public Output<Double> getPeerAsn() {
-        return this.peerAsn == null ? Output.empty() : this.peerAsn;
+    public Output<Double> peerAsn() {
+        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
 
-    public Output<String> getPeerIp() {
-        return this.peerIp == null ? Output.empty() : this.peerIp;
+    public Output<String> peerIp() {
+        return this.peerIp == null ? Codegen.empty() : this.peerIp;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +89,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
-    public Output<String> getVirtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
@@ -110,13 +111,13 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     }
 
     private VirtualHubBgpConnectionArgs() {
-        this.connectionName = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.peerAsn = Output.empty();
-        this.peerIp = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.virtualHubName = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.peerAsn = Codegen.empty();
+        this.peerIp = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.virtualHubName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -164,7 +165,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -172,7 +173,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder peerAsn(@Nullable Output<Double> peerAsn) {
@@ -180,7 +181,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder peerAsn(@Nullable Double peerAsn) {
-            this.peerAsn = Output.ofNullable(peerAsn);
+            this.peerAsn = Codegen.ofNullable(peerAsn);
             return this;
         }
         public Builder peerIp(@Nullable Output<String> peerIp) {
@@ -188,7 +189,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder peerIp(@Nullable String peerIp) {
-            this.peerIp = Output.ofNullable(peerIp);
+            this.peerIp = Codegen.ofNullable(peerIp);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AwsClusterAuthorizationAdminUserArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class AwsClusterAuthorizationArgs extends io.pulumi.resources.Resou
     @Import(name="adminUsers", required=true)
       private final Output<List<AwsClusterAuthorizationAdminUserArgs>> adminUsers;
 
-    public Output<List<AwsClusterAuthorizationAdminUserArgs>> getAdminUsers() {
+    public Output<List<AwsClusterAuthorizationAdminUserArgs>> adminUsers() {
         return this.adminUsers;
     }
 
@@ -30,7 +31,7 @@ public final class AwsClusterAuthorizationArgs extends io.pulumi.resources.Resou
     }
 
     private AwsClusterAuthorizationArgs() {
-        this.adminUsers = Output.empty();
+        this.adminUsers = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -54,28 +54,28 @@ public final class ConfigurationResponse {
      * <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
      * 
     */
-    public Optional<String> getActiveRevisionsMode() {
+    public Optional<String> activeRevisionsMode() {
         return Optional.ofNullable(this.activeRevisionsMode);
     }
     /**
      * Ingress configurations.
      * 
     */
-    public Optional<IngressResponse> getIngress() {
+    public Optional<IngressResponse> ingress() {
         return Optional.ofNullable(this.ingress);
     }
     /**
      * Collection of private container registry credentials for containers used by the Container app
      * 
     */
-    public List<RegistryCredentialsResponse> getRegistries() {
+    public List<RegistryCredentialsResponse> registries() {
         return this.registries == null ? List.of() : this.registries;
     }
     /**
      * Collection of secrets used by a Container app
      * 
     */
-    public List<SecretResponse> getSecrets() {
+    public List<SecretResponse> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
 

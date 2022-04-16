@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SourcePredefinedSource;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predefinedSource")
       private final @Nullable Output<SourcePredefinedSource> predefinedSource;
 
-    public Output<SourcePredefinedSource> getPredefinedSource() {
-        return this.predefinedSource == null ? Output.empty() : this.predefinedSource;
+    public Output<SourcePredefinedSource> predefinedSource() {
+        return this.predefinedSource == null ? Codegen.empty() : this.predefinedSource;
     }
 
     public SourceArgs(
@@ -49,8 +50,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.name = Output.empty();
-        this.predefinedSource = Output.empty();
+        this.name = Codegen.empty();
+        this.predefinedSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder predefinedSource(@Nullable Output<SourcePredefinedSource> predefinedSource) {
@@ -88,7 +89,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predefinedSource(@Nullable SourcePredefinedSource predefinedSource) {
-            this.predefinedSource = Output.ofNullable(predefinedSource);
+            this.predefinedSource = Codegen.ofNullable(predefinedSource);
             return this;
         }        public SourceArgs build() {
             return new SourceArgs(name, predefinedSource);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.elastic.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="monitoringStatus")
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
-        return this.monitoringStatus == null ? Output.empty() : this.monitoringStatus;
+    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
+        return this.monitoringStatus == null ? Codegen.empty() : this.monitoringStatus;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userInfo")
       private final @Nullable Output<UserInfoArgs> userInfo;
 
-    public Output<UserInfoArgs> getUserInfo() {
-        return this.userInfo == null ? Output.empty() : this.userInfo;
+    public Output<UserInfoArgs> userInfo() {
+        return this.userInfo == null ? Codegen.empty() : this.userInfo;
     }
 
     public MonitorPropertiesArgs(
@@ -65,9 +66,9 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MonitorPropertiesArgs() {
-        this.monitoringStatus = Output.empty();
-        this.provisioningState = Output.empty();
-        this.userInfo = Output.empty();
+        this.monitoringStatus = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.userInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Output.ofNullable(monitoringStatus);
+            this.monitoringStatus = Codegen.ofNullable(monitoringStatus);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
@@ -107,7 +108,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
@@ -115,7 +116,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
-            this.userInfo = Output.ofNullable(userInfo);
+            this.userInfo = Codegen.ofNullable(userInfo);
             return this;
         }        public MonitorPropertiesArgs build() {
             return new MonitorPropertiesArgs(monitoringStatus, provisioningState, userInfo);

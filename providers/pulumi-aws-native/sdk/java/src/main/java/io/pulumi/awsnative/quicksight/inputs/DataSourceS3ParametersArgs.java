@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceManifestFileLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class DataSourceS3ParametersArgs extends io.pulumi.resources.Resour
     @Import(name="manifestFileLocation", required=true)
       private final Output<DataSourceManifestFileLocationArgs> manifestFileLocation;
 
-    public Output<DataSourceManifestFileLocationArgs> getManifestFileLocation() {
+    public Output<DataSourceManifestFileLocationArgs> manifestFileLocation() {
         return this.manifestFileLocation;
     }
 
@@ -29,7 +30,7 @@ public final class DataSourceS3ParametersArgs extends io.pulumi.resources.Resour
     }
 
     private DataSourceS3ParametersArgs() {
-        this.manifestFileLocation = Output.empty();
+        this.manifestFileLocation = Codegen.empty();
     }
 
     public static Builder builder() {

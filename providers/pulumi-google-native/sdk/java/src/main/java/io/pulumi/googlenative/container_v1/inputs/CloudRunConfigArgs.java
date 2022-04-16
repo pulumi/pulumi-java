@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.enums.CloudRunConfigLoadBalancerType;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerType")
       private final @Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType;
 
-    public Output<CloudRunConfigLoadBalancerType> getLoadBalancerType() {
-        return this.loadBalancerType == null ? Output.empty() : this.loadBalancerType;
+    public Output<CloudRunConfigLoadBalancerType> loadBalancerType() {
+        return this.loadBalancerType == null ? Codegen.empty() : this.loadBalancerType;
     }
 
     public CloudRunConfigArgs(
@@ -49,8 +50,8 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CloudRunConfigArgs() {
-        this.disabled = Output.empty();
-        this.loadBalancerType = Output.empty();
+        this.disabled = Codegen.empty();
+        this.loadBalancerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder loadBalancerType(@Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType) {
@@ -88,7 +89,7 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancerType(@Nullable CloudRunConfigLoadBalancerType loadBalancerType) {
-            this.loadBalancerType = Output.ofNullable(loadBalancerType);
+            this.loadBalancerType = Codegen.ofNullable(loadBalancerType);
             return this;
         }        public CloudRunConfigArgs build() {
             return new CloudRunConfigArgs(disabled, loadBalancerType);

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
     @Import(name="outputSchema", required=true)
       private final String outputSchema;
 
-    public String getOutputSchema() {
+    public String outputSchema() {
         return this.outputSchema;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends io.pulu
     @Import(name="table", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
 

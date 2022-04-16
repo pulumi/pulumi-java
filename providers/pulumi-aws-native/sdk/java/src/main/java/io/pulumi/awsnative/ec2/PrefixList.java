@@ -11,6 +11,7 @@ import io.pulumi.awsnative.ec2.outputs.PrefixListTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Ip Version of Prefix List.
      * 
      */
-    public Output<PrefixListAddressFamily> getAddressFamily() {
+    public Output<PrefixListAddressFamily> addressFamily() {
         return this.addressFamily;
     }
     /**
@@ -49,7 +50,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Prefix List.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -63,7 +64,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Entries of Prefix List.
      * 
      */
-    public Output</* @Nullable */ List<PrefixListEntry>> getEntries() {
+    public Output</* @Nullable */ List<PrefixListEntry>> entries() {
         return this.entries;
     }
     /**
@@ -77,7 +78,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Max Entries of Prefix List.
      * 
      */
-    public Output<Integer> getMaxEntries() {
+    public Output<Integer> maxEntries() {
         return this.maxEntries;
     }
     /**
@@ -91,7 +92,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Owner Id of Prefix List.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -105,7 +106,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Id of Prefix List.
      * 
      */
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
     /**
@@ -119,7 +120,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Name of Prefix List.
      * 
      */
-    public Output<String> getPrefixListName() {
+    public Output<String> prefixListName() {
         return this.prefixListName;
     }
     /**
@@ -133,7 +134,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Tags for Prefix List
      * 
      */
-    public Output</* @Nullable */ List<PrefixListTag>> getTags() {
+    public Output</* @Nullable */ List<PrefixListTag>> tags() {
         return this.tags;
     }
     /**
@@ -147,7 +148,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @return Version of Prefix List.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 
@@ -173,7 +174,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrefixList(String name, PrefixListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:PrefixList", name, args == null ? PrefixListArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:PrefixList", name, args == null ? PrefixListArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrefixList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

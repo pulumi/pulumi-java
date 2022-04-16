@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.OS;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
+    public Output<String> agentPoolName() {
+        return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="os")
       private final @Nullable Output<Either<String,OS>> os;
 
-    public Output<Either<String,OS>> getOs() {
-        return this.os == null ? Output.empty() : this.os;
+    public Output<Either<String,OS>> os() {
+        return this.os == null ? Codegen.empty() : this.os;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -80,7 +81,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,8 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkSubnetResourceId")
       private final @Nullable Output<String> virtualNetworkSubnetResourceId;
 
-    public Output<String> getVirtualNetworkSubnetResourceId() {
-        return this.virtualNetworkSubnetResourceId == null ? Output.empty() : this.virtualNetworkSubnetResourceId;
+    public Output<String> virtualNetworkSubnetResourceId() {
+        return this.virtualNetworkSubnetResourceId == null ? Codegen.empty() : this.virtualNetworkSubnetResourceId;
     }
 
     public AgentPoolArgs(
@@ -139,15 +140,15 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentPoolArgs() {
-        this.agentPoolName = Output.empty();
-        this.count = Output.empty();
-        this.location = Output.empty();
-        this.os = Output.empty();
-        this.registryName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.tier = Output.empty();
-        this.virtualNetworkSubnetResourceId = Output.empty();
+        this.agentPoolName = Codegen.empty();
+        this.count = Codegen.empty();
+        this.location = Codegen.empty();
+        this.os = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.virtualNetworkSubnetResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Output.ofNullable(agentPoolName);
+            this.agentPoolName = Codegen.ofNullable(agentPoolName);
             return this;
         }
         public Builder count(@Nullable Output<Integer> count) {
@@ -199,7 +200,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -207,7 +208,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder os(@Nullable Output<Either<String,OS>> os) {
@@ -215,7 +216,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder os(@Nullable Either<String,OS> os) {
-            this.os = Output.ofNullable(os);
+            this.os = Codegen.ofNullable(os);
             return this;
         }
         public Builder registryName(Output<String> registryName) {
@@ -239,7 +240,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -247,7 +248,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }
         public Builder virtualNetworkSubnetResourceId(@Nullable Output<String> virtualNetworkSubnetResourceId) {
@@ -255,7 +256,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkSubnetResourceId(@Nullable String virtualNetworkSubnetResourceId) {
-            this.virtualNetworkSubnetResourceId = Output.ofNullable(virtualNetworkSubnetResourceId);
+            this.virtualNetworkSubnetResourceId = Codegen.ofNullable(virtualNetworkSubnetResourceId);
             return this;
         }        public AgentPoolArgs build() {
             return new AgentPoolArgs(agentPoolName, count, location, os, registryName, resourceGroupName, tags, tier, virtualNetworkSubnetResourceId);

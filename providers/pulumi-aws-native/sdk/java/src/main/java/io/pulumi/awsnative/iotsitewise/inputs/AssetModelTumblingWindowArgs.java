@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
     @Import(name="interval", required=true)
       private final Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval;
     }
 
     @Import(name="offset")
       private final @Nullable Output<String> offset;
 
-    public Output<String> getOffset() {
-        return this.offset == null ? Output.empty() : this.offset;
+    public Output<String> offset() {
+        return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     public AssetModelTumblingWindowArgs(
@@ -40,8 +41,8 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
     }
 
     private AssetModelTumblingWindowArgs() {
-        this.interval = Output.empty();
-        this.offset = Output.empty();
+        this.interval = Codegen.empty();
+        this.offset = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder offset(@Nullable String offset) {
-            this.offset = Output.ofNullable(offset);
+            this.offset = Codegen.ofNullable(offset);
             return this;
         }        public AssetModelTumblingWindowArgs build() {
             return new AssetModelTumblingWindowArgs(interval, offset);

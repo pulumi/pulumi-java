@@ -70,7 +70,7 @@ public final class CxPageTransitionRoute {
      * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
      * 
     */
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
@@ -78,7 +78,7 @@ public final class CxPageTransitionRoute {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
      * 
     */
-    public Optional<String> getIntent() {
+    public Optional<String> intent() {
         return Optional.ofNullable(this.intent);
     }
     /**
@@ -86,7 +86,7 @@ public final class CxPageTransitionRoute {
      * The unique identifier of this event handler.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -94,7 +94,7 @@ public final class CxPageTransitionRoute {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
     */
-    public Optional<String> getTargetFlow() {
+    public Optional<String> targetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
     /**
@@ -102,7 +102,7 @@ public final class CxPageTransitionRoute {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
      * 
     */
-    public Optional<String> getTargetPage() {
+    public Optional<String> targetPage() {
         return Optional.ofNullable(this.targetPage);
     }
     /**
@@ -110,7 +110,7 @@ public final class CxPageTransitionRoute {
      * Structure is documented below.
      * 
     */
-    public Optional<CxPageTransitionRouteTriggerFulfillment> getTriggerFulfillment() {
+    public Optional<CxPageTransitionRouteTriggerFulfillment> triggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }
 

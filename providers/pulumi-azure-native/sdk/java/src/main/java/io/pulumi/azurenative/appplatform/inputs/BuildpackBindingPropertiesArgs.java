@@ -8,6 +8,7 @@ import io.pulumi.azurenative.appplatform.inputs.BuildpackBindingLaunchProperties
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="bindingType")
       private final @Nullable Output<Either<String,BindingType>> bindingType;
 
-    public Output<Either<String,BindingType>> getBindingType() {
-        return this.bindingType == null ? Output.empty() : this.bindingType;
+    public Output<Either<String,BindingType>> bindingType() {
+        return this.bindingType == null ? Codegen.empty() : this.bindingType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="launchProperties")
       private final @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
-    public Output<BuildpackBindingLaunchPropertiesArgs> getLaunchProperties() {
-        return this.launchProperties == null ? Output.empty() : this.launchProperties;
+    public Output<BuildpackBindingLaunchPropertiesArgs> launchProperties() {
+        return this.launchProperties == null ? Codegen.empty() : this.launchProperties;
     }
 
     public BuildpackBindingPropertiesArgs(
@@ -51,8 +52,8 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private BuildpackBindingPropertiesArgs() {
-        this.bindingType = Output.empty();
-        this.launchProperties = Output.empty();
+        this.bindingType = Codegen.empty();
+        this.launchProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder bindingType(@Nullable Either<String,BindingType> bindingType) {
-            this.bindingType = Output.ofNullable(bindingType);
+            this.bindingType = Codegen.ofNullable(bindingType);
             return this;
         }
         public Builder launchProperties(@Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
@@ -90,7 +91,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesArgs launchProperties) {
-            this.launchProperties = Output.ofNullable(launchProperties);
+            this.launchProperties = Codegen.ofNullable(launchProperties);
             return this;
         }        public BuildpackBindingPropertiesArgs build() {
             return new BuildpackBindingPropertiesArgs(bindingType, launchProperties);

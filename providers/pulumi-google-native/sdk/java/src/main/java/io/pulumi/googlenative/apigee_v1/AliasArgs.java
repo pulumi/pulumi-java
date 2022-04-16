@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,8 +20,8 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+    public Output<String> alias() {
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -30,8 +31,8 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<String> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -41,14 +42,14 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<String> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -59,42 +60,42 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensions")
       private final @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Output<List<Map<String,String>>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+    public Output<List<Map<String,String>>> extensions() {
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
     @Import(name="ignoreExpiryValidation")
       private final @Nullable Output<String> ignoreExpiryValidation;
 
-    public Output<String> getIgnoreExpiryValidation() {
-        return this.ignoreExpiryValidation == null ? Output.empty() : this.ignoreExpiryValidation;
+    public Output<String> ignoreExpiryValidation() {
+        return this.ignoreExpiryValidation == null ? Codegen.empty() : this.ignoreExpiryValidation;
     }
 
     @Import(name="ignoreNewlineValidation")
       private final @Nullable Output<String> ignoreNewlineValidation;
 
-    public Output<String> getIgnoreNewlineValidation() {
-        return this.ignoreNewlineValidation == null ? Output.empty() : this.ignoreNewlineValidation;
+    public Output<String> ignoreNewlineValidation() {
+        return this.ignoreNewlineValidation == null ? Codegen.empty() : this.ignoreNewlineValidation;
     }
 
     @Import(name="keystoreId", required=true)
       private final Output<String> keystoreId;
 
-    public Output<String> getKeystoreId() {
+    public Output<String> keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -122,16 +123,16 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasArgs() {
-        this.alias = Output.empty();
-        this.contentType = Output.empty();
-        this.data = Output.empty();
-        this.environmentId = Output.empty();
-        this.extensions = Output.empty();
-        this.format = Output.empty();
-        this.ignoreExpiryValidation = Output.empty();
-        this.ignoreNewlineValidation = Output.empty();
-        this.keystoreId = Output.empty();
-        this.organizationId = Output.empty();
+        this.alias = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.data = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.extensions = Codegen.empty();
+        this.format = Codegen.empty();
+        this.ignoreExpiryValidation = Codegen.empty();
+        this.ignoreNewlineValidation = Codegen.empty();
+        this.keystoreId = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -185,7 +186,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder data(@Nullable Output<String> data) {
@@ -193,7 +194,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -209,7 +210,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder format(Output<String> format) {
@@ -225,7 +226,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreExpiryValidation(@Nullable String ignoreExpiryValidation) {
-            this.ignoreExpiryValidation = Output.ofNullable(ignoreExpiryValidation);
+            this.ignoreExpiryValidation = Codegen.ofNullable(ignoreExpiryValidation);
             return this;
         }
         public Builder ignoreNewlineValidation(@Nullable Output<String> ignoreNewlineValidation) {
@@ -233,7 +234,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreNewlineValidation(@Nullable String ignoreNewlineValidation) {
-            this.ignoreNewlineValidation = Output.ofNullable(ignoreNewlineValidation);
+            this.ignoreNewlineValidation = Codegen.ofNullable(ignoreNewlineValidation);
             return this;
         }
         public Builder keystoreId(Output<String> keystoreId) {

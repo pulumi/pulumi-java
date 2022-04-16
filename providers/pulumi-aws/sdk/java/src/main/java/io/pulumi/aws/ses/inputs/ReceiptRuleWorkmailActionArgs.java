@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
     @Import(name="organizationArn", required=true)
       private final Output<String> organizationArn;
 
-    public Output<String> getOrganizationArn() {
+    public Output<String> organizationArn() {
         return this.organizationArn;
     }
 
@@ -33,7 +34,7 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -44,8 +45,8 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+    public Output<String> topicArn() {
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public ReceiptRuleWorkmailActionArgs(
@@ -58,9 +59,9 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
     }
 
     private ReceiptRuleWorkmailActionArgs() {
-        this.organizationArn = Output.empty();
-        this.position = Output.empty();
-        this.topicArn = Output.empty();
+        this.organizationArn = Codegen.empty();
+        this.position = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public ReceiptRuleWorkmailActionArgs build() {
             return new ReceiptRuleWorkmailActionArgs(organizationArn, position, topicArn);

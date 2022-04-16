@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccessArgs exten
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -29,7 +30,7 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccessArgs exten
     }
 
     private FunctionEventInvokeConfigDestinationConfigOnSuccessArgs() {
-        this.destination = Output.empty();
+        this.destination = Codegen.empty();
     }
 
     public static Builder builder() {

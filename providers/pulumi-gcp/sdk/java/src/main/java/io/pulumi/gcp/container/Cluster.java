@@ -6,6 +6,7 @@ package io.pulumi.gcp.container;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.ClusterArgs;
 import io.pulumi.gcp.container.inputs.ClusterState;
@@ -86,7 +87,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterAddonsConfig> getAddonsConfig() {
+    public Output<ClusterAddonsConfig> addonsConfig() {
         return this.addonsConfig;
     }
     /**
@@ -104,7 +105,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterAuthenticatorGroupsConfig> getAuthenticatorGroupsConfig() {
+    public Output<ClusterAuthenticatorGroupsConfig> authenticatorGroupsConfig() {
         return this.authenticatorGroupsConfig;
     }
     /**
@@ -126,7 +127,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * for more details. Structure is documented below.
      * 
      */
-    public Output<ClusterClusterAutoscaling> getClusterAutoscaling() {
+    public Output<ClusterClusterAutoscaling> clusterAutoscaling() {
         return this.clusterAutoscaling;
     }
     /**
@@ -146,7 +147,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * only work for routes-based clusters, where `ip_allocation_policy` is not defined.
      * 
      */
-    public Output<String> getClusterIpv4Cidr() {
+    public Output<String> clusterIpv4Cidr() {
         return this.clusterIpv4Cidr;
     }
     /**
@@ -164,7 +165,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterClusterTelemetry> getClusterTelemetry() {
+    public Output<ClusterClusterTelemetry> clusterTelemetry() {
         return this.clusterTelemetry;
     }
     /**
@@ -178,7 +179,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration for [Confidential Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes) feature. Structure is documented below documented below.
      * 
      */
-    public Output<ClusterConfidentialNodes> getConfidentialNodes() {
+    public Output<ClusterConfidentialNodes> confidentialNodes() {
         return this.confidentialNodes;
     }
     /**
@@ -192,7 +193,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Structure is documented below.
      * 
      */
-    public Output<ClusterDatabaseEncryption> getDatabaseEncryption() {
+    public Output<ClusterDatabaseEncryption> databaseEncryption() {
         return this.databaseEncryption;
     }
     /**
@@ -206,7 +207,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
      * 
      */
-    public Output<String> getDatapathProvider() {
+    public Output<String> datapathProvider() {
         return this.datapathProvider;
     }
     /**
@@ -226,7 +227,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * for more information.
      * 
      */
-    public Output<Integer> getDefaultMaxPodsPerNode() {
+    public Output<Integer> defaultMaxPodsPerNode() {
         return this.defaultMaxPodsPerNode;
     }
     /**
@@ -240,7 +241,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
      * 
      */
-    public Output<ClusterDefaultSnatStatus> getDefaultSnatStatus() {
+    public Output<ClusterDefaultSnatStatus> defaultSnatStatus() {
         return this.defaultSnatStatus;
     }
     /**
@@ -254,7 +255,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Description of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -268,7 +269,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterDnsConfig> getDnsConfig() {
+    public Output</* @Nullable */ ClusterDnsConfig> dnsConfig() {
         return this.dnsConfig;
     }
     /**
@@ -288,7 +289,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * for available features.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableAutopilot() {
+    public Output</* @Nullable */ Boolean> enableAutopilot() {
         return this.enableAutopilot;
     }
     /**
@@ -304,7 +305,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * If enabled, all container images will be validated by Google Binary Authorization.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBinaryAuthorization() {
+    public Output</* @Nullable */ Boolean> enableBinaryAuthorization() {
         return this.enableBinaryAuthorization;
     }
     /**
@@ -318,7 +319,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
      * 
      */
-    public Output<Boolean> getEnableIntranodeVisibility() {
+    public Output<Boolean> enableIntranodeVisibility() {
         return this.enableIntranodeVisibility;
     }
     /**
@@ -336,7 +337,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * and will be automatically deleted after 30 days.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableKubernetesAlpha() {
+    public Output</* @Nullable */ Boolean> enableKubernetesAlpha() {
         return this.enableKubernetesAlpha;
     }
     /**
@@ -350,7 +351,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Whether L4ILB Subsetting is enabled for this cluster.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableL4IlbSubsetting() {
+    public Output</* @Nullable */ Boolean> enableL4IlbSubsetting() {
         return this.enableL4IlbSubsetting;
     }
     /**
@@ -370,7 +371,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableLegacyAbac() {
+    public Output</* @Nullable */ Boolean> enableLegacyAbac() {
         return this.enableLegacyAbac;
     }
     /**
@@ -384,7 +385,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableShieldedNodes() {
+    public Output</* @Nullable */ Boolean> enableShieldedNodes() {
         return this.enableShieldedNodes;
     }
     /**
@@ -400,7 +401,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableTpu() {
+    public Output</* @Nullable */ Boolean> enableTpu() {
         return this.enableTpu;
     }
     /**
@@ -414,7 +415,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The IP address of this cluster's Kubernetes master.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -428,7 +429,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return . Structure is documented below.
      * 
      */
-    public Output<ClusterIdentityServiceConfig> getIdentityServiceConfig() {
+    public Output<ClusterIdentityServiceConfig> identityServiceConfig() {
         return this.identityServiceConfig;
     }
     /**
@@ -452,7 +453,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `remove_default_node_pool` to `true`.
      * 
      */
-    public Output</* @Nullable */ Integer> getInitialNodeCount() {
+    public Output</* @Nullable */ Integer> initialNodeCount() {
         return this.initialNodeCount;
     }
     /**
@@ -472,7 +473,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * below.
      * 
      */
-    public Output<ClusterIpAllocationPolicy> getIpAllocationPolicy() {
+    public Output<ClusterIpAllocationPolicy> ipAllocationPolicy() {
         return this.ipAllocationPolicy;
     }
     /**
@@ -486,7 +487,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The fingerprint of the set of labels for this cluster.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -510,7 +511,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * the region, and with default node locations in those zones as well
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -526,7 +527,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterLoggingConfig> getLoggingConfig() {
+    public Output<ClusterLoggingConfig> loggingConfig() {
         return this.loggingConfig;
     }
     /**
@@ -544,7 +545,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
      * 
      */
-    public Output<String> getLoggingService() {
+    public Output<String> loggingService() {
         return this.loggingService;
     }
     /**
@@ -560,7 +561,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterMaintenancePolicy> getMaintenancePolicy() {
+    public Output</* @Nullable */ ClusterMaintenancePolicy> maintenancePolicy() {
         return this.maintenancePolicy;
     }
     /**
@@ -584,7 +585,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterMasterAuth> getMasterAuth() {
+    public Output<ClusterMasterAuth> masterAuth() {
         return this.masterAuth;
     }
     /**
@@ -606,7 +607,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterMasterAuthorizedNetworksConfig> getMasterAuthorizedNetworksConfig() {
+    public Output</* @Nullable */ ClusterMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig;
     }
     /**
@@ -624,7 +625,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * has been updated by GKE.
      * 
      */
-    public Output<String> getMasterVersion() {
+    public Output<String> masterVersion() {
         return this.masterVersion;
     }
     /**
@@ -654,7 +655,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * describe the various acceptable formats for this field.
      * 
      */
-    public Output</* @Nullable */ String> getMinMasterVersion() {
+    public Output</* @Nullable */ String> minMasterVersion() {
         return this.minMasterVersion;
     }
     /**
@@ -670,7 +671,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterMonitoringConfig> getMonitoringConfig() {
+    public Output<ClusterMonitoringConfig> monitoringConfig() {
         return this.monitoringConfig;
     }
     /**
@@ -696,7 +697,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Defaults to `monitoring.googleapis.com/kubernetes`
      * 
      */
-    public Output<String> getMonitoringService() {
+    public Output<String> monitoringService() {
         return this.monitoringService;
     }
     /**
@@ -712,7 +713,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * location.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -730,7 +731,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * shared network.
      * 
      */
-    public Output</* @Nullable */ String> getNetwork() {
+    public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
@@ -748,7 +749,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * feature. Structure is documented below.
      * 
      */
-    public Output<ClusterNetworkPolicy> getNetworkPolicy() {
+    public Output<ClusterNetworkPolicy> networkPolicy() {
         return this.networkPolicy;
     }
     /**
@@ -766,7 +767,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
      * 
      */
-    public Output<String> getNetworkingMode() {
+    public Output<String> networkingMode() {
         return this.networkingMode;
     }
     /**
@@ -788,7 +789,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterNodeConfig> getNodeConfig() {
+    public Output<ClusterNodeConfig> nodeConfig() {
         return this.nodeConfig;
     }
     /**
@@ -808,7 +809,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * a zonal cluster, omit the cluster's zone.
      * 
      */
-    public Output<List<String>> getNodeLocations() {
+    public Output<List<String>> nodeLocations() {
         return this.nodeLocations;
     }
     /**
@@ -832,7 +833,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * gcp.container.NodePool resource instead of this property.
      * 
      */
-    public Output<List<ClusterNodePool>> getNodePools() {
+    public Output<List<ClusterNodePool>> nodePools() {
         return this.nodePools;
     }
     /**
@@ -860,7 +861,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * To update nodes in other node pools, use the `version` attribute on the node pool.
      * 
      */
-    public Output<String> getNodeVersion() {
+    public Output<String> nodeVersion() {
         return this.nodeVersion;
     }
     /**
@@ -874,13 +875,13 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
      * 
      */
-    public Output<ClusterNotificationConfig> getNotificationConfig() {
+    public Output<ClusterNotificationConfig> notificationConfig() {
         return this.notificationConfig;
     }
     @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
     /**
@@ -898,7 +899,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterPodSecurityPolicyConfig> getPodSecurityPolicyConfig() {
+    public Output</* @Nullable */ ClusterPodSecurityPolicyConfig> podSecurityPolicyConfig() {
         return this.podSecurityPolicyConfig;
     }
     /**
@@ -914,7 +915,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * clusters with private nodes. Structure is documented below.
      * 
      */
-    public Output<ClusterPrivateClusterConfig> getPrivateClusterConfig() {
+    public Output<ClusterPrivateClusterConfig> privateClusterConfig() {
         return this.privateClusterConfig;
     }
     /**
@@ -928,7 +929,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
      * 
      */
-    public Output<String> getPrivateIpv6GoogleAccess() {
+    public Output<String> privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
     /**
@@ -944,7 +945,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -974,7 +975,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * channel. Structure is documented below.
      * 
      */
-    public Output<ClusterReleaseChannel> getReleaseChannel() {
+    public Output<ClusterReleaseChannel> releaseChannel() {
         return this.releaseChannel;
     }
     /**
@@ -994,7 +995,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * setting `initial_node_count` to at least `1`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRemoveDefaultNodePool() {
+    public Output</* @Nullable */ Boolean> removeDefaultNodePool() {
         return this.removeDefaultNodePool;
     }
     /**
@@ -1008,7 +1009,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResourceLabels() {
+    public Output</* @Nullable */ Map<String,String>> resourceLabels() {
         return this.resourceLabels;
     }
     /**
@@ -1026,7 +1027,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterResourceUsageExportConfig> getResourceUsageExportConfig() {
+    public Output</* @Nullable */ ClusterResourceUsageExportConfig> resourceUsageExportConfig() {
         return this.resourceUsageExportConfig;
     }
     /**
@@ -1040,7 +1041,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -1060,7 +1061,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `/16` from the container CIDR.
      * 
      */
-    public Output<String> getServicesIpv4Cidr() {
+    public Output<String> servicesIpv4Cidr() {
         return this.servicesIpv4Cidr;
     }
     /**
@@ -1076,7 +1077,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * subnetwork in which the cluster's instances are launched.
      * 
      */
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
     /**
@@ -1094,7 +1095,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * notation (e.g. `1.2.3.4/29`).
      * 
      */
-    public Output<String> getTpuIpv4CidrBlock() {
+    public Output<String> tpuIpv4CidrBlock() {
         return this.tpuIpv4CidrBlock;
     }
     /**
@@ -1110,7 +1111,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterVerticalPodAutoscaling> getVerticalPodAutoscaling() {
+    public Output</* @Nullable */ ClusterVerticalPodAutoscaling> verticalPodAutoscaling() {
         return this.verticalPodAutoscaling;
     }
     /**
@@ -1128,7 +1129,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ClusterWorkloadIdentityConfig> getWorkloadIdentityConfig() {
+    public Output<ClusterWorkloadIdentityConfig> workloadIdentityConfig() {
         return this.workloadIdentityConfig;
     }
 
@@ -1154,7 +1155,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:container/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

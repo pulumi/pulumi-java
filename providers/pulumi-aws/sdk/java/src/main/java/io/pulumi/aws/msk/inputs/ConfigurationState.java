@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kafkaVersions")
       private final @Nullable Output<List<String>> kafkaVersions;
 
-    public Output<List<String>> getKafkaVersions() {
-        return this.kafkaVersions == null ? Output.empty() : this.kafkaVersions;
+    public Output<List<String>> kafkaVersions() {
+        return this.kafkaVersions == null ? Codegen.empty() : this.kafkaVersions;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> getLatestRevision() {
-        return this.latestRevision == null ? Output.empty() : this.latestRevision;
+    public Output<Integer> latestRevision() {
+        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverProperties")
       private final @Nullable Output<String> serverProperties;
 
-    public Output<String> getServerProperties() {
-        return this.serverProperties == null ? Output.empty() : this.serverProperties;
+    public Output<String> serverProperties() {
+        return this.serverProperties == null ? Codegen.empty() : this.serverProperties;
     }
 
     public ConfigurationState(
@@ -98,12 +99,12 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.kafkaVersions = Output.empty();
-        this.latestRevision = Output.empty();
-        this.name = Output.empty();
-        this.serverProperties = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.kafkaVersions = Codegen.empty();
+        this.latestRevision = Codegen.empty();
+        this.name = Codegen.empty();
+        this.serverProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -149,7 +150,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
@@ -157,7 +158,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kafkaVersions(@Nullable List<String> kafkaVersions) {
-            this.kafkaVersions = Output.ofNullable(kafkaVersions);
+            this.kafkaVersions = Codegen.ofNullable(kafkaVersions);
             return this;
         }
         public Builder kafkaVersions(String... kafkaVersions) {
@@ -168,7 +169,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Output.ofNullable(latestRevision);
+            this.latestRevision = Codegen.ofNullable(latestRevision);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -176,7 +177,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder serverProperties(@Nullable Output<String> serverProperties) {
@@ -184,7 +185,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverProperties(@Nullable String serverProperties) {
-            this.serverProperties = Output.ofNullable(serverProperties);
+            this.serverProperties = Codegen.ofNullable(serverProperties);
             return this;
         }        public ConfigurationState build() {
             return new ConfigurationState(arn, description, kafkaVersions, latestRevision, name, serverProperties);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class CxVersionNluSettingArgs extends io.pulumi.resources.ResourceA
     @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
-    public Output<Double> getClassificationThreshold() {
-        return this.classificationThreshold == null ? Output.empty() : this.classificationThreshold;
+    public Output<Double> classificationThreshold() {
+        return this.classificationThreshold == null ? Codegen.empty() : this.classificationThreshold;
     }
 
     @Import(name="modelTrainingMode")
       private final @Nullable Output<String> modelTrainingMode;
 
-    public Output<String> getModelTrainingMode() {
-        return this.modelTrainingMode == null ? Output.empty() : this.modelTrainingMode;
+    public Output<String> modelTrainingMode() {
+        return this.modelTrainingMode == null ? Codegen.empty() : this.modelTrainingMode;
     }
 
     @Import(name="modelType")
       private final @Nullable Output<String> modelType;
 
-    public Output<String> getModelType() {
-        return this.modelType == null ? Output.empty() : this.modelType;
+    public Output<String> modelType() {
+        return this.modelType == null ? Codegen.empty() : this.modelType;
     }
 
     public CxVersionNluSettingArgs(
@@ -46,9 +47,9 @@ public final class CxVersionNluSettingArgs extends io.pulumi.resources.ResourceA
     }
 
     private CxVersionNluSettingArgs() {
-        this.classificationThreshold = Output.empty();
-        this.modelTrainingMode = Output.empty();
-        this.modelType = Output.empty();
+        this.classificationThreshold = Codegen.empty();
+        this.modelTrainingMode = Codegen.empty();
+        this.modelType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CxVersionNluSettingArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder classificationThreshold(@Nullable Double classificationThreshold) {
-            this.classificationThreshold = Output.ofNullable(classificationThreshold);
+            this.classificationThreshold = Codegen.ofNullable(classificationThreshold);
             return this;
         }
         public Builder modelTrainingMode(@Nullable Output<String> modelTrainingMode) {
@@ -88,7 +89,7 @@ public final class CxVersionNluSettingArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
-            this.modelTrainingMode = Output.ofNullable(modelTrainingMode);
+            this.modelTrainingMode = Codegen.ofNullable(modelTrainingMode);
             return this;
         }
         public Builder modelType(@Nullable Output<String> modelType) {
@@ -96,7 +97,7 @@ public final class CxVersionNluSettingArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder modelType(@Nullable String modelType) {
-            this.modelType = Output.ofNullable(modelType);
+            this.modelType = Codegen.ofNullable(modelType);
             return this;
         }        public CxVersionNluSettingArgs build() {
             return new CxVersionNluSettingArgs(classificationThreshold, modelTrainingMode, modelType);

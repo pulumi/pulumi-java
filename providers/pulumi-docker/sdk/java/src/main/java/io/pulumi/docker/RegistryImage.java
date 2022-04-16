@@ -6,6 +6,7 @@ package io.pulumi.docker;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.RegistryImageArgs;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.RegistryImageState;
@@ -117,7 +118,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * @return Definition for building the image
      * 
      */
-    public Output</* @Nullable */ RegistryImageBuild> getBuild() {
+    public Output</* @Nullable */ RegistryImageBuild> build() {
         return this.build;
     }
     /**
@@ -131,7 +132,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * @return If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getInsecureSkipVerify() {
+    public Output</* @Nullable */ Boolean> insecureSkipVerify() {
         return this.insecureSkipVerify;
     }
     /**
@@ -147,7 +148,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * the docker registry on destroy operation. Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getKeepRemotely() {
+    public Output</* @Nullable */ Boolean> keepRemotely() {
         return this.keepRemotely;
     }
     /**
@@ -161,7 +162,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * @return The name of the Docker image.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -175,7 +176,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * @return The sha256 digest of the image.
      * 
      */
-    public Output<String> getSha256Digest() {
+    public Output<String> sha256Digest() {
         return this.sha256Digest;
     }
 
@@ -201,7 +202,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistryImage(String name, @Nullable RegistryImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/registryImage:RegistryImage", name, args == null ? RegistryImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("docker:index/registryImage:RegistryImage", name, args == null ? RegistryImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegistryImage(String name, Output<String> id, @Nullable RegistryImageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.elb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elb", required=true)
       private final Output<String> elb;
 
-    public Output<String> getElb() {
+    public Output<String> elb() {
         return this.elb;
     }
 
@@ -31,7 +32,7 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -43,8 +44,8 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachmentArgs() {
-        this.elb = Output.empty();
-        this.instance = Output.empty();
+        this.elb = Codegen.empty();
+        this.instance = Codegen.empty();
     }
 
     public static Builder builder() {

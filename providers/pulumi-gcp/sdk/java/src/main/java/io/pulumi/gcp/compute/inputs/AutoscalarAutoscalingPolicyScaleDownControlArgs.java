@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
     @Import(name="maxScaledDownReplicas")
       private final @Nullable Output<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas;
 
-    public Output<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> getMaxScaledDownReplicas() {
-        return this.maxScaledDownReplicas == null ? Output.empty() : this.maxScaledDownReplicas;
+    public Output<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas() {
+        return this.maxScaledDownReplicas == null ? Codegen.empty() : this.maxScaledDownReplicas;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
     @Import(name="timeWindowSec")
       private final @Nullable Output<Integer> timeWindowSec;
 
-    public Output<Integer> getTimeWindowSec() {
-        return this.timeWindowSec == null ? Output.empty() : this.timeWindowSec;
+    public Output<Integer> timeWindowSec() {
+        return this.timeWindowSec == null ? Codegen.empty() : this.timeWindowSec;
     }
 
     public AutoscalarAutoscalingPolicyScaleDownControlArgs(
@@ -47,8 +48,8 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
     }
 
     private AutoscalarAutoscalingPolicyScaleDownControlArgs() {
-        this.maxScaledDownReplicas = Output.empty();
-        this.timeWindowSec = Output.empty();
+        this.maxScaledDownReplicas = Codegen.empty();
+        this.timeWindowSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
             return this;
         }
         public Builder maxScaledDownReplicas(@Nullable AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs maxScaledDownReplicas) {
-            this.maxScaledDownReplicas = Output.ofNullable(maxScaledDownReplicas);
+            this.maxScaledDownReplicas = Codegen.ofNullable(maxScaledDownReplicas);
             return this;
         }
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
@@ -86,7 +87,7 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
             return this;
         }
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
-            this.timeWindowSec = Output.ofNullable(timeWindowSec);
+            this.timeWindowSec = Codegen.ofNullable(timeWindowSec);
             return this;
         }        public AutoscalarAutoscalingPolicyScaleDownControlArgs build() {
             return new AutoscalarAutoscalingPolicyScaleDownControlArgs(maxScaledDownReplicas, timeWindowSec);

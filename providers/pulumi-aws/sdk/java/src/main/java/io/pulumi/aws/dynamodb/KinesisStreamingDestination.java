@@ -9,6 +9,7 @@ import io.pulumi.aws.dynamodb.inputs.KinesisStreamingDestinationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
      * @return The ARN for a Kinesis data stream. This must exist in the same account and region as the DynamoDB table.
      * 
      */
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
     /**
@@ -55,7 +56,7 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
      * can only be one Kinesis streaming destination for a given DynamoDB table.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -81,7 +82,7 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public KinesisStreamingDestination(String name, KinesisStreamingDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, args == null ? KinesisStreamingDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dynamodb/kinesisStreamingDestination:KinesisStreamingDestination", name, args == null ? KinesisStreamingDestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KinesisStreamingDestination(String name, Output<String> id, @Nullable KinesisStreamingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

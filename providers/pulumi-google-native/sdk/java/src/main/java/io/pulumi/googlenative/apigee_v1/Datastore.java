@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.DatastoreArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1DatastoreConfigResponse;
@@ -30,7 +31,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @return Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +45,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @return Datastore Configurations.
      * 
      */
-    public Output<GoogleCloudApigeeV1DatastoreConfigResponse> getDatastoreConfig() {
+    public Output<GoogleCloudApigeeV1DatastoreConfigResponse> datastoreConfig() {
         return this.datastoreConfig;
     }
     /**
@@ -58,7 +59,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @return Display name in UI
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +73,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @return Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
      */
-    public Output<String> getLastUpdateTime() {
+    public Output<String> lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
@@ -86,7 +87,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @return Organization that the datastore belongs to
      * 
      */
-    public Output<String> getOrg() {
+    public Output<String> org() {
         return this.org;
     }
     /**
@@ -100,7 +101,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @return Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
      * 
      */
-    public Output<String> getSelf() {
+    public Output<String> self() {
         return this.self;
     }
     /**
@@ -114,7 +115,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @return Destination storage type. Supported types `gcs` or `bigquery`.
      * 
      */
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType;
     }
 
@@ -140,7 +141,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Datastore(String name, DatastoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Datastore", name, args == null ? DatastoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Datastore", name, args == null ? DatastoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Datastore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

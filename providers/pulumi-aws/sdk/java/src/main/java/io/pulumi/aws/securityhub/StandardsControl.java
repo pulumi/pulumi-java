@@ -9,6 +9,7 @@ import io.pulumi.aws.securityhub.inputs.StandardsControlState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The identifier of the security standard control.
      * 
      */
-    public Output<String> getControlId() {
+    public Output<String> controlId() {
         return this.controlId;
     }
     /**
@@ -40,7 +41,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The control status could be `ENABLED` or `DISABLED`. You have to specify `disabled_reason` argument for `DISABLED` control status.
      * 
      */
-    public Output<String> getControlStatus() {
+    public Output<String> controlStatus() {
         return this.controlStatus;
     }
     /**
@@ -54,7 +55,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The date and time that the status of the security standard control was most recently updated.
      * 
      */
-    public Output<String> getControlStatusUpdatedAt() {
+    public Output<String> controlStatusUpdatedAt() {
         return this.controlStatusUpdatedAt;
     }
     /**
@@ -68,7 +69,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The standard control longer description. Provides information about what the control is checking for.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -82,7 +83,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return A description of the reason why you are disabling a security standard control. If you specify this attribute, `control_status` will be set to `DISABLED` automatically.
      * 
      */
-    public Output<String> getDisabledReason() {
+    public Output<String> disabledReason() {
         return this.disabledReason;
     }
     /**
@@ -96,7 +97,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The list of requirements that are related to this control.
      * 
      */
-    public Output<List<String>> getRelatedRequirements() {
+    public Output<List<String>> relatedRequirements() {
         return this.relatedRequirements;
     }
     /**
@@ -110,7 +111,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return A link to remediation information for the control in the Security Hub user documentation.
      * 
      */
-    public Output<String> getRemediationUrl() {
+    public Output<String> remediationUrl() {
         return this.remediationUrl;
     }
     /**
@@ -124,7 +125,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The severity of findings generated from this security standard control.
      * 
      */
-    public Output<String> getSeverityRating() {
+    public Output<String> severityRating() {
         return this.severityRating;
     }
     /**
@@ -138,7 +139,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The standards control ARN.
      * 
      */
-    public Output<String> getStandardsControlArn() {
+    public Output<String> standardsControlArn() {
         return this.standardsControlArn;
     }
     /**
@@ -152,7 +153,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @return The standard control title.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -178,7 +179,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StandardsControl(String name, StandardsControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/standardsControl:StandardsControl", name, args == null ? StandardsControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:securityhub/standardsControl:StandardsControl", name, args == null ? StandardsControlArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StandardsControl(String name, Output<String> id, @Nullable StandardsControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

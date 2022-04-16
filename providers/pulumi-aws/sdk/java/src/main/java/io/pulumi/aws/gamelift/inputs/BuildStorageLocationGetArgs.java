@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BuildStorageLocationGetArgs extends io.pulumi.resources.Resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -31,7 +32,7 @@ public final class BuildStorageLocationGetArgs extends io.pulumi.resources.Resou
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -42,7 +43,7 @@ public final class BuildStorageLocationGetArgs extends io.pulumi.resources.Resou
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -56,9 +57,9 @@ public final class BuildStorageLocationGetArgs extends io.pulumi.resources.Resou
     }
 
     private BuildStorageLocationGetArgs() {
-        this.bucket = Output.empty();
-        this.key = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucket = Codegen.empty();
+        this.key = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

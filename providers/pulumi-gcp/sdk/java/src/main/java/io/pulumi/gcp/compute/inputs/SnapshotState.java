@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.SnapshotSnapshotEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.SnapshotSourceDiskEncryptionKeyGetArgs;
 import java.lang.Integer;
@@ -26,8 +27,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<Integer> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
-    public Output<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
+    public Output<String> labelFingerprint() {
+        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
-        return this.licenses == null ? Output.empty() : this.licenses;
+    public Output<List<String>> licenses() {
+        return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey;
 
-    public Output<SnapshotSnapshotEncryptionKeyGetArgs> getSnapshotEncryptionKey() {
-        return this.snapshotEncryptionKey == null ? Output.empty() : this.snapshotEncryptionKey;
+    public Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey() {
+        return this.snapshotEncryptionKey == null ? Codegen.empty() : this.snapshotEncryptionKey;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotId")
       private final @Nullable Output<Integer> snapshotId;
 
-    public Output<Integer> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+    public Output<Integer> snapshotId() {
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
-        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
+    public Output<String> sourceDisk() {
+        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey;
 
-    public Output<SnapshotSourceDiskEncryptionKeyGetArgs> getSourceDiskEncryptionKey() {
-        return this.sourceDiskEncryptionKey == null ? Output.empty() : this.sourceDiskEncryptionKey;
+    public Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey() {
+        return this.sourceDiskEncryptionKey == null ? Codegen.empty() : this.sourceDiskEncryptionKey;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageBytes")
       private final @Nullable Output<Integer> storageBytes;
 
-    public Output<Integer> getStorageBytes() {
-        return this.storageBytes == null ? Output.empty() : this.storageBytes;
+    public Output<Integer> storageBytes() {
+        return this.storageBytes == null ? Codegen.empty() : this.storageBytes;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> getStorageLocations() {
-        return this.storageLocations == null ? Output.empty() : this.storageLocations;
+    public Output<List<String>> storageLocations() {
+        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 
     /**
@@ -206,8 +207,8 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public SnapshotState(
@@ -246,22 +247,22 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotState() {
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.labelFingerprint = Output.empty();
-        this.labels = Output.empty();
-        this.licenses = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.snapshotEncryptionKey = Output.empty();
-        this.snapshotId = Output.empty();
-        this.sourceDisk = Output.empty();
-        this.sourceDiskEncryptionKey = Output.empty();
-        this.storageBytes = Output.empty();
-        this.storageLocations = Output.empty();
-        this.zone = Output.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.labelFingerprint = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.licenses = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.snapshotEncryptionKey = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.sourceDisk = Codegen.empty();
+        this.sourceDiskEncryptionKey = Codegen.empty();
+        this.storageBytes = Codegen.empty();
+        this.storageLocations = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -319,7 +320,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -327,7 +328,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
@@ -335,7 +336,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
@@ -343,7 +344,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Output.ofNullable(labelFingerprint);
+            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -351,7 +352,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder licenses(@Nullable Output<List<String>> licenses) {
@@ -359,7 +360,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Output.ofNullable(licenses);
+            this.licenses = Codegen.ofNullable(licenses);
             return this;
         }
         public Builder licenses(String... licenses) {
@@ -370,7 +371,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -378,7 +379,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -386,7 +387,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder snapshotEncryptionKey(@Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey) {
@@ -394,7 +395,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotEncryptionKey(@Nullable SnapshotSnapshotEncryptionKeyGetArgs snapshotEncryptionKey) {
-            this.snapshotEncryptionKey = Output.ofNullable(snapshotEncryptionKey);
+            this.snapshotEncryptionKey = Codegen.ofNullable(snapshotEncryptionKey);
             return this;
         }
         public Builder snapshotId(@Nullable Output<Integer> snapshotId) {
@@ -402,7 +403,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotId(@Nullable Integer snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
@@ -410,7 +411,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Output.ofNullable(sourceDisk);
+            this.sourceDisk = Codegen.ofNullable(sourceDisk);
             return this;
         }
         public Builder sourceDiskEncryptionKey(@Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey) {
@@ -418,7 +419,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDiskEncryptionKey(@Nullable SnapshotSourceDiskEncryptionKeyGetArgs sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = Output.ofNullable(sourceDiskEncryptionKey);
+            this.sourceDiskEncryptionKey = Codegen.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
         public Builder storageBytes(@Nullable Output<Integer> storageBytes) {
@@ -426,7 +427,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageBytes(@Nullable Integer storageBytes) {
-            this.storageBytes = Output.ofNullable(storageBytes);
+            this.storageBytes = Codegen.ofNullable(storageBytes);
             return this;
         }
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
@@ -434,7 +435,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Output.ofNullable(storageLocations);
+            this.storageLocations = Codegen.ofNullable(storageLocations);
             return this;
         }
         public Builder storageLocations(String... storageLocations) {
@@ -445,7 +446,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public SnapshotState build() {
             return new SnapshotState(creationTimestamp, description, diskSizeGb, labelFingerprint, labels, licenses, name, project, selfLink, snapshotEncryptionKey, snapshotId, sourceDisk, sourceDiskEncryptionKey, storageBytes, storageLocations, zone);

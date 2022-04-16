@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
     @Import(name="enableConfidentialCompute")
       private final @Nullable Output<Boolean> enableConfidentialCompute;
 
-    public Output<Boolean> getEnableConfidentialCompute() {
-        return this.enableConfidentialCompute == null ? Output.empty() : this.enableConfidentialCompute;
+    public Output<Boolean> enableConfidentialCompute() {
+        return this.enableConfidentialCompute == null ? Codegen.empty() : this.enableConfidentialCompute;
     }
 
     public ConfidentialInstanceConfigArgs(@Nullable Output<Boolean> enableConfidentialCompute) {
@@ -34,7 +35,7 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
     }
 
     private ConfidentialInstanceConfigArgs() {
-        this.enableConfidentialCompute = Output.empty();
+        this.enableConfidentialCompute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enableConfidentialCompute(@Nullable Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Output.ofNullable(enableConfidentialCompute);
+            this.enableConfidentialCompute = Codegen.ofNullable(enableConfidentialCompute);
             return this;
         }        public ConfidentialInstanceConfigArgs build() {
             return new ConfidentialInstanceConfigArgs(enableConfidentialCompute);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedCpeUri", required=true)
       private final Output<String> affectedCpeUri;
 
-    public Output<String> getAffectedCpeUri() {
+    public Output<String> affectedCpeUri() {
         return this.affectedCpeUri;
     }
 
@@ -38,7 +39,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedPackage", required=true)
       private final Output<String> affectedPackage;
 
-    public Output<String> getAffectedPackage() {
+    public Output<String> affectedPackage() {
         return this.affectedPackage;
     }
 
@@ -49,8 +50,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedVersionEnd")
       private final @Nullable Output<VersionArgs> affectedVersionEnd;
 
-    public Output<VersionArgs> getAffectedVersionEnd() {
-        return this.affectedVersionEnd == null ? Output.empty() : this.affectedVersionEnd;
+    public Output<VersionArgs> affectedVersionEnd() {
+        return this.affectedVersionEnd == null ? Codegen.empty() : this.affectedVersionEnd;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedVersionStart")
       private final @Nullable Output<VersionArgs> affectedVersionStart;
 
-    public Output<VersionArgs> getAffectedVersionStart() {
-        return this.affectedVersionStart == null ? Output.empty() : this.affectedVersionStart;
+    public Output<VersionArgs> affectedVersionStart() {
+        return this.affectedVersionStart == null ? Codegen.empty() : this.affectedVersionStart;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedCpeUri")
       private final @Nullable Output<String> fixedCpeUri;
 
-    public Output<String> getFixedCpeUri() {
-        return this.fixedCpeUri == null ? Output.empty() : this.fixedCpeUri;
+    public Output<String> fixedCpeUri() {
+        return this.fixedCpeUri == null ? Codegen.empty() : this.fixedCpeUri;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedPackage")
       private final @Nullable Output<String> fixedPackage;
 
-    public Output<String> getFixedPackage() {
-        return this.fixedPackage == null ? Output.empty() : this.fixedPackage;
+    public Output<String> fixedPackage() {
+        return this.fixedPackage == null ? Codegen.empty() : this.fixedPackage;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedVersion")
       private final @Nullable Output<VersionArgs> fixedVersion;
 
-    public Output<VersionArgs> getFixedVersion() {
-        return this.fixedVersion == null ? Output.empty() : this.fixedVersion;
+    public Output<VersionArgs> fixedVersion() {
+        return this.fixedVersion == null ? Codegen.empty() : this.fixedVersion;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isObsolete")
       private final @Nullable Output<Boolean> isObsolete;
 
-    public Output<Boolean> getIsObsolete() {
-        return this.isObsolete == null ? Output.empty() : this.isObsolete;
+    public Output<Boolean> isObsolete() {
+        return this.isObsolete == null ? Codegen.empty() : this.isObsolete;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
-        return this.packageType == null ? Output.empty() : this.packageType;
+    public Output<String> packageType() {
+        return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severityName")
       private final @Nullable Output<String> severityName;
 
-    public Output<String> getSeverityName() {
-        return this.severityName == null ? Output.empty() : this.severityName;
+    public Output<String> severityName() {
+        return this.severityName == null ? Codegen.empty() : this.severityName;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<String> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceUpdateTime")
       private final @Nullable Output<String> sourceUpdateTime;
 
-    public Output<String> getSourceUpdateTime() {
-        return this.sourceUpdateTime == null ? Output.empty() : this.sourceUpdateTime;
+    public Output<String> sourceUpdateTime() {
+        return this.sourceUpdateTime == null ? Codegen.empty() : this.sourceUpdateTime;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
-    public Output<String> getVendor() {
-        return this.vendor == null ? Output.empty() : this.vendor;
+    public Output<String> vendor() {
+        return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 
     public DetailArgs(
@@ -206,20 +207,20 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetailArgs() {
-        this.affectedCpeUri = Output.empty();
-        this.affectedPackage = Output.empty();
-        this.affectedVersionEnd = Output.empty();
-        this.affectedVersionStart = Output.empty();
-        this.description = Output.empty();
-        this.fixedCpeUri = Output.empty();
-        this.fixedPackage = Output.empty();
-        this.fixedVersion = Output.empty();
-        this.isObsolete = Output.empty();
-        this.packageType = Output.empty();
-        this.severityName = Output.empty();
-        this.source = Output.empty();
-        this.sourceUpdateTime = Output.empty();
-        this.vendor = Output.empty();
+        this.affectedCpeUri = Codegen.empty();
+        this.affectedPackage = Codegen.empty();
+        this.affectedVersionEnd = Codegen.empty();
+        this.affectedVersionStart = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fixedCpeUri = Codegen.empty();
+        this.fixedPackage = Codegen.empty();
+        this.fixedVersion = Codegen.empty();
+        this.isObsolete = Codegen.empty();
+        this.packageType = Codegen.empty();
+        this.severityName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceUpdateTime = Codegen.empty();
+        this.vendor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -289,7 +290,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder affectedVersionEnd(@Nullable VersionArgs affectedVersionEnd) {
-            this.affectedVersionEnd = Output.ofNullable(affectedVersionEnd);
+            this.affectedVersionEnd = Codegen.ofNullable(affectedVersionEnd);
             return this;
         }
         public Builder affectedVersionStart(@Nullable Output<VersionArgs> affectedVersionStart) {
@@ -297,7 +298,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder affectedVersionStart(@Nullable VersionArgs affectedVersionStart) {
-            this.affectedVersionStart = Output.ofNullable(affectedVersionStart);
+            this.affectedVersionStart = Codegen.ofNullable(affectedVersionStart);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -305,7 +306,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
@@ -313,7 +314,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
-            this.fixedCpeUri = Output.ofNullable(fixedCpeUri);
+            this.fixedCpeUri = Codegen.ofNullable(fixedCpeUri);
             return this;
         }
         public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
@@ -321,7 +322,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedPackage(@Nullable String fixedPackage) {
-            this.fixedPackage = Output.ofNullable(fixedPackage);
+            this.fixedPackage = Codegen.ofNullable(fixedPackage);
             return this;
         }
         public Builder fixedVersion(@Nullable Output<VersionArgs> fixedVersion) {
@@ -329,7 +330,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedVersion(@Nullable VersionArgs fixedVersion) {
-            this.fixedVersion = Output.ofNullable(fixedVersion);
+            this.fixedVersion = Codegen.ofNullable(fixedVersion);
             return this;
         }
         public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
@@ -337,7 +338,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isObsolete(@Nullable Boolean isObsolete) {
-            this.isObsolete = Output.ofNullable(isObsolete);
+            this.isObsolete = Codegen.ofNullable(isObsolete);
             return this;
         }
         public Builder packageType(@Nullable Output<String> packageType) {
@@ -345,7 +346,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Output.ofNullable(packageType);
+            this.packageType = Codegen.ofNullable(packageType);
             return this;
         }
         public Builder severityName(@Nullable Output<String> severityName) {
@@ -353,7 +354,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder severityName(@Nullable String severityName) {
-            this.severityName = Output.ofNullable(severityName);
+            this.severityName = Codegen.ofNullable(severityName);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -361,7 +362,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder sourceUpdateTime(@Nullable Output<String> sourceUpdateTime) {
@@ -369,7 +370,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceUpdateTime(@Nullable String sourceUpdateTime) {
-            this.sourceUpdateTime = Output.ofNullable(sourceUpdateTime);
+            this.sourceUpdateTime = Codegen.ofNullable(sourceUpdateTime);
             return this;
         }
         public Builder vendor(@Nullable Output<String> vendor) {
@@ -377,7 +378,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Output.ofNullable(vendor);
+            this.vendor = Codegen.ofNullable(vendor);
             return this;
         }        public DetailArgs build() {
             return new DetailArgs(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);

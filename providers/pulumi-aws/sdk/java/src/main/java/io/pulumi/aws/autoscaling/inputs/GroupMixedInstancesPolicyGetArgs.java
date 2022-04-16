@@ -7,6 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyInstancesDistri
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class GroupMixedInstancesPolicyGetArgs extends io.pulumi.resources.
     @Import(name="instancesDistribution")
       private final @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution;
 
-    public Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> getInstancesDistribution() {
-        return this.instancesDistribution == null ? Output.empty() : this.instancesDistribution;
+    public Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution() {
+        return this.instancesDistribution == null ? Codegen.empty() : this.instancesDistribution;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class GroupMixedInstancesPolicyGetArgs extends io.pulumi.resources.
     @Import(name="launchTemplate", required=true)
       private final Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate;
 
-    public Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> getLaunchTemplate() {
+    public Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate() {
         return this.launchTemplate;
     }
 
@@ -45,8 +46,8 @@ public final class GroupMixedInstancesPolicyGetArgs extends io.pulumi.resources.
     }
 
     private GroupMixedInstancesPolicyGetArgs() {
-        this.instancesDistribution = Output.empty();
-        this.launchTemplate = Output.empty();
+        this.instancesDistribution = Codegen.empty();
+        this.launchTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class GroupMixedInstancesPolicyGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder instancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistributionGetArgs instancesDistribution) {
-            this.instancesDistribution = Output.ofNullable(instancesDistribution);
+            this.instancesDistribution = Codegen.ofNullable(instancesDistribution);
             return this;
         }
         public Builder launchTemplate(Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate) {

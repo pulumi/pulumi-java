@@ -16,14 +16,14 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
 
-    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue getValue() {
+    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value() {
         return this.value;
     }
 

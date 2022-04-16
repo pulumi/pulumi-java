@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="blackhole")
       private final @Nullable Output<Boolean> blackhole;
 
-    public Output<Boolean> getBlackhole() {
-        return this.blackhole == null ? Output.empty() : this.blackhole;
+    public Output<Boolean> blackhole() {
+        return this.blackhole == null ? Codegen.empty() : this.blackhole;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="prefixListId", required=true)
       private final Output<String> prefixListId;
 
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
 
@@ -44,8 +45,8 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
+    public Output<String> transitGatewayAttachmentId() {
+        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="transitGatewayRouteTableId", required=true)
       private final Output<String> transitGatewayRouteTableId;
 
-    public Output<String> getTransitGatewayRouteTableId() {
+    public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
@@ -71,10 +72,10 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
     }
 
     private PrefixListReferenceArgs() {
-        this.blackhole = Output.empty();
-        this.prefixListId = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayRouteTableId = Output.empty();
+        this.blackhole = Codegen.empty();
+        this.prefixListId = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayRouteTableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder blackhole(@Nullable Boolean blackhole) {
-            this.blackhole = Output.ofNullable(blackhole);
+            this.blackhole = Codegen.ofNullable(blackhole);
             return this;
         }
         public Builder prefixListId(Output<String> prefixListId) {
@@ -124,7 +125,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
             return this;
         }
         public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.CapabilitiesArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SeccompProfileArgs;
@@ -31,8 +32,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="allowPrivilegeEscalation")
       private final @Nullable Output<Boolean> allowPrivilegeEscalation;
 
-    public Output<Boolean> getAllowPrivilegeEscalation() {
-        return this.allowPrivilegeEscalation == null ? Output.empty() : this.allowPrivilegeEscalation;
+    public Output<Boolean> allowPrivilegeEscalation() {
+        return this.allowPrivilegeEscalation == null ? Codegen.empty() : this.allowPrivilegeEscalation;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="capabilities")
       private final @Nullable Output<CapabilitiesArgs> capabilities;
 
-    public Output<CapabilitiesArgs> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<CapabilitiesArgs> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privileged")
       private final @Nullable Output<Boolean> privileged;
 
-    public Output<Boolean> getPrivileged() {
-        return this.privileged == null ? Output.empty() : this.privileged;
+    public Output<Boolean> privileged() {
+        return this.privileged == null ? Codegen.empty() : this.privileged;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="procMount")
       private final @Nullable Output<String> procMount;
 
-    public Output<String> getProcMount() {
-        return this.procMount == null ? Output.empty() : this.procMount;
+    public Output<String> procMount() {
+        return this.procMount == null ? Codegen.empty() : this.procMount;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnlyRootFilesystem")
       private final @Nullable Output<Boolean> readOnlyRootFilesystem;
 
-    public Output<Boolean> getReadOnlyRootFilesystem() {
-        return this.readOnlyRootFilesystem == null ? Output.empty() : this.readOnlyRootFilesystem;
+    public Output<Boolean> readOnlyRootFilesystem() {
+        return this.readOnlyRootFilesystem == null ? Codegen.empty() : this.readOnlyRootFilesystem;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runAsGroup")
       private final @Nullable Output<Integer> runAsGroup;
 
-    public Output<Integer> getRunAsGroup() {
-        return this.runAsGroup == null ? Output.empty() : this.runAsGroup;
+    public Output<Integer> runAsGroup() {
+        return this.runAsGroup == null ? Codegen.empty() : this.runAsGroup;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runAsNonRoot")
       private final @Nullable Output<Boolean> runAsNonRoot;
 
-    public Output<Boolean> getRunAsNonRoot() {
-        return this.runAsNonRoot == null ? Output.empty() : this.runAsNonRoot;
+    public Output<Boolean> runAsNonRoot() {
+        return this.runAsNonRoot == null ? Codegen.empty() : this.runAsNonRoot;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runAsUser")
       private final @Nullable Output<Integer> runAsUser;
 
-    public Output<Integer> getRunAsUser() {
-        return this.runAsUser == null ? Output.empty() : this.runAsUser;
+    public Output<Integer> runAsUser() {
+        return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="seLinuxOptions")
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
-        return this.seLinuxOptions == null ? Output.empty() : this.seLinuxOptions;
+    public Output<SELinuxOptionsArgs> seLinuxOptions() {
+        return this.seLinuxOptions == null ? Codegen.empty() : this.seLinuxOptions;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="seccompProfile")
       private final @Nullable Output<SeccompProfileArgs> seccompProfile;
 
-    public Output<SeccompProfileArgs> getSeccompProfile() {
-        return this.seccompProfile == null ? Output.empty() : this.seccompProfile;
+    public Output<SeccompProfileArgs> seccompProfile() {
+        return this.seccompProfile == null ? Codegen.empty() : this.seccompProfile;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="windowsOptions")
       private final @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
-    public Output<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
-        return this.windowsOptions == null ? Output.empty() : this.windowsOptions;
+    public Output<WindowsSecurityContextOptionsArgs> windowsOptions() {
+        return this.windowsOptions == null ? Codegen.empty() : this.windowsOptions;
     }
 
     public SecurityContextArgs(
@@ -171,17 +172,17 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityContextArgs() {
-        this.allowPrivilegeEscalation = Output.empty();
-        this.capabilities = Output.empty();
-        this.privileged = Output.empty();
-        this.procMount = Output.empty();
-        this.readOnlyRootFilesystem = Output.empty();
-        this.runAsGroup = Output.empty();
-        this.runAsNonRoot = Output.empty();
-        this.runAsUser = Output.empty();
-        this.seLinuxOptions = Output.empty();
-        this.seccompProfile = Output.empty();
-        this.windowsOptions = Output.empty();
+        this.allowPrivilegeEscalation = Codegen.empty();
+        this.capabilities = Codegen.empty();
+        this.privileged = Codegen.empty();
+        this.procMount = Codegen.empty();
+        this.readOnlyRootFilesystem = Codegen.empty();
+        this.runAsGroup = Codegen.empty();
+        this.runAsNonRoot = Codegen.empty();
+        this.runAsUser = Codegen.empty();
+        this.seLinuxOptions = Codegen.empty();
+        this.seccompProfile = Codegen.empty();
+        this.windowsOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -229,7 +230,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
-            this.allowPrivilegeEscalation = Output.ofNullable(allowPrivilegeEscalation);
+            this.allowPrivilegeEscalation = Codegen.ofNullable(allowPrivilegeEscalation);
             return this;
         }
         public Builder capabilities(@Nullable Output<CapabilitiesArgs> capabilities) {
@@ -237,7 +238,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder capabilities(@Nullable CapabilitiesArgs capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder privileged(@Nullable Output<Boolean> privileged) {
@@ -245,7 +246,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Output.ofNullable(privileged);
+            this.privileged = Codegen.ofNullable(privileged);
             return this;
         }
         public Builder procMount(@Nullable Output<String> procMount) {
@@ -253,7 +254,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder procMount(@Nullable String procMount) {
-            this.procMount = Output.ofNullable(procMount);
+            this.procMount = Codegen.ofNullable(procMount);
             return this;
         }
         public Builder readOnlyRootFilesystem(@Nullable Output<Boolean> readOnlyRootFilesystem) {
@@ -261,7 +262,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
-            this.readOnlyRootFilesystem = Output.ofNullable(readOnlyRootFilesystem);
+            this.readOnlyRootFilesystem = Codegen.ofNullable(readOnlyRootFilesystem);
             return this;
         }
         public Builder runAsGroup(@Nullable Output<Integer> runAsGroup) {
@@ -269,7 +270,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder runAsGroup(@Nullable Integer runAsGroup) {
-            this.runAsGroup = Output.ofNullable(runAsGroup);
+            this.runAsGroup = Codegen.ofNullable(runAsGroup);
             return this;
         }
         public Builder runAsNonRoot(@Nullable Output<Boolean> runAsNonRoot) {
@@ -277,7 +278,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
-            this.runAsNonRoot = Output.ofNullable(runAsNonRoot);
+            this.runAsNonRoot = Codegen.ofNullable(runAsNonRoot);
             return this;
         }
         public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
@@ -285,7 +286,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder runAsUser(@Nullable Integer runAsUser) {
-            this.runAsUser = Output.ofNullable(runAsUser);
+            this.runAsUser = Codegen.ofNullable(runAsUser);
             return this;
         }
         public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
@@ -293,7 +294,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
-            this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
+            this.seLinuxOptions = Codegen.ofNullable(seLinuxOptions);
             return this;
         }
         public Builder seccompProfile(@Nullable Output<SeccompProfileArgs> seccompProfile) {
@@ -301,7 +302,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
-            this.seccompProfile = Output.ofNullable(seccompProfile);
+            this.seccompProfile = Codegen.ofNullable(seccompProfile);
             return this;
         }
         public Builder windowsOptions(@Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
@@ -309,7 +310,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
-            this.windowsOptions = Output.ofNullable(windowsOptions);
+            this.windowsOptions = Codegen.ofNullable(windowsOptions);
             return this;
         }        public SecurityContextArgs build() {
             return new SecurityContextArgs(allowPrivilegeEscalation, capabilities, privileged, procMount, readOnlyRootFilesystem, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, windowsOptions);

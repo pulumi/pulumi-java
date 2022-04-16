@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildSignatureArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="builderVersion", required=true)
       private final Output<String> builderVersion;
 
-    public Output<String> getBuilderVersion() {
+    public Output<String> builderVersion() {
         return this.builderVersion;
     }
 
@@ -37,8 +38,8 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signature")
       private final @Nullable Output<BuildSignatureArgs> signature;
 
-    public Output<BuildSignatureArgs> getSignature() {
-        return this.signature == null ? Output.empty() : this.signature;
+    public Output<BuildSignatureArgs> signature() {
+        return this.signature == null ? Codegen.empty() : this.signature;
     }
 
     public BuildArgs(
@@ -49,8 +50,8 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildArgs() {
-        this.builderVersion = Output.empty();
-        this.signature = Output.empty();
+        this.builderVersion = Codegen.empty();
+        this.signature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signature(@Nullable BuildSignatureArgs signature) {
-            this.signature = Output.ofNullable(signature);
+            this.signature = Codegen.ofNullable(signature);
             return this;
         }        public BuildArgs build() {
             return new BuildArgs(builderVersion, signature);

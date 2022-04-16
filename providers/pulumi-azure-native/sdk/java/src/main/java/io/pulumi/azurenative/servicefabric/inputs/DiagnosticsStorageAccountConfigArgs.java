@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="blobEndpoint", required=true)
       private final Output<String> blobEndpoint;
 
-    public Output<String> getBlobEndpoint() {
+    public Output<String> blobEndpoint() {
         return this.blobEndpoint;
     }
 
@@ -36,7 +37,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="protectedAccountKeyName", required=true)
       private final Output<String> protectedAccountKeyName;
 
-    public Output<String> getProtectedAccountKeyName() {
+    public Output<String> protectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
 
@@ -47,8 +48,8 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="protectedAccountKeyName2")
       private final @Nullable Output<String> protectedAccountKeyName2;
 
-    public Output<String> getProtectedAccountKeyName2() {
-        return this.protectedAccountKeyName2 == null ? Output.empty() : this.protectedAccountKeyName2;
+    public Output<String> protectedAccountKeyName2() {
+        return this.protectedAccountKeyName2 == null ? Codegen.empty() : this.protectedAccountKeyName2;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="queueEndpoint", required=true)
       private final Output<String> queueEndpoint;
 
-    public Output<String> getQueueEndpoint() {
+    public Output<String> queueEndpoint() {
         return this.queueEndpoint;
     }
 
@@ -69,7 +70,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -80,7 +81,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="tableEndpoint", required=true)
       private final Output<String> tableEndpoint;
 
-    public Output<String> getTableEndpoint() {
+    public Output<String> tableEndpoint() {
         return this.tableEndpoint;
     }
 
@@ -100,12 +101,12 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     }
 
     private DiagnosticsStorageAccountConfigArgs() {
-        this.blobEndpoint = Output.empty();
-        this.protectedAccountKeyName = Output.empty();
-        this.protectedAccountKeyName2 = Output.empty();
-        this.queueEndpoint = Output.empty();
-        this.storageAccountName = Output.empty();
-        this.tableEndpoint = Output.empty();
+        this.blobEndpoint = Codegen.empty();
+        this.protectedAccountKeyName = Codegen.empty();
+        this.protectedAccountKeyName2 = Codegen.empty();
+        this.queueEndpoint = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
+        this.tableEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder protectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
-            this.protectedAccountKeyName2 = Output.ofNullable(protectedAccountKeyName2);
+            this.protectedAccountKeyName2 = Codegen.ofNullable(protectedAccountKeyName2);
             return this;
         }
         public Builder queueEndpoint(Output<String> queueEndpoint) {

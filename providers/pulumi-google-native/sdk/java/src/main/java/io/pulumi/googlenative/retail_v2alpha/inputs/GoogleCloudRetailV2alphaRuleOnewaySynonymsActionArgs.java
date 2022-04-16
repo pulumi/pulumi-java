@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
     @Import(name="onewayTerms")
       private final @Nullable Output<List<String>> onewayTerms;
 
-    public Output<List<String>> getOnewayTerms() {
-        return this.onewayTerms == null ? Output.empty() : this.onewayTerms;
+    public Output<List<String>> onewayTerms() {
+        return this.onewayTerms == null ? Codegen.empty() : this.onewayTerms;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
     @Import(name="queryTerms")
       private final @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> getQueryTerms() {
-        return this.queryTerms == null ? Output.empty() : this.queryTerms;
+    public Output<List<String>> queryTerms() {
+        return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
     @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
-        return this.synonyms == null ? Output.empty() : this.synonyms;
+    public Output<List<String>> synonyms() {
+        return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 
     public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
     }
 
     private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs() {
-        this.onewayTerms = Output.empty();
-        this.queryTerms = Output.empty();
-        this.synonyms = Output.empty();
+        this.onewayTerms = Codegen.empty();
+        this.queryTerms = Codegen.empty();
+        this.synonyms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
             return this;
         }
         public Builder onewayTerms(@Nullable List<String> onewayTerms) {
-            this.onewayTerms = Output.ofNullable(onewayTerms);
+            this.onewayTerms = Codegen.ofNullable(onewayTerms);
             return this;
         }
         public Builder onewayTerms(String... onewayTerms) {
@@ -107,7 +108,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
             return this;
         }
         public Builder queryTerms(@Nullable List<String> queryTerms) {
-            this.queryTerms = Output.ofNullable(queryTerms);
+            this.queryTerms = Codegen.ofNullable(queryTerms);
             return this;
         }
         public Builder queryTerms(String... queryTerms) {
@@ -118,7 +119,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
             return this;
         }
         public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Output.ofNullable(synonyms);
+            this.synonyms = Codegen.ofNullable(synonyms);
             return this;
         }
         public Builder synonyms(String... synonyms) {

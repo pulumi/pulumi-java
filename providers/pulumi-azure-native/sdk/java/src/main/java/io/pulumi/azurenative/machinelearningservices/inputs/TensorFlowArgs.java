@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
-    public Output<String> getDistributionType() {
+    public Output<String> distributionType() {
         return this.distributionType;
     }
 
@@ -38,8 +39,8 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterServerCount")
       private final @Nullable Output<Integer> parameterServerCount;
 
-    public Output<Integer> getParameterServerCount() {
-        return this.parameterServerCount == null ? Output.empty() : this.parameterServerCount;
+    public Output<Integer> parameterServerCount() {
+        return this.parameterServerCount == null ? Codegen.empty() : this.parameterServerCount;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
       private final @Nullable Output<Integer> workerCount;
 
-    public Output<Integer> getWorkerCount() {
-        return this.workerCount == null ? Output.empty() : this.workerCount;
+    public Output<Integer> workerCount() {
+        return this.workerCount == null ? Codegen.empty() : this.workerCount;
     }
 
     public TensorFlowArgs(
@@ -63,9 +64,9 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TensorFlowArgs() {
-        this.distributionType = Output.empty();
-        this.parameterServerCount = Output.empty();
-        this.workerCount = Output.empty();
+        this.distributionType = Codegen.empty();
+        this.parameterServerCount = Codegen.empty();
+        this.workerCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
-            this.parameterServerCount = Output.ofNullable(parameterServerCount);
+            this.parameterServerCount = Codegen.ofNullable(parameterServerCount);
             return this;
         }
         public Builder workerCount(@Nullable Output<Integer> workerCount) {
@@ -113,7 +114,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerCount(@Nullable Integer workerCount) {
-            this.workerCount = Output.ofNullable(workerCount);
+            this.workerCount = Codegen.ofNullable(workerCount);
             return this;
         }        public TensorFlowArgs build() {
             return new TensorFlowArgs(distributionType, parameterServerCount, workerCount);

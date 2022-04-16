@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketArgs;
 import io.pulumi.gcp.storage.inputs.BucketState;
@@ -66,13 +67,13 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<BucketCor>> getCors() {
+    public Output</* @Nullable */ List<BucketCor>> cors() {
         return this.cors;
     }
     @Export(name="defaultEventBasedHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> defaultEventBasedHold;
 
-    public Output</* @Nullable */ Boolean> getDefaultEventBasedHold() {
+    public Output</* @Nullable */ Boolean> defaultEventBasedHold() {
         return this.defaultEventBasedHold;
     }
     /**
@@ -86,7 +87,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's encryption configuration. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketEncryption> getEncryption() {
+    public Output</* @Nullable */ BucketEncryption> encryption() {
         return this.encryption;
     }
     /**
@@ -104,7 +105,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * bucket that contains objects, the provider will fail that run.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -118,7 +119,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A map of key/value label pairs to assign to the bucket.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -132,7 +133,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<BucketLifecycleRule>> getLifecycleRules() {
+    public Output</* @Nullable */ List<BucketLifecycleRule>> lifecycleRules() {
         return this.lifecycleRules;
     }
     /**
@@ -146,7 +147,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -160,7 +161,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketLogging> getLogging() {
+    public Output</* @Nullable */ BucketLogging> logging() {
         return this.logging;
     }
     /**
@@ -174,7 +175,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -190,7 +191,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -204,7 +205,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Prevents public access to a bucket.
      * 
      */
-    public Output<String> getPublicAccessPrevention() {
+    public Output<String> publicAccessPrevention() {
         return this.publicAccessPrevention;
     }
     /**
@@ -218,7 +219,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequesterPays() {
+    public Output</* @Nullable */ Boolean> requesterPays() {
         return this.requesterPays;
     }
     /**
@@ -232,7 +233,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketRetentionPolicy> getRetentionPolicy() {
+    public Output</* @Nullable */ BucketRetentionPolicy> retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
@@ -246,7 +247,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -260,7 +261,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
      * 
      */
-    public Output</* @Nullable */ String> getStorageClass() {
+    public Output</* @Nullable */ String> storageClass() {
         return this.storageClass;
     }
     /**
@@ -274,7 +275,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
      * 
      */
-    public Output<Boolean> getUniformBucketLevelAccess() {
+    public Output<Boolean> uniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
     }
     /**
@@ -288,7 +289,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The base URL of the bucket, in the format `gs://<bucket-name>`.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
     /**
@@ -302,7 +303,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketVersioning> getVersioning() {
+    public Output</* @Nullable */ BucketVersioning> versioning() {
         return this.versioning;
     }
     /**
@@ -316,7 +317,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Configuration if the bucket acts as a website. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketWebsite> getWebsite() {
+    public Output</* @Nullable */ BucketWebsite> website() {
         return this.website;
     }
 
@@ -342,7 +343,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bucket(String name, BucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/bucket:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/bucket:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Bucket(String name, Output<String> id, @Nullable BucketState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

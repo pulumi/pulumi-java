@@ -9,6 +9,7 @@ import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValue
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     @Import(name="conditions")
       private final @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
 
-    public Output<List<AutomationRulePropertyValuesConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<AutomationRulePropertyValuesConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     @Import(name="expirationTimeUtc")
       private final @Nullable Output<String> expirationTimeUtc;
 
-    public Output<String> getExpirationTimeUtc() {
-        return this.expirationTimeUtc == null ? Output.empty() : this.expirationTimeUtc;
+    public Output<String> expirationTimeUtc() {
+        return this.expirationTimeUtc == null ? Codegen.empty() : this.expirationTimeUtc;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -64,7 +65,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     @Import(name="triggersOn", required=true)
       private final Output<Either<String,TriggersOn>> triggersOn;
 
-    public Output<Either<String,TriggersOn>> getTriggersOn() {
+    public Output<Either<String,TriggersOn>> triggersOn() {
         return this.triggersOn;
     }
 
@@ -75,7 +76,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     @Import(name="triggersWhen", required=true)
       private final Output<Either<String,TriggersWhen>> triggersWhen;
 
-    public Output<Either<String,TriggersWhen>> getTriggersWhen() {
+    public Output<Either<String,TriggersWhen>> triggersWhen() {
         return this.triggersWhen;
     }
 
@@ -93,11 +94,11 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     }
 
     private AutomationRuleTriggeringLogicArgs() {
-        this.conditions = Output.empty();
-        this.expirationTimeUtc = Output.empty();
-        this.isEnabled = Output.empty();
-        this.triggersOn = Output.empty();
-        this.triggersWhen = Output.empty();
+        this.conditions = Codegen.empty();
+        this.expirationTimeUtc = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.triggersOn = Codegen.empty();
+        this.triggersWhen = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
             return this;
         }
         public Builder conditions(@Nullable List<AutomationRulePropertyValuesConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(AutomationRulePropertyValuesConditionArgs... conditions) {
@@ -144,7 +145,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
             return this;
         }
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
-            this.expirationTimeUtc = Output.ofNullable(expirationTimeUtc);
+            this.expirationTimeUtc = Codegen.ofNullable(expirationTimeUtc);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {

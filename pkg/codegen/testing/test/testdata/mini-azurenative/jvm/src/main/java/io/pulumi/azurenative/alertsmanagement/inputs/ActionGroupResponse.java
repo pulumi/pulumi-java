@@ -25,7 +25,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="actionGroupId", required=true)
       private final String actionGroupId;
 
-    public String getActionGroupId() {
+    public String actionGroupId() {
         return this.actionGroupId;
     }
 
@@ -36,7 +36,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createdAt", required=true)
       private final String createdAt;
 
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
 
@@ -47,7 +47,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createdBy", required=true)
       private final String createdBy;
 
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
 
@@ -58,7 +58,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -69,7 +69,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
 
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
 
@@ -80,7 +80,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedBy", required=true)
       private final String lastModifiedBy;
 
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
 
@@ -91,7 +91,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -103,7 +103,7 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

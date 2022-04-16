@@ -5,6 +5,7 @@ package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class CanaryVpcConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+    public Output<List<String>> securityGroupIds() {
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class CanaryVpcConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class CanaryVpcConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public CanaryVpcConfigArgs(
@@ -58,9 +59,9 @@ public final class CanaryVpcConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CanaryVpcConfigArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class CanaryVpcConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -103,7 +104,7 @@ public final class CanaryVpcConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -114,7 +115,7 @@ public final class CanaryVpcConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public CanaryVpcConfigArgs build() {
             return new CanaryVpcConfigArgs(securityGroupIds, subnetIds, vpcId);

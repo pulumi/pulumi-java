@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
     @Import(name="backendBucket")
       private final @Nullable Output<String> backendBucket;
 
-    public Output<String> getBackendBucket() {
-        return this.backendBucket == null ? Output.empty() : this.backendBucket;
+    public Output<String> backendBucket() {
+        return this.backendBucket == null ? Codegen.empty() : this.backendBucket;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
     @Import(name="keyValue")
       private final @Nullable Output<String> keyValue;
 
-    public Output<String> getKeyValue() {
-        return this.keyValue == null ? Output.empty() : this.keyValue;
+    public Output<String> keyValue() {
+        return this.keyValue == null ? Codegen.empty() : this.keyValue;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public BackendBucketSignedUrlKeyState(
@@ -73,10 +74,10 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
     }
 
     private BackendBucketSignedUrlKeyState() {
-        this.backendBucket = Output.empty();
-        this.keyValue = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.backendBucket = Codegen.empty();
+        this.keyValue = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder backendBucket(@Nullable String backendBucket) {
-            this.backendBucket = Output.ofNullable(backendBucket);
+            this.backendBucket = Codegen.ofNullable(backendBucket);
             return this;
         }
         public Builder keyValue(@Nullable Output<String> keyValue) {
@@ -118,7 +119,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder keyValue(@Nullable String keyValue) {
-            this.keyValue = Output.ofNullable(keyValue);
+            this.keyValue = Codegen.ofNullable(keyValue);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -126,7 +127,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -134,7 +135,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public BackendBucketSignedUrlKeyState build() {
             return new BackendBucketSignedUrlKeyState(backendBucket, keyValue, name, project);

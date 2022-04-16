@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseIAMPolicyArgs;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMPolicyState;
@@ -70,7 +71,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner database.
      * 
      */
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
     /**
@@ -84,7 +85,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the database's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -98,7 +99,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner instance the database belongs to.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -114,7 +115,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -130,7 +131,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -156,7 +157,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabaseIAMPolicy(String name, DatabaseIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/databaseIAMPolicy:DatabaseIAMPolicy", name, args == null ? DatabaseIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/databaseIAMPolicy:DatabaseIAMPolicy", name, args == null ? DatabaseIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatabaseIAMPolicy(String name, Output<String> id, @Nullable DatabaseIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

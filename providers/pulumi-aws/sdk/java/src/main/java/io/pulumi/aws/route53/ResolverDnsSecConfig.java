@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.ResolverDnsSecConfigState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ResolverDnsSecConfig extends io.pulumi.resources.CustomResource {
      * @return The ARN for a configuration for DNSSEC validation.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -53,7 +54,7 @@ public class ResolverDnsSecConfig extends io.pulumi.resources.CustomResource {
      * @return The owner account ID of the virtual private cloud (VPC) for a configuration for DNSSEC validation.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -67,7 +68,7 @@ public class ResolverDnsSecConfig extends io.pulumi.resources.CustomResource {
      * @return The ID of the virtual private cloud (VPC) that you're updating the DNSSEC validation status for.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -81,7 +82,7 @@ public class ResolverDnsSecConfig extends io.pulumi.resources.CustomResource {
      * @return The validation status for a DNSSEC configuration. The status can be one of the following: `ENABLING`, `ENABLED`, `DISABLING` and `DISABLED`.
      * 
      */
-    public Output<String> getValidationStatus() {
+    public Output<String> validationStatus() {
         return this.validationStatus;
     }
 
@@ -107,7 +108,7 @@ public class ResolverDnsSecConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverDnsSecConfig(String name, ResolverDnsSecConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverDnsSecConfig:ResolverDnsSecConfig", name, args == null ? ResolverDnsSecConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverDnsSecConfig:ResolverDnsSecConfig", name, args == null ? ResolverDnsSecConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverDnsSecConfig(String name, Output<String> id, @Nullable ResolverDnsSecConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

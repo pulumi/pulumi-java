@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,15 +25,15 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
     @Import(name="diskConfig")
       private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig;
 
-    public Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> getDiskConfig() {
-        return this.diskConfig == null ? Output.empty() : this.diskConfig;
+    public Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig() {
+        return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
     }
 
     @Import(name="instanceNames")
       private final @Nullable Output<List<String>> instanceNames;
 
-    public Output<List<String>> getInstanceNames() {
-        return this.instanceNames == null ? Output.empty() : this.instanceNames;
+    public Output<List<String>> instanceNames() {
+        return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
     @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> getNumInstances() {
-        return this.numInstances == null ? Output.empty() : this.numInstances;
+    public Output<Integer> numInstances() {
+        return this.numInstances == null ? Codegen.empty() : this.numInstances;
     }
 
     public ClusterClusterConfigPreemptibleWorkerConfigArgs(
@@ -57,9 +58,9 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
     }
 
     private ClusterClusterConfigPreemptibleWorkerConfigArgs() {
-        this.diskConfig = Output.empty();
-        this.instanceNames = Output.empty();
-        this.numInstances = Output.empty();
+        this.diskConfig = Codegen.empty();
+        this.instanceNames = Codegen.empty();
+        this.numInstances = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
             return this;
         }
         public Builder diskConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs diskConfig) {
-            this.diskConfig = Output.ofNullable(diskConfig);
+            this.diskConfig = Codegen.ofNullable(diskConfig);
             return this;
         }
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
@@ -99,7 +100,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
             return this;
         }
         public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Output.ofNullable(instanceNames);
+            this.instanceNames = Codegen.ofNullable(instanceNames);
             return this;
         }
         public Builder instanceNames(String... instanceNames) {
@@ -110,7 +111,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
             return this;
         }
         public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Output.ofNullable(numInstances);
+            this.numInstances = Codegen.ofNullable(numInstances);
             return this;
         }        public ClusterClusterConfigPreemptibleWorkerConfigArgs build() {
             return new ClusterClusterConfigPreemptibleWorkerConfigArgs(diskConfig, instanceNames, numInstances);

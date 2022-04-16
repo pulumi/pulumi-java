@@ -32,14 +32,14 @@ public final class ProjectRepoIdResponse {
      * The ID of the project.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The name of the repo. Leave empty for the default repo.
      * 
     */
-    public String getRepoName() {
+    public String repoName() {
         return this.repoName;
     }
 

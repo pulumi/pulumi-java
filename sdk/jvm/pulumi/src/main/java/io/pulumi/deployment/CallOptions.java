@@ -2,7 +2,6 @@ package io.pulumi.deployment;
 
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.ProviderResource;
@@ -11,6 +10,8 @@ import io.pulumi.resources.Resource;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Optional;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * Options to help control the behavior of  @see {@link Deployment#call(String, TypeShape, CallArgs, Resource, CallOptions)}"/>.
@@ -26,9 +27,6 @@ public final class CallOptions {
     private final ProviderResource provider;
     @Nullable
     private final String version;
-
-    @InternalField
-    public final CallOptionsInternal internal = new CallOptionsInternal();
 
     public CallOptions() {
         this(null, null, null);
@@ -58,22 +56,28 @@ public final class CallOptions {
 
     /**
      * An optional version, corresponding to the version of the provider plugin that should be
-     * used when performing this invoke.
+     * used when performing this invokes.
      */
     public Optional<String> getVersion() {
         return Optional.ofNullable(version);
     }
 
     @InternalUse
-    public final class CallOptionsInternal {
+    public static final class CallOptionsInternal {
 
-        private CallOptionsInternal() {
-            /* Empty */
+        private final CallOptions options;
+
+        private CallOptionsInternal(CallOptions options) {
+            this.options = requireNonNull(options);
+        }
+
+        public static CallOptionsInternal from(CallOptions options) {
+            return new CallOptionsInternal(options);
         }
 
         public Optional<ProviderResource> getNestedProvider(String token) {
-            return CallOptions.this.getProvider().or(
-                    () -> CallOptions.this.getParent()
+            return this.options.getProvider().or(
+                    () -> this.options.getParent()
                             .flatMap(p -> Internal.from(p).getProvider(token))
             );
         }

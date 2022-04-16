@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.EvaluationJobArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1AttemptResponse;
@@ -33,7 +34,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
      * 
      */
-    public Output<String> getAnnotationSpecSet() {
+    public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
@@ -47,7 +48,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Every time the evaluation job runs and an error occurs, the failed attempt is appended to this array.
      * 
      */
-    public Output<List<GoogleCloudDatalabelingV1beta1AttemptResponse>> getAttempts() {
+    public Output<List<GoogleCloudDatalabelingV1beta1AttemptResponse>> attempts() {
         return this.attempts;
     }
     /**
@@ -61,7 +62,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Timestamp of when this evaluation job was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -75,7 +76,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Description of the job. The description can be up to 25,000 characters long.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -89,7 +90,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Configuration details for the evaluation job.
      * 
      */
-    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse> getEvaluationJobConfig() {
+    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse> evaluationJobConfig() {
         return this.evaluationJobConfig;
     }
     /**
@@ -103,7 +104,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.
      * 
      */
-    public Output<Boolean> getLabelMissingGroundTruth() {
+    public Output<Boolean> labelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
     }
     /**
@@ -117,7 +118,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.
      * 
      */
-    public Output<String> getModelVersion() {
+    public Output<String> modelVersion() {
         return this.modelVersion;
     }
     /**
@@ -131,7 +132,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.
      * 
      */
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
     /**
@@ -159,7 +160,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @return Describes the current state of the job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -185,7 +186,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EvaluationJob(String name, EvaluationJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datalabeling/v1beta1:EvaluationJob", name, args == null ? EvaluationJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datalabeling/v1beta1:EvaluationJob", name, args == null ? EvaluationJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EvaluationJob(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nonceExpirationInterval")
       private final @Nullable Output<String> nonceExpirationInterval;
 
-    public Output<String> getNonceExpirationInterval() {
-        return this.nonceExpirationInterval == null ? Output.empty() : this.nonceExpirationInterval;
+    public Output<String> nonceExpirationInterval() {
+        return this.nonceExpirationInterval == null ? Codegen.empty() : this.nonceExpirationInterval;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validateNonce")
       private final @Nullable Output<Boolean> validateNonce;
 
-    public Output<Boolean> getValidateNonce() {
-        return this.validateNonce == null ? Output.empty() : this.validateNonce;
+    public Output<Boolean> validateNonce() {
+        return this.validateNonce == null ? Codegen.empty() : this.validateNonce;
     }
 
     public NonceArgs(
@@ -49,8 +50,8 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NonceArgs() {
-        this.nonceExpirationInterval = Output.empty();
-        this.validateNonce = Output.empty();
+        this.nonceExpirationInterval = Codegen.empty();
+        this.validateNonce = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nonceExpirationInterval(@Nullable String nonceExpirationInterval) {
-            this.nonceExpirationInterval = Output.ofNullable(nonceExpirationInterval);
+            this.nonceExpirationInterval = Codegen.ofNullable(nonceExpirationInterval);
             return this;
         }
         public Builder validateNonce(@Nullable Output<Boolean> validateNonce) {
@@ -88,7 +89,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateNonce(@Nullable Boolean validateNonce) {
-            this.validateNonce = Output.ofNullable(validateNonce);
+            this.validateNonce = Codegen.ofNullable(validateNonce);
             return this;
         }        public NonceArgs build() {
             return new NonceArgs(nonceExpirationInterval, validateNonce);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanGroupArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
     @Import(name="failoverDeploymentModel")
       private final @Nullable Output<Either<String,FailoverDeploymentModel>> failoverDeploymentModel;
 
-    public Output<Either<String,FailoverDeploymentModel>> getFailoverDeploymentModel() {
-        return this.failoverDeploymentModel == null ? Output.empty() : this.failoverDeploymentModel;
+    public Output<Either<String,FailoverDeploymentModel>> failoverDeploymentModel() {
+        return this.failoverDeploymentModel == null ? Codegen.empty() : this.failoverDeploymentModel;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
     @Import(name="groups", required=true)
       private final Output<List<RecoveryPlanGroupArgs>> groups;
 
-    public Output<List<RecoveryPlanGroupArgs>> getGroups() {
+    public Output<List<RecoveryPlanGroupArgs>> groups() {
         return this.groups;
     }
 
@@ -52,7 +53,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
     @Import(name="primaryFabricId", required=true)
       private final Output<String> primaryFabricId;
 
-    public Output<String> getPrimaryFabricId() {
+    public Output<String> primaryFabricId() {
         return this.primaryFabricId;
     }
 
@@ -63,8 +64,8 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
     @Import(name="providerSpecificInput")
       private final @Nullable Output<List<RecoveryPlanA2AInputArgs>> providerSpecificInput;
 
-    public Output<List<RecoveryPlanA2AInputArgs>> getProviderSpecificInput() {
-        return this.providerSpecificInput == null ? Output.empty() : this.providerSpecificInput;
+    public Output<List<RecoveryPlanA2AInputArgs>> providerSpecificInput() {
+        return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
     @Import(name="recoveryFabricId", required=true)
       private final Output<String> recoveryFabricId;
 
-    public Output<String> getRecoveryFabricId() {
+    public Output<String> recoveryFabricId() {
         return this.recoveryFabricId;
     }
 
@@ -92,11 +93,11 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
     }
 
     private CreateRecoveryPlanInputPropertiesArgs() {
-        this.failoverDeploymentModel = Output.empty();
-        this.groups = Output.empty();
-        this.primaryFabricId = Output.empty();
-        this.providerSpecificInput = Output.empty();
-        this.recoveryFabricId = Output.empty();
+        this.failoverDeploymentModel = Codegen.empty();
+        this.groups = Codegen.empty();
+        this.primaryFabricId = Codegen.empty();
+        this.providerSpecificInput = Codegen.empty();
+        this.recoveryFabricId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder failoverDeploymentModel(@Nullable Either<String,FailoverDeploymentModel> failoverDeploymentModel) {
-            this.failoverDeploymentModel = Output.ofNullable(failoverDeploymentModel);
+            this.failoverDeploymentModel = Codegen.ofNullable(failoverDeploymentModel);
             return this;
         }
         public Builder groups(Output<List<RecoveryPlanGroupArgs>> groups) {
@@ -159,7 +160,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder providerSpecificInput(@Nullable List<RecoveryPlanA2AInputArgs> providerSpecificInput) {
-            this.providerSpecificInput = Output.ofNullable(providerSpecificInput);
+            this.providerSpecificInput = Codegen.ofNullable(providerSpecificInput);
             return this;
         }
         public Builder providerSpecificInput(RecoveryPlanA2AInputArgs... providerSpecificInput) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.codebuild.inputs;
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class WebhookFilterGroupGetArgs extends io.pulumi.resources.Resourc
     @Import(name="filters")
       private final @Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters;
 
-    public Output<List<WebhookFilterGroupFilterGetArgs>> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+    public Output<List<WebhookFilterGroupFilterGetArgs>> filters() {
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     public WebhookFilterGroupGetArgs(@Nullable Output<List<WebhookFilterGroupFilterGetArgs>> filters) {
@@ -31,7 +32,7 @@ public final class WebhookFilterGroupGetArgs extends io.pulumi.resources.Resourc
     }
 
     private WebhookFilterGroupGetArgs() {
-        this.filters = Output.empty();
+        this.filters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class WebhookFilterGroupGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filters(@Nullable List<WebhookFilterGroupFilterGetArgs> filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder filters(WebhookFilterGroupFilterGetArgs... filters) {

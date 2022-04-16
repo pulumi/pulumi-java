@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +39,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 
@@ -49,8 +50,8 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Output<Either<String,TriggerStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,TriggerStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public TimerTriggerArgs(
@@ -63,9 +64,9 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimerTriggerArgs() {
-        this.name = Output.empty();
-        this.schedule = Output.empty();
-        this.status = Output.empty();
+        this.name = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public TimerTriggerArgs build() {
             return new TimerTriggerArgs(name, schedule, status);

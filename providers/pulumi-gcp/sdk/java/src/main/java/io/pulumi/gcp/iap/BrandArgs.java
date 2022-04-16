@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationTitle", required=true)
       private final Output<String> applicationTitle;
 
-    public Output<String> getApplicationTitle() {
+    public Output<String> applicationTitle() {
         return this.applicationTitle;
     }
 
@@ -33,8 +34,8 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail", required=true)
       private final Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail;
     }
 
@@ -62,9 +63,9 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BrandArgs() {
-        this.applicationTitle = Output.empty();
-        this.project = Output.empty();
-        this.supportEmail = Output.empty();
+        this.applicationTitle = Codegen.empty();
+        this.project = Codegen.empty();
+        this.supportEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder supportEmail(Output<String> supportEmail) {

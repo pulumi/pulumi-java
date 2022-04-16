@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return The workload classifier context.
      * 
      */
-    public Output</* @Nullable */ String> getContext() {
+    public Output</* @Nullable */ String> context() {
         return this.context;
     }
     /**
@@ -55,7 +56,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return The workload classifier end time for classification.
      * 
      */
-    public Output</* @Nullable */ String> getEndTime() {
+    public Output</* @Nullable */ String> endTime() {
         return this.endTime;
     }
     /**
@@ -69,7 +70,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return The workload classifier importance.
      * 
      */
-    public Output</* @Nullable */ String> getImportance() {
+    public Output</* @Nullable */ String> importance() {
         return this.importance;
     }
     /**
@@ -83,7 +84,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return The workload classifier label.
      * 
      */
-    public Output</* @Nullable */ String> getLabel() {
+    public Output</* @Nullable */ String> label() {
         return this.label;
     }
     /**
@@ -97,7 +98,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return The workload classifier member name.
      * 
      */
-    public Output<String> getMemberName() {
+    public Output<String> memberName() {
         return this.memberName;
     }
     /**
@@ -111,7 +112,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +126,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return The workload classifier start time for classification.
      * 
      */
-    public Output</* @Nullable */ String> getStartTime() {
+    public Output</* @Nullable */ String> startTime() {
         return this.startTime;
     }
     /**
@@ -139,7 +140,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -165,7 +166,7 @@ public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkloadClassifier(String name, WorkloadClassifierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:WorkloadClassifier", name, args == null ? WorkloadClassifierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:WorkloadClassifier", name, args == null ? WorkloadClassifierArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkloadClassifier(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,22 +26,22 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> gateway;
 
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    public Output<String> getGateway() {
-        return this.gateway == null ? Output.empty() : this.gateway;
+    public Output<String> gateway() {
+        return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     @Import(name="globalIpv6Address")
       private final @Nullable Output<String> globalIpv6Address;
 
-    public Output<String> getGlobalIpv6Address() {
-        return this.globalIpv6Address == null ? Output.empty() : this.globalIpv6Address;
+    public Output<String> globalIpv6Address() {
+        return this.globalIpv6Address == null ? Codegen.empty() : this.globalIpv6Address;
     }
 
     @Import(name="globalIpv6PrefixLength")
       private final @Nullable Output<Integer> globalIpv6PrefixLength;
 
-    public Output<Integer> getGlobalIpv6PrefixLength() {
-        return this.globalIpv6PrefixLength == null ? Output.empty() : this.globalIpv6PrefixLength;
+    public Output<Integer> globalIpv6PrefixLength() {
+        return this.globalIpv6PrefixLength == null ? Codegen.empty() : this.globalIpv6PrefixLength;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> ipAddress;
 
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -67,22 +68,22 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> ipPrefixLength;
 
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    public Output<Integer> getIpPrefixLength() {
-        return this.ipPrefixLength == null ? Output.empty() : this.ipPrefixLength;
+    public Output<Integer> ipPrefixLength() {
+        return this.ipPrefixLength == null ? Codegen.empty() : this.ipPrefixLength;
     }
 
     @Import(name="ipv6Gateway")
       private final @Nullable Output<String> ipv6Gateway;
 
-    public Output<String> getIpv6Gateway() {
-        return this.ipv6Gateway == null ? Output.empty() : this.ipv6Gateway;
+    public Output<String> ipv6Gateway() {
+        return this.ipv6Gateway == null ? Codegen.empty() : this.ipv6Gateway;
     }
 
     @Import(name="networkName")
       private final @Nullable Output<String> networkName;
 
-    public Output<String> getNetworkName() {
-        return this.networkName == null ? Output.empty() : this.networkName;
+    public Output<String> networkName() {
+        return this.networkName == null ? Codegen.empty() : this.networkName;
     }
 
     public ContainerNetworkDataGetArgs(
@@ -103,13 +104,13 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
     }
 
     private ContainerNetworkDataGetArgs() {
-        this.gateway = Output.empty();
-        this.globalIpv6Address = Output.empty();
-        this.globalIpv6PrefixLength = Output.empty();
-        this.ipAddress = Output.empty();
-        this.ipPrefixLength = Output.empty();
-        this.ipv6Gateway = Output.empty();
-        this.networkName = Output.empty();
+        this.gateway = Codegen.empty();
+        this.globalIpv6Address = Codegen.empty();
+        this.globalIpv6PrefixLength = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.ipPrefixLength = Codegen.empty();
+        this.ipv6Gateway = Codegen.empty();
+        this.networkName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = Output.ofNullable(gateway);
+            this.gateway = Codegen.ofNullable(gateway);
             return this;
         }
         public Builder globalIpv6Address(@Nullable Output<String> globalIpv6Address) {
@@ -157,7 +158,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder globalIpv6Address(@Nullable String globalIpv6Address) {
-            this.globalIpv6Address = Output.ofNullable(globalIpv6Address);
+            this.globalIpv6Address = Codegen.ofNullable(globalIpv6Address);
             return this;
         }
         public Builder globalIpv6PrefixLength(@Nullable Output<Integer> globalIpv6PrefixLength) {
@@ -165,7 +166,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder globalIpv6PrefixLength(@Nullable Integer globalIpv6PrefixLength) {
-            this.globalIpv6PrefixLength = Output.ofNullable(globalIpv6PrefixLength);
+            this.globalIpv6PrefixLength = Codegen.ofNullable(globalIpv6PrefixLength);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -173,7 +174,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder ipPrefixLength(@Nullable Output<Integer> ipPrefixLength) {
@@ -181,7 +182,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipPrefixLength(@Nullable Integer ipPrefixLength) {
-            this.ipPrefixLength = Output.ofNullable(ipPrefixLength);
+            this.ipPrefixLength = Codegen.ofNullable(ipPrefixLength);
             return this;
         }
         public Builder ipv6Gateway(@Nullable Output<String> ipv6Gateway) {
@@ -189,7 +190,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipv6Gateway(@Nullable String ipv6Gateway) {
-            this.ipv6Gateway = Output.ofNullable(ipv6Gateway);
+            this.ipv6Gateway = Codegen.ofNullable(ipv6Gateway);
             return this;
         }
         public Builder networkName(@Nullable Output<String> networkName) {
@@ -197,7 +198,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder networkName(@Nullable String networkName) {
-            this.networkName = Output.ofNullable(networkName);
+            this.networkName = Codegen.ofNullable(networkName);
             return this;
         }        public ContainerNetworkDataGetArgs build() {
             return new ContainerNetworkDataGetArgs(gateway, globalIpv6Address, globalIpv6PrefixLength, ipAddress, ipPrefixLength, ipv6Gateway, networkName);

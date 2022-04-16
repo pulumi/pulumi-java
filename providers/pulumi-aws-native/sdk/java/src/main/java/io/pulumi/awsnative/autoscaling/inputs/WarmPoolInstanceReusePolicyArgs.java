@@ -5,6 +5,7 @@ package io.pulumi.awsnative.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
     @Import(name="reuseOnScaleIn")
       private final @Nullable Output<Boolean> reuseOnScaleIn;
 
-    public Output<Boolean> getReuseOnScaleIn() {
-        return this.reuseOnScaleIn == null ? Output.empty() : this.reuseOnScaleIn;
+    public Output<Boolean> reuseOnScaleIn() {
+        return this.reuseOnScaleIn == null ? Codegen.empty() : this.reuseOnScaleIn;
     }
 
     public WarmPoolInstanceReusePolicyArgs(@Nullable Output<Boolean> reuseOnScaleIn) {
@@ -26,7 +27,7 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
     }
 
     private WarmPoolInstanceReusePolicyArgs() {
-        this.reuseOnScaleIn = Output.empty();
+        this.reuseOnScaleIn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder reuseOnScaleIn(@Nullable Boolean reuseOnScaleIn) {
-            this.reuseOnScaleIn = Output.ofNullable(reuseOnScaleIn);
+            this.reuseOnScaleIn = Codegen.ofNullable(reuseOnScaleIn);
             return this;
         }        public WarmPoolInstanceReusePolicyArgs build() {
             return new WarmPoolInstanceReusePolicyArgs(reuseOnScaleIn);

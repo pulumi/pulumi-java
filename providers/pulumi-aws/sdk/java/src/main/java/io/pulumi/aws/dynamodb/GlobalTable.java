@@ -10,6 +10,7 @@ import io.pulumi.aws.dynamodb.outputs.GlobalTableReplica;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
      * @return The ARN of the DynamoDB Global Table
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +60,7 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
      * @return The name of the global table. Must match underlying DynamoDB Table names in all regions.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
      * @return Underlying DynamoDB Table. At least 1 replica must be defined. See below.
      * 
      */
-    public Output<List<GlobalTableReplica>> getReplicas() {
+    public Output<List<GlobalTableReplica>> replicas() {
         return this.replicas;
     }
 
@@ -99,7 +100,7 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GlobalTable(String name, GlobalTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/globalTable:GlobalTable", name, args == null ? GlobalTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dynamodb/globalTable:GlobalTable", name, args == null ? GlobalTableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GlobalTable(String name, Output<String> id, @Nullable GlobalTableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

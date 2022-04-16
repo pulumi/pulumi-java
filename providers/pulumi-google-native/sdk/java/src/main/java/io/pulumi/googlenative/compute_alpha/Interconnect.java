@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.InterconnectArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectCircuitInfoResponse;
@@ -35,7 +36,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
      * 
      */
-    public Output<Boolean> getAdminEnabled() {
+    public Output<Boolean> adminEnabled() {
         return this.adminEnabled;
     }
     /**
@@ -49,7 +50,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return A list of CircuitInfo objects, that describe the individual circuits in this LAG.
      * 
      */
-    public Output<List<InterconnectCircuitInfoResponse>> getCircuitInfos() {
+    public Output<List<InterconnectCircuitInfoResponse>> circuitInfos() {
         return this.circuitInfos;
     }
     /**
@@ -63,7 +64,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -77,7 +78,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Customer name, to put in the Letter of Authorization as the party authorized to request a crossconnect.
      * 
      */
-    public Output<String> getCustomerName() {
+    public Output<String> customerName() {
         return this.customerName;
     }
     /**
@@ -91,7 +92,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -105,7 +106,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return A list of outages expected for this Interconnect.
      * 
      */
-    public Output<List<InterconnectOutageNotificationResponse>> getExpectedOutages() {
+    public Output<List<InterconnectOutageNotificationResponse>> expectedOutages() {
         return this.expectedOutages;
     }
     /**
@@ -119,7 +120,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return IP address configured on the Google side of the Interconnect link. This can be used only for ping tests.
      * 
      */
-    public Output<String> getGoogleIpAddress() {
+    public Output<String> googleIpAddress() {
         return this.googleIpAddress;
     }
     /**
@@ -133,7 +134,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Google reference ID to be used when raising support tickets with Google or otherwise to debug backend connectivity issues.
      * 
      */
-    public Output<String> getGoogleReferenceId() {
+    public Output<String> googleReferenceId() {
         return this.googleReferenceId;
     }
     /**
@@ -147,7 +148,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return A list of the URLs of all InterconnectAttachments configured to use this Interconnect.
      * 
      */
-    public Output<List<String>> getInterconnectAttachments() {
+    public Output<List<String>> interconnectAttachments() {
         return this.interconnectAttachments;
     }
     /**
@@ -161,7 +162,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed interconnection shared between customers though a partner. - DEDICATED: A dedicated physical interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of DEDICATED.
      * 
      */
-    public Output<String> getInterconnectType() {
+    public Output<String> interconnectType() {
         return this.interconnectType;
     }
     /**
@@ -175,7 +176,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#interconnect for interconnects.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -189,7 +190,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return A fingerprint for the labels being applied to this Interconnect, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an Interconnect.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -203,7 +204,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -217,7 +218,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Type of link requested, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G Ethernet with LR optics. Note that this field indicates the speed of each of the links in the bundle, not the speed of the entire bundle.
      * 
      */
-    public Output<String> getLinkType() {
+    public Output<String> linkType() {
         return this.linkType;
     }
     /**
@@ -231,7 +232,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return URL of the InterconnectLocation object that represents where this connection is to be provisioned.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -245,7 +246,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Configuration to enable Media Access Control security (MACsec) on the Interconnect between Google and your on-premises router.
      * 
      */
-    public Output<InterconnectMacsecResponse> getMacsec() {
+    public Output<InterconnectMacsecResponse> macsec() {
         return this.macsec;
     }
     /**
@@ -259,7 +260,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Enable or disable MACsec on this Interconnect. MACsec enablement will fail if the macsec object is not specified.
      * 
      */
-    public Output<Boolean> getMacsecEnabled() {
+    public Output<Boolean> macsecEnabled() {
         return this.macsecEnabled;
     }
     /**
@@ -273,7 +274,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -287,7 +288,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Email address to contact the customer NOC for operations and maintenance notifications regarding this Interconnect. If specified, this will be used for notifications in addition to all other forms described, such as Stackdriver logs alerting and Cloud Notifications.
      * 
      */
-    public Output<String> getNocContactEmail() {
+    public Output<String> nocContactEmail() {
         return this.nocContactEmail;
     }
     /**
@@ -301,7 +302,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return The current status of this Interconnect's functionality, which can take one of the following values: - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to use. Attachments may be provisioned on this Interconnect. - OS_UNPROVISIONED: An Interconnect that has not completed turnup. No attachments may be provisioned on this Interconnect. - OS_UNDER_MAINTENANCE: An Interconnect that is undergoing internal maintenance. No attachments may be provisioned or updated on this Interconnect.
      * 
      */
-    public Output<String> getOperationalStatus() {
+    public Output<String> operationalStatus() {
         return this.operationalStatus;
     }
     /**
@@ -315,7 +316,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return IP address configured on the customer side of the Interconnect link. The customer should configure this IP address during turnup when prompted by Google NOC. This can be used only for ping tests.
      * 
      */
-    public Output<String> getPeerIpAddress() {
+    public Output<String> peerIpAddress() {
         return this.peerIpAddress;
     }
     /**
@@ -329,7 +330,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Number of links actually provisioned in this interconnect.
      * 
      */
-    public Output<Integer> getProvisionedLinkCount() {
+    public Output<Integer> provisionedLinkCount() {
         return this.provisionedLinkCount;
     }
     /**
@@ -343,7 +344,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Target number of physical links in the link bundle, as requested by the customer.
      * 
      */
-    public Output<Integer> getRequestedLinkCount() {
+    public Output<Integer> requestedLinkCount() {
         return this.requestedLinkCount;
     }
     /**
@@ -357,7 +358,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Set to true if the resource satisfies the zone separation organization policy constraints and false otherwise. Defaults to false if the field is not present.
      * 
      */
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
@@ -371,7 +372,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -385,7 +386,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -399,7 +400,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @return The current state of Interconnect functionality, which can take one of the following values: - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments may be provisioned on this Interconnect. - UNPROVISIONED: The Interconnect has not completed turnup. No attachments may be provisioned on this Interconnect. - UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance. No attachments may be provisioned or updated on this Interconnect.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -425,7 +426,7 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Interconnect(String name, @Nullable InterconnectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:Interconnect", name, args == null ? InterconnectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:Interconnect", name, args == null ? InterconnectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Interconnect(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

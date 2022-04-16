@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.DeploymentStrategyArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -29,8 +30,8 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> getMinReadySeconds() {
-        return this.minReadySeconds == null ? Output.empty() : this.minReadySeconds;
+    public Output<Integer> minReadySeconds() {
+        return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="paused")
       private final @Nullable Output<Boolean> paused;
 
-    public Output<Boolean> getPaused() {
-        return this.paused == null ? Output.empty() : this.paused;
+    public Output<Boolean> paused() {
+        return this.paused == null ? Codegen.empty() : this.paused;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="progressDeadlineSeconds")
       private final @Nullable Output<Integer> progressDeadlineSeconds;
 
-    public Output<Integer> getProgressDeadlineSeconds() {
-        return this.progressDeadlineSeconds == null ? Output.empty() : this.progressDeadlineSeconds;
+    public Output<Integer> progressDeadlineSeconds() {
+        return this.progressDeadlineSeconds == null ? Codegen.empty() : this.progressDeadlineSeconds;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
-        return this.replicas == null ? Output.empty() : this.replicas;
+    public Output<Integer> replicas() {
+        return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> getRevisionHistoryLimit() {
-        return this.revisionHistoryLimit == null ? Output.empty() : this.revisionHistoryLimit;
+    public Output<Integer> revisionHistoryLimit() {
+        return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector", required=true)
       private final Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector;
     }
 
@@ -95,8 +96,8 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strategy")
       private final @Nullable Output<DeploymentStrategyArgs> strategy;
 
-    public Output<DeploymentStrategyArgs> getStrategy() {
-        return this.strategy == null ? Output.empty() : this.strategy;
+    public Output<DeploymentStrategyArgs> strategy() {
+        return this.strategy == null ? Codegen.empty() : this.strategy;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
@@ -130,14 +131,14 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentSpecArgs() {
-        this.minReadySeconds = Output.empty();
-        this.paused = Output.empty();
-        this.progressDeadlineSeconds = Output.empty();
-        this.replicas = Output.empty();
-        this.revisionHistoryLimit = Output.empty();
-        this.selector = Output.empty();
-        this.strategy = Output.empty();
-        this.template = Output.empty();
+        this.minReadySeconds = Codegen.empty();
+        this.paused = Codegen.empty();
+        this.progressDeadlineSeconds = Codegen.empty();
+        this.replicas = Codegen.empty();
+        this.revisionHistoryLimit = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.strategy = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Output.ofNullable(minReadySeconds);
+            this.minReadySeconds = Codegen.ofNullable(minReadySeconds);
             return this;
         }
         public Builder paused(@Nullable Output<Boolean> paused) {
@@ -187,7 +188,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder paused(@Nullable Boolean paused) {
-            this.paused = Output.ofNullable(paused);
+            this.paused = Codegen.ofNullable(paused);
             return this;
         }
         public Builder progressDeadlineSeconds(@Nullable Output<Integer> progressDeadlineSeconds) {
@@ -195,7 +196,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder progressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
-            this.progressDeadlineSeconds = Output.ofNullable(progressDeadlineSeconds);
+            this.progressDeadlineSeconds = Codegen.ofNullable(progressDeadlineSeconds);
             return this;
         }
         public Builder replicas(@Nullable Output<Integer> replicas) {
@@ -203,7 +204,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Output.ofNullable(replicas);
+            this.replicas = Codegen.ofNullable(replicas);
             return this;
         }
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
@@ -211,7 +212,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
-            this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
+            this.revisionHistoryLimit = Codegen.ofNullable(revisionHistoryLimit);
             return this;
         }
         public Builder selector(Output<LabelSelectorArgs> selector) {
@@ -227,7 +228,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder strategy(@Nullable DeploymentStrategyArgs strategy) {
-            this.strategy = Output.ofNullable(strategy);
+            this.strategy = Codegen.ofNullable(strategy);
             return this;
         }
         public Builder template(Output<PodTemplateSpecArgs> template) {

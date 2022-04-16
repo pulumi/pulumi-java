@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="detailedStatus")
       private final @Nullable Output<String> detailedStatus;
 
-    public Output<String> getDetailedStatus() {
-        return this.detailedStatus == null ? Output.empty() : this.detailedStatus;
+    public Output<String> detailedStatus() {
+        return this.detailedStatus == null ? Codegen.empty() : this.detailedStatus;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ikeVersion")
       private final @Nullable Output<Integer> ikeVersion;
 
-    public Output<Integer> getIkeVersion() {
-        return this.ikeVersion == null ? Output.empty() : this.ikeVersion;
+    public Output<Integer> ikeVersion() {
+        return this.ikeVersion == null ? Codegen.empty() : this.ikeVersion;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
-    public Output<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
+    public Output<String> labelFingerprint() {
+        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="localTrafficSelectors")
       private final @Nullable Output<List<String>> localTrafficSelectors;
 
-    public Output<List<String>> getLocalTrafficSelectors() {
-        return this.localTrafficSelectors == null ? Output.empty() : this.localTrafficSelectors;
+    public Output<List<String>> localTrafficSelectors() {
+        return this.localTrafficSelectors == null ? Codegen.empty() : this.localTrafficSelectors;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerExternalGateway")
       private final @Nullable Output<String> peerExternalGateway;
 
-    public Output<String> getPeerExternalGateway() {
-        return this.peerExternalGateway == null ? Output.empty() : this.peerExternalGateway;
+    public Output<String> peerExternalGateway() {
+        return this.peerExternalGateway == null ? Codegen.empty() : this.peerExternalGateway;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerExternalGatewayInterface")
       private final @Nullable Output<Integer> peerExternalGatewayInterface;
 
-    public Output<Integer> getPeerExternalGatewayInterface() {
-        return this.peerExternalGatewayInterface == null ? Output.empty() : this.peerExternalGatewayInterface;
+    public Output<Integer> peerExternalGatewayInterface() {
+        return this.peerExternalGatewayInterface == null ? Codegen.empty() : this.peerExternalGatewayInterface;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerGcpGateway")
       private final @Nullable Output<String> peerGcpGateway;
 
-    public Output<String> getPeerGcpGateway() {
-        return this.peerGcpGateway == null ? Output.empty() : this.peerGcpGateway;
+    public Output<String> peerGcpGateway() {
+        return this.peerGcpGateway == null ? Codegen.empty() : this.peerGcpGateway;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
 
-    public Output<String> getPeerIp() {
-        return this.peerIp == null ? Output.empty() : this.peerIp;
+    public Output<String> peerIp() {
+        return this.peerIp == null ? Codegen.empty() : this.peerIp;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="remoteTrafficSelectors")
       private final @Nullable Output<List<String>> remoteTrafficSelectors;
 
-    public Output<List<String>> getRemoteTrafficSelectors() {
-        return this.remoteTrafficSelectors == null ? Output.empty() : this.remoteTrafficSelectors;
+    public Output<List<String>> remoteTrafficSelectors() {
+        return this.remoteTrafficSelectors == null ? Codegen.empty() : this.remoteTrafficSelectors;
     }
 
     /**
@@ -207,8 +208,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="router")
       private final @Nullable Output<String> router;
 
-    public Output<String> getRouter() {
-        return this.router == null ? Output.empty() : this.router;
+    public Output<String> router() {
+        return this.router == null ? Codegen.empty() : this.router;
     }
 
     /**
@@ -218,8 +219,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -231,8 +232,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sharedSecret")
       private final @Nullable Output<String> sharedSecret;
 
-    public Output<String> getSharedSecret() {
-        return this.sharedSecret == null ? Output.empty() : this.sharedSecret;
+    public Output<String> sharedSecret() {
+        return this.sharedSecret == null ? Codegen.empty() : this.sharedSecret;
     }
 
     /**
@@ -242,8 +243,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sharedSecretHash")
       private final @Nullable Output<String> sharedSecretHash;
 
-    public Output<String> getSharedSecretHash() {
-        return this.sharedSecretHash == null ? Output.empty() : this.sharedSecretHash;
+    public Output<String> sharedSecretHash() {
+        return this.sharedSecretHash == null ? Codegen.empty() : this.sharedSecretHash;
     }
 
     /**
@@ -254,8 +255,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetVpnGateway")
       private final @Nullable Output<String> targetVpnGateway;
 
-    public Output<String> getTargetVpnGateway() {
-        return this.targetVpnGateway == null ? Output.empty() : this.targetVpnGateway;
+    public Output<String> targetVpnGateway() {
+        return this.targetVpnGateway == null ? Codegen.empty() : this.targetVpnGateway;
     }
 
     /**
@@ -265,8 +266,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnelId")
       private final @Nullable Output<String> tunnelId;
 
-    public Output<String> getTunnelId() {
-        return this.tunnelId == null ? Output.empty() : this.tunnelId;
+    public Output<String> tunnelId() {
+        return this.tunnelId == null ? Codegen.empty() : this.tunnelId;
     }
 
     /**
@@ -278,8 +279,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnGateway")
       private final @Nullable Output<String> vpnGateway;
 
-    public Output<String> getVpnGateway() {
-        return this.vpnGateway == null ? Output.empty() : this.vpnGateway;
+    public Output<String> vpnGateway() {
+        return this.vpnGateway == null ? Codegen.empty() : this.vpnGateway;
     }
 
     /**
@@ -289,8 +290,8 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnGatewayInterface")
       private final @Nullable Output<Integer> vpnGatewayInterface;
 
-    public Output<Integer> getVpnGatewayInterface() {
-        return this.vpnGatewayInterface == null ? Output.empty() : this.vpnGatewayInterface;
+    public Output<Integer> vpnGatewayInterface() {
+        return this.vpnGatewayInterface == null ? Codegen.empty() : this.vpnGatewayInterface;
     }
 
     public VPNTunnelState(
@@ -343,29 +344,29 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VPNTunnelState() {
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.detailedStatus = Output.empty();
-        this.ikeVersion = Output.empty();
-        this.labelFingerprint = Output.empty();
-        this.labels = Output.empty();
-        this.localTrafficSelectors = Output.empty();
-        this.name = Output.empty();
-        this.peerExternalGateway = Output.empty();
-        this.peerExternalGatewayInterface = Output.empty();
-        this.peerGcpGateway = Output.empty();
-        this.peerIp = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.remoteTrafficSelectors = Output.empty();
-        this.router = Output.empty();
-        this.selfLink = Output.empty();
-        this.sharedSecret = Output.empty();
-        this.sharedSecretHash = Output.empty();
-        this.targetVpnGateway = Output.empty();
-        this.tunnelId = Output.empty();
-        this.vpnGateway = Output.empty();
-        this.vpnGatewayInterface = Output.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.detailedStatus = Codegen.empty();
+        this.ikeVersion = Codegen.empty();
+        this.labelFingerprint = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.localTrafficSelectors = Codegen.empty();
+        this.name = Codegen.empty();
+        this.peerExternalGateway = Codegen.empty();
+        this.peerExternalGatewayInterface = Codegen.empty();
+        this.peerGcpGateway = Codegen.empty();
+        this.peerIp = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.remoteTrafficSelectors = Codegen.empty();
+        this.router = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sharedSecret = Codegen.empty();
+        this.sharedSecretHash = Codegen.empty();
+        this.targetVpnGateway = Codegen.empty();
+        this.tunnelId = Codegen.empty();
+        this.vpnGateway = Codegen.empty();
+        this.vpnGatewayInterface = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -437,7 +438,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -445,7 +446,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder detailedStatus(@Nullable Output<String> detailedStatus) {
@@ -453,7 +454,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detailedStatus(@Nullable String detailedStatus) {
-            this.detailedStatus = Output.ofNullable(detailedStatus);
+            this.detailedStatus = Codegen.ofNullable(detailedStatus);
             return this;
         }
         public Builder ikeVersion(@Nullable Output<Integer> ikeVersion) {
@@ -461,7 +462,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ikeVersion(@Nullable Integer ikeVersion) {
-            this.ikeVersion = Output.ofNullable(ikeVersion);
+            this.ikeVersion = Codegen.ofNullable(ikeVersion);
             return this;
         }
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
@@ -469,7 +470,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Output.ofNullable(labelFingerprint);
+            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -477,7 +478,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder localTrafficSelectors(@Nullable Output<List<String>> localTrafficSelectors) {
@@ -485,7 +486,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localTrafficSelectors(@Nullable List<String> localTrafficSelectors) {
-            this.localTrafficSelectors = Output.ofNullable(localTrafficSelectors);
+            this.localTrafficSelectors = Codegen.ofNullable(localTrafficSelectors);
             return this;
         }
         public Builder localTrafficSelectors(String... localTrafficSelectors) {
@@ -496,7 +497,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder peerExternalGateway(@Nullable Output<String> peerExternalGateway) {
@@ -504,7 +505,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerExternalGateway(@Nullable String peerExternalGateway) {
-            this.peerExternalGateway = Output.ofNullable(peerExternalGateway);
+            this.peerExternalGateway = Codegen.ofNullable(peerExternalGateway);
             return this;
         }
         public Builder peerExternalGatewayInterface(@Nullable Output<Integer> peerExternalGatewayInterface) {
@@ -512,7 +513,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerExternalGatewayInterface(@Nullable Integer peerExternalGatewayInterface) {
-            this.peerExternalGatewayInterface = Output.ofNullable(peerExternalGatewayInterface);
+            this.peerExternalGatewayInterface = Codegen.ofNullable(peerExternalGatewayInterface);
             return this;
         }
         public Builder peerGcpGateway(@Nullable Output<String> peerGcpGateway) {
@@ -520,7 +521,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerGcpGateway(@Nullable String peerGcpGateway) {
-            this.peerGcpGateway = Output.ofNullable(peerGcpGateway);
+            this.peerGcpGateway = Codegen.ofNullable(peerGcpGateway);
             return this;
         }
         public Builder peerIp(@Nullable Output<String> peerIp) {
@@ -528,7 +529,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerIp(@Nullable String peerIp) {
-            this.peerIp = Output.ofNullable(peerIp);
+            this.peerIp = Codegen.ofNullable(peerIp);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -536,7 +537,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -544,7 +545,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder remoteTrafficSelectors(@Nullable Output<List<String>> remoteTrafficSelectors) {
@@ -552,7 +553,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteTrafficSelectors(@Nullable List<String> remoteTrafficSelectors) {
-            this.remoteTrafficSelectors = Output.ofNullable(remoteTrafficSelectors);
+            this.remoteTrafficSelectors = Codegen.ofNullable(remoteTrafficSelectors);
             return this;
         }
         public Builder remoteTrafficSelectors(String... remoteTrafficSelectors) {
@@ -563,7 +564,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder router(@Nullable String router) {
-            this.router = Output.ofNullable(router);
+            this.router = Codegen.ofNullable(router);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -571,7 +572,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sharedSecret(@Nullable Output<String> sharedSecret) {
@@ -579,7 +580,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sharedSecret(@Nullable String sharedSecret) {
-            this.sharedSecret = Output.ofNullable(sharedSecret);
+            this.sharedSecret = Codegen.ofNullable(sharedSecret);
             return this;
         }
         public Builder sharedSecretHash(@Nullable Output<String> sharedSecretHash) {
@@ -587,7 +588,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sharedSecretHash(@Nullable String sharedSecretHash) {
-            this.sharedSecretHash = Output.ofNullable(sharedSecretHash);
+            this.sharedSecretHash = Codegen.ofNullable(sharedSecretHash);
             return this;
         }
         public Builder targetVpnGateway(@Nullable Output<String> targetVpnGateway) {
@@ -595,7 +596,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetVpnGateway(@Nullable String targetVpnGateway) {
-            this.targetVpnGateway = Output.ofNullable(targetVpnGateway);
+            this.targetVpnGateway = Codegen.ofNullable(targetVpnGateway);
             return this;
         }
         public Builder tunnelId(@Nullable Output<String> tunnelId) {
@@ -603,7 +604,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnelId(@Nullable String tunnelId) {
-            this.tunnelId = Output.ofNullable(tunnelId);
+            this.tunnelId = Codegen.ofNullable(tunnelId);
             return this;
         }
         public Builder vpnGateway(@Nullable Output<String> vpnGateway) {
@@ -611,7 +612,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnGateway(@Nullable String vpnGateway) {
-            this.vpnGateway = Output.ofNullable(vpnGateway);
+            this.vpnGateway = Codegen.ofNullable(vpnGateway);
             return this;
         }
         public Builder vpnGatewayInterface(@Nullable Output<Integer> vpnGatewayInterface) {
@@ -619,7 +620,7 @@ public final class VPNTunnelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnGatewayInterface(@Nullable Integer vpnGatewayInterface) {
-            this.vpnGatewayInterface = Output.ofNullable(vpnGatewayInterface);
+            this.vpnGatewayInterface = Codegen.ofNullable(vpnGatewayInterface);
             return this;
         }        public VPNTunnelState build() {
             return new VPNTunnelState(creationTimestamp, description, detailedStatus, ikeVersion, labelFingerprint, labels, localTrafficSelectors, name, peerExternalGateway, peerExternalGatewayInterface, peerGcpGateway, peerIp, project, region, remoteTrafficSelectors, router, selfLink, sharedSecret, sharedSecretHash, targetVpnGateway, tunnelId, vpnGateway, vpnGatewayInterface);

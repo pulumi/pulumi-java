@@ -9,6 +9,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisIntegerParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisStringParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dateTimeParameters")
       private final @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
-    public Output<List<AnalysisDateTimeParameterArgs>> getDateTimeParameters() {
-        return this.dateTimeParameters == null ? Output.empty() : this.dateTimeParameters;
+    public Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters() {
+        return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="decimalParameters")
       private final @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
-    public Output<List<AnalysisDecimalParameterArgs>> getDecimalParameters() {
-        return this.decimalParameters == null ? Output.empty() : this.decimalParameters;
+    public Output<List<AnalysisDecimalParameterArgs>> decimalParameters() {
+        return this.decimalParameters == null ? Codegen.empty() : this.decimalParameters;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="integerParameters")
       private final @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
 
-    public Output<List<AnalysisIntegerParameterArgs>> getIntegerParameters() {
-        return this.integerParameters == null ? Output.empty() : this.integerParameters;
+    public Output<List<AnalysisIntegerParameterArgs>> integerParameters() {
+        return this.integerParameters == null ? Codegen.empty() : this.integerParameters;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="stringParameters")
       private final @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
 
-    public Output<List<AnalysisStringParameterArgs>> getStringParameters() {
-        return this.stringParameters == null ? Output.empty() : this.stringParameters;
+    public Output<List<AnalysisStringParameterArgs>> stringParameters() {
+        return this.stringParameters == null ? Codegen.empty() : this.stringParameters;
     }
 
     public AnalysisParametersArgs(
@@ -78,10 +79,10 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AnalysisParametersArgs() {
-        this.dateTimeParameters = Output.empty();
-        this.decimalParameters = Output.empty();
-        this.integerParameters = Output.empty();
-        this.stringParameters = Output.empty();
+        this.dateTimeParameters = Codegen.empty();
+        this.decimalParameters = Codegen.empty();
+        this.integerParameters = Codegen.empty();
+        this.stringParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dateTimeParameters(@Nullable List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
-            this.dateTimeParameters = Output.ofNullable(dateTimeParameters);
+            this.dateTimeParameters = Codegen.ofNullable(dateTimeParameters);
             return this;
         }
         public Builder dateTimeParameters(AnalysisDateTimeParameterArgs... dateTimeParameters) {
@@ -126,7 +127,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder decimalParameters(@Nullable List<AnalysisDecimalParameterArgs> decimalParameters) {
-            this.decimalParameters = Output.ofNullable(decimalParameters);
+            this.decimalParameters = Codegen.ofNullable(decimalParameters);
             return this;
         }
         public Builder decimalParameters(AnalysisDecimalParameterArgs... decimalParameters) {
@@ -137,7 +138,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder integerParameters(@Nullable List<AnalysisIntegerParameterArgs> integerParameters) {
-            this.integerParameters = Output.ofNullable(integerParameters);
+            this.integerParameters = Codegen.ofNullable(integerParameters);
             return this;
         }
         public Builder integerParameters(AnalysisIntegerParameterArgs... integerParameters) {
@@ -148,7 +149,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder stringParameters(@Nullable List<AnalysisStringParameterArgs> stringParameters) {
-            this.stringParameters = Output.ofNullable(stringParameters);
+            this.stringParameters = Codegen.ofNullable(stringParameters);
             return this;
         }
         public Builder stringParameters(AnalysisStringParameterArgs... stringParameters) {

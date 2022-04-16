@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
     @Import(name="allowConfigBasedIssuance", required=true)
       private final Output<Boolean> allowConfigBasedIssuance;
 
-    public Output<Boolean> getAllowConfigBasedIssuance() {
+    public Output<Boolean> allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
 
@@ -31,7 +32,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
     @Import(name="allowCsrBasedIssuance", required=true)
       private final Output<Boolean> allowCsrBasedIssuance;
 
-    public Output<Boolean> getAllowCsrBasedIssuance() {
+    public Output<Boolean> allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
 
@@ -43,8 +44,8 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
     }
 
     private CaPoolIssuancePolicyAllowedIssuanceModesArgs() {
-        this.allowConfigBasedIssuance = Output.empty();
-        this.allowCsrBasedIssuance = Output.empty();
+        this.allowConfigBasedIssuance = Codegen.empty();
+        this.allowCsrBasedIssuance = Codegen.empty();
     }
 
     public static Builder builder() {

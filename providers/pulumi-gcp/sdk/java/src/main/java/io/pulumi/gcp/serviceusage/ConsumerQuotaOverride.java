@@ -6,6 +6,7 @@ package io.pulumi.gcp.serviceusage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceusage.ConsumerQuotaOverrideArgs;
 import io.pulumi.gcp.serviceusage.inputs.ConsumerQuotaOverrideState;
@@ -57,7 +58,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * @return If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDimensions() {
+    public Output</* @Nullable */ Map<String,String>> dimensions() {
         return this.dimensions;
     }
     /**
@@ -73,7 +74,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * If `force` is `true`, that safety check is ignored.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForce() {
+    public Output</* @Nullable */ Boolean> force() {
         return this.force;
     }
     /**
@@ -87,7 +88,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * @return The limit on the metric, e.g. `/project/region`.
      * 
      */
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit;
     }
     /**
@@ -101,7 +102,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * @return The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
      * 
      */
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric;
     }
     /**
@@ -115,7 +116,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * @return The server-generated name of the quota override.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +130,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * @return The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
      * 
      */
-    public Output<String> getOverrideValue() {
+    public Output<String> overrideValue() {
         return this.overrideValue;
     }
     /**
@@ -145,7 +146,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -159,7 +160,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * @return The service that the metrics belong to, e.g. `compute.googleapis.com`.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -185,7 +186,7 @@ public class ConsumerQuotaOverride extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConsumerQuotaOverride(String name, ConsumerQuotaOverrideArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride", name, args == null ? ConsumerQuotaOverrideArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:serviceusage/consumerQuotaOverride:ConsumerQuotaOverride", name, args == null ? ConsumerQuotaOverrideArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConsumerQuotaOverride(String name, Output<String> id, @Nullable ConsumerQuotaOverrideState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

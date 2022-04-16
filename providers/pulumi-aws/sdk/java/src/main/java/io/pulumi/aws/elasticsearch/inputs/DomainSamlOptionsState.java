@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
     @Import(name="samlOptions")
       private final @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
-    public Output<DomainSamlOptionsSamlOptionsGetArgs> getSamlOptions() {
-        return this.samlOptions == null ? Output.empty() : this.samlOptions;
+    public Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions() {
+        return this.samlOptions == null ? Codegen.empty() : this.samlOptions;
     }
 
     public DomainSamlOptionsState(
@@ -45,8 +46,8 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
     }
 
     private DomainSamlOptionsState() {
-        this.domainName = Output.empty();
-        this.samlOptions = Output.empty();
+        this.domainName = Codegen.empty();
+        this.samlOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
@@ -84,7 +85,7 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder samlOptions(@Nullable DomainSamlOptionsSamlOptionsGetArgs samlOptions) {
-            this.samlOptions = Output.ofNullable(samlOptions);
+            this.samlOptions = Codegen.ofNullable(samlOptions);
             return this;
         }        public DomainSamlOptionsState build() {
             return new DomainSamlOptionsState(domainName, samlOptions);

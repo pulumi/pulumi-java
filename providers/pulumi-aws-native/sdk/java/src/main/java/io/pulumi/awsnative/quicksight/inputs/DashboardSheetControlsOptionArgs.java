@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.DashboardUIState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     @Import(name="visibilityState")
       private final @Nullable Output<DashboardUIState> visibilityState;
 
-    public Output<DashboardUIState> getVisibilityState() {
-        return this.visibilityState == null ? Output.empty() : this.visibilityState;
+    public Output<DashboardUIState> visibilityState() {
+        return this.visibilityState == null ? Codegen.empty() : this.visibilityState;
     }
 
     public DashboardSheetControlsOptionArgs(@Nullable Output<DashboardUIState> visibilityState) {
@@ -30,7 +31,7 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     }
 
     private DashboardSheetControlsOptionArgs() {
-        this.visibilityState = Output.empty();
+        this.visibilityState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder visibilityState(@Nullable DashboardUIState visibilityState) {
-            this.visibilityState = Output.ofNullable(visibilityState);
+            this.visibilityState = Codegen.ofNullable(visibilityState);
             return this;
         }        public DashboardSheetControlsOptionArgs build() {
             return new DashboardSheetControlsOptionArgs(visibilityState);

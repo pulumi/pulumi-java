@@ -10,6 +10,7 @@ import io.pulumi.aws.ecs.outputs.ClusterCapacityProvidersDefaultCapacityProvider
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public class ClusterCapacityProviders extends io.pulumi.resources.CustomResource
      * @return Set of names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCapacityProviders() {
+    public Output</* @Nullable */ List<String>> capacityProviders() {
         return this.capacityProviders;
     }
     /**
@@ -51,7 +52,7 @@ public class ClusterCapacityProviders extends io.pulumi.resources.CustomResource
      * @return Name of the ECS cluster to manage capacity providers for.
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -65,7 +66,7 @@ public class ClusterCapacityProviders extends io.pulumi.resources.CustomResource
      * @return Set of capacity provider strategies to use by default for the cluster. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ClusterCapacityProvidersDefaultCapacityProviderStrategy>> getDefaultCapacityProviderStrategies() {
+    public Output</* @Nullable */ List<ClusterCapacityProvidersDefaultCapacityProviderStrategy>> defaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies;
     }
 
@@ -91,7 +92,7 @@ public class ClusterCapacityProviders extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterCapacityProviders(String name, ClusterCapacityProvidersArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecs/clusterCapacityProviders:ClusterCapacityProviders", name, args == null ? ClusterCapacityProvidersArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecs/clusterCapacityProviders:ClusterCapacityProviders", name, args == null ? ClusterCapacityProvidersArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterCapacityProviders(String name, Output<String> id, @Nullable ClusterCapacityProvidersState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

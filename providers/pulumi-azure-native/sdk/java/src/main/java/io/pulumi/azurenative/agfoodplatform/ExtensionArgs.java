@@ -5,6 +5,7 @@ package io.pulumi.azurenative.agfoodplatform;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensionId")
       private final @Nullable Output<String> extensionId;
 
-    public Output<String> getExtensionId() {
-        return this.extensionId == null ? Output.empty() : this.extensionId;
+    public Output<String> extensionId() {
+        return this.extensionId == null ? Codegen.empty() : this.extensionId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="farmBeatsResourceName", required=true)
       private final Output<String> farmBeatsResourceName;
 
-    public Output<String> getFarmBeatsResourceName() {
+    public Output<String> farmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
 
@@ -43,7 +44,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,9 +58,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExtensionArgs() {
-        this.extensionId = Output.empty();
-        this.farmBeatsResourceName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.extensionId = Codegen.empty();
+        this.farmBeatsResourceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extensionId(@Nullable String extensionId) {
-            this.extensionId = Output.ofNullable(extensionId);
+            this.extensionId = Codegen.ofNullable(extensionId);
             return this;
         }
         public Builder farmBeatsResourceName(Output<String> farmBeatsResourceName) {

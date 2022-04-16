@@ -6,6 +6,7 @@ package io.pulumi.awsnative.configuration;
 import io.pulumi.awsnative.configuration.inputs.AggregationAuthorizationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
     @Import(name="authorizedAccountId", required=true)
       private final Output<String> authorizedAccountId;
 
-    public Output<String> getAuthorizedAccountId() {
+    public Output<String> authorizedAccountId() {
         return this.authorizedAccountId;
     }
 
@@ -34,7 +35,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
     @Import(name="authorizedAwsRegion", required=true)
       private final Output<String> authorizedAwsRegion;
 
-    public Output<String> getAuthorizedAwsRegion() {
+    public Output<String> authorizedAwsRegion() {
         return this.authorizedAwsRegion;
     }
 
@@ -45,8 +46,8 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
 
-    public Output<List<AggregationAuthorizationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<AggregationAuthorizationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AggregationAuthorizationArgs(
@@ -59,9 +60,9 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
     }
 
     private AggregationAuthorizationArgs() {
-        this.authorizedAccountId = Output.empty();
-        this.authorizedAwsRegion = Output.empty();
-        this.tags = Output.empty();
+        this.authorizedAccountId = Codegen.empty();
+        this.authorizedAwsRegion = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable List<AggregationAuthorizationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AggregationAuthorizationTagArgs... tags) {

@@ -16,6 +16,7 @@ import io.pulumi.aws.s3.inputs.BucketWebsiteArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,8 +36,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accelerationStatus")
       private final @Nullable Output<String> accelerationStatus;
 
-    public Output<String> getAccelerationStatus() {
-        return this.accelerationStatus == null ? Output.empty() : this.accelerationStatus;
+    public Output<String> accelerationStatus() {
+        return this.accelerationStatus == null ? Codegen.empty() : this.accelerationStatus;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acl")
       private final @Nullable Output<Either<String,CannedAcl>> acl;
 
-    public Output<Either<String,CannedAcl>> getAcl() {
-        return this.acl == null ? Output.empty() : this.acl;
+    public Output<Either<String,CannedAcl>> acl() {
+        return this.acl == null ? Codegen.empty() : this.acl;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="corsRules")
       private final @Nullable Output<List<BucketCorsRuleArgs>> corsRules;
 
-    public Output<List<BucketCorsRuleArgs>> getCorsRules() {
-        return this.corsRules == null ? Output.empty() : this.corsRules;
+    public Output<List<BucketCorsRuleArgs>> corsRules() {
+        return this.corsRules == null ? Codegen.empty() : this.corsRules;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grants")
       private final @Nullable Output<List<BucketGrantArgs>> grants;
 
-    public Output<List<BucketGrantArgs>> getGrants() {
-        return this.grants == null ? Output.empty() : this.grants;
+    public Output<List<BucketGrantArgs>> grants() {
+        return this.grants == null ? Codegen.empty() : this.grants;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
+    public Output<String> hostedZoneId() {
+        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleRules")
       private final @Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules;
 
-    public Output<List<BucketLifecycleRuleArgs>> getLifecycleRules() {
-        return this.lifecycleRules == null ? Output.empty() : this.lifecycleRules;
+    public Output<List<BucketLifecycleRuleArgs>> lifecycleRules() {
+        return this.lifecycleRules == null ? Codegen.empty() : this.lifecycleRules;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggings")
       private final @Nullable Output<List<BucketLoggingArgs>> loggings;
 
-    public Output<List<BucketLoggingArgs>> getLoggings() {
-        return this.loggings == null ? Output.empty() : this.loggings;
+    public Output<List<BucketLoggingArgs>> loggings() {
+        return this.loggings == null ? Codegen.empty() : this.loggings;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockConfiguration")
       private final @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
 
-    public Output<BucketObjectLockConfigurationArgs> getObjectLockConfiguration() {
-        return this.objectLockConfiguration == null ? Output.empty() : this.objectLockConfiguration;
+    public Output<BucketObjectLockConfigurationArgs> objectLockConfiguration() {
+        return this.objectLockConfiguration == null ? Codegen.empty() : this.objectLockConfiguration;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -178,8 +179,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicationConfiguration")
       private final @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
 
-    public Output<BucketReplicationConfigurationArgs> getReplicationConfiguration() {
-        return this.replicationConfiguration == null ? Output.empty() : this.replicationConfiguration;
+    public Output<BucketReplicationConfigurationArgs> replicationConfiguration() {
+        return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestPayer")
       private final @Nullable Output<String> requestPayer;
 
-    public Output<String> getRequestPayer() {
-        return this.requestPayer == null ? Output.empty() : this.requestPayer;
+    public Output<String> requestPayer() {
+        return this.requestPayer == null ? Codegen.empty() : this.requestPayer;
     }
 
     /**
@@ -203,8 +204,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Output<BucketServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
+    public Output<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration() {
+        return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
     }
 
     /**
@@ -214,8 +215,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -225,8 +226,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versioning")
       private final @Nullable Output<BucketVersioningArgs> versioning;
 
-    public Output<BucketVersioningArgs> getVersioning() {
-        return this.versioning == null ? Output.empty() : this.versioning;
+    public Output<BucketVersioningArgs> versioning() {
+        return this.versioning == null ? Codegen.empty() : this.versioning;
     }
 
     /**
@@ -236,8 +237,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="website")
       private final @Nullable Output<BucketWebsiteArgs> website;
 
-    public Output<BucketWebsiteArgs> getWebsite() {
-        return this.website == null ? Output.empty() : this.website;
+    public Output<BucketWebsiteArgs> website() {
+        return this.website == null ? Codegen.empty() : this.website;
     }
 
     /**
@@ -247,8 +248,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="websiteDomain")
       private final @Nullable Output<String> websiteDomain;
 
-    public Output<String> getWebsiteDomain() {
-        return this.websiteDomain == null ? Output.empty() : this.websiteDomain;
+    public Output<String> websiteDomain() {
+        return this.websiteDomain == null ? Codegen.empty() : this.websiteDomain;
     }
 
     /**
@@ -258,8 +259,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="websiteEndpoint")
       private final @Nullable Output<String> websiteEndpoint;
 
-    public Output<String> getWebsiteEndpoint() {
-        return this.websiteEndpoint == null ? Output.empty() : this.websiteEndpoint;
+    public Output<String> websiteEndpoint() {
+        return this.websiteEndpoint == null ? Codegen.empty() : this.websiteEndpoint;
     }
 
     public BucketArgs(
@@ -308,27 +309,27 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketArgs() {
-        this.accelerationStatus = Output.empty();
-        this.acl = Output.empty();
-        this.arn = Output.empty();
-        this.bucket = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.corsRules = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.grants = Output.empty();
-        this.hostedZoneId = Output.empty();
-        this.lifecycleRules = Output.empty();
-        this.loggings = Output.empty();
-        this.objectLockConfiguration = Output.empty();
-        this.policy = Output.empty();
-        this.replicationConfiguration = Output.empty();
-        this.requestPayer = Output.empty();
-        this.serverSideEncryptionConfiguration = Output.empty();
-        this.tags = Output.empty();
-        this.versioning = Output.empty();
-        this.website = Output.empty();
-        this.websiteDomain = Output.empty();
-        this.websiteEndpoint = Output.empty();
+        this.accelerationStatus = Codegen.empty();
+        this.acl = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.corsRules = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.grants = Codegen.empty();
+        this.hostedZoneId = Codegen.empty();
+        this.lifecycleRules = Codegen.empty();
+        this.loggings = Codegen.empty();
+        this.objectLockConfiguration = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.replicationConfiguration = Codegen.empty();
+        this.requestPayer = Codegen.empty();
+        this.serverSideEncryptionConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.versioning = Codegen.empty();
+        this.website = Codegen.empty();
+        this.websiteDomain = Codegen.empty();
+        this.websiteEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -396,7 +397,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accelerationStatus(@Nullable String accelerationStatus) {
-            this.accelerationStatus = Output.ofNullable(accelerationStatus);
+            this.accelerationStatus = Codegen.ofNullable(accelerationStatus);
             return this;
         }
         public Builder acl(@Nullable Output<Either<String,CannedAcl>> acl) {
@@ -404,7 +405,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acl(@Nullable Either<String,CannedAcl> acl) {
-            this.acl = Output.ofNullable(acl);
+            this.acl = Codegen.ofNullable(acl);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -412,7 +413,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder bucket(@Nullable Output<String> bucket) {
@@ -420,7 +421,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
@@ -428,7 +429,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder corsRules(@Nullable Output<List<BucketCorsRuleArgs>> corsRules) {
@@ -436,7 +437,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder corsRules(@Nullable List<BucketCorsRuleArgs> corsRules) {
-            this.corsRules = Output.ofNullable(corsRules);
+            this.corsRules = Codegen.ofNullable(corsRules);
             return this;
         }
         public Builder corsRules(BucketCorsRuleArgs... corsRules) {
@@ -447,7 +448,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder grants(@Nullable Output<List<BucketGrantArgs>> grants) {
@@ -455,7 +456,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grants(@Nullable List<BucketGrantArgs> grants) {
-            this.grants = Output.ofNullable(grants);
+            this.grants = Codegen.ofNullable(grants);
             return this;
         }
         public Builder grants(BucketGrantArgs... grants) {
@@ -466,7 +467,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Output.ofNullable(hostedZoneId);
+            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
             return this;
         }
         public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules) {
@@ -474,7 +475,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecycleRules(@Nullable List<BucketLifecycleRuleArgs> lifecycleRules) {
-            this.lifecycleRules = Output.ofNullable(lifecycleRules);
+            this.lifecycleRules = Codegen.ofNullable(lifecycleRules);
             return this;
         }
         public Builder lifecycleRules(BucketLifecycleRuleArgs... lifecycleRules) {
@@ -485,7 +486,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggings(@Nullable List<BucketLoggingArgs> loggings) {
-            this.loggings = Output.ofNullable(loggings);
+            this.loggings = Codegen.ofNullable(loggings);
             return this;
         }
         public Builder loggings(BucketLoggingArgs... loggings) {
@@ -496,7 +497,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
-            this.objectLockConfiguration = Output.ofNullable(objectLockConfiguration);
+            this.objectLockConfiguration = Codegen.ofNullable(objectLockConfiguration);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -508,7 +509,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
+            this.replicationConfiguration = Codegen.ofNullable(replicationConfiguration);
             return this;
         }
         public Builder requestPayer(@Nullable Output<String> requestPayer) {
@@ -516,7 +517,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestPayer(@Nullable String requestPayer) {
-            this.requestPayer = Output.ofNullable(requestPayer);
+            this.requestPayer = Codegen.ofNullable(requestPayer);
             return this;
         }
         public Builder serverSideEncryptionConfiguration(@Nullable Output<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
@@ -524,7 +525,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverSideEncryptionConfiguration(@Nullable BucketServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
+            this.serverSideEncryptionConfiguration = Codegen.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -532,7 +533,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
@@ -540,7 +541,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versioning(@Nullable BucketVersioningArgs versioning) {
-            this.versioning = Output.ofNullable(versioning);
+            this.versioning = Codegen.ofNullable(versioning);
             return this;
         }
         public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
@@ -548,7 +549,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder website(@Nullable BucketWebsiteArgs website) {
-            this.website = Output.ofNullable(website);
+            this.website = Codegen.ofNullable(website);
             return this;
         }
         public Builder websiteDomain(@Nullable Output<String> websiteDomain) {
@@ -556,7 +557,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder websiteDomain(@Nullable String websiteDomain) {
-            this.websiteDomain = Output.ofNullable(websiteDomain);
+            this.websiteDomain = Codegen.ofNullable(websiteDomain);
             return this;
         }
         public Builder websiteEndpoint(@Nullable Output<String> websiteEndpoint) {
@@ -564,7 +565,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder websiteEndpoint(@Nullable String websiteEndpoint) {
-            this.websiteEndpoint = Output.ofNullable(websiteEndpoint);
+            this.websiteEndpoint = Codegen.ofNullable(websiteEndpoint);
             return this;
         }        public BucketArgs build() {
             return new BucketArgs(accelerationStatus, acl, arn, bucket, bucketPrefix, corsRules, forceDestroy, grants, hostedZoneId, lifecycleRules, loggings, objectLockConfiguration, policy, replicationConfiguration, requestPayer, serverSideEncryptionConfiguration, tags, versioning, website, websiteDomain, websiteEndpoint);

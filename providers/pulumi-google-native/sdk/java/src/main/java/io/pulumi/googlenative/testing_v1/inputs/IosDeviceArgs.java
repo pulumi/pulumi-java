@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosModelId", required=true)
       private final Output<String> iosModelId;
 
-    public Output<String> getIosModelId() {
+    public Output<String> iosModelId() {
         return this.iosModelId;
     }
 
@@ -35,7 +36,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosVersionId", required=true)
       private final Output<String> iosVersionId;
 
-    public Output<String> getIosVersionId() {
+    public Output<String> iosVersionId() {
         return this.iosVersionId;
     }
 
@@ -46,7 +47,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locale", required=true)
       private final Output<String> locale;
 
-    public Output<String> getLocale() {
+    public Output<String> locale() {
         return this.locale;
     }
 
@@ -57,7 +58,7 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orientation", required=true)
       private final Output<String> orientation;
 
-    public Output<String> getOrientation() {
+    public Output<String> orientation() {
         return this.orientation;
     }
 
@@ -73,10 +74,10 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosDeviceArgs() {
-        this.iosModelId = Output.empty();
-        this.iosVersionId = Output.empty();
-        this.locale = Output.empty();
-        this.orientation = Output.empty();
+        this.iosModelId = Codegen.empty();
+        this.iosVersionId = Codegen.empty();
+        this.locale = Codegen.empty();
+        this.orientation = Codegen.empty();
     }
 
     public static Builder builder() {

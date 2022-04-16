@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassV2Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="greengrass")
       private final @Nullable Output<GatewayGreengrassArgs> greengrass;
 
-    public Output<GatewayGreengrassArgs> getGreengrass() {
-        return this.greengrass == null ? Output.empty() : this.greengrass;
+    public Output<GatewayGreengrassArgs> greengrass() {
+        return this.greengrass == null ? Codegen.empty() : this.greengrass;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="greengrassV2")
       private final @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
 
-    public Output<GatewayGreengrassV2Args> getGreengrassV2() {
-        return this.greengrassV2 == null ? Output.empty() : this.greengrassV2;
+    public Output<GatewayGreengrassV2Args> greengrassV2() {
+        return this.greengrassV2 == null ? Codegen.empty() : this.greengrassV2;
     }
 
     public GatewayPlatformArgs(
@@ -49,8 +50,8 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GatewayPlatformArgs() {
-        this.greengrass = Output.empty();
-        this.greengrassV2 = Output.empty();
+        this.greengrass = Codegen.empty();
+        this.greengrassV2 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder greengrass(@Nullable GatewayGreengrassArgs greengrass) {
-            this.greengrass = Output.ofNullable(greengrass);
+            this.greengrass = Codegen.ofNullable(greengrass);
             return this;
         }
         public Builder greengrassV2(@Nullable Output<GatewayGreengrassV2Args> greengrassV2) {
@@ -88,7 +89,7 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder greengrassV2(@Nullable GatewayGreengrassV2Args greengrassV2) {
-            this.greengrassV2 = Output.ofNullable(greengrassV2);
+            this.greengrassV2 = Codegen.ofNullable(greengrassV2);
             return this;
         }        public GatewayPlatformArgs build() {
             return new GatewayPlatformArgs(greengrass, greengrassV2);

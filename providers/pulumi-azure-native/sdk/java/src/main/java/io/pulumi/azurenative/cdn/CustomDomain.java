@@ -13,6 +13,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Certificate parameters for securing custom HTTPS
      * 
      */
-    public Output</* @Nullable */ Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> getCustomHttpsParameters() {
+    public Output</* @Nullable */ Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> customHttpsParameters() {
         return this.customHttpsParameters;
     }
     /**
@@ -59,7 +60,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Provisioning status of Custom Https of the custom domain.
      * 
      */
-    public Output<String> getCustomHttpsProvisioningState() {
+    public Output<String> customHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
     /**
@@ -73,7 +74,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
      */
-    public Output<String> getCustomHttpsProvisioningSubstate() {
+    public Output<String> customHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
     /**
@@ -87,7 +88,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return The host name of the custom domain. Must be a domain name.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -101,7 +102,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Provisioning status of the custom domain.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +130,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource status of the custom domain.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -143,7 +144,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -157,7 +158,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -171,7 +172,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @return Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
      * 
      */
-    public Output</* @Nullable */ String> getValidationData() {
+    public Output</* @Nullable */ String> validationData() {
         return this.validationData;
     }
 
@@ -197,7 +198,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomDomain(String name, CustomDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:CustomDomain", name, args == null ? CustomDomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cdn:CustomDomain", name, args == null ? CustomDomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomDomain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

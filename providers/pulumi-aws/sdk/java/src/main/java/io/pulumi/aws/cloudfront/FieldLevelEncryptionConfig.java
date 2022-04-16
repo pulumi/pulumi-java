@@ -11,6 +11,7 @@ import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigQueryArgProfil
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @return Internal value used by CloudFront to allow future updates to the Field Level Encryption Config.
      * 
      */
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference;
     }
     /**
@@ -55,7 +56,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @return An optional comment about the Field Level Encryption Config.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -69,7 +70,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @return Content Type Profile Config specifies when to forward content if a content type isn't recognized and profiles to use as by default in a request if a query argument doesn't specify a profile to use.
      * 
      */
-    public Output<FieldLevelEncryptionConfigContentTypeProfileConfig> getContentTypeProfileConfig() {
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfig> contentTypeProfileConfig() {
         return this.contentTypeProfileConfig;
     }
     /**
@@ -83,7 +84,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @return The current version of the Field Level Encryption Config. For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -97,7 +98,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @return Query Arg Profile Config that specifies when to forward content if a profile isn't found and the profile that can be provided as a query argument in a request.
      * 
      */
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfig> getQueryArgProfileConfig() {
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfig> queryArgProfileConfig() {
         return this.queryArgProfileConfig;
     }
 
@@ -123,7 +124,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public FieldLevelEncryptionConfig(String name, FieldLevelEncryptionConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig", name, args == null ? FieldLevelEncryptionConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig", name, args == null ? FieldLevelEncryptionConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FieldLevelEncryptionConfig(String name, Output<String> id, @Nullable FieldLevelEncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

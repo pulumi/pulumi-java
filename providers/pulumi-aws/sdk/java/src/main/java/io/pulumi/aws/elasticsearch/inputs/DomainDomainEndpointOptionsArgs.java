@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="customEndpoint")
       private final @Nullable Output<String> customEndpoint;
 
-    public Output<String> getCustomEndpoint() {
-        return this.customEndpoint == null ? Output.empty() : this.customEndpoint;
+    public Output<String> customEndpoint() {
+        return this.customEndpoint == null ? Codegen.empty() : this.customEndpoint;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="customEndpointCertificateArn")
       private final @Nullable Output<String> customEndpointCertificateArn;
 
-    public Output<String> getCustomEndpointCertificateArn() {
-        return this.customEndpointCertificateArn == null ? Output.empty() : this.customEndpointCertificateArn;
+    public Output<String> customEndpointCertificateArn() {
+        return this.customEndpointCertificateArn == null ? Codegen.empty() : this.customEndpointCertificateArn;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="customEndpointEnabled")
       private final @Nullable Output<Boolean> customEndpointEnabled;
 
-    public Output<Boolean> getCustomEndpointEnabled() {
-        return this.customEndpointEnabled == null ? Output.empty() : this.customEndpointEnabled;
+    public Output<Boolean> customEndpointEnabled() {
+        return this.customEndpointEnabled == null ? Codegen.empty() : this.customEndpointEnabled;
     }
 
     /**
@@ -55,15 +56,15 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="enforceHttps")
       private final @Nullable Output<Boolean> enforceHttps;
 
-    public Output<Boolean> getEnforceHttps() {
-        return this.enforceHttps == null ? Output.empty() : this.enforceHttps;
+    public Output<Boolean> enforceHttps() {
+        return this.enforceHttps == null ? Codegen.empty() : this.enforceHttps;
     }
 
     @Import(name="tlsSecurityPolicy")
       private final @Nullable Output<String> tlsSecurityPolicy;
 
-    public Output<String> getTlsSecurityPolicy() {
-        return this.tlsSecurityPolicy == null ? Output.empty() : this.tlsSecurityPolicy;
+    public Output<String> tlsSecurityPolicy() {
+        return this.tlsSecurityPolicy == null ? Codegen.empty() : this.tlsSecurityPolicy;
     }
 
     public DomainDomainEndpointOptionsArgs(
@@ -80,11 +81,11 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     }
 
     private DomainDomainEndpointOptionsArgs() {
-        this.customEndpoint = Output.empty();
-        this.customEndpointCertificateArn = Output.empty();
-        this.customEndpointEnabled = Output.empty();
-        this.enforceHttps = Output.empty();
-        this.tlsSecurityPolicy = Output.empty();
+        this.customEndpoint = Codegen.empty();
+        this.customEndpointCertificateArn = Codegen.empty();
+        this.customEndpointEnabled = Codegen.empty();
+        this.enforceHttps = Codegen.empty();
+        this.tlsSecurityPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customEndpoint(@Nullable String customEndpoint) {
-            this.customEndpoint = Output.ofNullable(customEndpoint);
+            this.customEndpoint = Codegen.ofNullable(customEndpoint);
             return this;
         }
         public Builder customEndpointCertificateArn(@Nullable Output<String> customEndpointCertificateArn) {
@@ -128,7 +129,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
-            this.customEndpointCertificateArn = Output.ofNullable(customEndpointCertificateArn);
+            this.customEndpointCertificateArn = Codegen.ofNullable(customEndpointCertificateArn);
             return this;
         }
         public Builder customEndpointEnabled(@Nullable Output<Boolean> customEndpointEnabled) {
@@ -136,7 +137,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
-            this.customEndpointEnabled = Output.ofNullable(customEndpointEnabled);
+            this.customEndpointEnabled = Codegen.ofNullable(customEndpointEnabled);
             return this;
         }
         public Builder enforceHttps(@Nullable Output<Boolean> enforceHttps) {
@@ -144,7 +145,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enforceHttps(@Nullable Boolean enforceHttps) {
-            this.enforceHttps = Output.ofNullable(enforceHttps);
+            this.enforceHttps = Codegen.ofNullable(enforceHttps);
             return this;
         }
         public Builder tlsSecurityPolicy(@Nullable Output<String> tlsSecurityPolicy) {
@@ -152,7 +153,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
-            this.tlsSecurityPolicy = Output.ofNullable(tlsSecurityPolicy);
+            this.tlsSecurityPolicy = Codegen.ofNullable(tlsSecurityPolicy);
             return this;
         }        public DomainDomainEndpointOptionsArgs build() {
             return new DomainDomainEndpointOptionsArgs(customEndpoint, customEndpointCertificateArn, customEndpointEnabled, enforceHttps, tlsSecurityPolicy);

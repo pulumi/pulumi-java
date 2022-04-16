@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryGroupIamMemberArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupIamMemberState;
@@ -60,7 +61,7 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=EntryGroupIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ EntryGroupIamMemberCondition> condition;
 
-    public Output</* @Nullable */ EntryGroupIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ EntryGroupIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -74,7 +75,7 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup;
     }
     /**
@@ -88,13 +89,13 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -110,13 +111,13 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -134,7 +135,7 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -160,7 +161,7 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntryGroupIamMember(String name, EntryGroupIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/entryGroupIamMember:EntryGroupIamMember", name, args == null ? EntryGroupIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/entryGroupIamMember:EntryGroupIamMember", name, args == null ? EntryGroupIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EntryGroupIamMember(String name, Output<String> id, @Nullable EntryGroupIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

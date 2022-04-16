@@ -6,6 +6,7 @@ package io.pulumi.googlenative.run_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.run_v1alpha1.JobArgs;
 import io.pulumi.googlenative.run_v1alpha1.outputs.JobSpecResponse;
@@ -32,7 +33,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
      * 
      */
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -46,7 +47,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds +optional
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -60,7 +61,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
      * 
      */
-    public Output<ObjectMetaResponse> getMetadata() {
+    public Output<ObjectMetaResponse> metadata() {
         return this.metadata;
     }
     /**
@@ -74,7 +75,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
      * 
      */
-    public Output<JobSpecResponse> getSpec() {
+    public Output<JobSpecResponse> spec() {
         return this.spec;
     }
     /**
@@ -88,7 +89,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
      * 
      */
-    public Output<JobStatusResponse> getStatus() {
+    public Output<JobStatusResponse> status() {
         return this.status;
     }
 
@@ -114,7 +115,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:run/v1alpha1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:run/v1alpha1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

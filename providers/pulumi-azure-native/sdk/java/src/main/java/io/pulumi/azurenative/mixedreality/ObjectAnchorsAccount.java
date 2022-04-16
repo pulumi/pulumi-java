@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return Correspond domain name of certain Spatial Anchors Account
      * 
      */
-    public Output<String> getAccountDomain() {
+    public Output<String> accountDomain() {
         return this.accountDomain;
     }
     /**
@@ -60,13 +61,13 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return unique id of certain account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     @Export(name="identity", type=ObjectAnchorsAccountResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ObjectAnchorsAccountResponseIdentity> identity;
 
-    public Output</* @Nullable */ ObjectAnchorsAccountResponseIdentity> getIdentity() {
+    public Output</* @Nullable */ ObjectAnchorsAccountResponseIdentity> identity() {
         return this.identity;
     }
     /**
@@ -80,7 +81,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The kind of account, if supported
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getKind() {
+    public Output</* @Nullable */ SkuResponse> kind() {
         return this.kind;
     }
     /**
@@ -94,7 +95,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -108,7 +109,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -122,7 +123,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The plan associated with this account
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getPlan() {
+    public Output</* @Nullable */ IdentityResponse> plan() {
         return this.plan;
     }
     /**
@@ -136,7 +137,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The sku associated with this account
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -150,7 +151,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The name of the storage account associated with this accountId
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountName() {
+    public Output</* @Nullable */ String> storageAccountName() {
         return this.storageAccountName;
     }
     /**
@@ -164,7 +165,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The system metadata related to an object anchors account.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -178,7 +179,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -192,7 +193,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -218,7 +219,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectAnchorsAccount(String name, ObjectAnchorsAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:mixedreality:ObjectAnchorsAccount", name, args == null ? ObjectAnchorsAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:mixedreality:ObjectAnchorsAccount", name, args == null ? ObjectAnchorsAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectAnchorsAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -21,10 +21,10 @@ public final class ModelQualityJobDefinitionModelQualityJobInput {
         this.groundTruthS3Input = groundTruthS3Input;
     }
 
-    public ModelQualityJobDefinitionEndpointInput getEndpointInput() {
+    public ModelQualityJobDefinitionEndpointInput endpointInput() {
         return this.endpointInput;
     }
-    public ModelQualityJobDefinitionMonitoringGroundTruthS3Input getGroundTruthS3Input() {
+    public ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input() {
         return this.groundTruthS3Input;
     }
 

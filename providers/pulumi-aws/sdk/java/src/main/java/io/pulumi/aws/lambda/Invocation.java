@@ -9,6 +9,7 @@ import io.pulumi.aws.lambda.inputs.InvocationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * @return Name of the lambda function.
      * 
      */
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
     /**
@@ -48,7 +49,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * @return JSON payload to the lambda function.
      * 
      */
-    public Output<String> getInput() {
+    public Output<String> input() {
         return this.input;
     }
     /**
@@ -62,7 +63,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * @return Qualifier (i.e., version) of the lambda function. Defaults to `$LATEST`.
      * 
      */
-    public Output</* @Nullable */ String> getQualifier() {
+    public Output</* @Nullable */ String> qualifier() {
         return this.qualifier;
     }
     /**
@@ -76,13 +77,13 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * @return String result of the lambda function invocation.
      * 
      */
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result;
     }
     @Export(name="triggers", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> triggers;
 
-    public Output</* @Nullable */ Map<String,String>> getTriggers() {
+    public Output</* @Nullable */ Map<String,String>> triggers() {
         return this.triggers;
     }
 
@@ -108,7 +109,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Invocation(String name, InvocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lambda/invocation:Invocation", name, args == null ? InvocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lambda/invocation:Invocation", name, args == null ? InvocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Invocation(String name, Output<String> id, @Nullable InvocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

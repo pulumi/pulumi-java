@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationGetArgs ex
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -25,7 +26,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationGetArgs ex
     }
 
     private ClusterResourceUsageExportConfigBigqueryDestinationGetArgs() {
-        this.datasetId = Output.empty();
+        this.datasetId = Codegen.empty();
     }
 
     public static Builder builder() {

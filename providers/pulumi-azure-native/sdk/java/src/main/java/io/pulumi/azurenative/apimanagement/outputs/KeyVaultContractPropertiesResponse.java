@@ -42,21 +42,21 @@ public final class KeyVaultContractPropertiesResponse {
      * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
      * 
     */
-    public Optional<String> getIdentityClientId() {
+    public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
      * Last time sync and refresh status of secret from key vault.
      * 
     */
-    public Optional<KeyVaultLastAccessStatusContractPropertiesResponse> getLastStatus() {
+    public Optional<KeyVaultLastAccessStatusContractPropertiesResponse> lastStatus() {
         return Optional.ofNullable(this.lastStatus);
     }
     /**
      * Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
      * 
     */
-    public Optional<String> getSecretIdentifier() {
+    public Optional<String> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
 

@@ -32,7 +32,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
      * Ignored for `public` visibility zones.
      * 
     */
-    public String getNamespaceUrl() {
+    public String namespaceUrl() {
         return this.namespaceUrl;
     }
 

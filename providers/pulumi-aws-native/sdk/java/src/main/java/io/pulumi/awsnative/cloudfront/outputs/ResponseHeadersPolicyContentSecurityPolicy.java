@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicyContentSecurityPolicy {
         this.override = override;
     }
 
-    public String getContentSecurityPolicy() {
+    public String contentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

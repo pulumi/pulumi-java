@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.inputs.SettingsParameterDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +38,7 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="parameters", required=true)
       private final Output<List<SettingsParameterDescriptionArgs>> parameters;
 
-    public Output<List<SettingsParameterDescriptionArgs>> getParameters() {
+    public Output<List<SettingsParameterDescriptionArgs>> parameters() {
         return this.parameters;
     }
 
@@ -49,8 +50,8 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
     }
 
     private SettingsSectionDescriptionArgs() {
-        this.name = Output.empty();
-        this.parameters = Output.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {

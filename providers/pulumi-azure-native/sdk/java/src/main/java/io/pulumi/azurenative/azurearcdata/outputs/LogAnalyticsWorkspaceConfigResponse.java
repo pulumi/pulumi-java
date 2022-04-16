@@ -26,7 +26,7 @@ public final class LogAnalyticsWorkspaceConfigResponse {
      * Azure Log Analytics workspace ID
      * 
     */
-    public Optional<String> getWorkspaceId() {
+    public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
 

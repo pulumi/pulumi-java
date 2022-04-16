@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.enums.DataCollectorType;
 import java.lang.String;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataCollectorId")
       private final @Nullable Output<String> dataCollectorId;
 
-    public Output<String> getDataCollectorId() {
-        return this.dataCollectorId == null ? Output.empty() : this.dataCollectorId;
+    public Output<String> dataCollectorId() {
+        return this.dataCollectorId == null ? Codegen.empty() : this.dataCollectorId;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,14 +41,14 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -58,8 +59,8 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<DataCollectorType> type;
 
-    public Output<DataCollectorType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<DataCollectorType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DataCollectorArgs(
@@ -76,11 +77,11 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataCollectorArgs() {
-        this.dataCollectorId = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.type = Output.empty();
+        this.dataCollectorId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataCollectorId(@Nullable String dataCollectorId) {
-            this.dataCollectorId = Output.ofNullable(dataCollectorId);
+            this.dataCollectorId = Codegen.ofNullable(dataCollectorId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -124,7 +125,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -132,7 +133,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -148,7 +149,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable DataCollectorType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DataCollectorArgs build() {
             return new DataCollectorArgs(dataCollectorId, description, name, organizationId, type);

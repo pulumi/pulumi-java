@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
     @Import(name="column", required=true)
       private final Output<String> column;
 
-    public Output<String> getColumn() {
+    public Output<String> column() {
         return this.column;
     }
 
@@ -37,8 +38,8 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
     @Import(name="subcolumns")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns;
 
-    public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> getSubcolumns() {
-        return this.subcolumns == null ? Output.empty() : this.subcolumns;
+    public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns() {
+        return this.subcolumns == null ? Codegen.empty() : this.subcolumns;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -88,11 +89,11 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
     }
 
     private GoogleCloudDatacatalogV1beta1ColumnSchemaArgs() {
-        this.column = Output.empty();
-        this.description = Output.empty();
-        this.mode = Output.empty();
-        this.subcolumns = Output.empty();
-        this.type = Output.empty();
+        this.column = Codegen.empty();
+        this.description = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.subcolumns = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -144,7 +145,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder subcolumns(@Nullable Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns) {
@@ -152,7 +153,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
             return this;
         }
         public Builder subcolumns(@Nullable List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs> subcolumns) {
-            this.subcolumns = Output.ofNullable(subcolumns);
+            this.subcolumns = Codegen.ofNullable(subcolumns);
             return this;
         }
         public Builder subcolumns(GoogleCloudDatacatalogV1beta1ColumnSchemaArgs... subcolumns) {

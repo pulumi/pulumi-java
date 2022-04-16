@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firestore_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.firestore_v1.enums.IndexQueryScope;
 import io.pulumi.googlenative.firestore_v1.inputs.GoogleFirestoreAdminV1IndexFieldArgs;
 import java.lang.String;
@@ -20,14 +21,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collectionGroupId", required=true)
       private final Output<String> collectionGroupId;
 
-    public Output<String> getCollectionGroupId() {
+    public Output<String> collectionGroupId() {
         return this.collectionGroupId;
     }
 
     @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -38,15 +39,15 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<GoogleFirestoreAdminV1IndexFieldArgs>> fields;
 
-    public Output<List<GoogleFirestoreAdminV1IndexFieldArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+    public Output<List<GoogleFirestoreAdminV1IndexFieldArgs>> fields() {
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryScope")
       private final @Nullable Output<IndexQueryScope> queryScope;
 
-    public Output<IndexQueryScope> getQueryScope() {
-        return this.queryScope == null ? Output.empty() : this.queryScope;
+    public Output<IndexQueryScope> queryScope() {
+        return this.queryScope == null ? Codegen.empty() : this.queryScope;
     }
 
     public IndexArgs(
@@ -74,11 +75,11 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.collectionGroupId = Output.empty();
-        this.databaseId = Output.empty();
-        this.fields = Output.empty();
-        this.project = Output.empty();
-        this.queryScope = Output.empty();
+        this.collectionGroupId = Codegen.empty();
+        this.databaseId = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.project = Codegen.empty();
+        this.queryScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<GoogleFirestoreAdminV1IndexFieldArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(GoogleFirestoreAdminV1IndexFieldArgs... fields) {
@@ -141,7 +142,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder queryScope(@Nullable Output<IndexQueryScope> queryScope) {
@@ -149,7 +150,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryScope(@Nullable IndexQueryScope queryScope) {
-            this.queryScope = Output.ofNullable(queryScope);
+            this.queryScope = Codegen.ofNullable(queryScope);
             return this;
         }        public IndexArgs build() {
             return new IndexArgs(collectionGroupId, databaseId, fields, project, queryScope);

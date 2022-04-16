@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.AlertRuleLeafConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,8 +34,8 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="anyOf")
       private final @Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf;
 
-    public Output<List<AlertRuleLeafConditionArgs>> getAnyOf() {
-        return this.anyOf == null ? Output.empty() : this.anyOf;
+    public Output<List<AlertRuleLeafConditionArgs>> anyOf() {
+        return this.anyOf == null ? Codegen.empty() : this.anyOf;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="containsAny")
       private final @Nullable Output<List<String>> containsAny;
 
-    public Output<List<String>> getContainsAny() {
-        return this.containsAny == null ? Output.empty() : this.containsAny;
+    public Output<List<String>> containsAny() {
+        return this.containsAny == null ? Codegen.empty() : this.containsAny;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="equals")
       private final @Nullable Output<String> equals;
 
-    public Output<String> getEquals() {
-        return this.equals == null ? Output.empty() : this.equals;
+    public Output<String> equals_() {
+        return this.equals == null ? Codegen.empty() : this.equals;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+    public Output<String> field() {
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     public AlertRuleAnyOfOrLeafConditionArgs(
@@ -83,10 +84,10 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     }
 
     private AlertRuleAnyOfOrLeafConditionArgs() {
-        this.anyOf = Output.empty();
-        this.containsAny = Output.empty();
-        this.equals = Output.empty();
-        this.field = Output.empty();
+        this.anyOf = Codegen.empty();
+        this.containsAny = Codegen.empty();
+        this.equals = Codegen.empty();
+        this.field = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
             return this;
         }
         public Builder anyOf(@Nullable List<AlertRuleLeafConditionArgs> anyOf) {
-            this.anyOf = Output.ofNullable(anyOf);
+            this.anyOf = Codegen.ofNullable(anyOf);
             return this;
         }
         public Builder anyOf(AlertRuleLeafConditionArgs... anyOf) {
@@ -131,18 +132,18 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
             return this;
         }
         public Builder containsAny(@Nullable List<String> containsAny) {
-            this.containsAny = Output.ofNullable(containsAny);
+            this.containsAny = Codegen.ofNullable(containsAny);
             return this;
         }
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
-        public Builder equals(@Nullable Output<String> equals) {
+        public Builder equals_(@Nullable Output<String> equals) {
             this.equals = equals;
             return this;
         }
-        public Builder equals(@Nullable String equals) {
-            this.equals = Output.ofNullable(equals);
+        public Builder equals_(@Nullable String equals) {
+            this.equals = Codegen.ofNullable(equals);
             return this;
         }
         public Builder field(@Nullable Output<String> field) {
@@ -150,7 +151,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }        public AlertRuleAnyOfOrLeafConditionArgs build() {
             return new AlertRuleAnyOfOrLeafConditionArgs(anyOf, containsAny, equals, field);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancer")
       private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
-    public Output<LoadBalancerStatusArgs> getLoadBalancer() {
-        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
+    public Output<LoadBalancerStatusArgs> loadBalancer() {
+        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 
     public IngressStatusArgs(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
@@ -34,7 +35,7 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressStatusArgs() {
-        this.loadBalancer = Output.empty();
+        this.loadBalancer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
-            this.loadBalancer = Output.ofNullable(loadBalancer);
+            this.loadBalancer = Codegen.ofNullable(loadBalancer);
             return this;
         }        public IngressStatusArgs build() {
             return new IngressStatusArgs(loadBalancer);

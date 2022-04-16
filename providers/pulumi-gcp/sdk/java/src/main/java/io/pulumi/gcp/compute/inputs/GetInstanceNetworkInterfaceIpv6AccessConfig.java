@@ -15,14 +15,14 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
     @Import(name="externalIpv6", required=true)
       private final String externalIpv6;
 
-    public String getExternalIpv6() {
+    public String externalIpv6() {
         return this.externalIpv6;
     }
 
     @Import(name="externalIpv6PrefixLength", required=true)
       private final String externalIpv6PrefixLength;
 
-    public String getExternalIpv6PrefixLength() {
+    public String externalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
     }
 
@@ -33,7 +33,7 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
     @Import(name="networkTier", required=true)
       private final String networkTier;
 
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
 
@@ -44,7 +44,7 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
     @Import(name="publicPtrDomainName", required=true)
       private final String publicPtrDomainName;
 
-    public String getPublicPtrDomainName() {
+    public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
 

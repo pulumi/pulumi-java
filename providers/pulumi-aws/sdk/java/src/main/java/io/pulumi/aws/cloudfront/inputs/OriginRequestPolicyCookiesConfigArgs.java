@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigCookiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
     @Import(name="cookieBehavior", required=true)
       private final Output<String> cookieBehavior;
 
-    public Output<String> getCookieBehavior() {
+    public Output<String> cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
       private final @Nullable Output<OriginRequestPolicyCookiesConfigCookiesArgs> cookies;
 
-    public Output<OriginRequestPolicyCookiesConfigCookiesArgs> getCookies() {
-        return this.cookies == null ? Output.empty() : this.cookies;
+    public Output<OriginRequestPolicyCookiesConfigCookiesArgs> cookies() {
+        return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 
     public OriginRequestPolicyCookiesConfigArgs(
@@ -37,8 +38,8 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
     }
 
     private OriginRequestPolicyCookiesConfigArgs() {
-        this.cookieBehavior = Output.empty();
-        this.cookies = Output.empty();
+        this.cookieBehavior = Codegen.empty();
+        this.cookies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder cookies(@Nullable OriginRequestPolicyCookiesConfigCookiesArgs cookies) {
-            this.cookies = Output.ofNullable(cookies);
+            this.cookies = Codegen.ofNullable(cookies);
             return this;
         }        public OriginRequestPolicyCookiesConfigArgs build() {
             return new OriginRequestPolicyCookiesConfigArgs(cookieBehavior, cookies);

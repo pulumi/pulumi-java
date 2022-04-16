@@ -11,6 +11,7 @@ import io.pulumi.azurenative.securityinsights.inputs.ThreatIntelligenceParsedPat
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -31,8 +32,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="confidence")
       private final @Nullable Output<Integer> confidence;
 
-    public Output<Integer> getConfidence() {
-        return this.confidence == null ? Output.empty() : this.confidence;
+    public Output<Integer> confidence() {
+        return this.confidence == null ? Codegen.empty() : this.confidence;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="created")
       private final @Nullable Output<String> created;
 
-    public Output<String> getCreated() {
-        return this.created == null ? Output.empty() : this.created;
+    public Output<String> created() {
+        return this.created == null ? Codegen.empty() : this.created;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="createdByRef")
       private final @Nullable Output<String> createdByRef;
 
-    public Output<String> getCreatedByRef() {
-        return this.createdByRef == null ? Output.empty() : this.createdByRef;
+    public Output<String> createdByRef() {
+        return this.createdByRef == null ? Codegen.empty() : this.createdByRef;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="defanged")
       private final @Nullable Output<Boolean> defanged;
 
-    public Output<Boolean> getDefanged() {
-        return this.defanged == null ? Output.empty() : this.defanged;
+    public Output<Boolean> defanged() {
+        return this.defanged == null ? Codegen.empty() : this.defanged;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="extensions")
       private final @Nullable Output<Object> extensions;
 
-    public Output<Object> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+    public Output<Object> extensions() {
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
-        return this.externalId == null ? Output.empty() : this.externalId;
+    public Output<String> externalId() {
+        return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="externalLastUpdatedTimeUtc")
       private final @Nullable Output<String> externalLastUpdatedTimeUtc;
 
-    public Output<String> getExternalLastUpdatedTimeUtc() {
-        return this.externalLastUpdatedTimeUtc == null ? Output.empty() : this.externalLastUpdatedTimeUtc;
+    public Output<String> externalLastUpdatedTimeUtc() {
+        return this.externalLastUpdatedTimeUtc == null ? Codegen.empty() : this.externalLastUpdatedTimeUtc;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="externalReferences")
       private final @Nullable Output<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences;
 
-    public Output<List<ThreatIntelligenceExternalReferenceArgs>> getExternalReferences() {
-        return this.externalReferences == null ? Output.empty() : this.externalReferences;
+    public Output<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences() {
+        return this.externalReferences == null ? Codegen.empty() : this.externalReferences;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="granularMarkings")
       private final @Nullable Output<List<ThreatIntelligenceGranularMarkingModelArgs>> granularMarkings;
 
-    public Output<List<ThreatIntelligenceGranularMarkingModelArgs>> getGranularMarkings() {
-        return this.granularMarkings == null ? Output.empty() : this.granularMarkings;
+    public Output<List<ThreatIntelligenceGranularMarkingModelArgs>> granularMarkings() {
+        return this.granularMarkings == null ? Codegen.empty() : this.granularMarkings;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="indicatorTypes")
       private final @Nullable Output<List<String>> indicatorTypes;
 
-    public Output<List<String>> getIndicatorTypes() {
-        return this.indicatorTypes == null ? Output.empty() : this.indicatorTypes;
+    public Output<List<String>> indicatorTypes() {
+        return this.indicatorTypes == null ? Codegen.empty() : this.indicatorTypes;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="killChainPhases")
       private final @Nullable Output<List<ThreatIntelligenceKillChainPhaseArgs>> killChainPhases;
 
-    public Output<List<ThreatIntelligenceKillChainPhaseArgs>> getKillChainPhases() {
-        return this.killChainPhases == null ? Output.empty() : this.killChainPhases;
+    public Output<List<ThreatIntelligenceKillChainPhaseArgs>> killChainPhases() {
+        return this.killChainPhases == null ? Codegen.empty() : this.killChainPhases;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="kind", required=true)
       private final Output<Either<String,ThreatIntelligenceResourceKind>> kind;
 
-    public Output<Either<String,ThreatIntelligenceResourceKind>> getKind() {
+    public Output<Either<String,ThreatIntelligenceResourceKind>> kind() {
         return this.kind;
     }
 
@@ -185,8 +186,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="language")
       private final @Nullable Output<String> language;
 
-    public Output<String> getLanguage() {
-        return this.language == null ? Output.empty() : this.language;
+    public Output<String> language() {
+        return this.language == null ? Codegen.empty() : this.language;
     }
 
     /**
@@ -207,8 +208,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="lastUpdatedTimeUtc")
       private final @Nullable Output<String> lastUpdatedTimeUtc;
 
-    public Output<String> getLastUpdatedTimeUtc() {
-        return this.lastUpdatedTimeUtc == null ? Output.empty() : this.lastUpdatedTimeUtc;
+    public Output<String> lastUpdatedTimeUtc() {
+        return this.lastUpdatedTimeUtc == null ? Codegen.empty() : this.lastUpdatedTimeUtc;
     }
 
     /**
@@ -218,8 +219,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="modified")
       private final @Nullable Output<String> modified;
 
-    public Output<String> getModified() {
-        return this.modified == null ? Output.empty() : this.modified;
+    public Output<String> modified() {
+        return this.modified == null ? Codegen.empty() : this.modified;
     }
 
     /**
@@ -229,8 +230,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -240,8 +241,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="objectMarkingRefs")
       private final @Nullable Output<List<String>> objectMarkingRefs;
 
-    public Output<List<String>> getObjectMarkingRefs() {
-        return this.objectMarkingRefs == null ? Output.empty() : this.objectMarkingRefs;
+    public Output<List<String>> objectMarkingRefs() {
+        return this.objectMarkingRefs == null ? Codegen.empty() : this.objectMarkingRefs;
     }
 
     /**
@@ -251,7 +252,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -262,8 +263,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="parsedPattern")
       private final @Nullable Output<List<ThreatIntelligenceParsedPatternArgs>> parsedPattern;
 
-    public Output<List<ThreatIntelligenceParsedPatternArgs>> getParsedPattern() {
-        return this.parsedPattern == null ? Output.empty() : this.parsedPattern;
+    public Output<List<ThreatIntelligenceParsedPatternArgs>> parsedPattern() {
+        return this.parsedPattern == null ? Codegen.empty() : this.parsedPattern;
     }
 
     /**
@@ -273,8 +274,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+    public Output<String> pattern() {
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     /**
@@ -284,8 +285,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="patternType")
       private final @Nullable Output<String> patternType;
 
-    public Output<String> getPatternType() {
-        return this.patternType == null ? Output.empty() : this.patternType;
+    public Output<String> patternType() {
+        return this.patternType == null ? Codegen.empty() : this.patternType;
     }
 
     /**
@@ -295,8 +296,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="patternVersion")
       private final @Nullable Output<String> patternVersion;
 
-    public Output<String> getPatternVersion() {
-        return this.patternVersion == null ? Output.empty() : this.patternVersion;
+    public Output<String> patternVersion() {
+        return this.patternVersion == null ? Codegen.empty() : this.patternVersion;
     }
 
     /**
@@ -306,7 +307,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -317,8 +318,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="revoked")
       private final @Nullable Output<Boolean> revoked;
 
-    public Output<Boolean> getRevoked() {
-        return this.revoked == null ? Output.empty() : this.revoked;
+    public Output<Boolean> revoked() {
+        return this.revoked == null ? Codegen.empty() : this.revoked;
     }
 
     /**
@@ -328,8 +329,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<String> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -339,8 +340,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="threatIntelligenceTags")
       private final @Nullable Output<List<String>> threatIntelligenceTags;
 
-    public Output<List<String>> getThreatIntelligenceTags() {
-        return this.threatIntelligenceTags == null ? Output.empty() : this.threatIntelligenceTags;
+    public Output<List<String>> threatIntelligenceTags() {
+        return this.threatIntelligenceTags == null ? Codegen.empty() : this.threatIntelligenceTags;
     }
 
     /**
@@ -350,8 +351,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="threatTypes")
       private final @Nullable Output<List<String>> threatTypes;
 
-    public Output<List<String>> getThreatTypes() {
-        return this.threatTypes == null ? Output.empty() : this.threatTypes;
+    public Output<List<String>> threatTypes() {
+        return this.threatTypes == null ? Codegen.empty() : this.threatTypes;
     }
 
     /**
@@ -361,8 +362,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
-    public Output<String> getValidFrom() {
-        return this.validFrom == null ? Output.empty() : this.validFrom;
+    public Output<String> validFrom() {
+        return this.validFrom == null ? Codegen.empty() : this.validFrom;
     }
 
     /**
@@ -372,8 +373,8 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
-    public Output<String> getValidUntil() {
-        return this.validUntil == null ? Output.empty() : this.validUntil;
+    public Output<String> validUntil() {
+        return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 
     /**
@@ -383,7 +384,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -457,39 +458,39 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     }
 
     private ThreatIntelligenceIndicatorArgs() {
-        this.confidence = Output.empty();
-        this.created = Output.empty();
-        this.createdByRef = Output.empty();
-        this.defanged = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.extensions = Output.empty();
-        this.externalId = Output.empty();
-        this.externalLastUpdatedTimeUtc = Output.empty();
-        this.externalReferences = Output.empty();
-        this.granularMarkings = Output.empty();
-        this.indicatorTypes = Output.empty();
-        this.killChainPhases = Output.empty();
-        this.kind = Output.empty();
-        this.labels = Output.empty();
-        this.language = Output.empty();
-        this.lastUpdatedTimeUtc = Output.empty();
-        this.modified = Output.empty();
-        this.name = Output.empty();
-        this.objectMarkingRefs = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.parsedPattern = Output.empty();
-        this.pattern = Output.empty();
-        this.patternType = Output.empty();
-        this.patternVersion = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.revoked = Output.empty();
-        this.source = Output.empty();
-        this.threatIntelligenceTags = Output.empty();
-        this.threatTypes = Output.empty();
-        this.validFrom = Output.empty();
-        this.validUntil = Output.empty();
-        this.workspaceName = Output.empty();
+        this.confidence = Codegen.empty();
+        this.created = Codegen.empty();
+        this.createdByRef = Codegen.empty();
+        this.defanged = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.extensions = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.externalLastUpdatedTimeUtc = Codegen.empty();
+        this.externalReferences = Codegen.empty();
+        this.granularMarkings = Codegen.empty();
+        this.indicatorTypes = Codegen.empty();
+        this.killChainPhases = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.language = Codegen.empty();
+        this.lastUpdatedTimeUtc = Codegen.empty();
+        this.modified = Codegen.empty();
+        this.name = Codegen.empty();
+        this.objectMarkingRefs = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.parsedPattern = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.patternType = Codegen.empty();
+        this.patternVersion = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.revoked = Codegen.empty();
+        this.source = Codegen.empty();
+        this.threatIntelligenceTags = Codegen.empty();
+        this.threatTypes = Codegen.empty();
+        this.validFrom = Codegen.empty();
+        this.validUntil = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -581,7 +582,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder confidence(@Nullable Integer confidence) {
-            this.confidence = Output.ofNullable(confidence);
+            this.confidence = Codegen.ofNullable(confidence);
             return this;
         }
         public Builder created(@Nullable Output<String> created) {
@@ -589,7 +590,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder created(@Nullable String created) {
-            this.created = Output.ofNullable(created);
+            this.created = Codegen.ofNullable(created);
             return this;
         }
         public Builder createdByRef(@Nullable Output<String> createdByRef) {
@@ -597,7 +598,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder createdByRef(@Nullable String createdByRef) {
-            this.createdByRef = Output.ofNullable(createdByRef);
+            this.createdByRef = Codegen.ofNullable(createdByRef);
             return this;
         }
         public Builder defanged(@Nullable Output<Boolean> defanged) {
@@ -605,7 +606,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder defanged(@Nullable Boolean defanged) {
-            this.defanged = Output.ofNullable(defanged);
+            this.defanged = Codegen.ofNullable(defanged);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -613,7 +614,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -621,7 +622,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder extensions(@Nullable Output<Object> extensions) {
@@ -629,7 +630,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder extensions(@Nullable Object extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder externalId(@Nullable Output<String> externalId) {
@@ -637,7 +638,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Output.ofNullable(externalId);
+            this.externalId = Codegen.ofNullable(externalId);
             return this;
         }
         public Builder externalLastUpdatedTimeUtc(@Nullable Output<String> externalLastUpdatedTimeUtc) {
@@ -645,7 +646,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder externalLastUpdatedTimeUtc(@Nullable String externalLastUpdatedTimeUtc) {
-            this.externalLastUpdatedTimeUtc = Output.ofNullable(externalLastUpdatedTimeUtc);
+            this.externalLastUpdatedTimeUtc = Codegen.ofNullable(externalLastUpdatedTimeUtc);
             return this;
         }
         public Builder externalReferences(@Nullable Output<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences) {
@@ -653,7 +654,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder externalReferences(@Nullable List<ThreatIntelligenceExternalReferenceArgs> externalReferences) {
-            this.externalReferences = Output.ofNullable(externalReferences);
+            this.externalReferences = Codegen.ofNullable(externalReferences);
             return this;
         }
         public Builder externalReferences(ThreatIntelligenceExternalReferenceArgs... externalReferences) {
@@ -664,7 +665,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder granularMarkings(@Nullable List<ThreatIntelligenceGranularMarkingModelArgs> granularMarkings) {
-            this.granularMarkings = Output.ofNullable(granularMarkings);
+            this.granularMarkings = Codegen.ofNullable(granularMarkings);
             return this;
         }
         public Builder granularMarkings(ThreatIntelligenceGranularMarkingModelArgs... granularMarkings) {
@@ -675,7 +676,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder indicatorTypes(@Nullable List<String> indicatorTypes) {
-            this.indicatorTypes = Output.ofNullable(indicatorTypes);
+            this.indicatorTypes = Codegen.ofNullable(indicatorTypes);
             return this;
         }
         public Builder indicatorTypes(String... indicatorTypes) {
@@ -686,7 +687,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder killChainPhases(@Nullable List<ThreatIntelligenceKillChainPhaseArgs> killChainPhases) {
-            this.killChainPhases = Output.ofNullable(killChainPhases);
+            this.killChainPhases = Codegen.ofNullable(killChainPhases);
             return this;
         }
         public Builder killChainPhases(ThreatIntelligenceKillChainPhaseArgs... killChainPhases) {
@@ -705,7 +706,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(String... labels) {
@@ -716,7 +717,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder language(@Nullable String language) {
-            this.language = Output.ofNullable(language);
+            this.language = Codegen.ofNullable(language);
             return this;
         }
         public Builder lastUpdatedTimeUtc(@Nullable Output<String> lastUpdatedTimeUtc) {
@@ -724,7 +725,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder lastUpdatedTimeUtc(@Nullable String lastUpdatedTimeUtc) {
-            this.lastUpdatedTimeUtc = Output.ofNullable(lastUpdatedTimeUtc);
+            this.lastUpdatedTimeUtc = Codegen.ofNullable(lastUpdatedTimeUtc);
             return this;
         }
         public Builder modified(@Nullable Output<String> modified) {
@@ -732,7 +733,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder modified(@Nullable String modified) {
-            this.modified = Output.ofNullable(modified);
+            this.modified = Codegen.ofNullable(modified);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -740,7 +741,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder objectMarkingRefs(@Nullable Output<List<String>> objectMarkingRefs) {
@@ -748,7 +749,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder objectMarkingRefs(@Nullable List<String> objectMarkingRefs) {
-            this.objectMarkingRefs = Output.ofNullable(objectMarkingRefs);
+            this.objectMarkingRefs = Codegen.ofNullable(objectMarkingRefs);
             return this;
         }
         public Builder objectMarkingRefs(String... objectMarkingRefs) {
@@ -767,7 +768,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder parsedPattern(@Nullable List<ThreatIntelligenceParsedPatternArgs> parsedPattern) {
-            this.parsedPattern = Output.ofNullable(parsedPattern);
+            this.parsedPattern = Codegen.ofNullable(parsedPattern);
             return this;
         }
         public Builder parsedPattern(ThreatIntelligenceParsedPatternArgs... parsedPattern) {
@@ -778,7 +779,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }
         public Builder patternType(@Nullable Output<String> patternType) {
@@ -786,7 +787,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder patternType(@Nullable String patternType) {
-            this.patternType = Output.ofNullable(patternType);
+            this.patternType = Codegen.ofNullable(patternType);
             return this;
         }
         public Builder patternVersion(@Nullable Output<String> patternVersion) {
@@ -794,7 +795,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder patternVersion(@Nullable String patternVersion) {
-            this.patternVersion = Output.ofNullable(patternVersion);
+            this.patternVersion = Codegen.ofNullable(patternVersion);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -810,7 +811,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder revoked(@Nullable Boolean revoked) {
-            this.revoked = Output.ofNullable(revoked);
+            this.revoked = Codegen.ofNullable(revoked);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -818,7 +819,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder threatIntelligenceTags(@Nullable Output<List<String>> threatIntelligenceTags) {
@@ -826,7 +827,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder threatIntelligenceTags(@Nullable List<String> threatIntelligenceTags) {
-            this.threatIntelligenceTags = Output.ofNullable(threatIntelligenceTags);
+            this.threatIntelligenceTags = Codegen.ofNullable(threatIntelligenceTags);
             return this;
         }
         public Builder threatIntelligenceTags(String... threatIntelligenceTags) {
@@ -837,7 +838,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder threatTypes(@Nullable List<String> threatTypes) {
-            this.threatTypes = Output.ofNullable(threatTypes);
+            this.threatTypes = Codegen.ofNullable(threatTypes);
             return this;
         }
         public Builder threatTypes(String... threatTypes) {
@@ -848,7 +849,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder validFrom(@Nullable String validFrom) {
-            this.validFrom = Output.ofNullable(validFrom);
+            this.validFrom = Codegen.ofNullable(validFrom);
             return this;
         }
         public Builder validUntil(@Nullable Output<String> validUntil) {
@@ -856,7 +857,7 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = Output.ofNullable(validUntil);
+            this.validUntil = Codegen.ofNullable(validUntil);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

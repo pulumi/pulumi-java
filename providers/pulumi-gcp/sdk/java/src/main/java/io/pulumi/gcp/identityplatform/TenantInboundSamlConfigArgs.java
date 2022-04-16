@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigArgs;
 import java.lang.Boolean;
@@ -24,7 +25,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -35,8 +36,8 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="idpConfig", required=true)
       private final Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
-    public Output<TenantInboundSamlConfigIdpConfigArgs> getIdpConfig() {
+    public Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig() {
         return this.idpConfig;
     }
 
@@ -60,8 +61,8 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="spConfig", required=true)
       private final Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
-    public Output<TenantInboundSamlConfigSpConfigArgs> getSpConfig() {
+    public Output<TenantInboundSamlConfigSpConfigArgs> spConfig() {
         return this.spConfig;
     }
 
@@ -96,7 +97,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="tenant", required=true)
       private final Output<String> tenant;
 
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant;
     }
 
@@ -118,13 +119,13 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     }
 
     private TenantInboundSamlConfigArgs() {
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.idpConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.spConfig = Output.empty();
-        this.tenant = Output.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.idpConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.spConfig = Codegen.empty();
+        this.tenant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder idpConfig(Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig) {
@@ -188,7 +189,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -196,7 +197,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder spConfig(Output<TenantInboundSamlConfigSpConfigArgs> spConfig) {

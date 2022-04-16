@@ -7,6 +7,7 @@ import io.pulumi.aws.glue.inputs.MLTransformInputRecordTableArgs;
 import io.pulumi.aws.glue.inputs.MLTransformParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="glueVersion")
       private final @Nullable Output<String> glueVersion;
 
-    public Output<String> getGlueVersion() {
-        return this.glueVersion == null ? Output.empty() : this.glueVersion;
+    public Output<String> glueVersion() {
+        return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputRecordTables", required=true)
       private final Output<List<MLTransformInputRecordTableArgs>> inputRecordTables;
 
-    public Output<List<MLTransformInputRecordTableArgs>> getInputRecordTables() {
+    public Output<List<MLTransformInputRecordTableArgs>> inputRecordTables() {
         return this.inputRecordTables;
     }
 
@@ -60,8 +61,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxCapacity")
       private final @Nullable Output<Double> maxCapacity;
 
-    public Output<Double> getMaxCapacity() {
-        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
+    public Output<Double> maxCapacity() {
+        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Output.empty() : this.maxRetries;
+    public Output<Integer> maxRetries() {
+        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> getNumberOfWorkers() {
-        return this.numberOfWorkers == null ? Output.empty() : this.numberOfWorkers;
+    public Output<Integer> numberOfWorkers() {
+        return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters", required=true)
       private final Output<MLTransformParametersArgs> parameters;
 
-    public Output<MLTransformParametersArgs> getParameters() {
+    public Output<MLTransformParametersArgs> parameters() {
         return this.parameters;
     }
 
@@ -115,7 +116,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -126,8 +127,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<Integer> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
-    public Output<String> getWorkerType() {
-        return this.workerType == null ? Output.empty() : this.workerType;
+    public Output<String> workerType() {
+        return this.workerType == null ? Codegen.empty() : this.workerType;
     }
 
     public MLTransformArgs(
@@ -180,18 +181,18 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MLTransformArgs() {
-        this.description = Output.empty();
-        this.glueVersion = Output.empty();
-        this.inputRecordTables = Output.empty();
-        this.maxCapacity = Output.empty();
-        this.maxRetries = Output.empty();
-        this.name = Output.empty();
-        this.numberOfWorkers = Output.empty();
-        this.parameters = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
-        this.timeout = Output.empty();
-        this.workerType = Output.empty();
+        this.description = Codegen.empty();
+        this.glueVersion = Codegen.empty();
+        this.inputRecordTables = Codegen.empty();
+        this.maxCapacity = Codegen.empty();
+        this.maxRetries = Codegen.empty();
+        this.name = Codegen.empty();
+        this.numberOfWorkers = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.workerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
@@ -249,7 +250,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Output.ofNullable(glueVersion);
+            this.glueVersion = Codegen.ofNullable(glueVersion);
             return this;
         }
         public Builder inputRecordTables(Output<List<MLTransformInputRecordTableArgs>> inputRecordTables) {
@@ -268,7 +269,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxCapacity(@Nullable Double maxCapacity) {
-            this.maxCapacity = Output.ofNullable(maxCapacity);
+            this.maxCapacity = Codegen.ofNullable(maxCapacity);
             return this;
         }
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
@@ -276,7 +277,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Output.ofNullable(maxRetries);
+            this.maxRetries = Codegen.ofNullable(maxRetries);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -284,7 +285,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
@@ -292,7 +293,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
+            this.numberOfWorkers = Codegen.ofNullable(numberOfWorkers);
             return this;
         }
         public Builder parameters(Output<MLTransformParametersArgs> parameters) {
@@ -316,7 +317,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -324,7 +325,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder workerType(@Nullable Output<String> workerType) {
@@ -332,7 +333,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerType(@Nullable String workerType) {
-            this.workerType = Output.ofNullable(workerType);
+            this.workerType = Codegen.ofNullable(workerType);
             return this;
         }        public MLTransformArgs build() {
             return new MLTransformArgs(description, glueVersion, inputRecordTables, maxCapacity, maxRetries, name, numberOfWorkers, parameters, roleArn, tags, timeout, workerType);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -35,7 +36,7 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 
@@ -47,8 +48,8 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private AlertSNSConfigurationArgs() {
-        this.roleArn = Output.empty();
-        this.snsTopicArn = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.snsTopicArn = Codegen.empty();
     }
 
     public static Builder builder() {

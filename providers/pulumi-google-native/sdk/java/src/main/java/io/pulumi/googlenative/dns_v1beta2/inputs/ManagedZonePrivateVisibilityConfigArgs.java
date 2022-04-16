@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZonePrivateVisibilityConfigGKEClusterArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZonePrivateVisibilityConfigNetworkArgs;
 import java.lang.String;
@@ -24,15 +25,15 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     @Import(name="gkeClusters")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
 
-    public Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> getGkeClusters() {
-        return this.gkeClusters == null ? Output.empty() : this.gkeClusters;
+    public Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters() {
+        return this.gkeClusters == null ? Codegen.empty() : this.gkeClusters;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     @Import(name="networks")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
-    public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> getNetworks() {
-        return this.networks == null ? Output.empty() : this.networks;
+    public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks() {
+        return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     public ManagedZonePrivateVisibilityConfigArgs(
@@ -56,9 +57,9 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     }
 
     private ManagedZonePrivateVisibilityConfigArgs() {
-        this.gkeClusters = Output.empty();
-        this.kind = Output.empty();
-        this.networks = Output.empty();
+        this.gkeClusters = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.networks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder gkeClusters(@Nullable List<ManagedZonePrivateVisibilityConfigGKEClusterArgs> gkeClusters) {
-            this.gkeClusters = Output.ofNullable(gkeClusters);
+            this.gkeClusters = Codegen.ofNullable(gkeClusters);
             return this;
         }
         public Builder gkeClusters(ManagedZonePrivateVisibilityConfigGKEClusterArgs... gkeClusters) {
@@ -101,7 +102,7 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder networks(@Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
@@ -109,7 +110,7 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder networks(@Nullable List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
-            this.networks = Output.ofNullable(networks);
+            this.networks = Codegen.ofNullable(networks);
             return this;
         }
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkArgs... networks) {

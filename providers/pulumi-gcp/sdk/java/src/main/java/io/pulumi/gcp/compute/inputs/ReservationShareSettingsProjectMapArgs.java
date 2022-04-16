@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -32,8 +33,8 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+    public Output<String> projectId() {
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     public ReservationShareSettingsProjectMapArgs(
@@ -44,8 +45,8 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
     }
 
     private ReservationShareSettingsProjectMapArgs() {
-        this.id = Output.empty();
-        this.projectId = Output.empty();
+        this.id = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }        public ReservationShareSettingsProjectMapArgs build() {
             return new ReservationShareSettingsProjectMapArgs(id, projectId);

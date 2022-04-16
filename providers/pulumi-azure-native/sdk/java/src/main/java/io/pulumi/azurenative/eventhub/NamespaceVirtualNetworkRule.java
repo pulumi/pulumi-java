@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -55,7 +56,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -69,7 +70,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * @return ARM ID of Virtual Network Subnet
      * 
      */
-    public Output</* @Nullable */ String> getVirtualNetworkSubnetId() {
+    public Output</* @Nullable */ String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 
@@ -95,7 +96,7 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceVirtualNetworkRule(String name, NamespaceVirtualNetworkRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventhub:NamespaceVirtualNetworkRule", name, args == null ? NamespaceVirtualNetworkRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventhub:NamespaceVirtualNetworkRule", name, args == null ? NamespaceVirtualNetworkRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NamespaceVirtualNetworkRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

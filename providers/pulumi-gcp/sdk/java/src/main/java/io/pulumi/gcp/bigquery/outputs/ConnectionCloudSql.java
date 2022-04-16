@@ -50,21 +50,21 @@ public final class ConnectionCloudSql {
      * Structure is documented below.
      * 
     */
-    public ConnectionCloudSqlCredential getCredential() {
+    public ConnectionCloudSqlCredential credential() {
         return this.credential;
     }
     /**
      * Database name.
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * Cloud SQL instance ID in the form project:location:instance.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
@@ -72,7 +72,7 @@ public final class ConnectionCloudSql {
      * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -34,14 +34,14 @@ public final class RedirectIncompatibleRowSettingsResponse {
      * Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getLinkedServiceName() {
+    public Object linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPath() {
+    public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }
 

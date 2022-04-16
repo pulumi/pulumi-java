@@ -24,7 +24,7 @@ public final class ClusterLoggingInfo {
      * Configuration block for Broker Logs settings for logging info. See below.
      * 
     */
-    public ClusterLoggingInfoBrokerLogs getBrokerLogs() {
+    public ClusterLoggingInfoBrokerLogs brokerLogs() {
         return this.brokerLogs;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * @return The type of administrator.
      * 
      */
-    public Output<String> getAdministratorType() {
+    public Output<String> administratorType() {
         return this.administratorType;
     }
     /**
@@ -55,7 +56,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * @return The server administrator login account name.
      * 
      */
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
     /**
@@ -69,7 +70,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * @return The server administrator Sid (Secure ID).
      * 
      */
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
     /**
@@ -97,7 +98,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * @return The server Active Directory Administrator tenant id.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -111,7 +112,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -137,7 +138,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerAdministrator(String name, ServerAdministratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dbformysql:ServerAdministrator", name, args == null ? ServerAdministratorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dbformysql:ServerAdministrator", name, args == null ? ServerAdministratorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerAdministrator(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

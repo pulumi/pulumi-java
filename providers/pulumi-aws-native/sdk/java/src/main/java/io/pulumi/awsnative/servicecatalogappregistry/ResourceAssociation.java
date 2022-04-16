@@ -9,6 +9,7 @@ import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationRe
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,13 +30,13 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * @return The name or the Id of the Application.
      * 
      */
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
-    public Output<String> getApplicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn;
     }
     /**
@@ -49,13 +50,13 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * @return The name or the Id of the Resource.
      * 
      */
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
     @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -69,7 +70,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * @return The type of the CFN Resource for now it's enum CFN_STACK.
      * 
      */
-    public Output<ResourceAssociationResourceType> getPropResourceType() {
+    public Output<ResourceAssociationResourceType> resourceType() {
         return this.resourceType;
     }
 
@@ -95,7 +96,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceAssociation(String name, ResourceAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalogappregistry:ResourceAssociation", name, args == null ? ResourceAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:servicecatalogappregistry:ResourceAssociation", name, args == null ? ResourceAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

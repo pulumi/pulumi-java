@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
-    public Output<String> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+    public Output<String> fileName() {
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     public SourceContextArgs(@Nullable Output<String> fileName) {
@@ -34,7 +35,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceContextArgs() {
-        this.fileName = Output.empty();
+        this.fileName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }        public SourceContextArgs build() {
             return new SourceContextArgs(fileName);

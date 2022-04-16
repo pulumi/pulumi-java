@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.StatefulSetUpdateStrategyArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
@@ -31,8 +32,8 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="podManagementPolicy")
       private final @Nullable Output<String> podManagementPolicy;
 
-    public Output<String> getPodManagementPolicy() {
-        return this.podManagementPolicy == null ? Output.empty() : this.podManagementPolicy;
+    public Output<String> podManagementPolicy() {
+        return this.podManagementPolicy == null ? Codegen.empty() : this.podManagementPolicy;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
-        return this.replicas == null ? Output.empty() : this.replicas;
+    public Output<Integer> replicas() {
+        return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> getRevisionHistoryLimit() {
-        return this.revisionHistoryLimit == null ? Output.empty() : this.revisionHistoryLimit;
+    public Output<Integer> revisionHistoryLimit() {
+        return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+    public Output<LabelSelectorArgs> selector() {
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -86,7 +87,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
@@ -97,8 +98,8 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="updateStrategy")
       private final @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy;
 
-    public Output<StatefulSetUpdateStrategyArgs> getUpdateStrategy() {
-        return this.updateStrategy == null ? Output.empty() : this.updateStrategy;
+    public Output<StatefulSetUpdateStrategyArgs> updateStrategy() {
+        return this.updateStrategy == null ? Codegen.empty() : this.updateStrategy;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="volumeClaimTemplates")
       private final @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
 
-    public Output<List<PersistentVolumeClaimArgs>> getVolumeClaimTemplates() {
-        return this.volumeClaimTemplates == null ? Output.empty() : this.volumeClaimTemplates;
+    public Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates() {
+        return this.volumeClaimTemplates == null ? Codegen.empty() : this.volumeClaimTemplates;
     }
 
     public StatefulSetSpecArgs(
@@ -132,14 +133,14 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private StatefulSetSpecArgs() {
-        this.podManagementPolicy = Output.empty();
-        this.replicas = Output.empty();
-        this.revisionHistoryLimit = Output.empty();
-        this.selector = Output.empty();
-        this.serviceName = Output.empty();
-        this.template = Output.empty();
-        this.updateStrategy = Output.empty();
-        this.volumeClaimTemplates = Output.empty();
+        this.podManagementPolicy = Codegen.empty();
+        this.replicas = Codegen.empty();
+        this.revisionHistoryLimit = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.template = Codegen.empty();
+        this.updateStrategy = Codegen.empty();
+        this.volumeClaimTemplates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder podManagementPolicy(@Nullable String podManagementPolicy) {
-            this.podManagementPolicy = Output.ofNullable(podManagementPolicy);
+            this.podManagementPolicy = Codegen.ofNullable(podManagementPolicy);
             return this;
         }
         public Builder replicas(@Nullable Output<Integer> replicas) {
@@ -189,7 +190,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Output.ofNullable(replicas);
+            this.replicas = Codegen.ofNullable(replicas);
             return this;
         }
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
@@ -197,7 +198,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
-            this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
+            this.revisionHistoryLimit = Codegen.ofNullable(revisionHistoryLimit);
             return this;
         }
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
@@ -205,7 +206,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -229,7 +230,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder updateStrategy(@Nullable StatefulSetUpdateStrategyArgs updateStrategy) {
-            this.updateStrategy = Output.ofNullable(updateStrategy);
+            this.updateStrategy = Codegen.ofNullable(updateStrategy);
             return this;
         }
         public Builder volumeClaimTemplates(@Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
@@ -237,7 +238,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaimArgs> volumeClaimTemplates) {
-            this.volumeClaimTemplates = Output.ofNullable(volumeClaimTemplates);
+            this.volumeClaimTemplates = Codegen.ofNullable(volumeClaimTemplates);
             return this;
         }
         public Builder volumeClaimTemplates(PersistentVolumeClaimArgs... volumeClaimTemplates) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ImageGuestOsFeatureGetArgs;
 import io.pulumi.gcp.compute.inputs.ImageRawDiskGetArgs;
 import java.lang.Integer;
@@ -26,8 +27,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveSizeBytes")
       private final @Nullable Output<Integer> archiveSizeBytes;
 
-    public Output<Integer> getArchiveSizeBytes() {
-        return this.archiveSizeBytes == null ? Output.empty() : this.archiveSizeBytes;
+    public Output<Integer> archiveSizeBytes() {
+        return this.archiveSizeBytes == null ? Codegen.empty() : this.archiveSizeBytes;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<Integer> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
-        return this.family == null ? Output.empty() : this.family;
+    public Output<String> family() {
+        return this.family == null ? Codegen.empty() : this.family;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures;
 
-    public Output<List<ImageGuestOsFeatureGetArgs>> getGuestOsFeatures() {
-        return this.guestOsFeatures == null ? Output.empty() : this.guestOsFeatures;
+    public Output<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures() {
+        return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
-    public Output<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
+    public Output<String> labelFingerprint() {
+        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
-        return this.licenses == null ? Output.empty() : this.licenses;
+    public Output<List<String>> licenses() {
+        return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawDisk")
       private final @Nullable Output<ImageRawDiskGetArgs> rawDisk;
 
-    public Output<ImageRawDiskGetArgs> getRawDisk() {
-        return this.rawDisk == null ? Output.empty() : this.rawDisk;
+    public Output<ImageRawDiskGetArgs> rawDisk() {
+        return this.rawDisk == null ? Codegen.empty() : this.rawDisk;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
-        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
+    public Output<String> sourceDisk() {
+        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
 
-    public Output<String> getSourceImage() {
-        return this.sourceImage == null ? Output.empty() : this.sourceImage;
+    public Output<String> sourceImage() {
+        return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
     }
 
     /**
@@ -219,8 +220,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> getSourceSnapshot() {
-        return this.sourceSnapshot == null ? Output.empty() : this.sourceSnapshot;
+    public Output<String> sourceSnapshot() {
+        return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
     }
 
     public ImageState(
@@ -259,22 +260,22 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageState() {
-        this.archiveSizeBytes = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.family = Output.empty();
-        this.guestOsFeatures = Output.empty();
-        this.labelFingerprint = Output.empty();
-        this.labels = Output.empty();
-        this.licenses = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rawDisk = Output.empty();
-        this.selfLink = Output.empty();
-        this.sourceDisk = Output.empty();
-        this.sourceImage = Output.empty();
-        this.sourceSnapshot = Output.empty();
+        this.archiveSizeBytes = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.family = Codegen.empty();
+        this.guestOsFeatures = Codegen.empty();
+        this.labelFingerprint = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.licenses = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rawDisk = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sourceDisk = Codegen.empty();
+        this.sourceImage = Codegen.empty();
+        this.sourceSnapshot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -332,7 +333,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder archiveSizeBytes(@Nullable Integer archiveSizeBytes) {
-            this.archiveSizeBytes = Output.ofNullable(archiveSizeBytes);
+            this.archiveSizeBytes = Codegen.ofNullable(archiveSizeBytes);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -340,7 +341,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -348,7 +349,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
@@ -356,7 +357,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder family(@Nullable Output<String> family) {
@@ -364,7 +365,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder family(@Nullable String family) {
-            this.family = Output.ofNullable(family);
+            this.family = Codegen.ofNullable(family);
             return this;
         }
         public Builder guestOsFeatures(@Nullable Output<List<ImageGuestOsFeatureGetArgs>> guestOsFeatures) {
@@ -372,7 +373,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder guestOsFeatures(@Nullable List<ImageGuestOsFeatureGetArgs> guestOsFeatures) {
-            this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
+            this.guestOsFeatures = Codegen.ofNullable(guestOsFeatures);
             return this;
         }
         public Builder guestOsFeatures(ImageGuestOsFeatureGetArgs... guestOsFeatures) {
@@ -383,7 +384,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Output.ofNullable(labelFingerprint);
+            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -391,7 +392,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder licenses(@Nullable Output<List<String>> licenses) {
@@ -399,7 +400,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Output.ofNullable(licenses);
+            this.licenses = Codegen.ofNullable(licenses);
             return this;
         }
         public Builder licenses(String... licenses) {
@@ -410,7 +411,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -418,7 +419,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rawDisk(@Nullable Output<ImageRawDiskGetArgs> rawDisk) {
@@ -426,7 +427,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rawDisk(@Nullable ImageRawDiskGetArgs rawDisk) {
-            this.rawDisk = Output.ofNullable(rawDisk);
+            this.rawDisk = Codegen.ofNullable(rawDisk);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -434,7 +435,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
@@ -442,7 +443,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Output.ofNullable(sourceDisk);
+            this.sourceDisk = Codegen.ofNullable(sourceDisk);
             return this;
         }
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
@@ -450,7 +451,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Output.ofNullable(sourceImage);
+            this.sourceImage = Codegen.ofNullable(sourceImage);
             return this;
         }
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
@@ -458,7 +459,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
+            this.sourceSnapshot = Codegen.ofNullable(sourceSnapshot);
             return this;
         }        public ImageState build() {
             return new ImageState(archiveSizeBytes, creationTimestamp, description, diskSizeGb, family, guestOsFeatures, labelFingerprint, labels, licenses, name, project, rawDisk, selfLink, sourceDisk, sourceImage, sourceSnapshot);

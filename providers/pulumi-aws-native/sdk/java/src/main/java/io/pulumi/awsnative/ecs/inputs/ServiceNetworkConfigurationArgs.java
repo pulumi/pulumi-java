@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.inputs.ServiceAwsVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="awsvpcConfiguration")
       private final @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
 
-    public Output<ServiceAwsVpcConfigurationArgs> getAwsvpcConfiguration() {
-        return this.awsvpcConfiguration == null ? Output.empty() : this.awsvpcConfiguration;
+    public Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration() {
+        return this.awsvpcConfiguration == null ? Codegen.empty() : this.awsvpcConfiguration;
     }
 
     public ServiceNetworkConfigurationArgs(@Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
@@ -26,7 +27,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     private ServiceNetworkConfigurationArgs() {
-        this.awsvpcConfiguration = Output.empty();
+        this.awsvpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfigurationArgs awsvpcConfiguration) {
-            this.awsvpcConfiguration = Output.ofNullable(awsvpcConfiguration);
+            this.awsvpcConfiguration = Codegen.ofNullable(awsvpcConfiguration);
             return this;
         }        public ServiceNetworkConfigurationArgs build() {
             return new ServiceNetworkConfigurationArgs(awsvpcConfiguration);

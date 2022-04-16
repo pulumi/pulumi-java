@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
     @Import(name="operationConfigType")
       private final @Nullable Output<String> operationConfigType;
 
-    public Output<String> getOperationConfigType() {
-        return this.operationConfigType == null ? Output.empty() : this.operationConfigType;
+    public Output<String> operationConfigType() {
+        return this.operationConfigType == null ? Codegen.empty() : this.operationConfigType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
     @Import(name="operationConfigs", required=true)
       private final Output<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> operationConfigs;
 
-    public Output<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> getOperationConfigs() {
+    public Output<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> operationConfigs() {
         return this.operationConfigs;
     }
 
@@ -50,8 +51,8 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
     }
 
     private GoogleCloudApigeeV1GraphQLOperationGroupArgs() {
-        this.operationConfigType = Output.empty();
-        this.operationConfigs = Output.empty();
+        this.operationConfigType = Codegen.empty();
+        this.operationConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
             return this;
         }
         public Builder operationConfigType(@Nullable String operationConfigType) {
-            this.operationConfigType = Output.ofNullable(operationConfigType);
+            this.operationConfigType = Codegen.ofNullable(operationConfigType);
             return this;
         }
         public Builder operationConfigs(Output<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> operationConfigs) {

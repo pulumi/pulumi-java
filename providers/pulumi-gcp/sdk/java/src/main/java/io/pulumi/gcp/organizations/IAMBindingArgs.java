@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.organizations.inputs.IAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<IAMBindingConditionArgs> condition;
 
-    public Output<IAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<IAMBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -41,7 +42,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -54,7 +55,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -70,10 +71,10 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.orgId = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable IAMBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessPolicyArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessPolicyState;
@@ -55,7 +56,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Time the AccessPolicy was created in UTC.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -69,7 +70,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name of the AccessPolicy. Format: {policy_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Format: organizations/{organization_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -99,7 +100,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Human readable title. Does not affect behavior.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -113,7 +114,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Time the AccessPolicy was updated in UTC.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -139,7 +140,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPolicy(String name, AccessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/accessPolicy:AccessPolicy", name, args == null ? AccessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/accessPolicy:AccessPolicy", name, args == null ? AccessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessPolicy(String name, Output<String> id, @Nullable AccessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

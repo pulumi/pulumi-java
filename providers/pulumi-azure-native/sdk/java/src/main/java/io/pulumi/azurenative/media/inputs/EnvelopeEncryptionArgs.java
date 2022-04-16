@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clearTracks")
       private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
-    public Output<List<TrackSelectionArgs>> getClearTracks() {
-        return this.clearTracks == null ? Output.empty() : this.clearTracks;
+    public Output<List<TrackSelectionArgs>> clearTracks() {
+        return this.clearTracks == null ? Codegen.empty() : this.clearTracks;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="contentKeys")
       private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
-    public Output<StreamingPolicyContentKeysArgs> getContentKeys() {
-        return this.contentKeys == null ? Output.empty() : this.contentKeys;
+    public Output<StreamingPolicyContentKeysArgs> contentKeys() {
+        return this.contentKeys == null ? Codegen.empty() : this.contentKeys;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="customKeyAcquisitionUrlTemplate")
       private final @Nullable Output<String> customKeyAcquisitionUrlTemplate;
 
-    public Output<String> getCustomKeyAcquisitionUrlTemplate() {
-        return this.customKeyAcquisitionUrlTemplate == null ? Output.empty() : this.customKeyAcquisitionUrlTemplate;
+    public Output<String> customKeyAcquisitionUrlTemplate() {
+        return this.customKeyAcquisitionUrlTemplate == null ? Codegen.empty() : this.customKeyAcquisitionUrlTemplate;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Output<EnabledProtocolsArgs> getEnabledProtocols() {
-        return this.enabledProtocols == null ? Output.empty() : this.enabledProtocols;
+    public Output<EnabledProtocolsArgs> enabledProtocols() {
+        return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 
     public EnvelopeEncryptionArgs(
@@ -78,10 +79,10 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EnvelopeEncryptionArgs() {
-        this.clearTracks = Output.empty();
-        this.contentKeys = Output.empty();
-        this.customKeyAcquisitionUrlTemplate = Output.empty();
-        this.enabledProtocols = Output.empty();
+        this.clearTracks = Codegen.empty();
+        this.contentKeys = Codegen.empty();
+        this.customKeyAcquisitionUrlTemplate = Codegen.empty();
+        this.enabledProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder clearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
-            this.clearTracks = Output.ofNullable(clearTracks);
+            this.clearTracks = Codegen.ofNullable(clearTracks);
             return this;
         }
         public Builder clearTracks(TrackSelectionArgs... clearTracks) {
@@ -126,7 +127,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
-            this.contentKeys = Output.ofNullable(contentKeys);
+            this.contentKeys = Codegen.ofNullable(contentKeys);
             return this;
         }
         public Builder customKeyAcquisitionUrlTemplate(@Nullable Output<String> customKeyAcquisitionUrlTemplate) {
@@ -134,7 +135,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
-            this.customKeyAcquisitionUrlTemplate = Output.ofNullable(customKeyAcquisitionUrlTemplate);
+            this.customKeyAcquisitionUrlTemplate = Codegen.ofNullable(customKeyAcquisitionUrlTemplate);
             return this;
         }
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
@@ -142,7 +143,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
-            this.enabledProtocols = Output.ofNullable(enabledProtocols);
+            this.enabledProtocols = Codegen.ofNullable(enabledProtocols);
             return this;
         }        public EnvelopeEncryptionArgs build() {
             return new EnvelopeEncryptionArgs(clearTracks, contentKeys, customKeyAcquisitionUrlTemplate, enabledProtocols);

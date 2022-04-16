@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
-        return this.dataSetName == null ? Output.empty() : this.dataSetName;
+    public Output<String> dataSetName() {
+        return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataWarehouseName", required=true)
       private final Output<String> dataWarehouseName;
 
-    public Output<String> getDataWarehouseName() {
+    public Output<String> dataWarehouseName() {
         return this.dataWarehouseName;
     }
 
@@ -55,7 +56,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -66,7 +67,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -88,7 +89,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -99,7 +100,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sqlServerResourceId", required=true)
       private final Output<String> sqlServerResourceId;
 
-    public Output<String> getSqlServerResourceId() {
+    public Output<String> sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
 
@@ -110,7 +111,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -136,15 +137,15 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SqlDWTableDataSetArgs() {
-        this.accountName = Output.empty();
-        this.dataSetName = Output.empty();
-        this.dataWarehouseName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaName = Output.empty();
-        this.shareName = Output.empty();
-        this.sqlServerResourceId = Output.empty();
-        this.tableName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetName = Codegen.empty();
+        this.dataWarehouseName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.sqlServerResourceId = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Output.ofNullable(dataSetName);
+            this.dataSetName = Codegen.ofNullable(dataSetName);
             return this;
         }
         public Builder dataWarehouseName(Output<String> dataWarehouseName) {

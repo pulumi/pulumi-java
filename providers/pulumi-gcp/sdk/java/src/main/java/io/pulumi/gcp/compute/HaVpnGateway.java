@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.HaVpnGatewayArgs;
 import io.pulumi.gcp.compute.inputs.HaVpnGatewayState;
@@ -62,7 +63,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The network this VPN gateway is accepting traffic for.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -118,7 +119,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -132,7 +133,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The region this gateway should sit in.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -146,7 +147,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -162,7 +163,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<HaVpnGatewayVpnInterface>> getVpnInterfaces() {
+    public Output<List<HaVpnGatewayVpnInterface>> vpnInterfaces() {
         return this.vpnInterfaces;
     }
 
@@ -188,7 +189,7 @@ public class HaVpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HaVpnGateway(String name, HaVpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/haVpnGateway:HaVpnGateway", name, args == null ? HaVpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/haVpnGateway:HaVpnGateway", name, args == null ? HaVpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HaVpnGateway(String name, Output<String> id, @Nullable HaVpnGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.InstanceIAMMemberArgs;
 import io.pulumi.gcp.spanner.inputs.InstanceIAMMemberState;
@@ -63,7 +64,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=InstanceIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ InstanceIAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ InstanceIAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -77,7 +78,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the instance's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -91,13 +92,13 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * @return The name of the instance.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -113,7 +114,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -131,7 +132,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -157,7 +158,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceIAMMember(String name, InstanceIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/instanceIAMMember:InstanceIAMMember", name, args == null ? InstanceIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/instanceIAMMember:InstanceIAMMember", name, args == null ? InstanceIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceIAMMember(String name, Output<String> id, @Nullable InstanceIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

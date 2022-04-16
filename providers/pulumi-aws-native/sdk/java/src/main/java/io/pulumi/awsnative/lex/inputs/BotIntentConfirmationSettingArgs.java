@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotPromptSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,21 +24,21 @@ public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.
     @Import(name="declinationResponse", required=true)
       private final Output<BotResponseSpecificationArgs> declinationResponse;
 
-    public Output<BotResponseSpecificationArgs> getDeclinationResponse() {
+    public Output<BotResponseSpecificationArgs> declinationResponse() {
         return this.declinationResponse;
     }
 
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
-        return this.isActive == null ? Output.empty() : this.isActive;
+    public Output<Boolean> isActive() {
+        return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
     @Import(name="promptSpecification", required=true)
       private final Output<BotPromptSpecificationArgs> promptSpecification;
 
-    public Output<BotPromptSpecificationArgs> getPromptSpecification() {
+    public Output<BotPromptSpecificationArgs> promptSpecification() {
         return this.promptSpecification;
     }
 
@@ -51,9 +52,9 @@ public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.
     }
 
     private BotIntentConfirmationSettingArgs() {
-        this.declinationResponse = Output.empty();
-        this.isActive = Output.empty();
-        this.promptSpecification = Output.empty();
+        this.declinationResponse = Codegen.empty();
+        this.isActive = Codegen.empty();
+        this.promptSpecification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.
             return this;
         }
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Output.ofNullable(isActive);
+            this.isActive = Codegen.ofNullable(isActive);
             return this;
         }
         public Builder promptSpecification(Output<BotPromptSpecificationArgs> promptSpecification) {

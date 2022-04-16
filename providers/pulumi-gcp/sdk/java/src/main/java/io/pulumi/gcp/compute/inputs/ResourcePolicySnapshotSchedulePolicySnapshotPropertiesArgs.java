@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> getGuestFlush() {
-        return this.guestFlush == null ? Output.empty() : this.guestFlush;
+    public Output<Boolean> guestFlush() {
+        return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="storageLocations")
       private final @Nullable Output<String> storageLocations;
 
-    public Output<String> getStorageLocations() {
-        return this.storageLocations == null ? Output.empty() : this.storageLocations;
+    public Output<String> storageLocations() {
+        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 
     public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(
@@ -60,9 +61,9 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     }
 
     private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs() {
-        this.guestFlush = Output.empty();
-        this.labels = Output.empty();
-        this.storageLocations = Output.empty();
+        this.guestFlush = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.storageLocations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
             return this;
         }
         public Builder guestFlush(@Nullable Boolean guestFlush) {
-            this.guestFlush = Output.ofNullable(guestFlush);
+            this.guestFlush = Codegen.ofNullable(guestFlush);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -102,7 +103,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder storageLocations(@Nullable Output<String> storageLocations) {
@@ -110,7 +111,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
             return this;
         }
         public Builder storageLocations(@Nullable String storageLocations) {
-            this.storageLocations = Output.ofNullable(storageLocations);
+            this.storageLocations = Codegen.ofNullable(storageLocations);
             return this;
         }        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(guestFlush, labels, storageLocations);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
     @Import(name="methodSelectors")
       private final @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs>> methodSelectors;
 
-    public Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs>> getMethodSelectors() {
-        return this.methodSelectors == null ? Output.empty() : this.methodSelectors;
+    public Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs>> methodSelectors() {
+        return this.methodSelectors == null ? Codegen.empty() : this.methodSelectors;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     public ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs(
@@ -52,8 +53,8 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
     }
 
     private ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs() {
-        this.methodSelectors = Output.empty();
-        this.serviceName = Output.empty();
+        this.methodSelectors = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
             return this;
         }
         public Builder methodSelectors(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs> methodSelectors) {
-            this.methodSelectors = Output.ofNullable(methodSelectors);
+            this.methodSelectors = Codegen.ofNullable(methodSelectors);
             return this;
         }
         public Builder methodSelectors(ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs... methodSelectors) {
@@ -94,7 +95,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }        public ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationGetArgs(methodSelectors, serviceName);

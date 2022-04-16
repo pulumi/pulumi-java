@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.ShareSettingsShareType;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectMap")
       private final @Nullable Output<Map<String,String>> projectMap;
 
-    public Output<Map<String,String>> getProjectMap() {
-        return this.projectMap == null ? Output.empty() : this.projectMap;
+    public Output<Map<String,String>> projectMap() {
+        return this.projectMap == null ? Codegen.empty() : this.projectMap;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projects")
       private final @Nullable Output<List<String>> projects;
 
-    public Output<List<String>> getProjects() {
-        return this.projects == null ? Output.empty() : this.projects;
+    public Output<List<String>> projects() {
+        return this.projects == null ? Codegen.empty() : this.projects;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareType")
       private final @Nullable Output<ShareSettingsShareType> shareType;
 
-    public Output<ShareSettingsShareType> getShareType() {
-        return this.shareType == null ? Output.empty() : this.shareType;
+    public Output<ShareSettingsShareType> shareType() {
+        return this.shareType == null ? Codegen.empty() : this.shareType;
     }
 
     public ShareSettingsArgs(
@@ -64,9 +65,9 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ShareSettingsArgs() {
-        this.projectMap = Output.empty();
-        this.projects = Output.empty();
-        this.shareType = Output.empty();
+        this.projectMap = Codegen.empty();
+        this.projects = Codegen.empty();
+        this.shareType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectMap(@Nullable Map<String,String> projectMap) {
-            this.projectMap = Output.ofNullable(projectMap);
+            this.projectMap = Codegen.ofNullable(projectMap);
             return this;
         }
         public Builder projects(@Nullable Output<List<String>> projects) {
@@ -106,7 +107,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projects(@Nullable List<String> projects) {
-            this.projects = Output.ofNullable(projects);
+            this.projects = Codegen.ofNullable(projects);
             return this;
         }
         public Builder projects(String... projects) {
@@ -117,7 +118,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareType(@Nullable ShareSettingsShareType shareType) {
-            this.shareType = Output.ofNullable(shareType);
+            this.shareType = Codegen.ofNullable(shareType);
             return this;
         }        public ShareSettingsArgs build() {
             return new ShareSettingsArgs(projectMap, projects, shareType);

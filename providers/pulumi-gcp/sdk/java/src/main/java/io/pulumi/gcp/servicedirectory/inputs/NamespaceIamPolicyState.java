@@ -5,6 +5,7 @@ package io.pulumi.gcp.servicedirectory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     public NamespaceIamPolicyState(
@@ -58,9 +59,9 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
     }
 
     private NamespaceIamPolicyState() {
-        this.etag = Output.empty();
-        this.name = Output.empty();
-        this.policyData = Output.empty();
+        this.etag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -100,7 +101,7 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -108,7 +109,7 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }        public NamespaceIamPolicyState build() {
             return new NamespaceIamPolicyState(etag, name, policyData);

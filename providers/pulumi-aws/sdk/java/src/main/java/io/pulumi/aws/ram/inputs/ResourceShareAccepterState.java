@@ -5,6 +5,7 @@ package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="invitationArn")
       private final @Nullable Output<String> invitationArn;
 
-    public Output<String> getInvitationArn() {
-        return this.invitationArn == null ? Output.empty() : this.invitationArn;
+    public Output<String> invitationArn() {
+        return this.invitationArn == null ? Codegen.empty() : this.invitationArn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="receiverAccountId")
       private final @Nullable Output<String> receiverAccountId;
 
-    public Output<String> getReceiverAccountId() {
-        return this.receiverAccountId == null ? Output.empty() : this.receiverAccountId;
+    public Output<String> receiverAccountId() {
+        return this.receiverAccountId == null ? Codegen.empty() : this.receiverAccountId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<String>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="senderAccountId")
       private final @Nullable Output<String> senderAccountId;
 
-    public Output<String> getSenderAccountId() {
-        return this.senderAccountId == null ? Output.empty() : this.senderAccountId;
+    public Output<String> senderAccountId() {
+        return this.senderAccountId == null ? Codegen.empty() : this.senderAccountId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="shareArn")
       private final @Nullable Output<String> shareArn;
 
-    public Output<String> getShareArn() {
-        return this.shareArn == null ? Output.empty() : this.shareArn;
+    public Output<String> shareArn() {
+        return this.shareArn == null ? Codegen.empty() : this.shareArn;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="shareId")
       private final @Nullable Output<String> shareId;
 
-    public Output<String> getShareId() {
-        return this.shareId == null ? Output.empty() : this.shareId;
+    public Output<String> shareId() {
+        return this.shareId == null ? Codegen.empty() : this.shareId;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
-        return this.shareName == null ? Output.empty() : this.shareName;
+    public Output<String> shareName() {
+        return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ResourceShareAccepterState(
@@ -123,14 +124,14 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     }
 
     private ResourceShareAccepterState() {
-        this.invitationArn = Output.empty();
-        this.receiverAccountId = Output.empty();
-        this.resources = Output.empty();
-        this.senderAccountId = Output.empty();
-        this.shareArn = Output.empty();
-        this.shareId = Output.empty();
-        this.shareName = Output.empty();
-        this.status = Output.empty();
+        this.invitationArn = Codegen.empty();
+        this.receiverAccountId = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.senderAccountId = Codegen.empty();
+        this.shareArn = Codegen.empty();
+        this.shareId = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder invitationArn(@Nullable String invitationArn) {
-            this.invitationArn = Output.ofNullable(invitationArn);
+            this.invitationArn = Codegen.ofNullable(invitationArn);
             return this;
         }
         public Builder receiverAccountId(@Nullable Output<String> receiverAccountId) {
@@ -180,7 +181,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder receiverAccountId(@Nullable String receiverAccountId) {
-            this.receiverAccountId = Output.ofNullable(receiverAccountId);
+            this.receiverAccountId = Codegen.ofNullable(receiverAccountId);
             return this;
         }
         public Builder resources(@Nullable Output<List<String>> resources) {
@@ -188,7 +189,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {
@@ -199,7 +200,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder senderAccountId(@Nullable String senderAccountId) {
-            this.senderAccountId = Output.ofNullable(senderAccountId);
+            this.senderAccountId = Codegen.ofNullable(senderAccountId);
             return this;
         }
         public Builder shareArn(@Nullable Output<String> shareArn) {
@@ -207,7 +208,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder shareArn(@Nullable String shareArn) {
-            this.shareArn = Output.ofNullable(shareArn);
+            this.shareArn = Codegen.ofNullable(shareArn);
             return this;
         }
         public Builder shareId(@Nullable Output<String> shareId) {
@@ -215,7 +216,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder shareId(@Nullable String shareId) {
-            this.shareId = Output.ofNullable(shareId);
+            this.shareId = Codegen.ofNullable(shareId);
             return this;
         }
         public Builder shareName(@Nullable Output<String> shareName) {
@@ -223,7 +224,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Output.ofNullable(shareName);
+            this.shareName = Codegen.ofNullable(shareName);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -231,7 +232,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ResourceShareAccepterState build() {
             return new ResourceShareAccepterState(invitationArn, receiverAccountId, resources, senderAccountId, shareArn, shareId, shareName, status);

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return Properties of the controller.
      * 
      */
-    public Output</* @Nullable */ ControllerDetailsResponse> getControllerDetails() {
+    public Output</* @Nullable */ ControllerDetailsResponse> controllerDetails() {
         return this.controllerDetails;
     }
     /**
@@ -58,7 +59,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return Location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return The current state of dnc delegated subnet resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return Resource guid.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -114,7 +115,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return subnet details
      * 
      */
-    public Output</* @Nullable */ SubnetDetailsResponse> getSubnetDetails() {
+    public Output</* @Nullable */ SubnetDetailsResponse> subnetDetails() {
         return this.subnetDetails;
     }
     /**
@@ -128,7 +129,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @return The type of resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public DelegatedSubnetServiceDetails(String name, DelegatedSubnetServiceDetailsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:delegatednetwork:DelegatedSubnetServiceDetails", name, args == null ? DelegatedSubnetServiceDetailsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:delegatednetwork:DelegatedSubnetServiceDetails", name, args == null ? DelegatedSubnetServiceDetailsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DelegatedSubnetServiceDetails(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

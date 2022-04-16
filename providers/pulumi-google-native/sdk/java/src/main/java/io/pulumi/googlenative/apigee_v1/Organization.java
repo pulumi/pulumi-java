@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.OrganizationArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AddonsConfigResponse;
@@ -33,7 +34,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Addon configurations of the Apigee organization.
      * 
      */
-    public Output<GoogleCloudApigeeV1AddonsConfigResponse> getAddonsConfig() {
+    public Output<GoogleCloudApigeeV1AddonsConfigResponse> addonsConfig() {
         return this.addonsConfig;
     }
     /**
@@ -47,7 +48,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
-    public Output<String> getAnalyticsRegion() {
+    public Output<String> analyticsRegion() {
         return this.analyticsRegion;
     }
     /**
@@ -61,7 +62,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Not used by Apigee.
      * 
      */
-    public Output<List<String>> getAttributes() {
+    public Output<List<String>> attributes() {
         return this.attributes;
     }
     /**
@@ -75,7 +76,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.
      * 
      */
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
     /**
@@ -89,7 +90,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
      * 
      */
-    public Output<String> getBillingType() {
+    public Output<String> billingType() {
         return this.billingType;
     }
     /**
@@ -103,7 +104,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
      * 
      */
-    public Output<String> getCaCertificate() {
+    public Output<String> caCertificate() {
         return this.caCertificate;
     }
     /**
@@ -117,7 +118,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Time that the Apigee organization was created in milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -131,7 +132,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Not used by Apigee.
      * 
      */
-    public Output<String> getCustomerName() {
+    public Output<String> customerName() {
         return this.customerName;
     }
     /**
@@ -145,7 +146,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Description of the Apigee organization.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -159,7 +160,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Display name for the Apigee organization. Unused, but reserved for future use.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -173,7 +174,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return List of environments in the Apigee organization.
      * 
      */
-    public Output<List<String>> getEnvironments() {
+    public Output<List<String>> environments() {
         return this.environments;
     }
     /**
@@ -187,7 +188,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Time that the Apigee organization is scheduled for deletion.
      * 
      */
-    public Output<String> getExpiresAt() {
+    public Output<String> expiresAt() {
         return this.expiresAt;
     }
     /**
@@ -201,7 +202,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Time that the Apigee organization was last modified in milliseconds since epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -215,7 +216,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Name of the Apigee organization.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -229,7 +230,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Configuration for the Portals settings.
      * 
      */
-    public Output<Boolean> getPortalDisabled() {
+    public Output<Boolean> portalDisabled() {
         return this.portalDisabled;
     }
     /**
@@ -243,7 +244,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Project ID associated with the Apigee organization.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -257,7 +258,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Properties defined in the Apigee organization profile.
      * 
      */
-    public Output<GoogleCloudApigeeV1PropertiesResponse> getProperties() {
+    public Output<GoogleCloudApigeeV1PropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -271,7 +272,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
      * 
      */
-    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
+    public Output<String> runtimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName;
     }
     /**
@@ -285,7 +286,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Runtime type of the Apigee organization based on the Apigee subscription purchased.
      * 
      */
-    public Output<String> getRuntimeType() {
+    public Output<String> runtimeType() {
         return this.runtimeType;
     }
     /**
@@ -299,7 +300,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return State of the organization. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -313,7 +314,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Not used by Apigee.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -339,7 +340,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Organization(String name, OrganizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Organization(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

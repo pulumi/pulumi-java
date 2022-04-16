@@ -47,31 +47,31 @@ public final class GetNotificationRuleResult {
         this.targets = targets;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
-    public Optional<NotificationRuleDetailType> getDetailType() {
+    public Optional<NotificationRuleDetailType> detailType() {
         return Optional.ofNullable(this.detailType);
     }
-    public Optional<String> getEventTypeId() {
+    public Optional<String> eventTypeId() {
         return Optional.ofNullable(this.eventTypeId);
     }
-    public List<String> getEventTypeIds() {
+    public List<String> eventTypeIds() {
         return this.eventTypeIds == null ? List.of() : this.eventTypeIds;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<NotificationRuleStatus> getStatus() {
+    public Optional<NotificationRuleStatus> status() {
         return Optional.ofNullable(this.status);
     }
-    public Optional<String> getTargetAddress() {
+    public Optional<String> targetAddress() {
         return Optional.ofNullable(this.targetAddress);
     }
-    public List<NotificationRuleTarget> getTargets() {
+    public List<NotificationRuleTarget> targets() {
         return this.targets == null ? List.of() : this.targets;
     }
 

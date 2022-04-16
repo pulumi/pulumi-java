@@ -6,6 +6,7 @@ package io.pulumi.awsnative.elasticache.inputs;
 import io.pulumi.awsnative.elasticache.enums.GlobalReplicationGroupMemberRole;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
     @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
 
-    public Output<String> getReplicationGroupId() {
-        return this.replicationGroupId == null ? Output.empty() : this.replicationGroupId;
+    public Output<String> replicationGroupId() {
+        return this.replicationGroupId == null ? Codegen.empty() : this.replicationGroupId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
     @Import(name="replicationGroupRegion")
       private final @Nullable Output<String> replicationGroupRegion;
 
-    public Output<String> getReplicationGroupRegion() {
-        return this.replicationGroupRegion == null ? Output.empty() : this.replicationGroupRegion;
+    public Output<String> replicationGroupRegion() {
+        return this.replicationGroupRegion == null ? Codegen.empty() : this.replicationGroupRegion;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
     @Import(name="role")
       private final @Nullable Output<GlobalReplicationGroupMemberRole> role;
 
-    public Output<GlobalReplicationGroupMemberRole> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<GlobalReplicationGroupMemberRole> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public GlobalReplicationGroupMemberArgs(
@@ -58,9 +59,9 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
     }
 
     private GlobalReplicationGroupMemberArgs() {
-        this.replicationGroupId = Output.empty();
-        this.replicationGroupRegion = Output.empty();
-        this.role = Output.empty();
+        this.replicationGroupId = Codegen.empty();
+        this.replicationGroupRegion = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
             return this;
         }
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
-            this.replicationGroupId = Output.ofNullable(replicationGroupId);
+            this.replicationGroupId = Codegen.ofNullable(replicationGroupId);
             return this;
         }
         public Builder replicationGroupRegion(@Nullable Output<String> replicationGroupRegion) {
@@ -100,7 +101,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
             return this;
         }
         public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
-            this.replicationGroupRegion = Output.ofNullable(replicationGroupRegion);
+            this.replicationGroupRegion = Codegen.ofNullable(replicationGroupRegion);
             return this;
         }
         public Builder role(@Nullable Output<GlobalReplicationGroupMemberRole> role) {
@@ -108,7 +109,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
             return this;
         }
         public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public GlobalReplicationGroupMemberArgs build() {
             return new GlobalReplicationGroupMemberArgs(replicationGroupId, replicationGroupRegion, role);

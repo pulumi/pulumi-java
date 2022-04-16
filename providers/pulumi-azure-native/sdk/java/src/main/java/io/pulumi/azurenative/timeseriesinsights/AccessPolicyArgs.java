@@ -7,6 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.AccessPolicyRole;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyName")
       private final @Nullable Output<String> accessPolicyName;
 
-    public Output<String> getAccessPolicyName() {
-        return this.accessPolicyName == null ? Output.empty() : this.accessPolicyName;
+    public Output<String> accessPolicyName() {
+        return this.accessPolicyName == null ? Codegen.empty() : this.accessPolicyName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -57,8 +58,8 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalObjectId")
       private final @Nullable Output<String> principalObjectId;
 
-    public Output<String> getPrincipalObjectId() {
-        return this.principalObjectId == null ? Output.empty() : this.principalObjectId;
+    public Output<String> principalObjectId() {
+        return this.principalObjectId == null ? Codegen.empty() : this.principalObjectId;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,8 +80,8 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<Either<String,AccessPolicyRole>>> roles;
 
-    public Output<List<Either<String,AccessPolicyRole>>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+    public Output<List<Either<String,AccessPolicyRole>>> roles() {
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     public AccessPolicyArgs(
@@ -99,12 +100,12 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPolicyArgs() {
-        this.accessPolicyName = Output.empty();
-        this.description = Output.empty();
-        this.environmentName = Output.empty();
-        this.principalObjectId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roles = Output.empty();
+        this.accessPolicyName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.environmentName = Codegen.empty();
+        this.principalObjectId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessPolicyName(@Nullable String accessPolicyName) {
-            this.accessPolicyName = Output.ofNullable(accessPolicyName);
+            this.accessPolicyName = Codegen.ofNullable(accessPolicyName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -150,7 +151,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentName(Output<String> environmentName) {
@@ -166,7 +167,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principalObjectId(@Nullable String principalObjectId) {
-            this.principalObjectId = Output.ofNullable(principalObjectId);
+            this.principalObjectId = Codegen.ofNullable(principalObjectId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -182,7 +183,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roles(@Nullable List<Either<String,AccessPolicyRole>> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(Either<String,AccessPolicyRole>... roles) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.RouterNatRuleActionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<RouterNatRuleActionArgs> action;
 
-    public Output<RouterNatRuleActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<RouterNatRuleActionArgs> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="match")
       private final @Nullable Output<String> match;
 
-    public Output<String> getMatch() {
-        return this.match == null ? Output.empty() : this.match;
+    public Output<String> match() {
+        return this.match == null ? Codegen.empty() : this.match;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleNumber")
       private final @Nullable Output<Integer> ruleNumber;
 
-    public Output<Integer> getRuleNumber() {
-        return this.ruleNumber == null ? Output.empty() : this.ruleNumber;
+    public Output<Integer> ruleNumber() {
+        return this.ruleNumber == null ? Codegen.empty() : this.ruleNumber;
     }
 
     public RouterNatRuleArgs(
@@ -72,10 +73,10 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterNatRuleArgs() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.match = Output.empty();
-        this.ruleNumber = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.match = Codegen.empty();
+        this.ruleNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable RouterNatRuleActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -117,7 +118,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder match(@Nullable Output<String> match) {
@@ -125,7 +126,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder match(@Nullable String match) {
-            this.match = Output.ofNullable(match);
+            this.match = Codegen.ofNullable(match);
             return this;
         }
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
@@ -133,7 +134,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleNumber(@Nullable Integer ruleNumber) {
-            this.ruleNumber = Output.ofNullable(ruleNumber);
+            this.ruleNumber = Codegen.ofNullable(ruleNumber);
             return this;
         }        public RouterNatRuleArgs build() {
             return new RouterNatRuleArgs(action, description, match, ruleNumber);

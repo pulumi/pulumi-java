@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebasehosting_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebasehosting_v1beta1.SiteArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -44,7 +45,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The default URL for the Hosting site.
      * 
      */
-    public Output<String> getDefaultUrl() {
+    public Output<String> defaultUrl() {
         return this.defaultUrl;
     }
     /**
@@ -58,7 +59,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return Optional. User-specified labels for the Hosting site.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -72,7 +73,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified resource name of the Hosting site, in the format: projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's [`ProjectNumber`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The type of Hosting site. Every Firebase project has a `DEFAULT_SITE`, which is created when Hosting is provisioned for the project. All additional sites are `USER_SITE`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -112,7 +113,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Site(String name, SiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebasehosting/v1beta1:Site", name, args == null ? SiteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebasehosting/v1beta1:Site", name, args == null ? SiteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Site(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

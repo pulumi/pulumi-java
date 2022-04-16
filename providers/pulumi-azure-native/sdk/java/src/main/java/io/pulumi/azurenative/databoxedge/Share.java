@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Access protocol to be used by the share.
      * 
      */
-    public Output<String> getAccessProtocol() {
+    public Output<String> accessProtocol() {
         return this.accessProtocol;
     }
     /**
@@ -61,7 +62,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Azure container mapping for the share.
      * 
      */
-    public Output</* @Nullable */ AzureContainerInfoResponse> getAzureContainerInfo() {
+    public Output</* @Nullable */ AzureContainerInfoResponse> azureContainerInfo() {
         return this.azureContainerInfo;
     }
     /**
@@ -75,7 +76,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return List of IP addresses and corresponding access rights on the share(required for NFS protocol).
      * 
      */
-    public Output</* @Nullable */ List<ClientAccessRightResponse>> getClientAccessRights() {
+    public Output</* @Nullable */ List<ClientAccessRightResponse>> clientAccessRights() {
         return this.clientAccessRights;
     }
     /**
@@ -89,7 +90,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Data policy of the share.
      * 
      */
-    public Output</* @Nullable */ String> getDataPolicy() {
+    public Output</* @Nullable */ String> dataPolicy() {
         return this.dataPolicy;
     }
     /**
@@ -103,7 +104,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Description for the share.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -117,7 +118,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Current monitoring status of the share.
      * 
      */
-    public Output<String> getMonitoringStatus() {
+    public Output<String> monitoringStatus() {
         return this.monitoringStatus;
     }
     /**
@@ -131,7 +132,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Details of the refresh job on this share.
      * 
      */
-    public Output</* @Nullable */ RefreshDetailsResponse> getRefreshDetails() {
+    public Output</* @Nullable */ RefreshDetailsResponse> refreshDetails() {
         return this.refreshDetails;
     }
     /**
@@ -159,7 +160,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Share mount point to the role.
      * 
      */
-    public Output<List<MountPointMapResponse>> getShareMappings() {
+    public Output<List<MountPointMapResponse>> shareMappings() {
         return this.shareMappings;
     }
     /**
@@ -173,7 +174,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Current status of the share.
      * 
      */
-    public Output<String> getShareStatus() {
+    public Output<String> shareStatus() {
         return this.shareStatus;
     }
     /**
@@ -187,7 +188,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Share on ASE device
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -201,7 +202,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -215,7 +216,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @return Mapping of users and corresponding access rights on the share (required for SMB protocol).
      * 
      */
-    public Output</* @Nullable */ List<UserAccessRightResponse>> getUserAccessRights() {
+    public Output</* @Nullable */ List<UserAccessRightResponse>> userAccessRights() {
         return this.userAccessRights;
     }
 
@@ -241,7 +242,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Share(String name, ShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:Share", name, args == null ? ShareArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:databoxedge:Share", name, args == null ? ShareArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Share(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

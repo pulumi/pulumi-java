@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.RouteState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -47,7 +48,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
      * 
      */
-    public Output</* @Nullable */ String> getCarrierGatewayId() {
+    public Output</* @Nullable */ String> carrierGatewayId() {
         return this.carrierGatewayId;
     }
     /**
@@ -61,7 +62,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The destination CIDR block.
      * 
      */
-    public Output</* @Nullable */ String> getDestinationCidrBlock() {
+    public Output</* @Nullable */ String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
     /**
@@ -75,7 +76,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The destination IPv6 CIDR block.
      * 
      */
-    public Output</* @Nullable */ String> getDestinationIpv6CidrBlock() {
+    public Output</* @Nullable */ String> destinationIpv6CidrBlock() {
         return this.destinationIpv6CidrBlock;
     }
     /**
@@ -89,7 +90,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The ID of a managed prefix list destination.
      * 
      */
-    public Output</* @Nullable */ String> getDestinationPrefixListId() {
+    public Output</* @Nullable */ String> destinationPrefixListId() {
         return this.destinationPrefixListId;
     }
     /**
@@ -103,7 +104,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of a VPC Egress Only Internet Gateway.
      * 
      */
-    public Output</* @Nullable */ String> getEgressOnlyGatewayId() {
+    public Output</* @Nullable */ String> egressOnlyGatewayId() {
         return this.egressOnlyGatewayId;
     }
     /**
@@ -117,7 +118,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of a VPC internet gateway or a virtual private gateway.
      * 
      */
-    public Output</* @Nullable */ String> getGatewayId() {
+    public Output</* @Nullable */ String> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -131,7 +132,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of an EC2 instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -145,7 +146,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the owner of the EC2 instance.
      * 
      */
-    public Output<String> getInstanceOwnerId() {
+    public Output<String> instanceOwnerId() {
         return this.instanceOwnerId;
     }
     /**
@@ -159,7 +160,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of a Outpost local gateway.
      * 
      */
-    public Output</* @Nullable */ String> getLocalGatewayId() {
+    public Output</* @Nullable */ String> localGatewayId() {
         return this.localGatewayId;
     }
     /**
@@ -173,7 +174,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of a VPC NAT gateway.
      * 
      */
-    public Output</* @Nullable */ String> getNatGatewayId() {
+    public Output</* @Nullable */ String> natGatewayId() {
         return this.natGatewayId;
     }
     /**
@@ -187,7 +188,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of an EC2 network interface.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -201,7 +202,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return How the route was created - `CreateRouteTable`, `CreateRoute` or `EnableVgwRoutePropagation`.
      * 
      */
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin;
     }
     /**
@@ -215,7 +216,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The ID of the routing table.
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     /**
@@ -229,7 +230,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The state of the route - `active` or `blackhole`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -243,7 +244,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of an EC2 Transit Gateway.
      * 
      */
-    public Output</* @Nullable */ String> getTransitGatewayId() {
+    public Output</* @Nullable */ String> transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
@@ -257,7 +258,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of a VPC Endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getVpcEndpointId() {
+    public Output</* @Nullable */ String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
     /**
@@ -271,7 +272,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Identifier of a VPC peering connection.
      * 
      */
-    public Output</* @Nullable */ String> getVpcPeeringConnectionId() {
+    public Output</* @Nullable */ String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 
@@ -297,7 +298,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Route(String name, RouteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/route:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/route:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Route(String name, Output<String> id, @Nullable RouteState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

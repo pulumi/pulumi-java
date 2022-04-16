@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
     @Import(name="bucket", required=true)
       private final Output<InventoryDestinationBucketArgs> bucket;
 
-    public Output<InventoryDestinationBucketArgs> getBucket() {
+    public Output<InventoryDestinationBucketArgs> bucket() {
         return this.bucket;
     }
 
@@ -29,7 +30,7 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
     }
 
     private InventoryDestinationArgs() {
-        this.bucket = Output.empty();
+        this.bucket = Codegen.empty();
     }
 
     public static Builder builder() {

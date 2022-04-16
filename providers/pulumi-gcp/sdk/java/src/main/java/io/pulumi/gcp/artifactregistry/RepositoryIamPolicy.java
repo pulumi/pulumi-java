@@ -6,6 +6,7 @@ package io.pulumi.gcp.artifactregistry;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.artifactregistry.RepositoryIamPolicyArgs;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamPolicyState;
@@ -67,7 +68,7 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -83,7 +84,7 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -99,7 +100,7 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -115,7 +116,7 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -129,7 +130,7 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -155,7 +156,7 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RepositoryIamPolicy(String name, RepositoryIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:artifactregistry/repositoryIamPolicy:RepositoryIamPolicy", name, args == null ? RepositoryIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:artifactregistry/repositoryIamPolicy:RepositoryIamPolicy", name, args == null ? RepositoryIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RepositoryIamPolicy(String name, Output<String> id, @Nullable RepositoryIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

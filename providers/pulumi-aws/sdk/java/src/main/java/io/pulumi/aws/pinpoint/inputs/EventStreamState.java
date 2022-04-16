@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationStreamArn")
       private final @Nullable Output<String> destinationStreamArn;
 
-    public Output<String> getDestinationStreamArn() {
-        return this.destinationStreamArn == null ? Output.empty() : this.destinationStreamArn;
+    public Output<String> destinationStreamArn() {
+        return this.destinationStreamArn == null ? Codegen.empty() : this.destinationStreamArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public EventStreamState(
@@ -57,9 +58,9 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventStreamState() {
-        this.applicationId = Output.empty();
-        this.destinationStreamArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.destinationStreamArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder destinationStreamArn(@Nullable Output<String> destinationStreamArn) {
@@ -99,7 +100,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationStreamArn(@Nullable String destinationStreamArn) {
-            this.destinationStreamArn = Output.ofNullable(destinationStreamArn);
+            this.destinationStreamArn = Codegen.ofNullable(destinationStreamArn);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -107,7 +108,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public EventStreamState build() {
             return new EventStreamState(applicationId, destinationStreamArn, roleArn);

@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
     @Import(name="signingRegion")
       private final @Nullable Output<String> signingRegion;
 
-    public Output<String> getSigningRegion() {
-        return this.signingRegion == null ? Output.empty() : this.signingRegion;
+    public Output<String> signingRegion() {
+        return this.signingRegion == null ? Codegen.empty() : this.signingRegion;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
     @Import(name="signingServiceName")
       private final @Nullable Output<String> signingServiceName;
 
-    public Output<String> getSigningServiceName() {
-        return this.signingServiceName == null ? Output.empty() : this.signingServiceName;
+    public Output<String> signingServiceName() {
+        return this.signingServiceName == null ? Codegen.empty() : this.signingServiceName;
     }
 
     public DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs(
@@ -44,8 +45,8 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
     }
 
     private DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs() {
-        this.signingRegion = Output.empty();
-        this.signingServiceName = Output.empty();
+        this.signingRegion = Codegen.empty();
+        this.signingServiceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
             return this;
         }
         public Builder signingRegion(@Nullable String signingRegion) {
-            this.signingRegion = Output.ofNullable(signingRegion);
+            this.signingRegion = Codegen.ofNullable(signingRegion);
             return this;
         }
         public Builder signingServiceName(@Nullable Output<String> signingServiceName) {
@@ -83,7 +84,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
             return this;
         }
         public Builder signingServiceName(@Nullable String signingServiceName) {
-            this.signingServiceName = Output.ofNullable(signingServiceName);
+            this.signingServiceName = Codegen.ofNullable(signingServiceName);
             return this;
         }        public DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs build() {
             return new DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs(signingRegion, signingServiceName);

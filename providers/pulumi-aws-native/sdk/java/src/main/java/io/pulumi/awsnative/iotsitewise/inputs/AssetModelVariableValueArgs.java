@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +18,14 @@ public final class AssetModelVariableValueArgs extends io.pulumi.resources.Resou
     @Import(name="hierarchyLogicalId")
       private final @Nullable Output<String> hierarchyLogicalId;
 
-    public Output<String> getHierarchyLogicalId() {
-        return this.hierarchyLogicalId == null ? Output.empty() : this.hierarchyLogicalId;
+    public Output<String> hierarchyLogicalId() {
+        return this.hierarchyLogicalId == null ? Codegen.empty() : this.hierarchyLogicalId;
     }
 
     @Import(name="propertyLogicalId", required=true)
       private final Output<String> propertyLogicalId;
 
-    public Output<String> getPropertyLogicalId() {
+    public Output<String> propertyLogicalId() {
         return this.propertyLogicalId;
     }
 
@@ -36,8 +37,8 @@ public final class AssetModelVariableValueArgs extends io.pulumi.resources.Resou
     }
 
     private AssetModelVariableValueArgs() {
-        this.hierarchyLogicalId = Output.empty();
-        this.propertyLogicalId = Output.empty();
+        this.hierarchyLogicalId = Codegen.empty();
+        this.propertyLogicalId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class AssetModelVariableValueArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder hierarchyLogicalId(@Nullable String hierarchyLogicalId) {
-            this.hierarchyLogicalId = Output.ofNullable(hierarchyLogicalId);
+            this.hierarchyLogicalId = Codegen.ofNullable(hierarchyLogicalId);
             return this;
         }
         public Builder propertyLogicalId(Output<String> propertyLogicalId) {

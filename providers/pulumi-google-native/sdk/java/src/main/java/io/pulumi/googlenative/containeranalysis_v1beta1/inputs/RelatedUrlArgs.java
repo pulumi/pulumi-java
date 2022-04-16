@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public RelatedUrlArgs(
@@ -48,8 +49,8 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RelatedUrlArgs() {
-        this.label = Output.empty();
-        this.url = Output.empty();
+        this.label = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -87,7 +88,7 @@ public final class RelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public RelatedUrlArgs build() {
             return new RelatedUrlArgs(label, url);

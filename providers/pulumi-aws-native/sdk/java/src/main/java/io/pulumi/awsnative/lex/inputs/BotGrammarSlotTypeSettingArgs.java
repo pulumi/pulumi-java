@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotGrammarSlotTypeSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
     @Import(name="source")
       private final @Nullable Output<BotGrammarSlotTypeSourceArgs> source;
 
-    public Output<BotGrammarSlotTypeSourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<BotGrammarSlotTypeSourceArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public BotGrammarSlotTypeSettingArgs(@Nullable Output<BotGrammarSlotTypeSourceArgs> source) {
@@ -30,7 +31,7 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
     }
 
     private BotGrammarSlotTypeSettingArgs() {
-        this.source = Output.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder source(@Nullable BotGrammarSlotTypeSourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public BotGrammarSlotTypeSettingArgs build() {
             return new BotGrammarSlotTypeSettingArgs(source);

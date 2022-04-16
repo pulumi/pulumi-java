@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the transaction node dns endpoint.
      * 
      */
-    public Output<String> getDns() {
+    public Output<String> dns() {
         return this.dns;
     }
     /**
@@ -56,7 +57,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the firewall rules.
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleResponse>> getFirewallRules() {
+    public Output</* @Nullable */ List<FirewallRuleResponse>> firewallRules() {
         return this.firewallRules;
     }
     /**
@@ -70,7 +71,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the transaction node location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -84,7 +85,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return Sets the transaction node dns endpoint basic auth password.
      * 
      */
-    public Output</* @Nullable */ String> getPassword() {
+    public Output</* @Nullable */ String> password() {
         return this.password;
     }
     /**
@@ -112,7 +113,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the blockchain member provision state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -126,7 +127,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the transaction node public key.
      * 
      */
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -140,7 +141,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return The type of the service - e.g. "Microsoft.Blockchain"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -154,7 +155,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the transaction node dns endpoint basic auth user name.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -180,7 +181,7 @@ public class TransactionNode extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TransactionNode(String name, TransactionNodeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:blockchain:TransactionNode", name, args == null ? TransactionNodeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:blockchain:TransactionNode", name, args == null ? TransactionNodeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransactionNode(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -3,9 +3,10 @@
 
 package io.pulumi.aws.s3;
 
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acl")
       private final @Nullable Output<String> acl;
 
-    public Output<String> getAcl() {
-        return this.acl == null ? Output.empty() : this.acl;
+    public Output<String> acl() {
+        return this.acl == null ? Codegen.empty() : this.acl;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -46,8 +47,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> getBucketKeyEnabled() {
-        return this.bucketKeyEnabled == null ? Output.empty() : this.bucketKeyEnabled;
+    public Output<Boolean> bucketKeyEnabled() {
+        return this.bucketKeyEnabled == null ? Codegen.empty() : this.bucketKeyEnabled;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
 
-    public Output<String> getCacheControl() {
-        return this.cacheControl == null ? Output.empty() : this.cacheControl;
+    public Output<String> cacheControl() {
+        return this.cacheControl == null ? Codegen.empty() : this.cacheControl;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentBase64")
       private final @Nullable Output<String> contentBase64;
 
-    public Output<String> getContentBase64() {
-        return this.contentBase64 == null ? Output.empty() : this.contentBase64;
+    public Output<String> contentBase64() {
+        return this.contentBase64 == null ? Codegen.empty() : this.contentBase64;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
 
-    public Output<String> getContentDisposition() {
-        return this.contentDisposition == null ? Output.empty() : this.contentDisposition;
+    public Output<String> contentDisposition() {
+        return this.contentDisposition == null ? Codegen.empty() : this.contentDisposition;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
-    public Output<String> getContentEncoding() {
-        return this.contentEncoding == null ? Output.empty() : this.contentEncoding;
+    public Output<String> contentEncoding() {
+        return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
 
-    public Output<String> getContentLanguage() {
-        return this.contentLanguage == null ? Output.empty() : this.contentLanguage;
+    public Output<String> contentLanguage() {
+        return this.contentLanguage == null ? Codegen.empty() : this.contentLanguage;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<String> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -178,8 +179,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -189,8 +190,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockLegalHoldStatus")
       private final @Nullable Output<String> objectLockLegalHoldStatus;
 
-    public Output<String> getObjectLockLegalHoldStatus() {
-        return this.objectLockLegalHoldStatus == null ? Output.empty() : this.objectLockLegalHoldStatus;
+    public Output<String> objectLockLegalHoldStatus() {
+        return this.objectLockLegalHoldStatus == null ? Codegen.empty() : this.objectLockLegalHoldStatus;
     }
 
     /**
@@ -200,8 +201,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockMode")
       private final @Nullable Output<String> objectLockMode;
 
-    public Output<String> getObjectLockMode() {
-        return this.objectLockMode == null ? Output.empty() : this.objectLockMode;
+    public Output<String> objectLockMode() {
+        return this.objectLockMode == null ? Codegen.empty() : this.objectLockMode;
     }
 
     /**
@@ -211,8 +212,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockRetainUntilDate")
       private final @Nullable Output<String> objectLockRetainUntilDate;
 
-    public Output<String> getObjectLockRetainUntilDate() {
-        return this.objectLockRetainUntilDate == null ? Output.empty() : this.objectLockRetainUntilDate;
+    public Output<String> objectLockRetainUntilDate() {
+        return this.objectLockRetainUntilDate == null ? Codegen.empty() : this.objectLockRetainUntilDate;
     }
 
     /**
@@ -222,8 +223,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryption")
       private final @Nullable Output<String> serverSideEncryption;
 
-    public Output<String> getServerSideEncryption() {
-        return this.serverSideEncryption == null ? Output.empty() : this.serverSideEncryption;
+    public Output<String> serverSideEncryption() {
+        return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
     }
 
     /**
@@ -233,8 +234,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<AssetOrArchive> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -244,8 +245,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceHash")
       private final @Nullable Output<String> sourceHash;
 
-    public Output<String> getSourceHash() {
-        return this.sourceHash == null ? Output.empty() : this.sourceHash;
+    public Output<String> sourceHash() {
+        return this.sourceHash == null ? Codegen.empty() : this.sourceHash;
     }
 
     /**
@@ -255,8 +256,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+    public Output<String> storageClass() {
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     /**
@@ -266,8 +267,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -277,8 +278,8 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="websiteRedirect")
       private final @Nullable Output<String> websiteRedirect;
 
-    public Output<String> getWebsiteRedirect() {
-        return this.websiteRedirect == null ? Output.empty() : this.websiteRedirect;
+    public Output<String> websiteRedirect() {
+        return this.websiteRedirect == null ? Codegen.empty() : this.websiteRedirect;
     }
 
     public BucketObjectArgs(
@@ -333,30 +334,30 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketObjectArgs() {
-        this.acl = Output.empty();
-        this.bucket = Output.empty();
-        this.bucketKeyEnabled = Output.empty();
-        this.cacheControl = Output.empty();
-        this.content = Output.empty();
-        this.contentBase64 = Output.empty();
-        this.contentDisposition = Output.empty();
-        this.contentEncoding = Output.empty();
-        this.contentLanguage = Output.empty();
-        this.contentType = Output.empty();
-        this.etag = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.key = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.metadata = Output.empty();
-        this.objectLockLegalHoldStatus = Output.empty();
-        this.objectLockMode = Output.empty();
-        this.objectLockRetainUntilDate = Output.empty();
-        this.serverSideEncryption = Output.empty();
-        this.source = Output.empty();
-        this.sourceHash = Output.empty();
-        this.storageClass = Output.empty();
-        this.tags = Output.empty();
-        this.websiteRedirect = Output.empty();
+        this.acl = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.bucketKeyEnabled = Codegen.empty();
+        this.cacheControl = Codegen.empty();
+        this.content = Codegen.empty();
+        this.contentBase64 = Codegen.empty();
+        this.contentDisposition = Codegen.empty();
+        this.contentEncoding = Codegen.empty();
+        this.contentLanguage = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.key = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.objectLockLegalHoldStatus = Codegen.empty();
+        this.objectLockMode = Codegen.empty();
+        this.objectLockRetainUntilDate = Codegen.empty();
+        this.serverSideEncryption = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceHash = Codegen.empty();
+        this.storageClass = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.websiteRedirect = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -430,7 +431,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acl(@Nullable String acl) {
-            this.acl = Output.ofNullable(acl);
+            this.acl = Codegen.ofNullable(acl);
             return this;
         }
         public Builder bucket(Output<String> bucket) {
@@ -442,7 +443,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
-            this.bucketKeyEnabled = Output.ofNullable(bucketKeyEnabled);
+            this.bucketKeyEnabled = Codegen.ofNullable(bucketKeyEnabled);
             return this;
         }
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
@@ -450,7 +451,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = Output.ofNullable(cacheControl);
+            this.cacheControl = Codegen.ofNullable(cacheControl);
             return this;
         }
         public Builder content(@Nullable Output<String> content) {
@@ -458,7 +459,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentBase64(@Nullable Output<String> contentBase64) {
@@ -466,7 +467,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentBase64(@Nullable String contentBase64) {
-            this.contentBase64 = Output.ofNullable(contentBase64);
+            this.contentBase64 = Codegen.ofNullable(contentBase64);
             return this;
         }
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
@@ -474,7 +475,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = Output.ofNullable(contentDisposition);
+            this.contentDisposition = Codegen.ofNullable(contentDisposition);
             return this;
         }
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
@@ -482,7 +483,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Output.ofNullable(contentEncoding);
+            this.contentEncoding = Codegen.ofNullable(contentEncoding);
             return this;
         }
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
@@ -490,7 +491,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = Output.ofNullable(contentLanguage);
+            this.contentLanguage = Codegen.ofNullable(contentLanguage);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -498,7 +499,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -506,7 +507,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -514,7 +515,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -522,7 +523,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -530,7 +531,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -538,7 +539,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder objectLockLegalHoldStatus(@Nullable Output<String> objectLockLegalHoldStatus) {
@@ -546,7 +547,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectLockLegalHoldStatus(@Nullable String objectLockLegalHoldStatus) {
-            this.objectLockLegalHoldStatus = Output.ofNullable(objectLockLegalHoldStatus);
+            this.objectLockLegalHoldStatus = Codegen.ofNullable(objectLockLegalHoldStatus);
             return this;
         }
         public Builder objectLockMode(@Nullable Output<String> objectLockMode) {
@@ -554,7 +555,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectLockMode(@Nullable String objectLockMode) {
-            this.objectLockMode = Output.ofNullable(objectLockMode);
+            this.objectLockMode = Codegen.ofNullable(objectLockMode);
             return this;
         }
         public Builder objectLockRetainUntilDate(@Nullable Output<String> objectLockRetainUntilDate) {
@@ -562,7 +563,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectLockRetainUntilDate(@Nullable String objectLockRetainUntilDate) {
-            this.objectLockRetainUntilDate = Output.ofNullable(objectLockRetainUntilDate);
+            this.objectLockRetainUntilDate = Codegen.ofNullable(objectLockRetainUntilDate);
             return this;
         }
         public Builder serverSideEncryption(@Nullable Output<String> serverSideEncryption) {
@@ -570,7 +571,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverSideEncryption(@Nullable String serverSideEncryption) {
-            this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
+            this.serverSideEncryption = Codegen.ofNullable(serverSideEncryption);
             return this;
         }
         public Builder source(@Nullable Output<AssetOrArchive> source) {
@@ -578,7 +579,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder sourceHash(@Nullable Output<String> sourceHash) {
@@ -586,7 +587,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceHash(@Nullable String sourceHash) {
-            this.sourceHash = Output.ofNullable(sourceHash);
+            this.sourceHash = Codegen.ofNullable(sourceHash);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -594,7 +595,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -602,7 +603,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder websiteRedirect(@Nullable Output<String> websiteRedirect) {
@@ -610,7 +611,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder websiteRedirect(@Nullable String websiteRedirect) {
-            this.websiteRedirect = Output.ofNullable(websiteRedirect);
+            this.websiteRedirect = Codegen.ofNullable(websiteRedirect);
             return this;
         }        public BucketObjectArgs build() {
             return new BucketObjectArgs(acl, bucket, bucketKeyEnabled, cacheControl, content, contentBase64, contentDisposition, contentEncoding, contentLanguage, contentType, etag, forceDestroy, key, kmsKeyId, metadata, objectLockLegalHoldStatus, objectLockMode, objectLockRetainUntilDate, serverSideEncryption, source, sourceHash, storageClass, tags, websiteRedirect);

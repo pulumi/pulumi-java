@@ -5,6 +5,7 @@ package io.pulumi.aws.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
+        return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Output<Integer> getDeletionWindowInDays() {
-        return this.deletionWindowInDays == null ? Output.empty() : this.deletionWindowInDays;
+    public Output<Integer> deletionWindowInDays() {
+        return this.deletionWindowInDays == null ? Codegen.empty() : this.deletionWindowInDays;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,15 +62,15 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryKeyArn", required=true)
       private final Output<String> primaryKeyArn;
 
-    public Output<String> getPrimaryKeyArn() {
+    public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
     }
 
@@ -90,8 +91,8 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ReplicaKeyArgs(
@@ -112,13 +113,13 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaKeyArgs() {
-        this.bypassPolicyLockoutSafetyCheck = Output.empty();
-        this.deletionWindowInDays = Output.empty();
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.policy = Output.empty();
-        this.primaryKeyArn = Output.empty();
-        this.tags = Output.empty();
+        this.bypassPolicyLockoutSafetyCheck = Codegen.empty();
+        this.deletionWindowInDays = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.primaryKeyArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
+            this.bypassPolicyLockoutSafetyCheck = Codegen.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
         public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
@@ -166,7 +167,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
-            this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
+            this.deletionWindowInDays = Codegen.ofNullable(deletionWindowInDays);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -174,7 +175,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -182,7 +183,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -190,7 +191,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
@@ -206,7 +207,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ReplicaKeyArgs build() {
             return new ReplicaKeyArgs(bypassPolicyLockoutSafetyCheck, deletionWindowInDays, description, enabled, policy, primaryKeyArn, tags);

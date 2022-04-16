@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
     @Import(name="challengeRequiredOnNewDevice")
       private final @Nullable Output<Boolean> challengeRequiredOnNewDevice;
 
-    public Output<Boolean> getChallengeRequiredOnNewDevice() {
-        return this.challengeRequiredOnNewDevice == null ? Output.empty() : this.challengeRequiredOnNewDevice;
+    public Output<Boolean> challengeRequiredOnNewDevice() {
+        return this.challengeRequiredOnNewDevice == null ? Codegen.empty() : this.challengeRequiredOnNewDevice;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
     @Import(name="deviceOnlyRememberedOnUserPrompt")
       private final @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
 
-    public Output<Boolean> getDeviceOnlyRememberedOnUserPrompt() {
-        return this.deviceOnlyRememberedOnUserPrompt == null ? Output.empty() : this.deviceOnlyRememberedOnUserPrompt;
+    public Output<Boolean> deviceOnlyRememberedOnUserPrompt() {
+        return this.deviceOnlyRememberedOnUserPrompt == null ? Codegen.empty() : this.deviceOnlyRememberedOnUserPrompt;
     }
 
     public UserPoolDeviceConfigurationArgs(
@@ -44,8 +45,8 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
     }
 
     private UserPoolDeviceConfigurationArgs() {
-        this.challengeRequiredOnNewDevice = Output.empty();
-        this.deviceOnlyRememberedOnUserPrompt = Output.empty();
+        this.challengeRequiredOnNewDevice = Codegen.empty();
+        this.deviceOnlyRememberedOnUserPrompt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder challengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
-            this.challengeRequiredOnNewDevice = Output.ofNullable(challengeRequiredOnNewDevice);
+            this.challengeRequiredOnNewDevice = Codegen.ofNullable(challengeRequiredOnNewDevice);
             return this;
         }
         public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt) {
@@ -83,7 +84,7 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
-            this.deviceOnlyRememberedOnUserPrompt = Output.ofNullable(deviceOnlyRememberedOnUserPrompt);
+            this.deviceOnlyRememberedOnUserPrompt = Codegen.ofNullable(deviceOnlyRememberedOnUserPrompt);
             return this;
         }        public UserPoolDeviceConfigurationArgs build() {
             return new UserPoolDeviceConfigurationArgs(challengeRequiredOnNewDevice, deviceOnlyRememberedOnUserPrompt);

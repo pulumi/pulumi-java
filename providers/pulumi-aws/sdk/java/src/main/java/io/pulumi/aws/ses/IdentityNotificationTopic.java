@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.IdentityNotificationTopicState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @return The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
      * 
      */
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
     /**
@@ -54,7 +55,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @return Whether SES should include original email headers in SNS notifications of this type. *false* by default.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIncludeOriginalHeaders() {
+    public Output</* @Nullable */ Boolean> includeOriginalHeaders() {
         return this.includeOriginalHeaders;
     }
     /**
@@ -68,7 +69,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @return The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
      * 
      */
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
     /**
@@ -82,7 +83,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
      * 
      */
-    public Output</* @Nullable */ String> getTopicArn() {
+    public Output</* @Nullable */ String> topicArn() {
         return this.topicArn;
     }
 
@@ -108,7 +109,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityNotificationTopic(String name, IdentityNotificationTopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, args == null ? IdentityNotificationTopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, args == null ? IdentityNotificationTopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityNotificationTopic(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="ambiguousRoleResolution")
       private final @Nullable Output<String> ambiguousRoleResolution;
 
-    public Output<String> getAmbiguousRoleResolution() {
-        return this.ambiguousRoleResolution == null ? Output.empty() : this.ambiguousRoleResolution;
+    public Output<String> ambiguousRoleResolution() {
+        return this.ambiguousRoleResolution == null ? Codegen.empty() : this.ambiguousRoleResolution;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="identityProvider", required=true)
       private final Output<String> identityProvider;
 
-    public Output<String> getIdentityProvider() {
+    public Output<String> identityProvider() {
         return this.identityProvider;
     }
 
@@ -45,8 +46,8 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="mappingRules")
       private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules;
 
-    public Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> getMappingRules() {
-        return this.mappingRules == null ? Output.empty() : this.mappingRules;
+    public Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs>> mappingRules() {
+        return this.mappingRules == null ? Codegen.empty() : this.mappingRules;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -72,10 +73,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
     }
 
     private IdentityPoolRoleAttachmentRoleMappingArgs() {
-        this.ambiguousRoleResolution = Output.empty();
-        this.identityProvider = Output.empty();
-        this.mappingRules = Output.empty();
-        this.type = Output.empty();
+        this.ambiguousRoleResolution = Codegen.empty();
+        this.identityProvider = Codegen.empty();
+        this.mappingRules = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
             return this;
         }
         public Builder ambiguousRoleResolution(@Nullable String ambiguousRoleResolution) {
-            this.ambiguousRoleResolution = Output.ofNullable(ambiguousRoleResolution);
+            this.ambiguousRoleResolution = Codegen.ofNullable(ambiguousRoleResolution);
             return this;
         }
         public Builder identityProvider(Output<String> identityProvider) {
@@ -125,7 +126,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingArgs extends io.pulumi.r
             return this;
         }
         public Builder mappingRules(@Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs> mappingRules) {
-            this.mappingRules = Output.ofNullable(mappingRules);
+            this.mappingRules = Codegen.ofNullable(mappingRules);
             return this;
         }
         public Builder mappingRules(IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs... mappingRules) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="frameworkArns")
       private final @Nullable Output<List<String>> frameworkArns;
 
-    public Output<List<String>> getFrameworkArns() {
-        return this.frameworkArns == null ? Output.empty() : this.frameworkArns;
+    public Output<List<String>> frameworkArns() {
+        return this.frameworkArns == null ? Codegen.empty() : this.frameworkArns;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="reportTemplate", required=true)
       private final Output<String> reportTemplate;
 
-    public Output<String> getReportTemplate() {
+    public Output<String> reportTemplate() {
         return this.reportTemplate;
     }
 
@@ -49,8 +50,8 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private ReportSettingPropertiesArgs() {
-        this.frameworkArns = Output.empty();
-        this.reportTemplate = Output.empty();
+        this.frameworkArns = Codegen.empty();
+        this.reportTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ReportSettingPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder frameworkArns(@Nullable List<String> frameworkArns) {
-            this.frameworkArns = Output.ofNullable(frameworkArns);
+            this.frameworkArns = Codegen.ofNullable(frameworkArns);
             return this;
         }
         public Builder frameworkArns(String... frameworkArns) {

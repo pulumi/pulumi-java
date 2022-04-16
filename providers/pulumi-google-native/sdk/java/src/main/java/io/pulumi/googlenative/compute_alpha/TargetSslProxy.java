@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.TargetSslProxyArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
      * 
      */
-    public Output<String> getCertificateMap() {
+    public Output<String> certificateMap() {
         return this.certificateMap;
     }
     /**
@@ -43,7 +44,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -57,7 +58,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#targetSslProxy for target SSL proxies.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -85,7 +86,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
      * 
      */
-    public Output<String> getProxyHeader() {
+    public Output<String> proxyHeader() {
         return this.proxyHeader;
     }
     /**
@@ -113,7 +114,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -127,7 +128,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return URL to the BackendService resource.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -141,7 +142,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
      * 
      */
-    public Output<List<String>> getSslCertificates() {
+    public Output<List<String>> sslCertificates() {
         return this.sslCertificates;
     }
     /**
@@ -155,7 +156,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @return URL of SslPolicy resource that will be associated with the TargetSslProxy resource. If not set, the TargetSslProxy resource will not have any SSL policy configured.
      * 
      */
-    public Output<String> getSslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy;
     }
 
@@ -181,7 +182,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetSslProxy(String name, @Nullable TargetSslProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:TargetSslProxy", name, args == null ? TargetSslProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:TargetSslProxy", name, args == null ? TargetSslProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetSslProxy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigArgs
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationProductionVariantArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="asyncInferenceConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigArgs> getAsyncInferenceConfig() {
-        return this.asyncInferenceConfig == null ? Output.empty() : this.asyncInferenceConfig;
+    public Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig() {
+        return this.asyncInferenceConfig == null ? Codegen.empty() : this.asyncInferenceConfig;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="dataCaptureConfig")
       private final @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
 
-    public Output<EndpointConfigurationDataCaptureConfigArgs> getDataCaptureConfig() {
-        return this.dataCaptureConfig == null ? Output.empty() : this.dataCaptureConfig;
+    public Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig() {
+        return this.dataCaptureConfig == null ? Codegen.empty() : this.dataCaptureConfig;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="productionVariants", required=true)
       private final Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
 
-    public Output<List<EndpointConfigurationProductionVariantArgs>> getProductionVariants() {
+    public Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants() {
         return this.productionVariants;
     }
 
@@ -81,8 +82,8 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EndpointConfigurationArgs(
@@ -101,12 +102,12 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private EndpointConfigurationArgs() {
-        this.asyncInferenceConfig = Output.empty();
-        this.dataCaptureConfig = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.name = Output.empty();
-        this.productionVariants = Output.empty();
-        this.tags = Output.empty();
+        this.asyncInferenceConfig = Codegen.empty();
+        this.dataCaptureConfig = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.productionVariants = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder asyncInferenceConfig(@Nullable EndpointConfigurationAsyncInferenceConfigArgs asyncInferenceConfig) {
-            this.asyncInferenceConfig = Output.ofNullable(asyncInferenceConfig);
+            this.asyncInferenceConfig = Codegen.ofNullable(asyncInferenceConfig);
             return this;
         }
         public Builder dataCaptureConfig(@Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig) {
@@ -152,7 +153,7 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dataCaptureConfig(@Nullable EndpointConfigurationDataCaptureConfigArgs dataCaptureConfig) {
-            this.dataCaptureConfig = Output.ofNullable(dataCaptureConfig);
+            this.dataCaptureConfig = Codegen.ofNullable(dataCaptureConfig);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -160,7 +161,7 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -168,7 +169,7 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder productionVariants(Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants) {
@@ -187,7 +188,7 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public EndpointConfigurationArgs build() {
             return new EndpointConfigurationArgs(asyncInferenceConfig, dataCaptureConfig, kmsKeyArn, name, productionVariants, tags);

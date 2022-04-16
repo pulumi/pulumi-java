@@ -5,6 +5,7 @@ package io.pulumi.googlenative.redis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.redis_v1.enums.PersistenceConfigPersistenceMode;
 import io.pulumi.googlenative.redis_v1.enums.PersistenceConfigRdbSnapshotPeriod;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="persistenceMode")
       private final @Nullable Output<PersistenceConfigPersistenceMode> persistenceMode;
 
-    public Output<PersistenceConfigPersistenceMode> getPersistenceMode() {
-        return this.persistenceMode == null ? Output.empty() : this.persistenceMode;
+    public Output<PersistenceConfigPersistenceMode> persistenceMode() {
+        return this.persistenceMode == null ? Codegen.empty() : this.persistenceMode;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rdbSnapshotPeriod")
       private final @Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
 
-    public Output<PersistenceConfigRdbSnapshotPeriod> getRdbSnapshotPeriod() {
-        return this.rdbSnapshotPeriod == null ? Output.empty() : this.rdbSnapshotPeriod;
+    public Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod() {
+        return this.rdbSnapshotPeriod == null ? Codegen.empty() : this.rdbSnapshotPeriod;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rdbSnapshotStartTime")
       private final @Nullable Output<String> rdbSnapshotStartTime;
 
-    public Output<String> getRdbSnapshotStartTime() {
-        return this.rdbSnapshotStartTime == null ? Output.empty() : this.rdbSnapshotStartTime;
+    public Output<String> rdbSnapshotStartTime() {
+        return this.rdbSnapshotStartTime == null ? Codegen.empty() : this.rdbSnapshotStartTime;
     }
 
     public PersistenceConfigArgs(
@@ -63,9 +64,9 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PersistenceConfigArgs() {
-        this.persistenceMode = Output.empty();
-        this.rdbSnapshotPeriod = Output.empty();
-        this.rdbSnapshotStartTime = Output.empty();
+        this.persistenceMode = Codegen.empty();
+        this.rdbSnapshotPeriod = Codegen.empty();
+        this.rdbSnapshotStartTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder persistenceMode(@Nullable PersistenceConfigPersistenceMode persistenceMode) {
-            this.persistenceMode = Output.ofNullable(persistenceMode);
+            this.persistenceMode = Codegen.ofNullable(persistenceMode);
             return this;
         }
         public Builder rdbSnapshotPeriod(@Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod) {
@@ -105,7 +106,7 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rdbSnapshotPeriod(@Nullable PersistenceConfigRdbSnapshotPeriod rdbSnapshotPeriod) {
-            this.rdbSnapshotPeriod = Output.ofNullable(rdbSnapshotPeriod);
+            this.rdbSnapshotPeriod = Codegen.ofNullable(rdbSnapshotPeriod);
             return this;
         }
         public Builder rdbSnapshotStartTime(@Nullable Output<String> rdbSnapshotStartTime) {
@@ -113,7 +114,7 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rdbSnapshotStartTime(@Nullable String rdbSnapshotStartTime) {
-            this.rdbSnapshotStartTime = Output.ofNullable(rdbSnapshotStartTime);
+            this.rdbSnapshotStartTime = Codegen.ofNullable(rdbSnapshotStartTime);
             return this;
         }        public PersistenceConfigArgs build() {
             return new PersistenceConfigArgs(persistenceMode, rdbSnapshotPeriod, rdbSnapshotStartTime);

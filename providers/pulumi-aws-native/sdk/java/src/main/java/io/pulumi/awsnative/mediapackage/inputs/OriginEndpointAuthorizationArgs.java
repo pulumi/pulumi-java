@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class OriginEndpointAuthorizationArgs extends io.pulumi.resources.R
     @Import(name="cdnIdentifierSecret", required=true)
       private final Output<String> cdnIdentifierSecret;
 
-    public Output<String> getCdnIdentifierSecret() {
+    public Output<String> cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
 
@@ -35,7 +36,7 @@ public final class OriginEndpointAuthorizationArgs extends io.pulumi.resources.R
     @Import(name="secretsRoleArn", required=true)
       private final Output<String> secretsRoleArn;
 
-    public Output<String> getSecretsRoleArn() {
+    public Output<String> secretsRoleArn() {
         return this.secretsRoleArn;
     }
 
@@ -47,8 +48,8 @@ public final class OriginEndpointAuthorizationArgs extends io.pulumi.resources.R
     }
 
     private OriginEndpointAuthorizationArgs() {
-        this.cdnIdentifierSecret = Output.empty();
-        this.secretsRoleArn = Output.empty();
+        this.cdnIdentifierSecret = Codegen.empty();
+        this.secretsRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {

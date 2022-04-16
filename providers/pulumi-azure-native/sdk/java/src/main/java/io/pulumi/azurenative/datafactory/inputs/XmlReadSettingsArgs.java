@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> getCompressionProperties() {
-        return this.compressionProperties == null ? Output.empty() : this.compressionProperties;
+    public Output<Object> compressionProperties() {
+        return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="detectDataType")
       private final @Nullable Output<Object> detectDataType;
 
-    public Output<Object> getDetectDataType() {
-        return this.detectDataType == null ? Output.empty() : this.detectDataType;
+    public Output<Object> detectDataType() {
+        return this.detectDataType == null ? Codegen.empty() : this.detectDataType;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespacePrefixes")
       private final @Nullable Output<Object> namespacePrefixes;
 
-    public Output<Object> getNamespacePrefixes() {
-        return this.namespacePrefixes == null ? Output.empty() : this.namespacePrefixes;
+    public Output<Object> namespacePrefixes() {
+        return this.namespacePrefixes == null ? Codegen.empty() : this.namespacePrefixes;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespaces")
       private final @Nullable Output<Object> namespaces;
 
-    public Output<Object> getNamespaces() {
-        return this.namespaces == null ? Output.empty() : this.namespaces;
+    public Output<Object> namespaces() {
+        return this.namespaces == null ? Codegen.empty() : this.namespaces;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -85,8 +86,8 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="validationMode")
       private final @Nullable Output<Object> validationMode;
 
-    public Output<Object> getValidationMode() {
-        return this.validationMode == null ? Output.empty() : this.validationMode;
+    public Output<Object> validationMode() {
+        return this.validationMode == null ? Codegen.empty() : this.validationMode;
     }
 
     public XmlReadSettingsArgs(
@@ -105,12 +106,12 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private XmlReadSettingsArgs() {
-        this.compressionProperties = Output.empty();
-        this.detectDataType = Output.empty();
-        this.namespacePrefixes = Output.empty();
-        this.namespaces = Output.empty();
-        this.type = Output.empty();
-        this.validationMode = Output.empty();
+        this.compressionProperties = Codegen.empty();
+        this.detectDataType = Codegen.empty();
+        this.namespacePrefixes = Codegen.empty();
+        this.namespaces = Codegen.empty();
+        this.type = Codegen.empty();
+        this.validationMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Output.ofNullable(compressionProperties);
+            this.compressionProperties = Codegen.ofNullable(compressionProperties);
             return this;
         }
         public Builder detectDataType(@Nullable Output<Object> detectDataType) {
@@ -156,7 +157,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder detectDataType(@Nullable Object detectDataType) {
-            this.detectDataType = Output.ofNullable(detectDataType);
+            this.detectDataType = Codegen.ofNullable(detectDataType);
             return this;
         }
         public Builder namespacePrefixes(@Nullable Output<Object> namespacePrefixes) {
@@ -164,7 +165,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namespacePrefixes(@Nullable Object namespacePrefixes) {
-            this.namespacePrefixes = Output.ofNullable(namespacePrefixes);
+            this.namespacePrefixes = Codegen.ofNullable(namespacePrefixes);
             return this;
         }
         public Builder namespaces(@Nullable Output<Object> namespaces) {
@@ -172,7 +173,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namespaces(@Nullable Object namespaces) {
-            this.namespaces = Output.ofNullable(namespaces);
+            this.namespaces = Codegen.ofNullable(namespaces);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -188,7 +189,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder validationMode(@Nullable Object validationMode) {
-            this.validationMode = Output.ofNullable(validationMode);
+            this.validationMode = Codegen.ofNullable(validationMode);
             return this;
         }        public XmlReadSettingsArgs build() {
             return new XmlReadSettingsArgs(compressionProperties, detectDataType, namespacePrefixes, namespaces, type, validationMode);

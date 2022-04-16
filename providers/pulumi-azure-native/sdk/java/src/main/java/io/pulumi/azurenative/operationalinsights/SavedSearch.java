@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The category of the saved search. This helps the user to find a saved search faster.
      * 
      */
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
     /**
@@ -57,7 +58,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return Saved search display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +72,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -85,7 +86,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The function alias if query serves as a function.
      * 
      */
-    public Output</* @Nullable */ String> getFunctionAlias() {
+    public Output</* @Nullable */ String> functionAlias() {
         return this.functionAlias;
     }
     /**
@@ -99,7 +100,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
-    public Output</* @Nullable */ String> getFunctionParameters() {
+    public Output</* @Nullable */ String> functionParameters() {
         return this.functionParameters;
     }
     /**
@@ -113,7 +114,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The query expression for the saved search.
      * 
      */
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
     /**
@@ -141,7 +142,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The tags attached to the saved search.
      * 
      */
-    public Output</* @Nullable */ List<TagResponse>> getTags() {
+    public Output</* @Nullable */ List<TagResponse>> tags() {
         return this.tags;
     }
     /**
@@ -155,7 +156,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -169,7 +170,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @return The version number of the query language. The current version is 2 and is the default.
      * 
      */
-    public Output</* @Nullable */ Double> getVersion() {
+    public Output</* @Nullable */ Double> version() {
         return this.version;
     }
 
@@ -195,7 +196,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SavedSearch(String name, SavedSearchArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:operationalinsights:SavedSearch", name, args == null ? SavedSearchArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:operationalinsights:SavedSearch", name, args == null ? SavedSearchArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SavedSearch(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

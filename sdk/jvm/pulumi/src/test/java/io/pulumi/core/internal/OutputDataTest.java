@@ -11,8 +11,8 @@ class OutputDataTest {
 
     @Test
     void testHashCodeEqualsContract() {
-        assertThat(OutputData.empty()).isEqualTo(OutputData.empty());
-        assertThat(OutputData.empty()).isNotEqualTo(OutputData.of(1));
+        assertThat(OutputData.ofNullable(null)).isEqualTo(OutputData.ofNullable(null));
+        assertThat(OutputData.ofNullable(null)).isNotEqualTo(OutputData.of(1));
     }
 
     @Test
@@ -28,11 +28,8 @@ class OutputDataTest {
 
     @Test
     void testTupleEmpty() {
-        var result = OutputData.tuple(
-                Output.empty(), Output.empty(), Output.empty(), Output.empty(),
-                Output.empty(), Output.empty(), Output.empty(), Output.empty()
-        ).join();
-
+        var e = Output.ofNullable(null);
+        var result = OutputData.tuple(e, e, e, e, e, e, e, e).join();
         assertThat(result.getValueNullable()).isNotNull()
                 .isEqualTo(Tuples.of(null, null, null, null, null, null, null, null));
     }
@@ -54,9 +51,9 @@ class OutputDataTest {
     void testAccumulator() {
         var result = OutputData.builder(null)
                 .accumulate(OutputData.of("foo"), (__, o2) -> o2)
-                .accumulate(OutputData.empty(), (o1, __) -> o1)
+                .accumulate(OutputData.ofNullable(null), (o1, __) -> o1)
                 .accumulate(OutputData.unknown(), (o1, __) -> o1)
-                .accumulate(OutputData.emptySecret(), (o1, __) -> o1)
+                .accumulate(OutputData.ofNullable(null).withIsSecret(true), (o1, __) -> o1)
                 .accumulate(OutputData.unknownSecret(), (o1, __) -> o1)
                 .build();
 

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The author of the gallery image.
      * 
      */
-    public Output<String> getAuthor() {
+    public Output<String> author() {
         return this.author;
     }
     /**
@@ -56,7 +57,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The creation date of the gallery image.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -70,7 +71,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The description of the gallery image.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -84,7 +85,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The icon of the gallery image.
      * 
      */
-    public Output<String> getIcon() {
+    public Output<String> icon() {
         return this.icon;
     }
     /**
@@ -98,7 +99,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The image reference of the gallery image.
      * 
      */
-    public Output<GalleryImageReferenceResponse> getImageReference() {
+    public Output<GalleryImageReferenceResponse> imageReference() {
         return this.imageReference;
     }
     /**
@@ -112,7 +113,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this gallery image is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -126,7 +127,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this gallery has been overridden for this lab account
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsOverride() {
+    public Output</* @Nullable */ Boolean> isOverride() {
         return this.isOverride;
     }
     /**
@@ -140,7 +141,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return Indicates if the plan has been authorized for programmatic deployment.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsPlanAuthorized() {
+    public Output</* @Nullable */ Boolean> isPlanAuthorized() {
         return this.isPlanAuthorized;
     }
     /**
@@ -154,7 +155,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The details of the latest operation. ex: status, error
      * 
      */
-    public Output<LatestOperationResultResponse> getLatestOperationResult() {
+    public Output<LatestOperationResultResponse> latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
@@ -168,7 +169,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -182,7 +183,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -196,7 +197,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The third party plan that applies to this image
      * 
      */
-    public Output<String> getPlanId() {
+    public Output<String> planId() {
         return this.planId;
     }
     /**
@@ -210,7 +211,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -224,7 +225,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -238,7 +239,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -252,7 +253,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> getUniqueIdentifier() {
+    public Output</* @Nullable */ String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
@@ -278,7 +279,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GalleryImage(String name, GalleryImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:labservices:GalleryImage", name, args == null ? GalleryImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:labservices:GalleryImage", name, args == null ? GalleryImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GalleryImage(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

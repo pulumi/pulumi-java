@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
-        return this.primary == null ? Output.empty() : this.primary;
+    public Output<Boolean> primary() {
+        return this.primary == null ? Codegen.empty() : this.primary;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
+    public Output<String> privateIPAddress() {
+        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Output.empty() : this.privateIPAllocationMethod;
+    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
+        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<SubResourceArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public ApplicationGatewayPrivateLinkIpConfigurationArgs(
@@ -104,12 +105,12 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
     }
 
     private ApplicationGatewayPrivateLinkIpConfigurationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.primary = Output.empty();
-        this.privateIPAddress = Output.empty();
-        this.privateIPAllocationMethod = Output.empty();
-        this.subnet = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.primary = Codegen.empty();
+        this.privateIPAddress = Codegen.empty();
+        this.privateIPAllocationMethod = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -155,7 +156,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder primary(@Nullable Output<Boolean> primary) {
@@ -163,7 +164,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
             return this;
         }
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Output.ofNullable(primary);
+            this.primary = Codegen.ofNullable(primary);
             return this;
         }
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
@@ -171,7 +172,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
             return this;
         }
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Output.ofNullable(privateIPAddress);
+            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
@@ -179,7 +180,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
+            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
             return this;
         }
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
@@ -187,7 +188,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
             return this;
         }
         public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public ApplicationGatewayPrivateLinkIpConfigurationArgs build() {
             return new ApplicationGatewayPrivateLinkIpConfigurationArgs(id, name, primary, privateIPAddress, privateIPAllocationMethod, subnet);

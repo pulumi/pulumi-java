@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+    public Output<Boolean> enable() {
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="ruleVisibility")
       private final @Nullable Output<String> ruleVisibility;
 
-    public Output<String> getRuleVisibility() {
-        return this.ruleVisibility == null ? Output.empty() : this.ruleVisibility;
+    public Output<String> ruleVisibility() {
+        return this.ruleVisibility == null ? Codegen.empty() : this.ruleVisibility;
     }
 
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs(
@@ -45,8 +46,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     }
 
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs() {
-        this.enable = Output.empty();
-        this.ruleVisibility = Output.empty();
+        this.enable = Codegen.empty();
+        this.ruleVisibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder ruleVisibility(@Nullable Output<String> ruleVisibility) {
@@ -84,7 +85,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             return this;
         }
         public Builder ruleVisibility(@Nullable String ruleVisibility) {
-            this.ruleVisibility = Output.ofNullable(ruleVisibility);
+            this.ruleVisibility = Codegen.ofNullable(ruleVisibility);
             return this;
         }        public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs(enable, ruleVisibility);

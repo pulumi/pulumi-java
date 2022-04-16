@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsPathTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,61 +25,61 @@ public class NetworkInsightsPath extends io.pulumi.resources.CustomResource {
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     @Export(name="destination", type=String.class, parameters={})
     private Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
     @Export(name="destinationIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationIp;
 
-    public Output</* @Nullable */ String> getDestinationIp() {
+    public Output</* @Nullable */ String> destinationIp() {
         return this.destinationIp;
     }
     @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destinationPort;
 
-    public Output</* @Nullable */ Integer> getDestinationPort() {
+    public Output</* @Nullable */ Integer> destinationPort() {
         return this.destinationPort;
     }
     @Export(name="networkInsightsPathArn", type=String.class, parameters={})
     private Output<String> networkInsightsPathArn;
 
-    public Output<String> getNetworkInsightsPathArn() {
+    public Output<String> networkInsightsPathArn() {
         return this.networkInsightsPathArn;
     }
     @Export(name="networkInsightsPathId", type=String.class, parameters={})
     private Output<String> networkInsightsPathId;
 
-    public Output<String> getNetworkInsightsPathId() {
+    public Output<String> networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
     @Export(name="protocol", type=NetworkInsightsPathProtocol.class, parameters={})
     private Output<NetworkInsightsPathProtocol> protocol;
 
-    public Output<NetworkInsightsPathProtocol> getProtocol() {
+    public Output<NetworkInsightsPathProtocol> protocol() {
         return this.protocol;
     }
     @Export(name="source", type=String.class, parameters={})
     private Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
     @Export(name="sourceIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIp;
 
-    public Output</* @Nullable */ String> getSourceIp() {
+    public Output</* @Nullable */ String> sourceIp() {
         return this.sourceIp;
     }
     @Export(name="tags", type=List.class, parameters={NetworkInsightsPathTag.class})
     private Output</* @Nullable */ List<NetworkInsightsPathTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsPathTag>> getTags() {
+    public Output</* @Nullable */ List<NetworkInsightsPathTag>> tags() {
         return this.tags;
     }
 
@@ -104,7 +105,7 @@ public class NetworkInsightsPath extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInsightsPath(String name, NetworkInsightsPathArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:NetworkInsightsPath", name, args == null ? NetworkInsightsPathArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:NetworkInsightsPath", name, args == null ? NetworkInsightsPathArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkInsightsPath(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.InstanceGroupArgs;
 import io.pulumi.googlenative.compute_beta.outputs.NamedPortResponse;
@@ -31,7 +32,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The creation timestamp for this instance group in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -45,7 +46,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The fingerprint of the named ports. The system uses this fingerprint to detect conflicts when multiple users change the named ports concurrently.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -73,7 +74,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The resource type, which is always compute#instanceGroup for instance groups.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +88,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return  Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports apply to all instances in this instance group.
      * 
      */
-    public Output<List<NamedPortResponse>> getNamedPorts() {
+    public Output<List<NamedPortResponse>> namedPorts() {
         return this.namedPorts;
     }
     /**
@@ -115,7 +116,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The URL of the network to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -129,7 +130,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The URL of the region where the instance group is located (for regional resources).
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -143,7 +144,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The URL for this instance group. The server generates this URL.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -157,7 +158,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The total number of instances in the instance group.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -171,7 +172,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The URL of the subnetwork to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
      */
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
     /**
@@ -185,7 +186,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The URL of the zone where the instance group is located (for zonal resources).
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -211,7 +212,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceGroup(String name, @Nullable InstanceGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:InstanceGroup", name, args == null ? InstanceGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:InstanceGroup", name, args == null ? InstanceGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

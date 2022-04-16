@@ -44,7 +44,7 @@ public final class RuleEmailActionResponse {
      * the list of administrator's custom email addresses to notify of the activation of the alert.
      * 
     */
-    public List<String> getCustomEmails() {
+    public List<String> customEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
     /**
@@ -52,14 +52,14 @@ public final class RuleEmailActionResponse {
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
      * 
     */
-    public Optional<Boolean> getSendToServiceOwners() {
+    public Optional<Boolean> sendToServiceOwners() {
         return Optional.ofNullable(this.sendToServiceOwners);
     }
 

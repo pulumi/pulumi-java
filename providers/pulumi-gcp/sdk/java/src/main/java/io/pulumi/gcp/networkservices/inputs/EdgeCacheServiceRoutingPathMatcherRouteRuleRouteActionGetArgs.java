@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs;
@@ -24,8 +25,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
     @Import(name="cdnPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> cdnPolicy;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> getCdnPolicy() {
-        return this.cdnPolicy == null ? Output.empty() : this.cdnPolicy;
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> cdnPolicy() {
+        return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
     @Import(name="corsPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> getCorsPolicy() {
-        return this.corsPolicy == null ? Output.empty() : this.corsPolicy;
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy() {
+        return this.corsPolicy == null ? Codegen.empty() : this.corsPolicy;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
     @Import(name="urlRewrite")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> getUrlRewrite() {
-        return this.urlRewrite == null ? Output.empty() : this.urlRewrite;
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite() {
+        return this.urlRewrite == null ? Codegen.empty() : this.urlRewrite;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs(
@@ -62,9 +63,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs() {
-        this.cdnPolicy = Output.empty();
-        this.corsPolicy = Output.empty();
-        this.urlRewrite = Output.empty();
+        this.cdnPolicy = Codegen.empty();
+        this.corsPolicy = Codegen.empty();
+        this.urlRewrite = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
             return this;
         }
         public Builder cdnPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs cdnPolicy) {
-            this.cdnPolicy = Output.ofNullable(cdnPolicy);
+            this.cdnPolicy = Codegen.ofNullable(cdnPolicy);
             return this;
         }
         public Builder corsPolicy(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy) {
@@ -104,7 +105,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
             return this;
         }
         public Builder corsPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs corsPolicy) {
-            this.corsPolicy = Output.ofNullable(corsPolicy);
+            this.corsPolicy = Codegen.ofNullable(corsPolicy);
             return this;
         }
         public Builder urlRewrite(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite) {
@@ -112,7 +113,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
             return this;
         }
         public Builder urlRewrite(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs urlRewrite) {
-            this.urlRewrite = Output.ofNullable(urlRewrite);
+            this.urlRewrite = Codegen.ofNullable(urlRewrite);
             return this;
         }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs(cdnPolicy, corsPolicy, urlRewrite);

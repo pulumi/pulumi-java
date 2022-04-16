@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+    public Output<String> environmentId() {
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalServiceFabricId")
       private final @Nullable Output<String> externalServiceFabricId;
 
-    public Output<String> getExternalServiceFabricId() {
-        return this.externalServiceFabricId == null ? Output.empty() : this.externalServiceFabricId;
+    public Output<String> externalServiceFabricId() {
+        return this.externalServiceFabricId == null ? Codegen.empty() : this.externalServiceFabricId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -55,8 +56,8 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,8 +89,8 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -123,14 +124,14 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceFabricArgs() {
-        this.environmentId = Output.empty();
-        this.externalServiceFabricId = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.userName = Output.empty();
+        this.environmentId = Codegen.empty();
+        this.externalServiceFabricId = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder externalServiceFabricId(@Nullable Output<String> externalServiceFabricId) {
@@ -180,7 +181,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalServiceFabricId(@Nullable String externalServiceFabricId) {
-            this.externalServiceFabricId = Output.ofNullable(externalServiceFabricId);
+            this.externalServiceFabricId = Codegen.ofNullable(externalServiceFabricId);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -196,7 +197,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -204,7 +205,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -220,7 +221,7 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userName(Output<String> userName) {

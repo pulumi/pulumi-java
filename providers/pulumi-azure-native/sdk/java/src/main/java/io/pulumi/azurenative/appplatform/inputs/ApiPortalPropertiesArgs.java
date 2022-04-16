@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="gatewayIds")
       private final @Nullable Output<List<String>> gatewayIds;
 
-    public Output<List<String>> getGatewayIds() {
-        return this.gatewayIds == null ? Output.empty() : this.gatewayIds;
+    public Output<List<String>> gatewayIds() {
+        return this.gatewayIds == null ? Codegen.empty() : this.gatewayIds;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
-    public Output<Boolean> getHttpsOnly() {
-        return this.httpsOnly == null ? Output.empty() : this.httpsOnly;
+    public Output<Boolean> httpsOnly() {
+        return this.httpsOnly == null ? Codegen.empty() : this.httpsOnly;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> getPublic_() {
-        return this.public_ == null ? Output.empty() : this.public_;
+    public Output<Boolean> public_() {
+        return this.public_ == null ? Codegen.empty() : this.public_;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceUrls")
       private final @Nullable Output<List<String>> sourceUrls;
 
-    public Output<List<String>> getSourceUrls() {
-        return this.sourceUrls == null ? Output.empty() : this.sourceUrls;
+    public Output<List<String>> sourceUrls() {
+        return this.sourceUrls == null ? Codegen.empty() : this.sourceUrls;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="ssoProperties")
       private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
-    public Output<SsoPropertiesArgs> getSsoProperties() {
-        return this.ssoProperties == null ? Output.empty() : this.ssoProperties;
+    public Output<SsoPropertiesArgs> ssoProperties() {
+        return this.ssoProperties == null ? Codegen.empty() : this.ssoProperties;
     }
 
     public ApiPortalPropertiesArgs(
@@ -90,11 +91,11 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     private ApiPortalPropertiesArgs() {
-        this.gatewayIds = Output.empty();
-        this.httpsOnly = Output.empty();
-        this.public_ = Output.empty();
-        this.sourceUrls = Output.empty();
-        this.ssoProperties = Output.empty();
+        this.gatewayIds = Codegen.empty();
+        this.httpsOnly = Codegen.empty();
+        this.public_ = Codegen.empty();
+        this.sourceUrls = Codegen.empty();
+        this.ssoProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder gatewayIds(@Nullable List<String> gatewayIds) {
-            this.gatewayIds = Output.ofNullable(gatewayIds);
+            this.gatewayIds = Codegen.ofNullable(gatewayIds);
             return this;
         }
         public Builder gatewayIds(String... gatewayIds) {
@@ -141,7 +142,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            this.httpsOnly = Output.ofNullable(httpsOnly);
+            this.httpsOnly = Codegen.ofNullable(httpsOnly);
             return this;
         }
         public Builder public_(@Nullable Output<Boolean> public_) {
@@ -149,7 +150,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder public_(@Nullable Boolean public_) {
-            this.public_ = Output.ofNullable(public_);
+            this.public_ = Codegen.ofNullable(public_);
             return this;
         }
         public Builder sourceUrls(@Nullable Output<List<String>> sourceUrls) {
@@ -157,7 +158,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceUrls(@Nullable List<String> sourceUrls) {
-            this.sourceUrls = Output.ofNullable(sourceUrls);
+            this.sourceUrls = Codegen.ofNullable(sourceUrls);
             return this;
         }
         public Builder sourceUrls(String... sourceUrls) {
@@ -168,7 +169,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ssoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
-            this.ssoProperties = Output.ofNullable(ssoProperties);
+            this.ssoProperties = Codegen.ofNullable(ssoProperties);
             return this;
         }        public ApiPortalPropertiesArgs build() {
             return new ApiPortalPropertiesArgs(gatewayIds, httpsOnly, public_, sourceUrls, ssoProperties);

@@ -33,14 +33,14 @@ public final class ServerEndpointRecallErrorResponse {
      * Count of occurences of the error
      * 
     */
-    public Double getCount() {
+    public Double count() {
         return this.count;
     }
     /**
      * Error code (HResult)
      * 
     */
-    public Integer getErrorCode() {
+    public Integer errorCode() {
         return this.errorCode;
     }
 

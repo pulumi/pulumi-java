@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.ExperimentArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse;
@@ -34,7 +35,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Creation time of this experiment.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -48,7 +49,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The definition of the experiment.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse> getDefinition() {
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse> definition() {
         return this.definition;
     }
     /**
@@ -62,7 +63,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The human-readable description of the experiment.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -76,7 +77,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -90,7 +91,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return End time of this experiment.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -104,7 +105,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
      * 
      */
-    public Output<String> getExperimentLength() {
+    public Output<String> experimentLength() {
         return this.experimentLength;
     }
     /**
@@ -118,7 +119,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Last update time of this experiment.
      * 
      */
-    public Output<String> getLastUpdateTime() {
+    public Output<String> lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
@@ -132,7 +133,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The name of the experiment. Format: projects//locations//agents//environments//experiments/..
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +147,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Inference result of the experiment.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultResponse> getResult() {
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultResponse> result() {
         return this.result;
     }
     /**
@@ -160,7 +161,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1RolloutConfigResponse> getRolloutConfig() {
+    public Output<GoogleCloudDialogflowCxV3beta1RolloutConfigResponse> rolloutConfig() {
         return this.rolloutConfig;
     }
     /**
@@ -174,7 +175,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
      * 
      */
-    public Output<String> getRolloutFailureReason() {
+    public Output<String> rolloutFailureReason() {
         return this.rolloutFailureReason;
     }
     /**
@@ -188,7 +189,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return State of the auto rollout process.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1RolloutStateResponse> getRolloutState() {
+    public Output<GoogleCloudDialogflowCxV3beta1RolloutStateResponse> rolloutState() {
         return this.rolloutState;
     }
     /**
@@ -202,7 +203,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Start time of this experiment.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -216,7 +217,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -230,7 +231,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The history of updates to the experiment variants.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse>> getVariantsHistory() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse>> variantsHistory() {
         return this.variantsHistory;
     }
 
@@ -256,7 +257,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Experiment(String name, ExperimentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3beta1:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3beta1:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Experiment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

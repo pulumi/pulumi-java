@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
      * @return Linked storage accounts type.
      * 
      */
-    public Output<String> getDataSourceType() {
+    public Output<String> dataSourceType() {
         return this.dataSourceType;
     }
     /**
@@ -55,7 +56,7 @@ public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
      * @return Linked storage accounts resources ids.
      * 
      */
-    public Output</* @Nullable */ List<String>> getStorageAccountIds() {
+    public Output</* @Nullable */ List<String>> storageAccountIds() {
         return this.storageAccountIds;
     }
     /**
@@ -83,7 +84,7 @@ public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LinkedStorageAccount(String name, LinkedStorageAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:operationalinsights:LinkedStorageAccount", name, args == null ? LinkedStorageAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:operationalinsights:LinkedStorageAccount", name, args == null ? LinkedStorageAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LinkedStorageAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

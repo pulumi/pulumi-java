@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectionRuleArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
     @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
-        return this.infoTypes == null ? Output.empty() : this.infoTypes;
+    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes() {
+        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
     @Import(name="rules")
       private final @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;
 
-    public Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public GooglePrivacyDlpV2InspectionRuleSetArgs(
@@ -50,8 +51,8 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
     }
 
     private GooglePrivacyDlpV2InspectionRuleSetArgs() {
-        this.infoTypes = Output.empty();
-        this.rules = Output.empty();
+        this.infoTypes = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
             return this;
         }
         public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
-            this.infoTypes = Output.ofNullable(infoTypes);
+            this.infoTypes = Codegen.ofNullable(infoTypes);
             return this;
         }
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
@@ -92,7 +93,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
             return this;
         }
         public Builder rules(@Nullable List<GooglePrivacyDlpV2InspectionRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(GooglePrivacyDlpV2InspectionRuleArgs... rules) {

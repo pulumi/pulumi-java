@@ -6,6 +6,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupTargetTrackingConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +23,14 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
     @Import(name="estimatedInstanceWarmup")
       private final @Nullable Output<Double> estimatedInstanceWarmup;
 
-    public Output<Double> getEstimatedInstanceWarmup() {
-        return this.estimatedInstanceWarmup == null ? Output.empty() : this.estimatedInstanceWarmup;
+    public Output<Double> estimatedInstanceWarmup() {
+        return this.estimatedInstanceWarmup == null ? Codegen.empty() : this.estimatedInstanceWarmup;
     }
 
     @Import(name="targetTrackingConfiguration", required=true)
       private final Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
-    public Output<GameServerGroupTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
+    public Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration() {
         return this.targetTrackingConfiguration;
     }
 
@@ -41,8 +42,8 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
     }
 
     private GameServerGroupAutoScalingPolicyArgs() {
-        this.estimatedInstanceWarmup = Output.empty();
-        this.targetTrackingConfiguration = Output.empty();
+        this.estimatedInstanceWarmup = Codegen.empty();
+        this.targetTrackingConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
             return this;
         }
         public Builder estimatedInstanceWarmup(@Nullable Double estimatedInstanceWarmup) {
-            this.estimatedInstanceWarmup = Output.ofNullable(estimatedInstanceWarmup);
+            this.estimatedInstanceWarmup = Codegen.ofNullable(estimatedInstanceWarmup);
             return this;
         }
         public Builder targetTrackingConfiguration(Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration) {

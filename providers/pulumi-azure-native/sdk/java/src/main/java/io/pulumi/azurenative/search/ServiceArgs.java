@@ -10,6 +10,7 @@ import io.pulumi.azurenative.search.inputs.NetworkRuleSetArgs;
 import io.pulumi.azurenative.search.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostingMode")
       private final @Nullable Output<HostingMode> hostingMode;
 
-    public Output<HostingMode> getHostingMode() {
-        return this.hostingMode == null ? Output.empty() : this.hostingMode;
+    public Output<HostingMode> hostingMode() {
+        return this.hostingMode == null ? Codegen.empty() : this.hostingMode;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkRuleSet")
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
-        return this.networkRuleSet == null ? Output.empty() : this.networkRuleSet;
+    public Output<NetworkRuleSetArgs> networkRuleSet() {
+        return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionCount")
       private final @Nullable Output<Integer> partitionCount;
 
-    public Output<Integer> getPartitionCount() {
-        return this.partitionCount == null ? Output.empty() : this.partitionCount;
+    public Output<Integer> partitionCount() {
+        return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<PublicNetworkAccess> publicNetworkAccess;
 
-    public Output<PublicNetworkAccess> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<PublicNetworkAccess> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Output.empty() : this.replicaCount;
+    public Output<Integer> replicaCount() {
+        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,8 +117,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="searchServiceName")
       private final @Nullable Output<String> searchServiceName;
 
-    public Output<String> getSearchServiceName() {
-        return this.searchServiceName == null ? Output.empty() : this.searchServiceName;
+    public Output<String> searchServiceName() {
+        return this.searchServiceName == null ? Codegen.empty() : this.searchServiceName;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServiceArgs(
@@ -154,13 +155,13 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> searchServiceName,
         @Nullable Output<SkuArgs> sku,
         @Nullable Output<Map<String,String>> tags) {
-        this.hostingMode = hostingMode == null ? Output.ofNullable(io.pulumi.azurenative.search.enums.HostingMode.Default_) : hostingMode;
+        this.hostingMode = hostingMode == null ? Codegen.ofNullable(io.pulumi.azurenative.search.enums.HostingMode.Default_) : hostingMode;
         this.identity = identity;
         this.location = location;
         this.networkRuleSet = networkRuleSet;
-        this.partitionCount = partitionCount == null ? Output.ofNullable(1) : partitionCount;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofNullable(io.pulumi.azurenative.search.enums.PublicNetworkAccess.Enabled) : publicNetworkAccess;
-        this.replicaCount = replicaCount == null ? Output.ofNullable(1) : replicaCount;
+        this.partitionCount = partitionCount == null ? Codegen.ofNullable(1) : partitionCount;
+        this.publicNetworkAccess = publicNetworkAccess == null ? Codegen.ofNullable(io.pulumi.azurenative.search.enums.PublicNetworkAccess.Enabled) : publicNetworkAccess;
+        this.replicaCount = replicaCount == null ? Codegen.ofNullable(1) : replicaCount;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.searchServiceName = searchServiceName;
         this.sku = sku;
@@ -168,17 +169,17 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.hostingMode = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.networkRuleSet = Output.empty();
-        this.partitionCount = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.replicaCount = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.searchServiceName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.hostingMode = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkRuleSet = Codegen.empty();
+        this.partitionCount = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.replicaCount = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.searchServiceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostingMode(@Nullable HostingMode hostingMode) {
-            this.hostingMode = Output.ofNullable(hostingMode);
+            this.hostingMode = Codegen.ofNullable(hostingMode);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -234,7 +235,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -242,7 +243,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
@@ -250,7 +251,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
-            this.networkRuleSet = Output.ofNullable(networkRuleSet);
+            this.networkRuleSet = Codegen.ofNullable(networkRuleSet);
             return this;
         }
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
@@ -258,7 +259,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Output.ofNullable(partitionCount);
+            this.partitionCount = Codegen.ofNullable(partitionCount);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccess> publicNetworkAccess) {
@@ -266,7 +267,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable PublicNetworkAccess publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
@@ -274,7 +275,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Output.ofNullable(replicaCount);
+            this.replicaCount = Codegen.ofNullable(replicaCount);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -290,7 +291,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder searchServiceName(@Nullable String searchServiceName) {
-            this.searchServiceName = Output.ofNullable(searchServiceName);
+            this.searchServiceName = Codegen.ofNullable(searchServiceName);
             return this;
         }
         public Builder sku(@Nullable Output<SkuArgs> sku) {
@@ -298,7 +299,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -306,7 +307,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(hostingMode, identity, location, networkRuleSet, partitionCount, publicNetworkAccess, replicaCount, resourceGroupName, searchServiceName, sku, tags);

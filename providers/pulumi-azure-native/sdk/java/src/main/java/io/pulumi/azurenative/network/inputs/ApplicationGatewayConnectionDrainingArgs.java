@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     @Import(name="drainTimeoutInSec", required=true)
       private final Output<Integer> drainTimeoutInSec;
 
-    public Output<Integer> getDrainTimeoutInSec() {
+    public Output<Integer> drainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
 
@@ -36,7 +37,7 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -48,8 +49,8 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     }
 
     private ApplicationGatewayConnectionDrainingArgs() {
-        this.drainTimeoutInSec = Output.empty();
-        this.enabled = Output.empty();
+        this.drainTimeoutInSec = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+    public Output<String> packageName() {
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
     @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> getSha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Output.empty() : this.sha1Fingerprint;
+    public Output<String> sha1Fingerprint() {
+        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
     }
 
     public V2AndroidApplicationArgs(
@@ -48,8 +49,8 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
     }
 
     private V2AndroidApplicationArgs() {
-        this.packageName = Output.empty();
-        this.sha1Fingerprint = Output.empty();
+        this.packageName = Codegen.empty();
+        this.sha1Fingerprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
@@ -87,7 +88,7 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
+            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
             return this;
         }        public V2AndroidApplicationArgs build() {
             return new V2AndroidApplicationArgs(packageName, sha1Fingerprint);

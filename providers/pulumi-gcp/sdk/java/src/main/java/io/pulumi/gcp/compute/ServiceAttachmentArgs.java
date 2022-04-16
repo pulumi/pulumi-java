@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ServiceAttachmentConsumerAcceptListArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="connectionPreference", required=true)
       private final Output<String> connectionPreference;
 
-    public Output<String> getConnectionPreference() {
+    public Output<String> connectionPreference() {
         return this.connectionPreference;
     }
 
@@ -38,8 +39,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="consumerAcceptLists")
       private final @Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists;
 
-    public Output<List<ServiceAttachmentConsumerAcceptListArgs>> getConsumerAcceptLists() {
-        return this.consumerAcceptLists == null ? Output.empty() : this.consumerAcceptLists;
+    public Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists() {
+        return this.consumerAcceptLists == null ? Codegen.empty() : this.consumerAcceptLists;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="consumerRejectLists")
       private final @Nullable Output<List<String>> consumerRejectLists;
 
-    public Output<List<String>> getConsumerRejectLists() {
-        return this.consumerRejectLists == null ? Output.empty() : this.consumerRejectLists;
+    public Output<List<String>> consumerRejectLists() {
+        return this.consumerRejectLists == null ? Codegen.empty() : this.consumerRejectLists;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enableProxyProtocol", required=true)
       private final Output<Boolean> enableProxyProtocol;
 
-    public Output<Boolean> getEnableProxyProtocol() {
+    public Output<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol;
     }
 
@@ -90,8 +91,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="natSubnets", required=true)
       private final Output<List<String>> natSubnets;
 
-    public Output<List<String>> getNatSubnets() {
+    public Output<List<String>> natSubnets() {
         return this.natSubnets;
     }
 
@@ -113,8 +114,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetService", required=true)
       private final Output<String> targetService;
 
-    public Output<String> getTargetService() {
+    public Output<String> targetService() {
         return this.targetService;
     }
 
@@ -164,16 +165,16 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceAttachmentArgs() {
-        this.connectionPreference = Output.empty();
-        this.consumerAcceptLists = Output.empty();
-        this.consumerRejectLists = Output.empty();
-        this.description = Output.empty();
-        this.enableProxyProtocol = Output.empty();
-        this.name = Output.empty();
-        this.natSubnets = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.targetService = Output.empty();
+        this.connectionPreference = Codegen.empty();
+        this.consumerAcceptLists = Codegen.empty();
+        this.consumerRejectLists = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableProxyProtocol = Codegen.empty();
+        this.name = Codegen.empty();
+        this.natSubnets = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.targetService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -227,7 +228,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerAcceptListArgs> consumerAcceptLists) {
-            this.consumerAcceptLists = Output.ofNullable(consumerAcceptLists);
+            this.consumerAcceptLists = Codegen.ofNullable(consumerAcceptLists);
             return this;
         }
         public Builder consumerAcceptLists(ServiceAttachmentConsumerAcceptListArgs... consumerAcceptLists) {
@@ -238,7 +239,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
-            this.consumerRejectLists = Output.ofNullable(consumerRejectLists);
+            this.consumerRejectLists = Codegen.ofNullable(consumerRejectLists);
             return this;
         }
         public Builder consumerRejectLists(String... consumerRejectLists) {
@@ -249,7 +250,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableProxyProtocol(Output<Boolean> enableProxyProtocol) {
@@ -265,7 +266,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder natSubnets(Output<List<String>> natSubnets) {
@@ -284,7 +285,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -292,7 +293,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder targetService(Output<String> targetService) {

@@ -21,14 +21,14 @@ public final class RepositoryLifecyclePolicy extends io.pulumi.resources.InvokeA
     @Import(name="lifecyclePolicyText")
       private final @Nullable String lifecyclePolicyText;
 
-    public Optional<String> getLifecyclePolicyText() {
+    public Optional<String> lifecyclePolicyText() {
         return this.lifecyclePolicyText == null ? Optional.empty() : Optional.ofNullable(this.lifecyclePolicyText);
     }
 
     @Import(name="registryId")
       private final @Nullable String registryId;
 
-    public Optional<String> getRegistryId() {
+    public Optional<String> registryId() {
         return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
     }
 

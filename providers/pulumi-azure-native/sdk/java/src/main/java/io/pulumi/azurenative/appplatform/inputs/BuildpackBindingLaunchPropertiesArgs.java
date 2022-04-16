@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     @Import(name="secrets")
       private final @Nullable Output<Map<String,String>> secrets;
 
-    public Output<Map<String,String>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+    public Output<Map<String,String>> secrets() {
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     public BuildpackBindingLaunchPropertiesArgs(
@@ -49,8 +50,8 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     }
 
     private BuildpackBindingLaunchPropertiesArgs() {
-        this.properties = Output.empty();
-        this.secrets = Output.empty();
+        this.properties = Codegen.empty();
+        this.secrets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder secrets(@Nullable Output<Map<String,String>> secrets) {
@@ -88,7 +89,7 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder secrets(@Nullable Map<String,String> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }        public BuildpackBindingLaunchPropertiesArgs build() {
             return new BuildpackBindingLaunchPropertiesArgs(properties, secrets);

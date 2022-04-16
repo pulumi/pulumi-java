@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Object Id of user creating the query.
      * 
      */
-    public Output<String> getAuthor() {
+    public Output<String> author() {
         return this.author;
     }
     /**
@@ -59,7 +60,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Body of the query.
      * 
      */
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body;
     }
     /**
@@ -73,7 +74,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Description of the query.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +88,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Unique display name for your query within the Query Pack.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -101,7 +102,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Additional properties that can be set for the query.
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -129,7 +130,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return The related metadata items for the function.
      * 
      */
-    public Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> getRelated() {
+    public Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> related() {
         return this.related;
     }
     /**
@@ -143,7 +144,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -157,7 +158,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Tags associated with the query.
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> getTags() {
+    public Output</* @Nullable */ Map<String,List<String>>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +172,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Creation Date for the Log Analytics Query, in ISO 8601 format.
      * 
      */
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -185,7 +186,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Last modified date of the Log Analytics Query, in ISO 8601 format.
      * 
      */
-    public Output<String> getTimeModified() {
+    public Output<String> timeModified() {
         return this.timeModified;
     }
     /**
@@ -199,7 +200,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -225,7 +226,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Query(String name, QueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:operationalinsights:Query", name, args == null ? QueryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:operationalinsights:Query", name, args == null ? QueryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Query(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

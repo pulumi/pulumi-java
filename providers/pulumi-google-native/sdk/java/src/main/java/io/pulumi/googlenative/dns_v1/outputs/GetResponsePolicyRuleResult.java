@@ -50,31 +50,31 @@ public final class GetResponsePolicyRuleResult {
      * Answer this query with a behavior rather than DNS data.
      * 
     */
-    public String getBehavior() {
+    public String behavior() {
         return this.behavior;
     }
     /**
      * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
      * 
     */
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
      * 
     */
-    public ResponsePolicyRuleLocalDataResponse getLocalData() {
+    public ResponsePolicyRuleLocalDataResponse localData() {
         return this.localData;
     }
     /**
      * An identifier for this rule. Must be unique with the ResponsePolicy.
      * 
     */
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 

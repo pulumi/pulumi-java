@@ -8,6 +8,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionScpActionDefinitionGet
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionSsmActionDefinitionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,8 +24,8 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
     @Import(name="iamActionDefinition")
       private final @Nullable Output<BudgetActionDefinitionIamActionDefinitionGetArgs> iamActionDefinition;
 
-    public Output<BudgetActionDefinitionIamActionDefinitionGetArgs> getIamActionDefinition() {
-        return this.iamActionDefinition == null ? Output.empty() : this.iamActionDefinition;
+    public Output<BudgetActionDefinitionIamActionDefinitionGetArgs> iamActionDefinition() {
+        return this.iamActionDefinition == null ? Codegen.empty() : this.iamActionDefinition;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
     @Import(name="scpActionDefinition")
       private final @Nullable Output<BudgetActionDefinitionScpActionDefinitionGetArgs> scpActionDefinition;
 
-    public Output<BudgetActionDefinitionScpActionDefinitionGetArgs> getScpActionDefinition() {
-        return this.scpActionDefinition == null ? Output.empty() : this.scpActionDefinition;
+    public Output<BudgetActionDefinitionScpActionDefinitionGetArgs> scpActionDefinition() {
+        return this.scpActionDefinition == null ? Codegen.empty() : this.scpActionDefinition;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
     @Import(name="ssmActionDefinition")
       private final @Nullable Output<BudgetActionDefinitionSsmActionDefinitionGetArgs> ssmActionDefinition;
 
-    public Output<BudgetActionDefinitionSsmActionDefinitionGetArgs> getSsmActionDefinition() {
-        return this.ssmActionDefinition == null ? Output.empty() : this.ssmActionDefinition;
+    public Output<BudgetActionDefinitionSsmActionDefinitionGetArgs> ssmActionDefinition() {
+        return this.ssmActionDefinition == null ? Codegen.empty() : this.ssmActionDefinition;
     }
 
     public BudgetActionDefinitionGetArgs(
@@ -59,9 +60,9 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
     }
 
     private BudgetActionDefinitionGetArgs() {
-        this.iamActionDefinition = Output.empty();
-        this.scpActionDefinition = Output.empty();
-        this.ssmActionDefinition = Output.empty();
+        this.iamActionDefinition = Codegen.empty();
+        this.scpActionDefinition = Codegen.empty();
+        this.ssmActionDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder iamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinitionGetArgs iamActionDefinition) {
-            this.iamActionDefinition = Output.ofNullable(iamActionDefinition);
+            this.iamActionDefinition = Codegen.ofNullable(iamActionDefinition);
             return this;
         }
         public Builder scpActionDefinition(@Nullable Output<BudgetActionDefinitionScpActionDefinitionGetArgs> scpActionDefinition) {
@@ -101,7 +102,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinitionGetArgs scpActionDefinition) {
-            this.scpActionDefinition = Output.ofNullable(scpActionDefinition);
+            this.scpActionDefinition = Codegen.ofNullable(scpActionDefinition);
             return this;
         }
         public Builder ssmActionDefinition(@Nullable Output<BudgetActionDefinitionSsmActionDefinitionGetArgs> ssmActionDefinition) {
@@ -109,7 +110,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinitionGetArgs ssmActionDefinition) {
-            this.ssmActionDefinition = Output.ofNullable(ssmActionDefinition);
+            this.ssmActionDefinition = Codegen.ofNullable(ssmActionDefinition);
             return this;
         }        public BudgetActionDefinitionGetArgs build() {
             return new BudgetActionDefinitionGetArgs(iamActionDefinition, scpActionDefinition, ssmActionDefinition);

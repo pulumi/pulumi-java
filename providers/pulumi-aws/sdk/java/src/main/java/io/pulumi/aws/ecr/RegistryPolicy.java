@@ -9,6 +9,7 @@ import io.pulumi.aws.ecr.inputs.RegistryPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -45,7 +46,7 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
      * @return The registry ID where the registry was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -71,7 +72,7 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistryPolicy(String name, RegistryPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/registryPolicy:RegistryPolicy", name, args == null ? RegistryPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/registryPolicy:RegistryPolicy", name, args == null ? RegistryPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegistryPolicy(String name, Output<String> id, @Nullable RegistryPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

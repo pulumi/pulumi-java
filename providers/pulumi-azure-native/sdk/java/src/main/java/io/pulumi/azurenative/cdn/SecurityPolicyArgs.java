@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
-    public Output<SecurityPolicyWebApplicationFirewallParametersArgs> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -44,7 +45,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityPolicyName")
       private final @Nullable Output<String> securityPolicyName;
 
-    public Output<String> getSecurityPolicyName() {
-        return this.securityPolicyName == null ? Output.empty() : this.securityPolicyName;
+    public Output<String> securityPolicyName() {
+        return this.securityPolicyName == null ? Codegen.empty() : this.securityPolicyName;
     }
 
     public SecurityPolicyArgs(
@@ -71,10 +72,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityPolicyArgs() {
-        this.parameters = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.securityPolicyName = Output.empty();
+        this.parameters = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.securityPolicyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder profileName(Output<String> profileName) {
@@ -132,7 +133,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityPolicyName(@Nullable String securityPolicyName) {
-            this.securityPolicyName = Output.ofNullable(securityPolicyName);
+            this.securityPolicyName = Codegen.ofNullable(securityPolicyName);
             return this;
         }        public SecurityPolicyArgs build() {
             return new SecurityPolicyArgs(parameters, profileName, resourceGroupName, securityPolicyName);

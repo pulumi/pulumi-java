@@ -6,6 +6,7 @@ package io.pulumi.aws.batch.inputs;
 import io.pulumi.aws.batch.inputs.SchedulingPolicyFairSharePolicyGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,15 +24,15 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="fairSharePolicy")
       private final @Nullable Output<SchedulingPolicyFairSharePolicyGetArgs> fairSharePolicy;
 
-    public Output<SchedulingPolicyFairSharePolicyGetArgs> getFairSharePolicy() {
-        return this.fairSharePolicy == null ? Output.empty() : this.fairSharePolicy;
+    public Output<SchedulingPolicyFairSharePolicyGetArgs> fairSharePolicy() {
+        return this.fairSharePolicy == null ? Codegen.empty() : this.fairSharePolicy;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public SchedulingPolicyState(
@@ -81,11 +82,11 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     private SchedulingPolicyState() {
-        this.arn = Output.empty();
-        this.fairSharePolicy = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.fairSharePolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder fairSharePolicy(@Nullable Output<SchedulingPolicyFairSharePolicyGetArgs> fairSharePolicy) {
@@ -129,7 +130,7 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fairSharePolicy(@Nullable SchedulingPolicyFairSharePolicyGetArgs fairSharePolicy) {
-            this.fairSharePolicy = Output.ofNullable(fairSharePolicy);
+            this.fairSharePolicy = Codegen.ofNullable(fairSharePolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -137,7 +138,7 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -145,7 +146,7 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -153,7 +154,7 @@ public final class SchedulingPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public SchedulingPolicyState build() {
             return new SchedulingPolicyState(arn, fairSharePolicy, name, tags, tagsAll);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.events.inputs.ConnectionClientParametersArgs;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +21,29 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientParameters", required=true)
       private final Output<ConnectionClientParametersArgs> clientParameters;
 
-    public Output<ConnectionClientParametersArgs> getClientParameters() {
+    public Output<ConnectionClientParametersArgs> clientParameters() {
         return this.clientParameters;
     }
 
     @Import(name="httpMethod", required=true)
       private final Output<ConnectionOAuthParametersHttpMethod> httpMethod;
 
-    public Output<ConnectionOAuthParametersHttpMethod> getHttpMethod() {
+    public Output<ConnectionOAuthParametersHttpMethod> httpMethod() {
         return this.httpMethod;
     }
 
     @Import(name="oAuthHttpParameters")
       private final @Nullable Output<ConnectionHttpParametersArgs> oAuthHttpParameters;
 
-    public Output<ConnectionHttpParametersArgs> getOAuthHttpParameters() {
-        return this.oAuthHttpParameters == null ? Output.empty() : this.oAuthHttpParameters;
+    public Output<ConnectionHttpParametersArgs> oAuthHttpParameters() {
+        return this.oAuthHttpParameters == null ? Codegen.empty() : this.oAuthHttpParameters;
     }
 
     public ConnectionOAuthParametersArgs(
@@ -57,10 +58,10 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
     }
 
     private ConnectionOAuthParametersArgs() {
-        this.authorizationEndpoint = Output.empty();
-        this.clientParameters = Output.empty();
-        this.httpMethod = Output.empty();
-        this.oAuthHttpParameters = Output.empty();
+        this.authorizationEndpoint = Codegen.empty();
+        this.clientParameters = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.oAuthHttpParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder oAuthHttpParameters(@Nullable ConnectionHttpParametersArgs oAuthHttpParameters) {
-            this.oAuthHttpParameters = Output.ofNullable(oAuthHttpParameters);
+            this.oAuthHttpParameters = Codegen.ofNullable(oAuthHttpParameters);
             return this;
         }        public ConnectionOAuthParametersArgs build() {
             return new ConnectionOAuthParametersArgs(authorizationEndpoint, clientParameters, httpMethod, oAuthHttpParameters);

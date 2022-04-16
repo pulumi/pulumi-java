@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
     @Import(name="resolverQueryLogConfigId")
       private final @Nullable Output<String> resolverQueryLogConfigId;
 
-    public Output<String> getResolverQueryLogConfigId() {
-        return this.resolverQueryLogConfigId == null ? Output.empty() : this.resolverQueryLogConfigId;
+    public Output<String> resolverQueryLogConfigId() {
+        return this.resolverQueryLogConfigId == null ? Codegen.empty() : this.resolverQueryLogConfigId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public ResolverQueryLoggingConfigAssociationArgs(
@@ -44,8 +45,8 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
     }
 
     private ResolverQueryLoggingConfigAssociationArgs() {
-        this.resolverQueryLogConfigId = Output.empty();
-        this.resourceId = Output.empty();
+        this.resolverQueryLogConfigId = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
             return this;
         }
         public Builder resolverQueryLogConfigId(@Nullable String resolverQueryLogConfigId) {
-            this.resolverQueryLogConfigId = Output.ofNullable(resolverQueryLogConfigId);
+            this.resolverQueryLogConfigId = Codegen.ofNullable(resolverQueryLogConfigId);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -83,7 +84,7 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public ResolverQueryLoggingConfigAssociationArgs build() {
             return new ResolverQueryLoggingConfigAssociationArgs(resolverQueryLogConfigId, resourceId);

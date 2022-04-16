@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxEnvironmentArgs;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentState;
@@ -53,7 +54,7 @@ public class CxEnvironment extends io.pulumi.resources.CustomResource {
      * @return The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -67,7 +68,7 @@ public class CxEnvironment extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -81,7 +82,7 @@ public class CxEnvironment extends io.pulumi.resources.CustomResource {
      * @return The name of the environment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +98,7 @@ public class CxEnvironment extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    public Output</* @Nullable */ String> getParent() {
+    public Output</* @Nullable */ String> parent() {
         return this.parent;
     }
     /**
@@ -113,7 +114,7 @@ public class CxEnvironment extends io.pulumi.resources.CustomResource {
      * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -129,7 +130,7 @@ public class CxEnvironment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<CxEnvironmentVersionConfig>> getVersionConfigs() {
+    public Output<List<CxEnvironmentVersionConfig>> versionConfigs() {
         return this.versionConfigs;
     }
 
@@ -155,7 +156,7 @@ public class CxEnvironment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CxEnvironment(String name, CxEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/cxEnvironment:CxEnvironment", name, args == null ? CxEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/cxEnvironment:CxEnvironment", name, args == null ? CxEnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CxEnvironment(String name, Output<String> id, @Nullable CxEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

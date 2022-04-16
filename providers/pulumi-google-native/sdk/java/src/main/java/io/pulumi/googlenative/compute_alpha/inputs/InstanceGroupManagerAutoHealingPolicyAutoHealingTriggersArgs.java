@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
     @Import(name="onHealthCheck")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
-    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> getOnHealthCheck() {
-        return this.onHealthCheck == null ? Output.empty() : this.onHealthCheck;
+    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck() {
+        return this.onHealthCheck == null ? Codegen.empty() : this.onHealthCheck;
     }
 
     public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs(@Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
@@ -30,7 +31,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
     }
 
     private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs() {
-        this.onHealthCheck = Output.empty();
+        this.onHealthCheck = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
             return this;
         }
         public Builder onHealthCheck(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck onHealthCheck) {
-            this.onHealthCheck = Output.ofNullable(onHealthCheck);
+            this.onHealthCheck = Codegen.ofNullable(onHealthCheck);
             return this;
         }        public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs(onHealthCheck);

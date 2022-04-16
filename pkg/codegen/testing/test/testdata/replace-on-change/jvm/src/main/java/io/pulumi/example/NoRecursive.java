@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.NoRecursiveArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Rec;
@@ -17,13 +18,13 @@ public class NoRecursive extends io.pulumi.resources.CustomResource {
     @Export(name="rec", type=Rec.class, parameters={})
     private Output</* @Nullable */ Rec> rec;
 
-    public Output</* @Nullable */ Rec> getRec() {
+    public Output</* @Nullable */ Rec> rec() {
         return this.rec;
     }
     @Export(name="replace", type=String.class, parameters={})
     private Output</* @Nullable */ String> replace;
 
-    public Output</* @Nullable */ String> getReplace() {
+    public Output</* @Nullable */ String> replace() {
         return this.replace;
     }
 
@@ -49,7 +50,7 @@ public class NoRecursive extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NoRecursive(String name, @Nullable NoRecursiveArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::NoRecursive", name, args == null ? NoRecursiveArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::NoRecursive", name, args == null ? NoRecursiveArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NoRecursive(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

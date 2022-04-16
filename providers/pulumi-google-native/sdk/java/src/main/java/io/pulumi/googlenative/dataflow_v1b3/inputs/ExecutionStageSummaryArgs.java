@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentSourceArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentTransformArgs;
@@ -30,8 +31,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="componentSource")
       private final @Nullable Output<List<ComponentSourceArgs>> componentSource;
 
-    public Output<List<ComponentSourceArgs>> getComponentSource() {
-        return this.componentSource == null ? Output.empty() : this.componentSource;
+    public Output<List<ComponentSourceArgs>> componentSource() {
+        return this.componentSource == null ? Codegen.empty() : this.componentSource;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="componentTransform")
       private final @Nullable Output<List<ComponentTransformArgs>> componentTransform;
 
-    public Output<List<ComponentTransformArgs>> getComponentTransform() {
-        return this.componentTransform == null ? Output.empty() : this.componentTransform;
+    public Output<List<ComponentTransformArgs>> componentTransform() {
+        return this.componentTransform == null ? Codegen.empty() : this.componentTransform;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="inputSource")
       private final @Nullable Output<List<StageSourceArgs>> inputSource;
 
-    public Output<List<StageSourceArgs>> getInputSource() {
-        return this.inputSource == null ? Output.empty() : this.inputSource;
+    public Output<List<StageSourceArgs>> inputSource() {
+        return this.inputSource == null ? Codegen.empty() : this.inputSource;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<ExecutionStageSummaryKind> kind;
 
-    public Output<ExecutionStageSummaryKind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<ExecutionStageSummaryKind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="outputSource")
       private final @Nullable Output<List<StageSourceArgs>> outputSource;
 
-    public Output<List<StageSourceArgs>> getOutputSource() {
-        return this.outputSource == null ? Output.empty() : this.outputSource;
+    public Output<List<StageSourceArgs>> outputSource() {
+        return this.outputSource == null ? Codegen.empty() : this.outputSource;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="prerequisiteStage")
       private final @Nullable Output<List<String>> prerequisiteStage;
 
-    public Output<List<String>> getPrerequisiteStage() {
-        return this.prerequisiteStage == null ? Output.empty() : this.prerequisiteStage;
+    public Output<List<String>> prerequisiteStage() {
+        return this.prerequisiteStage == null ? Codegen.empty() : this.prerequisiteStage;
     }
 
     public ExecutionStageSummaryArgs(
@@ -131,14 +132,14 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     }
 
     private ExecutionStageSummaryArgs() {
-        this.componentSource = Output.empty();
-        this.componentTransform = Output.empty();
-        this.id = Output.empty();
-        this.inputSource = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.outputSource = Output.empty();
-        this.prerequisiteStage = Output.empty();
+        this.componentSource = Codegen.empty();
+        this.componentTransform = Codegen.empty();
+        this.id = Codegen.empty();
+        this.inputSource = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputSource = Codegen.empty();
+        this.prerequisiteStage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder componentSource(@Nullable List<ComponentSourceArgs> componentSource) {
-            this.componentSource = Output.ofNullable(componentSource);
+            this.componentSource = Codegen.ofNullable(componentSource);
             return this;
         }
         public Builder componentSource(ComponentSourceArgs... componentSource) {
@@ -191,7 +192,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder componentTransform(@Nullable List<ComponentTransformArgs> componentTransform) {
-            this.componentTransform = Output.ofNullable(componentTransform);
+            this.componentTransform = Codegen.ofNullable(componentTransform);
             return this;
         }
         public Builder componentTransform(ComponentTransformArgs... componentTransform) {
@@ -202,7 +203,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder inputSource(@Nullable Output<List<StageSourceArgs>> inputSource) {
@@ -210,7 +211,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder inputSource(@Nullable List<StageSourceArgs> inputSource) {
-            this.inputSource = Output.ofNullable(inputSource);
+            this.inputSource = Codegen.ofNullable(inputSource);
             return this;
         }
         public Builder inputSource(StageSourceArgs... inputSource) {
@@ -221,7 +222,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder kind(@Nullable ExecutionStageSummaryKind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -229,7 +230,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputSource(@Nullable Output<List<StageSourceArgs>> outputSource) {
@@ -237,7 +238,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder outputSource(@Nullable List<StageSourceArgs> outputSource) {
-            this.outputSource = Output.ofNullable(outputSource);
+            this.outputSource = Codegen.ofNullable(outputSource);
             return this;
         }
         public Builder outputSource(StageSourceArgs... outputSource) {
@@ -248,7 +249,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder prerequisiteStage(@Nullable List<String> prerequisiteStage) {
-            this.prerequisiteStage = Output.ofNullable(prerequisiteStage);
+            this.prerequisiteStage = Codegen.ofNullable(prerequisiteStage);
             return this;
         }
         public Builder prerequisiteStage(String... prerequisiteStage) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     @Import(name="dataSourceType")
       private final @Nullable Output<String> dataSourceType;
 
-    public Output<String> getDataSourceType() {
-        return this.dataSourceType == null ? Output.empty() : this.dataSourceType;
+    public Output<String> dataSourceType() {
+        return this.dataSourceType == null ? Codegen.empty() : this.dataSourceType;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,8 +45,8 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     @Import(name="storageAccountIds")
       private final @Nullable Output<List<String>> storageAccountIds;
 
-    public Output<List<String>> getStorageAccountIds() {
-        return this.storageAccountIds == null ? Output.empty() : this.storageAccountIds;
+    public Output<List<String>> storageAccountIds() {
+        return this.storageAccountIds == null ? Codegen.empty() : this.storageAccountIds;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -71,10 +72,10 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
     }
 
     private LinkedStorageAccountArgs() {
-        this.dataSourceType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountIds = Output.empty();
-        this.workspaceName = Output.empty();
+        this.dataSourceType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountIds = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dataSourceType(@Nullable String dataSourceType) {
-            this.dataSourceType = Output.ofNullable(dataSourceType);
+            this.dataSourceType = Codegen.ofNullable(dataSourceType);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -124,7 +125,7 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder storageAccountIds(@Nullable List<String> storageAccountIds) {
-            this.storageAccountIds = Output.ofNullable(storageAccountIds);
+            this.storageAccountIds = Codegen.ofNullable(storageAccountIds);
             return this;
         }
         public Builder storageAccountIds(String... storageAccountIds) {

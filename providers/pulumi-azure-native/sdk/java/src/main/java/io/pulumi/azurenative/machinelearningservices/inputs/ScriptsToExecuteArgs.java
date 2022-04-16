@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ScriptReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="creationScript")
       private final @Nullable Output<ScriptReferenceArgs> creationScript;
 
-    public Output<ScriptReferenceArgs> getCreationScript() {
-        return this.creationScript == null ? Output.empty() : this.creationScript;
+    public Output<ScriptReferenceArgs> creationScript() {
+        return this.creationScript == null ? Codegen.empty() : this.creationScript;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="startupScript")
       private final @Nullable Output<ScriptReferenceArgs> startupScript;
 
-    public Output<ScriptReferenceArgs> getStartupScript() {
-        return this.startupScript == null ? Output.empty() : this.startupScript;
+    public Output<ScriptReferenceArgs> startupScript() {
+        return this.startupScript == null ? Codegen.empty() : this.startupScript;
     }
 
     public ScriptsToExecuteArgs(
@@ -48,8 +49,8 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ScriptsToExecuteArgs() {
-        this.creationScript = Output.empty();
-        this.startupScript = Output.empty();
+        this.creationScript = Codegen.empty();
+        this.startupScript = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder creationScript(@Nullable ScriptReferenceArgs creationScript) {
-            this.creationScript = Output.ofNullable(creationScript);
+            this.creationScript = Codegen.ofNullable(creationScript);
             return this;
         }
         public Builder startupScript(@Nullable Output<ScriptReferenceArgs> startupScript) {
@@ -87,7 +88,7 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startupScript(@Nullable ScriptReferenceArgs startupScript) {
-            this.startupScript = Output.ofNullable(startupScript);
+            this.startupScript = Codegen.ofNullable(startupScript);
             return this;
         }        public ScriptsToExecuteArgs build() {
             return new ScriptsToExecuteArgs(creationScript, startupScript);

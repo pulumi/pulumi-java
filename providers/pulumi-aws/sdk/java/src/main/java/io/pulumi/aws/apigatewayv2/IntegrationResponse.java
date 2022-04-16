@@ -9,6 +9,7 @@ import io.pulumi.aws.apigatewayv2.inputs.IntegrationResponseState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -55,7 +56,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
      * 
      */
-    public Output</* @Nullable */ String> getContentHandlingStrategy() {
+    public Output</* @Nullable */ String> contentHandlingStrategy() {
         return this.contentHandlingStrategy;
     }
     /**
@@ -69,7 +70,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The identifier of the `aws.apigatewayv2.Integration`.
      * 
      */
-    public Output<String> getIntegrationId() {
+    public Output<String> integrationId() {
         return this.integrationId;
     }
     /**
@@ -83,7 +84,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The integration response key.
      * 
      */
-    public Output<String> getIntegrationResponseKey() {
+    public Output<String> integrationResponseKey() {
         return this.integrationResponseKey;
     }
     /**
@@ -97,7 +98,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseTemplates() {
+    public Output</* @Nullable */ Map<String,String>> responseTemplates() {
         return this.responseTemplates;
     }
     /**
@@ -111,7 +112,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @return The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateSelectionExpression() {
+    public Output</* @Nullable */ String> templateSelectionExpression() {
         return this.templateSelectionExpression;
     }
 
@@ -137,7 +138,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationResponse(String name, IntegrationResponseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/integrationResponse:IntegrationResponse", name, args == null ? IntegrationResponseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/integrationResponse:IntegrationResponse", name, args == null ? IntegrationResponseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IntegrationResponse(String name, Output<String> id, @Nullable IntegrationResponseState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

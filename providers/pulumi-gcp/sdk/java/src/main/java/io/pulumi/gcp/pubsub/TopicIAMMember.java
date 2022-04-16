@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.TopicIAMMemberArgs;
 import io.pulumi.gcp.pubsub.inputs.TopicIAMMemberState;
@@ -60,7 +61,7 @@ public class TopicIAMMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=TopicIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ TopicIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ TopicIAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ TopicIAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -74,13 +75,13 @@ public class TopicIAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -96,7 +97,7 @@ public class TopicIAMMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -114,7 +115,7 @@ public class TopicIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -128,7 +129,7 @@ public class TopicIAMMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -154,7 +155,7 @@ public class TopicIAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicIAMMember(String name, TopicIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/topicIAMMember:TopicIAMMember", name, args == null ? TopicIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/topicIAMMember:TopicIAMMember", name, args == null ? TopicIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TopicIAMMember(String name, Output<String> id, @Nullable TopicIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

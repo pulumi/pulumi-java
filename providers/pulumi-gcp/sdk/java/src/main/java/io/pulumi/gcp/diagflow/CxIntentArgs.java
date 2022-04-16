@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxIntentParameterArgs;
 import io.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhraseArgs;
 import java.lang.Boolean;
@@ -27,8 +28,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -50,8 +51,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> getIsFallback() {
-        return this.isFallback == null ? Output.empty() : this.isFallback;
+    public Output<Boolean> isFallback() {
+        return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+    public Output<String> languageCode() {
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<CxIntentParameterArgs>> parameters;
 
-    public Output<List<CxIntentParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<CxIntentParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trainingPhrases")
       private final @Nullable Output<List<CxIntentTrainingPhraseArgs>> trainingPhrases;
 
-    public Output<List<CxIntentTrainingPhraseArgs>> getTrainingPhrases() {
-        return this.trainingPhrases == null ? Output.empty() : this.trainingPhrases;
+    public Output<List<CxIntentTrainingPhraseArgs>> trainingPhrases() {
+        return this.trainingPhrases == null ? Codegen.empty() : this.trainingPhrases;
     }
 
     public CxIntentArgs(
@@ -151,15 +152,15 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxIntentArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.isFallback = Output.empty();
-        this.labels = Output.empty();
-        this.languageCode = Output.empty();
-        this.parameters = Output.empty();
-        this.parent = Output.empty();
-        this.priority = Output.empty();
-        this.trainingPhrases = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.isFallback = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.trainingPhrases = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -203,7 +204,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -219,7 +220,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isFallback(@Nullable Boolean isFallback) {
-            this.isFallback = Output.ofNullable(isFallback);
+            this.isFallback = Codegen.ofNullable(isFallback);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -227,7 +228,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder languageCode(@Nullable Output<String> languageCode) {
@@ -235,7 +236,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder parameters(@Nullable Output<List<CxIntentParameterArgs>> parameters) {
@@ -243,7 +244,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<CxIntentParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(CxIntentParameterArgs... parameters) {
@@ -254,7 +255,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -262,7 +263,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder trainingPhrases(@Nullable Output<List<CxIntentTrainingPhraseArgs>> trainingPhrases) {
@@ -270,7 +271,7 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trainingPhrases(@Nullable List<CxIntentTrainingPhraseArgs> trainingPhrases) {
-            this.trainingPhrases = Output.ofNullable(trainingPhrases);
+            this.trainingPhrases = Codegen.ofNullable(trainingPhrases);
             return this;
         }
         public Builder trainingPhrases(CxIntentTrainingPhraseArgs... trainingPhrases) {

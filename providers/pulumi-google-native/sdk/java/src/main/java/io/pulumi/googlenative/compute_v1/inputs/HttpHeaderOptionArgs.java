@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
-    public Output<String> getHeaderName() {
-        return this.headerName == null ? Output.empty() : this.headerName;
+    public Output<String> headerName() {
+        return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="headerValue")
       private final @Nullable Output<String> headerValue;
 
-    public Output<String> getHeaderValue() {
-        return this.headerValue == null ? Output.empty() : this.headerValue;
+    public Output<String> headerValue() {
+        return this.headerValue == null ? Codegen.empty() : this.headerValue;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="replace")
       private final @Nullable Output<Boolean> replace;
 
-    public Output<Boolean> getReplace() {
-        return this.replace == null ? Output.empty() : this.replace;
+    public Output<Boolean> replace() {
+        return this.replace == null ? Codegen.empty() : this.replace;
     }
 
     public HttpHeaderOptionArgs(
@@ -62,9 +63,9 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HttpHeaderOptionArgs() {
-        this.headerName = Output.empty();
-        this.headerValue = Output.empty();
-        this.replace = Output.empty();
+        this.headerName = Codegen.empty();
+        this.headerValue = Codegen.empty();
+        this.replace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder headerName(@Nullable String headerName) {
-            this.headerName = Output.ofNullable(headerName);
+            this.headerName = Codegen.ofNullable(headerName);
             return this;
         }
         public Builder headerValue(@Nullable Output<String> headerValue) {
@@ -104,7 +105,7 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder headerValue(@Nullable String headerValue) {
-            this.headerValue = Output.ofNullable(headerValue);
+            this.headerValue = Codegen.ofNullable(headerValue);
             return this;
         }
         public Builder replace(@Nullable Output<Boolean> replace) {
@@ -112,7 +113,7 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder replace(@Nullable Boolean replace) {
-            this.replace = Output.ofNullable(replace);
+            this.replace = Codegen.ofNullable(replace);
             return this;
         }        public HttpHeaderOptionArgs build() {
             return new HttpHeaderOptionArgs(headerName, headerValue, replace);

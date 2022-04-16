@@ -9,6 +9,7 @@ import io.pulumi.aws.lambda.inputs.ProvisionedConcurrencyConfigState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * @return Name or Amazon Resource Name (ARN) of the Lambda Function.
      * 
      */
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
     /**
@@ -54,7 +55,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * @return Amount of capacity to allocate. Must be greater than or equal to `1`.
      * 
      */
-    public Output<Integer> getProvisionedConcurrentExecutions() {
+    public Output<Integer> provisionedConcurrentExecutions() {
         return this.provisionedConcurrentExecutions;
     }
     /**
@@ -68,7 +69,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * @return Lambda Function version or Lambda Alias name.
      * 
      */
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier;
     }
 
@@ -94,7 +95,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public ProvisionedConcurrencyConfig(String name, ProvisionedConcurrencyConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lambda/provisionedConcurrencyConfig:ProvisionedConcurrencyConfig", name, args == null ? ProvisionedConcurrencyConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lambda/provisionedConcurrencyConfig:ProvisionedConcurrencyConfig", name, args == null ? ProvisionedConcurrencyConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProvisionedConcurrencyConfig(String name, Output<String> id, @Nullable ProvisionedConcurrencyConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

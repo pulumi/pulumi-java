@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.CollectorAgentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="agentProperties")
       private final @Nullable Output<CollectorAgentPropertiesArgs> agentProperties;
 
-    public Output<CollectorAgentPropertiesArgs> getAgentProperties() {
-        return this.agentProperties == null ? Output.empty() : this.agentProperties;
+    public Output<CollectorAgentPropertiesArgs> agentProperties() {
+        return this.agentProperties == null ? Codegen.empty() : this.agentProperties;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="discoverySiteId")
       private final @Nullable Output<String> discoverySiteId;
 
-    public Output<String> getDiscoverySiteId() {
-        return this.discoverySiteId == null ? Output.empty() : this.discoverySiteId;
+    public Output<String> discoverySiteId() {
+        return this.discoverySiteId == null ? Codegen.empty() : this.discoverySiteId;
     }
 
     public CollectorPropertiesArgs(
@@ -41,8 +42,8 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     private CollectorPropertiesArgs() {
-        this.agentProperties = Output.empty();
-        this.discoverySiteId = Output.empty();
+        this.agentProperties = Codegen.empty();
+        this.discoverySiteId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder agentProperties(@Nullable CollectorAgentPropertiesArgs agentProperties) {
-            this.agentProperties = Output.ofNullable(agentProperties);
+            this.agentProperties = Codegen.ofNullable(agentProperties);
             return this;
         }
         public Builder discoverySiteId(@Nullable Output<String> discoverySiteId) {
@@ -80,7 +81,7 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
-            this.discoverySiteId = Output.ofNullable(discoverySiteId);
+            this.discoverySiteId = Codegen.ofNullable(discoverySiteId);
             return this;
         }        public CollectorPropertiesArgs build() {
             return new CollectorPropertiesArgs(agentProperties, discoverySiteId);

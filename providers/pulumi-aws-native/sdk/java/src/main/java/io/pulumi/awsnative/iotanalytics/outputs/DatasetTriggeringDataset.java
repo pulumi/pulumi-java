@@ -16,7 +16,7 @@ public final class DatasetTriggeringDataset {
         this.datasetName = datasetName;
     }
 
-    public String getDatasetName() {
+    public String datasetName() {
         return this.datasetName;
     }
 

@@ -20,10 +20,10 @@ public final class TaskDefinitionSecret {
         this.valueFrom = valueFrom;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getValueFrom() {
+    public String valueFrom() {
         return this.valueFrom;
     }
 

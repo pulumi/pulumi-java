@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.DiskStorageAccountTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,DiskStorageAccountTypes>> name;
 
-    public Output<Either<String,DiskStorageAccountTypes>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<Either<String,DiskStorageAccountTypes>> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public DiskSkuArgs(@Nullable Output<Either<String,DiskStorageAccountTypes>> name) {
@@ -36,7 +37,7 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskSkuArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable Either<String,DiskStorageAccountTypes> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public DiskSkuArgs build() {
             return new DiskSkuArgs(name);

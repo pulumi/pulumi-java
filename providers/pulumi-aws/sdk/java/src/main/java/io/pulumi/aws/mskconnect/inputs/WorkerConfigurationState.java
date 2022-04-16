@@ -5,6 +5,7 @@ package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> getLatestRevision() {
-        return this.latestRevision == null ? Output.empty() : this.latestRevision;
+    public Output<Integer> latestRevision() {
+        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="propertiesFileContent")
       private final @Nullable Output<String> propertiesFileContent;
 
-    public Output<String> getPropertiesFileContent() {
-        return this.propertiesFileContent == null ? Output.empty() : this.propertiesFileContent;
+    public Output<String> propertiesFileContent() {
+        return this.propertiesFileContent == null ? Codegen.empty() : this.propertiesFileContent;
     }
 
     public WorkerConfigurationState(
@@ -84,11 +85,11 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     }
 
     private WorkerConfigurationState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.latestRevision = Output.empty();
-        this.name = Output.empty();
-        this.propertiesFileContent = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.latestRevision = Codegen.empty();
+        this.name = Codegen.empty();
+        this.propertiesFileContent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -132,7 +133,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
@@ -140,7 +141,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Output.ofNullable(latestRevision);
+            this.latestRevision = Codegen.ofNullable(latestRevision);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -148,7 +149,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder propertiesFileContent(@Nullable Output<String> propertiesFileContent) {
@@ -156,7 +157,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder propertiesFileContent(@Nullable String propertiesFileContent) {
-            this.propertiesFileContent = Output.ofNullable(propertiesFileContent);
+            this.propertiesFileContent = Codegen.ofNullable(propertiesFileContent);
             return this;
         }        public WorkerConfigurationState build() {
             return new WorkerConfigurationState(arn, description, latestRevision, name, propertiesFileContent);

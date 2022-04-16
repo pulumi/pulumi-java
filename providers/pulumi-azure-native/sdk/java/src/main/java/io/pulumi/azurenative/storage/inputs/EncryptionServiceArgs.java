@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storage.enums.KeyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="keyType")
       private final @Nullable Output<Either<String,KeyType>> keyType;
 
-    public Output<Either<String,KeyType>> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+    public Output<Either<String,KeyType>> keyType() {
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     public EncryptionServiceArgs(
@@ -51,8 +52,8 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EncryptionServiceArgs() {
-        this.enabled = Output.empty();
-        this.keyType = Output.empty();
+        this.enabled = Codegen.empty();
+        this.keyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
@@ -90,7 +91,7 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }        public EncryptionServiceArgs build() {
             return new EncryptionServiceArgs(enabled, keyType);

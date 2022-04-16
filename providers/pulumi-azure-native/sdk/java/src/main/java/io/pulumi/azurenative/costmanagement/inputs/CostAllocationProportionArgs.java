@@ -5,6 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +37,7 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
     @Import(name="percentage", required=true)
       private final Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage;
     }
 
@@ -48,8 +49,8 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
     }
 
     private CostAllocationProportionArgs() {
-        this.name = Output.empty();
-        this.percentage = Output.empty();
+        this.name = Codegen.empty();
+        this.percentage = Codegen.empty();
     }
 
     public static Builder builder() {

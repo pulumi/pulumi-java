@@ -6,6 +6,7 @@ package io.pulumi.googlenative.securitycenter_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.SourceArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The canonical name of the finding. It's either "organizations/{organization_id}/sources/{source_id}", "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}", depending on the closest CRM ancestor of the resource associated with the finding.
      * 
      */
-    public Output<String> getCanonicalName() {
+    public Output<String> canonicalName() {
         return this.canonicalName;
     }
     /**
@@ -44,7 +45,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated or insecure libraries."
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The source's display name. A source's display name must be unique amongst its siblings, for example, two sources with the same parent can't share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +73,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -98,7 +99,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Source(String name, SourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:securitycenter/v1:Source", name, args == null ? SourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:securitycenter/v1:Source", name, args == null ? SourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Source(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

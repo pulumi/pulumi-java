@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusVersionTargetGetArgs;
 import java.lang.Boolean;
@@ -24,8 +25,8 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
     @Import(name="isStable")
       private final @Nullable Output<Boolean> isStable;
 
-    public Output<Boolean> getIsStable() {
-        return this.isStable == null ? Output.empty() : this.isStable;
+    public Output<Boolean> isStable() {
+        return this.isStable == null ? Codegen.empty() : this.isStable;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
     @Import(name="statefuls")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> statefuls;
 
-    public Output<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> getStatefuls() {
-        return this.statefuls == null ? Output.empty() : this.statefuls;
+    public Output<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> statefuls() {
+        return this.statefuls == null ? Codegen.empty() : this.statefuls;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
     @Import(name="versionTargets")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets;
 
-    public Output<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> getVersionTargets() {
-        return this.versionTargets == null ? Output.empty() : this.versionTargets;
+    public Output<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets() {
+        return this.versionTargets == null ? Codegen.empty() : this.versionTargets;
     }
 
     public RegionInstanceGroupManagerStatusGetArgs(
@@ -60,9 +61,9 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
     }
 
     private RegionInstanceGroupManagerStatusGetArgs() {
-        this.isStable = Output.empty();
-        this.statefuls = Output.empty();
-        this.versionTargets = Output.empty();
+        this.isStable = Codegen.empty();
+        this.statefuls = Codegen.empty();
+        this.versionTargets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
             return this;
         }
         public Builder isStable(@Nullable Boolean isStable) {
-            this.isStable = Output.ofNullable(isStable);
+            this.isStable = Codegen.ofNullable(isStable);
             return this;
         }
         public Builder statefuls(@Nullable Output<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> statefuls) {
@@ -102,7 +103,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
             return this;
         }
         public Builder statefuls(@Nullable List<RegionInstanceGroupManagerStatusStatefulGetArgs> statefuls) {
-            this.statefuls = Output.ofNullable(statefuls);
+            this.statefuls = Codegen.ofNullable(statefuls);
             return this;
         }
         public Builder statefuls(RegionInstanceGroupManagerStatusStatefulGetArgs... statefuls) {
@@ -113,7 +114,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
             return this;
         }
         public Builder versionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTargetGetArgs> versionTargets) {
-            this.versionTargets = Output.ofNullable(versionTargets);
+            this.versionTargets = Codegen.ofNullable(versionTargets);
             return this;
         }
         public Builder versionTargets(RegionInstanceGroupManagerStatusVersionTargetGetArgs... versionTargets) {

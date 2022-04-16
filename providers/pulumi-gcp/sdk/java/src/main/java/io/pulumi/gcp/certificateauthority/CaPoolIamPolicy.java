@@ -6,6 +6,7 @@ package io.pulumi.gcp.certificateauthority;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolIamPolicyArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamPolicyState;
@@ -67,7 +68,7 @@ public class CaPoolIamPolicy extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getCaPool() {
+    public Output<String> caPool() {
         return this.caPool;
     }
     /**
@@ -81,7 +82,7 @@ public class CaPoolIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -99,7 +100,7 @@ public class CaPoolIamPolicy extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +116,7 @@ public class CaPoolIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -131,7 +132,7 @@ public class CaPoolIamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -157,7 +158,7 @@ public class CaPoolIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CaPoolIamPolicy(String name, CaPoolIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:certificateauthority/caPoolIamPolicy:CaPoolIamPolicy", name, args == null ? CaPoolIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:certificateauthority/caPoolIamPolicy:CaPoolIamPolicy", name, args == null ? CaPoolIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CaPoolIamPolicy(String name, Output<String> id, @Nullable CaPoolIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

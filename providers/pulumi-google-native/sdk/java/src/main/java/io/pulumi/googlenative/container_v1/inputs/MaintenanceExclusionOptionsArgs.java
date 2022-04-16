@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.enums.MaintenanceExclusionOptionsScope;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
     @Import(name="scope")
       private final @Nullable Output<MaintenanceExclusionOptionsScope> scope;
 
-    public Output<MaintenanceExclusionOptionsScope> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<MaintenanceExclusionOptionsScope> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public MaintenanceExclusionOptionsArgs(@Nullable Output<MaintenanceExclusionOptionsScope> scope) {
@@ -34,7 +35,7 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
     }
 
     private MaintenanceExclusionOptionsArgs() {
-        this.scope = Output.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder scope(@Nullable MaintenanceExclusionOptionsScope scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public MaintenanceExclusionOptionsArgs build() {
             return new MaintenanceExclusionOptionsArgs(scope);

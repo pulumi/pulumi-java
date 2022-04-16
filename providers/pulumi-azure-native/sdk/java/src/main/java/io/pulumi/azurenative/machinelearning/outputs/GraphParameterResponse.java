@@ -43,21 +43,21 @@ public final class GraphParameterResponse {
      * Description of this graph parameter.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Association links for this parameter to nodes in the graph.
      * 
     */
-    public List<GraphParameterLinkResponse> getLinks() {
+    public List<GraphParameterLinkResponse> links() {
         return this.links;
     }
     /**
      * Graph parameter's type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

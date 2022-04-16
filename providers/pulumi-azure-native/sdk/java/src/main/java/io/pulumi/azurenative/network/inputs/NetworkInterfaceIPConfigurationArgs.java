@@ -15,6 +15,7 @@ import io.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -37,8 +38,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
 
-    public Output<List<ApplicationGatewayBackendAddressPoolArgs>> getApplicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? Output.empty() : this.applicationGatewayBackendAddressPools;
+    public Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools() {
+        return this.applicationGatewayBackendAddressPools == null ? Codegen.empty() : this.applicationGatewayBackendAddressPools;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="applicationSecurityGroups")
       private final @Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
 
-    public Output<List<ApplicationSecurityGroupArgs>> getApplicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? Output.empty() : this.applicationSecurityGroups;
+    public Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups() {
+        return this.applicationSecurityGroups == null ? Codegen.empty() : this.applicationSecurityGroups;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
 
-    public Output<List<BackendAddressPoolArgs>> getLoadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? Output.empty() : this.loadBalancerBackendAddressPools;
+    public Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools() {
+        return this.loadBalancerBackendAddressPools == null ? Codegen.empty() : this.loadBalancerBackendAddressPools;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="loadBalancerInboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
 
-    public Output<List<InboundNatRuleArgs>> getLoadBalancerInboundNatRules() {
-        return this.loadBalancerInboundNatRules == null ? Output.empty() : this.loadBalancerInboundNatRules;
+    public Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules() {
+        return this.loadBalancerInboundNatRules == null ? Codegen.empty() : this.loadBalancerInboundNatRules;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
-        return this.primary == null ? Output.empty() : this.primary;
+    public Output<Boolean> primary() {
+        return this.primary == null ? Codegen.empty() : this.primary;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
+    public Output<String> privateIPAddress() {
+        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> getPrivateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Output.empty() : this.privateIPAddressVersion;
+    public Output<Either<String,IPVersion>> privateIPAddressVersion() {
+        return this.privateIPAddressVersion == null ? Codegen.empty() : this.privateIPAddressVersion;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Output.empty() : this.privateIPAllocationMethod;
+    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
+        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="publicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
-    public Output<PublicIPAddressArgs> getPublicIPAddress() {
-        return this.publicIPAddress == null ? Output.empty() : this.publicIPAddress;
+    public Output<PublicIPAddressArgs> publicIPAddress() {
+        return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<SubnetArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="virtualNetworkTaps")
       private final @Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
 
-    public Output<List<VirtualNetworkTapArgs>> getVirtualNetworkTaps() {
-        return this.virtualNetworkTaps == null ? Output.empty() : this.virtualNetworkTaps;
+    public Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps() {
+        return this.virtualNetworkTaps == null ? Codegen.empty() : this.virtualNetworkTaps;
     }
 
     public NetworkInterfaceIPConfigurationArgs(
@@ -216,20 +217,20 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     }
 
     private NetworkInterfaceIPConfigurationArgs() {
-        this.applicationGatewayBackendAddressPools = Output.empty();
-        this.applicationSecurityGroups = Output.empty();
-        this.id = Output.empty();
-        this.loadBalancerBackendAddressPools = Output.empty();
-        this.loadBalancerInboundNatRules = Output.empty();
-        this.name = Output.empty();
-        this.primary = Output.empty();
-        this.privateIPAddress = Output.empty();
-        this.privateIPAddressVersion = Output.empty();
-        this.privateIPAllocationMethod = Output.empty();
-        this.publicIPAddress = Output.empty();
-        this.subnet = Output.empty();
-        this.type = Output.empty();
-        this.virtualNetworkTaps = Output.empty();
+        this.applicationGatewayBackendAddressPools = Codegen.empty();
+        this.applicationSecurityGroups = Codegen.empty();
+        this.id = Codegen.empty();
+        this.loadBalancerBackendAddressPools = Codegen.empty();
+        this.loadBalancerInboundNatRules = Codegen.empty();
+        this.name = Codegen.empty();
+        this.primary = Codegen.empty();
+        this.privateIPAddress = Codegen.empty();
+        this.privateIPAddressVersion = Codegen.empty();
+        this.privateIPAllocationMethod = Codegen.empty();
+        this.publicIPAddress = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.type = Codegen.empty();
+        this.virtualNetworkTaps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -283,7 +284,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder applicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolArgs> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = Output.ofNullable(applicationGatewayBackendAddressPools);
+            this.applicationGatewayBackendAddressPools = Codegen.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
         public Builder applicationGatewayBackendAddressPools(ApplicationGatewayBackendAddressPoolArgs... applicationGatewayBackendAddressPools) {
@@ -294,7 +295,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder applicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> applicationSecurityGroups) {
-            this.applicationSecurityGroups = Output.ofNullable(applicationSecurityGroups);
+            this.applicationSecurityGroups = Codegen.ofNullable(applicationSecurityGroups);
             return this;
         }
         public Builder applicationSecurityGroups(ApplicationSecurityGroupArgs... applicationSecurityGroups) {
@@ -305,7 +306,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder loadBalancerBackendAddressPools(@Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools) {
@@ -313,7 +314,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder loadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolArgs> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = Output.ofNullable(loadBalancerBackendAddressPools);
+            this.loadBalancerBackendAddressPools = Codegen.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
         public Builder loadBalancerBackendAddressPools(BackendAddressPoolArgs... loadBalancerBackendAddressPools) {
@@ -324,7 +325,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder loadBalancerInboundNatRules(@Nullable List<InboundNatRuleArgs> loadBalancerInboundNatRules) {
-            this.loadBalancerInboundNatRules = Output.ofNullable(loadBalancerInboundNatRules);
+            this.loadBalancerInboundNatRules = Codegen.ofNullable(loadBalancerInboundNatRules);
             return this;
         }
         public Builder loadBalancerInboundNatRules(InboundNatRuleArgs... loadBalancerInboundNatRules) {
@@ -335,7 +336,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder primary(@Nullable Output<Boolean> primary) {
@@ -343,7 +344,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Output.ofNullable(primary);
+            this.primary = Codegen.ofNullable(primary);
             return this;
         }
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
@@ -351,7 +352,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Output.ofNullable(privateIPAddress);
+            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
             return this;
         }
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
@@ -359,7 +360,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
+            this.privateIPAddressVersion = Codegen.ofNullable(privateIPAddressVersion);
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
@@ -367,7 +368,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
+            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
             return this;
         }
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
@@ -375,7 +376,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
-            this.publicIPAddress = Output.ofNullable(publicIPAddress);
+            this.publicIPAddress = Codegen.ofNullable(publicIPAddress);
             return this;
         }
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
@@ -383,7 +384,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -391,7 +392,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder virtualNetworkTaps(@Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
@@ -399,7 +400,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder virtualNetworkTaps(@Nullable List<VirtualNetworkTapArgs> virtualNetworkTaps) {
-            this.virtualNetworkTaps = Output.ofNullable(virtualNetworkTaps);
+            this.virtualNetworkTaps = Codegen.ofNullable(virtualNetworkTaps);
             return this;
         }
         public Builder virtualNetworkTaps(VirtualNetworkTapArgs... virtualNetworkTaps) {

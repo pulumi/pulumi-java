@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,15 +23,15 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pgpKey")
       private final @Nullable Output<String> pgpKey;
 
-    public Output<String> getPgpKey() {
-        return this.pgpKey == null ? Output.empty() : this.pgpKey;
+    public Output<String> pgpKey() {
+        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<String> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     public KeyPairArgs(
@@ -69,10 +70,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPairArgs() {
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.pgpKey = Output.empty();
-        this.publicKey = Output.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.pgpKey = Codegen.empty();
+        this.publicKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -114,7 +115,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
@@ -122,7 +123,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Output.ofNullable(pgpKey);
+            this.pgpKey = Codegen.ofNullable(pgpKey);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -130,7 +131,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }        public KeyPairArgs build() {
             return new KeyPairArgs(name, namePrefix, pgpKey, publicKey);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1.inputs.CloudBuildOptionsArgs;
 import io.pulumi.googlenative.appengine_v1.inputs.ContainerInfoArgs;
 import io.pulumi.googlenative.appengine_v1.inputs.ZipInfoArgs;
@@ -29,8 +30,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudBuildOptions")
       private final @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
 
-    public Output<CloudBuildOptionsArgs> getCloudBuildOptions() {
-        return this.cloudBuildOptions == null ? Output.empty() : this.cloudBuildOptions;
+    public Output<CloudBuildOptionsArgs> cloudBuildOptions() {
+        return this.cloudBuildOptions == null ? Codegen.empty() : this.cloudBuildOptions;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<ContainerInfoArgs> container;
 
-    public Output<ContainerInfoArgs> getContainer() {
-        return this.container == null ? Output.empty() : this.container;
+    public Output<ContainerInfoArgs> container() {
+        return this.container == null ? Codegen.empty() : this.container;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
 
-    public Output<Map<String,String>> getFiles() {
-        return this.files == null ? Output.empty() : this.files;
+    public Output<Map<String,String>> files() {
+        return this.files == null ? Codegen.empty() : this.files;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zip")
       private final @Nullable Output<ZipInfoArgs> zip;
 
-    public Output<ZipInfoArgs> getZip() {
-        return this.zip == null ? Output.empty() : this.zip;
+    public Output<ZipInfoArgs> zip() {
+        return this.zip == null ? Codegen.empty() : this.zip;
     }
 
     public DeploymentArgs(
@@ -78,10 +79,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.cloudBuildOptions = Output.empty();
-        this.container = Output.empty();
-        this.files = Output.empty();
-        this.zip = Output.empty();
+        this.cloudBuildOptions = Codegen.empty();
+        this.container = Codegen.empty();
+        this.files = Codegen.empty();
+        this.zip = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudBuildOptions(@Nullable CloudBuildOptionsArgs cloudBuildOptions) {
-            this.cloudBuildOptions = Output.ofNullable(cloudBuildOptions);
+            this.cloudBuildOptions = Codegen.ofNullable(cloudBuildOptions);
             return this;
         }
         public Builder container(@Nullable Output<ContainerInfoArgs> container) {
@@ -123,7 +124,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder container(@Nullable ContainerInfoArgs container) {
-            this.container = Output.ofNullable(container);
+            this.container = Codegen.ofNullable(container);
             return this;
         }
         public Builder files(@Nullable Output<Map<String,String>> files) {
@@ -131,7 +132,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder files(@Nullable Map<String,String> files) {
-            this.files = Output.ofNullable(files);
+            this.files = Codegen.ofNullable(files);
             return this;
         }
         public Builder zip(@Nullable Output<ZipInfoArgs> zip) {
@@ -139,7 +140,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zip(@Nullable ZipInfoArgs zip) {
-            this.zip = Output.ofNullable(zip);
+            this.zip = Codegen.ofNullable(zip);
             return this;
         }        public DeploymentArgs build() {
             return new DeploymentArgs(cloudBuildOptions, container, files, zip);

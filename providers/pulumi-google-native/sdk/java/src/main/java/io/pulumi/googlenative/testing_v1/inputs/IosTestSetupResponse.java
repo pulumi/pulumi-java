@@ -26,7 +26,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalIpas", required=true)
       private final List<FileReferenceResponse> additionalIpas;
 
-    public List<FileReferenceResponse> getAdditionalIpas() {
+    public List<FileReferenceResponse> additionalIpas() {
         return this.additionalIpas;
     }
 
@@ -37,7 +37,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkProfile", required=true)
       private final String networkProfile;
 
-    public String getNetworkProfile() {
+    public String networkProfile() {
         return this.networkProfile;
     }
 
@@ -48,7 +48,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pullDirectories", required=true)
       private final List<IosDeviceFileResponse> pullDirectories;
 
-    public List<IosDeviceFileResponse> getPullDirectories() {
+    public List<IosDeviceFileResponse> pullDirectories() {
         return this.pullDirectories;
     }
 
@@ -59,7 +59,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pushFiles", required=true)
       private final List<IosDeviceFileResponse> pushFiles;
 
-    public List<IosDeviceFileResponse> getPushFiles() {
+    public List<IosDeviceFileResponse> pushFiles() {
         return this.pushFiles;
     }
 

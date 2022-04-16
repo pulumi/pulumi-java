@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.VpcAssociationAuthorizationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class VpcAssociationAuthorization extends io.pulumi.resources.CustomResou
      * @return The VPC to authorize for association with the private hosted zone.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -53,7 +54,7 @@ public class VpcAssociationAuthorization extends io.pulumi.resources.CustomResou
      * @return The VPC's region. Defaults to the region of the AWS provider.
      * 
      */
-    public Output<String> getVpcRegion() {
+    public Output<String> vpcRegion() {
         return this.vpcRegion;
     }
     /**
@@ -67,7 +68,7 @@ public class VpcAssociationAuthorization extends io.pulumi.resources.CustomResou
      * @return The ID of the private hosted zone that you want to authorize associating a VPC with.
      * 
      */
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 
@@ -93,7 +94,7 @@ public class VpcAssociationAuthorization extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcAssociationAuthorization(String name, VpcAssociationAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/vpcAssociationAuthorization:VpcAssociationAuthorization", name, args == null ? VpcAssociationAuthorizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/vpcAssociationAuthorization:VpcAssociationAuthorization", name, args == null ? VpcAssociationAuthorizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcAssociationAuthorization(String name, Output<String> id, @Nullable VpcAssociationAuthorizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.securityinsights.enums.AutomationRulePropertyCondit
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="operator")
       private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
 
-    public Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> getOperator() {
-        return this.operator == null ? Output.empty() : this.operator;
+    public Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator() {
+        return this.operator == null ? Codegen.empty() : this.operator;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="propertyName")
       private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
 
-    public Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> getPropertyName() {
-        return this.propertyName == null ? Output.empty() : this.propertyName;
+    public Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName() {
+        return this.propertyName == null ? Codegen.empty() : this.propertyName;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     @Import(name="propertyValues")
       private final @Nullable Output<List<String>> propertyValues;
 
-    public Output<List<String>> getPropertyValues() {
-        return this.propertyValues == null ? Output.empty() : this.propertyValues;
+    public Output<List<String>> propertyValues() {
+        return this.propertyValues == null ? Codegen.empty() : this.propertyValues;
     }
 
     public AutomationRulePropertyValuesConditionConditionPropertiesArgs(
@@ -65,9 +66,9 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     }
 
     private AutomationRulePropertyValuesConditionConditionPropertiesArgs() {
-        this.operator = Output.empty();
-        this.propertyName = Output.empty();
-        this.propertyValues = Output.empty();
+        this.operator = Codegen.empty();
+        this.propertyName = Codegen.empty();
+        this.propertyValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
             return this;
         }
         public Builder operator(@Nullable Either<String,AutomationRulePropertyConditionSupportedOperator> operator) {
-            this.operator = Output.ofNullable(operator);
+            this.operator = Codegen.ofNullable(operator);
             return this;
         }
         public Builder propertyName(@Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName) {
@@ -107,7 +108,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
             return this;
         }
         public Builder propertyName(@Nullable Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
-            this.propertyName = Output.ofNullable(propertyName);
+            this.propertyName = Codegen.ofNullable(propertyName);
             return this;
         }
         public Builder propertyValues(@Nullable Output<List<String>> propertyValues) {
@@ -115,7 +116,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
             return this;
         }
         public Builder propertyValues(@Nullable List<String> propertyValues) {
-            this.propertyValues = Output.ofNullable(propertyValues);
+            this.propertyValues = Codegen.ofNullable(propertyValues);
             return this;
         }
         public Builder propertyValues(String... propertyValues) {

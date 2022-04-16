@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetIotEventsDestinationConfig
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
     @Import(name="iotEventsDestinationConfiguration")
       private final @Nullable Output<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
 
-    public Output<DatasetIotEventsDestinationConfigurationArgs> getIotEventsDestinationConfiguration() {
-        return this.iotEventsDestinationConfiguration == null ? Output.empty() : this.iotEventsDestinationConfiguration;
+    public Output<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration() {
+        return this.iotEventsDestinationConfiguration == null ? Codegen.empty() : this.iotEventsDestinationConfiguration;
     }
 
     @Import(name="s3DestinationConfiguration")
       private final @Nullable Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
-    public Output<DatasetS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
-        return this.s3DestinationConfiguration == null ? Output.empty() : this.s3DestinationConfiguration;
+    public Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration() {
+        return this.s3DestinationConfiguration == null ? Codegen.empty() : this.s3DestinationConfiguration;
     }
 
     public DatasetContentDeliveryRuleDestinationArgs(
@@ -37,8 +38,8 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
     }
 
     private DatasetContentDeliveryRuleDestinationArgs() {
-        this.iotEventsDestinationConfiguration = Output.empty();
-        this.s3DestinationConfiguration = Output.empty();
+        this.iotEventsDestinationConfiguration = Codegen.empty();
+        this.s3DestinationConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
             return this;
         }
         public Builder iotEventsDestinationConfiguration(@Nullable DatasetIotEventsDestinationConfigurationArgs iotEventsDestinationConfiguration) {
-            this.iotEventsDestinationConfiguration = Output.ofNullable(iotEventsDestinationConfiguration);
+            this.iotEventsDestinationConfiguration = Codegen.ofNullable(iotEventsDestinationConfiguration);
             return this;
         }
         public Builder s3DestinationConfiguration(@Nullable Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration) {
@@ -76,7 +77,7 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
             return this;
         }
         public Builder s3DestinationConfiguration(@Nullable DatasetS3DestinationConfigurationArgs s3DestinationConfiguration) {
-            this.s3DestinationConfiguration = Output.ofNullable(s3DestinationConfiguration);
+            this.s3DestinationConfiguration = Codegen.ofNullable(s3DestinationConfiguration);
             return this;
         }        public DatasetContentDeliveryRuleDestinationArgs build() {
             return new DatasetContentDeliveryRuleDestinationArgs(iotEventsDestinationConfiguration, s3DestinationConfiguration);

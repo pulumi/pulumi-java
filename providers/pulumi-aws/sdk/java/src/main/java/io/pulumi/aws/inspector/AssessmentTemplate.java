@@ -9,6 +9,7 @@ import io.pulumi.aws.inspector.inputs.AssessmentTemplateState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @return The template assessment ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @return The duration of the inspector run.
      * 
      */
-    public Output<Integer> getDuration() {
+    public Output<Integer> duration() {
         return this.duration;
     }
     /**
@@ -70,7 +71,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @return The name of the assessment template.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @return The rules to be used during the run.
      * 
      */
-    public Output<List<String>> getRulesPackageArns() {
+    public Output<List<String>> rulesPackageArns() {
         return this.rulesPackageArns;
     }
     /**
@@ -98,7 +99,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @return Key-value map of tags for the Inspector assessment template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +113,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -126,7 +127,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @return The assessment target ARN to attach the template to.
      * 
      */
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 
@@ -152,7 +153,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AssessmentTemplate(String name, AssessmentTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:inspector/assessmentTemplate:AssessmentTemplate", name, args == null ? AssessmentTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:inspector/assessmentTemplate:AssessmentTemplate", name, args == null ? AssessmentTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AssessmentTemplate(String name, Output<String> id, @Nullable AssessmentTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -79,56 +79,56 @@ public final class GetConnectionTypeResult {
      * Gets the creation time.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets the field definitions of the connection type.
      * 
     */
-    public Map<String,FieldDefinitionResponse> getFieldDefinitions() {
+    public Map<String,FieldDefinitionResponse> fieldDefinitions() {
         return this.fieldDefinitions;
     }
     /**
      * Gets the id of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets a Boolean value to indicate if the connection type is global.
      * 
     */
-    public Optional<Boolean> getIsGlobal() {
+    public Optional<Boolean> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Gets the name of the connection type.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

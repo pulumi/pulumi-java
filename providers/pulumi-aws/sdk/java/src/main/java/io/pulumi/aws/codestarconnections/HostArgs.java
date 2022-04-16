@@ -6,6 +6,7 @@ package io.pulumi.aws.codestarconnections;
 import io.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerEndpoint", required=true)
       private final Output<String> providerEndpoint;
 
-    public Output<String> getProviderEndpoint() {
+    public Output<String> providerEndpoint() {
         return this.providerEndpoint;
     }
 
@@ -44,7 +45,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerType", required=true)
       private final Output<String> providerType;
 
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
 
@@ -55,8 +56,8 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
       private final @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<HostVpcConfigurationArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
+    public Output<HostVpcConfigurationArgs> vpcConfiguration() {
+        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 
     public HostArgs(
@@ -71,10 +72,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostArgs() {
-        this.name = Output.empty();
-        this.providerEndpoint = Output.empty();
-        this.providerType = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.name = Codegen.empty();
+        this.providerEndpoint = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder providerEndpoint(Output<String> providerEndpoint) {
@@ -132,7 +133,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConfiguration(@Nullable HostVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
             return this;
         }        public HostArgs build() {
             return new HostArgs(name, providerEndpoint, providerType, vpcConfiguration);

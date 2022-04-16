@@ -9,6 +9,7 @@ import io.pulumi.awsnative.amplify.outputs.DomainSubDomainSetting;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,61 +24,61 @@ public class Domain extends io.pulumi.resources.CustomResource {
     @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="autoSubDomainCreationPatterns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> autoSubDomainCreationPatterns;
 
-    public Output</* @Nullable */ List<String>> getAutoSubDomainCreationPatterns() {
+    public Output</* @Nullable */ List<String>> autoSubDomainCreationPatterns() {
         return this.autoSubDomainCreationPatterns;
     }
     @Export(name="autoSubDomainIAMRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoSubDomainIAMRole;
 
-    public Output</* @Nullable */ String> getAutoSubDomainIAMRole() {
+    public Output</* @Nullable */ String> autoSubDomainIAMRole() {
         return this.autoSubDomainIAMRole;
     }
     @Export(name="certificateRecord", type=String.class, parameters={})
     private Output<String> certificateRecord;
 
-    public Output<String> getCertificateRecord() {
+    public Output<String> certificateRecord() {
         return this.certificateRecord;
     }
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     @Export(name="domainStatus", type=String.class, parameters={})
     private Output<String> domainStatus;
 
-    public Output<String> getDomainStatus() {
+    public Output<String> domainStatus() {
         return this.domainStatus;
     }
     @Export(name="enableAutoSubDomain", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutoSubDomain;
 
-    public Output</* @Nullable */ Boolean> getEnableAutoSubDomain() {
+    public Output</* @Nullable */ Boolean> enableAutoSubDomain() {
         return this.enableAutoSubDomain;
     }
     @Export(name="statusReason", type=String.class, parameters={})
     private Output<String> statusReason;
 
-    public Output<String> getStatusReason() {
+    public Output<String> statusReason() {
         return this.statusReason;
     }
     @Export(name="subDomainSettings", type=List.class, parameters={DomainSubDomainSetting.class})
     private Output<List<DomainSubDomainSetting>> subDomainSettings;
 
-    public Output<List<DomainSubDomainSetting>> getSubDomainSettings() {
+    public Output<List<DomainSubDomainSetting>> subDomainSettings() {
         return this.subDomainSettings;
     }
 
@@ -103,7 +104,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:amplify:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:amplify:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Domain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

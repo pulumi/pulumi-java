@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class UserPoolUserPoolAddOnsArgs extends io.pulumi.resources.Resour
     @Import(name="advancedSecurityMode", required=true)
       private final Output<String> advancedSecurityMode;
 
-    public Output<String> getAdvancedSecurityMode() {
+    public Output<String> advancedSecurityMode() {
         return this.advancedSecurityMode;
     }
 
@@ -29,7 +30,7 @@ public final class UserPoolUserPoolAddOnsArgs extends io.pulumi.resources.Resour
     }
 
     private UserPoolUserPoolAddOnsArgs() {
-        this.advancedSecurityMode = Output.empty();
+        this.advancedSecurityMode = Codegen.empty();
     }
 
     public static Builder builder() {

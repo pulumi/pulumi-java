@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.MetastoreServiceArgs;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceState;
@@ -51,7 +52,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @return A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
      */
-    public Output<String> getArtifactGcsUri() {
+    public Output<String> artifactGcsUri() {
         return this.artifactGcsUri;
     }
     /**
@@ -65,7 +66,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @return The URI of the endpoint used to access the metastore service.
      * 
      */
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri;
     }
     /**
@@ -81,7 +82,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetastoreServiceHiveMetastoreConfig> getHiveMetastoreConfig() {
+    public Output</* @Nullable */ MetastoreServiceHiveMetastoreConfig> hiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
     }
     /**
@@ -95,7 +96,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @return User-defined labels for the metastore service.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -111,7 +112,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * The default value is `global`.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -129,7 +130,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetastoreServiceMaintenanceWindow> getMaintenanceWindow() {
+    public Output</* @Nullable */ MetastoreServiceMaintenanceWindow> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -143,7 +144,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @return The relative resource name of the metastore service.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +160,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * "projects/{projectNumber}/global/networks/{network_id}".
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -173,7 +174,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @return The TCP port at which the metastore service is reached. Default: 9083.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -189,7 +190,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -207,7 +208,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * 3 and 63 characters.
      * 
      */
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
     /**
@@ -221,7 +222,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @return The current state of the metastore service.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -235,7 +236,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @return Additional information about the current state of the metastore service, if available.
      * 
      */
-    public Output<String> getStateMessage() {
+    public Output<String> stateMessage() {
         return this.stateMessage;
     }
     /**
@@ -251,7 +252,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * Possible values are `DEVELOPER` and `ENTERPRISE`.
      * 
      */
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
 
@@ -277,7 +278,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetastoreService(String name, MetastoreServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MetastoreService(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

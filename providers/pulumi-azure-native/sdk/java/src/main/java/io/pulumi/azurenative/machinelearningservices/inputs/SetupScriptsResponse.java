@@ -25,7 +25,7 @@ public final class SetupScriptsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scripts")
       private final @Nullable ScriptsToExecuteResponse scripts;
 
-    public Optional<ScriptsToExecuteResponse> getScripts() {
+    public Optional<ScriptsToExecuteResponse> scripts() {
         return this.scripts == null ? Optional.empty() : Optional.ofNullable(this.scripts);
     }
 

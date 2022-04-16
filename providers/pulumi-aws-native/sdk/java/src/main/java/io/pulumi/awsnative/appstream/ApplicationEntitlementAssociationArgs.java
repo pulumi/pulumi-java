@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appstream;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,21 +17,21 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
     @Import(name="applicationIdentifier", required=true)
       private final Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="entitlementName", required=true)
       private final Output<String> entitlementName;
 
-    public Output<String> getEntitlementName() {
+    public Output<String> entitlementName() {
         return this.entitlementName;
     }
 
     @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -44,9 +45,9 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
     }
 
     private ApplicationEntitlementAssociationArgs() {
-        this.applicationIdentifier = Output.empty();
-        this.entitlementName = Output.empty();
-        this.stackName = Output.empty();
+        this.applicationIdentifier = Codegen.empty();
+        this.entitlementName = Codegen.empty();
+        this.stackName = Codegen.empty();
     }
 
     public static Builder builder() {

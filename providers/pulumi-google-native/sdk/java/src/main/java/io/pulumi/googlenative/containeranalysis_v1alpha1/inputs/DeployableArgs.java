@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri")
       private final @Nullable Output<List<String>> resourceUri;
 
-    public Output<List<String>> getResourceUri() {
-        return this.resourceUri == null ? Output.empty() : this.resourceUri;
+    public Output<List<String>> resourceUri() {
+        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
     public DeployableArgs(@Nullable Output<List<String>> resourceUri) {
@@ -35,7 +36,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeployableArgs() {
-        this.resourceUri = Output.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceUri(@Nullable List<String> resourceUri) {
-            this.resourceUri = Output.ofNullable(resourceUri);
+            this.resourceUri = Codegen.ofNullable(resourceUri);
             return this;
         }
         public Builder resourceUri(String... resourceUri) {

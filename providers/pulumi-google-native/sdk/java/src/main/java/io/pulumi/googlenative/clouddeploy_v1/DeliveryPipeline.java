@@ -6,6 +6,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.DeliveryPipelineArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.PipelineConditionResponse;
@@ -32,7 +33,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -46,7 +47,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return Information around the state of the Delivery Pipeline.
      * 
      */
-    public Output<PipelineConditionResponse> getCondition() {
+    public Output<PipelineConditionResponse> condition() {
         return this.condition;
     }
     /**
@@ -60,7 +61,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return Time at which the pipeline was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -74,7 +75,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return Description of the `DeliveryPipeline`. Max length is 255 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -102,7 +103,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -116,7 +117,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +131,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
      * 
      */
-    public Output<SerialPipelineResponse> getSerialPipeline() {
+    public Output<SerialPipelineResponse> serialPipeline() {
         return this.serialPipeline;
     }
     /**
@@ -144,7 +145,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the `DeliveryPipeline`.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -158,7 +159,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @return Most recent time at which the pipeline was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -184,7 +185,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeliveryPipeline(String name, DeliveryPipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:clouddeploy/v1:DeliveryPipeline", name, args == null ? DeliveryPipelineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:clouddeploy/v1:DeliveryPipeline", name, args == null ? DeliveryPipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeliveryPipeline(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

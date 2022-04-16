@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.HostedConnectionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +34,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The Direct Connect endpoint on which the physical connection terminates.
      * 
      */
-    public Output<String> getAwsDevice() {
+    public Output<String> awsDevice() {
         return this.awsDevice;
     }
     /**
@@ -47,7 +48,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps and 10Gbps. Case sensitive.
      * 
      */
-    public Output<String> getBandwidth() {
+    public Output<String> bandwidth() {
         return this.bandwidth;
     }
     /**
@@ -61,7 +62,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the interconnect or LAG.
      * 
      */
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -75,7 +76,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
      * 
      */
-    public Output<String> getHasLogicalRedundancy() {
+    public Output<String> hasLogicalRedundancy() {
         return this.hasLogicalRedundancy;
     }
     /**
@@ -89,7 +90,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return Boolean value representing if jumbo frames have been enabled for this connection.
      * 
      */
-    public Output<Boolean> getJumboFrameCapable() {
+    public Output<Boolean> jumboFrameCapable() {
         return this.jumboFrameCapable;
     }
     /**
@@ -103,7 +104,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the LAG.
      * 
      */
-    public Output<String> getLagId() {
+    public Output<String> lagId() {
         return this.lagId;
     }
     /**
@@ -117,7 +118,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The time of the most recent call to [DescribeLoa](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) for this connection.
      * 
      */
-    public Output<String> getLoaIssueTime() {
+    public Output<String> loaIssueTime() {
         return this.loaIssueTime;
     }
     /**
@@ -131,7 +132,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The location of the connection.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -145,7 +146,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the connection.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +160,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS account of the customer for the connection.
      * 
      */
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
     /**
@@ -173,7 +174,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the AWS Direct Connect service provider associated with the connection.
      * 
      */
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName;
     }
     /**
@@ -187,7 +188,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the service provider associated with the connection.
      * 
      */
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
     /**
@@ -201,7 +202,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The AWS Region where the connection is located.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -215,7 +216,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The state of the connection. Possible values include: ordering, requested, pending, available, down, deleting, deleted, rejected, unknown. See [AllocateHostedConnection](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocateHostedConnection.html) for a description of each connection state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -229,7 +230,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @return The dedicated VLAN provisioned to the hosted connection.
      * 
      */
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 
@@ -255,7 +256,7 @@ public class HostedConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedConnection(String name, HostedConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/hostedConnection:HostedConnection", name, args == null ? HostedConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/hostedConnection:HostedConnection", name, args == null ? HostedConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HostedConnection(String name, Output<String> id, @Nullable HostedConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.robomaker.outputs.RobotTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,13 +31,13 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @return The target architecture of the robot.
      * 
      */
-    public Output<RobotArchitecture> getArchitecture() {
+    public Output<RobotArchitecture> architecture() {
         return this.architecture;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -50,7 +51,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> getFleet() {
+    public Output</* @Nullable */ String> fleet() {
         return this.fleet;
     }
     /**
@@ -64,7 +65,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @return The Greengrass group id.
      * 
      */
-    public Output<String> getGreengrassGroupId() {
+    public Output<String> greengrassGroupId() {
         return this.greengrassGroupId;
     }
     /**
@@ -78,13 +79,13 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @return The name for the robot.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="tags", type=RobotTags.class, parameters={})
     private Output</* @Nullable */ RobotTags> tags;
 
-    public Output</* @Nullable */ RobotTags> getTags() {
+    public Output</* @Nullable */ RobotTags> tags() {
         return this.tags;
     }
 
@@ -110,7 +111,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Robot(String name, RobotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:robomaker:Robot", name, args == null ? RobotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:robomaker:Robot", name, args == null ? RobotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Robot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

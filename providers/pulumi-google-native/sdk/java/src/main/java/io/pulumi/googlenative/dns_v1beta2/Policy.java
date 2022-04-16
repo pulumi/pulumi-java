@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dns_v1beta2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.PolicyArgs;
 import io.pulumi.googlenative.dns_v1beta2.outputs.PolicyAlternativeNameServerConfigResponse;
@@ -32,7 +33,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
      * 
      */
-    public Output<PolicyAlternativeNameServerConfigResponse> getAlternativeNameServerConfig() {
+    public Output<PolicyAlternativeNameServerConfigResponse> alternativeNameServerConfig() {
         return this.alternativeNameServerConfig;
     }
     /**
@@ -46,7 +47,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
      * 
      */
-    public Output<Boolean> getEnableInboundForwarding() {
+    public Output<Boolean> enableInboundForwarding() {
         return this.enableInboundForwarding;
     }
     /**
@@ -74,13 +75,13 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
      * 
      */
-    public Output<Boolean> getEnableLogging() {
+    public Output<Boolean> enableLogging() {
         return this.enableLogging;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -94,7 +95,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return User-assigned name for this policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -108,7 +109,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return List of network names specifying networks to which this policy is applied.
      * 
      */
-    public Output<List<PolicyNetworkResponse>> getNetworks() {
+    public Output<List<PolicyNetworkResponse>> networks() {
         return this.networks;
     }
 
@@ -134,7 +135,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Policy(String name, @Nullable PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dns/v1beta2:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dns/v1beta2:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Policy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

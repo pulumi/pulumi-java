@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricValueArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileStatisticalThresholdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="comparisonOperator")
       private final @Nullable Output<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator;
 
-    public Output<SecurityProfileBehaviorCriteriaComparisonOperator> getComparisonOperator() {
-        return this.comparisonOperator == null ? Output.empty() : this.comparisonOperator;
+    public Output<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator() {
+        return this.comparisonOperator == null ? Codegen.empty() : this.comparisonOperator;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="consecutiveDatapointsToAlarm")
       private final @Nullable Output<Integer> consecutiveDatapointsToAlarm;
 
-    public Output<Integer> getConsecutiveDatapointsToAlarm() {
-        return this.consecutiveDatapointsToAlarm == null ? Output.empty() : this.consecutiveDatapointsToAlarm;
+    public Output<Integer> consecutiveDatapointsToAlarm() {
+        return this.consecutiveDatapointsToAlarm == null ? Codegen.empty() : this.consecutiveDatapointsToAlarm;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="consecutiveDatapointsToClear")
       private final @Nullable Output<Integer> consecutiveDatapointsToClear;
 
-    public Output<Integer> getConsecutiveDatapointsToClear() {
-        return this.consecutiveDatapointsToClear == null ? Output.empty() : this.consecutiveDatapointsToClear;
+    public Output<Integer> consecutiveDatapointsToClear() {
+        return this.consecutiveDatapointsToClear == null ? Codegen.empty() : this.consecutiveDatapointsToClear;
     }
 
     /**
@@ -62,29 +63,29 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="durationSeconds")
       private final @Nullable Output<Integer> durationSeconds;
 
-    public Output<Integer> getDurationSeconds() {
-        return this.durationSeconds == null ? Output.empty() : this.durationSeconds;
+    public Output<Integer> durationSeconds() {
+        return this.durationSeconds == null ? Codegen.empty() : this.durationSeconds;
     }
 
     @Import(name="mlDetectionConfig")
       private final @Nullable Output<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig;
 
-    public Output<SecurityProfileMachineLearningDetectionConfigArgs> getMlDetectionConfig() {
-        return this.mlDetectionConfig == null ? Output.empty() : this.mlDetectionConfig;
+    public Output<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig() {
+        return this.mlDetectionConfig == null ? Codegen.empty() : this.mlDetectionConfig;
     }
 
     @Import(name="statisticalThreshold")
       private final @Nullable Output<SecurityProfileStatisticalThresholdArgs> statisticalThreshold;
 
-    public Output<SecurityProfileStatisticalThresholdArgs> getStatisticalThreshold() {
-        return this.statisticalThreshold == null ? Output.empty() : this.statisticalThreshold;
+    public Output<SecurityProfileStatisticalThresholdArgs> statisticalThreshold() {
+        return this.statisticalThreshold == null ? Codegen.empty() : this.statisticalThreshold;
     }
 
     @Import(name="value")
       private final @Nullable Output<SecurityProfileMetricValueArgs> value;
 
-    public Output<SecurityProfileMetricValueArgs> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<SecurityProfileMetricValueArgs> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public SecurityProfileBehaviorCriteriaArgs(
@@ -105,13 +106,13 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     }
 
     private SecurityProfileBehaviorCriteriaArgs() {
-        this.comparisonOperator = Output.empty();
-        this.consecutiveDatapointsToAlarm = Output.empty();
-        this.consecutiveDatapointsToClear = Output.empty();
-        this.durationSeconds = Output.empty();
-        this.mlDetectionConfig = Output.empty();
-        this.statisticalThreshold = Output.empty();
-        this.value = Output.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.consecutiveDatapointsToAlarm = Codegen.empty();
+        this.consecutiveDatapointsToClear = Codegen.empty();
+        this.durationSeconds = Codegen.empty();
+        this.mlDetectionConfig = Codegen.empty();
+        this.statisticalThreshold = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             return this;
         }
         public Builder comparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
-            this.comparisonOperator = Output.ofNullable(comparisonOperator);
+            this.comparisonOperator = Codegen.ofNullable(comparisonOperator);
             return this;
         }
         public Builder consecutiveDatapointsToAlarm(@Nullable Output<Integer> consecutiveDatapointsToAlarm) {
@@ -159,7 +160,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             return this;
         }
         public Builder consecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
-            this.consecutiveDatapointsToAlarm = Output.ofNullable(consecutiveDatapointsToAlarm);
+            this.consecutiveDatapointsToAlarm = Codegen.ofNullable(consecutiveDatapointsToAlarm);
             return this;
         }
         public Builder consecutiveDatapointsToClear(@Nullable Output<Integer> consecutiveDatapointsToClear) {
@@ -167,7 +168,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             return this;
         }
         public Builder consecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
-            this.consecutiveDatapointsToClear = Output.ofNullable(consecutiveDatapointsToClear);
+            this.consecutiveDatapointsToClear = Codegen.ofNullable(consecutiveDatapointsToClear);
             return this;
         }
         public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
@@ -175,7 +176,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             return this;
         }
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = Output.ofNullable(durationSeconds);
+            this.durationSeconds = Codegen.ofNullable(durationSeconds);
             return this;
         }
         public Builder mlDetectionConfig(@Nullable Output<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig) {
@@ -183,7 +184,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             return this;
         }
         public Builder mlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfigArgs mlDetectionConfig) {
-            this.mlDetectionConfig = Output.ofNullable(mlDetectionConfig);
+            this.mlDetectionConfig = Codegen.ofNullable(mlDetectionConfig);
             return this;
         }
         public Builder statisticalThreshold(@Nullable Output<SecurityProfileStatisticalThresholdArgs> statisticalThreshold) {
@@ -191,7 +192,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             return this;
         }
         public Builder statisticalThreshold(@Nullable SecurityProfileStatisticalThresholdArgs statisticalThreshold) {
-            this.statisticalThreshold = Output.ofNullable(statisticalThreshold);
+            this.statisticalThreshold = Codegen.ofNullable(statisticalThreshold);
             return this;
         }
         public Builder value(@Nullable Output<SecurityProfileMetricValueArgs> value) {
@@ -199,7 +200,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             return this;
         }
         public Builder value(@Nullable SecurityProfileMetricValueArgs value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public SecurityProfileBehaviorCriteriaArgs build() {
             return new SecurityProfileBehaviorCriteriaArgs(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);

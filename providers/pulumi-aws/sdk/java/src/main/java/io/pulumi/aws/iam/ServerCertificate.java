@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.ServerCertificateState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -51,7 +52,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) specifying the server certificate.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +68,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * PEM-encoded format.
      * 
      */
-    public Output<String> getCertificateBody() {
+    public Output<String> certificateBody() {
         return this.certificateBody;
     }
     /**
@@ -85,7 +86,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * of the chain.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateChain() {
+    public Output</* @Nullable */ String> certificateChain() {
         return this.certificateChain;
     }
     /**
@@ -99,7 +100,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) on which the certificate is set to expire.
      * 
      */
-    public Output<String> getExpiration() {
+    public Output<String> expiration() {
         return this.expiration;
     }
     /**
@@ -115,7 +116,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * path in this value. If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -151,7 +152,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
      * 
      */
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     /**
@@ -165,7 +166,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @return The contents of the private key in PEM-encoded format.
      * 
      */
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -179,7 +180,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @return Map of resource tags for the server certificate. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -193,7 +194,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -207,7 +208,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) when the server certificate was uploaded.
      * 
      */
-    public Output<String> getUploadDate() {
+    public Output<String> uploadDate() {
         return this.uploadDate;
     }
 
@@ -233,7 +234,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerCertificate(String name, ServerCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/serverCertificate:ServerCertificate", name, args == null ? ServerCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/serverCertificate:ServerCertificate", name, args == null ? ServerCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerCertificate(String name, Output<String> id, @Nullable ServerCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

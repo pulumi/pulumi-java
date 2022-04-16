@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
-    public Output<String> getAutoPlacement() {
-        return this.autoPlacement == null ? Output.empty() : this.autoPlacement;
+    public Output<String> autoPlacement() {
+        return this.autoPlacement == null ? Codegen.empty() : this.autoPlacement;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
-    public Output<String> getHostRecovery() {
-        return this.hostRecovery == null ? Output.empty() : this.hostRecovery;
+    public Output<String> hostRecovery() {
+        return this.hostRecovery == null ? Codegen.empty() : this.hostRecovery;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceFamily")
       private final @Nullable Output<String> instanceFamily;
 
-    public Output<String> getInstanceFamily() {
-        return this.instanceFamily == null ? Output.empty() : this.instanceFamily;
+    public Output<String> instanceFamily() {
+        return this.instanceFamily == null ? Codegen.empty() : this.instanceFamily;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public DedicatedHostState(
@@ -136,15 +137,15 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DedicatedHostState() {
-        this.arn = Output.empty();
-        this.autoPlacement = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.hostRecovery = Output.empty();
-        this.instanceFamily = Output.empty();
-        this.instanceType = Output.empty();
-        this.ownerId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.autoPlacement = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.hostRecovery = Codegen.empty();
+        this.instanceFamily = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder autoPlacement(@Nullable Output<String> autoPlacement) {
@@ -196,7 +197,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoPlacement(@Nullable String autoPlacement) {
-            this.autoPlacement = Output.ofNullable(autoPlacement);
+            this.autoPlacement = Codegen.ofNullable(autoPlacement);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -204,7 +205,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
@@ -212,7 +213,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostRecovery(@Nullable String hostRecovery) {
-            this.hostRecovery = Output.ofNullable(hostRecovery);
+            this.hostRecovery = Codegen.ofNullable(hostRecovery);
             return this;
         }
         public Builder instanceFamily(@Nullable Output<String> instanceFamily) {
@@ -220,7 +221,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceFamily(@Nullable String instanceFamily) {
-            this.instanceFamily = Output.ofNullable(instanceFamily);
+            this.instanceFamily = Codegen.ofNullable(instanceFamily);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -228,7 +229,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -236,7 +237,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -244,7 +245,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -252,7 +253,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public DedicatedHostState build() {
             return new DedicatedHostState(arn, autoPlacement, availabilityZone, hostRecovery, instanceFamily, instanceType, ownerId, tags, tagsAll);

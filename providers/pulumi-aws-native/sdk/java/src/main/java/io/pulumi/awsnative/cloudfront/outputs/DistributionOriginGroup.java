@@ -25,13 +25,13 @@ public final class DistributionOriginGroup {
         this.members = members;
     }
 
-    public DistributionOriginGroupFailoverCriteria getFailoverCriteria() {
+    public DistributionOriginGroupFailoverCriteria failoverCriteria() {
         return this.failoverCriteria;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public DistributionOriginGroupMembers getMembers() {
+    public DistributionOriginGroupMembers members() {
         return this.members;
     }
 

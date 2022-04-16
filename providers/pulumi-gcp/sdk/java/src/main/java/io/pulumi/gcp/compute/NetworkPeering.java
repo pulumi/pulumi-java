@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkPeeringArgs;
 import io.pulumi.gcp.compute.inputs.NetworkPeeringState;
@@ -48,7 +49,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @return Whether to export the custom routes to the peer network. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getExportCustomRoutes() {
+    public Output</* @Nullable */ Boolean> exportCustomRoutes() {
         return this.exportCustomRoutes;
     }
     /**
@@ -62,7 +63,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @return Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> getExportSubnetRoutesWithPublicIp() {
+    public Output</* @Nullable */ Boolean> exportSubnetRoutesWithPublicIp() {
         return this.exportSubnetRoutesWithPublicIp;
     }
     /**
@@ -76,7 +77,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @return Whether to import the custom routes from the peer network. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getImportCustomRoutes() {
+    public Output</* @Nullable */ Boolean> importCustomRoutes() {
         return this.importCustomRoutes;
     }
     /**
@@ -90,7 +91,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @return Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> getImportSubnetRoutesWithPublicIp() {
+    public Output</* @Nullable */ Boolean> importSubnetRoutesWithPublicIp() {
         return this.importSubnetRoutesWithPublicIp;
     }
     /**
@@ -104,7 +105,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @return Name of the peering.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +119,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @return The primary network of the peering.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -134,7 +135,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * may belong to a different project.
      * 
      */
-    public Output<String> getPeerNetwork() {
+    public Output<String> peerNetwork() {
         return this.peerNetwork;
     }
     /**
@@ -150,7 +151,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * `ACTIVE` when there's a matching configuration in the peer network.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -164,7 +165,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @return Details about the current state of the peering.
      * 
      */
-    public Output<String> getStateDetails() {
+    public Output<String> stateDetails() {
         return this.stateDetails;
     }
 
@@ -190,7 +191,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkPeering(String name, NetworkPeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/networkPeering:NetworkPeering", name, args == null ? NetworkPeeringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/networkPeering:NetworkPeering", name, args == null ? NetworkPeeringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkPeering(String name, Output<String> id, @Nullable NetworkPeeringState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

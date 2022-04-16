@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.ValidationOptionsSchemaValidation;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.ValidationOptionsUndeclaredProperties;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="schemaValidation")
       private final @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
 
-    public Output<ValidationOptionsSchemaValidation> getSchemaValidation() {
-        return this.schemaValidation == null ? Output.empty() : this.schemaValidation;
+    public Output<ValidationOptionsSchemaValidation> schemaValidation() {
+        return this.schemaValidation == null ? Codegen.empty() : this.schemaValidation;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="undeclaredProperties")
       private final @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
 
-    public Output<ValidationOptionsUndeclaredProperties> getUndeclaredProperties() {
-        return this.undeclaredProperties == null ? Output.empty() : this.undeclaredProperties;
+    public Output<ValidationOptionsUndeclaredProperties> undeclaredProperties() {
+        return this.undeclaredProperties == null ? Codegen.empty() : this.undeclaredProperties;
     }
 
     public ValidationOptionsArgs(
@@ -49,8 +50,8 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ValidationOptionsArgs() {
-        this.schemaValidation = Output.empty();
-        this.undeclaredProperties = Output.empty();
+        this.schemaValidation = Codegen.empty();
+        this.undeclaredProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder schemaValidation(@Nullable ValidationOptionsSchemaValidation schemaValidation) {
-            this.schemaValidation = Output.ofNullable(schemaValidation);
+            this.schemaValidation = Codegen.ofNullable(schemaValidation);
             return this;
         }
         public Builder undeclaredProperties(@Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
@@ -88,7 +89,7 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder undeclaredProperties(@Nullable ValidationOptionsUndeclaredProperties undeclaredProperties) {
-            this.undeclaredProperties = Output.ofNullable(undeclaredProperties);
+            this.undeclaredProperties = Codegen.ofNullable(undeclaredProperties);
             return this;
         }        public ValidationOptionsArgs build() {
             return new ValidationOptionsArgs(schemaValidation, undeclaredProperties);

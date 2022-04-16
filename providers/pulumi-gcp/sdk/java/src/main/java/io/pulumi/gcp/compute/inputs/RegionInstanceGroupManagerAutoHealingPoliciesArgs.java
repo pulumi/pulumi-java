@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesArgs extends io.
     @Import(name="healthCheck", required=true)
       private final Output<String> healthCheck;
 
-    public Output<String> getHealthCheck() {
+    public Output<String> healthCheck() {
         return this.healthCheck;
     }
 
@@ -33,7 +34,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesArgs extends io.
     @Import(name="initialDelaySec", required=true)
       private final Output<Integer> initialDelaySec;
 
-    public Output<Integer> getInitialDelaySec() {
+    public Output<Integer> initialDelaySec() {
         return this.initialDelaySec;
     }
 
@@ -45,8 +46,8 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesArgs extends io.
     }
 
     private RegionInstanceGroupManagerAutoHealingPoliciesArgs() {
-        this.healthCheck = Output.empty();
-        this.initialDelaySec = Output.empty();
+        this.healthCheck = Codegen.empty();
+        this.initialDelaySec = Codegen.empty();
     }
 
     public static Builder builder() {

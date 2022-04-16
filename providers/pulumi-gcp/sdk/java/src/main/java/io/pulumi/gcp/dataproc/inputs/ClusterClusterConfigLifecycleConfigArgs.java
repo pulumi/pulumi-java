@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
     @Import(name="autoDeleteTime")
       private final @Nullable Output<String> autoDeleteTime;
 
-    public Output<String> getAutoDeleteTime() {
-        return this.autoDeleteTime == null ? Output.empty() : this.autoDeleteTime;
+    public Output<String> autoDeleteTime() {
+        return this.autoDeleteTime == null ? Codegen.empty() : this.autoDeleteTime;
     }
 
     /**
@@ -35,15 +36,15 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
     @Import(name="idleDeleteTtl")
       private final @Nullable Output<String> idleDeleteTtl;
 
-    public Output<String> getIdleDeleteTtl() {
-        return this.idleDeleteTtl == null ? Output.empty() : this.idleDeleteTtl;
+    public Output<String> idleDeleteTtl() {
+        return this.idleDeleteTtl == null ? Codegen.empty() : this.idleDeleteTtl;
     }
 
     @Import(name="idleStartTime")
       private final @Nullable Output<String> idleStartTime;
 
-    public Output<String> getIdleStartTime() {
-        return this.idleStartTime == null ? Output.empty() : this.idleStartTime;
+    public Output<String> idleStartTime() {
+        return this.idleStartTime == null ? Codegen.empty() : this.idleStartTime;
     }
 
     public ClusterClusterConfigLifecycleConfigArgs(
@@ -56,9 +57,9 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
     }
 
     private ClusterClusterConfigLifecycleConfigArgs() {
-        this.autoDeleteTime = Output.empty();
-        this.idleDeleteTtl = Output.empty();
-        this.idleStartTime = Output.empty();
+        this.autoDeleteTime = Codegen.empty();
+        this.idleDeleteTtl = Codegen.empty();
+        this.idleStartTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
-            this.autoDeleteTime = Output.ofNullable(autoDeleteTime);
+            this.autoDeleteTime = Codegen.ofNullable(autoDeleteTime);
             return this;
         }
         public Builder idleDeleteTtl(@Nullable Output<String> idleDeleteTtl) {
@@ -98,7 +99,7 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
-            this.idleDeleteTtl = Output.ofNullable(idleDeleteTtl);
+            this.idleDeleteTtl = Codegen.ofNullable(idleDeleteTtl);
             return this;
         }
         public Builder idleStartTime(@Nullable Output<String> idleStartTime) {
@@ -106,7 +107,7 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder idleStartTime(@Nullable String idleStartTime) {
-            this.idleStartTime = Output.ofNullable(idleStartTime);
+            this.idleStartTime = Codegen.ofNullable(idleStartTime);
             return this;
         }        public ClusterClusterConfigLifecycleConfigArgs build() {
             return new ClusterClusterConfigLifecycleConfigArgs(autoDeleteTime, idleDeleteTtl, idleStartTime);

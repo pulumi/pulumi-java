@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -31,7 +32,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
     @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 
@@ -43,8 +44,8 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
     }
 
     private NetworkInterfaceSecurityGroupAttachmentArgs() {
-        this.networkInterfaceId = Output.empty();
-        this.securityGroupId = Output.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
     }
 
     public static Builder builder() {

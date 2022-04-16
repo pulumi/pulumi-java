@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPropertiesEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encryption")
       private final @Nullable Output<VaultPropertiesEncryptionArgs> encryption;
 
-    public Output<VaultPropertiesEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<VaultPropertiesEncryptionArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     public VaultPropertiesArgs(@Nullable Output<VaultPropertiesEncryptionArgs> encryption) {
@@ -34,7 +35,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VaultPropertiesArgs() {
-        this.encryption = Output.empty();
+        this.encryption = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder encryption(@Nullable VaultPropertiesEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }        public VaultPropertiesArgs build() {
             return new VaultPropertiesArgs(encryption);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
 
-    public Output<FhirStoreIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<FhirStoreIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -33,14 +34,14 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="fhirStoreId", required=true)
       private final Output<String> fhirStoreId;
 
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -53,7 +54,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -69,10 +70,10 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     private FhirStoreIamBindingArgs() {
-        this.condition = Output.empty();
-        this.fhirStoreId = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.fhirStoreId = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder condition(@Nullable FhirStoreIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder fhirStoreId(Output<String> fhirStoreId) {

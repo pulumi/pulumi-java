@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lambda.inputs;
 import io.pulumi.awsnative.lambda.enums.CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
     @Import(name="untrustedArtifactOnDeployment", required=true)
       private final Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
 
-    public Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> getUntrustedArtifactOnDeployment() {
+    public Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 
@@ -33,7 +34,7 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
     }
 
     private CodeSigningConfigCodeSigningPoliciesArgs() {
-        this.untrustedArtifactOnDeployment = Output.empty();
+        this.untrustedArtifactOnDeployment = Codegen.empty();
     }
 
     public static Builder builder() {

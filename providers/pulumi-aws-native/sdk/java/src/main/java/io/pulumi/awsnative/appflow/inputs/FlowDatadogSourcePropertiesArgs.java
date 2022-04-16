@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class FlowDatadogSourcePropertiesArgs extends io.pulumi.resources.R
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 
@@ -25,7 +26,7 @@ public final class FlowDatadogSourcePropertiesArgs extends io.pulumi.resources.R
     }
 
     private FlowDatadogSourcePropertiesArgs() {
-        this.object = Output.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {

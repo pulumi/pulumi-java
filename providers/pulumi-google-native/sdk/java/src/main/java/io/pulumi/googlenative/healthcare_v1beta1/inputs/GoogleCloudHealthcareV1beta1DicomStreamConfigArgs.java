@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
     @Import(name="bigqueryDestination")
       private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
 
-    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> getBigqueryDestination() {
-        return this.bigqueryDestination == null ? Output.empty() : this.bigqueryDestination;
+    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination() {
+        return this.bigqueryDestination == null ? Codegen.empty() : this.bigqueryDestination;
     }
 
     public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination) {
@@ -34,7 +35,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
     }
 
     private GoogleCloudHealthcareV1beta1DicomStreamConfigArgs() {
-        this.bigqueryDestination = Output.empty();
+        this.bigqueryDestination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
             return this;
         }
         public Builder bigqueryDestination(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Output.ofNullable(bigqueryDestination);
+            this.bigqueryDestination = Codegen.ofNullable(bigqueryDestination);
             return this;
         }        public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {
             return new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(bigqueryDestination);

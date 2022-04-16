@@ -5,6 +5,7 @@ package io.pulumi.azurenative.labservices;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
-    public Output<String> getLabAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -33,7 +34,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -44,8 +45,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<String> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,8 +78,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> getUniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Output.empty() : this.uniqueIdentifier;
+    public Output<String> uniqueIdentifier() {
+        return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public UserArgs(
@@ -123,14 +124,14 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.labAccountName = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.uniqueIdentifier = Output.empty();
-        this.userName = Output.empty();
+        this.labAccountName = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uniqueIdentifier = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -196,7 +197,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -212,7 +213,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
@@ -220,7 +221,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
+            this.uniqueIdentifier = Codegen.ofNullable(uniqueIdentifier);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -228,7 +229,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public UserArgs build() {
             return new UserArgs(labAccountName, labName, location, provisioningState, resourceGroupName, tags, uniqueIdentifier, userName);

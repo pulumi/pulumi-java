@@ -5,6 +5,7 @@ package io.pulumi.aws.ram;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -31,7 +32,7 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
     @Import(name="resourceShareArn", required=true)
       private final Output<String> resourceShareArn;
 
-    public Output<String> getResourceShareArn() {
+    public Output<String> resourceShareArn() {
         return this.resourceShareArn;
     }
 
@@ -43,8 +44,8 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
     }
 
     private PrincipalAssociationArgs() {
-        this.principal = Output.empty();
-        this.resourceShareArn = Output.empty();
+        this.principal = Codegen.empty();
+        this.resourceShareArn = Codegen.empty();
     }
 
     public static Builder builder() {

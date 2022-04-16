@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vpcaccess_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vpcaccess_v1.inputs.SubnetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +20,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorId", required=true)
       private final Output<String> connectorId;
 
-    public Output<String> getConnectorId() {
+    public Output<String> connectorId() {
         return this.connectorId;
     }
 
@@ -30,15 +31,15 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
 
-    public Output<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
+    public Output<String> ipCidrRange() {
+        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<String> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Output.empty() : this.maxInstances;
+    public Output<Integer> maxInstances() {
+        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxThroughput")
       private final @Nullable Output<Integer> maxThroughput;
 
-    public Output<Integer> getMaxThroughput() {
-        return this.maxThroughput == null ? Output.empty() : this.maxThroughput;
+    public Output<Integer> maxThroughput() {
+        return this.maxThroughput == null ? Codegen.empty() : this.maxThroughput;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> getMinInstances() {
-        return this.minInstances == null ? Output.empty() : this.minInstances;
+    public Output<Integer> minInstances() {
+        return this.minInstances == null ? Codegen.empty() : this.minInstances;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minThroughput")
       private final @Nullable Output<Integer> minThroughput;
 
-    public Output<Integer> getMinThroughput() {
-        return this.minThroughput == null ? Output.empty() : this.minThroughput;
+    public Output<Integer> minThroughput() {
+        return this.minThroughput == null ? Codegen.empty() : this.minThroughput;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,15 +115,15 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<SubnetArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public ConnectorArgs(
@@ -164,18 +165,18 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectorArgs() {
-        this.connectorId = Output.empty();
-        this.ipCidrRange = Output.empty();
-        this.location = Output.empty();
-        this.machineType = Output.empty();
-        this.maxInstances = Output.empty();
-        this.maxThroughput = Output.empty();
-        this.minInstances = Output.empty();
-        this.minThroughput = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.subnet = Output.empty();
+        this.connectorId = Codegen.empty();
+        this.ipCidrRange = Codegen.empty();
+        this.location = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.maxInstances = Codegen.empty();
+        this.maxThroughput = Codegen.empty();
+        this.minInstances = Codegen.empty();
+        this.minThroughput = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Output.ofNullable(ipCidrRange);
+            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -241,7 +242,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -249,7 +250,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
@@ -257,7 +258,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Output.ofNullable(maxInstances);
+            this.maxInstances = Codegen.ofNullable(maxInstances);
             return this;
         }
         public Builder maxThroughput(@Nullable Output<Integer> maxThroughput) {
@@ -265,7 +266,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxThroughput(@Nullable Integer maxThroughput) {
-            this.maxThroughput = Output.ofNullable(maxThroughput);
+            this.maxThroughput = Codegen.ofNullable(maxThroughput);
             return this;
         }
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
@@ -273,7 +274,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Output.ofNullable(minInstances);
+            this.minInstances = Codegen.ofNullable(minInstances);
             return this;
         }
         public Builder minThroughput(@Nullable Output<Integer> minThroughput) {
@@ -281,7 +282,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minThroughput(@Nullable Integer minThroughput) {
-            this.minThroughput = Output.ofNullable(minThroughput);
+            this.minThroughput = Codegen.ofNullable(minThroughput);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -289,7 +290,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -297,7 +298,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -305,7 +306,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
@@ -313,7 +314,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public ConnectorArgs build() {
             return new ConnectorArgs(connectorId, ipCidrRange, location, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, project, subnet);

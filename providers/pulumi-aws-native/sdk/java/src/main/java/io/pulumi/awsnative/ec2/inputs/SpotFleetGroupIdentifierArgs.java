@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -25,7 +26,7 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     }
 
     private SpotFleetGroupIdentifierArgs() {
-        this.groupId = Output.empty();
+        this.groupId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * @return the region of the rmpl
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -55,13 +56,13 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * @return The rmpl Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=ResourceManagementPrivateLinkEndpointConnectionsResponse.class, parameters={})
     private Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> properties;
 
-    public Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> getProperties() {
+    public Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> properties() {
         return this.properties;
     }
     /**
@@ -75,7 +76,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * @return The operation type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -101,7 +102,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceManagementPrivateLink(String name, ResourceManagementPrivateLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:ResourceManagementPrivateLink", name, args == null ? ResourceManagementPrivateLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:ResourceManagementPrivateLink", name, args == null ? ResourceManagementPrivateLinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceManagementPrivateLink(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

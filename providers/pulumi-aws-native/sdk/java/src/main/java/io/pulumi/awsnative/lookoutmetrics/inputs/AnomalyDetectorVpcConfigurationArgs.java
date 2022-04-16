@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class AnomalyDetectorVpcConfigurationArgs extends io.pulumi.resourc
     @Import(name="securityGroupIdList", required=true)
       private final Output<List<String>> securityGroupIdList;
 
-    public Output<List<String>> getSecurityGroupIdList() {
+    public Output<List<String>> securityGroupIdList() {
         return this.securityGroupIdList;
     }
 
     @Import(name="subnetIdList", required=true)
       private final Output<List<String>> subnetIdList;
 
-    public Output<List<String>> getSubnetIdList() {
+    public Output<List<String>> subnetIdList() {
         return this.subnetIdList;
     }
 
@@ -36,8 +37,8 @@ public final class AnomalyDetectorVpcConfigurationArgs extends io.pulumi.resourc
     }
 
     private AnomalyDetectorVpcConfigurationArgs() {
-        this.securityGroupIdList = Output.empty();
-        this.subnetIdList = Output.empty();
+        this.securityGroupIdList = Codegen.empty();
+        this.subnetIdList = Codegen.empty();
     }
 
     public static Builder builder() {

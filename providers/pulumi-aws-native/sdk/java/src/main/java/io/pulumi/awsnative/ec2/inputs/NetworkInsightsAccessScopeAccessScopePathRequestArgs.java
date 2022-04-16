@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopePathStatementReq
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,22 +20,22 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
     @Import(name="destination")
       private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
 
-    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="source")
       private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source;
 
-    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     @Import(name="throughResources")
       private final @Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
 
-    public Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> getThroughResources() {
-        return this.throughResources == null ? Output.empty() : this.throughResources;
+    public Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources() {
+        return this.throughResources == null ? Codegen.empty() : this.throughResources;
     }
 
     public NetworkInsightsAccessScopeAccessScopePathRequestArgs(
@@ -47,9 +48,9 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
     }
 
     private NetworkInsightsAccessScopeAccessScopePathRequestArgs() {
-        this.destination = Output.empty();
-        this.source = Output.empty();
-        this.throughResources = Output.empty();
+        this.destination = Codegen.empty();
+        this.source = Codegen.empty();
+        this.throughResources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
             return this;
         }
         public Builder destination(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder source(@Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source) {
@@ -89,7 +90,7 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
             return this;
         }
         public Builder source(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder throughResources(@Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources) {
@@ -97,7 +98,7 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
             return this;
         }
         public Builder throughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs> throughResources) {
-            this.throughResources = Output.ofNullable(throughResources);
+            this.throughResources = Codegen.ofNullable(throughResources);
             return this;
         }
         public Builder throughResources(NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs... throughResources) {

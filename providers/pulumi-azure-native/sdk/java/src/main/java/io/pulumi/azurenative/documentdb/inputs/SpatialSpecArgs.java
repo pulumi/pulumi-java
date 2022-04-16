@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.SpatialType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="types")
       private final @Nullable Output<List<Either<String,SpatialType>>> types;
 
-    public Output<List<Either<String,SpatialType>>> getTypes() {
-        return this.types == null ? Output.empty() : this.types;
+    public Output<List<Either<String,SpatialType>>> types() {
+        return this.types == null ? Codegen.empty() : this.types;
     }
 
     public SpatialSpecArgs(
@@ -47,8 +48,8 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpatialSpecArgs() {
-        this.path = Output.empty();
-        this.types = Output.empty();
+        this.path = Codegen.empty();
+        this.types = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder types(@Nullable Output<List<Either<String,SpatialType>>> types) {
@@ -86,7 +87,7 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder types(@Nullable List<Either<String,SpatialType>> types) {
-            this.types = Output.ofNullable(types);
+            this.types = Codegen.ofNullable(types);
             return this;
         }
         public Builder types(Either<String,SpatialType>... types) {

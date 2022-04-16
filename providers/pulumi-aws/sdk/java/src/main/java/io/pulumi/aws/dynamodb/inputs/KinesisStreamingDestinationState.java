@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
-        return this.streamArn == null ? Output.empty() : this.streamArn;
+    public Output<String> streamArn() {
+        return this.streamArn == null ? Codegen.empty() : this.streamArn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<String> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     public KinesisStreamingDestinationState(
@@ -45,8 +46,8 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     }
 
     private KinesisStreamingDestinationState() {
-        this.streamArn = Output.empty();
-        this.tableName = Output.empty();
+        this.streamArn = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
             return this;
         }
         public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Output.ofNullable(streamArn);
+            this.streamArn = Codegen.ofNullable(streamArn);
             return this;
         }
         public Builder tableName(@Nullable Output<String> tableName) {
@@ -84,7 +85,7 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }        public KinesisStreamingDestinationState build() {
             return new KinesisStreamingDestinationState(streamArn, tableName);

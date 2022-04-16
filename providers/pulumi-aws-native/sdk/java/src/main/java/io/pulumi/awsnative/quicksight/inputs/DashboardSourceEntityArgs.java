@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardSourceTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
     @Import(name="sourceTemplate")
       private final @Nullable Output<DashboardSourceTemplateArgs> sourceTemplate;
 
-    public Output<DashboardSourceTemplateArgs> getSourceTemplate() {
-        return this.sourceTemplate == null ? Output.empty() : this.sourceTemplate;
+    public Output<DashboardSourceTemplateArgs> sourceTemplate() {
+        return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
     }
 
     public DashboardSourceEntityArgs(@Nullable Output<DashboardSourceTemplateArgs> sourceTemplate) {
@@ -30,7 +31,7 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
     }
 
     private DashboardSourceEntityArgs() {
-        this.sourceTemplate = Output.empty();
+        this.sourceTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sourceTemplate(@Nullable DashboardSourceTemplateArgs sourceTemplate) {
-            this.sourceTemplate = Output.ofNullable(sourceTemplate);
+            this.sourceTemplate = Codegen.ofNullable(sourceTemplate);
             return this;
         }        public DashboardSourceEntityArgs build() {
             return new DashboardSourceEntityArgs(sourceTemplate);

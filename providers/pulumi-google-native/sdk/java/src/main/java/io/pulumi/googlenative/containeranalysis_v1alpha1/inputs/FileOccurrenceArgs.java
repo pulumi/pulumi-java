@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributions")
       private final @Nullable Output<List<String>> attributions;
 
-    public Output<List<String>> getAttributions() {
-        return this.attributions == null ? Output.empty() : this.attributions;
+    public Output<List<String>> attributions() {
+        return this.attributions == null ? Codegen.empty() : this.attributions;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contributors")
       private final @Nullable Output<List<String>> contributors;
 
-    public Output<List<String>> getContributors() {
-        return this.contributors == null ? Output.empty() : this.contributors;
+    public Output<List<String>> contributors() {
+        return this.contributors == null ? Codegen.empty() : this.contributors;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="copyright")
       private final @Nullable Output<String> copyright;
 
-    public Output<String> getCopyright() {
-        return this.copyright == null ? Output.empty() : this.copyright;
+    public Output<String> copyright() {
+        return this.copyright == null ? Codegen.empty() : this.copyright;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filesLicenseInfo")
       private final @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Output<List<String>> getFilesLicenseInfo() {
-        return this.filesLicenseInfo == null ? Output.empty() : this.filesLicenseInfo;
+    public Output<List<String>> filesLicenseInfo() {
+        return this.filesLicenseInfo == null ? Codegen.empty() : this.filesLicenseInfo;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseConcluded")
       private final @Nullable Output<LicenseArgs> licenseConcluded;
 
-    public Output<LicenseArgs> getLicenseConcluded() {
-        return this.licenseConcluded == null ? Output.empty() : this.licenseConcluded;
+    public Output<LicenseArgs> licenseConcluded() {
+        return this.licenseConcluded == null ? Codegen.empty() : this.licenseConcluded;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notice")
       private final @Nullable Output<String> notice;
 
-    public Output<String> getNotice() {
-        return this.notice == null ? Output.empty() : this.notice;
+    public Output<String> notice() {
+        return this.notice == null ? Codegen.empty() : this.notice;
     }
 
     public FileOccurrenceArgs(
@@ -128,14 +129,14 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileOccurrenceArgs() {
-        this.attributions = Output.empty();
-        this.comment = Output.empty();
-        this.contributors = Output.empty();
-        this.copyright = Output.empty();
-        this.filesLicenseInfo = Output.empty();
-        this.id = Output.empty();
-        this.licenseConcluded = Output.empty();
-        this.notice = Output.empty();
+        this.attributions = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.contributors = Codegen.empty();
+        this.copyright = Codegen.empty();
+        this.filesLicenseInfo = Codegen.empty();
+        this.id = Codegen.empty();
+        this.licenseConcluded = Codegen.empty();
+        this.notice = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributions(@Nullable List<String> attributions) {
-            this.attributions = Output.ofNullable(attributions);
+            this.attributions = Codegen.ofNullable(attributions);
             return this;
         }
         public Builder attributions(String... attributions) {
@@ -188,7 +189,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder contributors(@Nullable Output<List<String>> contributors) {
@@ -196,7 +197,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contributors(@Nullable List<String> contributors) {
-            this.contributors = Output.ofNullable(contributors);
+            this.contributors = Codegen.ofNullable(contributors);
             return this;
         }
         public Builder contributors(String... contributors) {
@@ -207,7 +208,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder copyright(@Nullable String copyright) {
-            this.copyright = Output.ofNullable(copyright);
+            this.copyright = Codegen.ofNullable(copyright);
             return this;
         }
         public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
@@ -215,7 +216,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Output.ofNullable(filesLicenseInfo);
+            this.filesLicenseInfo = Codegen.ofNullable(filesLicenseInfo);
             return this;
         }
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
@@ -226,7 +227,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
@@ -234,7 +235,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
-            this.licenseConcluded = Output.ofNullable(licenseConcluded);
+            this.licenseConcluded = Codegen.ofNullable(licenseConcluded);
             return this;
         }
         public Builder notice(@Nullable Output<String> notice) {
@@ -242,7 +243,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notice(@Nullable String notice) {
-            this.notice = Output.ofNullable(notice);
+            this.notice = Codegen.ofNullable(notice);
             return this;
         }        public FileOccurrenceArgs build() {
             return new FileOccurrenceArgs(attributions, comment, contributors, copyright, filesLicenseInfo, id, licenseConcluded, notice);

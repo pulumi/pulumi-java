@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     @Import(name="interval", required=true)
       private final Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval;
     }
 
@@ -36,7 +37,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     @Import(name="limit", required=true)
       private final Output<String> limit;
 
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit;
     }
 
@@ -47,8 +48,8 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
-        return this.timeUnit == null ? Output.empty() : this.timeUnit;
+    public Output<String> timeUnit() {
+        return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
     }
 
     public GoogleCloudApigeeV1QuotaArgs(
@@ -61,9 +62,9 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     }
 
     private GoogleCloudApigeeV1QuotaArgs() {
-        this.interval = Output.empty();
-        this.limit = Output.empty();
-        this.timeUnit = Output.empty();
+        this.interval = Codegen.empty();
+        this.limit = Codegen.empty();
+        this.timeUnit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Output.ofNullable(timeUnit);
+            this.timeUnit = Codegen.ofNullable(timeUnit);
             return this;
         }        public GoogleCloudApigeeV1QuotaArgs build() {
             return new GoogleCloudApigeeV1QuotaArgs(interval, limit, timeUnit);

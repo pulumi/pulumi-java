@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public PolicyAttachmentState(
@@ -44,8 +45,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     }
 
     private PolicyAttachmentState() {
-        this.policy = Output.empty();
-        this.target = Output.empty();
+        this.policy = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public PolicyAttachmentState build() {
             return new PolicyAttachmentState(policy, target);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.CustomApiPropertiesDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiName")
       private final @Nullable Output<String> apiName;
 
-    public Output<String> getApiName() {
-        return this.apiName == null ? Output.empty() : this.apiName;
+    public Output<String> apiName() {
+        return this.apiName == null ? Codegen.empty() : this.apiName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<CustomApiPropertiesDefinitionArgs> properties;
 
-    public Output<CustomApiPropertiesDefinitionArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<CustomApiPropertiesDefinitionArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+    public Output<String> subscriptionId() {
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CustomApiArgs(
@@ -98,12 +99,12 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomApiArgs() {
-        this.apiName = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tags = Output.empty();
+        this.apiName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiName(@Nullable String apiName) {
-            this.apiName = Output.ofNullable(apiName);
+            this.apiName = Codegen.ofNullable(apiName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -149,7 +150,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<CustomApiPropertiesDefinitionArgs> properties) {
@@ -157,7 +158,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable CustomApiPropertiesDefinitionArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -173,7 +174,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -181,7 +182,7 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CustomApiArgs build() {
             return new CustomApiArgs(apiName, location, properties, resourceGroupName, subscriptionId, tags);

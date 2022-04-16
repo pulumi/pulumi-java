@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.AS2OneWayAgreementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
     @Import(name="receiveAgreement", required=true)
       private final Output<AS2OneWayAgreementArgs> receiveAgreement;
 
-    public Output<AS2OneWayAgreementArgs> getReceiveAgreement() {
+    public Output<AS2OneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -35,7 +36,7 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
     @Import(name="sendAgreement", required=true)
       private final Output<AS2OneWayAgreementArgs> sendAgreement;
 
-    public Output<AS2OneWayAgreementArgs> getSendAgreement() {
+    public Output<AS2OneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
 
@@ -47,8 +48,8 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
     }
 
     private AS2AgreementContentArgs() {
-        this.receiveAgreement = Output.empty();
-        this.sendAgreement = Output.empty();
+        this.receiveAgreement = Codegen.empty();
+        this.sendAgreement = Codegen.empty();
     }
 
     public static Builder builder() {

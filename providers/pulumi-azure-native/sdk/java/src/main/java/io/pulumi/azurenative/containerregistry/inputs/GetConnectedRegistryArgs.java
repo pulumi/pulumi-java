@@ -19,7 +19,7 @@ public final class GetConnectedRegistryArgs extends io.pulumi.resources.InvokeAr
     @Import(name="connectedRegistryName", required=true)
       private final String connectedRegistryName;
 
-    public String getConnectedRegistryName() {
+    public String connectedRegistryName() {
         return this.connectedRegistryName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConnectedRegistryArgs extends io.pulumi.resources.InvokeAr
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConnectedRegistryArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

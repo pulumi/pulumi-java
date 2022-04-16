@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     @Import(name="activeDirectoryId")
       private final @Nullable Output<String> activeDirectoryId;
 
-    public Output<String> getActiveDirectoryId() {
-        return this.activeDirectoryId == null ? Output.empty() : this.activeDirectoryId;
+    public Output<String> activeDirectoryId() {
+        return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     @Import(name="rootCertificateChainArn")
       private final @Nullable Output<String> rootCertificateChainArn;
 
-    public Output<String> getRootCertificateChainArn() {
-        return this.rootCertificateChainArn == null ? Output.empty() : this.rootCertificateChainArn;
+    public Output<String> rootCertificateChainArn() {
+        return this.rootCertificateChainArn == null ? Codegen.empty() : this.rootCertificateChainArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     @Import(name="samlProviderArn")
       private final @Nullable Output<String> samlProviderArn;
 
-    public Output<String> getSamlProviderArn() {
-        return this.samlProviderArn == null ? Output.empty() : this.samlProviderArn;
+    public Output<String> samlProviderArn() {
+        return this.samlProviderArn == null ? Codegen.empty() : this.samlProviderArn;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     @Import(name="selfServiceSamlProviderArn")
       private final @Nullable Output<String> selfServiceSamlProviderArn;
 
-    public Output<String> getSelfServiceSamlProviderArn() {
-        return this.selfServiceSamlProviderArn == null ? Output.empty() : this.selfServiceSamlProviderArn;
+    public Output<String> selfServiceSamlProviderArn() {
+        return this.selfServiceSamlProviderArn == null ? Codegen.empty() : this.selfServiceSamlProviderArn;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -83,11 +84,11 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
     }
 
     private EndpointAuthenticationOptionArgs() {
-        this.activeDirectoryId = Output.empty();
-        this.rootCertificateChainArn = Output.empty();
-        this.samlProviderArn = Output.empty();
-        this.selfServiceSamlProviderArn = Output.empty();
-        this.type = Output.empty();
+        this.activeDirectoryId = Codegen.empty();
+        this.rootCertificateChainArn = Codegen.empty();
+        this.samlProviderArn = Codegen.empty();
+        this.selfServiceSamlProviderArn = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = Output.ofNullable(activeDirectoryId);
+            this.activeDirectoryId = Codegen.ofNullable(activeDirectoryId);
             return this;
         }
         public Builder rootCertificateChainArn(@Nullable Output<String> rootCertificateChainArn) {
@@ -131,7 +132,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
-            this.rootCertificateChainArn = Output.ofNullable(rootCertificateChainArn);
+            this.rootCertificateChainArn = Codegen.ofNullable(rootCertificateChainArn);
             return this;
         }
         public Builder samlProviderArn(@Nullable Output<String> samlProviderArn) {
@@ -139,7 +140,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder samlProviderArn(@Nullable String samlProviderArn) {
-            this.samlProviderArn = Output.ofNullable(samlProviderArn);
+            this.samlProviderArn = Codegen.ofNullable(samlProviderArn);
             return this;
         }
         public Builder selfServiceSamlProviderArn(@Nullable Output<String> selfServiceSamlProviderArn) {
@@ -147,7 +148,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
-            this.selfServiceSamlProviderArn = Output.ofNullable(selfServiceSamlProviderArn);
+            this.selfServiceSamlProviderArn = Codegen.ofNullable(selfServiceSamlProviderArn);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.DashboardState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the dashboard.
      * 
      */
-    public Output<String> getDashboardArn() {
+    public Output<String> dashboardArn() {
         return this.dashboardArn;
     }
     /**
@@ -53,7 +54,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
      * 
      */
-    public Output<String> getDashboardBody() {
+    public Output<String> dashboardBody() {
         return this.dashboardBody;
     }
     /**
@@ -67,7 +68,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The name of the dashboard.
      * 
      */
-    public Output<String> getDashboardName() {
+    public Output<String> dashboardName() {
         return this.dashboardName;
     }
 
@@ -93,7 +94,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dashboard(String name, DashboardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/dashboard:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/dashboard:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dashboard(String name, Output<String> id, @Nullable DashboardState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

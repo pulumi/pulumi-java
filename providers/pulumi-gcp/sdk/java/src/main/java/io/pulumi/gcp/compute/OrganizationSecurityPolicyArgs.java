@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -44,7 +45,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -59,8 +60,8 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public OrganizationSecurityPolicyArgs(
@@ -75,10 +76,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     }
 
     private OrganizationSecurityPolicyArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.parent = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -136,7 +137,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public OrganizationSecurityPolicyArgs build() {
             return new OrganizationSecurityPolicyArgs(description, displayName, parent, type);

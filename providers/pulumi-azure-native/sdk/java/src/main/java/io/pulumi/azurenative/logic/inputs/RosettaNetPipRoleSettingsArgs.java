@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetPipRoleType;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipBusinessDocumentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -38,7 +39,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     @Import(name="businessDocument", required=true)
       private final Output<RosettaNetPipBusinessDocumentArgs> businessDocument;
 
-    public Output<RosettaNetPipBusinessDocumentArgs> getBusinessDocument() {
+    public Output<RosettaNetPipBusinessDocumentArgs> businessDocument() {
         return this.businessDocument;
     }
 
@@ -49,8 +50,8 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -71,7 +72,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     @Import(name="roleType", required=true)
       private final Output<RosettaNetPipRoleType> roleType;
 
-    public Output<RosettaNetPipRoleType> getRoleType() {
+    public Output<RosettaNetPipRoleType> roleType() {
         return this.roleType;
     }
 
@@ -82,7 +83,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -93,7 +94,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     @Import(name="serviceClassification", required=true)
       private final Output<String> serviceClassification;
 
-    public Output<String> getServiceClassification() {
+    public Output<String> serviceClassification() {
         return this.serviceClassification;
     }
 
@@ -115,13 +116,13 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
     }
 
     private RosettaNetPipRoleSettingsArgs() {
-        this.action = Output.empty();
-        this.businessDocument = Output.empty();
-        this.description = Output.empty();
-        this.role = Output.empty();
-        this.roleType = Output.empty();
-        this.service = Output.empty();
-        this.serviceClassification = Output.empty();
+        this.action = Codegen.empty();
+        this.businessDocument = Codegen.empty();
+        this.description = Codegen.empty();
+        this.role = Codegen.empty();
+        this.roleType = Codegen.empty();
+        this.service = Codegen.empty();
+        this.serviceClassification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder role(Output<String> role) {

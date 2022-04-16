@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.RulesEngineMatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="action", required=true)
       private final Output<RulesEngineActionArgs> action;
 
-    public Output<RulesEngineActionArgs> getAction() {
+    public Output<RulesEngineActionArgs> action() {
         return this.action;
     }
 
@@ -42,8 +43,8 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="matchConditions")
       private final @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
 
-    public Output<List<RulesEngineMatchConditionArgs>> getMatchConditions() {
-        return this.matchConditions == null ? Output.empty() : this.matchConditions;
+    public Output<List<RulesEngineMatchConditionArgs>> matchConditions() {
+        return this.matchConditions == null ? Codegen.empty() : this.matchConditions;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="matchProcessingBehavior")
       private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
-    public Output<Either<String,MatchProcessingBehavior>> getMatchProcessingBehavior() {
-        return this.matchProcessingBehavior == null ? Output.empty() : this.matchProcessingBehavior;
+    public Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior() {
+        return this.matchProcessingBehavior == null ? Codegen.empty() : this.matchProcessingBehavior;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -75,7 +76,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -93,11 +94,11 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RulesEngineRuleArgs() {
-        this.action = Output.empty();
-        this.matchConditions = Output.empty();
-        this.matchProcessingBehavior = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
+        this.action = Codegen.empty();
+        this.matchConditions = Codegen.empty();
+        this.matchProcessingBehavior = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder matchConditions(@Nullable List<RulesEngineMatchConditionArgs> matchConditions) {
-            this.matchConditions = Output.ofNullable(matchConditions);
+            this.matchConditions = Codegen.ofNullable(matchConditions);
             return this;
         }
         public Builder matchConditions(RulesEngineMatchConditionArgs... matchConditions) {
@@ -152,7 +153,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
-            this.matchProcessingBehavior = Output.ofNullable(matchProcessingBehavior);
+            this.matchProcessingBehavior = Codegen.ofNullable(matchProcessingBehavior);
             return this;
         }
         public Builder name(Output<String> name) {

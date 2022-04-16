@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+    public Output<String> policyName() {
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
     @Import(name="tracks")
       private final @Nullable Output<List<TrackSelectionArgs>> tracks;
 
-    public Output<List<TrackSelectionArgs>> getTracks() {
-        return this.tracks == null ? Output.empty() : this.tracks;
+    public Output<List<TrackSelectionArgs>> tracks() {
+        return this.tracks == null ? Codegen.empty() : this.tracks;
     }
 
     public StreamingPolicyContentKeyArgs(
@@ -63,9 +64,9 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
     }
 
     private StreamingPolicyContentKeyArgs() {
-        this.label = Output.empty();
-        this.policyName = Output.empty();
-        this.tracks = Output.empty();
+        this.label = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.tracks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -105,7 +106,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }
         public Builder tracks(@Nullable Output<List<TrackSelectionArgs>> tracks) {
@@ -113,7 +114,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tracks(@Nullable List<TrackSelectionArgs> tracks) {
-            this.tracks = Output.ofNullable(tracks);
+            this.tracks = Codegen.ofNullable(tracks);
             return this;
         }
         public Builder tracks(TrackSelectionArgs... tracks) {

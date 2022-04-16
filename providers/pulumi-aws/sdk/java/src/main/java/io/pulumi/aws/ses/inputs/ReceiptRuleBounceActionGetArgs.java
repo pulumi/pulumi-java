@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="message", required=true)
       private final Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
 
@@ -33,7 +34,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -44,7 +45,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="sender", required=true)
       private final Output<String> sender;
 
-    public Output<String> getSender() {
+    public Output<String> sender() {
         return this.sender;
     }
 
@@ -55,7 +56,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="smtpReplyCode", required=true)
       private final Output<String> smtpReplyCode;
 
-    public Output<String> getSmtpReplyCode() {
+    public Output<String> smtpReplyCode() {
         return this.smtpReplyCode;
     }
 
@@ -66,8 +67,8 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
-        return this.statusCode == null ? Output.empty() : this.statusCode;
+    public Output<String> statusCode() {
+        return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+    public Output<String> topicArn() {
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public ReceiptRuleBounceActionGetArgs(
@@ -97,12 +98,12 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     }
 
     private ReceiptRuleBounceActionGetArgs() {
-        this.message = Output.empty();
-        this.position = Output.empty();
-        this.sender = Output.empty();
-        this.smtpReplyCode = Output.empty();
-        this.statusCode = Output.empty();
-        this.topicArn = Output.empty();
+        this.message = Codegen.empty();
+        this.position = Codegen.empty();
+        this.sender = Codegen.empty();
+        this.smtpReplyCode = Codegen.empty();
+        this.statusCode = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Output.ofNullable(statusCode);
+            this.statusCode = Codegen.ofNullable(statusCode);
             return this;
         }
         public Builder topicArn(@Nullable Output<String> topicArn) {
@@ -180,7 +181,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public ReceiptRuleBounceActionGetArgs build() {
             return new ReceiptRuleBounceActionGetArgs(message, position, sender, smtpReplyCode, statusCode, topicArn);

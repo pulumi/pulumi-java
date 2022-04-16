@@ -24,7 +24,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="kmsKey", required=true)
       private final String kmsKey;
 
-    public String getKmsKey() {
+    public String kmsKey() {
         return this.kmsKey;
     }
 
@@ -35,7 +35,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="networkTags", required=true)
       private final List<String> networkTags;
 
-    public List<String> getNetworkTags() {
+    public List<String> networkTags() {
         return this.networkTags;
     }
 
@@ -46,7 +46,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="networkUri", required=true)
       private final String networkUri;
 
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
 
@@ -57,7 +57,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -68,7 +68,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="subnetworkUri", required=true)
       private final String subnetworkUri;
 
-    public String getSubnetworkUri() {
+    public String subnetworkUri() {
         return this.subnetworkUri;
     }
 

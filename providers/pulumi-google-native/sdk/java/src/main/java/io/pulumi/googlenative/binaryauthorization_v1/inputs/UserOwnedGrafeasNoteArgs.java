@@ -5,6 +5,7 @@ package io.pulumi.googlenative.binaryauthorization_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.binaryauthorization_v1.inputs.AttestorPublicKeyArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
     @Import(name="noteReference", required=true)
       private final Output<String> noteReference;
 
-    public Output<String> getNoteReference() {
+    public Output<String> noteReference() {
         return this.noteReference;
     }
 
@@ -38,8 +39,8 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
     @Import(name="publicKeys")
       private final @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
 
-    public Output<List<AttestorPublicKeyArgs>> getPublicKeys() {
-        return this.publicKeys == null ? Output.empty() : this.publicKeys;
+    public Output<List<AttestorPublicKeyArgs>> publicKeys() {
+        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 
     public UserOwnedGrafeasNoteArgs(
@@ -50,8 +51,8 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
     }
 
     private UserOwnedGrafeasNoteArgs() {
-        this.noteReference = Output.empty();
-        this.publicKeys = Output.empty();
+        this.noteReference = Codegen.empty();
+        this.publicKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder publicKeys(@Nullable List<AttestorPublicKeyArgs> publicKeys) {
-            this.publicKeys = Output.ofNullable(publicKeys);
+            this.publicKeys = Codegen.ofNullable(publicKeys);
             return this;
         }
         public Builder publicKeys(AttestorPublicKeyArgs... publicKeys) {

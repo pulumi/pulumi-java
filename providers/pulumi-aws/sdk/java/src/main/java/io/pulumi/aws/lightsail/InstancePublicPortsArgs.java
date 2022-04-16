@@ -6,6 +6,7 @@ package io.pulumi.aws.lightsail;
 import io.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
     @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -33,7 +34,7 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
     @Import(name="portInfos", required=true)
       private final Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
 
-    public Output<List<InstancePublicPortsPortInfoArgs>> getPortInfos() {
+    public Output<List<InstancePublicPortsPortInfoArgs>> portInfos() {
         return this.portInfos;
     }
 
@@ -45,8 +46,8 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
     }
 
     private InstancePublicPortsArgs() {
-        this.instanceName = Output.empty();
-        this.portInfos = Output.empty();
+        this.instanceName = Codegen.empty();
+        this.portInfos = Codegen.empty();
     }
 
     public static Builder builder() {

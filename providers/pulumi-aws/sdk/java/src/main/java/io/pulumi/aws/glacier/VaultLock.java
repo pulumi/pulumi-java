@@ -9,6 +9,7 @@ import io.pulumi.aws.glacier.inputs.VaultLockState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class VaultLock extends io.pulumi.resources.CustomResource {
      * @return Boolean whether to permanently apply this Glacier Lock Policy. Once completed, this cannot be undone. If set to `false`, the Glacier Lock Policy remains in a testing mode for 24 hours. After that time, the Glacier Lock Policy is automatically removed by Glacier and the this provider resource will show as needing recreation. Changing this from `false` to `true` will show as resource recreation, which is expected. Changing this from `true` to `false` is not possible unless the Glacier Vault is recreated at the same time.
      * 
      */
-    public Output<Boolean> getCompleteLock() {
+    public Output<Boolean> completeLock() {
         return this.completeLock;
     }
     /**
@@ -58,7 +59,7 @@ public class VaultLock extends io.pulumi.resources.CustomResource {
      * @return Allow this provider to ignore the error returned when attempting to delete the Glacier Lock Policy. This can be used to delete or recreate the Glacier Vault via this provider, for example, if the Glacier Vault Lock policy permits that action. This should only be used in conjunction with `complete_lock` being set to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnoreDeletionError() {
+    public Output</* @Nullable */ Boolean> ignoreDeletionError() {
         return this.ignoreDeletionError;
     }
     /**
@@ -72,7 +73,7 @@ public class VaultLock extends io.pulumi.resources.CustomResource {
      * @return JSON string containing the IAM policy to apply as the Glacier Vault Lock policy.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -86,7 +87,7 @@ public class VaultLock extends io.pulumi.resources.CustomResource {
      * @return The name of the Glacier Vault.
      * 
      */
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -112,7 +113,7 @@ public class VaultLock extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VaultLock(String name, VaultLockArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glacier/vaultLock:VaultLock", name, args == null ? VaultLockArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glacier/vaultLock:VaultLock", name, args == null ? VaultLockArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VaultLock(String name, Output<String> id, @Nullable VaultLockState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -17,7 +17,7 @@ public final class AbortConfigProperties {
         this.criteriaList = criteriaList;
     }
 
-    public List<JobTemplateAbortCriteria> getCriteriaList() {
+    public List<JobTemplateAbortCriteria> criteriaList() {
         return this.criteriaList;
     }
 

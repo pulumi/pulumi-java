@@ -9,6 +9,7 @@ import io.pulumi.awsnative.devicefarm.outputs.ProjectTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,25 +24,25 @@ public class Project extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="defaultJobTimeoutMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultJobTimeoutMinutes;
 
-    public Output</* @Nullable */ Integer> getDefaultJobTimeoutMinutes() {
+    public Output</* @Nullable */ Integer> defaultJobTimeoutMinutes() {
         return this.defaultJobTimeoutMinutes;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
-    public Output</* @Nullable */ List<ProjectTag>> getTags() {
+    public Output</* @Nullable */ List<ProjectTag>> tags() {
         return this.tags;
     }
 
@@ -67,7 +68,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, @Nullable ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:devicefarm:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:devicefarm:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

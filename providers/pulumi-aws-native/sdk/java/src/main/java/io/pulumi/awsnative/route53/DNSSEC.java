@@ -8,6 +8,7 @@ import io.pulumi.awsnative.route53.DNSSECArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class DNSSEC extends io.pulumi.resources.CustomResource {
      * @return The unique string (ID) used to identify a hosted zone.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -54,7 +55,7 @@ public class DNSSEC extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DNSSEC(String name, DNSSECArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53:DNSSEC", name, args == null ? DNSSECArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53:DNSSEC", name, args == null ? DNSSECArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DNSSEC(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

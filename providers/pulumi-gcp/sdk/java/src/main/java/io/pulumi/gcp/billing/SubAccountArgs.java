@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionPolicy")
       private final @Nullable Output<String> deletionPolicy;
 
-    public Output<String> getDeletionPolicy() {
-        return this.deletionPolicy == null ? Output.empty() : this.deletionPolicy;
+    public Output<String> deletionPolicy() {
+        return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -46,7 +47,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterBillingAccount", required=true)
       private final Output<String> masterBillingAccount;
 
-    public Output<String> getMasterBillingAccount() {
+    public Output<String> masterBillingAccount() {
         return this.masterBillingAccount;
     }
 
@@ -60,9 +61,9 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubAccountArgs() {
-        this.deletionPolicy = Output.empty();
-        this.displayName = Output.empty();
-        this.masterBillingAccount = Output.empty();
+        this.deletionPolicy = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.masterBillingAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Output.ofNullable(deletionPolicy);
+            this.deletionPolicy = Codegen.ofNullable(deletionPolicy);
             return this;
         }
         public Builder displayName(Output<String> displayName) {

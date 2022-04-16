@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="delegatedAdminAccountId")
       private final @Nullable Output<String> delegatedAdminAccountId;
 
-    public Output<String> getDelegatedAdminAccountId() {
-        return this.delegatedAdminAccountId == null ? Output.empty() : this.delegatedAdminAccountId;
+    public Output<String> delegatedAdminAccountId() {
+        return this.delegatedAdminAccountId == null ? Codegen.empty() : this.delegatedAdminAccountId;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="servicePrincipal")
       private final @Nullable Output<String> servicePrincipal;
 
-    public Output<String> getServicePrincipal() {
-        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
+    public Output<String> servicePrincipal() {
+        return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
     }
 
     public VpcIpamOrganizationAdminAccountState(
@@ -79,11 +80,11 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     }
 
     private VpcIpamOrganizationAdminAccountState() {
-        this.arn = Output.empty();
-        this.delegatedAdminAccountId = Output.empty();
-        this.email = Output.empty();
-        this.name = Output.empty();
-        this.servicePrincipal = Output.empty();
+        this.arn = Codegen.empty();
+        this.delegatedAdminAccountId = Codegen.empty();
+        this.email = Codegen.empty();
+        this.name = Codegen.empty();
+        this.servicePrincipal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder delegatedAdminAccountId(@Nullable Output<String> delegatedAdminAccountId) {
@@ -127,7 +128,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
             return this;
         }
         public Builder delegatedAdminAccountId(@Nullable String delegatedAdminAccountId) {
-            this.delegatedAdminAccountId = Output.ofNullable(delegatedAdminAccountId);
+            this.delegatedAdminAccountId = Codegen.ofNullable(delegatedAdminAccountId);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -135,7 +136,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -143,7 +144,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
@@ -151,7 +152,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
             return this;
         }
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
-            this.servicePrincipal = Output.ofNullable(servicePrincipal);
+            this.servicePrincipal = Codegen.ofNullable(servicePrincipal);
             return this;
         }        public VpcIpamOrganizationAdminAccountState build() {
             return new VpcIpamOrganizationAdminAccountState(arn, delegatedAdminAccountId, email, name, servicePrincipal);

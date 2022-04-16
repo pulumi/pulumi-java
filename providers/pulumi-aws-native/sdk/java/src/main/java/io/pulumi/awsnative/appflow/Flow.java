@@ -13,6 +13,7 @@ import io.pulumi.awsnative.appflow.outputs.FlowTriggerConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return Description of the flow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -50,7 +51,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return List of Destination connectors of the flow.
      * 
      */
-    public Output<List<FlowDestinationFlowConfig>> getDestinationFlowConfigList() {
+    public Output<List<FlowDestinationFlowConfig>> destinationFlowConfigList() {
         return this.destinationFlowConfigList;
     }
     /**
@@ -64,7 +65,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return ARN identifier of the flow.
      * 
      */
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -78,7 +79,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return Name of the flow.
      * 
      */
-    public Output<String> getFlowName() {
+    public Output<String> flowName() {
         return this.flowName;
     }
     /**
@@ -92,7 +93,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    public Output</* @Nullable */ String> getKMSArn() {
+    public Output</* @Nullable */ String> kMSArn() {
         return this.kMSArn;
     }
     /**
@@ -106,7 +107,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return Configurations of Source connector of the flow.
      * 
      */
-    public Output<FlowSourceFlowConfig> getSourceFlowConfig() {
+    public Output<FlowSourceFlowConfig> sourceFlowConfig() {
         return this.sourceFlowConfig;
     }
     /**
@@ -120,7 +121,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return List of Tags.
      * 
      */
-    public Output</* @Nullable */ List<FlowTag>> getTags() {
+    public Output</* @Nullable */ List<FlowTag>> tags() {
         return this.tags;
     }
     /**
@@ -134,7 +135,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return List of tasks for the flow.
      * 
      */
-    public Output<List<FlowTask>> getTasks() {
+    public Output<List<FlowTask>> tasks() {
         return this.tasks;
     }
     /**
@@ -148,7 +149,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return Trigger settings of the flow.
      * 
      */
-    public Output<FlowTriggerConfig> getTriggerConfig() {
+    public Output<FlowTriggerConfig> triggerConfig() {
         return this.triggerConfig;
     }
 
@@ -174,7 +175,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Flow(String name, FlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appflow:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:appflow:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Flow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

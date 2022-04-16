@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -37,7 +38,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="highKey", required=true)
       private final Output<String> highKey;
 
-    public Output<String> getHighKey() {
+    public Output<String> highKey() {
         return this.highKey;
     }
 
@@ -49,7 +50,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="lowKey", required=true)
       private final Output<String> lowKey;
 
-    public Output<String> getLowKey() {
+    public Output<String> lowKey() {
         return this.lowKey;
     }
 
@@ -61,7 +62,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="partitionScheme", required=true)
       private final Output<String> partitionScheme;
 
-    public Output<String> getPartitionScheme() {
+    public Output<String> partitionScheme() {
         return this.partitionScheme;
     }
 
@@ -77,10 +78,10 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     }
 
     private UniformInt64RangePartitionSchemeDescriptionArgs() {
-        this.count = Output.empty();
-        this.highKey = Output.empty();
-        this.lowKey = Output.empty();
-        this.partitionScheme = Output.empty();
+        this.count = Codegen.empty();
+        this.highKey = Codegen.empty();
+        this.lowKey = Codegen.empty();
+        this.partitionScheme = Codegen.empty();
     }
 
     public static Builder builder() {

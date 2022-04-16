@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.meta_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.StatusDetailsArgs;
 import java.lang.Integer;
@@ -24,8 +25,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<Integer> code;
 
-    public Output<Integer> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+    public Output<Integer> code() {
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="details")
       private final @Nullable Output<StatusDetailsArgs> details;
 
-    public Output<StatusDetailsArgs> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<StatusDetailsArgs> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ListMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     public StatusArgs(
@@ -112,13 +113,13 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StatusArgs() {
-        this.apiVersion = Output.empty();
-        this.code = Output.empty();
-        this.details = Output.empty();
-        this.kind = Output.empty();
-        this.message = Output.empty();
-        this.metadata = Output.empty();
-        this.reason = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.code = Codegen.empty();
+        this.details = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.message = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.reason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder code(@Nullable Output<Integer> code) {
@@ -166,7 +167,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder code(@Nullable Integer code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder details(@Nullable Output<StatusDetailsArgs> details) {
@@ -174,7 +175,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder details(@Nullable StatusDetailsArgs details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -182,7 +183,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -190,7 +191,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
@@ -198,7 +199,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -206,7 +207,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }        public StatusArgs build() {
             return new StatusArgs(apiVersion, code, details, kind, message, metadata, reason);

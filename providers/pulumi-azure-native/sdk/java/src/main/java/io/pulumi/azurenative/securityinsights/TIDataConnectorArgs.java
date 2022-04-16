@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.inputs.TIDataConnectorDataTypesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
 
-    public Output<String> getDataConnectorId() {
-        return this.dataConnectorId == null ? Output.empty() : this.dataConnectorId;
+    public Output<String> dataConnectorId() {
+        return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataTypes")
       private final @Nullable Output<TIDataConnectorDataTypesArgs> dataTypes;
 
-    public Output<TIDataConnectorDataTypesArgs> getDataTypes() {
-        return this.dataTypes == null ? Output.empty() : this.dataTypes;
+    public Output<TIDataConnectorDataTypesArgs> dataTypes() {
+        return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -56,7 +57,7 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tipLookbackPeriod")
       private final @Nullable Output<String> tipLookbackPeriod;
 
-    public Output<String> getTipLookbackPeriod() {
-        return this.tipLookbackPeriod == null ? Output.empty() : this.tipLookbackPeriod;
+    public Output<String> tipLookbackPeriod() {
+        return this.tipLookbackPeriod == null ? Codegen.empty() : this.tipLookbackPeriod;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -111,13 +112,13 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TIDataConnectorArgs() {
-        this.dataConnectorId = Output.empty();
-        this.dataTypes = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tenantId = Output.empty();
-        this.tipLookbackPeriod = Output.empty();
-        this.workspaceName = Output.empty();
+        this.dataConnectorId = Codegen.empty();
+        this.dataTypes = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.tipLookbackPeriod = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
-            this.dataConnectorId = Output.ofNullable(dataConnectorId);
+            this.dataConnectorId = Codegen.ofNullable(dataConnectorId);
             return this;
         }
         public Builder dataTypes(@Nullable Output<TIDataConnectorDataTypesArgs> dataTypes) {
@@ -165,7 +166,7 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dataTypes(@Nullable TIDataConnectorDataTypesArgs dataTypes) {
-            this.dataTypes = Output.ofNullable(dataTypes);
+            this.dataTypes = Codegen.ofNullable(dataTypes);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -189,7 +190,7 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder tipLookbackPeriod(@Nullable Output<String> tipLookbackPeriod) {
@@ -197,7 +198,7 @@ public final class TIDataConnectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tipLookbackPeriod(@Nullable String tipLookbackPeriod) {
-            this.tipLookbackPeriod = Output.ofNullable(tipLookbackPeriod);
+            this.tipLookbackPeriod = Codegen.ofNullable(tipLookbackPeriod);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

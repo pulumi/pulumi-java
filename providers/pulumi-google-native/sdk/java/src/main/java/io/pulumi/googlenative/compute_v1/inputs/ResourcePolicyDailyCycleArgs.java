@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
     @Import(name="daysInCycle")
       private final @Nullable Output<Integer> daysInCycle;
 
-    public Output<Integer> getDaysInCycle() {
-        return this.daysInCycle == null ? Output.empty() : this.daysInCycle;
+    public Output<Integer> daysInCycle() {
+        return this.daysInCycle == null ? Codegen.empty() : this.daysInCycle;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public ResourcePolicyDailyCycleArgs(
@@ -49,8 +50,8 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
     }
 
     private ResourcePolicyDailyCycleArgs() {
-        this.daysInCycle = Output.empty();
-        this.startTime = Output.empty();
+        this.daysInCycle = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder daysInCycle(@Nullable Integer daysInCycle) {
-            this.daysInCycle = Output.ofNullable(daysInCycle);
+            this.daysInCycle = Codegen.ofNullable(daysInCycle);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -88,7 +89,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public ResourcePolicyDailyCycleArgs build() {
             return new ResourcePolicyDailyCycleArgs(daysInCycle, startTime);

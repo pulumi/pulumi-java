@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.PrimaryStepRollUp;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IndividualOutcomeArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="individualOutcome")
       private final @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
 
-    public Output<List<IndividualOutcomeArgs>> getIndividualOutcome() {
-        return this.individualOutcome == null ? Output.empty() : this.individualOutcome;
+    public Output<List<IndividualOutcomeArgs>> individualOutcome() {
+        return this.individualOutcome == null ? Codegen.empty() : this.individualOutcome;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rollUp")
       private final @Nullable Output<PrimaryStepRollUp> rollUp;
 
-    public Output<PrimaryStepRollUp> getRollUp() {
-        return this.rollUp == null ? Output.empty() : this.rollUp;
+    public Output<PrimaryStepRollUp> rollUp() {
+        return this.rollUp == null ? Codegen.empty() : this.rollUp;
     }
 
     public PrimaryStepArgs(
@@ -50,8 +51,8 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrimaryStepArgs() {
-        this.individualOutcome = Output.empty();
-        this.rollUp = Output.empty();
+        this.individualOutcome = Codegen.empty();
+        this.rollUp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder individualOutcome(@Nullable List<IndividualOutcomeArgs> individualOutcome) {
-            this.individualOutcome = Output.ofNullable(individualOutcome);
+            this.individualOutcome = Codegen.ofNullable(individualOutcome);
             return this;
         }
         public Builder individualOutcome(IndividualOutcomeArgs... individualOutcome) {
@@ -92,7 +93,7 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rollUp(@Nullable PrimaryStepRollUp rollUp) {
-            this.rollUp = Output.ofNullable(rollUp);
+            this.rollUp = Codegen.ofNullable(rollUp);
             return this;
         }        public PrimaryStepArgs build() {
             return new PrimaryStepArgs(individualOutcome, rollUp);

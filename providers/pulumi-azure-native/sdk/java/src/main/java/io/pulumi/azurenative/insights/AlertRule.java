@@ -15,6 +15,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -50,7 +51,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return action that is performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> getAction() {
+    public Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> action() {
         return this.action;
     }
     /**
@@ -64,7 +65,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> getActions() {
+    public Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> actions() {
         return this.actions;
     }
     /**
@@ -78,7 +79,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return the condition that results in the alert rule being activated.
      * 
      */
-    public Output<Object> getCondition() {
+    public Output<Object> condition() {
         return this.condition;
     }
     /**
@@ -92,7 +93,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return the description of the alert rule that will be included in the alert email.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -106,7 +107,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return the flag that indicates whether the alert rule is enabled.
      * 
      */
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -120,7 +121,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return Last time the rule was updated in ISO8601 format.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -134,7 +135,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -148,7 +149,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -162,7 +163,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return the provisioning state.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -176,7 +177,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -190,7 +191,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -216,7 +217,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AlertRule(String name, AlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:AlertRule", name, args == null ? AlertRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:AlertRule", name, args == null ? AlertRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AlertRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

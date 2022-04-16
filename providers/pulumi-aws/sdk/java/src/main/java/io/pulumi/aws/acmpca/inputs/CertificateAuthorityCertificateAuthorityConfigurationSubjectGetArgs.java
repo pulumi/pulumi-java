@@ -5,6 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
-        return this.commonName == null ? Output.empty() : this.commonName;
+    public Output<String> commonName() {
+        return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="country")
       private final @Nullable Output<String> country;
 
-    public Output<String> getCountry() {
-        return this.country == null ? Output.empty() : this.country;
+    public Output<String> country() {
+        return this.country == null ? Codegen.empty() : this.country;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="distinguishedNameQualifier")
       private final @Nullable Output<String> distinguishedNameQualifier;
 
-    public Output<String> getDistinguishedNameQualifier() {
-        return this.distinguishedNameQualifier == null ? Output.empty() : this.distinguishedNameQualifier;
+    public Output<String> distinguishedNameQualifier() {
+        return this.distinguishedNameQualifier == null ? Codegen.empty() : this.distinguishedNameQualifier;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="generationQualifier")
       private final @Nullable Output<String> generationQualifier;
 
-    public Output<String> getGenerationQualifier() {
-        return this.generationQualifier == null ? Output.empty() : this.generationQualifier;
+    public Output<String> generationQualifier() {
+        return this.generationQualifier == null ? Codegen.empty() : this.generationQualifier;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="givenName")
       private final @Nullable Output<String> givenName;
 
-    public Output<String> getGivenName() {
-        return this.givenName == null ? Output.empty() : this.givenName;
+    public Output<String> givenName() {
+        return this.givenName == null ? Codegen.empty() : this.givenName;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="initials")
       private final @Nullable Output<String> initials;
 
-    public Output<String> getInitials() {
-        return this.initials == null ? Output.empty() : this.initials;
+    public Output<String> initials() {
+        return this.initials == null ? Codegen.empty() : this.initials;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="locality")
       private final @Nullable Output<String> locality;
 
-    public Output<String> getLocality() {
-        return this.locality == null ? Output.empty() : this.locality;
+    public Output<String> locality() {
+        return this.locality == null ? Codegen.empty() : this.locality;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
-        return this.organization == null ? Output.empty() : this.organization;
+    public Output<String> organization() {
+        return this.organization == null ? Codegen.empty() : this.organization;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
-    public Output<String> getOrganizationalUnit() {
-        return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
+    public Output<String> organizationalUnit() {
+        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="pseudonym")
       private final @Nullable Output<String> pseudonym;
 
-    public Output<String> getPseudonym() {
-        return this.pseudonym == null ? Output.empty() : this.pseudonym;
+    public Output<String> pseudonym() {
+        return this.pseudonym == null ? Codegen.empty() : this.pseudonym;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="surname")
       private final @Nullable Output<String> surname;
 
-    public Output<String> getSurname() {
-        return this.surname == null ? Output.empty() : this.surname;
+    public Output<String> surname() {
+        return this.surname == null ? Codegen.empty() : this.surname;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs(
@@ -187,19 +188,19 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     }
 
     private CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs() {
-        this.commonName = Output.empty();
-        this.country = Output.empty();
-        this.distinguishedNameQualifier = Output.empty();
-        this.generationQualifier = Output.empty();
-        this.givenName = Output.empty();
-        this.initials = Output.empty();
-        this.locality = Output.empty();
-        this.organization = Output.empty();
-        this.organizationalUnit = Output.empty();
-        this.pseudonym = Output.empty();
-        this.state = Output.empty();
-        this.surname = Output.empty();
-        this.title = Output.empty();
+        this.commonName = Codegen.empty();
+        this.country = Codegen.empty();
+        this.distinguishedNameQualifier = Codegen.empty();
+        this.generationQualifier = Codegen.empty();
+        this.givenName = Codegen.empty();
+        this.initials = Codegen.empty();
+        this.locality = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.organizationalUnit = Codegen.empty();
+        this.pseudonym = Codegen.empty();
+        this.state = Codegen.empty();
+        this.surname = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -251,7 +252,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Output.ofNullable(commonName);
+            this.commonName = Codegen.ofNullable(commonName);
             return this;
         }
         public Builder country(@Nullable Output<String> country) {
@@ -259,7 +260,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder country(@Nullable String country) {
-            this.country = Output.ofNullable(country);
+            this.country = Codegen.ofNullable(country);
             return this;
         }
         public Builder distinguishedNameQualifier(@Nullable Output<String> distinguishedNameQualifier) {
@@ -267,7 +268,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder distinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
-            this.distinguishedNameQualifier = Output.ofNullable(distinguishedNameQualifier);
+            this.distinguishedNameQualifier = Codegen.ofNullable(distinguishedNameQualifier);
             return this;
         }
         public Builder generationQualifier(@Nullable Output<String> generationQualifier) {
@@ -275,7 +276,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder generationQualifier(@Nullable String generationQualifier) {
-            this.generationQualifier = Output.ofNullable(generationQualifier);
+            this.generationQualifier = Codegen.ofNullable(generationQualifier);
             return this;
         }
         public Builder givenName(@Nullable Output<String> givenName) {
@@ -283,7 +284,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder givenName(@Nullable String givenName) {
-            this.givenName = Output.ofNullable(givenName);
+            this.givenName = Codegen.ofNullable(givenName);
             return this;
         }
         public Builder initials(@Nullable Output<String> initials) {
@@ -291,7 +292,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder initials(@Nullable String initials) {
-            this.initials = Output.ofNullable(initials);
+            this.initials = Codegen.ofNullable(initials);
             return this;
         }
         public Builder locality(@Nullable Output<String> locality) {
@@ -299,7 +300,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder locality(@Nullable String locality) {
-            this.locality = Output.ofNullable(locality);
+            this.locality = Codegen.ofNullable(locality);
             return this;
         }
         public Builder organization(@Nullable Output<String> organization) {
@@ -307,7 +308,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder organization(@Nullable String organization) {
-            this.organization = Output.ofNullable(organization);
+            this.organization = Codegen.ofNullable(organization);
             return this;
         }
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
@@ -315,7 +316,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Output.ofNullable(organizationalUnit);
+            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
             return this;
         }
         public Builder pseudonym(@Nullable Output<String> pseudonym) {
@@ -323,7 +324,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder pseudonym(@Nullable String pseudonym) {
-            this.pseudonym = Output.ofNullable(pseudonym);
+            this.pseudonym = Codegen.ofNullable(pseudonym);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -331,7 +332,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder surname(@Nullable Output<String> surname) {
@@ -339,7 +340,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder surname(@Nullable String surname) {
-            this.surname = Output.ofNullable(surname);
+            this.surname = Codegen.ofNullable(surname);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -347,7 +348,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs build() {
             return new CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs(commonName, country, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, state, surname, title);

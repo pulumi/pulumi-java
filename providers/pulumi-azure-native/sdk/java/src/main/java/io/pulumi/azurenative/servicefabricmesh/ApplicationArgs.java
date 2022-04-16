@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsDescriptionArgs
 import io.pulumi.azurenative.servicefabricmesh.inputs.ServiceResourceDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationResourceName")
       private final @Nullable Output<String> applicationResourceName;
 
-    public Output<String> getApplicationResourceName() {
-        return this.applicationResourceName == null ? Output.empty() : this.applicationResourceName;
+    public Output<String> applicationResourceName() {
+        return this.applicationResourceName == null ? Codegen.empty() : this.applicationResourceName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="debugParams")
       private final @Nullable Output<String> debugParams;
 
-    public Output<String> getDebugParams() {
-        return this.debugParams == null ? Output.empty() : this.debugParams;
+    public Output<String> debugParams() {
+        return this.debugParams == null ? Codegen.empty() : this.debugParams;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
 
-    public Output<DiagnosticsDescriptionArgs> getDiagnostics() {
-        return this.diagnostics == null ? Output.empty() : this.diagnostics;
+    public Output<DiagnosticsDescriptionArgs> diagnostics() {
+        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="services")
       private final @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
 
-    public Output<List<ServiceResourceDescriptionArgs>> getServices() {
-        return this.services == null ? Output.empty() : this.services;
+    public Output<List<ServiceResourceDescriptionArgs>> services() {
+        return this.services == null ? Codegen.empty() : this.services;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationArgs(
@@ -126,14 +127,14 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationResourceName = Output.empty();
-        this.debugParams = Output.empty();
-        this.description = Output.empty();
-        this.diagnostics = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.services = Output.empty();
-        this.tags = Output.empty();
+        this.applicationResourceName = Codegen.empty();
+        this.debugParams = Codegen.empty();
+        this.description = Codegen.empty();
+        this.diagnostics = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.services = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationResourceName(@Nullable String applicationResourceName) {
-            this.applicationResourceName = Output.ofNullable(applicationResourceName);
+            this.applicationResourceName = Codegen.ofNullable(applicationResourceName);
             return this;
         }
         public Builder debugParams(@Nullable Output<String> debugParams) {
@@ -183,7 +184,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder debugParams(@Nullable String debugParams) {
-            this.debugParams = Output.ofNullable(debugParams);
+            this.debugParams = Codegen.ofNullable(debugParams);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -191,7 +192,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diagnostics(@Nullable Output<DiagnosticsDescriptionArgs> diagnostics) {
@@ -199,7 +200,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diagnostics(@Nullable DiagnosticsDescriptionArgs diagnostics) {
-            this.diagnostics = Output.ofNullable(diagnostics);
+            this.diagnostics = Codegen.ofNullable(diagnostics);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -207,7 +208,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -223,7 +224,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder services(@Nullable List<ServiceResourceDescriptionArgs> services) {
-            this.services = Output.ofNullable(services);
+            this.services = Codegen.ofNullable(services);
             return this;
         }
         public Builder services(ServiceResourceDescriptionArgs... services) {
@@ -234,7 +235,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationResourceName, debugParams, description, diagnostics, location, resourceGroupName, services, tags);

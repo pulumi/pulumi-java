@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.ThrottlingMetricType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +21,21 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
-    public Output<String> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+    public Output<String> interval() {
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     @Import(name="limit", required=true)
       private final Output<Double> limit;
 
-    public Output<Double> getLimit() {
+    public Output<Double> limit() {
         return this.limit;
     }
 
     @Import(name="type", required=true)
       private final Output<Either<String,ThrottlingMetricType>> type;
 
-    public Output<Either<String,ThrottlingMetricType>> getType() {
+    public Output<Either<String,ThrottlingMetricType>> type() {
         return this.type;
     }
 
@@ -48,9 +49,9 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ThrottlingMetricArgs() {
-        this.interval = Output.empty();
-        this.limit = Output.empty();
-        this.type = Output.empty();
+        this.interval = Codegen.empty();
+        this.limit = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder interval(@Nullable String interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder limit(Output<Double> limit) {

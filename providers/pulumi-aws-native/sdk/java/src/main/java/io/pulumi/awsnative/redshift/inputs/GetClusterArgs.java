@@ -19,7 +19,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 

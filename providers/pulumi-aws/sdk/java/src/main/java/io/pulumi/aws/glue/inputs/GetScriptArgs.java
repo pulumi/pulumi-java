@@ -24,7 +24,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dagEdges", required=true)
       private final List<GetScriptDagEdge> dagEdges;
 
-    public List<GetScriptDagEdge> getDagEdges() {
+    public List<GetScriptDagEdge> dagEdges() {
         return this.dagEdges;
     }
 
@@ -35,7 +35,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dagNodes", required=true)
       private final List<GetScriptDagNode> dagNodes;
 
-    public List<GetScriptDagNode> getDagNodes() {
+    public List<GetScriptDagNode> dagNodes() {
         return this.dagNodes;
     }
 
@@ -46,7 +46,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="language")
       private final @Nullable String language;
 
-    public Optional<String> getLanguage() {
+    public Optional<String> language() {
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
     }
 

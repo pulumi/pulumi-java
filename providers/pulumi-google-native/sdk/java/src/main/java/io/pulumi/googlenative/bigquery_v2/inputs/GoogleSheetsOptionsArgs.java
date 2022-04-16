@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="range")
       private final @Nullable Output<String> range;
 
-    public Output<String> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+    public Output<String> range() {
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="skipLeadingRows")
       private final @Nullable Output<String> skipLeadingRows;
 
-    public Output<String> getSkipLeadingRows() {
-        return this.skipLeadingRows == null ? Output.empty() : this.skipLeadingRows;
+    public Output<String> skipLeadingRows() {
+        return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
     }
 
     public GoogleSheetsOptionsArgs(
@@ -44,8 +45,8 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     private GoogleSheetsOptionsArgs() {
-        this.range = Output.empty();
-        this.skipLeadingRows = Output.empty();
+        this.range = Codegen.empty();
+        this.skipLeadingRows = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder range(@Nullable String range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder skipLeadingRows(@Nullable Output<String> skipLeadingRows) {
@@ -83,7 +84,7 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder skipLeadingRows(@Nullable String skipLeadingRows) {
-            this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
+            this.skipLeadingRows = Codegen.ofNullable(skipLeadingRows);
             return this;
         }        public GoogleSheetsOptionsArgs build() {
             return new GoogleSheetsOptionsArgs(range, skipLeadingRows);

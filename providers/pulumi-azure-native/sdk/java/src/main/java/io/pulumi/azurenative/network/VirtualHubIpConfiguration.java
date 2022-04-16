@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +58,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return Name of the Ip Configuration.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return The private IP address of the IP configuration.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateIPAddress() {
+    public Output</* @Nullable */ String> privateIPAddress() {
         return this.privateIPAddress;
     }
     /**
@@ -85,7 +86,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return The private IP address allocation method.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateIPAllocationMethod() {
+    public Output</* @Nullable */ String> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod;
     }
     /**
@@ -99,7 +100,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return The provisioning state of the IP configuration resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +114,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return The reference to the public IP resource.
      * 
      */
-    public Output</* @Nullable */ PublicIPAddressResponse> getPublicIPAddress() {
+    public Output</* @Nullable */ PublicIPAddressResponse> publicIPAddress() {
         return this.publicIPAddress;
     }
     /**
@@ -127,7 +128,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return The reference to the subnet resource.
      * 
      */
-    public Output</* @Nullable */ SubnetResponse> getSubnet() {
+    public Output</* @Nullable */ SubnetResponse> subnet() {
         return this.subnet;
     }
     /**
@@ -141,7 +142,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @return Ipconfiguration type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class VirtualHubIpConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualHubIpConfiguration(String name, VirtualHubIpConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualHubIpConfiguration", name, args == null ? VirtualHubIpConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualHubIpConfiguration", name, args == null ? VirtualHubIpConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualHubIpConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

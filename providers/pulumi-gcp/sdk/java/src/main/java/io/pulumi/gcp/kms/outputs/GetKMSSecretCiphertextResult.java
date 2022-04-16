@@ -38,20 +38,20 @@ public final class GetKMSSecretCiphertextResult {
      * Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
     */
-    public String getCiphertext() {
+    public String ciphertext() {
         return this.ciphertext;
     }
-    public String getCryptoKey() {
+    public String cryptoKey() {
         return this.cryptoKey;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getPlaintext() {
+    public String plaintext() {
         return this.plaintext;
     }
 

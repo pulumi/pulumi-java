@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +48,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the AD fully qualified display name.
      * 
      */
-    public Output<String> getAdFqdn() {
+    public Output<String> adFqdn() {
         return this.adFqdn;
     }
     /**
@@ -61,7 +62,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The hybrid machine agent full version.
      * 
      */
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion;
     }
     /**
@@ -75,7 +76,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Public Key that the client provides to be used during initial resource onboarding
      * 
      */
-    public Output</* @Nullable */ String> getClientPublicKey() {
+    public Output</* @Nullable */ String> clientPublicKey() {
         return this.clientPublicKey;
     }
     /**
@@ -89,7 +90,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the hybrid machine display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -103,7 +104,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the DNS fully qualified display name.
      * 
      */
-    public Output<String> getDnsFqdn() {
+    public Output<String> dnsFqdn() {
         return this.dnsFqdn;
     }
     /**
@@ -117,7 +118,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the Windows domain name.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -131,7 +132,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Details about the error state.
      * 
      */
-    public Output<List<ErrorDetailResponse>> getErrorDetails() {
+    public Output<List<ErrorDetailResponse>> errorDetails() {
         return this.errorDetails;
     }
     /**
@@ -145,13 +146,13 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Machine Extensions information
      * 
      */
-    public Output<List<MachineExtensionInstanceViewResponse>> getExtensions() {
+    public Output<List<MachineExtensionInstanceViewResponse>> extensions() {
         return this.extensions;
     }
     @Export(name="identity", type=MachineResponseIdentity.class, parameters={})
     private Output</* @Nullable */ MachineResponseIdentity> identity;
 
-    public Output</* @Nullable */ MachineResponseIdentity> getIdentity() {
+    public Output</* @Nullable */ MachineResponseIdentity> identity() {
         return this.identity;
     }
     /**
@@ -165,7 +166,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The time of the last status change.
      * 
      */
-    public Output<String> getLastStatusChange() {
+    public Output<String> lastStatusChange() {
         return this.lastStatusChange;
     }
     /**
@@ -179,7 +180,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -193,7 +194,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to the geographic location of the resource.
      * 
      */
-    public Output</* @Nullable */ LocationDataResponse> getLocationData() {
+    public Output</* @Nullable */ LocationDataResponse> locationData() {
         return this.locationData;
     }
     /**
@@ -207,7 +208,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the hybrid machine FQDN.
      * 
      */
-    public Output<String> getMachineFqdn() {
+    public Output<String> machineFqdn() {
         return this.machineFqdn;
     }
     /**
@@ -221,7 +222,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -235,7 +236,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The Operating System running on the hybrid machine.
      * 
      */
-    public Output<String> getOsName() {
+    public Output<String> osName() {
         return this.osName;
     }
     /**
@@ -249,7 +250,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the operating system settings for the hybrid machine.
      * 
      */
-    public Output</* @Nullable */ MachinePropertiesResponseOsProfile> getOsProfile() {
+    public Output</* @Nullable */ MachinePropertiesResponseOsProfile> osProfile() {
         return this.osProfile;
     }
     /**
@@ -263,7 +264,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the Operating System product SKU.
      * 
      */
-    public Output<String> getOsSku() {
+    public Output<String> osSku() {
         return this.osSku;
     }
     /**
@@ -277,7 +278,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The version of Operating System running on the hybrid machine.
      * 
      */
-    public Output<String> getOsVersion() {
+    public Output<String> osVersion() {
         return this.osVersion;
     }
     /**
@@ -291,7 +292,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -305,7 +306,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The status of the hybrid machine agent.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -319,7 +320,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -333,7 +334,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -347,7 +348,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the hybrid machine unique ID.
      * 
      */
-    public Output</* @Nullable */ String> getVmId() {
+    public Output</* @Nullable */ String> vmId() {
         return this.vmId;
     }
     /**
@@ -361,7 +362,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @return Specifies the Arc Machine's unique SMBIOS ID
      * 
      */
-    public Output<String> getVmUuid() {
+    public Output<String> vmUuid() {
         return this.vmUuid;
     }
 
@@ -387,7 +388,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Machine(String name, MachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hybridcompute:Machine", name, args == null ? MachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:hybridcompute:Machine", name, args == null ? MachineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Machine(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -12,6 +12,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -33,8 +34,8 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Output<Either<String,PolicyType>> getPolicyType() {
-        return this.policyType == null ? Output.empty() : this.policyType;
+    public Output<Either<String,PolicyType>> policyType() {
+        return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
 
-    public Output<Object> getSchedulePolicy() {
-        return this.schedulePolicy == null ? Output.empty() : this.schedulePolicy;
+    public Output<Object> schedulePolicy() {
+        return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 
     public SubProtectionPolicyArgs(
@@ -69,9 +70,9 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private SubProtectionPolicyArgs() {
-        this.policyType = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.schedulePolicy = Output.empty();
+        this.policyType = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.schedulePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Output.ofNullable(policyType);
+            this.policyType = Codegen.ofNullable(policyType);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
@@ -111,7 +112,7 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
@@ -119,7 +120,7 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Output.ofNullable(schedulePolicy);
+            this.schedulePolicy = Codegen.ofNullable(schedulePolicy);
             return this;
         }        public SubProtectionPolicyArgs build() {
             return new SubProtectionPolicyArgs(policyType, retentionPolicy, schedulePolicy);

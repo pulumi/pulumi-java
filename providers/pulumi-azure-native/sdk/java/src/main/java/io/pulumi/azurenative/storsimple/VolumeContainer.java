@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -44,7 +45,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The bandwidth-rate set on the volume container.
      * 
      */
-    public Output</* @Nullable */ Integer> getBandWidthRateInMbps() {
+    public Output</* @Nullable */ Integer> bandWidthRateInMbps() {
         return this.bandWidthRateInMbps;
     }
     /**
@@ -58,7 +59,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The ID of the bandwidth setting associated with the volume container.
      * 
      */
-    public Output</* @Nullable */ String> getBandwidthSettingId() {
+    public Output</* @Nullable */ String> bandwidthSettingId() {
         return this.bandwidthSettingId;
     }
     /**
@@ -72,7 +73,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getEncryptionKey() {
+    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptionKey() {
         return this.encryptionKey;
     }
     /**
@@ -86,7 +87,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The flag to denote whether encryption is enabled or not.
      * 
      */
-    public Output<String> getEncryptionStatus() {
+    public Output<String> encryptionStatus() {
         return this.encryptionStatus;
     }
     /**
@@ -100,7 +101,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -114,7 +115,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
      * 
      */
-    public Output<String> getOwnerShipStatus() {
+    public Output<String> ownerShipStatus() {
         return this.ownerShipStatus;
     }
     /**
@@ -142,7 +143,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The path ID of storage account associated with the volume container.
      * 
      */
-    public Output<String> getStorageAccountCredentialId() {
+    public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
     /**
@@ -156,7 +157,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The total cloud storage for the volume container.
      * 
      */
-    public Output<Double> getTotalCloudStorageUsageInBytes() {
+    public Output<Double> totalCloudStorageUsageInBytes() {
         return this.totalCloudStorageUsageInBytes;
     }
     /**
@@ -170,7 +171,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -184,7 +185,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @return The number of volumes in the volume Container.
      * 
      */
-    public Output<Integer> getVolumeCount() {
+    public Output<Integer> volumeCount() {
         return this.volumeCount;
     }
 
@@ -210,7 +211,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VolumeContainer(String name, VolumeContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storsimple:VolumeContainer", name, args == null ? VolumeContainerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storsimple:VolumeContainer", name, args == null ? VolumeContainerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VolumeContainer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

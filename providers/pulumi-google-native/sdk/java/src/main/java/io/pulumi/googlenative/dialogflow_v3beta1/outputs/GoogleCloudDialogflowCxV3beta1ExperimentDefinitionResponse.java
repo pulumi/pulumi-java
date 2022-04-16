@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse {
      * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
     */
-    public String getCondition() {
+    public String condition() {
         return this.condition;
     }
     /**
      * The flow versions as the variants of this experiment.
      * 
     */
-    public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse getVersionVariants() {
+    public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.random.RandomPasswordArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomPasswordState;
@@ -45,7 +46,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -59,7 +60,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return The length of the string desired.
      * 
      */
-    public Output<Integer> getLength() {
+    public Output<Integer> length() {
         return this.length;
     }
     /**
@@ -73,7 +74,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Include lowercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLower() {
+    public Output</* @Nullable */ Boolean> lower() {
         return this.lower;
     }
     /**
@@ -87,7 +88,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Minimum number of lowercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinLower() {
+    public Output</* @Nullable */ Integer> minLower() {
         return this.minLower;
     }
     /**
@@ -101,7 +102,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Minimum number of numeric characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinNumeric() {
+    public Output</* @Nullable */ Integer> minNumeric() {
         return this.minNumeric;
     }
     /**
@@ -115,7 +116,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Minimum number of special characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinSpecial() {
+    public Output</* @Nullable */ Integer> minSpecial() {
         return this.minSpecial;
     }
     /**
@@ -129,7 +130,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Minimum number of uppercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinUpper() {
+    public Output</* @Nullable */ Integer> minUpper() {
         return this.minUpper;
     }
     /**
@@ -143,7 +144,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Include numeric characters in the result.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNumber() {
+    public Output</* @Nullable */ Boolean> number() {
         return this.number;
     }
     /**
@@ -157,7 +158,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
      * 
      */
-    public Output</* @Nullable */ String> getOverrideSpecial() {
+    public Output</* @Nullable */ String> overrideSpecial() {
         return this.overrideSpecial;
     }
     /**
@@ -171,7 +172,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return The generated random string.
      * 
      */
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result;
     }
     /**
@@ -185,7 +186,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
      * 
      */
-    public Output</* @Nullable */ Boolean> getSpecial() {
+    public Output</* @Nullable */ Boolean> special() {
         return this.special;
     }
     /**
@@ -199,7 +200,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @return Include uppercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUpper() {
+    public Output</* @Nullable */ Boolean> upper() {
         return this.upper;
     }
 
@@ -225,7 +226,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomPassword(String name, RandomPasswordArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomPassword:RandomPassword", name, args == null ? RandomPasswordArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("random:index/randomPassword:RandomPassword", name, args == null ? RandomPasswordArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RandomPassword(String name, Output<String> id, @Nullable RandomPasswordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

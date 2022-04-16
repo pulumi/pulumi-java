@@ -9,6 +9,7 @@ import io.pulumi.aws.s3control.inputs.BucketState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the bucket.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Name of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -71,7 +72,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return UTC creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -85,7 +86,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Identifier of the Outpost to contain this bucket.
      * 
      */
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
     /**
@@ -99,7 +100,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Boolean whether Public Access Block is enabled.
      * 
      */
-    public Output<Boolean> getPublicAccessBlockEnabled() {
+    public Output<Boolean> publicAccessBlockEnabled() {
         return this.publicAccessBlockEnabled;
     }
     /**
@@ -113,7 +114,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +128,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -153,7 +154,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bucket(String name, BucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/bucket:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/bucket:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Bucket(String name, Output<String> id, @Nullable BucketState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

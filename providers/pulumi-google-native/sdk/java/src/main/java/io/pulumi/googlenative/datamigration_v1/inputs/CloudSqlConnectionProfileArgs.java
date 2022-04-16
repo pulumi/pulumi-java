@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datamigration_v1.inputs.CloudSqlSettingsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
     @Import(name="settings")
       private final @Nullable Output<CloudSqlSettingsArgs> settings;
 
-    public Output<CloudSqlSettingsArgs> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+    public Output<CloudSqlSettingsArgs> settings() {
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     public CloudSqlConnectionProfileArgs(@Nullable Output<CloudSqlSettingsArgs> settings) {
@@ -34,7 +35,7 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
     }
 
     private CloudSqlConnectionProfileArgs() {
-        this.settings = Output.empty();
+        this.settings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder settings(@Nullable CloudSqlSettingsArgs settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }        public CloudSqlConnectionProfileArgs build() {
             return new CloudSqlConnectionProfileArgs(settings);

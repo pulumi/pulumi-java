@@ -26,7 +26,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
      * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
      * 
     */
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 

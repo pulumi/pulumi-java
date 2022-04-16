@@ -5,6 +5,7 @@ package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class TagsItemPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -35,8 +36,8 @@ public final class TagsItemPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TagsItemPropertiesArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

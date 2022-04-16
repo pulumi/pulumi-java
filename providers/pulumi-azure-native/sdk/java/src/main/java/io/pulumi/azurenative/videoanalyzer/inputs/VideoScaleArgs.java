@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.VideoScaleMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<String> height;
 
-    public Output<String> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+    public Output<String> height() {
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Either<String,VideoScaleMode>> mode;
 
-    public Output<Either<String,VideoScaleMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<Either<String,VideoScaleMode>> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<String> width;
 
-    public Output<String> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+    public Output<String> width() {
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     public VideoScaleArgs(
@@ -63,9 +64,9 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoScaleArgs() {
-        this.height = Output.empty();
-        this.mode = Output.empty();
-        this.width = Output.empty();
+        this.height = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.width = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder height(@Nullable String height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,VideoScaleMode>> mode) {
@@ -105,7 +106,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable Either<String,VideoScaleMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder width(@Nullable Output<String> width) {
@@ -113,7 +114,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder width(@Nullable String width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }        public VideoScaleArgs build() {
             return new VideoScaleArgs(height, mode, width);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -35,7 +36,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -46,7 +47,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -57,7 +58,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ticketConfiguration", required=true)
       private final Output<String> ticketConfiguration;
 
-    public Output<String> getTicketConfiguration() {
+    public Output<String> ticketConfiguration() {
         return this.ticketConfiguration;
     }
 
@@ -68,7 +69,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -86,11 +87,11 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ItsmReceiverArgs() {
-        this.connectionId = Output.empty();
-        this.name = Output.empty();
-        this.region = Output.empty();
-        this.ticketConfiguration = Output.empty();
-        this.workspaceId = Output.empty();
+        this.connectionId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.region = Codegen.empty();
+        this.ticketConfiguration = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {

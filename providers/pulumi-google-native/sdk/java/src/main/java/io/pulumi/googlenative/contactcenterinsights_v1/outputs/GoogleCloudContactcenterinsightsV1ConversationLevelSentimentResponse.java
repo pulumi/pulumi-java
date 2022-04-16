@@ -33,14 +33,14 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
      * The channel of the audio that the data applies to.
      * 
     */
-    public Integer getChannelTag() {
+    public Integer channelTag() {
         return this.channelTag;
     }
     /**
      * Data specifying sentiment.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
+    public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
     }
 

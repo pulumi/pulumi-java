@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
     @Import(name="clientAccessPolicy")
       private final @Nullable Output<String> clientAccessPolicy;
 
-    public Output<String> getClientAccessPolicy() {
-        return this.clientAccessPolicy == null ? Output.empty() : this.clientAccessPolicy;
+    public Output<String> clientAccessPolicy() {
+        return this.clientAccessPolicy == null ? Codegen.empty() : this.clientAccessPolicy;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
     @Import(name="crossDomainPolicy")
       private final @Nullable Output<String> crossDomainPolicy;
 
-    public Output<String> getCrossDomainPolicy() {
-        return this.crossDomainPolicy == null ? Output.empty() : this.crossDomainPolicy;
+    public Output<String> crossDomainPolicy() {
+        return this.crossDomainPolicy == null ? Codegen.empty() : this.crossDomainPolicy;
     }
 
     public CrossSiteAccessPoliciesArgs(
@@ -48,8 +49,8 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
     }
 
     private CrossSiteAccessPoliciesArgs() {
-        this.clientAccessPolicy = Output.empty();
-        this.crossDomainPolicy = Output.empty();
+        this.clientAccessPolicy = Codegen.empty();
+        this.crossDomainPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
-            this.clientAccessPolicy = Output.ofNullable(clientAccessPolicy);
+            this.clientAccessPolicy = Codegen.ofNullable(clientAccessPolicy);
             return this;
         }
         public Builder crossDomainPolicy(@Nullable Output<String> crossDomainPolicy) {
@@ -87,7 +88,7 @@ public final class CrossSiteAccessPoliciesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
-            this.crossDomainPolicy = Output.ofNullable(crossDomainPolicy);
+            this.crossDomainPolicy = Codegen.ofNullable(crossDomainPolicy);
             return this;
         }        public CrossSiteAccessPoliciesArgs build() {
             return new CrossSiteAccessPoliciesArgs(clientAccessPolicy, crossDomainPolicy);

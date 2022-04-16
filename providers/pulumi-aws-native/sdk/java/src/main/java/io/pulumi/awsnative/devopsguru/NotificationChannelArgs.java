@@ -6,6 +6,7 @@ package io.pulumi.awsnative.devopsguru;
 import io.pulumi.awsnative.devopsguru.inputs.NotificationChannelConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -16,7 +17,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="config", required=true)
       private final Output<NotificationChannelConfigArgs> config;
 
-    public Output<NotificationChannelConfigArgs> getConfig() {
+    public Output<NotificationChannelConfigArgs> config() {
         return this.config;
     }
 
@@ -25,7 +26,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     }
 
     private NotificationChannelArgs() {
-        this.config = Output.empty();
+        this.config = Codegen.empty();
     }
 
     public static Builder builder() {

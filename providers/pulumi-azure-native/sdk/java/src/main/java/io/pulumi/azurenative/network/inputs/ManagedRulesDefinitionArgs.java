@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.ManagedRuleSetArgs;
 import io.pulumi.azurenative.network.inputs.OwaspCrsExclusionEntryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
     @Import(name="exclusions")
       private final @Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions;
 
-    public Output<List<OwaspCrsExclusionEntryArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+    public Output<List<OwaspCrsExclusionEntryArgs>> exclusions() {
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
     @Import(name="managedRuleSets", required=true)
       private final Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
-    public Output<List<ManagedRuleSetArgs>> getManagedRuleSets() {
+    public Output<List<ManagedRuleSetArgs>> managedRuleSets() {
         return this.managedRuleSets;
     }
 
@@ -50,8 +51,8 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedRulesDefinitionArgs() {
-        this.exclusions = Output.empty();
-        this.managedRuleSets = Output.empty();
+        this.exclusions = Codegen.empty();
+        this.managedRuleSets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder exclusions(@Nullable List<OwaspCrsExclusionEntryArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(OwaspCrsExclusionEntryArgs... exclusions) {

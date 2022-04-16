@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
     @Import(name="followGaeApplication")
       private final @Nullable Output<String> followGaeApplication;
 
-    public Output<String> getFollowGaeApplication() {
-        return this.followGaeApplication == null ? Output.empty() : this.followGaeApplication;
+    public Output<String> followGaeApplication() {
+        return this.followGaeApplication == null ? Codegen.empty() : this.followGaeApplication;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public DatabaseInstanceSettingsLocationPreferenceGetArgs(
@@ -46,8 +47,8 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
     }
 
     private DatabaseInstanceSettingsLocationPreferenceGetArgs() {
-        this.followGaeApplication = Output.empty();
-        this.zone = Output.empty();
+        this.followGaeApplication = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
             return this;
         }
         public Builder followGaeApplication(@Nullable String followGaeApplication) {
-            this.followGaeApplication = Output.ofNullable(followGaeApplication);
+            this.followGaeApplication = Codegen.ofNullable(followGaeApplication);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -85,7 +86,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public DatabaseInstanceSettingsLocationPreferenceGetArgs build() {
             return new DatabaseInstanceSettingsLocationPreferenceGetArgs(followGaeApplication, zone);

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class ContainerLabelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label", required=true)
       private final Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -35,8 +36,8 @@ public final class ContainerLabelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerLabelArgs() {
-        this.label = Output.empty();
-        this.value = Output.empty();
+        this.label = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

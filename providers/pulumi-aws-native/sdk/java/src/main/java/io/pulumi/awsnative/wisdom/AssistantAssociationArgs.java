@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationAssociationDataArgs
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,29 +22,29 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     @Import(name="assistantId", required=true)
       private final Output<String> assistantId;
 
-    public Output<String> getAssistantId() {
+    public Output<String> assistantId() {
         return this.assistantId;
     }
 
     @Import(name="association", required=true)
       private final Output<AssistantAssociationAssociationDataArgs> association;
 
-    public Output<AssistantAssociationAssociationDataArgs> getAssociation() {
+    public Output<AssistantAssociationAssociationDataArgs> association() {
         return this.association;
     }
 
     @Import(name="associationType", required=true)
       private final Output<AssistantAssociationAssociationType> associationType;
 
-    public Output<AssistantAssociationAssociationType> getAssociationType() {
+    public Output<AssistantAssociationAssociationType> associationType() {
         return this.associationType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AssistantAssociationTagArgs>> tags;
 
-    public Output<List<AssistantAssociationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<AssistantAssociationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AssistantAssociationArgs(
@@ -58,10 +59,10 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     }
 
     private AssistantAssociationArgs() {
-        this.assistantId = Output.empty();
-        this.association = Output.empty();
-        this.associationType = Output.empty();
-        this.tags = Output.empty();
+        this.assistantId = Codegen.empty();
+        this.association = Codegen.empty();
+        this.associationType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable List<AssistantAssociationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AssistantAssociationTagArgs... tags) {

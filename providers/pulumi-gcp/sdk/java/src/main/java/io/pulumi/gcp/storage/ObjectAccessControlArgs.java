@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -39,7 +40,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="entity", required=true)
       private final Output<String> entity;
 
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity;
     }
 
@@ -50,7 +51,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 
@@ -62,7 +63,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -78,10 +79,10 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     private ObjectAccessControlArgs() {
-        this.bucket = Output.empty();
-        this.entity = Output.empty();
-        this.object = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.entity = Codegen.empty();
+        this.object = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {

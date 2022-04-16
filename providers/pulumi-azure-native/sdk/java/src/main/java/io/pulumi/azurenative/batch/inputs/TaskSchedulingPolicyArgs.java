@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.ComputeNodeFillType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -16,7 +17,7 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="nodeFillType", required=true)
       private final Output<ComputeNodeFillType> nodeFillType;
 
-    public Output<ComputeNodeFillType> getNodeFillType() {
+    public Output<ComputeNodeFillType> nodeFillType() {
         return this.nodeFillType;
     }
 
@@ -25,7 +26,7 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private TaskSchedulingPolicyArgs() {
-        this.nodeFillType = Output.empty();
+        this.nodeFillType = Codegen.empty();
     }
 
     public static Builder builder() {

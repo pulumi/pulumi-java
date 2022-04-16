@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,35 +20,35 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
     @Import(name="dNSName", required=true)
       private final Output<String> dNSName;
 
-    public Output<String> getDNSName() {
+    public Output<String> dNSName() {
         return this.dNSName;
     }
 
     @Import(name="hTTPPort")
       private final @Nullable Output<Integer> hTTPPort;
 
-    public Output<Integer> getHTTPPort() {
-        return this.hTTPPort == null ? Output.empty() : this.hTTPPort;
+    public Output<Integer> hTTPPort() {
+        return this.hTTPPort == null ? Codegen.empty() : this.hTTPPort;
     }
 
     @Import(name="hTTPSPort")
       private final @Nullable Output<Integer> hTTPSPort;
 
-    public Output<Integer> getHTTPSPort() {
-        return this.hTTPSPort == null ? Output.empty() : this.hTTPSPort;
+    public Output<Integer> hTTPSPort() {
+        return this.hTTPSPort == null ? Codegen.empty() : this.hTTPSPort;
     }
 
     @Import(name="originProtocolPolicy", required=true)
       private final Output<String> originProtocolPolicy;
 
-    public Output<String> getOriginProtocolPolicy() {
+    public Output<String> originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @Import(name="originSSLProtocols", required=true)
       private final Output<List<String>> originSSLProtocols;
 
-    public Output<List<String>> getOriginSSLProtocols() {
+    public Output<List<String>> originSSLProtocols() {
         return this.originSSLProtocols;
     }
 
@@ -65,11 +66,11 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
     }
 
     private DistributionLegacyCustomOriginArgs() {
-        this.dNSName = Output.empty();
-        this.hTTPPort = Output.empty();
-        this.hTTPSPort = Output.empty();
-        this.originProtocolPolicy = Output.empty();
-        this.originSSLProtocols = Output.empty();
+        this.dNSName = Codegen.empty();
+        this.hTTPPort = Codegen.empty();
+        this.hTTPSPort = Codegen.empty();
+        this.originProtocolPolicy = Codegen.empty();
+        this.originSSLProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
             return this;
         }
         public Builder hTTPPort(@Nullable Integer hTTPPort) {
-            this.hTTPPort = Output.ofNullable(hTTPPort);
+            this.hTTPPort = Codegen.ofNullable(hTTPPort);
             return this;
         }
         public Builder hTTPSPort(@Nullable Output<Integer> hTTPSPort) {
@@ -121,7 +122,7 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
             return this;
         }
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
-            this.hTTPSPort = Output.ofNullable(hTTPSPort);
+            this.hTTPSPort = Codegen.ofNullable(hTTPSPort);
             return this;
         }
         public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {

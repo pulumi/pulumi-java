@@ -5,6 +5,7 @@ package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="accelerator")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> getAccelerator() {
-        return this.accelerator == null ? Output.empty() : this.accelerator;
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator() {
+        return this.accelerator == null ? Codegen.empty() : this.accelerator;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="diskSizeGb", required=true)
       private final Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -50,7 +51,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="diskType", required=true)
       private final Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType;
     }
 
@@ -61,8 +62,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
 
@@ -83,8 +84,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="maxConcurrentActions")
       private final @Nullable Output<String> maxConcurrentActions;
 
-    public Output<String> getMaxConcurrentActions() {
-        return this.maxConcurrentActions == null ? Output.empty() : this.maxConcurrentActions;
+    public Output<String> maxConcurrentActions() {
+        return this.maxConcurrentActions == null ? Codegen.empty() : this.maxConcurrentActions;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
+    public Output<String> minCpuPlatform() {
+        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="networkAccess")
       private final @Nullable Output<String> networkAccess;
 
-    public Output<String> getNetworkAccess() {
-        return this.networkAccess == null ? Output.empty() : this.networkAccess;
+    public Output<String> networkAccess() {
+        return this.networkAccess == null ? Codegen.empty() : this.networkAccess;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
-        return this.reserved == null ? Output.empty() : this.reserved;
+    public Output<Boolean> reserved() {
+        return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="soleTenantNodeType")
       private final @Nullable Output<String> soleTenantNodeType;
 
-    public Output<String> getSoleTenantNodeType() {
-        return this.soleTenantNodeType == null ? Output.empty() : this.soleTenantNodeType;
+    public Output<String> soleTenantNodeType() {
+        return this.soleTenantNodeType == null ? Codegen.empty() : this.soleTenantNodeType;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;
 
-    public Output<String> getVmImage() {
-        return this.vmImage == null ? Output.empty() : this.vmImage;
+    public Output<String> vmImage() {
+        return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(
@@ -168,17 +169,17 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     }
 
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs() {
-        this.accelerator = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.diskType = Output.empty();
-        this.labels = Output.empty();
-        this.machineType = Output.empty();
-        this.maxConcurrentActions = Output.empty();
-        this.minCpuPlatform = Output.empty();
-        this.networkAccess = Output.empty();
-        this.reserved = Output.empty();
-        this.soleTenantNodeType = Output.empty();
-        this.vmImage = Output.empty();
+        this.accelerator = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.maxConcurrentActions = Codegen.empty();
+        this.minCpuPlatform = Codegen.empty();
+        this.networkAccess = Codegen.empty();
+        this.reserved = Codegen.empty();
+        this.soleTenantNodeType = Codegen.empty();
+        this.vmImage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder accelerator(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs accelerator) {
-            this.accelerator = Output.ofNullable(accelerator);
+            this.accelerator = Codegen.ofNullable(accelerator);
             return this;
         }
         public Builder diskSizeGb(Output<String> diskSizeGb) {
@@ -250,7 +251,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder machineType(Output<String> machineType) {
@@ -266,7 +267,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder maxConcurrentActions(@Nullable String maxConcurrentActions) {
-            this.maxConcurrentActions = Output.ofNullable(maxConcurrentActions);
+            this.maxConcurrentActions = Codegen.ofNullable(maxConcurrentActions);
             return this;
         }
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
@@ -274,7 +275,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
             return this;
         }
         public Builder networkAccess(@Nullable Output<String> networkAccess) {
@@ -282,7 +283,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder networkAccess(@Nullable String networkAccess) {
-            this.networkAccess = Output.ofNullable(networkAccess);
+            this.networkAccess = Codegen.ofNullable(networkAccess);
             return this;
         }
         public Builder reserved(@Nullable Output<Boolean> reserved) {
@@ -290,7 +291,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Output.ofNullable(reserved);
+            this.reserved = Codegen.ofNullable(reserved);
             return this;
         }
         public Builder soleTenantNodeType(@Nullable Output<String> soleTenantNodeType) {
@@ -298,7 +299,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder soleTenantNodeType(@Nullable String soleTenantNodeType) {
-            this.soleTenantNodeType = Output.ofNullable(soleTenantNodeType);
+            this.soleTenantNodeType = Codegen.ofNullable(soleTenantNodeType);
             return this;
         }
         public Builder vmImage(@Nullable Output<String> vmImage) {
@@ -306,7 +307,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             return this;
         }
         public Builder vmImage(@Nullable String vmImage) {
-            this.vmImage = Output.ofNullable(vmImage);
+            this.vmImage = Codegen.ofNullable(vmImage);
             return this;
         }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);

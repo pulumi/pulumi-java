@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty.inputs;
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     @Import(name="autoEnable")
       private final @Nullable Output<Boolean> autoEnable;
 
-    public Output<Boolean> getAutoEnable() {
-        return this.autoEnable == null ? Output.empty() : this.autoEnable;
+    public Output<Boolean> autoEnable() {
+        return this.autoEnable == null ? Codegen.empty() : this.autoEnable;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     @Import(name="datasources")
       private final @Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources;
 
-    public Output<OrganizationConfigurationDatasourcesGetArgs> getDatasources() {
-        return this.datasources == null ? Output.empty() : this.datasources;
+    public Output<OrganizationConfigurationDatasourcesGetArgs> datasources() {
+        return this.datasources == null ? Codegen.empty() : this.datasources;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
-        return this.detectorId == null ? Output.empty() : this.detectorId;
+    public Output<String> detectorId() {
+        return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
     public OrganizationConfigurationState(
@@ -59,9 +60,9 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     }
 
     private OrganizationConfigurationState() {
-        this.autoEnable = Output.empty();
-        this.datasources = Output.empty();
-        this.detectorId = Output.empty();
+        this.autoEnable = Codegen.empty();
+        this.datasources = Codegen.empty();
+        this.detectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder autoEnable(@Nullable Boolean autoEnable) {
-            this.autoEnable = Output.ofNullable(autoEnable);
+            this.autoEnable = Codegen.ofNullable(autoEnable);
             return this;
         }
         public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources) {
@@ -101,7 +102,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder datasources(@Nullable OrganizationConfigurationDatasourcesGetArgs datasources) {
-            this.datasources = Output.ofNullable(datasources);
+            this.datasources = Codegen.ofNullable(datasources);
             return this;
         }
         public Builder detectorId(@Nullable Output<String> detectorId) {
@@ -109,7 +110,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Output.ofNullable(detectorId);
+            this.detectorId = Codegen.ofNullable(detectorId);
             return this;
         }        public OrganizationConfigurationState build() {
             return new OrganizationConfigurationState(autoEnable, datasources, detectorId);

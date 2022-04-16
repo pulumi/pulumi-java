@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
     @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
-    public Output<String> getIdentityClientId() {
-        return this.identityClientId == null ? Output.empty() : this.identityClientId;
+    public Output<String> identityClientId() {
+        return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
     @Import(name="secretIdentifier")
       private final @Nullable Output<String> secretIdentifier;
 
-    public Output<String> getSecretIdentifier() {
-        return this.secretIdentifier == null ? Output.empty() : this.secretIdentifier;
+    public Output<String> secretIdentifier() {
+        return this.secretIdentifier == null ? Codegen.empty() : this.secretIdentifier;
     }
 
     public KeyVaultContractCreatePropertiesArgs(
@@ -48,8 +49,8 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
     }
 
     private KeyVaultContractCreatePropertiesArgs() {
-        this.identityClientId = Output.empty();
-        this.secretIdentifier = Output.empty();
+        this.identityClientId = Codegen.empty();
+        this.secretIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Output.ofNullable(identityClientId);
+            this.identityClientId = Codegen.ofNullable(identityClientId);
             return this;
         }
         public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
@@ -87,7 +88,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
-            this.secretIdentifier = Output.ofNullable(secretIdentifier);
+            this.secretIdentifier = Codegen.ofNullable(secretIdentifier);
             return this;
         }        public KeyVaultContractCreatePropertiesArgs build() {
             return new KeyVaultContractCreatePropertiesArgs(identityClientId, secretIdentifier);

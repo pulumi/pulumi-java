@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.ValidateSyncMigrationInputSqlServerTaskInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
     @Import(name="input")
       private final @Nullable Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input;
 
-    public Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+    public Output<ValidateSyncMigrationInputSqlServerTaskInputArgs> input() {
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 
@@ -50,8 +51,8 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
     }
 
     private ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs() {
-        this.input = Output.empty();
-        this.taskType = Output.empty();
+        this.input = Codegen.empty();
+        this.taskType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesArgs ex
             return this;
         }
         public Builder input(@Nullable ValidateSyncMigrationInputSqlServerTaskInputArgs input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder taskType(Output<String> taskType) {

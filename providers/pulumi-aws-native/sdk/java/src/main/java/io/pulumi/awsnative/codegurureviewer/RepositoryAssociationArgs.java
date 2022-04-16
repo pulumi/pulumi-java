@@ -7,6 +7,7 @@ import io.pulumi.awsnative.codegurureviewer.enums.RepositoryAssociationType;
 import io.pulumi.awsnative.codegurureviewer.inputs.RepositoryAssociationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+    public Output<String> bucketName() {
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionArn")
       private final @Nullable Output<String> connectionArn;
 
-    public Output<String> getConnectionArn() {
-        return this.connectionArn == null ? Output.empty() : this.connectionArn;
+    public Output<String> connectionArn() {
+        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+    public Output<String> owner() {
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
 
-    public Output<List<RepositoryAssociationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<RepositoryAssociationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<RepositoryAssociationType> type;
 
-    public Output<RepositoryAssociationType> getType() {
+    public Output<RepositoryAssociationType> type() {
         return this.type;
     }
 
@@ -99,12 +100,12 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private RepositoryAssociationArgs() {
-        this.bucketName = Output.empty();
-        this.connectionArn = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.connectionArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
@@ -150,7 +151,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Output.ofNullable(connectionArn);
+            this.connectionArn = Codegen.ofNullable(connectionArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -158,7 +159,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -166,7 +167,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder tags(@Nullable Output<List<RepositoryAssociationTagArgs>> tags) {
@@ -174,7 +175,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable List<RepositoryAssociationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RepositoryAssociationTagArgs... tags) {

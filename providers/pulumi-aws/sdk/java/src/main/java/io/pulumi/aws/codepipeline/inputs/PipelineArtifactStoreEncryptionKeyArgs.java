@@ -5,6 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends io.pulumi.reso
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -31,7 +32,7 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends io.pulumi.reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -43,8 +44,8 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends io.pulumi.reso
     }
 
     private PipelineArtifactStoreEncryptionKeyArgs() {
-        this.id = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

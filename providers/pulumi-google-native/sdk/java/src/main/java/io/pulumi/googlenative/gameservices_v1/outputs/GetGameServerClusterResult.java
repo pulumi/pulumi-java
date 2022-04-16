@@ -77,56 +77,56 @@ public final class GetGameServerClusterResult {
      * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
      * 
     */
-    public KubernetesClusterStateResponse getClusterState() {
+    public KubernetesClusterStateResponse clusterState() {
         return this.clusterState;
     }
     /**
      * The game server cluster connection information. This information is used to manage game server clusters.
      * 
     */
-    public GameServerClusterConnectionInfoResponse getConnectionInfo() {
+    public GameServerClusterConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
     }
     /**
      * The creation time.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Human readable description of the cluster.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * ETag of the resource.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The labels associated with this game server cluster. Each label is a key-value pair.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The last-modified time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.efs.inputs.FileSystemPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class FileSystemPolicy extends io.pulumi.resources.CustomResource {
      * @return A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck;
     }
     /**
@@ -54,7 +55,7 @@ public class FileSystemPolicy extends io.pulumi.resources.CustomResource {
      * @return The ID of the EFS file system.
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     /**
@@ -68,7 +69,7 @@ public class FileSystemPolicy extends io.pulumi.resources.CustomResource {
      * @return The JSON formatted file system policy for the EFS file system. see [Docs](https://docs.aws.amazon.com/efs/latest/ug/access-control-overview.html#access-control-manage-access-intro-resource-policies) for more info.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -94,7 +95,7 @@ public class FileSystemPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileSystemPolicy(String name, FileSystemPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:efs/fileSystemPolicy:FileSystemPolicy", name, args == null ? FileSystemPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:efs/fileSystemPolicy:FileSystemPolicy", name, args == null ? FileSystemPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FileSystemPolicy(String name, Output<String> id, @Nullable FileSystemPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

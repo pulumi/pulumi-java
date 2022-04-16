@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="customerId")
       private final @Nullable Output<String> customerId;
 
-    public Output<String> getCustomerId() {
-        return this.customerId == null ? Output.empty() : this.customerId;
+    public Output<String> customerId() {
+        return this.customerId == null ? Codegen.empty() : this.customerId;
     }
 
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
-    public Output<String> getSharedKey() {
-        return this.sharedKey == null ? Output.empty() : this.sharedKey;
+    public Output<String> sharedKey() {
+        return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
     }
 
     public LogAnalyticsConfigurationArgs(
@@ -36,8 +37,8 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private LogAnalyticsConfigurationArgs() {
-        this.customerId = Output.empty();
-        this.sharedKey = Output.empty();
+        this.customerId = Codegen.empty();
+        this.sharedKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder customerId(@Nullable String customerId) {
-            this.customerId = Output.ofNullable(customerId);
+            this.customerId = Codegen.ofNullable(customerId);
             return this;
         }
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
@@ -75,7 +76,7 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = Output.ofNullable(sharedKey);
+            this.sharedKey = Codegen.ofNullable(sharedKey);
             return this;
         }        public LogAnalyticsConfigurationArgs build() {
             return new LogAnalyticsConfigurationArgs(customerId, sharedKey);

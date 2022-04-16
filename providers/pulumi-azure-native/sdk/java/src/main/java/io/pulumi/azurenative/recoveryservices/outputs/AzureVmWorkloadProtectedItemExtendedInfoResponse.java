@@ -42,21 +42,21 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
      * The oldest backup copy available for this backup item.
      * 
     */
-    public Optional<String> getOldestRecoveryPoint() {
+    public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
      * 
     */
-    public Optional<String> getPolicyState() {
+    public Optional<String> policyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Number of backup copies available for this backup item.
      * 
     */
-    public Optional<Integer> getRecoveryPointCount() {
+    public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
 

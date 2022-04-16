@@ -8,6 +8,7 @@ import io.pulumi.azurenative.elastic.inputs.LogRulesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     @Import(name="logRules")
       private final @Nullable Output<LogRulesArgs> logRules;
 
-    public Output<LogRulesArgs> getLogRules() {
-        return this.logRules == null ? Output.empty() : this.logRules;
+    public Output<LogRulesArgs> logRules() {
+        return this.logRules == null ? Codegen.empty() : this.logRules;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     public MonitoringTagRulesPropertiesArgs(
@@ -51,8 +52,8 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     }
 
     private MonitoringTagRulesPropertiesArgs() {
-        this.logRules = Output.empty();
-        this.provisioningState = Output.empty();
+        this.logRules = Codegen.empty();
+        this.provisioningState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder logRules(@Nullable LogRulesArgs logRules) {
-            this.logRules = Output.ofNullable(logRules);
+            this.logRules = Codegen.ofNullable(logRules);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
@@ -90,7 +91,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }        public MonitoringTagRulesPropertiesArgs build() {
             return new MonitoringTagRulesPropertiesArgs(logRules, provisioningState);

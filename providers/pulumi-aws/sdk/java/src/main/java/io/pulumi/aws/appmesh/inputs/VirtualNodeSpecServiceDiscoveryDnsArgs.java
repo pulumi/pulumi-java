@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
     }
 
     private VirtualNodeSpecServiceDiscoveryDnsArgs() {
-        this.hostname = Output.empty();
+        this.hostname = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -16,6 +16,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -51,7 +52,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * External cloud identifier used as part of scanning configuration.
      * 
      */
-    public Output</* @Nullable */ CloudConnectorsResponse> getCloudConnectors() {
+    public Output</* @Nullable */ CloudConnectorsResponse> cloudConnectors() {
         return this.cloudConnectors;
     }
     /**
@@ -65,7 +66,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets the time at which the entity was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -79,7 +80,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets the creator of the entity.
      * 
      */
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -93,7 +94,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets the creators of the entity's object id.
      * 
      */
-    public Output<String> getCreatedByObjectId() {
+    public Output<String> createdByObjectId() {
         return this.createdByObjectId;
     }
     /**
@@ -107,7 +108,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The URIs that are the public endpoints of the account.
      * 
      */
-    public Output<AccountPropertiesResponseEndpoints> getEndpoints() {
+    public Output<AccountPropertiesResponseEndpoints> endpoints() {
         return this.endpoints;
     }
     /**
@@ -121,7 +122,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the friendly name.
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -135,7 +136,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Identity Info on the tracked resource
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -149,7 +150,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -163,7 +164,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the managed resource group name
      * 
      */
-    public Output</* @Nullable */ String> getManagedResourceGroupName() {
+    public Output</* @Nullable */ String> managedResourceGroupName() {
         return this.managedResourceGroupName;
     }
     /**
@@ -177,7 +178,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets the resource identifiers of the managed resources.
      * 
      */
-    public Output<AccountPropertiesResponseManagedResources> getManagedResources() {
+    public Output<AccountPropertiesResponseManagedResources> managedResources() {
         return this.managedResources;
     }
     /**
@@ -191,7 +192,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -205,7 +206,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets the private endpoint connections information.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -219,7 +220,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the state of the provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -233,7 +234,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the public network access.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -247,7 +248,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the Sku.
      * 
      */
-    public Output<AccountResponseSku> getSku() {
+    public Output<AccountResponseSku> sku() {
         return this.sku;
     }
     /**
@@ -261,7 +262,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<AccountPropertiesResponseSystemData> getSystemData() {
+    public Output<AccountPropertiesResponseSystemData> systemData() {
         return this.systemData;
     }
     /**
@@ -275,7 +276,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Tags on the azure resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -289,7 +290,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -315,7 +316,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:purview:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:purview:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

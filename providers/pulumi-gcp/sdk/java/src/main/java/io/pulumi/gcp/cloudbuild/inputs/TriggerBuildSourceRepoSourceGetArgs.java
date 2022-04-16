@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
-    public Output<String> getBranchName() {
-        return this.branchName == null ? Output.empty() : this.branchName;
+    public Output<String> branchName() {
+        return this.branchName == null ? Codegen.empty() : this.branchName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="commitSha")
       private final @Nullable Output<String> commitSha;
 
-    public Output<String> getCommitSha() {
-        return this.commitSha == null ? Output.empty() : this.commitSha;
+    public Output<String> commitSha() {
+        return this.commitSha == null ? Codegen.empty() : this.commitSha;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="dir")
       private final @Nullable Output<String> dir;
 
-    public Output<String> getDir() {
-        return this.dir == null ? Output.empty() : this.dir;
+    public Output<String> dir() {
+        return this.dir == null ? Codegen.empty() : this.dir;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> getInvertRegex() {
-        return this.invertRegex == null ? Output.empty() : this.invertRegex;
+    public Output<Boolean> invertRegex() {
+        return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+    public Output<String> projectId() {
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="repoName", required=true)
       private final Output<String> repoName;
 
-    public Output<String> getRepoName() {
+    public Output<String> repoName() {
         return this.repoName;
     }
 
@@ -100,8 +101,8 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> getSubstitutions() {
-        return this.substitutions == null ? Output.empty() : this.substitutions;
+    public Output<Map<String,String>> substitutions() {
+        return this.substitutions == null ? Codegen.empty() : this.substitutions;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     @Import(name="tagName")
       private final @Nullable Output<String> tagName;
 
-    public Output<String> getTagName() {
-        return this.tagName == null ? Output.empty() : this.tagName;
+    public Output<String> tagName() {
+        return this.tagName == null ? Codegen.empty() : this.tagName;
     }
 
     public TriggerBuildSourceRepoSourceGetArgs(
@@ -137,14 +138,14 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
     }
 
     private TriggerBuildSourceRepoSourceGetArgs() {
-        this.branchName = Output.empty();
-        this.commitSha = Output.empty();
-        this.dir = Output.empty();
-        this.invertRegex = Output.empty();
-        this.projectId = Output.empty();
-        this.repoName = Output.empty();
-        this.substitutions = Output.empty();
-        this.tagName = Output.empty();
+        this.branchName = Codegen.empty();
+        this.commitSha = Codegen.empty();
+        this.dir = Codegen.empty();
+        this.invertRegex = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.repoName = Codegen.empty();
+        this.substitutions = Codegen.empty();
+        this.tagName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = Output.ofNullable(branchName);
+            this.branchName = Codegen.ofNullable(branchName);
             return this;
         }
         public Builder commitSha(@Nullable Output<String> commitSha) {
@@ -194,7 +195,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder commitSha(@Nullable String commitSha) {
-            this.commitSha = Output.ofNullable(commitSha);
+            this.commitSha = Codegen.ofNullable(commitSha);
             return this;
         }
         public Builder dir(@Nullable Output<String> dir) {
@@ -202,7 +203,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dir(@Nullable String dir) {
-            this.dir = Output.ofNullable(dir);
+            this.dir = Codegen.ofNullable(dir);
             return this;
         }
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
@@ -210,7 +211,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Output.ofNullable(invertRegex);
+            this.invertRegex = Codegen.ofNullable(invertRegex);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -218,7 +219,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }
         public Builder repoName(Output<String> repoName) {
@@ -234,7 +235,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Output.ofNullable(substitutions);
+            this.substitutions = Codegen.ofNullable(substitutions);
             return this;
         }
         public Builder tagName(@Nullable Output<String> tagName) {
@@ -242,7 +243,7 @@ public final class TriggerBuildSourceRepoSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tagName(@Nullable String tagName) {
-            this.tagName = Output.ofNullable(tagName);
+            this.tagName = Codegen.ofNullable(tagName);
             return this;
         }        public TriggerBuildSourceRepoSourceGetArgs build() {
             return new TriggerBuildSourceRepoSourceGetArgs(branchName, commitSha, dir, invertRegex, projectId, repoName, substitutions, tagName);

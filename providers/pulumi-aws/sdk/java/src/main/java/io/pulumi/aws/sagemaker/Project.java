@@ -10,6 +10,7 @@ import io.pulumi.aws.sagemaker.outputs.ProjectServiceCatalogProvisioningDetails;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Project.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A description for the project.
      * 
      */
-    public Output</* @Nullable */ String> getProjectDescription() {
+    public Output</* @Nullable */ String> projectDescription() {
         return this.projectDescription;
     }
     /**
@@ -71,7 +72,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The ID of the project.
      * 
      */
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     /**
@@ -85,7 +86,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The name of the Project.
      * 
      */
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
     /**
@@ -99,7 +100,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The product ID and provisioning artifact ID to provision a service catalog. See Service Catalog Provisioning Details below.
      * 
      */
-    public Output<ProjectServiceCatalogProvisioningDetails> getServiceCatalogProvisioningDetails() {
+    public Output<ProjectServiceCatalogProvisioningDetails> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
     /**
@@ -113,7 +114,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +128,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -153,7 +154,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable ProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

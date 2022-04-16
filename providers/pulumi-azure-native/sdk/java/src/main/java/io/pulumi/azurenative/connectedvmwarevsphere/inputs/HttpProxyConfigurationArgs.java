@@ -5,6 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
 
-    public Output<String> getHttpsProxy() {
-        return this.httpsProxy == null ? Output.empty() : this.httpsProxy;
+    public Output<String> httpsProxy() {
+        return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
     }
 
     public HttpProxyConfigurationArgs(@Nullable Output<String> httpsProxy) {
@@ -34,7 +35,7 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private HttpProxyConfigurationArgs() {
-        this.httpsProxy = Output.empty();
+        this.httpsProxy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = Output.ofNullable(httpsProxy);
+            this.httpsProxy = Codegen.ofNullable(httpsProxy);
             return this;
         }        public HttpProxyConfigurationArgs build() {
             return new HttpProxyConfigurationArgs(httpsProxy);

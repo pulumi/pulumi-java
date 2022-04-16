@@ -23,10 +23,10 @@ public final class DeliveryStreamDeserializer {
         this.openXJsonSerDe = openXJsonSerDe;
     }
 
-    public Optional<DeliveryStreamHiveJsonSerDe> getHiveJsonSerDe() {
+    public Optional<DeliveryStreamHiveJsonSerDe> hiveJsonSerDe() {
         return Optional.ofNullable(this.hiveJsonSerDe);
     }
-    public Optional<DeliveryStreamOpenXJsonSerDe> getOpenXJsonSerDe() {
+    public Optional<DeliveryStreamOpenXJsonSerDe> openXJsonSerDe() {
         return Optional.ofNullable(this.openXJsonSerDe);
     }
 

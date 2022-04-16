@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.IstioConfigAuth;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auth")
       private final @Nullable Output<IstioConfigAuth> auth;
 
-    public Output<IstioConfigAuth> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+    public Output<IstioConfigAuth> auth() {
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     public IstioConfigArgs(
@@ -49,8 +50,8 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IstioConfigArgs() {
-        this.auth = Output.empty();
-        this.disabled = Output.empty();
+        this.auth = Codegen.empty();
+        this.disabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auth(@Nullable IstioConfigAuth auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -88,7 +89,7 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }        public IstioConfigArgs build() {
             return new IstioConfigArgs(auth, disabled);

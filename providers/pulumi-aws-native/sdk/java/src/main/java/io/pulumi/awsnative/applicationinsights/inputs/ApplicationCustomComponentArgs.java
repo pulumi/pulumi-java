@@ -5,6 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     @Import(name="componentName", required=true)
       private final Output<String> componentName;
 
-    public Output<String> getComponentName() {
+    public Output<String> componentName() {
         return this.componentName;
     }
 
@@ -36,7 +37,7 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     @Import(name="resourceList", required=true)
       private final Output<List<String>> resourceList;
 
-    public Output<List<String>> getResourceList() {
+    public Output<List<String>> resourceList() {
         return this.resourceList;
     }
 
@@ -48,8 +49,8 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     }
 
     private ApplicationCustomComponentArgs() {
-        this.componentName = Output.empty();
-        this.resourceList = Output.empty();
+        this.componentName = Codegen.empty();
+        this.resourceList = Codegen.empty();
     }
 
     public static Builder builder() {

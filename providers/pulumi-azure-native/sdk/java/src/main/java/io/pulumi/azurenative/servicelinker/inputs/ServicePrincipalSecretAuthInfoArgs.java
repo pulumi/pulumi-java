@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     @Import(name="authType", required=true)
       private final Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
 
@@ -36,7 +37,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -47,7 +48,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -58,7 +59,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -74,10 +75,10 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     }
 
     private ServicePrincipalSecretAuthInfoArgs() {
-        this.authType = Output.empty();
-        this.clientId = Output.empty();
-        this.principalId = Output.empty();
-        this.secret = Output.empty();
+        this.authType = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {

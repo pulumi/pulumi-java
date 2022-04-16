@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Type of the sever administrator.
      * 
      */
-    public Output<String> getAdministratorType() {
+    public Output<String> administratorType() {
         return this.administratorType;
     }
     /**
@@ -56,7 +57,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Azure Active Directory only Authentication enabled.
      * 
      */
-    public Output<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
@@ -70,7 +71,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Login name of the server administrator.
      * 
      */
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
     /**
@@ -84,7 +85,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return SID (object ID) of the server administrator.
      * 
      */
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
     /**
@@ -112,7 +113,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Tenant ID of the administrator.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -126,7 +127,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -152,7 +153,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerAzureADAdministrator(String name, ServerAzureADAdministratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ServerAzureADAdministrator", name, args == null ? ServerAzureADAdministratorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:ServerAzureADAdministrator", name, args == null ? ServerAzureADAdministratorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerAzureADAdministrator(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

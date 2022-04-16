@@ -8,6 +8,7 @@ import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaEventSource
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaLinuxProcessParamsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -24,78 +25,78 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     @Import(name="environmentVariables")
       private final @Nullable Output<Object> environmentVariables;
 
-    public Output<Object> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+    public Output<Object> environmentVariables() {
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     @Import(name="eventSources")
       private final @Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
 
-    public Output<List<ComponentVersionLambdaEventSourceArgs>> getEventSources() {
-        return this.eventSources == null ? Output.empty() : this.eventSources;
+    public Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources() {
+        return this.eventSources == null ? Codegen.empty() : this.eventSources;
     }
 
     @Import(name="execArgs")
       private final @Nullable Output<List<String>> execArgs;
 
-    public Output<List<String>> getExecArgs() {
-        return this.execArgs == null ? Output.empty() : this.execArgs;
+    public Output<List<String>> execArgs() {
+        return this.execArgs == null ? Codegen.empty() : this.execArgs;
     }
 
     @Import(name="inputPayloadEncodingType")
       private final @Nullable Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
 
-    public Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> getInputPayloadEncodingType() {
-        return this.inputPayloadEncodingType == null ? Output.empty() : this.inputPayloadEncodingType;
+    public Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType() {
+        return this.inputPayloadEncodingType == null ? Codegen.empty() : this.inputPayloadEncodingType;
     }
 
     @Import(name="linuxProcessParams")
       private final @Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
 
-    public Output<ComponentVersionLambdaLinuxProcessParamsArgs> getLinuxProcessParams() {
-        return this.linuxProcessParams == null ? Output.empty() : this.linuxProcessParams;
+    public Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams() {
+        return this.linuxProcessParams == null ? Codegen.empty() : this.linuxProcessParams;
     }
 
     @Import(name="maxIdleTimeInSeconds")
       private final @Nullable Output<Integer> maxIdleTimeInSeconds;
 
-    public Output<Integer> getMaxIdleTimeInSeconds() {
-        return this.maxIdleTimeInSeconds == null ? Output.empty() : this.maxIdleTimeInSeconds;
+    public Output<Integer> maxIdleTimeInSeconds() {
+        return this.maxIdleTimeInSeconds == null ? Codegen.empty() : this.maxIdleTimeInSeconds;
     }
 
     @Import(name="maxInstancesCount")
       private final @Nullable Output<Integer> maxInstancesCount;
 
-    public Output<Integer> getMaxInstancesCount() {
-        return this.maxInstancesCount == null ? Output.empty() : this.maxInstancesCount;
+    public Output<Integer> maxInstancesCount() {
+        return this.maxInstancesCount == null ? Codegen.empty() : this.maxInstancesCount;
     }
 
     @Import(name="maxQueueSize")
       private final @Nullable Output<Integer> maxQueueSize;
 
-    public Output<Integer> getMaxQueueSize() {
-        return this.maxQueueSize == null ? Output.empty() : this.maxQueueSize;
+    public Output<Integer> maxQueueSize() {
+        return this.maxQueueSize == null ? Codegen.empty() : this.maxQueueSize;
     }
 
     @Import(name="pinned")
       private final @Nullable Output<Boolean> pinned;
 
-    public Output<Boolean> getPinned() {
-        return this.pinned == null ? Output.empty() : this.pinned;
+    public Output<Boolean> pinned() {
+        return this.pinned == null ? Codegen.empty() : this.pinned;
     }
 
     @Import(name="statusTimeoutInSeconds")
       private final @Nullable Output<Integer> statusTimeoutInSeconds;
 
-    public Output<Integer> getStatusTimeoutInSeconds() {
-        return this.statusTimeoutInSeconds == null ? Output.empty() : this.statusTimeoutInSeconds;
+    public Output<Integer> statusTimeoutInSeconds() {
+        return this.statusTimeoutInSeconds == null ? Codegen.empty() : this.statusTimeoutInSeconds;
     }
 
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
+    public Output<Integer> timeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     public ComponentVersionLambdaExecutionParametersArgs(
@@ -124,17 +125,17 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     }
 
     private ComponentVersionLambdaExecutionParametersArgs() {
-        this.environmentVariables = Output.empty();
-        this.eventSources = Output.empty();
-        this.execArgs = Output.empty();
-        this.inputPayloadEncodingType = Output.empty();
-        this.linuxProcessParams = Output.empty();
-        this.maxIdleTimeInSeconds = Output.empty();
-        this.maxInstancesCount = Output.empty();
-        this.maxQueueSize = Output.empty();
-        this.pinned = Output.empty();
-        this.statusTimeoutInSeconds = Output.empty();
-        this.timeoutInSeconds = Output.empty();
+        this.environmentVariables = Codegen.empty();
+        this.eventSources = Codegen.empty();
+        this.execArgs = Codegen.empty();
+        this.inputPayloadEncodingType = Codegen.empty();
+        this.linuxProcessParams = Codegen.empty();
+        this.maxIdleTimeInSeconds = Codegen.empty();
+        this.maxInstancesCount = Codegen.empty();
+        this.maxQueueSize = Codegen.empty();
+        this.pinned = Codegen.empty();
+        this.statusTimeoutInSeconds = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder environmentVariables(@Nullable Object environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder eventSources(@Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources) {
@@ -190,7 +191,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder eventSources(@Nullable List<ComponentVersionLambdaEventSourceArgs> eventSources) {
-            this.eventSources = Output.ofNullable(eventSources);
+            this.eventSources = Codegen.ofNullable(eventSources);
             return this;
         }
         public Builder eventSources(ComponentVersionLambdaEventSourceArgs... eventSources) {
@@ -201,7 +202,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder execArgs(@Nullable List<String> execArgs) {
-            this.execArgs = Output.ofNullable(execArgs);
+            this.execArgs = Codegen.ofNullable(execArgs);
             return this;
         }
         public Builder execArgs(String... execArgs) {
@@ -212,7 +213,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder inputPayloadEncodingType(@Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType) {
-            this.inputPayloadEncodingType = Output.ofNullable(inputPayloadEncodingType);
+            this.inputPayloadEncodingType = Codegen.ofNullable(inputPayloadEncodingType);
             return this;
         }
         public Builder linuxProcessParams(@Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams) {
@@ -220,7 +221,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder linuxProcessParams(@Nullable ComponentVersionLambdaLinuxProcessParamsArgs linuxProcessParams) {
-            this.linuxProcessParams = Output.ofNullable(linuxProcessParams);
+            this.linuxProcessParams = Codegen.ofNullable(linuxProcessParams);
             return this;
         }
         public Builder maxIdleTimeInSeconds(@Nullable Output<Integer> maxIdleTimeInSeconds) {
@@ -228,7 +229,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder maxIdleTimeInSeconds(@Nullable Integer maxIdleTimeInSeconds) {
-            this.maxIdleTimeInSeconds = Output.ofNullable(maxIdleTimeInSeconds);
+            this.maxIdleTimeInSeconds = Codegen.ofNullable(maxIdleTimeInSeconds);
             return this;
         }
         public Builder maxInstancesCount(@Nullable Output<Integer> maxInstancesCount) {
@@ -236,7 +237,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder maxInstancesCount(@Nullable Integer maxInstancesCount) {
-            this.maxInstancesCount = Output.ofNullable(maxInstancesCount);
+            this.maxInstancesCount = Codegen.ofNullable(maxInstancesCount);
             return this;
         }
         public Builder maxQueueSize(@Nullable Output<Integer> maxQueueSize) {
@@ -244,7 +245,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder maxQueueSize(@Nullable Integer maxQueueSize) {
-            this.maxQueueSize = Output.ofNullable(maxQueueSize);
+            this.maxQueueSize = Codegen.ofNullable(maxQueueSize);
             return this;
         }
         public Builder pinned(@Nullable Output<Boolean> pinned) {
@@ -252,7 +253,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder pinned(@Nullable Boolean pinned) {
-            this.pinned = Output.ofNullable(pinned);
+            this.pinned = Codegen.ofNullable(pinned);
             return this;
         }
         public Builder statusTimeoutInSeconds(@Nullable Output<Integer> statusTimeoutInSeconds) {
@@ -260,7 +261,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder statusTimeoutInSeconds(@Nullable Integer statusTimeoutInSeconds) {
-            this.statusTimeoutInSeconds = Output.ofNullable(statusTimeoutInSeconds);
+            this.statusTimeoutInSeconds = Codegen.ofNullable(statusTimeoutInSeconds);
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
@@ -268,7 +269,7 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
             return this;
         }        public ComponentVersionLambdaExecutionParametersArgs build() {
             return new ComponentVersionLambdaExecutionParametersArgs(environmentVariables, eventSources, execArgs, inputPayloadEncodingType, linuxProcessParams, maxIdleTimeInSeconds, maxInstancesCount, maxQueueSize, pinned, statusTimeoutInSeconds, timeoutInSeconds);

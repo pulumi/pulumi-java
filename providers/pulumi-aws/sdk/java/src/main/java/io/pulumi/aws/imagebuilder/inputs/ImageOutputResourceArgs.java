@@ -6,6 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.ImageOutputResourceAmiArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="amis")
       private final @Nullable Output<List<ImageOutputResourceAmiArgs>> amis;
 
-    public Output<List<ImageOutputResourceAmiArgs>> getAmis() {
-        return this.amis == null ? Output.empty() : this.amis;
+    public Output<List<ImageOutputResourceAmiArgs>> amis() {
+        return this.amis == null ? Codegen.empty() : this.amis;
     }
 
     public ImageOutputResourceArgs(@Nullable Output<List<ImageOutputResourceAmiArgs>> amis) {
@@ -31,7 +32,7 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ImageOutputResourceArgs() {
-        this.amis = Output.empty();
+        this.amis = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder amis(@Nullable List<ImageOutputResourceAmiArgs> amis) {
-            this.amis = Output.ofNullable(amis);
+            this.amis = Codegen.ofNullable(amis);
             return this;
         }
         public Builder amis(ImageOutputResourceAmiArgs... amis) {

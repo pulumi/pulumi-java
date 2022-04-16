@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.AzureInternalMonitoringPipelineSinkDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="defaultSinkRefs")
       private final @Nullable Output<List<String>> defaultSinkRefs;
 
-    public Output<List<String>> getDefaultSinkRefs() {
-        return this.defaultSinkRefs == null ? Output.empty() : this.defaultSinkRefs;
+    public Output<List<String>> defaultSinkRefs() {
+        return this.defaultSinkRefs == null ? Codegen.empty() : this.defaultSinkRefs;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="sinks")
       private final @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
 
-    public Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> getSinks() {
-        return this.sinks == null ? Output.empty() : this.sinks;
+    public Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks() {
+        return this.sinks == null ? Codegen.empty() : this.sinks;
     }
 
     public DiagnosticsDescriptionArgs(
@@ -64,9 +65,9 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     }
 
     private DiagnosticsDescriptionArgs() {
-        this.defaultSinkRefs = Output.empty();
-        this.enabled = Output.empty();
-        this.sinks = Output.empty();
+        this.defaultSinkRefs = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.sinks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder defaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
-            this.defaultSinkRefs = Output.ofNullable(defaultSinkRefs);
+            this.defaultSinkRefs = Codegen.ofNullable(defaultSinkRefs);
             return this;
         }
         public Builder defaultSinkRefs(String... defaultSinkRefs) {
@@ -109,7 +110,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder sinks(@Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
@@ -117,7 +118,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionArgs> sinks) {
-            this.sinks = Output.ofNullable(sinks);
+            this.sinks = Codegen.ofNullable(sinks);
             return this;
         }
         public Builder sinks(AzureInternalMonitoringPipelineSinkDescriptionArgs... sinks) {

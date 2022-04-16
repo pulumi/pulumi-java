@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="domain", required=true)
       private final Output<Object> domain;
 
-    public Output<Object> getDomain() {
+    public Output<Object> domain() {
         return this.domain;
     }
 
@@ -36,7 +37,7 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="password", required=true)
       private final Output<SecureStringArgs> password;
 
-    public Output<SecureStringArgs> getPassword() {
+    public Output<SecureStringArgs> password() {
         return this.password;
     }
 
@@ -47,7 +48,7 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="userName", required=true)
       private final Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName;
     }
 
@@ -61,9 +62,9 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
     }
 
     private SSISExecutionCredentialArgs() {
-        this.domain = Output.empty();
-        this.password = Output.empty();
-        this.userName = Output.empty();
+        this.domain = Codegen.empty();
+        this.password = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {

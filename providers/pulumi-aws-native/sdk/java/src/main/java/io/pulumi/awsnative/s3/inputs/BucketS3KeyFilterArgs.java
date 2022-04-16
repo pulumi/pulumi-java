@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketFilterRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rules", required=true)
       private final Output<List<BucketFilterRuleArgs>> rules;
 
-    public Output<List<BucketFilterRuleArgs>> getRules() {
+    public Output<List<BucketFilterRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -30,7 +31,7 @@ public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BucketS3KeyFilterArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class BlobInventoryPolicy extends io.pulumi.resources.CustomResource {
      * @return Returns the last modified date and time of the blob inventory policy.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -57,7 +58,7 @@ public class BlobInventoryPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class BlobInventoryPolicy extends io.pulumi.resources.CustomResource {
      * @return The storage account blob inventory policy object. It is composed of policy rules.
      * 
      */
-    public Output<BlobInventoryPolicySchemaResponse> getPolicy() {
+    public Output<BlobInventoryPolicySchemaResponse> policy() {
         return this.policy;
     }
     /**
@@ -85,7 +86,7 @@ public class BlobInventoryPolicy extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -99,7 +100,7 @@ public class BlobInventoryPolicy extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -125,7 +126,7 @@ public class BlobInventoryPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BlobInventoryPolicy(String name, BlobInventoryPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:BlobInventoryPolicy", name, args == null ? BlobInventoryPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storage:BlobInventoryPolicy", name, args == null ? BlobInventoryPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BlobInventoryPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs extends i
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -29,7 +30,7 @@ public final class GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs extends i
     }
 
     private GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs() {
-        this.artifactId = Output.empty();
+        this.artifactId = Codegen.empty();
     }
 
     public static Builder builder() {

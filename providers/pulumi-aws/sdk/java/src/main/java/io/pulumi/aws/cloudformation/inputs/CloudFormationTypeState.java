@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudformation.inputs;
 import io.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="defaultVersionId")
       private final @Nullable Output<String> defaultVersionId;
 
-    public Output<String> getDefaultVersionId() {
-        return this.defaultVersionId == null ? Output.empty() : this.defaultVersionId;
+    public Output<String> defaultVersionId() {
+        return this.defaultVersionId == null ? Codegen.empty() : this.defaultVersionId;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="deprecatedStatus")
       private final @Nullable Output<String> deprecatedStatus;
 
-    public Output<String> getDeprecatedStatus() {
-        return this.deprecatedStatus == null ? Output.empty() : this.deprecatedStatus;
+    public Output<String> deprecatedStatus() {
+        return this.deprecatedStatus == null ? Codegen.empty() : this.deprecatedStatus;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="documentationUrl")
       private final @Nullable Output<String> documentationUrl;
 
-    public Output<String> getDocumentationUrl() {
-        return this.documentationUrl == null ? Output.empty() : this.documentationUrl;
+    public Output<String> documentationUrl() {
+        return this.documentationUrl == null ? Codegen.empty() : this.documentationUrl;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
+    public Output<String> executionRoleArn() {
+        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="isDefaultVersion")
       private final @Nullable Output<Boolean> isDefaultVersion;
 
-    public Output<Boolean> getIsDefaultVersion() {
-        return this.isDefaultVersion == null ? Output.empty() : this.isDefaultVersion;
+    public Output<Boolean> isDefaultVersion() {
+        return this.isDefaultVersion == null ? Codegen.empty() : this.isDefaultVersion;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="loggingConfig")
       private final @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
 
-    public Output<CloudFormationTypeLoggingConfigGetArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+    public Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig() {
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="provisioningType")
       private final @Nullable Output<String> provisioningType;
 
-    public Output<String> getProvisioningType() {
-        return this.provisioningType == null ? Output.empty() : this.provisioningType;
+    public Output<String> provisioningType() {
+        return this.provisioningType == null ? Codegen.empty() : this.provisioningType;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<String> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="schemaHandlerPackage")
       private final @Nullable Output<String> schemaHandlerPackage;
 
-    public Output<String> getSchemaHandlerPackage() {
-        return this.schemaHandlerPackage == null ? Output.empty() : this.schemaHandlerPackage;
+    public Output<String> schemaHandlerPackage() {
+        return this.schemaHandlerPackage == null ? Codegen.empty() : this.schemaHandlerPackage;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="sourceUrl")
       private final @Nullable Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
-        return this.sourceUrl == null ? Output.empty() : this.sourceUrl;
+    public Output<String> sourceUrl() {
+        return this.sourceUrl == null ? Codegen.empty() : this.sourceUrl;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="typeArn")
       private final @Nullable Output<String> typeArn;
 
-    public Output<String> getTypeArn() {
-        return this.typeArn == null ? Output.empty() : this.typeArn;
+    public Output<String> typeArn() {
+        return this.typeArn == null ? Codegen.empty() : this.typeArn;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+    public Output<String> typeName() {
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
-        return this.versionId == null ? Output.empty() : this.versionId;
+    public Output<String> versionId() {
+        return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
-    public Output<String> getVisibility() {
-        return this.visibility == null ? Output.empty() : this.visibility;
+    public Output<String> visibility() {
+        return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 
     public CloudFormationTypeState(
@@ -241,23 +242,23 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     }
 
     private CloudFormationTypeState() {
-        this.arn = Output.empty();
-        this.defaultVersionId = Output.empty();
-        this.deprecatedStatus = Output.empty();
-        this.description = Output.empty();
-        this.documentationUrl = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.isDefaultVersion = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.provisioningType = Output.empty();
-        this.schema = Output.empty();
-        this.schemaHandlerPackage = Output.empty();
-        this.sourceUrl = Output.empty();
-        this.type = Output.empty();
-        this.typeArn = Output.empty();
-        this.typeName = Output.empty();
-        this.versionId = Output.empty();
-        this.visibility = Output.empty();
+        this.arn = Codegen.empty();
+        this.defaultVersionId = Codegen.empty();
+        this.deprecatedStatus = Codegen.empty();
+        this.description = Codegen.empty();
+        this.documentationUrl = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.isDefaultVersion = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.provisioningType = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.schemaHandlerPackage = Codegen.empty();
+        this.sourceUrl = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeArn = Codegen.empty();
+        this.typeName = Codegen.empty();
+        this.versionId = Codegen.empty();
+        this.visibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -317,7 +318,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder defaultVersionId(@Nullable Output<String> defaultVersionId) {
@@ -325,7 +326,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder defaultVersionId(@Nullable String defaultVersionId) {
-            this.defaultVersionId = Output.ofNullable(defaultVersionId);
+            this.defaultVersionId = Codegen.ofNullable(defaultVersionId);
             return this;
         }
         public Builder deprecatedStatus(@Nullable Output<String> deprecatedStatus) {
@@ -333,7 +334,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder deprecatedStatus(@Nullable String deprecatedStatus) {
-            this.deprecatedStatus = Output.ofNullable(deprecatedStatus);
+            this.deprecatedStatus = Codegen.ofNullable(deprecatedStatus);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -341,7 +342,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentationUrl(@Nullable Output<String> documentationUrl) {
@@ -349,7 +350,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder documentationUrl(@Nullable String documentationUrl) {
-            this.documentationUrl = Output.ofNullable(documentationUrl);
+            this.documentationUrl = Codegen.ofNullable(documentationUrl);
             return this;
         }
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
@@ -357,7 +358,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Output.ofNullable(executionRoleArn);
+            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
             return this;
         }
         public Builder isDefaultVersion(@Nullable Output<Boolean> isDefaultVersion) {
@@ -365,7 +366,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
-            this.isDefaultVersion = Output.ofNullable(isDefaultVersion);
+            this.isDefaultVersion = Codegen.ofNullable(isDefaultVersion);
             return this;
         }
         public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig) {
@@ -373,7 +374,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder provisioningType(@Nullable Output<String> provisioningType) {
@@ -381,7 +382,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder provisioningType(@Nullable String provisioningType) {
-            this.provisioningType = Output.ofNullable(provisioningType);
+            this.provisioningType = Codegen.ofNullable(provisioningType);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -389,7 +390,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder schemaHandlerPackage(@Nullable Output<String> schemaHandlerPackage) {
@@ -397,7 +398,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schemaHandlerPackage(@Nullable String schemaHandlerPackage) {
-            this.schemaHandlerPackage = Output.ofNullable(schemaHandlerPackage);
+            this.schemaHandlerPackage = Codegen.ofNullable(schemaHandlerPackage);
             return this;
         }
         public Builder sourceUrl(@Nullable Output<String> sourceUrl) {
@@ -405,7 +406,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceUrl(@Nullable String sourceUrl) {
-            this.sourceUrl = Output.ofNullable(sourceUrl);
+            this.sourceUrl = Codegen.ofNullable(sourceUrl);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -413,7 +414,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder typeArn(@Nullable Output<String> typeArn) {
@@ -421,7 +422,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder typeArn(@Nullable String typeArn) {
-            this.typeArn = Output.ofNullable(typeArn);
+            this.typeArn = Codegen.ofNullable(typeArn);
             return this;
         }
         public Builder typeName(@Nullable Output<String> typeName) {
@@ -429,7 +430,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }
         public Builder versionId(@Nullable Output<String> versionId) {
@@ -437,7 +438,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Output.ofNullable(versionId);
+            this.versionId = Codegen.ofNullable(versionId);
             return this;
         }
         public Builder visibility(@Nullable Output<String> visibility) {
@@ -445,7 +446,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = Output.ofNullable(visibility);
+            this.visibility = Codegen.ofNullable(visibility);
             return this;
         }        public CloudFormationTypeState build() {
             return new CloudFormationTypeState(arn, defaultVersionId, deprecatedStatus, description, documentationUrl, executionRoleArn, isDefaultVersion, loggingConfig, provisioningType, schema, schemaHandlerPackage, sourceUrl, type, typeArn, typeName, versionId, visibility);

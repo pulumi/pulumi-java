@@ -5,6 +5,7 @@ package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.spanner_v1.enums.DatabaseDatabaseDialect;
 import io.pulumi.googlenative.spanner_v1.inputs.EncryptionConfigArgs;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createStatement", required=true)
       private final Output<String> createStatement;
 
-    public Output<String> getCreateStatement() {
+    public Output<String> createStatement() {
         return this.createStatement;
     }
 
@@ -35,8 +36,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseDialect")
       private final @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
 
-    public Output<DatabaseDatabaseDialect> getDatabaseDialect() {
-        return this.databaseDialect == null ? Output.empty() : this.databaseDialect;
+    public Output<DatabaseDatabaseDialect> databaseDialect() {
+        return this.databaseDialect == null ? Codegen.empty() : this.databaseDialect;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -57,22 +58,22 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extraStatements")
       private final @Nullable Output<List<String>> extraStatements;
 
-    public Output<List<String>> getExtraStatements() {
-        return this.extraStatements == null ? Output.empty() : this.extraStatements;
+    public Output<List<String>> extraStatements() {
+        return this.extraStatements == null ? Codegen.empty() : this.extraStatements;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatabaseArgs(
@@ -91,12 +92,12 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.createStatement = Output.empty();
-        this.databaseDialect = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.extraStatements = Output.empty();
-        this.instanceId = Output.empty();
-        this.project = Output.empty();
+        this.createStatement = Codegen.empty();
+        this.databaseDialect = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.extraStatements = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseDialect(@Nullable DatabaseDatabaseDialect databaseDialect) {
-            this.databaseDialect = Output.ofNullable(databaseDialect);
+            this.databaseDialect = Codegen.ofNullable(databaseDialect);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
@@ -150,7 +151,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder extraStatements(@Nullable Output<List<String>> extraStatements) {
@@ -158,7 +159,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extraStatements(@Nullable List<String> extraStatements) {
-            this.extraStatements = Output.ofNullable(extraStatements);
+            this.extraStatements = Codegen.ofNullable(extraStatements);
             return this;
         }
         public Builder extraStatements(String... extraStatements) {
@@ -177,7 +178,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatabaseArgs build() {
             return new DatabaseArgs(createStatement, databaseDialect, encryptionConfig, extraStatements, instanceId, project);

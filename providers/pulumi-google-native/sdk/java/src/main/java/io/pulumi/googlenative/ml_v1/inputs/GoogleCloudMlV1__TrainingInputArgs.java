@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__TrainingInputScaleTier;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EncryptionConfigArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__HyperparameterSpecArgs;
@@ -32,8 +33,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="enableWebAccess")
       private final @Nullable Output<Boolean> enableWebAccess;
 
-    public Output<Boolean> getEnableWebAccess() {
-        return this.enableWebAccess == null ? Output.empty() : this.enableWebAccess;
+    public Output<Boolean> enableWebAccess() {
+        return this.enableWebAccess == null ? Codegen.empty() : this.enableWebAccess;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="encryptionConfig")
       private final @Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig;
 
-    public Output<GoogleCloudMlV1__EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="evaluatorConfig")
       private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> getEvaluatorConfig() {
-        return this.evaluatorConfig == null ? Output.empty() : this.evaluatorConfig;
+    public Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig() {
+        return this.evaluatorConfig == null ? Codegen.empty() : this.evaluatorConfig;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="evaluatorCount")
       private final @Nullable Output<String> evaluatorCount;
 
-    public Output<String> getEvaluatorCount() {
-        return this.evaluatorCount == null ? Output.empty() : this.evaluatorCount;
+    public Output<String> evaluatorCount() {
+        return this.evaluatorCount == null ? Codegen.empty() : this.evaluatorCount;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="evaluatorType")
       private final @Nullable Output<String> evaluatorType;
 
-    public Output<String> getEvaluatorType() {
-        return this.evaluatorType == null ? Output.empty() : this.evaluatorType;
+    public Output<String> evaluatorType() {
+        return this.evaluatorType == null ? Codegen.empty() : this.evaluatorType;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="hyperparameters")
       private final @Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters;
 
-    public Output<GoogleCloudMlV1__HyperparameterSpecArgs> getHyperparameters() {
-        return this.hyperparameters == null ? Output.empty() : this.hyperparameters;
+    public Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters() {
+        return this.hyperparameters == null ? Codegen.empty() : this.hyperparameters;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="jobDir")
       private final @Nullable Output<String> jobDir;
 
-    public Output<String> getJobDir() {
-        return this.jobDir == null ? Output.empty() : this.jobDir;
+    public Output<String> jobDir() {
+        return this.jobDir == null ? Codegen.empty() : this.jobDir;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="masterConfig")
       private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> getMasterConfig() {
-        return this.masterConfig == null ? Output.empty() : this.masterConfig;
+    public Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig() {
+        return this.masterConfig == null ? Codegen.empty() : this.masterConfig;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="masterType")
       private final @Nullable Output<String> masterType;
 
-    public Output<String> getMasterType() {
-        return this.masterType == null ? Output.empty() : this.masterType;
+    public Output<String> masterType() {
+        return this.masterType == null ? Codegen.empty() : this.masterType;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="packageUris", required=true)
       private final Output<List<String>> packageUris;
 
-    public Output<List<String>> getPackageUris() {
+    public Output<List<String>> packageUris() {
         return this.packageUris;
     }
 
@@ -164,8 +165,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="parameterServerConfig")
       private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> getParameterServerConfig() {
-        return this.parameterServerConfig == null ? Output.empty() : this.parameterServerConfig;
+    public Output<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig() {
+        return this.parameterServerConfig == null ? Codegen.empty() : this.parameterServerConfig;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="parameterServerCount")
       private final @Nullable Output<String> parameterServerCount;
 
-    public Output<String> getParameterServerCount() {
-        return this.parameterServerCount == null ? Output.empty() : this.parameterServerCount;
+    public Output<String> parameterServerCount() {
+        return this.parameterServerCount == null ? Codegen.empty() : this.parameterServerCount;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="parameterServerType")
       private final @Nullable Output<String> parameterServerType;
 
-    public Output<String> getParameterServerType() {
-        return this.parameterServerType == null ? Output.empty() : this.parameterServerType;
+    public Output<String> parameterServerType() {
+        return this.parameterServerType == null ? Codegen.empty() : this.parameterServerType;
     }
 
     /**
@@ -197,7 +198,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="pythonModule", required=true)
       private final Output<String> pythonModule;
 
-    public Output<String> getPythonModule() {
+    public Output<String> pythonModule() {
         return this.pythonModule;
     }
 
@@ -208,8 +209,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
-    public Output<String> getPythonVersion() {
-        return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
+    public Output<String> pythonVersion() {
+        return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
     }
 
     /**
@@ -219,7 +220,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -230,8 +231,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
+    public Output<String> runtimeVersion() {
+        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
     /**
@@ -241,7 +242,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="scaleTier", required=true)
       private final Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier;
 
-    public Output<GoogleCloudMlV1__TrainingInputScaleTier> getScaleTier() {
+    public Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier() {
         return this.scaleTier;
     }
 
@@ -252,8 +253,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="scheduling")
       private final @Nullable Output<GoogleCloudMlV1__SchedulingArgs> scheduling;
 
-    public Output<GoogleCloudMlV1__SchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Output.empty() : this.scheduling;
+    public Output<GoogleCloudMlV1__SchedulingArgs> scheduling() {
+        return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
     /**
@@ -263,8 +264,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -274,8 +275,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="useChiefInTfConfig")
       private final @Nullable Output<Boolean> useChiefInTfConfig;
 
-    public Output<Boolean> getUseChiefInTfConfig() {
-        return this.useChiefInTfConfig == null ? Output.empty() : this.useChiefInTfConfig;
+    public Output<Boolean> useChiefInTfConfig() {
+        return this.useChiefInTfConfig == null ? Codegen.empty() : this.useChiefInTfConfig;
     }
 
     /**
@@ -285,8 +286,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="workerConfig")
       private final @Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig;
 
-    public Output<GoogleCloudMlV1__ReplicaConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Output.empty() : this.workerConfig;
+    public Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig() {
+        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
     /**
@@ -296,8 +297,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;
 
-    public Output<String> getWorkerCount() {
-        return this.workerCount == null ? Output.empty() : this.workerCount;
+    public Output<String> workerCount() {
+        return this.workerCount == null ? Codegen.empty() : this.workerCount;
     }
 
     /**
@@ -307,8 +308,8 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
-    public Output<String> getWorkerType() {
-        return this.workerType == null ? Output.empty() : this.workerType;
+    public Output<String> workerType() {
+        return this.workerType == null ? Codegen.empty() : this.workerType;
     }
 
     public GoogleCloudMlV1__TrainingInputArgs(
@@ -367,32 +368,32 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
     }
 
     private GoogleCloudMlV1__TrainingInputArgs() {
-        this.args = Output.empty();
-        this.enableWebAccess = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.evaluatorConfig = Output.empty();
-        this.evaluatorCount = Output.empty();
-        this.evaluatorType = Output.empty();
-        this.hyperparameters = Output.empty();
-        this.jobDir = Output.empty();
-        this.masterConfig = Output.empty();
-        this.masterType = Output.empty();
-        this.network = Output.empty();
-        this.packageUris = Output.empty();
-        this.parameterServerConfig = Output.empty();
-        this.parameterServerCount = Output.empty();
-        this.parameterServerType = Output.empty();
-        this.pythonModule = Output.empty();
-        this.pythonVersion = Output.empty();
-        this.region = Output.empty();
-        this.runtimeVersion = Output.empty();
-        this.scaleTier = Output.empty();
-        this.scheduling = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.useChiefInTfConfig = Output.empty();
-        this.workerConfig = Output.empty();
-        this.workerCount = Output.empty();
-        this.workerType = Output.empty();
+        this.args = Codegen.empty();
+        this.enableWebAccess = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.evaluatorConfig = Codegen.empty();
+        this.evaluatorCount = Codegen.empty();
+        this.evaluatorType = Codegen.empty();
+        this.hyperparameters = Codegen.empty();
+        this.jobDir = Codegen.empty();
+        this.masterConfig = Codegen.empty();
+        this.masterType = Codegen.empty();
+        this.network = Codegen.empty();
+        this.packageUris = Codegen.empty();
+        this.parameterServerConfig = Codegen.empty();
+        this.parameterServerCount = Codegen.empty();
+        this.parameterServerType = Codegen.empty();
+        this.pythonModule = Codegen.empty();
+        this.pythonVersion = Codegen.empty();
+        this.region = Codegen.empty();
+        this.runtimeVersion = Codegen.empty();
+        this.scaleTier = Codegen.empty();
+        this.scheduling = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.useChiefInTfConfig = Codegen.empty();
+        this.workerConfig = Codegen.empty();
+        this.workerCount = Codegen.empty();
+        this.workerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -470,7 +471,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -481,7 +482,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder enableWebAccess(@Nullable Boolean enableWebAccess) {
-            this.enableWebAccess = Output.ofNullable(enableWebAccess);
+            this.enableWebAccess = Codegen.ofNullable(enableWebAccess);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig) {
@@ -489,7 +490,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder encryptionConfig(@Nullable GoogleCloudMlV1__EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder evaluatorConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig) {
@@ -497,7 +498,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder evaluatorConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs evaluatorConfig) {
-            this.evaluatorConfig = Output.ofNullable(evaluatorConfig);
+            this.evaluatorConfig = Codegen.ofNullable(evaluatorConfig);
             return this;
         }
         public Builder evaluatorCount(@Nullable Output<String> evaluatorCount) {
@@ -505,7 +506,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder evaluatorCount(@Nullable String evaluatorCount) {
-            this.evaluatorCount = Output.ofNullable(evaluatorCount);
+            this.evaluatorCount = Codegen.ofNullable(evaluatorCount);
             return this;
         }
         public Builder evaluatorType(@Nullable Output<String> evaluatorType) {
@@ -513,7 +514,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder evaluatorType(@Nullable String evaluatorType) {
-            this.evaluatorType = Output.ofNullable(evaluatorType);
+            this.evaluatorType = Codegen.ofNullable(evaluatorType);
             return this;
         }
         public Builder hyperparameters(@Nullable Output<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters) {
@@ -521,7 +522,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder hyperparameters(@Nullable GoogleCloudMlV1__HyperparameterSpecArgs hyperparameters) {
-            this.hyperparameters = Output.ofNullable(hyperparameters);
+            this.hyperparameters = Codegen.ofNullable(hyperparameters);
             return this;
         }
         public Builder jobDir(@Nullable Output<String> jobDir) {
@@ -529,7 +530,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder jobDir(@Nullable String jobDir) {
-            this.jobDir = Output.ofNullable(jobDir);
+            this.jobDir = Codegen.ofNullable(jobDir);
             return this;
         }
         public Builder masterConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig) {
@@ -537,7 +538,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder masterConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs masterConfig) {
-            this.masterConfig = Output.ofNullable(masterConfig);
+            this.masterConfig = Codegen.ofNullable(masterConfig);
             return this;
         }
         public Builder masterType(@Nullable Output<String> masterType) {
@@ -545,7 +546,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder masterType(@Nullable String masterType) {
-            this.masterType = Output.ofNullable(masterType);
+            this.masterType = Codegen.ofNullable(masterType);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -553,7 +554,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder packageUris(Output<List<String>> packageUris) {
@@ -572,7 +573,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder parameterServerConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs parameterServerConfig) {
-            this.parameterServerConfig = Output.ofNullable(parameterServerConfig);
+            this.parameterServerConfig = Codegen.ofNullable(parameterServerConfig);
             return this;
         }
         public Builder parameterServerCount(@Nullable Output<String> parameterServerCount) {
@@ -580,7 +581,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder parameterServerCount(@Nullable String parameterServerCount) {
-            this.parameterServerCount = Output.ofNullable(parameterServerCount);
+            this.parameterServerCount = Codegen.ofNullable(parameterServerCount);
             return this;
         }
         public Builder parameterServerType(@Nullable Output<String> parameterServerType) {
@@ -588,7 +589,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder parameterServerType(@Nullable String parameterServerType) {
-            this.parameterServerType = Output.ofNullable(parameterServerType);
+            this.parameterServerType = Codegen.ofNullable(parameterServerType);
             return this;
         }
         public Builder pythonModule(Output<String> pythonModule) {
@@ -604,7 +605,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Output.ofNullable(pythonVersion);
+            this.pythonVersion = Codegen.ofNullable(pythonVersion);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -620,7 +621,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Output.ofNullable(runtimeVersion);
+            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
             return this;
         }
         public Builder scaleTier(Output<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier) {
@@ -636,7 +637,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder scheduling(@Nullable GoogleCloudMlV1__SchedulingArgs scheduling) {
-            this.scheduling = Output.ofNullable(scheduling);
+            this.scheduling = Codegen.ofNullable(scheduling);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -644,7 +645,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder useChiefInTfConfig(@Nullable Output<Boolean> useChiefInTfConfig) {
@@ -652,7 +653,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder useChiefInTfConfig(@Nullable Boolean useChiefInTfConfig) {
-            this.useChiefInTfConfig = Output.ofNullable(useChiefInTfConfig);
+            this.useChiefInTfConfig = Codegen.ofNullable(useChiefInTfConfig);
             return this;
         }
         public Builder workerConfig(@Nullable Output<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig) {
@@ -660,7 +661,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder workerConfig(@Nullable GoogleCloudMlV1__ReplicaConfigArgs workerConfig) {
-            this.workerConfig = Output.ofNullable(workerConfig);
+            this.workerConfig = Codegen.ofNullable(workerConfig);
             return this;
         }
         public Builder workerCount(@Nullable Output<String> workerCount) {
@@ -668,7 +669,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder workerCount(@Nullable String workerCount) {
-            this.workerCount = Output.ofNullable(workerCount);
+            this.workerCount = Codegen.ofNullable(workerCount);
             return this;
         }
         public Builder workerType(@Nullable Output<String> workerType) {
@@ -676,7 +677,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder workerType(@Nullable String workerType) {
-            this.workerType = Output.ofNullable(workerType);
+            this.workerType = Codegen.ofNullable(workerType);
             return this;
         }        public GoogleCloudMlV1__TrainingInputArgs build() {
             return new GoogleCloudMlV1__TrainingInputArgs(args, enableWebAccess, encryptionConfig, evaluatorConfig, evaluatorCount, evaluatorType, hyperparameters, jobDir, masterConfig, masterType, network, packageUris, parameterServerConfig, parameterServerCount, parameterServerType, pythonModule, pythonVersion, region, runtimeVersion, scaleTier, scheduling, serviceAccount, useChiefInTfConfig, workerConfig, workerCount, workerType);

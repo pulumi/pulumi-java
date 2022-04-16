@@ -25,7 +25,7 @@ public final class ServiceAuthenticationConfiguration extends io.pulumi.resource
     @Import(name="accessRoleArn")
       private final @Nullable String accessRoleArn;
 
-    public Optional<String> getAccessRoleArn() {
+    public Optional<String> accessRoleArn() {
         return this.accessRoleArn == null ? Optional.empty() : Optional.ofNullable(this.accessRoleArn);
     }
 
@@ -36,7 +36,7 @@ public final class ServiceAuthenticationConfiguration extends io.pulumi.resource
     @Import(name="connectionArn")
       private final @Nullable String connectionArn;
 
-    public Optional<String> getConnectionArn() {
+    public Optional<String> connectionArn() {
         return this.connectionArn == null ? Optional.empty() : Optional.ofNullable(this.connectionArn);
     }
 

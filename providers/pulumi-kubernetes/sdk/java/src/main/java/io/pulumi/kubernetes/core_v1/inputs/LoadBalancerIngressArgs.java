@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PortStatusArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+    public Output<String> ip() {
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     @Import(name="ports")
       private final @Nullable Output<List<PortStatusArgs>> ports;
 
-    public Output<List<PortStatusArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<PortStatusArgs>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     public LoadBalancerIngressArgs(
@@ -63,9 +64,9 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     }
 
     private LoadBalancerIngressArgs() {
-        this.hostname = Output.empty();
-        this.ip = Output.empty();
-        this.ports = Output.empty();
+        this.hostname = Codegen.empty();
+        this.ip = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder ip(@Nullable Output<String> ip) {
@@ -105,7 +106,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }
         public Builder ports(@Nullable Output<List<PortStatusArgs>> ports) {
@@ -113,7 +114,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ports(@Nullable List<PortStatusArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(PortStatusArgs... ports) {

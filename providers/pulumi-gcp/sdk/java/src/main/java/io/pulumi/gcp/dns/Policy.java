@@ -6,6 +6,7 @@ package io.pulumi.gcp.dns;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.PolicyArgs;
 import io.pulumi.gcp.dns.inputs.PolicyState;
@@ -64,7 +65,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PolicyAlternativeNameServerConfig> getAlternativeNameServerConfig() {
+    public Output</* @Nullable */ PolicyAlternativeNameServerConfig> alternativeNameServerConfig() {
         return this.alternativeNameServerConfig;
     }
     /**
@@ -78,7 +79,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return A textual description field. Defaults to 'Managed by Pulumi'.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -98,7 +99,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * that are bound to this policy.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableInboundForwarding() {
+    public Output</* @Nullable */ Boolean> enableInboundForwarding() {
         return this.enableInboundForwarding;
     }
     /**
@@ -114,7 +115,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Defaults to no logging if not set.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableLogging() {
+    public Output</* @Nullable */ Boolean> enableLogging() {
         return this.enableLogging;
     }
     /**
@@ -128,7 +129,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return User assigned name for this policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +145,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<PolicyNetwork>> getNetworks() {
+    public Output</* @Nullable */ List<PolicyNetwork>> networks() {
         return this.networks;
     }
     /**
@@ -160,7 +161,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -186,7 +187,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Policy(String name, @Nullable PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dns/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dns/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Policy(String name, Output<String> id, @Nullable PolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

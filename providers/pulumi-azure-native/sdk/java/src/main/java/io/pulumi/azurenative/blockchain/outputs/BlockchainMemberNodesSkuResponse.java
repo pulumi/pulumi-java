@@ -26,7 +26,7 @@ public final class BlockchainMemberNodesSkuResponse {
      * Gets or sets the nodes capacity.
      * 
     */
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,36 +19,36 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
     @Import(name="disable")
       private final @Nullable Output<Boolean> disable;
 
-    public Output<Boolean> getDisable() {
-        return this.disable == null ? Output.empty() : this.disable;
+    public Output<Boolean> disable() {
+        return this.disable == null ? Codegen.empty() : this.disable;
     }
 
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+    public Output<String> level() {
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs(
@@ -64,11 +65,11 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
     }
 
     private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs() {
-        this.disable = Output.empty();
-        this.level = Output.empty();
-        this.role = Output.empty();
-        this.type = Output.empty();
-        this.user = Output.empty();
+        this.disable = Codegen.empty();
+        this.level = Codegen.empty();
+        this.role = Codegen.empty();
+        this.type = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
             return this;
         }
         public Builder disable(@Nullable Boolean disable) {
-            this.disable = Output.ofNullable(disable);
+            this.disable = Codegen.ofNullable(disable);
             return this;
         }
         public Builder level(@Nullable Output<String> level) {
@@ -112,7 +113,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
             return this;
         }
         public Builder level(@Nullable String level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -120,7 +121,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -128,7 +129,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -136,7 +137,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs build() {
             return new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs(disable, level, role, type, user);

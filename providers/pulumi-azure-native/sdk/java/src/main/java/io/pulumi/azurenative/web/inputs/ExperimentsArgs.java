@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.RampUpRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rampUpRules")
       private final @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
 
-    public Output<List<RampUpRuleArgs>> getRampUpRules() {
-        return this.rampUpRules == null ? Output.empty() : this.rampUpRules;
+    public Output<List<RampUpRuleArgs>> rampUpRules() {
+        return this.rampUpRules == null ? Codegen.empty() : this.rampUpRules;
     }
 
     public ExperimentsArgs(@Nullable Output<List<RampUpRuleArgs>> rampUpRules) {
@@ -35,7 +36,7 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExperimentsArgs() {
-        this.rampUpRules = Output.empty();
+        this.rampUpRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rampUpRules(@Nullable List<RampUpRuleArgs> rampUpRules) {
-            this.rampUpRules = Output.ofNullable(rampUpRules);
+            this.rampUpRules = Codegen.ofNullable(rampUpRules);
             return this;
         }
         public Builder rampUpRules(RampUpRuleArgs... rampUpRules) {

@@ -34,14 +34,14 @@ public final class IPRuleResponse {
      * The action of IP ACL rule.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
      * 
     */
-    public String getIPAddressOrRange() {
+    public String iPAddressOrRange() {
         return this.iPAddressOrRange;
     }
 

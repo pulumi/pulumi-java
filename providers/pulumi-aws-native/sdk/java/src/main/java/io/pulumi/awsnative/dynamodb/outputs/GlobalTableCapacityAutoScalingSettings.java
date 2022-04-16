@@ -29,16 +29,16 @@ public final class GlobalTableCapacityAutoScalingSettings {
         this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
     }
 
-    public Integer getMaxCapacity() {
+    public Integer maxCapacity() {
         return this.maxCapacity;
     }
-    public Integer getMinCapacity() {
+    public Integer minCapacity() {
         return this.minCapacity;
     }
-    public Optional<Integer> getSeedCapacity() {
+    public Optional<Integer> seedCapacity() {
         return Optional.ofNullable(this.seedCapacity);
     }
-    public GlobalTableTargetTrackingScalingPolicyConfiguration getTargetTrackingScalingPolicyConfiguration() {
+    public GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration() {
         return this.targetTrackingScalingPolicyConfiguration;
     }
 

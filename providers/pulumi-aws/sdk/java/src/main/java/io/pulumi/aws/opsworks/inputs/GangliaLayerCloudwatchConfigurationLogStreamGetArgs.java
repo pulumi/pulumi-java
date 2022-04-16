@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,78 +19,78 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
     @Import(name="batchCount")
       private final @Nullable Output<Integer> batchCount;
 
-    public Output<Integer> getBatchCount() {
-        return this.batchCount == null ? Output.empty() : this.batchCount;
+    public Output<Integer> batchCount() {
+        return this.batchCount == null ? Codegen.empty() : this.batchCount;
     }
 
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
-        return this.batchSize == null ? Output.empty() : this.batchSize;
+    public Output<Integer> batchSize() {
+        return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     @Import(name="bufferDuration")
       private final @Nullable Output<Integer> bufferDuration;
 
-    public Output<Integer> getBufferDuration() {
-        return this.bufferDuration == null ? Output.empty() : this.bufferDuration;
+    public Output<Integer> bufferDuration() {
+        return this.bufferDuration == null ? Codegen.empty() : this.bufferDuration;
     }
 
     @Import(name="datetimeFormat")
       private final @Nullable Output<String> datetimeFormat;
 
-    public Output<String> getDatetimeFormat() {
-        return this.datetimeFormat == null ? Output.empty() : this.datetimeFormat;
+    public Output<String> datetimeFormat() {
+        return this.datetimeFormat == null ? Codegen.empty() : this.datetimeFormat;
     }
 
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<String> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     @Import(name="file", required=true)
       private final Output<String> file;
 
-    public Output<String> getFile() {
+    public Output<String> file() {
         return this.file;
     }
 
     @Import(name="fileFingerprintLines")
       private final @Nullable Output<String> fileFingerprintLines;
 
-    public Output<String> getFileFingerprintLines() {
-        return this.fileFingerprintLines == null ? Output.empty() : this.fileFingerprintLines;
+    public Output<String> fileFingerprintLines() {
+        return this.fileFingerprintLines == null ? Codegen.empty() : this.fileFingerprintLines;
     }
 
     @Import(name="initialPosition")
       private final @Nullable Output<String> initialPosition;
 
-    public Output<String> getInitialPosition() {
-        return this.initialPosition == null ? Output.empty() : this.initialPosition;
+    public Output<String> initialPosition() {
+        return this.initialPosition == null ? Codegen.empty() : this.initialPosition;
     }
 
     @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
     @Import(name="multilineStartPattern")
       private final @Nullable Output<String> multilineStartPattern;
 
-    public Output<String> getMultilineStartPattern() {
-        return this.multilineStartPattern == null ? Output.empty() : this.multilineStartPattern;
+    public Output<String> multilineStartPattern() {
+        return this.multilineStartPattern == null ? Codegen.empty() : this.multilineStartPattern;
     }
 
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public GangliaLayerCloudwatchConfigurationLogStreamGetArgs(
@@ -118,17 +119,17 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
     }
 
     private GangliaLayerCloudwatchConfigurationLogStreamGetArgs() {
-        this.batchCount = Output.empty();
-        this.batchSize = Output.empty();
-        this.bufferDuration = Output.empty();
-        this.datetimeFormat = Output.empty();
-        this.encoding = Output.empty();
-        this.file = Output.empty();
-        this.fileFingerprintLines = Output.empty();
-        this.initialPosition = Output.empty();
-        this.logGroupName = Output.empty();
-        this.multilineStartPattern = Output.empty();
-        this.timeZone = Output.empty();
+        this.batchCount = Codegen.empty();
+        this.batchSize = Codegen.empty();
+        this.bufferDuration = Codegen.empty();
+        this.datetimeFormat = Codegen.empty();
+        this.encoding = Codegen.empty();
+        this.file = Codegen.empty();
+        this.fileFingerprintLines = Codegen.empty();
+        this.initialPosition = Codegen.empty();
+        this.logGroupName = Codegen.empty();
+        this.multilineStartPattern = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder batchCount(@Nullable Integer batchCount) {
-            this.batchCount = Output.ofNullable(batchCount);
+            this.batchCount = Codegen.ofNullable(batchCount);
             return this;
         }
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
@@ -184,7 +185,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Output.ofNullable(batchSize);
+            this.batchSize = Codegen.ofNullable(batchSize);
             return this;
         }
         public Builder bufferDuration(@Nullable Output<Integer> bufferDuration) {
@@ -192,7 +193,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder bufferDuration(@Nullable Integer bufferDuration) {
-            this.bufferDuration = Output.ofNullable(bufferDuration);
+            this.bufferDuration = Codegen.ofNullable(bufferDuration);
             return this;
         }
         public Builder datetimeFormat(@Nullable Output<String> datetimeFormat) {
@@ -200,7 +201,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder datetimeFormat(@Nullable String datetimeFormat) {
-            this.datetimeFormat = Output.ofNullable(datetimeFormat);
+            this.datetimeFormat = Codegen.ofNullable(datetimeFormat);
             return this;
         }
         public Builder encoding(@Nullable Output<String> encoding) {
@@ -208,7 +209,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder file(Output<String> file) {
@@ -224,7 +225,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder fileFingerprintLines(@Nullable String fileFingerprintLines) {
-            this.fileFingerprintLines = Output.ofNullable(fileFingerprintLines);
+            this.fileFingerprintLines = Codegen.ofNullable(fileFingerprintLines);
             return this;
         }
         public Builder initialPosition(@Nullable Output<String> initialPosition) {
@@ -232,7 +233,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder initialPosition(@Nullable String initialPosition) {
-            this.initialPosition = Output.ofNullable(initialPosition);
+            this.initialPosition = Codegen.ofNullable(initialPosition);
             return this;
         }
         public Builder logGroupName(Output<String> logGroupName) {
@@ -248,7 +249,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder multilineStartPattern(@Nullable String multilineStartPattern) {
-            this.multilineStartPattern = Output.ofNullable(multilineStartPattern);
+            this.multilineStartPattern = Codegen.ofNullable(multilineStartPattern);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -256,7 +257,7 @@ public final class GangliaLayerCloudwatchConfigurationLogStreamGetArgs extends i
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public GangliaLayerCloudwatchConfigurationLogStreamGetArgs build() {
             return new GangliaLayerCloudwatchConfigurationLogStreamGetArgs(batchCount, batchSize, bufferDuration, datetimeFormat, encoding, file, fileFingerprintLines, initialPosition, logGroupName, multilineStartPattern, timeZone);

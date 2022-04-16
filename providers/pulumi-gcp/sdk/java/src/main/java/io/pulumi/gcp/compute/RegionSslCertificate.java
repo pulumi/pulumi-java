@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionSslCertificateArgs;
 import io.pulumi.gcp.compute.inputs.RegionSslCertificateState;
@@ -69,7 +70,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -83,7 +84,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getCertificateId() {
+    public Output<Integer> certificateId() {
         return this.certificateId;
     }
     /**
@@ -97,7 +98,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -111,7 +112,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -137,7 +138,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -153,7 +154,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -169,7 +170,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -185,7 +186,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -201,7 +202,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -215,7 +216,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -241,7 +242,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionSslCertificate:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionSslCertificate:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionSslCertificate(String name, Output<String> id, @Nullable RegionSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

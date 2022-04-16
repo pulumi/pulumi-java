@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     @Import(name="consumerGroupName")
       private final @Nullable Output<String> consumerGroupName;
 
-    public Output<String> getConsumerGroupName() {
-        return this.consumerGroupName == null ? Output.empty() : this.consumerGroupName;
+    public Output<String> consumerGroupName() {
+        return this.consumerGroupName == null ? Codegen.empty() : this.consumerGroupName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<String> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     @Import(name="iotHubNamespace")
       private final @Nullable Output<String> iotHubNamespace;
 
-    public Output<String> getIotHubNamespace() {
-        return this.iotHubNamespace == null ? Output.empty() : this.iotHubNamespace;
+    public Output<String> iotHubNamespace() {
+        return this.iotHubNamespace == null ? Codegen.empty() : this.iotHubNamespace;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Output<String> getSharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Output.empty() : this.sharedAccessPolicyKey;
+    public Output<String> sharedAccessPolicyKey() {
+        return this.sharedAccessPolicyKey == null ? Codegen.empty() : this.sharedAccessPolicyKey;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Output<String> getSharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Output.empty() : this.sharedAccessPolicyName;
+    public Output<String> sharedAccessPolicyName() {
+        return this.sharedAccessPolicyName == null ? Codegen.empty() : this.sharedAccessPolicyName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -101,12 +102,12 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     }
 
     private IoTHubStreamInputDataSourceArgs() {
-        this.consumerGroupName = Output.empty();
-        this.endpoint = Output.empty();
-        this.iotHubNamespace = Output.empty();
-        this.sharedAccessPolicyKey = Output.empty();
-        this.sharedAccessPolicyName = Output.empty();
-        this.type = Output.empty();
+        this.consumerGroupName = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.iotHubNamespace = Codegen.empty();
+        this.sharedAccessPolicyKey = Codegen.empty();
+        this.sharedAccessPolicyName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder consumerGroupName(@Nullable String consumerGroupName) {
-            this.consumerGroupName = Output.ofNullable(consumerGroupName);
+            this.consumerGroupName = Codegen.ofNullable(consumerGroupName);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -152,7 +153,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder iotHubNamespace(@Nullable Output<String> iotHubNamespace) {
@@ -160,7 +161,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder iotHubNamespace(@Nullable String iotHubNamespace) {
-            this.iotHubNamespace = Output.ofNullable(iotHubNamespace);
+            this.iotHubNamespace = Codegen.ofNullable(iotHubNamespace);
             return this;
         }
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
@@ -168,7 +169,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
+            this.sharedAccessPolicyKey = Codegen.ofNullable(sharedAccessPolicyKey);
             return this;
         }
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
@@ -176,7 +177,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
+            this.sharedAccessPolicyName = Codegen.ofNullable(sharedAccessPolicyName);
             return this;
         }
         public Builder type(Output<String> type) {

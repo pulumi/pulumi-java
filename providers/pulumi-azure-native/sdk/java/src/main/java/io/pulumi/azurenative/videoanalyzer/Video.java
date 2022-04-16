@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return Optional video description provided by the user. Value can be up to 2048 characters long.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return Video flags contain information about the available video actions and its dynamic properties based on the current video state.
      * 
      */
-    public Output<VideoFlagsResponse> getFlags() {
+    public Output<VideoFlagsResponse> flags() {
         return this.flags;
     }
     /**
@@ -73,7 +74,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return Contains information about the video and audio content.
      * 
      */
-    public Output<VideoMediaInfoResponse> getMediaInfo() {
+    public Output<VideoMediaInfoResponse> mediaInfo() {
         return this.mediaInfo;
     }
     /**
@@ -87,7 +88,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return Video streaming holds information about video streaming URLs.
      * 
      */
-    public Output<VideoStreamingResponse> getStreaming() {
+    public Output<VideoStreamingResponse> streaming() {
         return this.streaming;
     }
     /**
@@ -115,7 +116,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +130,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return Optional video title provided by the user. Value can be up to 256 characters long.
      * 
      */
-    public Output</* @Nullable */ String> getTitle() {
+    public Output</* @Nullable */ String> title() {
         return this.title;
     }
     /**
@@ -143,7 +144,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -169,7 +170,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Video(String name, VideoArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:videoanalyzer:Video", name, args == null ? VideoArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:videoanalyzer:Video", name, args == null ? VideoArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Video(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

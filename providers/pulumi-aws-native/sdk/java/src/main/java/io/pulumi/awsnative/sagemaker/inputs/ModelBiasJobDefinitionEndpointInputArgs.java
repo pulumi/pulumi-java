@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS3
 import io.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS3InputMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,14 +29,14 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
-    public Output<String> getEndTimeOffset() {
-        return this.endTimeOffset == null ? Output.empty() : this.endTimeOffset;
+    public Output<String> endTimeOffset() {
+        return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
     }
 
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -46,8 +47,8 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="featuresAttribute")
       private final @Nullable Output<String> featuresAttribute;
 
-    public Output<String> getFeaturesAttribute() {
-        return this.featuresAttribute == null ? Output.empty() : this.featuresAttribute;
+    public Output<String> featuresAttribute() {
+        return this.featuresAttribute == null ? Codegen.empty() : this.featuresAttribute;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="inferenceAttribute")
       private final @Nullable Output<String> inferenceAttribute;
 
-    public Output<String> getInferenceAttribute() {
-        return this.inferenceAttribute == null ? Output.empty() : this.inferenceAttribute;
+    public Output<String> inferenceAttribute() {
+        return this.inferenceAttribute == null ? Codegen.empty() : this.inferenceAttribute;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath;
     }
 
@@ -79,15 +80,15 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="probabilityAttribute")
       private final @Nullable Output<String> probabilityAttribute;
 
-    public Output<String> getProbabilityAttribute() {
-        return this.probabilityAttribute == null ? Output.empty() : this.probabilityAttribute;
+    public Output<String> probabilityAttribute() {
+        return this.probabilityAttribute == null ? Codegen.empty() : this.probabilityAttribute;
     }
 
     @Import(name="probabilityThresholdAttribute")
       private final @Nullable Output<Double> probabilityThresholdAttribute;
 
-    public Output<Double> getProbabilityThresholdAttribute() {
-        return this.probabilityThresholdAttribute == null ? Output.empty() : this.probabilityThresholdAttribute;
+    public Output<Double> probabilityThresholdAttribute() {
+        return this.probabilityThresholdAttribute == null ? Codegen.empty() : this.probabilityThresholdAttribute;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="s3DataDistributionType")
       private final @Nullable Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
-    public Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
-        return this.s3DataDistributionType == null ? Output.empty() : this.s3DataDistributionType;
+    public Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType() {
+        return this.s3DataDistributionType == null ? Codegen.empty() : this.s3DataDistributionType;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="s3InputMode")
       private final @Nullable Output<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
-    public Output<ModelBiasJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
-        return this.s3InputMode == null ? Output.empty() : this.s3InputMode;
+    public Output<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode() {
+        return this.s3InputMode == null ? Codegen.empty() : this.s3InputMode;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
-    public Output<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
+    public Output<String> startTimeOffset() {
+        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
     }
 
     public ModelBiasJobDefinitionEndpointInputArgs(
@@ -147,16 +148,16 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     }
 
     private ModelBiasJobDefinitionEndpointInputArgs() {
-        this.endTimeOffset = Output.empty();
-        this.endpointName = Output.empty();
-        this.featuresAttribute = Output.empty();
-        this.inferenceAttribute = Output.empty();
-        this.localPath = Output.empty();
-        this.probabilityAttribute = Output.empty();
-        this.probabilityThresholdAttribute = Output.empty();
-        this.s3DataDistributionType = Output.empty();
-        this.s3InputMode = Output.empty();
-        this.startTimeOffset = Output.empty();
+        this.endTimeOffset = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.featuresAttribute = Codegen.empty();
+        this.inferenceAttribute = Codegen.empty();
+        this.localPath = Codegen.empty();
+        this.probabilityAttribute = Codegen.empty();
+        this.probabilityThresholdAttribute = Codegen.empty();
+        this.s3DataDistributionType = Codegen.empty();
+        this.s3InputMode = Codegen.empty();
+        this.startTimeOffset = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Output.ofNullable(endTimeOffset);
+            this.endTimeOffset = Codegen.ofNullable(endTimeOffset);
             return this;
         }
         public Builder endpointName(Output<String> endpointName) {
@@ -218,7 +219,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder featuresAttribute(@Nullable String featuresAttribute) {
-            this.featuresAttribute = Output.ofNullable(featuresAttribute);
+            this.featuresAttribute = Codegen.ofNullable(featuresAttribute);
             return this;
         }
         public Builder inferenceAttribute(@Nullable Output<String> inferenceAttribute) {
@@ -226,7 +227,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
-            this.inferenceAttribute = Output.ofNullable(inferenceAttribute);
+            this.inferenceAttribute = Codegen.ofNullable(inferenceAttribute);
             return this;
         }
         public Builder localPath(Output<String> localPath) {
@@ -242,7 +243,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
-            this.probabilityAttribute = Output.ofNullable(probabilityAttribute);
+            this.probabilityAttribute = Codegen.ofNullable(probabilityAttribute);
             return this;
         }
         public Builder probabilityThresholdAttribute(@Nullable Output<Double> probabilityThresholdAttribute) {
@@ -250,7 +251,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder probabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
-            this.probabilityThresholdAttribute = Output.ofNullable(probabilityThresholdAttribute);
+            this.probabilityThresholdAttribute = Codegen.ofNullable(probabilityThresholdAttribute);
             return this;
         }
         public Builder s3DataDistributionType(@Nullable Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
@@ -258,7 +259,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder s3DataDistributionType(@Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
-            this.s3DataDistributionType = Output.ofNullable(s3DataDistributionType);
+            this.s3DataDistributionType = Codegen.ofNullable(s3DataDistributionType);
             return this;
         }
         public Builder s3InputMode(@Nullable Output<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode) {
@@ -266,7 +267,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder s3InputMode(@Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode) {
-            this.s3InputMode = Output.ofNullable(s3InputMode);
+            this.s3InputMode = Codegen.ofNullable(s3InputMode);
             return this;
         }
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
@@ -274,7 +275,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
             return this;
         }
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Output.ofNullable(startTimeOffset);
+            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
             return this;
         }        public ModelBiasJobDefinitionEndpointInputArgs build() {
             return new ModelBiasJobDefinitionEndpointInputArgs(endTimeOffset, endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, probabilityThresholdAttribute, s3DataDistributionType, s3InputMode, startTimeOffset);

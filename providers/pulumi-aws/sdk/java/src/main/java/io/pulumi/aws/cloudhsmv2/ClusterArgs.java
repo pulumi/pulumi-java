@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudhsmv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmType", required=true)
       private final Output<String> hsmType;
 
-    public Output<String> getHsmType() {
+    public Output<String> hsmType() {
         return this.hsmType;
     }
 
@@ -34,8 +35,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceBackupIdentifier")
       private final @Nullable Output<String> sourceBackupIdentifier;
 
-    public Output<String> getSourceBackupIdentifier() {
-        return this.sourceBackupIdentifier == null ? Output.empty() : this.sourceBackupIdentifier;
+    public Output<String> sourceBackupIdentifier() {
+        return this.sourceBackupIdentifier == null ? Codegen.empty() : this.sourceBackupIdentifier;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -56,8 +57,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterArgs(
@@ -72,10 +73,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.hsmType = Output.empty();
-        this.sourceBackupIdentifier = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
+        this.hsmType = Codegen.empty();
+        this.sourceBackupIdentifier = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
-            this.sourceBackupIdentifier = Output.ofNullable(sourceBackupIdentifier);
+            this.sourceBackupIdentifier = Codegen.ofNullable(sourceBackupIdentifier);
             return this;
         }
         public Builder subnetIds(Output<List<String>> subnetIds) {
@@ -136,7 +137,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(hsmType, sourceBackupIdentifier, subnetIds, tags);

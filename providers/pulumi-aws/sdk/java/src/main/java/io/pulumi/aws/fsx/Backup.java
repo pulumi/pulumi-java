@@ -9,6 +9,7 @@ import io.pulumi.aws.fsx.inputs.BackupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name of the backup.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +61,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The ID of the file system to back up. Required if backing up Lustre or Windows file systems.
      * 
      */
-    public Output</* @Nullable */ String> getFileSystemId() {
+    public Output</* @Nullable */ String> fileSystemId() {
         return this.fileSystemId;
     }
     /**
@@ -74,7 +75,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's data at rest.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -88,7 +89,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return AWS account identifier that created the file system.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -102,7 +103,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -116,7 +117,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -130,7 +131,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The type of the file system backup.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -144,7 +145,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The ID of the volume to back up. Required if backing up a ONTAP Volume.
      * 
      */
-    public Output</* @Nullable */ String> getVolumeId() {
+    public Output</* @Nullable */ String> volumeId() {
         return this.volumeId;
     }
 
@@ -170,7 +171,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backup(String name, @Nullable BackupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/backup:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:fsx/backup:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Backup(String name, Output<String> id, @Nullable BackupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

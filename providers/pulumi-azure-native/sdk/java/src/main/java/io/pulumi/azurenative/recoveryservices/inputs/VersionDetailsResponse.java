@@ -25,7 +25,7 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="expiryDate")
       private final @Nullable String expiryDate;
 
-    public Optional<String> getExpiryDate() {
+    public Optional<String> expiryDate() {
         return this.expiryDate == null ? Optional.empty() : Optional.ofNullable(this.expiryDate);
     }
 
@@ -36,7 +36,7 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -47,7 +47,7 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

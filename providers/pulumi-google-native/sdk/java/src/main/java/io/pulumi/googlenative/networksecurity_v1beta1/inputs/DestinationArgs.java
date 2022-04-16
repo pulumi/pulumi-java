@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.HttpHeaderMatchArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hosts", required=true)
       private final Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts;
     }
 
@@ -39,8 +40,8 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpHeaderMatch")
       private final @Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch;
 
-    public Output<HttpHeaderMatchArgs> getHttpHeaderMatch() {
-        return this.httpHeaderMatch == null ? Output.empty() : this.httpHeaderMatch;
+    public Output<HttpHeaderMatchArgs> httpHeaderMatch() {
+        return this.httpHeaderMatch == null ? Codegen.empty() : this.httpHeaderMatch;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> getMethods() {
-        return this.methods == null ? Output.empty() : this.methods;
+    public Output<List<String>> methods() {
+        return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports", required=true)
       private final Output<List<Integer>> ports;
 
-    public Output<List<Integer>> getPorts() {
+    public Output<List<Integer>> ports() {
         return this.ports;
     }
 
@@ -77,10 +78,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DestinationArgs() {
-        this.hosts = Output.empty();
-        this.httpHeaderMatch = Output.empty();
-        this.methods = Output.empty();
-        this.ports = Output.empty();
+        this.hosts = Codegen.empty();
+        this.httpHeaderMatch = Codegen.empty();
+        this.methods = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpHeaderMatch(@Nullable HttpHeaderMatchArgs httpHeaderMatch) {
-            this.httpHeaderMatch = Output.ofNullable(httpHeaderMatch);
+            this.httpHeaderMatch = Codegen.ofNullable(httpHeaderMatch);
             return this;
         }
         public Builder methods(@Nullable Output<List<String>> methods) {
@@ -133,7 +134,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Output.ofNullable(methods);
+            this.methods = Codegen.ofNullable(methods);
             return this;
         }
         public Builder methods(String... methods) {

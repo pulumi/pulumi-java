@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
     @Import(name="originalRouteTableId")
       private final @Nullable Output<String> originalRouteTableId;
 
-    public Output<String> getOriginalRouteTableId() {
-        return this.originalRouteTableId == null ? Output.empty() : this.originalRouteTableId;
+    public Output<String> originalRouteTableId() {
+        return this.originalRouteTableId == null ? Codegen.empty() : this.originalRouteTableId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
     @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
-        return this.routeTableId == null ? Output.empty() : this.routeTableId;
+    public Output<String> routeTableId() {
+        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public MainRouteTableAssociationState(
@@ -58,9 +59,9 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
     }
 
     private MainRouteTableAssociationState() {
-        this.originalRouteTableId = Output.empty();
-        this.routeTableId = Output.empty();
-        this.vpcId = Output.empty();
+        this.originalRouteTableId = Codegen.empty();
+        this.routeTableId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder originalRouteTableId(@Nullable String originalRouteTableId) {
-            this.originalRouteTableId = Output.ofNullable(originalRouteTableId);
+            this.originalRouteTableId = Codegen.ofNullable(originalRouteTableId);
             return this;
         }
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
@@ -100,7 +101,7 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Output.ofNullable(routeTableId);
+            this.routeTableId = Codegen.ofNullable(routeTableId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -108,7 +109,7 @@ public final class MainRouteTableAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public MainRouteTableAssociationState build() {
             return new MainRouteTableAssociationState(originalRouteTableId, routeTableId, vpcId);

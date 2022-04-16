@@ -9,6 +9,7 @@ import io.pulumi.aws.cfg.inputs.RecorderStatusState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class RecorderStatus extends io.pulumi.resources.CustomResource {
      * @return Whether the configuration recorder should be enabled or disabled.
      * 
      */
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -56,7 +57,7 @@ public class RecorderStatus extends io.pulumi.resources.CustomResource {
      * @return The name of the recorder
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -82,7 +83,7 @@ public class RecorderStatus extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RecorderStatus(String name, RecorderStatusArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/recorderStatus:RecorderStatus", name, args == null ? RecorderStatusArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/recorderStatus:RecorderStatus", name, args == null ? RecorderStatusArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RecorderStatus(String name, Output<String> id, @Nullable RecorderStatusState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

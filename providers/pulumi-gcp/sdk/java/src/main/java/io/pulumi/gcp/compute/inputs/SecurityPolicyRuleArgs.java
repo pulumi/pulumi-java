@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsArgs;
 import java.lang.Boolean;
@@ -29,7 +30,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -40,8 +41,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="match", required=true)
       private final Output<SecurityPolicyRuleMatchArgs> match;
 
-    public Output<SecurityPolicyRuleMatchArgs> getMatch() {
+    public Output<SecurityPolicyRuleMatchArgs> match() {
         return this.match;
     }
 
@@ -64,8 +65,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> getPreview() {
-        return this.preview == null ? Output.empty() : this.preview;
+    public Output<Boolean> preview() {
+        return this.preview == null ? Codegen.empty() : this.preview;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -88,8 +89,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rateLimitOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
-        return this.rateLimitOptions == null ? Output.empty() : this.rateLimitOptions;
+    public Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions() {
+        return this.rateLimitOptions == null ? Codegen.empty() : this.rateLimitOptions;
     }
 
     public SecurityPolicyRuleArgs(
@@ -108,12 +109,12 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SecurityPolicyRuleArgs() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.match = Output.empty();
-        this.preview = Output.empty();
-        this.priority = Output.empty();
-        this.rateLimitOptions = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.match = Codegen.empty();
+        this.preview = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.rateLimitOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder match(Output<SecurityPolicyRuleMatchArgs> match) {
@@ -175,7 +176,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Output.ofNullable(preview);
+            this.preview = Codegen.ofNullable(preview);
             return this;
         }
         public Builder priority(Output<Integer> priority) {
@@ -191,7 +192,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
-            this.rateLimitOptions = Output.ofNullable(rateLimitOptions);
+            this.rateLimitOptions = Codegen.ofNullable(rateLimitOptions);
             return this;
         }        public SecurityPolicyRuleArgs build() {
             return new SecurityPolicyRuleArgs(action, description, match, preview, priority, rateLimitOptions);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.search.inputs;
 import io.pulumi.azurenative.search.inputs.IpRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipRules")
       private final @Nullable Output<List<IpRuleArgs>> ipRules;
 
-    public Output<List<IpRuleArgs>> getIpRules() {
-        return this.ipRules == null ? Output.empty() : this.ipRules;
+    public Output<List<IpRuleArgs>> ipRules() {
+        return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
     public NetworkRuleSetArgs(@Nullable Output<List<IpRuleArgs>> ipRules) {
@@ -35,7 +36,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkRuleSetArgs() {
-        this.ipRules = Output.empty();
+        this.ipRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipRules(@Nullable List<IpRuleArgs> ipRules) {
-            this.ipRules = Output.ofNullable(ipRules);
+            this.ipRules = Codegen.ofNullable(ipRules);
             return this;
         }
         public Builder ipRules(IpRuleArgs... ipRules) {

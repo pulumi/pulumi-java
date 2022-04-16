@@ -7,6 +7,7 @@ import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationValuesRuntime
 import io.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePairArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
     @Import(name="buildCommand")
       private final @Nullable Output<String> buildCommand;
 
-    public Output<String> getBuildCommand() {
-        return this.buildCommand == null ? Output.empty() : this.buildCommand;
+    public Output<String> buildCommand() {
+        return this.buildCommand == null ? Codegen.empty() : this.buildCommand;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<String> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -50,15 +51,15 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
     @Import(name="runtime", required=true)
       private final Output<ServiceCodeConfigurationValuesRuntime> runtime;
 
-    public Output<ServiceCodeConfigurationValuesRuntime> getRuntime() {
+    public Output<ServiceCodeConfigurationValuesRuntime> runtime() {
         return this.runtime;
     }
 
     @Import(name="runtimeEnvironmentVariables")
       private final @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
 
-    public Output<List<ServiceKeyValuePairArgs>> getRuntimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? Output.empty() : this.runtimeEnvironmentVariables;
+    public Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables() {
+        return this.runtimeEnvironmentVariables == null ? Codegen.empty() : this.runtimeEnvironmentVariables;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
     @Import(name="startCommand")
       private final @Nullable Output<String> startCommand;
 
-    public Output<String> getStartCommand() {
-        return this.startCommand == null ? Output.empty() : this.startCommand;
+    public Output<String> startCommand() {
+        return this.startCommand == null ? Codegen.empty() : this.startCommand;
     }
 
     public ServiceCodeConfigurationValuesArgs(
@@ -86,11 +87,11 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
     }
 
     private ServiceCodeConfigurationValuesArgs() {
-        this.buildCommand = Output.empty();
-        this.port = Output.empty();
-        this.runtime = Output.empty();
-        this.runtimeEnvironmentVariables = Output.empty();
-        this.startCommand = Output.empty();
+        this.buildCommand = Codegen.empty();
+        this.port = Codegen.empty();
+        this.runtime = Codegen.empty();
+        this.runtimeEnvironmentVariables = Codegen.empty();
+        this.startCommand = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
             return this;
         }
         public Builder buildCommand(@Nullable String buildCommand) {
-            this.buildCommand = Output.ofNullable(buildCommand);
+            this.buildCommand = Codegen.ofNullable(buildCommand);
             return this;
         }
         public Builder port(@Nullable Output<String> port) {
@@ -134,7 +135,7 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder runtime(Output<ServiceCodeConfigurationValuesRuntime> runtime) {
@@ -150,7 +151,7 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
             return this;
         }
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
+            this.runtimeEnvironmentVariables = Codegen.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
         public Builder runtimeEnvironmentVariables(ServiceKeyValuePairArgs... runtimeEnvironmentVariables) {
@@ -161,7 +162,7 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
             return this;
         }
         public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = Output.ofNullable(startCommand);
+            this.startCommand = Codegen.ofNullable(startCommand);
             return this;
         }        public ServiceCodeConfigurationValuesArgs build() {
             return new ServiceCodeConfigurationValuesArgs(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);

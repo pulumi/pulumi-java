@@ -6,6 +6,7 @@ package io.pulumi.aws.opsworks;
 import io.pulumi.aws.opsworks.inputs.StackCustomCookbooksSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
-        return this.agentVersion == null ? Output.empty() : this.agentVersion;
+    public Output<String> agentVersion() {
+        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="berkshelfVersion")
       private final @Nullable Output<String> berkshelfVersion;
 
-    public Output<String> getBerkshelfVersion() {
-        return this.berkshelfVersion == null ? Output.empty() : this.berkshelfVersion;
+    public Output<String> berkshelfVersion() {
+        return this.berkshelfVersion == null ? Codegen.empty() : this.berkshelfVersion;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="color")
       private final @Nullable Output<String> color;
 
-    public Output<String> getColor() {
-        return this.color == null ? Output.empty() : this.color;
+    public Output<String> color() {
+        return this.color == null ? Codegen.empty() : this.color;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationManagerName")
       private final @Nullable Output<String> configurationManagerName;
 
-    public Output<String> getConfigurationManagerName() {
-        return this.configurationManagerName == null ? Output.empty() : this.configurationManagerName;
+    public Output<String> configurationManagerName() {
+        return this.configurationManagerName == null ? Codegen.empty() : this.configurationManagerName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationManagerVersion")
       private final @Nullable Output<String> configurationManagerVersion;
 
-    public Output<String> getConfigurationManagerVersion() {
-        return this.configurationManagerVersion == null ? Output.empty() : this.configurationManagerVersion;
+    public Output<String> configurationManagerVersion() {
+        return this.configurationManagerVersion == null ? Codegen.empty() : this.configurationManagerVersion;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customCookbooksSources")
       private final @Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources;
 
-    public Output<List<StackCustomCookbooksSourceArgs>> getCustomCookbooksSources() {
-        return this.customCookbooksSources == null ? Output.empty() : this.customCookbooksSources;
+    public Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources() {
+        return this.customCookbooksSources == null ? Codegen.empty() : this.customCookbooksSources;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customJson")
       private final @Nullable Output<String> customJson;
 
-    public Output<String> getCustomJson() {
-        return this.customJson == null ? Output.empty() : this.customJson;
+    public Output<String> customJson() {
+        return this.customJson == null ? Codegen.empty() : this.customJson;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAvailabilityZone")
       private final @Nullable Output<String> defaultAvailabilityZone;
 
-    public Output<String> getDefaultAvailabilityZone() {
-        return this.defaultAvailabilityZone == null ? Output.empty() : this.defaultAvailabilityZone;
+    public Output<String> defaultAvailabilityZone() {
+        return this.defaultAvailabilityZone == null ? Codegen.empty() : this.defaultAvailabilityZone;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultInstanceProfileArn", required=true)
       private final Output<String> defaultInstanceProfileArn;
 
-    public Output<String> getDefaultInstanceProfileArn() {
+    public Output<String> defaultInstanceProfileArn() {
         return this.defaultInstanceProfileArn;
     }
 
@@ -127,8 +128,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultOs")
       private final @Nullable Output<String> defaultOs;
 
-    public Output<String> getDefaultOs() {
-        return this.defaultOs == null ? Output.empty() : this.defaultOs;
+    public Output<String> defaultOs() {
+        return this.defaultOs == null ? Codegen.empty() : this.defaultOs;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRootDeviceType")
       private final @Nullable Output<String> defaultRootDeviceType;
 
-    public Output<String> getDefaultRootDeviceType() {
-        return this.defaultRootDeviceType == null ? Output.empty() : this.defaultRootDeviceType;
+    public Output<String> defaultRootDeviceType() {
+        return this.defaultRootDeviceType == null ? Codegen.empty() : this.defaultRootDeviceType;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSshKeyName")
       private final @Nullable Output<String> defaultSshKeyName;
 
-    public Output<String> getDefaultSshKeyName() {
-        return this.defaultSshKeyName == null ? Output.empty() : this.defaultSshKeyName;
+    public Output<String> defaultSshKeyName() {
+        return this.defaultSshKeyName == null ? Codegen.empty() : this.defaultSshKeyName;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSubnetId")
       private final @Nullable Output<String> defaultSubnetId;
 
-    public Output<String> getDefaultSubnetId() {
-        return this.defaultSubnetId == null ? Output.empty() : this.defaultSubnetId;
+    public Output<String> defaultSubnetId() {
+        return this.defaultSubnetId == null ? Codegen.empty() : this.defaultSubnetId;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostnameTheme")
       private final @Nullable Output<String> hostnameTheme;
 
-    public Output<String> getHostnameTheme() {
-        return this.hostnameTheme == null ? Output.empty() : this.hostnameTheme;
+    public Output<String> hostnameTheme() {
+        return this.hostnameTheme == null ? Codegen.empty() : this.hostnameTheme;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manageBerkshelf")
       private final @Nullable Output<Boolean> manageBerkshelf;
 
-    public Output<Boolean> getManageBerkshelf() {
-        return this.manageBerkshelf == null ? Output.empty() : this.manageBerkshelf;
+    public Output<Boolean> manageBerkshelf() {
+        return this.manageBerkshelf == null ? Codegen.empty() : this.manageBerkshelf;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -206,7 +207,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -217,7 +218,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRoleArn", required=true)
       private final Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
 
@@ -228,8 +229,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -240,8 +241,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useCustomCookbooks")
       private final @Nullable Output<Boolean> useCustomCookbooks;
 
-    public Output<Boolean> getUseCustomCookbooks() {
-        return this.useCustomCookbooks == null ? Output.empty() : this.useCustomCookbooks;
+    public Output<Boolean> useCustomCookbooks() {
+        return this.useCustomCookbooks == null ? Codegen.empty() : this.useCustomCookbooks;
     }
 
     /**
@@ -252,8 +253,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useOpsworksSecurityGroups")
       private final @Nullable Output<Boolean> useOpsworksSecurityGroups;
 
-    public Output<Boolean> getUseOpsworksSecurityGroups() {
-        return this.useOpsworksSecurityGroups == null ? Output.empty() : this.useOpsworksSecurityGroups;
+    public Output<Boolean> useOpsworksSecurityGroups() {
+        return this.useOpsworksSecurityGroups == null ? Codegen.empty() : this.useOpsworksSecurityGroups;
     }
 
     /**
@@ -263,8 +264,8 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public StackArgs(
@@ -315,28 +316,28 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackArgs() {
-        this.agentVersion = Output.empty();
-        this.berkshelfVersion = Output.empty();
-        this.color = Output.empty();
-        this.configurationManagerName = Output.empty();
-        this.configurationManagerVersion = Output.empty();
-        this.customCookbooksSources = Output.empty();
-        this.customJson = Output.empty();
-        this.defaultAvailabilityZone = Output.empty();
-        this.defaultInstanceProfileArn = Output.empty();
-        this.defaultOs = Output.empty();
-        this.defaultRootDeviceType = Output.empty();
-        this.defaultSshKeyName = Output.empty();
-        this.defaultSubnetId = Output.empty();
-        this.hostnameTheme = Output.empty();
-        this.manageBerkshelf = Output.empty();
-        this.name = Output.empty();
-        this.region = Output.empty();
-        this.serviceRoleArn = Output.empty();
-        this.tags = Output.empty();
-        this.useCustomCookbooks = Output.empty();
-        this.useOpsworksSecurityGroups = Output.empty();
-        this.vpcId = Output.empty();
+        this.agentVersion = Codegen.empty();
+        this.berkshelfVersion = Codegen.empty();
+        this.color = Codegen.empty();
+        this.configurationManagerName = Codegen.empty();
+        this.configurationManagerVersion = Codegen.empty();
+        this.customCookbooksSources = Codegen.empty();
+        this.customJson = Codegen.empty();
+        this.defaultAvailabilityZone = Codegen.empty();
+        this.defaultInstanceProfileArn = Codegen.empty();
+        this.defaultOs = Codegen.empty();
+        this.defaultRootDeviceType = Codegen.empty();
+        this.defaultSshKeyName = Codegen.empty();
+        this.defaultSubnetId = Codegen.empty();
+        this.hostnameTheme = Codegen.empty();
+        this.manageBerkshelf = Codegen.empty();
+        this.name = Codegen.empty();
+        this.region = Codegen.empty();
+        this.serviceRoleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.useCustomCookbooks = Codegen.empty();
+        this.useOpsworksSecurityGroups = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -406,7 +407,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Output.ofNullable(agentVersion);
+            this.agentVersion = Codegen.ofNullable(agentVersion);
             return this;
         }
         public Builder berkshelfVersion(@Nullable Output<String> berkshelfVersion) {
@@ -414,7 +415,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder berkshelfVersion(@Nullable String berkshelfVersion) {
-            this.berkshelfVersion = Output.ofNullable(berkshelfVersion);
+            this.berkshelfVersion = Codegen.ofNullable(berkshelfVersion);
             return this;
         }
         public Builder color(@Nullable Output<String> color) {
@@ -422,7 +423,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder color(@Nullable String color) {
-            this.color = Output.ofNullable(color);
+            this.color = Codegen.ofNullable(color);
             return this;
         }
         public Builder configurationManagerName(@Nullable Output<String> configurationManagerName) {
@@ -430,7 +431,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationManagerName(@Nullable String configurationManagerName) {
-            this.configurationManagerName = Output.ofNullable(configurationManagerName);
+            this.configurationManagerName = Codegen.ofNullable(configurationManagerName);
             return this;
         }
         public Builder configurationManagerVersion(@Nullable Output<String> configurationManagerVersion) {
@@ -438,7 +439,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationManagerVersion(@Nullable String configurationManagerVersion) {
-            this.configurationManagerVersion = Output.ofNullable(configurationManagerVersion);
+            this.configurationManagerVersion = Codegen.ofNullable(configurationManagerVersion);
             return this;
         }
         public Builder customCookbooksSources(@Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources) {
@@ -446,7 +447,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customCookbooksSources(@Nullable List<StackCustomCookbooksSourceArgs> customCookbooksSources) {
-            this.customCookbooksSources = Output.ofNullable(customCookbooksSources);
+            this.customCookbooksSources = Codegen.ofNullable(customCookbooksSources);
             return this;
         }
         public Builder customCookbooksSources(StackCustomCookbooksSourceArgs... customCookbooksSources) {
@@ -457,7 +458,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customJson(@Nullable String customJson) {
-            this.customJson = Output.ofNullable(customJson);
+            this.customJson = Codegen.ofNullable(customJson);
             return this;
         }
         public Builder defaultAvailabilityZone(@Nullable Output<String> defaultAvailabilityZone) {
@@ -465,7 +466,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultAvailabilityZone(@Nullable String defaultAvailabilityZone) {
-            this.defaultAvailabilityZone = Output.ofNullable(defaultAvailabilityZone);
+            this.defaultAvailabilityZone = Codegen.ofNullable(defaultAvailabilityZone);
             return this;
         }
         public Builder defaultInstanceProfileArn(Output<String> defaultInstanceProfileArn) {
@@ -481,7 +482,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultOs(@Nullable String defaultOs) {
-            this.defaultOs = Output.ofNullable(defaultOs);
+            this.defaultOs = Codegen.ofNullable(defaultOs);
             return this;
         }
         public Builder defaultRootDeviceType(@Nullable Output<String> defaultRootDeviceType) {
@@ -489,7 +490,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRootDeviceType(@Nullable String defaultRootDeviceType) {
-            this.defaultRootDeviceType = Output.ofNullable(defaultRootDeviceType);
+            this.defaultRootDeviceType = Codegen.ofNullable(defaultRootDeviceType);
             return this;
         }
         public Builder defaultSshKeyName(@Nullable Output<String> defaultSshKeyName) {
@@ -497,7 +498,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultSshKeyName(@Nullable String defaultSshKeyName) {
-            this.defaultSshKeyName = Output.ofNullable(defaultSshKeyName);
+            this.defaultSshKeyName = Codegen.ofNullable(defaultSshKeyName);
             return this;
         }
         public Builder defaultSubnetId(@Nullable Output<String> defaultSubnetId) {
@@ -505,7 +506,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultSubnetId(@Nullable String defaultSubnetId) {
-            this.defaultSubnetId = Output.ofNullable(defaultSubnetId);
+            this.defaultSubnetId = Codegen.ofNullable(defaultSubnetId);
             return this;
         }
         public Builder hostnameTheme(@Nullable Output<String> hostnameTheme) {
@@ -513,7 +514,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostnameTheme(@Nullable String hostnameTheme) {
-            this.hostnameTheme = Output.ofNullable(hostnameTheme);
+            this.hostnameTheme = Codegen.ofNullable(hostnameTheme);
             return this;
         }
         public Builder manageBerkshelf(@Nullable Output<Boolean> manageBerkshelf) {
@@ -521,7 +522,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manageBerkshelf(@Nullable Boolean manageBerkshelf) {
-            this.manageBerkshelf = Output.ofNullable(manageBerkshelf);
+            this.manageBerkshelf = Codegen.ofNullable(manageBerkshelf);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -529,7 +530,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -553,7 +554,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder useCustomCookbooks(@Nullable Output<Boolean> useCustomCookbooks) {
@@ -561,7 +562,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useCustomCookbooks(@Nullable Boolean useCustomCookbooks) {
-            this.useCustomCookbooks = Output.ofNullable(useCustomCookbooks);
+            this.useCustomCookbooks = Codegen.ofNullable(useCustomCookbooks);
             return this;
         }
         public Builder useOpsworksSecurityGroups(@Nullable Output<Boolean> useOpsworksSecurityGroups) {
@@ -569,7 +570,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useOpsworksSecurityGroups(@Nullable Boolean useOpsworksSecurityGroups) {
-            this.useOpsworksSecurityGroups = Output.ofNullable(useOpsworksSecurityGroups);
+            this.useOpsworksSecurityGroups = Codegen.ofNullable(useOpsworksSecurityGroups);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -577,7 +578,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public StackArgs build() {
             return new StackArgs(agentVersion, berkshelfVersion, color, configurationManagerName, configurationManagerVersion, customCookbooksSources, customJson, defaultAvailabilityZone, defaultInstanceProfileArn, defaultOs, defaultRootDeviceType, defaultSshKeyName, defaultSubnetId, hostnameTheme, manageBerkshelf, name, region, serviceRoleArn, tags, useCustomCookbooks, useOpsworksSecurityGroups, vpcId);

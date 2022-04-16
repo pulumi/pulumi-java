@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.DataMaskingState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataMaskingPolicyName")
       private final @Nullable Output<String> dataMaskingPolicyName;
 
-    public Output<String> getDataMaskingPolicyName() {
-        return this.dataMaskingPolicyName == null ? Output.empty() : this.dataMaskingPolicyName;
+    public Output<String> dataMaskingPolicyName() {
+        return this.dataMaskingPolicyName == null ? Codegen.empty() : this.dataMaskingPolicyName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataMaskingState", required=true)
       private final Output<DataMaskingState> dataMaskingState;
 
-    public Output<DataMaskingState> getDataMaskingState() {
+    public Output<DataMaskingState> dataMaskingState() {
         return this.dataMaskingState;
     }
 
@@ -44,7 +45,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -55,8 +56,8 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="exemptPrincipals")
       private final @Nullable Output<String> exemptPrincipals;
 
-    public Output<String> getExemptPrincipals() {
-        return this.exemptPrincipals == null ? Output.empty() : this.exemptPrincipals;
+    public Output<String> exemptPrincipals() {
+        return this.exemptPrincipals == null ? Codegen.empty() : this.exemptPrincipals;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -97,12 +98,12 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataMaskingPolicyArgs() {
-        this.dataMaskingPolicyName = Output.empty();
-        this.dataMaskingState = Output.empty();
-        this.databaseName = Output.empty();
-        this.exemptPrincipals = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.dataMaskingPolicyName = Codegen.empty();
+        this.dataMaskingState = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.exemptPrincipals = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataMaskingPolicyName(@Nullable String dataMaskingPolicyName) {
-            this.dataMaskingPolicyName = Output.ofNullable(dataMaskingPolicyName);
+            this.dataMaskingPolicyName = Codegen.ofNullable(dataMaskingPolicyName);
             return this;
         }
         public Builder dataMaskingState(Output<DataMaskingState> dataMaskingState) {
@@ -164,7 +165,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder exemptPrincipals(@Nullable String exemptPrincipals) {
-            this.exemptPrincipals = Output.ofNullable(exemptPrincipals);
+            this.exemptPrincipals = Codegen.ofNullable(exemptPrincipals);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

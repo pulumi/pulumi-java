@@ -9,6 +9,7 @@ import io.pulumi.awsnative.route53recoveryreadiness.outputs.CellTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the cell.
      * 
      */
-    public Output<String> getCellArn() {
+    public Output<String> cellArn() {
         return this.cellArn;
     }
     /**
@@ -44,7 +45,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * @return The name of the cell to create.
      * 
      */
-    public Output<String> getCellName() {
+    public Output<String> cellName() {
         return this.cellName;
     }
     /**
@@ -58,7 +59,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * @return A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCells() {
+    public Output</* @Nullable */ List<String>> cells() {
         return this.cells;
     }
     /**
@@ -72,7 +73,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * @return The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is a list but currently can have only one element.
      * 
      */
-    public Output<List<String>> getParentReadinessScopes() {
+    public Output<List<String>> parentReadinessScopes() {
         return this.parentReadinessScopes;
     }
     /**
@@ -86,7 +87,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<CellTag>> getTags() {
+    public Output</* @Nullable */ List<CellTag>> tags() {
         return this.tags;
     }
 
@@ -112,7 +113,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cell(String name, @Nullable CellArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoveryreadiness:Cell", name, args == null ? CellArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoveryreadiness:Cell", name, args == null ? CellArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cell(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

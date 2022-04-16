@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluateTargetHealth", required=true)
       private final Output<Boolean> evaluateTargetHealth;
 
-    public Output<Boolean> getEvaluateTargetHealth() {
+    public Output<Boolean> evaluateTargetHealth() {
         return this.evaluateTargetHealth;
     }
 
@@ -32,7 +33,7 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -43,7 +44,7 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 
@@ -57,9 +58,9 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecordAliasArgs() {
-        this.evaluateTargetHealth = Output.empty();
-        this.name = Output.empty();
-        this.zoneId = Output.empty();
+        this.evaluateTargetHealth = Codegen.empty();
+        this.name = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {

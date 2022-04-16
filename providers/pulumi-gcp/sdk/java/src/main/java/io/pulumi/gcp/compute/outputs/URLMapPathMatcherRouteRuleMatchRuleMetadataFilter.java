@@ -46,7 +46,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      * Structure is documented below.
      * 
     */
-    public List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> getFilterLabels() {
+    public List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
     /**
@@ -59,7 +59,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
      * 
     */
-    public String getFilterMatchCriteria() {
+    public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
       private final Output<List<String>> resourceUri;
 
-    public Output<List<String>> getResourceUri() {
+    public Output<List<String>> resourceUri() {
         return this.resourceUri;
     }
 
@@ -34,7 +35,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeployableArgs() {
-        this.resourceUri = Output.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {

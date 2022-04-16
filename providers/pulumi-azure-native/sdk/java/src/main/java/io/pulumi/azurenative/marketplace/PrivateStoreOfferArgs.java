@@ -6,6 +6,7 @@ package io.pulumi.azurenative.marketplace;
 import io.pulumi.azurenative.marketplace.inputs.PlanArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iconFileUris")
       private final @Nullable Output<Map<String,String>> iconFileUris;
 
-    public Output<Map<String,String>> getIconFileUris() {
-        return this.iconFileUris == null ? Output.empty() : this.iconFileUris;
+    public Output<Map<String,String>> iconFileUris() {
+        return this.iconFileUris == null ? Codegen.empty() : this.iconFileUris;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="offerId")
       private final @Nullable Output<String> offerId;
 
-    public Output<String> getOfferId() {
-        return this.offerId == null ? Output.empty() : this.offerId;
+    public Output<String> offerId() {
+        return this.offerId == null ? Codegen.empty() : this.offerId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="plans")
       private final @Nullable Output<List<PlanArgs>> plans;
 
-    public Output<List<PlanArgs>> getPlans() {
-        return this.plans == null ? Output.empty() : this.plans;
+    public Output<List<PlanArgs>> plans() {
+        return this.plans == null ? Codegen.empty() : this.plans;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
 
-    public Output<String> getPrivateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
 
@@ -80,8 +81,8 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="specificPlanIdsLimitation")
       private final @Nullable Output<List<String>> specificPlanIdsLimitation;
 
-    public Output<List<String>> getSpecificPlanIdsLimitation() {
-        return this.specificPlanIdsLimitation == null ? Output.empty() : this.specificPlanIdsLimitation;
+    public Output<List<String>> specificPlanIdsLimitation() {
+        return this.specificPlanIdsLimitation == null ? Codegen.empty() : this.specificPlanIdsLimitation;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="updateSuppressedDueIdempotence")
       private final @Nullable Output<Boolean> updateSuppressedDueIdempotence;
 
-    public Output<Boolean> getUpdateSuppressedDueIdempotence() {
-        return this.updateSuppressedDueIdempotence == null ? Output.empty() : this.updateSuppressedDueIdempotence;
+    public Output<Boolean> updateSuppressedDueIdempotence() {
+        return this.updateSuppressedDueIdempotence == null ? Codegen.empty() : this.updateSuppressedDueIdempotence;
     }
 
     public PrivateStoreOfferArgs(
@@ -113,13 +114,13 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PrivateStoreOfferArgs() {
-        this.eTag = Output.empty();
-        this.iconFileUris = Output.empty();
-        this.offerId = Output.empty();
-        this.plans = Output.empty();
-        this.privateStoreId = Output.empty();
-        this.specificPlanIdsLimitation = Output.empty();
-        this.updateSuppressedDueIdempotence = Output.empty();
+        this.eTag = Codegen.empty();
+        this.iconFileUris = Codegen.empty();
+        this.offerId = Codegen.empty();
+        this.plans = Codegen.empty();
+        this.privateStoreId = Codegen.empty();
+        this.specificPlanIdsLimitation = Codegen.empty();
+        this.updateSuppressedDueIdempotence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder iconFileUris(@Nullable Output<Map<String,String>> iconFileUris) {
@@ -167,7 +168,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder iconFileUris(@Nullable Map<String,String> iconFileUris) {
-            this.iconFileUris = Output.ofNullable(iconFileUris);
+            this.iconFileUris = Codegen.ofNullable(iconFileUris);
             return this;
         }
         public Builder offerId(@Nullable Output<String> offerId) {
@@ -175,7 +176,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder offerId(@Nullable String offerId) {
-            this.offerId = Output.ofNullable(offerId);
+            this.offerId = Codegen.ofNullable(offerId);
             return this;
         }
         public Builder plans(@Nullable Output<List<PlanArgs>> plans) {
@@ -183,7 +184,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder plans(@Nullable List<PlanArgs> plans) {
-            this.plans = Output.ofNullable(plans);
+            this.plans = Codegen.ofNullable(plans);
             return this;
         }
         public Builder plans(PlanArgs... plans) {
@@ -202,7 +203,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder specificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
-            this.specificPlanIdsLimitation = Output.ofNullable(specificPlanIdsLimitation);
+            this.specificPlanIdsLimitation = Codegen.ofNullable(specificPlanIdsLimitation);
             return this;
         }
         public Builder specificPlanIdsLimitation(String... specificPlanIdsLimitation) {
@@ -213,7 +214,7 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder updateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
-            this.updateSuppressedDueIdempotence = Output.ofNullable(updateSuppressedDueIdempotence);
+            this.updateSuppressedDueIdempotence = Codegen.ofNullable(updateSuppressedDueIdempotence);
             return this;
         }        public PrivateStoreOfferArgs build() {
             return new PrivateStoreOfferArgs(eTag, iconFileUris, offerId, plans, privateStoreId, specificPlanIdsLimitation, updateSuppressedDueIdempotence);

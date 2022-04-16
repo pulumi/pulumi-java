@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return The ETag of the virtual network link.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
      * 
      */
-    public Output</* @Nullable */ Boolean> getRegistrationEnabled() {
+    public Output</* @Nullable */ Boolean> registrationEnabled() {
         return this.registrationEnabled;
     }
     /**
@@ -114,7 +115,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +129,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -142,7 +143,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return The reference of the virtual network.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualNetwork() {
+    public Output</* @Nullable */ SubResourceResponse> virtualNetwork() {
         return this.virtualNetwork;
     }
     /**
@@ -156,7 +157,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @return The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<String> getVirtualNetworkLinkState() {
+    public Output<String> virtualNetworkLinkState() {
         return this.virtualNetworkLinkState;
     }
 
@@ -182,7 +183,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetworkLink(String name, VirtualNetworkLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualNetworkLink", name, args == null ? VirtualNetworkLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualNetworkLink", name, args == null ? VirtualNetworkLinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualNetworkLink(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

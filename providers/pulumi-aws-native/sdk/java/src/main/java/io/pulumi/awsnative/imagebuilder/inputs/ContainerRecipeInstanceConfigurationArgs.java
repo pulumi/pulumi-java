@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceBlockDeviceMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
+    public Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings() {
+        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<String> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     public ContainerRecipeInstanceConfigurationArgs(
@@ -50,8 +51,8 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
     }
 
     private ContainerRecipeInstanceConfigurationArgs() {
-        this.blockDeviceMappings = Output.empty();
-        this.image = Output.empty();
+        this.blockDeviceMappings = Codegen.empty();
+        this.image = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder blockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
             return this;
         }
         public Builder blockDeviceMappings(ContainerRecipeInstanceBlockDeviceMappingArgs... blockDeviceMappings) {
@@ -92,7 +93,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }        public ContainerRecipeInstanceConfigurationArgs build() {
             return new ContainerRecipeInstanceConfigurationArgs(blockDeviceMappings, image);

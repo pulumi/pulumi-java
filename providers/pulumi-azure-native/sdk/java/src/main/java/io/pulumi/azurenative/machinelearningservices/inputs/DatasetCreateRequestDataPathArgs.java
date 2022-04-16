@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
-        return this.datastoreName == null ? Output.empty() : this.datastoreName;
+    public Output<String> datastoreName() {
+        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
     @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
-    public Output<String> getRelativePath() {
-        return this.relativePath == null ? Output.empty() : this.relativePath;
+    public Output<String> relativePath() {
+        return this.relativePath == null ? Codegen.empty() : this.relativePath;
     }
 
     public DatasetCreateRequestDataPathArgs(
@@ -44,8 +45,8 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
     }
 
     private DatasetCreateRequestDataPathArgs() {
-        this.datastoreName = Output.empty();
-        this.relativePath = Output.empty();
+        this.datastoreName = Codegen.empty();
+        this.relativePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
             return this;
         }
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Output.ofNullable(datastoreName);
+            this.datastoreName = Codegen.ofNullable(datastoreName);
             return this;
         }
         public Builder relativePath(@Nullable Output<String> relativePath) {
@@ -83,7 +84,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
             return this;
         }
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Output.ofNullable(relativePath);
+            this.relativePath = Codegen.ofNullable(relativePath);
             return this;
         }        public DatasetCreateRequestDataPathArgs build() {
             return new DatasetCreateRequestDataPathArgs(datastoreName, relativePath);

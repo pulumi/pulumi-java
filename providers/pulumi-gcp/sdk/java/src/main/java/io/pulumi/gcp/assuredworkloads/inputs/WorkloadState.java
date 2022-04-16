@@ -5,6 +5,7 @@ package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsGetArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceGetArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingGetArgs;
@@ -26,8 +27,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
-        return this.billingAccount == null ? Output.empty() : this.billingAccount;
+    public Output<String> billingAccount() {
+        return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="complianceRegime")
       private final @Nullable Output<String> complianceRegime;
 
-    public Output<String> getComplianceRegime() {
-        return this.complianceRegime == null ? Output.empty() : this.complianceRegime;
+    public Output<String> complianceRegime() {
+        return this.complianceRegime == null ? Codegen.empty() : this.complianceRegime;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsSettings")
       private final @Nullable Output<WorkloadKmsSettingsGetArgs> kmsSettings;
 
-    public Output<WorkloadKmsSettingsGetArgs> getKmsSettings() {
-        return this.kmsSettings == null ? Output.empty() : this.kmsSettings;
+    public Output<WorkloadKmsSettingsGetArgs> kmsSettings() {
+        return this.kmsSettings == null ? Codegen.empty() : this.kmsSettings;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
-        return this.organization == null ? Output.empty() : this.organization;
+    public Output<String> organization() {
+        return this.organization == null ? Codegen.empty() : this.organization;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionedResourcesParent")
       private final @Nullable Output<String> provisionedResourcesParent;
 
-    public Output<String> getProvisionedResourcesParent() {
-        return this.provisionedResourcesParent == null ? Output.empty() : this.provisionedResourcesParent;
+    public Output<String> provisionedResourcesParent() {
+        return this.provisionedResourcesParent == null ? Codegen.empty() : this.provisionedResourcesParent;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettings")
       private final @Nullable Output<List<WorkloadResourceSettingGetArgs>> resourceSettings;
 
-    public Output<List<WorkloadResourceSettingGetArgs>> getResourceSettings() {
-        return this.resourceSettings == null ? Output.empty() : this.resourceSettings;
+    public Output<List<WorkloadResourceSettingGetArgs>> resourceSettings() {
+        return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<WorkloadResourceGetArgs>> resources;
 
-    public Output<List<WorkloadResourceGetArgs>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<WorkloadResourceGetArgs>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     public WorkloadState(
@@ -180,18 +181,18 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkloadState() {
-        this.billingAccount = Output.empty();
-        this.complianceRegime = Output.empty();
-        this.createTime = Output.empty();
-        this.displayName = Output.empty();
-        this.kmsSettings = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.organization = Output.empty();
-        this.provisionedResourcesParent = Output.empty();
-        this.resourceSettings = Output.empty();
-        this.resources = Output.empty();
+        this.billingAccount = Codegen.empty();
+        this.complianceRegime = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.kmsSettings = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.provisionedResourcesParent = Codegen.empty();
+        this.resourceSettings = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Output.ofNullable(billingAccount);
+            this.billingAccount = Codegen.ofNullable(billingAccount);
             return this;
         }
         public Builder complianceRegime(@Nullable Output<String> complianceRegime) {
@@ -249,7 +250,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder complianceRegime(@Nullable String complianceRegime) {
-            this.complianceRegime = Output.ofNullable(complianceRegime);
+            this.complianceRegime = Codegen.ofNullable(complianceRegime);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -257,7 +258,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -265,7 +266,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsGetArgs> kmsSettings) {
@@ -273,7 +274,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsSettings(@Nullable WorkloadKmsSettingsGetArgs kmsSettings) {
-            this.kmsSettings = Output.ofNullable(kmsSettings);
+            this.kmsSettings = Codegen.ofNullable(kmsSettings);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -281,7 +282,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -289,7 +290,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -297,7 +298,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organization(@Nullable Output<String> organization) {
@@ -305,7 +306,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder organization(@Nullable String organization) {
-            this.organization = Output.ofNullable(organization);
+            this.organization = Codegen.ofNullable(organization);
             return this;
         }
         public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
@@ -313,7 +314,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
-            this.provisionedResourcesParent = Output.ofNullable(provisionedResourcesParent);
+            this.provisionedResourcesParent = Codegen.ofNullable(provisionedResourcesParent);
             return this;
         }
         public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingGetArgs>> resourceSettings) {
@@ -321,7 +322,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSettings(@Nullable List<WorkloadResourceSettingGetArgs> resourceSettings) {
-            this.resourceSettings = Output.ofNullable(resourceSettings);
+            this.resourceSettings = Codegen.ofNullable(resourceSettings);
             return this;
         }
         public Builder resourceSettings(WorkloadResourceSettingGetArgs... resourceSettings) {
@@ -332,7 +333,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable List<WorkloadResourceGetArgs> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(WorkloadResourceGetArgs... resources) {

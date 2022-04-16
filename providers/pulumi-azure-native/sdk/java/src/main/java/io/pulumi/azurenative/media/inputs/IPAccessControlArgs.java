@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.IPRangeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="allow")
       private final @Nullable Output<List<IPRangeArgs>> allow;
 
-    public Output<List<IPRangeArgs>> getAllow() {
-        return this.allow == null ? Output.empty() : this.allow;
+    public Output<List<IPRangeArgs>> allow() {
+        return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     public IPAccessControlArgs(@Nullable Output<List<IPRangeArgs>> allow) {
@@ -35,7 +36,7 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private IPAccessControlArgs() {
-        this.allow = Output.empty();
+        this.allow = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder allow(@Nullable List<IPRangeArgs> allow) {
-            this.allow = Output.ofNullable(allow);
+            this.allow = Codegen.ofNullable(allow);
             return this;
         }
         public Builder allow(IPRangeArgs... allow) {

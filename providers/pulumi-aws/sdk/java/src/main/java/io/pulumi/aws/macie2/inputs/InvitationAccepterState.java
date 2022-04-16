@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     @Import(name="administratorAccountId")
       private final @Nullable Output<String> administratorAccountId;
 
-    public Output<String> getAdministratorAccountId() {
-        return this.administratorAccountId == null ? Output.empty() : this.administratorAccountId;
+    public Output<String> administratorAccountId() {
+        return this.administratorAccountId == null ? Codegen.empty() : this.administratorAccountId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     @Import(name="invitationId")
       private final @Nullable Output<String> invitationId;
 
-    public Output<String> getInvitationId() {
-        return this.invitationId == null ? Output.empty() : this.invitationId;
+    public Output<String> invitationId() {
+        return this.invitationId == null ? Codegen.empty() : this.invitationId;
     }
 
     public InvitationAccepterState(
@@ -44,8 +45,8 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     }
 
     private InvitationAccepterState() {
-        this.administratorAccountId = Output.empty();
-        this.invitationId = Output.empty();
+        this.administratorAccountId = Codegen.empty();
+        this.invitationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder administratorAccountId(@Nullable String administratorAccountId) {
-            this.administratorAccountId = Output.ofNullable(administratorAccountId);
+            this.administratorAccountId = Codegen.ofNullable(administratorAccountId);
             return this;
         }
         public Builder invitationId(@Nullable Output<String> invitationId) {
@@ -83,7 +84,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder invitationId(@Nullable String invitationId) {
-            this.invitationId = Output.ofNullable(invitationId);
+            this.invitationId = Codegen.ofNullable(invitationId);
             return this;
         }        public InvitationAccepterState build() {
             return new InvitationAccepterState(administratorAccountId, invitationId);

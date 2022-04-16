@@ -5,6 +5,7 @@ package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     @Import(name="day", required=true)
       private final Output<String> day;
 
-    public Output<String> getDay() {
+    public Output<String> day() {
         return this.day;
     }
 
@@ -46,8 +47,8 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     @Import(name="startTime", required=true)
       private final Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
 
-    public Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> getStartTime() {
+    public Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime() {
         return this.startTime;
     }
 
@@ -74,9 +75,9 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
     }
 
     private InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs() {
-        this.day = Output.empty();
-        this.duration = Output.empty();
-        this.startTime = Output.empty();
+        this.day = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder startTime(Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
     @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
-    public Output<String> getExactMatch() {
-        return this.exactMatch == null ? Output.empty() : this.exactMatch;
+    public Output<String> exactMatch() {
+        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,8 +50,8 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
     @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Output.empty() : this.presentMatch;
+    public Output<Boolean> presentMatch() {
+        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
-        return this.regexMatch == null ? Output.empty() : this.regexMatch;
+    public Output<String> regexMatch() {
+        return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 
     public URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
@@ -79,10 +80,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
     }
 
     private URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs() {
-        this.exactMatch = Output.empty();
-        this.name = Output.empty();
-        this.presentMatch = Output.empty();
-        this.regexMatch = Output.empty();
+        this.exactMatch = Codegen.empty();
+        this.name = Codegen.empty();
+        this.presentMatch = Codegen.empty();
+        this.regexMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
             return this;
         }
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Output.ofNullable(exactMatch);
+            this.exactMatch = Codegen.ofNullable(exactMatch);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -132,7 +133,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
             return this;
         }
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Output.ofNullable(presentMatch);
+            this.presentMatch = Codegen.ofNullable(presentMatch);
             return this;
         }
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
@@ -140,7 +141,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs ex
             return this;
         }
         public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Output.ofNullable(regexMatch);
+            this.regexMatch = Codegen.ofNullable(regexMatch);
             return this;
         }        public URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs build() {
             return new URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(exactMatch, name, presentMatch, regexMatch);

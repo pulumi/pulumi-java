@@ -27,7 +27,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetSnapshotFilter> filters;
 
-    public List<GetSnapshotFilter> getFilters() {
+    public List<GetSnapshotFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -38,7 +38,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -49,7 +49,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="owners")
       private final @Nullable List<String> owners;
 
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners == null ? List.of() : this.owners;
     }
 
@@ -60,7 +60,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="restorableByUserIds")
       private final @Nullable List<String> restorableByUserIds;
 
-    public List<String> getRestorableByUserIds() {
+    public List<String> restorableByUserIds() {
         return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
     }
 
@@ -71,7 +71,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="snapshotIds")
       private final @Nullable List<String> snapshotIds;
 
-    public List<String> getSnapshotIds() {
+    public List<String> snapshotIds() {
         return this.snapshotIds == null ? List.of() : this.snapshotIds;
     }
 
@@ -82,7 +82,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

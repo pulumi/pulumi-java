@@ -9,6 +9,7 @@ import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
      * 
      */
-    public Output<String> getIdentityName() {
+    public Output<String> identityName() {
         return this.identityName;
     }
     /**
@@ -43,7 +44,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the identity to map to the Studio is a user or a group.
      * 
      */
-    public Output<StudioSessionMappingIdentityType> getIdentityType() {
+    public Output<StudioSessionMappingIdentityType> identityType() {
         return this.identityType;
     }
     /**
@@ -57,7 +58,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
      * 
      */
-    public Output<String> getSessionPolicyArn() {
+    public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
     }
     /**
@@ -71,7 +72,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -97,7 +98,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StudioSessionMapping(String name, StudioSessionMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:emr:StudioSessionMapping", name, args == null ? StudioSessionMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:emr:StudioSessionMapping", name, args == null ? StudioSessionMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StudioSessionMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

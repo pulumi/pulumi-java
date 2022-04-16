@@ -9,6 +9,7 @@ import io.pulumi.aws.storagegateway.inputs.UploadBufferState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class UploadBuffer extends io.pulumi.resources.CustomResource {
      * @return Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
      * 
      */
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId;
     }
     /**
@@ -55,7 +56,7 @@ public class UploadBuffer extends io.pulumi.resources.CustomResource {
      * @return Local disk path. For example, `/dev/nvme1n1`.
      * 
      */
-    public Output<String> getDiskPath() {
+    public Output<String> diskPath() {
         return this.diskPath;
     }
     /**
@@ -69,7 +70,7 @@ public class UploadBuffer extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -95,7 +96,7 @@ public class UploadBuffer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UploadBuffer(String name, UploadBufferArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:storagegateway/uploadBuffer:UploadBuffer", name, args == null ? UploadBufferArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:storagegateway/uploadBuffer:UploadBuffer", name, args == null ? UploadBufferArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UploadBuffer(String name, Output<String> id, @Nullable UploadBufferState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

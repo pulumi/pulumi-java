@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.SessionEntityTypeArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse;
@@ -30,7 +31,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * @return The collection of entities to override or supplement the custom entity type.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse>> getEntities() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse>> entities() {
         return this.entities;
     }
     /**
@@ -44,7 +45,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the additional data should override or supplement the custom entity type definition.
      * 
      */
-    public Output<String> getEntityOverrideMode() {
+    public Output<String> entityOverrideMode() {
         return this.entityOverrideMode;
     }
     /**
@@ -58,7 +59,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -84,7 +85,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SessionEntityType(String name, SessionEntityTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3beta1:SessionEntityType", name, args == null ? SessionEntityTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3beta1:SessionEntityType", name, args == null ? SessionEntityTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SessionEntityType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.networkmanager.inputs.LinkBandwidthArgs;
 import io.pulumi.awsnative.networkmanager.inputs.LinkTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bandwidth", required=true)
       private final Output<LinkBandwidthArgs> bandwidth;
 
-    public Output<LinkBandwidthArgs> getBandwidth() {
+    public Output<LinkBandwidthArgs> bandwidth() {
         return this.bandwidth;
     }
 
@@ -35,8 +36,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -57,8 +58,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provider")
       private final @Nullable Output<String> provider;
 
-    public Output<String> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<String> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -79,8 +80,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LinkTagArgs>> tags;
 
-    public Output<List<LinkTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<LinkTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public LinkArgs(
@@ -112,13 +113,13 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkArgs() {
-        this.bandwidth = Output.empty();
-        this.description = Output.empty();
-        this.globalNetworkId = Output.empty();
-        this.provider = Output.empty();
-        this.siteId = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.bandwidth = Codegen.empty();
+        this.description = Codegen.empty();
+        this.globalNetworkId = Codegen.empty();
+        this.provider = Codegen.empty();
+        this.siteId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder globalNetworkId(Output<String> globalNetworkId) {
@@ -182,7 +183,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provider(@Nullable String provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }
         public Builder siteId(Output<String> siteId) {
@@ -198,7 +199,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<LinkTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LinkTagArgs... tags) {
@@ -209,7 +210,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public LinkArgs build() {
             return new LinkArgs(bandwidth, description, globalNetworkId, provider, siteId, tags, type);

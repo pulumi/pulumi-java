@@ -9,6 +9,7 @@ import io.pulumi.aws.apigatewayv2.inputs.VpcLinkState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return The VPC Link ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return The name of the VPC Link. Must be between 1 and 128 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return Security group IDs for the VPC Link.
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -86,7 +87,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return Subnet IDs for the VPC Link.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -100,7 +101,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the VPC Link. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +115,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -140,7 +141,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcLink(String name, VpcLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/vpcLink:VpcLink", name, args == null ? VpcLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/vpcLink:VpcLink", name, args == null ? VpcLinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcLink(String name, Output<String> id, @Nullable VpcLinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

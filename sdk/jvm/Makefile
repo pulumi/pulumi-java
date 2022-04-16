@@ -1,11 +1,9 @@
-# TODO: use pulumictl to compute versions from repo tags
-VERSION := 1.0.0
-
 # Builds the project and runs unit tests.
 build::		ensure
-	gradle build
+	gradle --console=plain build
 
 ensure::
+	java --version
 	gradle --version
 
 # Installs the package into a local Maven repository - `~/.m2` by
@@ -24,4 +22,4 @@ ensure::
 #
 # Adjust 1.0.0 to the right version above.
 install::	build
-	gradle -Pversion=${VERSION} publishToMavenLocal
+	gradle --console=plain publishToMavenLocal

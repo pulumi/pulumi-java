@@ -6,6 +6,7 @@ package io.pulumi.awsnative.robomaker.inputs;
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSourceConfigArchitecture;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
     @Import(name="architecture", required=true)
       private final Output<SimulationApplicationSourceConfigArchitecture> architecture;
 
-    public Output<SimulationApplicationSourceConfigArchitecture> getArchitecture() {
+    public Output<SimulationApplicationSourceConfigArchitecture> architecture() {
         return this.architecture;
     }
 
@@ -36,7 +37,7 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
     @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
 
@@ -47,7 +48,7 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
     @Import(name="s3Key", required=true)
       private final Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key;
     }
 
@@ -61,9 +62,9 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
     }
 
     private SimulationApplicationSourceConfigArgs() {
-        this.architecture = Output.empty();
-        this.s3Bucket = Output.empty();
-        this.s3Key = Output.empty();
+        this.architecture = Codegen.empty();
+        this.s3Bucket = Codegen.empty();
+        this.s3Key = Codegen.empty();
     }
 
     public static Builder builder() {

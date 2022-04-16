@@ -6,6 +6,7 @@ package io.pulumi.gcp.serviceAccount;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.AccountArgs;
 import io.pulumi.gcp.serviceAccount.inputs.AccountState;
@@ -56,7 +57,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * to comply with RFC1035. Changing this forces a new service account to be created.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -72,7 +73,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Must be less than or equal to 256 UTF-8 bytes.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Must be set after creation to disable a service account.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -104,7 +105,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Can be updated without creating a new resource.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -122,7 +123,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * that would grant the service account privileges.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -136,7 +137,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified name of the service account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -152,7 +153,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Defaults to the provider project configuration.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -166,7 +167,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The unique id of the service account.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 
@@ -192,7 +193,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:serviceAccount/account:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:serviceAccount/account:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable AccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

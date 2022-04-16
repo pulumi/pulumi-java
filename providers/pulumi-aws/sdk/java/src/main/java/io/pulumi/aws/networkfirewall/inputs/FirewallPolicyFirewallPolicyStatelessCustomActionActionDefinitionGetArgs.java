@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     @Import(name="publishMetricAction", required=true)
       private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction;
 
-    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> getPublishMetricAction() {
+    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction() {
         return this.publishMetricAction;
     }
 
@@ -29,7 +30,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     }
 
     private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs() {
-        this.publishMetricAction = Output.empty();
+        this.publishMetricAction = Codegen.empty();
     }
 
     public static Builder builder() {

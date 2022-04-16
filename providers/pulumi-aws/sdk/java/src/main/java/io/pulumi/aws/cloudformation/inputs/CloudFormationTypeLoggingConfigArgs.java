@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
     @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
@@ -31,7 +32,7 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
     @Import(name="logRoleArn", required=true)
       private final Output<String> logRoleArn;
 
-    public Output<String> getLogRoleArn() {
+    public Output<String> logRoleArn() {
         return this.logRoleArn;
     }
 
@@ -43,8 +44,8 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
     }
 
     private CloudFormationTypeLoggingConfigArgs() {
-        this.logGroupName = Output.empty();
-        this.logRoleArn = Output.empty();
+        this.logGroupName = Codegen.empty();
+        this.logRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {

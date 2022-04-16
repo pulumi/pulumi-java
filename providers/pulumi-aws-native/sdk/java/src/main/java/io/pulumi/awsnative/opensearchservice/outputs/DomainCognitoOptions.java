@@ -29,16 +29,16 @@ public final class DomainCognitoOptions {
         this.userPoolId = userPoolId;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<String> getIdentityPoolId() {
+    public Optional<String> identityPoolId() {
         return Optional.ofNullable(this.identityPoolId);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public Optional<String> getUserPoolId() {
+    public Optional<String> userPoolId() {
         return Optional.ofNullable(this.userPoolId);
     }
 

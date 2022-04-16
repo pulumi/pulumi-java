@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.enums.ManifestType;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
-    public Output<String> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+    public Output<String> fileName() {
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="muxStreams", required=true)
       private final Output<List<String>> muxStreams;
 
-    public Output<List<String>> getMuxStreams() {
+    public Output<List<String>> muxStreams() {
         return this.muxStreams;
     }
 
@@ -49,7 +50,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<ManifestType> type;
 
-    public Output<ManifestType> getType() {
+    public Output<ManifestType> type() {
         return this.type;
     }
 
@@ -63,9 +64,9 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManifestArgs() {
-        this.fileName = Output.empty();
-        this.muxStreams = Output.empty();
-        this.type = Output.empty();
+        this.fileName = Codegen.empty();
+        this.muxStreams = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder muxStreams(Output<List<String>> muxStreams) {

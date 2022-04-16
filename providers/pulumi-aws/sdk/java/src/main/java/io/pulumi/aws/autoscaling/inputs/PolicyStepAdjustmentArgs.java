@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
     @Import(name="metricIntervalLowerBound")
       private final @Nullable Output<String> metricIntervalLowerBound;
 
-    public Output<String> getMetricIntervalLowerBound() {
-        return this.metricIntervalLowerBound == null ? Output.empty() : this.metricIntervalLowerBound;
+    public Output<String> metricIntervalLowerBound() {
+        return this.metricIntervalLowerBound == null ? Codegen.empty() : this.metricIntervalLowerBound;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
     @Import(name="metricIntervalUpperBound")
       private final @Nullable Output<String> metricIntervalUpperBound;
 
-    public Output<String> getMetricIntervalUpperBound() {
-        return this.metricIntervalUpperBound == null ? Output.empty() : this.metricIntervalUpperBound;
+    public Output<String> metricIntervalUpperBound() {
+        return this.metricIntervalUpperBound == null ? Codegen.empty() : this.metricIntervalUpperBound;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
     @Import(name="scalingAdjustment", required=true)
       private final Output<Integer> scalingAdjustment;
 
-    public Output<Integer> getScalingAdjustment() {
+    public Output<Integer> scalingAdjustment() {
         return this.scalingAdjustment;
     }
 
@@ -65,9 +66,9 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
     }
 
     private PolicyStepAdjustmentArgs() {
-        this.metricIntervalLowerBound = Output.empty();
-        this.metricIntervalUpperBound = Output.empty();
-        this.scalingAdjustment = Output.empty();
+        this.metricIntervalLowerBound = Codegen.empty();
+        this.metricIntervalUpperBound = Codegen.empty();
+        this.scalingAdjustment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder metricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
-            this.metricIntervalLowerBound = Output.ofNullable(metricIntervalLowerBound);
+            this.metricIntervalLowerBound = Codegen.ofNullable(metricIntervalLowerBound);
             return this;
         }
         public Builder metricIntervalUpperBound(@Nullable Output<String> metricIntervalUpperBound) {
@@ -107,7 +108,7 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder metricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
-            this.metricIntervalUpperBound = Output.ofNullable(metricIntervalUpperBound);
+            this.metricIntervalUpperBound = Codegen.ofNullable(metricIntervalUpperBound);
             return this;
         }
         public Builder scalingAdjustment(Output<Integer> scalingAdjustment) {

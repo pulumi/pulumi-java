@@ -7,6 +7,7 @@ import io.pulumi.azurenative.blueprint.enums.ArtifactKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
 
-    public Output<String> getArtifactName() {
-        return this.artifactName == null ? Output.empty() : this.artifactName;
+    public Output<String> artifactName() {
+        return this.artifactName == null ? Codegen.empty() : this.artifactName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
-    public Output<String> getBlueprintName() {
+    public Output<String> blueprintName() {
         return this.blueprintName;
     }
 
@@ -45,7 +46,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,ArtifactKind>> kind;
 
-    public Output<Either<String,ArtifactKind>> getKind() {
+    public Output<Either<String,ArtifactKind>> kind() {
         return this.kind;
     }
 
@@ -56,7 +57,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
-    public Output<String> getResourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -72,10 +73,10 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactArgs() {
-        this.artifactName = Output.empty();
-        this.blueprintName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceScope = Output.empty();
+        this.artifactName = Codegen.empty();
+        this.blueprintName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifactName(@Nullable String artifactName) {
-            this.artifactName = Output.ofNullable(artifactName);
+            this.artifactName = Codegen.ofNullable(artifactName);
             return this;
         }
         public Builder blueprintName(Output<String> blueprintName) {

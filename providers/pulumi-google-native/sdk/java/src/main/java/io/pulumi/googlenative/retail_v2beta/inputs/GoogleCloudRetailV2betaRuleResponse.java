@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="boostAction", required=true)
       private final GoogleCloudRetailV2betaRuleBoostActionResponse boostAction;
 
-    public GoogleCloudRetailV2betaRuleBoostActionResponse getBoostAction() {
+    public GoogleCloudRetailV2betaRuleBoostActionResponse boostAction() {
         return this.boostAction;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="condition", required=true)
       private final GoogleCloudRetailV2betaConditionResponse condition;
 
-    public GoogleCloudRetailV2betaConditionResponse getCondition() {
+    public GoogleCloudRetailV2betaConditionResponse condition() {
         return this.condition;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="doNotAssociateAction", required=true)
       private final GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction;
 
-    public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse getDoNotAssociateAction() {
+    public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction() {
         return this.doNotAssociateAction;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="filterAction", required=true)
       private final GoogleCloudRetailV2betaRuleFilterActionResponse filterAction;
 
-    public GoogleCloudRetailV2betaRuleFilterActionResponse getFilterAction() {
+    public GoogleCloudRetailV2betaRuleFilterActionResponse filterAction() {
         return this.filterAction;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="ignoreAction", required=true)
       private final GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction;
 
-    public GoogleCloudRetailV2betaRuleIgnoreActionResponse getIgnoreAction() {
+    public GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction() {
         return this.ignoreAction;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="onewaySynonymsAction", required=true)
       private final GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
 
-    public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse getOnewaySynonymsAction() {
+    public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction() {
         return this.onewaySynonymsAction;
     }
 
@@ -97,7 +97,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="redirectAction", required=true)
       private final GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction;
 
-    public GoogleCloudRetailV2betaRuleRedirectActionResponse getRedirectAction() {
+    public GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction() {
         return this.redirectAction;
     }
 
@@ -108,7 +108,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="replacementAction", required=true)
       private final GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction;
 
-    public GoogleCloudRetailV2betaRuleReplacementActionResponse getReplacementAction() {
+    public GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction() {
         return this.replacementAction;
     }
 
@@ -119,7 +119,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
     @Import(name="twowaySynonymsAction", required=true)
       private final GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
-    public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse getTwowaySynonymsAction() {
+    public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction() {
         return this.twowaySynonymsAction;
     }
 

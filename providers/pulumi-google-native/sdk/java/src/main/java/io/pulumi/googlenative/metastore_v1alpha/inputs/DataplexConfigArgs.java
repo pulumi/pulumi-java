@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lakeResources")
       private final @Nullable Output<Map<String,String>> lakeResources;
 
-    public Output<Map<String,String>> getLakeResources() {
-        return this.lakeResources == null ? Output.empty() : this.lakeResources;
+    public Output<Map<String,String>> lakeResources() {
+        return this.lakeResources == null ? Codegen.empty() : this.lakeResources;
     }
 
     public DataplexConfigArgs(@Nullable Output<Map<String,String>> lakeResources) {
@@ -35,7 +36,7 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataplexConfigArgs() {
-        this.lakeResources = Output.empty();
+        this.lakeResources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lakeResources(@Nullable Map<String,String> lakeResources) {
-            this.lakeResources = Output.ofNullable(lakeResources);
+            this.lakeResources = Codegen.ofNullable(lakeResources);
             return this;
         }        public DataplexConfigArgs build() {
             return new DataplexConfigArgs(lakeResources);

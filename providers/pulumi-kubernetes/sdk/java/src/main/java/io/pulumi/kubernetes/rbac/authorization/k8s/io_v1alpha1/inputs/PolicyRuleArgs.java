@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiGroups")
       private final @Nullable Output<List<String>> apiGroups;
 
-    public Output<List<String>> getApiGroups() {
-        return this.apiGroups == null ? Output.empty() : this.apiGroups;
+    public Output<List<String>> apiGroups() {
+        return this.apiGroups == null ? Codegen.empty() : this.apiGroups;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nonResourceURLs")
       private final @Nullable Output<List<String>> nonResourceURLs;
 
-    public Output<List<String>> getNonResourceURLs() {
-        return this.nonResourceURLs == null ? Output.empty() : this.nonResourceURLs;
+    public Output<List<String>> nonResourceURLs() {
+        return this.nonResourceURLs == null ? Codegen.empty() : this.nonResourceURLs;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
       private final @Nullable Output<List<String>> resourceNames;
 
-    public Output<List<String>> getResourceNames() {
-        return this.resourceNames == null ? Output.empty() : this.resourceNames;
+    public Output<List<String>> resourceNames() {
+        return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<String>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;
 
-    public Output<List<String>> getVerbs() {
+    public Output<List<String>> verbs() {
         return this.verbs;
     }
 
@@ -88,11 +89,11 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyRuleArgs() {
-        this.apiGroups = Output.empty();
-        this.nonResourceURLs = Output.empty();
-        this.resourceNames = Output.empty();
-        this.resources = Output.empty();
-        this.verbs = Output.empty();
+        this.apiGroups = Codegen.empty();
+        this.nonResourceURLs = Codegen.empty();
+        this.resourceNames = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.verbs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiGroups(@Nullable List<String> apiGroups) {
-            this.apiGroups = Output.ofNullable(apiGroups);
+            this.apiGroups = Codegen.ofNullable(apiGroups);
             return this;
         }
         public Builder apiGroups(String... apiGroups) {
@@ -139,7 +140,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
-            this.nonResourceURLs = Output.ofNullable(nonResourceURLs);
+            this.nonResourceURLs = Codegen.ofNullable(nonResourceURLs);
             return this;
         }
         public Builder nonResourceURLs(String... nonResourceURLs) {
@@ -150,7 +151,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceNames(@Nullable List<String> resourceNames) {
-            this.resourceNames = Output.ofNullable(resourceNames);
+            this.resourceNames = Codegen.ofNullable(resourceNames);
             return this;
         }
         public Builder resourceNames(String... resourceNames) {
@@ -161,7 +162,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {

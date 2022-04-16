@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Map<String,String>> value;
 
-    public Output<Map<String,String>> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Map<String,String>> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public OptionArgs(
@@ -49,8 +50,8 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OptionArgs() {
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder value(@Nullable Output<Map<String,String>> value) {
@@ -88,7 +89,7 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable Map<String,String> value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public OptionArgs build() {
             return new OptionArgs(name, value);

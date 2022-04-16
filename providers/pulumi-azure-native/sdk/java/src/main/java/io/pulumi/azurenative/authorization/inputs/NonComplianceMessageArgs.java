@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
     @Import(name="message", required=true)
       private final Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
 
@@ -36,8 +37,8 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> getPolicyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Output.empty() : this.policyDefinitionReferenceId;
+    public Output<String> policyDefinitionReferenceId() {
+        return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
     }
 
     public NonComplianceMessageArgs(
@@ -48,8 +49,8 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
     }
 
     private NonComplianceMessageArgs() {
-        this.message = Output.empty();
-        this.policyDefinitionReferenceId = Output.empty();
+        this.message = Codegen.empty();
+        this.policyDefinitionReferenceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
+            this.policyDefinitionReferenceId = Codegen.ofNullable(policyDefinitionReferenceId);
             return this;
         }        public NonComplianceMessageArgs build() {
             return new NonComplianceMessageArgs(message, policyDefinitionReferenceId);

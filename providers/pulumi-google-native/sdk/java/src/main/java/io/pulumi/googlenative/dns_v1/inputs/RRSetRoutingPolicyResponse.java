@@ -21,21 +21,21 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
     @Import(name="geo", required=true)
       private final RRSetRoutingPolicyGeoPolicyResponse geo;
 
-    public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
+    public RRSetRoutingPolicyGeoPolicyResponse geo() {
         return this.geo;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
     @Import(name="wrr", required=true)
       private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
-    public RRSetRoutingPolicyWrrPolicyResponse getWrr() {
+    public RRSetRoutingPolicyWrrPolicyResponse wrr() {
         return this.wrr;
     }
 

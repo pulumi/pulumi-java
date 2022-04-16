@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsArgs;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class PreventionJobTriggerInspectJobActionArgs extends io.pulumi.re
     @Import(name="saveFindings", required=true)
       private final Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings;
 
-    public Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> getSaveFindings() {
+    public Output<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings() {
         return this.saveFindings;
     }
 
@@ -30,7 +31,7 @@ public final class PreventionJobTriggerInspectJobActionArgs extends io.pulumi.re
     }
 
     private PreventionJobTriggerInspectJobActionArgs() {
-        this.saveFindings = Output.empty();
+        this.saveFindings = Codegen.empty();
     }
 
     public static Builder builder() {

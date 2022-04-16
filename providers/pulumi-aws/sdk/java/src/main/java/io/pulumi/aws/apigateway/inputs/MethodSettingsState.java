@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway.inputs;
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="methodPath")
       private final @Nullable Output<String> methodPath;
 
-    public Output<String> getMethodPath() {
-        return this.methodPath == null ? Output.empty() : this.methodPath;
+    public Output<String> methodPath() {
+        return this.methodPath == null ? Codegen.empty() : this.methodPath;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+    public Output<String> restApi() {
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="settings")
       private final @Nullable Output<MethodSettingsSettingsGetArgs> settings;
 
-    public Output<MethodSettingsSettingsGetArgs> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+    public Output<MethodSettingsSettingsGetArgs> settings() {
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+    public Output<String> stageName() {
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     public MethodSettingsState(
@@ -71,10 +72,10 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     }
 
     private MethodSettingsState() {
-        this.methodPath = Output.empty();
-        this.restApi = Output.empty();
-        this.settings = Output.empty();
-        this.stageName = Output.empty();
+        this.methodPath = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder methodPath(@Nullable String methodPath) {
-            this.methodPath = Output.ofNullable(methodPath);
+            this.methodPath = Codegen.ofNullable(methodPath);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {
@@ -120,7 +121,7 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder settings(@Nullable MethodSettingsSettingsGetArgs settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder stageName(@Nullable Output<String> stageName) {
@@ -128,7 +129,7 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }        public MethodSettingsState build() {
             return new MethodSettingsState(methodPath, restApi, settings, stageName);

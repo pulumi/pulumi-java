@@ -9,6 +9,7 @@ import io.pulumi.aws.sns.inputs.PlatformApplicationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return The ARN of the SNS platform application
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -53,7 +54,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
      * 
      */
-    public Output</* @Nullable */ String> getEventDeliveryFailureTopicArn() {
+    public Output</* @Nullable */ String> eventDeliveryFailureTopicArn() {
         return this.eventDeliveryFailureTopicArn;
     }
     /**
@@ -67,7 +68,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when a new platform endpoint is added to your platform application.
      * 
      */
-    public Output</* @Nullable */ String> getEventEndpointCreatedTopicArn() {
+    public Output</* @Nullable */ String> eventEndpointCreatedTopicArn() {
         return this.eventEndpointCreatedTopicArn;
     }
     /**
@@ -81,7 +82,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
      * 
      */
-    public Output</* @Nullable */ String> getEventEndpointDeletedTopicArn() {
+    public Output</* @Nullable */ String> eventEndpointDeletedTopicArn() {
         return this.eventEndpointDeletedTopicArn;
     }
     /**
@@ -95,7 +96,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when an existing platform endpoint is changed from your platform application.
      * 
      */
-    public Output</* @Nullable */ String> getEventEndpointUpdatedTopicArn() {
+    public Output</* @Nullable */ String> eventEndpointUpdatedTopicArn() {
         return this.eventEndpointUpdatedTopicArn;
     }
     /**
@@ -109,7 +110,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive failure feedback for this application.
      * 
      */
-    public Output</* @Nullable */ String> getFailureFeedbackRoleArn() {
+    public Output</* @Nullable */ String> failureFeedbackRoleArn() {
         return this.failureFeedbackRoleArn;
     }
     /**
@@ -123,7 +124,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return The friendly name for the SNS platform application
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -137,7 +138,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
      * 
      */
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     /**
@@ -151,7 +152,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
      * 
      */
-    public Output<String> getPlatformCredential() {
+    public Output<String> platformCredential() {
         return this.platformCredential;
     }
     /**
@@ -165,7 +166,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
      * 
      */
-    public Output</* @Nullable */ String> getPlatformPrincipal() {
+    public Output</* @Nullable */ String> platformPrincipal() {
         return this.platformPrincipal;
     }
     /**
@@ -179,7 +180,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive success feedback for this application.
      * 
      */
-    public Output</* @Nullable */ String> getSuccessFeedbackRoleArn() {
+    public Output</* @Nullable */ String> successFeedbackRoleArn() {
         return this.successFeedbackRoleArn;
     }
     /**
@@ -193,7 +194,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @return The percentage of success to sample (0-100)
      * 
      */
-    public Output</* @Nullable */ String> getSuccessFeedbackSampleRate() {
+    public Output</* @Nullable */ String> successFeedbackSampleRate() {
         return this.successFeedbackSampleRate;
     }
 
@@ -219,7 +220,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PlatformApplication(String name, PlatformApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sns/platformApplication:PlatformApplication", name, args == null ? PlatformApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sns/platformApplication:PlatformApplication", name, args == null ? PlatformApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PlatformApplication(String name, Output<String> id, @Nullable PlatformApplicationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

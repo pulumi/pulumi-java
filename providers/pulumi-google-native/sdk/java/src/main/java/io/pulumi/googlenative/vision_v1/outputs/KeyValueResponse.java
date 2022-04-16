@@ -32,14 +32,14 @@ public final class KeyValueResponse {
      * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

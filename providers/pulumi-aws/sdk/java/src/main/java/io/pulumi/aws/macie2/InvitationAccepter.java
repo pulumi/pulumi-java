@@ -9,6 +9,7 @@ import io.pulumi.aws.macie2.inputs.InvitationAccepterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID for the account that sent the invitation.
      * 
      */
-    public Output<String> getAdministratorAccountId() {
+    public Output<String> administratorAccountId() {
         return this.administratorAccountId;
     }
     /**
@@ -53,7 +54,7 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the invitation.
      * 
      */
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId;
     }
 
@@ -79,7 +80,7 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InvitationAccepter(String name, InvitationAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:macie2/invitationAccepter:InvitationAccepter", name, args == null ? InvitationAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:macie2/invitationAccepter:InvitationAccepter", name, args == null ? InvitationAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InvitationAccepter(String name, Output<String> id, @Nullable InvitationAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

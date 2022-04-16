@@ -2,7 +2,6 @@ package io.pulumi.deployment;
 
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.InvokeArgs;
 import io.pulumi.resources.ProviderResource;
@@ -11,6 +10,8 @@ import io.pulumi.resources.Resource;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Optional;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * Options to help control the behavior of @see {@link Deployment#invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}.
@@ -26,10 +27,6 @@ public final class InvokeOptions {
     private final ProviderResource provider;
     @Nullable
     private final String version;
-
-    @SuppressWarnings("unused")
-    @InternalField
-    private final InvokeOptionsInternal internal = new InvokeOptionsInternal();
 
     public InvokeOptions() {
         this(null, null, null);
@@ -67,15 +64,21 @@ public final class InvokeOptions {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final class InvokeOptionsInternal {
+    public static final class InvokeOptionsInternal {
 
-        private InvokeOptionsInternal() {
-            /* Empty */
+        private final InvokeOptions options;
+
+        private InvokeOptionsInternal(InvokeOptions options) {
+            this.options = requireNonNull(options);
+        }
+
+        public static InvokeOptionsInternal from(InvokeOptions options) {
+            return new InvokeOptionsInternal(options);
         }
 
         public Optional<ProviderResource> getNestedProvider(String token) {
-            return InvokeOptions.this.getProvider().or(
-                    () -> InvokeOptions.this.getParent()
+            return this.options.getProvider().or(
+                    () -> this.options.getParent()
                             .flatMap(p -> Internal.from(p).getProvider(token))
             );
         }

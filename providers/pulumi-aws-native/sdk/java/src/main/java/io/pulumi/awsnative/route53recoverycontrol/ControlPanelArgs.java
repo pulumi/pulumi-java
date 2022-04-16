@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53recoverycontrol;
 import io.pulumi.awsnative.route53recoverycontrol.inputs.ControlPanelTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
-        return this.clusterArn == null ? Output.empty() : this.clusterArn;
+    public Output<String> clusterArn() {
+        return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ControlPanelTagArgs>> tags;
 
-    public Output<List<ControlPanelTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ControlPanelTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ControlPanelArgs(
@@ -59,9 +60,9 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControlPanelArgs() {
-        this.clusterArn = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.clusterArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Output.ofNullable(clusterArn);
+            this.clusterArn = Codegen.ofNullable(clusterArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -101,7 +102,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<ControlPanelTagArgs>> tags) {
@@ -109,7 +110,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ControlPanelTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ControlPanelTagArgs... tags) {

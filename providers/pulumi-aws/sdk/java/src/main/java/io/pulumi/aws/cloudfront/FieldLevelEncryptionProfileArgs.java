@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
     @Import(name="encryptionEntities", required=true)
       private final Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
 
-    public Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> getEncryptionEntities() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities() {
         return this.encryptionEntities;
     }
 
@@ -44,8 +45,8 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FieldLevelEncryptionProfileArgs(
@@ -58,9 +59,9 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
     }
 
     private FieldLevelEncryptionProfileArgs() {
-        this.comment = Output.empty();
-        this.encryptionEntities = Output.empty();
-        this.name = Output.empty();
+        this.comment = Codegen.empty();
+        this.encryptionEntities = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder encryptionEntities(Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities) {
@@ -108,7 +109,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FieldLevelEncryptionProfileArgs build() {
             return new FieldLevelEncryptionProfileArgs(comment, encryptionEntities, name);

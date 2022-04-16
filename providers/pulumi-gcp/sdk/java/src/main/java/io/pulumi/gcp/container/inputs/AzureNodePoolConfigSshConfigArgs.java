@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AzureNodePoolConfigSshConfigArgs extends io.pulumi.resources.
     @Import(name="authorizedKey", required=true)
       private final Output<String> authorizedKey;
 
-    public Output<String> getAuthorizedKey() {
+    public Output<String> authorizedKey() {
         return this.authorizedKey;
     }
 
@@ -29,7 +30,7 @@ public final class AzureNodePoolConfigSshConfigArgs extends io.pulumi.resources.
     }
 
     private AzureNodePoolConfigSshConfigArgs() {
-        this.authorizedKey = Output.empty();
+        this.authorizedKey = Codegen.empty();
     }
 
     public static Builder builder() {

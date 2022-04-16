@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     @Import(name="appKey", required=true)
       private final Output<String> appKey;
 
-    public Output<String> getAppKey() {
+    public Output<String> appKey() {
         return this.appKey;
     }
 
@@ -35,7 +36,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -46,7 +47,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -60,9 +61,9 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     }
 
     private AzureActiveDirectoryAppArgs() {
-        this.appKey = Output.empty();
-        this.applicationId = Output.empty();
-        this.tenantId = Output.empty();
+        this.appKey = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {

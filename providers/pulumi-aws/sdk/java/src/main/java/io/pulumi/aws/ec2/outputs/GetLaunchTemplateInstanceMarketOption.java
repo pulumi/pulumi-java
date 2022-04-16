@@ -22,10 +22,10 @@ public final class GetLaunchTemplateInstanceMarketOption {
         this.spotOptions = spotOptions;
     }
 
-    public String getMarketType() {
+    public String marketType() {
         return this.marketType;
     }
-    public List<GetLaunchTemplateInstanceMarketOptionSpotOption> getSpotOptions() {
+    public List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions() {
         return this.spotOptions;
     }
 

@@ -15,6 +15,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.SkuArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -33,8 +34,8 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="computeName")
       private final @Nullable Output<String> computeName;
 
-    public Output<String> getComputeName() {
-        return this.computeName == null ? Output.empty() : this.computeName;
+    public Output<String> computeName() {
+        return this.computeName == null ? Codegen.empty() : this.computeName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
-    public Output<Object> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Object> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,8 +89,8 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -134,14 +135,14 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     }
 
     private MachineLearningComputeArgs() {
-        this.computeName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.computeName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder computeName(@Nullable String computeName) {
-            this.computeName = Output.ofNullable(computeName);
+            this.computeName = Codegen.ofNullable(computeName);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -191,7 +192,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -199,7 +200,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<Object> properties) {
@@ -207,7 +208,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder properties(@Nullable Object properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -223,7 +224,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -231,7 +232,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

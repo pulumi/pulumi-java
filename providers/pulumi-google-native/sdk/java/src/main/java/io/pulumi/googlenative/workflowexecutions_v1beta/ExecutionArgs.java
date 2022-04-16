@@ -5,6 +5,7 @@ package io.pulumi.googlenative.workflowexecutions_v1beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.workflowexecutions_v1beta.enums.ExecutionCallLogLevel;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="argument")
       private final @Nullable Output<String> argument;
 
-    public Output<String> getArgument() {
-        return this.argument == null ? Output.empty() : this.argument;
+    public Output<String> argument() {
+        return this.argument == null ? Codegen.empty() : this.argument;
     }
 
     /**
@@ -33,28 +34,28 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="callLogLevel")
       private final @Nullable Output<ExecutionCallLogLevel> callLogLevel;
 
-    public Output<ExecutionCallLogLevel> getCallLogLevel() {
-        return this.callLogLevel == null ? Output.empty() : this.callLogLevel;
+    public Output<ExecutionCallLogLevel> callLogLevel() {
+        return this.callLogLevel == null ? Codegen.empty() : this.callLogLevel;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="workflowId", required=true)
       private final Output<String> workflowId;
 
-    public Output<String> getWorkflowId() {
+    public Output<String> workflowId() {
         return this.workflowId;
     }
 
@@ -72,11 +73,11 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExecutionArgs() {
-        this.argument = Output.empty();
-        this.callLogLevel = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.workflowId = Output.empty();
+        this.argument = Codegen.empty();
+        this.callLogLevel = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.workflowId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder argument(@Nullable String argument) {
-            this.argument = Output.ofNullable(argument);
+            this.argument = Codegen.ofNullable(argument);
             return this;
         }
         public Builder callLogLevel(@Nullable Output<ExecutionCallLogLevel> callLogLevel) {
@@ -120,7 +121,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder callLogLevel(@Nullable ExecutionCallLogLevel callLogLevel) {
-            this.callLogLevel = Output.ofNullable(callLogLevel);
+            this.callLogLevel = Codegen.ofNullable(callLogLevel);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -128,7 +129,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -136,7 +137,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder workflowId(Output<String> workflowId) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -37,7 +38,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     @Import(name="maxCount", required=true)
       private final Output<Integer> maxCount;
 
-    public Output<Integer> getMaxCount() {
+    public Output<Integer> maxCount() {
         return this.maxCount;
     }
 
@@ -48,7 +49,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     @Import(name="minCount", required=true)
       private final Output<Integer> minCount;
 
-    public Output<Integer> getMinCount() {
+    public Output<Integer> minCount() {
         return this.minCount;
     }
 
@@ -59,7 +60,7 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     @Import(name="scaleIncrement", required=true)
       private final Output<Integer> scaleIncrement;
 
-    public Output<Integer> getScaleIncrement() {
+    public Output<Integer> scaleIncrement() {
         return this.scaleIncrement;
     }
 
@@ -75,10 +76,10 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     }
 
     private AddRemoveReplicaScalingMechanismArgs() {
-        this.kind = Output.empty();
-        this.maxCount = Output.empty();
-        this.minCount = Output.empty();
-        this.scaleIncrement = Output.empty();
+        this.kind = Codegen.empty();
+        this.maxCount = Codegen.empty();
+        this.minCount = Codegen.empty();
+        this.scaleIncrement = Codegen.empty();
     }
 
     public static Builder builder() {

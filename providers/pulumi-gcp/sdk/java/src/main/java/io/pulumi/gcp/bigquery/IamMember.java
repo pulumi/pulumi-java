@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.IamMemberArgs;
 import io.pulumi.gcp.bigquery.inputs.IamMemberState;
@@ -74,13 +75,13 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ IamMemberCondition> getCondition() {
+    public Output</* @Nullable */ IamMemberCondition> condition() {
         return this.condition;
     }
     @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -94,13 +95,13 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -116,7 +117,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -134,13 +135,13 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     @Export(name="tableId", type=String.class, parameters={})
     private Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 
@@ -166,7 +167,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamMember(String name, IamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/iamMember:IamMember", name, args == null ? IamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/iamMember:IamMember", name, args == null ? IamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamMember(String name, Output<String> id, @Nullable IamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

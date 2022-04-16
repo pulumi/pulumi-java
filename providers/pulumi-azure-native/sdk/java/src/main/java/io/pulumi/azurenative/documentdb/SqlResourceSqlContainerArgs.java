@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.SqlContainerResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,8 +36,8 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+    public Output<String> containerName() {
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -57,8 +58,8 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Output<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<CreateUpdateOptionsArgs> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="resource", required=true)
       private final Output<SqlContainerResourceArgs> resource;
 
-    public Output<SqlContainerResourceArgs> getResource() {
+    public Output<SqlContainerResourceArgs> resource() {
         return this.resource;
     }
 
@@ -90,7 +91,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,8 +102,8 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SqlResourceSqlContainerArgs(
@@ -125,14 +126,14 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
     }
 
     private SqlResourceSqlContainerArgs() {
-        this.accountName = Output.empty();
-        this.containerName = Output.empty();
-        this.databaseName = Output.empty();
-        this.location = Output.empty();
-        this.options = Output.empty();
-        this.resource = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.options = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -198,7 +199,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
@@ -206,7 +207,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder resource(Output<SqlContainerResourceArgs> resource) {
@@ -230,7 +231,7 @@ public final class SqlResourceSqlContainerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SqlResourceSqlContainerArgs build() {
             return new SqlResourceSqlContainerArgs(accountName, containerName, databaseName, location, options, resource, resourceGroupName, tags);

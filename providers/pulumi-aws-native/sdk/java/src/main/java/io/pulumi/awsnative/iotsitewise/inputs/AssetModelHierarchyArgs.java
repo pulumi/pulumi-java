@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
     @Import(name="childAssetModelId", required=true)
       private final Output<String> childAssetModelId;
 
-    public Output<String> getChildAssetModelId() {
+    public Output<String> childAssetModelId() {
         return this.childAssetModelId;
     }
 
@@ -35,7 +36,7 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
     @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
 
-    public Output<String> getLogicalId() {
+    public Output<String> logicalId() {
         return this.logicalId;
     }
 
@@ -46,7 +47,7 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,9 +61,9 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
     }
 
     private AssetModelHierarchyArgs() {
-        this.childAssetModelId = Output.empty();
-        this.logicalId = Output.empty();
-        this.name = Output.empty();
+        this.childAssetModelId = Codegen.empty();
+        this.logicalId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

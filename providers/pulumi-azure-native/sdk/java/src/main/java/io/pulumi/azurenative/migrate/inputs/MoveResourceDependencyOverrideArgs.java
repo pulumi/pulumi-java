@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+    public Output<String> targetId() {
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     public MoveResourceDependencyOverrideArgs(
@@ -49,8 +50,8 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
     }
 
     private MoveResourceDependencyOverrideArgs() {
-        this.id = Output.empty();
-        this.targetId = Output.empty();
+        this.id = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder targetId(@Nullable Output<String> targetId) {
@@ -88,7 +89,7 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }        public MoveResourceDependencyOverrideArgs build() {
             return new MoveResourceDependencyOverrideArgs(id, targetId);

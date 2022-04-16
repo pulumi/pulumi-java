@@ -19,21 +19,21 @@ public final class LicenseConsumptionConfiguration extends io.pulumi.resources.I
     @Import(name="borrowConfiguration")
       private final @Nullable LicenseBorrowConfiguration borrowConfiguration;
 
-    public Optional<LicenseBorrowConfiguration> getBorrowConfiguration() {
+    public Optional<LicenseBorrowConfiguration> borrowConfiguration() {
         return this.borrowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.borrowConfiguration);
     }
 
     @Import(name="provisionalConfiguration")
       private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
 
-    public Optional<LicenseProvisionalConfiguration> getProvisionalConfiguration() {
+    public Optional<LicenseProvisionalConfiguration> provisionalConfiguration() {
         return this.provisionalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.provisionalConfiguration);
     }
 
     @Import(name="renewType")
       private final @Nullable String renewType;
 
-    public Optional<String> getRenewType() {
+    public Optional<String> renewType() {
         return this.renewType == null ? Optional.empty() : Optional.ofNullable(this.renewType);
     }
 

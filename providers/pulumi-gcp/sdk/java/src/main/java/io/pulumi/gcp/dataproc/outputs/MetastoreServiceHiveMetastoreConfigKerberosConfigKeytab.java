@@ -26,7 +26,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
      * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
      * 
     */
-    public String getCloudSecret() {
+    public String cloudSecret() {
         return this.cloudSecret;
     }
 

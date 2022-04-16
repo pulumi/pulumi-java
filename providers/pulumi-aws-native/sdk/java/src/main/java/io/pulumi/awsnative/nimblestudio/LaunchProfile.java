@@ -10,6 +10,7 @@ import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      * @return <p>The description.</p>
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -47,13 +48,13 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      *             These subnets must support the specified instance types. </p>
      * 
      */
-    public Output<List<String>> getEc2SubnetIds() {
+    public Output<List<String>> ec2SubnetIds() {
         return this.ec2SubnetIds;
     }
     @Export(name="launchProfileId", type=String.class, parameters={})
     private Output<String> launchProfileId;
 
-    public Output<String> getLaunchProfileId() {
+    public Output<String> launchProfileId() {
         return this.launchProfileId;
     }
     /**
@@ -69,7 +70,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      *             version is "2021-03-31".</p>
      * 
      */
-    public Output<List<String>> getLaunchProfileProtocolVersions() {
+    public Output<List<String>> launchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
     }
     /**
@@ -83,13 +84,13 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      * @return <p>The name for the launch profile.</p>
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="streamConfiguration", type=LaunchProfileStreamConfiguration.class, parameters={})
     private Output<LaunchProfileStreamConfiguration> streamConfiguration;
 
-    public Output<LaunchProfileStreamConfiguration> getStreamConfiguration() {
+    public Output<LaunchProfileStreamConfiguration> streamConfiguration() {
         return this.streamConfiguration;
     }
     /**
@@ -105,7 +106,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      *             launch profile.</p>
      * 
      */
-    public Output<List<String>> getStudioComponentIds() {
+    public Output<List<String>> studioComponentIds() {
         return this.studioComponentIds;
     }
     /**
@@ -119,13 +120,13 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      * @return <p>The studio ID. </p>
      * 
      */
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
     @Export(name="tags", type=LaunchProfileTags.class, parameters={})
     private Output</* @Nullable */ LaunchProfileTags> tags;
 
-    public Output</* @Nullable */ LaunchProfileTags> getTags() {
+    public Output</* @Nullable */ LaunchProfileTags> tags() {
         return this.tags;
     }
 
@@ -151,7 +152,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LaunchProfile(String name, LaunchProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:nimblestudio:LaunchProfile", name, args == null ? LaunchProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:nimblestudio:LaunchProfile", name, args == null ? LaunchProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LaunchProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

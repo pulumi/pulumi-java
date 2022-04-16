@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.LinuxConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
-        return this.adminUsername == null ? Output.empty() : this.adminUsername;
+    public Output<String> adminUsername() {
+        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
-        return this.customData == null ? Output.empty() : this.customData;
+    public Output<String> customData() {
+        return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customDataRequired")
       private final @Nullable Output<Boolean> customDataRequired;
 
-    public Output<Boolean> getCustomDataRequired() {
-        return this.customDataRequired == null ? Output.empty() : this.customDataRequired;
+    public Output<Boolean> customDataRequired() {
+        return this.customDataRequired == null ? Codegen.empty() : this.customDataRequired;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linuxConfiguration")
       private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
-        return this.linuxConfiguration == null ? Output.empty() : this.linuxConfiguration;
+    public Output<LinuxConfigurationArgs> linuxConfiguration() {
+        return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
     }
 
     public OsProfileArgs(
@@ -71,15 +72,15 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
         this.adminUsername = adminUsername;
         this.customData = customData;
-        this.customDataRequired = customDataRequired == null ? Output.ofNullable(true) : customDataRequired;
+        this.customDataRequired = customDataRequired == null ? Codegen.ofNullable(true) : customDataRequired;
         this.linuxConfiguration = linuxConfiguration;
     }
 
     private OsProfileArgs() {
-        this.adminUsername = Output.empty();
-        this.customData = Output.empty();
-        this.customDataRequired = Output.empty();
-        this.linuxConfiguration = Output.empty();
+        this.adminUsername = Codegen.empty();
+        this.customData = Codegen.empty();
+        this.customDataRequired = Codegen.empty();
+        this.linuxConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Output.ofNullable(adminUsername);
+            this.adminUsername = Codegen.ofNullable(adminUsername);
             return this;
         }
         public Builder customData(@Nullable Output<String> customData) {
@@ -121,7 +122,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customData(@Nullable String customData) {
-            this.customData = Output.ofNullable(customData);
+            this.customData = Codegen.ofNullable(customData);
             return this;
         }
         public Builder customDataRequired(@Nullable Output<Boolean> customDataRequired) {
@@ -129,7 +130,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDataRequired(@Nullable Boolean customDataRequired) {
-            this.customDataRequired = Output.ofNullable(customDataRequired);
+            this.customDataRequired = Codegen.ofNullable(customDataRequired);
             return this;
         }
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
@@ -137,7 +138,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
+            this.linuxConfiguration = Codegen.ofNullable(linuxConfiguration);
             return this;
         }        public OsProfileArgs build() {
             return new OsProfileArgs(adminUsername, customData, customDataRequired, linuxConfiguration);

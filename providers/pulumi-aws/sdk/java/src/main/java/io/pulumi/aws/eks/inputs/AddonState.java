@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
-    public Output<String> getAddonName() {
-        return this.addonName == null ? Output.empty() : this.addonName;
+    public Output<String> addonName() {
+        return this.addonName == null ? Codegen.empty() : this.addonName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="addonVersion")
       private final @Nullable Output<String> addonVersion;
 
-    public Output<String> getAddonVersion() {
-        return this.addonVersion == null ? Output.empty() : this.addonVersion;
+    public Output<String> addonVersion() {
+        return this.addonVersion == null ? Codegen.empty() : this.addonVersion;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="modifiedAt")
       private final @Nullable Output<String> modifiedAt;
 
-    public Output<String> getModifiedAt() {
-        return this.modifiedAt == null ? Output.empty() : this.modifiedAt;
+    public Output<String> modifiedAt() {
+        return this.modifiedAt == null ? Codegen.empty() : this.modifiedAt;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolveConflicts")
       private final @Nullable Output<String> resolveConflicts;
 
-    public Output<String> getResolveConflicts() {
-        return this.resolveConflicts == null ? Output.empty() : this.resolveConflicts;
+    public Output<String> resolveConflicts() {
+        return this.resolveConflicts == null ? Codegen.empty() : this.resolveConflicts;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountRoleArn")
       private final @Nullable Output<String> serviceAccountRoleArn;
 
-    public Output<String> getServiceAccountRoleArn() {
-        return this.serviceAccountRoleArn == null ? Output.empty() : this.serviceAccountRoleArn;
+    public Output<String> serviceAccountRoleArn() {
+        return this.serviceAccountRoleArn == null ? Codegen.empty() : this.serviceAccountRoleArn;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public AddonState(
@@ -158,16 +159,16 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddonState() {
-        this.addonName = Output.empty();
-        this.addonVersion = Output.empty();
-        this.arn = Output.empty();
-        this.clusterName = Output.empty();
-        this.createdAt = Output.empty();
-        this.modifiedAt = Output.empty();
-        this.resolveConflicts = Output.empty();
-        this.serviceAccountRoleArn = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.addonName = Codegen.empty();
+        this.addonVersion = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.modifiedAt = Codegen.empty();
+        this.resolveConflicts = Codegen.empty();
+        this.serviceAccountRoleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Output.ofNullable(addonName);
+            this.addonName = Codegen.ofNullable(addonName);
             return this;
         }
         public Builder addonVersion(@Nullable Output<String> addonVersion) {
@@ -221,7 +222,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addonVersion(@Nullable String addonVersion) {
-            this.addonVersion = Output.ofNullable(addonVersion);
+            this.addonVersion = Codegen.ofNullable(addonVersion);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -229,7 +230,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -237,7 +238,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder createdAt(@Nullable Output<String> createdAt) {
@@ -245,7 +246,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
@@ -253,7 +254,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = Output.ofNullable(modifiedAt);
+            this.modifiedAt = Codegen.ofNullable(modifiedAt);
             return this;
         }
         public Builder resolveConflicts(@Nullable Output<String> resolveConflicts) {
@@ -261,7 +262,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resolveConflicts(@Nullable String resolveConflicts) {
-            this.resolveConflicts = Output.ofNullable(resolveConflicts);
+            this.resolveConflicts = Codegen.ofNullable(resolveConflicts);
             return this;
         }
         public Builder serviceAccountRoleArn(@Nullable Output<String> serviceAccountRoleArn) {
@@ -269,7 +270,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
-            this.serviceAccountRoleArn = Output.ofNullable(serviceAccountRoleArn);
+            this.serviceAccountRoleArn = Codegen.ofNullable(serviceAccountRoleArn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -277,7 +278,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -285,7 +286,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public AddonState build() {
             return new AddonState(addonName, addonVersion, arn, clusterName, createdAt, modifiedAt, resolveConflicts, serviceAccountRoleArn, tags, tagsAll);

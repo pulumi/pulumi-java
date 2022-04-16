@@ -5,6 +5,7 @@ package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="carrierAccountNumber", required=true)
       private final Output<String> carrierAccountNumber;
 
-    public Output<String> getCarrierAccountNumber() {
+    public Output<String> carrierAccountNumber() {
         return this.carrierAccountNumber;
     }
 
@@ -35,7 +36,7 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="carrierName", required=true)
       private final Output<String> carrierName;
 
-    public Output<String> getCarrierName() {
+    public Output<String> carrierName() {
         return this.carrierName;
     }
 
@@ -47,8 +48,8 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReturnShippingArgs() {
-        this.carrierAccountNumber = Output.empty();
-        this.carrierName = Output.empty();
+        this.carrierAccountNumber = Codegen.empty();
+        this.carrierName = Codegen.empty();
     }
 
     public static Builder builder() {

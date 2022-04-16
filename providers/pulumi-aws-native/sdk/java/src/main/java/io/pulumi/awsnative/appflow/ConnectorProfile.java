@@ -11,6 +11,7 @@ import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @return Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
      * 
      */
-    public Output<ConnectorProfileConnectionMode> getConnectionMode() {
+    public Output<ConnectorProfileConnectionMode> connectionMode() {
         return this.connectionMode;
     }
     /**
@@ -45,7 +46,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @return Unique identifier for connector profile resources
      * 
      */
-    public Output<String> getConnectorProfileArn() {
+    public Output<String> connectorProfileArn() {
         return this.connectorProfileArn;
     }
     /**
@@ -59,7 +60,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @return Connector specific configurations needed to create connector profile
      * 
      */
-    public Output</* @Nullable */ ConnectorProfileConfig> getConnectorProfileConfig() {
+    public Output</* @Nullable */ ConnectorProfileConfig> connectorProfileConfig() {
         return this.connectorProfileConfig;
     }
     /**
@@ -73,7 +74,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @return The maximum number of items to retrieve in a single batch.
      * 
      */
-    public Output<String> getConnectorProfileName() {
+    public Output<String> connectorProfileName() {
         return this.connectorProfileName;
     }
     /**
@@ -87,7 +88,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @return List of Saas providers that need connector profile to be created
      * 
      */
-    public Output<ConnectorProfileConnectorType> getConnectorType() {
+    public Output<ConnectorProfileConnectorType> connectorType() {
         return this.connectorType;
     }
     /**
@@ -101,7 +102,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @return A unique Arn for Connector-Profile resource
      * 
      */
-    public Output<String> getCredentialsArn() {
+    public Output<String> credentialsArn() {
         return this.credentialsArn;
     }
     /**
@@ -115,7 +116,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    public Output</* @Nullable */ String> getKMSArn() {
+    public Output</* @Nullable */ String> kMSArn() {
         return this.kMSArn;
     }
 
@@ -141,7 +142,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectorProfile(String name, ConnectorProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appflow:ConnectorProfile", name, args == null ? ConnectorProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:appflow:ConnectorProfile", name, args == null ? ConnectorProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectorProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

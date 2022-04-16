@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeName", required=true)
       private final Output<String> nodeName;
 
-    public Output<String> getNodeName() {
+    public Output<String> nodeName() {
         return this.nodeName;
     }
 
@@ -33,7 +34,7 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeInputArgs() {
-        this.nodeName = Output.empty();
+        this.nodeName = Codegen.empty();
     }
 
     public static Builder builder() {

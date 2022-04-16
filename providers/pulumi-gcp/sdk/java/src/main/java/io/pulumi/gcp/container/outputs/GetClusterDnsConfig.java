@@ -23,13 +23,13 @@ public final class GetClusterDnsConfig {
         this.clusterDnsScope = clusterDnsScope;
     }
 
-    public String getClusterDns() {
+    public String clusterDns() {
         return this.clusterDns;
     }
-    public String getClusterDnsDomain() {
+    public String clusterDnsDomain() {
         return this.clusterDnsDomain;
     }
-    public String getClusterDnsScope() {
+    public String clusterDnsScope() {
         return this.clusterDnsScope;
     }
 

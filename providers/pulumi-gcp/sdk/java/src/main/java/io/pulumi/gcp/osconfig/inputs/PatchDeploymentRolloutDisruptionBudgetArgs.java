@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
     @Import(name="fixed")
       private final @Nullable Output<Integer> fixed;
 
-    public Output<Integer> getFixed() {
-        return this.fixed == null ? Output.empty() : this.fixed;
+    public Output<Integer> fixed() {
+        return this.fixed == null ? Codegen.empty() : this.fixed;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
     @Import(name="percentage")
       private final @Nullable Output<Integer> percentage;
 
-    public Output<Integer> getPercentage() {
-        return this.percentage == null ? Output.empty() : this.percentage;
+    public Output<Integer> percentage() {
+        return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 
     public PatchDeploymentRolloutDisruptionBudgetArgs(
@@ -44,8 +45,8 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
     }
 
     private PatchDeploymentRolloutDisruptionBudgetArgs() {
-        this.fixed = Output.empty();
-        this.percentage = Output.empty();
+        this.fixed = Codegen.empty();
+        this.percentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
             return this;
         }
         public Builder fixed(@Nullable Integer fixed) {
-            this.fixed = Output.ofNullable(fixed);
+            this.fixed = Codegen.ofNullable(fixed);
             return this;
         }
         public Builder percentage(@Nullable Output<Integer> percentage) {
@@ -83,7 +84,7 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
             return this;
         }
         public Builder percentage(@Nullable Integer percentage) {
-            this.percentage = Output.ofNullable(percentage);
+            this.percentage = Codegen.ofNullable(percentage);
             return this;
         }        public PatchDeploymentRolloutDisruptionBudgetArgs build() {
             return new PatchDeploymentRolloutDisruptionBudgetArgs(fixed, percentage);

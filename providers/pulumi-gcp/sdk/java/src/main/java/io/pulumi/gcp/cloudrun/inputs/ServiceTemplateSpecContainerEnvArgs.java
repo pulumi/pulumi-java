@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
     @Import(name="valueFrom")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
 
-    public Output<ServiceTemplateSpecContainerEnvValueFromArgs> getValueFrom() {
-        return this.valueFrom == null ? Output.empty() : this.valueFrom;
+    public Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom() {
+        return this.valueFrom == null ? Codegen.empty() : this.valueFrom;
     }
 
     public ServiceTemplateSpecContainerEnvArgs(
@@ -66,9 +67,9 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
     }
 
     private ServiceTemplateSpecContainerEnvArgs() {
-        this.name = Output.empty();
-        this.value = Output.empty();
-        this.valueFrom = Output.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
+        this.valueFrom = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -108,7 +109,7 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder valueFrom(@Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
@@ -116,7 +117,7 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
             return this;
         }
         public Builder valueFrom(@Nullable ServiceTemplateSpecContainerEnvValueFromArgs valueFrom) {
-            this.valueFrom = Output.ofNullable(valueFrom);
+            this.valueFrom = Codegen.ofNullable(valueFrom);
             return this;
         }        public ServiceTemplateSpecContainerEnvArgs build() {
             return new ServiceTemplateSpecContainerEnvArgs(name, value, valueFrom);

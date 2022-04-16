@@ -10,6 +10,7 @@ import io.pulumi.awsnative.nimblestudio.outputs.StreamingImageTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @return <p>A human-readable description of the streaming image.</p>
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -45,13 +46,13 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @return <p>The ID of an EC2 machine image with which to create this streaming image.</p>
      * 
      */
-    public Output<String> getEc2ImageId() {
+    public Output<String> ec2ImageId() {
         return this.ec2ImageId;
     }
     @Export(name="encryptionConfiguration", type=StreamingImageEncryptionConfiguration.class, parameters={})
     private Output<StreamingImageEncryptionConfiguration> encryptionConfiguration;
 
-    public Output<StreamingImageEncryptionConfiguration> getEncryptionConfiguration() {
+    public Output<StreamingImageEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     /**
@@ -65,7 +66,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @return <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
      * 
      */
-    public Output<List<String>> getEulaIds() {
+    public Output<List<String>> eulaIds() {
         return this.eulaIds;
     }
     /**
@@ -79,7 +80,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @return <p>A friendly name for a streaming image resource.</p>
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -93,7 +94,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @return <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -107,13 +108,13 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @return <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
      * 
      */
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     @Export(name="streamingImageId", type=String.class, parameters={})
     private Output<String> streamingImageId;
 
-    public Output<String> getStreamingImageId() {
+    public Output<String> streamingImageId() {
         return this.streamingImageId;
     }
     /**
@@ -127,13 +128,13 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @return <p>The studioId. </p>
      * 
      */
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
     @Export(name="tags", type=StreamingImageTags.class, parameters={})
     private Output</* @Nullable */ StreamingImageTags> tags;
 
-    public Output</* @Nullable */ StreamingImageTags> getTags() {
+    public Output</* @Nullable */ StreamingImageTags> tags() {
         return this.tags;
     }
 
@@ -159,7 +160,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StreamingImage(String name, StreamingImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:nimblestudio:StreamingImage", name, args == null ? StreamingImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:nimblestudio:StreamingImage", name, args == null ? StreamingImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StreamingImage(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

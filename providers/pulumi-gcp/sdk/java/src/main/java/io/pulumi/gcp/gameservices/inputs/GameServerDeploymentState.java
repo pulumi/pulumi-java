@@ -5,6 +5,7 @@ package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
-        return this.deploymentId == null ? Output.empty() : this.deploymentId;
+    public Output<String> deploymentId() {
+        return this.deploymentId == null ? Codegen.empty() : this.deploymentId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public GameServerDeploymentState(
@@ -101,12 +102,12 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
     }
 
     private GameServerDeploymentState() {
-        this.deploymentId = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.deploymentId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder deploymentId(@Nullable String deploymentId) {
-            this.deploymentId = Output.ofNullable(deploymentId);
+            this.deploymentId = Codegen.ofNullable(deploymentId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -152,7 +153,7 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -160,7 +161,7 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -168,7 +169,7 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -176,7 +177,7 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -184,7 +185,7 @@ public final class GameServerDeploymentState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public GameServerDeploymentState build() {
             return new GameServerDeploymentState(deploymentId, description, labels, location, name, project);

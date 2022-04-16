@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetArgs extends io.pulumi.re
     @Import(name="ipSet", required=true)
       private final Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet;
 
-    public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> getIpSet() {
+    public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet() {
         return this.ipSet;
     }
 
@@ -32,7 +33,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetArgs extends io.pulumi.re
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -44,8 +45,8 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetArgs extends io.pulumi.re
     }
 
     private RuleGroupRuleGroupRuleVariablesIpSetArgs() {
-        this.ipSet = Output.empty();
-        this.key = Output.empty();
+        this.ipSet = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {

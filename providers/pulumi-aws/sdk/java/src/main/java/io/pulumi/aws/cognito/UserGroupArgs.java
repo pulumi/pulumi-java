@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="precedence")
       private final @Nullable Output<Integer> precedence;
 
-    public Output<Integer> getPrecedence() {
-        return this.precedence == null ? Output.empty() : this.precedence;
+    public Output<Integer> precedence() {
+        return this.precedence == null ? Codegen.empty() : this.precedence;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -84,11 +85,11 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserGroupArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.precedence = Output.empty();
-        this.roleArn = Output.empty();
-        this.userPoolId = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.precedence = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -132,7 +133,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder precedence(@Nullable Output<Integer> precedence) {
@@ -140,7 +141,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder precedence(@Nullable Integer precedence) {
-            this.precedence = Output.ofNullable(precedence);
+            this.precedence = Codegen.ofNullable(precedence);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -148,7 +149,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder userPoolId(Output<String> userPoolId) {

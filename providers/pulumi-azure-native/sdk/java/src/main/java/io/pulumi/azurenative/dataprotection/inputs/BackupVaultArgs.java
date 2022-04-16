@@ -6,6 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.StorageSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSettings", required=true)
       private final Output<List<StorageSettingArgs>> storageSettings;
 
-    public Output<List<StorageSettingArgs>> getStorageSettings() {
+    public Output<List<StorageSettingArgs>> storageSettings() {
         return this.storageSettings;
     }
 
@@ -34,7 +35,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupVaultArgs() {
-        this.storageSettings = Output.empty();
+        this.storageSettings = Codegen.empty();
     }
 
     public static Builder builder() {

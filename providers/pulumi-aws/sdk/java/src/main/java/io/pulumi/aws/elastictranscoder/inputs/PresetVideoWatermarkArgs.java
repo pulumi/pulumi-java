@@ -5,6 +5,7 @@ package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="horizontalAlign")
       private final @Nullable Output<String> horizontalAlign;
 
-    public Output<String> getHorizontalAlign() {
-        return this.horizontalAlign == null ? Output.empty() : this.horizontalAlign;
+    public Output<String> horizontalAlign() {
+        return this.horizontalAlign == null ? Codegen.empty() : this.horizontalAlign;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="horizontalOffset")
       private final @Nullable Output<String> horizontalOffset;
 
-    public Output<String> getHorizontalOffset() {
-        return this.horizontalOffset == null ? Output.empty() : this.horizontalOffset;
+    public Output<String> horizontalOffset() {
+        return this.horizontalOffset == null ? Codegen.empty() : this.horizontalOffset;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="maxHeight")
       private final @Nullable Output<String> maxHeight;
 
-    public Output<String> getMaxHeight() {
-        return this.maxHeight == null ? Output.empty() : this.maxHeight;
+    public Output<String> maxHeight() {
+        return this.maxHeight == null ? Codegen.empty() : this.maxHeight;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="maxWidth")
       private final @Nullable Output<String> maxWidth;
 
-    public Output<String> getMaxWidth() {
-        return this.maxWidth == null ? Output.empty() : this.maxWidth;
+    public Output<String> maxWidth() {
+        return this.maxWidth == null ? Codegen.empty() : this.maxWidth;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="opacity")
       private final @Nullable Output<String> opacity;
 
-    public Output<String> getOpacity() {
-        return this.opacity == null ? Output.empty() : this.opacity;
+    public Output<String> opacity() {
+        return this.opacity == null ? Codegen.empty() : this.opacity;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="sizingPolicy")
       private final @Nullable Output<String> sizingPolicy;
 
-    public Output<String> getSizingPolicy() {
-        return this.sizingPolicy == null ? Output.empty() : this.sizingPolicy;
+    public Output<String> sizingPolicy() {
+        return this.sizingPolicy == null ? Codegen.empty() : this.sizingPolicy;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="verticalAlign")
       private final @Nullable Output<String> verticalAlign;
 
-    public Output<String> getVerticalAlign() {
-        return this.verticalAlign == null ? Output.empty() : this.verticalAlign;
+    public Output<String> verticalAlign() {
+        return this.verticalAlign == null ? Codegen.empty() : this.verticalAlign;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     @Import(name="verticalOffset")
       private final @Nullable Output<String> verticalOffset;
 
-    public Output<String> getVerticalOffset() {
-        return this.verticalOffset == null ? Output.empty() : this.verticalOffset;
+    public Output<String> verticalOffset() {
+        return this.verticalOffset == null ? Codegen.empty() : this.verticalOffset;
     }
 
     public PresetVideoWatermarkArgs(
@@ -148,16 +149,16 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
     }
 
     private PresetVideoWatermarkArgs() {
-        this.horizontalAlign = Output.empty();
-        this.horizontalOffset = Output.empty();
-        this.id = Output.empty();
-        this.maxHeight = Output.empty();
-        this.maxWidth = Output.empty();
-        this.opacity = Output.empty();
-        this.sizingPolicy = Output.empty();
-        this.target = Output.empty();
-        this.verticalAlign = Output.empty();
-        this.verticalOffset = Output.empty();
+        this.horizontalAlign = Codegen.empty();
+        this.horizontalOffset = Codegen.empty();
+        this.id = Codegen.empty();
+        this.maxHeight = Codegen.empty();
+        this.maxWidth = Codegen.empty();
+        this.opacity = Codegen.empty();
+        this.sizingPolicy = Codegen.empty();
+        this.target = Codegen.empty();
+        this.verticalAlign = Codegen.empty();
+        this.verticalOffset = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -203,7 +204,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder horizontalAlign(@Nullable String horizontalAlign) {
-            this.horizontalAlign = Output.ofNullable(horizontalAlign);
+            this.horizontalAlign = Codegen.ofNullable(horizontalAlign);
             return this;
         }
         public Builder horizontalOffset(@Nullable Output<String> horizontalOffset) {
@@ -211,7 +212,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder horizontalOffset(@Nullable String horizontalOffset) {
-            this.horizontalOffset = Output.ofNullable(horizontalOffset);
+            this.horizontalOffset = Codegen.ofNullable(horizontalOffset);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -219,7 +220,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder maxHeight(@Nullable Output<String> maxHeight) {
@@ -227,7 +228,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder maxHeight(@Nullable String maxHeight) {
-            this.maxHeight = Output.ofNullable(maxHeight);
+            this.maxHeight = Codegen.ofNullable(maxHeight);
             return this;
         }
         public Builder maxWidth(@Nullable Output<String> maxWidth) {
@@ -235,7 +236,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder maxWidth(@Nullable String maxWidth) {
-            this.maxWidth = Output.ofNullable(maxWidth);
+            this.maxWidth = Codegen.ofNullable(maxWidth);
             return this;
         }
         public Builder opacity(@Nullable Output<String> opacity) {
@@ -243,7 +244,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder opacity(@Nullable String opacity) {
-            this.opacity = Output.ofNullable(opacity);
+            this.opacity = Codegen.ofNullable(opacity);
             return this;
         }
         public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
@@ -251,7 +252,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
-            this.sizingPolicy = Output.ofNullable(sizingPolicy);
+            this.sizingPolicy = Codegen.ofNullable(sizingPolicy);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -259,7 +260,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder verticalAlign(@Nullable Output<String> verticalAlign) {
@@ -267,7 +268,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder verticalAlign(@Nullable String verticalAlign) {
-            this.verticalAlign = Output.ofNullable(verticalAlign);
+            this.verticalAlign = Codegen.ofNullable(verticalAlign);
             return this;
         }
         public Builder verticalOffset(@Nullable Output<String> verticalOffset) {
@@ -275,7 +276,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder verticalOffset(@Nullable String verticalOffset) {
-            this.verticalOffset = Output.ofNullable(verticalOffset);
+            this.verticalOffset = Codegen.ofNullable(verticalOffset);
             return this;
         }        public PresetVideoWatermarkArgs build() {
             return new PresetVideoWatermarkArgs(horizontalAlign, horizontalOffset, id, maxHeight, maxWidth, opacity, sizingPolicy, target, verticalAlign, verticalOffset);

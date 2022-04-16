@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @return Authorization type of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getAuthType() {
+    public Output</* @Nullable */ String> authType() {
         return this.authType;
     }
     /**
@@ -55,7 +56,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @return Category of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getCategory() {
+    public Output</* @Nullable */ String> category() {
         return this.category;
     }
     /**
@@ -69,7 +70,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @return Friendly name of the workspace connection.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @return Target of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getTarget() {
+    public Output</* @Nullable */ String> target() {
         return this.target;
     }
     /**
@@ -97,7 +98,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @return Resource type of workspace connection.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -111,7 +112,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @return Value details of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
     /**
@@ -125,7 +126,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @return format for the workspace connection value
      * 
      */
-    public Output</* @Nullable */ String> getValueFormat() {
+    public Output</* @Nullable */ String> valueFormat() {
         return this.valueFormat;
     }
 
@@ -151,7 +152,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkspaceConnection(String name, WorkspaceConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:WorkspaceConnection", name, args == null ? WorkspaceConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningservices:WorkspaceConnection", name, args == null ? WorkspaceConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkspaceConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

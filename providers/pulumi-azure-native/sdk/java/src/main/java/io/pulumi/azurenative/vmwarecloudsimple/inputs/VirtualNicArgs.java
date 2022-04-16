@@ -8,6 +8,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.inputs.GuestOSNICCustomizationArg
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNetworkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,8 +31,8 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customization")
       private final @Nullable Output<GuestOSNICCustomizationArgs> customization;
 
-    public Output<GuestOSNICCustomizationArgs> getCustomization() {
-        return this.customization == null ? Output.empty() : this.customization;
+    public Output<GuestOSNICCustomizationArgs> customization() {
+        return this.customization == null ? Codegen.empty() : this.customization;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+    public Output<List<String>> ipAddresses() {
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="macAddress")
       private final @Nullable Output<String> macAddress;
 
-    public Output<String> getMacAddress() {
-        return this.macAddress == null ? Output.empty() : this.macAddress;
+    public Output<String> macAddress() {
+        return this.macAddress == null ? Codegen.empty() : this.macAddress;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
       private final Output<VirtualNetworkArgs> network;
 
-    public Output<VirtualNetworkArgs> getNetwork() {
+    public Output<VirtualNetworkArgs> network() {
         return this.network;
     }
 
@@ -74,7 +75,7 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nicType", required=true)
       private final Output<NICType> nicType;
 
-    public Output<NICType> getNicType() {
+    public Output<NICType> nicType() {
         return this.nicType;
     }
 
@@ -85,8 +86,8 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="powerOnBoot")
       private final @Nullable Output<Boolean> powerOnBoot;
 
-    public Output<Boolean> getPowerOnBoot() {
-        return this.powerOnBoot == null ? Output.empty() : this.powerOnBoot;
+    public Output<Boolean> powerOnBoot() {
+        return this.powerOnBoot == null ? Codegen.empty() : this.powerOnBoot;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNicId")
       private final @Nullable Output<String> virtualNicId;
 
-    public Output<String> getVirtualNicId() {
-        return this.virtualNicId == null ? Output.empty() : this.virtualNicId;
+    public Output<String> virtualNicId() {
+        return this.virtualNicId == null ? Codegen.empty() : this.virtualNicId;
     }
 
     public VirtualNicArgs(
@@ -118,13 +119,13 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualNicArgs() {
-        this.customization = Output.empty();
-        this.ipAddresses = Output.empty();
-        this.macAddress = Output.empty();
-        this.network = Output.empty();
-        this.nicType = Output.empty();
-        this.powerOnBoot = Output.empty();
-        this.virtualNicId = Output.empty();
+        this.customization = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
+        this.macAddress = Codegen.empty();
+        this.network = Codegen.empty();
+        this.nicType = Codegen.empty();
+        this.powerOnBoot = Codegen.empty();
+        this.virtualNicId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customization(@Nullable GuestOSNICCustomizationArgs customization) {
-            this.customization = Output.ofNullable(customization);
+            this.customization = Codegen.ofNullable(customization);
             return this;
         }
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
@@ -172,7 +173,7 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {
@@ -183,7 +184,7 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder macAddress(@Nullable String macAddress) {
-            this.macAddress = Output.ofNullable(macAddress);
+            this.macAddress = Codegen.ofNullable(macAddress);
             return this;
         }
         public Builder network(Output<VirtualNetworkArgs> network) {
@@ -207,7 +208,7 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder powerOnBoot(@Nullable Boolean powerOnBoot) {
-            this.powerOnBoot = Output.ofNullable(powerOnBoot);
+            this.powerOnBoot = Codegen.ofNullable(powerOnBoot);
             return this;
         }
         public Builder virtualNicId(@Nullable Output<String> virtualNicId) {
@@ -215,7 +216,7 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNicId(@Nullable String virtualNicId) {
-            this.virtualNicId = Output.ofNullable(virtualNicId);
+            this.virtualNicId = Codegen.ofNullable(virtualNicId);
             return this;
         }        public VirtualNicArgs build() {
             return new VirtualNicArgs(customization, ipAddresses, macAddress, network, nicType, powerOnBoot, virtualNicId);

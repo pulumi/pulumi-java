@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends io.pu
     @Import(name="script", required=true)
       private final Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script;
     }
 
@@ -36,8 +37,8 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends io.pu
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
+    public Output<Integer> timeoutSec() {
+        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
     public ClusterClusterConfigInitializationActionGetArgs(
@@ -48,8 +49,8 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends io.pu
     }
 
     private ClusterClusterConfigInitializationActionGetArgs() {
-        this.script = Output.empty();
-        this.timeoutSec = Output.empty();
+        this.script = Codegen.empty();
+        this.timeoutSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends io.pu
             return this;
         }
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Output.ofNullable(timeoutSec);
+            this.timeoutSec = Codegen.ofNullable(timeoutSec);
             return this;
         }        public ClusterClusterConfigInitializationActionGetArgs build() {
             return new ClusterClusterConfigInitializationActionGetArgs(script, timeoutSec);

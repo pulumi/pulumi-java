@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigAptArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigGooArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPostStepArgs;
@@ -29,8 +30,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="apt")
       private final @Nullable Output<PatchDeploymentPatchConfigAptArgs> apt;
 
-    public Output<PatchDeploymentPatchConfigAptArgs> getApt() {
-        return this.apt == null ? Output.empty() : this.apt;
+    public Output<PatchDeploymentPatchConfigAptArgs> apt() {
+        return this.apt == null ? Codegen.empty() : this.apt;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="goo")
       private final @Nullable Output<PatchDeploymentPatchConfigGooArgs> goo;
 
-    public Output<PatchDeploymentPatchConfigGooArgs> getGoo() {
-        return this.goo == null ? Output.empty() : this.goo;
+    public Output<PatchDeploymentPatchConfigGooArgs> goo() {
+        return this.goo == null ? Codegen.empty() : this.goo;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="postStep")
       private final @Nullable Output<PatchDeploymentPatchConfigPostStepArgs> postStep;
 
-    public Output<PatchDeploymentPatchConfigPostStepArgs> getPostStep() {
-        return this.postStep == null ? Output.empty() : this.postStep;
+    public Output<PatchDeploymentPatchConfigPostStepArgs> postStep() {
+        return this.postStep == null ? Codegen.empty() : this.postStep;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="preStep")
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepArgs> preStep;
 
-    public Output<PatchDeploymentPatchConfigPreStepArgs> getPreStep() {
-        return this.preStep == null ? Output.empty() : this.preStep;
+    public Output<PatchDeploymentPatchConfigPreStepArgs> preStep() {
+        return this.preStep == null ? Codegen.empty() : this.preStep;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="rebootConfig")
       private final @Nullable Output<String> rebootConfig;
 
-    public Output<String> getRebootConfig() {
-        return this.rebootConfig == null ? Output.empty() : this.rebootConfig;
+    public Output<String> rebootConfig() {
+        return this.rebootConfig == null ? Codegen.empty() : this.rebootConfig;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="windowsUpdate")
       private final @Nullable Output<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate;
 
-    public Output<PatchDeploymentPatchConfigWindowsUpdateArgs> getWindowsUpdate() {
-        return this.windowsUpdate == null ? Output.empty() : this.windowsUpdate;
+    public Output<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate() {
+        return this.windowsUpdate == null ? Codegen.empty() : this.windowsUpdate;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="yum")
       private final @Nullable Output<PatchDeploymentPatchConfigYumArgs> yum;
 
-    public Output<PatchDeploymentPatchConfigYumArgs> getYum() {
-        return this.yum == null ? Output.empty() : this.yum;
+    public Output<PatchDeploymentPatchConfigYumArgs> yum() {
+        return this.yum == null ? Codegen.empty() : this.yum;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     @Import(name="zypper")
       private final @Nullable Output<PatchDeploymentPatchConfigZypperArgs> zypper;
 
-    public Output<PatchDeploymentPatchConfigZypperArgs> getZypper() {
-        return this.zypper == null ? Output.empty() : this.zypper;
+    public Output<PatchDeploymentPatchConfigZypperArgs> zypper() {
+        return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 
     public PatchDeploymentPatchConfigArgs(
@@ -137,14 +138,14 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
     }
 
     private PatchDeploymentPatchConfigArgs() {
-        this.apt = Output.empty();
-        this.goo = Output.empty();
-        this.postStep = Output.empty();
-        this.preStep = Output.empty();
-        this.rebootConfig = Output.empty();
-        this.windowsUpdate = Output.empty();
-        this.yum = Output.empty();
-        this.zypper = Output.empty();
+        this.apt = Codegen.empty();
+        this.goo = Codegen.empty();
+        this.postStep = Codegen.empty();
+        this.preStep = Codegen.empty();
+        this.rebootConfig = Codegen.empty();
+        this.windowsUpdate = Codegen.empty();
+        this.yum = Codegen.empty();
+        this.zypper = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder apt(@Nullable PatchDeploymentPatchConfigAptArgs apt) {
-            this.apt = Output.ofNullable(apt);
+            this.apt = Codegen.ofNullable(apt);
             return this;
         }
         public Builder goo(@Nullable Output<PatchDeploymentPatchConfigGooArgs> goo) {
@@ -194,7 +195,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder goo(@Nullable PatchDeploymentPatchConfigGooArgs goo) {
-            this.goo = Output.ofNullable(goo);
+            this.goo = Codegen.ofNullable(goo);
             return this;
         }
         public Builder postStep(@Nullable Output<PatchDeploymentPatchConfigPostStepArgs> postStep) {
@@ -202,7 +203,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder postStep(@Nullable PatchDeploymentPatchConfigPostStepArgs postStep) {
-            this.postStep = Output.ofNullable(postStep);
+            this.postStep = Codegen.ofNullable(postStep);
             return this;
         }
         public Builder preStep(@Nullable Output<PatchDeploymentPatchConfigPreStepArgs> preStep) {
@@ -210,7 +211,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder preStep(@Nullable PatchDeploymentPatchConfigPreStepArgs preStep) {
-            this.preStep = Output.ofNullable(preStep);
+            this.preStep = Codegen.ofNullable(preStep);
             return this;
         }
         public Builder rebootConfig(@Nullable Output<String> rebootConfig) {
@@ -218,7 +219,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder rebootConfig(@Nullable String rebootConfig) {
-            this.rebootConfig = Output.ofNullable(rebootConfig);
+            this.rebootConfig = Codegen.ofNullable(rebootConfig);
             return this;
         }
         public Builder windowsUpdate(@Nullable Output<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate) {
@@ -226,7 +227,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder windowsUpdate(@Nullable PatchDeploymentPatchConfigWindowsUpdateArgs windowsUpdate) {
-            this.windowsUpdate = Output.ofNullable(windowsUpdate);
+            this.windowsUpdate = Codegen.ofNullable(windowsUpdate);
             return this;
         }
         public Builder yum(@Nullable Output<PatchDeploymentPatchConfigYumArgs> yum) {
@@ -234,7 +235,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder yum(@Nullable PatchDeploymentPatchConfigYumArgs yum) {
-            this.yum = Output.ofNullable(yum);
+            this.yum = Codegen.ofNullable(yum);
             return this;
         }
         public Builder zypper(@Nullable Output<PatchDeploymentPatchConfigZypperArgs> zypper) {
@@ -242,7 +243,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder zypper(@Nullable PatchDeploymentPatchConfigZypperArgs zypper) {
-            this.zypper = Output.ofNullable(zypper);
+            this.zypper = Codegen.ofNullable(zypper);
             return this;
         }        public PatchDeploymentPatchConfigArgs build() {
             return new PatchDeploymentPatchConfigArgs(apt, goo, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);

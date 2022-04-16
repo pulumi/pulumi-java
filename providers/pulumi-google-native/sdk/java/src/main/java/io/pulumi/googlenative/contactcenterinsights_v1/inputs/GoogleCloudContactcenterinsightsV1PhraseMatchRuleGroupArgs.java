@@ -5,6 +5,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     @Import(name="phraseMatchRules")
       private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
 
-    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> getPhraseMatchRules() {
-        return this.phraseMatchRules == null ? Output.empty() : this.phraseMatchRules;
+    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules() {
+        return this.phraseMatchRules == null ? Codegen.empty() : this.phraseMatchRules;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     @Import(name="type", required=true)
       private final Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 
-    public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> getType() {
+    public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type() {
         return this.type;
     }
 
@@ -50,8 +51,8 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     }
 
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs() {
-        this.phraseMatchRules = Output.empty();
-        this.type = Output.empty();
+        this.phraseMatchRules = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
             return this;
         }
         public Builder phraseMatchRules(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs> phraseMatchRules) {
-            this.phraseMatchRules = Output.ofNullable(phraseMatchRules);
+            this.phraseMatchRules = Codegen.ofNullable(phraseMatchRules);
             return this;
         }
         public Builder phraseMatchRules(GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs... phraseMatchRules) {

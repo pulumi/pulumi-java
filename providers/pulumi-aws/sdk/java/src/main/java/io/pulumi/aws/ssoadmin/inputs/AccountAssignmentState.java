@@ -5,6 +5,7 @@ package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
-        return this.instanceArn == null ? Output.empty() : this.instanceArn;
+    public Output<String> instanceArn() {
+        return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="permissionSetArn")
       private final @Nullable Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
-        return this.permissionSetArn == null ? Output.empty() : this.permissionSetArn;
+    public Output<String> permissionSetArn() {
+        return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+    public Output<String> principalId() {
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="principalType")
       private final @Nullable Output<String> principalType;
 
-    public Output<String> getPrincipalType() {
-        return this.principalType == null ? Output.empty() : this.principalType;
+    public Output<String> principalType() {
+        return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+    public Output<String> targetId() {
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+    public Output<String> targetType() {
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     public AccountAssignmentState(
@@ -96,12 +97,12 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     }
 
     private AccountAssignmentState() {
-        this.instanceArn = Output.empty();
-        this.permissionSetArn = Output.empty();
-        this.principalId = Output.empty();
-        this.principalType = Output.empty();
-        this.targetId = Output.empty();
-        this.targetType = Output.empty();
+        this.instanceArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.targetId = Codegen.empty();
+        this.targetType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Output.ofNullable(instanceArn);
+            this.instanceArn = Codegen.ofNullable(instanceArn);
             return this;
         }
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
@@ -147,7 +148,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Output.ofNullable(permissionSetArn);
+            this.permissionSetArn = Codegen.ofNullable(permissionSetArn);
             return this;
         }
         public Builder principalId(@Nullable Output<String> principalId) {
@@ -155,7 +156,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }
         public Builder principalType(@Nullable Output<String> principalType) {
@@ -163,7 +164,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder principalType(@Nullable String principalType) {
-            this.principalType = Output.ofNullable(principalType);
+            this.principalType = Codegen.ofNullable(principalType);
             return this;
         }
         public Builder targetId(@Nullable Output<String> targetId) {
@@ -171,7 +172,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }
         public Builder targetType(@Nullable Output<String> targetType) {
@@ -179,7 +180,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }        public AccountAssignmentState build() {
             return new AccountAssignmentState(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);

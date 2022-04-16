@@ -92,70 +92,70 @@ public final class GetProfileResult {
      * The Id of the frontdoor.
      * 
     */
-    public String getFrontdoorId() {
+    public String frontdoorId() {
         return this.frontdoorId;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning status of the profile.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the profile.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

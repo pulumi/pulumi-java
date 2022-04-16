@@ -26,7 +26,7 @@ public final class GetDocumentResult {
      * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
      * 
     */
-    public List<DocumentTag> getTags() {
+    public List<DocumentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

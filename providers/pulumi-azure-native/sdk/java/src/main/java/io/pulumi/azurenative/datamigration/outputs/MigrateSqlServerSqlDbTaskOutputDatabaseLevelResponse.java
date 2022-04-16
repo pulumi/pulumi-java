@@ -136,77 +136,77 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
      * Name of the item
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Number of database/object errors.
      * 
     */
-    public Double getErrorCount() {
+    public Double errorCount() {
         return this.errorCount;
     }
     /**
      * Wildcard string prefix to use for querying all errors of the item
      * 
     */
-    public String getErrorPrefix() {
+    public String errorPrefix() {
         return this.errorPrefix;
     }
     /**
      * Migration exceptions and warnings.
      * 
     */
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Migration progress message
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Number of objects
      * 
     */
-    public Double getNumberOfObjects() {
+    public Double numberOfObjects() {
         return this.numberOfObjects;
     }
     /**
      * Number of successfully completed objects
      * 
     */
-    public Double getNumberOfObjectsCompleted() {
+    public Double numberOfObjectsCompleted() {
         return this.numberOfObjectsCompleted;
     }
     /**
      * Summary of object results in the migration
      * 
     */
-    public Map<String,DataItemMigrationSummaryResultResponse> getObjectSummary() {
+    public Map<String,DataItemMigrationSummaryResultResponse> objectSummary() {
         return this.objectSummary;
     }
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
      * 
     */
-    public String getResultPrefix() {
+    public String resultPrefix() {
         return this.resultPrefix;
     }
     /**
@@ -214,35 +214,35 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
      * Expected value is 'DatabaseLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Migration stage that this database is in
      * 
     */
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Status message
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
     @Import(name="range")
       private final @Nullable Output<String> range;
 
-    public Output<String> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+    public Output<String> range() {
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
     @Import(name="skipLeadingRows")
       private final @Nullable Output<Integer> skipLeadingRows;
 
-    public Output<Integer> getSkipLeadingRows() {
-        return this.skipLeadingRows == null ? Output.empty() : this.skipLeadingRows;
+    public Output<Integer> skipLeadingRows() {
+        return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
     }
 
     public TableExternalDataConfigurationGoogleSheetsOptionsArgs(
@@ -48,8 +49,8 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
     }
 
     private TableExternalDataConfigurationGoogleSheetsOptionsArgs() {
-        this.range = Output.empty();
-        this.skipLeadingRows = Output.empty();
+        this.range = Codegen.empty();
+        this.skipLeadingRows = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
             return this;
         }
         public Builder range(@Nullable String range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
@@ -87,7 +88,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
             return this;
         }
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
-            this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
+            this.skipLeadingRows = Codegen.ofNullable(skipLeadingRows);
             return this;
         }        public TableExternalDataConfigurationGoogleSheetsOptionsArgs build() {
             return new TableExternalDataConfigurationGoogleSheetsOptionsArgs(range, skipLeadingRows);

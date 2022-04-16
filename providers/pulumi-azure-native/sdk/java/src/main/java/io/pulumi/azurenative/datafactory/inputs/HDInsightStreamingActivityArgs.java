@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="arguments")
       private final @Nullable Output<List<Object>> arguments;
 
-    public Output<List<Object>> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+    public Output<List<Object>> arguments() {
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="combiner")
       private final @Nullable Output<Object> combiner;
 
-    public Output<Object> getCombiner() {
-        return this.combiner == null ? Output.empty() : this.combiner;
+    public Output<Object> combiner() {
+        return this.combiner == null ? Codegen.empty() : this.combiner;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="commandEnvironment")
       private final @Nullable Output<List<Object>> commandEnvironment;
 
-    public Output<List<Object>> getCommandEnvironment() {
-        return this.commandEnvironment == null ? Output.empty() : this.commandEnvironment;
+    public Output<List<Object>> commandEnvironment() {
+        return this.commandEnvironment == null ? Codegen.empty() : this.commandEnvironment;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="defines")
       private final @Nullable Output<Map<String,Object>> defines;
 
-    public Output<Map<String,Object>> getDefines() {
-        return this.defines == null ? Output.empty() : this.defines;
+    public Output<Map<String,Object>> defines() {
+        return this.defines == null ? Codegen.empty() : this.defines;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="fileLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> getFileLinkedService() {
-        return this.fileLinkedService == null ? Output.empty() : this.fileLinkedService;
+    public Output<LinkedServiceReferenceArgs> fileLinkedService() {
+        return this.fileLinkedService == null ? Codegen.empty() : this.fileLinkedService;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="filePaths", required=true)
       private final Output<List<Object>> filePaths;
 
-    public Output<List<Object>> getFilePaths() {
+    public Output<List<Object>> filePaths() {
         return this.filePaths;
     }
 
@@ -122,8 +123,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="getDebugInfo")
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
-        return this.getDebugInfo == null ? Output.empty() : this.getDebugInfo;
+    public Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo() {
+        return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="input", required=true)
       private final Output<Object> input;
 
-    public Output<Object> getInput() {
+    public Output<Object> input() {
         return this.input;
     }
 
@@ -144,8 +145,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="mapper", required=true)
       private final Output<Object> mapper;
 
-    public Output<Object> getMapper() {
+    public Output<Object> mapper() {
         return this.mapper;
     }
 
@@ -166,7 +167,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -177,7 +178,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="output", required=true)
       private final Output<Object> output;
 
-    public Output<Object> getOutput() {
+    public Output<Object> output() {
         return this.output;
     }
 
@@ -188,8 +189,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<ActivityPolicyArgs> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="reducer", required=true)
       private final Output<Object> reducer;
 
-    public Output<Object> getReducer() {
+    public Output<Object> reducer() {
         return this.reducer;
     }
 
@@ -210,8 +211,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="storageLinkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
-        return this.storageLinkedServices == null ? Output.empty() : this.storageLinkedServices;
+    public Output<List<LinkedServiceReferenceArgs>> storageLinkedServices() {
+        return this.storageLinkedServices == null ? Codegen.empty() : this.storageLinkedServices;
     }
 
     /**
@@ -222,7 +223,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -233,8 +234,8 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> userProperties() {
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public HDInsightStreamingActivityArgs(
@@ -279,25 +280,25 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
     }
 
     private HDInsightStreamingActivityArgs() {
-        this.arguments = Output.empty();
-        this.combiner = Output.empty();
-        this.commandEnvironment = Output.empty();
-        this.defines = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.fileLinkedService = Output.empty();
-        this.filePaths = Output.empty();
-        this.getDebugInfo = Output.empty();
-        this.input = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.mapper = Output.empty();
-        this.name = Output.empty();
-        this.output = Output.empty();
-        this.policy = Output.empty();
-        this.reducer = Output.empty();
-        this.storageLinkedServices = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.arguments = Codegen.empty();
+        this.combiner = Codegen.empty();
+        this.commandEnvironment = Codegen.empty();
+        this.defines = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fileLinkedService = Codegen.empty();
+        this.filePaths = Codegen.empty();
+        this.getDebugInfo = Codegen.empty();
+        this.input = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.mapper = Codegen.empty();
+        this.name = Codegen.empty();
+        this.output = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.reducer = Codegen.empty();
+        this.storageLinkedServices = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -361,7 +362,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder arguments(Object... arguments) {
@@ -372,7 +373,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder combiner(@Nullable Object combiner) {
-            this.combiner = Output.ofNullable(combiner);
+            this.combiner = Codegen.ofNullable(combiner);
             return this;
         }
         public Builder commandEnvironment(@Nullable Output<List<Object>> commandEnvironment) {
@@ -380,7 +381,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder commandEnvironment(@Nullable List<Object> commandEnvironment) {
-            this.commandEnvironment = Output.ofNullable(commandEnvironment);
+            this.commandEnvironment = Codegen.ofNullable(commandEnvironment);
             return this;
         }
         public Builder commandEnvironment(Object... commandEnvironment) {
@@ -391,7 +392,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = Output.ofNullable(defines);
+            this.defines = Codegen.ofNullable(defines);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
@@ -399,7 +400,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -410,7 +411,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fileLinkedService(@Nullable Output<LinkedServiceReferenceArgs> fileLinkedService) {
@@ -418,7 +419,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder fileLinkedService(@Nullable LinkedServiceReferenceArgs fileLinkedService) {
-            this.fileLinkedService = Output.ofNullable(fileLinkedService);
+            this.fileLinkedService = Codegen.ofNullable(fileLinkedService);
             return this;
         }
         public Builder filePaths(Output<List<Object>> filePaths) {
@@ -437,7 +438,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Output.ofNullable(getDebugInfo);
+            this.getDebugInfo = Codegen.ofNullable(getDebugInfo);
             return this;
         }
         public Builder input(Output<Object> input) {
@@ -453,7 +454,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder mapper(Output<Object> mapper) {
@@ -485,7 +486,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder reducer(Output<Object> reducer) {
@@ -501,7 +502,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
-            this.storageLinkedServices = Output.ofNullable(storageLinkedServices);
+            this.storageLinkedServices = Codegen.ofNullable(storageLinkedServices);
             return this;
         }
         public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
@@ -520,7 +521,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

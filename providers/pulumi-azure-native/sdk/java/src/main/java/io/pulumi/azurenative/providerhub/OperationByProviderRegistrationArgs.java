@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.providerhub.inputs.OperationsDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     @Import(name="contents", required=true)
       private final Output<List<OperationsDefinitionArgs>> contents;
 
-    public Output<List<OperationsDefinitionArgs>> getContents() {
+    public Output<List<OperationsDefinitionArgs>> contents() {
         return this.contents;
     }
 
@@ -29,7 +30,7 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -41,8 +42,8 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     }
 
     private OperationByProviderRegistrationArgs() {
-        this.contents = Output.empty();
-        this.providerNamespace = Output.empty();
+        this.contents = Codegen.empty();
+        this.providerNamespace = Codegen.empty();
     }
 
     public static Builder builder() {

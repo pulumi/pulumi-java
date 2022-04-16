@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.GatewayRouteConfigPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gatewayName", required=true)
       private final Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
 
@@ -33,8 +34,8 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<GatewayRouteConfigPropertiesArgs> properties;
 
-    public Output<GatewayRouteConfigPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<GatewayRouteConfigPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="routeConfigName")
       private final @Nullable Output<String> routeConfigName;
 
-    public Output<String> getRouteConfigName() {
-        return this.routeConfigName == null ? Output.empty() : this.routeConfigName;
+    public Output<String> routeConfigName() {
+        return this.routeConfigName == null ? Codegen.empty() : this.routeConfigName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -84,11 +85,11 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GatewayRouteConfigArgs() {
-        this.gatewayName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routeConfigName = Output.empty();
-        this.serviceName = Output.empty();
+        this.gatewayName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routeConfigName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder properties(@Nullable GatewayRouteConfigPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -148,7 +149,7 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder routeConfigName(@Nullable String routeConfigName) {
-            this.routeConfigName = Output.ofNullable(routeConfigName);
+            this.routeConfigName = Codegen.ofNullable(routeConfigName);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {

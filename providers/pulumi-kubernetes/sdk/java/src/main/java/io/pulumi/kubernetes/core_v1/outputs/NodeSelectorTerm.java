@@ -34,14 +34,14 @@ public final class NodeSelectorTerm {
      * A list of node selector requirements by node's labels.
      * 
     */
-    public List<NodeSelectorRequirement> getMatchExpressions() {
+    public List<NodeSelectorRequirement> matchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }
     /**
      * A list of node selector requirements by node's fields.
      * 
     */
-    public List<NodeSelectorRequirement> getMatchFields() {
+    public List<NodeSelectorRequirement> matchFields() {
         return this.matchFields == null ? List.of() : this.matchFields;
     }
 

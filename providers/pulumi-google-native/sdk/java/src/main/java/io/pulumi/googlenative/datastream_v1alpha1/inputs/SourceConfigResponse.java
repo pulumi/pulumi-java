@@ -25,7 +25,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mysqlSourceConfig", required=true)
       private final MysqlSourceConfigResponse mysqlSourceConfig;
 
-    public MysqlSourceConfigResponse getMysqlSourceConfig() {
+    public MysqlSourceConfigResponse mysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
 
@@ -36,7 +36,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oracleSourceConfig", required=true)
       private final OracleSourceConfigResponse oracleSourceConfig;
 
-    public OracleSourceConfigResponse getOracleSourceConfig() {
+    public OracleSourceConfigResponse oracleSourceConfig() {
         return this.oracleSourceConfig;
     }
 
@@ -47,7 +47,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceConnectionProfileName", required=true)
       private final String sourceConnectionProfileName;
 
-    public String getSourceConnectionProfileName() {
+    public String sourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
     }
 

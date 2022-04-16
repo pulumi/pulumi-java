@@ -5,6 +5,7 @@ package io.pulumi.gcp.workflows.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+    public Output<String> revisionId() {
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceContents")
       private final @Nullable Output<String> sourceContents;
 
-    public Output<String> getSourceContents() {
-        return this.sourceContents == null ? Output.empty() : this.sourceContents;
+    public Output<String> sourceContents() {
+        return this.sourceContents == null ? Codegen.empty() : this.sourceContents;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public WorkflowState(
@@ -181,18 +182,18 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkflowState() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.revisionId = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.sourceContents = Output.empty();
-        this.state = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.revisionId = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.sourceContents = Codegen.empty();
+        this.state = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -242,7 +243,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -250,7 +251,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -258,7 +259,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -266,7 +267,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -274,7 +275,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -282,7 +283,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -290,7 +291,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder revisionId(@Nullable Output<String> revisionId) {
@@ -298,7 +299,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -306,7 +307,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder sourceContents(@Nullable Output<String> sourceContents) {
@@ -314,7 +315,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceContents(@Nullable String sourceContents) {
-            this.sourceContents = Output.ofNullable(sourceContents);
+            this.sourceContents = Codegen.ofNullable(sourceContents);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -322,7 +323,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -330,7 +331,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public WorkflowState build() {
             return new WorkflowState(createTime, description, labels, name, namePrefix, project, region, revisionId, serviceAccount, sourceContents, state, updateTime);

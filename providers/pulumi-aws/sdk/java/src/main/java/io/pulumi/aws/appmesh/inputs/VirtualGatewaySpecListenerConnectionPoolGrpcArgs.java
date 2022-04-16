@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolGrpcArgs extends io.p
     @Import(name="maxRequests", required=true)
       private final Output<Integer> maxRequests;
 
-    public Output<Integer> getMaxRequests() {
+    public Output<Integer> maxRequests() {
         return this.maxRequests;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolGrpcArgs extends io.p
     }
 
     private VirtualGatewaySpecListenerConnectionPoolGrpcArgs() {
-        this.maxRequests = Output.empty();
+        this.maxRequests = Codegen.empty();
     }
 
     public static Builder builder() {

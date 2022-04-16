@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.ProtocolTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
 
-    public Output<String> getCertificateUrl() {
-        return this.certificateUrl == null ? Output.empty() : this.certificateUrl;
+    public Output<String> certificateUrl() {
+        return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<ProtocolTypes> protocol;
 
-    public Output<ProtocolTypes> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<ProtocolTypes> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public WinRMListenerArgs(
@@ -49,8 +50,8 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WinRMListenerArgs() {
-        this.certificateUrl = Output.empty();
-        this.protocol = Output.empty();
+        this.certificateUrl = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Output.ofNullable(certificateUrl);
+            this.certificateUrl = Codegen.ofNullable(certificateUrl);
             return this;
         }
         public Builder protocol(@Nullable Output<ProtocolTypes> protocol) {
@@ -88,7 +89,7 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable ProtocolTypes protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public WinRMListenerArgs build() {
             return new WinRMListenerArgs(certificateUrl, protocol);

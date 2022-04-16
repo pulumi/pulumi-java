@@ -8,6 +8,7 @@ import io.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiStages")
       private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
-    public Output<List<UsagePlanApiStageArgs>> getApiStages() {
-        return this.apiStages == null ? Output.empty() : this.apiStages;
+    public Output<List<UsagePlanApiStageArgs>> apiStages() {
+        return this.apiStages == null ? Codegen.empty() : this.apiStages;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="productCode")
       private final @Nullable Output<String> productCode;
 
-    public Output<String> getProductCode() {
-        return this.productCode == null ? Output.empty() : this.productCode;
+    public Output<String> productCode() {
+        return this.productCode == null ? Codegen.empty() : this.productCode;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quotaSettings")
       private final @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
 
-    public Output<UsagePlanQuotaSettingsArgs> getQuotaSettings() {
-        return this.quotaSettings == null ? Output.empty() : this.quotaSettings;
+    public Output<UsagePlanQuotaSettingsArgs> quotaSettings() {
+        return this.quotaSettings == null ? Codegen.empty() : this.quotaSettings;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="throttleSettings")
       private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
 
-    public Output<UsagePlanThrottleSettingsArgs> getThrottleSettings() {
-        return this.throttleSettings == null ? Output.empty() : this.throttleSettings;
+    public Output<UsagePlanThrottleSettingsArgs> throttleSettings() {
+        return this.throttleSettings == null ? Codegen.empty() : this.throttleSettings;
     }
 
     public UsagePlanArgs(
@@ -114,13 +115,13 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UsagePlanArgs() {
-        this.apiStages = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.productCode = Output.empty();
-        this.quotaSettings = Output.empty();
-        this.tags = Output.empty();
-        this.throttleSettings = Output.empty();
+        this.apiStages = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.productCode = Codegen.empty();
+        this.quotaSettings = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.throttleSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
-            this.apiStages = Output.ofNullable(apiStages);
+            this.apiStages = Codegen.ofNullable(apiStages);
             return this;
         }
         public Builder apiStages(UsagePlanApiStageArgs... apiStages) {
@@ -171,7 +172,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -179,7 +180,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder productCode(@Nullable Output<String> productCode) {
@@ -187,7 +188,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productCode(@Nullable String productCode) {
-            this.productCode = Output.ofNullable(productCode);
+            this.productCode = Codegen.ofNullable(productCode);
             return this;
         }
         public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings) {
@@ -195,7 +196,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quotaSettings(@Nullable UsagePlanQuotaSettingsArgs quotaSettings) {
-            this.quotaSettings = Output.ofNullable(quotaSettings);
+            this.quotaSettings = Codegen.ofNullable(quotaSettings);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -203,7 +204,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings) {
@@ -211,7 +212,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throttleSettings(@Nullable UsagePlanThrottleSettingsArgs throttleSettings) {
-            this.throttleSettings = Output.ofNullable(throttleSettings);
+            this.throttleSettings = Codegen.ofNullable(throttleSettings);
             return this;
         }        public UsagePlanArgs build() {
             return new UsagePlanArgs(apiStages, description, name, productCode, quotaSettings, tags, throttleSettings);

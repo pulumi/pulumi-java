@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateConnectionName")
       private final @Nullable Output<String> privateConnectionName;
 
-    public Output<String> getPrivateConnectionName() {
-        return this.privateConnectionName == null ? Output.empty() : this.privateConnectionName;
+    public Output<String> privateConnectionName() {
+        return this.privateConnectionName == null ? Codegen.empty() : this.privateConnectionName;
     }
 
     public PrivateConnectivityArgs(@Nullable Output<String> privateConnectionName) {
@@ -30,7 +31,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     }
 
     private PrivateConnectivityArgs() {
-        this.privateConnectionName = Output.empty();
+        this.privateConnectionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder privateConnectionName(@Nullable String privateConnectionName) {
-            this.privateConnectionName = Output.ofNullable(privateConnectionName);
+            this.privateConnectionName = Codegen.ofNullable(privateConnectionName);
             return this;
         }        public PrivateConnectivityArgs build() {
             return new PrivateConnectivityArgs(privateConnectionName);

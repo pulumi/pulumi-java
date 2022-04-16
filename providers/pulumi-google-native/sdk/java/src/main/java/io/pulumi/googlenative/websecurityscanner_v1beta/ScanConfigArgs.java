@@ -5,6 +5,7 @@ package io.pulumi.googlenative.websecurityscanner_v1beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigExportToSecurityCommandCenter;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigRiskLevel;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigTargetPlatformsItem;
@@ -31,8 +32,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<AuthenticationArgs> authentication;
 
-    public Output<AuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<AuthenticationArgs> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blacklistPatterns")
       private final @Nullable Output<List<String>> blacklistPatterns;
 
-    public Output<List<String>> getBlacklistPatterns() {
-        return this.blacklistPatterns == null ? Output.empty() : this.blacklistPatterns;
+    public Output<List<String>> blacklistPatterns() {
+        return this.blacklistPatterns == null ? Codegen.empty() : this.blacklistPatterns;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -64,8 +65,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exportToSecurityCommandCenter")
       private final @Nullable Output<ScanConfigExportToSecurityCommandCenter> exportToSecurityCommandCenter;
 
-    public Output<ScanConfigExportToSecurityCommandCenter> getExportToSecurityCommandCenter() {
-        return this.exportToSecurityCommandCenter == null ? Output.empty() : this.exportToSecurityCommandCenter;
+    public Output<ScanConfigExportToSecurityCommandCenter> exportToSecurityCommandCenter() {
+        return this.exportToSecurityCommandCenter == null ? Codegen.empty() : this.exportToSecurityCommandCenter;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreHttpStatusErrors")
       private final @Nullable Output<Boolean> ignoreHttpStatusErrors;
 
-    public Output<Boolean> getIgnoreHttpStatusErrors() {
-        return this.ignoreHttpStatusErrors == null ? Output.empty() : this.ignoreHttpStatusErrors;
+    public Output<Boolean> ignoreHttpStatusErrors() {
+        return this.ignoreHttpStatusErrors == null ? Codegen.empty() : this.ignoreHttpStatusErrors;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestRun")
       private final @Nullable Output<ScanRunArgs> latestRun;
 
-    public Output<ScanRunArgs> getLatestRun() {
-        return this.latestRun == null ? Output.empty() : this.latestRun;
+    public Output<ScanRunArgs> latestRun() {
+        return this.latestRun == null ? Codegen.empty() : this.latestRun;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedScan")
       private final @Nullable Output<Boolean> managedScan;
 
-    public Output<Boolean> getManagedScan() {
-        return this.managedScan == null ? Output.empty() : this.managedScan;
+    public Output<Boolean> managedScan() {
+        return this.managedScan == null ? Codegen.empty() : this.managedScan;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxQps")
       private final @Nullable Output<Integer> maxQps;
 
-    public Output<Integer> getMaxQps() {
-        return this.maxQps == null ? Output.empty() : this.maxQps;
+    public Output<Integer> maxQps() {
+        return this.maxQps == null ? Codegen.empty() : this.maxQps;
     }
 
     /**
@@ -119,15 +120,15 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="riskLevel")
       private final @Nullable Output<ScanConfigRiskLevel> riskLevel;
 
-    public Output<ScanConfigRiskLevel> getRiskLevel() {
-        return this.riskLevel == null ? Output.empty() : this.riskLevel;
+    public Output<ScanConfigRiskLevel> riskLevel() {
+        return this.riskLevel == null ? Codegen.empty() : this.riskLevel;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ScheduleArgs> schedule;
 
-    public Output<ScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<ScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startingUrls", required=true)
       private final Output<List<String>> startingUrls;
 
-    public Output<List<String>> getStartingUrls() {
+    public Output<List<String>> startingUrls() {
         return this.startingUrls;
     }
 
@@ -170,8 +171,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticIpScan")
       private final @Nullable Output<Boolean> staticIpScan;
 
-    public Output<Boolean> getStaticIpScan() {
-        return this.staticIpScan == null ? Output.empty() : this.staticIpScan;
+    public Output<Boolean> staticIpScan() {
+        return this.staticIpScan == null ? Codegen.empty() : this.staticIpScan;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetPlatforms")
       private final @Nullable Output<List<ScanConfigTargetPlatformsItem>> targetPlatforms;
 
-    public Output<List<ScanConfigTargetPlatformsItem>> getTargetPlatforms() {
-        return this.targetPlatforms == null ? Output.empty() : this.targetPlatforms;
+    public Output<List<ScanConfigTargetPlatformsItem>> targetPlatforms() {
+        return this.targetPlatforms == null ? Codegen.empty() : this.targetPlatforms;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAgent")
       private final @Nullable Output<ScanConfigUserAgent> userAgent;
 
-    public Output<ScanConfigUserAgent> getUserAgent() {
-        return this.userAgent == null ? Output.empty() : this.userAgent;
+    public Output<ScanConfigUserAgent> userAgent() {
+        return this.userAgent == null ? Codegen.empty() : this.userAgent;
     }
 
     public ScanConfigArgs(
@@ -232,22 +233,22 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScanConfigArgs() {
-        this.authentication = Output.empty();
-        this.blacklistPatterns = Output.empty();
-        this.displayName = Output.empty();
-        this.exportToSecurityCommandCenter = Output.empty();
-        this.ignoreHttpStatusErrors = Output.empty();
-        this.latestRun = Output.empty();
-        this.managedScan = Output.empty();
-        this.maxQps = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.riskLevel = Output.empty();
-        this.schedule = Output.empty();
-        this.startingUrls = Output.empty();
-        this.staticIpScan = Output.empty();
-        this.targetPlatforms = Output.empty();
-        this.userAgent = Output.empty();
+        this.authentication = Codegen.empty();
+        this.blacklistPatterns = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.exportToSecurityCommandCenter = Codegen.empty();
+        this.ignoreHttpStatusErrors = Codegen.empty();
+        this.latestRun = Codegen.empty();
+        this.managedScan = Codegen.empty();
+        this.maxQps = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.riskLevel = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.startingUrls = Codegen.empty();
+        this.staticIpScan = Codegen.empty();
+        this.targetPlatforms = Codegen.empty();
+        this.userAgent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -305,7 +306,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable AuthenticationArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder blacklistPatterns(@Nullable Output<List<String>> blacklistPatterns) {
@@ -313,7 +314,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
-            this.blacklistPatterns = Output.ofNullable(blacklistPatterns);
+            this.blacklistPatterns = Codegen.ofNullable(blacklistPatterns);
             return this;
         }
         public Builder blacklistPatterns(String... blacklistPatterns) {
@@ -332,7 +333,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exportToSecurityCommandCenter(@Nullable ScanConfigExportToSecurityCommandCenter exportToSecurityCommandCenter) {
-            this.exportToSecurityCommandCenter = Output.ofNullable(exportToSecurityCommandCenter);
+            this.exportToSecurityCommandCenter = Codegen.ofNullable(exportToSecurityCommandCenter);
             return this;
         }
         public Builder ignoreHttpStatusErrors(@Nullable Output<Boolean> ignoreHttpStatusErrors) {
@@ -340,7 +341,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreHttpStatusErrors(@Nullable Boolean ignoreHttpStatusErrors) {
-            this.ignoreHttpStatusErrors = Output.ofNullable(ignoreHttpStatusErrors);
+            this.ignoreHttpStatusErrors = Codegen.ofNullable(ignoreHttpStatusErrors);
             return this;
         }
         public Builder latestRun(@Nullable Output<ScanRunArgs> latestRun) {
@@ -348,7 +349,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latestRun(@Nullable ScanRunArgs latestRun) {
-            this.latestRun = Output.ofNullable(latestRun);
+            this.latestRun = Codegen.ofNullable(latestRun);
             return this;
         }
         public Builder managedScan(@Nullable Output<Boolean> managedScan) {
@@ -356,7 +357,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedScan(@Nullable Boolean managedScan) {
-            this.managedScan = Output.ofNullable(managedScan);
+            this.managedScan = Codegen.ofNullable(managedScan);
             return this;
         }
         public Builder maxQps(@Nullable Output<Integer> maxQps) {
@@ -364,7 +365,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxQps(@Nullable Integer maxQps) {
-            this.maxQps = Output.ofNullable(maxQps);
+            this.maxQps = Codegen.ofNullable(maxQps);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -372,7 +373,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -380,7 +381,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder riskLevel(@Nullable Output<ScanConfigRiskLevel> riskLevel) {
@@ -388,7 +389,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder riskLevel(@Nullable ScanConfigRiskLevel riskLevel) {
-            this.riskLevel = Output.ofNullable(riskLevel);
+            this.riskLevel = Codegen.ofNullable(riskLevel);
             return this;
         }
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
@@ -396,7 +397,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable ScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder startingUrls(Output<List<String>> startingUrls) {
@@ -415,7 +416,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticIpScan(@Nullable Boolean staticIpScan) {
-            this.staticIpScan = Output.ofNullable(staticIpScan);
+            this.staticIpScan = Codegen.ofNullable(staticIpScan);
             return this;
         }
         public Builder targetPlatforms(@Nullable Output<List<ScanConfigTargetPlatformsItem>> targetPlatforms) {
@@ -423,7 +424,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetPlatforms(@Nullable List<ScanConfigTargetPlatformsItem> targetPlatforms) {
-            this.targetPlatforms = Output.ofNullable(targetPlatforms);
+            this.targetPlatforms = Codegen.ofNullable(targetPlatforms);
             return this;
         }
         public Builder targetPlatforms(ScanConfigTargetPlatformsItem... targetPlatforms) {
@@ -434,7 +435,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAgent(@Nullable ScanConfigUserAgent userAgent) {
-            this.userAgent = Output.ofNullable(userAgent);
+            this.userAgent = Codegen.ofNullable(userAgent);
             return this;
         }        public ScanConfigArgs build() {
             return new ScanConfigArgs(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, ignoreHttpStatusErrors, latestRun, managedScan, maxQps, name, project, riskLevel, schedule, startingUrls, staticIpScan, targetPlatforms, userAgent);

@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+    public Output<Boolean> encrypted() {
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="mountPoint", required=true)
       private final Output<String> mountPoint;
 
-    public Output<String> getMountPoint() {
+    public Output<String> mountPoint() {
         return this.mountPoint;
     }
 
@@ -56,7 +57,7 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="numberOfDisks", required=true)
       private final Output<Integer> numberOfDisks;
 
-    public Output<Integer> getNumberOfDisks() {
+    public Output<Integer> numberOfDisks() {
         return this.numberOfDisks;
     }
 
@@ -67,8 +68,8 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="raidLevel")
       private final @Nullable Output<String> raidLevel;
 
-    public Output<String> getRaidLevel() {
-        return this.raidLevel == null ? Output.empty() : this.raidLevel;
+    public Output<String> raidLevel() {
+        return this.raidLevel == null ? Codegen.empty() : this.raidLevel;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -89,8 +90,8 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public CustomLayerEbsVolumeGetArgs(
@@ -111,13 +112,13 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
     }
 
     private CustomLayerEbsVolumeGetArgs() {
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.mountPoint = Output.empty();
-        this.numberOfDisks = Output.empty();
-        this.raidLevel = Output.empty();
-        this.size = Output.empty();
-        this.type = Output.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.mountPoint = Codegen.empty();
+        this.numberOfDisks = Codegen.empty();
+        this.raidLevel = Codegen.empty();
+        this.size = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -165,7 +166,7 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder mountPoint(Output<String> mountPoint) {
@@ -189,7 +190,7 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder raidLevel(@Nullable String raidLevel) {
-            this.raidLevel = Output.ofNullable(raidLevel);
+            this.raidLevel = Codegen.ofNullable(raidLevel);
             return this;
         }
         public Builder size(Output<Integer> size) {
@@ -205,7 +206,7 @@ public final class CustomLayerEbsVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public CustomLayerEbsVolumeGetArgs build() {
             return new CustomLayerEbsVolumeGetArgs(encrypted, iops, mountPoint, numberOfDisks, raidLevel, size, type);

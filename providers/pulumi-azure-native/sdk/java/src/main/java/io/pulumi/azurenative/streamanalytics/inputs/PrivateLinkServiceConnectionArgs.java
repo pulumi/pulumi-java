@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> getGroupIds() {
-        return this.groupIds == null ? Output.empty() : this.groupIds;
+    public Output<List<String>> groupIds() {
+        return this.groupIds == null ? Codegen.empty() : this.groupIds;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     @Import(name="privateLinkServiceId")
       private final @Nullable Output<String> privateLinkServiceId;
 
-    public Output<String> getPrivateLinkServiceId() {
-        return this.privateLinkServiceId == null ? Output.empty() : this.privateLinkServiceId;
+    public Output<String> privateLinkServiceId() {
+        return this.privateLinkServiceId == null ? Codegen.empty() : this.privateLinkServiceId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
-        return this.requestMessage == null ? Output.empty() : this.requestMessage;
+    public Output<String> requestMessage() {
+        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
     public PrivateLinkServiceConnectionArgs(
@@ -62,9 +63,9 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     }
 
     private PrivateLinkServiceConnectionArgs() {
-        this.groupIds = Output.empty();
-        this.privateLinkServiceId = Output.empty();
-        this.requestMessage = Output.empty();
+        this.groupIds = Codegen.empty();
+        this.privateLinkServiceId = Codegen.empty();
+        this.requestMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Output.ofNullable(groupIds);
+            this.groupIds = Codegen.ofNullable(groupIds);
             return this;
         }
         public Builder groupIds(String... groupIds) {
@@ -107,7 +108,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
-            this.privateLinkServiceId = Output.ofNullable(privateLinkServiceId);
+            this.privateLinkServiceId = Codegen.ofNullable(privateLinkServiceId);
             return this;
         }
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
@@ -115,7 +116,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Output.ofNullable(requestMessage);
+            this.requestMessage = Codegen.ofNullable(requestMessage);
             return this;
         }        public PrivateLinkServiceConnectionArgs build() {
             return new PrivateLinkServiceConnectionArgs(groupIds, privateLinkServiceId, requestMessage);

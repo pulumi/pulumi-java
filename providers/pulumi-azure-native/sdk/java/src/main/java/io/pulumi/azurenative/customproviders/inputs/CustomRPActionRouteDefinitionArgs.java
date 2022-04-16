@@ -7,6 +7,7 @@ import io.pulumi.azurenative.customproviders.enums.ActionRouting;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -38,7 +39,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,8 +50,8 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
     @Import(name="routingType")
       private final @Nullable Output<Either<String,ActionRouting>> routingType;
 
-    public Output<Either<String,ActionRouting>> getRoutingType() {
-        return this.routingType == null ? Output.empty() : this.routingType;
+    public Output<Either<String,ActionRouting>> routingType() {
+        return this.routingType == null ? Codegen.empty() : this.routingType;
     }
 
     public CustomRPActionRouteDefinitionArgs(
@@ -63,9 +64,9 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
     }
 
     private CustomRPActionRouteDefinitionArgs() {
-        this.endpoint = Output.empty();
-        this.name = Output.empty();
-        this.routingType = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.routingType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder routingType(@Nullable Either<String,ActionRouting> routingType) {
-            this.routingType = Output.ofNullable(routingType);
+            this.routingType = Codegen.ofNullable(routingType);
             return this;
         }        public CustomRPActionRouteDefinitionArgs build() {
             return new CustomRPActionRouteDefinitionArgs(endpoint, name, routingType);

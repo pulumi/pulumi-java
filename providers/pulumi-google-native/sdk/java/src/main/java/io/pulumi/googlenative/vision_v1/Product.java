@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vision_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vision_v1.ProductArgs;
 import io.pulumi.googlenative.vision_v1.outputs.KeyValueResponse;
@@ -30,7 +31,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return User-provided metadata to be stored with this product. Must be at most 4096 characters long.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -44,7 +45,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return The user-provided name for this Product. Must not be empty. Must be at most 4096 characters long.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -58,7 +59,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return The resource name of the product. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating a product.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Immutable. The category for the product identified by the reference image. This should be one of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or "general-v1". The legacy categories "homegoods", "apparel", and "toys" are still supported, but these should not be used for new products.
      * 
      */
-    public Output<String> getProductCategory() {
+    public Output<String> productCategory() {
         return this.productCategory;
     }
     /**
@@ -86,7 +87,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs that can be attached to a product. At query time, constraints can be specified based on the product_labels. Note that integer values can be provided as strings, e.g. "1199". Only strings with integer values can match a range-based restriction which is to be supported soon. Multiple values can be assigned to the same key. One product may have up to 500 product_labels. Notice that the total number of distinct product_labels over all products in one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for that ProductSet.
      * 
      */
-    public Output<List<KeyValueResponse>> getProductLabels() {
+    public Output<List<KeyValueResponse>> productLabels() {
         return this.productLabels;
     }
 
@@ -112,7 +113,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Product(String name, @Nullable ProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vision/v1:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vision/v1:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Product(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

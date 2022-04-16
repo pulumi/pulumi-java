@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -32,7 +33,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
     @Import(name="headerValue", required=true)
       private final Output<String> headerValue;
 
-    public Output<String> getHeaderValue() {
+    public Output<String> headerValue() {
         return this.headerValue;
     }
 
@@ -44,7 +45,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
     @Import(name="replace", required=true)
       private final Output<Boolean> replace;
 
-    public Output<Boolean> getReplace() {
+    public Output<Boolean> replace() {
         return this.replace;
     }
 
@@ -58,9 +59,9 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHe
     }
 
     private URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs() {
-        this.headerName = Output.empty();
-        this.headerValue = Output.empty();
-        this.replace = Output.empty();
+        this.headerName = Codegen.empty();
+        this.headerValue = Codegen.empty();
+        this.replace = Codegen.empty();
     }
 
     public static Builder builder() {

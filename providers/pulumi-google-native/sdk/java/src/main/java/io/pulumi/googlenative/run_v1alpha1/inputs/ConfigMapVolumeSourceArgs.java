@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.KeyToPathArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,8 +30,8 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="defaultMode")
       private final @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Output.empty() : this.defaultMode;
+    public Output<Integer> defaultMode() {
+        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="items")
       private final @Nullable Output<List<KeyToPathArgs>> items;
 
-    public Output<List<KeyToPathArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<List<KeyToPathArgs>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> getOptional() {
-        return this.optional == null ? Output.empty() : this.optional;
+    public Output<Boolean> optional() {
+        return this.optional == null ? Codegen.empty() : this.optional;
     }
 
     public ConfigMapVolumeSourceArgs(
@@ -78,10 +79,10 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private ConfigMapVolumeSourceArgs() {
-        this.defaultMode = Output.empty();
-        this.items = Output.empty();
-        this.name = Output.empty();
-        this.optional = Output.empty();
+        this.defaultMode = Codegen.empty();
+        this.items = Codegen.empty();
+        this.name = Codegen.empty();
+        this.optional = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Output.ofNullable(defaultMode);
+            this.defaultMode = Codegen.ofNullable(defaultMode);
             return this;
         }
         public Builder items(@Nullable Output<List<KeyToPathArgs>> items) {
@@ -123,7 +124,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder items(@Nullable List<KeyToPathArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(KeyToPathArgs... items) {
@@ -134,7 +135,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder optional(@Nullable Output<Boolean> optional) {
@@ -142,7 +143,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Output.ofNullable(optional);
+            this.optional = Codegen.ofNullable(optional);
             return this;
         }        public ConfigMapVolumeSourceArgs build() {
             return new ConfigMapVolumeSourceArgs(defaultMode, items, name, optional);

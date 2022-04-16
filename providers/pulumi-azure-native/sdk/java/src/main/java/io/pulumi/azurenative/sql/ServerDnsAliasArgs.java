@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsAliasName")
       private final @Nullable Output<String> dnsAliasName;
 
-    public Output<String> getDnsAliasName() {
-        return this.dnsAliasName == null ? Output.empty() : this.dnsAliasName;
+    public Output<String> dnsAliasName() {
+        return this.dnsAliasName == null ? Codegen.empty() : this.dnsAliasName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +44,7 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -57,9 +58,9 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerDnsAliasArgs() {
-        this.dnsAliasName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.dnsAliasName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsAliasName(@Nullable String dnsAliasName) {
-            this.dnsAliasName = Output.ofNullable(dnsAliasName);
+            this.dnsAliasName = Codegen.ofNullable(dnsAliasName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

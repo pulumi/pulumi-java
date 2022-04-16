@@ -26,7 +26,7 @@ public final class GetVirtualMachineRdpFileContentsResult {
      * The contents of the .rdp file
      * 
     */
-    public Optional<String> getContents() {
+    public Optional<String> contents() {
         return Optional.ofNullable(this.contents);
     }
 

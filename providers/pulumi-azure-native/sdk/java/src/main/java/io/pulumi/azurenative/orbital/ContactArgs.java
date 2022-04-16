@@ -6,6 +6,7 @@ package io.pulumi.azurenative.orbital;
 import io.pulumi.azurenative.orbital.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactName")
       private final @Nullable Output<String> contactName;
 
-    public Output<String> getContactName() {
-        return this.contactName == null ? Output.empty() : this.contactName;
+    public Output<String> contactName() {
+        return this.contactName == null ? Codegen.empty() : this.contactName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactProfile", required=true)
       private final Output<ResourceReferenceArgs> contactProfile;
 
-    public Output<ResourceReferenceArgs> getContactProfile() {
+    public Output<ResourceReferenceArgs> contactProfile() {
         return this.contactProfile;
     }
 
@@ -44,7 +45,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groundStationName", required=true)
       private final Output<String> groundStationName;
 
-    public Output<String> getGroundStationName() {
+    public Output<String> groundStationName() {
         return this.groundStationName;
     }
 
@@ -55,7 +56,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservationEndTime", required=true)
       private final Output<String> reservationEndTime;
 
-    public Output<String> getReservationEndTime() {
+    public Output<String> reservationEndTime() {
         return this.reservationEndTime;
     }
 
@@ -66,7 +67,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservationStartTime", required=true)
       private final Output<String> reservationStartTime;
 
-    public Output<String> getReservationStartTime() {
+    public Output<String> reservationStartTime() {
         return this.reservationStartTime;
     }
 
@@ -77,7 +78,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +89,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spacecraftName", required=true)
       private final Output<String> spacecraftName;
 
-    public Output<String> getSpacecraftName() {
+    public Output<String> spacecraftName() {
         return this.spacecraftName;
     }
 
@@ -110,13 +111,13 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.contactName = Output.empty();
-        this.contactProfile = Output.empty();
-        this.groundStationName = Output.empty();
-        this.reservationEndTime = Output.empty();
-        this.reservationStartTime = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.spacecraftName = Output.empty();
+        this.contactName = Codegen.empty();
+        this.contactProfile = Codegen.empty();
+        this.groundStationName = Codegen.empty();
+        this.reservationEndTime = Codegen.empty();
+        this.reservationStartTime = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.spacecraftName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactName(@Nullable String contactName) {
-            this.contactName = Output.ofNullable(contactName);
+            this.contactName = Codegen.ofNullable(contactName);
             return this;
         }
         public Builder contactProfile(Output<ResourceReferenceArgs> contactProfile) {

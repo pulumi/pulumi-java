@@ -34,14 +34,14 @@ public final class BlobLocationResponse {
      * Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
      * 
     */
-    public Optional<String> getCredentials() {
+    public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

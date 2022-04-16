@@ -8,6 +8,7 @@ import io.pulumi.azurenative.apimanagement.inputs.CertificateInformationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="certificate")
       private final @Nullable Output<CertificateInformationArgs> certificate;
 
-    public Output<CertificateInformationArgs> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<CertificateInformationArgs> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="certificatePassword")
       private final @Nullable Output<String> certificatePassword;
 
-    public Output<String> getCertificatePassword() {
-        return this.certificatePassword == null ? Output.empty() : this.certificatePassword;
+    public Output<String> certificatePassword() {
+        return this.certificatePassword == null ? Codegen.empty() : this.certificatePassword;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="defaultSslBinding")
       private final @Nullable Output<Boolean> defaultSslBinding;
 
-    public Output<Boolean> getDefaultSslBinding() {
-        return this.defaultSslBinding == null ? Output.empty() : this.defaultSslBinding;
+    public Output<Boolean> defaultSslBinding() {
+        return this.defaultSslBinding == null ? Codegen.empty() : this.defaultSslBinding;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="encodedCertificate")
       private final @Nullable Output<String> encodedCertificate;
 
-    public Output<String> getEncodedCertificate() {
-        return this.encodedCertificate == null ? Output.empty() : this.encodedCertificate;
+    public Output<String> encodedCertificate() {
+        return this.encodedCertificate == null ? Codegen.empty() : this.encodedCertificate;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -84,8 +85,8 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
-    public Output<String> getIdentityClientId() {
-        return this.identityClientId == null ? Output.empty() : this.identityClientId;
+    public Output<String> identityClientId() {
+        return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
+    public Output<String> keyVaultId() {
+        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="negotiateClientCertificate")
       private final @Nullable Output<Boolean> negotiateClientCertificate;
 
-    public Output<Boolean> getNegotiateClientCertificate() {
-        return this.negotiateClientCertificate == null ? Output.empty() : this.negotiateClientCertificate;
+    public Output<Boolean> negotiateClientCertificate() {
+        return this.negotiateClientCertificate == null ? Codegen.empty() : this.negotiateClientCertificate;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<Either<String,HostnameType>> type;
 
-    public Output<Either<String,HostnameType>> getType() {
+    public Output<Either<String,HostnameType>> type() {
         return this.type;
     }
 
@@ -133,25 +134,25 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
         Output<Either<String,HostnameType>> type) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
-        this.defaultSslBinding = defaultSslBinding == null ? Output.ofNullable(false) : defaultSslBinding;
+        this.defaultSslBinding = defaultSslBinding == null ? Codegen.ofNullable(false) : defaultSslBinding;
         this.encodedCertificate = encodedCertificate;
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.identityClientId = identityClientId;
         this.keyVaultId = keyVaultId;
-        this.negotiateClientCertificate = negotiateClientCertificate == null ? Output.ofNullable(false) : negotiateClientCertificate;
+        this.negotiateClientCertificate = negotiateClientCertificate == null ? Codegen.ofNullable(false) : negotiateClientCertificate;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private HostnameConfigurationArgs() {
-        this.certificate = Output.empty();
-        this.certificatePassword = Output.empty();
-        this.defaultSslBinding = Output.empty();
-        this.encodedCertificate = Output.empty();
-        this.hostName = Output.empty();
-        this.identityClientId = Output.empty();
-        this.keyVaultId = Output.empty();
-        this.negotiateClientCertificate = Output.empty();
-        this.type = Output.empty();
+        this.certificate = Codegen.empty();
+        this.certificatePassword = Codegen.empty();
+        this.defaultSslBinding = Codegen.empty();
+        this.encodedCertificate = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.identityClientId = Codegen.empty();
+        this.keyVaultId = Codegen.empty();
+        this.negotiateClientCertificate = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificate(@Nullable CertificateInformationArgs certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificatePassword(@Nullable Output<String> certificatePassword) {
@@ -203,7 +204,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificatePassword(@Nullable String certificatePassword) {
-            this.certificatePassword = Output.ofNullable(certificatePassword);
+            this.certificatePassword = Codegen.ofNullable(certificatePassword);
             return this;
         }
         public Builder defaultSslBinding(@Nullable Output<Boolean> defaultSslBinding) {
@@ -211,7 +212,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultSslBinding(@Nullable Boolean defaultSslBinding) {
-            this.defaultSslBinding = Output.ofNullable(defaultSslBinding);
+            this.defaultSslBinding = Codegen.ofNullable(defaultSslBinding);
             return this;
         }
         public Builder encodedCertificate(@Nullable Output<String> encodedCertificate) {
@@ -219,7 +220,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder encodedCertificate(@Nullable String encodedCertificate) {
-            this.encodedCertificate = Output.ofNullable(encodedCertificate);
+            this.encodedCertificate = Codegen.ofNullable(encodedCertificate);
             return this;
         }
         public Builder hostName(Output<String> hostName) {
@@ -235,7 +236,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Output.ofNullable(identityClientId);
+            this.identityClientId = Codegen.ofNullable(identityClientId);
             return this;
         }
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
@@ -243,7 +244,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Output.ofNullable(keyVaultId);
+            this.keyVaultId = Codegen.ofNullable(keyVaultId);
             return this;
         }
         public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
@@ -251,7 +252,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
-            this.negotiateClientCertificate = Output.ofNullable(negotiateClientCertificate);
+            this.negotiateClientCertificate = Codegen.ofNullable(negotiateClientCertificate);
             return this;
         }
         public Builder type(Output<Either<String,HostnameType>> type) {

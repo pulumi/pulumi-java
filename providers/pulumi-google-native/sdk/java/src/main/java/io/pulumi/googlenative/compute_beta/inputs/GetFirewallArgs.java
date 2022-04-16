@@ -17,14 +17,14 @@ public final class GetFirewallArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="firewall", required=true)
       private final String firewall;
 
-    public String getFirewall() {
+    public String firewall() {
         return this.firewall;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

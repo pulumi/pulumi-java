@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -36,8 +37,8 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<String> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public VirtualNetworkProfileArgs(
@@ -48,8 +49,8 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     }
 
     private VirtualNetworkProfileArgs() {
-        this.id = Output.empty();
-        this.subnet = Output.empty();
+        this.id = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public VirtualNetworkProfileArgs build() {
             return new VirtualNetworkProfileArgs(id, subnet);

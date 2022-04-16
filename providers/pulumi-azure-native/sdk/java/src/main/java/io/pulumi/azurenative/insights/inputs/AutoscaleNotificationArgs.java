@@ -8,6 +8,7 @@ import io.pulumi.azurenative.insights.inputs.EmailNotificationArgs;
 import io.pulumi.azurenative.insights.inputs.WebhookNotificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
     @Import(name="email")
       private final @Nullable Output<EmailNotificationArgs> email;
 
-    public Output<EmailNotificationArgs> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<EmailNotificationArgs> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
     @Import(name="operation", required=true)
       private final Output<OperationType> operation;
 
-    public Output<OperationType> getOperation() {
+    public Output<OperationType> operation() {
         return this.operation;
     }
 
@@ -50,8 +51,8 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
     @Import(name="webhooks")
       private final @Nullable Output<List<WebhookNotificationArgs>> webhooks;
 
-    public Output<List<WebhookNotificationArgs>> getWebhooks() {
-        return this.webhooks == null ? Output.empty() : this.webhooks;
+    public Output<List<WebhookNotificationArgs>> webhooks() {
+        return this.webhooks == null ? Codegen.empty() : this.webhooks;
     }
 
     public AutoscaleNotificationArgs(
@@ -64,9 +65,9 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
     }
 
     private AutoscaleNotificationArgs() {
-        this.email = Output.empty();
-        this.operation = Output.empty();
-        this.webhooks = Output.empty();
+        this.email = Codegen.empty();
+        this.operation = Codegen.empty();
+        this.webhooks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder email(@Nullable EmailNotificationArgs email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder operation(Output<OperationType> operation) {
@@ -114,7 +115,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder webhooks(@Nullable List<WebhookNotificationArgs> webhooks) {
-            this.webhooks = Output.ofNullable(webhooks);
+            this.webhooks = Codegen.ofNullable(webhooks);
             return this;
         }
         public Builder webhooks(WebhookNotificationArgs... webhooks) {

@@ -24,7 +24,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="caCertificate", required=true)
       private final String caCertificate;
 
-    public String getCaCertificate() {
+    public String caCertificate() {
         return this.caCertificate;
     }
 
@@ -35,7 +35,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
 
@@ -46,7 +46,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="clientKey", required=true)
       private final String clientKey;
 
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
 
@@ -57,7 +57,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="dumpFilePath", required=true)
       private final String dumpFilePath;
 
-    public String getDumpFilePath() {
+    public String dumpFilePath() {
         return this.dumpFilePath;
     }
 
@@ -68,7 +68,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="hostPort", required=true)
       private final String hostPort;
 
-    public String getHostPort() {
+    public String hostPort() {
         return this.hostPort;
     }
 
@@ -79,7 +79,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -90,7 +90,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -101,7 +101,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="sourceInstance", required=true)
       private final InstanceReferenceResponse sourceInstance;
 
-    public InstanceReferenceResponse getSourceInstance() {
+    public InstanceReferenceResponse sourceInstance() {
         return this.sourceInstance;
     }
 
@@ -112,7 +112,7 @@ public final class OnPremisesConfigurationResponse extends io.pulumi.resources.I
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

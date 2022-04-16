@@ -7,6 +7,7 @@ import io.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsOnDemandSpecifi
 import io.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsSpotSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
     @Import(name="onDemandSpecifications")
       private final @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> getOnDemandSpecifications() {
-        return this.onDemandSpecifications == null ? Output.empty() : this.onDemandSpecifications;
+    public Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications() {
+        return this.onDemandSpecifications == null ? Codegen.empty() : this.onDemandSpecifications;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
     @Import(name="spotSpecifications")
       private final @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> getSpotSpecifications() {
-        return this.spotSpecifications == null ? Output.empty() : this.spotSpecifications;
+    public Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications() {
+        return this.spotSpecifications == null ? Codegen.empty() : this.spotSpecifications;
     }
 
     public InstanceFleetLaunchSpecificationsArgs(
@@ -46,8 +47,8 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
     }
 
     private InstanceFleetLaunchSpecificationsArgs() {
-        this.onDemandSpecifications = Output.empty();
-        this.spotSpecifications = Output.empty();
+        this.onDemandSpecifications = Codegen.empty();
+        this.spotSpecifications = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
             return this;
         }
         public Builder onDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
-            this.onDemandSpecifications = Output.ofNullable(onDemandSpecifications);
+            this.onDemandSpecifications = Codegen.ofNullable(onDemandSpecifications);
             return this;
         }
         public Builder onDemandSpecifications(InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs... onDemandSpecifications) {
@@ -88,7 +89,7 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
             return this;
         }
         public Builder spotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
-            this.spotSpecifications = Output.ofNullable(spotSpecifications);
+            this.spotSpecifications = Codegen.ofNullable(spotSpecifications);
             return this;
         }
         public Builder spotSpecifications(InstanceFleetLaunchSpecificationsSpotSpecificationArgs... spotSpecifications) {

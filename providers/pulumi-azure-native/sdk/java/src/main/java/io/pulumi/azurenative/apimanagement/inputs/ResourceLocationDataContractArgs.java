@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
     @Import(name="city")
       private final @Nullable Output<String> city;
 
-    public Output<String> getCity() {
-        return this.city == null ? Output.empty() : this.city;
+    public Output<String> city() {
+        return this.city == null ? Codegen.empty() : this.city;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
     @Import(name="countryOrRegion")
       private final @Nullable Output<String> countryOrRegion;
 
-    public Output<String> getCountryOrRegion() {
-        return this.countryOrRegion == null ? Output.empty() : this.countryOrRegion;
+    public Output<String> countryOrRegion() {
+        return this.countryOrRegion == null ? Codegen.empty() : this.countryOrRegion;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
     @Import(name="district")
       private final @Nullable Output<String> district;
 
-    public Output<String> getDistrict() {
-        return this.district == null ? Output.empty() : this.district;
+    public Output<String> district() {
+        return this.district == null ? Codegen.empty() : this.district;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -74,10 +75,10 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
     }
 
     private ResourceLocationDataContractArgs() {
-        this.city = Output.empty();
-        this.countryOrRegion = Output.empty();
-        this.district = Output.empty();
-        this.name = Output.empty();
+        this.city = Codegen.empty();
+        this.countryOrRegion = Codegen.empty();
+        this.district = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
             return this;
         }
         public Builder city(@Nullable String city) {
-            this.city = Output.ofNullable(city);
+            this.city = Codegen.ofNullable(city);
             return this;
         }
         public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
@@ -119,7 +120,7 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
             return this;
         }
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = Output.ofNullable(countryOrRegion);
+            this.countryOrRegion = Codegen.ofNullable(countryOrRegion);
             return this;
         }
         public Builder district(@Nullable Output<String> district) {
@@ -127,7 +128,7 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
             return this;
         }
         public Builder district(@Nullable String district) {
-            this.district = Output.ofNullable(district);
+            this.district = Codegen.ofNullable(district);
             return this;
         }
         public Builder name(Output<String> name) {

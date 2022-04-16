@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.KnowledgeBaseArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * @return The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -42,7 +43,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * @return Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, expect this to be present for non en-us languages. When unspecified, the default language code en-us applies.
      * 
      */
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -56,7 +57,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * @return The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -82,7 +83,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KnowledgeBase(String name, KnowledgeBaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2:KnowledgeBase", name, args == null ? KnowledgeBaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2:KnowledgeBase", name, args == null ? KnowledgeBaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KnowledgeBase(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

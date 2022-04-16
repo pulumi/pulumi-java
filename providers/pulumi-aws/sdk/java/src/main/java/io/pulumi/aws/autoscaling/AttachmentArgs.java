@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="albTargetGroupArn")
       private final @Nullable Output<String> albTargetGroupArn;
 
-    public Output<String> getAlbTargetGroupArn() {
-        return this.albTargetGroupArn == null ? Output.empty() : this.albTargetGroupArn;
+    public Output<String> albTargetGroupArn() {
+        return this.albTargetGroupArn == null ? Codegen.empty() : this.albTargetGroupArn;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName", required=true)
       private final Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
 
@@ -43,8 +44,8 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elb")
       private final @Nullable Output<String> elb;
 
-    public Output<String> getElb() {
-        return this.elb == null ? Output.empty() : this.elb;
+    public Output<String> elb() {
+        return this.elb == null ? Codegen.empty() : this.elb;
     }
 
     public AttachmentArgs(
@@ -57,9 +58,9 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachmentArgs() {
-        this.albTargetGroupArn = Output.empty();
-        this.autoscalingGroupName = Output.empty();
-        this.elb = Output.empty();
+        this.albTargetGroupArn = Codegen.empty();
+        this.autoscalingGroupName = Codegen.empty();
+        this.elb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder albTargetGroupArn(@Nullable String albTargetGroupArn) {
-            this.albTargetGroupArn = Output.ofNullable(albTargetGroupArn);
+            this.albTargetGroupArn = Codegen.ofNullable(albTargetGroupArn);
             return this;
         }
         public Builder autoscalingGroupName(Output<String> autoscalingGroupName) {
@@ -107,7 +108,7 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elb(@Nullable String elb) {
-            this.elb = Output.ofNullable(elb);
+            this.elb = Codegen.ofNullable(elb);
             return this;
         }        public AttachmentArgs build() {
             return new AttachmentArgs(albTargetGroupArn, autoscalingGroupName, elb);

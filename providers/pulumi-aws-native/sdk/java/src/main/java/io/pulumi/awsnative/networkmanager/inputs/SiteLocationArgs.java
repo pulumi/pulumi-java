@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+    public Output<String> address() {
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latitude")
       private final @Nullable Output<String> latitude;
 
-    public Output<String> getLatitude() {
-        return this.latitude == null ? Output.empty() : this.latitude;
+    public Output<String> latitude() {
+        return this.latitude == null ? Codegen.empty() : this.latitude;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="longitude")
       private final @Nullable Output<String> longitude;
 
-    public Output<String> getLongitude() {
-        return this.longitude == null ? Output.empty() : this.longitude;
+    public Output<String> longitude() {
+        return this.longitude == null ? Codegen.empty() : this.longitude;
     }
 
     public SiteLocationArgs(
@@ -61,9 +62,9 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SiteLocationArgs() {
-        this.address = Output.empty();
-        this.latitude = Output.empty();
-        this.longitude = Output.empty();
+        this.address = Codegen.empty();
+        this.latitude = Codegen.empty();
+        this.longitude = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder latitude(@Nullable Output<String> latitude) {
@@ -103,7 +104,7 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latitude(@Nullable String latitude) {
-            this.latitude = Output.ofNullable(latitude);
+            this.latitude = Codegen.ofNullable(latitude);
             return this;
         }
         public Builder longitude(@Nullable Output<String> longitude) {
@@ -111,7 +112,7 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder longitude(@Nullable String longitude) {
-            this.longitude = Output.ofNullable(longitude);
+            this.longitude = Codegen.ofNullable(longitude);
             return this;
         }        public SiteLocationArgs build() {
             return new SiteLocationArgs(address, latitude, longitude);

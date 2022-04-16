@@ -34,14 +34,14 @@ public final class GetIAMPolicyAuditConfig {
      * A nested block that defines the operations you'd like to log.
      * 
     */
-    public List<GetIAMPolicyAuditConfigAuditLogConfig> getAuditLogConfigs() {
+    public List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
      * Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

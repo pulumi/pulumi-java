@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ConsumerGroup extends io.pulumi.resources.CustomResource {
      * @return Exact time the message was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -55,7 +56,7 @@ public class ConsumerGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class ConsumerGroup extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -83,7 +84,7 @@ public class ConsumerGroup extends io.pulumi.resources.CustomResource {
      * @return The exact time the message was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
     /**
@@ -97,7 +98,7 @@ public class ConsumerGroup extends io.pulumi.resources.CustomResource {
      * @return User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
      * 
      */
-    public Output</* @Nullable */ String> getUserMetadata() {
+    public Output</* @Nullable */ String> userMetadata() {
         return this.userMetadata;
     }
 
@@ -123,7 +124,7 @@ public class ConsumerGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConsumerGroup(String name, ConsumerGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventhub:ConsumerGroup", name, args == null ? ConsumerGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventhub:ConsumerGroup", name, args == null ? ConsumerGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConsumerGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

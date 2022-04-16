@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     @Import(name="allocationWeight")
       private final @Nullable Output<Integer> allocationWeight;
 
-    public Output<Integer> getAllocationWeight() {
-        return this.allocationWeight == null ? Output.empty() : this.allocationWeight;
+    public Output<Integer> allocationWeight() {
+        return this.allocationWeight == null ? Codegen.empty() : this.allocationWeight;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     @Import(name="applyAllocationPolicy")
       private final @Nullable Output<Boolean> applyAllocationPolicy;
 
-    public Output<Boolean> getApplyAllocationPolicy() {
-        return this.applyAllocationPolicy == null ? Output.empty() : this.applyAllocationPolicy;
+    public Output<Boolean> applyAllocationPolicy() {
+        return this.applyAllocationPolicy == null ? Codegen.empty() : this.applyAllocationPolicy;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
@@ -60,7 +61,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -76,10 +77,10 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     }
 
     private IotHubDefinitionDescriptionArgs() {
-        this.allocationWeight = Output.empty();
-        this.applyAllocationPolicy = Output.empty();
-        this.connectionString = Output.empty();
-        this.location = Output.empty();
+        this.allocationWeight = Codegen.empty();
+        this.applyAllocationPolicy = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder allocationWeight(@Nullable Integer allocationWeight) {
-            this.allocationWeight = Output.ofNullable(allocationWeight);
+            this.allocationWeight = Codegen.ofNullable(allocationWeight);
             return this;
         }
         public Builder applyAllocationPolicy(@Nullable Output<Boolean> applyAllocationPolicy) {
@@ -121,7 +122,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
-            this.applyAllocationPolicy = Output.ofNullable(applyAllocationPolicy);
+            this.applyAllocationPolicy = Codegen.ofNullable(applyAllocationPolicy);
             return this;
         }
         public Builder connectionString(Output<String> connectionString) {

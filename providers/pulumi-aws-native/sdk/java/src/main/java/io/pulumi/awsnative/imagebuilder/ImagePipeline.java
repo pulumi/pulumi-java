@@ -11,6 +11,7 @@ import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineSchedule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -33,7 +34,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the image pipeline.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +48,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
-    public Output</* @Nullable */ String> getContainerRecipeArn() {
+    public Output</* @Nullable */ String> containerRecipeArn() {
         return this.containerRecipeArn;
     }
     /**
@@ -61,7 +62,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The description of the image pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +76,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getDistributionConfigurationArn() {
+    public Output</* @Nullable */ String> distributionConfigurationArn() {
         return this.distributionConfigurationArn;
     }
     /**
@@ -89,7 +90,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnhancedImageMetadataEnabled() {
+    public Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled;
     }
     /**
@@ -103,7 +104,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      */
-    public Output</* @Nullable */ String> getImageRecipeArn() {
+    public Output</* @Nullable */ String> imageRecipeArn() {
         return this.imageRecipeArn;
     }
     /**
@@ -117,7 +118,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The image tests configuration of the image pipeline.
      * 
      */
-    public Output</* @Nullable */ ImagePipelineImageTestsConfiguration> getImageTestsConfiguration() {
+    public Output</* @Nullable */ ImagePipelineImageTestsConfiguration> imageTestsConfiguration() {
         return this.imageTestsConfiguration;
     }
     /**
@@ -131,7 +132,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getInfrastructureConfigurationArn() {
+    public Output</* @Nullable */ String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
     /**
@@ -145,7 +146,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The name of the image pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -159,7 +160,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The schedule of the image pipeline.
      * 
      */
-    public Output</* @Nullable */ ImagePipelineSchedule> getSchedule() {
+    public Output</* @Nullable */ ImagePipelineSchedule> schedule() {
         return this.schedule;
     }
     /**
@@ -173,7 +174,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The status of the image pipeline.
      * 
      */
-    public Output</* @Nullable */ ImagePipelineStatus> getStatus() {
+    public Output</* @Nullable */ ImagePipelineStatus> status() {
         return this.status;
     }
     /**
@@ -187,7 +188,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return The tags of this image pipeline.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
 
@@ -213,7 +214,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImagePipeline(String name, @Nullable ImagePipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:imagebuilder:ImagePipeline", name, args == null ? ImagePipelineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:imagebuilder:ImagePipeline", name, args == null ? ImagePipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImagePipeline(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

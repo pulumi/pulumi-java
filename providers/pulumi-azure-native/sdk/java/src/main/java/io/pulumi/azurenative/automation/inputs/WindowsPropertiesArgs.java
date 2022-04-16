@@ -7,6 +7,7 @@ import io.pulumi.azurenative.automation.enums.WindowsUpdateClasses;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="excludedKbNumbers")
       private final @Nullable Output<List<String>> excludedKbNumbers;
 
-    public Output<List<String>> getExcludedKbNumbers() {
-        return this.excludedKbNumbers == null ? Output.empty() : this.excludedKbNumbers;
+    public Output<List<String>> excludedKbNumbers() {
+        return this.excludedKbNumbers == null ? Codegen.empty() : this.excludedKbNumbers;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="includedKbNumbers")
       private final @Nullable Output<List<String>> includedKbNumbers;
 
-    public Output<List<String>> getIncludedKbNumbers() {
-        return this.includedKbNumbers == null ? Output.empty() : this.includedKbNumbers;
+    public Output<List<String>> includedKbNumbers() {
+        return this.includedKbNumbers == null ? Codegen.empty() : this.includedKbNumbers;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="includedUpdateClassifications")
       private final @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
 
-    public Output<Either<String,WindowsUpdateClasses>> getIncludedUpdateClassifications() {
-        return this.includedUpdateClassifications == null ? Output.empty() : this.includedUpdateClassifications;
+    public Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications() {
+        return this.includedUpdateClassifications == null ? Codegen.empty() : this.includedUpdateClassifications;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rebootSetting")
       private final @Nullable Output<String> rebootSetting;
 
-    public Output<String> getRebootSetting() {
-        return this.rebootSetting == null ? Output.empty() : this.rebootSetting;
+    public Output<String> rebootSetting() {
+        return this.rebootSetting == null ? Codegen.empty() : this.rebootSetting;
     }
 
     public WindowsPropertiesArgs(
@@ -77,10 +78,10 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WindowsPropertiesArgs() {
-        this.excludedKbNumbers = Output.empty();
-        this.includedKbNumbers = Output.empty();
-        this.includedUpdateClassifications = Output.empty();
-        this.rebootSetting = Output.empty();
+        this.excludedKbNumbers = Codegen.empty();
+        this.includedKbNumbers = Codegen.empty();
+        this.includedUpdateClassifications = Codegen.empty();
+        this.rebootSetting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder excludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
-            this.excludedKbNumbers = Output.ofNullable(excludedKbNumbers);
+            this.excludedKbNumbers = Codegen.ofNullable(excludedKbNumbers);
             return this;
         }
         public Builder excludedKbNumbers(String... excludedKbNumbers) {
@@ -125,7 +126,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
-            this.includedKbNumbers = Output.ofNullable(includedKbNumbers);
+            this.includedKbNumbers = Codegen.ofNullable(includedKbNumbers);
             return this;
         }
         public Builder includedKbNumbers(String... includedKbNumbers) {
@@ -136,7 +137,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder includedUpdateClassifications(@Nullable Either<String,WindowsUpdateClasses> includedUpdateClassifications) {
-            this.includedUpdateClassifications = Output.ofNullable(includedUpdateClassifications);
+            this.includedUpdateClassifications = Codegen.ofNullable(includedUpdateClassifications);
             return this;
         }
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
@@ -144,7 +145,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rebootSetting(@Nullable String rebootSetting) {
-            this.rebootSetting = Output.ofNullable(rebootSetting);
+            this.rebootSetting = Codegen.ofNullable(rebootSetting);
             return this;
         }        public WindowsPropertiesArgs build() {
             return new WindowsPropertiesArgs(excludedKbNumbers, includedKbNumbers, includedUpdateClassifications, rebootSetting);

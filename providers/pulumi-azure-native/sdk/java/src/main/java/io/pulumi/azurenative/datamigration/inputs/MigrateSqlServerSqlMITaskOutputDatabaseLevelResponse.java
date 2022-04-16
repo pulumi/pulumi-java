@@ -22,7 +22,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -33,7 +33,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -44,7 +44,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
 
@@ -55,7 +55,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -66,7 +66,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -78,7 +78,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -89,7 +89,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="sizeMB", required=true)
       private final Double sizeMB;
 
-    public Double getSizeMB() {
+    public Double sizeMB() {
         return this.sizeMB;
     }
 
@@ -100,7 +100,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="stage", required=true)
       private final String stage;
 
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
 
@@ -111,7 +111,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -122,7 +122,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

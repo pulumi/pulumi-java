@@ -24,7 +24,7 @@ public final class GuestOsFeatureResponse {
      * The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more information, see Enabling guest operating system features.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

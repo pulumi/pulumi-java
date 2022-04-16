@@ -47,7 +47,7 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      * Structure is documented below.
      * 
     */
-    public Optional<ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> getDailySchedule() {
+    public Optional<ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
@@ -55,7 +55,7 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      * Structure is documented below.
      * 
     */
-    public Optional<ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> getHourlySchedule() {
+    public Optional<ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
     /**
@@ -63,7 +63,7 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      * Structure is documented below.
      * 
     */
-    public Optional<ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> getWeeklySchedule() {
+    public Optional<ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
 

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return CNAME of the certificate to be issued via free certificate
      * 
      */
-    public Output</* @Nullable */ String> getCanonicalName() {
+    public Output</* @Nullable */ String> canonicalName() {
         return this.canonicalName;
     }
     /**
@@ -58,7 +59,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Raw bytes of .cer file
      * 
      */
-    public Output<String> getCerBlob() {
+    public Output<String> cerBlob() {
         return this.cerBlob;
     }
     /**
@@ -72,7 +73,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Method of domain validation for free cert
      * 
      */
-    public Output</* @Nullable */ String> getDomainValidationMethod() {
+    public Output</* @Nullable */ String> domainValidationMethod() {
         return this.domainValidationMethod;
     }
     /**
@@ -86,7 +87,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Certificate expiration date.
      * 
      */
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -100,7 +101,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Friendly name of the certificate.
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -114,7 +115,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Host names the certificate applies to.
      * 
      */
-    public Output</* @Nullable */ List<String>> getHostNames() {
+    public Output</* @Nullable */ List<String>> hostNames() {
         return this.hostNames;
     }
     /**
@@ -128,7 +129,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Specification for the App Service Environment to use for the certificate.
      * 
      */
-    public Output<HostingEnvironmentProfileResponse> getHostingEnvironmentProfile() {
+    public Output<HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile;
     }
     /**
@@ -142,7 +143,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Certificate issue Date.
      * 
      */
-    public Output<String> getIssueDate() {
+    public Output<String> issueDate() {
         return this.issueDate;
     }
     /**
@@ -156,7 +157,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Certificate issuer.
      * 
      */
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
     /**
@@ -170,7 +171,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Key Vault Csm resource Id.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultId() {
+    public Output</* @Nullable */ String> keyVaultId() {
         return this.keyVaultId;
     }
     /**
@@ -184,7 +185,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Key Vault secret name.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultSecretName() {
+    public Output</* @Nullable */ String> keyVaultSecretName() {
         return this.keyVaultSecretName;
     }
     /**
@@ -198,7 +199,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Status of the Key Vault secret.
      * 
      */
-    public Output<String> getKeyVaultSecretStatus() {
+    public Output<String> keyVaultSecretStatus() {
         return this.keyVaultSecretStatus;
     }
     /**
@@ -212,7 +213,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -226,7 +227,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -240,7 +241,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -254,7 +255,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Pfx blob.
      * 
      */
-    public Output</* @Nullable */ String> getPfxBlob() {
+    public Output</* @Nullable */ String> pfxBlob() {
         return this.pfxBlob;
     }
     /**
@@ -268,7 +269,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Public key hash.
      * 
      */
-    public Output<String> getPublicKeyHash() {
+    public Output<String> publicKeyHash() {
         return this.publicKeyHash;
     }
     /**
@@ -282,7 +283,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Self link.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -296,7 +297,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
      * 
      */
-    public Output</* @Nullable */ String> getServerFarmId() {
+    public Output</* @Nullable */ String> serverFarmId() {
         return this.serverFarmId;
     }
     /**
@@ -310,7 +311,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return App name.
      * 
      */
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
     /**
@@ -324,7 +325,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Subject name of the certificate.
      * 
      */
-    public Output<String> getSubjectName() {
+    public Output<String> subjectName() {
         return this.subjectName;
     }
     /**
@@ -338,7 +339,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -352,7 +353,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Certificate thumbprint.
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -366,7 +367,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -380,7 +381,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Is the certificate valid?.
      * 
      */
-    public Output<Boolean> getValid() {
+    public Output<Boolean> valid() {
         return this.valid;
     }
 
@@ -406,7 +407,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Certificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

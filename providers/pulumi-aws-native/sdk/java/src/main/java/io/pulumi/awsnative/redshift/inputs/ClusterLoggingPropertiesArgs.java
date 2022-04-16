@@ -5,6 +5,7 @@ package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
+    public Output<String> s3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
     public ClusterLoggingPropertiesArgs(
@@ -36,8 +37,8 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private ClusterLoggingPropertiesArgs() {
-        this.bucketName = Output.empty();
-        this.s3KeyPrefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.s3KeyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
             return this;
         }        public ClusterLoggingPropertiesArgs build() {
             return new ClusterLoggingPropertiesArgs(bucketName, s3KeyPrefix);

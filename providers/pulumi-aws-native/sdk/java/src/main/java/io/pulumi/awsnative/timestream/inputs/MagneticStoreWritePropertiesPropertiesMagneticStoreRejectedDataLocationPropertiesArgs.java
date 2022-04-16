@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="s3Configuration")
       private final @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration;
 
-    public Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> getS3Configuration() {
-        return this.s3Configuration == null ? Output.empty() : this.s3Configuration;
+    public Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration() {
+        return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
     }
 
     public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs(@Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration) {
@@ -34,7 +35,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     }
 
     private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs() {
-        this.s3Configuration = Output.empty();
+        this.s3Configuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
             return this;
         }
         public Builder s3Configuration(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs s3Configuration) {
-            this.s3Configuration = Output.ofNullable(s3Configuration);
+            this.s3Configuration = Codegen.ofNullable(s3Configuration);
             return this;
         }        public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs build() {
             return new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs(s3Configuration);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storage_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.HmacKeyArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return The ID of the HMAC Key.
      * 
      */
-    public Output<String> getAccessId() {
+    public Output<String> accessId() {
         return this.accessId;
     }
     /**
@@ -43,7 +44,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return HTTP 1.1 Entity tag for the HMAC key.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +58,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -71,7 +72,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return Project ID owning the service account to which the key authenticates.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -85,7 +86,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return The link to this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -99,7 +100,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return The email address of the key's associated service account.
      * 
      */
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
@@ -113,7 +114,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -127,7 +128,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return The creation time of the HMAC key in RFC 3339 format.
      * 
      */
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -141,7 +142,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @return The last modification time of the HMAC key metadata in RFC 3339 format.
      * 
      */
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated;
     }
 
@@ -167,7 +168,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HmacKey(String name, HmacKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storage/v1:HmacKey", name, args == null ? HmacKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storage/v1:HmacKey", name, args == null ? HmacKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HmacKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

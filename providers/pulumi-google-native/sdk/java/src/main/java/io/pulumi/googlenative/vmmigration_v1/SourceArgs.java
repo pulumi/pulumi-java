@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vmmigration_v1.inputs.VmwareSourceDetailsArgs;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,35 +35,35 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
@@ -73,8 +74,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmware")
       private final @Nullable Output<VmwareSourceDetailsArgs> vmware;
 
-    public Output<VmwareSourceDetailsArgs> getVmware() {
-        return this.vmware == null ? Output.empty() : this.vmware;
+    public Output<VmwareSourceDetailsArgs> vmware() {
+        return this.vmware == null ? Codegen.empty() : this.vmware;
     }
 
     public SourceArgs(
@@ -95,13 +96,13 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.sourceId = Output.empty();
-        this.vmware = Output.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.sourceId = Codegen.empty();
+        this.vmware = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -149,7 +150,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -157,7 +158,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -165,7 +166,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -173,7 +174,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder sourceId(Output<String> sourceId) {
@@ -189,7 +190,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmware(@Nullable VmwareSourceDetailsArgs vmware) {
-            this.vmware = Output.ofNullable(vmware);
+            this.vmware = Codegen.ofNullable(vmware);
             return this;
         }        public SourceArgs build() {
             return new SourceArgs(description, labels, location, project, requestId, sourceId, vmware);

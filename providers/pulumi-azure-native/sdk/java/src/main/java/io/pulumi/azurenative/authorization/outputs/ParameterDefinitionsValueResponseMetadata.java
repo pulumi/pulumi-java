@@ -49,28 +49,28 @@ public final class ParameterDefinitionsValueResponseMetadata {
      * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
      * 
     */
-    public Optional<Boolean> getAssignPermissions() {
+    public Optional<Boolean> assignPermissions() {
         return Optional.ofNullable(this.assignPermissions);
     }
     /**
      * The description of the parameter.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name for the parameter.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
      * 
     */
-    public Optional<String> getStrongType() {
+    public Optional<String> strongType() {
         return Optional.ofNullable(this.strongType);
     }
 

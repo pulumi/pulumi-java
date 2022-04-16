@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionIAMBindingArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingState;
@@ -57,7 +58,7 @@ public class SubscriptionIAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=SubscriptionIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ SubscriptionIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ SubscriptionIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ SubscriptionIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -71,13 +72,13 @@ public class SubscriptionIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the subscription's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -93,7 +94,7 @@ public class SubscriptionIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -111,7 +112,7 @@ public class SubscriptionIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -125,7 +126,7 @@ public class SubscriptionIAMBinding extends io.pulumi.resources.CustomResource {
      * @return The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription;
     }
 
@@ -151,7 +152,7 @@ public class SubscriptionIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubscriptionIAMBinding(String name, SubscriptionIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/subscriptionIAMBinding:SubscriptionIAMBinding", name, args == null ? SubscriptionIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/subscriptionIAMBinding:SubscriptionIAMBinding", name, args == null ? SubscriptionIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SubscriptionIAMBinding(String name, Output<String> id, @Nullable SubscriptionIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

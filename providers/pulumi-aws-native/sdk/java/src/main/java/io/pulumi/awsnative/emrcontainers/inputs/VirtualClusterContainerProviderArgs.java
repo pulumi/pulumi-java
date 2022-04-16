@@ -6,6 +6,7 @@ package io.pulumi.awsnative.emrcontainers.inputs;
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,14 +22,14 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="info", required=true)
       private final Output<VirtualClusterContainerInfoArgs> info;
 
-    public Output<VirtualClusterContainerInfoArgs> getInfo() {
+    public Output<VirtualClusterContainerInfoArgs> info() {
         return this.info;
     }
 
@@ -39,7 +40,7 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -53,9 +54,9 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
     }
 
     private VirtualClusterContainerProviderArgs() {
-        this.id = Output.empty();
-        this.info = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.info = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

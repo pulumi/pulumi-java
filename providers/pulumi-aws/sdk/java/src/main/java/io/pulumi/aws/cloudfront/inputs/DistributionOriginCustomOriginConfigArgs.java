@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="httpPort", required=true)
       private final Output<Integer> httpPort;
 
-    public Output<Integer> getHttpPort() {
+    public Output<Integer> httpPort() {
         return this.httpPort;
     }
 
@@ -34,7 +35,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="httpsPort", required=true)
       private final Output<Integer> httpsPort;
 
-    public Output<Integer> getHttpsPort() {
+    public Output<Integer> httpsPort() {
         return this.httpsPort;
     }
 
@@ -45,8 +46,8 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originKeepaliveTimeout")
       private final @Nullable Output<Integer> originKeepaliveTimeout;
 
-    public Output<Integer> getOriginKeepaliveTimeout() {
-        return this.originKeepaliveTimeout == null ? Output.empty() : this.originKeepaliveTimeout;
+    public Output<Integer> originKeepaliveTimeout() {
+        return this.originKeepaliveTimeout == null ? Codegen.empty() : this.originKeepaliveTimeout;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originProtocolPolicy", required=true)
       private final Output<String> originProtocolPolicy;
 
-    public Output<String> getOriginProtocolPolicy() {
+    public Output<String> originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
@@ -68,8 +69,8 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originReadTimeout")
       private final @Nullable Output<Integer> originReadTimeout;
 
-    public Output<Integer> getOriginReadTimeout() {
-        return this.originReadTimeout == null ? Output.empty() : this.originReadTimeout;
+    public Output<Integer> originReadTimeout() {
+        return this.originReadTimeout == null ? Codegen.empty() : this.originReadTimeout;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originSslProtocols", required=true)
       private final Output<List<String>> originSslProtocols;
 
-    public Output<List<String>> getOriginSslProtocols() {
+    public Output<List<String>> originSslProtocols() {
         return this.originSslProtocols;
     }
 
@@ -101,12 +102,12 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     }
 
     private DistributionOriginCustomOriginConfigArgs() {
-        this.httpPort = Output.empty();
-        this.httpsPort = Output.empty();
-        this.originKeepaliveTimeout = Output.empty();
-        this.originProtocolPolicy = Output.empty();
-        this.originReadTimeout = Output.empty();
-        this.originSslProtocols = Output.empty();
+        this.httpPort = Codegen.empty();
+        this.httpsPort = Codegen.empty();
+        this.originKeepaliveTimeout = Codegen.empty();
+        this.originProtocolPolicy = Codegen.empty();
+        this.originReadTimeout = Codegen.empty();
+        this.originSslProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
-            this.originKeepaliveTimeout = Output.ofNullable(originKeepaliveTimeout);
+            this.originKeepaliveTimeout = Codegen.ofNullable(originKeepaliveTimeout);
             return this;
         }
         public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {
@@ -176,7 +177,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
-            this.originReadTimeout = Output.ofNullable(originReadTimeout);
+            this.originReadTimeout = Codegen.ofNullable(originReadTimeout);
             return this;
         }
         public Builder originSslProtocols(Output<List<String>> originSslProtocols) {

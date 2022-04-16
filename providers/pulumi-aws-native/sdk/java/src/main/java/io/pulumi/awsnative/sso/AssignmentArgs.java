@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import io.pulumi.awsnative.sso.enums.AssignmentTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -33,7 +34,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -44,7 +45,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -55,7 +56,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalType", required=true)
       private final Output<AssignmentPrincipalType> principalType;
 
-    public Output<AssignmentPrincipalType> getPrincipalType() {
+    public Output<AssignmentPrincipalType> principalType() {
         return this.principalType;
     }
 
@@ -66,7 +67,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -77,7 +78,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetType", required=true)
       private final Output<AssignmentTargetType> targetType;
 
-    public Output<AssignmentTargetType> getTargetType() {
+    public Output<AssignmentTargetType> targetType() {
         return this.targetType;
     }
 
@@ -97,12 +98,12 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssignmentArgs() {
-        this.instanceArn = Output.empty();
-        this.permissionSetArn = Output.empty();
-        this.principalId = Output.empty();
-        this.principalType = Output.empty();
-        this.targetId = Output.empty();
-        this.targetType = Output.empty();
+        this.instanceArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.targetId = Codegen.empty();
+        this.targetType = Codegen.empty();
     }
 
     public static Builder builder() {

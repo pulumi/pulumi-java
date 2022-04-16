@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotCapacityRebalanceReplacementStrategy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
     @Import(name="replacementStrategy")
       private final @Nullable Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy;
 
-    public Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
-        return this.replacementStrategy == null ? Output.empty() : this.replacementStrategy;
+    public Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy() {
+        return this.replacementStrategy == null ? Codegen.empty() : this.replacementStrategy;
     }
 
     @Import(name="terminationDelay")
       private final @Nullable Output<Integer> terminationDelay;
 
-    public Output<Integer> getTerminationDelay() {
-        return this.terminationDelay == null ? Output.empty() : this.terminationDelay;
+    public Output<Integer> terminationDelay() {
+        return this.terminationDelay == null ? Codegen.empty() : this.terminationDelay;
     }
 
     public SpotFleetSpotCapacityRebalanceArgs(
@@ -37,8 +38,8 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
     }
 
     private SpotFleetSpotCapacityRebalanceArgs() {
-        this.replacementStrategy = Output.empty();
-        this.terminationDelay = Output.empty();
+        this.replacementStrategy = Codegen.empty();
+        this.terminationDelay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
             return this;
         }
         public Builder replacementStrategy(@Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy) {
-            this.replacementStrategy = Output.ofNullable(replacementStrategy);
+            this.replacementStrategy = Codegen.ofNullable(replacementStrategy);
             return this;
         }
         public Builder terminationDelay(@Nullable Output<Integer> terminationDelay) {
@@ -76,7 +77,7 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
             return this;
         }
         public Builder terminationDelay(@Nullable Integer terminationDelay) {
-            this.terminationDelay = Output.ofNullable(terminationDelay);
+            this.terminationDelay = Codegen.ofNullable(terminationDelay);
             return this;
         }        public SpotFleetSpotCapacityRebalanceArgs build() {
             return new SpotFleetSpotCapacityRebalanceArgs(replacementStrategy, terminationDelay);

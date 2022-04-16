@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     @Import(name="filters")
       private final @Nullable Output<List<String>> filters;
 
-    public Output<List<String>> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+    public Output<List<String>> filters() {
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     @Import(name="searchCriteria")
       private final @Nullable Output<String> searchCriteria;
 
-    public Output<String> getSearchCriteria() {
-        return this.searchCriteria == null ? Output.empty() : this.searchCriteria;
+    public Output<String> searchCriteria() {
+        return this.searchCriteria == null ? Codegen.empty() : this.searchCriteria;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -72,8 +73,8 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     @Import(name="updateLimit")
       private final @Nullable Output<Integer> updateLimit;
 
-    public Output<Integer> getUpdateLimit() {
-        return this.updateLimit == null ? Output.empty() : this.updateLimit;
+    public Output<Integer> updateLimit() {
+        return this.updateLimit == null ? Codegen.empty() : this.updateLimit;
     }
 
     public ImageTemplateWindowsUpdateCustomizerArgs(
@@ -90,11 +91,11 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     }
 
     private ImageTemplateWindowsUpdateCustomizerArgs() {
-        this.filters = Output.empty();
-        this.name = Output.empty();
-        this.searchCriteria = Output.empty();
-        this.type = Output.empty();
-        this.updateLimit = Output.empty();
+        this.filters = Codegen.empty();
+        this.name = Codegen.empty();
+        this.searchCriteria = Codegen.empty();
+        this.type = Codegen.empty();
+        this.updateLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
             return this;
         }
         public Builder filters(@Nullable List<String> filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder filters(String... filters) {
@@ -141,7 +142,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder searchCriteria(@Nullable Output<String> searchCriteria) {
@@ -149,7 +150,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
             return this;
         }
         public Builder searchCriteria(@Nullable String searchCriteria) {
-            this.searchCriteria = Output.ofNullable(searchCriteria);
+            this.searchCriteria = Codegen.ofNullable(searchCriteria);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -165,7 +166,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
             return this;
         }
         public Builder updateLimit(@Nullable Integer updateLimit) {
-            this.updateLimit = Output.ofNullable(updateLimit);
+            this.updateLimit = Codegen.ofNullable(updateLimit);
             return this;
         }        public ImageTemplateWindowsUpdateCustomizerArgs build() {
             return new ImageTemplateWindowsUpdateCustomizerArgs(filters, name, searchCriteria, type, updateLimit);

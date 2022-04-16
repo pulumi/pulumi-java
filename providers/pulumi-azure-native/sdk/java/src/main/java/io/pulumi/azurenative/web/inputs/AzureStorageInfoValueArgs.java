@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.AzureStorageType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
-    public Output<String> getAccessKey() {
-        return this.accessKey == null ? Output.empty() : this.accessKey;
+    public Output<String> accessKey() {
+        return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
-    public Output<String> getMountPath() {
-        return this.mountPath == null ? Output.empty() : this.mountPath;
+    public Output<String> mountPath() {
+        return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
-        return this.shareName == null ? Output.empty() : this.shareName;
+    public Output<String> shareName() {
+        return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<AzureStorageType> type;
 
-    public Output<AzureStorageType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<AzureStorageType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AzureStorageInfoValueArgs(
@@ -88,11 +89,11 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureStorageInfoValueArgs() {
-        this.accessKey = Output.empty();
-        this.accountName = Output.empty();
-        this.mountPath = Output.empty();
-        this.shareName = Output.empty();
-        this.type = Output.empty();
+        this.accessKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.mountPath = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Output.ofNullable(accessKey);
+            this.accessKey = Codegen.ofNullable(accessKey);
             return this;
         }
         public Builder accountName(@Nullable Output<String> accountName) {
@@ -136,7 +137,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder mountPath(@Nullable Output<String> mountPath) {
@@ -144,7 +145,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Output.ofNullable(mountPath);
+            this.mountPath = Codegen.ofNullable(mountPath);
             return this;
         }
         public Builder shareName(@Nullable Output<String> shareName) {
@@ -152,7 +153,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Output.ofNullable(shareName);
+            this.shareName = Codegen.ofNullable(shareName);
             return this;
         }
         public Builder type(@Nullable Output<AzureStorageType> type) {
@@ -160,7 +161,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder type(@Nullable AzureStorageType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AzureStorageInfoValueArgs build() {
             return new AzureStorageInfoValueArgs(accessKey, accountName, mountPath, shareName, type);

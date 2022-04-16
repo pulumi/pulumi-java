@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigateway;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.GatewayIamMemberArgs;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamMemberState;
@@ -60,7 +61,7 @@ public class GatewayIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=GatewayIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ GatewayIamMemberCondition> condition;
 
-    public Output</* @Nullable */ GatewayIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ GatewayIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -74,19 +75,19 @@ public class GatewayIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="gateway", type=String.class, parameters={})
     private Output<String> gateway;
 
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -102,7 +103,7 @@ public class GatewayIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -122,7 +123,7 @@ public class GatewayIamMember extends io.pulumi.resources.CustomResource {
      * region is specified, it is taken from the provider configuration.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -140,7 +141,7 @@ public class GatewayIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -166,7 +167,7 @@ public class GatewayIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayIamMember(String name, GatewayIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/gatewayIamMember:GatewayIamMember", name, args == null ? GatewayIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigateway/gatewayIamMember:GatewayIamMember", name, args == null ? GatewayIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GatewayIamMember(String name, Output<String> id, @Nullable GatewayIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

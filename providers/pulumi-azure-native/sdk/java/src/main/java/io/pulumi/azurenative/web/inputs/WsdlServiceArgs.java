@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointQualifiedNames")
       private final @Nullable Output<List<String>> endpointQualifiedNames;
 
-    public Output<List<String>> getEndpointQualifiedNames() {
-        return this.endpointQualifiedNames == null ? Output.empty() : this.endpointQualifiedNames;
+    public Output<List<String>> endpointQualifiedNames() {
+        return this.endpointQualifiedNames == null ? Codegen.empty() : this.endpointQualifiedNames;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="qualifiedName", required=true)
       private final Output<String> qualifiedName;
 
-    public Output<String> getQualifiedName() {
+    public Output<String> qualifiedName() {
         return this.qualifiedName;
     }
 
@@ -49,8 +50,8 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WsdlServiceArgs() {
-        this.endpointQualifiedNames = Output.empty();
-        this.qualifiedName = Output.empty();
+        this.endpointQualifiedNames = Codegen.empty();
+        this.qualifiedName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
-            this.endpointQualifiedNames = Output.ofNullable(endpointQualifiedNames);
+            this.endpointQualifiedNames = Codegen.ofNullable(endpointQualifiedNames);
             return this;
         }
         public Builder endpointQualifiedNames(String... endpointQualifiedNames) {

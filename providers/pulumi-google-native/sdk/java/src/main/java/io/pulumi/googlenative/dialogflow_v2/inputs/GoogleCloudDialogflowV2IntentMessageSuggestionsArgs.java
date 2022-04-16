@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageSuggestionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
     @Import(name="suggestions", required=true)
       private final Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> getSuggestions() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions() {
         return this.suggestions;
     }
 
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
     }
 
     private GoogleCloudDialogflowV2IntentMessageSuggestionsArgs() {
-        this.suggestions = Output.empty();
+        this.suggestions = Codegen.empty();
     }
 
     public static Builder builder() {

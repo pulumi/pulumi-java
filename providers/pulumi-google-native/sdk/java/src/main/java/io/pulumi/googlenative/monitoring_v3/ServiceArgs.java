@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.AppEngineArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.CloudEndpointsArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.ClusterIstioArgs;
@@ -29,8 +30,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appEngine")
       private final @Nullable Output<AppEngineArgs> appEngine;
 
-    public Output<AppEngineArgs> getAppEngine() {
-        return this.appEngine == null ? Output.empty() : this.appEngine;
+    public Output<AppEngineArgs> appEngine() {
+        return this.appEngine == null ? Codegen.empty() : this.appEngine;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudEndpoints")
       private final @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
 
-    public Output<CloudEndpointsArgs> getCloudEndpoints() {
-        return this.cloudEndpoints == null ? Output.empty() : this.cloudEndpoints;
+    public Output<CloudEndpointsArgs> cloudEndpoints() {
+        return this.cloudEndpoints == null ? Codegen.empty() : this.cloudEndpoints;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterIstio")
       private final @Nullable Output<ClusterIstioArgs> clusterIstio;
 
-    public Output<ClusterIstioArgs> getClusterIstio() {
-        return this.clusterIstio == null ? Output.empty() : this.clusterIstio;
+    public Output<ClusterIstioArgs> clusterIstio() {
+        return this.clusterIstio == null ? Codegen.empty() : this.clusterIstio;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<CustomArgs> custom;
 
-    public Output<CustomArgs> getCustom() {
-        return this.custom == null ? Output.empty() : this.custom;
+    public Output<CustomArgs> custom() {
+        return this.custom == null ? Codegen.empty() : this.custom;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="istioCanonicalService")
       private final @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
 
-    public Output<IstioCanonicalServiceArgs> getIstioCanonicalService() {
-        return this.istioCanonicalService == null ? Output.empty() : this.istioCanonicalService;
+    public Output<IstioCanonicalServiceArgs> istioCanonicalService() {
+        return this.istioCanonicalService == null ? Codegen.empty() : this.istioCanonicalService;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshIstio")
       private final @Nullable Output<MeshIstioArgs> meshIstio;
 
-    public Output<MeshIstioArgs> getMeshIstio() {
-        return this.meshIstio == null ? Output.empty() : this.meshIstio;
+    public Output<MeshIstioArgs> meshIstio() {
+        return this.meshIstio == null ? Codegen.empty() : this.meshIstio;
     }
 
     /**
@@ -106,15 +107,15 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
-    public Output<String> getServiceId() {
-        return this.serviceId == null ? Output.empty() : this.serviceId;
+    public Output<String> serviceId() {
+        return this.serviceId == null ? Codegen.empty() : this.serviceId;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="telemetry")
       private final @Nullable Output<TelemetryArgs> telemetry;
 
-    public Output<TelemetryArgs> getTelemetry() {
-        return this.telemetry == null ? Output.empty() : this.telemetry;
+    public Output<TelemetryArgs> telemetry() {
+        return this.telemetry == null ? Codegen.empty() : this.telemetry;
     }
 
     /**
@@ -135,21 +136,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Output.empty() : this.userLabels;
+    public Output<Map<String,String>> userLabels() {
+        return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     @Import(name="v3Id", required=true)
       private final Output<String> v3Id;
 
-    public Output<String> getV3Id() {
+    public Output<String> v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
       private final Output<String> v3Id1;
 
-    public Output<String> getV3Id1() {
+    public Output<String> v3Id1() {
         return this.v3Id1;
     }
 
@@ -183,19 +184,19 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.appEngine = Output.empty();
-        this.cloudEndpoints = Output.empty();
-        this.clusterIstio = Output.empty();
-        this.custom = Output.empty();
-        this.displayName = Output.empty();
-        this.istioCanonicalService = Output.empty();
-        this.meshIstio = Output.empty();
-        this.name = Output.empty();
-        this.serviceId = Output.empty();
-        this.telemetry = Output.empty();
-        this.userLabels = Output.empty();
-        this.v3Id = Output.empty();
-        this.v3Id1 = Output.empty();
+        this.appEngine = Codegen.empty();
+        this.cloudEndpoints = Codegen.empty();
+        this.clusterIstio = Codegen.empty();
+        this.custom = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.istioCanonicalService = Codegen.empty();
+        this.meshIstio = Codegen.empty();
+        this.name = Codegen.empty();
+        this.serviceId = Codegen.empty();
+        this.telemetry = Codegen.empty();
+        this.userLabels = Codegen.empty();
+        this.v3Id = Codegen.empty();
+        this.v3Id1 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -247,7 +248,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appEngine(@Nullable AppEngineArgs appEngine) {
-            this.appEngine = Output.ofNullable(appEngine);
+            this.appEngine = Codegen.ofNullable(appEngine);
             return this;
         }
         public Builder cloudEndpoints(@Nullable Output<CloudEndpointsArgs> cloudEndpoints) {
@@ -255,7 +256,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudEndpoints(@Nullable CloudEndpointsArgs cloudEndpoints) {
-            this.cloudEndpoints = Output.ofNullable(cloudEndpoints);
+            this.cloudEndpoints = Codegen.ofNullable(cloudEndpoints);
             return this;
         }
         public Builder clusterIstio(@Nullable Output<ClusterIstioArgs> clusterIstio) {
@@ -263,7 +264,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterIstio(@Nullable ClusterIstioArgs clusterIstio) {
-            this.clusterIstio = Output.ofNullable(clusterIstio);
+            this.clusterIstio = Codegen.ofNullable(clusterIstio);
             return this;
         }
         public Builder custom(@Nullable Output<CustomArgs> custom) {
@@ -271,7 +272,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder custom(@Nullable CustomArgs custom) {
-            this.custom = Output.ofNullable(custom);
+            this.custom = Codegen.ofNullable(custom);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -279,7 +280,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder istioCanonicalService(@Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService) {
@@ -287,7 +288,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder istioCanonicalService(@Nullable IstioCanonicalServiceArgs istioCanonicalService) {
-            this.istioCanonicalService = Output.ofNullable(istioCanonicalService);
+            this.istioCanonicalService = Codegen.ofNullable(istioCanonicalService);
             return this;
         }
         public Builder meshIstio(@Nullable Output<MeshIstioArgs> meshIstio) {
@@ -295,7 +296,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder meshIstio(@Nullable MeshIstioArgs meshIstio) {
-            this.meshIstio = Output.ofNullable(meshIstio);
+            this.meshIstio = Codegen.ofNullable(meshIstio);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -303,7 +304,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder serviceId(@Nullable Output<String> serviceId) {
@@ -311,7 +312,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Output.ofNullable(serviceId);
+            this.serviceId = Codegen.ofNullable(serviceId);
             return this;
         }
         public Builder telemetry(@Nullable Output<TelemetryArgs> telemetry) {
@@ -319,7 +320,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder telemetry(@Nullable TelemetryArgs telemetry) {
-            this.telemetry = Output.ofNullable(telemetry);
+            this.telemetry = Codegen.ofNullable(telemetry);
             return this;
         }
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
@@ -327,7 +328,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Output.ofNullable(userLabels);
+            this.userLabels = Codegen.ofNullable(userLabels);
             return this;
         }
         public Builder v3Id(Output<String> v3Id) {

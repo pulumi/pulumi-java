@@ -11,6 +11,7 @@ import io.pulumi.aws.codepipeline.outputs.PipelineStage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The codepipeline ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    public Output<PipelineArtifactStore> getArtifactStore() {
+    public Output<PipelineArtifactStore> artifactStore() {
         return this.artifactStore;
     }
     /**
@@ -71,7 +72,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The name of the pipeline.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -99,7 +100,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return A stage block. Stages are documented below.
      * 
      */
-    public Output<List<PipelineStage>> getStages() {
+    public Output<List<PipelineStage>> stages() {
         return this.stages;
     }
     /**
@@ -113,7 +114,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +128,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -153,7 +154,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Pipeline(String name, PipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codepipeline/pipeline:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codepipeline/pipeline:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Pipeline(String name, Output<String> id, @Nullable PipelineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

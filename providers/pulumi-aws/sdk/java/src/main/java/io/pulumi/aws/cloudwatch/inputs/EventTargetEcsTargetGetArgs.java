@@ -7,6 +7,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetNetworkConfigurationG
 import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetPlacementConstraintGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="enableEcsManagedTags")
       private final @Nullable Output<Boolean> enableEcsManagedTags;
 
-    public Output<Boolean> getEnableEcsManagedTags() {
-        return this.enableEcsManagedTags == null ? Output.empty() : this.enableEcsManagedTags;
+    public Output<Boolean> enableEcsManagedTags() {
+        return this.enableEcsManagedTags == null ? Codegen.empty() : this.enableEcsManagedTags;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="enableExecuteCommand")
       private final @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Output<Boolean> getEnableExecuteCommand() {
-        return this.enableExecuteCommand == null ? Output.empty() : this.enableExecuteCommand;
+    public Output<Boolean> enableExecuteCommand() {
+        return this.enableExecuteCommand == null ? Codegen.empty() : this.enableExecuteCommand;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+    public Output<String> group() {
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="launchType")
       private final @Nullable Output<String> launchType;
 
-    public Output<String> getLaunchType() {
-        return this.launchType == null ? Output.empty() : this.launchType;
+    public Output<String> launchType() {
+        return this.launchType == null ? Codegen.empty() : this.launchType;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="networkConfiguration")
       private final @Nullable Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration;
 
-    public Output<EventTargetEcsTargetNetworkConfigurationGetArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
+    public Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration() {
+        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="placementConstraints")
       private final @Nullable Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints;
 
-    public Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> getPlacementConstraints() {
-        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
+    public Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints() {
+        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
-        return this.platformVersion == null ? Output.empty() : this.platformVersion;
+    public Output<String> platformVersion() {
+        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="propagateTags")
       private final @Nullable Output<String> propagateTags;
 
-    public Output<String> getPropagateTags() {
-        return this.propagateTags == null ? Output.empty() : this.propagateTags;
+    public Output<String> propagateTags() {
+        return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="taskCount")
       private final @Nullable Output<Integer> taskCount;
 
-    public Output<Integer> getTaskCount() {
-        return this.taskCount == null ? Output.empty() : this.taskCount;
+    public Output<Integer> taskCount() {
+        return this.taskCount == null ? Codegen.empty() : this.taskCount;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     @Import(name="taskDefinitionArn", required=true)
       private final Output<String> taskDefinitionArn;
 
-    public Output<String> getTaskDefinitionArn() {
+    public Output<String> taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
 
@@ -167,17 +168,17 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     }
 
     private EventTargetEcsTargetGetArgs() {
-        this.enableEcsManagedTags = Output.empty();
-        this.enableExecuteCommand = Output.empty();
-        this.group = Output.empty();
-        this.launchType = Output.empty();
-        this.networkConfiguration = Output.empty();
-        this.placementConstraints = Output.empty();
-        this.platformVersion = Output.empty();
-        this.propagateTags = Output.empty();
-        this.tags = Output.empty();
-        this.taskCount = Output.empty();
-        this.taskDefinitionArn = Output.empty();
+        this.enableEcsManagedTags = Codegen.empty();
+        this.enableExecuteCommand = Codegen.empty();
+        this.group = Codegen.empty();
+        this.launchType = Codegen.empty();
+        this.networkConfiguration = Codegen.empty();
+        this.placementConstraints = Codegen.empty();
+        this.platformVersion = Codegen.empty();
+        this.propagateTags = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.taskCount = Codegen.empty();
+        this.taskDefinitionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
-            this.enableEcsManagedTags = Output.ofNullable(enableEcsManagedTags);
+            this.enableEcsManagedTags = Codegen.ofNullable(enableEcsManagedTags);
             return this;
         }
         public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
@@ -233,7 +234,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
-            this.enableExecuteCommand = Output.ofNullable(enableExecuteCommand);
+            this.enableExecuteCommand = Codegen.ofNullable(enableExecuteCommand);
             return this;
         }
         public Builder group(@Nullable Output<String> group) {
@@ -241,7 +242,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder group(@Nullable String group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder launchType(@Nullable Output<String> launchType) {
@@ -249,7 +250,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder launchType(@Nullable String launchType) {
-            this.launchType = Output.ofNullable(launchType);
+            this.launchType = Codegen.ofNullable(launchType);
             return this;
         }
         public Builder networkConfiguration(@Nullable Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration) {
@@ -257,7 +258,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder networkConfiguration(@Nullable EventTargetEcsTargetNetworkConfigurationGetArgs networkConfiguration) {
-            this.networkConfiguration = Output.ofNullable(networkConfiguration);
+            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
             return this;
         }
         public Builder placementConstraints(@Nullable Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints) {
@@ -265,7 +266,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder placementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraintGetArgs> placementConstraints) {
-            this.placementConstraints = Output.ofNullable(placementConstraints);
+            this.placementConstraints = Codegen.ofNullable(placementConstraints);
             return this;
         }
         public Builder placementConstraints(EventTargetEcsTargetPlacementConstraintGetArgs... placementConstraints) {
@@ -276,7 +277,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Output.ofNullable(platformVersion);
+            this.platformVersion = Codegen.ofNullable(platformVersion);
             return this;
         }
         public Builder propagateTags(@Nullable Output<String> propagateTags) {
@@ -284,7 +285,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder propagateTags(@Nullable String propagateTags) {
-            this.propagateTags = Output.ofNullable(propagateTags);
+            this.propagateTags = Codegen.ofNullable(propagateTags);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -292,7 +293,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder taskCount(@Nullable Output<Integer> taskCount) {
@@ -300,7 +301,7 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder taskCount(@Nullable Integer taskCount) {
-            this.taskCount = Output.ofNullable(taskCount);
+            this.taskCount = Codegen.ofNullable(taskCount);
             return this;
         }
         public Builder taskDefinitionArn(Output<String> taskDefinitionArn) {

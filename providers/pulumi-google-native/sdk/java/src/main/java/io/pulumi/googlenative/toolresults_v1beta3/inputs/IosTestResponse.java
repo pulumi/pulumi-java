@@ -27,7 +27,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iosAppInfo", required=true)
       private final IosAppInfoResponse iosAppInfo;
 
-    public IosAppInfoResponse getIosAppInfo() {
+    public IosAppInfoResponse iosAppInfo() {
         return this.iosAppInfo;
     }
 
@@ -38,7 +38,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iosRoboTest", required=true)
       private final IosRoboTestResponse iosRoboTest;
 
-    public IosRoboTestResponse getIosRoboTest() {
+    public IosRoboTestResponse iosRoboTest() {
         return this.iosRoboTest;
     }
 
@@ -49,7 +49,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iosTestLoop", required=true)
       private final IosTestLoopResponse iosTestLoop;
 
-    public IosTestLoopResponse getIosTestLoop() {
+    public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
     }
 
@@ -60,7 +60,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iosXcTest", required=true)
       private final IosXcTestResponse iosXcTest;
 
-    public IosXcTestResponse getIosXcTest() {
+    public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
     }
 
@@ -71,7 +71,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="testTimeout", required=true)
       private final DurationResponse testTimeout;
 
-    public DurationResponse getTestTimeout() {
+    public DurationResponse testTimeout() {
         return this.testTimeout;
     }
 

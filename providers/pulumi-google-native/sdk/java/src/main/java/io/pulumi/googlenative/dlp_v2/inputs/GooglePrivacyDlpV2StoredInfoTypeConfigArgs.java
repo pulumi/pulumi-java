@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexArgs;
@@ -28,8 +29,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
-    public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Output.empty() : this.dictionary;
+    public Output<GooglePrivacyDlpV2DictionaryArgs> dictionary() {
+        return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="largeCustomDictionary")
       private final @Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
 
-    public Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> getLargeCustomDictionary() {
-        return this.largeCustomDictionary == null ? Output.empty() : this.largeCustomDictionary;
+    public Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary() {
+        return this.largeCustomDictionary == null ? Codegen.empty() : this.largeCustomDictionary;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
-    public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+    public Output<GooglePrivacyDlpV2RegexArgs> regex() {
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     public GooglePrivacyDlpV2StoredInfoTypeConfigArgs(
@@ -90,11 +91,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     }
 
     private GooglePrivacyDlpV2StoredInfoTypeConfigArgs() {
-        this.description = Output.empty();
-        this.dictionary = Output.empty();
-        this.displayName = Output.empty();
-        this.largeCustomDictionary = Output.empty();
-        this.regex = Output.empty();
+        this.description = Codegen.empty();
+        this.dictionary = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.largeCustomDictionary = Codegen.empty();
+        this.regex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dictionary(@Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
@@ -138,7 +139,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
-            this.dictionary = Output.ofNullable(dictionary);
+            this.dictionary = Codegen.ofNullable(dictionary);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -146,7 +147,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder largeCustomDictionary(@Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary) {
@@ -154,7 +155,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder largeCustomDictionary(@Nullable GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs largeCustomDictionary) {
-            this.largeCustomDictionary = Output.ofNullable(largeCustomDictionary);
+            this.largeCustomDictionary = Codegen.ofNullable(largeCustomDictionary);
             return this;
         }
         public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
@@ -162,7 +163,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
             return this;
         }
         public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }        public GooglePrivacyDlpV2StoredInfoTypeConfigArgs build() {
             return new GooglePrivacyDlpV2StoredInfoTypeConfigArgs(description, dictionary, displayName, largeCustomDictionary, regex);

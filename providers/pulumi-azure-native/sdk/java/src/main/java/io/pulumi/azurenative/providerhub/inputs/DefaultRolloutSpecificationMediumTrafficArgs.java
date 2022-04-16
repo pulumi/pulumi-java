@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+    public Output<List<String>> regions() {
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     @Import(name="waitDuration")
       private final @Nullable Output<String> waitDuration;
 
-    public Output<String> getWaitDuration() {
-        return this.waitDuration == null ? Output.empty() : this.waitDuration;
+    public Output<String> waitDuration() {
+        return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
     }
 
     public DefaultRolloutSpecificationMediumTrafficArgs(
@@ -37,8 +38,8 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
     }
 
     private DefaultRolloutSpecificationMediumTrafficArgs() {
-        this.regions = Output.empty();
-        this.waitDuration = Output.empty();
+        this.regions = Codegen.empty();
+        this.waitDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {
@@ -79,7 +80,7 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
             return this;
         }
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Output.ofNullable(waitDuration);
+            this.waitDuration = Codegen.ofNullable(waitDuration);
             return this;
         }        public DefaultRolloutSpecificationMediumTrafficArgs build() {
             return new DefaultRolloutSpecificationMediumTrafficArgs(regions, waitDuration);

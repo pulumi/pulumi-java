@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,71 +22,71 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
     @Import(name="blockSizeBytes")
       private final @Nullable Output<Integer> blockSizeBytes;
 
-    public Output<Integer> getBlockSizeBytes() {
-        return this.blockSizeBytes == null ? Output.empty() : this.blockSizeBytes;
+    public Output<Integer> blockSizeBytes() {
+        return this.blockSizeBytes == null ? Codegen.empty() : this.blockSizeBytes;
     }
 
     @Import(name="bloomFilterColumns")
       private final @Nullable Output<List<String>> bloomFilterColumns;
 
-    public Output<List<String>> getBloomFilterColumns() {
-        return this.bloomFilterColumns == null ? Output.empty() : this.bloomFilterColumns;
+    public Output<List<String>> bloomFilterColumns() {
+        return this.bloomFilterColumns == null ? Codegen.empty() : this.bloomFilterColumns;
     }
 
     @Import(name="bloomFilterFalsePositiveProbability")
       private final @Nullable Output<Double> bloomFilterFalsePositiveProbability;
 
-    public Output<Double> getBloomFilterFalsePositiveProbability() {
-        return this.bloomFilterFalsePositiveProbability == null ? Output.empty() : this.bloomFilterFalsePositiveProbability;
+    public Output<Double> bloomFilterFalsePositiveProbability() {
+        return this.bloomFilterFalsePositiveProbability == null ? Codegen.empty() : this.bloomFilterFalsePositiveProbability;
     }
 
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+    public Output<String> compression() {
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     @Import(name="dictionaryKeyThreshold")
       private final @Nullable Output<Double> dictionaryKeyThreshold;
 
-    public Output<Double> getDictionaryKeyThreshold() {
-        return this.dictionaryKeyThreshold == null ? Output.empty() : this.dictionaryKeyThreshold;
+    public Output<Double> dictionaryKeyThreshold() {
+        return this.dictionaryKeyThreshold == null ? Codegen.empty() : this.dictionaryKeyThreshold;
     }
 
     @Import(name="enablePadding")
       private final @Nullable Output<Boolean> enablePadding;
 
-    public Output<Boolean> getEnablePadding() {
-        return this.enablePadding == null ? Output.empty() : this.enablePadding;
+    public Output<Boolean> enablePadding() {
+        return this.enablePadding == null ? Codegen.empty() : this.enablePadding;
     }
 
     @Import(name="formatVersion")
       private final @Nullable Output<String> formatVersion;
 
-    public Output<String> getFormatVersion() {
-        return this.formatVersion == null ? Output.empty() : this.formatVersion;
+    public Output<String> formatVersion() {
+        return this.formatVersion == null ? Codegen.empty() : this.formatVersion;
     }
 
     @Import(name="paddingTolerance")
       private final @Nullable Output<Double> paddingTolerance;
 
-    public Output<Double> getPaddingTolerance() {
-        return this.paddingTolerance == null ? Output.empty() : this.paddingTolerance;
+    public Output<Double> paddingTolerance() {
+        return this.paddingTolerance == null ? Codegen.empty() : this.paddingTolerance;
     }
 
     @Import(name="rowIndexStride")
       private final @Nullable Output<Integer> rowIndexStride;
 
-    public Output<Integer> getRowIndexStride() {
-        return this.rowIndexStride == null ? Output.empty() : this.rowIndexStride;
+    public Output<Integer> rowIndexStride() {
+        return this.rowIndexStride == null ? Codegen.empty() : this.rowIndexStride;
     }
 
     @Import(name="stripeSizeBytes")
       private final @Nullable Output<Integer> stripeSizeBytes;
 
-    public Output<Integer> getStripeSizeBytes() {
-        return this.stripeSizeBytes == null ? Output.empty() : this.stripeSizeBytes;
+    public Output<Integer> stripeSizeBytes() {
+        return this.stripeSizeBytes == null ? Codegen.empty() : this.stripeSizeBytes;
     }
 
     public DeliveryStreamOrcSerDeArgs(
@@ -112,16 +113,16 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
     }
 
     private DeliveryStreamOrcSerDeArgs() {
-        this.blockSizeBytes = Output.empty();
-        this.bloomFilterColumns = Output.empty();
-        this.bloomFilterFalsePositiveProbability = Output.empty();
-        this.compression = Output.empty();
-        this.dictionaryKeyThreshold = Output.empty();
-        this.enablePadding = Output.empty();
-        this.formatVersion = Output.empty();
-        this.paddingTolerance = Output.empty();
-        this.rowIndexStride = Output.empty();
-        this.stripeSizeBytes = Output.empty();
+        this.blockSizeBytes = Codegen.empty();
+        this.bloomFilterColumns = Codegen.empty();
+        this.bloomFilterFalsePositiveProbability = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.dictionaryKeyThreshold = Codegen.empty();
+        this.enablePadding = Codegen.empty();
+        this.formatVersion = Codegen.empty();
+        this.paddingTolerance = Codegen.empty();
+        this.rowIndexStride = Codegen.empty();
+        this.stripeSizeBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
-            this.blockSizeBytes = Output.ofNullable(blockSizeBytes);
+            this.blockSizeBytes = Codegen.ofNullable(blockSizeBytes);
             return this;
         }
         public Builder bloomFilterColumns(@Nullable Output<List<String>> bloomFilterColumns) {
@@ -175,7 +176,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bloomFilterColumns(@Nullable List<String> bloomFilterColumns) {
-            this.bloomFilterColumns = Output.ofNullable(bloomFilterColumns);
+            this.bloomFilterColumns = Codegen.ofNullable(bloomFilterColumns);
             return this;
         }
         public Builder bloomFilterColumns(String... bloomFilterColumns) {
@@ -186,7 +187,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bloomFilterFalsePositiveProbability(@Nullable Double bloomFilterFalsePositiveProbability) {
-            this.bloomFilterFalsePositiveProbability = Output.ofNullable(bloomFilterFalsePositiveProbability);
+            this.bloomFilterFalsePositiveProbability = Codegen.ofNullable(bloomFilterFalsePositiveProbability);
             return this;
         }
         public Builder compression(@Nullable Output<String> compression) {
@@ -194,7 +195,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder compression(@Nullable String compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder dictionaryKeyThreshold(@Nullable Output<Double> dictionaryKeyThreshold) {
@@ -202,7 +203,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dictionaryKeyThreshold(@Nullable Double dictionaryKeyThreshold) {
-            this.dictionaryKeyThreshold = Output.ofNullable(dictionaryKeyThreshold);
+            this.dictionaryKeyThreshold = Codegen.ofNullable(dictionaryKeyThreshold);
             return this;
         }
         public Builder enablePadding(@Nullable Output<Boolean> enablePadding) {
@@ -210,7 +211,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enablePadding(@Nullable Boolean enablePadding) {
-            this.enablePadding = Output.ofNullable(enablePadding);
+            this.enablePadding = Codegen.ofNullable(enablePadding);
             return this;
         }
         public Builder formatVersion(@Nullable Output<String> formatVersion) {
@@ -218,7 +219,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder formatVersion(@Nullable String formatVersion) {
-            this.formatVersion = Output.ofNullable(formatVersion);
+            this.formatVersion = Codegen.ofNullable(formatVersion);
             return this;
         }
         public Builder paddingTolerance(@Nullable Output<Double> paddingTolerance) {
@@ -226,7 +227,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder paddingTolerance(@Nullable Double paddingTolerance) {
-            this.paddingTolerance = Output.ofNullable(paddingTolerance);
+            this.paddingTolerance = Codegen.ofNullable(paddingTolerance);
             return this;
         }
         public Builder rowIndexStride(@Nullable Output<Integer> rowIndexStride) {
@@ -234,7 +235,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder rowIndexStride(@Nullable Integer rowIndexStride) {
-            this.rowIndexStride = Output.ofNullable(rowIndexStride);
+            this.rowIndexStride = Codegen.ofNullable(rowIndexStride);
             return this;
         }
         public Builder stripeSizeBytes(@Nullable Output<Integer> stripeSizeBytes) {
@@ -242,7 +243,7 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder stripeSizeBytes(@Nullable Integer stripeSizeBytes) {
-            this.stripeSizeBytes = Output.ofNullable(stripeSizeBytes);
+            this.stripeSizeBytes = Codegen.ofNullable(stripeSizeBytes);
             return this;
         }        public DeliveryStreamOrcSerDeArgs build() {
             return new DeliveryStreamOrcSerDeArgs(blockSizeBytes, bloomFilterColumns, bloomFilterFalsePositiveProbability, compression, dictionaryKeyThreshold, enablePadding, formatVersion, paddingTolerance, rowIndexStride, stripeSizeBytes);

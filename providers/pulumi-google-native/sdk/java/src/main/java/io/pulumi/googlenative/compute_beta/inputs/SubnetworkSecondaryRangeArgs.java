@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
     @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
 
-    public Output<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
+    public Output<String> ipCidrRange() {
+        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
     @Import(name="rangeName")
       private final @Nullable Output<String> rangeName;
 
-    public Output<String> getRangeName() {
-        return this.rangeName == null ? Output.empty() : this.rangeName;
+    public Output<String> rangeName() {
+        return this.rangeName == null ? Codegen.empty() : this.rangeName;
     }
 
     public SubnetworkSecondaryRangeArgs(
@@ -48,8 +49,8 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
     }
 
     private SubnetworkSecondaryRangeArgs() {
-        this.ipCidrRange = Output.empty();
-        this.rangeName = Output.empty();
+        this.ipCidrRange = Codegen.empty();
+        this.rangeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Output.ofNullable(ipCidrRange);
+            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
             return this;
         }
         public Builder rangeName(@Nullable Output<String> rangeName) {
@@ -87,7 +88,7 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder rangeName(@Nullable String rangeName) {
-            this.rangeName = Output.ofNullable(rangeName);
+            this.rangeName = Codegen.ofNullable(rangeName);
             return this;
         }        public SubnetworkSecondaryRangeArgs build() {
             return new SubnetworkSecondaryRangeArgs(ipCidrRange, rangeName);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -46,7 +47,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
      * 
      */
-    public Output</* @Nullable */ Integer> getAutoPauseDelay() {
+    public Output</* @Nullable */ Integer> autoPauseDelay() {
         return this.autoPauseDelay;
     }
     /**
@@ -60,7 +61,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Collation of the metadata catalog.
      * 
      */
-    public Output</* @Nullable */ String> getCatalogCollation() {
+    public Output</* @Nullable */ String> catalogCollation() {
         return this.catalogCollation;
     }
     /**
@@ -74,7 +75,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The collation of the database.
      * 
      */
-    public Output</* @Nullable */ String> getCollation() {
+    public Output</* @Nullable */ String> collation() {
         return this.collation;
     }
     /**
@@ -88,7 +89,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The creation date of the database (ISO8601 format).
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -102,7 +103,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The storage account type used to store backups for this database.
      * 
      */
-    public Output<String> getCurrentBackupStorageRedundancy() {
+    public Output<String> currentBackupStorageRedundancy() {
         return this.currentBackupStorageRedundancy;
     }
     /**
@@ -116,7 +117,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The current service level objective name of the database.
      * 
      */
-    public Output<String> getCurrentServiceObjectiveName() {
+    public Output<String> currentServiceObjectiveName() {
         return this.currentServiceObjectiveName;
     }
     /**
@@ -130,7 +131,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The name and tier of the SKU.
      * 
      */
-    public Output<SkuResponse> getCurrentSku() {
+    public Output<SkuResponse> currentSku() {
         return this.currentSku;
     }
     /**
@@ -144,7 +145,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The ID of the database.
      * 
      */
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
     /**
@@ -158,7 +159,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The default secondary region for this database.
      * 
      */
-    public Output<String> getDefaultSecondaryLocation() {
+    public Output<String> defaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
     /**
@@ -172,7 +173,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return This records the earliest start date and time that restore is available for this database (ISO8601 format).
      * 
      */
-    public Output<String> getEarliestRestoreDate() {
+    public Output<String> earliestRestoreDate() {
         return this.earliestRestoreDate;
     }
     /**
@@ -186,7 +187,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The resource identifier of the elastic pool containing this database.
      * 
      */
-    public Output</* @Nullable */ String> getElasticPoolId() {
+    public Output</* @Nullable */ String> elasticPoolId() {
         return this.elasticPoolId;
     }
     /**
@@ -200,7 +201,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Failover Group resource identifier that this database belongs to.
      * 
      */
-    public Output<String> getFailoverGroupId() {
+    public Output<String> failoverGroupId() {
         return this.failoverGroupId;
     }
     /**
@@ -214,7 +215,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The number of secondary replicas associated with the database that are used to provide high availability.
      * 
      */
-    public Output</* @Nullable */ Integer> getHighAvailabilityReplicaCount() {
+    public Output</* @Nullable */ Integer> highAvailabilityReplicaCount() {
         return this.highAvailabilityReplicaCount;
     }
     /**
@@ -228,7 +229,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Kind of database. This is metadata used for the Azure portal experience.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -242,7 +243,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
      * 
      */
-    public Output</* @Nullable */ String> getLicenseType() {
+    public Output</* @Nullable */ String> licenseType() {
         return this.licenseType;
     }
     /**
@@ -256,7 +257,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -270,7 +271,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
      * 
      */
-    public Output</* @Nullable */ String> getMaintenanceConfigurationId() {
+    public Output</* @Nullable */ String> maintenanceConfigurationId() {
         return this.maintenanceConfigurationId;
     }
     /**
@@ -284,7 +285,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Resource that manages the database.
      * 
      */
-    public Output<String> getManagedBy() {
+    public Output<String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -298,7 +299,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The max log size for this database.
      * 
      */
-    public Output<Double> getMaxLogSizeBytes() {
+    public Output<Double> maxLogSizeBytes() {
         return this.maxLogSizeBytes;
     }
     /**
@@ -312,7 +313,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The max size of the database expressed in bytes.
      * 
      */
-    public Output</* @Nullable */ Double> getMaxSizeBytes() {
+    public Output</* @Nullable */ Double> maxSizeBytes() {
         return this.maxSizeBytes;
     }
     /**
@@ -326,7 +327,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Minimal capacity that database will always have allocated, if not paused
      * 
      */
-    public Output</* @Nullable */ Double> getMinCapacity() {
+    public Output</* @Nullable */ Double> minCapacity() {
         return this.minCapacity;
     }
     /**
@@ -340,7 +341,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -354,7 +355,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
      * 
      */
-    public Output<String> getPausedDate() {
+    public Output<String> pausedDate() {
         return this.pausedDate;
     }
     /**
@@ -368,7 +369,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
      * 
      */
-    public Output</* @Nullable */ String> getReadScale() {
+    public Output</* @Nullable */ String> readScale() {
         return this.readScale;
     }
     /**
@@ -382,7 +383,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The storage account type to be used to store backups for this database.
      * 
      */
-    public Output</* @Nullable */ String> getRequestedBackupStorageRedundancy() {
+    public Output</* @Nullable */ String> requestedBackupStorageRedundancy() {
         return this.requestedBackupStorageRedundancy;
     }
     /**
@@ -396,7 +397,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The requested service level objective name of the database.
      * 
      */
-    public Output<String> getRequestedServiceObjectiveName() {
+    public Output<String> requestedServiceObjectiveName() {
         return this.requestedServiceObjectiveName;
     }
     /**
@@ -410,7 +411,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
      * 
      */
-    public Output<String> getResumedDate() {
+    public Output<String> resumedDate() {
         return this.resumedDate;
     }
     /**
@@ -424,7 +425,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryType() {
+    public Output</* @Nullable */ String> secondaryType() {
         return this.secondaryType;
     }
     /**
@@ -442,7 +443,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -456,7 +457,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The status of the database.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -470,7 +471,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -484,7 +485,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -498,7 +499,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
      * 
      */
-    public Output</* @Nullable */ Boolean> getZoneRedundant() {
+    public Output</* @Nullable */ Boolean> zoneRedundant() {
         return this.zoneRedundant;
     }
 
@@ -524,7 +525,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Database(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse ex
     @Import(name="parts", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts;
 
-    public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> getParts() {
+    public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts() {
         return this.parts;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse ex
     @Import(name="repeatCount", required=true)
       private final Integer repeatCount;
 
-    public Integer getRepeatCount() {
+    public Integer repeatCount() {
         return this.repeatCount;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The Name of the alert rule template used to create this rule.
      * 
      */
-    public Output</* @Nullable */ String> getAlertRuleTemplateName() {
+    public Output</* @Nullable */ String> alertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
     /**
@@ -57,7 +58,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The description of the alert rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The display name for alerts created by this alert rule.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +86,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return Determines whether this alert rule is enabled or disabled.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -99,7 +100,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -115,7 +116,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * Expected value is 'Scheduled'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -129,7 +130,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The last time that this alert rule has been modified.
      * 
      */
-    public Output<String> getLastModifiedUtc() {
+    public Output<String> lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
@@ -143,7 +144,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +158,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The query that creates alerts for this rule.
      * 
      */
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
     /**
@@ -171,7 +172,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The frequency (in ISO 8601 duration format) for this alert rule to run.
      * 
      */
-    public Output<String> getQueryFrequency() {
+    public Output<String> queryFrequency() {
         return this.queryFrequency;
     }
     /**
@@ -185,7 +186,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The period (in ISO 8601 duration format) that this alert rule looks at.
      * 
      */
-    public Output<String> getQueryPeriod() {
+    public Output<String> queryPeriod() {
         return this.queryPeriod;
     }
     /**
@@ -199,7 +200,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The severity for alerts created by this alert rule.
      * 
      */
-    public Output<String> getSeverity() {
+    public Output<String> severity() {
         return this.severity;
     }
     /**
@@ -213,7 +214,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
      * 
      */
-    public Output<String> getSuppressionDuration() {
+    public Output<String> suppressionDuration() {
         return this.suppressionDuration;
     }
     /**
@@ -227,7 +228,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return Determines whether the suppression for this alert rule is enabled or disabled.
      * 
      */
-    public Output<Boolean> getSuppressionEnabled() {
+    public Output<Boolean> suppressionEnabled() {
         return this.suppressionEnabled;
     }
     /**
@@ -241,7 +242,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The tactics of the alert rule
      * 
      */
-    public Output</* @Nullable */ List<String>> getTactics() {
+    public Output</* @Nullable */ List<String>> tactics() {
         return this.tactics;
     }
     /**
@@ -255,7 +256,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The operation against the threshold that triggers alert rule.
      * 
      */
-    public Output<String> getTriggerOperator() {
+    public Output<String> triggerOperator() {
         return this.triggerOperator;
     }
     /**
@@ -269,7 +270,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return The threshold triggers this alert rule.
      * 
      */
-    public Output<Integer> getTriggerThreshold() {
+    public Output<Integer> triggerThreshold() {
         return this.triggerThreshold;
     }
     /**
@@ -283,7 +284,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -309,7 +310,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScheduledAlertRule(String name, ScheduledAlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:ScheduledAlertRule", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:ScheduledAlertRule", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScheduledAlertRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

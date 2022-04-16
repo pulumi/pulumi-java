@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Output<Boolean> getAllowInterrupt() {
-        return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
+    public Output<Boolean> allowInterrupt() {
+        return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
     }
 
     /**
@@ -39,14 +40,14 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
     @Import(name="delayInSeconds", required=true)
       private final Output<Integer> delayInSeconds;
 
-    public Output<Integer> getDelayInSeconds() {
+    public Output<Integer> delayInSeconds() {
         return this.delayInSeconds;
     }
 
     @Import(name="messageGroups", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroups;
 
-    public Output<List<BotMessageGroupArgs>> getMessageGroups() {
+    public Output<List<BotMessageGroupArgs>> messageGroups() {
         return this.messageGroups;
     }
 
@@ -60,9 +61,9 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
     }
 
     private BotFulfillmentStartResponseSpecificationArgs() {
-        this.allowInterrupt = Output.empty();
-        this.delayInSeconds = Output.empty();
-        this.messageGroups = Output.empty();
+        this.allowInterrupt = Codegen.empty();
+        this.delayInSeconds = Codegen.empty();
+        this.messageGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
             return this;
         }
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Output.ofNullable(allowInterrupt);
+            this.allowInterrupt = Codegen.ofNullable(allowInterrupt);
             return this;
         }
         public Builder delayInSeconds(Output<Integer> delayInSeconds) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudrun;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudrun.IamBindingArgs;
 import io.pulumi.gcp.cloudrun.inputs.IamBindingState;
@@ -61,7 +62,7 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=IamBindingCondition.class, parameters={})
     private Output</* @Nullable */ IamBindingCondition> condition;
 
-    public Output</* @Nullable */ IamBindingCondition> getCondition() {
+    public Output</* @Nullable */ IamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,7 +76,7 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -89,13 +90,13 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
      * @return The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -111,7 +112,7 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -129,7 +130,7 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -143,7 +144,7 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -169,7 +170,7 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamBinding(String name, IamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudrun/iamBinding:IamBinding", name, args == null ? IamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudrun/iamBinding:IamBinding", name, args == null ? IamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamBinding(String name, Output<String> id, @Nullable IamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

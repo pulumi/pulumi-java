@@ -7,6 +7,7 @@ import io.pulumi.azurenative.appplatform.enums.UserSourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactSelector")
       private final @Nullable Output<String> artifactSelector;
 
-    public Output<String> getArtifactSelector() {
-        return this.artifactSelector == null ? Output.empty() : this.artifactSelector;
+    public Output<String> artifactSelector() {
+        return this.artifactSelector == null ? Codegen.empty() : this.artifactSelector;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
-    public Output<String> getRelativePath() {
-        return this.relativePath == null ? Output.empty() : this.relativePath;
+    public Output<String> relativePath() {
+        return this.relativePath == null ? Codegen.empty() : this.relativePath;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,UserSourceType>> type;
 
-    public Output<Either<String,UserSourceType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,UserSourceType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public UserSourceInfoArgs(
@@ -77,10 +78,10 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserSourceInfoArgs() {
-        this.artifactSelector = Output.empty();
-        this.relativePath = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.artifactSelector = Codegen.empty();
+        this.relativePath = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifactSelector(@Nullable String artifactSelector) {
-            this.artifactSelector = Output.ofNullable(artifactSelector);
+            this.artifactSelector = Codegen.ofNullable(artifactSelector);
             return this;
         }
         public Builder relativePath(@Nullable Output<String> relativePath) {
@@ -122,7 +123,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Output.ofNullable(relativePath);
+            this.relativePath = Codegen.ofNullable(relativePath);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,UserSourceType>> type) {
@@ -130,7 +131,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,UserSourceType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -138,7 +139,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public UserSourceInfoArgs build() {
             return new UserSourceInfoArgs(artifactSelector, relativePath, type, version);

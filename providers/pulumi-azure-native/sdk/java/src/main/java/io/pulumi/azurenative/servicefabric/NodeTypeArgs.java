@@ -8,6 +8,7 @@ import io.pulumi.azurenative.servicefabric.inputs.VMSSExtensionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.VaultSecretGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getApplicationPorts() {
-        return this.applicationPorts == null ? Output.empty() : this.applicationPorts;
+    public Output<EndpointRangeDescriptionArgs> applicationPorts() {
+        return this.applicationPorts == null ? Codegen.empty() : this.applicationPorts;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
 
-    public Output<Map<String,String>> getCapacities() {
-        return this.capacities == null ? Output.empty() : this.capacities;
+    public Output<Map<String,String>> capacities() {
+        return this.capacities == null ? Codegen.empty() : this.capacities;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -61,7 +62,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskSizeGB", required=true)
       private final Output<Integer> dataDiskSizeGB;
 
-    public Output<Integer> getDataDiskSizeGB() {
+    public Output<Integer> dataDiskSizeGB() {
         return this.dataDiskSizeGB;
     }
 
@@ -72,8 +73,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getEphemeralPorts() {
-        return this.ephemeralPorts == null ? Output.empty() : this.ephemeralPorts;
+    public Output<EndpointRangeDescriptionArgs> ephemeralPorts() {
+        return this.ephemeralPorts == null ? Codegen.empty() : this.ephemeralPorts;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
 
-    public Output<Boolean> getIsPrimary() {
+    public Output<Boolean> isPrimary() {
         return this.isPrimary;
     }
 
@@ -94,8 +95,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTypeName")
       private final @Nullable Output<String> nodeTypeName;
 
-    public Output<String> getNodeTypeName() {
-        return this.nodeTypeName == null ? Output.empty() : this.nodeTypeName;
+    public Output<String> nodeTypeName() {
+        return this.nodeTypeName == null ? Codegen.empty() : this.nodeTypeName;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
 
-    public Output<Map<String,String>> getPlacementProperties() {
-        return this.placementProperties == null ? Output.empty() : this.placementProperties;
+    public Output<Map<String,String>> placementProperties() {
+        return this.placementProperties == null ? Codegen.empty() : this.placementProperties;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -127,8 +128,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmExtensions")
       private final @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
 
-    public Output<List<VMSSExtensionArgs>> getVmExtensions() {
-        return this.vmExtensions == null ? Output.empty() : this.vmExtensions;
+    public Output<List<VMSSExtensionArgs>> vmExtensions() {
+        return this.vmExtensions == null ? Codegen.empty() : this.vmExtensions;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImageOffer")
       private final @Nullable Output<String> vmImageOffer;
 
-    public Output<String> getVmImageOffer() {
-        return this.vmImageOffer == null ? Output.empty() : this.vmImageOffer;
+    public Output<String> vmImageOffer() {
+        return this.vmImageOffer == null ? Codegen.empty() : this.vmImageOffer;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImagePublisher")
       private final @Nullable Output<String> vmImagePublisher;
 
-    public Output<String> getVmImagePublisher() {
-        return this.vmImagePublisher == null ? Output.empty() : this.vmImagePublisher;
+    public Output<String> vmImagePublisher() {
+        return this.vmImagePublisher == null ? Codegen.empty() : this.vmImagePublisher;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImageSku")
       private final @Nullable Output<String> vmImageSku;
 
-    public Output<String> getVmImageSku() {
-        return this.vmImageSku == null ? Output.empty() : this.vmImageSku;
+    public Output<String> vmImageSku() {
+        return this.vmImageSku == null ? Codegen.empty() : this.vmImageSku;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImageVersion")
       private final @Nullable Output<String> vmImageVersion;
 
-    public Output<String> getVmImageVersion() {
-        return this.vmImageVersion == null ? Output.empty() : this.vmImageVersion;
+    public Output<String> vmImageVersion() {
+        return this.vmImageVersion == null ? Codegen.empty() : this.vmImageVersion;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;
 
-    public Output<Integer> getVmInstanceCount() {
+    public Output<Integer> vmInstanceCount() {
         return this.vmInstanceCount;
     }
 
@@ -204,8 +205,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmSecrets")
       private final @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
 
-    public Output<List<VaultSecretGroupArgs>> getVmSecrets() {
-        return this.vmSecrets == null ? Output.empty() : this.vmSecrets;
+    public Output<List<VaultSecretGroupArgs>> vmSecrets() {
+        return this.vmSecrets == null ? Codegen.empty() : this.vmSecrets;
     }
 
     /**
@@ -215,8 +216,8 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+    public Output<String> vmSize() {
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public NodeTypeArgs(
@@ -259,24 +260,24 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeTypeArgs() {
-        this.applicationPorts = Output.empty();
-        this.capacities = Output.empty();
-        this.clusterName = Output.empty();
-        this.dataDiskSizeGB = Output.empty();
-        this.ephemeralPorts = Output.empty();
-        this.isPrimary = Output.empty();
-        this.nodeTypeName = Output.empty();
-        this.placementProperties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vmExtensions = Output.empty();
-        this.vmImageOffer = Output.empty();
-        this.vmImagePublisher = Output.empty();
-        this.vmImageSku = Output.empty();
-        this.vmImageVersion = Output.empty();
-        this.vmInstanceCount = Output.empty();
-        this.vmSecrets = Output.empty();
-        this.vmSize = Output.empty();
+        this.applicationPorts = Codegen.empty();
+        this.capacities = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.dataDiskSizeGB = Codegen.empty();
+        this.ephemeralPorts = Codegen.empty();
+        this.isPrimary = Codegen.empty();
+        this.nodeTypeName = Codegen.empty();
+        this.placementProperties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vmExtensions = Codegen.empty();
+        this.vmImageOffer = Codegen.empty();
+        this.vmImagePublisher = Codegen.empty();
+        this.vmImageSku = Codegen.empty();
+        this.vmImageVersion = Codegen.empty();
+        this.vmInstanceCount = Codegen.empty();
+        this.vmSecrets = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -338,7 +339,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
-            this.applicationPorts = Output.ofNullable(applicationPorts);
+            this.applicationPorts = Codegen.ofNullable(applicationPorts);
             return this;
         }
         public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
@@ -346,7 +347,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacities(@Nullable Map<String,String> capacities) {
-            this.capacities = Output.ofNullable(capacities);
+            this.capacities = Codegen.ofNullable(capacities);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -370,7 +371,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
-            this.ephemeralPorts = Output.ofNullable(ephemeralPorts);
+            this.ephemeralPorts = Codegen.ofNullable(ephemeralPorts);
             return this;
         }
         public Builder isPrimary(Output<Boolean> isPrimary) {
@@ -386,7 +387,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeTypeName(@Nullable String nodeTypeName) {
-            this.nodeTypeName = Output.ofNullable(nodeTypeName);
+            this.nodeTypeName = Codegen.ofNullable(nodeTypeName);
             return this;
         }
         public Builder placementProperties(@Nullable Output<Map<String,String>> placementProperties) {
@@ -394,7 +395,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
-            this.placementProperties = Output.ofNullable(placementProperties);
+            this.placementProperties = Codegen.ofNullable(placementProperties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -410,7 +411,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vmExtensions(@Nullable Output<List<VMSSExtensionArgs>> vmExtensions) {
@@ -418,7 +419,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmExtensions(@Nullable List<VMSSExtensionArgs> vmExtensions) {
-            this.vmExtensions = Output.ofNullable(vmExtensions);
+            this.vmExtensions = Codegen.ofNullable(vmExtensions);
             return this;
         }
         public Builder vmExtensions(VMSSExtensionArgs... vmExtensions) {
@@ -429,7 +430,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmImageOffer(@Nullable String vmImageOffer) {
-            this.vmImageOffer = Output.ofNullable(vmImageOffer);
+            this.vmImageOffer = Codegen.ofNullable(vmImageOffer);
             return this;
         }
         public Builder vmImagePublisher(@Nullable Output<String> vmImagePublisher) {
@@ -437,7 +438,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
-            this.vmImagePublisher = Output.ofNullable(vmImagePublisher);
+            this.vmImagePublisher = Codegen.ofNullable(vmImagePublisher);
             return this;
         }
         public Builder vmImageSku(@Nullable Output<String> vmImageSku) {
@@ -445,7 +446,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmImageSku(@Nullable String vmImageSku) {
-            this.vmImageSku = Output.ofNullable(vmImageSku);
+            this.vmImageSku = Codegen.ofNullable(vmImageSku);
             return this;
         }
         public Builder vmImageVersion(@Nullable Output<String> vmImageVersion) {
@@ -453,7 +454,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmImageVersion(@Nullable String vmImageVersion) {
-            this.vmImageVersion = Output.ofNullable(vmImageVersion);
+            this.vmImageVersion = Codegen.ofNullable(vmImageVersion);
             return this;
         }
         public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {
@@ -469,7 +470,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmSecrets(@Nullable List<VaultSecretGroupArgs> vmSecrets) {
-            this.vmSecrets = Output.ofNullable(vmSecrets);
+            this.vmSecrets = Codegen.ofNullable(vmSecrets);
             return this;
         }
         public Builder vmSecrets(VaultSecretGroupArgs... vmSecrets) {
@@ -480,7 +481,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public NodeTypeArgs build() {
             return new NodeTypeArgs(applicationPorts, capacities, clusterName, dataDiskSizeGB, ephemeralPorts, isPrimary, nodeTypeName, placementProperties, resourceGroupName, tags, vmExtensions, vmImageOffer, vmImagePublisher, vmImageSku, vmImageVersion, vmInstanceCount, vmSecrets, vmSize);

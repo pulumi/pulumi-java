@@ -8,6 +8,7 @@ import io.pulumi.awsnative.chatbot.SlackChannelConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return Amazon Resource Name (ARN) of the configuration
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -44,7 +45,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return The name of the configuration
      * 
      */
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName;
     }
     /**
@@ -58,7 +59,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
      * 
      */
-    public Output</* @Nullable */ List<String>> getGuardrailPolicies() {
+    public Output</* @Nullable */ List<String>> guardrailPolicies() {
         return this.guardrailPolicies;
     }
     /**
@@ -72,7 +73,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return The ARN of the IAM role that defines the permissions for AWS Chatbot
      * 
      */
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
@@ -86,7 +87,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
      * 
      */
-    public Output</* @Nullable */ String> getLoggingLevel() {
+    public Output</* @Nullable */ String> loggingLevel() {
         return this.loggingLevel;
     }
     /**
@@ -100,7 +101,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return The id of the Slack channel
      * 
      */
-    public Output<String> getSlackChannelId() {
+    public Output<String> slackChannelId() {
         return this.slackChannelId;
     }
     /**
@@ -114,7 +115,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return The id of the Slack workspace
      * 
      */
-    public Output<String> getSlackWorkspaceId() {
+    public Output<String> slackWorkspaceId() {
         return this.slackWorkspaceId;
     }
     /**
@@ -128,7 +129,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSnsTopicArns() {
+    public Output</* @Nullable */ List<String>> snsTopicArns() {
         return this.snsTopicArns;
     }
     /**
@@ -142,7 +143,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @return Enables use of a user role requirement in your chat configuration
      * 
      */
-    public Output</* @Nullable */ Boolean> getUserRoleRequired() {
+    public Output</* @Nullable */ Boolean> userRoleRequired() {
         return this.userRoleRequired;
     }
 
@@ -168,7 +169,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public SlackChannelConfiguration(String name, SlackChannelConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:chatbot:SlackChannelConfiguration", name, args == null ? SlackChannelConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:chatbot:SlackChannelConfiguration", name, args == null ? SlackChannelConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SlackChannelConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

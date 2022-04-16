@@ -10,6 +10,7 @@ import io.pulumi.awsnative.inspectorv2.outputs.FilterCriteria;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -44,7 +45,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter action.
      * 
      */
-    public Output<FilterAction> getFilterAction() {
+    public Output<FilterAction> filterAction() {
         return this.filterAction;
     }
     /**
@@ -72,7 +73,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter criteria.
      * 
      */
-    public Output<FilterCriteria> getFilterCriteria() {
+    public Output<FilterCriteria> filterCriteria() {
         return this.filterCriteria;
     }
     /**
@@ -86,7 +87,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -112,7 +113,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Filter(String name, FilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:inspectorv2:Filter", name, args == null ? FilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:inspectorv2:Filter", name, args == null ? FilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Filter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

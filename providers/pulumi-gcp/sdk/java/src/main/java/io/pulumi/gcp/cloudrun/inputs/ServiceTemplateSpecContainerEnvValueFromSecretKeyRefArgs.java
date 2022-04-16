@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs exte
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,7 +33,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs exte
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,8 +45,8 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs exte
     }
 
     private ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs() {
-        this.key = Output.empty();
-        this.name = Output.empty();
+        this.key = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

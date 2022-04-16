@@ -8,6 +8,7 @@ import io.pulumi.awsnative.datasync.inputs.LocationNFSOnPremConfigArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationNFSTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +22,14 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountOptions")
       private final @Nullable Output<LocationNFSMountOptionsArgs> mountOptions;
 
-    public Output<LocationNFSMountOptionsArgs> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+    public Output<LocationNFSMountOptionsArgs> mountOptions() {
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     @Import(name="onPremConfig", required=true)
       private final Output<LocationNFSOnPremConfigArgs> onPremConfig;
 
-    public Output<LocationNFSOnPremConfigArgs> getOnPremConfig() {
+    public Output<LocationNFSOnPremConfigArgs> onPremConfig() {
         return this.onPremConfig;
     }
 
@@ -39,7 +40,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
 
@@ -50,7 +51,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
 
@@ -61,8 +62,8 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LocationNFSTagArgs>> tags;
 
-    public Output<List<LocationNFSTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<LocationNFSTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LocationNFSArgs(
@@ -79,11 +80,11 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationNFSArgs() {
-        this.mountOptions = Output.empty();
-        this.onPremConfig = Output.empty();
-        this.serverHostname = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
+        this.mountOptions = Codegen.empty();
+        this.onPremConfig = Codegen.empty();
+        this.serverHostname = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountOptions(@Nullable LocationNFSMountOptionsArgs mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder onPremConfig(Output<LocationNFSOnPremConfigArgs> onPremConfig) {
@@ -151,7 +152,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<LocationNFSTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LocationNFSTagArgs... tags) {

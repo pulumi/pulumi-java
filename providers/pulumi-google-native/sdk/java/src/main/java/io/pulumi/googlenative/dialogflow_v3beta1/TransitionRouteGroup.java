@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.TransitionRouteGroupArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1TransitionRouteResponse;
@@ -30,7 +31,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -44,7 +45,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +59,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @return Transition routes associated with the TransitionRouteGroup.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse>> getTransitionRoutes() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse>> transitionRoutes() {
         return this.transitionRoutes;
     }
 
@@ -84,7 +85,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitionRouteGroup(String name, TransitionRouteGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3beta1:TransitionRouteGroup", name, args == null ? TransitionRouteGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3beta1:TransitionRouteGroup", name, args == null ? TransitionRouteGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitionRouteGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

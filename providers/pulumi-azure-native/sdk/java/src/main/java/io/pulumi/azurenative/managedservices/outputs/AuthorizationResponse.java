@@ -49,28 +49,28 @@ public final class AuthorizationResponse {
      * The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
      * 
     */
-    public List<String> getDelegatedRoleDefinitionIds() {
+    public List<String> delegatedRoleDefinitionIds() {
         return this.delegatedRoleDefinitionIds == null ? List.of() : this.delegatedRoleDefinitionIds;
     }
     /**
      * Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * Display name of the principal Id.
      * 
     */
-    public Optional<String> getPrincipalIdDisplayName() {
+    public Optional<String> principalIdDisplayName() {
         return Optional.ofNullable(this.principalIdDisplayName);
     }
     /**
      * The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
      * 
     */
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     @Import(name="attachmentId", required=true)
       private final Output<String> attachmentId;
 
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId;
     }
 
@@ -32,8 +33,8 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -57,9 +58,9 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     }
 
     private OrganizationSecurityPolicyAssociationArgs() {
-        this.attachmentId = Output.empty();
-        this.name = Output.empty();
-        this.policyId = Output.empty();
+        this.attachmentId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policyId(Output<String> policyId) {

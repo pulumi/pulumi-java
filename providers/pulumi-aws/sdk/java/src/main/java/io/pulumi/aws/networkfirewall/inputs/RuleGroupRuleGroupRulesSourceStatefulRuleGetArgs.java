@@ -7,6 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefu
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -34,7 +35,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
     @Import(name="header", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> getHeader() {
+    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header() {
         return this.header;
     }
 
@@ -45,7 +46,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
     @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions() {
         return this.ruleOptions;
     }
 
@@ -59,9 +60,9 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
     }
 
     private RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs() {
-        this.action = Output.empty();
-        this.header = Output.empty();
-        this.ruleOptions = Output.empty();
+        this.action = Codegen.empty();
+        this.header = Codegen.empty();
+        this.ruleOptions = Codegen.empty();
     }
 
     public static Builder builder() {

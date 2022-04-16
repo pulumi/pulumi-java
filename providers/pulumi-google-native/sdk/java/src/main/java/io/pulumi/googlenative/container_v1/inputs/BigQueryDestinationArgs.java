@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+    public Output<String> datasetId() {
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     public BigQueryDestinationArgs(@Nullable Output<String> datasetId) {
@@ -34,7 +35,7 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
     }
 
     private BigQueryDestinationArgs() {
-        this.datasetId = Output.empty();
+        this.datasetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }        public BigQueryDestinationArgs build() {
             return new BigQueryDestinationArgs(datasetId);

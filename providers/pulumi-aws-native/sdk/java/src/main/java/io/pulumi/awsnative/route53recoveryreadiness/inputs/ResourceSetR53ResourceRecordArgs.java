@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
     @Import(name="recordSetId")
       private final @Nullable Output<String> recordSetId;
 
-    public Output<String> getRecordSetId() {
-        return this.recordSetId == null ? Output.empty() : this.recordSetId;
+    public Output<String> recordSetId() {
+        return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
     }
 
     public ResourceSetR53ResourceRecordArgs(
@@ -48,8 +49,8 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
     }
 
     private ResourceSetR53ResourceRecordArgs() {
-        this.domainName = Output.empty();
-        this.recordSetId = Output.empty();
+        this.domainName = Codegen.empty();
+        this.recordSetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
@@ -87,7 +88,7 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
             return this;
         }
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Output.ofNullable(recordSetId);
+            this.recordSetId = Codegen.ofNullable(recordSetId);
             return this;
         }        public ResourceSetR53ResourceRecordArgs build() {
             return new ResourceSetR53ResourceRecordArgs(domainName, recordSetId);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
     @Import(name="diskEncryptionSet")
       private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Output.empty() : this.diskEncryptionSet;
+    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
+        return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     public ManagedDiskParametersArgs(
@@ -64,9 +65,9 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
     }
 
     private ManagedDiskParametersArgs() {
-        this.diskEncryptionSet = Output.empty();
-        this.id = Output.empty();
-        this.storageAccountType = Output.empty();
+        this.diskEncryptionSet = Codegen.empty();
+        this.id = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
-            this.diskEncryptionSet = Output.ofNullable(diskEncryptionSet);
+            this.diskEncryptionSet = Codegen.ofNullable(diskEncryptionSet);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -106,7 +107,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
@@ -114,7 +115,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }        public ManagedDiskParametersArgs build() {
             return new ManagedDiskParametersArgs(diskEncryptionSet, id, storageAccountType);

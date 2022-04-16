@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class StreamStreamModeDetailsArgs extends io.pulumi.resources.Resou
     @Import(name="streamMode", required=true)
       private final Output<String> streamMode;
 
-    public Output<String> getStreamMode() {
+    public Output<String> streamMode() {
         return this.streamMode;
     }
 
@@ -29,7 +30,7 @@ public final class StreamStreamModeDetailsArgs extends io.pulumi.resources.Resou
     }
 
     private StreamStreamModeDetailsArgs() {
-        this.streamMode = Output.empty();
+        this.streamMode = Codegen.empty();
     }
 
     public static Builder builder() {

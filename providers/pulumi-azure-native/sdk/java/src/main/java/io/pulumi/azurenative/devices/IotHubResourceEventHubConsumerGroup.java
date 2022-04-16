@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return The etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +57,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return The Event Hub-compatible consumer group name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return The tags.
      * 
      */
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties;
     }
     /**
@@ -84,7 +85,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -110,7 +111,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public IotHubResourceEventHubConsumerGroup(String name, IotHubResourceEventHubConsumerGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devices:IotHubResourceEventHubConsumerGroup", name, args == null ? IotHubResourceEventHubConsumerGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devices:IotHubResourceEventHubConsumerGroup", name, args == null ? IotHubResourceEventHubConsumerGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IotHubResourceEventHubConsumerGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

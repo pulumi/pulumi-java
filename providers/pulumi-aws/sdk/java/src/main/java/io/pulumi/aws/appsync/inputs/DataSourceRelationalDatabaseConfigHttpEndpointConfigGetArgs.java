@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="awsSecretStoreArn", required=true)
       private final Output<String> awsSecretStoreArn;
 
-    public Output<String> getAwsSecretStoreArn() {
+    public Output<String> awsSecretStoreArn() {
         return this.awsSecretStoreArn;
     }
 
@@ -32,8 +33,8 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -54,8 +55,8 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<String> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     public DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs(
@@ -83,11 +84,11 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     }
 
     private DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs() {
-        this.awsSecretStoreArn = Output.empty();
-        this.databaseName = Output.empty();
-        this.dbClusterIdentifier = Output.empty();
-        this.region = Output.empty();
-        this.schema = Output.empty();
+        this.awsSecretStoreArn = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.dbClusterIdentifier = Codegen.empty();
+        this.region = Codegen.empty();
+        this.schema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
@@ -147,7 +148,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -155,7 +156,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }        public DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs build() {
             return new DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs(awsSecretStoreArn, databaseName, dbClusterIdentifier, region, schema);

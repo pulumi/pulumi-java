@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+    public Output<String> expirationTime() {
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public AclEntryArgs(
@@ -74,10 +75,10 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AclEntryArgs() {
-        this.expirationTime = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.expirationTime = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -119,7 +120,7 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -127,7 +128,7 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -135,7 +136,7 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public AclEntryArgs build() {
             return new AclEntryArgs(expirationTime, kind, name, value);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.UserAssignedPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="userAssigned")
       private final @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
 
-    public Output<UserAssignedPropertiesArgs> getUserAssigned() {
-        return this.userAssigned == null ? Output.empty() : this.userAssigned;
+    public Output<UserAssignedPropertiesArgs> userAssigned() {
+        return this.userAssigned == null ? Codegen.empty() : this.userAssigned;
     }
 
     public IdentityPropertiesArgs(
@@ -49,8 +50,8 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private IdentityPropertiesArgs() {
-        this.type = Output.empty();
-        this.userAssigned = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssigned = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userAssigned(@Nullable Output<UserAssignedPropertiesArgs> userAssigned) {
@@ -88,7 +89,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder userAssigned(@Nullable UserAssignedPropertiesArgs userAssigned) {
-            this.userAssigned = Output.ofNullable(userAssigned);
+            this.userAssigned = Codegen.ofNullable(userAssigned);
             return this;
         }        public IdentityPropertiesArgs build() {
             return new IdentityPropertiesArgs(type, userAssigned);

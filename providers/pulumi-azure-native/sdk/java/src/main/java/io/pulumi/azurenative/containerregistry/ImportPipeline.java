@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The identity of the import pipeline.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
         return this.identity;
     }
     /**
@@ -59,7 +60,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The location of the import pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,7 +74,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The list of all options configured for the pipeline.
      * 
      */
-    public Output</* @Nullable */ List<String>> getOptions() {
+    public Output</* @Nullable */ List<String>> options() {
         return this.options;
     }
     /**
@@ -101,7 +102,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the pipeline at the time the operation was called.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +116,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The source properties of the import pipeline.
      * 
      */
-    public Output<ImportPipelineSourcePropertiesResponse> getSource() {
+    public Output<ImportPipelineSourcePropertiesResponse> source() {
         return this.source;
     }
     /**
@@ -129,7 +130,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -143,7 +144,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The properties that describe the trigger of the import pipeline.
      * 
      */
-    public Output</* @Nullable */ PipelineTriggerPropertiesResponse> getTrigger() {
+    public Output</* @Nullable */ PipelineTriggerPropertiesResponse> trigger() {
         return this.trigger;
     }
     /**
@@ -157,7 +158,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -183,7 +184,7 @@ public class ImportPipeline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImportPipeline(String name, ImportPipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:ImportPipeline", name, args == null ? ImportPipelineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:containerregistry:ImportPipeline", name, args == null ? ImportPipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImportPipeline(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

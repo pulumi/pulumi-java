@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClassifierXmlClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="classification", required=true)
       private final Output<String> classification;
 
-    public Output<String> getClassification() {
+    public Output<String> classification() {
         return this.classification;
     }
 
@@ -31,7 +32,7 @@ public final class ClassifierXmlClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="rowTag", required=true)
       private final Output<String> rowTag;
 
-    public Output<String> getRowTag() {
+    public Output<String> rowTag() {
         return this.rowTag;
     }
 
@@ -43,8 +44,8 @@ public final class ClassifierXmlClassifierGetArgs extends io.pulumi.resources.Re
     }
 
     private ClassifierXmlClassifierGetArgs() {
-        this.classification = Output.empty();
-        this.rowTag = Output.empty();
+        this.classification = Codegen.empty();
+        this.rowTag = Codegen.empty();
     }
 
     public static Builder builder() {

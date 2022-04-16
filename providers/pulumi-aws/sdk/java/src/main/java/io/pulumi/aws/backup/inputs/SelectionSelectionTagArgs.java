@@ -5,6 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class SelectionSelectionTagArgs extends io.pulumi.resources.Resourc
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -31,7 +32,7 @@ public final class SelectionSelectionTagArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -42,7 +43,7 @@ public final class SelectionSelectionTagArgs extends io.pulumi.resources.Resourc
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -56,9 +57,9 @@ public final class SelectionSelectionTagArgs extends io.pulumi.resources.Resourc
     }
 
     private SelectionSelectionTagArgs() {
-        this.key = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

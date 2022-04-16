@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudbuild_v1alpha2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.WorkerPoolArgs;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.outputs.NetworkConfigResponse;
@@ -31,7 +32,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Time at which the request to create the `WorkerPool` was received.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +46,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Time at which the request to delete the `WorkerPool` was received.
      * 
      */
-    public Output<String> getDeleteTime() {
+    public Output<String> deleteTime() {
         return this.deleteTime;
     }
     /**
@@ -59,7 +60,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Network configuration for the `WorkerPool`.
      * 
      */
-    public Output<NetworkConfigResponse> getNetworkConfig() {
+    public Output<NetworkConfigResponse> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -87,7 +88,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -101,7 +102,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return WorkerPool state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -115,7 +116,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Time at which the request to update the `WorkerPool` was received.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -129,7 +130,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Worker configuration for the `WorkerPool`.
      * 
      */
-    public Output<WorkerConfigResponse> getWorkerConfig() {
+    public Output<WorkerConfigResponse> workerConfig() {
         return this.workerConfig;
     }
 
@@ -155,7 +156,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkerPool(String name, WorkerPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudbuild/v1alpha2:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudbuild/v1alpha2:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkerPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

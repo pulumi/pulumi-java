@@ -47,28 +47,28 @@ public final class GetAttestorResult {
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Time when the attestor was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
      * 
     */
-    public UserOwnedDrydockNoteResponse getUserOwnedDrydockNote() {
+    public UserOwnedDrydockNoteResponse userOwnedDrydockNote() {
         return this.userOwnedDrydockNote;
     }
 

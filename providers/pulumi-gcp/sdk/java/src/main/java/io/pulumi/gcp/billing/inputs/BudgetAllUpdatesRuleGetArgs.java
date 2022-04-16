@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
     @Import(name="disableDefaultIamRecipients")
       private final @Nullable Output<Boolean> disableDefaultIamRecipients;
 
-    public Output<Boolean> getDisableDefaultIamRecipients() {
-        return this.disableDefaultIamRecipients == null ? Output.empty() : this.disableDefaultIamRecipients;
+    public Output<Boolean> disableDefaultIamRecipients() {
+        return this.disableDefaultIamRecipients == null ? Codegen.empty() : this.disableDefaultIamRecipients;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
     @Import(name="monitoringNotificationChannels")
       private final @Nullable Output<List<String>> monitoringNotificationChannels;
 
-    public Output<List<String>> getMonitoringNotificationChannels() {
-        return this.monitoringNotificationChannels == null ? Output.empty() : this.monitoringNotificationChannels;
+    public Output<List<String>> monitoringNotificationChannels() {
+        return this.monitoringNotificationChannels == null ? Codegen.empty() : this.monitoringNotificationChannels;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
     @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
-        return this.pubsubTopic == null ? Output.empty() : this.pubsubTopic;
+    public Output<String> pubsubTopic() {
+        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
     @Import(name="schemaVersion")
       private final @Nullable Output<String> schemaVersion;
 
-    public Output<String> getSchemaVersion() {
-        return this.schemaVersion == null ? Output.empty() : this.schemaVersion;
+    public Output<String> schemaVersion() {
+        return this.schemaVersion == null ? Codegen.empty() : this.schemaVersion;
     }
 
     public BudgetAllUpdatesRuleGetArgs(
@@ -83,10 +84,10 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
     }
 
     private BudgetAllUpdatesRuleGetArgs() {
-        this.disableDefaultIamRecipients = Output.empty();
-        this.monitoringNotificationChannels = Output.empty();
-        this.pubsubTopic = Output.empty();
-        this.schemaVersion = Output.empty();
+        this.disableDefaultIamRecipients = Codegen.empty();
+        this.monitoringNotificationChannels = Codegen.empty();
+        this.pubsubTopic = Codegen.empty();
+        this.schemaVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder disableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
-            this.disableDefaultIamRecipients = Output.ofNullable(disableDefaultIamRecipients);
+            this.disableDefaultIamRecipients = Codegen.ofNullable(disableDefaultIamRecipients);
             return this;
         }
         public Builder monitoringNotificationChannels(@Nullable Output<List<String>> monitoringNotificationChannels) {
@@ -128,7 +129,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder monitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
-            this.monitoringNotificationChannels = Output.ofNullable(monitoringNotificationChannels);
+            this.monitoringNotificationChannels = Codegen.ofNullable(monitoringNotificationChannels);
             return this;
         }
         public Builder monitoringNotificationChannels(String... monitoringNotificationChannels) {
@@ -139,7 +140,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Output.ofNullable(pubsubTopic);
+            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
             return this;
         }
         public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
@@ -147,7 +148,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder schemaVersion(@Nullable String schemaVersion) {
-            this.schemaVersion = Output.ofNullable(schemaVersion);
+            this.schemaVersion = Codegen.ofNullable(schemaVersion);
             return this;
         }        public BudgetAllUpdatesRuleGetArgs build() {
             return new BudgetAllUpdatesRuleGetArgs(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     @Import(name="componentId", required=true)
       private final Output<String> componentId;
 
-    public Output<String> getComponentId() {
+    public Output<String> componentId() {
         return this.componentId;
     }
 
@@ -36,7 +37,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     @Import(name="failedLocationCount", required=true)
       private final Output<Double> failedLocationCount;
 
-    public Output<Double> getFailedLocationCount() {
+    public Output<Double> failedLocationCount() {
         return this.failedLocationCount;
     }
 
@@ -48,7 +49,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -59,7 +60,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     @Import(name="webTestId", required=true)
       private final Output<String> webTestId;
 
-    public Output<String> getWebTestId() {
+    public Output<String> webTestId() {
         return this.webTestId;
     }
 
@@ -75,10 +76,10 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     }
 
     private WebtestLocationAvailabilityCriteriaArgs() {
-        this.componentId = Output.empty();
-        this.failedLocationCount = Output.empty();
-        this.odataType = Output.empty();
-        this.webTestId = Output.empty();
+        this.componentId = Codegen.empty();
+        this.failedLocationCount = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.webTestId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,25 +34,25 @@ public class ImportCollector extends io.pulumi.resources.CustomResource {
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=ImportCollectorPropertiesResponse.class, parameters={})
     private Output<ImportCollectorPropertiesResponse> properties;
 
-    public Output<ImportCollectorPropertiesResponse> getProperties() {
+    public Output<ImportCollectorPropertiesResponse> properties() {
         return this.properties;
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -77,7 +78,7 @@ public class ImportCollector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImportCollector(String name, ImportCollectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:migrate:ImportCollector", name, args == null ? ImportCollectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:migrate:ImportCollector", name, args == null ? ImportCollectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImportCollector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

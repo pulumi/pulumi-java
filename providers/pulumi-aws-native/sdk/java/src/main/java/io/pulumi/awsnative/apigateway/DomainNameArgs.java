@@ -8,6 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.DomainNameMutualTlsAuthenticationAr
 import io.pulumi.awsnative.apigateway.inputs.DomainNameTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,57 +22,57 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+    public Output<String> certificateArn() {
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     @Import(name="endpointConfiguration")
       private final @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<DomainNameEndpointConfigurationArgs> getEndpointConfiguration() {
-        return this.endpointConfiguration == null ? Output.empty() : this.endpointConfiguration;
+    public Output<DomainNameEndpointConfigurationArgs> endpointConfiguration() {
+        return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
     }
 
     @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
-    public Output<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
-        return this.mutualTlsAuthentication == null ? Output.empty() : this.mutualTlsAuthentication;
+    public Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication() {
+        return this.mutualTlsAuthentication == null ? Codegen.empty() : this.mutualTlsAuthentication;
     }
 
     @Import(name="ownershipVerificationCertificateArn")
       private final @Nullable Output<String> ownershipVerificationCertificateArn;
 
-    public Output<String> getOwnershipVerificationCertificateArn() {
-        return this.ownershipVerificationCertificateArn == null ? Output.empty() : this.ownershipVerificationCertificateArn;
+    public Output<String> ownershipVerificationCertificateArn() {
+        return this.ownershipVerificationCertificateArn == null ? Codegen.empty() : this.ownershipVerificationCertificateArn;
     }
 
     @Import(name="regionalCertificateArn")
       private final @Nullable Output<String> regionalCertificateArn;
 
-    public Output<String> getRegionalCertificateArn() {
-        return this.regionalCertificateArn == null ? Output.empty() : this.regionalCertificateArn;
+    public Output<String> regionalCertificateArn() {
+        return this.regionalCertificateArn == null ? Codegen.empty() : this.regionalCertificateArn;
     }
 
     @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
-    public Output<String> getSecurityPolicy() {
-        return this.securityPolicy == null ? Output.empty() : this.securityPolicy;
+    public Output<String> securityPolicy() {
+        return this.securityPolicy == null ? Codegen.empty() : this.securityPolicy;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DomainNameTagArgs>> tags;
 
-    public Output<List<DomainNameTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DomainNameTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DomainNameArgs(
@@ -94,14 +95,14 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainNameArgs() {
-        this.certificateArn = Output.empty();
-        this.domainName = Output.empty();
-        this.endpointConfiguration = Output.empty();
-        this.mutualTlsAuthentication = Output.empty();
-        this.ownershipVerificationCertificateArn = Output.empty();
-        this.regionalCertificateArn = Output.empty();
-        this.securityPolicy = Output.empty();
-        this.tags = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.endpointConfiguration = Codegen.empty();
+        this.mutualTlsAuthentication = Codegen.empty();
+        this.ownershipVerificationCertificateArn = Codegen.empty();
+        this.regionalCertificateArn = Codegen.empty();
+        this.securityPolicy = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -151,7 +152,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
@@ -159,7 +160,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointConfiguration(@Nullable DomainNameEndpointConfigurationArgs endpointConfiguration) {
-            this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
+            this.endpointConfiguration = Codegen.ofNullable(endpointConfiguration);
             return this;
         }
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
@@ -167,7 +168,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
-            this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
+            this.mutualTlsAuthentication = Codegen.ofNullable(mutualTlsAuthentication);
             return this;
         }
         public Builder ownershipVerificationCertificateArn(@Nullable Output<String> ownershipVerificationCertificateArn) {
@@ -175,7 +176,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
-            this.ownershipVerificationCertificateArn = Output.ofNullable(ownershipVerificationCertificateArn);
+            this.ownershipVerificationCertificateArn = Codegen.ofNullable(ownershipVerificationCertificateArn);
             return this;
         }
         public Builder regionalCertificateArn(@Nullable Output<String> regionalCertificateArn) {
@@ -183,7 +184,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
-            this.regionalCertificateArn = Output.ofNullable(regionalCertificateArn);
+            this.regionalCertificateArn = Codegen.ofNullable(regionalCertificateArn);
             return this;
         }
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
@@ -191,7 +192,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityPolicy(@Nullable String securityPolicy) {
-            this.securityPolicy = Output.ofNullable(securityPolicy);
+            this.securityPolicy = Codegen.ofNullable(securityPolicy);
             return this;
         }
         public Builder tags(@Nullable Output<List<DomainNameTagArgs>> tags) {
@@ -199,7 +200,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DomainNameTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DomainNameTagArgs... tags) {

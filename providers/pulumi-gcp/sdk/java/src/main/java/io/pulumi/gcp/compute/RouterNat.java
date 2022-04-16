@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterNatArgs;
 import io.pulumi.gcp.compute.inputs.RouterNatState;
@@ -64,7 +65,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * valid static external IPs that have been assigned to the NAT.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDrainNatIps() {
+    public Output</* @Nullable */ List<String>> drainNatIps() {
         return this.drainNatIps;
     }
     /**
@@ -80,7 +81,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableEndpointIndependentMapping() {
+    public Output</* @Nullable */ Boolean> enableEndpointIndependentMapping() {
         return this.enableEndpointIndependentMapping;
     }
     /**
@@ -94,7 +95,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * @return Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> getIcmpIdleTimeoutSec() {
+    public Output</* @Nullable */ Integer> icmpIdleTimeoutSec() {
         return this.icmpIdleTimeoutSec;
     }
     /**
@@ -110,7 +111,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RouterNatLogConfig> getLogConfig() {
+    public Output</* @Nullable */ RouterNatLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -124,7 +125,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * @return Minimum number of ports allocated to a VM from this NAT.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinPortsPerVm() {
+    public Output</* @Nullable */ Integer> minPortsPerVm() {
         return this.minPortsPerVm;
     }
     /**
@@ -138,7 +139,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * @return Self-link of subnetwork to NAT
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -158,7 +159,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
      * 
      */
-    public Output<String> getNatIpAllocateOption() {
+    public Output<String> natIpAllocateOption() {
         return this.natIpAllocateOption;
     }
     /**
@@ -174,7 +175,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * is set to MANUAL_ONLY.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNatIps() {
+    public Output</* @Nullable */ List<String>> natIps() {
         return this.natIps;
     }
     /**
@@ -190,7 +191,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -204,7 +205,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * @return Region where the router and NAT reside.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -218,7 +219,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * @return The name of the Cloud Router in which this NAT will be configured.
      * 
      */
-    public Output<String> getRouter() {
+    public Output<String> router() {
         return this.router;
     }
     /**
@@ -252,7 +253,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
      * 
      */
-    public Output<String> getSourceSubnetworkIpRangesToNat() {
+    public Output<String> sourceSubnetworkIpRangesToNat() {
         return this.sourceSubnetworkIpRangesToNat;
     }
     /**
@@ -270,7 +271,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RouterNatSubnetwork>> getSubnetworks() {
+    public Output</* @Nullable */ List<RouterNatSubnetwork>> subnetworks() {
         return this.subnetworks;
     }
     /**
@@ -286,7 +287,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Defaults to 1200s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> getTcpEstablishedIdleTimeoutSec() {
+    public Output</* @Nullable */ Integer> tcpEstablishedIdleTimeoutSec() {
         return this.tcpEstablishedIdleTimeoutSec;
     }
     /**
@@ -302,7 +303,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Defaults to 30s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> getTcpTransitoryIdleTimeoutSec() {
+    public Output</* @Nullable */ Integer> tcpTransitoryIdleTimeoutSec() {
         return this.tcpTransitoryIdleTimeoutSec;
     }
     /**
@@ -316,7 +317,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * @return Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> getUdpIdleTimeoutSec() {
+    public Output</* @Nullable */ Integer> udpIdleTimeoutSec() {
         return this.udpIdleTimeoutSec;
     }
 
@@ -342,7 +343,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouterNat(String name, RouterNatArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/routerNat:RouterNat", name, args == null ? RouterNatArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/routerNat:RouterNat", name, args == null ? RouterNatArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RouterNat(String name, Output<String> id, @Nullable RouterNatState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

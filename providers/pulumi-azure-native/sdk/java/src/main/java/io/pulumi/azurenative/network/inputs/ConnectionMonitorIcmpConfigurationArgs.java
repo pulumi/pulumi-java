@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
     @Import(name="disableTraceRoute")
       private final @Nullable Output<Boolean> disableTraceRoute;
 
-    public Output<Boolean> getDisableTraceRoute() {
-        return this.disableTraceRoute == null ? Output.empty() : this.disableTraceRoute;
+    public Output<Boolean> disableTraceRoute() {
+        return this.disableTraceRoute == null ? Codegen.empty() : this.disableTraceRoute;
     }
 
     public ConnectionMonitorIcmpConfigurationArgs(@Nullable Output<Boolean> disableTraceRoute) {
@@ -34,7 +35,7 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
     }
 
     private ConnectionMonitorIcmpConfigurationArgs() {
-        this.disableTraceRoute = Output.empty();
+        this.disableTraceRoute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
-            this.disableTraceRoute = Output.ofNullable(disableTraceRoute);
+            this.disableTraceRoute = Codegen.ofNullable(disableTraceRoute);
             return this;
         }        public ConnectionMonitorIcmpConfigurationArgs build() {
             return new ConnectionMonitorIcmpConfigurationArgs(disableTraceRoute);

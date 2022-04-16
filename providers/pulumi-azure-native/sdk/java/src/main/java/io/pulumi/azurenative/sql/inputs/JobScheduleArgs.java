@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql.inputs;
 import io.pulumi.azurenative.sql.enums.JobScheduleType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
-    public Output<String> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+    public Output<String> interval() {
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<JobScheduleType> type;
 
-    public Output<JobScheduleType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<JobScheduleType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public JobScheduleArgs(
@@ -82,18 +83,18 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> startTime,
         @Nullable Output<JobScheduleType> type) {
         this.enabled = enabled;
-        this.endTime = endTime == null ? Output.ofNullable("9999-12-31T11:59:59+00:00") : endTime;
+        this.endTime = endTime == null ? Codegen.ofNullable("9999-12-31T11:59:59+00:00") : endTime;
         this.interval = interval;
-        this.startTime = startTime == null ? Output.ofNullable("0001-01-01T00:00:00+00:00") : startTime;
-        this.type = type == null ? Output.ofNullable(io.pulumi.azurenative.sql.enums.JobScheduleType.Once) : type;
+        this.startTime = startTime == null ? Codegen.ofNullable("0001-01-01T00:00:00+00:00") : startTime;
+        this.type = type == null ? Codegen.ofNullable(io.pulumi.azurenative.sql.enums.JobScheduleType.Once) : type;
     }
 
     private JobScheduleArgs() {
-        this.enabled = Output.empty();
-        this.endTime = Output.empty();
-        this.interval = Output.empty();
-        this.startTime = Output.empty();
-        this.type = Output.empty();
+        this.enabled = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -137,7 +138,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder interval(@Nullable Output<String> interval) {
@@ -145,7 +146,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interval(@Nullable String interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -153,7 +154,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder type(@Nullable Output<JobScheduleType> type) {
@@ -161,7 +162,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable JobScheduleType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public JobScheduleArgs build() {
             return new JobScheduleArgs(enabled, endTime, interval, startTime, type);

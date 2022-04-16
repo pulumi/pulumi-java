@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
     @Import(name="vpc")
       private final @Nullable Output<String> vpc;
 
-    public Output<String> getVpc() {
-        return this.vpc == null ? Output.empty() : this.vpc;
+    public Output<String> vpc() {
+        return this.vpc == null ? Codegen.empty() : this.vpc;
     }
 
     public VpcPeeringConnectivityArgs(@Nullable Output<String> vpc) {
@@ -34,7 +35,7 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
     }
 
     private VpcPeeringConnectivityArgs() {
-        this.vpc = Output.empty();
+        this.vpc = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpc(@Nullable String vpc) {
-            this.vpc = Output.ofNullable(vpc);
+            this.vpc = Codegen.ofNullable(vpc);
             return this;
         }        public VpcPeeringConnectivityArgs build() {
             return new VpcPeeringConnectivityArgs(vpc);

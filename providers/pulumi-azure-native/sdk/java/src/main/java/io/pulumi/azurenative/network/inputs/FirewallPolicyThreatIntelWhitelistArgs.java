@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
     @Import(name="fqdns")
       private final @Nullable Output<List<String>> fqdns;
 
-    public Output<List<String>> getFqdns() {
-        return this.fqdns == null ? Output.empty() : this.fqdns;
+    public Output<List<String>> fqdns() {
+        return this.fqdns == null ? Codegen.empty() : this.fqdns;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+    public Output<List<String>> ipAddresses() {
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     public FirewallPolicyThreatIntelWhitelistArgs(
@@ -49,8 +50,8 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
     }
 
     private FirewallPolicyThreatIntelWhitelistArgs() {
-        this.fqdns = Output.empty();
-        this.ipAddresses = Output.empty();
+        this.fqdns = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
             return this;
         }
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Output.ofNullable(fqdns);
+            this.fqdns = Codegen.ofNullable(fqdns);
             return this;
         }
         public Builder fqdns(String... fqdns) {
@@ -91,7 +92,7 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {

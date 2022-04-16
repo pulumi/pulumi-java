@@ -9,6 +9,7 @@ import io.pulumi.aws.dynamodb.inputs.TableItemState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -38,7 +39,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * @return Hash key to use for lookups and identification of the item
      * 
      */
-    public Output<String> getHashKey() {
+    public Output<String> hashKey() {
         return this.hashKey;
     }
     /**
@@ -54,7 +55,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
-    public Output<String> getItem() {
+    public Output<String> item() {
         return this.item;
     }
     /**
@@ -68,7 +69,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * @return Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
      * 
      */
-    public Output</* @Nullable */ String> getRangeKey() {
+    public Output</* @Nullable */ String> rangeKey() {
         return this.rangeKey;
     }
     /**
@@ -82,7 +83,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * @return The name of the table to contain the item.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -108,7 +109,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableItem(String name, TableItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/tableItem:TableItem", name, args == null ? TableItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dynamodb/tableItem:TableItem", name, args == null ? TableItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TableItem(String name, Output<String> id, @Nullable TableItemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

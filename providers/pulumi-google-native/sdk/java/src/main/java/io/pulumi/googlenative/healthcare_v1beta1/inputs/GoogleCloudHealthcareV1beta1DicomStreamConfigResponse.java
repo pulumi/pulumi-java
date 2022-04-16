@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse extends
     @Import(name="bigqueryDestination", required=true)
       private final GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination;
 
-    public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse getBigqueryDestination() {
+    public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
     }
 

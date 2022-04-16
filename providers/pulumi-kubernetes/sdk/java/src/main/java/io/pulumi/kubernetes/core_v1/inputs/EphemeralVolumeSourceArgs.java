@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimTemplateArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="volumeClaimTemplate")
       private final @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
 
-    public Output<PersistentVolumeClaimTemplateArgs> getVolumeClaimTemplate() {
-        return this.volumeClaimTemplate == null ? Output.empty() : this.volumeClaimTemplate;
+    public Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate() {
+        return this.volumeClaimTemplate == null ? Codegen.empty() : this.volumeClaimTemplate;
     }
 
     public EphemeralVolumeSourceArgs(
@@ -55,8 +56,8 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private EphemeralVolumeSourceArgs() {
-        this.readOnly = Output.empty();
-        this.volumeClaimTemplate = Output.empty();
+        this.readOnly = Codegen.empty();
+        this.volumeClaimTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder volumeClaimTemplate(@Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
@@ -94,7 +95,7 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder volumeClaimTemplate(@Nullable PersistentVolumeClaimTemplateArgs volumeClaimTemplate) {
-            this.volumeClaimTemplate = Output.ofNullable(volumeClaimTemplate);
+            this.volumeClaimTemplate = Codegen.ofNullable(volumeClaimTemplate);
             return this;
         }        public EphemeralVolumeSourceArgs build() {
             return new EphemeralVolumeSourceArgs(readOnly, volumeClaimTemplate);

@@ -9,6 +9,7 @@ import io.pulumi.aws.imagebuilder.inputs.ComponentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return (Required) Amazon Resource Name (ARN) of the component.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Change description of the component.
      * 
      */
-    public Output</* @Nullable */ String> getChangeDescription() {
+    public Output</* @Nullable */ String> changeDescription() {
         return this.changeDescription;
     }
     /**
@@ -72,7 +73,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Inline YAML string with data of the component. Exactly one of `data` and `uri` can be specified. the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -86,7 +87,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Date the component was created.
      * 
      */
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated;
     }
     /**
@@ -100,7 +101,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Description of the component.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -114,7 +115,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Encryption status of the component.
      * 
      */
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted;
     }
     /**
@@ -128,7 +129,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -142,7 +143,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Name of the component.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +157,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Owner of the component.
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -170,7 +171,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Platform of the component.
      * 
      */
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     /**
@@ -184,7 +185,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Set of Operating Systems (OS) supported by the component.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSupportedOsVersions() {
+    public Output</* @Nullable */ List<String>> supportedOsVersions() {
         return this.supportedOsVersions;
     }
     /**
@@ -198,7 +199,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -212,7 +213,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -226,7 +227,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Type of the component.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -240,7 +241,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
      * 
      */
-    public Output</* @Nullable */ String> getUri() {
+    public Output</* @Nullable */ String> uri() {
         return this.uri;
     }
     /**
@@ -254,7 +255,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Version of the component.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -280,7 +281,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Component(String name, ComponentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:imagebuilder/component:Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:imagebuilder/component:Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Component(String name, Output<String> id, @Nullable ComponentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

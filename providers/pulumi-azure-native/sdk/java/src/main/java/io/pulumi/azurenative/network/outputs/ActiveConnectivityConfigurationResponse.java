@@ -108,84 +108,84 @@ public final class ActiveConnectivityConfigurationResponse {
      * Groups for configuration
      * 
     */
-    public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
+    public List<ConnectivityGroupItemResponse> appliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
     /**
      * Deployment time string.
      * 
     */
-    public Optional<String> getCommitTime() {
+    public Optional<String> commitTime() {
         return Optional.ofNullable(this.commitTime);
     }
     /**
      * Effective configuration groups.
      * 
     */
-    public List<ConfigurationGroupResponse> getConfigurationGroups() {
+    public List<ConfigurationGroupResponse> configurationGroups() {
         return this.configurationGroups == null ? List.of() : this.configurationGroups;
     }
     /**
      * Connectivity topology type.
      * 
     */
-    public String getConnectivityTopology() {
+    public String connectivityTopology() {
         return this.connectivityTopology;
     }
     /**
      * Flag if need to remove current existing peerings.
      * 
     */
-    public Optional<String> getDeleteExistingPeering() {
+    public Optional<String> deleteExistingPeering() {
         return Optional.ofNullable(this.deleteExistingPeering);
     }
     /**
      * A description of the connectivity configuration.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * List of hubItems
      * 
     */
-    public List<HubResponse> getHubs() {
+    public List<HubResponse> hubs() {
         return this.hubs == null ? List.of() : this.hubs;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Flag if global mesh is supported.
      * 
     */
-    public Optional<String> getIsGlobal() {
+    public Optional<String> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * The provisioning state of the connectivity configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Deployment region.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 

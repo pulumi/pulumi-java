@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageUri")
       private final @Nullable Output<String> storageUri;
 
-    public Output<String> getStorageUri() {
-        return this.storageUri == null ? Output.empty() : this.storageUri;
+    public Output<String> storageUri() {
+        return this.storageUri == null ? Codegen.empty() : this.storageUri;
     }
 
     public BootDiagnosticsArgs(
@@ -49,8 +50,8 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BootDiagnosticsArgs() {
-        this.enabled = Output.empty();
-        this.storageUri = Output.empty();
+        this.enabled = Codegen.empty();
+        this.storageUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder storageUri(@Nullable Output<String> storageUri) {
@@ -88,7 +89,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder storageUri(@Nullable String storageUri) {
-            this.storageUri = Output.ofNullable(storageUri);
+            this.storageUri = Codegen.ofNullable(storageUri);
             return this;
         }        public BootDiagnosticsArgs build() {
             return new BootDiagnosticsArgs(enabled, storageUri);

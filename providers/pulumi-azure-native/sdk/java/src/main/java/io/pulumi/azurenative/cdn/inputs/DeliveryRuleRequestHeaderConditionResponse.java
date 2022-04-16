@@ -25,7 +25,7 @@ public final class DeliveryRuleRequestHeaderConditionResponse extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleRequestHeaderConditionResponse extends io.pulumi.
     @Import(name="parameters", required=true)
       private final RequestHeaderMatchConditionParametersResponse parameters;
 
-    public RequestHeaderMatchConditionParametersResponse getParameters() {
+    public RequestHeaderMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

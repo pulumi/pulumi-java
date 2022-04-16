@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
     @Import(name="step")
       private final @Nullable Output<String> step;
 
-    public Output<String> getStep() {
-        return this.step == null ? Output.empty() : this.step;
+    public Output<String> step() {
+        return this.step == null ? Codegen.empty() : this.step;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
     @Import(name="stepIndex")
       private final @Nullable Output<Integer> stepIndex;
 
-    public Output<Integer> getStepIndex() {
-        return this.stepIndex == null ? Output.empty() : this.stepIndex;
+    public Output<Integer> stepIndex() {
+        return this.stepIndex == null ? Codegen.empty() : this.stepIndex;
     }
 
     public GoogleCloudDialogflowCxV3beta1RolloutStateArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
     }
 
     private GoogleCloudDialogflowCxV3beta1RolloutStateArgs() {
-        this.startTime = Output.empty();
-        this.step = Output.empty();
-        this.stepIndex = Output.empty();
+        this.startTime = Codegen.empty();
+        this.step = Codegen.empty();
+        this.stepIndex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder step(@Nullable Output<String> step) {
@@ -104,7 +105,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
             return this;
         }
         public Builder step(@Nullable String step) {
-            this.step = Output.ofNullable(step);
+            this.step = Codegen.ofNullable(step);
             return this;
         }
         public Builder stepIndex(@Nullable Output<Integer> stepIndex) {
@@ -112,7 +113,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
             return this;
         }
         public Builder stepIndex(@Nullable Integer stepIndex) {
-            this.stepIndex = Output.ofNullable(stepIndex);
+            this.stepIndex = Codegen.ofNullable(stepIndex);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1RolloutStateArgs build() {
             return new GoogleCloudDialogflowCxV3beta1RolloutStateArgs(startTime, step, stepIndex);

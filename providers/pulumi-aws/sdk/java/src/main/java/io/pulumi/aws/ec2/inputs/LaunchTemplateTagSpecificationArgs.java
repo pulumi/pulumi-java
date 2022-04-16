@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LaunchTemplateTagSpecificationArgs extends io.pulumi.resource
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LaunchTemplateTagSpecificationArgs extends io.pulumi.resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LaunchTemplateTagSpecificationArgs(
@@ -45,8 +46,8 @@ public final class LaunchTemplateTagSpecificationArgs extends io.pulumi.resource
     }
 
     private LaunchTemplateTagSpecificationArgs() {
-        this.resourceType = Output.empty();
-        this.tags = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class LaunchTemplateTagSpecificationArgs extends io.pulumi.resource
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -84,7 +85,7 @@ public final class LaunchTemplateTagSpecificationArgs extends io.pulumi.resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LaunchTemplateTagSpecificationArgs build() {
             return new LaunchTemplateTagSpecificationArgs(resourceType, tags);

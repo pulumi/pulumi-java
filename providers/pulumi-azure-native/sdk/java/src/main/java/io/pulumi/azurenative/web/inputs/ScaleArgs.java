@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ScaleRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
-        return this.maxReplicas == null ? Output.empty() : this.maxReplicas;
+    public Output<Integer> maxReplicas() {
+        return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> getMinReplicas() {
-        return this.minReplicas == null ? Output.empty() : this.minReplicas;
+    public Output<Integer> minReplicas() {
+        return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<ScaleRuleArgs>> rules;
 
-    public Output<List<ScaleRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<ScaleRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public ScaleArgs(
@@ -63,9 +64,9 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScaleArgs() {
-        this.maxReplicas = Output.empty();
-        this.minReplicas = Output.empty();
-        this.rules = Output.empty();
+        this.maxReplicas = Codegen.empty();
+        this.minReplicas = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Output.ofNullable(maxReplicas);
+            this.maxReplicas = Codegen.ofNullable(maxReplicas);
             return this;
         }
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
@@ -105,7 +106,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Output.ofNullable(minReplicas);
+            this.minReplicas = Codegen.ofNullable(minReplicas);
             return this;
         }
         public Builder rules(@Nullable Output<List<ScaleRuleArgs>> rules) {
@@ -113,7 +114,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<ScaleRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(ScaleRuleArgs... rules) {

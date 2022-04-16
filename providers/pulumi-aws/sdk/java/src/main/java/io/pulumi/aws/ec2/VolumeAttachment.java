@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VolumeAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
      * 
      */
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
     /**
@@ -67,7 +68,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDetach() {
+    public Output</* @Nullable */ Boolean> forceDetach() {
         return this.forceDetach;
     }
     /**
@@ -81,7 +82,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the Instance to attach to
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -103,7 +104,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * means attached.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipDestroy() {
+    public Output</* @Nullable */ Boolean> skipDestroy() {
         return this.skipDestroy;
     }
     /**
@@ -119,7 +120,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * before trying to detach the volume. Stops the instance, if it is not already stopped.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStopInstanceBeforeDetaching() {
+    public Output</* @Nullable */ Boolean> stopInstanceBeforeDetaching() {
         return this.stopInstanceBeforeDetaching;
     }
     /**
@@ -133,7 +134,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the Volume to be attached
      * 
      */
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
 
@@ -159,7 +160,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VolumeAttachment(String name, VolumeAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/volumeAttachment:VolumeAttachment", name, args == null ? VolumeAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/volumeAttachment:VolumeAttachment", name, args == null ? VolumeAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VolumeAttachment(String name, Output<String> id, @Nullable VolumeAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

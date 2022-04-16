@@ -24,7 +24,7 @@ public final class HealthCheckLogConfigResponse {
      * Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
      * 
     */
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
 

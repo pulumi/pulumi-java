@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerAddress", required=true)
       private final Output<String> radiusServerAddress;
 
-    public Output<String> getRadiusServerAddress() {
+    public Output<String> radiusServerAddress() {
         return this.radiusServerAddress;
     }
 
@@ -37,8 +38,8 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerScore")
       private final @Nullable Output<Double> radiusServerScore;
 
-    public Output<Double> getRadiusServerScore() {
-        return this.radiusServerScore == null ? Output.empty() : this.radiusServerScore;
+    public Output<Double> radiusServerScore() {
+        return this.radiusServerScore == null ? Codegen.empty() : this.radiusServerScore;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
 
-    public Output<String> getRadiusServerSecret() {
-        return this.radiusServerSecret == null ? Output.empty() : this.radiusServerSecret;
+    public Output<String> radiusServerSecret() {
+        return this.radiusServerSecret == null ? Codegen.empty() : this.radiusServerSecret;
     }
 
     public RadiusServerArgs(
@@ -62,9 +63,9 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RadiusServerArgs() {
-        this.radiusServerAddress = Output.empty();
-        this.radiusServerScore = Output.empty();
-        this.radiusServerSecret = Output.empty();
+        this.radiusServerAddress = Codegen.empty();
+        this.radiusServerScore = Codegen.empty();
+        this.radiusServerSecret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder radiusServerScore(@Nullable Double radiusServerScore) {
-            this.radiusServerScore = Output.ofNullable(radiusServerScore);
+            this.radiusServerScore = Codegen.ofNullable(radiusServerScore);
             return this;
         }
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
@@ -112,7 +113,7 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
-            this.radiusServerSecret = Output.ofNullable(radiusServerSecret);
+            this.radiusServerSecret = Codegen.ofNullable(radiusServerSecret);
             return this;
         }        public RadiusServerArgs build() {
             return new RadiusServerArgs(radiusServerAddress, radiusServerScore, radiusServerSecret);

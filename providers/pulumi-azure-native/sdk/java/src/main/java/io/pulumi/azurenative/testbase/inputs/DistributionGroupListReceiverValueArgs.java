@@ -5,6 +5,7 @@ package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
     @Import(name="distributionGroups")
       private final @Nullable Output<List<String>> distributionGroups;
 
-    public Output<List<String>> getDistributionGroups() {
-        return this.distributionGroups == null ? Output.empty() : this.distributionGroups;
+    public Output<List<String>> distributionGroups() {
+        return this.distributionGroups == null ? Codegen.empty() : this.distributionGroups;
     }
 
     public DistributionGroupListReceiverValueArgs(@Nullable Output<List<String>> distributionGroups) {
@@ -35,7 +36,7 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
     }
 
     private DistributionGroupListReceiverValueArgs() {
-        this.distributionGroups = Output.empty();
+        this.distributionGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
             return this;
         }
         public Builder distributionGroups(@Nullable List<String> distributionGroups) {
-            this.distributionGroups = Output.ofNullable(distributionGroups);
+            this.distributionGroups = Codegen.ofNullable(distributionGroups);
             return this;
         }
         public Builder distributionGroups(String... distributionGroups) {

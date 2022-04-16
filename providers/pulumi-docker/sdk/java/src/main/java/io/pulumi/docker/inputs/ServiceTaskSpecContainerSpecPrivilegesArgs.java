@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
     @Import(name="credentialSpec")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> getCredentialSpec() {
-        return this.credentialSpec == null ? Output.empty() : this.credentialSpec;
+    public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec() {
+        return this.credentialSpec == null ? Codegen.empty() : this.credentialSpec;
     }
 
     @Import(name="seLinuxContext")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> getSeLinuxContext() {
-        return this.seLinuxContext == null ? Output.empty() : this.seLinuxContext;
+    public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext() {
+        return this.seLinuxContext == null ? Codegen.empty() : this.seLinuxContext;
     }
 
     public ServiceTaskSpecContainerSpecPrivilegesArgs(
@@ -37,8 +38,8 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
     }
 
     private ServiceTaskSpecContainerSpecPrivilegesArgs() {
-        this.credentialSpec = Output.empty();
-        this.seLinuxContext = Output.empty();
+        this.credentialSpec = Codegen.empty();
+        this.seLinuxContext = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
             return this;
         }
         public Builder credentialSpec(@Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs credentialSpec) {
-            this.credentialSpec = Output.ofNullable(credentialSpec);
+            this.credentialSpec = Codegen.ofNullable(credentialSpec);
             return this;
         }
         public Builder seLinuxContext(@Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext) {
@@ -76,7 +77,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
             return this;
         }
         public Builder seLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs seLinuxContext) {
-            this.seLinuxContext = Output.ofNullable(seLinuxContext);
+            this.seLinuxContext = Codegen.ofNullable(seLinuxContext);
             return this;
         }        public ServiceTaskSpecContainerSpecPrivilegesArgs build() {
             return new ServiceTaskSpecContainerSpecPrivilegesArgs(credentialSpec, seLinuxContext);

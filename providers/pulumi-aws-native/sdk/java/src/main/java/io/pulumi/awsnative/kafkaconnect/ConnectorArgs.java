@@ -12,6 +12,7 @@ import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorPluginArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
       private final Output<ConnectorCapacityArgs> capacity;
 
-    public Output<ConnectorCapacityArgs> getCapacity() {
+    public Output<ConnectorCapacityArgs> capacity() {
         return this.capacity;
     }
 
@@ -37,7 +38,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorConfiguration", required=true)
       private final Output<Object> connectorConfiguration;
 
-    public Output<Object> getConnectorConfiguration() {
+    public Output<Object> connectorConfiguration() {
         return this.connectorConfiguration;
     }
 
@@ -48,8 +49,8 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorDescription")
       private final @Nullable Output<String> connectorDescription;
 
-    public Output<String> getConnectorDescription() {
-        return this.connectorDescription == null ? Output.empty() : this.connectorDescription;
+    public Output<String> connectorDescription() {
+        return this.connectorDescription == null ? Codegen.empty() : this.connectorDescription;
     }
 
     /**
@@ -59,28 +60,28 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
-    public Output<String> getConnectorName() {
-        return this.connectorName == null ? Output.empty() : this.connectorName;
+    public Output<String> connectorName() {
+        return this.connectorName == null ? Codegen.empty() : this.connectorName;
     }
 
     @Import(name="kafkaCluster", required=true)
       private final Output<ConnectorKafkaClusterArgs> kafkaCluster;
 
-    public Output<ConnectorKafkaClusterArgs> getKafkaCluster() {
+    public Output<ConnectorKafkaClusterArgs> kafkaCluster() {
         return this.kafkaCluster;
     }
 
     @Import(name="kafkaClusterClientAuthentication", required=true)
       private final Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
 
-    public Output<ConnectorKafkaClusterClientAuthenticationArgs> getKafkaClusterClientAuthentication() {
+    public Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication() {
         return this.kafkaClusterClientAuthentication;
     }
 
     @Import(name="kafkaClusterEncryptionInTransit", required=true)
       private final Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
 
-    public Output<ConnectorKafkaClusterEncryptionInTransitArgs> getKafkaClusterEncryptionInTransit() {
+    public Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit() {
         return this.kafkaClusterEncryptionInTransit;
     }
 
@@ -91,15 +92,15 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kafkaConnectVersion", required=true)
       private final Output<String> kafkaConnectVersion;
 
-    public Output<String> getKafkaConnectVersion() {
+    public Output<String> kafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
 
     @Import(name="logDelivery")
       private final @Nullable Output<ConnectorLogDeliveryArgs> logDelivery;
 
-    public Output<ConnectorLogDeliveryArgs> getLogDelivery() {
-        return this.logDelivery == null ? Output.empty() : this.logDelivery;
+    public Output<ConnectorLogDeliveryArgs> logDelivery() {
+        return this.logDelivery == null ? Codegen.empty() : this.logDelivery;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="plugins", required=true)
       private final Output<List<ConnectorPluginArgs>> plugins;
 
-    public Output<List<ConnectorPluginArgs>> getPlugins() {
+    public Output<List<ConnectorPluginArgs>> plugins() {
         return this.plugins;
     }
 
@@ -120,15 +121,15 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceExecutionRoleArn", required=true)
       private final Output<String> serviceExecutionRoleArn;
 
-    public Output<String> getServiceExecutionRoleArn() {
+    public Output<String> serviceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
 
     @Import(name="workerConfiguration")
       private final @Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration;
 
-    public Output<ConnectorWorkerConfigurationArgs> getWorkerConfiguration() {
-        return this.workerConfiguration == null ? Output.empty() : this.workerConfiguration;
+    public Output<ConnectorWorkerConfigurationArgs> workerConfiguration() {
+        return this.workerConfiguration == null ? Codegen.empty() : this.workerConfiguration;
     }
 
     public ConnectorArgs(
@@ -159,18 +160,18 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectorArgs() {
-        this.capacity = Output.empty();
-        this.connectorConfiguration = Output.empty();
-        this.connectorDescription = Output.empty();
-        this.connectorName = Output.empty();
-        this.kafkaCluster = Output.empty();
-        this.kafkaClusterClientAuthentication = Output.empty();
-        this.kafkaClusterEncryptionInTransit = Output.empty();
-        this.kafkaConnectVersion = Output.empty();
-        this.logDelivery = Output.empty();
-        this.plugins = Output.empty();
-        this.serviceExecutionRoleArn = Output.empty();
-        this.workerConfiguration = Output.empty();
+        this.capacity = Codegen.empty();
+        this.connectorConfiguration = Codegen.empty();
+        this.connectorDescription = Codegen.empty();
+        this.connectorName = Codegen.empty();
+        this.kafkaCluster = Codegen.empty();
+        this.kafkaClusterClientAuthentication = Codegen.empty();
+        this.kafkaClusterEncryptionInTransit = Codegen.empty();
+        this.kafkaConnectVersion = Codegen.empty();
+        this.logDelivery = Codegen.empty();
+        this.plugins = Codegen.empty();
+        this.serviceExecutionRoleArn = Codegen.empty();
+        this.workerConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -236,7 +237,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectorDescription(@Nullable String connectorDescription) {
-            this.connectorDescription = Output.ofNullable(connectorDescription);
+            this.connectorDescription = Codegen.ofNullable(connectorDescription);
             return this;
         }
         public Builder connectorName(@Nullable Output<String> connectorName) {
@@ -244,7 +245,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Output.ofNullable(connectorName);
+            this.connectorName = Codegen.ofNullable(connectorName);
             return this;
         }
         public Builder kafkaCluster(Output<ConnectorKafkaClusterArgs> kafkaCluster) {
@@ -284,7 +285,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logDelivery(@Nullable ConnectorLogDeliveryArgs logDelivery) {
-            this.logDelivery = Output.ofNullable(logDelivery);
+            this.logDelivery = Codegen.ofNullable(logDelivery);
             return this;
         }
         public Builder plugins(Output<List<ConnectorPluginArgs>> plugins) {
@@ -311,7 +312,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerConfiguration(@Nullable ConnectorWorkerConfigurationArgs workerConfiguration) {
-            this.workerConfiguration = Output.ofNullable(workerConfiguration);
+            this.workerConfiguration = Codegen.ofNullable(workerConfiguration);
             return this;
         }        public ConnectorArgs build() {
             return new ConnectorArgs(capacity, connectorConfiguration, connectorDescription, connectorName, kafkaCluster, kafkaClusterClientAuthentication, kafkaClusterEncryptionInTransit, kafkaConnectVersion, logDelivery, plugins, serviceExecutionRoleArn, workerConfiguration);

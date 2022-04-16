@@ -8,6 +8,7 @@ import io.pulumi.azurenative.dataprotection.enums.StorageSettingTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreType")
       private final @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
 
-    public Output<Either<String,StorageSettingStoreTypes>> getDatastoreType() {
-        return this.datastoreType == null ? Output.empty() : this.datastoreType;
+    public Output<Either<String,StorageSettingStoreTypes>> datastoreType() {
+        return this.datastoreType == null ? Codegen.empty() : this.datastoreType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,StorageSettingTypes>> type;
 
-    public Output<Either<String,StorageSettingTypes>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,StorageSettingTypes>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public StorageSettingArgs(
@@ -51,8 +52,8 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageSettingArgs() {
-        this.datastoreType = Output.empty();
-        this.type = Output.empty();
+        this.datastoreType = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastoreType(@Nullable Either<String,StorageSettingStoreTypes> datastoreType) {
-            this.datastoreType = Output.ofNullable(datastoreType);
+            this.datastoreType = Codegen.ofNullable(datastoreType);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,StorageSettingTypes>> type) {
@@ -90,7 +91,7 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,StorageSettingTypes> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public StorageSettingArgs build() {
             return new StorageSettingArgs(datastoreType, type);

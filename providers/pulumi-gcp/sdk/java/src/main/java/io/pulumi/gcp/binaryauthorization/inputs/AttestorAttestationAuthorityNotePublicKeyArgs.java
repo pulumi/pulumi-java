@@ -5,6 +5,7 @@ package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="asciiArmoredPgpPublicKey")
       private final @Nullable Output<String> asciiArmoredPgpPublicKey;
 
-    public Output<String> getAsciiArmoredPgpPublicKey() {
-        return this.asciiArmoredPgpPublicKey == null ? Output.empty() : this.asciiArmoredPgpPublicKey;
+    public Output<String> asciiArmoredPgpPublicKey() {
+        return this.asciiArmoredPgpPublicKey == null ? Codegen.empty() : this.asciiArmoredPgpPublicKey;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="pkixPublicKey")
       private final @Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> pkixPublicKey;
 
-    public Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> getPkixPublicKey() {
-        return this.pkixPublicKey == null ? Output.empty() : this.pkixPublicKey;
+    public Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> pkixPublicKey() {
+        return this.pkixPublicKey == null ? Codegen.empty() : this.pkixPublicKey;
     }
 
     public AttestorAttestationAuthorityNotePublicKeyArgs(
@@ -89,10 +90,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     }
 
     private AttestorAttestationAuthorityNotePublicKeyArgs() {
-        this.asciiArmoredPgpPublicKey = Output.empty();
-        this.comment = Output.empty();
-        this.id = Output.empty();
-        this.pkixPublicKey = Output.empty();
+        this.asciiArmoredPgpPublicKey = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.id = Codegen.empty();
+        this.pkixPublicKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
             return this;
         }
         public Builder asciiArmoredPgpPublicKey(@Nullable String asciiArmoredPgpPublicKey) {
-            this.asciiArmoredPgpPublicKey = Output.ofNullable(asciiArmoredPgpPublicKey);
+            this.asciiArmoredPgpPublicKey = Codegen.ofNullable(asciiArmoredPgpPublicKey);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -134,7 +135,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -142,7 +143,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder pkixPublicKey(@Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> pkixPublicKey) {
@@ -150,7 +151,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
             return this;
         }
         public Builder pkixPublicKey(@Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs pkixPublicKey) {
-            this.pkixPublicKey = Output.ofNullable(pkixPublicKey);
+            this.pkixPublicKey = Codegen.ofNullable(pkixPublicKey);
             return this;
         }        public AttestorAttestationAuthorityNotePublicKeyArgs build() {
             return new AttestorAttestationAuthorityNotePublicKeyArgs(asciiArmoredPgpPublicKey, comment, id, pkixPublicKey);

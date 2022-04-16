@@ -10,6 +10,7 @@ import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,13 +46,13 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return Amazon Resource Name of the file system.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -65,7 +66,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return Set to true to run an import data repository task to import metadata from the data repository to the file system after the data repository association is created. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBatchImportMetaDataOnCreate() {
+    public Output</* @Nullable */ Boolean> batchImportMetaDataOnCreate() {
         return this.batchImportMetaDataOnCreate;
     }
     /**
@@ -79,7 +80,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return The path to the Amazon S3 data repository that will be linked to the file system. The path must be an S3 bucket s3://myBucket/myPrefix/. This path specifies where in the S3 data repository files will be imported from or exported to. The same S3 bucket cannot be linked more than once to the same file system.
      * 
      */
-    public Output<String> getDataRepositoryPath() {
+    public Output<String> dataRepositoryPath() {
         return this.dataRepositoryPath;
     }
     /**
@@ -93,7 +94,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return Set to true to delete files from the file system upon deleting this data repository association. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeleteDataInFilesystem() {
+    public Output</* @Nullable */ Boolean> deleteDataInFilesystem() {
         return this.deleteDataInFilesystem;
     }
     /**
@@ -107,7 +108,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return The ID of the Amazon FSx file system to on which to create a data repository association.
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     /**
@@ -121,7 +122,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return A path on the file system that points to a high-level directory (such as `/ns1/`) or subdirectory (such as `/ns1/subdir/`) that will be mapped 1-1 with `data_repository_path`. The leading forward slash in the name is required. Two data repository associations cannot have overlapping file system paths. For example, if a data repository is associated with file system path `/ns1/`, then you cannot link another data repository with file system path `/ns1/ns2`. This path specifies where in your file system files will be exported from or imported to. This file system directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.
      * 
      */
-    public Output<String> getFileSystemPath() {
+    public Output<String> fileSystemPath() {
         return this.fileSystemPath;
     }
     /**
@@ -135,7 +136,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system.
      * 
      */
-    public Output<Integer> getImportedFileChunkSize() {
+    public Output<Integer> importedFileChunkSize() {
         return this.importedFileChunkSize;
     }
     /**
@@ -151,7 +152,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.
      * 
      */
-    public Output<DataRepositoryAssociationS3> getS3() {
+    public Output<DataRepositoryAssociationS3> s3() {
         return this.s3;
     }
     /**
@@ -165,7 +166,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return A map of tags to assign to the data repository association. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -179,7 +180,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -205,7 +206,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DataRepositoryAssociation(String name, DataRepositoryAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation", name, args == null ? DataRepositoryAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation", name, args == null ? DataRepositoryAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataRepositoryAssociation(String name, Output<String> id, @Nullable DataRepositoryAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.aadiam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="days", required=true)
       private final Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days;
     }
 
@@ -36,7 +37,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -48,8 +49,8 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RetentionPolicyArgs() {
-        this.days = Output.empty();
-        this.enabled = Output.empty();
+        this.days = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {

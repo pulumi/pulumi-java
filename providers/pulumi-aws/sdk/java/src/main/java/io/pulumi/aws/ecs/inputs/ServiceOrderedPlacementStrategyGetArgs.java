@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+    public Output<String> field() {
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -47,8 +48,8 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
     }
 
     private ServiceOrderedPlacementStrategyGetArgs() {
-        this.field = Output.empty();
-        this.type = Output.empty();
+        this.field = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder type(Output<String> type) {

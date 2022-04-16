@@ -7,6 +7,7 @@ import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingSessionStora
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamingSessionStorageRootArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,15 +29,15 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
     @Import(name="mode")
       private final @Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode;
 
-    public Output<List<LaunchProfileStreamingSessionStorageMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<List<LaunchProfileStreamingSessionStorageMode>> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="root")
       private final @Nullable Output<LaunchProfileStreamingSessionStorageRootArgs> root;
 
-    public Output<LaunchProfileStreamingSessionStorageRootArgs> getRoot() {
-        return this.root == null ? Output.empty() : this.root;
+    public Output<LaunchProfileStreamingSessionStorageRootArgs> root() {
+        return this.root == null ? Codegen.empty() : this.root;
     }
 
     public LaunchProfileStreamConfigurationSessionStorageArgs(
@@ -47,8 +48,8 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
     }
 
     private LaunchProfileStreamConfigurationSessionStorageArgs() {
-        this.mode = Output.empty();
-        this.root = Output.empty();
+        this.mode = Codegen.empty();
+        this.root = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
             return this;
         }
         public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder mode(LaunchProfileStreamingSessionStorageMode... mode) {
@@ -89,7 +90,7 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
             return this;
         }
         public Builder root(@Nullable LaunchProfileStreamingSessionStorageRootArgs root) {
-            this.root = Output.ofNullable(root);
+            this.root = Codegen.ofNullable(root);
             return this;
         }        public LaunchProfileStreamConfigurationSessionStorageArgs build() {
             return new LaunchProfileStreamConfigurationSessionStorageArgs(mode, root);

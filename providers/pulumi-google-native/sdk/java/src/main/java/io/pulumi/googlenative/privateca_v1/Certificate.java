@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CertificateArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
@@ -36,7 +37,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return A structured description of the issued X.509 certificate.
      * 
      */
-    public Output<CertificateDescriptionResponse> getCertificateDescription() {
+    public Output<CertificateDescriptionResponse> certificateDescription() {
         return this.certificateDescription;
     }
     /**
@@ -50,7 +51,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
      * 
      */
-    public Output<String> getCertificateTemplate() {
+    public Output<String> certificateTemplate() {
         return this.certificateTemplate;
     }
     /**
@@ -64,7 +65,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
      * 
      */
-    public Output<CertificateConfigResponse> getConfig() {
+    public Output<CertificateConfigResponse> config() {
         return this.config;
     }
     /**
@@ -78,7 +79,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The time at which this Certificate was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -92,7 +93,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      * 
      */
-    public Output<String> getIssuerCertificateAuthority() {
+    public Output<String> issuerCertificateAuthority() {
         return this.issuerCertificateAuthority;
     }
     /**
@@ -106,7 +107,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Optional. Labels with user-defined metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -120,7 +121,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
      */
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime;
     }
     /**
@@ -134,7 +135,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -148,7 +149,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The pem-encoded, signed X.509 certificate.
      * 
      */
-    public Output<String> getPemCertificate() {
+    public Output<String> pemCertificate() {
         return this.pemCertificate;
     }
     /**
@@ -162,7 +163,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
      * 
      */
-    public Output<List<String>> getPemCertificateChain() {
+    public Output<List<String>> pemCertificateChain() {
         return this.pemCertificateChain;
     }
     /**
@@ -176,7 +177,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    public Output<String> getPemCsr() {
+    public Output<String> pemCsr() {
         return this.pemCsr;
     }
     /**
@@ -190,7 +191,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
      * 
      */
-    public Output<RevocationDetailsResponse> getRevocationDetails() {
+    public Output<RevocationDetailsResponse> revocationDetails() {
         return this.revocationDetails;
     }
     /**
@@ -204,7 +205,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
      */
-    public Output<String> getSubjectMode() {
+    public Output<String> subjectMode() {
         return this.subjectMode;
     }
     /**
@@ -218,7 +219,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The time at which this Certificate was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -244,7 +245,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Certificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

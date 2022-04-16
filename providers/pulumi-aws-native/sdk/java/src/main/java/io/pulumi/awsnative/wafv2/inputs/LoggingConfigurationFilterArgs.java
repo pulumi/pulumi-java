@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,7 +24,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     @Import(name="behavior", required=true)
       private final Output<LoggingConfigurationFilterBehavior> behavior;
 
-    public Output<LoggingConfigurationFilterBehavior> getBehavior() {
+    public Output<LoggingConfigurationFilterBehavior> behavior() {
         return this.behavior;
     }
 
@@ -34,7 +35,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     @Import(name="conditions", required=true)
       private final Output<List<LoggingConfigurationConditionArgs>> conditions;
 
-    public Output<List<LoggingConfigurationConditionArgs>> getConditions() {
+    public Output<List<LoggingConfigurationConditionArgs>> conditions() {
         return this.conditions;
     }
 
@@ -45,7 +46,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     @Import(name="requirement", required=true)
       private final Output<LoggingConfigurationFilterRequirement> requirement;
 
-    public Output<LoggingConfigurationFilterRequirement> getRequirement() {
+    public Output<LoggingConfigurationFilterRequirement> requirement() {
         return this.requirement;
     }
 
@@ -59,9 +60,9 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     }
 
     private LoggingConfigurationFilterArgs() {
-        this.behavior = Output.empty();
-        this.conditions = Output.empty();
-        this.requirement = Output.empty();
+        this.behavior = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.requirement = Codegen.empty();
     }
 
     public static Builder builder() {

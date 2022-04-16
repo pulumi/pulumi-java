@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DiskExclusionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="diskExclusionProperties")
       private final @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
 
-    public Output<DiskExclusionPropertiesArgs> getDiskExclusionProperties() {
-        return this.diskExclusionProperties == null ? Output.empty() : this.diskExclusionProperties;
+    public Output<DiskExclusionPropertiesArgs> diskExclusionProperties() {
+        return this.diskExclusionProperties == null ? Codegen.empty() : this.diskExclusionProperties;
     }
 
     public ExtendedPropertiesArgs(@Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties) {
@@ -34,7 +35,7 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ExtendedPropertiesArgs() {
-        this.diskExclusionProperties = Output.empty();
+        this.diskExclusionProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesArgs diskExclusionProperties) {
-            this.diskExclusionProperties = Output.ofNullable(diskExclusionProperties);
+            this.diskExclusionProperties = Codegen.ofNullable(diskExclusionProperties);
             return this;
         }        public ExtendedPropertiesArgs build() {
             return new ExtendedPropertiesArgs(diskExclusionProperties);

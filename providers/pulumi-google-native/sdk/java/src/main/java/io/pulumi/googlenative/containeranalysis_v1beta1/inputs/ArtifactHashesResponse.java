@@ -19,7 +19,7 @@ public final class ArtifactHashesResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sha256", required=true)
       private final String sha256;
 
-    public String getSha256() {
+    public String sha256() {
         return this.sha256;
     }
 

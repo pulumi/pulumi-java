@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.IPAMScopeTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,13 +34,13 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IPAM scope.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -53,7 +54,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
      * 
      */
-    public Output<String> getIpamArn() {
+    public Output<String> ipamArn() {
         return this.ipamArn;
     }
     /**
@@ -67,7 +68,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return The Id of the IPAM this scope is a part of.
      * 
      */
-    public Output<String> getIpamId() {
+    public Output<String> ipamId() {
         return this.ipamId;
     }
     /**
@@ -81,7 +82,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return Id of the IPAM scope.
      * 
      */
-    public Output<String> getIpamScopeId() {
+    public Output<String> ipamScopeId() {
         return this.ipamScopeId;
     }
     /**
@@ -95,7 +96,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return Determines whether this scope contains publicly routable space or space for a private network
      * 
      */
-    public Output<IPAMScopeIpamScopeType> getIpamScopeType() {
+    public Output<IPAMScopeIpamScopeType> ipamScopeType() {
         return this.ipamScopeType;
     }
     /**
@@ -109,7 +110,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return Is this one of the default scopes created with the IPAM.
      * 
      */
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
     /**
@@ -123,7 +124,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return The number of pools that currently exist in this scope.
      * 
      */
-    public Output<Integer> getPoolCount() {
+    public Output<Integer> poolCount() {
         return this.poolCount;
     }
     /**
@@ -137,7 +138,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<IPAMScopeTag>> getTags() {
+    public Output</* @Nullable */ List<IPAMScopeTag>> tags() {
         return this.tags;
     }
 
@@ -163,7 +164,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IPAMScope(String name, IPAMScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:IPAMScope", name, args == null ? IPAMScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:IPAMScope", name, args == null ? IPAMScopeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IPAMScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

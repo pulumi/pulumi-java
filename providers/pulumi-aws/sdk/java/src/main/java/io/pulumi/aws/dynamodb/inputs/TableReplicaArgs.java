@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class TableReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class TableReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
-    public Output<String> getRegionName() {
+    public Output<String> regionName() {
         return this.regionName;
     }
 
@@ -45,8 +46,8 @@ public final class TableReplicaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableReplicaArgs() {
-        this.kmsKeyArn = Output.empty();
-        this.regionName = Output.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.regionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TableReplicaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder regionName(Output<String> regionName) {

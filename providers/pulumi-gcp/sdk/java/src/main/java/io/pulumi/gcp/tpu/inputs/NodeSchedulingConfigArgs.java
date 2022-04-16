@@ -5,6 +5,7 @@ package io.pulumi.gcp.tpu.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class NodeSchedulingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="preemptible", required=true)
       private final Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible;
     }
 
@@ -29,7 +30,7 @@ public final class NodeSchedulingConfigArgs extends io.pulumi.resources.Resource
     }
 
     private NodeSchedulingConfigArgs() {
-        this.preemptible = Output.empty();
+        this.preemptible = Codegen.empty();
     }
 
     public static Builder builder() {

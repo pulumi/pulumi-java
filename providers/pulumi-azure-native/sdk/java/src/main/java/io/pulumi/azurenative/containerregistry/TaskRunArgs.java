@@ -10,6 +10,7 @@ import io.pulumi.azurenative.containerregistry.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TaskRunRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
+    public Output<String> forceUpdateTag() {
+        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityPropertiesArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -71,7 +72,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,8 +83,8 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runRequest")
       private final @Nullable Output<Object> runRequest;
 
-    public Output<Object> getRunRequest() {
-        return this.runRequest == null ? Output.empty() : this.runRequest;
+    public Output<Object> runRequest() {
+        return this.runRequest == null ? Codegen.empty() : this.runRequest;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskRunName")
       private final @Nullable Output<String> taskRunName;
 
-    public Output<String> getTaskRunName() {
-        return this.taskRunName == null ? Output.empty() : this.taskRunName;
+    public Output<String> taskRunName() {
+        return this.taskRunName == null ? Codegen.empty() : this.taskRunName;
     }
 
     public TaskRunArgs(
@@ -115,13 +116,13 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskRunArgs() {
-        this.forceUpdateTag = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.registryName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.runRequest = Output.empty();
-        this.taskRunName = Output.empty();
+        this.forceUpdateTag = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.runRequest = Codegen.empty();
+        this.taskRunName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
@@ -169,7 +170,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -177,7 +178,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder registryName(Output<String> registryName) {
@@ -201,7 +202,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runRequest(@Nullable Object runRequest) {
-            this.runRequest = Output.ofNullable(runRequest);
+            this.runRequest = Codegen.ofNullable(runRequest);
             return this;
         }
         public Builder taskRunName(@Nullable Output<String> taskRunName) {
@@ -209,7 +210,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskRunName(@Nullable String taskRunName) {
-            this.taskRunName = Output.ofNullable(taskRunName);
+            this.taskRunName = Codegen.ofNullable(taskRunName);
             return this;
         }        public TaskRunArgs build() {
             return new TaskRunArgs(forceUpdateTag, identity, location, registryName, resourceGroupName, runRequest, taskRunName);

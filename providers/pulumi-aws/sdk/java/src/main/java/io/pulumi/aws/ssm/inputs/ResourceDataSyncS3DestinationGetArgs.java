@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -32,8 +33,8 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -65,8 +66,8 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
     @Import(name="syncFormat")
       private final @Nullable Output<String> syncFormat;
 
-    public Output<String> getSyncFormat() {
-        return this.syncFormat == null ? Output.empty() : this.syncFormat;
+    public Output<String> syncFormat() {
+        return this.syncFormat == null ? Codegen.empty() : this.syncFormat;
     }
 
     public ResourceDataSyncS3DestinationGetArgs(
@@ -83,11 +84,11 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
     }
 
     private ResourceDataSyncS3DestinationGetArgs() {
-        this.bucketName = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.prefix = Output.empty();
-        this.region = Output.empty();
-        this.syncFormat = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.region = Codegen.empty();
+        this.syncFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -139,7 +140,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -155,7 +156,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder syncFormat(@Nullable String syncFormat) {
-            this.syncFormat = Output.ofNullable(syncFormat);
+            this.syncFormat = Codegen.ofNullable(syncFormat);
             return this;
         }        public ResourceDataSyncS3DestinationGetArgs build() {
             return new ResourceDataSyncS3DestinationGetArgs(bucketName, kmsKeyArn, prefix, region, syncFormat);

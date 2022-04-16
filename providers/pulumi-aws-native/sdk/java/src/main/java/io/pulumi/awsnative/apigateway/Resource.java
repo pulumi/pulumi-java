@@ -8,6 +8,7 @@ import io.pulumi.awsnative.apigateway.ResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The parent resource's identifier.
      * 
      */
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
     /**
@@ -42,7 +43,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The last path segment for this resource.
      * 
      */
-    public Output<String> getPathPart() {
+    public Output<String> pathPart() {
         return this.pathPart;
     }
     /**
@@ -56,7 +57,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return A unique primary identifier for a Resource
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -70,7 +71,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The ID of the RestApi resource in which you want to create this resource..
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -96,7 +97,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.PcProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="localIPAddress")
       private final @Nullable Output<String> localIPAddress;
 
-    public Output<String> getLocalIPAddress() {
-        return this.localIPAddress == null ? Output.empty() : this.localIPAddress;
+    public Output<String> localIPAddress() {
+        return this.localIPAddress == null ? Codegen.empty() : this.localIPAddress;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="localPort")
       private final @Nullable Output<String> localPort;
 
-    public Output<String> getLocalPort() {
-        return this.localPort == null ? Output.empty() : this.localPort;
+    public Output<String> localPort() {
+        return this.localPort == null ? Codegen.empty() : this.localPort;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="protocol")
       private final @Nullable Output<Either<String,PcProtocol>> protocol;
 
-    public Output<Either<String,PcProtocol>> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<Either<String,PcProtocol>> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="remoteIPAddress")
       private final @Nullable Output<String> remoteIPAddress;
 
-    public Output<String> getRemoteIPAddress() {
-        return this.remoteIPAddress == null ? Output.empty() : this.remoteIPAddress;
+    public Output<String> remoteIPAddress() {
+        return this.remoteIPAddress == null ? Codegen.empty() : this.remoteIPAddress;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="remotePort")
       private final @Nullable Output<String> remotePort;
 
-    public Output<String> getRemotePort() {
-        return this.remotePort == null ? Output.empty() : this.remotePort;
+    public Output<String> remotePort() {
+        return this.remotePort == null ? Codegen.empty() : this.remotePort;
     }
 
     public PacketCaptureFilterArgs(
@@ -89,11 +90,11 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     }
 
     private PacketCaptureFilterArgs() {
-        this.localIPAddress = Output.empty();
-        this.localPort = Output.empty();
-        this.protocol = Output.empty();
-        this.remoteIPAddress = Output.empty();
-        this.remotePort = Output.empty();
+        this.localIPAddress = Codegen.empty();
+        this.localPort = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.remoteIPAddress = Codegen.empty();
+        this.remotePort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder localIPAddress(@Nullable String localIPAddress) {
-            this.localIPAddress = Output.ofNullable(localIPAddress);
+            this.localIPAddress = Codegen.ofNullable(localIPAddress);
             return this;
         }
         public Builder localPort(@Nullable Output<String> localPort) {
@@ -137,7 +138,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder localPort(@Nullable String localPort) {
-            this.localPort = Output.ofNullable(localPort);
+            this.localPort = Codegen.ofNullable(localPort);
             return this;
         }
         public Builder protocol(@Nullable Output<Either<String,PcProtocol>> protocol) {
@@ -145,7 +146,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder protocol(@Nullable Either<String,PcProtocol> protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder remoteIPAddress(@Nullable Output<String> remoteIPAddress) {
@@ -153,7 +154,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder remoteIPAddress(@Nullable String remoteIPAddress) {
-            this.remoteIPAddress = Output.ofNullable(remoteIPAddress);
+            this.remoteIPAddress = Codegen.ofNullable(remoteIPAddress);
             return this;
         }
         public Builder remotePort(@Nullable Output<String> remotePort) {
@@ -161,7 +162,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder remotePort(@Nullable String remotePort) {
-            this.remotePort = Output.ofNullable(remotePort);
+            this.remotePort = Codegen.ofNullable(remotePort);
             return this;
         }        public PacketCaptureFilterArgs build() {
             return new PacketCaptureFilterArgs(localIPAddress, localPort, protocol, remoteIPAddress, remotePort);

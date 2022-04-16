@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="condition")
       private final @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
 
-    public Output<TunnelInstanceIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<TunnelInstanceIAMBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -54,8 +55,8 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -67,15 +68,15 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public TunnelInstanceIAMBindingArgs(
@@ -94,12 +95,12 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     }
 
     private TunnelInstanceIAMBindingArgs() {
-        this.condition = Output.empty();
-        this.instance = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.zone = Output.empty();
+        this.condition = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder condition(@Nullable TunnelInstanceIAMBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder instance(Output<String> instance) {
@@ -164,7 +165,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {
@@ -180,7 +181,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public TunnelInstanceIAMBindingArgs build() {
             return new TunnelInstanceIAMBindingArgs(condition, instance, members, project, role, zone);

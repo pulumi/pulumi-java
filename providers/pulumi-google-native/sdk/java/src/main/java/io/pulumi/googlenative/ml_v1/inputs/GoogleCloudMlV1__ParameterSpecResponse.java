@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
     @Import(name="categoricalValues", required=true)
       private final List<String> categoricalValues;
 
-    public List<String> getCategoricalValues() {
+    public List<String> categoricalValues() {
         return this.categoricalValues;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
     @Import(name="discreteValues", required=true)
       private final List<Double> discreteValues;
 
-    public List<Double> getDiscreteValues() {
+    public List<Double> discreteValues() {
         return this.discreteValues;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
     @Import(name="maxValue", required=true)
       private final Double maxValue;
 
-    public Double getMaxValue() {
+    public Double maxValue() {
         return this.maxValue;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
     @Import(name="minValue", required=true)
       private final Double minValue;
 
-    public Double getMinValue() {
+    public Double minValue() {
         return this.minValue;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
     @Import(name="parameterName", required=true)
       private final String parameterName;
 
-    public String getParameterName() {
+    public String parameterName() {
         return this.parameterName;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
     @Import(name="scaleType", required=true)
       private final String scaleType;
 
-    public String getScaleType() {
+    public String scaleType() {
         return this.scaleType;
     }
 
@@ -91,7 +91,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

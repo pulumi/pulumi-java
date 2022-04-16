@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.EngineSplitTrafficSplitArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
     @Import(name="migrateTraffic")
       private final @Nullable Output<Boolean> migrateTraffic;
 
-    public Output<Boolean> getMigrateTraffic() {
-        return this.migrateTraffic == null ? Output.empty() : this.migrateTraffic;
+    public Output<Boolean> migrateTraffic() {
+        return this.migrateTraffic == null ? Codegen.empty() : this.migrateTraffic;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -58,7 +59,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
     @Import(name="split", required=true)
       private final Output<EngineSplitTrafficSplitArgs> split;
 
-    public Output<EngineSplitTrafficSplitArgs> getSplit() {
+    public Output<EngineSplitTrafficSplitArgs> split() {
         return this.split;
     }
 
@@ -74,10 +75,10 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EngineSplitTrafficArgs() {
-        this.migrateTraffic = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
-        this.split = Output.empty();
+        this.migrateTraffic = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
+        this.split = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder migrateTraffic(@Nullable Boolean migrateTraffic) {
-            this.migrateTraffic = Output.ofNullable(migrateTraffic);
+            this.migrateTraffic = Codegen.ofNullable(migrateTraffic);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -119,7 +120,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(Output<String> service) {

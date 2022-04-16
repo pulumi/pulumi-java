@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -36,8 +37,8 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootPath")
       private final @Nullable Output<String> rootPath;
 
-    public Output<String> getRootPath() {
-        return this.rootPath == null ? Output.empty() : this.rootPath;
+    public Output<String> rootPath() {
+        return this.rootPath == null ? Codegen.empty() : this.rootPath;
     }
 
     public GcsProfileArgs(
@@ -48,8 +49,8 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GcsProfileArgs() {
-        this.bucketName = Output.empty();
-        this.rootPath = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.rootPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootPath(@Nullable String rootPath) {
-            this.rootPath = Output.ofNullable(rootPath);
+            this.rootPath = Codegen.ofNullable(rootPath);
             return this;
         }        public GcsProfileArgs build() {
             return new GcsProfileArgs(bucketName, rootPath);

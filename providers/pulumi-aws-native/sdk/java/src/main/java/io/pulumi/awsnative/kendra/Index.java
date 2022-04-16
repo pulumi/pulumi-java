@@ -15,6 +15,7 @@ import io.pulumi.awsnative.kendra.outputs.IndexUserTokenConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public class Index extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -42,7 +43,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return Capacity units
      * 
      */
-    public Output</* @Nullable */ IndexCapacityUnitsConfiguration> getCapacityUnits() {
+    public Output</* @Nullable */ IndexCapacityUnitsConfiguration> capacityUnits() {
         return this.capacityUnits;
     }
     /**
@@ -56,7 +57,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return A description for the index
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,25 +71,25 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return Document metadata configurations
      * 
      */
-    public Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> getDocumentMetadataConfigurations() {
+    public Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> documentMetadataConfigurations() {
         return this.documentMetadataConfigurations;
     }
     @Export(name="edition", type=IndexEdition.class, parameters={})
     private Output<IndexEdition> edition;
 
-    public Output<IndexEdition> getEdition() {
+    public Output<IndexEdition> edition() {
         return this.edition;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -102,7 +103,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return Server side encryption configuration
      * 
      */
-    public Output</* @Nullable */ IndexServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
+    public Output</* @Nullable */ IndexServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
     /**
@@ -116,19 +117,19 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return Tags for labeling the index
      * 
      */
-    public Output</* @Nullable */ List<IndexTag>> getTags() {
+    public Output</* @Nullable */ List<IndexTag>> tags() {
         return this.tags;
     }
     @Export(name="userContextPolicy", type=IndexUserContextPolicy.class, parameters={})
     private Output</* @Nullable */ IndexUserContextPolicy> userContextPolicy;
 
-    public Output</* @Nullable */ IndexUserContextPolicy> getUserContextPolicy() {
+    public Output</* @Nullable */ IndexUserContextPolicy> userContextPolicy() {
         return this.userContextPolicy;
     }
     @Export(name="userTokenConfigurations", type=List.class, parameters={IndexUserTokenConfiguration.class})
     private Output</* @Nullable */ List<IndexUserTokenConfiguration>> userTokenConfigurations;
 
-    public Output</* @Nullable */ List<IndexUserTokenConfiguration>> getUserTokenConfigurations() {
+    public Output</* @Nullable */ List<IndexUserTokenConfiguration>> userTokenConfigurations() {
         return this.userTokenConfigurations;
     }
 
@@ -154,7 +155,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Index(String name, IndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:kendra:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:kendra:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Index(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

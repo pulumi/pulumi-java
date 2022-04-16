@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.LoadBalancerBackendAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="loadBalancerBackendAddresses")
       private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
-    public Output<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
-        return this.loadBalancerBackendAddresses == null ? Output.empty() : this.loadBalancerBackendAddresses;
+    public Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses() {
+        return this.loadBalancerBackendAddresses == null ? Codegen.empty() : this.loadBalancerBackendAddresses;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public BackendAddressPoolArgs(
@@ -76,10 +77,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BackendAddressPoolArgs() {
-        this.id = Output.empty();
-        this.loadBalancerBackendAddresses = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
+        this.id = Codegen.empty();
+        this.loadBalancerBackendAddresses = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder loadBalancerBackendAddresses(@Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
@@ -121,7 +122,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressArgs> loadBalancerBackendAddresses) {
-            this.loadBalancerBackendAddresses = Output.ofNullable(loadBalancerBackendAddresses);
+            this.loadBalancerBackendAddresses = Codegen.ofNullable(loadBalancerBackendAddresses);
             return this;
         }
         public Builder loadBalancerBackendAddresses(LoadBalancerBackendAddressArgs... loadBalancerBackendAddresses) {
@@ -132,7 +133,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public BackendAddressPoolArgs build() {
             return new BackendAddressPoolArgs(id, loadBalancerBackendAddresses, location, name);

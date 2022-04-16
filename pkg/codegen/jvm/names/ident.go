@@ -33,15 +33,28 @@ func isReservedWord(s string) bool {
 	}
 }
 
-// isReservedResourceMethod checks if a method is valid is valid when inherited from a resource.
-func isReservedResourceMethod(s string) bool {
+// isReservedResourceMethod checks if a method is valid when inherited from Object.
+func isReservedMethod(s string) bool {
 	switch s {
-	// These names conflicts with methods on Resource.
-	// TODO: add other methods that can conflict.
-	case "getResourceType", "getResourceName":
+	// These names conflict with methods on Object.
+	case "notify", "notifyAll", "toString", "clone", "equals", "hashCode", "getClass", "wait", "finalize":
 		return true
 	default:
 		return isReservedWord(s)
+	}
+}
+
+// isReservedResourceMethod checks if a method is valid when inherited from Resource.
+func isReservedResourceMethod(s string) bool {
+	switch s {
+	// These names conflict with methods on Resource.
+	case "getResourceType", "getResourceName", "getChildResources", "getUrn":
+		return true
+	// These names conflict with methods on our builders.
+	case "builder":
+		return true
+	default:
+		return isReservedMethod(s)
 	}
 }
 
@@ -83,7 +96,7 @@ func MakeSafeEnumName(name, typeName string) (string, error) {
 	return safeName, nil
 }
 
-// A valid Java identifier
+// Ident is a valid Java identifier
 type Ident string
 
 func (id Ident) String() string {
@@ -91,7 +104,7 @@ func (id Ident) String() string {
 }
 
 // makeValidIdentifier replaces characters that are not allowed in Java identifiers with underscores.
-// A reserved word is prefixed with _. No attempt is made to ensure that the result is unique.
+// A reserved word is suffixed with _. No attempt is made to ensure that the result is unique.
 func (id Ident) makeValid() string {
 	name := string(id)
 	var builder strings.Builder
@@ -122,29 +135,32 @@ func (id Ident) FQN() FQN {
 	return FQN{[]Ident{}, id}
 }
 
+// Property is a valid Java identifier for a property
 type Property Ident
 
 func (id Ident) AsProperty() Property {
 	return Property(id)
 }
 
-func (id Property) safePrefix(prefix string) string {
-	s := prefix + Title(Ident(id).String())
-	if !isReservedResourceMethod(s) {
-		return s
-	}
-	return prefix + "Prop" + Title(Ident(id).String())
+// Field returns a name of a valid Java field for this property.
+func (id Property) Field() string {
+	return Ident(id).String()
 }
 
-// The name of a getter for this property.
+// Getter returns a name of a Java getter for this property.
 func (id Property) Getter() string {
-	return id.safePrefix("get")
+	if isReservedResourceMethod(id.Field()) {
+		return id.Field() + "_"
+	}
+	return id.Field()
 }
 
-// The name of a setter for this property.
+// Setter returns a name of a Java setter for this property.
 func (id Property) Setter() string {
-	setter := id.safePrefix("")
-	return strings.ToLower(setter[0:1]) + setter[1:]
+	if isReservedResourceMethod(id.Field()) {
+		return id.Field() + "_"
+	}
+	return id.Field()
 }
 
 // MakeValidIdentifier replaces characters that are not allowed in Java identifiers with underscores. A reserved word is
@@ -183,25 +199,12 @@ func Title(s string) string {
 	return string(append([]rune{unicode.ToUpper(runes[0])}, runes[1:]...))
 }
 
-// Camel converts s to camel case.
-//
-// Examples:
-// "helloWorld"    => "helloWorld"
-// "HelloWorld"    => "helloWorld"
-// "JSONObject"    => "jsonobject"
-// "My-FRIEND.Bob" => "my-FRIEND.Bob"
-func Camel(s string) string {
+// LowerCamelCase sets the first character to lowercase
+// LowerCamelCase("LowerCamelCase") -> "lowerCamelCase"
+func LowerCamelCase(s string) string {
 	if s == "" {
 		return ""
 	}
 	runes := []rune(s)
-	res := make([]rune, 0, len(runes))
-	for i, r := range runes {
-		if unicode.IsLower(r) {
-			res = append(res, runes[i:]...)
-			break
-		}
-		res = append(res, unicode.ToLower(r))
-	}
-	return string(res)
+	return string(append([]rune{unicode.ToLower(runes[0])}, runes[1:]...))
 }

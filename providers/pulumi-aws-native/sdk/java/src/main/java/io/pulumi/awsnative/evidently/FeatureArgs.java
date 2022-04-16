@@ -9,6 +9,7 @@ import io.pulumi.awsnative.evidently.inputs.FeatureTagArgs;
 import io.pulumi.awsnative.evidently.inputs.FeatureVariationObjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,42 +23,42 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultVariation")
       private final @Nullable Output<String> defaultVariation;
 
-    public Output<String> getDefaultVariation() {
-        return this.defaultVariation == null ? Output.empty() : this.defaultVariation;
+    public Output<String> defaultVariation() {
+        return this.defaultVariation == null ? Codegen.empty() : this.defaultVariation;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="entityOverrides")
       private final @Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides;
 
-    public Output<List<FeatureEntityOverrideArgs>> getEntityOverrides() {
-        return this.entityOverrides == null ? Output.empty() : this.entityOverrides;
+    public Output<List<FeatureEntityOverrideArgs>> entityOverrides() {
+        return this.entityOverrides == null ? Codegen.empty() : this.entityOverrides;
     }
 
     @Import(name="evaluationStrategy")
       private final @Nullable Output<FeatureEvaluationStrategy> evaluationStrategy;
 
-    public Output<FeatureEvaluationStrategy> getEvaluationStrategy() {
-        return this.evaluationStrategy == null ? Output.empty() : this.evaluationStrategy;
+    public Output<FeatureEvaluationStrategy> evaluationStrategy() {
+        return this.evaluationStrategy == null ? Codegen.empty() : this.evaluationStrategy;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -68,14 +69,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FeatureTagArgs>> tags;
 
-    public Output<List<FeatureTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<FeatureTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="variations", required=true)
       private final Output<List<FeatureVariationObjectArgs>> variations;
 
-    public Output<List<FeatureVariationObjectArgs>> getVariations() {
+    public Output<List<FeatureVariationObjectArgs>> variations() {
         return this.variations;
     }
 
@@ -99,14 +100,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureArgs() {
-        this.defaultVariation = Output.empty();
-        this.description = Output.empty();
-        this.entityOverrides = Output.empty();
-        this.evaluationStrategy = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.tags = Output.empty();
-        this.variations = Output.empty();
+        this.defaultVariation = Codegen.empty();
+        this.description = Codegen.empty();
+        this.entityOverrides = Codegen.empty();
+        this.evaluationStrategy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.variations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultVariation(@Nullable String defaultVariation) {
-            this.defaultVariation = Output.ofNullable(defaultVariation);
+            this.defaultVariation = Codegen.ofNullable(defaultVariation);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -156,7 +157,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder entityOverrides(@Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides) {
@@ -164,7 +165,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entityOverrides(@Nullable List<FeatureEntityOverrideArgs> entityOverrides) {
-            this.entityOverrides = Output.ofNullable(entityOverrides);
+            this.entityOverrides = Codegen.ofNullable(entityOverrides);
             return this;
         }
         public Builder entityOverrides(FeatureEntityOverrideArgs... entityOverrides) {
@@ -175,7 +176,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder evaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
-            this.evaluationStrategy = Output.ofNullable(evaluationStrategy);
+            this.evaluationStrategy = Codegen.ofNullable(evaluationStrategy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -183,7 +184,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(Output<String> project) {
@@ -199,7 +200,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<FeatureTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FeatureTagArgs... tags) {

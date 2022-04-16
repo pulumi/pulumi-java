@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeUpdateStepArgs;
@@ -26,8 +27,8 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="artifacts")
       private final @Nullable Output<List<GuestPoliciesRecipeArtifactArgs>> artifacts;
 
-    public Output<List<GuestPoliciesRecipeArtifactArgs>> getArtifacts() {
-        return this.artifacts == null ? Output.empty() : this.artifacts;
+    public Output<List<GuestPoliciesRecipeArtifactArgs>> artifacts() {
+        return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="desiredState")
       private final @Nullable Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
-        return this.desiredState == null ? Output.empty() : this.desiredState;
+    public Output<String> desiredState() {
+        return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="installSteps")
       private final @Nullable Output<List<GuestPoliciesRecipeInstallStepArgs>> installSteps;
 
-    public Output<List<GuestPoliciesRecipeInstallStepArgs>> getInstallSteps() {
-        return this.installSteps == null ? Output.empty() : this.installSteps;
+    public Output<List<GuestPoliciesRecipeInstallStepArgs>> installSteps() {
+        return this.installSteps == null ? Codegen.empty() : this.installSteps;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -83,8 +84,8 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="updateSteps")
       private final @Nullable Output<List<GuestPoliciesRecipeUpdateStepArgs>> updateSteps;
 
-    public Output<List<GuestPoliciesRecipeUpdateStepArgs>> getUpdateSteps() {
-        return this.updateSteps == null ? Output.empty() : this.updateSteps;
+    public Output<List<GuestPoliciesRecipeUpdateStepArgs>> updateSteps() {
+        return this.updateSteps == null ? Codegen.empty() : this.updateSteps;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GuestPoliciesRecipeArgs(
@@ -114,12 +115,12 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     }
 
     private GuestPoliciesRecipeArgs() {
-        this.artifacts = Output.empty();
-        this.desiredState = Output.empty();
-        this.installSteps = Output.empty();
-        this.name = Output.empty();
-        this.updateSteps = Output.empty();
-        this.version = Output.empty();
+        this.artifacts = Codegen.empty();
+        this.desiredState = Codegen.empty();
+        this.installSteps = Codegen.empty();
+        this.name = Codegen.empty();
+        this.updateSteps = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder artifacts(@Nullable List<GuestPoliciesRecipeArtifactArgs> artifacts) {
-            this.artifacts = Output.ofNullable(artifacts);
+            this.artifacts = Codegen.ofNullable(artifacts);
             return this;
         }
         public Builder artifacts(GuestPoliciesRecipeArtifactArgs... artifacts) {
@@ -168,7 +169,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Output.ofNullable(desiredState);
+            this.desiredState = Codegen.ofNullable(desiredState);
             return this;
         }
         public Builder installSteps(@Nullable Output<List<GuestPoliciesRecipeInstallStepArgs>> installSteps) {
@@ -176,7 +177,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder installSteps(@Nullable List<GuestPoliciesRecipeInstallStepArgs> installSteps) {
-            this.installSteps = Output.ofNullable(installSteps);
+            this.installSteps = Codegen.ofNullable(installSteps);
             return this;
         }
         public Builder installSteps(GuestPoliciesRecipeInstallStepArgs... installSteps) {
@@ -195,7 +196,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder updateSteps(@Nullable List<GuestPoliciesRecipeUpdateStepArgs> updateSteps) {
-            this.updateSteps = Output.ofNullable(updateSteps);
+            this.updateSteps = Codegen.ofNullable(updateSteps);
             return this;
         }
         public Builder updateSteps(GuestPoliciesRecipeUpdateStepArgs... updateSteps) {
@@ -206,7 +207,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GuestPoliciesRecipeArgs build() {
             return new GuestPoliciesRecipeArgs(artifacts, desiredState, installSteps, name, updateSteps, version);

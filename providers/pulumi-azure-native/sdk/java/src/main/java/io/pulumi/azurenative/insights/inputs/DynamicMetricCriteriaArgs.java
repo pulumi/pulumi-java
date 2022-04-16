@@ -11,6 +11,7 @@ import io.pulumi.azurenative.insights.inputs.MetricDimensionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="alertSensitivity", required=true)
       private final Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
 
-    public Output<Either<String,DynamicThresholdSensitivity>> getAlertSensitivity() {
+    public Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity() {
         return this.alertSensitivity;
     }
 
@@ -45,7 +46,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="criterionType", required=true)
       private final Output<String> criterionType;
 
-    public Output<String> getCriterionType() {
+    public Output<String> criterionType() {
         return this.criterionType;
     }
 
@@ -56,8 +57,8 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="dimensions")
       private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
-    public Output<List<MetricDimensionArgs>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<List<MetricDimensionArgs>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="failingPeriods", required=true)
       private final Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
 
-    public Output<DynamicThresholdFailingPeriodsArgs> getFailingPeriods() {
+    public Output<DynamicThresholdFailingPeriodsArgs> failingPeriods() {
         return this.failingPeriods;
     }
 
@@ -78,8 +79,8 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="ignoreDataBefore")
       private final @Nullable Output<String> ignoreDataBefore;
 
-    public Output<String> getIgnoreDataBefore() {
-        return this.ignoreDataBefore == null ? Output.empty() : this.ignoreDataBefore;
+    public Output<String> ignoreDataBefore() {
+        return this.ignoreDataBefore == null ? Codegen.empty() : this.ignoreDataBefore;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -100,8 +101,8 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
-        return this.metricNamespace == null ? Output.empty() : this.metricNamespace;
+    public Output<String> metricNamespace() {
+        return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -122,7 +123,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="operator", required=true)
       private final Output<Either<String,DynamicThresholdOperator>> operator;
 
-    public Output<Either<String,DynamicThresholdOperator>> getOperator() {
+    public Output<Either<String,DynamicThresholdOperator>> operator() {
         return this.operator;
     }
 
@@ -133,8 +134,8 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="skipMetricValidation")
       private final @Nullable Output<Boolean> skipMetricValidation;
 
-    public Output<Boolean> getSkipMetricValidation() {
-        return this.skipMetricValidation == null ? Output.empty() : this.skipMetricValidation;
+    public Output<Boolean> skipMetricValidation() {
+        return this.skipMetricValidation == null ? Codegen.empty() : this.skipMetricValidation;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="timeAggregation", required=true)
       private final Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
-    public Output<Either<String,AggregationTypeEnum>> getTimeAggregation() {
+    public Output<Either<String,AggregationTypeEnum>> timeAggregation() {
         return this.timeAggregation;
     }
 
@@ -174,17 +175,17 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     }
 
     private DynamicMetricCriteriaArgs() {
-        this.alertSensitivity = Output.empty();
-        this.criterionType = Output.empty();
-        this.dimensions = Output.empty();
-        this.failingPeriods = Output.empty();
-        this.ignoreDataBefore = Output.empty();
-        this.metricName = Output.empty();
-        this.metricNamespace = Output.empty();
-        this.name = Output.empty();
-        this.operator = Output.empty();
-        this.skipMetricValidation = Output.empty();
-        this.timeAggregation = Output.empty();
+        this.alertSensitivity = Codegen.empty();
+        this.criterionType = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.failingPeriods = Codegen.empty();
+        this.ignoreDataBefore = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.metricNamespace = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.skipMetricValidation = Codegen.empty();
+        this.timeAggregation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder dimensions(MetricDimensionArgs... dimensions) {
@@ -267,7 +268,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ignoreDataBefore(@Nullable String ignoreDataBefore) {
-            this.ignoreDataBefore = Output.ofNullable(ignoreDataBefore);
+            this.ignoreDataBefore = Codegen.ofNullable(ignoreDataBefore);
             return this;
         }
         public Builder metricName(Output<String> metricName) {
@@ -283,7 +284,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Output.ofNullable(metricNamespace);
+            this.metricNamespace = Codegen.ofNullable(metricNamespace);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -307,7 +308,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
-            this.skipMetricValidation = Output.ofNullable(skipMetricValidation);
+            this.skipMetricValidation = Codegen.ofNullable(skipMetricValidation);
             return this;
         }
         public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {

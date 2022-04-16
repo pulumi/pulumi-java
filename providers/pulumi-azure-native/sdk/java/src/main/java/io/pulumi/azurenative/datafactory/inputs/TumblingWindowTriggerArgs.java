@@ -12,6 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.TumblingWindowTriggerDependencyR
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -35,8 +36,8 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="delay")
       private final @Nullable Output<Object> delay;
 
-    public Output<Object> getDelay() {
-        return this.delay == null ? Output.empty() : this.delay;
+    public Output<Object> delay() {
+        return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="dependsOn")
       private final @Nullable Output<List<Object>> dependsOn;
 
-    public Output<List<Object>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+    public Output<List<Object>> dependsOn() {
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="frequency", required=true)
       private final Output<Either<String,TumblingWindowFrequency>> frequency;
 
-    public Output<Either<String,TumblingWindowFrequency>> getFrequency() {
+    public Output<Either<String,TumblingWindowFrequency>> frequency() {
         return this.frequency;
     }
 
@@ -101,7 +102,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -112,7 +113,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="maxConcurrency", required=true)
       private final Output<Integer> maxConcurrency;
 
-    public Output<Integer> getMaxConcurrency() {
+    public Output<Integer> maxConcurrency() {
         return this.maxConcurrency;
     }
 
@@ -123,7 +124,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="pipeline", required=true)
       private final Output<TriggerPipelineReferenceArgs> pipeline;
 
-    public Output<TriggerPipelineReferenceArgs> getPipeline() {
+    public Output<TriggerPipelineReferenceArgs> pipeline() {
         return this.pipeline;
     }
 
@@ -134,8 +135,8 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
+    public Output<RetryPolicyArgs> retryPolicy() {
+        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -157,7 +158,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -189,18 +190,18 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     }
 
     private TumblingWindowTriggerArgs() {
-        this.annotations = Output.empty();
-        this.delay = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.endTime = Output.empty();
-        this.frequency = Output.empty();
-        this.interval = Output.empty();
-        this.maxConcurrency = Output.empty();
-        this.pipeline = Output.empty();
-        this.retryPolicy = Output.empty();
-        this.startTime = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.delay = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.maxConcurrency = Codegen.empty();
+        this.pipeline = Codegen.empty();
+        this.retryPolicy = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -261,7 +262,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder delay(@Nullable Object delay) {
-            this.delay = Output.ofNullable(delay);
+            this.delay = Codegen.ofNullable(delay);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<Object>> dependsOn) {
@@ -269,7 +270,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dependsOn(@Nullable List<Object> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(Object... dependsOn) {
@@ -280,7 +281,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -288,7 +289,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder frequency(Output<Either<String,TumblingWindowFrequency>> frequency) {
@@ -328,7 +329,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Output.ofNullable(retryPolicy);
+            this.retryPolicy = Codegen.ofNullable(retryPolicy);
             return this;
         }
         public Builder startTime(Output<String> startTime) {

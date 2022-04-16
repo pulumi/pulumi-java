@@ -9,6 +9,7 @@ import io.pulumi.awsnative.lightsail.outputs.CertificateTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
     @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -36,7 +37,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The name for the certificate.
      * 
      */
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
     /**
@@ -50,7 +51,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The domain name (e.g., example.com ) for the certificate.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -64,7 +65,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The validation status of the certificate.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -78,7 +79,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSubjectAlternativeNames() {
+    public Output</* @Nullable */ List<String>> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
@@ -92,7 +93,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<CertificateTag>> getTags() {
+    public Output</* @Nullable */ List<CertificateTag>> tags() {
         return this.tags;
     }
 
@@ -118,7 +119,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lightsail:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:lightsail:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Certificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

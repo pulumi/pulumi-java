@@ -8,6 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
@@ -35,15 +36,15 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseThemeId")
       private final @Nullable Output<String> baseThemeId;
 
-    public Output<String> getBaseThemeId() {
-        return this.baseThemeId == null ? Output.empty() : this.baseThemeId;
+    public Output<String> baseThemeId() {
+        return this.baseThemeId == null ? Codegen.empty() : this.baseThemeId;
     }
 
     @Import(name="configuration")
       private final @Nullable Output<ThemeConfigurationArgs> configuration;
 
-    public Output<ThemeConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+    public Output<ThemeConfigurationArgs> configuration() {
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
 
-    public Output<List<ThemeResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<List<ThemeResourcePermissionArgs>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -77,14 +78,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ThemeTagArgs>> tags;
 
-    public Output<List<ThemeTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ThemeTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="themeId", required=true)
       private final Output<String> themeId;
 
-    public Output<String> getThemeId() {
+    public Output<String> themeId() {
         return this.themeId;
     }
 
@@ -98,8 +99,8 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
-    public Output<String> getVersionDescription() {
-        return this.versionDescription == null ? Output.empty() : this.versionDescription;
+    public Output<String> versionDescription() {
+        return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
     }
 
     public ThemeArgs(
@@ -122,14 +123,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeArgs() {
-        this.awsAccountId = Output.empty();
-        this.baseThemeId = Output.empty();
-        this.configuration = Output.empty();
-        this.name = Output.empty();
-        this.permissions = Output.empty();
-        this.tags = Output.empty();
-        this.themeId = Output.empty();
-        this.versionDescription = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.baseThemeId = Codegen.empty();
+        this.configuration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.themeId = Codegen.empty();
+        this.versionDescription = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseThemeId(@Nullable String baseThemeId) {
-            this.baseThemeId = Output.ofNullable(baseThemeId);
+            this.baseThemeId = Codegen.ofNullable(baseThemeId);
             return this;
         }
         public Builder configuration(@Nullable Output<ThemeConfigurationArgs> configuration) {
@@ -187,7 +188,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable ThemeConfigurationArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -195,7 +196,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder permissions(@Nullable Output<List<ThemeResourcePermissionArgs>> permissions) {
@@ -203,7 +204,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable List<ThemeResourcePermissionArgs> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(ThemeResourcePermissionArgs... permissions) {
@@ -214,7 +215,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ThemeTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ThemeTagArgs... tags) {
@@ -233,7 +234,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Output.ofNullable(versionDescription);
+            this.versionDescription = Codegen.ofNullable(versionDescription);
             return this;
         }        public ThemeArgs build() {
             return new ThemeArgs(awsAccountId, baseThemeId, configuration, name, permissions, tags, themeId, versionDescription);

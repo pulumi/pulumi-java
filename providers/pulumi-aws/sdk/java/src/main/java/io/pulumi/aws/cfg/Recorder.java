@@ -10,6 +10,7 @@ import io.pulumi.aws.cfg.outputs.RecorderRecordingGroup;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -42,7 +43,7 @@ public class Recorder extends io.pulumi.resources.CustomResource {
      * @return The name of the recorder. Defaults to `default`. Changing it recreates the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class Recorder extends io.pulumi.resources.CustomResource {
      * @return Recording group - see below.
      * 
      */
-    public Output<RecorderRecordingGroup> getRecordingGroup() {
+    public Output<RecorderRecordingGroup> recordingGroup() {
         return this.recordingGroup;
     }
     /**
@@ -70,7 +71,7 @@ public class Recorder extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -96,7 +97,7 @@ public class Recorder extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Recorder(String name, RecorderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/recorder:Recorder", name, args == null ? RecorderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/recorder:Recorder", name, args == null ? RecorderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Recorder(String name, Output<String> id, @Nullable RecorderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

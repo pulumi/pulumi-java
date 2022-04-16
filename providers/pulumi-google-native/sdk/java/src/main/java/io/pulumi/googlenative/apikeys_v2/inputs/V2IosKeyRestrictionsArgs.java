@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
     @Import(name="allowedBundleIds")
       private final @Nullable Output<List<String>> allowedBundleIds;
 
-    public Output<List<String>> getAllowedBundleIds() {
-        return this.allowedBundleIds == null ? Output.empty() : this.allowedBundleIds;
+    public Output<List<String>> allowedBundleIds() {
+        return this.allowedBundleIds == null ? Codegen.empty() : this.allowedBundleIds;
     }
 
     public V2IosKeyRestrictionsArgs(@Nullable Output<List<String>> allowedBundleIds) {
@@ -35,7 +36,7 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
     }
 
     private V2IosKeyRestrictionsArgs() {
-        this.allowedBundleIds = Output.empty();
+        this.allowedBundleIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
-            this.allowedBundleIds = Output.ofNullable(allowedBundleIds);
+            this.allowedBundleIds = Codegen.ofNullable(allowedBundleIds);
             return this;
         }
         public Builder allowedBundleIds(String... allowedBundleIds) {

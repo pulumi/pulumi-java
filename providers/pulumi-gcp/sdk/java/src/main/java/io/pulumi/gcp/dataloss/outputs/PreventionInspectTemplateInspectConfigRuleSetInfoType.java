@@ -26,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoType {
      * or `projects/project-id/storedInfoTypes/432452342`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleRunPlaybookActionActionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
     @Import(name="actionConfiguration", required=true)
       private final Output<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration;
 
-    public Output<AutomationRuleRunPlaybookActionActionConfigurationArgs> getActionConfiguration() {
+    public Output<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration() {
         return this.actionConfiguration;
     }
 
@@ -38,7 +39,7 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
     @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType;
     }
 
@@ -49,7 +50,7 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
     @Import(name="order", required=true)
       private final Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
 
@@ -63,9 +64,9 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
     }
 
     private AutomationRuleRunPlaybookActionArgs() {
-        this.actionConfiguration = Output.empty();
-        this.actionType = Output.empty();
-        this.order = Output.empty();
+        this.actionConfiguration = Codegen.empty();
+        this.actionType = Codegen.empty();
+        this.order = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -30,7 +30,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
     @Import(name="alwaysEncryptedAkvAuthType", required=true)
       private final String alwaysEncryptedAkvAuthType;
 
-    public String getAlwaysEncryptedAkvAuthType() {
+    public String alwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
     }
 
@@ -41,7 +41,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -52,7 +52,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
@@ -63,7 +63,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
     @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 

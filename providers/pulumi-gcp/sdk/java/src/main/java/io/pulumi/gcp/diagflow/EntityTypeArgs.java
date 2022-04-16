@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.EntityTypeEntityArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -35,8 +36,8 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Output<Boolean> getEnableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Output.empty() : this.enableFuzzyExtraction;
+    public Output<Boolean> enableFuzzyExtraction() {
+        return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entities")
       private final @Nullable Output<List<EntityTypeEntityArgs>> entities;
 
-    public Output<List<EntityTypeEntityArgs>> getEntities() {
-        return this.entities == null ? Output.empty() : this.entities;
+    public Output<List<EntityTypeEntityArgs>> entities() {
+        return this.entities == null ? Codegen.empty() : this.entities;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -75,8 +76,8 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public EntityTypeArgs(
@@ -93,11 +94,11 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntityTypeArgs() {
-        this.displayName = Output.empty();
-        this.enableFuzzyExtraction = Output.empty();
-        this.entities = Output.empty();
-        this.kind = Output.empty();
-        this.project = Output.empty();
+        this.displayName = Codegen.empty();
+        this.enableFuzzyExtraction = Codegen.empty();
+        this.entities = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
+            this.enableFuzzyExtraction = Codegen.ofNullable(enableFuzzyExtraction);
             return this;
         }
         public Builder entities(@Nullable Output<List<EntityTypeEntityArgs>> entities) {
@@ -149,7 +150,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entities(@Nullable List<EntityTypeEntityArgs> entities) {
-            this.entities = Output.ofNullable(entities);
+            this.entities = Codegen.ofNullable(entities);
             return this;
         }
         public Builder entities(EntityTypeEntityArgs... entities) {
@@ -168,7 +169,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public EntityTypeArgs build() {
             return new EntityTypeArgs(displayName, enableFuzzyExtraction, entities, kind, project);

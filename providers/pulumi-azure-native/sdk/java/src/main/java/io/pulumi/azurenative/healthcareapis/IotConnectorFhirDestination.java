@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +58,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return FHIR Mappings
      * 
      */
-    public Output<IotMappingPropertiesResponse> getFhirMapping() {
+    public Output<IotMappingPropertiesResponse> fhirMapping() {
         return this.fhirMapping;
     }
     /**
@@ -71,7 +72,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return Fully qualified resource id of the FHIR service to connect to.
      * 
      */
-    public Output<String> getFhirServiceResourceId() {
+    public Output<String> fhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
     /**
@@ -85,7 +86,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -99,7 +100,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return Determines how resource identity is resolved on the destination.
      * 
      */
-    public Output<String> getResourceIdentityResolutionType() {
+    public Output<String> resourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
     /**
@@ -127,7 +128,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -141,7 +142,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public IotConnectorFhirDestination(String name, IotConnectorFhirDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:healthcareapis:IotConnectorFhirDestination", name, args == null ? IotConnectorFhirDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:healthcareapis:IotConnectorFhirDestination", name, args == null ? IotConnectorFhirDestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IotConnectorFhirDestination(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

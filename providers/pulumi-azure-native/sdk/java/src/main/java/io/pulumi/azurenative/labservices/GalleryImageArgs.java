@@ -5,6 +5,7 @@ package io.pulumi.azurenative.labservices;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="galleryImageName")
       private final @Nullable Output<String> galleryImageName;
 
-    public Output<String> getGalleryImageName() {
-        return this.galleryImageName == null ? Output.empty() : this.galleryImageName;
+    public Output<String> galleryImageName() {
+        return this.galleryImageName == null ? Codegen.empty() : this.galleryImageName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+    public Output<Boolean> isEnabled() {
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isOverride")
       private final @Nullable Output<Boolean> isOverride;
 
-    public Output<Boolean> getIsOverride() {
-        return this.isOverride == null ? Output.empty() : this.isOverride;
+    public Output<Boolean> isOverride() {
+        return this.isOverride == null ? Codegen.empty() : this.isOverride;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isPlanAuthorized")
       private final @Nullable Output<Boolean> isPlanAuthorized;
 
-    public Output<Boolean> getIsPlanAuthorized() {
-        return this.isPlanAuthorized == null ? Output.empty() : this.isPlanAuthorized;
+    public Output<Boolean> isPlanAuthorized() {
+        return this.isPlanAuthorized == null ? Codegen.empty() : this.isPlanAuthorized;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
-    public Output<String> getLabAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -78,8 +79,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<String> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,8 +112,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> getUniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Output.empty() : this.uniqueIdentifier;
+    public Output<String> uniqueIdentifier() {
+        return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 
     public GalleryImageArgs(
@@ -150,16 +151,16 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GalleryImageArgs() {
-        this.galleryImageName = Output.empty();
-        this.isEnabled = Output.empty();
-        this.isOverride = Output.empty();
-        this.isPlanAuthorized = Output.empty();
-        this.labAccountName = Output.empty();
-        this.location = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.uniqueIdentifier = Output.empty();
+        this.galleryImageName = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.isOverride = Codegen.empty();
+        this.isPlanAuthorized = Codegen.empty();
+        this.labAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uniqueIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder galleryImageName(@Nullable String galleryImageName) {
-            this.galleryImageName = Output.ofNullable(galleryImageName);
+            this.galleryImageName = Codegen.ofNullable(galleryImageName);
             return this;
         }
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
@@ -213,7 +214,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }
         public Builder isOverride(@Nullable Output<Boolean> isOverride) {
@@ -221,7 +222,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isOverride(@Nullable Boolean isOverride) {
-            this.isOverride = Output.ofNullable(isOverride);
+            this.isOverride = Codegen.ofNullable(isOverride);
             return this;
         }
         public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
@@ -229,7 +230,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
-            this.isPlanAuthorized = Output.ofNullable(isPlanAuthorized);
+            this.isPlanAuthorized = Codegen.ofNullable(isPlanAuthorized);
             return this;
         }
         public Builder labAccountName(Output<String> labAccountName) {
@@ -245,7 +246,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -253,7 +254,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -269,7 +270,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
@@ -277,7 +278,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
+            this.uniqueIdentifier = Codegen.ofNullable(uniqueIdentifier);
             return this;
         }        public GalleryImageArgs build() {
             return new GalleryImageArgs(galleryImageName, isEnabled, isOverride, isPlanAuthorized, labAccountName, location, provisioningState, resourceGroupName, tags, uniqueIdentifier);

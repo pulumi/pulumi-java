@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.DaemonEndpointArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
     @Import(name="kubeletEndpoint")
       private final @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;
 
-    public Output<DaemonEndpointArgs> getKubeletEndpoint() {
-        return this.kubeletEndpoint == null ? Output.empty() : this.kubeletEndpoint;
+    public Output<DaemonEndpointArgs> kubeletEndpoint() {
+        return this.kubeletEndpoint == null ? Codegen.empty() : this.kubeletEndpoint;
     }
 
     public NodeDaemonEndpointsArgs(@Nullable Output<DaemonEndpointArgs> kubeletEndpoint) {
@@ -34,7 +35,7 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
     }
 
     private NodeDaemonEndpointsArgs() {
-        this.kubeletEndpoint = Output.empty();
+        this.kubeletEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kubeletEndpoint(@Nullable DaemonEndpointArgs kubeletEndpoint) {
-            this.kubeletEndpoint = Output.ofNullable(kubeletEndpoint);
+            this.kubeletEndpoint = Codegen.ofNullable(kubeletEndpoint);
             return this;
         }        public NodeDaemonEndpointsArgs build() {
             return new NodeDaemonEndpointsArgs(kubeletEndpoint);

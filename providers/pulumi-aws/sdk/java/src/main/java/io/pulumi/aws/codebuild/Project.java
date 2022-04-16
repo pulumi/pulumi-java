@@ -20,6 +20,7 @@ import io.pulumi.aws.codebuild.outputs.ProjectVpcConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,7 +55,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return ARN of the CodeBuild project.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +69,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output<ProjectArtifacts> getArtifacts() {
+    public Output<ProjectArtifacts> artifacts() {
         return this.artifacts;
     }
     /**
@@ -82,7 +83,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBadgeEnabled() {
+    public Output</* @Nullable */ Boolean> badgeEnabled() {
         return this.badgeEnabled;
     }
     /**
@@ -96,7 +97,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return URL of the build badge when `badge_enabled` is enabled.
      * 
      */
-    public Output<String> getBadgeUrl() {
+    public Output<String> badgeUrl() {
         return this.badgeUrl;
     }
     /**
@@ -110,7 +111,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Defines the batch build options for the project.
      * 
      */
-    public Output</* @Nullable */ ProjectBuildBatchConfig> getBuildBatchConfig() {
+    public Output</* @Nullable */ ProjectBuildBatchConfig> buildBatchConfig() {
         return this.buildBatchConfig;
     }
     /**
@@ -124,7 +125,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
      * 
      */
-    public Output</* @Nullable */ Integer> getBuildTimeout() {
+    public Output</* @Nullable */ Integer> buildTimeout() {
         return this.buildTimeout;
     }
     /**
@@ -138,7 +139,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ProjectCache> getCache() {
+    public Output</* @Nullable */ ProjectCache> cache() {
         return this.cache;
     }
     /**
@@ -152,7 +153,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
      * 
      */
-    public Output</* @Nullable */ Integer> getConcurrentBuildLimit() {
+    public Output</* @Nullable */ Integer> concurrentBuildLimit() {
         return this.concurrentBuildLimit;
     }
     /**
@@ -166,7 +167,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Short description of the project.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -180,7 +181,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
      * 
      */
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey;
     }
     /**
@@ -194,7 +195,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output<ProjectEnvironment> getEnvironment() {
+    public Output<ProjectEnvironment> environment() {
         return this.environment;
     }
     /**
@@ -208,7 +209,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A set of file system locations to to mount inside the build. File system locations are documented below.
      * 
      */
-    public Output</* @Nullable */ List<ProjectFileSystemLocation>> getFileSystemLocations() {
+    public Output</* @Nullable */ List<ProjectFileSystemLocation>> fileSystemLocations() {
         return this.fileSystemLocations;
     }
     /**
@@ -222,7 +223,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ProjectLogsConfig> getLogsConfig() {
+    public Output</* @Nullable */ ProjectLogsConfig> logsConfig() {
         return this.logsConfig;
     }
     /**
@@ -236,7 +237,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -250,7 +251,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Specifies the visibility of the project's builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
      * 
      */
-    public Output</* @Nullable */ String> getProjectVisibility() {
+    public Output</* @Nullable */ String> projectVisibility() {
         return this.projectVisibility;
     }
     /**
@@ -264,7 +265,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The project identifier used with the public build APIs.
      * 
      */
-    public Output<String> getPublicProjectAlias() {
+    public Output<String> publicProjectAlias() {
         return this.publicProjectAlias;
     }
     /**
@@ -278,7 +279,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
      * 
      */
-    public Output</* @Nullable */ Integer> getQueuedTimeout() {
+    public Output</* @Nullable */ Integer> queuedTimeout() {
         return this.queuedTimeout;
     }
     /**
@@ -292,7 +293,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project's builds.
      * 
      */
-    public Output</* @Nullable */ String> getResourceAccessRole() {
+    public Output</* @Nullable */ String> resourceAccessRole() {
         return this.resourceAccessRole;
     }
     /**
@@ -306,7 +307,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ProjectSecondaryArtifact>> getSecondaryArtifacts() {
+    public Output</* @Nullable */ List<ProjectSecondaryArtifact>> secondaryArtifacts() {
         return this.secondaryArtifacts;
     }
     /**
@@ -320,7 +321,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ProjectSecondarySourceVersion>> getSecondarySourceVersions() {
+    public Output</* @Nullable */ List<ProjectSecondarySourceVersion>> secondarySourceVersions() {
         return this.secondarySourceVersions;
     }
     /**
@@ -334,7 +335,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ProjectSecondarySource>> getSecondarySources() {
+    public Output</* @Nullable */ List<ProjectSecondarySource>> secondarySources() {
         return this.secondarySources;
     }
     /**
@@ -348,7 +349,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Specifies the service role ARN for the batch build project.
      * 
      */
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
     /**
@@ -362,7 +363,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output<ProjectSource> getSource() {
+    public Output<ProjectSource> source() {
         return this.source;
     }
     /**
@@ -376,7 +377,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The source version for the corresponding source identifier. See [AWS docs](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectSourceVersion.html#CodeBuild-Type-ProjectSourceVersion-sourceVersion) for more details.
      * 
      */
-    public Output</* @Nullable */ String> getSourceVersion() {
+    public Output</* @Nullable */ String> sourceVersion() {
         return this.sourceVersion;
     }
     /**
@@ -390,7 +391,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -404,7 +405,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -418,7 +419,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ProjectVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ ProjectVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 
@@ -444,7 +445,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codebuild/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codebuild/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable ProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

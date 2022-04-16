@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dbforpostgresql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="charset")
       private final @Nullable Output<String> charset;
 
-    public Output<String> getCharset() {
-        return this.charset == null ? Output.empty() : this.charset;
+    public Output<String> charset() {
+        return this.charset == null ? Codegen.empty() : this.charset;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
-        return this.collation == null ? Output.empty() : this.collation;
+    public Output<String> collation() {
+        return this.collation == null ? Codegen.empty() : this.collation;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +66,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -83,11 +84,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.charset = Output.empty();
-        this.collation = Output.empty();
-        this.databaseName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.charset = Codegen.empty();
+        this.collation = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder charset(@Nullable String charset) {
-            this.charset = Output.ofNullable(charset);
+            this.charset = Codegen.ofNullable(charset);
             return this;
         }
         public Builder collation(@Nullable Output<String> collation) {
@@ -131,7 +132,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder collation(@Nullable String collation) {
-            this.collation = Output.ofNullable(collation);
+            this.collation = Codegen.ofNullable(collation);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -139,7 +140,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

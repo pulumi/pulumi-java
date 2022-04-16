@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcIpamScopeState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +35,7 @@ public class VpcIpamScope extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +49,7 @@ public class VpcIpamScope extends io.pulumi.resources.CustomResource {
      * @return A description for the scope you're creating.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -62,7 +63,7 @@ public class VpcIpamScope extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IPAM for which you're creating this scope.
      * 
      */
-    public Output<String> getIpamArn() {
+    public Output<String> ipamArn() {
         return this.ipamArn;
     }
     /**
@@ -76,13 +77,13 @@ public class VpcIpamScope extends io.pulumi.resources.CustomResource {
      * @return The ID of the IPAM for which you're creating this scope.
      * 
      */
-    public Output<String> getIpamId() {
+    public Output<String> ipamId() {
         return this.ipamId;
     }
     @Export(name="ipamScopeType", type=String.class, parameters={})
     private Output<String> ipamScopeType;
 
-    public Output<String> getIpamScopeType() {
+    public Output<String> ipamScopeType() {
         return this.ipamScopeType;
     }
     /**
@@ -96,7 +97,7 @@ public class VpcIpamScope extends io.pulumi.resources.CustomResource {
      * @return Defines if the scope is the default scope or not.
      * 
      */
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
     /**
@@ -110,19 +111,19 @@ public class VpcIpamScope extends io.pulumi.resources.CustomResource {
      * @return Count of pools under this scope
      * 
      */
-    public Output<Integer> getPoolCount() {
+    public Output<Integer> poolCount() {
         return this.poolCount;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -148,7 +149,7 @@ public class VpcIpamScope extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpamScope(String name, VpcIpamScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpamScope:VpcIpamScope", name, args == null ? VpcIpamScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcIpamScope:VpcIpamScope", name, args == null ? VpcIpamScopeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcIpamScope(String name, Output<String> id, @Nullable VpcIpamScopeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

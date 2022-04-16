@@ -105,84 +105,84 @@ public final class GetAssetResult {
      * The alternate ID of the Asset.
      * 
     */
-    public Optional<String> getAlternateId() {
+    public Optional<String> alternateId() {
         return Optional.ofNullable(this.alternateId);
     }
     /**
      * The Asset ID.
      * 
     */
-    public String getAssetId() {
+    public String assetId() {
         return this.assetId;
     }
     /**
      * The name of the asset blob container.
      * 
     */
-    public Optional<String> getContainer() {
+    public Optional<String> container() {
         return Optional.ofNullable(this.container);
     }
     /**
      * The creation date of the Asset.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * The Asset description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last modified date of the Asset.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the storage account.
      * 
     */
-    public Optional<String> getStorageAccountName() {
+    public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
     /**
      * The Asset encryption format. One of None or MediaStorageEncryption.
      * 
     */
-    public String getStorageEncryptionFormat() {
+    public String storageEncryptionFormat() {
         return this.storageEncryptionFormat;
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

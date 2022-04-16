@@ -15,7 +15,7 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="firewallPolicyArn", required=true)
       private final String firewallPolicyArn;
 
-    public String getFirewallPolicyArn() {
+    public String firewallPolicyArn() {
         return this.firewallPolicyArn;
     }
 

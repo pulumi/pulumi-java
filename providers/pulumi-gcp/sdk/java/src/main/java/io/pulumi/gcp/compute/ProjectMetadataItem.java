@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ProjectMetadataItemArgs;
 import io.pulumi.gcp.compute.inputs.ProjectMetadataItemState;
@@ -42,7 +43,7 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
      * @return The metadata key to set.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -58,7 +59,7 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -72,7 +73,7 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
      * @return The value to set for the given metadata key.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -98,7 +99,7 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectMetadataItem(String name, ProjectMetadataItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/projectMetadataItem:ProjectMetadataItem", name, args == null ? ProjectMetadataItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/projectMetadataItem:ProjectMetadataItem", name, args == null ? ProjectMetadataItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectMetadataItem(String name, Output<String> id, @Nullable ProjectMetadataItemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

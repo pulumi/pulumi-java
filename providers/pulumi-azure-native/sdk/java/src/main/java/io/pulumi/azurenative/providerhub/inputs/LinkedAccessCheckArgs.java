@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,36 +18,36 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="actionName")
       private final @Nullable Output<String> actionName;
 
-    public Output<String> getActionName() {
-        return this.actionName == null ? Output.empty() : this.actionName;
+    public Output<String> actionName() {
+        return this.actionName == null ? Codegen.empty() : this.actionName;
     }
 
     @Import(name="linkedAction")
       private final @Nullable Output<String> linkedAction;
 
-    public Output<String> getLinkedAction() {
-        return this.linkedAction == null ? Output.empty() : this.linkedAction;
+    public Output<String> linkedAction() {
+        return this.linkedAction == null ? Codegen.empty() : this.linkedAction;
     }
 
     @Import(name="linkedActionVerb")
       private final @Nullable Output<String> linkedActionVerb;
 
-    public Output<String> getLinkedActionVerb() {
-        return this.linkedActionVerb == null ? Output.empty() : this.linkedActionVerb;
+    public Output<String> linkedActionVerb() {
+        return this.linkedActionVerb == null ? Codegen.empty() : this.linkedActionVerb;
     }
 
     @Import(name="linkedProperty")
       private final @Nullable Output<String> linkedProperty;
 
-    public Output<String> getLinkedProperty() {
-        return this.linkedProperty == null ? Output.empty() : this.linkedProperty;
+    public Output<String> linkedProperty() {
+        return this.linkedProperty == null ? Codegen.empty() : this.linkedProperty;
     }
 
     @Import(name="linkedType")
       private final @Nullable Output<String> linkedType;
 
-    public Output<String> getLinkedType() {
-        return this.linkedType == null ? Output.empty() : this.linkedType;
+    public Output<String> linkedType() {
+        return this.linkedType == null ? Codegen.empty() : this.linkedType;
     }
 
     public LinkedAccessCheckArgs(
@@ -63,11 +64,11 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LinkedAccessCheckArgs() {
-        this.actionName = Output.empty();
-        this.linkedAction = Output.empty();
-        this.linkedActionVerb = Output.empty();
-        this.linkedProperty = Output.empty();
-        this.linkedType = Output.empty();
+        this.actionName = Codegen.empty();
+        this.linkedAction = Codegen.empty();
+        this.linkedActionVerb = Codegen.empty();
+        this.linkedProperty = Codegen.empty();
+        this.linkedType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder actionName(@Nullable String actionName) {
-            this.actionName = Output.ofNullable(actionName);
+            this.actionName = Codegen.ofNullable(actionName);
             return this;
         }
         public Builder linkedAction(@Nullable Output<String> linkedAction) {
@@ -111,7 +112,7 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder linkedAction(@Nullable String linkedAction) {
-            this.linkedAction = Output.ofNullable(linkedAction);
+            this.linkedAction = Codegen.ofNullable(linkedAction);
             return this;
         }
         public Builder linkedActionVerb(@Nullable Output<String> linkedActionVerb) {
@@ -119,7 +120,7 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
-            this.linkedActionVerb = Output.ofNullable(linkedActionVerb);
+            this.linkedActionVerb = Codegen.ofNullable(linkedActionVerb);
             return this;
         }
         public Builder linkedProperty(@Nullable Output<String> linkedProperty) {
@@ -127,7 +128,7 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder linkedProperty(@Nullable String linkedProperty) {
-            this.linkedProperty = Output.ofNullable(linkedProperty);
+            this.linkedProperty = Codegen.ofNullable(linkedProperty);
             return this;
         }
         public Builder linkedType(@Nullable Output<String> linkedType) {
@@ -135,7 +136,7 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder linkedType(@Nullable String linkedType) {
-            this.linkedType = Output.ofNullable(linkedType);
+            this.linkedType = Codegen.ofNullable(linkedType);
             return this;
         }        public LinkedAccessCheckArgs build() {
             return new LinkedAccessCheckArgs(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);

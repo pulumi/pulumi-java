@@ -8,6 +8,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionSubscriberArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionThreshold", required=true)
       private final Output<BudgetActionActionThresholdArgs> actionThreshold;
 
-    public Output<BudgetActionActionThresholdArgs> getActionThreshold() {
+    public Output<BudgetActionActionThresholdArgs> actionThreshold() {
         return this.actionThreshold;
     }
 
@@ -47,7 +48,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType;
     }
 
@@ -58,7 +59,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvalModel", required=true)
       private final Output<String> approvalModel;
 
-    public Output<String> getApprovalModel() {
+    public Output<String> approvalModel() {
         return this.approvalModel;
     }
 
@@ -69,7 +70,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="budgetName", required=true)
       private final Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
 
@@ -80,7 +81,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<BudgetActionDefinitionArgs> definition;
 
-    public Output<BudgetActionDefinitionArgs> getDefinition() {
+    public Output<BudgetActionDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -91,7 +92,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
@@ -102,7 +103,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
 
@@ -113,7 +114,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscribers", required=true)
       private final Output<List<BudgetActionSubscriberArgs>> subscribers;
 
-    public Output<List<BudgetActionSubscriberArgs>> getSubscribers() {
+    public Output<List<BudgetActionSubscriberArgs>> subscribers() {
         return this.subscribers;
     }
 
@@ -139,15 +140,15 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetActionArgs() {
-        this.accountId = Output.empty();
-        this.actionThreshold = Output.empty();
-        this.actionType = Output.empty();
-        this.approvalModel = Output.empty();
-        this.budgetName = Output.empty();
-        this.definition = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.notificationType = Output.empty();
-        this.subscribers = Output.empty();
+        this.accountId = Codegen.empty();
+        this.actionThreshold = Codegen.empty();
+        this.actionType = Codegen.empty();
+        this.approvalModel = Codegen.empty();
+        this.budgetName = Codegen.empty();
+        this.definition = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.notificationType = Codegen.empty();
+        this.subscribers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder actionThreshold(Output<BudgetActionActionThresholdArgs> actionThreshold) {

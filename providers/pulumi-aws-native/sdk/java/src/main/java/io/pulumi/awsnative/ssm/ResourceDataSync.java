@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ssm.outputs.ResourceDataSyncSyncSource;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,55 +23,55 @@ public class ResourceDataSync extends io.pulumi.resources.CustomResource {
     @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
-    public Output</* @Nullable */ String> getBucketName() {
+    public Output</* @Nullable */ String> bucketName() {
         return this.bucketName;
     }
     @Export(name="bucketPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketPrefix;
 
-    public Output</* @Nullable */ String> getBucketPrefix() {
+    public Output</* @Nullable */ String> bucketPrefix() {
         return this.bucketPrefix;
     }
     @Export(name="bucketRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketRegion;
 
-    public Output</* @Nullable */ String> getBucketRegion() {
+    public Output</* @Nullable */ String> bucketRegion() {
         return this.bucketRegion;
     }
     @Export(name="kMSKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSKeyArn;
 
-    public Output</* @Nullable */ String> getKMSKeyArn() {
+    public Output</* @Nullable */ String> kMSKeyArn() {
         return this.kMSKeyArn;
     }
     @Export(name="s3Destination", type=ResourceDataSyncS3Destination.class, parameters={})
     private Output</* @Nullable */ ResourceDataSyncS3Destination> s3Destination;
 
-    public Output</* @Nullable */ ResourceDataSyncS3Destination> getS3Destination() {
+    public Output</* @Nullable */ ResourceDataSyncS3Destination> s3Destination() {
         return this.s3Destination;
     }
     @Export(name="syncFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncFormat;
 
-    public Output</* @Nullable */ String> getSyncFormat() {
+    public Output</* @Nullable */ String> syncFormat() {
         return this.syncFormat;
     }
     @Export(name="syncName", type=String.class, parameters={})
     private Output<String> syncName;
 
-    public Output<String> getSyncName() {
+    public Output<String> syncName() {
         return this.syncName;
     }
     @Export(name="syncSource", type=ResourceDataSyncSyncSource.class, parameters={})
     private Output</* @Nullable */ ResourceDataSyncSyncSource> syncSource;
 
-    public Output</* @Nullable */ ResourceDataSyncSyncSource> getSyncSource() {
+    public Output</* @Nullable */ ResourceDataSyncSyncSource> syncSource() {
         return this.syncSource;
     }
     @Export(name="syncType", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncType;
 
-    public Output</* @Nullable */ String> getSyncType() {
+    public Output</* @Nullable */ String> syncType() {
         return this.syncType;
     }
 
@@ -96,7 +97,7 @@ public class ResourceDataSync extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceDataSync(String name, @Nullable ResourceDataSyncArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ssm:ResourceDataSync", name, args == null ? ResourceDataSyncArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ssm:ResourceDataSync", name, args == null ? ResourceDataSyncArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceDataSync(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

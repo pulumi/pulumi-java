@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
     @Import(name="durationSeconds")
       private final @Nullable Output<Integer> durationSeconds;
 
-    public Output<Integer> getDurationSeconds() {
-        return this.durationSeconds == null ? Output.empty() : this.durationSeconds;
+    public Output<Integer> durationSeconds() {
+        return this.durationSeconds == null ? Codegen.empty() : this.durationSeconds;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public ListenerTargetGroupStickinessConfigArgs(
@@ -37,8 +38,8 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
     }
 
     private ListenerTargetGroupStickinessConfigArgs() {
-        this.durationSeconds = Output.empty();
-        this.enabled = Output.empty();
+        this.durationSeconds = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = Output.ofNullable(durationSeconds);
+            this.durationSeconds = Codegen.ofNullable(durationSeconds);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -76,7 +77,7 @@ public final class ListenerTargetGroupStickinessConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public ListenerTargetGroupStickinessConfigArgs build() {
             return new ListenerTargetGroupStickinessConfigArgs(durationSeconds, enabled);

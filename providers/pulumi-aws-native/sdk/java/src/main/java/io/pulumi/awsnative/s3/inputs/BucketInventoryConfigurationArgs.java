@@ -9,6 +9,7 @@ import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationScheduleFrequenc
 import io.pulumi.awsnative.s3.inputs.BucketDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     @Import(name="destination", required=true)
       private final Output<BucketDestinationArgs> destination;
 
-    public Output<BucketDestinationArgs> getDestination() {
+    public Output<BucketDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -34,7 +35,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -45,7 +46,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -56,7 +57,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     @Import(name="includedObjectVersions", required=true)
       private final Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
 
-    public Output<BucketInventoryConfigurationIncludedObjectVersions> getIncludedObjectVersions() {
+    public Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions() {
         return this.includedObjectVersions;
     }
 
@@ -67,8 +68,8 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     @Import(name="optionalFields")
       private final @Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
 
-    public Output<List<BucketInventoryConfigurationOptionalFieldsItem>> getOptionalFields() {
-        return this.optionalFields == null ? Output.empty() : this.optionalFields;
+    public Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields() {
+        return this.optionalFields == null ? Codegen.empty() : this.optionalFields;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     @Import(name="scheduleFrequency", required=true)
       private final Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
 
-    public Output<BucketInventoryConfigurationScheduleFrequency> getScheduleFrequency() {
+    public Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency() {
         return this.scheduleFrequency;
     }
 
@@ -111,13 +112,13 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     }
 
     private BucketInventoryConfigurationArgs() {
-        this.destination = Output.empty();
-        this.enabled = Output.empty();
-        this.id = Output.empty();
-        this.includedObjectVersions = Output.empty();
-        this.optionalFields = Output.empty();
-        this.prefix = Output.empty();
-        this.scheduleFrequency = Output.empty();
+        this.destination = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.id = Codegen.empty();
+        this.includedObjectVersions = Codegen.empty();
+        this.optionalFields = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.scheduleFrequency = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder optionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
-            this.optionalFields = Output.ofNullable(optionalFields);
+            this.optionalFields = Codegen.ofNullable(optionalFields);
             return this;
         }
         public Builder optionalFields(BucketInventoryConfigurationOptionalFieldsItem... optionalFields) {
@@ -200,7 +201,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder scheduleFrequency(Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {

@@ -18,14 +18,14 @@ public final class ConfigUplinkSpectrumConfig extends io.pulumi.resources.Invoke
     @Import(name="centerFrequency")
       private final @Nullable ConfigFrequency centerFrequency;
 
-    public Optional<ConfigFrequency> getCenterFrequency() {
+    public Optional<ConfigFrequency> centerFrequency() {
         return this.centerFrequency == null ? Optional.empty() : Optional.ofNullable(this.centerFrequency);
     }
 
     @Import(name="polarization")
       private final @Nullable ConfigPolarization polarization;
 
-    public Optional<ConfigPolarization> getPolarization() {
+    public Optional<ConfigPolarization> polarization() {
         return this.polarization == null ? Optional.empty() : Optional.ofNullable(this.polarization);
     }
 

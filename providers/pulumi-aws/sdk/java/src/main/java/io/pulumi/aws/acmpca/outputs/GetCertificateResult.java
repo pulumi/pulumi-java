@@ -41,31 +41,31 @@ public final class GetCertificateResult {
         this.id = id;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The PEM-encoded certificate value.
      * 
     */
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
-    public String getCertificateAuthorityArn() {
+    public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
      * The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
      * 
     */
-    public String getCertificateChain() {
+    public String certificateChain() {
         return this.certificateChain;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

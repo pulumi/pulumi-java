@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -48,8 +49,8 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountKey")
       private final @Nullable Output<String> storageAccountKey;
 
-    public Output<String> getStorageAccountKey() {
-        return this.storageAccountKey == null ? Output.empty() : this.storageAccountKey;
+    public Output<String> storageAccountKey() {
+        return this.storageAccountKey == null ? Codegen.empty() : this.storageAccountKey;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -75,10 +76,10 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AzureFileVolumeArgs() {
-        this.readOnly = Output.empty();
-        this.shareName = Output.empty();
-        this.storageAccountKey = Output.empty();
-        this.storageAccountName = Output.empty();
+        this.readOnly = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.storageAccountKey = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder shareName(Output<String> shareName) {
@@ -128,7 +129,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
-            this.storageAccountKey = Output.ofNullable(storageAccountKey);
+            this.storageAccountKey = Codegen.ofNullable(storageAccountKey);
             return this;
         }
         public Builder storageAccountName(Output<String> storageAccountName) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityLocationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affectedLocation")
       private final @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
 
-    public Output<VulnerabilityLocationArgs> getAffectedLocation() {
-        return this.affectedLocation == null ? Output.empty() : this.affectedLocation;
+    public Output<VulnerabilityLocationArgs> affectedLocation() {
+        return this.affectedLocation == null ? Codegen.empty() : this.affectedLocation;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedLocation")
       private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
-    public Output<VulnerabilityLocationArgs> getFixedLocation() {
-        return this.fixedLocation == null ? Output.empty() : this.fixedLocation;
+    public Output<VulnerabilityLocationArgs> fixedLocation() {
+        return this.fixedLocation == null ? Codegen.empty() : this.fixedLocation;
     }
 
     /**
@@ -48,15 +49,15 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
-        return this.packageType == null ? Output.empty() : this.packageType;
+    public Output<String> packageType() {
+        return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
     @Import(name="severityName")
       private final @Nullable Output<String> severityName;
 
-    public Output<String> getSeverityName() {
-        return this.severityName == null ? Output.empty() : this.severityName;
+    public Output<String> severityName() {
+        return this.severityName == null ? Codegen.empty() : this.severityName;
     }
 
     public PackageIssueArgs(
@@ -71,10 +72,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageIssueArgs() {
-        this.affectedLocation = Output.empty();
-        this.fixedLocation = Output.empty();
-        this.packageType = Output.empty();
-        this.severityName = Output.empty();
+        this.affectedLocation = Codegen.empty();
+        this.fixedLocation = Codegen.empty();
+        this.packageType = Codegen.empty();
+        this.severityName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder affectedLocation(@Nullable VulnerabilityLocationArgs affectedLocation) {
-            this.affectedLocation = Output.ofNullable(affectedLocation);
+            this.affectedLocation = Codegen.ofNullable(affectedLocation);
             return this;
         }
         public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
@@ -116,7 +117,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
-            this.fixedLocation = Output.ofNullable(fixedLocation);
+            this.fixedLocation = Codegen.ofNullable(fixedLocation);
             return this;
         }
         public Builder packageType(@Nullable Output<String> packageType) {
@@ -124,7 +125,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Output.ofNullable(packageType);
+            this.packageType = Codegen.ofNullable(packageType);
             return this;
         }
         public Builder severityName(@Nullable Output<String> severityName) {
@@ -132,7 +133,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder severityName(@Nullable String severityName) {
-            this.severityName = Output.ofNullable(severityName);
+            this.severityName = Codegen.ofNullable(severityName);
             return this;
         }        public PackageIssueArgs build() {
             return new PackageIssueArgs(affectedLocation, fixedLocation, packageType, severityName);

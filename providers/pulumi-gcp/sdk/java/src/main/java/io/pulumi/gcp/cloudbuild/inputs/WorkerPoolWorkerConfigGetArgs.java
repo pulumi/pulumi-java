@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<Integer> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<String> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="noExternalIp")
       private final @Nullable Output<Boolean> noExternalIp;
 
-    public Output<Boolean> getNoExternalIp() {
-        return this.noExternalIp == null ? Output.empty() : this.noExternalIp;
+    public Output<Boolean> noExternalIp() {
+        return this.noExternalIp == null ? Codegen.empty() : this.noExternalIp;
     }
 
     public WorkerPoolWorkerConfigGetArgs(
@@ -59,9 +60,9 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private WorkerPoolWorkerConfigGetArgs() {
-        this.diskSizeGb = Output.empty();
-        this.machineType = Output.empty();
-        this.noExternalIp = Output.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.noExternalIp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -101,7 +102,7 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder noExternalIp(@Nullable Output<Boolean> noExternalIp) {
@@ -109,7 +110,7 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder noExternalIp(@Nullable Boolean noExternalIp) {
-            this.noExternalIp = Output.ofNullable(noExternalIp);
+            this.noExternalIp = Codegen.ofNullable(noExternalIp);
             return this;
         }        public WorkerPoolWorkerConfigGetArgs build() {
             return new WorkerPoolWorkerConfigGetArgs(diskSizeGb, machineType, noExternalIp);

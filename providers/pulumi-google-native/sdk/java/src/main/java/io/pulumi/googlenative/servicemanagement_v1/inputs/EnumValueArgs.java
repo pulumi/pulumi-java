@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+    public Output<Integer> number() {
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<List<OptionArgs>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     public EnumValueArgs(
@@ -64,9 +65,9 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnumValueArgs() {
-        this.name = Output.empty();
-        this.number = Output.empty();
-        this.options = Output.empty();
+        this.name = Codegen.empty();
+        this.number = Codegen.empty();
+        this.options = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder number(@Nullable Output<Integer> number) {
@@ -106,7 +107,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder number(@Nullable Integer number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
@@ -114,7 +115,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(OptionArgs... options) {

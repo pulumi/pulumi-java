@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
     @Import(name="appIdClientRegex")
       private final @Nullable Output<String> appIdClientRegex;
 
-    public Output<String> getAppIdClientRegex() {
-        return this.appIdClientRegex == null ? Output.empty() : this.appIdClientRegex;
+    public Output<String> appIdClientRegex() {
+        return this.appIdClientRegex == null ? Codegen.empty() : this.appIdClientRegex;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
     @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
-    public Output<String> getAwsRegion() {
-        return this.awsRegion == null ? Output.empty() : this.awsRegion;
+    public Output<String> awsRegion() {
+        return this.awsRegion == null ? Codegen.empty() : this.awsRegion;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
     @Import(name="defaultAction", required=true)
       private final Output<String> defaultAction;
 
-    public Output<String> getDefaultAction() {
+    public Output<String> defaultAction() {
         return this.defaultAction;
     }
 
@@ -54,7 +55,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -70,10 +71,10 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
     }
 
     private GraphQLApiUserPoolConfigGetArgs() {
-        this.appIdClientRegex = Output.empty();
-        this.awsRegion = Output.empty();
-        this.defaultAction = Output.empty();
-        this.userPoolId = Output.empty();
+        this.appIdClientRegex = Codegen.empty();
+        this.awsRegion = Codegen.empty();
+        this.defaultAction = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder appIdClientRegex(@Nullable String appIdClientRegex) {
-            this.appIdClientRegex = Output.ofNullable(appIdClientRegex);
+            this.appIdClientRegex = Codegen.ofNullable(appIdClientRegex);
             return this;
         }
         public Builder awsRegion(@Nullable Output<String> awsRegion) {
@@ -115,7 +116,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Output.ofNullable(awsRegion);
+            this.awsRegion = Codegen.ofNullable(awsRegion);
             return this;
         }
         public Builder defaultAction(Output<String> defaultAction) {

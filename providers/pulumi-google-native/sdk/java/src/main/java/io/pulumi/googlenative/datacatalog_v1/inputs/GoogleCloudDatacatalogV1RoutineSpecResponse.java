@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
     @Import(name="bigqueryRoutineSpec", required=true)
       private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
 
-    public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse getBigqueryRoutineSpec() {
+    public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
     @Import(name="definitionBody", required=true)
       private final String definitionBody;
 
-    public String getDefinitionBody() {
+    public String definitionBody() {
         return this.definitionBody;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
     @Import(name="language", required=true)
       private final String language;
 
-    public String getLanguage() {
+    public String language() {
         return this.language;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
     @Import(name="returnType", required=true)
       private final String returnType;
 
-    public String getReturnType() {
+    public String returnType() {
         return this.returnType;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
     @Import(name="routineArguments", required=true)
       private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
 
-    public List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> getRoutineArguments() {
+    public List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments() {
         return this.routineArguments;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
     @Import(name="routineType", required=true)
       private final String routineType;
 
-    public String getRoutineType() {
+    public String routineType() {
         return this.routineType;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1beta4.BackupRunArgs;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DiskEncryptionConfigurationResponse;
@@ -32,7 +33,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
      * 
      */
-    public Output<String> getBackupKind() {
+    public Output<String> backupKind() {
         return this.backupKind;
     }
     /**
@@ -46,7 +47,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The description of this run, only applicable to on-demand backups.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return Encryption configuration specific to a backup.
      * 
      */
-    public Output<DiskEncryptionConfigurationResponse> getDiskEncryptionConfiguration() {
+    public Output<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration;
     }
     /**
@@ -74,7 +75,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return Encryption status specific to a backup.
      * 
      */
-    public Output<DiskEncryptionStatusResponse> getDiskEncryptionStatus() {
+    public Output<DiskEncryptionStatusResponse> diskEncryptionStatus() {
         return this.diskEncryptionStatus;
     }
     /**
@@ -88,7 +89,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -102,7 +103,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    public Output<String> getEnqueuedTime() {
+    public Output<String> enqueuedTime() {
         return this.enqueuedTime;
     }
     /**
@@ -116,7 +117,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return Information about why the backup operation failed. This is only present if the run has the FAILED status.
      * 
      */
-    public Output<OperationErrorResponse> getError() {
+    public Output<OperationErrorResponse> error() {
         return this.error;
     }
     /**
@@ -130,7 +131,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return Name of the database instance.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -144,7 +145,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return This is always `sql#backupRun`.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -158,7 +159,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return Location of the backups.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -172,7 +173,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The URI of this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -186,7 +187,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -200,7 +201,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The status of this run.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -214,7 +215,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -228,7 +229,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @return The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    public Output<String> getWindowStartTime() {
+    public Output<String> windowStartTime() {
         return this.windowStartTime;
     }
 
@@ -254,7 +255,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackupRun(String name, BackupRunArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:sqladmin/v1beta4:BackupRun", name, args == null ? BackupRunArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:sqladmin/v1beta4:BackupRun", name, args == null ? BackupRunArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackupRun(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

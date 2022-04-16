@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<String> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public CertificateCertificateDescriptionPublicKeyArgs(
@@ -45,8 +46,8 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
     }
 
     private CertificateCertificateDescriptionPublicKeyArgs() {
-        this.format = Output.empty();
-        this.key = Output.empty();
+        this.format = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -84,7 +85,7 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public CertificateCertificateDescriptionPublicKeyArgs build() {
             return new CertificateCertificateDescriptionPublicKeyArgs(format, key);

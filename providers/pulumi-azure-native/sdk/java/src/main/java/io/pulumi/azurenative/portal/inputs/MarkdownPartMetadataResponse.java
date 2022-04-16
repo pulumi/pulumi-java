@@ -28,7 +28,7 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
     @Import(name="inputs")
       private final @Nullable List<Object> inputs;
 
-    public List<Object> getInputs() {
+    public List<Object> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
 
@@ -39,7 +39,7 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
     @Import(name="settings")
       private final @Nullable MarkdownPartMetadataResponseSettings settings;
 
-    public Optional<MarkdownPartMetadataResponseSettings> getSettings() {
+    public Optional<MarkdownPartMetadataResponseSettings> settings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
@@ -51,7 +51,7 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

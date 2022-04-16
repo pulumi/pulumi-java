@@ -21,7 +21,7 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
     @Import(name="serviceEndpointPolicyName", required=true)
       private final String serviceEndpointPolicyName;
 
-    public String getServiceEndpointPolicyName() {
+    public String serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
     }
 

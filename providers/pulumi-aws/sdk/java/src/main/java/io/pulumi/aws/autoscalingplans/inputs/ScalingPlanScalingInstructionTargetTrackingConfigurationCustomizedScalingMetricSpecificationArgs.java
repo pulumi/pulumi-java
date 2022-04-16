@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
     @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<Map<String,String>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -44,7 +45,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -55,7 +56,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
     @Import(name="statistic", required=true)
       private final Output<String> statistic;
 
-    public Output<String> getStatistic() {
+    public Output<String> statistic() {
         return this.statistic;
     }
 
@@ -66,8 +67,8 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs(
@@ -84,11 +85,11 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
     }
 
     private ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs() {
-        this.dimensions = Output.empty();
-        this.metricName = Output.empty();
-        this.namespace = Output.empty();
-        this.statistic = Output.empty();
-        this.unit = Output.empty();
+        this.dimensions = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.statistic = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
             return this;
         }
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder metricName(Output<String> metricName) {
@@ -156,7 +157,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs build() {
             return new ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs(dimensions, metricName, namespace, statistic, unit);

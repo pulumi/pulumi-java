@@ -31,19 +31,19 @@ public final class RRSetRoutingPolicyResponse {
         this.wrrPolicy = wrrPolicy;
     }
 
-    public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
+    public RRSetRoutingPolicyGeoPolicyResponse geo() {
         return this.geo;
     }
-    public RRSetRoutingPolicyGeoPolicyResponse getGeoPolicy() {
+    public RRSetRoutingPolicyGeoPolicyResponse geoPolicy() {
         return this.geoPolicy;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
-    public RRSetRoutingPolicyWrrPolicyResponse getWrr() {
+    public RRSetRoutingPolicyWrrPolicyResponse wrr() {
         return this.wrr;
     }
-    public RRSetRoutingPolicyWrrPolicyResponse getWrrPolicy() {
+    public RRSetRoutingPolicyWrrPolicyResponse wrrPolicy() {
         return this.wrrPolicy;
     }
 

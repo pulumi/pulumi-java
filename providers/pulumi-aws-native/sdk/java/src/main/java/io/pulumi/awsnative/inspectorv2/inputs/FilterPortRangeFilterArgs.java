@@ -5,6 +5,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
     @Import(name="beginInclusive")
       private final @Nullable Output<Integer> beginInclusive;
 
-    public Output<Integer> getBeginInclusive() {
-        return this.beginInclusive == null ? Output.empty() : this.beginInclusive;
+    public Output<Integer> beginInclusive() {
+        return this.beginInclusive == null ? Codegen.empty() : this.beginInclusive;
     }
 
     @Import(name="endInclusive")
       private final @Nullable Output<Integer> endInclusive;
 
-    public Output<Integer> getEndInclusive() {
-        return this.endInclusive == null ? Output.empty() : this.endInclusive;
+    public Output<Integer> endInclusive() {
+        return this.endInclusive == null ? Codegen.empty() : this.endInclusive;
     }
 
     public FilterPortRangeFilterArgs(
@@ -36,8 +37,8 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
     }
 
     private FilterPortRangeFilterArgs() {
-        this.beginInclusive = Output.empty();
-        this.endInclusive = Output.empty();
+        this.beginInclusive = Codegen.empty();
+        this.endInclusive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder beginInclusive(@Nullable Integer beginInclusive) {
-            this.beginInclusive = Output.ofNullable(beginInclusive);
+            this.beginInclusive = Codegen.ofNullable(beginInclusive);
             return this;
         }
         public Builder endInclusive(@Nullable Output<Integer> endInclusive) {
@@ -75,7 +76,7 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = Output.ofNullable(endInclusive);
+            this.endInclusive = Codegen.ofNullable(endInclusive);
             return this;
         }        public FilterPortRangeFilterArgs build() {
             return new FilterPortRangeFilterArgs(beginInclusive, endInclusive);

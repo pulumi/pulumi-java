@@ -9,6 +9,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsGetA
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     @Import(name="accessControlTranslation")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
 
-    public Output<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> getAccessControlTranslation() {
-        return this.accessControlTranslation == null ? Output.empty() : this.accessControlTranslation;
+    public Output<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation() {
+        return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     @Import(name="account")
       private final @Nullable Output<String> account;
 
-    public Output<String> getAccount() {
-        return this.account == null ? Output.empty() : this.account;
+    public Output<String> account() {
+        return this.account == null ? Codegen.empty() : this.account;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -58,8 +59,8 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+    public Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> encryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     @Import(name="metrics")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsGetArgs> metrics;
 
-    public Output<BucketReplicationConfigRuleDestinationMetricsGetArgs> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+    public Output<BucketReplicationConfigRuleDestinationMetricsGetArgs> metrics() {
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     @Import(name="replicationTime")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> replicationTime;
 
-    public Output<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> getReplicationTime() {
-        return this.replicationTime == null ? Output.empty() : this.replicationTime;
+    public Output<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> replicationTime() {
+        return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+    public Output<String> storageClass() {
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     public BucketReplicationConfigRuleDestinationGetArgs(
@@ -113,13 +114,13 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
     }
 
     private BucketReplicationConfigRuleDestinationGetArgs() {
-        this.accessControlTranslation = Output.empty();
-        this.account = Output.empty();
-        this.bucket = Output.empty();
-        this.encryptionConfiguration = Output.empty();
-        this.metrics = Output.empty();
-        this.replicationTime = Output.empty();
-        this.storageClass = Output.empty();
+        this.accessControlTranslation = Codegen.empty();
+        this.account = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.replicationTime = Codegen.empty();
+        this.storageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
             return this;
         }
         public Builder accessControlTranslation(@Nullable BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs accessControlTranslation) {
-            this.accessControlTranslation = Output.ofNullable(accessControlTranslation);
+            this.accessControlTranslation = Codegen.ofNullable(accessControlTranslation);
             return this;
         }
         public Builder account(@Nullable Output<String> account) {
@@ -167,7 +168,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
             return this;
         }
         public Builder account(@Nullable String account) {
-            this.account = Output.ofNullable(account);
+            this.account = Codegen.ofNullable(account);
             return this;
         }
         public Builder bucket(Output<String> bucket) {
@@ -183,7 +184,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
             return this;
         }
         public Builder encryptionConfiguration(@Nullable BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder metrics(@Nullable Output<BucketReplicationConfigRuleDestinationMetricsGetArgs> metrics) {
@@ -191,7 +192,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
             return this;
         }
         public Builder metrics(@Nullable BucketReplicationConfigRuleDestinationMetricsGetArgs metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder replicationTime(@Nullable Output<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> replicationTime) {
@@ -199,7 +200,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
             return this;
         }
         public Builder replicationTime(@Nullable BucketReplicationConfigRuleDestinationReplicationTimeGetArgs replicationTime) {
-            this.replicationTime = Output.ofNullable(replicationTime);
+            this.replicationTime = Codegen.ofNullable(replicationTime);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -207,7 +208,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }        public BucketReplicationConfigRuleDestinationGetArgs build() {
             return new BucketReplicationConfigRuleDestinationGetArgs(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);

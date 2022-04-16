@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="attachmentTarget")
       private final @Nullable Output<String> attachmentTarget;
 
-    public Output<String> getAttachmentTarget() {
-        return this.attachmentTarget == null ? Output.empty() : this.attachmentTarget;
+    public Output<String> attachmentTarget() {
+        return this.attachmentTarget == null ? Codegen.empty() : this.attachmentTarget;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="firewallPolicy")
       private final @Nullable Output<String> firewallPolicy;
 
-    public Output<String> getFirewallPolicy() {
-        return this.firewallPolicy == null ? Output.empty() : this.firewallPolicy;
+    public Output<String> firewallPolicy() {
+        return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
-        return this.shortName == null ? Output.empty() : this.shortName;
+    public Output<String> shortName() {
+        return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
     public FirewallPolicyAssociationState(
@@ -70,10 +71,10 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     }
 
     private FirewallPolicyAssociationState() {
-        this.attachmentTarget = Output.empty();
-        this.firewallPolicy = Output.empty();
-        this.name = Output.empty();
-        this.shortName = Output.empty();
+        this.attachmentTarget = Codegen.empty();
+        this.firewallPolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.shortName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder attachmentTarget(@Nullable String attachmentTarget) {
-            this.attachmentTarget = Output.ofNullable(attachmentTarget);
+            this.attachmentTarget = Codegen.ofNullable(attachmentTarget);
             return this;
         }
         public Builder firewallPolicy(@Nullable Output<String> firewallPolicy) {
@@ -115,7 +116,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder firewallPolicy(@Nullable String firewallPolicy) {
-            this.firewallPolicy = Output.ofNullable(firewallPolicy);
+            this.firewallPolicy = Codegen.ofNullable(firewallPolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -123,7 +124,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder shortName(@Nullable Output<String> shortName) {
@@ -131,7 +132,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Output.ofNullable(shortName);
+            this.shortName = Codegen.ofNullable(shortName);
             return this;
         }        public FirewallPolicyAssociationState build() {
             return new FirewallPolicyAssociationState(attachmentTarget, firewallPolicy, name, shortName);

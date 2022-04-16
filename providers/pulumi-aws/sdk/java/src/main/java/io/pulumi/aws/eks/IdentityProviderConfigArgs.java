@@ -6,6 +6,7 @@ package io.pulumi.aws.eks;
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -34,7 +35,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     @Import(name="oidc", required=true)
       private final Output<IdentityProviderConfigOidcArgs> oidc;
 
-    public Output<IdentityProviderConfigOidcArgs> getOidc() {
+    public Output<IdentityProviderConfigOidcArgs> oidc() {
         return this.oidc;
     }
 
@@ -45,8 +46,8 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IdentityProviderConfigArgs(
@@ -59,9 +60,9 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     }
 
     private IdentityProviderConfigArgs() {
-        this.clusterName = Output.empty();
-        this.oidc = Output.empty();
-        this.tags = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.oidc = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IdentityProviderConfigArgs build() {
             return new IdentityProviderConfigArgs(clusterName, oidc, tags);

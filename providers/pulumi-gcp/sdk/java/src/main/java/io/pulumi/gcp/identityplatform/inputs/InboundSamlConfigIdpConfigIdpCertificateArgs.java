@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class InboundSamlConfigIdpConfigIdpCertificateArgs extends io.pulum
     @Import(name="x509Certificate")
       private final @Nullable Output<String> x509Certificate;
 
-    public Output<String> getX509Certificate() {
-        return this.x509Certificate == null ? Output.empty() : this.x509Certificate;
+    public Output<String> x509Certificate() {
+        return this.x509Certificate == null ? Codegen.empty() : this.x509Certificate;
     }
 
     public InboundSamlConfigIdpConfigIdpCertificateArgs(@Nullable Output<String> x509Certificate) {
@@ -31,7 +32,7 @@ public final class InboundSamlConfigIdpConfigIdpCertificateArgs extends io.pulum
     }
 
     private InboundSamlConfigIdpConfigIdpCertificateArgs() {
-        this.x509Certificate = Output.empty();
+        this.x509Certificate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class InboundSamlConfigIdpConfigIdpCertificateArgs extends io.pulum
             return this;
         }
         public Builder x509Certificate(@Nullable String x509Certificate) {
-            this.x509Certificate = Output.ofNullable(x509Certificate);
+            this.x509Certificate = Codegen.ofNullable(x509Certificate);
             return this;
         }        public InboundSamlConfigIdpConfigIdpCertificateArgs build() {
             return new InboundSamlConfigIdpConfigIdpCertificateArgs(x509Certificate);

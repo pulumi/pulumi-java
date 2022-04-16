@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.ThrottlingMetricArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,22 +20,22 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
     @Import(name="metrics", required=true)
       private final Output<List<ThrottlingMetricArgs>> metrics;
 
-    public Output<List<ThrottlingMetricArgs>> getMetrics() {
+    public Output<List<ThrottlingMetricArgs>> metrics() {
         return this.metrics;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
+    public Output<List<String>> requiredFeatures() {
+        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     public ThrottlingRuleArgs(
@@ -47,9 +48,9 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThrottlingRuleArgs() {
-        this.action = Output.empty();
-        this.metrics = Output.empty();
-        this.requiredFeatures = Output.empty();
+        this.action = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.requiredFeatures = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Output.ofNullable(requiredFeatures);
+            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
             return this;
         }
         public Builder requiredFeatures(String... requiredFeatures) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.msk.inputs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class ClusterLoggingInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="brokerLogs", required=true)
       private final Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
 
-    public Output<ClusterLoggingInfoBrokerLogsArgs> getBrokerLogs() {
+    public Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs() {
         return this.brokerLogs;
     }
 
@@ -29,7 +30,7 @@ public final class ClusterLoggingInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ClusterLoggingInfoArgs() {
-        this.brokerLogs = Output.empty();
+        this.brokerLogs = Codegen.empty();
     }
 
     public static Builder builder() {

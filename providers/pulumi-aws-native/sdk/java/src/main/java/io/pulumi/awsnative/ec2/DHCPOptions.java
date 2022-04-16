@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.DHCPOptionsTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
     @Export(name="dhcpOptionsId", type=String.class, parameters={})
     private Output<String> dhcpOptionsId;
 
-    public Output<String> getDhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
@@ -37,7 +38,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
      * @return This value is used to complete unqualified DNS hostnames.
      * 
      */
-    public Output</* @Nullable */ String> getDomainName() {
+    public Output</* @Nullable */ String> domainName() {
         return this.domainName;
     }
     /**
@@ -51,7 +52,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
      * @return The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDomainNameServers() {
+    public Output</* @Nullable */ List<String>> domainNameServers() {
         return this.domainNameServers;
     }
     /**
@@ -65,7 +66,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
      * @return The IPv4 addresses of up to four NetBIOS name servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetbiosNameServers() {
+    public Output</* @Nullable */ List<String>> netbiosNameServers() {
         return this.netbiosNameServers;
     }
     /**
@@ -79,7 +80,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
      * @return The NetBIOS node type (1, 2, 4, or 8).
      * 
      */
-    public Output</* @Nullable */ Integer> getNetbiosNodeType() {
+    public Output</* @Nullable */ Integer> netbiosNodeType() {
         return this.netbiosNodeType;
     }
     /**
@@ -93,7 +94,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
      * @return The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNtpServers() {
+    public Output</* @Nullable */ List<String>> ntpServers() {
         return this.ntpServers;
     }
     /**
@@ -107,7 +108,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
      * @return Any tags assigned to the DHCP options set.
      * 
      */
-    public Output</* @Nullable */ List<DHCPOptionsTag>> getTags() {
+    public Output</* @Nullable */ List<DHCPOptionsTag>> tags() {
         return this.tags;
     }
 
@@ -133,7 +134,7 @@ public class DHCPOptions extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DHCPOptions(String name, @Nullable DHCPOptionsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:DHCPOptions", name, args == null ? DHCPOptionsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:DHCPOptions", name, args == null ? DHCPOptionsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DHCPOptions(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

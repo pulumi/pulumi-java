@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AnalyticsApplicationOutputSchemaArgs extends io.pulumi.resour
     @Import(name="recordFormatType", required=true)
       private final Output<String> recordFormatType;
 
-    public Output<String> getRecordFormatType() {
+    public Output<String> recordFormatType() {
         return this.recordFormatType;
     }
 
@@ -29,7 +30,7 @@ public final class AnalyticsApplicationOutputSchemaArgs extends io.pulumi.resour
     }
 
     private AnalyticsApplicationOutputSchemaArgs() {
-        this.recordFormatType = Output.empty();
+        this.recordFormatType = Codegen.empty();
     }
 
     public static Builder builder() {

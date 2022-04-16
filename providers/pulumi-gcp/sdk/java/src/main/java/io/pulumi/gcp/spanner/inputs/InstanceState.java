@@ -5,6 +5,7 @@ package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<String> config;
 
-    public Output<String> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<String> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> getNumNodes() {
-        return this.numNodes == null ? Output.empty() : this.numNodes;
+    public Output<Integer> numNodes() {
+        return this.numNodes == null ? Codegen.empty() : this.numNodes;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="processingUnits")
       private final @Nullable Output<Integer> processingUnits;
 
-    public Output<Integer> getProcessingUnits() {
-        return this.processingUnits == null ? Output.empty() : this.processingUnits;
+    public Output<Integer> processingUnits() {
+        return this.processingUnits == null ? Codegen.empty() : this.processingUnits;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public InstanceState(
@@ -151,15 +152,15 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.config = Output.empty();
-        this.displayName = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.numNodes = Output.empty();
-        this.processingUnits = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
+        this.config = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.numNodes = Codegen.empty();
+        this.processingUnits = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -203,7 +204,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable String config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -211,7 +212,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -219,7 +220,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -227,7 +228,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -235,7 +236,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
@@ -243,7 +244,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Output.ofNullable(numNodes);
+            this.numNodes = Codegen.ofNullable(numNodes);
             return this;
         }
         public Builder processingUnits(@Nullable Output<Integer> processingUnits) {
@@ -251,7 +252,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder processingUnits(@Nullable Integer processingUnits) {
-            this.processingUnits = Output.ofNullable(processingUnits);
+            this.processingUnits = Codegen.ofNullable(processingUnits);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -259,7 +260,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -267,7 +268,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public InstanceState build() {
             return new InstanceState(config, displayName, forceDestroy, labels, name, numNodes, processingUnits, project, state);

@@ -3,10 +3,11 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketObjectArgs;
 import io.pulumi.gcp.storage.inputs.BucketObjectState;
@@ -44,7 +45,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The name of the containing bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -60,7 +61,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
      * 
      */
-    public Output</* @Nullable */ String> getCacheControl() {
+    public Output</* @Nullable */ String> cacheControl() {
         return this.cacheControl;
     }
     /**
@@ -74,7 +75,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
      * 
      */
-    public Output</* @Nullable */ String> getContent() {
+    public Output</* @Nullable */ String> content() {
         return this.content;
     }
     /**
@@ -88,7 +89,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
      * 
      */
-    public Output</* @Nullable */ String> getContentDisposition() {
+    public Output</* @Nullable */ String> contentDisposition() {
         return this.contentDisposition;
     }
     /**
@@ -102,7 +103,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
      * 
      */
-    public Output</* @Nullable */ String> getContentEncoding() {
+    public Output</* @Nullable */ String> contentEncoding() {
         return this.contentEncoding;
     }
     /**
@@ -116,7 +117,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
      * 
      */
-    public Output</* @Nullable */ String> getContentLanguage() {
+    public Output</* @Nullable */ String> contentLanguage() {
         return this.contentLanguage;
     }
     /**
@@ -130,7 +131,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -144,7 +145,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return (Computed) Base 64 CRC32 hash of the uploaded data.
      * 
      */
-    public Output<String> getCrc32c() {
+    public Output<String> crc32c() {
         return this.crc32c;
     }
     /**
@@ -160,13 +161,13 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketObjectCustomerEncryption> getCustomerEncryption() {
+    public Output</* @Nullable */ BucketObjectCustomerEncryption> customerEncryption() {
         return this.customerEncryption;
     }
     @Export(name="detectMd5hash", type=String.class, parameters={})
     private Output</* @Nullable */ String> detectMd5hash;
 
-    public Output</* @Nullable */ String> getDetectMd5hash() {
+    public Output</* @Nullable */ String> detectMd5hash() {
         return this.detectMd5hash;
     }
     /**
@@ -184,7 +185,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * will be subject to bucket-level retention (if any).
      * 
      */
-    public Output</* @Nullable */ Boolean> getEventBasedHold() {
+    public Output</* @Nullable */ Boolean> eventBasedHold() {
         return this.eventBasedHold;
     }
     /**
@@ -198,7 +199,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
      * 
      */
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -212,7 +213,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return (Computed) Base 64 MD5 hash of the uploaded data.
      * 
      */
-    public Output<String> getMd5hash() {
+    public Output<String> md5hash() {
         return this.md5hash;
     }
     /**
@@ -226,7 +227,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return (Computed) A url reference to download this object.
      * 
      */
-    public Output<String> getMediaLink() {
+    public Output<String> mediaLink() {
         return this.mediaLink;
     }
     /**
@@ -240,7 +241,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return User-provided metadata, in key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -254,7 +255,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The name of the object. If you're interpolating the name of this object, see `output_name` instead.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -270,7 +271,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * `gcp.storage.ObjectACL` resources when your `gcp.storage.BucketObject` is recreated.
      * 
      */
-    public Output<String> getOutputName() {
+    public Output<String> outputName() {
         return this.outputName;
     }
     /**
@@ -284,7 +285,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return (Computed) A url reference to this object.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -300,7 +301,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * if `content` is not.
      * 
      */
-    public Output</* @Nullable */ AssetOrArchive> getSource() {
+    public Output</* @Nullable */ AssetOrArchive> source() {
         return this.source;
     }
     /**
@@ -318,7 +319,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
      */
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
     /**
@@ -334,7 +335,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * overwrites.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTemporaryHold() {
+    public Output</* @Nullable */ Boolean> temporaryHold() {
         return this.temporaryHold;
     }
 
@@ -360,7 +361,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketObject(String name, BucketObjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/bucketObject:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/bucketObject:BucketObject", name, args == null ? BucketObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketObject(String name, Output<String> id, @Nullable BucketObjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

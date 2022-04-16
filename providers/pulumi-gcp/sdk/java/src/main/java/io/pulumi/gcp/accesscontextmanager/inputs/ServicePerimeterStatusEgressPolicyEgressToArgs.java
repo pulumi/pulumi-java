@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyEgressToOperationArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
     @Import(name="operations")
       private final @Nullable Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
 
-    public Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> getOperations() {
-        return this.operations == null ? Output.empty() : this.operations;
+    public Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations() {
+        return this.operations == null ? Codegen.empty() : this.operations;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<String>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     public ServicePerimeterStatusEgressPolicyEgressToArgs(
@@ -52,8 +53,8 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
     }
 
     private ServicePerimeterStatusEgressPolicyEgressToArgs() {
-        this.operations = Output.empty();
-        this.resources = Output.empty();
+        this.operations = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
             return this;
         }
         public Builder operations(@Nullable List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs> operations) {
-            this.operations = Output.ofNullable(operations);
+            this.operations = Codegen.ofNullable(operations);
             return this;
         }
         public Builder operations(ServicePerimeterStatusEgressPolicyEgressToOperationArgs... operations) {
@@ -94,7 +95,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {

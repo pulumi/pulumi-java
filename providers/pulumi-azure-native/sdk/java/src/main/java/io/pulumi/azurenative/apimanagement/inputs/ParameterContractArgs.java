@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<String> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,8 +61,8 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
-    public Output<Boolean> getRequired() {
-        return this.required == null ? Output.empty() : this.required;
+    public Output<Boolean> required() {
+        return this.required == null ? Codegen.empty() : this.required;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,8 +83,8 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ParameterContractArgs(
@@ -102,12 +103,12 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ParameterContractArgs() {
-        this.defaultValue = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.required = Output.empty();
-        this.type = Output.empty();
-        this.values = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.required = Codegen.empty();
+        this.type = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -153,7 +154,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -169,7 +170,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder required(@Nullable Boolean required) {
-            this.required = Output.ofNullable(required);
+            this.required = Codegen.ofNullable(required);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -185,7 +186,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

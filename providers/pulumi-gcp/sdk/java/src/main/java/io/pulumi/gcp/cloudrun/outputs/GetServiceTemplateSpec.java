@@ -36,22 +36,22 @@ public final class GetServiceTemplateSpec {
         this.volumes = volumes;
     }
 
-    public Integer getContainerConcurrency() {
+    public Integer containerConcurrency() {
         return this.containerConcurrency;
     }
-    public List<GetServiceTemplateSpecContainer> getContainers() {
+    public List<GetServiceTemplateSpecContainer> containers() {
         return this.containers;
     }
-    public String getServiceAccountName() {
+    public String serviceAccountName() {
         return this.serviceAccountName;
     }
-    public String getServingState() {
+    public String servingState() {
         return this.servingState;
     }
-    public Integer getTimeoutSeconds() {
+    public Integer timeoutSeconds() {
         return this.timeoutSeconds;
     }
-    public List<GetServiceTemplateSpecVolume> getVolumes() {
+    public List<GetServiceTemplateSpecVolume> volumes() {
         return this.volumes;
     }
 

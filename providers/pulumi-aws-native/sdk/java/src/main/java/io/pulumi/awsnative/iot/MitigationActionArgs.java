@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.MitigationActionActionParamsArgs;
 import io.pulumi.awsnative.iot.inputs.MitigationActionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,21 +25,21 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="actionName")
       private final @Nullable Output<String> actionName;
 
-    public Output<String> getActionName() {
-        return this.actionName == null ? Output.empty() : this.actionName;
+    public Output<String> actionName() {
+        return this.actionName == null ? Codegen.empty() : this.actionName;
     }
 
     @Import(name="actionParams", required=true)
       private final Output<MitigationActionActionParamsArgs> actionParams;
 
-    public Output<MitigationActionActionParamsArgs> getActionParams() {
+    public Output<MitigationActionActionParamsArgs> actionParams() {
         return this.actionParams;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -49,8 +50,8 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<MitigationActionTagArgs>> tags;
 
-    public Output<List<MitigationActionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<MitigationActionTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MitigationActionArgs(
@@ -65,10 +66,10 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MitigationActionArgs() {
-        this.actionName = Output.empty();
-        this.actionParams = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.actionName = Codegen.empty();
+        this.actionParams = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder actionName(@Nullable String actionName) {
-            this.actionName = Output.ofNullable(actionName);
+            this.actionName = Codegen.ofNullable(actionName);
             return this;
         }
         public Builder actionParams(Output<MitigationActionActionParamsArgs> actionParams) {
@@ -126,7 +127,7 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable List<MitigationActionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(MitigationActionTagArgs... tags) {

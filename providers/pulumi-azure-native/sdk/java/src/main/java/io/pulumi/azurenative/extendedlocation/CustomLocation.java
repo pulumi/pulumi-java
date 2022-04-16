@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return This is optional input that contains the authentication that should be used to generate the namespace.
      * 
      */
-    public Output</* @Nullable */ CustomLocationPropertiesResponseAuthentication> getAuthentication() {
+    public Output</* @Nullable */ CustomLocationPropertiesResponseAuthentication> authentication() {
         return this.authentication;
     }
     /**
@@ -58,7 +59,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Contains the reference to the add-on that contains charts to deploy CRDs and operators.
      * 
      */
-    public Output</* @Nullable */ List<String>> getClusterExtensionIds() {
+    public Output</* @Nullable */ List<String>> clusterExtensionIds() {
         return this.clusterExtensionIds;
     }
     /**
@@ -72,7 +73,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Display name for the Custom Locations location.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -86,7 +87,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
      * 
      */
-    public Output</* @Nullable */ String> getHostResourceId() {
+    public Output</* @Nullable */ String> hostResourceId() {
         return this.hostResourceId;
     }
     /**
@@ -100,7 +101,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Type of host the Custom Locations is referencing (Kubernetes, etc...).
      * 
      */
-    public Output</* @Nullable */ String> getHostType() {
+    public Output</* @Nullable */ String> hostType() {
         return this.hostType;
     }
     /**
@@ -114,7 +115,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -128,7 +129,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Kubernetes namespace that will be created on the specified cluster.
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
     /**
@@ -156,7 +157,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Provisioning State for the Custom Location.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -170,7 +171,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -184,7 +185,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -198,7 +199,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -224,7 +225,7 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomLocation(String name, CustomLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:extendedlocation:CustomLocation", name, args == null ? CustomLocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:extendedlocation:CustomLocation", name, args == null ? CustomLocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomLocation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

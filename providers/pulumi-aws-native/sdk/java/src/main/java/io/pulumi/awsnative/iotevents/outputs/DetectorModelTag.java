@@ -32,14 +32,14 @@ public final class DetectorModelTag {
      * Key of the Tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Value of the Tag.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentOverridesArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantValuesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="overrides")
       private final @Nullable Output<ComponentOverridesArgs> overrides;
 
-    public Output<ComponentOverridesArgs> getOverrides() {
-        return this.overrides == null ? Output.empty() : this.overrides;
+    public Output<ComponentOverridesArgs> overrides() {
+        return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     @Import(name="variantValues")
       private final @Nullable Output<ComponentVariantValuesArgs> variantValues;
 
-    public Output<ComponentVariantValuesArgs> getVariantValues() {
-        return this.variantValues == null ? Output.empty() : this.variantValues;
+    public Output<ComponentVariantValuesArgs> variantValues() {
+        return this.variantValues == null ? Codegen.empty() : this.variantValues;
     }
 
     public ComponentVariantArgs(
@@ -37,8 +38,8 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ComponentVariantArgs() {
-        this.overrides = Output.empty();
-        this.variantValues = Output.empty();
+        this.overrides = Codegen.empty();
+        this.variantValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder overrides(@Nullable ComponentOverridesArgs overrides) {
-            this.overrides = Output.ofNullable(overrides);
+            this.overrides = Codegen.ofNullable(overrides);
             return this;
         }
         public Builder variantValues(@Nullable Output<ComponentVariantValuesArgs> variantValues) {
@@ -76,7 +77,7 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder variantValues(@Nullable ComponentVariantValuesArgs variantValues) {
-            this.variantValues = Output.ofNullable(variantValues);
+            this.variantValues = Codegen.ofNullable(variantValues);
             return this;
         }        public ComponentVariantArgs build() {
             return new ComponentVariantArgs(overrides, variantValues);

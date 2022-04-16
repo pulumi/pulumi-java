@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit;
     }
 
@@ -33,8 +34,8 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="offset")
       private final @Nullable Output<Integer> offset;
 
-    public Output<Integer> getOffset() {
-        return this.offset == null ? Output.empty() : this.offset;
+    public Output<Integer> offset() {
+        return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="period", required=true)
       private final Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period;
     }
 
@@ -58,9 +59,9 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private UsagePlanQuotaSettingsArgs() {
-        this.limit = Output.empty();
-        this.offset = Output.empty();
-        this.period = Output.empty();
+        this.limit = Codegen.empty();
+        this.offset = Codegen.empty();
+        this.period = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder offset(@Nullable Integer offset) {
-            this.offset = Output.ofNullable(offset);
+            this.offset = Codegen.ofNullable(offset);
             return this;
         }
         public Builder period(Output<String> period) {

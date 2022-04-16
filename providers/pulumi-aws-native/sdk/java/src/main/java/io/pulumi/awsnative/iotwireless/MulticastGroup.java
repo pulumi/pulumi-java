@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotwireless.outputs.MulticastGroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return Multicast group arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return Wireless device to associate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> getAssociateWirelessDevice() {
+    public Output</* @Nullable */ String> associateWirelessDevice() {
         return this.associateWirelessDevice;
     }
     /**
@@ -59,7 +60,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return Multicast group description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return Wireless device to disassociate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> getDisassociateWirelessDevice() {
+    public Output</* @Nullable */ String> disassociateWirelessDevice() {
         return this.disassociateWirelessDevice;
     }
     /**
@@ -87,7 +88,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return Multicast group LoRaWAN
      * 
      */
-    public Output<MulticastGroupLoRaWAN> getLoRaWAN() {
+    public Output<MulticastGroupLoRaWAN> loRaWAN() {
         return this.loRaWAN;
     }
     /**
@@ -101,7 +102,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return Name of Multicast group
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return Multicast group status. Returned after successful read.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -129,7 +130,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the Multicast group.
      * 
      */
-    public Output</* @Nullable */ List<MulticastGroupTag>> getTags() {
+    public Output</* @Nullable */ List<MulticastGroupTag>> tags() {
         return this.tags;
     }
 
@@ -155,7 +156,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MulticastGroup(String name, MulticastGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotwireless:MulticastGroup", name, args == null ? MulticastGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotwireless:MulticastGroup", name, args == null ? MulticastGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MulticastGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

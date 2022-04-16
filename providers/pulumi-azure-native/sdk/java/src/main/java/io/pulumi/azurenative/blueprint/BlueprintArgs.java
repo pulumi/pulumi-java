@@ -9,6 +9,7 @@ import io.pulumi.azurenative.blueprint.inputs.ResourceGroupDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blueprintName")
       private final @Nullable Output<String> blueprintName;
 
-    public Output<String> getBlueprintName() {
-        return this.blueprintName == null ? Output.empty() : this.blueprintName;
+    public Output<String> blueprintName() {
+        return this.blueprintName == null ? Codegen.empty() : this.blueprintName;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterDefinitionArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroups")
       private final @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
 
-    public Output<Map<String,ResourceGroupDefinitionArgs>> getResourceGroups() {
-        return this.resourceGroups == null ? Output.empty() : this.resourceGroups;
+    public Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups() {
+        return this.resourceGroups == null ? Codegen.empty() : this.resourceGroups;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
-    public Output<String> getResourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -93,7 +94,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetScope", required=true)
       private final Output<Either<String,BlueprintTargetScope>> targetScope;
 
-    public Output<Either<String,BlueprintTargetScope>> getTargetScope() {
+    public Output<Either<String,BlueprintTargetScope>> targetScope() {
         return this.targetScope;
     }
 
@@ -104,8 +105,8 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versions")
       private final @Nullable Output<Object> versions;
 
-    public Output<Object> getVersions() {
-        return this.versions == null ? Output.empty() : this.versions;
+    public Output<Object> versions() {
+        return this.versions == null ? Codegen.empty() : this.versions;
     }
 
     public BlueprintArgs(
@@ -128,14 +129,14 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BlueprintArgs() {
-        this.blueprintName = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroups = Output.empty();
-        this.resourceScope = Output.empty();
-        this.targetScope = Output.empty();
-        this.versions = Output.empty();
+        this.blueprintName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroups = Codegen.empty();
+        this.resourceScope = Codegen.empty();
+        this.targetScope = Codegen.empty();
+        this.versions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blueprintName(@Nullable String blueprintName) {
-            this.blueprintName = Output.ofNullable(blueprintName);
+            this.blueprintName = Codegen.ofNullable(blueprintName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -185,7 +186,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -193,7 +194,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionArgs>> parameters) {
@@ -201,7 +202,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterDefinitionArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroups(@Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups) {
@@ -209,7 +210,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
-            this.resourceGroups = Output.ofNullable(resourceGroups);
+            this.resourceGroups = Codegen.ofNullable(resourceGroups);
             return this;
         }
         public Builder resourceScope(Output<String> resourceScope) {
@@ -233,7 +234,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versions(@Nullable Object versions) {
-            this.versions = Output.ofNullable(versions);
+            this.versions = Codegen.ofNullable(versions);
             return this;
         }        public BlueprintArgs build() {
             return new BlueprintArgs(blueprintName, description, displayName, parameters, resourceGroups, resourceScope, targetScope, versions);

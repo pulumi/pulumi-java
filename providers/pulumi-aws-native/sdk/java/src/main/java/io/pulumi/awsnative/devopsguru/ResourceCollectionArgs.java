@@ -6,6 +6,7 @@ package io.pulumi.awsnative.devopsguru;
 import io.pulumi.awsnative.devopsguru.inputs.ResourceCollectionFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -16,7 +17,7 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceCollectionFilter", required=true)
       private final Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
 
-    public Output<ResourceCollectionFilterArgs> getResourceCollectionFilter() {
+    public Output<ResourceCollectionFilterArgs> resourceCollectionFilter() {
         return this.resourceCollectionFilter;
     }
 
@@ -25,7 +26,7 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourceCollectionArgs() {
-        this.resourceCollectionFilter = Output.empty();
+        this.resourceCollectionFilter = Codegen.empty();
     }
 
     public static Builder builder() {

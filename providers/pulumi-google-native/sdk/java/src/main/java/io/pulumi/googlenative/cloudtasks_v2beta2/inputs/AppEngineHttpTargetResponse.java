@@ -23,7 +23,7 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
     @Import(name="appEngineRoutingOverride", required=true)
       private final AppEngineRoutingResponse appEngineRoutingOverride;
 
-    public AppEngineRoutingResponse getAppEngineRoutingOverride() {
+    public AppEngineRoutingResponse appEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
     }
 

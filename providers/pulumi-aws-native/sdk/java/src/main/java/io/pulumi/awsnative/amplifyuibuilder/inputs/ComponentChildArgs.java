@@ -6,6 +6,7 @@ package io.pulumi.awsnative.amplifyuibuilder.inputs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,28 +20,28 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="children")
       private final @Nullable Output<List<ComponentChildArgs>> children;
 
-    public Output<List<ComponentChildArgs>> getChildren() {
-        return this.children == null ? Output.empty() : this.children;
+    public Output<List<ComponentChildArgs>> children() {
+        return this.children == null ? Codegen.empty() : this.children;
     }
 
     @Import(name="componentType", required=true)
       private final Output<String> componentType;
 
-    public Output<String> getComponentType() {
+    public Output<String> componentType() {
         return this.componentType;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="properties", required=true)
       private final Output<ComponentPropertiesArgs> properties;
 
-    public Output<ComponentPropertiesArgs> getProperties() {
+    public Output<ComponentPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -56,10 +57,10 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComponentChildArgs() {
-        this.children = Output.empty();
-        this.componentType = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
+        this.children = Codegen.empty();
+        this.componentType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder children(@Nullable List<ComponentChildArgs> children) {
-            this.children = Output.ofNullable(children);
+            this.children = Codegen.ofNullable(children);
             return this;
         }
         public Builder children(ComponentChildArgs... children) {

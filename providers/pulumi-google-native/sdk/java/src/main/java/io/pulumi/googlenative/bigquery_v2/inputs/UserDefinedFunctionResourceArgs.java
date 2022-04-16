@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
     @Import(name="inlineCode")
       private final @Nullable Output<String> inlineCode;
 
-    public Output<String> getInlineCode() {
-        return this.inlineCode == null ? Output.empty() : this.inlineCode;
+    public Output<String> inlineCode() {
+        return this.inlineCode == null ? Codegen.empty() : this.inlineCode;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
-        return this.resourceUri == null ? Output.empty() : this.resourceUri;
+    public Output<String> resourceUri() {
+        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
     public UserDefinedFunctionResourceArgs(
@@ -48,8 +49,8 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
     }
 
     private UserDefinedFunctionResourceArgs() {
-        this.inlineCode = Output.empty();
-        this.resourceUri = Output.empty();
+        this.inlineCode = Codegen.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder inlineCode(@Nullable String inlineCode) {
-            this.inlineCode = Output.ofNullable(inlineCode);
+            this.inlineCode = Codegen.ofNullable(inlineCode);
             return this;
         }
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
@@ -87,7 +88,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Output.ofNullable(resourceUri);
+            this.resourceUri = Codegen.ofNullable(resourceUri);
             return this;
         }        public UserDefinedFunctionResourceArgs build() {
             return new UserDefinedFunctionResourceArgs(inlineCode, resourceUri);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minReceiveInterval")
       private final @Nullable Output<Integer> minReceiveInterval;
 
-    public Output<Integer> getMinReceiveInterval() {
-        return this.minReceiveInterval == null ? Output.empty() : this.minReceiveInterval;
+    public Output<Integer> minReceiveInterval() {
+        return this.minReceiveInterval == null ? Codegen.empty() : this.minReceiveInterval;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTransmitInterval")
       private final @Nullable Output<Integer> minTransmitInterval;
 
-    public Output<Integer> getMinTransmitInterval() {
-        return this.minTransmitInterval == null ? Output.empty() : this.minTransmitInterval;
+    public Output<Integer> minTransmitInterval() {
+        return this.minTransmitInterval == null ? Codegen.empty() : this.minTransmitInterval;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiplier")
       private final @Nullable Output<Integer> multiplier;
 
-    public Output<Integer> getMultiplier() {
-        return this.multiplier == null ? Output.empty() : this.multiplier;
+    public Output<Integer> multiplier() {
+        return this.multiplier == null ? Codegen.empty() : this.multiplier;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionInitializationMode", required=true)
       private final Output<String> sessionInitializationMode;
 
-    public Output<String> getSessionInitializationMode() {
+    public Output<String> sessionInitializationMode() {
         return this.sessionInitializationMode;
     }
 
@@ -86,10 +87,10 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterPeerBfdArgs() {
-        this.minReceiveInterval = Output.empty();
-        this.minTransmitInterval = Output.empty();
-        this.multiplier = Output.empty();
-        this.sessionInitializationMode = Output.empty();
+        this.minReceiveInterval = Codegen.empty();
+        this.minTransmitInterval = Codegen.empty();
+        this.multiplier = Codegen.empty();
+        this.sessionInitializationMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minReceiveInterval(@Nullable Integer minReceiveInterval) {
-            this.minReceiveInterval = Output.ofNullable(minReceiveInterval);
+            this.minReceiveInterval = Codegen.ofNullable(minReceiveInterval);
             return this;
         }
         public Builder minTransmitInterval(@Nullable Output<Integer> minTransmitInterval) {
@@ -131,7 +132,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
-            this.minTransmitInterval = Output.ofNullable(minTransmitInterval);
+            this.minTransmitInterval = Codegen.ofNullable(minTransmitInterval);
             return this;
         }
         public Builder multiplier(@Nullable Output<Integer> multiplier) {
@@ -139,7 +140,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multiplier(@Nullable Integer multiplier) {
-            this.multiplier = Output.ofNullable(multiplier);
+            this.multiplier = Codegen.ofNullable(multiplier);
             return this;
         }
         public Builder sessionInitializationMode(Output<String> sessionInitializationMode) {

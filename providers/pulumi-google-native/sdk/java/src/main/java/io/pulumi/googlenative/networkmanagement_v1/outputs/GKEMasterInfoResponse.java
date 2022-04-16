@@ -46,28 +46,28 @@ public final class GKEMasterInfoResponse {
      * URI of a GKE cluster network.
      * 
     */
-    public String getClusterNetworkUri() {
+    public String clusterNetworkUri() {
         return this.clusterNetworkUri;
     }
     /**
      * URI of a GKE cluster.
      * 
     */
-    public String getClusterUri() {
+    public String clusterUri() {
         return this.clusterUri;
     }
     /**
      * External IP address of a GKE cluster master.
      * 
     */
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
     /**
      * Internal IP address of a GKE cluster master.
      * 
     */
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
 

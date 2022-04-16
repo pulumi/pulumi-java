@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="control", required=true)
       private final Output<String> control;
 
-    public Output<String> getControl() {
+    public Output<String> control() {
         return this.control;
     }
 
@@ -32,14 +33,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -50,14 +51,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metricLabels", required=true)
       private final Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
 
-    public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> getMetricLabels() {
+    public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels() {
         return this.metricLabels;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -68,7 +69,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -79,7 +80,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="treatment", required=true)
       private final Output<String> treatment;
 
-    public Output<String> getTreatment() {
+    public Output<String> treatment() {
         return this.treatment;
     }
 
@@ -101,13 +102,13 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CanaryEvaluationArgs() {
-        this.control = Output.empty();
-        this.endTime = Output.empty();
-        this.instanceId = Output.empty();
-        this.metricLabels = Output.empty();
-        this.organizationId = Output.empty();
-        this.startTime = Output.empty();
-        this.treatment = Output.empty();
+        this.control = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.metricLabels = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.treatment = Codegen.empty();
     }
 
     public static Builder builder() {

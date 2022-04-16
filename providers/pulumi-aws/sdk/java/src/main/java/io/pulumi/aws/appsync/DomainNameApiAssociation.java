@@ -9,6 +9,7 @@ import io.pulumi.aws.appsync.inputs.DomainNameApiAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
      * @return The API ID.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -53,7 +54,7 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
      * @return The Appsync domain name.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -79,7 +80,7 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainNameApiAssociation(String name, DomainNameApiAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/domainNameApiAssociation:DomainNameApiAssociation", name, args == null ? DomainNameApiAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/domainNameApiAssociation:DomainNameApiAssociation", name, args == null ? DomainNameApiAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainNameApiAssociation(String name, Output<String> id, @Nullable DomainNameApiAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

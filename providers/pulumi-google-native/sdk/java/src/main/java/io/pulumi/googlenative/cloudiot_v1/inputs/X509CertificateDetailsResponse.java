@@ -23,7 +23,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
     @Import(name="expiryTime", required=true)
       private final String expiryTime;
 
-    public String getExpiryTime() {
+    public String expiryTime() {
         return this.expiryTime;
     }
 
@@ -34,7 +34,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -45,7 +45,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
     @Import(name="publicKeyType", required=true)
       private final String publicKeyType;
 
-    public String getPublicKeyType() {
+    public String publicKeyType() {
         return this.publicKeyType;
     }
 
@@ -56,7 +56,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
     @Import(name="signatureAlgorithm", required=true)
       private final String signatureAlgorithm;
 
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 
@@ -67,7 +67,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -78,7 +78,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
     @Import(name="subject", required=true)
       private final String subject;
 
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 

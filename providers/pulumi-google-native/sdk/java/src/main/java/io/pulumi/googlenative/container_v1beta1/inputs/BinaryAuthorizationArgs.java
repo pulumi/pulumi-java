@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public BinaryAuthorizationArgs(@Nullable Output<Boolean> enabled) {
@@ -34,7 +35,7 @@ public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceA
     }
 
     private BinaryAuthorizationArgs() {
-        this.enabled = Output.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public BinaryAuthorizationArgs build() {
             return new BinaryAuthorizationArgs(enabled);

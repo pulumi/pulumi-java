@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
     @Import(name="ignoreCertificateNameMismatch", required=true)
       private final Output<Boolean> ignoreCertificateNameMismatch;
 
-    public Output<Boolean> getIgnoreCertificateNameMismatch() {
+    public Output<Boolean> ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
 
@@ -35,7 +36,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
     @Import(name="keepHttpConnectionAlive", required=true)
       private final Output<Boolean> keepHttpConnectionAlive;
 
-    public Output<Boolean> getKeepHttpConnectionAlive() {
+    public Output<Boolean> keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
 
@@ -46,7 +47,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
     @Import(name="supportHttpStatusCodeContinue", required=true)
       private final Output<Boolean> supportHttpStatusCodeContinue;
 
-    public Output<Boolean> getSupportHttpStatusCodeContinue() {
+    public Output<Boolean> supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
 
@@ -57,7 +58,7 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
     @Import(name="unfoldHttpHeaders", required=true)
       private final Output<Boolean> unfoldHttpHeaders;
 
-    public Output<Boolean> getUnfoldHttpHeaders() {
+    public Output<Boolean> unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
 
@@ -73,10 +74,10 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
     }
 
     private AS2MessageConnectionSettingsArgs() {
-        this.ignoreCertificateNameMismatch = Output.empty();
-        this.keepHttpConnectionAlive = Output.empty();
-        this.supportHttpStatusCodeContinue = Output.empty();
-        this.unfoldHttpHeaders = Output.empty();
+        this.ignoreCertificateNameMismatch = Codegen.empty();
+        this.keepHttpConnectionAlive = Codegen.empty();
+        this.supportHttpStatusCodeContinue = Codegen.empty();
+        this.unfoldHttpHeaders = Codegen.empty();
     }
 
     public static Builder builder() {

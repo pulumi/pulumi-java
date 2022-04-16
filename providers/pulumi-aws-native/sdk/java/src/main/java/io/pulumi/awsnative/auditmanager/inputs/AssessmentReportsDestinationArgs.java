@@ -6,6 +6,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 import io.pulumi.awsnative.auditmanager.enums.AssessmentReportDestinationType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,15 +23,15 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<String> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="destinationType")
       private final @Nullable Output<AssessmentReportDestinationType> destinationType;
 
-    public Output<AssessmentReportDestinationType> getDestinationType() {
-        return this.destinationType == null ? Output.empty() : this.destinationType;
+    public Output<AssessmentReportDestinationType> destinationType() {
+        return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
     public AssessmentReportsDestinationArgs(
@@ -41,8 +42,8 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
     }
 
     private AssessmentReportsDestinationArgs() {
-        this.destination = Output.empty();
-        this.destinationType = Output.empty();
+        this.destination = Codegen.empty();
+        this.destinationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder destinationType(@Nullable Output<AssessmentReportDestinationType> destinationType) {
@@ -80,7 +81,7 @@ public final class AssessmentReportsDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
-            this.destinationType = Output.ofNullable(destinationType);
+            this.destinationType = Codegen.ofNullable(destinationType);
             return this;
         }        public AssessmentReportsDestinationArgs build() {
             return new AssessmentReportsDestinationArgs(destination, destinationType);

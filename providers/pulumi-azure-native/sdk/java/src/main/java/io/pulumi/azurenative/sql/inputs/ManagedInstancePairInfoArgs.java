@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
     @Import(name="partnerManagedInstanceId")
       private final @Nullable Output<String> partnerManagedInstanceId;
 
-    public Output<String> getPartnerManagedInstanceId() {
-        return this.partnerManagedInstanceId == null ? Output.empty() : this.partnerManagedInstanceId;
+    public Output<String> partnerManagedInstanceId() {
+        return this.partnerManagedInstanceId == null ? Codegen.empty() : this.partnerManagedInstanceId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
     @Import(name="primaryManagedInstanceId")
       private final @Nullable Output<String> primaryManagedInstanceId;
 
-    public Output<String> getPrimaryManagedInstanceId() {
-        return this.primaryManagedInstanceId == null ? Output.empty() : this.primaryManagedInstanceId;
+    public Output<String> primaryManagedInstanceId() {
+        return this.primaryManagedInstanceId == null ? Codegen.empty() : this.primaryManagedInstanceId;
     }
 
     public ManagedInstancePairInfoArgs(
@@ -48,8 +49,8 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
     }
 
     private ManagedInstancePairInfoArgs() {
-        this.partnerManagedInstanceId = Output.empty();
-        this.primaryManagedInstanceId = Output.empty();
+        this.partnerManagedInstanceId = Codegen.empty();
+        this.primaryManagedInstanceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
-            this.partnerManagedInstanceId = Output.ofNullable(partnerManagedInstanceId);
+            this.partnerManagedInstanceId = Codegen.ofNullable(partnerManagedInstanceId);
             return this;
         }
         public Builder primaryManagedInstanceId(@Nullable Output<String> primaryManagedInstanceId) {
@@ -87,7 +88,7 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
-            this.primaryManagedInstanceId = Output.ofNullable(primaryManagedInstanceId);
+            this.primaryManagedInstanceId = Codegen.ofNullable(primaryManagedInstanceId);
             return this;
         }        public ManagedInstancePairInfoArgs build() {
             return new ManagedInstancePairInfoArgs(partnerManagedInstanceId, primaryManagedInstanceId);

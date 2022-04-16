@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -39,29 +40,29 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -71,15 +72,15 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
-    public Output<String> getSecurityPolicy() {
-        return this.securityPolicy == null ? Output.empty() : this.securityPolicy;
+    public Output<String> securityPolicy() {
+        return this.securityPolicy == null ? Codegen.empty() : this.securityPolicy;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+    public Output<String> validateOnly() {
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public NetworkEdgeSecurityServiceArgs(
@@ -102,14 +103,14 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     }
 
     private NetworkEdgeSecurityServiceArgs() {
-        this.description = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.securityPolicy = Output.empty();
-        this.validateOnly = Output.empty();
+        this.description = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.securityPolicy = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -159,7 +160,7 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -167,7 +168,7 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -175,7 +176,7 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -191,7 +192,7 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
@@ -199,7 +200,7 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder securityPolicy(@Nullable String securityPolicy) {
-            this.securityPolicy = Output.ofNullable(securityPolicy);
+            this.securityPolicy = Codegen.ofNullable(securityPolicy);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -207,7 +208,7 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public NetworkEdgeSecurityServiceArgs build() {
             return new NetworkEdgeSecurityServiceArgs(description, kind, name, project, region, requestId, securityPolicy, validateOnly);

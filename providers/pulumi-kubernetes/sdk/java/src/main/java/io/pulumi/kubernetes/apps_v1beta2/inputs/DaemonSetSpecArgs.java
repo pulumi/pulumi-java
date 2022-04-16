@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.DaemonSetUpdateStrategyArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -28,8 +29,8 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> getMinReadySeconds() {
-        return this.minReadySeconds == null ? Output.empty() : this.minReadySeconds;
+    public Output<Integer> minReadySeconds() {
+        return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> getRevisionHistoryLimit() {
-        return this.revisionHistoryLimit == null ? Output.empty() : this.revisionHistoryLimit;
+    public Output<Integer> revisionHistoryLimit() {
+        return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector", required=true)
       private final Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector;
     }
 
@@ -61,7 +62,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
@@ -72,8 +73,8 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateStrategy")
       private final @Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy;
 
-    public Output<DaemonSetUpdateStrategyArgs> getUpdateStrategy() {
-        return this.updateStrategy == null ? Output.empty() : this.updateStrategy;
+    public Output<DaemonSetUpdateStrategyArgs> updateStrategy() {
+        return this.updateStrategy == null ? Codegen.empty() : this.updateStrategy;
     }
 
     public DaemonSetSpecArgs(
@@ -90,11 +91,11 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DaemonSetSpecArgs() {
-        this.minReadySeconds = Output.empty();
-        this.revisionHistoryLimit = Output.empty();
-        this.selector = Output.empty();
-        this.template = Output.empty();
-        this.updateStrategy = Output.empty();
+        this.minReadySeconds = Codegen.empty();
+        this.revisionHistoryLimit = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.template = Codegen.empty();
+        this.updateStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Output.ofNullable(minReadySeconds);
+            this.minReadySeconds = Codegen.ofNullable(minReadySeconds);
             return this;
         }
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
@@ -138,7 +139,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
-            this.revisionHistoryLimit = Output.ofNullable(revisionHistoryLimit);
+            this.revisionHistoryLimit = Codegen.ofNullable(revisionHistoryLimit);
             return this;
         }
         public Builder selector(Output<LabelSelectorArgs> selector) {
@@ -162,7 +163,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateStrategy(@Nullable DaemonSetUpdateStrategyArgs updateStrategy) {
-            this.updateStrategy = Output.ofNullable(updateStrategy);
+            this.updateStrategy = Codegen.ofNullable(updateStrategy);
             return this;
         }        public DaemonSetSpecArgs build() {
             return new DaemonSetSpecArgs(minReadySeconds, revisionHistoryLimit, selector, template, updateStrategy);

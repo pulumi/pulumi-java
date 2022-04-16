@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.TargetVpnGatewayArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -43,7 +44,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return A list of URLs to the ForwardingRule resources. ForwardingRules are created using compute.forwardingRules.insert and associated with a VPN gateway.
      * 
      */
-    public Output<List<String>> getForwardingRules() {
+    public Output<List<String>> forwardingRules() {
         return this.forwardingRules;
     }
     /**
@@ -71,7 +72,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Type of resource. Always compute#targetVpnGateway for target VPN gateways.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -85,7 +86,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -113,7 +114,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return URL of the region where the target VPN gateway resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -127,7 +128,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -141,7 +142,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The status of the VPN gateway, which can be one of the following: CREATING, READY, FAILED, or DELETING.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -155,7 +156,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @return A list of URLs to VpnTunnel resources. VpnTunnels are created using the compute.vpntunnels.insert method and associated with a VPN gateway.
      * 
      */
-    public Output<List<String>> getTunnels() {
+    public Output<List<String>> tunnels() {
         return this.tunnels;
     }
 
@@ -181,7 +182,7 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetVpnGateway(String name, TargetVpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:TargetVpnGateway", name, args == null ? TargetVpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/v1:TargetVpnGateway", name, args == null ? TargetVpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetVpnGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

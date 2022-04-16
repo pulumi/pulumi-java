@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigGetArgs;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteTime")
       private final @Nullable Output<String> deleteTime;
 
-    public Output<String> getDeleteTime() {
-        return this.deleteTime == null ? Output.empty() : this.deleteTime;
+    public Output<String> deleteTime() {
+        return this.deleteTime == null ? Codegen.empty() : this.deleteTime;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
 
-    public Output<WorkerPoolNetworkConfigGetArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+    public Output<WorkerPoolNetworkConfigGetArgs> networkConfig() {
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+    public Output<String> uid() {
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
       private final @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
 
-    public Output<WorkerPoolWorkerConfigGetArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Output.empty() : this.workerConfig;
+    public Output<WorkerPoolWorkerConfigGetArgs> workerConfig() {
+        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
     public WorkerPoolState(
@@ -178,18 +179,18 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolState() {
-        this.annotations = Output.empty();
-        this.createTime = Output.empty();
-        this.deleteTime = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networkConfig = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
-        this.uid = Output.empty();
-        this.updateTime = Output.empty();
-        this.workerConfig = Output.empty();
+        this.annotations = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.deleteTime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
+        this.uid = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.workerConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -247,7 +248,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder deleteTime(@Nullable Output<String> deleteTime) {
@@ -255,7 +256,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteTime(@Nullable String deleteTime) {
-            this.deleteTime = Output.ofNullable(deleteTime);
+            this.deleteTime = Codegen.ofNullable(deleteTime);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -263,7 +264,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -271,7 +272,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -279,7 +280,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkConfig(@Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig) {
@@ -287,7 +288,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfig(@Nullable WorkerPoolNetworkConfigGetArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -295,7 +296,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -303,7 +304,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -311,7 +312,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -319,7 +320,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder workerConfig(@Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig) {
@@ -327,7 +328,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerConfig(@Nullable WorkerPoolWorkerConfigGetArgs workerConfig) {
-            this.workerConfig = Output.ofNullable(workerConfig);
+            this.workerConfig = Codegen.ofNullable(workerConfig);
             return this;
         }        public WorkerPoolState build() {
             return new WorkerPoolState(annotations, createTime, deleteTime, displayName, location, name, networkConfig, project, state, uid, updateTime, workerConfig);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceIamPolicyArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceIamPolicyState;
@@ -17,25 +18,25 @@ public class BackendServiceIamPolicy extends io.pulumi.resources.CustomResource 
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -61,7 +62,7 @@ public class BackendServiceIamPolicy extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendServiceIamPolicy(String name, BackendServiceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/backendServiceIamPolicy:BackendServiceIamPolicy", name, args == null ? BackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/backendServiceIamPolicy:BackendServiceIamPolicy", name, args == null ? BackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendServiceIamPolicy(String name, Output<String> id, @Nullable BackendServiceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

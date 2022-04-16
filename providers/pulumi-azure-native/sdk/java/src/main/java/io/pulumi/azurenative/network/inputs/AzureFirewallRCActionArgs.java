@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.AzureFirewallRCActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class AzureFirewallRCActionArgs extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,AzureFirewallRCActionType>> type;
 
-    public Output<Either<String,AzureFirewallRCActionType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,AzureFirewallRCActionType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AzureFirewallRCActionArgs(@Nullable Output<Either<String,AzureFirewallRCActionType>> type) {
@@ -36,7 +37,7 @@ public final class AzureFirewallRCActionArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureFirewallRCActionArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class AzureFirewallRCActionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder type(@Nullable Either<String,AzureFirewallRCActionType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AzureFirewallRCActionArgs build() {
             return new AzureFirewallRCActionArgs(type);

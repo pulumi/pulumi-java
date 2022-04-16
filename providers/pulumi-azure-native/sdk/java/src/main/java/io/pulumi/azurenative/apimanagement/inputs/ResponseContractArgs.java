@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.RepresentationContractArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="headers")
       private final @Nullable Output<List<ParameterContractArgs>> headers;
 
-    public Output<List<ParameterContractArgs>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<ParameterContractArgs>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="representations")
       private final @Nullable Output<List<RepresentationContractArgs>> representations;
 
-    public Output<List<RepresentationContractArgs>> getRepresentations() {
-        return this.representations == null ? Output.empty() : this.representations;
+    public Output<List<RepresentationContractArgs>> representations() {
+        return this.representations == null ? Codegen.empty() : this.representations;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="statusCode", required=true)
       private final Output<Integer> statusCode;
 
-    public Output<Integer> getStatusCode() {
+    public Output<Integer> statusCode() {
         return this.statusCode;
     }
 
@@ -78,10 +79,10 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResponseContractArgs() {
-        this.description = Output.empty();
-        this.headers = Output.empty();
-        this.representations = Output.empty();
-        this.statusCode = Output.empty();
+        this.description = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.representations = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
@@ -123,7 +124,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder headers(@Nullable List<ParameterContractArgs> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(ParameterContractArgs... headers) {
@@ -134,7 +135,7 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
-            this.representations = Output.ofNullable(representations);
+            this.representations = Codegen.ofNullable(representations);
             return this;
         }
         public Builder representations(RepresentationContractArgs... representations) {

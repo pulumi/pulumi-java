@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1beta1.AuthorizationPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.RuleResponse;
@@ -31,7 +32,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @return The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -45,7 +46,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +60,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Free-text description of the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Set of label tags associated with the AuthorizationPolicy resource.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -87,7 +88,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
      * 
      */
-    public Output<List<RuleResponse>> getRules() {
+    public Output<List<RuleResponse>> rules() {
         return this.rules;
     }
     /**
@@ -115,7 +116,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -141,7 +142,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AuthorizationPolicy(String name, AuthorizationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networksecurity/v1beta1:AuthorizationPolicy", name, args == null ? AuthorizationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networksecurity/v1beta1:AuthorizationPolicy", name, args == null ? AuthorizationPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AuthorizationPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

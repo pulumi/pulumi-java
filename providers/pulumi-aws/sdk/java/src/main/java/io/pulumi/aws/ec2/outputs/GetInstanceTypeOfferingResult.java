@@ -41,27 +41,27 @@ public final class GetInstanceTypeOfferingResult {
         this.preferredInstanceTypes = preferredInstanceTypes;
     }
 
-    public List<GetInstanceTypeOfferingFilter> getFilters() {
+    public List<GetInstanceTypeOfferingFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * EC2 Instance Type.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
-    public Optional<String> getLocationType() {
+    public Optional<String> locationType() {
         return Optional.ofNullable(this.locationType);
     }
-    public List<String> getPreferredInstanceTypes() {
+    public List<String> preferredInstanceTypes() {
         return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;
     }
 

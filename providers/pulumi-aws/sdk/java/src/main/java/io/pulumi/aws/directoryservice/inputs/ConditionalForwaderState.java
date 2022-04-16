@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
-        return this.directoryId == null ? Output.empty() : this.directoryId;
+    public Output<String> directoryId() {
+        return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
     @Import(name="dnsIps")
       private final @Nullable Output<List<String>> dnsIps;
 
-    public Output<List<String>> getDnsIps() {
-        return this.dnsIps == null ? Output.empty() : this.dnsIps;
+    public Output<List<String>> dnsIps() {
+        return this.dnsIps == null ? Codegen.empty() : this.dnsIps;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
     @Import(name="remoteDomainName")
       private final @Nullable Output<String> remoteDomainName;
 
-    public Output<String> getRemoteDomainName() {
-        return this.remoteDomainName == null ? Output.empty() : this.remoteDomainName;
+    public Output<String> remoteDomainName() {
+        return this.remoteDomainName == null ? Codegen.empty() : this.remoteDomainName;
     }
 
     public ConditionalForwaderState(
@@ -58,9 +59,9 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
     }
 
     private ConditionalForwaderState() {
-        this.directoryId = Output.empty();
-        this.dnsIps = Output.empty();
-        this.remoteDomainName = Output.empty();
+        this.directoryId = Codegen.empty();
+        this.dnsIps = Codegen.empty();
+        this.remoteDomainName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Output.ofNullable(directoryId);
+            this.directoryId = Codegen.ofNullable(directoryId);
             return this;
         }
         public Builder dnsIps(@Nullable Output<List<String>> dnsIps) {
@@ -100,7 +101,7 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dnsIps(@Nullable List<String> dnsIps) {
-            this.dnsIps = Output.ofNullable(dnsIps);
+            this.dnsIps = Codegen.ofNullable(dnsIps);
             return this;
         }
         public Builder dnsIps(String... dnsIps) {
@@ -111,7 +112,7 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder remoteDomainName(@Nullable String remoteDomainName) {
-            this.remoteDomainName = Output.ofNullable(remoteDomainName);
+            this.remoteDomainName = Codegen.ofNullable(remoteDomainName);
             return this;
         }        public ConditionalForwaderState build() {
             return new ConditionalForwaderState(directoryId, dnsIps, remoteDomainName);

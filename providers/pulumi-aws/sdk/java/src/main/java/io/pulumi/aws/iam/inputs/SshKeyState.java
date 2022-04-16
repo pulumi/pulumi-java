@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<String> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+    public Output<String> fingerprint() {
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<String> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKeyId")
       private final @Nullable Output<String> sshPublicKeyId;
 
-    public Output<String> getSshPublicKeyId() {
-        return this.sshPublicKeyId == null ? Output.empty() : this.sshPublicKeyId;
+    public Output<String> sshPublicKeyId() {
+        return this.sshPublicKeyId == null ? Codegen.empty() : this.sshPublicKeyId;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public SshKeyState(
@@ -96,12 +97,12 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshKeyState() {
-        this.encoding = Output.empty();
-        this.fingerprint = Output.empty();
-        this.publicKey = Output.empty();
-        this.sshPublicKeyId = Output.empty();
-        this.status = Output.empty();
-        this.username = Output.empty();
+        this.encoding = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.sshPublicKeyId = Codegen.empty();
+        this.status = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
@@ -147,7 +148,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -155,7 +156,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder sshPublicKeyId(@Nullable Output<String> sshPublicKeyId) {
@@ -163,7 +164,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshPublicKeyId(@Nullable String sshPublicKeyId) {
-            this.sshPublicKeyId = Output.ofNullable(sshPublicKeyId);
+            this.sshPublicKeyId = Codegen.ofNullable(sshPublicKeyId);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -171,7 +172,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -179,7 +180,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public SshKeyState build() {
             return new SshKeyState(encoding, fingerprint, publicKey, sshPublicKeyId, status, username);

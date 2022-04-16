@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return Optional ETag.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -59,7 +60,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return Input Managed Identity Details
      * 
      */
-    public Output</* @Nullable */ DppIdentityDetailsResponse> getIdentity() {
+    public Output</* @Nullable */ DppIdentityDetailsResponse> identity() {
         return this.identity;
     }
     /**
@@ -73,7 +74,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -87,7 +88,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return Resource name associated with the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return BackupVaultResource properties
      * 
      */
-    public Output<BackupVaultResponse> getProperties() {
+    public Output<BackupVaultResponse> properties() {
         return this.properties;
     }
     /**
@@ -115,7 +116,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +130,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +144,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -169,7 +170,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackupVault(String name, BackupVaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dataprotection:BackupVault", name, args == null ? BackupVaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dataprotection:BackupVault", name, args == null ? BackupVaultArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackupVault(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

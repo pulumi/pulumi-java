@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class ClusterMasterAuthClientCertificateConfigArgs extends io.pulum
     @Import(name="issueClientCertificate", required=true)
       private final Output<Boolean> issueClientCertificate;
 
-    public Output<Boolean> getIssueClientCertificate() {
+    public Output<Boolean> issueClientCertificate() {
         return this.issueClientCertificate;
     }
 
@@ -25,7 +26,7 @@ public final class ClusterMasterAuthClientCertificateConfigArgs extends io.pulum
     }
 
     private ClusterMasterAuthClientCertificateConfigArgs() {
-        this.issueClientCertificate = Output.empty();
+        this.issueClientCertificate = Codegen.empty();
     }
 
     public static Builder builder() {

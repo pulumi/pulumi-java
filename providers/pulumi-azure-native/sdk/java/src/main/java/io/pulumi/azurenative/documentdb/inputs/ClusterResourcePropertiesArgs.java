@@ -10,6 +10,7 @@ import io.pulumi.azurenative.documentdb.inputs.SeedNodeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,8 +34,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="authenticationMethod")
       private final @Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod;
 
-    public Output<Either<String,AuthenticationMethod>> getAuthenticationMethod() {
-        return this.authenticationMethod == null ? Output.empty() : this.authenticationMethod;
+    public Output<Either<String,AuthenticationMethod>> authenticationMethod() {
+        return this.authenticationMethod == null ? Codegen.empty() : this.authenticationMethod;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="cassandraVersion")
       private final @Nullable Output<String> cassandraVersion;
 
-    public Output<String> getCassandraVersion() {
-        return this.cassandraVersion == null ? Output.empty() : this.cassandraVersion;
+    public Output<String> cassandraVersion() {
+        return this.cassandraVersion == null ? Codegen.empty() : this.cassandraVersion;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="clientCertificates")
       private final @Nullable Output<List<CertificateArgs>> clientCertificates;
 
-    public Output<List<CertificateArgs>> getClientCertificates() {
-        return this.clientCertificates == null ? Output.empty() : this.clientCertificates;
+    public Output<List<CertificateArgs>> clientCertificates() {
+        return this.clientCertificates == null ? Codegen.empty() : this.clientCertificates;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="clusterNameOverride")
       private final @Nullable Output<String> clusterNameOverride;
 
-    public Output<String> getClusterNameOverride() {
-        return this.clusterNameOverride == null ? Output.empty() : this.clusterNameOverride;
+    public Output<String> clusterNameOverride() {
+        return this.clusterNameOverride == null ? Codegen.empty() : this.clusterNameOverride;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="delegatedManagementSubnetId")
       private final @Nullable Output<String> delegatedManagementSubnetId;
 
-    public Output<String> getDelegatedManagementSubnetId() {
-        return this.delegatedManagementSubnetId == null ? Output.empty() : this.delegatedManagementSubnetId;
+    public Output<String> delegatedManagementSubnetId() {
+        return this.delegatedManagementSubnetId == null ? Codegen.empty() : this.delegatedManagementSubnetId;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="externalGossipCertificates")
       private final @Nullable Output<List<CertificateArgs>> externalGossipCertificates;
 
-    public Output<List<CertificateArgs>> getExternalGossipCertificates() {
-        return this.externalGossipCertificates == null ? Output.empty() : this.externalGossipCertificates;
+    public Output<List<CertificateArgs>> externalGossipCertificates() {
+        return this.externalGossipCertificates == null ? Codegen.empty() : this.externalGossipCertificates;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="externalSeedNodes")
       private final @Nullable Output<List<SeedNodeArgs>> externalSeedNodes;
 
-    public Output<List<SeedNodeArgs>> getExternalSeedNodes() {
-        return this.externalSeedNodes == null ? Output.empty() : this.externalSeedNodes;
+    public Output<List<SeedNodeArgs>> externalSeedNodes() {
+        return this.externalSeedNodes == null ? Codegen.empty() : this.externalSeedNodes;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="hoursBetweenBackups")
       private final @Nullable Output<Integer> hoursBetweenBackups;
 
-    public Output<Integer> getHoursBetweenBackups() {
-        return this.hoursBetweenBackups == null ? Output.empty() : this.hoursBetweenBackups;
+    public Output<Integer> hoursBetweenBackups() {
+        return this.hoursBetweenBackups == null ? Codegen.empty() : this.hoursBetweenBackups;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="initialCassandraAdminPassword")
       private final @Nullable Output<String> initialCassandraAdminPassword;
 
-    public Output<String> getInitialCassandraAdminPassword() {
-        return this.initialCassandraAdminPassword == null ? Output.empty() : this.initialCassandraAdminPassword;
+    public Output<String> initialCassandraAdminPassword() {
+        return this.initialCassandraAdminPassword == null ? Codegen.empty() : this.initialCassandraAdminPassword;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="prometheusEndpoint")
       private final @Nullable Output<SeedNodeArgs> prometheusEndpoint;
 
-    public Output<SeedNodeArgs> getPrometheusEndpoint() {
-        return this.prometheusEndpoint == null ? Output.empty() : this.prometheusEndpoint;
+    public Output<SeedNodeArgs> prometheusEndpoint() {
+        return this.prometheusEndpoint == null ? Codegen.empty() : this.prometheusEndpoint;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
-    public Output<Either<String,ManagedCassandraProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ManagedCassandraProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="repairEnabled")
       private final @Nullable Output<Boolean> repairEnabled;
 
-    public Output<Boolean> getRepairEnabled() {
-        return this.repairEnabled == null ? Output.empty() : this.repairEnabled;
+    public Output<Boolean> repairEnabled() {
+        return this.repairEnabled == null ? Codegen.empty() : this.repairEnabled;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="restoreFromBackupId")
       private final @Nullable Output<String> restoreFromBackupId;
 
-    public Output<String> getRestoreFromBackupId() {
-        return this.restoreFromBackupId == null ? Output.empty() : this.restoreFromBackupId;
+    public Output<String> restoreFromBackupId() {
+        return this.restoreFromBackupId == null ? Codegen.empty() : this.restoreFromBackupId;
     }
 
     public ClusterResourcePropertiesArgs(
@@ -199,19 +200,19 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ClusterResourcePropertiesArgs() {
-        this.authenticationMethod = Output.empty();
-        this.cassandraVersion = Output.empty();
-        this.clientCertificates = Output.empty();
-        this.clusterNameOverride = Output.empty();
-        this.delegatedManagementSubnetId = Output.empty();
-        this.externalGossipCertificates = Output.empty();
-        this.externalSeedNodes = Output.empty();
-        this.hoursBetweenBackups = Output.empty();
-        this.initialCassandraAdminPassword = Output.empty();
-        this.prometheusEndpoint = Output.empty();
-        this.provisioningState = Output.empty();
-        this.repairEnabled = Output.empty();
-        this.restoreFromBackupId = Output.empty();
+        this.authenticationMethod = Codegen.empty();
+        this.cassandraVersion = Codegen.empty();
+        this.clientCertificates = Codegen.empty();
+        this.clusterNameOverride = Codegen.empty();
+        this.delegatedManagementSubnetId = Codegen.empty();
+        this.externalGossipCertificates = Codegen.empty();
+        this.externalSeedNodes = Codegen.empty();
+        this.hoursBetweenBackups = Codegen.empty();
+        this.initialCassandraAdminPassword = Codegen.empty();
+        this.prometheusEndpoint = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.repairEnabled = Codegen.empty();
+        this.restoreFromBackupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -263,7 +264,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder authenticationMethod(@Nullable Either<String,AuthenticationMethod> authenticationMethod) {
-            this.authenticationMethod = Output.ofNullable(authenticationMethod);
+            this.authenticationMethod = Codegen.ofNullable(authenticationMethod);
             return this;
         }
         public Builder cassandraVersion(@Nullable Output<String> cassandraVersion) {
@@ -271,7 +272,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder cassandraVersion(@Nullable String cassandraVersion) {
-            this.cassandraVersion = Output.ofNullable(cassandraVersion);
+            this.cassandraVersion = Codegen.ofNullable(cassandraVersion);
             return this;
         }
         public Builder clientCertificates(@Nullable Output<List<CertificateArgs>> clientCertificates) {
@@ -279,7 +280,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder clientCertificates(@Nullable List<CertificateArgs> clientCertificates) {
-            this.clientCertificates = Output.ofNullable(clientCertificates);
+            this.clientCertificates = Codegen.ofNullable(clientCertificates);
             return this;
         }
         public Builder clientCertificates(CertificateArgs... clientCertificates) {
@@ -290,7 +291,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
-            this.clusterNameOverride = Output.ofNullable(clusterNameOverride);
+            this.clusterNameOverride = Codegen.ofNullable(clusterNameOverride);
             return this;
         }
         public Builder delegatedManagementSubnetId(@Nullable Output<String> delegatedManagementSubnetId) {
@@ -298,7 +299,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
-            this.delegatedManagementSubnetId = Output.ofNullable(delegatedManagementSubnetId);
+            this.delegatedManagementSubnetId = Codegen.ofNullable(delegatedManagementSubnetId);
             return this;
         }
         public Builder externalGossipCertificates(@Nullable Output<List<CertificateArgs>> externalGossipCertificates) {
@@ -306,7 +307,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder externalGossipCertificates(@Nullable List<CertificateArgs> externalGossipCertificates) {
-            this.externalGossipCertificates = Output.ofNullable(externalGossipCertificates);
+            this.externalGossipCertificates = Codegen.ofNullable(externalGossipCertificates);
             return this;
         }
         public Builder externalGossipCertificates(CertificateArgs... externalGossipCertificates) {
@@ -317,7 +318,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder externalSeedNodes(@Nullable List<SeedNodeArgs> externalSeedNodes) {
-            this.externalSeedNodes = Output.ofNullable(externalSeedNodes);
+            this.externalSeedNodes = Codegen.ofNullable(externalSeedNodes);
             return this;
         }
         public Builder externalSeedNodes(SeedNodeArgs... externalSeedNodes) {
@@ -328,7 +329,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
-            this.hoursBetweenBackups = Output.ofNullable(hoursBetweenBackups);
+            this.hoursBetweenBackups = Codegen.ofNullable(hoursBetweenBackups);
             return this;
         }
         public Builder initialCassandraAdminPassword(@Nullable Output<String> initialCassandraAdminPassword) {
@@ -336,7 +337,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder initialCassandraAdminPassword(@Nullable String initialCassandraAdminPassword) {
-            this.initialCassandraAdminPassword = Output.ofNullable(initialCassandraAdminPassword);
+            this.initialCassandraAdminPassword = Codegen.ofNullable(initialCassandraAdminPassword);
             return this;
         }
         public Builder prometheusEndpoint(@Nullable Output<SeedNodeArgs> prometheusEndpoint) {
@@ -344,7 +345,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder prometheusEndpoint(@Nullable SeedNodeArgs prometheusEndpoint) {
-            this.prometheusEndpoint = Output.ofNullable(prometheusEndpoint);
+            this.prometheusEndpoint = Codegen.ofNullable(prometheusEndpoint);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
@@ -352,7 +353,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder repairEnabled(@Nullable Output<Boolean> repairEnabled) {
@@ -360,7 +361,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder repairEnabled(@Nullable Boolean repairEnabled) {
-            this.repairEnabled = Output.ofNullable(repairEnabled);
+            this.repairEnabled = Codegen.ofNullable(repairEnabled);
             return this;
         }
         public Builder restoreFromBackupId(@Nullable Output<String> restoreFromBackupId) {
@@ -368,7 +369,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder restoreFromBackupId(@Nullable String restoreFromBackupId) {
-            this.restoreFromBackupId = Output.ofNullable(restoreFromBackupId);
+            this.restoreFromBackupId = Codegen.ofNullable(restoreFromBackupId);
             return this;
         }        public ClusterResourcePropertiesArgs build() {
             return new ClusterResourcePropertiesArgs(authenticationMethod, cassandraVersion, clientCertificates, clusterNameOverride, delegatedManagementSubnetId, externalGossipCertificates, externalSeedNodes, hoursBetweenBackups, initialCassandraAdminPassword, prometheusEndpoint, provisioningState, repairEnabled, restoreFromBackupId);

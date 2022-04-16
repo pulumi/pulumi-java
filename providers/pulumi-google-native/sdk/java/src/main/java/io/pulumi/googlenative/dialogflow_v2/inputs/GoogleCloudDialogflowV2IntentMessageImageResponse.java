@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
     @Import(name="accessibilityText", required=true)
       private final String accessibilityText;
 
-    public String getAccessibilityText() {
+    public String accessibilityText() {
         return this.accessibilityText;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
     @Import(name="imageUri", required=true)
       private final String imageUri;
 
-    public String getImageUri() {
+    public String imageUri() {
         return this.imageUri;
     }
 

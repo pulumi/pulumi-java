@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Object> count;
 
-    public Output<Object> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Object> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
+    public Output<Integer> intervalInSeconds() {
+        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
     public RetryPolicyArgs(
@@ -49,8 +50,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RetryPolicyArgs() {
-        this.count = Output.empty();
-        this.intervalInSeconds = Output.empty();
+        this.count = Codegen.empty();
+        this.intervalInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder count(@Nullable Object count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
@@ -88,7 +89,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
             return this;
         }        public RetryPolicyArgs build() {
             return new RetryPolicyArgs(count, intervalInSeconds);

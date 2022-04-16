@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.inputs.ScaleRuleArgs;
 import io.pulumi.azurenative.insights.inputs.TimeWindowArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="capacity", required=true)
       private final Output<ScaleCapacityArgs> capacity;
 
-    public Output<ScaleCapacityArgs> getCapacity() {
+    public Output<ScaleCapacityArgs> capacity() {
         return this.capacity;
     }
 
@@ -41,8 +42,8 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fixedDate")
       private final @Nullable Output<TimeWindowArgs> fixedDate;
 
-    public Output<TimeWindowArgs> getFixedDate() {
-        return this.fixedDate == null ? Output.empty() : this.fixedDate;
+    public Output<TimeWindowArgs> fixedDate() {
+        return this.fixedDate == null ? Codegen.empty() : this.fixedDate;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -63,8 +64,8 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="recurrence")
       private final @Nullable Output<RecurrenceArgs> recurrence;
 
-    public Output<RecurrenceArgs> getRecurrence() {
-        return this.recurrence == null ? Output.empty() : this.recurrence;
+    public Output<RecurrenceArgs> recurrence() {
+        return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rules", required=true)
       private final Output<List<ScaleRuleArgs>> rules;
 
-    public Output<List<ScaleRuleArgs>> getRules() {
+    public Output<List<ScaleRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -92,11 +93,11 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AutoscaleProfileArgs() {
-        this.capacity = Output.empty();
-        this.fixedDate = Output.empty();
-        this.name = Output.empty();
-        this.recurrence = Output.empty();
-        this.rules = Output.empty();
+        this.capacity = Codegen.empty();
+        this.fixedDate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.recurrence = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fixedDate(@Nullable TimeWindowArgs fixedDate) {
-            this.fixedDate = Output.ofNullable(fixedDate);
+            this.fixedDate = Codegen.ofNullable(fixedDate);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -156,7 +157,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder recurrence(@Nullable RecurrenceArgs recurrence) {
-            this.recurrence = Output.ofNullable(recurrence);
+            this.recurrence = Codegen.ofNullable(recurrence);
             return this;
         }
         public Builder rules(Output<List<ScaleRuleArgs>> rules) {

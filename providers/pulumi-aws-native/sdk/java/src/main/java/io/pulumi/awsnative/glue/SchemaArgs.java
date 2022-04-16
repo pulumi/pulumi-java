@@ -10,6 +10,7 @@ import io.pulumi.awsnative.glue.inputs.SchemaTagArgs;
 import io.pulumi.awsnative.glue.inputs.SchemaVersionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="checkpointVersion")
       private final @Nullable Output<SchemaVersionArgs> checkpointVersion;
 
-    public Output<SchemaVersionArgs> getCheckpointVersion() {
-        return this.checkpointVersion == null ? Output.empty() : this.checkpointVersion;
+    public Output<SchemaVersionArgs> checkpointVersion() {
+        return this.checkpointVersion == null ? Codegen.empty() : this.checkpointVersion;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compatibility", required=true)
       private final Output<SchemaCompatibility> compatibility;
 
-    public Output<SchemaCompatibility> getCompatibility() {
+    public Output<SchemaCompatibility> compatibility() {
         return this.compatibility;
     }
 
@@ -45,7 +46,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataFormat", required=true)
       private final Output<SchemaDataFormat> dataFormat;
 
-    public Output<SchemaDataFormat> getDataFormat() {
+    public Output<SchemaDataFormat> dataFormat() {
         return this.dataFormat;
     }
 
@@ -56,8 +57,8 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,15 +68,15 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="registry")
       private final @Nullable Output<SchemaRegistryArgs> registry;
 
-    public Output<SchemaRegistryArgs> getRegistry() {
-        return this.registry == null ? Output.empty() : this.registry;
+    public Output<SchemaRegistryArgs> registry() {
+        return this.registry == null ? Codegen.empty() : this.registry;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaDefinition", required=true)
       private final Output<String> schemaDefinition;
 
-    public Output<String> getSchemaDefinition() {
+    public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
 
@@ -96,8 +97,8 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<SchemaTagArgs>> tags;
 
-    public Output<List<SchemaTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<SchemaTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SchemaArgs(
@@ -120,14 +121,14 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.checkpointVersion = Output.empty();
-        this.compatibility = Output.empty();
-        this.dataFormat = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.registry = Output.empty();
-        this.schemaDefinition = Output.empty();
-        this.tags = Output.empty();
+        this.checkpointVersion = Codegen.empty();
+        this.compatibility = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.registry = Codegen.empty();
+        this.schemaDefinition = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -169,7 +170,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checkpointVersion(@Nullable SchemaVersionArgs checkpointVersion) {
-            this.checkpointVersion = Output.ofNullable(checkpointVersion);
+            this.checkpointVersion = Codegen.ofNullable(checkpointVersion);
             return this;
         }
         public Builder compatibility(Output<SchemaCompatibility> compatibility) {
@@ -193,7 +194,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -201,7 +202,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder registry(@Nullable Output<SchemaRegistryArgs> registry) {
@@ -209,7 +210,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registry(@Nullable SchemaRegistryArgs registry) {
-            this.registry = Output.ofNullable(registry);
+            this.registry = Codegen.ofNullable(registry);
             return this;
         }
         public Builder schemaDefinition(Output<String> schemaDefinition) {
@@ -225,7 +226,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<SchemaTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SchemaTagArgs... tags) {

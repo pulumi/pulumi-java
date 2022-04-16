@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidModelIds", required=true)
       private final Output<List<String>> androidModelIds;
 
-    public Output<List<String>> getAndroidModelIds() {
+    public Output<List<String>> androidModelIds() {
         return this.androidModelIds;
     }
 
@@ -36,7 +37,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidVersionIds", required=true)
       private final Output<List<String>> androidVersionIds;
 
-    public Output<List<String>> getAndroidVersionIds() {
+    public Output<List<String>> androidVersionIds() {
         return this.androidVersionIds;
     }
 
@@ -47,7 +48,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locales", required=true)
       private final Output<List<String>> locales;
 
-    public Output<List<String>> getLocales() {
+    public Output<List<String>> locales() {
         return this.locales;
     }
 
@@ -58,7 +59,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orientations", required=true)
       private final Output<List<String>> orientations;
 
-    public Output<List<String>> getOrientations() {
+    public Output<List<String>> orientations() {
         return this.orientations;
     }
 
@@ -74,10 +75,10 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AndroidMatrixArgs() {
-        this.androidModelIds = Output.empty();
-        this.androidVersionIds = Output.empty();
-        this.locales = Output.empty();
-        this.orientations = Output.empty();
+        this.androidModelIds = Codegen.empty();
+        this.androidVersionIds = Codegen.empty();
+        this.locales = Codegen.empty();
+        this.orientations = Codegen.empty();
     }
 
     public static Builder builder() {

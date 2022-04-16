@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<StandardSqlDataTypeArgs> type;
 
-    public Output<StandardSqlDataTypeArgs> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<StandardSqlDataTypeArgs> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public StandardSqlFieldArgs(
@@ -49,8 +50,8 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private StandardSqlFieldArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<StandardSqlDataTypeArgs> type) {
@@ -88,7 +89,7 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable StandardSqlDataTypeArgs type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public StandardSqlFieldArgs build() {
             return new StandardSqlFieldArgs(name, type);

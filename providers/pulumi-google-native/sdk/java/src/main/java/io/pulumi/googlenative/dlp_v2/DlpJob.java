@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dlp_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dlp_v2.DlpJobArgs;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse;
@@ -33,7 +34,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return Time when the job was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +48,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return Time when the job finished.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -61,7 +62,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return A stream of errors encountered running the job.
      * 
      */
-    public Output<List<GooglePrivacyDlpV2ErrorResponse>> getErrors() {
+    public Output<List<GooglePrivacyDlpV2ErrorResponse>> errors() {
         return this.errors;
     }
     /**
@@ -75,7 +76,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return Results from inspecting a data source.
      * 
      */
-    public Output<GooglePrivacyDlpV2InspectDataSourceDetailsResponse> getInspectDetails() {
+    public Output<GooglePrivacyDlpV2InspectDataSourceDetailsResponse> inspectDetails() {
         return this.inspectDetails;
     }
     /**
@@ -89,7 +90,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return If created by a job trigger, the resource name of the trigger that instantiated the job.
      * 
      */
-    public Output<String> getJobTriggerName() {
+    public Output<String> jobTriggerName() {
         return this.jobTriggerName;
     }
     /**
@@ -103,7 +104,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return The server-assigned name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +118,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return Results from analyzing risk of a data source.
      * 
      */
-    public Output<GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse> getRiskDetails() {
+    public Output<GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse> riskDetails() {
         return this.riskDetails;
     }
     /**
@@ -131,7 +132,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return Time when the job started.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -145,7 +146,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return State of a job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -159,7 +160,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @return The type of job.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -185,7 +186,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DlpJob(String name, @Nullable DlpJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dlp/v2:DlpJob", name, args == null ? DlpJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dlp/v2:DlpJob", name, args == null ? DlpJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DlpJob(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

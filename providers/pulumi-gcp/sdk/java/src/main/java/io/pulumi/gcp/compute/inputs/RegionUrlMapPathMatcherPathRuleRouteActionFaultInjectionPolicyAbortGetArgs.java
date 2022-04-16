@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     @Import(name="httpStatus", required=true)
       private final Output<Integer> httpStatus;
 
-    public Output<Integer> getHttpStatus() {
+    public Output<Integer> httpStatus() {
         return this.httpStatus;
     }
 
@@ -35,7 +36,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     @Import(name="percentage", required=true)
       private final Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage;
     }
 
@@ -47,8 +48,8 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     }
 
     private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs() {
-        this.httpStatus = Output.empty();
-        this.percentage = Output.empty();
+        this.httpStatus = Codegen.empty();
+        this.percentage = Codegen.empty();
     }
 
     public static Builder builder() {

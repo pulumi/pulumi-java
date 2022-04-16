@@ -43,7 +43,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="acrUseManagedIdentityCreds")
       private final @Nullable Boolean acrUseManagedIdentityCreds;
 
-    public Optional<Boolean> getAcrUseManagedIdentityCreds() {
+    public Optional<Boolean> acrUseManagedIdentityCreds() {
         return this.acrUseManagedIdentityCreds == null ? Optional.empty() : Optional.ofNullable(this.acrUseManagedIdentityCreds);
     }
 
@@ -54,7 +54,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="acrUserManagedIdentityID")
       private final @Nullable String acrUserManagedIdentityID;
 
-    public Optional<String> getAcrUserManagedIdentityID() {
+    public Optional<String> acrUserManagedIdentityID() {
         return this.acrUserManagedIdentityID == null ? Optional.empty() : Optional.ofNullable(this.acrUserManagedIdentityID);
     }
 
@@ -65,7 +65,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="alwaysOn")
       private final @Nullable Boolean alwaysOn;
 
-    public Optional<Boolean> getAlwaysOn() {
+    public Optional<Boolean> alwaysOn() {
         return this.alwaysOn == null ? Optional.empty() : Optional.ofNullable(this.alwaysOn);
     }
 
@@ -76,7 +76,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiDefinition")
       private final @Nullable ApiDefinitionInfoResponse apiDefinition;
 
-    public Optional<ApiDefinitionInfoResponse> getApiDefinition() {
+    public Optional<ApiDefinitionInfoResponse> apiDefinition() {
         return this.apiDefinition == null ? Optional.empty() : Optional.ofNullable(this.apiDefinition);
     }
 
@@ -87,7 +87,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiManagementConfig")
       private final @Nullable ApiManagementConfigResponse apiManagementConfig;
 
-    public Optional<ApiManagementConfigResponse> getApiManagementConfig() {
+    public Optional<ApiManagementConfigResponse> apiManagementConfig() {
         return this.apiManagementConfig == null ? Optional.empty() : Optional.ofNullable(this.apiManagementConfig);
     }
 
@@ -98,7 +98,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="appCommandLine")
       private final @Nullable String appCommandLine;
 
-    public Optional<String> getAppCommandLine() {
+    public Optional<String> appCommandLine() {
         return this.appCommandLine == null ? Optional.empty() : Optional.ofNullable(this.appCommandLine);
     }
 
@@ -109,7 +109,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="appSettings")
       private final @Nullable List<NameValuePairResponse> appSettings;
 
-    public List<NameValuePairResponse> getAppSettings() {
+    public List<NameValuePairResponse> appSettings() {
         return this.appSettings == null ? List.of() : this.appSettings;
     }
 
@@ -120,7 +120,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoHealEnabled")
       private final @Nullable Boolean autoHealEnabled;
 
-    public Optional<Boolean> getAutoHealEnabled() {
+    public Optional<Boolean> autoHealEnabled() {
         return this.autoHealEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoHealEnabled);
     }
 
@@ -131,7 +131,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoHealRules")
       private final @Nullable AutoHealRulesResponse autoHealRules;
 
-    public Optional<AutoHealRulesResponse> getAutoHealRules() {
+    public Optional<AutoHealRulesResponse> autoHealRules() {
         return this.autoHealRules == null ? Optional.empty() : Optional.ofNullable(this.autoHealRules);
     }
 
@@ -142,7 +142,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoSwapSlotName")
       private final @Nullable String autoSwapSlotName;
 
-    public Optional<String> getAutoSwapSlotName() {
+    public Optional<String> autoSwapSlotName() {
         return this.autoSwapSlotName == null ? Optional.empty() : Optional.ofNullable(this.autoSwapSlotName);
     }
 
@@ -153,7 +153,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="azureStorageAccounts")
       private final @Nullable Map<String,AzureStorageInfoValueResponse> azureStorageAccounts;
 
-    public Map<String,AzureStorageInfoValueResponse> getAzureStorageAccounts() {
+    public Map<String,AzureStorageInfoValueResponse> azureStorageAccounts() {
         return this.azureStorageAccounts == null ? Map.of() : this.azureStorageAccounts;
     }
 
@@ -164,7 +164,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="connectionStrings")
       private final @Nullable List<ConnStringInfoResponse> connectionStrings;
 
-    public List<ConnStringInfoResponse> getConnectionStrings() {
+    public List<ConnStringInfoResponse> connectionStrings() {
         return this.connectionStrings == null ? List.of() : this.connectionStrings;
     }
 
@@ -175,7 +175,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cors")
       private final @Nullable CorsSettingsResponse cors;
 
-    public Optional<CorsSettingsResponse> getCors() {
+    public Optional<CorsSettingsResponse> cors() {
         return this.cors == null ? Optional.empty() : Optional.ofNullable(this.cors);
     }
 
@@ -186,7 +186,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultDocuments")
       private final @Nullable List<String> defaultDocuments;
 
-    public List<String> getDefaultDocuments() {
+    public List<String> defaultDocuments() {
         return this.defaultDocuments == null ? List.of() : this.defaultDocuments;
     }
 
@@ -197,7 +197,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="detailedErrorLoggingEnabled")
       private final @Nullable Boolean detailedErrorLoggingEnabled;
 
-    public Optional<Boolean> getDetailedErrorLoggingEnabled() {
+    public Optional<Boolean> detailedErrorLoggingEnabled() {
         return this.detailedErrorLoggingEnabled == null ? Optional.empty() : Optional.ofNullable(this.detailedErrorLoggingEnabled);
     }
 
@@ -208,7 +208,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="documentRoot")
       private final @Nullable String documentRoot;
 
-    public Optional<String> getDocumentRoot() {
+    public Optional<String> documentRoot() {
         return this.documentRoot == null ? Optional.empty() : Optional.ofNullable(this.documentRoot);
     }
 
@@ -219,7 +219,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="experiments")
       private final @Nullable ExperimentsResponse experiments;
 
-    public Optional<ExperimentsResponse> getExperiments() {
+    public Optional<ExperimentsResponse> experiments() {
         return this.experiments == null ? Optional.empty() : Optional.ofNullable(this.experiments);
     }
 
@@ -230,7 +230,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ftpsState")
       private final @Nullable String ftpsState;
 
-    public Optional<String> getFtpsState() {
+    public Optional<String> ftpsState() {
         return this.ftpsState == null ? Optional.empty() : Optional.ofNullable(this.ftpsState);
     }
 
@@ -242,7 +242,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="functionAppScaleLimit")
       private final @Nullable Integer functionAppScaleLimit;
 
-    public Optional<Integer> getFunctionAppScaleLimit() {
+    public Optional<Integer> functionAppScaleLimit() {
         return this.functionAppScaleLimit == null ? Optional.empty() : Optional.ofNullable(this.functionAppScaleLimit);
     }
 
@@ -255,7 +255,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="functionsRuntimeScaleMonitoringEnabled")
       private final @Nullable Boolean functionsRuntimeScaleMonitoringEnabled;
 
-    public Optional<Boolean> getFunctionsRuntimeScaleMonitoringEnabled() {
+    public Optional<Boolean> functionsRuntimeScaleMonitoringEnabled() {
         return this.functionsRuntimeScaleMonitoringEnabled == null ? Optional.empty() : Optional.ofNullable(this.functionsRuntimeScaleMonitoringEnabled);
     }
 
@@ -266,7 +266,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="handlerMappings")
       private final @Nullable List<HandlerMappingResponse> handlerMappings;
 
-    public List<HandlerMappingResponse> getHandlerMappings() {
+    public List<HandlerMappingResponse> handlerMappings() {
         return this.handlerMappings == null ? List.of() : this.handlerMappings;
     }
 
@@ -277,7 +277,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="healthCheckPath")
       private final @Nullable String healthCheckPath;
 
-    public Optional<String> getHealthCheckPath() {
+    public Optional<String> healthCheckPath() {
         return this.healthCheckPath == null ? Optional.empty() : Optional.ofNullable(this.healthCheckPath);
     }
 
@@ -288,7 +288,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="http20Enabled")
       private final @Nullable Boolean http20Enabled;
 
-    public Optional<Boolean> getHttp20Enabled() {
+    public Optional<Boolean> http20Enabled() {
         return this.http20Enabled == null ? Optional.empty() : Optional.ofNullable(this.http20Enabled);
     }
 
@@ -299,7 +299,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpLoggingEnabled")
       private final @Nullable Boolean httpLoggingEnabled;
 
-    public Optional<Boolean> getHttpLoggingEnabled() {
+    public Optional<Boolean> httpLoggingEnabled() {
         return this.httpLoggingEnabled == null ? Optional.empty() : Optional.ofNullable(this.httpLoggingEnabled);
     }
 
@@ -310,7 +310,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipSecurityRestrictions")
       private final @Nullable List<IpSecurityRestrictionResponse> ipSecurityRestrictions;
 
-    public List<IpSecurityRestrictionResponse> getIpSecurityRestrictions() {
+    public List<IpSecurityRestrictionResponse> ipSecurityRestrictions() {
         return this.ipSecurityRestrictions == null ? List.of() : this.ipSecurityRestrictions;
     }
 
@@ -321,7 +321,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="javaContainer")
       private final @Nullable String javaContainer;
 
-    public Optional<String> getJavaContainer() {
+    public Optional<String> javaContainer() {
         return this.javaContainer == null ? Optional.empty() : Optional.ofNullable(this.javaContainer);
     }
 
@@ -332,7 +332,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="javaContainerVersion")
       private final @Nullable String javaContainerVersion;
 
-    public Optional<String> getJavaContainerVersion() {
+    public Optional<String> javaContainerVersion() {
         return this.javaContainerVersion == null ? Optional.empty() : Optional.ofNullable(this.javaContainerVersion);
     }
 
@@ -343,7 +343,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="javaVersion")
       private final @Nullable String javaVersion;
 
-    public Optional<String> getJavaVersion() {
+    public Optional<String> javaVersion() {
         return this.javaVersion == null ? Optional.empty() : Optional.ofNullable(this.javaVersion);
     }
 
@@ -354,7 +354,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyVaultReferenceIdentity")
       private final @Nullable String keyVaultReferenceIdentity;
 
-    public Optional<String> getKeyVaultReferenceIdentity() {
+    public Optional<String> keyVaultReferenceIdentity() {
         return this.keyVaultReferenceIdentity == null ? Optional.empty() : Optional.ofNullable(this.keyVaultReferenceIdentity);
     }
 
@@ -365,7 +365,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="limits")
       private final @Nullable SiteLimitsResponse limits;
 
-    public Optional<SiteLimitsResponse> getLimits() {
+    public Optional<SiteLimitsResponse> limits() {
         return this.limits == null ? Optional.empty() : Optional.ofNullable(this.limits);
     }
 
@@ -376,7 +376,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="linuxFxVersion")
       private final @Nullable String linuxFxVersion;
 
-    public Optional<String> getLinuxFxVersion() {
+    public Optional<String> linuxFxVersion() {
         return this.linuxFxVersion == null ? Optional.empty() : Optional.ofNullable(this.linuxFxVersion);
     }
 
@@ -387,7 +387,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancing")
       private final @Nullable String loadBalancing;
 
-    public Optional<String> getLoadBalancing() {
+    public Optional<String> loadBalancing() {
         return this.loadBalancing == null ? Optional.empty() : Optional.ofNullable(this.loadBalancing);
     }
 
@@ -398,7 +398,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="localMySqlEnabled")
       private final @Nullable Boolean localMySqlEnabled;
 
-    public Optional<Boolean> getLocalMySqlEnabled() {
+    public Optional<Boolean> localMySqlEnabled() {
         return this.localMySqlEnabled == null ? Optional.empty() : Optional.ofNullable(this.localMySqlEnabled);
     }
 
@@ -409,7 +409,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logsDirectorySizeLimit")
       private final @Nullable Integer logsDirectorySizeLimit;
 
-    public Optional<Integer> getLogsDirectorySizeLimit() {
+    public Optional<Integer> logsDirectorySizeLimit() {
         return this.logsDirectorySizeLimit == null ? Optional.empty() : Optional.ofNullable(this.logsDirectorySizeLimit);
     }
 
@@ -420,7 +420,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineKey", required=true)
       private final SiteMachineKeyResponse machineKey;
 
-    public SiteMachineKeyResponse getMachineKey() {
+    public SiteMachineKeyResponse machineKey() {
         return this.machineKey;
     }
 
@@ -431,7 +431,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="managedPipelineMode")
       private final @Nullable String managedPipelineMode;
 
-    public Optional<String> getManagedPipelineMode() {
+    public Optional<String> managedPipelineMode() {
         return this.managedPipelineMode == null ? Optional.empty() : Optional.ofNullable(this.managedPipelineMode);
     }
 
@@ -442,7 +442,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="managedServiceIdentityId")
       private final @Nullable Integer managedServiceIdentityId;
 
-    public Optional<Integer> getManagedServiceIdentityId() {
+    public Optional<Integer> managedServiceIdentityId() {
         return this.managedServiceIdentityId == null ? Optional.empty() : Optional.ofNullable(this.managedServiceIdentityId);
     }
 
@@ -453,7 +453,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minTlsVersion")
       private final @Nullable String minTlsVersion;
 
-    public Optional<String> getMinTlsVersion() {
+    public Optional<String> minTlsVersion() {
         return this.minTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minTlsVersion);
     }
 
@@ -465,7 +465,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minimumElasticInstanceCount")
       private final @Nullable Integer minimumElasticInstanceCount;
 
-    public Optional<Integer> getMinimumElasticInstanceCount() {
+    public Optional<Integer> minimumElasticInstanceCount() {
         return this.minimumElasticInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minimumElasticInstanceCount);
     }
 
@@ -476,7 +476,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="netFrameworkVersion")
       private final @Nullable String netFrameworkVersion;
 
-    public Optional<String> getNetFrameworkVersion() {
+    public Optional<String> netFrameworkVersion() {
         return this.netFrameworkVersion == null ? Optional.empty() : Optional.ofNullable(this.netFrameworkVersion);
     }
 
@@ -487,7 +487,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeVersion")
       private final @Nullable String nodeVersion;
 
-    public Optional<String> getNodeVersion() {
+    public Optional<String> nodeVersion() {
         return this.nodeVersion == null ? Optional.empty() : Optional.ofNullable(this.nodeVersion);
     }
 
@@ -498,7 +498,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="numberOfWorkers")
       private final @Nullable Integer numberOfWorkers;
 
-    public Optional<Integer> getNumberOfWorkers() {
+    public Optional<Integer> numberOfWorkers() {
         return this.numberOfWorkers == null ? Optional.empty() : Optional.ofNullable(this.numberOfWorkers);
     }
 
@@ -509,7 +509,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="phpVersion")
       private final @Nullable String phpVersion;
 
-    public Optional<String> getPhpVersion() {
+    public Optional<String> phpVersion() {
         return this.phpVersion == null ? Optional.empty() : Optional.ofNullable(this.phpVersion);
     }
 
@@ -520,7 +520,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="powerShellVersion")
       private final @Nullable String powerShellVersion;
 
-    public Optional<String> getPowerShellVersion() {
+    public Optional<String> powerShellVersion() {
         return this.powerShellVersion == null ? Optional.empty() : Optional.ofNullable(this.powerShellVersion);
     }
 
@@ -532,7 +532,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="preWarmedInstanceCount")
       private final @Nullable Integer preWarmedInstanceCount;
 
-    public Optional<Integer> getPreWarmedInstanceCount() {
+    public Optional<Integer> preWarmedInstanceCount() {
         return this.preWarmedInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.preWarmedInstanceCount);
     }
 
@@ -543,7 +543,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
@@ -554,7 +554,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publishingUsername")
       private final @Nullable String publishingUsername;
 
-    public Optional<String> getPublishingUsername() {
+    public Optional<String> publishingUsername() {
         return this.publishingUsername == null ? Optional.empty() : Optional.ofNullable(this.publishingUsername);
     }
 
@@ -565,7 +565,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="push")
       private final @Nullable PushSettingsResponse push;
 
-    public Optional<PushSettingsResponse> getPush() {
+    public Optional<PushSettingsResponse> push() {
         return this.push == null ? Optional.empty() : Optional.ofNullable(this.push);
     }
 
@@ -576,7 +576,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pythonVersion")
       private final @Nullable String pythonVersion;
 
-    public Optional<String> getPythonVersion() {
+    public Optional<String> pythonVersion() {
         return this.pythonVersion == null ? Optional.empty() : Optional.ofNullable(this.pythonVersion);
     }
 
@@ -587,7 +587,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="remoteDebuggingEnabled")
       private final @Nullable Boolean remoteDebuggingEnabled;
 
-    public Optional<Boolean> getRemoteDebuggingEnabled() {
+    public Optional<Boolean> remoteDebuggingEnabled() {
         return this.remoteDebuggingEnabled == null ? Optional.empty() : Optional.ofNullable(this.remoteDebuggingEnabled);
     }
 
@@ -598,7 +598,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="remoteDebuggingVersion")
       private final @Nullable String remoteDebuggingVersion;
 
-    public Optional<String> getRemoteDebuggingVersion() {
+    public Optional<String> remoteDebuggingVersion() {
         return this.remoteDebuggingVersion == null ? Optional.empty() : Optional.ofNullable(this.remoteDebuggingVersion);
     }
 
@@ -609,7 +609,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestTracingEnabled")
       private final @Nullable Boolean requestTracingEnabled;
 
-    public Optional<Boolean> getRequestTracingEnabled() {
+    public Optional<Boolean> requestTracingEnabled() {
         return this.requestTracingEnabled == null ? Optional.empty() : Optional.ofNullable(this.requestTracingEnabled);
     }
 
@@ -620,7 +620,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestTracingExpirationTime")
       private final @Nullable String requestTracingExpirationTime;
 
-    public Optional<String> getRequestTracingExpirationTime() {
+    public Optional<String> requestTracingExpirationTime() {
         return this.requestTracingExpirationTime == null ? Optional.empty() : Optional.ofNullable(this.requestTracingExpirationTime);
     }
 
@@ -631,7 +631,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scmIpSecurityRestrictions")
       private final @Nullable List<IpSecurityRestrictionResponse> scmIpSecurityRestrictions;
 
-    public List<IpSecurityRestrictionResponse> getScmIpSecurityRestrictions() {
+    public List<IpSecurityRestrictionResponse> scmIpSecurityRestrictions() {
         return this.scmIpSecurityRestrictions == null ? List.of() : this.scmIpSecurityRestrictions;
     }
 
@@ -642,7 +642,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scmIpSecurityRestrictionsUseMain")
       private final @Nullable Boolean scmIpSecurityRestrictionsUseMain;
 
-    public Optional<Boolean> getScmIpSecurityRestrictionsUseMain() {
+    public Optional<Boolean> scmIpSecurityRestrictionsUseMain() {
         return this.scmIpSecurityRestrictionsUseMain == null ? Optional.empty() : Optional.ofNullable(this.scmIpSecurityRestrictionsUseMain);
     }
 
@@ -653,7 +653,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scmMinTlsVersion")
       private final @Nullable String scmMinTlsVersion;
 
-    public Optional<String> getScmMinTlsVersion() {
+    public Optional<String> scmMinTlsVersion() {
         return this.scmMinTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.scmMinTlsVersion);
     }
 
@@ -664,7 +664,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scmType")
       private final @Nullable String scmType;
 
-    public Optional<String> getScmType() {
+    public Optional<String> scmType() {
         return this.scmType == null ? Optional.empty() : Optional.ofNullable(this.scmType);
     }
 
@@ -675,7 +675,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tracingOptions")
       private final @Nullable String tracingOptions;
 
-    public Optional<String> getTracingOptions() {
+    public Optional<String> tracingOptions() {
         return this.tracingOptions == null ? Optional.empty() : Optional.ofNullable(this.tracingOptions);
     }
 
@@ -686,7 +686,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="use32BitWorkerProcess")
       private final @Nullable Boolean use32BitWorkerProcess;
 
-    public Optional<Boolean> getUse32BitWorkerProcess() {
+    public Optional<Boolean> use32BitWorkerProcess() {
         return this.use32BitWorkerProcess == null ? Optional.empty() : Optional.ofNullable(this.use32BitWorkerProcess);
     }
 
@@ -697,7 +697,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualApplications")
       private final @Nullable List<VirtualApplicationResponse> virtualApplications;
 
-    public List<VirtualApplicationResponse> getVirtualApplications() {
+    public List<VirtualApplicationResponse> virtualApplications() {
         return this.virtualApplications == null ? List.of() : this.virtualApplications;
     }
 
@@ -708,7 +708,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vnetName")
       private final @Nullable String vnetName;
 
-    public Optional<String> getVnetName() {
+    public Optional<String> vnetName() {
         return this.vnetName == null ? Optional.empty() : Optional.ofNullable(this.vnetName);
     }
 
@@ -719,7 +719,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vnetPrivatePortsCount")
       private final @Nullable Integer vnetPrivatePortsCount;
 
-    public Optional<Integer> getVnetPrivatePortsCount() {
+    public Optional<Integer> vnetPrivatePortsCount() {
         return this.vnetPrivatePortsCount == null ? Optional.empty() : Optional.ofNullable(this.vnetPrivatePortsCount);
     }
 
@@ -730,7 +730,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vnetRouteAllEnabled")
       private final @Nullable Boolean vnetRouteAllEnabled;
 
-    public Optional<Boolean> getVnetRouteAllEnabled() {
+    public Optional<Boolean> vnetRouteAllEnabled() {
         return this.vnetRouteAllEnabled == null ? Optional.empty() : Optional.ofNullable(this.vnetRouteAllEnabled);
     }
 
@@ -741,7 +741,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="webSocketsEnabled")
       private final @Nullable Boolean webSocketsEnabled;
 
-    public Optional<Boolean> getWebSocketsEnabled() {
+    public Optional<Boolean> webSocketsEnabled() {
         return this.webSocketsEnabled == null ? Optional.empty() : Optional.ofNullable(this.webSocketsEnabled);
     }
 
@@ -752,7 +752,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="websiteTimeZone")
       private final @Nullable String websiteTimeZone;
 
-    public Optional<String> getWebsiteTimeZone() {
+    public Optional<String> websiteTimeZone() {
         return this.websiteTimeZone == null ? Optional.empty() : Optional.ofNullable(this.websiteTimeZone);
     }
 
@@ -763,7 +763,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="windowsFxVersion")
       private final @Nullable String windowsFxVersion;
 
-    public Optional<String> getWindowsFxVersion() {
+    public Optional<String> windowsFxVersion() {
         return this.windowsFxVersion == null ? Optional.empty() : Optional.ofNullable(this.windowsFxVersion);
     }
 
@@ -774,7 +774,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="xManagedServiceIdentityId")
       private final @Nullable Integer xManagedServiceIdentityId;
 
-    public Optional<Integer> getXManagedServiceIdentityId() {
+    public Optional<Integer> xManagedServiceIdentityId() {
         return this.xManagedServiceIdentityId == null ? Optional.empty() : Optional.ofNullable(this.xManagedServiceIdentityId);
     }
 

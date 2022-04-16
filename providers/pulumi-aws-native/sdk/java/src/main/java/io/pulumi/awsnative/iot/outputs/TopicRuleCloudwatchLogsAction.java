@@ -20,10 +20,10 @@ public final class TopicRuleCloudwatchLogsAction {
         this.roleArn = roleArn;
     }
 
-    public String getLogGroupName() {
+    public String logGroupName() {
         return this.logGroupName;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

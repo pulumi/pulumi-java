@@ -21,7 +21,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="applicationId", required=true)
       private final String applicationId;
 
-    public String getApplicationId() {
+    public String applicationId() {
         return this.applicationId;
     }
 
@@ -32,7 +32,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="semanticVersion")
       private final @Nullable String semanticVersion;
 
-    public Optional<String> getSemanticVersion() {
+    public Optional<String> semanticVersion() {
         return this.semanticVersion == null ? Optional.empty() : Optional.ofNullable(this.semanticVersion);
     }
 

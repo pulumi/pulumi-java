@@ -38,25 +38,25 @@ public final class IndexJwtTokenTypeConfiguration {
         this.userNameAttributeField = userNameAttributeField;
     }
 
-    public Optional<String> getClaimRegex() {
+    public Optional<String> claimRegex() {
         return Optional.ofNullable(this.claimRegex);
     }
-    public Optional<String> getGroupAttributeField() {
+    public Optional<String> groupAttributeField() {
         return Optional.ofNullable(this.groupAttributeField);
     }
-    public Optional<String> getIssuer() {
+    public Optional<String> issuer() {
         return Optional.ofNullable(this.issuer);
     }
-    public IndexKeyLocation getKeyLocation() {
+    public IndexKeyLocation keyLocation() {
         return this.keyLocation;
     }
-    public Optional<String> getSecretManagerArn() {
+    public Optional<String> secretManagerArn() {
         return Optional.ofNullable(this.secretManagerArn);
     }
-    public Optional<String> getURL() {
+    public Optional<String> uRL() {
         return Optional.ofNullable(this.uRL);
     }
-    public Optional<String> getUserNameAttributeField() {
+    public Optional<String> userNameAttributeField() {
         return Optional.ofNullable(this.userNameAttributeField);
     }
 

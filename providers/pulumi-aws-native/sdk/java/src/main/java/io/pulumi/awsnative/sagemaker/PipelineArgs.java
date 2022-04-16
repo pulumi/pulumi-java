@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ParallelismConfigurationPropertiesAr
 import io.pulumi.awsnative.sagemaker.inputs.PipelineTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +22,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parallelismConfiguration")
       private final @Nullable Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
 
-    public Output<ParallelismConfigurationPropertiesArgs> getParallelismConfiguration() {
-        return this.parallelismConfiguration == null ? Output.empty() : this.parallelismConfiguration;
+    public Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration() {
+        return this.parallelismConfiguration == null ? Codegen.empty() : this.parallelismConfiguration;
     }
 
     @Import(name="pipelineDefinition", required=true)
       private final Output<Object> pipelineDefinition;
 
-    public Output<Object> getPipelineDefinition() {
+    public Output<Object> pipelineDefinition() {
         return this.pipelineDefinition;
     }
 
@@ -39,8 +40,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDescription")
       private final @Nullable Output<String> pipelineDescription;
 
-    public Output<String> getPipelineDescription() {
-        return this.pipelineDescription == null ? Output.empty() : this.pipelineDescription;
+    public Output<String> pipelineDescription() {
+        return this.pipelineDescription == null ? Codegen.empty() : this.pipelineDescription;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDisplayName")
       private final @Nullable Output<String> pipelineDisplayName;
 
-    public Output<String> getPipelineDisplayName() {
-        return this.pipelineDisplayName == null ? Output.empty() : this.pipelineDisplayName;
+    public Output<String> pipelineDisplayName() {
+        return this.pipelineDisplayName == null ? Codegen.empty() : this.pipelineDisplayName;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
 
-    public Output<String> getPipelineName() {
-        return this.pipelineName == null ? Output.empty() : this.pipelineName;
+    public Output<String> pipelineName() {
+        return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
     }
 
     /**
@@ -72,15 +73,15 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PipelineTagArgs>> tags;
 
-    public Output<List<PipelineTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<PipelineTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PipelineArgs(
@@ -101,13 +102,13 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.parallelismConfiguration = Output.empty();
-        this.pipelineDefinition = Output.empty();
-        this.pipelineDescription = Output.empty();
-        this.pipelineDisplayName = Output.empty();
-        this.pipelineName = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.parallelismConfiguration = Codegen.empty();
+        this.pipelineDefinition = Codegen.empty();
+        this.pipelineDescription = Codegen.empty();
+        this.pipelineDisplayName = Codegen.empty();
+        this.pipelineName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parallelismConfiguration(@Nullable ParallelismConfigurationPropertiesArgs parallelismConfiguration) {
-            this.parallelismConfiguration = Output.ofNullable(parallelismConfiguration);
+            this.parallelismConfiguration = Codegen.ofNullable(parallelismConfiguration);
             return this;
         }
         public Builder pipelineDefinition(Output<Object> pipelineDefinition) {
@@ -163,7 +164,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineDescription(@Nullable String pipelineDescription) {
-            this.pipelineDescription = Output.ofNullable(pipelineDescription);
+            this.pipelineDescription = Codegen.ofNullable(pipelineDescription);
             return this;
         }
         public Builder pipelineDisplayName(@Nullable Output<String> pipelineDisplayName) {
@@ -171,7 +172,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineDisplayName(@Nullable String pipelineDisplayName) {
-            this.pipelineDisplayName = Output.ofNullable(pipelineDisplayName);
+            this.pipelineDisplayName = Codegen.ofNullable(pipelineDisplayName);
             return this;
         }
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
@@ -179,7 +180,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Output.ofNullable(pipelineName);
+            this.pipelineName = Codegen.ofNullable(pipelineName);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -195,7 +196,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<PipelineTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PipelineTagArgs... tags) {

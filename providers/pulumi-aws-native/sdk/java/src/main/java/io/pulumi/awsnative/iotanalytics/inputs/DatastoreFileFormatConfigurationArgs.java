@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastoreJsonConfigurationArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreParquetConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     @Import(name="jsonConfiguration")
       private final @Nullable Output<DatastoreJsonConfigurationArgs> jsonConfiguration;
 
-    public Output<DatastoreJsonConfigurationArgs> getJsonConfiguration() {
-        return this.jsonConfiguration == null ? Output.empty() : this.jsonConfiguration;
+    public Output<DatastoreJsonConfigurationArgs> jsonConfiguration() {
+        return this.jsonConfiguration == null ? Codegen.empty() : this.jsonConfiguration;
     }
 
     @Import(name="parquetConfiguration")
       private final @Nullable Output<DatastoreParquetConfigurationArgs> parquetConfiguration;
 
-    public Output<DatastoreParquetConfigurationArgs> getParquetConfiguration() {
-        return this.parquetConfiguration == null ? Output.empty() : this.parquetConfiguration;
+    public Output<DatastoreParquetConfigurationArgs> parquetConfiguration() {
+        return this.parquetConfiguration == null ? Codegen.empty() : this.parquetConfiguration;
     }
 
     public DatastoreFileFormatConfigurationArgs(
@@ -37,8 +38,8 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     }
 
     private DatastoreFileFormatConfigurationArgs() {
-        this.jsonConfiguration = Output.empty();
-        this.parquetConfiguration = Output.empty();
+        this.jsonConfiguration = Codegen.empty();
+        this.parquetConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder jsonConfiguration(@Nullable DatastoreJsonConfigurationArgs jsonConfiguration) {
-            this.jsonConfiguration = Output.ofNullable(jsonConfiguration);
+            this.jsonConfiguration = Codegen.ofNullable(jsonConfiguration);
             return this;
         }
         public Builder parquetConfiguration(@Nullable Output<DatastoreParquetConfigurationArgs> parquetConfiguration) {
@@ -76,7 +77,7 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder parquetConfiguration(@Nullable DatastoreParquetConfigurationArgs parquetConfiguration) {
-            this.parquetConfiguration = Output.ofNullable(parquetConfiguration);
+            this.parquetConfiguration = Codegen.ofNullable(parquetConfiguration);
             return this;
         }        public DatastoreFileFormatConfigurationArgs build() {
             return new DatastoreFileFormatConfigurationArgs(jsonConfiguration, parquetConfiguration);

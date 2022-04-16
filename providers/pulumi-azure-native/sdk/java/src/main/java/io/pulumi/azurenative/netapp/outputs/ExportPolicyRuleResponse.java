@@ -120,98 +120,98 @@ public final class ExportPolicyRuleResponse {
      * Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
      * 
     */
-    public Optional<String> getAllowedClients() {
+    public Optional<String> allowedClients() {
         return Optional.ofNullable(this.allowedClients);
     }
     /**
      * Allows CIFS protocol
      * 
     */
-    public Optional<Boolean> getCifs() {
+    public Optional<Boolean> cifs() {
         return Optional.ofNullable(this.cifs);
     }
     /**
      * Has root access to volume
      * 
     */
-    public Optional<Boolean> getHasRootAccess() {
+    public Optional<Boolean> hasRootAccess() {
         return Optional.ofNullable(this.hasRootAccess);
     }
     /**
      * Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
      * 
     */
-    public Optional<Boolean> getKerberos5ReadOnly() {
+    public Optional<Boolean> kerberos5ReadOnly() {
         return Optional.ofNullable(this.kerberos5ReadOnly);
     }
     /**
      * Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
      * 
     */
-    public Optional<Boolean> getKerberos5ReadWrite() {
+    public Optional<Boolean> kerberos5ReadWrite() {
         return Optional.ofNullable(this.kerberos5ReadWrite);
     }
     /**
      * Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
      * 
     */
-    public Optional<Boolean> getKerberos5iReadOnly() {
+    public Optional<Boolean> kerberos5iReadOnly() {
         return Optional.ofNullable(this.kerberos5iReadOnly);
     }
     /**
      * Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
      * 
     */
-    public Optional<Boolean> getKerberos5iReadWrite() {
+    public Optional<Boolean> kerberos5iReadWrite() {
         return Optional.ofNullable(this.kerberos5iReadWrite);
     }
     /**
      * Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
      * 
     */
-    public Optional<Boolean> getKerberos5pReadOnly() {
+    public Optional<Boolean> kerberos5pReadOnly() {
         return Optional.ofNullable(this.kerberos5pReadOnly);
     }
     /**
      * Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
      * 
     */
-    public Optional<Boolean> getKerberos5pReadWrite() {
+    public Optional<Boolean> kerberos5pReadWrite() {
         return Optional.ofNullable(this.kerberos5pReadWrite);
     }
     /**
      * Allows NFSv3 protocol. Enable only for NFSv3 type volumes
      * 
     */
-    public Optional<Boolean> getNfsv3() {
+    public Optional<Boolean> nfsv3() {
         return Optional.ofNullable(this.nfsv3);
     }
     /**
      * Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
      * 
     */
-    public Optional<Boolean> getNfsv41() {
+    public Optional<Boolean> nfsv41() {
         return Optional.ofNullable(this.nfsv41);
     }
     /**
      * Order index
      * 
     */
-    public Optional<Integer> getRuleIndex() {
+    public Optional<Integer> ruleIndex() {
         return Optional.ofNullable(this.ruleIndex);
     }
     /**
      * Read only access
      * 
     */
-    public Optional<Boolean> getUnixReadOnly() {
+    public Optional<Boolean> unixReadOnly() {
         return Optional.ofNullable(this.unixReadOnly);
     }
     /**
      * Read and write access
      * 
     */
-    public Optional<Boolean> getUnixReadWrite() {
+    public Optional<Boolean> unixReadWrite() {
         return Optional.ofNullable(this.unixReadWrite);
     }
 

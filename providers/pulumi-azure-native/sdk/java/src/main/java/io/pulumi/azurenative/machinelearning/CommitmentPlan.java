@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return An entity tag used to enforce optimistic concurrency.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -55,7 +56,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -69,7 +70,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return The commitment plan properties.
      * 
      */
-    public Output<CommitmentPlanPropertiesResponse> getProperties() {
+    public Output<CommitmentPlanPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -97,7 +98,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return The commitment plan SKU.
      * 
      */
-    public Output</* @Nullable */ ResourceSkuResponse> getSku() {
+    public Output</* @Nullable */ ResourceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -111,7 +112,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return User-defined tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -125,7 +126,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -151,7 +152,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CommitmentPlan(String name, CommitmentPlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearning:CommitmentPlan", name, args == null ? CommitmentPlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearning:CommitmentPlan", name, args == null ? CommitmentPlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CommitmentPlan(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

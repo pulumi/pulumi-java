@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.ServiceArgs;
 import io.pulumi.gcp.servicedirectory.inputs.ServiceState;
@@ -60,7 +61,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -74,7 +75,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +89,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The resource name of the namespace this service will belong to.
      * 
      */
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
     /**
@@ -104,7 +105,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * lowercase letters or the hyphen character.
      * 
      */
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -130,7 +131,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicedirectory/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable ServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

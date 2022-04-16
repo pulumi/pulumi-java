@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return /29 IP address space to carve out Customer addresses for tunnels.
      * 
      */
-    public Output</* @Nullable */ String> getAddressPrefix() {
+    public Output</* @Nullable */ String> addressPrefix() {
         return this.addressPrefix;
     }
     /**
@@ -57,7 +58,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return The authorization key.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizationKey() {
+    public Output</* @Nullable */ String> authorizationKey() {
         return this.authorizationKey;
     }
     /**
@@ -71,7 +72,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return Express Route Circuit connection state.
      * 
      */
-    public Output<String> getCircuitConnectionStatus() {
+    public Output<String> circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
@@ -85,7 +86,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -99,7 +100,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getExpressRouteCircuitPeering() {
+    public Output</* @Nullable */ SubResourceResponse> expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
     /**
@@ -113,7 +114,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return IPv6 Address PrefixProperties of the express route circuit connection.
      * 
      */
-    public Output</* @Nullable */ Ipv6CircuitConnectionConfigResponse> getIpv6CircuitConnectionConfig() {
+    public Output</* @Nullable */ Ipv6CircuitConnectionConfigResponse> ipv6CircuitConnectionConfig() {
         return this.ipv6CircuitConnectionConfig;
     }
     /**
@@ -127,7 +128,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -141,7 +142,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getPeerExpressRouteCircuitPeering() {
+    public Output</* @Nullable */ SubResourceResponse> peerExpressRouteCircuitPeering() {
         return this.peerExpressRouteCircuitPeering;
     }
     /**
@@ -155,7 +156,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return The provisioning state of the express route circuit connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -169,7 +170,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -195,7 +196,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ExpressRouteCircuitConnection(String name, ExpressRouteCircuitConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ExpressRouteCircuitConnection", name, args == null ? ExpressRouteCircuitConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ExpressRouteCircuitConnection", name, args == null ? ExpressRouteCircuitConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExpressRouteCircuitConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

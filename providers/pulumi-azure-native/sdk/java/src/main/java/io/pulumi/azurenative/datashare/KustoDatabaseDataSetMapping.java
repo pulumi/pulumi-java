@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return The id of the source data set.
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -56,7 +57,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return Gets the status of the data set mapping.
      * 
      */
-    public Output<String> getDataSetMappingStatus() {
+    public Output<String> dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
@@ -72,7 +73,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Expected value is 'KustoDatabase'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -86,7 +87,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return Resource id of the sink kusto cluster.
      * 
      */
-    public Output<String> getKustoClusterResourceId() {
+    public Output<String> kustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
@@ -100,7 +101,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return Location of the sink kusto cluster.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -114,7 +115,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return Provisioning state of the data set mapping.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -142,7 +143,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -156,7 +157,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public KustoDatabaseDataSetMapping(String name, KustoDatabaseDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:KustoDatabaseDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:KustoDatabaseDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private KustoDatabaseDataSetMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

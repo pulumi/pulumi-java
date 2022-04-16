@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The maximum degree of parallelism per job this user can use to submit jobs.
      * 
      */
-    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
+    public Output<Integer> maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
     /**
@@ -56,7 +57,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The minimum priority per job this user can use to submit jobs.
      * 
      */
-    public Output<Integer> getMinPriorityPerJob() {
+    public Output<Integer> minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
@@ -70,7 +71,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The AAD object identifier for the entity to create a policy for.
      * 
      */
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
     /**
@@ -98,7 +99,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The type of AAD object the object identifier refers to.
      * 
      */
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
     /**
@@ -112,7 +113,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +139,7 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ComputePolicy(String name, ComputePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datalakeanalytics:ComputePolicy", name, args == null ? ComputePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:datalakeanalytics:ComputePolicy", name, args == null ? ComputePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ComputePolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

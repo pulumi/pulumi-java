@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Schedule for daily snapshots
      * 
      */
-    public Output</* @Nullable */ DailyScheduleResponse> getDailySchedule() {
+    public Output</* @Nullable */ DailyScheduleResponse> dailySchedule() {
         return this.dailySchedule;
     }
     /**
@@ -61,7 +62,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return The property to decide policy is enabled or not
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -75,7 +76,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Schedule for hourly snapshots
      * 
      */
-    public Output</* @Nullable */ HourlyScheduleResponse> getHourlySchedule() {
+    public Output</* @Nullable */ HourlyScheduleResponse> hourlySchedule() {
         return this.hourlySchedule;
     }
     /**
@@ -89,7 +90,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -103,7 +104,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Schedule for monthly snapshots
      * 
      */
-    public Output</* @Nullable */ MonthlyScheduleResponse> getMonthlySchedule() {
+    public Output</* @Nullable */ MonthlyScheduleResponse> monthlySchedule() {
         return this.monthlySchedule;
     }
     /**
@@ -117,7 +118,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Azure lifecycle management
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -145,7 +146,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -159,7 +160,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -173,7 +174,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @return Schedule for weekly snapshots
      * 
      */
-    public Output</* @Nullable */ WeeklyScheduleResponse> getWeeklySchedule() {
+    public Output</* @Nullable */ WeeklyScheduleResponse> weeklySchedule() {
         return this.weeklySchedule;
     }
 
@@ -199,7 +200,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotPolicy(String name, SnapshotPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:netapp:SnapshotPolicy", name, args == null ? SnapshotPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:netapp:SnapshotPolicy", name, args == null ? SnapshotPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SnapshotPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

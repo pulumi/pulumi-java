@@ -11,6 +11,7 @@ import io.pulumi.aws.globalaccelerator.outputs.AcceleratorIpSet;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @return The attributes of the accelerator. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ AcceleratorAttributes> getAttributes() {
+    public Output</* @Nullable */ AcceleratorAttributes> attributes() {
         return this.attributes;
     }
     /**
@@ -64,7 +65,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -78,13 +79,13 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -98,7 +99,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @return The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
      * 
      */
-    public Output</* @Nullable */ String> getIpAddressType() {
+    public Output</* @Nullable */ String> ipAddressType() {
         return this.ipAddressType;
     }
     /**
@@ -112,7 +113,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @return IP address set associated with the accelerator.
      * 
      */
-    public Output<List<AcceleratorIpSet>> getIpSets() {
+    public Output<List<AcceleratorIpSet>> ipSets() {
         return this.ipSets;
     }
     /**
@@ -126,7 +127,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @return The name of the accelerator.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +141,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +155,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -180,7 +181,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Accelerator(String name, @Nullable AcceleratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:globalaccelerator/accelerator:Accelerator", name, args == null ? AcceleratorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:globalaccelerator/accelerator:Accelerator", name, args == null ? AcceleratorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Accelerator(String name, Output<String> id, @Nullable AcceleratorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

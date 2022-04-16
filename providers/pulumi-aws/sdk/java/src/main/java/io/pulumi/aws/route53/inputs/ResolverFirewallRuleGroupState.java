@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
     @Import(name="shareStatus")
       private final @Nullable Output<String> shareStatus;
 
-    public Output<String> getShareStatus() {
-        return this.shareStatus == null ? Output.empty() : this.shareStatus;
+    public Output<String> shareStatus() {
+        return this.shareStatus == null ? Codegen.empty() : this.shareStatus;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ResolverFirewallRuleGroupState(
@@ -97,12 +98,12 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
     }
 
     private ResolverFirewallRuleGroupState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.ownerId = Output.empty();
-        this.shareStatus = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.shareStatus = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -148,7 +149,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -156,7 +157,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder shareStatus(@Nullable Output<String> shareStatus) {
@@ -164,7 +165,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
             return this;
         }
         public Builder shareStatus(@Nullable String shareStatus) {
-            this.shareStatus = Output.ofNullable(shareStatus);
+            this.shareStatus = Codegen.ofNullable(shareStatus);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -172,7 +173,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -180,7 +181,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ResolverFirewallRuleGroupState build() {
             return new ResolverFirewallRuleGroupState(arn, name, ownerId, shareStatus, tags, tagsAll);

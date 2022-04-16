@@ -10,6 +10,7 @@ import io.pulumi.aws.waf.outputs.RuleGroupActivatedRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A list of activated rules, see below
      * 
      */
-    public Output</* @Nullable */ List<RuleGroupActivatedRule>> getActivatedRules() {
+    public Output</* @Nullable */ List<RuleGroupActivatedRule>> activatedRules() {
         return this.activatedRules;
     }
     /**
@@ -56,7 +57,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return The ARN of the WAF rule group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +71,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A friendly name for the metrics from the rule group
      * 
      */
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
     /**
@@ -84,7 +85,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A friendly name of the rule group
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +113,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -138,7 +139,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuleGroup(String name, RuleGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:waf/ruleGroup:RuleGroup", name, args == null ? RuleGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:waf/ruleGroup:RuleGroup", name, args == null ? RuleGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RuleGroup(String name, Output<String> id, @Nullable RuleGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

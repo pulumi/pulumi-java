@@ -10,6 +10,7 @@ import io.pulumi.awsnative.robomaker.inputs.SimulationApplicationSourceConfigArg
 import io.pulumi.awsnative.robomaker.inputs.SimulationApplicationTagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
-    public Output<String> getCurrentRevisionId() {
-        return this.currentRevisionId == null ? Output.empty() : this.currentRevisionId;
+    public Output<String> currentRevisionId() {
+        return this.currentRevisionId == null ? Codegen.empty() : this.currentRevisionId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<String> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="renderingEngine")
       private final @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
 
-    public Output<SimulationApplicationRenderingEngineArgs> getRenderingEngine() {
-        return this.renderingEngine == null ? Output.empty() : this.renderingEngine;
+    public Output<SimulationApplicationRenderingEngineArgs> renderingEngine() {
+        return this.renderingEngine == null ? Codegen.empty() : this.renderingEngine;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="robotSoftwareSuite", required=true)
       private final Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
-    public Output<SimulationApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
+    public Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
 
@@ -82,7 +83,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="simulationSoftwareSuite", required=true)
       private final Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
 
-    public Output<SimulationApplicationSimulationSoftwareSuiteArgs> getSimulationSoftwareSuite() {
+    public Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite() {
         return this.simulationSoftwareSuite;
     }
 
@@ -93,15 +94,15 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="sources")
       private final @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;
 
-    public Output<List<SimulationApplicationSourceConfigArgs>> getSources() {
-        return this.sources == null ? Output.empty() : this.sources;
+    public Output<List<SimulationApplicationSourceConfigArgs>> sources() {
+        return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     @Import(name="tags")
       private final @Nullable Output<SimulationApplicationTagsArgs> tags;
 
-    public Output<SimulationApplicationTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<SimulationApplicationTagsArgs> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SimulationApplicationArgs(
@@ -124,14 +125,14 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     }
 
     private SimulationApplicationArgs() {
-        this.currentRevisionId = Output.empty();
-        this.environment = Output.empty();
-        this.name = Output.empty();
-        this.renderingEngine = Output.empty();
-        this.robotSoftwareSuite = Output.empty();
-        this.simulationSoftwareSuite = Output.empty();
-        this.sources = Output.empty();
-        this.tags = Output.empty();
+        this.currentRevisionId = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.name = Codegen.empty();
+        this.renderingEngine = Codegen.empty();
+        this.robotSoftwareSuite = Codegen.empty();
+        this.simulationSoftwareSuite = Codegen.empty();
+        this.sources = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
-            this.currentRevisionId = Output.ofNullable(currentRevisionId);
+            this.currentRevisionId = Codegen.ofNullable(currentRevisionId);
             return this;
         }
         public Builder environment(@Nullable Output<String> environment) {
@@ -181,7 +182,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder environment(@Nullable String environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -189,7 +190,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder renderingEngine(@Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine) {
@@ -197,7 +198,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder renderingEngine(@Nullable SimulationApplicationRenderingEngineArgs renderingEngine) {
-            this.renderingEngine = Output.ofNullable(renderingEngine);
+            this.renderingEngine = Codegen.ofNullable(renderingEngine);
             return this;
         }
         public Builder robotSoftwareSuite(Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
@@ -221,7 +222,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sources(@Nullable List<SimulationApplicationSourceConfigArgs> sources) {
-            this.sources = Output.ofNullable(sources);
+            this.sources = Codegen.ofNullable(sources);
             return this;
         }
         public Builder sources(SimulationApplicationSourceConfigArgs... sources) {
@@ -232,7 +233,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable SimulationApplicationTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SimulationApplicationArgs build() {
             return new SimulationApplicationArgs(currentRevisionId, environment, name, renderingEngine, robotSoftwareSuite, simulationSoftwareSuite, sources, tags);

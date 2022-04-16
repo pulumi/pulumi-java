@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -31,7 +32,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -42,7 +43,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkId", required=true)
       private final Output<String> linkId;
 
-    public Output<String> getLinkId() {
+    public Output<String> linkId() {
         return this.linkId;
     }
 
@@ -56,9 +57,9 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private LinkAssociationArgs() {
-        this.deviceId = Output.empty();
-        this.globalNetworkId = Output.empty();
-        this.linkId = Output.empty();
+        this.deviceId = Codegen.empty();
+        this.globalNetworkId = Codegen.empty();
+        this.linkId = Codegen.empty();
     }
 
     public static Builder builder() {

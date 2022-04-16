@@ -34,6 +34,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -68,7 +69,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayAuthenticationCertificateResponse>> getAuthenticationCertificates() {
+    public Output</* @Nullable */ List<ApplicationGatewayAuthenticationCertificateResponse>> authenticationCertificates() {
         return this.authenticationCertificates;
     }
     /**
@@ -82,7 +83,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Autoscale Configuration.
      * 
      */
-    public Output</* @Nullable */ ApplicationGatewayAutoscaleConfigurationResponse> getAutoscaleConfiguration() {
+    public Output</* @Nullable */ ApplicationGatewayAutoscaleConfigurationResponse> autoscaleConfiguration() {
         return this.autoscaleConfiguration;
     }
     /**
@@ -96,7 +97,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayBackendAddressPoolResponse>> getBackendAddressPools() {
+    public Output</* @Nullable */ List<ApplicationGatewayBackendAddressPoolResponse>> backendAddressPools() {
         return this.backendAddressPools;
     }
     /**
@@ -110,7 +111,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayBackendHttpSettingsResponse>> getBackendHttpSettingsCollection() {
+    public Output</* @Nullable */ List<ApplicationGatewayBackendHttpSettingsResponse>> backendHttpSettingsCollection() {
         return this.backendHttpSettingsCollection;
     }
     /**
@@ -124,7 +125,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Custom error configurations of the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayCustomErrorResponse>> getCustomErrorConfigurations() {
+    public Output</* @Nullable */ List<ApplicationGatewayCustomErrorResponse>> customErrorConfigurations() {
         return this.customErrorConfigurations;
     }
     /**
@@ -138,7 +139,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Whether FIPS is enabled on the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableFips() {
+    public Output</* @Nullable */ Boolean> enableFips() {
         return this.enableFips;
     }
     /**
@@ -152,7 +153,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Whether HTTP2 is enabled on the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableHttp2() {
+    public Output</* @Nullable */ Boolean> enableHttp2() {
         return this.enableHttp2;
     }
     /**
@@ -166,7 +167,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -180,7 +181,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Reference to the FirewallPolicy resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getFirewallPolicy() {
+    public Output</* @Nullable */ SubResourceResponse> firewallPolicy() {
         return this.firewallPolicy;
     }
     /**
@@ -194,7 +195,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceFirewallPolicyAssociation() {
+    public Output</* @Nullable */ Boolean> forceFirewallPolicyAssociation() {
         return this.forceFirewallPolicyAssociation;
     }
     /**
@@ -208,7 +209,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayFrontendIPConfigurationResponse>> getFrontendIPConfigurations() {
+    public Output</* @Nullable */ List<ApplicationGatewayFrontendIPConfigurationResponse>> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
     /**
@@ -222,7 +223,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayFrontendPortResponse>> getFrontendPorts() {
+    public Output</* @Nullable */ List<ApplicationGatewayFrontendPortResponse>> frontendPorts() {
         return this.frontendPorts;
     }
     /**
@@ -236,7 +237,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> getGatewayIPConfigurations() {
+    public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> gatewayIPConfigurations() {
         return this.gatewayIPConfigurations;
     }
     /**
@@ -250,7 +251,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayHttpListenerResponse>> getHttpListeners() {
+    public Output</* @Nullable */ List<ApplicationGatewayHttpListenerResponse>> httpListeners() {
         return this.httpListeners;
     }
     /**
@@ -264,7 +265,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return The identity of the application gateway, if configured.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -278,7 +279,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -292,7 +293,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -306,7 +307,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Operational state of the application gateway resource.
      * 
      */
-    public Output<String> getOperationalState() {
+    public Output<String> operationalState() {
         return this.operationalState;
     }
     /**
@@ -320,7 +321,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Private Endpoint connections on application gateway.
      * 
      */
-    public Output<List<ApplicationGatewayPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<ApplicationGatewayPrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -334,7 +335,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return PrivateLink configurations on application gateway.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayPrivateLinkConfigurationResponse>> getPrivateLinkConfigurations() {
+    public Output</* @Nullable */ List<ApplicationGatewayPrivateLinkConfigurationResponse>> privateLinkConfigurations() {
         return this.privateLinkConfigurations;
     }
     /**
@@ -348,7 +349,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Probes of the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayProbeResponse>> getProbes() {
+    public Output</* @Nullable */ List<ApplicationGatewayProbeResponse>> probes() {
         return this.probes;
     }
     /**
@@ -362,7 +363,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the application gateway resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -376,7 +377,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayRedirectConfigurationResponse>> getRedirectConfigurations() {
+    public Output</* @Nullable */ List<ApplicationGatewayRedirectConfigurationResponse>> redirectConfigurations() {
         return this.redirectConfigurations;
     }
     /**
@@ -390,7 +391,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Request routing rules of the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayRequestRoutingRuleResponse>> getRequestRoutingRules() {
+    public Output</* @Nullable */ List<ApplicationGatewayRequestRoutingRuleResponse>> requestRoutingRules() {
         return this.requestRoutingRules;
     }
     /**
@@ -404,7 +405,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the application gateway resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -418,7 +419,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Rewrite rules for the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayRewriteRuleSetResponse>> getRewriteRuleSets() {
+    public Output</* @Nullable */ List<ApplicationGatewayRewriteRuleSetResponse>> rewriteRuleSets() {
         return this.rewriteRuleSets;
     }
     /**
@@ -432,7 +433,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return SKU of the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ ApplicationGatewaySkuResponse> getSku() {
+    public Output</* @Nullable */ ApplicationGatewaySkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -446,7 +447,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewaySslCertificateResponse>> getSslCertificates() {
+    public Output</* @Nullable */ List<ApplicationGatewaySslCertificateResponse>> sslCertificates() {
         return this.sslCertificates;
     }
     /**
@@ -460,7 +461,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return SSL policy of the application gateway resource.
      * 
      */
-    public Output</* @Nullable */ ApplicationGatewaySslPolicyResponse> getSslPolicy() {
+    public Output</* @Nullable */ ApplicationGatewaySslPolicyResponse> sslPolicy() {
         return this.sslPolicy;
     }
     /**
@@ -474,7 +475,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewaySslProfileResponse>> getSslProfiles() {
+    public Output</* @Nullable */ List<ApplicationGatewaySslProfileResponse>> sslProfiles() {
         return this.sslProfiles;
     }
     /**
@@ -488,7 +489,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -502,7 +503,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayTrustedClientCertificateResponse>> getTrustedClientCertificates() {
+    public Output</* @Nullable */ List<ApplicationGatewayTrustedClientCertificateResponse>> trustedClientCertificates() {
         return this.trustedClientCertificates;
     }
     /**
@@ -516,7 +517,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayTrustedRootCertificateResponse>> getTrustedRootCertificates() {
+    public Output</* @Nullable */ List<ApplicationGatewayTrustedRootCertificateResponse>> trustedRootCertificates() {
         return this.trustedRootCertificates;
     }
     /**
@@ -530,7 +531,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -544,7 +545,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayUrlPathMapResponse>> getUrlPathMaps() {
+    public Output</* @Nullable */ List<ApplicationGatewayUrlPathMapResponse>> urlPathMaps() {
         return this.urlPathMaps;
     }
     /**
@@ -558,7 +559,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return Web application firewall configuration.
      * 
      */
-    public Output</* @Nullable */ ApplicationGatewayWebApplicationFirewallConfigurationResponse> getWebApplicationFirewallConfiguration() {
+    public Output</* @Nullable */ ApplicationGatewayWebApplicationFirewallConfigurationResponse> webApplicationFirewallConfiguration() {
         return this.webApplicationFirewallConfiguration;
     }
     /**
@@ -572,7 +573,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 
@@ -598,7 +599,7 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationGateway(String name, ApplicationGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ApplicationGateway", name, args == null ? ApplicationGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ApplicationGateway", name, args == null ? ApplicationGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplicationGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

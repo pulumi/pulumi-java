@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+    public Output<String> ip() {
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<String> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ProxyServerPropertiesArgs(
@@ -48,8 +49,8 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private ProxyServerPropertiesArgs() {
-        this.ip = Output.empty();
-        this.port = Output.empty();
+        this.ip = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }
         public Builder port(@Nullable Output<String> port) {
@@ -87,7 +88,7 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ProxyServerPropertiesArgs build() {
             return new ProxyServerPropertiesArgs(ip, port);

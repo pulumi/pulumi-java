@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.StatusLevelTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+    public Output<String> code() {
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayStatus")
       private final @Nullable Output<String> displayStatus;
 
-    public Output<String> getDisplayStatus() {
-        return this.displayStatus == null ? Output.empty() : this.displayStatus;
+    public Output<String> displayStatus() {
+        return this.displayStatus == null ? Codegen.empty() : this.displayStatus;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="level")
       private final @Nullable Output<StatusLevelTypes> level;
 
-    public Output<StatusLevelTypes> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+    public Output<StatusLevelTypes> level() {
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
-        return this.time == null ? Output.empty() : this.time;
+    public Output<String> time() {
+        return this.time == null ? Codegen.empty() : this.time;
     }
 
     public InstanceViewStatusArgs(
@@ -88,11 +89,11 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceViewStatusArgs() {
-        this.code = Output.empty();
-        this.displayStatus = Output.empty();
-        this.level = Output.empty();
-        this.message = Output.empty();
-        this.time = Output.empty();
+        this.code = Codegen.empty();
+        this.displayStatus = Codegen.empty();
+        this.level = Codegen.empty();
+        this.message = Codegen.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder displayStatus(@Nullable Output<String> displayStatus) {
@@ -136,7 +137,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder displayStatus(@Nullable String displayStatus) {
-            this.displayStatus = Output.ofNullable(displayStatus);
+            this.displayStatus = Codegen.ofNullable(displayStatus);
             return this;
         }
         public Builder level(@Nullable Output<StatusLevelTypes> level) {
@@ -144,7 +145,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder level(@Nullable StatusLevelTypes level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -152,7 +153,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder time(@Nullable Output<String> time) {
@@ -160,7 +161,7 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder time(@Nullable String time) {
-            this.time = Output.ofNullable(time);
+            this.time = Codegen.ofNullable(time);
             return this;
         }        public InstanceViewStatusArgs build() {
             return new InstanceViewStatusArgs(code, displayStatus, level, message, time);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
     @Import(name="deleteRule")
       private final @Nullable Output<String> deleteRule;
 
-    public Output<String> getDeleteRule() {
-        return this.deleteRule == null ? Output.empty() : this.deleteRule;
+    public Output<String> deleteRule() {
+        return this.deleteRule == null ? Codegen.empty() : this.deleteRule;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -44,8 +45,8 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
     }
 
     private RegionInstanceGroupManagerStatefulDiskGetArgs() {
-        this.deleteRule = Output.empty();
-        this.deviceName = Output.empty();
+        this.deleteRule = Codegen.empty();
+        this.deviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
             return this;
         }
         public Builder deleteRule(@Nullable String deleteRule) {
-            this.deleteRule = Output.ofNullable(deleteRule);
+            this.deleteRule = Codegen.ofNullable(deleteRule);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {

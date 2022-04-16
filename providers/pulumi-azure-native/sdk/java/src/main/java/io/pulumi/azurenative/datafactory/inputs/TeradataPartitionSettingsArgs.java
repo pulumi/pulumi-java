@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
     @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
 
-    public Output<Object> getPartitionColumnName() {
-        return this.partitionColumnName == null ? Output.empty() : this.partitionColumnName;
+    public Output<Object> partitionColumnName() {
+        return this.partitionColumnName == null ? Codegen.empty() : this.partitionColumnName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
     @Import(name="partitionLowerBound")
       private final @Nullable Output<Object> partitionLowerBound;
 
-    public Output<Object> getPartitionLowerBound() {
-        return this.partitionLowerBound == null ? Output.empty() : this.partitionLowerBound;
+    public Output<Object> partitionLowerBound() {
+        return this.partitionLowerBound == null ? Codegen.empty() : this.partitionLowerBound;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
     @Import(name="partitionUpperBound")
       private final @Nullable Output<Object> partitionUpperBound;
 
-    public Output<Object> getPartitionUpperBound() {
-        return this.partitionUpperBound == null ? Output.empty() : this.partitionUpperBound;
+    public Output<Object> partitionUpperBound() {
+        return this.partitionUpperBound == null ? Codegen.empty() : this.partitionUpperBound;
     }
 
     public TeradataPartitionSettingsArgs(
@@ -61,9 +62,9 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
     }
 
     private TeradataPartitionSettingsArgs() {
-        this.partitionColumnName = Output.empty();
-        this.partitionLowerBound = Output.empty();
-        this.partitionUpperBound = Output.empty();
+        this.partitionColumnName = Codegen.empty();
+        this.partitionLowerBound = Codegen.empty();
+        this.partitionUpperBound = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = Output.ofNullable(partitionColumnName);
+            this.partitionColumnName = Codegen.ofNullable(partitionColumnName);
             return this;
         }
         public Builder partitionLowerBound(@Nullable Output<Object> partitionLowerBound) {
@@ -103,7 +104,7 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
-            this.partitionLowerBound = Output.ofNullable(partitionLowerBound);
+            this.partitionLowerBound = Codegen.ofNullable(partitionLowerBound);
             return this;
         }
         public Builder partitionUpperBound(@Nullable Output<Object> partitionUpperBound) {
@@ -111,7 +112,7 @@ public final class TeradataPartitionSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
-            this.partitionUpperBound = Output.ofNullable(partitionUpperBound);
+            this.partitionUpperBound = Codegen.ofNullable(partitionUpperBound);
             return this;
         }        public TeradataPartitionSettingsArgs build() {
             return new TeradataPartitionSettingsArgs(partitionColumnName, partitionLowerBound, partitionUpperBound);

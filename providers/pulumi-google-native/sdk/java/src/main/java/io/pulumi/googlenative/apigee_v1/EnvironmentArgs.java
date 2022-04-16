@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.enums.EnvironmentApiProxyType;
 import io.pulumi.googlenative.apigee_v1.enums.EnvironmentDeploymentType;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertiesArgs;
@@ -24,8 +25,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiProxyType")
       private final @Nullable Output<EnvironmentApiProxyType> apiProxyType;
 
-    public Output<EnvironmentApiProxyType> getApiProxyType() {
-        return this.apiProxyType == null ? Output.empty() : this.apiProxyType;
+    public Output<EnvironmentApiProxyType> apiProxyType() {
+        return this.apiProxyType == null ? Codegen.empty() : this.apiProxyType;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentType")
       private final @Nullable Output<EnvironmentDeploymentType> deploymentType;
 
-    public Output<EnvironmentDeploymentType> getDeploymentType() {
-        return this.deploymentType == null ? Output.empty() : this.deploymentType;
+    public Output<EnvironmentDeploymentType> deploymentType() {
+        return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -68,14 +69,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -86,8 +87,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
 
-    public Output<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<GoogleCloudApigeeV1PropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public EnvironmentArgs(
@@ -108,13 +109,13 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.apiProxyType = Output.empty();
-        this.deploymentType = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.properties = Output.empty();
+        this.apiProxyType = Codegen.empty();
+        this.deploymentType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiProxyType(@Nullable EnvironmentApiProxyType apiProxyType) {
-            this.apiProxyType = Output.ofNullable(apiProxyType);
+            this.apiProxyType = Codegen.ofNullable(apiProxyType);
             return this;
         }
         public Builder deploymentType(@Nullable Output<EnvironmentDeploymentType> deploymentType) {
@@ -162,7 +163,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentType(@Nullable EnvironmentDeploymentType deploymentType) {
-            this.deploymentType = Output.ofNullable(deploymentType);
+            this.deploymentType = Codegen.ofNullable(deploymentType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -170,7 +171,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -178,7 +179,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -186,7 +187,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -202,7 +203,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public EnvironmentArgs build() {
             return new EnvironmentArgs(apiProxyType, deploymentType, description, displayName, name, organizationId, properties);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.ServiceAttachmentConnectionPreference;
 import io.pulumi.googlenative.compute_alpha.inputs.ServiceAttachmentConsumerProjectLimitArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="connectionPreference")
       private final @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference;
 
-    public Output<ServiceAttachmentConnectionPreference> getConnectionPreference() {
-        return this.connectionPreference == null ? Output.empty() : this.connectionPreference;
+    public Output<ServiceAttachmentConnectionPreference> connectionPreference() {
+        return this.connectionPreference == null ? Codegen.empty() : this.connectionPreference;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="consumerAcceptLists")
       private final @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
 
-    public Output<List<ServiceAttachmentConsumerProjectLimitArgs>> getConsumerAcceptLists() {
-        return this.consumerAcceptLists == null ? Output.empty() : this.consumerAcceptLists;
+    public Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists() {
+        return this.consumerAcceptLists == null ? Codegen.empty() : this.consumerAcceptLists;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="consumerRejectLists")
       private final @Nullable Output<List<String>> consumerRejectLists;
 
-    public Output<List<String>> getConsumerRejectLists() {
-        return this.consumerRejectLists == null ? Output.empty() : this.consumerRejectLists;
+    public Output<List<String>> consumerRejectLists() {
+        return this.consumerRejectLists == null ? Codegen.empty() : this.consumerRejectLists;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="domainNames")
       private final @Nullable Output<List<String>> domainNames;
 
-    public Output<List<String>> getDomainNames() {
-        return this.domainNames == null ? Output.empty() : this.domainNames;
+    public Output<List<String>> domainNames() {
+        return this.domainNames == null ? Codegen.empty() : this.domainNames;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enableProxyProtocol")
       private final @Nullable Output<Boolean> enableProxyProtocol;
 
-    public Output<Boolean> getEnableProxyProtocol() {
-        return this.enableProxyProtocol == null ? Output.empty() : this.enableProxyProtocol;
+    public Output<Boolean> enableProxyProtocol() {
+        return this.enableProxyProtocol == null ? Codegen.empty() : this.enableProxyProtocol;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="natSubnets")
       private final @Nullable Output<List<String>> natSubnets;
 
-    public Output<List<String>> getNatSubnets() {
-        return this.natSubnets == null ? Output.empty() : this.natSubnets;
+    public Output<List<String>> natSubnets() {
+        return this.natSubnets == null ? Codegen.empty() : this.natSubnets;
     }
 
     /**
@@ -113,29 +114,29 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="producerForwardingRule")
       private final @Nullable Output<String> producerForwardingRule;
 
-    public Output<String> getProducerForwardingRule() {
-        return this.producerForwardingRule == null ? Output.empty() : this.producerForwardingRule;
+    public Output<String> producerForwardingRule() {
+        return this.producerForwardingRule == null ? Codegen.empty() : this.producerForwardingRule;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetService")
       private final @Nullable Output<String> targetService;
 
-    public Output<String> getTargetService() {
-        return this.targetService == null ? Output.empty() : this.targetService;
+    public Output<String> targetService() {
+        return this.targetService == null ? Codegen.empty() : this.targetService;
     }
 
     public ServiceAttachmentArgs(
@@ -179,19 +180,19 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceAttachmentArgs() {
-        this.connectionPreference = Output.empty();
-        this.consumerAcceptLists = Output.empty();
-        this.consumerRejectLists = Output.empty();
-        this.description = Output.empty();
-        this.domainNames = Output.empty();
-        this.enableProxyProtocol = Output.empty();
-        this.name = Output.empty();
-        this.natSubnets = Output.empty();
-        this.producerForwardingRule = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.targetService = Output.empty();
+        this.connectionPreference = Codegen.empty();
+        this.consumerAcceptLists = Codegen.empty();
+        this.consumerRejectLists = Codegen.empty();
+        this.description = Codegen.empty();
+        this.domainNames = Codegen.empty();
+        this.enableProxyProtocol = Codegen.empty();
+        this.name = Codegen.empty();
+        this.natSubnets = Codegen.empty();
+        this.producerForwardingRule = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.targetService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder connectionPreference(@Nullable ServiceAttachmentConnectionPreference connectionPreference) {
-            this.connectionPreference = Output.ofNullable(connectionPreference);
+            this.connectionPreference = Codegen.ofNullable(connectionPreference);
             return this;
         }
         public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists) {
@@ -251,7 +252,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerProjectLimitArgs> consumerAcceptLists) {
-            this.consumerAcceptLists = Output.ofNullable(consumerAcceptLists);
+            this.consumerAcceptLists = Codegen.ofNullable(consumerAcceptLists);
             return this;
         }
         public Builder consumerAcceptLists(ServiceAttachmentConsumerProjectLimitArgs... consumerAcceptLists) {
@@ -262,7 +263,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
-            this.consumerRejectLists = Output.ofNullable(consumerRejectLists);
+            this.consumerRejectLists = Codegen.ofNullable(consumerRejectLists);
             return this;
         }
         public Builder consumerRejectLists(String... consumerRejectLists) {
@@ -273,7 +274,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder domainNames(@Nullable Output<List<String>> domainNames) {
@@ -281,7 +282,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder domainNames(@Nullable List<String> domainNames) {
-            this.domainNames = Output.ofNullable(domainNames);
+            this.domainNames = Codegen.ofNullable(domainNames);
             return this;
         }
         public Builder domainNames(String... domainNames) {
@@ -292,7 +293,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
-            this.enableProxyProtocol = Output.ofNullable(enableProxyProtocol);
+            this.enableProxyProtocol = Codegen.ofNullable(enableProxyProtocol);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -300,7 +301,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder natSubnets(@Nullable Output<List<String>> natSubnets) {
@@ -308,7 +309,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder natSubnets(@Nullable List<String> natSubnets) {
-            this.natSubnets = Output.ofNullable(natSubnets);
+            this.natSubnets = Codegen.ofNullable(natSubnets);
             return this;
         }
         public Builder natSubnets(String... natSubnets) {
@@ -319,7 +320,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder producerForwardingRule(@Nullable String producerForwardingRule) {
-            this.producerForwardingRule = Output.ofNullable(producerForwardingRule);
+            this.producerForwardingRule = Codegen.ofNullable(producerForwardingRule);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -327,7 +328,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -343,7 +344,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder targetService(@Nullable Output<String> targetService) {
@@ -351,7 +352,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder targetService(@Nullable String targetService) {
-            this.targetService = Output.ofNullable(targetService);
+            this.targetService = Codegen.ofNullable(targetService);
             return this;
         }        public ServiceAttachmentArgs build() {
             return new ServiceAttachmentArgs(connectionPreference, consumerAcceptLists, consumerRejectLists, description, domainNames, enableProxyProtocol, name, natSubnets, producerForwardingRule, project, region, requestId, targetService);

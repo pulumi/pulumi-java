@@ -5,6 +5,7 @@ package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="html")
       private final @Nullable Output<String> html;
 
-    public Output<String> getHtml() {
-        return this.html == null ? Output.empty() : this.html;
+    public Output<String> html() {
+        return this.html == null ? Codegen.empty() : this.html;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subject")
       private final @Nullable Output<String> subject;
 
-    public Output<String> getSubject() {
-        return this.subject == null ? Output.empty() : this.subject;
+    public Output<String> subject() {
+        return this.subject == null ? Codegen.empty() : this.subject;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<String> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public TemplateArgs(
@@ -70,10 +71,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.html = Output.empty();
-        this.name = Output.empty();
-        this.subject = Output.empty();
-        this.text = Output.empty();
+        this.html = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subject = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder html(@Nullable String html) {
-            this.html = Output.ofNullable(html);
+            this.html = Codegen.ofNullable(html);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -115,7 +116,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subject(@Nullable Output<String> subject) {
@@ -123,7 +124,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subject(@Nullable String subject) {
-            this.subject = Output.ofNullable(subject);
+            this.subject = Codegen.ofNullable(subject);
             return this;
         }
         public Builder text(@Nullable Output<String> text) {
@@ -131,7 +132,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder text(@Nullable String text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public TemplateArgs build() {
             return new TemplateArgs(html, name, subject, text);

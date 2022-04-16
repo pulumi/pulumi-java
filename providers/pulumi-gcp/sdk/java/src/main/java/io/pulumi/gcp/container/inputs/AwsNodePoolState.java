@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AwsNodePoolAutoscalingGetArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigGetArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolMaxPodsConstraintGetArgs;
@@ -26,8 +27,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling")
       private final @Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling;
 
-    public Output<AwsNodePoolAutoscalingGetArgs> getAutoscaling() {
-        return this.autoscaling == null ? Output.empty() : this.autoscaling;
+    public Output<AwsNodePoolAutoscalingGetArgs> autoscaling() {
+        return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
-        return this.cluster == null ? Output.empty() : this.cluster;
+    public Output<String> cluster() {
+        return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<AwsNodePoolConfigGetArgs> config;
 
-    public Output<AwsNodePoolConfigGetArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<AwsNodePoolConfigGetArgs> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsConstraint")
       private final @Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
 
-    public Output<AwsNodePoolMaxPodsConstraintGetArgs> getMaxPodsConstraint() {
-        return this.maxPodsConstraint == null ? Output.empty() : this.maxPodsConstraint;
+    public Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint() {
+        return this.maxPodsConstraint == null ? Codegen.empty() : this.maxPodsConstraint;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="reconciling")
       private final @Nullable Output<Boolean> reconciling;
 
-    public Output<Boolean> getReconciling() {
-        return this.reconciling == null ? Output.empty() : this.reconciling;
+    public Output<Boolean> reconciling() {
+        return this.reconciling == null ? Codegen.empty() : this.reconciling;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+    public Output<String> uid() {
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -193,8 +194,8 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public AwsNodePoolState(
@@ -233,22 +234,22 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsNodePoolState() {
-        this.annotations = Output.empty();
-        this.autoscaling = Output.empty();
-        this.cluster = Output.empty();
-        this.config = Output.empty();
-        this.createTime = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.maxPodsConstraint = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.reconciling = Output.empty();
-        this.state = Output.empty();
-        this.subnetId = Output.empty();
-        this.uid = Output.empty();
-        this.updateTime = Output.empty();
-        this.version = Output.empty();
+        this.annotations = Codegen.empty();
+        this.autoscaling = Codegen.empty();
+        this.cluster = Codegen.empty();
+        this.config = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxPodsConstraint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.reconciling = Codegen.empty();
+        this.state = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.uid = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -306,7 +307,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder autoscaling(@Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling) {
@@ -314,7 +315,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscaling(@Nullable AwsNodePoolAutoscalingGetArgs autoscaling) {
-            this.autoscaling = Output.ofNullable(autoscaling);
+            this.autoscaling = Codegen.ofNullable(autoscaling);
             return this;
         }
         public Builder cluster(@Nullable Output<String> cluster) {
@@ -322,7 +323,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Output.ofNullable(cluster);
+            this.cluster = Codegen.ofNullable(cluster);
             return this;
         }
         public Builder config(@Nullable Output<AwsNodePoolConfigGetArgs> config) {
@@ -330,7 +331,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable AwsNodePoolConfigGetArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -338,7 +339,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -346,7 +347,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -354,7 +355,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxPodsConstraint(@Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
@@ -362,7 +363,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxPodsConstraint(@Nullable AwsNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
-            this.maxPodsConstraint = Output.ofNullable(maxPodsConstraint);
+            this.maxPodsConstraint = Codegen.ofNullable(maxPodsConstraint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -370,7 +371,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -378,7 +379,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
@@ -386,7 +387,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reconciling(@Nullable Boolean reconciling) {
-            this.reconciling = Output.ofNullable(reconciling);
+            this.reconciling = Codegen.ofNullable(reconciling);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -394,7 +395,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -402,7 +403,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -410,7 +411,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -418,7 +419,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -426,7 +427,7 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public AwsNodePoolState build() {
             return new AwsNodePoolState(annotations, autoscaling, cluster, config, createTime, etag, location, maxPodsConstraint, name, project, reconciling, state, subnetId, uid, updateTime, version);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ExpressionArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition", required=true)
       private final Output<ExpressionArgs> condition;
 
-    public Output<ExpressionArgs> getCondition() {
+    public Output<ExpressionArgs> condition() {
         return this.condition;
     }
 
@@ -40,8 +41,8 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="items", required=true)
       private final Output<ExpressionArgs> items;
 
-    public Output<ExpressionArgs> getItems() {
+    public Output<ExpressionArgs> items() {
         return this.items;
     }
 
@@ -73,7 +74,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -85,7 +86,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -96,8 +97,8 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> userProperties() {
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public FilterActivityArgs(
@@ -118,13 +119,13 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterActivityArgs() {
-        this.condition = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.items = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.condition = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.items = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -183,7 +184,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder items(Output<ExpressionArgs> items) {
@@ -215,7 +216,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

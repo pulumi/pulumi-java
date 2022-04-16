@@ -5,6 +5,7 @@ package io.pulumi.gcp.resourcemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     @Import(name="origin")
       private final @Nullable Output<String> origin;
 
-    public Output<String> getOrigin() {
-        return this.origin == null ? Output.empty() : this.origin;
+    public Output<String> origin() {
+        return this.origin == null ? Codegen.empty() : this.origin;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     @Import(name="restrictions")
       private final @Nullable Output<List<String>> restrictions;
 
-    public Output<List<String>> getRestrictions() {
-        return this.restrictions == null ? Output.empty() : this.restrictions;
+    public Output<List<String>> restrictions() {
+        return this.restrictions == null ? Codegen.empty() : this.restrictions;
     }
 
     public LienState(
@@ -107,12 +108,12 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LienState() {
-        this.createTime = Output.empty();
-        this.name = Output.empty();
-        this.origin = Output.empty();
-        this.parent = Output.empty();
-        this.reason = Output.empty();
-        this.restrictions = Output.empty();
+        this.createTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.origin = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.restrictions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -158,7 +159,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder origin(@Nullable Output<String> origin) {
@@ -166,7 +167,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder origin(@Nullable String origin) {
-            this.origin = Output.ofNullable(origin);
+            this.origin = Codegen.ofNullable(origin);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -174,7 +175,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -182,7 +183,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }
         public Builder restrictions(@Nullable Output<List<String>> restrictions) {
@@ -190,7 +191,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restrictions(@Nullable List<String> restrictions) {
-            this.restrictions = Output.ofNullable(restrictions);
+            this.restrictions = Codegen.ofNullable(restrictions);
             return this;
         }
         public Builder restrictions(String... restrictions) {

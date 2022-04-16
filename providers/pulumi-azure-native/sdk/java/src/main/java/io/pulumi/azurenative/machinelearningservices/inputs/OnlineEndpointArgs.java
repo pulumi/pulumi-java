@@ -8,6 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authMode", required=true)
       private final Output<Either<String,EndpointAuthMode>> authMode;
 
-    public Output<Either<String,EndpointAuthMode>> getAuthMode() {
+    public Output<Either<String,EndpointAuthMode>> authMode() {
         return this.authMode;
     }
 
@@ -41,8 +42,8 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<EndpointAuthKeysArgs> keys;
 
-    public Output<EndpointAuthKeysArgs> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+    public Output<EndpointAuthKeysArgs> keys() {
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
       private final @Nullable Output<Map<String,Integer>> traffic;
 
-    public Output<Map<String,Integer>> getTraffic() {
-        return this.traffic == null ? Output.empty() : this.traffic;
+    public Output<Map<String,Integer>> traffic() {
+        return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 
     public OnlineEndpointArgs(
@@ -107,12 +108,12 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OnlineEndpointArgs() {
-        this.authMode = Output.empty();
-        this.description = Output.empty();
-        this.keys = Output.empty();
-        this.properties = Output.empty();
-        this.target = Output.empty();
-        this.traffic = Output.empty();
+        this.authMode = Codegen.empty();
+        this.description = Codegen.empty();
+        this.keys = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.target = Codegen.empty();
+        this.traffic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder keys(@Nullable Output<EndpointAuthKeysArgs> keys) {
@@ -166,7 +167,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keys(@Nullable EndpointAuthKeysArgs keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -174,7 +175,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -182,7 +183,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder traffic(@Nullable Output<Map<String,Integer>> traffic) {
@@ -190,7 +191,7 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
-            this.traffic = Output.ofNullable(traffic);
+            this.traffic = Codegen.ofNullable(traffic);
             return this;
         }        public OnlineEndpointArgs build() {
             return new OnlineEndpointArgs(authMode, description, keys, properties, target, traffic);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="producerProjectId")
       private final @Nullable Output<String> producerProjectId;
 
-    public Output<String> getProducerProjectId() {
-        return this.producerProjectId == null ? Output.empty() : this.producerProjectId;
+    public Output<String> producerProjectId() {
+        return this.producerProjectId == null ? Codegen.empty() : this.producerProjectId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     public ServiceArgs(
@@ -44,8 +45,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.producerProjectId = Output.empty();
-        this.serviceName = Output.empty();
+        this.producerProjectId = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder producerProjectId(@Nullable String producerProjectId) {
-            this.producerProjectId = Output.ofNullable(producerProjectId);
+            this.producerProjectId = Codegen.ofNullable(producerProjectId);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -83,7 +84,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(producerProjectId, serviceName);

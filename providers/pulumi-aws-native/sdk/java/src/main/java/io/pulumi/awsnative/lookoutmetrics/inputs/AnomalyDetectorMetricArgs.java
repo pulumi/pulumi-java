@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricAggregationFunction;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,22 +23,22 @@ public final class AnomalyDetectorMetricArgs extends io.pulumi.resources.Resourc
     @Import(name="aggregationFunction", required=true)
       private final Output<AnomalyDetectorMetricAggregationFunction> aggregationFunction;
 
-    public Output<AnomalyDetectorMetricAggregationFunction> getAggregationFunction() {
+    public Output<AnomalyDetectorMetricAggregationFunction> aggregationFunction() {
         return this.aggregationFunction;
     }
 
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public AnomalyDetectorMetricArgs(
@@ -50,9 +51,9 @@ public final class AnomalyDetectorMetricArgs extends io.pulumi.resources.Resourc
     }
 
     private AnomalyDetectorMetricArgs() {
-        this.aggregationFunction = Output.empty();
-        this.metricName = Output.empty();
-        this.namespace = Output.empty();
+        this.aggregationFunction = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class AnomalyDetectorMetricArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public AnomalyDetectorMetricArgs build() {
             return new AnomalyDetectorMetricArgs(aggregationFunction, metricName, namespace);

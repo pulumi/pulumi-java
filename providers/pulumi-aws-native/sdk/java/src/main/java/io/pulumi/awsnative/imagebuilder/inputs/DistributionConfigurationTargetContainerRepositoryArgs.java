@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.enums.DistributionConfigurationTargetContainerRepositoryService;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+    public Output<String> repositoryName() {
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     @Import(name="service")
       private final @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
 
-    public Output<DistributionConfigurationTargetContainerRepositoryService> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<DistributionConfigurationTargetContainerRepositoryService> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public DistributionConfigurationTargetContainerRepositoryArgs(
@@ -49,8 +50,8 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     }
 
     private DistributionConfigurationTargetContainerRepositoryArgs() {
-        this.repositoryName = Output.empty();
-        this.service = Output.empty();
+        this.repositoryName = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }
         public Builder service(@Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service) {
@@ -88,7 +89,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
             return this;
         }
         public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public DistributionConfigurationTargetContainerRepositoryArgs build() {
             return new DistributionConfigurationTargetContainerRepositoryArgs(repositoryName, service);

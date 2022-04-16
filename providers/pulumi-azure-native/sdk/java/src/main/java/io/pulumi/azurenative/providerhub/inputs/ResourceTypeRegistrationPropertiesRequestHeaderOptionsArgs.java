@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.OptInHeaderType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,8 +20,8 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
     @Import(name="optInHeaders")
       private final @Nullable Output<Either<String,OptInHeaderType>> optInHeaders;
 
-    public Output<Either<String,OptInHeaderType>> getOptInHeaders() {
-        return this.optInHeaders == null ? Output.empty() : this.optInHeaders;
+    public Output<Either<String,OptInHeaderType>> optInHeaders() {
+        return this.optInHeaders == null ? Codegen.empty() : this.optInHeaders;
     }
 
     public ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs(@Nullable Output<Either<String,OptInHeaderType>> optInHeaders) {
@@ -28,7 +29,7 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
     }
 
     private ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs() {
-        this.optInHeaders = Output.empty();
+        this.optInHeaders = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -56,7 +57,7 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
             return this;
         }
         public Builder optInHeaders(@Nullable Either<String,OptInHeaderType> optInHeaders) {
-            this.optInHeaders = Output.ofNullable(optInHeaders);
+            this.optInHeaders = Codegen.ofNullable(optInHeaders);
             return this;
         }        public ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs build() {
             return new ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs(optInHeaders);

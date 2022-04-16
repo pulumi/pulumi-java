@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
     @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
-    public Output<String> getKeyArn() {
-        return this.keyArn == null ? Output.empty() : this.keyArn;
+    public Output<String> keyArn() {
+        return this.keyArn == null ? Codegen.empty() : this.keyArn;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
     @Import(name="keyType")
       private final @Nullable Output<String> keyType;
 
-    public Output<String> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+    public Output<String> keyType() {
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     public FirehoseDeliveryStreamServerSideEncryptionGetArgs(
@@ -58,9 +59,9 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
     }
 
     private FirehoseDeliveryStreamServerSideEncryptionGetArgs() {
-        this.enabled = Output.empty();
-        this.keyArn = Output.empty();
-        this.keyType = Output.empty();
+        this.enabled = Codegen.empty();
+        this.keyArn = Codegen.empty();
+        this.keyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder keyArn(@Nullable Output<String> keyArn) {
@@ -100,7 +101,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
             return this;
         }
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Output.ofNullable(keyArn);
+            this.keyArn = Codegen.ofNullable(keyArn);
             return this;
         }
         public Builder keyType(@Nullable Output<String> keyType) {
@@ -108,7 +109,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
             return this;
         }
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }        public FirehoseDeliveryStreamServerSideEncryptionGetArgs build() {
             return new FirehoseDeliveryStreamServerSideEncryptionGetArgs(enabled, keyArn, keyType);

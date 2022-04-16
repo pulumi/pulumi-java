@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<Integer> code;
 
-    public Output<Integer> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+    public Output<Integer> code() {
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="details")
       private final @Nullable Output<List<Map<String,String>>> details;
 
-    public Output<List<Map<String,String>>> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<List<Map<String,String>>> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     public StatusArgs(
@@ -64,9 +65,9 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StatusArgs() {
-        this.code = Output.empty();
-        this.details = Output.empty();
-        this.message = Output.empty();
+        this.code = Codegen.empty();
+        this.details = Codegen.empty();
+        this.message = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder code(@Nullable Integer code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder details(@Nullable Output<List<Map<String,String>>> details) {
@@ -106,7 +107,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder details(@Nullable List<Map<String,String>> details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -114,7 +115,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }        public StatusArgs build() {
             return new StatusArgs(code, details, message);

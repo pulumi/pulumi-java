@@ -7,6 +7,7 @@ import io.pulumi.azurenative.orbital.enums.AutoTrackingConfiguration;
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoTrackingConfiguration")
       private final @Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration;
 
-    public Output<AutoTrackingConfiguration> getAutoTrackingConfiguration() {
-        return this.autoTrackingConfiguration == null ? Output.empty() : this.autoTrackingConfiguration;
+    public Output<AutoTrackingConfiguration> autoTrackingConfiguration() {
+        return this.autoTrackingConfiguration == null ? Codegen.empty() : this.autoTrackingConfiguration;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactProfileName")
       private final @Nullable Output<String> contactProfileName;
 
-    public Output<String> getContactProfileName() {
-        return this.contactProfileName == null ? Output.empty() : this.contactProfileName;
+    public Output<String> contactProfileName() {
+        return this.contactProfileName == null ? Codegen.empty() : this.contactProfileName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventHubUri")
       private final @Nullable Output<String> eventHubUri;
 
-    public Output<String> getEventHubUri() {
-        return this.eventHubUri == null ? Output.empty() : this.eventHubUri;
+    public Output<String> eventHubUri() {
+        return this.eventHubUri == null ? Codegen.empty() : this.eventHubUri;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="links", required=true)
       private final Output<List<ContactProfileLinkArgs>> links;
 
-    public Output<List<ContactProfileLinkArgs>> getLinks() {
+    public Output<List<ContactProfileLinkArgs>> links() {
         return this.links;
     }
 
@@ -70,8 +71,8 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumElevationDegrees")
       private final @Nullable Output<Double> minimumElevationDegrees;
 
-    public Output<Double> getMinimumElevationDegrees() {
-        return this.minimumElevationDegrees == null ? Output.empty() : this.minimumElevationDegrees;
+    public Output<Double> minimumElevationDegrees() {
+        return this.minimumElevationDegrees == null ? Codegen.empty() : this.minimumElevationDegrees;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumViableContactDuration")
       private final @Nullable Output<String> minimumViableContactDuration;
 
-    public Output<String> getMinimumViableContactDuration() {
-        return this.minimumViableContactDuration == null ? Output.empty() : this.minimumViableContactDuration;
+    public Output<String> minimumViableContactDuration() {
+        return this.minimumViableContactDuration == null ? Codegen.empty() : this.minimumViableContactDuration;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,8 +115,8 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ContactProfileArgs(
@@ -140,15 +141,15 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactProfileArgs() {
-        this.autoTrackingConfiguration = Output.empty();
-        this.contactProfileName = Output.empty();
-        this.eventHubUri = Output.empty();
-        this.links = Output.empty();
-        this.location = Output.empty();
-        this.minimumElevationDegrees = Output.empty();
-        this.minimumViableContactDuration = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.autoTrackingConfiguration = Codegen.empty();
+        this.contactProfileName = Codegen.empty();
+        this.eventHubUri = Codegen.empty();
+        this.links = Codegen.empty();
+        this.location = Codegen.empty();
+        this.minimumElevationDegrees = Codegen.empty();
+        this.minimumViableContactDuration = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoTrackingConfiguration(@Nullable AutoTrackingConfiguration autoTrackingConfiguration) {
-            this.autoTrackingConfiguration = Output.ofNullable(autoTrackingConfiguration);
+            this.autoTrackingConfiguration = Codegen.ofNullable(autoTrackingConfiguration);
             return this;
         }
         public Builder contactProfileName(@Nullable Output<String> contactProfileName) {
@@ -200,7 +201,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactProfileName(@Nullable String contactProfileName) {
-            this.contactProfileName = Output.ofNullable(contactProfileName);
+            this.contactProfileName = Codegen.ofNullable(contactProfileName);
             return this;
         }
         public Builder eventHubUri(@Nullable Output<String> eventHubUri) {
@@ -208,7 +209,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventHubUri(@Nullable String eventHubUri) {
-            this.eventHubUri = Output.ofNullable(eventHubUri);
+            this.eventHubUri = Codegen.ofNullable(eventHubUri);
             return this;
         }
         public Builder links(Output<List<ContactProfileLinkArgs>> links) {
@@ -227,7 +228,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder minimumElevationDegrees(@Nullable Output<Double> minimumElevationDegrees) {
@@ -235,7 +236,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
-            this.minimumElevationDegrees = Output.ofNullable(minimumElevationDegrees);
+            this.minimumElevationDegrees = Codegen.ofNullable(minimumElevationDegrees);
             return this;
         }
         public Builder minimumViableContactDuration(@Nullable Output<String> minimumViableContactDuration) {
@@ -243,7 +244,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumViableContactDuration(@Nullable String minimumViableContactDuration) {
-            this.minimumViableContactDuration = Output.ofNullable(minimumViableContactDuration);
+            this.minimumViableContactDuration = Codegen.ofNullable(minimumViableContactDuration);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -259,7 +260,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ContactProfileArgs build() {
             return new ContactProfileArgs(autoTrackingConfiguration, contactProfileName, eventHubUri, links, location, minimumElevationDegrees, minimumViableContactDuration, resourceGroupName, tags);

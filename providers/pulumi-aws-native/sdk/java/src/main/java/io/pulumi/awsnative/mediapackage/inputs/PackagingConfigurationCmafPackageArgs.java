@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationCmafEncrypt
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationCmafEncryptionArgs> encryption;
 
-    public Output<PackagingConfigurationCmafEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<PackagingConfigurationCmafEncryptionArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     @Import(name="hlsManifests", required=true)
       private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
-    public Output<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
+    public Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests() {
         return this.hlsManifests;
     }
 
@@ -47,15 +48,15 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
 
-    public Output<Boolean> getIncludeEncoderConfigurationInSegments() {
-        return this.includeEncoderConfigurationInSegments == null ? Output.empty() : this.includeEncoderConfigurationInSegments;
+    public Output<Boolean> includeEncoderConfigurationInSegments() {
+        return this.includeEncoderConfigurationInSegments == null ? Codegen.empty() : this.includeEncoderConfigurationInSegments;
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Output.empty() : this.segmentDurationSeconds;
+    public Output<Integer> segmentDurationSeconds() {
+        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 
     public PackagingConfigurationCmafPackageArgs(
@@ -70,10 +71,10 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     }
 
     private PackagingConfigurationCmafPackageArgs() {
-        this.encryption = Output.empty();
-        this.hlsManifests = Output.empty();
-        this.includeEncoderConfigurationInSegments = Output.empty();
-        this.segmentDurationSeconds = Output.empty();
+        this.encryption = Codegen.empty();
+        this.hlsManifests = Codegen.empty();
+        this.includeEncoderConfigurationInSegments = Codegen.empty();
+        this.segmentDurationSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
             return this;
         }
         public Builder encryption(@Nullable PackagingConfigurationCmafEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder hlsManifests(Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
@@ -126,7 +127,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
             return this;
         }
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
-            this.includeEncoderConfigurationInSegments = Output.ofNullable(includeEncoderConfigurationInSegments);
+            this.includeEncoderConfigurationInSegments = Codegen.ofNullable(includeEncoderConfigurationInSegments);
             return this;
         }
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
@@ -134,7 +135,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
             return this;
         }
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
+            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
             return this;
         }        public PackagingConfigurationCmafPackageArgs build() {
             return new PackagingConfigurationCmafPackageArgs(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);

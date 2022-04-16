@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1.inputs.RevisionTemplateArgs;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<RevisionTemplateArgs> template;
 
-    public Output<RevisionTemplateArgs> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+    public Output<RevisionTemplateArgs> template() {
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
       private final @Nullable Output<List<TrafficTargetArgs>> traffic;
 
-    public Output<List<TrafficTargetArgs>> getTraffic() {
-        return this.traffic == null ? Output.empty() : this.traffic;
+    public Output<List<TrafficTargetArgs>> traffic() {
+        return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 
     public ServiceSpecArgs(
@@ -50,8 +51,8 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceSpecArgs() {
-        this.template = Output.empty();
-        this.traffic = Output.empty();
+        this.template = Codegen.empty();
+        this.traffic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder template(@Nullable RevisionTemplateArgs template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }
         public Builder traffic(@Nullable Output<List<TrafficTargetArgs>> traffic) {
@@ -89,7 +90,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder traffic(@Nullable List<TrafficTargetArgs> traffic) {
-            this.traffic = Output.ofNullable(traffic);
+            this.traffic = Codegen.ofNullable(traffic);
             return this;
         }
         public Builder traffic(TrafficTargetArgs... traffic) {

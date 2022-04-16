@@ -6,6 +6,7 @@ package io.pulumi.aws.route53.inputs;
 import io.pulumi.aws.route53.inputs.ResolverRuleTargetIpGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolverEndpointId")
       private final @Nullable Output<String> resolverEndpointId;
 
-    public Output<String> getResolverEndpointId() {
-        return this.resolverEndpointId == null ? Output.empty() : this.resolverEndpointId;
+    public Output<String> resolverEndpointId() {
+        return this.resolverEndpointId == null ? Codegen.empty() : this.resolverEndpointId;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleType")
       private final @Nullable Output<String> ruleType;
 
-    public Output<String> getRuleType() {
-        return this.ruleType == null ? Output.empty() : this.ruleType;
+    public Output<String> ruleType() {
+        return this.ruleType == null ? Codegen.empty() : this.ruleType;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareStatus")
       private final @Nullable Output<String> shareStatus;
 
-    public Output<String> getShareStatus() {
-        return this.shareStatus == null ? Output.empty() : this.shareStatus;
+    public Output<String> shareStatus() {
+        return this.shareStatus == null ? Codegen.empty() : this.shareStatus;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetIps")
       private final @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
 
-    public Output<List<ResolverRuleTargetIpGetArgs>> getTargetIps() {
-        return this.targetIps == null ? Output.empty() : this.targetIps;
+    public Output<List<ResolverRuleTargetIpGetArgs>> targetIps() {
+        return this.targetIps == null ? Codegen.empty() : this.targetIps;
     }
 
     public ResolverRuleState(
@@ -154,16 +155,16 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResolverRuleState() {
-        this.arn = Output.empty();
-        this.domainName = Output.empty();
-        this.name = Output.empty();
-        this.ownerId = Output.empty();
-        this.resolverEndpointId = Output.empty();
-        this.ruleType = Output.empty();
-        this.shareStatus = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.targetIps = Output.empty();
+        this.arn = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.resolverEndpointId = Codegen.empty();
+        this.ruleType = Codegen.empty();
+        this.shareStatus = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.targetIps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -217,7 +218,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -225,7 +226,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -233,7 +234,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
@@ -241,7 +242,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            this.resolverEndpointId = Output.ofNullable(resolverEndpointId);
+            this.resolverEndpointId = Codegen.ofNullable(resolverEndpointId);
             return this;
         }
         public Builder ruleType(@Nullable Output<String> ruleType) {
@@ -249,7 +250,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleType(@Nullable String ruleType) {
-            this.ruleType = Output.ofNullable(ruleType);
+            this.ruleType = Codegen.ofNullable(ruleType);
             return this;
         }
         public Builder shareStatus(@Nullable Output<String> shareStatus) {
@@ -257,7 +258,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareStatus(@Nullable String shareStatus) {
-            this.shareStatus = Output.ofNullable(shareStatus);
+            this.shareStatus = Codegen.ofNullable(shareStatus);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -265,7 +266,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -273,7 +274,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps) {
@@ -281,7 +282,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetIps(@Nullable List<ResolverRuleTargetIpGetArgs> targetIps) {
-            this.targetIps = Output.ofNullable(targetIps);
+            this.targetIps = Codegen.ofNullable(targetIps);
             return this;
         }
         public Builder targetIps(ResolverRuleTargetIpGetArgs... targetIps) {

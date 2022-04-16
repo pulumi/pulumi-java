@@ -9,6 +9,7 @@ import io.pulumi.aws.applicationloadbalancing.inputs.TargetGroupAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
      * 
      */
-    public Output</* @Nullable */ String> getAvailabilityZone() {
+    public Output</* @Nullable */ String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -57,7 +58,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The port on which targets receive traffic.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -71,7 +72,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The ARN of the target group with which to register targets
      * 
      */
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn;
     }
     /**
@@ -85,7 +86,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda. If the target type is alb, specify the arn of alb.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -111,7 +112,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetGroupAttachment(String name, TargetGroupAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:applicationloadbalancing/targetGroupAttachment:TargetGroupAttachment", name, args == null ? TargetGroupAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:applicationloadbalancing/targetGroupAttachment:TargetGroupAttachment", name, args == null ? TargetGroupAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetGroupAttachment(String name, Output<String> id, @Nullable TargetGroupAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

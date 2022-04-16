@@ -5,6 +5,7 @@ package io.pulumi.googlenative.secretmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.secretmanager_v1.inputs.AutomaticArgs;
 import io.pulumi.googlenative.secretmanager_v1.inputs.UserManagedArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automatic")
       private final @Nullable Output<AutomaticArgs> automatic;
 
-    public Output<AutomaticArgs> getAutomatic() {
-        return this.automatic == null ? Output.empty() : this.automatic;
+    public Output<AutomaticArgs> automatic() {
+        return this.automatic == null ? Codegen.empty() : this.automatic;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userManaged")
       private final @Nullable Output<UserManagedArgs> userManaged;
 
-    public Output<UserManagedArgs> getUserManaged() {
-        return this.userManaged == null ? Output.empty() : this.userManaged;
+    public Output<UserManagedArgs> userManaged() {
+        return this.userManaged == null ? Codegen.empty() : this.userManaged;
     }
 
     public ReplicationArgs(
@@ -49,8 +50,8 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicationArgs() {
-        this.automatic = Output.empty();
-        this.userManaged = Output.empty();
+        this.automatic = Codegen.empty();
+        this.userManaged = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automatic(@Nullable AutomaticArgs automatic) {
-            this.automatic = Output.ofNullable(automatic);
+            this.automatic = Codegen.ofNullable(automatic);
             return this;
         }
         public Builder userManaged(@Nullable Output<UserManagedArgs> userManaged) {
@@ -88,7 +89,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userManaged(@Nullable UserManagedArgs userManaged) {
-            this.userManaged = Output.ofNullable(userManaged);
+            this.userManaged = Codegen.ofNullable(userManaged);
             return this;
         }        public ReplicationArgs build() {
             return new ReplicationArgs(automatic, userManaged);

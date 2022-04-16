@@ -9,6 +9,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteRetryPolicyGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteTimeoutGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class RouteSpecHttpRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="action", required=true)
       private final Output<RouteSpecHttpRouteActionGetArgs> action;
 
-    public Output<RouteSpecHttpRouteActionGetArgs> getAction() {
+    public Output<RouteSpecHttpRouteActionGetArgs> action() {
         return this.action;
     }
 
@@ -35,7 +36,7 @@ public final class RouteSpecHttpRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="match", required=true)
       private final Output<RouteSpecHttpRouteMatchGetArgs> match;
 
-    public Output<RouteSpecHttpRouteMatchGetArgs> getMatch() {
+    public Output<RouteSpecHttpRouteMatchGetArgs> match() {
         return this.match;
     }
 
@@ -46,8 +47,8 @@ public final class RouteSpecHttpRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="retryPolicy")
       private final @Nullable Output<RouteSpecHttpRouteRetryPolicyGetArgs> retryPolicy;
 
-    public Output<RouteSpecHttpRouteRetryPolicyGetArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
+    public Output<RouteSpecHttpRouteRetryPolicyGetArgs> retryPolicy() {
+        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RouteSpecHttpRouteGetArgs extends io.pulumi.resources.Resourc
     @Import(name="timeout")
       private final @Nullable Output<RouteSpecHttpRouteTimeoutGetArgs> timeout;
 
-    public Output<RouteSpecHttpRouteTimeoutGetArgs> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<RouteSpecHttpRouteTimeoutGetArgs> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public RouteSpecHttpRouteGetArgs(
@@ -73,10 +74,10 @@ public final class RouteSpecHttpRouteGetArgs extends io.pulumi.resources.Resourc
     }
 
     private RouteSpecHttpRouteGetArgs() {
-        this.action = Output.empty();
-        this.match = Output.empty();
-        this.retryPolicy = Output.empty();
-        this.timeout = Output.empty();
+        this.action = Codegen.empty();
+        this.match = Codegen.empty();
+        this.retryPolicy = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class RouteSpecHttpRouteGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder retryPolicy(@Nullable RouteSpecHttpRouteRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Output.ofNullable(retryPolicy);
+            this.retryPolicy = Codegen.ofNullable(retryPolicy);
             return this;
         }
         public Builder timeout(@Nullable Output<RouteSpecHttpRouteTimeoutGetArgs> timeout) {
@@ -134,7 +135,7 @@ public final class RouteSpecHttpRouteGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timeout(@Nullable RouteSpecHttpRouteTimeoutGetArgs timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public RouteSpecHttpRouteGetArgs build() {
             return new RouteSpecHttpRouteGetArgs(action, match, retryPolicy, timeout);

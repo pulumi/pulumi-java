@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
     @Import(name="clientBroker")
       private final @Nullable Output<String> clientBroker;
 
-    public Output<String> getClientBroker() {
-        return this.clientBroker == null ? Output.empty() : this.clientBroker;
+    public Output<String> clientBroker() {
+        return this.clientBroker == null ? Codegen.empty() : this.clientBroker;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
     @Import(name="inCluster")
       private final @Nullable Output<Boolean> inCluster;
 
-    public Output<Boolean> getInCluster() {
-        return this.inCluster == null ? Output.empty() : this.inCluster;
+    public Output<Boolean> inCluster() {
+        return this.inCluster == null ? Codegen.empty() : this.inCluster;
     }
 
     public ClusterEncryptionInfoEncryptionInTransitGetArgs(
@@ -45,8 +46,8 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
     }
 
     private ClusterEncryptionInfoEncryptionInTransitGetArgs() {
-        this.clientBroker = Output.empty();
-        this.inCluster = Output.empty();
+        this.clientBroker = Codegen.empty();
+        this.inCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
             return this;
         }
         public Builder clientBroker(@Nullable String clientBroker) {
-            this.clientBroker = Output.ofNullable(clientBroker);
+            this.clientBroker = Codegen.ofNullable(clientBroker);
             return this;
         }
         public Builder inCluster(@Nullable Output<Boolean> inCluster) {
@@ -84,7 +85,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
             return this;
         }
         public Builder inCluster(@Nullable Boolean inCluster) {
-            this.inCluster = Output.ofNullable(inCluster);
+            this.inCluster = Codegen.ofNullable(inCluster);
             return this;
         }        public ClusterEncryptionInfoEncryptionInTransitGetArgs build() {
             return new ClusterEncryptionInfoEncryptionInTransitGetArgs(clientBroker, inCluster);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<String> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
     @Import(name="keyVaultSecretId")
       private final @Nullable Output<String> keyVaultSecretId;
 
-    public Output<String> getKeyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Output.empty() : this.keyVaultSecretId;
+    public Output<String> keyVaultSecretId() {
+        return this.keyVaultSecretId == null ? Codegen.empty() : this.keyVaultSecretId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ApplicationGatewayTrustedRootCertificateArgs(
@@ -74,10 +75,10 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
     }
 
     private ApplicationGatewayTrustedRootCertificateArgs() {
-        this.data = Output.empty();
-        this.id = Output.empty();
-        this.keyVaultSecretId = Output.empty();
-        this.name = Output.empty();
+        this.data = Codegen.empty();
+        this.id = Codegen.empty();
+        this.keyVaultSecretId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -119,7 +120,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
@@ -127,7 +128,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
             return this;
         }
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = Output.ofNullable(keyVaultSecretId);
+            this.keyVaultSecretId = Codegen.ofNullable(keyVaultSecretId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -135,7 +136,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ApplicationGatewayTrustedRootCertificateArgs build() {
             return new ApplicationGatewayTrustedRootCertificateArgs(data, id, keyVaultSecretId, name);

@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs extend
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
+    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
     public DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
@@ -30,7 +31,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs extend
     }
 
     private DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs() {
-        this.defaultResourceSpec = Output.empty();
+        this.defaultResourceSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs extend
             return this;
         }
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
             return this;
         }        public DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs build() {
             return new DomainDefaultUserSettingsTensorBoardAppSettingsGetArgs(defaultResourceSpec);

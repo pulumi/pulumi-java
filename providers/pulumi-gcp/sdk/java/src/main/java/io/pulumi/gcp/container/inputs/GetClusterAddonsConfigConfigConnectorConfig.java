@@ -15,7 +15,7 @@ public final class GetClusterAddonsConfigConfigConnectorConfig extends io.pulumi
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

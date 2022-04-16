@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public BasicAuthArgs(
@@ -40,8 +41,8 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BasicAuthArgs() {
-        this.password = Output.empty();
-        this.user = Output.empty();
+        this.password = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -79,7 +80,7 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public BasicAuthArgs build() {
             return new BasicAuthArgs(password, user);

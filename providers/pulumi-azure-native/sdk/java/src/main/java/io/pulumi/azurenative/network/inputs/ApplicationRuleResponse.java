@@ -28,7 +28,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="fqdnTags")
       private final @Nullable List<String> fqdnTags;
 
-    public List<String> getFqdnTags() {
+    public List<String> fqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="protocols")
       private final @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols;
 
-    public List<FirewallPolicyRuleApplicationProtocolResponse> getProtocols() {
+    public List<FirewallPolicyRuleApplicationProtocolResponse> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
 
@@ -84,7 +84,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 
@@ -95,7 +95,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
@@ -106,7 +106,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
 
-    public List<String> getSourceIpGroups() {
+    public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 
@@ -117,7 +117,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="targetFqdns")
       private final @Nullable List<String> targetFqdns;
 
-    public List<String> getTargetFqdns() {
+    public List<String> targetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }
 
@@ -128,7 +128,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="targetUrls")
       private final @Nullable List<String> targetUrls;
 
-    public List<String> getTargetUrls() {
+    public List<String> targetUrls() {
         return this.targetUrls == null ? List.of() : this.targetUrls;
     }
 
@@ -139,7 +139,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="terminateTLS")
       private final @Nullable Boolean terminateTLS;
 
-    public Optional<Boolean> getTerminateTLS() {
+    public Optional<Boolean> terminateTLS() {
         return this.terminateTLS == null ? Optional.empty() : Optional.ofNullable(this.terminateTLS);
     }
 
@@ -150,7 +150,7 @@ public final class ApplicationRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="webCategories")
       private final @Nullable List<String> webCategories;
 
-    public List<String> getWebCategories() {
+    public List<String> webCategories() {
         return this.webCategories == null ? List.of() : this.webCategories;
     }
 

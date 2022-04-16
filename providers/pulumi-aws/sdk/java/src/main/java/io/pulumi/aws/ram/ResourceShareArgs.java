@@ -5,6 +5,7 @@ package io.pulumi.aws.ram;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowExternalPrincipals")
       private final @Nullable Output<Boolean> allowExternalPrincipals;
 
-    public Output<Boolean> getAllowExternalPrincipals() {
-        return this.allowExternalPrincipals == null ? Output.empty() : this.allowExternalPrincipals;
+    public Output<Boolean> allowExternalPrincipals() {
+        return this.allowExternalPrincipals == null ? Codegen.empty() : this.allowExternalPrincipals;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResourceShareArgs(
@@ -59,9 +60,9 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceShareArgs() {
-        this.allowExternalPrincipals = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.allowExternalPrincipals = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowExternalPrincipals(@Nullable Boolean allowExternalPrincipals) {
-            this.allowExternalPrincipals = Output.ofNullable(allowExternalPrincipals);
+            this.allowExternalPrincipals = Codegen.ofNullable(allowExternalPrincipals);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -101,7 +102,7 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -109,7 +110,7 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ResourceShareArgs build() {
             return new ResourceShareArgs(allowExternalPrincipals, name, tags);

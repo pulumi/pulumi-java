@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageGetArgs extends io
     @Import(name="text")
       private final @Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public CxPageEventHandlerTriggerFulfillmentMessageGetArgs(@Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text) {
@@ -30,7 +31,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageGetArgs extends io
     }
 
     private CxPageEventHandlerTriggerFulfillmentMessageGetArgs() {
-        this.text = Output.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageGetArgs extends io
             return this;
         }
         public Builder text(@Nullable CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public CxPageEventHandlerTriggerFulfillmentMessageGetArgs build() {
             return new CxPageEventHandlerTriggerFulfillmentMessageGetArgs(text);

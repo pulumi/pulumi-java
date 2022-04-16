@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.AccessApprovalSettingsArgs;
 import io.pulumi.gcp.projects.inputs.AccessApprovalSettingsState;
@@ -52,7 +53,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * of the Project.
      * 
      */
-    public Output<Boolean> getEnrolledAncestor() {
+    public Output<Boolean> enrolledAncestor() {
         return this.enrolledAncestor;
     }
     /**
@@ -74,7 +75,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<AccessApprovalSettingsEnrolledService>> getEnrolledServices() {
+    public Output<List<AccessApprovalSettingsEnrolledService>> enrolledServices() {
         return this.enrolledServices;
     }
     /**
@@ -88,7 +89,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * @return The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -106,7 +107,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * resources of that resource. A maximum of 50 email addresses are allowed.
      * 
      */
-    public Output<List<String>> getNotificationEmails() {
+    public Output<List<String>> notificationEmails() {
         return this.notificationEmails;
     }
     /**
@@ -128,7 +129,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * Deprecated in favor of `project_id`
      * 
      */
-    public Output</* @Nullable */ String> getProject() {
+    public Output</* @Nullable */ String> project() {
         return this.project;
     }
     /**
@@ -142,7 +143,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * @return ID of the project of the access approval settings.
      * 
      */
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -168,7 +169,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessApprovalSettings(String name, AccessApprovalSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/accessApprovalSettings:AccessApprovalSettings", name, args == null ? AccessApprovalSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/accessApprovalSettings:AccessApprovalSettings", name, args == null ? AccessApprovalSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessApprovalSettings(String name, Output<String> id, @Nullable AccessApprovalSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

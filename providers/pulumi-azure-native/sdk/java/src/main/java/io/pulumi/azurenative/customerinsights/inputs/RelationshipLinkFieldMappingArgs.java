@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 import io.pulumi.azurenative.customerinsights.enums.LinkTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     @Import(name="interactionFieldName", required=true)
       private final Output<String> interactionFieldName;
 
-    public Output<String> getInteractionFieldName() {
+    public Output<String> interactionFieldName() {
         return this.interactionFieldName;
     }
 
@@ -37,8 +38,8 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     @Import(name="linkType")
       private final @Nullable Output<LinkTypes> linkType;
 
-    public Output<LinkTypes> getLinkType() {
-        return this.linkType == null ? Output.empty() : this.linkType;
+    public Output<LinkTypes> linkType() {
+        return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     @Import(name="relationshipFieldName", required=true)
       private final Output<String> relationshipFieldName;
 
-    public Output<String> getRelationshipFieldName() {
+    public Output<String> relationshipFieldName() {
         return this.relationshipFieldName;
     }
 
@@ -62,9 +63,9 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     }
 
     private RelationshipLinkFieldMappingArgs() {
-        this.interactionFieldName = Output.empty();
-        this.linkType = Output.empty();
-        this.relationshipFieldName = Output.empty();
+        this.interactionFieldName = Codegen.empty();
+        this.linkType = Codegen.empty();
+        this.relationshipFieldName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
             return this;
         }
         public Builder linkType(@Nullable LinkTypes linkType) {
-            this.linkType = Output.ofNullable(linkType);
+            this.linkType = Codegen.ofNullable(linkType);
             return this;
         }
         public Builder relationshipFieldName(Output<String> relationshipFieldName) {

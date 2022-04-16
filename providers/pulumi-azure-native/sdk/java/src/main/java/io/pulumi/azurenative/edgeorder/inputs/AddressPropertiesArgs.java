@@ -7,6 +7,7 @@ import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
 
-    public Output<ContactDetailsArgs> getContactDetails() {
+    public Output<ContactDetailsArgs> contactDetails() {
         return this.contactDetails;
     }
 
@@ -37,8 +38,8 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Output<ShippingAddressArgs> getShippingAddress() {
-        return this.shippingAddress == null ? Output.empty() : this.shippingAddress;
+    public Output<ShippingAddressArgs> shippingAddress() {
+        return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
     }
 
     public AddressPropertiesArgs(
@@ -49,8 +50,8 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AddressPropertiesArgs() {
-        this.contactDetails = Output.empty();
-        this.shippingAddress = Output.empty();
+        this.contactDetails = Codegen.empty();
+        this.shippingAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
-            this.shippingAddress = Output.ofNullable(shippingAddress);
+            this.shippingAddress = Codegen.ofNullable(shippingAddress);
             return this;
         }        public AddressPropertiesArgs build() {
             return new AddressPropertiesArgs(contactDetails, shippingAddress);

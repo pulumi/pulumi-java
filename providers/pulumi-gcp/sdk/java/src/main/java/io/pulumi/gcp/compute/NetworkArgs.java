@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoCreateSubnetworks")
       private final @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Output<Boolean> getAutoCreateSubnetworks() {
-        return this.autoCreateSubnetworks == null ? Output.empty() : this.autoCreateSubnetworks;
+    public Output<Boolean> autoCreateSubnetworks() {
+        return this.autoCreateSubnetworks == null ? Codegen.empty() : this.autoCreateSubnetworks;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteDefaultRoutesOnCreate")
       private final @Nullable Output<Boolean> deleteDefaultRoutesOnCreate;
 
-    public Output<Boolean> getDeleteDefaultRoutesOnCreate() {
-        return this.deleteDefaultRoutesOnCreate == null ? Output.empty() : this.deleteDefaultRoutesOnCreate;
+    public Output<Boolean> deleteDefaultRoutesOnCreate() {
+        return this.deleteDefaultRoutesOnCreate == null ? Codegen.empty() : this.deleteDefaultRoutesOnCreate;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
-        return this.mtu == null ? Output.empty() : this.mtu;
+    public Output<Integer> mtu() {
+        return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingMode")
       private final @Nullable Output<String> routingMode;
 
-    public Output<String> getRoutingMode() {
-        return this.routingMode == null ? Output.empty() : this.routingMode;
+    public Output<String> routingMode() {
+        return this.routingMode == null ? Codegen.empty() : this.routingMode;
     }
 
     public NetworkArgs(
@@ -130,13 +131,13 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkArgs() {
-        this.autoCreateSubnetworks = Output.empty();
-        this.deleteDefaultRoutesOnCreate = Output.empty();
-        this.description = Output.empty();
-        this.mtu = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.routingMode = Output.empty();
+        this.autoCreateSubnetworks = Codegen.empty();
+        this.deleteDefaultRoutesOnCreate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.mtu = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.routingMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = Output.ofNullable(autoCreateSubnetworks);
+            this.autoCreateSubnetworks = Codegen.ofNullable(autoCreateSubnetworks);
             return this;
         }
         public Builder deleteDefaultRoutesOnCreate(@Nullable Output<Boolean> deleteDefaultRoutesOnCreate) {
@@ -184,7 +185,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteDefaultRoutesOnCreate(@Nullable Boolean deleteDefaultRoutesOnCreate) {
-            this.deleteDefaultRoutesOnCreate = Output.ofNullable(deleteDefaultRoutesOnCreate);
+            this.deleteDefaultRoutesOnCreate = Codegen.ofNullable(deleteDefaultRoutesOnCreate);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -192,7 +193,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder mtu(@Nullable Output<Integer> mtu) {
@@ -200,7 +201,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Output.ofNullable(mtu);
+            this.mtu = Codegen.ofNullable(mtu);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -208,7 +209,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -216,7 +217,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder routingMode(@Nullable Output<String> routingMode) {
@@ -224,7 +225,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingMode(@Nullable String routingMode) {
-            this.routingMode = Output.ofNullable(routingMode);
+            this.routingMode = Codegen.ofNullable(routingMode);
             return this;
         }        public NetworkArgs build() {
             return new NetworkArgs(autoCreateSubnetworks, deleteDefaultRoutesOnCreate, description, mtu, name, project, routingMode);

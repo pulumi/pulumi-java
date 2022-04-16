@@ -11,6 +11,7 @@ import io.pulumi.awsnative.ivs.outputs.ChannelTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Channel ARN is automatically generated on creation and assigned as the unique identifier.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +50,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Whether the channel is authorized.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAuthorized() {
+    public Output</* @Nullable */ Boolean> authorized() {
         return this.authorized;
     }
     /**
@@ -63,7 +64,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
      * 
      */
-    public Output<String> getIngestEndpoint() {
+    public Output<String> ingestEndpoint() {
         return this.ingestEndpoint;
     }
     /**
@@ -77,7 +78,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Channel latency mode.
      * 
      */
-    public Output</* @Nullable */ ChannelLatencyMode> getLatencyMode() {
+    public Output</* @Nullable */ ChannelLatencyMode> latencyMode() {
         return this.latencyMode;
     }
     /**
@@ -91,7 +92,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Channel
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -105,7 +106,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Channel Playback URL.
      * 
      */
-    public Output<String> getPlaybackUrl() {
+    public Output<String> playbackUrl() {
         return this.playbackUrl;
     }
     /**
@@ -119,7 +120,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
      * 
      */
-    public Output</* @Nullable */ String> getRecordingConfigurationArn() {
+    public Output</* @Nullable */ String> recordingConfigurationArn() {
         return this.recordingConfigurationArn;
     }
     /**
@@ -133,7 +134,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<ChannelTag>> getTags() {
+    public Output</* @Nullable */ List<ChannelTag>> tags() {
         return this.tags;
     }
     /**
@@ -147,7 +148,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
      * 
      */
-    public Output</* @Nullable */ ChannelType> getType() {
+    public Output</* @Nullable */ ChannelType> type() {
         return this.type;
     }
 
@@ -173,7 +174,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Channel(String name, @Nullable ChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ivs:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ivs:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Channel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

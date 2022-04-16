@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
 
-    public Output<String> getContainerImage() {
-        return this.containerImage == null ? Output.empty() : this.containerImage;
+    public Output<String> containerImage() {
+        return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public RuntimeConfigArgs(
@@ -62,9 +63,9 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuntimeConfigArgs() {
-        this.containerImage = Output.empty();
-        this.properties = Output.empty();
-        this.version = Output.empty();
+        this.containerImage = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Output.ofNullable(containerImage);
+            this.containerImage = Codegen.ofNullable(containerImage);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -104,7 +105,7 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -112,7 +113,7 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public RuntimeConfigArgs build() {
             return new RuntimeConfigArgs(containerImage, properties, version);

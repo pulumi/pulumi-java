@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.AzureFirewallNatRCActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class AzureFirewallNatRCActionArgs extends io.pulumi.resources.Reso
     @Import(name="type")
       private final @Nullable Output<Either<String,AzureFirewallNatRCActionType>> type;
 
-    public Output<Either<String,AzureFirewallNatRCActionType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,AzureFirewallNatRCActionType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AzureFirewallNatRCActionArgs(@Nullable Output<Either<String,AzureFirewallNatRCActionType>> type) {
@@ -36,7 +37,7 @@ public final class AzureFirewallNatRCActionArgs extends io.pulumi.resources.Reso
     }
 
     private AzureFirewallNatRCActionArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class AzureFirewallNatRCActionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder type(@Nullable Either<String,AzureFirewallNatRCActionType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AzureFirewallNatRCActionArgs build() {
             return new AzureFirewallNatRCActionArgs(type);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.FlowUpsolverS3OutputFormatConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="s3OutputFormatConfig", required=true)
       private final Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
-    public Output<FlowUpsolverS3OutputFormatConfigArgs> getS3OutputFormatConfig() {
+    public Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig() {
         return this.s3OutputFormatConfig;
     }
 
@@ -46,9 +47,9 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
     }
 
     private FlowUpsolverDestinationPropertiesArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.s3OutputFormatConfig = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.s3OutputFormatConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder s3OutputFormatConfig(Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig) {

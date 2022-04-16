@@ -36,22 +36,22 @@ public final class DistributionCustomOriginConfig {
         this.originSSLProtocols = originSSLProtocols;
     }
 
-    public Optional<Integer> getHTTPPort() {
+    public Optional<Integer> hTTPPort() {
         return Optional.ofNullable(this.hTTPPort);
     }
-    public Optional<Integer> getHTTPSPort() {
+    public Optional<Integer> hTTPSPort() {
         return Optional.ofNullable(this.hTTPSPort);
     }
-    public Optional<Integer> getOriginKeepaliveTimeout() {
+    public Optional<Integer> originKeepaliveTimeout() {
         return Optional.ofNullable(this.originKeepaliveTimeout);
     }
-    public String getOriginProtocolPolicy() {
+    public String originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
-    public Optional<Integer> getOriginReadTimeout() {
+    public Optional<Integer> originReadTimeout() {
         return Optional.ofNullable(this.originReadTimeout);
     }
-    public List<String> getOriginSSLProtocols() {
+    public List<String> originSSLProtocols() {
         return this.originSSLProtocols == null ? List.of() : this.originSSLProtocols;
     }
 

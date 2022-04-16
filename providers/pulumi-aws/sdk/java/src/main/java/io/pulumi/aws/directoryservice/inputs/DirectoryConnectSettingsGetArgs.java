@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
+    public Output<List<String>> availabilityZones() {
+        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="connectIps")
       private final @Nullable Output<List<String>> connectIps;
 
-    public Output<List<String>> getConnectIps() {
-        return this.connectIps == null ? Output.empty() : this.connectIps;
+    public Output<List<String>> connectIps() {
+        return this.connectIps == null ? Codegen.empty() : this.connectIps;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="customerDnsIps", required=true)
       private final Output<List<String>> customerDnsIps;
 
-    public Output<List<String>> getCustomerDnsIps() {
+    public Output<List<String>> customerDnsIps() {
         return this.customerDnsIps;
     }
 
@@ -51,7 +52,7 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="customerUsername", required=true)
       private final Output<String> customerUsername;
 
-    public Output<String> getCustomerUsername() {
+    public Output<String> customerUsername() {
         return this.customerUsername;
     }
 
@@ -62,7 +63,7 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -73,7 +74,7 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -93,12 +94,12 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     }
 
     private DirectoryConnectSettingsGetArgs() {
-        this.availabilityZones = Output.empty();
-        this.connectIps = Output.empty();
-        this.customerDnsIps = Output.empty();
-        this.customerUsername = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.availabilityZones = Codegen.empty();
+        this.connectIps = Codegen.empty();
+        this.customerDnsIps = Codegen.empty();
+        this.customerUsername = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Output.ofNullable(availabilityZones);
+            this.availabilityZones = Codegen.ofNullable(availabilityZones);
             return this;
         }
         public Builder availabilityZones(String... availabilityZones) {
@@ -147,7 +148,7 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder connectIps(@Nullable List<String> connectIps) {
-            this.connectIps = Output.ofNullable(connectIps);
+            this.connectIps = Codegen.ofNullable(connectIps);
             return this;
         }
         public Builder connectIps(String... connectIps) {

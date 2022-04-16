@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -29,8 +30,8 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="gcsUri")
       private final @Nullable Output<String> gcsUri;
 
-    public Output<String> getGcsUri() {
-        return this.gcsUri == null ? Output.empty() : this.gcsUri;
+    public Output<String> gcsUri() {
+        return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -51,14 +52,14 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -76,11 +77,11 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ArchiveDeploymentArgs() {
-        this.environmentId = Output.empty();
-        this.gcsUri = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
+        this.environmentId = Codegen.empty();
+        this.gcsUri = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Output.ofNullable(gcsUri);
+            this.gcsUri = Codegen.ofNullable(gcsUri);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -132,7 +133,7 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {

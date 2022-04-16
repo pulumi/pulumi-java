@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.DatasetArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1InputConfigResponse;
@@ -31,7 +32,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The names of any related resources that are blocking changes to the dataset.
      * 
      */
-    public Output<List<String>> getBlockingResources() {
+    public Output<List<String>> blockingResources() {
         return this.blockingResources;
     }
     /**
@@ -45,7 +46,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return Time the dataset is created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +60,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The number of data items in the dataset.
      * 
      */
-    public Output<String> getDataItemCount() {
+    public Output<String> dataItemCount() {
         return this.dataItemCount;
     }
     /**
@@ -73,7 +74,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -87,7 +88,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The display name of the dataset. Maximum of 64 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -101,7 +102,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
      * 
      */
-    public Output<List<GoogleCloudDatalabelingV1beta1InputConfigResponse>> getInputConfigs() {
+    public Output<List<GoogleCloudDatalabelingV1beta1InputConfigResponse>> inputConfigs() {
         return this.inputConfigs;
     }
     /**
@@ -115,7 +116,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
      * 
      */
-    public Output<String> getLastMigrateTime() {
+    public Output<String> lastMigrateTime() {
         return this.lastMigrateTime;
     }
     /**
@@ -129,7 +130,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -155,7 +156,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dataset(String name, DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datalabeling/v1beta1:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datalabeling/v1beta1:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dataset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

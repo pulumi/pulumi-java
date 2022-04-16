@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customDnsConfigs")
       private final @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
 
-    public Output<List<CustomDnsConfigPropertiesFormatArgs>> getCustomDnsConfigs() {
-        return this.customDnsConfigs == null ? Output.empty() : this.customDnsConfigs;
+    public Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs() {
+        return this.customDnsConfigs == null ? Codegen.empty() : this.customDnsConfigs;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> extendedLocation() {
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? Output.empty() : this.manualPrivateLinkServiceConnections;
+    public Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections() {
+        return this.manualPrivateLinkServiceConnections == null ? Codegen.empty() : this.manualPrivateLinkServiceConnections;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privateEndpointName")
       private final @Nullable Output<String> privateEndpointName;
 
-    public Output<String> getPrivateEndpointName() {
-        return this.privateEndpointName == null ? Output.empty() : this.privateEndpointName;
+    public Output<String> privateEndpointName() {
+        return this.privateEndpointName == null ? Codegen.empty() : this.privateEndpointName;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
-        return this.privateLinkServiceConnections == null ? Output.empty() : this.privateLinkServiceConnections;
+    public Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections() {
+        return this.privateLinkServiceConnections == null ? Codegen.empty() : this.privateLinkServiceConnections;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,8 +116,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<SubnetArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PrivateEndpointArgs(
@@ -154,16 +155,16 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PrivateEndpointArgs() {
-        this.customDnsConfigs = Output.empty();
-        this.extendedLocation = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.manualPrivateLinkServiceConnections = Output.empty();
-        this.privateEndpointName = Output.empty();
-        this.privateLinkServiceConnections = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subnet = Output.empty();
-        this.tags = Output.empty();
+        this.customDnsConfigs = Codegen.empty();
+        this.extendedLocation = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.manualPrivateLinkServiceConnections = Codegen.empty();
+        this.privateEndpointName = Codegen.empty();
+        this.privateLinkServiceConnections = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
-            this.customDnsConfigs = Output.ofNullable(customDnsConfigs);
+            this.customDnsConfigs = Codegen.ofNullable(customDnsConfigs);
             return this;
         }
         public Builder customDnsConfigs(CustomDnsConfigPropertiesFormatArgs... customDnsConfigs) {
@@ -220,7 +221,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -228,7 +229,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -236,7 +237,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
@@ -244,7 +245,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = Output.ofNullable(manualPrivateLinkServiceConnections);
+            this.manualPrivateLinkServiceConnections = Codegen.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
@@ -255,7 +256,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
-            this.privateEndpointName = Output.ofNullable(privateEndpointName);
+            this.privateEndpointName = Codegen.ofNullable(privateEndpointName);
             return this;
         }
         public Builder privateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
@@ -263,7 +264,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = Output.ofNullable(privateLinkServiceConnections);
+            this.privateLinkServiceConnections = Codegen.ofNullable(privateLinkServiceConnections);
             return this;
         }
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionArgs... privateLinkServiceConnections) {
@@ -282,7 +283,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -290,7 +291,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PrivateEndpointArgs build() {
             return new PrivateEndpointArgs(customDnsConfigs, extendedLocation, id, location, manualPrivateLinkServiceConnections, privateEndpointName, privateLinkServiceConnections, resourceGroupName, subnet, tags);

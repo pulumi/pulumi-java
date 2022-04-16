@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfigGetArgs extends 
     @Import(name="lambdaConflictHandlerArn")
       private final @Nullable Output<String> lambdaConflictHandlerArn;
 
-    public Output<String> getLambdaConflictHandlerArn() {
-        return this.lambdaConflictHandlerArn == null ? Output.empty() : this.lambdaConflictHandlerArn;
+    public Output<String> lambdaConflictHandlerArn() {
+        return this.lambdaConflictHandlerArn == null ? Codegen.empty() : this.lambdaConflictHandlerArn;
     }
 
     public FunctionSyncConfigLambdaConflictHandlerConfigGetArgs(@Nullable Output<String> lambdaConflictHandlerArn) {
@@ -30,7 +31,7 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfigGetArgs extends 
     }
 
     private FunctionSyncConfigLambdaConflictHandlerConfigGetArgs() {
-        this.lambdaConflictHandlerArn = Output.empty();
+        this.lambdaConflictHandlerArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfigGetArgs extends 
             return this;
         }
         public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
-            this.lambdaConflictHandlerArn = Output.ofNullable(lambdaConflictHandlerArn);
+            this.lambdaConflictHandlerArn = Codegen.ofNullable(lambdaConflictHandlerArn);
             return this;
         }        public FunctionSyncConfigLambdaConflictHandlerConfigGetArgs build() {
             return new FunctionSyncConfigLambdaConflictHandlerConfigGetArgs(lambdaConflictHandlerArn);

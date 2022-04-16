@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
     @Import(name="propertyGroups", required=true)
       private final Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups;
 
-    public Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> getPropertyGroups() {
+    public Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups() {
         return this.propertyGroups;
     }
 
@@ -30,7 +31,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
     }
 
     private ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs() {
-        this.propertyGroups = Output.empty();
+        this.propertyGroups = Codegen.empty();
     }
 
     public static Builder builder() {

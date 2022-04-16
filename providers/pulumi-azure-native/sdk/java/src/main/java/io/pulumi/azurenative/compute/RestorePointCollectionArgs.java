@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.RestorePointCollectionSourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,8 +46,8 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="restorePointCollectionName")
       private final @Nullable Output<String> restorePointCollectionName;
 
-    public Output<String> getRestorePointCollectionName() {
-        return this.restorePointCollectionName == null ? Output.empty() : this.restorePointCollectionName;
+    public Output<String> restorePointCollectionName() {
+        return this.restorePointCollectionName == null ? Codegen.empty() : this.restorePointCollectionName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="source")
       private final @Nullable Output<RestorePointCollectionSourcePropertiesArgs> source;
 
-    public Output<RestorePointCollectionSourcePropertiesArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<RestorePointCollectionSourcePropertiesArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RestorePointCollectionArgs(
@@ -85,11 +86,11 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
     }
 
     private RestorePointCollectionArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.restorePointCollectionName = Output.empty();
-        this.source = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.restorePointCollectionName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -141,7 +142,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder restorePointCollectionName(@Nullable String restorePointCollectionName) {
-            this.restorePointCollectionName = Output.ofNullable(restorePointCollectionName);
+            this.restorePointCollectionName = Codegen.ofNullable(restorePointCollectionName);
             return this;
         }
         public Builder source(@Nullable Output<RestorePointCollectionSourcePropertiesArgs> source) {
@@ -149,7 +150,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder source(@Nullable RestorePointCollectionSourcePropertiesArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -157,7 +158,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RestorePointCollectionArgs build() {
             return new RestorePointCollectionArgs(location, resourceGroupName, restorePointCollectionName, source, tags);

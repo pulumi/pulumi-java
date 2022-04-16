@@ -18,7 +18,7 @@ public final class TaskDefinitionEphemeralStorage {
         this.sizeInGiB = sizeInGiB;
     }
 
-    public Optional<Integer> getSizeInGiB() {
+    public Optional<Integer> sizeInGiB() {
         return Optional.ofNullable(this.sizeInGiB);
     }
 

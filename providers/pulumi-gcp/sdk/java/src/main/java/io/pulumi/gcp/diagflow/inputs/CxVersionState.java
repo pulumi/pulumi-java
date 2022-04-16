@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxVersionNluSettingGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nluSettings")
       private final @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
 
-    public Output<List<CxVersionNluSettingGetArgs>> getNluSettings() {
-        return this.nluSettings == null ? Output.empty() : this.nluSettings;
+    public Output<List<CxVersionNluSettingGetArgs>> nluSettings() {
+        return this.nluSettings == null ? Codegen.empty() : this.nluSettings;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public CxVersionState(
@@ -115,13 +116,13 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxVersionState() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.nluSettings = Output.empty();
-        this.parent = Output.empty();
-        this.state = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nluSettings = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -169,7 +170,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -177,7 +178,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -185,7 +186,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nluSettings(@Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings) {
@@ -193,7 +194,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nluSettings(@Nullable List<CxVersionNluSettingGetArgs> nluSettings) {
-            this.nluSettings = Output.ofNullable(nluSettings);
+            this.nluSettings = Codegen.ofNullable(nluSettings);
             return this;
         }
         public Builder nluSettings(CxVersionNluSettingGetArgs... nluSettings) {
@@ -204,7 +205,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -212,7 +213,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public CxVersionState build() {
             return new CxVersionState(createTime, description, displayName, name, nluSettings, parent, state);

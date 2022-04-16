@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @return Type of DHCP: SERVER or RELAY.
      * 
      */
-    public Output<String> getDhcpType() {
+    public Output<String> dhcpType() {
         return this.dhcpType;
     }
     /**
@@ -56,7 +57,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @return Display name of the DHCP entity.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -70,7 +71,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @return The provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -98,7 +99,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> getRevision() {
+    public Output</* @Nullable */ Double> revision() {
         return this.revision;
     }
     /**
@@ -112,7 +113,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @return NSX Segments consuming DHCP.
      * 
      */
-    public Output<List<String>> getSegments() {
+    public Output<List<String>> segments() {
         return this.segments;
     }
     /**
@@ -126,7 +127,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -152,7 +153,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkloadNetworkDhcp(String name, WorkloadNetworkDhcpArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:avs:WorkloadNetworkDhcp", name, args == null ? WorkloadNetworkDhcpArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:avs:WorkloadNetworkDhcp", name, args == null ? WorkloadNetworkDhcpArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkloadNetworkDhcp(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

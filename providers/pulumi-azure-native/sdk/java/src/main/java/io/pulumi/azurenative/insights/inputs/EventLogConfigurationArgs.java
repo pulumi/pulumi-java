@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +18,14 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="logName", required=true)
       private final Output<String> logName;
 
-    public Output<String> getLogName() {
+    public Output<String> logName() {
         return this.logName;
     }
 
@@ -36,8 +37,8 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private EventLogConfigurationArgs() {
-        this.filter = Output.empty();
-        this.logName = Output.empty();
+        this.filter = Codegen.empty();
+        this.logName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder logName(Output<String> logName) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterGetArgs
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
     @Import(name="logDestinationConfigs")
       private final @Nullable Output<List<String>> logDestinationConfigs;
 
-    public Output<List<String>> getLogDestinationConfigs() {
-        return this.logDestinationConfigs == null ? Output.empty() : this.logDestinationConfigs;
+    public Output<List<String>> logDestinationConfigs() {
+        return this.logDestinationConfigs == null ? Codegen.empty() : this.logDestinationConfigs;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
     @Import(name="loggingFilter")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterGetArgs> getLoggingFilter() {
-        return this.loggingFilter == null ? Output.empty() : this.loggingFilter;
+    public Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter() {
+        return this.loggingFilter == null ? Codegen.empty() : this.loggingFilter;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
     @Import(name="redactedFields")
       private final @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields;
 
-    public Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> getRedactedFields() {
-        return this.redactedFields == null ? Output.empty() : this.redactedFields;
+    public Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields() {
+        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+    public Output<String> resourceArn() {
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     public WebAclLoggingConfigurationState(
@@ -73,10 +74,10 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
     }
 
     private WebAclLoggingConfigurationState() {
-        this.logDestinationConfigs = Output.empty();
-        this.loggingFilter = Output.empty();
-        this.redactedFields = Output.empty();
-        this.resourceArn = Output.empty();
+        this.logDestinationConfigs = Codegen.empty();
+        this.loggingFilter = Codegen.empty();
+        this.redactedFields = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
             return this;
         }
         public Builder logDestinationConfigs(@Nullable List<String> logDestinationConfigs) {
-            this.logDestinationConfigs = Output.ofNullable(logDestinationConfigs);
+            this.logDestinationConfigs = Codegen.ofNullable(logDestinationConfigs);
             return this;
         }
         public Builder logDestinationConfigs(String... logDestinationConfigs) {
@@ -121,7 +122,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
             return this;
         }
         public Builder loggingFilter(@Nullable WebAclLoggingConfigurationLoggingFilterGetArgs loggingFilter) {
-            this.loggingFilter = Output.ofNullable(loggingFilter);
+            this.loggingFilter = Codegen.ofNullable(loggingFilter);
             return this;
         }
         public Builder redactedFields(@Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields) {
@@ -129,7 +130,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
             return this;
         }
         public Builder redactedFields(@Nullable List<WebAclLoggingConfigurationRedactedFieldGetArgs> redactedFields) {
-            this.redactedFields = Output.ofNullable(redactedFields);
+            this.redactedFields = Codegen.ofNullable(redactedFields);
             return this;
         }
         public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldGetArgs... redactedFields) {
@@ -140,7 +141,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }        public WebAclLoggingConfigurationState build() {
             return new WebAclLoggingConfigurationState(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);

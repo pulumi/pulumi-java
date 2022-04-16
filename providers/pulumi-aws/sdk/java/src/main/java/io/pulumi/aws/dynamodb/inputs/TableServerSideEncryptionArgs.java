@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class TableServerSideEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -34,8 +35,8 @@ public final class TableServerSideEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     public TableServerSideEncryptionArgs(
@@ -46,8 +47,8 @@ public final class TableServerSideEncryptionArgs extends io.pulumi.resources.Res
     }
 
     private TableServerSideEncryptionArgs() {
-        this.enabled = Output.empty();
-        this.kmsKeyArn = Output.empty();
+        this.enabled = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class TableServerSideEncryptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }        public TableServerSideEncryptionArgs build() {
             return new TableServerSideEncryptionArgs(enabled, kmsKeyArn);

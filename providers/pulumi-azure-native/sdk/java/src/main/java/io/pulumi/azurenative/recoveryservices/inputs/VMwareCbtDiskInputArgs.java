@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     @Import(name="diskId", required=true)
       private final Output<String> diskId;
 
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId;
     }
 
@@ -38,8 +39,8 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Output<Either<String,DiskAccountType>> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+    public Output<Either<String,DiskAccountType>> diskType() {
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isOSDisk", required=true)
       private final Output<String> isOSDisk;
 
-    public Output<String> getIsOSDisk() {
+    public Output<String> isOSDisk() {
         return this.isOSDisk;
     }
 
@@ -60,7 +61,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logStorageAccountId", required=true)
       private final Output<String> logStorageAccountId;
 
-    public Output<String> getLogStorageAccountId() {
+    public Output<String> logStorageAccountId() {
         return this.logStorageAccountId;
     }
 
@@ -71,7 +72,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logStorageAccountSasSecretName", required=true)
       private final Output<String> logStorageAccountSasSecretName;
 
-    public Output<String> getLogStorageAccountSasSecretName() {
+    public Output<String> logStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
 
@@ -89,11 +90,11 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VMwareCbtDiskInputArgs() {
-        this.diskId = Output.empty();
-        this.diskType = Output.empty();
-        this.isOSDisk = Output.empty();
-        this.logStorageAccountId = Output.empty();
-        this.logStorageAccountSasSecretName = Output.empty();
+        this.diskId = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.isOSDisk = Codegen.empty();
+        this.logStorageAccountId = Codegen.empty();
+        this.logStorageAccountSasSecretName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder isOSDisk(Output<String> isOSDisk) {

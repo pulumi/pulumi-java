@@ -5,6 +5,7 @@ package io.pulumi.googlenative.orgpolicy_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,14 +23,14 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -40,8 +41,8 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="spec")
       private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public OrganizationPolicyArgs(
@@ -54,9 +55,9 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private OrganizationPolicyArgs() {
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.spec = Output.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -104,7 +105,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder spec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public OrganizationPolicyArgs build() {
             return new OrganizationPolicyArgs(name, organizationId, spec);

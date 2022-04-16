@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="enableReliableLogging")
       private final @Nullable Output<Object> enableReliableLogging;
 
-    public Output<Object> getEnableReliableLogging() {
-        return this.enableReliableLogging == null ? Output.empty() : this.enableReliableLogging;
+    public Output<Object> enableReliableLogging() {
+        return this.enableReliableLogging == null ? Codegen.empty() : this.enableReliableLogging;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="logLevel")
       private final @Nullable Output<Object> logLevel;
 
-    public Output<Object> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+    public Output<Object> logLevel() {
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     public CopyActivityLogSettingsArgs(
@@ -48,8 +49,8 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private CopyActivityLogSettingsArgs() {
-        this.enableReliableLogging = Output.empty();
-        this.logLevel = Output.empty();
+        this.enableReliableLogging = Codegen.empty();
+        this.logLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
-            this.enableReliableLogging = Output.ofNullable(enableReliableLogging);
+            this.enableReliableLogging = Codegen.ofNullable(enableReliableLogging);
             return this;
         }
         public Builder logLevel(@Nullable Output<Object> logLevel) {
@@ -87,7 +88,7 @@ public final class CopyActivityLogSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder logLevel(@Nullable Object logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }        public CopyActivityLogSettingsArgs build() {
             return new CopyActivityLogSettingsArgs(enableReliableLogging, logLevel);

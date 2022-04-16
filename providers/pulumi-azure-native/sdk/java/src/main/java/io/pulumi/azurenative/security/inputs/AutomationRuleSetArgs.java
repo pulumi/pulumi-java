@@ -6,6 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.inputs.AutomationTriggeringRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rules")
       private final @Nullable Output<List<AutomationTriggeringRuleArgs>> rules;
 
-    public Output<List<AutomationTriggeringRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<AutomationTriggeringRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public AutomationRuleSetArgs(@Nullable Output<List<AutomationTriggeringRuleArgs>> rules) {
@@ -31,7 +32,7 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutomationRuleSetArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rules(@Nullable List<AutomationTriggeringRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(AutomationTriggeringRuleArgs... rules) {

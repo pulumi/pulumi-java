@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.RouterApplianceInstanceArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     @Import(name="instances")
       private final @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
 
-    public Output<List<RouterApplianceInstanceArgs>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+    public Output<List<RouterApplianceInstanceArgs>> instances() {
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     @Import(name="siteToSiteDataTransfer")
       private final @Nullable Output<Boolean> siteToSiteDataTransfer;
 
-    public Output<Boolean> getSiteToSiteDataTransfer() {
-        return this.siteToSiteDataTransfer == null ? Output.empty() : this.siteToSiteDataTransfer;
+    public Output<Boolean> siteToSiteDataTransfer() {
+        return this.siteToSiteDataTransfer == null ? Codegen.empty() : this.siteToSiteDataTransfer;
     }
 
     public LinkedRouterApplianceInstancesArgs(
@@ -50,8 +51,8 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     }
 
     private LinkedRouterApplianceInstancesArgs() {
-        this.instances = Output.empty();
-        this.siteToSiteDataTransfer = Output.empty();
+        this.instances = Codegen.empty();
+        this.siteToSiteDataTransfer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
             return this;
         }
         public Builder instances(@Nullable List<RouterApplianceInstanceArgs> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(RouterApplianceInstanceArgs... instances) {
@@ -92,7 +93,7 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
             return this;
         }
         public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Output.ofNullable(siteToSiteDataTransfer);
+            this.siteToSiteDataTransfer = Codegen.ofNullable(siteToSiteDataTransfer);
             return this;
         }        public LinkedRouterApplianceInstancesArgs build() {
             return new LinkedRouterApplianceInstancesArgs(instances, siteToSiteDataTransfer);

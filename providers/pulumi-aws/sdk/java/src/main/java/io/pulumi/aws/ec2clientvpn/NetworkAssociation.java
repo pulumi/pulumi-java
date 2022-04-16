@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2clientvpn.inputs.NetworkAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The unique ID of the target network association.
      * 
      */
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -55,7 +56,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the Client VPN endpoint.
      * 
      */
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
     /**
@@ -69,7 +70,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -83,7 +84,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The current state of the target network association.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -97,7 +98,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the subnet to associate with the Client VPN endpoint.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -111,7 +112,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC in which the target subnet is located.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -137,7 +138,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkAssociation(String name, NetworkAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2clientvpn/networkAssociation:NetworkAssociation", name, args == null ? NetworkAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2clientvpn/networkAssociation:NetworkAssociation", name, args == null ? NetworkAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkAssociation(String name, Output<String> id, @Nullable NetworkAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

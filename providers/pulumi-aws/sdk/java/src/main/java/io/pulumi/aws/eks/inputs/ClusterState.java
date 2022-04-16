@@ -10,6 +10,7 @@ import io.pulumi.aws.eks.inputs.ClusterKubernetesNetworkConfigGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterVpcConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthority")
       private final @Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority;
 
-    public Output<ClusterCertificateAuthorityGetArgs> getCertificateAuthority() {
-        return this.certificateAuthority == null ? Output.empty() : this.certificateAuthority;
+    public Output<ClusterCertificateAuthorityGetArgs> certificateAuthority() {
+        return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledClusterLogTypes")
       private final @Nullable Output<List<String>> enabledClusterLogTypes;
 
-    public Output<List<String>> getEnabledClusterLogTypes() {
-        return this.enabledClusterLogTypes == null ? Output.empty() : this.enabledClusterLogTypes;
+    public Output<List<String>> enabledClusterLogTypes() {
+        return this.enabledClusterLogTypes == null ? Codegen.empty() : this.enabledClusterLogTypes;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig;
 
-    public Output<ClusterEncryptionConfigGetArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<ClusterEncryptionConfigGetArgs> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<String> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="identities")
       private final @Nullable Output<List<ClusterIdentityGetArgs>> identities;
 
-    public Output<List<ClusterIdentityGetArgs>> getIdentities() {
-        return this.identities == null ? Output.empty() : this.identities;
+    public Output<List<ClusterIdentityGetArgs>> identities() {
+        return this.identities == null ? Codegen.empty() : this.identities;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubernetesNetworkConfig")
       private final @Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
 
-    public Output<ClusterKubernetesNetworkConfigGetArgs> getKubernetesNetworkConfig() {
-        return this.kubernetesNetworkConfig == null ? Output.empty() : this.kubernetesNetworkConfig;
+    public Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig() {
+        return this.kubernetesNetworkConfig == null ? Codegen.empty() : this.kubernetesNetworkConfig;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
-        return this.platformVersion == null ? Output.empty() : this.platformVersion;
+    public Output<String> platformVersion() {
+        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -193,8 +194,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<ClusterVpcConfigGetArgs> vpcConfig;
 
-    public Output<ClusterVpcConfigGetArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
+    public Output<ClusterVpcConfigGetArgs> vpcConfig() {
+        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
     public ClusterState(
@@ -233,22 +234,22 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.arn = Output.empty();
-        this.certificateAuthority = Output.empty();
-        this.createdAt = Output.empty();
-        this.enabledClusterLogTypes = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.endpoint = Output.empty();
-        this.identities = Output.empty();
-        this.kubernetesNetworkConfig = Output.empty();
-        this.name = Output.empty();
-        this.platformVersion = Output.empty();
-        this.roleArn = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.version = Output.empty();
-        this.vpcConfig = Output.empty();
+        this.arn = Codegen.empty();
+        this.certificateAuthority = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.enabledClusterLogTypes = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.identities = Codegen.empty();
+        this.kubernetesNetworkConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.platformVersion = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.version = Codegen.empty();
+        this.vpcConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -306,7 +307,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder certificateAuthority(@Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority) {
@@ -314,7 +315,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateAuthority(@Nullable ClusterCertificateAuthorityGetArgs certificateAuthority) {
-            this.certificateAuthority = Output.ofNullable(certificateAuthority);
+            this.certificateAuthority = Codegen.ofNullable(certificateAuthority);
             return this;
         }
         public Builder createdAt(@Nullable Output<String> createdAt) {
@@ -322,7 +323,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder enabledClusterLogTypes(@Nullable Output<List<String>> enabledClusterLogTypes) {
@@ -330,7 +331,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
-            this.enabledClusterLogTypes = Output.ofNullable(enabledClusterLogTypes);
+            this.enabledClusterLogTypes = Codegen.ofNullable(enabledClusterLogTypes);
             return this;
         }
         public Builder enabledClusterLogTypes(String... enabledClusterLogTypes) {
@@ -341,7 +342,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable ClusterEncryptionConfigGetArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -349,7 +350,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder identities(@Nullable Output<List<ClusterIdentityGetArgs>> identities) {
@@ -357,7 +358,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identities(@Nullable List<ClusterIdentityGetArgs> identities) {
-            this.identities = Output.ofNullable(identities);
+            this.identities = Codegen.ofNullable(identities);
             return this;
         }
         public Builder identities(ClusterIdentityGetArgs... identities) {
@@ -368,7 +369,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigGetArgs kubernetesNetworkConfig) {
-            this.kubernetesNetworkConfig = Output.ofNullable(kubernetesNetworkConfig);
+            this.kubernetesNetworkConfig = Codegen.ofNullable(kubernetesNetworkConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -376,7 +377,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
@@ -384,7 +385,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Output.ofNullable(platformVersion);
+            this.platformVersion = Codegen.ofNullable(platformVersion);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -392,7 +393,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -400,7 +401,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -408,7 +409,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -416,7 +417,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -424,7 +425,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder vpcConfig(@Nullable Output<ClusterVpcConfigGetArgs> vpcConfig) {
@@ -432,7 +433,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConfig(@Nullable ClusterVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Output.ofNullable(vpcConfig);
+            this.vpcConfig = Codegen.ofNullable(vpcConfig);
             return this;
         }        public ClusterState build() {
             return new ClusterState(arn, certificateAuthority, createdAt, enabledClusterLogTypes, encryptionConfig, endpoint, identities, kubernetesNetworkConfig, name, platformVersion, roleArn, status, tags, tagsAll, version, vpcConfig);

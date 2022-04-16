@@ -5,6 +5,7 @@ package io.pulumi.aws.glacier;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completeLock", required=true)
       private final Output<Boolean> completeLock;
 
-    public Output<Boolean> getCompleteLock() {
+    public Output<Boolean> completeLock() {
         return this.completeLock;
     }
 
@@ -33,8 +34,8 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreDeletionError")
       private final @Nullable Output<Boolean> ignoreDeletionError;
 
-    public Output<Boolean> getIgnoreDeletionError() {
-        return this.ignoreDeletionError == null ? Output.empty() : this.ignoreDeletionError;
+    public Output<Boolean> ignoreDeletionError() {
+        return this.ignoreDeletionError == null ? Codegen.empty() : this.ignoreDeletionError;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -55,7 +56,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -71,10 +72,10 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultLockArgs() {
-        this.completeLock = Output.empty();
-        this.ignoreDeletionError = Output.empty();
-        this.policy = Output.empty();
-        this.vaultName = Output.empty();
+        this.completeLock = Codegen.empty();
+        this.ignoreDeletionError = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
-            this.ignoreDeletionError = Output.ofNullable(ignoreDeletionError);
+            this.ignoreDeletionError = Codegen.ofNullable(ignoreDeletionError);
             return this;
         }
         public Builder policy(Output<String> policy) {

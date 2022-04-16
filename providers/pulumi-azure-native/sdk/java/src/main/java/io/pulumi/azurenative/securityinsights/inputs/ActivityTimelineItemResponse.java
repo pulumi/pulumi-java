@@ -23,7 +23,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="bucketEndTimeUTC", required=true)
       private final String bucketEndTimeUTC;
 
-    public String getBucketEndTimeUTC() {
+    public String bucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
     }
 
@@ -34,7 +34,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="bucketStartTimeUTC", required=true)
       private final String bucketStartTimeUTC;
 
-    public String getBucketStartTimeUTC() {
+    public String bucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
     }
 
@@ -45,7 +45,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -56,7 +56,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="firstActivityTimeUTC", required=true)
       private final String firstActivityTimeUTC;
 
-    public String getFirstActivityTimeUTC() {
+    public String firstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
     }
 
@@ -68,7 +68,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -79,7 +79,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="lastActivityTimeUTC", required=true)
       private final String lastActivityTimeUTC;
 
-    public String getLastActivityTimeUTC() {
+    public String lastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
     }
 
@@ -90,7 +90,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="queryId", required=true)
       private final String queryId;
 
-    public String getQueryId() {
+    public String queryId() {
         return this.queryId;
     }
 
@@ -101,7 +101,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

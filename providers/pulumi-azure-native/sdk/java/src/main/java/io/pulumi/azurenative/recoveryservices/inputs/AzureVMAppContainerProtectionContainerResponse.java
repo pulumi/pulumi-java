@@ -26,7 +26,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -41,7 +41,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="containerType", required=true)
       private final String containerType;
 
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
 
@@ -52,7 +52,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="extendedInfo")
       private final @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
 
-    public Optional<AzureWorkloadContainerExtendedInfoResponse> getExtendedInfo() {
+    public Optional<AzureWorkloadContainerExtendedInfoResponse> extendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
@@ -63,7 +63,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -74,7 +74,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
@@ -85,7 +85,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
 
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
@@ -96,7 +96,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="operationType")
       private final @Nullable String operationType;
 
-    public Optional<String> getOperationType() {
+    public Optional<String> operationType() {
         return this.operationType == null ? Optional.empty() : Optional.ofNullable(this.operationType);
     }
 
@@ -107,7 +107,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 
@@ -118,7 +118,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
@@ -129,7 +129,7 @@ public final class AzureVMAppContainerProtectionContainerResponse extends io.pul
     @Import(name="workloadType")
       private final @Nullable String workloadType;
 
-    public Optional<String> getWorkloadType() {
+    public Optional<String> workloadType() {
         return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
     }
 

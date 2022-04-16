@@ -164,140 +164,140 @@ public final class GetLaunchConfigurationResult {
      * The Amazon Resource Name of the launch configuration.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Whether a Public IP address is associated with the instance.
      * 
     */
-    public Boolean getAssociatePublicIpAddress() {
+    public Boolean associatePublicIpAddress() {
         return this.associatePublicIpAddress;
     }
     /**
      * The EBS Block Devices attached to the instance.
      * 
     */
-    public List<GetLaunchConfigurationEbsBlockDevice> getEbsBlockDevices() {
+    public List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
      * Whether the launched EC2 instance will be EBS-optimized.
      * 
     */
-    public Boolean getEbsOptimized() {
+    public Boolean ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
      * Whether Detailed Monitoring is Enabled.
      * 
     */
-    public Boolean getEnableMonitoring() {
+    public Boolean enableMonitoring() {
         return this.enableMonitoring;
     }
     /**
      * The Ephemeral volumes on the instance.
      * 
     */
-    public List<GetLaunchConfigurationEphemeralBlockDevice> getEphemeralBlockDevices() {
+    public List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
      * The IAM Instance Profile to associate with launched instances.
      * 
     */
-    public String getIamInstanceProfile() {
+    public String iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The EC2 Image ID of the instance.
      * 
     */
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
     /**
      * The Instance Type of the instance to launch.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The Key Name that should be used for the instance.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * The metadata options for the instance.
      * 
     */
-    public List<GetLaunchConfigurationMetadataOption> getMetadataOptions() {
+    public List<GetLaunchConfigurationMetadataOption> metadataOptions() {
         return this.metadataOptions;
     }
     /**
      * The Name of the launch configuration.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Tenancy of the instance.
      * 
     */
-    public String getPlacementTenancy() {
+    public String placementTenancy() {
         return this.placementTenancy;
     }
     /**
      * The Root Block Device of the instance.
      * 
     */
-    public List<GetLaunchConfigurationRootBlockDevice> getRootBlockDevices() {
+    public List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices() {
         return this.rootBlockDevices;
     }
     /**
      * A list of associated Security Group IDS.
      * 
     */
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
     /**
      * The Price to use for reserving Spot instances.
      * 
     */
-    public String getSpotPrice() {
+    public String spotPrice() {
         return this.spotPrice;
     }
     /**
      * The User Data of the instance.
      * 
     */
-    public String getUserData() {
+    public String userData() {
         return this.userData;
     }
     /**
      * The ID of a ClassicLink-enabled VPC.
      * 
     */
-    public String getVpcClassicLinkId() {
+    public String vpcClassicLinkId() {
         return this.vpcClassicLinkId;
     }
     /**
      * The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.
      * 
     */
-    public List<String> getVpcClassicLinkSecurityGroups() {
+    public List<String> vpcClassicLinkSecurityGroups() {
         return this.vpcClassicLinkSecurityGroups;
     }
 

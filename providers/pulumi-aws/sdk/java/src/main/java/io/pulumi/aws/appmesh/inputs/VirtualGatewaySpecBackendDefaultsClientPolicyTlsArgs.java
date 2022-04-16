@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolic
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="certificate")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> certificate;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="enforce")
       private final @Nullable Output<Boolean> enforce;
 
-    public Output<Boolean> getEnforce() {
-        return this.enforce == null ? Output.empty() : this.enforce;
+    public Output<Boolean> enforce() {
+        return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="ports")
       private final @Nullable Output<List<Integer>> ports;
 
-    public Output<List<Integer>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<Integer>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     @Import(name="validation", required=true)
       private final Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> validation;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> getValidation() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> validation() {
         return this.validation;
     }
 
@@ -74,10 +75,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     }
 
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs() {
-        this.certificate = Output.empty();
-        this.enforce = Output.empty();
-        this.ports = Output.empty();
-        this.validation = Output.empty();
+        this.certificate = Codegen.empty();
+        this.enforce = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.validation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
             return this;
         }
         public Builder certificate(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder enforce(@Nullable Output<Boolean> enforce) {
@@ -119,7 +120,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
             return this;
         }
         public Builder enforce(@Nullable Boolean enforce) {
-            this.enforce = Output.ofNullable(enforce);
+            this.enforce = Codegen.ofNullable(enforce);
             return this;
         }
         public Builder ports(@Nullable Output<List<Integer>> ports) {
@@ -127,7 +128,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
             return this;
         }
         public Builder ports(@Nullable List<Integer> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(Integer... ports) {

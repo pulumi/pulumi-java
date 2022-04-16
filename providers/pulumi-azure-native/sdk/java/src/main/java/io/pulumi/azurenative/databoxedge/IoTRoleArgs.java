@@ -12,6 +12,7 @@ import io.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeResource")
       private final @Nullable Output<ComputeResourceArgs> computeResource;
 
-    public Output<ComputeResourceArgs> getComputeResource() {
-        return this.computeResource == null ? Output.empty() : this.computeResource;
+    public Output<ComputeResourceArgs> computeResource() {
+        return this.computeResource == null ? Codegen.empty() : this.computeResource;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -51,7 +52,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPlatform", required=true)
       private final Output<Either<String,PlatformType>> hostPlatform;
 
-    public Output<Either<String,PlatformType>> getHostPlatform() {
+    public Output<Either<String,PlatformType>> hostPlatform() {
         return this.hostPlatform;
     }
 
@@ -62,7 +63,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ioTDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
 
@@ -73,8 +74,8 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeAgentInfo")
       private final @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
-    public Output<IoTEdgeAgentInfoArgs> getIoTEdgeAgentInfo() {
-        return this.ioTEdgeAgentInfo == null ? Output.empty() : this.ioTEdgeAgentInfo;
+    public Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo() {
+        return this.ioTEdgeAgentInfo == null ? Codegen.empty() : this.ioTEdgeAgentInfo;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
 
@@ -96,7 +97,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -107,8 +108,8 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -129,7 +130,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;
 
-    public Output<Either<String,RoleStatus>> getRoleStatus() {
+    public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
 
@@ -140,8 +141,8 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareMappings")
       private final @Nullable Output<List<MountPointMapArgs>> shareMappings;
 
-    public Output<List<MountPointMapArgs>> getShareMappings() {
-        return this.shareMappings == null ? Output.empty() : this.shareMappings;
+    public Output<List<MountPointMapArgs>> shareMappings() {
+        return this.shareMappings == null ? Codegen.empty() : this.shareMappings;
     }
 
     public IoTRoleArgs(
@@ -170,17 +171,17 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IoTRoleArgs() {
-        this.computeResource = Output.empty();
-        this.deviceName = Output.empty();
-        this.hostPlatform = Output.empty();
-        this.ioTDeviceDetails = Output.empty();
-        this.ioTEdgeAgentInfo = Output.empty();
-        this.ioTEdgeDeviceDetails = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleStatus = Output.empty();
-        this.shareMappings = Output.empty();
+        this.computeResource = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.hostPlatform = Codegen.empty();
+        this.ioTDeviceDetails = Codegen.empty();
+        this.ioTEdgeAgentInfo = Codegen.empty();
+        this.ioTEdgeDeviceDetails = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleStatus = Codegen.empty();
+        this.shareMappings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -228,7 +229,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computeResource(@Nullable ComputeResourceArgs computeResource) {
-            this.computeResource = Output.ofNullable(computeResource);
+            this.computeResource = Codegen.ofNullable(computeResource);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -260,7 +261,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ioTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoArgs ioTEdgeAgentInfo) {
-            this.ioTEdgeAgentInfo = Output.ofNullable(ioTEdgeAgentInfo);
+            this.ioTEdgeAgentInfo = Codegen.ofNullable(ioTEdgeAgentInfo);
             return this;
         }
         public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
@@ -284,7 +285,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -308,7 +309,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareMappings(@Nullable List<MountPointMapArgs> shareMappings) {
-            this.shareMappings = Output.ofNullable(shareMappings);
+            this.shareMappings = Codegen.ofNullable(shareMappings);
             return this;
         }
         public Builder shareMappings(MountPointMapArgs... shareMappings) {

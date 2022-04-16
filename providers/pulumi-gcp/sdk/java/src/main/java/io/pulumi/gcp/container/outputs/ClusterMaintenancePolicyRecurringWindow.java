@@ -23,13 +23,13 @@ public final class ClusterMaintenancePolicyRecurringWindow {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
-    public String getRecurrence() {
+    public String recurrence() {
         return this.recurrence;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

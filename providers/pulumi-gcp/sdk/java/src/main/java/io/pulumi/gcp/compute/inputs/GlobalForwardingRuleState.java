@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.GlobalForwardingRuleMetadataFilterGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="ipProtocol")
       private final @Nullable Output<String> ipProtocol;
 
-    public Output<String> getIpProtocol() {
-        return this.ipProtocol == null ? Output.empty() : this.ipProtocol;
+    public Output<String> ipProtocol() {
+        return this.ipProtocol == null ? Codegen.empty() : this.ipProtocol;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="ipVersion")
       private final @Nullable Output<String> ipVersion;
 
-    public Output<String> getIpVersion() {
-        return this.ipVersion == null ? Output.empty() : this.ipVersion;
+    public Output<String> ipVersion() {
+        return this.ipVersion == null ? Codegen.empty() : this.ipVersion;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
-    public Output<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
+    public Output<String> labelFingerprint() {
+        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="loadBalancingScheme")
       private final @Nullable Output<String> loadBalancingScheme;
 
-    public Output<String> getLoadBalancingScheme() {
-        return this.loadBalancingScheme == null ? Output.empty() : this.loadBalancingScheme;
+    public Output<String> loadBalancingScheme() {
+        return this.loadBalancingScheme == null ? Codegen.empty() : this.loadBalancingScheme;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="metadataFilters")
       private final @Nullable Output<List<GlobalForwardingRuleMetadataFilterGetArgs>> metadataFilters;
 
-    public Output<List<GlobalForwardingRuleMetadataFilterGetArgs>> getMetadataFilters() {
-        return this.metadataFilters == null ? Output.empty() : this.metadataFilters;
+    public Output<List<GlobalForwardingRuleMetadataFilterGetArgs>> metadataFilters() {
+        return this.metadataFilters == null ? Codegen.empty() : this.metadataFilters;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="portRange")
       private final @Nullable Output<String> portRange;
 
-    public Output<String> getPortRange() {
-        return this.portRange == null ? Output.empty() : this.portRange;
+    public Output<String> portRange() {
+        return this.portRange == null ? Codegen.empty() : this.portRange;
     }
 
     /**
@@ -209,8 +210,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -220,8 +221,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -236,8 +237,8 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public GlobalForwardingRuleState(
@@ -272,20 +273,20 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
     }
 
     private GlobalForwardingRuleState() {
-        this.description = Output.empty();
-        this.ipAddress = Output.empty();
-        this.ipProtocol = Output.empty();
-        this.ipVersion = Output.empty();
-        this.labelFingerprint = Output.empty();
-        this.labels = Output.empty();
-        this.loadBalancingScheme = Output.empty();
-        this.metadataFilters = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.portRange = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.target = Output.empty();
+        this.description = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.ipProtocol = Codegen.empty();
+        this.ipVersion = Codegen.empty();
+        this.labelFingerprint = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.loadBalancingScheme = Codegen.empty();
+        this.metadataFilters = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.portRange = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -339,7 +340,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -347,7 +348,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder ipProtocol(@Nullable Output<String> ipProtocol) {
@@ -355,7 +356,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipProtocol(@Nullable String ipProtocol) {
-            this.ipProtocol = Output.ofNullable(ipProtocol);
+            this.ipProtocol = Codegen.ofNullable(ipProtocol);
             return this;
         }
         public Builder ipVersion(@Nullable Output<String> ipVersion) {
@@ -363,7 +364,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipVersion(@Nullable String ipVersion) {
-            this.ipVersion = Output.ofNullable(ipVersion);
+            this.ipVersion = Codegen.ofNullable(ipVersion);
             return this;
         }
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
@@ -371,7 +372,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Output.ofNullable(labelFingerprint);
+            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -379,7 +380,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
@@ -387,7 +388,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
-            this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
+            this.loadBalancingScheme = Codegen.ofNullable(loadBalancingScheme);
             return this;
         }
         public Builder metadataFilters(@Nullable Output<List<GlobalForwardingRuleMetadataFilterGetArgs>> metadataFilters) {
@@ -395,7 +396,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder metadataFilters(@Nullable List<GlobalForwardingRuleMetadataFilterGetArgs> metadataFilters) {
-            this.metadataFilters = Output.ofNullable(metadataFilters);
+            this.metadataFilters = Codegen.ofNullable(metadataFilters);
             return this;
         }
         public Builder metadataFilters(GlobalForwardingRuleMetadataFilterGetArgs... metadataFilters) {
@@ -406,7 +407,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -414,7 +415,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder portRange(@Nullable Output<String> portRange) {
@@ -422,7 +423,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder portRange(@Nullable String portRange) {
-            this.portRange = Output.ofNullable(portRange);
+            this.portRange = Codegen.ofNullable(portRange);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -430,7 +431,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -438,7 +439,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -446,7 +447,7 @@ public final class GlobalForwardingRuleState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public GlobalForwardingRuleState build() {
             return new GlobalForwardingRuleState(description, ipAddress, ipProtocol, ipVersion, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, portRange, project, selfLink, target);

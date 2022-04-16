@@ -25,7 +25,7 @@ public final class MysqlDatabaseResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -36,7 +36,7 @@ public final class MysqlDatabaseResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="mysqlTables", required=true)
       private final List<MysqlTableResponse> mysqlTables;
 
-    public List<MysqlTableResponse> getMysqlTables() {
+    public List<MysqlTableResponse> mysqlTables() {
         return this.mysqlTables;
     }
 

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigStatu
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return Arn
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return Count
      * 
      */
-    public Output<Integer> getAssociationCount() {
+    public Output<Integer> associationCount() {
         return this.associationCount;
     }
     /**
@@ -59,7 +60,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -73,7 +74,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return The id of the creator request.
      * 
      */
-    public Output<String> getCreatorRequestId() {
+    public Output<String> creatorRequestId() {
         return this.creatorRequestId;
     }
     /**
@@ -87,7 +88,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return destination arn
      * 
      */
-    public Output</* @Nullable */ String> getDestinationArn() {
+    public Output</* @Nullable */ String> destinationArn() {
         return this.destinationArn;
     }
     /**
@@ -101,7 +102,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return ResolverQueryLogConfigName
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return AccountId
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -129,7 +130,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
      */
-    public Output<ResolverQueryLoggingConfigShareStatus> getShareStatus() {
+    public Output<ResolverQueryLoggingConfigShareStatus> shareStatus() {
         return this.shareStatus;
     }
     /**
@@ -143,7 +144,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @return ResolverQueryLogConfigStatus, possible values are CREATING, CREATED, DELETED AND FAILED.
      * 
      */
-    public Output<ResolverQueryLoggingConfigStatus> getStatus() {
+    public Output<ResolverQueryLoggingConfigStatus> status() {
         return this.status;
     }
 
@@ -169,7 +170,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverQueryLoggingConfig(String name, @Nullable ResolverQueryLoggingConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:ResolverQueryLoggingConfig", name, args == null ? ResolverQueryLoggingConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53resolver:ResolverQueryLoggingConfig", name, args == null ? ResolverQueryLoggingConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverQueryLoggingConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

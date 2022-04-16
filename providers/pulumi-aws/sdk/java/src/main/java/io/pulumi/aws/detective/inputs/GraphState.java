@@ -5,6 +5,7 @@ package io.pulumi.aws.detective.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+    public Output<String> createdTime() {
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
     @Import(name="graphArn")
       private final @Nullable Output<String> graphArn;
 
-    public Output<String> getGraphArn() {
-        return this.graphArn == null ? Output.empty() : this.graphArn;
+    public Output<String> graphArn() {
+        return this.graphArn == null ? Codegen.empty() : this.graphArn;
     }
 
     /**
@@ -44,15 +45,15 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public GraphState(
@@ -67,10 +68,10 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphState() {
-        this.createdTime = Output.empty();
-        this.graphArn = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.createdTime = Codegen.empty();
+        this.graphArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder graphArn(@Nullable Output<String> graphArn) {
@@ -112,7 +113,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Output.ofNullable(graphArn);
+            this.graphArn = Codegen.ofNullable(graphArn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -120,7 +121,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -128,7 +129,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public GraphState build() {
             return new GraphState(createdTime, graphArn, tags, tagsAll);

@@ -9,6 +9,7 @@ import io.pulumi.aws.kms.inputs.AliasState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the key alias.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -85,7 +86,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the target key identifier.
      * 
      */
-    public Output<String> getTargetKeyArn() {
+    public Output<String> targetKeyArn() {
         return this.targetKeyArn;
     }
     /**
@@ -99,7 +100,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Identifier for the key for which the alias is for, can be either an ARN or key_id.
      * 
      */
-    public Output<String> getTargetKeyId() {
+    public Output<String> targetKeyId() {
         return this.targetKeyId;
     }
 
@@ -125,7 +126,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Alias(String name, AliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kms/alias:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kms/alias:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Alias(String name, Output<String> id, @Nullable AliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

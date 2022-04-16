@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri", required=true)
       private final Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri;
     }
 
@@ -37,8 +38,8 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<VersionArgs> version;
 
-    public Output<VersionArgs> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<VersionArgs> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public LocationArgs(
@@ -62,9 +63,9 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationArgs() {
-        this.cpeUri = Output.empty();
-        this.path = Output.empty();
-        this.version = Output.empty();
+        this.cpeUri = Codegen.empty();
+        this.path = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder version(@Nullable Output<VersionArgs> version) {
@@ -112,7 +113,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable VersionArgs version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public LocationArgs build() {
             return new LocationArgs(cpeUri, path, version);

@@ -24,7 +24,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -41,7 +41,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
     @Import(name="revocationConfigurations")
       private final @Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations;
 
-    public List<GetCertificateAuthorityRevocationConfiguration> getRevocationConfigurations() {
+    public List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations() {
         return this.revocationConfigurations == null ? List.of() : this.revocationConfigurations;
     }
 
@@ -52,7 +52,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

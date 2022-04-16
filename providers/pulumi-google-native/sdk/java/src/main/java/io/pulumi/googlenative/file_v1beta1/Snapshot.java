@@ -6,6 +6,7 @@ package io.pulumi.googlenative.file_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.file_v1beta1.SnapshotArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The time when the snapshot was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +45,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The amount of bytes needed to allocate a full copy of the snapshot content
      * 
      */
-    public Output<String> getFilesystemUsedBytes() {
+    public Output<String> filesystemUsedBytes() {
         return this.filesystemUsedBytes;
     }
     /**
@@ -72,7 +73,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -86,7 +87,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The snapshot state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -126,7 +127,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:file/v1beta1:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:file/v1beta1:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Snapshot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

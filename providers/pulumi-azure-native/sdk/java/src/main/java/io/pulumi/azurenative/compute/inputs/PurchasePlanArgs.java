@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +37,7 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="product", required=true)
       private final Output<String> product;
 
-    public Output<String> getProduct() {
+    public Output<String> product() {
         return this.product;
     }
 
@@ -47,8 +48,8 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
 
-    public Output<String> getPromotionCode() {
-        return this.promotionCode == null ? Output.empty() : this.promotionCode;
+    public Output<String> promotionCode() {
+        return this.promotionCode == null ? Codegen.empty() : this.promotionCode;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher;
     }
 
@@ -74,10 +75,10 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PurchasePlanArgs() {
-        this.name = Output.empty();
-        this.product = Output.empty();
-        this.promotionCode = Output.empty();
-        this.publisher = Output.empty();
+        this.name = Codegen.empty();
+        this.product = Codegen.empty();
+        this.promotionCode = Codegen.empty();
+        this.publisher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = Output.ofNullable(promotionCode);
+            this.promotionCode = Codegen.ofNullable(promotionCode);
             return this;
         }
         public Builder publisher(Output<String> publisher) {

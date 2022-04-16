@@ -10,6 +10,7 @@ import io.pulumi.aws.route53recoverycontrol.outputs.SafetyRuleRuleConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return ARN of the safety rule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssertedControls() {
+    public Output</* @Nullable */ List<String>> assertedControls() {
         return this.assertedControls;
     }
     /**
@@ -70,7 +71,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return ARN of the control panel in which this safety rule will reside.
      * 
      */
-    public Output<String> getControlPanelArn() {
+    public Output<String> controlPanelArn() {
         return this.controlPanelArn;
     }
     /**
@@ -84,7 +85,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
      * 
      */
-    public Output</* @Nullable */ List<String>> getGatingControls() {
+    public Output</* @Nullable */ List<String>> gatingControls() {
         return this.gatingControls;
     }
     /**
@@ -98,7 +99,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return Name describing the safety rule.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return Configuration block for safety rule criteria. See below.
      * 
      */
-    public Output<SafetyRuleRuleConfig> getRuleConfig() {
+    public Output<SafetyRuleRuleConfig> ruleConfig() {
         return this.ruleConfig;
     }
     /**
@@ -126,7 +127,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return Status of the safety rule. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -140,7 +141,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetControls() {
+    public Output</* @Nullable */ List<String>> targetControls() {
         return this.targetControls;
     }
     /**
@@ -154,7 +155,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return Evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.
      * 
      */
-    public Output<Integer> getWaitPeriodMs() {
+    public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 
@@ -180,7 +181,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SafetyRule(String name, SafetyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53recoverycontrol/safetyRule:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53recoverycontrol/safetyRule:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SafetyRule(String name, Output<String> id, @Nullable SafetyRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

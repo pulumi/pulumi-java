@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     @Import(name="databaseTableName")
       private final @Nullable Output<String> databaseTableName;
 
-    public Output<String> getDatabaseTableName() {
-        return this.databaseTableName == null ? Output.empty() : this.databaseTableName;
+    public Output<String> databaseTableName() {
+        return this.databaseTableName == null ? Codegen.empty() : this.databaseTableName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     @Import(name="glueConnectionName", required=true)
       private final Output<String> glueConnectionName;
 
-    public Output<String> getGlueConnectionName() {
+    public Output<String> glueConnectionName() {
         return this.glueConnectionName;
     }
 
@@ -44,15 +45,15 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
-    public Output<String> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+    public Output<String> queryString() {
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     @Import(name="tempDirectory")
       private final @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
-    public Output<DatasetS3LocationArgs> getTempDirectory() {
-        return this.tempDirectory == null ? Output.empty() : this.tempDirectory;
+    public Output<DatasetS3LocationArgs> tempDirectory() {
+        return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
     }
 
     public DatasetDatabaseInputDefinitionArgs(
@@ -67,10 +68,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     }
 
     private DatasetDatabaseInputDefinitionArgs() {
-        this.databaseTableName = Output.empty();
-        this.glueConnectionName = Output.empty();
-        this.queryString = Output.empty();
-        this.tempDirectory = Output.empty();
+        this.databaseTableName = Codegen.empty();
+        this.glueConnectionName = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.tempDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
             return this;
         }
         public Builder databaseTableName(@Nullable String databaseTableName) {
-            this.databaseTableName = Output.ofNullable(databaseTableName);
+            this.databaseTableName = Codegen.ofNullable(databaseTableName);
             return this;
         }
         public Builder glueConnectionName(Output<String> glueConnectionName) {
@@ -120,7 +121,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
             return this;
         }
         public Builder queryString(@Nullable String queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder tempDirectory(@Nullable Output<DatasetS3LocationArgs> tempDirectory) {
@@ -128,7 +129,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
             return this;
         }
         public Builder tempDirectory(@Nullable DatasetS3LocationArgs tempDirectory) {
-            this.tempDirectory = Output.ofNullable(tempDirectory);
+            this.tempDirectory = Codegen.ofNullable(tempDirectory);
             return this;
         }        public DatasetDatabaseInputDefinitionArgs build() {
             return new DatasetDatabaseInputDefinitionArgs(databaseTableName, glueConnectionName, queryString, tempDirectory);

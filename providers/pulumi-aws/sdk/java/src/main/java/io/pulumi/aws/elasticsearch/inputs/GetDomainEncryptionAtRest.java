@@ -20,7 +20,7 @@ public final class GetDomainEncryptionAtRest extends io.pulumi.resources.InvokeA
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -31,7 +31,7 @@ public final class GetDomainEncryptionAtRest extends io.pulumi.resources.InvokeA
     @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
 

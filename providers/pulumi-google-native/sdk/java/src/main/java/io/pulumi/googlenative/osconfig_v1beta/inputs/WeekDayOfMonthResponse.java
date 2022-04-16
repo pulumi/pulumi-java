@@ -24,7 +24,7 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="dayOfWeek", required=true)
       private final String dayOfWeek;
 
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -35,7 +35,7 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="dayOffset", required=true)
       private final Integer dayOffset;
 
-    public Integer getDayOffset() {
+    public Integer dayOffset() {
         return this.dayOffset;
     }
 
@@ -46,7 +46,7 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="weekOrdinal", required=true)
       private final Integer weekOrdinal;
 
-    public Integer getWeekOrdinal() {
+    public Integer weekOrdinal() {
         return this.weekOrdinal;
     }
 

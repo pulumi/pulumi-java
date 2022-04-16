@@ -5,6 +5,7 @@ package io.pulumi.gcp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enableBatching")
       private final @Nullable Output<Boolean> enableBatching;
 
-    public Output<Boolean> getEnableBatching() {
-        return this.enableBatching == null ? Output.empty() : this.enableBatching;
+    public Output<Boolean> enableBatching() {
+        return this.enableBatching == null ? Codegen.empty() : this.enableBatching;
     }
 
     @Import(name="sendAfter")
       private final @Nullable Output<String> sendAfter;
 
-    public Output<String> getSendAfter() {
-        return this.sendAfter == null ? Output.empty() : this.sendAfter;
+    public Output<String> sendAfter() {
+        return this.sendAfter == null ? Codegen.empty() : this.sendAfter;
     }
 
     public ProviderBatchingArgs(
@@ -37,8 +38,8 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProviderBatchingArgs() {
-        this.enableBatching = Output.empty();
-        this.sendAfter = Output.empty();
+        this.enableBatching = Codegen.empty();
+        this.sendAfter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enableBatching(@Nullable Boolean enableBatching) {
-            this.enableBatching = Output.ofNullable(enableBatching);
+            this.enableBatching = Codegen.ofNullable(enableBatching);
             return this;
         }
         public Builder sendAfter(@Nullable Output<String> sendAfter) {
@@ -76,7 +77,7 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sendAfter(@Nullable String sendAfter) {
-            this.sendAfter = Output.ofNullable(sendAfter);
+            this.sendAfter = Codegen.ofNullable(sendAfter);
             return this;
         }        public ProviderBatchingArgs build() {
             return new ProviderBatchingArgs(enableBatching, sendAfter);

@@ -6,7 +6,6 @@ import io.pulumi.Log;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.ImportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.serialization.internal.JsonFormatter;
@@ -30,10 +29,6 @@ public abstract class InputArgs {
 
     private final ImmutableList<ImportMetadata<?, ?, ?>> inputInfos;
 
-    @SuppressWarnings("unused")
-    @InternalField
-    private final InputArgsInternal internal = new InputArgsInternal();
-
     protected InputArgs() {
         this.inputInfos = extractInputInfos(this.getClass());
     }
@@ -42,9 +37,17 @@ public abstract class InputArgs {
 
     @InternalUse
     @ParametersAreNonnullByDefault
-    public final class InputArgsInternal {
+    public static final class InputArgsInternal {
 
-        private InputArgsInternal() { /* Empty */ }
+        private final InputArgs inputArgs;
+
+        private InputArgsInternal(InputArgs inputArgs) {
+            this.inputArgs = requireNonNull(inputArgs);
+        }
+
+        public static InputArgsInternal from(InputArgs inputArgs) {
+            return new InputArgsInternal(inputArgs);
+        }
 
         // TODO: try to remove, this only casts the type
         public CompletableFuture<Map<Object, /* @Nullable */ Object>> toNullableMapAsync(Log log) {
@@ -72,24 +75,24 @@ public abstract class InputArgs {
                     CompletableFuture.completedFuture(ImmutableMap.<String, Output<?>>builder())
             );
 
-            for (var info : InputArgs.this.inputInfos) {
-                var fullName = InputArgs.this.fullName(info);
+            for (var info : this.inputArgs.inputInfos) {
+                var fullName = this.inputArgs.fullName(info);
 
-                var value = info.getFieldOutput(InputArgs.this);
+                var value = info.getFieldOutput(this.inputArgs);
                 if (info.getAnnotation().required() && value.isEmpty()) {
                     throw new IllegalArgumentException(
-                            String.format("%s is required but was not given a value", InputArgs.this.fullName(info)));
+                            String.format("'%s' is required but was not given a value", this.inputArgs.fullName(info)));
                 }
 
                 if (info.getAnnotation().json()) {
                     var valueFuture = value.map(v -> convertToJson.apply(fullName, v))
-                            .orElse(CompletableFuture.completedFuture(Output.empty()));
+                            .orElse(CompletableFuture.completedFuture(Output.ofNullable(null)));
                     builder.accumulate(
                             valueFuture, (b, m) -> b.put(info.getName(), m)
                     );
                 } else {
                     var valueFuture = value.map(CompletableFuture::completedFuture)
-                        .orElse(CompletableFuture.completedFuture(Output.empty()));
+                        .orElse(CompletableFuture.completedFuture(Output.ofNullable(null)));
                     builder.accumulate(
                             valueFuture, (b, m) -> b.put(info.getName(), m)
                     );

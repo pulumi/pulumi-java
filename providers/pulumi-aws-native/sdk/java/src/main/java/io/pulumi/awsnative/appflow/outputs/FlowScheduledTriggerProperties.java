@@ -36,22 +36,22 @@ public final class FlowScheduledTriggerProperties {
         this.timeZone = timeZone;
     }
 
-    public Optional<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
+    public Optional<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode() {
         return Optional.ofNullable(this.dataPullMode);
     }
-    public Optional<Double> getScheduleEndTime() {
+    public Optional<Double> scheduleEndTime() {
         return Optional.ofNullable(this.scheduleEndTime);
     }
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
-    public Optional<Double> getScheduleOffset() {
+    public Optional<Double> scheduleOffset() {
         return Optional.ofNullable(this.scheduleOffset);
     }
-    public Optional<Double> getScheduleStartTime() {
+    public Optional<Double> scheduleStartTime() {
         return Optional.ofNullable(this.scheduleStartTime);
     }
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
 

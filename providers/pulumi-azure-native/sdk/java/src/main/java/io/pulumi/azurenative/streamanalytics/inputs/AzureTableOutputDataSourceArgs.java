@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+    public Output<String> accountKey() {
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
-        return this.batchSize == null ? Output.empty() : this.batchSize;
+    public Output<Integer> batchSize() {
+        return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="columnsToRemove")
       private final @Nullable Output<List<String>> columnsToRemove;
 
-    public Output<List<String>> getColumnsToRemove() {
-        return this.columnsToRemove == null ? Output.empty() : this.columnsToRemove;
+    public Output<List<String>> columnsToRemove() {
+        return this.columnsToRemove == null ? Codegen.empty() : this.columnsToRemove;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
-        return this.partitionKey == null ? Output.empty() : this.partitionKey;
+    public Output<String> partitionKey() {
+        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="rowKey")
       private final @Nullable Output<String> rowKey;
 
-    public Output<String> getRowKey() {
-        return this.rowKey == null ? Output.empty() : this.rowKey;
+    public Output<String> rowKey() {
+        return this.rowKey == null ? Codegen.empty() : this.rowKey;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+    public Output<String> table() {
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -129,14 +130,14 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     }
 
     private AzureTableOutputDataSourceArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.batchSize = Output.empty();
-        this.columnsToRemove = Output.empty();
-        this.partitionKey = Output.empty();
-        this.rowKey = Output.empty();
-        this.table = Output.empty();
-        this.type = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.batchSize = Codegen.empty();
+        this.columnsToRemove = Codegen.empty();
+        this.partitionKey = Codegen.empty();
+        this.rowKey = Codegen.empty();
+        this.table = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder accountName(@Nullable Output<String> accountName) {
@@ -186,7 +187,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
@@ -194,7 +195,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Output.ofNullable(batchSize);
+            this.batchSize = Codegen.ofNullable(batchSize);
             return this;
         }
         public Builder columnsToRemove(@Nullable Output<List<String>> columnsToRemove) {
@@ -202,7 +203,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
-            this.columnsToRemove = Output.ofNullable(columnsToRemove);
+            this.columnsToRemove = Codegen.ofNullable(columnsToRemove);
             return this;
         }
         public Builder columnsToRemove(String... columnsToRemove) {
@@ -213,7 +214,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Output.ofNullable(partitionKey);
+            this.partitionKey = Codegen.ofNullable(partitionKey);
             return this;
         }
         public Builder rowKey(@Nullable Output<String> rowKey) {
@@ -221,7 +222,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder rowKey(@Nullable String rowKey) {
-            this.rowKey = Output.ofNullable(rowKey);
+            this.rowKey = Codegen.ofNullable(rowKey);
             return this;
         }
         public Builder table(@Nullable Output<String> table) {
@@ -229,7 +230,7 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder table(@Nullable String table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }
         public Builder type(Output<String> type) {

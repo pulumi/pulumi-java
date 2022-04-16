@@ -10,6 +10,7 @@ import io.pulumi.azurenative.media.inputs.H264LayerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,8 +33,8 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="complexity")
       private final @Nullable Output<Either<String,H264Complexity>> complexity;
 
-    public Output<Either<String,H264Complexity>> getComplexity() {
-        return this.complexity == null ? Output.empty() : this.complexity;
+    public Output<Either<String,H264Complexity>> complexity() {
+        return this.complexity == null ? Codegen.empty() : this.complexity;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> getKeyFrameInterval() {
-        return this.keyFrameInterval == null ? Output.empty() : this.keyFrameInterval;
+    public Output<String> keyFrameInterval() {
+        return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="layers")
       private final @Nullable Output<List<H264LayerArgs>> layers;
 
-    public Output<List<H264LayerArgs>> getLayers() {
-        return this.layers == null ? Output.empty() : this.layers;
+    public Output<List<H264LayerArgs>> layers() {
+        return this.layers == null ? Codegen.empty() : this.layers;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -88,8 +89,8 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sceneChangeDetection")
       private final @Nullable Output<Boolean> sceneChangeDetection;
 
-    public Output<Boolean> getSceneChangeDetection() {
-        return this.sceneChangeDetection == null ? Output.empty() : this.sceneChangeDetection;
+    public Output<Boolean> sceneChangeDetection() {
+        return this.sceneChangeDetection == null ? Codegen.empty() : this.sceneChangeDetection;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> getStretchMode() {
-        return this.stretchMode == null ? Output.empty() : this.stretchMode;
+    public Output<Either<String,StretchMode>> stretchMode() {
+        return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncMode")
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Output<Either<String,VideoSyncMode>> getSyncMode() {
-        return this.syncMode == null ? Output.empty() : this.syncMode;
+    public Output<Either<String,VideoSyncMode>> syncMode() {
+        return this.syncMode == null ? Codegen.empty() : this.syncMode;
     }
 
     public H264VideoArgs(
@@ -134,14 +135,14 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private H264VideoArgs() {
-        this.complexity = Output.empty();
-        this.keyFrameInterval = Output.empty();
-        this.label = Output.empty();
-        this.layers = Output.empty();
-        this.odataType = Output.empty();
-        this.sceneChangeDetection = Output.empty();
-        this.stretchMode = Output.empty();
-        this.syncMode = Output.empty();
+        this.complexity = Codegen.empty();
+        this.keyFrameInterval = Codegen.empty();
+        this.label = Codegen.empty();
+        this.layers = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.sceneChangeDetection = Codegen.empty();
+        this.stretchMode = Codegen.empty();
+        this.syncMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder complexity(@Nullable Either<String,H264Complexity> complexity) {
-            this.complexity = Output.ofNullable(complexity);
+            this.complexity = Codegen.ofNullable(complexity);
             return this;
         }
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
@@ -191,7 +192,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
+            this.keyFrameInterval = Codegen.ofNullable(keyFrameInterval);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -199,7 +200,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder layers(@Nullable Output<List<H264LayerArgs>> layers) {
@@ -207,7 +208,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder layers(@Nullable List<H264LayerArgs> layers) {
-            this.layers = Output.ofNullable(layers);
+            this.layers = Codegen.ofNullable(layers);
             return this;
         }
         public Builder layers(H264LayerArgs... layers) {
@@ -226,7 +227,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
-            this.sceneChangeDetection = Output.ofNullable(sceneChangeDetection);
+            this.sceneChangeDetection = Codegen.ofNullable(sceneChangeDetection);
             return this;
         }
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
@@ -234,7 +235,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Output.ofNullable(stretchMode);
+            this.stretchMode = Codegen.ofNullable(stretchMode);
             return this;
         }
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
@@ -242,7 +243,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
-            this.syncMode = Output.ofNullable(syncMode);
+            this.syncMode = Codegen.ofNullable(syncMode);
             return this;
         }        public H264VideoArgs build() {
             return new H264VideoArgs(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);

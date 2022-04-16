@@ -1,12 +1,12 @@
 package io.pulumi.deployment;
 
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
+import io.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -34,7 +34,7 @@ public class DeploymentRunnerTest {
             .setSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
-        var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack.class).join();
+        var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack::new).join();
 
         assertThat(mock.runner.getSwallowedExceptions()).hasSize(2);
 

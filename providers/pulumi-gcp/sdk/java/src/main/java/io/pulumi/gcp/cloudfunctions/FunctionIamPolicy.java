@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudfunctions;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionIamPolicyArgs;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamPolicyState;
@@ -17,31 +18,31 @@ public class FunctionIamPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
-    public Output<String> getCloudFunction() {
+    public Output<String> cloudFunction() {
         return this.cloudFunction;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -67,7 +68,7 @@ public class FunctionIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FunctionIamPolicy(String name, FunctionIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudfunctions/functionIamPolicy:FunctionIamPolicy", name, args == null ? FunctionIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudfunctions/functionIamPolicy:FunctionIamPolicy", name, args == null ? FunctionIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FunctionIamPolicy(String name, Output<String> id, @Nullable FunctionIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

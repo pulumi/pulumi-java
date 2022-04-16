@@ -10,6 +10,7 @@ import io.pulumi.awsnative.rds.outputs.DBProxyEndpointTagFormat;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the DB proxy endpoint.
      * 
      */
-    public Output<String> getDBProxyEndpointArn() {
+    public Output<String> dBProxyEndpointArn() {
         return this.dBProxyEndpointArn;
     }
     /**
@@ -46,7 +47,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
      * 
      */
-    public Output<String> getDBProxyEndpointName() {
+    public Output<String> dBProxyEndpointName() {
         return this.dBProxyEndpointName;
     }
     /**
@@ -60,7 +61,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
      * 
      */
-    public Output<String> getDBProxyName() {
+    public Output<String> dBProxyName() {
         return this.dBProxyName;
     }
     /**
@@ -74,7 +75,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -88,7 +89,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.
      * 
      */
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
     /**
@@ -102,7 +103,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
      * 
      */
-    public Output</* @Nullable */ List<DBProxyEndpointTagFormat>> getTags() {
+    public Output</* @Nullable */ List<DBProxyEndpointTagFormat>> tags() {
         return this.tags;
     }
     /**
@@ -116,7 +117,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
      * 
      */
-    public Output</* @Nullable */ DBProxyEndpointTargetRole> getTargetRole() {
+    public Output</* @Nullable */ DBProxyEndpointTargetRole> targetRole() {
         return this.targetRole;
     }
     /**
@@ -130,7 +131,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return VPC ID to associate with the new DB proxy endpoint.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -144,7 +145,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return VPC security group IDs to associate with the new DB proxy endpoint.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVpcSecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
     /**
@@ -158,7 +159,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return VPC subnet IDs to associate with the new DB proxy endpoint.
      * 
      */
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
@@ -184,7 +185,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DBProxyEndpoint(String name, DBProxyEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:rds:DBProxyEndpoint", name, args == null ? DBProxyEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:rds:DBProxyEndpoint", name, args == null ? DBProxyEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DBProxyEndpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

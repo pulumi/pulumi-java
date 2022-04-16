@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
-    public Output<String> getServiceId() {
-        return this.serviceId == null ? Output.empty() : this.serviceId;
+    public Output<String> serviceId() {
+        return this.serviceId == null ? Codegen.empty() : this.serviceId;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="telemetry")
       private final @Nullable Output<CustomServiceTelemetryGetArgs> telemetry;
 
-    public Output<CustomServiceTelemetryGetArgs> getTelemetry() {
-        return this.telemetry == null ? Output.empty() : this.telemetry;
+    public Output<CustomServiceTelemetryGetArgs> telemetry() {
+        return this.telemetry == null ? Codegen.empty() : this.telemetry;
     }
 
     public CustomServiceState(
@@ -87,11 +88,11 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomServiceState() {
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.serviceId = Output.empty();
-        this.telemetry = Output.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceId = Codegen.empty();
+        this.telemetry = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -135,7 +136,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -143,7 +144,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceId(@Nullable Output<String> serviceId) {
@@ -151,7 +152,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Output.ofNullable(serviceId);
+            this.serviceId = Codegen.ofNullable(serviceId);
             return this;
         }
         public Builder telemetry(@Nullable Output<CustomServiceTelemetryGetArgs> telemetry) {
@@ -159,7 +160,7 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder telemetry(@Nullable CustomServiceTelemetryGetArgs telemetry) {
-            this.telemetry = Output.ofNullable(telemetry);
+            this.telemetry = Codegen.ofNullable(telemetry);
             return this;
         }        public CustomServiceState build() {
             return new CustomServiceState(displayName, name, project, serviceId, telemetry);

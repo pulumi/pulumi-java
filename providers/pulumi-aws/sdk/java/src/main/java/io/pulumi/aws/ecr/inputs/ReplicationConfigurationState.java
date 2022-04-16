@@ -6,6 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
-        return this.registryId == null ? Output.empty() : this.registryId;
+    public Output<String> registryId() {
+        return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
     @Import(name="replicationConfiguration")
       private final @Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
 
-    public Output<ReplicationConfigurationReplicationConfigurationGetArgs> getReplicationConfiguration() {
-        return this.replicationConfiguration == null ? Output.empty() : this.replicationConfiguration;
+    public Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration() {
+        return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
     }
 
     public ReplicationConfigurationState(
@@ -45,8 +46,8 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
     }
 
     private ReplicationConfigurationState() {
-        this.registryId = Output.empty();
-        this.replicationConfiguration = Output.empty();
+        this.registryId = Codegen.empty();
+        this.replicationConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Output.ofNullable(registryId);
+            this.registryId = Codegen.ofNullable(registryId);
             return this;
         }
         public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
@@ -84,7 +85,7 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder replicationConfiguration(@Nullable ReplicationConfigurationReplicationConfigurationGetArgs replicationConfiguration) {
-            this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
+            this.replicationConfiguration = Codegen.ofNullable(replicationConfiguration);
             return this;
         }        public ReplicationConfigurationState build() {
             return new ReplicationConfigurationState(registryId, replicationConfiguration);

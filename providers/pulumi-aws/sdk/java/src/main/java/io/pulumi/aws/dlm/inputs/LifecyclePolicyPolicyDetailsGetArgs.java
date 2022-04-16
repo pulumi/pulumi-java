@@ -6,6 +6,7 @@ package io.pulumi.aws.dlm.inputs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
     @Import(name="resourceTypes", required=true)
       private final Output<List<String>> resourceTypes;
 
-    public Output<List<String>> getResourceTypes() {
+    public Output<List<String>> resourceTypes() {
         return this.resourceTypes;
     }
 
@@ -34,7 +35,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
     @Import(name="schedules", required=true)
       private final Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
 
-    public Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> getSchedules() {
+    public Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules() {
         return this.schedules;
     }
 
@@ -45,7 +46,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
     @Import(name="targetTags", required=true)
       private final Output<Map<String,String>> targetTags;
 
-    public Output<Map<String,String>> getTargetTags() {
+    public Output<Map<String,String>> targetTags() {
         return this.targetTags;
     }
 
@@ -59,9 +60,9 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
     }
 
     private LifecyclePolicyPolicyDetailsGetArgs() {
-        this.resourceTypes = Output.empty();
-        this.schedules = Output.empty();
-        this.targetTags = Output.empty();
+        this.resourceTypes = Codegen.empty();
+        this.schedules = Codegen.empty();
+        this.targetTags = Codegen.empty();
     }
 
     public static Builder builder() {

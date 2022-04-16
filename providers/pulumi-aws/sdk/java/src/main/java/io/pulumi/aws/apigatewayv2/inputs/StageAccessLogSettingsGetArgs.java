@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
@@ -31,7 +32,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -43,8 +44,8 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
     }
 
     private StageAccessLogSettingsGetArgs() {
-        this.destinationArn = Output.empty();
-        this.format = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.format = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.mediaconnect.FlowVpcInterfaceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -43,7 +44,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * @return Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * @return IDs of the network interfaces created in customer's account by MediaConnect.
      * 
      */
-    public Output<List<String>> getNetworkInterfaceIds() {
+    public Output<List<String>> networkInterfaceIds() {
         return this.networkInterfaceIds;
     }
     /**
@@ -71,7 +72,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * @return Role Arn MediaConnect can assumes to create ENIs in customer's account.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -85,7 +86,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * @return Security Group IDs to be used on ENI.
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -99,7 +100,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * @return Subnet must be in the AZ of the Flow
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -125,7 +126,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlowVpcInterface(String name, FlowVpcInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediaconnect:FlowVpcInterface", name, args == null ? FlowVpcInterfaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediaconnect:FlowVpcInterface", name, args == null ? FlowVpcInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FlowVpcInterface(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

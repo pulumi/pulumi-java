@@ -24,7 +24,7 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="metastoreService", required=true)
       private final String metastoreService;
 
-    public String getMetastoreService() {
+    public String metastoreService() {
         return this.metastoreService;
     }
 
@@ -35,7 +35,7 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="sparkHistoryServerConfig", required=true)
       private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;
 
-    public SparkHistoryServerConfigResponse getSparkHistoryServerConfig() {
+    public SparkHistoryServerConfigResponse sparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig;
     }
 

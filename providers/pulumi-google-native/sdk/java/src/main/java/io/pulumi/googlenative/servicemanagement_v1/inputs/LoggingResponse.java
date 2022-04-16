@@ -24,7 +24,7 @@ public final class LoggingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="consumerDestinations", required=true)
       private final List<LoggingDestinationResponse> consumerDestinations;
 
-    public List<LoggingDestinationResponse> getConsumerDestinations() {
+    public List<LoggingDestinationResponse> consumerDestinations() {
         return this.consumerDestinations;
     }
 
@@ -35,7 +35,7 @@ public final class LoggingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="producerDestinations", required=true)
       private final List<LoggingDestinationResponse> producerDestinations;
 
-    public List<LoggingDestinationResponse> getProducerDestinations() {
+    public List<LoggingDestinationResponse> producerDestinations() {
         return this.producerDestinations;
     }
 

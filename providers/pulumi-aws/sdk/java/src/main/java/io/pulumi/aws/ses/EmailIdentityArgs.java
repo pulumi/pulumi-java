@@ -5,6 +5,7 @@ package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -29,7 +30,7 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EmailIdentityArgs() {
-        this.email = Output.empty();
+        this.email = Codegen.empty();
     }
 
     public static Builder builder() {

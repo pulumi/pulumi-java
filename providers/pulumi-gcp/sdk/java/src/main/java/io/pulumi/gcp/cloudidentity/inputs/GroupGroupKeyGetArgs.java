@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudidentity.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -42,8 +43,8 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public GroupGroupKeyGetArgs(
@@ -54,8 +55,8 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GroupGroupKeyGetArgs() {
-        this.id = Output.empty();
-        this.namespace = Output.empty();
+        this.id = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class GroupGroupKeyGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public GroupGroupKeyGetArgs build() {
             return new GroupGroupKeyGetArgs(id, namespace);

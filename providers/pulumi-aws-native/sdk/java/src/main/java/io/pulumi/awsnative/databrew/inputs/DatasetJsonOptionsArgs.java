@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="multiLine")
       private final @Nullable Output<Boolean> multiLine;
 
-    public Output<Boolean> getMultiLine() {
-        return this.multiLine == null ? Output.empty() : this.multiLine;
+    public Output<Boolean> multiLine() {
+        return this.multiLine == null ? Codegen.empty() : this.multiLine;
     }
 
     public DatasetJsonOptionsArgs(@Nullable Output<Boolean> multiLine) {
@@ -30,7 +31,7 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatasetJsonOptionsArgs() {
-        this.multiLine = Output.empty();
+        this.multiLine = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder multiLine(@Nullable Boolean multiLine) {
-            this.multiLine = Output.ofNullable(multiLine);
+            this.multiLine = Codegen.ofNullable(multiLine);
             return this;
         }        public DatasetJsonOptionsArgs build() {
             return new DatasetJsonOptionsArgs(multiLine);

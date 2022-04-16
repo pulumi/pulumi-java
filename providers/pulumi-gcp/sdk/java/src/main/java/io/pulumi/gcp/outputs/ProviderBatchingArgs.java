@@ -23,10 +23,10 @@ public final class ProviderBatchingArgs {
         this.sendAfter = sendAfter;
     }
 
-    public @Nullable Output<Boolean> getEnableBatching() {
+    public @Nullable Output<Boolean> enableBatching() {
         return this.enableBatching;
     }
-    public @Nullable Output<String> getSendAfter() {
+    public @Nullable Output<String> sendAfter() {
         return this.sendAfter;
     }
 

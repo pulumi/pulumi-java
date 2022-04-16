@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.AccountPasswordPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Whether to allow users to change their own password
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowUsersToChangePassword() {
+    public Output</* @Nullable */ Boolean> allowUsersToChangePassword() {
         return this.allowUsersToChangePassword;
     }
     /**
@@ -58,7 +59,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
      * 
      */
-    public Output<Boolean> getExpirePasswords() {
+    public Output<Boolean> expirePasswords() {
         return this.expirePasswords;
     }
     /**
@@ -72,7 +73,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
      * 
      */
-    public Output<Boolean> getHardExpiry() {
+    public Output<Boolean> hardExpiry() {
         return this.hardExpiry;
     }
     /**
@@ -86,7 +87,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return The number of days that an user password is valid.
      * 
      */
-    public Output<Integer> getMaxPasswordAge() {
+    public Output<Integer> maxPasswordAge() {
         return this.maxPasswordAge;
     }
     /**
@@ -100,7 +101,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Minimum length to require for user passwords.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinimumPasswordLength() {
+    public Output</* @Nullable */ Integer> minimumPasswordLength() {
         return this.minimumPasswordLength;
     }
     /**
@@ -114,7 +115,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return The number of previous passwords that users are prevented from reusing.
      * 
      */
-    public Output<Integer> getPasswordReusePrevention() {
+    public Output<Integer> passwordReusePrevention() {
         return this.passwordReusePrevention;
     }
     /**
@@ -128,7 +129,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Whether to require lowercase characters for user passwords.
      * 
      */
-    public Output<Boolean> getRequireLowercaseCharacters() {
+    public Output<Boolean> requireLowercaseCharacters() {
         return this.requireLowercaseCharacters;
     }
     /**
@@ -142,7 +143,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Whether to require numbers for user passwords.
      * 
      */
-    public Output<Boolean> getRequireNumbers() {
+    public Output<Boolean> requireNumbers() {
         return this.requireNumbers;
     }
     /**
@@ -156,7 +157,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Whether to require symbols for user passwords.
      * 
      */
-    public Output<Boolean> getRequireSymbols() {
+    public Output<Boolean> requireSymbols() {
         return this.requireSymbols;
     }
     /**
@@ -170,7 +171,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @return Whether to require uppercase characters for user passwords.
      * 
      */
-    public Output<Boolean> getRequireUppercaseCharacters() {
+    public Output<Boolean> requireUppercaseCharacters() {
         return this.requireUppercaseCharacters;
     }
 
@@ -196,7 +197,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountPasswordPolicy(String name, @Nullable AccountPasswordPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/accountPasswordPolicy:AccountPasswordPolicy", name, args == null ? AccountPasswordPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/accountPasswordPolicy:AccountPasswordPolicy", name, args == null ? AccountPasswordPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountPasswordPolicy(String name, Output<String> id, @Nullable AccountPasswordPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -99,77 +99,77 @@ public final class GetWorkloadNetworkDnsServiceResult {
      * Default DNS zone of the DNS Service.
      * 
     */
-    public Optional<String> getDefaultDnsZone() {
+    public Optional<String> defaultDnsZone() {
         return Optional.ofNullable(this.defaultDnsZone);
     }
     /**
      * Display name of the DNS Service.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * DNS service IP of the DNS Service.
      * 
     */
-    public Optional<String> getDnsServiceIp() {
+    public Optional<String> dnsServiceIp() {
         return Optional.ofNullable(this.dnsServiceIp);
     }
     /**
      * FQDN zones of the DNS Service.
      * 
     */
-    public List<String> getFqdnZones() {
+    public List<String> fqdnZones() {
         return this.fqdnZones == null ? List.of() : this.fqdnZones;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * DNS Service log level.
      * 
     */
-    public Optional<String> getLogLevel() {
+    public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
     */
-    public Optional<Double> getRevision() {
+    public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * DNS Service status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

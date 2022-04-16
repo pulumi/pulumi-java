@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiGroup", required=true)
       private final Output<String> apiGroup;
 
-    public Output<String> getApiGroup() {
+    public Output<String> apiGroup() {
         return this.apiGroup;
     }
 
@@ -35,7 +36,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -46,7 +47,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,9 +61,9 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleRefArgs() {
-        this.apiGroup = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
+        this.apiGroup = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

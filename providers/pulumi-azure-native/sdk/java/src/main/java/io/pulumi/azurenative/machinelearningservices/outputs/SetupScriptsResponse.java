@@ -26,7 +26,7 @@ public final class SetupScriptsResponse {
      * Customized setup scripts
      * 
     */
-    public Optional<ScriptsToExecuteResponse> getScripts() {
+    public Optional<ScriptsToExecuteResponse> scripts() {
         return Optional.ofNullable(this.scripts);
     }
 

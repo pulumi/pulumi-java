@@ -5,6 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="colSpan", required=true)
       private final Output<Integer> colSpan;
 
-    public Output<Integer> getColSpan() {
+    public Output<Integer> colSpan() {
         return this.colSpan;
     }
 
@@ -39,8 +40,8 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
 
-    public Output<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,Object>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="rowSpan", required=true)
       private final Output<Integer> rowSpan;
 
-    public Output<Integer> getRowSpan() {
+    public Output<Integer> rowSpan() {
         return this.rowSpan;
     }
 
@@ -61,7 +62,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="x", required=true)
       private final Output<Integer> x;
 
-    public Output<Integer> getX() {
+    public Output<Integer> x() {
         return this.x;
     }
 
@@ -72,7 +73,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="y", required=true)
       private final Output<Integer> y;
 
-    public Output<Integer> getY() {
+    public Output<Integer> y() {
         return this.y;
     }
 
@@ -90,11 +91,11 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     }
 
     private DashboardPartsPositionArgs() {
-        this.colSpan = Output.empty();
-        this.metadata = Output.empty();
-        this.rowSpan = Output.empty();
-        this.x = Output.empty();
-        this.y = Output.empty();
+        this.colSpan = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.rowSpan = Codegen.empty();
+        this.x = Codegen.empty();
+        this.y = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder rowSpan(Output<Integer> rowSpan) {

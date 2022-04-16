@@ -23,7 +23,7 @@ public final class ApprovalConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="approvalRequired", required=true)
       private final Boolean approvalRequired;
 
-    public Boolean getApprovalRequired() {
+    public Boolean approvalRequired() {
         return this.approvalRequired;
     }
 

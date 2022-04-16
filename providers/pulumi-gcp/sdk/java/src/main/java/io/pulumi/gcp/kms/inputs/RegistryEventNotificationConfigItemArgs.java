@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
     @Import(name="pubsubTopicName", required=true)
       private final Output<String> pubsubTopicName;
 
-    public Output<String> getPubsubTopicName() {
+    public Output<String> pubsubTopicName() {
         return this.pubsubTopicName;
     }
 
     @Import(name="subfolderMatches")
       private final @Nullable Output<String> subfolderMatches;
 
-    public Output<String> getSubfolderMatches() {
-        return this.subfolderMatches == null ? Output.empty() : this.subfolderMatches;
+    public Output<String> subfolderMatches() {
+        return this.subfolderMatches == null ? Codegen.empty() : this.subfolderMatches;
     }
 
     public RegistryEventNotificationConfigItemArgs(
@@ -36,8 +37,8 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
     }
 
     private RegistryEventNotificationConfigItemArgs() {
-        this.pubsubTopicName = Output.empty();
-        this.subfolderMatches = Output.empty();
+        this.pubsubTopicName = Codegen.empty();
+        this.subfolderMatches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
             return this;
         }
         public Builder subfolderMatches(@Nullable String subfolderMatches) {
-            this.subfolderMatches = Output.ofNullable(subfolderMatches);
+            this.subfolderMatches = Codegen.ofNullable(subfolderMatches);
             return this;
         }        public RegistryEventNotificationConfigItemArgs build() {
             return new RegistryEventNotificationConfigItemArgs(pubsubTopicName, subfolderMatches);

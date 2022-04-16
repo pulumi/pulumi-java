@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
     @Import(name="destination", required=true)
       private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination;
 
-    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> getDestination() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -33,8 +34,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
     @Import(name="outputSchemaVersion")
       private final @Nullable Output<String> outputSchemaVersion;
 
-    public Output<String> getOutputSchemaVersion() {
-        return this.outputSchemaVersion == null ? Output.empty() : this.outputSchemaVersion;
+    public Output<String> outputSchemaVersion() {
+        return this.outputSchemaVersion == null ? Codegen.empty() : this.outputSchemaVersion;
     }
 
     public AnalyticsConfigurationStorageClassAnalysisDataExportArgs(
@@ -45,8 +46,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
     }
 
     private AnalyticsConfigurationStorageClassAnalysisDataExportArgs() {
-        this.destination = Output.empty();
-        this.outputSchemaVersion = Output.empty();
+        this.destination = Codegen.empty();
+        this.outputSchemaVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
             return this;
         }
         public Builder outputSchemaVersion(@Nullable String outputSchemaVersion) {
-            this.outputSchemaVersion = Output.ofNullable(outputSchemaVersion);
+            this.outputSchemaVersion = Codegen.ofNullable(outputSchemaVersion);
             return this;
         }        public AnalyticsConfigurationStorageClassAnalysisDataExportArgs build() {
             return new AnalyticsConfigurationStorageClassAnalysisDataExportArgs(destination, outputSchemaVersion);

@@ -5,6 +5,7 @@ package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AccessHomeDirectoryMappingGetArgs extends io.pulumi.resources
     @Import(name="entry", required=true)
       private final Output<String> entry;
 
-    public Output<String> getEntry() {
+    public Output<String> entry() {
         return this.entry;
     }
 
@@ -31,7 +32,7 @@ public final class AccessHomeDirectoryMappingGetArgs extends io.pulumi.resources
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -43,8 +44,8 @@ public final class AccessHomeDirectoryMappingGetArgs extends io.pulumi.resources
     }
 
     private AccessHomeDirectoryMappingGetArgs() {
-        this.entry = Output.empty();
-        this.target = Output.empty();
+        this.entry = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

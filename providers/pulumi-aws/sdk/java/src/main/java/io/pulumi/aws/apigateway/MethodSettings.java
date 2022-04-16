@@ -10,6 +10,7 @@ import io.pulumi.aws.apigateway.outputs.MethodSettingsSettings;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -42,7 +43,7 @@ public class MethodSettings extends io.pulumi.resources.CustomResource {
      * @return Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, "/")`).
      * 
      */
-    public Output<String> getMethodPath() {
+    public Output<String> methodPath() {
         return this.methodPath;
     }
     /**
@@ -56,7 +57,7 @@ public class MethodSettings extends io.pulumi.resources.CustomResource {
      * @return The ID of the REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -70,7 +71,7 @@ public class MethodSettings extends io.pulumi.resources.CustomResource {
      * @return The settings block, see below.
      * 
      */
-    public Output<MethodSettingsSettings> getSettings() {
+    public Output<MethodSettingsSettings> settings() {
         return this.settings;
     }
     /**
@@ -84,7 +85,7 @@ public class MethodSettings extends io.pulumi.resources.CustomResource {
      * @return The name of the stage
      * 
      */
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
 
@@ -110,7 +111,7 @@ public class MethodSettings extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MethodSettings(String name, MethodSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/methodSettings:MethodSettings", name, args == null ? MethodSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/methodSettings:MethodSettings", name, args == null ? MethodSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MethodSettings(String name, Output<String> id, @Nullable MethodSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight;
 import io.pulumi.azurenative.hdinsight.inputs.ApplicationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+    public Output<String> applicationName() {
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -45,8 +46,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ApplicationPropertiesArgs> properties;
 
-    public Output<ApplicationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ApplicationPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationArgs(
@@ -85,11 +86,11 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationName = Output.empty();
-        this.clusterName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.applicationName = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -141,7 +142,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ApplicationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -157,7 +158,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationName, clusterName, properties, resourceGroupName, tags);

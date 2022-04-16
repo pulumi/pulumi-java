@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.PublicKeyArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectConfigArgs;
@@ -27,8 +28,8 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicKey")
       private final @Nullable Output<PublicKeyArgs> publicKey;
 
-    public Output<PublicKeyArgs> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<PublicKeyArgs> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="reusableConfig", required=true)
       private final Output<ReusableConfigWrapperArgs> reusableConfig;
 
-    public Output<ReusableConfigWrapperArgs> getReusableConfig() {
+    public Output<ReusableConfigWrapperArgs> reusableConfig() {
         return this.reusableConfig;
     }
 
@@ -49,7 +50,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subjectConfig", required=true)
       private final Output<SubjectConfigArgs> subjectConfig;
 
-    public Output<SubjectConfigArgs> getSubjectConfig() {
+    public Output<SubjectConfigArgs> subjectConfig() {
         return this.subjectConfig;
     }
 
@@ -63,9 +64,9 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CertificateConfigArgs() {
-        this.publicKey = Output.empty();
-        this.reusableConfig = Output.empty();
-        this.subjectConfig = Output.empty();
+        this.publicKey = Codegen.empty();
+        this.reusableConfig = Codegen.empty();
+        this.subjectConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publicKey(@Nullable PublicKeyArgs publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder reusableConfig(Output<ReusableConfigWrapperArgs> reusableConfig) {

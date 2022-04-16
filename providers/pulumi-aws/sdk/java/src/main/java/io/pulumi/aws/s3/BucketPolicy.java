@@ -9,6 +9,7 @@ import io.pulumi.aws.s3.inputs.BucketPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket to which to apply the policy.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -53,7 +54,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @return The text of the policy. Although this is a bucket policy rather than an IAM policy, the `aws.iam.getPolicyDocument` data source may be used, so long as it specifies a principal. Note: Bucket policies are limited to 20 KB in size.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -79,7 +80,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketPolicy(String name, BucketPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/bucketPolicy:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3/bucketPolicy:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketPolicy(String name, Output<String> id, @Nullable BucketPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

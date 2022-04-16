@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
     @Import(name="digits")
       private final @Nullable Output<String> digits;
 
-    public Output<String> getDigits() {
-        return this.digits == null ? Output.empty() : this.digits;
+    public Output<String> digits() {
+        return this.digits == null ? Codegen.empty() : this.digits;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
     @Import(name="finishDigit")
       private final @Nullable Output<String> finishDigit;
 
-    public Output<String> getFinishDigit() {
-        return this.finishDigit == null ? Output.empty() : this.finishDigit;
+    public Output<String> finishDigit() {
+        return this.finishDigit == null ? Codegen.empty() : this.finishDigit;
     }
 
     public GoogleCloudDialogflowCxV3DtmfInputArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
     }
 
     private GoogleCloudDialogflowCxV3DtmfInputArgs() {
-        this.digits = Output.empty();
-        this.finishDigit = Output.empty();
+        this.digits = Codegen.empty();
+        this.finishDigit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder digits(@Nullable String digits) {
-            this.digits = Output.ofNullable(digits);
+            this.digits = Codegen.ofNullable(digits);
             return this;
         }
         public Builder finishDigit(@Nullable Output<String> finishDigit) {
@@ -87,7 +88,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder finishDigit(@Nullable String finishDigit) {
-            this.finishDigit = Output.ofNullable(finishDigit);
+            this.finishDigit = Codegen.ofNullable(finishDigit);
             return this;
         }        public GoogleCloudDialogflowCxV3DtmfInputArgs build() {
             return new GoogleCloudDialogflowCxV3DtmfInputArgs(digits, finishDigit);

@@ -6,6 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.ClusterStepHadoopJarStepArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ClusterStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionOnFailure", required=true)
       private final Output<String> actionOnFailure;
 
-    public Output<String> getActionOnFailure() {
+    public Output<String> actionOnFailure() {
         return this.actionOnFailure;
     }
 
@@ -32,7 +33,7 @@ public final class ClusterStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hadoopJarStep", required=true)
       private final Output<ClusterStepHadoopJarStepArgs> hadoopJarStep;
 
-    public Output<ClusterStepHadoopJarStepArgs> getHadoopJarStep() {
+    public Output<ClusterStepHadoopJarStepArgs> hadoopJarStep() {
         return this.hadoopJarStep;
     }
 
@@ -43,7 +44,7 @@ public final class ClusterStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -57,9 +58,9 @@ public final class ClusterStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterStepArgs() {
-        this.actionOnFailure = Output.empty();
-        this.hadoopJarStep = Output.empty();
-        this.name = Output.empty();
+        this.actionOnFailure = Codegen.empty();
+        this.hadoopJarStep = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scriptArguments")
       private final @Nullable Output<String> scriptArguments;
 
-    public Output<String> getScriptArguments() {
-        return this.scriptArguments == null ? Output.empty() : this.scriptArguments;
+    public Output<String> scriptArguments() {
+        return this.scriptArguments == null ? Codegen.empty() : this.scriptArguments;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scriptData")
       private final @Nullable Output<String> scriptData;
 
-    public Output<String> getScriptData() {
-        return this.scriptData == null ? Output.empty() : this.scriptData;
+    public Output<String> scriptData() {
+        return this.scriptData == null ? Codegen.empty() : this.scriptData;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scriptSource")
       private final @Nullable Output<String> scriptSource;
 
-    public Output<String> getScriptSource() {
-        return this.scriptSource == null ? Output.empty() : this.scriptSource;
+    public Output<String> scriptSource() {
+        return this.scriptSource == null ? Codegen.empty() : this.scriptSource;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ScriptReferenceArgs(
@@ -74,10 +75,10 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScriptReferenceArgs() {
-        this.scriptArguments = Output.empty();
-        this.scriptData = Output.empty();
-        this.scriptSource = Output.empty();
-        this.timeout = Output.empty();
+        this.scriptArguments = Codegen.empty();
+        this.scriptData = Codegen.empty();
+        this.scriptSource = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scriptArguments(@Nullable String scriptArguments) {
-            this.scriptArguments = Output.ofNullable(scriptArguments);
+            this.scriptArguments = Codegen.ofNullable(scriptArguments);
             return this;
         }
         public Builder scriptData(@Nullable Output<String> scriptData) {
@@ -119,7 +120,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scriptData(@Nullable String scriptData) {
-            this.scriptData = Output.ofNullable(scriptData);
+            this.scriptData = Codegen.ofNullable(scriptData);
             return this;
         }
         public Builder scriptSource(@Nullable Output<String> scriptSource) {
@@ -127,7 +128,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scriptSource(@Nullable String scriptSource) {
-            this.scriptSource = Output.ofNullable(scriptSource);
+            this.scriptSource = Codegen.ofNullable(scriptSource);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -135,7 +136,7 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ScriptReferenceArgs build() {
             return new ScriptReferenceArgs(scriptArguments, scriptData, scriptSource, timeout);

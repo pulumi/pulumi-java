@@ -9,6 +9,7 @@ import io.pulumi.awsnative.sagemaker.outputs.ImageTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,31 +23,31 @@ public class Image extends io.pulumi.resources.CustomResource {
     @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
-    public Output<String> getImageArn() {
+    public Output<String> imageArn() {
         return this.imageArn;
     }
     @Export(name="imageDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageDescription;
 
-    public Output</* @Nullable */ String> getImageDescription() {
+    public Output</* @Nullable */ String> imageDescription() {
         return this.imageDescription;
     }
     @Export(name="imageDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageDisplayName;
 
-    public Output</* @Nullable */ String> getImageDisplayName() {
+    public Output</* @Nullable */ String> imageDisplayName() {
         return this.imageDisplayName;
     }
     @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
     @Export(name="imageRoleArn", type=String.class, parameters={})
     private Output<String> imageRoleArn;
 
-    public Output<String> getImageRoleArn() {
+    public Output<String> imageRoleArn() {
         return this.imageRoleArn;
     }
     /**
@@ -60,7 +61,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ImageTag>> getTags() {
+    public Output</* @Nullable */ List<ImageTag>> tags() {
         return this.tags;
     }
 
@@ -86,7 +87,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Image(String name, ImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Image(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

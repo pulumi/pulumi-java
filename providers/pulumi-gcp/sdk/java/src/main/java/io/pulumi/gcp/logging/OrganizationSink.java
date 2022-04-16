@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.OrganizationSinkArgs;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkState;
@@ -46,7 +47,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * @return Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    public Output<OrganizationSinkBigqueryOptions> getBigqueryOptions() {
+    public Output<OrganizationSinkBigqueryOptions> bigqueryOptions() {
         return this.bigqueryOptions;
     }
     /**
@@ -60,7 +61,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * @return A description of this exclusion.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -80,7 +81,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
     /**
@@ -94,7 +95,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * @return If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -108,7 +109,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * @return Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<OrganizationSinkExclusion>> getExclusions() {
+    public Output</* @Nullable */ List<OrganizationSinkExclusion>> exclusions() {
         return this.exclusions;
     }
     /**
@@ -124,7 +125,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    public Output</* @Nullable */ String> getFilter() {
+    public Output</* @Nullable */ String> filter() {
         return this.filter;
     }
     /**
@@ -140,7 +141,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIncludeChildren() {
+    public Output</* @Nullable */ Boolean> includeChildren() {
         return this.includeChildren;
     }
     /**
@@ -154,7 +155,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * @return A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -168,7 +169,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * @return The numeric ID of the organization to be exported to the sink.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -184,7 +185,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * configured `destination`.
      * 
      */
-    public Output<String> getWriterIdentity() {
+    public Output<String> writerIdentity() {
         return this.writerIdentity;
     }
 
@@ -210,7 +211,7 @@ public class OrganizationSink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationSink(String name, OrganizationSinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/organizationSink:OrganizationSink", name, args == null ? OrganizationSinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/organizationSink:OrganizationSink", name, args == null ? OrganizationSinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationSink(String name, Output<String> id, @Nullable OrganizationSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

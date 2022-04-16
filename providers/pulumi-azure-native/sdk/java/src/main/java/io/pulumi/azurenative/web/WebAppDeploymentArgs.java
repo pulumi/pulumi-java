@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
-        return this.active == null ? Output.empty() : this.active;
+    public Output<Boolean> active() {
+        return this.active == null ? Codegen.empty() : this.active;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="author")
       private final @Nullable Output<String> author;
 
-    public Output<String> getAuthor() {
-        return this.author == null ? Output.empty() : this.author;
+    public Output<String> author() {
+        return this.author == null ? Codegen.empty() : this.author;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="authorEmail")
       private final @Nullable Output<String> authorEmail;
 
-    public Output<String> getAuthorEmail() {
-        return this.authorEmail == null ? Output.empty() : this.authorEmail;
+    public Output<String> authorEmail() {
+        return this.authorEmail == null ? Codegen.empty() : this.authorEmail;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deployer")
       private final @Nullable Output<String> deployer;
 
-    public Output<String> getDeployer() {
-        return this.deployer == null ? Output.empty() : this.deployer;
+    public Output<String> deployer() {
+        return this.deployer == null ? Codegen.empty() : this.deployer;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="details")
       private final @Nullable Output<String> details;
 
-    public Output<String> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<String> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -133,7 +134,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -144,8 +145,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<Integer> status;
 
-    public Output<Integer> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Integer> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public WebAppDeploymentArgs(
@@ -189,19 +190,19 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WebAppDeploymentArgs() {
-        this.active = Output.empty();
-        this.author = Output.empty();
-        this.authorEmail = Output.empty();
-        this.deployer = Output.empty();
-        this.details = Output.empty();
-        this.endTime = Output.empty();
-        this.id = Output.empty();
-        this.kind = Output.empty();
-        this.message = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.startTime = Output.empty();
-        this.status = Output.empty();
+        this.active = Codegen.empty();
+        this.author = Codegen.empty();
+        this.authorEmail = Codegen.empty();
+        this.deployer = Codegen.empty();
+        this.details = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.id = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.message = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -253,7 +254,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder active(@Nullable Boolean active) {
-            this.active = Output.ofNullable(active);
+            this.active = Codegen.ofNullable(active);
             return this;
         }
         public Builder author(@Nullable Output<String> author) {
@@ -261,7 +262,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder author(@Nullable String author) {
-            this.author = Output.ofNullable(author);
+            this.author = Codegen.ofNullable(author);
             return this;
         }
         public Builder authorEmail(@Nullable Output<String> authorEmail) {
@@ -269,7 +270,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder authorEmail(@Nullable String authorEmail) {
-            this.authorEmail = Output.ofNullable(authorEmail);
+            this.authorEmail = Codegen.ofNullable(authorEmail);
             return this;
         }
         public Builder deployer(@Nullable Output<String> deployer) {
@@ -277,7 +278,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deployer(@Nullable String deployer) {
-            this.deployer = Output.ofNullable(deployer);
+            this.deployer = Codegen.ofNullable(deployer);
             return this;
         }
         public Builder details(@Nullable Output<String> details) {
@@ -285,7 +286,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder details(@Nullable String details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -293,7 +294,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -301,7 +302,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -309,7 +310,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -317,7 +318,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -341,7 +342,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder status(@Nullable Output<Integer> status) {
@@ -349,7 +350,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable Integer status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public WebAppDeploymentArgs build() {
             return new WebAppDeploymentArgs(active, author, authorEmail, deployer, details, endTime, id, kind, message, name, resourceGroupName, startTime, status);

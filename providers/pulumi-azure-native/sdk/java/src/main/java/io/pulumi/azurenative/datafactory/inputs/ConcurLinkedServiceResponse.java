@@ -33,7 +33,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="clientId", required=true)
       private final Object clientId;
 
-    public Object getClientId() {
+    public Object clientId() {
         return this.clientId;
     }
 
@@ -55,7 +55,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="connectionProperties")
       private final @Nullable Object connectionProperties;
 
-    public Optional<Object> getConnectionProperties() {
+    public Optional<Object> connectionProperties() {
         return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
     }
 
@@ -77,7 +77,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -88,7 +88,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -99,7 +99,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -110,7 +110,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -122,7 +122,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -133,7 +133,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
 
-    public Optional<Object> getUseEncryptedEndpoints() {
+    public Optional<Object> useEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
@@ -144,7 +144,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
 
-    public Optional<Object> getUseHostVerification() {
+    public Optional<Object> useHostVerification() {
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
     }
 
@@ -155,7 +155,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;
 
-    public Optional<Object> getUsePeerVerification() {
+    public Optional<Object> usePeerVerification() {
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
     }
 
@@ -166,7 +166,7 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
     @Import(name="username", required=true)
       private final Object username;
 
-    public Object getUsername() {
+    public Object username() {
         return this.username;
     }
 

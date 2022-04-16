@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
     @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -31,7 +32,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -42,7 +43,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -56,9 +57,9 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
     }
 
     private CatalogTableTargetTableGetArgs() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.name = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

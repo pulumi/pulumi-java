@@ -8,6 +8,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRun
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="cloudwatchConfig")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs> cloudwatchConfig;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs> getCloudwatchConfig() {
-        return this.cloudwatchConfig == null ? Output.empty() : this.cloudwatchConfig;
+    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs> cloudwatchConfig() {
+        return this.cloudwatchConfig == null ? Codegen.empty() : this.cloudwatchConfig;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentHash")
       private final @Nullable Output<String> documentHash;
 
-    public Output<String> getDocumentHash() {
-        return this.documentHash == null ? Output.empty() : this.documentHash;
+    public Output<String> documentHash() {
+        return this.documentHash == null ? Codegen.empty() : this.documentHash;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentHashType")
       private final @Nullable Output<String> documentHashType;
 
-    public Output<String> getDocumentHashType() {
-        return this.documentHashType == null ? Output.empty() : this.documentHashType;
+    public Output<String> documentHashType() {
+        return this.documentHashType == null ? Codegen.empty() : this.documentHashType;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
-    public Output<String> getDocumentVersion() {
-        return this.documentVersion == null ? Output.empty() : this.documentVersion;
+    public Output<String> documentVersion() {
+        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationConfig")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> notificationConfig;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> notificationConfig() {
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="outputS3Bucket")
       private final @Nullable Output<String> outputS3Bucket;
 
-    public Output<String> getOutputS3Bucket() {
-        return this.outputS3Bucket == null ? Output.empty() : this.outputS3Bucket;
+    public Output<String> outputS3Bucket() {
+        return this.outputS3Bucket == null ? Codegen.empty() : this.outputS3Bucket;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="outputS3KeyPrefix")
       private final @Nullable Output<String> outputS3KeyPrefix;
 
-    public Output<String> getOutputS3KeyPrefix() {
-        return this.outputS3KeyPrefix == null ? Output.empty() : this.outputS3KeyPrefix;
+    public Output<String> outputS3KeyPrefix() {
+        return this.outputS3KeyPrefix == null ? Codegen.empty() : this.outputS3KeyPrefix;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="parameters")
       private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> parameters;
 
-    public Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
-        return this.serviceRoleArn == null ? Output.empty() : this.serviceRoleArn;
+    public Output<String> serviceRoleArn() {
+        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
+    public Output<Integer> timeoutSeconds() {
+        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs(
@@ -166,17 +167,17 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs() {
-        this.cloudwatchConfig = Output.empty();
-        this.comment = Output.empty();
-        this.documentHash = Output.empty();
-        this.documentHashType = Output.empty();
-        this.documentVersion = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.outputS3Bucket = Output.empty();
-        this.outputS3KeyPrefix = Output.empty();
-        this.parameters = Output.empty();
-        this.serviceRoleArn = Output.empty();
-        this.timeoutSeconds = Output.empty();
+        this.cloudwatchConfig = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.documentHash = Codegen.empty();
+        this.documentHashType = Codegen.empty();
+        this.documentVersion = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.outputS3Bucket = Codegen.empty();
+        this.outputS3KeyPrefix = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.serviceRoleArn = Codegen.empty();
+        this.timeoutSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder cloudwatchConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs cloudwatchConfig) {
-            this.cloudwatchConfig = Output.ofNullable(cloudwatchConfig);
+            this.cloudwatchConfig = Codegen.ofNullable(cloudwatchConfig);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -232,7 +233,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder documentHash(@Nullable Output<String> documentHash) {
@@ -240,7 +241,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder documentHash(@Nullable String documentHash) {
-            this.documentHash = Output.ofNullable(documentHash);
+            this.documentHash = Codegen.ofNullable(documentHash);
             return this;
         }
         public Builder documentHashType(@Nullable Output<String> documentHashType) {
@@ -248,7 +249,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder documentHashType(@Nullable String documentHashType) {
-            this.documentHashType = Output.ofNullable(documentHashType);
+            this.documentHashType = Codegen.ofNullable(documentHashType);
             return this;
         }
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
@@ -256,7 +257,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Output.ofNullable(documentVersion);
+            this.documentVersion = Codegen.ofNullable(documentVersion);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> notificationConfig) {
@@ -264,7 +265,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder notificationConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder outputS3Bucket(@Nullable Output<String> outputS3Bucket) {
@@ -272,7 +273,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder outputS3Bucket(@Nullable String outputS3Bucket) {
-            this.outputS3Bucket = Output.ofNullable(outputS3Bucket);
+            this.outputS3Bucket = Codegen.ofNullable(outputS3Bucket);
             return this;
         }
         public Builder outputS3KeyPrefix(@Nullable Output<String> outputS3KeyPrefix) {
@@ -280,7 +281,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
-            this.outputS3KeyPrefix = Output.ofNullable(outputS3KeyPrefix);
+            this.outputS3KeyPrefix = Codegen.ofNullable(outputS3KeyPrefix);
             return this;
         }
         public Builder parameters(@Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> parameters) {
@@ -288,7 +289,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs... parameters) {
@@ -299,7 +300,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
+            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
             return this;
         }
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
@@ -307,7 +308,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
             return this;
         }        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs(cloudwatchConfig, comment, documentHash, documentHashType, documentVersion, notificationConfig, outputS3Bucket, outputS3KeyPrefix, parameters, serviceRoleArn, timeoutSeconds);

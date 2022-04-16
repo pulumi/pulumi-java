@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -32,7 +33,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +44,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -54,8 +55,8 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagId")
       private final @Nullable Output<String> tagId;
 
-    public Output<String> getTagId() {
-        return this.tagId == null ? Output.empty() : this.tagId;
+    public Output<String> tagId() {
+        return this.tagId == null ? Codegen.empty() : this.tagId;
     }
 
     public TagArgs(
@@ -70,10 +71,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.displayName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.tagId = Output.empty();
+        this.displayName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.tagId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagId(@Nullable String tagId) {
-            this.tagId = Output.ofNullable(tagId);
+            this.tagId = Codegen.ofNullable(tagId);
             return this;
         }        public TagArgs build() {
             return new TagArgs(displayName, resourceGroupName, serviceName, tagId);

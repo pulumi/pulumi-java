@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.certificates.k8s.io_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
     @Import(name="items", required=true)
       private final Output<List<CertificateSigningRequestArgs>> items;
 
-    public Output<List<CertificateSigningRequestArgs>> getItems() {
+    public Output<List<CertificateSigningRequestArgs>> items() {
         return this.items;
     }
 
@@ -46,15 +47,15 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ListMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public CertificateSigningRequestListArgs(
@@ -69,10 +70,10 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
     }
 
     private CertificateSigningRequestListArgs() {
-        this.apiVersion = Output.empty();
-        this.items = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.items = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder items(Output<List<CertificateSigningRequestArgs>> items) {
@@ -125,7 +126,7 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
@@ -133,7 +134,7 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
             return this;
         }
         public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public CertificateSigningRequestListArgs build() {
             return new CertificateSigningRequestListArgs(apiVersion, items, kind, metadata);

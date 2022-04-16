@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall;
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="firewallArn", required=true)
       private final Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn;
     }
 
@@ -32,7 +33,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="loggingConfiguration", required=true)
       private final Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<LoggingConfigurationLoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration;
     }
 
@@ -44,8 +45,8 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private LoggingConfigurationArgs() {
-        this.firewallArn = Output.empty();
-        this.loggingConfiguration = Output.empty();
+        this.firewallArn = Codegen.empty();
+        this.loggingConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {

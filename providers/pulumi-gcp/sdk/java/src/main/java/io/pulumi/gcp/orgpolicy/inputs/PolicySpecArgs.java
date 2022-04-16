@@ -5,6 +5,7 @@ package io.pulumi.gcp.orgpolicy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inheritFromParent")
       private final @Nullable Output<Boolean> inheritFromParent;
 
-    public Output<Boolean> getInheritFromParent() {
-        return this.inheritFromParent == null ? Output.empty() : this.inheritFromParent;
+    public Output<Boolean> inheritFromParent() {
+        return this.inheritFromParent == null ? Codegen.empty() : this.inheritFromParent;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reset")
       private final @Nullable Output<Boolean> reset;
 
-    public Output<Boolean> getReset() {
-        return this.reset == null ? Output.empty() : this.reset;
+    public Output<Boolean> reset() {
+        return this.reset == null ? Codegen.empty() : this.reset;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<PolicySpecRuleArgs>> rules;
 
-    public Output<List<PolicySpecRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<PolicySpecRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public PolicySpecArgs(
@@ -88,11 +89,11 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicySpecArgs() {
-        this.etag = Output.empty();
-        this.inheritFromParent = Output.empty();
-        this.reset = Output.empty();
-        this.rules = Output.empty();
-        this.updateTime = Output.empty();
+        this.etag = Codegen.empty();
+        this.inheritFromParent = Codegen.empty();
+        this.reset = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
@@ -136,7 +137,7 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
-            this.inheritFromParent = Output.ofNullable(inheritFromParent);
+            this.inheritFromParent = Codegen.ofNullable(inheritFromParent);
             return this;
         }
         public Builder reset(@Nullable Output<Boolean> reset) {
@@ -144,7 +145,7 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reset(@Nullable Boolean reset) {
-            this.reset = Output.ofNullable(reset);
+            this.reset = Codegen.ofNullable(reset);
             return this;
         }
         public Builder rules(@Nullable Output<List<PolicySpecRuleArgs>> rules) {
@@ -152,7 +153,7 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<PolicySpecRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(PolicySpecRuleArgs... rules) {
@@ -163,7 +164,7 @@ public final class PolicySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public PolicySpecArgs build() {
             return new PolicySpecArgs(etag, inheritFromParent, reset, rules, updateTime);

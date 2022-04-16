@@ -23,7 +23,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
     @Import(name="repoName", required=true)
       private final String repoName;
 
-    public String getRepoName() {
+    public String repoName() {
         return this.repoName;
     }
 

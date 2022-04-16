@@ -5,9 +5,10 @@ package jvm
 import (
 	"bytes"
 	"fmt"
-	"github.com/zclconf/go-cty/cty"
 	"io"
 	"strings"
+
+	"github.com/zclconf/go-cty/cty"
 
 	"github.com/hashicorp/hcl/v2"
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
@@ -368,7 +369,7 @@ func (g *generator) findFunctionSchema(w io.Writer, function string) (bool, *sch
 	for _, pkg := range g.program.Packages() {
 		if pkg.Functions != nil {
 			for _, functionSchame := range pkg.Functions {
-				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, names.Camel(function)) {
+				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, names.LowerCamelCase(function)) {
 					return true, functionSchame
 				}
 			}
@@ -396,7 +397,7 @@ func getTraversalKey(traversal hcl.Traversal) string {
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
-	variableName := names.Camel(names.MakeValidIdentifier(resource.Name()))
+	variableName := names.LowerCamelCase(names.MakeValidIdentifier(resource.Name()))
 	instantiate := func(resName string) {
 		resourceProperties := make(map[string]schema.Type)
 		foundSchema, resourceSchema := g.findResourceSchema(resource)
@@ -460,7 +461,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 							// check whether {root} is actually a variable name that holds the result
 							// of a function invoke
 							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
-								resultTypeName := names.Camel(typeName(functionSchema.Outputs))
+								resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
 								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
 								g.makeIndent(w)
 								g.Fgenf(w, "final var %s = ", resource.Name())

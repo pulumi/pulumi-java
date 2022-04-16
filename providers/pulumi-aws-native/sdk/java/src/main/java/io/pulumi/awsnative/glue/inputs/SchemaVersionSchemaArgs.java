@@ -5,6 +5,7 @@ package io.pulumi.awsnative.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
     @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
-    public Output<String> getRegistryName() {
-        return this.registryName == null ? Output.empty() : this.registryName;
+    public Output<String> registryName() {
+        return this.registryName == null ? Codegen.empty() : this.registryName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
     @Import(name="schemaArn")
       private final @Nullable Output<String> schemaArn;
 
-    public Output<String> getSchemaArn() {
-        return this.schemaArn == null ? Output.empty() : this.schemaArn;
+    public Output<String> schemaArn() {
+        return this.schemaArn == null ? Codegen.empty() : this.schemaArn;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
-        return this.schemaName == null ? Output.empty() : this.schemaName;
+    public Output<String> schemaName() {
+        return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 
     public SchemaVersionSchemaArgs(
@@ -61,9 +62,9 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
     }
 
     private SchemaVersionSchemaArgs() {
-        this.registryName = Output.empty();
-        this.schemaArn = Output.empty();
-        this.schemaName = Output.empty();
+        this.registryName = Codegen.empty();
+        this.schemaArn = Codegen.empty();
+        this.schemaName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder registryName(@Nullable String registryName) {
-            this.registryName = Output.ofNullable(registryName);
+            this.registryName = Codegen.ofNullable(registryName);
             return this;
         }
         public Builder schemaArn(@Nullable Output<String> schemaArn) {
@@ -103,7 +104,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schemaArn(@Nullable String schemaArn) {
-            this.schemaArn = Output.ofNullable(schemaArn);
+            this.schemaArn = Codegen.ofNullable(schemaArn);
             return this;
         }
         public Builder schemaName(@Nullable Output<String> schemaName) {
@@ -111,7 +112,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Output.ofNullable(schemaName);
+            this.schemaName = Codegen.ofNullable(schemaName);
             return this;
         }        public SchemaVersionSchemaArgs build() {
             return new SchemaVersionSchemaArgs(registryName, schemaArn, schemaName);

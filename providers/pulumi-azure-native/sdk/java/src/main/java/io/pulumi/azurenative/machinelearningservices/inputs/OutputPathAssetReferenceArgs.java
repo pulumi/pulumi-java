@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
-        return this.jobId == null ? Output.empty() : this.jobId;
+    public Output<String> jobId() {
+        return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
     @Import(name="referenceType", required=true)
       private final Output<String> referenceType;
 
-    public Output<String> getReferenceType() {
+    public Output<String> referenceType() {
         return this.referenceType;
     }
 
@@ -62,9 +63,9 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
     }
 
     private OutputPathAssetReferenceArgs() {
-        this.jobId = Output.empty();
-        this.path = Output.empty();
-        this.referenceType = Output.empty();
+        this.jobId = Codegen.empty();
+        this.path = Codegen.empty();
+        this.referenceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Output.ofNullable(jobId);
+            this.jobId = Codegen.ofNullable(jobId);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -104,7 +105,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder referenceType(Output<String> referenceType) {

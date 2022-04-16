@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,8 +29,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Output.empty() : this.autoDelete;
+    public Output<Boolean> autoDelete() {
+        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="boot")
       private final @Nullable Output<Boolean> boot;
 
-    public Output<Boolean> getBoot() {
-        return this.boot == null ? Output.empty() : this.boot;
+    public Output<Boolean> boot() {
+        return this.boot == null ? Codegen.empty() : this.boot;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+    public Output<String> deviceName() {
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<String>> guestOsFeatures;
 
-    public Output<List<String>> getGuestOsFeatures() {
-        return this.guestOsFeatures == null ? Output.empty() : this.guestOsFeatures;
+    public Output<List<String>> guestOsFeatures() {
+        return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="index")
       private final @Nullable Output<Integer> index;
 
-    public Output<Integer> getIndex() {
-        return this.index == null ? Output.empty() : this.index;
+    public Output<Integer> index() {
+        return this.index == null ? Codegen.empty() : this.index;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="initializeParams")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> getInitializeParams() {
-        return this.initializeParams == null ? Output.empty() : this.initializeParams;
+    public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams() {
+        return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="interface")
       private final @Nullable Output<String> interface_;
 
-    public Output<String> getInterface_() {
-        return this.interface_ == null ? Output.empty() : this.interface_;
+    public Output<String> interface_() {
+        return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
-        return this.licenses == null ? Output.empty() : this.licenses;
+    public Output<List<String>> licenses() {
+        return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<String> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs(
@@ -220,18 +221,18 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     }
 
     private RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs() {
-        this.autoDelete = Output.empty();
-        this.boot = Output.empty();
-        this.deviceName = Output.empty();
-        this.guestOsFeatures = Output.empty();
-        this.index = Output.empty();
-        this.initializeParams = Output.empty();
-        this.interface_ = Output.empty();
-        this.kind = Output.empty();
-        this.licenses = Output.empty();
-        this.mode = Output.empty();
-        this.source = Output.empty();
-        this.type = Output.empty();
+        this.autoDelete = Codegen.empty();
+        this.boot = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.guestOsFeatures = Codegen.empty();
+        this.index = Codegen.empty();
+        this.initializeParams = Codegen.empty();
+        this.interface_ = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.licenses = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.source = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -281,7 +282,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Output.ofNullable(autoDelete);
+            this.autoDelete = Codegen.ofNullable(autoDelete);
             return this;
         }
         public Builder boot(@Nullable Output<Boolean> boot) {
@@ -289,7 +290,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder boot(@Nullable Boolean boot) {
-            this.boot = Output.ofNullable(boot);
+            this.boot = Codegen.ofNullable(boot);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -297,7 +298,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder guestOsFeatures(@Nullable Output<List<String>> guestOsFeatures) {
@@ -305,7 +306,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder guestOsFeatures(@Nullable List<String> guestOsFeatures) {
-            this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
+            this.guestOsFeatures = Codegen.ofNullable(guestOsFeatures);
             return this;
         }
         public Builder guestOsFeatures(String... guestOsFeatures) {
@@ -316,7 +317,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder index(@Nullable Integer index) {
-            this.index = Output.ofNullable(index);
+            this.index = Codegen.ofNullable(index);
             return this;
         }
         public Builder initializeParams(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams) {
@@ -324,7 +325,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder initializeParams(@Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs initializeParams) {
-            this.initializeParams = Output.ofNullable(initializeParams);
+            this.initializeParams = Codegen.ofNullable(initializeParams);
             return this;
         }
         public Builder interface_(@Nullable Output<String> interface_) {
@@ -332,7 +333,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Output.ofNullable(interface_);
+            this.interface_ = Codegen.ofNullable(interface_);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -340,7 +341,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder licenses(@Nullable Output<List<String>> licenses) {
@@ -348,7 +349,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Output.ofNullable(licenses);
+            this.licenses = Codegen.ofNullable(licenses);
             return this;
         }
         public Builder licenses(String... licenses) {
@@ -359,7 +360,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -367,7 +368,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -375,7 +376,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, interface_, kind, licenses, mode, source, type);

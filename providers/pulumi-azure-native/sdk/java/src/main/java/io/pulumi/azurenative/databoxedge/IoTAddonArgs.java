@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.inputs.IoTDeviceInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
-    public Output<String> getAddonName() {
-        return this.addonName == null ? Output.empty() : this.addonName;
+    public Output<String> addonName() {
+        return this.addonName == null ? Codegen.empty() : this.addonName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -44,7 +45,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ioTDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
 
@@ -55,7 +56,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ioTEdgeDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
-    public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
 
@@ -67,7 +68,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -78,7 +79,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +90,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleName", required=true)
       private final Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName;
     }
 
@@ -111,13 +112,13 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IoTAddonArgs() {
-        this.addonName = Output.empty();
-        this.deviceName = Output.empty();
-        this.ioTDeviceDetails = Output.empty();
-        this.ioTEdgeDeviceDetails = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleName = Output.empty();
+        this.addonName = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.ioTDeviceDetails = Codegen.empty();
+        this.ioTEdgeDeviceDetails = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Output.ofNullable(addonName);
+            this.addonName = Codegen.ofNullable(addonName);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {

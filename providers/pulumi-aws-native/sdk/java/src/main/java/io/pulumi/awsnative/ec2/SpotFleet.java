@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.SpotFleetRequestConfigData;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import javax.annotation.Nullable;
 
 /**
@@ -20,7 +21,7 @@ public class SpotFleet extends io.pulumi.resources.CustomResource {
     @Export(name="spotFleetRequestConfigData", type=SpotFleetRequestConfigData.class, parameters={})
     private Output<SpotFleetRequestConfigData> spotFleetRequestConfigData;
 
-    public Output<SpotFleetRequestConfigData> getSpotFleetRequestConfigData() {
+    public Output<SpotFleetRequestConfigData> spotFleetRequestConfigData() {
         return this.spotFleetRequestConfigData;
     }
 
@@ -46,7 +47,7 @@ public class SpotFleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SpotFleet(String name, SpotFleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:SpotFleet", name, args == null ? SpotFleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:SpotFleet", name, args == null ? SpotFleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SpotFleet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

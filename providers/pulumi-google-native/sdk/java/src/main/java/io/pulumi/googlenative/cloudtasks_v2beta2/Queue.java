@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudtasks_v2beta2.QueueArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineHttpTargetResponse;
@@ -33,7 +34,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return App Engine HTTP target. An App Engine queue is a queue that has an AppEngineHttpTarget.
      * 
      */
-    public Output<AppEngineHttpTargetResponse> getAppEngineHttpTarget() {
+    public Output<AppEngineHttpTargetResponse> appEngineHttpTarget() {
         return this.appEngineHttpTarget;
     }
     /**
@@ -47,7 +48,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Caller-specified and required in CreateQueue, after which it becomes output only. The queue name. The queue name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the queue's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -61,7 +62,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Pull target. A pull queue is a queue that has a PullTarget.
      * 
      */
-    public Output<PullTargetResponse> getPullTarget() {
+    public Output<PullTargetResponse> pullTarget() {
         return this.pullTarget;
     }
     /**
@@ -75,7 +76,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The last time this queue was purged. All tasks that were created before this time were purged. A queue can be purged using PurgeQueue, the [App Engine Task Queue SDK, or the Cloud Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue). Purge time will be truncated to the nearest microsecond. Purge time will be unset if the queue has never been purged.
      * 
      */
-    public Output<String> getPurgeTime() {
+    public Output<String> purgeTime() {
         return this.purgeTime;
     }
     /**
@@ -89,7 +90,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Rate limits for task dispatches. rate_limits and retry_config are related because they both control task attempts however they control how tasks are attempted in different ways: * rate_limits controls the total rate of dispatches from a queue (i.e. all traffic dispatched from the queue, regardless of whether the dispatch is from a first attempt or a retry). * retry_config controls what happens to particular a task after its first attempt fails. That is, retry_config controls task retries (the second attempt, third attempt, etc).
      * 
      */
-    public Output<RateLimitsResponse> getRateLimits() {
+    public Output<RateLimitsResponse> rateLimits() {
         return this.rateLimits;
     }
     /**
@@ -103,7 +104,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Settings that determine the retry behavior. * For tasks created using Cloud Tasks: the queue-level retry settings apply to all tasks in the queue that were created using Cloud Tasks. Retry settings cannot be set on individual tasks. * For tasks created using the App Engine SDK: the queue-level retry settings apply to all tasks in the queue which do not have retry settings explicitly set on the task and were created by the App Engine SDK. See [App Engine documentation](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/retrying-tasks).
      * 
      */
-    public Output<RetryConfigResponse> getRetryConfig() {
+    public Output<RetryConfigResponse> retryConfig() {
         return this.retryConfig;
     }
     /**
@@ -117,7 +118,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The state of the queue. `state` can only be changed by called PauseQueue, ResumeQueue, or uploading [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue cannot be used to change `state`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -131,7 +132,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The realtime, informational statistics for a queue. In order to receive the statistics the caller should include this field in the FieldMask.
      * 
      */
-    public Output<QueueStatsResponse> getStats() {
+    public Output<QueueStatsResponse> stats() {
         return this.stats;
     }
     /**
@@ -145,7 +146,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The maximum amount of time that a task will be retained in this queue. Queues created by Cloud Tasks have a default `task_ttl` of 31 days. After a task has lived for `task_ttl`, the task will be deleted regardless of whether it was dispatched or not. The `task_ttl` for queues created via queue.yaml/xml is equal to the maximum duration because there is a [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues. To view the maximum valid duration, see the documentation for Duration.
      * 
      */
-    public Output<String> getTaskTtl() {
+    public Output<String> taskTtl() {
         return this.taskTtl;
     }
     /**
@@ -159,7 +160,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The task tombstone time to live (TTL). After a task is deleted or completed, the task's tombstone is retained for the length of time specified by `tombstone_ttl`. The tombstone is used by task de-duplication; another task with the same name can't be created until the tombstone has expired. For more information about task de-duplication, see the documentation for CreateTaskRequest. Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
      * 
      */
-    public Output<String> getTombstoneTtl() {
+    public Output<String> tombstoneTtl() {
         return this.tombstoneTtl;
     }
 
@@ -185,7 +186,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Queue(String name, @Nullable QueueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudtasks/v2beta2:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudtasks/v2beta2:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Queue(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

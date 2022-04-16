@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.RoleBindingArgs;
@@ -33,7 +34,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -47,7 +48,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -61,7 +62,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata.
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -75,7 +76,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return RoleRef can reference a Role in the current namespace or a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
      * 
      */
-    public Output<RoleRef> getRoleRef() {
+    public Output<RoleRef> roleRef() {
         return this.roleRef;
     }
     /**
@@ -89,7 +90,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return Subjects holds references to the objects the role applies to.
      * 
      */
-    public Output</* @Nullable */ List<Subject>> getSubjects() {
+    public Output</* @Nullable */ List<Subject>> subjects() {
         return this.subjects;
     }
 
@@ -115,7 +116,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoleBinding(String name, RoleBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:rbac.authorization.k8s.io/v1alpha1:RoleBinding", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:rbac.authorization.k8s.io/v1alpha1:RoleBinding", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private RoleBinding(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

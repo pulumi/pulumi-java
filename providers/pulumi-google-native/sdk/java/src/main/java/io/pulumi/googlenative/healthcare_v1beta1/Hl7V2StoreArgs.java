@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.Hl7V2NotificationConfigArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ParserConfigArgs;
@@ -23,15 +24,15 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId")
       private final @Nullable Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
-        return this.hl7V2StoreId == null ? Output.empty() : this.hl7V2StoreId;
+    public Output<String> hl7V2StoreId() {
+        return this.hl7V2StoreId == null ? Codegen.empty() : this.hl7V2StoreId;
     }
 
     /**
@@ -41,15 +42,15 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Output<NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+    public Output<NotificationConfigArgs> notificationConfig() {
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfigs")
       private final @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
 
-    public Output<List<Hl7V2NotificationConfigArgs>> getNotificationConfigs() {
-        return this.notificationConfigs == null ? Output.empty() : this.notificationConfigs;
+    public Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs() {
+        return this.notificationConfigs == null ? Codegen.empty() : this.notificationConfigs;
     }
 
     /**
@@ -92,15 +93,15 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parserConfig")
       private final @Nullable Output<ParserConfigArgs> parserConfig;
 
-    public Output<ParserConfigArgs> getParserConfig() {
-        return this.parserConfig == null ? Output.empty() : this.parserConfig;
+    public Output<ParserConfigArgs> parserConfig() {
+        return this.parserConfig == null ? Codegen.empty() : this.parserConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rejectDuplicateMessage")
       private final @Nullable Output<Boolean> rejectDuplicateMessage;
 
-    public Output<Boolean> getRejectDuplicateMessage() {
-        return this.rejectDuplicateMessage == null ? Output.empty() : this.rejectDuplicateMessage;
+    public Output<Boolean> rejectDuplicateMessage() {
+        return this.rejectDuplicateMessage == null ? Codegen.empty() : this.rejectDuplicateMessage;
     }
 
     public Hl7V2StoreArgs(
@@ -138,16 +139,16 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private Hl7V2StoreArgs() {
-        this.datasetId = Output.empty();
-        this.hl7V2StoreId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.notificationConfigs = Output.empty();
-        this.parserConfig = Output.empty();
-        this.project = Output.empty();
-        this.rejectDuplicateMessage = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.hl7V2StoreId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.notificationConfigs = Codegen.empty();
+        this.parserConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rejectDuplicateMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -201,7 +202,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
-            this.hl7V2StoreId = Output.ofNullable(hl7V2StoreId);
+            this.hl7V2StoreId = Codegen.ofNullable(hl7V2StoreId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -209,7 +210,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -217,7 +218,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -225,7 +226,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
@@ -233,7 +234,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder notificationConfigs(@Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs) {
@@ -241,7 +242,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfigs(@Nullable List<Hl7V2NotificationConfigArgs> notificationConfigs) {
-            this.notificationConfigs = Output.ofNullable(notificationConfigs);
+            this.notificationConfigs = Codegen.ofNullable(notificationConfigs);
             return this;
         }
         public Builder notificationConfigs(Hl7V2NotificationConfigArgs... notificationConfigs) {
@@ -252,7 +253,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parserConfig(@Nullable ParserConfigArgs parserConfig) {
-            this.parserConfig = Output.ofNullable(parserConfig);
+            this.parserConfig = Codegen.ofNullable(parserConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -260,7 +261,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rejectDuplicateMessage(@Nullable Output<Boolean> rejectDuplicateMessage) {
@@ -268,7 +269,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rejectDuplicateMessage(@Nullable Boolean rejectDuplicateMessage) {
-            this.rejectDuplicateMessage = Output.ofNullable(rejectDuplicateMessage);
+            this.rejectDuplicateMessage = Codegen.ofNullable(rejectDuplicateMessage);
             return this;
         }        public Hl7V2StoreArgs build() {
             return new Hl7V2StoreArgs(datasetId, hl7V2StoreId, labels, location, name, notificationConfig, notificationConfigs, parserConfig, project, rejectDuplicateMessage);

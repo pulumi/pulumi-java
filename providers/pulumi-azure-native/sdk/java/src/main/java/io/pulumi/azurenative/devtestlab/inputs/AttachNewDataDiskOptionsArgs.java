@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
-    public Output<String> getDiskName() {
-        return this.diskName == null ? Output.empty() : this.diskName;
+    public Output<String> diskName() {
+        return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
     @Import(name="diskSizeGiB")
       private final @Nullable Output<Integer> diskSizeGiB;
 
-    public Output<Integer> getDiskSizeGiB() {
-        return this.diskSizeGiB == null ? Output.empty() : this.diskSizeGiB;
+    public Output<Integer> diskSizeGiB() {
+        return this.diskSizeGiB == null ? Codegen.empty() : this.diskSizeGiB;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
     @Import(name="diskType")
       private final @Nullable Output<Either<String,StorageType>> diskType;
 
-    public Output<Either<String,StorageType>> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+    public Output<Either<String,StorageType>> diskType() {
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     public AttachNewDataDiskOptionsArgs(
@@ -64,9 +65,9 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
     }
 
     private AttachNewDataDiskOptionsArgs() {
-        this.diskName = Output.empty();
-        this.diskSizeGiB = Output.empty();
-        this.diskType = Output.empty();
+        this.diskName = Codegen.empty();
+        this.diskSizeGiB = Codegen.empty();
+        this.diskType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Output.ofNullable(diskName);
+            this.diskName = Codegen.ofNullable(diskName);
             return this;
         }
         public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
@@ -106,7 +107,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
-            this.diskSizeGiB = Output.ofNullable(diskSizeGiB);
+            this.diskSizeGiB = Codegen.ofNullable(diskSizeGiB);
             return this;
         }
         public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
@@ -114,7 +115,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder diskType(@Nullable Either<String,StorageType> diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }        public AttachNewDataDiskOptionsArgs build() {
             return new AttachNewDataDiskOptionsArgs(diskName, diskSizeGiB, diskType);

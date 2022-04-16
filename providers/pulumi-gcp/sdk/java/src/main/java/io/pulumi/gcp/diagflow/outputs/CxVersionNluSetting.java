@@ -26,13 +26,13 @@ public final class CxVersionNluSetting {
         this.modelType = modelType;
     }
 
-    public Optional<Double> getClassificationThreshold() {
+    public Optional<Double> classificationThreshold() {
         return Optional.ofNullable(this.classificationThreshold);
     }
-    public Optional<String> getModelTrainingMode() {
+    public Optional<String> modelTrainingMode() {
         return Optional.ofNullable(this.modelTrainingMode);
     }
-    public Optional<String> getModelType() {
+    public Optional<String> modelType() {
         return Optional.ofNullable(this.modelType);
     }
 

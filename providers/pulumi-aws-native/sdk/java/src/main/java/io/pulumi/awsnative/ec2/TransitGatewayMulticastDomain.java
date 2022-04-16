@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.TransitGatewayMulticastDomainTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @return The time the transit gateway multicast domain was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -45,7 +46,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @return The options for the transit gateway multicast domain.
      * 
      */
-    public Output</* @Nullable */ OptionsProperties> getOptions() {
+    public Output</* @Nullable */ OptionsProperties> options() {
         return this.options;
     }
     /**
@@ -59,7 +60,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @return The state of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -73,7 +74,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @return The tags for the transit gateway multicast domain.
      * 
      */
-    public Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> getTags() {
+    public Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> tags() {
         return this.tags;
     }
     /**
@@ -87,7 +88,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @return The ID of the transit gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
@@ -101,7 +102,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @return The Amazon Resource Name (ARN) of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainArn() {
+    public Output<String> transitGatewayMulticastDomainArn() {
         return this.transitGatewayMulticastDomainArn;
     }
     /**
@@ -115,7 +116,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -141,7 +142,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitGatewayMulticastDomain(String name, TransitGatewayMulticastDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:TransitGatewayMulticastDomain", name, args == null ? TransitGatewayMulticastDomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:TransitGatewayMulticastDomain", name, args == null ? TransitGatewayMulticastDomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitGatewayMulticastDomain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<CapacityReservationFleetTagArgs>> tags;
 
-    public Output<List<CapacityReservationFleetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<CapacityReservationFleetTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CapacityReservationFleetTagSpecificationArgs(
@@ -38,8 +39,8 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
     }
 
     private CapacityReservationFleetTagSpecificationArgs() {
-        this.resourceType = Output.empty();
-        this.tags = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder tags(@Nullable Output<List<CapacityReservationFleetTagArgs>> tags) {
@@ -77,7 +78,7 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
             return this;
         }
         public Builder tags(@Nullable List<CapacityReservationFleetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(CapacityReservationFleetTagArgs... tags) {

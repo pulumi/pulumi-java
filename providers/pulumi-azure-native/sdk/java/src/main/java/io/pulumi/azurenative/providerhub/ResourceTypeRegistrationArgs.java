@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
-    public Output<ResourceTypeRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ResourceTypeRegistrationPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -40,8 +41,8 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public ResourceTypeRegistrationArgs(
@@ -54,9 +55,9 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     }
 
     private ResourceTypeRegistrationArgs() {
-        this.properties = Output.empty();
-        this.providerNamespace = Output.empty();
-        this.resourceType = Output.empty();
+        this.properties = Codegen.empty();
+        this.providerNamespace = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerNamespace(Output<String> providerNamespace) {
@@ -104,7 +105,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public ResourceTypeRegistrationArgs build() {
             return new ResourceTypeRegistrationArgs(properties, providerNamespace, resourceType);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebBackendServiceIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.WebBackendServiceIamPolicyState;
@@ -71,7 +72,7 @@ public class WebBackendServiceIamPolicy extends io.pulumi.resources.CustomResour
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -87,7 +88,7 @@ public class WebBackendServiceIamPolicy extends io.pulumi.resources.CustomResour
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -103,7 +104,7 @@ public class WebBackendServiceIamPolicy extends io.pulumi.resources.CustomResour
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -117,7 +118,7 @@ public class WebBackendServiceIamPolicy extends io.pulumi.resources.CustomResour
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getWebBackendService() {
+    public Output<String> webBackendService() {
         return this.webBackendService;
     }
 
@@ -143,7 +144,7 @@ public class WebBackendServiceIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebBackendServiceIamPolicy(String name, WebBackendServiceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webBackendServiceIamPolicy:WebBackendServiceIamPolicy", name, args == null ? WebBackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/webBackendServiceIamPolicy:WebBackendServiceIamPolicy", name, args == null ? WebBackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebBackendServiceIamPolicy(String name, Output<String> id, @Nullable WebBackendServiceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

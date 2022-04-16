@@ -5,6 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
     @Import(name="dataId", required=true)
       private final Output<String> dataId;
 
-    public Output<String> getDataId() {
+    public Output<String> dataId() {
         return this.dataId;
     }
 
@@ -35,7 +36,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
     @Import(name="negated", required=true)
       private final Output<Boolean> negated;
 
-    public Output<Boolean> getNegated() {
+    public Output<Boolean> negated() {
         return this.negated;
     }
 
@@ -46,7 +47,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -60,9 +61,9 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
     }
 
     private RateBasedRulePredicateArgs() {
-        this.dataId = Output.empty();
-        this.negated = Output.empty();
-        this.type = Output.empty();
+        this.dataId = Codegen.empty();
+        this.negated = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

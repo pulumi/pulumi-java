@@ -49,28 +49,28 @@ public final class SSISChildPackageResponse {
      * Content for embedded child package. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getPackageContent() {
+    public Object packageContent() {
         return this.packageContent;
     }
     /**
      * Last modified date for embedded child package.
      * 
     */
-    public Optional<String> getPackageLastModifiedDate() {
+    public Optional<String> packageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
     /**
      * Name for embedded child package.
      * 
     */
-    public Optional<String> getPackageName() {
+    public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
     /**
      * Path for embedded child package. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getPackagePath() {
+    public Object packagePath() {
         return this.packagePath;
     }
 

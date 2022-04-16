@@ -5,6 +5,7 @@ package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Output<Boolean> getBlockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Output.empty() : this.blockPublicPolicy;
+    public Output<Boolean> blockPublicPolicy() {
+        return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
-        return this.secretArn == null ? Output.empty() : this.secretArn;
+    public Output<String> secretArn() {
+        return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
     public SecretPolicyState(
@@ -58,9 +59,9 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretPolicyState() {
-        this.blockPublicPolicy = Output.empty();
-        this.policy = Output.empty();
-        this.secretArn = Output.empty();
+        this.blockPublicPolicy = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.secretArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
+            this.blockPublicPolicy = Codegen.ofNullable(blockPublicPolicy);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -100,7 +101,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder secretArn(@Nullable Output<String> secretArn) {
@@ -108,7 +109,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Output.ofNullable(secretArn);
+            this.secretArn = Codegen.ofNullable(secretArn);
             return this;
         }        public SecretPolicyState build() {
             return new SecretPolicyState(blockPublicPolicy, policy, secretArn);

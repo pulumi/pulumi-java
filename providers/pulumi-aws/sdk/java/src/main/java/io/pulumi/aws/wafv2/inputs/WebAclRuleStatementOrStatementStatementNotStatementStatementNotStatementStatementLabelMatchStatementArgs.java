@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -31,7 +32,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -43,8 +44,8 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     }
 
     private WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementLabelMatchStatementArgs() {
-        this.key = Output.empty();
-        this.scope = Output.empty();
+        this.key = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {

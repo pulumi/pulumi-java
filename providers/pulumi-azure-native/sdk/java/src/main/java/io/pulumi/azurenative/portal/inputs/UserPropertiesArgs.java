@@ -10,6 +10,7 @@ import io.pulumi.azurenative.portal.inputs.TerminalSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredLocation", required=true)
       private final Output<String> preferredLocation;
 
-    public Output<String> getPreferredLocation() {
+    public Output<String> preferredLocation() {
         return this.preferredLocation;
     }
 
@@ -40,7 +41,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredOsType", required=true)
       private final Output<Either<String,OsType>> preferredOsType;
 
-    public Output<Either<String,OsType>> getPreferredOsType() {
+    public Output<Either<String,OsType>> preferredOsType() {
         return this.preferredOsType;
     }
 
@@ -51,7 +52,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredShellType", required=true)
       private final Output<Either<String,ShellType>> preferredShellType;
 
-    public Output<Either<String,ShellType>> getPreferredShellType() {
+    public Output<Either<String,ShellType>> preferredShellType() {
         return this.preferredShellType;
     }
 
@@ -62,7 +63,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageProfile", required=true)
       private final Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile;
     }
 
@@ -73,7 +74,7 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="terminalSettings", required=true)
       private final Output<TerminalSettingsArgs> terminalSettings;
 
-    public Output<TerminalSettingsArgs> getTerminalSettings() {
+    public Output<TerminalSettingsArgs> terminalSettings() {
         return this.terminalSettings;
     }
 
@@ -91,11 +92,11 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPropertiesArgs() {
-        this.preferredLocation = Output.empty();
-        this.preferredOsType = Output.empty();
-        this.preferredShellType = Output.empty();
-        this.storageProfile = Output.empty();
-        this.terminalSettings = Output.empty();
+        this.preferredLocation = Codegen.empty();
+        this.preferredOsType = Codegen.empty();
+        this.preferredShellType = Codegen.empty();
+        this.storageProfile = Codegen.empty();
+        this.terminalSettings = Codegen.empty();
     }
 
     public static Builder builder() {

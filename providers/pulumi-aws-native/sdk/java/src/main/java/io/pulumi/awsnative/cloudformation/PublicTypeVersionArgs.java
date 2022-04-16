@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logDeliveryBucket")
       private final @Nullable Output<String> logDeliveryBucket;
 
-    public Output<String> getLogDeliveryBucket() {
-        return this.logDeliveryBucket == null ? Output.empty() : this.logDeliveryBucket;
+    public Output<String> logDeliveryBucket() {
+        return this.logDeliveryBucket == null ? Codegen.empty() : this.logDeliveryBucket;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicVersionNumber")
       private final @Nullable Output<String> publicVersionNumber;
 
-    public Output<String> getPublicVersionNumber() {
-        return this.publicVersionNumber == null ? Output.empty() : this.publicVersionNumber;
+    public Output<String> publicVersionNumber() {
+        return this.publicVersionNumber == null ? Codegen.empty() : this.publicVersionNumber;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<PublicTypeVersionType> type;
 
-    public Output<PublicTypeVersionType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<PublicTypeVersionType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+    public Output<String> typeName() {
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     public PublicTypeVersionArgs(
@@ -86,11 +87,11 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PublicTypeVersionArgs() {
-        this.arn = Output.empty();
-        this.logDeliveryBucket = Output.empty();
-        this.publicVersionNumber = Output.empty();
-        this.type = Output.empty();
-        this.typeName = Output.empty();
+        this.arn = Codegen.empty();
+        this.logDeliveryBucket = Codegen.empty();
+        this.publicVersionNumber = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder logDeliveryBucket(@Nullable Output<String> logDeliveryBucket) {
@@ -134,7 +135,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder logDeliveryBucket(@Nullable String logDeliveryBucket) {
-            this.logDeliveryBucket = Output.ofNullable(logDeliveryBucket);
+            this.logDeliveryBucket = Codegen.ofNullable(logDeliveryBucket);
             return this;
         }
         public Builder publicVersionNumber(@Nullable Output<String> publicVersionNumber) {
@@ -142,7 +143,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publicVersionNumber(@Nullable String publicVersionNumber) {
-            this.publicVersionNumber = Output.ofNullable(publicVersionNumber);
+            this.publicVersionNumber = Codegen.ofNullable(publicVersionNumber);
             return this;
         }
         public Builder type(@Nullable Output<PublicTypeVersionType> type) {
@@ -150,7 +151,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable PublicTypeVersionType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder typeName(@Nullable Output<String> typeName) {
@@ -158,7 +159,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }        public PublicTypeVersionArgs build() {
             return new PublicTypeVersionArgs(arn, logDeliveryBucket, publicVersionNumber, type, typeName);

@@ -44,21 +44,21 @@ public final class PreferencesResponse {
      * Preferences related to the Encryption.
      * 
     */
-    public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
+    public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
     /**
      * Preferred data center region.
      * 
     */
-    public List<String> getPreferredDataCenterRegion() {
+    public List<String> preferredDataCenterRegion() {
         return this.preferredDataCenterRegion == null ? List.of() : this.preferredDataCenterRegion;
     }
     /**
      * Preferences related to the shipment logistics of the sku.
      * 
     */
-    public Optional<TransportPreferencesResponse> getTransportPreferences() {
+    public Optional<TransportPreferencesResponse> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
 

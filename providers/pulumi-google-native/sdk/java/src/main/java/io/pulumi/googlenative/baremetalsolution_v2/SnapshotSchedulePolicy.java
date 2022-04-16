@@ -6,6 +6,7 @@ package io.pulumi.googlenative.baremetalsolution_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.baremetalsolution_v2.SnapshotSchedulePolicyArgs;
 import io.pulumi.googlenative.baremetalsolution_v2.outputs.ScheduleResponse;
@@ -32,7 +33,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return The description of the snapshot schedule policy.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -46,7 +47,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return Labels as key value pairs.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -60,7 +61,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the snapshot schedule policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
      * 
      */
-    public Output<List<ScheduleResponse>> getSchedules() {
+    public Output<List<ScheduleResponse>> schedules() {
         return this.schedules;
     }
 
@@ -100,7 +101,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotSchedulePolicy(String name, SnapshotSchedulePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:baremetalsolution/v2:SnapshotSchedulePolicy", name, args == null ? SnapshotSchedulePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:baremetalsolution/v2:SnapshotSchedulePolicy", name, args == null ? SnapshotSchedulePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SnapshotSchedulePolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.gameservices;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerClusterArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterState;
@@ -55,7 +56,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return Required. The resource name of the game server cluster
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -73,7 +74,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<GameServerClusterConnectionInfo> getConnectionInfo() {
+    public Output<GameServerClusterConnectionInfo> connectionInfo() {
         return this.connectionInfo;
     }
     /**
@@ -87,7 +88,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return Human readable description of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +104,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * key-value pair.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -117,7 +118,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return Location of the Cluster.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -135,7 +136,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -151,7 +152,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -165,7 +166,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return The realm id of the game server realm.
      * 
      */
-    public Output<String> getRealmId() {
+    public Output<String> realmId() {
         return this.realmId;
     }
 
@@ -191,7 +192,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerCluster(String name, GameServerClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gameservices/gameServerCluster:GameServerCluster", name, args == null ? GameServerClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:gameservices/gameServerCluster:GameServerCluster", name, args == null ? GameServerClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GameServerCluster(String name, Output<String> id, @Nullable GameServerClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

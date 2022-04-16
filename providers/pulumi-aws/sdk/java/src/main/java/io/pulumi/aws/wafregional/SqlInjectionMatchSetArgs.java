@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional;
 import io.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
     @Import(name="sqlInjectionMatchTuples")
       private final @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
 
-    public Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> getSqlInjectionMatchTuples() {
-        return this.sqlInjectionMatchTuples == null ? Output.empty() : this.sqlInjectionMatchTuples;
+    public Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples() {
+        return this.sqlInjectionMatchTuples == null ? Codegen.empty() : this.sqlInjectionMatchTuples;
     }
 
     public SqlInjectionMatchSetArgs(
@@ -46,8 +47,8 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
     }
 
     private SqlInjectionMatchSetArgs() {
-        this.name = Output.empty();
-        this.sqlInjectionMatchTuples = Output.empty();
+        this.name = Codegen.empty();
+        this.sqlInjectionMatchTuples = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sqlInjectionMatchTuples(@Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples) {
@@ -85,7 +86,7 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sqlInjectionMatchTuples(@Nullable List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs> sqlInjectionMatchTuples) {
-            this.sqlInjectionMatchTuples = Output.ofNullable(sqlInjectionMatchTuples);
+            this.sqlInjectionMatchTuples = Codegen.ofNullable(sqlInjectionMatchTuples);
             return this;
         }
         public Builder sqlInjectionMatchTuples(SqlInjectionMatchSetSqlInjectionMatchTupleArgs... sqlInjectionMatchTuples) {

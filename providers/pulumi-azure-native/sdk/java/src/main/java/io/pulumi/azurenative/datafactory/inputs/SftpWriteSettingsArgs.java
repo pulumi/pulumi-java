@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
 
-    public Output<Object> getCopyBehavior() {
-        return this.copyBehavior == null ? Output.empty() : this.copyBehavior;
+    public Output<Object> copyBehavior() {
+        return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="operationTimeout")
       private final @Nullable Output<Object> operationTimeout;
 
-    public Output<Object> getOperationTimeout() {
-        return this.operationTimeout == null ? Output.empty() : this.operationTimeout;
+    public Output<Object> operationTimeout() {
+        return this.operationTimeout == null ? Codegen.empty() : this.operationTimeout;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,8 +83,8 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="useTempFileRename")
       private final @Nullable Output<Object> useTempFileRename;
 
-    public Output<Object> getUseTempFileRename() {
-        return this.useTempFileRename == null ? Output.empty() : this.useTempFileRename;
+    public Output<Object> useTempFileRename() {
+        return this.useTempFileRename == null ? Codegen.empty() : this.useTempFileRename;
     }
 
     public SftpWriteSettingsArgs(
@@ -102,12 +103,12 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SftpWriteSettingsArgs() {
-        this.copyBehavior = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.operationTimeout = Output.empty();
-        this.type = Output.empty();
-        this.useTempFileRename = Output.empty();
+        this.copyBehavior = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.operationTimeout = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useTempFileRename = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Output.ofNullable(copyBehavior);
+            this.copyBehavior = Codegen.ofNullable(copyBehavior);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -153,7 +154,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -161,7 +162,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder operationTimeout(@Nullable Output<Object> operationTimeout) {
@@ -169,7 +170,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder operationTimeout(@Nullable Object operationTimeout) {
-            this.operationTimeout = Output.ofNullable(operationTimeout);
+            this.operationTimeout = Codegen.ofNullable(operationTimeout);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -185,7 +186,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder useTempFileRename(@Nullable Object useTempFileRename) {
-            this.useTempFileRename = Output.ofNullable(useTempFileRename);
+            this.useTempFileRename = Codegen.ofNullable(useTempFileRename);
             return this;
         }        public SftpWriteSettingsArgs build() {
             return new SftpWriteSettingsArgs(copyBehavior, disableMetricsCollection, maxConcurrentConnections, operationTimeout, type, useTempFileRename);

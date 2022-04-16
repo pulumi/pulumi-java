@@ -12,6 +12,7 @@ import io.pulumi.aws.elasticloadbalancing.outputs.LoadBalancerListener;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -66,7 +67,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return An Access Logs block. Access Logs documented below.
      * 
      */
-    public Output</* @Nullable */ LoadBalancerAccessLogs> getAccessLogs() {
+    public Output</* @Nullable */ LoadBalancerAccessLogs> accessLogs() {
         return this.accessLogs;
     }
     /**
@@ -80,7 +81,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The ARN of the ELB
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -94,7 +95,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The AZ's to serve traffic in.
      * 
      */
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -108,7 +109,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Boolean to enable connection draining. Default: `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getConnectionDraining() {
+    public Output</* @Nullable */ Boolean> connectionDraining() {
         return this.connectionDraining;
     }
     /**
@@ -122,7 +123,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The time in seconds to allow for connections to drain. Default: `300`
      * 
      */
-    public Output</* @Nullable */ Integer> getConnectionDrainingTimeout() {
+    public Output</* @Nullable */ Integer> connectionDrainingTimeout() {
         return this.connectionDrainingTimeout;
     }
     /**
@@ -136,7 +137,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Enable cross-zone load balancing. Default: `true`
      * 
      */
-    public Output</* @Nullable */ Boolean> getCrossZoneLoadBalancing() {
+    public Output</* @Nullable */ Boolean> crossZoneLoadBalancing() {
         return this.crossZoneLoadBalancing;
     }
     /**
@@ -150,7 +151,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    public Output</* @Nullable */ String> getDesyncMitigationMode() {
+    public Output</* @Nullable */ String> desyncMitigationMode() {
         return this.desyncMitigationMode;
     }
     /**
@@ -164,7 +165,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The DNS name of the ELB
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -178,7 +179,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A health_check block. Health Check documented below.
      * 
      */
-    public Output<LoadBalancerHealthCheck> getHealthCheck() {
+    public Output<LoadBalancerHealthCheck> healthCheck() {
         return this.healthCheck;
     }
     /**
@@ -192,7 +193,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The time in seconds that the connection is allowed to be idle. Default: `60`
      * 
      */
-    public Output</* @Nullable */ Integer> getIdleTimeout() {
+    public Output</* @Nullable */ Integer> idleTimeout() {
         return this.idleTimeout;
     }
     /**
@@ -206,7 +207,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A list of instance ids to place in the ELB pool.
      * 
      */
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances;
     }
     /**
@@ -220,7 +221,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return If true, ELB will be an internal ELB.
      * 
      */
-    public Output<Boolean> getInternal() {
+    public Output<Boolean> internal() {
         return this.internal;
     }
     /**
@@ -234,7 +235,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A list of listener blocks. Listeners documented below.
      * 
      */
-    public Output<List<LoadBalancerListener>> getListeners() {
+    public Output<List<LoadBalancerListener>> listeners() {
         return this.listeners;
     }
     /**
@@ -248,7 +249,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The name of the ELB. By default generated by this provider.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -264,7 +265,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -280,7 +281,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Only valid if creating an ELB within a VPC
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -298,7 +299,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * instances. Use this for Classic or Default VPC only.
      * 
      */
-    public Output<String> getSourceSecurityGroup() {
+    public Output<String> sourceSecurityGroup() {
         return this.sourceSecurityGroup;
     }
     /**
@@ -316,7 +317,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * instances. Only available on ELBs launched in a VPC.
      * 
      */
-    public Output<String> getSourceSecurityGroupId() {
+    public Output<String> sourceSecurityGroupId() {
         return this.sourceSecurityGroupId;
     }
     /**
@@ -330,7 +331,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A list of subnet IDs to attach to the ELB.
      * 
      */
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
     /**
@@ -344,7 +345,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -358,7 +359,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -372,7 +373,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
      * 
      */
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 
@@ -398,7 +399,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancer(String name, LoadBalancerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticloadbalancing/loadBalancer:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticloadbalancing/loadBalancer:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LoadBalancer(String name, Output<String> id, @Nullable LoadBalancerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

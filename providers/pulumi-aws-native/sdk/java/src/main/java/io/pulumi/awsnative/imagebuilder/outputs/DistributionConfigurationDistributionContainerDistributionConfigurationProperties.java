@@ -43,21 +43,21 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * Tags that are attached to the container distribution configuration.
      * 
     */
-    public List<String> getContainerTags() {
+    public List<String> containerTags() {
         return this.containerTags == null ? List.of() : this.containerTags;
     }
     /**
      * The description of the container distribution configuration.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The destination repository for the container distribution configuration.
      * 
     */
-    public Optional<DistributionConfigurationTargetContainerRepository> getTargetRepository() {
+    public Optional<DistributionConfigurationTargetContainerRepository> targetRepository() {
         return Optional.ofNullable(this.targetRepository);
     }
 

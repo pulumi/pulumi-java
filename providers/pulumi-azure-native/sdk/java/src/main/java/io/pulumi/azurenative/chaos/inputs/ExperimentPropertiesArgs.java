@@ -7,6 +7,7 @@ import io.pulumi.azurenative.chaos.inputs.SelectorArgs;
 import io.pulumi.azurenative.chaos.inputs.StepArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="selectors", required=true)
       private final Output<List<SelectorArgs>> selectors;
 
-    public Output<List<SelectorArgs>> getSelectors() {
+    public Output<List<SelectorArgs>> selectors() {
         return this.selectors;
     }
 
@@ -39,8 +40,8 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="startOnCreation")
       private final @Nullable Output<Boolean> startOnCreation;
 
-    public Output<Boolean> getStartOnCreation() {
-        return this.startOnCreation == null ? Output.empty() : this.startOnCreation;
+    public Output<Boolean> startOnCreation() {
+        return this.startOnCreation == null ? Codegen.empty() : this.startOnCreation;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="steps", required=true)
       private final Output<List<StepArgs>> steps;
 
-    public Output<List<StepArgs>> getSteps() {
+    public Output<List<StepArgs>> steps() {
         return this.steps;
     }
 
@@ -64,9 +65,9 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private ExperimentPropertiesArgs() {
-        this.selectors = Output.empty();
-        this.startOnCreation = Output.empty();
-        this.steps = Output.empty();
+        this.selectors = Codegen.empty();
+        this.startOnCreation = Codegen.empty();
+        this.steps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = Output.ofNullable(startOnCreation);
+            this.startOnCreation = Codegen.ofNullable(startOnCreation);
             return this;
         }
         public Builder steps(Output<List<StepArgs>> steps) {

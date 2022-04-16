@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.enums.DatabaseEncryptionState;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<DatabaseEncryptionState> state;
 
-    public Output<DatabaseEncryptionState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<DatabaseEncryptionState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public DatabaseEncryptionArgs(
@@ -49,8 +50,8 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatabaseEncryptionArgs() {
-        this.keyName = Output.empty();
-        this.state = Output.empty();
+        this.keyName = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder state(@Nullable Output<DatabaseEncryptionState> state) {
@@ -88,7 +89,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder state(@Nullable DatabaseEncryptionState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public DatabaseEncryptionArgs build() {
             return new DatabaseEncryptionArgs(keyName, state);

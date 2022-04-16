@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -31,7 +32,7 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -43,8 +44,8 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentialsArgs ext
     }
 
     private ConnectorProfileServiceNowConnectorProfileCredentialsArgs() {
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

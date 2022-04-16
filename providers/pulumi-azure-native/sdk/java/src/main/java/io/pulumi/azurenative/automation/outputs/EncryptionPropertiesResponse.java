@@ -43,21 +43,21 @@ public final class EncryptionPropertiesResponse {
      * User identity used for CMK.
      * 
     */
-    public Optional<EncryptionPropertiesResponseIdentity> getIdentity() {
+    public Optional<EncryptionPropertiesResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Encryption Key Source
      * 
     */
-    public Optional<String> getKeySource() {
+    public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * Key vault properties.
      * 
     */
-    public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
 

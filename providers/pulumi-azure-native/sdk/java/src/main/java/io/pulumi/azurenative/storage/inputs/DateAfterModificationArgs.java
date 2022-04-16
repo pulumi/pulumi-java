@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     @Import(name="daysAfterLastAccessTimeGreaterThan")
       private final @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
 
-    public Output<Double> getDaysAfterLastAccessTimeGreaterThan() {
-        return this.daysAfterLastAccessTimeGreaterThan == null ? Output.empty() : this.daysAfterLastAccessTimeGreaterThan;
+    public Output<Double> daysAfterLastAccessTimeGreaterThan() {
+        return this.daysAfterLastAccessTimeGreaterThan == null ? Codegen.empty() : this.daysAfterLastAccessTimeGreaterThan;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     @Import(name="daysAfterModificationGreaterThan")
       private final @Nullable Output<Double> daysAfterModificationGreaterThan;
 
-    public Output<Double> getDaysAfterModificationGreaterThan() {
-        return this.daysAfterModificationGreaterThan == null ? Output.empty() : this.daysAfterModificationGreaterThan;
+    public Output<Double> daysAfterModificationGreaterThan() {
+        return this.daysAfterModificationGreaterThan == null ? Codegen.empty() : this.daysAfterModificationGreaterThan;
     }
 
     public DateAfterModificationArgs(
@@ -48,8 +49,8 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     }
 
     private DateAfterModificationArgs() {
-        this.daysAfterLastAccessTimeGreaterThan = Output.empty();
-        this.daysAfterModificationGreaterThan = Output.empty();
+        this.daysAfterLastAccessTimeGreaterThan = Codegen.empty();
+        this.daysAfterModificationGreaterThan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
-            this.daysAfterLastAccessTimeGreaterThan = Output.ofNullable(daysAfterLastAccessTimeGreaterThan);
+            this.daysAfterLastAccessTimeGreaterThan = Codegen.ofNullable(daysAfterLastAccessTimeGreaterThan);
             return this;
         }
         public Builder daysAfterModificationGreaterThan(@Nullable Output<Double> daysAfterModificationGreaterThan) {
@@ -87,7 +88,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
-            this.daysAfterModificationGreaterThan = Output.ofNullable(daysAfterModificationGreaterThan);
+            this.daysAfterModificationGreaterThan = Codegen.ofNullable(daysAfterModificationGreaterThan);
             return this;
         }        public DateAfterModificationArgs build() {
             return new DateAfterModificationArgs(daysAfterLastAccessTimeGreaterThan, daysAfterModificationGreaterThan);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternateId")
       private final @Nullable Output<String> alternateId;
 
-    public Output<String> getAlternateId() {
-        return this.alternateId == null ? Output.empty() : this.alternateId;
+    public Output<String> alternateId() {
+        return this.alternateId == null ? Codegen.empty() : this.alternateId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetName")
       private final @Nullable Output<String> assetName;
 
-    public Output<String> getAssetName() {
-        return this.assetName == null ? Output.empty() : this.assetName;
+    public Output<String> assetName() {
+        return this.assetName == null ? Codegen.empty() : this.assetName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<String> container;
 
-    public Output<String> getContainer() {
-        return this.container == null ? Output.empty() : this.container;
+    public Output<String> container() {
+        return this.container == null ? Codegen.empty() : this.container;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,8 +88,8 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
+    public Output<String> storageAccountName() {
+        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
     public AssetArgs(
@@ -109,13 +110,13 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetArgs() {
-        this.accountName = Output.empty();
-        this.alternateId = Output.empty();
-        this.assetName = Output.empty();
-        this.container = Output.empty();
-        this.description = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.alternateId = Codegen.empty();
+        this.assetName = Codegen.empty();
+        this.container = Codegen.empty();
+        this.description = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alternateId(@Nullable String alternateId) {
-            this.alternateId = Output.ofNullable(alternateId);
+            this.alternateId = Codegen.ofNullable(alternateId);
             return this;
         }
         public Builder assetName(@Nullable Output<String> assetName) {
@@ -171,7 +172,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetName(@Nullable String assetName) {
-            this.assetName = Output.ofNullable(assetName);
+            this.assetName = Codegen.ofNullable(assetName);
             return this;
         }
         public Builder container(@Nullable Output<String> container) {
@@ -179,7 +180,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder container(@Nullable String container) {
-            this.container = Output.ofNullable(container);
+            this.container = Codegen.ofNullable(container);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -187,7 +188,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -203,7 +204,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Output.ofNullable(storageAccountName);
+            this.storageAccountName = Codegen.ofNullable(storageAccountName);
             return this;
         }        public AssetArgs build() {
             return new AssetArgs(accountName, alternateId, assetName, container, description, resourceGroupName, storageAccountName);

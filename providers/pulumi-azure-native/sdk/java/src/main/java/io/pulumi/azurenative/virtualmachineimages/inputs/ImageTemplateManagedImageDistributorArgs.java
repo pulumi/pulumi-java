@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
 
-    public Output<Map<String,String>> getArtifactTags() {
-        return this.artifactTags == null ? Output.empty() : this.artifactTags;
+    public Output<Map<String,String>> artifactTags() {
+        return this.artifactTags == null ? Codegen.empty() : this.artifactTags;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
@@ -48,7 +49,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -59,7 +60,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
 
-    public Output<String> getRunOutputName() {
+    public Output<String> runOutputName() {
         return this.runOutputName;
     }
 
@@ -71,7 +72,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -89,11 +90,11 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     }
 
     private ImageTemplateManagedImageDistributorArgs() {
-        this.artifactTags = Output.empty();
-        this.imageId = Output.empty();
-        this.location = Output.empty();
-        this.runOutputName = Output.empty();
-        this.type = Output.empty();
+        this.artifactTags = Codegen.empty();
+        this.imageId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.runOutputName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
             return this;
         }
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = Output.ofNullable(artifactTags);
+            this.artifactTags = Codegen.ofNullable(artifactTags);
             return this;
         }
         public Builder imageId(Output<String> imageId) {

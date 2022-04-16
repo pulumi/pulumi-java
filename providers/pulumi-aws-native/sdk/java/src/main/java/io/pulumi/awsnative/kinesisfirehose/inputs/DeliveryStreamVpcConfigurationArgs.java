@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +18,21 @@ public final class DeliveryStreamVpcConfigurationArgs extends io.pulumi.resource
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -45,9 +46,9 @@ public final class DeliveryStreamVpcConfigurationArgs extends io.pulumi.resource
     }
 
     private DeliveryStreamVpcConfigurationArgs() {
-        this.roleARN = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
+        this.roleARN = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
     }
 
     public static Builder builder() {

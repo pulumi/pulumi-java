@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
     @Import(name="enableDataIntegrityValidation")
       private final @Nullable Output<Boolean> enableDataIntegrityValidation;
 
-    public Output<Boolean> getEnableDataIntegrityValidation() {
-        return this.enableDataIntegrityValidation == null ? Output.empty() : this.enableDataIntegrityValidation;
+    public Output<Boolean> enableDataIntegrityValidation() {
+        return this.enableDataIntegrityValidation == null ? Codegen.empty() : this.enableDataIntegrityValidation;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
     @Import(name="enableQueryAnalysisValidation")
       private final @Nullable Output<Boolean> enableQueryAnalysisValidation;
 
-    public Output<Boolean> getEnableQueryAnalysisValidation() {
-        return this.enableQueryAnalysisValidation == null ? Output.empty() : this.enableQueryAnalysisValidation;
+    public Output<Boolean> enableQueryAnalysisValidation() {
+        return this.enableQueryAnalysisValidation == null ? Codegen.empty() : this.enableQueryAnalysisValidation;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
     @Import(name="enableSchemaValidation")
       private final @Nullable Output<Boolean> enableSchemaValidation;
 
-    public Output<Boolean> getEnableSchemaValidation() {
-        return this.enableSchemaValidation == null ? Output.empty() : this.enableSchemaValidation;
+    public Output<Boolean> enableSchemaValidation() {
+        return this.enableSchemaValidation == null ? Codegen.empty() : this.enableSchemaValidation;
     }
 
     public MigrationValidationOptionsArgs(
@@ -61,9 +62,9 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
     }
 
     private MigrationValidationOptionsArgs() {
-        this.enableDataIntegrityValidation = Output.empty();
-        this.enableQueryAnalysisValidation = Output.empty();
-        this.enableSchemaValidation = Output.empty();
+        this.enableDataIntegrityValidation = Codegen.empty();
+        this.enableQueryAnalysisValidation = Codegen.empty();
+        this.enableSchemaValidation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
-            this.enableDataIntegrityValidation = Output.ofNullable(enableDataIntegrityValidation);
+            this.enableDataIntegrityValidation = Codegen.ofNullable(enableDataIntegrityValidation);
             return this;
         }
         public Builder enableQueryAnalysisValidation(@Nullable Output<Boolean> enableQueryAnalysisValidation) {
@@ -103,7 +104,7 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
-            this.enableQueryAnalysisValidation = Output.ofNullable(enableQueryAnalysisValidation);
+            this.enableQueryAnalysisValidation = Codegen.ofNullable(enableQueryAnalysisValidation);
             return this;
         }
         public Builder enableSchemaValidation(@Nullable Output<Boolean> enableSchemaValidation) {
@@ -111,7 +112,7 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
-            this.enableSchemaValidation = Output.ofNullable(enableSchemaValidation);
+            this.enableSchemaValidation = Codegen.ofNullable(enableSchemaValidation);
             return this;
         }        public MigrationValidationOptionsArgs build() {
             return new MigrationValidationOptionsArgs(enableDataIntegrityValidation, enableQueryAnalysisValidation, enableSchemaValidation);

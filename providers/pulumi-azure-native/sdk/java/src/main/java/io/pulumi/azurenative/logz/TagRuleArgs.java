@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.logz.inputs.MonitoringTagRulesPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
 
-    public Output<String> getMonitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -33,8 +34,8 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
-    public Output<MonitoringTagRulesPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<MonitoringTagRulesPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -44,15 +45,15 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
-        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
+    public Output<String> ruleSetName() {
+        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 
     public TagRuleArgs(
@@ -67,10 +68,10 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagRuleArgs() {
-        this.monitorName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleSetName = Output.empty();
+        this.monitorName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable MonitoringTagRulesPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -128,7 +129,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Output.ofNullable(ruleSetName);
+            this.ruleSetName = Codegen.ofNullable(ruleSetName);
             return this;
         }        public TagRuleArgs build() {
             return new TagRuleArgs(monitorName, properties, resourceGroupName, ruleSetName);

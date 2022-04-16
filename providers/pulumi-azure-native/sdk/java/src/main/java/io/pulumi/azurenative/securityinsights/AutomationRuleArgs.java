@@ -9,6 +9,7 @@ import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleTriggeringLog
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
 
-    public Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> getActions() {
+    public Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions() {
         return this.actions;
     }
 
@@ -38,8 +39,8 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationRuleId")
       private final @Nullable Output<String> automationRuleId;
 
-    public Output<String> getAutomationRuleId() {
-        return this.automationRuleId == null ? Output.empty() : this.automationRuleId;
+    public Output<String> automationRuleId() {
+        return this.automationRuleId == null ? Codegen.empty() : this.automationRuleId;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -60,7 +61,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -71,7 +72,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order", required=true)
       private final Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
 
@@ -82,7 +83,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +94,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggeringLogic", required=true)
       private final Output<AutomationRuleTriggeringLogicArgs> triggeringLogic;
 
-    public Output<AutomationRuleTriggeringLogicArgs> getTriggeringLogic() {
+    public Output<AutomationRuleTriggeringLogicArgs> triggeringLogic() {
         return this.triggeringLogic;
     }
 
@@ -104,7 +105,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -128,14 +129,14 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutomationRuleArgs() {
-        this.actions = Output.empty();
-        this.automationRuleId = Output.empty();
-        this.displayName = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.order = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.triggeringLogic = Output.empty();
-        this.workspaceName = Output.empty();
+        this.actions = Codegen.empty();
+        this.automationRuleId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.order = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.triggeringLogic = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automationRuleId(@Nullable String automationRuleId) {
-            this.automationRuleId = Output.ofNullable(automationRuleId);
+            this.automationRuleId = Codegen.ofNullable(automationRuleId);
             return this;
         }
         public Builder displayName(Output<String> displayName) {

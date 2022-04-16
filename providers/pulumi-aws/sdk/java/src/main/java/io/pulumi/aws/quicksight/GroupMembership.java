@@ -9,6 +9,7 @@ import io.pulumi.aws.quicksight.inputs.GroupMembershipState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -59,7 +60,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the group in which the member will be added.
      * 
      */
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
     /**
@@ -73,7 +74,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the member to add to the group.
      * 
      */
-    public Output<String> getMemberName() {
+    public Output<String> memberName() {
         return this.memberName;
     }
     /**
@@ -87,7 +88,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The namespace. Defaults to `default`. Currently only `default` is supported.
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
 
@@ -113,7 +114,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GroupMembership(String name, GroupMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:quicksight/groupMembership:GroupMembership", name, args == null ? GroupMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:quicksight/groupMembership:GroupMembership", name, args == null ? GroupMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GroupMembership(String name, Output<String> id, @Nullable GroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

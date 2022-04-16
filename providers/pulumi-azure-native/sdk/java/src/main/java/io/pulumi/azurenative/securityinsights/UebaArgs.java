@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.UebaDataSources;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSources")
       private final @Nullable Output<List<Either<String,UebaDataSources>>> dataSources;
 
-    public Output<List<Either<String,UebaDataSources>>> getDataSources() {
-        return this.dataSources == null ? Output.empty() : this.dataSources;
+    public Output<List<Either<String,UebaDataSources>>> dataSources() {
+        return this.dataSources == null ? Codegen.empty() : this.dataSources;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -47,7 +48,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -58,7 +59,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,8 +70,8 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="settingsName")
       private final @Nullable Output<String> settingsName;
 
-    public Output<String> getSettingsName() {
-        return this.settingsName == null ? Output.empty() : this.settingsName;
+    public Output<String> settingsName() {
+        return this.settingsName == null ? Codegen.empty() : this.settingsName;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -100,12 +101,12 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UebaArgs() {
-        this.dataSources = Output.empty();
-        this.kind = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.settingsName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.dataSources = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.settingsName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSources(@Nullable List<Either<String,UebaDataSources>> dataSources) {
-            this.dataSources = Output.ofNullable(dataSources);
+            this.dataSources = Codegen.ofNullable(dataSources);
             return this;
         }
         public Builder dataSources(Either<String,UebaDataSources>... dataSources) {
@@ -178,7 +179,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder settingsName(@Nullable String settingsName) {
-            this.settingsName = Output.ofNullable(settingsName);
+            this.settingsName = Codegen.ofNullable(settingsName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

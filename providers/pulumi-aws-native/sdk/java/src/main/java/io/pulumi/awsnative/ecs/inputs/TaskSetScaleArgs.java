@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.enums.TaskSetScaleUnit;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unit")
       private final @Nullable Output<TaskSetScaleUnit> unit;
 
-    public Output<TaskSetScaleUnit> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<TaskSetScaleUnit> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
-    public Output<Double> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Double> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TaskSetScaleArgs(
@@ -45,8 +46,8 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskSetScaleArgs() {
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unit(@Nullable TaskSetScaleUnit unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder value(@Nullable Output<Double> value) {
@@ -84,7 +85,7 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable Double value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public TaskSetScaleArgs build() {
             return new TaskSetScaleArgs(unit, value);

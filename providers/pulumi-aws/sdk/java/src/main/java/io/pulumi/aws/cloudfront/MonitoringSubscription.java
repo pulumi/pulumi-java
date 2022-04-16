@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudfront.outputs.MonitoringSubscriptionMonitoringSubscrip
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class MonitoringSubscription extends io.pulumi.resources.CustomResource {
      * @return The ID of the distribution that you are enabling metrics for.
      * 
      */
-    public Output<String> getDistributionId() {
+    public Output<String> distributionId() {
         return this.distributionId;
     }
     /**
@@ -54,7 +55,7 @@ public class MonitoringSubscription extends io.pulumi.resources.CustomResource {
      * @return A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.
      * 
      */
-    public Output<MonitoringSubscriptionMonitoringSubscription> getMonitoringSubscription() {
+    public Output<MonitoringSubscriptionMonitoringSubscription> monitoringSubscription() {
         return this.monitoringSubscription;
     }
 
@@ -80,7 +81,7 @@ public class MonitoringSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MonitoringSubscription(String name, MonitoringSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/monitoringSubscription:MonitoringSubscription", name, args == null ? MonitoringSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/monitoringSubscription:MonitoringSubscription", name, args == null ? MonitoringSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MonitoringSubscription(String name, Output<String> id, @Nullable MonitoringSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

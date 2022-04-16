@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.enums.PatchRolloutMode;
 import io.pulumi.googlenative.osconfig_v1.inputs.FixedOrPercentArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disruptionBudget")
       private final @Nullable Output<FixedOrPercentArgs> disruptionBudget;
 
-    public Output<FixedOrPercentArgs> getDisruptionBudget() {
-        return this.disruptionBudget == null ? Output.empty() : this.disruptionBudget;
+    public Output<FixedOrPercentArgs> disruptionBudget() {
+        return this.disruptionBudget == null ? Codegen.empty() : this.disruptionBudget;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<PatchRolloutMode> mode;
 
-    public Output<PatchRolloutMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<PatchRolloutMode> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public PatchRolloutArgs(
@@ -49,8 +50,8 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchRolloutArgs() {
-        this.disruptionBudget = Output.empty();
-        this.mode = Output.empty();
+        this.disruptionBudget = Codegen.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disruptionBudget(@Nullable FixedOrPercentArgs disruptionBudget) {
-            this.disruptionBudget = Output.ofNullable(disruptionBudget);
+            this.disruptionBudget = Codegen.ofNullable(disruptionBudget);
             return this;
         }
         public Builder mode(@Nullable Output<PatchRolloutMode> mode) {
@@ -88,7 +89,7 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable PatchRolloutMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public PatchRolloutArgs build() {
             return new PatchRolloutArgs(disruptionBudget, mode);

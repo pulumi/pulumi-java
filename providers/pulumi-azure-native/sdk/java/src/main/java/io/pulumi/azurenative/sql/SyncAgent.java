@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return Expiration time of the sync agent version.
      * 
      */
-    public Output<String> getExpiryTime() {
+    public Output<String> expiryTime() {
         return this.expiryTime;
     }
     /**
@@ -56,7 +57,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return If the sync agent version is up to date.
      * 
      */
-    public Output<Boolean> getIsUpToDate() {
+    public Output<Boolean> isUpToDate() {
         return this.isUpToDate;
     }
     /**
@@ -70,7 +71,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return Last alive time of the sync agent.
      * 
      */
-    public Output<String> getLastAliveTime() {
+    public Output<String> lastAliveTime() {
         return this.lastAliveTime;
     }
     /**
@@ -84,7 +85,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return State of the sync agent.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -112,7 +113,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync database in the sync agent.
      * 
      */
-    public Output</* @Nullable */ String> getSyncDatabaseId() {
+    public Output</* @Nullable */ String> syncDatabaseId() {
         return this.syncDatabaseId;
     }
     /**
@@ -126,7 +127,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -140,7 +141,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @return Version of the sync agent.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -166,7 +167,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SyncAgent(String name, SyncAgentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:SyncAgent", name, args == null ? SyncAgentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:SyncAgent", name, args == null ? SyncAgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SyncAgent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

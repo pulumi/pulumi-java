@@ -26,7 +26,7 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="number", required=true)
       private final Integer number;
 
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
 
@@ -48,7 +48,7 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
 

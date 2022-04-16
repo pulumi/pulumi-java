@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="latestRevision")
       private final @Nullable Output<Boolean> latestRevision;
 
-    public Output<Boolean> getLatestRevision() {
-        return this.latestRevision == null ? Output.empty() : this.latestRevision;
+    public Output<Boolean> latestRevision() {
+        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="percent", required=true)
       private final Output<Integer> percent;
 
-    public Output<Integer> getPercent() {
+    public Output<Integer> percent() {
         return this.percent;
     }
 
@@ -48,8 +49,8 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="revisionName")
       private final @Nullable Output<String> revisionName;
 
-    public Output<String> getRevisionName() {
-        return this.revisionName == null ? Output.empty() : this.revisionName;
+    public Output<String> revisionName() {
+        return this.revisionName == null ? Codegen.empty() : this.revisionName;
     }
 
     public ServiceTrafficGetArgs(
@@ -62,9 +63,9 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceTrafficGetArgs() {
-        this.latestRevision = Output.empty();
-        this.percent = Output.empty();
-        this.revisionName = Output.empty();
+        this.latestRevision = Codegen.empty();
+        this.percent = Codegen.empty();
+        this.revisionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = Output.ofNullable(latestRevision);
+            this.latestRevision = Codegen.ofNullable(latestRevision);
             return this;
         }
         public Builder percent(Output<Integer> percent) {
@@ -112,7 +113,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = Output.ofNullable(revisionName);
+            this.revisionName = Codegen.ofNullable(revisionName);
             return this;
         }        public ServiceTrafficGetArgs build() {
             return new ServiceTrafficGetArgs(latestRevision, percent, revisionName);

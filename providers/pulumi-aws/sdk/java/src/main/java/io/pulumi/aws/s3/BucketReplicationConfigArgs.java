@@ -6,6 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -33,7 +34,7 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -44,7 +45,7 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="rules", required=true)
       private final Output<List<BucketReplicationConfigRuleArgs>> rules;
 
-    public Output<List<BucketReplicationConfigRuleArgs>> getRules() {
+    public Output<List<BucketReplicationConfigRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -58,9 +59,9 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     }
 
     private BucketReplicationConfigArgs() {
-        this.bucket = Output.empty();
-        this.role = Output.empty();
-        this.rules = Output.empty();
+        this.bucket = Codegen.empty();
+        this.role = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

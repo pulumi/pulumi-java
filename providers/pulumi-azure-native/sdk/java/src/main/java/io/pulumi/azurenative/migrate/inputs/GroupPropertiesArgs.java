@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="groupType")
       private final @Nullable Output<String> groupType;
 
-    public Output<String> getGroupType() {
-        return this.groupType == null ? Output.empty() : this.groupType;
+    public Output<String> groupType() {
+        return this.groupType == null ? Codegen.empty() : this.groupType;
     }
 
     public GroupPropertiesArgs(@Nullable Output<String> groupType) {
@@ -34,7 +35,7 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GroupPropertiesArgs() {
-        this.groupType = Output.empty();
+        this.groupType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder groupType(@Nullable String groupType) {
-            this.groupType = Output.ofNullable(groupType);
+            this.groupType = Codegen.ofNullable(groupType);
             return this;
         }        public GroupPropertiesArgs build() {
             return new GroupPropertiesArgs(groupType);

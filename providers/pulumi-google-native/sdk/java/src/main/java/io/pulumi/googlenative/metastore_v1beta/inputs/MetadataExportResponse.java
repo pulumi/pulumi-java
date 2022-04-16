@@ -23,7 +23,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="databaseDumpType", required=true)
       private final String databaseDumpType;
 
-    public String getDatabaseDumpType() {
+    public String databaseDumpType() {
         return this.databaseDumpType;
     }
 
@@ -34,7 +34,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="destinationGcsUri", required=true)
       private final String destinationGcsUri;
 
-    public String getDestinationGcsUri() {
+    public String destinationGcsUri() {
         return this.destinationGcsUri;
     }
 
@@ -45,7 +45,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -56,7 +56,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -67,7 +67,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

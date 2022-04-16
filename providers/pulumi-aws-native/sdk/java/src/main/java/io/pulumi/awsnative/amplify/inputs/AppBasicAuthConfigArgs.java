@@ -5,6 +5,7 @@ package io.pulumi.awsnative.amplify.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableBasicAuth")
       private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> getEnableBasicAuth() {
-        return this.enableBasicAuth == null ? Output.empty() : this.enableBasicAuth;
+    public Output<Boolean> enableBasicAuth() {
+        return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
     }
 
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public AppBasicAuthConfigArgs(
@@ -46,9 +47,9 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AppBasicAuthConfigArgs() {
-        this.enableBasicAuth = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.enableBasicAuth = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
+            this.enableBasicAuth = Codegen.ofNullable(enableBasicAuth);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -88,7 +89,7 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -96,7 +97,7 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public AppBasicAuthConfigArgs build() {
             return new AppBasicAuthConfigArgs(enableBasicAuth, password, username);

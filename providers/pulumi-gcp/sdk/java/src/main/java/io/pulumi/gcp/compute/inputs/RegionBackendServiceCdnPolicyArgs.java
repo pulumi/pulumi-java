@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyCacheKeyPolicyArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs;
 import java.lang.Boolean;
@@ -27,8 +28,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="cacheKeyPolicy")
       private final @Nullable Output<RegionBackendServiceCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy;
 
-    public Output<RegionBackendServiceCdnPolicyCacheKeyPolicyArgs> getCacheKeyPolicy() {
-        return this.cacheKeyPolicy == null ? Output.empty() : this.cacheKeyPolicy;
+    public Output<RegionBackendServiceCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy() {
+        return this.cacheKeyPolicy == null ? Codegen.empty() : this.cacheKeyPolicy;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="cacheMode")
       private final @Nullable Output<String> cacheMode;
 
-    public Output<String> getCacheMode() {
-        return this.cacheMode == null ? Output.empty() : this.cacheMode;
+    public Output<String> cacheMode() {
+        return this.cacheMode == null ? Codegen.empty() : this.cacheMode;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="clientTtl")
       private final @Nullable Output<Integer> clientTtl;
 
-    public Output<Integer> getClientTtl() {
-        return this.clientTtl == null ? Output.empty() : this.clientTtl;
+    public Output<Integer> clientTtl() {
+        return this.clientTtl == null ? Codegen.empty() : this.clientTtl;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
+    public Output<Integer> defaultTtl() {
+        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> getMaxTtl() {
-        return this.maxTtl == null ? Output.empty() : this.maxTtl;
+    public Output<Integer> maxTtl() {
+        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="negativeCaching")
       private final @Nullable Output<Boolean> negativeCaching;
 
-    public Output<Boolean> getNegativeCaching() {
-        return this.negativeCaching == null ? Output.empty() : this.negativeCaching;
+    public Output<Boolean> negativeCaching() {
+        return this.negativeCaching == null ? Codegen.empty() : this.negativeCaching;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="negativeCachingPolicies")
       private final @Nullable Output<List<RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies;
 
-    public Output<List<RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs>> getNegativeCachingPolicies() {
-        return this.negativeCachingPolicies == null ? Output.empty() : this.negativeCachingPolicies;
+    public Output<List<RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies() {
+        return this.negativeCachingPolicies == null ? Codegen.empty() : this.negativeCachingPolicies;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="serveWhileStale")
       private final @Nullable Output<Integer> serveWhileStale;
 
-    public Output<Integer> getServeWhileStale() {
-        return this.serveWhileStale == null ? Output.empty() : this.serveWhileStale;
+    public Output<Integer> serveWhileStale() {
+        return this.serveWhileStale == null ? Codegen.empty() : this.serveWhileStale;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     @Import(name="signedUrlCacheMaxAgeSec")
       private final @Nullable Output<Integer> signedUrlCacheMaxAgeSec;
 
-    public Output<Integer> getSignedUrlCacheMaxAgeSec() {
-        return this.signedUrlCacheMaxAgeSec == null ? Output.empty() : this.signedUrlCacheMaxAgeSec;
+    public Output<Integer> signedUrlCacheMaxAgeSec() {
+        return this.signedUrlCacheMaxAgeSec == null ? Codegen.empty() : this.signedUrlCacheMaxAgeSec;
     }
 
     public RegionBackendServiceCdnPolicyArgs(
@@ -154,15 +155,15 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
     }
 
     private RegionBackendServiceCdnPolicyArgs() {
-        this.cacheKeyPolicy = Output.empty();
-        this.cacheMode = Output.empty();
-        this.clientTtl = Output.empty();
-        this.defaultTtl = Output.empty();
-        this.maxTtl = Output.empty();
-        this.negativeCaching = Output.empty();
-        this.negativeCachingPolicies = Output.empty();
-        this.serveWhileStale = Output.empty();
-        this.signedUrlCacheMaxAgeSec = Output.empty();
+        this.cacheKeyPolicy = Codegen.empty();
+        this.cacheMode = Codegen.empty();
+        this.clientTtl = Codegen.empty();
+        this.defaultTtl = Codegen.empty();
+        this.maxTtl = Codegen.empty();
+        this.negativeCaching = Codegen.empty();
+        this.negativeCachingPolicies = Codegen.empty();
+        this.serveWhileStale = Codegen.empty();
+        this.signedUrlCacheMaxAgeSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder cacheKeyPolicy(@Nullable RegionBackendServiceCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
-            this.cacheKeyPolicy = Output.ofNullable(cacheKeyPolicy);
+            this.cacheKeyPolicy = Codegen.ofNullable(cacheKeyPolicy);
             return this;
         }
         public Builder cacheMode(@Nullable Output<String> cacheMode) {
@@ -214,7 +215,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder cacheMode(@Nullable String cacheMode) {
-            this.cacheMode = Output.ofNullable(cacheMode);
+            this.cacheMode = Codegen.ofNullable(cacheMode);
             return this;
         }
         public Builder clientTtl(@Nullable Output<Integer> clientTtl) {
@@ -222,7 +223,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder clientTtl(@Nullable Integer clientTtl) {
-            this.clientTtl = Output.ofNullable(clientTtl);
+            this.clientTtl = Codegen.ofNullable(clientTtl);
             return this;
         }
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
@@ -230,7 +231,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Output.ofNullable(defaultTtl);
+            this.defaultTtl = Codegen.ofNullable(defaultTtl);
             return this;
         }
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
@@ -238,7 +239,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Output.ofNullable(maxTtl);
+            this.maxTtl = Codegen.ofNullable(maxTtl);
             return this;
         }
         public Builder negativeCaching(@Nullable Output<Boolean> negativeCaching) {
@@ -246,7 +247,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder negativeCaching(@Nullable Boolean negativeCaching) {
-            this.negativeCaching = Output.ofNullable(negativeCaching);
+            this.negativeCaching = Codegen.ofNullable(negativeCaching);
             return this;
         }
         public Builder negativeCachingPolicies(@Nullable Output<List<RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies) {
@@ -254,7 +255,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder negativeCachingPolicies(@Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicies) {
-            this.negativeCachingPolicies = Output.ofNullable(negativeCachingPolicies);
+            this.negativeCachingPolicies = Codegen.ofNullable(negativeCachingPolicies);
             return this;
         }
         public Builder negativeCachingPolicies(RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs... negativeCachingPolicies) {
@@ -265,7 +266,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
-            this.serveWhileStale = Output.ofNullable(serveWhileStale);
+            this.serveWhileStale = Codegen.ofNullable(serveWhileStale);
             return this;
         }
         public Builder signedUrlCacheMaxAgeSec(@Nullable Output<Integer> signedUrlCacheMaxAgeSec) {
@@ -273,7 +274,7 @@ public final class RegionBackendServiceCdnPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder signedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
-            this.signedUrlCacheMaxAgeSec = Output.ofNullable(signedUrlCacheMaxAgeSec);
+            this.signedUrlCacheMaxAgeSec = Codegen.ofNullable(signedUrlCacheMaxAgeSec);
             return this;
         }        public RegionBackendServiceCdnPolicyArgs build() {
             return new RegionBackendServiceCdnPolicyArgs(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);

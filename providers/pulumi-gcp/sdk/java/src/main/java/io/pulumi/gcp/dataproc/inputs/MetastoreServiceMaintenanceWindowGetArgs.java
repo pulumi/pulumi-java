@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends io.pulumi.re
     @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
-    public Output<String> getDayOfWeek() {
+    public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -33,7 +34,7 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends io.pulumi.re
     @Import(name="hourOfDay", required=true)
       private final Output<Integer> hourOfDay;
 
-    public Output<Integer> getHourOfDay() {
+    public Output<Integer> hourOfDay() {
         return this.hourOfDay;
     }
 
@@ -45,8 +46,8 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends io.pulumi.re
     }
 
     private MetastoreServiceMaintenanceWindowGetArgs() {
-        this.dayOfWeek = Output.empty();
-        this.hourOfDay = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.hourOfDay = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -29,7 +29,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultMetadata", required=true)
       private final AliasPathMetadataResponse defaultMetadata;
 
-    public AliasPathMetadataResponse getDefaultMetadata() {
+    public AliasPathMetadataResponse defaultMetadata() {
         return this.defaultMetadata;
     }
 
@@ -40,7 +40,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultPath")
       private final @Nullable String defaultPath;
 
-    public Optional<String> getDefaultPath() {
+    public Optional<String> defaultPath() {
         return this.defaultPath == null ? Optional.empty() : Optional.ofNullable(this.defaultPath);
     }
 
@@ -51,7 +51,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultPattern")
       private final @Nullable AliasPatternResponse defaultPattern;
 
-    public Optional<AliasPatternResponse> getDefaultPattern() {
+    public Optional<AliasPatternResponse> defaultPattern() {
         return this.defaultPattern == null ? Optional.empty() : Optional.ofNullable(this.defaultPattern);
     }
 
@@ -62,7 +62,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -73,7 +73,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="paths")
       private final @Nullable List<AliasPathResponse> paths;
 
-    public List<AliasPathResponse> getPaths() {
+    public List<AliasPathResponse> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
 
@@ -84,7 +84,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

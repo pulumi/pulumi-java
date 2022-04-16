@@ -41,21 +41,21 @@ public final class AuthenticationResponse {
      * Authentication using a custom account.
      * 
     */
-    public CustomAccountResponse getCustomAccount() {
+    public CustomAccountResponse customAccount() {
         return this.customAccount;
     }
     /**
      * Authentication using a Google account.
      * 
     */
-    public GoogleAccountResponse getGoogleAccount() {
+    public GoogleAccountResponse googleAccount() {
         return this.googleAccount;
     }
     /**
      * Authentication using Identity-Aware-Proxy (IAP).
      * 
     */
-    public IapCredentialResponse getIapCredential() {
+    public IapCredentialResponse iapCredential() {
         return this.iapCredential;
     }
 

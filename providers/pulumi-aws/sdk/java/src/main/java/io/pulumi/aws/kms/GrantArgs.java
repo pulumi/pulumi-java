@@ -6,6 +6,7 @@ package io.pulumi.aws.kms;
 import io.pulumi.aws.kms.inputs.GrantConstraintArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="constraints")
       private final @Nullable Output<List<GrantConstraintArgs>> constraints;
 
-    public Output<List<GrantConstraintArgs>> getConstraints() {
-        return this.constraints == null ? Output.empty() : this.constraints;
+    public Output<List<GrantConstraintArgs>> constraints() {
+        return this.constraints == null ? Codegen.empty() : this.constraints;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grantCreationTokens")
       private final @Nullable Output<List<String>> grantCreationTokens;
 
-    public Output<List<String>> getGrantCreationTokens() {
-        return this.grantCreationTokens == null ? Output.empty() : this.grantCreationTokens;
+    public Output<List<String>> grantCreationTokens() {
+        return this.grantCreationTokens == null ? Codegen.empty() : this.grantCreationTokens;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="granteePrincipal", required=true)
       private final Output<String> granteePrincipal;
 
-    public Output<String> getGranteePrincipal() {
+    public Output<String> granteePrincipal() {
         return this.granteePrincipal;
     }
 
@@ -57,7 +58,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -68,8 +69,8 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operations", required=true)
       private final Output<List<String>> operations;
 
-    public Output<List<String>> getOperations() {
+    public Output<List<String>> operations() {
         return this.operations;
     }
 
@@ -91,8 +92,8 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retireOnDelete")
       private final @Nullable Output<Boolean> retireOnDelete;
 
-    public Output<Boolean> getRetireOnDelete() {
-        return this.retireOnDelete == null ? Output.empty() : this.retireOnDelete;
+    public Output<Boolean> retireOnDelete() {
+        return this.retireOnDelete == null ? Codegen.empty() : this.retireOnDelete;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retiringPrincipal")
       private final @Nullable Output<String> retiringPrincipal;
 
-    public Output<String> getRetiringPrincipal() {
-        return this.retiringPrincipal == null ? Output.empty() : this.retiringPrincipal;
+    public Output<String> retiringPrincipal() {
+        return this.retiringPrincipal == null ? Codegen.empty() : this.retiringPrincipal;
     }
 
     public GrantArgs(
@@ -126,14 +127,14 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GrantArgs() {
-        this.constraints = Output.empty();
-        this.grantCreationTokens = Output.empty();
-        this.granteePrincipal = Output.empty();
-        this.keyId = Output.empty();
-        this.name = Output.empty();
-        this.operations = Output.empty();
-        this.retireOnDelete = Output.empty();
-        this.retiringPrincipal = Output.empty();
+        this.constraints = Codegen.empty();
+        this.grantCreationTokens = Codegen.empty();
+        this.granteePrincipal = Codegen.empty();
+        this.keyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operations = Codegen.empty();
+        this.retireOnDelete = Codegen.empty();
+        this.retiringPrincipal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder constraints(@Nullable List<GrantConstraintArgs> constraints) {
-            this.constraints = Output.ofNullable(constraints);
+            this.constraints = Codegen.ofNullable(constraints);
             return this;
         }
         public Builder constraints(GrantConstraintArgs... constraints) {
@@ -186,7 +187,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grantCreationTokens(@Nullable List<String> grantCreationTokens) {
-            this.grantCreationTokens = Output.ofNullable(grantCreationTokens);
+            this.grantCreationTokens = Codegen.ofNullable(grantCreationTokens);
             return this;
         }
         public Builder grantCreationTokens(String... grantCreationTokens) {
@@ -213,7 +214,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder operations(Output<List<String>> operations) {
@@ -232,7 +233,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retireOnDelete(@Nullable Boolean retireOnDelete) {
-            this.retireOnDelete = Output.ofNullable(retireOnDelete);
+            this.retireOnDelete = Codegen.ofNullable(retireOnDelete);
             return this;
         }
         public Builder retiringPrincipal(@Nullable Output<String> retiringPrincipal) {
@@ -240,7 +241,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retiringPrincipal(@Nullable String retiringPrincipal) {
-            this.retiringPrincipal = Output.ofNullable(retiringPrincipal);
+            this.retiringPrincipal = Codegen.ofNullable(retiringPrincipal);
             return this;
         }        public GrantArgs build() {
             return new GrantArgs(constraints, grantCreationTokens, granteePrincipal, keyId, name, operations, retireOnDelete, retiringPrincipal);

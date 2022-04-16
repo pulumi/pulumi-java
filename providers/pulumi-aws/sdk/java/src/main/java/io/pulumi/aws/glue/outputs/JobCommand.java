@@ -41,21 +41,21 @@ public final class JobCommand {
      * The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Python version being used to execute a Python shell job. Allowed values are 2 or 3.
      * 
     */
-    public Optional<String> getPythonVersion() {
+    public Optional<String> pythonVersion() {
         return Optional.ofNullable(this.pythonVersion);
     }
     /**
      * Specifies the S3 path to a script that executes a job.
      * 
     */
-    public String getScriptLocation() {
+    public String scriptLocation() {
         return this.scriptLocation;
     }
 

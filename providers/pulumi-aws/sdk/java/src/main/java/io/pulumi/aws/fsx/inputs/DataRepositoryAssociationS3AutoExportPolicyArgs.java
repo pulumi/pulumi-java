@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DataRepositoryAssociationS3AutoExportPolicyArgs extends io.pu
     @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
-        return this.events == null ? Output.empty() : this.events;
+    public Output<List<String>> events() {
+        return this.events == null ? Codegen.empty() : this.events;
     }
 
     public DataRepositoryAssociationS3AutoExportPolicyArgs(@Nullable Output<List<String>> events) {
@@ -31,7 +32,7 @@ public final class DataRepositoryAssociationS3AutoExportPolicyArgs extends io.pu
     }
 
     private DataRepositoryAssociationS3AutoExportPolicyArgs() {
-        this.events = Output.empty();
+        this.events = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class DataRepositoryAssociationS3AutoExportPolicyArgs extends io.pu
             return this;
         }
         public Builder events(@Nullable List<String> events) {
-            this.events = Output.ofNullable(events);
+            this.events = Codegen.ofNullable(events);
             return this;
         }
         public Builder events(String... events) {

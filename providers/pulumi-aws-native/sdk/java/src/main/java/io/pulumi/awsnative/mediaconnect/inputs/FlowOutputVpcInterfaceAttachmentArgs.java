@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
     @Import(name="vpcInterfaceName")
       private final @Nullable Output<String> vpcInterfaceName;
 
-    public Output<String> getVpcInterfaceName() {
-        return this.vpcInterfaceName == null ? Output.empty() : this.vpcInterfaceName;
+    public Output<String> vpcInterfaceName() {
+        return this.vpcInterfaceName == null ? Codegen.empty() : this.vpcInterfaceName;
     }
 
     public FlowOutputVpcInterfaceAttachmentArgs(@Nullable Output<String> vpcInterfaceName) {
@@ -34,7 +35,7 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
     }
 
     private FlowOutputVpcInterfaceAttachmentArgs() {
-        this.vpcInterfaceName = Output.empty();
+        this.vpcInterfaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
             return this;
         }
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
-            this.vpcInterfaceName = Output.ofNullable(vpcInterfaceName);
+            this.vpcInterfaceName = Codegen.ofNullable(vpcInterfaceName);
             return this;
         }        public FlowOutputVpcInterfaceAttachmentArgs build() {
             return new FlowOutputVpcInterfaceAttachmentArgs(vpcInterfaceName);

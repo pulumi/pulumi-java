@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.IdentityProviderInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="authenticationIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> authenticationIdentityInput;
 
-    public Output<IdentityProviderInputArgs> getAuthenticationIdentityInput() {
+    public Output<IdentityProviderInputArgs> authenticationIdentityInput() {
         return this.authenticationIdentityInput;
     }
 
@@ -37,8 +38,8 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="dataPlaneAuthenticationIdentityInput")
       private final @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
 
-    public Output<IdentityProviderInputArgs> getDataPlaneAuthenticationIdentityInput() {
-        return this.dataPlaneAuthenticationIdentityInput == null ? Output.empty() : this.dataPlaneAuthenticationIdentityInput;
+    public Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput() {
+        return this.dataPlaneAuthenticationIdentityInput == null ? Codegen.empty() : this.dataPlaneAuthenticationIdentityInput;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="machineId")
       private final @Nullable Output<String> machineId;
 
-    public Output<String> getMachineId() {
-        return this.machineId == null ? Output.empty() : this.machineId;
+    public Output<String> machineId() {
+        return this.machineId == null ? Codegen.empty() : this.machineId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
-    public Output<String> getMachineName() {
+    public Output<String> machineName() {
         return this.machineName;
     }
 
@@ -70,7 +71,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="resourceAccessIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
 
-    public Output<IdentityProviderInputArgs> getResourceAccessIdentityInput() {
+    public Output<IdentityProviderInputArgs> resourceAccessIdentityInput() {
         return this.resourceAccessIdentityInput;
     }
 
@@ -88,11 +89,11 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     }
 
     private AddRecoveryServicesProviderInputPropertiesArgs() {
-        this.authenticationIdentityInput = Output.empty();
-        this.dataPlaneAuthenticationIdentityInput = Output.empty();
-        this.machineId = Output.empty();
-        this.machineName = Output.empty();
-        this.resourceAccessIdentityInput = Output.empty();
+        this.authenticationIdentityInput = Codegen.empty();
+        this.dataPlaneAuthenticationIdentityInput = Codegen.empty();
+        this.machineId = Codegen.empty();
+        this.machineName = Codegen.empty();
+        this.resourceAccessIdentityInput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
             return this;
         }
         public Builder dataPlaneAuthenticationIdentityInput(@Nullable IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
-            this.dataPlaneAuthenticationIdentityInput = Output.ofNullable(dataPlaneAuthenticationIdentityInput);
+            this.dataPlaneAuthenticationIdentityInput = Codegen.ofNullable(dataPlaneAuthenticationIdentityInput);
             return this;
         }
         public Builder machineId(@Nullable Output<String> machineId) {
@@ -144,7 +145,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
             return this;
         }
         public Builder machineId(@Nullable String machineId) {
-            this.machineId = Output.ofNullable(machineId);
+            this.machineId = Codegen.ofNullable(machineId);
             return this;
         }
         public Builder machineName(Output<String> machineName) {

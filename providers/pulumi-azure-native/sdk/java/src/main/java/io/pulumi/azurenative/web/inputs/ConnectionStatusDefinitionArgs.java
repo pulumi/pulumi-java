@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ConnectionErrorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="error")
       private final @Nullable Output<ConnectionErrorArgs> error;
 
-    public Output<ConnectionErrorArgs> getError() {
-        return this.error == null ? Output.empty() : this.error;
+    public Output<ConnectionErrorArgs> error() {
+        return this.error == null ? Codegen.empty() : this.error;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public ConnectionStatusDefinitionArgs(
@@ -62,9 +63,9 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
     }
 
     private ConnectionStatusDefinitionArgs() {
-        this.error = Output.empty();
-        this.status = Output.empty();
-        this.target = Output.empty();
+        this.error = Codegen.empty();
+        this.status = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder error(@Nullable ConnectionErrorArgs error) {
-            this.error = Output.ofNullable(error);
+            this.error = Codegen.ofNullable(error);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -104,7 +105,7 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -112,7 +113,7 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public ConnectionStatusDefinitionArgs build() {
             return new ConnectionStatusDefinitionArgs(error, status, target);

@@ -5,6 +5,7 @@ package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="bitDepth")
       private final @Nullable Output<String> bitDepth;
 
-    public Output<String> getBitDepth() {
-        return this.bitDepth == null ? Output.empty() : this.bitDepth;
+    public Output<String> bitDepth() {
+        return this.bitDepth == null ? Codegen.empty() : this.bitDepth;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="bitOrder")
       private final @Nullable Output<String> bitOrder;
 
-    public Output<String> getBitOrder() {
-        return this.bitOrder == null ? Output.empty() : this.bitOrder;
+    public Output<String> bitOrder() {
+        return this.bitOrder == null ? Codegen.empty() : this.bitOrder;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+    public Output<String> profile() {
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="signed")
       private final @Nullable Output<String> signed;
 
-    public Output<String> getSigned() {
-        return this.signed == null ? Output.empty() : this.signed;
+    public Output<String> signed() {
+        return this.signed == null ? Codegen.empty() : this.signed;
     }
 
     public PresetAudioCodecOptionsGetArgs(
@@ -70,10 +71,10 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     }
 
     private PresetAudioCodecOptionsGetArgs() {
-        this.bitDepth = Output.empty();
-        this.bitOrder = Output.empty();
-        this.profile = Output.empty();
-        this.signed = Output.empty();
+        this.bitDepth = Codegen.empty();
+        this.bitOrder = Codegen.empty();
+        this.profile = Codegen.empty();
+        this.signed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder bitDepth(@Nullable String bitDepth) {
-            this.bitDepth = Output.ofNullable(bitDepth);
+            this.bitDepth = Codegen.ofNullable(bitDepth);
             return this;
         }
         public Builder bitOrder(@Nullable Output<String> bitOrder) {
@@ -115,7 +116,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder bitOrder(@Nullable String bitOrder) {
-            this.bitOrder = Output.ofNullable(bitOrder);
+            this.bitOrder = Codegen.ofNullable(bitOrder);
             return this;
         }
         public Builder profile(@Nullable Output<String> profile) {
@@ -123,7 +124,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder profile(@Nullable String profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder signed(@Nullable Output<String> signed) {
@@ -131,7 +132,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder signed(@Nullable String signed) {
-            this.signed = Output.ofNullable(signed);
+            this.signed = Codegen.ofNullable(signed);
             return this;
         }        public PresetAudioCodecOptionsGetArgs build() {
             return new PresetAudioCodecOptionsGetArgs(bitDepth, bitOrder, profile, signed);

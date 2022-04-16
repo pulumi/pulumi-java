@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     @Import(name="postbackData")
       private final @Nullable Output<String> postbackData;
 
-    public Output<String> getPostbackData() {
-        return this.postbackData == null ? Output.empty() : this.postbackData;
+    public Output<String> postbackData() {
+        return this.postbackData == null ? Codegen.empty() : this.postbackData;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<String> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs() {
-        this.postbackData = Output.empty();
-        this.text = Output.empty();
+        this.postbackData = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
             return this;
         }
         public Builder postbackData(@Nullable String postbackData) {
-            this.postbackData = Output.ofNullable(postbackData);
+            this.postbackData = Codegen.ofNullable(postbackData);
             return this;
         }
         public Builder text(@Nullable Output<String> text) {
@@ -87,7 +88,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
             return this;
         }
         public Builder text(@Nullable String text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(postbackData, text);

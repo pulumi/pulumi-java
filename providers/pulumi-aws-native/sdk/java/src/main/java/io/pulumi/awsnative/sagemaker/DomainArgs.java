@@ -9,6 +9,7 @@ import io.pulumi.awsnative.sagemaker.inputs.DomainTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainUserSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appNetworkAccessType")
       private final @Nullable Output<DomainAppNetworkAccessType> appNetworkAccessType;
 
-    public Output<DomainAppNetworkAccessType> getAppNetworkAccessType() {
-        return this.appNetworkAccessType == null ? Output.empty() : this.appNetworkAccessType;
+    public Output<DomainAppNetworkAccessType> appNetworkAccessType() {
+        return this.appNetworkAccessType == null ? Codegen.empty() : this.appNetworkAccessType;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authMode", required=true)
       private final Output<DomainAuthMode> authMode;
 
-    public Output<DomainAuthMode> getAuthMode() {
+    public Output<DomainAuthMode> authMode() {
         return this.authMode;
     }
 
@@ -48,7 +49,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultUserSettings", required=true)
       private final Output<DomainUserSettingsArgs> defaultUserSettings;
 
-    public Output<DomainUserSettingsArgs> getDefaultUserSettings() {
+    public Output<DomainUserSettingsArgs> defaultUserSettings() {
         return this.defaultUserSettings;
     }
 
@@ -59,8 +60,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -92,8 +93,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Output<List<DomainTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DomainTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -127,14 +128,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.appNetworkAccessType = Output.empty();
-        this.authMode = Output.empty();
-        this.defaultUserSettings = Output.empty();
-        this.domainName = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.appNetworkAccessType = Codegen.empty();
+        this.authMode = Codegen.empty();
+        this.defaultUserSettings = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appNetworkAccessType(@Nullable DomainAppNetworkAccessType appNetworkAccessType) {
-            this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
+            this.appNetworkAccessType = Codegen.ofNullable(appNetworkAccessType);
             return this;
         }
         public Builder authMode(Output<DomainAuthMode> authMode) {
@@ -200,7 +201,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -208,7 +209,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder subnetIds(Output<List<String>> subnetIds) {
@@ -227,7 +228,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DomainTagArgs... tags) {

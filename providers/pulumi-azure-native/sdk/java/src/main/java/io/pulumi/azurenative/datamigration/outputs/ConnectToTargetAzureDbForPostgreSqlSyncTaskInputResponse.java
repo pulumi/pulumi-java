@@ -32,14 +32,14 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
      * Connection information for source PostgreSQL server
      * 
     */
-    public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
+    public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for target Azure Database for PostgreSQL server
      * 
     */
-    public PostgreSqlConnectionInfoResponse getTargetConnectionInfo() {
+    public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

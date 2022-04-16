@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.BuilderConfigArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.MetadataArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.RecipeArgs;
@@ -25,8 +26,8 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="builderConfig")
       private final @Nullable Output<BuilderConfigArgs> builderConfig;
 
-    public Output<BuilderConfigArgs> getBuilderConfig() {
-        return this.builderConfig == null ? Output.empty() : this.builderConfig;
+    public Output<BuilderConfigArgs> builderConfig() {
+        return this.builderConfig == null ? Codegen.empty() : this.builderConfig;
     }
 
     /**
@@ -36,15 +37,15 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="materials")
       private final @Nullable Output<List<String>> materials;
 
-    public Output<List<String>> getMaterials() {
-        return this.materials == null ? Output.empty() : this.materials;
+    public Output<List<String>> materials() {
+        return this.materials == null ? Codegen.empty() : this.materials;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<MetadataArgs> metadata;
 
-    public Output<MetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<MetadataArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="recipe")
       private final @Nullable Output<RecipeArgs> recipe;
 
-    public Output<RecipeArgs> getRecipe() {
-        return this.recipe == null ? Output.empty() : this.recipe;
+    public Output<RecipeArgs> recipe() {
+        return this.recipe == null ? Codegen.empty() : this.recipe;
     }
 
     public InTotoProvenanceArgs(
@@ -70,10 +71,10 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InTotoProvenanceArgs() {
-        this.builderConfig = Output.empty();
-        this.materials = Output.empty();
-        this.metadata = Output.empty();
-        this.recipe = Output.empty();
+        this.builderConfig = Codegen.empty();
+        this.materials = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.recipe = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder builderConfig(@Nullable BuilderConfigArgs builderConfig) {
-            this.builderConfig = Output.ofNullable(builderConfig);
+            this.builderConfig = Codegen.ofNullable(builderConfig);
             return this;
         }
         public Builder materials(@Nullable Output<List<String>> materials) {
@@ -115,7 +116,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder materials(@Nullable List<String> materials) {
-            this.materials = Output.ofNullable(materials);
+            this.materials = Codegen.ofNullable(materials);
             return this;
         }
         public Builder materials(String... materials) {
@@ -126,7 +127,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metadata(@Nullable MetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder recipe(@Nullable Output<RecipeArgs> recipe) {
@@ -134,7 +135,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder recipe(@Nullable RecipeArgs recipe) {
-            this.recipe = Output.ofNullable(recipe);
+            this.recipe = Codegen.ofNullable(recipe);
             return this;
         }        public InTotoProvenanceArgs build() {
             return new InTotoProvenanceArgs(builderConfig, materials, metadata, recipe);

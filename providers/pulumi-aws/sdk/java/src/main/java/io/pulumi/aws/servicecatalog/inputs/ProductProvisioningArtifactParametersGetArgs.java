@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
     @Import(name="disableTemplateValidation")
       private final @Nullable Output<Boolean> disableTemplateValidation;
 
-    public Output<Boolean> getDisableTemplateValidation() {
-        return this.disableTemplateValidation == null ? Output.empty() : this.disableTemplateValidation;
+    public Output<Boolean> disableTemplateValidation() {
+        return this.disableTemplateValidation == null ? Codegen.empty() : this.disableTemplateValidation;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
     @Import(name="templatePhysicalId")
       private final @Nullable Output<String> templatePhysicalId;
 
-    public Output<String> getTemplatePhysicalId() {
-        return this.templatePhysicalId == null ? Output.empty() : this.templatePhysicalId;
+    public Output<String> templatePhysicalId() {
+        return this.templatePhysicalId == null ? Codegen.empty() : this.templatePhysicalId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
     @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
-    public Output<String> getTemplateUrl() {
-        return this.templateUrl == null ? Output.empty() : this.templateUrl;
+    public Output<String> templateUrl() {
+        return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ProductProvisioningArtifactParametersGetArgs(
@@ -97,12 +98,12 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
     }
 
     private ProductProvisioningArtifactParametersGetArgs() {
-        this.description = Output.empty();
-        this.disableTemplateValidation = Output.empty();
-        this.name = Output.empty();
-        this.templatePhysicalId = Output.empty();
-        this.templateUrl = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.disableTemplateValidation = Codegen.empty();
+        this.name = Codegen.empty();
+        this.templatePhysicalId = Codegen.empty();
+        this.templateUrl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disableTemplateValidation(@Nullable Output<Boolean> disableTemplateValidation) {
@@ -148,7 +149,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
             return this;
         }
         public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
-            this.disableTemplateValidation = Output.ofNullable(disableTemplateValidation);
+            this.disableTemplateValidation = Codegen.ofNullable(disableTemplateValidation);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -156,7 +157,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder templatePhysicalId(@Nullable Output<String> templatePhysicalId) {
@@ -164,7 +165,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
             return this;
         }
         public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
-            this.templatePhysicalId = Output.ofNullable(templatePhysicalId);
+            this.templatePhysicalId = Codegen.ofNullable(templatePhysicalId);
             return this;
         }
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
@@ -172,7 +173,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
             return this;
         }
         public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Output.ofNullable(templateUrl);
+            this.templateUrl = Codegen.ofNullable(templateUrl);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -180,7 +181,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ProductProvisioningArtifactParametersGetArgs build() {
             return new ProductProvisioningArtifactParametersGetArgs(description, disableTemplateValidation, name, templatePhysicalId, templateUrl, type);

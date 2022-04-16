@@ -14,6 +14,7 @@ import io.pulumi.aws.appsync.outputs.GraphQLApiUserPoolConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return One or more additional authentication providers for the GraphqlApi. Defined below.
      * 
      */
-    public Output</* @Nullable */ List<GraphQLApiAdditionalAuthenticationProvider>> getAdditionalAuthenticationProviders() {
+    public Output</* @Nullable */ List<GraphQLApiAdditionalAuthenticationProvider>> additionalAuthenticationProviders() {
         return this.additionalAuthenticationProviders;
     }
     /**
@@ -61,7 +62,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return The ARN
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -75,7 +76,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
      * 
      */
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
     /**
@@ -89,7 +90,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return Nested argument containing Lambda authorizer configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiLambdaAuthorizerConfig> getLambdaAuthorizerConfig() {
+    public Output</* @Nullable */ GraphQLApiLambdaAuthorizerConfig> lambdaAuthorizerConfig() {
         return this.lambdaAuthorizerConfig;
     }
     /**
@@ -103,7 +104,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return Nested argument containing logging configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiLogConfig> getLogConfig() {
+    public Output</* @Nullable */ GraphQLApiLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -117,7 +118,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return A user-supplied name for the GraphqlApi.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return Nested argument containing OpenID Connect configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiOpenidConnectConfig> getOpenidConnectConfig() {
+    public Output</* @Nullable */ GraphQLApiOpenidConnectConfig> openidConnectConfig() {
         return this.openidConnectConfig;
     }
     /**
@@ -145,7 +146,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
      * 
      */
-    public Output</* @Nullable */ String> getSchema() {
+    public Output</* @Nullable */ String> schema() {
         return this.schema;
     }
     /**
@@ -159,7 +160,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -173,7 +174,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -187,7 +188,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return Map of URIs associated with the APIE.g., `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
      * 
      */
-    public Output<Map<String,String>> getUris() {
+    public Output<Map<String,String>> uris() {
         return this.uris;
     }
     /**
@@ -201,7 +202,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return The Amazon Cognito User Pool configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiUserPoolConfig> getUserPoolConfig() {
+    public Output</* @Nullable */ GraphQLApiUserPoolConfig> userPoolConfig() {
         return this.userPoolConfig;
     }
     /**
@@ -215,7 +216,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @return Whether tracing with X-ray is enabled. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getXrayEnabled() {
+    public Output</* @Nullable */ Boolean> xrayEnabled() {
         return this.xrayEnabled;
     }
 
@@ -241,7 +242,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GraphQLApi(String name, GraphQLApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/graphQLApi:GraphQLApi", name, args == null ? GraphQLApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/graphQLApi:GraphQLApi", name, args == null ? GraphQLApiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GraphQLApi(String name, Output<String> id, @Nullable GraphQLApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

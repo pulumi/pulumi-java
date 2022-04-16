@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ModelExplainabilityJobDefinitionConstraintsResourceArgs exten
     @Import(name="s3Uri")
       private final @Nullable Output<String> s3Uri;
 
-    public Output<String> getS3Uri() {
-        return this.s3Uri == null ? Output.empty() : this.s3Uri;
+    public Output<String> s3Uri() {
+        return this.s3Uri == null ? Codegen.empty() : this.s3Uri;
     }
 
     public ModelExplainabilityJobDefinitionConstraintsResourceArgs(@Nullable Output<String> s3Uri) {
@@ -34,7 +35,7 @@ public final class ModelExplainabilityJobDefinitionConstraintsResourceArgs exten
     }
 
     private ModelExplainabilityJobDefinitionConstraintsResourceArgs() {
-        this.s3Uri = Output.empty();
+        this.s3Uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ModelExplainabilityJobDefinitionConstraintsResourceArgs exten
             return this;
         }
         public Builder s3Uri(@Nullable String s3Uri) {
-            this.s3Uri = Output.ofNullable(s3Uri);
+            this.s3Uri = Codegen.ofNullable(s3Uri);
             return this;
         }        public ModelExplainabilityJobDefinitionConstraintsResourceArgs build() {
             return new ModelExplainabilityJobDefinitionConstraintsResourceArgs(s3Uri);

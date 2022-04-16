@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
-        return this.connectionId == null ? Output.empty() : this.connectionId;
+    public Output<String> connectionId() {
+        return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="connectionsBandwidth")
       private final @Nullable Output<String> connectionsBandwidth;
 
-    public Output<String> getConnectionsBandwidth() {
-        return this.connectionsBandwidth == null ? Output.empty() : this.connectionsBandwidth;
+    public Output<String> connectionsBandwidth() {
+        return this.connectionsBandwidth == null ? Codegen.empty() : this.connectionsBandwidth;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -67,15 +68,15 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="hasLogicalRedundancy")
       private final @Nullable Output<String> hasLogicalRedundancy;
 
-    public Output<String> getHasLogicalRedundancy() {
-        return this.hasLogicalRedundancy == null ? Output.empty() : this.hasLogicalRedundancy;
+    public Output<String> hasLogicalRedundancy() {
+        return this.hasLogicalRedundancy == null ? Codegen.empty() : this.hasLogicalRedundancy;
     }
 
     @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> getJumboFrameCapable() {
-        return this.jumboFrameCapable == null ? Output.empty() : this.jumboFrameCapable;
+    public Output<Boolean> jumboFrameCapable() {
+        return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
+    public Output<String> ownerAccountId() {
+        return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+    public Output<String> providerName() {
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public LinkAggregationGroupState(
@@ -172,18 +173,18 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     }
 
     private LinkAggregationGroupState() {
-        this.arn = Output.empty();
-        this.connectionId = Output.empty();
-        this.connectionsBandwidth = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.hasLogicalRedundancy = Output.empty();
-        this.jumboFrameCapable = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.ownerAccountId = Output.empty();
-        this.providerName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.connectionsBandwidth = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.hasLogicalRedundancy = Codegen.empty();
+        this.jumboFrameCapable = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerAccountId = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder connectionId(@Nullable Output<String> connectionId) {
@@ -241,7 +242,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Output.ofNullable(connectionId);
+            this.connectionId = Codegen.ofNullable(connectionId);
             return this;
         }
         public Builder connectionsBandwidth(@Nullable Output<String> connectionsBandwidth) {
@@ -249,7 +250,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionsBandwidth(@Nullable String connectionsBandwidth) {
-            this.connectionsBandwidth = Output.ofNullable(connectionsBandwidth);
+            this.connectionsBandwidth = Codegen.ofNullable(connectionsBandwidth);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -257,7 +258,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
@@ -265,7 +266,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
-            this.hasLogicalRedundancy = Output.ofNullable(hasLogicalRedundancy);
+            this.hasLogicalRedundancy = Codegen.ofNullable(hasLogicalRedundancy);
             return this;
         }
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
@@ -273,7 +274,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
-            this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
+            this.jumboFrameCapable = Codegen.ofNullable(jumboFrameCapable);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -281,7 +282,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -289,7 +290,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
@@ -297,7 +298,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Output.ofNullable(ownerAccountId);
+            this.ownerAccountId = Codegen.ofNullable(ownerAccountId);
             return this;
         }
         public Builder providerName(@Nullable Output<String> providerName) {
@@ -305,7 +306,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -313,7 +314,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -321,7 +322,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public LinkAggregationGroupState build() {
             return new LinkAggregationGroupState(arn, connectionId, connectionsBandwidth, forceDestroy, hasLogicalRedundancy, jumboFrameCapable, location, name, ownerAccountId, providerName, tags, tagsAll);

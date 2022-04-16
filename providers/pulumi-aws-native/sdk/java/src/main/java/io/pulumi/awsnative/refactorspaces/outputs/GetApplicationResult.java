@@ -49,35 +49,35 @@ public final class GetApplicationResult {
         this.vpcLinkId = vpcLinkId;
     }
 
-    public Optional<String> getApiGatewayId() {
+    public Optional<String> apiGatewayId() {
         return Optional.ofNullable(this.apiGatewayId);
     }
-    public Optional<String> getApplicationIdentifier() {
+    public Optional<String> applicationIdentifier() {
         return Optional.ofNullable(this.applicationIdentifier);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getNlbArn() {
+    public Optional<String> nlbArn() {
         return Optional.ofNullable(this.nlbArn);
     }
-    public Optional<String> getNlbName() {
+    public Optional<String> nlbName() {
         return Optional.ofNullable(this.nlbName);
     }
-    public Optional<String> getProxyUrl() {
+    public Optional<String> proxyUrl() {
         return Optional.ofNullable(this.proxyUrl);
     }
-    public Optional<String> getStageName() {
+    public Optional<String> stageName() {
         return Optional.ofNullable(this.stageName);
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
     */
-    public List<ApplicationTag> getTags() {
+    public List<ApplicationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getVpcLinkId() {
+    public Optional<String> vpcLinkId() {
         return Optional.ofNullable(this.vpcLinkId);
     }
 

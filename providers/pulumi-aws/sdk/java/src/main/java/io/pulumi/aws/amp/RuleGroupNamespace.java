@@ -9,6 +9,7 @@ import io.pulumi.aws.amp.inputs.RuleGroupNamespaceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
      * @return the rule group namespace data that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-Ruler.html).
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -53,7 +54,7 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
      * @return The name of the rule group namespace
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -67,7 +68,7 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
      * @return The id of the prometheus workspace the rule group namespace should be linked to
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -93,7 +94,7 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuleGroupNamespace(String name, RuleGroupNamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amp/ruleGroupNamespace:RuleGroupNamespace", name, args == null ? RuleGroupNamespaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:amp/ruleGroupNamespace:RuleGroupNamespace", name, args == null ? RuleGroupNamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RuleGroupNamespace(String name, Output<String> id, @Nullable RuleGroupNamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.NodePlacementPolicyType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="policy")
       private final @Nullable Output<NodePlacementPolicyType> policy;
 
-    public Output<NodePlacementPolicyType> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<NodePlacementPolicyType> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public NodePlacementConfigurationArgs(@Nullable Output<NodePlacementPolicyType> policy) {
@@ -34,7 +35,7 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private NodePlacementConfigurationArgs() {
-        this.policy = Output.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder policy(@Nullable NodePlacementPolicyType policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public NodePlacementConfigurationArgs build() {
             return new NodePlacementConfigurationArgs(policy);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     @Import(name="defaultValue", required=true)
       private final Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue;
     }
 
@@ -31,7 +32,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     @Import(name="dimensionName", required=true)
       private final Output<String> dimensionName;
 
-    public Output<String> getDimensionName() {
+    public Output<String> dimensionName() {
         return this.dimensionName;
     }
 
@@ -42,7 +43,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     @Import(name="valueSource", required=true)
       private final Output<String> valueSource;
 
-    public Output<String> getValueSource() {
+    public Output<String> valueSource() {
         return this.valueSource;
     }
 
@@ -56,9 +57,9 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     }
 
     private EventDestinationCloudwatchDestinationGetArgs() {
-        this.defaultValue = Output.empty();
-        this.dimensionName = Output.empty();
-        this.valueSource = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.dimensionName = Codegen.empty();
+        this.valueSource = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.HPAScalingPolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="policies")
       private final @Nullable Output<List<HPAScalingPolicyArgs>> policies;
 
-    public Output<List<HPAScalingPolicyArgs>> getPolicies() {
-        return this.policies == null ? Output.empty() : this.policies;
+    public Output<List<HPAScalingPolicyArgs>> policies() {
+        return this.policies == null ? Codegen.empty() : this.policies;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="selectPolicy")
       private final @Nullable Output<String> selectPolicy;
 
-    public Output<String> getSelectPolicy() {
-        return this.selectPolicy == null ? Output.empty() : this.selectPolicy;
+    public Output<String> selectPolicy() {
+        return this.selectPolicy == null ? Codegen.empty() : this.selectPolicy;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="stabilizationWindowSeconds")
       private final @Nullable Output<Integer> stabilizationWindowSeconds;
 
-    public Output<Integer> getStabilizationWindowSeconds() {
-        return this.stabilizationWindowSeconds == null ? Output.empty() : this.stabilizationWindowSeconds;
+    public Output<Integer> stabilizationWindowSeconds() {
+        return this.stabilizationWindowSeconds == null ? Codegen.empty() : this.stabilizationWindowSeconds;
     }
 
     public HPAScalingRulesArgs(
@@ -64,9 +65,9 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private HPAScalingRulesArgs() {
-        this.policies = Output.empty();
-        this.selectPolicy = Output.empty();
-        this.stabilizationWindowSeconds = Output.empty();
+        this.policies = Codegen.empty();
+        this.selectPolicy = Codegen.empty();
+        this.stabilizationWindowSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policies(@Nullable List<HPAScalingPolicyArgs> policies) {
-            this.policies = Output.ofNullable(policies);
+            this.policies = Codegen.ofNullable(policies);
             return this;
         }
         public Builder policies(HPAScalingPolicyArgs... policies) {
@@ -109,7 +110,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selectPolicy(@Nullable String selectPolicy) {
-            this.selectPolicy = Output.ofNullable(selectPolicy);
+            this.selectPolicy = Codegen.ofNullable(selectPolicy);
             return this;
         }
         public Builder stabilizationWindowSeconds(@Nullable Output<Integer> stabilizationWindowSeconds) {
@@ -117,7 +118,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder stabilizationWindowSeconds(@Nullable Integer stabilizationWindowSeconds) {
-            this.stabilizationWindowSeconds = Output.ofNullable(stabilizationWindowSeconds);
+            this.stabilizationWindowSeconds = Codegen.ofNullable(stabilizationWindowSeconds);
             return this;
         }        public HPAScalingRulesArgs build() {
             return new HPAScalingRulesArgs(policies, selectPolicy, stabilizationWindowSeconds);

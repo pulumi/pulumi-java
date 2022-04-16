@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.RegexMatchSetRegexMatchTupleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="regexMatchTuples")
       private final @Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples;
 
-    public Output<List<RegexMatchSetRegexMatchTupleGetArgs>> getRegexMatchTuples() {
-        return this.regexMatchTuples == null ? Output.empty() : this.regexMatchTuples;
+    public Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples() {
+        return this.regexMatchTuples == null ? Codegen.empty() : this.regexMatchTuples;
     }
 
     public RegexMatchSetState(
@@ -59,9 +60,9 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegexMatchSetState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.regexMatchTuples = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.regexMatchTuples = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -101,7 +102,7 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder regexMatchTuples(@Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples) {
@@ -109,7 +110,7 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regexMatchTuples(@Nullable List<RegexMatchSetRegexMatchTupleGetArgs> regexMatchTuples) {
-            this.regexMatchTuples = Output.ofNullable(regexMatchTuples);
+            this.regexMatchTuples = Codegen.ofNullable(regexMatchTuples);
             return this;
         }
         public Builder regexMatchTuples(RegexMatchSetRegexMatchTupleGetArgs... regexMatchTuples) {

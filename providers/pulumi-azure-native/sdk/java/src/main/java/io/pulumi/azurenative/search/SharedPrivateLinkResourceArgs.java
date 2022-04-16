@@ -6,6 +6,7 @@ package io.pulumi.azurenative.search;
 import io.pulumi.azurenative.search.inputs.SharedPrivateLinkResourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="properties")
       private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
 
-    public Output<SharedPrivateLinkResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<SharedPrivateLinkResourcePropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +45,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="searchServiceName", required=true)
       private final Output<String> searchServiceName;
 
-    public Output<String> getSearchServiceName() {
+    public Output<String> searchServiceName() {
         return this.searchServiceName;
     }
 
@@ -55,8 +56,8 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="sharedPrivateLinkResourceName")
       private final @Nullable Output<String> sharedPrivateLinkResourceName;
 
-    public Output<String> getSharedPrivateLinkResourceName() {
-        return this.sharedPrivateLinkResourceName == null ? Output.empty() : this.sharedPrivateLinkResourceName;
+    public Output<String> sharedPrivateLinkResourceName() {
+        return this.sharedPrivateLinkResourceName == null ? Codegen.empty() : this.sharedPrivateLinkResourceName;
     }
 
     public SharedPrivateLinkResourceArgs(
@@ -71,10 +72,10 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     }
 
     private SharedPrivateLinkResourceArgs() {
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.searchServiceName = Output.empty();
-        this.sharedPrivateLinkResourceName = Output.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.searchServiceName = Codegen.empty();
+        this.sharedPrivateLinkResourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder properties(@Nullable SharedPrivateLinkResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -132,7 +133,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
-            this.sharedPrivateLinkResourceName = Output.ofNullable(sharedPrivateLinkResourceName);
+            this.sharedPrivateLinkResourceName = Codegen.ofNullable(sharedPrivateLinkResourceName);
             return this;
         }        public SharedPrivateLinkResourceArgs build() {
             return new SharedPrivateLinkResourceArgs(properties, resourceGroupName, searchServiceName, sharedPrivateLinkResourceName);

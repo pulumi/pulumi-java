@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
     @Import(name="securityGroupIdLists")
       private final @Nullable Output<List<String>> securityGroupIdLists;
 
-    public Output<List<String>> getSecurityGroupIdLists() {
-        return this.securityGroupIdLists == null ? Output.empty() : this.securityGroupIdLists;
+    public Output<List<String>> securityGroupIdLists() {
+        return this.securityGroupIdLists == null ? Codegen.empty() : this.securityGroupIdLists;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public ConnectionPhysicalConnectionRequirementsGetArgs(
@@ -58,9 +59,9 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
     }
 
     private ConnectionPhysicalConnectionRequirementsGetArgs() {
-        this.availabilityZone = Output.empty();
-        this.securityGroupIdLists = Output.empty();
-        this.subnetId = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.securityGroupIdLists = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder securityGroupIdLists(@Nullable Output<List<String>> securityGroupIdLists) {
@@ -100,7 +101,7 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
             return this;
         }
         public Builder securityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
-            this.securityGroupIdLists = Output.ofNullable(securityGroupIdLists);
+            this.securityGroupIdLists = Codegen.ofNullable(securityGroupIdLists);
             return this;
         }
         public Builder securityGroupIdLists(String... securityGroupIdLists) {
@@ -111,7 +112,7 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends io.pu
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public ConnectionPhysicalConnectionRequirementsGetArgs build() {
             return new ConnectionPhysicalConnectionRequirementsGetArgs(availabilityZone, securityGroupIdLists, subnetId);

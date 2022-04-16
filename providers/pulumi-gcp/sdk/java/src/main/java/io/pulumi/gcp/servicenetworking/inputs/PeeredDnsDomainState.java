@@ -5,6 +5,7 @@ package io.pulumi.gcp.servicenetworking.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="dnsSuffix")
       private final @Nullable Output<String> dnsSuffix;
 
-    public Output<String> getDnsSuffix() {
-        return this.dnsSuffix == null ? Output.empty() : this.dnsSuffix;
+    public Output<String> dnsSuffix() {
+        return this.dnsSuffix == null ? Codegen.empty() : this.dnsSuffix;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public PeeredDnsDomainState(
@@ -96,12 +97,12 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
     }
 
     private PeeredDnsDomainState() {
-        this.dnsSuffix = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.parent = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.dnsSuffix = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dnsSuffix(@Nullable String dnsSuffix) {
-            this.dnsSuffix = Output.ofNullable(dnsSuffix);
+            this.dnsSuffix = Codegen.ofNullable(dnsSuffix);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -147,7 +148,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -155,7 +156,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -163,7 +164,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -171,7 +172,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -179,7 +180,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public PeeredDnsDomainState build() {
             return new PeeredDnsDomainState(dnsSuffix, name, network, parent, project, service);

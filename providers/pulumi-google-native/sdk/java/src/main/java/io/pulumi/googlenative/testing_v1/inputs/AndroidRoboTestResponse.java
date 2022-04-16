@@ -28,7 +28,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appApk", required=true)
       private final FileReferenceResponse appApk;
 
-    public FileReferenceResponse getAppApk() {
+    public FileReferenceResponse appApk() {
         return this.appApk;
     }
 
@@ -39,7 +39,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appBundle", required=true)
       private final AppBundleResponse appBundle;
 
-    public AppBundleResponse getAppBundle() {
+    public AppBundleResponse appBundle() {
         return this.appBundle;
     }
 
@@ -50,7 +50,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appInitialActivity", required=true)
       private final String appInitialActivity;
 
-    public String getAppInitialActivity() {
+    public String appInitialActivity() {
         return this.appInitialActivity;
     }
 
@@ -61,7 +61,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appPackageId", required=true)
       private final String appPackageId;
 
-    public String getAppPackageId() {
+    public String appPackageId() {
         return this.appPackageId;
     }
 
@@ -72,7 +72,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="roboDirectives", required=true)
       private final List<RoboDirectiveResponse> roboDirectives;
 
-    public List<RoboDirectiveResponse> getRoboDirectives() {
+    public List<RoboDirectiveResponse> roboDirectives() {
         return this.roboDirectives;
     }
 
@@ -83,7 +83,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="roboMode", required=true)
       private final String roboMode;
 
-    public String getRoboMode() {
+    public String roboMode() {
         return this.roboMode;
     }
 
@@ -94,7 +94,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="roboScript", required=true)
       private final FileReferenceResponse roboScript;
 
-    public FileReferenceResponse getRoboScript() {
+    public FileReferenceResponse roboScript() {
         return this.roboScript;
     }
 
@@ -105,7 +105,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="startingIntents", required=true)
       private final List<RoboStartingIntentResponse> startingIntents;
 
-    public List<RoboStartingIntentResponse> getStartingIntents() {
+    public List<RoboStartingIntentResponse> startingIntents() {
         return this.startingIntents;
     }
 

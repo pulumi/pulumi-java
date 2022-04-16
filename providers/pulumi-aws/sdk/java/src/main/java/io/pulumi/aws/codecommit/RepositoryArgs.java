@@ -5,6 +5,7 @@ package io.pulumi.aws.codecommit;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultBranch")
       private final @Nullable Output<String> defaultBranch;
 
-    public Output<String> getDefaultBranch() {
-        return this.defaultBranch == null ? Output.empty() : this.defaultBranch;
+    public Output<String> defaultBranch() {
+        return this.defaultBranch == null ? Codegen.empty() : this.defaultBranch;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -55,8 +56,8 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RepositoryArgs(
@@ -71,10 +72,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.defaultBranch = Output.empty();
-        this.description = Output.empty();
-        this.repositoryName = Output.empty();
-        this.tags = Output.empty();
+        this.defaultBranch = Codegen.empty();
+        this.description = Codegen.empty();
+        this.repositoryName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultBranch(@Nullable String defaultBranch) {
-            this.defaultBranch = Output.ofNullable(defaultBranch);
+            this.defaultBranch = Codegen.ofNullable(defaultBranch);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -116,7 +117,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder repositoryName(Output<String> repositoryName) {
@@ -132,7 +133,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RepositoryArgs build() {
             return new RepositoryArgs(defaultBranch, description, repositoryName, tags);

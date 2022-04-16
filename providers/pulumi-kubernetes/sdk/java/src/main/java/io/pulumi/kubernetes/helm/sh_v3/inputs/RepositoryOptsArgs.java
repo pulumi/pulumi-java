@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.helm.sh_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caFile")
       private final @Nullable Output<String> caFile;
 
-    public Output<String> getCaFile() {
-        return this.caFile == null ? Output.empty() : this.caFile;
+    public Output<String> caFile() {
+        return this.caFile == null ? Codegen.empty() : this.caFile;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certFile")
       private final @Nullable Output<String> certFile;
 
-    public Output<String> getCertFile() {
-        return this.certFile == null ? Output.empty() : this.certFile;
+    public Output<String> certFile() {
+        return this.certFile == null ? Codegen.empty() : this.certFile;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFile")
       private final @Nullable Output<String> keyFile;
 
-    public Output<String> getKeyFile() {
-        return this.keyFile == null ? Output.empty() : this.keyFile;
+    public Output<String> keyFile() {
+        return this.keyFile == null ? Codegen.empty() : this.keyFile;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repo")
       private final @Nullable Output<String> repo;
 
-    public Output<String> getRepo() {
-        return this.repo == null ? Output.empty() : this.repo;
+    public Output<String> repo() {
+        return this.repo == null ? Codegen.empty() : this.repo;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public RepositoryOptsArgs(
@@ -100,12 +101,12 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryOptsArgs() {
-        this.caFile = Output.empty();
-        this.certFile = Output.empty();
-        this.keyFile = Output.empty();
-        this.password = Output.empty();
-        this.repo = Output.empty();
-        this.username = Output.empty();
+        this.caFile = Codegen.empty();
+        this.certFile = Codegen.empty();
+        this.keyFile = Codegen.empty();
+        this.password = Codegen.empty();
+        this.repo = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caFile(@Nullable String caFile) {
-            this.caFile = Output.ofNullable(caFile);
+            this.caFile = Codegen.ofNullable(caFile);
             return this;
         }
         public Builder certFile(@Nullable Output<String> certFile) {
@@ -151,7 +152,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certFile(@Nullable String certFile) {
-            this.certFile = Output.ofNullable(certFile);
+            this.certFile = Codegen.ofNullable(certFile);
             return this;
         }
         public Builder keyFile(@Nullable Output<String> keyFile) {
@@ -159,15 +160,15 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyFile(@Nullable String keyFile) {
-            this.keyFile = Output.ofNullable(keyFile);
+            this.keyFile = Codegen.ofNullable(keyFile);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
-            this.password = Output.ofNullable(password).asSecret();
+            this.password = Codegen.secret(password);
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password).asSecret();
+            this.password = Codegen.secret(password);
             return this;
         }
         public Builder repo(@Nullable Output<String> repo) {
@@ -175,7 +176,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repo(@Nullable String repo) {
-            this.repo = Output.ofNullable(repo);
+            this.repo = Codegen.ofNullable(repo);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -183,7 +184,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public RepositoryOptsArgs build() {
             return new RepositoryOptsArgs(caFile, certFile, keyFile, password, repo, username);

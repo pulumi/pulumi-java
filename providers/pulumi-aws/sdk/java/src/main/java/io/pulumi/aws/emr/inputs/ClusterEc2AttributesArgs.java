@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="additionalMasterSecurityGroups")
       private final @Nullable Output<String> additionalMasterSecurityGroups;
 
-    public Output<String> getAdditionalMasterSecurityGroups() {
-        return this.additionalMasterSecurityGroups == null ? Output.empty() : this.additionalMasterSecurityGroups;
+    public Output<String> additionalMasterSecurityGroups() {
+        return this.additionalMasterSecurityGroups == null ? Codegen.empty() : this.additionalMasterSecurityGroups;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="additionalSlaveSecurityGroups")
       private final @Nullable Output<String> additionalSlaveSecurityGroups;
 
-    public Output<String> getAdditionalSlaveSecurityGroups() {
-        return this.additionalSlaveSecurityGroups == null ? Output.empty() : this.additionalSlaveSecurityGroups;
+    public Output<String> additionalSlaveSecurityGroups() {
+        return this.additionalSlaveSecurityGroups == null ? Codegen.empty() : this.additionalSlaveSecurityGroups;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="emrManagedMasterSecurityGroup")
       private final @Nullable Output<String> emrManagedMasterSecurityGroup;
 
-    public Output<String> getEmrManagedMasterSecurityGroup() {
-        return this.emrManagedMasterSecurityGroup == null ? Output.empty() : this.emrManagedMasterSecurityGroup;
+    public Output<String> emrManagedMasterSecurityGroup() {
+        return this.emrManagedMasterSecurityGroup == null ? Codegen.empty() : this.emrManagedMasterSecurityGroup;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="emrManagedSlaveSecurityGroup")
       private final @Nullable Output<String> emrManagedSlaveSecurityGroup;
 
-    public Output<String> getEmrManagedSlaveSecurityGroup() {
-        return this.emrManagedSlaveSecurityGroup == null ? Output.empty() : this.emrManagedSlaveSecurityGroup;
+    public Output<String> emrManagedSlaveSecurityGroup() {
+        return this.emrManagedSlaveSecurityGroup == null ? Codegen.empty() : this.emrManagedSlaveSecurityGroup;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="instanceProfile", required=true)
       private final Output<String> instanceProfile;
 
-    public Output<String> getInstanceProfile() {
+    public Output<String> instanceProfile() {
         return this.instanceProfile;
     }
 
@@ -77,8 +78,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="serviceAccessSecurityGroup")
       private final @Nullable Output<String> serviceAccessSecurityGroup;
 
-    public Output<String> getServiceAccessSecurityGroup() {
-        return this.serviceAccessSecurityGroup == null ? Output.empty() : this.serviceAccessSecurityGroup;
+    public Output<String> serviceAccessSecurityGroup() {
+        return this.serviceAccessSecurityGroup == null ? Codegen.empty() : this.serviceAccessSecurityGroup;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     public ClusterEc2AttributesArgs(
@@ -136,15 +137,15 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     }
 
     private ClusterEc2AttributesArgs() {
-        this.additionalMasterSecurityGroups = Output.empty();
-        this.additionalSlaveSecurityGroups = Output.empty();
-        this.emrManagedMasterSecurityGroup = Output.empty();
-        this.emrManagedSlaveSecurityGroup = Output.empty();
-        this.instanceProfile = Output.empty();
-        this.keyName = Output.empty();
-        this.serviceAccessSecurityGroup = Output.empty();
-        this.subnetId = Output.empty();
-        this.subnetIds = Output.empty();
+        this.additionalMasterSecurityGroups = Codegen.empty();
+        this.additionalSlaveSecurityGroups = Codegen.empty();
+        this.emrManagedMasterSecurityGroup = Codegen.empty();
+        this.emrManagedSlaveSecurityGroup = Codegen.empty();
+        this.instanceProfile = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.serviceAccessSecurityGroup = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.subnetIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder additionalMasterSecurityGroups(@Nullable String additionalMasterSecurityGroups) {
-            this.additionalMasterSecurityGroups = Output.ofNullable(additionalMasterSecurityGroups);
+            this.additionalMasterSecurityGroups = Codegen.ofNullable(additionalMasterSecurityGroups);
             return this;
         }
         public Builder additionalSlaveSecurityGroups(@Nullable Output<String> additionalSlaveSecurityGroups) {
@@ -196,7 +197,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder additionalSlaveSecurityGroups(@Nullable String additionalSlaveSecurityGroups) {
-            this.additionalSlaveSecurityGroups = Output.ofNullable(additionalSlaveSecurityGroups);
+            this.additionalSlaveSecurityGroups = Codegen.ofNullable(additionalSlaveSecurityGroups);
             return this;
         }
         public Builder emrManagedMasterSecurityGroup(@Nullable Output<String> emrManagedMasterSecurityGroup) {
@@ -204,7 +205,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder emrManagedMasterSecurityGroup(@Nullable String emrManagedMasterSecurityGroup) {
-            this.emrManagedMasterSecurityGroup = Output.ofNullable(emrManagedMasterSecurityGroup);
+            this.emrManagedMasterSecurityGroup = Codegen.ofNullable(emrManagedMasterSecurityGroup);
             return this;
         }
         public Builder emrManagedSlaveSecurityGroup(@Nullable Output<String> emrManagedSlaveSecurityGroup) {
@@ -212,7 +213,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder emrManagedSlaveSecurityGroup(@Nullable String emrManagedSlaveSecurityGroup) {
-            this.emrManagedSlaveSecurityGroup = Output.ofNullable(emrManagedSlaveSecurityGroup);
+            this.emrManagedSlaveSecurityGroup = Codegen.ofNullable(emrManagedSlaveSecurityGroup);
             return this;
         }
         public Builder instanceProfile(Output<String> instanceProfile) {
@@ -228,7 +229,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder serviceAccessSecurityGroup(@Nullable Output<String> serviceAccessSecurityGroup) {
@@ -236,7 +237,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder serviceAccessSecurityGroup(@Nullable String serviceAccessSecurityGroup) {
-            this.serviceAccessSecurityGroup = Output.ofNullable(serviceAccessSecurityGroup);
+            this.serviceAccessSecurityGroup = Codegen.ofNullable(serviceAccessSecurityGroup);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -244,7 +245,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -252,7 +253,7 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {

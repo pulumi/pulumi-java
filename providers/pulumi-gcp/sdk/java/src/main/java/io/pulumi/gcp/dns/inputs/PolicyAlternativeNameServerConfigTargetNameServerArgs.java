@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="forwardingPath")
       private final @Nullable Output<String> forwardingPath;
 
-    public Output<String> getForwardingPath() {
-        return this.forwardingPath == null ? Output.empty() : this.forwardingPath;
+    public Output<String> forwardingPath() {
+        return this.forwardingPath == null ? Codegen.empty() : this.forwardingPath;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="ipv4Address", required=true)
       private final Output<String> ipv4Address;
 
-    public Output<String> getIpv4Address() {
+    public Output<String> ipv4Address() {
         return this.ipv4Address;
     }
 
@@ -47,8 +48,8 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     }
 
     private PolicyAlternativeNameServerConfigTargetNameServerArgs() {
-        this.forwardingPath = Output.empty();
-        this.ipv4Address = Output.empty();
+        this.forwardingPath = Codegen.empty();
+        this.ipv4Address = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
             return this;
         }
         public Builder forwardingPath(@Nullable String forwardingPath) {
-            this.forwardingPath = Output.ofNullable(forwardingPath);
+            this.forwardingPath = Codegen.ofNullable(forwardingPath);
             return this;
         }
         public Builder ipv4Address(Output<String> ipv4Address) {

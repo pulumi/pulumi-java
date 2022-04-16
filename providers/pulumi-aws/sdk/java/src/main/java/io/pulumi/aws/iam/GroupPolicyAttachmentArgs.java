@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -31,7 +32,7 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 
@@ -43,8 +44,8 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
     }
 
     private GroupPolicyAttachmentArgs() {
-        this.group = Output.empty();
-        this.policyArn = Output.empty();
+        this.group = Codegen.empty();
+        this.policyArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class DeliveryStreamRetryOptionsArgs extends io.pulumi.resources.Re
     @Import(name="durationInSeconds")
       private final @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> getDurationInSeconds() {
-        return this.durationInSeconds == null ? Output.empty() : this.durationInSeconds;
+    public Output<Integer> durationInSeconds() {
+        return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
     }
 
     public DeliveryStreamRetryOptionsArgs(@Nullable Output<Integer> durationInSeconds) {
@@ -26,7 +27,7 @@ public final class DeliveryStreamRetryOptionsArgs extends io.pulumi.resources.Re
     }
 
     private DeliveryStreamRetryOptionsArgs() {
-        this.durationInSeconds = Output.empty();
+        this.durationInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DeliveryStreamRetryOptionsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = Output.ofNullable(durationInSeconds);
+            this.durationInSeconds = Codegen.ofNullable(durationInSeconds);
             return this;
         }        public DeliveryStreamRetryOptionsArgs build() {
             return new DeliveryStreamRetryOptionsArgs(durationInSeconds);

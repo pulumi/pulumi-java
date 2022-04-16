@@ -6,6 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaFilesystemPermission;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +20,29 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
     @Import(name="addGroupOwner")
       private final @Nullable Output<Boolean> addGroupOwner;
 
-    public Output<Boolean> getAddGroupOwner() {
-        return this.addGroupOwner == null ? Output.empty() : this.addGroupOwner;
+    public Output<Boolean> addGroupOwner() {
+        return this.addGroupOwner == null ? Codegen.empty() : this.addGroupOwner;
     }
 
     @Import(name="destinationPath")
       private final @Nullable Output<String> destinationPath;
 
-    public Output<String> getDestinationPath() {
-        return this.destinationPath == null ? Output.empty() : this.destinationPath;
+    public Output<String> destinationPath() {
+        return this.destinationPath == null ? Codegen.empty() : this.destinationPath;
     }
 
     @Import(name="permission")
       private final @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
 
-    public Output<ComponentVersionLambdaFilesystemPermission> getPermission() {
-        return this.permission == null ? Output.empty() : this.permission;
+    public Output<ComponentVersionLambdaFilesystemPermission> permission() {
+        return this.permission == null ? Codegen.empty() : this.permission;
     }
 
     @Import(name="sourcePath")
       private final @Nullable Output<String> sourcePath;
 
-    public Output<String> getSourcePath() {
-        return this.sourcePath == null ? Output.empty() : this.sourcePath;
+    public Output<String> sourcePath() {
+        return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
     }
 
     public ComponentVersionLambdaVolumeMountArgs(
@@ -56,10 +57,10 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
     }
 
     private ComponentVersionLambdaVolumeMountArgs() {
-        this.addGroupOwner = Output.empty();
-        this.destinationPath = Output.empty();
-        this.permission = Output.empty();
-        this.sourcePath = Output.empty();
+        this.addGroupOwner = Codegen.empty();
+        this.destinationPath = Codegen.empty();
+        this.permission = Codegen.empty();
+        this.sourcePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
-            this.addGroupOwner = Output.ofNullable(addGroupOwner);
+            this.addGroupOwner = Codegen.ofNullable(addGroupOwner);
             return this;
         }
         public Builder destinationPath(@Nullable Output<String> destinationPath) {
@@ -101,7 +102,7 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder destinationPath(@Nullable String destinationPath) {
-            this.destinationPath = Output.ofNullable(destinationPath);
+            this.destinationPath = Codegen.ofNullable(destinationPath);
             return this;
         }
         public Builder permission(@Nullable Output<ComponentVersionLambdaFilesystemPermission> permission) {
@@ -109,7 +110,7 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
-            this.permission = Output.ofNullable(permission);
+            this.permission = Codegen.ofNullable(permission);
             return this;
         }
         public Builder sourcePath(@Nullable Output<String> sourcePath) {
@@ -117,7 +118,7 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder sourcePath(@Nullable String sourcePath) {
-            this.sourcePath = Output.ofNullable(sourcePath);
+            this.sourcePath = Codegen.ofNullable(sourcePath);
             return this;
         }        public ComponentVersionLambdaVolumeMountArgs build() {
             return new ComponentVersionLambdaVolumeMountArgs(addGroupOwner, destinationPath, permission, sourcePath);

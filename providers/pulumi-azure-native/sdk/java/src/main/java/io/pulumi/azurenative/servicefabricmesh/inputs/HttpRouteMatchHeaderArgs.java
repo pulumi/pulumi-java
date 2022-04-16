@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.enums.HeaderMatchType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,8 +39,8 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<Either<String,HeaderMatchType>> type;
 
-    public Output<Either<String,HeaderMatchType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,HeaderMatchType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public HttpRouteMatchHeaderArgs(
@@ -63,9 +64,9 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     }
 
     private HttpRouteMatchHeaderArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder type(@Nullable Either<String,HeaderMatchType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -113,7 +114,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public HttpRouteMatchHeaderArgs build() {
             return new HttpRouteMatchHeaderArgs(name, type, value);

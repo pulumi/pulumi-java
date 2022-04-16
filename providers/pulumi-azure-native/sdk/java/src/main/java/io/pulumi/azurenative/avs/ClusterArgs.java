@@ -6,6 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterSize", required=true)
       private final Output<Integer> clusterSize;
 
-    public Output<Integer> getClusterSize() {
+    public Output<Integer> clusterSize() {
         return this.clusterSize;
     }
 
@@ -45,7 +46,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -56,7 +57,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -85,11 +86,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.clusterName = Output.empty();
-        this.clusterSize = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.clusterSize = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder clusterSize(Output<Integer> clusterSize) {

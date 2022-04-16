@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
     @Import(name="newGameSessionsPerCreator")
       private final @Nullable Output<Integer> newGameSessionsPerCreator;
 
-    public Output<Integer> getNewGameSessionsPerCreator() {
-        return this.newGameSessionsPerCreator == null ? Output.empty() : this.newGameSessionsPerCreator;
+    public Output<Integer> newGameSessionsPerCreator() {
+        return this.newGameSessionsPerCreator == null ? Codegen.empty() : this.newGameSessionsPerCreator;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
     @Import(name="policyPeriodInMinutes")
       private final @Nullable Output<Integer> policyPeriodInMinutes;
 
-    public Output<Integer> getPolicyPeriodInMinutes() {
-        return this.policyPeriodInMinutes == null ? Output.empty() : this.policyPeriodInMinutes;
+    public Output<Integer> policyPeriodInMinutes() {
+        return this.policyPeriodInMinutes == null ? Codegen.empty() : this.policyPeriodInMinutes;
     }
 
     public FleetResourceCreationLimitPolicyGetArgs(
@@ -44,8 +45,8 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
     }
 
     private FleetResourceCreationLimitPolicyGetArgs() {
-        this.newGameSessionsPerCreator = Output.empty();
-        this.policyPeriodInMinutes = Output.empty();
+        this.newGameSessionsPerCreator = Codegen.empty();
+        this.policyPeriodInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder newGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
-            this.newGameSessionsPerCreator = Output.ofNullable(newGameSessionsPerCreator);
+            this.newGameSessionsPerCreator = Codegen.ofNullable(newGameSessionsPerCreator);
             return this;
         }
         public Builder policyPeriodInMinutes(@Nullable Output<Integer> policyPeriodInMinutes) {
@@ -83,7 +84,7 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
-            this.policyPeriodInMinutes = Output.ofNullable(policyPeriodInMinutes);
+            this.policyPeriodInMinutes = Codegen.ofNullable(policyPeriodInMinutes);
             return this;
         }        public FleetResourceCreationLimitPolicyGetArgs build() {
             return new FleetResourceCreationLimitPolicyGetArgs(newGameSessionsPerCreator, policyPeriodInMinutes);

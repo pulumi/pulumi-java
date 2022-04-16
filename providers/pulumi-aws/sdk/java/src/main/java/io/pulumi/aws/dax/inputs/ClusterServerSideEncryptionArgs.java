@@ -5,6 +5,7 @@ package io.pulumi.aws.dax.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ClusterServerSideEncryptionArgs extends io.pulumi.resources.R
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public ClusterServerSideEncryptionArgs(@Nullable Output<Boolean> enabled) {
@@ -30,7 +31,7 @@ public final class ClusterServerSideEncryptionArgs extends io.pulumi.resources.R
     }
 
     private ClusterServerSideEncryptionArgs() {
-        this.enabled = Output.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterServerSideEncryptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public ClusterServerSideEncryptionArgs build() {
             return new ClusterServerSideEncryptionArgs(enabled);

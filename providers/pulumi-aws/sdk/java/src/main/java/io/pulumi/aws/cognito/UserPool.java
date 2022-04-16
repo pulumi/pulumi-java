@@ -21,6 +21,7 @@ import io.pulumi.aws.cognito.outputs.UserPoolVerificationMessageTemplate;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -54,7 +55,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
      * 
      */
-    public Output</* @Nullable */ UserPoolAccountRecoverySetting> getAccountRecoverySetting() {
+    public Output</* @Nullable */ UserPoolAccountRecoverySetting> accountRecoverySetting() {
         return this.accountRecoverySetting;
     }
     /**
@@ -68,7 +69,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for creating a new user profile. Detailed below.
      * 
      */
-    public Output<UserPoolAdminCreateUserConfig> getAdminCreateUserConfig() {
+    public Output<UserPoolAdminCreateUserConfig> adminCreateUserConfig() {
         return this.adminCreateUserConfig;
     }
     /**
@@ -82,7 +83,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAliasAttributes() {
+    public Output</* @Nullable */ List<String>> aliasAttributes() {
         return this.aliasAttributes;
     }
     /**
@@ -96,7 +97,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return ARN of the user pool.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -110,7 +111,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Attributes to be auto-verified. Valid values: `email`, `phone_number`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAutoVerifiedAttributes() {
+    public Output</* @Nullable */ List<String>> autoVerifiedAttributes() {
         return this.autoVerifiedAttributes;
     }
     /**
@@ -124,7 +125,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Date the user pool was created.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -138,7 +139,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
      * 
      */
-    public Output<String> getCustomDomain() {
+    public Output<String> customDomain() {
         return this.customDomain;
     }
     /**
@@ -152,7 +153,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the user pool's device tracking. Detailed below.
      * 
      */
-    public Output</* @Nullable */ UserPoolDeviceConfiguration> getDeviceConfiguration() {
+    public Output</* @Nullable */ UserPoolDeviceConfiguration> deviceConfiguration() {
         return this.deviceConfiguration;
     }
     /**
@@ -166,7 +167,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Holds the domain prefix if the user pool has a domain associated with it.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -180,7 +181,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for configuring email. Detailed below.
      * 
      */
-    public Output</* @Nullable */ UserPoolEmailConfiguration> getEmailConfiguration() {
+    public Output</* @Nullable */ UserPoolEmailConfiguration> emailConfiguration() {
         return this.emailConfiguration;
     }
     /**
@@ -194,7 +195,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
      * 
      */
-    public Output<String> getEmailVerificationMessage() {
+    public Output<String> emailVerificationMessage() {
         return this.emailVerificationMessage;
     }
     /**
@@ -208,7 +209,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
      * 
      */
-    public Output<String> getEmailVerificationSubject() {
+    public Output<String> emailVerificationSubject() {
         return this.emailVerificationSubject;
     }
     /**
@@ -222,7 +223,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -236,7 +237,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return A number estimating the size of the user pool.
      * 
      */
-    public Output<Integer> getEstimatedNumberOfUsers() {
+    public Output<Integer> estimatedNumberOfUsers() {
         return this.estimatedNumberOfUsers;
     }
     /**
@@ -250,7 +251,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
      * 
      */
-    public Output</* @Nullable */ UserPoolLambdaConfig> getLambdaConfig() {
+    public Output</* @Nullable */ UserPoolLambdaConfig> lambdaConfig() {
         return this.lambdaConfig;
     }
     /**
@@ -264,7 +265,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Date the user pool was last modified.
      * 
      */
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
@@ -278,7 +279,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
      * 
      */
-    public Output</* @Nullable */ String> getMfaConfiguration() {
+    public Output</* @Nullable */ String> mfaConfiguration() {
         return this.mfaConfiguration;
     }
     /**
@@ -292,7 +293,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Name of the attribute.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -306,7 +307,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration blocked for information about the user pool password policy. Detailed below.
      * 
      */
-    public Output<UserPoolPasswordPolicy> getPasswordPolicy() {
+    public Output<UserPoolPasswordPolicy> passwordPolicy() {
         return this.passwordPolicy;
     }
     /**
@@ -320,7 +321,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
      * 
      */
-    public Output</* @Nullable */ List<UserPoolSchema>> getSchemas() {
+    public Output</* @Nullable */ List<UserPoolSchema>> schemas() {
         return this.schemas;
     }
     /**
@@ -334,7 +335,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
      * 
      */
-    public Output</* @Nullable */ String> getSmsAuthenticationMessage() {
+    public Output</* @Nullable */ String> smsAuthenticationMessage() {
         return this.smsAuthenticationMessage;
     }
     /**
@@ -348,7 +349,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
      * 
      */
-    public Output<UserPoolSmsConfiguration> getSmsConfiguration() {
+    public Output<UserPoolSmsConfiguration> smsConfiguration() {
         return this.smsConfiguration;
     }
     /**
@@ -362,7 +363,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
      * 
      */
-    public Output<String> getSmsVerificationMessage() {
+    public Output<String> smsVerificationMessage() {
         return this.smsVerificationMessage;
     }
     /**
@@ -376,7 +377,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ UserPoolSoftwareTokenMfaConfiguration> getSoftwareTokenMfaConfiguration() {
+    public Output</* @Nullable */ UserPoolSoftwareTokenMfaConfiguration> softwareTokenMfaConfiguration() {
         return this.softwareTokenMfaConfiguration;
     }
     /**
@@ -390,7 +391,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the User Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -404,7 +405,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -418,7 +419,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
      * 
      */
-    public Output</* @Nullable */ UserPoolUserPoolAddOns> getUserPoolAddOns() {
+    public Output</* @Nullable */ UserPoolUserPoolAddOns> userPoolAddOns() {
         return this.userPoolAddOns;
     }
     /**
@@ -432,7 +433,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUsernameAttributes() {
+    public Output</* @Nullable */ List<String>> usernameAttributes() {
         return this.usernameAttributes;
     }
     /**
@@ -446,7 +447,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for username configuration. Detailed below.
      * 
      */
-    public Output</* @Nullable */ UserPoolUsernameConfiguration> getUsernameConfiguration() {
+    public Output</* @Nullable */ UserPoolUsernameConfiguration> usernameConfiguration() {
         return this.usernameConfiguration;
     }
     /**
@@ -460,7 +461,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @return Configuration block for verification message templates. Detailed below.
      * 
      */
-    public Output<UserPoolVerificationMessageTemplate> getVerificationMessageTemplate() {
+    public Output<UserPoolVerificationMessageTemplate> verificationMessageTemplate() {
         return this.verificationMessageTemplate;
     }
 
@@ -486,7 +487,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserPool(String name, @Nullable UserPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/userPool:UserPool", name, args == null ? UserPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/userPool:UserPool", name, args == null ? UserPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserPool(String name, Output<String> id, @Nullable UserPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

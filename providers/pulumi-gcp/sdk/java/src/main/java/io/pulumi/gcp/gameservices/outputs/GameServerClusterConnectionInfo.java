@@ -37,7 +37,7 @@ public final class GameServerClusterConnectionInfo {
      * Structure is documented below.
      * 
     */
-    public GameServerClusterConnectionInfoGkeClusterReference getGkeClusterReference() {
+    public GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference() {
         return this.gkeClusterReference;
     }
     /**
@@ -46,7 +46,7 @@ public final class GameServerClusterConnectionInfo {
      * during creation.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

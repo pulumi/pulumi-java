@@ -34,14 +34,14 @@ public final class ClusterClusterEndpoint {
      * Cluster endpoint.
      * 
     */
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * Region of the endpoint.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 

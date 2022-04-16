@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
     @Import(name="instancePort", required=true)
       private final Output<Integer> instancePort;
 
-    public Output<Integer> getInstancePort() {
+    public Output<Integer> instancePort() {
         return this.instancePort;
     }
 
@@ -34,7 +35,7 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
     @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -45,8 +46,8 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
     @Import(name="policyNames")
       private final @Nullable Output<List<String>> policyNames;
 
-    public Output<List<String>> getPolicyNames() {
-        return this.policyNames == null ? Output.empty() : this.policyNames;
+    public Output<List<String>> policyNames() {
+        return this.policyNames == null ? Codegen.empty() : this.policyNames;
     }
 
     public LoadBalancerBackendServerPolicyArgs(
@@ -59,9 +60,9 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
     }
 
     private LoadBalancerBackendServerPolicyArgs() {
-        this.instancePort = Output.empty();
-        this.loadBalancerName = Output.empty();
-        this.policyNames = Output.empty();
+        this.instancePort = Codegen.empty();
+        this.loadBalancerName = Codegen.empty();
+        this.policyNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class LoadBalancerBackendServerPolicyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Output.ofNullable(policyNames);
+            this.policyNames = Codegen.ofNullable(policyNames);
             return this;
         }
         public Builder policyNames(String... policyNames) {

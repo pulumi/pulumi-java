@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     @Import(name="field", required=true)
       private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> getField() {
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field() {
         return this.field;
     }
 
@@ -34,7 +35,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     @Import(name="table", required=true)
       private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> getTable() {
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table() {
         return this.table;
     }
 
@@ -46,8 +47,8 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     }
 
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs() {
-        this.field = Output.empty();
-        this.table = Output.empty();
+        this.field = Codegen.empty();
+        this.table = Codegen.empty();
     }
 
     public static Builder builder() {

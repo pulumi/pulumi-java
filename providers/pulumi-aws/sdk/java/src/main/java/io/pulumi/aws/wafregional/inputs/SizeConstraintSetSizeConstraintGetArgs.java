@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintFieldToMatchGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -35,7 +36,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     @Import(name="fieldToMatch", required=true)
       private final Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -47,7 +48,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -63,7 +64,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
@@ -79,10 +80,10 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     }
 
     private SizeConstraintSetSizeConstraintGetArgs() {
-        this.comparisonOperator = Output.empty();
-        this.fieldToMatch = Output.empty();
-        this.size = Output.empty();
-        this.textTransformation = Output.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.size = Codegen.empty();
+        this.textTransformation = Codegen.empty();
     }
 
     public static Builder builder() {

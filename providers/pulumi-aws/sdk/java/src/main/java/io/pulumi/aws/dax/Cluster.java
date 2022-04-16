@@ -11,6 +11,7 @@ import io.pulumi.aws.dax.outputs.ClusterServerSideEncryption;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The ARN of the DAX cluster
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +63,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * nodes will be created
      * 
      */
-    public Output</* @Nullable */ List<String>> getAvailabilityZones() {
+    public Output</* @Nullable */ List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -76,7 +77,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The DNS name of the DAX cluster without the port appended
      * 
      */
-    public Output<String> getClusterAddress() {
+    public Output<String> clusterAddress() {
         return this.clusterAddress;
     }
     /**
@@ -94,7 +95,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Default value is `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> getClusterEndpointEncryptionType() {
+    public Output</* @Nullable */ String> clusterEndpointEncryptionType() {
         return this.clusterEndpointEncryptionType;
     }
     /**
@@ -110,7 +111,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * lowercase
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -126,7 +127,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * consisting of a DNS name and a port number
      * 
      */
-    public Output<String> getConfigurationEndpoint() {
+    public Output<String> configurationEndpoint() {
         return this.configurationEndpoint;
     }
     /**
@@ -140,7 +141,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Description for the cluster
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -158,7 +159,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * permissions to access DynamoDB on your behalf
      * 
      */
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
@@ -178,7 +179,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `sun:05:00-sun:09:00`
      * 
      */
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -194,7 +195,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
      * 
      */
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType;
     }
     /**
@@ -212,7 +213,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `${aws_dax_cluster.test.nodes.0.address}`
      * 
      */
-    public Output<List<ClusterNode>> getNodes() {
+    public Output<List<ClusterNode>> nodes() {
         return this.nodes;
     }
     /**
@@ -230,7 +231,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
      * 
      */
-    public Output</* @Nullable */ String> getNotificationTopicArn() {
+    public Output</* @Nullable */ String> notificationTopicArn() {
         return this.notificationTopicArn;
     }
     /**
@@ -246,7 +247,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * with this DAX cluster
      * 
      */
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName;
     }
     /**
@@ -260,7 +261,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The port used by the configuration endpoint
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -278,7 +279,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * replicas
      * 
      */
-    public Output<Integer> getReplicationFactor() {
+    public Output<Integer> replicationFactor() {
         return this.replicationFactor;
     }
     /**
@@ -294,7 +295,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * with the cluster
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -308,7 +309,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Encrypt at rest options
      * 
      */
-    public Output</* @Nullable */ ClusterServerSideEncryption> getServerSideEncryption() {
+    public Output</* @Nullable */ ClusterServerSideEncryption> serverSideEncryption() {
         return this.serverSideEncryption;
     }
     /**
@@ -324,7 +325,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * cluster
      * 
      */
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName;
     }
     /**
@@ -338,7 +339,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -352,7 +353,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -378,7 +379,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dax/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dax/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

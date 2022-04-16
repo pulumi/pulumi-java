@@ -7,6 +7,7 @@ import io.pulumi.azurenative.desktopvirtualization.inputs.MsixPackageApplication
 import io.pulumi.azurenative.desktopvirtualization.inputs.MsixPackageDependenciesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolName", required=true)
       private final Output<String> hostPoolName;
 
-    public Output<String> getHostPoolName() {
+    public Output<String> hostPoolName() {
         return this.hostPoolName;
     }
 
@@ -47,8 +48,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imagePath")
       private final @Nullable Output<String> imagePath;
 
-    public Output<String> getImagePath() {
-        return this.imagePath == null ? Output.empty() : this.imagePath;
+    public Output<String> imagePath() {
+        return this.imagePath == null ? Codegen.empty() : this.imagePath;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
-        return this.isActive == null ? Output.empty() : this.isActive;
+    public Output<Boolean> isActive() {
+        return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isRegularRegistration")
       private final @Nullable Output<Boolean> isRegularRegistration;
 
-    public Output<Boolean> getIsRegularRegistration() {
-        return this.isRegularRegistration == null ? Output.empty() : this.isRegularRegistration;
+    public Output<Boolean> isRegularRegistration() {
+        return this.isRegularRegistration == null ? Codegen.empty() : this.isRegularRegistration;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdated")
       private final @Nullable Output<String> lastUpdated;
 
-    public Output<String> getLastUpdated() {
-        return this.lastUpdated == null ? Output.empty() : this.lastUpdated;
+    public Output<String> lastUpdated() {
+        return this.lastUpdated == null ? Codegen.empty() : this.lastUpdated;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="msixPackageFullName")
       private final @Nullable Output<String> msixPackageFullName;
 
-    public Output<String> getMsixPackageFullName() {
-        return this.msixPackageFullName == null ? Output.empty() : this.msixPackageFullName;
+    public Output<String> msixPackageFullName() {
+        return this.msixPackageFullName == null ? Codegen.empty() : this.msixPackageFullName;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageApplications")
       private final @Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications;
 
-    public Output<List<MsixPackageApplicationsArgs>> getPackageApplications() {
-        return this.packageApplications == null ? Output.empty() : this.packageApplications;
+    public Output<List<MsixPackageApplicationsArgs>> packageApplications() {
+        return this.packageApplications == null ? Codegen.empty() : this.packageApplications;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageDependencies")
       private final @Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies;
 
-    public Output<List<MsixPackageDependenciesArgs>> getPackageDependencies() {
-        return this.packageDependencies == null ? Output.empty() : this.packageDependencies;
+    public Output<List<MsixPackageDependenciesArgs>> packageDependencies() {
+        return this.packageDependencies == null ? Codegen.empty() : this.packageDependencies;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageFamilyName")
       private final @Nullable Output<String> packageFamilyName;
 
-    public Output<String> getPackageFamilyName() {
-        return this.packageFamilyName == null ? Output.empty() : this.packageFamilyName;
+    public Output<String> packageFamilyName() {
+        return this.packageFamilyName == null ? Codegen.empty() : this.packageFamilyName;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+    public Output<String> packageName() {
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageRelativePath")
       private final @Nullable Output<String> packageRelativePath;
 
-    public Output<String> getPackageRelativePath() {
-        return this.packageRelativePath == null ? Output.empty() : this.packageRelativePath;
+    public Output<String> packageRelativePath() {
+        return this.packageRelativePath == null ? Codegen.empty() : this.packageRelativePath;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -168,8 +169,8 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public MSIXPackageArgs(
@@ -204,20 +205,20 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MSIXPackageArgs() {
-        this.displayName = Output.empty();
-        this.hostPoolName = Output.empty();
-        this.imagePath = Output.empty();
-        this.isActive = Output.empty();
-        this.isRegularRegistration = Output.empty();
-        this.lastUpdated = Output.empty();
-        this.msixPackageFullName = Output.empty();
-        this.packageApplications = Output.empty();
-        this.packageDependencies = Output.empty();
-        this.packageFamilyName = Output.empty();
-        this.packageName = Output.empty();
-        this.packageRelativePath = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.version = Output.empty();
+        this.displayName = Codegen.empty();
+        this.hostPoolName = Codegen.empty();
+        this.imagePath = Codegen.empty();
+        this.isActive = Codegen.empty();
+        this.isRegularRegistration = Codegen.empty();
+        this.lastUpdated = Codegen.empty();
+        this.msixPackageFullName = Codegen.empty();
+        this.packageApplications = Codegen.empty();
+        this.packageDependencies = Codegen.empty();
+        this.packageFamilyName = Codegen.empty();
+        this.packageName = Codegen.empty();
+        this.packageRelativePath = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -271,7 +272,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hostPoolName(Output<String> hostPoolName) {
@@ -287,7 +288,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imagePath(@Nullable String imagePath) {
-            this.imagePath = Output.ofNullable(imagePath);
+            this.imagePath = Codegen.ofNullable(imagePath);
             return this;
         }
         public Builder isActive(@Nullable Output<Boolean> isActive) {
@@ -295,7 +296,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Output.ofNullable(isActive);
+            this.isActive = Codegen.ofNullable(isActive);
             return this;
         }
         public Builder isRegularRegistration(@Nullable Output<Boolean> isRegularRegistration) {
@@ -303,7 +304,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isRegularRegistration(@Nullable Boolean isRegularRegistration) {
-            this.isRegularRegistration = Output.ofNullable(isRegularRegistration);
+            this.isRegularRegistration = Codegen.ofNullable(isRegularRegistration);
             return this;
         }
         public Builder lastUpdated(@Nullable Output<String> lastUpdated) {
@@ -311,7 +312,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdated(@Nullable String lastUpdated) {
-            this.lastUpdated = Output.ofNullable(lastUpdated);
+            this.lastUpdated = Codegen.ofNullable(lastUpdated);
             return this;
         }
         public Builder msixPackageFullName(@Nullable Output<String> msixPackageFullName) {
@@ -319,7 +320,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msixPackageFullName(@Nullable String msixPackageFullName) {
-            this.msixPackageFullName = Output.ofNullable(msixPackageFullName);
+            this.msixPackageFullName = Codegen.ofNullable(msixPackageFullName);
             return this;
         }
         public Builder packageApplications(@Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications) {
@@ -327,7 +328,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageApplications(@Nullable List<MsixPackageApplicationsArgs> packageApplications) {
-            this.packageApplications = Output.ofNullable(packageApplications);
+            this.packageApplications = Codegen.ofNullable(packageApplications);
             return this;
         }
         public Builder packageApplications(MsixPackageApplicationsArgs... packageApplications) {
@@ -338,7 +339,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageDependencies(@Nullable List<MsixPackageDependenciesArgs> packageDependencies) {
-            this.packageDependencies = Output.ofNullable(packageDependencies);
+            this.packageDependencies = Codegen.ofNullable(packageDependencies);
             return this;
         }
         public Builder packageDependencies(MsixPackageDependenciesArgs... packageDependencies) {
@@ -349,7 +350,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageFamilyName(@Nullable String packageFamilyName) {
-            this.packageFamilyName = Output.ofNullable(packageFamilyName);
+            this.packageFamilyName = Codegen.ofNullable(packageFamilyName);
             return this;
         }
         public Builder packageName(@Nullable Output<String> packageName) {
@@ -357,7 +358,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder packageRelativePath(@Nullable Output<String> packageRelativePath) {
@@ -365,7 +366,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageRelativePath(@Nullable String packageRelativePath) {
-            this.packageRelativePath = Output.ofNullable(packageRelativePath);
+            this.packageRelativePath = Codegen.ofNullable(packageRelativePath);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -381,7 +382,7 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public MSIXPackageArgs build() {
             return new MSIXPackageArgs(displayName, hostPoolName, imagePath, isActive, isRegularRegistration, lastUpdated, msixPackageFullName, packageApplications, packageDependencies, packageFamilyName, packageName, packageRelativePath, resourceGroupName, version);

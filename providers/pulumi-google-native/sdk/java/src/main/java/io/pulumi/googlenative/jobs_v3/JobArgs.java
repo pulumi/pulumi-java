@@ -5,6 +5,7 @@ package io.pulumi.googlenative.jobs_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.jobs_v3.enums.JobDegreeTypesItem;
 import io.pulumi.googlenative.jobs_v3.enums.JobEmploymentTypesItem;
 import io.pulumi.googlenative.jobs_v3.enums.JobJobBenefitsItem;
@@ -32,8 +33,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addresses")
       private final @Nullable Output<List<String>> addresses;
 
-    public Output<List<String>> getAddresses() {
-        return this.addresses == null ? Output.empty() : this.addresses;
+    public Output<List<String>> addresses() {
+        return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationInfo", required=true)
       private final Output<ApplicationInfoArgs> applicationInfo;
 
-    public Output<ApplicationInfoArgs> getApplicationInfo() {
+    public Output<ApplicationInfoArgs> applicationInfo() {
         return this.applicationInfo;
     }
 
@@ -54,7 +55,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="companyName", required=true)
       private final Output<String> companyName;
 
-    public Output<String> getCompanyName() {
+    public Output<String> companyName() {
         return this.companyName;
     }
 
@@ -65,8 +66,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compensationInfo")
       private final @Nullable Output<CompensationInfoArgs> compensationInfo;
 
-    public Output<CompensationInfoArgs> getCompensationInfo() {
-        return this.compensationInfo == null ? Output.empty() : this.compensationInfo;
+    public Output<CompensationInfoArgs> compensationInfo() {
+        return this.compensationInfo == null ? Codegen.empty() : this.compensationInfo;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> getCustomAttributes() {
-        return this.customAttributes == null ? Output.empty() : this.customAttributes;
+    public Output<Map<String,String>> customAttributes() {
+        return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="degreeTypes")
       private final @Nullable Output<List<JobDegreeTypesItem>> degreeTypes;
 
-    public Output<List<JobDegreeTypesItem>> getDegreeTypes() {
-        return this.degreeTypes == null ? Output.empty() : this.degreeTypes;
+    public Output<List<JobDegreeTypesItem>> degreeTypes() {
+        return this.degreeTypes == null ? Codegen.empty() : this.degreeTypes;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="department")
       private final @Nullable Output<String> department;
 
-    public Output<String> getDepartment() {
-        return this.department == null ? Output.empty() : this.department;
+    public Output<String> department() {
+        return this.department == null ? Codegen.empty() : this.department;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -120,8 +121,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="employmentTypes")
       private final @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes;
 
-    public Output<List<JobEmploymentTypesItem>> getEmploymentTypes() {
-        return this.employmentTypes == null ? Output.empty() : this.employmentTypes;
+    public Output<List<JobEmploymentTypesItem>> employmentTypes() {
+        return this.employmentTypes == null ? Codegen.empty() : this.employmentTypes;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="incentives")
       private final @Nullable Output<String> incentives;
 
-    public Output<String> getIncentives() {
-        return this.incentives == null ? Output.empty() : this.incentives;
+    public Output<String> incentives() {
+        return this.incentives == null ? Codegen.empty() : this.incentives;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobBenefits")
       private final @Nullable Output<List<JobJobBenefitsItem>> jobBenefits;
 
-    public Output<List<JobJobBenefitsItem>> getJobBenefits() {
-        return this.jobBenefits == null ? Output.empty() : this.jobBenefits;
+    public Output<List<JobJobBenefitsItem>> jobBenefits() {
+        return this.jobBenefits == null ? Codegen.empty() : this.jobBenefits;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobEndTime")
       private final @Nullable Output<String> jobEndTime;
 
-    public Output<String> getJobEndTime() {
-        return this.jobEndTime == null ? Output.empty() : this.jobEndTime;
+    public Output<String> jobEndTime() {
+        return this.jobEndTime == null ? Codegen.empty() : this.jobEndTime;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobLevel")
       private final @Nullable Output<JobJobLevel> jobLevel;
 
-    public Output<JobJobLevel> getJobLevel() {
-        return this.jobLevel == null ? Output.empty() : this.jobLevel;
+    public Output<JobJobLevel> jobLevel() {
+        return this.jobLevel == null ? Codegen.empty() : this.jobLevel;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobStartTime")
       private final @Nullable Output<String> jobStartTime;
 
-    public Output<String> getJobStartTime() {
-        return this.jobStartTime == null ? Output.empty() : this.jobStartTime;
+    public Output<String> jobStartTime() {
+        return this.jobStartTime == null ? Codegen.empty() : this.jobStartTime;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+    public Output<String> languageCode() {
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -208,8 +209,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postingExpireTime")
       private final @Nullable Output<String> postingExpireTime;
 
-    public Output<String> getPostingExpireTime() {
-        return this.postingExpireTime == null ? Output.empty() : this.postingExpireTime;
+    public Output<String> postingExpireTime() {
+        return this.postingExpireTime == null ? Codegen.empty() : this.postingExpireTime;
     }
 
     /**
@@ -219,8 +220,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postingPublishTime")
       private final @Nullable Output<String> postingPublishTime;
 
-    public Output<String> getPostingPublishTime() {
-        return this.postingPublishTime == null ? Output.empty() : this.postingPublishTime;
+    public Output<String> postingPublishTime() {
+        return this.postingPublishTime == null ? Codegen.empty() : this.postingPublishTime;
     }
 
     /**
@@ -230,8 +231,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postingRegion")
       private final @Nullable Output<JobPostingRegion> postingRegion;
 
-    public Output<JobPostingRegion> getPostingRegion() {
-        return this.postingRegion == null ? Output.empty() : this.postingRegion;
+    public Output<JobPostingRegion> postingRegion() {
+        return this.postingRegion == null ? Codegen.empty() : this.postingRegion;
     }
 
     /**
@@ -241,15 +242,15 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="processingOptions")
       private final @Nullable Output<ProcessingOptionsArgs> processingOptions;
 
-    public Output<ProcessingOptionsArgs> getProcessingOptions() {
-        return this.processingOptions == null ? Output.empty() : this.processingOptions;
+    public Output<ProcessingOptionsArgs> processingOptions() {
+        return this.processingOptions == null ? Codegen.empty() : this.processingOptions;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -259,8 +260,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="promotionValue")
       private final @Nullable Output<Integer> promotionValue;
 
-    public Output<Integer> getPromotionValue() {
-        return this.promotionValue == null ? Output.empty() : this.promotionValue;
+    public Output<Integer> promotionValue() {
+        return this.promotionValue == null ? Codegen.empty() : this.promotionValue;
     }
 
     /**
@@ -270,8 +271,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="qualifications")
       private final @Nullable Output<String> qualifications;
 
-    public Output<String> getQualifications() {
-        return this.qualifications == null ? Output.empty() : this.qualifications;
+    public Output<String> qualifications() {
+        return this.qualifications == null ? Codegen.empty() : this.qualifications;
     }
 
     /**
@@ -281,7 +282,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requisitionId", required=true)
       private final Output<String> requisitionId;
 
-    public Output<String> getRequisitionId() {
+    public Output<String> requisitionId() {
         return this.requisitionId;
     }
 
@@ -292,8 +293,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responsibilities")
       private final @Nullable Output<String> responsibilities;
 
-    public Output<String> getResponsibilities() {
-        return this.responsibilities == null ? Output.empty() : this.responsibilities;
+    public Output<String> responsibilities() {
+        return this.responsibilities == null ? Codegen.empty() : this.responsibilities;
     }
 
     /**
@@ -303,7 +304,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -363,32 +364,32 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.addresses = Output.empty();
-        this.applicationInfo = Output.empty();
-        this.companyName = Output.empty();
-        this.compensationInfo = Output.empty();
-        this.customAttributes = Output.empty();
-        this.degreeTypes = Output.empty();
-        this.department = Output.empty();
-        this.description = Output.empty();
-        this.employmentTypes = Output.empty();
-        this.incentives = Output.empty();
-        this.jobBenefits = Output.empty();
-        this.jobEndTime = Output.empty();
-        this.jobLevel = Output.empty();
-        this.jobStartTime = Output.empty();
-        this.languageCode = Output.empty();
-        this.name = Output.empty();
-        this.postingExpireTime = Output.empty();
-        this.postingPublishTime = Output.empty();
-        this.postingRegion = Output.empty();
-        this.processingOptions = Output.empty();
-        this.project = Output.empty();
-        this.promotionValue = Output.empty();
-        this.qualifications = Output.empty();
-        this.requisitionId = Output.empty();
-        this.responsibilities = Output.empty();
-        this.title = Output.empty();
+        this.addresses = Codegen.empty();
+        this.applicationInfo = Codegen.empty();
+        this.companyName = Codegen.empty();
+        this.compensationInfo = Codegen.empty();
+        this.customAttributes = Codegen.empty();
+        this.degreeTypes = Codegen.empty();
+        this.department = Codegen.empty();
+        this.description = Codegen.empty();
+        this.employmentTypes = Codegen.empty();
+        this.incentives = Codegen.empty();
+        this.jobBenefits = Codegen.empty();
+        this.jobEndTime = Codegen.empty();
+        this.jobLevel = Codegen.empty();
+        this.jobStartTime = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.name = Codegen.empty();
+        this.postingExpireTime = Codegen.empty();
+        this.postingPublishTime = Codegen.empty();
+        this.postingRegion = Codegen.empty();
+        this.processingOptions = Codegen.empty();
+        this.project = Codegen.empty();
+        this.promotionValue = Codegen.empty();
+        this.qualifications = Codegen.empty();
+        this.requisitionId = Codegen.empty();
+        this.responsibilities = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -466,7 +467,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addresses(@Nullable List<String> addresses) {
-            this.addresses = Output.ofNullable(addresses);
+            this.addresses = Codegen.ofNullable(addresses);
             return this;
         }
         public Builder addresses(String... addresses) {
@@ -493,7 +494,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compensationInfo(@Nullable CompensationInfoArgs compensationInfo) {
-            this.compensationInfo = Output.ofNullable(compensationInfo);
+            this.compensationInfo = Codegen.ofNullable(compensationInfo);
             return this;
         }
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
@@ -501,7 +502,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Output.ofNullable(customAttributes);
+            this.customAttributes = Codegen.ofNullable(customAttributes);
             return this;
         }
         public Builder degreeTypes(@Nullable Output<List<JobDegreeTypesItem>> degreeTypes) {
@@ -509,7 +510,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder degreeTypes(@Nullable List<JobDegreeTypesItem> degreeTypes) {
-            this.degreeTypes = Output.ofNullable(degreeTypes);
+            this.degreeTypes = Codegen.ofNullable(degreeTypes);
             return this;
         }
         public Builder degreeTypes(JobDegreeTypesItem... degreeTypes) {
@@ -520,7 +521,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder department(@Nullable String department) {
-            this.department = Output.ofNullable(department);
+            this.department = Codegen.ofNullable(department);
             return this;
         }
         public Builder description(Output<String> description) {
@@ -536,7 +537,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder employmentTypes(@Nullable List<JobEmploymentTypesItem> employmentTypes) {
-            this.employmentTypes = Output.ofNullable(employmentTypes);
+            this.employmentTypes = Codegen.ofNullable(employmentTypes);
             return this;
         }
         public Builder employmentTypes(JobEmploymentTypesItem... employmentTypes) {
@@ -547,7 +548,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incentives(@Nullable String incentives) {
-            this.incentives = Output.ofNullable(incentives);
+            this.incentives = Codegen.ofNullable(incentives);
             return this;
         }
         public Builder jobBenefits(@Nullable Output<List<JobJobBenefitsItem>> jobBenefits) {
@@ -555,7 +556,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobBenefits(@Nullable List<JobJobBenefitsItem> jobBenefits) {
-            this.jobBenefits = Output.ofNullable(jobBenefits);
+            this.jobBenefits = Codegen.ofNullable(jobBenefits);
             return this;
         }
         public Builder jobBenefits(JobJobBenefitsItem... jobBenefits) {
@@ -566,7 +567,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobEndTime(@Nullable String jobEndTime) {
-            this.jobEndTime = Output.ofNullable(jobEndTime);
+            this.jobEndTime = Codegen.ofNullable(jobEndTime);
             return this;
         }
         public Builder jobLevel(@Nullable Output<JobJobLevel> jobLevel) {
@@ -574,7 +575,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobLevel(@Nullable JobJobLevel jobLevel) {
-            this.jobLevel = Output.ofNullable(jobLevel);
+            this.jobLevel = Codegen.ofNullable(jobLevel);
             return this;
         }
         public Builder jobStartTime(@Nullable Output<String> jobStartTime) {
@@ -582,7 +583,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobStartTime(@Nullable String jobStartTime) {
-            this.jobStartTime = Output.ofNullable(jobStartTime);
+            this.jobStartTime = Codegen.ofNullable(jobStartTime);
             return this;
         }
         public Builder languageCode(@Nullable Output<String> languageCode) {
@@ -590,7 +591,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -598,7 +599,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder postingExpireTime(@Nullable Output<String> postingExpireTime) {
@@ -606,7 +607,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postingExpireTime(@Nullable String postingExpireTime) {
-            this.postingExpireTime = Output.ofNullable(postingExpireTime);
+            this.postingExpireTime = Codegen.ofNullable(postingExpireTime);
             return this;
         }
         public Builder postingPublishTime(@Nullable Output<String> postingPublishTime) {
@@ -614,7 +615,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postingPublishTime(@Nullable String postingPublishTime) {
-            this.postingPublishTime = Output.ofNullable(postingPublishTime);
+            this.postingPublishTime = Codegen.ofNullable(postingPublishTime);
             return this;
         }
         public Builder postingRegion(@Nullable Output<JobPostingRegion> postingRegion) {
@@ -622,7 +623,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postingRegion(@Nullable JobPostingRegion postingRegion) {
-            this.postingRegion = Output.ofNullable(postingRegion);
+            this.postingRegion = Codegen.ofNullable(postingRegion);
             return this;
         }
         public Builder processingOptions(@Nullable Output<ProcessingOptionsArgs> processingOptions) {
@@ -630,7 +631,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder processingOptions(@Nullable ProcessingOptionsArgs processingOptions) {
-            this.processingOptions = Output.ofNullable(processingOptions);
+            this.processingOptions = Codegen.ofNullable(processingOptions);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -638,7 +639,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder promotionValue(@Nullable Output<Integer> promotionValue) {
@@ -646,7 +647,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder promotionValue(@Nullable Integer promotionValue) {
-            this.promotionValue = Output.ofNullable(promotionValue);
+            this.promotionValue = Codegen.ofNullable(promotionValue);
             return this;
         }
         public Builder qualifications(@Nullable Output<String> qualifications) {
@@ -654,7 +655,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qualifications(@Nullable String qualifications) {
-            this.qualifications = Output.ofNullable(qualifications);
+            this.qualifications = Codegen.ofNullable(qualifications);
             return this;
         }
         public Builder requisitionId(Output<String> requisitionId) {
@@ -670,7 +671,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responsibilities(@Nullable String responsibilities) {
-            this.responsibilities = Output.ofNullable(responsibilities);
+            this.responsibilities = Codegen.ofNullable(responsibilities);
             return this;
         }
         public Builder title(Output<String> title) {

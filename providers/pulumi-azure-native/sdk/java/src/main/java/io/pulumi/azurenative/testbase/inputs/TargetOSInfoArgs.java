@@ -5,6 +5,7 @@ package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osUpdateType", required=true)
       private final Output<String> osUpdateType;
 
-    public Output<String> getOsUpdateType() {
+    public Output<String> osUpdateType() {
         return this.osUpdateType;
     }
 
@@ -36,7 +37,7 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetOSs", required=true)
       private final Output<List<String>> targetOSs;
 
-    public Output<List<String>> getTargetOSs() {
+    public Output<List<String>> targetOSs() {
         return this.targetOSs;
     }
 
@@ -48,8 +49,8 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetOSInfoArgs() {
-        this.osUpdateType = Output.empty();
-        this.targetOSs = Output.empty();
+        this.osUpdateType = Codegen.empty();
+        this.targetOSs = Codegen.empty();
     }
 
     public static Builder builder() {

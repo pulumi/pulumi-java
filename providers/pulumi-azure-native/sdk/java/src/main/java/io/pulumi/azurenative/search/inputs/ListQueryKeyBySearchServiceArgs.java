@@ -19,7 +19,7 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
     @Import(name="searchServiceName", required=true)
       private final String searchServiceName;
 
-    public String getSearchServiceName() {
+    public String searchServiceName() {
         return this.searchServiceName;
     }
 

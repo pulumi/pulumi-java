@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,21 +19,21 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="id", required=true)
       private final Output<Integer> id;
 
-    public Output<Integer> getId() {
+    public Output<Integer> id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -46,9 +47,9 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private EtwEventConfigurationArgs() {
-        this.filter = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
+        this.filter = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder id(Output<Integer> id) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataSourceParametersAwsIotAnalyticsArgs extends io.pulumi.res
     @Import(name="dataSetName", required=true)
       private final Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
+    public Output<String> dataSetName() {
         return this.dataSetName;
     }
 
@@ -29,7 +30,7 @@ public final class DataSourceParametersAwsIotAnalyticsArgs extends io.pulumi.res
     }
 
     private DataSourceParametersAwsIotAnalyticsArgs() {
-        this.dataSetName = Output.empty();
+        this.dataSetName = Codegen.empty();
     }
 
     public static Builder builder() {

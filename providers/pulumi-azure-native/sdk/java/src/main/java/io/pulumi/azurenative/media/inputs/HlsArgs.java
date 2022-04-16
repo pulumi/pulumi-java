@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fragmentsPerTsSegment")
       private final @Nullable Output<Integer> fragmentsPerTsSegment;
 
-    public Output<Integer> getFragmentsPerTsSegment() {
-        return this.fragmentsPerTsSegment == null ? Output.empty() : this.fragmentsPerTsSegment;
+    public Output<Integer> fragmentsPerTsSegment() {
+        return this.fragmentsPerTsSegment == null ? Codegen.empty() : this.fragmentsPerTsSegment;
     }
 
     public HlsArgs(@Nullable Output<Integer> fragmentsPerTsSegment) {
@@ -34,7 +35,7 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HlsArgs() {
-        this.fragmentsPerTsSegment = Output.empty();
+        this.fragmentsPerTsSegment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
-            this.fragmentsPerTsSegment = Output.ofNullable(fragmentsPerTsSegment);
+            this.fragmentsPerTsSegment = Codegen.ofNullable(fragmentsPerTsSegment);
             return this;
         }        public HlsArgs build() {
             return new HlsArgs(fragmentsPerTsSegment);

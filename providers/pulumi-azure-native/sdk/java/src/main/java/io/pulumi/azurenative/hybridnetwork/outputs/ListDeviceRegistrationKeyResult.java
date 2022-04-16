@@ -24,7 +24,7 @@ public final class ListDeviceRegistrationKeyResult {
      * The registration key for the device.
      * 
     */
-    public String getRegistrationKey() {
+    public String registrationKey() {
         return this.registrationKey;
     }
 

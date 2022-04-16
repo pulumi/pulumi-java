@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class SpotFleetIamInstanceProfileSpecificationArgs extends io.pulum
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     public SpotFleetIamInstanceProfileSpecificationArgs(@Nullable Output<String> arn) {
@@ -26,7 +27,7 @@ public final class SpotFleetIamInstanceProfileSpecificationArgs extends io.pulum
     }
 
     private SpotFleetIamInstanceProfileSpecificationArgs() {
-        this.arn = Output.empty();
+        this.arn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class SpotFleetIamInstanceProfileSpecificationArgs extends io.pulum
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }        public SpotFleetIamInstanceProfileSpecificationArgs build() {
             return new SpotFleetIamInstanceProfileSpecificationArgs(arn);

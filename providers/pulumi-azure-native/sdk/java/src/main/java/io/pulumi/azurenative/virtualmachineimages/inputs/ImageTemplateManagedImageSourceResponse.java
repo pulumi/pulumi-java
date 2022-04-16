@@ -23,7 +23,7 @@ public final class ImageTemplateManagedImageSourceResponse extends io.pulumi.res
     @Import(name="imageId", required=true)
       private final String imageId;
 
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
 
@@ -35,7 +35,7 @@ public final class ImageTemplateManagedImageSourceResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

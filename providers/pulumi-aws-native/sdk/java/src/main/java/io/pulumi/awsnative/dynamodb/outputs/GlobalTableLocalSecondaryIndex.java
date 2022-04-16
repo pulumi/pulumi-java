@@ -26,13 +26,13 @@ public final class GlobalTableLocalSecondaryIndex {
         this.projection = projection;
     }
 
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
-    public List<GlobalTableKeySchema> getKeySchema() {
+    public List<GlobalTableKeySchema> keySchema() {
         return this.keySchema;
     }
-    public GlobalTableProjection getProjection() {
+    public GlobalTableProjection projection() {
         return this.projection;
     }
 

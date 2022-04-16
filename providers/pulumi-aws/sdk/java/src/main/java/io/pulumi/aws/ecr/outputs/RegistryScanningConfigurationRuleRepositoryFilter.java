@@ -20,10 +20,10 @@ public final class RegistryScanningConfigurationRuleRepositoryFilter {
         this.filterType = filterType;
     }
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
-    public String getFilterType() {
+    public String filterType() {
         return this.filterType;
     }
 

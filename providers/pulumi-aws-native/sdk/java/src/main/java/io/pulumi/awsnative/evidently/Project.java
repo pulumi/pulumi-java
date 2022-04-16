@@ -10,6 +10,7 @@ import io.pulumi.awsnative.evidently.outputs.ProjectTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,25 +24,25 @@ public class Project extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="dataDelivery", type=ProjectDataDeliveryObject.class, parameters={})
     private Output</* @Nullable */ ProjectDataDeliveryObject> dataDelivery;
 
-    public Output</* @Nullable */ ProjectDataDeliveryObject> getDataDelivery() {
+    public Output</* @Nullable */ ProjectDataDeliveryObject> dataDelivery() {
         return this.dataDelivery;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -55,7 +56,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ProjectTag>> getTags() {
+    public Output</* @Nullable */ List<ProjectTag>> tags() {
         return this.tags;
     }
 
@@ -81,7 +82,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, @Nullable ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:evidently:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:evidently:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

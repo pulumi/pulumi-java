@@ -10,6 +10,7 @@ import io.pulumi.aws.mskconnect.outputs.CustomPluginLocation;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @return the Amazon Resource Name (ARN) of the custom plugin.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @return The type of the plugin file. Allowed values are `ZIP` and `JAR`.
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -69,7 +70,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @return A summary description of the custom plugin.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -83,7 +84,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @return an ID of the latest successfully created revision of the custom plugin.
      * 
      */
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision;
     }
     /**
@@ -97,7 +98,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @return Information about the location of a custom plugin. See below.
      * 
      */
-    public Output<CustomPluginLocation> getLocation() {
+    public Output<CustomPluginLocation> location() {
         return this.location;
     }
     /**
@@ -111,7 +112,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @return The name of the custom plugin..
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +126,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @return the state of the custom plugin.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -151,7 +152,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomPlugin(String name, CustomPluginArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mskconnect/customPlugin:CustomPlugin", name, args == null ? CustomPluginArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mskconnect/customPlugin:CustomPlugin", name, args == null ? CustomPluginArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomPlugin(String name, Output<String> id, @Nullable CustomPluginState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

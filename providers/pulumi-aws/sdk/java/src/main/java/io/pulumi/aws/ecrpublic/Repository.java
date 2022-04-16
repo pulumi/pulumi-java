@@ -10,6 +10,7 @@ import io.pulumi.aws.ecrpublic.outputs.RepositoryCatalogData;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Full ARN of the repository.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,13 +58,13 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Catalog data configuration for the repository. See below for schema.
      * 
      */
-    public Output</* @Nullable */ RepositoryCatalogData> getCatalogData() {
+    public Output</* @Nullable */ RepositoryCatalogData> catalogData() {
         return this.catalogData;
     }
     @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -77,7 +78,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -91,7 +92,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Name of the repository.
      * 
      */
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
     /**
@@ -105,7 +106,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The URI of the repository.
      * 
      */
-    public Output<String> getRepositoryUri() {
+    public Output<String> repositoryUri() {
         return this.repositoryUri;
     }
 
@@ -131,7 +132,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Repository(String name, RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecrpublic/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecrpublic/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Repository(String name, Output<String> id, @Nullable RepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

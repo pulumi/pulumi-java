@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categories", required=true)
       private final Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories;
     }
 
@@ -35,8 +36,8 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
       private final Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations;
     }
 
@@ -57,8 +58,8 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logProfileName")
       private final @Nullable Output<String> logProfileName;
 
-    public Output<String> getLogProfileName() {
-        return this.logProfileName == null ? Output.empty() : this.logProfileName;
+    public Output<String> logProfileName() {
+        return this.logProfileName == null ? Codegen.empty() : this.logProfileName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy", required=true)
       private final Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Output<RetentionPolicyArgs> getRetentionPolicy() {
+    public Output<RetentionPolicyArgs> retentionPolicy() {
         return this.retentionPolicy;
     }
 
@@ -79,8 +80,8 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
 
-    public Output<String> getServiceBusRuleId() {
-        return this.serviceBusRuleId == null ? Output.empty() : this.serviceBusRuleId;
+    public Output<String> serviceBusRuleId() {
+        return this.serviceBusRuleId == null ? Codegen.empty() : this.serviceBusRuleId;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
-        return this.storageAccountId == null ? Output.empty() : this.storageAccountId;
+    public Output<String> storageAccountId() {
+        return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LogProfileArgs(
@@ -125,14 +126,14 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogProfileArgs() {
-        this.categories = Output.empty();
-        this.location = Output.empty();
-        this.locations = Output.empty();
-        this.logProfileName = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.serviceBusRuleId = Output.empty();
-        this.storageAccountId = Output.empty();
-        this.tags = Output.empty();
+        this.categories = Codegen.empty();
+        this.location = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.logProfileName = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.serviceBusRuleId = Codegen.empty();
+        this.storageAccountId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -185,7 +186,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder locations(Output<List<String>> locations) {
@@ -204,7 +205,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logProfileName(@Nullable String logProfileName) {
-            this.logProfileName = Output.ofNullable(logProfileName);
+            this.logProfileName = Codegen.ofNullable(logProfileName);
             return this;
         }
         public Builder retentionPolicy(Output<RetentionPolicyArgs> retentionPolicy) {
@@ -220,7 +221,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
-            this.serviceBusRuleId = Output.ofNullable(serviceBusRuleId);
+            this.serviceBusRuleId = Codegen.ofNullable(serviceBusRuleId);
             return this;
         }
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
@@ -228,7 +229,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Output.ofNullable(storageAccountId);
+            this.storageAccountId = Codegen.ofNullable(storageAccountId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -236,7 +237,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LogProfileArgs build() {
             return new LogProfileArgs(categories, location, locations, logProfileName, retentionPolicy, serviceBusRuleId, storageAccountId, tags);

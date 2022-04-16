@@ -9,6 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanProtectedItemAr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
 
-    public Output<List<RecoveryPlanActionArgs>> getEndGroupActions() {
-        return this.endGroupActions == null ? Output.empty() : this.endGroupActions;
+    public Output<List<RecoveryPlanActionArgs>> endGroupActions() {
+        return this.endGroupActions == null ? Codegen.empty() : this.endGroupActions;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="groupType", required=true)
       private final Output<Either<String,RecoveryPlanGroupType>> groupType;
 
-    public Output<Either<String,RecoveryPlanGroupType>> getGroupType() {
+    public Output<Either<String,RecoveryPlanGroupType>> groupType() {
         return this.groupType;
     }
 
@@ -52,8 +53,8 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="replicationProtectedItems")
       private final @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
 
-    public Output<List<RecoveryPlanProtectedItemArgs>> getReplicationProtectedItems() {
-        return this.replicationProtectedItems == null ? Output.empty() : this.replicationProtectedItems;
+    public Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems() {
+        return this.replicationProtectedItems == null ? Codegen.empty() : this.replicationProtectedItems;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="startGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;
 
-    public Output<List<RecoveryPlanActionArgs>> getStartGroupActions() {
-        return this.startGroupActions == null ? Output.empty() : this.startGroupActions;
+    public Output<List<RecoveryPlanActionArgs>> startGroupActions() {
+        return this.startGroupActions == null ? Codegen.empty() : this.startGroupActions;
     }
 
     public RecoveryPlanGroupArgs(
@@ -79,10 +80,10 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RecoveryPlanGroupArgs() {
-        this.endGroupActions = Output.empty();
-        this.groupType = Output.empty();
-        this.replicationProtectedItems = Output.empty();
-        this.startGroupActions = Output.empty();
+        this.endGroupActions = Codegen.empty();
+        this.groupType = Codegen.empty();
+        this.replicationProtectedItems = Codegen.empty();
+        this.startGroupActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder endGroupActions(@Nullable List<RecoveryPlanActionArgs> endGroupActions) {
-            this.endGroupActions = Output.ofNullable(endGroupActions);
+            this.endGroupActions = Codegen.ofNullable(endGroupActions);
             return this;
         }
         public Builder endGroupActions(RecoveryPlanActionArgs... endGroupActions) {
@@ -135,7 +136,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder replicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemArgs> replicationProtectedItems) {
-            this.replicationProtectedItems = Output.ofNullable(replicationProtectedItems);
+            this.replicationProtectedItems = Codegen.ofNullable(replicationProtectedItems);
             return this;
         }
         public Builder replicationProtectedItems(RecoveryPlanProtectedItemArgs... replicationProtectedItems) {
@@ -146,7 +147,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder startGroupActions(@Nullable List<RecoveryPlanActionArgs> startGroupActions) {
-            this.startGroupActions = Output.ofNullable(startGroupActions);
+            this.startGroupActions = Codegen.ofNullable(startGroupActions);
             return this;
         }
         public Builder startGroupActions(RecoveryPlanActionArgs... startGroupActions) {

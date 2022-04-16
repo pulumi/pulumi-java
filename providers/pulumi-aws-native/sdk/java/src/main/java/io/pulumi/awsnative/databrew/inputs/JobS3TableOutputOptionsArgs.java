@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -16,7 +17,7 @@ public final class JobS3TableOutputOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="location", required=true)
       private final Output<JobS3LocationArgs> location;
 
-    public Output<JobS3LocationArgs> getLocation() {
+    public Output<JobS3LocationArgs> location() {
         return this.location;
     }
 
@@ -25,7 +26,7 @@ public final class JobS3TableOutputOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private JobS3TableOutputOptionsArgs() {
-        this.location = Output.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {

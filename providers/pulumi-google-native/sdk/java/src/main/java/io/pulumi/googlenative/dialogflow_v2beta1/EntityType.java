@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.EntityTypeArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1EntityTypeEntityResponse;
@@ -32,7 +33,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Optional. Indicates whether the entity type can be automatically expanded.
      * 
      */
-    public Output<String> getAutoExpansionMode() {
+    public Output<String> autoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
@@ -46,7 +47,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The name of the entity type.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -60,7 +61,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Optional. Enables fuzzy entity extraction during classification.
      * 
      */
-    public Output<Boolean> getEnableFuzzyExtraction() {
+    public Output<Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
@@ -74,7 +75,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Optional. The collection of entity entries associated with the entity type.
      * 
      */
-    public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse>> getEntities() {
+    public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse>> entities() {
         return this.entities;
     }
     /**
@@ -88,7 +89,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates the kind of entity type.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -102,7 +103,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -128,7 +129,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntityType(String name, EntityTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2beta1:EntityType", name, args == null ? EntityTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2beta1:EntityType", name, args == null ? EntityTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EntityType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

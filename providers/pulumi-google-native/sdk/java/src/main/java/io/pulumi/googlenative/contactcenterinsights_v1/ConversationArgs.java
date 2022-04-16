@@ -5,6 +5,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.ConversationMedium;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs;
@@ -25,8 +26,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentId")
       private final @Nullable Output<String> agentId;
 
-    public Output<String> getAgentId() {
-        return this.agentId == null ? Output.empty() : this.agentId;
+    public Output<String> agentId() {
+        return this.agentId == null ? Codegen.empty() : this.agentId;
     }
 
     /**
@@ -36,15 +37,15 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="callMetadata")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
 
-    public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> getCallMetadata() {
-        return this.callMetadata == null ? Output.empty() : this.callMetadata;
+    public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata() {
+        return this.callMetadata == null ? Codegen.empty() : this.callMetadata;
     }
 
     @Import(name="conversationId")
       private final @Nullable Output<String> conversationId;
 
-    public Output<String> getConversationId() {
-        return this.conversationId == null ? Output.empty() : this.conversationId;
+    public Output<String> conversationId() {
+        return this.conversationId == null ? Codegen.empty() : this.conversationId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSource")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
 
-    public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> getDataSource() {
-        return this.dataSource == null ? Output.empty() : this.dataSource;
+    public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource() {
+        return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+    public Output<String> expireTime() {
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -87,15 +88,15 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+    public Output<String> languageCode() {
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="medium")
       private final @Nullable Output<ConversationMedium> medium;
 
-    public Output<ConversationMedium> getMedium() {
-        return this.medium == null ? Output.empty() : this.medium;
+    public Output<ConversationMedium> medium() {
+        return this.medium == null ? Codegen.empty() : this.medium;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -127,15 +128,15 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="obfuscatedUserId")
       private final @Nullable Output<String> obfuscatedUserId;
 
-    public Output<String> getObfuscatedUserId() {
-        return this.obfuscatedUserId == null ? Output.empty() : this.obfuscatedUserId;
+    public Output<String> obfuscatedUserId() {
+        return this.obfuscatedUserId == null ? Codegen.empty() : this.obfuscatedUserId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<String> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public ConversationArgs(
@@ -192,20 +193,20 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConversationArgs() {
-        this.agentId = Output.empty();
-        this.callMetadata = Output.empty();
-        this.conversationId = Output.empty();
-        this.dataSource = Output.empty();
-        this.expireTime = Output.empty();
-        this.labels = Output.empty();
-        this.languageCode = Output.empty();
-        this.location = Output.empty();
-        this.medium = Output.empty();
-        this.name = Output.empty();
-        this.obfuscatedUserId = Output.empty();
-        this.project = Output.empty();
-        this.startTime = Output.empty();
-        this.ttl = Output.empty();
+        this.agentId = Codegen.empty();
+        this.callMetadata = Codegen.empty();
+        this.conversationId = Codegen.empty();
+        this.dataSource = Codegen.empty();
+        this.expireTime = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.location = Codegen.empty();
+        this.medium = Codegen.empty();
+        this.name = Codegen.empty();
+        this.obfuscatedUserId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -259,7 +260,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentId(@Nullable String agentId) {
-            this.agentId = Output.ofNullable(agentId);
+            this.agentId = Codegen.ofNullable(agentId);
             return this;
         }
         public Builder callMetadata(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata) {
@@ -267,7 +268,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder callMetadata(@Nullable GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs callMetadata) {
-            this.callMetadata = Output.ofNullable(callMetadata);
+            this.callMetadata = Codegen.ofNullable(callMetadata);
             return this;
         }
         public Builder conversationId(@Nullable Output<String> conversationId) {
@@ -275,7 +276,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conversationId(@Nullable String conversationId) {
-            this.conversationId = Output.ofNullable(conversationId);
+            this.conversationId = Codegen.ofNullable(conversationId);
             return this;
         }
         public Builder dataSource(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource) {
@@ -283,7 +284,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSource(@Nullable GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs dataSource) {
-            this.dataSource = Output.ofNullable(dataSource);
+            this.dataSource = Codegen.ofNullable(dataSource);
             return this;
         }
         public Builder expireTime(@Nullable Output<String> expireTime) {
@@ -291,7 +292,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -299,7 +300,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder languageCode(@Nullable Output<String> languageCode) {
@@ -307,7 +308,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -315,7 +316,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder medium(@Nullable Output<ConversationMedium> medium) {
@@ -323,7 +324,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder medium(@Nullable ConversationMedium medium) {
-            this.medium = Output.ofNullable(medium);
+            this.medium = Codegen.ofNullable(medium);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -331,7 +332,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder obfuscatedUserId(@Nullable Output<String> obfuscatedUserId) {
@@ -339,7 +340,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder obfuscatedUserId(@Nullable String obfuscatedUserId) {
-            this.obfuscatedUserId = Output.ofNullable(obfuscatedUserId);
+            this.obfuscatedUserId = Codegen.ofNullable(obfuscatedUserId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -347,7 +348,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -355,7 +356,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder ttl(@Nullable Output<String> ttl) {
@@ -363,7 +364,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public ConversationArgs build() {
             return new ConversationArgs(agentId, callMetadata, conversationId, dataSource, expireTime, labels, languageCode, location, medium, name, obfuscatedUserId, project, startTime, ttl);

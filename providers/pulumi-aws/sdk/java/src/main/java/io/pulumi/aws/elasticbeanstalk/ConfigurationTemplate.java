@@ -10,6 +10,7 @@ import io.pulumi.aws.elasticbeanstalk.outputs.ConfigurationTemplateSetting;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return name of the application to associate with this configuration template
      * 
      */
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     /**
@@ -57,7 +58,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return Short description of the Template
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return The ID of the environment used with this configuration template
      * 
      */
-    public Output</* @Nullable */ String> getEnvironmentId() {
+    public Output</* @Nullable */ String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -85,7 +86,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return A unique name for this Template.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +104,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * below in Option Settings
      * 
      */
-    public Output<List<ConfigurationTemplateSetting>> getSettings() {
+    public Output<List<ConfigurationTemplateSetting>> settings() {
         return this.settings;
     }
     /**
@@ -119,7 +120,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    public Output</* @Nullable */ String> getSolutionStackName() {
+    public Output</* @Nullable */ String> solutionStackName() {
         return this.solutionStackName;
     }
 
@@ -145,7 +146,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationTemplate(String name, ConfigurationTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticbeanstalk/configurationTemplate:ConfigurationTemplate", name, args == null ? ConfigurationTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticbeanstalk/configurationTemplate:ConfigurationTemplate", name, args == null ? ConfigurationTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfigurationTemplate(String name, Output<String> id, @Nullable ConfigurationTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

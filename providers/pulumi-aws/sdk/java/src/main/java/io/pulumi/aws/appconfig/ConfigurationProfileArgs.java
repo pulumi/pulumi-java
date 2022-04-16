@@ -6,6 +6,7 @@ package io.pulumi.aws.appconfig;
 import io.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -35,8 +36,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="locationUri", required=true)
       private final Output<String> locationUri;
 
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
 
@@ -57,8 +58,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="retrievalRoleArn")
       private final @Nullable Output<String> retrievalRoleArn;
 
-    public Output<String> getRetrievalRoleArn() {
-        return this.retrievalRoleArn == null ? Output.empty() : this.retrievalRoleArn;
+    public Output<String> retrievalRoleArn() {
+        return this.retrievalRoleArn == null ? Codegen.empty() : this.retrievalRoleArn;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="validators")
       private final @Nullable Output<List<ConfigurationProfileValidatorArgs>> validators;
 
-    public Output<List<ConfigurationProfileValidatorArgs>> getValidators() {
-        return this.validators == null ? Output.empty() : this.validators;
+    public Output<List<ConfigurationProfileValidatorArgs>> validators() {
+        return this.validators == null ? Codegen.empty() : this.validators;
     }
 
     public ConfigurationProfileArgs(
@@ -112,13 +113,13 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     }
 
     private ConfigurationProfileArgs() {
-        this.applicationId = Output.empty();
-        this.description = Output.empty();
-        this.locationUri = Output.empty();
-        this.name = Output.empty();
-        this.retrievalRoleArn = Output.empty();
-        this.tags = Output.empty();
-        this.validators = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.locationUri = Codegen.empty();
+        this.name = Codegen.empty();
+        this.retrievalRoleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.validators = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder locationUri(Output<String> locationUri) {
@@ -182,7 +183,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder retrievalRoleArn(@Nullable Output<String> retrievalRoleArn) {
@@ -190,7 +191,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder retrievalRoleArn(@Nullable String retrievalRoleArn) {
-            this.retrievalRoleArn = Output.ofNullable(retrievalRoleArn);
+            this.retrievalRoleArn = Codegen.ofNullable(retrievalRoleArn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -198,7 +199,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorArgs>> validators) {
@@ -206,7 +207,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder validators(@Nullable List<ConfigurationProfileValidatorArgs> validators) {
-            this.validators = Output.ofNullable(validators);
+            this.validators = Codegen.ofNullable(validators);
             return this;
         }
         public Builder validators(ConfigurationProfileValidatorArgs... validators) {

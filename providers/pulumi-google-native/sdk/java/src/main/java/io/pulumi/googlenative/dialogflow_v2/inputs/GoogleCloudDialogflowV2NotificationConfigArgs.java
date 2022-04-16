@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2NotificationConfigMessageFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends io.pulu
     @Import(name="messageFormat")
       private final @Nullable Output<GoogleCloudDialogflowV2NotificationConfigMessageFormat> messageFormat;
 
-    public Output<GoogleCloudDialogflowV2NotificationConfigMessageFormat> getMessageFormat() {
-        return this.messageFormat == null ? Output.empty() : this.messageFormat;
+    public Output<GoogleCloudDialogflowV2NotificationConfigMessageFormat> messageFormat() {
+        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends io.pulu
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public GoogleCloudDialogflowV2NotificationConfigArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends io.pulu
     }
 
     private GoogleCloudDialogflowV2NotificationConfigArgs() {
-        this.messageFormat = Output.empty();
-        this.topic = Output.empty();
+        this.messageFormat = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends io.pulu
             return this;
         }
         public Builder messageFormat(@Nullable GoogleCloudDialogflowV2NotificationConfigMessageFormat messageFormat) {
-            this.messageFormat = Output.ofNullable(messageFormat);
+            this.messageFormat = Codegen.ofNullable(messageFormat);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends io.pulu
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public GoogleCloudDialogflowV2NotificationConfigArgs build() {
             return new GoogleCloudDialogflowV2NotificationConfigArgs(messageFormat, topic);

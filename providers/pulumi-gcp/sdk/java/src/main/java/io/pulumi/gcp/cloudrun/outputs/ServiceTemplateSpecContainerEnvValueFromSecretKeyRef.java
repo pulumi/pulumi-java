@@ -34,14 +34,14 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
      * Can be 'latest' for the latest value or an integer for a specific version.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Volume's name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

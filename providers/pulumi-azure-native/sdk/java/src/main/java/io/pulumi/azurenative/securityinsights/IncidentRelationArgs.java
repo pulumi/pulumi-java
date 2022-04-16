@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="incidentId", required=true)
       private final Output<String> incidentId;
 
-    public Output<String> getIncidentId() {
+    public Output<String> incidentId() {
         return this.incidentId;
     }
 
@@ -32,7 +33,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -43,7 +44,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="relatedResourceId", required=true)
       private final Output<String> relatedResourceId;
 
-    public Output<String> getRelatedResourceId() {
+    public Output<String> relatedResourceId() {
         return this.relatedResourceId;
     }
 
@@ -54,8 +55,8 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="relationName")
       private final @Nullable Output<String> relationName;
 
-    public Output<String> getRelationName() {
-        return this.relationName == null ? Output.empty() : this.relationName;
+    public Output<String> relationName() {
+        return this.relationName == null ? Codegen.empty() : this.relationName;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,7 +77,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -96,12 +97,12 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IncidentRelationArgs() {
-        this.incidentId = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.relatedResourceId = Output.empty();
-        this.relationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.incidentId = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.relatedResourceId = Codegen.empty();
+        this.relationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder relationName(@Nullable String relationName) {
-            this.relationName = Output.ofNullable(relationName);
+            this.relationName = Codegen.ofNullable(relationName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

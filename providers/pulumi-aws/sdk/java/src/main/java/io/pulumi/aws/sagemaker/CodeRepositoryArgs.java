@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="codeRepositoryName", required=true)
       private final Output<String> codeRepositoryName;
 
-    public Output<String> getCodeRepositoryName() {
+    public Output<String> codeRepositoryName() {
         return this.codeRepositoryName;
     }
 
@@ -34,7 +35,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gitConfig", required=true)
       private final Output<CodeRepositoryGitConfigArgs> gitConfig;
 
-    public Output<CodeRepositoryGitConfigArgs> getGitConfig() {
+    public Output<CodeRepositoryGitConfigArgs> gitConfig() {
         return this.gitConfig;
     }
 
@@ -45,8 +46,8 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CodeRepositoryArgs(
@@ -59,9 +60,9 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CodeRepositoryArgs() {
-        this.codeRepositoryName = Output.empty();
-        this.gitConfig = Output.empty();
-        this.tags = Output.empty();
+        this.codeRepositoryName = Codegen.empty();
+        this.gitConfig = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CodeRepositoryArgs build() {
             return new CodeRepositoryArgs(codeRepositoryName, gitConfig, tags);

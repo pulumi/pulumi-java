@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     @Import(name="object")
       private final @Nullable Output<String> object;
 
-    public Output<String> getObject() {
-        return this.object == null ? Output.empty() : this.object;
+    public Output<String> object() {
+        return this.object == null ? Codegen.empty() : this.object;
     }
 
     public FlowLookoutMetricsDestinationPropertiesArgs(@Nullable Output<String> object) {
@@ -26,7 +27,7 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     }
 
     private FlowLookoutMetricsDestinationPropertiesArgs() {
-        this.object = Output.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder object(@Nullable String object) {
-            this.object = Output.ofNullable(object);
+            this.object = Codegen.ofNullable(object);
             return this;
         }        public FlowLookoutMetricsDestinationPropertiesArgs build() {
             return new FlowLookoutMetricsDestinationPropertiesArgs(object);

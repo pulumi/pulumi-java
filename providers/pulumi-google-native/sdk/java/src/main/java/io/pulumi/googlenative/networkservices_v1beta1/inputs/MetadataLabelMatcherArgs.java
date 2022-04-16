@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networkservices_v1beta1.enums.MetadataLabelMatcherMetadataLabelMatchCriteria;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelsArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
     @Import(name="metadataLabelMatchCriteria")
       private final @Nullable Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
 
-    public Output<MetadataLabelMatcherMetadataLabelMatchCriteria> getMetadataLabelMatchCriteria() {
-        return this.metadataLabelMatchCriteria == null ? Output.empty() : this.metadataLabelMatchCriteria;
+    public Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria() {
+        return this.metadataLabelMatchCriteria == null ? Codegen.empty() : this.metadataLabelMatchCriteria;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
     @Import(name="metadataLabels")
       private final @Nullable Output<List<MetadataLabelsArgs>> metadataLabels;
 
-    public Output<List<MetadataLabelsArgs>> getMetadataLabels() {
-        return this.metadataLabels == null ? Output.empty() : this.metadataLabels;
+    public Output<List<MetadataLabelsArgs>> metadataLabels() {
+        return this.metadataLabels == null ? Codegen.empty() : this.metadataLabels;
     }
 
     public MetadataLabelMatcherArgs(
@@ -50,8 +51,8 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
     }
 
     private MetadataLabelMatcherArgs() {
-        this.metadataLabelMatchCriteria = Output.empty();
-        this.metadataLabels = Output.empty();
+        this.metadataLabelMatchCriteria = Codegen.empty();
+        this.metadataLabels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder metadataLabelMatchCriteria(@Nullable MetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
-            this.metadataLabelMatchCriteria = Output.ofNullable(metadataLabelMatchCriteria);
+            this.metadataLabelMatchCriteria = Codegen.ofNullable(metadataLabelMatchCriteria);
             return this;
         }
         public Builder metadataLabels(@Nullable Output<List<MetadataLabelsArgs>> metadataLabels) {
@@ -89,7 +90,7 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder metadataLabels(@Nullable List<MetadataLabelsArgs> metadataLabels) {
-            this.metadataLabels = Output.ofNullable(metadataLabels);
+            this.metadataLabels = Codegen.ofNullable(metadataLabels);
             return this;
         }
         public Builder metadataLabels(MetadataLabelsArgs... metadataLabels) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterDirection;
 import io.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterRankingMethod;
 import java.lang.Integer;
@@ -27,8 +28,8 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     @Import(name="direction")
       private final @Nullable Output<PickTimeSeriesFilterDirection> direction;
 
-    public Output<PickTimeSeriesFilterDirection> getDirection() {
-        return this.direction == null ? Output.empty() : this.direction;
+    public Output<PickTimeSeriesFilterDirection> direction() {
+        return this.direction == null ? Codegen.empty() : this.direction;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     @Import(name="numTimeSeries")
       private final @Nullable Output<Integer> numTimeSeries;
 
-    public Output<Integer> getNumTimeSeries() {
-        return this.numTimeSeries == null ? Output.empty() : this.numTimeSeries;
+    public Output<Integer> numTimeSeries() {
+        return this.numTimeSeries == null ? Codegen.empty() : this.numTimeSeries;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     @Import(name="rankingMethod")
       private final @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
 
-    public Output<PickTimeSeriesFilterRankingMethod> getRankingMethod() {
-        return this.rankingMethod == null ? Output.empty() : this.rankingMethod;
+    public Output<PickTimeSeriesFilterRankingMethod> rankingMethod() {
+        return this.rankingMethod == null ? Codegen.empty() : this.rankingMethod;
     }
 
     public PickTimeSeriesFilterArgs(
@@ -63,9 +64,9 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     }
 
     private PickTimeSeriesFilterArgs() {
-        this.direction = Output.empty();
-        this.numTimeSeries = Output.empty();
-        this.rankingMethod = Output.empty();
+        this.direction = Codegen.empty();
+        this.numTimeSeries = Codegen.empty();
+        this.rankingMethod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder direction(@Nullable PickTimeSeriesFilterDirection direction) {
-            this.direction = Output.ofNullable(direction);
+            this.direction = Codegen.ofNullable(direction);
             return this;
         }
         public Builder numTimeSeries(@Nullable Output<Integer> numTimeSeries) {
@@ -105,7 +106,7 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder numTimeSeries(@Nullable Integer numTimeSeries) {
-            this.numTimeSeries = Output.ofNullable(numTimeSeries);
+            this.numTimeSeries = Codegen.ofNullable(numTimeSeries);
             return this;
         }
         public Builder rankingMethod(@Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod) {
@@ -113,7 +114,7 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder rankingMethod(@Nullable PickTimeSeriesFilterRankingMethod rankingMethod) {
-            this.rankingMethod = Output.ofNullable(rankingMethod);
+            this.rankingMethod = Codegen.ofNullable(rankingMethod);
             return this;
         }        public PickTimeSeriesFilterArgs build() {
             return new PickTimeSeriesFilterArgs(direction, numTimeSeries, rankingMethod);

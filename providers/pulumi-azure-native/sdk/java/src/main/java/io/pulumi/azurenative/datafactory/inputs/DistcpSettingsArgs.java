@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distcpOptions")
       private final @Nullable Output<Object> distcpOptions;
 
-    public Output<Object> getDistcpOptions() {
-        return this.distcpOptions == null ? Output.empty() : this.distcpOptions;
+    public Output<Object> distcpOptions() {
+        return this.distcpOptions == null ? Codegen.empty() : this.distcpOptions;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceManagerEndpoint", required=true)
       private final Output<Object> resourceManagerEndpoint;
 
-    public Output<Object> getResourceManagerEndpoint() {
+    public Output<Object> resourceManagerEndpoint() {
         return this.resourceManagerEndpoint;
     }
 
@@ -47,7 +48,7 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tempScriptPath", required=true)
       private final Output<Object> tempScriptPath;
 
-    public Output<Object> getTempScriptPath() {
+    public Output<Object> tempScriptPath() {
         return this.tempScriptPath;
     }
 
@@ -61,9 +62,9 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DistcpSettingsArgs() {
-        this.distcpOptions = Output.empty();
-        this.resourceManagerEndpoint = Output.empty();
-        this.tempScriptPath = Output.empty();
+        this.distcpOptions = Codegen.empty();
+        this.resourceManagerEndpoint = Codegen.empty();
+        this.tempScriptPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distcpOptions(@Nullable Object distcpOptions) {
-            this.distcpOptions = Output.ofNullable(distcpOptions);
+            this.distcpOptions = Codegen.ofNullable(distcpOptions);
             return this;
         }
         public Builder resourceManagerEndpoint(Output<Object> resourceManagerEndpoint) {

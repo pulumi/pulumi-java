@@ -147,122 +147,122 @@ public final class GetDatasetResult {
      * [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
      * 
     */
-    public List<DatasetAccessItemResponse> getAccess() {
+    public List<DatasetAccessItemResponse> access() {
         return this.access;
     }
     /**
      * The time when this dataset was created, in milliseconds since the epoch.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * [Required] A reference that identifies the dataset.
      * 
     */
-    public DatasetReferenceResponse getDatasetReference() {
+    public DatasetReferenceResponse datasetReference() {
         return this.datasetReference;
     }
     /**
      * The default collation of the dataset.
      * 
     */
-    public String getDefaultCollation() {
+    public String defaultCollation() {
         return this.defaultCollation;
     }
-    public EncryptionConfigurationResponse getDefaultEncryptionConfiguration() {
+    public EncryptionConfigurationResponse defaultEncryptionConfiguration() {
         return this.defaultEncryptionConfiguration;
     }
     /**
      * [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
      * 
     */
-    public String getDefaultPartitionExpirationMs() {
+    public String defaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs;
     }
     /**
      * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table's expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
      * 
     */
-    public String getDefaultTableExpirationMs() {
+    public String defaultTableExpirationMs() {
         return this.defaultTableExpirationMs;
     }
     /**
      * [Optional] A user-friendly description of the dataset.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * A hash of the resource.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * [Optional] A descriptive name for the dataset.
      * 
     */
-    public String getFriendlyName() {
+    public String friendlyName() {
         return this.friendlyName;
     }
     /**
      * [Optional] Indicates if table names are case insensitive in the dataset.
      * 
     */
-    public Boolean getIsCaseInsensitive() {
+    public Boolean isCaseInsensitive() {
         return this.isCaseInsensitive;
     }
     /**
      * The resource type.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Reserved for future use.
      * 
     */
-    public Boolean getSatisfiesPZS() {
+    public Boolean satisfiesPZS() {
         return this.satisfiesPZS;
     }
     /**
      * A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * [Optional]The tags associated with this dataset. Tag keys are globally unique.
      * 
     */
-    public List<DatasetTagsItemResponse> getTags() {
+    public List<DatasetTagsItemResponse> tags() {
         return this.tags;
     }
 

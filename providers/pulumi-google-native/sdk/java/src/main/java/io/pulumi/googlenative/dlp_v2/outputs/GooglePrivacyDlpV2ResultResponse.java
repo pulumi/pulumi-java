@@ -49,28 +49,28 @@ public final class GooglePrivacyDlpV2ResultResponse {
      * Statistics related to the processing of hybrid inspect.
      * 
     */
-    public GooglePrivacyDlpV2HybridInspectStatisticsResponse getHybridStats() {
+    public GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats() {
         return this.hybridStats;
     }
     /**
      * Statistics of how many instances of each info type were found during inspect job.
      * 
     */
-    public List<GooglePrivacyDlpV2InfoTypeStatsResponse> getInfoTypeStats() {
+    public List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats() {
         return this.infoTypeStats;
     }
     /**
      * Total size in bytes that were processed.
      * 
     */
-    public String getProcessedBytes() {
+    public String processedBytes() {
         return this.processedBytes;
     }
     /**
      * Estimate of the number of bytes to process.
      * 
     */
-    public String getTotalEstimatedBytes() {
+    public String totalEstimatedBytes() {
         return this.totalEstimatedBytes;
     }
 

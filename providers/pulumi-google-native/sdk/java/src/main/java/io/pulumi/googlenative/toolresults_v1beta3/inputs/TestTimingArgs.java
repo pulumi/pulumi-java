@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testProcessDuration")
       private final @Nullable Output<DurationArgs> testProcessDuration;
 
-    public Output<DurationArgs> getTestProcessDuration() {
-        return this.testProcessDuration == null ? Output.empty() : this.testProcessDuration;
+    public Output<DurationArgs> testProcessDuration() {
+        return this.testProcessDuration == null ? Codegen.empty() : this.testProcessDuration;
     }
 
     public TestTimingArgs(@Nullable Output<DurationArgs> testProcessDuration) {
@@ -34,7 +35,7 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestTimingArgs() {
-        this.testProcessDuration = Output.empty();
+        this.testProcessDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testProcessDuration(@Nullable DurationArgs testProcessDuration) {
-            this.testProcessDuration = Output.ofNullable(testProcessDuration);
+            this.testProcessDuration = Codegen.ofNullable(testProcessDuration);
             return this;
         }        public TestTimingArgs build() {
             return new TestTimingArgs(testProcessDuration);

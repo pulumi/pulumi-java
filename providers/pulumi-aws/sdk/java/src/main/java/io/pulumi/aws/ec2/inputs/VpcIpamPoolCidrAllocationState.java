@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
-        return this.cidr == null ? Output.empty() : this.cidr;
+    public Output<String> cidr() {
+        return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,15 +46,15 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="disallowedCidrs")
       private final @Nullable Output<List<String>> disallowedCidrs;
 
-    public Output<List<String>> getDisallowedCidrs() {
-        return this.disallowedCidrs == null ? Output.empty() : this.disallowedCidrs;
+    public Output<List<String>> disallowedCidrs() {
+        return this.disallowedCidrs == null ? Codegen.empty() : this.disallowedCidrs;
     }
 
     @Import(name="ipamPoolAllocationId")
       private final @Nullable Output<String> ipamPoolAllocationId;
 
-    public Output<String> getIpamPoolAllocationId() {
-        return this.ipamPoolAllocationId == null ? Output.empty() : this.ipamPoolAllocationId;
+    public Output<String> ipamPoolAllocationId() {
+        return this.ipamPoolAllocationId == null ? Codegen.empty() : this.ipamPoolAllocationId;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="ipamPoolId")
       private final @Nullable Output<String> ipamPoolId;
 
-    public Output<String> getIpamPoolId() {
-        return this.ipamPoolId == null ? Output.empty() : this.ipamPoolId;
+    public Output<String> ipamPoolId() {
+        return this.ipamPoolId == null ? Codegen.empty() : this.ipamPoolId;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
-    public Output<Integer> getNetmaskLength() {
-        return this.netmaskLength == null ? Output.empty() : this.netmaskLength;
+    public Output<Integer> netmaskLength() {
+        return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
-    public Output<String> getResourceOwner() {
-        return this.resourceOwner == null ? Output.empty() : this.resourceOwner;
+    public Output<String> resourceOwner() {
+        return this.resourceOwner == null ? Codegen.empty() : this.resourceOwner;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public VpcIpamPoolCidrAllocationState(
@@ -133,15 +134,15 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
     }
 
     private VpcIpamPoolCidrAllocationState() {
-        this.cidr = Output.empty();
-        this.description = Output.empty();
-        this.disallowedCidrs = Output.empty();
-        this.ipamPoolAllocationId = Output.empty();
-        this.ipamPoolId = Output.empty();
-        this.netmaskLength = Output.empty();
-        this.resourceId = Output.empty();
-        this.resourceOwner = Output.empty();
-        this.resourceType = Output.empty();
+        this.cidr = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disallowedCidrs = Codegen.empty();
+        this.ipamPoolAllocationId = Codegen.empty();
+        this.ipamPoolId = Codegen.empty();
+        this.netmaskLength = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.resourceOwner = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -185,7 +186,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Output.ofNullable(cidr);
+            this.cidr = Codegen.ofNullable(cidr);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -193,7 +194,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disallowedCidrs(@Nullable Output<List<String>> disallowedCidrs) {
@@ -201,7 +202,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
-            this.disallowedCidrs = Output.ofNullable(disallowedCidrs);
+            this.disallowedCidrs = Codegen.ofNullable(disallowedCidrs);
             return this;
         }
         public Builder disallowedCidrs(String... disallowedCidrs) {
@@ -212,7 +213,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder ipamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
-            this.ipamPoolAllocationId = Output.ofNullable(ipamPoolAllocationId);
+            this.ipamPoolAllocationId = Codegen.ofNullable(ipamPoolAllocationId);
             return this;
         }
         public Builder ipamPoolId(@Nullable Output<String> ipamPoolId) {
@@ -220,7 +221,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
-            this.ipamPoolId = Output.ofNullable(ipamPoolId);
+            this.ipamPoolId = Codegen.ofNullable(ipamPoolId);
             return this;
         }
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
@@ -228,7 +229,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = Output.ofNullable(netmaskLength);
+            this.netmaskLength = Codegen.ofNullable(netmaskLength);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -236,7 +237,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
@@ -244,7 +245,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Output.ofNullable(resourceOwner);
+            this.resourceOwner = Codegen.ofNullable(resourceOwner);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -252,7 +253,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public VpcIpamPoolCidrAllocationState build() {
             return new VpcIpamPoolCidrAllocationState(cidr, description, disallowedCidrs, ipamPoolAllocationId, ipamPoolId, netmaskLength, resourceId, resourceOwner, resourceType);

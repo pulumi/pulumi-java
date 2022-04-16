@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
@@ -49,7 +50,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -60,8 +61,8 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="sasTtlAsIso8601")
       private final @Nullable Output<String> sasTtlAsIso8601;
 
-    public Output<String> getSasTtlAsIso8601() {
-        return this.sasTtlAsIso8601 == null ? Output.empty() : this.sasTtlAsIso8601;
+    public Output<String> sasTtlAsIso8601() {
+        return this.sasTtlAsIso8601 == null ? Codegen.empty() : this.sasTtlAsIso8601;
     }
 
     public StorageEndpointPropertiesArgs(
@@ -76,10 +77,10 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private StorageEndpointPropertiesArgs() {
-        this.authenticationType = Output.empty();
-        this.connectionString = Output.empty();
-        this.containerName = Output.empty();
-        this.sasTtlAsIso8601 = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.sasTtlAsIso8601 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder connectionString(Output<String> connectionString) {
@@ -137,7 +138,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
-            this.sasTtlAsIso8601 = Output.ofNullable(sasTtlAsIso8601);
+            this.sasTtlAsIso8601 = Codegen.ofNullable(sasTtlAsIso8601);
             return this;
         }        public StorageEndpointPropertiesArgs build() {
             return new StorageEndpointPropertiesArgs(authenticationType, connectionString, containerName, sasTtlAsIso8601);

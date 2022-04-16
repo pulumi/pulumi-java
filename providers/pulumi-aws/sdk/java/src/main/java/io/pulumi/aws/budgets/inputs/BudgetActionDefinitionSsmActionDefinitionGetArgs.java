@@ -5,6 +5,7 @@ package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     @Import(name="actionSubType", required=true)
       private final Output<String> actionSubType;
 
-    public Output<String> getActionSubType() {
+    public Output<String> actionSubType() {
         return this.actionSubType;
     }
 
@@ -32,7 +33,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     @Import(name="instanceIds", required=true)
       private final Output<List<String>> instanceIds;
 
-    public Output<List<String>> getInstanceIds() {
+    public Output<List<String>> instanceIds() {
         return this.instanceIds;
     }
 
@@ -43,7 +44,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -57,9 +58,9 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     }
 
     private BudgetActionDefinitionSsmActionDefinitionGetArgs() {
-        this.actionSubType = Output.empty();
-        this.instanceIds = Output.empty();
-        this.region = Output.empty();
+        this.actionSubType = Codegen.empty();
+        this.instanceIds = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {

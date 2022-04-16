@@ -25,7 +25,7 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="email")
       private final @Nullable String email;
 
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
@@ -36,7 +36,7 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="link")
       private final @Nullable String link;
 
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
@@ -47,7 +47,7 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

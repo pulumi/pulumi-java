@@ -26,7 +26,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
     @Import(name="actionableMessage")
       private final @Nullable String actionableMessage;
 
-    public Optional<String> getActionableMessage() {
+    public Optional<String> actionableMessage() {
         return this.actionableMessage == null ? Optional.empty() : Optional.ofNullable(this.actionableMessage);
     }
 
@@ -37,7 +37,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
     @Import(name="filePath", required=true)
       private final String filePath;
 
-    public String getFilePath() {
+    public String filePath() {
         return this.filePath;
     }
 
@@ -48,7 +48,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
     @Import(name="hResult", required=true)
       private final Integer hResult;
 
-    public Integer getHResult() {
+    public Integer hResult() {
         return this.hResult;
     }
 
@@ -59,7 +59,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
     @Import(name="lineNumber", required=true)
       private final String lineNumber;
 
-    public String getLineNumber() {
+    public String lineNumber() {
         return this.lineNumber;
     }
 
@@ -70,7 +70,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -81,7 +81,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
     @Import(name="stackTrace", required=true)
       private final String stackTrace;
 
-    public String getStackTrace() {
+    public String stackTrace() {
         return this.stackTrace;
     }
 

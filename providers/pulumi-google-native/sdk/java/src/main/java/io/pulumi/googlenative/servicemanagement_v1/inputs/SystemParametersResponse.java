@@ -24,7 +24,7 @@ public final class SystemParametersResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rules", required=true)
       private final List<SystemParameterRuleResponse> rules;
 
-    public List<SystemParameterRuleResponse> getRules() {
+    public List<SystemParameterRuleResponse> rules() {
         return this.rules;
     }
 

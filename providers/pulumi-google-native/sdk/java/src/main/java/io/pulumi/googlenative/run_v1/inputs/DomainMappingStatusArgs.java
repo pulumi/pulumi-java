@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
 import io.pulumi.googlenative.run_v1.inputs.ResourceRecordArgs;
 import java.lang.Integer;
@@ -29,8 +30,8 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="conditions")
       private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
-    public Output<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<GoogleCloudRunV1ConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="mappedRouteName")
       private final @Nullable Output<String> mappedRouteName;
 
-    public Output<String> getMappedRouteName() {
-        return this.mappedRouteName == null ? Output.empty() : this.mappedRouteName;
+    public Output<String> mappedRouteName() {
+        return this.mappedRouteName == null ? Codegen.empty() : this.mappedRouteName;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+    public Output<Integer> observedGeneration() {
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceRecords")
       private final @Nullable Output<List<ResourceRecordArgs>> resourceRecords;
 
-    public Output<List<ResourceRecordArgs>> getResourceRecords() {
-        return this.resourceRecords == null ? Output.empty() : this.resourceRecords;
+    public Output<List<ResourceRecordArgs>> resourceRecords() {
+        return this.resourceRecords == null ? Codegen.empty() : this.resourceRecords;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public DomainMappingStatusArgs(
@@ -91,11 +92,11 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     }
 
     private DomainMappingStatusArgs() {
-        this.conditions = Output.empty();
-        this.mappedRouteName = Output.empty();
-        this.observedGeneration = Output.empty();
-        this.resourceRecords = Output.empty();
-        this.url = Output.empty();
+        this.conditions = Codegen.empty();
+        this.mappedRouteName = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
+        this.resourceRecords = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder conditions(@Nullable List<GoogleCloudRunV1ConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(GoogleCloudRunV1ConditionArgs... conditions) {
@@ -142,7 +143,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
-            this.mappedRouteName = Output.ofNullable(mappedRouteName);
+            this.mappedRouteName = Codegen.ofNullable(mappedRouteName);
             return this;
         }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
@@ -150,7 +151,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }
         public Builder resourceRecords(@Nullable Output<List<ResourceRecordArgs>> resourceRecords) {
@@ -158,7 +159,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder resourceRecords(@Nullable List<ResourceRecordArgs> resourceRecords) {
-            this.resourceRecords = Output.ofNullable(resourceRecords);
+            this.resourceRecords = Codegen.ofNullable(resourceRecords);
             return this;
         }
         public Builder resourceRecords(ResourceRecordArgs... resourceRecords) {
@@ -169,7 +170,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public DomainMappingStatusArgs build() {
             return new DomainMappingStatusArgs(conditions, mappedRouteName, observedGeneration, resourceRecords, url);

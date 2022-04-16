@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+    public Output<String> category() {
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -49,8 +50,8 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private SubscriptionLogSettingsArgs() {
-        this.category = Output.empty();
-        this.enabled = Output.empty();
+        this.category = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder category(@Nullable String category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {

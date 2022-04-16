@@ -5,6 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class BackupPlanAdvancedBackupSettingResourceTypeArgs extends io.pu
     @Import(name="backupOptions", required=true)
       private final Output<Object> backupOptions;
 
-    public Output<Object> getBackupOptions() {
+    public Output<Object> backupOptions() {
         return this.backupOptions;
     }
 
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -36,8 +37,8 @@ public final class BackupPlanAdvancedBackupSettingResourceTypeArgs extends io.pu
     }
 
     private BackupPlanAdvancedBackupSettingResourceTypeArgs() {
-        this.backupOptions = Output.empty();
-        this.resourceType = Output.empty();
+        this.backupOptions = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {

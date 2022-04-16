@@ -7,6 +7,7 @@ import io.pulumi.azurenative.orbital.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endPointName", required=true)
       private final Output<String> endPointName;
 
-    public Output<String> getEndPointName() {
+    public Output<String> endPointName() {
         return this.endPointName;
     }
 
@@ -37,7 +38,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress", required=true)
       private final Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
 
@@ -48,7 +49,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port;
     }
 
@@ -59,7 +60,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
-    public Output<Either<String,Protocol>> getProtocol() {
+    public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 
@@ -75,10 +76,10 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndPointArgs() {
-        this.endPointName = Output.empty();
-        this.ipAddress = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
+        this.endPointName = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {

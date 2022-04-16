@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+    public Output<List<String>> keys() {
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     public MongoIndexKeysArgs(@Nullable Output<List<String>> keys) {
@@ -35,7 +36,7 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MongoIndexKeysArgs() {
-        this.keys = Output.empty();
+        this.keys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder keys(String... keys) {

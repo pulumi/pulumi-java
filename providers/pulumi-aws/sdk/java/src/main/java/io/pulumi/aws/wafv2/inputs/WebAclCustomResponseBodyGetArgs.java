@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class WebAclCustomResponseBodyGetArgs extends io.pulumi.resources.R
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -31,7 +32,7 @@ public final class WebAclCustomResponseBodyGetArgs extends io.pulumi.resources.R
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -42,7 +43,7 @@ public final class WebAclCustomResponseBodyGetArgs extends io.pulumi.resources.R
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -56,9 +57,9 @@ public final class WebAclCustomResponseBodyGetArgs extends io.pulumi.resources.R
     }
 
     private WebAclCustomResponseBodyGetArgs() {
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.key = Output.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {

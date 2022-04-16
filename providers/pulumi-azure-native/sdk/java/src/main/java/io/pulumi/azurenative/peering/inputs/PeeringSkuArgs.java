@@ -9,6 +9,7 @@ import io.pulumi.azurenative.peering.enums.Tier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<Either<String,Family>> family;
 
-    public Output<Either<String,Family>> getFamily() {
-        return this.family == null ? Output.empty() : this.family;
+    public Output<Either<String,Family>> family() {
+        return this.family == null ? Codegen.empty() : this.family;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Either<String,Size>> size;
 
-    public Output<Either<String,Size>> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<Either<String,Size>> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<Either<String,Tier>> tier;
 
-    public Output<Either<String,Tier>> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<Either<String,Tier>> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public PeeringSkuArgs(
@@ -78,10 +79,10 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PeeringSkuArgs() {
-        this.family = Output.empty();
-        this.name = Output.empty();
-        this.size = Output.empty();
-        this.tier = Output.empty();
+        this.family = Codegen.empty();
+        this.name = Codegen.empty();
+        this.size = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder family(@Nullable Either<String,Family> family) {
-            this.family = Output.ofNullable(family);
+            this.family = Codegen.ofNullable(family);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -123,7 +124,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder size(@Nullable Output<Either<String,Size>> size) {
@@ -131,7 +132,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable Either<String,Size> size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder tier(@Nullable Output<Either<String,Tier>> tier) {
@@ -139,7 +140,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable Either<String,Tier> tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public PeeringSkuArgs build() {
             return new PeeringSkuArgs(family, name, size, tier);

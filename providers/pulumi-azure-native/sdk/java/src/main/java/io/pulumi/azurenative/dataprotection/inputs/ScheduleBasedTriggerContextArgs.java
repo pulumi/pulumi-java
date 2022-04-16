@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TaggingCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -39,7 +40,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     @Import(name="schedule", required=true)
       private final Output<BackupScheduleArgs> schedule;
 
-    public Output<BackupScheduleArgs> getSchedule() {
+    public Output<BackupScheduleArgs> schedule() {
         return this.schedule;
     }
 
@@ -50,7 +51,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     @Import(name="taggingCriteria", required=true)
       private final Output<List<TaggingCriteriaArgs>> taggingCriteria;
 
-    public Output<List<TaggingCriteriaArgs>> getTaggingCriteria() {
+    public Output<List<TaggingCriteriaArgs>> taggingCriteria() {
         return this.taggingCriteria;
     }
 
@@ -64,9 +65,9 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     }
 
     private ScheduleBasedTriggerContextArgs() {
-        this.objectType = Output.empty();
-        this.schedule = Output.empty();
-        this.taggingCriteria = Output.empty();
+        this.objectType = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.taggingCriteria = Codegen.empty();
     }
 
     public static Builder builder() {

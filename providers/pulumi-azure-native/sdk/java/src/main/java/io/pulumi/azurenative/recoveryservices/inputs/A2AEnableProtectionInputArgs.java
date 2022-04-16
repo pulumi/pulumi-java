@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.A2AVmManagedDiskInputDetail
 import io.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="diskEncryptionInfo")
       private final @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
-    public Output<DiskEncryptionInfoArgs> getDiskEncryptionInfo() {
-        return this.diskEncryptionInfo == null ? Output.empty() : this.diskEncryptionInfo;
+    public Output<DiskEncryptionInfoArgs> diskEncryptionInfo() {
+        return this.diskEncryptionInfo == null ? Codegen.empty() : this.diskEncryptionInfo;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="fabricObjectId")
       private final @Nullable Output<String> fabricObjectId;
 
-    public Output<String> getFabricObjectId() {
-        return this.fabricObjectId == null ? Output.empty() : this.fabricObjectId;
+    public Output<String> fabricObjectId() {
+        return this.fabricObjectId == null ? Codegen.empty() : this.fabricObjectId;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="multiVmGroupName")
       private final @Nullable Output<String> multiVmGroupName;
 
-    public Output<String> getMultiVmGroupName() {
-        return this.multiVmGroupName == null ? Output.empty() : this.multiVmGroupName;
+    public Output<String> multiVmGroupName() {
+        return this.multiVmGroupName == null ? Codegen.empty() : this.multiVmGroupName;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryAvailabilitySetId")
       private final @Nullable Output<String> recoveryAvailabilitySetId;
 
-    public Output<String> getRecoveryAvailabilitySetId() {
-        return this.recoveryAvailabilitySetId == null ? Output.empty() : this.recoveryAvailabilitySetId;
+    public Output<String> recoveryAvailabilitySetId() {
+        return this.recoveryAvailabilitySetId == null ? Codegen.empty() : this.recoveryAvailabilitySetId;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryAvailabilityZone")
       private final @Nullable Output<String> recoveryAvailabilityZone;
 
-    public Output<String> getRecoveryAvailabilityZone() {
-        return this.recoveryAvailabilityZone == null ? Output.empty() : this.recoveryAvailabilityZone;
+    public Output<String> recoveryAvailabilityZone() {
+        return this.recoveryAvailabilityZone == null ? Codegen.empty() : this.recoveryAvailabilityZone;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryAzureNetworkId")
       private final @Nullable Output<String> recoveryAzureNetworkId;
 
-    public Output<String> getRecoveryAzureNetworkId() {
-        return this.recoveryAzureNetworkId == null ? Output.empty() : this.recoveryAzureNetworkId;
+    public Output<String> recoveryAzureNetworkId() {
+        return this.recoveryAzureNetworkId == null ? Codegen.empty() : this.recoveryAzureNetworkId;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryBootDiagStorageAccountId")
       private final @Nullable Output<String> recoveryBootDiagStorageAccountId;
 
-    public Output<String> getRecoveryBootDiagStorageAccountId() {
-        return this.recoveryBootDiagStorageAccountId == null ? Output.empty() : this.recoveryBootDiagStorageAccountId;
+    public Output<String> recoveryBootDiagStorageAccountId() {
+        return this.recoveryBootDiagStorageAccountId == null ? Codegen.empty() : this.recoveryBootDiagStorageAccountId;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryCloudServiceId")
       private final @Nullable Output<String> recoveryCloudServiceId;
 
-    public Output<String> getRecoveryCloudServiceId() {
-        return this.recoveryCloudServiceId == null ? Output.empty() : this.recoveryCloudServiceId;
+    public Output<String> recoveryCloudServiceId() {
+        return this.recoveryCloudServiceId == null ? Codegen.empty() : this.recoveryCloudServiceId;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryContainerId")
       private final @Nullable Output<String> recoveryContainerId;
 
-    public Output<String> getRecoveryContainerId() {
-        return this.recoveryContainerId == null ? Output.empty() : this.recoveryContainerId;
+    public Output<String> recoveryContainerId() {
+        return this.recoveryContainerId == null ? Codegen.empty() : this.recoveryContainerId;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryProximityPlacementGroupId")
       private final @Nullable Output<String> recoveryProximityPlacementGroupId;
 
-    public Output<String> getRecoveryProximityPlacementGroupId() {
-        return this.recoveryProximityPlacementGroupId == null ? Output.empty() : this.recoveryProximityPlacementGroupId;
+    public Output<String> recoveryProximityPlacementGroupId() {
+        return this.recoveryProximityPlacementGroupId == null ? Codegen.empty() : this.recoveryProximityPlacementGroupId;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryResourceGroupId")
       private final @Nullable Output<String> recoveryResourceGroupId;
 
-    public Output<String> getRecoveryResourceGroupId() {
-        return this.recoveryResourceGroupId == null ? Output.empty() : this.recoveryResourceGroupId;
+    public Output<String> recoveryResourceGroupId() {
+        return this.recoveryResourceGroupId == null ? Codegen.empty() : this.recoveryResourceGroupId;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="recoverySubnetName")
       private final @Nullable Output<String> recoverySubnetName;
 
-    public Output<String> getRecoverySubnetName() {
-        return this.recoverySubnetName == null ? Output.empty() : this.recoverySubnetName;
+    public Output<String> recoverySubnetName() {
+        return this.recoverySubnetName == null ? Codegen.empty() : this.recoverySubnetName;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="vmDisks")
       private final @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks;
 
-    public Output<List<A2AVmDiskInputDetailsArgs>> getVmDisks() {
-        return this.vmDisks == null ? Output.empty() : this.vmDisks;
+    public Output<List<A2AVmDiskInputDetailsArgs>> vmDisks() {
+        return this.vmDisks == null ? Codegen.empty() : this.vmDisks;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     @Import(name="vmManagedDisks")
       private final @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
 
-    public Output<List<A2AVmManagedDiskInputDetailsArgs>> getVmManagedDisks() {
-        return this.vmManagedDisks == null ? Output.empty() : this.vmManagedDisks;
+    public Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks() {
+        return this.vmManagedDisks == null ? Codegen.empty() : this.vmManagedDisks;
     }
 
     public A2AEnableProtectionInputArgs(
@@ -222,21 +223,21 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     }
 
     private A2AEnableProtectionInputArgs() {
-        this.diskEncryptionInfo = Output.empty();
-        this.fabricObjectId = Output.empty();
-        this.instanceType = Output.empty();
-        this.multiVmGroupName = Output.empty();
-        this.recoveryAvailabilitySetId = Output.empty();
-        this.recoveryAvailabilityZone = Output.empty();
-        this.recoveryAzureNetworkId = Output.empty();
-        this.recoveryBootDiagStorageAccountId = Output.empty();
-        this.recoveryCloudServiceId = Output.empty();
-        this.recoveryContainerId = Output.empty();
-        this.recoveryProximityPlacementGroupId = Output.empty();
-        this.recoveryResourceGroupId = Output.empty();
-        this.recoverySubnetName = Output.empty();
-        this.vmDisks = Output.empty();
-        this.vmManagedDisks = Output.empty();
+        this.diskEncryptionInfo = Codegen.empty();
+        this.fabricObjectId = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.multiVmGroupName = Codegen.empty();
+        this.recoveryAvailabilitySetId = Codegen.empty();
+        this.recoveryAvailabilityZone = Codegen.empty();
+        this.recoveryAzureNetworkId = Codegen.empty();
+        this.recoveryBootDiagStorageAccountId = Codegen.empty();
+        this.recoveryCloudServiceId = Codegen.empty();
+        this.recoveryContainerId = Codegen.empty();
+        this.recoveryProximityPlacementGroupId = Codegen.empty();
+        this.recoveryResourceGroupId = Codegen.empty();
+        this.recoverySubnetName = Codegen.empty();
+        this.vmDisks = Codegen.empty();
+        this.vmManagedDisks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder diskEncryptionInfo(@Nullable DiskEncryptionInfoArgs diskEncryptionInfo) {
-            this.diskEncryptionInfo = Output.ofNullable(diskEncryptionInfo);
+            this.diskEncryptionInfo = Codegen.ofNullable(diskEncryptionInfo);
             return this;
         }
         public Builder fabricObjectId(@Nullable Output<String> fabricObjectId) {
@@ -300,7 +301,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder fabricObjectId(@Nullable String fabricObjectId) {
-            this.fabricObjectId = Output.ofNullable(fabricObjectId);
+            this.fabricObjectId = Codegen.ofNullable(fabricObjectId);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -308,7 +309,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
@@ -316,7 +317,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
-            this.multiVmGroupName = Output.ofNullable(multiVmGroupName);
+            this.multiVmGroupName = Codegen.ofNullable(multiVmGroupName);
             return this;
         }
         public Builder recoveryAvailabilitySetId(@Nullable Output<String> recoveryAvailabilitySetId) {
@@ -324,7 +325,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
-            this.recoveryAvailabilitySetId = Output.ofNullable(recoveryAvailabilitySetId);
+            this.recoveryAvailabilitySetId = Codegen.ofNullable(recoveryAvailabilitySetId);
             return this;
         }
         public Builder recoveryAvailabilityZone(@Nullable Output<String> recoveryAvailabilityZone) {
@@ -332,7 +333,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryAvailabilityZone(@Nullable String recoveryAvailabilityZone) {
-            this.recoveryAvailabilityZone = Output.ofNullable(recoveryAvailabilityZone);
+            this.recoveryAvailabilityZone = Codegen.ofNullable(recoveryAvailabilityZone);
             return this;
         }
         public Builder recoveryAzureNetworkId(@Nullable Output<String> recoveryAzureNetworkId) {
@@ -340,7 +341,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryAzureNetworkId(@Nullable String recoveryAzureNetworkId) {
-            this.recoveryAzureNetworkId = Output.ofNullable(recoveryAzureNetworkId);
+            this.recoveryAzureNetworkId = Codegen.ofNullable(recoveryAzureNetworkId);
             return this;
         }
         public Builder recoveryBootDiagStorageAccountId(@Nullable Output<String> recoveryBootDiagStorageAccountId) {
@@ -348,7 +349,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryBootDiagStorageAccountId(@Nullable String recoveryBootDiagStorageAccountId) {
-            this.recoveryBootDiagStorageAccountId = Output.ofNullable(recoveryBootDiagStorageAccountId);
+            this.recoveryBootDiagStorageAccountId = Codegen.ofNullable(recoveryBootDiagStorageAccountId);
             return this;
         }
         public Builder recoveryCloudServiceId(@Nullable Output<String> recoveryCloudServiceId) {
@@ -356,7 +357,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryCloudServiceId(@Nullable String recoveryCloudServiceId) {
-            this.recoveryCloudServiceId = Output.ofNullable(recoveryCloudServiceId);
+            this.recoveryCloudServiceId = Codegen.ofNullable(recoveryCloudServiceId);
             return this;
         }
         public Builder recoveryContainerId(@Nullable Output<String> recoveryContainerId) {
@@ -364,7 +365,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryContainerId(@Nullable String recoveryContainerId) {
-            this.recoveryContainerId = Output.ofNullable(recoveryContainerId);
+            this.recoveryContainerId = Codegen.ofNullable(recoveryContainerId);
             return this;
         }
         public Builder recoveryProximityPlacementGroupId(@Nullable Output<String> recoveryProximityPlacementGroupId) {
@@ -372,7 +373,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryProximityPlacementGroupId(@Nullable String recoveryProximityPlacementGroupId) {
-            this.recoveryProximityPlacementGroupId = Output.ofNullable(recoveryProximityPlacementGroupId);
+            this.recoveryProximityPlacementGroupId = Codegen.ofNullable(recoveryProximityPlacementGroupId);
             return this;
         }
         public Builder recoveryResourceGroupId(@Nullable Output<String> recoveryResourceGroupId) {
@@ -380,7 +381,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
-            this.recoveryResourceGroupId = Output.ofNullable(recoveryResourceGroupId);
+            this.recoveryResourceGroupId = Codegen.ofNullable(recoveryResourceGroupId);
             return this;
         }
         public Builder recoverySubnetName(@Nullable Output<String> recoverySubnetName) {
@@ -388,7 +389,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoverySubnetName(@Nullable String recoverySubnetName) {
-            this.recoverySubnetName = Output.ofNullable(recoverySubnetName);
+            this.recoverySubnetName = Codegen.ofNullable(recoverySubnetName);
             return this;
         }
         public Builder vmDisks(@Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks) {
@@ -396,7 +397,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder vmDisks(@Nullable List<A2AVmDiskInputDetailsArgs> vmDisks) {
-            this.vmDisks = Output.ofNullable(vmDisks);
+            this.vmDisks = Codegen.ofNullable(vmDisks);
             return this;
         }
         public Builder vmDisks(A2AVmDiskInputDetailsArgs... vmDisks) {
@@ -407,7 +408,7 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder vmManagedDisks(@Nullable List<A2AVmManagedDiskInputDetailsArgs> vmManagedDisks) {
-            this.vmManagedDisks = Output.ofNullable(vmManagedDisks);
+            this.vmManagedDisks = Codegen.ofNullable(vmManagedDisks);
             return this;
         }
         public Builder vmManagedDisks(A2AVmManagedDiskInputDetailsArgs... vmManagedDisks) {

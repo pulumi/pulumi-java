@@ -5,6 +5,7 @@ package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     @Import(name="instancePort", required=true)
       private final Output<Integer> instancePort;
 
-    public Output<Integer> getInstancePort() {
+    public Output<Integer> instancePort() {
         return this.instancePort;
     }
 
@@ -34,7 +35,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     @Import(name="instanceProtocol", required=true)
       private final Output<String> instanceProtocol;
 
-    public Output<String> getInstanceProtocol() {
+    public Output<String> instanceProtocol() {
         return this.instanceProtocol;
     }
 
@@ -45,7 +46,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     @Import(name="lbPort", required=true)
       private final Output<Integer> lbPort;
 
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
 
@@ -57,7 +58,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     @Import(name="lbProtocol", required=true)
       private final Output<String> lbProtocol;
 
-    public Output<String> getLbProtocol() {
+    public Output<String> lbProtocol() {
         return this.lbProtocol;
     }
 
@@ -69,8 +70,8 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     @Import(name="sslCertificateId")
       private final @Nullable Output<String> sslCertificateId;
 
-    public Output<String> getSslCertificateId() {
-        return this.sslCertificateId == null ? Output.empty() : this.sslCertificateId;
+    public Output<String> sslCertificateId() {
+        return this.sslCertificateId == null ? Codegen.empty() : this.sslCertificateId;
     }
 
     public LoadBalancerListenerGetArgs(
@@ -87,11 +88,11 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     }
 
     private LoadBalancerListenerGetArgs() {
-        this.instancePort = Output.empty();
-        this.instanceProtocol = Output.empty();
-        this.lbPort = Output.empty();
-        this.lbProtocol = Output.empty();
-        this.sslCertificateId = Output.empty();
+        this.instancePort = Codegen.empty();
+        this.instanceProtocol = Codegen.empty();
+        this.lbPort = Codegen.empty();
+        this.lbProtocol = Codegen.empty();
+        this.sslCertificateId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sslCertificateId(@Nullable String sslCertificateId) {
-            this.sslCertificateId = Output.ofNullable(sslCertificateId);
+            this.sslCertificateId = Codegen.ofNullable(sslCertificateId);
             return this;
         }        public LoadBalancerListenerGetArgs build() {
             return new LoadBalancerListenerGetArgs(instancePort, instanceProtocol, lbPort, lbProtocol, sslCertificateId);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.iam_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iam_v1.WorkloadIdentityPoolArgs;
 import java.lang.Boolean;
@@ -30,7 +31,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -44,7 +45,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -58,7 +59,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +73,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return The resource name of the pool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return The state of the pool.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -112,7 +113,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkloadIdentityPool(String name, WorkloadIdentityPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:iam/v1:WorkloadIdentityPool", name, args == null ? WorkloadIdentityPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:iam/v1:WorkloadIdentityPool", name, args == null ? WorkloadIdentityPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkloadIdentityPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

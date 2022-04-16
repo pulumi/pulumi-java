@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     @Import(name="envId")
       private final @Nullable Output<String> envId;
 
-    public Output<String> getEnvId() {
-        return this.envId == null ? Output.empty() : this.envId;
+    public Output<String> envId() {
+        return this.envId == null ? Codegen.empty() : this.envId;
     }
 
     /**
@@ -32,15 +33,15 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+    public Output<String> orgId() {
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     public EnvironmentIamPolicyState(
@@ -67,10 +68,10 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     }
 
     private EnvironmentIamPolicyState() {
-        this.envId = Output.empty();
-        this.etag = Output.empty();
-        this.orgId = Output.empty();
-        this.policyData = Output.empty();
+        this.envId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder envId(@Nullable String envId) {
-            this.envId = Output.ofNullable(envId);
+            this.envId = Codegen.ofNullable(envId);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -112,7 +113,7 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder orgId(@Nullable Output<String> orgId) {
@@ -120,7 +121,7 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -128,7 +129,7 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }        public EnvironmentIamPolicyState build() {
             return new EnvironmentIamPolicyState(envId, etag, orgId, policyData);

@@ -32,14 +32,14 @@ public final class UserAssignedManagedIdentityResponse {
      * The client ID.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The principal ID.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

@@ -21,7 +21,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="audience")
       private final @Nullable String audience;
 
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
@@ -32,7 +32,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -43,7 +43,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="secret")
       private final @Nullable String secret;
 
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 
@@ -54,7 +54,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="tenant")
       private final @Nullable String tenant;
 
-    public Optional<String> getTenant() {
+    public Optional<String> tenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
@@ -66,7 +66,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

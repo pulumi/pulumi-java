@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Credential extends io.pulumi.resources.CustomResource {
      * @return Gets the creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -55,7 +56,7 @@ public class Credential extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +70,7 @@ public class Credential extends io.pulumi.resources.CustomResource {
      * @return Gets the last modified time.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -83,7 +84,7 @@ public class Credential extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +98,7 @@ public class Credential extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -111,7 +112,7 @@ public class Credential extends io.pulumi.resources.CustomResource {
      * @return Gets the user name of the credential.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -137,7 +138,7 @@ public class Credential extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Credential(String name, CredentialArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:Credential", name, args == null ? CredentialArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:automation:Credential", name, args == null ? CredentialArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Credential(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementGetArgs
     @Import(name="statements", required=true)
       private final Output<List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements;
 
-    public Output<List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs>> getStatements() {
+    public Output<List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 
@@ -30,7 +31,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementGetArgs
     }
 
     private RuleGroupRuleStatementOrStatementStatementAndStatementGetArgs() {
-        this.statements = Output.empty();
+        this.statements = Codegen.empty();
     }
 
     public static Builder builder() {

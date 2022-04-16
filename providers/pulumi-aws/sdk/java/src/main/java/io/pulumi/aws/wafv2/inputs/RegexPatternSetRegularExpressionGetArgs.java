@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RegexPatternSetRegularExpressionGetArgs extends io.pulumi.res
     @Import(name="regexString", required=true)
       private final Output<String> regexString;
 
-    public Output<String> getRegexString() {
+    public Output<String> regexString() {
         return this.regexString;
     }
 
@@ -29,7 +30,7 @@ public final class RegexPatternSetRegularExpressionGetArgs extends io.pulumi.res
     }
 
     private RegexPatternSetRegularExpressionGetArgs() {
-        this.regexString = Output.empty();
+        this.regexString = Codegen.empty();
     }
 
     public static Builder builder() {

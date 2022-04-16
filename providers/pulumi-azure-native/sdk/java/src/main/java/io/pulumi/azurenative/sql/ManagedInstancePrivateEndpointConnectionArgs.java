@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.inputs.ManagedInstancePrivateEndpointPropertyAr
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -34,15 +35,15 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="privateEndpoint")
       private final @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
 
-    public Output<ManagedInstancePrivateEndpointPropertyArgs> getPrivateEndpoint() {
-        return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
+    public Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint() {
+        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Output.empty() : this.privateEndpointConnectionName;
+    public Output<String> privateEndpointConnectionName() {
+        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
-    public Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+    public Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,11 +82,11 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     }
 
     private ManagedInstancePrivateEndpointConnectionArgs() {
-        this.managedInstanceName = Output.empty();
-        this.privateEndpoint = Output.empty();
-        this.privateEndpointConnectionName = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.managedInstanceName = Codegen.empty();
+        this.privateEndpoint = Codegen.empty();
+        this.privateEndpointConnectionName = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
             return this;
         }
         public Builder privateEndpoint(@Nullable ManagedInstancePrivateEndpointPropertyArgs privateEndpoint) {
-            this.privateEndpoint = Output.ofNullable(privateEndpoint);
+            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
@@ -137,7 +138,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
+            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
@@ -145,7 +146,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

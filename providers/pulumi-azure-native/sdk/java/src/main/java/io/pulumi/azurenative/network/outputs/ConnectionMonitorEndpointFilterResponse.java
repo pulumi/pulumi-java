@@ -36,14 +36,14 @@ public final class ConnectionMonitorEndpointFilterResponse {
      * List of items in the filter.
      * 
     */
-    public List<ConnectionMonitorEndpointFilterItemResponse> getItems() {
+    public List<ConnectionMonitorEndpointFilterItemResponse> items() {
         return this.items == null ? List.of() : this.items;
     }
     /**
      * The behavior of the endpoint filter. Currently only 'Include' is supported.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

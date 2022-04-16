@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     @Import(name="condition")
       private final @Nullable Output<EnvironmentIamBindingConditionArgs> condition;
 
-    public Output<EnvironmentIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<EnvironmentIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,21 +31,21 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     @Import(name="envId", required=true)
       private final Output<String> envId;
 
-    public Output<String> getEnvId() {
+    public Output<String> envId() {
         return this.envId;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -57,7 +58,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -75,11 +76,11 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     }
 
     private EnvironmentIamBindingArgs() {
-        this.condition = Output.empty();
-        this.envId = Output.empty();
-        this.members = Output.empty();
-        this.orgId = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.envId = Codegen.empty();
+        this.members = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder condition(@Nullable EnvironmentIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder envId(Output<String> envId) {

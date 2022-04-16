@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventHandlerArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
     @Import(name="initialPromptFulfillment", required=true)
       private final Output<GoogleCloudDialogflowCxV3FulfillmentArgs> initialPromptFulfillment;
 
-    public Output<GoogleCloudDialogflowCxV3FulfillmentArgs> getInitialPromptFulfillment() {
+    public Output<GoogleCloudDialogflowCxV3FulfillmentArgs> initialPromptFulfillment() {
         return this.initialPromptFulfillment;
     }
 
@@ -38,8 +39,8 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
     @Import(name="repromptEventHandlers")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> repromptEventHandlers;
 
-    public Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> getRepromptEventHandlers() {
-        return this.repromptEventHandlers == null ? Output.empty() : this.repromptEventHandlers;
+    public Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> repromptEventHandlers() {
+        return this.repromptEventHandlers == null ? Codegen.empty() : this.repromptEventHandlers;
     }
 
     public GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
     }
 
     private GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs() {
-        this.initialPromptFulfillment = Output.empty();
-        this.repromptEventHandlers = Output.empty();
+        this.initialPromptFulfillment = Codegen.empty();
+        this.repromptEventHandlers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
             return this;
         }
         public Builder repromptEventHandlers(@Nullable List<GoogleCloudDialogflowCxV3EventHandlerArgs> repromptEventHandlers) {
-            this.repromptEventHandlers = Output.ofNullable(repromptEventHandlers);
+            this.repromptEventHandlers = Codegen.ofNullable(repromptEventHandlers);
             return this;
         }
         public Builder repromptEventHandlers(GoogleCloudDialogflowCxV3EventHandlerArgs... repromptEventHandlers) {

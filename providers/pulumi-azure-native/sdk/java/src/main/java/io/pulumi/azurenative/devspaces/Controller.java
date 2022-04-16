@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return DNS name for accessing DataPlane services
      * 
      */
-    public Output<String> getDataPlaneFqdn() {
+    public Output<String> dataPlaneFqdn() {
         return this.dataPlaneFqdn;
     }
     /**
@@ -56,7 +57,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
      * 
      */
-    public Output<String> getHostSuffix() {
+    public Output<String> hostSuffix() {
         return this.hostSuffix;
     }
     /**
@@ -70,7 +71,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return Region where the Azure resource is located.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -84,7 +85,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the Azure Dev Spaces Controller.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -112,7 +113,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return Model representing SKU for Azure Dev Spaces Controller.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -126,7 +127,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return Tags for the Azure resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +141,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return DNS of the target container host's API server
      * 
      */
-    public Output<String> getTargetContainerHostApiServerFqdn() {
+    public Output<String> targetContainerHostApiServerFqdn() {
         return this.targetContainerHostApiServerFqdn;
     }
     /**
@@ -154,7 +155,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the target container host
      * 
      */
-    public Output<String> getTargetContainerHostResourceId() {
+    public Output<String> targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
     /**
@@ -168,7 +169,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -194,7 +195,7 @@ public class Controller extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Controller(String name, ControllerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devspaces:Controller", name, args == null ? ControllerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devspaces:Controller", name, args == null ? ControllerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Controller(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

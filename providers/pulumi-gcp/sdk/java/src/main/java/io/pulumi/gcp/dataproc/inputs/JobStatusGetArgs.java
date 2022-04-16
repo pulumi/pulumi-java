@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,29 +18,29 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="details")
       private final @Nullable Output<String> details;
 
-    public Output<String> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<String> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     @Import(name="stateStartTime")
       private final @Nullable Output<String> stateStartTime;
 
-    public Output<String> getStateStartTime() {
-        return this.stateStartTime == null ? Output.empty() : this.stateStartTime;
+    public Output<String> stateStartTime() {
+        return this.stateStartTime == null ? Codegen.empty() : this.stateStartTime;
     }
 
     @Import(name="substate")
       private final @Nullable Output<String> substate;
 
-    public Output<String> getSubstate() {
-        return this.substate == null ? Output.empty() : this.substate;
+    public Output<String> substate() {
+        return this.substate == null ? Codegen.empty() : this.substate;
     }
 
     public JobStatusGetArgs(
@@ -54,10 +55,10 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobStatusGetArgs() {
-        this.details = Output.empty();
-        this.state = Output.empty();
-        this.stateStartTime = Output.empty();
-        this.substate = Output.empty();
+        this.details = Codegen.empty();
+        this.state = Codegen.empty();
+        this.stateStartTime = Codegen.empty();
+        this.substate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder details(@Nullable String details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -99,7 +100,7 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder stateStartTime(@Nullable Output<String> stateStartTime) {
@@ -107,7 +108,7 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stateStartTime(@Nullable String stateStartTime) {
-            this.stateStartTime = Output.ofNullable(stateStartTime);
+            this.stateStartTime = Codegen.ofNullable(stateStartTime);
             return this;
         }
         public Builder substate(@Nullable Output<String> substate) {
@@ -115,7 +116,7 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder substate(@Nullable String substate) {
-            this.substate = Output.ofNullable(substate);
+            this.substate = Codegen.ofNullable(substate);
             return this;
         }        public JobStatusGetArgs build() {
             return new JobStatusGetArgs(details, state, stateStartTime, substate);

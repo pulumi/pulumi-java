@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
-    public Output<String> getSha256() {
-        return this.sha256 == null ? Output.empty() : this.sha256;
+    public Output<String> sha256() {
+        return this.sha256 == null ? Codegen.empty() : this.sha256;
     }
 
     public ArtifactHashesArgs(@Nullable Output<String> sha256) {
@@ -30,7 +31,7 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactHashesArgs() {
-        this.sha256 = Output.empty();
+        this.sha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sha256(@Nullable String sha256) {
-            this.sha256 = Output.ofNullable(sha256);
+            this.sha256 = Codegen.ofNullable(sha256);
             return this;
         }        public ArtifactHashesArgs build() {
             return new ArtifactHashesArgs(sha256);

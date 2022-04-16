@@ -5,6 +5,7 @@ package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VaultPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupVaultName", required=true)
       private final Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
 
@@ -31,7 +32,7 @@ public final class VaultPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -43,8 +44,8 @@ public final class VaultPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultPolicyArgs() {
-        this.backupVaultName = Output.empty();
-        this.policy = Output.empty();
+        this.backupVaultName = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {

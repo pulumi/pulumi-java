@@ -9,6 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,8 +33,8 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="libraries")
       private final @Nullable Output<List<Map<String,Object>>> libraries;
 
-    public Output<List<Map<String,Object>>> getLibraries() {
-        return this.libraries == null ? Output.empty() : this.libraries;
+    public Output<List<Map<String,Object>>> libraries() {
+        return this.libraries == null ? Codegen.empty() : this.libraries;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -87,8 +88,8 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="parameters")
       private final @Nullable Output<List<Object>> parameters;
 
-    public Output<List<Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<Object>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<ActivityPolicyArgs> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="pythonFile", required=true)
       private final Output<Object> pythonFile;
 
-    public Output<Object> getPythonFile() {
+    public Output<Object> pythonFile() {
         return this.pythonFile;
     }
 
@@ -121,7 +122,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -132,8 +133,8 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> userProperties() {
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public DatabricksSparkPythonActivityArgs(
@@ -160,16 +161,16 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     }
 
     private DatabricksSparkPythonActivityArgs() {
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.libraries = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.policy = Output.empty();
-        this.pythonFile = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.libraries = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.pythonFile = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -226,7 +227,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder libraries(@Nullable Output<List<Map<String,Object>>> libraries) {
@@ -234,7 +235,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             return this;
         }
         public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
-            this.libraries = Output.ofNullable(libraries);
+            this.libraries = Codegen.ofNullable(libraries);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -242,7 +243,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -258,7 +259,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             return this;
         }
         public Builder parameters(@Nullable List<Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(Object... parameters) {
@@ -269,7 +270,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder pythonFile(Output<Object> pythonFile) {
@@ -293,7 +294,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

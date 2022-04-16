@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigArgs;
@@ -23,7 +24,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicKey", required=true)
       private final Output<CertificateConfigPublicKeyArgs> publicKey;
 
-    public Output<CertificateConfigPublicKeyArgs> getPublicKey() {
+    public Output<CertificateConfigPublicKeyArgs> publicKey() {
         return this.publicKey;
     }
 
@@ -35,7 +36,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subjectConfig", required=true)
       private final Output<CertificateConfigSubjectConfigArgs> subjectConfig;
 
-    public Output<CertificateConfigSubjectConfigArgs> getSubjectConfig() {
+    public Output<CertificateConfigSubjectConfigArgs> subjectConfig() {
         return this.subjectConfig;
     }
 
@@ -47,7 +48,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="x509Config", required=true)
       private final Output<CertificateConfigX509ConfigArgs> x509Config;
 
-    public Output<CertificateConfigX509ConfigArgs> getX509Config() {
+    public Output<CertificateConfigX509ConfigArgs> x509Config() {
         return this.x509Config;
     }
 
@@ -61,9 +62,9 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CertificateConfigArgs() {
-        this.publicKey = Output.empty();
-        this.subjectConfig = Output.empty();
-        this.x509Config = Output.empty();
+        this.publicKey = Codegen.empty();
+        this.subjectConfig = Codegen.empty();
+        this.x509Config = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -40,15 +41,15 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="sqlMigrationServiceName")
       private final @Nullable Output<String> sqlMigrationServiceName;
 
-    public Output<String> getSqlMigrationServiceName() {
-        return this.sqlMigrationServiceName == null ? Output.empty() : this.sqlMigrationServiceName;
+    public Output<String> sqlMigrationServiceName() {
+        return this.sqlMigrationServiceName == null ? Codegen.empty() : this.sqlMigrationServiceName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SqlMigrationServiceArgs(
@@ -63,10 +64,10 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
     }
 
     private SqlMigrationServiceArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sqlMigrationServiceName = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlMigrationServiceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -116,7 +117,7 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sqlMigrationServiceName(@Nullable String sqlMigrationServiceName) {
-            this.sqlMigrationServiceName = Output.ofNullable(sqlMigrationServiceName);
+            this.sqlMigrationServiceName = Codegen.ofNullable(sqlMigrationServiceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -124,7 +125,7 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SqlMigrationServiceArgs build() {
             return new SqlMigrationServiceArgs(location, resourceGroupName, sqlMigrationServiceName, tags);

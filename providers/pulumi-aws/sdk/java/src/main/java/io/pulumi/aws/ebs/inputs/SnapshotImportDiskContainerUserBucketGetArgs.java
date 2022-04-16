@@ -5,6 +5,7 @@ package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends io.pulum
     @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
 
@@ -31,7 +32,7 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends io.pulum
     @Import(name="s3Key", required=true)
       private final Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key;
     }
 
@@ -43,8 +44,8 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends io.pulum
     }
 
     private SnapshotImportDiskContainerUserBucketGetArgs() {
-        this.s3Bucket = Output.empty();
-        this.s3Key = Output.empty();
+        this.s3Bucket = Codegen.empty();
+        this.s3Key = Codegen.empty();
     }
 
     public static Builder builder() {

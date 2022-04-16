@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.enums.CompositeFilterLogicOperator;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="logicOperator")
       private final @Nullable Output<CompositeFilterLogicOperator> logicOperator;
 
-    public Output<CompositeFilterLogicOperator> getLogicOperator() {
-        return this.logicOperator == null ? Output.empty() : this.logicOperator;
+    public Output<CompositeFilterLogicOperator> logicOperator() {
+        return this.logicOperator == null ? Codegen.empty() : this.logicOperator;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subFilters")
       private final @Nullable Output<List<FilterArgs>> subFilters;
 
-    public Output<List<FilterArgs>> getSubFilters() {
-        return this.subFilters == null ? Output.empty() : this.subFilters;
+    public Output<List<FilterArgs>> subFilters() {
+        return this.subFilters == null ? Codegen.empty() : this.subFilters;
     }
 
     public CompositeFilterArgs(
@@ -46,8 +47,8 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CompositeFilterArgs() {
-        this.logicOperator = Output.empty();
-        this.subFilters = Output.empty();
+        this.logicOperator = Codegen.empty();
+        this.subFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder logicOperator(@Nullable CompositeFilterLogicOperator logicOperator) {
-            this.logicOperator = Output.ofNullable(logicOperator);
+            this.logicOperator = Codegen.ofNullable(logicOperator);
             return this;
         }
         public Builder subFilters(@Nullable Output<List<FilterArgs>> subFilters) {
@@ -85,7 +86,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subFilters(@Nullable List<FilterArgs> subFilters) {
-            this.subFilters = Output.ofNullable(subFilters);
+            this.subFilters = Codegen.ofNullable(subFilters);
             return this;
         }
         public Builder subFilters(FilterArgs... subFilters) {

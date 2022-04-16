@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -26,8 +27,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automountServiceAccountToken")
       private final @Nullable Output<Boolean> automountServiceAccountToken;
 
-    public Output<Boolean> getAutomountServiceAccountToken() {
-        return this.automountServiceAccountToken == null ? Output.empty() : this.automountServiceAccountToken;
+    public Output<Boolean> automountServiceAccountToken() {
+        return this.automountServiceAccountToken == null ? Codegen.empty() : this.automountServiceAccountToken;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imagePullSecrets")
       private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
-        return this.imagePullSecrets == null ? Output.empty() : this.imagePullSecrets;
+    public Output<List<LocalObjectReferenceArgs>> imagePullSecrets() {
+        return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ObjectMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
       private final @Nullable Output<List<ObjectReferenceArgs>> secrets;
 
-    public Output<List<ObjectReferenceArgs>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+    public Output<List<ObjectReferenceArgs>> secrets() {
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     public ServiceAccountArgs(
@@ -101,12 +102,12 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceAccountArgs() {
-        this.apiVersion = Output.empty();
-        this.automountServiceAccountToken = Output.empty();
-        this.imagePullSecrets = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.secrets = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.automountServiceAccountToken = Codegen.empty();
+        this.imagePullSecrets = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.secrets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
@@ -152,7 +153,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
-            this.automountServiceAccountToken = Output.ofNullable(automountServiceAccountToken);
+            this.automountServiceAccountToken = Codegen.ofNullable(automountServiceAccountToken);
             return this;
         }
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
@@ -160,7 +161,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
+            this.imagePullSecrets = Codegen.ofNullable(imagePullSecrets);
             return this;
         }
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
@@ -171,7 +172,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -179,7 +180,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder secrets(@Nullable Output<List<ObjectReferenceArgs>> secrets) {
@@ -187,7 +188,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secrets(@Nullable List<ObjectReferenceArgs> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder secrets(ObjectReferenceArgs... secrets) {

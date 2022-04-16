@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicenetworking;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicenetworking.ConnectionArgs;
 import io.pulumi.gcp.servicenetworking.inputs.ConnectionState;
@@ -47,13 +48,13 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Name of VPC network connected with service producers using VPC peering.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     @Export(name="peering", type=String.class, parameters={})
     private Output<String> peering;
 
-    public Output<String> getPeering() {
+    public Output<String> peering() {
         return this.peering;
     }
     /**
@@ -71,7 +72,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * is already established will not reallocate already provisioned service producer subnetworks.
      * 
      */
-    public Output<List<String>> getReservedPeeringRanges() {
+    public Output<List<String>> reservedPeeringRanges() {
         return this.reservedPeeringRanges;
     }
     /**
@@ -89,7 +90,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * 'servicenetworking.googleapis.com'.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -115,7 +116,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connection(String name, ConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicenetworking/connection:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicenetworking/connection:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connection(String name, Output<String> id, @Nullable ConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -24,7 +24,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="context", required=true)
       private final String context;
 
-    public String getContext() {
+    public String context() {
         return this.context;
     }
 
@@ -35,7 +35,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="payload", required=true)
       private final String payload;
 
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
 
@@ -46,7 +46,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stackTrace", required=true)
       private final StackTraceResponse stackTrace;
 
-    public StackTraceResponse getStackTrace() {
+    public StackTraceResponse stackTrace() {
         return this.stackTrace;
     }
 

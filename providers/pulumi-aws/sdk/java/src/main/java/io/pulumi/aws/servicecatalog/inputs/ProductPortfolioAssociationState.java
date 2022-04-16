@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+    public Output<String> acceptLanguage() {
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     @Import(name="portfolioId")
       private final @Nullable Output<String> portfolioId;
 
-    public Output<String> getPortfolioId() {
-        return this.portfolioId == null ? Output.empty() : this.portfolioId;
+    public Output<String> portfolioId() {
+        return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
-        return this.productId == null ? Output.empty() : this.productId;
+    public Output<String> productId() {
+        return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     @Import(name="sourcePortfolioId")
       private final @Nullable Output<String> sourcePortfolioId;
 
-    public Output<String> getSourcePortfolioId() {
-        return this.sourcePortfolioId == null ? Output.empty() : this.sourcePortfolioId;
+    public Output<String> sourcePortfolioId() {
+        return this.sourcePortfolioId == null ? Codegen.empty() : this.sourcePortfolioId;
     }
 
     public ProductPortfolioAssociationState(
@@ -70,10 +71,10 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
     }
 
     private ProductPortfolioAssociationState() {
-        this.acceptLanguage = Output.empty();
-        this.portfolioId = Output.empty();
-        this.productId = Output.empty();
-        this.sourcePortfolioId = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.portfolioId = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.sourcePortfolioId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
@@ -115,7 +116,7 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Output.ofNullable(portfolioId);
+            this.portfolioId = Codegen.ofNullable(portfolioId);
             return this;
         }
         public Builder productId(@Nullable Output<String> productId) {
@@ -123,7 +124,7 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder productId(@Nullable String productId) {
-            this.productId = Output.ofNullable(productId);
+            this.productId = Codegen.ofNullable(productId);
             return this;
         }
         public Builder sourcePortfolioId(@Nullable Output<String> sourcePortfolioId) {
@@ -131,7 +132,7 @@ public final class ProductPortfolioAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
-            this.sourcePortfolioId = Output.ofNullable(sourcePortfolioId);
+            this.sourcePortfolioId = Codegen.ofNullable(sourcePortfolioId);
             return this;
         }        public ProductPortfolioAssociationState build() {
             return new ProductPortfolioAssociationState(acceptLanguage, portfolioId, productId, sourcePortfolioId);

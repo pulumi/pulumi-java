@@ -25,7 +25,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
@@ -47,7 +47,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
     @Import(name="status", required=true)
       private final BucketIntelligentTieringConfigurationStatus status;
 
-    public BucketIntelligentTieringConfigurationStatus getStatus() {
+    public BucketIntelligentTieringConfigurationStatus status() {
         return this.status;
     }
 
@@ -58,7 +58,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
     @Import(name="tagFilters")
       private final @Nullable List<BucketTagFilter> tagFilters;
 
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 
@@ -69,7 +69,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
     @Import(name="tierings", required=true)
       private final List<BucketTiering> tierings;
 
-    public List<BucketTiering> getTierings() {
+    public List<BucketTiering> tierings() {
         return this.tierings;
     }
 

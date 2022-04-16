@@ -62,42 +62,42 @@ public final class ReprotectAgentDetailsResponse {
      * The health of the reprotect agent.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * The health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
      * The reprotect agent Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last heartbeat received from the reprotect agent.
      * 
     */
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
      * The reprotect agent name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

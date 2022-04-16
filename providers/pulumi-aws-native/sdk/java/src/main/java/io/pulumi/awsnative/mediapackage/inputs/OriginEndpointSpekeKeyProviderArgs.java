@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+    public Output<String> certificateArn() {
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -48,7 +49,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -59,7 +60,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     @Import(name="systemIds", required=true)
       private final Output<List<String>> systemIds;
 
-    public Output<List<String>> getSystemIds() {
+    public Output<List<String>> systemIds() {
         return this.systemIds;
     }
 
@@ -70,7 +71,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -88,11 +89,11 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     }
 
     private OriginEndpointSpekeKeyProviderArgs() {
-        this.certificateArn = Output.empty();
-        this.resourceId = Output.empty();
-        this.roleArn = Output.empty();
-        this.systemIds = Output.empty();
-        this.url = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.systemIds = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

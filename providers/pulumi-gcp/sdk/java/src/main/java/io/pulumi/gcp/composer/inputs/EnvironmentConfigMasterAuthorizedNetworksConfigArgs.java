@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -19,14 +20,14 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
-    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
+    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks() {
+        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -38,8 +39,8 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
     }
 
     private EnvironmentConfigMasterAuthorizedNetworksConfigArgs() {
-        this.cidrBlocks = Output.empty();
-        this.enabled = Output.empty();
+        this.cidrBlocks = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
             return this;
         }
         public Builder cidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs> cidrBlocks) {
-            this.cidrBlocks = Output.ofNullable(cidrBlocks);
+            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
             return this;
         }
         public Builder cidrBlocks(EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs... cidrBlocks) {

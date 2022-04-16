@@ -24,7 +24,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -35,7 +35,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
     @Import(name="file", required=true)
       private final OSPolicyResourceFileResponse file;
 
-    public OSPolicyResourceFileResponse getFile() {
+    public OSPolicyResourceFileResponse file() {
         return this.file;
     }
 
@@ -46,7 +46,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -57,7 +57,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
     @Import(name="permissions", required=true)
       private final String permissions;
 
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
 
@@ -68,7 +68,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.backup.outputs.BackupPlanResourceType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,31 +23,31 @@ public class BackupPlan extends io.pulumi.resources.CustomResource {
     @Export(name="backupPlan", type=BackupPlanResourceType.class, parameters={})
     private Output<BackupPlanResourceType> backupPlan;
 
-    public Output<BackupPlanResourceType> getBackupPlan() {
+    public Output<BackupPlanResourceType> backupPlan() {
         return this.backupPlan;
     }
     @Export(name="backupPlanArn", type=String.class, parameters={})
     private Output<String> backupPlanArn;
 
-    public Output<String> getBackupPlanArn() {
+    public Output<String> backupPlanArn() {
         return this.backupPlanArn;
     }
     @Export(name="backupPlanId", type=String.class, parameters={})
     private Output<String> backupPlanId;
 
-    public Output<String> getBackupPlanId() {
+    public Output<String> backupPlanId() {
         return this.backupPlanId;
     }
     @Export(name="backupPlanTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> backupPlanTags;
 
-    public Output</* @Nullable */ Object> getBackupPlanTags() {
+    public Output</* @Nullable */ Object> backupPlanTags() {
         return this.backupPlanTags;
     }
     @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 
@@ -72,7 +73,7 @@ public class BackupPlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackupPlan(String name, BackupPlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:backup:BackupPlan", name, args == null ? BackupPlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:backup:BackupPlan", name, args == null ? BackupPlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackupPlan(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

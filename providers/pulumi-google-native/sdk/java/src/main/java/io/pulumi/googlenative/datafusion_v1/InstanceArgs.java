@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datafusion_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datafusion_v1.enums.InstanceType;
 import io.pulumi.googlenative.datafusion_v1.inputs.AcceleratorArgs;
 import io.pulumi.googlenative.datafusion_v1.inputs.CryptoKeyConfigArgs;
@@ -29,8 +30,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorArgs>> accelerators;
 
-    public Output<List<AcceleratorArgs>> getAccelerators() {
-        return this.accelerators == null ? Output.empty() : this.accelerators;
+    public Output<List<AcceleratorArgs>> accelerators() {
+        return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availableVersion")
       private final @Nullable Output<List<VersionArgs>> availableVersion;
 
-    public Output<List<VersionArgs>> getAvailableVersion() {
-        return this.availableVersion == null ? Output.empty() : this.availableVersion;
+    public Output<List<VersionArgs>> availableVersion() {
+        return this.availableVersion == null ? Codegen.empty() : this.availableVersion;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cryptoKeyConfig")
       private final @Nullable Output<CryptoKeyConfigArgs> cryptoKeyConfig;
 
-    public Output<CryptoKeyConfigArgs> getCryptoKeyConfig() {
-        return this.cryptoKeyConfig == null ? Output.empty() : this.cryptoKeyConfig;
+    public Output<CryptoKeyConfigArgs> cryptoKeyConfig() {
+        return this.cryptoKeyConfig == null ? Codegen.empty() : this.cryptoKeyConfig;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataprocServiceAccount")
       private final @Nullable Output<String> dataprocServiceAccount;
 
-    public Output<String> getDataprocServiceAccount() {
-        return this.dataprocServiceAccount == null ? Output.empty() : this.dataprocServiceAccount;
+    public Output<String> dataprocServiceAccount() {
+        return this.dataprocServiceAccount == null ? Codegen.empty() : this.dataprocServiceAccount;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableRbac")
       private final @Nullable Output<Boolean> enableRbac;
 
-    public Output<Boolean> getEnableRbac() {
-        return this.enableRbac == null ? Output.empty() : this.enableRbac;
+    public Output<Boolean> enableRbac() {
+        return this.enableRbac == null ? Codegen.empty() : this.enableRbac;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> getEnableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Output.empty() : this.enableStackdriverLogging;
+    public Output<Boolean> enableStackdriverLogging() {
+        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
     }
 
     /**
@@ -117,14 +118,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverMonitoring")
       private final @Nullable Output<Boolean> enableStackdriverMonitoring;
 
-    public Output<Boolean> getEnableStackdriverMonitoring() {
-        return this.enableStackdriverMonitoring == null ? Output.empty() : this.enableStackdriverMonitoring;
+    public Output<Boolean> enableStackdriverMonitoring() {
+        return this.enableStackdriverMonitoring == null ? Codegen.empty() : this.enableStackdriverMonitoring;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -135,15 +136,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+    public Output<NetworkConfigArgs> networkConfig() {
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<Map<String,String>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -175,15 +176,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateInstance")
       private final @Nullable Output<Boolean> privateInstance;
 
-    public Output<Boolean> getPrivateInstance() {
-        return this.privateInstance == null ? Output.empty() : this.privateInstance;
+    public Output<Boolean> privateInstance() {
+        return this.privateInstance == null ? Codegen.empty() : this.privateInstance;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<InstanceType> type;
 
-    public Output<InstanceType> getType() {
+    public Output<InstanceType> type() {
         return this.type;
     }
 
@@ -204,8 +205,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -215,8 +216,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceArgs(
@@ -261,25 +262,25 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.accelerators = Output.empty();
-        this.availableVersion = Output.empty();
-        this.cryptoKeyConfig = Output.empty();
-        this.dataprocServiceAccount = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.enableRbac = Output.empty();
-        this.enableStackdriverLogging = Output.empty();
-        this.enableStackdriverMonitoring = Output.empty();
-        this.instanceId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.networkConfig = Output.empty();
-        this.options = Output.empty();
-        this.privateInstance = Output.empty();
-        this.project = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
-        this.zone = Output.empty();
+        this.accelerators = Codegen.empty();
+        this.availableVersion = Codegen.empty();
+        this.cryptoKeyConfig = Codegen.empty();
+        this.dataprocServiceAccount = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enableRbac = Codegen.empty();
+        this.enableStackdriverLogging = Codegen.empty();
+        this.enableStackdriverMonitoring = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.options = Codegen.empty();
+        this.privateInstance = Codegen.empty();
+        this.project = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -343,7 +344,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accelerators(@Nullable List<AcceleratorArgs> accelerators) {
-            this.accelerators = Output.ofNullable(accelerators);
+            this.accelerators = Codegen.ofNullable(accelerators);
             return this;
         }
         public Builder accelerators(AcceleratorArgs... accelerators) {
@@ -354,7 +355,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availableVersion(@Nullable List<VersionArgs> availableVersion) {
-            this.availableVersion = Output.ofNullable(availableVersion);
+            this.availableVersion = Codegen.ofNullable(availableVersion);
             return this;
         }
         public Builder availableVersion(VersionArgs... availableVersion) {
@@ -365,7 +366,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cryptoKeyConfig(@Nullable CryptoKeyConfigArgs cryptoKeyConfig) {
-            this.cryptoKeyConfig = Output.ofNullable(cryptoKeyConfig);
+            this.cryptoKeyConfig = Codegen.ofNullable(cryptoKeyConfig);
             return this;
         }
         public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
@@ -373,7 +374,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
-            this.dataprocServiceAccount = Output.ofNullable(dataprocServiceAccount);
+            this.dataprocServiceAccount = Codegen.ofNullable(dataprocServiceAccount);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -381,7 +382,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -389,7 +390,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enableRbac(@Nullable Output<Boolean> enableRbac) {
@@ -397,7 +398,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableRbac(@Nullable Boolean enableRbac) {
-            this.enableRbac = Output.ofNullable(enableRbac);
+            this.enableRbac = Codegen.ofNullable(enableRbac);
             return this;
         }
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
@@ -405,7 +406,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
+            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
             return this;
         }
         public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
@@ -413,7 +414,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
-            this.enableStackdriverMonitoring = Output.ofNullable(enableStackdriverMonitoring);
+            this.enableStackdriverMonitoring = Codegen.ofNullable(enableStackdriverMonitoring);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {
@@ -429,7 +430,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -437,7 +438,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
@@ -445,7 +446,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder options(@Nullable Output<Map<String,String>> options) {
@@ -453,7 +454,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable Map<String,String> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
@@ -461,7 +462,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateInstance(@Nullable Boolean privateInstance) {
-            this.privateInstance = Output.ofNullable(privateInstance);
+            this.privateInstance = Codegen.ofNullable(privateInstance);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -469,7 +470,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder type(Output<InstanceType> type) {
@@ -485,7 +486,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -493,7 +494,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(accelerators, availableVersion, cryptoKeyConfig, dataprocServiceAccount, description, displayName, enableRbac, enableStackdriverLogging, enableStackdriverMonitoring, instanceId, labels, location, networkConfig, options, privateInstance, project, type, version, zone);

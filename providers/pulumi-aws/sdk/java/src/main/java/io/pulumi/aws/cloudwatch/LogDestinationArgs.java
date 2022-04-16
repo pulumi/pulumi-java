@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -43,7 +44,7 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 
@@ -57,9 +58,9 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogDestinationArgs() {
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.targetArn = Output.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

@@ -25,7 +25,7 @@ public final class NetworkConfigResponse {
      * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
      * 
     */
-    public List<ConsumerResponse> getConsumers() {
+    public List<ConsumerResponse> consumers() {
         return this.consumers;
     }
 

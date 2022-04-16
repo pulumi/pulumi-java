@@ -8,6 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TargetCopySettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deleteAfter", required=true)
       private final Output<AbsoluteDeleteOptionArgs> deleteAfter;
 
-    public Output<AbsoluteDeleteOptionArgs> getDeleteAfter() {
+    public Output<AbsoluteDeleteOptionArgs> deleteAfter() {
         return this.deleteAfter;
     }
 
@@ -39,15 +40,15 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceDataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> sourceDataStore;
 
-    public Output<DataStoreInfoBaseArgs> getSourceDataStore() {
+    public Output<DataStoreInfoBaseArgs> sourceDataStore() {
         return this.sourceDataStore;
     }
 
     @Import(name="targetDataStoreCopySettings")
       private final @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 
-    public Output<List<TargetCopySettingArgs>> getTargetDataStoreCopySettings() {
-        return this.targetDataStoreCopySettings == null ? Output.empty() : this.targetDataStoreCopySettings;
+    public Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings() {
+        return this.targetDataStoreCopySettings == null ? Codegen.empty() : this.targetDataStoreCopySettings;
     }
 
     public SourceLifeCycleArgs(
@@ -60,9 +61,9 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SourceLifeCycleArgs() {
-        this.deleteAfter = Output.empty();
-        this.sourceDataStore = Output.empty();
-        this.targetDataStoreCopySettings = Output.empty();
+        this.deleteAfter = Codegen.empty();
+        this.sourceDataStore = Codegen.empty();
+        this.targetDataStoreCopySettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingArgs> targetDataStoreCopySettings) {
-            this.targetDataStoreCopySettings = Output.ofNullable(targetDataStoreCopySettings);
+            this.targetDataStoreCopySettings = Codegen.ofNullable(targetDataStoreCopySettings);
             return this;
         }
         public Builder targetDataStoreCopySettings(TargetCopySettingArgs... targetDataStoreCopySettings) {

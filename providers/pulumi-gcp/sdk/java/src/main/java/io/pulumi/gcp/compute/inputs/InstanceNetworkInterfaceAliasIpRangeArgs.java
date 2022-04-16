@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
     @Import(name="ipCidrRange", required=true)
       private final Output<String> ipCidrRange;
 
-    public Output<String> getIpCidrRange() {
+    public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -37,8 +38,8 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
     @Import(name="subnetworkRangeName")
       private final @Nullable Output<String> subnetworkRangeName;
 
-    public Output<String> getSubnetworkRangeName() {
-        return this.subnetworkRangeName == null ? Output.empty() : this.subnetworkRangeName;
+    public Output<String> subnetworkRangeName() {
+        return this.subnetworkRangeName == null ? Codegen.empty() : this.subnetworkRangeName;
     }
 
     public InstanceNetworkInterfaceAliasIpRangeArgs(
@@ -49,8 +50,8 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
     }
 
     private InstanceNetworkInterfaceAliasIpRangeArgs() {
-        this.ipCidrRange = Output.empty();
-        this.subnetworkRangeName = Output.empty();
+        this.ipCidrRange = Codegen.empty();
+        this.subnetworkRangeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class InstanceNetworkInterfaceAliasIpRangeArgs extends io.pulumi.re
             return this;
         }
         public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
-            this.subnetworkRangeName = Output.ofNullable(subnetworkRangeName);
+            this.subnetworkRangeName = Codegen.ofNullable(subnetworkRangeName);
             return this;
         }        public InstanceNetworkInterfaceAliasIpRangeArgs build() {
             return new InstanceNetworkInterfaceAliasIpRangeArgs(ipCidrRange, subnetworkRangeName);

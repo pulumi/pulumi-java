@@ -6,6 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="componentName", required=true)
       private final Output<String> componentName;
 
-    public Output<String> getComponentName() {
+    public Output<String> componentName() {
         return this.componentName;
     }
 
@@ -37,8 +38,8 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseKey")
       private final @Nullable Output<SecureStringArgs> licenseKey;
 
-    public Output<SecureStringArgs> getLicenseKey() {
-        return this.licenseKey == null ? Output.empty() : this.licenseKey;
+    public Output<SecureStringArgs> licenseKey() {
+        return this.licenseKey == null ? Codegen.empty() : this.licenseKey;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -63,9 +64,9 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComponentSetupArgs() {
-        this.componentName = Output.empty();
-        this.licenseKey = Output.empty();
-        this.type = Output.empty();
+        this.componentName = Codegen.empty();
+        this.licenseKey = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenseKey(@Nullable SecureStringArgs licenseKey) {
-            this.licenseKey = Output.ofNullable(licenseKey);
+            this.licenseKey = Codegen.ofNullable(licenseKey);
             return this;
         }
         public Builder type(Output<String> type) {

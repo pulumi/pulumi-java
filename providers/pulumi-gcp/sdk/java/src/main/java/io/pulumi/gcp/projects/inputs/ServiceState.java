@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableDependentServices")
       private final @Nullable Output<Boolean> disableDependentServices;
 
-    public Output<Boolean> getDisableDependentServices() {
-        return this.disableDependentServices == null ? Output.empty() : this.disableDependentServices;
+    public Output<Boolean> disableDependentServices() {
+        return this.disableDependentServices == null ? Codegen.empty() : this.disableDependentServices;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableOnDestroy")
       private final @Nullable Output<Boolean> disableOnDestroy;
 
-    public Output<Boolean> getDisableOnDestroy() {
-        return this.disableOnDestroy == null ? Output.empty() : this.disableOnDestroy;
+    public Output<Boolean> disableOnDestroy() {
+        return this.disableOnDestroy == null ? Codegen.empty() : this.disableOnDestroy;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public ServiceState(
@@ -75,10 +76,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceState() {
-        this.disableDependentServices = Output.empty();
-        this.disableOnDestroy = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.disableDependentServices = Codegen.empty();
+        this.disableOnDestroy = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableDependentServices(@Nullable Boolean disableDependentServices) {
-            this.disableDependentServices = Output.ofNullable(disableDependentServices);
+            this.disableDependentServices = Codegen.ofNullable(disableDependentServices);
             return this;
         }
         public Builder disableOnDestroy(@Nullable Output<Boolean> disableOnDestroy) {
@@ -120,7 +121,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableOnDestroy(@Nullable Boolean disableOnDestroy) {
-            this.disableOnDestroy = Output.ofNullable(disableOnDestroy);
+            this.disableOnDestroy = Codegen.ofNullable(disableOnDestroy);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -128,7 +129,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -136,7 +137,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public ServiceState build() {
             return new ServiceState(disableDependentServices, disableOnDestroy, project, service);

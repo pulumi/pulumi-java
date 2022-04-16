@@ -6,6 +6,7 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.PerfSampleSeriesArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.BasicPerfSampleSeriesResponse;
@@ -32,7 +33,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return Basic series represented by a line chart
      * 
      */
-    public Output<BasicPerfSampleSeriesResponse> getBasicPerfSampleSeries() {
+    public Output<BasicPerfSampleSeriesResponse> basicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
     /**
@@ -46,7 +47,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A tool results execution ID.
      * 
      */
-    public Output<String> getExecutionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
     /**
@@ -60,7 +61,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A tool results history ID.
      * 
      */
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
     /**
@@ -74,7 +75,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return The cloud project
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -88,7 +89,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A sample series id
      * 
      */
-    public Output<String> getSampleSeriesId() {
+    public Output<String> sampleSeriesId() {
         return this.sampleSeriesId;
     }
     /**
@@ -102,7 +103,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A tool results step ID.
      * 
      */
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId;
     }
 
@@ -128,7 +129,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PerfSampleSeries(String name, PerfSampleSeriesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:toolresults/v1beta3:PerfSampleSeries", name, args == null ? PerfSampleSeriesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:toolresults/v1beta3:PerfSampleSeries", name, args == null ? PerfSampleSeriesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PerfSampleSeries(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

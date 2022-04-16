@@ -10,6 +10,7 @@ import io.pulumi.awsnative.cloudwatch.outputs.MetricStreamTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name of the metric stream.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +48,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return The date of creation of the metric stream.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -61,7 +62,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamFilter>> getExcludeFilters() {
+    public Output</* @Nullable */ List<MetricStreamFilter>> excludeFilters() {
         return this.excludeFilters;
     }
     /**
@@ -75,7 +76,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Kinesis Firehose where to stream the data.
      * 
      */
-    public Output<String> getFirehoseArn() {
+    public Output<String> firehoseArn() {
         return this.firehoseArn;
     }
     /**
@@ -89,7 +90,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamFilter>> getIncludeFilters() {
+    public Output</* @Nullable */ List<MetricStreamFilter>> includeFilters() {
         return this.includeFilters;
     }
     /**
@@ -103,7 +104,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return The date of the last update of the metric stream.
      * 
      */
-    public Output<String> getLastUpdateDate() {
+    public Output<String> lastUpdateDate() {
         return this.lastUpdateDate;
     }
     /**
@@ -117,7 +118,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Name of the metric stream.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return The output format of the data streamed to the Kinesis Firehose.
      * 
      */
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat;
     }
     /**
@@ -145,7 +146,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return The ARN of the role that provides access to the Kinesis Firehose.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -159,7 +160,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Displays the state of the Metric Stream.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -173,7 +174,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return A set of tags to assign to the delivery stream.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamTag>> getTags() {
+    public Output</* @Nullable */ List<MetricStreamTag>> tags() {
         return this.tags;
     }
 
@@ -199,7 +200,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetricStream(String name, MetricStreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudwatch:MetricStream", name, args == null ? MetricStreamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudwatch:MetricStream", name, args == null ? MetricStreamArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MetricStream(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

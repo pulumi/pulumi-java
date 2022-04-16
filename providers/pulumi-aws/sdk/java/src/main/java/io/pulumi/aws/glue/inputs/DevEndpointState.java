@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<Map<String,Object>> arguments;
 
-    public Output<Map<String,Object>> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+    public Output<Map<String,Object>> arguments() {
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="extraJarsS3Path")
       private final @Nullable Output<String> extraJarsS3Path;
 
-    public Output<String> getExtraJarsS3Path() {
-        return this.extraJarsS3Path == null ? Output.empty() : this.extraJarsS3Path;
+    public Output<String> extraJarsS3Path() {
+        return this.extraJarsS3Path == null ? Codegen.empty() : this.extraJarsS3Path;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="extraPythonLibsS3Path")
       private final @Nullable Output<String> extraPythonLibsS3Path;
 
-    public Output<String> getExtraPythonLibsS3Path() {
-        return this.extraPythonLibsS3Path == null ? Output.empty() : this.extraPythonLibsS3Path;
+    public Output<String> extraPythonLibsS3Path() {
+        return this.extraPythonLibsS3Path == null ? Codegen.empty() : this.extraPythonLibsS3Path;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
-    public Output<String> getFailureReason() {
-        return this.failureReason == null ? Output.empty() : this.failureReason;
+    public Output<String> failureReason() {
+        return this.failureReason == null ? Codegen.empty() : this.failureReason;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="glueVersion")
       private final @Nullable Output<String> glueVersion;
 
-    public Output<String> getGlueVersion() {
-        return this.glueVersion == null ? Output.empty() : this.glueVersion;
+    public Output<String> glueVersion() {
+        return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> getNumberOfNodes() {
-        return this.numberOfNodes == null ? Output.empty() : this.numberOfNodes;
+    public Output<Integer> numberOfNodes() {
+        return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> getNumberOfWorkers() {
-        return this.numberOfWorkers == null ? Output.empty() : this.numberOfWorkers;
+    public Output<Integer> numberOfWorkers() {
+        return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateAddress")
       private final @Nullable Output<String> privateAddress;
 
-    public Output<String> getPrivateAddress() {
-        return this.privateAddress == null ? Output.empty() : this.privateAddress;
+    public Output<String> privateAddress() {
+        return this.privateAddress == null ? Codegen.empty() : this.privateAddress;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicAddress")
       private final @Nullable Output<String> publicAddress;
 
-    public Output<String> getPublicAddress() {
-        return this.publicAddress == null ? Output.empty() : this.publicAddress;
+    public Output<String> publicAddress() {
+        return this.publicAddress == null ? Codegen.empty() : this.publicAddress;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<String> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeys")
       private final @Nullable Output<List<String>> publicKeys;
 
-    public Output<List<String>> getPublicKeys() {
-        return this.publicKeys == null ? Output.empty() : this.publicKeys;
+    public Output<List<String>> publicKeys() {
+        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
-    public Output<String> getSecurityConfiguration() {
-        return this.securityConfiguration == null ? Output.empty() : this.securityConfiguration;
+    public Output<String> securityConfiguration() {
+        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+    public Output<List<String>> securityGroupIds() {
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -212,8 +213,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -223,8 +224,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -234,8 +235,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -245,8 +246,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -256,8 +257,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -267,8 +268,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
-    public Output<String> getWorkerType() {
-        return this.workerType == null ? Output.empty() : this.workerType;
+    public Output<String> workerType() {
+        return this.workerType == null ? Codegen.empty() : this.workerType;
     }
 
     /**
@@ -278,8 +279,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="yarnEndpointAddress")
       private final @Nullable Output<String> yarnEndpointAddress;
 
-    public Output<String> getYarnEndpointAddress() {
-        return this.yarnEndpointAddress == null ? Output.empty() : this.yarnEndpointAddress;
+    public Output<String> yarnEndpointAddress() {
+        return this.yarnEndpointAddress == null ? Codegen.empty() : this.yarnEndpointAddress;
     }
 
     /**
@@ -289,8 +290,8 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zeppelinRemoteSparkInterpreterPort")
       private final @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort;
 
-    public Output<Integer> getZeppelinRemoteSparkInterpreterPort() {
-        return this.zeppelinRemoteSparkInterpreterPort == null ? Output.empty() : this.zeppelinRemoteSparkInterpreterPort;
+    public Output<Integer> zeppelinRemoteSparkInterpreterPort() {
+        return this.zeppelinRemoteSparkInterpreterPort == null ? Codegen.empty() : this.zeppelinRemoteSparkInterpreterPort;
     }
 
     public DevEndpointState(
@@ -347,31 +348,31 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DevEndpointState() {
-        this.arguments = Output.empty();
-        this.arn = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.extraJarsS3Path = Output.empty();
-        this.extraPythonLibsS3Path = Output.empty();
-        this.failureReason = Output.empty();
-        this.glueVersion = Output.empty();
-        this.name = Output.empty();
-        this.numberOfNodes = Output.empty();
-        this.numberOfWorkers = Output.empty();
-        this.privateAddress = Output.empty();
-        this.publicAddress = Output.empty();
-        this.publicKey = Output.empty();
-        this.publicKeys = Output.empty();
-        this.roleArn = Output.empty();
-        this.securityConfiguration = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.status = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
-        this.workerType = Output.empty();
-        this.yarnEndpointAddress = Output.empty();
-        this.zeppelinRemoteSparkInterpreterPort = Output.empty();
+        this.arguments = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.extraJarsS3Path = Codegen.empty();
+        this.extraPythonLibsS3Path = Codegen.empty();
+        this.failureReason = Codegen.empty();
+        this.glueVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.numberOfNodes = Codegen.empty();
+        this.numberOfWorkers = Codegen.empty();
+        this.privateAddress = Codegen.empty();
+        this.publicAddress = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.publicKeys = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.securityConfiguration = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.workerType = Codegen.empty();
+        this.yarnEndpointAddress = Codegen.empty();
+        this.zeppelinRemoteSparkInterpreterPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -447,7 +448,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arguments(@Nullable Map<String,Object> arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -455,7 +456,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -463,7 +464,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder extraJarsS3Path(@Nullable Output<String> extraJarsS3Path) {
@@ -471,7 +472,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extraJarsS3Path(@Nullable String extraJarsS3Path) {
-            this.extraJarsS3Path = Output.ofNullable(extraJarsS3Path);
+            this.extraJarsS3Path = Codegen.ofNullable(extraJarsS3Path);
             return this;
         }
         public Builder extraPythonLibsS3Path(@Nullable Output<String> extraPythonLibsS3Path) {
@@ -479,7 +480,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
-            this.extraPythonLibsS3Path = Output.ofNullable(extraPythonLibsS3Path);
+            this.extraPythonLibsS3Path = Codegen.ofNullable(extraPythonLibsS3Path);
             return this;
         }
         public Builder failureReason(@Nullable Output<String> failureReason) {
@@ -487,7 +488,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Output.ofNullable(failureReason);
+            this.failureReason = Codegen.ofNullable(failureReason);
             return this;
         }
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
@@ -495,7 +496,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Output.ofNullable(glueVersion);
+            this.glueVersion = Codegen.ofNullable(glueVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -503,7 +504,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
@@ -511,7 +512,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Output.ofNullable(numberOfNodes);
+            this.numberOfNodes = Codegen.ofNullable(numberOfNodes);
             return this;
         }
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
@@ -519,7 +520,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
+            this.numberOfWorkers = Codegen.ofNullable(numberOfWorkers);
             return this;
         }
         public Builder privateAddress(@Nullable Output<String> privateAddress) {
@@ -527,7 +528,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateAddress(@Nullable String privateAddress) {
-            this.privateAddress = Output.ofNullable(privateAddress);
+            this.privateAddress = Codegen.ofNullable(privateAddress);
             return this;
         }
         public Builder publicAddress(@Nullable Output<String> publicAddress) {
@@ -535,7 +536,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicAddress(@Nullable String publicAddress) {
-            this.publicAddress = Output.ofNullable(publicAddress);
+            this.publicAddress = Codegen.ofNullable(publicAddress);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -543,7 +544,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder publicKeys(@Nullable Output<List<String>> publicKeys) {
@@ -551,7 +552,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKeys(@Nullable List<String> publicKeys) {
-            this.publicKeys = Output.ofNullable(publicKeys);
+            this.publicKeys = Codegen.ofNullable(publicKeys);
             return this;
         }
         public Builder publicKeys(String... publicKeys) {
@@ -562,7 +563,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
@@ -570,7 +571,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Output.ofNullable(securityConfiguration);
+            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
             return this;
         }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
@@ -578,7 +579,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -589,7 +590,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -597,7 +598,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -605,7 +606,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -613,7 +614,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -621,7 +622,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder workerType(@Nullable Output<String> workerType) {
@@ -629,7 +630,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerType(@Nullable String workerType) {
-            this.workerType = Output.ofNullable(workerType);
+            this.workerType = Codegen.ofNullable(workerType);
             return this;
         }
         public Builder yarnEndpointAddress(@Nullable Output<String> yarnEndpointAddress) {
@@ -637,7 +638,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder yarnEndpointAddress(@Nullable String yarnEndpointAddress) {
-            this.yarnEndpointAddress = Output.ofNullable(yarnEndpointAddress);
+            this.yarnEndpointAddress = Codegen.ofNullable(yarnEndpointAddress);
             return this;
         }
         public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort) {
@@ -645,7 +646,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Integer zeppelinRemoteSparkInterpreterPort) {
-            this.zeppelinRemoteSparkInterpreterPort = Output.ofNullable(zeppelinRemoteSparkInterpreterPort);
+            this.zeppelinRemoteSparkInterpreterPort = Codegen.ofNullable(zeppelinRemoteSparkInterpreterPort);
             return this;
         }        public DevEndpointState build() {
             return new DevEndpointState(arguments, arn, availabilityZone, extraJarsS3Path, extraPythonLibsS3Path, failureReason, glueVersion, name, numberOfNodes, numberOfWorkers, privateAddress, publicAddress, publicKey, publicKeys, roleArn, securityConfiguration, securityGroupIds, status, subnetId, tags, tagsAll, vpcId, workerType, yarnEndpointAddress, zeppelinRemoteSparkInterpreterPort);

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.resiliencehub.outputs.AppTagMap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the App.
      * 
      */
-    public Output<String> getAppArn() {
+    public Output<String> appArn() {
         return this.appArn;
     }
     /**
@@ -45,7 +46,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return A string containing full ResilienceHub app template body.
      * 
      */
-    public Output<String> getAppTemplateBody() {
+    public Output<String> appTemplateBody() {
         return this.appTemplateBody;
     }
     /**
@@ -59,7 +60,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return App description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Name of the app.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
-    public Output</* @Nullable */ String> getResiliencyPolicyArn() {
+    public Output</* @Nullable */ String> resiliencyPolicyArn() {
         return this.resiliencyPolicyArn;
     }
     /**
@@ -101,13 +102,13 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return An array of ResourceMapping objects.
      * 
      */
-    public Output<List<AppResourceMapping>> getResourceMappings() {
+    public Output<List<AppResourceMapping>> resourceMappings() {
         return this.resourceMappings;
     }
     @Export(name="tags", type=AppTagMap.class, parameters={})
     private Output</* @Nullable */ AppTagMap> tags;
 
-    public Output</* @Nullable */ AppTagMap> getTags() {
+    public Output</* @Nullable */ AppTagMap> tags() {
         return this.tags;
     }
 
@@ -133,7 +134,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public App(String name, AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:resiliencehub:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:resiliencehub:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private App(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

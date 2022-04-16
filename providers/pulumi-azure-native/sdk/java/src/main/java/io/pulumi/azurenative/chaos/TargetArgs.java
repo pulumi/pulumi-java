@@ -5,6 +5,7 @@ package io.pulumi.azurenative.chaos;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentProviderNamespace", required=true)
       private final Output<String> parentProviderNamespace;
 
-    public Output<String> getParentProviderNamespace() {
+    public Output<String> parentProviderNamespace() {
         return this.parentProviderNamespace;
     }
 
@@ -44,7 +45,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceName", required=true)
       private final Output<String> parentResourceName;
 
-    public Output<String> getParentResourceName() {
+    public Output<String> parentResourceName() {
         return this.parentResourceName;
     }
 
@@ -55,7 +56,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
-    public Output<String> getParentResourceType() {
+    public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -66,7 +67,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -77,7 +78,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,8 +89,8 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetName")
       private final @Nullable Output<String> targetName;
 
-    public Output<String> getTargetName() {
-        return this.targetName == null ? Output.empty() : this.targetName;
+    public Output<String> targetName() {
+        return this.targetName == null ? Codegen.empty() : this.targetName;
     }
 
     public TargetArgs(
@@ -110,13 +111,13 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetArgs() {
-        this.location = Output.empty();
-        this.parentProviderNamespace = Output.empty();
-        this.parentResourceName = Output.empty();
-        this.parentResourceType = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.targetName = Output.empty();
+        this.location = Codegen.empty();
+        this.parentProviderNamespace = Codegen.empty();
+        this.parentResourceName = Codegen.empty();
+        this.parentResourceType = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.targetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {
@@ -204,7 +205,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetName(@Nullable String targetName) {
-            this.targetName = Output.ofNullable(targetName);
+            this.targetName = Codegen.ofNullable(targetName);
             return this;
         }        public TargetArgs build() {
             return new TargetArgs(location, parentProviderNamespace, parentResourceName, parentResourceType, properties, resourceGroupName, targetName);

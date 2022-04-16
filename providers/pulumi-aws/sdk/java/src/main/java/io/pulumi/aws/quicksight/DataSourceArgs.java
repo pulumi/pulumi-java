@@ -10,6 +10,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourceSslPropertiesArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceVpcConnectionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
+    public Output<String> awsAccountId() {
+        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<DataSourceCredentialsArgs> credentials;
 
-    public Output<DataSourceCredentialsArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+    public Output<DataSourceCredentialsArgs> credentials() {
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
 
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
 
@@ -61,8 +62,8 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters", required=true)
       private final Output<DataSourceParametersArgs> parameters;
 
-    public Output<DataSourceParametersArgs> getParameters() {
+    public Output<DataSourceParametersArgs> parameters() {
         return this.parameters;
     }
 
@@ -83,8 +84,8 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<DataSourcePermissionArgs>> permissions;
 
-    public Output<List<DataSourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<List<DataSourcePermissionArgs>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslProperties")
       private final @Nullable Output<DataSourceSslPropertiesArgs> sslProperties;
 
-    public Output<DataSourceSslPropertiesArgs> getSslProperties() {
-        return this.sslProperties == null ? Output.empty() : this.sslProperties;
+    public Output<DataSourceSslPropertiesArgs> sslProperties() {
+        return this.sslProperties == null ? Codegen.empty() : this.sslProperties;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -127,8 +128,8 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnectionProperties")
       private final @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties;
 
-    public Output<DataSourceVpcConnectionPropertiesArgs> getVpcConnectionProperties() {
-        return this.vpcConnectionProperties == null ? Output.empty() : this.vpcConnectionProperties;
+    public Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties() {
+        return this.vpcConnectionProperties == null ? Codegen.empty() : this.vpcConnectionProperties;
     }
 
     public DataSourceArgs(
@@ -155,16 +156,16 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.awsAccountId = Output.empty();
-        this.credentials = Output.empty();
-        this.dataSourceId = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.permissions = Output.empty();
-        this.sslProperties = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
-        this.vpcConnectionProperties = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.credentials = Codegen.empty();
+        this.dataSourceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.sslProperties = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
+        this.vpcConnectionProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Output.ofNullable(awsAccountId);
+            this.awsAccountId = Codegen.ofNullable(awsAccountId);
             return this;
         }
         public Builder credentials(@Nullable Output<DataSourceCredentialsArgs> credentials) {
@@ -218,7 +219,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable DataSourceCredentialsArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder dataSourceId(Output<String> dataSourceId) {
@@ -234,7 +235,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(Output<DataSourceParametersArgs> parameters) {
@@ -250,7 +251,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable List<DataSourcePermissionArgs> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(DataSourcePermissionArgs... permissions) {
@@ -261,7 +262,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslProperties(@Nullable DataSourceSslPropertiesArgs sslProperties) {
-            this.sslProperties = Output.ofNullable(sslProperties);
+            this.sslProperties = Codegen.ofNullable(sslProperties);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -269,7 +270,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -285,7 +286,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
-            this.vpcConnectionProperties = Output.ofNullable(vpcConnectionProperties);
+            this.vpcConnectionProperties = Codegen.ofNullable(vpcConnectionProperties);
             return this;
         }        public DataSourceArgs build() {
             return new DataSourceArgs(awsAccountId, credentials, dataSourceId, name, parameters, permissions, sslProperties, tags, type, vpcConnectionProperties);

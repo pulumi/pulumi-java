@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -32,8 +33,8 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<String> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -58,9 +59,9 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     }
 
     private GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs() {
-        this.artifactId = Output.empty();
-        this.destination = Output.empty();
-        this.type = Output.empty();
+        this.artifactId = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder type(Output<String> type) {

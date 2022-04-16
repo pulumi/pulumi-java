@@ -90,14 +90,14 @@ public final class GetScheduledSynchronizationSettingResult {
      * Time at which the synchronization setting was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -105,56 +105,56 @@ public final class GetScheduledSynchronizationSettingResult {
      * Expected value is 'ScheduleBased'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Recurrence Interval
      * 
     */
-    public String getRecurrenceInterval() {
+    public String recurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
      * Synchronization time
      * 
     */
-    public String getSynchronizationTime() {
+    public String synchronizationTime() {
         return this.synchronizationTime;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Name of the user who created the synchronization setting.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

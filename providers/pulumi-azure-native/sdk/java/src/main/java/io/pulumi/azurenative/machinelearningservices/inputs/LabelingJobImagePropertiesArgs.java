@@ -8,6 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.MediaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="annotationType")
       private final @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
 
-    public Output<Either<String,ImageAnnotationType>> getAnnotationType() {
-        return this.annotationType == null ? Output.empty() : this.annotationType;
+    public Output<Either<String,ImageAnnotationType>> annotationType() {
+        return this.annotationType == null ? Codegen.empty() : this.annotationType;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="mediaType", required=true)
       private final Output<Either<String,MediaType>> mediaType;
 
-    public Output<Either<String,MediaType>> getMediaType() {
+    public Output<Either<String,MediaType>> mediaType() {
         return this.mediaType;
     }
 
@@ -47,8 +48,8 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     }
 
     private LabelingJobImagePropertiesArgs() {
-        this.annotationType = Output.empty();
-        this.mediaType = Output.empty();
+        this.annotationType = Codegen.empty();
+        this.mediaType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder annotationType(@Nullable Either<String,ImageAnnotationType> annotationType) {
-            this.annotationType = Output.ofNullable(annotationType);
+            this.annotationType = Codegen.ofNullable(annotationType);
             return this;
         }
         public Builder mediaType(Output<Either<String,MediaType>> mediaType) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
-    public Output<String> getIpRange() {
-        return this.ipRange == null ? Output.empty() : this.ipRange;
+    public Output<String> ipRange() {
+        return this.ipRange == null ? Codegen.empty() : this.ipRange;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkedInterconnectAttachment")
       private final @Nullable Output<String> linkedInterconnectAttachment;
 
-    public Output<String> getLinkedInterconnectAttachment() {
-        return this.linkedInterconnectAttachment == null ? Output.empty() : this.linkedInterconnectAttachment;
+    public Output<String> linkedInterconnectAttachment() {
+        return this.linkedInterconnectAttachment == null ? Codegen.empty() : this.linkedInterconnectAttachment;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkedVpnTunnel")
       private final @Nullable Output<String> linkedVpnTunnel;
 
-    public Output<String> getLinkedVpnTunnel() {
-        return this.linkedVpnTunnel == null ? Output.empty() : this.linkedVpnTunnel;
+    public Output<String> linkedVpnTunnel() {
+        return this.linkedVpnTunnel == null ? Codegen.empty() : this.linkedVpnTunnel;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
+    public Output<String> privateIpAddress() {
+        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="redundantInterface")
       private final @Nullable Output<String> redundantInterface;
 
-    public Output<String> getRedundantInterface() {
-        return this.redundantInterface == null ? Output.empty() : this.redundantInterface;
+    public Output<String> redundantInterface() {
+        return this.redundantInterface == null ? Codegen.empty() : this.redundantInterface;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+    public Output<String> subnetwork() {
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public RouterInterfaceArgs(
@@ -109,13 +110,13 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RouterInterfaceArgs() {
-        this.ipRange = Output.empty();
-        this.linkedInterconnectAttachment = Output.empty();
-        this.linkedVpnTunnel = Output.empty();
-        this.name = Output.empty();
-        this.privateIpAddress = Output.empty();
-        this.redundantInterface = Output.empty();
-        this.subnetwork = Output.empty();
+        this.ipRange = Codegen.empty();
+        this.linkedInterconnectAttachment = Codegen.empty();
+        this.linkedVpnTunnel = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
+        this.redundantInterface = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Output.ofNullable(ipRange);
+            this.ipRange = Codegen.ofNullable(ipRange);
             return this;
         }
         public Builder linkedInterconnectAttachment(@Nullable Output<String> linkedInterconnectAttachment) {
@@ -163,7 +164,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder linkedInterconnectAttachment(@Nullable String linkedInterconnectAttachment) {
-            this.linkedInterconnectAttachment = Output.ofNullable(linkedInterconnectAttachment);
+            this.linkedInterconnectAttachment = Codegen.ofNullable(linkedInterconnectAttachment);
             return this;
         }
         public Builder linkedVpnTunnel(@Nullable Output<String> linkedVpnTunnel) {
@@ -171,7 +172,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder linkedVpnTunnel(@Nullable String linkedVpnTunnel) {
-            this.linkedVpnTunnel = Output.ofNullable(linkedVpnTunnel);
+            this.linkedVpnTunnel = Codegen.ofNullable(linkedVpnTunnel);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -179,7 +180,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
@@ -187,7 +188,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Output.ofNullable(privateIpAddress);
+            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
             return this;
         }
         public Builder redundantInterface(@Nullable Output<String> redundantInterface) {
@@ -195,7 +196,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder redundantInterface(@Nullable String redundantInterface) {
-            this.redundantInterface = Output.ofNullable(redundantInterface);
+            this.redundantInterface = Codegen.ofNullable(redundantInterface);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -203,7 +204,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public RouterInterfaceArgs build() {
             return new RouterInterfaceArgs(ipRange, linkedInterconnectAttachment, linkedVpnTunnel, name, privateIpAddress, redundantInterface, subnetwork);

@@ -25,7 +25,7 @@ public final class VirtualDirectoryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="physicalPath")
       private final @Nullable String physicalPath;
 
-    public Optional<String> getPhysicalPath() {
+    public Optional<String> physicalPath() {
         return this.physicalPath == null ? Optional.empty() : Optional.ofNullable(this.physicalPath);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualDirectoryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="virtualPath")
       private final @Nullable String virtualPath;
 
-    public Optional<String> getVirtualPath() {
+    public Optional<String> virtualPath() {
         return this.virtualPath == null ? Optional.empty() : Optional.ofNullable(this.virtualPath);
     }
 

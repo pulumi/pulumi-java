@@ -5,6 +5,7 @@ package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     @Import(name="cert")
       private final @Nullable Output<String> cert;
 
-    public Output<String> getCert() {
-        return this.cert == null ? Output.empty() : this.cert;
+    public Output<String> cert() {
+        return this.cert == null ? Codegen.empty() : this.cert;
     }
 
     /**
@@ -31,29 +32,29 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+    public Output<String> expireTime() {
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
 
-    public Output<String> getSerialNumber() {
-        return this.serialNumber == null ? Output.empty() : this.serialNumber;
+    public Output<String> serialNumber() {
+        return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
     }
 
     @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> getSha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Output.empty() : this.sha1Fingerprint;
+    public Output<String> sha1Fingerprint() {
+        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
     }
 
     public InstanceServerCaCertArgs(
@@ -70,11 +71,11 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     }
 
     private InstanceServerCaCertArgs() {
-        this.cert = Output.empty();
-        this.createTime = Output.empty();
-        this.expireTime = Output.empty();
-        this.serialNumber = Output.empty();
-        this.sha1Fingerprint = Output.empty();
+        this.cert = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.expireTime = Codegen.empty();
+        this.serialNumber = Codegen.empty();
+        this.sha1Fingerprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder cert(@Nullable String cert) {
-            this.cert = Output.ofNullable(cert);
+            this.cert = Codegen.ofNullable(cert);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -118,7 +119,7 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder expireTime(@Nullable Output<String> expireTime) {
@@ -126,7 +127,7 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
@@ -134,7 +135,7 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Output.ofNullable(serialNumber);
+            this.serialNumber = Codegen.ofNullable(serialNumber);
             return this;
         }
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
@@ -142,7 +143,7 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
+            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
             return this;
         }        public InstanceServerCaCertArgs build() {
             return new InstanceServerCaCertArgs(cert, createTime, expireTime, serialNumber, sha1Fingerprint);

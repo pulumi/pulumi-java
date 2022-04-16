@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -31,7 +32,7 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationStreamArn", required=true)
       private final Output<String> destinationStreamArn;
 
-    public Output<String> getDestinationStreamArn() {
+    public Output<String> destinationStreamArn() {
         return this.destinationStreamArn;
     }
 
@@ -42,7 +43,7 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -56,9 +57,9 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventStreamArgs() {
-        this.applicationId = Output.empty();
-        this.destinationStreamArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.destinationStreamArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

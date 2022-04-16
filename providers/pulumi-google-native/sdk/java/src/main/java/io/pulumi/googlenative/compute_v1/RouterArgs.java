@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.RouterBgpArgs;
 import io.pulumi.googlenative.compute_v1.inputs.RouterBgpPeerArgs;
 import io.pulumi.googlenative.compute_v1.inputs.RouterInterfaceArgs;
@@ -27,8 +28,8 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgp")
       private final @Nullable Output<RouterBgpArgs> bgp;
 
-    public Output<RouterBgpArgs> getBgp() {
-        return this.bgp == null ? Output.empty() : this.bgp;
+    public Output<RouterBgpArgs> bgp() {
+        return this.bgp == null ? Codegen.empty() : this.bgp;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpPeers")
       private final @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
 
-    public Output<List<RouterBgpPeerArgs>> getBgpPeers() {
-        return this.bgpPeers == null ? Output.empty() : this.bgpPeers;
+    public Output<List<RouterBgpPeerArgs>> bgpPeers() {
+        return this.bgpPeers == null ? Codegen.empty() : this.bgpPeers;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptedInterconnectRouter")
       private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Output<Boolean> getEncryptedInterconnectRouter() {
-        return this.encryptedInterconnectRouter == null ? Output.empty() : this.encryptedInterconnectRouter;
+    public Output<Boolean> encryptedInterconnectRouter() {
+        return this.encryptedInterconnectRouter == null ? Codegen.empty() : this.encryptedInterconnectRouter;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interfaces")
       private final @Nullable Output<List<RouterInterfaceArgs>> interfaces;
 
-    public Output<List<RouterInterfaceArgs>> getInterfaces() {
-        return this.interfaces == null ? Output.empty() : this.interfaces;
+    public Output<List<RouterInterfaceArgs>> interfaces() {
+        return this.interfaces == null ? Codegen.empty() : this.interfaces;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nats")
       private final @Nullable Output<List<RouterNatArgs>> nats;
 
-    public Output<List<RouterNatArgs>> getNats() {
-        return this.nats == null ? Output.empty() : this.nats;
+    public Output<List<RouterNatArgs>> nats() {
+        return this.nats == null ? Codegen.empty() : this.nats;
     }
 
     /**
@@ -104,29 +105,29 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     public RouterArgs(
@@ -155,17 +156,17 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterArgs() {
-        this.bgp = Output.empty();
-        this.bgpPeers = Output.empty();
-        this.description = Output.empty();
-        this.encryptedInterconnectRouter = Output.empty();
-        this.interfaces = Output.empty();
-        this.name = Output.empty();
-        this.nats = Output.empty();
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
+        this.bgp = Codegen.empty();
+        this.bgpPeers = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedInterconnectRouter = Codegen.empty();
+        this.interfaces = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nats = Codegen.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bgp(@Nullable RouterBgpArgs bgp) {
-            this.bgp = Output.ofNullable(bgp);
+            this.bgp = Codegen.ofNullable(bgp);
             return this;
         }
         public Builder bgpPeers(@Nullable Output<List<RouterBgpPeerArgs>> bgpPeers) {
@@ -221,7 +222,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bgpPeers(@Nullable List<RouterBgpPeerArgs> bgpPeers) {
-            this.bgpPeers = Output.ofNullable(bgpPeers);
+            this.bgpPeers = Codegen.ofNullable(bgpPeers);
             return this;
         }
         public Builder bgpPeers(RouterBgpPeerArgs... bgpPeers) {
@@ -232,7 +233,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
@@ -240,7 +241,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = Output.ofNullable(encryptedInterconnectRouter);
+            this.encryptedInterconnectRouter = Codegen.ofNullable(encryptedInterconnectRouter);
             return this;
         }
         public Builder interfaces(@Nullable Output<List<RouterInterfaceArgs>> interfaces) {
@@ -248,7 +249,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interfaces(@Nullable List<RouterInterfaceArgs> interfaces) {
-            this.interfaces = Output.ofNullable(interfaces);
+            this.interfaces = Codegen.ofNullable(interfaces);
             return this;
         }
         public Builder interfaces(RouterInterfaceArgs... interfaces) {
@@ -259,7 +260,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nats(@Nullable Output<List<RouterNatArgs>> nats) {
@@ -267,7 +268,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nats(@Nullable List<RouterNatArgs> nats) {
-            this.nats = Output.ofNullable(nats);
+            this.nats = Codegen.ofNullable(nats);
             return this;
         }
         public Builder nats(RouterNatArgs... nats) {
@@ -278,7 +279,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -286,7 +287,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -302,7 +303,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }        public RouterArgs build() {
             return new RouterArgs(bgp, bgpPeers, description, encryptedInterconnectRouter, interfaces, name, nats, network, project, region, requestId);

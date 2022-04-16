@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NodeAffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodAntiAffinityArgs;
@@ -27,8 +28,8 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeAffinity")
       private final @Nullable Output<NodeAffinityArgs> nodeAffinity;
 
-    public Output<NodeAffinityArgs> getNodeAffinity() {
-        return this.nodeAffinity == null ? Output.empty() : this.nodeAffinity;
+    public Output<NodeAffinityArgs> nodeAffinity() {
+        return this.nodeAffinity == null ? Codegen.empty() : this.nodeAffinity;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podAffinity")
       private final @Nullable Output<PodAffinityArgs> podAffinity;
 
-    public Output<PodAffinityArgs> getPodAffinity() {
-        return this.podAffinity == null ? Output.empty() : this.podAffinity;
+    public Output<PodAffinityArgs> podAffinity() {
+        return this.podAffinity == null ? Codegen.empty() : this.podAffinity;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podAntiAffinity")
       private final @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
 
-    public Output<PodAntiAffinityArgs> getPodAntiAffinity() {
-        return this.podAntiAffinity == null ? Output.empty() : this.podAntiAffinity;
+    public Output<PodAntiAffinityArgs> podAntiAffinity() {
+        return this.podAntiAffinity == null ? Codegen.empty() : this.podAntiAffinity;
     }
 
     public AffinityArgs(
@@ -63,9 +64,9 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AffinityArgs() {
-        this.nodeAffinity = Output.empty();
-        this.podAffinity = Output.empty();
-        this.podAntiAffinity = Output.empty();
+        this.nodeAffinity = Codegen.empty();
+        this.podAffinity = Codegen.empty();
+        this.podAntiAffinity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeAffinity(@Nullable NodeAffinityArgs nodeAffinity) {
-            this.nodeAffinity = Output.ofNullable(nodeAffinity);
+            this.nodeAffinity = Codegen.ofNullable(nodeAffinity);
             return this;
         }
         public Builder podAffinity(@Nullable Output<PodAffinityArgs> podAffinity) {
@@ -105,7 +106,7 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder podAffinity(@Nullable PodAffinityArgs podAffinity) {
-            this.podAffinity = Output.ofNullable(podAffinity);
+            this.podAffinity = Codegen.ofNullable(podAffinity);
             return this;
         }
         public Builder podAntiAffinity(@Nullable Output<PodAntiAffinityArgs> podAntiAffinity) {
@@ -113,7 +114,7 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder podAntiAffinity(@Nullable PodAntiAffinityArgs podAntiAffinity) {
-            this.podAntiAffinity = Output.ofNullable(podAntiAffinity);
+            this.podAntiAffinity = Codegen.ofNullable(podAntiAffinity);
             return this;
         }        public AffinityArgs build() {
             return new AffinityArgs(nodeAffinity, podAffinity, podAntiAffinity);

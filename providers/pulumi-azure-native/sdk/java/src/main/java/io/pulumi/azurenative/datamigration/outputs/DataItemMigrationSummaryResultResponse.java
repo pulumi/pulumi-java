@@ -82,63 +82,63 @@ public final class DataItemMigrationSummaryResultResponse {
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Wildcard string prefix to use for querying all errors of the item
      * 
     */
-    public String getErrorPrefix() {
+    public String errorPrefix() {
         return this.errorPrefix;
     }
     /**
      * Number of successfully completed items
      * 
     */
-    public Double getItemsCompletedCount() {
+    public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
     }
     /**
      * Number of items
      * 
     */
-    public Double getItemsCount() {
+    public Double itemsCount() {
         return this.itemsCount;
     }
     /**
      * Name of the item
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
      * 
     */
-    public String getResultPrefix() {
+    public String resultPrefix() {
         return this.resultPrefix;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Status message
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 

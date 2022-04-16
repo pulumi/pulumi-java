@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="contentUrl", required=true)
       private final Output<String> contentUrl;
 
-    public Output<String> getContentUrl() {
+    public Output<String> contentUrl() {
         return this.contentUrl;
     }
 
@@ -37,8 +38,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="icon")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getIcon() {
-        return this.icon == null ? Output.empty() : this.icon;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon() {
+        return this.icon == null ? Codegen.empty() : this.icon;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="largeImage")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getLargeImage() {
-        return this.largeImage == null ? Output.empty() : this.largeImage;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage() {
+        return this.largeImage == null ? Codegen.empty() : this.largeImage;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -88,11 +89,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs() {
-        this.contentUrl = Output.empty();
-        this.description = Output.empty();
-        this.icon = Output.empty();
-        this.largeImage = Output.empty();
-        this.name = Output.empty();
+        this.contentUrl = Codegen.empty();
+        this.description = Codegen.empty();
+        this.icon = Codegen.empty();
+        this.largeImage = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder icon(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon) {
@@ -144,7 +145,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             return this;
         }
         public Builder icon(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs icon) {
-            this.icon = Output.ofNullable(icon);
+            this.icon = Codegen.ofNullable(icon);
             return this;
         }
         public Builder largeImage(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage) {
@@ -152,7 +153,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             return this;
         }
         public Builder largeImage(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs largeImage) {
-            this.largeImage = Output.ofNullable(largeImage);
+            this.largeImage = Codegen.ofNullable(largeImage);
             return this;
         }
         public Builder name(Output<String> name) {

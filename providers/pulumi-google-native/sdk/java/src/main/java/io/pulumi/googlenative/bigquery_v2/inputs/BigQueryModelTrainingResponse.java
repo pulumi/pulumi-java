@@ -20,7 +20,7 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
     @Import(name="currentIteration", required=true)
       private final Integer currentIteration;
 
-    public Integer getCurrentIteration() {
+    public Integer currentIteration() {
         return this.currentIteration;
     }
 
@@ -31,7 +31,7 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
     @Import(name="expectedTotalIterations", required=true)
       private final String expectedTotalIterations;
 
-    public String getExpectedTotalIterations() {
+    public String expectedTotalIterations() {
         return this.expectedTotalIterations;
     }
 

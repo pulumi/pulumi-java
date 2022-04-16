@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.TransitGatewayVpcAttachmentTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public class TransitGatewayVpcAttachment extends io.pulumi.resources.CustomResou
     @Export(name="addSubnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addSubnetIds;
 
-    public Output</* @Nullable */ List<String>> getAddSubnetIds() {
+    public Output</* @Nullable */ List<String>> addSubnetIds() {
         return this.addSubnetIds;
     }
     /**
@@ -37,37 +38,37 @@ public class TransitGatewayVpcAttachment extends io.pulumi.resources.CustomResou
      * @return The options for the transit gateway vpc attachment.
      * 
      */
-    public Output</* @Nullable */ OptionsProperties> getOptions() {
+    public Output</* @Nullable */ OptionsProperties> options() {
         return this.options;
     }
     @Export(name="removeSubnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> removeSubnetIds;
 
-    public Output</* @Nullable */ List<String>> getRemoveSubnetIds() {
+    public Output</* @Nullable */ List<String>> removeSubnetIds() {
         return this.removeSubnetIds;
     }
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetIds;
 
-    public Output</* @Nullable */ List<String>> getSubnetIds() {
+    public Output</* @Nullable */ List<String>> subnetIds() {
         return this.subnetIds;
     }
     @Export(name="tags", type=List.class, parameters={TransitGatewayVpcAttachmentTag.class})
     private Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> tags;
 
-    public Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> getTags() {
+    public Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> tags() {
         return this.tags;
     }
     @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> transitGatewayId;
 
-    public Output</* @Nullable */ String> getTransitGatewayId() {
+    public Output</* @Nullable */ String> transitGatewayId() {
         return this.transitGatewayId;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
-    public Output</* @Nullable */ String> getVpcId() {
+    public Output</* @Nullable */ String> vpcId() {
         return this.vpcId;
     }
 
@@ -93,7 +94,7 @@ public class TransitGatewayVpcAttachment extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitGatewayVpcAttachment(String name, @Nullable TransitGatewayVpcAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:TransitGatewayVpcAttachment", name, args == null ? TransitGatewayVpcAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:TransitGatewayVpcAttachment", name, args == null ? TransitGatewayVpcAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitGatewayVpcAttachment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

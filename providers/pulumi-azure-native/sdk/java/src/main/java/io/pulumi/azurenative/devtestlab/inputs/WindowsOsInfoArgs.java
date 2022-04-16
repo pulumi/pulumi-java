@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.WindowsOsState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowsOsState")
       private final @Nullable Output<Either<String,WindowsOsState>> windowsOsState;
 
-    public Output<Either<String,WindowsOsState>> getWindowsOsState() {
-        return this.windowsOsState == null ? Output.empty() : this.windowsOsState;
+    public Output<Either<String,WindowsOsState>> windowsOsState() {
+        return this.windowsOsState == null ? Codegen.empty() : this.windowsOsState;
     }
 
     public WindowsOsInfoArgs(@Nullable Output<Either<String,WindowsOsState>> windowsOsState) {
@@ -36,7 +37,7 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WindowsOsInfoArgs() {
-        this.windowsOsState = Output.empty();
+        this.windowsOsState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder windowsOsState(@Nullable Either<String,WindowsOsState> windowsOsState) {
-            this.windowsOsState = Output.ofNullable(windowsOsState);
+            this.windowsOsState = Codegen.ofNullable(windowsOsState);
             return this;
         }        public WindowsOsInfoArgs build() {
             return new WindowsOsInfoArgs(windowsOsState);

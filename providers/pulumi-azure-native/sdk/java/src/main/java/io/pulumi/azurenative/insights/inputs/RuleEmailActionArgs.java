@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
 
-    public Output<List<String>> getCustomEmails() {
-        return this.customEmails == null ? Output.empty() : this.customEmails;
+    public Output<List<String>> customEmails() {
+        return this.customEmails == null ? Codegen.empty() : this.customEmails;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -50,8 +51,8 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sendToServiceOwners")
       private final @Nullable Output<Boolean> sendToServiceOwners;
 
-    public Output<Boolean> getSendToServiceOwners() {
-        return this.sendToServiceOwners == null ? Output.empty() : this.sendToServiceOwners;
+    public Output<Boolean> sendToServiceOwners() {
+        return this.sendToServiceOwners == null ? Codegen.empty() : this.sendToServiceOwners;
     }
 
     public RuleEmailActionArgs(
@@ -64,9 +65,9 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RuleEmailActionArgs() {
-        this.customEmails = Output.empty();
-        this.odataType = Output.empty();
-        this.sendToServiceOwners = Output.empty();
+        this.customEmails = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.sendToServiceOwners = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = Output.ofNullable(customEmails);
+            this.customEmails = Codegen.ofNullable(customEmails);
             return this;
         }
         public Builder customEmails(String... customEmails) {
@@ -117,7 +118,7 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
-            this.sendToServiceOwners = Output.ofNullable(sendToServiceOwners);
+            this.sendToServiceOwners = Codegen.ofNullable(sendToServiceOwners);
             return this;
         }        public RuleEmailActionArgs build() {
             return new RuleEmailActionArgs(customEmails, odataType, sendToServiceOwners);

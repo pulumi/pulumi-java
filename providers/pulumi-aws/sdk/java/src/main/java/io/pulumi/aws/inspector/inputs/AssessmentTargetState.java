@@ -5,6 +5,7 @@ package io.pulumi.aws.inspector.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupArn")
       private final @Nullable Output<String> resourceGroupArn;
 
-    public Output<String> getResourceGroupArn() {
-        return this.resourceGroupArn == null ? Output.empty() : this.resourceGroupArn;
+    public Output<String> resourceGroupArn() {
+        return this.resourceGroupArn == null ? Codegen.empty() : this.resourceGroupArn;
     }
 
     public AssessmentTargetState(
@@ -57,9 +58,9 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
     }
 
     private AssessmentTargetState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupArn = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -99,7 +100,7 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupArn(@Nullable Output<String> resourceGroupArn) {
@@ -107,7 +108,7 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
-            this.resourceGroupArn = Output.ofNullable(resourceGroupArn);
+            this.resourceGroupArn = Codegen.ofNullable(resourceGroupArn);
             return this;
         }        public AssessmentTargetState build() {
             return new AssessmentTargetState(arn, name, resourceGroupArn);

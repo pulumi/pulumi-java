@@ -23,7 +23,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -34,7 +34,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="containerImage", required=true)
       private final String containerImage;
 
-    public String getContainerImage() {
+    public String containerImage() {
         return this.containerImage;
     }
 
@@ -45,7 +45,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -56,7 +56,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="framework", required=true)
       private final String framework;
 
-    public String getFramework() {
+    public String framework() {
         return this.framework;
     }
 
@@ -67,7 +67,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="snapshot", required=true)
       private final String snapshot;
 
-    public String getSnapshot() {
+    public String snapshot() {
         return this.snapshot;
     }
 
@@ -78,7 +78,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -89,7 +89,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="targetImage", required=true)
       private final String targetImage;
 
-    public String getTargetImage() {
+    public String targetImage() {
         return this.targetImage;
     }
 
@@ -100,7 +100,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="targetVersion", required=true)
       private final String targetVersion;
 
-    public String getTargetVersion() {
+    public String targetVersion() {
         return this.targetVersion;
     }
 
@@ -111,7 +111,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 
@@ -122,7 +122,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     @Import(name="vmImage", required=true)
       private final String vmImage;
 
-    public String getVmImage() {
+    public String vmImage() {
         return this.vmImage;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportRecurrencePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recurrence", required=true)
       private final Output<Either<String,RecurrenceType>> recurrence;
 
-    public Output<Either<String,RecurrenceType>> getRecurrence() {
+    public Output<Either<String,RecurrenceType>> recurrence() {
         return this.recurrence;
     }
 
@@ -40,8 +41,8 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recurrencePeriod")
       private final @Nullable Output<ReportRecurrencePeriodArgs> recurrencePeriod;
 
-    public Output<ReportRecurrencePeriodArgs> getRecurrencePeriod() {
-        return this.recurrencePeriod == null ? Output.empty() : this.recurrencePeriod;
+    public Output<ReportRecurrencePeriodArgs> recurrencePeriod() {
+        return this.recurrencePeriod == null ? Codegen.empty() : this.recurrencePeriod;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,StatusType>> status;
 
-    public Output<Either<String,StatusType>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,StatusType>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ReportScheduleArgs(
@@ -65,9 +66,9 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportScheduleArgs() {
-        this.recurrence = Output.empty();
-        this.recurrencePeriod = Output.empty();
-        this.status = Output.empty();
+        this.recurrence = Codegen.empty();
+        this.recurrencePeriod = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recurrencePeriod(@Nullable ReportRecurrencePeriodArgs recurrencePeriod) {
-            this.recurrencePeriod = Output.ofNullable(recurrencePeriod);
+            this.recurrencePeriod = Codegen.ofNullable(recurrencePeriod);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,StatusType>> status) {
@@ -115,7 +116,7 @@ public final class ReportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,StatusType> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ReportScheduleArgs build() {
             return new ReportScheduleArgs(recurrence, recurrencePeriod, status);

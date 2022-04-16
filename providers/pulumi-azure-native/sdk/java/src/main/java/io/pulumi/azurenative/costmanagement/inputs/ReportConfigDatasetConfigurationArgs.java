@@ -5,6 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ReportConfigDatasetConfigurationArgs extends io.pulumi.resour
     @Import(name="columns")
       private final @Nullable Output<List<String>> columns;
 
-    public Output<List<String>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+    public Output<List<String>> columns() {
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     public ReportConfigDatasetConfigurationArgs(@Nullable Output<List<String>> columns) {
@@ -35,7 +36,7 @@ public final class ReportConfigDatasetConfigurationArgs extends io.pulumi.resour
     }
 
     private ReportConfigDatasetConfigurationArgs() {
-        this.columns = Output.empty();
+        this.columns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ReportConfigDatasetConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder columns(@Nullable List<String> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(String... columns) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotevents.inputs.InputDefinitionArgs;
 import io.pulumi.awsnative.iotevents.inputs.InputTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputDefinition", required=true)
       private final Output<InputDefinitionArgs> inputDefinition;
 
-    public Output<InputDefinitionArgs> getInputDefinition() {
+    public Output<InputDefinitionArgs> inputDefinition() {
         return this.inputDefinition;
     }
 
@@ -31,8 +32,8 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputDescription")
       private final @Nullable Output<String> inputDescription;
 
-    public Output<String> getInputDescription() {
-        return this.inputDescription == null ? Output.empty() : this.inputDescription;
+    public Output<String> inputDescription() {
+        return this.inputDescription == null ? Codegen.empty() : this.inputDescription;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputName")
       private final @Nullable Output<String> inputName;
 
-    public Output<String> getInputName() {
-        return this.inputName == null ? Output.empty() : this.inputName;
+    public Output<String> inputName() {
+        return this.inputName == null ? Codegen.empty() : this.inputName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<InputTagArgs>> tags;
 
-    public Output<List<InputTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<InputTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public InputArgs(
@@ -71,10 +72,10 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputArgs() {
-        this.inputDefinition = Output.empty();
-        this.inputDescription = Output.empty();
-        this.inputName = Output.empty();
-        this.tags = Output.empty();
+        this.inputDefinition = Codegen.empty();
+        this.inputDescription = Codegen.empty();
+        this.inputName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputDescription(@Nullable String inputDescription) {
-            this.inputDescription = Output.ofNullable(inputDescription);
+            this.inputDescription = Codegen.ofNullable(inputDescription);
             return this;
         }
         public Builder inputName(@Nullable Output<String> inputName) {
@@ -124,7 +125,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputName(@Nullable String inputName) {
-            this.inputName = Output.ofNullable(inputName);
+            this.inputName = Codegen.ofNullable(inputName);
             return this;
         }
         public Builder tags(@Nullable Output<List<InputTagArgs>> tags) {
@@ -132,7 +133,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<InputTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(InputTagArgs... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
-        return this.operation == null ? Output.empty() : this.operation;
+    public Output<String> operation() {
+        return this.operation == null ? Codegen.empty() : this.operation;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
     @Import(name="operationTypes", required=true)
       private final Output<List<String>> operationTypes;
 
-    public Output<List<String>> getOperationTypes() {
+    public Output<List<String>> operationTypes() {
         return this.operationTypes;
     }
 
@@ -49,8 +50,8 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
     }
 
     private GoogleCloudApigeeV1GraphQLOperationArgs() {
-        this.operation = Output.empty();
-        this.operationTypes = Output.empty();
+        this.operation = Codegen.empty();
+        this.operationTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
             return this;
         }
         public Builder operation(@Nullable String operation) {
-            this.operation = Output.ofNullable(operation);
+            this.operation = Codegen.ofNullable(operation);
             return this;
         }
         public Builder operationTypes(Output<List<String>> operationTypes) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigateway;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiIamPolicyArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiIamPolicyState;
@@ -59,7 +60,7 @@ public class ApiIamPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="api", type=String.class, parameters={})
     private Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
     /**
@@ -73,7 +74,7 @@ public class ApiIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -89,7 +90,7 @@ public class ApiIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -105,7 +106,7 @@ public class ApiIamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -131,7 +132,7 @@ public class ApiIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiIamPolicy(String name, ApiIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/apiIamPolicy:ApiIamPolicy", name, args == null ? ApiIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigateway/apiIamPolicy:ApiIamPolicy", name, args == null ? ApiIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiIamPolicy(String name, Output<String> id, @Nullable ApiIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

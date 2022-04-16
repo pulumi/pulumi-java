@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.DiagnosticLevel;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+    public Output<String> field() {
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="level")
       private final @Nullable Output<DiagnosticLevel> level;
 
-    public Output<DiagnosticLevel> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+    public Output<DiagnosticLevel> level() {
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     public DiagnosticArgs(
@@ -45,8 +46,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiagnosticArgs() {
-        this.field = Output.empty();
-        this.level = Output.empty();
+        this.field = Codegen.empty();
+        this.level = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder level(@Nullable Output<DiagnosticLevel> level) {
@@ -84,7 +85,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder level(@Nullable DiagnosticLevel level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }        public DiagnosticArgs build() {
             return new DiagnosticArgs(field, level);

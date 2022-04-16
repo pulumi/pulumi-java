@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+    public Output<String> category() {
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -49,8 +50,8 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
       private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Output<RetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+    public Output<RetentionPolicyArgs> retentionPolicy() {
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeGrain")
       private final @Nullable Output<String> timeGrain;
 
-    public Output<String> getTimeGrain() {
-        return this.timeGrain == null ? Output.empty() : this.timeGrain;
+    public Output<String> timeGrain() {
+        return this.timeGrain == null ? Codegen.empty() : this.timeGrain;
     }
 
     public MetricSettingsArgs(
@@ -76,10 +77,10 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricSettingsArgs() {
-        this.category = Output.empty();
-        this.enabled = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.timeGrain = Output.empty();
+        this.category = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.timeGrain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder category(@Nullable String category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {
@@ -129,7 +130,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder timeGrain(@Nullable Output<String> timeGrain) {
@@ -137,7 +138,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeGrain(@Nullable String timeGrain) {
-            this.timeGrain = Output.ofNullable(timeGrain);
+            this.timeGrain = Codegen.ofNullable(timeGrain);
             return this;
         }        public MetricSettingsArgs build() {
             return new MetricSettingsArgs(category, enabled, retentionPolicy, timeGrain);

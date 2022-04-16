@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3outposts.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public AccessPointVpcConfigurationArgs(@Nullable Output<String> vpcId) {
@@ -30,7 +31,7 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
     }
 
     private AccessPointVpcConfigurationArgs() {
-        this.vpcId = Output.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public AccessPointVpcConfigurationArgs build() {
             return new AccessPointVpcConfigurationArgs(vpcId);

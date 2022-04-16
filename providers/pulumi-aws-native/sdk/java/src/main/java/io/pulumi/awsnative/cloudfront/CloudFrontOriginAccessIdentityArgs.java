@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.cloudfront.inputs.CloudFrontOriginAccessIdentityConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -16,7 +17,7 @@ public final class CloudFrontOriginAccessIdentityArgs extends io.pulumi.resource
     @Import(name="cloudFrontOriginAccessIdentityConfig", required=true)
       private final Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
 
-    public Output<CloudFrontOriginAccessIdentityConfigArgs> getCloudFrontOriginAccessIdentityConfig() {
+    public Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig() {
         return this.cloudFrontOriginAccessIdentityConfig;
     }
 
@@ -25,7 +26,7 @@ public final class CloudFrontOriginAccessIdentityArgs extends io.pulumi.resource
     }
 
     private CloudFrontOriginAccessIdentityArgs() {
-        this.cloudFrontOriginAccessIdentityConfig = Output.empty();
+        this.cloudFrontOriginAccessIdentityConfig = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
     @Import(name="partition")
       private final @Nullable Output<Integer> partition;
 
-    public Output<Integer> getPartition() {
-        return this.partition == null ? Output.empty() : this.partition;
+    public Output<Integer> partition() {
+        return this.partition == null ? Codegen.empty() : this.partition;
     }
 
     public RollingUpdateStatefulSetStrategyArgs(@Nullable Output<Integer> partition) {
@@ -34,7 +35,7 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
     }
 
     private RollingUpdateStatefulSetStrategyArgs() {
-        this.partition = Output.empty();
+        this.partition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
             return this;
         }
         public Builder partition(@Nullable Integer partition) {
-            this.partition = Output.ofNullable(partition);
+            this.partition = Codegen.ofNullable(partition);
             return this;
         }        public RollingUpdateStatefulSetStrategyArgs build() {
             return new RollingUpdateStatefulSetStrategyArgs(partition);

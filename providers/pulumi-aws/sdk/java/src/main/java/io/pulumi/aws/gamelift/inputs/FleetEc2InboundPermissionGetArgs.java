@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
     @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
@@ -32,7 +33,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
     @Import(name="ipRange", required=true)
       private final Output<String> ipRange;
 
-    public Output<String> getIpRange() {
+    public Output<String> ipRange() {
         return this.ipRange;
     }
 
@@ -43,7 +44,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -54,7 +55,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
     @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort;
     }
 
@@ -70,10 +71,10 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
     }
 
     private FleetEc2InboundPermissionGetArgs() {
-        this.fromPort = Output.empty();
-        this.ipRange = Output.empty();
-        this.protocol = Output.empty();
-        this.toPort = Output.empty();
+        this.fromPort = Codegen.empty();
+        this.ipRange = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {

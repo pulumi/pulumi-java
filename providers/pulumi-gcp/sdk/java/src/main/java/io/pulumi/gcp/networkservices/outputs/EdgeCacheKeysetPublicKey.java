@@ -38,7 +38,7 @@ public final class EdgeCacheKeysetPublicKey {
      * which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -47,7 +47,7 @@ public final class EdgeCacheKeysetPublicKey {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

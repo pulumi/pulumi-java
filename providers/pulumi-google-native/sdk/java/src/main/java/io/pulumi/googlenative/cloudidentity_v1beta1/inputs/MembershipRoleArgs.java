@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.ExpiryDetailArgs;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.RestrictionEvaluationsArgs;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expiryDetail")
       private final @Nullable Output<ExpiryDetailArgs> expiryDetail;
 
-    public Output<ExpiryDetailArgs> getExpiryDetail() {
-        return this.expiryDetail == null ? Output.empty() : this.expiryDetail;
+    public Output<ExpiryDetailArgs> expiryDetail() {
+        return this.expiryDetail == null ? Codegen.empty() : this.expiryDetail;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restrictionEvaluations")
       private final @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
 
-    public Output<RestrictionEvaluationsArgs> getRestrictionEvaluations() {
-        return this.restrictionEvaluations == null ? Output.empty() : this.restrictionEvaluations;
+    public Output<RestrictionEvaluationsArgs> restrictionEvaluations() {
+        return this.restrictionEvaluations == null ? Codegen.empty() : this.restrictionEvaluations;
     }
 
     public MembershipRoleArgs(
@@ -63,9 +64,9 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MembershipRoleArgs() {
-        this.expiryDetail = Output.empty();
-        this.name = Output.empty();
-        this.restrictionEvaluations = Output.empty();
+        this.expiryDetail = Codegen.empty();
+        this.name = Codegen.empty();
+        this.restrictionEvaluations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expiryDetail(@Nullable ExpiryDetailArgs expiryDetail) {
-            this.expiryDetail = Output.ofNullable(expiryDetail);
+            this.expiryDetail = Codegen.ofNullable(expiryDetail);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -105,7 +106,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder restrictionEvaluations(@Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations) {
@@ -113,7 +114,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restrictionEvaluations(@Nullable RestrictionEvaluationsArgs restrictionEvaluations) {
-            this.restrictionEvaluations = Output.ofNullable(restrictionEvaluations);
+            this.restrictionEvaluations = Codegen.ofNullable(restrictionEvaluations);
             return this;
         }        public MembershipRoleArgs build() {
             return new MembershipRoleArgs(expiryDetail, name, restrictionEvaluations);

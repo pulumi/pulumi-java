@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packageContent", required=true)
       private final Output<Object> packageContent;
 
-    public Output<Object> getPackageContent() {
+    public Output<Object> packageContent() {
         return this.packageContent;
     }
 
@@ -37,8 +38,8 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packageLastModifiedDate")
       private final @Nullable Output<String> packageLastModifiedDate;
 
-    public Output<String> getPackageLastModifiedDate() {
-        return this.packageLastModifiedDate == null ? Output.empty() : this.packageLastModifiedDate;
+    public Output<String> packageLastModifiedDate() {
+        return this.packageLastModifiedDate == null ? Codegen.empty() : this.packageLastModifiedDate;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+    public Output<String> packageName() {
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packagePath", required=true)
       private final Output<Object> packagePath;
 
-    public Output<Object> getPackagePath() {
+    public Output<Object> packagePath() {
         return this.packagePath;
     }
 
@@ -75,10 +76,10 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SSISChildPackageArgs() {
-        this.packageContent = Output.empty();
-        this.packageLastModifiedDate = Output.empty();
-        this.packageName = Output.empty();
-        this.packagePath = Output.empty();
+        this.packageContent = Codegen.empty();
+        this.packageLastModifiedDate = Codegen.empty();
+        this.packageName = Codegen.empty();
+        this.packagePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
-            this.packageLastModifiedDate = Output.ofNullable(packageLastModifiedDate);
+            this.packageLastModifiedDate = Codegen.ofNullable(packageLastModifiedDate);
             return this;
         }
         public Builder packageName(@Nullable Output<String> packageName) {
@@ -128,7 +129,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder packagePath(Output<Object> packagePath) {

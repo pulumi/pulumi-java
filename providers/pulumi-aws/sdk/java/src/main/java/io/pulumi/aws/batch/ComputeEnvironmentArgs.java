@@ -6,6 +6,7 @@ package io.pulumi.aws.batch;
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="computeEnvironmentName")
       private final @Nullable Output<String> computeEnvironmentName;
 
-    public Output<String> getComputeEnvironmentName() {
-        return this.computeEnvironmentName == null ? Output.empty() : this.computeEnvironmentName;
+    public Output<String> computeEnvironmentName() {
+        return this.computeEnvironmentName == null ? Codegen.empty() : this.computeEnvironmentName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="computeEnvironmentNamePrefix")
       private final @Nullable Output<String> computeEnvironmentNamePrefix;
 
-    public Output<String> getComputeEnvironmentNamePrefix() {
-        return this.computeEnvironmentNamePrefix == null ? Output.empty() : this.computeEnvironmentNamePrefix;
+    public Output<String> computeEnvironmentNamePrefix() {
+        return this.computeEnvironmentNamePrefix == null ? Codegen.empty() : this.computeEnvironmentNamePrefix;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="computeResources")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesArgs> computeResources;
 
-    public Output<ComputeEnvironmentComputeResourcesArgs> getComputeResources() {
-        return this.computeResources == null ? Output.empty() : this.computeResources;
+    public Output<ComputeEnvironmentComputeResourcesArgs> computeResources() {
+        return this.computeResources == null ? Codegen.empty() : this.computeResources;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
-        return this.serviceRole == null ? Output.empty() : this.serviceRole;
+    public Output<String> serviceRole() {
+        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -111,13 +112,13 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ComputeEnvironmentArgs() {
-        this.computeEnvironmentName = Output.empty();
-        this.computeEnvironmentNamePrefix = Output.empty();
-        this.computeResources = Output.empty();
-        this.serviceRole = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.computeEnvironmentName = Codegen.empty();
+        this.computeEnvironmentNamePrefix = Codegen.empty();
+        this.computeResources = Codegen.empty();
+        this.serviceRole = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder computeEnvironmentName(@Nullable String computeEnvironmentName) {
-            this.computeEnvironmentName = Output.ofNullable(computeEnvironmentName);
+            this.computeEnvironmentName = Codegen.ofNullable(computeEnvironmentName);
             return this;
         }
         public Builder computeEnvironmentNamePrefix(@Nullable Output<String> computeEnvironmentNamePrefix) {
@@ -165,7 +166,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder computeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
-            this.computeEnvironmentNamePrefix = Output.ofNullable(computeEnvironmentNamePrefix);
+            this.computeEnvironmentNamePrefix = Codegen.ofNullable(computeEnvironmentNamePrefix);
             return this;
         }
         public Builder computeResources(@Nullable Output<ComputeEnvironmentComputeResourcesArgs> computeResources) {
@@ -173,7 +174,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder computeResources(@Nullable ComputeEnvironmentComputeResourcesArgs computeResources) {
-            this.computeResources = Output.ofNullable(computeResources);
+            this.computeResources = Codegen.ofNullable(computeResources);
             return this;
         }
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
@@ -181,7 +182,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Output.ofNullable(serviceRole);
+            this.serviceRole = Codegen.ofNullable(serviceRole);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -189,7 +190,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -197,7 +198,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(Output<String> type) {

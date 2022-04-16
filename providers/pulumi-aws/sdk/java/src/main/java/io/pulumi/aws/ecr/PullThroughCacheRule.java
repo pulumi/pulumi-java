@@ -9,6 +9,7 @@ import io.pulumi.aws.ecr.inputs.PullThroughCacheRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -42,7 +43,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @return The repository name prefix to use when caching images from the source registry.
      * 
      */
-    public Output<String> getEcrRepositoryPrefix() {
+    public Output<String> ecrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
     }
     /**
@@ -56,7 +57,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -70,7 +71,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @return The registry URL of the upstream public registry to use as the source.
      * 
      */
-    public Output<String> getUpstreamRegistryUrl() {
+    public Output<String> upstreamRegistryUrl() {
         return this.upstreamRegistryUrl;
     }
 
@@ -96,7 +97,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PullThroughCacheRule(String name, PullThroughCacheRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/pullThroughCacheRule:PullThroughCacheRule", name, args == null ? PullThroughCacheRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/pullThroughCacheRule:PullThroughCacheRule", name, args == null ? PullThroughCacheRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PullThroughCacheRule(String name, Output<String> id, @Nullable PullThroughCacheRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

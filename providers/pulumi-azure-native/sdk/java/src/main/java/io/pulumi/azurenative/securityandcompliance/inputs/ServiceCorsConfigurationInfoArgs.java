@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityandcompliance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
-    public Output<Boolean> getAllowCredentials() {
-        return this.allowCredentials == null ? Output.empty() : this.allowCredentials;
+    public Output<Boolean> allowCredentials() {
+        return this.allowCredentials == null ? Codegen.empty() : this.allowCredentials;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<String>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     @Import(name="maxAge")
       private final @Nullable Output<Double> maxAge;
 
-    public Output<Double> getMaxAge() {
-        return this.maxAge == null ? Output.empty() : this.maxAge;
+    public Output<Double> maxAge() {
+        return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> getMethods() {
-        return this.methods == null ? Output.empty() : this.methods;
+    public Output<List<String>> methods() {
+        return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     @Import(name="origins")
       private final @Nullable Output<List<String>> origins;
 
-    public Output<List<String>> getOrigins() {
-        return this.origins == null ? Output.empty() : this.origins;
+    public Output<List<String>> origins() {
+        return this.origins == null ? Codegen.empty() : this.origins;
     }
 
     public ServiceCorsConfigurationInfoArgs(
@@ -90,11 +91,11 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
     }
 
     private ServiceCorsConfigurationInfoArgs() {
-        this.allowCredentials = Output.empty();
-        this.headers = Output.empty();
-        this.maxAge = Output.empty();
-        this.methods = Output.empty();
-        this.origins = Output.empty();
+        this.allowCredentials = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.maxAge = Codegen.empty();
+        this.methods = Codegen.empty();
+        this.origins = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
-            this.allowCredentials = Output.ofNullable(allowCredentials);
+            this.allowCredentials = Codegen.ofNullable(allowCredentials);
             return this;
         }
         public Builder headers(@Nullable Output<List<String>> headers) {
@@ -138,7 +139,7 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(String... headers) {
@@ -149,7 +150,7 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder maxAge(@Nullable Double maxAge) {
-            this.maxAge = Output.ofNullable(maxAge);
+            this.maxAge = Codegen.ofNullable(maxAge);
             return this;
         }
         public Builder methods(@Nullable Output<List<String>> methods) {
@@ -157,7 +158,7 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Output.ofNullable(methods);
+            this.methods = Codegen.ofNullable(methods);
             return this;
         }
         public Builder methods(String... methods) {
@@ -168,7 +169,7 @@ public final class ServiceCorsConfigurationInfoArgs extends io.pulumi.resources.
             return this;
         }
         public Builder origins(@Nullable List<String> origins) {
-            this.origins = Output.ofNullable(origins);
+            this.origins = Codegen.ofNullable(origins);
             return this;
         }
         public Builder origins(String... origins) {

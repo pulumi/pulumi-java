@@ -27,7 +27,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
     @Import(name="checkPermissionsGroup")
       private final @Nullable String checkPermissionsGroup;
 
-    public Optional<String> getCheckPermissionsGroup() {
+    public Optional<String> checkPermissionsGroup() {
         return this.checkPermissionsGroup == null ? Optional.empty() : Optional.ofNullable(this.checkPermissionsGroup);
     }
 
@@ -38,7 +38,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
     @Import(name="collectAgentJobs")
       private final @Nullable Boolean collectAgentJobs;
 
-    public Optional<Boolean> getCollectAgentJobs() {
+    public Optional<Boolean> collectAgentJobs() {
         return this.collectAgentJobs == null ? Optional.empty() : Optional.ofNullable(this.collectAgentJobs);
     }
 
@@ -49,7 +49,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
     @Import(name="collectLogins")
       private final @Nullable Boolean collectLogins;
 
-    public Optional<Boolean> getCollectLogins() {
+    public Optional<Boolean> collectLogins() {
         return this.collectLogins == null ? Optional.empty() : Optional.ofNullable(this.collectLogins);
     }
 
@@ -60,7 +60,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 

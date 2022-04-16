@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class TableServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Specifies CORS rules for the Table service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Table service.
      * 
      */
-    public Output</* @Nullable */ CorsRulesResponse> getCors() {
+    public Output</* @Nullable */ CorsRulesResponse> cors() {
         return this.cors;
     }
     /**
@@ -56,7 +57,7 @@ public class TableServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class TableServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -96,7 +97,7 @@ public class TableServiceProperties extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableServiceProperties(String name, TableServicePropertiesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:TableServiceProperties", name, args == null ? TableServicePropertiesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storage:TableServiceProperties", name, args == null ? TableServicePropertiesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TableServiceProperties(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

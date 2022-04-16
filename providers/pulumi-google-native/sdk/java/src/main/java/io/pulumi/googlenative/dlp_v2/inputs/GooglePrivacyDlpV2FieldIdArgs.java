@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public GooglePrivacyDlpV2FieldIdArgs(@Nullable Output<String> name) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.Res
     }
 
     private GooglePrivacyDlpV2FieldIdArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public GooglePrivacyDlpV2FieldIdArgs build() {
             return new GooglePrivacyDlpV2FieldIdArgs(name);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowEntitlementEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataTransferSubscriberFeePercent")
       private final @Nullable Output<Integer> dataTransferSubscriberFeePercent;
 
-    public Output<Integer> getDataTransferSubscriberFeePercent() {
-        return this.dataTransferSubscriberFeePercent == null ? Output.empty() : this.dataTransferSubscriberFeePercent;
+    public Output<Integer> dataTransferSubscriberFeePercent() {
+        return this.dataTransferSubscriberFeePercent == null ? Codegen.empty() : this.dataTransferSubscriberFeePercent;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -47,8 +48,8 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encryption")
       private final @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
 
-    public Output<FlowEntitlementEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<FlowEntitlementEncryptionArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="entitlementStatus")
       private final @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
 
-    public Output<FlowEntitlementEntitlementStatus> getEntitlementStatus() {
-        return this.entitlementStatus == null ? Output.empty() : this.entitlementStatus;
+    public Output<FlowEntitlementEntitlementStatus> entitlementStatus() {
+        return this.entitlementStatus == null ? Codegen.empty() : this.entitlementStatus;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="flowArn", required=true)
       private final Output<String> flowArn;
 
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
 
@@ -80,8 +81,8 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subscribers", required=true)
       private final Output<List<String>> subscribers;
 
-    public Output<List<String>> getSubscribers() {
+    public Output<List<String>> subscribers() {
         return this.subscribers;
     }
 
@@ -113,13 +114,13 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FlowEntitlementArgs() {
-        this.dataTransferSubscriberFeePercent = Output.empty();
-        this.description = Output.empty();
-        this.encryption = Output.empty();
-        this.entitlementStatus = Output.empty();
-        this.flowArn = Output.empty();
-        this.name = Output.empty();
-        this.subscribers = Output.empty();
+        this.dataTransferSubscriberFeePercent = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.entitlementStatus = Codegen.empty();
+        this.flowArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subscribers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dataTransferSubscriberFeePercent(@Nullable Integer dataTransferSubscriberFeePercent) {
-            this.dataTransferSubscriberFeePercent = Output.ofNullable(dataTransferSubscriberFeePercent);
+            this.dataTransferSubscriberFeePercent = Codegen.ofNullable(dataTransferSubscriberFeePercent);
             return this;
         }
         public Builder description(Output<String> description) {
@@ -175,7 +176,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder encryption(@Nullable FlowEntitlementEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder entitlementStatus(@Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus) {
@@ -183,7 +184,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder entitlementStatus(@Nullable FlowEntitlementEntitlementStatus entitlementStatus) {
-            this.entitlementStatus = Output.ofNullable(entitlementStatus);
+            this.entitlementStatus = Codegen.ofNullable(entitlementStatus);
             return this;
         }
         public Builder flowArn(Output<String> flowArn) {
@@ -199,7 +200,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subscribers(Output<List<String>> subscribers) {

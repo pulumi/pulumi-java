@@ -6,6 +6,7 @@ package io.pulumi.awsnative.rum.inputs;
 import io.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="allowCookies")
       private final @Nullable Output<Boolean> allowCookies;
 
-    public Output<Boolean> getAllowCookies() {
-        return this.allowCookies == null ? Output.empty() : this.allowCookies;
+    public Output<Boolean> allowCookies() {
+        return this.allowCookies == null ? Codegen.empty() : this.allowCookies;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="enableXRay")
       private final @Nullable Output<Boolean> enableXRay;
 
-    public Output<Boolean> getEnableXRay() {
-        return this.enableXRay == null ? Output.empty() : this.enableXRay;
+    public Output<Boolean> enableXRay() {
+        return this.enableXRay == null ? Codegen.empty() : this.enableXRay;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="excludedPages")
       private final @Nullable Output<List<String>> excludedPages;
 
-    public Output<List<String>> getExcludedPages() {
-        return this.excludedPages == null ? Output.empty() : this.excludedPages;
+    public Output<List<String>> excludedPages() {
+        return this.excludedPages == null ? Codegen.empty() : this.excludedPages;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="favoritePages")
       private final @Nullable Output<List<String>> favoritePages;
 
-    public Output<List<String>> getFavoritePages() {
-        return this.favoritePages == null ? Output.empty() : this.favoritePages;
+    public Output<List<String>> favoritePages() {
+        return this.favoritePages == null ? Codegen.empty() : this.favoritePages;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="guestRoleArn")
       private final @Nullable Output<String> guestRoleArn;
 
-    public Output<String> getGuestRoleArn() {
-        return this.guestRoleArn == null ? Output.empty() : this.guestRoleArn;
+    public Output<String> guestRoleArn() {
+        return this.guestRoleArn == null ? Codegen.empty() : this.guestRoleArn;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="identityPoolId")
       private final @Nullable Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
-        return this.identityPoolId == null ? Output.empty() : this.identityPoolId;
+    public Output<String> identityPoolId() {
+        return this.identityPoolId == null ? Codegen.empty() : this.identityPoolId;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="includedPages")
       private final @Nullable Output<List<String>> includedPages;
 
-    public Output<List<String>> getIncludedPages() {
-        return this.includedPages == null ? Output.empty() : this.includedPages;
+    public Output<List<String>> includedPages() {
+        return this.includedPages == null ? Codegen.empty() : this.includedPages;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="sessionSampleRate")
       private final @Nullable Output<Double> sessionSampleRate;
 
-    public Output<Double> getSessionSampleRate() {
-        return this.sessionSampleRate == null ? Output.empty() : this.sessionSampleRate;
+    public Output<Double> sessionSampleRate() {
+        return this.sessionSampleRate == null ? Codegen.empty() : this.sessionSampleRate;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="telemetries")
       private final @Nullable Output<List<AppMonitorTelemetry>> telemetries;
 
-    public Output<List<AppMonitorTelemetry>> getTelemetries() {
-        return this.telemetries == null ? Output.empty() : this.telemetries;
+    public Output<List<AppMonitorTelemetry>> telemetries() {
+        return this.telemetries == null ? Codegen.empty() : this.telemetries;
     }
 
     public AppMonitorConfigurationArgs(
@@ -143,15 +144,15 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private AppMonitorConfigurationArgs() {
-        this.allowCookies = Output.empty();
-        this.enableXRay = Output.empty();
-        this.excludedPages = Output.empty();
-        this.favoritePages = Output.empty();
-        this.guestRoleArn = Output.empty();
-        this.identityPoolId = Output.empty();
-        this.includedPages = Output.empty();
-        this.sessionSampleRate = Output.empty();
-        this.telemetries = Output.empty();
+        this.allowCookies = Codegen.empty();
+        this.enableXRay = Codegen.empty();
+        this.excludedPages = Codegen.empty();
+        this.favoritePages = Codegen.empty();
+        this.guestRoleArn = Codegen.empty();
+        this.identityPoolId = Codegen.empty();
+        this.includedPages = Codegen.empty();
+        this.sessionSampleRate = Codegen.empty();
+        this.telemetries = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder allowCookies(@Nullable Boolean allowCookies) {
-            this.allowCookies = Output.ofNullable(allowCookies);
+            this.allowCookies = Codegen.ofNullable(allowCookies);
             return this;
         }
         public Builder enableXRay(@Nullable Output<Boolean> enableXRay) {
@@ -203,7 +204,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableXRay(@Nullable Boolean enableXRay) {
-            this.enableXRay = Output.ofNullable(enableXRay);
+            this.enableXRay = Codegen.ofNullable(enableXRay);
             return this;
         }
         public Builder excludedPages(@Nullable Output<List<String>> excludedPages) {
@@ -211,7 +212,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder excludedPages(@Nullable List<String> excludedPages) {
-            this.excludedPages = Output.ofNullable(excludedPages);
+            this.excludedPages = Codegen.ofNullable(excludedPages);
             return this;
         }
         public Builder excludedPages(String... excludedPages) {
@@ -222,7 +223,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder favoritePages(@Nullable List<String> favoritePages) {
-            this.favoritePages = Output.ofNullable(favoritePages);
+            this.favoritePages = Codegen.ofNullable(favoritePages);
             return this;
         }
         public Builder favoritePages(String... favoritePages) {
@@ -233,7 +234,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder guestRoleArn(@Nullable String guestRoleArn) {
-            this.guestRoleArn = Output.ofNullable(guestRoleArn);
+            this.guestRoleArn = Codegen.ofNullable(guestRoleArn);
             return this;
         }
         public Builder identityPoolId(@Nullable Output<String> identityPoolId) {
@@ -241,7 +242,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder identityPoolId(@Nullable String identityPoolId) {
-            this.identityPoolId = Output.ofNullable(identityPoolId);
+            this.identityPoolId = Codegen.ofNullable(identityPoolId);
             return this;
         }
         public Builder includedPages(@Nullable Output<List<String>> includedPages) {
@@ -249,7 +250,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder includedPages(@Nullable List<String> includedPages) {
-            this.includedPages = Output.ofNullable(includedPages);
+            this.includedPages = Codegen.ofNullable(includedPages);
             return this;
         }
         public Builder includedPages(String... includedPages) {
@@ -260,7 +261,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sessionSampleRate(@Nullable Double sessionSampleRate) {
-            this.sessionSampleRate = Output.ofNullable(sessionSampleRate);
+            this.sessionSampleRate = Codegen.ofNullable(sessionSampleRate);
             return this;
         }
         public Builder telemetries(@Nullable Output<List<AppMonitorTelemetry>> telemetries) {
@@ -268,7 +269,7 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder telemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
-            this.telemetries = Output.ofNullable(telemetries);
+            this.telemetries = Codegen.ofNullable(telemetries);
             return this;
         }
         public Builder telemetries(AppMonitorTelemetry... telemetries) {

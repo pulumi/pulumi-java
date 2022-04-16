@@ -75,55 +75,55 @@ public final class GetDatabaseInstanceSetting {
         this.version = version;
     }
 
-    public String getActivationPolicy() {
+    public String activationPolicy() {
         return this.activationPolicy;
     }
-    public String getAvailabilityType() {
+    public String availabilityType() {
         return this.availabilityType;
     }
-    public List<GetDatabaseInstanceSettingBackupConfiguration> getBackupConfigurations() {
+    public List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations() {
         return this.backupConfigurations;
     }
-    public String getCollation() {
+    public String collation() {
         return this.collation;
     }
-    public List<GetDatabaseInstanceSettingDatabaseFlag> getDatabaseFlags() {
+    public List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags() {
         return this.databaseFlags;
     }
-    public Boolean getDiskAutoresize() {
+    public Boolean diskAutoresize() {
         return this.diskAutoresize;
     }
-    public Integer getDiskAutoresizeLimit() {
+    public Integer diskAutoresizeLimit() {
         return this.diskAutoresizeLimit;
     }
-    public Integer getDiskSize() {
+    public Integer diskSize() {
         return this.diskSize;
     }
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
-    public List<GetDatabaseInstanceSettingInsightsConfig> getInsightsConfigs() {
+    public List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs() {
         return this.insightsConfigs;
     }
-    public List<GetDatabaseInstanceSettingIpConfiguration> getIpConfigurations() {
+    public List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations() {
         return this.ipConfigurations;
     }
-    public List<GetDatabaseInstanceSettingLocationPreference> getLocationPreferences() {
+    public List<GetDatabaseInstanceSettingLocationPreference> locationPreferences() {
         return this.locationPreferences;
     }
-    public List<GetDatabaseInstanceSettingMaintenanceWindow> getMaintenanceWindows() {
+    public List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows() {
         return this.maintenanceWindows;
     }
-    public String getPricingPlan() {
+    public String pricingPlan() {
         return this.pricingPlan;
     }
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels;
     }
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maxGroupPreparedCapacity")
       private final @Nullable Output<Integer> maxGroupPreparedCapacity;
 
-    public Output<Integer> getMaxGroupPreparedCapacity() {
-        return this.maxGroupPreparedCapacity == null ? Output.empty() : this.maxGroupPreparedCapacity;
+    public Output<Integer> maxGroupPreparedCapacity() {
+        return this.maxGroupPreparedCapacity == null ? Codegen.empty() : this.maxGroupPreparedCapacity;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
-        return this.minSize == null ? Output.empty() : this.minSize;
+    public Output<Integer> minSize() {
+        return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="poolState")
       private final @Nullable Output<String> poolState;
 
-    public Output<String> getPoolState() {
-        return this.poolState == null ? Output.empty() : this.poolState;
+    public Output<String> poolState() {
+        return this.poolState == null ? Codegen.empty() : this.poolState;
     }
 
     public GroupWarmPoolGetArgs(
@@ -58,9 +59,9 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GroupWarmPoolGetArgs() {
-        this.maxGroupPreparedCapacity = Output.empty();
-        this.minSize = Output.empty();
-        this.poolState = Output.empty();
+        this.maxGroupPreparedCapacity = Codegen.empty();
+        this.minSize = Codegen.empty();
+        this.poolState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
-            this.maxGroupPreparedCapacity = Output.ofNullable(maxGroupPreparedCapacity);
+            this.maxGroupPreparedCapacity = Codegen.ofNullable(maxGroupPreparedCapacity);
             return this;
         }
         public Builder minSize(@Nullable Output<Integer> minSize) {
@@ -100,7 +101,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Output.ofNullable(minSize);
+            this.minSize = Codegen.ofNullable(minSize);
             return this;
         }
         public Builder poolState(@Nullable Output<String> poolState) {
@@ -108,7 +109,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder poolState(@Nullable String poolState) {
-            this.poolState = Output.ofNullable(poolState);
+            this.poolState = Codegen.ofNullable(poolState);
             return this;
         }        public GroupWarmPoolGetArgs build() {
             return new GroupWarmPoolGetArgs(maxGroupPreparedCapacity, minSize, poolState);

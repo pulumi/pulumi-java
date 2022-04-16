@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.DataFlowComputeType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     @Import(name="cleanup")
       private final @Nullable Output<Boolean> cleanup;
 
-    public Output<Boolean> getCleanup() {
-        return this.cleanup == null ? Output.empty() : this.cleanup;
+    public Output<Boolean> cleanup() {
+        return this.cleanup == null ? Codegen.empty() : this.cleanup;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     @Import(name="computeType")
       private final @Nullable Output<Either<String,DataFlowComputeType>> computeType;
 
-    public Output<Either<String,DataFlowComputeType>> getComputeType() {
-        return this.computeType == null ? Output.empty() : this.computeType;
+    public Output<Either<String,DataFlowComputeType>> computeType() {
+        return this.computeType == null ? Codegen.empty() : this.computeType;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     @Import(name="coreCount")
       private final @Nullable Output<Integer> coreCount;
 
-    public Output<Integer> getCoreCount() {
-        return this.coreCount == null ? Output.empty() : this.coreCount;
+    public Output<Integer> coreCount() {
+        return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     @Import(name="timeToLive")
       private final @Nullable Output<Integer> timeToLive;
 
-    public Output<Integer> getTimeToLive() {
-        return this.timeToLive == null ? Output.empty() : this.timeToLive;
+    public Output<Integer> timeToLive() {
+        return this.timeToLive == null ? Codegen.empty() : this.timeToLive;
     }
 
     public IntegrationRuntimeDataFlowPropertiesArgs(
@@ -78,10 +79,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     }
 
     private IntegrationRuntimeDataFlowPropertiesArgs() {
-        this.cleanup = Output.empty();
-        this.computeType = Output.empty();
-        this.coreCount = Output.empty();
-        this.timeToLive = Output.empty();
+        this.cleanup = Codegen.empty();
+        this.computeType = Codegen.empty();
+        this.coreCount = Codegen.empty();
+        this.timeToLive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder cleanup(@Nullable Boolean cleanup) {
-            this.cleanup = Output.ofNullable(cleanup);
+            this.cleanup = Codegen.ofNullable(cleanup);
             return this;
         }
         public Builder computeType(@Nullable Output<Either<String,DataFlowComputeType>> computeType) {
@@ -123,7 +124,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder computeType(@Nullable Either<String,DataFlowComputeType> computeType) {
-            this.computeType = Output.ofNullable(computeType);
+            this.computeType = Codegen.ofNullable(computeType);
             return this;
         }
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
@@ -131,7 +132,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Output.ofNullable(coreCount);
+            this.coreCount = Codegen.ofNullable(coreCount);
             return this;
         }
         public Builder timeToLive(@Nullable Output<Integer> timeToLive) {
@@ -139,7 +140,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder timeToLive(@Nullable Integer timeToLive) {
-            this.timeToLive = Output.ofNullable(timeToLive);
+            this.timeToLive = Codegen.ofNullable(timeToLive);
             return this;
         }        public IntegrationRuntimeDataFlowPropertiesArgs build() {
             return new IntegrationRuntimeDataFlowPropertiesArgs(cleanup, computeType, coreCount, timeToLive);

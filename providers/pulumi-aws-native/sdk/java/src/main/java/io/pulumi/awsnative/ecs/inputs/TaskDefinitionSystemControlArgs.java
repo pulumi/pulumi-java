@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TaskDefinitionSystemControlArgs(
@@ -36,8 +37,8 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
     }
 
     private TaskDefinitionSystemControlArgs() {
-        this.namespace = Output.empty();
-        this.value = Output.empty();
+        this.namespace = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -75,7 +76,7 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public TaskDefinitionSystemControlArgs build() {
             return new TaskDefinitionSystemControlArgs(namespace, value);

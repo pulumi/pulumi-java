@@ -10,6 +10,7 @@ import io.pulumi.awsnative.mediaconnect.outputs.FlowSource;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
      * 
      */
-    public Output</* @Nullable */ String> getAvailabilityZone() {
+    public Output</* @Nullable */ String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -44,7 +45,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -58,7 +59,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
      * 
      */
-    public Output<String> getFlowAvailabilityZone() {
+    public Output<String> flowAvailabilityZone() {
         return this.flowAvailabilityZone;
     }
     /**
@@ -72,7 +73,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The name of the flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The source of the flow.
      * 
      */
-    public Output<FlowSource> getSource() {
+    public Output<FlowSource> source() {
         return this.source;
     }
     /**
@@ -100,7 +101,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The source failover config of the flow.
      * 
      */
-    public Output</* @Nullable */ FlowFailoverConfig> getSourceFailoverConfig() {
+    public Output</* @Nullable */ FlowFailoverConfig> sourceFailoverConfig() {
         return this.sourceFailoverConfig;
     }
 
@@ -126,7 +127,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Flow(String name, FlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediaconnect:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediaconnect:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Flow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

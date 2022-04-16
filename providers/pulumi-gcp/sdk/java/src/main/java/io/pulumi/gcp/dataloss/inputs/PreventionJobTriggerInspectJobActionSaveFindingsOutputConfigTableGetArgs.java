@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -32,7 +33,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -44,8 +45,8 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
-    public Output<String> getTableId() {
-        return this.tableId == null ? Output.empty() : this.tableId;
+    public Output<String> tableId() {
+        return this.tableId == null ? Codegen.empty() : this.tableId;
     }
 
     public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs(
@@ -58,9 +59,9 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
     }
 
     private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs() {
-        this.datasetId = Output.empty();
-        this.projectId = Output.empty();
-        this.tableId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.tableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
             return this;
         }
         public Builder tableId(@Nullable String tableId) {
-            this.tableId = Output.ofNullable(tableId);
+            this.tableId = Codegen.ofNullable(tableId);
             return this;
         }        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs(datasetId, projectId, tableId);

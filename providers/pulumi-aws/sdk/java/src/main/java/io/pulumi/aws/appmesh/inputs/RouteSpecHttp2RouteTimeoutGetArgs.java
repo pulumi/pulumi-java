@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutIdleGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutPerRequestGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     @Import(name="idle")
       private final @Nullable Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
 
-    public Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> getIdle() {
-        return this.idle == null ? Output.empty() : this.idle;
+    public Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle() {
+        return this.idle == null ? Codegen.empty() : this.idle;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     @Import(name="perRequest")
       private final @Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
 
-    public Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> getPerRequest() {
-        return this.perRequest == null ? Output.empty() : this.perRequest;
+    public Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest() {
+        return this.perRequest == null ? Codegen.empty() : this.perRequest;
     }
 
     public RouteSpecHttp2RouteTimeoutGetArgs(
@@ -45,8 +46,8 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     }
 
     private RouteSpecHttp2RouteTimeoutGetArgs() {
-        this.idle = Output.empty();
-        this.perRequest = Output.empty();
+        this.idle = Codegen.empty();
+        this.perRequest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder idle(@Nullable RouteSpecHttp2RouteTimeoutIdleGetArgs idle) {
-            this.idle = Output.ofNullable(idle);
+            this.idle = Codegen.ofNullable(idle);
             return this;
         }
         public Builder perRequest(@Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest) {
@@ -84,7 +85,7 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder perRequest(@Nullable RouteSpecHttp2RouteTimeoutPerRequestGetArgs perRequest) {
-            this.perRequest = Output.ofNullable(perRequest);
+            this.perRequest = Codegen.ofNullable(perRequest);
             return this;
         }        public RouteSpecHttp2RouteTimeoutGetArgs build() {
             return new RouteSpecHttp2RouteTimeoutGetArgs(idle, perRequest);

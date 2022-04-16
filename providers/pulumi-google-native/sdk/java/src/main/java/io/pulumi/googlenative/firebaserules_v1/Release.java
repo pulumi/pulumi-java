@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebaserules_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaserules_v1.ReleaseArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time the release was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -42,7 +43,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Format: `projects/{project_id}/releases/{release_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
      */
-    public Output<String> getRulesetName() {
+    public Output<String> rulesetName() {
         return this.rulesetName;
     }
     /**
@@ -70,7 +71,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time the release was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -96,7 +97,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Release(String name, @Nullable ReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebaserules/v1:Release", name, args == null ? ReleaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebaserules/v1:Release", name, args == null ? ReleaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Release(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

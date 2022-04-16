@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.inputs.KeyVaultContractCreatePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+    public Output<String> certificateId() {
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<String> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVault")
       private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
-    public Output<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
-        return this.keyVault == null ? Output.empty() : this.keyVault;
+    public Output<KeyVaultContractCreatePropertiesArgs> keyVault() {
+        return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -97,12 +98,12 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateId = Output.empty();
-        this.data = Output.empty();
-        this.keyVault = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.data = Codegen.empty();
+        this.keyVault = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder data(@Nullable Output<String> data) {
@@ -148,7 +149,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder keyVault(@Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault) {
@@ -156,7 +157,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
-            this.keyVault = Output.ofNullable(keyVault);
+            this.keyVault = Codegen.ofNullable(keyVault);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -164,7 +165,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

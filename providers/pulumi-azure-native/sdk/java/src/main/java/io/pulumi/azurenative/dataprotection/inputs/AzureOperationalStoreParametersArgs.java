@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dataprotection.enums.DataStoreTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class AzureOperationalStoreParametersArgs extends io.pulumi.resourc
     @Import(name="dataStoreType", required=true)
       private final Output<Either<String,DataStoreTypes>> dataStoreType;
 
-    public Output<Either<String,DataStoreTypes>> getDataStoreType() {
+    public Output<Either<String,DataStoreTypes>> dataStoreType() {
         return this.dataStoreType;
     }
 
@@ -39,7 +40,7 @@ public final class AzureOperationalStoreParametersArgs extends io.pulumi.resourc
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -50,8 +51,8 @@ public final class AzureOperationalStoreParametersArgs extends io.pulumi.resourc
     @Import(name="resourceGroupId")
       private final @Nullable Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
-        return this.resourceGroupId == null ? Output.empty() : this.resourceGroupId;
+    public Output<String> resourceGroupId() {
+        return this.resourceGroupId == null ? Codegen.empty() : this.resourceGroupId;
     }
 
     public AzureOperationalStoreParametersArgs(
@@ -64,9 +65,9 @@ public final class AzureOperationalStoreParametersArgs extends io.pulumi.resourc
     }
 
     private AzureOperationalStoreParametersArgs() {
-        this.dataStoreType = Output.empty();
-        this.objectType = Output.empty();
-        this.resourceGroupId = Output.empty();
+        this.dataStoreType = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.resourceGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class AzureOperationalStoreParametersArgs extends io.pulumi.resourc
             return this;
         }
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
-            this.resourceGroupId = Output.ofNullable(resourceGroupId);
+            this.resourceGroupId = Codegen.ofNullable(resourceGroupId);
             return this;
         }        public AzureOperationalStoreParametersArgs build() {
             return new AzureOperationalStoreParametersArgs(dataStoreType, objectType, resourceGroupId);

@@ -39,21 +39,21 @@ public final class MembershipStateResponse {
      * The current state of the Membership resource.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * This field is never set by the Hub Service.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * This field is never set by the Hub Service.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

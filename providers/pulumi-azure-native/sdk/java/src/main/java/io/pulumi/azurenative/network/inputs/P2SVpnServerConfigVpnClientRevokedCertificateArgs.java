@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+    public Output<String> thumbprint() {
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public P2SVpnServerConfigVpnClientRevokedCertificateArgs(
@@ -74,10 +75,10 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     }
 
     private P2SVpnServerConfigVpnClientRevokedCertificateArgs() {
-        this.etag = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.thumbprint = Output.empty();
+        this.etag = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -119,7 +120,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -127,7 +128,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -135,7 +136,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public P2SVpnServerConfigVpnClientRevokedCertificateArgs build() {
             return new P2SVpnServerConfigVpnClientRevokedCertificateArgs(etag, id, name, thumbprint);

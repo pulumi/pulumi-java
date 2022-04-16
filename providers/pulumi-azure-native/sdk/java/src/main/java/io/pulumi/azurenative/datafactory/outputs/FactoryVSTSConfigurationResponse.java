@@ -77,49 +77,49 @@ public final class FactoryVSTSConfigurationResponse {
      * Account name.
      * 
     */
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
     /**
      * Collaboration branch.
      * 
     */
-    public String getCollaborationBranch() {
+    public String collaborationBranch() {
         return this.collaborationBranch;
     }
     /**
      * Last commit id.
      * 
     */
-    public Optional<String> getLastCommitId() {
+    public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
      * VSTS project name.
      * 
     */
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
     /**
      * Repository name.
      * 
     */
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
     /**
      * Root folder.
      * 
     */
-    public String getRootFolder() {
+    public String rootFolder() {
         return this.rootFolder;
     }
     /**
      * VSTS tenant id.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
@@ -127,7 +127,7 @@ public final class FactoryVSTSConfigurationResponse {
      * Expected value is 'FactoryVSTSConfiguration'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

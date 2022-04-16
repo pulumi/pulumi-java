@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.LayerDirective;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<String> arguments;
 
-    public Output<String> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+    public Output<String> arguments() {
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="directive", required=true)
       private final Output<LayerDirective> directive;
 
-    public Output<LayerDirective> getDirective() {
+    public Output<LayerDirective> directive() {
         return this.directive;
     }
 
@@ -49,8 +50,8 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LayerArgs() {
-        this.arguments = Output.empty();
-        this.directive = Output.empty();
+        this.arguments = Codegen.empty();
+        this.directive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arguments(@Nullable String arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder directive(Output<LayerDirective> directive) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesInstanceGetArgs;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesSubnetworkGetArgs;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
     @Import(name="instances")
       private final @Nullable Output<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances;
 
-    public Output<List<PacketMirroringMirroredResourcesInstanceGetArgs>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+    public Output<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances() {
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
     @Import(name="subnetworks")
       private final @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks;
 
-    public Output<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> getSubnetworks() {
-        return this.subnetworks == null ? Output.empty() : this.subnetworks;
+    public Output<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks() {
+        return this.subnetworks == null ? Codegen.empty() : this.subnetworks;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PacketMirroringMirroredResourcesGetArgs(
@@ -62,9 +63,9 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
     }
 
     private PacketMirroringMirroredResourcesGetArgs() {
-        this.instances = Output.empty();
-        this.subnetworks = Output.empty();
-        this.tags = Output.empty();
+        this.instances = Codegen.empty();
+        this.subnetworks = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
             return this;
         }
         public Builder instances(@Nullable List<PacketMirroringMirroredResourcesInstanceGetArgs> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(PacketMirroringMirroredResourcesInstanceGetArgs... instances) {
@@ -107,7 +108,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
             return this;
         }
         public Builder subnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetworkGetArgs> subnetworks) {
-            this.subnetworks = Output.ofNullable(subnetworks);
+            this.subnetworks = Codegen.ofNullable(subnetworks);
             return this;
         }
         public Builder subnetworks(PacketMirroringMirroredResourcesSubnetworkGetArgs... subnetworks) {
@@ -118,7 +119,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {

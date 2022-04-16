@@ -14,6 +14,7 @@ import io.pulumi.azurenative.databox.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -32,8 +33,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo")
       private final @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
 
-    public Output<JobDeliveryInfoArgs> getDeliveryInfo() {
-        return this.deliveryInfo == null ? Output.empty() : this.deliveryInfo;
+    public Output<JobDeliveryInfoArgs> deliveryInfo() {
+        return this.deliveryInfo == null ? Codegen.empty() : this.deliveryInfo;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryType")
       private final @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
 
-    public Output<Either<String,JobDeliveryType>> getDeliveryType() {
-        return this.deliveryType == null ? Output.empty() : this.deliveryType;
+    public Output<Either<String,JobDeliveryType>> deliveryType() {
+        return this.deliveryType == null ? Codegen.empty() : this.deliveryType;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="details")
       private final @Nullable Output<Object> details;
 
-    public Output<Object> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<Object> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ResourceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
-        return this.jobName == null ? Output.empty() : this.jobName;
+    public Output<String> jobName() {
+        return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -109,7 +110,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -120,8 +121,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferType", required=true)
       private final Output<Either<String,TransferType>> transferType;
 
-    public Output<Either<String,TransferType>> getTransferType() {
+    public Output<Either<String,TransferType>> transferType() {
         return this.transferType;
     }
 
@@ -159,16 +160,16 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.deliveryInfo = Output.empty();
-        this.deliveryType = Output.empty();
-        this.details = Output.empty();
-        this.identity = Output.empty();
-        this.jobName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.transferType = Output.empty();
+        this.deliveryInfo = Codegen.empty();
+        this.deliveryType = Codegen.empty();
+        this.details = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transferType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -214,7 +215,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryInfo(@Nullable JobDeliveryInfoArgs deliveryInfo) {
-            this.deliveryInfo = Output.ofNullable(deliveryInfo);
+            this.deliveryInfo = Codegen.ofNullable(deliveryInfo);
             return this;
         }
         public Builder deliveryType(@Nullable Output<Either<String,JobDeliveryType>> deliveryType) {
@@ -222,7 +223,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryType(@Nullable Either<String,JobDeliveryType> deliveryType) {
-            this.deliveryType = Output.ofNullable(deliveryType);
+            this.deliveryType = Codegen.ofNullable(deliveryType);
             return this;
         }
         public Builder details(@Nullable Output<Object> details) {
@@ -230,7 +231,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder details(@Nullable Object details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
@@ -238,7 +239,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder jobName(@Nullable Output<String> jobName) {
@@ -246,7 +247,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Output.ofNullable(jobName);
+            this.jobName = Codegen.ofNullable(jobName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -254,7 +255,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -278,7 +279,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder transferType(Output<Either<String,TransferType>> transferType) {

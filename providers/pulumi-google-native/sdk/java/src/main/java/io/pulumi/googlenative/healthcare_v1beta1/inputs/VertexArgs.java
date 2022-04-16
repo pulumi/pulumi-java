@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="x")
       private final @Nullable Output<Double> x;
 
-    public Output<Double> getX() {
-        return this.x == null ? Output.empty() : this.x;
+    public Output<Double> x() {
+        return this.x == null ? Codegen.empty() : this.x;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="y")
       private final @Nullable Output<Double> y;
 
-    public Output<Double> getY() {
-        return this.y == null ? Output.empty() : this.y;
+    public Output<Double> y() {
+        return this.y == null ? Codegen.empty() : this.y;
     }
 
     public VertexArgs(
@@ -48,8 +49,8 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VertexArgs() {
-        this.x = Output.empty();
-        this.y = Output.empty();
+        this.x = Codegen.empty();
+        this.y = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder x(@Nullable Double x) {
-            this.x = Output.ofNullable(x);
+            this.x = Codegen.ofNullable(x);
             return this;
         }
         public Builder y(@Nullable Output<Double> y) {
@@ -87,7 +88,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder y(@Nullable Double y) {
-            this.y = Output.ofNullable(y);
+            this.y = Codegen.ofNullable(y);
             return this;
         }        public VertexArgs build() {
             return new VertexArgs(x, y);

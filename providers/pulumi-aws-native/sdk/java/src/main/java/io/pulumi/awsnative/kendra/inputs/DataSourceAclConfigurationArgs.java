@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class DataSourceAclConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="allowedGroupsColumnName", required=true)
       private final Output<String> allowedGroupsColumnName;
 
-    public Output<String> getAllowedGroupsColumnName() {
+    public Output<String> allowedGroupsColumnName() {
         return this.allowedGroupsColumnName;
     }
 
@@ -25,7 +26,7 @@ public final class DataSourceAclConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private DataSourceAclConfigurationArgs() {
-        this.allowedGroupsColumnName = Output.empty();
+        this.allowedGroupsColumnName = Codegen.empty();
     }
 
     public static Builder builder() {

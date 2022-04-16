@@ -6,6 +6,7 @@ package io.pulumi.googlenative.artifactregistry_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.artifactregistry_v1.RepositoryArgs;
 import io.pulumi.googlenative.artifactregistry_v1.outputs.MavenRepositoryConfigResponse;
@@ -30,7 +31,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The time when the repository was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +45,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The user-provided description of the repository.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The format of packages that are stored in the repository.
      * 
      */
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
     /**
@@ -72,7 +73,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
      * 
      */
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -86,7 +87,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -100,7 +101,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Maven repository config contains repository level configuration for the repositories of maven type.
      * 
      */
-    public Output<MavenRepositoryConfigResponse> getMavenConfig() {
+    public Output<MavenRepositoryConfigResponse> mavenConfig() {
         return this.mavenConfig;
     }
     /**
@@ -114,7 +115,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The time when the repository was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -154,7 +155,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Repository(String name, @Nullable RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:artifactregistry/v1:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:artifactregistry/v1:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Repository(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

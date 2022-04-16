@@ -13,6 +13,7 @@ import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationRestO
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,57 +26,57 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
     @Import(name="canary")
       private final @Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary;
 
-    public Output<DefaultRolloutSpecificationCanaryArgs> getCanary() {
-        return this.canary == null ? Output.empty() : this.canary;
+    public Output<DefaultRolloutSpecificationCanaryArgs> canary() {
+        return this.canary == null ? Codegen.empty() : this.canary;
     }
 
     @Import(name="highTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
 
-    public Output<DefaultRolloutSpecificationHighTrafficArgs> getHighTraffic() {
-        return this.highTraffic == null ? Output.empty() : this.highTraffic;
+    public Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic() {
+        return this.highTraffic == null ? Codegen.empty() : this.highTraffic;
     }
 
     @Import(name="lowTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
 
-    public Output<DefaultRolloutSpecificationLowTrafficArgs> getLowTraffic() {
-        return this.lowTraffic == null ? Output.empty() : this.lowTraffic;
+    public Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic() {
+        return this.lowTraffic == null ? Codegen.empty() : this.lowTraffic;
     }
 
     @Import(name="mediumTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
 
-    public Output<DefaultRolloutSpecificationMediumTrafficArgs> getMediumTraffic() {
-        return this.mediumTraffic == null ? Output.empty() : this.mediumTraffic;
+    public Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic() {
+        return this.mediumTraffic == null ? Codegen.empty() : this.mediumTraffic;
     }
 
     @Import(name="providerRegistration")
       private final @Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
 
-    public Output<DefaultRolloutSpecificationProviderRegistrationArgs> getProviderRegistration() {
-        return this.providerRegistration == null ? Output.empty() : this.providerRegistration;
+    public Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration() {
+        return this.providerRegistration == null ? Codegen.empty() : this.providerRegistration;
     }
 
     @Import(name="resourceTypeRegistrations")
       private final @Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
 
-    public Output<List<ResourceTypeRegistrationArgs>> getResourceTypeRegistrations() {
-        return this.resourceTypeRegistrations == null ? Output.empty() : this.resourceTypeRegistrations;
+    public Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations() {
+        return this.resourceTypeRegistrations == null ? Codegen.empty() : this.resourceTypeRegistrations;
     }
 
     @Import(name="restOfTheWorldGroupOne")
       private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
 
-    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> getRestOfTheWorldGroupOne() {
-        return this.restOfTheWorldGroupOne == null ? Output.empty() : this.restOfTheWorldGroupOne;
+    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne() {
+        return this.restOfTheWorldGroupOne == null ? Codegen.empty() : this.restOfTheWorldGroupOne;
     }
 
     @Import(name="restOfTheWorldGroupTwo")
       private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
 
-    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> getRestOfTheWorldGroupTwo() {
-        return this.restOfTheWorldGroupTwo == null ? Output.empty() : this.restOfTheWorldGroupTwo;
+    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo() {
+        return this.restOfTheWorldGroupTwo == null ? Codegen.empty() : this.restOfTheWorldGroupTwo;
     }
 
     public DefaultRolloutPropertiesSpecificationArgs(
@@ -98,14 +99,14 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
     }
 
     private DefaultRolloutPropertiesSpecificationArgs() {
-        this.canary = Output.empty();
-        this.highTraffic = Output.empty();
-        this.lowTraffic = Output.empty();
-        this.mediumTraffic = Output.empty();
-        this.providerRegistration = Output.empty();
-        this.resourceTypeRegistrations = Output.empty();
-        this.restOfTheWorldGroupOne = Output.empty();
-        this.restOfTheWorldGroupTwo = Output.empty();
+        this.canary = Codegen.empty();
+        this.highTraffic = Codegen.empty();
+        this.lowTraffic = Codegen.empty();
+        this.mediumTraffic = Codegen.empty();
+        this.providerRegistration = Codegen.empty();
+        this.resourceTypeRegistrations = Codegen.empty();
+        this.restOfTheWorldGroupOne = Codegen.empty();
+        this.restOfTheWorldGroupTwo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder canary(@Nullable DefaultRolloutSpecificationCanaryArgs canary) {
-            this.canary = Output.ofNullable(canary);
+            this.canary = Codegen.ofNullable(canary);
             return this;
         }
         public Builder highTraffic(@Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic) {
@@ -155,7 +156,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder highTraffic(@Nullable DefaultRolloutSpecificationHighTrafficArgs highTraffic) {
-            this.highTraffic = Output.ofNullable(highTraffic);
+            this.highTraffic = Codegen.ofNullable(highTraffic);
             return this;
         }
         public Builder lowTraffic(@Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic) {
@@ -163,7 +164,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder lowTraffic(@Nullable DefaultRolloutSpecificationLowTrafficArgs lowTraffic) {
-            this.lowTraffic = Output.ofNullable(lowTraffic);
+            this.lowTraffic = Codegen.ofNullable(lowTraffic);
             return this;
         }
         public Builder mediumTraffic(@Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic) {
@@ -171,7 +172,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationMediumTrafficArgs mediumTraffic) {
-            this.mediumTraffic = Output.ofNullable(mediumTraffic);
+            this.mediumTraffic = Codegen.ofNullable(mediumTraffic);
             return this;
         }
         public Builder providerRegistration(@Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration) {
@@ -179,7 +180,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder providerRegistration(@Nullable DefaultRolloutSpecificationProviderRegistrationArgs providerRegistration) {
-            this.providerRegistration = Output.ofNullable(providerRegistration);
+            this.providerRegistration = Codegen.ofNullable(providerRegistration);
             return this;
         }
         public Builder resourceTypeRegistrations(@Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations) {
@@ -187,7 +188,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationArgs> resourceTypeRegistrations) {
-            this.resourceTypeRegistrations = Output.ofNullable(resourceTypeRegistrations);
+            this.resourceTypeRegistrations = Codegen.ofNullable(resourceTypeRegistrations);
             return this;
         }
         public Builder resourceTypeRegistrations(ResourceTypeRegistrationArgs... resourceTypeRegistrations) {
@@ -198,7 +199,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs restOfTheWorldGroupOne) {
-            this.restOfTheWorldGroupOne = Output.ofNullable(restOfTheWorldGroupOne);
+            this.restOfTheWorldGroupOne = Codegen.ofNullable(restOfTheWorldGroupOne);
             return this;
         }
         public Builder restOfTheWorldGroupTwo(@Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo) {
@@ -206,7 +207,7 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
             return this;
         }
         public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs restOfTheWorldGroupTwo) {
-            this.restOfTheWorldGroupTwo = Output.ofNullable(restOfTheWorldGroupTwo);
+            this.restOfTheWorldGroupTwo = Codegen.ofNullable(restOfTheWorldGroupTwo);
             return this;
         }        public DefaultRolloutPropertiesSpecificationArgs build() {
             return new DefaultRolloutPropertiesSpecificationArgs(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);

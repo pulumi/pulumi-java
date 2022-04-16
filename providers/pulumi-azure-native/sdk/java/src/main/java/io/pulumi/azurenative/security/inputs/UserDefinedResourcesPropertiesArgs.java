@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -36,7 +37,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     @Import(name="querySubscriptions", required=true)
       private final Output<List<String>> querySubscriptions;
 
-    public Output<List<String>> getQuerySubscriptions() {
+    public Output<List<String>> querySubscriptions() {
         return this.querySubscriptions;
     }
 
@@ -48,8 +49,8 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     }
 
     private UserDefinedResourcesPropertiesArgs() {
-        this.query = Output.empty();
-        this.querySubscriptions = Output.empty();
+        this.query = Codegen.empty();
+        this.querySubscriptions = Codegen.empty();
     }
 
     public static Builder builder() {

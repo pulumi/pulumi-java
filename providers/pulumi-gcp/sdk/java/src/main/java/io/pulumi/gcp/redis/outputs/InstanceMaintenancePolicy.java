@@ -64,7 +64,7 @@ public final class InstanceMaintenancePolicy {
      * resolution and up to nine fractional digits.
      * 
     */
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
     /**
@@ -73,7 +73,7 @@ public final class InstanceMaintenancePolicy {
      * length is greater than 512.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -83,7 +83,7 @@ public final class InstanceMaintenancePolicy {
      * resolution and up to nine fractional digits.
      * 
     */
-    public Optional<String> getUpdateTime() {
+    public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
     /**
@@ -93,7 +93,7 @@ public final class InstanceMaintenancePolicy {
      * Structure is documented below.
      * 
     */
-    public List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> getWeeklyMaintenanceWindows() {
+    public List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows == null ? List.of() : this.weeklyMaintenanceWindows;
     }
 

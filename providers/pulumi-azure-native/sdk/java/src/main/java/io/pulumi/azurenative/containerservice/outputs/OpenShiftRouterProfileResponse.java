@@ -41,21 +41,21 @@ public final class OpenShiftRouterProfileResponse {
      * Auto-allocated FQDN for the OpenShift router.
      * 
     */
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
     /**
      * Name of the router profile.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * DNS subdomain for OpenShift router.
      * 
     */
-    public String getPublicSubdomain() {
+    public String publicSubdomain() {
         return this.publicSubdomain;
     }
 

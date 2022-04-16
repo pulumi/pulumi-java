@@ -25,7 +25,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
     @Import(name="agentAutoUpdateStatus")
       private final @Nullable String agentAutoUpdateStatus;
 
-    public Optional<String> getAgentAutoUpdateStatus() {
+    public Optional<String> agentAutoUpdateStatus() {
         return this.agentAutoUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.agentAutoUpdateStatus);
     }
 
@@ -36,7 +36,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
     @Import(name="automationAccountArmId")
       private final @Nullable String automationAccountArmId;
 
-    public Optional<String> getAutomationAccountArmId() {
+    public Optional<String> automationAccountArmId() {
         return this.automationAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.automationAccountArmId);
     }
 
@@ -48,7 +48,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -59,7 +59,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
     @Import(name="jobScheduleName")
       private final @Nullable String jobScheduleName;
 
-    public Optional<String> getJobScheduleName() {
+    public Optional<String> jobScheduleName() {
         return this.jobScheduleName == null ? Optional.empty() : Optional.ofNullable(this.jobScheduleName);
     }
 
@@ -70,7 +70,7 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
     @Import(name="scheduleName")
       private final @Nullable String scheduleName;
 
-    public Optional<String> getScheduleName() {
+    public Optional<String> scheduleName() {
         return this.scheduleName == null ? Optional.empty() : Optional.ofNullable(this.scheduleName);
     }
 

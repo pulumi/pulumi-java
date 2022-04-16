@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
     @Import(name="maxValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse maxValue;
 
-    public GooglePrivacyDlpV2ValueResponse getMaxValue() {
+    public GooglePrivacyDlpV2ValueResponse maxValue() {
         return this.maxValue;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
     @Import(name="minValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse minValue;
 
-    public GooglePrivacyDlpV2ValueResponse getMinValue() {
+    public GooglePrivacyDlpV2ValueResponse minValue() {
         return this.minValue;
     }
 
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
     @Import(name="quantileValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
-    public List<GooglePrivacyDlpV2ValueResponse> getQuantileValues() {
+    public List<GooglePrivacyDlpV2ValueResponse> quantileValues() {
         return this.quantileValues;
     }
 

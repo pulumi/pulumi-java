@@ -19,7 +19,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
     @Import(name="activeUnits", required=true)
       private final String activeUnits;
 
-    public String getActiveUnits() {
+    public String activeUnits() {
         return this.activeUnits;
     }
 
@@ -30,7 +30,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
     @Import(name="completedUnits", required=true)
       private final String completedUnits;
 
-    public String getCompletedUnits() {
+    public String completedUnits() {
         return this.completedUnits;
     }
 
@@ -41,7 +41,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
     @Import(name="elapsedMs", required=true)
       private final String elapsedMs;
 
-    public String getElapsedMs() {
+    public String elapsedMs() {
         return this.elapsedMs;
     }
 
@@ -52,7 +52,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
     @Import(name="pendingUnits", required=true)
       private final String pendingUnits;
 
-    public String getPendingUnits() {
+    public String pendingUnits() {
         return this.pendingUnits;
     }
 
@@ -63,7 +63,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
     @Import(name="totalSlotMs", required=true)
       private final String totalSlotMs;
 
-    public String getTotalSlotMs() {
+    public String totalSlotMs() {
         return this.totalSlotMs;
     }
 

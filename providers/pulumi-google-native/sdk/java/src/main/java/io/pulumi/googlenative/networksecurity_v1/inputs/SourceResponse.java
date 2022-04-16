@@ -24,7 +24,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipBlocks", required=true)
       private final List<String> ipBlocks;
 
-    public List<String> getIpBlocks() {
+    public List<String> ipBlocks() {
         return this.ipBlocks;
     }
 
@@ -35,7 +35,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="principals", required=true)
       private final List<String> principals;
 
-    public List<String> getPrincipals() {
+    public List<String> principals() {
         return this.principals;
     }
 

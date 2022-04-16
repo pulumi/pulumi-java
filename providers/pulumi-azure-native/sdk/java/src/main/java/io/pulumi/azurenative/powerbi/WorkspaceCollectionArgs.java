@@ -6,6 +6,7 @@ package io.pulumi.azurenative.powerbi;
 import io.pulumi.azurenative.powerbi.inputs.AzureSkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,22 +35,22 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="sku")
       private final @Nullable Output<AzureSkuArgs> sku;
 
-    public Output<AzureSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<AzureSkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
     @Import(name="workspaceCollectionName")
       private final @Nullable Output<String> workspaceCollectionName;
 
-    public Output<String> getWorkspaceCollectionName() {
-        return this.workspaceCollectionName == null ? Output.empty() : this.workspaceCollectionName;
+    public Output<String> workspaceCollectionName() {
+        return this.workspaceCollectionName == null ? Codegen.empty() : this.workspaceCollectionName;
     }
 
     public WorkspaceCollectionArgs(
@@ -77,11 +78,11 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkspaceCollectionArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceCollectionName = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceCollectionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -133,7 +134,7 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sku(@Nullable AzureSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -141,7 +142,7 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceCollectionName(@Nullable Output<String> workspaceCollectionName) {
@@ -149,7 +150,7 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder workspaceCollectionName(@Nullable String workspaceCollectionName) {
-            this.workspaceCollectionName = Output.ofNullable(workspaceCollectionName);
+            this.workspaceCollectionName = Codegen.ofNullable(workspaceCollectionName);
             return this;
         }        public WorkspaceCollectionArgs build() {
             return new WorkspaceCollectionArgs(location, resourceGroupName, sku, tags, workspaceCollectionName);

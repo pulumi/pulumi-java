@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Configuration used to bootstrap the Pipeline.
      * 
      */
-    public Output<BootstrapConfigurationResponse> getBootstrapConfiguration() {
+    public Output<BootstrapConfigurationResponse> bootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
     /**
@@ -59,7 +60,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,7 +74,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the Pipeline
      * 
      */
-    public Output<Integer> getPipelineId() {
+    public Output<Integer> pipelineId() {
         return this.pipelineId;
     }
     /**
@@ -101,7 +102,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
      * 
      */
-    public Output<String> getPipelineType() {
+    public Output<String> pipelineType() {
         return this.pipelineType;
     }
     /**
@@ -115,7 +116,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The system metadata pertaining to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +130,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +144,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -169,7 +170,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Pipeline(String name, PipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devops:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devops:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Pipeline(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

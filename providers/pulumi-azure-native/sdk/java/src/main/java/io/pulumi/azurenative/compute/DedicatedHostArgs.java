@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.DedicatedHostLicenseTypes;
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoReplaceOnFailure")
       private final @Nullable Output<Boolean> autoReplaceOnFailure;
 
-    public Output<Boolean> getAutoReplaceOnFailure() {
-        return this.autoReplaceOnFailure == null ? Output.empty() : this.autoReplaceOnFailure;
+    public Output<Boolean> autoReplaceOnFailure() {
+        return this.autoReplaceOnFailure == null ? Codegen.empty() : this.autoReplaceOnFailure;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostGroupName", required=true)
       private final Output<String> hostGroupName;
 
-    public Output<String> getHostGroupName() {
+    public Output<String> hostGroupName() {
         return this.hostGroupName;
     }
 
@@ -48,8 +49,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
-        return this.hostName == null ? Output.empty() : this.hostName;
+    public Output<String> hostName() {
+        return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseType")
       private final @Nullable Output<DedicatedHostLicenseTypes> licenseType;
 
-    public Output<DedicatedHostLicenseTypes> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+    public Output<DedicatedHostLicenseTypes> licenseType() {
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformFaultDomain")
       private final @Nullable Output<Integer> platformFaultDomain;
 
-    public Output<Integer> getPlatformFaultDomain() {
-        return this.platformFaultDomain == null ? Output.empty() : this.platformFaultDomain;
+    public Output<Integer> platformFaultDomain() {
+        return this.platformFaultDomain == null ? Codegen.empty() : this.platformFaultDomain;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +104,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -114,8 +115,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DedicatedHostArgs(
@@ -140,15 +141,15 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DedicatedHostArgs() {
-        this.autoReplaceOnFailure = Output.empty();
-        this.hostGroupName = Output.empty();
-        this.hostName = Output.empty();
-        this.licenseType = Output.empty();
-        this.location = Output.empty();
-        this.platformFaultDomain = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.autoReplaceOnFailure = Codegen.empty();
+        this.hostGroupName = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.platformFaultDomain = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoReplaceOnFailure(@Nullable Boolean autoReplaceOnFailure) {
-            this.autoReplaceOnFailure = Output.ofNullable(autoReplaceOnFailure);
+            this.autoReplaceOnFailure = Codegen.ofNullable(autoReplaceOnFailure);
             return this;
         }
         public Builder hostGroupName(Output<String> hostGroupName) {
@@ -208,7 +209,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Output.ofNullable(hostName);
+            this.hostName = Codegen.ofNullable(hostName);
             return this;
         }
         public Builder licenseType(@Nullable Output<DedicatedHostLicenseTypes> licenseType) {
@@ -216,7 +217,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenseType(@Nullable DedicatedHostLicenseTypes licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -224,7 +225,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder platformFaultDomain(@Nullable Output<Integer> platformFaultDomain) {
@@ -232,7 +233,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
-            this.platformFaultDomain = Output.ofNullable(platformFaultDomain);
+            this.platformFaultDomain = Codegen.ofNullable(platformFaultDomain);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -256,7 +257,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DedicatedHostArgs build() {
             return new DedicatedHostArgs(autoReplaceOnFailure, hostGroupName, hostName, licenseType, location, platformFaultDomain, resourceGroupName, sku, tags);

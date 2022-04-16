@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +59,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the restore point collection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -86,7 +87,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return The unique id of the restore point collection.
      * 
      */
-    public Output<String> getRestorePointCollectionId() {
+    public Output<String> restorePointCollectionId() {
         return this.restorePointCollectionId;
     }
     /**
@@ -100,7 +101,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return A list containing all restore points created under this restore point collection.
      * 
      */
-    public Output<List<RestorePointResponse>> getRestorePoints() {
+    public Output<List<RestorePointResponse>> restorePoints() {
         return this.restorePoints;
     }
     /**
@@ -114,7 +115,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return The properties of the source resource that this restore point collection is created from.
      * 
      */
-    public Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> getSource() {
+    public Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> source() {
         return this.source;
     }
     /**
@@ -128,7 +129,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RestorePointCollection(String name, RestorePointCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:RestorePointCollection", name, args == null ? RestorePointCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:RestorePointCollection", name, args == null ? RestorePointCollectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RestorePointCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.TopicRulePutItemInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
     @Import(name="putItem")
       private final @Nullable Output<TopicRulePutItemInputArgs> putItem;
 
-    public Output<TopicRulePutItemInputArgs> getPutItem() {
-        return this.putItem == null ? Output.empty() : this.putItem;
+    public Output<TopicRulePutItemInputArgs> putItem() {
+        return this.putItem == null ? Codegen.empty() : this.putItem;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public TopicRuleDynamoDBv2ActionArgs(
@@ -37,8 +38,8 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
     }
 
     private TopicRuleDynamoDBv2ActionArgs() {
-        this.putItem = Output.empty();
-        this.roleArn = Output.empty();
+        this.putItem = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder putItem(@Nullable TopicRulePutItemInputArgs putItem) {
-            this.putItem = Output.ofNullable(putItem);
+            this.putItem = Codegen.ofNullable(putItem);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -76,7 +77,7 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public TopicRuleDynamoDBv2ActionArgs build() {
             return new TopicRuleDynamoDBv2ActionArgs(putItem, roleArn);

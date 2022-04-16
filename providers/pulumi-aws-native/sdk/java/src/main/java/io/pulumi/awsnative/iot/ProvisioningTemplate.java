@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,49 +25,49 @@ public class ProvisioningTemplate extends io.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     @Export(name="preProvisioningHook", type=ProvisioningTemplateProvisioningHook.class, parameters={})
     private Output</* @Nullable */ ProvisioningTemplateProvisioningHook> preProvisioningHook;
 
-    public Output</* @Nullable */ ProvisioningTemplateProvisioningHook> getPreProvisioningHook() {
+    public Output</* @Nullable */ ProvisioningTemplateProvisioningHook> preProvisioningHook() {
         return this.preProvisioningHook;
     }
     @Export(name="provisioningRoleArn", type=String.class, parameters={})
     private Output<String> provisioningRoleArn;
 
-    public Output<String> getProvisioningRoleArn() {
+    public Output<String> provisioningRoleArn() {
         return this.provisioningRoleArn;
     }
     @Export(name="tags", type=List.class, parameters={ProvisioningTemplateTag.class})
     private Output</* @Nullable */ List<ProvisioningTemplateTag>> tags;
 
-    public Output</* @Nullable */ List<ProvisioningTemplateTag>> getTags() {
+    public Output</* @Nullable */ List<ProvisioningTemplateTag>> tags() {
         return this.tags;
     }
     @Export(name="templateArn", type=String.class, parameters={})
     private Output<String> templateArn;
 
-    public Output<String> getTemplateArn() {
+    public Output<String> templateArn() {
         return this.templateArn;
     }
     @Export(name="templateBody", type=String.class, parameters={})
     private Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody;
     }
     @Export(name="templateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateName;
 
-    public Output</* @Nullable */ String> getTemplateName() {
+    public Output</* @Nullable */ String> templateName() {
         return this.templateName;
     }
 
@@ -92,7 +93,7 @@ public class ProvisioningTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProvisioningTemplate(String name, ProvisioningTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:ProvisioningTemplate", name, args == null ? ProvisioningTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:ProvisioningTemplate", name, args == null ? ProvisioningTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProvisioningTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

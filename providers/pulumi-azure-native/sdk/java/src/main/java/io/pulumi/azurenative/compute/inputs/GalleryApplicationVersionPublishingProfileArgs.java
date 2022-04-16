@@ -10,6 +10,7 @@ import io.pulumi.azurenative.compute.inputs.UserArtifactSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,8 +34,8 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     @Import(name="enableHealthCheck")
       private final @Nullable Output<Boolean> enableHealthCheck;
 
-    public Output<Boolean> getEnableHealthCheck() {
-        return this.enableHealthCheck == null ? Output.empty() : this.enableHealthCheck;
+    public Output<Boolean> enableHealthCheck() {
+        return this.enableHealthCheck == null ? Codegen.empty() : this.enableHealthCheck;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> getEndOfLifeDate() {
-        return this.endOfLifeDate == null ? Output.empty() : this.endOfLifeDate;
+    public Output<String> endOfLifeDate() {
+        return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
     }
 
     /**
@@ -55,15 +56,15 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
 
-    public Output<Boolean> getExcludeFromLatest() {
-        return this.excludeFromLatest == null ? Output.empty() : this.excludeFromLatest;
+    public Output<Boolean> excludeFromLatest() {
+        return this.excludeFromLatest == null ? Codegen.empty() : this.excludeFromLatest;
     }
 
     @Import(name="manageActions")
       private final @Nullable Output<UserArtifactManageArgs> manageActions;
 
-    public Output<UserArtifactManageArgs> getManageActions() {
-        return this.manageActions == null ? Output.empty() : this.manageActions;
+    public Output<UserArtifactManageArgs> manageActions() {
+        return this.manageActions == null ? Codegen.empty() : this.manageActions;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Output.empty() : this.replicaCount;
+    public Output<Integer> replicaCount() {
+        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     @Import(name="source", required=true)
       private final Output<UserArtifactSourceArgs> source;
 
-    public Output<UserArtifactSourceArgs> getSource() {
+    public Output<UserArtifactSourceArgs> source() {
         return this.source;
     }
 
@@ -95,8 +96,8 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountType>> storageAccountType() {
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     @Import(name="targetRegions")
       private final @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
-    public Output<List<TargetRegionArgs>> getTargetRegions() {
-        return this.targetRegions == null ? Output.empty() : this.targetRegions;
+    public Output<List<TargetRegionArgs>> targetRegions() {
+        return this.targetRegions == null ? Codegen.empty() : this.targetRegions;
     }
 
     public GalleryApplicationVersionPublishingProfileArgs(
@@ -130,14 +131,14 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
     }
 
     private GalleryApplicationVersionPublishingProfileArgs() {
-        this.enableHealthCheck = Output.empty();
-        this.endOfLifeDate = Output.empty();
-        this.excludeFromLatest = Output.empty();
-        this.manageActions = Output.empty();
-        this.replicaCount = Output.empty();
-        this.source = Output.empty();
-        this.storageAccountType = Output.empty();
-        this.targetRegions = Output.empty();
+        this.enableHealthCheck = Codegen.empty();
+        this.endOfLifeDate = Codegen.empty();
+        this.excludeFromLatest = Codegen.empty();
+        this.manageActions = Codegen.empty();
+        this.replicaCount = Codegen.empty();
+        this.source = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
+        this.targetRegions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             return this;
         }
         public Builder enableHealthCheck(@Nullable Boolean enableHealthCheck) {
-            this.enableHealthCheck = Output.ofNullable(enableHealthCheck);
+            this.enableHealthCheck = Codegen.ofNullable(enableHealthCheck);
             return this;
         }
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
@@ -187,7 +188,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             return this;
         }
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
+            this.endOfLifeDate = Codegen.ofNullable(endOfLifeDate);
             return this;
         }
         public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
@@ -195,7 +196,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             return this;
         }
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
-            this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
+            this.excludeFromLatest = Codegen.ofNullable(excludeFromLatest);
             return this;
         }
         public Builder manageActions(@Nullable Output<UserArtifactManageArgs> manageActions) {
@@ -203,7 +204,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             return this;
         }
         public Builder manageActions(@Nullable UserArtifactManageArgs manageActions) {
-            this.manageActions = Output.ofNullable(manageActions);
+            this.manageActions = Codegen.ofNullable(manageActions);
             return this;
         }
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
@@ -211,7 +212,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             return this;
         }
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Output.ofNullable(replicaCount);
+            this.replicaCount = Codegen.ofNullable(replicaCount);
             return this;
         }
         public Builder source(Output<UserArtifactSourceArgs> source) {
@@ -227,7 +228,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }
         public Builder targetRegions(@Nullable Output<List<TargetRegionArgs>> targetRegions) {
@@ -235,7 +236,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
             return this;
         }
         public Builder targetRegions(@Nullable List<TargetRegionArgs> targetRegions) {
-            this.targetRegions = Output.ofNullable(targetRegions);
+            this.targetRegions = Codegen.ofNullable(targetRegions);
             return this;
         }
         public Builder targetRegions(TargetRegionArgs... targetRegions) {

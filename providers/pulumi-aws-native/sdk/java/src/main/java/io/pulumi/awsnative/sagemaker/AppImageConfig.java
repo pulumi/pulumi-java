@@ -10,6 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AppImageConfig.
      * 
      */
-    public Output<String> getAppImageConfigArn() {
+    public Output<String> appImageConfigArn() {
         return this.appImageConfigArn;
     }
     /**
@@ -45,7 +46,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return The Name of the AppImageConfig.
      * 
      */
-    public Output<String> getAppImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
     /**
@@ -59,7 +60,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return The KernelGatewayImageConfig.
      * 
      */
-    public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
+    public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig;
     }
     /**
@@ -73,7 +74,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the AppImageConfig.
      * 
      */
-    public Output</* @Nullable */ List<AppImageConfigTag>> getTags() {
+    public Output</* @Nullable */ List<AppImageConfigTag>> tags() {
         return this.tags;
     }
 
@@ -99,7 +100,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppImageConfig(String name, @Nullable AppImageConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:AppImageConfig", name, args == null ? AppImageConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:AppImageConfig", name, args == null ? AppImageConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppImageConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

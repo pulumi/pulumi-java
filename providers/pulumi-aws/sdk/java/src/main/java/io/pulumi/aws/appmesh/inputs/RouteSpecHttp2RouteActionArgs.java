@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteActionWeightedTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class RouteSpecHttp2RouteActionArgs extends io.pulumi.resources.Res
     @Import(name="weightedTargets", required=true)
       private final Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets;
 
-    public Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> getWeightedTargets() {
+    public Output<List<RouteSpecHttp2RouteActionWeightedTargetArgs>> weightedTargets() {
         return this.weightedTargets;
     }
 
@@ -31,7 +32,7 @@ public final class RouteSpecHttp2RouteActionArgs extends io.pulumi.resources.Res
     }
 
     private RouteSpecHttp2RouteActionArgs() {
-        this.weightedTargets = Output.empty();
+        this.weightedTargets = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsublite_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="perPartitionBytes")
       private final @Nullable Output<String> perPartitionBytes;
 
-    public Output<String> getPerPartitionBytes() {
-        return this.perPartitionBytes == null ? Output.empty() : this.perPartitionBytes;
+    public Output<String> perPartitionBytes() {
+        return this.perPartitionBytes == null ? Codegen.empty() : this.perPartitionBytes;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
-        return this.period == null ? Output.empty() : this.period;
+    public Output<String> period() {
+        return this.period == null ? Codegen.empty() : this.period;
     }
 
     public RetentionConfigArgs(
@@ -48,8 +49,8 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RetentionConfigArgs() {
-        this.perPartitionBytes = Output.empty();
-        this.period = Output.empty();
+        this.perPartitionBytes = Codegen.empty();
+        this.period = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder perPartitionBytes(@Nullable String perPartitionBytes) {
-            this.perPartitionBytes = Output.ofNullable(perPartitionBytes);
+            this.perPartitionBytes = Codegen.ofNullable(perPartitionBytes);
             return this;
         }
         public Builder period(@Nullable Output<String> period) {
@@ -87,7 +88,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder period(@Nullable String period) {
-            this.period = Output.ofNullable(period);
+            this.period = Codegen.ofNullable(period);
             return this;
         }        public RetentionConfigArgs build() {
             return new RetentionConfigArgs(perPartitionBytes, period);

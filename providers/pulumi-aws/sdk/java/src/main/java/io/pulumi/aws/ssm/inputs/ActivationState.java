@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="activationCode")
       private final @Nullable Output<String> activationCode;
 
-    public Output<String> getActivationCode() {
-        return this.activationCode == null ? Output.empty() : this.activationCode;
+    public Output<String> activationCode() {
+        return this.activationCode == null ? Codegen.empty() : this.activationCode;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+    public Output<String> expirationDate() {
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expired")
       private final @Nullable Output<Boolean> expired;
 
-    public Output<Boolean> getExpired() {
-        return this.expired == null ? Output.empty() : this.expired;
+    public Output<Boolean> expired() {
+        return this.expired == null ? Codegen.empty() : this.expired;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRole")
       private final @Nullable Output<String> iamRole;
 
-    public Output<String> getIamRole() {
-        return this.iamRole == null ? Output.empty() : this.iamRole;
+    public Output<String> iamRole() {
+        return this.iamRole == null ? Codegen.empty() : this.iamRole;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationCount")
       private final @Nullable Output<Integer> registrationCount;
 
-    public Output<Integer> getRegistrationCount() {
-        return this.registrationCount == null ? Output.empty() : this.registrationCount;
+    public Output<Integer> registrationCount() {
+        return this.registrationCount == null ? Codegen.empty() : this.registrationCount;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationLimit")
       private final @Nullable Output<Integer> registrationLimit;
 
-    public Output<Integer> getRegistrationLimit() {
-        return this.registrationLimit == null ? Output.empty() : this.registrationLimit;
+    public Output<Integer> registrationLimit() {
+        return this.registrationLimit == null ? Codegen.empty() : this.registrationLimit;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ActivationState(
@@ -151,16 +152,16 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActivationState() {
-        this.activationCode = Output.empty();
-        this.description = Output.empty();
-        this.expirationDate = Output.empty();
-        this.expired = Output.empty();
-        this.iamRole = Output.empty();
-        this.name = Output.empty();
-        this.registrationCount = Output.empty();
-        this.registrationLimit = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.activationCode = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.expired = Codegen.empty();
+        this.iamRole = Codegen.empty();
+        this.name = Codegen.empty();
+        this.registrationCount = Codegen.empty();
+        this.registrationLimit = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activationCode(@Nullable String activationCode) {
-            this.activationCode = Output.ofNullable(activationCode);
+            this.activationCode = Codegen.ofNullable(activationCode);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -214,7 +215,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -222,7 +223,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder expired(@Nullable Output<Boolean> expired) {
@@ -230,7 +231,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expired(@Nullable Boolean expired) {
-            this.expired = Output.ofNullable(expired);
+            this.expired = Codegen.ofNullable(expired);
             return this;
         }
         public Builder iamRole(@Nullable Output<String> iamRole) {
@@ -238,7 +239,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Output.ofNullable(iamRole);
+            this.iamRole = Codegen.ofNullable(iamRole);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -246,7 +247,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder registrationCount(@Nullable Output<Integer> registrationCount) {
@@ -254,7 +255,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationCount(@Nullable Integer registrationCount) {
-            this.registrationCount = Output.ofNullable(registrationCount);
+            this.registrationCount = Codegen.ofNullable(registrationCount);
             return this;
         }
         public Builder registrationLimit(@Nullable Output<Integer> registrationLimit) {
@@ -262,7 +263,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationLimit(@Nullable Integer registrationLimit) {
-            this.registrationLimit = Output.ofNullable(registrationLimit);
+            this.registrationLimit = Codegen.ofNullable(registrationLimit);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -270,7 +271,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -278,7 +279,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ActivationState build() {
             return new ActivationState(activationCode, description, expirationDate, expired, iamRole, name, registrationCount, registrationLimit, tags, tagsAll);

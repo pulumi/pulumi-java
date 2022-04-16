@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,14 +22,14 @@ public final class CertificateValidityArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
       private final Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value;
     }
 
@@ -40,8 +41,8 @@ public final class CertificateValidityArgs extends io.pulumi.resources.ResourceA
     }
 
     private CertificateValidityArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

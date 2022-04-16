@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
     @Import(name="allowedAadTenantIdsForLinking")
       private final @Nullable Output<List<String>> allowedAadTenantIdsForLinking;
 
-    public Output<List<String>> getAllowedAadTenantIdsForLinking() {
-        return this.allowedAadTenantIdsForLinking == null ? Output.empty() : this.allowedAadTenantIdsForLinking;
+    public Output<List<String>> allowedAadTenantIdsForLinking() {
+        return this.allowedAadTenantIdsForLinking == null ? Codegen.empty() : this.allowedAadTenantIdsForLinking;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
     @Import(name="linkedAccessCheckOnTargetResource")
       private final @Nullable Output<Boolean> linkedAccessCheckOnTargetResource;
 
-    public Output<Boolean> getLinkedAccessCheckOnTargetResource() {
-        return this.linkedAccessCheckOnTargetResource == null ? Output.empty() : this.linkedAccessCheckOnTargetResource;
+    public Output<Boolean> linkedAccessCheckOnTargetResource() {
+        return this.linkedAccessCheckOnTargetResource == null ? Codegen.empty() : this.linkedAccessCheckOnTargetResource;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
     @Import(name="preventDataExfiltration")
       private final @Nullable Output<Boolean> preventDataExfiltration;
 
-    public Output<Boolean> getPreventDataExfiltration() {
-        return this.preventDataExfiltration == null ? Output.empty() : this.preventDataExfiltration;
+    public Output<Boolean> preventDataExfiltration() {
+        return this.preventDataExfiltration == null ? Codegen.empty() : this.preventDataExfiltration;
     }
 
     public ManagedVirtualNetworkSettingsArgs(
@@ -63,9 +64,9 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
     }
 
     private ManagedVirtualNetworkSettingsArgs() {
-        this.allowedAadTenantIdsForLinking = Output.empty();
-        this.linkedAccessCheckOnTargetResource = Output.empty();
-        this.preventDataExfiltration = Output.empty();
+        this.allowedAadTenantIdsForLinking = Codegen.empty();
+        this.linkedAccessCheckOnTargetResource = Codegen.empty();
+        this.preventDataExfiltration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder allowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
-            this.allowedAadTenantIdsForLinking = Output.ofNullable(allowedAadTenantIdsForLinking);
+            this.allowedAadTenantIdsForLinking = Codegen.ofNullable(allowedAadTenantIdsForLinking);
             return this;
         }
         public Builder allowedAadTenantIdsForLinking(String... allowedAadTenantIdsForLinking) {
@@ -108,7 +109,7 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
-            this.linkedAccessCheckOnTargetResource = Output.ofNullable(linkedAccessCheckOnTargetResource);
+            this.linkedAccessCheckOnTargetResource = Codegen.ofNullable(linkedAccessCheckOnTargetResource);
             return this;
         }
         public Builder preventDataExfiltration(@Nullable Output<Boolean> preventDataExfiltration) {
@@ -116,7 +117,7 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
-            this.preventDataExfiltration = Output.ofNullable(preventDataExfiltration);
+            this.preventDataExfiltration = Codegen.ofNullable(preventDataExfiltration);
             return this;
         }        public ManagedVirtualNetworkSettingsArgs build() {
             return new ManagedVirtualNetworkSettingsArgs(allowedAadTenantIdsForLinking, linkedAccessCheckOnTargetResource, preventDataExfiltration);

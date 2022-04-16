@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,8 +36,8 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computePolicyName")
       private final @Nullable Output<String> computePolicyName;
 
-    public Output<String> getComputePolicyName() {
-        return this.computePolicyName == null ? Output.empty() : this.computePolicyName;
+    public Output<String> computePolicyName() {
+        return this.computePolicyName == null ? Codegen.empty() : this.computePolicyName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Output.empty() : this.maxDegreeOfParallelismPerJob;
+    public Output<Integer> maxDegreeOfParallelismPerJob() {
+        return this.maxDegreeOfParallelismPerJob == null ? Codegen.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
 
-    public Output<Integer> getMinPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Output.empty() : this.minPriorityPerJob;
+    public Output<Integer> minPriorityPerJob() {
+        return this.minPriorityPerJob == null ? Codegen.empty() : this.minPriorityPerJob;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -79,7 +80,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectType", required=true)
       private final Output<Either<String,AADObjectType>> objectType;
 
-    public Output<Either<String,AADObjectType>> getObjectType() {
+    public Output<Either<String,AADObjectType>> objectType() {
         return this.objectType;
     }
 
@@ -90,7 +91,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,13 +113,13 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComputePolicyArgs() {
-        this.accountName = Output.empty();
-        this.computePolicyName = Output.empty();
-        this.maxDegreeOfParallelismPerJob = Output.empty();
-        this.minPriorityPerJob = Output.empty();
-        this.objectId = Output.empty();
-        this.objectType = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.computePolicyName = Codegen.empty();
+        this.maxDegreeOfParallelismPerJob = Codegen.empty();
+        this.minPriorityPerJob = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computePolicyName(@Nullable String computePolicyName) {
-            this.computePolicyName = Output.ofNullable(computePolicyName);
+            this.computePolicyName = Codegen.ofNullable(computePolicyName);
             return this;
         }
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
@@ -174,7 +175,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
+            this.maxDegreeOfParallelismPerJob = Codegen.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
@@ -182,7 +183,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
+            this.minPriorityPerJob = Codegen.ofNullable(minPriorityPerJob);
             return this;
         }
         public Builder objectId(Output<String> objectId) {

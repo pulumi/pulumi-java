@@ -7,6 +7,7 @@ import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTarge
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
     @Import(name="nlbResource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> getNlbResource() {
-        return this.nlbResource == null ? Output.empty() : this.nlbResource;
+    public Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource() {
+        return this.nlbResource == null ? Codegen.empty() : this.nlbResource;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
     @Import(name="r53Resource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> getR53Resource() {
-        return this.r53Resource == null ? Output.empty() : this.r53Resource;
+    public Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource() {
+        return this.r53Resource == null ? Codegen.empty() : this.r53Resource;
     }
 
     public ResourceSetResourceDnsTargetResourceTargetResourceArgs(
@@ -45,8 +46,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
     }
 
     private ResourceSetResourceDnsTargetResourceTargetResourceArgs() {
-        this.nlbResource = Output.empty();
-        this.r53Resource = Output.empty();
+        this.nlbResource = Codegen.empty();
+        this.r53Resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
             return this;
         }
         public Builder nlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs nlbResource) {
-            this.nlbResource = Output.ofNullable(nlbResource);
+            this.nlbResource = Codegen.ofNullable(nlbResource);
             return this;
         }
         public Builder r53Resource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource) {
@@ -84,7 +85,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
             return this;
         }
         public Builder r53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs r53Resource) {
-            this.r53Resource = Output.ofNullable(r53Resource);
+            this.r53Resource = Codegen.ofNullable(r53Resource);
             return this;
         }        public ResourceSetResourceDnsTargetResourceTargetResourceArgs build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceArgs(nlbResource, r53Resource);

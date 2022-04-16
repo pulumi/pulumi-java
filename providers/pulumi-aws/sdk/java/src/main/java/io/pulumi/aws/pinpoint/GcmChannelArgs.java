@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
 
@@ -33,7 +34,7 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -44,8 +45,8 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public GcmChannelArgs(
@@ -58,9 +59,9 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GcmChannelArgs() {
-        this.apiKey = Output.empty();
-        this.applicationId = Output.empty();
-        this.enabled = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public GcmChannelArgs build() {
             return new GcmChannelArgs(apiKey, applicationId, enabled);

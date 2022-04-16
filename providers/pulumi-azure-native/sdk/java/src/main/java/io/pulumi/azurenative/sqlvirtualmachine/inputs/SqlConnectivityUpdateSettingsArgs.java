@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.enums.ConnectivityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
     @Import(name="connectivityType")
       private final @Nullable Output<Either<String,ConnectivityType>> connectivityType;
 
-    public Output<Either<String,ConnectivityType>> getConnectivityType() {
-        return this.connectivityType == null ? Output.empty() : this.connectivityType;
+    public Output<Either<String,ConnectivityType>> connectivityType() {
+        return this.connectivityType == null ? Codegen.empty() : this.connectivityType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
     @Import(name="sqlAuthUpdatePassword")
       private final @Nullable Output<String> sqlAuthUpdatePassword;
 
-    public Output<String> getSqlAuthUpdatePassword() {
-        return this.sqlAuthUpdatePassword == null ? Output.empty() : this.sqlAuthUpdatePassword;
+    public Output<String> sqlAuthUpdatePassword() {
+        return this.sqlAuthUpdatePassword == null ? Codegen.empty() : this.sqlAuthUpdatePassword;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
     @Import(name="sqlAuthUpdateUserName")
       private final @Nullable Output<String> sqlAuthUpdateUserName;
 
-    public Output<String> getSqlAuthUpdateUserName() {
-        return this.sqlAuthUpdateUserName == null ? Output.empty() : this.sqlAuthUpdateUserName;
+    public Output<String> sqlAuthUpdateUserName() {
+        return this.sqlAuthUpdateUserName == null ? Codegen.empty() : this.sqlAuthUpdateUserName;
     }
 
     public SqlConnectivityUpdateSettingsArgs(
@@ -77,10 +78,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
     }
 
     private SqlConnectivityUpdateSettingsArgs() {
-        this.connectivityType = Output.empty();
-        this.port = Output.empty();
-        this.sqlAuthUpdatePassword = Output.empty();
-        this.sqlAuthUpdateUserName = Output.empty();
+        this.connectivityType = Codegen.empty();
+        this.port = Codegen.empty();
+        this.sqlAuthUpdatePassword = Codegen.empty();
+        this.sqlAuthUpdateUserName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder connectivityType(@Nullable Either<String,ConnectivityType> connectivityType) {
-            this.connectivityType = Output.ofNullable(connectivityType);
+            this.connectivityType = Codegen.ofNullable(connectivityType);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -122,7 +123,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder sqlAuthUpdatePassword(@Nullable Output<String> sqlAuthUpdatePassword) {
@@ -130,7 +131,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder sqlAuthUpdatePassword(@Nullable String sqlAuthUpdatePassword) {
-            this.sqlAuthUpdatePassword = Output.ofNullable(sqlAuthUpdatePassword);
+            this.sqlAuthUpdatePassword = Codegen.ofNullable(sqlAuthUpdatePassword);
             return this;
         }
         public Builder sqlAuthUpdateUserName(@Nullable Output<String> sqlAuthUpdateUserName) {
@@ -138,7 +139,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder sqlAuthUpdateUserName(@Nullable String sqlAuthUpdateUserName) {
-            this.sqlAuthUpdateUserName = Output.ofNullable(sqlAuthUpdateUserName);
+            this.sqlAuthUpdateUserName = Codegen.ofNullable(sqlAuthUpdateUserName);
             return this;
         }        public SqlConnectivityUpdateSettingsArgs build() {
             return new SqlConnectivityUpdateSettingsArgs(connectivityType, port, sqlAuthUpdatePassword, sqlAuthUpdateUserName);

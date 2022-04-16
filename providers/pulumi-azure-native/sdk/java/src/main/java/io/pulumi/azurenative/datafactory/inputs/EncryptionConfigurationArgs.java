@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.CMKIdentityDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="identity")
       private final @Nullable Output<CMKIdentityDefinitionArgs> identity;
 
-    public Output<CMKIdentityDefinitionArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<CMKIdentityDefinitionArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -48,8 +49,8 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
-        return this.keyVersion == null ? Output.empty() : this.keyVersion;
+    public Output<String> keyVersion() {
+        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="vaultBaseUrl", required=true)
       private final Output<String> vaultBaseUrl;
 
-    public Output<String> getVaultBaseUrl() {
+    public Output<String> vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 
@@ -75,10 +76,10 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private EncryptionConfigurationArgs() {
-        this.identity = Output.empty();
-        this.keyName = Output.empty();
-        this.keyVersion = Output.empty();
-        this.vaultBaseUrl = Output.empty();
+        this.identity = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.keyVersion = Codegen.empty();
+        this.vaultBaseUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder identity(@Nullable CMKIdentityDefinitionArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyName(Output<String> keyName) {
@@ -128,7 +129,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Output.ofNullable(keyVersion);
+            this.keyVersion = Codegen.ofNullable(keyVersion);
             return this;
         }
         public Builder vaultBaseUrl(Output<String> vaultBaseUrl) {

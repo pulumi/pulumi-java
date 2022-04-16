@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.PolicyContentFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Either<String,PolicyContentFormat>> format;
 
-    public Output<Either<String,PolicyContentFormat>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<Either<String,PolicyContentFormat>> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+    public Output<String> policyId() {
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +57,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -67,7 +68,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -85,11 +86,11 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.format = Output.empty();
-        this.policyId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.value = Output.empty();
+        this.format = Codegen.empty();
+        this.policyId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable Either<String,PolicyContentFormat> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder policyId(@Nullable Output<String> policyId) {
@@ -133,7 +134,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

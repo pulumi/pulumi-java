@@ -7,6 +7,7 @@ import io.pulumi.azurenative.security.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
     @Import(name="allowedSourceAddressPrefix")
       private final @Nullable Output<String> allowedSourceAddressPrefix;
 
-    public Output<String> getAllowedSourceAddressPrefix() {
-        return this.allowedSourceAddressPrefix == null ? Output.empty() : this.allowedSourceAddressPrefix;
+    public Output<String> allowedSourceAddressPrefix() {
+        return this.allowedSourceAddressPrefix == null ? Codegen.empty() : this.allowedSourceAddressPrefix;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
     @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
-    public Output<List<String>> getAllowedSourceAddressPrefixes() {
-        return this.allowedSourceAddressPrefixes == null ? Output.empty() : this.allowedSourceAddressPrefixes;
+    public Output<List<String>> allowedSourceAddressPrefixes() {
+        return this.allowedSourceAddressPrefixes == null ? Codegen.empty() : this.allowedSourceAddressPrefixes;
     }
 
     /**
@@ -47,21 +48,21 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
     @Import(name="maxRequestAccessDuration", required=true)
       private final Output<String> maxRequestAccessDuration;
 
-    public Output<String> getMaxRequestAccessDuration() {
+    public Output<String> maxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
 
     @Import(name="number", required=true)
       private final Output<Integer> number;
 
-    public Output<Integer> getNumber() {
+    public Output<Integer> number() {
         return this.number;
     }
 
     @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
-    public Output<Either<String,Protocol>> getProtocol() {
+    public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 
@@ -79,11 +80,11 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
     }
 
     private JitNetworkAccessPortRuleArgs() {
-        this.allowedSourceAddressPrefix = Output.empty();
-        this.allowedSourceAddressPrefixes = Output.empty();
-        this.maxRequestAccessDuration = Output.empty();
-        this.number = Output.empty();
-        this.protocol = Output.empty();
+        this.allowedSourceAddressPrefix = Codegen.empty();
+        this.allowedSourceAddressPrefixes = Codegen.empty();
+        this.maxRequestAccessDuration = Codegen.empty();
+        this.number = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
-            this.allowedSourceAddressPrefix = Output.ofNullable(allowedSourceAddressPrefix);
+            this.allowedSourceAddressPrefix = Codegen.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
@@ -127,7 +128,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
-            this.allowedSourceAddressPrefixes = Output.ofNullable(allowedSourceAddressPrefixes);
+            this.allowedSourceAddressPrefixes = Codegen.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {

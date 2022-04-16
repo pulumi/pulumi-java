@@ -6,6 +6,7 @@ package io.pulumi.gcp.tags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagKeyIamPolicyArgs;
 import io.pulumi.gcp.tags.inputs.TagKeyIamPolicyState;
@@ -67,7 +68,7 @@ public class TagKeyIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -83,7 +84,7 @@ public class TagKeyIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -97,7 +98,7 @@ public class TagKeyIamPolicy extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getTagKey() {
+    public Output<String> tagKey() {
         return this.tagKey;
     }
 
@@ -123,7 +124,7 @@ public class TagKeyIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagKeyIamPolicy(String name, TagKeyIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:tags/tagKeyIamPolicy:TagKeyIamPolicy", name, args == null ? TagKeyIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:tags/tagKeyIamPolicy:TagKeyIamPolicy", name, args == null ? TagKeyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagKeyIamPolicy(String name, Output<String> id, @Nullable TagKeyIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

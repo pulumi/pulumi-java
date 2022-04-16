@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakeanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,8 +37,8 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
     @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
-    public Output<String> getSuffix() {
-        return this.suffix == null ? Output.empty() : this.suffix;
+    public Output<String> suffix() {
+        return this.suffix == null ? Codegen.empty() : this.suffix;
     }
 
     public AddDataLakeStoreWithAccountParametersArgs(
@@ -48,8 +49,8 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
     }
 
     private AddDataLakeStoreWithAccountParametersArgs() {
-        this.name = Output.empty();
-        this.suffix = Output.empty();
+        this.name = Codegen.empty();
+        this.suffix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
             return this;
         }
         public Builder suffix(@Nullable String suffix) {
-            this.suffix = Output.ofNullable(suffix);
+            this.suffix = Codegen.ofNullable(suffix);
             return this;
         }        public AddDataLakeStoreWithAccountParametersArgs build() {
             return new AddDataLakeStoreWithAccountParametersArgs(name, suffix);

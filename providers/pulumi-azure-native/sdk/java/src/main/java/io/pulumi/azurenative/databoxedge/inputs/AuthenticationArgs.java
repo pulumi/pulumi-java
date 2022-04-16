@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.SymmetricKeyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="symmetricKey")
       private final @Nullable Output<SymmetricKeyArgs> symmetricKey;
 
-    public Output<SymmetricKeyArgs> getSymmetricKey() {
-        return this.symmetricKey == null ? Output.empty() : this.symmetricKey;
+    public Output<SymmetricKeyArgs> symmetricKey() {
+        return this.symmetricKey == null ? Codegen.empty() : this.symmetricKey;
     }
 
     public AuthenticationArgs(@Nullable Output<SymmetricKeyArgs> symmetricKey) {
@@ -34,7 +35,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthenticationArgs() {
-        this.symmetricKey = Output.empty();
+        this.symmetricKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder symmetricKey(@Nullable SymmetricKeyArgs symmetricKey) {
-            this.symmetricKey = Output.ofNullable(symmetricKey);
+            this.symmetricKey = Codegen.ofNullable(symmetricKey);
             return this;
         }        public AuthenticationArgs build() {
             return new AuthenticationArgs(symmetricKey);

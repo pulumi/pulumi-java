@@ -36,7 +36,7 @@ public final class InstanceNetworkConfig {
      * nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
      * 
     */
-    public String getIpAllocation() {
+    public String ipAllocation() {
         return this.ipAllocation;
     }
     /**
@@ -45,7 +45,7 @@ public final class InstanceNetworkConfig {
      * project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 

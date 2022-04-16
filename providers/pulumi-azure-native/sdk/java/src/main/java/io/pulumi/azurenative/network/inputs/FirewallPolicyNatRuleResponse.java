@@ -31,7 +31,7 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
     @Import(name="action")
       private final @Nullable FirewallPolicyNatRuleActionResponse action;
 
-    public Optional<FirewallPolicyNatRuleActionResponse> getAction() {
+    public Optional<FirewallPolicyNatRuleActionResponse> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -42,7 +42,7 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -53,7 +53,7 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -64,7 +64,7 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
     @Import(name="ruleCondition")
       private final @Nullable Object ruleCondition;
 
-    public Object getRuleCondition() {
+    public Object ruleCondition() {
         return this.ruleCondition == null ? null : this.ruleCondition;
     }
 
@@ -76,7 +76,7 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 
@@ -87,7 +87,7 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
     @Import(name="translatedAddress")
       private final @Nullable String translatedAddress;
 
-    public Optional<String> getTranslatedAddress() {
+    public Optional<String> translatedAddress() {
         return this.translatedAddress == null ? Optional.empty() : Optional.ofNullable(this.translatedAddress);
     }
 
@@ -98,7 +98,7 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
     @Import(name="translatedPort")
       private final @Nullable String translatedPort;
 
-    public Optional<String> getTranslatedPort() {
+    public Optional<String> translatedPort() {
         return this.translatedPort == null ? Optional.empty() : Optional.ofNullable(this.translatedPort);
     }
 

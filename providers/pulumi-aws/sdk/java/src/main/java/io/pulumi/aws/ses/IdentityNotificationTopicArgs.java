@@ -5,6 +5,7 @@ package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     @Import(name="identity", required=true)
       private final Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
 
@@ -33,8 +34,8 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     @Import(name="includeOriginalHeaders")
       private final @Nullable Output<Boolean> includeOriginalHeaders;
 
-    public Output<Boolean> getIncludeOriginalHeaders() {
-        return this.includeOriginalHeaders == null ? Output.empty() : this.includeOriginalHeaders;
+    public Output<Boolean> includeOriginalHeaders() {
+        return this.includeOriginalHeaders == null ? Codegen.empty() : this.includeOriginalHeaders;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
 
@@ -55,8 +56,8 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+    public Output<String> topicArn() {
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public IdentityNotificationTopicArgs(
@@ -71,10 +72,10 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     }
 
     private IdentityNotificationTopicArgs() {
-        this.identity = Output.empty();
-        this.includeOriginalHeaders = Output.empty();
-        this.notificationType = Output.empty();
-        this.topicArn = Output.empty();
+        this.identity = Codegen.empty();
+        this.includeOriginalHeaders = Codegen.empty();
+        this.notificationType = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
-            this.includeOriginalHeaders = Output.ofNullable(includeOriginalHeaders);
+            this.includeOriginalHeaders = Codegen.ofNullable(includeOriginalHeaders);
             return this;
         }
         public Builder notificationType(Output<String> notificationType) {
@@ -132,7 +133,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public IdentityNotificationTopicArgs build() {
             return new IdentityNotificationTopicArgs(identity, includeOriginalHeaders, notificationType, topicArn);

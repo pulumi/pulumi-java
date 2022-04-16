@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kinesis.inputs.StreamModeDetailsArgs;
 import io.pulumi.awsnative.kinesis.inputs.StreamTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPeriodHours")
       private final @Nullable Output<Integer> retentionPeriodHours;
 
-    public Output<Integer> getRetentionPeriodHours() {
-        return this.retentionPeriodHours == null ? Output.empty() : this.retentionPeriodHours;
+    public Output<Integer> retentionPeriodHours() {
+        return this.retentionPeriodHours == null ? Codegen.empty() : this.retentionPeriodHours;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> getShardCount() {
-        return this.shardCount == null ? Output.empty() : this.shardCount;
+    public Output<Integer> shardCount() {
+        return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamEncryption")
       private final @Nullable Output<StreamEncryptionArgs> streamEncryption;
 
-    public Output<StreamEncryptionArgs> getStreamEncryption() {
-        return this.streamEncryption == null ? Output.empty() : this.streamEncryption;
+    public Output<StreamEncryptionArgs> streamEncryption() {
+        return this.streamEncryption == null ? Codegen.empty() : this.streamEncryption;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamModeDetails")
       private final @Nullable Output<StreamModeDetailsArgs> streamModeDetails;
 
-    public Output<StreamModeDetailsArgs> getStreamModeDetails() {
-        return this.streamModeDetails == null ? Output.empty() : this.streamModeDetails;
+    public Output<StreamModeDetailsArgs> streamModeDetails() {
+        return this.streamModeDetails == null ? Codegen.empty() : this.streamModeDetails;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Output<List<StreamTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<StreamTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StreamArgs(
@@ -101,12 +102,12 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.name = Output.empty();
-        this.retentionPeriodHours = Output.empty();
-        this.shardCount = Output.empty();
-        this.streamEncryption = Output.empty();
-        this.streamModeDetails = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.retentionPeriodHours = Codegen.empty();
+        this.shardCount = Codegen.empty();
+        this.streamEncryption = Codegen.empty();
+        this.streamModeDetails = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder retentionPeriodHours(@Nullable Output<Integer> retentionPeriodHours) {
@@ -152,7 +153,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPeriodHours(@Nullable Integer retentionPeriodHours) {
-            this.retentionPeriodHours = Output.ofNullable(retentionPeriodHours);
+            this.retentionPeriodHours = Codegen.ofNullable(retentionPeriodHours);
             return this;
         }
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
@@ -160,7 +161,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Output.ofNullable(shardCount);
+            this.shardCount = Codegen.ofNullable(shardCount);
             return this;
         }
         public Builder streamEncryption(@Nullable Output<StreamEncryptionArgs> streamEncryption) {
@@ -168,7 +169,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamEncryption(@Nullable StreamEncryptionArgs streamEncryption) {
-            this.streamEncryption = Output.ofNullable(streamEncryption);
+            this.streamEncryption = Codegen.ofNullable(streamEncryption);
             return this;
         }
         public Builder streamModeDetails(@Nullable Output<StreamModeDetailsArgs> streamModeDetails) {
@@ -176,7 +177,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamModeDetails(@Nullable StreamModeDetailsArgs streamModeDetails) {
-            this.streamModeDetails = Output.ofNullable(streamModeDetails);
+            this.streamModeDetails = Codegen.ofNullable(streamModeDetails);
             return this;
         }
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
@@ -184,7 +185,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StreamTagArgs... tags) {

@@ -25,7 +25,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="bmcDefaultUserPassword")
       private final @Nullable SecretResponse bmcDefaultUserPassword;
 
-    public Optional<SecretResponse> getBmcDefaultUserPassword() {
+    public Optional<SecretResponse> bmcDefaultUserPassword() {
         return this.bmcDefaultUserPassword == null ? Optional.empty() : Optional.ofNullable(this.bmcDefaultUserPassword);
     }
 
@@ -36,7 +36,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="hcsDataVolumeBitLockerExternalKey")
       private final @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
 
-    public Optional<SecretResponse> getHcsDataVolumeBitLockerExternalKey() {
+    public Optional<SecretResponse> hcsDataVolumeBitLockerExternalKey() {
         return this.hcsDataVolumeBitLockerExternalKey == null ? Optional.empty() : Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
     }
 
@@ -47,7 +47,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="hcsInternalVolumeBitLockerExternalKey")
       private final @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
 
-    public Optional<SecretResponse> getHcsInternalVolumeBitLockerExternalKey() {
+    public Optional<SecretResponse> hcsInternalVolumeBitLockerExternalKey() {
         return this.hcsInternalVolumeBitLockerExternalKey == null ? Optional.empty() : Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
     }
 
@@ -58,7 +58,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="rotateKeyForDataVolumeBitlocker")
       private final @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
 
-    public Optional<SecretResponse> getRotateKeyForDataVolumeBitlocker() {
+    public Optional<SecretResponse> rotateKeyForDataVolumeBitlocker() {
         return this.rotateKeyForDataVolumeBitlocker == null ? Optional.empty() : Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
     }
 
@@ -69,7 +69,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="rotateKeysForSedDrivesSerialized")
       private final @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
 
-    public Optional<SecretResponse> getRotateKeysForSedDrivesSerialized() {
+    public Optional<SecretResponse> rotateKeysForSedDrivesSerialized() {
         return this.rotateKeysForSedDrivesSerialized == null ? Optional.empty() : Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
     }
 
@@ -80,7 +80,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sedEncryptionExternalKey")
       private final @Nullable SecretResponse sedEncryptionExternalKey;
 
-    public Optional<SecretResponse> getSedEncryptionExternalKey() {
+    public Optional<SecretResponse> sedEncryptionExternalKey() {
         return this.sedEncryptionExternalKey == null ? Optional.empty() : Optional.ofNullable(this.sedEncryptionExternalKey);
     }
 
@@ -91,7 +91,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sedEncryptionExternalKeyId")
       private final @Nullable SecretResponse sedEncryptionExternalKeyId;
 
-    public Optional<SecretResponse> getSedEncryptionExternalKeyId() {
+    public Optional<SecretResponse> sedEncryptionExternalKeyId() {
         return this.sedEncryptionExternalKeyId == null ? Optional.empty() : Optional.ofNullable(this.sedEncryptionExternalKeyId);
     }
 
@@ -102,7 +102,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="systemVolumeBitLockerRecoveryKey")
       private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
-    public Optional<SecretResponse> getSystemVolumeBitLockerRecoveryKey() {
+    public Optional<SecretResponse> systemVolumeBitLockerRecoveryKey() {
         return this.systemVolumeBitLockerRecoveryKey == null ? Optional.empty() : Optional.ofNullable(this.systemVolumeBitLockerRecoveryKey);
     }
 

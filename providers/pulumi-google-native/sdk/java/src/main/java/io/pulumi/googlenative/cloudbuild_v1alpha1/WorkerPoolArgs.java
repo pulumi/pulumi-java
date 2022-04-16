@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.enums.WorkerPoolRegionsItem;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.inputs.WorkerConfigArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regions")
       private final @Nullable Output<List<WorkerPoolRegionsItem>> regions;
 
-    public Output<List<WorkerPoolRegionsItem>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+    public Output<List<WorkerPoolRegionsItem>> regions() {
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;
 
-    public Output<WorkerConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Output.empty() : this.workerConfig;
+    public Output<WorkerConfigArgs> workerConfig() {
+        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;
 
-    public Output<String> getWorkerCount() {
-        return this.workerCount == null ? Output.empty() : this.workerCount;
+    public Output<String> workerCount() {
+        return this.workerCount == null ? Codegen.empty() : this.workerCount;
     }
 
     public WorkerPoolArgs(
@@ -86,11 +87,11 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolArgs() {
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.regions = Output.empty();
-        this.workerConfig = Output.empty();
-        this.workerCount = Output.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.regions = Codegen.empty();
+        this.workerConfig = Codegen.empty();
+        this.workerCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -134,7 +135,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder regions(@Nullable Output<List<WorkerPoolRegionsItem>> regions) {
@@ -142,7 +143,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regions(@Nullable List<WorkerPoolRegionsItem> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(WorkerPoolRegionsItem... regions) {
@@ -153,7 +154,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
-            this.workerConfig = Output.ofNullable(workerConfig);
+            this.workerConfig = Codegen.ofNullable(workerConfig);
             return this;
         }
         public Builder workerCount(@Nullable Output<String> workerCount) {
@@ -161,7 +162,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerCount(@Nullable String workerCount) {
-            this.workerCount = Output.ofNullable(workerCount);
+            this.workerCount = Codegen.ofNullable(workerCount);
             return this;
         }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(name, project, regions, workerConfig, workerCount);

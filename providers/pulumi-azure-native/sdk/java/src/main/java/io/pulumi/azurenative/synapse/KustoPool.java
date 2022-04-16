@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The Kusto Pool data ingestion URI.
      * 
      */
-    public Output<String> getDataIngestionUri() {
+    public Output<String> dataIngestionUri() {
         return this.dataIngestionUri;
     }
     /**
@@ -58,7 +59,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The engine type
      * 
      */
-    public Output</* @Nullable */ String> getEngineType() {
+    public Output</* @Nullable */ String> engineType() {
         return this.engineType;
     }
     /**
@@ -72,7 +73,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -86,7 +87,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -100,7 +101,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +129,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The SKU of the kusto pool.
      * 
      */
-    public Output<AzureSkuResponse> getSku() {
+    public Output<AzureSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -142,7 +143,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The state of the resource.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -156,7 +157,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The reason for the Kusto Pool's current state.
      * 
      */
-    public Output<String> getStateReason() {
+    public Output<String> stateReason() {
         return this.stateReason;
     }
     /**
@@ -170,7 +171,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -184,7 +185,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -198,7 +199,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -212,7 +213,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The Kusto Pool URI.
      * 
      */
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
     /**
@@ -226,7 +227,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @return The workspace unique identifier.
      * 
      */
-    public Output</* @Nullable */ String> getWorkspaceUid() {
+    public Output</* @Nullable */ String> workspaceUid() {
         return this.workspaceUid;
     }
 
@@ -252,7 +253,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KustoPool(String name, KustoPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:kustoPool", name, args == null ? KustoPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:synapse:kustoPool", name, args == null ? KustoPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KustoPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

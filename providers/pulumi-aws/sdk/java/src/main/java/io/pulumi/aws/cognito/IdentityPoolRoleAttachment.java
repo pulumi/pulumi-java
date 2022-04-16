@@ -10,6 +10,7 @@ import io.pulumi.aws.cognito.outputs.IdentityPoolRoleAttachmentRoleMapping;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class IdentityPoolRoleAttachment extends io.pulumi.resources.CustomResour
      * @return An identity pool ID in the format REGION:GUID.
      * 
      */
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
     /**
@@ -56,7 +57,7 @@ public class IdentityPoolRoleAttachment extends io.pulumi.resources.CustomResour
      * @return A List of Role Mapping.
      * 
      */
-    public Output</* @Nullable */ List<IdentityPoolRoleAttachmentRoleMapping>> getRoleMappings() {
+    public Output</* @Nullable */ List<IdentityPoolRoleAttachmentRoleMapping>> roleMappings() {
         return this.roleMappings;
     }
     /**
@@ -70,7 +71,7 @@ public class IdentityPoolRoleAttachment extends io.pulumi.resources.CustomResour
      * @return The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
      * 
      */
-    public Output<Map<String,String>> getRoles() {
+    public Output<Map<String,String>> roles() {
         return this.roles;
     }
 
@@ -96,7 +97,7 @@ public class IdentityPoolRoleAttachment extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityPoolRoleAttachment(String name, IdentityPoolRoleAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment", name, args == null ? IdentityPoolRoleAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment", name, args == null ? IdentityPoolRoleAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityPoolRoleAttachment(String name, Output<String> id, @Nullable IdentityPoolRoleAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MySqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -35,7 +36,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -47,8 +48,8 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
     }
 
     private ConnectToTargetAzureDbForMySqlTaskInputArgs() {
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {

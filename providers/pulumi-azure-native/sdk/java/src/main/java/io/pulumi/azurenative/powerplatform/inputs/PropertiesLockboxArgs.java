@@ -7,6 +7,7 @@ import io.pulumi.azurenative.powerplatform.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,State>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public PropertiesLockboxArgs(@Nullable Output<Either<String,State>> state) {
@@ -36,7 +37,7 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PropertiesLockboxArgs() {
-        this.state = Output.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public PropertiesLockboxArgs build() {
             return new PropertiesLockboxArgs(state);

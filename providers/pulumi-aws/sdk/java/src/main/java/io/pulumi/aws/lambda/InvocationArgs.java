@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -33,7 +34,7 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="input", required=true)
       private final Output<String> input;
 
-    public Output<String> getInput() {
+    public Output<String> input() {
         return this.input;
     }
 
@@ -44,15 +45,15 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
-        return this.qualifier == null ? Output.empty() : this.qualifier;
+    public Output<String> qualifier() {
+        return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+    public Output<Map<String,String>> triggers() {
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public InvocationArgs(
@@ -67,10 +68,10 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InvocationArgs() {
-        this.functionName = Output.empty();
-        this.input = Output.empty();
-        this.qualifier = Output.empty();
-        this.triggers = Output.empty();
+        this.functionName = Codegen.empty();
+        this.input = Codegen.empty();
+        this.qualifier = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Output.ofNullable(qualifier);
+            this.qualifier = Codegen.ofNullable(qualifier);
             return this;
         }
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
@@ -128,7 +129,7 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }        public InvocationArgs build() {
             return new InvocationArgs(functionName, input, qualifier, triggers);

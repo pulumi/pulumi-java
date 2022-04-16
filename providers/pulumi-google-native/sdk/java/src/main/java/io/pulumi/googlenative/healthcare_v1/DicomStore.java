@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.DicomStoreArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.NotificationConfigResponse;
@@ -30,7 +31,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -44,7 +45,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +59,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return Notification destination for new DICOM instances. Supplied by the client.
      * 
      */
-    public Output<NotificationConfigResponse> getNotificationConfig() {
+    public Output<NotificationConfigResponse> notificationConfig() {
         return this.notificationConfig;
     }
 
@@ -84,7 +85,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DicomStore(String name, DicomStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1:DicomStore", name, args == null ? DicomStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1:DicomStore", name, args == null ? DicomStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DicomStore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

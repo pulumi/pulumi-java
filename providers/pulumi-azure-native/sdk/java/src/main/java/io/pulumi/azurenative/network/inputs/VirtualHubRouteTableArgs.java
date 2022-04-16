@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
     @Import(name="routes")
       private final @Nullable Output<List<VirtualHubRouteArgs>> routes;
 
-    public Output<List<VirtualHubRouteArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+    public Output<List<VirtualHubRouteArgs>> routes() {
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     public VirtualHubRouteTableArgs(@Nullable Output<List<VirtualHubRouteArgs>> routes) {
@@ -35,7 +36,7 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
     }
 
     private VirtualHubRouteTableArgs() {
-        this.routes = Output.empty();
+        this.routes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder routes(@Nullable List<VirtualHubRouteArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(VirtualHubRouteArgs... routes) {

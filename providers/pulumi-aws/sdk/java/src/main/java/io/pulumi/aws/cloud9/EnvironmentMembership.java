@@ -9,6 +9,7 @@ import io.pulumi.aws.cloud9.inputs.EnvironmentMembershipState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class EnvironmentMembership extends io.pulumi.resources.CustomResource {
      * @return The ID of the environment that contains the environment member you want to add.
      * 
      */
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -53,7 +54,7 @@ public class EnvironmentMembership extends io.pulumi.resources.CustomResource {
      * @return The type of environment member permissions you want to associate with this environment member. Allowed values are `read-only` and `read-write` .
      * 
      */
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
     /**
@@ -67,7 +68,7 @@ public class EnvironmentMembership extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the environment member you want to add.
      * 
      */
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
     /**
@@ -81,7 +82,7 @@ public class EnvironmentMembership extends io.pulumi.resources.CustomResource {
      * @return he user ID in AWS Identity and Access Management (AWS IAM) of the environment member.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -107,7 +108,7 @@ public class EnvironmentMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvironmentMembership(String name, EnvironmentMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloud9/environmentMembership:EnvironmentMembership", name, args == null ? EnvironmentMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloud9/environmentMembership:EnvironmentMembership", name, args == null ? EnvironmentMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvironmentMembership(String name, Output<String> id, @Nullable EnvironmentMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

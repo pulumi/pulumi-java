@@ -26,7 +26,7 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
     @Import(name="keyVaultKeyUri")
       private final @Nullable String keyVaultKeyUri;
 
-    public Optional<String> getKeyVaultKeyUri() {
+    public Optional<String> keyVaultKeyUri() {
         return this.keyVaultKeyUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultKeyUri);
     }
 
@@ -37,7 +37,7 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
     @Import(name="offerThroughput")
       private final @Nullable Double offerThroughput;
 
-    public Optional<Double> getOfferThroughput() {
+    public Optional<Double> offerThroughput() {
         return this.offerThroughput == null ? Optional.empty() : Optional.ofNullable(this.offerThroughput);
     }
 

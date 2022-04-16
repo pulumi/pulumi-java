@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
 
-    public Output<String> getBackupPolicyName() {
-        return this.backupPolicyName == null ? Output.empty() : this.backupPolicyName;
+    public Output<String> backupPolicyName() {
+        return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
 
-    public Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -70,10 +71,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.backupPolicyName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.vaultName = Output.empty();
+        this.backupPolicyName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
-            this.backupPolicyName = Output.ofNullable(backupPolicyName);
+            this.backupPolicyName = Codegen.ofNullable(backupPolicyName);
             return this;
         }
         public Builder properties(@Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties) {
@@ -115,7 +116,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

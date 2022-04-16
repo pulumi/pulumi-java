@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
+    public Output<String> targetNamespace() {
+        return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 
     public ScopeNamespaceArgs(@Nullable Output<String> targetNamespace) {
@@ -34,7 +35,7 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeNamespaceArgs() {
-        this.targetNamespace = Output.empty();
+        this.targetNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Output.ofNullable(targetNamespace);
+            this.targetNamespace = Codegen.ofNullable(targetNamespace);
             return this;
         }        public ScopeNamespaceArgs build() {
             return new ScopeNamespaceArgs(targetNamespace);

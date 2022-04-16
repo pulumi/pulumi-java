@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class VirtualNodeSpecBackendGetArgs extends io.pulumi.resources.Res
     @Import(name="virtualService", required=true)
       private final Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceGetArgs> getVirtualService() {
+    public Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService() {
         return this.virtualService;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualNodeSpecBackendGetArgs extends io.pulumi.resources.Res
     }
 
     private VirtualNodeSpecBackendGetArgs() {
-        this.virtualService = Output.empty();
+        this.virtualService = Codegen.empty();
     }
 
     public static Builder builder() {

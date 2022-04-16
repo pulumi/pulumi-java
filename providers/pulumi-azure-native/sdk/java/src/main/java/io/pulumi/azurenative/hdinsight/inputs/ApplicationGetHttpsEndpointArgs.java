@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     @Import(name="accessModes")
       private final @Nullable Output<List<String>> accessModes;
 
-    public Output<List<String>> getAccessModes() {
-        return this.accessModes == null ? Output.empty() : this.accessModes;
+    public Output<List<String>> accessModes() {
+        return this.accessModes == null ? Codegen.empty() : this.accessModes;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Output.empty() : this.destinationPort;
+    public Output<Integer> destinationPort() {
+        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     @Import(name="disableGatewayAuth")
       private final @Nullable Output<Boolean> disableGatewayAuth;
 
-    public Output<Boolean> getDisableGatewayAuth() {
-        return this.disableGatewayAuth == null ? Output.empty() : this.disableGatewayAuth;
+    public Output<Boolean> disableGatewayAuth() {
+        return this.disableGatewayAuth == null ? Codegen.empty() : this.disableGatewayAuth;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
+    public Output<String> privateIPAddress() {
+        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     @Import(name="subDomainSuffix")
       private final @Nullable Output<String> subDomainSuffix;
 
-    public Output<String> getSubDomainSuffix() {
-        return this.subDomainSuffix == null ? Output.empty() : this.subDomainSuffix;
+    public Output<String> subDomainSuffix() {
+        return this.subDomainSuffix == null ? Codegen.empty() : this.subDomainSuffix;
     }
 
     public ApplicationGetHttpsEndpointArgs(
@@ -90,11 +91,11 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     }
 
     private ApplicationGetHttpsEndpointArgs() {
-        this.accessModes = Output.empty();
-        this.destinationPort = Output.empty();
-        this.disableGatewayAuth = Output.empty();
-        this.privateIPAddress = Output.empty();
-        this.subDomainSuffix = Output.empty();
+        this.accessModes = Codegen.empty();
+        this.destinationPort = Codegen.empty();
+        this.disableGatewayAuth = Codegen.empty();
+        this.privateIPAddress = Codegen.empty();
+        this.subDomainSuffix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder accessModes(@Nullable List<String> accessModes) {
-            this.accessModes = Output.ofNullable(accessModes);
+            this.accessModes = Codegen.ofNullable(accessModes);
             return this;
         }
         public Builder accessModes(String... accessModes) {
@@ -141,7 +142,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Output.ofNullable(destinationPort);
+            this.destinationPort = Codegen.ofNullable(destinationPort);
             return this;
         }
         public Builder disableGatewayAuth(@Nullable Output<Boolean> disableGatewayAuth) {
@@ -149,7 +150,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
-            this.disableGatewayAuth = Output.ofNullable(disableGatewayAuth);
+            this.disableGatewayAuth = Codegen.ofNullable(disableGatewayAuth);
             return this;
         }
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
@@ -157,7 +158,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Output.ofNullable(privateIPAddress);
+            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
             return this;
         }
         public Builder subDomainSuffix(@Nullable Output<String> subDomainSuffix) {
@@ -165,7 +166,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
-            this.subDomainSuffix = Output.ofNullable(subDomainSuffix);
+            this.subDomainSuffix = Codegen.ofNullable(subDomainSuffix);
             return this;
         }        public ApplicationGetHttpsEndpointArgs build() {
             return new ApplicationGetHttpsEndpointArgs(accessModes, destinationPort, disableGatewayAuth, privateIPAddress, subDomainSuffix);

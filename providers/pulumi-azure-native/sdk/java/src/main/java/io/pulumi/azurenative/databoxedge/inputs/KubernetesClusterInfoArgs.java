@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class KubernetesClusterInfoArgs extends io.pulumi.resources.Resourc
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -33,7 +34,7 @@ public final class KubernetesClusterInfoArgs extends io.pulumi.resources.Resourc
     }
 
     private KubernetesClusterInfoArgs() {
-        this.version = Output.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {

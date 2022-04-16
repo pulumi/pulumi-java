@@ -12,6 +12,7 @@ import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionUpdateWirelessGatew
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return TaskDefinition arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +49,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
      * 
      */
-    public Output<Boolean> getAutoCreateTasks() {
+    public Output<Boolean> autoCreateTasks() {
         return this.autoCreateTasks;
     }
     /**
@@ -62,7 +63,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return The list of task definitions.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> getLoRaWANUpdateGatewayTaskEntry() {
+    public Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> loRaWANUpdateGatewayTaskEntry() {
         return this.loRaWANUpdateGatewayTaskEntry;
     }
     /**
@@ -76,7 +77,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return The name of the new resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -90,7 +91,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<TaskDefinitionTag>> tags() {
         return this.tags;
     }
     /**
@@ -104,7 +105,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return A filter to list only the wireless gateway task definitions that use this task definition type
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionType> getTaskDefinitionType() {
+    public Output</* @Nullable */ TaskDefinitionType> taskDefinitionType() {
         return this.taskDefinitionType;
     }
     /**
@@ -118,7 +119,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Information about the gateways to update.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> getUpdate() {
+    public Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> update() {
         return this.update;
     }
 
@@ -144,7 +145,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TaskDefinition(String name, TaskDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotwireless:TaskDefinition", name, args == null ? TaskDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotwireless:TaskDefinition", name, args == null ? TaskDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TaskDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

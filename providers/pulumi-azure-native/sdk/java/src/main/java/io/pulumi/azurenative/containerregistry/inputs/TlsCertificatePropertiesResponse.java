@@ -23,7 +23,7 @@ public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -34,7 +34,7 @@ public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

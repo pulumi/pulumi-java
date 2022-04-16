@@ -5,6 +5,7 @@ package io.pulumi.googlenative.artifactregistry_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -28,36 +29,36 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="packageId", required=true)
       private final Output<String> packageId;
 
-    public Output<String> getPackageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="repositoryId", required=true)
       private final Output<String> repositoryId;
 
-    public Output<String> getRepositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
     @Import(name="tagId")
       private final @Nullable Output<String> tagId;
 
-    public Output<String> getTagId() {
-        return this.tagId == null ? Output.empty() : this.tagId;
+    public Output<String> tagId() {
+        return this.tagId == null ? Codegen.empty() : this.tagId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public TagArgs(
@@ -89,13 +90,13 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.packageId = Output.empty();
-        this.project = Output.empty();
-        this.repositoryId = Output.empty();
-        this.tagId = Output.empty();
-        this.version = Output.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.packageId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.repositoryId = Codegen.empty();
+        this.tagId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -143,7 +144,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder packageId(Output<String> packageId) {
@@ -159,7 +160,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder repositoryId(Output<String> repositoryId) {
@@ -175,7 +176,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagId(@Nullable String tagId) {
-            this.tagId = Output.ofNullable(tagId);
+            this.tagId = Codegen.ofNullable(tagId);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -183,7 +184,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public TagArgs build() {
             return new TagArgs(location, name, packageId, project, repositoryId, tagId, version);

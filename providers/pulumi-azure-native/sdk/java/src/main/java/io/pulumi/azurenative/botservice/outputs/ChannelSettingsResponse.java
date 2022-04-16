@@ -86,63 +86,63 @@ public final class ChannelSettingsResponse {
      * The bot icon url
      * 
     */
-    public Optional<String> getBotIconUrl() {
+    public Optional<String> botIconUrl() {
         return Optional.ofNullable(this.botIconUrl);
     }
     /**
      * The bot id
      * 
     */
-    public Optional<String> getBotId() {
+    public Optional<String> botId() {
         return Optional.ofNullable(this.botId);
     }
     /**
      * The channel display name
      * 
     */
-    public Optional<String> getChannelDisplayName() {
+    public Optional<String> channelDisplayName() {
         return Optional.ofNullable(this.channelDisplayName);
     }
     /**
      * The channel id
      * 
     */
-    public Optional<String> getChannelId() {
+    public Optional<String> channelId() {
         return Optional.ofNullable(this.channelId);
     }
     /**
      * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
      * 
     */
-    public Optional<Boolean> getDisableLocalAuth() {
+    public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
      * The extensionKey1
      * 
     */
-    public Optional<String> getExtensionKey1() {
+    public Optional<String> extensionKey1() {
         return Optional.ofNullable(this.extensionKey1);
     }
     /**
      * The extensionKey2
      * 
     */
-    public Optional<String> getExtensionKey2() {
+    public Optional<String> extensionKey2() {
         return Optional.ofNullable(this.extensionKey2);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
     */
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * The list of sites
      * 
     */
-    public List<SiteResponse> getSites() {
+    public List<SiteResponse> sites() {
         return this.sites == null ? List.of() : this.sites;
     }
 

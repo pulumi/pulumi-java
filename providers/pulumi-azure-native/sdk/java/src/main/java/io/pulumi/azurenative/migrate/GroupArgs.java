@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.migrate.inputs.GroupPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+    public Output<String> groupName() {
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -55,7 +56,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<GroupPropertiesArgs> properties;
 
-    public Output<GroupPropertiesArgs> getProperties() {
+    public Output<GroupPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -66,7 +67,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,11 +85,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.eTag = Output.empty();
-        this.groupName = Output.empty();
-        this.projectName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.eTag = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -132,7 +133,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder projectName(Output<String> projectName) {

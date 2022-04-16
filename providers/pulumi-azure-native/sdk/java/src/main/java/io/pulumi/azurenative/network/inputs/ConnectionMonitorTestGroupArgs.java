@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
+    public Output<List<String>> destinations() {
         return this.destinations;
     }
 
@@ -38,8 +39,8 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="disable")
       private final @Nullable Output<Boolean> disable;
 
-    public Output<Boolean> getDisable() {
-        return this.disable == null ? Output.empty() : this.disable;
+    public Output<Boolean> disable() {
+        return this.disable == null ? Codegen.empty() : this.disable;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,7 +61,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="sources", required=true)
       private final Output<List<String>> sources;
 
-    public Output<List<String>> getSources() {
+    public Output<List<String>> sources() {
         return this.sources;
     }
 
@@ -71,7 +72,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="testConfigurations", required=true)
       private final Output<List<String>> testConfigurations;
 
-    public Output<List<String>> getTestConfigurations() {
+    public Output<List<String>> testConfigurations() {
         return this.testConfigurations;
     }
 
@@ -89,11 +90,11 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     }
 
     private ConnectionMonitorTestGroupArgs() {
-        this.destinations = Output.empty();
-        this.disable = Output.empty();
-        this.name = Output.empty();
-        this.sources = Output.empty();
-        this.testConfigurations = Output.empty();
+        this.destinations = Codegen.empty();
+        this.disable = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sources = Codegen.empty();
+        this.testConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder disable(@Nullable Boolean disable) {
-            this.disable = Output.ofNullable(disable);
+            this.disable = Codegen.ofNullable(disable);
             return this;
         }
         public Builder name(Output<String> name) {

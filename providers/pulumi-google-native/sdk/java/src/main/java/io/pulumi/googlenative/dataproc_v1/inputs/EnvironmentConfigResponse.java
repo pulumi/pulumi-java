@@ -24,7 +24,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="executionConfig", required=true)
       private final ExecutionConfigResponse executionConfig;
 
-    public ExecutionConfigResponse getExecutionConfig() {
+    public ExecutionConfigResponse executionConfig() {
         return this.executionConfig;
     }
 
@@ -35,7 +35,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="peripheralsConfig", required=true)
       private final PeripheralsConfigResponse peripheralsConfig;
 
-    public PeripheralsConfigResponse getPeripheralsConfig() {
+    public PeripheralsConfigResponse peripheralsConfig() {
         return this.peripheralsConfig;
     }
 

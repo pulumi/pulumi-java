@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+    public Output<String> dataType() {
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isConfigurationParameter")
       private final @Nullable Output<Boolean> isConfigurationParameter;
 
-    public Output<Boolean> getIsConfigurationParameter() {
-        return this.isConfigurationParameter == null ? Output.empty() : this.isConfigurationParameter;
+    public Output<Boolean> isConfigurationParameter() {
+        return this.isConfigurationParameter == null ? Codegen.empty() : this.isConfigurationParameter;
     }
 
     public FunctionInputArgs(
@@ -49,8 +50,8 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionInputArgs() {
-        this.dataType = Output.empty();
-        this.isConfigurationParameter = Output.empty();
+        this.dataType = Codegen.empty();
+        this.isConfigurationParameter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder isConfigurationParameter(@Nullable Output<Boolean> isConfigurationParameter) {
@@ -88,7 +89,7 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
-            this.isConfigurationParameter = Output.ofNullable(isConfigurationParameter);
+            this.isConfigurationParameter = Codegen.ofNullable(isConfigurationParameter);
             return this;
         }        public FunctionInputArgs build() {
             return new FunctionInputArgs(dataType, isConfigurationParameter);

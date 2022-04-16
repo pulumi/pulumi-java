@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<ServiceIamMemberConditionGetArgs> condition;
 
-    public Output<ServiceIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<ServiceIamMemberConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -29,15 +30,15 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+    public Output<String> member() {
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -49,15 +50,15 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     public ServiceIamMemberState(
@@ -74,11 +75,11 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceIamMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
-        this.serviceName = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable ServiceIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -122,7 +123,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -130,7 +131,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -138,7 +139,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -146,7 +147,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }        public ServiceIamMemberState build() {
             return new ServiceIamMemberState(condition, etag, member, role, serviceName);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.NamespaceIamBindingArgs;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingState;
@@ -61,7 +62,7 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=NamespaceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ NamespaceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ NamespaceIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ NamespaceIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,13 +76,13 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -95,7 +96,7 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -139,7 +140,7 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceIamBinding(String name, NamespaceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, args == null ? NamespaceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, args == null ? NamespaceIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NamespaceIamBinding(String name, Output<String> id, @Nullable NamespaceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

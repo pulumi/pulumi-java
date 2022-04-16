@@ -9,6 +9,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="inputs", required=true)
       private final Output<List<NodeInputArgs>> inputs;
 
-    public Output<List<NodeInputArgs>> getInputs() {
+    public Output<List<NodeInputArgs>> inputs() {
         return this.inputs;
     }
 
@@ -40,7 +41,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,7 +52,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="preset", required=true)
       private final Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
 
-    public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> getPreset() {
+    public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset() {
         return this.preset;
     }
 
@@ -63,7 +64,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -79,10 +80,10 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncoderProcessorArgs() {
-        this.inputs = Output.empty();
-        this.name = Output.empty();
-        this.preset = Output.empty();
-        this.type = Output.empty();
+        this.inputs = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preset = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

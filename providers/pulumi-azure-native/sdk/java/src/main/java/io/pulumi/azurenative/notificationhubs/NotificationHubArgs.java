@@ -13,6 +13,7 @@ import io.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import io.pulumi.azurenative.notificationhubs.inputs.WnsCredentialArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,8 +32,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="admCredential")
       private final @Nullable Output<AdmCredentialArgs> admCredential;
 
-    public Output<AdmCredentialArgs> getAdmCredential() {
-        return this.admCredential == null ? Output.empty() : this.admCredential;
+    public Output<AdmCredentialArgs> admCredential() {
+        return this.admCredential == null ? Codegen.empty() : this.admCredential;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="apnsCredential")
       private final @Nullable Output<ApnsCredentialArgs> apnsCredential;
 
-    public Output<ApnsCredentialArgs> getApnsCredential() {
-        return this.apnsCredential == null ? Output.empty() : this.apnsCredential;
+    public Output<ApnsCredentialArgs> apnsCredential() {
+        return this.apnsCredential == null ? Codegen.empty() : this.apnsCredential;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="authorizationRules")
       private final @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
 
-    public Output<List<SharedAccessAuthorizationRulePropertiesArgs>> getAuthorizationRules() {
-        return this.authorizationRules == null ? Output.empty() : this.authorizationRules;
+    public Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules() {
+        return this.authorizationRules == null ? Codegen.empty() : this.authorizationRules;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="baiduCredential")
       private final @Nullable Output<BaiduCredentialArgs> baiduCredential;
 
-    public Output<BaiduCredentialArgs> getBaiduCredential() {
-        return this.baiduCredential == null ? Output.empty() : this.baiduCredential;
+    public Output<BaiduCredentialArgs> baiduCredential() {
+        return this.baiduCredential == null ? Codegen.empty() : this.baiduCredential;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="gcmCredential")
       private final @Nullable Output<GcmCredentialArgs> gcmCredential;
 
-    public Output<GcmCredentialArgs> getGcmCredential() {
-        return this.gcmCredential == null ? Output.empty() : this.gcmCredential;
+    public Output<GcmCredentialArgs> gcmCredential() {
+        return this.gcmCredential == null ? Codegen.empty() : this.gcmCredential;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="mpnsCredential")
       private final @Nullable Output<MpnsCredentialArgs> mpnsCredential;
 
-    public Output<MpnsCredentialArgs> getMpnsCredential() {
-        return this.mpnsCredential == null ? Output.empty() : this.mpnsCredential;
+    public Output<MpnsCredentialArgs> mpnsCredential() {
+        return this.mpnsCredential == null ? Codegen.empty() : this.mpnsCredential;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -130,8 +131,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="notificationHubName")
       private final @Nullable Output<String> notificationHubName;
 
-    public Output<String> getNotificationHubName() {
-        return this.notificationHubName == null ? Output.empty() : this.notificationHubName;
+    public Output<String> notificationHubName() {
+        return this.notificationHubName == null ? Codegen.empty() : this.notificationHubName;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="registrationTtl")
       private final @Nullable Output<String> registrationTtl;
 
-    public Output<String> getRegistrationTtl() {
-        return this.registrationTtl == null ? Output.empty() : this.registrationTtl;
+    public Output<String> registrationTtl() {
+        return this.registrationTtl == null ? Codegen.empty() : this.registrationTtl;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -163,8 +164,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="wnsCredential")
       private final @Nullable Output<WnsCredentialArgs> wnsCredential;
 
-    public Output<WnsCredentialArgs> getWnsCredential() {
-        return this.wnsCredential == null ? Output.empty() : this.wnsCredential;
+    public Output<WnsCredentialArgs> wnsCredential() {
+        return this.wnsCredential == null ? Codegen.empty() : this.wnsCredential;
     }
 
     public NotificationHubArgs(
@@ -223,21 +224,21 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NotificationHubArgs() {
-        this.admCredential = Output.empty();
-        this.apnsCredential = Output.empty();
-        this.authorizationRules = Output.empty();
-        this.baiduCredential = Output.empty();
-        this.gcmCredential = Output.empty();
-        this.location = Output.empty();
-        this.mpnsCredential = Output.empty();
-        this.name = Output.empty();
-        this.namespaceName = Output.empty();
-        this.notificationHubName = Output.empty();
-        this.registrationTtl = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.wnsCredential = Output.empty();
+        this.admCredential = Codegen.empty();
+        this.apnsCredential = Codegen.empty();
+        this.authorizationRules = Codegen.empty();
+        this.baiduCredential = Codegen.empty();
+        this.gcmCredential = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mpnsCredential = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.notificationHubName = Codegen.empty();
+        this.registrationTtl = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.wnsCredential = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -293,7 +294,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder admCredential(@Nullable AdmCredentialArgs admCredential) {
-            this.admCredential = Output.ofNullable(admCredential);
+            this.admCredential = Codegen.ofNullable(admCredential);
             return this;
         }
         public Builder apnsCredential(@Nullable Output<ApnsCredentialArgs> apnsCredential) {
@@ -301,7 +302,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder apnsCredential(@Nullable ApnsCredentialArgs apnsCredential) {
-            this.apnsCredential = Output.ofNullable(apnsCredential);
+            this.apnsCredential = Codegen.ofNullable(apnsCredential);
             return this;
         }
         public Builder authorizationRules(@Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules) {
@@ -309,7 +310,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder authorizationRules(@Nullable List<SharedAccessAuthorizationRulePropertiesArgs> authorizationRules) {
-            this.authorizationRules = Output.ofNullable(authorizationRules);
+            this.authorizationRules = Codegen.ofNullable(authorizationRules);
             return this;
         }
         public Builder authorizationRules(SharedAccessAuthorizationRulePropertiesArgs... authorizationRules) {
@@ -320,7 +321,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder baiduCredential(@Nullable BaiduCredentialArgs baiduCredential) {
-            this.baiduCredential = Output.ofNullable(baiduCredential);
+            this.baiduCredential = Codegen.ofNullable(baiduCredential);
             return this;
         }
         public Builder gcmCredential(@Nullable Output<GcmCredentialArgs> gcmCredential) {
@@ -328,7 +329,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder gcmCredential(@Nullable GcmCredentialArgs gcmCredential) {
-            this.gcmCredential = Output.ofNullable(gcmCredential);
+            this.gcmCredential = Codegen.ofNullable(gcmCredential);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -336,7 +337,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mpnsCredential(@Nullable Output<MpnsCredentialArgs> mpnsCredential) {
@@ -344,7 +345,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder mpnsCredential(@Nullable MpnsCredentialArgs mpnsCredential) {
-            this.mpnsCredential = Output.ofNullable(mpnsCredential);
+            this.mpnsCredential = Codegen.ofNullable(mpnsCredential);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -352,7 +353,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {
@@ -368,7 +369,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder notificationHubName(@Nullable String notificationHubName) {
-            this.notificationHubName = Output.ofNullable(notificationHubName);
+            this.notificationHubName = Codegen.ofNullable(notificationHubName);
             return this;
         }
         public Builder registrationTtl(@Nullable Output<String> registrationTtl) {
@@ -376,7 +377,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder registrationTtl(@Nullable String registrationTtl) {
-            this.registrationTtl = Output.ofNullable(registrationTtl);
+            this.registrationTtl = Codegen.ofNullable(registrationTtl);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -392,7 +393,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -400,7 +401,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder wnsCredential(@Nullable Output<WnsCredentialArgs> wnsCredential) {
@@ -408,7 +409,7 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder wnsCredential(@Nullable WnsCredentialArgs wnsCredential) {
-            this.wnsCredential = Output.ofNullable(wnsCredential);
+            this.wnsCredential = Codegen.ofNullable(wnsCredential);
             return this;
         }        public NotificationHubArgs build() {
             return new NotificationHubArgs(admCredential, apnsCredential, authorizationRules, baiduCredential, gcmCredential, location, mpnsCredential, name, namespaceName, notificationHubName, registrationTtl, resourceGroupName, sku, tags, wnsCredential);

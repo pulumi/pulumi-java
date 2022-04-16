@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ProjectSecondarySourceGitSubmodulesConfigArgs extends io.pulu
     @Import(name="fetchSubmodules", required=true)
       private final Output<Boolean> fetchSubmodules;
 
-    public Output<Boolean> getFetchSubmodules() {
+    public Output<Boolean> fetchSubmodules() {
         return this.fetchSubmodules;
     }
 
@@ -29,7 +30,7 @@ public final class ProjectSecondarySourceGitSubmodulesConfigArgs extends io.pulu
     }
 
     private ProjectSecondarySourceGitSubmodulesConfigArgs() {
-        this.fetchSubmodules = Output.empty();
+        this.fetchSubmodules = Codegen.empty();
     }
 
     public static Builder builder() {

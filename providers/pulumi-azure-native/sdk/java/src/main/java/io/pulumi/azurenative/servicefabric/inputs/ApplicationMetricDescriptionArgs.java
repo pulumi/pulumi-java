@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="maximumCapacity")
       private final @Nullable Output<Double> maximumCapacity;
 
-    public Output<Double> getMaximumCapacity() {
-        return this.maximumCapacity == null ? Output.empty() : this.maximumCapacity;
+    public Output<Double> maximumCapacity() {
+        return this.maximumCapacity == null ? Codegen.empty() : this.maximumCapacity;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="reservationCapacity")
       private final @Nullable Output<Double> reservationCapacity;
 
-    public Output<Double> getReservationCapacity() {
-        return this.reservationCapacity == null ? Output.empty() : this.reservationCapacity;
+    public Output<Double> reservationCapacity() {
+        return this.reservationCapacity == null ? Codegen.empty() : this.reservationCapacity;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="totalApplicationCapacity")
       private final @Nullable Output<Double> totalApplicationCapacity;
 
-    public Output<Double> getTotalApplicationCapacity() {
-        return this.totalApplicationCapacity == null ? Output.empty() : this.totalApplicationCapacity;
+    public Output<Double> totalApplicationCapacity() {
+        return this.totalApplicationCapacity == null ? Codegen.empty() : this.totalApplicationCapacity;
     }
 
     public ApplicationMetricDescriptionArgs(
@@ -85,10 +86,10 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     }
 
     private ApplicationMetricDescriptionArgs() {
-        this.maximumCapacity = Output.empty();
-        this.name = Output.empty();
-        this.reservationCapacity = Output.empty();
-        this.totalApplicationCapacity = Output.empty();
+        this.maximumCapacity = Codegen.empty();
+        this.name = Codegen.empty();
+        this.reservationCapacity = Codegen.empty();
+        this.totalApplicationCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder maximumCapacity(@Nullable Double maximumCapacity) {
-            this.maximumCapacity = Output.ofNullable(maximumCapacity);
+            this.maximumCapacity = Codegen.ofNullable(maximumCapacity);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -130,7 +131,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder reservationCapacity(@Nullable Output<Double> reservationCapacity) {
@@ -138,7 +139,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder reservationCapacity(@Nullable Double reservationCapacity) {
-            this.reservationCapacity = Output.ofNullable(reservationCapacity);
+            this.reservationCapacity = Codegen.ofNullable(reservationCapacity);
             return this;
         }
         public Builder totalApplicationCapacity(@Nullable Output<Double> totalApplicationCapacity) {
@@ -146,7 +147,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
-            this.totalApplicationCapacity = Output.ofNullable(totalApplicationCapacity);
+            this.totalApplicationCapacity = Codegen.ofNullable(totalApplicationCapacity);
             return this;
         }        public ApplicationMetricDescriptionArgs build() {
             return new ApplicationMetricDescriptionArgs(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);

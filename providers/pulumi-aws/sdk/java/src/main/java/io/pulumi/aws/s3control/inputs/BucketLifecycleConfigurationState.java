@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
     @Import(name="rules")
       private final @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
-    public Output<List<BucketLifecycleConfigurationRuleGetArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public BucketLifecycleConfigurationState(
@@ -46,8 +47,8 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
     }
 
     private BucketLifecycleConfigurationState() {
-        this.bucket = Output.empty();
-        this.rules = Output.empty();
+        this.bucket = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder rules(@Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
@@ -85,7 +86,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
             return this;
         }
         public Builder rules(@Nullable List<BucketLifecycleConfigurationRuleGetArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(BucketLifecycleConfigurationRuleGetArgs... rules) {

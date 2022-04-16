@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aggregation")
       private final @Nullable Output<AggregationArgs> aggregation;
 
-    public Output<AggregationArgs> getAggregation() {
-        return this.aggregation == null ? Output.empty() : this.aggregation;
+    public Output<AggregationArgs> aggregation() {
+        return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -49,8 +50,8 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RatioPartArgs() {
-        this.aggregation = Output.empty();
-        this.filter = Output.empty();
+        this.aggregation = Codegen.empty();
+        this.filter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aggregation(@Nullable AggregationArgs aggregation) {
-            this.aggregation = Output.ofNullable(aggregation);
+            this.aggregation = Codegen.ofNullable(aggregation);
             return this;
         }
         public Builder filter(Output<String> filter) {

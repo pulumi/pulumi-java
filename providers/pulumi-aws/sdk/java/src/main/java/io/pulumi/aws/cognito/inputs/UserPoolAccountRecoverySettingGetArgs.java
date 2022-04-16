@@ -6,6 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.UserPoolAccountRecoverySettingRecoveryMechanismGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class UserPoolAccountRecoverySettingGetArgs extends io.pulumi.resou
     @Import(name="recoveryMechanisms", required=true)
       private final Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
 
-    public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> getRecoveryMechanisms() {
+    public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms() {
         return this.recoveryMechanisms;
     }
 
@@ -30,7 +31,7 @@ public final class UserPoolAccountRecoverySettingGetArgs extends io.pulumi.resou
     }
 
     private UserPoolAccountRecoverySettingGetArgs() {
-        this.recoveryMechanisms = Output.empty();
+        this.recoveryMechanisms = Codegen.empty();
     }
 
     public static Builder builder() {

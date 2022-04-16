@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends io.
     @Import(name="instanceCount", required=true)
       private final Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount;
     }
 
@@ -37,7 +38,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends io.
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -48,8 +49,8 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends io.
     @Import(name="volumeKmsKeyId")
       private final @Nullable Output<String> volumeKmsKeyId;
 
-    public Output<String> getVolumeKmsKeyId() {
-        return this.volumeKmsKeyId == null ? Output.empty() : this.volumeKmsKeyId;
+    public Output<String> volumeKmsKeyId() {
+        return this.volumeKmsKeyId == null ? Codegen.empty() : this.volumeKmsKeyId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends io.
     @Import(name="volumeSizeInGB", required=true)
       private final Output<Integer> volumeSizeInGB;
 
-    public Output<Integer> getVolumeSizeInGB() {
+    public Output<Integer> volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 
@@ -75,10 +76,10 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends io.
     }
 
     private ModelExplainabilityJobDefinitionClusterConfigArgs() {
-        this.instanceCount = Output.empty();
-        this.instanceType = Output.empty();
-        this.volumeKmsKeyId = Output.empty();
-        this.volumeSizeInGB = Output.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.volumeKmsKeyId = Codegen.empty();
+        this.volumeSizeInGB = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ModelExplainabilityJobDefinitionClusterConfigArgs extends io.
             return this;
         }
         public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
-            this.volumeKmsKeyId = Output.ofNullable(volumeKmsKeyId);
+            this.volumeKmsKeyId = Codegen.ofNullable(volumeKmsKeyId);
             return this;
         }
         public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {

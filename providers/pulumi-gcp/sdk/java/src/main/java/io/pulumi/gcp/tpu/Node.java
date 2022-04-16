@@ -6,6 +6,7 @@ package io.pulumi.gcp.tpu;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tpu.NodeArgs;
 import io.pulumi.gcp.tpu.inputs.NodeState;
@@ -62,7 +63,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The type of hardware accelerators associated with this node.
      * 
      */
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
     /**
@@ -90,7 +91,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * is peered with another network that is using that CIDR block.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -104,7 +105,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The user-supplied description of the TPU. Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -118,7 +119,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -132,7 +133,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The immutable name of the TPU.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -152,7 +153,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * used.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -168,7 +169,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * node first reach out to the first (index 0) entry.
      * 
      */
-    public Output<List<NodeNetworkEndpoint>> getNetworkEndpoints() {
+    public Output<List<NodeNetworkEndpoint>> networkEndpoints() {
         return this.networkEndpoints;
     }
     /**
@@ -184,7 +185,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -200,7 +201,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodeSchedulingConfig> getSchedulingConfig() {
+    public Output</* @Nullable */ NodeSchedulingConfig> schedulingConfig() {
         return this.schedulingConfig;
     }
     /**
@@ -216,7 +217,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -230,7 +231,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The version of Tensorflow running in the Node.
      * 
      */
-    public Output<String> getTensorflowVersion() {
+    public Output<String> tensorflowVersion() {
         return this.tensorflowVersion;
     }
     /**
@@ -250,7 +251,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseServiceNetworking() {
+    public Output</* @Nullable */ Boolean> useServiceNetworking() {
         return this.useServiceNetworking;
     }
     /**
@@ -264,7 +265,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The GCP location for the TPU. If it is not provided, the provider zone is used.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -290,7 +291,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Node(String name, NodeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:tpu/node:Node", name, args == null ? NodeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:tpu/node:Node", name, args == null ? NodeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Node(String name, Output<String> id, @Nullable NodeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

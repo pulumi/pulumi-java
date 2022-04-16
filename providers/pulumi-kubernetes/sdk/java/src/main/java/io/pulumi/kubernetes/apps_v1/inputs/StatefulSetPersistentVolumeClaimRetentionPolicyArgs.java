@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     @Import(name="whenDeleted")
       private final @Nullable Output<String> whenDeleted;
 
-    public Output<String> getWhenDeleted() {
-        return this.whenDeleted == null ? Output.empty() : this.whenDeleted;
+    public Output<String> whenDeleted() {
+        return this.whenDeleted == null ? Codegen.empty() : this.whenDeleted;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     @Import(name="whenScaled")
       private final @Nullable Output<String> whenScaled;
 
-    public Output<String> getWhenScaled() {
-        return this.whenScaled == null ? Output.empty() : this.whenScaled;
+    public Output<String> whenScaled() {
+        return this.whenScaled == null ? Codegen.empty() : this.whenScaled;
     }
 
     public StatefulSetPersistentVolumeClaimRetentionPolicyArgs(
@@ -48,8 +49,8 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     }
 
     private StatefulSetPersistentVolumeClaimRetentionPolicyArgs() {
-        this.whenDeleted = Output.empty();
-        this.whenScaled = Output.empty();
+        this.whenDeleted = Codegen.empty();
+        this.whenScaled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
             return this;
         }
         public Builder whenDeleted(@Nullable String whenDeleted) {
-            this.whenDeleted = Output.ofNullable(whenDeleted);
+            this.whenDeleted = Codegen.ofNullable(whenDeleted);
             return this;
         }
         public Builder whenScaled(@Nullable Output<String> whenScaled) {
@@ -87,7 +88,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
             return this;
         }
         public Builder whenScaled(@Nullable String whenScaled) {
-            this.whenScaled = Output.ofNullable(whenScaled);
+            this.whenScaled = Codegen.ofNullable(whenScaled);
             return this;
         }        public StatefulSetPersistentVolumeClaimRetentionPolicyArgs build() {
             return new StatefulSetPersistentVolumeClaimRetentionPolicyArgs(whenDeleted, whenScaled);

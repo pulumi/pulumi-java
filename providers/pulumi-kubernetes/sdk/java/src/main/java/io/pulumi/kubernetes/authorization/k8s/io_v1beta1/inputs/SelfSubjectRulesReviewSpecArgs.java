@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public SelfSubjectRulesReviewSpecArgs(@Nullable Output<String> namespace) {
@@ -30,7 +31,7 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
     }
 
     private SelfSubjectRulesReviewSpecArgs() {
-        this.namespace = Output.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public SelfSubjectRulesReviewSpecArgs build() {
             return new SelfSubjectRulesReviewSpecArgs(namespace);

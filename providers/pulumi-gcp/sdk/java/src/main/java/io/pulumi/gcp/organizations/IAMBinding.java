@@ -6,6 +6,7 @@ package io.pulumi.gcp.organizations;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.IAMBindingArgs;
 import io.pulumi.gcp.organizations.inputs.IAMBindingState;
@@ -48,7 +49,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=IAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ IAMBindingCondition> condition;
 
-    public Output</* @Nullable */ IAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ IAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -62,7 +63,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the organization's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -76,7 +77,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -90,7 +91,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return The numeric ID of the organization in which you want to create a custom role.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -108,7 +109,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -134,7 +135,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMBinding(String name, IAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:organizations/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:organizations/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMBinding(String name, Output<String> id, @Nullable IAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

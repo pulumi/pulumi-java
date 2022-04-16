@@ -80,7 +80,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * Bounds: [0s, 1d].
      * 
     */
-    public String getGracefulDecommissionTimeout() {
+    public String gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
     /**
@@ -92,7 +92,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * Bounds: [0.0, 1.0].
      * 
     */
-    public Double getScaleDownFactor() {
+    public Double scaleDownFactor() {
         return this.scaleDownFactor;
     }
     /**
@@ -103,7 +103,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
     */
-    public Optional<Double> getScaleDownMinWorkerFraction() {
+    public Optional<Double> scaleDownMinWorkerFraction() {
         return Optional.ofNullable(this.scaleDownMinWorkerFraction);
     }
     /**
@@ -115,7 +115,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * Bounds: [0.0, 1.0].
      * 
     */
-    public Double getScaleUpFactor() {
+    public Double scaleUpFactor() {
         return this.scaleUpFactor;
     }
     /**
@@ -126,7 +126,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
     */
-    public Optional<Double> getScaleUpMinWorkerFraction() {
+    public Optional<Double> scaleUpMinWorkerFraction() {
         return Optional.ofNullable(this.scaleUpMinWorkerFraction);
     }
 

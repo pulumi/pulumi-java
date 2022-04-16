@@ -6,6 +6,7 @@ package io.pulumi.aws.datasync.inputs;
 import io.pulumi.aws.datasync.inputs.LocationSmbMountOptionsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentArns")
       private final @Nullable Output<List<String>> agentArns;
 
-    public Output<List<String>> getAgentArns() {
-        return this.agentArns == null ? Output.empty() : this.agentArns;
+    public Output<List<String>> agentArns() {
+        return this.agentArns == null ? Codegen.empty() : this.agentArns;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+    public Output<String> domain() {
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountOptions")
       private final @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
 
-    public Output<LocationSmbMountOptionsGetArgs> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+    public Output<LocationSmbMountOptionsGetArgs> mountOptions() {
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname")
       private final @Nullable Output<String> serverHostname;
 
-    public Output<String> getServerHostname() {
-        return this.serverHostname == null ? Output.empty() : this.serverHostname;
+    public Output<String> serverHostname() {
+        return this.serverHostname == null ? Codegen.empty() : this.serverHostname;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+    public Output<String> subdirectory() {
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -112,15 +113,15 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public LocationSmbState(
@@ -160,17 +161,17 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationSmbState() {
-        this.agentArns = Output.empty();
-        this.arn = Output.empty();
-        this.domain = Output.empty();
-        this.mountOptions = Output.empty();
-        this.password = Output.empty();
-        this.serverHostname = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uri = Output.empty();
-        this.user = Output.empty();
+        this.agentArns = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.mountOptions = Codegen.empty();
+        this.password = Codegen.empty();
+        this.serverHostname = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentArns(@Nullable List<String> agentArns) {
-            this.agentArns = Output.ofNullable(agentArns);
+            this.agentArns = Codegen.ofNullable(agentArns);
             return this;
         }
         public Builder agentArns(String... agentArns) {
@@ -229,7 +230,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -237,7 +238,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder mountOptions(@Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions) {
@@ -245,7 +246,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountOptions(@Nullable LocationSmbMountOptionsGetArgs mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -253,7 +254,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder serverHostname(@Nullable Output<String> serverHostname) {
@@ -261,7 +262,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverHostname(@Nullable String serverHostname) {
-            this.serverHostname = Output.ofNullable(serverHostname);
+            this.serverHostname = Codegen.ofNullable(serverHostname);
             return this;
         }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
@@ -269,7 +270,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -277,7 +278,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -285,7 +286,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -293,7 +294,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -301,7 +302,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public LocationSmbState build() {
             return new LocationSmbState(agentArns, arn, domain, mountOptions, password, serverHostname, subdirectory, tags, tagsAll, uri, user);

@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.LocalSubjectAccessReviewArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.SubjectAccessReviewSpec;
@@ -33,7 +34,7 @@ public class LocalSubjectAccessReview extends io.pulumi.resources.CustomResource
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -47,13 +48,13 @@ public class LocalSubjectAccessReview extends io.pulumi.resources.CustomResource
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -67,7 +68,7 @@ public class LocalSubjectAccessReview extends io.pulumi.resources.CustomResource
      * @return Spec holds information about the request being evaluated.  spec.namespace must be equal to the namespace you made the request against.  If empty, it is defaulted.
      * 
      */
-    public Output<SubjectAccessReviewSpec> getSpec() {
+    public Output<SubjectAccessReviewSpec> spec() {
         return this.spec;
     }
     /**
@@ -81,7 +82,7 @@ public class LocalSubjectAccessReview extends io.pulumi.resources.CustomResource
      * @return Status is filled in by the server and indicates whether the request is allowed or not
      * 
      */
-    public Output</* @Nullable */ SubjectAccessReviewStatus> getStatus() {
+    public Output</* @Nullable */ SubjectAccessReviewStatus> status() {
         return this.status;
     }
 
@@ -107,7 +108,7 @@ public class LocalSubjectAccessReview extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public LocalSubjectAccessReview(String name, LocalSubjectAccessReviewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:authorization.k8s.io/v1beta1:LocalSubjectAccessReview", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:authorization.k8s.io/v1beta1:LocalSubjectAccessReview", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocalSubjectAccessReview(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

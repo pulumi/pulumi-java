@@ -10,6 +10,7 @@ import io.pulumi.aws.efs.outputs.BackupPolicyBackupPolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return A backup_policy object (documented below).
      * 
      */
-    public Output<BackupPolicyBackupPolicy> getBackupPolicy() {
+    public Output<BackupPolicyBackupPolicy> backupPolicy() {
         return this.backupPolicy;
     }
     /**
@@ -55,7 +56,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The ID of the EFS file system.
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -81,7 +82,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackupPolicy(String name, BackupPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:efs/backupPolicy:BackupPolicy", name, args == null ? BackupPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:efs/backupPolicy:BackupPolicy", name, args == null ? BackupPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackupPolicy(String name, Output<String> id, @Nullable BackupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

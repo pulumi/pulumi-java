@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="periodSeconds", required=true)
       private final Output<Integer> periodSeconds;
 
-    public Output<Integer> getPeriodSeconds() {
+    public Output<Integer> periodSeconds() {
         return this.periodSeconds;
     }
 
@@ -36,7 +37,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -47,7 +48,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 
@@ -61,9 +62,9 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HPAScalingPolicyArgs() {
-        this.periodSeconds = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.periodSeconds = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

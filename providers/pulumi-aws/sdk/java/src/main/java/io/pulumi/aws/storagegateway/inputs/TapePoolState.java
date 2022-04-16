@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName")
       private final @Nullable Output<String> poolName;
 
-    public Output<String> getPoolName() {
-        return this.poolName == null ? Output.empty() : this.poolName;
+    public Output<String> poolName() {
+        return this.poolName == null ? Codegen.empty() : this.poolName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionLockTimeInDays")
       private final @Nullable Output<Integer> retentionLockTimeInDays;
 
-    public Output<Integer> getRetentionLockTimeInDays() {
-        return this.retentionLockTimeInDays == null ? Output.empty() : this.retentionLockTimeInDays;
+    public Output<Integer> retentionLockTimeInDays() {
+        return this.retentionLockTimeInDays == null ? Codegen.empty() : this.retentionLockTimeInDays;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionLockType")
       private final @Nullable Output<String> retentionLockType;
 
-    public Output<String> getRetentionLockType() {
-        return this.retentionLockType == null ? Output.empty() : this.retentionLockType;
+    public Output<String> retentionLockType() {
+        return this.retentionLockType == null ? Codegen.empty() : this.retentionLockType;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+    public Output<String> storageClass() {
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public TapePoolState(
@@ -111,13 +112,13 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TapePoolState() {
-        this.arn = Output.empty();
-        this.poolName = Output.empty();
-        this.retentionLockTimeInDays = Output.empty();
-        this.retentionLockType = Output.empty();
-        this.storageClass = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.poolName = Codegen.empty();
+        this.retentionLockTimeInDays = Codegen.empty();
+        this.retentionLockType = Codegen.empty();
+        this.storageClass = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder poolName(@Nullable Output<String> poolName) {
@@ -165,7 +166,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder poolName(@Nullable String poolName) {
-            this.poolName = Output.ofNullable(poolName);
+            this.poolName = Codegen.ofNullable(poolName);
             return this;
         }
         public Builder retentionLockTimeInDays(@Nullable Output<Integer> retentionLockTimeInDays) {
@@ -173,7 +174,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
-            this.retentionLockTimeInDays = Output.ofNullable(retentionLockTimeInDays);
+            this.retentionLockTimeInDays = Codegen.ofNullable(retentionLockTimeInDays);
             return this;
         }
         public Builder retentionLockType(@Nullable Output<String> retentionLockType) {
@@ -181,7 +182,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionLockType(@Nullable String retentionLockType) {
-            this.retentionLockType = Output.ofNullable(retentionLockType);
+            this.retentionLockType = Codegen.ofNullable(retentionLockType);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -189,7 +190,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -197,7 +198,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -205,7 +206,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public TapePoolState build() {
             return new TapePoolState(arn, poolName, retentionLockTimeInDays, retentionLockType, storageClass, tags, tagsAll);

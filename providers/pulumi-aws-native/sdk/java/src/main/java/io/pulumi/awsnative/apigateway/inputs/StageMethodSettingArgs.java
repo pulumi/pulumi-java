@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -28,8 +29,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
 
-    public Output<Boolean> getCacheDataEncrypted() {
-        return this.cacheDataEncrypted == null ? Output.empty() : this.cacheDataEncrypted;
+    public Output<Boolean> cacheDataEncrypted() {
+        return this.cacheDataEncrypted == null ? Codegen.empty() : this.cacheDataEncrypted;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
 
-    public Output<Integer> getCacheTtlInSeconds() {
-        return this.cacheTtlInSeconds == null ? Output.empty() : this.cacheTtlInSeconds;
+    public Output<Integer> cacheTtlInSeconds() {
+        return this.cacheTtlInSeconds == null ? Codegen.empty() : this.cacheTtlInSeconds;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
 
-    public Output<Boolean> getCachingEnabled() {
-        return this.cachingEnabled == null ? Output.empty() : this.cachingEnabled;
+    public Output<Boolean> cachingEnabled() {
+        return this.cachingEnabled == null ? Codegen.empty() : this.cachingEnabled;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Output<Boolean> getDataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Output.empty() : this.dataTraceEnabled;
+    public Output<Boolean> dataTraceEnabled() {
+        return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
-        return this.httpMethod == null ? Output.empty() : this.httpMethod;
+    public Output<String> httpMethod() {
+        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
-    public Output<String> getLoggingLevel() {
-        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
+    public Output<String> loggingLevel() {
+        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
 
-    public Output<Boolean> getMetricsEnabled() {
-        return this.metricsEnabled == null ? Output.empty() : this.metricsEnabled;
+    public Output<Boolean> metricsEnabled() {
+        return this.metricsEnabled == null ? Codegen.empty() : this.metricsEnabled;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
-    public Output<String> getResourcePath() {
-        return this.resourcePath == null ? Output.empty() : this.resourcePath;
+    public Output<String> resourcePath() {
+        return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Output<Integer> getThrottlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Output.empty() : this.throttlingBurstLimit;
+    public Output<Integer> throttlingBurstLimit() {
+        return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
-    public Output<Double> getThrottlingRateLimit() {
-        return this.throttlingRateLimit == null ? Output.empty() : this.throttlingRateLimit;
+    public Output<Double> throttlingRateLimit() {
+        return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
     }
 
     public StageMethodSettingArgs(
@@ -155,16 +156,16 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private StageMethodSettingArgs() {
-        this.cacheDataEncrypted = Output.empty();
-        this.cacheTtlInSeconds = Output.empty();
-        this.cachingEnabled = Output.empty();
-        this.dataTraceEnabled = Output.empty();
-        this.httpMethod = Output.empty();
-        this.loggingLevel = Output.empty();
-        this.metricsEnabled = Output.empty();
-        this.resourcePath = Output.empty();
-        this.throttlingBurstLimit = Output.empty();
-        this.throttlingRateLimit = Output.empty();
+        this.cacheDataEncrypted = Codegen.empty();
+        this.cacheTtlInSeconds = Codegen.empty();
+        this.cachingEnabled = Codegen.empty();
+        this.dataTraceEnabled = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.loggingLevel = Codegen.empty();
+        this.metricsEnabled = Codegen.empty();
+        this.resourcePath = Codegen.empty();
+        this.throttlingBurstLimit = Codegen.empty();
+        this.throttlingRateLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
-            this.cacheDataEncrypted = Output.ofNullable(cacheDataEncrypted);
+            this.cacheDataEncrypted = Codegen.ofNullable(cacheDataEncrypted);
             return this;
         }
         public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
@@ -218,7 +219,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
-            this.cacheTtlInSeconds = Output.ofNullable(cacheTtlInSeconds);
+            this.cacheTtlInSeconds = Codegen.ofNullable(cacheTtlInSeconds);
             return this;
         }
         public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
@@ -226,7 +227,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
-            this.cachingEnabled = Output.ofNullable(cachingEnabled);
+            this.cachingEnabled = Codegen.ofNullable(cachingEnabled);
             return this;
         }
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
@@ -234,7 +235,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
+            this.dataTraceEnabled = Codegen.ofNullable(dataTraceEnabled);
             return this;
         }
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
@@ -242,7 +243,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Output.ofNullable(httpMethod);
+            this.httpMethod = Codegen.ofNullable(httpMethod);
             return this;
         }
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
@@ -250,7 +251,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Output.ofNullable(loggingLevel);
+            this.loggingLevel = Codegen.ofNullable(loggingLevel);
             return this;
         }
         public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
@@ -258,7 +259,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
-            this.metricsEnabled = Output.ofNullable(metricsEnabled);
+            this.metricsEnabled = Codegen.ofNullable(metricsEnabled);
             return this;
         }
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
@@ -266,7 +267,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Output.ofNullable(resourcePath);
+            this.resourcePath = Codegen.ofNullable(resourcePath);
             return this;
         }
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
@@ -274,7 +275,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
+            this.throttlingBurstLimit = Codegen.ofNullable(throttlingBurstLimit);
             return this;
         }
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
@@ -282,7 +283,7 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
+            this.throttlingRateLimit = Codegen.ofNullable(throttlingRateLimit);
             return this;
         }        public StageMethodSettingArgs build() {
             return new StageMethodSettingArgs(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, httpMethod, loggingLevel, metricsEnabled, resourcePath, throttlingBurstLimit, throttlingRateLimit);

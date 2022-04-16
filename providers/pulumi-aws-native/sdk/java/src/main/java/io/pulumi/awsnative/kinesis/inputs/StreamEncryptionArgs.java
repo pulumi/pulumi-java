@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kinesis.inputs;
 import io.pulumi.awsnative.kinesis.enums.StreamEncryptionEncryptionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionType", required=true)
       private final Output<StreamEncryptionEncryptionType> encryptionType;
 
-    public Output<StreamEncryptionEncryptionType> getEncryptionType() {
+    public Output<StreamEncryptionEncryptionType> encryptionType() {
         return this.encryptionType;
     }
 
@@ -36,7 +37,7 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -48,8 +49,8 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private StreamEncryptionArgs() {
-        this.encryptionType = Output.empty();
-        this.keyId = Output.empty();
+        this.encryptionType = Codegen.empty();
+        this.keyId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigtable;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.InstanceArgs;
 import io.pulumi.gcp.bigtable.inputs.InstanceState;
@@ -57,7 +58,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * See structure below.
      * 
      */
-    public Output<List<InstanceCluster>> getClusters() {
+    public Output<List<InstanceCluster>> clusters() {
         return this.clusters;
     }
     /**
@@ -73,7 +74,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeletionProtection() {
+    public Output</* @Nullable */ Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     /**
@@ -87,7 +88,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -113,7 +114,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceType() {
+    public Output</* @Nullable */ String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -127,7 +128,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -141,7 +142,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +158,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -183,7 +184,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, @Nullable InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigtable/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigtable/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable InstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

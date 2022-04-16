@@ -8,6 +8,7 @@ import io.pulumi.azurenative.documentdb.inputs.PrivilegeArgs;
 import io.pulumi.azurenative.documentdb.inputs.RoleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,8 +37,8 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="mongoRoleDefinitionId")
       private final @Nullable Output<String> mongoRoleDefinitionId;
 
-    public Output<String> getMongoRoleDefinitionId() {
-        return this.mongoRoleDefinitionId == null ? Output.empty() : this.mongoRoleDefinitionId;
+    public Output<String> mongoRoleDefinitionId() {
+        return this.mongoRoleDefinitionId == null ? Codegen.empty() : this.mongoRoleDefinitionId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="privileges")
       private final @Nullable Output<List<PrivilegeArgs>> privileges;
 
-    public Output<List<PrivilegeArgs>> getPrivileges() {
-        return this.privileges == null ? Output.empty() : this.privileges;
+    public Output<List<PrivilegeArgs>> privileges() {
+        return this.privileges == null ? Codegen.empty() : this.privileges;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,8 +81,8 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
-        return this.roleName == null ? Output.empty() : this.roleName;
+    public Output<String> roleName() {
+        return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
 
-    public Output<List<RoleArgs>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+    public Output<List<RoleArgs>> roles() {
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable Output<MongoRoleDefinitionType> type;
 
-    public Output<MongoRoleDefinitionType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<MongoRoleDefinitionType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public MongoDBResourceMongoRoleDefinitionArgs(
@@ -126,14 +127,14 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     }
 
     private MongoDBResourceMongoRoleDefinitionArgs() {
-        this.accountName = Output.empty();
-        this.databaseName = Output.empty();
-        this.mongoRoleDefinitionId = Output.empty();
-        this.privileges = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleName = Output.empty();
-        this.roles = Output.empty();
-        this.type = Output.empty();
+        this.accountName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.mongoRoleDefinitionId = Codegen.empty();
+        this.privileges = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.roles = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder mongoRoleDefinitionId(@Nullable Output<String> mongoRoleDefinitionId) {
@@ -191,7 +192,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder mongoRoleDefinitionId(@Nullable String mongoRoleDefinitionId) {
-            this.mongoRoleDefinitionId = Output.ofNullable(mongoRoleDefinitionId);
+            this.mongoRoleDefinitionId = Codegen.ofNullable(mongoRoleDefinitionId);
             return this;
         }
         public Builder privileges(@Nullable Output<List<PrivilegeArgs>> privileges) {
@@ -199,7 +200,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder privileges(@Nullable List<PrivilegeArgs> privileges) {
-            this.privileges = Output.ofNullable(privileges);
+            this.privileges = Codegen.ofNullable(privileges);
             return this;
         }
         public Builder privileges(PrivilegeArgs... privileges) {
@@ -218,7 +219,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Output.ofNullable(roleName);
+            this.roleName = Codegen.ofNullable(roleName);
             return this;
         }
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
@@ -226,7 +227,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(RoleArgs... roles) {
@@ -237,7 +238,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder type(@Nullable MongoRoleDefinitionType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public MongoDBResourceMongoRoleDefinitionArgs build() {
             return new MongoDBResourceMongoRoleDefinitionArgs(accountName, databaseName, mongoRoleDefinitionId, privileges, resourceGroupName, roleName, roles, type);

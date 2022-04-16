@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricTargetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +37,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="target", required=true)
       private final Output<MetricTargetArgs> target;
 
-    public Output<MetricTargetArgs> getTarget() {
+    public Output<MetricTargetArgs> target() {
         return this.target;
     }
 
@@ -48,8 +49,8 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     }
 
     private ResourceMetricSourceArgs() {
-        this.name = Output.empty();
-        this.target = Output.empty();
+        this.name = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

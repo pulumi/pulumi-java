@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketMetricFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<BucketMetricFilterGetArgs> filter;
 
-    public Output<BucketMetricFilterGetArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<BucketMetricFilterGetArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public BucketMetricState(
@@ -58,9 +59,9 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketMetricState() {
-        this.bucket = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
+        this.bucket = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder filter(@Nullable Output<BucketMetricFilterGetArgs> filter) {
@@ -100,7 +101,7 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable BucketMetricFilterGetArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -108,7 +109,7 @@ public final class BucketMetricState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public BucketMetricState build() {
             return new BucketMetricState(bucket, filter, name);

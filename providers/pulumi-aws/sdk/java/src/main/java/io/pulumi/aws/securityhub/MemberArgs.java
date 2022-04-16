@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -33,7 +34,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -44,8 +45,8 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> getInvite() {
-        return this.invite == null ? Output.empty() : this.invite;
+    public Output<Boolean> invite() {
+        return this.invite == null ? Codegen.empty() : this.invite;
     }
 
     public MemberArgs(
@@ -58,9 +59,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberArgs() {
-        this.accountId = Output.empty();
-        this.email = Output.empty();
-        this.invite = Output.empty();
+        this.accountId = Codegen.empty();
+        this.email = Codegen.empty();
+        this.invite = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Output.ofNullable(invite);
+            this.invite = Codegen.ofNullable(invite);
             return this;
         }        public MemberArgs build() {
             return new MemberArgs(accountId, email, invite);

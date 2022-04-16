@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes;
     }
 
@@ -25,7 +26,7 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
     }
 
     private BucketReplicationTimeValueArgs() {
-        this.minutes = Output.empty();
+        this.minutes = Codegen.empty();
     }
 
     public static Builder builder() {

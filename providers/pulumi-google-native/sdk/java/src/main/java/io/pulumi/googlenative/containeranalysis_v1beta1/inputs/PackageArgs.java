@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DistributionArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distribution")
       private final @Nullable Output<List<DistributionArgs>> distribution;
 
-    public Output<List<DistributionArgs>> getDistribution() {
-        return this.distribution == null ? Output.empty() : this.distribution;
+    public Output<List<DistributionArgs>> distribution() {
+        return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,8 +51,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageArgs() {
-        this.distribution = Output.empty();
-        this.name = Output.empty();
+        this.distribution = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distribution(@Nullable List<DistributionArgs> distribution) {
-            this.distribution = Output.ofNullable(distribution);
+            this.distribution = Codegen.ofNullable(distribution);
             return this;
         }
         public Builder distribution(DistributionArgs... distribution) {

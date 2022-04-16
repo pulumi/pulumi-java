@@ -7,6 +7,7 @@ import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionC
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
     @Import(name="cmkArn")
       private final @Nullable Output<String> cmkArn;
 
-    public Output<String> getCmkArn() {
-        return this.cmkArn == null ? Output.empty() : this.cmkArn;
+    public Output<String> cmkArn() {
+        return this.cmkArn == null ? Codegen.empty() : this.cmkArn;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
     @Import(name="copyTags")
       private final @Nullable Output<Boolean> copyTags;
 
-    public Output<Boolean> getCopyTags() {
-        return this.copyTags == null ? Output.empty() : this.copyTags;
+    public Output<Boolean> copyTags() {
+        return this.copyTags == null ? Codegen.empty() : this.copyTags;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
     @Import(name="deprecateRule")
       private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs> deprecateRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs> getDeprecateRule() {
-        return this.deprecateRule == null ? Output.empty() : this.deprecateRule;
+    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs> deprecateRule() {
+        return this.deprecateRule == null ? Codegen.empty() : this.deprecateRule;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
     @Import(name="encrypted", required=true)
       private final Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted;
     }
 
@@ -68,8 +69,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
     @Import(name="retainRule")
       private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleGetArgs> retainRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleGetArgs> getRetainRule() {
-        return this.retainRule == null ? Output.empty() : this.retainRule;
+    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleGetArgs> retainRule() {
+        return this.retainRule == null ? Codegen.empty() : this.retainRule;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -99,12 +100,12 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
     }
 
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs() {
-        this.cmkArn = Output.empty();
-        this.copyTags = Output.empty();
-        this.deprecateRule = Output.empty();
-        this.encrypted = Output.empty();
-        this.retainRule = Output.empty();
-        this.target = Output.empty();
+        this.cmkArn = Codegen.empty();
+        this.copyTags = Codegen.empty();
+        this.deprecateRule = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.retainRule = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
             return this;
         }
         public Builder cmkArn(@Nullable String cmkArn) {
-            this.cmkArn = Output.ofNullable(cmkArn);
+            this.cmkArn = Codegen.ofNullable(cmkArn);
             return this;
         }
         public Builder copyTags(@Nullable Output<Boolean> copyTags) {
@@ -150,7 +151,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
             return this;
         }
         public Builder copyTags(@Nullable Boolean copyTags) {
-            this.copyTags = Output.ofNullable(copyTags);
+            this.copyTags = Codegen.ofNullable(copyTags);
             return this;
         }
         public Builder deprecateRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs> deprecateRule) {
@@ -158,7 +159,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
             return this;
         }
         public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs deprecateRule) {
-            this.deprecateRule = Output.ofNullable(deprecateRule);
+            this.deprecateRule = Codegen.ofNullable(deprecateRule);
             return this;
         }
         public Builder encrypted(Output<Boolean> encrypted) {
@@ -174,7 +175,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArg
             return this;
         }
         public Builder retainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleGetArgs retainRule) {
-            this.retainRule = Output.ofNullable(retainRule);
+            this.retainRule = Codegen.ofNullable(retainRule);
             return this;
         }
         public Builder target(Output<String> target) {

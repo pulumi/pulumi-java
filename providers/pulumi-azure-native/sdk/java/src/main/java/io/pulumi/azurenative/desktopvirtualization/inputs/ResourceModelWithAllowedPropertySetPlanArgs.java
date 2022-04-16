@@ -5,6 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,7 +33,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
     @Import(name="product", required=true)
       private final Output<String> product;
 
-    public Output<String> getProduct() {
+    public Output<String> product() {
         return this.product;
     }
 
@@ -43,8 +44,8 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
     @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
 
-    public Output<String> getPromotionCode() {
-        return this.promotionCode == null ? Output.empty() : this.promotionCode;
+    public Output<String> promotionCode() {
+        return this.promotionCode == null ? Codegen.empty() : this.promotionCode;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher;
     }
 
@@ -65,8 +66,8 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ResourceModelWithAllowedPropertySetPlanArgs(
@@ -83,11 +84,11 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
     }
 
     private ResourceModelWithAllowedPropertySetPlanArgs() {
-        this.name = Output.empty();
-        this.product = Output.empty();
-        this.promotionCode = Output.empty();
-        this.publisher = Output.empty();
-        this.version = Output.empty();
+        this.name = Codegen.empty();
+        this.product = Codegen.empty();
+        this.promotionCode = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
             return this;
         }
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = Output.ofNullable(promotionCode);
+            this.promotionCode = Codegen.ofNullable(promotionCode);
             return this;
         }
         public Builder publisher(Output<String> publisher) {
@@ -155,7 +156,7 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ResourceModelWithAllowedPropertySetPlanArgs build() {
             return new ResourceModelWithAllowedPropertySetPlanArgs(name, product, promotionCode, publisher, version);

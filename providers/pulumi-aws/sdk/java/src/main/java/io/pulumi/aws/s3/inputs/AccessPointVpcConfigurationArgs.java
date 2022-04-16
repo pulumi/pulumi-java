@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -29,7 +30,7 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
     }
 
     private AccessPointVpcConfigurationArgs() {
-        this.vpcId = Output.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {

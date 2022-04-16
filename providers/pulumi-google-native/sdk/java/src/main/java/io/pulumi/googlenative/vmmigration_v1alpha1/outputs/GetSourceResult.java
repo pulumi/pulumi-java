@@ -70,49 +70,49 @@ public final class GetSourceResult {
      * The create time timestamp.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the source.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Provides details on the state of the Source in case of an error.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The labels of the source.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The Source name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The update time timestamp.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * Vmware type source details.
      * 
     */
-    public VmwareSourceDetailsResponse getVmware() {
+    public VmwareSourceDetailsResponse vmware() {
         return this.vmware;
     }
 

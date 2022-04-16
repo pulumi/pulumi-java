@@ -12,6 +12,7 @@ import io.pulumi.awsnative.ec2.outputs.CapacityReservationFleetTagSpecification;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,61 +30,61 @@ public class CapacityReservationFleet extends io.pulumi.resources.CustomResource
     @Export(name="allocationStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> allocationStrategy;
 
-    public Output</* @Nullable */ String> getAllocationStrategy() {
+    public Output</* @Nullable */ String> allocationStrategy() {
         return this.allocationStrategy;
     }
     @Export(name="capacityReservationFleetId", type=String.class, parameters={})
     private Output<String> capacityReservationFleetId;
 
-    public Output<String> getCapacityReservationFleetId() {
+    public Output<String> capacityReservationFleetId() {
         return this.capacityReservationFleetId;
     }
     @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
-    public Output</* @Nullable */ String> getEndDate() {
+    public Output</* @Nullable */ String> endDate() {
         return this.endDate;
     }
     @Export(name="instanceMatchCriteria", type=CapacityReservationFleetInstanceMatchCriteria.class, parameters={})
     private Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
-    public Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> getInstanceMatchCriteria() {
+    public Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria() {
         return this.instanceMatchCriteria;
     }
     @Export(name="instanceTypeSpecifications", type=List.class, parameters={CapacityReservationFleetInstanceTypeSpecification.class})
     private Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> instanceTypeSpecifications;
 
-    public Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> getInstanceTypeSpecifications() {
+    public Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> instanceTypeSpecifications() {
         return this.instanceTypeSpecifications;
     }
     @Export(name="noRemoveEndDate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> noRemoveEndDate;
 
-    public Output</* @Nullable */ Boolean> getNoRemoveEndDate() {
+    public Output</* @Nullable */ Boolean> noRemoveEndDate() {
         return this.noRemoveEndDate;
     }
     @Export(name="removeEndDate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeEndDate;
 
-    public Output</* @Nullable */ Boolean> getRemoveEndDate() {
+    public Output</* @Nullable */ Boolean> removeEndDate() {
         return this.removeEndDate;
     }
     @Export(name="tagSpecifications", type=List.class, parameters={CapacityReservationFleetTagSpecification.class})
     private Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> tagSpecifications;
 
-    public Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> getTagSpecifications() {
+    public Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> tagSpecifications() {
         return this.tagSpecifications;
     }
     @Export(name="tenancy", type=CapacityReservationFleetTenancy.class, parameters={})
     private Output</* @Nullable */ CapacityReservationFleetTenancy> tenancy;
 
-    public Output</* @Nullable */ CapacityReservationFleetTenancy> getTenancy() {
+    public Output</* @Nullable */ CapacityReservationFleetTenancy> tenancy() {
         return this.tenancy;
     }
     @Export(name="totalTargetCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> totalTargetCapacity;
 
-    public Output</* @Nullable */ Integer> getTotalTargetCapacity() {
+    public Output</* @Nullable */ Integer> totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 
@@ -109,7 +110,7 @@ public class CapacityReservationFleet extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public CapacityReservationFleet(String name, @Nullable CapacityReservationFleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:CapacityReservationFleet", name, args == null ? CapacityReservationFleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:CapacityReservationFleet", name, args == null ? CapacityReservationFleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CapacityReservationFleet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

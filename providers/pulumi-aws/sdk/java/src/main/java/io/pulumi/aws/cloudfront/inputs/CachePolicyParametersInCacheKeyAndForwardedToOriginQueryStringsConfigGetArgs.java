@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     @Import(name="queryStringBehavior", required=true)
       private final Output<String> queryStringBehavior;
 
-    public Output<String> getQueryStringBehavior() {
+    public Output<String> queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
@@ -33,8 +34,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     @Import(name="queryStrings")
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs> queryStrings;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs> getQueryStrings() {
-        return this.queryStrings == null ? Output.empty() : this.queryStrings;
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs> queryStrings() {
+        return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 
     public CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs(
@@ -45,8 +46,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     }
 
     private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs() {
-        this.queryStringBehavior = Output.empty();
-        this.queryStrings = Output.empty();
+        this.queryStringBehavior = Codegen.empty();
+        this.queryStrings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
             return this;
         }
         public Builder queryStrings(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsGetArgs queryStrings) {
-            this.queryStrings = Output.ofNullable(queryStrings);
+            this.queryStrings = Codegen.ofNullable(queryStrings);
             return this;
         }        public CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs(queryStringBehavior, queryStrings);

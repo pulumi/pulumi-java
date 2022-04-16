@@ -24,7 +24,7 @@ public final class GetDomainClusterConfigZoneAwarenessConfig {
      * Number of availability zones used.
      * 
     */
-    public Integer getAvailabilityZoneCount() {
+    public Integer availabilityZoneCount() {
         return this.availabilityZoneCount;
     }
 

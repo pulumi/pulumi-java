@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.inputs.ActiveDirectoryPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
     @Import(name="activeDirectoryProperties")
       private final @Nullable Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties;
 
-    public Output<ActiveDirectoryPropertiesArgs> getActiveDirectoryProperties() {
-        return this.activeDirectoryProperties == null ? Output.empty() : this.activeDirectoryProperties;
+    public Output<ActiveDirectoryPropertiesArgs> activeDirectoryProperties() {
+        return this.activeDirectoryProperties == null ? Codegen.empty() : this.activeDirectoryProperties;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
     @Import(name="directoryServiceOptions", required=true)
       private final Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions;
 
-    public Output<Either<String,DirectoryServiceOptions>> getDirectoryServiceOptions() {
+    public Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions() {
         return this.directoryServiceOptions;
     }
 
@@ -51,8 +52,8 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
     }
 
     private AzureFilesIdentityBasedAuthenticationArgs() {
-        this.activeDirectoryProperties = Output.empty();
-        this.directoryServiceOptions = Output.empty();
+        this.activeDirectoryProperties = Codegen.empty();
+        this.directoryServiceOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
             return this;
         }
         public Builder activeDirectoryProperties(@Nullable ActiveDirectoryPropertiesArgs activeDirectoryProperties) {
-            this.activeDirectoryProperties = Output.ofNullable(activeDirectoryProperties);
+            this.activeDirectoryProperties = Codegen.ofNullable(activeDirectoryProperties);
             return this;
         }
         public Builder directoryServiceOptions(Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {

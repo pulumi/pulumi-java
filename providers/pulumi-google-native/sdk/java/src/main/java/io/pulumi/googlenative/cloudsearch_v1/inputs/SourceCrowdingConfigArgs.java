@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="numResults")
       private final @Nullable Output<Integer> numResults;
 
-    public Output<Integer> getNumResults() {
-        return this.numResults == null ? Output.empty() : this.numResults;
+    public Output<Integer> numResults() {
+        return this.numResults == null ? Codegen.empty() : this.numResults;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="numSuggestions")
       private final @Nullable Output<Integer> numSuggestions;
 
-    public Output<Integer> getNumSuggestions() {
-        return this.numSuggestions == null ? Output.empty() : this.numSuggestions;
+    public Output<Integer> numSuggestions() {
+        return this.numSuggestions == null ? Codegen.empty() : this.numSuggestions;
     }
 
     public SourceCrowdingConfigArgs(
@@ -48,8 +49,8 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     }
 
     private SourceCrowdingConfigArgs() {
-        this.numResults = Output.empty();
-        this.numSuggestions = Output.empty();
+        this.numResults = Codegen.empty();
+        this.numSuggestions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder numResults(@Nullable Integer numResults) {
-            this.numResults = Output.ofNullable(numResults);
+            this.numResults = Codegen.ofNullable(numResults);
             return this;
         }
         public Builder numSuggestions(@Nullable Output<Integer> numSuggestions) {
@@ -87,7 +88,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder numSuggestions(@Nullable Integer numSuggestions) {
-            this.numSuggestions = Output.ofNullable(numSuggestions);
+            this.numSuggestions = Codegen.ofNullable(numSuggestions);
             return this;
         }        public SourceCrowdingConfigArgs build() {
             return new SourceCrowdingConfigArgs(numResults, numSuggestions);

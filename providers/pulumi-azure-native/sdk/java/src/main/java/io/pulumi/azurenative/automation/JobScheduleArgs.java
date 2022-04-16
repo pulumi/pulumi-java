@@ -7,6 +7,7 @@ import io.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import io.pulumi.azurenative.automation.inputs.ScheduleAssociationPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -35,8 +36,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobScheduleId")
       private final @Nullable Output<String> jobScheduleId;
 
-    public Output<String> getJobScheduleId() {
-        return this.jobScheduleId == null ? Output.empty() : this.jobScheduleId;
+    public Output<String> jobScheduleId() {
+        return this.jobScheduleId == null ? Codegen.empty() : this.jobScheduleId;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,8 +69,8 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runOn")
       private final @Nullable Output<String> runOn;
 
-    public Output<String> getRunOn() {
-        return this.runOn == null ? Output.empty() : this.runOn;
+    public Output<String> runOn() {
+        return this.runOn == null ? Codegen.empty() : this.runOn;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runbook", required=true)
       private final Output<RunbookAssociationPropertyArgs> runbook;
 
-    public Output<RunbookAssociationPropertyArgs> getRunbook() {
+    public Output<RunbookAssociationPropertyArgs> runbook() {
         return this.runbook;
     }
 
@@ -90,7 +91,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<ScheduleAssociationPropertyArgs> schedule;
 
-    public Output<ScheduleAssociationPropertyArgs> getSchedule() {
+    public Output<ScheduleAssociationPropertyArgs> schedule() {
         return this.schedule;
     }
 
@@ -112,13 +113,13 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobScheduleArgs() {
-        this.automationAccountName = Output.empty();
-        this.jobScheduleId = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.runOn = Output.empty();
-        this.runbook = Output.empty();
-        this.schedule = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.jobScheduleId = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.runOn = Codegen.empty();
+        this.runbook = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobScheduleId(@Nullable String jobScheduleId) {
-            this.jobScheduleId = Output.ofNullable(jobScheduleId);
+            this.jobScheduleId = Codegen.ofNullable(jobScheduleId);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -174,7 +175,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -190,7 +191,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runOn(@Nullable String runOn) {
-            this.runOn = Output.ofNullable(runOn);
+            this.runOn = Codegen.ofNullable(runOn);
             return this;
         }
         public Builder runbook(Output<RunbookAssociationPropertyArgs> runbook) {

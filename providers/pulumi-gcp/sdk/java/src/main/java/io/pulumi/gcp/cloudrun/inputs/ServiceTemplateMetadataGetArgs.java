@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -31,8 +32,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
-    public Output<Integer> getGeneration() {
-        return this.generation == null ? Output.empty() : this.generation;
+    public Output<Integer> generation() {
+        return this.generation == null ? Codegen.empty() : this.generation;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
-    public Output<String> getResourceVersion() {
-        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
+    public Output<String> resourceVersion() {
+        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+    public Output<String> uid() {
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public ServiceTemplateMetadataGetArgs(
@@ -148,14 +149,14 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
     }
 
     private ServiceTemplateMetadataGetArgs() {
-        this.annotations = Output.empty();
-        this.generation = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.resourceVersion = Output.empty();
-        this.selfLink = Output.empty();
-        this.uid = Output.empty();
+        this.annotations = Codegen.empty();
+        this.generation = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.resourceVersion = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder generation(@Nullable Output<Integer> generation) {
@@ -205,7 +206,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder generation(@Nullable Integer generation) {
-            this.generation = Output.ofNullable(generation);
+            this.generation = Codegen.ofNullable(generation);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -213,7 +214,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -229,7 +230,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
@@ -237,7 +238,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Output.ofNullable(resourceVersion);
+            this.resourceVersion = Codegen.ofNullable(resourceVersion);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -245,7 +246,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -253,7 +254,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public ServiceTemplateMetadataGetArgs build() {
             return new ServiceTemplateMetadataGetArgs(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);

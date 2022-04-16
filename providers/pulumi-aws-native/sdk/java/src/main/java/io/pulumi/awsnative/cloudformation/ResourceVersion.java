@@ -11,6 +11,7 @@ import io.pulumi.awsnative.cloudformation.outputs.ResourceVersionLoggingConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +49,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
      * 
      */
-    public Output</* @Nullable */ String> getExecutionRoleArn() {
+    public Output</* @Nullable */ String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -62,7 +63,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return Indicates if this type version is the current default version
      * 
      */
-    public Output<Boolean> getIsDefaultVersion() {
+    public Output<Boolean> isDefaultVersion() {
         return this.isDefaultVersion;
     }
     /**
@@ -76,7 +77,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return Specifies logging configuration information for a type.
      * 
      */
-    public Output</* @Nullable */ ResourceVersionLoggingConfig> getLoggingConfig() {
+    public Output</* @Nullable */ ResourceVersionLoggingConfig> loggingConfig() {
         return this.loggingConfig;
     }
     /**
@@ -90,7 +91,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * 
      */
-    public Output<ResourceVersionProvisioningType> getProvisioningType() {
+    public Output<ResourceVersionProvisioningType> provisioningType() {
         return this.provisioningType;
     }
     /**
@@ -108,7 +109,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
      * 
      */
-    public Output<String> getSchemaHandlerPackage() {
+    public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
     /**
@@ -122,7 +123,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type without the versionID.
      * 
      */
-    public Output<String> getTypeArn() {
+    public Output<String> typeArn() {
         return this.typeArn;
     }
     /**
@@ -140,7 +141,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
     /**
@@ -154,7 +155,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @return The ID of the version of the type represented by this resource instance.
      * 
      */
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
     /**
@@ -180,7 +181,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * PUBLIC: The type is publically visible and usable within any Amazon account.
      * 
      */
-    public Output<ResourceVersionVisibility> getVisibility() {
+    public Output<ResourceVersionVisibility> visibility() {
         return this.visibility;
     }
 
@@ -206,7 +207,7 @@ public class ResourceVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceVersion(String name, ResourceVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudformation:ResourceVersion", name, args == null ? ResourceVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudformation:ResourceVersion", name, args == null ? ResourceVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

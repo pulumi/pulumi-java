@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DomainSamlOptionsSamlOptionsIdpGetArgs extends io.pulumi.reso
     @Import(name="entityId", required=true)
       private final Output<String> entityId;
 
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
 
@@ -31,7 +32,7 @@ public final class DomainSamlOptionsSamlOptionsIdpGetArgs extends io.pulumi.reso
     @Import(name="metadataContent", required=true)
       private final Output<String> metadataContent;
 
-    public Output<String> getMetadataContent() {
+    public Output<String> metadataContent() {
         return this.metadataContent;
     }
 
@@ -43,8 +44,8 @@ public final class DomainSamlOptionsSamlOptionsIdpGetArgs extends io.pulumi.reso
     }
 
     private DomainSamlOptionsSamlOptionsIdpGetArgs() {
-        this.entityId = Output.empty();
-        this.metadataContent = Output.empty();
+        this.entityId = Codegen.empty();
+        this.metadataContent = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerNetworkInterfaceConfigurations")
       private final @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
 
-    public Output<List<ContainerNetworkInterfaceConfigurationArgs>> getContainerNetworkInterfaceConfigurations() {
-        return this.containerNetworkInterfaceConfigurations == null ? Output.empty() : this.containerNetworkInterfaceConfigurations;
+    public Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations() {
+        return this.containerNetworkInterfaceConfigurations == null ? Codegen.empty() : this.containerNetworkInterfaceConfigurations;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkProfileName")
       private final @Nullable Output<String> networkProfileName;
 
-    public Output<String> getNetworkProfileName() {
-        return this.networkProfileName == null ? Output.empty() : this.networkProfileName;
+    public Output<String> networkProfileName() {
+        return this.networkProfileName == null ? Codegen.empty() : this.networkProfileName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,8 +80,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkProfileArgs(
@@ -99,12 +100,12 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkProfileArgs() {
-        this.containerNetworkInterfaceConfigurations = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.networkProfileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.containerNetworkInterfaceConfigurations = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkProfileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerNetworkInterfaceConfigurations(@Nullable List<ContainerNetworkInterfaceConfigurationArgs> containerNetworkInterfaceConfigurations) {
-            this.containerNetworkInterfaceConfigurations = Output.ofNullable(containerNetworkInterfaceConfigurations);
+            this.containerNetworkInterfaceConfigurations = Codegen.ofNullable(containerNetworkInterfaceConfigurations);
             return this;
         }
         public Builder containerNetworkInterfaceConfigurations(ContainerNetworkInterfaceConfigurationArgs... containerNetworkInterfaceConfigurations) {
@@ -153,7 +154,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -161,7 +162,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkProfileName(@Nullable Output<String> networkProfileName) {
@@ -169,7 +170,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkProfileName(@Nullable String networkProfileName) {
-            this.networkProfileName = Output.ofNullable(networkProfileName);
+            this.networkProfileName = Codegen.ofNullable(networkProfileName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -185,7 +186,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(containerNetworkInterfaceConfigurations, id, location, networkProfileName, resourceGroupName, tags);

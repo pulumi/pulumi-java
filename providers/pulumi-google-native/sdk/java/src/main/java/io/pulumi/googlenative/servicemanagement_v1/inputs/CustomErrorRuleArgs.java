@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isErrorType")
       private final @Nullable Output<Boolean> isErrorType;
 
-    public Output<Boolean> getIsErrorType() {
-        return this.isErrorType == null ? Output.empty() : this.isErrorType;
+    public Output<Boolean> isErrorType() {
+        return this.isErrorType == null ? Codegen.empty() : this.isErrorType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+    public Output<String> selector() {
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public CustomErrorRuleArgs(
@@ -49,8 +50,8 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CustomErrorRuleArgs() {
-        this.isErrorType = Output.empty();
-        this.selector = Output.empty();
+        this.isErrorType = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder isErrorType(@Nullable Boolean isErrorType) {
-            this.isErrorType = Output.ofNullable(isErrorType);
+            this.isErrorType = Codegen.ofNullable(isErrorType);
             return this;
         }
         public Builder selector(@Nullable Output<String> selector) {
@@ -88,7 +89,7 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public CustomErrorRuleArgs build() {
             return new CustomErrorRuleArgs(isErrorType, selector);

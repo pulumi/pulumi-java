@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
     @Import(name="condition")
       private final @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
-    public Output<GooglePrivacyDlpV2RecordConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<GooglePrivacyDlpV2RecordConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     public GooglePrivacyDlpV2RecordSuppressionArgs(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
     }
 
     private GooglePrivacyDlpV2RecordSuppressionArgs() {
-        this.condition = Output.empty();
+        this.condition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
             return this;
         }
         public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }        public GooglePrivacyDlpV2RecordSuppressionArgs build() {
             return new GooglePrivacyDlpV2RecordSuppressionArgs(condition);

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceTaskSpecPlacementPlatformArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,29 +21,29 @@ public final class ServiceTaskSpecPlacementArgs extends io.pulumi.resources.Reso
     @Import(name="constraints")
       private final @Nullable Output<List<String>> constraints;
 
-    public Output<List<String>> getConstraints() {
-        return this.constraints == null ? Output.empty() : this.constraints;
+    public Output<List<String>> constraints() {
+        return this.constraints == null ? Codegen.empty() : this.constraints;
     }
 
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
-        return this.maxReplicas == null ? Output.empty() : this.maxReplicas;
+    public Output<Integer> maxReplicas() {
+        return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
     }
 
     @Import(name="platforms")
       private final @Nullable Output<List<ServiceTaskSpecPlacementPlatformArgs>> platforms;
 
-    public Output<List<ServiceTaskSpecPlacementPlatformArgs>> getPlatforms() {
-        return this.platforms == null ? Output.empty() : this.platforms;
+    public Output<List<ServiceTaskSpecPlacementPlatformArgs>> platforms() {
+        return this.platforms == null ? Codegen.empty() : this.platforms;
     }
 
     @Import(name="prefs")
       private final @Nullable Output<List<String>> prefs;
 
-    public Output<List<String>> getPrefs() {
-        return this.prefs == null ? Output.empty() : this.prefs;
+    public Output<List<String>> prefs() {
+        return this.prefs == null ? Codegen.empty() : this.prefs;
     }
 
     public ServiceTaskSpecPlacementArgs(
@@ -57,10 +58,10 @@ public final class ServiceTaskSpecPlacementArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceTaskSpecPlacementArgs() {
-        this.constraints = Output.empty();
-        this.maxReplicas = Output.empty();
-        this.platforms = Output.empty();
-        this.prefs = Output.empty();
+        this.constraints = Codegen.empty();
+        this.maxReplicas = Codegen.empty();
+        this.platforms = Codegen.empty();
+        this.prefs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ServiceTaskSpecPlacementArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder constraints(@Nullable List<String> constraints) {
-            this.constraints = Output.ofNullable(constraints);
+            this.constraints = Codegen.ofNullable(constraints);
             return this;
         }
         public Builder constraints(String... constraints) {
@@ -105,7 +106,7 @@ public final class ServiceTaskSpecPlacementArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Output.ofNullable(maxReplicas);
+            this.maxReplicas = Codegen.ofNullable(maxReplicas);
             return this;
         }
         public Builder platforms(@Nullable Output<List<ServiceTaskSpecPlacementPlatformArgs>> platforms) {
@@ -113,7 +114,7 @@ public final class ServiceTaskSpecPlacementArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder platforms(@Nullable List<ServiceTaskSpecPlacementPlatformArgs> platforms) {
-            this.platforms = Output.ofNullable(platforms);
+            this.platforms = Codegen.ofNullable(platforms);
             return this;
         }
         public Builder platforms(ServiceTaskSpecPlacementPlatformArgs... platforms) {
@@ -124,7 +125,7 @@ public final class ServiceTaskSpecPlacementArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder prefs(@Nullable List<String> prefs) {
-            this.prefs = Output.ofNullable(prefs);
+            this.prefs = Codegen.ofNullable(prefs);
             return this;
         }
         public Builder prefs(String... prefs) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.imagebuilder.inputs.ImageImageTestsConfigurationGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageOutputResourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
-    public Output<String> getDateCreated() {
-        return this.dateCreated == null ? Output.empty() : this.dateCreated;
+    public Output<String> dateCreated() {
+        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> getDistributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Output.empty() : this.distributionConfigurationArn;
+    public Output<String> distributionConfigurationArn() {
+        return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> getEnhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Output.empty() : this.enhancedImageMetadataEnabled;
+    public Output<Boolean> enhancedImageMetadataEnabled() {
+        return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageRecipeArn")
       private final @Nullable Output<String> imageRecipeArn;
 
-    public Output<String> getImageRecipeArn() {
-        return this.imageRecipeArn == null ? Output.empty() : this.imageRecipeArn;
+    public Output<String> imageRecipeArn() {
+        return this.imageRecipeArn == null ? Codegen.empty() : this.imageRecipeArn;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
-    public Output<ImageImageTestsConfigurationGetArgs> getImageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Output.empty() : this.imageTestsConfiguration;
+    public Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration() {
+        return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfigurationArn")
       private final @Nullable Output<String> infrastructureConfigurationArn;
 
-    public Output<String> getInfrastructureConfigurationArn() {
-        return this.infrastructureConfigurationArn == null ? Output.empty() : this.infrastructureConfigurationArn;
+    public Output<String> infrastructureConfigurationArn() {
+        return this.infrastructureConfigurationArn == null ? Codegen.empty() : this.infrastructureConfigurationArn;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
-        return this.osVersion == null ? Output.empty() : this.osVersion;
+    public Output<String> osVersion() {
+        return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputResources")
       private final @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources;
 
-    public Output<List<ImageOutputResourceGetArgs>> getOutputResources() {
-        return this.outputResources == null ? Output.empty() : this.outputResources;
+    public Output<List<ImageOutputResourceGetArgs>> outputResources() {
+        return this.outputResources == null ? Codegen.empty() : this.outputResources;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+    public Output<String> platform() {
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ImageState(
@@ -205,20 +206,20 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageState() {
-        this.arn = Output.empty();
-        this.dateCreated = Output.empty();
-        this.distributionConfigurationArn = Output.empty();
-        this.enhancedImageMetadataEnabled = Output.empty();
-        this.imageRecipeArn = Output.empty();
-        this.imageTestsConfiguration = Output.empty();
-        this.infrastructureConfigurationArn = Output.empty();
-        this.name = Output.empty();
-        this.osVersion = Output.empty();
-        this.outputResources = Output.empty();
-        this.platform = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.version = Output.empty();
+        this.arn = Codegen.empty();
+        this.dateCreated = Codegen.empty();
+        this.distributionConfigurationArn = Codegen.empty();
+        this.enhancedImageMetadataEnabled = Codegen.empty();
+        this.imageRecipeArn = Codegen.empty();
+        this.imageTestsConfiguration = Codegen.empty();
+        this.infrastructureConfigurationArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osVersion = Codegen.empty();
+        this.outputResources = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -272,7 +273,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
@@ -280,7 +281,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Output.ofNullable(dateCreated);
+            this.dateCreated = Codegen.ofNullable(dateCreated);
             return this;
         }
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
@@ -288,7 +289,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Output.ofNullable(distributionConfigurationArn);
+            this.distributionConfigurationArn = Codegen.ofNullable(distributionConfigurationArn);
             return this;
         }
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
@@ -296,7 +297,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Output.ofNullable(enhancedImageMetadataEnabled);
+            this.enhancedImageMetadataEnabled = Codegen.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
         public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
@@ -304,7 +305,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
-            this.imageRecipeArn = Output.ofNullable(imageRecipeArn);
+            this.imageRecipeArn = Codegen.ofNullable(imageRecipeArn);
             return this;
         }
         public Builder imageTestsConfiguration(@Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration) {
@@ -312,7 +313,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageTestsConfiguration(@Nullable ImageImageTestsConfigurationGetArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Output.ofNullable(imageTestsConfiguration);
+            this.imageTestsConfiguration = Codegen.ofNullable(imageTestsConfiguration);
             return this;
         }
         public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
@@ -320,7 +321,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Output.ofNullable(infrastructureConfigurationArn);
+            this.infrastructureConfigurationArn = Codegen.ofNullable(infrastructureConfigurationArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -328,7 +329,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder osVersion(@Nullable Output<String> osVersion) {
@@ -336,7 +337,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Output.ofNullable(osVersion);
+            this.osVersion = Codegen.ofNullable(osVersion);
             return this;
         }
         public Builder outputResources(@Nullable Output<List<ImageOutputResourceGetArgs>> outputResources) {
@@ -344,7 +345,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputResources(@Nullable List<ImageOutputResourceGetArgs> outputResources) {
-            this.outputResources = Output.ofNullable(outputResources);
+            this.outputResources = Codegen.ofNullable(outputResources);
             return this;
         }
         public Builder outputResources(ImageOutputResourceGetArgs... outputResources) {
@@ -355,7 +356,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable String platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -363,7 +364,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -371,7 +372,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -379,7 +380,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ImageState build() {
             return new ImageState(arn, dateCreated, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, name, osVersion, outputResources, platform, tags, tagsAll, version);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.apimanagement.inputs.RequestContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.ResponseContractArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -36,8 +37,8 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -58,7 +59,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method", required=true)
       private final Output<String> method;
 
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method;
     }
 
@@ -69,8 +70,8 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationId")
       private final @Nullable Output<String> operationId;
 
-    public Output<String> getOperationId() {
-        return this.operationId == null ? Output.empty() : this.operationId;
+    public Output<String> operationId() {
+        return this.operationId == null ? Codegen.empty() : this.operationId;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policies")
       private final @Nullable Output<String> policies;
 
-    public Output<String> getPolicies() {
-        return this.policies == null ? Output.empty() : this.policies;
+    public Output<String> policies() {
+        return this.policies == null ? Codegen.empty() : this.policies;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="request")
       private final @Nullable Output<RequestContractArgs> request;
 
-    public Output<RequestContractArgs> getRequest() {
-        return this.request == null ? Output.empty() : this.request;
+    public Output<RequestContractArgs> request() {
+        return this.request == null ? Codegen.empty() : this.request;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,8 +114,8 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responses")
       private final @Nullable Output<List<ResponseContractArgs>> responses;
 
-    public Output<List<ResponseContractArgs>> getResponses() {
-        return this.responses == null ? Output.empty() : this.responses;
+    public Output<List<ResponseContractArgs>> responses() {
+        return this.responses == null ? Codegen.empty() : this.responses;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -135,8 +136,8 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateParameters")
       private final @Nullable Output<List<ParameterContractArgs>> templateParameters;
 
-    public Output<List<ParameterContractArgs>> getTemplateParameters() {
-        return this.templateParameters == null ? Output.empty() : this.templateParameters;
+    public Output<List<ParameterContractArgs>> templateParameters() {
+        return this.templateParameters == null ? Codegen.empty() : this.templateParameters;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
-    public Output<String> getUrlTemplate() {
+    public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 
@@ -178,18 +179,18 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiOperationArgs() {
-        this.apiId = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.method = Output.empty();
-        this.operationId = Output.empty();
-        this.policies = Output.empty();
-        this.request = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.responses = Output.empty();
-        this.serviceName = Output.empty();
-        this.templateParameters = Output.empty();
-        this.urlTemplate = Output.empty();
+        this.apiId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.method = Codegen.empty();
+        this.operationId = Codegen.empty();
+        this.policies = Codegen.empty();
+        this.request = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.responses = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.templateParameters = Codegen.empty();
+        this.urlTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -247,7 +248,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -271,7 +272,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationId(@Nullable String operationId) {
-            this.operationId = Output.ofNullable(operationId);
+            this.operationId = Codegen.ofNullable(operationId);
             return this;
         }
         public Builder policies(@Nullable Output<String> policies) {
@@ -279,7 +280,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policies(@Nullable String policies) {
-            this.policies = Output.ofNullable(policies);
+            this.policies = Codegen.ofNullable(policies);
             return this;
         }
         public Builder request(@Nullable Output<RequestContractArgs> request) {
@@ -287,7 +288,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder request(@Nullable RequestContractArgs request) {
-            this.request = Output.ofNullable(request);
+            this.request = Codegen.ofNullable(request);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -303,7 +304,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responses(@Nullable List<ResponseContractArgs> responses) {
-            this.responses = Output.ofNullable(responses);
+            this.responses = Codegen.ofNullable(responses);
             return this;
         }
         public Builder responses(ResponseContractArgs... responses) {
@@ -322,7 +323,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateParameters(@Nullable List<ParameterContractArgs> templateParameters) {
-            this.templateParameters = Output.ofNullable(templateParameters);
+            this.templateParameters = Codegen.ofNullable(templateParameters);
             return this;
         }
         public Builder templateParameters(ParameterContractArgs... templateParameters) {

@@ -8,6 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPo
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,8 +24,8 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="acm")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs> acm;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs> getAcm() {
-        return this.acm == null ? Output.empty() : this.acm;
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs> acm() {
+        return this.acm == null ? Codegen.empty() : this.acm;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs> file;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs> file() {
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs> sds;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs> getSds() {
-        return this.sds == null ? Output.empty() : this.sds;
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs> sds() {
+        return this.sds == null ? Codegen.empty() : this.sds;
     }
 
     public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs(
@@ -59,9 +60,9 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     }
 
     private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs() {
-        this.acm = Output.empty();
-        this.file = Output.empty();
-        this.sds = Output.empty();
+        this.acm = Codegen.empty();
+        this.file = Codegen.empty();
+        this.sds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             return this;
         }
         public Builder acm(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs acm) {
-            this.acm = Output.ofNullable(acm);
+            this.acm = Codegen.ofNullable(acm);
             return this;
         }
         public Builder file(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs> file) {
@@ -101,7 +102,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             return this;
         }
         public Builder file(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder sds(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs> sds) {
@@ -109,7 +110,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             return this;
         }
         public Builder sds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs sds) {
-            this.sds = Output.ofNullable(sds);
+            this.sds = Codegen.ofNullable(sds);
             return this;
         }        public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs build() {
             return new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs(acm, file, sds);

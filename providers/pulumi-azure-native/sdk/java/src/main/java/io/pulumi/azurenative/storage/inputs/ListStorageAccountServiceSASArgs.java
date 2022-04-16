@@ -25,7 +25,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="cacheControl")
       private final @Nullable String cacheControl;
 
-    public Optional<String> getCacheControl() {
+    public Optional<String> cacheControl() {
         return this.cacheControl == null ? Optional.empty() : Optional.ofNullable(this.cacheControl);
     }
 
@@ -47,7 +47,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="canonicalizedResource", required=true)
       private final String canonicalizedResource;
 
-    public String getCanonicalizedResource() {
+    public String canonicalizedResource() {
         return this.canonicalizedResource;
     }
 
@@ -58,7 +58,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="contentDisposition")
       private final @Nullable String contentDisposition;
 
-    public Optional<String> getContentDisposition() {
+    public Optional<String> contentDisposition() {
         return this.contentDisposition == null ? Optional.empty() : Optional.ofNullable(this.contentDisposition);
     }
 
@@ -69,7 +69,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="contentEncoding")
       private final @Nullable String contentEncoding;
 
-    public Optional<String> getContentEncoding() {
+    public Optional<String> contentEncoding() {
         return this.contentEncoding == null ? Optional.empty() : Optional.ofNullable(this.contentEncoding);
     }
 
@@ -80,7 +80,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="contentLanguage")
       private final @Nullable String contentLanguage;
 
-    public Optional<String> getContentLanguage() {
+    public Optional<String> contentLanguage() {
         return this.contentLanguage == null ? Optional.empty() : Optional.ofNullable(this.contentLanguage);
     }
 
@@ -91,7 +91,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -102,7 +102,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="iPAddressOrRange")
       private final @Nullable String iPAddressOrRange;
 
-    public Optional<String> getIPAddressOrRange() {
+    public Optional<String> iPAddressOrRange() {
         return this.iPAddressOrRange == null ? Optional.empty() : Optional.ofNullable(this.iPAddressOrRange);
     }
 
@@ -113,7 +113,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="identifier")
       private final @Nullable String identifier;
 
-    public Optional<String> getIdentifier() {
+    public Optional<String> identifier() {
         return this.identifier == null ? Optional.empty() : Optional.ofNullable(this.identifier);
     }
 
@@ -124,7 +124,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="keyToSign")
       private final @Nullable String keyToSign;
 
-    public Optional<String> getKeyToSign() {
+    public Optional<String> keyToSign() {
         return this.keyToSign == null ? Optional.empty() : Optional.ofNullable(this.keyToSign);
     }
 
@@ -135,7 +135,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="partitionKeyEnd")
       private final @Nullable String partitionKeyEnd;
 
-    public Optional<String> getPartitionKeyEnd() {
+    public Optional<String> partitionKeyEnd() {
         return this.partitionKeyEnd == null ? Optional.empty() : Optional.ofNullable(this.partitionKeyEnd);
     }
 
@@ -146,7 +146,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="partitionKeyStart")
       private final @Nullable String partitionKeyStart;
 
-    public Optional<String> getPartitionKeyStart() {
+    public Optional<String> partitionKeyStart() {
         return this.partitionKeyStart == null ? Optional.empty() : Optional.ofNullable(this.partitionKeyStart);
     }
 
@@ -157,7 +157,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="permissions")
       private final @Nullable Either<String,Permissions> permissions;
 
-    public Either<String,Permissions> getPermissions() {
+    public Either<String,Permissions> permissions() {
         return this.permissions == null ? null : this.permissions;
     }
 
@@ -168,7 +168,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="protocols")
       private final @Nullable HttpProtocol protocols;
 
-    public Optional<HttpProtocol> getProtocols() {
+    public Optional<HttpProtocol> protocols() {
         return this.protocols == null ? Optional.empty() : Optional.ofNullable(this.protocols);
     }
 
@@ -179,7 +179,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="resource")
       private final @Nullable Either<String,SignedResource> resource;
 
-    public Either<String,SignedResource> getResource() {
+    public Either<String,SignedResource> resource() {
         return this.resource == null ? null : this.resource;
     }
 
@@ -190,7 +190,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -201,7 +201,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="rowKeyEnd")
       private final @Nullable String rowKeyEnd;
 
-    public Optional<String> getRowKeyEnd() {
+    public Optional<String> rowKeyEnd() {
         return this.rowKeyEnd == null ? Optional.empty() : Optional.ofNullable(this.rowKeyEnd);
     }
 
@@ -212,7 +212,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="rowKeyStart")
       private final @Nullable String rowKeyStart;
 
-    public Optional<String> getRowKeyStart() {
+    public Optional<String> rowKeyStart() {
         return this.rowKeyStart == null ? Optional.empty() : Optional.ofNullable(this.rowKeyStart);
     }
 
@@ -223,7 +223,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="sharedAccessExpiryTime")
       private final @Nullable String sharedAccessExpiryTime;
 
-    public Optional<String> getSharedAccessExpiryTime() {
+    public Optional<String> sharedAccessExpiryTime() {
         return this.sharedAccessExpiryTime == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessExpiryTime);
     }
 
@@ -234,7 +234,7 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     @Import(name="sharedAccessStartTime")
       private final @Nullable String sharedAccessStartTime;
 
-    public Optional<String> getSharedAccessStartTime() {
+    public Optional<String> sharedAccessStartTime() {
         return this.sharedAccessStartTime == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessStartTime);
     }
 

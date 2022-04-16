@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storagetransfer_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storagetransfer_v1.AgentPoolArgs;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.BandwidthLimitResponse;
@@ -29,7 +30,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
      * 
      */
-    public Output<BandwidthLimitResponse> getBandwidthLimit() {
+    public Output<BandwidthLimitResponse> bandwidthLimit() {
         return this.bandwidthLimit;
     }
     /**
@@ -43,7 +44,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies the client-specified AgentPool description.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -57,7 +58,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Specifies the state of the AgentPool.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -97,7 +98,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AgentPool(String name, AgentPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storagetransfer/v1:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storagetransfer/v1:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AgentPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

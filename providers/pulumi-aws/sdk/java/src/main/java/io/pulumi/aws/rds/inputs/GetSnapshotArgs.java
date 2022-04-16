@@ -22,7 +22,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dbInstanceIdentifier")
       private final @Nullable String dbInstanceIdentifier;
 
-    public Optional<String> getDbInstanceIdentifier() {
+    public Optional<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbInstanceIdentifier);
     }
 
@@ -33,7 +33,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dbSnapshotIdentifier")
       private final @Nullable String dbSnapshotIdentifier;
 
-    public Optional<String> getDbSnapshotIdentifier() {
+    public Optional<String> dbSnapshotIdentifier() {
         return this.dbSnapshotIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbSnapshotIdentifier);
     }
 
@@ -45,7 +45,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="includePublic")
       private final @Nullable Boolean includePublic;
 
-    public Optional<Boolean> getIncludePublic() {
+    public Optional<Boolean> includePublic() {
         return this.includePublic == null ? Optional.empty() : Optional.ofNullable(this.includePublic);
     }
 
@@ -58,7 +58,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="includeShared")
       private final @Nullable Boolean includeShared;
 
-    public Optional<Boolean> getIncludeShared() {
+    public Optional<Boolean> includeShared() {
         return this.includeShared == null ? Optional.empty() : Optional.ofNullable(this.includeShared);
     }
 
@@ -70,7 +70,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -83,7 +83,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="snapshotType")
       private final @Nullable String snapshotType;
 
-    public Optional<String> getSnapshotType() {
+    public Optional<String> snapshotType() {
         return this.snapshotType == null ? Optional.empty() : Optional.ofNullable(this.snapshotType);
     }
 

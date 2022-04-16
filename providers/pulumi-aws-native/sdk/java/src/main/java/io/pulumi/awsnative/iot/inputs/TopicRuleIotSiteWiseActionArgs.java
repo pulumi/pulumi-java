@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.TopicRulePutAssetPropertyValueEntryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,14 +19,14 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     @Import(name="putAssetPropertyValueEntries", required=true)
       private final Output<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
 
-    public Output<List<TopicRulePutAssetPropertyValueEntryArgs>> getPutAssetPropertyValueEntries() {
+    public Output<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries() {
         return this.putAssetPropertyValueEntries;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -37,8 +38,8 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     }
 
     private TopicRuleIotSiteWiseActionArgs() {
-        this.putAssetPropertyValueEntries = Output.empty();
-        this.roleArn = Output.empty();
+        this.putAssetPropertyValueEntries = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

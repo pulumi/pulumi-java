@@ -7,6 +7,7 @@ import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfiguration
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
     @Import(name="destinations", required=true)
       private final Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> destinations;
 
-    public Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> getDestinations() {
+    public Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> destinations() {
         return this.destinations;
     }
 
@@ -34,8 +35,8 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
     @Import(name="repositoryFilters")
       private final @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
 
-    public Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> getRepositoryFilters() {
-        return this.repositoryFilters == null ? Output.empty() : this.repositoryFilters;
+    public Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> repositoryFilters() {
+        return this.repositoryFilters == null ? Codegen.empty() : this.repositoryFilters;
     }
 
     public ReplicationConfigurationReplicationConfigurationRuleArgs(
@@ -46,8 +47,8 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
     }
 
     private ReplicationConfigurationReplicationConfigurationRuleArgs() {
-        this.destinations = Output.empty();
-        this.repositoryFilters = Output.empty();
+        this.destinations = Codegen.empty();
+        this.repositoryFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
             return this;
         }
         public Builder repositoryFilters(@Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs> repositoryFilters) {
-            this.repositoryFilters = Output.ofNullable(repositoryFilters);
+            this.repositoryFilters = Codegen.ofNullable(repositoryFilters);
             return this;
         }
         public Builder repositoryFilters(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs... repositoryFilters) {

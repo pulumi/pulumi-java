@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @return The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
      * 
      */
-    public Output</* @Nullable */ String> getAwsRoleArn() {
+    public Output</* @Nullable */ String> awsRoleArn() {
         return this.awsRoleArn;
     }
     /**
@@ -56,7 +57,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @return The available data types for the connector.
      * 
      */
-    public Output</* @Nullable */ AwsCloudTrailDataConnectorDataTypesResponse> getDataTypes() {
+    public Output</* @Nullable */ AwsCloudTrailDataConnectorDataTypesResponse> dataTypes() {
         return this.dataTypes;
     }
     /**
@@ -70,7 +71,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -86,7 +87,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * Expected value is 'AmazonWebServicesCloudTrail'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -100,7 +101,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +141,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AwsCloudTrailDataConnector(String name, AwsCloudTrailDataConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:AwsCloudTrailDataConnector", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:AwsCloudTrailDataConnector", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AwsCloudTrailDataConnector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

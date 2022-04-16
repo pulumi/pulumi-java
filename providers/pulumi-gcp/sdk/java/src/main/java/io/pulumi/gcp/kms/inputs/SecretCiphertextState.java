@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     @Import(name="additionalAuthenticatedData")
       private final @Nullable Output<String> additionalAuthenticatedData;
 
-    public Output<String> getAdditionalAuthenticatedData() {
-        return this.additionalAuthenticatedData == null ? Output.empty() : this.additionalAuthenticatedData;
+    public Output<String> additionalAuthenticatedData() {
+        return this.additionalAuthenticatedData == null ? Codegen.empty() : this.additionalAuthenticatedData;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     @Import(name="ciphertext")
       private final @Nullable Output<String> ciphertext;
 
-    public Output<String> getCiphertext() {
-        return this.ciphertext == null ? Output.empty() : this.ciphertext;
+    public Output<String> ciphertext() {
+        return this.ciphertext == null ? Codegen.empty() : this.ciphertext;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     @Import(name="cryptoKey")
       private final @Nullable Output<String> cryptoKey;
 
-    public Output<String> getCryptoKey() {
-        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
+    public Output<String> cryptoKey() {
+        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     @Import(name="plaintext")
       private final @Nullable Output<String> plaintext;
 
-    public Output<String> getPlaintext() {
-        return this.plaintext == null ? Output.empty() : this.plaintext;
+    public Output<String> plaintext() {
+        return this.plaintext == null ? Codegen.empty() : this.plaintext;
     }
 
     public SecretCiphertextState(
@@ -73,10 +74,10 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     }
 
     private SecretCiphertextState() {
-        this.additionalAuthenticatedData = Output.empty();
-        this.ciphertext = Output.empty();
-        this.cryptoKey = Output.empty();
-        this.plaintext = Output.empty();
+        this.additionalAuthenticatedData = Codegen.empty();
+        this.ciphertext = Codegen.empty();
+        this.cryptoKey = Codegen.empty();
+        this.plaintext = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = Output.ofNullable(additionalAuthenticatedData);
+            this.additionalAuthenticatedData = Codegen.ofNullable(additionalAuthenticatedData);
             return this;
         }
         public Builder ciphertext(@Nullable Output<String> ciphertext) {
@@ -118,7 +119,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ciphertext(@Nullable String ciphertext) {
-            this.ciphertext = Output.ofNullable(ciphertext);
+            this.ciphertext = Codegen.ofNullable(ciphertext);
             return this;
         }
         public Builder cryptoKey(@Nullable Output<String> cryptoKey) {
@@ -126,7 +127,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cryptoKey(@Nullable String cryptoKey) {
-            this.cryptoKey = Output.ofNullable(cryptoKey);
+            this.cryptoKey = Codegen.ofNullable(cryptoKey);
             return this;
         }
         public Builder plaintext(@Nullable Output<String> plaintext) {
@@ -134,7 +135,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder plaintext(@Nullable String plaintext) {
-            this.plaintext = Output.ofNullable(plaintext);
+            this.plaintext = Codegen.ofNullable(plaintext);
             return this;
         }        public SecretCiphertextState build() {
             return new SecretCiphertextState(additionalAuthenticatedData, ciphertext, cryptoKey, plaintext);

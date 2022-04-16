@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiPrefix")
       private final @Nullable Output<String> apiPrefix;
 
-    public Output<String> getApiPrefix() {
-        return this.apiPrefix == null ? Output.empty() : this.apiPrefix;
+    public Output<String> apiPrefix() {
+        return this.apiPrefix == null ? Codegen.empty() : this.apiPrefix;
     }
 
     public HttpSettingsRoutesArgs(@Nullable Output<String> apiPrefix) {
@@ -34,7 +35,7 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpSettingsRoutesArgs() {
-        this.apiPrefix = Output.empty();
+        this.apiPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder apiPrefix(@Nullable String apiPrefix) {
-            this.apiPrefix = Output.ofNullable(apiPrefix);
+            this.apiPrefix = Codegen.ofNullable(apiPrefix);
             return this;
         }        public HttpSettingsRoutesArgs build() {
             return new HttpSettingsRoutesArgs(apiPrefix);

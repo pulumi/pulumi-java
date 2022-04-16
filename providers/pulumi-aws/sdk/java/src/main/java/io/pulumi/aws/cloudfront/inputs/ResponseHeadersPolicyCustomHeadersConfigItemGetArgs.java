@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
     @Import(name="header", required=true)
       private final Output<String> header;
 
-    public Output<String> getHeader() {
+    public Output<String> header() {
         return this.header;
     }
 
@@ -32,7 +33,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
@@ -43,7 +44,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -57,9 +58,9 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
     }
 
     private ResponseHeadersPolicyCustomHeadersConfigItemGetArgs() {
-        this.header = Output.empty();
-        this.override = Output.empty();
-        this.value = Output.empty();
+        this.header = Codegen.empty();
+        this.override = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

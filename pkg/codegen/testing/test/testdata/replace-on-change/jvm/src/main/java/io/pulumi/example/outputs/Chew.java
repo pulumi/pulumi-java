@@ -18,7 +18,7 @@ public final class Chew {
         this.owner = owner;
     }
 
-    public Optional<Dog> getOwner() {
+    public Optional<Dog> owner() {
         return Optional.ofNullable(this.owner);
     }
 

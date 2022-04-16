@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+    public Output<List<String>> command() {
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<String> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -72,8 +73,8 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
+    public Output<List<VolumeMountArgs>> volumeMounts() {
+        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 
     public InitContainerDefinitionArgs(
@@ -90,11 +91,11 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private InitContainerDefinitionArgs() {
-        this.command = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.image = Output.empty();
-        this.name = Output.empty();
-        this.volumeMounts = Output.empty();
+        this.command = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.image = Codegen.empty();
+        this.name = Codegen.empty();
+        this.volumeMounts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -141,7 +142,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
@@ -152,7 +153,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -168,7 +169,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Output.ofNullable(volumeMounts);
+            this.volumeMounts = Codegen.ofNullable(volumeMounts);
             return this;
         }
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {

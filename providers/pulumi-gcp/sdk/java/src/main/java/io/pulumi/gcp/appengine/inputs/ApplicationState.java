@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationIapGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleGetArgs;
@@ -25,8 +26,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+    public Output<String> appId() {
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authDomain")
       private final @Nullable Output<String> authDomain;
 
-    public Output<String> getAuthDomain() {
-        return this.authDomain == null ? Output.empty() : this.authDomain;
+    public Output<String> authDomain() {
+        return this.authDomain == null ? Codegen.empty() : this.authDomain;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="codeBucket")
       private final @Nullable Output<String> codeBucket;
 
-    public Output<String> getCodeBucket() {
-        return this.codeBucket == null ? Output.empty() : this.codeBucket;
+    public Output<String> codeBucket() {
+        return this.codeBucket == null ? Codegen.empty() : this.codeBucket;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<String> databaseType;
 
-    public Output<String> getDatabaseType() {
-        return this.databaseType == null ? Output.empty() : this.databaseType;
+    public Output<String> databaseType() {
+        return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultBucket")
       private final @Nullable Output<String> defaultBucket;
 
-    public Output<String> getDefaultBucket() {
-        return this.defaultBucket == null ? Output.empty() : this.defaultBucket;
+    public Output<String> defaultBucket() {
+        return this.defaultBucket == null ? Codegen.empty() : this.defaultBucket;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultHostname")
       private final @Nullable Output<String> defaultHostname;
 
-    public Output<String> getDefaultHostname() {
-        return this.defaultHostname == null ? Output.empty() : this.defaultHostname;
+    public Output<String> defaultHostname() {
+        return this.defaultHostname == null ? Codegen.empty() : this.defaultHostname;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureSettings")
       private final @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings;
 
-    public Output<ApplicationFeatureSettingsGetArgs> getFeatureSettings() {
-        return this.featureSettings == null ? Output.empty() : this.featureSettings;
+    public Output<ApplicationFeatureSettingsGetArgs> featureSettings() {
+        return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcrDomain")
       private final @Nullable Output<String> gcrDomain;
 
-    public Output<String> getGcrDomain() {
-        return this.gcrDomain == null ? Output.empty() : this.gcrDomain;
+    public Output<String> gcrDomain() {
+        return this.gcrDomain == null ? Codegen.empty() : this.gcrDomain;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="iap")
       private final @Nullable Output<ApplicationIapGetArgs> iap;
 
-    public Output<ApplicationIapGetArgs> getIap() {
-        return this.iap == null ? Output.empty() : this.iap;
+    public Output<ApplicationIapGetArgs> iap() {
+        return this.iap == null ? Codegen.empty() : this.iap;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationId")
       private final @Nullable Output<String> locationId;
 
-    public Output<String> getLocationId() {
-        return this.locationId == null ? Output.empty() : this.locationId;
+    public Output<String> locationId() {
+        return this.locationId == null ? Codegen.empty() : this.locationId;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="servingStatus")
       private final @Nullable Output<String> servingStatus;
 
-    public Output<String> getServingStatus() {
-        return this.servingStatus == null ? Output.empty() : this.servingStatus;
+    public Output<String> servingStatus() {
+        return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlDispatchRules")
       private final @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
 
-    public Output<List<ApplicationUrlDispatchRuleGetArgs>> getUrlDispatchRules() {
-        return this.urlDispatchRules == null ? Output.empty() : this.urlDispatchRules;
+    public Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules() {
+        return this.urlDispatchRules == null ? Codegen.empty() : this.urlDispatchRules;
     }
 
     public ApplicationState(
@@ -210,20 +211,20 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationState() {
-        this.appId = Output.empty();
-        this.authDomain = Output.empty();
-        this.codeBucket = Output.empty();
-        this.databaseType = Output.empty();
-        this.defaultBucket = Output.empty();
-        this.defaultHostname = Output.empty();
-        this.featureSettings = Output.empty();
-        this.gcrDomain = Output.empty();
-        this.iap = Output.empty();
-        this.locationId = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.servingStatus = Output.empty();
-        this.urlDispatchRules = Output.empty();
+        this.appId = Codegen.empty();
+        this.authDomain = Codegen.empty();
+        this.codeBucket = Codegen.empty();
+        this.databaseType = Codegen.empty();
+        this.defaultBucket = Codegen.empty();
+        this.defaultHostname = Codegen.empty();
+        this.featureSettings = Codegen.empty();
+        this.gcrDomain = Codegen.empty();
+        this.iap = Codegen.empty();
+        this.locationId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.servingStatus = Codegen.empty();
+        this.urlDispatchRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -277,7 +278,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder authDomain(@Nullable Output<String> authDomain) {
@@ -285,7 +286,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authDomain(@Nullable String authDomain) {
-            this.authDomain = Output.ofNullable(authDomain);
+            this.authDomain = Codegen.ofNullable(authDomain);
             return this;
         }
         public Builder codeBucket(@Nullable Output<String> codeBucket) {
@@ -293,7 +294,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder codeBucket(@Nullable String codeBucket) {
-            this.codeBucket = Output.ofNullable(codeBucket);
+            this.codeBucket = Codegen.ofNullable(codeBucket);
             return this;
         }
         public Builder databaseType(@Nullable Output<String> databaseType) {
@@ -301,7 +302,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseType(@Nullable String databaseType) {
-            this.databaseType = Output.ofNullable(databaseType);
+            this.databaseType = Codegen.ofNullable(databaseType);
             return this;
         }
         public Builder defaultBucket(@Nullable Output<String> defaultBucket) {
@@ -309,7 +310,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultBucket(@Nullable String defaultBucket) {
-            this.defaultBucket = Output.ofNullable(defaultBucket);
+            this.defaultBucket = Codegen.ofNullable(defaultBucket);
             return this;
         }
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
@@ -317,7 +318,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultHostname(@Nullable String defaultHostname) {
-            this.defaultHostname = Output.ofNullable(defaultHostname);
+            this.defaultHostname = Codegen.ofNullable(defaultHostname);
             return this;
         }
         public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings) {
@@ -325,7 +326,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureSettings(@Nullable ApplicationFeatureSettingsGetArgs featureSettings) {
-            this.featureSettings = Output.ofNullable(featureSettings);
+            this.featureSettings = Codegen.ofNullable(featureSettings);
             return this;
         }
         public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
@@ -333,7 +334,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcrDomain(@Nullable String gcrDomain) {
-            this.gcrDomain = Output.ofNullable(gcrDomain);
+            this.gcrDomain = Codegen.ofNullable(gcrDomain);
             return this;
         }
         public Builder iap(@Nullable Output<ApplicationIapGetArgs> iap) {
@@ -341,7 +342,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iap(@Nullable ApplicationIapGetArgs iap) {
-            this.iap = Output.ofNullable(iap);
+            this.iap = Codegen.ofNullable(iap);
             return this;
         }
         public Builder locationId(@Nullable Output<String> locationId) {
@@ -349,7 +350,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationId(@Nullable String locationId) {
-            this.locationId = Output.ofNullable(locationId);
+            this.locationId = Codegen.ofNullable(locationId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -357,7 +358,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -365,7 +366,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
@@ -373,7 +374,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servingStatus(@Nullable String servingStatus) {
-            this.servingStatus = Output.ofNullable(servingStatus);
+            this.servingStatus = Codegen.ofNullable(servingStatus);
             return this;
         }
         public Builder urlDispatchRules(@Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
@@ -381,7 +382,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder urlDispatchRules(@Nullable List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
-            this.urlDispatchRules = Output.ofNullable(urlDispatchRules);
+            this.urlDispatchRules = Codegen.ofNullable(urlDispatchRules);
             return this;
         }
         public Builder urlDispatchRules(ApplicationUrlDispatchRuleGetArgs... urlDispatchRules) {

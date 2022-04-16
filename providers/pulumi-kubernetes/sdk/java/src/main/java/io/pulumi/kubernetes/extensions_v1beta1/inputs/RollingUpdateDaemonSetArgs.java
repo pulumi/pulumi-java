@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
     @Import(name="maxUnavailable")
       private final @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Output<Either<Integer,String>> getMaxUnavailable() {
-        return this.maxUnavailable == null ? Output.empty() : this.maxUnavailable;
+    public Output<Either<Integer,String>> maxUnavailable() {
+        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
     public RollingUpdateDaemonSetArgs(@Nullable Output<Either<Integer,String>> maxUnavailable) {
@@ -36,7 +37,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
     }
 
     private RollingUpdateDaemonSetArgs() {
-        this.maxUnavailable = Output.empty();
+        this.maxUnavailable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
-            this.maxUnavailable = Output.ofNullable(maxUnavailable);
+            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
             return this;
         }        public RollingUpdateDaemonSetArgs build() {
             return new RollingUpdateDaemonSetArgs(maxUnavailable);

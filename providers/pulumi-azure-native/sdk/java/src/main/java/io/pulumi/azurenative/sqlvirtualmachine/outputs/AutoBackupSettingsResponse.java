@@ -92,70 +92,70 @@ public final class AutoBackupSettingsResponse {
      * Backup schedule type.
      * 
     */
-    public Optional<String> getBackupScheduleType() {
+    public Optional<String> backupScheduleType() {
         return Optional.ofNullable(this.backupScheduleType);
     }
     /**
      * Include or exclude system databases from auto backup.
      * 
     */
-    public Optional<Boolean> getBackupSystemDbs() {
+    public Optional<Boolean> backupSystemDbs() {
         return Optional.ofNullable(this.backupSystemDbs);
     }
     /**
      * Enable or disable autobackup on SQL virtual machine.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * Enable or disable encryption for backup on SQL virtual machine.
      * 
     */
-    public Optional<Boolean> getEnableEncryption() {
+    public Optional<Boolean> enableEncryption() {
         return Optional.ofNullable(this.enableEncryption);
     }
     /**
      * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
      * 
     */
-    public Optional<String> getFullBackupFrequency() {
+    public Optional<String> fullBackupFrequency() {
         return Optional.ofNullable(this.fullBackupFrequency);
     }
     /**
      * Start time of a given day during which full backups can take place. 0-23 hours.
      * 
     */
-    public Optional<Integer> getFullBackupStartTime() {
+    public Optional<Integer> fullBackupStartTime() {
         return Optional.ofNullable(this.fullBackupStartTime);
     }
     /**
      * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
      * 
     */
-    public Optional<Integer> getFullBackupWindowHours() {
+    public Optional<Integer> fullBackupWindowHours() {
         return Optional.ofNullable(this.fullBackupWindowHours);
     }
     /**
      * Frequency of log backups. 5-60 minutes.
      * 
     */
-    public Optional<Integer> getLogBackupFrequency() {
+    public Optional<Integer> logBackupFrequency() {
         return Optional.ofNullable(this.logBackupFrequency);
     }
     /**
      * Retention period of backup: 1-30 days.
      * 
     */
-    public Optional<Integer> getRetentionPeriod() {
+    public Optional<Integer> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
     /**
      * Storage account url where backup will be taken to.
      * 
     */
-    public Optional<String> getStorageAccountUrl() {
+    public Optional<String> storageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }
 

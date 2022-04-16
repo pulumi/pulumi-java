@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtrace_v2beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudtrace_v2beta1.inputs.OutputConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,15 +34,15 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputConfig", required=true)
       private final Output<OutputConfigArgs> outputConfig;
 
-    public Output<OutputConfigArgs> getOutputConfig() {
+    public Output<OutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public TraceSinkArgs(
@@ -54,9 +55,9 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TraceSinkArgs() {
-        this.name = Output.empty();
-        this.outputConfig = Output.empty();
-        this.project = Output.empty();
+        this.name = Codegen.empty();
+        this.outputConfig = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputConfig(Output<OutputConfigArgs> outputConfig) {
@@ -104,7 +105,7 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public TraceSinkArgs build() {
             return new TraceSinkArgs(name, outputConfig, project);

@@ -25,7 +25,7 @@ public final class ConfigurationServiceSettingsResponse extends io.pulumi.resour
     @Import(name="gitProperty")
       private final @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
 
-    public Optional<ConfigurationServiceGitPropertyResponse> getGitProperty() {
+    public Optional<ConfigurationServiceGitPropertyResponse> gitProperty() {
         return this.gitProperty == null ? Optional.empty() : Optional.ofNullable(this.gitProperty);
     }
 

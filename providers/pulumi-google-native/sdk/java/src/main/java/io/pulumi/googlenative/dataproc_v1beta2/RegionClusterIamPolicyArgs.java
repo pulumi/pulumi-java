@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,14 +25,14 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+    public Output<List<BindingArgs>> bindings() {
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -42,21 +43,21 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="regionId", required=true)
       private final Output<String> regionId;
 
-    public Output<String> getRegionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
@@ -67,8 +68,8 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public RegionClusterIamPolicyArgs(
@@ -87,12 +88,12 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private RegionClusterIamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.clusterId = Output.empty();
-        this.etag = Output.empty();
-        this.project = Output.empty();
-        this.regionId = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.project = Codegen.empty();
+        this.regionId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -149,7 +150,7 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -157,7 +158,7 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder regionId(Output<String> regionId) {
@@ -173,7 +174,7 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public RegionClusterIamPolicyArgs build() {
             return new RegionClusterIamPolicyArgs(bindings, clusterId, etag, project, regionId, version);

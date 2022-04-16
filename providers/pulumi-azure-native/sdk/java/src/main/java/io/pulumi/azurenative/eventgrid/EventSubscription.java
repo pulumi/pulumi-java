@@ -20,6 +20,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -53,7 +54,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The DeadLetter destination of the event subscription.
      * 
      */
-    public Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> getDeadLetterDestination() {
+    public Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return this.deadLetterDestination;
     }
     /**
@@ -67,7 +68,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Information about the destination where events have to be delivered for the event subscription.
      * 
      */
-    public Output</* @Nullable */ Object> getDestination() {
+    public Output</* @Nullable */ Object> destination() {
         return this.destination;
     }
     /**
@@ -81,7 +82,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The event delivery schema for the event subscription.
      * 
      */
-    public Output</* @Nullable */ String> getEventDeliverySchema() {
+    public Output</* @Nullable */ String> eventDeliverySchema() {
         return this.eventDeliverySchema;
     }
     /**
@@ -95,7 +96,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Expiration time of the event subscription.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationTimeUtc() {
+    public Output</* @Nullable */ String> expirationTimeUtc() {
         return this.expirationTimeUtc;
     }
     /**
@@ -109,7 +110,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Information about the filter for the event subscription.
      * 
      */
-    public Output</* @Nullable */ EventSubscriptionFilterResponse> getFilter() {
+    public Output</* @Nullable */ EventSubscriptionFilterResponse> filter() {
         return this.filter;
     }
     /**
@@ -123,7 +124,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return List of user defined labels.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLabels() {
+    public Output</* @Nullable */ List<String>> labels() {
         return this.labels;
     }
     /**
@@ -137,7 +138,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -151,7 +152,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the event subscription.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -165,7 +166,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
      */
-    public Output</* @Nullable */ RetryPolicyResponse> getRetryPolicy() {
+    public Output</* @Nullable */ RetryPolicyResponse> retryPolicy() {
         return this.retryPolicy;
     }
     /**
@@ -179,7 +180,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to Event Subscription resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -193,7 +194,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Name of the topic of the event subscription.
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
     /**
@@ -207,7 +208,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -233,7 +234,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventSubscription(String name, EventSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventgrid:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

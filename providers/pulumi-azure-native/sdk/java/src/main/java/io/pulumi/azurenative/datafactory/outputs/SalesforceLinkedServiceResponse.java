@@ -106,63 +106,63 @@ public final class SalesforceLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getApiVersion() {
+    public Optional<Object> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The URL of Salesforce instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEnvironmentUrl() {
+    public Optional<Object> environmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The password for Basic authentication of the Salesforce instance.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The security token is optional to remotely access Salesforce instance.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getSecurityToken() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> securityToken() {
         return Optional.ofNullable(this.securityToken);
     }
     /**
@@ -170,14 +170,14 @@ public final class SalesforceLinkedServiceResponse {
      * Expected value is 'Salesforce'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }
 

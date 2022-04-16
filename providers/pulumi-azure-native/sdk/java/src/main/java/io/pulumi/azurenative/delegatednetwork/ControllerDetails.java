@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return dnc application id should be used by customer to authenticate with dnc gateway.
      * 
      */
-    public Output<String> getDncAppId() {
+    public Output<String> dncAppId() {
         return this.dncAppId;
     }
     /**
@@ -56,7 +57,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return dnc endpoint url that customers can use to connect to
      * 
      */
-    public Output<String> getDncEndpoint() {
+    public Output<String> dncEndpoint() {
         return this.dncEndpoint;
     }
     /**
@@ -70,7 +71,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return tenant id of dnc application id
      * 
      */
-    public Output<String> getDncTenantId() {
+    public Output<String> dncTenantId() {
         return this.dncTenantId;
     }
     /**
@@ -84,7 +85,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return Location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -98,7 +99,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return The current state of dnc controller resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -126,7 +127,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return Resource guid.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -140,7 +141,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +155,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @return The type of resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -180,7 +181,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ControllerDetails(String name, ControllerDetailsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:delegatednetwork:ControllerDetails", name, args == null ? ControllerDetailsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:delegatednetwork:ControllerDetails", name, args == null ? ControllerDetailsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ControllerDetails(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

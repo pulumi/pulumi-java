@@ -9,6 +9,7 @@ import io.pulumi.azurenative.confidentialledger.inputs.CertBasedSecurityPrincipa
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="aadBasedSecurityPrincipals")
       private final @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
-    public Output<List<AADBasedSecurityPrincipalArgs>> getAadBasedSecurityPrincipals() {
-        return this.aadBasedSecurityPrincipals == null ? Output.empty() : this.aadBasedSecurityPrincipals;
+    public Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals() {
+        return this.aadBasedSecurityPrincipals == null ? Codegen.empty() : this.aadBasedSecurityPrincipals;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="certBasedSecurityPrincipals")
       private final @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
-    public Output<List<CertBasedSecurityPrincipalArgs>> getCertBasedSecurityPrincipals() {
-        return this.certBasedSecurityPrincipals == null ? Output.empty() : this.certBasedSecurityPrincipals;
+    public Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals() {
+        return this.certBasedSecurityPrincipals == null ? Codegen.empty() : this.certBasedSecurityPrincipals;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ledgerStorageAccount")
       private final @Nullable Output<String> ledgerStorageAccount;
 
-    public Output<String> getLedgerStorageAccount() {
-        return this.ledgerStorageAccount == null ? Output.empty() : this.ledgerStorageAccount;
+    public Output<String> ledgerStorageAccount() {
+        return this.ledgerStorageAccount == null ? Codegen.empty() : this.ledgerStorageAccount;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ledgerType")
       private final @Nullable Output<Either<String,LedgerType>> ledgerType;
 
-    public Output<Either<String,LedgerType>> getLedgerType() {
-        return this.ledgerType == null ? Output.empty() : this.ledgerType;
+    public Output<Either<String,LedgerType>> ledgerType() {
+        return this.ledgerType == null ? Codegen.empty() : this.ledgerType;
     }
 
     public LedgerPropertiesArgs(
@@ -79,10 +80,10 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LedgerPropertiesArgs() {
-        this.aadBasedSecurityPrincipals = Output.empty();
-        this.certBasedSecurityPrincipals = Output.empty();
-        this.ledgerStorageAccount = Output.empty();
-        this.ledgerType = Output.empty();
+        this.aadBasedSecurityPrincipals = Codegen.empty();
+        this.certBasedSecurityPrincipals = Codegen.empty();
+        this.ledgerStorageAccount = Codegen.empty();
+        this.ledgerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
-            this.aadBasedSecurityPrincipals = Output.ofNullable(aadBasedSecurityPrincipals);
+            this.aadBasedSecurityPrincipals = Codegen.ofNullable(aadBasedSecurityPrincipals);
             return this;
         }
         public Builder aadBasedSecurityPrincipals(AADBasedSecurityPrincipalArgs... aadBasedSecurityPrincipals) {
@@ -127,7 +128,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
-            this.certBasedSecurityPrincipals = Output.ofNullable(certBasedSecurityPrincipals);
+            this.certBasedSecurityPrincipals = Codegen.ofNullable(certBasedSecurityPrincipals);
             return this;
         }
         public Builder certBasedSecurityPrincipals(CertBasedSecurityPrincipalArgs... certBasedSecurityPrincipals) {
@@ -138,7 +139,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
-            this.ledgerStorageAccount = Output.ofNullable(ledgerStorageAccount);
+            this.ledgerStorageAccount = Codegen.ofNullable(ledgerStorageAccount);
             return this;
         }
         public Builder ledgerType(@Nullable Output<Either<String,LedgerType>> ledgerType) {
@@ -146,7 +147,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ledgerType(@Nullable Either<String,LedgerType> ledgerType) {
-            this.ledgerType = Output.ofNullable(ledgerType);
+            this.ledgerType = Codegen.ofNullable(ledgerType);
             return this;
         }        public LedgerPropertiesArgs build() {
             return new LedgerPropertiesArgs(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, ledgerStorageAccount, ledgerType);

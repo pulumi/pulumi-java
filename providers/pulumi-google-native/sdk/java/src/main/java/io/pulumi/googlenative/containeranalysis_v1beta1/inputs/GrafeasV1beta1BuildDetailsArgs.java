@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildProvenanceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     @Import(name="provenance", required=true)
       private final Output<BuildProvenanceArgs> provenance;
 
-    public Output<BuildProvenanceArgs> getProvenance() {
+    public Output<BuildProvenanceArgs> provenance() {
         return this.provenance;
     }
 
@@ -37,8 +38,8 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     @Import(name="provenanceBytes")
       private final @Nullable Output<String> provenanceBytes;
 
-    public Output<String> getProvenanceBytes() {
-        return this.provenanceBytes == null ? Output.empty() : this.provenanceBytes;
+    public Output<String> provenanceBytes() {
+        return this.provenanceBytes == null ? Codegen.empty() : this.provenanceBytes;
     }
 
     public GrafeasV1beta1BuildDetailsArgs(
@@ -49,8 +50,8 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     }
 
     private GrafeasV1beta1BuildDetailsArgs() {
-        this.provenance = Output.empty();
-        this.provenanceBytes = Output.empty();
+        this.provenance = Codegen.empty();
+        this.provenanceBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder provenanceBytes(@Nullable String provenanceBytes) {
-            this.provenanceBytes = Output.ofNullable(provenanceBytes);
+            this.provenanceBytes = Codegen.ofNullable(provenanceBytes);
             return this;
         }        public GrafeasV1beta1BuildDetailsArgs build() {
             return new GrafeasV1beta1BuildDetailsArgs(provenance, provenanceBytes);

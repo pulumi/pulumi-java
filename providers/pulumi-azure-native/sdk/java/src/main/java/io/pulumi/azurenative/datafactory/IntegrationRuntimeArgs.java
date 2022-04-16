@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SelfHostedIntegrationRuntimeArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -35,8 +36,8 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="integrationRuntimeName")
       private final @Nullable Output<String> integrationRuntimeName;
 
-    public Output<String> getIntegrationRuntimeName() {
-        return this.integrationRuntimeName == null ? Output.empty() : this.integrationRuntimeName;
+    public Output<String> integrationRuntimeName() {
+        return this.integrationRuntimeName == null ? Codegen.empty() : this.integrationRuntimeName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="properties", required=true)
       private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
-    public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
+    public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties() {
         return this.properties;
     }
 
@@ -57,7 +58,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,10 +74,10 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     }
 
     private IntegrationRuntimeArgs() {
-        this.factoryName = Output.empty();
-        this.integrationRuntimeName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.factoryName = Codegen.empty();
+        this.integrationRuntimeName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder integrationRuntimeName(@Nullable String integrationRuntimeName) {
-            this.integrationRuntimeName = Output.ofNullable(integrationRuntimeName);
+            this.integrationRuntimeName = Codegen.ofNullable(integrationRuntimeName);
             return this;
         }
         public Builder properties(Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {

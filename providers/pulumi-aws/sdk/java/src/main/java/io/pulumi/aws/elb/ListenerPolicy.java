@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public class ListenerPolicy extends io.pulumi.resources.CustomResource {
      * @return The load balancer to attach the policy to.
      * 
      */
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
     /**
@@ -48,7 +49,7 @@ public class ListenerPolicy extends io.pulumi.resources.CustomResource {
      * @return The load balancer listener port to apply the policy to.
      * 
      */
-    public Output<Integer> getLoadBalancerPort() {
+    public Output<Integer> loadBalancerPort() {
         return this.loadBalancerPort;
     }
     /**
@@ -62,7 +63,7 @@ public class ListenerPolicy extends io.pulumi.resources.CustomResource {
      * @return List of Policy Names to apply to the backend server.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPolicyNames() {
+    public Output</* @Nullable */ List<String>> policyNames() {
         return this.policyNames;
     }
 
@@ -88,7 +89,7 @@ public class ListenerPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ListenerPolicy(String name, ListenerPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elb/listenerPolicy:ListenerPolicy", name, args == null ? ListenerPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elb/listenerPolicy:ListenerPolicy", name, args == null ? ListenerPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ListenerPolicy(String name, Output<String> id, @Nullable ListenerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

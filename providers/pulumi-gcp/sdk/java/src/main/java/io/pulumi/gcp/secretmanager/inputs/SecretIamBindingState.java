@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.secretmanager.inputs.SecretIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<SecretIamBindingConditionGetArgs> condition;
 
-    public Output<SecretIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<SecretIamBindingConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,15 +31,15 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -62,15 +63,15 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="secretId")
       private final @Nullable Output<String> secretId;
 
-    public Output<String> getSecretId() {
-        return this.secretId == null ? Output.empty() : this.secretId;
+    public Output<String> secretId() {
+        return this.secretId == null ? Codegen.empty() : this.secretId;
     }
 
     public SecretIamBindingState(
@@ -89,12 +90,12 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
     }
 
     private SecretIamBindingState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.secretId = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.secretId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable SecretIamBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -140,7 +141,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -148,7 +149,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -159,7 +160,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -167,7 +168,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder secretId(@Nullable Output<String> secretId) {
@@ -175,7 +176,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder secretId(@Nullable String secretId) {
-            this.secretId = Output.ofNullable(secretId);
+            this.secretId = Codegen.ofNullable(secretId);
             return this;
         }        public SecretIamBindingState build() {
             return new SecretIamBindingState(condition, etag, members, project, role, secretId);

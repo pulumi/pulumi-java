@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1beta1.enums.AuthorizationPolicyAction;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.RuleArgs;
 import java.lang.String;
@@ -25,14 +26,14 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="action", required=true)
       private final Output<AuthorizationPolicyAction> action;
 
-    public Output<AuthorizationPolicyAction> getAction() {
+    public Output<AuthorizationPolicyAction> action() {
         return this.action;
     }
 
     @Import(name="authorizationPolicyId", required=true)
       private final Output<String> authorizationPolicyId;
 
-    public Output<String> getAuthorizationPolicyId() {
+    public Output<String> authorizationPolicyId() {
         return this.authorizationPolicyId;
     }
 
@@ -43,8 +44,8 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -54,15 +55,15 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -72,15 +73,15 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="rules")
       private final @Nullable Output<List<RuleArgs>> rules;
 
-    public Output<List<RuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<RuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public AuthorizationPolicyArgs(
@@ -114,14 +115,14 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private AuthorizationPolicyArgs() {
-        this.action = Output.empty();
-        this.authorizationPolicyId = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rules = Output.empty();
+        this.action = Codegen.empty();
+        this.authorizationPolicyId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -187,7 +188,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -195,7 +196,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -203,7 +204,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -211,7 +212,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rules(@Nullable Output<List<RuleArgs>> rules) {
@@ -219,7 +220,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder rules(@Nullable List<RuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RuleArgs... rules) {

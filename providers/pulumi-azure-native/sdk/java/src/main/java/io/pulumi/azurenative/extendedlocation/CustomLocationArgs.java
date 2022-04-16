@@ -8,6 +8,7 @@ import io.pulumi.azurenative.extendedlocation.inputs.CustomLocationPropertiesAut
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
 
-    public Output<CustomLocationPropertiesAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<CustomLocationPropertiesAuthenticationArgs> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterExtensionIds")
       private final @Nullable Output<List<String>> clusterExtensionIds;
 
-    public Output<List<String>> getClusterExtensionIds() {
-        return this.clusterExtensionIds == null ? Output.empty() : this.clusterExtensionIds;
+    public Output<List<String>> clusterExtensionIds() {
+        return this.clusterExtensionIds == null ? Codegen.empty() : this.clusterExtensionIds;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostResourceId")
       private final @Nullable Output<String> hostResourceId;
 
-    public Output<String> getHostResourceId() {
-        return this.hostResourceId == null ? Output.empty() : this.hostResourceId;
+    public Output<String> hostResourceId() {
+        return this.hostResourceId == null ? Codegen.empty() : this.hostResourceId;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostType")
       private final @Nullable Output<Either<String,HostType>> hostType;
 
-    public Output<Either<String,HostType>> getHostType() {
-        return this.hostType == null ? Output.empty() : this.hostType;
+    public Output<Either<String,HostType>> hostType() {
+        return this.hostType == null ? Codegen.empty() : this.hostType;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<String> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,8 +126,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CustomLocationArgs(
@@ -166,17 +167,17 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomLocationArgs() {
-        this.authentication = Output.empty();
-        this.clusterExtensionIds = Output.empty();
-        this.displayName = Output.empty();
-        this.hostResourceId = Output.empty();
-        this.hostType = Output.empty();
-        this.location = Output.empty();
-        this.namespace = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
+        this.authentication = Codegen.empty();
+        this.clusterExtensionIds = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hostResourceId = Codegen.empty();
+        this.hostType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable CustomLocationPropertiesAuthenticationArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder clusterExtensionIds(@Nullable Output<List<String>> clusterExtensionIds) {
@@ -232,7 +233,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterExtensionIds(@Nullable List<String> clusterExtensionIds) {
-            this.clusterExtensionIds = Output.ofNullable(clusterExtensionIds);
+            this.clusterExtensionIds = Codegen.ofNullable(clusterExtensionIds);
             return this;
         }
         public Builder clusterExtensionIds(String... clusterExtensionIds) {
@@ -243,7 +244,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hostResourceId(@Nullable Output<String> hostResourceId) {
@@ -251,7 +252,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostResourceId(@Nullable String hostResourceId) {
-            this.hostResourceId = Output.ofNullable(hostResourceId);
+            this.hostResourceId = Codegen.ofNullable(hostResourceId);
             return this;
         }
         public Builder hostType(@Nullable Output<Either<String,HostType>> hostType) {
@@ -259,7 +260,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostType(@Nullable Either<String,HostType> hostType) {
-            this.hostType = Output.ofNullable(hostType);
+            this.hostType = Codegen.ofNullable(hostType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -267,7 +268,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -275,7 +276,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -283,7 +284,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -299,7 +300,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -307,7 +308,7 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CustomLocationArgs build() {
             return new CustomLocationArgs(authentication, clusterExtensionIds, displayName, hostResourceId, hostType, location, namespace, provisioningState, resourceGroupName, resourceName, tags);

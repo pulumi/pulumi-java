@@ -5,6 +5,7 @@ package io.pulumi.docker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.PluginGrantPermissionArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,8 +26,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+    public Output<String> alias() {
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableTimeout")
       private final @Nullable Output<Integer> enableTimeout;
 
-    public Output<Integer> getEnableTimeout() {
-        return this.enableTimeout == null ? Output.empty() : this.enableTimeout;
+    public Output<Integer> enableTimeout() {
+        return this.enableTimeout == null ? Codegen.empty() : this.enableTimeout;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
-    public Output<List<String>> getEnvs() {
-        return this.envs == null ? Output.empty() : this.envs;
+    public Output<List<String>> envs() {
+        return this.envs == null ? Codegen.empty() : this.envs;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDisable")
       private final @Nullable Output<Boolean> forceDisable;
 
-    public Output<Boolean> getForceDisable() {
-        return this.forceDisable == null ? Output.empty() : this.forceDisable;
+    public Output<Boolean> forceDisable() {
+        return this.forceDisable == null ? Codegen.empty() : this.forceDisable;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grantAllPermissions")
       private final @Nullable Output<Boolean> grantAllPermissions;
 
-    public Output<Boolean> getGrantAllPermissions() {
-        return this.grantAllPermissions == null ? Output.empty() : this.grantAllPermissions;
+    public Output<Boolean> grantAllPermissions() {
+        return this.grantAllPermissions == null ? Codegen.empty() : this.grantAllPermissions;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grantPermissions")
       private final @Nullable Output<List<PluginGrantPermissionArgs>> grantPermissions;
 
-    public Output<List<PluginGrantPermissionArgs>> getGrantPermissions() {
-        return this.grantPermissions == null ? Output.empty() : this.grantPermissions;
+    public Output<List<PluginGrantPermissionArgs>> grantPermissions() {
+        return this.grantPermissions == null ? Codegen.empty() : this.grantPermissions;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public PluginArgs(
@@ -139,15 +140,15 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PluginArgs() {
-        this.alias = Output.empty();
-        this.enableTimeout = Output.empty();
-        this.enabled = Output.empty();
-        this.envs = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.forceDisable = Output.empty();
-        this.grantAllPermissions = Output.empty();
-        this.grantPermissions = Output.empty();
-        this.name = Output.empty();
+        this.alias = Codegen.empty();
+        this.enableTimeout = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.envs = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.forceDisable = Codegen.empty();
+        this.grantAllPermissions = Codegen.empty();
+        this.grantPermissions = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder enableTimeout(@Nullable Output<Integer> enableTimeout) {
@@ -199,7 +200,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableTimeout(@Nullable Integer enableTimeout) {
-            this.enableTimeout = Output.ofNullable(enableTimeout);
+            this.enableTimeout = Codegen.ofNullable(enableTimeout);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -207,7 +208,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder envs(@Nullable Output<List<String>> envs) {
@@ -215,7 +216,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder envs(@Nullable List<String> envs) {
-            this.envs = Output.ofNullable(envs);
+            this.envs = Codegen.ofNullable(envs);
             return this;
         }
         public Builder envs(String... envs) {
@@ -226,7 +227,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder forceDisable(@Nullable Output<Boolean> forceDisable) {
@@ -234,7 +235,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDisable(@Nullable Boolean forceDisable) {
-            this.forceDisable = Output.ofNullable(forceDisable);
+            this.forceDisable = Codegen.ofNullable(forceDisable);
             return this;
         }
         public Builder grantAllPermissions(@Nullable Output<Boolean> grantAllPermissions) {
@@ -242,7 +243,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grantAllPermissions(@Nullable Boolean grantAllPermissions) {
-            this.grantAllPermissions = Output.ofNullable(grantAllPermissions);
+            this.grantAllPermissions = Codegen.ofNullable(grantAllPermissions);
             return this;
         }
         public Builder grantPermissions(@Nullable Output<List<PluginGrantPermissionArgs>> grantPermissions) {
@@ -250,7 +251,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grantPermissions(@Nullable List<PluginGrantPermissionArgs> grantPermissions) {
-            this.grantPermissions = Output.ofNullable(grantPermissions);
+            this.grantPermissions = Codegen.ofNullable(grantPermissions);
             return this;
         }
         public Builder grantPermissions(PluginGrantPermissionArgs... grantPermissions) {
@@ -261,7 +262,7 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public PluginArgs build() {
             return new PluginArgs(alias, enableTimeout, enabled, envs, forceDestroy, forceDisable, grantAllPermissions, grantPermissions, name);

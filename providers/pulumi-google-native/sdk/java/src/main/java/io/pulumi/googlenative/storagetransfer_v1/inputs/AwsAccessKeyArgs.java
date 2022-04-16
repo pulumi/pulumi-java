@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessKeyId", required=true)
       private final Output<String> accessKeyId;
 
-    public Output<String> getAccessKeyId() {
+    public Output<String> accessKeyId() {
         return this.accessKeyId;
     }
 
@@ -35,7 +36,7 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretAccessKey", required=true)
       private final Output<String> secretAccessKey;
 
-    public Output<String> getSecretAccessKey() {
+    public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
 
@@ -47,8 +48,8 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsAccessKeyArgs() {
-        this.accessKeyId = Output.empty();
-        this.secretAccessKey = Output.empty();
+        this.accessKeyId = Codegen.empty();
+        this.secretAccessKey = Codegen.empty();
     }
 
     public static Builder builder() {

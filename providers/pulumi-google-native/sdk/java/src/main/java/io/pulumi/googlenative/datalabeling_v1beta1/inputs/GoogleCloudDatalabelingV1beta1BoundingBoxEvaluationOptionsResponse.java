@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsRes
     @Import(name="iouThreshold", required=true)
       private final Double iouThreshold;
 
-    public Double getIouThreshold() {
+    public Double iouThreshold() {
         return this.iouThreshold;
     }
 

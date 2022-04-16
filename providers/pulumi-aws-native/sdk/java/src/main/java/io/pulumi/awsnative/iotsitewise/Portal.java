@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.PortalTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
      * 
      */
-    public Output</* @Nullable */ AlarmsProperties> getAlarms() {
+    public Output</* @Nullable */ AlarmsProperties> alarms() {
         return this.alarms;
     }
     /**
@@ -45,7 +46,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The email address that sends alarm notifications.
      * 
      */
-    public Output</* @Nullable */ String> getNotificationSenderEmail() {
+    public Output</* @Nullable */ String> notificationSenderEmail() {
         return this.notificationSenderEmail;
     }
     /**
@@ -59,7 +60,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The ARN of the portal, which has the following format.
      * 
      */
-    public Output<String> getPortalArn() {
+    public Output<String> portalArn() {
         return this.portalArn;
     }
     /**
@@ -73,7 +74,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
      * 
      */
-    public Output</* @Nullable */ String> getPortalAuthMode() {
+    public Output</* @Nullable */ String> portalAuthMode() {
         return this.portalAuthMode;
     }
     /**
@@ -87,7 +88,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The AWS SSO application generated client ID (used with AWS SSO APIs).
      * 
      */
-    public Output<String> getPortalClientId() {
+    public Output<String> portalClientId() {
         return this.portalClientId;
     }
     /**
@@ -101,7 +102,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The AWS administrator's contact email address.
      * 
      */
-    public Output<String> getPortalContactEmail() {
+    public Output<String> portalContactEmail() {
         return this.portalContactEmail;
     }
     /**
@@ -115,7 +116,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return A description for the portal.
      * 
      */
-    public Output</* @Nullable */ String> getPortalDescription() {
+    public Output</* @Nullable */ String> portalDescription() {
         return this.portalDescription;
     }
     /**
@@ -129,7 +130,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The ID of the portal.
      * 
      */
-    public Output<String> getPortalId() {
+    public Output<String> portalId() {
         return this.portalId;
     }
     /**
@@ -143,7 +144,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return A friendly name for the portal.
      * 
      */
-    public Output<String> getPortalName() {
+    public Output<String> portalName() {
         return this.portalName;
     }
     /**
@@ -157,7 +158,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
      * 
      */
-    public Output<String> getPortalStartUrl() {
+    public Output<String> portalStartUrl() {
         return this.portalStartUrl;
     }
     /**
@@ -171,7 +172,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -185,7 +186,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the portal.
      * 
      */
-    public Output</* @Nullable */ List<PortalTag>> getTags() {
+    public Output</* @Nullable */ List<PortalTag>> tags() {
         return this.tags;
     }
 
@@ -211,7 +212,7 @@ public class Portal extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Portal(String name, PortalArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotsitewise:Portal", name, args == null ? PortalArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotsitewise:Portal", name, args == null ? PortalArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Portal(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

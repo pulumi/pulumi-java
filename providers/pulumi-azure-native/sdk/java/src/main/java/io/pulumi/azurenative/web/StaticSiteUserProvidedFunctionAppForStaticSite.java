@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * @return The date and time on which the function app was registered with the static site.
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -55,7 +56,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * @return The region of the function app registered with the static site
      * 
      */
-    public Output</* @Nullable */ String> getFunctionAppRegion() {
+    public Output</* @Nullable */ String> functionAppRegion() {
         return this.functionAppRegion;
     }
     /**
@@ -69,7 +70,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * @return The resource id of the function app registered with the static site
      * 
      */
-    public Output</* @Nullable */ String> getFunctionAppResourceId() {
+    public Output</* @Nullable */ String> functionAppResourceId() {
         return this.functionAppResourceId;
     }
     /**
@@ -83,7 +84,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -97,7 +98,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -111,7 +112,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -137,7 +138,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * @param options A bag of options that control this resource's behavior.
      */
     public StaticSiteUserProvidedFunctionAppForStaticSite(String name, StaticSiteUserProvidedFunctionAppForStaticSiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:StaticSiteUserProvidedFunctionAppForStaticSite", name, args == null ? StaticSiteUserProvidedFunctionAppForStaticSiteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:StaticSiteUserProvidedFunctionAppForStaticSite", name, args == null ? StaticSiteUserProvidedFunctionAppForStaticSiteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StaticSiteUserProvidedFunctionAppForStaticSite(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

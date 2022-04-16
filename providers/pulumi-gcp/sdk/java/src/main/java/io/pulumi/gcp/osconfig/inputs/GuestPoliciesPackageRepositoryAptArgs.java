@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
     @Import(name="archiveType")
       private final @Nullable Output<String> archiveType;
 
-    public Output<String> getArchiveType() {
-        return this.archiveType == null ? Output.empty() : this.archiveType;
+    public Output<String> archiveType() {
+        return this.archiveType == null ? Codegen.empty() : this.archiveType;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
     @Import(name="components", required=true)
       private final Output<List<String>> components;
 
-    public Output<List<String>> getComponents() {
+    public Output<List<String>> components() {
         return this.components;
     }
 
@@ -46,7 +47,7 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
     @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
-    public Output<String> getDistribution() {
+    public Output<String> distribution() {
         return this.distribution;
     }
 
@@ -58,8 +59,8 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
     @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
-    public Output<String> getGpgKey() {
-        return this.gpgKey == null ? Output.empty() : this.gpgKey;
+    public Output<String> gpgKey() {
+        return this.gpgKey == null ? Codegen.empty() : this.gpgKey;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -87,11 +88,11 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
     }
 
     private GuestPoliciesPackageRepositoryAptArgs() {
-        this.archiveType = Output.empty();
-        this.components = Output.empty();
-        this.distribution = Output.empty();
-        this.gpgKey = Output.empty();
-        this.uri = Output.empty();
+        this.archiveType = Codegen.empty();
+        this.components = Codegen.empty();
+        this.distribution = Codegen.empty();
+        this.gpgKey = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
             return this;
         }
         public Builder archiveType(@Nullable String archiveType) {
-            this.archiveType = Output.ofNullable(archiveType);
+            this.archiveType = Codegen.ofNullable(archiveType);
             return this;
         }
         public Builder components(Output<List<String>> components) {
@@ -154,7 +155,7 @@ public final class GuestPoliciesPackageRepositoryAptArgs extends io.pulumi.resou
             return this;
         }
         public Builder gpgKey(@Nullable String gpgKey) {
-            this.gpgKey = Output.ofNullable(gpgKey);
+            this.gpgKey = Codegen.ofNullable(gpgKey);
             return this;
         }
         public Builder uri(Output<String> uri) {

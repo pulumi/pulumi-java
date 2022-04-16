@@ -16,7 +16,7 @@ public final class GetLaunchTemplateCreditSpecification {
         this.cpuCredits = cpuCredits;
     }
 
-    public String getCpuCredits() {
+    public String cpuCredits() {
         return this.cpuCredits;
     }
 

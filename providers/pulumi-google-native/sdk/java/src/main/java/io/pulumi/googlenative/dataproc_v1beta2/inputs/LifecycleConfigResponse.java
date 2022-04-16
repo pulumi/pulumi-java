@@ -23,7 +23,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="autoDeleteTime", required=true)
       private final String autoDeleteTime;
 
-    public String getAutoDeleteTime() {
+    public String autoDeleteTime() {
         return this.autoDeleteTime;
     }
 
@@ -34,7 +34,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="autoDeleteTtl", required=true)
       private final String autoDeleteTtl;
 
-    public String getAutoDeleteTtl() {
+    public String autoDeleteTtl() {
         return this.autoDeleteTtl;
     }
 
@@ -45,7 +45,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="idleDeleteTtl", required=true)
       private final String idleDeleteTtl;
 
-    public String getIdleDeleteTtl() {
+    public String idleDeleteTtl() {
         return this.idleDeleteTtl;
     }
 
@@ -56,7 +56,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="idleStartTime", required=true)
       private final String idleStartTime;
 
-    public String getIdleStartTime() {
+    public String idleStartTime() {
         return this.idleStartTime;
     }
 

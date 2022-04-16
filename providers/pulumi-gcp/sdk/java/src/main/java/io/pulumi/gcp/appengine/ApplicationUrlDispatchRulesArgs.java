@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     @Import(name="dispatchRules", required=true)
       private final Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
 
-    public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> getDispatchRules() {
+    public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules() {
         return this.dispatchRules;
     }
 
@@ -36,8 +37,8 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ApplicationUrlDispatchRulesArgs(
@@ -48,8 +49,8 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     }
 
     private ApplicationUrlDispatchRulesArgs() {
-        this.dispatchRules = Output.empty();
-        this.project = Output.empty();
+        this.dispatchRules = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ApplicationUrlDispatchRulesArgs build() {
             return new ApplicationUrlDispatchRulesArgs(dispatchRules, project);

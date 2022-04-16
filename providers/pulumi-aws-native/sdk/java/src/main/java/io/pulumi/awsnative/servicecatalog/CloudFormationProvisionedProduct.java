@@ -12,6 +12,7 @@ import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProdu
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,19 +27,19 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
     @Export(name="acceptLanguage", type=CloudFormationProvisionedProductAcceptLanguage.class, parameters={})
     private Output</* @Nullable */ CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
-    public Output</* @Nullable */ CloudFormationProvisionedProductAcceptLanguage> getAcceptLanguage() {
+    public Output</* @Nullable */ CloudFormationProvisionedProductAcceptLanguage> acceptLanguage() {
         return this.acceptLanguage;
     }
     @Export(name="cloudformationStackArn", type=String.class, parameters={})
     private Output<String> cloudformationStackArn;
 
-    public Output<String> getCloudformationStackArn() {
+    public Output<String> cloudformationStackArn() {
         return this.cloudformationStackArn;
     }
     @Export(name="notificationArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notificationArns;
 
-    public Output</* @Nullable */ List<String>> getNotificationArns() {
+    public Output</* @Nullable */ List<String>> notificationArns() {
         return this.notificationArns;
     }
     /**
@@ -52,79 +53,79 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
      * @return List of key-value pair outputs.
      * 
      */
-    public Output<Object> getOutputs() {
+    public Output<Object> outputs() {
         return this.outputs;
     }
     @Export(name="pathId", type=String.class, parameters={})
     private Output</* @Nullable */ String> pathId;
 
-    public Output</* @Nullable */ String> getPathId() {
+    public Output</* @Nullable */ String> pathId() {
         return this.pathId;
     }
     @Export(name="pathName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pathName;
 
-    public Output</* @Nullable */ String> getPathName() {
+    public Output</* @Nullable */ String> pathName() {
         return this.pathName;
     }
     @Export(name="productId", type=String.class, parameters={})
     private Output</* @Nullable */ String> productId;
 
-    public Output</* @Nullable */ String> getProductId() {
+    public Output</* @Nullable */ String> productId() {
         return this.productId;
     }
     @Export(name="productName", type=String.class, parameters={})
     private Output</* @Nullable */ String> productName;
 
-    public Output</* @Nullable */ String> getProductName() {
+    public Output</* @Nullable */ String> productName() {
         return this.productName;
     }
     @Export(name="provisionedProductId", type=String.class, parameters={})
     private Output<String> provisionedProductId;
 
-    public Output<String> getProvisionedProductId() {
+    public Output<String> provisionedProductId() {
         return this.provisionedProductId;
     }
     @Export(name="provisionedProductName", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisionedProductName;
 
-    public Output</* @Nullable */ String> getProvisionedProductName() {
+    public Output</* @Nullable */ String> provisionedProductName() {
         return this.provisionedProductName;
     }
     @Export(name="provisioningArtifactId", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningArtifactId;
 
-    public Output</* @Nullable */ String> getProvisioningArtifactId() {
+    public Output</* @Nullable */ String> provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
     @Export(name="provisioningArtifactName", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningArtifactName;
 
-    public Output</* @Nullable */ String> getProvisioningArtifactName() {
+    public Output</* @Nullable */ String> provisioningArtifactName() {
         return this.provisioningArtifactName;
     }
     @Export(name="provisioningParameters", type=List.class, parameters={CloudFormationProvisionedProductProvisioningParameter.class})
     private Output</* @Nullable */ List<CloudFormationProvisionedProductProvisioningParameter>> provisioningParameters;
 
-    public Output</* @Nullable */ List<CloudFormationProvisionedProductProvisioningParameter>> getProvisioningParameters() {
+    public Output</* @Nullable */ List<CloudFormationProvisionedProductProvisioningParameter>> provisioningParameters() {
         return this.provisioningParameters;
     }
     @Export(name="provisioningPreferences", type=CloudFormationProvisionedProductProvisioningPreferences.class, parameters={})
     private Output</* @Nullable */ CloudFormationProvisionedProductProvisioningPreferences> provisioningPreferences;
 
-    public Output</* @Nullable */ CloudFormationProvisionedProductProvisioningPreferences> getProvisioningPreferences() {
+    public Output</* @Nullable */ CloudFormationProvisionedProductProvisioningPreferences> provisioningPreferences() {
         return this.provisioningPreferences;
     }
     @Export(name="recordId", type=String.class, parameters={})
     private Output<String> recordId;
 
-    public Output<String> getRecordId() {
+    public Output<String> recordId() {
         return this.recordId;
     }
     @Export(name="tags", type=List.class, parameters={CloudFormationProvisionedProductTag.class})
     private Output</* @Nullable */ List<CloudFormationProvisionedProductTag>> tags;
 
-    public Output</* @Nullable */ List<CloudFormationProvisionedProductTag>> getTags() {
+    public Output</* @Nullable */ List<CloudFormationProvisionedProductTag>> tags() {
         return this.tags;
     }
 
@@ -150,7 +151,7 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudFormationProvisionedProduct(String name, @Nullable CloudFormationProvisionedProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalog:CloudFormationProvisionedProduct", name, args == null ? CloudFormationProvisionedProductArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:servicecatalog:CloudFormationProvisionedProduct", name, args == null ? CloudFormationProvisionedProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloudFormationProvisionedProduct(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

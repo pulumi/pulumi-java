@@ -27,7 +27,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -60,7 +60,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -71,7 +71,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="managementGroups")
       private final @Nullable List<ResourceIdResponse> managementGroups;
 
-    public List<ResourceIdResponse> getManagementGroups() {
+    public List<ResourceIdResponse> managementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
 
@@ -82,7 +82,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -93,7 +93,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -104,7 +104,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="subnets")
       private final @Nullable List<ResourceIdResponse> subnets;
 
-    public List<ResourceIdResponse> getSubnets() {
+    public List<ResourceIdResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
 
@@ -115,7 +115,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="subscriptions")
       private final @Nullable List<ResourceIdResponse> subscriptions;
 
-    public List<ResourceIdResponse> getSubscriptions() {
+    public List<ResourceIdResponse> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
 
@@ -126,7 +126,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -137,7 +137,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
     @Import(name="virtualNetworks")
       private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    public List<ResourceIdResponse> getVirtualNetworks() {
+    public List<ResourceIdResponse> virtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
     }
 

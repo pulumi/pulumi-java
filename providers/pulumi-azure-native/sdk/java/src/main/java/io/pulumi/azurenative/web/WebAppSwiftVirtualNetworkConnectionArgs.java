@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,7 +45,7 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     @Import(name="subnetResourceId")
       private final @Nullable Output<String> subnetResourceId;
 
-    public Output<String> getSubnetResourceId() {
-        return this.subnetResourceId == null ? Output.empty() : this.subnetResourceId;
+    public Output<String> subnetResourceId() {
+        return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     @Import(name="swiftSupported")
       private final @Nullable Output<Boolean> swiftSupported;
 
-    public Output<Boolean> getSwiftSupported() {
-        return this.swiftSupported == null ? Output.empty() : this.swiftSupported;
+    public Output<Boolean> swiftSupported() {
+        return this.swiftSupported == null ? Codegen.empty() : this.swiftSupported;
     }
 
     public WebAppSwiftVirtualNetworkConnectionArgs(
@@ -84,11 +85,11 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     }
 
     private WebAppSwiftVirtualNetworkConnectionArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subnetResourceId = Output.empty();
-        this.swiftSupported = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subnetResourceId = Codegen.empty();
+        this.swiftSupported = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -148,7 +149,7 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
             return this;
         }
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = Output.ofNullable(subnetResourceId);
+            this.subnetResourceId = Codegen.ofNullable(subnetResourceId);
             return this;
         }
         public Builder swiftSupported(@Nullable Output<Boolean> swiftSupported) {
@@ -156,7 +157,7 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
             return this;
         }
         public Builder swiftSupported(@Nullable Boolean swiftSupported) {
-            this.swiftSupported = Output.ofNullable(swiftSupported);
+            this.swiftSupported = Codegen.ofNullable(swiftSupported);
             return this;
         }        public WebAppSwiftVirtualNetworkConnectionArgs build() {
             return new WebAppSwiftVirtualNetworkConnectionArgs(kind, name, resourceGroupName, subnetResourceId, swiftSupported);

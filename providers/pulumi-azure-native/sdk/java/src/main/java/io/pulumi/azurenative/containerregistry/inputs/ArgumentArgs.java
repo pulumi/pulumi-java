@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isSecret")
       private final @Nullable Output<Boolean> isSecret;
 
-    public Output<Boolean> getIsSecret() {
-        return this.isSecret == null ? Output.empty() : this.isSecret;
+    public Output<Boolean> isSecret() {
+        return this.isSecret == null ? Codegen.empty() : this.isSecret;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +49,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -56,15 +57,15 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Boolean> isSecret,
         Output<String> name,
         Output<String> value) {
-        this.isSecret = isSecret == null ? Output.ofNullable(false) : isSecret;
+        this.isSecret = isSecret == null ? Codegen.ofNullable(false) : isSecret;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ArgumentArgs() {
-        this.isSecret = Output.empty();
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.isSecret = Codegen.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isSecret(@Nullable Boolean isSecret) {
-            this.isSecret = Output.ofNullable(isSecret);
+            this.isSecret = Codegen.ofNullable(isSecret);
             return this;
         }
         public Builder name(Output<String> name) {

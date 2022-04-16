@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleProtobufEmptyArgs;
@@ -28,8 +29,8 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     @Import(name="customTag")
       private final @Nullable Output<String> customTag;
 
-    public Output<String> getCustomTag() {
-        return this.customTag == null ? Output.empty() : this.customTag;
+    public Output<String> customTag() {
+        return this.customTag == null ? Codegen.empty() : this.customTag;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     @Import(name="field", required=true)
       private final Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field;
     }
 
@@ -50,8 +51,8 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     @Import(name="inferred")
       private final @Nullable Output<GoogleProtobufEmptyArgs> inferred;
 
-    public Output<GoogleProtobufEmptyArgs> getInferred() {
-        return this.inferred == null ? Output.empty() : this.inferred;
+    public Output<GoogleProtobufEmptyArgs> inferred() {
+        return this.inferred == null ? Codegen.empty() : this.inferred;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     @Import(name="infoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
-        return this.infoType == null ? Output.empty() : this.infoType;
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> infoType() {
+        return this.infoType == null ? Codegen.empty() : this.infoType;
     }
 
     public GooglePrivacyDlpV2QuasiIdArgs(
@@ -77,10 +78,10 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     }
 
     private GooglePrivacyDlpV2QuasiIdArgs() {
-        this.customTag = Output.empty();
-        this.field = Output.empty();
-        this.inferred = Output.empty();
-        this.infoType = Output.empty();
+        this.customTag = Codegen.empty();
+        this.field = Codegen.empty();
+        this.inferred = Codegen.empty();
+        this.infoType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder customTag(@Nullable String customTag) {
-            this.customTag = Output.ofNullable(customTag);
+            this.customTag = Codegen.ofNullable(customTag);
             return this;
         }
         public Builder field(Output<GooglePrivacyDlpV2FieldIdArgs> field) {
@@ -130,7 +131,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder inferred(@Nullable GoogleProtobufEmptyArgs inferred) {
-            this.inferred = Output.ofNullable(inferred);
+            this.inferred = Codegen.ofNullable(inferred);
             return this;
         }
         public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
@@ -138,7 +139,7 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
-            this.infoType = Output.ofNullable(infoType);
+            this.infoType = Codegen.ofNullable(infoType);
             return this;
         }        public GooglePrivacyDlpV2QuasiIdArgs build() {
             return new GooglePrivacyDlpV2QuasiIdArgs(customTag, field, inferred, infoType);

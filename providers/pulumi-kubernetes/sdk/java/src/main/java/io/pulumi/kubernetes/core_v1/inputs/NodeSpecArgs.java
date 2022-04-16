@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NodeConfigSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.TaintArgs;
 import java.lang.Boolean;
@@ -29,8 +30,8 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configSource")
       private final @Nullable Output<NodeConfigSourceArgs> configSource;
 
-    public Output<NodeConfigSourceArgs> getConfigSource() {
-        return this.configSource == null ? Output.empty() : this.configSource;
+    public Output<NodeConfigSourceArgs> configSource() {
+        return this.configSource == null ? Codegen.empty() : this.configSource;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalID")
       private final @Nullable Output<String> externalID;
 
-    public Output<String> getExternalID() {
-        return this.externalID == null ? Output.empty() : this.externalID;
+    public Output<String> externalID() {
+        return this.externalID == null ? Codegen.empty() : this.externalID;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podCIDR")
       private final @Nullable Output<String> podCIDR;
 
-    public Output<String> getPodCIDR() {
-        return this.podCIDR == null ? Output.empty() : this.podCIDR;
+    public Output<String> podCIDR() {
+        return this.podCIDR == null ? Codegen.empty() : this.podCIDR;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podCIDRs")
       private final @Nullable Output<List<String>> podCIDRs;
 
-    public Output<List<String>> getPodCIDRs() {
-        return this.podCIDRs == null ? Output.empty() : this.podCIDRs;
+    public Output<List<String>> podCIDRs() {
+        return this.podCIDRs == null ? Codegen.empty() : this.podCIDRs;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerID")
       private final @Nullable Output<String> providerID;
 
-    public Output<String> getProviderID() {
-        return this.providerID == null ? Output.empty() : this.providerID;
+    public Output<String> providerID() {
+        return this.providerID == null ? Codegen.empty() : this.providerID;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taints")
       private final @Nullable Output<List<TaintArgs>> taints;
 
-    public Output<List<TaintArgs>> getTaints() {
-        return this.taints == null ? Output.empty() : this.taints;
+    public Output<List<TaintArgs>> taints() {
+        return this.taints == null ? Codegen.empty() : this.taints;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unschedulable")
       private final @Nullable Output<Boolean> unschedulable;
 
-    public Output<Boolean> getUnschedulable() {
-        return this.unschedulable == null ? Output.empty() : this.unschedulable;
+    public Output<Boolean> unschedulable() {
+        return this.unschedulable == null ? Codegen.empty() : this.unschedulable;
     }
 
     public NodeSpecArgs(
@@ -117,13 +118,13 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeSpecArgs() {
-        this.configSource = Output.empty();
-        this.externalID = Output.empty();
-        this.podCIDR = Output.empty();
-        this.podCIDRs = Output.empty();
-        this.providerID = Output.empty();
-        this.taints = Output.empty();
-        this.unschedulable = Output.empty();
+        this.configSource = Codegen.empty();
+        this.externalID = Codegen.empty();
+        this.podCIDR = Codegen.empty();
+        this.podCIDRs = Codegen.empty();
+        this.providerID = Codegen.empty();
+        this.taints = Codegen.empty();
+        this.unschedulable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configSource(@Nullable NodeConfigSourceArgs configSource) {
-            this.configSource = Output.ofNullable(configSource);
+            this.configSource = Codegen.ofNullable(configSource);
             return this;
         }
         public Builder externalID(@Nullable Output<String> externalID) {
@@ -171,7 +172,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalID(@Nullable String externalID) {
-            this.externalID = Output.ofNullable(externalID);
+            this.externalID = Codegen.ofNullable(externalID);
             return this;
         }
         public Builder podCIDR(@Nullable Output<String> podCIDR) {
@@ -179,7 +180,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder podCIDR(@Nullable String podCIDR) {
-            this.podCIDR = Output.ofNullable(podCIDR);
+            this.podCIDR = Codegen.ofNullable(podCIDR);
             return this;
         }
         public Builder podCIDRs(@Nullable Output<List<String>> podCIDRs) {
@@ -187,7 +188,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder podCIDRs(@Nullable List<String> podCIDRs) {
-            this.podCIDRs = Output.ofNullable(podCIDRs);
+            this.podCIDRs = Codegen.ofNullable(podCIDRs);
             return this;
         }
         public Builder podCIDRs(String... podCIDRs) {
@@ -198,7 +199,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerID(@Nullable String providerID) {
-            this.providerID = Output.ofNullable(providerID);
+            this.providerID = Codegen.ofNullable(providerID);
             return this;
         }
         public Builder taints(@Nullable Output<List<TaintArgs>> taints) {
@@ -206,7 +207,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taints(@Nullable List<TaintArgs> taints) {
-            this.taints = Output.ofNullable(taints);
+            this.taints = Codegen.ofNullable(taints);
             return this;
         }
         public Builder taints(TaintArgs... taints) {
@@ -217,7 +218,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unschedulable(@Nullable Boolean unschedulable) {
-            this.unschedulable = Output.ofNullable(unschedulable);
+            this.unschedulable = Codegen.ofNullable(unschedulable);
             return this;
         }        public NodeSpecArgs build() {
             return new NodeSpecArgs(configSource, externalID, podCIDR, podCIDRs, providerID, taints, unschedulable);

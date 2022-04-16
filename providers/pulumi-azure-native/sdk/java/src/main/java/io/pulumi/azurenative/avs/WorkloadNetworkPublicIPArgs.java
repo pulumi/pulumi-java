@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     @Import(name="numberOfPublicIPs")
       private final @Nullable Output<Double> numberOfPublicIPs;
 
-    public Output<Double> getNumberOfPublicIPs() {
-        return this.numberOfPublicIPs == null ? Output.empty() : this.numberOfPublicIPs;
+    public Output<Double> numberOfPublicIPs() {
+        return this.numberOfPublicIPs == null ? Codegen.empty() : this.numberOfPublicIPs;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -55,8 +56,8 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     @Import(name="publicIPId")
       private final @Nullable Output<String> publicIPId;
 
-    public Output<String> getPublicIPId() {
-        return this.publicIPId == null ? Output.empty() : this.publicIPId;
+    public Output<String> publicIPId() {
+        return this.publicIPId == null ? Codegen.empty() : this.publicIPId;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,11 +85,11 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     }
 
     private WorkloadNetworkPublicIPArgs() {
-        this.displayName = Output.empty();
-        this.numberOfPublicIPs = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.publicIPId = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.displayName = Codegen.empty();
+        this.numberOfPublicIPs = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.publicIPId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder numberOfPublicIPs(@Nullable Output<Double> numberOfPublicIPs) {
@@ -132,7 +133,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder numberOfPublicIPs(@Nullable Double numberOfPublicIPs) {
-            this.numberOfPublicIPs = Output.ofNullable(numberOfPublicIPs);
+            this.numberOfPublicIPs = Codegen.ofNullable(numberOfPublicIPs);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {
@@ -148,7 +149,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publicIPId(@Nullable String publicIPId) {
-            this.publicIPId = Output.ofNullable(publicIPId);
+            this.publicIPId = Codegen.ofNullable(publicIPId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

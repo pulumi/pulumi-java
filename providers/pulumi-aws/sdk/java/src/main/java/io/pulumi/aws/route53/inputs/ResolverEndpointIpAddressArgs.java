@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+    public Output<String> ip() {
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     @Import(name="ipId")
       private final @Nullable Output<String> ipId;
 
-    public Output<String> getIpId() {
-        return this.ipId == null ? Output.empty() : this.ipId;
+    public Output<String> ipId() {
+        return this.ipId == null ? Codegen.empty() : this.ipId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -53,9 +54,9 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
     }
 
     private ResolverEndpointIpAddressArgs() {
-        this.ip = Output.empty();
-        this.ipId = Output.empty();
-        this.subnetId = Output.empty();
+        this.ip = Codegen.empty();
+        this.ipId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }
         public Builder ipId(@Nullable Output<String> ipId) {
@@ -95,7 +96,7 @@ public final class ResolverEndpointIpAddressArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ipId(@Nullable String ipId) {
-            this.ipId = Output.ofNullable(ipId);
+            this.ipId = Codegen.ofNullable(ipId);
             return this;
         }
         public Builder subnetId(Output<String> subnetId) {

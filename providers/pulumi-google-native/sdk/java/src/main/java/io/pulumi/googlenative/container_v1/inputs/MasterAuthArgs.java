@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.ClientCertificateConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateConfig")
       private final @Nullable Output<ClientCertificateConfigArgs> clientCertificateConfig;
 
-    public Output<ClientCertificateConfigArgs> getClientCertificateConfig() {
-        return this.clientCertificateConfig == null ? Output.empty() : this.clientCertificateConfig;
+    public Output<ClientCertificateConfigArgs> clientCertificateConfig() {
+        return this.clientCertificateConfig == null ? Codegen.empty() : this.clientCertificateConfig;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public MasterAuthArgs(
@@ -62,9 +63,9 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MasterAuthArgs() {
-        this.clientCertificateConfig = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.clientCertificateConfig = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificateConfig(@Nullable ClientCertificateConfigArgs clientCertificateConfig) {
-            this.clientCertificateConfig = Output.ofNullable(clientCertificateConfig);
+            this.clientCertificateConfig = Codegen.ofNullable(clientCertificateConfig);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -104,7 +105,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -112,7 +113,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public MasterAuthArgs build() {
             return new MasterAuthArgs(clientCertificateConfig, password, username);

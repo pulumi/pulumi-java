@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+    public Output<String> creationTime() {
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataRetentionInHours")
       private final @Nullable Output<Integer> dataRetentionInHours;
 
-    public Output<Integer> getDataRetentionInHours() {
-        return this.dataRetentionInHours == null ? Output.empty() : this.dataRetentionInHours;
+    public Output<Integer> dataRetentionInHours() {
+        return this.dataRetentionInHours == null ? Codegen.empty() : this.dataRetentionInHours;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+    public Output<String> deviceName() {
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mediaType")
       private final @Nullable Output<String> mediaType;
 
-    public Output<String> getMediaType() {
-        return this.mediaType == null ? Output.empty() : this.mediaType;
+    public Output<String> mediaType() {
+        return this.mediaType == null ? Codegen.empty() : this.mediaType;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public VideoStreamState(
@@ -151,16 +152,16 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoStreamState() {
-        this.arn = Output.empty();
-        this.creationTime = Output.empty();
-        this.dataRetentionInHours = Output.empty();
-        this.deviceName = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.mediaType = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.version = Output.empty();
+        this.arn = Codegen.empty();
+        this.creationTime = Codegen.empty();
+        this.dataRetentionInHours = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.mediaType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder creationTime(@Nullable Output<String> creationTime) {
@@ -214,7 +215,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder dataRetentionInHours(@Nullable Output<Integer> dataRetentionInHours) {
@@ -222,7 +223,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataRetentionInHours(@Nullable Integer dataRetentionInHours) {
-            this.dataRetentionInHours = Output.ofNullable(dataRetentionInHours);
+            this.dataRetentionInHours = Codegen.ofNullable(dataRetentionInHours);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -230,7 +231,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -238,7 +239,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder mediaType(@Nullable Output<String> mediaType) {
@@ -246,7 +247,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = Output.ofNullable(mediaType);
+            this.mediaType = Codegen.ofNullable(mediaType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -254,7 +255,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -262,7 +263,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -270,7 +271,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -278,7 +279,7 @@ public final class VideoStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public VideoStreamState build() {
             return new VideoStreamState(arn, creationTime, dataRetentionInHours, deviceName, kmsKeyId, mediaType, name, tags, tagsAll, version);

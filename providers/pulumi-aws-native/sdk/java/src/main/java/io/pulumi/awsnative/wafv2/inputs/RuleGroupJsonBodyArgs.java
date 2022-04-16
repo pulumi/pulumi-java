@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupJsonMatchPatternArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,21 +24,21 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="invalidFallbackBehavior")
       private final @Nullable Output<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior;
 
-    public Output<RuleGroupBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
-        return this.invalidFallbackBehavior == null ? Output.empty() : this.invalidFallbackBehavior;
+    public Output<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior() {
+        return this.invalidFallbackBehavior == null ? Codegen.empty() : this.invalidFallbackBehavior;
     }
 
     @Import(name="matchPattern", required=true)
       private final Output<RuleGroupJsonMatchPatternArgs> matchPattern;
 
-    public Output<RuleGroupJsonMatchPatternArgs> getMatchPattern() {
+    public Output<RuleGroupJsonMatchPatternArgs> matchPattern() {
         return this.matchPattern;
     }
 
     @Import(name="matchScope", required=true)
       private final Output<RuleGroupJsonMatchScope> matchScope;
 
-    public Output<RuleGroupJsonMatchScope> getMatchScope() {
+    public Output<RuleGroupJsonMatchScope> matchScope() {
         return this.matchScope;
     }
 
@@ -51,9 +52,9 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RuleGroupJsonBodyArgs() {
-        this.invalidFallbackBehavior = Output.empty();
-        this.matchPattern = Output.empty();
-        this.matchScope = Output.empty();
+        this.invalidFallbackBehavior = Codegen.empty();
+        this.matchPattern = Codegen.empty();
+        this.matchScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder invalidFallbackBehavior(@Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior) {
-            this.invalidFallbackBehavior = Output.ofNullable(invalidFallbackBehavior);
+            this.invalidFallbackBehavior = Codegen.ofNullable(invalidFallbackBehavior);
             return this;
         }
         public Builder matchPattern(Output<RuleGroupJsonMatchPatternArgs> matchPattern) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.ec2.outputs.VpcEndpointServicePrivateDnsNameConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
      * 
      */
-    public Output<Boolean> getAcceptanceRequired() {
+    public Output<Boolean> acceptanceRequired() {
         return this.acceptanceRequired;
     }
     /**
@@ -64,7 +65,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return The ARNs of one or more principals allowed to discover the endpoint service.
      * 
      */
-    public Output<List<String>> getAllowedPrincipals() {
+    public Output<List<String>> allowedPrincipals() {
         return this.allowedPrincipals;
     }
     /**
@@ -78,7 +79,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the VPC endpoint service.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -92,7 +93,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return The Availability Zones in which the service is available.
      * 
      */
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -106,7 +107,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return The DNS names for the service.
      * 
      */
-    public Output<List<String>> getBaseEndpointDnsNames() {
+    public Output<List<String>> baseEndpointDnsNames() {
         return this.baseEndpointDnsNames;
     }
     /**
@@ -120,7 +121,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
      * 
      */
-    public Output</* @Nullable */ List<String>> getGatewayLoadBalancerArns() {
+    public Output</* @Nullable */ List<String>> gatewayLoadBalancerArns() {
         return this.gatewayLoadBalancerArns;
     }
     /**
@@ -134,7 +135,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return Whether or not the service manages its VPC endpoints - `true` or `false`.
      * 
      */
-    public Output<Boolean> getManagesVpcEndpoints() {
+    public Output<Boolean> managesVpcEndpoints() {
         return this.managesVpcEndpoints;
     }
     /**
@@ -148,7 +149,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetworkLoadBalancerArns() {
+    public Output</* @Nullable */ List<String>> networkLoadBalancerArns() {
         return this.networkLoadBalancerArns;
     }
     /**
@@ -162,7 +163,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return The private DNS name for the service.
      * 
      */
-    public Output<String> getPrivateDnsName() {
+    public Output<String> privateDnsName() {
         return this.privateDnsName;
     }
     /**
@@ -176,7 +177,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return List of objects containing information about the endpoint service private DNS name configuration.
      * 
      */
-    public Output<List<VpcEndpointServicePrivateDnsNameConfiguration>> getPrivateDnsNameConfigurations() {
+    public Output<List<VpcEndpointServicePrivateDnsNameConfiguration>> privateDnsNameConfigurations() {
         return this.privateDnsNameConfigurations;
     }
     /**
@@ -190,7 +191,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return The service name.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -204,7 +205,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return The service type, `Gateway` or `Interface`.
      * 
      */
-    public Output<String> getServiceType() {
+    public Output<String> serviceType() {
         return this.serviceType;
     }
     /**
@@ -218,7 +219,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -232,7 +233,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -246,7 +247,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -272,7 +273,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcEndpointService(String name, VpcEndpointServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcEndpointService:VpcEndpointService", name, args == null ? VpcEndpointServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcEndpointService:VpcEndpointService", name, args == null ? VpcEndpointServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcEndpointService(String name, Output<String> id, @Nullable VpcEndpointServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

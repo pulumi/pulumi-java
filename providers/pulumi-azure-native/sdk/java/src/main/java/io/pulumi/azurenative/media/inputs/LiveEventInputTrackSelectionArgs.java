@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
-        return this.operation == null ? Output.empty() : this.operation;
+    public Output<String> operation() {
+        return this.operation == null ? Codegen.empty() : this.operation;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
     @Import(name="property")
       private final @Nullable Output<String> property;
 
-    public Output<String> getProperty() {
-        return this.property == null ? Output.empty() : this.property;
+    public Output<String> property() {
+        return this.property == null ? Codegen.empty() : this.property;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public LiveEventInputTrackSelectionArgs(
@@ -61,9 +62,9 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
     }
 
     private LiveEventInputTrackSelectionArgs() {
-        this.operation = Output.empty();
-        this.property = Output.empty();
-        this.value = Output.empty();
+        this.operation = Codegen.empty();
+        this.property = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder operation(@Nullable String operation) {
-            this.operation = Output.ofNullable(operation);
+            this.operation = Codegen.ofNullable(operation);
             return this;
         }
         public Builder property(@Nullable Output<String> property) {
@@ -103,7 +104,7 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder property(@Nullable String property) {
-            this.property = Output.ofNullable(property);
+            this.property = Codegen.ofNullable(property);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -111,7 +112,7 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public LiveEventInputTrackSelectionArgs build() {
             return new LiveEventInputTrackSelectionArgs(operation, property, value);

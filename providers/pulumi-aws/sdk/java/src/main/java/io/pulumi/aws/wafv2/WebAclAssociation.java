@@ -9,6 +9,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -44,7 +45,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the resource to associate with the web ACL. This must be an ARN of an Application Load Balancer or an Amazon API Gateway stage.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -58,7 +59,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Web ACL that you want to associate with the resource.
      * 
      */
-    public Output<String> getWebAclArn() {
+    public Output<String> webAclArn() {
         return this.webAclArn;
     }
 
@@ -84,7 +85,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAclAssociation(String name, WebAclAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafv2/webAclAssociation:WebAclAssociation", name, args == null ? WebAclAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafv2/webAclAssociation:WebAclAssociation", name, args == null ? WebAclAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAclAssociation(String name, Output<String> id, @Nullable WebAclAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

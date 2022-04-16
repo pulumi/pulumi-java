@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="allowedAuthenticationType")
       private final @Nullable Output<Integer> allowedAuthenticationType;
 
-    public Output<Integer> getAllowedAuthenticationType() {
-        return this.allowedAuthenticationType == null ? Output.empty() : this.allowedAuthenticationType;
+    public Output<Integer> allowedAuthenticationType() {
+        return this.allowedAuthenticationType == null ? Codegen.empty() : this.allowedAuthenticationType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
-    public Output<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
-        return this.applicationConsistentSnapshotFrequencyInHours == null ? Output.empty() : this.applicationConsistentSnapshotFrequencyInHours;
+    public Output<Integer> applicationConsistentSnapshotFrequencyInHours() {
+        return this.applicationConsistentSnapshotFrequencyInHours == null ? Codegen.empty() : this.applicationConsistentSnapshotFrequencyInHours;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+    public Output<String> compression() {
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="initialReplicationMethod")
       private final @Nullable Output<String> initialReplicationMethod;
 
-    public Output<String> getInitialReplicationMethod() {
-        return this.initialReplicationMethod == null ? Output.empty() : this.initialReplicationMethod;
+    public Output<String> initialReplicationMethod() {
+        return this.initialReplicationMethod == null ? Codegen.empty() : this.initialReplicationMethod;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="offlineReplicationExportPath")
       private final @Nullable Output<String> offlineReplicationExportPath;
 
-    public Output<String> getOfflineReplicationExportPath() {
-        return this.offlineReplicationExportPath == null ? Output.empty() : this.offlineReplicationExportPath;
+    public Output<String> offlineReplicationExportPath() {
+        return this.offlineReplicationExportPath == null ? Codegen.empty() : this.offlineReplicationExportPath;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="offlineReplicationImportPath")
       private final @Nullable Output<String> offlineReplicationImportPath;
 
-    public Output<String> getOfflineReplicationImportPath() {
-        return this.offlineReplicationImportPath == null ? Output.empty() : this.offlineReplicationImportPath;
+    public Output<String> offlineReplicationImportPath() {
+        return this.offlineReplicationImportPath == null ? Codegen.empty() : this.offlineReplicationImportPath;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="onlineReplicationStartTime")
       private final @Nullable Output<String> onlineReplicationStartTime;
 
-    public Output<String> getOnlineReplicationStartTime() {
-        return this.onlineReplicationStartTime == null ? Output.empty() : this.onlineReplicationStartTime;
+    public Output<String> onlineReplicationStartTime() {
+        return this.onlineReplicationStartTime == null ? Codegen.empty() : this.onlineReplicationStartTime;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="recoveryPoints")
       private final @Nullable Output<Integer> recoveryPoints;
 
-    public Output<Integer> getRecoveryPoints() {
-        return this.recoveryPoints == null ? Output.empty() : this.recoveryPoints;
+    public Output<Integer> recoveryPoints() {
+        return this.recoveryPoints == null ? Codegen.empty() : this.recoveryPoints;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="replicaDeletion")
       private final @Nullable Output<String> replicaDeletion;
 
-    public Output<String> getReplicaDeletion() {
-        return this.replicaDeletion == null ? Output.empty() : this.replicaDeletion;
+    public Output<String> replicaDeletion() {
+        return this.replicaDeletion == null ? Codegen.empty() : this.replicaDeletion;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="replicationFrequencyInSeconds")
       private final @Nullable Output<Integer> replicationFrequencyInSeconds;
 
-    public Output<Integer> getReplicationFrequencyInSeconds() {
-        return this.replicationFrequencyInSeconds == null ? Output.empty() : this.replicationFrequencyInSeconds;
+    public Output<Integer> replicationFrequencyInSeconds() {
+        return this.replicationFrequencyInSeconds == null ? Codegen.empty() : this.replicationFrequencyInSeconds;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     @Import(name="replicationPort")
       private final @Nullable Output<Integer> replicationPort;
 
-    public Output<Integer> getReplicationPort() {
-        return this.replicationPort == null ? Output.empty() : this.replicationPort;
+    public Output<Integer> replicationPort() {
+        return this.replicationPort == null ? Codegen.empty() : this.replicationPort;
     }
 
     public HyperVReplicaBluePolicyInputArgs(
@@ -180,18 +181,18 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
     }
 
     private HyperVReplicaBluePolicyInputArgs() {
-        this.allowedAuthenticationType = Output.empty();
-        this.applicationConsistentSnapshotFrequencyInHours = Output.empty();
-        this.compression = Output.empty();
-        this.initialReplicationMethod = Output.empty();
-        this.instanceType = Output.empty();
-        this.offlineReplicationExportPath = Output.empty();
-        this.offlineReplicationImportPath = Output.empty();
-        this.onlineReplicationStartTime = Output.empty();
-        this.recoveryPoints = Output.empty();
-        this.replicaDeletion = Output.empty();
-        this.replicationFrequencyInSeconds = Output.empty();
-        this.replicationPort = Output.empty();
+        this.allowedAuthenticationType = Codegen.empty();
+        this.applicationConsistentSnapshotFrequencyInHours = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.initialReplicationMethod = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.offlineReplicationExportPath = Codegen.empty();
+        this.offlineReplicationImportPath = Codegen.empty();
+        this.onlineReplicationStartTime = Codegen.empty();
+        this.recoveryPoints = Codegen.empty();
+        this.replicaDeletion = Codegen.empty();
+        this.replicationFrequencyInSeconds = Codegen.empty();
+        this.replicationPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
-            this.allowedAuthenticationType = Output.ofNullable(allowedAuthenticationType);
+            this.allowedAuthenticationType = Codegen.ofNullable(allowedAuthenticationType);
             return this;
         }
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours) {
@@ -249,7 +250,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
-            this.applicationConsistentSnapshotFrequencyInHours = Output.ofNullable(applicationConsistentSnapshotFrequencyInHours);
+            this.applicationConsistentSnapshotFrequencyInHours = Codegen.ofNullable(applicationConsistentSnapshotFrequencyInHours);
             return this;
         }
         public Builder compression(@Nullable Output<String> compression) {
@@ -257,7 +258,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder compression(@Nullable String compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder initialReplicationMethod(@Nullable Output<String> initialReplicationMethod) {
@@ -265,7 +266,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder initialReplicationMethod(@Nullable String initialReplicationMethod) {
-            this.initialReplicationMethod = Output.ofNullable(initialReplicationMethod);
+            this.initialReplicationMethod = Codegen.ofNullable(initialReplicationMethod);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -273,7 +274,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder offlineReplicationExportPath(@Nullable Output<String> offlineReplicationExportPath) {
@@ -281,7 +282,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder offlineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
-            this.offlineReplicationExportPath = Output.ofNullable(offlineReplicationExportPath);
+            this.offlineReplicationExportPath = Codegen.ofNullable(offlineReplicationExportPath);
             return this;
         }
         public Builder offlineReplicationImportPath(@Nullable Output<String> offlineReplicationImportPath) {
@@ -289,7 +290,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder offlineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
-            this.offlineReplicationImportPath = Output.ofNullable(offlineReplicationImportPath);
+            this.offlineReplicationImportPath = Codegen.ofNullable(offlineReplicationImportPath);
             return this;
         }
         public Builder onlineReplicationStartTime(@Nullable Output<String> onlineReplicationStartTime) {
@@ -297,7 +298,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
-            this.onlineReplicationStartTime = Output.ofNullable(onlineReplicationStartTime);
+            this.onlineReplicationStartTime = Codegen.ofNullable(onlineReplicationStartTime);
             return this;
         }
         public Builder recoveryPoints(@Nullable Output<Integer> recoveryPoints) {
@@ -305,7 +306,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
-            this.recoveryPoints = Output.ofNullable(recoveryPoints);
+            this.recoveryPoints = Codegen.ofNullable(recoveryPoints);
             return this;
         }
         public Builder replicaDeletion(@Nullable Output<String> replicaDeletion) {
@@ -313,7 +314,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder replicaDeletion(@Nullable String replicaDeletion) {
-            this.replicaDeletion = Output.ofNullable(replicaDeletion);
+            this.replicaDeletion = Codegen.ofNullable(replicaDeletion);
             return this;
         }
         public Builder replicationFrequencyInSeconds(@Nullable Output<Integer> replicationFrequencyInSeconds) {
@@ -321,7 +322,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder replicationFrequencyInSeconds(@Nullable Integer replicationFrequencyInSeconds) {
-            this.replicationFrequencyInSeconds = Output.ofNullable(replicationFrequencyInSeconds);
+            this.replicationFrequencyInSeconds = Codegen.ofNullable(replicationFrequencyInSeconds);
             return this;
         }
         public Builder replicationPort(@Nullable Output<Integer> replicationPort) {
@@ -329,7 +330,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
             return this;
         }
         public Builder replicationPort(@Nullable Integer replicationPort) {
-            this.replicationPort = Output.ofNullable(replicationPort);
+            this.replicationPort = Codegen.ofNullable(replicationPort);
             return this;
         }        public HyperVReplicaBluePolicyInputArgs build() {
             return new HyperVReplicaBluePolicyInputArgs(allowedAuthenticationType, applicationConsistentSnapshotFrequencyInHours, compression, initialReplicationMethod, instanceType, offlineReplicationExportPath, offlineReplicationImportPath, onlineReplicationStartTime, recoveryPoints, replicaDeletion, replicationFrequencyInSeconds, replicationPort);

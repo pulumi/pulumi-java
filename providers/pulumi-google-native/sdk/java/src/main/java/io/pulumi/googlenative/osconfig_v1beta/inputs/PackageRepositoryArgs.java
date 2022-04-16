@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AptRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.GooRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.YumRepositoryArgs;
@@ -28,8 +29,8 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="apt")
       private final @Nullable Output<AptRepositoryArgs> apt;
 
-    public Output<AptRepositoryArgs> getApt() {
-        return this.apt == null ? Output.empty() : this.apt;
+    public Output<AptRepositoryArgs> apt() {
+        return this.apt == null ? Codegen.empty() : this.apt;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="goo")
       private final @Nullable Output<GooRepositoryArgs> goo;
 
-    public Output<GooRepositoryArgs> getGoo() {
-        return this.goo == null ? Output.empty() : this.goo;
+    public Output<GooRepositoryArgs> goo() {
+        return this.goo == null ? Codegen.empty() : this.goo;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="yum")
       private final @Nullable Output<YumRepositoryArgs> yum;
 
-    public Output<YumRepositoryArgs> getYum() {
-        return this.yum == null ? Output.empty() : this.yum;
+    public Output<YumRepositoryArgs> yum() {
+        return this.yum == null ? Codegen.empty() : this.yum;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="zypper")
       private final @Nullable Output<ZypperRepositoryArgs> zypper;
 
-    public Output<ZypperRepositoryArgs> getZypper() {
-        return this.zypper == null ? Output.empty() : this.zypper;
+    public Output<ZypperRepositoryArgs> zypper() {
+        return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 
     public PackageRepositoryArgs(
@@ -77,10 +78,10 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PackageRepositoryArgs() {
-        this.apt = Output.empty();
-        this.goo = Output.empty();
-        this.yum = Output.empty();
-        this.zypper = Output.empty();
+        this.apt = Codegen.empty();
+        this.goo = Codegen.empty();
+        this.yum = Codegen.empty();
+        this.zypper = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder apt(@Nullable AptRepositoryArgs apt) {
-            this.apt = Output.ofNullable(apt);
+            this.apt = Codegen.ofNullable(apt);
             return this;
         }
         public Builder goo(@Nullable Output<GooRepositoryArgs> goo) {
@@ -122,7 +123,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder goo(@Nullable GooRepositoryArgs goo) {
-            this.goo = Output.ofNullable(goo);
+            this.goo = Codegen.ofNullable(goo);
             return this;
         }
         public Builder yum(@Nullable Output<YumRepositoryArgs> yum) {
@@ -130,7 +131,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder yum(@Nullable YumRepositoryArgs yum) {
-            this.yum = Output.ofNullable(yum);
+            this.yum = Codegen.ofNullable(yum);
             return this;
         }
         public Builder zypper(@Nullable Output<ZypperRepositoryArgs> zypper) {
@@ -138,7 +139,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder zypper(@Nullable ZypperRepositoryArgs zypper) {
-            this.zypper = Output.ofNullable(zypper);
+            this.zypper = Codegen.ofNullable(zypper);
             return this;
         }        public PackageRepositoryArgs build() {
             return new PackageRepositoryArgs(apt, goo, yum, zypper);

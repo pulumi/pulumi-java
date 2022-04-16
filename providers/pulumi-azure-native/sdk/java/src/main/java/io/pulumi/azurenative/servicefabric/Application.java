@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -48,7 +49,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Azure resource etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -62,7 +63,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Describes the managed identities for an Azure resource.
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -76,7 +77,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -90,7 +91,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return List of user assigned identities for the application, each mapped to a friendly name.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationUserAssignedIdentityResponse>> getManagedIdentities() {
+    public Output</* @Nullable */ List<ApplicationUserAssignedIdentityResponse>> managedIdentities() {
         return this.managedIdentities;
     }
     /**
@@ -104,7 +105,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
      * 
      */
-    public Output</* @Nullable */ Double> getMaximumNodes() {
+    public Output</* @Nullable */ Double> maximumNodes() {
         return this.maximumNodes;
     }
     /**
@@ -118,7 +119,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return List of application capacity metric description.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationMetricDescriptionResponse>> getMetrics() {
+    public Output</* @Nullable */ List<ApplicationMetricDescriptionResponse>> metrics() {
         return this.metrics;
     }
     /**
@@ -132,7 +133,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
      * 
      */
-    public Output</* @Nullable */ Double> getMinimumNodes() {
+    public Output</* @Nullable */ Double> minimumNodes() {
         return this.minimumNodes;
     }
     /**
@@ -146,7 +147,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Azure resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +161,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return List of application parameters with overridden values from their default values specified in the application manifest.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -174,7 +175,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The current deployment or provisioning state, which only appears in the response
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -188,7 +189,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Remove the current application capacity settings.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRemoveApplicationCapacity() {
+    public Output</* @Nullable */ Boolean> removeApplicationCapacity() {
         return this.removeApplicationCapacity;
     }
     /**
@@ -202,7 +203,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -216,7 +217,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Azure resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -230,7 +231,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The application type name as defined in the application manifest.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
     /**
@@ -244,7 +245,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The version of the application type as defined in the application manifest.
      * 
      */
-    public Output</* @Nullable */ String> getTypeVersion() {
+    public Output</* @Nullable */ String> typeVersion() {
         return this.typeVersion;
     }
     /**
@@ -258,7 +259,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Describes the policy for a monitored application upgrade.
      * 
      */
-    public Output</* @Nullable */ ApplicationUpgradePolicyResponse> getUpgradePolicy() {
+    public Output</* @Nullable */ ApplicationUpgradePolicyResponse> upgradePolicy() {
         return this.upgradePolicy;
     }
 
@@ -284,7 +285,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabric:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:servicefabric:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Application(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

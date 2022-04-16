@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Entity Tag
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +60,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The identity of Cognitive Services account.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -73,7 +74,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The Kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +88,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The location of the resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -101,7 +102,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The name of the created account
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Properties of Cognitive Services account.
      * 
      */
-    public Output<CognitiveServicesAccountPropertiesResponse> getProperties() {
+    public Output<CognitiveServicesAccountPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -129,7 +130,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The SKU of Cognitive Services account.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -143,7 +144,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +158,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -183,7 +184,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cognitiveservices:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cognitiveservices:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

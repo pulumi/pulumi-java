@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<ConnectionStringType> type;
 
-    public Output<ConnectionStringType> getType() {
+    public Output<ConnectionStringType> type() {
         return this.type;
     }
 
@@ -36,7 +37,7 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -48,8 +49,8 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
     }
 
     private ConnStringValueTypePairArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

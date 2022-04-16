@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.ResourceCommitmentType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
+    public Output<String> acceleratorType() {
+        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="amount")
       private final @Nullable Output<String> amount;
 
-    public Output<String> getAmount() {
-        return this.amount == null ? Output.empty() : this.amount;
+    public Output<String> amount() {
+        return this.amount == null ? Codegen.empty() : this.amount;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<ResourceCommitmentType> type;
 
-    public Output<ResourceCommitmentType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ResourceCommitmentType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ResourceCommitmentArgs(
@@ -62,9 +63,9 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourceCommitmentArgs() {
-        this.acceleratorType = Output.empty();
-        this.amount = Output.empty();
-        this.type = Output.empty();
+        this.acceleratorType = Codegen.empty();
+        this.amount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Output.ofNullable(acceleratorType);
+            this.acceleratorType = Codegen.ofNullable(acceleratorType);
             return this;
         }
         public Builder amount(@Nullable Output<String> amount) {
@@ -104,7 +105,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder amount(@Nullable String amount) {
-            this.amount = Output.ofNullable(amount);
+            this.amount = Codegen.ofNullable(amount);
             return this;
         }
         public Builder type(@Nullable Output<ResourceCommitmentType> type) {
@@ -112,7 +113,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable ResourceCommitmentType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ResourceCommitmentArgs build() {
             return new ResourceCommitmentArgs(acceleratorType, amount, type);

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     @Import(name="endsWiths")
       private final @Nullable Output<List<String>> endsWiths;
 
-    public Output<List<String>> getEndsWiths() {
-        return this.endsWiths == null ? Output.empty() : this.endsWiths;
+    public Output<List<String>> endsWiths() {
+        return this.endsWiths == null ? Codegen.empty() : this.endsWiths;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     @Import(name="equals")
       private final @Nullable Output<List<String>> equals;
 
-    public Output<List<String>> getEquals() {
-        return this.equals == null ? Output.empty() : this.equals;
+    public Output<List<String>> equals_() {
+        return this.equals == null ? Codegen.empty() : this.equals;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     @Import(name="field", required=true)
       private final Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field;
     }
 
@@ -55,8 +56,8 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     @Import(name="notEndsWiths")
       private final @Nullable Output<List<String>> notEndsWiths;
 
-    public Output<List<String>> getNotEndsWiths() {
-        return this.notEndsWiths == null ? Output.empty() : this.notEndsWiths;
+    public Output<List<String>> notEndsWiths() {
+        return this.notEndsWiths == null ? Codegen.empty() : this.notEndsWiths;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     @Import(name="notEquals")
       private final @Nullable Output<List<String>> notEquals;
 
-    public Output<List<String>> getNotEquals() {
-        return this.notEquals == null ? Output.empty() : this.notEquals;
+    public Output<List<String>> notEquals() {
+        return this.notEquals == null ? Codegen.empty() : this.notEquals;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     @Import(name="notStartsWiths")
       private final @Nullable Output<List<String>> notStartsWiths;
 
-    public Output<List<String>> getNotStartsWiths() {
-        return this.notStartsWiths == null ? Output.empty() : this.notStartsWiths;
+    public Output<List<String>> notStartsWiths() {
+        return this.notStartsWiths == null ? Codegen.empty() : this.notStartsWiths;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     @Import(name="startsWiths")
       private final @Nullable Output<List<String>> startsWiths;
 
-    public Output<List<String>> getStartsWiths() {
-        return this.startsWiths == null ? Output.empty() : this.startsWiths;
+    public Output<List<String>> startsWiths() {
+        return this.startsWiths == null ? Codegen.empty() : this.startsWiths;
     }
 
     public TrailAdvancedEventSelectorFieldSelectorArgs(
@@ -110,13 +111,13 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     }
 
     private TrailAdvancedEventSelectorFieldSelectorArgs() {
-        this.endsWiths = Output.empty();
-        this.equals = Output.empty();
-        this.field = Output.empty();
-        this.notEndsWiths = Output.empty();
-        this.notEquals = Output.empty();
-        this.notStartsWiths = Output.empty();
-        this.startsWiths = Output.empty();
+        this.endsWiths = Codegen.empty();
+        this.equals = Codegen.empty();
+        this.field = Codegen.empty();
+        this.notEndsWiths = Codegen.empty();
+        this.notEquals = Codegen.empty();
+        this.notStartsWiths = Codegen.empty();
+        this.startsWiths = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,22 +157,22 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
             return this;
         }
         public Builder endsWiths(@Nullable List<String> endsWiths) {
-            this.endsWiths = Output.ofNullable(endsWiths);
+            this.endsWiths = Codegen.ofNullable(endsWiths);
             return this;
         }
         public Builder endsWiths(String... endsWiths) {
             return endsWiths(List.of(endsWiths));
         }
-        public Builder equals(@Nullable Output<List<String>> equals) {
+        public Builder equals_(@Nullable Output<List<String>> equals) {
             this.equals = equals;
             return this;
         }
-        public Builder equals(@Nullable List<String> equals) {
-            this.equals = Output.ofNullable(equals);
+        public Builder equals_(@Nullable List<String> equals) {
+            this.equals = Codegen.ofNullable(equals);
             return this;
         }
-        public Builder equals(String... equals) {
-            return equals(List.of(equals));
+        public Builder equals_(String... equals) {
+            return equals_(List.of(equals));
         }
         public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
@@ -186,7 +187,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
             return this;
         }
         public Builder notEndsWiths(@Nullable List<String> notEndsWiths) {
-            this.notEndsWiths = Output.ofNullable(notEndsWiths);
+            this.notEndsWiths = Codegen.ofNullable(notEndsWiths);
             return this;
         }
         public Builder notEndsWiths(String... notEndsWiths) {
@@ -197,7 +198,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
             return this;
         }
         public Builder notEquals(@Nullable List<String> notEquals) {
-            this.notEquals = Output.ofNullable(notEquals);
+            this.notEquals = Codegen.ofNullable(notEquals);
             return this;
         }
         public Builder notEquals(String... notEquals) {
@@ -208,7 +209,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
             return this;
         }
         public Builder notStartsWiths(@Nullable List<String> notStartsWiths) {
-            this.notStartsWiths = Output.ofNullable(notStartsWiths);
+            this.notStartsWiths = Codegen.ofNullable(notStartsWiths);
             return this;
         }
         public Builder notStartsWiths(String... notStartsWiths) {
@@ -219,7 +220,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
             return this;
         }
         public Builder startsWiths(@Nullable List<String> startsWiths) {
-            this.startsWiths = Output.ofNullable(startsWiths);
+            this.startsWiths = Codegen.ofNullable(startsWiths);
             return this;
         }
         public Builder startsWiths(String... startsWiths) {

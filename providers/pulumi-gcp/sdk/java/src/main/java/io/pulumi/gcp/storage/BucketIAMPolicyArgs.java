@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -32,7 +33,7 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -44,8 +45,8 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BucketIAMPolicyArgs() {
-        this.bucket = Output.empty();
-        this.policyData = Output.empty();
+        this.bucket = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

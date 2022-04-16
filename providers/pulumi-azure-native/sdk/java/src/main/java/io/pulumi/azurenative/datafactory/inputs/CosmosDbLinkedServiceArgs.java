@@ -13,6 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -36,8 +37,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="accountEndpoint")
       private final @Nullable Output<Object> accountEndpoint;
 
-    public Output<Object> getAccountEndpoint() {
-        return this.accountEndpoint == null ? Output.empty() : this.accountEndpoint;
+    public Output<Object> accountEndpoint() {
+        return this.accountEndpoint == null ? Codegen.empty() : this.accountEndpoint;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="accountKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey() {
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
-    public Output<Object> getAzureCloudType() {
-        return this.azureCloudType == null ? Output.empty() : this.azureCloudType;
+    public Output<Object> azureCloudType() {
+        return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionMode")
       private final @Nullable Output<Either<String,CosmosDbConnectionMode>> connectionMode;
 
-    public Output<Either<String,CosmosDbConnectionMode>> getConnectionMode() {
-        return this.connectionMode == null ? Output.empty() : this.connectionMode;
+    public Output<Either<String,CosmosDbConnectionMode>> connectionMode() {
+        return this.connectionMode == null ? Codegen.empty() : this.connectionMode;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
-    public Output<Object> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+    public Output<Object> connectionString() {
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+    public Output<CredentialReferenceArgs> credential() {
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="database")
       private final @Nullable Output<Object> database;
 
-    public Output<Object> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<Object> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="servicePrincipalCredential")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
-        return this.servicePrincipalCredential == null ? Output.empty() : this.servicePrincipalCredential;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential() {
+        return this.servicePrincipalCredential == null ? Codegen.empty() : this.servicePrincipalCredential;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="servicePrincipalCredentialType")
       private final @Nullable Output<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType;
 
-    public Output<Either<String,CosmosDbServicePrincipalCredentialType>> getServicePrincipalCredentialType() {
-        return this.servicePrincipalCredentialType == null ? Output.empty() : this.servicePrincipalCredentialType;
+    public Output<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType() {
+        return this.servicePrincipalCredentialType == null ? Codegen.empty() : this.servicePrincipalCredentialType;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
+    public Output<Object> servicePrincipalId() {
+        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
-    public Output<Object> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+    public Output<Object> tenant() {
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -255,23 +256,23 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     }
 
     private CosmosDbLinkedServiceArgs() {
-        this.accountEndpoint = Output.empty();
-        this.accountKey = Output.empty();
-        this.annotations = Output.empty();
-        this.azureCloudType = Output.empty();
-        this.connectVia = Output.empty();
-        this.connectionMode = Output.empty();
-        this.connectionString = Output.empty();
-        this.credential = Output.empty();
-        this.database = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.servicePrincipalCredential = Output.empty();
-        this.servicePrincipalCredentialType = Output.empty();
-        this.servicePrincipalId = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
+        this.accountEndpoint = Codegen.empty();
+        this.accountKey = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.azureCloudType = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.connectionMode = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.database = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.servicePrincipalCredential = Codegen.empty();
+        this.servicePrincipalCredentialType = Codegen.empty();
+        this.servicePrincipalId = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -331,7 +332,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accountEndpoint(@Nullable Object accountEndpoint) {
-            this.accountEndpoint = Output.ofNullable(accountEndpoint);
+            this.accountEndpoint = Codegen.ofNullable(accountEndpoint);
             return this;
         }
         public Builder accountKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey) {
@@ -339,7 +340,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accountKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -347,7 +348,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -358,7 +359,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = Output.ofNullable(azureCloudType);
+            this.azureCloudType = Codegen.ofNullable(azureCloudType);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -366,7 +367,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder connectionMode(@Nullable Output<Either<String,CosmosDbConnectionMode>> connectionMode) {
@@ -374,7 +375,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionMode(@Nullable Either<String,CosmosDbConnectionMode> connectionMode) {
-            this.connectionMode = Output.ofNullable(connectionMode);
+            this.connectionMode = Codegen.ofNullable(connectionMode);
             return this;
         }
         public Builder connectionString(@Nullable Output<Object> connectionString) {
@@ -382,7 +383,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
@@ -390,7 +391,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder database(@Nullable Output<Object> database) {
@@ -398,7 +399,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder database(@Nullable Object database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -406,7 +407,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -414,7 +415,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -422,7 +423,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder servicePrincipalCredential(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
@@ -430,7 +431,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
-            this.servicePrincipalCredential = Output.ofNullable(servicePrincipalCredential);
+            this.servicePrincipalCredential = Codegen.ofNullable(servicePrincipalCredential);
             return this;
         }
         public Builder servicePrincipalCredentialType(@Nullable Output<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType) {
@@ -438,7 +439,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder servicePrincipalCredentialType(@Nullable Either<String,CosmosDbServicePrincipalCredentialType> servicePrincipalCredentialType) {
-            this.servicePrincipalCredentialType = Output.ofNullable(servicePrincipalCredentialType);
+            this.servicePrincipalCredentialType = Codegen.ofNullable(servicePrincipalCredentialType);
             return this;
         }
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
@@ -446,7 +447,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
             return this;
         }
         public Builder tenant(@Nullable Output<Object> tenant) {
@@ -454,7 +455,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -24,7 +24,7 @@ public final class IPAMIpamOperatingRegion {
      * The name of the region.
      * 
     */
-    public String getRegionName() {
+    public String regionName() {
         return this.regionName;
     }
 

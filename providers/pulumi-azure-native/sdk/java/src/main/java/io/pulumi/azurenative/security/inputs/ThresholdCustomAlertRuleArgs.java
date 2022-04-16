@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -37,7 +38,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="maxThreshold", required=true)
       private final Output<Integer> maxThreshold;
 
-    public Output<Integer> getMaxThreshold() {
+    public Output<Integer> maxThreshold() {
         return this.maxThreshold;
     }
 
@@ -48,7 +49,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="minThreshold", required=true)
       private final Output<Integer> minThreshold;
 
-    public Output<Integer> getMinThreshold() {
+    public Output<Integer> minThreshold() {
         return this.minThreshold;
     }
 
@@ -60,7 +61,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -76,10 +77,10 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     }
 
     private ThresholdCustomAlertRuleArgs() {
-        this.isEnabled = Output.empty();
-        this.maxThreshold = Output.empty();
-        this.minThreshold = Output.empty();
-        this.ruleType = Output.empty();
+        this.isEnabled = Codegen.empty();
+        this.maxThreshold = Codegen.empty();
+        this.minThreshold = Codegen.empty();
+        this.ruleType = Codegen.empty();
     }
 
     public static Builder builder() {

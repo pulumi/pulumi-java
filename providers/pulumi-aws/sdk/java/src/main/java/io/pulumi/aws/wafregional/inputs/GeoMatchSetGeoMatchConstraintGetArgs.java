@@ -5,6 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class GeoMatchSetGeoMatchConstraintGetArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -33,7 +34,7 @@ public final class GeoMatchSetGeoMatchConstraintGetArgs extends io.pulumi.resour
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -45,8 +46,8 @@ public final class GeoMatchSetGeoMatchConstraintGetArgs extends io.pulumi.resour
     }
 
     private GeoMatchSetGeoMatchConstraintGetArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

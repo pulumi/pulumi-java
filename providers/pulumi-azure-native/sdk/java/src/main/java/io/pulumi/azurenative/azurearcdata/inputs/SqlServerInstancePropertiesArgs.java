@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
-        return this.collation == null ? Output.empty() : this.collation;
+    public Output<String> collation() {
+        return this.collation == null ? Codegen.empty() : this.collation;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="containerResourceId", required=true)
       private final Output<String> containerResourceId;
 
-    public Output<String> getContainerResourceId() {
+    public Output<String> containerResourceId() {
         return this.containerResourceId;
     }
 
@@ -47,8 +48,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="currentVersion")
       private final @Nullable Output<String> currentVersion;
 
-    public Output<String> getCurrentVersion() {
-        return this.currentVersion == null ? Output.empty() : this.currentVersion;
+    public Output<String> currentVersion() {
+        return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="edition")
       private final @Nullable Output<String> edition;
 
-    public Output<String> getEdition() {
-        return this.edition == null ? Output.empty() : this.edition;
+    public Output<String> edition() {
+        return this.edition == null ? Codegen.empty() : this.edition;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+    public Output<String> instanceName() {
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+    public Output<String> licenseType() {
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="patchLevel")
       private final @Nullable Output<String> patchLevel;
 
-    public Output<String> getPatchLevel() {
-        return this.patchLevel == null ? Output.empty() : this.patchLevel;
+    public Output<String> patchLevel() {
+        return this.patchLevel == null ? Codegen.empty() : this.patchLevel;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
-        return this.productId == null ? Output.empty() : this.productId;
+    public Output<String> productId() {
+        return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -124,8 +125,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="tcpDynamicPorts")
       private final @Nullable Output<String> tcpDynamicPorts;
 
-    public Output<String> getTcpDynamicPorts() {
-        return this.tcpDynamicPorts == null ? Output.empty() : this.tcpDynamicPorts;
+    public Output<String> tcpDynamicPorts() {
+        return this.tcpDynamicPorts == null ? Codegen.empty() : this.tcpDynamicPorts;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="tcpStaticPorts")
       private final @Nullable Output<String> tcpStaticPorts;
 
-    public Output<String> getTcpStaticPorts() {
-        return this.tcpStaticPorts == null ? Output.empty() : this.tcpStaticPorts;
+    public Output<String> tcpStaticPorts() {
+        return this.tcpStaticPorts == null ? Codegen.empty() : this.tcpStaticPorts;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="vCore")
       private final @Nullable Output<String> vCore;
 
-    public Output<String> getVCore() {
-        return this.vCore == null ? Output.empty() : this.vCore;
+    public Output<String> vCore() {
+        return this.vCore == null ? Codegen.empty() : this.vCore;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public SqlServerInstancePropertiesArgs(
@@ -191,19 +192,19 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     }
 
     private SqlServerInstancePropertiesArgs() {
-        this.collation = Output.empty();
-        this.containerResourceId = Output.empty();
-        this.currentVersion = Output.empty();
-        this.edition = Output.empty();
-        this.instanceName = Output.empty();
-        this.licenseType = Output.empty();
-        this.patchLevel = Output.empty();
-        this.productId = Output.empty();
-        this.status = Output.empty();
-        this.tcpDynamicPorts = Output.empty();
-        this.tcpStaticPorts = Output.empty();
-        this.vCore = Output.empty();
-        this.version = Output.empty();
+        this.collation = Codegen.empty();
+        this.containerResourceId = Codegen.empty();
+        this.currentVersion = Codegen.empty();
+        this.edition = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.patchLevel = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tcpDynamicPorts = Codegen.empty();
+        this.tcpStaticPorts = Codegen.empty();
+        this.vCore = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -255,7 +256,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder collation(@Nullable String collation) {
-            this.collation = Output.ofNullable(collation);
+            this.collation = Codegen.ofNullable(collation);
             return this;
         }
         public Builder containerResourceId(Output<String> containerResourceId) {
@@ -271,7 +272,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder currentVersion(@Nullable String currentVersion) {
-            this.currentVersion = Output.ofNullable(currentVersion);
+            this.currentVersion = Codegen.ofNullable(currentVersion);
             return this;
         }
         public Builder edition(@Nullable Output<String> edition) {
@@ -279,7 +280,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder edition(@Nullable String edition) {
-            this.edition = Output.ofNullable(edition);
+            this.edition = Codegen.ofNullable(edition);
             return this;
         }
         public Builder instanceName(@Nullable Output<String> instanceName) {
@@ -287,7 +288,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder licenseType(@Nullable Output<String> licenseType) {
@@ -295,7 +296,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder patchLevel(@Nullable Output<String> patchLevel) {
@@ -303,7 +304,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder patchLevel(@Nullable String patchLevel) {
-            this.patchLevel = Output.ofNullable(patchLevel);
+            this.patchLevel = Codegen.ofNullable(patchLevel);
             return this;
         }
         public Builder productId(@Nullable Output<String> productId) {
@@ -311,7 +312,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder productId(@Nullable String productId) {
-            this.productId = Output.ofNullable(productId);
+            this.productId = Codegen.ofNullable(productId);
             return this;
         }
         public Builder status(Output<String> status) {
@@ -327,7 +328,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
-            this.tcpDynamicPorts = Output.ofNullable(tcpDynamicPorts);
+            this.tcpDynamicPorts = Codegen.ofNullable(tcpDynamicPorts);
             return this;
         }
         public Builder tcpStaticPorts(@Nullable Output<String> tcpStaticPorts) {
@@ -335,7 +336,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
-            this.tcpStaticPorts = Output.ofNullable(tcpStaticPorts);
+            this.tcpStaticPorts = Codegen.ofNullable(tcpStaticPorts);
             return this;
         }
         public Builder vCore(@Nullable Output<String> vCore) {
@@ -343,7 +344,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vCore(@Nullable String vCore) {
-            this.vCore = Output.ofNullable(vCore);
+            this.vCore = Codegen.ofNullable(vCore);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -351,7 +352,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public SqlServerInstancePropertiesArgs build() {
             return new SqlServerInstancePropertiesArgs(collation, containerResourceId, currentVersion, edition, instanceName, licenseType, patchLevel, productId, status, tcpDynamicPorts, tcpStaticPorts, vCore, version);

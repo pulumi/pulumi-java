@@ -42,21 +42,21 @@ public final class ApplicationEnvironment {
      * Variable name.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Set visibility of the variable value to `true` or `false`.
      * 
     */
-    public Optional<Boolean> getSecure() {
+    public Optional<Boolean> secure() {
         return Optional.ofNullable(this.secure);
     }
     /**
      * Variable value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

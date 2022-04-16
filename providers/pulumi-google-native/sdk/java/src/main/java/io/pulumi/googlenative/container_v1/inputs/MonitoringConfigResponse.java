@@ -23,7 +23,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="componentConfig", required=true)
       private final MonitoringComponentConfigResponse componentConfig;
 
-    public MonitoringComponentConfigResponse getComponentConfig() {
+    public MonitoringComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
 

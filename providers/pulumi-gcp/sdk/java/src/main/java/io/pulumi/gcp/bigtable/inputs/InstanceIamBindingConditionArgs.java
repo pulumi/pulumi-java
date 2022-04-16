@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +18,21 @@ public final class InstanceIamBindingConditionArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -45,9 +46,9 @@ public final class InstanceIamBindingConditionArgs extends io.pulumi.resources.R
     }
 
     private InstanceIamBindingConditionArgs() {
-        this.description = Output.empty();
-        this.expression = Output.empty();
-        this.title = Output.empty();
+        this.description = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class InstanceIamBindingConditionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expression(Output<String> expression) {

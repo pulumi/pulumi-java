@@ -6,6 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.inputs.ConnectionSettingParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<String> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="parameters")
       private final @Nullable Output<List<ConnectionSettingParameterArgs>> parameters;
 
-    public Output<List<ConnectionSettingParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<ConnectionSettingParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<String> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="scopes")
       private final @Nullable Output<String> scopes;
 
-    public Output<String> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+    public Output<String> scopes() {
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="serviceProviderDisplayName")
       private final @Nullable Output<String> serviceProviderDisplayName;
 
-    public Output<String> getServiceProviderDisplayName() {
-        return this.serviceProviderDisplayName == null ? Output.empty() : this.serviceProviderDisplayName;
+    public Output<String> serviceProviderDisplayName() {
+        return this.serviceProviderDisplayName == null ? Codegen.empty() : this.serviceProviderDisplayName;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="serviceProviderId")
       private final @Nullable Output<String> serviceProviderId;
 
-    public Output<String> getServiceProviderId() {
-        return this.serviceProviderId == null ? Output.empty() : this.serviceProviderId;
+    public Output<String> serviceProviderId() {
+        return this.serviceProviderId == null ? Codegen.empty() : this.serviceProviderId;
     }
 
     public ConnectionSettingPropertiesArgs(
@@ -141,15 +142,15 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     }
 
     private ConnectionSettingPropertiesArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.provisioningState = Output.empty();
-        this.scopes = Output.empty();
-        this.serviceProviderDisplayName = Output.empty();
-        this.serviceProviderId = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.serviceProviderDisplayName = Codegen.empty();
+        this.serviceProviderId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -201,7 +202,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -209,7 +210,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -217,7 +218,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ConnectionSettingParameterArgs>> parameters) {
@@ -225,7 +226,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder parameters(@Nullable List<ConnectionSettingParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ConnectionSettingParameterArgs... parameters) {
@@ -236,7 +237,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder scopes(@Nullable Output<String> scopes) {
@@ -244,7 +245,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder scopes(@Nullable String scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder serviceProviderDisplayName(@Nullable Output<String> serviceProviderDisplayName) {
@@ -252,7 +253,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder serviceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
-            this.serviceProviderDisplayName = Output.ofNullable(serviceProviderDisplayName);
+            this.serviceProviderDisplayName = Codegen.ofNullable(serviceProviderDisplayName);
             return this;
         }
         public Builder serviceProviderId(@Nullable Output<String> serviceProviderId) {
@@ -260,7 +261,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder serviceProviderId(@Nullable String serviceProviderId) {
-            this.serviceProviderId = Output.ofNullable(serviceProviderId);
+            this.serviceProviderId = Codegen.ofNullable(serviceProviderId);
             return this;
         }        public ConnectionSettingPropertiesArgs build() {
             return new ConnectionSettingPropertiesArgs(clientId, clientSecret, id, name, parameters, provisioningState, scopes, serviceProviderDisplayName, serviceProviderId);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clusterIpv4CidrBlock")
       private final @Nullable Output<String> clusterIpv4CidrBlock;
 
-    public Output<String> getClusterIpv4CidrBlock() {
-        return this.clusterIpv4CidrBlock == null ? Output.empty() : this.clusterIpv4CidrBlock;
+    public Output<String> clusterIpv4CidrBlock() {
+        return this.clusterIpv4CidrBlock == null ? Codegen.empty() : this.clusterIpv4CidrBlock;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clusterSecondaryRangeName")
       private final @Nullable Output<String> clusterSecondaryRangeName;
 
-    public Output<String> getClusterSecondaryRangeName() {
-        return this.clusterSecondaryRangeName == null ? Output.empty() : this.clusterSecondaryRangeName;
+    public Output<String> clusterSecondaryRangeName() {
+        return this.clusterSecondaryRangeName == null ? Codegen.empty() : this.clusterSecondaryRangeName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="createSubnetwork")
       private final @Nullable Output<Boolean> createSubnetwork;
 
-    public Output<Boolean> getCreateSubnetwork() {
-        return this.createSubnetwork == null ? Output.empty() : this.createSubnetwork;
+    public Output<Boolean> createSubnetwork() {
+        return this.createSubnetwork == null ? Codegen.empty() : this.createSubnetwork;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nodeIpv4CidrBlock")
       private final @Nullable Output<String> nodeIpv4CidrBlock;
 
-    public Output<String> getNodeIpv4CidrBlock() {
-        return this.nodeIpv4CidrBlock == null ? Output.empty() : this.nodeIpv4CidrBlock;
+    public Output<String> nodeIpv4CidrBlock() {
+        return this.nodeIpv4CidrBlock == null ? Codegen.empty() : this.nodeIpv4CidrBlock;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicesIpv4CidrBlock")
       private final @Nullable Output<String> servicesIpv4CidrBlock;
 
-    public Output<String> getServicesIpv4CidrBlock() {
-        return this.servicesIpv4CidrBlock == null ? Output.empty() : this.servicesIpv4CidrBlock;
+    public Output<String> servicesIpv4CidrBlock() {
+        return this.servicesIpv4CidrBlock == null ? Codegen.empty() : this.servicesIpv4CidrBlock;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicesSecondaryRangeName")
       private final @Nullable Output<String> servicesSecondaryRangeName;
 
-    public Output<String> getServicesSecondaryRangeName() {
-        return this.servicesSecondaryRangeName == null ? Output.empty() : this.servicesSecondaryRangeName;
+    public Output<String> servicesSecondaryRangeName() {
+        return this.servicesSecondaryRangeName == null ? Codegen.empty() : this.servicesSecondaryRangeName;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subnetworkName")
       private final @Nullable Output<String> subnetworkName;
 
-    public Output<String> getSubnetworkName() {
-        return this.subnetworkName == null ? Output.empty() : this.subnetworkName;
+    public Output<String> subnetworkName() {
+        return this.subnetworkName == null ? Codegen.empty() : this.subnetworkName;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tpuIpv4CidrBlock")
       private final @Nullable Output<String> tpuIpv4CidrBlock;
 
-    public Output<String> getTpuIpv4CidrBlock() {
-        return this.tpuIpv4CidrBlock == null ? Output.empty() : this.tpuIpv4CidrBlock;
+    public Output<String> tpuIpv4CidrBlock() {
+        return this.tpuIpv4CidrBlock == null ? Codegen.empty() : this.tpuIpv4CidrBlock;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="useIpAliases")
       private final @Nullable Output<Boolean> useIpAliases;
 
-    public Output<Boolean> getUseIpAliases() {
-        return this.useIpAliases == null ? Output.empty() : this.useIpAliases;
+    public Output<Boolean> useIpAliases() {
+        return this.useIpAliases == null ? Codegen.empty() : this.useIpAliases;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="useRoutes")
       private final @Nullable Output<Boolean> useRoutes;
 
-    public Output<Boolean> getUseRoutes() {
-        return this.useRoutes == null ? Output.empty() : this.useRoutes;
+    public Output<Boolean> useRoutes() {
+        return this.useRoutes == null ? Codegen.empty() : this.useRoutes;
     }
 
     public IPAllocationPolicyArgs(
@@ -153,16 +154,16 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private IPAllocationPolicyArgs() {
-        this.clusterIpv4CidrBlock = Output.empty();
-        this.clusterSecondaryRangeName = Output.empty();
-        this.createSubnetwork = Output.empty();
-        this.nodeIpv4CidrBlock = Output.empty();
-        this.servicesIpv4CidrBlock = Output.empty();
-        this.servicesSecondaryRangeName = Output.empty();
-        this.subnetworkName = Output.empty();
-        this.tpuIpv4CidrBlock = Output.empty();
-        this.useIpAliases = Output.empty();
-        this.useRoutes = Output.empty();
+        this.clusterIpv4CidrBlock = Codegen.empty();
+        this.clusterSecondaryRangeName = Codegen.empty();
+        this.createSubnetwork = Codegen.empty();
+        this.nodeIpv4CidrBlock = Codegen.empty();
+        this.servicesIpv4CidrBlock = Codegen.empty();
+        this.servicesSecondaryRangeName = Codegen.empty();
+        this.subnetworkName = Codegen.empty();
+        this.tpuIpv4CidrBlock = Codegen.empty();
+        this.useIpAliases = Codegen.empty();
+        this.useRoutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = Output.ofNullable(clusterIpv4CidrBlock);
+            this.clusterIpv4CidrBlock = Codegen.ofNullable(clusterIpv4CidrBlock);
             return this;
         }
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
@@ -216,7 +217,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = Output.ofNullable(clusterSecondaryRangeName);
+            this.clusterSecondaryRangeName = Codegen.ofNullable(clusterSecondaryRangeName);
             return this;
         }
         public Builder createSubnetwork(@Nullable Output<Boolean> createSubnetwork) {
@@ -224,7 +225,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createSubnetwork(@Nullable Boolean createSubnetwork) {
-            this.createSubnetwork = Output.ofNullable(createSubnetwork);
+            this.createSubnetwork = Codegen.ofNullable(createSubnetwork);
             return this;
         }
         public Builder nodeIpv4CidrBlock(@Nullable Output<String> nodeIpv4CidrBlock) {
@@ -232,7 +233,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder nodeIpv4CidrBlock(@Nullable String nodeIpv4CidrBlock) {
-            this.nodeIpv4CidrBlock = Output.ofNullable(nodeIpv4CidrBlock);
+            this.nodeIpv4CidrBlock = Codegen.ofNullable(nodeIpv4CidrBlock);
             return this;
         }
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
@@ -240,7 +241,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = Output.ofNullable(servicesIpv4CidrBlock);
+            this.servicesIpv4CidrBlock = Codegen.ofNullable(servicesIpv4CidrBlock);
             return this;
         }
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
@@ -248,7 +249,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = Output.ofNullable(servicesSecondaryRangeName);
+            this.servicesSecondaryRangeName = Codegen.ofNullable(servicesSecondaryRangeName);
             return this;
         }
         public Builder subnetworkName(@Nullable Output<String> subnetworkName) {
@@ -256,7 +257,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder subnetworkName(@Nullable String subnetworkName) {
-            this.subnetworkName = Output.ofNullable(subnetworkName);
+            this.subnetworkName = Codegen.ofNullable(subnetworkName);
             return this;
         }
         public Builder tpuIpv4CidrBlock(@Nullable Output<String> tpuIpv4CidrBlock) {
@@ -264,7 +265,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tpuIpv4CidrBlock(@Nullable String tpuIpv4CidrBlock) {
-            this.tpuIpv4CidrBlock = Output.ofNullable(tpuIpv4CidrBlock);
+            this.tpuIpv4CidrBlock = Codegen.ofNullable(tpuIpv4CidrBlock);
             return this;
         }
         public Builder useIpAliases(@Nullable Output<Boolean> useIpAliases) {
@@ -272,7 +273,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder useIpAliases(@Nullable Boolean useIpAliases) {
-            this.useIpAliases = Output.ofNullable(useIpAliases);
+            this.useIpAliases = Codegen.ofNullable(useIpAliases);
             return this;
         }
         public Builder useRoutes(@Nullable Output<Boolean> useRoutes) {
@@ -280,7 +281,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder useRoutes(@Nullable Boolean useRoutes) {
-            this.useRoutes = Output.ofNullable(useRoutes);
+            this.useRoutes = Codegen.ofNullable(useRoutes);
             return this;
         }        public IPAllocationPolicyArgs build() {
             return new IPAllocationPolicyArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);

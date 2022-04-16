@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<String> container;
 
-    public Output<String> getContainer() {
-        return this.container == null ? Output.empty() : this.container;
+    public Output<String> container() {
+        return this.container == null ? Codegen.empty() : this.container;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystem")
       private final @Nullable Output<String> fileSystem;
 
-    public Output<String> getFileSystem() {
-        return this.fileSystem == null ? Output.empty() : this.fileSystem;
+    public Output<String> fileSystem() {
+        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileshare")
       private final @Nullable Output<String> fileshare;
 
-    public Output<String> getFileshare() {
-        return this.fileshare == null ? Output.empty() : this.fileshare;
+    public Output<String> fileshare() {
+        return this.fileshare == null ? Codegen.empty() : this.fileshare;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
-        return this.isDefault == null ? Output.empty() : this.isDefault;
+    public Output<Boolean> isDefault() {
+        return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="msiResourceId")
       private final @Nullable Output<String> msiResourceId;
 
-    public Output<String> getMsiResourceId() {
-        return this.msiResourceId == null ? Output.empty() : this.msiResourceId;
+    public Output<String> msiResourceId() {
+        return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="saskey")
       private final @Nullable Output<String> saskey;
 
-    public Output<String> getSaskey() {
-        return this.saskey == null ? Output.empty() : this.saskey;
+    public Output<String> saskey() {
+        return this.saskey == null ? Codegen.empty() : this.saskey;
     }
 
     public StorageAccountArgs(
@@ -140,15 +141,15 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.container = Output.empty();
-        this.fileSystem = Output.empty();
-        this.fileshare = Output.empty();
-        this.isDefault = Output.empty();
-        this.key = Output.empty();
-        this.msiResourceId = Output.empty();
-        this.name = Output.empty();
-        this.resourceId = Output.empty();
-        this.saskey = Output.empty();
+        this.container = Codegen.empty();
+        this.fileSystem = Codegen.empty();
+        this.fileshare = Codegen.empty();
+        this.isDefault = Codegen.empty();
+        this.key = Codegen.empty();
+        this.msiResourceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.saskey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder container(@Nullable String container) {
-            this.container = Output.ofNullable(container);
+            this.container = Codegen.ofNullable(container);
             return this;
         }
         public Builder fileSystem(@Nullable Output<String> fileSystem) {
@@ -200,7 +201,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystem(@Nullable String fileSystem) {
-            this.fileSystem = Output.ofNullable(fileSystem);
+            this.fileSystem = Codegen.ofNullable(fileSystem);
             return this;
         }
         public Builder fileshare(@Nullable Output<String> fileshare) {
@@ -208,7 +209,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileshare(@Nullable String fileshare) {
-            this.fileshare = Output.ofNullable(fileshare);
+            this.fileshare = Codegen.ofNullable(fileshare);
             return this;
         }
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
@@ -216,7 +217,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Output.ofNullable(isDefault);
+            this.isDefault = Codegen.ofNullable(isDefault);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -224,7 +225,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
@@ -232,7 +233,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = Output.ofNullable(msiResourceId);
+            this.msiResourceId = Codegen.ofNullable(msiResourceId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -240,7 +241,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -248,7 +249,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder saskey(@Nullable Output<String> saskey) {
@@ -256,7 +257,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder saskey(@Nullable String saskey) {
-            this.saskey = Output.ofNullable(saskey);
+            this.saskey = Codegen.ofNullable(saskey);
             return this;
         }        public StorageAccountArgs build() {
             return new StorageAccountArgs(container, fileSystem, fileshare, isDefault, key, msiResourceId, name, resourceId, saskey);

@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Description of the operation. May include HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Operation Name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +73,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
      * 
      */
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method;
     }
     /**
@@ -86,7 +87,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Operation Policies
      * 
      */
-    public Output</* @Nullable */ String> getPolicies() {
+    public Output</* @Nullable */ String> policies() {
         return this.policies;
     }
     /**
@@ -114,7 +115,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return An entity containing request details.
      * 
      */
-    public Output</* @Nullable */ RequestContractResponse> getRequest() {
+    public Output</* @Nullable */ RequestContractResponse> request() {
         return this.request;
     }
     /**
@@ -128,7 +129,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Array of Operation responses.
      * 
      */
-    public Output</* @Nullable */ List<ResponseContractResponse>> getResponses() {
+    public Output</* @Nullable */ List<ResponseContractResponse>> responses() {
         return this.responses;
     }
     /**
@@ -142,7 +143,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Collection of URL template parameters.
      * 
      */
-    public Output</* @Nullable */ List<ParameterContractResponse>> getTemplateParameters() {
+    public Output</* @Nullable */ List<ParameterContractResponse>> templateParameters() {
         return this.templateParameters;
     }
     /**
@@ -156,7 +157,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -170,7 +171,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @return Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
      * 
      */
-    public Output<String> getUrlTemplate() {
+    public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 
@@ -196,7 +197,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiOperation(String name, ApiOperationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiOperation", name, args == null ? ApiOperationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:ApiOperation", name, args == null ? ApiOperationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiOperation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

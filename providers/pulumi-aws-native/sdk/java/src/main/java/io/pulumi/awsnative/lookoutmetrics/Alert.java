@@ -9,6 +9,7 @@ import io.pulumi.awsnative.lookoutmetrics.outputs.AlertAction;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @return The action to be taken by the alert when an anomaly is detected.
      * 
      */
-    public Output<AlertAction> getAction() {
+    public Output<AlertAction> action() {
         return this.action;
     }
     /**
@@ -44,7 +45,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @return A description for the alert.
      * 
      */
-    public Output</* @Nullable */ String> getAlertDescription() {
+    public Output</* @Nullable */ String> alertDescription() {
         return this.alertDescription;
     }
     /**
@@ -58,7 +59,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @return The name of the alert. If not provided, a name is generated automatically.
      * 
      */
-    public Output</* @Nullable */ String> getAlertName() {
+    public Output</* @Nullable */ String> alertName() {
         return this.alertName;
     }
     /**
@@ -72,7 +73,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @return A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
      * 
      */
-    public Output<Integer> getAlertSensitivityThreshold() {
+    public Output<Integer> alertSensitivityThreshold() {
         return this.alertSensitivityThreshold;
     }
     /**
@@ -86,7 +87,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @return The Amazon resource name (ARN) of the Anomaly Detector to alert.
      * 
      */
-    public Output<String> getAnomalyDetectorArn() {
+    public Output<String> anomalyDetectorArn() {
         return this.anomalyDetectorArn;
     }
     /**
@@ -100,7 +101,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @return ARN assigned to the alert.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -126,7 +127,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Alert(String name, AlertArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lookoutmetrics:Alert", name, args == null ? AlertArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:lookoutmetrics:Alert", name, args == null ? AlertArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Alert(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
-    public Output<String> getAutoPlacement() {
-        return this.autoPlacement == null ? Output.empty() : this.autoPlacement;
+    public Output<String> autoPlacement() {
+        return this.autoPlacement == null ? Codegen.empty() : this.autoPlacement;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
 
@@ -44,8 +45,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
-    public Output<String> getHostRecovery() {
-        return this.hostRecovery == null ? Output.empty() : this.hostRecovery;
+    public Output<String> hostRecovery() {
+        return this.hostRecovery == null ? Codegen.empty() : this.hostRecovery;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceFamily")
       private final @Nullable Output<String> instanceFamily;
 
-    public Output<String> getInstanceFamily() {
-        return this.instanceFamily == null ? Output.empty() : this.instanceFamily;
+    public Output<String> instanceFamily() {
+        return this.instanceFamily == null ? Codegen.empty() : this.instanceFamily;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DedicatedHostArgs(
@@ -97,12 +98,12 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DedicatedHostArgs() {
-        this.autoPlacement = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.hostRecovery = Output.empty();
-        this.instanceFamily = Output.empty();
-        this.instanceType = Output.empty();
-        this.tags = Output.empty();
+        this.autoPlacement = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.hostRecovery = Codegen.empty();
+        this.instanceFamily = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoPlacement(@Nullable String autoPlacement) {
-            this.autoPlacement = Output.ofNullable(autoPlacement);
+            this.autoPlacement = Codegen.ofNullable(autoPlacement);
             return this;
         }
         public Builder availabilityZone(Output<String> availabilityZone) {
@@ -156,7 +157,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostRecovery(@Nullable String hostRecovery) {
-            this.hostRecovery = Output.ofNullable(hostRecovery);
+            this.hostRecovery = Codegen.ofNullable(hostRecovery);
             return this;
         }
         public Builder instanceFamily(@Nullable Output<String> instanceFamily) {
@@ -164,7 +165,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceFamily(@Nullable String instanceFamily) {
-            this.instanceFamily = Output.ofNullable(instanceFamily);
+            this.instanceFamily = Codegen.ofNullable(instanceFamily);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -172,7 +173,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -180,7 +181,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DedicatedHostArgs build() {
             return new DedicatedHostArgs(autoPlacement, availabilityZone, hostRecovery, instanceFamily, instanceType, tags);

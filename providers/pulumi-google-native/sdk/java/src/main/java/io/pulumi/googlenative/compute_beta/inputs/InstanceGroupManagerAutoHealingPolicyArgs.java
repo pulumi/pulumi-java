@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="healthCheck")
       private final @Nullable Output<String> healthCheck;
 
-    public Output<String> getHealthCheck() {
-        return this.healthCheck == null ? Output.empty() : this.healthCheck;
+    public Output<String> healthCheck() {
+        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="initialDelaySec")
       private final @Nullable Output<Integer> initialDelaySec;
 
-    public Output<Integer> getInitialDelaySec() {
-        return this.initialDelaySec == null ? Output.empty() : this.initialDelaySec;
+    public Output<Integer> initialDelaySec() {
+        return this.initialDelaySec == null ? Codegen.empty() : this.initialDelaySec;
     }
 
     public InstanceGroupManagerAutoHealingPolicyArgs(
@@ -45,8 +46,8 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     }
 
     private InstanceGroupManagerAutoHealingPolicyArgs() {
-        this.healthCheck = Output.empty();
-        this.initialDelaySec = Output.empty();
+        this.healthCheck = Codegen.empty();
+        this.initialDelaySec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             return this;
         }
         public Builder healthCheck(@Nullable String healthCheck) {
-            this.healthCheck = Output.ofNullable(healthCheck);
+            this.healthCheck = Codegen.ofNullable(healthCheck);
             return this;
         }
         public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
@@ -84,7 +85,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
             return this;
         }
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Output.ofNullable(initialDelaySec);
+            this.initialDelaySec = Codegen.ofNullable(initialDelaySec);
             return this;
         }        public InstanceGroupManagerAutoHealingPolicyArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyArgs(healthCheck, initialDelaySec);

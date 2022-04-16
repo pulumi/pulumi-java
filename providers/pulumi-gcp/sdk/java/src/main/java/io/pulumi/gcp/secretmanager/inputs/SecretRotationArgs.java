@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextRotationTime")
       private final @Nullable Output<String> nextRotationTime;
 
-    public Output<String> getNextRotationTime() {
-        return this.nextRotationTime == null ? Output.empty() : this.nextRotationTime;
+    public Output<String> nextRotationTime() {
+        return this.nextRotationTime == null ? Codegen.empty() : this.nextRotationTime;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotationPeriod")
       private final @Nullable Output<String> rotationPeriod;
 
-    public Output<String> getRotationPeriod() {
-        return this.rotationPeriod == null ? Output.empty() : this.rotationPeriod;
+    public Output<String> rotationPeriod() {
+        return this.rotationPeriod == null ? Codegen.empty() : this.rotationPeriod;
     }
 
     public SecretRotationArgs(
@@ -46,8 +47,8 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretRotationArgs() {
-        this.nextRotationTime = Output.empty();
-        this.rotationPeriod = Output.empty();
+        this.nextRotationTime = Codegen.empty();
+        this.rotationPeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextRotationTime(@Nullable String nextRotationTime) {
-            this.nextRotationTime = Output.ofNullable(nextRotationTime);
+            this.nextRotationTime = Codegen.ofNullable(nextRotationTime);
             return this;
         }
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
@@ -85,7 +86,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
-            this.rotationPeriod = Output.ofNullable(rotationPeriod);
+            this.rotationPeriod = Codegen.ofNullable(rotationPeriod);
             return this;
         }        public SecretRotationArgs build() {
             return new SecretRotationArgs(nextRotationTime, rotationPeriod);

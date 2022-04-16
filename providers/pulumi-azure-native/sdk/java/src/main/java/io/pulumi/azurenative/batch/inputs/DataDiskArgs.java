@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.enums.CachingType;
 import io.pulumi.azurenative.batch.enums.StorageAccountType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,14 +34,14 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caching")
       private final @Nullable Output<CachingType> caching;
 
-    public Output<CachingType> getCaching() {
-        return this.caching == null ? Output.empty() : this.caching;
+    public Output<CachingType> caching() {
+        return this.caching == null ? Codegen.empty() : this.caching;
     }
 
     @Import(name="diskSizeGB", required=true)
       private final Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB;
     }
 
@@ -51,7 +52,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -65,8 +66,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountType")
       private final @Nullable Output<StorageAccountType> storageAccountType;
 
-    public Output<StorageAccountType> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+    public Output<StorageAccountType> storageAccountType() {
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     public DataDiskArgs(
@@ -81,10 +82,10 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataDiskArgs() {
-        this.caching = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.lun = Output.empty();
-        this.storageAccountType = Output.empty();
+        this.caching = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.lun = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caching(@Nullable CachingType caching) {
-            this.caching = Output.ofNullable(caching);
+            this.caching = Codegen.ofNullable(caching);
             return this;
         }
         public Builder diskSizeGB(Output<Integer> diskSizeGB) {
@@ -142,7 +143,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountType(@Nullable StorageAccountType storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }        public DataDiskArgs build() {
             return new DataDiskArgs(caching, diskSizeGB, lun, storageAccountType);

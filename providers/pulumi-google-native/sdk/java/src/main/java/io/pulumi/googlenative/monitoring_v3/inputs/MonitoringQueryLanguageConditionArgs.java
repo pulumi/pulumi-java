@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<String> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
     @Import(name="trigger")
       private final @Nullable Output<TriggerArgs> trigger;
 
-    public Output<TriggerArgs> getTrigger() {
-        return this.trigger == null ? Output.empty() : this.trigger;
+    public Output<TriggerArgs> trigger() {
+        return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 
     public MonitoringQueryLanguageConditionArgs(
@@ -62,9 +63,9 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
     }
 
     private MonitoringQueryLanguageConditionArgs() {
-        this.duration = Output.empty();
-        this.query = Output.empty();
-        this.trigger = Output.empty();
+        this.duration = Codegen.empty();
+        this.query = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -104,7 +105,7 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder trigger(@Nullable Output<TriggerArgs> trigger) {
@@ -112,7 +113,7 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
             return this;
         }
         public Builder trigger(@Nullable TriggerArgs trigger) {
-            this.trigger = Output.ofNullable(trigger);
+            this.trigger = Codegen.ofNullable(trigger);
             return this;
         }        public MonitoringQueryLanguageConditionArgs build() {
             return new MonitoringQueryLanguageConditionArgs(duration, query, trigger);

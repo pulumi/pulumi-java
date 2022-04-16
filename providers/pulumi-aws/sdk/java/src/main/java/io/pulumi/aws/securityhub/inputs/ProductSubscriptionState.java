@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
     @Import(name="productArn")
       private final @Nullable Output<String> productArn;
 
-    public Output<String> getProductArn() {
-        return this.productArn == null ? Output.empty() : this.productArn;
+    public Output<String> productArn() {
+        return this.productArn == null ? Codegen.empty() : this.productArn;
     }
 
     public ProductSubscriptionState(
@@ -44,8 +45,8 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
     }
 
     private ProductSubscriptionState() {
-        this.arn = Output.empty();
-        this.productArn = Output.empty();
+        this.arn = Codegen.empty();
+        this.productArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder productArn(@Nullable Output<String> productArn) {
@@ -83,7 +84,7 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder productArn(@Nullable String productArn) {
-            this.productArn = Output.ofNullable(productArn);
+            this.productArn = Codegen.ofNullable(productArn);
             return this;
         }        public ProductSubscriptionState build() {
             return new ProductSubscriptionState(arn, productArn);

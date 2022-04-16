@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
     @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
-        return this.dxGatewayId == null ? Output.empty() : this.dxGatewayId;
+    public Output<String> dxGatewayId() {
+        return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
     @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 
@@ -55,8 +56,8 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
     @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
-        return this.vpnGatewayId == null ? Output.empty() : this.vpnGatewayId;
+    public Output<String> vpnGatewayId() {
+        return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
     }
 
     public HostedPrivateVirtualInterfaceAccepterArgs(
@@ -71,10 +72,10 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
     }
 
     private HostedPrivateVirtualInterfaceAccepterArgs() {
-        this.dxGatewayId = Output.empty();
-        this.tags = Output.empty();
-        this.virtualInterfaceId = Output.empty();
-        this.vpnGatewayId = Output.empty();
+        this.dxGatewayId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualInterfaceId = Codegen.empty();
+        this.vpnGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
             return this;
         }
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
-            this.dxGatewayId = Output.ofNullable(dxGatewayId);
+            this.dxGatewayId = Codegen.ofNullable(dxGatewayId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -116,7 +117,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {
@@ -132,7 +133,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
             return this;
         }
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
-            this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
+            this.vpnGatewayId = Codegen.ofNullable(vpnGatewayId);
             return this;
         }        public HostedPrivateVirtualInterfaceAccepterArgs build() {
             return new HostedPrivateVirtualInterfaceAccepterArgs(dxGatewayId, tags, virtualInterfaceId, vpnGatewayId);

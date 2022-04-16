@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.RecipeStepArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,22 +36,22 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="steps", required=true)
       private final Output<List<RecipeStepArgs>> steps;
 
-    public Output<List<RecipeStepArgs>> getSteps() {
+    public Output<List<RecipeStepArgs>> steps() {
         return this.steps;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<RecipeTagArgs>> tags;
 
-    public Output<List<RecipeTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<RecipeTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RecipeArgs(
@@ -65,10 +66,10 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecipeArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.steps = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.steps = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -110,7 +111,7 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder steps(Output<List<RecipeStepArgs>> steps) {
@@ -129,7 +130,7 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<RecipeTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RecipeTagArgs... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
     @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
-    public Output<Boolean> getAll() {
-        return this.all == null ? Output.empty() : this.all;
+    public Output<Boolean> all() {
+        return this.all == null ? Codegen.empty() : this.all;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public PolicyListPolicyDenyGetArgs(
@@ -46,8 +47,8 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
     }
 
     private PolicyListPolicyDenyGetArgs() {
-        this.all = Output.empty();
-        this.values = Output.empty();
+        this.all = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder all(@Nullable Boolean all) {
-            this.all = Output.ofNullable(all);
+            this.all = Codegen.ofNullable(all);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -85,7 +86,7 @@ public final class PolicyListPolicyDenyGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

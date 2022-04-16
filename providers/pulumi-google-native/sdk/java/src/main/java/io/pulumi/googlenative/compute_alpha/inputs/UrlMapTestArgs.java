@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.UrlMapTestHeaderArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendServiceWeight")
       private final @Nullable Output<Integer> backendServiceWeight;
 
-    public Output<Integer> getBackendServiceWeight() {
-        return this.backendServiceWeight == null ? Output.empty() : this.backendServiceWeight;
+    public Output<Integer> backendServiceWeight() {
+        return this.backendServiceWeight == null ? Codegen.empty() : this.backendServiceWeight;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expectedOutputUrl")
       private final @Nullable Output<String> expectedOutputUrl;
 
-    public Output<String> getExpectedOutputUrl() {
-        return this.expectedOutputUrl == null ? Output.empty() : this.expectedOutputUrl;
+    public Output<String> expectedOutputUrl() {
+        return this.expectedOutputUrl == null ? Codegen.empty() : this.expectedOutputUrl;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expectedRedirectResponseCode")
       private final @Nullable Output<Integer> expectedRedirectResponseCode;
 
-    public Output<Integer> getExpectedRedirectResponseCode() {
-        return this.expectedRedirectResponseCode == null ? Output.empty() : this.expectedRedirectResponseCode;
+    public Output<Integer> expectedRedirectResponseCode() {
+        return this.expectedRedirectResponseCode == null ? Codegen.empty() : this.expectedRedirectResponseCode;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<List<UrlMapTestHeaderArgs>> headers;
 
-    public Output<List<UrlMapTestHeaderArgs>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<UrlMapTestHeaderArgs>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+    public Output<String> host() {
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public UrlMapTestArgs(
@@ -129,14 +130,14 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UrlMapTestArgs() {
-        this.backendServiceWeight = Output.empty();
-        this.description = Output.empty();
-        this.expectedOutputUrl = Output.empty();
-        this.expectedRedirectResponseCode = Output.empty();
-        this.headers = Output.empty();
-        this.host = Output.empty();
-        this.path = Output.empty();
-        this.service = Output.empty();
+        this.backendServiceWeight = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expectedOutputUrl = Codegen.empty();
+        this.expectedRedirectResponseCode = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.host = Codegen.empty();
+        this.path = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backendServiceWeight(@Nullable Integer backendServiceWeight) {
-            this.backendServiceWeight = Output.ofNullable(backendServiceWeight);
+            this.backendServiceWeight = Codegen.ofNullable(backendServiceWeight);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -186,7 +187,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expectedOutputUrl(@Nullable Output<String> expectedOutputUrl) {
@@ -194,7 +195,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expectedOutputUrl(@Nullable String expectedOutputUrl) {
-            this.expectedOutputUrl = Output.ofNullable(expectedOutputUrl);
+            this.expectedOutputUrl = Codegen.ofNullable(expectedOutputUrl);
             return this;
         }
         public Builder expectedRedirectResponseCode(@Nullable Output<Integer> expectedRedirectResponseCode) {
@@ -202,7 +203,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expectedRedirectResponseCode(@Nullable Integer expectedRedirectResponseCode) {
-            this.expectedRedirectResponseCode = Output.ofNullable(expectedRedirectResponseCode);
+            this.expectedRedirectResponseCode = Codegen.ofNullable(expectedRedirectResponseCode);
             return this;
         }
         public Builder headers(@Nullable Output<List<UrlMapTestHeaderArgs>> headers) {
@@ -210,7 +211,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder headers(@Nullable List<UrlMapTestHeaderArgs> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(UrlMapTestHeaderArgs... headers) {
@@ -221,7 +222,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -229,7 +230,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -237,7 +238,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public UrlMapTestArgs build() {
             return new UrlMapTestArgs(backendServiceWeight, description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);

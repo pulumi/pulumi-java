@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.RouteFilterRuleType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="access", required=true)
       private final Output<Either<String,Access>> access;
 
-    public Output<Either<String,Access>> getAccess() {
+    public Output<Either<String,Access>> access() {
         return this.access;
     }
 
@@ -40,7 +41,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="communities", required=true)
       private final Output<List<String>> communities;
 
-    public Output<List<String>> getCommunities() {
+    public Output<List<String>> communities() {
         return this.communities;
     }
 
@@ -51,8 +52,8 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="routeFilterRuleType", required=true)
       private final Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
 
-    public Output<Either<String,RouteFilterRuleType>> getRouteFilterRuleType() {
+    public Output<Either<String,RouteFilterRuleType>> routeFilterRuleType() {
         return this.routeFilterRuleType;
     }
 
@@ -104,12 +105,12 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RouteFilterRuleArgs() {
-        this.access = Output.empty();
-        this.communities = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.routeFilterRuleType = Output.empty();
+        this.access = Codegen.empty();
+        this.communities = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.routeFilterRuleType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -174,7 +175,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -182,7 +183,7 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder routeFilterRuleType(Output<Either<String,RouteFilterRuleType>> routeFilterRuleType) {

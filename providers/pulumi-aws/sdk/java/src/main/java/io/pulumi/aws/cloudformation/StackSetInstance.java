@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudformation.outputs.StackSetInstanceDeploymentTargets;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -60,7 +61,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
      * 
      */
-    public Output</* @Nullable */ StackSetInstanceDeploymentTargets> getDeploymentTargets() {
+    public Output</* @Nullable */ StackSetInstanceDeploymentTargets> deploymentTargets() {
         return this.deploymentTargets;
     }
     /**
@@ -74,7 +75,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
      * 
      */
-    public Output<String> getOrganizationalUnitId() {
+    public Output<String> organizationalUnitId() {
         return this.organizationalUnitId;
     }
     /**
@@ -88,7 +89,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return Key-value map of input parameters to override from the StackSet for this Instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameterOverrides() {
+    public Output</* @Nullable */ Map<String,String>> parameterOverrides() {
         return this.parameterOverrides;
     }
     /**
@@ -102,7 +103,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return Target AWS Region to create a Stack based on the StackSet. Defaults to current region.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -116,7 +117,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRetainStack() {
+    public Output</* @Nullable */ Boolean> retainStack() {
         return this.retainStack;
     }
     /**
@@ -130,7 +131,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return Stack identifier
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
     /**
@@ -144,7 +145,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @return Name of the StackSet.
      * 
      */
-    public Output<String> getStackSetName() {
+    public Output<String> stackSetName() {
         return this.stackSetName;
     }
 
@@ -170,7 +171,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StackSetInstance(String name, StackSetInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudformation/stackSetInstance:StackSetInstance", name, args == null ? StackSetInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudformation/stackSetInstance:StackSetInstance", name, args == null ? StackSetInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StackSetInstance(String name, Output<String> id, @Nullable StackSetInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

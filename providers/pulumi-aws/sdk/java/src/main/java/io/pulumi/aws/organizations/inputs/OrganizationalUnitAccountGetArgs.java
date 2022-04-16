@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public OrganizationalUnitAccountGetArgs(
@@ -70,10 +71,10 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
     }
 
     private OrganizationalUnitAccountGetArgs() {
-        this.arn = Output.empty();
-        this.email = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.email = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -115,7 +116,7 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -123,7 +124,7 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -131,7 +132,7 @@ public final class OrganizationalUnitAccountGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public OrganizationalUnitAccountGetArgs build() {
             return new OrganizationalUnitAccountGetArgs(arn, email, id, name);

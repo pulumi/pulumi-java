@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class ResponseHeadersPolicyContentTypeOptionsArgs extends io.pulumi
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
@@ -25,7 +26,7 @@ public final class ResponseHeadersPolicyContentTypeOptionsArgs extends io.pulumi
     }
 
     private ResponseHeadersPolicyContentTypeOptionsArgs() {
-        this.override = Output.empty();
+        this.override = Codegen.empty();
     }
 
     public static Builder builder() {

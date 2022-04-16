@@ -26,7 +26,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     @Import(name="affinityType", required=true)
       private final String affinityType;
 
-    public String getAffinityType() {
+    public String affinityType() {
         return this.affinityType;
     }
 
@@ -37,7 +37,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -48,7 +48,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -59,7 +59,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -71,7 +71,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -82,7 +82,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     @Import(name="vmMembers", required=true)
       private final List<String> vmMembers;
 
-    public List<String> getVmMembers() {
+    public List<String> vmMembers() {
         return this.vmMembers;
     }
 

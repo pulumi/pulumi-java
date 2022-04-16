@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.inputs.BatchConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
     @Import(name="batchConfigurationName")
       private final @Nullable Output<String> batchConfigurationName;
 
-    public Output<String> getBatchConfigurationName() {
-        return this.batchConfigurationName == null ? Output.empty() : this.batchConfigurationName;
+    public Output<String> batchConfigurationName() {
+        return this.batchConfigurationName == null ? Codegen.empty() : this.batchConfigurationName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -45,8 +46,8 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
     @Import(name="properties", required=true)
       private final Output<BatchConfigurationPropertiesArgs> properties;
 
-    public Output<BatchConfigurationPropertiesArgs> getProperties() {
+    public Output<BatchConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -67,7 +68,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,8 +79,8 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountBatchConfigurationArgs(
@@ -98,12 +99,12 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
     }
 
     private IntegrationAccountBatchConfigurationArgs() {
-        this.batchConfigurationName = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.batchConfigurationName = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder batchConfigurationName(@Nullable String batchConfigurationName) {
-            this.batchConfigurationName = Output.ofNullable(batchConfigurationName);
+            this.batchConfigurationName = Codegen.ofNullable(batchConfigurationName);
             return this;
         }
         public Builder integrationAccountName(Output<String> integrationAccountName) {
@@ -157,7 +158,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<BatchConfigurationPropertiesArgs> properties) {
@@ -181,7 +182,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountBatchConfigurationArgs build() {
             return new IntegrationAccountBatchConfigurationArgs(batchConfigurationName, integrationAccountName, location, properties, resourceGroupName, tags);

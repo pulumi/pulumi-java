@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
     @Import(name="networkInterfaceConfigurations")
       private final @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? Output.empty() : this.networkInterfaceConfigurations;
+    public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations() {
+        return this.networkInterfaceConfigurations == null ? Codegen.empty() : this.networkInterfaceConfigurations;
     }
 
     public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
@@ -35,7 +36,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
     }
 
     private VirtualMachineScaleSetVMNetworkProfileConfigurationArgs() {
-        this.networkInterfaceConfigurations = Output.empty();
+        this.networkInterfaceConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
             return this;
         }
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
+            this.networkInterfaceConfigurations = Codegen.ofNullable(networkInterfaceConfigurations);
             return this;
         }
         public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationArgs... networkInterfaceConfigurations) {

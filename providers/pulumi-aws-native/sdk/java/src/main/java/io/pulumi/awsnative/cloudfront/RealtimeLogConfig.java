@@ -9,6 +9,7 @@ import io.pulumi.awsnative.cloudfront.outputs.RealtimeLogConfigEndPoint;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,31 +24,31 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="endPoints", type=List.class, parameters={RealtimeLogConfigEndPoint.class})
     private Output<List<RealtimeLogConfigEndPoint>> endPoints;
 
-    public Output<List<RealtimeLogConfigEndPoint>> getEndPoints() {
+    public Output<List<RealtimeLogConfigEndPoint>> endPoints() {
         return this.endPoints;
     }
     @Export(name="fields", type=List.class, parameters={String.class})
     private Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="samplingRate", type=Double.class, parameters={})
     private Output<Double> samplingRate;
 
-    public Output<Double> getSamplingRate() {
+    public Output<Double> samplingRate() {
         return this.samplingRate;
     }
 
@@ -73,7 +74,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RealtimeLogConfig(String name, RealtimeLogConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudfront:RealtimeLogConfig", name, args == null ? RealtimeLogConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudfront:RealtimeLogConfig", name, args == null ? RealtimeLogConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RealtimeLogConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

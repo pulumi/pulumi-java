@@ -5,6 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
     @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
 
@@ -36,7 +37,7 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
     @Import(name="subnetArn", required=true)
       private final Output<String> subnetArn;
 
-    public Output<String> getSubnetArn() {
+    public Output<String> subnetArn() {
         return this.subnetArn;
     }
 
@@ -48,8 +49,8 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
     }
 
     private LocationEFSEc2ConfigArgs() {
-        this.securityGroupArns = Output.empty();
-        this.subnetArn = Output.empty();
+        this.securityGroupArns = Codegen.empty();
+        this.subnetArn = Codegen.empty();
     }
 
     public static Builder builder() {

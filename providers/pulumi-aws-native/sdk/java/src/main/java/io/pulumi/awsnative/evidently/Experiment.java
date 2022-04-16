@@ -12,6 +12,7 @@ import io.pulumi.awsnative.evidently.outputs.ExperimentTreatmentObject;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,49 +27,49 @@ public class Experiment extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="metricGoals", type=List.class, parameters={ExperimentMetricGoalObject.class})
     private Output<List<ExperimentMetricGoalObject>> metricGoals;
 
-    public Output<List<ExperimentMetricGoalObject>> getMetricGoals() {
+    public Output<List<ExperimentMetricGoalObject>> metricGoals() {
         return this.metricGoals;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="onlineAbConfig", type=ExperimentOnlineAbConfigObject.class, parameters={})
     private Output<ExperimentOnlineAbConfigObject> onlineAbConfig;
 
-    public Output<ExperimentOnlineAbConfigObject> getOnlineAbConfig() {
+    public Output<ExperimentOnlineAbConfigObject> onlineAbConfig() {
         return this.onlineAbConfig;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="randomizationSalt", type=String.class, parameters={})
     private Output</* @Nullable */ String> randomizationSalt;
 
-    public Output</* @Nullable */ String> getRandomizationSalt() {
+    public Output</* @Nullable */ String> randomizationSalt() {
         return this.randomizationSalt;
     }
     @Export(name="samplingRate", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> samplingRate;
 
-    public Output</* @Nullable */ Integer> getSamplingRate() {
+    public Output</* @Nullable */ Integer> samplingRate() {
         return this.samplingRate;
     }
     /**
@@ -82,13 +83,13 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ExperimentTag>> getTags() {
+    public Output</* @Nullable */ List<ExperimentTag>> tags() {
         return this.tags;
     }
     @Export(name="treatments", type=List.class, parameters={ExperimentTreatmentObject.class})
     private Output<List<ExperimentTreatmentObject>> treatments;
 
-    public Output<List<ExperimentTreatmentObject>> getTreatments() {
+    public Output<List<ExperimentTreatmentObject>> treatments() {
         return this.treatments;
     }
 
@@ -114,7 +115,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Experiment(String name, ExperimentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:evidently:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:evidently:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Experiment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

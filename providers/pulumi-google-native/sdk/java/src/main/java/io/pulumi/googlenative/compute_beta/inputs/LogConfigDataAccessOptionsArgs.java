@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.LogConfigDataAccessOptionsLogMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
     @Import(name="logMode")
       private final @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
 
-    public Output<LogConfigDataAccessOptionsLogMode> getLogMode() {
-        return this.logMode == null ? Output.empty() : this.logMode;
+    public Output<LogConfigDataAccessOptionsLogMode> logMode() {
+        return this.logMode == null ? Codegen.empty() : this.logMode;
     }
 
     public LogConfigDataAccessOptionsArgs(@Nullable Output<LogConfigDataAccessOptionsLogMode> logMode) {
@@ -34,7 +35,7 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
     }
 
     private LogConfigDataAccessOptionsArgs() {
-        this.logMode = Output.empty();
+        this.logMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder logMode(@Nullable LogConfigDataAccessOptionsLogMode logMode) {
-            this.logMode = Output.ofNullable(logMode);
+            this.logMode = Codegen.ofNullable(logMode);
             return this;
         }        public LogConfigDataAccessOptionsArgs build() {
             return new LogConfigDataAccessOptionsArgs(logMode);

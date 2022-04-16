@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +24,7 @@ public final class SubnetworkSecondaryIpRangeArgs extends io.pulumi.resources.Re
     @Import(name="ipCidrRange", required=true)
       private final Output<String> ipCidrRange;
 
-    public Output<String> getIpCidrRange() {
+    public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -37,7 +38,7 @@ public final class SubnetworkSecondaryIpRangeArgs extends io.pulumi.resources.Re
     @Import(name="rangeName", required=true)
       private final Output<String> rangeName;
 
-    public Output<String> getRangeName() {
+    public Output<String> rangeName() {
         return this.rangeName;
     }
 
@@ -49,8 +50,8 @@ public final class SubnetworkSecondaryIpRangeArgs extends io.pulumi.resources.Re
     }
 
     private SubnetworkSecondaryIpRangeArgs() {
-        this.ipCidrRange = Output.empty();
-        this.rangeName = Output.empty();
+        this.ipCidrRange = Codegen.empty();
+        this.rangeName = Codegen.empty();
     }
 
     public static Builder builder() {

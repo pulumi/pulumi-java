@@ -8,6 +8,7 @@ import io.pulumi.azurenative.labservices.inputs.ReferenceVmArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="galleryImageResourceId")
       private final @Nullable Output<String> galleryImageResourceId;
 
-    public Output<String> getGalleryImageResourceId() {
-        return this.galleryImageResourceId == null ? Output.empty() : this.galleryImageResourceId;
+    public Output<String> galleryImageResourceId() {
+        return this.galleryImageResourceId == null ? Codegen.empty() : this.galleryImageResourceId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="referenceVm", required=true)
       private final Output<ReferenceVmArgs> referenceVm;
 
-    public Output<ReferenceVmArgs> getReferenceVm() {
+    public Output<ReferenceVmArgs> referenceVm() {
         return this.referenceVm;
     }
 
@@ -50,8 +51,8 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="size")
       private final @Nullable Output<Either<String,ManagedLabVmSize>> size;
 
-    public Output<Either<String,ManagedLabVmSize>> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<Either<String,ManagedLabVmSize>> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     public ResourceSettingsArgs(
@@ -64,9 +65,9 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceSettingsArgs() {
-        this.galleryImageResourceId = Output.empty();
-        this.referenceVm = Output.empty();
-        this.size = Output.empty();
+        this.galleryImageResourceId = Codegen.empty();
+        this.referenceVm = Codegen.empty();
+        this.size = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
-            this.galleryImageResourceId = Output.ofNullable(galleryImageResourceId);
+            this.galleryImageResourceId = Codegen.ofNullable(galleryImageResourceId);
             return this;
         }
         public Builder referenceVm(Output<ReferenceVmArgs> referenceVm) {
@@ -114,7 +115,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder size(@Nullable Either<String,ManagedLabVmSize> size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }        public ResourceSettingsArgs build() {
             return new ResourceSettingsArgs(galleryImageResourceId, referenceVm, size);

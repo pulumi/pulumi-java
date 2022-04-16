@@ -11,6 +11,7 @@ import io.pulumi.azurenative.network.inputs.HubArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="appliesToGroups")
       private final @Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups;
 
-    public Output<List<ConnectivityGroupItemArgs>> getAppliesToGroups() {
-        return this.appliesToGroups == null ? Output.empty() : this.appliesToGroups;
+    public Output<List<ConnectivityGroupItemArgs>> appliesToGroups() {
+        return this.appliesToGroups == null ? Codegen.empty() : this.appliesToGroups;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
-        return this.configurationName == null ? Output.empty() : this.configurationName;
+    public Output<String> configurationName() {
+        return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="connectivityTopology", required=true)
       private final Output<Either<String,ConnectivityTopology>> connectivityTopology;
 
-    public Output<Either<String,ConnectivityTopology>> getConnectivityTopology() {
+    public Output<Either<String,ConnectivityTopology>> connectivityTopology() {
         return this.connectivityTopology;
     }
 
@@ -61,8 +62,8 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="deleteExistingPeering")
       private final @Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering;
 
-    public Output<Either<String,DeleteExistingPeering>> getDeleteExistingPeering() {
-        return this.deleteExistingPeering == null ? Output.empty() : this.deleteExistingPeering;
+    public Output<Either<String,DeleteExistingPeering>> deleteExistingPeering() {
+        return this.deleteExistingPeering == null ? Codegen.empty() : this.deleteExistingPeering;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="hubs")
       private final @Nullable Output<List<HubArgs>> hubs;
 
-    public Output<List<HubArgs>> getHubs() {
-        return this.hubs == null ? Output.empty() : this.hubs;
+    public Output<List<HubArgs>> hubs() {
+        return this.hubs == null ? Codegen.empty() : this.hubs;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="isGlobal")
       private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
-    public Output<Either<String,IsGlobal>> getIsGlobal() {
-        return this.isGlobal == null ? Output.empty() : this.isGlobal;
+    public Output<Either<String,IsGlobal>> isGlobal() {
+        return this.isGlobal == null ? Codegen.empty() : this.isGlobal;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -127,7 +128,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -155,16 +156,16 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private ConnectivityConfigurationArgs() {
-        this.appliesToGroups = Output.empty();
-        this.configurationName = Output.empty();
-        this.connectivityTopology = Output.empty();
-        this.deleteExistingPeering = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.hubs = Output.empty();
-        this.isGlobal = Output.empty();
-        this.networkManagerName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.appliesToGroups = Codegen.empty();
+        this.configurationName = Codegen.empty();
+        this.connectivityTopology = Codegen.empty();
+        this.deleteExistingPeering = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hubs = Codegen.empty();
+        this.isGlobal = Codegen.empty();
+        this.networkManagerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemArgs> appliesToGroups) {
-            this.appliesToGroups = Output.ofNullable(appliesToGroups);
+            this.appliesToGroups = Codegen.ofNullable(appliesToGroups);
             return this;
         }
         public Builder appliesToGroups(ConnectivityGroupItemArgs... appliesToGroups) {
@@ -221,7 +222,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Output.ofNullable(configurationName);
+            this.configurationName = Codegen.ofNullable(configurationName);
             return this;
         }
         public Builder connectivityTopology(Output<Either<String,ConnectivityTopology>> connectivityTopology) {
@@ -237,7 +238,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder deleteExistingPeering(@Nullable Either<String,DeleteExistingPeering> deleteExistingPeering) {
-            this.deleteExistingPeering = Output.ofNullable(deleteExistingPeering);
+            this.deleteExistingPeering = Codegen.ofNullable(deleteExistingPeering);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -245,7 +246,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -253,7 +254,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hubs(@Nullable Output<List<HubArgs>> hubs) {
@@ -261,7 +262,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder hubs(@Nullable List<HubArgs> hubs) {
-            this.hubs = Output.ofNullable(hubs);
+            this.hubs = Codegen.ofNullable(hubs);
             return this;
         }
         public Builder hubs(HubArgs... hubs) {
@@ -272,7 +273,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
-            this.isGlobal = Output.ofNullable(isGlobal);
+            this.isGlobal = Codegen.ofNullable(isGlobal);
             return this;
         }
         public Builder networkManagerName(Output<String> networkManagerName) {

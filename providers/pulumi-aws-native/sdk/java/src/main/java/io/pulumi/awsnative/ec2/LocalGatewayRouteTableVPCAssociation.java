@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.LocalGatewayRouteTableVPCAssociationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @return The ID of the local gateway.
      * 
      */
-    public Output<String> getLocalGatewayId() {
+    public Output<String> localGatewayId() {
         return this.localGatewayId;
     }
     /**
@@ -44,7 +45,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @return The ID of the local gateway route table.
      * 
      */
-    public Output<String> getLocalGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
     /**
@@ -58,7 +59,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @return The ID of the association.
      * 
      */
-    public Output<String> getLocalGatewayRouteTableVpcAssociationId() {
+    public Output<String> localGatewayRouteTableVpcAssociationId() {
         return this.localGatewayRouteTableVpcAssociationId;
     }
     /**
@@ -72,7 +73,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @return The state of the association.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -86,7 +87,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @return The tags for the association.
      * 
      */
-    public Output</* @Nullable */ List<LocalGatewayRouteTableVPCAssociationTag>> getTags() {
+    public Output</* @Nullable */ List<LocalGatewayRouteTableVPCAssociationTag>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +101,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -126,7 +127,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public LocalGatewayRouteTableVPCAssociation(String name, LocalGatewayRouteTableVPCAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:LocalGatewayRouteTableVPCAssociation", name, args == null ? LocalGatewayRouteTableVPCAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:LocalGatewayRouteTableVPCAssociation", name, args == null ? LocalGatewayRouteTableVPCAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocalGatewayRouteTableVPCAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.HostedZoneDnsSecState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class HostedZoneDnsSec extends io.pulumi.resources.CustomResource {
      * @return Identifier of the Route 53 Hosted Zone.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -55,7 +56,7 @@ public class HostedZoneDnsSec extends io.pulumi.resources.CustomResource {
      * @return Hosted Zone signing status. Valid values: `SIGNING`, `NOT_SIGNING`. Defaults to `SIGNING`.
      * 
      */
-    public Output</* @Nullable */ String> getSigningStatus() {
+    public Output</* @Nullable */ String> signingStatus() {
         return this.signingStatus;
     }
 
@@ -81,7 +82,7 @@ public class HostedZoneDnsSec extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedZoneDnsSec(String name, HostedZoneDnsSecArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/hostedZoneDnsSec:HostedZoneDnsSec", name, args == null ? HostedZoneDnsSecArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/hostedZoneDnsSec:HostedZoneDnsSec", name, args == null ? HostedZoneDnsSecArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HostedZoneDnsSec(String name, Output<String> id, @Nullable HostedZoneDnsSecState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

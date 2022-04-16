@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> getArchiveUris() {
-        return this.archiveUris == null ? Output.empty() : this.archiveUris;
+    public Output<List<String>> archiveUris() {
+        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> getFileUris() {
-        return this.fileUris == null ? Output.empty() : this.fileUris;
+    public Output<List<String>> fileUris() {
+        return this.fileUris == null ? Codegen.empty() : this.fileUris;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mainRFileUri", required=true)
       private final Output<String> mainRFileUri;
 
-    public Output<String> getMainRFileUri() {
+    public Output<String> mainRFileUri() {
         return this.mainRFileUri;
     }
 
@@ -75,10 +76,10 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SparkRBatchArgs() {
-        this.archiveUris = Output.empty();
-        this.args = Output.empty();
-        this.fileUris = Output.empty();
-        this.mainRFileUri = Output.empty();
+        this.archiveUris = Codegen.empty();
+        this.args = Codegen.empty();
+        this.fileUris = Codegen.empty();
+        this.mainRFileUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Output.ofNullable(archiveUris);
+            this.archiveUris = Codegen.ofNullable(archiveUris);
             return this;
         }
         public Builder archiveUris(String... archiveUris) {
@@ -123,7 +124,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -134,7 +135,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Output.ofNullable(fileUris);
+            this.fileUris = Codegen.ofNullable(fileUris);
             return this;
         }
         public Builder fileUris(String... fileUris) {

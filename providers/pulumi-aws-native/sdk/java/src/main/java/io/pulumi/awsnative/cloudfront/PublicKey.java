@@ -9,6 +9,7 @@ import io.pulumi.awsnative.cloudfront.outputs.PublicKeyConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -21,13 +22,13 @@ public class PublicKey extends io.pulumi.resources.CustomResource {
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     @Export(name="publicKeyConfig", type=PublicKeyConfig.class, parameters={})
     private Output<PublicKeyConfig> publicKeyConfig;
 
-    public Output<PublicKeyConfig> getPublicKeyConfig() {
+    public Output<PublicKeyConfig> publicKeyConfig() {
         return this.publicKeyConfig;
     }
 
@@ -53,7 +54,7 @@ public class PublicKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicKey(String name, PublicKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudfront:PublicKey", name, args == null ? PublicKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudfront:PublicKey", name, args == null ? PublicKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublicKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

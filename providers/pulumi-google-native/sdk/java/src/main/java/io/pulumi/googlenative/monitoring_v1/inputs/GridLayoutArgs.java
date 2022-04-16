@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columns")
       private final @Nullable Output<String> columns;
 
-    public Output<String> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+    public Output<String> columns() {
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="widgets")
       private final @Nullable Output<List<WidgetArgs>> widgets;
 
-    public Output<List<WidgetArgs>> getWidgets() {
-        return this.widgets == null ? Output.empty() : this.widgets;
+    public Output<List<WidgetArgs>> widgets() {
+        return this.widgets == null ? Codegen.empty() : this.widgets;
     }
 
     public GridLayoutArgs(
@@ -50,8 +51,8 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GridLayoutArgs() {
-        this.columns = Output.empty();
-        this.widgets = Output.empty();
+        this.columns = Codegen.empty();
+        this.widgets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columns(@Nullable String columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
@@ -89,7 +90,7 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder widgets(@Nullable List<WidgetArgs> widgets) {
-            this.widgets = Output.ofNullable(widgets);
+            this.widgets = Codegen.ofNullable(widgets);
             return this;
         }
         public Builder widgets(WidgetArgs... widgets) {

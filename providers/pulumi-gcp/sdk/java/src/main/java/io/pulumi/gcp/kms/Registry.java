@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.RegistryArgs;
 import io.pulumi.gcp.kms.inputs.RegistryState;
@@ -36,7 +37,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return List of public key certificates to authenticate devices.
      * 
      */
-    public Output</* @Nullable */ List<RegistryCredential>> getCredentials() {
+    public Output</* @Nullable */ List<RegistryCredential>> credentials() {
         return this.credentials;
     }
     /**
@@ -50,7 +51,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return List of configurations for event notifications, such as PubSub topics to publish device events to.
      * 
      */
-    public Output<List<RegistryEventNotificationConfigItem>> getEventNotificationConfigs() {
+    public Output<List<RegistryEventNotificationConfigItem>> eventNotificationConfigs() {
         return this.eventNotificationConfigs;
     }
     /**
@@ -64,7 +65,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return Activate or deactivate HTTP.
      * 
      */
-    public Output<Map<String,Object>> getHttpConfig() {
+    public Output<Map<String,Object>> httpConfig() {
         return this.httpConfig;
     }
     /**
@@ -84,7 +85,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * "DEBUG"]
      * 
      */
-    public Output</* @Nullable */ String> getLogLevel() {
+    public Output</* @Nullable */ String> logLevel() {
         return this.logLevel;
     }
     /**
@@ -98,7 +99,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return Activate or deactivate MQTT.
      * 
      */
-    public Output<Map<String,Object>> getMqttConfig() {
+    public Output<Map<String,Object>> mqttConfig() {
         return this.mqttConfig;
     }
     /**
@@ -112,13 +113,13 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A unique name for the resource, required by device registry.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -132,7 +133,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return The region in which the created registry should reside. If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -146,7 +147,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A PubSub topic to publish device state updates.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getStateNotificationConfig() {
+    public Output</* @Nullable */ Map<String,Object>> stateNotificationConfig() {
         return this.stateNotificationConfig;
     }
 
@@ -172,7 +173,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Registry(String name, @Nullable RegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Registry(String name, Output<String> id, @Nullable RegistryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

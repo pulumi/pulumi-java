@@ -21,10 +21,10 @@ public final class JobStatisticOverride {
         this.statistic = statistic;
     }
 
-    public JobParameterMap getParameters() {
+    public JobParameterMap parameters() {
         return this.parameters;
     }
-    public String getStatistic() {
+    public String statistic() {
         return this.statistic;
     }
 

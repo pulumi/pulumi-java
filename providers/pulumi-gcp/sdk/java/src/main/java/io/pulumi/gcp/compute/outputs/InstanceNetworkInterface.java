@@ -137,7 +137,7 @@ public final class InstanceNetworkInterface {
      * This block can be repeated multiple times. Structure documented below.
      * 
     */
-    public List<InstanceNetworkInterfaceAccessConfig> getAccessConfigs() {
+    public List<InstanceNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs == null ? List.of() : this.accessConfigs;
     }
     /**
@@ -146,7 +146,7 @@ public final class InstanceNetworkInterface {
      * interfaces on subnet-mode networks. Structure documented below.
      * 
     */
-    public List<InstanceNetworkInterfaceAliasIpRange> getAliasIpRanges() {
+    public List<InstanceNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges == null ? List.of() : this.aliasIpRanges;
     }
     /**
@@ -155,7 +155,7 @@ public final class InstanceNetworkInterface {
      * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
      * 
     */
-    public List<InstanceNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
+    public List<InstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? List.of() : this.ipv6AccessConfigs;
     }
     /**
@@ -163,7 +163,7 @@ public final class InstanceNetworkInterface {
      * This field is always inherited from its subnetwork.
      * 
     */
-    public Optional<String> getIpv6AccessType() {
+    public Optional<String> ipv6AccessType() {
         return Optional.ofNullable(this.ipv6AccessType);
     }
     /**
@@ -171,7 +171,7 @@ public final class InstanceNetworkInterface {
      * Changing this forces a new resource to be created.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -180,7 +180,7 @@ public final class InstanceNetworkInterface {
      * be inferred from the subnetwork.
      * 
     */
-    public Optional<String> getNetwork() {
+    public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
@@ -188,28 +188,28 @@ public final class InstanceNetworkInterface {
      * empty, the address will be automatically assigned.
      * 
     */
-    public Optional<String> getNetworkIp() {
+    public Optional<String> networkIp() {
         return Optional.ofNullable(this.networkIp);
     }
     /**
      * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
      * 
     */
-    public Optional<String> getNicType() {
+    public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
      * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
     */
-    public Optional<Integer> getQueueCount() {
+    public Optional<Integer> queueCount() {
         return Optional.ofNullable(this.queueCount);
     }
     /**
      * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
      * 
     */
-    public Optional<String> getStackType() {
+    public Optional<String> stackType() {
         return Optional.ofNullable(this.stackType);
     }
     /**
@@ -222,7 +222,7 @@ public final class InstanceNetworkInterface {
      * in custom subnet mode, specifying the subnetwork is required.
      * 
     */
-    public Optional<String> getSubnetwork() {
+    public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
     /**
@@ -232,7 +232,7 @@ public final class InstanceNetworkInterface {
      * field is not provided, the provider project is used.
      * 
     */
-    public Optional<String> getSubnetworkProject() {
+    public Optional<String> subnetworkProject() {
         return Optional.ofNullable(this.subnetworkProject);
     }
 

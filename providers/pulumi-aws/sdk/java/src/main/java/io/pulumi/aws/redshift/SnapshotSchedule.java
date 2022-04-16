@@ -9,6 +9,7 @@ import io.pulumi.aws.redshift.inputs.SnapshotScheduleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +41,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Redshift Snapshot Schedule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @return The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
      * 
      */
-    public Output<List<String>> getDefinitions() {
+    public Output<List<String>> definitions() {
         return this.definitions;
     }
     /**
@@ -68,7 +69,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @return The description of the snapshot schedule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +83,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @return Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -96,7 +97,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @return The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier;
     }
     /**
@@ -112,7 +113,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    public Output<String> getIdentifierPrefix() {
+    public Output<String> identifierPrefix() {
         return this.identifierPrefix;
     }
     /**
@@ -126,7 +127,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +141,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -166,7 +167,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotSchedule(String name, SnapshotScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:redshift/snapshotSchedule:SnapshotSchedule", name, args == null ? SnapshotScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:redshift/snapshotSchedule:SnapshotSchedule", name, args == null ? SnapshotScheduleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SnapshotSchedule(String name, Output<String> id, @Nullable SnapshotScheduleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

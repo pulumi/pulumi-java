@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.CopyActivityLogSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.LogLocationSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="copyActivityLogSettings")
       private final @Nullable Output<CopyActivityLogSettingsArgs> copyActivityLogSettings;
 
-    public Output<CopyActivityLogSettingsArgs> getCopyActivityLogSettings() {
-        return this.copyActivityLogSettings == null ? Output.empty() : this.copyActivityLogSettings;
+    public Output<CopyActivityLogSettingsArgs> copyActivityLogSettings() {
+        return this.copyActivityLogSettings == null ? Codegen.empty() : this.copyActivityLogSettings;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableCopyActivityLog")
       private final @Nullable Output<Object> enableCopyActivityLog;
 
-    public Output<Object> getEnableCopyActivityLog() {
-        return this.enableCopyActivityLog == null ? Output.empty() : this.enableCopyActivityLog;
+    public Output<Object> enableCopyActivityLog() {
+        return this.enableCopyActivityLog == null ? Codegen.empty() : this.enableCopyActivityLog;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLocationSettings", required=true)
       private final Output<LogLocationSettingsArgs> logLocationSettings;
 
-    public Output<LogLocationSettingsArgs> getLogLocationSettings() {
+    public Output<LogLocationSettingsArgs> logLocationSettings() {
         return this.logLocationSettings;
     }
 
@@ -63,9 +64,9 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogSettingsArgs() {
-        this.copyActivityLogSettings = Output.empty();
-        this.enableCopyActivityLog = Output.empty();
-        this.logLocationSettings = Output.empty();
+        this.copyActivityLogSettings = Codegen.empty();
+        this.enableCopyActivityLog = Codegen.empty();
+        this.logLocationSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder copyActivityLogSettings(@Nullable CopyActivityLogSettingsArgs copyActivityLogSettings) {
-            this.copyActivityLogSettings = Output.ofNullable(copyActivityLogSettings);
+            this.copyActivityLogSettings = Codegen.ofNullable(copyActivityLogSettings);
             return this;
         }
         public Builder enableCopyActivityLog(@Nullable Output<Object> enableCopyActivityLog) {
@@ -105,7 +106,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
-            this.enableCopyActivityLog = Output.ofNullable(enableCopyActivityLog);
+            this.enableCopyActivityLog = Codegen.ofNullable(enableCopyActivityLog);
             return this;
         }
         public Builder logLocationSettings(Output<LogLocationSettingsArgs> logLocationSettings) {

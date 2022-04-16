@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class MetricStreamIncludeFilterGetArgs extends io.pulumi.resources.
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -29,7 +30,7 @@ public final class MetricStreamIncludeFilterGetArgs extends io.pulumi.resources.
     }
 
     private MetricStreamIncludeFilterGetArgs() {
-        this.namespace = Output.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {

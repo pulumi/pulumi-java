@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
 
@@ -36,8 +37,8 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entries")
       private final @Nullable Output<List<ManagedPrefixListEntryArgs>> entries;
 
-    public Output<List<ManagedPrefixListEntryArgs>> getEntries() {
-        return this.entries == null ? Output.empty() : this.entries;
+    public Output<List<ManagedPrefixListEntryArgs>> entries() {
+        return this.entries == null ? Codegen.empty() : this.entries;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxEntries", required=true)
       private final Output<Integer> maxEntries;
 
-    public Output<Integer> getMaxEntries() {
+    public Output<Integer> maxEntries() {
         return this.maxEntries;
     }
 
@@ -58,8 +59,8 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ManagedPrefixListArgs(
@@ -87,11 +88,11 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ManagedPrefixListArgs() {
-        this.addressFamily = Output.empty();
-        this.entries = Output.empty();
-        this.maxEntries = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.addressFamily = Codegen.empty();
+        this.entries = Codegen.empty();
+        this.maxEntries = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder entries(@Nullable List<ManagedPrefixListEntryArgs> entries) {
-            this.entries = Output.ofNullable(entries);
+            this.entries = Codegen.ofNullable(entries);
             return this;
         }
         public Builder entries(ManagedPrefixListEntryArgs... entries) {
@@ -154,7 +155,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -162,7 +163,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ManagedPrefixListArgs build() {
             return new ManagedPrefixListArgs(addressFamily, entries, maxEntries, name, tags);

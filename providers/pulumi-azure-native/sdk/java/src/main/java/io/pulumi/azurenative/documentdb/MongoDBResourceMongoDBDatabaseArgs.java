@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.MongoDBDatabaseResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,8 +36,8 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Output<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<CreateUpdateOptionsArgs> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     @Import(name="resource", required=true)
       private final Output<MongoDBDatabaseResourceArgs> resource;
 
-    public Output<MongoDBDatabaseResourceArgs> getResource() {
+    public Output<MongoDBDatabaseResourceArgs> resource() {
         return this.resource;
     }
 
@@ -79,7 +80,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,8 +91,8 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MongoDBResourceMongoDBDatabaseArgs(
@@ -112,13 +113,13 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
     }
 
     private MongoDBResourceMongoDBDatabaseArgs() {
-        this.accountName = Output.empty();
-        this.databaseName = Output.empty();
-        this.location = Output.empty();
-        this.options = Output.empty();
-        this.resource = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.options = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -174,7 +175,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
@@ -182,7 +183,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
             return this;
         }
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder resource(Output<MongoDBDatabaseResourceArgs> resource) {
@@ -206,7 +207,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends io.pulumi.resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public MongoDBResourceMongoDBDatabaseArgs build() {
             return new MongoDBResourceMongoDBDatabaseArgs(accountName, databaseName, location, options, resource, resourceGroupName, tags);

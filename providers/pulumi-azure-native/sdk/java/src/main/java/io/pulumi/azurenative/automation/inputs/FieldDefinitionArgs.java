@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
 
-    public Output<Boolean> getIsEncrypted() {
-        return this.isEncrypted == null ? Output.empty() : this.isEncrypted;
+    public Output<Boolean> isEncrypted() {
+        return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isOptional")
       private final @Nullable Output<Boolean> isOptional;
 
-    public Output<Boolean> getIsOptional() {
-        return this.isOptional == null ? Output.empty() : this.isOptional;
+    public Output<Boolean> isOptional() {
+        return this.isOptional == null ? Codegen.empty() : this.isOptional;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -62,9 +63,9 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FieldDefinitionArgs() {
-        this.isEncrypted = Output.empty();
-        this.isOptional = Output.empty();
-        this.type = Output.empty();
+        this.isEncrypted = Codegen.empty();
+        this.isOptional = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Output.ofNullable(isEncrypted);
+            this.isEncrypted = Codegen.ofNullable(isEncrypted);
             return this;
         }
         public Builder isOptional(@Nullable Output<Boolean> isOptional) {
@@ -104,7 +105,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder isOptional(@Nullable Boolean isOptional) {
-            this.isOptional = Output.ofNullable(isOptional);
+            this.isOptional = Codegen.ofNullable(isOptional);
             return this;
         }
         public Builder type(Output<String> type) {

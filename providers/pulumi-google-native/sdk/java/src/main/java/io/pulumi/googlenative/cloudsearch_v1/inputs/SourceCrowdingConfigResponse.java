@@ -23,7 +23,7 @@ public final class SourceCrowdingConfigResponse extends io.pulumi.resources.Invo
     @Import(name="numResults", required=true)
       private final Integer numResults;
 
-    public Integer getNumResults() {
+    public Integer numResults() {
         return this.numResults;
     }
 
@@ -34,7 +34,7 @@ public final class SourceCrowdingConfigResponse extends io.pulumi.resources.Invo
     @Import(name="numSuggestions", required=true)
       private final Integer numSuggestions;
 
-    public Integer getNumSuggestions() {
+    public Integer numSuggestions() {
         return this.numSuggestions;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,29 +18,29 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetAr
     @Import(name="externalIpv6")
       private final @Nullable Output<String> externalIpv6;
 
-    public Output<String> getExternalIpv6() {
-        return this.externalIpv6 == null ? Output.empty() : this.externalIpv6;
+    public Output<String> externalIpv6() {
+        return this.externalIpv6 == null ? Codegen.empty() : this.externalIpv6;
     }
 
     @Import(name="externalIpv6PrefixLength")
       private final @Nullable Output<String> externalIpv6PrefixLength;
 
-    public Output<String> getExternalIpv6PrefixLength() {
-        return this.externalIpv6PrefixLength == null ? Output.empty() : this.externalIpv6PrefixLength;
+    public Output<String> externalIpv6PrefixLength() {
+        return this.externalIpv6PrefixLength == null ? Codegen.empty() : this.externalIpv6PrefixLength;
     }
 
     @Import(name="networkTier", required=true)
       private final Output<String> networkTier;
 
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier;
     }
 
     @Import(name="publicPtrDomainName")
       private final @Nullable Output<String> publicPtrDomainName;
 
-    public Output<String> getPublicPtrDomainName() {
-        return this.publicPtrDomainName == null ? Output.empty() : this.publicPtrDomainName;
+    public Output<String> publicPtrDomainName() {
+        return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
     }
 
     public InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs(
@@ -54,10 +55,10 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetAr
     }
 
     private InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs() {
-        this.externalIpv6 = Output.empty();
-        this.externalIpv6PrefixLength = Output.empty();
-        this.networkTier = Output.empty();
-        this.publicPtrDomainName = Output.empty();
+        this.externalIpv6 = Codegen.empty();
+        this.externalIpv6PrefixLength = Codegen.empty();
+        this.networkTier = Codegen.empty();
+        this.publicPtrDomainName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetAr
             return this;
         }
         public Builder externalIpv6(@Nullable String externalIpv6) {
-            this.externalIpv6 = Output.ofNullable(externalIpv6);
+            this.externalIpv6 = Codegen.ofNullable(externalIpv6);
             return this;
         }
         public Builder externalIpv6PrefixLength(@Nullable Output<String> externalIpv6PrefixLength) {
@@ -99,7 +100,7 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetAr
             return this;
         }
         public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
-            this.externalIpv6PrefixLength = Output.ofNullable(externalIpv6PrefixLength);
+            this.externalIpv6PrefixLength = Codegen.ofNullable(externalIpv6PrefixLength);
             return this;
         }
         public Builder networkTier(Output<String> networkTier) {
@@ -115,7 +116,7 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetAr
             return this;
         }
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
-            this.publicPtrDomainName = Output.ofNullable(publicPtrDomainName);
+            this.publicPtrDomainName = Codegen.ofNullable(publicPtrDomainName);
             return this;
         }        public InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs build() {
             return new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);

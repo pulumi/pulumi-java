@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.B2BPartnerContentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="b2b")
       private final @Nullable Output<B2BPartnerContentArgs> b2b;
 
-    public Output<B2BPartnerContentArgs> getB2b() {
-        return this.b2b == null ? Output.empty() : this.b2b;
+    public Output<B2BPartnerContentArgs> b2b() {
+        return this.b2b == null ? Codegen.empty() : this.b2b;
     }
 
     public PartnerContentArgs(@Nullable Output<B2BPartnerContentArgs> b2b) {
@@ -34,7 +35,7 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PartnerContentArgs() {
-        this.b2b = Output.empty();
+        this.b2b = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder b2b(@Nullable B2BPartnerContentArgs b2b) {
-            this.b2b = Output.ofNullable(b2b);
+            this.b2b = Codegen.ofNullable(b2b);
             return this;
         }        public PartnerContentArgs build() {
             return new PartnerContentArgs(b2b);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.ProvisioningTemplateProvisioningHookArgs;
 import io.pulumi.awsnative.iot.inputs.ProvisioningTemplateTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,50 +22,50 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="preProvisioningHook")
       private final @Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
 
-    public Output<ProvisioningTemplateProvisioningHookArgs> getPreProvisioningHook() {
-        return this.preProvisioningHook == null ? Output.empty() : this.preProvisioningHook;
+    public Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook() {
+        return this.preProvisioningHook == null ? Codegen.empty() : this.preProvisioningHook;
     }
 
     @Import(name="provisioningRoleArn", required=true)
       private final Output<String> provisioningRoleArn;
 
-    public Output<String> getProvisioningRoleArn() {
+    public Output<String> provisioningRoleArn() {
         return this.provisioningRoleArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ProvisioningTemplateTagArgs>> tags;
 
-    public Output<List<ProvisioningTemplateTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ProvisioningTemplateTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="templateBody", required=true)
       private final Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody;
     }
 
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
-    public Output<String> getTemplateName() {
-        return this.templateName == null ? Output.empty() : this.templateName;
+    public Output<String> templateName() {
+        return this.templateName == null ? Codegen.empty() : this.templateName;
     }
 
     public ProvisioningTemplateArgs(
@@ -85,13 +86,13 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
     }
 
     private ProvisioningTemplateArgs() {
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.preProvisioningHook = Output.empty();
-        this.provisioningRoleArn = Output.empty();
-        this.tags = Output.empty();
-        this.templateBody = Output.empty();
-        this.templateName = Output.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.preProvisioningHook = Codegen.empty();
+        this.provisioningRoleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateBody = Codegen.empty();
+        this.templateName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -139,7 +140,7 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder preProvisioningHook(@Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook) {
@@ -147,7 +148,7 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder preProvisioningHook(@Nullable ProvisioningTemplateProvisioningHookArgs preProvisioningHook) {
-            this.preProvisioningHook = Output.ofNullable(preProvisioningHook);
+            this.preProvisioningHook = Codegen.ofNullable(preProvisioningHook);
             return this;
         }
         public Builder provisioningRoleArn(Output<String> provisioningRoleArn) {
@@ -163,7 +164,7 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable List<ProvisioningTemplateTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ProvisioningTemplateTagArgs... tags) {
@@ -182,7 +183,7 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = Output.ofNullable(templateName);
+            this.templateName = Codegen.ofNullable(templateName);
             return this;
         }        public ProvisioningTemplateArgs build() {
             return new ProvisioningTemplateArgs(description, enabled, preProvisioningHook, provisioningRoleArn, tags, templateBody, templateName);

@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
      * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
      * 
     */
-    public Integer getRecentSentencesCount() {
+    public Integer recentSentencesCount() {
         return this.recentSentencesCount;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingGetArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionBasicScalingGetArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentGetArgs;
@@ -33,8 +34,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="automaticScaling")
       private final @Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
 
-    public Output<StandardAppVersionAutomaticScalingGetArgs> getAutomaticScaling() {
-        return this.automaticScaling == null ? Output.empty() : this.automaticScaling;
+    public Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling() {
+        return this.automaticScaling == null ? Codegen.empty() : this.automaticScaling;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="basicScaling")
       private final @Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling;
 
-    public Output<StandardAppVersionBasicScalingGetArgs> getBasicScaling() {
-        return this.basicScaling == null ? Output.empty() : this.basicScaling;
+    public Output<StandardAppVersionBasicScalingGetArgs> basicScaling() {
+        return this.basicScaling == null ? Codegen.empty() : this.basicScaling;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="deleteServiceOnDestroy")
       private final @Nullable Output<Boolean> deleteServiceOnDestroy;
 
-    public Output<Boolean> getDeleteServiceOnDestroy() {
-        return this.deleteServiceOnDestroy == null ? Output.empty() : this.deleteServiceOnDestroy;
+    public Output<Boolean> deleteServiceOnDestroy() {
+        return this.deleteServiceOnDestroy == null ? Codegen.empty() : this.deleteServiceOnDestroy;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="deployment")
       private final @Nullable Output<StandardAppVersionDeploymentGetArgs> deployment;
 
-    public Output<StandardAppVersionDeploymentGetArgs> getDeployment() {
-        return this.deployment == null ? Output.empty() : this.deployment;
+    public Output<StandardAppVersionDeploymentGetArgs> deployment() {
+        return this.deployment == null ? Codegen.empty() : this.deployment;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="entrypoint")
       private final @Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint;
 
-    public Output<StandardAppVersionEntrypointGetArgs> getEntrypoint() {
-        return this.entrypoint == null ? Output.empty() : this.entrypoint;
+    public Output<StandardAppVersionEntrypointGetArgs> entrypoint() {
+        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
-    public Output<Map<String,String>> getEnvVariables() {
-        return this.envVariables == null ? Output.empty() : this.envVariables;
+    public Output<Map<String,String>> envVariables() {
+        return this.envVariables == null ? Codegen.empty() : this.envVariables;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="handlers")
       private final @Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers;
 
-    public Output<List<StandardAppVersionHandlerGetArgs>> getHandlers() {
-        return this.handlers == null ? Output.empty() : this.handlers;
+    public Output<List<StandardAppVersionHandlerGetArgs>> handlers() {
+        return this.handlers == null ? Codegen.empty() : this.handlers;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="inboundServices")
       private final @Nullable Output<List<String>> inboundServices;
 
-    public Output<List<String>> getInboundServices() {
-        return this.inboundServices == null ? Output.empty() : this.inboundServices;
+    public Output<List<String>> inboundServices() {
+        return this.inboundServices == null ? Codegen.empty() : this.inboundServices;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="instanceClass")
       private final @Nullable Output<String> instanceClass;
 
-    public Output<String> getInstanceClass() {
-        return this.instanceClass == null ? Output.empty() : this.instanceClass;
+    public Output<String> instanceClass() {
+        return this.instanceClass == null ? Codegen.empty() : this.instanceClass;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="libraries")
       private final @Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries;
 
-    public Output<List<StandardAppVersionLibraryGetArgs>> getLibraries() {
-        return this.libraries == null ? Output.empty() : this.libraries;
+    public Output<List<StandardAppVersionLibraryGetArgs>> libraries() {
+        return this.libraries == null ? Codegen.empty() : this.libraries;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="manualScaling")
       private final @Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling;
 
-    public Output<StandardAppVersionManualScalingGetArgs> getManualScaling() {
-        return this.manualScaling == null ? Output.empty() : this.manualScaling;
+    public Output<StandardAppVersionManualScalingGetArgs> manualScaling() {
+        return this.manualScaling == null ? Codegen.empty() : this.manualScaling;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -176,8 +177,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="noopOnDestroy")
       private final @Nullable Output<Boolean> noopOnDestroy;
 
-    public Output<Boolean> getNoopOnDestroy() {
-        return this.noopOnDestroy == null ? Output.empty() : this.noopOnDestroy;
+    public Output<Boolean> noopOnDestroy() {
+        return this.noopOnDestroy == null ? Codegen.empty() : this.noopOnDestroy;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
-    public Output<String> getRuntime() {
-        return this.runtime == null ? Output.empty() : this.runtime;
+    public Output<String> runtime() {
+        return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
     /**
@@ -212,8 +213,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="runtimeApiVersion")
       private final @Nullable Output<String> runtimeApiVersion;
 
-    public Output<String> getRuntimeApiVersion() {
-        return this.runtimeApiVersion == null ? Output.empty() : this.runtimeApiVersion;
+    public Output<String> runtimeApiVersion() {
+        return this.runtimeApiVersion == null ? Codegen.empty() : this.runtimeApiVersion;
     }
 
     /**
@@ -223,8 +224,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -234,8 +235,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="threadsafe")
       private final @Nullable Output<Boolean> threadsafe;
 
-    public Output<Boolean> getThreadsafe() {
-        return this.threadsafe == null ? Output.empty() : this.threadsafe;
+    public Output<Boolean> threadsafe() {
+        return this.threadsafe == null ? Codegen.empty() : this.threadsafe;
     }
 
     /**
@@ -245,8 +246,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
-        return this.versionId == null ? Output.empty() : this.versionId;
+    public Output<String> versionId() {
+        return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
     /**
@@ -257,8 +258,8 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     @Import(name="vpcAccessConnector")
       private final @Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
 
-    public Output<StandardAppVersionVpcAccessConnectorGetArgs> getVpcAccessConnector() {
-        return this.vpcAccessConnector == null ? Output.empty() : this.vpcAccessConnector;
+    public Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector() {
+        return this.vpcAccessConnector == null ? Codegen.empty() : this.vpcAccessConnector;
     }
 
     public StandardAppVersionState(
@@ -305,26 +306,26 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     }
 
     private StandardAppVersionState() {
-        this.automaticScaling = Output.empty();
-        this.basicScaling = Output.empty();
-        this.deleteServiceOnDestroy = Output.empty();
-        this.deployment = Output.empty();
-        this.entrypoint = Output.empty();
-        this.envVariables = Output.empty();
-        this.handlers = Output.empty();
-        this.inboundServices = Output.empty();
-        this.instanceClass = Output.empty();
-        this.libraries = Output.empty();
-        this.manualScaling = Output.empty();
-        this.name = Output.empty();
-        this.noopOnDestroy = Output.empty();
-        this.project = Output.empty();
-        this.runtime = Output.empty();
-        this.runtimeApiVersion = Output.empty();
-        this.service = Output.empty();
-        this.threadsafe = Output.empty();
-        this.versionId = Output.empty();
-        this.vpcAccessConnector = Output.empty();
+        this.automaticScaling = Codegen.empty();
+        this.basicScaling = Codegen.empty();
+        this.deleteServiceOnDestroy = Codegen.empty();
+        this.deployment = Codegen.empty();
+        this.entrypoint = Codegen.empty();
+        this.envVariables = Codegen.empty();
+        this.handlers = Codegen.empty();
+        this.inboundServices = Codegen.empty();
+        this.instanceClass = Codegen.empty();
+        this.libraries = Codegen.empty();
+        this.manualScaling = Codegen.empty();
+        this.name = Codegen.empty();
+        this.noopOnDestroy = Codegen.empty();
+        this.project = Codegen.empty();
+        this.runtime = Codegen.empty();
+        this.runtimeApiVersion = Codegen.empty();
+        this.service = Codegen.empty();
+        this.threadsafe = Codegen.empty();
+        this.versionId = Codegen.empty();
+        this.vpcAccessConnector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -390,7 +391,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder automaticScaling(@Nullable StandardAppVersionAutomaticScalingGetArgs automaticScaling) {
-            this.automaticScaling = Output.ofNullable(automaticScaling);
+            this.automaticScaling = Codegen.ofNullable(automaticScaling);
             return this;
         }
         public Builder basicScaling(@Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling) {
@@ -398,7 +399,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder basicScaling(@Nullable StandardAppVersionBasicScalingGetArgs basicScaling) {
-            this.basicScaling = Output.ofNullable(basicScaling);
+            this.basicScaling = Codegen.ofNullable(basicScaling);
             return this;
         }
         public Builder deleteServiceOnDestroy(@Nullable Output<Boolean> deleteServiceOnDestroy) {
@@ -406,7 +407,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder deleteServiceOnDestroy(@Nullable Boolean deleteServiceOnDestroy) {
-            this.deleteServiceOnDestroy = Output.ofNullable(deleteServiceOnDestroy);
+            this.deleteServiceOnDestroy = Codegen.ofNullable(deleteServiceOnDestroy);
             return this;
         }
         public Builder deployment(@Nullable Output<StandardAppVersionDeploymentGetArgs> deployment) {
@@ -414,7 +415,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder deployment(@Nullable StandardAppVersionDeploymentGetArgs deployment) {
-            this.deployment = Output.ofNullable(deployment);
+            this.deployment = Codegen.ofNullable(deployment);
             return this;
         }
         public Builder entrypoint(@Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint) {
@@ -422,7 +423,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder entrypoint(@Nullable StandardAppVersionEntrypointGetArgs entrypoint) {
-            this.entrypoint = Output.ofNullable(entrypoint);
+            this.entrypoint = Codegen.ofNullable(entrypoint);
             return this;
         }
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
@@ -430,7 +431,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
-            this.envVariables = Output.ofNullable(envVariables);
+            this.envVariables = Codegen.ofNullable(envVariables);
             return this;
         }
         public Builder handlers(@Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers) {
@@ -438,7 +439,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder handlers(@Nullable List<StandardAppVersionHandlerGetArgs> handlers) {
-            this.handlers = Output.ofNullable(handlers);
+            this.handlers = Codegen.ofNullable(handlers);
             return this;
         }
         public Builder handlers(StandardAppVersionHandlerGetArgs... handlers) {
@@ -449,7 +450,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder inboundServices(@Nullable List<String> inboundServices) {
-            this.inboundServices = Output.ofNullable(inboundServices);
+            this.inboundServices = Codegen.ofNullable(inboundServices);
             return this;
         }
         public Builder inboundServices(String... inboundServices) {
@@ -460,7 +461,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = Output.ofNullable(instanceClass);
+            this.instanceClass = Codegen.ofNullable(instanceClass);
             return this;
         }
         public Builder libraries(@Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries) {
@@ -468,7 +469,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder libraries(@Nullable List<StandardAppVersionLibraryGetArgs> libraries) {
-            this.libraries = Output.ofNullable(libraries);
+            this.libraries = Codegen.ofNullable(libraries);
             return this;
         }
         public Builder libraries(StandardAppVersionLibraryGetArgs... libraries) {
@@ -479,7 +480,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder manualScaling(@Nullable StandardAppVersionManualScalingGetArgs manualScaling) {
-            this.manualScaling = Output.ofNullable(manualScaling);
+            this.manualScaling = Codegen.ofNullable(manualScaling);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -487,7 +488,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder noopOnDestroy(@Nullable Output<Boolean> noopOnDestroy) {
@@ -495,7 +496,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder noopOnDestroy(@Nullable Boolean noopOnDestroy) {
-            this.noopOnDestroy = Output.ofNullable(noopOnDestroy);
+            this.noopOnDestroy = Codegen.ofNullable(noopOnDestroy);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -503,7 +504,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder runtime(@Nullable Output<String> runtime) {
@@ -511,7 +512,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Output.ofNullable(runtime);
+            this.runtime = Codegen.ofNullable(runtime);
             return this;
         }
         public Builder runtimeApiVersion(@Nullable Output<String> runtimeApiVersion) {
@@ -519,7 +520,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
-            this.runtimeApiVersion = Output.ofNullable(runtimeApiVersion);
+            this.runtimeApiVersion = Codegen.ofNullable(runtimeApiVersion);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -527,7 +528,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder threadsafe(@Nullable Output<Boolean> threadsafe) {
@@ -535,7 +536,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder threadsafe(@Nullable Boolean threadsafe) {
-            this.threadsafe = Output.ofNullable(threadsafe);
+            this.threadsafe = Codegen.ofNullable(threadsafe);
             return this;
         }
         public Builder versionId(@Nullable Output<String> versionId) {
@@ -543,7 +544,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Output.ofNullable(versionId);
+            this.versionId = Codegen.ofNullable(versionId);
             return this;
         }
         public Builder vpcAccessConnector(@Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector) {
@@ -551,7 +552,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder vpcAccessConnector(@Nullable StandardAppVersionVpcAccessConnectorGetArgs vpcAccessConnector) {
-            this.vpcAccessConnector = Output.ofNullable(vpcAccessConnector);
+            this.vpcAccessConnector = Codegen.ofNullable(vpcAccessConnector);
             return this;
         }        public StandardAppVersionState build() {
             return new StandardAppVersionState(automaticScaling, basicScaling, deleteServiceOnDestroy, deployment, entrypoint, envVariables, handlers, inboundServices, instanceClass, libraries, manualScaling, name, noopOnDestroy, project, runtime, runtimeApiVersion, service, threadsafe, versionId, vpcAccessConnector);

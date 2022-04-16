@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+    public Output<String> groupName() {
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
     @Import(name="streamName")
       private final @Nullable Output<String> streamName;
 
-    public Output<String> getStreamName() {
-        return this.streamName == null ? Output.empty() : this.streamName;
+    public Output<String> streamName() {
+        return this.streamName == null ? Codegen.empty() : this.streamName;
     }
 
     public ProjectLogsConfigCloudwatchLogsArgs(
@@ -57,9 +58,9 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
     }
 
     private ProjectLogsConfigCloudwatchLogsArgs() {
-        this.groupName = Output.empty();
-        this.status = Output.empty();
-        this.streamName = Output.empty();
+        this.groupName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.streamName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -99,7 +100,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder streamName(@Nullable Output<String> streamName) {
@@ -107,7 +108,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder streamName(@Nullable String streamName) {
-            this.streamName = Output.ofNullable(streamName);
+            this.streamName = Codegen.ofNullable(streamName);
             return this;
         }        public ProjectLogsConfigCloudwatchLogsArgs build() {
             return new ProjectLogsConfigCloudwatchLogsArgs(groupName, status, streamName);

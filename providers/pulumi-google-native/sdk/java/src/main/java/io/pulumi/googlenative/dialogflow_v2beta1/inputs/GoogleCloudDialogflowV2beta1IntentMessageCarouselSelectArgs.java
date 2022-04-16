@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs e
     @Import(name="items", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> getItems() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items() {
         return this.items;
     }
 
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs e
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {

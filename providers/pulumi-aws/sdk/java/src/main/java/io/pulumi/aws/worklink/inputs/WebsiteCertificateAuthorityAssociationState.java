@@ -5,6 +5,7 @@ package io.pulumi.aws.worklink.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<String> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     @Import(name="fleetArn")
       private final @Nullable Output<String> fleetArn;
 
-    public Output<String> getFleetArn() {
-        return this.fleetArn == null ? Output.empty() : this.fleetArn;
+    public Output<String> fleetArn() {
+        return this.fleetArn == null ? Codegen.empty() : this.fleetArn;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     @Import(name="websiteCaId")
       private final @Nullable Output<String> websiteCaId;
 
-    public Output<String> getWebsiteCaId() {
-        return this.websiteCaId == null ? Output.empty() : this.websiteCaId;
+    public Output<String> websiteCaId() {
+        return this.websiteCaId == null ? Codegen.empty() : this.websiteCaId;
     }
 
     public WebsiteCertificateAuthorityAssociationState(
@@ -70,10 +71,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     }
 
     private WebsiteCertificateAuthorityAssociationState() {
-        this.certificate = Output.empty();
-        this.displayName = Output.empty();
-        this.fleetArn = Output.empty();
-        this.websiteCaId = Output.empty();
+        this.certificate = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.fleetArn = Codegen.empty();
+        this.websiteCaId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -115,7 +116,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder fleetArn(@Nullable Output<String> fleetArn) {
@@ -123,7 +124,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
             return this;
         }
         public Builder fleetArn(@Nullable String fleetArn) {
-            this.fleetArn = Output.ofNullable(fleetArn);
+            this.fleetArn = Codegen.ofNullable(fleetArn);
             return this;
         }
         public Builder websiteCaId(@Nullable Output<String> websiteCaId) {
@@ -131,7 +132,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
             return this;
         }
         public Builder websiteCaId(@Nullable String websiteCaId) {
-            this.websiteCaId = Output.ofNullable(websiteCaId);
+            this.websiteCaId = Codegen.ofNullable(websiteCaId);
             return this;
         }        public WebsiteCertificateAuthorityAssociationState build() {
             return new WebsiteCertificateAuthorityAssociationState(certificate, displayName, fleetArn, websiteCaId);

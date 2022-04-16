@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service OEM AAD domain
      * 
      */
-    public Output</* @Nullable */ String> getAdminDomainName() {
+    public Output</* @Nullable */ String> adminDomainName() {
         return this.adminDomainName;
     }
     /**
@@ -57,7 +58,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service ODM AAD domain
      * 
      */
-    public Output</* @Nullable */ String> getBillingDomainName() {
+    public Output</* @Nullable */ String> billingDomainName() {
         return this.billingDomainName;
     }
     /**
@@ -71,7 +72,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -85,7 +86,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -99,7 +100,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service notes.
      * 
      */
-    public Output</* @Nullable */ String> getNotes() {
+    public Output</* @Nullable */ String> notes() {
         return this.notes;
     }
     /**
@@ -127,7 +128,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service device allocation,
      * 
      */
-    public Output</* @Nullable */ Double> getQuantity() {
+    public Output</* @Nullable */ Double> quantity() {
         return this.quantity;
     }
     /**
@@ -141,7 +142,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service start date,
      * 
      */
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate;
     }
     /**
@@ -155,7 +156,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -195,7 +196,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:windowsiot:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:windowsiot:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

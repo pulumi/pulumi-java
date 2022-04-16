@@ -12,6 +12,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigTrackingConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigUplinkEchoConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,50 +24,50 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="antennaDownlinkConfig")
       private final @Nullable Output<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig;
 
-    public Output<ConfigAntennaDownlinkConfigArgs> getAntennaDownlinkConfig() {
-        return this.antennaDownlinkConfig == null ? Output.empty() : this.antennaDownlinkConfig;
+    public Output<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig() {
+        return this.antennaDownlinkConfig == null ? Codegen.empty() : this.antennaDownlinkConfig;
     }
 
     @Import(name="antennaDownlinkDemodDecodeConfig")
       private final @Nullable Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig;
 
-    public Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> getAntennaDownlinkDemodDecodeConfig() {
-        return this.antennaDownlinkDemodDecodeConfig == null ? Output.empty() : this.antennaDownlinkDemodDecodeConfig;
+    public Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig() {
+        return this.antennaDownlinkDemodDecodeConfig == null ? Codegen.empty() : this.antennaDownlinkDemodDecodeConfig;
     }
 
     @Import(name="antennaUplinkConfig")
       private final @Nullable Output<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig;
 
-    public Output<ConfigAntennaUplinkConfigArgs> getAntennaUplinkConfig() {
-        return this.antennaUplinkConfig == null ? Output.empty() : this.antennaUplinkConfig;
+    public Output<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig() {
+        return this.antennaUplinkConfig == null ? Codegen.empty() : this.antennaUplinkConfig;
     }
 
     @Import(name="dataflowEndpointConfig")
       private final @Nullable Output<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig;
 
-    public Output<ConfigDataflowEndpointConfigArgs> getDataflowEndpointConfig() {
-        return this.dataflowEndpointConfig == null ? Output.empty() : this.dataflowEndpointConfig;
+    public Output<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig() {
+        return this.dataflowEndpointConfig == null ? Codegen.empty() : this.dataflowEndpointConfig;
     }
 
     @Import(name="s3RecordingConfig")
       private final @Nullable Output<ConfigS3RecordingConfigArgs> s3RecordingConfig;
 
-    public Output<ConfigS3RecordingConfigArgs> getS3RecordingConfig() {
-        return this.s3RecordingConfig == null ? Output.empty() : this.s3RecordingConfig;
+    public Output<ConfigS3RecordingConfigArgs> s3RecordingConfig() {
+        return this.s3RecordingConfig == null ? Codegen.empty() : this.s3RecordingConfig;
     }
 
     @Import(name="trackingConfig")
       private final @Nullable Output<ConfigTrackingConfigArgs> trackingConfig;
 
-    public Output<ConfigTrackingConfigArgs> getTrackingConfig() {
-        return this.trackingConfig == null ? Output.empty() : this.trackingConfig;
+    public Output<ConfigTrackingConfigArgs> trackingConfig() {
+        return this.trackingConfig == null ? Codegen.empty() : this.trackingConfig;
     }
 
     @Import(name="uplinkEchoConfig")
       private final @Nullable Output<ConfigUplinkEchoConfigArgs> uplinkEchoConfig;
 
-    public Output<ConfigUplinkEchoConfigArgs> getUplinkEchoConfig() {
-        return this.uplinkEchoConfig == null ? Output.empty() : this.uplinkEchoConfig;
+    public Output<ConfigUplinkEchoConfigArgs> uplinkEchoConfig() {
+        return this.uplinkEchoConfig == null ? Codegen.empty() : this.uplinkEchoConfig;
     }
 
     public ConfigDataArgs(
@@ -87,13 +88,13 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigDataArgs() {
-        this.antennaDownlinkConfig = Output.empty();
-        this.antennaDownlinkDemodDecodeConfig = Output.empty();
-        this.antennaUplinkConfig = Output.empty();
-        this.dataflowEndpointConfig = Output.empty();
-        this.s3RecordingConfig = Output.empty();
-        this.trackingConfig = Output.empty();
-        this.uplinkEchoConfig = Output.empty();
+        this.antennaDownlinkConfig = Codegen.empty();
+        this.antennaDownlinkDemodDecodeConfig = Codegen.empty();
+        this.antennaUplinkConfig = Codegen.empty();
+        this.dataflowEndpointConfig = Codegen.empty();
+        this.s3RecordingConfig = Codegen.empty();
+        this.trackingConfig = Codegen.empty();
+        this.uplinkEchoConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder antennaDownlinkConfig(@Nullable ConfigAntennaDownlinkConfigArgs antennaDownlinkConfig) {
-            this.antennaDownlinkConfig = Output.ofNullable(antennaDownlinkConfig);
+            this.antennaDownlinkConfig = Codegen.ofNullable(antennaDownlinkConfig);
             return this;
         }
         public Builder antennaDownlinkDemodDecodeConfig(@Nullable Output<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig) {
@@ -141,7 +142,7 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder antennaDownlinkDemodDecodeConfig(@Nullable ConfigAntennaDownlinkDemodDecodeConfigArgs antennaDownlinkDemodDecodeConfig) {
-            this.antennaDownlinkDemodDecodeConfig = Output.ofNullable(antennaDownlinkDemodDecodeConfig);
+            this.antennaDownlinkDemodDecodeConfig = Codegen.ofNullable(antennaDownlinkDemodDecodeConfig);
             return this;
         }
         public Builder antennaUplinkConfig(@Nullable Output<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig) {
@@ -149,7 +150,7 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder antennaUplinkConfig(@Nullable ConfigAntennaUplinkConfigArgs antennaUplinkConfig) {
-            this.antennaUplinkConfig = Output.ofNullable(antennaUplinkConfig);
+            this.antennaUplinkConfig = Codegen.ofNullable(antennaUplinkConfig);
             return this;
         }
         public Builder dataflowEndpointConfig(@Nullable Output<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig) {
@@ -157,7 +158,7 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataflowEndpointConfig(@Nullable ConfigDataflowEndpointConfigArgs dataflowEndpointConfig) {
-            this.dataflowEndpointConfig = Output.ofNullable(dataflowEndpointConfig);
+            this.dataflowEndpointConfig = Codegen.ofNullable(dataflowEndpointConfig);
             return this;
         }
         public Builder s3RecordingConfig(@Nullable Output<ConfigS3RecordingConfigArgs> s3RecordingConfig) {
@@ -165,7 +166,7 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3RecordingConfig(@Nullable ConfigS3RecordingConfigArgs s3RecordingConfig) {
-            this.s3RecordingConfig = Output.ofNullable(s3RecordingConfig);
+            this.s3RecordingConfig = Codegen.ofNullable(s3RecordingConfig);
             return this;
         }
         public Builder trackingConfig(@Nullable Output<ConfigTrackingConfigArgs> trackingConfig) {
@@ -173,7 +174,7 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trackingConfig(@Nullable ConfigTrackingConfigArgs trackingConfig) {
-            this.trackingConfig = Output.ofNullable(trackingConfig);
+            this.trackingConfig = Codegen.ofNullable(trackingConfig);
             return this;
         }
         public Builder uplinkEchoConfig(@Nullable Output<ConfigUplinkEchoConfigArgs> uplinkEchoConfig) {
@@ -181,7 +182,7 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uplinkEchoConfig(@Nullable ConfigUplinkEchoConfigArgs uplinkEchoConfig) {
-            this.uplinkEchoConfig = Output.ofNullable(uplinkEchoConfig);
+            this.uplinkEchoConfig = Codegen.ofNullable(uplinkEchoConfig);
             return this;
         }        public ConfigDataArgs build() {
             return new ConfigDataArgs(antennaDownlinkConfig, antennaDownlinkDemodDecodeConfig, antennaUplinkConfig, dataflowEndpointConfig, s3RecordingConfig, trackingConfig, uplinkEchoConfig);

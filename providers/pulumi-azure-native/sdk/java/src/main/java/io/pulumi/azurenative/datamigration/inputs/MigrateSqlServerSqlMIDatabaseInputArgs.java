@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
     @Import(name="backupFilePaths")
       private final @Nullable Output<List<String>> backupFilePaths;
 
-    public Output<List<String>> getBackupFilePaths() {
-        return this.backupFilePaths == null ? Output.empty() : this.backupFilePaths;
+    public Output<List<String>> backupFilePaths() {
+        return this.backupFilePaths == null ? Codegen.empty() : this.backupFilePaths;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> getBackupFileShare() {
-        return this.backupFileShare == null ? Output.empty() : this.backupFileShare;
+    public Output<FileShareArgs> backupFileShare() {
+        return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,7 +61,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
     @Import(name="restoreDatabaseName", required=true)
       private final Output<String> restoreDatabaseName;
 
-    public Output<String> getRestoreDatabaseName() {
+    public Output<String> restoreDatabaseName() {
         return this.restoreDatabaseName;
     }
 
@@ -76,10 +77,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
     }
 
     private MigrateSqlServerSqlMIDatabaseInputArgs() {
-        this.backupFilePaths = Output.empty();
-        this.backupFileShare = Output.empty();
-        this.name = Output.empty();
-        this.restoreDatabaseName = Output.empty();
+        this.backupFilePaths = Codegen.empty();
+        this.backupFileShare = Codegen.empty();
+        this.name = Codegen.empty();
+        this.restoreDatabaseName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder backupFilePaths(@Nullable List<String> backupFilePaths) {
-            this.backupFilePaths = Output.ofNullable(backupFilePaths);
+            this.backupFilePaths = Codegen.ofNullable(backupFilePaths);
             return this;
         }
         public Builder backupFilePaths(String... backupFilePaths) {
@@ -124,7 +125,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
-            this.backupFileShare = Output.ofNullable(backupFileShare);
+            this.backupFileShare = Codegen.ofNullable(backupFileShare);
             return this;
         }
         public Builder name(Output<String> name) {

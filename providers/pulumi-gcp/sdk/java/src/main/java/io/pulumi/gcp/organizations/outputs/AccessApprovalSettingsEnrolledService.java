@@ -56,7 +56,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * storage.googleapis.com
      * 
     */
-    public String getCloudProduct() {
+    public String cloudProduct() {
         return this.cloudProduct;
     }
     /**
@@ -65,7 +65,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * Possible values are `BLOCK_ALL`.
      * 
     */
-    public Optional<String> getEnrollmentLevel() {
+    public Optional<String> enrollmentLevel() {
         return Optional.ofNullable(this.enrollmentLevel);
     }
 

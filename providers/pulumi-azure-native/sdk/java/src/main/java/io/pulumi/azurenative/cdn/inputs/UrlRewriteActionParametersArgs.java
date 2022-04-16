@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,14 +27,14 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -44,8 +45,8 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
     @Import(name="preserveUnmatchedPath")
       private final @Nullable Output<Boolean> preserveUnmatchedPath;
 
-    public Output<Boolean> getPreserveUnmatchedPath() {
-        return this.preserveUnmatchedPath == null ? Output.empty() : this.preserveUnmatchedPath;
+    public Output<Boolean> preserveUnmatchedPath() {
+        return this.preserveUnmatchedPath == null ? Codegen.empty() : this.preserveUnmatchedPath;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
     @Import(name="sourcePattern", required=true)
       private final Output<String> sourcePattern;
 
-    public Output<String> getSourcePattern() {
+    public Output<String> sourcePattern() {
         return this.sourcePattern;
     }
 
@@ -71,10 +72,10 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
     }
 
     private UrlRewriteActionParametersArgs() {
-        this.destination = Output.empty();
-        this.odataType = Output.empty();
-        this.preserveUnmatchedPath = Output.empty();
-        this.sourcePattern = Output.empty();
+        this.destination = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.preserveUnmatchedPath = Codegen.empty();
+        this.sourcePattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
-            this.preserveUnmatchedPath = Output.ofNullable(preserveUnmatchedPath);
+            this.preserveUnmatchedPath = Codegen.ofNullable(preserveUnmatchedPath);
             return this;
         }
         public Builder sourcePattern(Output<String> sourcePattern) {

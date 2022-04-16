@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigSchedulerArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWebServerArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWorkerArgs;
@@ -19,22 +20,22 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
     @Import(name="scheduler")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
 
-    public Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> getScheduler() {
-        return this.scheduler == null ? Output.empty() : this.scheduler;
+    public Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler() {
+        return this.scheduler == null ? Codegen.empty() : this.scheduler;
     }
 
     @Import(name="webServer")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
 
-    public Output<EnvironmentConfigWorkloadsConfigWebServerArgs> getWebServer() {
-        return this.webServer == null ? Output.empty() : this.webServer;
+    public Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer() {
+        return this.webServer == null ? Codegen.empty() : this.webServer;
     }
 
     @Import(name="worker")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
 
-    public Output<EnvironmentConfigWorkloadsConfigWorkerArgs> getWorker() {
-        return this.worker == null ? Output.empty() : this.worker;
+    public Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker() {
+        return this.worker == null ? Codegen.empty() : this.worker;
     }
 
     public EnvironmentConfigWorkloadsConfigArgs(
@@ -47,9 +48,9 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
     }
 
     private EnvironmentConfigWorkloadsConfigArgs() {
-        this.scheduler = Output.empty();
-        this.webServer = Output.empty();
-        this.worker = Output.empty();
+        this.scheduler = Codegen.empty();
+        this.webServer = Codegen.empty();
+        this.worker = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder scheduler(@Nullable EnvironmentConfigWorkloadsConfigSchedulerArgs scheduler) {
-            this.scheduler = Output.ofNullable(scheduler);
+            this.scheduler = Codegen.ofNullable(scheduler);
             return this;
         }
         public Builder webServer(@Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer) {
@@ -89,7 +90,7 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder webServer(@Nullable EnvironmentConfigWorkloadsConfigWebServerArgs webServer) {
-            this.webServer = Output.ofNullable(webServer);
+            this.webServer = Codegen.ofNullable(webServer);
             return this;
         }
         public Builder worker(@Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker) {
@@ -97,7 +98,7 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder worker(@Nullable EnvironmentConfigWorkloadsConfigWorkerArgs worker) {
-            this.worker = Output.ofNullable(worker);
+            this.worker = Codegen.ofNullable(worker);
             return this;
         }        public EnvironmentConfigWorkloadsConfigArgs build() {
             return new EnvironmentConfigWorkloadsConfigArgs(scheduler, webServer, worker);

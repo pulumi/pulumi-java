@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TableColumnFamilyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="family", required=true)
       private final Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
 
@@ -29,7 +30,7 @@ public final class TableColumnFamilyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TableColumnFamilyArgs() {
-        this.family = Output.empty();
+        this.family = Codegen.empty();
     }
 
     public static Builder builder() {

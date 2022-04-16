@@ -7,6 +7,7 @@ import io.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyGetArgs;
 import io.pulumi.aws.efs.inputs.FileSystemSizeInByteGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -28,8 +29,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
-    public Output<String> getAvailabilityZoneId() {
-        return this.availabilityZoneId == null ? Output.empty() : this.availabilityZoneId;
+    public Output<String> availabilityZoneId() {
+        return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> getAvailabilityZoneName() {
-        return this.availabilityZoneName == null ? Output.empty() : this.availabilityZoneName;
+    public Output<String> availabilityZoneName() {
+        return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationToken")
       private final @Nullable Output<String> creationToken;
 
-    public Output<String> getCreationToken() {
-        return this.creationToken == null ? Output.empty() : this.creationToken;
+    public Output<String> creationToken() {
+        return this.creationToken == null ? Codegen.empty() : this.creationToken;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+    public Output<String> dnsName() {
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+    public Output<Boolean> encrypted() {
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecyclePolicy")
       private final @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
 
-    public Output<FileSystemLifecyclePolicyGetArgs> getLifecyclePolicy() {
-        return this.lifecyclePolicy == null ? Output.empty() : this.lifecyclePolicy;
+    public Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy() {
+        return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfMountTargets")
       private final @Nullable Output<Integer> numberOfMountTargets;
 
-    public Output<Integer> getNumberOfMountTargets() {
-        return this.numberOfMountTargets == null ? Output.empty() : this.numberOfMountTargets;
+    public Output<Integer> numberOfMountTargets() {
+        return this.numberOfMountTargets == null ? Codegen.empty() : this.numberOfMountTargets;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="performanceMode")
       private final @Nullable Output<String> performanceMode;
 
-    public Output<String> getPerformanceMode() {
-        return this.performanceMode == null ? Output.empty() : this.performanceMode;
+    public Output<String> performanceMode() {
+        return this.performanceMode == null ? Codegen.empty() : this.performanceMode;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionedThroughputInMibps")
       private final @Nullable Output<Double> provisionedThroughputInMibps;
 
-    public Output<Double> getProvisionedThroughputInMibps() {
-        return this.provisionedThroughputInMibps == null ? Output.empty() : this.provisionedThroughputInMibps;
+    public Output<Double> provisionedThroughputInMibps() {
+        return this.provisionedThroughputInMibps == null ? Codegen.empty() : this.provisionedThroughputInMibps;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeInBytes")
       private final @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
 
-    public Output<List<FileSystemSizeInByteGetArgs>> getSizeInBytes() {
-        return this.sizeInBytes == null ? Output.empty() : this.sizeInBytes;
+    public Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes() {
+        return this.sizeInBytes == null ? Codegen.empty() : this.sizeInBytes;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="throughputMode")
       private final @Nullable Output<String> throughputMode;
 
-    public Output<String> getThroughputMode() {
-        return this.throughputMode == null ? Output.empty() : this.throughputMode;
+    public Output<String> throughputMode() {
+        return this.throughputMode == null ? Codegen.empty() : this.throughputMode;
     }
 
     public FileSystemState(
@@ -236,22 +237,22 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileSystemState() {
-        this.arn = Output.empty();
-        this.availabilityZoneId = Output.empty();
-        this.availabilityZoneName = Output.empty();
-        this.creationToken = Output.empty();
-        this.dnsName = Output.empty();
-        this.encrypted = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.lifecyclePolicy = Output.empty();
-        this.numberOfMountTargets = Output.empty();
-        this.ownerId = Output.empty();
-        this.performanceMode = Output.empty();
-        this.provisionedThroughputInMibps = Output.empty();
-        this.sizeInBytes = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.throughputMode = Output.empty();
+        this.arn = Codegen.empty();
+        this.availabilityZoneId = Codegen.empty();
+        this.availabilityZoneName = Codegen.empty();
+        this.creationToken = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.lifecyclePolicy = Codegen.empty();
+        this.numberOfMountTargets = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.performanceMode = Codegen.empty();
+        this.provisionedThroughputInMibps = Codegen.empty();
+        this.sizeInBytes = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.throughputMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -309,7 +310,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
@@ -317,7 +318,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
+            this.availabilityZoneId = Codegen.ofNullable(availabilityZoneId);
             return this;
         }
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
@@ -325,7 +326,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
+            this.availabilityZoneName = Codegen.ofNullable(availabilityZoneName);
             return this;
         }
         public Builder creationToken(@Nullable Output<String> creationToken) {
@@ -333,7 +334,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationToken(@Nullable String creationToken) {
-            this.creationToken = Output.ofNullable(creationToken);
+            this.creationToken = Codegen.ofNullable(creationToken);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -341,7 +342,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
@@ -349,7 +350,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -357,7 +358,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy) {
@@ -365,7 +366,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecyclePolicy(@Nullable FileSystemLifecyclePolicyGetArgs lifecyclePolicy) {
-            this.lifecyclePolicy = Output.ofNullable(lifecyclePolicy);
+            this.lifecyclePolicy = Codegen.ofNullable(lifecyclePolicy);
             return this;
         }
         public Builder numberOfMountTargets(@Nullable Output<Integer> numberOfMountTargets) {
@@ -373,7 +374,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numberOfMountTargets(@Nullable Integer numberOfMountTargets) {
-            this.numberOfMountTargets = Output.ofNullable(numberOfMountTargets);
+            this.numberOfMountTargets = Codegen.ofNullable(numberOfMountTargets);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -381,7 +382,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder performanceMode(@Nullable Output<String> performanceMode) {
@@ -389,7 +390,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder performanceMode(@Nullable String performanceMode) {
-            this.performanceMode = Output.ofNullable(performanceMode);
+            this.performanceMode = Codegen.ofNullable(performanceMode);
             return this;
         }
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
@@ -397,7 +398,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = Output.ofNullable(provisionedThroughputInMibps);
+            this.provisionedThroughputInMibps = Codegen.ofNullable(provisionedThroughputInMibps);
             return this;
         }
         public Builder sizeInBytes(@Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes) {
@@ -405,7 +406,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizeInBytes(@Nullable List<FileSystemSizeInByteGetArgs> sizeInBytes) {
-            this.sizeInBytes = Output.ofNullable(sizeInBytes);
+            this.sizeInBytes = Codegen.ofNullable(sizeInBytes);
             return this;
         }
         public Builder sizeInBytes(FileSystemSizeInByteGetArgs... sizeInBytes) {
@@ -416,7 +417,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -424,7 +425,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
@@ -432,7 +433,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throughputMode(@Nullable String throughputMode) {
-            this.throughputMode = Output.ofNullable(throughputMode);
+            this.throughputMode = Codegen.ofNullable(throughputMode);
             return this;
         }        public FileSystemState build() {
             return new FileSystemState(arn, availabilityZoneId, availabilityZoneName, creationToken, dnsName, encrypted, kmsKeyId, lifecyclePolicy, numberOfMountTargets, ownerId, performanceMode, provisionedThroughputInMibps, sizeInBytes, tags, tagsAll, throughputMode);

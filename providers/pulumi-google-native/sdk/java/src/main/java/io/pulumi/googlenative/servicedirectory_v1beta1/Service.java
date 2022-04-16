@@ -6,6 +6,7 @@ package io.pulumi.googlenative.servicedirectory_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.servicedirectory_v1beta1.ServiceArgs;
 import io.pulumi.googlenative.servicedirectory_v1beta1.outputs.EndpointResponse;
@@ -31,7 +32,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the service was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +46,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Endpoints associated with this service. Returned on LookupService.ResolveService. Control plane clients should use RegistrationService.ListEndpoints.
      * 
      */
-    public Output<List<EndpointResponse>> getEndpoints() {
+    public Output<List<EndpointResponse>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -59,7 +60,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Optional. Metadata for the service. This data can be consumed by service clients. Restrictions: * The entire metadata dictionary may contain up to 2000 characters, spread accoss all key-value pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two segments: an optional prefix and name, separated by a slash (/). The name segment is required and must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in total, followed by a slash (/). Metadata that fails to meet these requirements are rejected Note: This field is equivalent to the `annotations` field in the v1 API. They have the same syntax and read/write to the same location in Service Directory.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -73,7 +74,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name for the service in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the service was last updated. Note: endpoints being created/deleted/updated within the service are not considered service updates for the purpose of this timestamp.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -113,7 +114,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:servicedirectory/v1beta1:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:servicedirectory/v1beta1:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.cognitiveservices.inputs.VirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAction")
       private final @Nullable Output<Either<String,NetworkRuleAction>> defaultAction;
 
-    public Output<Either<String,NetworkRuleAction>> getDefaultAction() {
-        return this.defaultAction == null ? Output.empty() : this.defaultAction;
+    public Output<Either<String,NetworkRuleAction>> defaultAction() {
+        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipRules")
       private final @Nullable Output<List<IpRuleArgs>> ipRules;
 
-    public Output<List<IpRuleArgs>> getIpRules() {
-        return this.ipRules == null ? Output.empty() : this.ipRules;
+    public Output<List<IpRuleArgs>> ipRules() {
+        return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
+    public Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules() {
+        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 
     public NetworkRuleSetArgs(
@@ -66,9 +67,9 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkRuleSetArgs() {
-        this.defaultAction = Output.empty();
-        this.ipRules = Output.empty();
-        this.virtualNetworkRules = Output.empty();
+        this.defaultAction = Codegen.empty();
+        this.ipRules = Codegen.empty();
+        this.virtualNetworkRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultAction(@Nullable Either<String,NetworkRuleAction> defaultAction) {
-            this.defaultAction = Output.ofNullable(defaultAction);
+            this.defaultAction = Codegen.ofNullable(defaultAction);
             return this;
         }
         public Builder ipRules(@Nullable Output<List<IpRuleArgs>> ipRules) {
@@ -108,7 +109,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipRules(@Nullable List<IpRuleArgs> ipRules) {
-            this.ipRules = Output.ofNullable(ipRules);
+            this.ipRules = Codegen.ofNullable(ipRules);
             return this;
         }
         public Builder ipRules(IpRuleArgs... ipRules) {
@@ -119,7 +120,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
             return this;
         }
         public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code", required=true)
       private final Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code;
     }
 
@@ -33,8 +34,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publish")
       private final @Nullable Output<Boolean> publish;
 
-    public Output<Boolean> getPublish() {
-        return this.publish == null ? Output.empty() : this.publish;
+    public Output<Boolean> publish() {
+        return this.publish == null ? Codegen.empty() : this.publish;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
 
@@ -84,11 +85,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.code = Output.empty();
-        this.comment = Output.empty();
-        this.name = Output.empty();
-        this.publish = Output.empty();
-        this.runtime = Output.empty();
+        this.code = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publish = Codegen.empty();
+        this.runtime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publish(@Nullable Output<Boolean> publish) {
@@ -148,7 +149,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publish(@Nullable Boolean publish) {
-            this.publish = Output.ofNullable(publish);
+            this.publish = Codegen.ofNullable(publish);
             return this;
         }
         public Builder runtime(Output<String> runtime) {

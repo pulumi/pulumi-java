@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
 
-    public Output<Object> getDeserializer() {
-        return this.deserializer == null ? Output.empty() : this.deserializer;
+    public Output<Object> deserializer() {
+        return this.deserializer == null ? Codegen.empty() : this.deserializer;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encodingName")
       private final @Nullable Output<Object> encodingName;
 
-    public Output<Object> getEncodingName() {
-        return this.encodingName == null ? Output.empty() : this.encodingName;
+    public Output<Object> encodingName() {
+        return this.encodingName == null ? Codegen.empty() : this.encodingName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filePattern")
       private final @Nullable Output<Object> filePattern;
 
-    public Output<Object> getFilePattern() {
-        return this.filePattern == null ? Output.empty() : this.filePattern;
+    public Output<Object> filePattern() {
+        return this.filePattern == null ? Codegen.empty() : this.filePattern;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jsonNodeReference")
       private final @Nullable Output<Object> jsonNodeReference;
 
-    public Output<Object> getJsonNodeReference() {
-        return this.jsonNodeReference == null ? Output.empty() : this.jsonNodeReference;
+    public Output<Object> jsonNodeReference() {
+        return this.jsonNodeReference == null ? Codegen.empty() : this.jsonNodeReference;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jsonPathDefinition")
       private final @Nullable Output<Object> jsonPathDefinition;
 
-    public Output<Object> getJsonPathDefinition() {
-        return this.jsonPathDefinition == null ? Output.empty() : this.jsonPathDefinition;
+    public Output<Object> jsonPathDefinition() {
+        return this.jsonPathDefinition == null ? Codegen.empty() : this.jsonPathDefinition;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nestingSeparator")
       private final @Nullable Output<Object> nestingSeparator;
 
-    public Output<Object> getNestingSeparator() {
-        return this.nestingSeparator == null ? Output.empty() : this.nestingSeparator;
+    public Output<Object> nestingSeparator() {
+        return this.nestingSeparator == null ? Codegen.empty() : this.nestingSeparator;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
 
-    public Output<Object> getSerializer() {
-        return this.serializer == null ? Output.empty() : this.serializer;
+    public Output<Object> serializer() {
+        return this.serializer == null ? Codegen.empty() : this.serializer;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -128,14 +129,14 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JsonFormatArgs() {
-        this.deserializer = Output.empty();
-        this.encodingName = Output.empty();
-        this.filePattern = Output.empty();
-        this.jsonNodeReference = Output.empty();
-        this.jsonPathDefinition = Output.empty();
-        this.nestingSeparator = Output.empty();
-        this.serializer = Output.empty();
-        this.type = Output.empty();
+        this.deserializer = Codegen.empty();
+        this.encodingName = Codegen.empty();
+        this.filePattern = Codegen.empty();
+        this.jsonNodeReference = Codegen.empty();
+        this.jsonPathDefinition = Codegen.empty();
+        this.nestingSeparator = Codegen.empty();
+        this.serializer = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = Output.ofNullable(deserializer);
+            this.deserializer = Codegen.ofNullable(deserializer);
             return this;
         }
         public Builder encodingName(@Nullable Output<Object> encodingName) {
@@ -185,7 +186,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encodingName(@Nullable Object encodingName) {
-            this.encodingName = Output.ofNullable(encodingName);
+            this.encodingName = Codegen.ofNullable(encodingName);
             return this;
         }
         public Builder filePattern(@Nullable Output<Object> filePattern) {
@@ -193,7 +194,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filePattern(@Nullable Object filePattern) {
-            this.filePattern = Output.ofNullable(filePattern);
+            this.filePattern = Codegen.ofNullable(filePattern);
             return this;
         }
         public Builder jsonNodeReference(@Nullable Output<Object> jsonNodeReference) {
@@ -201,7 +202,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
-            this.jsonNodeReference = Output.ofNullable(jsonNodeReference);
+            this.jsonNodeReference = Codegen.ofNullable(jsonNodeReference);
             return this;
         }
         public Builder jsonPathDefinition(@Nullable Output<Object> jsonPathDefinition) {
@@ -209,7 +210,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
-            this.jsonPathDefinition = Output.ofNullable(jsonPathDefinition);
+            this.jsonPathDefinition = Codegen.ofNullable(jsonPathDefinition);
             return this;
         }
         public Builder nestingSeparator(@Nullable Output<Object> nestingSeparator) {
@@ -217,7 +218,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nestingSeparator(@Nullable Object nestingSeparator) {
-            this.nestingSeparator = Output.ofNullable(nestingSeparator);
+            this.nestingSeparator = Codegen.ofNullable(nestingSeparator);
             return this;
         }
         public Builder serializer(@Nullable Output<Object> serializer) {
@@ -225,7 +226,7 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serializer(@Nullable Object serializer) {
-            this.serializer = Output.ofNullable(serializer);
+            this.serializer = Codegen.ofNullable(serializer);
             return this;
         }
         public Builder type(Output<String> type) {

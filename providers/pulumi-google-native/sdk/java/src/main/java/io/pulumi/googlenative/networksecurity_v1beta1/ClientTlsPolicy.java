@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1beta1.ClientTlsPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.GoogleCloudNetworksecurityV1beta1CertificateProviderResponse;
@@ -32,7 +33,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
      * 
      */
-    public Output<GoogleCloudNetworksecurityV1beta1CertificateProviderResponse> getClientCertificate() {
+    public Output<GoogleCloudNetworksecurityV1beta1CertificateProviderResponse> clientCertificate() {
         return this.clientCertificate;
     }
     /**
@@ -46,7 +47,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +61,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Free-text description of the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -74,7 +75,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Set of label tags associated with the resource.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -88,7 +89,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
      * 
      */
-    public Output<List<ValidationCAResponse>> getServerValidationCa() {
+    public Output<List<ValidationCAResponse>> serverValidationCa() {
         return this.serverValidationCa;
     }
     /**
@@ -116,7 +117,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
      * 
      */
-    public Output<String> getSni() {
+    public Output<String> sni() {
         return this.sni;
     }
     /**
@@ -130,7 +131,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -156,7 +157,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClientTlsPolicy(String name, ClientTlsPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networksecurity/v1beta1:ClientTlsPolicy", name, args == null ? ClientTlsPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networksecurity/v1beta1:ClientTlsPolicy", name, args == null ? ClientTlsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClientTlsPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

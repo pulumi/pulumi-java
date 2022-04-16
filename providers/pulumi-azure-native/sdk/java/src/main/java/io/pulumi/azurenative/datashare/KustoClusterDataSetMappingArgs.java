@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +33,7 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -43,8 +44,8 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
+    public Output<String> dataSetMappingName() {
+        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -66,7 +67,7 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     @Import(name="kustoClusterResourceId", required=true)
       private final Output<String> kustoClusterResourceId;
 
-    public Output<String> getKustoClusterResourceId() {
+    public Output<String> kustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
 
@@ -77,7 +78,7 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +89,7 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -110,13 +111,13 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
     }
 
     private KustoClusterDataSetMappingArgs() {
-        this.accountName = Output.empty();
-        this.dataSetId = Output.empty();
-        this.dataSetMappingName = Output.empty();
-        this.kind = Output.empty();
-        this.kustoClusterResourceId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetId = Codegen.empty();
+        this.dataSetMappingName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.kustoClusterResourceId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class KustoClusterDataSetMappingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
             return this;
         }
         public Builder kind(Output<String> kind) {

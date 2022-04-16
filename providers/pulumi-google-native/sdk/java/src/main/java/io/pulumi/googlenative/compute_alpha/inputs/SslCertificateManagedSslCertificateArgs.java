@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
-        return this.domains == null ? Output.empty() : this.domains;
+    public Output<List<String>> domains() {
+        return this.domains == null ? Codegen.empty() : this.domains;
     }
 
     public SslCertificateManagedSslCertificateArgs(@Nullable Output<List<String>> domains) {
@@ -35,7 +36,7 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
     }
 
     private SslCertificateManagedSslCertificateArgs() {
-        this.domains = Output.empty();
+        this.domains = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
             return this;
         }
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Output.ofNullable(domains);
+            this.domains = Codegen.ofNullable(domains);
             return this;
         }
         public Builder domains(String... domains) {

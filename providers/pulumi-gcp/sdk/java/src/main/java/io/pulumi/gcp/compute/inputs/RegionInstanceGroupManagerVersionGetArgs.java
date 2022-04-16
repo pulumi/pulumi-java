@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerVersionTargetSizeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class RegionInstanceGroupManagerVersionGetArgs extends io.pulumi.re
     @Import(name="instanceTemplate", required=true)
       private final Output<String> instanceTemplate;
 
-    public Output<String> getInstanceTemplate() {
+    public Output<String> instanceTemplate() {
         return this.instanceTemplate;
     }
 
@@ -33,8 +34,8 @@ public final class RegionInstanceGroupManagerVersionGetArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class RegionInstanceGroupManagerVersionGetArgs extends io.pulumi.re
     @Import(name="targetSize")
       private final @Nullable Output<RegionInstanceGroupManagerVersionTargetSizeGetArgs> targetSize;
 
-    public Output<RegionInstanceGroupManagerVersionTargetSizeGetArgs> getTargetSize() {
-        return this.targetSize == null ? Output.empty() : this.targetSize;
+    public Output<RegionInstanceGroupManagerVersionTargetSizeGetArgs> targetSize() {
+        return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 
     public RegionInstanceGroupManagerVersionGetArgs(
@@ -58,9 +59,9 @@ public final class RegionInstanceGroupManagerVersionGetArgs extends io.pulumi.re
     }
 
     private RegionInstanceGroupManagerVersionGetArgs() {
-        this.instanceTemplate = Output.empty();
-        this.name = Output.empty();
-        this.targetSize = Output.empty();
+        this.instanceTemplate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.targetSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class RegionInstanceGroupManagerVersionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder targetSize(@Nullable Output<RegionInstanceGroupManagerVersionTargetSizeGetArgs> targetSize) {
@@ -108,7 +109,7 @@ public final class RegionInstanceGroupManagerVersionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder targetSize(@Nullable RegionInstanceGroupManagerVersionTargetSizeGetArgs targetSize) {
-            this.targetSize = Output.ofNullable(targetSize);
+            this.targetSize = Codegen.ofNullable(targetSize);
             return this;
         }        public RegionInstanceGroupManagerVersionGetArgs build() {
             return new RegionInstanceGroupManagerVersionGetArgs(instanceTemplate, name, targetSize);

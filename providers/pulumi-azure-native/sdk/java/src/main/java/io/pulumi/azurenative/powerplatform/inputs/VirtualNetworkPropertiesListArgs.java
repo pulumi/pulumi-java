@@ -6,6 +6,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 import io.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
     @Import(name="nextLink")
       private final @Nullable Output<String> nextLink;
 
-    public Output<String> getNextLink() {
-        return this.nextLink == null ? Output.empty() : this.nextLink;
+    public Output<String> nextLink() {
+        return this.nextLink == null ? Codegen.empty() : this.nextLink;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
     @Import(name="value")
       private final @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
 
-    public Output<List<VirtualNetworkPropertiesArgs>> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<List<VirtualNetworkPropertiesArgs>> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public VirtualNetworkPropertiesListArgs(
@@ -50,8 +51,8 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
     }
 
     private VirtualNetworkPropertiesListArgs() {
-        this.nextLink = Output.empty();
-        this.value = Output.empty();
+        this.nextLink = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
             return this;
         }
         public Builder nextLink(@Nullable String nextLink) {
-            this.nextLink = Output.ofNullable(nextLink);
+            this.nextLink = Codegen.ofNullable(nextLink);
             return this;
         }
         public Builder value(@Nullable Output<List<VirtualNetworkPropertiesArgs>> value) {
@@ -89,7 +90,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
             return this;
         }
         public Builder value(@Nullable List<VirtualNetworkPropertiesArgs> value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder value(VirtualNetworkPropertiesArgs... value) {

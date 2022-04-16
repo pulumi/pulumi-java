@@ -10,6 +10,7 @@ import io.pulumi.awsnative.kinesisvideo.outputs.SignalingChannelTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * @return The period of time a signaling channel retains undelivered messages before they are discarded.
      * 
      */
-    public Output</* @Nullable */ Integer> getMessageTtlSeconds() {
+    public Output</* @Nullable */ Integer> messageTtlSeconds() {
         return this.messageTtlSeconds;
     }
     /**
@@ -60,7 +61,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * @return The name of the Kinesis Video Signaling Channel.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<SignalingChannelTag>> getTags() {
+    public Output</* @Nullable */ List<SignalingChannelTag>> tags() {
         return this.tags;
     }
     /**
@@ -88,7 +89,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * @return The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
      * 
      */
-    public Output</* @Nullable */ SignalingChannelType> getType() {
+    public Output</* @Nullable */ SignalingChannelType> type() {
         return this.type;
     }
 
@@ -114,7 +115,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SignalingChannel(String name, @Nullable SignalingChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:kinesisvideo:SignalingChannel", name, args == null ? SignalingChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:kinesisvideo:SignalingChannel", name, args == null ? SignalingChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SignalingChannel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

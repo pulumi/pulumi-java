@@ -19,7 +19,7 @@ public final class GetInternetGatewayAttachment extends io.pulumi.resources.Invo
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -30,7 +30,7 @@ public final class GetInternetGatewayAttachment extends io.pulumi.resources.Invo
     @Import(name="vpcId", required=true)
       private final String vpcId;
 
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

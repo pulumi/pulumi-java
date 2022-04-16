@@ -35,14 +35,14 @@ public final class ManagementPolicyDefinitionResponse {
      * An object that defines the action set.
      * 
     */
-    public ManagementPolicyActionResponse getActions() {
+    public ManagementPolicyActionResponse actions() {
         return this.actions;
     }
     /**
      * An object that defines the filter set.
      * 
     */
-    public Optional<ManagementPolicyFilterResponse> getFilters() {
+    public Optional<ManagementPolicyFilterResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
 

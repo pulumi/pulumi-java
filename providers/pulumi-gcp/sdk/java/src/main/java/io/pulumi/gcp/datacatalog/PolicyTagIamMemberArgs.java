@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,14 +19,14 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="condition")
       private final @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
 
-    public Output<PolicyTagIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<PolicyTagIamMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -36,7 +37,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyTag", required=true)
       private final Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
+    public Output<String> policyTag() {
         return this.policyTag;
     }
 
@@ -49,7 +50,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -65,10 +66,10 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PolicyTagIamMemberArgs() {
-        this.condition = Output.empty();
-        this.member = Output.empty();
-        this.policyTag = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.member = Codegen.empty();
+        this.policyTag = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable PolicyTagIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder member(Output<String> member) {

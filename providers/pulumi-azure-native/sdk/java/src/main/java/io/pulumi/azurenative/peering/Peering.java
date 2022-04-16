@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The properties that define a direct peering.
      * 
      */
-    public Output</* @Nullable */ PeeringPropertiesDirectResponse> getDirect() {
+    public Output</* @Nullable */ PeeringPropertiesDirectResponse> direct() {
         return this.direct;
     }
     /**
@@ -59,7 +60,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The properties that define an exchange peering.
      * 
      */
-    public Output</* @Nullable */ PeeringPropertiesExchangeResponse> getExchange() {
+    public Output</* @Nullable */ PeeringPropertiesExchangeResponse> exchange() {
         return this.exchange;
     }
     /**
@@ -73,7 +74,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The kind of the peering.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +88,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -101,7 +102,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The location of the peering.
      * 
      */
-    public Output</* @Nullable */ String> getPeeringLocation() {
+    public Output</* @Nullable */ String> peeringLocation() {
         return this.peeringLocation;
     }
     /**
@@ -129,7 +130,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +144,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The SKU that defines the tier and kind of the peering.
      * 
      */
-    public Output<PeeringSkuResponse> getSku() {
+    public Output<PeeringSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -157,7 +158,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +172,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -197,7 +198,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Peering(String name, PeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:peering:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Peering(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

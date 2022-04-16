@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="localGatewayId")
       private final @Nullable Output<String> localGatewayId;
 
-    public Output<String> getLocalGatewayId() {
-        return this.localGatewayId == null ? Output.empty() : this.localGatewayId;
+    public Output<String> localGatewayId() {
+        return this.localGatewayId == null ? Codegen.empty() : this.localGatewayId;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="localGatewayRouteTableId")
       private final @Nullable Output<String> localGatewayRouteTableId;
 
-    public Output<String> getLocalGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Output.empty() : this.localGatewayRouteTableId;
+    public Output<String> localGatewayRouteTableId() {
+        return this.localGatewayRouteTableId == null ? Codegen.empty() : this.localGatewayRouteTableId;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public LocalGatewayRouteTableVpcAssociationState(
@@ -80,11 +81,11 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     }
 
     private LocalGatewayRouteTableVpcAssociationState() {
-        this.localGatewayId = Output.empty();
-        this.localGatewayRouteTableId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
+        this.localGatewayId = Codegen.empty();
+        this.localGatewayRouteTableId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
             return this;
         }
         public Builder localGatewayId(@Nullable String localGatewayId) {
-            this.localGatewayId = Output.ofNullable(localGatewayId);
+            this.localGatewayId = Codegen.ofNullable(localGatewayId);
             return this;
         }
         public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
@@ -128,7 +129,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
             return this;
         }
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Output.ofNullable(localGatewayRouteTableId);
+            this.localGatewayRouteTableId = Codegen.ofNullable(localGatewayRouteTableId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -136,7 +137,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -144,7 +145,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -152,7 +153,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public LocalGatewayRouteTableVpcAssociationState build() {
             return new LocalGatewayRouteTableVpcAssociationState(localGatewayId, localGatewayRouteTableId, tags, tagsAll, vpcId);

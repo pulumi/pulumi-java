@@ -41,21 +41,21 @@ public final class InsightFiltersProcessParentPid {
      * The equal-to condition to be applied to a single field when querying for findings, provided as a String.
      * 
     */
-    public Optional<String> getEq() {
+    public Optional<String> eq() {
         return Optional.ofNullable(this.eq);
     }
     /**
      * The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
     */
-    public Optional<String> getGte() {
+    public Optional<String> gte() {
         return Optional.ofNullable(this.gte);
     }
     /**
      * The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
     */
-    public Optional<String> getLte() {
+    public Optional<String> lte() {
         return Optional.ofNullable(this.lte);
     }
 

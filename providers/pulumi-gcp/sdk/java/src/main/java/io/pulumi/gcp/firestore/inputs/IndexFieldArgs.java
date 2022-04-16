@@ -5,6 +5,7 @@ package io.pulumi.gcp.firestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arrayConfig")
       private final @Nullable Output<String> arrayConfig;
 
-    public Output<String> getArrayConfig() {
-        return this.arrayConfig == null ? Output.empty() : this.arrayConfig;
+    public Output<String> arrayConfig() {
+        return this.arrayConfig == null ? Codegen.empty() : this.arrayConfig;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
-    public Output<String> getFieldPath() {
-        return this.fieldPath == null ? Output.empty() : this.fieldPath;
+    public Output<String> fieldPath() {
+        return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order")
       private final @Nullable Output<String> order;
 
-    public Output<String> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+    public Output<String> order() {
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     public IndexFieldArgs(
@@ -61,9 +62,9 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexFieldArgs() {
-        this.arrayConfig = Output.empty();
-        this.fieldPath = Output.empty();
-        this.order = Output.empty();
+        this.arrayConfig = Codegen.empty();
+        this.fieldPath = Codegen.empty();
+        this.order = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arrayConfig(@Nullable String arrayConfig) {
-            this.arrayConfig = Output.ofNullable(arrayConfig);
+            this.arrayConfig = Codegen.ofNullable(arrayConfig);
             return this;
         }
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
@@ -103,7 +104,7 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Output.ofNullable(fieldPath);
+            this.fieldPath = Codegen.ofNullable(fieldPath);
             return this;
         }
         public Builder order(@Nullable Output<String> order) {
@@ -111,7 +112,7 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder order(@Nullable String order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }        public IndexFieldArgs build() {
             return new IndexFieldArgs(arrayConfig, fieldPath, order);

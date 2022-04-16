@@ -39,21 +39,21 @@ public final class OSPolicyResourceFileGcsResponse {
      * Bucket of the Cloud Storage object.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * Generation number of the Cloud Storage object.
      * 
     */
-    public String getGeneration() {
+    public String generation() {
         return this.generation;
     }
     /**
      * Name of the Cloud Storage object.
      * 
     */
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

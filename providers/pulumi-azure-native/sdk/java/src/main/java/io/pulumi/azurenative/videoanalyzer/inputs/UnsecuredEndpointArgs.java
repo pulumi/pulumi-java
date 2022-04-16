@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelArg
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="credentials", required=true)
       private final Output<UsernamePasswordCredentialsArgs> credentials;
 
-    public Output<UsernamePasswordCredentialsArgs> getCredentials() {
+    public Output<UsernamePasswordCredentialsArgs> credentials() {
         return this.credentials;
     }
 
@@ -38,8 +39,8 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tunnel")
       private final @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
-    public Output<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
-        return this.tunnel == null ? Output.empty() : this.tunnel;
+    public Output<SecureIotDeviceRemoteTunnelArgs> tunnel() {
+        return this.tunnel == null ? Codegen.empty() : this.tunnel;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -61,7 +62,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -77,10 +78,10 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
     }
 
     private UnsecuredEndpointArgs() {
-        this.credentials = Output.empty();
-        this.tunnel = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
+        this.credentials = Codegen.empty();
+        this.tunnel = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
-            this.tunnel = Output.ofNullable(tunnel);
+            this.tunnel = Codegen.ofNullable(tunnel);
             return this;
         }
         public Builder type(Output<String> type) {

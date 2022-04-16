@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityandcompliance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
+    public Output<String> storageAccountName() {
+        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
     public ServiceExportConfigurationInfoArgs(@Nullable Output<String> storageAccountName) {
@@ -34,7 +35,7 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
     }
 
     private ServiceExportConfigurationInfoArgs() {
-        this.storageAccountName = Output.empty();
+        this.storageAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
             return this;
         }
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Output.ofNullable(storageAccountName);
+            this.storageAccountName = Codegen.ofNullable(storageAccountName);
             return this;
         }        public ServiceExportConfigurationInfoArgs build() {
             return new ServiceExportConfigurationInfoArgs(storageAccountName);

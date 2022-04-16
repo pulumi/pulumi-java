@@ -10,6 +10,7 @@ import io.pulumi.awsnative.databrew.outputs.RulesetTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return Description of the Ruleset
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -45,7 +46,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return Name of the Ruleset
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,13 +60,13 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return List of the data quality rules in the ruleset
      * 
      */
-    public Output<List<RulesetRule>> getRules() {
+    public Output<List<RulesetRule>> rules() {
         return this.rules;
     }
     @Export(name="tags", type=List.class, parameters={RulesetTag.class})
     private Output</* @Nullable */ List<RulesetTag>> tags;
 
-    public Output</* @Nullable */ List<RulesetTag>> getTags() {
+    public Output</* @Nullable */ List<RulesetTag>> tags() {
         return this.tags;
     }
     /**
@@ -79,7 +80,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return Arn of the target resource (dataset) to apply the ruleset to
      * 
      */
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 
@@ -105,7 +106,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Ruleset(String name, RulesetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:databrew:Ruleset", name, args == null ? RulesetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:databrew:Ruleset", name, args == null ? RulesetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Ruleset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

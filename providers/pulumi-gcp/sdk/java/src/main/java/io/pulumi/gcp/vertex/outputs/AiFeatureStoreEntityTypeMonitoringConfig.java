@@ -28,7 +28,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis> getSnapshotAnalysis() {
+    public Optional<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis> snapshotAnalysis() {
         return Optional.ofNullable(this.snapshotAnalysis);
     }
 

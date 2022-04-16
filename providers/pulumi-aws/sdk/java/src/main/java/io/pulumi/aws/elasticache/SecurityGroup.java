@@ -9,6 +9,7 @@ import io.pulumi.aws.elasticache.inputs.SecurityGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return description for the cache security group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Name for the cache security group. This value is stored as a lowercase string.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -75,7 +76,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * authorized for ingress to the cache security group
      * 
      */
-    public Output<List<String>> getSecurityGroupNames() {
+    public Output<List<String>> securityGroupNames() {
         return this.securityGroupNames;
     }
 
@@ -101,7 +102,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityGroup(String name, SecurityGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticache/securityGroup:SecurityGroup", name, args == null ? SecurityGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticache/securityGroup:SecurityGroup", name, args == null ? SecurityGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecurityGroup(String name, Output<String> id, @Nullable SecurityGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
     @Import(name="splitWeight", required=true)
       private final Output<Integer> splitWeight;
 
-    public Output<Integer> getSplitWeight() {
+    public Output<Integer> splitWeight() {
         return this.splitWeight;
     }
 
@@ -36,8 +37,8 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
     }
 
     private LaunchGroupToWeightArgs() {
-        this.groupName = Output.empty();
-        this.splitWeight = Output.empty();
+        this.groupName = Codegen.empty();
+        this.splitWeight = Codegen.empty();
     }
 
     public static Builder builder() {

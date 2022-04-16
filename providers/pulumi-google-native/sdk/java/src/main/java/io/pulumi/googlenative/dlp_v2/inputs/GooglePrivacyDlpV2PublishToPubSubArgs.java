@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends io.pulumi.resou
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public GooglePrivacyDlpV2PublishToPubSubArgs(@Nullable Output<String> topic) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends io.pulumi.resou
     }
 
     private GooglePrivacyDlpV2PublishToPubSubArgs() {
-        this.topic = Output.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends io.pulumi.resou
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public GooglePrivacyDlpV2PublishToPubSubArgs build() {
             return new GooglePrivacyDlpV2PublishToPubSubArgs(topic);

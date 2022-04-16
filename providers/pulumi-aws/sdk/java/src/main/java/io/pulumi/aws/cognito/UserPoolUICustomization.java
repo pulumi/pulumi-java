@@ -9,6 +9,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolUICustomizationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
      * 
      */
-    public Output</* @Nullable */ String> getClientId() {
+    public Output</* @Nullable */ String> clientId() {
         return this.clientId;
     }
     /**
@@ -55,7 +56,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -69,7 +70,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
      * 
      */
-    public Output</* @Nullable */ String> getCss() {
+    public Output</* @Nullable */ String> css() {
         return this.css;
     }
     /**
@@ -83,7 +84,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The CSS version number.
      * 
      */
-    public Output<String> getCssVersion() {
+    public Output<String> cssVersion() {
         return this.cssVersion;
     }
     /**
@@ -97,7 +98,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
      * 
      */
-    public Output</* @Nullable */ String> getImageFile() {
+    public Output</* @Nullable */ String> imageFile() {
         return this.imageFile;
     }
     /**
@@ -111,7 +112,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The logo image URL for the UI customization.
      * 
      */
-    public Output<String> getImageUrl() {
+    public Output<String> imageUrl() {
         return this.imageUrl;
     }
     /**
@@ -125,7 +126,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
      * 
      */
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
@@ -139,7 +140,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @return The user pool ID for the user pool.
      * 
      */
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -165,7 +166,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public UserPoolUICustomization(String name, UserPoolUICustomizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/userPoolUICustomization:UserPoolUICustomization", name, args == null ? UserPoolUICustomizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/userPoolUICustomization:UserPoolUICustomization", name, args == null ? UserPoolUICustomizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserPoolUICustomization(String name, Output<String> id, @Nullable UserPoolUICustomizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

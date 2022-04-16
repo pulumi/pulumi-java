@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetCapacityRebalanceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
     @Import(name="capacityRebalance")
       private final @Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance;
 
-    public Output<EC2FleetCapacityRebalanceArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
+    public Output<EC2FleetCapacityRebalanceArgs> capacityRebalance() {
+        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 
     public EC2FleetMaintenanceStrategiesArgs(@Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance) {
@@ -26,7 +27,7 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
     }
 
     private EC2FleetMaintenanceStrategiesArgs() {
-        this.capacityRebalance = Output.empty();
+        this.capacityRebalance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder capacityRebalance(@Nullable EC2FleetCapacityRebalanceArgs capacityRebalance) {
-            this.capacityRebalance = Output.ofNullable(capacityRebalance);
+            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
             return this;
         }        public EC2FleetMaintenanceStrategiesArgs build() {
             return new EC2FleetMaintenanceStrategiesArgs(capacityRebalance);

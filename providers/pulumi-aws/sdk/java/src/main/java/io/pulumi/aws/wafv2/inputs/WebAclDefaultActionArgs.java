@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class WebAclDefaultActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="allow")
       private final @Nullable Output<WebAclDefaultActionAllowArgs> allow;
 
-    public Output<WebAclDefaultActionAllowArgs> getAllow() {
-        return this.allow == null ? Output.empty() : this.allow;
+    public Output<WebAclDefaultActionAllowArgs> allow() {
+        return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WebAclDefaultActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="block")
       private final @Nullable Output<WebAclDefaultActionBlockArgs> block;
 
-    public Output<WebAclDefaultActionBlockArgs> getBlock() {
-        return this.block == null ? Output.empty() : this.block;
+    public Output<WebAclDefaultActionBlockArgs> block() {
+        return this.block == null ? Codegen.empty() : this.block;
     }
 
     public WebAclDefaultActionArgs(
@@ -45,8 +46,8 @@ public final class WebAclDefaultActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private WebAclDefaultActionArgs() {
-        this.allow = Output.empty();
-        this.block = Output.empty();
+        this.allow = Codegen.empty();
+        this.block = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WebAclDefaultActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allow(@Nullable WebAclDefaultActionAllowArgs allow) {
-            this.allow = Output.ofNullable(allow);
+            this.allow = Codegen.ofNullable(allow);
             return this;
         }
         public Builder block(@Nullable Output<WebAclDefaultActionBlockArgs> block) {
@@ -84,7 +85,7 @@ public final class WebAclDefaultActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder block(@Nullable WebAclDefaultActionBlockArgs block) {
-            this.block = Output.ofNullable(block);
+            this.block = Codegen.ofNullable(block);
             return this;
         }        public WebAclDefaultActionArgs build() {
             return new WebAclDefaultActionArgs(allow, block);

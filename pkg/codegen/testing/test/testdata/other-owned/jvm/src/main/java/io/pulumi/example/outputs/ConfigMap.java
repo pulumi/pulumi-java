@@ -18,7 +18,7 @@ public final class ConfigMap {
         this.config = config;
     }
 
-    public Optional<String> getConfig() {
+    public Optional<String> config() {
         return Optional.ofNullable(this.config);
     }
 

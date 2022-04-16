@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+    public Output<String> end() {
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+    public Output<String> start() {
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public TimeSpanArgs(
@@ -48,8 +49,8 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimeSpanArgs() {
-        this.end = Output.empty();
-        this.start = Output.empty();
+        this.end = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder end(@Nullable String end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder start(@Nullable Output<String> start) {
@@ -87,7 +88,7 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder start(@Nullable String start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public TimeSpanArgs build() {
             return new TimeSpanArgs(end, start);

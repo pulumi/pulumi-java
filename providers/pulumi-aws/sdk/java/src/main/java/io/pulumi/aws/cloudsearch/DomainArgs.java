@@ -8,6 +8,7 @@ import io.pulumi.aws.cloudsearch.inputs.DomainIndexFieldArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainScalingParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointOptions")
       private final @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
 
-    public Output<DomainEndpointOptionsArgs> getEndpointOptions() {
-        return this.endpointOptions == null ? Output.empty() : this.endpointOptions;
+    public Output<DomainEndpointOptionsArgs> endpointOptions() {
+        return this.endpointOptions == null ? Codegen.empty() : this.endpointOptions;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="indexFields")
       private final @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
 
-    public Output<List<DomainIndexFieldArgs>> getIndexFields() {
-        return this.indexFields == null ? Output.empty() : this.indexFields;
+    public Output<List<DomainIndexFieldArgs>> indexFields() {
+        return this.indexFields == null ? Codegen.empty() : this.indexFields;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
-    public Output<Boolean> getMultiAz() {
-        return this.multiAz == null ? Output.empty() : this.multiAz;
+    public Output<Boolean> multiAz() {
+        return this.multiAz == null ? Codegen.empty() : this.multiAz;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalingParameters")
       private final @Nullable Output<DomainScalingParametersArgs> scalingParameters;
 
-    public Output<DomainScalingParametersArgs> getScalingParameters() {
-        return this.scalingParameters == null ? Output.empty() : this.scalingParameters;
+    public Output<DomainScalingParametersArgs> scalingParameters() {
+        return this.scalingParameters == null ? Codegen.empty() : this.scalingParameters;
     }
 
     public DomainArgs(
@@ -88,11 +89,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.endpointOptions = Output.empty();
-        this.indexFields = Output.empty();
-        this.multiAz = Output.empty();
-        this.name = Output.empty();
-        this.scalingParameters = Output.empty();
+        this.endpointOptions = Codegen.empty();
+        this.indexFields = Codegen.empty();
+        this.multiAz = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scalingParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointOptions(@Nullable DomainEndpointOptionsArgs endpointOptions) {
-            this.endpointOptions = Output.ofNullable(endpointOptions);
+            this.endpointOptions = Codegen.ofNullable(endpointOptions);
             return this;
         }
         public Builder indexFields(@Nullable Output<List<DomainIndexFieldArgs>> indexFields) {
@@ -136,7 +137,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder indexFields(@Nullable List<DomainIndexFieldArgs> indexFields) {
-            this.indexFields = Output.ofNullable(indexFields);
+            this.indexFields = Codegen.ofNullable(indexFields);
             return this;
         }
         public Builder indexFields(DomainIndexFieldArgs... indexFields) {
@@ -147,7 +148,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multiAz(@Nullable Boolean multiAz) {
-            this.multiAz = Output.ofNullable(multiAz);
+            this.multiAz = Codegen.ofNullable(multiAz);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -155,7 +156,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder scalingParameters(@Nullable Output<DomainScalingParametersArgs> scalingParameters) {
@@ -163,7 +164,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scalingParameters(@Nullable DomainScalingParametersArgs scalingParameters) {
-            this.scalingParameters = Output.ofNullable(scalingParameters);
+            this.scalingParameters = Codegen.ofNullable(scalingParameters);
             return this;
         }        public DomainArgs build() {
             return new DomainArgs(endpointOptions, indexFields, multiAz, name, scalingParameters);

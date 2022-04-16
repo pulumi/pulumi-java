@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The ID of the application.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -57,7 +58,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The display name of the application.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +72,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -85,7 +86,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The ARM resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return A valid instance SKU.
      * 
      */
-    public Output<AppSkuInfoResponse> getSku() {
+    public Output<AppSkuInfoResponse> sku() {
         return this.sku;
     }
     /**
@@ -113,7 +114,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The subdomain of the application.
      * 
      */
-    public Output</* @Nullable */ String> getSubdomain() {
+    public Output</* @Nullable */ String> subdomain() {
         return this.subdomain;
     }
     /**
@@ -127,7 +128,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +142,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
      */
-    public Output</* @Nullable */ String> getTemplate() {
+    public Output</* @Nullable */ String> template() {
         return this.template;
     }
     /**
@@ -155,7 +156,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +182,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public App(String name, AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:iotcentral:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:iotcentral:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private App(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

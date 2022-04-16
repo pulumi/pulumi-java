@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
     @Import(name="magnitude", required=true)
       private final Double magnitude;
 
-    public Double getMagnitude() {
+    public Double magnitude() {
         return this.magnitude;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
     @Import(name="score", required=true)
       private final Double score;
 
-    public Double getScore() {
+    public Double score() {
         return this.score;
     }
 

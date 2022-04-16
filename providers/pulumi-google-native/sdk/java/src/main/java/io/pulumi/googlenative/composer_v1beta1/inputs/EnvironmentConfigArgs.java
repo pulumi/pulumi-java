@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.composer_v1beta1.enums.EnvironmentConfigEnvironmentSize;
 import io.pulumi.googlenative.composer_v1beta1.inputs.DatabaseConfigArgs;
 import io.pulumi.googlenative.composer_v1beta1.inputs.EncryptionConfigArgs;
@@ -36,8 +37,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="databaseConfig")
       private final @Nullable Output<DatabaseConfigArgs> databaseConfig;
 
-    public Output<DatabaseConfigArgs> getDatabaseConfig() {
-        return this.databaseConfig == null ? Output.empty() : this.databaseConfig;
+    public Output<DatabaseConfigArgs> databaseConfig() {
+        return this.databaseConfig == null ? Codegen.empty() : this.databaseConfig;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="environmentSize")
       private final @Nullable Output<EnvironmentConfigEnvironmentSize> environmentSize;
 
-    public Output<EnvironmentConfigEnvironmentSize> getEnvironmentSize() {
-        return this.environmentSize == null ? Output.empty() : this.environmentSize;
+    public Output<EnvironmentConfigEnvironmentSize> environmentSize() {
+        return this.environmentSize == null ? Codegen.empty() : this.environmentSize;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
+    public Output<MaintenanceWindowArgs> maintenanceWindow() {
+        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="masterAuthorizedNetworksConfig")
       private final @Nullable Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
-    public Output<MasterAuthorizedNetworksConfigArgs> getMasterAuthorizedNetworksConfig() {
-        return this.masterAuthorizedNetworksConfig == null ? Output.empty() : this.masterAuthorizedNetworksConfig;
+    public Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig() {
+        return this.masterAuthorizedNetworksConfig == null ? Codegen.empty() : this.masterAuthorizedNetworksConfig;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="nodeConfig")
       private final @Nullable Output<NodeConfigArgs> nodeConfig;
 
-    public Output<NodeConfigArgs> getNodeConfig() {
-        return this.nodeConfig == null ? Output.empty() : this.nodeConfig;
+    public Output<NodeConfigArgs> nodeConfig() {
+        return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
-        return this.nodeCount == null ? Output.empty() : this.nodeCount;
+    public Output<Integer> nodeCount() {
+        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateEnvironmentConfig")
       private final @Nullable Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig;
 
-    public Output<PrivateEnvironmentConfigArgs> getPrivateEnvironmentConfig() {
-        return this.privateEnvironmentConfig == null ? Output.empty() : this.privateEnvironmentConfig;
+    public Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig() {
+        return this.privateEnvironmentConfig == null ? Codegen.empty() : this.privateEnvironmentConfig;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="softwareConfig")
       private final @Nullable Output<SoftwareConfigArgs> softwareConfig;
 
-    public Output<SoftwareConfigArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
+    public Output<SoftwareConfigArgs> softwareConfig() {
+        return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="webServerConfig")
       private final @Nullable Output<WebServerConfigArgs> webServerConfig;
 
-    public Output<WebServerConfigArgs> getWebServerConfig() {
-        return this.webServerConfig == null ? Output.empty() : this.webServerConfig;
+    public Output<WebServerConfigArgs> webServerConfig() {
+        return this.webServerConfig == null ? Codegen.empty() : this.webServerConfig;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="webServerNetworkAccessControl")
       private final @Nullable Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl;
 
-    public Output<WebServerNetworkAccessControlArgs> getWebServerNetworkAccessControl() {
-        return this.webServerNetworkAccessControl == null ? Output.empty() : this.webServerNetworkAccessControl;
+    public Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl() {
+        return this.webServerNetworkAccessControl == null ? Codegen.empty() : this.webServerNetworkAccessControl;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workloadsConfig")
       private final @Nullable Output<WorkloadsConfigArgs> workloadsConfig;
 
-    public Output<WorkloadsConfigArgs> getWorkloadsConfig() {
-        return this.workloadsConfig == null ? Output.empty() : this.workloadsConfig;
+    public Output<WorkloadsConfigArgs> workloadsConfig() {
+        return this.workloadsConfig == null ? Codegen.empty() : this.workloadsConfig;
     }
 
     public EnvironmentConfigArgs(
@@ -189,18 +190,18 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EnvironmentConfigArgs() {
-        this.databaseConfig = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.environmentSize = Output.empty();
-        this.maintenanceWindow = Output.empty();
-        this.masterAuthorizedNetworksConfig = Output.empty();
-        this.nodeConfig = Output.empty();
-        this.nodeCount = Output.empty();
-        this.privateEnvironmentConfig = Output.empty();
-        this.softwareConfig = Output.empty();
-        this.webServerConfig = Output.empty();
-        this.webServerNetworkAccessControl = Output.empty();
-        this.workloadsConfig = Output.empty();
+        this.databaseConfig = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.environmentSize = Codegen.empty();
+        this.maintenanceWindow = Codegen.empty();
+        this.masterAuthorizedNetworksConfig = Codegen.empty();
+        this.nodeConfig = Codegen.empty();
+        this.nodeCount = Codegen.empty();
+        this.privateEnvironmentConfig = Codegen.empty();
+        this.softwareConfig = Codegen.empty();
+        this.webServerConfig = Codegen.empty();
+        this.webServerNetworkAccessControl = Codegen.empty();
+        this.workloadsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder databaseConfig(@Nullable DatabaseConfigArgs databaseConfig) {
-            this.databaseConfig = Output.ofNullable(databaseConfig);
+            this.databaseConfig = Codegen.ofNullable(databaseConfig);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
@@ -258,7 +259,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder environmentSize(@Nullable Output<EnvironmentConfigEnvironmentSize> environmentSize) {
@@ -266,7 +267,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder environmentSize(@Nullable EnvironmentConfigEnvironmentSize environmentSize) {
-            this.environmentSize = Output.ofNullable(environmentSize);
+            this.environmentSize = Codegen.ofNullable(environmentSize);
             return this;
         }
         public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
@@ -274,7 +275,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
             return this;
         }
         public Builder masterAuthorizedNetworksConfig(@Nullable Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig) {
@@ -282,7 +283,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder masterAuthorizedNetworksConfig(@Nullable MasterAuthorizedNetworksConfigArgs masterAuthorizedNetworksConfig) {
-            this.masterAuthorizedNetworksConfig = Output.ofNullable(masterAuthorizedNetworksConfig);
+            this.masterAuthorizedNetworksConfig = Codegen.ofNullable(masterAuthorizedNetworksConfig);
             return this;
         }
         public Builder nodeConfig(@Nullable Output<NodeConfigArgs> nodeConfig) {
@@ -290,7 +291,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder nodeConfig(@Nullable NodeConfigArgs nodeConfig) {
-            this.nodeConfig = Output.ofNullable(nodeConfig);
+            this.nodeConfig = Codegen.ofNullable(nodeConfig);
             return this;
         }
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
@@ -298,7 +299,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Output.ofNullable(nodeCount);
+            this.nodeCount = Codegen.ofNullable(nodeCount);
             return this;
         }
         public Builder privateEnvironmentConfig(@Nullable Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig) {
@@ -306,7 +307,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateEnvironmentConfig(@Nullable PrivateEnvironmentConfigArgs privateEnvironmentConfig) {
-            this.privateEnvironmentConfig = Output.ofNullable(privateEnvironmentConfig);
+            this.privateEnvironmentConfig = Codegen.ofNullable(privateEnvironmentConfig);
             return this;
         }
         public Builder softwareConfig(@Nullable Output<SoftwareConfigArgs> softwareConfig) {
@@ -314,7 +315,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder softwareConfig(@Nullable SoftwareConfigArgs softwareConfig) {
-            this.softwareConfig = Output.ofNullable(softwareConfig);
+            this.softwareConfig = Codegen.ofNullable(softwareConfig);
             return this;
         }
         public Builder webServerConfig(@Nullable Output<WebServerConfigArgs> webServerConfig) {
@@ -322,7 +323,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder webServerConfig(@Nullable WebServerConfigArgs webServerConfig) {
-            this.webServerConfig = Output.ofNullable(webServerConfig);
+            this.webServerConfig = Codegen.ofNullable(webServerConfig);
             return this;
         }
         public Builder webServerNetworkAccessControl(@Nullable Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl) {
@@ -330,7 +331,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder webServerNetworkAccessControl(@Nullable WebServerNetworkAccessControlArgs webServerNetworkAccessControl) {
-            this.webServerNetworkAccessControl = Output.ofNullable(webServerNetworkAccessControl);
+            this.webServerNetworkAccessControl = Codegen.ofNullable(webServerNetworkAccessControl);
             return this;
         }
         public Builder workloadsConfig(@Nullable Output<WorkloadsConfigArgs> workloadsConfig) {
@@ -338,7 +339,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder workloadsConfig(@Nullable WorkloadsConfigArgs workloadsConfig) {
-            this.workloadsConfig = Output.ofNullable(workloadsConfig);
+            this.workloadsConfig = Codegen.ofNullable(workloadsConfig);
             return this;
         }        public EnvironmentConfigArgs build() {
             return new EnvironmentConfigArgs(databaseConfig, encryptionConfig, environmentSize, maintenanceWindow, masterAuthorizedNetworksConfig, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);

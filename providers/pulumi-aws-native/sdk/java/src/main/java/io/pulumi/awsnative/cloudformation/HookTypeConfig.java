@@ -9,6 +9,7 @@ import io.pulumi.awsnative.cloudformation.enums.HookTypeConfigConfigurationAlias
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * @return The configuration data for the extension, in this account and region.
      * 
      */
-    public Output</* @Nullable */ String> getConfiguration() {
+    public Output</* @Nullable */ String> configuration() {
         return this.configuration;
     }
     /**
@@ -43,7 +44,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * @return An alias by which to refer to this extension configuration data.
      * 
      */
-    public Output</* @Nullable */ HookTypeConfigConfigurationAlias> getConfigurationAlias() {
+    public Output</* @Nullable */ HookTypeConfigConfigurationAlias> configurationAlias() {
         return this.configurationAlias;
     }
     /**
@@ -57,7 +58,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the configuration data, in this account and region.
      * 
      */
-    public Output<String> getConfigurationArn() {
+    public Output<String> configurationArn() {
         return this.configurationArn;
     }
     /**
@@ -71,7 +72,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    public Output</* @Nullable */ String> getTypeArn() {
+    public Output</* @Nullable */ String> typeArn() {
         return this.typeArn;
     }
     /**
@@ -89,7 +90,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
 
@@ -115,7 +116,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HookTypeConfig(String name, @Nullable HookTypeConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudformation:HookTypeConfig", name, args == null ? HookTypeConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudformation:HookTypeConfig", name, args == null ? HookTypeConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HookTypeConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

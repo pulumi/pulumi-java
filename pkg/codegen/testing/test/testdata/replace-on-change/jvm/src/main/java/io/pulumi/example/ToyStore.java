@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.ToyStoreArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Chew;
@@ -19,25 +20,25 @@ public class ToyStore extends io.pulumi.resources.CustomResource {
     @Export(name="chew", type=Chew.class, parameters={})
     private Output</* @Nullable */ Chew> chew;
 
-    public Output</* @Nullable */ Chew> getChew() {
+    public Output</* @Nullable */ Chew> chew() {
         return this.chew;
     }
     @Export(name="laser", type=Laser.class, parameters={})
     private Output</* @Nullable */ Laser> laser;
 
-    public Output</* @Nullable */ Laser> getLaser() {
+    public Output</* @Nullable */ Laser> laser() {
         return this.laser;
     }
     @Export(name="stuff", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> stuff;
 
-    public Output</* @Nullable */ List<Toy>> getStuff() {
+    public Output</* @Nullable */ List<Toy>> stuff() {
         return this.stuff;
     }
     @Export(name="wanted", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> wanted;
 
-    public Output</* @Nullable */ List<Toy>> getWanted() {
+    public Output</* @Nullable */ List<Toy>> wanted() {
         return this.wanted;
     }
 
@@ -63,7 +64,7 @@ public class ToyStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ToyStore(String name, @Nullable ToyStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::ToyStore", name, args == null ? ToyStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::ToyStore", name, args == null ? ToyStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ToyStore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

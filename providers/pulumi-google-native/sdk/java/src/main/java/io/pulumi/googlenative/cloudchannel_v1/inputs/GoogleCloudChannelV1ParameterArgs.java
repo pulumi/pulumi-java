@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ValueArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
     @Import(name="value")
       private final @Nullable Output<GoogleCloudChannelV1ValueArgs> value;
 
-    public Output<GoogleCloudChannelV1ValueArgs> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<GoogleCloudChannelV1ValueArgs> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public GoogleCloudChannelV1ParameterArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
     }
 
     private GoogleCloudChannelV1ParameterArgs() {
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder value(@Nullable Output<GoogleCloudChannelV1ValueArgs> value) {
@@ -88,7 +89,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
             return this;
         }
         public Builder value(@Nullable GoogleCloudChannelV1ValueArgs value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public GoogleCloudChannelV1ParameterArgs build() {
             return new GoogleCloudChannelV1ParameterArgs(name, value);

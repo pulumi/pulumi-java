@@ -5,6 +5,7 @@ package io.pulumi.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="effect", required=true)
       private final Output<String> effect;
 
-    public Output<String> getEffect() {
+    public Output<String> effect() {
         return this.effect;
     }
 
@@ -35,7 +36,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -47,8 +48,8 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaintArgs() {
-        this.effect = Output.empty();
-        this.value = Output.empty();
+        this.effect = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analysisKind", required=true)
       private final Output<DiscoveryAnalysisKind> analysisKind;
 
-    public Output<DiscoveryAnalysisKind> getAnalysisKind() {
+    public Output<DiscoveryAnalysisKind> analysisKind() {
         return this.analysisKind;
     }
 
@@ -33,7 +34,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiscoveryArgs() {
-        this.analysisKind = Output.empty();
+        this.analysisKind = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -101,77 +101,77 @@ public final class GetPublishedBlueprintResult {
      * Name of the published blueprint definition.
      * 
     */
-    public Optional<String> getBlueprintName() {
+    public Optional<String> blueprintName() {
         return Optional.ofNullable(this.blueprintName);
     }
     /**
      * Version-specific change notes.
      * 
     */
-    public Optional<String> getChangeNotes() {
+    public Optional<String> changeNotes() {
         return Optional.ofNullable(this.changeNotes);
     }
     /**
      * Multi-line explain this resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Parameters required by this blueprint definition.
      * 
     */
-    public Map<String,ParameterDefinitionResponse> getParameters() {
+    public Map<String,ParameterDefinitionResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Resource group placeholders defined by this blueprint definition.
      * 
     */
-    public Map<String,ResourceGroupDefinitionResponse> getResourceGroups() {
+    public Map<String,ResourceGroupDefinitionResponse> resourceGroups() {
         return this.resourceGroups == null ? Map.of() : this.resourceGroups;
     }
     /**
      * Status of the blueprint. This field is readonly.
      * 
     */
-    public BlueprintStatusResponse getStatus() {
+    public BlueprintStatusResponse status() {
         return this.status;
     }
     /**
      * The scope where this blueprint definition can be assigned.
      * 
     */
-    public Optional<String> getTargetScope() {
+    public Optional<String> targetScope() {
         return Optional.ofNullable(this.targetScope);
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

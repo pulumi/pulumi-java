@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
     @Import(name="allowedSuccessCodes")
       private final @Nullable Output<List<Integer>> allowedSuccessCodes;
 
-    public Output<List<Integer>> getAllowedSuccessCodes() {
-        return this.allowedSuccessCodes == null ? Output.empty() : this.allowedSuccessCodes;
+    public Output<List<Integer>> allowedSuccessCodes() {
+        return this.allowedSuccessCodes == null ? Codegen.empty() : this.allowedSuccessCodes;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
     @Import(name="gcsObject")
       private final @Nullable Output<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectGetArgs> gcsObject;
 
-    public Output<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectGetArgs> getGcsObject() {
-        return this.gcsObject == null ? Output.empty() : this.gcsObject;
+    public Output<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectGetArgs> gcsObject() {
+        return this.gcsObject == null ? Codegen.empty() : this.gcsObject;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
     @Import(name="interpreter")
       private final @Nullable Output<String> interpreter;
 
-    public Output<String> getInterpreter() {
-        return this.interpreter == null ? Output.empty() : this.interpreter;
+    public Output<String> interpreter() {
+        return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
-        return this.localPath == null ? Output.empty() : this.localPath;
+    public Output<String> localPath() {
+        return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 
     public PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs(
@@ -76,10 +77,10 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
     }
 
     private PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs() {
-        this.allowedSuccessCodes = Output.empty();
-        this.gcsObject = Output.empty();
-        this.interpreter = Output.empty();
-        this.localPath = Output.empty();
+        this.allowedSuccessCodes = Codegen.empty();
+        this.gcsObject = Codegen.empty();
+        this.interpreter = Codegen.empty();
+        this.localPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
             return this;
         }
         public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
-            this.allowedSuccessCodes = Output.ofNullable(allowedSuccessCodes);
+            this.allowedSuccessCodes = Codegen.ofNullable(allowedSuccessCodes);
             return this;
         }
         public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
@@ -124,7 +125,7 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
             return this;
         }
         public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectGetArgs gcsObject) {
-            this.gcsObject = Output.ofNullable(gcsObject);
+            this.gcsObject = Codegen.ofNullable(gcsObject);
             return this;
         }
         public Builder interpreter(@Nullable Output<String> interpreter) {
@@ -132,7 +133,7 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
             return this;
         }
         public Builder interpreter(@Nullable String interpreter) {
-            this.interpreter = Output.ofNullable(interpreter);
+            this.interpreter = Codegen.ofNullable(interpreter);
             return this;
         }
         public Builder localPath(@Nullable Output<String> localPath) {
@@ -140,7 +141,7 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArg
             return this;
         }
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Output.ofNullable(localPath);
+            this.localPath = Codegen.ofNullable(localPath);
             return this;
         }        public PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs build() {
             return new PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGetArgs(allowedSuccessCodes, gcsObject, interpreter, localPath);

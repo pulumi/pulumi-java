@@ -6,6 +6,7 @@ package io.pulumi.aws.datapipeline.inputs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectAttributeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,8 +20,8 @@ public final class PipelineDefinitionParameterObjectArgs extends io.pulumi.resou
     @Import(name="attributes")
       private final @Nullable Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes;
 
-    public Output<List<PipelineDefinitionParameterObjectAttributeArgs>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<List<PipelineDefinitionParameterObjectAttributeArgs>> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class PipelineDefinitionParameterObjectArgs extends io.pulumi.resou
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -42,8 +43,8 @@ public final class PipelineDefinitionParameterObjectArgs extends io.pulumi.resou
     }
 
     private PipelineDefinitionParameterObjectArgs() {
-        this.attributes = Output.empty();
-        this.id = Output.empty();
+        this.attributes = Codegen.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class PipelineDefinitionParameterObjectArgs extends io.pulumi.resou
             return this;
         }
         public Builder attributes(@Nullable List<PipelineDefinitionParameterObjectAttributeArgs> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder attributes(PipelineDefinitionParameterObjectAttributeArgs... attributes) {

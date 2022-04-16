@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudbuild;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudbuild.TriggerArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerState;
@@ -65,7 +66,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerBuild> getBuild() {
+    public Output</* @Nullable */ TriggerBuild> build() {
         return this.build;
     }
     /**
@@ -79,7 +80,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Time when the trigger was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -93,7 +94,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Human-readable description of the trigger.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -107,7 +108,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Whether the trigger is disabled or not. If true, the trigger will never result in a build.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -121,7 +122,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
      * 
      */
-    public Output</* @Nullable */ String> getFilename() {
+    public Output</* @Nullable */ String> filename() {
         return this.filename;
     }
     /**
@@ -139,7 +140,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerGithub> getGithub() {
+    public Output</* @Nullable */ TriggerGithub> github() {
         return this.github;
     }
     /**
@@ -165,7 +166,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * of the ignoredFiles globs, then we do not trigger a build.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIgnoredFiles() {
+    public Output</* @Nullable */ List<String>> ignoredFiles() {
         return this.ignoredFiles;
     }
     /**
@@ -195,7 +196,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * a build.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIncludedFiles() {
+    public Output</* @Nullable */ List<String>> includedFiles() {
         return this.includedFiles;
     }
     /**
@@ -213,7 +214,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Each named volume must be used by at least two build steps.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -229,7 +230,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -249,7 +250,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerPubsubConfig> getPubsubConfig() {
+    public Output</* @Nullable */ TriggerPubsubConfig> pubsubConfig() {
         return this.pubsubConfig;
     }
     /**
@@ -271,7 +272,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
      * 
      */
-    public Output</* @Nullable */ String> getServiceAccount() {
+    public Output</* @Nullable */ String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -285,7 +286,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getSubstitutions() {
+    public Output</* @Nullable */ Map<String,String>> substitutions() {
         return this.substitutions;
     }
     /**
@@ -299,7 +300,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Tags for annotation of a Build. These are not docker tags.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
     /**
@@ -313,7 +314,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the trigger.
      * 
      */
-    public Output<String> getTriggerId() {
+    public Output<String> triggerId() {
         return this.triggerId;
     }
     /**
@@ -337,7 +338,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerTriggerTemplate> getTriggerTemplate() {
+    public Output</* @Nullable */ TriggerTriggerTemplate> triggerTemplate() {
         return this.triggerTemplate;
     }
     /**
@@ -357,7 +358,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerWebhookConfig> getWebhookConfig() {
+    public Output</* @Nullable */ TriggerWebhookConfig> webhookConfig() {
         return this.webhookConfig;
     }
 
@@ -383,7 +384,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Trigger(String name, @Nullable TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudbuild/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudbuild/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Trigger(String name, Output<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

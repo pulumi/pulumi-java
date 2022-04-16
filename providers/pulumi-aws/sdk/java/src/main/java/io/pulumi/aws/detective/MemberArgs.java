@@ -5,6 +5,7 @@ package io.pulumi.aws.detective;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -33,8 +34,8 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> getDisableEmailNotification() {
-        return this.disableEmailNotification == null ? Output.empty() : this.disableEmailNotification;
+    public Output<Boolean> disableEmailNotification() {
+        return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
 
@@ -55,7 +56,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="graphArn", required=true)
       private final Output<String> graphArn;
 
-    public Output<String> getGraphArn() {
+    public Output<String> graphArn() {
         return this.graphArn;
     }
 
@@ -66,8 +67,8 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     public MemberArgs(
@@ -84,11 +85,11 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberArgs() {
-        this.accountId = Output.empty();
-        this.disableEmailNotification = Output.empty();
-        this.emailAddress = Output.empty();
-        this.graphArn = Output.empty();
-        this.message = Output.empty();
+        this.accountId = Codegen.empty();
+        this.disableEmailNotification = Codegen.empty();
+        this.emailAddress = Codegen.empty();
+        this.graphArn = Codegen.empty();
+        this.message = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
+            this.disableEmailNotification = Codegen.ofNullable(disableEmailNotification);
             return this;
         }
         public Builder emailAddress(Output<String> emailAddress) {
@@ -156,7 +157,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }        public MemberArgs build() {
             return new MemberArgs(accountId, disableEmailNotification, emailAddress, graphArn, message);

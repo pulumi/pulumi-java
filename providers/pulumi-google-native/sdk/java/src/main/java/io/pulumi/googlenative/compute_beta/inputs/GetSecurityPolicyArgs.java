@@ -17,14 +17,14 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="securityPolicy", required=true)
       private final String securityPolicy;
 
-    public String getSecurityPolicy() {
+    public String securityPolicy() {
         return this.securityPolicy;
     }
 

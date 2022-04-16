@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audience", required=true)
       private final Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience;
     }
 
@@ -37,8 +38,8 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;
 
-    public Output<Integer> getExpirationSeconds() {
-        return this.expirationSeconds == null ? Output.empty() : this.expirationSeconds;
+    public Output<Integer> expirationSeconds() {
+        return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
     }
 
     public TokenRequestArgs(
@@ -49,8 +50,8 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TokenRequestArgs() {
-        this.audience = Output.empty();
-        this.expirationSeconds = Output.empty();
+        this.audience = Codegen.empty();
+        this.expirationSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Output.ofNullable(expirationSeconds);
+            this.expirationSeconds = Codegen.ofNullable(expirationSeconds);
             return this;
         }        public TokenRequestArgs build() {
             return new TokenRequestArgs(audience, expirationSeconds);

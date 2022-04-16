@@ -7,6 +7,7 @@ import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExclud
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends io.pulumi
     @Import(name="excludes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes() {
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends io.pulumi
     @Import(name="includes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> getIncludes() {
-        return this.includes == null ? Output.empty() : this.includes;
+    public Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes() {
+        return this.includes == null ? Codegen.empty() : this.includes;
     }
 
     public ClassificationJobS3JobDefinitionScopingArgs(
@@ -45,8 +46,8 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends io.pulumi
     }
 
     private ClassificationJobS3JobDefinitionScopingArgs() {
-        this.excludes = Output.empty();
-        this.includes = Output.empty();
+        this.excludes = Codegen.empty();
+        this.includes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends io.pulumi
             return this;
         }
         public Builder excludes(@Nullable ClassificationJobS3JobDefinitionScopingExcludesArgs excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder includes(@Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes) {
@@ -84,7 +85,7 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends io.pulumi
             return this;
         }
         public Builder includes(@Nullable ClassificationJobS3JobDefinitionScopingIncludesArgs includes) {
-            this.includes = Output.ofNullable(includes);
+            this.includes = Codegen.ofNullable(includes);
             return this;
         }        public ClassificationJobS3JobDefinitionScopingArgs build() {
             return new ClassificationJobS3JobDefinitionScopingArgs(excludes, includes);

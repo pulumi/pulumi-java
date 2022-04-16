@@ -12,6 +12,7 @@ import io.pulumi.awsnative.sagemaker.outputs.OnlineStoreConfigProperties;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @return Description about the FeatureGroup.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -47,7 +48,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @return The Event Time Feature Name.
      * 
      */
-    public Output<String> getEventTimeFeatureName() {
+    public Output<String> eventTimeFeatureName() {
         return this.eventTimeFeatureName;
     }
     /**
@@ -61,7 +62,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @return An Array of Feature Definition
      * 
      */
-    public Output<List<FeatureGroupFeatureDefinition>> getFeatureDefinitions() {
+    public Output<List<FeatureGroupFeatureDefinition>> featureDefinitions() {
         return this.featureDefinitions;
     }
     /**
@@ -75,19 +76,19 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @return The Name of the FeatureGroup.
      * 
      */
-    public Output<String> getFeatureGroupName() {
+    public Output<String> featureGroupName() {
         return this.featureGroupName;
     }
     @Export(name="offlineStoreConfig", type=OfflineStoreConfigProperties.class, parameters={})
     private Output</* @Nullable */ OfflineStoreConfigProperties> offlineStoreConfig;
 
-    public Output</* @Nullable */ OfflineStoreConfigProperties> getOfflineStoreConfig() {
+    public Output</* @Nullable */ OfflineStoreConfigProperties> offlineStoreConfig() {
         return this.offlineStoreConfig;
     }
     @Export(name="onlineStoreConfig", type=OnlineStoreConfigProperties.class, parameters={})
     private Output</* @Nullable */ OnlineStoreConfigProperties> onlineStoreConfig;
 
-    public Output</* @Nullable */ OnlineStoreConfigProperties> getOnlineStoreConfig() {
+    public Output</* @Nullable */ OnlineStoreConfigProperties> onlineStoreConfig() {
         return this.onlineStoreConfig;
     }
     /**
@@ -101,7 +102,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @return The Record Identifier Feature Name.
      * 
      */
-    public Output<String> getRecordIdentifierFeatureName() {
+    public Output<String> recordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
     }
     /**
@@ -115,7 +116,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @return Role Arn
      * 
      */
-    public Output</* @Nullable */ String> getRoleArn() {
+    public Output</* @Nullable */ String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -129,7 +130,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pair to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<FeatureGroupTag>> getTags() {
+    public Output</* @Nullable */ List<FeatureGroupTag>> tags() {
         return this.tags;
     }
 
@@ -155,7 +156,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FeatureGroup(String name, FeatureGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:FeatureGroup", name, args == null ? FeatureGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:FeatureGroup", name, args == null ? FeatureGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FeatureGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

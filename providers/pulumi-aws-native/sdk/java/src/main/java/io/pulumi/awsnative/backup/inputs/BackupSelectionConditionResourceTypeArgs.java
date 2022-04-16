@@ -5,6 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,21 +17,21 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
     @Import(name="conditionKey", required=true)
       private final Output<String> conditionKey;
 
-    public Output<String> getConditionKey() {
+    public Output<String> conditionKey() {
         return this.conditionKey;
     }
 
     @Import(name="conditionType", required=true)
       private final Output<String> conditionType;
 
-    public Output<String> getConditionType() {
+    public Output<String> conditionType() {
         return this.conditionType;
     }
 
     @Import(name="conditionValue", required=true)
       private final Output<String> conditionValue;
 
-    public Output<String> getConditionValue() {
+    public Output<String> conditionValue() {
         return this.conditionValue;
     }
 
@@ -44,9 +45,9 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
     }
 
     private BackupSelectionConditionResourceTypeArgs() {
-        this.conditionKey = Output.empty();
-        this.conditionType = Output.empty();
-        this.conditionValue = Output.empty();
+        this.conditionKey = Codegen.empty();
+        this.conditionType = Codegen.empty();
+        this.conditionValue = Codegen.empty();
     }
 
     public static Builder builder() {

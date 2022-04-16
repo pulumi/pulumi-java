@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotButtonArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     @Import(name="buttons")
       private final @Nullable Output<List<BotButtonArgs>> buttons;
 
-    public Output<List<BotButtonArgs>> getButtons() {
-        return this.buttons == null ? Output.empty() : this.buttons;
+    public Output<List<BotButtonArgs>> buttons() {
+        return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     @Import(name="imageUrl")
       private final @Nullable Output<String> imageUrl;
 
-    public Output<String> getImageUrl() {
-        return this.imageUrl == null ? Output.empty() : this.imageUrl;
+    public Output<String> imageUrl() {
+        return this.imageUrl == null ? Codegen.empty() : this.imageUrl;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
-        return this.subtitle == null ? Output.empty() : this.subtitle;
+    public Output<String> subtitle() {
+        return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -76,10 +77,10 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     }
 
     private BotImageResponseCardArgs() {
-        this.buttons = Output.empty();
-        this.imageUrl = Output.empty();
-        this.subtitle = Output.empty();
-        this.title = Output.empty();
+        this.buttons = Codegen.empty();
+        this.imageUrl = Codegen.empty();
+        this.subtitle = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder buttons(@Nullable List<BotButtonArgs> buttons) {
-            this.buttons = Output.ofNullable(buttons);
+            this.buttons = Codegen.ofNullable(buttons);
             return this;
         }
         public Builder buttons(BotButtonArgs... buttons) {
@@ -124,7 +125,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = Output.ofNullable(imageUrl);
+            this.imageUrl = Codegen.ofNullable(imageUrl);
             return this;
         }
         public Builder subtitle(@Nullable Output<String> subtitle) {
@@ -132,7 +133,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Output.ofNullable(subtitle);
+            this.subtitle = Codegen.ofNullable(subtitle);
             return this;
         }
         public Builder title(Output<String> title) {

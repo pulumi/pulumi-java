@@ -23,7 +23,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
     @Import(name="schedule", required=true)
       private final String schedule;
 
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
 

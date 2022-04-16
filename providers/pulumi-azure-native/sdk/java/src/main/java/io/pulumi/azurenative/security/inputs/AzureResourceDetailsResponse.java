@@ -23,7 +23,7 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

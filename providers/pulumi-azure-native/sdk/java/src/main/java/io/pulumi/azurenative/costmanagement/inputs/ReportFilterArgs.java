@@ -6,6 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportComparisonExpressionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="and")
       private final @Nullable Output<List<ReportFilterArgs>> and;
 
-    public Output<List<ReportFilterArgs>> getAnd() {
-        return this.and == null ? Output.empty() : this.and;
+    public Output<List<ReportFilterArgs>> and() {
+        return this.and == null ? Codegen.empty() : this.and;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimension")
       private final @Nullable Output<ReportComparisonExpressionArgs> dimension;
 
-    public Output<ReportComparisonExpressionArgs> getDimension() {
-        return this.dimension == null ? Output.empty() : this.dimension;
+    public Output<ReportComparisonExpressionArgs> dimension() {
+        return this.dimension == null ? Codegen.empty() : this.dimension;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="not")
       private final @Nullable Output<ReportFilterArgs> not;
 
-    public Output<ReportFilterArgs> getNot() {
-        return this.not == null ? Output.empty() : this.not;
+    public Output<ReportFilterArgs> not() {
+        return this.not == null ? Codegen.empty() : this.not;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="or")
       private final @Nullable Output<List<ReportFilterArgs>> or;
 
-    public Output<List<ReportFilterArgs>> getOr() {
-        return this.or == null ? Output.empty() : this.or;
+    public Output<List<ReportFilterArgs>> or() {
+        return this.or == null ? Codegen.empty() : this.or;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<ReportComparisonExpressionArgs> tag;
 
-    public Output<ReportComparisonExpressionArgs> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<ReportComparisonExpressionArgs> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public ReportFilterArgs(
@@ -88,11 +89,11 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportFilterArgs() {
-        this.and = Output.empty();
-        this.dimension = Output.empty();
-        this.not = Output.empty();
-        this.or = Output.empty();
-        this.tag = Output.empty();
+        this.and = Codegen.empty();
+        this.dimension = Codegen.empty();
+        this.not = Codegen.empty();
+        this.or = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder and(@Nullable List<ReportFilterArgs> and) {
-            this.and = Output.ofNullable(and);
+            this.and = Codegen.ofNullable(and);
             return this;
         }
         public Builder and(ReportFilterArgs... and) {
@@ -139,7 +140,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimension(@Nullable ReportComparisonExpressionArgs dimension) {
-            this.dimension = Output.ofNullable(dimension);
+            this.dimension = Codegen.ofNullable(dimension);
             return this;
         }
         public Builder not(@Nullable Output<ReportFilterArgs> not) {
@@ -147,7 +148,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder not(@Nullable ReportFilterArgs not) {
-            this.not = Output.ofNullable(not);
+            this.not = Codegen.ofNullable(not);
             return this;
         }
         public Builder or(@Nullable Output<List<ReportFilterArgs>> or) {
@@ -155,7 +156,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder or(@Nullable List<ReportFilterArgs> or) {
-            this.or = Output.ofNullable(or);
+            this.or = Codegen.ofNullable(or);
             return this;
         }
         public Builder or(ReportFilterArgs... or) {
@@ -166,7 +167,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tag(@Nullable ReportComparisonExpressionArgs tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public ReportFilterArgs build() {
             return new ReportFilterArgs(and, dimension, not, or, tag);

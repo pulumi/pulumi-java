@@ -1,7 +1,6 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.internal.DeploymentInternal;
 
@@ -18,10 +17,6 @@ import static java.util.Objects.requireNonNull;
  * CRUD operations for provisioning.
  */
 public class ComponentResource extends Resource {
-
-    @SuppressWarnings("unused")
-    @InternalField
-    private final ComponentResourceInternal internal = new ComponentResourceInternal(this);
 
     /**
      * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
@@ -108,9 +103,12 @@ public class ComponentResource extends Resource {
     @InternalUse
     @ParametersAreNonnullByDefault
     public static class ComponentResourceInternal extends ResourceInternal {
-
         protected ComponentResourceInternal(ComponentResource resource) {
             super(resource);
+        }
+
+        public static ComponentResourceInternal from(ComponentResource r) {
+            return new ComponentResourceInternal(r);
         }
     }
 }

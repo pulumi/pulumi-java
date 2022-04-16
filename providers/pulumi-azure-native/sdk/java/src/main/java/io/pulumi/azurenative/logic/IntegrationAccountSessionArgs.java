@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
     @Import(name="content")
       private final @Nullable Output<Object> content;
 
-    public Output<Object> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<Object> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -45,8 +46,8 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
     @Import(name="sessionName")
       private final @Nullable Output<String> sessionName;
 
-    public Output<String> getSessionName() {
-        return this.sessionName == null ? Output.empty() : this.sessionName;
+    public Output<String> sessionName() {
+        return this.sessionName == null ? Codegen.empty() : this.sessionName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountSessionArgs(
@@ -98,12 +99,12 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
     }
 
     private IntegrationAccountSessionArgs() {
-        this.content = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sessionName = Output.empty();
-        this.tags = Output.empty();
+        this.content = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sessionName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder content(@Nullable Object content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder integrationAccountName(Output<String> integrationAccountName) {
@@ -157,7 +158,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -173,7 +174,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Output.ofNullable(sessionName);
+            this.sessionName = Codegen.ofNullable(sessionName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -181,7 +182,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountSessionArgs build() {
             return new IntegrationAccountSessionArgs(content, integrationAccountName, location, resourceGroupName, sessionName, tags);

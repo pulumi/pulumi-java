@@ -5,6 +5,7 @@ package io.pulumi.azurenative.timeseriesinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
     @Import(name="propertyName")
       private final @Nullable Output<String> propertyName;
 
-    public Output<String> getPropertyName() {
-        return this.propertyName == null ? Output.empty() : this.propertyName;
+    public Output<String> propertyName() {
+        return this.propertyName == null ? Codegen.empty() : this.propertyName;
     }
 
     public LocalTimestampTimeZoneOffsetArgs(@Nullable Output<String> propertyName) {
@@ -34,7 +35,7 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
     }
 
     private LocalTimestampTimeZoneOffsetArgs() {
-        this.propertyName = Output.empty();
+        this.propertyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder propertyName(@Nullable String propertyName) {
-            this.propertyName = Output.ofNullable(propertyName);
+            this.propertyName = Codegen.ofNullable(propertyName);
             return this;
         }        public LocalTimestampTimeZoneOffsetArgs build() {
             return new LocalTimestampTimeZoneOffsetArgs(propertyName);

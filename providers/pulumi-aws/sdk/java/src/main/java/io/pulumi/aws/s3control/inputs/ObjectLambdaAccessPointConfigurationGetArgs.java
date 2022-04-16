@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
     @Import(name="allowedFeatures")
       private final @Nullable Output<List<String>> allowedFeatures;
 
-    public Output<List<String>> getAllowedFeatures() {
-        return this.allowedFeatures == null ? Output.empty() : this.allowedFeatures;
+    public Output<List<String>> allowedFeatures() {
+        return this.allowedFeatures == null ? Codegen.empty() : this.allowedFeatures;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
     @Import(name="cloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> cloudWatchMetricsEnabled;
 
-    public Output<Boolean> getCloudWatchMetricsEnabled() {
-        return this.cloudWatchMetricsEnabled == null ? Output.empty() : this.cloudWatchMetricsEnabled;
+    public Output<Boolean> cloudWatchMetricsEnabled() {
+        return this.cloudWatchMetricsEnabled == null ? Codegen.empty() : this.cloudWatchMetricsEnabled;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
     @Import(name="supportingAccessPoint", required=true)
       private final Output<String> supportingAccessPoint;
 
-    public Output<String> getSupportingAccessPoint() {
+    public Output<String> supportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
@@ -57,7 +58,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
     @Import(name="transformationConfigurations", required=true)
       private final Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations;
 
-    public Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> getTransformationConfigurations() {
+    public Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations() {
         return this.transformationConfigurations;
     }
 
@@ -73,10 +74,10 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
     }
 
     private ObjectLambdaAccessPointConfigurationGetArgs() {
-        this.allowedFeatures = Output.empty();
-        this.cloudWatchMetricsEnabled = Output.empty();
-        this.supportingAccessPoint = Output.empty();
-        this.transformationConfigurations = Output.empty();
+        this.allowedFeatures = Codegen.empty();
+        this.cloudWatchMetricsEnabled = Codegen.empty();
+        this.supportingAccessPoint = Codegen.empty();
+        this.transformationConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
             return this;
         }
         public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
-            this.allowedFeatures = Output.ofNullable(allowedFeatures);
+            this.allowedFeatures = Codegen.ofNullable(allowedFeatures);
             return this;
         }
         public Builder allowedFeatures(String... allowedFeatures) {
@@ -121,7 +122,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
             return this;
         }
         public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = Output.ofNullable(cloudWatchMetricsEnabled);
+            this.cloudWatchMetricsEnabled = Codegen.ofNullable(cloudWatchMetricsEnabled);
             return this;
         }
         public Builder supportingAccessPoint(Output<String> supportingAccessPoint) {

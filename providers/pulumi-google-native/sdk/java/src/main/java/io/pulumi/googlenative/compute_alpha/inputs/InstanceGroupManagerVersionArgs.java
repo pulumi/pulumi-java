@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.FixedOrPercentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     @Import(name="instanceTemplate")
       private final @Nullable Output<String> instanceTemplate;
 
-    public Output<String> getInstanceTemplate() {
-        return this.instanceTemplate == null ? Output.empty() : this.instanceTemplate;
+    public Output<String> instanceTemplate() {
+        return this.instanceTemplate == null ? Codegen.empty() : this.instanceTemplate;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     @Import(name="targetSize")
       private final @Nullable Output<FixedOrPercentArgs> targetSize;
 
-    public Output<FixedOrPercentArgs> getTargetSize() {
-        return this.targetSize == null ? Output.empty() : this.targetSize;
+    public Output<FixedOrPercentArgs> targetSize() {
+        return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 
     public InstanceGroupManagerVersionArgs(
@@ -58,9 +59,9 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     }
 
     private InstanceGroupManagerVersionArgs() {
-        this.instanceTemplate = Output.empty();
-        this.name = Output.empty();
-        this.targetSize = Output.empty();
+        this.instanceTemplate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.targetSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder instanceTemplate(@Nullable String instanceTemplate) {
-            this.instanceTemplate = Output.ofNullable(instanceTemplate);
+            this.instanceTemplate = Codegen.ofNullable(instanceTemplate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -100,7 +101,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder targetSize(@Nullable Output<FixedOrPercentArgs> targetSize) {
@@ -108,7 +109,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder targetSize(@Nullable FixedOrPercentArgs targetSize) {
-            this.targetSize = Output.ofNullable(targetSize);
+            this.targetSize = Codegen.ofNullable(targetSize);
             return this;
         }        public InstanceGroupManagerVersionArgs build() {
             return new InstanceGroupManagerVersionArgs(instanceTemplate, name, targetSize);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
-        return this.gatewayId == null ? Output.empty() : this.gatewayId;
+    public Output<String> gatewayId() {
+        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -43,8 +44,8 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public RouteTableAssociationArgs(
@@ -57,9 +58,9 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private RouteTableAssociationArgs() {
-        this.gatewayId = Output.empty();
-        this.routeTableId = Output.empty();
-        this.subnetId = Output.empty();
+        this.gatewayId = Codegen.empty();
+        this.routeTableId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Output.ofNullable(gatewayId);
+            this.gatewayId = Codegen.ofNullable(gatewayId);
             return this;
         }
         public Builder routeTableId(Output<String> routeTableId) {
@@ -107,7 +108,7 @@ public final class RouteTableAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public RouteTableAssociationArgs build() {
             return new RouteTableAssociationArgs(gatewayId, routeTableId, subnetId);

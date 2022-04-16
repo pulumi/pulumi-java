@@ -5,6 +5,7 @@ package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.IapTestServiceAccountInfoArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iapTestServiceAccountInfo")
       private final @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
-    public Output<IapTestServiceAccountInfoArgs> getIapTestServiceAccountInfo() {
-        return this.iapTestServiceAccountInfo == null ? Output.empty() : this.iapTestServiceAccountInfo;
+    public Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo() {
+        return this.iapTestServiceAccountInfo == null ? Codegen.empty() : this.iapTestServiceAccountInfo;
     }
 
     public IapCredentialArgs(@Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
@@ -34,7 +35,7 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IapCredentialArgs() {
-        this.iapTestServiceAccountInfo = Output.empty();
+        this.iapTestServiceAccountInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iapTestServiceAccountInfo(@Nullable IapTestServiceAccountInfoArgs iapTestServiceAccountInfo) {
-            this.iapTestServiceAccountInfo = Output.ofNullable(iapTestServiceAccountInfo);
+            this.iapTestServiceAccountInfo = Codegen.ofNullable(iapTestServiceAccountInfo);
             return this;
         }        public IapCredentialArgs build() {
             return new IapCredentialArgs(iapTestServiceAccountInfo);

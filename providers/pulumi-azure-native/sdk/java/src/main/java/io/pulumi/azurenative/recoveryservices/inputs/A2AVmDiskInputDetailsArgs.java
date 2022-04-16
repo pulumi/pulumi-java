@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
     @Import(name="diskUri")
       private final @Nullable Output<String> diskUri;
 
-    public Output<String> getDiskUri() {
-        return this.diskUri == null ? Output.empty() : this.diskUri;
+    public Output<String> diskUri() {
+        return this.diskUri == null ? Codegen.empty() : this.diskUri;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
     @Import(name="primaryStagingAzureStorageAccountId")
       private final @Nullable Output<String> primaryStagingAzureStorageAccountId;
 
-    public Output<String> getPrimaryStagingAzureStorageAccountId() {
-        return this.primaryStagingAzureStorageAccountId == null ? Output.empty() : this.primaryStagingAzureStorageAccountId;
+    public Output<String> primaryStagingAzureStorageAccountId() {
+        return this.primaryStagingAzureStorageAccountId == null ? Codegen.empty() : this.primaryStagingAzureStorageAccountId;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
     @Import(name="recoveryAzureStorageAccountId")
       private final @Nullable Output<String> recoveryAzureStorageAccountId;
 
-    public Output<String> getRecoveryAzureStorageAccountId() {
-        return this.recoveryAzureStorageAccountId == null ? Output.empty() : this.recoveryAzureStorageAccountId;
+    public Output<String> recoveryAzureStorageAccountId() {
+        return this.recoveryAzureStorageAccountId == null ? Codegen.empty() : this.recoveryAzureStorageAccountId;
     }
 
     public A2AVmDiskInputDetailsArgs(
@@ -61,9 +62,9 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
     }
 
     private A2AVmDiskInputDetailsArgs() {
-        this.diskUri = Output.empty();
-        this.primaryStagingAzureStorageAccountId = Output.empty();
-        this.recoveryAzureStorageAccountId = Output.empty();
+        this.diskUri = Codegen.empty();
+        this.primaryStagingAzureStorageAccountId = Codegen.empty();
+        this.recoveryAzureStorageAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder diskUri(@Nullable String diskUri) {
-            this.diskUri = Output.ofNullable(diskUri);
+            this.diskUri = Codegen.ofNullable(diskUri);
             return this;
         }
         public Builder primaryStagingAzureStorageAccountId(@Nullable Output<String> primaryStagingAzureStorageAccountId) {
@@ -103,7 +104,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
-            this.primaryStagingAzureStorageAccountId = Output.ofNullable(primaryStagingAzureStorageAccountId);
+            this.primaryStagingAzureStorageAccountId = Codegen.ofNullable(primaryStagingAzureStorageAccountId);
             return this;
         }
         public Builder recoveryAzureStorageAccountId(@Nullable Output<String> recoveryAzureStorageAccountId) {
@@ -111,7 +112,7 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder recoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
-            this.recoveryAzureStorageAccountId = Output.ofNullable(recoveryAzureStorageAccountId);
+            this.recoveryAzureStorageAccountId = Codegen.ofNullable(recoveryAzureStorageAccountId);
             return this;
         }        public A2AVmDiskInputDetailsArgs build() {
             return new A2AVmDiskInputDetailsArgs(diskUri, primaryStagingAzureStorageAccountId, recoveryAzureStorageAccountId);

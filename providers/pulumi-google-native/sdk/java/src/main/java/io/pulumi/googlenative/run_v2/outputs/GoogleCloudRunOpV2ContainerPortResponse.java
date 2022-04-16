@@ -33,14 +33,14 @@ public final class GoogleCloudRunOpV2ContainerPortResponse {
      * Port number the container listens on. This must be a valid TCP port number, 0 < container_port < 65536.
      * 
     */
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
     /**
      * If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

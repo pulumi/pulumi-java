@@ -6,6 +6,7 @@ package io.pulumi.awsnative.synthetics.inputs;
 import io.pulumi.awsnative.synthetics.inputs.CanaryBaseScreenshotArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
     @Import(name="baseCanaryRunId", required=true)
       private final Output<String> baseCanaryRunId;
 
-    public Output<String> getBaseCanaryRunId() {
+    public Output<String> baseCanaryRunId() {
         return this.baseCanaryRunId;
     }
 
@@ -34,8 +35,8 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
     @Import(name="baseScreenshots")
       private final @Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots;
 
-    public Output<List<CanaryBaseScreenshotArgs>> getBaseScreenshots() {
-        return this.baseScreenshots == null ? Output.empty() : this.baseScreenshots;
+    public Output<List<CanaryBaseScreenshotArgs>> baseScreenshots() {
+        return this.baseScreenshots == null ? Codegen.empty() : this.baseScreenshots;
     }
 
     public CanaryVisualReferenceArgs(
@@ -46,8 +47,8 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
     }
 
     private CanaryVisualReferenceArgs() {
-        this.baseCanaryRunId = Output.empty();
-        this.baseScreenshots = Output.empty();
+        this.baseCanaryRunId = Codegen.empty();
+        this.baseScreenshots = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder baseScreenshots(@Nullable List<CanaryBaseScreenshotArgs> baseScreenshots) {
-            this.baseScreenshots = Output.ofNullable(baseScreenshots);
+            this.baseScreenshots = Codegen.ofNullable(baseScreenshots);
             return this;
         }
         public Builder baseScreenshots(CanaryBaseScreenshotArgs... baseScreenshots) {

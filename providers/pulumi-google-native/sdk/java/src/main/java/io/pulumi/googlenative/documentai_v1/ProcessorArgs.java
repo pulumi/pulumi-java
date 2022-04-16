@@ -5,6 +5,7 @@ package io.pulumi.googlenative.documentai_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultProcessorVersion")
       private final @Nullable Output<String> defaultProcessorVersion;
 
-    public Output<String> getDefaultProcessorVersion() {
-        return this.defaultProcessorVersion == null ? Output.empty() : this.defaultProcessorVersion;
+    public Output<String> defaultProcessorVersion() {
+        return this.defaultProcessorVersion == null ? Codegen.empty() : this.defaultProcessorVersion;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -54,22 +55,22 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+    public Output<String> kmsKeyName() {
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ProcessorArgs(
@@ -101,13 +102,13 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProcessorArgs() {
-        this.createTime = Output.empty();
-        this.defaultProcessorVersion = Output.empty();
-        this.displayName = Output.empty();
-        this.kmsKeyName = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.type = Output.empty();
+        this.createTime = Codegen.empty();
+        this.defaultProcessorVersion = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder defaultProcessorVersion(@Nullable Output<String> defaultProcessorVersion) {
@@ -155,7 +156,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultProcessorVersion(@Nullable String defaultProcessorVersion) {
-            this.defaultProcessorVersion = Output.ofNullable(defaultProcessorVersion);
+            this.defaultProcessorVersion = Codegen.ofNullable(defaultProcessorVersion);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -163,7 +164,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -171,7 +172,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -179,7 +180,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -187,7 +188,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -195,7 +196,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ProcessorArgs build() {
             return new ProcessorArgs(createTime, defaultProcessorVersion, displayName, kmsKeyName, location, project, type);

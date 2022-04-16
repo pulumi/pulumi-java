@@ -5,6 +5,7 @@ package io.pulumi.aws.detective.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="administratorId")
       private final @Nullable Output<String> administratorId;
 
-    public Output<String> getAdministratorId() {
-        return this.administratorId == null ? Output.empty() : this.administratorId;
+    public Output<String> administratorId() {
+        return this.administratorId == null ? Codegen.empty() : this.administratorId;
     }
 
     /**
@@ -44,15 +45,15 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> getDisableEmailNotification() {
-        return this.disableEmailNotification == null ? Output.empty() : this.disableEmailNotification;
+    public Output<Boolean> disableEmailNotification() {
+        return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
     }
 
     @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
-    public Output<String> getDisabledReason() {
-        return this.disabledReason == null ? Output.empty() : this.disabledReason;
+    public Output<String> disabledReason() {
+        return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
-        return this.emailAddress == null ? Output.empty() : this.emailAddress;
+    public Output<String> emailAddress() {
+        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="graphArn")
       private final @Nullable Output<String> graphArn;
 
-    public Output<String> getGraphArn() {
-        return this.graphArn == null ? Output.empty() : this.graphArn;
+    public Output<String> graphArn() {
+        return this.graphArn == null ? Codegen.empty() : this.graphArn;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="invitedTime")
       private final @Nullable Output<String> invitedTime;
 
-    public Output<String> getInvitedTime() {
-        return this.invitedTime == null ? Output.empty() : this.invitedTime;
+    public Output<String> invitedTime() {
+        return this.invitedTime == null ? Codegen.empty() : this.invitedTime;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updatedTime")
       private final @Nullable Output<String> updatedTime;
 
-    public Output<String> getUpdatedTime() {
-        return this.updatedTime == null ? Output.empty() : this.updatedTime;
+    public Output<String> updatedTime() {
+        return this.updatedTime == null ? Codegen.empty() : this.updatedTime;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeUsageInBytes")
       private final @Nullable Output<String> volumeUsageInBytes;
 
-    public Output<String> getVolumeUsageInBytes() {
-        return this.volumeUsageInBytes == null ? Output.empty() : this.volumeUsageInBytes;
+    public Output<String> volumeUsageInBytes() {
+        return this.volumeUsageInBytes == null ? Codegen.empty() : this.volumeUsageInBytes;
     }
 
     public MemberState(
@@ -158,17 +159,17 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberState() {
-        this.accountId = Output.empty();
-        this.administratorId = Output.empty();
-        this.disableEmailNotification = Output.empty();
-        this.disabledReason = Output.empty();
-        this.emailAddress = Output.empty();
-        this.graphArn = Output.empty();
-        this.invitedTime = Output.empty();
-        this.message = Output.empty();
-        this.status = Output.empty();
-        this.updatedTime = Output.empty();
-        this.volumeUsageInBytes = Output.empty();
+        this.accountId = Codegen.empty();
+        this.administratorId = Codegen.empty();
+        this.disableEmailNotification = Codegen.empty();
+        this.disabledReason = Codegen.empty();
+        this.emailAddress = Codegen.empty();
+        this.graphArn = Codegen.empty();
+        this.invitedTime = Codegen.empty();
+        this.message = Codegen.empty();
+        this.status = Codegen.empty();
+        this.updatedTime = Codegen.empty();
+        this.volumeUsageInBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -216,7 +217,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder administratorId(@Nullable Output<String> administratorId) {
@@ -224,7 +225,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administratorId(@Nullable String administratorId) {
-            this.administratorId = Output.ofNullable(administratorId);
+            this.administratorId = Codegen.ofNullable(administratorId);
             return this;
         }
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
@@ -232,7 +233,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
+            this.disableEmailNotification = Codegen.ofNullable(disableEmailNotification);
             return this;
         }
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
@@ -240,7 +241,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Output.ofNullable(disabledReason);
+            this.disabledReason = Codegen.ofNullable(disabledReason);
             return this;
         }
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
@@ -248,7 +249,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Output.ofNullable(emailAddress);
+            this.emailAddress = Codegen.ofNullable(emailAddress);
             return this;
         }
         public Builder graphArn(@Nullable Output<String> graphArn) {
@@ -256,7 +257,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Output.ofNullable(graphArn);
+            this.graphArn = Codegen.ofNullable(graphArn);
             return this;
         }
         public Builder invitedTime(@Nullable Output<String> invitedTime) {
@@ -264,7 +265,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invitedTime(@Nullable String invitedTime) {
-            this.invitedTime = Output.ofNullable(invitedTime);
+            this.invitedTime = Codegen.ofNullable(invitedTime);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -272,7 +273,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -280,7 +281,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder updatedTime(@Nullable Output<String> updatedTime) {
@@ -288,7 +289,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedTime(@Nullable String updatedTime) {
-            this.updatedTime = Output.ofNullable(updatedTime);
+            this.updatedTime = Codegen.ofNullable(updatedTime);
             return this;
         }
         public Builder volumeUsageInBytes(@Nullable Output<String> volumeUsageInBytes) {
@@ -296,7 +297,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeUsageInBytes(@Nullable String volumeUsageInBytes) {
-            this.volumeUsageInBytes = Output.ofNullable(volumeUsageInBytes);
+            this.volumeUsageInBytes = Codegen.ofNullable(volumeUsageInBytes);
             return this;
         }        public MemberState build() {
             return new MemberState(accountId, administratorId, disableEmailNotification, disabledReason, emailAddress, graphArn, invitedTime, message, status, updatedTime, volumeUsageInBytes);

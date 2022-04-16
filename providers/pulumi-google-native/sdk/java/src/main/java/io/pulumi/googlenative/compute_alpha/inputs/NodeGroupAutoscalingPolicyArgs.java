@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.NodeGroupAutoscalingPolicyMode;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     @Import(name="maxNodes")
       private final @Nullable Output<Integer> maxNodes;
 
-    public Output<Integer> getMaxNodes() {
-        return this.maxNodes == null ? Output.empty() : this.maxNodes;
+    public Output<Integer> maxNodes() {
+        return this.maxNodes == null ? Codegen.empty() : this.maxNodes;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     @Import(name="minNodes")
       private final @Nullable Output<Integer> minNodes;
 
-    public Output<Integer> getMinNodes() {
-        return this.minNodes == null ? Output.empty() : this.minNodes;
+    public Output<Integer> minNodes() {
+        return this.minNodes == null ? Codegen.empty() : this.minNodes;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     @Import(name="mode")
       private final @Nullable Output<NodeGroupAutoscalingPolicyMode> mode;
 
-    public Output<NodeGroupAutoscalingPolicyMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<NodeGroupAutoscalingPolicyMode> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public NodeGroupAutoscalingPolicyArgs(
@@ -58,9 +59,9 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     }
 
     private NodeGroupAutoscalingPolicyArgs() {
-        this.maxNodes = Output.empty();
-        this.minNodes = Output.empty();
-        this.mode = Output.empty();
+        this.maxNodes = Codegen.empty();
+        this.minNodes = Codegen.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maxNodes(@Nullable Integer maxNodes) {
-            this.maxNodes = Output.ofNullable(maxNodes);
+            this.maxNodes = Codegen.ofNullable(maxNodes);
             return this;
         }
         public Builder minNodes(@Nullable Output<Integer> minNodes) {
@@ -100,7 +101,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder minNodes(@Nullable Integer minNodes) {
-            this.minNodes = Output.ofNullable(minNodes);
+            this.minNodes = Codegen.ofNullable(minNodes);
             return this;
         }
         public Builder mode(@Nullable Output<NodeGroupAutoscalingPolicyMode> mode) {
@@ -108,7 +109,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder mode(@Nullable NodeGroupAutoscalingPolicyMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public NodeGroupAutoscalingPolicyArgs build() {
             return new NodeGroupAutoscalingPolicyArgs(maxNodes, minNodes, mode);

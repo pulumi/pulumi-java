@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,35 +26,35 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
     @Import(name="fieldToMatch", required=true)
       private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="positionalConstraint", required=true)
       private final Output<WebACLPositionalConstraint> positionalConstraint;
 
-    public Output<WebACLPositionalConstraint> getPositionalConstraint() {
+    public Output<WebACLPositionalConstraint> positionalConstraint() {
         return this.positionalConstraint;
     }
 
     @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
-    public Output<String> getSearchString() {
-        return this.searchString == null ? Output.empty() : this.searchString;
+    public Output<String> searchString() {
+        return this.searchString == null ? Codegen.empty() : this.searchString;
     }
 
     @Import(name="searchStringBase64")
       private final @Nullable Output<String> searchStringBase64;
 
-    public Output<String> getSearchStringBase64() {
-        return this.searchStringBase64 == null ? Output.empty() : this.searchStringBase64;
+    public Output<String> searchStringBase64() {
+        return this.searchStringBase64 == null ? Codegen.empty() : this.searchStringBase64;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
@@ -71,11 +72,11 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
     }
 
     private WebACLByteMatchStatementArgs() {
-        this.fieldToMatch = Output.empty();
-        this.positionalConstraint = Output.empty();
-        this.searchString = Output.empty();
-        this.searchStringBase64 = Output.empty();
-        this.textTransformations = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.positionalConstraint = Codegen.empty();
+        this.searchString = Codegen.empty();
+        this.searchStringBase64 = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder searchString(@Nullable String searchString) {
-            this.searchString = Output.ofNullable(searchString);
+            this.searchString = Codegen.ofNullable(searchString);
             return this;
         }
         public Builder searchStringBase64(@Nullable Output<String> searchStringBase64) {
@@ -135,7 +136,7 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
-            this.searchStringBase64 = Output.ofNullable(searchStringBase64);
+            this.searchStringBase64 = Codegen.ofNullable(searchStringBase64);
             return this;
         }
         public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {

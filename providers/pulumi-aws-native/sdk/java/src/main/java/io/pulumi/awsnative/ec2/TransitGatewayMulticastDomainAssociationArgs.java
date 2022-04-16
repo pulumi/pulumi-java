@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -31,7 +32,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
     @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -42,7 +43,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final Output<String> transitGatewayMulticastDomainId;
 
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -56,9 +57,9 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
     }
 
     private TransitGatewayMulticastDomainAssociationArgs() {
-        this.subnetId = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayMulticastDomainId = Output.empty();
+        this.subnetId = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayMulticastDomainId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
     @Import(name="ttl", required=true)
       private final Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl;
     }
 
@@ -33,7 +34,7 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
     }
 
     private SubscriptionExpirationPolicyGetArgs() {
-        this.ttl = Output.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {

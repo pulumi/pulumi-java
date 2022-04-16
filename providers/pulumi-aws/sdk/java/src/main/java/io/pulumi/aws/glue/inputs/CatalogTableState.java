@@ -9,6 +9,7 @@ import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorGetArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableTargetTableGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+    public Output<String> owner() {
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionIndices")
       private final @Nullable Output<List<CatalogTablePartitionIndexGetArgs>> partitionIndices;
 
-    public Output<List<CatalogTablePartitionIndexGetArgs>> getPartitionIndices() {
-        return this.partitionIndices == null ? Output.empty() : this.partitionIndices;
+    public Output<List<CatalogTablePartitionIndexGetArgs>> partitionIndices() {
+        return this.partitionIndices == null ? Codegen.empty() : this.partitionIndices;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionKeys")
       private final @Nullable Output<List<CatalogTablePartitionKeyGetArgs>> partitionKeys;
 
-    public Output<List<CatalogTablePartitionKeyGetArgs>> getPartitionKeys() {
-        return this.partitionKeys == null ? Output.empty() : this.partitionKeys;
+    public Output<List<CatalogTablePartitionKeyGetArgs>> partitionKeys() {
+        return this.partitionKeys == null ? Codegen.empty() : this.partitionKeys;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retention")
       private final @Nullable Output<Integer> retention;
 
-    public Output<Integer> getRetention() {
-        return this.retention == null ? Output.empty() : this.retention;
+    public Output<Integer> retention() {
+        return this.retention == null ? Codegen.empty() : this.retention;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageDescriptor")
       private final @Nullable Output<CatalogTableStorageDescriptorGetArgs> storageDescriptor;
 
-    public Output<CatalogTableStorageDescriptorGetArgs> getStorageDescriptor() {
-        return this.storageDescriptor == null ? Output.empty() : this.storageDescriptor;
+    public Output<CatalogTableStorageDescriptorGetArgs> storageDescriptor() {
+        return this.storageDescriptor == null ? Codegen.empty() : this.storageDescriptor;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableType")
       private final @Nullable Output<String> tableType;
 
-    public Output<String> getTableType() {
-        return this.tableType == null ? Output.empty() : this.tableType;
+    public Output<String> tableType() {
+        return this.tableType == null ? Codegen.empty() : this.tableType;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetTable")
       private final @Nullable Output<CatalogTableTargetTableGetArgs> targetTable;
 
-    public Output<CatalogTableTargetTableGetArgs> getTargetTable() {
-        return this.targetTable == null ? Output.empty() : this.targetTable;
+    public Output<CatalogTableTargetTableGetArgs> targetTable() {
+        return this.targetTable == null ? Codegen.empty() : this.targetTable;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="viewExpandedText")
       private final @Nullable Output<String> viewExpandedText;
 
-    public Output<String> getViewExpandedText() {
-        return this.viewExpandedText == null ? Output.empty() : this.viewExpandedText;
+    public Output<String> viewExpandedText() {
+        return this.viewExpandedText == null ? Codegen.empty() : this.viewExpandedText;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="viewOriginalText")
       private final @Nullable Output<String> viewOriginalText;
 
-    public Output<String> getViewOriginalText() {
-        return this.viewOriginalText == null ? Output.empty() : this.viewOriginalText;
+    public Output<String> viewOriginalText() {
+        return this.viewOriginalText == null ? Codegen.empty() : this.viewOriginalText;
     }
 
     public CatalogTableState(
@@ -220,21 +221,21 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CatalogTableState() {
-        this.arn = Output.empty();
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.parameters = Output.empty();
-        this.partitionIndices = Output.empty();
-        this.partitionKeys = Output.empty();
-        this.retention = Output.empty();
-        this.storageDescriptor = Output.empty();
-        this.tableType = Output.empty();
-        this.targetTable = Output.empty();
-        this.viewExpandedText = Output.empty();
-        this.viewOriginalText = Output.empty();
+        this.arn = Codegen.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.partitionIndices = Codegen.empty();
+        this.partitionKeys = Codegen.empty();
+        this.retention = Codegen.empty();
+        this.storageDescriptor = Codegen.empty();
+        this.tableType = Codegen.empty();
+        this.targetTable = Codegen.empty();
+        this.viewExpandedText = Codegen.empty();
+        this.viewOriginalText = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -290,7 +291,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder catalogId(@Nullable Output<String> catalogId) {
@@ -298,7 +299,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -306,7 +307,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -314,7 +315,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -322,7 +323,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -330,7 +331,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -338,7 +339,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder partitionIndices(@Nullable Output<List<CatalogTablePartitionIndexGetArgs>> partitionIndices) {
@@ -346,7 +347,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionIndices(@Nullable List<CatalogTablePartitionIndexGetArgs> partitionIndices) {
-            this.partitionIndices = Output.ofNullable(partitionIndices);
+            this.partitionIndices = Codegen.ofNullable(partitionIndices);
             return this;
         }
         public Builder partitionIndices(CatalogTablePartitionIndexGetArgs... partitionIndices) {
@@ -357,7 +358,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionKeys(@Nullable List<CatalogTablePartitionKeyGetArgs> partitionKeys) {
-            this.partitionKeys = Output.ofNullable(partitionKeys);
+            this.partitionKeys = Codegen.ofNullable(partitionKeys);
             return this;
         }
         public Builder partitionKeys(CatalogTablePartitionKeyGetArgs... partitionKeys) {
@@ -368,7 +369,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retention(@Nullable Integer retention) {
-            this.retention = Output.ofNullable(retention);
+            this.retention = Codegen.ofNullable(retention);
             return this;
         }
         public Builder storageDescriptor(@Nullable Output<CatalogTableStorageDescriptorGetArgs> storageDescriptor) {
@@ -376,7 +377,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageDescriptor(@Nullable CatalogTableStorageDescriptorGetArgs storageDescriptor) {
-            this.storageDescriptor = Output.ofNullable(storageDescriptor);
+            this.storageDescriptor = Codegen.ofNullable(storageDescriptor);
             return this;
         }
         public Builder tableType(@Nullable Output<String> tableType) {
@@ -384,7 +385,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableType(@Nullable String tableType) {
-            this.tableType = Output.ofNullable(tableType);
+            this.tableType = Codegen.ofNullable(tableType);
             return this;
         }
         public Builder targetTable(@Nullable Output<CatalogTableTargetTableGetArgs> targetTable) {
@@ -392,7 +393,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetTable(@Nullable CatalogTableTargetTableGetArgs targetTable) {
-            this.targetTable = Output.ofNullable(targetTable);
+            this.targetTable = Codegen.ofNullable(targetTable);
             return this;
         }
         public Builder viewExpandedText(@Nullable Output<String> viewExpandedText) {
@@ -400,7 +401,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder viewExpandedText(@Nullable String viewExpandedText) {
-            this.viewExpandedText = Output.ofNullable(viewExpandedText);
+            this.viewExpandedText = Codegen.ofNullable(viewExpandedText);
             return this;
         }
         public Builder viewOriginalText(@Nullable Output<String> viewOriginalText) {
@@ -408,7 +409,7 @@ public final class CatalogTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder viewOriginalText(@Nullable String viewOriginalText) {
-            this.viewOriginalText = Output.ofNullable(viewOriginalText);
+            this.viewOriginalText = Codegen.ofNullable(viewOriginalText);
             return this;
         }        public CatalogTableState build() {
             return new CatalogTableState(arn, catalogId, databaseName, description, name, owner, parameters, partitionIndices, partitionKeys, retention, storageDescriptor, tableType, targetTable, viewExpandedText, viewOriginalText);

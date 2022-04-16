@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The name of the metadata object.
      * 
      */
-    public Output<String> getAssignmentName() {
+    public Output<String> assignmentName() {
         return this.assignmentName;
     }
     /**
@@ -58,7 +59,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Widget types set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getConflationPolicies() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> conflationPolicies() {
         return this.conflationPolicies;
     }
     /**
@@ -72,7 +73,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Connectors set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getConnectors() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> connectors() {
         return this.connectors;
     }
     /**
@@ -86,7 +87,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Localized description for the metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDescription() {
+    public Output</* @Nullable */ Map<String,String>> description() {
         return this.description;
     }
     /**
@@ -100,7 +101,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Localized display names for the metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -114,7 +115,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Interactions set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getInteractions() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> interactions() {
         return this.interactions;
     }
     /**
@@ -128,7 +129,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Kpis set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getKpis() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> kpis() {
         return this.kpis;
     }
     /**
@@ -142,7 +143,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Links set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getLinks() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> links() {
         return this.links;
     }
     /**
@@ -156,7 +157,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -170,7 +171,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The principals being assigned to.
      * 
      */
-    public Output<List<AssignmentPrincipalResponse>> getPrincipals() {
+    public Output<List<AssignmentPrincipalResponse>> principals() {
         return this.principals;
     }
     /**
@@ -184,7 +185,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Profiles set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getProfiles() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> profiles() {
         return this.profiles;
     }
     /**
@@ -198,7 +199,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -212,7 +213,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The Role assignments set for the relationship links.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getRelationshipLinks() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> relationshipLinks() {
         return this.relationshipLinks;
     }
     /**
@@ -226,7 +227,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The Role assignments set for the relationships.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getRelationships() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> relationships() {
         return this.relationships;
     }
     /**
@@ -240,7 +241,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Type of roles.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -254,7 +255,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The Role assignments set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getRoleAssignments() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> roleAssignments() {
         return this.roleAssignments;
     }
     /**
@@ -268,7 +269,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Sas Policies set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getSasPolicies() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> sasPolicies() {
         return this.sasPolicies;
     }
     /**
@@ -282,7 +283,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The Role assignments set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getSegments() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> segments() {
         return this.segments;
     }
     /**
@@ -296,7 +297,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -310,7 +311,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -324,7 +325,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Views set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getViews() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> views() {
         return this.views;
     }
     /**
@@ -338,7 +339,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Widget types set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> getWidgetTypes() {
+    public Output</* @Nullable */ ResourceSetDescriptionResponse> widgetTypes() {
         return this.widgetTypes;
     }
 
@@ -364,7 +365,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoleAssignment(String name, RoleAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customerinsights:RoleAssignment", name, args == null ? RoleAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customerinsights:RoleAssignment", name, args == null ? RoleAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RoleAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

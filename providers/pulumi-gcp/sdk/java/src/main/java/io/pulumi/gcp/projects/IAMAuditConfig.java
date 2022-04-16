@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.IAMAuditConfigArgs;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigState;
@@ -101,7 +102,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    public Output<List<IAMAuditConfigAuditLogConfig>> getAuditLogConfigs() {
+    public Output<List<IAMAuditConfigAuditLogConfig>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
@@ -115,7 +116,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the project's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -131,7 +132,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * inferred from the provider.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -145,7 +146,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -171,7 +172,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMAuditConfig(String name, IAMAuditConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/iAMAuditConfig:IAMAuditConfig", name, args == null ? IAMAuditConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/iAMAuditConfig:IAMAuditConfig", name, args == null ? IAMAuditConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMAuditConfig(String name, Output<String> id, @Nullable IAMAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
     @Import(name="webTest")
       private final @Nullable Output<String> webTest;
 
-    public Output<String> getWebTest() {
-        return this.webTest == null ? Output.empty() : this.webTest;
+    public Output<String> webTest() {
+        return this.webTest == null ? Codegen.empty() : this.webTest;
     }
 
     public WebTestPropertiesConfigurationArgs(@Nullable Output<String> webTest) {
@@ -34,7 +35,7 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
     }
 
     private WebTestPropertiesConfigurationArgs() {
-        this.webTest = Output.empty();
+        this.webTest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder webTest(@Nullable String webTest) {
-            this.webTest = Output.ofNullable(webTest);
+            this.webTest = Codegen.ofNullable(webTest);
             return this;
         }        public WebTestPropertiesConfigurationArgs build() {
             return new WebTestPropertiesConfigurationArgs(webTest);

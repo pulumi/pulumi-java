@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ContainerPortInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<String> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public ContainerPortInfoArgs(
@@ -36,8 +37,8 @@ public final class ContainerPortInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ContainerPortInfoArgs() {
-        this.port = Output.empty();
-        this.protocol = Output.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ContainerPortInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -75,7 +76,7 @@ public final class ContainerPortInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public ContainerPortInfoArgs build() {
             return new ContainerPortInfoArgs(port, protocol);

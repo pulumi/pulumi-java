@@ -10,6 +10,7 @@ import io.pulumi.awsnative.lambda.outputs.CodeSigningConfigCodeSigningPolicies;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
      * 
      */
-    public Output<CodeSigningConfigAllowedPublishers> getAllowedPublishers() {
+    public Output<CodeSigningConfigAllowedPublishers> allowedPublishers() {
         return this.allowedPublishers;
     }
     /**
@@ -44,7 +45,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return A unique Arn for CodeSigningConfig resource
      * 
      */
-    public Output<String> getCodeSigningConfigArn() {
+    public Output<String> codeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
@@ -58,7 +59,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for CodeSigningConfig resource
      * 
      */
-    public Output<String> getCodeSigningConfigId() {
+    public Output<String> codeSigningConfigId() {
         return this.codeSigningConfigId;
     }
     /**
@@ -72,7 +73,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return Policies to control how to act if a signature is invalid
      * 
      */
-    public Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> getCodeSigningPolicies() {
+    public Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> codeSigningPolicies() {
         return this.codeSigningPolicies;
     }
     /**
@@ -86,7 +87,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return A description of the CodeSigningConfig
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
 
@@ -112,7 +113,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CodeSigningConfig(String name, CodeSigningConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lambda:CodeSigningConfig", name, args == null ? CodeSigningConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:lambda:CodeSigningConfig", name, args == null ? CodeSigningConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CodeSigningConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
     @Import(name="httpHeaderName", required=true)
       private final Output<String> httpHeaderName;
 
-    public Output<String> getHttpHeaderName() {
+    public Output<String> httpHeaderName() {
         return this.httpHeaderName;
     }
 
@@ -32,7 +33,7 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 
@@ -44,8 +45,8 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
     }
 
     private ListenerRuleConditionHttpHeaderGetArgs() {
-        this.httpHeaderName = Output.empty();
-        this.values = Output.empty();
+        this.httpHeaderName = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

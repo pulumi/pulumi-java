@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     @Import(name="enablePrivateEndpoint", required=true)
       private final Output<Boolean> enablePrivateEndpoint;
 
-    public Output<Boolean> getEnablePrivateEndpoint() {
+    public Output<Boolean> enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
@@ -40,8 +41,8 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     @Import(name="enablePrivateNodes")
       private final @Nullable Output<Boolean> enablePrivateNodes;
 
-    public Output<Boolean> getEnablePrivateNodes() {
-        return this.enablePrivateNodes == null ? Output.empty() : this.enablePrivateNodes;
+    public Output<Boolean> enablePrivateNodes() {
+        return this.enablePrivateNodes == null ? Codegen.empty() : this.enablePrivateNodes;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     @Import(name="masterGlobalAccessConfig")
       private final @Nullable Output<ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
 
-    public Output<ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs> getMasterGlobalAccessConfig() {
-        return this.masterGlobalAccessConfig == null ? Output.empty() : this.masterGlobalAccessConfig;
+    public Output<ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs> masterGlobalAccessConfig() {
+        return this.masterGlobalAccessConfig == null ? Codegen.empty() : this.masterGlobalAccessConfig;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     @Import(name="masterIpv4CidrBlock")
       private final @Nullable Output<String> masterIpv4CidrBlock;
 
-    public Output<String> getMasterIpv4CidrBlock() {
-        return this.masterIpv4CidrBlock == null ? Output.empty() : this.masterIpv4CidrBlock;
+    public Output<String> masterIpv4CidrBlock() {
+        return this.masterIpv4CidrBlock == null ? Codegen.empty() : this.masterIpv4CidrBlock;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
 
-    public Output<String> getPeeringName() {
-        return this.peeringName == null ? Output.empty() : this.peeringName;
+    public Output<String> peeringName() {
+        return this.peeringName == null ? Codegen.empty() : this.peeringName;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     @Import(name="privateEndpoint")
       private final @Nullable Output<String> privateEndpoint;
 
-    public Output<String> getPrivateEndpoint() {
-        return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
+    public Output<String> privateEndpoint() {
+        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     @Import(name="publicEndpoint")
       private final @Nullable Output<String> publicEndpoint;
 
-    public Output<String> getPublicEndpoint() {
-        return this.publicEndpoint == null ? Output.empty() : this.publicEndpoint;
+    public Output<String> publicEndpoint() {
+        return this.publicEndpoint == null ? Codegen.empty() : this.publicEndpoint;
     }
 
     public ClusterPrivateClusterConfigArgs(
@@ -125,13 +126,13 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
     }
 
     private ClusterPrivateClusterConfigArgs() {
-        this.enablePrivateEndpoint = Output.empty();
-        this.enablePrivateNodes = Output.empty();
-        this.masterGlobalAccessConfig = Output.empty();
-        this.masterIpv4CidrBlock = Output.empty();
-        this.peeringName = Output.empty();
-        this.privateEndpoint = Output.empty();
-        this.publicEndpoint = Output.empty();
+        this.enablePrivateEndpoint = Codegen.empty();
+        this.enablePrivateNodes = Codegen.empty();
+        this.masterGlobalAccessConfig = Codegen.empty();
+        this.masterIpv4CidrBlock = Codegen.empty();
+        this.peeringName = Codegen.empty();
+        this.privateEndpoint = Codegen.empty();
+        this.publicEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
-            this.enablePrivateNodes = Output.ofNullable(enablePrivateNodes);
+            this.enablePrivateNodes = Codegen.ofNullable(enablePrivateNodes);
             return this;
         }
         public Builder masterGlobalAccessConfig(@Nullable Output<ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs> masterGlobalAccessConfig) {
@@ -187,7 +188,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder masterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs masterGlobalAccessConfig) {
-            this.masterGlobalAccessConfig = Output.ofNullable(masterGlobalAccessConfig);
+            this.masterGlobalAccessConfig = Codegen.ofNullable(masterGlobalAccessConfig);
             return this;
         }
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
@@ -195,7 +196,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
-            this.masterIpv4CidrBlock = Output.ofNullable(masterIpv4CidrBlock);
+            this.masterIpv4CidrBlock = Codegen.ofNullable(masterIpv4CidrBlock);
             return this;
         }
         public Builder peeringName(@Nullable Output<String> peeringName) {
@@ -203,7 +204,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Output.ofNullable(peeringName);
+            this.peeringName = Codegen.ofNullable(peeringName);
             return this;
         }
         public Builder privateEndpoint(@Nullable Output<String> privateEndpoint) {
@@ -211,7 +212,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder privateEndpoint(@Nullable String privateEndpoint) {
-            this.privateEndpoint = Output.ofNullable(privateEndpoint);
+            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
             return this;
         }
         public Builder publicEndpoint(@Nullable Output<String> publicEndpoint) {
@@ -219,7 +220,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder publicEndpoint(@Nullable String publicEndpoint) {
-            this.publicEndpoint = Output.ofNullable(publicEndpoint);
+            this.publicEndpoint = Codegen.ofNullable(publicEndpoint);
             return this;
         }        public ClusterPrivateClusterConfigArgs build() {
             return new ClusterPrivateClusterConfigArgs(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);

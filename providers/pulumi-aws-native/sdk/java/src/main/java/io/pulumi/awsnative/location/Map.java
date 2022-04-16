@@ -10,6 +10,7 @@ import io.pulumi.awsnative.location.outputs.MapConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,55 +23,55 @@ public class Map extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="configuration", type=MapConfiguration.class, parameters={})
     private Output<MapConfiguration> configuration;
 
-    public Output<MapConfiguration> getConfiguration() {
+    public Output<MapConfiguration> configuration() {
         return this.configuration;
     }
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     @Export(name="dataSource", type=String.class, parameters={})
     private Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="mapArn", type=String.class, parameters={})
     private Output<String> mapArn;
 
-    public Output<String> getMapArn() {
+    public Output<String> mapArn() {
         return this.mapArn;
     }
     @Export(name="mapName", type=String.class, parameters={})
     private Output<String> mapName;
 
-    public Output<String> getMapName() {
+    public Output<String> mapName() {
         return this.mapName;
     }
     @Export(name="pricingPlan", type=MapPricingPlan.class, parameters={})
     private Output</* @Nullable */ MapPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ MapPricingPlan> getPricingPlan() {
+    public Output</* @Nullable */ MapPricingPlan> pricingPlan() {
         return this.pricingPlan;
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -96,7 +97,7 @@ public class Map extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Map(String name, MapArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:location:Map", name, args == null ? MapArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:location:Map", name, args == null ? MapArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Map(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

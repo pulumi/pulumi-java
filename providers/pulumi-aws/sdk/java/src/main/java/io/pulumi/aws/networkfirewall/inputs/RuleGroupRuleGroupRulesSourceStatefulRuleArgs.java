@@ -7,6 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefu
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -34,7 +35,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     @Import(name="header", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> getHeader() {
+    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header() {
         return this.header;
     }
 
@@ -45,7 +46,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions() {
         return this.ruleOptions;
     }
 
@@ -59,9 +60,9 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     }
 
     private RuleGroupRuleGroupRulesSourceStatefulRuleArgs() {
-        this.action = Output.empty();
-        this.header = Output.empty();
-        this.ruleOptions = Output.empty();
+        this.action = Codegen.empty();
+        this.header = Codegen.empty();
+        this.ruleOptions = Codegen.empty();
     }
 
     public static Builder builder() {

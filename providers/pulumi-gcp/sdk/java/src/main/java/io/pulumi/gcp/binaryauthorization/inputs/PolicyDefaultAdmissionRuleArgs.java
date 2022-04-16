@@ -5,6 +5,7 @@ package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
     @Import(name="enforcementMode", required=true)
       private final Output<String> enforcementMode;
 
-    public Output<String> getEnforcementMode() {
+    public Output<String> enforcementMode() {
         return this.enforcementMode;
     }
 
@@ -35,7 +36,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
     @Import(name="evaluationMode", required=true)
       private final Output<String> evaluationMode;
 
-    public Output<String> getEvaluationMode() {
+    public Output<String> evaluationMode() {
         return this.evaluationMode;
     }
 
@@ -53,8 +54,8 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
     @Import(name="requireAttestationsBies")
       private final @Nullable Output<List<String>> requireAttestationsBies;
 
-    public Output<List<String>> getRequireAttestationsBies() {
-        return this.requireAttestationsBies == null ? Output.empty() : this.requireAttestationsBies;
+    public Output<List<String>> requireAttestationsBies() {
+        return this.requireAttestationsBies == null ? Codegen.empty() : this.requireAttestationsBies;
     }
 
     public PolicyDefaultAdmissionRuleArgs(
@@ -67,9 +68,9 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
     }
 
     private PolicyDefaultAdmissionRuleArgs() {
-        this.enforcementMode = Output.empty();
-        this.evaluationMode = Output.empty();
-        this.requireAttestationsBies = Output.empty();
+        this.enforcementMode = Codegen.empty();
+        this.evaluationMode = Codegen.empty();
+        this.requireAttestationsBies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
-            this.requireAttestationsBies = Output.ofNullable(requireAttestationsBies);
+            this.requireAttestationsBies = Codegen.ofNullable(requireAttestationsBies);
             return this;
         }
         public Builder requireAttestationsBies(String... requireAttestationsBies) {

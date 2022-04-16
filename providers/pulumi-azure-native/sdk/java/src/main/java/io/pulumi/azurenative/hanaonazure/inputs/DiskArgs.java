@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+    public Output<Integer> diskSizeGB() {
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public DiskArgs(
@@ -49,8 +50,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.diskSizeGB = Output.empty();
-        this.name = Output.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public DiskArgs build() {
             return new DiskArgs(diskSizeGB, name);

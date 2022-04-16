@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigArgs;
 import io.pulumi.gcp.dns.inputs.PolicyNetworkArgs;
 import java.lang.Boolean;
@@ -28,8 +29,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternativeNameServerConfig")
       private final @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
-    public Output<PolicyAlternativeNameServerConfigArgs> getAlternativeNameServerConfig() {
-        return this.alternativeNameServerConfig == null ? Output.empty() : this.alternativeNameServerConfig;
+    public Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig() {
+        return this.alternativeNameServerConfig == null ? Codegen.empty() : this.alternativeNameServerConfig;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableInboundForwarding")
       private final @Nullable Output<Boolean> enableInboundForwarding;
 
-    public Output<Boolean> getEnableInboundForwarding() {
-        return this.enableInboundForwarding == null ? Output.empty() : this.enableInboundForwarding;
+    public Output<Boolean> enableInboundForwarding() {
+        return this.enableInboundForwarding == null ? Codegen.empty() : this.enableInboundForwarding;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Output.empty() : this.enableLogging;
+    public Output<Boolean> enableLogging() {
+        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networks")
       private final @Nullable Output<List<PolicyNetworkArgs>> networks;
 
-    public Output<List<PolicyNetworkArgs>> getNetworks() {
-        return this.networks == null ? Output.empty() : this.networks;
+    public Output<List<PolicyNetworkArgs>> networks() {
+        return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public PolicyArgs(
@@ -122,13 +123,13 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.alternativeNameServerConfig = Output.empty();
-        this.description = Output.empty();
-        this.enableInboundForwarding = Output.empty();
-        this.enableLogging = Output.empty();
-        this.name = Output.empty();
-        this.networks = Output.empty();
-        this.project = Output.empty();
+        this.alternativeNameServerConfig = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableInboundForwarding = Codegen.empty();
+        this.enableLogging = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networks = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigArgs alternativeNameServerConfig) {
-            this.alternativeNameServerConfig = Output.ofNullable(alternativeNameServerConfig);
+            this.alternativeNameServerConfig = Codegen.ofNullable(alternativeNameServerConfig);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -176,7 +177,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableInboundForwarding(@Nullable Output<Boolean> enableInboundForwarding) {
@@ -184,7 +185,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
-            this.enableInboundForwarding = Output.ofNullable(enableInboundForwarding);
+            this.enableInboundForwarding = Codegen.ofNullable(enableInboundForwarding);
             return this;
         }
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
@@ -192,7 +193,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Output.ofNullable(enableLogging);
+            this.enableLogging = Codegen.ofNullable(enableLogging);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -200,7 +201,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networks(@Nullable Output<List<PolicyNetworkArgs>> networks) {
@@ -208,7 +209,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networks(@Nullable List<PolicyNetworkArgs> networks) {
-            this.networks = Output.ofNullable(networks);
+            this.networks = Codegen.ofNullable(networks);
             return this;
         }
         public Builder networks(PolicyNetworkArgs... networks) {
@@ -219,7 +220,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public PolicyArgs build() {
             return new PolicyArgs(alternativeNameServerConfig, description, enableInboundForwarding, enableLogging, name, networks, project);

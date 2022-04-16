@@ -19,7 +19,7 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
     @Import(name="fhirDestinationName", required=true)
       private final String fhirDestinationName;
 
-    public String getFhirDestinationName() {
+    public String fhirDestinationName() {
         return this.fhirDestinationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
     @Import(name="iotConnectorName", required=true)
       private final String iotConnectorName;
 
-    public String getIotConnectorName() {
+    public String iotConnectorName() {
         return this.iotConnectorName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.managementpartner;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerId")
       private final @Nullable Output<String> partnerId;
 
-    public Output<String> getPartnerId() {
-        return this.partnerId == null ? Output.empty() : this.partnerId;
+    public Output<String> partnerId() {
+        return this.partnerId == null ? Codegen.empty() : this.partnerId;
     }
 
     public PartnerArgs(@Nullable Output<String> partnerId) {
@@ -30,7 +31,7 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PartnerArgs() {
-        this.partnerId = Output.empty();
+        this.partnerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partnerId(@Nullable String partnerId) {
-            this.partnerId = Output.ofNullable(partnerId);
+            this.partnerId = Codegen.ofNullable(partnerId);
             return this;
         }        public PartnerArgs build() {
             return new PartnerArgs(partnerId);

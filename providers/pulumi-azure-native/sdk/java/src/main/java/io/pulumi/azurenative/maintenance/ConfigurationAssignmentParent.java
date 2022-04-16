@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @return Location of the resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -56,7 +57,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @return The maintenance configuration Id
      * 
      */
-    public Output</* @Nullable */ String> getMaintenanceConfigurationId() {
+    public Output</* @Nullable */ String> maintenanceConfigurationId() {
         return this.maintenanceConfigurationId;
     }
     /**
@@ -70,7 +71,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @return Name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @return The unique resourceId
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -98,7 +99,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -112,7 +113,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @return Type of the resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +139,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationAssignmentParent(String name, ConfigurationAssignmentParentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:maintenance:ConfigurationAssignmentParent", name, args == null ? ConfigurationAssignmentParentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:maintenance:ConfigurationAssignmentParent", name, args == null ? ConfigurationAssignmentParentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfigurationAssignmentParent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

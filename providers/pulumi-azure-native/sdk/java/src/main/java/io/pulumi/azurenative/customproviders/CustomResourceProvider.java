@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return A list of actions that the custom resource provider implements.
      * 
      */
-    public Output</* @Nullable */ List<CustomRPActionRouteDefinitionResponse>> getActions() {
+    public Output</* @Nullable */ List<CustomRPActionRouteDefinitionResponse>> actions() {
         return this.actions;
     }
     /**
@@ -59,7 +60,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +74,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource provider.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -101,7 +102,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return A list of resource types that the custom resource provider implements.
      * 
      */
-    public Output</* @Nullable */ List<CustomRPResourceTypeRouteDefinitionResponse>> getResourceTypes() {
+    public Output</* @Nullable */ List<CustomRPResourceTypeRouteDefinitionResponse>> resourceTypes() {
         return this.resourceTypes;
     }
     /**
@@ -115,7 +116,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +130,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -143,7 +144,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @return A list of validations to run on the custom resource provider's requests.
      * 
      */
-    public Output</* @Nullable */ List<CustomRPValidationsResponse>> getValidations() {
+    public Output</* @Nullable */ List<CustomRPValidationsResponse>> validations() {
         return this.validations;
     }
 
@@ -169,7 +170,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomResourceProvider(String name, CustomResourceProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customproviders:CustomResourceProvider", name, args == null ? CustomResourceProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customproviders:CustomResourceProvider", name, args == null ? CustomResourceProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomResourceProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -21,10 +21,10 @@ public final class RuleGroupForwardedIPConfiguration {
         this.headerName = headerName;
     }
 
-    public RuleGroupForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
+    public RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 

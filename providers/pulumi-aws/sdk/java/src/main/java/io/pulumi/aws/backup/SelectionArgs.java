@@ -7,6 +7,7 @@ import io.pulumi.aws.backup.inputs.SelectionConditionArgs;
 import io.pulumi.aws.backup.inputs.SelectionSelectionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<SelectionConditionArgs>> conditions;
 
-    public Output<List<SelectionConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<SelectionConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
 
@@ -46,8 +47,8 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notResources")
       private final @Nullable Output<List<String>> notResources;
 
-    public Output<List<String>> getNotResources() {
-        return this.notResources == null ? Output.empty() : this.notResources;
+    public Output<List<String>> notResources() {
+        return this.notResources == null ? Codegen.empty() : this.notResources;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="planId", required=true)
       private final Output<String> planId;
 
-    public Output<String> getPlanId() {
+    public Output<String> planId() {
         return this.planId;
     }
 
@@ -79,8 +80,8 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<String>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selectionTags")
       private final @Nullable Output<List<SelectionSelectionTagArgs>> selectionTags;
 
-    public Output<List<SelectionSelectionTagArgs>> getSelectionTags() {
-        return this.selectionTags == null ? Output.empty() : this.selectionTags;
+    public Output<List<SelectionSelectionTagArgs>> selectionTags() {
+        return this.selectionTags == null ? Codegen.empty() : this.selectionTags;
     }
 
     public SelectionArgs(
@@ -112,13 +113,13 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SelectionArgs() {
-        this.conditions = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.name = Output.empty();
-        this.notResources = Output.empty();
-        this.planId = Output.empty();
-        this.resources = Output.empty();
-        this.selectionTags = Output.empty();
+        this.conditions = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notResources = Codegen.empty();
+        this.planId = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.selectionTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<SelectionConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(SelectionConditionArgs... conditions) {
@@ -177,7 +178,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notResources(@Nullable Output<List<String>> notResources) {
@@ -185,7 +186,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notResources(@Nullable List<String> notResources) {
-            this.notResources = Output.ofNullable(notResources);
+            this.notResources = Codegen.ofNullable(notResources);
             return this;
         }
         public Builder notResources(String... notResources) {
@@ -204,7 +205,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {
@@ -215,7 +216,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selectionTags(@Nullable List<SelectionSelectionTagArgs> selectionTags) {
-            this.selectionTags = Output.ofNullable(selectionTags);
+            this.selectionTags = Codegen.ofNullable(selectionTags);
             return this;
         }
         public Builder selectionTags(SelectionSelectionTagArgs... selectionTags) {

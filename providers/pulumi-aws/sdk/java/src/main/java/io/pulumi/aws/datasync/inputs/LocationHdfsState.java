@@ -7,6 +7,7 @@ import io.pulumi.aws.datasync.inputs.LocationHdfsNameNodeGetArgs;
 import io.pulumi.aws.datasync.inputs.LocationHdfsQopConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentArns")
       private final @Nullable Output<List<String>> agentArns;
 
-    public Output<List<String>> getAgentArns() {
-        return this.agentArns == null ? Output.empty() : this.agentArns;
+    public Output<List<String>> agentArns() {
+        return this.agentArns == null ? Codegen.empty() : this.agentArns;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<String> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="blockSize")
       private final @Nullable Output<Integer> blockSize;
 
-    public Output<Integer> getBlockSize() {
-        return this.blockSize == null ? Output.empty() : this.blockSize;
+    public Output<Integer> blockSize() {
+        return this.blockSize == null ? Codegen.empty() : this.blockSize;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKeytab")
       private final @Nullable Output<String> kerberosKeytab;
 
-    public Output<String> getKerberosKeytab() {
-        return this.kerberosKeytab == null ? Output.empty() : this.kerberosKeytab;
+    public Output<String> kerberosKeytab() {
+        return this.kerberosKeytab == null ? Codegen.empty() : this.kerberosKeytab;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKrb5Conf")
       private final @Nullable Output<String> kerberosKrb5Conf;
 
-    public Output<String> getKerberosKrb5Conf() {
-        return this.kerberosKrb5Conf == null ? Output.empty() : this.kerberosKrb5Conf;
+    public Output<String> kerberosKrb5Conf() {
+        return this.kerberosKrb5Conf == null ? Codegen.empty() : this.kerberosKrb5Conf;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kerberosPrincipal")
       private final @Nullable Output<String> kerberosPrincipal;
 
-    public Output<String> getKerberosPrincipal() {
-        return this.kerberosPrincipal == null ? Output.empty() : this.kerberosPrincipal;
+    public Output<String> kerberosPrincipal() {
+        return this.kerberosPrincipal == null ? Codegen.empty() : this.kerberosPrincipal;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyProviderUri")
       private final @Nullable Output<String> kmsKeyProviderUri;
 
-    public Output<String> getKmsKeyProviderUri() {
-        return this.kmsKeyProviderUri == null ? Output.empty() : this.kmsKeyProviderUri;
+    public Output<String> kmsKeyProviderUri() {
+        return this.kmsKeyProviderUri == null ? Codegen.empty() : this.kmsKeyProviderUri;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameNodes")
       private final @Nullable Output<List<LocationHdfsNameNodeGetArgs>> nameNodes;
 
-    public Output<List<LocationHdfsNameNodeGetArgs>> getNameNodes() {
-        return this.nameNodes == null ? Output.empty() : this.nameNodes;
+    public Output<List<LocationHdfsNameNodeGetArgs>> nameNodes() {
+        return this.nameNodes == null ? Codegen.empty() : this.nameNodes;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="qopConfiguration")
       private final @Nullable Output<LocationHdfsQopConfigurationGetArgs> qopConfiguration;
 
-    public Output<LocationHdfsQopConfigurationGetArgs> getQopConfiguration() {
-        return this.qopConfiguration == null ? Output.empty() : this.qopConfiguration;
+    public Output<LocationHdfsQopConfigurationGetArgs> qopConfiguration() {
+        return this.qopConfiguration == null ? Codegen.empty() : this.qopConfiguration;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicationFactor")
       private final @Nullable Output<Integer> replicationFactor;
 
-    public Output<Integer> getReplicationFactor() {
-        return this.replicationFactor == null ? Output.empty() : this.replicationFactor;
+    public Output<Integer> replicationFactor() {
+        return this.replicationFactor == null ? Codegen.empty() : this.replicationFactor;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="simpleUser")
       private final @Nullable Output<String> simpleUser;
 
-    public Output<String> getSimpleUser() {
-        return this.simpleUser == null ? Output.empty() : this.simpleUser;
+    public Output<String> simpleUser() {
+        return this.simpleUser == null ? Codegen.empty() : this.simpleUser;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+    public Output<String> subdirectory() {
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -180,15 +181,15 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public LocationHdfsState(
@@ -227,22 +228,22 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationHdfsState() {
-        this.agentArns = Output.empty();
-        this.arn = Output.empty();
-        this.authenticationType = Output.empty();
-        this.blockSize = Output.empty();
-        this.kerberosKeytab = Output.empty();
-        this.kerberosKrb5Conf = Output.empty();
-        this.kerberosPrincipal = Output.empty();
-        this.kmsKeyProviderUri = Output.empty();
-        this.nameNodes = Output.empty();
-        this.qopConfiguration = Output.empty();
-        this.replicationFactor = Output.empty();
-        this.simpleUser = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uri = Output.empty();
+        this.agentArns = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.blockSize = Codegen.empty();
+        this.kerberosKeytab = Codegen.empty();
+        this.kerberosKrb5Conf = Codegen.empty();
+        this.kerberosPrincipal = Codegen.empty();
+        this.kmsKeyProviderUri = Codegen.empty();
+        this.nameNodes = Codegen.empty();
+        this.qopConfiguration = Codegen.empty();
+        this.replicationFactor = Codegen.empty();
+        this.simpleUser = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -300,7 +301,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentArns(@Nullable List<String> agentArns) {
-            this.agentArns = Output.ofNullable(agentArns);
+            this.agentArns = Codegen.ofNullable(agentArns);
             return this;
         }
         public Builder agentArns(String... agentArns) {
@@ -311,7 +312,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
@@ -319,7 +320,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder blockSize(@Nullable Output<Integer> blockSize) {
@@ -327,7 +328,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blockSize(@Nullable Integer blockSize) {
-            this.blockSize = Output.ofNullable(blockSize);
+            this.blockSize = Codegen.ofNullable(blockSize);
             return this;
         }
         public Builder kerberosKeytab(@Nullable Output<String> kerberosKeytab) {
@@ -335,7 +336,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosKeytab(@Nullable String kerberosKeytab) {
-            this.kerberosKeytab = Output.ofNullable(kerberosKeytab);
+            this.kerberosKeytab = Codegen.ofNullable(kerberosKeytab);
             return this;
         }
         public Builder kerberosKrb5Conf(@Nullable Output<String> kerberosKrb5Conf) {
@@ -343,7 +344,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosKrb5Conf(@Nullable String kerberosKrb5Conf) {
-            this.kerberosKrb5Conf = Output.ofNullable(kerberosKrb5Conf);
+            this.kerberosKrb5Conf = Codegen.ofNullable(kerberosKrb5Conf);
             return this;
         }
         public Builder kerberosPrincipal(@Nullable Output<String> kerberosPrincipal) {
@@ -351,7 +352,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
-            this.kerberosPrincipal = Output.ofNullable(kerberosPrincipal);
+            this.kerberosPrincipal = Codegen.ofNullable(kerberosPrincipal);
             return this;
         }
         public Builder kmsKeyProviderUri(@Nullable Output<String> kmsKeyProviderUri) {
@@ -359,7 +360,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
-            this.kmsKeyProviderUri = Output.ofNullable(kmsKeyProviderUri);
+            this.kmsKeyProviderUri = Codegen.ofNullable(kmsKeyProviderUri);
             return this;
         }
         public Builder nameNodes(@Nullable Output<List<LocationHdfsNameNodeGetArgs>> nameNodes) {
@@ -367,7 +368,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nameNodes(@Nullable List<LocationHdfsNameNodeGetArgs> nameNodes) {
-            this.nameNodes = Output.ofNullable(nameNodes);
+            this.nameNodes = Codegen.ofNullable(nameNodes);
             return this;
         }
         public Builder nameNodes(LocationHdfsNameNodeGetArgs... nameNodes) {
@@ -378,7 +379,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qopConfiguration(@Nullable LocationHdfsQopConfigurationGetArgs qopConfiguration) {
-            this.qopConfiguration = Output.ofNullable(qopConfiguration);
+            this.qopConfiguration = Codegen.ofNullable(qopConfiguration);
             return this;
         }
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
@@ -386,7 +387,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
-            this.replicationFactor = Output.ofNullable(replicationFactor);
+            this.replicationFactor = Codegen.ofNullable(replicationFactor);
             return this;
         }
         public Builder simpleUser(@Nullable Output<String> simpleUser) {
@@ -394,7 +395,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder simpleUser(@Nullable String simpleUser) {
-            this.simpleUser = Output.ofNullable(simpleUser);
+            this.simpleUser = Codegen.ofNullable(simpleUser);
             return this;
         }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
@@ -402,7 +403,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -410,7 +411,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -418,7 +419,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -426,7 +427,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public LocationHdfsState build() {
             return new LocationHdfsState(agentArns, arn, authenticationType, blockSize, kerberosKeytab, kerberosKrb5Conf, kerberosPrincipal, kmsKeyProviderUri, nameNodes, qopConfiguration, replicationFactor, simpleUser, subdirectory, tags, tagsAll, uri);

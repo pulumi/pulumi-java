@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
-    public Output<String> getMachineName() {
+    public Output<String> machineName() {
         return this.machineName;
     }
 
@@ -36,7 +37,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -47,7 +48,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     @Import(name="sourceComputerId", required=true)
       private final Output<String> sourceComputerId;
 
-    public Output<String> getSourceComputerId() {
+    public Output<String> sourceComputerId() {
         return this.sourceComputerId;
     }
 
@@ -58,7 +59,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     @Import(name="vmuuid", required=true)
       private final Output<String> vmuuid;
 
-    public Output<String> getVmuuid() {
+    public Output<String> vmuuid() {
         return this.vmuuid;
     }
 
@@ -69,7 +70,7 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -87,11 +88,11 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
     }
 
     private OnPremiseResourceDetailsArgs() {
-        this.machineName = Output.empty();
-        this.source = Output.empty();
-        this.sourceComputerId = Output.empty();
-        this.vmuuid = Output.empty();
-        this.workspaceId = Output.empty();
+        this.machineName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceComputerId = Codegen.empty();
+        this.vmuuid = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {

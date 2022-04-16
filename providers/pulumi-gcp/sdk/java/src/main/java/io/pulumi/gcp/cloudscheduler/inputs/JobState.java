@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetGetArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetGetArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobPubsubTargetGetArgs;
@@ -28,8 +29,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="appEngineHttpTarget")
       private final @Nullable Output<JobAppEngineHttpTargetGetArgs> appEngineHttpTarget;
 
-    public Output<JobAppEngineHttpTargetGetArgs> getAppEngineHttpTarget() {
-        return this.appEngineHttpTarget == null ? Output.empty() : this.appEngineHttpTarget;
+    public Output<JobAppEngineHttpTargetGetArgs> appEngineHttpTarget() {
+        return this.appEngineHttpTarget == null ? Codegen.empty() : this.appEngineHttpTarget;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="attemptDeadline")
       private final @Nullable Output<String> attemptDeadline;
 
-    public Output<String> getAttemptDeadline() {
-        return this.attemptDeadline == null ? Output.empty() : this.attemptDeadline;
+    public Output<String> attemptDeadline() {
+        return this.attemptDeadline == null ? Codegen.empty() : this.attemptDeadline;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpTarget")
       private final @Nullable Output<JobHttpTargetGetArgs> httpTarget;
 
-    public Output<JobHttpTargetGetArgs> getHttpTarget() {
-        return this.httpTarget == null ? Output.empty() : this.httpTarget;
+    public Output<JobHttpTargetGetArgs> httpTarget() {
+        return this.httpTarget == null ? Codegen.empty() : this.httpTarget;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubTarget")
       private final @Nullable Output<JobPubsubTargetGetArgs> pubsubTarget;
 
-    public Output<JobPubsubTargetGetArgs> getPubsubTarget() {
-        return this.pubsubTarget == null ? Output.empty() : this.pubsubTarget;
+    public Output<JobPubsubTargetGetArgs> pubsubTarget() {
+        return this.pubsubTarget == null ? Codegen.empty() : this.pubsubTarget;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryConfig")
       private final @Nullable Output<JobRetryConfigGetArgs> retryConfig;
 
-    public Output<JobRetryConfigGetArgs> getRetryConfig() {
-        return this.retryConfig == null ? Output.empty() : this.retryConfig;
+    public Output<JobRetryConfigGetArgs> retryConfig() {
+        return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<String> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public JobState(
@@ -187,17 +188,17 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobState() {
-        this.appEngineHttpTarget = Output.empty();
-        this.attemptDeadline = Output.empty();
-        this.description = Output.empty();
-        this.httpTarget = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.pubsubTarget = Output.empty();
-        this.region = Output.empty();
-        this.retryConfig = Output.empty();
-        this.schedule = Output.empty();
-        this.timeZone = Output.empty();
+        this.appEngineHttpTarget = Codegen.empty();
+        this.attemptDeadline = Codegen.empty();
+        this.description = Codegen.empty();
+        this.httpTarget = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.pubsubTarget = Codegen.empty();
+        this.region = Codegen.empty();
+        this.retryConfig = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -245,7 +246,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appEngineHttpTarget(@Nullable JobAppEngineHttpTargetGetArgs appEngineHttpTarget) {
-            this.appEngineHttpTarget = Output.ofNullable(appEngineHttpTarget);
+            this.appEngineHttpTarget = Codegen.ofNullable(appEngineHttpTarget);
             return this;
         }
         public Builder attemptDeadline(@Nullable Output<String> attemptDeadline) {
@@ -253,7 +254,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attemptDeadline(@Nullable String attemptDeadline) {
-            this.attemptDeadline = Output.ofNullable(attemptDeadline);
+            this.attemptDeadline = Codegen.ofNullable(attemptDeadline);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -261,7 +262,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder httpTarget(@Nullable Output<JobHttpTargetGetArgs> httpTarget) {
@@ -269,7 +270,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpTarget(@Nullable JobHttpTargetGetArgs httpTarget) {
-            this.httpTarget = Output.ofNullable(httpTarget);
+            this.httpTarget = Codegen.ofNullable(httpTarget);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -277,7 +278,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -285,7 +286,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder pubsubTarget(@Nullable Output<JobPubsubTargetGetArgs> pubsubTarget) {
@@ -293,7 +294,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pubsubTarget(@Nullable JobPubsubTargetGetArgs pubsubTarget) {
-            this.pubsubTarget = Output.ofNullable(pubsubTarget);
+            this.pubsubTarget = Codegen.ofNullable(pubsubTarget);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -301,7 +302,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder retryConfig(@Nullable Output<JobRetryConfigGetArgs> retryConfig) {
@@ -309,7 +310,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryConfig(@Nullable JobRetryConfigGetArgs retryConfig) {
-            this.retryConfig = Output.ofNullable(retryConfig);
+            this.retryConfig = Codegen.ofNullable(retryConfig);
             return this;
         }
         public Builder schedule(@Nullable Output<String> schedule) {
@@ -317,7 +318,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -325,7 +326,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public JobState build() {
             return new JobState(appEngineHttpTarget, attemptDeadline, description, httpTarget, name, project, pubsubTarget, region, retryConfig, schedule, timeZone);

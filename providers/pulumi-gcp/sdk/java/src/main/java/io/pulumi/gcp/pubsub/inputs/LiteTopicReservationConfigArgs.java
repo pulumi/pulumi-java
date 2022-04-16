@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
     @Import(name="throughputReservation")
       private final @Nullable Output<String> throughputReservation;
 
-    public Output<String> getThroughputReservation() {
-        return this.throughputReservation == null ? Output.empty() : this.throughputReservation;
+    public Output<String> throughputReservation() {
+        return this.throughputReservation == null ? Codegen.empty() : this.throughputReservation;
     }
 
     public LiteTopicReservationConfigArgs(@Nullable Output<String> throughputReservation) {
@@ -30,7 +31,7 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
     }
 
     private LiteTopicReservationConfigArgs() {
-        this.throughputReservation = Output.empty();
+        this.throughputReservation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder throughputReservation(@Nullable String throughputReservation) {
-            this.throughputReservation = Output.ofNullable(throughputReservation);
+            this.throughputReservation = Codegen.ofNullable(throughputReservation);
             return this;
         }        public LiteTopicReservationConfigArgs build() {
             return new LiteTopicReservationConfigArgs(throughputReservation);

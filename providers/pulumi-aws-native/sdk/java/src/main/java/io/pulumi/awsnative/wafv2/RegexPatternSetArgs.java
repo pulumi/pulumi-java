@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RegexPatternSetScope;
 import io.pulumi.awsnative.wafv2.inputs.RegexPatternSetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="regularExpressionList", required=true)
       private final Output<List<String>> regularExpressionList;
 
-    public Output<List<String>> getRegularExpressionList() {
+    public Output<List<String>> regularExpressionList() {
         return this.regularExpressionList;
     }
 
@@ -53,15 +54,15 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scope", required=true)
       private final Output<RegexPatternSetScope> scope;
 
-    public Output<RegexPatternSetScope> getScope() {
+    public Output<RegexPatternSetScope> scope() {
         return this.scope;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<RegexPatternSetTagArgs>> tags;
 
-    public Output<List<RegexPatternSetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<RegexPatternSetTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RegexPatternSetArgs(
@@ -78,11 +79,11 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RegexPatternSetArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.regularExpressionList = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.regularExpressionList = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -126,7 +127,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder regularExpressionList(Output<List<String>> regularExpressionList) {
@@ -153,7 +154,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable List<RegexPatternSetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RegexPatternSetTagArgs... tags) {

@@ -37,7 +37,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
      * The size of the disk in base-2 GB.
      * 
     */
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
@@ -46,7 +46,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
      * Possible values are `SCSI` and `NVME`.
      * 
     */
-    public Optional<String> getInterface_() {
+    public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }
 

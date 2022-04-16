@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -45,8 +46,8 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
     }
 
     private FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs() {
-        this.priority = Output.empty();
-        this.resourceArn = Output.empty();
+        this.priority = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder resourceArn(Output<String> resourceArn) {

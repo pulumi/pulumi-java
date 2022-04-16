@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,7 +48,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoReplaceOnFailure() {
+    public Output</* @Nullable */ Boolean> autoReplaceOnFailure() {
         return this.autoReplaceOnFailure;
     }
     /**
@@ -61,7 +62,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return A unique id generated and assigned to the dedicated host by the platform. <br><br> Does not change throughout the lifetime of the host.
      * 
      */
-    public Output<String> getHostId() {
+    public Output<String> hostId() {
         return this.hostId;
     }
     /**
@@ -75,7 +76,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return The dedicated host instance view.
      * 
      */
-    public Output<DedicatedHostInstanceViewResponse> getInstanceView() {
+    public Output<DedicatedHostInstanceViewResponse> instanceView() {
         return this.instanceView;
     }
     /**
@@ -89,7 +90,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
      * 
      */
-    public Output</* @Nullable */ String> getLicenseType() {
+    public Output</* @Nullable */ String> licenseType() {
         return this.licenseType;
     }
     /**
@@ -103,7 +104,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -117,7 +118,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return Fault domain of the dedicated host within a dedicated host group.
      * 
      */
-    public Output</* @Nullable */ Integer> getPlatformFaultDomain() {
+    public Output</* @Nullable */ Integer> platformFaultDomain() {
         return this.platformFaultDomain;
     }
     /**
@@ -145,7 +146,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -159,7 +160,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return The date when the host was first provisioned.
      * 
      */
-    public Output<String> getProvisioningTime() {
+    public Output<String> provisioningTime() {
         return this.provisioningTime;
     }
     /**
@@ -173,7 +174,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -187,7 +188,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -201,7 +202,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -215,7 +216,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @return A list of references to all virtual machines in the Dedicated Host.
      * 
      */
-    public Output<List<SubResourceReadOnlyResponse>> getVirtualMachines() {
+    public Output<List<SubResourceReadOnlyResponse>> virtualMachines() {
         return this.virtualMachines;
     }
 
@@ -241,7 +242,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DedicatedHost(String name, DedicatedHostArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:DedicatedHost", name, args == null ? DedicatedHostArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:DedicatedHost", name, args == null ? DedicatedHostArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DedicatedHost(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

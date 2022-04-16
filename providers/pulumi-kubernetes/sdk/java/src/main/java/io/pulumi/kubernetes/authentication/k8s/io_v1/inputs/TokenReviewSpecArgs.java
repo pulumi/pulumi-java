@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> getAudiences() {
-        return this.audiences == null ? Output.empty() : this.audiences;
+    public Output<List<String>> audiences() {
+        return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="token")
       private final @Nullable Output<String> token;
 
-    public Output<String> getToken() {
-        return this.token == null ? Output.empty() : this.token;
+    public Output<String> token() {
+        return this.token == null ? Codegen.empty() : this.token;
     }
 
     public TokenReviewSpecArgs(
@@ -49,8 +50,8 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TokenReviewSpecArgs() {
-        this.audiences = Output.empty();
-        this.token = Output.empty();
+        this.audiences = Codegen.empty();
+        this.token = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Output.ofNullable(audiences);
+            this.audiences = Codegen.ofNullable(audiences);
             return this;
         }
         public Builder audiences(String... audiences) {
@@ -91,7 +92,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder token(@Nullable String token) {
-            this.token = Output.ofNullable(token);
+            this.token = Codegen.ofNullable(token);
             return this;
         }        public TokenReviewSpecArgs build() {
             return new TokenReviewSpecArgs(audiences, token);

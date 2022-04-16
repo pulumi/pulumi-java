@@ -25,7 +25,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
@@ -36,7 +36,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -47,7 +47,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
     @Import(name="spn")
       private final @Nullable String spn;
 
-    public Optional<String> getSpn() {
+    public Optional<String> spn() {
         return this.spn == null ? Optional.empty() : Optional.ofNullable(this.spn);
     }
 

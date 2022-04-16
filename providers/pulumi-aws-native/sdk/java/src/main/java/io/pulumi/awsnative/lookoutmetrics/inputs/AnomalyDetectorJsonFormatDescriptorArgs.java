@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorJsonFormatDescriptorFileCompression;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
     @Import(name="charset")
       private final @Nullable Output<String> charset;
 
-    public Output<String> getCharset() {
-        return this.charset == null ? Output.empty() : this.charset;
+    public Output<String> charset() {
+        return this.charset == null ? Codegen.empty() : this.charset;
     }
 
     @Import(name="fileCompression")
       private final @Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression;
 
-    public Output<AnomalyDetectorJsonFormatDescriptorFileCompression> getFileCompression() {
-        return this.fileCompression == null ? Output.empty() : this.fileCompression;
+    public Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression() {
+        return this.fileCompression == null ? Codegen.empty() : this.fileCompression;
     }
 
     public AnomalyDetectorJsonFormatDescriptorArgs(
@@ -37,8 +38,8 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
     }
 
     private AnomalyDetectorJsonFormatDescriptorArgs() {
-        this.charset = Output.empty();
-        this.fileCompression = Output.empty();
+        this.charset = Codegen.empty();
+        this.fileCompression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
             return this;
         }
         public Builder charset(@Nullable String charset) {
-            this.charset = Output.ofNullable(charset);
+            this.charset = Codegen.ofNullable(charset);
             return this;
         }
         public Builder fileCompression(@Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression) {
@@ -76,7 +77,7 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
             return this;
         }
         public Builder fileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
-            this.fileCompression = Output.ofNullable(fileCompression);
+            this.fileCompression = Codegen.ofNullable(fileCompression);
             return this;
         }        public AnomalyDetectorJsonFormatDescriptorArgs build() {
             return new AnomalyDetectorJsonFormatDescriptorArgs(charset, fileCompression);

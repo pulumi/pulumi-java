@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
     @Import(name="gcsFileUri")
       private final @Nullable Output<String> gcsFileUri;
 
-    public Output<String> getGcsFileUri() {
-        return this.gcsFileUri == null ? Output.empty() : this.gcsFileUri;
+    public Output<String> gcsFileUri() {
+        return this.gcsFileUri == null ? Codegen.empty() : this.gcsFileUri;
     }
 
     public GoogleCloudDatalabelingV1beta1PdfInstructionArgs(@Nullable Output<String> gcsFileUri) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
     }
 
     private GoogleCloudDatalabelingV1beta1PdfInstructionArgs() {
-        this.gcsFileUri = Output.empty();
+        this.gcsFileUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
             return this;
         }
         public Builder gcsFileUri(@Nullable String gcsFileUri) {
-            this.gcsFileUri = Output.ofNullable(gcsFileUri);
+            this.gcsFileUri = Codegen.ofNullable(gcsFileUri);
             return this;
         }        public GoogleCloudDatalabelingV1beta1PdfInstructionArgs build() {
             return new GoogleCloudDatalabelingV1beta1PdfInstructionArgs(gcsFileUri);

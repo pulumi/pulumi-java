@@ -7,6 +7,7 @@ import io.pulumi.azurenative.operationalinsights.enums.LinkedServiceEntityStatus
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
 
-    public Output<String> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+    public Output<String> linkedServiceName() {
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,LinkedServiceEntityStatus>> provisioningState;
 
-    public Output<Either<String,LinkedServiceEntityStatus>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,LinkedServiceEntityStatus>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,8 +58,8 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -90,8 +91,8 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeAccessResourceId")
       private final @Nullable Output<String> writeAccessResourceId;
 
-    public Output<String> getWriteAccessResourceId() {
-        return this.writeAccessResourceId == null ? Output.empty() : this.writeAccessResourceId;
+    public Output<String> writeAccessResourceId() {
+        return this.writeAccessResourceId == null ? Codegen.empty() : this.writeAccessResourceId;
     }
 
     public LinkedServiceArgs(
@@ -112,13 +113,13 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkedServiceArgs() {
-        this.linkedServiceName = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
-        this.writeAccessResourceId = Output.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
+        this.writeAccessResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedServiceName(@Nullable String linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,LinkedServiceEntityStatus>> provisioningState) {
@@ -166,7 +167,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,LinkedServiceEntityStatus> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -182,7 +183,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -190,7 +191,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {
@@ -206,7 +207,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeAccessResourceId(@Nullable String writeAccessResourceId) {
-            this.writeAccessResourceId = Output.ofNullable(writeAccessResourceId);
+            this.writeAccessResourceId = Codegen.ofNullable(writeAccessResourceId);
             return this;
         }        public LinkedServiceArgs build() {
             return new LinkedServiceArgs(linkedServiceName, provisioningState, resourceGroupName, resourceId, tags, workspaceName, writeAccessResourceId);

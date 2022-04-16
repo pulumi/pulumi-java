@@ -8,6 +8,7 @@ import io.pulumi.azurenative.policyinsights.inputs.AttestationEvidenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="attestationName")
       private final @Nullable Output<String> attestationName;
 
-    public Output<String> getAttestationName() {
-        return this.attestationName == null ? Output.empty() : this.attestationName;
+    public Output<String> attestationName() {
+        return this.attestationName == null ? Codegen.empty() : this.attestationName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="comments")
       private final @Nullable Output<String> comments;
 
-    public Output<String> getComments() {
-        return this.comments == null ? Output.empty() : this.comments;
+    public Output<String> comments() {
+        return this.comments == null ? Codegen.empty() : this.comments;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="complianceState")
       private final @Nullable Output<Either<String,ComplianceState>> complianceState;
 
-    public Output<Either<String,ComplianceState>> getComplianceState() {
-        return this.complianceState == null ? Output.empty() : this.complianceState;
+    public Output<Either<String,ComplianceState>> complianceState() {
+        return this.complianceState == null ? Codegen.empty() : this.complianceState;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="evidence")
       private final @Nullable Output<List<AttestationEvidenceArgs>> evidence;
 
-    public Output<List<AttestationEvidenceArgs>> getEvidence() {
-        return this.evidence == null ? Output.empty() : this.evidence;
+    public Output<List<AttestationEvidenceArgs>> evidence() {
+        return this.evidence == null ? Codegen.empty() : this.evidence;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
 
-    public Output<String> getExpiresOn() {
-        return this.expiresOn == null ? Output.empty() : this.expiresOn;
+    public Output<String> expiresOn() {
+        return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+    public Output<String> owner() {
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="policyAssignmentId", required=true)
       private final Output<String> policyAssignmentId;
 
-    public Output<String> getPolicyAssignmentId() {
+    public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
 
@@ -102,8 +103,8 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> getPolicyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Output.empty() : this.policyDefinitionReferenceId;
+    public Output<String> policyDefinitionReferenceId() {
+        return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
     }
 
     public AttestationAtSubscriptionArgs(
@@ -126,14 +127,14 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     }
 
     private AttestationAtSubscriptionArgs() {
-        this.attestationName = Output.empty();
-        this.comments = Output.empty();
-        this.complianceState = Output.empty();
-        this.evidence = Output.empty();
-        this.expiresOn = Output.empty();
-        this.owner = Output.empty();
-        this.policyAssignmentId = Output.empty();
-        this.policyDefinitionReferenceId = Output.empty();
+        this.attestationName = Codegen.empty();
+        this.comments = Codegen.empty();
+        this.complianceState = Codegen.empty();
+        this.evidence = Codegen.empty();
+        this.expiresOn = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.policyAssignmentId = Codegen.empty();
+        this.policyDefinitionReferenceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder attestationName(@Nullable String attestationName) {
-            this.attestationName = Output.ofNullable(attestationName);
+            this.attestationName = Codegen.ofNullable(attestationName);
             return this;
         }
         public Builder comments(@Nullable Output<String> comments) {
@@ -183,7 +184,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder comments(@Nullable String comments) {
-            this.comments = Output.ofNullable(comments);
+            this.comments = Codegen.ofNullable(comments);
             return this;
         }
         public Builder complianceState(@Nullable Output<Either<String,ComplianceState>> complianceState) {
@@ -191,7 +192,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder complianceState(@Nullable Either<String,ComplianceState> complianceState) {
-            this.complianceState = Output.ofNullable(complianceState);
+            this.complianceState = Codegen.ofNullable(complianceState);
             return this;
         }
         public Builder evidence(@Nullable Output<List<AttestationEvidenceArgs>> evidence) {
@@ -199,7 +200,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder evidence(@Nullable List<AttestationEvidenceArgs> evidence) {
-            this.evidence = Output.ofNullable(evidence);
+            this.evidence = Codegen.ofNullable(evidence);
             return this;
         }
         public Builder evidence(AttestationEvidenceArgs... evidence) {
@@ -210,7 +211,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Output.ofNullable(expiresOn);
+            this.expiresOn = Codegen.ofNullable(expiresOn);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -218,7 +219,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder policyAssignmentId(Output<String> policyAssignmentId) {
@@ -234,7 +235,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
+            this.policyDefinitionReferenceId = Codegen.ofNullable(policyDefinitionReferenceId);
             return this;
         }        public AttestationAtSubscriptionArgs build() {
             return new AttestationAtSubscriptionArgs(attestationName, comments, complianceState, evidence, expiresOn, owner, policyAssignmentId, policyDefinitionReferenceId);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +42,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Object id of the user that created the lab.
      * 
      */
-    public Output<String> getCreatedByObjectId() {
+    public Output<String> createdByObjectId() {
         return this.createdByObjectId;
     }
     /**
@@ -55,7 +56,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Lab creator name
      * 
      */
-    public Output<String> getCreatedByUserPrincipalName() {
+    public Output<String> createdByUserPrincipalName() {
         return this.createdByUserPrincipalName;
     }
     /**
@@ -69,7 +70,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Creation date for the lab
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -83,7 +84,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Invitation code that users can use to join a lab.
      * 
      */
-    public Output<String> getInvitationCode() {
+    public Output<String> invitationCode() {
         return this.invitationCode;
     }
     /**
@@ -97,7 +98,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The details of the latest operation. ex: status, error
      * 
      */
-    public Output<LatestOperationResultResponse> getLatestOperationResult() {
+    public Output<LatestOperationResultResponse> latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
@@ -111,7 +112,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -125,7 +126,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Maximum number of users allowed in the lab.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxUsersInLab() {
+    public Output</* @Nullable */ Integer> maxUsersInLab() {
         return this.maxUsersInLab;
     }
     /**
@@ -139,7 +140,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -153,7 +154,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -167,7 +168,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -181,7 +182,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -195,7 +196,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> getUniqueIdentifier() {
+    public Output</* @Nullable */ String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -209,7 +210,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Maximum duration a user can use an environment for in the lab.
      * 
      */
-    public Output</* @Nullable */ String> getUsageQuota() {
+    public Output</* @Nullable */ String> usageQuota() {
         return this.usageQuota;
     }
     /**
@@ -223,7 +224,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Lab user access mode (open to all vs. restricted to those listed on the lab).
      * 
      */
-    public Output</* @Nullable */ String> getUserAccessMode() {
+    public Output</* @Nullable */ String> userAccessMode() {
         return this.userAccessMode;
     }
     /**
@@ -237,7 +238,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @return Maximum value MaxUsersInLab can be set to, as specified by the service
      * 
      */
-    public Output<Integer> getUserQuota() {
+    public Output<Integer> userQuota() {
         return this.userQuota;
     }
 
@@ -263,7 +264,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Lab(String name, LabArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:labservices:Lab", name, args == null ? LabArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:labservices:Lab", name, args == null ? LabArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Lab(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

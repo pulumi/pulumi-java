@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     @Import(name="recentSentencesCount", required=true)
       private final Integer recentSentencesCount;
 
-    public Integer getRecentSentencesCount() {
+    public Integer recentSentencesCount() {
         return this.recentSentencesCount;
     }
 

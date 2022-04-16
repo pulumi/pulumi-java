@@ -26,7 +26,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="artifactStorage", required=true)
       private final String artifactStorage;
 
-    public String getArtifactStorage() {
+    public String artifactStorage() {
         return this.artifactStorage;
     }
 
@@ -37,7 +37,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="defaultPool", required=true)
       private final DefaultPoolResponse defaultPool;
 
-    public DefaultPoolResponse getDefaultPool() {
+    public DefaultPoolResponse defaultPool() {
         return this.defaultPool;
     }
 
@@ -48,7 +48,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="privatePool", required=true)
       private final PrivatePoolResponse privatePool;
 
-    public PrivatePoolResponse getPrivatePool() {
+    public PrivatePoolResponse privatePool() {
         return this.privatePool;
     }
 
@@ -59,7 +59,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -70,7 +70,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="usages", required=true)
       private final List<String> usages;
 
-    public List<String> getUsages() {
+    public List<String> usages() {
         return this.usages;
     }
 
@@ -81,7 +81,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="workerPool", required=true)
       private final String workerPool;
 
-    public String getWorkerPool() {
+    public String workerPool() {
         return this.workerPool;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repository")
       private final @Nullable Output<String> repository;
 
-    public Output<String> getRepository() {
-        return this.repository == null ? Output.empty() : this.repository;
+    public Output<String> repository() {
+        return this.repository == null ? Codegen.empty() : this.repository;
     }
 
     public RCranPackageArgs(
@@ -44,8 +45,8 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RCranPackageArgs() {
-        this.name = Output.empty();
-        this.repository = Output.empty();
+        this.name = Codegen.empty();
+        this.repository = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder repository(@Nullable Output<String> repository) {
@@ -83,7 +84,7 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repository(@Nullable String repository) {
-            this.repository = Output.ofNullable(repository);
+            this.repository = Codegen.ofNullable(repository);
             return this;
         }        public RCranPackageArgs build() {
             return new RCranPackageArgs(name, repository);

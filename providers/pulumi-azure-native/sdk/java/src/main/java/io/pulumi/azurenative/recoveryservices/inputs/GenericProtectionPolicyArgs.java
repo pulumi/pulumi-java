@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
-    public Output<String> getBackupManagementType() {
+    public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -40,8 +41,8 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
-    public Output<String> getFabricName() {
-        return this.fabricName == null ? Output.empty() : this.fabricName;
+    public Output<String> fabricName() {
+        return this.fabricName == null ? Codegen.empty() : this.fabricName;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> getProtectedItemsCount() {
-        return this.protectedItemsCount == null ? Output.empty() : this.protectedItemsCount;
+    public Output<Integer> protectedItemsCount() {
+        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="subProtectionPolicy")
       private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
-    public Output<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
-        return this.subProtectionPolicy == null ? Output.empty() : this.subProtectionPolicy;
+    public Output<List<SubProtectionPolicyArgs>> subProtectionPolicy() {
+        return this.subProtectionPolicy == null ? Codegen.empty() : this.subProtectionPolicy;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public GenericProtectionPolicyArgs(
@@ -91,11 +92,11 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private GenericProtectionPolicyArgs() {
-        this.backupManagementType = Output.empty();
-        this.fabricName = Output.empty();
-        this.protectedItemsCount = Output.empty();
-        this.subProtectionPolicy = Output.empty();
-        this.timeZone = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.fabricName = Codegen.empty();
+        this.protectedItemsCount = Codegen.empty();
+        this.subProtectionPolicy = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Output.ofNullable(fabricName);
+            this.fabricName = Codegen.ofNullable(fabricName);
             return this;
         }
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
@@ -147,7 +148,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
+            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
             return this;
         }
         public Builder subProtectionPolicy(@Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
@@ -155,7 +156,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
-            this.subProtectionPolicy = Output.ofNullable(subProtectionPolicy);
+            this.subProtectionPolicy = Codegen.ofNullable(subProtectionPolicy);
             return this;
         }
         public Builder subProtectionPolicy(SubProtectionPolicyArgs... subProtectionPolicy) {
@@ -166,7 +167,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public GenericProtectionPolicyArgs build() {
             return new GenericProtectionPolicyArgs(backupManagementType, fabricName, protectedItemsCount, subProtectionPolicy, timeZone);

@@ -5,6 +5,7 @@ package io.pulumi.example;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.inputs.PetArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,15 +20,15 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="pets")
       private final @Nullable Output<List<PetArgs>> pets;
 
-    public Output<List<PetArgs>> getPets() {
-        return this.pets == null ? Output.empty() : this.pets;
+    public Output<List<PetArgs>> pets() {
+        return this.pets == null ? Codegen.empty() : this.pets;
     }
 
     public PersonArgs(
@@ -38,8 +39,8 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PersonArgs() {
-        this.name = Output.empty();
-        this.pets = Output.empty();
+        this.name = Codegen.empty();
+        this.pets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pets(@Nullable Output<List<PetArgs>> pets) {
@@ -77,7 +78,7 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pets(@Nullable List<PetArgs> pets) {
-            this.pets = Output.ofNullable(pets);
+            this.pets = Codegen.ofNullable(pets);
             return this;
         }
         public Builder pets(PetArgs... pets) {

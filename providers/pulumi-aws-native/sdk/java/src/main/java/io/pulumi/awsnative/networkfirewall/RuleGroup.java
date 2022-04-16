@@ -10,6 +10,7 @@ import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,49 +25,49 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
     @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="ruleGroup", type=io.pulumi.awsnative.networkfirewall.outputs.RuleGroup.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.networkfirewall.outputs.RuleGroup> ruleGroup;
 
-    public Output</* @Nullable */ io.pulumi.awsnative.networkfirewall.outputs.RuleGroup> getRuleGroup() {
+    public Output</* @Nullable */ io.pulumi.awsnative.networkfirewall.outputs.RuleGroup> ruleGroup() {
         return this.ruleGroup;
     }
     @Export(name="ruleGroupArn", type=String.class, parameters={})
     private Output<String> ruleGroupArn;
 
-    public Output<String> getRuleGroupArn() {
+    public Output<String> ruleGroupArn() {
         return this.ruleGroupArn;
     }
     @Export(name="ruleGroupId", type=String.class, parameters={})
     private Output<String> ruleGroupId;
 
-    public Output<String> getRuleGroupId() {
+    public Output<String> ruleGroupId() {
         return this.ruleGroupId;
     }
     @Export(name="ruleGroupName", type=String.class, parameters={})
     private Output<String> ruleGroupName;
 
-    public Output<String> getRuleGroupName() {
+    public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
     @Export(name="tags", type=List.class, parameters={RuleGroupTag.class})
     private Output</* @Nullable */ List<RuleGroupTag>> tags;
 
-    public Output</* @Nullable */ List<RuleGroupTag>> getTags() {
+    public Output</* @Nullable */ List<RuleGroupTag>> tags() {
         return this.tags;
     }
     @Export(name="type", type=RuleGroupTypeEnum.class, parameters={})
     private Output<RuleGroupTypeEnum> type;
 
-    public Output<RuleGroupTypeEnum> getType() {
+    public Output<RuleGroupTypeEnum> type() {
         return this.type;
     }
 
@@ -92,7 +93,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuleGroup(String name, RuleGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkfirewall:RuleGroup", name, args == null ? RuleGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkfirewall:RuleGroup", name, args == null ? RuleGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RuleGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -33,8 +34,8 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
     @Import(name="usePreviousValue")
       private final @Nullable Output<Boolean> usePreviousValue;
 
-    public Output<Boolean> getUsePreviousValue() {
-        return this.usePreviousValue == null ? Output.empty() : this.usePreviousValue;
+    public Output<Boolean> usePreviousValue() {
+        return this.usePreviousValue == null ? Codegen.empty() : this.usePreviousValue;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ProvisionedProductProvisioningParameterGetArgs(
@@ -58,9 +59,9 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
     }
 
     private ProvisionedProductProvisioningParameterGetArgs() {
-        this.key = Output.empty();
-        this.usePreviousValue = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.usePreviousValue = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
             return this;
         }
         public Builder usePreviousValue(@Nullable Boolean usePreviousValue) {
-            this.usePreviousValue = Output.ofNullable(usePreviousValue);
+            this.usePreviousValue = Codegen.ofNullable(usePreviousValue);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -108,7 +109,7 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ProvisionedProductProvisioningParameterGetArgs build() {
             return new ProvisionedProductProvisioningParameterGetArgs(key, usePreviousValue, value);

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.SubnetState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The ARN of the subnet.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +62,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * assigned an IPv6 address. Default is `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getAssignIpv6AddressOnCreation() {
+    public Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation;
     }
     /**
@@ -75,7 +76,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return AZ for the subnet.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -89,7 +90,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return AZ ID of the subnet. This argument is not supported in all regions or partitions. If necessary, use `availability_zone` instead.
      * 
      */
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
@@ -103,7 +104,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The IPv4 CIDR block for the subnet.
      * 
      */
-    public Output</* @Nullable */ String> getCidrBlock() {
+    public Output</* @Nullable */ String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -117,7 +118,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
      * 
      */
-    public Output</* @Nullable */ String> getCustomerOwnedIpv4Pool() {
+    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     /**
@@ -131,7 +132,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic IPv6 addresses for IPv4-only destinations. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDns64() {
+    public Output</* @Nullable */ Boolean> enableDns64() {
         return this.enableDns64;
     }
     /**
@@ -145,7 +146,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to respond to DNS queries for instance hostnames with DNS A records. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableResourceNameDnsARecordOnLaunch() {
+    public Output</* @Nullable */ Boolean> enableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch;
     }
     /**
@@ -159,7 +160,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableResourceNameDnsAaaaRecordOnLaunch() {
+    public Output</* @Nullable */ Boolean> enableResourceNameDnsAaaaRecordOnLaunch() {
         return this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
     /**
@@ -175,7 +176,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * in CIDR notation. The subnet size must use a /64 prefix length.
      * 
      */
-    public Output</* @Nullable */ String> getIpv6CidrBlock() {
+    public Output</* @Nullable */ String> ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     /**
@@ -189,7 +190,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The association ID for the IPv6 CIDR block.
      * 
      */
-    public Output<String> getIpv6CidrBlockAssociationId() {
+    public Output<String> ipv6CidrBlockAssociationId() {
         return this.ipv6CidrBlockAssociationId;
     }
     /**
@@ -203,7 +204,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to create an IPv6-only subnet. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIpv6Native() {
+    public Output</* @Nullable */ Boolean> ipv6Native() {
         return this.ipv6Native;
     }
     /**
@@ -217,7 +218,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMapCustomerOwnedIpOnLaunch() {
+    public Output</* @Nullable */ Boolean> mapCustomerOwnedIpOnLaunch() {
         return this.mapCustomerOwnedIpOnLaunch;
     }
     /**
@@ -235,7 +236,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * a public IP address. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMapPublicIpOnLaunch() {
+    public Output</* @Nullable */ Boolean> mapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch;
     }
     /**
@@ -249,7 +250,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Outpost.
      * 
      */
-    public Output</* @Nullable */ String> getOutpostArn() {
+    public Output</* @Nullable */ String> outpostArn() {
         return this.outpostArn;
     }
     /**
@@ -263,7 +264,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the subnet.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -277,7 +278,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The type of hostnames to assign to instances in the subnet at launch. For IPv4-only subnets, an instance DNS name must be based on the instance IPv4 address. For IPv6-only subnets, an instance DNS name must be based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID. Valid values: `ip-name`, `resource-name`.
      * 
      */
-    public Output<String> getPrivateDnsHostnameTypeOnLaunch() {
+    public Output<String> privateDnsHostnameTypeOnLaunch() {
         return this.privateDnsHostnameTypeOnLaunch;
     }
     /**
@@ -291,7 +292,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -305,7 +306,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -319,7 +320,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @return The VPC ID.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -345,7 +346,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Subnet(String name, SubnetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/subnet:Subnet", name, args == null ? SubnetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/subnet:Subnet", name, args == null ? SubnetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Subnet(String name, Output<String> id, @Nullable SubnetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

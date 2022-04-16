@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return List of Allowed Tenants when configuring Azure Active Directory login.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAllowedTenants() {
+    public Output</* @Nullable */ List<String>> allowedTenants() {
         return this.allowedTenants;
     }
     /**
@@ -55,7 +56,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
      * 
      */
-    public Output</* @Nullable */ String> getAuthority() {
+    public Output</* @Nullable */ String> authority() {
         return this.authority;
     }
     /**
@@ -69,7 +70,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -83,7 +84,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> getClientSecret() {
+    public Output</* @Nullable */ String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -97,7 +98,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -111,7 +112,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    public Output</* @Nullable */ String> getPasswordResetPolicyName() {
+    public Output</* @Nullable */ String> passwordResetPolicyName() {
         return this.passwordResetPolicyName;
     }
     /**
@@ -125,7 +126,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    public Output</* @Nullable */ String> getProfileEditingPolicyName() {
+    public Output</* @Nullable */ String> profileEditingPolicyName() {
         return this.profileEditingPolicyName;
     }
     /**
@@ -139,7 +140,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Signin Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    public Output</* @Nullable */ String> getSigninPolicyName() {
+    public Output</* @Nullable */ String> signinPolicyName() {
         return this.signinPolicyName;
     }
     /**
@@ -153,7 +154,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return The TenantId to use instead of Common when logging into Active Directory
      * 
      */
-    public Output</* @Nullable */ String> getSigninTenant() {
+    public Output</* @Nullable */ String> signinTenant() {
         return this.signinTenant;
     }
     /**
@@ -167,7 +168,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Signup Policy Name. Only applies to AAD B2C Identity Provider.
      * 
      */
-    public Output</* @Nullable */ String> getSignupPolicyName() {
+    public Output</* @Nullable */ String> signupPolicyName() {
         return this.signupPolicyName;
     }
     /**
@@ -181,7 +182,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -207,7 +208,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityProvider(String name, IdentityProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:IdentityProvider", name, args == null ? IdentityProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:IdentityProvider", name, args == null ? IdentityProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

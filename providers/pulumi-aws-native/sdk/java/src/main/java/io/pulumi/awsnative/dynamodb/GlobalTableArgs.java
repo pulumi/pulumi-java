@@ -14,6 +14,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTimeToLiveSpecificationArg
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableWriteProvisionedThroughputSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,78 +28,78 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributeDefinitions", required=true)
       private final Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
 
-    public Output<List<GlobalTableAttributeDefinitionArgs>> getAttributeDefinitions() {
+    public Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions() {
         return this.attributeDefinitions;
     }
 
     @Import(name="billingMode")
       private final @Nullable Output<String> billingMode;
 
-    public Output<String> getBillingMode() {
-        return this.billingMode == null ? Output.empty() : this.billingMode;
+    public Output<String> billingMode() {
+        return this.billingMode == null ? Codegen.empty() : this.billingMode;
     }
 
     @Import(name="globalSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
-    public Output<List<GlobalTableGlobalSecondaryIndexArgs>> getGlobalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? Output.empty() : this.globalSecondaryIndexes;
+    public Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes() {
+        return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
     }
 
     @Import(name="keySchema", required=true)
       private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
-    public Output<List<GlobalTableKeySchemaArgs>> getKeySchema() {
+    public Output<List<GlobalTableKeySchemaArgs>> keySchema() {
         return this.keySchema;
     }
 
     @Import(name="localSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
-    public Output<List<GlobalTableLocalSecondaryIndexArgs>> getLocalSecondaryIndexes() {
-        return this.localSecondaryIndexes == null ? Output.empty() : this.localSecondaryIndexes;
+    public Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes() {
+        return this.localSecondaryIndexes == null ? Codegen.empty() : this.localSecondaryIndexes;
     }
 
     @Import(name="replicas", required=true)
       private final Output<List<GlobalTableReplicaSpecificationArgs>> replicas;
 
-    public Output<List<GlobalTableReplicaSpecificationArgs>> getReplicas() {
+    public Output<List<GlobalTableReplicaSpecificationArgs>> replicas() {
         return this.replicas;
     }
 
     @Import(name="sSESpecification")
       private final @Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification;
 
-    public Output<GlobalTableSSESpecificationArgs> getSSESpecification() {
-        return this.sSESpecification == null ? Output.empty() : this.sSESpecification;
+    public Output<GlobalTableSSESpecificationArgs> sSESpecification() {
+        return this.sSESpecification == null ? Codegen.empty() : this.sSESpecification;
     }
 
     @Import(name="streamSpecification")
       private final @Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification;
 
-    public Output<GlobalTableStreamSpecificationArgs> getStreamSpecification() {
-        return this.streamSpecification == null ? Output.empty() : this.streamSpecification;
+    public Output<GlobalTableStreamSpecificationArgs> streamSpecification() {
+        return this.streamSpecification == null ? Codegen.empty() : this.streamSpecification;
     }
 
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<String> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     @Import(name="timeToLiveSpecification")
       private final @Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
 
-    public Output<GlobalTableTimeToLiveSpecificationArgs> getTimeToLiveSpecification() {
-        return this.timeToLiveSpecification == null ? Output.empty() : this.timeToLiveSpecification;
+    public Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification() {
+        return this.timeToLiveSpecification == null ? Codegen.empty() : this.timeToLiveSpecification;
     }
 
     @Import(name="writeProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
-    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
-        return this.writeProvisionedThroughputSettings == null ? Output.empty() : this.writeProvisionedThroughputSettings;
+    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings() {
+        return this.writeProvisionedThroughputSettings == null ? Codegen.empty() : this.writeProvisionedThroughputSettings;
     }
 
     public GlobalTableArgs(
@@ -127,17 +128,17 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalTableArgs() {
-        this.attributeDefinitions = Output.empty();
-        this.billingMode = Output.empty();
-        this.globalSecondaryIndexes = Output.empty();
-        this.keySchema = Output.empty();
-        this.localSecondaryIndexes = Output.empty();
-        this.replicas = Output.empty();
-        this.sSESpecification = Output.empty();
-        this.streamSpecification = Output.empty();
-        this.tableName = Output.empty();
-        this.timeToLiveSpecification = Output.empty();
-        this.writeProvisionedThroughputSettings = Output.empty();
+        this.attributeDefinitions = Codegen.empty();
+        this.billingMode = Codegen.empty();
+        this.globalSecondaryIndexes = Codegen.empty();
+        this.keySchema = Codegen.empty();
+        this.localSecondaryIndexes = Codegen.empty();
+        this.replicas = Codegen.empty();
+        this.sSESpecification = Codegen.empty();
+        this.streamSpecification = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.timeToLiveSpecification = Codegen.empty();
+        this.writeProvisionedThroughputSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingMode(@Nullable String billingMode) {
-            this.billingMode = Output.ofNullable(billingMode);
+            this.billingMode = Codegen.ofNullable(billingMode);
             return this;
         }
         public Builder globalSecondaryIndexes(@Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
@@ -204,7 +205,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder globalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = Output.ofNullable(globalSecondaryIndexes);
+            this.globalSecondaryIndexes = Codegen.ofNullable(globalSecondaryIndexes);
             return this;
         }
         public Builder globalSecondaryIndexes(GlobalTableGlobalSecondaryIndexArgs... globalSecondaryIndexes) {
@@ -226,7 +227,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localSecondaryIndexes(@Nullable List<GlobalTableLocalSecondaryIndexArgs> localSecondaryIndexes) {
-            this.localSecondaryIndexes = Output.ofNullable(localSecondaryIndexes);
+            this.localSecondaryIndexes = Codegen.ofNullable(localSecondaryIndexes);
             return this;
         }
         public Builder localSecondaryIndexes(GlobalTableLocalSecondaryIndexArgs... localSecondaryIndexes) {
@@ -248,7 +249,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sSESpecification(@Nullable GlobalTableSSESpecificationArgs sSESpecification) {
-            this.sSESpecification = Output.ofNullable(sSESpecification);
+            this.sSESpecification = Codegen.ofNullable(sSESpecification);
             return this;
         }
         public Builder streamSpecification(@Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification) {
@@ -256,7 +257,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamSpecification(@Nullable GlobalTableStreamSpecificationArgs streamSpecification) {
-            this.streamSpecification = Output.ofNullable(streamSpecification);
+            this.streamSpecification = Codegen.ofNullable(streamSpecification);
             return this;
         }
         public Builder tableName(@Nullable Output<String> tableName) {
@@ -264,7 +265,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder timeToLiveSpecification(@Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification) {
@@ -272,7 +273,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecificationArgs timeToLiveSpecification) {
-            this.timeToLiveSpecification = Output.ofNullable(timeToLiveSpecification);
+            this.timeToLiveSpecification = Codegen.ofNullable(timeToLiveSpecification);
             return this;
         }
         public Builder writeProvisionedThroughputSettings(@Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
@@ -280,7 +281,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
-            this.writeProvisionedThroughputSettings = Output.ofNullable(writeProvisionedThroughputSettings);
+            this.writeProvisionedThroughputSettings = Codegen.ofNullable(writeProvisionedThroughputSettings);
             return this;
         }        public GlobalTableArgs build() {
             return new GlobalTableArgs(attributeDefinitions, billingMode, globalSecondaryIndexes, keySchema, localSecondaryIndexes, replicas, sSESpecification, streamSpecification, tableName, timeToLiveSpecification, writeProvisionedThroughputSettings);

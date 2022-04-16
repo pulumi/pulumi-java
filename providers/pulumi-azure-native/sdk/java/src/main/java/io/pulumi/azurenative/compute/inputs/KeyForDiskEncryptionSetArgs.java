@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.SourceVaultArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
     @Import(name="keyUrl", required=true)
       private final Output<String> keyUrl;
 
-    public Output<String> getKeyUrl() {
+    public Output<String> keyUrl() {
         return this.keyUrl;
     }
 
@@ -37,8 +38,8 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
     @Import(name="sourceVault")
       private final @Nullable Output<SourceVaultArgs> sourceVault;
 
-    public Output<SourceVaultArgs> getSourceVault() {
-        return this.sourceVault == null ? Output.empty() : this.sourceVault;
+    public Output<SourceVaultArgs> sourceVault() {
+        return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
     }
 
     public KeyForDiskEncryptionSetArgs(
@@ -49,8 +50,8 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
     }
 
     private KeyForDiskEncryptionSetArgs() {
-        this.keyUrl = Output.empty();
-        this.sourceVault = Output.empty();
+        this.keyUrl = Codegen.empty();
+        this.sourceVault = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sourceVault(@Nullable SourceVaultArgs sourceVault) {
-            this.sourceVault = Output.ofNullable(sourceVault);
+            this.sourceVault = Codegen.ofNullable(sourceVault);
             return this;
         }        public KeyForDiskEncryptionSetArgs build() {
             return new KeyForDiskEncryptionSetArgs(keyUrl, sourceVault);

@@ -5,6 +5,7 @@ package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CertificateOptionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="certificateTransparencyLoggingPreference")
       private final @Nullable Output<String> certificateTransparencyLoggingPreference;
 
-    public Output<String> getCertificateTransparencyLoggingPreference() {
-        return this.certificateTransparencyLoggingPreference == null ? Output.empty() : this.certificateTransparencyLoggingPreference;
+    public Output<String> certificateTransparencyLoggingPreference() {
+        return this.certificateTransparencyLoggingPreference == null ? Codegen.empty() : this.certificateTransparencyLoggingPreference;
     }
 
     public CertificateOptionsArgs(@Nullable Output<String> certificateTransparencyLoggingPreference) {
@@ -30,7 +31,7 @@ public final class CertificateOptionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CertificateOptionsArgs() {
-        this.certificateTransparencyLoggingPreference = Output.empty();
+        this.certificateTransparencyLoggingPreference = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CertificateOptionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder certificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
-            this.certificateTransparencyLoggingPreference = Output.ofNullable(certificateTransparencyLoggingPreference);
+            this.certificateTransparencyLoggingPreference = Codegen.ofNullable(certificateTransparencyLoggingPreference);
             return this;
         }        public CertificateOptionsArgs build() {
             return new CertificateOptionsArgs(certificateTransparencyLoggingPreference);

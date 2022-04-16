@@ -15,7 +15,7 @@ public final class GetFunctionTracingConfig extends io.pulumi.resources.InvokeAr
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

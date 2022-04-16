@@ -3,10 +3,11 @@
 
 package io.pulumi.kubernetes.helm.sh_v3;
 
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.ReleaseStatus;
@@ -51,7 +52,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAtomic() {
+    public Output</* @Nullable */ Boolean> atomic() {
         return this.atomic;
     }
     /**
@@ -65,7 +66,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Chart name to be installed. A path may be used.
      * 
      */
-    public Output<String> getChart() {
+    public Output<String> chart() {
         return this.chart;
     }
     /**
@@ -79,7 +80,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Allow deletion of new resources created in this upgrade when upgrade fails.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCleanupOnFail() {
+    public Output</* @Nullable */ Boolean> cleanupOnFail() {
         return this.cleanupOnFail;
     }
     /**
@@ -93,7 +94,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Create the namespace if it does not exist.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCreateNamespace() {
+    public Output</* @Nullable */ Boolean> createNamespace() {
         return this.createNamespace;
     }
     /**
@@ -107,7 +108,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Run helm dependency update before installing the chart.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDependencyUpdate() {
+    public Output</* @Nullable */ Boolean> dependencyUpdate() {
         return this.dependencyUpdate;
     }
     /**
@@ -121,7 +122,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Add a custom description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -135,7 +136,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDevel() {
+    public Output</* @Nullable */ Boolean> devel() {
         return this.devel;
     }
     /**
@@ -149,7 +150,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableCRDHooks() {
+    public Output</* @Nullable */ Boolean> disableCRDHooks() {
         return this.disableCRDHooks;
     }
     /**
@@ -163,7 +164,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableOpenapiValidation() {
+    public Output</* @Nullable */ Boolean> disableOpenapiValidation() {
         return this.disableOpenapiValidation;
     }
     /**
@@ -177,7 +178,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Prevent hooks from running.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableWebhooks() {
+    public Output</* @Nullable */ Boolean> disableWebhooks() {
         return this.disableWebhooks;
     }
     /**
@@ -191,7 +192,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Force resource update through delete/recreate if needed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceUpdate() {
+    public Output</* @Nullable */ Boolean> forceUpdate() {
         return this.forceUpdate;
     }
     /**
@@ -205,7 +206,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Location of public keys used for verification. Used only if `verify` is true
      * 
      */
-    public Output</* @Nullable */ String> getKeyring() {
+    public Output</* @Nullable */ String> keyring() {
         return this.keyring;
     }
     /**
@@ -219,7 +220,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Run helm lint when planning.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLint() {
+    public Output</* @Nullable */ Boolean> lint() {
         return this.lint;
     }
     /**
@@ -233,7 +234,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return The rendered manifests as JSON. Not yet supported.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getManifest() {
+    public Output</* @Nullable */ Map<String,Object>> manifest() {
         return this.manifest;
     }
     /**
@@ -247,7 +248,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Limit the maximum number of revisions saved per release. Use 0 for no limit.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxHistory() {
+    public Output</* @Nullable */ Integer> maxHistory() {
         return this.maxHistory;
     }
     /**
@@ -261,7 +262,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Release name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -275,7 +276,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Namespace to install the release into.
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
     /**
@@ -289,7 +290,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Postrender command to run.
      * 
      */
-    public Output</* @Nullable */ String> getPostrender() {
+    public Output</* @Nullable */ String> postrender() {
         return this.postrender;
     }
     /**
@@ -303,7 +304,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Perform pods restart during upgrade/rollback.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRecreatePods() {
+    public Output</* @Nullable */ Boolean> recreatePods() {
         return this.recreatePods;
     }
     /**
@@ -317,7 +318,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return If set, render subchart notes along with the parent.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRenderSubchartNotes() {
+    public Output</* @Nullable */ Boolean> renderSubchartNotes() {
         return this.renderSubchartNotes;
     }
     /**
@@ -331,7 +332,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Re-use the given name, even if that name is already used. This is unsafe in production
      * 
      */
-    public Output</* @Nullable */ Boolean> getReplace() {
+    public Output</* @Nullable */ Boolean> replace() {
         return this.replace;
     }
     /**
@@ -345,7 +346,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Specification defining the Helm chart repository to use.
      * 
      */
-    public Output</* @Nullable */ RepositoryOpts> getRepositoryOpts() {
+    public Output</* @Nullable */ RepositoryOpts> repositoryOpts() {
         return this.repositoryOpts;
     }
     /**
@@ -359,7 +360,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return When upgrading, reset the values to the ones built into the chart.
      * 
      */
-    public Output</* @Nullable */ Boolean> getResetValues() {
+    public Output</* @Nullable */ Boolean> resetValues() {
         return this.resetValues;
     }
     /**
@@ -373,7 +374,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Names of resources created by the release grouped by "kind/version".
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> getResourceNames() {
+    public Output</* @Nullable */ Map<String,List<String>>> resourceNames() {
         return this.resourceNames;
     }
     /**
@@ -387,7 +388,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
      * 
      */
-    public Output</* @Nullable */ Boolean> getReuseValues() {
+    public Output</* @Nullable */ Boolean> reuseValues() {
         return this.reuseValues;
     }
     /**
@@ -401,7 +402,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipAwait() {
+    public Output</* @Nullable */ Boolean> skipAwait() {
         return this.skipAwait;
     }
     /**
@@ -415,7 +416,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return If set, no CRDs will be installed. By default, CRDs are installed if not already present.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipCrds() {
+    public Output</* @Nullable */ Boolean> skipCrds() {
         return this.skipCrds;
     }
     /**
@@ -429,7 +430,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Status of the deployed release.
      * 
      */
-    public Output<ReleaseStatus> getStatus() {
+    public Output<ReleaseStatus> status() {
         return this.status;
     }
     /**
@@ -443,7 +444,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time in seconds to wait for any individual kubernetes operation.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -457,7 +458,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return List of assets (raw yaml files). Content is read and merged with values (with values taking precedence).
      * 
      */
-    public Output</* @Nullable */ List<AssetOrArchive>> getValueYamlFiles() {
+    public Output</* @Nullable */ List<AssetOrArchive>> valueYamlFiles() {
         return this.valueYamlFiles;
     }
     /**
@@ -471,7 +472,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Custom values set for the release.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getValues() {
+    public Output</* @Nullable */ Map<String,Object>> values() {
         return this.values;
     }
     /**
@@ -485,7 +486,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Verify the package before installing it.
      * 
      */
-    public Output</* @Nullable */ Boolean> getVerify() {
+    public Output</* @Nullable */ Boolean> verify() {
         return this.verify;
     }
     /**
@@ -499,7 +500,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Specify the exact chart version to install. If this is not specified, the latest version is installed.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
     /**
@@ -513,7 +514,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForJobs() {
+    public Output</* @Nullable */ Boolean> waitForJobs() {
         return this.waitForJobs;
     }
 
@@ -539,7 +540,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Release(String name, ReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:helm.sh/v3:Release", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:helm.sh/v3:Release", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Release(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

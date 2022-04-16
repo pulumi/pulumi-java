@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.SecurityPolicyRuleMatcherVersionedExpr;
 import io.pulumi.googlenative.compute_beta.inputs.ExprArgs;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleMatcherConfigArgs;
@@ -27,8 +28,8 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     @Import(name="config")
       private final @Nullable Output<SecurityPolicyRuleMatcherConfigArgs> config;
 
-    public Output<SecurityPolicyRuleMatcherConfigArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<SecurityPolicyRuleMatcherConfigArgs> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     @Import(name="expr")
       private final @Nullable Output<ExprArgs> expr;
 
-    public Output<ExprArgs> getExpr() {
-        return this.expr == null ? Output.empty() : this.expr;
+    public Output<ExprArgs> expr() {
+        return this.expr == null ? Codegen.empty() : this.expr;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     @Import(name="versionedExpr")
       private final @Nullable Output<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr;
 
-    public Output<SecurityPolicyRuleMatcherVersionedExpr> getVersionedExpr() {
-        return this.versionedExpr == null ? Output.empty() : this.versionedExpr;
+    public Output<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr() {
+        return this.versionedExpr == null ? Codegen.empty() : this.versionedExpr;
     }
 
     public SecurityPolicyRuleMatcherArgs(
@@ -63,9 +64,9 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     }
 
     private SecurityPolicyRuleMatcherArgs() {
-        this.config = Output.empty();
-        this.expr = Output.empty();
-        this.versionedExpr = Output.empty();
+        this.config = Codegen.empty();
+        this.expr = Codegen.empty();
+        this.versionedExpr = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder config(@Nullable SecurityPolicyRuleMatcherConfigArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder expr(@Nullable Output<ExprArgs> expr) {
@@ -105,7 +106,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder expr(@Nullable ExprArgs expr) {
-            this.expr = Output.ofNullable(expr);
+            this.expr = Codegen.ofNullable(expr);
             return this;
         }
         public Builder versionedExpr(@Nullable Output<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr) {
@@ -113,7 +114,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder versionedExpr(@Nullable SecurityPolicyRuleMatcherVersionedExpr versionedExpr) {
-            this.versionedExpr = Output.ofNullable(versionedExpr);
+            this.versionedExpr = Codegen.ofNullable(versionedExpr);
             return this;
         }        public SecurityPolicyRuleMatcherArgs build() {
             return new SecurityPolicyRuleMatcherArgs(config, expr, versionedExpr);

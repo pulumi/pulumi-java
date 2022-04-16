@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +58,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @return The consumer link id.
      * 
      */
-    public Output<String> getLinkIdentifier() {
+    public Output<String> linkIdentifier() {
         return this.linkIdentifier;
     }
     /**
@@ -71,7 +72,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @return Name of the private endpoint connection on an application gateway.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @return The resource of private end point.
      * 
      */
-    public Output<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -99,7 +100,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @return A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -113,7 +114,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @return The provisioning state of the application gateway private endpoint connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +128,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -153,7 +154,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationGatewayPrivateEndpointConnection(String name, ApplicationGatewayPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ApplicationGatewayPrivateEndpointConnection", name, args == null ? ApplicationGatewayPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ApplicationGatewayPrivateEndpointConnection", name, args == null ? ApplicationGatewayPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplicationGatewayPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfiguratio
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,8 +21,8 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
     @Import(name="accessControlAttributes")
       private final @Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
-    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
-        return this.accessControlAttributes == null ? Output.empty() : this.accessControlAttributes;
+    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes() {
+        return this.accessControlAttributes == null ? Codegen.empty() : this.accessControlAttributes;
     }
 
     /**
@@ -31,8 +32,8 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
     @Import(name="instanceAccessControlAttributeConfiguration")
       private final @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
 
-    public Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> getInstanceAccessControlAttributeConfiguration() {
-        return this.instanceAccessControlAttributeConfiguration == null ? Output.empty() : this.instanceAccessControlAttributeConfiguration;
+    public Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration() {
+        return this.instanceAccessControlAttributeConfiguration == null ? Codegen.empty() : this.instanceAccessControlAttributeConfiguration;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -56,9 +57,9 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
     }
 
     private InstanceAccessControlAttributeConfigurationArgs() {
-        this.accessControlAttributes = Output.empty();
-        this.instanceAccessControlAttributeConfiguration = Output.empty();
-        this.instanceArn = Output.empty();
+        this.accessControlAttributes = Codegen.empty();
+        this.instanceAccessControlAttributeConfiguration = Codegen.empty();
+        this.instanceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
             return this;
         }
         public Builder accessControlAttributes(@Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
-            this.accessControlAttributes = Output.ofNullable(accessControlAttributes);
+            this.accessControlAttributes = Codegen.ofNullable(accessControlAttributes);
             return this;
         }
         public Builder accessControlAttributes(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs... accessControlAttributes) {
@@ -101,7 +102,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
             return this;
         }
         public Builder instanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationPropertiesArgs instanceAccessControlAttributeConfiguration) {
-            this.instanceAccessControlAttributeConfiguration = Output.ofNullable(instanceAccessControlAttributeConfiguration);
+            this.instanceAccessControlAttributeConfiguration = Codegen.ofNullable(instanceAccessControlAttributeConfiguration);
             return this;
         }
         public Builder instanceArn(Output<String> instanceArn) {

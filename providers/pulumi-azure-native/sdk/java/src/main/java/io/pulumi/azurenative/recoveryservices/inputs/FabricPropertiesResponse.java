@@ -35,7 +35,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="bcdrState")
       private final @Nullable String bcdrState;
 
-    public Optional<String> getBcdrState() {
+    public Optional<String> bcdrState() {
         return this.bcdrState == null ? Optional.empty() : Optional.ofNullable(this.bcdrState);
     }
 
@@ -46,7 +46,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="customDetails")
       private final @Nullable Object customDetails;
 
-    public Object getCustomDetails() {
+    public Object customDetails() {
         return this.customDetails == null ? null : this.customDetails;
     }
 
@@ -57,7 +57,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="encryptionDetails")
       private final @Nullable EncryptionDetailsResponse encryptionDetails;
 
-    public Optional<EncryptionDetailsResponse> getEncryptionDetails() {
+    public Optional<EncryptionDetailsResponse> encryptionDetails() {
         return this.encryptionDetails == null ? Optional.empty() : Optional.ofNullable(this.encryptionDetails);
     }
 
@@ -68,7 +68,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -79,7 +79,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="health")
       private final @Nullable String health;
 
-    public Optional<String> getHealth() {
+    public Optional<String> health() {
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
     }
 
@@ -90,7 +90,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="healthErrorDetails")
       private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
-    public List<HealthErrorResponse> getHealthErrorDetails() {
+    public List<HealthErrorResponse> healthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
 
@@ -101,7 +101,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="internalIdentifier")
       private final @Nullable String internalIdentifier;
 
-    public Optional<String> getInternalIdentifier() {
+    public Optional<String> internalIdentifier() {
         return this.internalIdentifier == null ? Optional.empty() : Optional.ofNullable(this.internalIdentifier);
     }
 
@@ -112,7 +112,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rolloverEncryptionDetails")
       private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 
-    public Optional<EncryptionDetailsResponse> getRolloverEncryptionDetails() {
+    public Optional<EncryptionDetailsResponse> rolloverEncryptionDetails() {
         return this.rolloverEncryptionDetails == null ? Optional.empty() : Optional.ofNullable(this.rolloverEncryptionDetails);
     }
 

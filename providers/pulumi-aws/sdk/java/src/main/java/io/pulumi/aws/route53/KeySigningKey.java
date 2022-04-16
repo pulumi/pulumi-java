@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.KeySigningKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return A string used to represent the delegation signer digest algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.3](https://tools.ietf.org/html/rfc8624#section-3.3).
      * 
      */
-    public Output<String> getDigestAlgorithmMnemonic() {
+    public Output<String> digestAlgorithmMnemonic() {
         return this.digestAlgorithmMnemonic;
     }
     /**
@@ -54,7 +55,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return An integer used to represent the delegation signer digest algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.3](https://tools.ietf.org/html/rfc8624#section-3.3).
      * 
      */
-    public Output<Integer> getDigestAlgorithmType() {
+    public Output<Integer> digestAlgorithmType() {
         return this.digestAlgorithmType;
     }
     /**
@@ -68,7 +69,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return A cryptographic digest of a DNSKEY resource record (RR). DNSKEY records are used to publish the public key that resolvers can use to verify DNSSEC signatures that are used to secure certain kinds of information provided by the DNS system.
      * 
      */
-    public Output<String> getDigestValue() {
+    public Output<String> digestValue() {
         return this.digestValue;
     }
     /**
@@ -82,7 +83,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return A string that represents a DNSKEY record.
      * 
      */
-    public Output<String> getDnskeyRecord() {
+    public Output<String> dnskeyRecord() {
         return this.dnskeyRecord;
     }
     /**
@@ -96,7 +97,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return A string that represents a delegation signer (DS) record.
      * 
      */
-    public Output<String> getDsRecord() {
+    public Output<String> dsRecord() {
         return this.dsRecord;
     }
     /**
@@ -110,7 +111,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return An integer that specifies how the key is used. For key-signing key (KSK), this value is always 257.
      * 
      */
-    public Output<Integer> getFlag() {
+    public Output<Integer> flag() {
         return this.flag;
     }
     /**
@@ -124,7 +125,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return Identifier of the Route 53 Hosted Zone.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -138,7 +139,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key. This must be unique for each key-signing key (KSK) in a single hosted zone. This key must be in the `us-east-1` Region and meet certain requirements, which are described in the [Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring-dnssec-cmk-requirements.html) and [Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateKeySigningKey.html).
      * 
      */
-    public Output<String> getKeyManagementServiceArn() {
+    public Output<String> keyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
     /**
@@ -152,7 +153,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return An integer used to identify the DNSSEC record for the domain name. The process used to calculate the value is described in [RFC-4034 Appendix B](https://tools.ietf.org/rfc/rfc4034.txt).
      * 
      */
-    public Output<Integer> getKeyTag() {
+    public Output<Integer> keyTag() {
         return this.keyTag;
     }
     /**
@@ -166,7 +167,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return Name of the key-signing key (KSK). Must be unique for each key-singing key in the same hosted zone.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -180,7 +181,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return The public key, represented as a Base64 encoding, as required by [RFC-4034 Page 5](https://tools.ietf.org/rfc/rfc4034.txt).
      * 
      */
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -194,7 +195,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return A string used to represent the signing algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.1](https://tools.ietf.org/html/rfc8624#section-3.1).
      * 
      */
-    public Output<String> getSigningAlgorithmMnemonic() {
+    public Output<String> signingAlgorithmMnemonic() {
         return this.signingAlgorithmMnemonic;
     }
     /**
@@ -208,7 +209,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return An integer used to represent the signing algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.1](https://tools.ietf.org/html/rfc8624#section-3.1).
      * 
      */
-    public Output<Integer> getSigningAlgorithmType() {
+    public Output<Integer> signingAlgorithmType() {
         return this.signingAlgorithmType;
     }
     /**
@@ -222,7 +223,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return Status of the key-signing key (KSK). Valid values: `ACTIVE`, `INACTIVE`. Defaults to `ACTIVE`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
 
@@ -248,7 +249,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeySigningKey(String name, KeySigningKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/keySigningKey:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/keySigningKey:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeySigningKey(String name, Output<String> id, @Nullable KeySigningKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

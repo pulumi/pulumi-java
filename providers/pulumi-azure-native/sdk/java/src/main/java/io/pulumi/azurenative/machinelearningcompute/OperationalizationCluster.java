@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -48,7 +49,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return AppInsights configuration.
      * 
      */
-    public Output</* @Nullable */ AppInsightsPropertiesResponse> getAppInsights() {
+    public Output</* @Nullable */ AppInsightsPropertiesResponse> appInsights() {
         return this.appInsights;
     }
     /**
@@ -62,7 +63,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return The cluster type.
      * 
      */
-    public Output<String> getClusterType() {
+    public Output<String> clusterType() {
         return this.clusterType;
     }
     /**
@@ -76,7 +77,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Container Registry properties.
      * 
      */
-    public Output</* @Nullable */ ContainerRegistryPropertiesResponse> getContainerRegistry() {
+    public Output</* @Nullable */ ContainerRegistryPropertiesResponse> containerRegistry() {
         return this.containerRegistry;
     }
     /**
@@ -90,7 +91,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Parameters for the Azure Container Service cluster.
      * 
      */
-    public Output</* @Nullable */ AcsClusterPropertiesResponse> getContainerService() {
+    public Output</* @Nullable */ AcsClusterPropertiesResponse> containerService() {
         return this.containerService;
     }
     /**
@@ -104,7 +105,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return The date and time when the cluster was created.
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -118,7 +119,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return The description of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -132,7 +133,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Contains global configuration for the web services in the cluster.
      * 
      */
-    public Output</* @Nullable */ GlobalServiceConfigurationResponse> getGlobalServiceConfiguration() {
+    public Output</* @Nullable */ GlobalServiceConfigurationResponse> globalServiceConfiguration() {
         return this.globalServiceConfiguration;
     }
     /**
@@ -146,7 +147,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Specifies the location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -160,7 +161,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return The date and time when the cluster was last modified.
      * 
      */
-    public Output<String> getModifiedOn() {
+    public Output<String> modifiedOn() {
         return this.modifiedOn;
     }
     /**
@@ -174,7 +175,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -188,7 +189,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return List of provisioning errors reported by the resource provider.
      * 
      */
-    public Output<List<ErrorResponseWrapperResponse>> getProvisioningErrors() {
+    public Output<List<ErrorResponseWrapperResponse>> provisioningErrors() {
         return this.provisioningErrors;
     }
     /**
@@ -202,7 +203,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -216,7 +217,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Storage Account properties.
      * 
      */
-    public Output</* @Nullable */ StorageAccountPropertiesResponse> getStorageAccount() {
+    public Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount() {
         return this.storageAccount;
     }
     /**
@@ -230,7 +231,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -244,7 +245,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -270,7 +271,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public OperationalizationCluster(String name, OperationalizationClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningcompute:OperationalizationCluster", name, args == null ? OperationalizationClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningcompute:OperationalizationCluster", name, args == null ? OperationalizationClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OperationalizationCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

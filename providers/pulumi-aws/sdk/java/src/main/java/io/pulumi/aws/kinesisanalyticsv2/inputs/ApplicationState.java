@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationGetArgs> getApplicationConfiguration() {
-        return this.applicationConfiguration == null ? Output.empty() : this.applicationConfiguration;
+    public Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration() {
+        return this.applicationConfiguration == null ? Codegen.empty() : this.applicationConfiguration;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Output<ApplicationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
+    public Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTimestamp")
       private final @Nullable Output<String> createTimestamp;
 
-    public Output<String> getCreateTimestamp() {
-        return this.createTimestamp == null ? Output.empty() : this.createTimestamp;
+    public Output<String> createTimestamp() {
+        return this.createTimestamp == null ? Codegen.empty() : this.createTimestamp;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceStop")
       private final @Nullable Output<Boolean> forceStop;
 
-    public Output<Boolean> getForceStop() {
-        return this.forceStop == null ? Output.empty() : this.forceStop;
+    public Output<Boolean> forceStop() {
+        return this.forceStop == null ? Codegen.empty() : this.forceStop;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdateTimestamp")
       private final @Nullable Output<String> lastUpdateTimestamp;
 
-    public Output<String> getLastUpdateTimestamp() {
-        return this.lastUpdateTimestamp == null ? Output.empty() : this.lastUpdateTimestamp;
+    public Output<String> lastUpdateTimestamp() {
+        return this.lastUpdateTimestamp == null ? Codegen.empty() : this.lastUpdateTimestamp;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeEnvironment")
       private final @Nullable Output<String> runtimeEnvironment;
 
-    public Output<String> getRuntimeEnvironment() {
-        return this.runtimeEnvironment == null ? Output.empty() : this.runtimeEnvironment;
+    public Output<String> runtimeEnvironment() {
+        return this.runtimeEnvironment == null ? Codegen.empty() : this.runtimeEnvironment;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceExecutionRole")
       private final @Nullable Output<String> serviceExecutionRole;
 
-    public Output<String> getServiceExecutionRole() {
-        return this.serviceExecutionRole == null ? Output.empty() : this.serviceExecutionRole;
+    public Output<String> serviceExecutionRole() {
+        return this.serviceExecutionRole == null ? Codegen.empty() : this.serviceExecutionRole;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="startApplication")
       private final @Nullable Output<Boolean> startApplication;
 
-    public Output<Boolean> getStartApplication() {
-        return this.startApplication == null ? Output.empty() : this.startApplication;
+    public Output<Boolean> startApplication() {
+        return this.startApplication == null ? Codegen.empty() : this.startApplication;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionId")
       private final @Nullable Output<Integer> versionId;
 
-    public Output<Integer> getVersionId() {
-        return this.versionId == null ? Output.empty() : this.versionId;
+    public Output<Integer> versionId() {
+        return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
     public ApplicationState(
@@ -218,21 +219,21 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationState() {
-        this.applicationConfiguration = Output.empty();
-        this.arn = Output.empty();
-        this.cloudwatchLoggingOptions = Output.empty();
-        this.createTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.forceStop = Output.empty();
-        this.lastUpdateTimestamp = Output.empty();
-        this.name = Output.empty();
-        this.runtimeEnvironment = Output.empty();
-        this.serviceExecutionRole = Output.empty();
-        this.startApplication = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.versionId = Output.empty();
+        this.applicationConfiguration = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.cloudwatchLoggingOptions = Codegen.empty();
+        this.createTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.forceStop = Codegen.empty();
+        this.lastUpdateTimestamp = Codegen.empty();
+        this.name = Codegen.empty();
+        this.runtimeEnvironment = Codegen.empty();
+        this.serviceExecutionRole = Codegen.empty();
+        this.startApplication = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.versionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -288,7 +289,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationConfiguration(@Nullable ApplicationApplicationConfigurationGetArgs applicationConfiguration) {
-            this.applicationConfiguration = Output.ofNullable(applicationConfiguration);
+            this.applicationConfiguration = Codegen.ofNullable(applicationConfiguration);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -296,7 +297,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
@@ -304,7 +305,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
         public Builder createTimestamp(@Nullable Output<String> createTimestamp) {
@@ -312,7 +313,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTimestamp(@Nullable String createTimestamp) {
-            this.createTimestamp = Output.ofNullable(createTimestamp);
+            this.createTimestamp = Codegen.ofNullable(createTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -320,7 +321,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder forceStop(@Nullable Output<Boolean> forceStop) {
@@ -328,7 +329,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceStop(@Nullable Boolean forceStop) {
-            this.forceStop = Output.ofNullable(forceStop);
+            this.forceStop = Codegen.ofNullable(forceStop);
             return this;
         }
         public Builder lastUpdateTimestamp(@Nullable Output<String> lastUpdateTimestamp) {
@@ -336,7 +337,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdateTimestamp(@Nullable String lastUpdateTimestamp) {
-            this.lastUpdateTimestamp = Output.ofNullable(lastUpdateTimestamp);
+            this.lastUpdateTimestamp = Codegen.ofNullable(lastUpdateTimestamp);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -344,7 +345,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder runtimeEnvironment(@Nullable Output<String> runtimeEnvironment) {
@@ -352,7 +353,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeEnvironment(@Nullable String runtimeEnvironment) {
-            this.runtimeEnvironment = Output.ofNullable(runtimeEnvironment);
+            this.runtimeEnvironment = Codegen.ofNullable(runtimeEnvironment);
             return this;
         }
         public Builder serviceExecutionRole(@Nullable Output<String> serviceExecutionRole) {
@@ -360,7 +361,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceExecutionRole(@Nullable String serviceExecutionRole) {
-            this.serviceExecutionRole = Output.ofNullable(serviceExecutionRole);
+            this.serviceExecutionRole = Codegen.ofNullable(serviceExecutionRole);
             return this;
         }
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
@@ -368,7 +369,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Output.ofNullable(startApplication);
+            this.startApplication = Codegen.ofNullable(startApplication);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -376,7 +377,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -384,7 +385,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -392,7 +393,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder versionId(@Nullable Output<Integer> versionId) {
@@ -400,7 +401,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionId(@Nullable Integer versionId) {
-            this.versionId = Output.ofNullable(versionId);
+            this.versionId = Codegen.ofNullable(versionId);
             return this;
         }        public ApplicationState build() {
             return new ApplicationState(applicationConfiguration, arn, cloudwatchLoggingOptions, createTimestamp, description, forceStop, lastUpdateTimestamp, name, runtimeEnvironment, serviceExecutionRole, startApplication, status, tags, tagsAll, versionId);

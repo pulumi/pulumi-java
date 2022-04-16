@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return The id of the source data set.
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -56,7 +57,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return Gets the status of the data set mapping.
      * 
      */
-    public Output<String> getDataSetMappingStatus() {
+    public Output<String> dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
@@ -70,7 +71,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return DatabaseName name of the sink data set
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -86,7 +87,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * Expected value is 'SqlDBTable'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -100,7 +101,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return Provisioning state of the data set mapping.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +129,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return Schema of the table. Default value is dbo.
      * 
      */
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
     /**
@@ -142,7 +143,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return Resource id of SQL server
      * 
      */
-    public Output<String> getSqlServerResourceId() {
+    public Output<String> sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
@@ -156,7 +157,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -170,7 +171,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return SQL DB table name.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
     /**
@@ -184,7 +185,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -210,7 +211,7 @@ public class SqlDBTableDataSetMapping extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlDBTableDataSetMapping(String name, SqlDBTableDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:SqlDBTableDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:SqlDBTableDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SqlDBTableDataSetMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

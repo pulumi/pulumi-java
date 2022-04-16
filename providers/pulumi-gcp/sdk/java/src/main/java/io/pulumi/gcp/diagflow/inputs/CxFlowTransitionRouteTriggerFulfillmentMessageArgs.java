@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
     @Import(name="text")
       private final @Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text;
 
-    public Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public CxFlowTransitionRouteTriggerFulfillmentMessageArgs(@Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text) {
@@ -30,7 +31,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
     }
 
     private CxFlowTransitionRouteTriggerFulfillmentMessageArgs() {
-        this.text = Output.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
             return this;
         }
         public Builder text(@Nullable CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public CxFlowTransitionRouteTriggerFulfillmentMessageArgs build() {
             return new CxFlowTransitionRouteTriggerFulfillmentMessageArgs(text);

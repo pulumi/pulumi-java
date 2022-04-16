@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="certificateChain", required=true)
       private final Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     }
 
     private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs() {
-        this.certificateChain = Output.empty();
+        this.certificateChain = Codegen.empty();
     }
 
     public static Builder builder() {

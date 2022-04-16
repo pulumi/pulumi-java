@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ImageIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<ImageIamMemberConditionArgs> condition;
 
-    public Output<ImageIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<ImageIamMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -34,14 +35,14 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -53,8 +54,8 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -84,11 +85,11 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageIamMemberArgs() {
-        this.condition = Output.empty();
-        this.image = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.image = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable ImageIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder image(Output<String> image) {
@@ -148,7 +149,7 @@ public final class ImageIamMemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanNotificationTargetItemArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="dedupeString")
       private final @Nullable Output<String> dedupeString;
 
-    public Output<String> getDedupeString() {
-        return this.dedupeString == null ? Output.empty() : this.dedupeString;
+    public Output<String> dedupeString() {
+        return this.dedupeString == null ? Codegen.empty() : this.dedupeString;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="impact", required=true)
       private final Output<Integer> impact;
 
-    public Output<Integer> getImpact() {
+    public Output<Integer> impact() {
         return this.impact;
     }
 
@@ -50,8 +51,8 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="notificationTargets")
       private final @Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
 
-    public Output<List<ResponsePlanNotificationTargetItemArgs>> getNotificationTargets() {
-        return this.notificationTargets == null ? Output.empty() : this.notificationTargets;
+    public Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets() {
+        return this.notificationTargets == null ? Codegen.empty() : this.notificationTargets;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="summary")
       private final @Nullable Output<String> summary;
 
-    public Output<String> getSummary() {
-        return this.summary == null ? Output.empty() : this.summary;
+    public Output<String> summary() {
+        return this.summary == null ? Codegen.empty() : this.summary;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -90,11 +91,11 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     }
 
     private ResponsePlanIncidentTemplateArgs() {
-        this.dedupeString = Output.empty();
-        this.impact = Output.empty();
-        this.notificationTargets = Output.empty();
-        this.summary = Output.empty();
-        this.title = Output.empty();
+        this.dedupeString = Codegen.empty();
+        this.impact = Codegen.empty();
+        this.notificationTargets = Codegen.empty();
+        this.summary = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dedupeString(@Nullable String dedupeString) {
-            this.dedupeString = Output.ofNullable(dedupeString);
+            this.dedupeString = Codegen.ofNullable(dedupeString);
             return this;
         }
         public Builder impact(Output<Integer> impact) {
@@ -146,7 +147,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItemArgs> notificationTargets) {
-            this.notificationTargets = Output.ofNullable(notificationTargets);
+            this.notificationTargets = Codegen.ofNullable(notificationTargets);
             return this;
         }
         public Builder notificationTargets(ResponsePlanNotificationTargetItemArgs... notificationTargets) {
@@ -157,7 +158,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder summary(@Nullable String summary) {
-            this.summary = Output.ofNullable(summary);
+            this.summary = Codegen.ofNullable(summary);
             return this;
         }
         public Builder title(Output<String> title) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endSearchTime")
       private final @Nullable Output<String> endSearchTime;
 
-    public Output<String> getEndSearchTime() {
-        return this.endSearchTime == null ? Output.empty() : this.endSearchTime;
+    public Output<String> endSearchTime() {
+        return this.endSearchTime == null ? Codegen.empty() : this.endSearchTime;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
-        return this.limit == null ? Output.empty() : this.limit;
+    public Output<Integer> limit() {
+        return this.limit == null ? Codegen.empty() : this.limit;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<String> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startSearchTime")
       private final @Nullable Output<String> startSearchTime;
 
-    public Output<String> getStartSearchTime() {
-        return this.startSearchTime == null ? Output.empty() : this.startSearchTime;
+    public Output<String> startSearchTime() {
+        return this.startSearchTime == null ? Codegen.empty() : this.startSearchTime;
     }
 
     public SearchResultsArgs(
@@ -88,11 +89,11 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SearchResultsArgs() {
-        this.description = Output.empty();
-        this.endSearchTime = Output.empty();
-        this.limit = Output.empty();
-        this.query = Output.empty();
-        this.startSearchTime = Output.empty();
+        this.description = Codegen.empty();
+        this.endSearchTime = Codegen.empty();
+        this.limit = Codegen.empty();
+        this.query = Codegen.empty();
+        this.startSearchTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endSearchTime(@Nullable Output<String> endSearchTime) {
@@ -136,7 +137,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endSearchTime(@Nullable String endSearchTime) {
-            this.endSearchTime = Output.ofNullable(endSearchTime);
+            this.endSearchTime = Codegen.ofNullable(endSearchTime);
             return this;
         }
         public Builder limit(@Nullable Output<Integer> limit) {
@@ -144,7 +145,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder limit(@Nullable Integer limit) {
-            this.limit = Output.ofNullable(limit);
+            this.limit = Codegen.ofNullable(limit);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -152,7 +153,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder startSearchTime(@Nullable Output<String> startSearchTime) {
@@ -160,7 +161,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startSearchTime(@Nullable String startSearchTime) {
-            this.startSearchTime = Output.ofNullable(startSearchTime);
+            this.startSearchTime = Codegen.ofNullable(startSearchTime);
             return this;
         }        public SearchResultsArgs build() {
             return new SearchResultsArgs(description, endSearchTime, limit, query, startSearchTime);

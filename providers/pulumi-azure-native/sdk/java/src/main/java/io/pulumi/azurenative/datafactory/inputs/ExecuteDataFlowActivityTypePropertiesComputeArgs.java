@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
     @Import(name="computeType")
       private final @Nullable Output<Object> computeType;
 
-    public Output<Object> getComputeType() {
-        return this.computeType == null ? Output.empty() : this.computeType;
+    public Output<Object> computeType() {
+        return this.computeType == null ? Codegen.empty() : this.computeType;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
     @Import(name="coreCount")
       private final @Nullable Output<Object> coreCount;
 
-    public Output<Object> getCoreCount() {
-        return this.coreCount == null ? Output.empty() : this.coreCount;
+    public Output<Object> coreCount() {
+        return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
     public ExecuteDataFlowActivityTypePropertiesComputeArgs(
@@ -48,8 +49,8 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
     }
 
     private ExecuteDataFlowActivityTypePropertiesComputeArgs() {
-        this.computeType = Output.empty();
-        this.coreCount = Output.empty();
+        this.computeType = Codegen.empty();
+        this.coreCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
             return this;
         }
         public Builder computeType(@Nullable Object computeType) {
-            this.computeType = Output.ofNullable(computeType);
+            this.computeType = Codegen.ofNullable(computeType);
             return this;
         }
         public Builder coreCount(@Nullable Output<Object> coreCount) {
@@ -87,7 +88,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
             return this;
         }
         public Builder coreCount(@Nullable Object coreCount) {
-            this.coreCount = Output.ofNullable(coreCount);
+            this.coreCount = Codegen.ofNullable(coreCount);
             return this;
         }        public ExecuteDataFlowActivityTypePropertiesComputeArgs build() {
             return new ExecuteDataFlowActivityTypePropertiesComputeArgs(computeType, coreCount);

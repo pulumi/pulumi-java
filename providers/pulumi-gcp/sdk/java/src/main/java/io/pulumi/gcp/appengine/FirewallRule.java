@@ -6,6 +6,7 @@ package io.pulumi.gcp.appengine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.FirewallRuleArgs;
 import io.pulumi.gcp.appengine.inputs.FirewallRuleState;
@@ -57,7 +58,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -71,7 +72,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return An optional string description of this rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -93,7 +94,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * this rule can be modified by the user.
      * 
      */
-    public Output</* @Nullable */ Integer> getPriority() {
+    public Output</* @Nullable */ Integer> priority() {
         return this.priority;
     }
     /**
@@ -109,7 +110,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -123,7 +124,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return IP address or range, defined using CIDR notation, of requests that this rule applies to.
      * 
      */
-    public Output<String> getSourceRange() {
+    public Output<String> sourceRange() {
         return this.sourceRange;
     }
 
@@ -149,7 +150,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallRule(String name, FirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/firewallRule:FirewallRule", name, args == null ? FirewallRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:appengine/firewallRule:FirewallRule", name, args == null ? FirewallRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirewallRule(String name, Output<String> id, @Nullable FirewallRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

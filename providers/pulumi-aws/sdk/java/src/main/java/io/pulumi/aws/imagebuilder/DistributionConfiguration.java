@@ -10,6 +10,7 @@ import io.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistribution;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return (Required) Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return Date the distribution configuration was created.
      * 
      */
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated;
     }
     /**
@@ -70,7 +71,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return Date the distribution configuration was updated.
      * 
      */
-    public Output<String> getDateUpdated() {
+    public Output<String> dateUpdated() {
         return this.dateUpdated;
     }
     /**
@@ -84,7 +85,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return Description of the container distribution configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -98,7 +99,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return One or more configuration blocks with distribution settings. Detailed below.
      * 
      */
-    public Output<List<DistributionConfigurationDistribution>> getDistributions() {
+    public Output<List<DistributionConfigurationDistribution>> distributions() {
         return this.distributions;
     }
     /**
@@ -112,7 +113,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return Name to apply to the distributed AMI.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +127,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return Key-value map of resource tags for the distribution configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +141,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -166,7 +167,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DistributionConfiguration(String name, DistributionConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:imagebuilder/distributionConfiguration:DistributionConfiguration", name, args == null ? DistributionConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:imagebuilder/distributionConfiguration:DistributionConfiguration", name, args == null ? DistributionConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DistributionConfiguration(String name, Output<String> id, @Nullable DistributionConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.efs.MountTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -21,25 +22,25 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
     @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
-    public Output</* @Nullable */ String> getIpAddress() {
+    public Output</* @Nullable */ String> ipAddress() {
         return this.ipAddress;
     }
     @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -65,7 +66,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MountTarget(String name, MountTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:efs:MountTarget", name, args == null ? MountTargetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:efs:MountTarget", name, args == null ? MountTargetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MountTarget(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

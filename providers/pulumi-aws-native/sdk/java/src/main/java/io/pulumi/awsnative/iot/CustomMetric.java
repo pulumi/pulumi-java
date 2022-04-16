@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.outputs.CustomMetricTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * @return Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -47,7 +48,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) of the custom metric.
      * 
      */
-    public Output<String> getMetricArn() {
+    public Output<String> metricArn() {
         return this.metricArn;
     }
     /**
@@ -61,7 +62,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
      * 
      */
-    public Output</* @Nullable */ String> getMetricName() {
+    public Output</* @Nullable */ String> metricName() {
         return this.metricName;
     }
     /**
@@ -75,7 +76,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * @return The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
      * 
      */
-    public Output<CustomMetricMetricType> getMetricType() {
+    public Output<CustomMetricMetricType> metricType() {
         return this.metricType;
     }
     /**
@@ -89,7 +90,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<CustomMetricTag>> getTags() {
+    public Output</* @Nullable */ List<CustomMetricTag>> tags() {
         return this.tags;
     }
 
@@ -115,7 +116,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomMetric(String name, CustomMetricArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:CustomMetric", name, args == null ? CustomMetricArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:CustomMetric", name, args == null ? CustomMetricArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomMetric(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

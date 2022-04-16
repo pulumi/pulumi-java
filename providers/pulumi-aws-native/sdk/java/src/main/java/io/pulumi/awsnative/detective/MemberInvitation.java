@@ -8,6 +8,7 @@ import io.pulumi.awsnative.detective.MemberInvitationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * @return When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableEmailNotification() {
+    public Output</* @Nullable */ Boolean> disableEmailNotification() {
         return this.disableEmailNotification;
     }
     /**
@@ -43,7 +44,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * @return The ARN of the graph to which the member account will be invited
      * 
      */
-    public Output<String> getGraphArn() {
+    public Output<String> graphArn() {
         return this.graphArn;
     }
     /**
@@ -57,7 +58,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * @return The root email address for the account to be invited, for validation. Updating this field has no effect.
      * 
      */
-    public Output<String> getMemberEmailAddress() {
+    public Output<String> memberEmailAddress() {
         return this.memberEmailAddress;
     }
     /**
@@ -71,7 +72,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID to be invited to join the graph as a member
      * 
      */
-    public Output<String> getMemberId() {
+    public Output<String> memberId() {
         return this.memberId;
     }
     /**
@@ -85,7 +86,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * @return A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
      * 
      */
-    public Output</* @Nullable */ String> getMessage() {
+    public Output</* @Nullable */ String> message() {
         return this.message;
     }
 
@@ -111,7 +112,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MemberInvitation(String name, MemberInvitationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:detective:MemberInvitation", name, args == null ? MemberInvitationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:detective:MemberInvitation", name, args == null ? MemberInvitationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MemberInvitation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

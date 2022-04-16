@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
     @Import(name="parts", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs>> parts;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs>> getParts() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs>> parts() {
         return this.parts;
     }
 
@@ -38,8 +39,8 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
     @Import(name="repeatCount")
       private final @Nullable Output<Integer> repeatCount;
 
-    public Output<Integer> getRepeatCount() {
-        return this.repeatCount == null ? Output.empty() : this.repeatCount;
+    public Output<Integer> repeatCount() {
+        return this.repeatCount == null ? Codegen.empty() : this.repeatCount;
     }
 
     public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
     }
 
     private GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs() {
-        this.parts = Output.empty();
-        this.repeatCount = Output.empty();
+        this.parts = Codegen.empty();
+        this.repeatCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
             return this;
         }
         public Builder repeatCount(@Nullable Integer repeatCount) {
-            this.repeatCount = Output.ofNullable(repeatCount);
+            this.repeatCount = Codegen.ofNullable(repeatCount);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs build() {
             return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs(parts, repeatCount);

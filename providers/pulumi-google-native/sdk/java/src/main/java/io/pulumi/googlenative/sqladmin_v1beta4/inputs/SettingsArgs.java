@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsActivationPolicy;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsAvailabilityType;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsDataDiskType;
@@ -42,8 +43,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activationPolicy")
       private final @Nullable Output<SettingsActivationPolicy> activationPolicy;
 
-    public Output<SettingsActivationPolicy> getActivationPolicy() {
-        return this.activationPolicy == null ? Output.empty() : this.activationPolicy;
+    public Output<SettingsActivationPolicy> activationPolicy() {
+        return this.activationPolicy == null ? Codegen.empty() : this.activationPolicy;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activeDirectoryConfig")
       private final @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
 
-    public Output<SqlActiveDirectoryConfigArgs> getActiveDirectoryConfig() {
-        return this.activeDirectoryConfig == null ? Output.empty() : this.activeDirectoryConfig;
+    public Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig() {
+        return this.activeDirectoryConfig == null ? Codegen.empty() : this.activeDirectoryConfig;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityType")
       private final @Nullable Output<SettingsAvailabilityType> availabilityType;
 
-    public Output<SettingsAvailabilityType> getAvailabilityType() {
-        return this.availabilityType == null ? Output.empty() : this.availabilityType;
+    public Output<SettingsAvailabilityType> availabilityType() {
+        return this.availabilityType == null ? Codegen.empty() : this.availabilityType;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupConfiguration")
       private final @Nullable Output<BackupConfigurationArgs> backupConfiguration;
 
-    public Output<BackupConfigurationArgs> getBackupConfiguration() {
-        return this.backupConfiguration == null ? Output.empty() : this.backupConfiguration;
+    public Output<BackupConfigurationArgs> backupConfiguration() {
+        return this.backupConfiguration == null ? Codegen.empty() : this.backupConfiguration;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
-        return this.collation == null ? Output.empty() : this.collation;
+    public Output<String> collation() {
+        return this.collation == null ? Codegen.empty() : this.collation;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crashSafeReplicationEnabled")
       private final @Nullable Output<Boolean> crashSafeReplicationEnabled;
 
-    public Output<Boolean> getCrashSafeReplicationEnabled() {
-        return this.crashSafeReplicationEnabled == null ? Output.empty() : this.crashSafeReplicationEnabled;
+    public Output<Boolean> crashSafeReplicationEnabled() {
+        return this.crashSafeReplicationEnabled == null ? Codegen.empty() : this.crashSafeReplicationEnabled;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskSizeGb")
       private final @Nullable Output<String> dataDiskSizeGb;
 
-    public Output<String> getDataDiskSizeGb() {
-        return this.dataDiskSizeGb == null ? Output.empty() : this.dataDiskSizeGb;
+    public Output<String> dataDiskSizeGb() {
+        return this.dataDiskSizeGb == null ? Codegen.empty() : this.dataDiskSizeGb;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskType")
       private final @Nullable Output<SettingsDataDiskType> dataDiskType;
 
-    public Output<SettingsDataDiskType> getDataDiskType() {
-        return this.dataDiskType == null ? Output.empty() : this.dataDiskType;
+    public Output<SettingsDataDiskType> dataDiskType() {
+        return this.dataDiskType == null ? Codegen.empty() : this.dataDiskType;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseFlags")
       private final @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
 
-    public Output<List<DatabaseFlagsArgs>> getDatabaseFlags() {
-        return this.databaseFlags == null ? Output.empty() : this.databaseFlags;
+    public Output<List<DatabaseFlagsArgs>> databaseFlags() {
+        return this.databaseFlags == null ? Codegen.empty() : this.databaseFlags;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseReplicationEnabled")
       private final @Nullable Output<Boolean> databaseReplicationEnabled;
 
-    public Output<Boolean> getDatabaseReplicationEnabled() {
-        return this.databaseReplicationEnabled == null ? Output.empty() : this.databaseReplicationEnabled;
+    public Output<Boolean> databaseReplicationEnabled() {
+        return this.databaseReplicationEnabled == null ? Codegen.empty() : this.databaseReplicationEnabled;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="denyMaintenancePeriods")
       private final @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
 
-    public Output<List<DenyMaintenancePeriodArgs>> getDenyMaintenancePeriods() {
-        return this.denyMaintenancePeriods == null ? Output.empty() : this.denyMaintenancePeriods;
+    public Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods() {
+        return this.denyMaintenancePeriods == null ? Codegen.empty() : this.denyMaintenancePeriods;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insightsConfig")
       private final @Nullable Output<InsightsConfigArgs> insightsConfig;
 
-    public Output<InsightsConfigArgs> getInsightsConfig() {
-        return this.insightsConfig == null ? Output.empty() : this.insightsConfig;
+    public Output<InsightsConfigArgs> insightsConfig() {
+        return this.insightsConfig == null ? Codegen.empty() : this.insightsConfig;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipConfiguration")
       private final @Nullable Output<IpConfigurationArgs> ipConfiguration;
 
-    public Output<IpConfigurationArgs> getIpConfiguration() {
-        return this.ipConfiguration == null ? Output.empty() : this.ipConfiguration;
+    public Output<IpConfigurationArgs> ipConfiguration() {
+        return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationPreference")
       private final @Nullable Output<LocationPreferenceArgs> locationPreference;
 
-    public Output<LocationPreferenceArgs> getLocationPreference() {
-        return this.locationPreference == null ? Output.empty() : this.locationPreference;
+    public Output<LocationPreferenceArgs> locationPreference() {
+        return this.locationPreference == null ? Codegen.empty() : this.locationPreference;
     }
 
     /**
@@ -207,8 +208,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
+    public Output<MaintenanceWindowArgs> maintenanceWindow() {
+        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -218,8 +219,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="passwordValidationPolicy")
       private final @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
 
-    public Output<PasswordValidationPolicyArgs> getPasswordValidationPolicy() {
-        return this.passwordValidationPolicy == null ? Output.empty() : this.passwordValidationPolicy;
+    public Output<PasswordValidationPolicyArgs> passwordValidationPolicy() {
+        return this.passwordValidationPolicy == null ? Codegen.empty() : this.passwordValidationPolicy;
     }
 
     /**
@@ -229,8 +230,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pricingPlan")
       private final @Nullable Output<SettingsPricingPlan> pricingPlan;
 
-    public Output<SettingsPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
+    public Output<SettingsPricingPlan> pricingPlan() {
+        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     /**
@@ -240,8 +241,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="settingsVersion")
       private final @Nullable Output<String> settingsVersion;
 
-    public Output<String> getSettingsVersion() {
-        return this.settingsVersion == null ? Output.empty() : this.settingsVersion;
+    public Output<String> settingsVersion() {
+        return this.settingsVersion == null ? Codegen.empty() : this.settingsVersion;
     }
 
     /**
@@ -251,8 +252,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlServerAuditConfig")
       private final @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
 
-    public Output<SqlServerAuditConfigArgs> getSqlServerAuditConfig() {
-        return this.sqlServerAuditConfig == null ? Output.empty() : this.sqlServerAuditConfig;
+    public Output<SqlServerAuditConfigArgs> sqlServerAuditConfig() {
+        return this.sqlServerAuditConfig == null ? Codegen.empty() : this.sqlServerAuditConfig;
     }
 
     /**
@@ -262,8 +263,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAutoResize")
       private final @Nullable Output<Boolean> storageAutoResize;
 
-    public Output<Boolean> getStorageAutoResize() {
-        return this.storageAutoResize == null ? Output.empty() : this.storageAutoResize;
+    public Output<Boolean> storageAutoResize() {
+        return this.storageAutoResize == null ? Codegen.empty() : this.storageAutoResize;
     }
 
     /**
@@ -273,8 +274,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAutoResizeLimit")
       private final @Nullable Output<String> storageAutoResizeLimit;
 
-    public Output<String> getStorageAutoResizeLimit() {
-        return this.storageAutoResizeLimit == null ? Output.empty() : this.storageAutoResizeLimit;
+    public Output<String> storageAutoResizeLimit() {
+        return this.storageAutoResizeLimit == null ? Codegen.empty() : this.storageAutoResizeLimit;
     }
 
     /**
@@ -284,8 +285,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     /**
@@ -295,8 +296,8 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Output.empty() : this.userLabels;
+    public Output<Map<String,String>> userLabels() {
+        return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     public SettingsArgs(
@@ -351,30 +352,30 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SettingsArgs() {
-        this.activationPolicy = Output.empty();
-        this.activeDirectoryConfig = Output.empty();
-        this.availabilityType = Output.empty();
-        this.backupConfiguration = Output.empty();
-        this.collation = Output.empty();
-        this.crashSafeReplicationEnabled = Output.empty();
-        this.dataDiskSizeGb = Output.empty();
-        this.dataDiskType = Output.empty();
-        this.databaseFlags = Output.empty();
-        this.databaseReplicationEnabled = Output.empty();
-        this.denyMaintenancePeriods = Output.empty();
-        this.insightsConfig = Output.empty();
-        this.ipConfiguration = Output.empty();
-        this.kind = Output.empty();
-        this.locationPreference = Output.empty();
-        this.maintenanceWindow = Output.empty();
-        this.passwordValidationPolicy = Output.empty();
-        this.pricingPlan = Output.empty();
-        this.settingsVersion = Output.empty();
-        this.sqlServerAuditConfig = Output.empty();
-        this.storageAutoResize = Output.empty();
-        this.storageAutoResizeLimit = Output.empty();
-        this.tier = Output.empty();
-        this.userLabels = Output.empty();
+        this.activationPolicy = Codegen.empty();
+        this.activeDirectoryConfig = Codegen.empty();
+        this.availabilityType = Codegen.empty();
+        this.backupConfiguration = Codegen.empty();
+        this.collation = Codegen.empty();
+        this.crashSafeReplicationEnabled = Codegen.empty();
+        this.dataDiskSizeGb = Codegen.empty();
+        this.dataDiskType = Codegen.empty();
+        this.databaseFlags = Codegen.empty();
+        this.databaseReplicationEnabled = Codegen.empty();
+        this.denyMaintenancePeriods = Codegen.empty();
+        this.insightsConfig = Codegen.empty();
+        this.ipConfiguration = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.locationPreference = Codegen.empty();
+        this.maintenanceWindow = Codegen.empty();
+        this.passwordValidationPolicy = Codegen.empty();
+        this.pricingPlan = Codegen.empty();
+        this.settingsVersion = Codegen.empty();
+        this.sqlServerAuditConfig = Codegen.empty();
+        this.storageAutoResize = Codegen.empty();
+        this.storageAutoResizeLimit = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.userLabels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -448,7 +449,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activationPolicy(@Nullable SettingsActivationPolicy activationPolicy) {
-            this.activationPolicy = Output.ofNullable(activationPolicy);
+            this.activationPolicy = Codegen.ofNullable(activationPolicy);
             return this;
         }
         public Builder activeDirectoryConfig(@Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig) {
@@ -456,7 +457,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activeDirectoryConfig(@Nullable SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
-            this.activeDirectoryConfig = Output.ofNullable(activeDirectoryConfig);
+            this.activeDirectoryConfig = Codegen.ofNullable(activeDirectoryConfig);
             return this;
         }
         public Builder availabilityType(@Nullable Output<SettingsAvailabilityType> availabilityType) {
@@ -464,7 +465,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityType(@Nullable SettingsAvailabilityType availabilityType) {
-            this.availabilityType = Output.ofNullable(availabilityType);
+            this.availabilityType = Codegen.ofNullable(availabilityType);
             return this;
         }
         public Builder backupConfiguration(@Nullable Output<BackupConfigurationArgs> backupConfiguration) {
@@ -472,7 +473,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupConfiguration(@Nullable BackupConfigurationArgs backupConfiguration) {
-            this.backupConfiguration = Output.ofNullable(backupConfiguration);
+            this.backupConfiguration = Codegen.ofNullable(backupConfiguration);
             return this;
         }
         public Builder collation(@Nullable Output<String> collation) {
@@ -480,7 +481,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder collation(@Nullable String collation) {
-            this.collation = Output.ofNullable(collation);
+            this.collation = Codegen.ofNullable(collation);
             return this;
         }
         public Builder crashSafeReplicationEnabled(@Nullable Output<Boolean> crashSafeReplicationEnabled) {
@@ -488,7 +489,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crashSafeReplicationEnabled(@Nullable Boolean crashSafeReplicationEnabled) {
-            this.crashSafeReplicationEnabled = Output.ofNullable(crashSafeReplicationEnabled);
+            this.crashSafeReplicationEnabled = Codegen.ofNullable(crashSafeReplicationEnabled);
             return this;
         }
         public Builder dataDiskSizeGb(@Nullable Output<String> dataDiskSizeGb) {
@@ -496,7 +497,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
-            this.dataDiskSizeGb = Output.ofNullable(dataDiskSizeGb);
+            this.dataDiskSizeGb = Codegen.ofNullable(dataDiskSizeGb);
             return this;
         }
         public Builder dataDiskType(@Nullable Output<SettingsDataDiskType> dataDiskType) {
@@ -504,7 +505,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDiskType(@Nullable SettingsDataDiskType dataDiskType) {
-            this.dataDiskType = Output.ofNullable(dataDiskType);
+            this.dataDiskType = Codegen.ofNullable(dataDiskType);
             return this;
         }
         public Builder databaseFlags(@Nullable Output<List<DatabaseFlagsArgs>> databaseFlags) {
@@ -512,7 +513,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseFlags(@Nullable List<DatabaseFlagsArgs> databaseFlags) {
-            this.databaseFlags = Output.ofNullable(databaseFlags);
+            this.databaseFlags = Codegen.ofNullable(databaseFlags);
             return this;
         }
         public Builder databaseFlags(DatabaseFlagsArgs... databaseFlags) {
@@ -523,7 +524,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseReplicationEnabled(@Nullable Boolean databaseReplicationEnabled) {
-            this.databaseReplicationEnabled = Output.ofNullable(databaseReplicationEnabled);
+            this.databaseReplicationEnabled = Codegen.ofNullable(databaseReplicationEnabled);
             return this;
         }
         public Builder denyMaintenancePeriods(@Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods) {
@@ -531,7 +532,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder denyMaintenancePeriods(@Nullable List<DenyMaintenancePeriodArgs> denyMaintenancePeriods) {
-            this.denyMaintenancePeriods = Output.ofNullable(denyMaintenancePeriods);
+            this.denyMaintenancePeriods = Codegen.ofNullable(denyMaintenancePeriods);
             return this;
         }
         public Builder denyMaintenancePeriods(DenyMaintenancePeriodArgs... denyMaintenancePeriods) {
@@ -542,7 +543,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder insightsConfig(@Nullable InsightsConfigArgs insightsConfig) {
-            this.insightsConfig = Output.ofNullable(insightsConfig);
+            this.insightsConfig = Codegen.ofNullable(insightsConfig);
             return this;
         }
         public Builder ipConfiguration(@Nullable Output<IpConfigurationArgs> ipConfiguration) {
@@ -550,7 +551,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipConfiguration(@Nullable IpConfigurationArgs ipConfiguration) {
-            this.ipConfiguration = Output.ofNullable(ipConfiguration);
+            this.ipConfiguration = Codegen.ofNullable(ipConfiguration);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -558,7 +559,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder locationPreference(@Nullable Output<LocationPreferenceArgs> locationPreference) {
@@ -566,7 +567,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationPreference(@Nullable LocationPreferenceArgs locationPreference) {
-            this.locationPreference = Output.ofNullable(locationPreference);
+            this.locationPreference = Codegen.ofNullable(locationPreference);
             return this;
         }
         public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
@@ -574,7 +575,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
             return this;
         }
         public Builder passwordValidationPolicy(@Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy) {
@@ -582,7 +583,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder passwordValidationPolicy(@Nullable PasswordValidationPolicyArgs passwordValidationPolicy) {
-            this.passwordValidationPolicy = Output.ofNullable(passwordValidationPolicy);
+            this.passwordValidationPolicy = Codegen.ofNullable(passwordValidationPolicy);
             return this;
         }
         public Builder pricingPlan(@Nullable Output<SettingsPricingPlan> pricingPlan) {
@@ -590,7 +591,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pricingPlan(@Nullable SettingsPricingPlan pricingPlan) {
-            this.pricingPlan = Output.ofNullable(pricingPlan);
+            this.pricingPlan = Codegen.ofNullable(pricingPlan);
             return this;
         }
         public Builder settingsVersion(@Nullable Output<String> settingsVersion) {
@@ -598,7 +599,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder settingsVersion(@Nullable String settingsVersion) {
-            this.settingsVersion = Output.ofNullable(settingsVersion);
+            this.settingsVersion = Codegen.ofNullable(settingsVersion);
             return this;
         }
         public Builder sqlServerAuditConfig(@Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig) {
@@ -606,7 +607,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlServerAuditConfig(@Nullable SqlServerAuditConfigArgs sqlServerAuditConfig) {
-            this.sqlServerAuditConfig = Output.ofNullable(sqlServerAuditConfig);
+            this.sqlServerAuditConfig = Codegen.ofNullable(sqlServerAuditConfig);
             return this;
         }
         public Builder storageAutoResize(@Nullable Output<Boolean> storageAutoResize) {
@@ -614,7 +615,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAutoResize(@Nullable Boolean storageAutoResize) {
-            this.storageAutoResize = Output.ofNullable(storageAutoResize);
+            this.storageAutoResize = Codegen.ofNullable(storageAutoResize);
             return this;
         }
         public Builder storageAutoResizeLimit(@Nullable Output<String> storageAutoResizeLimit) {
@@ -622,7 +623,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
-            this.storageAutoResizeLimit = Output.ofNullable(storageAutoResizeLimit);
+            this.storageAutoResizeLimit = Codegen.ofNullable(storageAutoResizeLimit);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -630,7 +631,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
@@ -638,7 +639,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Output.ofNullable(userLabels);
+            this.userLabels = Codegen.ofNullable(userLabels);
             return this;
         }        public SettingsArgs build() {
             return new SettingsArgs(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);

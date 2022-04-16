@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends io.pulumi.reso
     @Import(name="enforced", required=true)
       private final Output<Boolean> enforced;
 
-    public Output<Boolean> getEnforced() {
+    public Output<Boolean> enforced() {
         return this.enforced;
     }
 
@@ -29,7 +30,7 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends io.pulumi.reso
     }
 
     private OrganizationPolicyBooleanPolicyGetArgs() {
-        this.enforced = Output.empty();
+        this.enforced = Codegen.empty();
     }
 
     public static Builder builder() {

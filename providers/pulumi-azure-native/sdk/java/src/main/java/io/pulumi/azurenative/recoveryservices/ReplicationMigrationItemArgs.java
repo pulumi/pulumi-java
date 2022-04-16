@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.EnableMigrationInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -33,8 +34,8 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     @Import(name="migrationItemName")
       private final @Nullable Output<String> migrationItemName;
 
-    public Output<String> getMigrationItemName() {
-        return this.migrationItemName == null ? Output.empty() : this.migrationItemName;
+    public Output<String> migrationItemName() {
+        return this.migrationItemName == null ? Codegen.empty() : this.migrationItemName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     @Import(name="properties", required=true)
       private final Output<EnableMigrationInputPropertiesArgs> properties;
 
-    public Output<EnableMigrationInputPropertiesArgs> getProperties() {
+    public Output<EnableMigrationInputPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -55,7 +56,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
 
-    public Output<String> getProtectionContainerName() {
+    public Output<String> protectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -66,7 +67,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -97,12 +98,12 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     }
 
     private ReplicationMigrationItemArgs() {
-        this.fabricName = Output.empty();
-        this.migrationItemName = Output.empty();
-        this.properties = Output.empty();
-        this.protectionContainerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.migrationItemName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.protectionContainerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder migrationItemName(@Nullable String migrationItemName) {
-            this.migrationItemName = Output.ofNullable(migrationItemName);
+            this.migrationItemName = Codegen.ofNullable(migrationItemName);
             return this;
         }
         public Builder properties(Output<EnableMigrationInputPropertiesArgs> properties) {

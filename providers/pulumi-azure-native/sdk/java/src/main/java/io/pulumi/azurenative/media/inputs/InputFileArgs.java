@@ -11,6 +11,7 @@ import io.pulumi.azurenative.media.inputs.SelectVideoTrackByIdArgs;
 import io.pulumi.azurenative.media.inputs.VideoTrackDescriptorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,8 +34,8 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filename")
       private final @Nullable Output<String> filename;
 
-    public Output<String> getFilename() {
-        return this.filename == null ? Output.empty() : this.filename;
+    public Output<String> filename() {
+        return this.filename == null ? Codegen.empty() : this.filename;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includedTracks")
       private final @Nullable Output<List<Object>> includedTracks;
 
-    public Output<List<Object>> getIncludedTracks() {
-        return this.includedTracks == null ? Output.empty() : this.includedTracks;
+    public Output<List<Object>> includedTracks() {
+        return this.includedTracks == null ? Codegen.empty() : this.includedTracks;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -70,9 +71,9 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputFileArgs() {
-        this.filename = Output.empty();
-        this.includedTracks = Output.empty();
-        this.odataType = Output.empty();
+        this.filename = Codegen.empty();
+        this.includedTracks = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filename(@Nullable String filename) {
-            this.filename = Output.ofNullable(filename);
+            this.filename = Codegen.ofNullable(filename);
             return this;
         }
         public Builder includedTracks(@Nullable Output<List<Object>> includedTracks) {
@@ -112,7 +113,7 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includedTracks(@Nullable List<Object> includedTracks) {
-            this.includedTracks = Output.ofNullable(includedTracks);
+            this.includedTracks = Codegen.ofNullable(includedTracks);
             return this;
         }
         public Builder includedTracks(Object... includedTracks) {

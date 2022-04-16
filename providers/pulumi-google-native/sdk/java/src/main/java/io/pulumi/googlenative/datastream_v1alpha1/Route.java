@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datastream_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1alpha1.RouteArgs;
 import java.lang.Integer;
@@ -31,7 +32,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The create time of the resource.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +46,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Destination address for connection
      * 
      */
-    public Output<String> getDestinationAddress() {
+    public Output<String> destinationAddress() {
         return this.destinationAddress;
     }
     /**
@@ -59,7 +60,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Destination port for connection
      * 
      */
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort;
     }
     /**
@@ -73,7 +74,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -87,7 +88,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -101,7 +102,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The resource's name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The update time of the resource.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -141,7 +142,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Route(String name, RouteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datastream/v1alpha1:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datastream/v1alpha1:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Route(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

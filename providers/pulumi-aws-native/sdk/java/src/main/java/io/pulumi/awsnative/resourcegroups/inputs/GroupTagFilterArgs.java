@@ -5,6 +5,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public GroupTagFilterArgs(
@@ -37,8 +38,8 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupTagFilterArgs() {
-        this.key = Output.empty();
-        this.values = Output.empty();
+        this.key = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -76,7 +77,7 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

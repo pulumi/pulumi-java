@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectAltNameGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectGetArgs;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
     @Import(name="subject", required=true)
       private final Output<CertificateConfigSubjectConfigSubjectGetArgs> subject;
 
-    public Output<CertificateConfigSubjectConfigSubjectGetArgs> getSubject() {
+    public Output<CertificateConfigSubjectConfigSubjectGetArgs> subject() {
         return this.subject;
     }
 
@@ -35,8 +36,8 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
     @Import(name="subjectAltName")
       private final @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
-    public Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
+    public Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName() {
+        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 
     public CertificateConfigSubjectConfigGetArgs(
@@ -47,8 +48,8 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
     }
 
     private CertificateConfigSubjectConfigGetArgs() {
-        this.subject = Output.empty();
-        this.subjectAltName = Output.empty();
+        this.subject = Codegen.empty();
+        this.subjectAltName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder subjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
-            this.subjectAltName = Output.ofNullable(subjectAltName);
+            this.subjectAltName = Codegen.ofNullable(subjectAltName);
             return this;
         }        public CertificateConfigSubjectConfigGetArgs build() {
             return new CertificateConfigSubjectConfigGetArgs(subject, subjectAltName);

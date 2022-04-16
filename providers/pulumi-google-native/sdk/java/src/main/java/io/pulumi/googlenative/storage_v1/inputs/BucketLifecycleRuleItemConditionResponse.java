@@ -26,7 +26,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="age", required=true)
       private final Integer age;
 
-    public Integer getAge() {
+    public Integer age() {
         return this.age;
     }
 
@@ -37,7 +37,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="createdBefore", required=true)
       private final String createdBefore;
 
-    public String getCreatedBefore() {
+    public String createdBefore() {
         return this.createdBefore;
     }
 
@@ -48,7 +48,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="customTimeBefore", required=true)
       private final String customTimeBefore;
 
-    public String getCustomTimeBefore() {
+    public String customTimeBefore() {
         return this.customTimeBefore;
     }
 
@@ -59,7 +59,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="daysSinceCustomTime", required=true)
       private final Integer daysSinceCustomTime;
 
-    public Integer getDaysSinceCustomTime() {
+    public Integer daysSinceCustomTime() {
         return this.daysSinceCustomTime;
     }
 
@@ -70,7 +70,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="daysSinceNoncurrentTime", required=true)
       private final Integer daysSinceNoncurrentTime;
 
-    public Integer getDaysSinceNoncurrentTime() {
+    public Integer daysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime;
     }
 
@@ -81,7 +81,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="isLive", required=true)
       private final Boolean isLive;
 
-    public Boolean getIsLive() {
+    public Boolean isLive() {
         return this.isLive;
     }
 
@@ -92,7 +92,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="matchesPattern", required=true)
       private final String matchesPattern;
 
-    public String getMatchesPattern() {
+    public String matchesPattern() {
         return this.matchesPattern;
     }
 
@@ -103,7 +103,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="matchesStorageClass", required=true)
       private final List<String> matchesStorageClass;
 
-    public List<String> getMatchesStorageClass() {
+    public List<String> matchesStorageClass() {
         return this.matchesStorageClass;
     }
 
@@ -114,7 +114,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="noncurrentTimeBefore", required=true)
       private final String noncurrentTimeBefore;
 
-    public String getNoncurrentTimeBefore() {
+    public String noncurrentTimeBefore() {
         return this.noncurrentTimeBefore;
     }
 
@@ -125,7 +125,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends io.pulumi.re
     @Import(name="numNewerVersions", required=true)
       private final Integer numNewerVersions;
 
-    public Integer getNumNewerVersions() {
+    public Integer numNewerVersions() {
         return this.numNewerVersions;
     }
 

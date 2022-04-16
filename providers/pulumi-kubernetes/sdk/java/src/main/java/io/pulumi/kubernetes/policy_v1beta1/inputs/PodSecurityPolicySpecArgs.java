@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.AllowedCSIDriverArgs;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.AllowedFlexVolumeArgs;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.AllowedHostPathArgs;
@@ -37,8 +38,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="allowPrivilegeEscalation")
       private final @Nullable Output<Boolean> allowPrivilegeEscalation;
 
-    public Output<Boolean> getAllowPrivilegeEscalation() {
-        return this.allowPrivilegeEscalation == null ? Output.empty() : this.allowPrivilegeEscalation;
+    public Output<Boolean> allowPrivilegeEscalation() {
+        return this.allowPrivilegeEscalation == null ? Codegen.empty() : this.allowPrivilegeEscalation;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedCSIDrivers")
       private final @Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
 
-    public Output<List<AllowedCSIDriverArgs>> getAllowedCSIDrivers() {
-        return this.allowedCSIDrivers == null ? Output.empty() : this.allowedCSIDrivers;
+    public Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers() {
+        return this.allowedCSIDrivers == null ? Codegen.empty() : this.allowedCSIDrivers;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedCapabilities")
       private final @Nullable Output<List<String>> allowedCapabilities;
 
-    public Output<List<String>> getAllowedCapabilities() {
-        return this.allowedCapabilities == null ? Output.empty() : this.allowedCapabilities;
+    public Output<List<String>> allowedCapabilities() {
+        return this.allowedCapabilities == null ? Codegen.empty() : this.allowedCapabilities;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedFlexVolumes")
       private final @Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
 
-    public Output<List<AllowedFlexVolumeArgs>> getAllowedFlexVolumes() {
-        return this.allowedFlexVolumes == null ? Output.empty() : this.allowedFlexVolumes;
+    public Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes() {
+        return this.allowedFlexVolumes == null ? Codegen.empty() : this.allowedFlexVolumes;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedHostPaths")
       private final @Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths;
 
-    public Output<List<AllowedHostPathArgs>> getAllowedHostPaths() {
-        return this.allowedHostPaths == null ? Output.empty() : this.allowedHostPaths;
+    public Output<List<AllowedHostPathArgs>> allowedHostPaths() {
+        return this.allowedHostPaths == null ? Codegen.empty() : this.allowedHostPaths;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedProcMountTypes")
       private final @Nullable Output<List<String>> allowedProcMountTypes;
 
-    public Output<List<String>> getAllowedProcMountTypes() {
-        return this.allowedProcMountTypes == null ? Output.empty() : this.allowedProcMountTypes;
+    public Output<List<String>> allowedProcMountTypes() {
+        return this.allowedProcMountTypes == null ? Codegen.empty() : this.allowedProcMountTypes;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedUnsafeSysctls")
       private final @Nullable Output<List<String>> allowedUnsafeSysctls;
 
-    public Output<List<String>> getAllowedUnsafeSysctls() {
-        return this.allowedUnsafeSysctls == null ? Output.empty() : this.allowedUnsafeSysctls;
+    public Output<List<String>> allowedUnsafeSysctls() {
+        return this.allowedUnsafeSysctls == null ? Codegen.empty() : this.allowedUnsafeSysctls;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="defaultAddCapabilities")
       private final @Nullable Output<List<String>> defaultAddCapabilities;
 
-    public Output<List<String>> getDefaultAddCapabilities() {
-        return this.defaultAddCapabilities == null ? Output.empty() : this.defaultAddCapabilities;
+    public Output<List<String>> defaultAddCapabilities() {
+        return this.defaultAddCapabilities == null ? Codegen.empty() : this.defaultAddCapabilities;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="defaultAllowPrivilegeEscalation")
       private final @Nullable Output<Boolean> defaultAllowPrivilegeEscalation;
 
-    public Output<Boolean> getDefaultAllowPrivilegeEscalation() {
-        return this.defaultAllowPrivilegeEscalation == null ? Output.empty() : this.defaultAllowPrivilegeEscalation;
+    public Output<Boolean> defaultAllowPrivilegeEscalation() {
+        return this.defaultAllowPrivilegeEscalation == null ? Codegen.empty() : this.defaultAllowPrivilegeEscalation;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="forbiddenSysctls")
       private final @Nullable Output<List<String>> forbiddenSysctls;
 
-    public Output<List<String>> getForbiddenSysctls() {
-        return this.forbiddenSysctls == null ? Output.empty() : this.forbiddenSysctls;
+    public Output<List<String>> forbiddenSysctls() {
+        return this.forbiddenSysctls == null ? Codegen.empty() : this.forbiddenSysctls;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="fsGroup", required=true)
       private final Output<FSGroupStrategyOptionsArgs> fsGroup;
 
-    public Output<FSGroupStrategyOptionsArgs> getFsGroup() {
+    public Output<FSGroupStrategyOptionsArgs> fsGroup() {
         return this.fsGroup;
     }
 
@@ -162,8 +163,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="hostIPC")
       private final @Nullable Output<Boolean> hostIPC;
 
-    public Output<Boolean> getHostIPC() {
-        return this.hostIPC == null ? Output.empty() : this.hostIPC;
+    public Output<Boolean> hostIPC() {
+        return this.hostIPC == null ? Codegen.empty() : this.hostIPC;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="hostNetwork")
       private final @Nullable Output<Boolean> hostNetwork;
 
-    public Output<Boolean> getHostNetwork() {
-        return this.hostNetwork == null ? Output.empty() : this.hostNetwork;
+    public Output<Boolean> hostNetwork() {
+        return this.hostNetwork == null ? Codegen.empty() : this.hostNetwork;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="hostPID")
       private final @Nullable Output<Boolean> hostPID;
 
-    public Output<Boolean> getHostPID() {
-        return this.hostPID == null ? Output.empty() : this.hostPID;
+    public Output<Boolean> hostPID() {
+        return this.hostPID == null ? Codegen.empty() : this.hostPID;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="hostPorts")
       private final @Nullable Output<List<HostPortRangeArgs>> hostPorts;
 
-    public Output<List<HostPortRangeArgs>> getHostPorts() {
-        return this.hostPorts == null ? Output.empty() : this.hostPorts;
+    public Output<List<HostPortRangeArgs>> hostPorts() {
+        return this.hostPorts == null ? Codegen.empty() : this.hostPorts;
     }
 
     /**
@@ -206,8 +207,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="privileged")
       private final @Nullable Output<Boolean> privileged;
 
-    public Output<Boolean> getPrivileged() {
-        return this.privileged == null ? Output.empty() : this.privileged;
+    public Output<Boolean> privileged() {
+        return this.privileged == null ? Codegen.empty() : this.privileged;
     }
 
     /**
@@ -217,8 +218,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="readOnlyRootFilesystem")
       private final @Nullable Output<Boolean> readOnlyRootFilesystem;
 
-    public Output<Boolean> getReadOnlyRootFilesystem() {
-        return this.readOnlyRootFilesystem == null ? Output.empty() : this.readOnlyRootFilesystem;
+    public Output<Boolean> readOnlyRootFilesystem() {
+        return this.readOnlyRootFilesystem == null ? Codegen.empty() : this.readOnlyRootFilesystem;
     }
 
     /**
@@ -228,8 +229,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="requiredDropCapabilities")
       private final @Nullable Output<List<String>> requiredDropCapabilities;
 
-    public Output<List<String>> getRequiredDropCapabilities() {
-        return this.requiredDropCapabilities == null ? Output.empty() : this.requiredDropCapabilities;
+    public Output<List<String>> requiredDropCapabilities() {
+        return this.requiredDropCapabilities == null ? Codegen.empty() : this.requiredDropCapabilities;
     }
 
     /**
@@ -239,8 +240,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="runAsGroup")
       private final @Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup;
 
-    public Output<RunAsGroupStrategyOptionsArgs> getRunAsGroup() {
-        return this.runAsGroup == null ? Output.empty() : this.runAsGroup;
+    public Output<RunAsGroupStrategyOptionsArgs> runAsGroup() {
+        return this.runAsGroup == null ? Codegen.empty() : this.runAsGroup;
     }
 
     /**
@@ -250,7 +251,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="runAsUser", required=true)
       private final Output<RunAsUserStrategyOptionsArgs> runAsUser;
 
-    public Output<RunAsUserStrategyOptionsArgs> getRunAsUser() {
+    public Output<RunAsUserStrategyOptionsArgs> runAsUser() {
         return this.runAsUser;
     }
 
@@ -261,8 +262,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="runtimeClass")
       private final @Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass;
 
-    public Output<RuntimeClassStrategyOptionsArgs> getRuntimeClass() {
-        return this.runtimeClass == null ? Output.empty() : this.runtimeClass;
+    public Output<RuntimeClassStrategyOptionsArgs> runtimeClass() {
+        return this.runtimeClass == null ? Codegen.empty() : this.runtimeClass;
     }
 
     /**
@@ -272,7 +273,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="seLinux", required=true)
       private final Output<SELinuxStrategyOptionsArgs> seLinux;
 
-    public Output<SELinuxStrategyOptionsArgs> getSeLinux() {
+    public Output<SELinuxStrategyOptionsArgs> seLinux() {
         return this.seLinux;
     }
 
@@ -283,7 +284,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="supplementalGroups", required=true)
       private final Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
 
-    public Output<SupplementalGroupsStrategyOptionsArgs> getSupplementalGroups() {
+    public Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups() {
         return this.supplementalGroups;
     }
 
@@ -294,8 +295,8 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     @Import(name="volumes")
       private final @Nullable Output<List<String>> volumes;
 
-    public Output<List<String>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<String>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public PodSecurityPolicySpecArgs(
@@ -350,30 +351,30 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     }
 
     private PodSecurityPolicySpecArgs() {
-        this.allowPrivilegeEscalation = Output.empty();
-        this.allowedCSIDrivers = Output.empty();
-        this.allowedCapabilities = Output.empty();
-        this.allowedFlexVolumes = Output.empty();
-        this.allowedHostPaths = Output.empty();
-        this.allowedProcMountTypes = Output.empty();
-        this.allowedUnsafeSysctls = Output.empty();
-        this.defaultAddCapabilities = Output.empty();
-        this.defaultAllowPrivilegeEscalation = Output.empty();
-        this.forbiddenSysctls = Output.empty();
-        this.fsGroup = Output.empty();
-        this.hostIPC = Output.empty();
-        this.hostNetwork = Output.empty();
-        this.hostPID = Output.empty();
-        this.hostPorts = Output.empty();
-        this.privileged = Output.empty();
-        this.readOnlyRootFilesystem = Output.empty();
-        this.requiredDropCapabilities = Output.empty();
-        this.runAsGroup = Output.empty();
-        this.runAsUser = Output.empty();
-        this.runtimeClass = Output.empty();
-        this.seLinux = Output.empty();
-        this.supplementalGroups = Output.empty();
-        this.volumes = Output.empty();
+        this.allowPrivilegeEscalation = Codegen.empty();
+        this.allowedCSIDrivers = Codegen.empty();
+        this.allowedCapabilities = Codegen.empty();
+        this.allowedFlexVolumes = Codegen.empty();
+        this.allowedHostPaths = Codegen.empty();
+        this.allowedProcMountTypes = Codegen.empty();
+        this.allowedUnsafeSysctls = Codegen.empty();
+        this.defaultAddCapabilities = Codegen.empty();
+        this.defaultAllowPrivilegeEscalation = Codegen.empty();
+        this.forbiddenSysctls = Codegen.empty();
+        this.fsGroup = Codegen.empty();
+        this.hostIPC = Codegen.empty();
+        this.hostNetwork = Codegen.empty();
+        this.hostPID = Codegen.empty();
+        this.hostPorts = Codegen.empty();
+        this.privileged = Codegen.empty();
+        this.readOnlyRootFilesystem = Codegen.empty();
+        this.requiredDropCapabilities = Codegen.empty();
+        this.runAsGroup = Codegen.empty();
+        this.runAsUser = Codegen.empty();
+        this.runtimeClass = Codegen.empty();
+        this.seLinux = Codegen.empty();
+        this.supplementalGroups = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -447,7 +448,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
-            this.allowPrivilegeEscalation = Output.ofNullable(allowPrivilegeEscalation);
+            this.allowPrivilegeEscalation = Codegen.ofNullable(allowPrivilegeEscalation);
             return this;
         }
         public Builder allowedCSIDrivers(@Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers) {
@@ -455,7 +456,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedCSIDrivers(@Nullable List<AllowedCSIDriverArgs> allowedCSIDrivers) {
-            this.allowedCSIDrivers = Output.ofNullable(allowedCSIDrivers);
+            this.allowedCSIDrivers = Codegen.ofNullable(allowedCSIDrivers);
             return this;
         }
         public Builder allowedCSIDrivers(AllowedCSIDriverArgs... allowedCSIDrivers) {
@@ -466,7 +467,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedCapabilities(@Nullable List<String> allowedCapabilities) {
-            this.allowedCapabilities = Output.ofNullable(allowedCapabilities);
+            this.allowedCapabilities = Codegen.ofNullable(allowedCapabilities);
             return this;
         }
         public Builder allowedCapabilities(String... allowedCapabilities) {
@@ -477,7 +478,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedFlexVolumes(@Nullable List<AllowedFlexVolumeArgs> allowedFlexVolumes) {
-            this.allowedFlexVolumes = Output.ofNullable(allowedFlexVolumes);
+            this.allowedFlexVolumes = Codegen.ofNullable(allowedFlexVolumes);
             return this;
         }
         public Builder allowedFlexVolumes(AllowedFlexVolumeArgs... allowedFlexVolumes) {
@@ -488,7 +489,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedHostPaths(@Nullable List<AllowedHostPathArgs> allowedHostPaths) {
-            this.allowedHostPaths = Output.ofNullable(allowedHostPaths);
+            this.allowedHostPaths = Codegen.ofNullable(allowedHostPaths);
             return this;
         }
         public Builder allowedHostPaths(AllowedHostPathArgs... allowedHostPaths) {
@@ -499,7 +500,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
-            this.allowedProcMountTypes = Output.ofNullable(allowedProcMountTypes);
+            this.allowedProcMountTypes = Codegen.ofNullable(allowedProcMountTypes);
             return this;
         }
         public Builder allowedProcMountTypes(String... allowedProcMountTypes) {
@@ -510,7 +511,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
-            this.allowedUnsafeSysctls = Output.ofNullable(allowedUnsafeSysctls);
+            this.allowedUnsafeSysctls = Codegen.ofNullable(allowedUnsafeSysctls);
             return this;
         }
         public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
@@ -521,7 +522,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
-            this.defaultAddCapabilities = Output.ofNullable(defaultAddCapabilities);
+            this.defaultAddCapabilities = Codegen.ofNullable(defaultAddCapabilities);
             return this;
         }
         public Builder defaultAddCapabilities(String... defaultAddCapabilities) {
@@ -532,7 +533,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
-            this.defaultAllowPrivilegeEscalation = Output.ofNullable(defaultAllowPrivilegeEscalation);
+            this.defaultAllowPrivilegeEscalation = Codegen.ofNullable(defaultAllowPrivilegeEscalation);
             return this;
         }
         public Builder forbiddenSysctls(@Nullable Output<List<String>> forbiddenSysctls) {
@@ -540,7 +541,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder forbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
-            this.forbiddenSysctls = Output.ofNullable(forbiddenSysctls);
+            this.forbiddenSysctls = Codegen.ofNullable(forbiddenSysctls);
             return this;
         }
         public Builder forbiddenSysctls(String... forbiddenSysctls) {
@@ -559,7 +560,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder hostIPC(@Nullable Boolean hostIPC) {
-            this.hostIPC = Output.ofNullable(hostIPC);
+            this.hostIPC = Codegen.ofNullable(hostIPC);
             return this;
         }
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
@@ -567,7 +568,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder hostNetwork(@Nullable Boolean hostNetwork) {
-            this.hostNetwork = Output.ofNullable(hostNetwork);
+            this.hostNetwork = Codegen.ofNullable(hostNetwork);
             return this;
         }
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
@@ -575,7 +576,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder hostPID(@Nullable Boolean hostPID) {
-            this.hostPID = Output.ofNullable(hostPID);
+            this.hostPID = Codegen.ofNullable(hostPID);
             return this;
         }
         public Builder hostPorts(@Nullable Output<List<HostPortRangeArgs>> hostPorts) {
@@ -583,7 +584,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder hostPorts(@Nullable List<HostPortRangeArgs> hostPorts) {
-            this.hostPorts = Output.ofNullable(hostPorts);
+            this.hostPorts = Codegen.ofNullable(hostPorts);
             return this;
         }
         public Builder hostPorts(HostPortRangeArgs... hostPorts) {
@@ -594,7 +595,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Output.ofNullable(privileged);
+            this.privileged = Codegen.ofNullable(privileged);
             return this;
         }
         public Builder readOnlyRootFilesystem(@Nullable Output<Boolean> readOnlyRootFilesystem) {
@@ -602,7 +603,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
-            this.readOnlyRootFilesystem = Output.ofNullable(readOnlyRootFilesystem);
+            this.readOnlyRootFilesystem = Codegen.ofNullable(readOnlyRootFilesystem);
             return this;
         }
         public Builder requiredDropCapabilities(@Nullable Output<List<String>> requiredDropCapabilities) {
@@ -610,7 +611,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder requiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
-            this.requiredDropCapabilities = Output.ofNullable(requiredDropCapabilities);
+            this.requiredDropCapabilities = Codegen.ofNullable(requiredDropCapabilities);
             return this;
         }
         public Builder requiredDropCapabilities(String... requiredDropCapabilities) {
@@ -621,7 +622,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder runAsGroup(@Nullable RunAsGroupStrategyOptionsArgs runAsGroup) {
-            this.runAsGroup = Output.ofNullable(runAsGroup);
+            this.runAsGroup = Codegen.ofNullable(runAsGroup);
             return this;
         }
         public Builder runAsUser(Output<RunAsUserStrategyOptionsArgs> runAsUser) {
@@ -637,7 +638,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder runtimeClass(@Nullable RuntimeClassStrategyOptionsArgs runtimeClass) {
-            this.runtimeClass = Output.ofNullable(runtimeClass);
+            this.runtimeClass = Codegen.ofNullable(runtimeClass);
             return this;
         }
         public Builder seLinux(Output<SELinuxStrategyOptionsArgs> seLinux) {
@@ -661,7 +662,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder volumes(@Nullable List<String> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(String... volumes) {

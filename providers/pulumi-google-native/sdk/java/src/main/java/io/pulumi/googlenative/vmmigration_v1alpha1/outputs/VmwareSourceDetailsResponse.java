@@ -46,28 +46,28 @@ public final class VmwareSourceDetailsResponse {
      * Input only. The credentials password. This is write only and can not be read in a GET operation.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The thumbprint representing the certificate for the vcenter.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * The credentials username.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
     /**
      * The ip address of the vcenter this Source represents.
      * 
     */
-    public String getVcenterIp() {
+    public String vcenterIp() {
         return this.vcenterIp;
     }
 

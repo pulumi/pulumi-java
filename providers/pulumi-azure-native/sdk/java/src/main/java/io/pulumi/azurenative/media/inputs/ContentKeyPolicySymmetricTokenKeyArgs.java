@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
     @Import(name="keyValue", required=true)
       private final Output<String> keyValue;
 
-    public Output<String> getKeyValue() {
+    public Output<String> keyValue() {
         return this.keyValue;
     }
 
@@ -36,7 +37,7 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -48,8 +49,8 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
     }
 
     private ContentKeyPolicySymmetricTokenKeyArgs() {
-        this.keyValue = Output.empty();
-        this.odataType = Output.empty();
+        this.keyValue = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {

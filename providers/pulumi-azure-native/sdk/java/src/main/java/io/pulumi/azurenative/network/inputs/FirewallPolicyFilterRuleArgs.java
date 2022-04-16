@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.NatRuleConditionArgs;
 import io.pulumi.azurenative.network.inputs.NetworkRuleConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -32,8 +33,8 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
     @Import(name="action")
       private final @Nullable Output<FirewallPolicyFilterRuleActionArgs> action;
 
-    public Output<FirewallPolicyFilterRuleActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<FirewallPolicyFilterRuleActionArgs> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
     @Import(name="ruleConditions")
       private final @Nullable Output<List<Object>> ruleConditions;
 
-    public Output<List<Object>> getRuleConditions() {
-        return this.ruleConditions == null ? Output.empty() : this.ruleConditions;
+    public Output<List<Object>> ruleConditions() {
+        return this.ruleConditions == null ? Codegen.empty() : this.ruleConditions;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -95,11 +96,11 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
     }
 
     private FirewallPolicyFilterRuleArgs() {
-        this.action = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.ruleConditions = Output.empty();
-        this.ruleType = Output.empty();
+        this.action = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleConditions = Codegen.empty();
+        this.ruleType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder action(@Nullable FirewallPolicyFilterRuleActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -143,7 +144,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -151,7 +152,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder ruleConditions(@Nullable Output<List<Object>> ruleConditions) {
@@ -159,7 +160,7 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder ruleConditions(@Nullable List<Object> ruleConditions) {
-            this.ruleConditions = Output.ofNullable(ruleConditions);
+            this.ruleConditions = Codegen.ofNullable(ruleConditions);
             return this;
         }
         public Builder ruleConditions(Object... ruleConditions) {

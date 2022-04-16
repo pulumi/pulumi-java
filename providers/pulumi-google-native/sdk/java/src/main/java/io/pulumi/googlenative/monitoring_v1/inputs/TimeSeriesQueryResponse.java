@@ -25,7 +25,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
     @Import(name="timeSeriesFilter", required=true)
       private final TimeSeriesFilterResponse timeSeriesFilter;
 
-    public TimeSeriesFilterResponse getTimeSeriesFilter() {
+    public TimeSeriesFilterResponse timeSeriesFilter() {
         return this.timeSeriesFilter;
     }
 
@@ -36,7 +36,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
     @Import(name="timeSeriesFilterRatio", required=true)
       private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
 
-    public TimeSeriesFilterRatioResponse getTimeSeriesFilterRatio() {
+    public TimeSeriesFilterRatioResponse timeSeriesFilterRatio() {
         return this.timeSeriesFilterRatio;
     }
 
@@ -47,7 +47,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
     @Import(name="timeSeriesQueryLanguage", required=true)
       private final String timeSeriesQueryLanguage;
 
-    public String getTimeSeriesQueryLanguage() {
+    public String timeSeriesQueryLanguage() {
         return this.timeSeriesQueryLanguage;
     }
 
@@ -58,7 +58,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
     @Import(name="unitOverride", required=true)
       private final String unitOverride;
 
-    public String getUnitOverride() {
+    public String unitOverride() {
         return this.unitOverride;
     }
 

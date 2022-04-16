@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+    public Output<String> serviceAccountEmail() {
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
-    public Output<String> getSubscription() {
-        return this.subscription == null ? Output.empty() : this.subscription;
+    public Output<String> subscription() {
+        return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -73,10 +74,10 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private TriggerPubsubConfigArgs() {
-        this.serviceAccountEmail = Output.empty();
-        this.state = Output.empty();
-        this.subscription = Output.empty();
-        this.topic = Output.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.state = Codegen.empty();
+        this.subscription = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -118,7 +119,7 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder subscription(@Nullable Output<String> subscription) {
@@ -126,7 +127,7 @@ public final class TriggerPubsubConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder subscription(@Nullable String subscription) {
-            this.subscription = Output.ofNullable(subscription);
+            this.subscription = Codegen.ofNullable(subscription);
             return this;
         }
         public Builder topic(Output<String> topic) {

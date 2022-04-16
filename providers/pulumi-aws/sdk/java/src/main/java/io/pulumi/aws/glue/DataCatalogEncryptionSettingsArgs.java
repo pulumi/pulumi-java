@@ -6,6 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
     @Import(name="dataCatalogEncryptionSettings", required=true)
       private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
 
-    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> getDataCatalogEncryptionSettings() {
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings() {
         return this.dataCatalogEncryptionSettings;
     }
 
@@ -45,8 +46,8 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
     }
 
     private DataCatalogEncryptionSettingsArgs() {
-        this.catalogId = Output.empty();
-        this.dataCatalogEncryptionSettings = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.dataCatalogEncryptionSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder dataCatalogEncryptionSettings(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings) {

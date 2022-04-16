@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceSessionKeysAbpV10xArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +18,14 @@ public final class WirelessDeviceAbpV10xArgs extends io.pulumi.resources.Resourc
     @Import(name="devAddr", required=true)
       private final Output<String> devAddr;
 
-    public Output<String> getDevAddr() {
+    public Output<String> devAddr() {
         return this.devAddr;
     }
 
     @Import(name="sessionKeys", required=true)
       private final Output<WirelessDeviceSessionKeysAbpV10xArgs> sessionKeys;
 
-    public Output<WirelessDeviceSessionKeysAbpV10xArgs> getSessionKeys() {
+    public Output<WirelessDeviceSessionKeysAbpV10xArgs> sessionKeys() {
         return this.sessionKeys;
     }
 
@@ -36,8 +37,8 @@ public final class WirelessDeviceAbpV10xArgs extends io.pulumi.resources.Resourc
     }
 
     private WirelessDeviceAbpV10xArgs() {
-        this.devAddr = Output.empty();
-        this.sessionKeys = Output.empty();
+        this.devAddr = Codegen.empty();
+        this.sessionKeys = Codegen.empty();
     }
 
     public static Builder builder() {

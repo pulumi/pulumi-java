@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
     @Import(name="expireTime", required=true)
       private final String expireTime;
 
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

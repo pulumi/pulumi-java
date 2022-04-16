@@ -8,6 +8,7 @@ import io.pulumi.awsnative.glue.SchemaVersionMetadataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
      * @return Metadata key
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -42,7 +43,7 @@ public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
      * @return Represents the version ID associated with the schema version.
      * 
      */
-    public Output<String> getSchemaVersionId() {
+    public Output<String> schemaVersionId() {
         return this.schemaVersionId;
     }
     /**
@@ -56,7 +57,7 @@ public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
      * @return Metadata value
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -82,7 +83,7 @@ public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SchemaVersionMetadata(String name, SchemaVersionMetadataArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:glue:SchemaVersionMetadata", name, args == null ? SchemaVersionMetadataArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:glue:SchemaVersionMetadata", name, args == null ? SchemaVersionMetadataArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SchemaVersionMetadata(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

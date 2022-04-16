@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -33,8 +34,8 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
 
-    public Output<Boolean> getIsEncrypted() {
-        return this.isEncrypted == null ? Output.empty() : this.isEncrypted;
+    public Output<Boolean> isEncrypted() {
+        return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -66,7 +67,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,8 +78,8 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="variableName")
       private final @Nullable Output<String> variableName;
 
-    public Output<String> getVariableName() {
-        return this.variableName == null ? Output.empty() : this.variableName;
+    public Output<String> variableName() {
+        return this.variableName == null ? Codegen.empty() : this.variableName;
     }
 
     public VariableArgs(
@@ -110,13 +111,13 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VariableArgs() {
-        this.automationAccountName = Output.empty();
-        this.description = Output.empty();
-        this.isEncrypted = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.value = Output.empty();
-        this.variableName = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.isEncrypted = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.value = Codegen.empty();
+        this.variableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
@@ -172,7 +173,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Output.ofNullable(isEncrypted);
+            this.isEncrypted = Codegen.ofNullable(isEncrypted);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -196,7 +197,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder variableName(@Nullable Output<String> variableName) {
@@ -204,7 +205,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variableName(@Nullable String variableName) {
-            this.variableName = Output.ofNullable(variableName);
+            this.variableName = Codegen.ofNullable(variableName);
             return this;
         }        public VariableArgs build() {
             return new VariableArgs(automationAccountName, description, isEncrypted, name, resourceGroupName, value, variableName);

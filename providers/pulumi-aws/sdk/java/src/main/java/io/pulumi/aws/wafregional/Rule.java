@@ -10,6 +10,7 @@ import io.pulumi.aws.wafregional.outputs.RulePredicate;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -53,7 +54,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The ARN of the WAF Regional Rule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +68,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The name or description for the Amazon CloudWatch metric of this rule.
      * 
      */
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
     /**
@@ -81,7 +82,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The name or description of the rule.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +96,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The objects to include in a rule (documented below).
      * 
      */
-    public Output</* @Nullable */ List<RulePredicate>> getPredicates() {
+    public Output</* @Nullable */ List<RulePredicate>> predicates() {
         return this.predicates;
     }
     /**
@@ -109,7 +110,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -123,7 +124,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -149,7 +150,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Rule(String name, RuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/rule:Rule", name, args == null ? RuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafregional/rule:Rule", name, args == null ? RuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Rule(String name, Output<String> id, @Nullable RuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

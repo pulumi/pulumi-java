@@ -40,21 +40,21 @@ public final class MetricDimensionResponse {
      * Name of the dimension.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * the dimension operator. Only 'Include' and 'Exclude' are supported
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * list of dimension values.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

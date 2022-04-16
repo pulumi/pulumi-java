@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -59,7 +60,7 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
      * @return The location of the resource group to which the resource belongs.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,19 +74,19 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
      * @return The name of the ARM resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="options", type=CassandraViewGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ CassandraViewGetPropertiesResponseOptions> options;
 
-    public Output</* @Nullable */ CassandraViewGetPropertiesResponseOptions> getOptions() {
+    public Output</* @Nullable */ CassandraViewGetPropertiesResponseOptions> options() {
         return this.options;
     }
     @Export(name="resource", type=CassandraViewGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ CassandraViewGetPropertiesResponseResource> resource;
 
-    public Output</* @Nullable */ CassandraViewGetPropertiesResponseResource> getResource() {
+    public Output</* @Nullable */ CassandraViewGetPropertiesResponseResource> resource() {
         return this.resource;
     }
     /**
@@ -99,7 +100,7 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +114,7 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -139,7 +140,7 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public CassandraResourceCassandraView(String name, CassandraResourceCassandraViewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:CassandraResourceCassandraView", name, args == null ? CassandraResourceCassandraViewArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:documentdb:CassandraResourceCassandraView", name, args == null ? CassandraResourceCassandraViewArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CassandraResourceCassandraView(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

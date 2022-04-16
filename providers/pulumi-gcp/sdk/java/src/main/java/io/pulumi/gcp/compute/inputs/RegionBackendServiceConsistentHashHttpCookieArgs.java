@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceConsistentHashHttpCookieTtlArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
     @Import(name="ttl")
       private final @Nullable Output<RegionBackendServiceConsistentHashHttpCookieTtlArgs> ttl;
 
-    public Output<RegionBackendServiceConsistentHashHttpCookieTtlArgs> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<RegionBackendServiceConsistentHashHttpCookieTtlArgs> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public RegionBackendServiceConsistentHashHttpCookieArgs(
@@ -59,9 +60,9 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
     }
 
     private RegionBackendServiceConsistentHashHttpCookieArgs() {
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.ttl = Output.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -101,7 +102,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder ttl(@Nullable Output<RegionBackendServiceConsistentHashHttpCookieTtlArgs> ttl) {
@@ -109,7 +110,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieArgs extends io.p
             return this;
         }
         public Builder ttl(@Nullable RegionBackendServiceConsistentHashHttpCookieTtlArgs ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public RegionBackendServiceConsistentHashHttpCookieArgs build() {
             return new RegionBackendServiceConsistentHashHttpCookieArgs(name, path, ttl);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gameservices_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1.RealmArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +44,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return Human readable description of the realm.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return ETag of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +72,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this realm. Each label is a key-value pair.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -85,7 +86,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
     /**
@@ -113,7 +114,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return The last-modified time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -139,7 +140,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Realm(String name, RealmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gameservices/v1:Realm", name, args == null ? RealmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gameservices/v1:Realm", name, args == null ? RealmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Realm(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

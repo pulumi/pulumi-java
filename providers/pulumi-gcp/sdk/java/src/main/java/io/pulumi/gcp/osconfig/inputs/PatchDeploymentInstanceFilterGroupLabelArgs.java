@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends io.pulumi
     @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
 
@@ -30,7 +31,7 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends io.pulumi
     }
 
     private PatchDeploymentInstanceFilterGroupLabelArgs() {
-        this.labels = Output.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {

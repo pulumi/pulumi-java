@@ -10,6 +10,7 @@ import io.pulumi.aws.route53.outputs.ResolverEndpointIpAddress;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Route 53 Resolver endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +61,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).
      * 
      */
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
     /**
@@ -74,7 +75,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC that you want to create the resolver endpoint in.
      * 
      */
-    public Output<String> getHostVpcId() {
+    public Output<String> hostVpcId() {
         return this.hostVpcId;
     }
     /**
@@ -90,7 +91,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
      * 
      */
-    public Output<List<ResolverEndpointIpAddress>> getIpAddresses() {
+    public Output<List<ResolverEndpointIpAddress>> ipAddresses() {
         return this.ipAddresses;
     }
     /**
@@ -104,7 +105,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @return The friendly name of the Route 53 Resolver endpoint.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +119,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ID of one or more security groups that you want to use to control access to this VPC.
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -132,7 +133,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -146,7 +147,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -172,7 +173,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverEndpoint(String name, ResolverEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverEndpoint:ResolverEndpoint", name, args == null ? ResolverEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverEndpoint:ResolverEndpoint", name, args == null ? ResolverEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverEndpoint(String name, Output<String> id, @Nullable ResolverEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

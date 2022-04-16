@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public TransitGatewayConnectOptionsArgs(@Nullable Output<String> protocol) {
@@ -30,7 +31,7 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
     }
 
     private TransitGatewayConnectOptionsArgs() {
-        this.protocol = Output.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public TransitGatewayConnectOptionsArgs build() {
             return new TransitGatewayConnectOptionsArgs(protocol);

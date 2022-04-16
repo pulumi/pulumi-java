@@ -19,7 +19,7 @@ public final class GetVpcPeeringConnectionPeerCidrBlockSet extends io.pulumi.res
     @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
 

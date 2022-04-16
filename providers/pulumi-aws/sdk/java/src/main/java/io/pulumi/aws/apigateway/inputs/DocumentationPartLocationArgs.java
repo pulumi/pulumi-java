@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
     @Import(name="method")
       private final @Nullable Output<String> method;
 
-    public Output<String> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+    public Output<String> method() {
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
-        return this.statusCode == null ? Output.empty() : this.statusCode;
+    public Output<String> statusCode() {
+        return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -83,11 +84,11 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
     }
 
     private DocumentationPartLocationArgs() {
-        this.method = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.statusCode = Output.empty();
-        this.type = Output.empty();
+        this.method = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.statusCode = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder method(@Nullable String method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -131,7 +132,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -139,7 +140,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder statusCode(@Nullable Output<String> statusCode) {
@@ -147,7 +148,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Output.ofNullable(statusCode);
+            this.statusCode = Codegen.ofNullable(statusCode);
             return this;
         }
         public Builder type(Output<String> type) {

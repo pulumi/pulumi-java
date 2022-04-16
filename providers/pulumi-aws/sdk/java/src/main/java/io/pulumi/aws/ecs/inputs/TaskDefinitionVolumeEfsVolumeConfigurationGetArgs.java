@@ -6,6 +6,7 @@ package io.pulumi.aws.ecs.inputs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
     @Import(name="authorizationConfig")
       private final @Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig;
 
-    public Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs> getAuthorizationConfig() {
-        return this.authorizationConfig == null ? Output.empty() : this.authorizationConfig;
+    public Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig() {
+        return this.authorizationConfig == null ? Codegen.empty() : this.authorizationConfig;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
     @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -45,8 +46,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
     @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;
 
-    public Output<String> getRootDirectory() {
-        return this.rootDirectory == null ? Output.empty() : this.rootDirectory;
+    public Output<String> rootDirectory() {
+        return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
     @Import(name="transitEncryption")
       private final @Nullable Output<String> transitEncryption;
 
-    public Output<String> getTransitEncryption() {
-        return this.transitEncryption == null ? Output.empty() : this.transitEncryption;
+    public Output<String> transitEncryption() {
+        return this.transitEncryption == null ? Codegen.empty() : this.transitEncryption;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
     @Import(name="transitEncryptionPort")
       private final @Nullable Output<Integer> transitEncryptionPort;
 
-    public Output<Integer> getTransitEncryptionPort() {
-        return this.transitEncryptionPort == null ? Output.empty() : this.transitEncryptionPort;
+    public Output<Integer> transitEncryptionPort() {
+        return this.transitEncryptionPort == null ? Codegen.empty() : this.transitEncryptionPort;
     }
 
     public TaskDefinitionVolumeEfsVolumeConfigurationGetArgs(
@@ -85,11 +86,11 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
     }
 
     private TaskDefinitionVolumeEfsVolumeConfigurationGetArgs() {
-        this.authorizationConfig = Output.empty();
-        this.fileSystemId = Output.empty();
-        this.rootDirectory = Output.empty();
-        this.transitEncryption = Output.empty();
-        this.transitEncryptionPort = Output.empty();
+        this.authorizationConfig = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
+        this.rootDirectory = Codegen.empty();
+        this.transitEncryption = Codegen.empty();
+        this.transitEncryptionPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
             return this;
         }
         public Builder authorizationConfig(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs authorizationConfig) {
-            this.authorizationConfig = Output.ofNullable(authorizationConfig);
+            this.authorizationConfig = Codegen.ofNullable(authorizationConfig);
             return this;
         }
         public Builder fileSystemId(Output<String> fileSystemId) {
@@ -141,7 +142,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
             return this;
         }
         public Builder rootDirectory(@Nullable String rootDirectory) {
-            this.rootDirectory = Output.ofNullable(rootDirectory);
+            this.rootDirectory = Codegen.ofNullable(rootDirectory);
             return this;
         }
         public Builder transitEncryption(@Nullable Output<String> transitEncryption) {
@@ -149,7 +150,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
             return this;
         }
         public Builder transitEncryption(@Nullable String transitEncryption) {
-            this.transitEncryption = Output.ofNullable(transitEncryption);
+            this.transitEncryption = Codegen.ofNullable(transitEncryption);
             return this;
         }
         public Builder transitEncryptionPort(@Nullable Output<Integer> transitEncryptionPort) {
@@ -157,7 +158,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
             return this;
         }
         public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
-            this.transitEncryptionPort = Output.ofNullable(transitEncryptionPort);
+            this.transitEncryptionPort = Codegen.ofNullable(transitEncryptionPort);
             return this;
         }        public TaskDefinitionVolumeEfsVolumeConfigurationGetArgs build() {
             return new TaskDefinitionVolumeEfsVolumeConfigurationGetArgs(authorizationConfig, fileSystemId, rootDirectory, transitEncryption, transitEncryptionPort);

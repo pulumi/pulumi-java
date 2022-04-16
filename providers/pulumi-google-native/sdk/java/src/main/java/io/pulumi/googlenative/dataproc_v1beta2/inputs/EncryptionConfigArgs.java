@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="gcePdKmsKeyName")
       private final @Nullable Output<String> gcePdKmsKeyName;
 
-    public Output<String> getGcePdKmsKeyName() {
-        return this.gcePdKmsKeyName == null ? Output.empty() : this.gcePdKmsKeyName;
+    public Output<String> gcePdKmsKeyName() {
+        return this.gcePdKmsKeyName == null ? Codegen.empty() : this.gcePdKmsKeyName;
     }
 
     public EncryptionConfigArgs(@Nullable Output<String> gcePdKmsKeyName) {
@@ -34,7 +35,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncryptionConfigArgs() {
-        this.gcePdKmsKeyName = Output.empty();
+        this.gcePdKmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = Output.ofNullable(gcePdKmsKeyName);
+            this.gcePdKmsKeyName = Codegen.ofNullable(gcePdKmsKeyName);
             return this;
         }        public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(gcePdKmsKeyName);

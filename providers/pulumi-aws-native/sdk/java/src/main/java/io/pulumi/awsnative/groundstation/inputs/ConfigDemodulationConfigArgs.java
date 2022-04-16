@@ -5,6 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
     @Import(name="unvalidatedJSON")
       private final @Nullable Output<String> unvalidatedJSON;
 
-    public Output<String> getUnvalidatedJSON() {
-        return this.unvalidatedJSON == null ? Output.empty() : this.unvalidatedJSON;
+    public Output<String> unvalidatedJSON() {
+        return this.unvalidatedJSON == null ? Codegen.empty() : this.unvalidatedJSON;
     }
 
     public ConfigDemodulationConfigArgs(@Nullable Output<String> unvalidatedJSON) {
@@ -26,7 +27,7 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
     }
 
     private ConfigDemodulationConfigArgs() {
-        this.unvalidatedJSON = Output.empty();
+        this.unvalidatedJSON = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
-            this.unvalidatedJSON = Output.ofNullable(unvalidatedJSON);
+            this.unvalidatedJSON = Codegen.ofNullable(unvalidatedJSON);
             return this;
         }        public ConfigDemodulationConfigArgs build() {
             return new ConfigDemodulationConfigArgs(unvalidatedJSON);

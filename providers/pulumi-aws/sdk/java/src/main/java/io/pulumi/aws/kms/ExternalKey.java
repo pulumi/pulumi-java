@@ -9,6 +9,7 @@ import io.pulumi.aws.kms.inputs.ExternalKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the key.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the key becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck;
     }
     /**
@@ -70,7 +71,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Duration in days after which the key is deleted after destruction of the resource. Must be between `7` and `30` days. Defaults to `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> getDeletionWindowInDays() {
+    public Output</* @Nullable */ Integer> deletionWindowInDays() {
         return this.deletionWindowInDays;
     }
     /**
@@ -84,7 +85,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Description of the key.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -98,7 +99,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the key is enabled. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -112,7 +113,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Whether the key material expires. Empty when pending key material import, otherwise `KEY_MATERIAL_EXPIRES` or `KEY_MATERIAL_DOES_NOT_EXPIRE`.
      * 
      */
-    public Output<String> getExpirationModel() {
+    public Output<String> expirationModel() {
         return this.expirationModel;
     }
     /**
@@ -126,7 +127,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
      * 
      */
-    public Output</* @Nullable */ String> getKeyMaterialBase64() {
+    public Output</* @Nullable */ String> keyMaterialBase64() {
         return this.keyMaterialBase64;
     }
     /**
@@ -140,7 +141,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return The state of the CMK.
      * 
      */
-    public Output<String> getKeyState() {
+    public Output<String> keyState() {
         return this.keyState;
     }
     /**
@@ -154,7 +155,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return The cryptographic operations for which you can use the CMK.
      * 
      */
-    public Output<String> getKeyUsage() {
+    public Output<String> keyUsage() {
         return this.keyUsage;
     }
     /**
@@ -168,7 +169,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
      * 
      */
-    public Output<Boolean> getMultiRegion() {
+    public Output<Boolean> multiRegion() {
         return this.multiRegion;
     }
     /**
@@ -182,7 +183,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -196,7 +197,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return A key-value map of tags to assign to the key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -210,7 +211,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -224,7 +225,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @return Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    public Output</* @Nullable */ String> getValidTo() {
+    public Output</* @Nullable */ String> validTo() {
         return this.validTo;
     }
 
@@ -250,7 +251,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExternalKey(String name, @Nullable ExternalKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kms/externalKey:ExternalKey", name, args == null ? ExternalKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kms/externalKey:ExternalKey", name, args == null ? ExternalKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExternalKey(String name, Output<String> id, @Nullable ExternalKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

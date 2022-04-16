@@ -9,6 +9,7 @@ import io.pulumi.azurenative.media.inputs.JobInputHttpArgs;
 import io.pulumi.azurenative.media.inputs.JobInputSequenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
       private final @Nullable Output<List<Object>> inputs;
 
-    public Output<List<Object>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+    public Output<List<Object>> inputs() {
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -55,8 +56,8 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobInputsArgs() {
-        this.inputs = Output.empty();
-        this.odataType = Output.empty();
+        this.inputs = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(Object... inputs) {

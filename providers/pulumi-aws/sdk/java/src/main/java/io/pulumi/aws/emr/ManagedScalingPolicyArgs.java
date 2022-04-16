@@ -6,6 +6,7 @@ package io.pulumi.aws.emr;
 import io.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -33,7 +34,7 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="computeLimits", required=true)
       private final Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
 
-    public Output<List<ManagedScalingPolicyComputeLimitArgs>> getComputeLimits() {
+    public Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits() {
         return this.computeLimits;
     }
 
@@ -45,8 +46,8 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private ManagedScalingPolicyArgs() {
-        this.clusterId = Output.empty();
-        this.computeLimits = Output.empty();
+        this.clusterId = Codegen.empty();
+        this.computeLimits = Codegen.empty();
     }
 
     public static Builder builder() {

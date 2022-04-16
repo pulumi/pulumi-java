@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -32,8 +33,8 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainTopicName")
       private final @Nullable Output<String> domainTopicName;
 
-    public Output<String> getDomainTopicName() {
-        return this.domainTopicName == null ? Output.empty() : this.domainTopicName;
+    public Output<String> domainTopicName() {
+        return this.domainTopicName == null ? Codegen.empty() : this.domainTopicName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,9 +58,9 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainTopicArgs() {
-        this.domainName = Output.empty();
-        this.domainTopicName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.domainName = Codegen.empty();
+        this.domainTopicName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainTopicName(@Nullable String domainTopicName) {
-            this.domainTopicName = Output.ofNullable(domainTopicName);
+            this.domainTopicName = Codegen.ofNullable(domainTopicName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

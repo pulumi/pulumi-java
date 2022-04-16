@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
     @Import(name="configOverrides")
       private final @Nullable Output<Map<String,String>> configOverrides;
 
-    public Output<Map<String,String>> getConfigOverrides() {
-        return this.configOverrides == null ? Output.empty() : this.configOverrides;
+    public Output<Map<String,String>> configOverrides() {
+        return this.configOverrides == null ? Codegen.empty() : this.configOverrides;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
     @Import(name="kerberosConfig")
       private final @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
 
-    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> getKerberosConfig() {
-        return this.kerberosConfig == null ? Output.empty() : this.kerberosConfig;
+    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig() {
+        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -61,9 +62,9 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
     }
 
     private MetastoreServiceHiveMetastoreConfigArgs() {
-        this.configOverrides = Output.empty();
-        this.kerberosConfig = Output.empty();
-        this.version = Output.empty();
+        this.configOverrides = Codegen.empty();
+        this.kerberosConfig = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
-            this.configOverrides = Output.ofNullable(configOverrides);
+            this.configOverrides = Codegen.ofNullable(configOverrides);
             return this;
         }
         public Builder kerberosConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig) {
@@ -103,7 +104,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder kerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Output.ofNullable(kerberosConfig);
+            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
             return this;
         }
         public Builder version(Output<String> version) {

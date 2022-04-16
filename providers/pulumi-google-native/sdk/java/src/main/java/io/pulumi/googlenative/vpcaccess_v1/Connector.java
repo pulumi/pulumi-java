@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vpcaccess_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vpcaccess_v1.ConnectorArgs;
 import io.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
@@ -31,7 +32,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return List of projects using the connector.
      * 
      */
-    public Output<List<String>> getConnectedProjects() {
+    public Output<List<String>> connectedProjects() {
         return this.connectedProjects;
     }
     /**
@@ -45,7 +46,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
      * 
      */
-    public Output<String> getIpCidrRange() {
+    public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -59,7 +60,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Machine type of VM Instance underlying connector. Default is e2-micro
      * 
      */
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
     /**
@@ -73,7 +74,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Maximum value of instances in autoscaling group underlying the connector.
      * 
      */
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances;
     }
     /**
@@ -87,7 +88,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
      * 
      */
-    public Output<Integer> getMaxThroughput() {
+    public Output<Integer> maxThroughput() {
         return this.maxThroughput;
     }
     /**
@@ -101,7 +102,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Minimum value of instances in autoscaling group underlying the connector.
      * 
      */
-    public Output<Integer> getMinInstances() {
+    public Output<Integer> minInstances() {
         return this.minInstances;
     }
     /**
@@ -115,7 +116,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Minimum throughput of the connector in Mbps. Default and min is 200.
      * 
      */
-    public Output<Integer> getMinThroughput() {
+    public Output<Integer> minThroughput() {
         return this.minThroughput;
     }
     /**
@@ -129,7 +130,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +144,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Name of a VPC network.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -157,7 +158,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return State of the VPC access connector.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -171,7 +172,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The subnet in which to house the VPC Access Connector.
      * 
      */
-    public Output<SubnetResponse> getSubnet() {
+    public Output<SubnetResponse> subnet() {
         return this.subnet;
     }
 
@@ -197,7 +198,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connector(String name, ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vpcaccess/v1:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vpcaccess/v1:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

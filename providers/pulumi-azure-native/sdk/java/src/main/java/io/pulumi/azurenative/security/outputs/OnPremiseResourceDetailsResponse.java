@@ -54,7 +54,7 @@ public final class OnPremiseResourceDetailsResponse {
      * The name of the machine
      * 
     */
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
     /**
@@ -62,28 +62,28 @@ public final class OnPremiseResourceDetailsResponse {
      * Expected value is 'OnPremise'.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * The oms agent Id installed on the machine
      * 
     */
-    public String getSourceComputerId() {
+    public String sourceComputerId() {
         return this.sourceComputerId;
     }
     /**
      * The unique Id of the machine
      * 
     */
-    public String getVmuuid() {
+    public String vmuuid() {
         return this.vmuuid;
     }
     /**
      * Azure resource Id of the workspace the machine is attached to
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 

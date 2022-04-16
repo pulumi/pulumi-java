@@ -6,6 +6,7 @@ package io.pulumi.aws.gamelift.inputs;
 import io.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationServerProcessArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="gameSessionActivationTimeoutSeconds")
       private final @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
 
-    public Output<Integer> getGameSessionActivationTimeoutSeconds() {
-        return this.gameSessionActivationTimeoutSeconds == null ? Output.empty() : this.gameSessionActivationTimeoutSeconds;
+    public Output<Integer> gameSessionActivationTimeoutSeconds() {
+        return this.gameSessionActivationTimeoutSeconds == null ? Codegen.empty() : this.gameSessionActivationTimeoutSeconds;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="maxConcurrentGameSessionActivations")
       private final @Nullable Output<Integer> maxConcurrentGameSessionActivations;
 
-    public Output<Integer> getMaxConcurrentGameSessionActivations() {
-        return this.maxConcurrentGameSessionActivations == null ? Output.empty() : this.maxConcurrentGameSessionActivations;
+    public Output<Integer> maxConcurrentGameSessionActivations() {
+        return this.maxConcurrentGameSessionActivations == null ? Codegen.empty() : this.maxConcurrentGameSessionActivations;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="serverProcesses")
       private final @Nullable Output<List<FleetRuntimeConfigurationServerProcessArgs>> serverProcesses;
 
-    public Output<List<FleetRuntimeConfigurationServerProcessArgs>> getServerProcesses() {
-        return this.serverProcesses == null ? Output.empty() : this.serverProcesses;
+    public Output<List<FleetRuntimeConfigurationServerProcessArgs>> serverProcesses() {
+        return this.serverProcesses == null ? Codegen.empty() : this.serverProcesses;
     }
 
     public FleetRuntimeConfigurationArgs(
@@ -59,9 +60,9 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private FleetRuntimeConfigurationArgs() {
-        this.gameSessionActivationTimeoutSeconds = Output.empty();
-        this.maxConcurrentGameSessionActivations = Output.empty();
-        this.serverProcesses = Output.empty();
+        this.gameSessionActivationTimeoutSeconds = Codegen.empty();
+        this.maxConcurrentGameSessionActivations = Codegen.empty();
+        this.serverProcesses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
-            this.gameSessionActivationTimeoutSeconds = Output.ofNullable(gameSessionActivationTimeoutSeconds);
+            this.gameSessionActivationTimeoutSeconds = Codegen.ofNullable(gameSessionActivationTimeoutSeconds);
             return this;
         }
         public Builder maxConcurrentGameSessionActivations(@Nullable Output<Integer> maxConcurrentGameSessionActivations) {
@@ -101,7 +102,7 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
-            this.maxConcurrentGameSessionActivations = Output.ofNullable(maxConcurrentGameSessionActivations);
+            this.maxConcurrentGameSessionActivations = Codegen.ofNullable(maxConcurrentGameSessionActivations);
             return this;
         }
         public Builder serverProcesses(@Nullable Output<List<FleetRuntimeConfigurationServerProcessArgs>> serverProcesses) {
@@ -109,7 +110,7 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder serverProcesses(@Nullable List<FleetRuntimeConfigurationServerProcessArgs> serverProcesses) {
-            this.serverProcesses = Output.ofNullable(serverProcesses);
+            this.serverProcesses = Codegen.ofNullable(serverProcesses);
             return this;
         }
         public Builder serverProcesses(FleetRuntimeConfigurationServerProcessArgs... serverProcesses) {

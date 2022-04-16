@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionStatesItem;
 import io.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionsItem;
 import java.lang.Boolean;
@@ -28,8 +29,8 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableOnpremGcsTransferLogs")
       private final @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
 
-    public Output<Boolean> getEnableOnpremGcsTransferLogs() {
-        return this.enableOnpremGcsTransferLogs == null ? Output.empty() : this.enableOnpremGcsTransferLogs;
+    public Output<Boolean> enableOnpremGcsTransferLogs() {
+        return this.enableOnpremGcsTransferLogs == null ? Codegen.empty() : this.enableOnpremGcsTransferLogs;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logActionStates")
       private final @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
 
-    public Output<List<LoggingConfigLogActionStatesItem>> getLogActionStates() {
-        return this.logActionStates == null ? Output.empty() : this.logActionStates;
+    public Output<List<LoggingConfigLogActionStatesItem>> logActionStates() {
+        return this.logActionStates == null ? Codegen.empty() : this.logActionStates;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logActions")
       private final @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
 
-    public Output<List<LoggingConfigLogActionsItem>> getLogActions() {
-        return this.logActions == null ? Output.empty() : this.logActions;
+    public Output<List<LoggingConfigLogActionsItem>> logActions() {
+        return this.logActions == null ? Codegen.empty() : this.logActions;
     }
 
     public LoggingConfigArgs(
@@ -64,9 +65,9 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggingConfigArgs() {
-        this.enableOnpremGcsTransferLogs = Output.empty();
-        this.logActionStates = Output.empty();
-        this.logActions = Output.empty();
+        this.enableOnpremGcsTransferLogs = Codegen.empty();
+        this.logActionStates = Codegen.empty();
+        this.logActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableOnpremGcsTransferLogs(@Nullable Boolean enableOnpremGcsTransferLogs) {
-            this.enableOnpremGcsTransferLogs = Output.ofNullable(enableOnpremGcsTransferLogs);
+            this.enableOnpremGcsTransferLogs = Codegen.ofNullable(enableOnpremGcsTransferLogs);
             return this;
         }
         public Builder logActionStates(@Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates) {
@@ -106,7 +107,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logActionStates(@Nullable List<LoggingConfigLogActionStatesItem> logActionStates) {
-            this.logActionStates = Output.ofNullable(logActionStates);
+            this.logActionStates = Codegen.ofNullable(logActionStates);
             return this;
         }
         public Builder logActionStates(LoggingConfigLogActionStatesItem... logActionStates) {
@@ -117,7 +118,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logActions(@Nullable List<LoggingConfigLogActionsItem> logActions) {
-            this.logActions = Output.ofNullable(logActions);
+            this.logActions = Codegen.ofNullable(logActions);
             return this;
         }
         public Builder logActions(LoggingConfigLogActionsItem... logActions) {

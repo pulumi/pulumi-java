@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+    public Output<String> address() {
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressType")
       private final @Nullable Output<String> addressType;
 
-    public Output<String> getAddressType() {
-        return this.addressType == null ? Output.empty() : this.addressType;
+    public Output<String> addressType() {
+        return this.addressType == null ? Codegen.empty() : this.addressType;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipVersion")
       private final @Nullable Output<String> ipVersion;
 
-    public Output<String> getIpVersion() {
-        return this.ipVersion == null ? Output.empty() : this.ipVersion;
+    public Output<String> ipVersion() {
+        return this.ipVersion == null ? Codegen.empty() : this.ipVersion;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
-    public Output<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
+    public Output<String> labelFingerprint() {
+        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
 
-    public Output<Integer> getPrefixLength() {
-        return this.prefixLength == null ? Output.empty() : this.prefixLength;
+    public Output<Integer> prefixLength() {
+        return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
-    public Output<String> getPurpose() {
-        return this.purpose == null ? Output.empty() : this.purpose;
+    public Output<String> purpose() {
+        return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public GlobalAddressState(
@@ -211,19 +212,19 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalAddressState() {
-        this.address = Output.empty();
-        this.addressType = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.ipVersion = Output.empty();
-        this.labelFingerprint = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.prefixLength = Output.empty();
-        this.project = Output.empty();
-        this.purpose = Output.empty();
-        this.selfLink = Output.empty();
+        this.address = Codegen.empty();
+        this.addressType = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ipVersion = Codegen.empty();
+        this.labelFingerprint = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.prefixLength = Codegen.empty();
+        this.project = Codegen.empty();
+        this.purpose = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -275,7 +276,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder addressType(@Nullable Output<String> addressType) {
@@ -283,7 +284,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressType(@Nullable String addressType) {
-            this.addressType = Output.ofNullable(addressType);
+            this.addressType = Codegen.ofNullable(addressType);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -291,7 +292,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -299,7 +300,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipVersion(@Nullable Output<String> ipVersion) {
@@ -307,7 +308,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipVersion(@Nullable String ipVersion) {
-            this.ipVersion = Output.ofNullable(ipVersion);
+            this.ipVersion = Codegen.ofNullable(ipVersion);
             return this;
         }
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
@@ -315,7 +316,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Output.ofNullable(labelFingerprint);
+            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -323,7 +324,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -331,7 +332,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -339,7 +340,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
@@ -347,7 +348,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefixLength(@Nullable Integer prefixLength) {
-            this.prefixLength = Output.ofNullable(prefixLength);
+            this.prefixLength = Codegen.ofNullable(prefixLength);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -355,7 +356,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder purpose(@Nullable Output<String> purpose) {
@@ -363,7 +364,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Output.ofNullable(purpose);
+            this.purpose = Codegen.ofNullable(purpose);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -371,7 +372,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public GlobalAddressState build() {
             return new GlobalAddressState(address, addressType, creationTimestamp, description, ipVersion, labelFingerprint, labels, name, network, prefixLength, project, purpose, selfLink);

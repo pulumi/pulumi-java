@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.IndividualOutcomeOutcomeSummary;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.lang.Integer;
@@ -28,15 +29,15 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="multistepNumber")
       private final @Nullable Output<Integer> multistepNumber;
 
-    public Output<Integer> getMultistepNumber() {
-        return this.multistepNumber == null ? Output.empty() : this.multistepNumber;
+    public Output<Integer> multistepNumber() {
+        return this.multistepNumber == null ? Codegen.empty() : this.multistepNumber;
     }
 
     @Import(name="outcomeSummary")
       private final @Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary;
 
-    public Output<IndividualOutcomeOutcomeSummary> getOutcomeSummary() {
-        return this.outcomeSummary == null ? Output.empty() : this.outcomeSummary;
+    public Output<IndividualOutcomeOutcomeSummary> outcomeSummary() {
+        return this.outcomeSummary == null ? Codegen.empty() : this.outcomeSummary;
     }
 
     /**
@@ -46,15 +47,15 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="runDuration")
       private final @Nullable Output<DurationArgs> runDuration;
 
-    public Output<DurationArgs> getRunDuration() {
-        return this.runDuration == null ? Output.empty() : this.runDuration;
+    public Output<DurationArgs> runDuration() {
+        return this.runDuration == null ? Codegen.empty() : this.runDuration;
     }
 
     @Import(name="stepId")
       private final @Nullable Output<String> stepId;
 
-    public Output<String> getStepId() {
-        return this.stepId == null ? Output.empty() : this.stepId;
+    public Output<String> stepId() {
+        return this.stepId == null ? Codegen.empty() : this.stepId;
     }
 
     public IndividualOutcomeArgs(
@@ -69,10 +70,10 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IndividualOutcomeArgs() {
-        this.multistepNumber = Output.empty();
-        this.outcomeSummary = Output.empty();
-        this.runDuration = Output.empty();
-        this.stepId = Output.empty();
+        this.multistepNumber = Codegen.empty();
+        this.outcomeSummary = Codegen.empty();
+        this.runDuration = Codegen.empty();
+        this.stepId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder multistepNumber(@Nullable Integer multistepNumber) {
-            this.multistepNumber = Output.ofNullable(multistepNumber);
+            this.multistepNumber = Codegen.ofNullable(multistepNumber);
             return this;
         }
         public Builder outcomeSummary(@Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary) {
@@ -114,7 +115,7 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder outcomeSummary(@Nullable IndividualOutcomeOutcomeSummary outcomeSummary) {
-            this.outcomeSummary = Output.ofNullable(outcomeSummary);
+            this.outcomeSummary = Codegen.ofNullable(outcomeSummary);
             return this;
         }
         public Builder runDuration(@Nullable Output<DurationArgs> runDuration) {
@@ -122,7 +123,7 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder runDuration(@Nullable DurationArgs runDuration) {
-            this.runDuration = Output.ofNullable(runDuration);
+            this.runDuration = Codegen.ofNullable(runDuration);
             return this;
         }
         public Builder stepId(@Nullable Output<String> stepId) {
@@ -130,7 +131,7 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder stepId(@Nullable String stepId) {
-            this.stepId = Output.ofNullable(stepId);
+            this.stepId = Codegen.ofNullable(stepId);
             return this;
         }        public IndividualOutcomeArgs build() {
             return new IndividualOutcomeArgs(multistepNumber, outcomeSummary, runDuration, stepId);

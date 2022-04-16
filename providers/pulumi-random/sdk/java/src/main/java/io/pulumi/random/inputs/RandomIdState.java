@@ -5,6 +5,7 @@ package io.pulumi.random.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="b64Std")
       private final @Nullable Output<String> b64Std;
 
-    public Output<String> getB64Std() {
-        return this.b64Std == null ? Output.empty() : this.b64Std;
+    public Output<String> b64Std() {
+        return this.b64Std == null ? Codegen.empty() : this.b64Std;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="b64Url")
       private final @Nullable Output<String> b64Url;
 
-    public Output<String> getB64Url() {
-        return this.b64Url == null ? Output.empty() : this.b64Url;
+    public Output<String> b64Url() {
+        return this.b64Url == null ? Codegen.empty() : this.b64Url;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="byteLength")
       private final @Nullable Output<Integer> byteLength;
 
-    public Output<Integer> getByteLength() {
-        return this.byteLength == null ? Output.empty() : this.byteLength;
+    public Output<Integer> byteLength() {
+        return this.byteLength == null ? Codegen.empty() : this.byteLength;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dec")
       private final @Nullable Output<String> dec;
 
-    public Output<String> getDec() {
-        return this.dec == null ? Output.empty() : this.dec;
+    public Output<String> dec() {
+        return this.dec == null ? Codegen.empty() : this.dec;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hex")
       private final @Nullable Output<String> hex;
 
-    public Output<String> getHex() {
-        return this.hex == null ? Output.empty() : this.hex;
+    public Output<String> hex() {
+        return this.hex == null ? Codegen.empty() : this.hex;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+    public Output<Map<String,Object>> keepers() {
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public RandomIdState(
@@ -112,13 +113,13 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomIdState() {
-        this.b64Std = Output.empty();
-        this.b64Url = Output.empty();
-        this.byteLength = Output.empty();
-        this.dec = Output.empty();
-        this.hex = Output.empty();
-        this.keepers = Output.empty();
-        this.prefix = Output.empty();
+        this.b64Std = Codegen.empty();
+        this.b64Url = Codegen.empty();
+        this.byteLength = Codegen.empty();
+        this.dec = Codegen.empty();
+        this.hex = Codegen.empty();
+        this.keepers = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder b64Std(@Nullable String b64Std) {
-            this.b64Std = Output.ofNullable(b64Std);
+            this.b64Std = Codegen.ofNullable(b64Std);
             return this;
         }
         public Builder b64Url(@Nullable Output<String> b64Url) {
@@ -166,7 +167,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder b64Url(@Nullable String b64Url) {
-            this.b64Url = Output.ofNullable(b64Url);
+            this.b64Url = Codegen.ofNullable(b64Url);
             return this;
         }
         public Builder byteLength(@Nullable Output<Integer> byteLength) {
@@ -174,7 +175,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder byteLength(@Nullable Integer byteLength) {
-            this.byteLength = Output.ofNullable(byteLength);
+            this.byteLength = Codegen.ofNullable(byteLength);
             return this;
         }
         public Builder dec(@Nullable Output<String> dec) {
@@ -182,7 +183,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dec(@Nullable String dec) {
-            this.dec = Output.ofNullable(dec);
+            this.dec = Codegen.ofNullable(dec);
             return this;
         }
         public Builder hex(@Nullable Output<String> hex) {
@@ -190,7 +191,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hex(@Nullable String hex) {
-            this.hex = Output.ofNullable(hex);
+            this.hex = Codegen.ofNullable(hex);
             return this;
         }
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
@@ -198,7 +199,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -206,7 +207,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public RandomIdState build() {
             return new RandomIdState(b64Std, b64Url, byteLength, dec, hex, keepers, prefix);

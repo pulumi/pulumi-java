@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.PgpSignedAttestationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pgpSignedAttestation")
       private final @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
-    public Output<PgpSignedAttestationArgs> getPgpSignedAttestation() {
-        return this.pgpSignedAttestation == null ? Output.empty() : this.pgpSignedAttestation;
+    public Output<PgpSignedAttestationArgs> pgpSignedAttestation() {
+        return this.pgpSignedAttestation == null ? Codegen.empty() : this.pgpSignedAttestation;
     }
 
     public AttestationArgs(@Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation) {
@@ -30,7 +31,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttestationArgs() {
-        this.pgpSignedAttestation = Output.empty();
+        this.pgpSignedAttestation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pgpSignedAttestation(@Nullable PgpSignedAttestationArgs pgpSignedAttestation) {
-            this.pgpSignedAttestation = Output.ofNullable(pgpSignedAttestation);
+            this.pgpSignedAttestation = Codegen.ofNullable(pgpSignedAttestation);
             return this;
         }        public AttestationArgs build() {
             return new AttestationArgs(pgpSignedAttestation);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.SqlStoredProcedureResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +36,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -46,7 +47,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -57,8 +58,8 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Output<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<CreateUpdateOptionsArgs> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="resource", required=true)
       private final Output<SqlStoredProcedureResourceArgs> resource;
 
-    public Output<SqlStoredProcedureResourceArgs> getResource() {
+    public Output<SqlStoredProcedureResourceArgs> resource() {
         return this.resource;
     }
 
@@ -90,7 +91,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,8 +102,8 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="storedProcedureName")
       private final @Nullable Output<String> storedProcedureName;
 
-    public Output<String> getStoredProcedureName() {
-        return this.storedProcedureName == null ? Output.empty() : this.storedProcedureName;
+    public Output<String> storedProcedureName() {
+        return this.storedProcedureName == null ? Codegen.empty() : this.storedProcedureName;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SqlResourceSqlStoredProcedureArgs(
@@ -138,15 +139,15 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
     }
 
     private SqlResourceSqlStoredProcedureArgs() {
-        this.accountName = Output.empty();
-        this.containerName = Output.empty();
-        this.databaseName = Output.empty();
-        this.location = Output.empty();
-        this.options = Output.empty();
-        this.resource = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storedProcedureName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.options = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storedProcedureName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -214,7 +215,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
@@ -222,7 +223,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
             return this;
         }
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder resource(Output<SqlStoredProcedureResourceArgs> resource) {
@@ -246,7 +247,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
             return this;
         }
         public Builder storedProcedureName(@Nullable String storedProcedureName) {
-            this.storedProcedureName = Output.ofNullable(storedProcedureName);
+            this.storedProcedureName = Codegen.ofNullable(storedProcedureName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -254,7 +255,7 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SqlResourceSqlStoredProcedureArgs build() {
             return new SqlResourceSqlStoredProcedureArgs(accountName, containerName, databaseName, location, options, resource, resourceGroupName, storedProcedureName, tags);

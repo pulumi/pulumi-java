@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingResourceMetricArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -39,7 +40,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     @Import(name="lowerLoadThreshold", required=true)
       private final Output<Double> lowerLoadThreshold;
 
-    public Output<Double> getLowerLoadThreshold() {
+    public Output<Double> lowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
 
@@ -50,7 +51,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     @Import(name="metric", required=true)
       private final Output<AutoScalingResourceMetricArgs> metric;
 
-    public Output<AutoScalingResourceMetricArgs> getMetric() {
+    public Output<AutoScalingResourceMetricArgs> metric() {
         return this.metric;
     }
 
@@ -61,7 +62,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     @Import(name="scaleIntervalInSeconds", required=true)
       private final Output<Integer> scaleIntervalInSeconds;
 
-    public Output<Integer> getScaleIntervalInSeconds() {
+    public Output<Integer> scaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
 
@@ -72,7 +73,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     @Import(name="upperLoadThreshold", required=true)
       private final Output<Double> upperLoadThreshold;
 
-    public Output<Double> getUpperLoadThreshold() {
+    public Output<Double> upperLoadThreshold() {
         return this.upperLoadThreshold;
     }
 
@@ -90,11 +91,11 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     }
 
     private AverageLoadScalingTriggerArgs() {
-        this.kind = Output.empty();
-        this.lowerLoadThreshold = Output.empty();
-        this.metric = Output.empty();
-        this.scaleIntervalInSeconds = Output.empty();
-        this.upperLoadThreshold = Output.empty();
+        this.kind = Codegen.empty();
+        this.lowerLoadThreshold = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.scaleIntervalInSeconds = Codegen.empty();
+        this.upperLoadThreshold = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
     @Import(name="sizeGib")
       private final @Nullable Output<Integer> sizeGib;
 
-    public Output<Integer> getSizeGib() {
-        return this.sizeGib == null ? Output.empty() : this.sizeGib;
+    public Output<Integer> sizeGib() {
+        return this.sizeGib == null ? Codegen.empty() : this.sizeGib;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+    public Output<String> volumeType() {
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public AwsClusterControlPlaneRootVolumeArgs(
@@ -71,10 +72,10 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
     }
 
     private AwsClusterControlPlaneRootVolumeArgs() {
-        this.iops = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.sizeGib = Output.empty();
-        this.volumeType = Output.empty();
+        this.iops = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.sizeGib = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -116,7 +117,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder sizeGib(@Nullable Output<Integer> sizeGib) {
@@ -124,7 +125,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
             return this;
         }
         public Builder sizeGib(@Nullable Integer sizeGib) {
-            this.sizeGib = Output.ofNullable(sizeGib);
+            this.sizeGib = Codegen.ofNullable(sizeGib);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -132,7 +133,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public AwsClusterControlPlaneRootVolumeArgs build() {
             return new AwsClusterControlPlaneRootVolumeArgs(iops, kmsKeyArn, sizeGib, volumeType);

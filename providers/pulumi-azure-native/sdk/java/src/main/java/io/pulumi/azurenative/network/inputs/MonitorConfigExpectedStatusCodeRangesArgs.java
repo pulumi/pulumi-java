@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
     @Import(name="max")
       private final @Nullable Output<Integer> max;
 
-    public Output<Integer> getMax() {
-        return this.max == null ? Output.empty() : this.max;
+    public Output<Integer> max() {
+        return this.max == null ? Codegen.empty() : this.max;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
     @Import(name="min")
       private final @Nullable Output<Integer> min;
 
-    public Output<Integer> getMin() {
-        return this.min == null ? Output.empty() : this.min;
+    public Output<Integer> min() {
+        return this.min == null ? Codegen.empty() : this.min;
     }
 
     public MonitorConfigExpectedStatusCodeRangesArgs(
@@ -48,8 +49,8 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
     }
 
     private MonitorConfigExpectedStatusCodeRangesArgs() {
-        this.max = Output.empty();
-        this.min = Output.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
             return this;
         }
         public Builder max(@Nullable Integer max) {
-            this.max = Output.ofNullable(max);
+            this.max = Codegen.ofNullable(max);
             return this;
         }
         public Builder min(@Nullable Output<Integer> min) {
@@ -87,7 +88,7 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
             return this;
         }
         public Builder min(@Nullable Integer min) {
-            this.min = Output.ofNullable(min);
+            this.min = Codegen.ofNullable(min);
             return this;
         }        public MonitorConfigExpectedStatusCodeRangesArgs build() {
             return new MonitorConfigExpectedStatusCodeRangesArgs(max, min);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="recommendationAction")
       private final @Nullable Output<String> recommendationAction;
 
-    public Output<String> getRecommendationAction() {
-        return this.recommendationAction == null ? Output.empty() : this.recommendationAction;
+    public Output<String> recommendationAction() {
+        return this.recommendationAction == null ? Codegen.empty() : this.recommendationAction;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public UserRecommendationArgs(
@@ -48,8 +49,8 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private UserRecommendationArgs() {
-        this.recommendationAction = Output.empty();
-        this.username = Output.empty();
+        this.recommendationAction = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder recommendationAction(@Nullable String recommendationAction) {
-            this.recommendationAction = Output.ofNullable(recommendationAction);
+            this.recommendationAction = Codegen.ofNullable(recommendationAction);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -87,7 +88,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public UserRecommendationArgs build() {
             return new UserRecommendationArgs(recommendationAction, username);

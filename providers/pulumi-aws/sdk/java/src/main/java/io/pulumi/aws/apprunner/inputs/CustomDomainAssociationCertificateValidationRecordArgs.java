@@ -5,6 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public CustomDomainAssociationCertificateValidationRecordArgs(
@@ -70,10 +71,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     }
 
     private CustomDomainAssociationCertificateValidationRecordArgs() {
-        this.name = Output.empty();
-        this.status = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -115,7 +116,7 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -123,7 +124,7 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -131,7 +132,7 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public CustomDomainAssociationCertificateValidationRecordArgs build() {
             return new CustomDomainAssociationCertificateValidationRecordArgs(name, status, type, value);

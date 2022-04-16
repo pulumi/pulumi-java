@@ -9,6 +9,7 @@ import io.pulumi.aws.rds.inputs.ClusterEndpointState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of cluster
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
      * 
      */
-    public Output<String> getClusterEndpointIdentifier() {
+    public Output<String> clusterEndpointIdentifier() {
         return this.clusterEndpointIdentifier;
     }
     /**
@@ -72,7 +73,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return The cluster identifier.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -86,7 +87,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return The type of the endpoint. One of: READER , ANY .
      * 
      */
-    public Output<String> getCustomEndpointType() {
+    public Output<String> customEndpointType() {
         return this.customEndpointType;
     }
     /**
@@ -100,7 +101,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return A custom endpoint for the Aurora cluster
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -114,7 +115,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getExcludedMembers() {
+    public Output</* @Nullable */ List<String>> excludedMembers() {
         return this.excludedMembers;
     }
     /**
@@ -128,7 +129,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getStaticMembers() {
+    public Output</* @Nullable */ List<String>> staticMembers() {
         return this.staticMembers;
     }
     /**
@@ -142,7 +143,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -182,7 +183,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterEndpoint(String name, ClusterEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/clusterEndpoint:ClusterEndpoint", name, args == null ? ClusterEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/clusterEndpoint:ClusterEndpoint", name, args == null ? ClusterEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterEndpoint(String name, Output<String> id, @Nullable ClusterEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTypeEnum;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,42 +22,42 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="ruleGroup")
       private final @Nullable Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
 
-    public Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> getRuleGroup() {
-        return this.ruleGroup == null ? Output.empty() : this.ruleGroup;
+    public Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup() {
+        return this.ruleGroup == null ? Codegen.empty() : this.ruleGroup;
     }
 
     @Import(name="ruleGroupName")
       private final @Nullable Output<String> ruleGroupName;
 
-    public Output<String> getRuleGroupName() {
-        return this.ruleGroupName == null ? Output.empty() : this.ruleGroupName;
+    public Output<String> ruleGroupName() {
+        return this.ruleGroupName == null ? Codegen.empty() : this.ruleGroupName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<RuleGroupTagArgs>> tags;
 
-    public Output<List<RuleGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<RuleGroupTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="type", required=true)
       private final Output<RuleGroupTypeEnum> type;
 
-    public Output<RuleGroupTypeEnum> getType() {
+    public Output<RuleGroupTypeEnum> type() {
         return this.type;
     }
 
@@ -76,12 +77,12 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleGroupArgs() {
-        this.capacity = Output.empty();
-        this.description = Output.empty();
-        this.ruleGroup = Output.empty();
-        this.ruleGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.capacity = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ruleGroup = Codegen.empty();
+        this.ruleGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ruleGroup(@Nullable Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup) {
@@ -135,7 +136,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleGroup(@Nullable io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs ruleGroup) {
-            this.ruleGroup = Output.ofNullable(ruleGroup);
+            this.ruleGroup = Codegen.ofNullable(ruleGroup);
             return this;
         }
         public Builder ruleGroupName(@Nullable Output<String> ruleGroupName) {
@@ -143,7 +144,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleGroupName(@Nullable String ruleGroupName) {
-            this.ruleGroupName = Output.ofNullable(ruleGroupName);
+            this.ruleGroupName = Codegen.ofNullable(ruleGroupName);
             return this;
         }
         public Builder tags(@Nullable Output<List<RuleGroupTagArgs>> tags) {
@@ -151,7 +152,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<RuleGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RuleGroupTagArgs... tags) {

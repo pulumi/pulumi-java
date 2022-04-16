@@ -6,6 +6,7 @@ package io.pulumi.aws.macie2.inputs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
     @Import(name="ands")
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands;
 
-    public Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> getAnds() {
-        return this.ands == null ? Output.empty() : this.ands;
+    public Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands() {
+        return this.ands == null ? Codegen.empty() : this.ands;
     }
 
     public ClassificationJobS3JobDefinitionScopingExcludesArgs(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands) {
@@ -31,7 +32,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
     }
 
     private ClassificationJobS3JobDefinitionScopingExcludesArgs() {
-        this.ands = Output.empty();
+        this.ands = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
             return this;
         }
         public Builder ands(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs> ands) {
-            this.ands = Output.ofNullable(ands);
+            this.ands = Codegen.ofNullable(ands);
             return this;
         }
         public Builder ands(ClassificationJobS3JobDefinitionScopingExcludesAndArgs... ands) {

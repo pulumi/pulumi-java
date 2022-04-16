@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bandwidth", required=true)
       private final Output<String> bandwidth;
 
-    public Output<String> getBandwidth() {
+    public Output<String> bandwidth() {
         return this.bandwidth;
     }
 
@@ -33,7 +34,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -44,8 +45,8 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ownerAccountId", required=true)
       private final Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
 
@@ -66,7 +67,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 
@@ -84,11 +85,11 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HostedConnectionArgs() {
-        this.bandwidth = Output.empty();
-        this.connectionId = Output.empty();
-        this.name = Output.empty();
-        this.ownerAccountId = Output.empty();
-        this.vlan = Output.empty();
+        this.bandwidth = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerAccountId = Codegen.empty();
+        this.vlan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerAccountId(Output<String> ownerAccountId) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudsupport_v2beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsupport_v2beta.CaseArgs;
 import io.pulumi.googlenative.cloudsupport_v2beta.outputs.ActorResponse;
@@ -34,7 +35,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The issue classification applicable to this case.
      * 
      */
-    public Output<CaseClassificationResponse> getClassification() {
+    public Output<CaseClassificationResponse> classification() {
         return this.classification;
     }
     /**
@@ -48,7 +49,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The time this case was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -62,7 +63,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
      * 
      */
-    public Output<ActorResponse> getCreator() {
+    public Output<ActorResponse> creator() {
         return this.creator;
     }
     /**
@@ -76,7 +77,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return A broad description of the issue.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -90,7 +91,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The short summary of the issue reported in this case.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -104,7 +105,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return Whether the case is currently escalated.
      * 
      */
-    public Output<Boolean> getEscalated() {
+    public Output<Boolean> escalated() {
         return this.escalated;
     }
     /**
@@ -118,7 +119,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The resource name for the case.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +133,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The priority of this case. If this is set, do not set severity.
      * 
      */
-    public Output<String> getPriority() {
+    public Output<String> priority() {
         return this.priority;
     }
     /**
@@ -146,7 +147,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The current status of the support case.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -160,7 +161,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The email addresses to receive updates on this case.
      * 
      */
-    public Output<List<String>> getSubscriberEmailAddresses() {
+    public Output<List<String>> subscriberEmailAddresses() {
         return this.subscriberEmailAddresses;
     }
     /**
@@ -174,7 +175,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return Whether this case was created for internal API testing and should not be acted on by the support team.
      * 
      */
-    public Output<Boolean> getTestCase() {
+    public Output<Boolean> testCase() {
         return this.testCase;
     }
     /**
@@ -188,7 +189,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
     /**
@@ -202,7 +203,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @return The time this case was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -228,7 +229,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Case(String name, CaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudsupport/v2beta:Case", name, args == null ? CaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudsupport/v2beta:Case", name, args == null ? CaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Case(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

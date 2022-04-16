@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn == null ? Output.empty() : this.cloudwatchLogGroupArn;
+    public Output<String> cloudwatchLogGroupArn() {
+        return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
-    public Output<String> getZoneId() {
-        return this.zoneId == null ? Output.empty() : this.zoneId;
+    public Output<String> zoneId() {
+        return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 
     public QueryLogState(
@@ -57,9 +58,9 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryLogState() {
-        this.arn = Output.empty();
-        this.cloudwatchLogGroupArn = Output.empty();
-        this.zoneId = Output.empty();
+        this.arn = Codegen.empty();
+        this.cloudwatchLogGroupArn = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
@@ -99,7 +100,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
+            this.cloudwatchLogGroupArn = Codegen.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
         public Builder zoneId(@Nullable Output<String> zoneId) {
@@ -107,7 +108,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Output.ofNullable(zoneId);
+            this.zoneId = Codegen.ofNullable(zoneId);
             return this;
         }        public QueryLogState build() {
             return new QueryLogState(arn, cloudwatchLogGroupArn, zoneId);

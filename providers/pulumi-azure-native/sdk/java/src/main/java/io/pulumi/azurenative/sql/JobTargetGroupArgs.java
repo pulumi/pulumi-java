@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.JobTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
 
-    public Output<String> getJobAgentName() {
+    public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
 
@@ -34,7 +35,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="members", required=true)
       private final Output<List<JobTargetArgs>> members;
 
-    public Output<List<JobTargetArgs>> getMembers() {
+    public Output<List<JobTargetArgs>> members() {
         return this.members;
     }
 
@@ -45,7 +46,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +57,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -67,8 +68,8 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetGroupName")
       private final @Nullable Output<String> targetGroupName;
 
-    public Output<String> getTargetGroupName() {
-        return this.targetGroupName == null ? Output.empty() : this.targetGroupName;
+    public Output<String> targetGroupName() {
+        return this.targetGroupName == null ? Codegen.empty() : this.targetGroupName;
     }
 
     public JobTargetGroupArgs(
@@ -85,11 +86,11 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobTargetGroupArgs() {
-        this.jobAgentName = Output.empty();
-        this.members = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.targetGroupName = Output.empty();
+        this.jobAgentName = Codegen.empty();
+        this.members = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.targetGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetGroupName(@Nullable String targetGroupName) {
-            this.targetGroupName = Output.ofNullable(targetGroupName);
+            this.targetGroupName = Codegen.ofNullable(targetGroupName);
             return this;
         }        public JobTargetGroupArgs build() {
             return new JobTargetGroupArgs(jobAgentName, members, resourceGroupName, serverName, targetGroupName);

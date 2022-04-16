@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
-        return this.objectId == null ? Output.empty() : this.objectId;
+    public Output<String> objectId() {
+        return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
     public WatchlistUserInfoArgs(@Nullable Output<String> objectId) {
@@ -34,7 +35,7 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WatchlistUserInfoArgs() {
-        this.objectId = Output.empty();
+        this.objectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Output.ofNullable(objectId);
+            this.objectId = Codegen.ofNullable(objectId);
             return this;
         }        public WatchlistUserInfoArgs build() {
             return new WatchlistUserInfoArgs(objectId);

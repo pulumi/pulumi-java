@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
      * Selects a secret and a specific version from Cloud Secret Manager.
      * 
     */
-    public GoogleCloudRunOpV2SecretKeySelectorResponse getSecretKeyRef() {
+    public GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }
 

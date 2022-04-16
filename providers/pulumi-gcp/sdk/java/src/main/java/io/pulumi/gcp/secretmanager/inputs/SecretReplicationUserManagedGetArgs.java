@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class SecretReplicationUserManagedGetArgs extends io.pulumi.resourc
     @Import(name="replicas", required=true)
       private final Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas;
 
-    public Output<List<SecretReplicationUserManagedReplicaGetArgs>> getReplicas() {
+    public Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas() {
         return this.replicas;
     }
 
@@ -31,7 +32,7 @@ public final class SecretReplicationUserManagedGetArgs extends io.pulumi.resourc
     }
 
     private SecretReplicationUserManagedGetArgs() {
-        this.replicas = Output.empty();
+        this.replicas = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.signalrservice.enums.FeatureFlags;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flag", required=true)
       private final Output<Either<String,FeatureFlags>> flag;
 
-    public Output<Either<String,FeatureFlags>> getFlag() {
+    public Output<Either<String,FeatureFlags>> flag() {
         return this.flag;
     }
 
@@ -41,8 +42,8 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -66,9 +67,9 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SignalRFeatureArgs() {
-        this.flag = Output.empty();
-        this.properties = Output.empty();
-        this.value = Output.empty();
+        this.flag = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder value(Output<String> value) {

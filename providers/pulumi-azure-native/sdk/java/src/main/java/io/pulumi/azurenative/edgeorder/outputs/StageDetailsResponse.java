@@ -46,28 +46,28 @@ public final class StageDetailsResponse {
      * Display name of the resource stage.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Stage name
      * 
     */
-    public String getStageName() {
+    public String stageName() {
         return this.stageName;
     }
     /**
      * Stage status.
      * 
     */
-    public String getStageStatus() {
+    public String stageStatus() {
         return this.stageStatus;
     }
     /**
      * Stage start time
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Output<String> getGlobalReplicationGroupDescription() {
-        return this.globalReplicationGroupDescription == null ? Output.empty() : this.globalReplicationGroupDescription;
+    public Output<String> globalReplicationGroupDescription() {
+        return this.globalReplicationGroupDescription == null ? Codegen.empty() : this.globalReplicationGroupDescription;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     @Import(name="globalReplicationGroupIdSuffix", required=true)
       private final Output<String> globalReplicationGroupIdSuffix;
 
-    public Output<String> getGlobalReplicationGroupIdSuffix() {
+    public Output<String> globalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix;
     }
 
@@ -43,7 +44,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     @Import(name="primaryReplicationGroupId", required=true)
       private final Output<String> primaryReplicationGroupId;
 
-    public Output<String> getPrimaryReplicationGroupId() {
+    public Output<String> primaryReplicationGroupId() {
         return this.primaryReplicationGroupId;
     }
 
@@ -57,9 +58,9 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     }
 
     private GlobalReplicationGroupArgs() {
-        this.globalReplicationGroupDescription = Output.empty();
-        this.globalReplicationGroupIdSuffix = Output.empty();
-        this.primaryReplicationGroupId = Output.empty();
+        this.globalReplicationGroupDescription = Codegen.empty();
+        this.globalReplicationGroupIdSuffix = Codegen.empty();
+        this.primaryReplicationGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
-            this.globalReplicationGroupDescription = Output.ofNullable(globalReplicationGroupDescription);
+            this.globalReplicationGroupDescription = Codegen.ofNullable(globalReplicationGroupDescription);
             return this;
         }
         public Builder globalReplicationGroupIdSuffix(Output<String> globalReplicationGroupIdSuffix) {

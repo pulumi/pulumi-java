@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.inputs.NetworkArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<String> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<String> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<NetworkArgs> network;
 
-    public Output<NetworkArgs> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<NetworkArgs> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<String> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public WorkerConfigArgs(
@@ -75,10 +76,10 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerConfigArgs() {
-        this.diskSizeGb = Output.empty();
-        this.machineType = Output.empty();
-        this.network = Output.empty();
-        this.tag = Output.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.network = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -120,7 +121,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder network(@Nullable Output<NetworkArgs> network) {
@@ -128,7 +129,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable NetworkArgs network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -136,7 +137,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public WorkerConfigArgs build() {
             return new WorkerConfigArgs(diskSizeGb, machineType, network, tag);

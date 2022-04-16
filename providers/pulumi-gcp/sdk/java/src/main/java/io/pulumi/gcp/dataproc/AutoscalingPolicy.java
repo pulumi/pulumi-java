@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.AutoscalingPolicyArgs;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicyState;
@@ -52,7 +53,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AutoscalingPolicyBasicAlgorithm> getBasicAlgorithm() {
+    public Output</* @Nullable */ AutoscalingPolicyBasicAlgorithm> basicAlgorithm() {
         return this.basicAlgorithm;
     }
     /**
@@ -68,7 +69,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * The default value is `global`.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -82,7 +83,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * @return The "resource name" of the autoscaling policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * 3 and 50 characters.
      * 
      */
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
     /**
@@ -116,7 +117,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -132,7 +133,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AutoscalingPolicySecondaryWorkerConfig> getSecondaryWorkerConfig() {
+    public Output</* @Nullable */ AutoscalingPolicySecondaryWorkerConfig> secondaryWorkerConfig() {
         return this.secondaryWorkerConfig;
     }
     /**
@@ -148,7 +149,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AutoscalingPolicyWorkerConfig> getWorkerConfig() {
+    public Output</* @Nullable */ AutoscalingPolicyWorkerConfig> workerConfig() {
         return this.workerConfig;
     }
 
@@ -174,7 +175,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AutoscalingPolicy(String name, AutoscalingPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/autoscalingPolicy:AutoscalingPolicy", name, args == null ? AutoscalingPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/autoscalingPolicy:AutoscalingPolicy", name, args == null ? AutoscalingPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AutoscalingPolicy(String name, Output<String> id, @Nullable AutoscalingPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

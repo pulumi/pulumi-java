@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="brand", required=true)
       private final Output<String> brand;
 
-    public Output<String> getBrand() {
+    public Output<String> brand() {
         return this.brand;
     }
 
@@ -33,7 +34,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -45,8 +46,8 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClientArgs() {
-        this.brand = Output.empty();
-        this.displayName = Output.empty();
+        this.brand = Codegen.empty();
+        this.displayName = Codegen.empty();
     }
 
     public static Builder builder() {

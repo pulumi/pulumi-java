@@ -5,6 +5,7 @@ package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.eventarc.inputs.TriggerDestinationCloudRunServiceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
-    public Output<String> getCloudFunction() {
-        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
+    public Output<String> cloudFunction() {
+        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cloudRunService")
       private final @Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService;
 
-    public Output<TriggerDestinationCloudRunServiceArgs> getCloudRunService() {
-        return this.cloudRunService == null ? Output.empty() : this.cloudRunService;
+    public Output<TriggerDestinationCloudRunServiceArgs> cloudRunService() {
+        return this.cloudRunService == null ? Codegen.empty() : this.cloudRunService;
     }
 
     public TriggerDestinationArgs(
@@ -45,8 +46,8 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TriggerDestinationArgs() {
-        this.cloudFunction = Output.empty();
-        this.cloudRunService = Output.empty();
+        this.cloudFunction = Codegen.empty();
+        this.cloudRunService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Output.ofNullable(cloudFunction);
+            this.cloudFunction = Codegen.ofNullable(cloudFunction);
             return this;
         }
         public Builder cloudRunService(@Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService) {
@@ -84,7 +85,7 @@ public final class TriggerDestinationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cloudRunService(@Nullable TriggerDestinationCloudRunServiceArgs cloudRunService) {
-            this.cloudRunService = Output.ofNullable(cloudRunService);
+            this.cloudRunService = Codegen.ofNullable(cloudRunService);
             return this;
         }        public TriggerDestinationArgs build() {
             return new TriggerDestinationArgs(cloudFunction, cloudRunService);

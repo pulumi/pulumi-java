@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.ClientInfoArgs;
 import io.pulumi.googlenative.testing_v1.inputs.EnvironmentMatrixArgs;
 import io.pulumi.googlenative.testing_v1.inputs.ResultStorageArgs;
@@ -27,8 +28,8 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientInfo")
       private final @Nullable Output<ClientInfoArgs> clientInfo;
 
-    public Output<ClientInfoArgs> getClientInfo() {
-        return this.clientInfo == null ? Output.empty() : this.clientInfo;
+    public Output<ClientInfoArgs> clientInfo() {
+        return this.clientInfo == null ? Codegen.empty() : this.clientInfo;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentMatrix", required=true)
       private final Output<EnvironmentMatrixArgs> environmentMatrix;
 
-    public Output<EnvironmentMatrixArgs> getEnvironmentMatrix() {
+    public Output<EnvironmentMatrixArgs> environmentMatrix() {
         return this.environmentMatrix;
     }
 
@@ -49,8 +50,8 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failFast")
       private final @Nullable Output<Boolean> failFast;
 
-    public Output<Boolean> getFailFast() {
-        return this.failFast == null ? Output.empty() : this.failFast;
+    public Output<Boolean> failFast() {
+        return this.failFast == null ? Codegen.empty() : this.failFast;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flakyTestAttempts")
       private final @Nullable Output<Integer> flakyTestAttempts;
 
-    public Output<Integer> getFlakyTestAttempts() {
-        return this.flakyTestAttempts == null ? Output.empty() : this.flakyTestAttempts;
+    public Output<Integer> flakyTestAttempts() {
+        return this.flakyTestAttempts == null ? Codegen.empty() : this.flakyTestAttempts;
     }
 
     /**
@@ -71,15 +72,15 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resultStorage", required=true)
       private final Output<ResultStorageArgs> resultStorage;
 
-    public Output<ResultStorageArgs> getResultStorage() {
+    public Output<ResultStorageArgs> resultStorage() {
         return this.resultStorage;
     }
 
@@ -100,7 +101,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testSpecification", required=true)
       private final Output<TestSpecificationArgs> testSpecification;
 
-    public Output<TestSpecificationArgs> getTestSpecification() {
+    public Output<TestSpecificationArgs> testSpecification() {
         return this.testSpecification;
     }
 
@@ -124,14 +125,14 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestMatrixArgs() {
-        this.clientInfo = Output.empty();
-        this.environmentMatrix = Output.empty();
-        this.failFast = Output.empty();
-        this.flakyTestAttempts = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.resultStorage = Output.empty();
-        this.testSpecification = Output.empty();
+        this.clientInfo = Codegen.empty();
+        this.environmentMatrix = Codegen.empty();
+        this.failFast = Codegen.empty();
+        this.flakyTestAttempts = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.resultStorage = Codegen.empty();
+        this.testSpecification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientInfo(@Nullable ClientInfoArgs clientInfo) {
-            this.clientInfo = Output.ofNullable(clientInfo);
+            this.clientInfo = Codegen.ofNullable(clientInfo);
             return this;
         }
         public Builder environmentMatrix(Output<EnvironmentMatrixArgs> environmentMatrix) {
@@ -189,7 +190,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failFast(@Nullable Boolean failFast) {
-            this.failFast = Output.ofNullable(failFast);
+            this.failFast = Codegen.ofNullable(failFast);
             return this;
         }
         public Builder flakyTestAttempts(@Nullable Output<Integer> flakyTestAttempts) {
@@ -197,7 +198,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flakyTestAttempts(@Nullable Integer flakyTestAttempts) {
-            this.flakyTestAttempts = Output.ofNullable(flakyTestAttempts);
+            this.flakyTestAttempts = Codegen.ofNullable(flakyTestAttempts);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -205,7 +206,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -213,7 +214,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder resultStorage(Output<ResultStorageArgs> resultStorage) {

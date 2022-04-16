@@ -50,28 +50,28 @@ public final class AnalyticsApplicationReferenceDataSources {
      * The ARN of the Kinesis Analytics Application.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The S3 configuration for the reference data source. See S3 Reference below for more details.
      * 
     */
-    public AnalyticsApplicationReferenceDataSourcesS3 getS3() {
+    public AnalyticsApplicationReferenceDataSourcesS3 s3() {
         return this.s3;
     }
     /**
      * The Schema format of the data in the streaming source. See Source Schema below for more details.
      * 
     */
-    public AnalyticsApplicationReferenceDataSourcesSchema getSchema() {
+    public AnalyticsApplicationReferenceDataSourcesSchema schema() {
         return this.schema;
     }
     /**
      * The in-application Table Name.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

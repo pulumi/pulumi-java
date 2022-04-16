@@ -6,6 +6,7 @@ package io.pulumi.gcp.container;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.AzureClusterArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterState;
@@ -57,7 +58,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAnnotations() {
+    public Output</* @Nullable */ Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -71,7 +72,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    public Output<AzureClusterAuthorization> getAuthorization() {
+    public Output<AzureClusterAuthorization> authorization() {
         return this.authorization;
     }
     /**
@@ -85,7 +86,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
      * 
      */
-    public Output<String> getAzureRegion() {
+    public Output<String> azureRegion() {
         return this.azureRegion;
     }
     /**
@@ -99,7 +100,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
-    public Output<String> getClient() {
+    public Output<String> client() {
         return this.client;
     }
     /**
@@ -113,7 +114,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Required. Configuration related to the cluster control plane.
      * 
      */
-    public Output<AzureClusterControlPlane> getControlPlane() {
+    public Output<AzureClusterControlPlane> controlPlane() {
         return this.controlPlane;
     }
     /**
@@ -127,7 +128,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this cluster was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -141,7 +142,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -155,7 +156,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. The endpoint of the cluster's API server.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -171,7 +172,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -185,7 +186,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Fleet configuration.
      * 
      */
-    public Output<AzureClusterFleet> getFleet() {
+    public Output<AzureClusterFleet> fleet() {
         return this.fleet;
     }
     /**
@@ -199,7 +200,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -213,7 +214,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return The name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -227,7 +228,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Required. Cluster-wide networking configuration.
      * 
      */
-    public Output<AzureClusterNetworking> getNetworking() {
+    public Output<AzureClusterNetworking> networking() {
         return this.networking;
     }
     /**
@@ -241,7 +242,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -255,7 +256,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. If set, there are currently changes in flight to the cluster.
      * 
      */
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling;
     }
     /**
@@ -269,7 +270,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
      * 
      */
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
     /**
@@ -285,7 +286,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * STOPPING, ERROR, DEGRADED
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -299,7 +300,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. A globally unique identifier for the cluster.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -313,7 +314,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this cluster was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -327,7 +328,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @return Output only. Workload Identity settings.
      * 
      */
-    public Output<List<AzureClusterWorkloadIdentityConfig>> getWorkloadIdentityConfigs() {
+    public Output<List<AzureClusterWorkloadIdentityConfig>> workloadIdentityConfigs() {
         return this.workloadIdentityConfigs;
     }
 
@@ -353,7 +354,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AzureCluster(String name, AzureClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/azureCluster:AzureCluster", name, args == null ? AzureClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:container/azureCluster:AzureCluster", name, args == null ? AzureClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AzureCluster(String name, Output<String> id, @Nullable AzureClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

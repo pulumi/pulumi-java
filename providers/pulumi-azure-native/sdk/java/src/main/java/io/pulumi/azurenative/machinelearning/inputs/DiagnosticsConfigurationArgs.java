@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearning.enums.DiagnosticsLevel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="expiry")
       private final @Nullable Output<String> expiry;
 
-    public Output<String> getExpiry() {
-        return this.expiry == null ? Output.empty() : this.expiry;
+    public Output<String> expiry() {
+        return this.expiry == null ? Codegen.empty() : this.expiry;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="level", required=true)
       private final Output<Either<String,DiagnosticsLevel>> level;
 
-    public Output<Either<String,DiagnosticsLevel>> getLevel() {
+    public Output<Either<String,DiagnosticsLevel>> level() {
         return this.level;
     }
 
@@ -50,8 +51,8 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private DiagnosticsConfigurationArgs() {
-        this.expiry = Output.empty();
-        this.level = Output.empty();
+        this.expiry = Codegen.empty();
+        this.level = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = Output.ofNullable(expiry);
+            this.expiry = Codegen.ofNullable(expiry);
             return this;
         }
         public Builder level(Output<Either<String,DiagnosticsLevel>> level) {

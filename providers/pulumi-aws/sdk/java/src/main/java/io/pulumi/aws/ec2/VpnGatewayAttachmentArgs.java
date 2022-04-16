@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -31,7 +32,7 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="vpnGatewayId", required=true)
       private final Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId;
     }
 
@@ -43,8 +44,8 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
     }
 
     private VpnGatewayAttachmentArgs() {
-        this.vpcId = Output.empty();
-        this.vpnGatewayId = Output.empty();
+        this.vpcId = Codegen.empty();
+        this.vpnGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {

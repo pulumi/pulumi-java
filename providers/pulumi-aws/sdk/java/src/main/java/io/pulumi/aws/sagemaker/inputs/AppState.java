@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.AppResourceSpecGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="appName")
       private final @Nullable Output<String> appName;
 
-    public Output<String> getAppName() {
-        return this.appName == null ? Output.empty() : this.appName;
+    public Output<String> appName() {
+        return this.appName == null ? Codegen.empty() : this.appName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="appType")
       private final @Nullable Output<String> appType;
 
-    public Output<String> getAppType() {
-        return this.appType == null ? Output.empty() : this.appType;
+    public Output<String> appType() {
+        return this.appType == null ? Codegen.empty() : this.appType;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
-    public Output<String> getDomainId() {
-        return this.domainId == null ? Output.empty() : this.domainId;
+    public Output<String> domainId() {
+        return this.domainId == null ? Codegen.empty() : this.domainId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSpec")
       private final @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
 
-    public Output<AppResourceSpecGetArgs> getResourceSpec() {
-        return this.resourceSpec == null ? Output.empty() : this.resourceSpec;
+    public Output<AppResourceSpecGetArgs> resourceSpec() {
+        return this.resourceSpec == null ? Codegen.empty() : this.resourceSpec;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProfileName")
       private final @Nullable Output<String> userProfileName;
 
-    public Output<String> getUserProfileName() {
-        return this.userProfileName == null ? Output.empty() : this.userProfileName;
+    public Output<String> userProfileName() {
+        return this.userProfileName == null ? Codegen.empty() : this.userProfileName;
     }
 
     public AppState(
@@ -124,14 +125,14 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppState() {
-        this.appName = Output.empty();
-        this.appType = Output.empty();
-        this.arn = Output.empty();
-        this.domainId = Output.empty();
-        this.resourceSpec = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userProfileName = Output.empty();
+        this.appName = Codegen.empty();
+        this.appType = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.domainId = Codegen.empty();
+        this.resourceSpec = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userProfileName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appName(@Nullable String appName) {
-            this.appName = Output.ofNullable(appName);
+            this.appName = Codegen.ofNullable(appName);
             return this;
         }
         public Builder appType(@Nullable Output<String> appType) {
@@ -181,7 +182,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appType(@Nullable String appType) {
-            this.appType = Output.ofNullable(appType);
+            this.appType = Codegen.ofNullable(appType);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -189,7 +190,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder domainId(@Nullable Output<String> domainId) {
@@ -197,7 +198,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainId(@Nullable String domainId) {
-            this.domainId = Output.ofNullable(domainId);
+            this.domainId = Codegen.ofNullable(domainId);
             return this;
         }
         public Builder resourceSpec(@Nullable Output<AppResourceSpecGetArgs> resourceSpec) {
@@ -205,7 +206,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSpec(@Nullable AppResourceSpecGetArgs resourceSpec) {
-            this.resourceSpec = Output.ofNullable(resourceSpec);
+            this.resourceSpec = Codegen.ofNullable(resourceSpec);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -213,7 +214,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -221,7 +222,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userProfileName(@Nullable Output<String> userProfileName) {
@@ -229,7 +230,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProfileName(@Nullable String userProfileName) {
-            this.userProfileName = Output.ofNullable(userProfileName);
+            this.userProfileName = Codegen.ofNullable(userProfileName);
             return this;
         }        public AppState build() {
             return new AppState(appName, appType, arn, domainId, resourceSpec, tags, tagsAll, userProfileName);

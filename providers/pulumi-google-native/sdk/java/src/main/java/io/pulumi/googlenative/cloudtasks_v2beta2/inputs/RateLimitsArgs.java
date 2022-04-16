@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxBurstSize")
       private final @Nullable Output<Integer> maxBurstSize;
 
-    public Output<Integer> getMaxBurstSize() {
-        return this.maxBurstSize == null ? Output.empty() : this.maxBurstSize;
+    public Output<Integer> maxBurstSize() {
+        return this.maxBurstSize == null ? Codegen.empty() : this.maxBurstSize;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentTasks")
       private final @Nullable Output<Integer> maxConcurrentTasks;
 
-    public Output<Integer> getMaxConcurrentTasks() {
-        return this.maxConcurrentTasks == null ? Output.empty() : this.maxConcurrentTasks;
+    public Output<Integer> maxConcurrentTasks() {
+        return this.maxConcurrentTasks == null ? Codegen.empty() : this.maxConcurrentTasks;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxTasksDispatchedPerSecond")
       private final @Nullable Output<Double> maxTasksDispatchedPerSecond;
 
-    public Output<Double> getMaxTasksDispatchedPerSecond() {
-        return this.maxTasksDispatchedPerSecond == null ? Output.empty() : this.maxTasksDispatchedPerSecond;
+    public Output<Double> maxTasksDispatchedPerSecond() {
+        return this.maxTasksDispatchedPerSecond == null ? Codegen.empty() : this.maxTasksDispatchedPerSecond;
     }
 
     public RateLimitsArgs(
@@ -62,9 +63,9 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RateLimitsArgs() {
-        this.maxBurstSize = Output.empty();
-        this.maxConcurrentTasks = Output.empty();
-        this.maxTasksDispatchedPerSecond = Output.empty();
+        this.maxBurstSize = Codegen.empty();
+        this.maxConcurrentTasks = Codegen.empty();
+        this.maxTasksDispatchedPerSecond = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
-            this.maxBurstSize = Output.ofNullable(maxBurstSize);
+            this.maxBurstSize = Codegen.ofNullable(maxBurstSize);
             return this;
         }
         public Builder maxConcurrentTasks(@Nullable Output<Integer> maxConcurrentTasks) {
@@ -104,7 +105,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentTasks(@Nullable Integer maxConcurrentTasks) {
-            this.maxConcurrentTasks = Output.ofNullable(maxConcurrentTasks);
+            this.maxConcurrentTasks = Codegen.ofNullable(maxConcurrentTasks);
             return this;
         }
         public Builder maxTasksDispatchedPerSecond(@Nullable Output<Double> maxTasksDispatchedPerSecond) {
@@ -112,7 +113,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxTasksDispatchedPerSecond(@Nullable Double maxTasksDispatchedPerSecond) {
-            this.maxTasksDispatchedPerSecond = Output.ofNullable(maxTasksDispatchedPerSecond);
+            this.maxTasksDispatchedPerSecond = Codegen.ofNullable(maxTasksDispatchedPerSecond);
             return this;
         }        public RateLimitsArgs build() {
             return new RateLimitsArgs(maxBurstSize, maxConcurrentTasks, maxTasksDispatchedPerSecond);

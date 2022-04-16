@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeCaCertUrl", required=true)
       private final Output<Boolean> includeCaCertUrl;
 
-    public Output<Boolean> getIncludeCaCertUrl() {
+    public Output<Boolean> includeCaCertUrl() {
         return this.includeCaCertUrl;
     }
 
@@ -35,7 +36,7 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeCrlAccessUrl", required=true)
       private final Output<Boolean> includeCrlAccessUrl;
 
-    public Output<Boolean> getIncludeCrlAccessUrl() {
+    public Output<Boolean> includeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
 
@@ -47,8 +48,8 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IssuingOptionsArgs() {
-        this.includeCaCertUrl = Output.empty();
-        this.includeCrlAccessUrl = Output.empty();
+        this.includeCaCertUrl = Codegen.empty();
+        this.includeCrlAccessUrl = Codegen.empty();
     }
 
     public static Builder builder() {

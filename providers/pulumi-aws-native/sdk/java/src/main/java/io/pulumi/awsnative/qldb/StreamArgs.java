@@ -7,6 +7,7 @@ import io.pulumi.awsnative.qldb.inputs.StreamKinesisConfigurationArgs;
 import io.pulumi.awsnative.qldb.inputs.StreamTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,43 +21,43 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exclusiveEndTime")
       private final @Nullable Output<String> exclusiveEndTime;
 
-    public Output<String> getExclusiveEndTime() {
-        return this.exclusiveEndTime == null ? Output.empty() : this.exclusiveEndTime;
+    public Output<String> exclusiveEndTime() {
+        return this.exclusiveEndTime == null ? Codegen.empty() : this.exclusiveEndTime;
     }
 
     @Import(name="inclusiveStartTime", required=true)
       private final Output<String> inclusiveStartTime;
 
-    public Output<String> getInclusiveStartTime() {
+    public Output<String> inclusiveStartTime() {
         return this.inclusiveStartTime;
     }
 
     @Import(name="kinesisConfiguration", required=true)
       private final Output<StreamKinesisConfigurationArgs> kinesisConfiguration;
 
-    public Output<StreamKinesisConfigurationArgs> getKinesisConfiguration() {
+    public Output<StreamKinesisConfigurationArgs> kinesisConfiguration() {
         return this.kinesisConfiguration;
     }
 
     @Import(name="ledgerName", required=true)
       private final Output<String> ledgerName;
 
-    public Output<String> getLedgerName() {
+    public Output<String> ledgerName() {
         return this.ledgerName;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamName")
       private final @Nullable Output<String> streamName;
 
-    public Output<String> getStreamName() {
-        return this.streamName == null ? Output.empty() : this.streamName;
+    public Output<String> streamName() {
+        return this.streamName == null ? Codegen.empty() : this.streamName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Output<List<StreamTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<StreamTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StreamArgs(
@@ -88,13 +89,13 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.exclusiveEndTime = Output.empty();
-        this.inclusiveStartTime = Output.empty();
-        this.kinesisConfiguration = Output.empty();
-        this.ledgerName = Output.empty();
-        this.roleArn = Output.empty();
-        this.streamName = Output.empty();
-        this.tags = Output.empty();
+        this.exclusiveEndTime = Codegen.empty();
+        this.inclusiveStartTime = Codegen.empty();
+        this.kinesisConfiguration = Codegen.empty();
+        this.ledgerName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.streamName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exclusiveEndTime(@Nullable String exclusiveEndTime) {
-            this.exclusiveEndTime = Output.ofNullable(exclusiveEndTime);
+            this.exclusiveEndTime = Codegen.ofNullable(exclusiveEndTime);
             return this;
         }
         public Builder inclusiveStartTime(Output<String> inclusiveStartTime) {
@@ -174,7 +175,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamName(@Nullable String streamName) {
-            this.streamName = Output.ofNullable(streamName);
+            this.streamName = Codegen.ofNullable(streamName);
             return this;
         }
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
@@ -182,7 +183,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StreamTagArgs... tags) {

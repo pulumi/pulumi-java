@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -35,7 +36,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="keyVersion", required=true)
       private final Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
+    public Output<String> keyVersion() {
         return this.keyVersion;
     }
 
@@ -46,7 +47,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="vaultBaseUrl", required=true)
       private final Output<String> vaultBaseUrl;
 
-    public Output<String> getVaultBaseUrl() {
+    public Output<String> vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 
@@ -60,9 +61,9 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private EncryptionPropertiesArgs() {
-        this.keyName = Output.empty();
-        this.keyVersion = Output.empty();
-        this.vaultBaseUrl = Output.empty();
+        this.keyName = Codegen.empty();
+        this.keyVersion = Codegen.empty();
+        this.vaultBaseUrl = Codegen.empty();
     }
 
     public static Builder builder() {

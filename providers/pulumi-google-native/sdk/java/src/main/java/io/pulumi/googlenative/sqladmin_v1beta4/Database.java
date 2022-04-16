@@ -6,6 +6,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1beta4.DatabaseArgs;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.SqlServerDatabaseDetailsResponse;
@@ -29,7 +30,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The Cloud SQL charset value.
      * 
      */
-    public Output<String> getCharset() {
+    public Output<String> charset() {
         return this.charset;
     }
     /**
@@ -43,7 +44,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The Cloud SQL collation value.
      * 
      */
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation;
     }
     /**
@@ -57,7 +58,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -71,7 +72,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return This is always `sql#database`.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -85,7 +86,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -113,13 +114,13 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The URI of this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     @Export(name="sqlserverDatabaseDetails", type=SqlServerDatabaseDetailsResponse.class, parameters={})
     private Output<SqlServerDatabaseDetailsResponse> sqlserverDatabaseDetails;
 
-    public Output<SqlServerDatabaseDetailsResponse> getSqlserverDatabaseDetails() {
+    public Output<SqlServerDatabaseDetailsResponse> sqlserverDatabaseDetails() {
         return this.sqlserverDatabaseDetails;
     }
 
@@ -145,7 +146,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:sqladmin/v1beta4:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:sqladmin/v1beta4:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Database(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -76,28 +76,28 @@ public final class FirewallPolicyNatRuleResponse {
      * The action type of a Nat rule.
      * 
     */
-    public Optional<FirewallPolicyNatRuleActionResponse> getAction() {
+    public Optional<FirewallPolicyNatRuleActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule resource.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The match conditions for incoming traffic.
      * 
     */
-    public Optional<Object> getRuleCondition() {
+    public Optional<Object> ruleCondition() {
         return Optional.ofNullable(this.ruleCondition);
     }
     /**
@@ -105,21 +105,21 @@ public final class FirewallPolicyNatRuleResponse {
      * Expected value is 'FirewallPolicyNatRule'.
      * 
     */
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
     /**
      * The translated address for this NAT rule.
      * 
     */
-    public Optional<String> getTranslatedAddress() {
+    public Optional<String> translatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
     /**
      * The translated port for this NAT rule.
      * 
     */
-    public Optional<String> getTranslatedPort() {
+    public Optional<String> translatedPort() {
         return Optional.ofNullable(this.translatedPort);
     }
 

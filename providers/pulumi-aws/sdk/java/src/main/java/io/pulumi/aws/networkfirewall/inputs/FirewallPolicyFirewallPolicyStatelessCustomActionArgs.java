@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
     @Import(name="actionDefinition", required=true)
       private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition;
 
-    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> getActionDefinition() {
+    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
@@ -32,7 +33,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 
@@ -44,8 +45,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
     }
 
     private FirewallPolicyFirewallPolicyStatelessCustomActionArgs() {
-        this.actionDefinition = Output.empty();
-        this.actionName = Output.empty();
+        this.actionDefinition = Codegen.empty();
+        this.actionName = Codegen.empty();
     }
 
     public static Builder builder() {

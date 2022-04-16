@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.inputs.PubSubArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pubsub")
       private final @Nullable Output<PubSubArgs> pubsub;
 
-    public Output<PubSubArgs> getPubsub() {
-        return this.pubsub == null ? Output.empty() : this.pubsub;
+    public Output<PubSubArgs> pubsub() {
+        return this.pubsub == null ? Codegen.empty() : this.pubsub;
     }
 
     public NotificationConfigArgs(@Nullable Output<PubSubArgs> pubsub) {
@@ -34,7 +35,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NotificationConfigArgs() {
-        this.pubsub = Output.empty();
+        this.pubsub = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pubsub(@Nullable PubSubArgs pubsub) {
-            this.pubsub = Output.ofNullable(pubsub);
+            this.pubsub = Codegen.ofNullable(pubsub);
             return this;
         }        public NotificationConfigArgs build() {
             return new NotificationConfigArgs(pubsub);

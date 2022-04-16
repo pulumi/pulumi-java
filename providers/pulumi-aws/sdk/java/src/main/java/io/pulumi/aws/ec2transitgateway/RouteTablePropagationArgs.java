@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
     @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -31,7 +32,7 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
     @Import(name="transitGatewayRouteTableId", required=true)
       private final Output<String> transitGatewayRouteTableId;
 
-    public Output<String> getTransitGatewayRouteTableId() {
+    public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
@@ -43,8 +44,8 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
     }
 
     private RouteTablePropagationArgs() {
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayRouteTableId = Output.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayRouteTableId = Codegen.empty();
     }
 
     public static Builder builder() {

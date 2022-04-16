@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<String> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
     @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
@@ -46,8 +47,8 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
     }
 
     private JobHttpTargetOauthTokenArgs() {
-        this.scope = Output.empty();
-        this.serviceAccountEmail = Output.empty();
+        this.scope = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {

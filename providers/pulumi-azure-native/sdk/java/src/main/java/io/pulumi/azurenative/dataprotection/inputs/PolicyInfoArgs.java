@@ -6,6 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.PolicyParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -33,8 +34,8 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyParameters")
       private final @Nullable Output<PolicyParametersArgs> policyParameters;
 
-    public Output<PolicyParametersArgs> getPolicyParameters() {
-        return this.policyParameters == null ? Output.empty() : this.policyParameters;
+    public Output<PolicyParametersArgs> policyParameters() {
+        return this.policyParameters == null ? Codegen.empty() : this.policyParameters;
     }
 
     public PolicyInfoArgs(
@@ -45,8 +46,8 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyInfoArgs() {
-        this.policyId = Output.empty();
-        this.policyParameters = Output.empty();
+        this.policyId = Codegen.empty();
+        this.policyParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyParameters(@Nullable PolicyParametersArgs policyParameters) {
-            this.policyParameters = Output.ofNullable(policyParameters);
+            this.policyParameters = Codegen.ofNullable(policyParameters);
             return this;
         }        public PolicyInfoArgs build() {
             return new PolicyInfoArgs(policyId, policyParameters);

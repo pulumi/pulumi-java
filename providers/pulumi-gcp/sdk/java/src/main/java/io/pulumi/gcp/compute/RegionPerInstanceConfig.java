@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionPerInstanceConfigArgs;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigState;
@@ -71,7 +72,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> getMinimalAction() {
+    public Output</* @Nullable */ String> minimalAction() {
         return this.minimalAction;
     }
     /**
@@ -95,7 +96,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> getMostDisruptiveAllowedAction() {
+    public Output</* @Nullable */ String> mostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction;
     }
     /**
@@ -109,7 +110,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * @return The name for this per-instance config and its corresponding instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +126,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionPerInstanceConfigPreservedState> getPreservedState() {
+    public Output</* @Nullable */ RegionPerInstanceConfigPreservedState> preservedState() {
         return this.preservedState;
     }
     /**
@@ -141,7 +142,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -155,7 +156,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * @return Region where the containing instance group manager is located
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -169,7 +170,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * @return The region instance group manager this instance config is part of.
      * 
      */
-    public Output<String> getRegionInstanceGroupManager() {
+    public Output<String> regionInstanceGroupManager() {
         return this.regionInstanceGroupManager;
     }
     /**
@@ -187,7 +188,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * State will be removed on the next instance recreation or update.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRemoveInstanceStateOnDestroy() {
+    public Output</* @Nullable */ Boolean> removeInstanceStateOnDestroy() {
         return this.removeInstanceStateOnDestroy;
     }
 
@@ -213,7 +214,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionPerInstanceConfig(String name, RegionPerInstanceConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig", name, args == null ? RegionPerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig", name, args == null ? RegionPerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionPerInstanceConfig(String name, Output<String> id, @Nullable RegionPerInstanceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

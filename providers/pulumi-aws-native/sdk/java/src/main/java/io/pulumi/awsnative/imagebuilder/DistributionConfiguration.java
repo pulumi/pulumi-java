@@ -9,6 +9,7 @@ import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistrib
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return The description of the distribution configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return The distributions of the distribution configuration.
      * 
      */
-    public Output<List<DistributionConfigurationDistribution>> getDistributions() {
+    public Output<List<DistributionConfigurationDistribution>> distributions() {
         return this.distributions;
     }
     /**
@@ -73,7 +74,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return The name of the distribution configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @return The tags associated with the component.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
 
@@ -113,7 +114,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DistributionConfiguration(String name, DistributionConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:imagebuilder:DistributionConfiguration", name, args == null ? DistributionConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:imagebuilder:DistributionConfiguration", name, args == null ? DistributionConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DistributionConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

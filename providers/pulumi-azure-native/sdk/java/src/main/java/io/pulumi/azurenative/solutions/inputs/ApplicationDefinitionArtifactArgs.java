@@ -8,6 +8,7 @@ import io.pulumi.azurenative.solutions.enums.ApplicationDefinitionArtifactName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<Either<String,ApplicationDefinitionArtifactName>> name;
 
-    public Output<Either<String,ApplicationDefinitionArtifactName>> getName() {
+    public Output<Either<String,ApplicationDefinitionArtifactName>> name() {
         return this.name;
     }
 
@@ -38,7 +39,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<ApplicationArtifactType> type;
 
-    public Output<ApplicationArtifactType> getType() {
+    public Output<ApplicationArtifactType> type() {
         return this.type;
     }
 
@@ -49,7 +50,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -63,9 +64,9 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
     }
 
     private ApplicationDefinitionArtifactArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.uri = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

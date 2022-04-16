@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxFailuresPerHour", required=true)
       private final Output<Integer> maxFailuresPerHour;
 
-    public Output<Integer> getMaxFailuresPerHour() {
+    public Output<Integer> maxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
 
     @Import(name="maxFailuresTotal", required=true)
       private final Output<Integer> maxFailuresTotal;
 
-    public Output<Integer> getMaxFailuresTotal() {
+    public Output<Integer> maxFailuresTotal() {
         return this.maxFailuresTotal;
     }
 
@@ -35,8 +36,8 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobSchedulingArgs() {
-        this.maxFailuresPerHour = Output.empty();
-        this.maxFailuresTotal = Output.empty();
+        this.maxFailuresPerHour = Codegen.empty();
+        this.maxFailuresTotal = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.azurenative.eventgrid.inputs.JsonInputSchemaMappingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inboundIpRules")
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
-    public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
-        return this.inboundIpRules == null ? Output.empty() : this.inboundIpRules;
+    public Output<List<InboundIpRuleArgs>> inboundIpRules() {
+        return this.inboundIpRules == null ? Codegen.empty() : this.inboundIpRules;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputSchema")
       private final @Nullable Output<Either<String,InputSchema>> inputSchema;
 
-    public Output<Either<String,InputSchema>> getInputSchema() {
-        return this.inputSchema == null ? Output.empty() : this.inputSchema;
+    public Output<Either<String,InputSchema>> inputSchema() {
+        return this.inputSchema == null ? Codegen.empty() : this.inputSchema;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputSchemaMapping")
       private final @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
-    public Output<JsonInputSchemaMappingArgs> getInputSchemaMapping() {
-        return this.inputSchemaMapping == null ? Output.empty() : this.inputSchemaMapping;
+    public Output<JsonInputSchemaMappingArgs> inputSchemaMapping() {
+        return this.inputSchemaMapping == null ? Codegen.empty() : this.inputSchemaMapping;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -95,8 +96,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicName")
       private final @Nullable Output<String> topicName;
 
-    public Output<String> getTopicName() {
-        return this.topicName == null ? Output.empty() : this.topicName;
+    public Output<String> topicName() {
+        return this.topicName == null ? Codegen.empty() : this.topicName;
     }
 
     public TopicArgs(
@@ -130,14 +131,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicArgs() {
-        this.inboundIpRules = Output.empty();
-        this.inputSchema = Output.empty();
-        this.inputSchemaMapping = Output.empty();
-        this.location = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.topicName = Output.empty();
+        this.inboundIpRules = Codegen.empty();
+        this.inputSchema = Codegen.empty();
+        this.inputSchemaMapping = Codegen.empty();
+        this.location = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.topicName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
-            this.inboundIpRules = Output.ofNullable(inboundIpRules);
+            this.inboundIpRules = Codegen.ofNullable(inboundIpRules);
             return this;
         }
         public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
@@ -190,7 +191,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputSchema(@Nullable Either<String,InputSchema> inputSchema) {
-            this.inputSchema = Output.ofNullable(inputSchema);
+            this.inputSchema = Codegen.ofNullable(inputSchema);
             return this;
         }
         public Builder inputSchemaMapping(@Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping) {
@@ -198,7 +199,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputSchemaMapping(@Nullable JsonInputSchemaMappingArgs inputSchemaMapping) {
-            this.inputSchemaMapping = Output.ofNullable(inputSchemaMapping);
+            this.inputSchemaMapping = Codegen.ofNullable(inputSchemaMapping);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -206,7 +207,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -214,7 +215,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -230,7 +231,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder topicName(@Nullable Output<String> topicName) {
@@ -238,7 +239,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topicName(@Nullable String topicName) {
-            this.topicName = Output.ofNullable(topicName);
+            this.topicName = Codegen.ofNullable(topicName);
             return this;
         }        public TopicArgs build() {
             return new TopicArgs(inboundIpRules, inputSchema, inputSchemaMapping, location, publicNetworkAccess, resourceGroupName, tags, topicName);

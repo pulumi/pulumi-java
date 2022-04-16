@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class DistributionDefaultCacheBehaviorFunctionAssociationArgs exten
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -32,7 +33,7 @@ public final class DistributionDefaultCacheBehaviorFunctionAssociationArgs exten
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -44,8 +45,8 @@ public final class DistributionDefaultCacheBehaviorFunctionAssociationArgs exten
     }
 
     private DistributionDefaultCacheBehaviorFunctionAssociationArgs() {
-        this.eventType = Output.empty();
-        this.functionArn = Output.empty();
+        this.eventType = Codegen.empty();
+        this.functionArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -26,7 +26,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
@@ -37,7 +37,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="objectId", required=true)
       private final String objectId;
 
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
 
@@ -48,7 +48,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="permissions", required=true)
       private final PermissionsResponse permissions;
 
-    public PermissionsResponse getPermissions() {
+    public PermissionsResponse permissions() {
         return this.permissions;
     }
 
@@ -59,7 +59,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

@@ -50,28 +50,28 @@ public final class ApplicationWindowsEvent {
      * The levels of event to log.
      * 
     */
-    public List<ApplicationEventLevel> getEventLevels() {
+    public List<ApplicationEventLevel> eventLevels() {
         return this.eventLevels;
     }
     /**
      * The type of Windows Events to log.
      * 
     */
-    public String getEventName() {
+    public String eventName() {
         return this.eventName;
     }
     /**
      * The CloudWatch log group name to be associated to the monitored log.
      * 
     */
-    public String getLogGroupName() {
+    public String logGroupName() {
         return this.logGroupName;
     }
     /**
      * The name of the log pattern set.
      * 
     */
-    public Optional<String> getPatternSet() {
+    public Optional<String> patternSet() {
         return Optional.ofNullable(this.patternSet);
     }
 

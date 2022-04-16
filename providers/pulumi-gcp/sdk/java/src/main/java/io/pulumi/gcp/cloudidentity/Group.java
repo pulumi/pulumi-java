@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudidentity;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudidentity.GroupArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupState;
@@ -53,7 +54,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The time when the Group was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -69,7 +70,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Must not be longer than 4,096 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -83,7 +84,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The display name of the Group.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -99,7 +100,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<GroupGroupKey> getGroupKey() {
+    public Output<GroupGroupKey> groupKey() {
         return this.groupKey;
     }
     /**
@@ -123,7 +124,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
      * 
      */
-    public Output</* @Nullable */ String> getInitialGroupConfig() {
+    public Output</* @Nullable */ String> initialGroupConfig() {
         return this.initialGroupConfig;
     }
     /**
@@ -143,7 +144,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * 'system/groups/external': '' if the Group is an external-identity-mapped group.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -157,7 +158,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Group in the format: groups/{group_id}, where group_id is the unique ID assigned to the Group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -177,7 +178,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups or customers/{customer_id} for Google Groups.
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -191,7 +192,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The time when the Group was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -217,7 +218,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudidentity/group:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudidentity/group:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable GroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

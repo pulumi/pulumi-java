@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TopicRuleErrorActionLambdaArgs extends io.pulumi.resources.Re
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -29,7 +30,7 @@ public final class TopicRuleErrorActionLambdaArgs extends io.pulumi.resources.Re
     }
 
     private TopicRuleErrorActionLambdaArgs() {
-        this.functionArn = Output.empty();
+        this.functionArn = Codegen.empty();
     }
 
     public static Builder builder() {

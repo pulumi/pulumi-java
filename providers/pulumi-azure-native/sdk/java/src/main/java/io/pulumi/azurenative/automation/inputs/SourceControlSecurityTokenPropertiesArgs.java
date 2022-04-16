@@ -7,6 +7,7 @@ import io.pulumi.azurenative.automation.enums.TokenType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+    public Output<String> accessToken() {
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
-        return this.refreshToken == null ? Output.empty() : this.refreshToken;
+    public Output<String> refreshToken() {
+        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
     @Import(name="tokenType")
       private final @Nullable Output<Either<String,TokenType>> tokenType;
 
-    public Output<Either<String,TokenType>> getTokenType() {
-        return this.tokenType == null ? Output.empty() : this.tokenType;
+    public Output<Either<String,TokenType>> tokenType() {
+        return this.tokenType == null ? Codegen.empty() : this.tokenType;
     }
 
     public SourceControlSecurityTokenPropertiesArgs(
@@ -59,9 +60,9 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
     }
 
     private SourceControlSecurityTokenPropertiesArgs() {
-        this.accessToken = Output.empty();
-        this.refreshToken = Output.empty();
-        this.tokenType = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.refreshToken = Codegen.empty();
+        this.tokenType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
@@ -101,7 +102,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Output.ofNullable(refreshToken);
+            this.refreshToken = Codegen.ofNullable(refreshToken);
             return this;
         }
         public Builder tokenType(@Nullable Output<Either<String,TokenType>> tokenType) {
@@ -109,7 +110,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder tokenType(@Nullable Either<String,TokenType> tokenType) {
-            this.tokenType = Output.ofNullable(tokenType);
+            this.tokenType = Codegen.ofNullable(tokenType);
             return this;
         }        public SourceControlSecurityTokenPropertiesArgs build() {
             return new SourceControlSecurityTokenPropertiesArgs(accessToken, refreshToken, tokenType);

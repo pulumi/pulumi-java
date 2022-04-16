@@ -6,6 +6,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_v2beta.CompositeTypeArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CompositeTypeLabelEntryResponse;
@@ -32,7 +33,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -46,7 +47,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getInsertTime() {
+    public Output<String> insertTime() {
         return this.insertTime;
     }
     /**
@@ -60,7 +61,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @return Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
      * 
      */
-    public Output<List<CompositeTypeLabelEntryResponse>> getLabels() {
+    public Output<List<CompositeTypeLabelEntryResponse>> labels() {
         return this.labels;
     }
     /**
@@ -74,7 +75,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @return Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +89,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @return The Operation that most recently ran, or is currently running, on this composite type.
      * 
      */
-    public Output<OperationResponse> getOperation() {
+    public Output<OperationResponse> operation() {
         return this.operation;
     }
     /**
@@ -102,13 +103,13 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @return Server defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -122,7 +123,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @return Files for the template type.
      * 
      */
-    public Output<TemplateContentsResponse> getTemplateContents() {
+    public Output<TemplateContentsResponse> templateContents() {
         return this.templateContents;
     }
 
@@ -148,7 +149,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CompositeType(String name, @Nullable CompositeTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:deploymentmanager/v2beta:CompositeType", name, args == null ? CompositeTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:deploymentmanager/v2beta:CompositeType", name, args == null ? CompositeTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CompositeType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
     @Import(name="enableInsightsExport")
       private final @Nullable Output<Boolean> enableInsightsExport;
 
-    public Output<Boolean> getEnableInsightsExport() {
-        return this.enableInsightsExport == null ? Output.empty() : this.enableInsightsExport;
+    public Output<Boolean> enableInsightsExport() {
+        return this.enableInsightsExport == null ? Codegen.empty() : this.enableInsightsExport;
     }
 
     public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(@Nullable Output<Boolean> enableInsightsExport) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
     }
 
     private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs() {
-        this.enableInsightsExport = Output.empty();
+        this.enableInsightsExport = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
             return this;
         }
         public Builder enableInsightsExport(@Nullable Boolean enableInsightsExport) {
-            this.enableInsightsExport = Output.ofNullable(enableInsightsExport);
+            this.enableInsightsExport = Codegen.ofNullable(enableInsightsExport);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(enableInsightsExport);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     @Import(name="migrationSetting")
       private final @Nullable Output<Map<String,String>> migrationSetting;
 
-    public Output<Map<String,String>> getMigrationSetting() {
-        return this.migrationSetting == null ? Output.empty() : this.migrationSetting;
+    public Output<Map<String,String>> migrationSetting() {
+        return this.migrationSetting == null ? Codegen.empty() : this.migrationSetting;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     @Import(name="sourceSetting")
       private final @Nullable Output<Map<String,String>> sourceSetting;
 
-    public Output<Map<String,String>> getSourceSetting() {
-        return this.sourceSetting == null ? Output.empty() : this.sourceSetting;
+    public Output<Map<String,String>> sourceSetting() {
+        return this.sourceSetting == null ? Codegen.empty() : this.sourceSetting;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
-    public Output<String> getTargetDatabaseName() {
-        return this.targetDatabaseName == null ? Output.empty() : this.targetDatabaseName;
+    public Output<String> targetDatabaseName() {
+        return this.targetDatabaseName == null ? Codegen.empty() : this.targetDatabaseName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     @Import(name="targetSetting")
       private final @Nullable Output<Map<String,String>> targetSetting;
 
-    public Output<Map<String,String>> getTargetSetting() {
-        return this.targetSetting == null ? Output.empty() : this.targetSetting;
+    public Output<Map<String,String>> targetSetting() {
+        return this.targetSetting == null ? Codegen.empty() : this.targetSetting;
     }
 
     public MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs(
@@ -88,11 +89,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     }
 
     private MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs() {
-        this.migrationSetting = Output.empty();
-        this.name = Output.empty();
-        this.sourceSetting = Output.empty();
-        this.targetDatabaseName = Output.empty();
-        this.targetSetting = Output.empty();
+        this.migrationSetting = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sourceSetting = Codegen.empty();
+        this.targetDatabaseName = Codegen.empty();
+        this.targetSetting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
             return this;
         }
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
-            this.migrationSetting = Output.ofNullable(migrationSetting);
+            this.migrationSetting = Codegen.ofNullable(migrationSetting);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -136,7 +137,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sourceSetting(@Nullable Output<Map<String,String>> sourceSetting) {
@@ -144,7 +145,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
             return this;
         }
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
-            this.sourceSetting = Output.ofNullable(sourceSetting);
+            this.sourceSetting = Codegen.ofNullable(sourceSetting);
             return this;
         }
         public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
@@ -152,7 +153,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
             return this;
         }
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = Output.ofNullable(targetDatabaseName);
+            this.targetDatabaseName = Codegen.ofNullable(targetDatabaseName);
             return this;
         }
         public Builder targetSetting(@Nullable Output<Map<String,String>> targetSetting) {
@@ -160,7 +161,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
             return this;
         }
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
-            this.targetSetting = Output.ofNullable(targetSetting);
+            this.targetSetting = Codegen.ofNullable(targetSetting);
             return this;
         }        public MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs build() {
             return new MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);

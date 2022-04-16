@@ -36,22 +36,22 @@ public final class EnvironmentConfigSoftwareConfig {
         this.schedulerCount = schedulerCount;
     }
 
-    public Map<String,String> getAirflowConfigOverrides() {
+    public Map<String,String> airflowConfigOverrides() {
         return this.airflowConfigOverrides == null ? Map.of() : this.airflowConfigOverrides;
     }
-    public Map<String,String> getEnvVariables() {
+    public Map<String,String> envVariables() {
         return this.envVariables == null ? Map.of() : this.envVariables;
     }
-    public Optional<String> getImageVersion() {
+    public Optional<String> imageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
-    public Map<String,String> getPypiPackages() {
+    public Map<String,String> pypiPackages() {
         return this.pypiPackages == null ? Map.of() : this.pypiPackages;
     }
-    public Optional<String> getPythonVersion() {
+    public Optional<String> pythonVersion() {
         return Optional.ofNullable(this.pythonVersion);
     }
-    public Optional<Integer> getSchedulerCount() {
+    public Optional<Integer> schedulerCount() {
         return Optional.ofNullable(this.schedulerCount);
     }
 

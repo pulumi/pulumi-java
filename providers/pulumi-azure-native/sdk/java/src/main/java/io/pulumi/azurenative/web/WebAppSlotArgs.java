@@ -12,6 +12,7 @@ import io.pulumi.azurenative.web.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,8 +33,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientAffinityEnabled")
       private final @Nullable Output<Boolean> clientAffinityEnabled;
 
-    public Output<Boolean> getClientAffinityEnabled() {
-        return this.clientAffinityEnabled == null ? Output.empty() : this.clientAffinityEnabled;
+    public Output<Boolean> clientAffinityEnabled() {
+        return this.clientAffinityEnabled == null ? Codegen.empty() : this.clientAffinityEnabled;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertEnabled")
       private final @Nullable Output<Boolean> clientCertEnabled;
 
-    public Output<Boolean> getClientCertEnabled() {
-        return this.clientCertEnabled == null ? Output.empty() : this.clientCertEnabled;
+    public Output<Boolean> clientCertEnabled() {
+        return this.clientCertEnabled == null ? Codegen.empty() : this.clientCertEnabled;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertExclusionPaths")
       private final @Nullable Output<String> clientCertExclusionPaths;
 
-    public Output<String> getClientCertExclusionPaths() {
-        return this.clientCertExclusionPaths == null ? Output.empty() : this.clientCertExclusionPaths;
+    public Output<String> clientCertExclusionPaths() {
+        return this.clientCertExclusionPaths == null ? Codegen.empty() : this.clientCertExclusionPaths;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertMode")
       private final @Nullable Output<ClientCertMode> clientCertMode;
 
-    public Output<ClientCertMode> getClientCertMode() {
-        return this.clientCertMode == null ? Output.empty() : this.clientCertMode;
+    public Output<ClientCertMode> clientCertMode() {
+        return this.clientCertMode == null ? Codegen.empty() : this.clientCertMode;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloningInfo")
       private final @Nullable Output<CloningInfoArgs> cloningInfo;
 
-    public Output<CloningInfoArgs> getCloningInfo() {
-        return this.cloningInfo == null ? Output.empty() : this.cloningInfo;
+    public Output<CloningInfoArgs> cloningInfo() {
+        return this.cloningInfo == null ? Codegen.empty() : this.cloningInfo;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerSize")
       private final @Nullable Output<Integer> containerSize;
 
-    public Output<Integer> getContainerSize() {
-        return this.containerSize == null ? Output.empty() : this.containerSize;
+    public Output<Integer> containerSize() {
+        return this.containerSize == null ? Codegen.empty() : this.containerSize;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customDomainVerificationId")
       private final @Nullable Output<String> customDomainVerificationId;
 
-    public Output<String> getCustomDomainVerificationId() {
-        return this.customDomainVerificationId == null ? Output.empty() : this.customDomainVerificationId;
+    public Output<String> customDomainVerificationId() {
+        return this.customDomainVerificationId == null ? Codegen.empty() : this.customDomainVerificationId;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dailyMemoryTimeQuota")
       private final @Nullable Output<Integer> dailyMemoryTimeQuota;
 
-    public Output<Integer> getDailyMemoryTimeQuota() {
-        return this.dailyMemoryTimeQuota == null ? Output.empty() : this.dailyMemoryTimeQuota;
+    public Output<Integer> dailyMemoryTimeQuota() {
+        return this.dailyMemoryTimeQuota == null ? Codegen.empty() : this.dailyMemoryTimeQuota;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostNameSslStates")
       private final @Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates;
 
-    public Output<List<HostNameSslStateArgs>> getHostNameSslStates() {
-        return this.hostNameSslStates == null ? Output.empty() : this.hostNameSslStates;
+    public Output<List<HostNameSslStateArgs>> hostNameSslStates() {
+        return this.hostNameSslStates == null ? Codegen.empty() : this.hostNameSslStates;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostNamesDisabled")
       private final @Nullable Output<Boolean> hostNamesDisabled;
 
-    public Output<Boolean> getHostNamesDisabled() {
-        return this.hostNamesDisabled == null ? Output.empty() : this.hostNamesDisabled;
+    public Output<Boolean> hostNamesDisabled() {
+        return this.hostNamesDisabled == null ? Codegen.empty() : this.hostNamesDisabled;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostingEnvironmentProfile")
       private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
-    public Output<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
-        return this.hostingEnvironmentProfile == null ? Output.empty() : this.hostingEnvironmentProfile;
+    public Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile() {
+        return this.hostingEnvironmentProfile == null ? Codegen.empty() : this.hostingEnvironmentProfile;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
-    public Output<Boolean> getHttpsOnly() {
-        return this.httpsOnly == null ? Output.empty() : this.httpsOnly;
+    public Output<Boolean> httpsOnly() {
+        return this.httpsOnly == null ? Codegen.empty() : this.httpsOnly;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hyperV")
       private final @Nullable Output<Boolean> hyperV;
 
-    public Output<Boolean> getHyperV() {
-        return this.hyperV == null ? Output.empty() : this.hyperV;
+    public Output<Boolean> hyperV() {
+        return this.hyperV == null ? Codegen.empty() : this.hyperV;
     }
 
     /**
@@ -191,8 +192,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isXenon")
       private final @Nullable Output<Boolean> isXenon;
 
-    public Output<Boolean> getIsXenon() {
-        return this.isXenon == null ? Output.empty() : this.isXenon;
+    public Output<Boolean> isXenon() {
+        return this.isXenon == null ? Codegen.empty() : this.isXenon;
     }
 
     /**
@@ -213,8 +214,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultReferenceIdentity")
       private final @Nullable Output<String> keyVaultReferenceIdentity;
 
-    public Output<String> getKeyVaultReferenceIdentity() {
-        return this.keyVaultReferenceIdentity == null ? Output.empty() : this.keyVaultReferenceIdentity;
+    public Output<String> keyVaultReferenceIdentity() {
+        return this.keyVaultReferenceIdentity == null ? Codegen.empty() : this.keyVaultReferenceIdentity;
     }
 
     /**
@@ -224,8 +225,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -235,8 +236,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -246,7 +247,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -257,8 +258,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redundancyMode")
       private final @Nullable Output<RedundancyMode> redundancyMode;
 
-    public Output<RedundancyMode> getRedundancyMode() {
-        return this.redundancyMode == null ? Output.empty() : this.redundancyMode;
+    public Output<RedundancyMode> redundancyMode() {
+        return this.redundancyMode == null ? Codegen.empty() : this.redundancyMode;
     }
 
     /**
@@ -268,8 +269,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
-        return this.reserved == null ? Output.empty() : this.reserved;
+    public Output<Boolean> reserved() {
+        return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 
     /**
@@ -279,7 +280,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -290,8 +291,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scmSiteAlsoStopped")
       private final @Nullable Output<Boolean> scmSiteAlsoStopped;
 
-    public Output<Boolean> getScmSiteAlsoStopped() {
-        return this.scmSiteAlsoStopped == null ? Output.empty() : this.scmSiteAlsoStopped;
+    public Output<Boolean> scmSiteAlsoStopped() {
+        return this.scmSiteAlsoStopped == null ? Codegen.empty() : this.scmSiteAlsoStopped;
     }
 
     /**
@@ -301,8 +302,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
 
-    public Output<String> getServerFarmId() {
-        return this.serverFarmId == null ? Output.empty() : this.serverFarmId;
+    public Output<String> serverFarmId() {
+        return this.serverFarmId == null ? Codegen.empty() : this.serverFarmId;
     }
 
     /**
@@ -312,8 +313,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteConfig")
       private final @Nullable Output<SiteConfigArgs> siteConfig;
 
-    public Output<SiteConfigArgs> getSiteConfig() {
-        return this.siteConfig == null ? Output.empty() : this.siteConfig;
+    public Output<SiteConfigArgs> siteConfig() {
+        return this.siteConfig == null ? Codegen.empty() : this.siteConfig;
     }
 
     /**
@@ -323,8 +324,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="slot")
       private final @Nullable Output<String> slot;
 
-    public Output<String> getSlot() {
-        return this.slot == null ? Output.empty() : this.slot;
+    public Output<String> slot() {
+        return this.slot == null ? Codegen.empty() : this.slot;
     }
 
     /**
@@ -334,8 +335,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountRequired")
       private final @Nullable Output<Boolean> storageAccountRequired;
 
-    public Output<Boolean> getStorageAccountRequired() {
-        return this.storageAccountRequired == null ? Output.empty() : this.storageAccountRequired;
+    public Output<Boolean> storageAccountRequired() {
+        return this.storageAccountRequired == null ? Codegen.empty() : this.storageAccountRequired;
     }
 
     /**
@@ -345,8 +346,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -357,8 +358,8 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkSubnetId")
       private final @Nullable Output<String> virtualNetworkSubnetId;
 
-    public Output<String> getVirtualNetworkSubnetId() {
-        return this.virtualNetworkSubnetId == null ? Output.empty() : this.virtualNetworkSubnetId;
+    public Output<String> virtualNetworkSubnetId() {
+        return this.virtualNetworkSubnetId == null ? Codegen.empty() : this.virtualNetworkSubnetId;
     }
 
     public WebAppSlotArgs(
@@ -405,17 +406,17 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         this.hostNamesDisabled = hostNamesDisabled;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
         this.httpsOnly = httpsOnly;
-        this.hyperV = hyperV == null ? Output.ofNullable(false) : hyperV;
+        this.hyperV = hyperV == null ? Codegen.ofNullable(false) : hyperV;
         this.identity = identity;
-        this.isXenon = isXenon == null ? Output.ofNullable(false) : isXenon;
+        this.isXenon = isXenon == null ? Codegen.ofNullable(false) : isXenon;
         this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
         this.kind = kind;
         this.location = location;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.redundancyMode = redundancyMode;
-        this.reserved = reserved == null ? Output.ofNullable(false) : reserved;
+        this.reserved = reserved == null ? Codegen.ofNullable(false) : reserved;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scmSiteAlsoStopped = scmSiteAlsoStopped == null ? Output.ofNullable(false) : scmSiteAlsoStopped;
+        this.scmSiteAlsoStopped = scmSiteAlsoStopped == null ? Codegen.ofNullable(false) : scmSiteAlsoStopped;
         this.serverFarmId = serverFarmId;
         this.siteConfig = siteConfig;
         this.slot = slot;
@@ -425,36 +426,36 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAppSlotArgs() {
-        this.clientAffinityEnabled = Output.empty();
-        this.clientCertEnabled = Output.empty();
-        this.clientCertExclusionPaths = Output.empty();
-        this.clientCertMode = Output.empty();
-        this.cloningInfo = Output.empty();
-        this.containerSize = Output.empty();
-        this.customDomainVerificationId = Output.empty();
-        this.dailyMemoryTimeQuota = Output.empty();
-        this.enabled = Output.empty();
-        this.hostNameSslStates = Output.empty();
-        this.hostNamesDisabled = Output.empty();
-        this.hostingEnvironmentProfile = Output.empty();
-        this.httpsOnly = Output.empty();
-        this.hyperV = Output.empty();
-        this.identity = Output.empty();
-        this.isXenon = Output.empty();
-        this.keyVaultReferenceIdentity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.redundancyMode = Output.empty();
-        this.reserved = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scmSiteAlsoStopped = Output.empty();
-        this.serverFarmId = Output.empty();
-        this.siteConfig = Output.empty();
-        this.slot = Output.empty();
-        this.storageAccountRequired = Output.empty();
-        this.tags = Output.empty();
-        this.virtualNetworkSubnetId = Output.empty();
+        this.clientAffinityEnabled = Codegen.empty();
+        this.clientCertEnabled = Codegen.empty();
+        this.clientCertExclusionPaths = Codegen.empty();
+        this.clientCertMode = Codegen.empty();
+        this.cloningInfo = Codegen.empty();
+        this.containerSize = Codegen.empty();
+        this.customDomainVerificationId = Codegen.empty();
+        this.dailyMemoryTimeQuota = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.hostNameSslStates = Codegen.empty();
+        this.hostNamesDisabled = Codegen.empty();
+        this.hostingEnvironmentProfile = Codegen.empty();
+        this.httpsOnly = Codegen.empty();
+        this.hyperV = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.isXenon = Codegen.empty();
+        this.keyVaultReferenceIdentity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.redundancyMode = Codegen.empty();
+        this.reserved = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scmSiteAlsoStopped = Codegen.empty();
+        this.serverFarmId = Codegen.empty();
+        this.siteConfig = Codegen.empty();
+        this.slot = Codegen.empty();
+        this.storageAccountRequired = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualNetworkSubnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -540,7 +541,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientAffinityEnabled(@Nullable Boolean clientAffinityEnabled) {
-            this.clientAffinityEnabled = Output.ofNullable(clientAffinityEnabled);
+            this.clientAffinityEnabled = Codegen.ofNullable(clientAffinityEnabled);
             return this;
         }
         public Builder clientCertEnabled(@Nullable Output<Boolean> clientCertEnabled) {
@@ -548,7 +549,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
-            this.clientCertEnabled = Output.ofNullable(clientCertEnabled);
+            this.clientCertEnabled = Codegen.ofNullable(clientCertEnabled);
             return this;
         }
         public Builder clientCertExclusionPaths(@Nullable Output<String> clientCertExclusionPaths) {
@@ -556,7 +557,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertExclusionPaths(@Nullable String clientCertExclusionPaths) {
-            this.clientCertExclusionPaths = Output.ofNullable(clientCertExclusionPaths);
+            this.clientCertExclusionPaths = Codegen.ofNullable(clientCertExclusionPaths);
             return this;
         }
         public Builder clientCertMode(@Nullable Output<ClientCertMode> clientCertMode) {
@@ -564,7 +565,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertMode(@Nullable ClientCertMode clientCertMode) {
-            this.clientCertMode = Output.ofNullable(clientCertMode);
+            this.clientCertMode = Codegen.ofNullable(clientCertMode);
             return this;
         }
         public Builder cloningInfo(@Nullable Output<CloningInfoArgs> cloningInfo) {
@@ -572,7 +573,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloningInfo(@Nullable CloningInfoArgs cloningInfo) {
-            this.cloningInfo = Output.ofNullable(cloningInfo);
+            this.cloningInfo = Codegen.ofNullable(cloningInfo);
             return this;
         }
         public Builder containerSize(@Nullable Output<Integer> containerSize) {
@@ -580,7 +581,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerSize(@Nullable Integer containerSize) {
-            this.containerSize = Output.ofNullable(containerSize);
+            this.containerSize = Codegen.ofNullable(containerSize);
             return this;
         }
         public Builder customDomainVerificationId(@Nullable Output<String> customDomainVerificationId) {
@@ -588,7 +589,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDomainVerificationId(@Nullable String customDomainVerificationId) {
-            this.customDomainVerificationId = Output.ofNullable(customDomainVerificationId);
+            this.customDomainVerificationId = Codegen.ofNullable(customDomainVerificationId);
             return this;
         }
         public Builder dailyMemoryTimeQuota(@Nullable Output<Integer> dailyMemoryTimeQuota) {
@@ -596,7 +597,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dailyMemoryTimeQuota(@Nullable Integer dailyMemoryTimeQuota) {
-            this.dailyMemoryTimeQuota = Output.ofNullable(dailyMemoryTimeQuota);
+            this.dailyMemoryTimeQuota = Codegen.ofNullable(dailyMemoryTimeQuota);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -604,7 +605,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder hostNameSslStates(@Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates) {
@@ -612,7 +613,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostNameSslStates(@Nullable List<HostNameSslStateArgs> hostNameSslStates) {
-            this.hostNameSslStates = Output.ofNullable(hostNameSslStates);
+            this.hostNameSslStates = Codegen.ofNullable(hostNameSslStates);
             return this;
         }
         public Builder hostNameSslStates(HostNameSslStateArgs... hostNameSslStates) {
@@ -623,7 +624,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostNamesDisabled(@Nullable Boolean hostNamesDisabled) {
-            this.hostNamesDisabled = Output.ofNullable(hostNamesDisabled);
+            this.hostNamesDisabled = Codegen.ofNullable(hostNamesDisabled);
             return this;
         }
         public Builder hostingEnvironmentProfile(@Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
@@ -631,7 +632,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
-            this.hostingEnvironmentProfile = Output.ofNullable(hostingEnvironmentProfile);
+            this.hostingEnvironmentProfile = Codegen.ofNullable(hostingEnvironmentProfile);
             return this;
         }
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
@@ -639,7 +640,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            this.httpsOnly = Output.ofNullable(httpsOnly);
+            this.httpsOnly = Codegen.ofNullable(httpsOnly);
             return this;
         }
         public Builder hyperV(@Nullable Output<Boolean> hyperV) {
@@ -647,7 +648,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hyperV(@Nullable Boolean hyperV) {
-            this.hyperV = Output.ofNullable(hyperV);
+            this.hyperV = Codegen.ofNullable(hyperV);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -655,7 +656,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder isXenon(@Nullable Output<Boolean> isXenon) {
@@ -663,7 +664,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isXenon(@Nullable Boolean isXenon) {
-            this.isXenon = Output.ofNullable(isXenon);
+            this.isXenon = Codegen.ofNullable(isXenon);
             return this;
         }
         public Builder keyVaultReferenceIdentity(@Nullable Output<String> keyVaultReferenceIdentity) {
@@ -671,7 +672,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
-            this.keyVaultReferenceIdentity = Output.ofNullable(keyVaultReferenceIdentity);
+            this.keyVaultReferenceIdentity = Codegen.ofNullable(keyVaultReferenceIdentity);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -679,7 +680,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -687,7 +688,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -703,7 +704,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redundancyMode(@Nullable RedundancyMode redundancyMode) {
-            this.redundancyMode = Output.ofNullable(redundancyMode);
+            this.redundancyMode = Codegen.ofNullable(redundancyMode);
             return this;
         }
         public Builder reserved(@Nullable Output<Boolean> reserved) {
@@ -711,7 +712,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Output.ofNullable(reserved);
+            this.reserved = Codegen.ofNullable(reserved);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -727,7 +728,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scmSiteAlsoStopped(@Nullable Boolean scmSiteAlsoStopped) {
-            this.scmSiteAlsoStopped = Output.ofNullable(scmSiteAlsoStopped);
+            this.scmSiteAlsoStopped = Codegen.ofNullable(scmSiteAlsoStopped);
             return this;
         }
         public Builder serverFarmId(@Nullable Output<String> serverFarmId) {
@@ -735,7 +736,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverFarmId(@Nullable String serverFarmId) {
-            this.serverFarmId = Output.ofNullable(serverFarmId);
+            this.serverFarmId = Codegen.ofNullable(serverFarmId);
             return this;
         }
         public Builder siteConfig(@Nullable Output<SiteConfigArgs> siteConfig) {
@@ -743,7 +744,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder siteConfig(@Nullable SiteConfigArgs siteConfig) {
-            this.siteConfig = Output.ofNullable(siteConfig);
+            this.siteConfig = Codegen.ofNullable(siteConfig);
             return this;
         }
         public Builder slot(@Nullable Output<String> slot) {
@@ -751,7 +752,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slot(@Nullable String slot) {
-            this.slot = Output.ofNullable(slot);
+            this.slot = Codegen.ofNullable(slot);
             return this;
         }
         public Builder storageAccountRequired(@Nullable Output<Boolean> storageAccountRequired) {
@@ -759,7 +760,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountRequired(@Nullable Boolean storageAccountRequired) {
-            this.storageAccountRequired = Output.ofNullable(storageAccountRequired);
+            this.storageAccountRequired = Codegen.ofNullable(storageAccountRequired);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -767,7 +768,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualNetworkSubnetId(@Nullable Output<String> virtualNetworkSubnetId) {
@@ -775,7 +776,7 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
-            this.virtualNetworkSubnetId = Output.ofNullable(virtualNetworkSubnetId);
+            this.virtualNetworkSubnetId = Codegen.ofNullable(virtualNetworkSubnetId);
             return this;
         }        public WebAppSlotArgs build() {
             return new WebAppSlotArgs(clientAffinityEnabled, clientCertEnabled, clientCertExclusionPaths, clientCertMode, cloningInfo, containerSize, customDomainVerificationId, dailyMemoryTimeQuota, enabled, hostNameSslStates, hostNamesDisabled, hostingEnvironmentProfile, httpsOnly, hyperV, identity, isXenon, keyVaultReferenceIdentity, kind, location, name, redundancyMode, reserved, resourceGroupName, scmSiteAlsoStopped, serverFarmId, siteConfig, slot, storageAccountRequired, tags, virtualNetworkSubnetId);

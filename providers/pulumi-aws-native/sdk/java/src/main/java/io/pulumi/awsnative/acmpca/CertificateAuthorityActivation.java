@@ -8,6 +8,7 @@ import io.pulumi.awsnative.acmpca.CertificateAuthorityActivationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * @return Certificate Authority certificate that will be installed in the Certificate Authority.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -42,7 +43,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * @return Arn of the Certificate Authority.
      * 
      */
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
@@ -56,7 +57,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * @return Certificate chain for the Certificate Authority certificate.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateChain() {
+    public Output</* @Nullable */ String> certificateChain() {
         return this.certificateChain;
     }
     /**
@@ -70,7 +71,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * @return The complete certificate chain, including the Certificate Authority certificate.
      * 
      */
-    public Output<String> getCompleteCertificateChain() {
+    public Output<String> completeCertificateChain() {
         return this.completeCertificateChain;
     }
     /**
@@ -84,7 +85,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * @return The status of the Certificate Authority.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
 
@@ -110,7 +111,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateAuthorityActivation(String name, CertificateAuthorityActivationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:acmpca:CertificateAuthorityActivation", name, args == null ? CertificateAuthorityActivationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:acmpca:CertificateAuthorityActivation", name, args == null ? CertificateAuthorityActivationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateAuthorityActivation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

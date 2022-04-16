@@ -27,7 +27,7 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="accessCredential")
       private final @Nullable SSISAccessCredentialResponse accessCredential;
 
-    public Optional<SSISAccessCredentialResponse> getAccessCredential() {
+    public Optional<SSISAccessCredentialResponse> accessCredential() {
         return this.accessCredential == null ? Optional.empty() : Optional.ofNullable(this.accessCredential);
     }
 
@@ -38,7 +38,7 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="logPath", required=true)
       private final Object logPath;
 
-    public Object getLogPath() {
+    public Object logPath() {
         return this.logPath;
     }
 
@@ -49,7 +49,7 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="logRefreshInterval")
       private final @Nullable Object logRefreshInterval;
 
-    public Optional<Object> getLogRefreshInterval() {
+    public Optional<Object> logRefreshInterval() {
         return this.logRefreshInterval == null ? Optional.empty() : Optional.ofNullable(this.logRefreshInterval);
     }
 
@@ -60,7 +60,7 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

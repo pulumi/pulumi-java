@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.ServiceArgs;
 import io.pulumi.gcp.projects.inputs.ServiceState;
@@ -60,7 +61,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * services depend on this service when destroying it.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableDependentServices() {
+    public Output</* @Nullable */ Boolean> disableDependentServices() {
         return this.disableDependentServices;
     }
     /**
@@ -74,7 +75,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return If true, disable the service when the resource is destroyed. Defaults to true. May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableOnDestroy() {
+    public Output</* @Nullable */ Boolean> disableOnDestroy() {
         return this.disableOnDestroy;
     }
     /**
@@ -90,7 +91,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -104,7 +105,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The service to enable.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -130,7 +131,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable ServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

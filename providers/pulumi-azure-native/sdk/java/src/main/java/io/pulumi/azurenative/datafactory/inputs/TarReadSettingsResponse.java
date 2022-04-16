@@ -26,7 +26,7 @@ public final class TarReadSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="preserveCompressionFileNameAsFolder")
       private final @Nullable Object preserveCompressionFileNameAsFolder;
 
-    public Optional<Object> getPreserveCompressionFileNameAsFolder() {
+    public Optional<Object> preserveCompressionFileNameAsFolder() {
         return this.preserveCompressionFileNameAsFolder == null ? Optional.empty() : Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
 
@@ -38,7 +38,7 @@ public final class TarReadSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

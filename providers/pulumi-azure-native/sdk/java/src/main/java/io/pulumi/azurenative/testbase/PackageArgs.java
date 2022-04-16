@@ -7,6 +7,7 @@ import io.pulumi.azurenative.testbase.inputs.TargetOSInfoArgs;
 import io.pulumi.azurenative.testbase.inputs.TestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -36,7 +37,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobPath", required=true)
       private final Output<String> blobPath;
 
-    public Output<String> getBlobPath() {
+    public Output<String> blobPath() {
         return this.blobPath;
     }
 
@@ -47,7 +48,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flightingRing", required=true)
       private final Output<String> flightingRing;
 
-    public Output<String> getFlightingRing() {
+    public Output<String> flightingRing() {
         return this.flightingRing;
     }
 
@@ -58,8 +59,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+    public Output<String> packageName() {
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetOSList", required=true)
       private final Output<List<TargetOSInfoArgs>> targetOSList;
 
-    public Output<List<TargetOSInfoArgs>> getTargetOSList() {
+    public Output<List<TargetOSInfoArgs>> targetOSList() {
         return this.targetOSList;
     }
 
@@ -113,7 +114,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
-    public Output<String> getTestBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -124,7 +125,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tests", required=true)
       private final Output<List<TestArgs>> tests;
 
-    public Output<List<TestArgs>> getTests() {
+    public Output<List<TestArgs>> tests() {
         return this.tests;
     }
 
@@ -135,7 +136,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -165,17 +166,17 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageArgs() {
-        this.applicationName = Output.empty();
-        this.blobPath = Output.empty();
-        this.flightingRing = Output.empty();
-        this.location = Output.empty();
-        this.packageName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.targetOSList = Output.empty();
-        this.testBaseAccountName = Output.empty();
-        this.tests = Output.empty();
-        this.version = Output.empty();
+        this.applicationName = Codegen.empty();
+        this.blobPath = Codegen.empty();
+        this.flightingRing = Codegen.empty();
+        this.location = Codegen.empty();
+        this.packageName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetOSList = Codegen.empty();
+        this.testBaseAccountName = Codegen.empty();
+        this.tests = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -247,7 +248,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder packageName(@Nullable Output<String> packageName) {
@@ -255,7 +256,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -271,7 +272,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetOSList(Output<List<TargetOSInfoArgs>> targetOSList) {

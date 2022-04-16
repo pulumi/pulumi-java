@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,13 +34,13 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource name for the suite definition.
      * 
      */
-    public Output<String> getSuiteDefinitionArn() {
+    public Output<String> suiteDefinitionArn() {
         return this.suiteDefinitionArn;
     }
     @Export(name="suiteDefinitionConfiguration", type=SuiteDefinitionConfigurationProperties.class, parameters={})
     private Output<SuiteDefinitionConfigurationProperties> suiteDefinitionConfiguration;
 
-    public Output<SuiteDefinitionConfigurationProperties> getSuiteDefinitionConfiguration() {
+    public Output<SuiteDefinitionConfigurationProperties> suiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
     }
     /**
@@ -53,7 +54,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the suite definition.
      * 
      */
-    public Output<String> getSuiteDefinitionId() {
+    public Output<String> suiteDefinitionId() {
         return this.suiteDefinitionId;
     }
     /**
@@ -67,7 +68,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * @return The suite definition version of a test suite.
      * 
      */
-    public Output<String> getSuiteDefinitionVersion() {
+    public Output<String> suiteDefinitionVersion() {
         return this.suiteDefinitionVersion;
     }
     /**
@@ -81,7 +82,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<SuiteDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<SuiteDefinitionTag>> tags() {
         return this.tags;
     }
 
@@ -107,7 +108,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SuiteDefinition(String name, SuiteDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotcoredeviceadvisor:SuiteDefinition", name, args == null ? SuiteDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotcoredeviceadvisor:SuiteDefinition", name, args == null ? SuiteDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SuiteDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

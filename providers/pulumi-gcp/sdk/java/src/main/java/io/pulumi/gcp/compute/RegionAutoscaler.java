@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionAutoscalerArgs;
 import io.pulumi.gcp.compute.inputs.RegionAutoscalerState;
@@ -72,7 +73,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<RegionAutoscalerAutoscalingPolicy> getAutoscalingPolicy() {
+    public Output<RegionAutoscalerAutoscalingPolicy> autoscalingPolicy() {
         return this.autoscalingPolicy;
     }
     /**
@@ -86,7 +87,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -100,7 +101,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -114,7 +115,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * @return The identifier for this object. Format specified above.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +131,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -144,7 +145,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * @return URL of the region where the instance group resides.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -158,7 +159,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -176,7 +177,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -202,7 +203,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionAutoscaler(String name, RegionAutoscalerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionAutoscaler:RegionAutoscaler", name, args == null ? RegionAutoscalerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionAutoscaler:RegionAutoscaler", name, args == null ? RegionAutoscalerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionAutoscaler(String name, Output<String> id, @Nullable RegionAutoscalerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

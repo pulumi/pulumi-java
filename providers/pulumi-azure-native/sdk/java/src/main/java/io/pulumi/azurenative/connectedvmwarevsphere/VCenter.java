@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the connection status to the vCenter.
      * 
      */
-    public Output<String> getConnectionStatus() {
+    public Output<String> connectionStatus() {
         return this.connectionStatus;
     }
     /**
@@ -61,7 +62,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Username / Password Credentials to connect to vcenter.
      * 
      */
-    public Output</* @Nullable */ VICredentialResponse> getCredentials() {
+    public Output</* @Nullable */ VICredentialResponse> credentials() {
         return this.credentials;
     }
     /**
@@ -75,7 +76,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    public Output<String> getCustomResourceName() {
+    public Output<String> customResourceName() {
         return this.customResourceName;
     }
     /**
@@ -89,7 +90,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the extended location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -103,7 +104,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the FQDN/IPAddress of the vCenter.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -117,7 +118,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the instance UUID of the vCenter.
      * 
      */
-    public Output<String> getInstanceUuid() {
+    public Output<String> instanceUuid() {
         return this.instanceUuid;
     }
     /**
@@ -131,7 +132,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -145,7 +146,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -159,7 +160,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -173,7 +174,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the port of the vCenter.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -187,7 +188,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -201,7 +202,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return The resource status information.
      * 
      */
-    public Output<List<ResourceStatusResponse>> getStatuses() {
+    public Output<List<ResourceStatusResponse>> statuses() {
         return this.statuses;
     }
     /**
@@ -215,7 +216,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -229,7 +230,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -243,7 +244,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -257,7 +258,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a unique identifier for this resource.
      * 
      */
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid;
     }
     /**
@@ -271,7 +272,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the version of the vCenter.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -297,7 +298,7 @@ public class VCenter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VCenter(String name, VCenterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:connectedvmwarevsphere:VCenter", name, args == null ? VCenterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:connectedvmwarevsphere:VCenter", name, args == null ? VCenterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VCenter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

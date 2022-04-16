@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -32,7 +33,7 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     @Import(name="provisionedConcurrentExecutions", required=true)
       private final Output<Integer> provisionedConcurrentExecutions;
 
-    public Output<Integer> getProvisionedConcurrentExecutions() {
+    public Output<Integer> provisionedConcurrentExecutions() {
         return this.provisionedConcurrentExecutions;
     }
 
@@ -43,7 +44,7 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     @Import(name="qualifier", required=true)
       private final Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier;
     }
 
@@ -57,9 +58,9 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     }
 
     private ProvisionedConcurrencyConfigArgs() {
-        this.functionName = Output.empty();
-        this.provisionedConcurrentExecutions = Output.empty();
-        this.qualifier = Output.empty();
+        this.functionName = Codegen.empty();
+        this.provisionedConcurrentExecutions = Codegen.empty();
+        this.qualifier = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1.enums.VersionInboundServicesItem;
 import io.pulumi.googlenative.appengine_v1.enums.VersionServingStatus;
 import io.pulumi.googlenative.appengine_v1.inputs.ApiConfigHandlerArgs;
@@ -42,14 +43,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiConfig")
       private final @Nullable Output<ApiConfigHandlerArgs> apiConfig;
 
-    public Output<ApiConfigHandlerArgs> getApiConfig() {
-        return this.apiConfig == null ? Output.empty() : this.apiConfig;
+    public Output<ApiConfigHandlerArgs> apiConfig() {
+        return this.apiConfig == null ? Codegen.empty() : this.apiConfig;
     }
 
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -60,8 +61,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automaticScaling")
       private final @Nullable Output<AutomaticScalingArgs> automaticScaling;
 
-    public Output<AutomaticScalingArgs> getAutomaticScaling() {
-        return this.automaticScaling == null ? Output.empty() : this.automaticScaling;
+    public Output<AutomaticScalingArgs> automaticScaling() {
+        return this.automaticScaling == null ? Codegen.empty() : this.automaticScaling;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="basicScaling")
       private final @Nullable Output<BasicScalingArgs> basicScaling;
 
-    public Output<BasicScalingArgs> getBasicScaling() {
-        return this.basicScaling == null ? Output.empty() : this.basicScaling;
+    public Output<BasicScalingArgs> basicScaling() {
+        return this.basicScaling == null ? Codegen.empty() : this.basicScaling;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="betaSettings")
       private final @Nullable Output<Map<String,String>> betaSettings;
 
-    public Output<Map<String,String>> getBetaSettings() {
-        return this.betaSettings == null ? Output.empty() : this.betaSettings;
+    public Output<Map<String,String>> betaSettings() {
+        return this.betaSettings == null ? Codegen.empty() : this.betaSettings;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildEnvVariables")
       private final @Nullable Output<Map<String,String>> buildEnvVariables;
 
-    public Output<Map<String,String>> getBuildEnvVariables() {
-        return this.buildEnvVariables == null ? Output.empty() : this.buildEnvVariables;
+    public Output<Map<String,String>> buildEnvVariables() {
+        return this.buildEnvVariables == null ? Codegen.empty() : this.buildEnvVariables;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultExpiration")
       private final @Nullable Output<String> defaultExpiration;
 
-    public Output<String> getDefaultExpiration() {
-        return this.defaultExpiration == null ? Output.empty() : this.defaultExpiration;
+    public Output<String> defaultExpiration() {
+        return this.defaultExpiration == null ? Codegen.empty() : this.defaultExpiration;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployment")
       private final @Nullable Output<DeploymentArgs> deployment;
 
-    public Output<DeploymentArgs> getDeployment() {
-        return this.deployment == null ? Output.empty() : this.deployment;
+    public Output<DeploymentArgs> deployment() {
+        return this.deployment == null ? Codegen.empty() : this.deployment;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointsApiService")
       private final @Nullable Output<EndpointsApiServiceArgs> endpointsApiService;
 
-    public Output<EndpointsApiServiceArgs> getEndpointsApiService() {
-        return this.endpointsApiService == null ? Output.empty() : this.endpointsApiService;
+    public Output<EndpointsApiServiceArgs> endpointsApiService() {
+        return this.endpointsApiService == null ? Codegen.empty() : this.endpointsApiService;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entrypoint")
       private final @Nullable Output<EntrypointArgs> entrypoint;
 
-    public Output<EntrypointArgs> getEntrypoint() {
-        return this.entrypoint == null ? Output.empty() : this.entrypoint;
+    public Output<EntrypointArgs> entrypoint() {
+        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<String> env;
 
-    public Output<String> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+    public Output<String> env() {
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
-    public Output<Map<String,String>> getEnvVariables() {
-        return this.envVariables == null ? Output.empty() : this.envVariables;
+    public Output<Map<String,String>> envVariables() {
+        return this.envVariables == null ? Codegen.empty() : this.envVariables;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorHandlers")
       private final @Nullable Output<List<ErrorHandlerArgs>> errorHandlers;
 
-    public Output<List<ErrorHandlerArgs>> getErrorHandlers() {
-        return this.errorHandlers == null ? Output.empty() : this.errorHandlers;
+    public Output<List<ErrorHandlerArgs>> errorHandlers() {
+        return this.errorHandlers == null ? Codegen.empty() : this.errorHandlers;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="handlers")
       private final @Nullable Output<List<UrlMapArgs>> handlers;
 
-    public Output<List<UrlMapArgs>> getHandlers() {
-        return this.handlers == null ? Output.empty() : this.handlers;
+    public Output<List<UrlMapArgs>> handlers() {
+        return this.handlers == null ? Codegen.empty() : this.handlers;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheck")
       private final @Nullable Output<HealthCheckArgs> healthCheck;
 
-    public Output<HealthCheckArgs> getHealthCheck() {
-        return this.healthCheck == null ? Output.empty() : this.healthCheck;
+    public Output<HealthCheckArgs> healthCheck() {
+        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
     /**
@@ -203,8 +204,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -214,8 +215,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inboundServices")
       private final @Nullable Output<List<VersionInboundServicesItem>> inboundServices;
 
-    public Output<List<VersionInboundServicesItem>> getInboundServices() {
-        return this.inboundServices == null ? Output.empty() : this.inboundServices;
+    public Output<List<VersionInboundServicesItem>> inboundServices() {
+        return this.inboundServices == null ? Codegen.empty() : this.inboundServices;
     }
 
     /**
@@ -225,8 +226,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceClass")
       private final @Nullable Output<String> instanceClass;
 
-    public Output<String> getInstanceClass() {
-        return this.instanceClass == null ? Output.empty() : this.instanceClass;
+    public Output<String> instanceClass() {
+        return this.instanceClass == null ? Codegen.empty() : this.instanceClass;
     }
 
     /**
@@ -236,8 +237,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="libraries")
       private final @Nullable Output<List<LibraryArgs>> libraries;
 
-    public Output<List<LibraryArgs>> getLibraries() {
-        return this.libraries == null ? Output.empty() : this.libraries;
+    public Output<List<LibraryArgs>> libraries() {
+        return this.libraries == null ? Codegen.empty() : this.libraries;
     }
 
     /**
@@ -247,8 +248,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="livenessCheck")
       private final @Nullable Output<LivenessCheckArgs> livenessCheck;
 
-    public Output<LivenessCheckArgs> getLivenessCheck() {
-        return this.livenessCheck == null ? Output.empty() : this.livenessCheck;
+    public Output<LivenessCheckArgs> livenessCheck() {
+        return this.livenessCheck == null ? Codegen.empty() : this.livenessCheck;
     }
 
     /**
@@ -258,8 +259,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manualScaling")
       private final @Nullable Output<ManualScalingArgs> manualScaling;
 
-    public Output<ManualScalingArgs> getManualScaling() {
-        return this.manualScaling == null ? Output.empty() : this.manualScaling;
+    public Output<ManualScalingArgs> manualScaling() {
+        return this.manualScaling == null ? Codegen.empty() : this.manualScaling;
     }
 
     /**
@@ -269,8 +270,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<NetworkArgs> network;
 
-    public Output<NetworkArgs> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<NetworkArgs> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -280,8 +281,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nobuildFilesRegex")
       private final @Nullable Output<String> nobuildFilesRegex;
 
-    public Output<String> getNobuildFilesRegex() {
-        return this.nobuildFilesRegex == null ? Output.empty() : this.nobuildFilesRegex;
+    public Output<String> nobuildFilesRegex() {
+        return this.nobuildFilesRegex == null ? Codegen.empty() : this.nobuildFilesRegex;
     }
 
     /**
@@ -291,8 +292,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readinessCheck")
       private final @Nullable Output<ReadinessCheckArgs> readinessCheck;
 
-    public Output<ReadinessCheckArgs> getReadinessCheck() {
-        return this.readinessCheck == null ? Output.empty() : this.readinessCheck;
+    public Output<ReadinessCheckArgs> readinessCheck() {
+        return this.readinessCheck == null ? Codegen.empty() : this.readinessCheck;
     }
 
     /**
@@ -302,8 +303,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<ResourcesArgs> resources;
 
-    public Output<ResourcesArgs> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<ResourcesArgs> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -313,8 +314,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
-    public Output<String> getRuntime() {
-        return this.runtime == null ? Output.empty() : this.runtime;
+    public Output<String> runtime() {
+        return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
     /**
@@ -324,8 +325,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeApiVersion")
       private final @Nullable Output<String> runtimeApiVersion;
 
-    public Output<String> getRuntimeApiVersion() {
-        return this.runtimeApiVersion == null ? Output.empty() : this.runtimeApiVersion;
+    public Output<String> runtimeApiVersion() {
+        return this.runtimeApiVersion == null ? Codegen.empty() : this.runtimeApiVersion;
     }
 
     /**
@@ -335,8 +336,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeChannel")
       private final @Nullable Output<String> runtimeChannel;
 
-    public Output<String> getRuntimeChannel() {
-        return this.runtimeChannel == null ? Output.empty() : this.runtimeChannel;
+    public Output<String> runtimeChannel() {
+        return this.runtimeChannel == null ? Codegen.empty() : this.runtimeChannel;
     }
 
     /**
@@ -346,8 +347,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeMainExecutablePath")
       private final @Nullable Output<String> runtimeMainExecutablePath;
 
-    public Output<String> getRuntimeMainExecutablePath() {
-        return this.runtimeMainExecutablePath == null ? Output.empty() : this.runtimeMainExecutablePath;
+    public Output<String> runtimeMainExecutablePath() {
+        return this.runtimeMainExecutablePath == null ? Codegen.empty() : this.runtimeMainExecutablePath;
     }
 
     /**
@@ -357,14 +358,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -375,8 +376,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servingStatus")
       private final @Nullable Output<VersionServingStatus> servingStatus;
 
-    public Output<VersionServingStatus> getServingStatus() {
-        return this.servingStatus == null ? Output.empty() : this.servingStatus;
+    public Output<VersionServingStatus> servingStatus() {
+        return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
     }
 
     /**
@@ -386,8 +387,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threadsafe")
       private final @Nullable Output<Boolean> threadsafe;
 
-    public Output<Boolean> getThreadsafe() {
-        return this.threadsafe == null ? Output.empty() : this.threadsafe;
+    public Output<Boolean> threadsafe() {
+        return this.threadsafe == null ? Codegen.empty() : this.threadsafe;
     }
 
     /**
@@ -397,8 +398,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vm")
       private final @Nullable Output<Boolean> vm;
 
-    public Output<Boolean> getVm() {
-        return this.vm == null ? Output.empty() : this.vm;
+    public Output<Boolean> vm() {
+        return this.vm == null ? Codegen.empty() : this.vm;
     }
 
     /**
@@ -408,8 +409,8 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcAccessConnector")
       private final @Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector;
 
-    public Output<VpcAccessConnectorArgs> getVpcAccessConnector() {
-        return this.vpcAccessConnector == null ? Output.empty() : this.vpcAccessConnector;
+    public Output<VpcAccessConnectorArgs> vpcAccessConnector() {
+        return this.vpcAccessConnector == null ? Codegen.empty() : this.vpcAccessConnector;
     }
 
     public VersionArgs(
@@ -486,41 +487,41 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VersionArgs() {
-        this.apiConfig = Output.empty();
-        this.appId = Output.empty();
-        this.automaticScaling = Output.empty();
-        this.basicScaling = Output.empty();
-        this.betaSettings = Output.empty();
-        this.buildEnvVariables = Output.empty();
-        this.defaultExpiration = Output.empty();
-        this.deployment = Output.empty();
-        this.endpointsApiService = Output.empty();
-        this.entrypoint = Output.empty();
-        this.env = Output.empty();
-        this.envVariables = Output.empty();
-        this.errorHandlers = Output.empty();
-        this.handlers = Output.empty();
-        this.healthCheck = Output.empty();
-        this.id = Output.empty();
-        this.inboundServices = Output.empty();
-        this.instanceClass = Output.empty();
-        this.libraries = Output.empty();
-        this.livenessCheck = Output.empty();
-        this.manualScaling = Output.empty();
-        this.network = Output.empty();
-        this.nobuildFilesRegex = Output.empty();
-        this.readinessCheck = Output.empty();
-        this.resources = Output.empty();
-        this.runtime = Output.empty();
-        this.runtimeApiVersion = Output.empty();
-        this.runtimeChannel = Output.empty();
-        this.runtimeMainExecutablePath = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.serviceId = Output.empty();
-        this.servingStatus = Output.empty();
-        this.threadsafe = Output.empty();
-        this.vm = Output.empty();
-        this.vpcAccessConnector = Output.empty();
+        this.apiConfig = Codegen.empty();
+        this.appId = Codegen.empty();
+        this.automaticScaling = Codegen.empty();
+        this.basicScaling = Codegen.empty();
+        this.betaSettings = Codegen.empty();
+        this.buildEnvVariables = Codegen.empty();
+        this.defaultExpiration = Codegen.empty();
+        this.deployment = Codegen.empty();
+        this.endpointsApiService = Codegen.empty();
+        this.entrypoint = Codegen.empty();
+        this.env = Codegen.empty();
+        this.envVariables = Codegen.empty();
+        this.errorHandlers = Codegen.empty();
+        this.handlers = Codegen.empty();
+        this.healthCheck = Codegen.empty();
+        this.id = Codegen.empty();
+        this.inboundServices = Codegen.empty();
+        this.instanceClass = Codegen.empty();
+        this.libraries = Codegen.empty();
+        this.livenessCheck = Codegen.empty();
+        this.manualScaling = Codegen.empty();
+        this.network = Codegen.empty();
+        this.nobuildFilesRegex = Codegen.empty();
+        this.readinessCheck = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.runtime = Codegen.empty();
+        this.runtimeApiVersion = Codegen.empty();
+        this.runtimeChannel = Codegen.empty();
+        this.runtimeMainExecutablePath = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.serviceId = Codegen.empty();
+        this.servingStatus = Codegen.empty();
+        this.threadsafe = Codegen.empty();
+        this.vm = Codegen.empty();
+        this.vpcAccessConnector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -616,7 +617,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiConfig(@Nullable ApiConfigHandlerArgs apiConfig) {
-            this.apiConfig = Output.ofNullable(apiConfig);
+            this.apiConfig = Codegen.ofNullable(apiConfig);
             return this;
         }
         public Builder appId(Output<String> appId) {
@@ -632,7 +633,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automaticScaling(@Nullable AutomaticScalingArgs automaticScaling) {
-            this.automaticScaling = Output.ofNullable(automaticScaling);
+            this.automaticScaling = Codegen.ofNullable(automaticScaling);
             return this;
         }
         public Builder basicScaling(@Nullable Output<BasicScalingArgs> basicScaling) {
@@ -640,7 +641,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder basicScaling(@Nullable BasicScalingArgs basicScaling) {
-            this.basicScaling = Output.ofNullable(basicScaling);
+            this.basicScaling = Codegen.ofNullable(basicScaling);
             return this;
         }
         public Builder betaSettings(@Nullable Output<Map<String,String>> betaSettings) {
@@ -648,7 +649,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder betaSettings(@Nullable Map<String,String> betaSettings) {
-            this.betaSettings = Output.ofNullable(betaSettings);
+            this.betaSettings = Codegen.ofNullable(betaSettings);
             return this;
         }
         public Builder buildEnvVariables(@Nullable Output<Map<String,String>> buildEnvVariables) {
@@ -656,7 +657,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildEnvVariables(@Nullable Map<String,String> buildEnvVariables) {
-            this.buildEnvVariables = Output.ofNullable(buildEnvVariables);
+            this.buildEnvVariables = Codegen.ofNullable(buildEnvVariables);
             return this;
         }
         public Builder defaultExpiration(@Nullable Output<String> defaultExpiration) {
@@ -664,7 +665,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultExpiration(@Nullable String defaultExpiration) {
-            this.defaultExpiration = Output.ofNullable(defaultExpiration);
+            this.defaultExpiration = Codegen.ofNullable(defaultExpiration);
             return this;
         }
         public Builder deployment(@Nullable Output<DeploymentArgs> deployment) {
@@ -672,7 +673,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deployment(@Nullable DeploymentArgs deployment) {
-            this.deployment = Output.ofNullable(deployment);
+            this.deployment = Codegen.ofNullable(deployment);
             return this;
         }
         public Builder endpointsApiService(@Nullable Output<EndpointsApiServiceArgs> endpointsApiService) {
@@ -680,7 +681,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointsApiService(@Nullable EndpointsApiServiceArgs endpointsApiService) {
-            this.endpointsApiService = Output.ofNullable(endpointsApiService);
+            this.endpointsApiService = Codegen.ofNullable(endpointsApiService);
             return this;
         }
         public Builder entrypoint(@Nullable Output<EntrypointArgs> entrypoint) {
@@ -688,7 +689,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entrypoint(@Nullable EntrypointArgs entrypoint) {
-            this.entrypoint = Output.ofNullable(entrypoint);
+            this.entrypoint = Codegen.ofNullable(entrypoint);
             return this;
         }
         public Builder env(@Nullable Output<String> env) {
@@ -696,7 +697,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder env(@Nullable String env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
@@ -704,7 +705,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
-            this.envVariables = Output.ofNullable(envVariables);
+            this.envVariables = Codegen.ofNullable(envVariables);
             return this;
         }
         public Builder errorHandlers(@Nullable Output<List<ErrorHandlerArgs>> errorHandlers) {
@@ -712,7 +713,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errorHandlers(@Nullable List<ErrorHandlerArgs> errorHandlers) {
-            this.errorHandlers = Output.ofNullable(errorHandlers);
+            this.errorHandlers = Codegen.ofNullable(errorHandlers);
             return this;
         }
         public Builder errorHandlers(ErrorHandlerArgs... errorHandlers) {
@@ -723,7 +724,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder handlers(@Nullable List<UrlMapArgs> handlers) {
-            this.handlers = Output.ofNullable(handlers);
+            this.handlers = Codegen.ofNullable(handlers);
             return this;
         }
         public Builder handlers(UrlMapArgs... handlers) {
@@ -734,7 +735,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheck(@Nullable HealthCheckArgs healthCheck) {
-            this.healthCheck = Output.ofNullable(healthCheck);
+            this.healthCheck = Codegen.ofNullable(healthCheck);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -742,7 +743,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder inboundServices(@Nullable Output<List<VersionInboundServicesItem>> inboundServices) {
@@ -750,7 +751,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inboundServices(@Nullable List<VersionInboundServicesItem> inboundServices) {
-            this.inboundServices = Output.ofNullable(inboundServices);
+            this.inboundServices = Codegen.ofNullable(inboundServices);
             return this;
         }
         public Builder inboundServices(VersionInboundServicesItem... inboundServices) {
@@ -761,7 +762,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = Output.ofNullable(instanceClass);
+            this.instanceClass = Codegen.ofNullable(instanceClass);
             return this;
         }
         public Builder libraries(@Nullable Output<List<LibraryArgs>> libraries) {
@@ -769,7 +770,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder libraries(@Nullable List<LibraryArgs> libraries) {
-            this.libraries = Output.ofNullable(libraries);
+            this.libraries = Codegen.ofNullable(libraries);
             return this;
         }
         public Builder libraries(LibraryArgs... libraries) {
@@ -780,7 +781,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder livenessCheck(@Nullable LivenessCheckArgs livenessCheck) {
-            this.livenessCheck = Output.ofNullable(livenessCheck);
+            this.livenessCheck = Codegen.ofNullable(livenessCheck);
             return this;
         }
         public Builder manualScaling(@Nullable Output<ManualScalingArgs> manualScaling) {
@@ -788,7 +789,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manualScaling(@Nullable ManualScalingArgs manualScaling) {
-            this.manualScaling = Output.ofNullable(manualScaling);
+            this.manualScaling = Codegen.ofNullable(manualScaling);
             return this;
         }
         public Builder network(@Nullable Output<NetworkArgs> network) {
@@ -796,7 +797,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable NetworkArgs network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder nobuildFilesRegex(@Nullable Output<String> nobuildFilesRegex) {
@@ -804,7 +805,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nobuildFilesRegex(@Nullable String nobuildFilesRegex) {
-            this.nobuildFilesRegex = Output.ofNullable(nobuildFilesRegex);
+            this.nobuildFilesRegex = Codegen.ofNullable(nobuildFilesRegex);
             return this;
         }
         public Builder readinessCheck(@Nullable Output<ReadinessCheckArgs> readinessCheck) {
@@ -812,7 +813,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readinessCheck(@Nullable ReadinessCheckArgs readinessCheck) {
-            this.readinessCheck = Output.ofNullable(readinessCheck);
+            this.readinessCheck = Codegen.ofNullable(readinessCheck);
             return this;
         }
         public Builder resources(@Nullable Output<ResourcesArgs> resources) {
@@ -820,7 +821,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable ResourcesArgs resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder runtime(@Nullable Output<String> runtime) {
@@ -828,7 +829,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Output.ofNullable(runtime);
+            this.runtime = Codegen.ofNullable(runtime);
             return this;
         }
         public Builder runtimeApiVersion(@Nullable Output<String> runtimeApiVersion) {
@@ -836,7 +837,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
-            this.runtimeApiVersion = Output.ofNullable(runtimeApiVersion);
+            this.runtimeApiVersion = Codegen.ofNullable(runtimeApiVersion);
             return this;
         }
         public Builder runtimeChannel(@Nullable Output<String> runtimeChannel) {
@@ -844,7 +845,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeChannel(@Nullable String runtimeChannel) {
-            this.runtimeChannel = Output.ofNullable(runtimeChannel);
+            this.runtimeChannel = Codegen.ofNullable(runtimeChannel);
             return this;
         }
         public Builder runtimeMainExecutablePath(@Nullable Output<String> runtimeMainExecutablePath) {
@@ -852,7 +853,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeMainExecutablePath(@Nullable String runtimeMainExecutablePath) {
-            this.runtimeMainExecutablePath = Output.ofNullable(runtimeMainExecutablePath);
+            this.runtimeMainExecutablePath = Codegen.ofNullable(runtimeMainExecutablePath);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -860,7 +861,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder serviceId(Output<String> serviceId) {
@@ -876,7 +877,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servingStatus(@Nullable VersionServingStatus servingStatus) {
-            this.servingStatus = Output.ofNullable(servingStatus);
+            this.servingStatus = Codegen.ofNullable(servingStatus);
             return this;
         }
         public Builder threadsafe(@Nullable Output<Boolean> threadsafe) {
@@ -884,7 +885,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder threadsafe(@Nullable Boolean threadsafe) {
-            this.threadsafe = Output.ofNullable(threadsafe);
+            this.threadsafe = Codegen.ofNullable(threadsafe);
             return this;
         }
         public Builder vm(@Nullable Output<Boolean> vm) {
@@ -892,7 +893,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vm(@Nullable Boolean vm) {
-            this.vm = Output.ofNullable(vm);
+            this.vm = Codegen.ofNullable(vm);
             return this;
         }
         public Builder vpcAccessConnector(@Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector) {
@@ -900,7 +901,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcAccessConnector(@Nullable VpcAccessConnectorArgs vpcAccessConnector) {
-            this.vpcAccessConnector = Output.ofNullable(vpcAccessConnector);
+            this.vpcAccessConnector = Codegen.ofNullable(vpcAccessConnector);
             return this;
         }        public VersionArgs build() {
             return new VersionArgs(apiConfig, appId, automaticScaling, basicScaling, betaSettings, buildEnvVariables, defaultExpiration, deployment, endpointsApiService, entrypoint, env, envVariables, errorHandlers, handlers, healthCheck, id, inboundServices, instanceClass, libraries, livenessCheck, manualScaling, network, nobuildFilesRegex, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, serviceAccount, serviceId, servingStatus, threadsafe, vm, vpcAccessConnector);

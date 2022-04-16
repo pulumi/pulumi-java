@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="aadClientId")
       private final @Nullable Output<String> aadClientId;
 
-    public Output<String> getAadClientId() {
-        return this.aadClientId == null ? Output.empty() : this.aadClientId;
+    public Output<String> aadClientId() {
+        return this.aadClientId == null ? Codegen.empty() : this.aadClientId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="aadTenantId")
       private final @Nullable Output<String> aadTenantId;
 
-    public Output<String> getAadTenantId() {
-        return this.aadTenantId == null ? Output.empty() : this.aadTenantId;
+    public Output<String> aadTenantId() {
+        return this.aadTenantId == null ? Codegen.empty() : this.aadTenantId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="eventHubConnectionString")
       private final @Nullable Output<String> eventHubConnectionString;
 
-    public Output<String> getEventHubConnectionString() {
-        return this.eventHubConnectionString == null ? Output.empty() : this.eventHubConnectionString;
+    public Output<String> eventHubConnectionString() {
+        return this.eventHubConnectionString == null ? Codegen.empty() : this.eventHubConnectionString;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="qnaAzureSearchEndpointId")
       private final @Nullable Output<String> qnaAzureSearchEndpointId;
 
-    public Output<String> getQnaAzureSearchEndpointId() {
-        return this.qnaAzureSearchEndpointId == null ? Output.empty() : this.qnaAzureSearchEndpointId;
+    public Output<String> qnaAzureSearchEndpointId() {
+        return this.qnaAzureSearchEndpointId == null ? Codegen.empty() : this.qnaAzureSearchEndpointId;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="qnaAzureSearchEndpointKey")
       private final @Nullable Output<String> qnaAzureSearchEndpointKey;
 
-    public Output<String> getQnaAzureSearchEndpointKey() {
-        return this.qnaAzureSearchEndpointKey == null ? Output.empty() : this.qnaAzureSearchEndpointKey;
+    public Output<String> qnaAzureSearchEndpointKey() {
+        return this.qnaAzureSearchEndpointKey == null ? Codegen.empty() : this.qnaAzureSearchEndpointKey;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="qnaRuntimeEndpoint")
       private final @Nullable Output<String> qnaRuntimeEndpoint;
 
-    public Output<String> getQnaRuntimeEndpoint() {
-        return this.qnaRuntimeEndpoint == null ? Output.empty() : this.qnaRuntimeEndpoint;
+    public Output<String> qnaRuntimeEndpoint() {
+        return this.qnaRuntimeEndpoint == null ? Codegen.empty() : this.qnaRuntimeEndpoint;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="statisticsEnabled")
       private final @Nullable Output<Boolean> statisticsEnabled;
 
-    public Output<Boolean> getStatisticsEnabled() {
-        return this.statisticsEnabled == null ? Output.empty() : this.statisticsEnabled;
+    public Output<Boolean> statisticsEnabled() {
+        return this.statisticsEnabled == null ? Codegen.empty() : this.statisticsEnabled;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="storageAccountConnectionString")
       private final @Nullable Output<String> storageAccountConnectionString;
 
-    public Output<String> getStorageAccountConnectionString() {
-        return this.storageAccountConnectionString == null ? Output.empty() : this.storageAccountConnectionString;
+    public Output<String> storageAccountConnectionString() {
+        return this.storageAccountConnectionString == null ? Codegen.empty() : this.storageAccountConnectionString;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="superUser")
       private final @Nullable Output<String> superUser;
 
-    public Output<String> getSuperUser() {
-        return this.superUser == null ? Output.empty() : this.superUser;
+    public Output<String> superUser() {
+        return this.superUser == null ? Codegen.empty() : this.superUser;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     @Import(name="websiteName")
       private final @Nullable Output<String> websiteName;
 
-    public Output<String> getWebsiteName() {
-        return this.websiteName == null ? Output.empty() : this.websiteName;
+    public Output<String> websiteName() {
+        return this.websiteName == null ? Codegen.empty() : this.websiteName;
     }
 
     public CognitiveServicesAccountApiPropertiesArgs(
@@ -153,16 +154,16 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     }
 
     private CognitiveServicesAccountApiPropertiesArgs() {
-        this.aadClientId = Output.empty();
-        this.aadTenantId = Output.empty();
-        this.eventHubConnectionString = Output.empty();
-        this.qnaAzureSearchEndpointId = Output.empty();
-        this.qnaAzureSearchEndpointKey = Output.empty();
-        this.qnaRuntimeEndpoint = Output.empty();
-        this.statisticsEnabled = Output.empty();
-        this.storageAccountConnectionString = Output.empty();
-        this.superUser = Output.empty();
-        this.websiteName = Output.empty();
+        this.aadClientId = Codegen.empty();
+        this.aadTenantId = Codegen.empty();
+        this.eventHubConnectionString = Codegen.empty();
+        this.qnaAzureSearchEndpointId = Codegen.empty();
+        this.qnaAzureSearchEndpointKey = Codegen.empty();
+        this.qnaRuntimeEndpoint = Codegen.empty();
+        this.statisticsEnabled = Codegen.empty();
+        this.storageAccountConnectionString = Codegen.empty();
+        this.superUser = Codegen.empty();
+        this.websiteName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder aadClientId(@Nullable String aadClientId) {
-            this.aadClientId = Output.ofNullable(aadClientId);
+            this.aadClientId = Codegen.ofNullable(aadClientId);
             return this;
         }
         public Builder aadTenantId(@Nullable Output<String> aadTenantId) {
@@ -216,7 +217,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder aadTenantId(@Nullable String aadTenantId) {
-            this.aadTenantId = Output.ofNullable(aadTenantId);
+            this.aadTenantId = Codegen.ofNullable(aadTenantId);
             return this;
         }
         public Builder eventHubConnectionString(@Nullable Output<String> eventHubConnectionString) {
@@ -224,7 +225,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
-            this.eventHubConnectionString = Output.ofNullable(eventHubConnectionString);
+            this.eventHubConnectionString = Codegen.ofNullable(eventHubConnectionString);
             return this;
         }
         public Builder qnaAzureSearchEndpointId(@Nullable Output<String> qnaAzureSearchEndpointId) {
@@ -232,7 +233,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder qnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
-            this.qnaAzureSearchEndpointId = Output.ofNullable(qnaAzureSearchEndpointId);
+            this.qnaAzureSearchEndpointId = Codegen.ofNullable(qnaAzureSearchEndpointId);
             return this;
         }
         public Builder qnaAzureSearchEndpointKey(@Nullable Output<String> qnaAzureSearchEndpointKey) {
@@ -240,7 +241,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder qnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
-            this.qnaAzureSearchEndpointKey = Output.ofNullable(qnaAzureSearchEndpointKey);
+            this.qnaAzureSearchEndpointKey = Codegen.ofNullable(qnaAzureSearchEndpointKey);
             return this;
         }
         public Builder qnaRuntimeEndpoint(@Nullable Output<String> qnaRuntimeEndpoint) {
@@ -248,7 +249,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder qnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
-            this.qnaRuntimeEndpoint = Output.ofNullable(qnaRuntimeEndpoint);
+            this.qnaRuntimeEndpoint = Codegen.ofNullable(qnaRuntimeEndpoint);
             return this;
         }
         public Builder statisticsEnabled(@Nullable Output<Boolean> statisticsEnabled) {
@@ -256,7 +257,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder statisticsEnabled(@Nullable Boolean statisticsEnabled) {
-            this.statisticsEnabled = Output.ofNullable(statisticsEnabled);
+            this.statisticsEnabled = Codegen.ofNullable(statisticsEnabled);
             return this;
         }
         public Builder storageAccountConnectionString(@Nullable Output<String> storageAccountConnectionString) {
@@ -264,7 +265,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder storageAccountConnectionString(@Nullable String storageAccountConnectionString) {
-            this.storageAccountConnectionString = Output.ofNullable(storageAccountConnectionString);
+            this.storageAccountConnectionString = Codegen.ofNullable(storageAccountConnectionString);
             return this;
         }
         public Builder superUser(@Nullable Output<String> superUser) {
@@ -272,7 +273,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder superUser(@Nullable String superUser) {
-            this.superUser = Output.ofNullable(superUser);
+            this.superUser = Codegen.ofNullable(superUser);
             return this;
         }
         public Builder websiteName(@Nullable Output<String> websiteName) {
@@ -280,7 +281,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder websiteName(@Nullable String websiteName) {
-            this.websiteName = Output.ofNullable(websiteName);
+            this.websiteName = Codegen.ofNullable(websiteName);
             return this;
         }        public CognitiveServicesAccountApiPropertiesArgs build() {
             return new CognitiveServicesAccountApiPropertiesArgs(aadClientId, aadTenantId, eventHubConnectionString, qnaAzureSearchEndpointId, qnaAzureSearchEndpointKey, qnaRuntimeEndpoint, statisticsEnabled, storageAccountConnectionString, superUser, websiteName);

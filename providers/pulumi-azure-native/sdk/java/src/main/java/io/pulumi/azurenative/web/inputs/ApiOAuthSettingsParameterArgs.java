@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
     @Import(name="options")
       private final @Nullable Output<Object> options;
 
-    public Output<Object> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<Object> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
     @Import(name="uiDefinition")
       private final @Nullable Output<Object> uiDefinition;
 
-    public Output<Object> getUiDefinition() {
-        return this.uiDefinition == null ? Output.empty() : this.uiDefinition;
+    public Output<Object> uiDefinition() {
+        return this.uiDefinition == null ? Codegen.empty() : this.uiDefinition;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ApiOAuthSettingsParameterArgs(
@@ -62,9 +63,9 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
     }
 
     private ApiOAuthSettingsParameterArgs() {
-        this.options = Output.empty();
-        this.uiDefinition = Output.empty();
-        this.value = Output.empty();
+        this.options = Codegen.empty();
+        this.uiDefinition = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder options(@Nullable Object options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder uiDefinition(@Nullable Output<Object> uiDefinition) {
@@ -104,7 +105,7 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder uiDefinition(@Nullable Object uiDefinition) {
-            this.uiDefinition = Output.ofNullable(uiDefinition);
+            this.uiDefinition = Codegen.ofNullable(uiDefinition);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -112,7 +113,7 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ApiOAuthSettingsParameterArgs build() {
             return new ApiOAuthSettingsParameterArgs(options, uiDefinition, value);

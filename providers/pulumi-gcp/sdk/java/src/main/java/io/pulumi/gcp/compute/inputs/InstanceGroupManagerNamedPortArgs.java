@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class InstanceGroupManagerNamedPortArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -33,7 +34,7 @@ public final class InstanceGroupManagerNamedPortArgs extends io.pulumi.resources
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -45,8 +46,8 @@ public final class InstanceGroupManagerNamedPortArgs extends io.pulumi.resources
     }
 
     private InstanceGroupManagerNamedPortArgs() {
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

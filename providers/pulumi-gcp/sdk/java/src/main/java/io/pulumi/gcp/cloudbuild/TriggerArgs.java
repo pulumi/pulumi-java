@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerGithubArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerPubsubConfigArgs;
@@ -30,8 +31,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="build")
       private final @Nullable Output<TriggerBuildArgs> build;
 
-    public Output<TriggerBuildArgs> getBuild() {
-        return this.build == null ? Output.empty() : this.build;
+    public Output<TriggerBuildArgs> build() {
+        return this.build == null ? Codegen.empty() : this.build;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filename")
       private final @Nullable Output<String> filename;
 
-    public Output<String> getFilename() {
-        return this.filename == null ? Output.empty() : this.filename;
+    public Output<String> filename() {
+        return this.filename == null ? Codegen.empty() : this.filename;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="github")
       private final @Nullable Output<TriggerGithubArgs> github;
 
-    public Output<TriggerGithubArgs> getGithub() {
-        return this.github == null ? Output.empty() : this.github;
+    public Output<TriggerGithubArgs> github() {
+        return this.github == null ? Codegen.empty() : this.github;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoredFiles")
       private final @Nullable Output<List<String>> ignoredFiles;
 
-    public Output<List<String>> getIgnoredFiles() {
-        return this.ignoredFiles == null ? Output.empty() : this.ignoredFiles;
+    public Output<List<String>> ignoredFiles() {
+        return this.ignoredFiles == null ? Codegen.empty() : this.ignoredFiles;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includedFiles")
       private final @Nullable Output<List<String>> includedFiles;
 
-    public Output<List<String>> getIncludedFiles() {
-        return this.includedFiles == null ? Output.empty() : this.includedFiles;
+    public Output<List<String>> includedFiles() {
+        return this.includedFiles == null ? Codegen.empty() : this.includedFiles;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubConfig")
       private final @Nullable Output<TriggerPubsubConfigArgs> pubsubConfig;
 
-    public Output<TriggerPubsubConfigArgs> getPubsubConfig() {
-        return this.pubsubConfig == null ? Output.empty() : this.pubsubConfig;
+    public Output<TriggerPubsubConfigArgs> pubsubConfig() {
+        return this.pubsubConfig == null ? Codegen.empty() : this.pubsubConfig;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> getSubstitutions() {
-        return this.substitutions == null ? Output.empty() : this.substitutions;
+    public Output<Map<String,String>> substitutions() {
+        return this.substitutions == null ? Codegen.empty() : this.substitutions;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -204,8 +205,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerTemplate")
       private final @Nullable Output<TriggerTriggerTemplateArgs> triggerTemplate;
 
-    public Output<TriggerTriggerTemplateArgs> getTriggerTemplate() {
-        return this.triggerTemplate == null ? Output.empty() : this.triggerTemplate;
+    public Output<TriggerTriggerTemplateArgs> triggerTemplate() {
+        return this.triggerTemplate == null ? Codegen.empty() : this.triggerTemplate;
     }
 
     /**
@@ -218,8 +219,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookConfig")
       private final @Nullable Output<TriggerWebhookConfigArgs> webhookConfig;
 
-    public Output<TriggerWebhookConfigArgs> getWebhookConfig() {
-        return this.webhookConfig == null ? Output.empty() : this.webhookConfig;
+    public Output<TriggerWebhookConfigArgs> webhookConfig() {
+        return this.webhookConfig == null ? Codegen.empty() : this.webhookConfig;
     }
 
     public TriggerArgs(
@@ -256,21 +257,21 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.build = Output.empty();
-        this.description = Output.empty();
-        this.disabled = Output.empty();
-        this.filename = Output.empty();
-        this.github = Output.empty();
-        this.ignoredFiles = Output.empty();
-        this.includedFiles = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.pubsubConfig = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.substitutions = Output.empty();
-        this.tags = Output.empty();
-        this.triggerTemplate = Output.empty();
-        this.webhookConfig = Output.empty();
+        this.build = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.filename = Codegen.empty();
+        this.github = Codegen.empty();
+        this.ignoredFiles = Codegen.empty();
+        this.includedFiles = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.pubsubConfig = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.substitutions = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.triggerTemplate = Codegen.empty();
+        this.webhookConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -326,7 +327,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder build(@Nullable TriggerBuildArgs build) {
-            this.build = Output.ofNullable(build);
+            this.build = Codegen.ofNullable(build);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -334,7 +335,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -342,7 +343,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder filename(@Nullable Output<String> filename) {
@@ -350,7 +351,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filename(@Nullable String filename) {
-            this.filename = Output.ofNullable(filename);
+            this.filename = Codegen.ofNullable(filename);
             return this;
         }
         public Builder github(@Nullable Output<TriggerGithubArgs> github) {
@@ -358,7 +359,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder github(@Nullable TriggerGithubArgs github) {
-            this.github = Output.ofNullable(github);
+            this.github = Codegen.ofNullable(github);
             return this;
         }
         public Builder ignoredFiles(@Nullable Output<List<String>> ignoredFiles) {
@@ -366,7 +367,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoredFiles(@Nullable List<String> ignoredFiles) {
-            this.ignoredFiles = Output.ofNullable(ignoredFiles);
+            this.ignoredFiles = Codegen.ofNullable(ignoredFiles);
             return this;
         }
         public Builder ignoredFiles(String... ignoredFiles) {
@@ -377,7 +378,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includedFiles(@Nullable List<String> includedFiles) {
-            this.includedFiles = Output.ofNullable(includedFiles);
+            this.includedFiles = Codegen.ofNullable(includedFiles);
             return this;
         }
         public Builder includedFiles(String... includedFiles) {
@@ -388,7 +389,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -396,7 +397,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder pubsubConfig(@Nullable Output<TriggerPubsubConfigArgs> pubsubConfig) {
@@ -404,7 +405,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pubsubConfig(@Nullable TriggerPubsubConfigArgs pubsubConfig) {
-            this.pubsubConfig = Output.ofNullable(pubsubConfig);
+            this.pubsubConfig = Codegen.ofNullable(pubsubConfig);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -412,7 +413,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
@@ -420,7 +421,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Output.ofNullable(substitutions);
+            this.substitutions = Codegen.ofNullable(substitutions);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -428,7 +429,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -439,7 +440,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggerTemplate(@Nullable TriggerTriggerTemplateArgs triggerTemplate) {
-            this.triggerTemplate = Output.ofNullable(triggerTemplate);
+            this.triggerTemplate = Codegen.ofNullable(triggerTemplate);
             return this;
         }
         public Builder webhookConfig(@Nullable Output<TriggerWebhookConfigArgs> webhookConfig) {
@@ -447,7 +448,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webhookConfig(@Nullable TriggerWebhookConfigArgs webhookConfig) {
-            this.webhookConfig = Output.ofNullable(webhookConfig);
+            this.webhookConfig = Codegen.ofNullable(webhookConfig);
             return this;
         }        public TriggerArgs build() {
             return new TriggerArgs(build, description, disabled, filename, github, ignoredFiles, includedFiles, name, project, pubsubConfig, serviceAccount, substitutions, tags, triggerTemplate, webhookConfig);

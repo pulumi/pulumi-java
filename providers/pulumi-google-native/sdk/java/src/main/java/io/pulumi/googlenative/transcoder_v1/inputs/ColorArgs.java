@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="brightness")
       private final @Nullable Output<Double> brightness;
 
-    public Output<Double> getBrightness() {
-        return this.brightness == null ? Output.empty() : this.brightness;
+    public Output<Double> brightness() {
+        return this.brightness == null ? Codegen.empty() : this.brightness;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contrast")
       private final @Nullable Output<Double> contrast;
 
-    public Output<Double> getContrast() {
-        return this.contrast == null ? Output.empty() : this.contrast;
+    public Output<Double> contrast() {
+        return this.contrast == null ? Codegen.empty() : this.contrast;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="saturation")
       private final @Nullable Output<Double> saturation;
 
-    public Output<Double> getSaturation() {
-        return this.saturation == null ? Output.empty() : this.saturation;
+    public Output<Double> saturation() {
+        return this.saturation == null ? Codegen.empty() : this.saturation;
     }
 
     public ColorArgs(
@@ -61,9 +62,9 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ColorArgs() {
-        this.brightness = Output.empty();
-        this.contrast = Output.empty();
-        this.saturation = Output.empty();
+        this.brightness = Codegen.empty();
+        this.contrast = Codegen.empty();
+        this.saturation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder brightness(@Nullable Double brightness) {
-            this.brightness = Output.ofNullable(brightness);
+            this.brightness = Codegen.ofNullable(brightness);
             return this;
         }
         public Builder contrast(@Nullable Output<Double> contrast) {
@@ -103,7 +104,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contrast(@Nullable Double contrast) {
-            this.contrast = Output.ofNullable(contrast);
+            this.contrast = Codegen.ofNullable(contrast);
             return this;
         }
         public Builder saturation(@Nullable Output<Double> saturation) {
@@ -111,7 +112,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder saturation(@Nullable Double saturation) {
-            this.saturation = Output.ofNullable(saturation);
+            this.saturation = Codegen.ofNullable(saturation);
             return this;
         }        public ColorArgs build() {
             return new ColorArgs(brightness, contrast, saturation);

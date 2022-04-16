@@ -5,6 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
     @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;
 
-    public Output<String> getPrometheusPort() {
-        return this.prometheusPort == null ? Output.empty() : this.prometheusPort;
+    public Output<String> prometheusPort() {
+        return this.prometheusPort == null ? Codegen.empty() : this.prometheusPort;
     }
 
     public ApplicationHAClusterPrometheusExporterArgs(@Nullable Output<String> prometheusPort) {
@@ -34,7 +35,7 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
     }
 
     private ApplicationHAClusterPrometheusExporterArgs() {
-        this.prometheusPort = Output.empty();
+        this.prometheusPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
             return this;
         }
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = Output.ofNullable(prometheusPort);
+            this.prometheusPort = Codegen.ofNullable(prometheusPort);
             return this;
         }        public ApplicationHAClusterPrometheusExporterArgs build() {
             return new ApplicationHAClusterPrometheusExporterArgs(prometheusPort);

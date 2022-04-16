@@ -34,7 +34,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
 
-    public Optional<Boolean> getAppInsightsEnabled() {
+    public Optional<Boolean> appInsightsEnabled() {
         return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
     }
 
@@ -45,7 +45,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="codeConfiguration")
       private final @Nullable CodeConfigurationResponse codeConfiguration;
 
-    public Optional<CodeConfigurationResponse> getCodeConfiguration() {
+    public Optional<CodeConfigurationResponse> codeConfiguration() {
         return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
     }
 
@@ -56,7 +56,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="containerResourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
-    public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
+    public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
     }
 
@@ -67,7 +67,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -79,7 +79,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="endpointComputeType", required=true)
       private final String endpointComputeType;
 
-    public String getEndpointComputeType() {
+    public String endpointComputeType() {
         return this.endpointComputeType;
     }
 
@@ -90,7 +90,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="environmentId")
       private final @Nullable String environmentId;
 
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
     }
 
@@ -101,7 +101,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
@@ -112,7 +112,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="livenessProbe")
       private final @Nullable ProbeSettingsResponse livenessProbe;
 
-    public Optional<ProbeSettingsResponse> getLivenessProbe() {
+    public Optional<ProbeSettingsResponse> livenessProbe() {
         return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
     }
 
@@ -123,7 +123,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="model")
       private final @Nullable Object model;
 
-    public Object getModel() {
+    public Object model() {
         return this.model == null ? null : this.model;
     }
 
@@ -134,7 +134,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -145,7 +145,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -156,7 +156,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="requestSettings")
       private final @Nullable OnlineRequestSettingsResponse requestSettings;
 
-    public Optional<OnlineRequestSettingsResponse> getRequestSettings() {
+    public Optional<OnlineRequestSettingsResponse> requestSettings() {
         return this.requestSettings == null ? Optional.empty() : Optional.ofNullable(this.requestSettings);
     }
 
@@ -167,7 +167,7 @@ public final class K8sOnlineDeploymentResponse extends io.pulumi.resources.Invok
     @Import(name="scaleSettings")
       private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
-    public Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> getScaleSettings() {
+    public Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings() {
         return this.scaleSettings == null ? null : this.scaleSettings;
     }
 

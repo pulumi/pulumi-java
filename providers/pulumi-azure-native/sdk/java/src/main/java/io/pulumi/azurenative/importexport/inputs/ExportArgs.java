@@ -5,6 +5,7 @@ package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobListBlobPath")
       private final @Nullable Output<String> blobListBlobPath;
 
-    public Output<String> getBlobListBlobPath() {
-        return this.blobListBlobPath == null ? Output.empty() : this.blobListBlobPath;
+    public Output<String> blobListBlobPath() {
+        return this.blobListBlobPath == null ? Codegen.empty() : this.blobListBlobPath;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobPath")
       private final @Nullable Output<List<String>> blobPath;
 
-    public Output<List<String>> getBlobPath() {
-        return this.blobPath == null ? Output.empty() : this.blobPath;
+    public Output<List<String>> blobPath() {
+        return this.blobPath == null ? Codegen.empty() : this.blobPath;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobPathPrefix")
       private final @Nullable Output<List<String>> blobPathPrefix;
 
-    public Output<List<String>> getBlobPathPrefix() {
-        return this.blobPathPrefix == null ? Output.empty() : this.blobPathPrefix;
+    public Output<List<String>> blobPathPrefix() {
+        return this.blobPathPrefix == null ? Codegen.empty() : this.blobPathPrefix;
     }
 
     public ExportArgs(
@@ -62,9 +63,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportArgs() {
-        this.blobListBlobPath = Output.empty();
-        this.blobPath = Output.empty();
-        this.blobPathPrefix = Output.empty();
+        this.blobListBlobPath = Codegen.empty();
+        this.blobPath = Codegen.empty();
+        this.blobPathPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobListBlobPath(@Nullable String blobListBlobPath) {
-            this.blobListBlobPath = Output.ofNullable(blobListBlobPath);
+            this.blobListBlobPath = Codegen.ofNullable(blobListBlobPath);
             return this;
         }
         public Builder blobPath(@Nullable Output<List<String>> blobPath) {
@@ -104,7 +105,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobPath(@Nullable List<String> blobPath) {
-            this.blobPath = Output.ofNullable(blobPath);
+            this.blobPath = Codegen.ofNullable(blobPath);
             return this;
         }
         public Builder blobPath(String... blobPath) {
@@ -115,7 +116,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
-            this.blobPathPrefix = Output.ofNullable(blobPathPrefix);
+            this.blobPathPrefix = Codegen.ofNullable(blobPathPrefix);
             return this;
         }
         public Builder blobPathPrefix(String... blobPathPrefix) {

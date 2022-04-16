@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ApiArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
@@ -31,7 +32,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return User labels applied to this API Proxy.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -45,7 +46,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return The id of the most recently created revision for this api proxy.
      * 
      */
-    public Output<String> getLatestRevisionId() {
+    public Output<String> latestRevisionId() {
         return this.latestRevisionId;
     }
     /**
@@ -59,7 +60,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Metadata describing the API proxy.
      * 
      */
-    public Output<GoogleCloudApigeeV1EntityMetadataResponse> getMetaData() {
+    public Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData() {
         return this.metaData;
     }
     /**
@@ -73,7 +74,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Name of the API proxy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return List of revisons defined for the API proxy.
      * 
      */
-    public Output<List<String>> getRevision() {
+    public Output<List<String>> revision() {
         return this.revision;
     }
 
@@ -113,7 +114,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Api(String name, ApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Api", name, args == null ? ApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Api", name, args == null ? ApiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Api(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

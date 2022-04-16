@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.AttributeArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +20,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -30,22 +31,22 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataId", required=true)
       private final Output<String> dataId;
 
-    public Output<String> getDataId() {
+    public Output<String> dataId() {
         return this.dataId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -55,15 +56,15 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceAttributes")
       private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
-    public Output<List<AttributeArgs>> getResourceAttributes() {
-        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
+    public Output<List<AttributeArgs>> resourceAttributes() {
+        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -108,14 +109,14 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UserDataMappingArgs() {
-        this.consentStoreId = Output.empty();
-        this.dataId = Output.empty();
-        this.datasetId = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.resourceAttributes = Output.empty();
-        this.userId = Output.empty();
+        this.consentStoreId = Codegen.empty();
+        this.dataId = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.resourceAttributes = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -189,7 +190,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -197,7 +198,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
@@ -205,7 +206,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
-            this.resourceAttributes = Output.ofNullable(resourceAttributes);
+            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
             return this;
         }
         public Builder resourceAttributes(AttributeArgs... resourceAttributes) {

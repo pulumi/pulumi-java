@@ -19,7 +19,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="prefixListId", required=true)
       private final String prefixListId;
 
-    public String getPrefixListId() {
+    public String prefixListId() {
         return this.prefixListId;
     }
 

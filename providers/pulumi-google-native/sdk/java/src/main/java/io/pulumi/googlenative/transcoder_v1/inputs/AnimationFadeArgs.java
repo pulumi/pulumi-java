@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.enums.AnimationFadeFadeType;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
-    public Output<String> getEndTimeOffset() {
-        return this.endTimeOffset == null ? Output.empty() : this.endTimeOffset;
+    public Output<String> endTimeOffset() {
+        return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fadeType", required=true)
       private final Output<AnimationFadeFadeType> fadeType;
 
-    public Output<AnimationFadeFadeType> getFadeType() {
+    public Output<AnimationFadeFadeType> fadeType() {
         return this.fadeType;
     }
 
@@ -49,8 +50,8 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
-    public Output<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
+    public Output<String> startTimeOffset() {
+        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xy")
       private final @Nullable Output<NormalizedCoordinateArgs> xy;
 
-    public Output<NormalizedCoordinateArgs> getXy() {
-        return this.xy == null ? Output.empty() : this.xy;
+    public Output<NormalizedCoordinateArgs> xy() {
+        return this.xy == null ? Codegen.empty() : this.xy;
     }
 
     public AnimationFadeArgs(
@@ -76,10 +77,10 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnimationFadeArgs() {
-        this.endTimeOffset = Output.empty();
-        this.fadeType = Output.empty();
-        this.startTimeOffset = Output.empty();
-        this.xy = Output.empty();
+        this.endTimeOffset = Codegen.empty();
+        this.fadeType = Codegen.empty();
+        this.startTimeOffset = Codegen.empty();
+        this.xy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Output.ofNullable(endTimeOffset);
+            this.endTimeOffset = Codegen.ofNullable(endTimeOffset);
             return this;
         }
         public Builder fadeType(Output<AnimationFadeFadeType> fadeType) {
@@ -129,7 +130,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Output.ofNullable(startTimeOffset);
+            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
             return this;
         }
         public Builder xy(@Nullable Output<NormalizedCoordinateArgs> xy) {
@@ -137,7 +138,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xy(@Nullable NormalizedCoordinateArgs xy) {
-            this.xy = Output.ofNullable(xy);
+            this.xy = Codegen.ofNullable(xy);
             return this;
         }        public AnimationFadeArgs build() {
             return new AnimationFadeArgs(endTimeOffset, fadeType, startTimeOffset, xy);

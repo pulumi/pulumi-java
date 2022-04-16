@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -31,7 +32,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
     @Import(name="destinationPort", required=true)
       private final Output<String> destinationPort;
 
-    public Output<String> getDestinationPort() {
+    public Output<String> destinationPort() {
         return this.destinationPort;
     }
 
@@ -42,7 +43,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
     @Import(name="direction", required=true)
       private final Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
 
@@ -53,7 +54,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -64,7 +65,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -75,7 +76,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
     @Import(name="sourcePort", required=true)
       private final Output<String> sourcePort;
 
-    public Output<String> getSourcePort() {
+    public Output<String> sourcePort() {
         return this.sourcePort;
     }
 
@@ -95,12 +96,12 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
     }
 
     private RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs() {
-        this.destination = Output.empty();
-        this.destinationPort = Output.empty();
-        this.direction = Output.empty();
-        this.protocol = Output.empty();
-        this.source = Output.empty();
-        this.sourcePort = Output.empty();
+        this.destination = Codegen.empty();
+        this.destinationPort = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourcePort = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+    public Output<String> connectionString() {
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
-        return this.endpointUri == null ? Output.empty() : this.endpointUri;
+    public Output<String> endpointUri() {
+        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
-    public Output<String> getEntityPath() {
-        return this.entityPath == null ? Output.empty() : this.entityPath;
+    public Output<String> entityPath() {
+        return this.entityPath == null ? Codegen.empty() : this.entityPath;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -93,8 +94,8 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
-        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
+    public Output<String> resourceGroup() {
+        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+    public Output<String> subscriptionId() {
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     public RoutingEventHubPropertiesArgs(
@@ -128,14 +129,14 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private RoutingEventHubPropertiesArgs() {
-        this.authenticationType = Output.empty();
-        this.connectionString = Output.empty();
-        this.endpointUri = Output.empty();
-        this.entityPath = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.endpointUri = Codegen.empty();
+        this.entityPath = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder connectionString(@Nullable Output<String> connectionString) {
@@ -185,7 +186,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
@@ -193,7 +194,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Output.ofNullable(endpointUri);
+            this.endpointUri = Codegen.ofNullable(endpointUri);
             return this;
         }
         public Builder entityPath(@Nullable Output<String> entityPath) {
@@ -201,7 +202,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = Output.ofNullable(entityPath);
+            this.entityPath = Codegen.ofNullable(entityPath);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -209,7 +210,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -225,7 +226,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Output.ofNullable(resourceGroup);
+            this.resourceGroup = Codegen.ofNullable(resourceGroup);
             return this;
         }
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
@@ -233,7 +234,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }        public RoutingEventHubPropertiesArgs build() {
             return new RoutingEventHubPropertiesArgs(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);

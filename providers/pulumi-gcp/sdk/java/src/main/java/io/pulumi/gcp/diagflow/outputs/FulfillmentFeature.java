@@ -28,7 +28,7 @@ public final class FulfillmentFeature {
      *   Possible values are `SMALLTALK`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

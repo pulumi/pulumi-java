@@ -5,6 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettingId")
       private final @Nullable Output<String> resourceSettingId;
 
-    public Output<String> getResourceSettingId() {
-        return this.resourceSettingId == null ? Output.empty() : this.resourceSettingId;
+    public Output<String> resourceSettingId() {
+        return this.resourceSettingId == null ? Codegen.empty() : this.resourceSettingId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmResourceId")
       private final @Nullable Output<String> vmResourceId;
 
-    public Output<String> getVmResourceId() {
-        return this.vmResourceId == null ? Output.empty() : this.vmResourceId;
+    public Output<String> vmResourceId() {
+        return this.vmResourceId == null ? Codegen.empty() : this.vmResourceId;
     }
 
     public ResourceSetArgs(
@@ -48,8 +49,8 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceSetArgs() {
-        this.resourceSettingId = Output.empty();
-        this.vmResourceId = Output.empty();
+        this.resourceSettingId = Codegen.empty();
+        this.vmResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSettingId(@Nullable String resourceSettingId) {
-            this.resourceSettingId = Output.ofNullable(resourceSettingId);
+            this.resourceSettingId = Codegen.ofNullable(resourceSettingId);
             return this;
         }
         public Builder vmResourceId(@Nullable Output<String> vmResourceId) {
@@ -87,7 +88,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmResourceId(@Nullable String vmResourceId) {
-            this.vmResourceId = Output.ofNullable(vmResourceId);
+            this.vmResourceId = Codegen.ofNullable(vmResourceId);
             return this;
         }        public ResourceSetArgs build() {
             return new ResourceSetArgs(resourceSettingId, vmResourceId);

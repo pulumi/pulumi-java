@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.ProjectSampleArgs;
 import io.pulumi.awsnative.databrew.inputs.ProjectTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetName", required=true)
       private final Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
 
@@ -35,8 +36,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recipeName", required=true)
       private final Output<String> recipeName;
 
-    public Output<String> getRecipeName() {
+    public Output<String> recipeName() {
         return this.recipeName;
     }
 
@@ -57,7 +58,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -68,15 +69,15 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sample")
       private final @Nullable Output<ProjectSampleArgs> sample;
 
-    public Output<ProjectSampleArgs> getSample() {
-        return this.sample == null ? Output.empty() : this.sample;
+    public Output<ProjectSampleArgs> sample() {
+        return this.sample == null ? Codegen.empty() : this.sample;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ProjectTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ProjectArgs(
@@ -95,12 +96,12 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.datasetName = Output.empty();
-        this.name = Output.empty();
-        this.recipeName = Output.empty();
-        this.roleArn = Output.empty();
-        this.sample = Output.empty();
-        this.tags = Output.empty();
+        this.datasetName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.recipeName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.sample = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recipeName(Output<String> recipeName) {
@@ -170,7 +171,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sample(@Nullable ProjectSampleArgs sample) {
-            this.sample = Output.ofNullable(sample);
+            this.sample = Codegen.ofNullable(sample);
             return this;
         }
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
@@ -178,7 +179,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ProjectTagArgs... tags) {

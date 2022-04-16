@@ -19,7 +19,7 @@ public final class GetResourceCollectionArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceCollectionType", required=true)
       private final ResourceCollectionType resourceCollectionType;
 
-    public ResourceCollectionType getResourceCollectionType() {
+    public ResourceCollectionType resourceCollectionType() {
         return this.resourceCollectionType;
     }
 

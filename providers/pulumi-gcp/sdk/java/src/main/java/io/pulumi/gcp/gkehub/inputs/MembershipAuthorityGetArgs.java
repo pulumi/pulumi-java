@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class MembershipAuthorityGetArgs extends io.pulumi.resources.Resour
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 
@@ -25,7 +26,7 @@ public final class MembershipAuthorityGetArgs extends io.pulumi.resources.Resour
     }
 
     private MembershipAuthorityGetArgs() {
-        this.issuer = Output.empty();
+        this.issuer = Codegen.empty();
     }
 
     public static Builder builder() {

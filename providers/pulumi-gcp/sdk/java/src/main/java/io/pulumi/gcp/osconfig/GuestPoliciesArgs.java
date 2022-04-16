@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryArgs;
@@ -33,7 +34,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignment", required=true)
       private final Output<GuestPoliciesAssignmentArgs> assignment;
 
-    public Output<GuestPoliciesAssignmentArgs> getAssignment() {
+    public Output<GuestPoliciesAssignmentArgs> assignment() {
         return this.assignment;
     }
 
@@ -44,8 +45,8 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestPolicyId", required=true)
       private final Output<String> guestPolicyId;
 
-    public Output<String> getGuestPolicyId() {
+    public Output<String> guestPolicyId() {
         return this.guestPolicyId;
     }
 
@@ -85,8 +86,8 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageRepositories")
       private final @Nullable Output<List<GuestPoliciesPackageRepositoryArgs>> packageRepositories;
 
-    public Output<List<GuestPoliciesPackageRepositoryArgs>> getPackageRepositories() {
-        return this.packageRepositories == null ? Output.empty() : this.packageRepositories;
+    public Output<List<GuestPoliciesPackageRepositoryArgs>> packageRepositories() {
+        return this.packageRepositories == null ? Codegen.empty() : this.packageRepositories;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packages")
       private final @Nullable Output<List<GuestPoliciesPackageArgs>> packages;
 
-    public Output<List<GuestPoliciesPackageArgs>> getPackages() {
-        return this.packages == null ? Output.empty() : this.packages;
+    public Output<List<GuestPoliciesPackageArgs>> packages() {
+        return this.packages == null ? Codegen.empty() : this.packages;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recipes")
       private final @Nullable Output<List<GuestPoliciesRecipeArgs>> recipes;
 
-    public Output<List<GuestPoliciesRecipeArgs>> getRecipes() {
-        return this.recipes == null ? Output.empty() : this.recipes;
+    public Output<List<GuestPoliciesRecipeArgs>> recipes() {
+        return this.recipes == null ? Codegen.empty() : this.recipes;
     }
 
     public GuestPoliciesArgs(
@@ -145,14 +146,14 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GuestPoliciesArgs() {
-        this.assignment = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.guestPolicyId = Output.empty();
-        this.packageRepositories = Output.empty();
-        this.packages = Output.empty();
-        this.project = Output.empty();
-        this.recipes = Output.empty();
+        this.assignment = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.guestPolicyId = Codegen.empty();
+        this.packageRepositories = Codegen.empty();
+        this.packages = Codegen.empty();
+        this.project = Codegen.empty();
+        this.recipes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -210,7 +211,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder guestPolicyId(Output<String> guestPolicyId) {
@@ -226,7 +227,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageRepositories(@Nullable List<GuestPoliciesPackageRepositoryArgs> packageRepositories) {
-            this.packageRepositories = Output.ofNullable(packageRepositories);
+            this.packageRepositories = Codegen.ofNullable(packageRepositories);
             return this;
         }
         public Builder packageRepositories(GuestPoliciesPackageRepositoryArgs... packageRepositories) {
@@ -237,7 +238,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packages(@Nullable List<GuestPoliciesPackageArgs> packages) {
-            this.packages = Output.ofNullable(packages);
+            this.packages = Codegen.ofNullable(packages);
             return this;
         }
         public Builder packages(GuestPoliciesPackageArgs... packages) {
@@ -248,7 +249,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder recipes(@Nullable Output<List<GuestPoliciesRecipeArgs>> recipes) {
@@ -256,7 +257,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recipes(@Nullable List<GuestPoliciesRecipeArgs> recipes) {
-            this.recipes = Output.ofNullable(recipes);
+            this.recipes = Codegen.ofNullable(recipes);
             return this;
         }
         public Builder recipes(GuestPoliciesRecipeArgs... recipes) {

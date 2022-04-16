@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelConditionArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionState;
@@ -57,7 +58,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * @return The name of the Access Level to add this condition to.
      * 
      */
-    public Output<String> getAccessLevel() {
+    public Output<String> accessLevel() {
         return this.accessLevel;
     }
     /**
@@ -77,7 +78,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelConditionDevicePolicy> getDevicePolicy() {
+    public Output</* @Nullable */ AccessLevelConditionDevicePolicy> devicePolicy() {
         return this.devicePolicy;
     }
     /**
@@ -109,7 +110,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * If empty, all IP addresses are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIpSubnetworks() {
+    public Output</* @Nullable */ List<String>> ipSubnetworks() {
         return this.ipSubnetworks;
     }
     /**
@@ -135,7 +136,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
      * 
      */
-    public Output</* @Nullable */ List<String>> getMembers() {
+    public Output</* @Nullable */ List<String>> members() {
         return this.members;
     }
     /**
@@ -153,7 +154,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * the Condition overall to be satisfied. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNegate() {
+    public Output</* @Nullable */ Boolean> negate() {
         return this.negate;
     }
     /**
@@ -171,7 +172,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Format: A valid ISO 3166-1 alpha-2 code.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRegions() {
+    public Output</* @Nullable */ List<String>> regions() {
         return this.regions;
     }
     /**
@@ -193,7 +194,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    public Output</* @Nullable */ List<String>> getRequiredAccessLevels() {
+    public Output</* @Nullable */ List<String>> requiredAccessLevels() {
         return this.requiredAccessLevels;
     }
 
@@ -219,7 +220,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessLevelCondition(String name, AccessLevelConditionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, args == null ? AccessLevelConditionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, args == null ? AccessLevelConditionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessLevelCondition(String name, Output<String> id, @Nullable AccessLevelConditionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

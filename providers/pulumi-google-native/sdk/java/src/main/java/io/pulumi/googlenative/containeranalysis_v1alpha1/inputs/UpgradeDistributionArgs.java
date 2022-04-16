@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="classification")
       private final @Nullable Output<String> classification;
 
-    public Output<String> getClassification() {
-        return this.classification == null ? Output.empty() : this.classification;
+    public Output<String> classification() {
+        return this.classification == null ? Codegen.empty() : this.classification;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
-        return this.cpeUri == null ? Output.empty() : this.cpeUri;
+    public Output<String> cpeUri() {
+        return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="cve")
       private final @Nullable Output<List<String>> cve;
 
-    public Output<List<String>> getCve() {
-        return this.cve == null ? Output.empty() : this.cve;
+    public Output<List<String>> cve() {
+        return this.cve == null ? Codegen.empty() : this.cve;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="severity")
       private final @Nullable Output<String> severity;
 
-    public Output<String> getSeverity() {
-        return this.severity == null ? Output.empty() : this.severity;
+    public Output<String> severity() {
+        return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     public UpgradeDistributionArgs(
@@ -75,10 +76,10 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     }
 
     private UpgradeDistributionArgs() {
-        this.classification = Output.empty();
-        this.cpeUri = Output.empty();
-        this.cve = Output.empty();
-        this.severity = Output.empty();
+        this.classification = Codegen.empty();
+        this.cpeUri = Codegen.empty();
+        this.cve = Codegen.empty();
+        this.severity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder classification(@Nullable String classification) {
-            this.classification = Output.ofNullable(classification);
+            this.classification = Codegen.ofNullable(classification);
             return this;
         }
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
@@ -120,7 +121,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Output.ofNullable(cpeUri);
+            this.cpeUri = Codegen.ofNullable(cpeUri);
             return this;
         }
         public Builder cve(@Nullable Output<List<String>> cve) {
@@ -128,7 +129,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder cve(@Nullable List<String> cve) {
-            this.cve = Output.ofNullable(cve);
+            this.cve = Codegen.ofNullable(cve);
             return this;
         }
         public Builder cve(String... cve) {
@@ -139,7 +140,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder severity(@Nullable String severity) {
-            this.severity = Output.ofNullable(severity);
+            this.severity = Codegen.ofNullable(severity);
             return this;
         }        public UpgradeDistributionArgs build() {
             return new UpgradeDistributionArgs(classification, cpeUri, cve, severity);

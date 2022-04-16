@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.MetricCounterSetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="counterSets", required=true)
       private final Output<List<MetricCounterSetArgs>> counterSets;
 
-    public Output<List<MetricCounterSetArgs>> getCounterSets() {
+    public Output<List<MetricCounterSetArgs>> counterSets() {
         return this.counterSets;
     }
 
@@ -38,8 +39,8 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="mdmAccount")
       private final @Nullable Output<String> mdmAccount;
 
-    public Output<String> getMdmAccount() {
-        return this.mdmAccount == null ? Output.empty() : this.mdmAccount;
+    public Output<String> mdmAccount() {
+        return this.mdmAccount == null ? Codegen.empty() : this.mdmAccount;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="metricNameSpace")
       private final @Nullable Output<String> metricNameSpace;
 
-    public Output<String> getMetricNameSpace() {
-        return this.metricNameSpace == null ? Output.empty() : this.metricNameSpace;
+    public Output<String> metricNameSpace() {
+        return this.metricNameSpace == null ? Codegen.empty() : this.metricNameSpace;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -76,10 +77,10 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private MetricConfigurationArgs() {
-        this.counterSets = Output.empty();
-        this.mdmAccount = Output.empty();
-        this.metricNameSpace = Output.empty();
-        this.resourceId = Output.empty();
+        this.counterSets = Codegen.empty();
+        this.mdmAccount = Codegen.empty();
+        this.metricNameSpace = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder mdmAccount(@Nullable String mdmAccount) {
-            this.mdmAccount = Output.ofNullable(mdmAccount);
+            this.mdmAccount = Codegen.ofNullable(mdmAccount);
             return this;
         }
         public Builder metricNameSpace(@Nullable Output<String> metricNameSpace) {
@@ -132,7 +133,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder metricNameSpace(@Nullable String metricNameSpace) {
-            this.metricNameSpace = Output.ofNullable(metricNameSpace);
+            this.metricNameSpace = Codegen.ofNullable(metricNameSpace);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

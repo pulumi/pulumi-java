@@ -26,7 +26,7 @@ public final class PriorityLevelConfigurationStatus {
      * `conditions` is the current state of "request-priority".
      * 
     */
-    public List<PriorityLevelConfigurationCondition> getConditions() {
+    public List<PriorityLevelConfigurationCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
 

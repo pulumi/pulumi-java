@@ -12,6 +12,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEventArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -32,8 +33,8 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="alarmMetrics")
       private final @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
-    public Output<List<ApplicationAlarmMetricArgs>> getAlarmMetrics() {
-        return this.alarmMetrics == null ? Output.empty() : this.alarmMetrics;
+    public Output<List<ApplicationAlarmMetricArgs>> alarmMetrics() {
+        return this.alarmMetrics == null ? Codegen.empty() : this.alarmMetrics;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="alarms")
       private final @Nullable Output<List<ApplicationAlarmArgs>> alarms;
 
-    public Output<List<ApplicationAlarmArgs>> getAlarms() {
-        return this.alarms == null ? Output.empty() : this.alarms;
+    public Output<List<ApplicationAlarmArgs>> alarms() {
+        return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="hAClusterPrometheusExporter")
       private final @Nullable Output<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter;
 
-    public Output<ApplicationHAClusterPrometheusExporterArgs> getHAClusterPrometheusExporter() {
-        return this.hAClusterPrometheusExporter == null ? Output.empty() : this.hAClusterPrometheusExporter;
+    public Output<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter() {
+        return this.hAClusterPrometheusExporter == null ? Codegen.empty() : this.hAClusterPrometheusExporter;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="hANAPrometheusExporter")
       private final @Nullable Output<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter;
 
-    public Output<ApplicationHANAPrometheusExporterArgs> getHANAPrometheusExporter() {
-        return this.hANAPrometheusExporter == null ? Output.empty() : this.hANAPrometheusExporter;
+    public Output<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter() {
+        return this.hANAPrometheusExporter == null ? Codegen.empty() : this.hANAPrometheusExporter;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="jMXPrometheusExporter")
       private final @Nullable Output<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter;
 
-    public Output<ApplicationJMXPrometheusExporterArgs> getJMXPrometheusExporter() {
-        return this.jMXPrometheusExporter == null ? Output.empty() : this.jMXPrometheusExporter;
+    public Output<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter() {
+        return this.jMXPrometheusExporter == null ? Codegen.empty() : this.jMXPrometheusExporter;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="logs")
       private final @Nullable Output<List<ApplicationLogArgs>> logs;
 
-    public Output<List<ApplicationLogArgs>> getLogs() {
-        return this.logs == null ? Output.empty() : this.logs;
+    public Output<List<ApplicationLogArgs>> logs() {
+        return this.logs == null ? Codegen.empty() : this.logs;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="windowsEvents")
       private final @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
 
-    public Output<List<ApplicationWindowsEventArgs>> getWindowsEvents() {
-        return this.windowsEvents == null ? Output.empty() : this.windowsEvents;
+    public Output<List<ApplicationWindowsEventArgs>> windowsEvents() {
+        return this.windowsEvents == null ? Codegen.empty() : this.windowsEvents;
     }
 
     public ApplicationConfigurationDetailsArgs(
@@ -120,13 +121,13 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     }
 
     private ApplicationConfigurationDetailsArgs() {
-        this.alarmMetrics = Output.empty();
-        this.alarms = Output.empty();
-        this.hAClusterPrometheusExporter = Output.empty();
-        this.hANAPrometheusExporter = Output.empty();
-        this.jMXPrometheusExporter = Output.empty();
-        this.logs = Output.empty();
-        this.windowsEvents = Output.empty();
+        this.alarmMetrics = Codegen.empty();
+        this.alarms = Codegen.empty();
+        this.hAClusterPrometheusExporter = Codegen.empty();
+        this.hANAPrometheusExporter = Codegen.empty();
+        this.jMXPrometheusExporter = Codegen.empty();
+        this.logs = Codegen.empty();
+        this.windowsEvents = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetricArgs> alarmMetrics) {
-            this.alarmMetrics = Output.ofNullable(alarmMetrics);
+            this.alarmMetrics = Codegen.ofNullable(alarmMetrics);
             return this;
         }
         public Builder alarmMetrics(ApplicationAlarmMetricArgs... alarmMetrics) {
@@ -177,7 +178,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder alarms(@Nullable List<ApplicationAlarmArgs> alarms) {
-            this.alarms = Output.ofNullable(alarms);
+            this.alarms = Codegen.ofNullable(alarms);
             return this;
         }
         public Builder alarms(ApplicationAlarmArgs... alarms) {
@@ -188,7 +189,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder hAClusterPrometheusExporter(@Nullable ApplicationHAClusterPrometheusExporterArgs hAClusterPrometheusExporter) {
-            this.hAClusterPrometheusExporter = Output.ofNullable(hAClusterPrometheusExporter);
+            this.hAClusterPrometheusExporter = Codegen.ofNullable(hAClusterPrometheusExporter);
             return this;
         }
         public Builder hANAPrometheusExporter(@Nullable Output<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter) {
@@ -196,7 +197,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder hANAPrometheusExporter(@Nullable ApplicationHANAPrometheusExporterArgs hANAPrometheusExporter) {
-            this.hANAPrometheusExporter = Output.ofNullable(hANAPrometheusExporter);
+            this.hANAPrometheusExporter = Codegen.ofNullable(hANAPrometheusExporter);
             return this;
         }
         public Builder jMXPrometheusExporter(@Nullable Output<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter) {
@@ -204,7 +205,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder jMXPrometheusExporter(@Nullable ApplicationJMXPrometheusExporterArgs jMXPrometheusExporter) {
-            this.jMXPrometheusExporter = Output.ofNullable(jMXPrometheusExporter);
+            this.jMXPrometheusExporter = Codegen.ofNullable(jMXPrometheusExporter);
             return this;
         }
         public Builder logs(@Nullable Output<List<ApplicationLogArgs>> logs) {
@@ -212,7 +213,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder logs(@Nullable List<ApplicationLogArgs> logs) {
-            this.logs = Output.ofNullable(logs);
+            this.logs = Codegen.ofNullable(logs);
             return this;
         }
         public Builder logs(ApplicationLogArgs... logs) {
@@ -223,7 +224,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder windowsEvents(@Nullable List<ApplicationWindowsEventArgs> windowsEvents) {
-            this.windowsEvents = Output.ofNullable(windowsEvents);
+            this.windowsEvents = Codegen.ofNullable(windowsEvents);
             return this;
         }
         public Builder windowsEvents(ApplicationWindowsEventArgs... windowsEvents) {

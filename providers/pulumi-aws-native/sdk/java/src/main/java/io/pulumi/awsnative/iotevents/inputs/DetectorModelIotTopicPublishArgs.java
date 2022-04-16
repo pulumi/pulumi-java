@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,15 +27,15 @@ public final class DetectorModelIotTopicPublishArgs extends io.pulumi.resources.
     @Import(name="mqttTopic", required=true)
       private final Output<String> mqttTopic;
 
-    public Output<String> getMqttTopic() {
+    public Output<String> mqttTopic() {
         return this.mqttTopic;
     }
 
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> payload() {
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     public DetectorModelIotTopicPublishArgs(
@@ -45,8 +46,8 @@ public final class DetectorModelIotTopicPublishArgs extends io.pulumi.resources.
     }
 
     private DetectorModelIotTopicPublishArgs() {
-        this.mqttTopic = Output.empty();
-        this.payload = Output.empty();
+        this.mqttTopic = Codegen.empty();
+        this.payload = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class DetectorModelIotTopicPublishArgs extends io.pulumi.resources.
             return this;
         }
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }        public DetectorModelIotTopicPublishArgs build() {
             return new DetectorModelIotTopicPublishArgs(mqttTopic, payload);

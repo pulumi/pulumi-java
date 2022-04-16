@@ -42,21 +42,21 @@ public final class BucketTopicConfiguration {
      * The Amazon S3 bucket event about which to send notifications.
      * 
     */
-    public String getEvent() {
+    public String event() {
         return this.event;
     }
     /**
      * The filtering rules that determine for which objects to send notifications.
      * 
     */
-    public Optional<BucketNotificationFilter> getFilter() {
+    public Optional<BucketNotificationFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

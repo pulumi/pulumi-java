@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessCont
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowCredentials", required=true)
       private final Output<Boolean> accessControlAllowCredentials;
 
-    public Output<Boolean> getAccessControlAllowCredentials() {
+    public Output<Boolean> accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
 
@@ -37,7 +38,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowHeaders", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> getAccessControlAllowHeaders() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
 
@@ -48,7 +49,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowMethods", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> getAccessControlAllowMethods() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
 
@@ -59,7 +60,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowOrigins", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> getAccessControlAllowOrigins() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
 
@@ -70,8 +71,8 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlExposeHeaders")
       private final @Nullable Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> getAccessControlExposeHeaders() {
-        return this.accessControlExposeHeaders == null ? Output.empty() : this.accessControlExposeHeaders;
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders() {
+        return this.accessControlExposeHeaders == null ? Codegen.empty() : this.accessControlExposeHeaders;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlMaxAgeSec")
       private final @Nullable Output<Integer> accessControlMaxAgeSec;
 
-    public Output<Integer> getAccessControlMaxAgeSec() {
-        return this.accessControlMaxAgeSec == null ? Output.empty() : this.accessControlMaxAgeSec;
+    public Output<Integer> accessControlMaxAgeSec() {
+        return this.accessControlMaxAgeSec == null ? Codegen.empty() : this.accessControlMaxAgeSec;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="originOverride", required=true)
       private final Output<Boolean> originOverride;
 
-    public Output<Boolean> getOriginOverride() {
+    public Output<Boolean> originOverride() {
         return this.originOverride;
     }
 
@@ -114,13 +115,13 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     }
 
     private ResponseHeadersPolicyCorsConfigArgs() {
-        this.accessControlAllowCredentials = Output.empty();
-        this.accessControlAllowHeaders = Output.empty();
-        this.accessControlAllowMethods = Output.empty();
-        this.accessControlAllowOrigins = Output.empty();
-        this.accessControlExposeHeaders = Output.empty();
-        this.accessControlMaxAgeSec = Output.empty();
-        this.originOverride = Output.empty();
+        this.accessControlAllowCredentials = Codegen.empty();
+        this.accessControlAllowHeaders = Codegen.empty();
+        this.accessControlAllowMethods = Codegen.empty();
+        this.accessControlAllowOrigins = Codegen.empty();
+        this.accessControlExposeHeaders = Codegen.empty();
+        this.accessControlMaxAgeSec = Codegen.empty();
+        this.originOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder accessControlExposeHeaders(@Nullable ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs accessControlExposeHeaders) {
-            this.accessControlExposeHeaders = Output.ofNullable(accessControlExposeHeaders);
+            this.accessControlExposeHeaders = Codegen.ofNullable(accessControlExposeHeaders);
             return this;
         }
         public Builder accessControlMaxAgeSec(@Nullable Output<Integer> accessControlMaxAgeSec) {
@@ -200,7 +201,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder accessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Output.ofNullable(accessControlMaxAgeSec);
+            this.accessControlMaxAgeSec = Codegen.ofNullable(accessControlMaxAgeSec);
             return this;
         }
         public Builder originOverride(Output<Boolean> originOverride) {

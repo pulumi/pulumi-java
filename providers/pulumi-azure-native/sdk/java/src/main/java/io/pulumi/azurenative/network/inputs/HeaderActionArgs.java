@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.HeaderActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headerActionType", required=true)
       private final Output<Either<String,HeaderActionType>> headerActionType;
 
-    public Output<Either<String,HeaderActionType>> getHeaderActionType() {
+    public Output<Either<String,HeaderActionType>> headerActionType() {
         return this.headerActionType;
     }
 
@@ -38,7 +39,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -49,8 +50,8 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public HeaderActionArgs(
@@ -63,9 +64,9 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HeaderActionArgs() {
-        this.headerActionType = Output.empty();
-        this.headerName = Output.empty();
-        this.value = Output.empty();
+        this.headerActionType = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public HeaderActionArgs build() {
             return new HeaderActionArgs(headerActionType, headerName, value);

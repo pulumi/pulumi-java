@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
     @Import(name="eventType")
       private final @Nullable Output<String> eventType;
 
-    public Output<String> getEventType() {
-        return this.eventType == null ? Output.empty() : this.eventType;
+    public Output<String> eventType() {
+        return this.eventType == null ? Codegen.empty() : this.eventType;
     }
 
     @Import(name="includeBody")
       private final @Nullable Output<Boolean> includeBody;
 
-    public Output<Boolean> getIncludeBody() {
-        return this.includeBody == null ? Output.empty() : this.includeBody;
+    public Output<Boolean> includeBody() {
+        return this.includeBody == null ? Codegen.empty() : this.includeBody;
     }
 
     @Import(name="lambdaFunctionARN")
       private final @Nullable Output<String> lambdaFunctionARN;
 
-    public Output<String> getLambdaFunctionARN() {
-        return this.lambdaFunctionARN == null ? Output.empty() : this.lambdaFunctionARN;
+    public Output<String> lambdaFunctionARN() {
+        return this.lambdaFunctionARN == null ? Codegen.empty() : this.lambdaFunctionARN;
     }
 
     public DistributionLambdaFunctionAssociationArgs(
@@ -46,9 +47,9 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
     }
 
     private DistributionLambdaFunctionAssociationArgs() {
-        this.eventType = Output.empty();
-        this.includeBody = Output.empty();
-        this.lambdaFunctionARN = Output.empty();
+        this.eventType = Codegen.empty();
+        this.includeBody = Codegen.empty();
+        this.lambdaFunctionARN = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
             return this;
         }
         public Builder eventType(@Nullable String eventType) {
-            this.eventType = Output.ofNullable(eventType);
+            this.eventType = Codegen.ofNullable(eventType);
             return this;
         }
         public Builder includeBody(@Nullable Output<Boolean> includeBody) {
@@ -88,7 +89,7 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
             return this;
         }
         public Builder includeBody(@Nullable Boolean includeBody) {
-            this.includeBody = Output.ofNullable(includeBody);
+            this.includeBody = Codegen.ofNullable(includeBody);
             return this;
         }
         public Builder lambdaFunctionARN(@Nullable Output<String> lambdaFunctionARN) {
@@ -96,7 +97,7 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
             return this;
         }
         public Builder lambdaFunctionARN(@Nullable String lambdaFunctionARN) {
-            this.lambdaFunctionARN = Output.ofNullable(lambdaFunctionARN);
+            this.lambdaFunctionARN = Codegen.ofNullable(lambdaFunctionARN);
             return this;
         }        public DistributionLambdaFunctionAssociationArgs build() {
             return new DistributionLambdaFunctionAssociationArgs(eventType, includeBody, lambdaFunctionARN);

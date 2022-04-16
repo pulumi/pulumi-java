@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsublite_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishMibPerSec")
       private final @Nullable Output<Integer> publishMibPerSec;
 
-    public Output<Integer> getPublishMibPerSec() {
-        return this.publishMibPerSec == null ? Output.empty() : this.publishMibPerSec;
+    public Output<Integer> publishMibPerSec() {
+        return this.publishMibPerSec == null ? Codegen.empty() : this.publishMibPerSec;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscribeMibPerSec")
       private final @Nullable Output<Integer> subscribeMibPerSec;
 
-    public Output<Integer> getSubscribeMibPerSec() {
-        return this.subscribeMibPerSec == null ? Output.empty() : this.subscribeMibPerSec;
+    public Output<Integer> subscribeMibPerSec() {
+        return this.subscribeMibPerSec == null ? Codegen.empty() : this.subscribeMibPerSec;
     }
 
     public CapacityArgs(
@@ -48,8 +49,8 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CapacityArgs() {
-        this.publishMibPerSec = Output.empty();
-        this.subscribeMibPerSec = Output.empty();
+        this.publishMibPerSec = Codegen.empty();
+        this.subscribeMibPerSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publishMibPerSec(@Nullable Integer publishMibPerSec) {
-            this.publishMibPerSec = Output.ofNullable(publishMibPerSec);
+            this.publishMibPerSec = Codegen.ofNullable(publishMibPerSec);
             return this;
         }
         public Builder subscribeMibPerSec(@Nullable Output<Integer> subscribeMibPerSec) {
@@ -87,7 +88,7 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscribeMibPerSec(@Nullable Integer subscribeMibPerSec) {
-            this.subscribeMibPerSec = Output.ofNullable(subscribeMibPerSec);
+            this.subscribeMibPerSec = Codegen.ofNullable(subscribeMibPerSec);
             return this;
         }        public CapacityArgs build() {
             return new CapacityArgs(publishMibPerSec, subscribeMibPerSec);

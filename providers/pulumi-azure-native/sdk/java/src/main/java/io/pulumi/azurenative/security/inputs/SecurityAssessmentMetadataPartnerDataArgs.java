@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
     @Import(name="partnerName", required=true)
       private final Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName;
     }
 
@@ -36,8 +37,8 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
-        return this.productName == null ? Output.empty() : this.productName;
+    public Output<String> productName() {
+        return this.productName == null ? Codegen.empty() : this.productName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -61,9 +62,9 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
     }
 
     private SecurityAssessmentMetadataPartnerDataArgs() {
-        this.partnerName = Output.empty();
-        this.productName = Output.empty();
-        this.secret = Output.empty();
+        this.partnerName = Codegen.empty();
+        this.productName = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
             return this;
         }
         public Builder productName(@Nullable String productName) {
-            this.productName = Output.ofNullable(productName);
+            this.productName = Codegen.ofNullable(productName);
             return this;
         }
         public Builder secret(Output<String> secret) {

@@ -63,42 +63,42 @@ public final class BudgetNotification {
      * (Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
      * 
     */
-    public String getComparisonOperator() {
+    public String comparisonOperator() {
         return this.comparisonOperator;
     }
     /**
      * (Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
      * 
     */
-    public String getNotificationType() {
+    public String notificationType() {
         return this.notificationType;
     }
     /**
      * (Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
      * 
     */
-    public List<String> getSubscriberEmailAddresses() {
+    public List<String> subscriberEmailAddresses() {
         return this.subscriberEmailAddresses == null ? List.of() : this.subscriberEmailAddresses;
     }
     /**
      * (Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
      * 
     */
-    public List<String> getSubscriberSnsTopicArns() {
+    public List<String> subscriberSnsTopicArns() {
         return this.subscriberSnsTopicArns == null ? List.of() : this.subscriberSnsTopicArns;
     }
     /**
      * (Required) Threshold when the notification should be sent.
      * 
     */
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
     /**
      * (Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
      * 
     */
-    public String getThresholdType() {
+    public String thresholdType() {
         return this.thresholdType;
     }
 

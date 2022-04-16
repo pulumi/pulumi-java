@@ -11,6 +11,7 @@ import io.pulumi.aws.cloudwatch.outputs.MetricStreamIncludeFilter;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return ARN of the metric stream.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the metric stream was created.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -71,7 +72,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return List of exclusive metric filters. If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here. Conflicts with `include_filter`.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamExcludeFilter>> getExcludeFilters() {
+    public Output</* @Nullable */ List<MetricStreamExcludeFilter>> excludeFilters() {
         return this.excludeFilters;
     }
     /**
@@ -85,7 +86,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return ARN of the Amazon Kinesis Firehose delivery stream to use for this metric stream.
      * 
      */
-    public Output<String> getFirehoseArn() {
+    public Output<String> firehoseArn() {
         return this.firehoseArn;
     }
     /**
@@ -99,7 +100,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return List of inclusive metric filters. If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here. Conflicts with `exclude_filter`.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamIncludeFilter>> getIncludeFilters() {
+    public Output</* @Nullable */ List<MetricStreamIncludeFilter>> includeFilters() {
         return this.includeFilters;
     }
     /**
@@ -113,13 +114,13 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the metric stream was last updated.
      * 
      */
-    public Output<String> getLastUpdateDate() {
+    public Output<String> lastUpdateDate() {
         return this.lastUpdateDate;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +134,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -147,7 +148,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Output format for the stream. Possible values are `json` and `opentelemetry0.7`. For more information about output formats, see [Metric streams output formats](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html).
      * 
      */
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat;
     }
     /**
@@ -161,7 +162,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return ARN of the IAM role that this metric stream will use to access Amazon Kinesis Firehose resources. For more information about role permissions, see [Trust between CloudWatch and Kinesis Data Firehose](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html).
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -175,7 +176,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return State of the metric stream. Possible values are `running` and `stopped`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -189,7 +190,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -203,7 +204,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -229,7 +230,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetricStream(String name, MetricStreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/metricStream:MetricStream", name, args == null ? MetricStreamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/metricStream:MetricStream", name, args == null ? MetricStreamArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MetricStream(String name, Output<String> id, @Nullable MetricStreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

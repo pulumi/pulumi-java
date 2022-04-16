@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.ServicePerimeterPerimeterType;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ServicePerimeterConfigArgs;
 import java.lang.Boolean;
@@ -20,7 +21,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accessPolicyId", required=true)
       private final Output<String> accessPolicyId;
 
-    public Output<String> getAccessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
 
@@ -31,8 +32,8 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="perimeterType")
       private final @Nullable Output<ServicePerimeterPerimeterType> perimeterType;
 
-    public Output<ServicePerimeterPerimeterType> getPerimeterType() {
-        return this.perimeterType == null ? Output.empty() : this.perimeterType;
+    public Output<ServicePerimeterPerimeterType> perimeterType() {
+        return this.perimeterType == null ? Codegen.empty() : this.perimeterType;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="spec")
       private final @Nullable Output<ServicePerimeterConfigArgs> spec;
 
-    public Output<ServicePerimeterConfigArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<ServicePerimeterConfigArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<ServicePerimeterConfigArgs> status;
 
-    public Output<ServicePerimeterConfigArgs> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<ServicePerimeterConfigArgs> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="useExplicitDryRunSpec")
       private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
-    public Output<Boolean> getUseExplicitDryRunSpec() {
-        return this.useExplicitDryRunSpec == null ? Output.empty() : this.useExplicitDryRunSpec;
+    public Output<Boolean> useExplicitDryRunSpec() {
+        return this.useExplicitDryRunSpec == null ? Codegen.empty() : this.useExplicitDryRunSpec;
     }
 
     public ServicePerimeterArgs(
@@ -121,14 +122,14 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServicePerimeterArgs() {
-        this.accessPolicyId = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.perimeterType = Output.empty();
-        this.spec = Output.empty();
-        this.status = Output.empty();
-        this.title = Output.empty();
-        this.useExplicitDryRunSpec = Output.empty();
+        this.accessPolicyId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.perimeterType = Codegen.empty();
+        this.spec = Codegen.empty();
+        this.status = Codegen.empty();
+        this.title = Codegen.empty();
+        this.useExplicitDryRunSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -186,7 +187,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder perimeterType(@Nullable Output<ServicePerimeterPerimeterType> perimeterType) {
@@ -194,7 +195,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder perimeterType(@Nullable ServicePerimeterPerimeterType perimeterType) {
-            this.perimeterType = Output.ofNullable(perimeterType);
+            this.perimeterType = Codegen.ofNullable(perimeterType);
             return this;
         }
         public Builder spec(@Nullable Output<ServicePerimeterConfigArgs> spec) {
@@ -202,7 +203,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder spec(@Nullable ServicePerimeterConfigArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }
         public Builder status(@Nullable Output<ServicePerimeterConfigArgs> status) {
@@ -210,7 +211,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable ServicePerimeterConfigArgs status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -218,7 +219,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder useExplicitDryRunSpec(@Nullable Output<Boolean> useExplicitDryRunSpec) {
@@ -226,7 +227,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
-            this.useExplicitDryRunSpec = Output.ofNullable(useExplicitDryRunSpec);
+            this.useExplicitDryRunSpec = Codegen.ofNullable(useExplicitDryRunSpec);
             return this;
         }        public ServicePerimeterArgs build() {
             return new ServicePerimeterArgs(accessPolicyId, description, name, perimeterType, spec, status, title, useExplicitDryRunSpec);

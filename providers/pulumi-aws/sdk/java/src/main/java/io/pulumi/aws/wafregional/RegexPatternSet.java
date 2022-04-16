@@ -9,6 +9,7 @@ import io.pulumi.aws.wafregional.inputs.RegexPatternSetState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return The name or description of the Regex Pattern Set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -54,7 +55,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return A list of regular expression (regex) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRegexPatternStrings() {
+    public Output</* @Nullable */ List<String>> regexPatternStrings() {
         return this.regexPatternStrings;
     }
 
@@ -80,7 +81,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegexPatternSet(String name, @Nullable RegexPatternSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/regexPatternSet:RegexPatternSet", name, args == null ? RegexPatternSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafregional/regexPatternSet:RegexPatternSet", name, args == null ? RegexPatternSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegexPatternSet(String name, Output<String> id, @Nullable RegexPatternSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

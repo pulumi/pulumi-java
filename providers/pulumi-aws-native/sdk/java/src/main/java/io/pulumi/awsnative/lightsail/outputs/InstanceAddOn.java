@@ -39,17 +39,17 @@ public final class InstanceAddOn {
      * The add-on type
      * 
     */
-    public String getAddOnType() {
+    public String addOnType() {
         return this.addOnType;
     }
-    public Optional<InstanceAutoSnapshotAddOn> getAutoSnapshotAddOnRequest() {
+    public Optional<InstanceAutoSnapshotAddOn> autoSnapshotAddOnRequest() {
         return Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
     /**
      * Status of the Addon
      * 
     */
-    public Optional<InstanceAddOnStatus> getStatus() {
+    public Optional<InstanceAddOnStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

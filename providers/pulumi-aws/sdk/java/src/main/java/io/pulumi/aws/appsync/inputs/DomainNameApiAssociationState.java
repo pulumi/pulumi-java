@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     public DomainNameApiAssociationState(
@@ -44,8 +45,8 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
     }
 
     private DomainNameApiAssociationState() {
-        this.apiId = Output.empty();
-        this.domainName = Output.empty();
+        this.apiId = Codegen.empty();
+        this.domainName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -83,7 +84,7 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }        public DomainNameApiAssociationState build() {
             return new DomainNameApiAssociationState(apiId, domainName);

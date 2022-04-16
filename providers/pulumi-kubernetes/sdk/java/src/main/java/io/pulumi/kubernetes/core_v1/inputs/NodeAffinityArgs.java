@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PreferredSchedulingTermArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredDuringSchedulingIgnoredDuringExecution")
       private final @Nullable Output<List<PreferredSchedulingTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
 
-    public Output<List<PreferredSchedulingTermArgs>> getPreferredDuringSchedulingIgnoredDuringExecution() {
-        return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Output.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
+    public Output<List<PreferredSchedulingTermArgs>> preferredDuringSchedulingIgnoredDuringExecution() {
+        return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Codegen.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiredDuringSchedulingIgnoredDuringExecution")
       private final @Nullable Output<NodeSelectorArgs> requiredDuringSchedulingIgnoredDuringExecution;
 
-    public Output<NodeSelectorArgs> getRequiredDuringSchedulingIgnoredDuringExecution() {
-        return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Output.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;
+    public Output<NodeSelectorArgs> requiredDuringSchedulingIgnoredDuringExecution() {
+        return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Codegen.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;
     }
 
     public NodeAffinityArgs(
@@ -50,8 +51,8 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeAffinityArgs() {
-        this.preferredDuringSchedulingIgnoredDuringExecution = Output.empty();
-        this.requiredDuringSchedulingIgnoredDuringExecution = Output.empty();
+        this.preferredDuringSchedulingIgnoredDuringExecution = Codegen.empty();
+        this.requiredDuringSchedulingIgnoredDuringExecution = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<PreferredSchedulingTermArgs> preferredDuringSchedulingIgnoredDuringExecution) {
-            this.preferredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(preferredDuringSchedulingIgnoredDuringExecution);
+            this.preferredDuringSchedulingIgnoredDuringExecution = Codegen.ofNullable(preferredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
         public Builder preferredDuringSchedulingIgnoredDuringExecution(PreferredSchedulingTermArgs... preferredDuringSchedulingIgnoredDuringExecution) {
@@ -92,7 +93,7 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable NodeSelectorArgs requiredDuringSchedulingIgnoredDuringExecution) {
-            this.requiredDuringSchedulingIgnoredDuringExecution = Output.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
+            this.requiredDuringSchedulingIgnoredDuringExecution = Codegen.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
             return this;
         }        public NodeAffinityArgs build() {
             return new NodeAffinityArgs(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);

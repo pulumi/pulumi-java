@@ -35,14 +35,14 @@ public final class HubIPAddressesResponse {
      * Private IP Address associated with azure firewall.
      * 
     */
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * Public IP addresses associated with azure firewall.
      * 
     */
-    public Optional<HubPublicIPAddressesResponse> getPublicIPs() {
+    public Optional<HubPublicIPAddressesResponse> publicIPs() {
         return Optional.ofNullable(this.publicIPs);
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.MainRouteTableAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -25,7 +26,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * @return Used internally, see __Notes__ below
      * 
      */
-    public Output<String> getOriginalRouteTableId() {
+    public Output<String> originalRouteTableId() {
         return this.originalRouteTableId;
     }
     /**
@@ -41,7 +42,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * main route table for the target VPC
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     /**
@@ -55,7 +56,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * @return The ID of the VPC whose main route table should be set
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -81,7 +82,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public MainRouteTableAssociation(String name, MainRouteTableAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/mainRouteTableAssociation:MainRouteTableAssociation", name, args == null ? MainRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/mainRouteTableAssociation:MainRouteTableAssociation", name, args == null ? MainRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MainRouteTableAssociation(String name, Output<String> id, @Nullable MainRouteTableAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

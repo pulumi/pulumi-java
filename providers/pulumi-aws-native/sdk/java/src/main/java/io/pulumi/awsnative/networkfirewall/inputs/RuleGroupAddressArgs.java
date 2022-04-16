@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="addressDefinition", required=true)
       private final Output<String> addressDefinition;
 
-    public Output<String> getAddressDefinition() {
+    public Output<String> addressDefinition() {
         return this.addressDefinition;
     }
 
@@ -25,7 +26,7 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RuleGroupAddressArgs() {
-        this.addressDefinition = Output.empty();
+        this.addressDefinition = Codegen.empty();
     }
 
     public static Builder builder() {

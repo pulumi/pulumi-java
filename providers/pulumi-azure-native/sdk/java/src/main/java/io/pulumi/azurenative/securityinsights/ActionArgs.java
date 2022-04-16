@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionId")
       private final @Nullable Output<String> actionId;
 
-    public Output<String> getActionId() {
-        return this.actionId == null ? Output.empty() : this.actionId;
+    public Output<String> actionId() {
+        return this.actionId == null ? Codegen.empty() : this.actionId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logicAppResourceId", required=true)
       private final Output<String> logicAppResourceId;
 
-    public Output<String> getLogicAppResourceId() {
+    public Output<String> logicAppResourceId() {
         return this.logicAppResourceId;
     }
 
@@ -43,7 +44,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -65,7 +66,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerUri", required=true)
       private final Output<String> triggerUri;
 
-    public Output<String> getTriggerUri() {
+    public Output<String> triggerUri() {
         return this.triggerUri;
     }
 
@@ -76,7 +77,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -96,12 +97,12 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionArgs() {
-        this.actionId = Output.empty();
-        this.logicAppResourceId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleId = Output.empty();
-        this.triggerUri = Output.empty();
-        this.workspaceName = Output.empty();
+        this.actionId = Codegen.empty();
+        this.logicAppResourceId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.triggerUri = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionId(@Nullable String actionId) {
-            this.actionId = Output.ofNullable(actionId);
+            this.actionId = Codegen.ofNullable(actionId);
             return this;
         }
         public Builder logicAppResourceId(Output<String> logicAppResourceId) {

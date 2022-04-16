@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<String> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="server")
       private final @Nullable Output<String> server;
 
-    public Output<String> getServer() {
-        return this.server == null ? Output.empty() : this.server;
+    public Output<String> server() {
+        return this.server == null ? Codegen.empty() : this.server;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+    public Output<String> table() {
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -81,8 +82,8 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public AzureSqlDatabaseOutputDataSourceArgs(
@@ -101,12 +102,12 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     }
 
     private AzureSqlDatabaseOutputDataSourceArgs() {
-        this.database = Output.empty();
-        this.password = Output.empty();
-        this.server = Output.empty();
-        this.table = Output.empty();
-        this.type = Output.empty();
-        this.user = Output.empty();
+        this.database = Codegen.empty();
+        this.password = Codegen.empty();
+        this.server = Codegen.empty();
+        this.table = Codegen.empty();
+        this.type = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -152,7 +153,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder server(@Nullable Output<String> server) {
@@ -160,7 +161,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder server(@Nullable String server) {
-            this.server = Output.ofNullable(server);
+            this.server = Codegen.ofNullable(server);
             return this;
         }
         public Builder table(@Nullable Output<String> table) {
@@ -168,7 +169,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder table(@Nullable String table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -184,7 +185,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public AzureSqlDatabaseOutputDataSourceArgs build() {
             return new AzureSqlDatabaseOutputDataSourceArgs(database, password, server, table, type, user);

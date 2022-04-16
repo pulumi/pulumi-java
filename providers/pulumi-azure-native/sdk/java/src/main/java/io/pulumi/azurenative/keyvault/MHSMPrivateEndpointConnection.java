@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return Modified whenever there is a change in the state of private endpoint connection.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -60,7 +61,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -74,7 +75,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return The name of the managed HSM Pool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +89,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return Properties of the private endpoint object.
      * 
      */
-    public Output</* @Nullable */ MHSMPrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ MHSMPrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -102,7 +103,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return Approval state of the private link connection.
      * 
      */
-    public Output</* @Nullable */ MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ MHSMPrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -116,7 +117,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return Provisioning state of the private endpoint connection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +131,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return SKU details
      * 
      */
-    public Output</* @Nullable */ ManagedHsmSkuResponse> getSku() {
+    public Output</* @Nullable */ ManagedHsmSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -144,7 +145,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return Metadata pertaining to creation and last modification of the key vault resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -158,7 +159,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +173,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @return The resource type of the managed HSM Pool.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -198,7 +199,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public MHSMPrivateEndpointConnection(String name, MHSMPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:keyvault:MHSMPrivateEndpointConnection", name, args == null ? MHSMPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:keyvault:MHSMPrivateEndpointConnection", name, args == null ? MHSMPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MHSMPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

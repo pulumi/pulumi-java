@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotFulfillmentUpdatesSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotPostFulfillmentStatusSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,22 +24,22 @@ public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
     @Import(name="fulfillmentUpdatesSpecification")
       private final @Nullable Output<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification;
 
-    public Output<BotFulfillmentUpdatesSpecificationArgs> getFulfillmentUpdatesSpecification() {
-        return this.fulfillmentUpdatesSpecification == null ? Output.empty() : this.fulfillmentUpdatesSpecification;
+    public Output<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification() {
+        return this.fulfillmentUpdatesSpecification == null ? Codegen.empty() : this.fulfillmentUpdatesSpecification;
     }
 
     @Import(name="postFulfillmentStatusSpecification")
       private final @Nullable Output<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification;
 
-    public Output<BotPostFulfillmentStatusSpecificationArgs> getPostFulfillmentStatusSpecification() {
-        return this.postFulfillmentStatusSpecification == null ? Output.empty() : this.postFulfillmentStatusSpecification;
+    public Output<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification() {
+        return this.postFulfillmentStatusSpecification == null ? Codegen.empty() : this.postFulfillmentStatusSpecification;
     }
 
     public BotFulfillmentCodeHookSettingArgs(
@@ -51,9 +52,9 @@ public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources
     }
 
     private BotFulfillmentCodeHookSettingArgs() {
-        this.enabled = Output.empty();
-        this.fulfillmentUpdatesSpecification = Output.empty();
-        this.postFulfillmentStatusSpecification = Output.empty();
+        this.enabled = Codegen.empty();
+        this.fulfillmentUpdatesSpecification = Codegen.empty();
+        this.postFulfillmentStatusSpecification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources
             return this;
         }
         public Builder fulfillmentUpdatesSpecification(@Nullable BotFulfillmentUpdatesSpecificationArgs fulfillmentUpdatesSpecification) {
-            this.fulfillmentUpdatesSpecification = Output.ofNullable(fulfillmentUpdatesSpecification);
+            this.fulfillmentUpdatesSpecification = Codegen.ofNullable(fulfillmentUpdatesSpecification);
             return this;
         }
         public Builder postFulfillmentStatusSpecification(@Nullable Output<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification) {
@@ -101,7 +102,7 @@ public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources
             return this;
         }
         public Builder postFulfillmentStatusSpecification(@Nullable BotPostFulfillmentStatusSpecificationArgs postFulfillmentStatusSpecification) {
-            this.postFulfillmentStatusSpecification = Output.ofNullable(postFulfillmentStatusSpecification);
+            this.postFulfillmentStatusSpecification = Codegen.ofNullable(postFulfillmentStatusSpecification);
             return this;
         }        public BotFulfillmentCodeHookSettingArgs build() {
             return new BotFulfillmentCodeHookSettingArgs(enabled, fulfillmentUpdatesSpecification, postFulfillmentStatusSpecification);

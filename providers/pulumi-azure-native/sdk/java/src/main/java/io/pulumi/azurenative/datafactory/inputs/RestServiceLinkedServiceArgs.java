@@ -12,6 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,8 +36,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="aadResourceId")
       private final @Nullable Output<Object> aadResourceId;
 
-    public Output<Object> getAadResourceId() {
-        return this.aadResourceId == null ? Output.empty() : this.aadResourceId;
+    public Output<Object> aadResourceId() {
+        return this.aadResourceId == null ? Codegen.empty() : this.aadResourceId;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="authHeaders")
       private final @Nullable Output<Object> authHeaders;
 
-    public Output<Object> getAuthHeaders() {
-        return this.authHeaders == null ? Output.empty() : this.authHeaders;
+    public Output<Object> authHeaders() {
+        return this.authHeaders == null ? Codegen.empty() : this.authHeaders;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,RestServiceAuthenticationType>> authenticationType;
 
-    public Output<Either<String,RestServiceAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,RestServiceAuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
 
@@ -79,8 +80,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
-    public Output<Object> getAzureCloudType() {
-        return this.azureCloudType == null ? Output.empty() : this.azureCloudType;
+    public Output<Object> azureCloudType() {
+        return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+    public Output<CredentialReferenceArgs> credential() {
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="enableServerCertificateValidation")
       private final @Nullable Output<Object> enableServerCertificateValidation;
 
-    public Output<Object> getEnableServerCertificateValidation() {
-        return this.enableServerCertificateValidation == null ? Output.empty() : this.enableServerCertificateValidation;
+    public Output<Object> enableServerCertificateValidation() {
+        return this.enableServerCertificateValidation == null ? Codegen.empty() : this.enableServerCertificateValidation;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
+    public Output<Object> servicePrincipalId() {
+        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -178,8 +179,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
+        return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
     /**
@@ -189,8 +190,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
-    public Output<Object> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+    public Output<Object> tenant() {
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -212,7 +213,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -223,8 +224,8 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<Object> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public RestServiceLinkedServiceArgs(
@@ -267,24 +268,24 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     }
 
     private RestServiceLinkedServiceArgs() {
-        this.aadResourceId = Output.empty();
-        this.annotations = Output.empty();
-        this.authHeaders = Output.empty();
-        this.authenticationType = Output.empty();
-        this.azureCloudType = Output.empty();
-        this.connectVia = Output.empty();
-        this.credential = Output.empty();
-        this.description = Output.empty();
-        this.enableServerCertificateValidation = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.servicePrincipalId = Output.empty();
-        this.servicePrincipalKey = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
-        this.userName = Output.empty();
+        this.aadResourceId = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.authHeaders = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.azureCloudType = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableServerCertificateValidation = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.servicePrincipalId = Codegen.empty();
+        this.servicePrincipalKey = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -346,7 +347,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder aadResourceId(@Nullable Object aadResourceId) {
-            this.aadResourceId = Output.ofNullable(aadResourceId);
+            this.aadResourceId = Codegen.ofNullable(aadResourceId);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -354,7 +355,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -365,7 +366,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder authHeaders(@Nullable Object authHeaders) {
-            this.authHeaders = Output.ofNullable(authHeaders);
+            this.authHeaders = Codegen.ofNullable(authHeaders);
             return this;
         }
         public Builder authenticationType(Output<Either<String,RestServiceAuthenticationType>> authenticationType) {
@@ -381,7 +382,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = Output.ofNullable(azureCloudType);
+            this.azureCloudType = Codegen.ofNullable(azureCloudType);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -389,7 +390,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
@@ -397,7 +398,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -405,7 +406,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableServerCertificateValidation(@Nullable Output<Object> enableServerCertificateValidation) {
@@ -413,7 +414,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
-            this.enableServerCertificateValidation = Output.ofNullable(enableServerCertificateValidation);
+            this.enableServerCertificateValidation = Codegen.ofNullable(enableServerCertificateValidation);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -421,7 +422,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -429,7 +430,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -437,7 +438,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
@@ -445,7 +446,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
@@ -453,7 +454,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Codegen.ofNullable(servicePrincipalKey);
             return this;
         }
         public Builder tenant(@Nullable Output<Object> tenant) {
@@ -461,7 +462,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -485,7 +486,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder userName(@Nullable Object userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public RestServiceLinkedServiceArgs build() {
             return new RestServiceLinkedServiceArgs(aadResourceId, annotations, authHeaders, authenticationType, azureCloudType, connectVia, credential, description, enableServerCertificateValidation, encryptedCredential, parameters, password, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);

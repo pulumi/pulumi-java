@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +46,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The content type of the raw content. Example : text/csv or text/tsv
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -59,7 +60,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The time the watchlist was created
      * 
      */
-    public Output</* @Nullable */ String> getCreated() {
+    public Output</* @Nullable */ String> created() {
         return this.created;
     }
     /**
@@ -73,7 +74,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return Describes a user that created the watchlist
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> getCreatedBy() {
+    public Output</* @Nullable */ WatchlistUserInfoResponse> createdBy() {
         return this.createdBy;
     }
     /**
@@ -87,7 +88,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The default duration of a watchlist (in ISO 8601 duration format)
      * 
      */
-    public Output</* @Nullable */ String> getDefaultDuration() {
+    public Output</* @Nullable */ String> defaultDuration() {
         return this.defaultDuration;
     }
     /**
@@ -101,7 +102,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return A description of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -115,7 +116,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The display name of the watchlist
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -129,7 +130,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -143,7 +144,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return A flag that indicates if the watchlist is deleted or not
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsDeleted() {
+    public Output</* @Nullable */ Boolean> isDeleted() {
         return this.isDeleted;
     }
     /**
@@ -157,7 +158,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
      * 
      */
-    public Output<String> getItemsSearchKey() {
+    public Output<String> itemsSearchKey() {
         return this.itemsSearchKey;
     }
     /**
@@ -171,7 +172,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return List of labels relevant to this watchlist
      * 
      */
-    public Output</* @Nullable */ List<String>> getLabels() {
+    public Output</* @Nullable */ List<String>> labels() {
         return this.labels;
     }
     /**
@@ -185,7 +186,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -199,7 +200,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The number of lines in a csv/tsv content to skip before the header
      * 
      */
-    public Output</* @Nullable */ Integer> getNumberOfLinesToSkip() {
+    public Output</* @Nullable */ Integer> numberOfLinesToSkip() {
         return this.numberOfLinesToSkip;
     }
     /**
@@ -213,7 +214,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The provider of the watchlist
      * 
      */
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider;
     }
     /**
@@ -227,7 +228,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
      * 
      */
-    public Output</* @Nullable */ String> getRawContent() {
+    public Output</* @Nullable */ String> rawContent() {
         return this.rawContent;
     }
     /**
@@ -241,7 +242,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The source of the watchlist
      * 
      */
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
     /**
@@ -255,7 +256,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -269,7 +270,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The tenantId where the watchlist belongs to
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -283,7 +284,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -297,7 +298,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The last time the watchlist was updated
      * 
      */
-    public Output</* @Nullable */ String> getUpdated() {
+    public Output</* @Nullable */ String> updated() {
         return this.updated;
     }
     /**
@@ -311,7 +312,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return Describes a user that updated the watchlist
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> getUpdatedBy() {
+    public Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy() {
         return this.updatedBy;
     }
     /**
@@ -325,7 +326,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
      * 
      */
-    public Output</* @Nullable */ String> getUploadStatus() {
+    public Output</* @Nullable */ String> uploadStatus() {
         return this.uploadStatus;
     }
     /**
@@ -339,7 +340,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The alias of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> getWatchlistAlias() {
+    public Output</* @Nullable */ String> watchlistAlias() {
         return this.watchlistAlias;
     }
     /**
@@ -353,7 +354,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The id (a Guid) of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> getWatchlistId() {
+    public Output</* @Nullable */ String> watchlistId() {
         return this.watchlistId;
     }
     /**
@@ -367,7 +368,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The number of Watchlist Items in the Watchlist
      * 
      */
-    public Output</* @Nullable */ Integer> getWatchlistItemsCount() {
+    public Output</* @Nullable */ Integer> watchlistItemsCount() {
         return this.watchlistItemsCount;
     }
     /**
@@ -381,7 +382,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @return The type of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> getWatchlistType() {
+    public Output</* @Nullable */ String> watchlistType() {
         return this.watchlistType;
     }
 
@@ -407,7 +408,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Watchlist(String name, WatchlistArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:Watchlist", name, args == null ? WatchlistArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:Watchlist", name, args == null ? WatchlistArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Watchlist(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

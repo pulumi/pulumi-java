@@ -43,14 +43,14 @@ public final class IntentSlotValueElicitationPromptMessage {
      * The text of the message. Must be less than or equal to 1000 characters in length.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The content type of the message string.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
@@ -58,7 +58,7 @@ public final class IntentSlotValueElicitationPromptMessage {
      * is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
      * 
     */
-    public Optional<Integer> getGroupNumber() {
+    public Optional<Integer> groupNumber() {
         return Optional.ofNullable(this.groupNumber);
     }
 

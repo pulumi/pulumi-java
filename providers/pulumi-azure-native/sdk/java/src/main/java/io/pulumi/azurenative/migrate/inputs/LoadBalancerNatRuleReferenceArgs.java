@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
     @Import(name="sourceArmResourceId", required=true)
       private final Output<String> sourceArmResourceId;
 
-    public Output<String> getSourceArmResourceId() {
+    public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
@@ -48,8 +49,8 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
     }
 
     private LoadBalancerNatRuleReferenceArgs() {
-        this.name = Output.empty();
-        this.sourceArmResourceId = Output.empty();
+        this.name = Codegen.empty();
+        this.sourceArmResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {

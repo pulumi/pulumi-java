@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * @return Flag that indicates the status of the CMK setting
      * 
      */
-    public Output</* @Nullable */ Boolean> getCustomerManagedKey() {
+    public Output</* @Nullable */ Boolean> customerManagedKey() {
         return this.customerManagedKey;
     }
     /**
@@ -57,7 +58,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +72,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -99,7 +100,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -125,7 +126,7 @@ public class SentinelOnboardingState extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public SentinelOnboardingState(String name, SentinelOnboardingStateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:SentinelOnboardingState", name, args == null ? SentinelOnboardingStateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:SentinelOnboardingState", name, args == null ? SentinelOnboardingStateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SentinelOnboardingState(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

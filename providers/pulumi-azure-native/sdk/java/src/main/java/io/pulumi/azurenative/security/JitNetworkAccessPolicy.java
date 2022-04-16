@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -56,7 +57,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -70,7 +71,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,13 +85,13 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Gets the provisioning state of the Just-in-Time policy.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     @Export(name="requests", type=List.class, parameters={JitNetworkAccessRequestResponse.class})
     private Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> requests;
 
-    public Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> getRequests() {
+    public Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> requests() {
         return this.requests;
     }
     /**
@@ -104,7 +105,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -118,7 +119,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Configurations for Microsoft.Compute/virtualMachines resource type.
      * 
      */
-    public Output<List<JitNetworkAccessPolicyVirtualMachineResponse>> getVirtualMachines() {
+    public Output<List<JitNetworkAccessPolicyVirtualMachineResponse>> virtualMachines() {
         return this.virtualMachines;
     }
 
@@ -144,7 +145,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JitNetworkAccessPolicy(String name, JitNetworkAccessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:security:JitNetworkAccessPolicy", name, args == null ? JitNetworkAccessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:security:JitNetworkAccessPolicy", name, args == null ? JitNetworkAccessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private JitNetworkAccessPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

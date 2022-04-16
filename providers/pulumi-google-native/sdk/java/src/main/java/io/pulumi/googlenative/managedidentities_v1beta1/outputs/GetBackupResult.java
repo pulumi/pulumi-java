@@ -68,49 +68,49 @@ public final class GetBackupResult {
      * The time the backups was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Optional. Resource labels to represent user provided metadata.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current state of the backup.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Additional information about the current status of this backup, if available.
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
     /**
      * Indicates whether it’s an on-demand backup or scheduled.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Last update time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

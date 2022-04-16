@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeout")
       private final @Nullable Output<String> idleTimeout;
 
-    public Output<String> getIdleTimeout() {
-        return this.idleTimeout == null ? Output.empty() : this.idleTimeout;
+    public Output<String> idleTimeout() {
+        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Output.empty() : this.maxInstances;
+    public Output<Integer> maxInstances() {
+        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 
     public BasicScalingArgs(
@@ -49,8 +50,8 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BasicScalingArgs() {
-        this.idleTimeout = Output.empty();
-        this.maxInstances = Output.empty();
+        this.idleTimeout = Codegen.empty();
+        this.maxInstances = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleTimeout(@Nullable String idleTimeout) {
-            this.idleTimeout = Output.ofNullable(idleTimeout);
+            this.idleTimeout = Codegen.ofNullable(idleTimeout);
             return this;
         }
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
@@ -88,7 +89,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Output.ofNullable(maxInstances);
+            this.maxInstances = Codegen.ofNullable(maxInstances);
             return this;
         }        public BasicScalingArgs build() {
             return new BasicScalingArgs(idleTimeout, maxInstances);

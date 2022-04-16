@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class DistributionCookiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="forward", required=true)
       private final Output<String> forward;
 
-    public Output<String> getForward() {
+    public Output<String> forward() {
         return this.forward;
     }
 
     @Import(name="whitelistedNames")
       private final @Nullable Output<List<String>> whitelistedNames;
 
-    public Output<List<String>> getWhitelistedNames() {
-        return this.whitelistedNames == null ? Output.empty() : this.whitelistedNames;
+    public Output<List<String>> whitelistedNames() {
+        return this.whitelistedNames == null ? Codegen.empty() : this.whitelistedNames;
     }
 
     public DistributionCookiesArgs(
@@ -37,8 +38,8 @@ public final class DistributionCookiesArgs extends io.pulumi.resources.ResourceA
     }
 
     private DistributionCookiesArgs() {
-        this.forward = Output.empty();
-        this.whitelistedNames = Output.empty();
+        this.forward = Codegen.empty();
+        this.whitelistedNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DistributionCookiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
-            this.whitelistedNames = Output.ofNullable(whitelistedNames);
+            this.whitelistedNames = Codegen.ofNullable(whitelistedNames);
             return this;
         }
         public Builder whitelistedNames(String... whitelistedNames) {

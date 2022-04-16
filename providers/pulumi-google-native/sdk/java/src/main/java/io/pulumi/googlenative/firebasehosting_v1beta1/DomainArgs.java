@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.DomainRedirectArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -33,15 +34,15 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainRedirect")
       private final @Nullable Output<DomainRedirectArgs> domainRedirect;
 
-    public Output<DomainRedirectArgs> getDomainRedirect() {
-        return this.domainRedirect == null ? Output.empty() : this.domainRedirect;
+    public Output<DomainRedirectArgs> domainRedirect() {
+        return this.domainRedirect == null ? Codegen.empty() : this.domainRedirect;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -51,14 +52,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="site", required=true)
       private final Output<String> site;
 
-    public Output<String> getSite() {
+    public Output<String> site() {
         return this.site;
     }
 
     @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -76,11 +77,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.domainName = Output.empty();
-        this.domainRedirect = Output.empty();
-        this.project = Output.empty();
-        this.site = Output.empty();
-        this.siteId = Output.empty();
+        this.domainName = Codegen.empty();
+        this.domainRedirect = Codegen.empty();
+        this.project = Codegen.empty();
+        this.site = Codegen.empty();
+        this.siteId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainRedirect(@Nullable DomainRedirectArgs domainRedirect) {
-            this.domainRedirect = Output.ofNullable(domainRedirect);
+            this.domainRedirect = Codegen.ofNullable(domainRedirect);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -132,7 +133,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder site(Output<String> site) {

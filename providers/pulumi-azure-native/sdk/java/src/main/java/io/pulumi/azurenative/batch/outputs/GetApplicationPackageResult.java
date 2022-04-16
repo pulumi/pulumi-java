@@ -81,63 +81,63 @@ public final class GetApplicationPackageResult {
      * The ETag of the resource, used for concurrency statements.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The format of the application package, if the package is active.
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The time at which the package was last activated, if the package is active.
      * 
     */
-    public String getLastActivationTime() {
+    public String lastActivationTime() {
         return this.lastActivationTime;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current state of the application package.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The URL for the application package in Azure Storage.
      * 
     */
-    public String getStorageUrl() {
+    public String storageUrl() {
         return this.storageUrl;
     }
     /**
      * The UTC time at which the Azure Storage URL will expire.
      * 
     */
-    public String getStorageUrlExpiry() {
+    public String storageUrlExpiry() {
         return this.storageUrlExpiry;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

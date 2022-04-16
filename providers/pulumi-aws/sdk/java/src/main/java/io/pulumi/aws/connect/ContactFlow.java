@@ -9,6 +9,7 @@ import io.pulumi.aws.connect.inputs.ContactFlowState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Contact Flow.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +62,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Contact Flow.
      * 
      */
-    public Output<String> getContactFlowId() {
+    public Output<String> contactFlowId() {
         return this.contactFlowId;
     }
     /**
@@ -75,13 +76,13 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return Specifies the content of the Contact Flow, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     @Export(name="contentHash", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentHash;
 
-    public Output</* @Nullable */ String> getContentHash() {
+    public Output</* @Nullable */ String> contentHash() {
         return this.contentHash;
     }
     /**
@@ -95,7 +96,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return Specifies the description of the Contact Flow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -109,7 +110,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The path to the Contact Flow source within the local filesystem. Conflicts with `content`.
      * 
      */
-    public Output</* @Nullable */ String> getFilename() {
+    public Output</* @Nullable */ String> filename() {
         return this.filename;
     }
     /**
@@ -123,7 +124,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -137,7 +138,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the Contact Flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -151,7 +152,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return Tags to apply to the Contact Flow. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -165,7 +166,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -179,7 +180,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the Contact Flow. Defaults to `CONTACT_FLOW`. Allowed Values are: `CONTACT_FLOW`, `CUSTOMER_QUEUE`, `CUSTOMER_HOLD`, `CUSTOMER_WHISPER`, `AGENT_HOLD`, `AGENT_WHISPER`, `OUTBOUND_WHISPER`, `AGENT_TRANSFER`, `QUEUE_TRANSFER`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 
@@ -205,7 +206,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ContactFlow(String name, ContactFlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:connect/contactFlow:ContactFlow", name, args == null ? ContactFlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:connect/contactFlow:ContactFlow", name, args == null ? ContactFlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ContactFlow(String name, Output<String> id, @Nullable ContactFlowState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

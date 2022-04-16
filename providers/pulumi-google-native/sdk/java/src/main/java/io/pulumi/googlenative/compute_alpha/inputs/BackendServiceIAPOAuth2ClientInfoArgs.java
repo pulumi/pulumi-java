@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+    public Output<String> applicationName() {
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
     @Import(name="clientName")
       private final @Nullable Output<String> clientName;
 
-    public Output<String> getClientName() {
-        return this.clientName == null ? Output.empty() : this.clientName;
+    public Output<String> clientName() {
+        return this.clientName == null ? Codegen.empty() : this.clientName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
     @Import(name="developerEmailAddress")
       private final @Nullable Output<String> developerEmailAddress;
 
-    public Output<String> getDeveloperEmailAddress() {
-        return this.developerEmailAddress == null ? Output.empty() : this.developerEmailAddress;
+    public Output<String> developerEmailAddress() {
+        return this.developerEmailAddress == null ? Codegen.empty() : this.developerEmailAddress;
     }
 
     public BackendServiceIAPOAuth2ClientInfoArgs(
@@ -57,9 +58,9 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
     }
 
     private BackendServiceIAPOAuth2ClientInfoArgs() {
-        this.applicationName = Output.empty();
-        this.clientName = Output.empty();
-        this.developerEmailAddress = Output.empty();
+        this.applicationName = Codegen.empty();
+        this.clientName = Codegen.empty();
+        this.developerEmailAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder clientName(@Nullable Output<String> clientName) {
@@ -99,7 +100,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder clientName(@Nullable String clientName) {
-            this.clientName = Output.ofNullable(clientName);
+            this.clientName = Codegen.ofNullable(clientName);
             return this;
         }
         public Builder developerEmailAddress(@Nullable Output<String> developerEmailAddress) {
@@ -107,7 +108,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder developerEmailAddress(@Nullable String developerEmailAddress) {
-            this.developerEmailAddress = Output.ofNullable(developerEmailAddress);
+            this.developerEmailAddress = Codegen.ofNullable(developerEmailAddress);
             return this;
         }        public BackendServiceIAPOAuth2ClientInfoArgs build() {
             return new BackendServiceIAPOAuth2ClientInfoArgs(applicationName, clientName, developerEmailAddress);

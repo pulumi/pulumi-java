@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -37,7 +38,7 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
     @Import(name="trackId", required=true)
       private final Output<Double> trackId;
 
-    public Output<Double> getTrackId() {
+    public Output<Double> trackId() {
         return this.trackId;
     }
 
@@ -49,8 +50,8 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
     }
 
     private SelectVideoTrackByIdArgs() {
-        this.odataType = Output.empty();
-        this.trackId = Output.empty();
+        this.odataType = Codegen.empty();
+        this.trackId = Codegen.empty();
     }
 
     public static Builder builder() {

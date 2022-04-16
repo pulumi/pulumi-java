@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     @Import(name="text")
       private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text) {
@@ -30,7 +31,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     }
 
     private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs() {
-        this.text = Output.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             return this;
         }
         public Builder text(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs(text);

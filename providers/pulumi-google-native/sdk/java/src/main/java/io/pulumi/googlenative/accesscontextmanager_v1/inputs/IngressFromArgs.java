@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.IngressFromIdentityType;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressSourceArgs;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> getIdentities() {
-        return this.identities == null ? Output.empty() : this.identities;
+    public Output<List<String>> identities() {
+        return this.identities == null ? Codegen.empty() : this.identities;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityType")
       private final @Nullable Output<IngressFromIdentityType> identityType;
 
-    public Output<IngressFromIdentityType> getIdentityType() {
-        return this.identityType == null ? Output.empty() : this.identityType;
+    public Output<IngressFromIdentityType> identityType() {
+        return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sources")
       private final @Nullable Output<List<IngressSourceArgs>> sources;
 
-    public Output<List<IngressSourceArgs>> getSources() {
-        return this.sources == null ? Output.empty() : this.sources;
+    public Output<List<IngressSourceArgs>> sources() {
+        return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     public IngressFromArgs(
@@ -64,9 +65,9 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressFromArgs() {
-        this.identities = Output.empty();
-        this.identityType = Output.empty();
-        this.sources = Output.empty();
+        this.identities = Codegen.empty();
+        this.identityType = Codegen.empty();
+        this.sources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identities(@Nullable List<String> identities) {
-            this.identities = Output.ofNullable(identities);
+            this.identities = Codegen.ofNullable(identities);
             return this;
         }
         public Builder identities(String... identities) {
@@ -109,7 +110,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identityType(@Nullable IngressFromIdentityType identityType) {
-            this.identityType = Output.ofNullable(identityType);
+            this.identityType = Codegen.ofNullable(identityType);
             return this;
         }
         public Builder sources(@Nullable Output<List<IngressSourceArgs>> sources) {
@@ -117,7 +118,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sources(@Nullable List<IngressSourceArgs> sources) {
-            this.sources = Output.ofNullable(sources);
+            this.sources = Codegen.ofNullable(sources);
             return this;
         }
         public Builder sources(IngressSourceArgs... sources) {

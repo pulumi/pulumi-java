@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="validateCertificateChain")
       private final @Nullable Output<Boolean> validateCertificateChain;
 
-    public Output<Boolean> getValidateCertificateChain() {
-        return this.validateCertificateChain == null ? Output.empty() : this.validateCertificateChain;
+    public Output<Boolean> validateCertificateChain() {
+        return this.validateCertificateChain == null ? Codegen.empty() : this.validateCertificateChain;
     }
 
     /**
@@ -36,20 +37,20 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="validateCertificateName")
       private final @Nullable Output<Boolean> validateCertificateName;
 
-    public Output<Boolean> getValidateCertificateName() {
-        return this.validateCertificateName == null ? Output.empty() : this.validateCertificateName;
+    public Output<Boolean> validateCertificateName() {
+        return this.validateCertificateName == null ? Codegen.empty() : this.validateCertificateName;
     }
 
     public BackendTlsPropertiesArgs(
         @Nullable Output<Boolean> validateCertificateChain,
         @Nullable Output<Boolean> validateCertificateName) {
-        this.validateCertificateChain = validateCertificateChain == null ? Output.ofNullable(true) : validateCertificateChain;
-        this.validateCertificateName = validateCertificateName == null ? Output.ofNullable(true) : validateCertificateName;
+        this.validateCertificateChain = validateCertificateChain == null ? Codegen.ofNullable(true) : validateCertificateChain;
+        this.validateCertificateName = validateCertificateName == null ? Codegen.ofNullable(true) : validateCertificateName;
     }
 
     private BackendTlsPropertiesArgs() {
-        this.validateCertificateChain = Output.empty();
-        this.validateCertificateName = Output.empty();
+        this.validateCertificateChain = Codegen.empty();
+        this.validateCertificateName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
-            this.validateCertificateChain = Output.ofNullable(validateCertificateChain);
+            this.validateCertificateChain = Codegen.ofNullable(validateCertificateChain);
             return this;
         }
         public Builder validateCertificateName(@Nullable Output<Boolean> validateCertificateName) {
@@ -87,7 +88,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
-            this.validateCertificateName = Output.ofNullable(validateCertificateName);
+            this.validateCertificateName = Codegen.ofNullable(validateCertificateName);
             return this;
         }        public BackendTlsPropertiesArgs build() {
             return new BackendTlsPropertiesArgs(validateCertificateChain, validateCertificateName);

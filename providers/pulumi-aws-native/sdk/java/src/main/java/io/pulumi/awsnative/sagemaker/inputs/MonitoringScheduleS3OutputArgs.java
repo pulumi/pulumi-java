@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleS3OutputS3UploadMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath;
     }
 
@@ -37,8 +38,8 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
     @Import(name="s3UploadMode")
       private final @Nullable Output<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode;
 
-    public Output<MonitoringScheduleS3OutputS3UploadMode> getS3UploadMode() {
-        return this.s3UploadMode == null ? Output.empty() : this.s3UploadMode;
+    public Output<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode() {
+        return this.s3UploadMode == null ? Codegen.empty() : this.s3UploadMode;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
     @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;
 
-    public Output<String> getS3Uri() {
+    public Output<String> s3Uri() {
         return this.s3Uri;
     }
 
@@ -62,9 +63,9 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
     }
 
     private MonitoringScheduleS3OutputArgs() {
-        this.localPath = Output.empty();
-        this.s3UploadMode = Output.empty();
-        this.s3Uri = Output.empty();
+        this.localPath = Codegen.empty();
+        this.s3UploadMode = Codegen.empty();
+        this.s3Uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder s3UploadMode(@Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode) {
-            this.s3UploadMode = Output.ofNullable(s3UploadMode);
+            this.s3UploadMode = Codegen.ofNullable(s3UploadMode);
             return this;
         }
         public Builder s3Uri(Output<String> s3Uri) {

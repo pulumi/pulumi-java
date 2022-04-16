@@ -6,6 +6,7 @@ package io.pulumi.gcp.billing;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamMemberArgs;
 import io.pulumi.gcp.billing.inputs.AccountIamMemberState;
@@ -18,31 +19,31 @@ public class AccountIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
     @Export(name="condition", type=AccountIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ AccountIamMemberCondition> condition;
 
-    public Output</* @Nullable */ AccountIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ AccountIamMemberCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -68,7 +69,7 @@ public class AccountIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountIamMember(String name, AccountIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/accountIamMember:AccountIamMember", name, args == null ? AccountIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:billing/accountIamMember:AccountIamMember", name, args == null ? AccountIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountIamMember(String name, Output<String> id, @Nullable AccountIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

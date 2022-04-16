@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ContainerCapabilitiesGetArgs;
 import io.pulumi.docker.inputs.ContainerDeviceGetArgs;
 import io.pulumi.docker.inputs.ContainerHealthcheckGetArgs;
@@ -38,8 +39,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="attach")
       private final @Nullable Output<Boolean> attach;
 
-    public Output<Boolean> getAttach() {
-        return this.attach == null ? Output.empty() : this.attach;
+    public Output<Boolean> attach() {
+        return this.attach == null ? Codegen.empty() : this.attach;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bridge")
       private final @Nullable Output<String> bridge;
 
-    public Output<String> getBridge() {
-        return this.bridge == null ? Output.empty() : this.bridge;
+    public Output<String> bridge() {
+        return this.bridge == null ? Codegen.empty() : this.bridge;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<ContainerCapabilitiesGetArgs> capabilities;
 
-    public Output<ContainerCapabilitiesGetArgs> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<ContainerCapabilitiesGetArgs> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+    public Output<List<String>> command() {
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerLogs")
       private final @Nullable Output<String> containerLogs;
 
-    public Output<String> getContainerLogs() {
-        return this.containerLogs == null ? Output.empty() : this.containerLogs;
+    public Output<String> containerLogs() {
+        return this.containerLogs == null ? Codegen.empty() : this.containerLogs;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpuSet")
       private final @Nullable Output<String> cpuSet;
 
-    public Output<String> getCpuSet() {
-        return this.cpuSet == null ? Output.empty() : this.cpuSet;
+    public Output<String> cpuSet() {
+        return this.cpuSet == null ? Codegen.empty() : this.cpuSet;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpuShares")
       private final @Nullable Output<Integer> cpuShares;
 
-    public Output<Integer> getCpuShares() {
-        return this.cpuShares == null ? Output.empty() : this.cpuShares;
+    public Output<Integer> cpuShares() {
+        return this.cpuShares == null ? Codegen.empty() : this.cpuShares;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destroyGraceSeconds")
       private final @Nullable Output<Integer> destroyGraceSeconds;
 
-    public Output<Integer> getDestroyGraceSeconds() {
-        return this.destroyGraceSeconds == null ? Output.empty() : this.destroyGraceSeconds;
+    public Output<Integer> destroyGraceSeconds() {
+        return this.destroyGraceSeconds == null ? Codegen.empty() : this.destroyGraceSeconds;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="devices")
       private final @Nullable Output<List<ContainerDeviceGetArgs>> devices;
 
-    public Output<List<ContainerDeviceGetArgs>> getDevices() {
-        return this.devices == null ? Output.empty() : this.devices;
+    public Output<List<ContainerDeviceGetArgs>> devices() {
+        return this.devices == null ? Codegen.empty() : this.devices;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dns")
       private final @Nullable Output<List<String>> dns;
 
-    public Output<List<String>> getDns() {
-        return this.dns == null ? Output.empty() : this.dns;
+    public Output<List<String>> dns() {
+        return this.dns == null ? Codegen.empty() : this.dns;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsOpts")
       private final @Nullable Output<List<String>> dnsOpts;
 
-    public Output<List<String>> getDnsOpts() {
-        return this.dnsOpts == null ? Output.empty() : this.dnsOpts;
+    public Output<List<String>> dnsOpts() {
+        return this.dnsOpts == null ? Codegen.empty() : this.dnsOpts;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsSearches")
       private final @Nullable Output<List<String>> dnsSearches;
 
-    public Output<List<String>> getDnsSearches() {
-        return this.dnsSearches == null ? Output.empty() : this.dnsSearches;
+    public Output<List<String>> dnsSearches() {
+        return this.dnsSearches == null ? Codegen.empty() : this.dnsSearches;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainname")
       private final @Nullable Output<String> domainname;
 
-    public Output<String> getDomainname() {
-        return this.domainname == null ? Output.empty() : this.domainname;
+    public Output<String> domainname() {
+        return this.domainname == null ? Codegen.empty() : this.domainname;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="entrypoints")
       private final @Nullable Output<List<String>> entrypoints;
 
-    public Output<List<String>> getEntrypoints() {
-        return this.entrypoints == null ? Output.empty() : this.entrypoints;
+    public Output<List<String>> entrypoints() {
+        return this.entrypoints == null ? Codegen.empty() : this.entrypoints;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
-    public Output<List<String>> getEnvs() {
-        return this.envs == null ? Output.empty() : this.envs;
+    public Output<List<String>> envs() {
+        return this.envs == null ? Codegen.empty() : this.envs;
     }
 
     /**
@@ -207,8 +208,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="exitCode")
       private final @Nullable Output<Integer> exitCode;
 
-    public Output<Integer> getExitCode() {
-        return this.exitCode == null ? Output.empty() : this.exitCode;
+    public Output<Integer> exitCode() {
+        return this.exitCode == null ? Codegen.empty() : this.exitCode;
     }
 
     /**
@@ -223,8 +224,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gateway;
 
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    public Output<String> getGateway() {
-        return this.gateway == null ? Output.empty() : this.gateway;
+    public Output<String> gateway() {
+        return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     /**
@@ -234,8 +235,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupAdds")
       private final @Nullable Output<List<String>> groupAdds;
 
-    public Output<List<String>> getGroupAdds() {
-        return this.groupAdds == null ? Output.empty() : this.groupAdds;
+    public Output<List<String>> groupAdds() {
+        return this.groupAdds == null ? Codegen.empty() : this.groupAdds;
     }
 
     /**
@@ -245,8 +246,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthcheck")
       private final @Nullable Output<ContainerHealthcheckGetArgs> healthcheck;
 
-    public Output<ContainerHealthcheckGetArgs> getHealthcheck() {
-        return this.healthcheck == null ? Output.empty() : this.healthcheck;
+    public Output<ContainerHealthcheckGetArgs> healthcheck() {
+        return this.healthcheck == null ? Codegen.empty() : this.healthcheck;
     }
 
     /**
@@ -256,8 +257,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -267,8 +268,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hosts")
       private final @Nullable Output<List<ContainerHostGetArgs>> hosts;
 
-    public Output<List<ContainerHostGetArgs>> getHosts() {
-        return this.hosts == null ? Output.empty() : this.hosts;
+    public Output<List<ContainerHostGetArgs>> hosts() {
+        return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
     /**
@@ -279,8 +280,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<String> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -291,8 +292,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="init")
       private final @Nullable Output<Boolean> init;
 
-    public Output<Boolean> getInit() {
-        return this.init == null ? Output.empty() : this.init;
+    public Output<Boolean> init() {
+        return this.init == null ? Codegen.empty() : this.init;
     }
 
     /**
@@ -307,8 +308,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -323,8 +324,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> ipPrefixLength;
 
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    public Output<Integer> getIpPrefixLength() {
-        return this.ipPrefixLength == null ? Output.empty() : this.ipPrefixLength;
+    public Output<Integer> ipPrefixLength() {
+        return this.ipPrefixLength == null ? Codegen.empty() : this.ipPrefixLength;
     }
 
     /**
@@ -335,8 +336,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipcMode")
       private final @Nullable Output<String> ipcMode;
 
-    public Output<String> getIpcMode() {
-        return this.ipcMode == null ? Output.empty() : this.ipcMode;
+    public Output<String> ipcMode() {
+        return this.ipcMode == null ? Codegen.empty() : this.ipcMode;
     }
 
     /**
@@ -346,8 +347,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<ContainerLabelGetArgs>> labels;
 
-    public Output<List<ContainerLabelGetArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<ContainerLabelGetArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -362,8 +363,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> links;
 
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
-    public Output<List<String>> getLinks() {
-        return this.links == null ? Output.empty() : this.links;
+    public Output<List<String>> links() {
+        return this.links == null ? Codegen.empty() : this.links;
     }
 
     /**
@@ -373,8 +374,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logDriver")
       private final @Nullable Output<String> logDriver;
 
-    public Output<String> getLogDriver() {
-        return this.logDriver == null ? Output.empty() : this.logDriver;
+    public Output<String> logDriver() {
+        return this.logDriver == null ? Codegen.empty() : this.logDriver;
     }
 
     /**
@@ -384,8 +385,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logOpts")
       private final @Nullable Output<Map<String,Object>> logOpts;
 
-    public Output<Map<String,Object>> getLogOpts() {
-        return this.logOpts == null ? Output.empty() : this.logOpts;
+    public Output<Map<String,Object>> logOpts() {
+        return this.logOpts == null ? Codegen.empty() : this.logOpts;
     }
 
     /**
@@ -395,8 +396,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logs")
       private final @Nullable Output<Boolean> logs;
 
-    public Output<Boolean> getLogs() {
-        return this.logs == null ? Output.empty() : this.logs;
+    public Output<Boolean> logs() {
+        return this.logs == null ? Codegen.empty() : this.logs;
     }
 
     /**
@@ -406,8 +407,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxRetryCount")
       private final @Nullable Output<Integer> maxRetryCount;
 
-    public Output<Integer> getMaxRetryCount() {
-        return this.maxRetryCount == null ? Output.empty() : this.maxRetryCount;
+    public Output<Integer> maxRetryCount() {
+        return this.maxRetryCount == null ? Codegen.empty() : this.maxRetryCount;
     }
 
     /**
@@ -417,8 +418,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="memory")
       private final @Nullable Output<Integer> memory;
 
-    public Output<Integer> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+    public Output<Integer> memory() {
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     /**
@@ -429,8 +430,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="memorySwap")
       private final @Nullable Output<Integer> memorySwap;
 
-    public Output<Integer> getMemorySwap() {
-        return this.memorySwap == null ? Output.empty() : this.memorySwap;
+    public Output<Integer> memorySwap() {
+        return this.memorySwap == null ? Codegen.empty() : this.memorySwap;
     }
 
     /**
@@ -440,8 +441,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mounts")
       private final @Nullable Output<List<ContainerMountGetArgs>> mounts;
 
-    public Output<List<ContainerMountGetArgs>> getMounts() {
-        return this.mounts == null ? Output.empty() : this.mounts;
+    public Output<List<ContainerMountGetArgs>> mounts() {
+        return this.mounts == null ? Codegen.empty() : this.mounts;
     }
 
     /**
@@ -452,8 +453,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mustRun")
       private final @Nullable Output<Boolean> mustRun;
 
-    public Output<Boolean> getMustRun() {
-        return this.mustRun == null ? Output.empty() : this.mustRun;
+    public Output<Boolean> mustRun() {
+        return this.mustRun == null ? Codegen.empty() : this.mustRun;
     }
 
     /**
@@ -463,8 +464,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -479,8 +480,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> networkAliases;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    public Output<List<String>> getNetworkAliases() {
-        return this.networkAliases == null ? Output.empty() : this.networkAliases;
+    public Output<List<String>> networkAliases() {
+        return this.networkAliases == null ? Codegen.empty() : this.networkAliases;
     }
 
     /**
@@ -490,8 +491,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkDatas")
       private final @Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas;
 
-    public Output<List<ContainerNetworkDataGetArgs>> getNetworkDatas() {
-        return this.networkDatas == null ? Output.empty() : this.networkDatas;
+    public Output<List<ContainerNetworkDataGetArgs>> networkDatas() {
+        return this.networkDatas == null ? Codegen.empty() : this.networkDatas;
     }
 
     /**
@@ -501,8 +502,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
-    public Output<String> getNetworkMode() {
-        return this.networkMode == null ? Output.empty() : this.networkMode;
+    public Output<String> networkMode() {
+        return this.networkMode == null ? Codegen.empty() : this.networkMode;
     }
 
     /**
@@ -517,8 +518,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> networks;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    public Output<List<String>> getNetworks() {
-        return this.networks == null ? Output.empty() : this.networks;
+    public Output<List<String>> networks() {
+        return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     /**
@@ -528,8 +529,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networksAdvanced")
       private final @Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced;
 
-    public Output<List<ContainerNetworksAdvancedGetArgs>> getNetworksAdvanced() {
-        return this.networksAdvanced == null ? Output.empty() : this.networksAdvanced;
+    public Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced() {
+        return this.networksAdvanced == null ? Codegen.empty() : this.networksAdvanced;
     }
 
     /**
@@ -539,8 +540,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pidMode")
       private final @Nullable Output<String> pidMode;
 
-    public Output<String> getPidMode() {
-        return this.pidMode == null ? Output.empty() : this.pidMode;
+    public Output<String> pidMode() {
+        return this.pidMode == null ? Codegen.empty() : this.pidMode;
     }
 
     /**
@@ -550,8 +551,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports")
       private final @Nullable Output<List<ContainerPortGetArgs>> ports;
 
-    public Output<List<ContainerPortGetArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<ContainerPortGetArgs>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -561,8 +562,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="privileged")
       private final @Nullable Output<Boolean> privileged;
 
-    public Output<Boolean> getPrivileged() {
-        return this.privileged == null ? Output.empty() : this.privileged;
+    public Output<Boolean> privileged() {
+        return this.privileged == null ? Codegen.empty() : this.privileged;
     }
 
     /**
@@ -572,8 +573,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishAllPorts")
       private final @Nullable Output<Boolean> publishAllPorts;
 
-    public Output<Boolean> getPublishAllPorts() {
-        return this.publishAllPorts == null ? Output.empty() : this.publishAllPorts;
+    public Output<Boolean> publishAllPorts() {
+        return this.publishAllPorts == null ? Codegen.empty() : this.publishAllPorts;
     }
 
     /**
@@ -583,8 +584,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -594,8 +595,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="removeVolumes")
       private final @Nullable Output<Boolean> removeVolumes;
 
-    public Output<Boolean> getRemoveVolumes() {
-        return this.removeVolumes == null ? Output.empty() : this.removeVolumes;
+    public Output<Boolean> removeVolumes() {
+        return this.removeVolumes == null ? Codegen.empty() : this.removeVolumes;
     }
 
     /**
@@ -605,8 +606,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="restart")
       private final @Nullable Output<String> restart;
 
-    public Output<String> getRestart() {
-        return this.restart == null ? Output.empty() : this.restart;
+    public Output<String> restart() {
+        return this.restart == null ? Codegen.empty() : this.restart;
     }
 
     /**
@@ -617,8 +618,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rm")
       private final @Nullable Output<Boolean> rm;
 
-    public Output<Boolean> getRm() {
-        return this.rm == null ? Output.empty() : this.rm;
+    public Output<Boolean> rm() {
+        return this.rm == null ? Codegen.empty() : this.rm;
     }
 
     /**
@@ -629,8 +630,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityOpts")
       private final @Nullable Output<List<String>> securityOpts;
 
-    public Output<List<String>> getSecurityOpts() {
-        return this.securityOpts == null ? Output.empty() : this.securityOpts;
+    public Output<List<String>> securityOpts() {
+        return this.securityOpts == null ? Codegen.empty() : this.securityOpts;
     }
 
     /**
@@ -640,8 +641,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shmSize")
       private final @Nullable Output<Integer> shmSize;
 
-    public Output<Integer> getShmSize() {
-        return this.shmSize == null ? Output.empty() : this.shmSize;
+    public Output<Integer> shmSize() {
+        return this.shmSize == null ? Codegen.empty() : this.shmSize;
     }
 
     /**
@@ -652,8 +653,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="start")
       private final @Nullable Output<Boolean> start;
 
-    public Output<Boolean> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+    public Output<Boolean> start() {
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     /**
@@ -663,8 +664,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stdinOpen")
       private final @Nullable Output<Boolean> stdinOpen;
 
-    public Output<Boolean> getStdinOpen() {
-        return this.stdinOpen == null ? Output.empty() : this.stdinOpen;
+    public Output<Boolean> stdinOpen() {
+        return this.stdinOpen == null ? Codegen.empty() : this.stdinOpen;
     }
 
     /**
@@ -674,8 +675,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageOpts")
       private final @Nullable Output<Map<String,Object>> storageOpts;
 
-    public Output<Map<String,Object>> getStorageOpts() {
-        return this.storageOpts == null ? Output.empty() : this.storageOpts;
+    public Output<Map<String,Object>> storageOpts() {
+        return this.storageOpts == null ? Codegen.empty() : this.storageOpts;
     }
 
     /**
@@ -685,8 +686,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sysctls")
       private final @Nullable Output<Map<String,Object>> sysctls;
 
-    public Output<Map<String,Object>> getSysctls() {
-        return this.sysctls == null ? Output.empty() : this.sysctls;
+    public Output<Map<String,Object>> sysctls() {
+        return this.sysctls == null ? Codegen.empty() : this.sysctls;
     }
 
     /**
@@ -696,8 +697,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tmpfs")
       private final @Nullable Output<Map<String,Object>> tmpfs;
 
-    public Output<Map<String,Object>> getTmpfs() {
-        return this.tmpfs == null ? Output.empty() : this.tmpfs;
+    public Output<Map<String,Object>> tmpfs() {
+        return this.tmpfs == null ? Codegen.empty() : this.tmpfs;
     }
 
     /**
@@ -707,8 +708,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tty")
       private final @Nullable Output<Boolean> tty;
 
-    public Output<Boolean> getTty() {
-        return this.tty == null ? Output.empty() : this.tty;
+    public Output<Boolean> tty() {
+        return this.tty == null ? Codegen.empty() : this.tty;
     }
 
     /**
@@ -718,8 +719,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ulimits")
       private final @Nullable Output<List<ContainerUlimitGetArgs>> ulimits;
 
-    public Output<List<ContainerUlimitGetArgs>> getUlimits() {
-        return this.ulimits == null ? Output.empty() : this.ulimits;
+    public Output<List<ContainerUlimitGetArgs>> ulimits() {
+        return this.ulimits == null ? Codegen.empty() : this.ulimits;
     }
 
     /**
@@ -730,8 +731,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uploads")
       private final @Nullable Output<List<ContainerUploadGetArgs>> uploads;
 
-    public Output<List<ContainerUploadGetArgs>> getUploads() {
-        return this.uploads == null ? Output.empty() : this.uploads;
+    public Output<List<ContainerUploadGetArgs>> uploads() {
+        return this.uploads == null ? Codegen.empty() : this.uploads;
     }
 
     /**
@@ -742,8 +743,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     /**
@@ -753,8 +754,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="usernsMode")
       private final @Nullable Output<String> usernsMode;
 
-    public Output<String> getUsernsMode() {
-        return this.usernsMode == null ? Output.empty() : this.usernsMode;
+    public Output<String> usernsMode() {
+        return this.usernsMode == null ? Codegen.empty() : this.usernsMode;
     }
 
     /**
@@ -764,8 +765,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<ContainerVolumeGetArgs>> volumes;
 
-    public Output<List<ContainerVolumeGetArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<ContainerVolumeGetArgs>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     /**
@@ -775,8 +776,8 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="workingDir")
       private final @Nullable Output<String> workingDir;
 
-    public Output<String> getWorkingDir() {
-        return this.workingDir == null ? Output.empty() : this.workingDir;
+    public Output<String> workingDir() {
+        return this.workingDir == null ? Codegen.empty() : this.workingDir;
     }
 
     public ContainerState(
@@ -911,70 +912,70 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerState() {
-        this.attach = Output.empty();
-        this.bridge = Output.empty();
-        this.capabilities = Output.empty();
-        this.command = Output.empty();
-        this.containerLogs = Output.empty();
-        this.cpuSet = Output.empty();
-        this.cpuShares = Output.empty();
-        this.destroyGraceSeconds = Output.empty();
-        this.devices = Output.empty();
-        this.dns = Output.empty();
-        this.dnsOpts = Output.empty();
-        this.dnsSearches = Output.empty();
-        this.domainname = Output.empty();
-        this.entrypoints = Output.empty();
-        this.envs = Output.empty();
-        this.exitCode = Output.empty();
-        this.gateway = Output.empty();
-        this.groupAdds = Output.empty();
-        this.healthcheck = Output.empty();
-        this.hostname = Output.empty();
-        this.hosts = Output.empty();
-        this.image = Output.empty();
-        this.init = Output.empty();
-        this.ipAddress = Output.empty();
-        this.ipPrefixLength = Output.empty();
-        this.ipcMode = Output.empty();
-        this.labels = Output.empty();
-        this.links = Output.empty();
-        this.logDriver = Output.empty();
-        this.logOpts = Output.empty();
-        this.logs = Output.empty();
-        this.maxRetryCount = Output.empty();
-        this.memory = Output.empty();
-        this.memorySwap = Output.empty();
-        this.mounts = Output.empty();
-        this.mustRun = Output.empty();
-        this.name = Output.empty();
-        this.networkAliases = Output.empty();
-        this.networkDatas = Output.empty();
-        this.networkMode = Output.empty();
-        this.networks = Output.empty();
-        this.networksAdvanced = Output.empty();
-        this.pidMode = Output.empty();
-        this.ports = Output.empty();
-        this.privileged = Output.empty();
-        this.publishAllPorts = Output.empty();
-        this.readOnly = Output.empty();
-        this.removeVolumes = Output.empty();
-        this.restart = Output.empty();
-        this.rm = Output.empty();
-        this.securityOpts = Output.empty();
-        this.shmSize = Output.empty();
-        this.start = Output.empty();
-        this.stdinOpen = Output.empty();
-        this.storageOpts = Output.empty();
-        this.sysctls = Output.empty();
-        this.tmpfs = Output.empty();
-        this.tty = Output.empty();
-        this.ulimits = Output.empty();
-        this.uploads = Output.empty();
-        this.user = Output.empty();
-        this.usernsMode = Output.empty();
-        this.volumes = Output.empty();
-        this.workingDir = Output.empty();
+        this.attach = Codegen.empty();
+        this.bridge = Codegen.empty();
+        this.capabilities = Codegen.empty();
+        this.command = Codegen.empty();
+        this.containerLogs = Codegen.empty();
+        this.cpuSet = Codegen.empty();
+        this.cpuShares = Codegen.empty();
+        this.destroyGraceSeconds = Codegen.empty();
+        this.devices = Codegen.empty();
+        this.dns = Codegen.empty();
+        this.dnsOpts = Codegen.empty();
+        this.dnsSearches = Codegen.empty();
+        this.domainname = Codegen.empty();
+        this.entrypoints = Codegen.empty();
+        this.envs = Codegen.empty();
+        this.exitCode = Codegen.empty();
+        this.gateway = Codegen.empty();
+        this.groupAdds = Codegen.empty();
+        this.healthcheck = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.hosts = Codegen.empty();
+        this.image = Codegen.empty();
+        this.init = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.ipPrefixLength = Codegen.empty();
+        this.ipcMode = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.links = Codegen.empty();
+        this.logDriver = Codegen.empty();
+        this.logOpts = Codegen.empty();
+        this.logs = Codegen.empty();
+        this.maxRetryCount = Codegen.empty();
+        this.memory = Codegen.empty();
+        this.memorySwap = Codegen.empty();
+        this.mounts = Codegen.empty();
+        this.mustRun = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkAliases = Codegen.empty();
+        this.networkDatas = Codegen.empty();
+        this.networkMode = Codegen.empty();
+        this.networks = Codegen.empty();
+        this.networksAdvanced = Codegen.empty();
+        this.pidMode = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.privileged = Codegen.empty();
+        this.publishAllPorts = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.removeVolumes = Codegen.empty();
+        this.restart = Codegen.empty();
+        this.rm = Codegen.empty();
+        this.securityOpts = Codegen.empty();
+        this.shmSize = Codegen.empty();
+        this.start = Codegen.empty();
+        this.stdinOpen = Codegen.empty();
+        this.storageOpts = Codegen.empty();
+        this.sysctls = Codegen.empty();
+        this.tmpfs = Codegen.empty();
+        this.tty = Codegen.empty();
+        this.ulimits = Codegen.empty();
+        this.uploads = Codegen.empty();
+        this.user = Codegen.empty();
+        this.usernsMode = Codegen.empty();
+        this.volumes = Codegen.empty();
+        this.workingDir = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -1128,7 +1129,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attach(@Nullable Boolean attach) {
-            this.attach = Output.ofNullable(attach);
+            this.attach = Codegen.ofNullable(attach);
             return this;
         }
         public Builder bridge(@Nullable Output<String> bridge) {
@@ -1136,7 +1137,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bridge(@Nullable String bridge) {
-            this.bridge = Output.ofNullable(bridge);
+            this.bridge = Codegen.ofNullable(bridge);
             return this;
         }
         public Builder capabilities(@Nullable Output<ContainerCapabilitiesGetArgs> capabilities) {
@@ -1144,7 +1145,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilities(@Nullable ContainerCapabilitiesGetArgs capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder command(@Nullable Output<List<String>> command) {
@@ -1152,7 +1153,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -1163,7 +1164,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerLogs(@Nullable String containerLogs) {
-            this.containerLogs = Output.ofNullable(containerLogs);
+            this.containerLogs = Codegen.ofNullable(containerLogs);
             return this;
         }
         public Builder cpuSet(@Nullable Output<String> cpuSet) {
@@ -1171,7 +1172,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpuSet(@Nullable String cpuSet) {
-            this.cpuSet = Output.ofNullable(cpuSet);
+            this.cpuSet = Codegen.ofNullable(cpuSet);
             return this;
         }
         public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
@@ -1179,7 +1180,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpuShares(@Nullable Integer cpuShares) {
-            this.cpuShares = Output.ofNullable(cpuShares);
+            this.cpuShares = Codegen.ofNullable(cpuShares);
             return this;
         }
         public Builder destroyGraceSeconds(@Nullable Output<Integer> destroyGraceSeconds) {
@@ -1187,7 +1188,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destroyGraceSeconds(@Nullable Integer destroyGraceSeconds) {
-            this.destroyGraceSeconds = Output.ofNullable(destroyGraceSeconds);
+            this.destroyGraceSeconds = Codegen.ofNullable(destroyGraceSeconds);
             return this;
         }
         public Builder devices(@Nullable Output<List<ContainerDeviceGetArgs>> devices) {
@@ -1195,7 +1196,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder devices(@Nullable List<ContainerDeviceGetArgs> devices) {
-            this.devices = Output.ofNullable(devices);
+            this.devices = Codegen.ofNullable(devices);
             return this;
         }
         public Builder devices(ContainerDeviceGetArgs... devices) {
@@ -1206,7 +1207,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dns(@Nullable List<String> dns) {
-            this.dns = Output.ofNullable(dns);
+            this.dns = Codegen.ofNullable(dns);
             return this;
         }
         public Builder dns(String... dns) {
@@ -1217,7 +1218,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsOpts(@Nullable List<String> dnsOpts) {
-            this.dnsOpts = Output.ofNullable(dnsOpts);
+            this.dnsOpts = Codegen.ofNullable(dnsOpts);
             return this;
         }
         public Builder dnsOpts(String... dnsOpts) {
@@ -1228,7 +1229,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsSearches(@Nullable List<String> dnsSearches) {
-            this.dnsSearches = Output.ofNullable(dnsSearches);
+            this.dnsSearches = Codegen.ofNullable(dnsSearches);
             return this;
         }
         public Builder dnsSearches(String... dnsSearches) {
@@ -1239,7 +1240,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainname(@Nullable String domainname) {
-            this.domainname = Output.ofNullable(domainname);
+            this.domainname = Codegen.ofNullable(domainname);
             return this;
         }
         public Builder entrypoints(@Nullable Output<List<String>> entrypoints) {
@@ -1247,7 +1248,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entrypoints(@Nullable List<String> entrypoints) {
-            this.entrypoints = Output.ofNullable(entrypoints);
+            this.entrypoints = Codegen.ofNullable(entrypoints);
             return this;
         }
         public Builder entrypoints(String... entrypoints) {
@@ -1258,7 +1259,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder envs(@Nullable List<String> envs) {
-            this.envs = Output.ofNullable(envs);
+            this.envs = Codegen.ofNullable(envs);
             return this;
         }
         public Builder envs(String... envs) {
@@ -1269,7 +1270,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exitCode(@Nullable Integer exitCode) {
-            this.exitCode = Output.ofNullable(exitCode);
+            this.exitCode = Codegen.ofNullable(exitCode);
             return this;
         }
         public Builder gateway(@Nullable Output<String> gateway) {
@@ -1277,7 +1278,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = Output.ofNullable(gateway);
+            this.gateway = Codegen.ofNullable(gateway);
             return this;
         }
         public Builder groupAdds(@Nullable Output<List<String>> groupAdds) {
@@ -1285,7 +1286,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupAdds(@Nullable List<String> groupAdds) {
-            this.groupAdds = Output.ofNullable(groupAdds);
+            this.groupAdds = Codegen.ofNullable(groupAdds);
             return this;
         }
         public Builder groupAdds(String... groupAdds) {
@@ -1296,7 +1297,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthcheck(@Nullable ContainerHealthcheckGetArgs healthcheck) {
-            this.healthcheck = Output.ofNullable(healthcheck);
+            this.healthcheck = Codegen.ofNullable(healthcheck);
             return this;
         }
         public Builder hostname(@Nullable Output<String> hostname) {
@@ -1304,7 +1305,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder hosts(@Nullable Output<List<ContainerHostGetArgs>> hosts) {
@@ -1312,7 +1313,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hosts(@Nullable List<ContainerHostGetArgs> hosts) {
-            this.hosts = Output.ofNullable(hosts);
+            this.hosts = Codegen.ofNullable(hosts);
             return this;
         }
         public Builder hosts(ContainerHostGetArgs... hosts) {
@@ -1323,7 +1324,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder init(@Nullable Output<Boolean> init) {
@@ -1331,7 +1332,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder init(@Nullable Boolean init) {
-            this.init = Output.ofNullable(init);
+            this.init = Codegen.ofNullable(init);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -1339,7 +1340,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder ipPrefixLength(@Nullable Output<Integer> ipPrefixLength) {
@@ -1347,7 +1348,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipPrefixLength(@Nullable Integer ipPrefixLength) {
-            this.ipPrefixLength = Output.ofNullable(ipPrefixLength);
+            this.ipPrefixLength = Codegen.ofNullable(ipPrefixLength);
             return this;
         }
         public Builder ipcMode(@Nullable Output<String> ipcMode) {
@@ -1355,7 +1356,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipcMode(@Nullable String ipcMode) {
-            this.ipcMode = Output.ofNullable(ipcMode);
+            this.ipcMode = Codegen.ofNullable(ipcMode);
             return this;
         }
         public Builder labels(@Nullable Output<List<ContainerLabelGetArgs>> labels) {
@@ -1363,7 +1364,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<ContainerLabelGetArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(ContainerLabelGetArgs... labels) {
@@ -1374,7 +1375,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder links(@Nullable List<String> links) {
-            this.links = Output.ofNullable(links);
+            this.links = Codegen.ofNullable(links);
             return this;
         }
         public Builder links(String... links) {
@@ -1385,7 +1386,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logDriver(@Nullable String logDriver) {
-            this.logDriver = Output.ofNullable(logDriver);
+            this.logDriver = Codegen.ofNullable(logDriver);
             return this;
         }
         public Builder logOpts(@Nullable Output<Map<String,Object>> logOpts) {
@@ -1393,7 +1394,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logOpts(@Nullable Map<String,Object> logOpts) {
-            this.logOpts = Output.ofNullable(logOpts);
+            this.logOpts = Codegen.ofNullable(logOpts);
             return this;
         }
         public Builder logs(@Nullable Output<Boolean> logs) {
@@ -1401,7 +1402,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logs(@Nullable Boolean logs) {
-            this.logs = Output.ofNullable(logs);
+            this.logs = Codegen.ofNullable(logs);
             return this;
         }
         public Builder maxRetryCount(@Nullable Output<Integer> maxRetryCount) {
@@ -1409,7 +1410,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxRetryCount(@Nullable Integer maxRetryCount) {
-            this.maxRetryCount = Output.ofNullable(maxRetryCount);
+            this.maxRetryCount = Codegen.ofNullable(maxRetryCount);
             return this;
         }
         public Builder memory(@Nullable Output<Integer> memory) {
@@ -1417,7 +1418,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memory(@Nullable Integer memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }
         public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
@@ -1425,7 +1426,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memorySwap(@Nullable Integer memorySwap) {
-            this.memorySwap = Output.ofNullable(memorySwap);
+            this.memorySwap = Codegen.ofNullable(memorySwap);
             return this;
         }
         public Builder mounts(@Nullable Output<List<ContainerMountGetArgs>> mounts) {
@@ -1433,7 +1434,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mounts(@Nullable List<ContainerMountGetArgs> mounts) {
-            this.mounts = Output.ofNullable(mounts);
+            this.mounts = Codegen.ofNullable(mounts);
             return this;
         }
         public Builder mounts(ContainerMountGetArgs... mounts) {
@@ -1444,7 +1445,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mustRun(@Nullable Boolean mustRun) {
-            this.mustRun = Output.ofNullable(mustRun);
+            this.mustRun = Codegen.ofNullable(mustRun);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -1452,7 +1453,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkAliases(@Nullable Output<List<String>> networkAliases) {
@@ -1460,7 +1461,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkAliases(@Nullable List<String> networkAliases) {
-            this.networkAliases = Output.ofNullable(networkAliases);
+            this.networkAliases = Codegen.ofNullable(networkAliases);
             return this;
         }
         public Builder networkAliases(String... networkAliases) {
@@ -1471,7 +1472,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkDatas(@Nullable List<ContainerNetworkDataGetArgs> networkDatas) {
-            this.networkDatas = Output.ofNullable(networkDatas);
+            this.networkDatas = Codegen.ofNullable(networkDatas);
             return this;
         }
         public Builder networkDatas(ContainerNetworkDataGetArgs... networkDatas) {
@@ -1482,7 +1483,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Output.ofNullable(networkMode);
+            this.networkMode = Codegen.ofNullable(networkMode);
             return this;
         }
         public Builder networks(@Nullable Output<List<String>> networks) {
@@ -1490,7 +1491,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networks(@Nullable List<String> networks) {
-            this.networks = Output.ofNullable(networks);
+            this.networks = Codegen.ofNullable(networks);
             return this;
         }
         public Builder networks(String... networks) {
@@ -1501,7 +1502,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networksAdvanced(@Nullable List<ContainerNetworksAdvancedGetArgs> networksAdvanced) {
-            this.networksAdvanced = Output.ofNullable(networksAdvanced);
+            this.networksAdvanced = Codegen.ofNullable(networksAdvanced);
             return this;
         }
         public Builder networksAdvanced(ContainerNetworksAdvancedGetArgs... networksAdvanced) {
@@ -1512,7 +1513,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pidMode(@Nullable String pidMode) {
-            this.pidMode = Output.ofNullable(pidMode);
+            this.pidMode = Codegen.ofNullable(pidMode);
             return this;
         }
         public Builder ports(@Nullable Output<List<ContainerPortGetArgs>> ports) {
@@ -1520,7 +1521,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ports(@Nullable List<ContainerPortGetArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(ContainerPortGetArgs... ports) {
@@ -1531,7 +1532,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Output.ofNullable(privileged);
+            this.privileged = Codegen.ofNullable(privileged);
             return this;
         }
         public Builder publishAllPorts(@Nullable Output<Boolean> publishAllPorts) {
@@ -1539,7 +1540,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publishAllPorts(@Nullable Boolean publishAllPorts) {
-            this.publishAllPorts = Output.ofNullable(publishAllPorts);
+            this.publishAllPorts = Codegen.ofNullable(publishAllPorts);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -1547,7 +1548,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder removeVolumes(@Nullable Output<Boolean> removeVolumes) {
@@ -1555,7 +1556,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder removeVolumes(@Nullable Boolean removeVolumes) {
-            this.removeVolumes = Output.ofNullable(removeVolumes);
+            this.removeVolumes = Codegen.ofNullable(removeVolumes);
             return this;
         }
         public Builder restart(@Nullable Output<String> restart) {
@@ -1563,7 +1564,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restart(@Nullable String restart) {
-            this.restart = Output.ofNullable(restart);
+            this.restart = Codegen.ofNullable(restart);
             return this;
         }
         public Builder rm(@Nullable Output<Boolean> rm) {
@@ -1571,7 +1572,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rm(@Nullable Boolean rm) {
-            this.rm = Output.ofNullable(rm);
+            this.rm = Codegen.ofNullable(rm);
             return this;
         }
         public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
@@ -1579,7 +1580,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityOpts(@Nullable List<String> securityOpts) {
-            this.securityOpts = Output.ofNullable(securityOpts);
+            this.securityOpts = Codegen.ofNullable(securityOpts);
             return this;
         }
         public Builder securityOpts(String... securityOpts) {
@@ -1590,7 +1591,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shmSize(@Nullable Integer shmSize) {
-            this.shmSize = Output.ofNullable(shmSize);
+            this.shmSize = Codegen.ofNullable(shmSize);
             return this;
         }
         public Builder start(@Nullable Output<Boolean> start) {
@@ -1598,7 +1599,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder start(@Nullable Boolean start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }
         public Builder stdinOpen(@Nullable Output<Boolean> stdinOpen) {
@@ -1606,7 +1607,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stdinOpen(@Nullable Boolean stdinOpen) {
-            this.stdinOpen = Output.ofNullable(stdinOpen);
+            this.stdinOpen = Codegen.ofNullable(stdinOpen);
             return this;
         }
         public Builder storageOpts(@Nullable Output<Map<String,Object>> storageOpts) {
@@ -1614,7 +1615,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageOpts(@Nullable Map<String,Object> storageOpts) {
-            this.storageOpts = Output.ofNullable(storageOpts);
+            this.storageOpts = Codegen.ofNullable(storageOpts);
             return this;
         }
         public Builder sysctls(@Nullable Output<Map<String,Object>> sysctls) {
@@ -1622,7 +1623,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sysctls(@Nullable Map<String,Object> sysctls) {
-            this.sysctls = Output.ofNullable(sysctls);
+            this.sysctls = Codegen.ofNullable(sysctls);
             return this;
         }
         public Builder tmpfs(@Nullable Output<Map<String,Object>> tmpfs) {
@@ -1630,7 +1631,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tmpfs(@Nullable Map<String,Object> tmpfs) {
-            this.tmpfs = Output.ofNullable(tmpfs);
+            this.tmpfs = Codegen.ofNullable(tmpfs);
             return this;
         }
         public Builder tty(@Nullable Output<Boolean> tty) {
@@ -1638,7 +1639,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tty(@Nullable Boolean tty) {
-            this.tty = Output.ofNullable(tty);
+            this.tty = Codegen.ofNullable(tty);
             return this;
         }
         public Builder ulimits(@Nullable Output<List<ContainerUlimitGetArgs>> ulimits) {
@@ -1646,7 +1647,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ulimits(@Nullable List<ContainerUlimitGetArgs> ulimits) {
-            this.ulimits = Output.ofNullable(ulimits);
+            this.ulimits = Codegen.ofNullable(ulimits);
             return this;
         }
         public Builder ulimits(ContainerUlimitGetArgs... ulimits) {
@@ -1657,7 +1658,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uploads(@Nullable List<ContainerUploadGetArgs> uploads) {
-            this.uploads = Output.ofNullable(uploads);
+            this.uploads = Codegen.ofNullable(uploads);
             return this;
         }
         public Builder uploads(ContainerUploadGetArgs... uploads) {
@@ -1668,7 +1669,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }
         public Builder usernsMode(@Nullable Output<String> usernsMode) {
@@ -1676,7 +1677,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usernsMode(@Nullable String usernsMode) {
-            this.usernsMode = Output.ofNullable(usernsMode);
+            this.usernsMode = Codegen.ofNullable(usernsMode);
             return this;
         }
         public Builder volumes(@Nullable Output<List<ContainerVolumeGetArgs>> volumes) {
@@ -1684,7 +1685,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumes(@Nullable List<ContainerVolumeGetArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(ContainerVolumeGetArgs... volumes) {
@@ -1695,7 +1696,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Output.ofNullable(workingDir);
+            this.workingDir = Codegen.ofNullable(workingDir);
             return this;
         }        public ContainerState build() {
             return new ContainerState(attach, bridge, capabilities, command, containerLogs, cpuSet, cpuShares, destroyGraceSeconds, devices, dns, dnsOpts, dnsSearches, domainname, entrypoints, envs, exitCode, gateway, groupAdds, healthcheck, hostname, hosts, image, init, ipAddress, ipPrefixLength, ipcMode, labels, links, logDriver, logOpts, logs, maxRetryCount, memory, memorySwap, mounts, mustRun, name, networkAliases, networkDatas, networkMode, networks, networksAdvanced, pidMode, ports, privileged, publishAllPorts, readOnly, removeVolumes, restart, rm, securityOpts, shmSize, start, stdinOpen, storageOpts, sysctls, tmpfs, tty, ulimits, uploads, user, usernsMode, volumes, workingDir);

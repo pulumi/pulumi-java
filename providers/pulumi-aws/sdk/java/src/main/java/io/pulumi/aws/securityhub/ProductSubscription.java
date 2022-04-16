@@ -9,6 +9,7 @@ import io.pulumi.aws.securityhub.inputs.ProductSubscriptionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ProductSubscription extends io.pulumi.resources.CustomResource {
      * @return The ARN of a resource that represents your subscription to the product that generates the findings that you want to import into Security Hub.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -53,7 +54,7 @@ public class ProductSubscription extends io.pulumi.resources.CustomResource {
      * @return The ARN of the product that generates findings that you want to import into Security Hub - see below.
      * 
      */
-    public Output<String> getProductArn() {
+    public Output<String> productArn() {
         return this.productArn;
     }
 
@@ -79,7 +80,7 @@ public class ProductSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProductSubscription(String name, ProductSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/productSubscription:ProductSubscription", name, args == null ? ProductSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:securityhub/productSubscription:ProductSubscription", name, args == null ? ProductSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProductSubscription(String name, Output<String> id, @Nullable ProductSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

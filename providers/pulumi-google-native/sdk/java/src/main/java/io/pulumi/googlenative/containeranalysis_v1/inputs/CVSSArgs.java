@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.enums.CVSSAttackComplexity;
 import io.pulumi.googlenative.containeranalysis_v1.enums.CVSSAttackVector;
 import io.pulumi.googlenative.containeranalysis_v1.enums.CVSSAuthentication;
@@ -30,8 +31,8 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attackComplexity")
       private final @Nullable Output<CVSSAttackComplexity> attackComplexity;
 
-    public Output<CVSSAttackComplexity> getAttackComplexity() {
-        return this.attackComplexity == null ? Output.empty() : this.attackComplexity;
+    public Output<CVSSAttackComplexity> attackComplexity() {
+        return this.attackComplexity == null ? Codegen.empty() : this.attackComplexity;
     }
 
     /**
@@ -41,22 +42,22 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attackVector")
       private final @Nullable Output<CVSSAttackVector> attackVector;
 
-    public Output<CVSSAttackVector> getAttackVector() {
-        return this.attackVector == null ? Output.empty() : this.attackVector;
+    public Output<CVSSAttackVector> attackVector() {
+        return this.attackVector == null ? Codegen.empty() : this.attackVector;
     }
 
     @Import(name="authentication")
       private final @Nullable Output<CVSSAuthentication> authentication;
 
-    public Output<CVSSAuthentication> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<CVSSAuthentication> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     @Import(name="availabilityImpact")
       private final @Nullable Output<CVSSAvailabilityImpact> availabilityImpact;
 
-    public Output<CVSSAvailabilityImpact> getAvailabilityImpact() {
-        return this.availabilityImpact == null ? Output.empty() : this.availabilityImpact;
+    public Output<CVSSAvailabilityImpact> availabilityImpact() {
+        return this.availabilityImpact == null ? Codegen.empty() : this.availabilityImpact;
     }
 
     /**
@@ -66,57 +67,57 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseScore")
       private final @Nullable Output<Double> baseScore;
 
-    public Output<Double> getBaseScore() {
-        return this.baseScore == null ? Output.empty() : this.baseScore;
+    public Output<Double> baseScore() {
+        return this.baseScore == null ? Codegen.empty() : this.baseScore;
     }
 
     @Import(name="confidentialityImpact")
       private final @Nullable Output<CVSSConfidentialityImpact> confidentialityImpact;
 
-    public Output<CVSSConfidentialityImpact> getConfidentialityImpact() {
-        return this.confidentialityImpact == null ? Output.empty() : this.confidentialityImpact;
+    public Output<CVSSConfidentialityImpact> confidentialityImpact() {
+        return this.confidentialityImpact == null ? Codegen.empty() : this.confidentialityImpact;
     }
 
     @Import(name="exploitabilityScore")
       private final @Nullable Output<Double> exploitabilityScore;
 
-    public Output<Double> getExploitabilityScore() {
-        return this.exploitabilityScore == null ? Output.empty() : this.exploitabilityScore;
+    public Output<Double> exploitabilityScore() {
+        return this.exploitabilityScore == null ? Codegen.empty() : this.exploitabilityScore;
     }
 
     @Import(name="impactScore")
       private final @Nullable Output<Double> impactScore;
 
-    public Output<Double> getImpactScore() {
-        return this.impactScore == null ? Output.empty() : this.impactScore;
+    public Output<Double> impactScore() {
+        return this.impactScore == null ? Codegen.empty() : this.impactScore;
     }
 
     @Import(name="integrityImpact")
       private final @Nullable Output<CVSSIntegrityImpact> integrityImpact;
 
-    public Output<CVSSIntegrityImpact> getIntegrityImpact() {
-        return this.integrityImpact == null ? Output.empty() : this.integrityImpact;
+    public Output<CVSSIntegrityImpact> integrityImpact() {
+        return this.integrityImpact == null ? Codegen.empty() : this.integrityImpact;
     }
 
     @Import(name="privilegesRequired")
       private final @Nullable Output<CVSSPrivilegesRequired> privilegesRequired;
 
-    public Output<CVSSPrivilegesRequired> getPrivilegesRequired() {
-        return this.privilegesRequired == null ? Output.empty() : this.privilegesRequired;
+    public Output<CVSSPrivilegesRequired> privilegesRequired() {
+        return this.privilegesRequired == null ? Codegen.empty() : this.privilegesRequired;
     }
 
     @Import(name="scope")
       private final @Nullable Output<CVSSScope> scope;
 
-    public Output<CVSSScope> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<CVSSScope> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="userInteraction")
       private final @Nullable Output<CVSSUserInteraction> userInteraction;
 
-    public Output<CVSSUserInteraction> getUserInteraction() {
-        return this.userInteraction == null ? Output.empty() : this.userInteraction;
+    public Output<CVSSUserInteraction> userInteraction() {
+        return this.userInteraction == null ? Codegen.empty() : this.userInteraction;
     }
 
     public CVSSArgs(
@@ -147,18 +148,18 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CVSSArgs() {
-        this.attackComplexity = Output.empty();
-        this.attackVector = Output.empty();
-        this.authentication = Output.empty();
-        this.availabilityImpact = Output.empty();
-        this.baseScore = Output.empty();
-        this.confidentialityImpact = Output.empty();
-        this.exploitabilityScore = Output.empty();
-        this.impactScore = Output.empty();
-        this.integrityImpact = Output.empty();
-        this.privilegesRequired = Output.empty();
-        this.scope = Output.empty();
-        this.userInteraction = Output.empty();
+        this.attackComplexity = Codegen.empty();
+        this.attackVector = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.availabilityImpact = Codegen.empty();
+        this.baseScore = Codegen.empty();
+        this.confidentialityImpact = Codegen.empty();
+        this.exploitabilityScore = Codegen.empty();
+        this.impactScore = Codegen.empty();
+        this.integrityImpact = Codegen.empty();
+        this.privilegesRequired = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.userInteraction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attackComplexity(@Nullable CVSSAttackComplexity attackComplexity) {
-            this.attackComplexity = Output.ofNullable(attackComplexity);
+            this.attackComplexity = Codegen.ofNullable(attackComplexity);
             return this;
         }
         public Builder attackVector(@Nullable Output<CVSSAttackVector> attackVector) {
@@ -216,7 +217,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attackVector(@Nullable CVSSAttackVector attackVector) {
-            this.attackVector = Output.ofNullable(attackVector);
+            this.attackVector = Codegen.ofNullable(attackVector);
             return this;
         }
         public Builder authentication(@Nullable Output<CVSSAuthentication> authentication) {
@@ -224,7 +225,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable CVSSAuthentication authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder availabilityImpact(@Nullable Output<CVSSAvailabilityImpact> availabilityImpact) {
@@ -232,7 +233,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityImpact(@Nullable CVSSAvailabilityImpact availabilityImpact) {
-            this.availabilityImpact = Output.ofNullable(availabilityImpact);
+            this.availabilityImpact = Codegen.ofNullable(availabilityImpact);
             return this;
         }
         public Builder baseScore(@Nullable Output<Double> baseScore) {
@@ -240,7 +241,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseScore(@Nullable Double baseScore) {
-            this.baseScore = Output.ofNullable(baseScore);
+            this.baseScore = Codegen.ofNullable(baseScore);
             return this;
         }
         public Builder confidentialityImpact(@Nullable Output<CVSSConfidentialityImpact> confidentialityImpact) {
@@ -248,7 +249,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder confidentialityImpact(@Nullable CVSSConfidentialityImpact confidentialityImpact) {
-            this.confidentialityImpact = Output.ofNullable(confidentialityImpact);
+            this.confidentialityImpact = Codegen.ofNullable(confidentialityImpact);
             return this;
         }
         public Builder exploitabilityScore(@Nullable Output<Double> exploitabilityScore) {
@@ -256,7 +257,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exploitabilityScore(@Nullable Double exploitabilityScore) {
-            this.exploitabilityScore = Output.ofNullable(exploitabilityScore);
+            this.exploitabilityScore = Codegen.ofNullable(exploitabilityScore);
             return this;
         }
         public Builder impactScore(@Nullable Output<Double> impactScore) {
@@ -264,7 +265,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder impactScore(@Nullable Double impactScore) {
-            this.impactScore = Output.ofNullable(impactScore);
+            this.impactScore = Codegen.ofNullable(impactScore);
             return this;
         }
         public Builder integrityImpact(@Nullable Output<CVSSIntegrityImpact> integrityImpact) {
@@ -272,7 +273,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integrityImpact(@Nullable CVSSIntegrityImpact integrityImpact) {
-            this.integrityImpact = Output.ofNullable(integrityImpact);
+            this.integrityImpact = Codegen.ofNullable(integrityImpact);
             return this;
         }
         public Builder privilegesRequired(@Nullable Output<CVSSPrivilegesRequired> privilegesRequired) {
@@ -280,7 +281,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privilegesRequired(@Nullable CVSSPrivilegesRequired privilegesRequired) {
-            this.privilegesRequired = Output.ofNullable(privilegesRequired);
+            this.privilegesRequired = Codegen.ofNullable(privilegesRequired);
             return this;
         }
         public Builder scope(@Nullable Output<CVSSScope> scope) {
@@ -288,7 +289,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable CVSSScope scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder userInteraction(@Nullable Output<CVSSUserInteraction> userInteraction) {
@@ -296,7 +297,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userInteraction(@Nullable CVSSUserInteraction userInteraction) {
-            this.userInteraction = Output.ofNullable(userInteraction);
+            this.userInteraction = Codegen.ofNullable(userInteraction);
             return this;
         }        public CVSSArgs build() {
             return new CVSSArgs(attackComplexity, attackVector, authentication, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);

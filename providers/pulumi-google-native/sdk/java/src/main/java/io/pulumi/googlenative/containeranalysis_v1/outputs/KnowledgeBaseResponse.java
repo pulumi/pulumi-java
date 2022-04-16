@@ -32,14 +32,14 @@ public final class KnowledgeBaseResponse {
      * The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.ModelState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The content type of the model
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -53,7 +54,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The description of the model
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -67,7 +68,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The name of the model
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -81,7 +82,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -95,7 +96,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The schema of the model in a JSON form
      * 
      */
-    public Output</* @Nullable */ String> getSchema() {
+    public Output</* @Nullable */ String> schema() {
         return this.schema;
     }
 
@@ -121,7 +122,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Model(String name, ModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/model:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/model:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Model(String name, Output<String> id, @Nullable ModelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

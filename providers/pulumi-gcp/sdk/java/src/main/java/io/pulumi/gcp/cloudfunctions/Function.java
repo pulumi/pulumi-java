@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudfunctions;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionArgs;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionState;
@@ -59,7 +60,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
      * 
      */
-    public Output</* @Nullable */ Integer> getAvailableMemoryMb() {
+    public Output</* @Nullable */ Integer> availableMemoryMb() {
         return this.availableMemoryMb;
     }
     /**
@@ -73,7 +74,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A set of key/value environment variable pairs available during build time.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getBuildEnvironmentVariables() {
+    public Output</* @Nullable */ Map<String,Object>> buildEnvironmentVariables() {
         return this.buildEnvironmentVariables;
     }
     /**
@@ -87,7 +88,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Description of the function.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -101,7 +102,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Name of the function that will be executed when the Google Cloud Function is triggered.
      * 
      */
-    public Output</* @Nullable */ String> getEntryPoint() {
+    public Output</* @Nullable */ String> entryPoint() {
         return this.entryPoint;
     }
     /**
@@ -115,7 +116,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A set of key/value environment variable pairs to assign to the function.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getEnvironmentVariables() {
+    public Output</* @Nullable */ Map<String,Object>> environmentVariables() {
         return this.environmentVariables;
     }
     /**
@@ -129,7 +130,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
      * 
      */
-    public Output<FunctionEventTrigger> getEventTrigger() {
+    public Output<FunctionEventTrigger> eventTrigger() {
         return this.eventTrigger;
     }
     /**
@@ -143,7 +144,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return URL which triggers function execution. Returned only if `trigger_http` is used.
      * 
      */
-    public Output<String> getHttpsTriggerUrl() {
+    public Output<String> httpsTriggerUrl() {
         return this.httpsTriggerUrl;
     }
     /**
@@ -157,7 +158,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
      * 
      */
-    public Output</* @Nullable */ String> getIngressSettings() {
+    public Output</* @Nullable */ String> ingressSettings() {
         return this.ingressSettings;
     }
     /**
@@ -171,7 +172,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getLabels() {
+    public Output</* @Nullable */ Map<String,Object>> labels() {
         return this.labels;
     }
     /**
@@ -185,7 +186,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The limit on the maximum number of function instances that may coexist at a given time.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxInstances() {
+    public Output</* @Nullable */ Integer> maxInstances() {
         return this.maxInstances;
     }
     /**
@@ -199,7 +200,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The limit on the minimum number of function instances that may coexist at a given time.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinInstances() {
+    public Output</* @Nullable */ Integer> minInstances() {
         return this.minInstances;
     }
     /**
@@ -213,7 +214,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A user-defined name of the function. Function names must be unique globally.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -227,7 +228,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Project of the function. If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -241,7 +242,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Region of function. If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -257,7 +258,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
      * 
      */
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
     /**
@@ -271,7 +272,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return If provided, the self-provided service account to run the function with.
      * 
      */
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
@@ -285,7 +286,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The GCS bucket containing the zip archive which contains the function.
      * 
      */
-    public Output</* @Nullable */ String> getSourceArchiveBucket() {
+    public Output</* @Nullable */ String> sourceArchiveBucket() {
         return this.sourceArchiveBucket;
     }
     /**
@@ -299,7 +300,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The source archive object (file) in archive bucket.
      * 
      */
-    public Output</* @Nullable */ String> getSourceArchiveObject() {
+    public Output</* @Nullable */ String> sourceArchiveObject() {
         return this.sourceArchiveObject;
     }
     /**
@@ -315,7 +316,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FunctionSourceRepository> getSourceRepository() {
+    public Output</* @Nullable */ FunctionSourceRepository> sourceRepository() {
         return this.sourceRepository;
     }
     /**
@@ -329,7 +330,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -343,7 +344,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTriggerHttp() {
+    public Output</* @Nullable */ Boolean> triggerHttp() {
         return this.triggerHttp;
     }
     /**
@@ -357,7 +358,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      * 
      */
-    public Output</* @Nullable */ String> getVpcConnector() {
+    public Output</* @Nullable */ String> vpcConnector() {
         return this.vpcConnector;
     }
     /**
@@ -371,7 +372,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
      * 
      */
-    public Output<String> getVpcConnectorEgressSettings() {
+    public Output<String> vpcConnectorEgressSettings() {
         return this.vpcConnectorEgressSettings;
     }
 
@@ -397,7 +398,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Function(String name, FunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudfunctions/function:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudfunctions/function:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Function(String name, Output<String> id, @Nullable FunctionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

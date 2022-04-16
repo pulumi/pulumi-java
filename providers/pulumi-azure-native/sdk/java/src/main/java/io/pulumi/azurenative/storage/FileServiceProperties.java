@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
      * 
      */
-    public Output</* @Nullable */ CorsRulesResponse> getCors() {
+    public Output</* @Nullable */ CorsRulesResponse> cors() {
         return this.cors;
     }
     /**
@@ -59,7 +60,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Protocol settings for file service
      * 
      */
-    public Output</* @Nullable */ ProtocolSettingsResponse> getProtocolSettings() {
+    public Output</* @Nullable */ ProtocolSettingsResponse> protocolSettings() {
         return this.protocolSettings;
     }
     /**
@@ -87,7 +88,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The file service properties for share soft delete.
      * 
      */
-    public Output</* @Nullable */ DeleteRetentionPolicyResponse> getShareDeleteRetentionPolicy() {
+    public Output</* @Nullable */ DeleteRetentionPolicyResponse> shareDeleteRetentionPolicy() {
         return this.shareDeleteRetentionPolicy;
     }
     /**
@@ -101,7 +102,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Sku name and tier.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -115,7 +116,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -141,7 +142,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileServiceProperties(String name, FileServicePropertiesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:FileServiceProperties", name, args == null ? FileServicePropertiesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storage:FileServiceProperties", name, args == null ? FileServicePropertiesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FileServiceProperties(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

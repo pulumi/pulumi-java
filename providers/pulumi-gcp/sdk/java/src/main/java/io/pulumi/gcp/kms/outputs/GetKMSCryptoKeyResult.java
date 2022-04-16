@@ -62,33 +62,33 @@ public final class GetKMSCryptoKeyResult {
         this.versionTemplates = versionTemplates;
     }
 
-    public String getDestroyScheduledDuration() {
+    public String destroyScheduledDuration() {
         return this.destroyScheduledDuration;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Boolean getImportOnly() {
+    public Boolean importOnly() {
         return this.importOnly;
     }
-    public String getKeyRing() {
+    public String keyRing() {
         return this.keyRing;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the cryptographic capabilities of the key.
      * 
     */
-    public String getPurpose() {
+    public String purpose() {
         return this.purpose;
     }
     /**
@@ -97,13 +97,13 @@ public final class GetKMSCryptoKeyResult {
      * of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
      * 
     */
-    public String getRotationPeriod() {
+    public String rotationPeriod() {
         return this.rotationPeriod;
     }
-    public Boolean getSkipInitialVersionCreation() {
+    public Boolean skipInitialVersionCreation() {
         return this.skipInitialVersionCreation;
     }
-    public List<GetKMSCryptoKeyVersionTemplate> getVersionTemplates() {
+    public List<GetKMSCryptoKeyVersionTemplate> versionTemplates() {
         return this.versionTemplates;
     }
 

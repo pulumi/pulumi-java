@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
     @Import(name="managementGroups")
       private final @Nullable Output<List<String>> managementGroups;
 
-    public Output<List<String>> getManagementGroups() {
-        return this.managementGroups == null ? Output.empty() : this.managementGroups;
+    public Output<List<String>> managementGroups() {
+        return this.managementGroups == null ? Codegen.empty() : this.managementGroups;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
     @Import(name="subscriptions")
       private final @Nullable Output<List<String>> subscriptions;
 
-    public Output<List<String>> getSubscriptions() {
-        return this.subscriptions == null ? Output.empty() : this.subscriptions;
+    public Output<List<String>> subscriptions() {
+        return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
     }
 
     public NetworkManagerPropertiesNetworkManagerScopesArgs(
@@ -49,8 +50,8 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
     }
 
     private NetworkManagerPropertiesNetworkManagerScopesArgs() {
-        this.managementGroups = Output.empty();
-        this.subscriptions = Output.empty();
+        this.managementGroups = Codegen.empty();
+        this.subscriptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
             return this;
         }
         public Builder managementGroups(@Nullable List<String> managementGroups) {
-            this.managementGroups = Output.ofNullable(managementGroups);
+            this.managementGroups = Codegen.ofNullable(managementGroups);
             return this;
         }
         public Builder managementGroups(String... managementGroups) {
@@ -91,7 +92,7 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
             return this;
         }
         public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = Output.ofNullable(subscriptions);
+            this.subscriptions = Codegen.ofNullable(subscriptions);
             return this;
         }
         public Builder subscriptions(String... subscriptions) {

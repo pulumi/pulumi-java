@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.RecArgs;
 import io.pulumi.example.Utilities;
 import javax.annotation.Nullable;
@@ -15,7 +16,7 @@ public class Rec extends io.pulumi.resources.CustomResource {
     @Export(name="rec", type=Rec.class, parameters={})
     private Output</* @Nullable */ Rec> rec;
 
-    public Output</* @Nullable */ Rec> getRec() {
+    public Output</* @Nullable */ Rec> rec() {
         return this.rec;
     }
 
@@ -41,7 +42,7 @@ public class Rec extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Rec(String name, @Nullable RecArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Rec", name, args == null ? RecArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::Rec", name, args == null ? RecArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Rec(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

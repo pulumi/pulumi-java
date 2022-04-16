@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="identityPoolId", required=true)
       private final Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
 
@@ -44,7 +45,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -55,7 +56,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -71,10 +72,10 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     }
 
     private DomainCognitoOptionsGetArgs() {
-        this.enabled = Output.empty();
-        this.identityPoolId = Output.empty();
-        this.roleArn = Output.empty();
-        this.userPoolId = Output.empty();
+        this.enabled = Codegen.empty();
+        this.identityPoolId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder identityPoolId(Output<String> identityPoolId) {

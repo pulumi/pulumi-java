@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
     @Import(name="signature")
       private final @Nullable Output<String> signature;
 
-    public Output<String> getSignature() {
-        return this.signature == null ? Output.empty() : this.signature;
+    public Output<String> signature() {
+        return this.signature == null ? Codegen.empty() : this.signature;
     }
 
     public VpcIpamPoolCidrCidrAuthorizationContextGetArgs(
@@ -44,8 +45,8 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
     }
 
     private VpcIpamPoolCidrCidrAuthorizationContextGetArgs() {
-        this.message = Output.empty();
-        this.signature = Output.empty();
+        this.message = Codegen.empty();
+        this.signature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder signature(@Nullable Output<String> signature) {
@@ -83,7 +84,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
             return this;
         }
         public Builder signature(@Nullable String signature) {
-            this.signature = Output.ofNullable(signature);
+            this.signature = Codegen.ofNullable(signature);
             return this;
         }        public VpcIpamPoolCidrCidrAuthorizationContextGetArgs build() {
             return new VpcIpamPoolCidrCidrAuthorizationContextGetArgs(message, signature);

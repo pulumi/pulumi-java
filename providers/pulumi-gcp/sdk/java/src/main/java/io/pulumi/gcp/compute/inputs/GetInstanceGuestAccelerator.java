@@ -20,7 +20,7 @@ public final class GetInstanceGuestAccelerator extends io.pulumi.resources.Invok
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -31,7 +31,7 @@ public final class GetInstanceGuestAccelerator extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

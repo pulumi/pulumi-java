@@ -7,6 +7,7 @@ import io.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationGetAr
 import io.pulumi.aws.codepipeline.inputs.WebhookFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<String> authentication;
 
-    public Output<String> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<String> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
-    public Output<WebhookAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Output.empty() : this.authenticationConfiguration;
+    public Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration() {
+        return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filters")
       private final @Nullable Output<List<WebhookFilterGetArgs>> filters;
 
-    public Output<List<WebhookFilterGetArgs>> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+    public Output<List<WebhookFilterGetArgs>> filters() {
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetAction")
       private final @Nullable Output<String> targetAction;
 
-    public Output<String> getTargetAction() {
-        return this.targetAction == null ? Output.empty() : this.targetAction;
+    public Output<String> targetAction() {
+        return this.targetAction == null ? Codegen.empty() : this.targetAction;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetPipeline")
       private final @Nullable Output<String> targetPipeline;
 
-    public Output<String> getTargetPipeline() {
-        return this.targetPipeline == null ? Output.empty() : this.targetPipeline;
+    public Output<String> targetPipeline() {
+        return this.targetPipeline == null ? Codegen.empty() : this.targetPipeline;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public WebhookState(
@@ -152,16 +153,16 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookState() {
-        this.arn = Output.empty();
-        this.authentication = Output.empty();
-        this.authenticationConfiguration = Output.empty();
-        this.filters = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.targetAction = Output.empty();
-        this.targetPipeline = Output.empty();
-        this.url = Output.empty();
+        this.arn = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.authenticationConfiguration = Codegen.empty();
+        this.filters = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.targetAction = Codegen.empty();
+        this.targetPipeline = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authentication(@Nullable Output<String> authentication) {
@@ -215,7 +216,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable String authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration) {
@@ -223,7 +224,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationConfiguration(@Nullable WebhookAuthenticationConfigurationGetArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
+            this.authenticationConfiguration = Codegen.ofNullable(authenticationConfiguration);
             return this;
         }
         public Builder filters(@Nullable Output<List<WebhookFilterGetArgs>> filters) {
@@ -231,7 +232,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filters(@Nullable List<WebhookFilterGetArgs> filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder filters(WebhookFilterGetArgs... filters) {
@@ -242,7 +243,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -250,7 +251,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -258,7 +259,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder targetAction(@Nullable Output<String> targetAction) {
@@ -266,7 +267,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetAction(@Nullable String targetAction) {
-            this.targetAction = Output.ofNullable(targetAction);
+            this.targetAction = Codegen.ofNullable(targetAction);
             return this;
         }
         public Builder targetPipeline(@Nullable Output<String> targetPipeline) {
@@ -274,7 +275,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetPipeline(@Nullable String targetPipeline) {
-            this.targetPipeline = Output.ofNullable(targetPipeline);
+            this.targetPipeline = Codegen.ofNullable(targetPipeline);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -282,7 +283,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public WebhookState build() {
             return new WebhookState(arn, authentication, authenticationConfiguration, filters, name, tags, tagsAll, targetAction, targetPipeline, url);

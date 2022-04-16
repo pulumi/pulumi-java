@@ -6,6 +6,7 @@ package io.pulumi.gcp.sourcerepo;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sourcerepo.RepositoryArgs;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryState;
@@ -54,7 +55,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The repo name may contain slashes. eg, `name/with/slash`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -88,7 +89,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RepositoryPubsubConfig>> getPubsubConfigs() {
+    public Output</* @Nullable */ List<RepositoryPubsubConfig>> pubsubConfigs() {
         return this.pubsubConfigs;
     }
     /**
@@ -102,7 +103,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The disk usage of the repo, in bytes.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -116,7 +117,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return URL to clone the repository from Google Cloud Source Repositories.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -142,7 +143,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Repository(String name, @Nullable RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:sourcerepo/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:sourcerepo/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Repository(String name, Output<String> id, @Nullable RepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

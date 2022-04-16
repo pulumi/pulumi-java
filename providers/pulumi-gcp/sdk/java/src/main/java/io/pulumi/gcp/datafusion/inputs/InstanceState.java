@@ -5,6 +5,7 @@ package io.pulumi.gcp.datafusion.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datafusion.inputs.InstanceNetworkConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataprocServiceAccount")
       private final @Nullable Output<String> dataprocServiceAccount;
 
-    public Output<String> getDataprocServiceAccount() {
-        return this.dataprocServiceAccount == null ? Output.empty() : this.dataprocServiceAccount;
+    public Output<String> dataprocServiceAccount() {
+        return this.dataprocServiceAccount == null ? Codegen.empty() : this.dataprocServiceAccount;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> getEnableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Output.empty() : this.enableStackdriverLogging;
+    public Output<Boolean> enableStackdriverLogging() {
+        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverMonitoring")
       private final @Nullable Output<Boolean> enableStackdriverMonitoring;
 
-    public Output<Boolean> getEnableStackdriverMonitoring() {
-        return this.enableStackdriverMonitoring == null ? Output.empty() : this.enableStackdriverMonitoring;
+    public Output<Boolean> enableStackdriverMonitoring() {
+        return this.enableStackdriverMonitoring == null ? Codegen.empty() : this.enableStackdriverMonitoring;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<InstanceNetworkConfigGetArgs> networkConfig;
 
-    public Output<InstanceNetworkConfigGetArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+    public Output<InstanceNetworkConfigGetArgs> networkConfig() {
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<Map<String,String>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateInstance")
       private final @Nullable Output<Boolean> privateInstance;
 
-    public Output<Boolean> getPrivateInstance() {
-        return this.privateInstance == null ? Output.empty() : this.privateInstance;
+    public Output<Boolean> privateInstance() {
+        return this.privateInstance == null ? Codegen.empty() : this.privateInstance;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceEndpoint")
       private final @Nullable Output<String> serviceEndpoint;
 
-    public Output<String> getServiceEndpoint() {
-        return this.serviceEndpoint == null ? Output.empty() : this.serviceEndpoint;
+    public Output<String> serviceEndpoint() {
+        return this.serviceEndpoint == null ? Codegen.empty() : this.serviceEndpoint;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stateMessage")
       private final @Nullable Output<String> stateMessage;
 
-    public Output<String> getStateMessage() {
-        return this.stateMessage == null ? Output.empty() : this.stateMessage;
+    public Output<String> stateMessage() {
+        return this.stateMessage == null ? Codegen.empty() : this.stateMessage;
     }
 
     /**
@@ -217,8 +218,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -228,8 +229,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -239,8 +240,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public InstanceState(
@@ -285,25 +286,25 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.createTime = Output.empty();
-        this.dataprocServiceAccount = Output.empty();
-        this.description = Output.empty();
-        this.enableStackdriverLogging = Output.empty();
-        this.enableStackdriverMonitoring = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.networkConfig = Output.empty();
-        this.options = Output.empty();
-        this.privateInstance = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.serviceEndpoint = Output.empty();
-        this.state = Output.empty();
-        this.stateMessage = Output.empty();
-        this.type = Output.empty();
-        this.updateTime = Output.empty();
-        this.version = Output.empty();
+        this.createTime = Codegen.empty();
+        this.dataprocServiceAccount = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableStackdriverLogging = Codegen.empty();
+        this.enableStackdriverMonitoring = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.options = Codegen.empty();
+        this.privateInstance = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.serviceEndpoint = Codegen.empty();
+        this.state = Codegen.empty();
+        this.stateMessage = Codegen.empty();
+        this.type = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -367,7 +368,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
@@ -375,7 +376,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
-            this.dataprocServiceAccount = Output.ofNullable(dataprocServiceAccount);
+            this.dataprocServiceAccount = Codegen.ofNullable(dataprocServiceAccount);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -383,7 +384,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
@@ -391,7 +392,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
+            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
             return this;
         }
         public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
@@ -399,7 +400,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
-            this.enableStackdriverMonitoring = Output.ofNullable(enableStackdriverMonitoring);
+            this.enableStackdriverMonitoring = Codegen.ofNullable(enableStackdriverMonitoring);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -407,7 +408,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -415,7 +416,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkConfig(@Nullable Output<InstanceNetworkConfigGetArgs> networkConfig) {
@@ -423,7 +424,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfig(@Nullable InstanceNetworkConfigGetArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder options(@Nullable Output<Map<String,String>> options) {
@@ -431,7 +432,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable Map<String,String> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
@@ -439,7 +440,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateInstance(@Nullable Boolean privateInstance) {
-            this.privateInstance = Output.ofNullable(privateInstance);
+            this.privateInstance = Codegen.ofNullable(privateInstance);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -447,7 +448,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -455,7 +456,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -463,7 +464,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder serviceEndpoint(@Nullable Output<String> serviceEndpoint) {
@@ -471,7 +472,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceEndpoint(@Nullable String serviceEndpoint) {
-            this.serviceEndpoint = Output.ofNullable(serviceEndpoint);
+            this.serviceEndpoint = Codegen.ofNullable(serviceEndpoint);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -479,7 +480,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder stateMessage(@Nullable Output<String> stateMessage) {
@@ -487,7 +488,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stateMessage(@Nullable String stateMessage) {
-            this.stateMessage = Output.ofNullable(stateMessage);
+            this.stateMessage = Codegen.ofNullable(stateMessage);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -495,7 +496,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -503,7 +504,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -511,7 +512,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public InstanceState build() {
             return new InstanceState(createTime, dataprocServiceAccount, description, enableStackdriverLogging, enableStackdriverMonitoring, labels, name, networkConfig, options, privateInstance, project, region, serviceAccount, serviceEndpoint, state, stateMessage, type, updateTime, version);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.logging.inputs.FolderSinkBigqueryOptionsArgs;
 import io.pulumi.gcp.logging.inputs.FolderSinkExclusionArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryOptions")
       private final @Nullable Output<FolderSinkBigqueryOptionsArgs> bigqueryOptions;
 
-    public Output<FolderSinkBigqueryOptionsArgs> getBigqueryOptions() {
-        return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
+    public Output<FolderSinkBigqueryOptionsArgs> bigqueryOptions() {
+        return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -61,8 +62,8 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exclusions")
       private final @Nullable Output<List<FolderSinkExclusionArgs>> exclusions;
 
-    public Output<List<FolderSinkExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+    public Output<List<FolderSinkExclusionArgs>> exclusions() {
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder", required=true)
       private final Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
@@ -108,8 +109,8 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeChildren")
       private final @Nullable Output<Boolean> includeChildren;
 
-    public Output<Boolean> getIncludeChildren() {
-        return this.includeChildren == null ? Output.empty() : this.includeChildren;
+    public Output<Boolean> includeChildren() {
+        return this.includeChildren == null ? Codegen.empty() : this.includeChildren;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FolderSinkArgs(
@@ -145,15 +146,15 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderSinkArgs() {
-        this.bigqueryOptions = Output.empty();
-        this.description = Output.empty();
-        this.destination = Output.empty();
-        this.disabled = Output.empty();
-        this.exclusions = Output.empty();
-        this.filter = Output.empty();
-        this.folder = Output.empty();
-        this.includeChildren = Output.empty();
-        this.name = Output.empty();
+        this.bigqueryOptions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.includeChildren = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bigqueryOptions(@Nullable FolderSinkBigqueryOptionsArgs bigqueryOptions) {
-            this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
+            this.bigqueryOptions = Codegen.ofNullable(bigqueryOptions);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -205,7 +206,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destination(Output<String> destination) {
@@ -221,7 +222,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder exclusions(@Nullable Output<List<FolderSinkExclusionArgs>> exclusions) {
@@ -229,7 +230,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exclusions(@Nullable List<FolderSinkExclusionArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(FolderSinkExclusionArgs... exclusions) {
@@ -240,7 +241,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder folder(Output<String> folder) {
@@ -256,7 +257,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includeChildren(@Nullable Boolean includeChildren) {
-            this.includeChildren = Output.ofNullable(includeChildren);
+            this.includeChildren = Codegen.ofNullable(includeChildren);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -264,7 +265,7 @@ public final class FolderSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FolderSinkArgs build() {
             return new FolderSinkArgs(bigqueryOptions, description, destination, disabled, exclusions, filter, folder, includeChildren, name);

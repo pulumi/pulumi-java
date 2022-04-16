@@ -7,6 +7,7 @@ import io.pulumi.azurenative.operationalinsights.enums.WorkspaceSkuNameEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityReservationLevel")
       private final @Nullable Output<Integer> capacityReservationLevel;
 
-    public Output<Integer> getCapacityReservationLevel() {
-        return this.capacityReservationLevel == null ? Output.empty() : this.capacityReservationLevel;
+    public Output<Integer> capacityReservationLevel() {
+        return this.capacityReservationLevel == null ? Codegen.empty() : this.capacityReservationLevel;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,WorkspaceSkuNameEnum>> name;
 
-    public Output<Either<String,WorkspaceSkuNameEnum>> getName() {
+    public Output<Either<String,WorkspaceSkuNameEnum>> name() {
         return this.name;
     }
 
@@ -51,8 +52,8 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceSkuArgs() {
-        this.capacityReservationLevel = Output.empty();
-        this.name = Output.empty();
+        this.capacityReservationLevel = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityReservationLevel(@Nullable Integer capacityReservationLevel) {
-            this.capacityReservationLevel = Output.ofNullable(capacityReservationLevel);
+            this.capacityReservationLevel = Codegen.ofNullable(capacityReservationLevel);
             return this;
         }
         public Builder name(Output<Either<String,WorkspaceSkuNameEnum>> name) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ProjectMetadataItemState(
@@ -58,9 +59,9 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
     }
 
     private ProjectMetadataItemState() {
-        this.key = Output.empty();
-        this.project = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.project = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -100,7 +101,7 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -108,7 +109,7 @@ public final class ProjectMetadataItemState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ProjectMetadataItemState build() {
             return new ProjectMetadataItemState(key, project, value);

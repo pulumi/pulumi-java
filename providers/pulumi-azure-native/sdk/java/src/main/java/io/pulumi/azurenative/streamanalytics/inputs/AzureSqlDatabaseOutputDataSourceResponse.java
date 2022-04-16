@@ -25,7 +25,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
     @Import(name="database")
       private final @Nullable String database;
 
-    public Optional<String> getDatabase() {
+    public Optional<String> database() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
     }
 
@@ -36,7 +36,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -47,7 +47,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
     @Import(name="server")
       private final @Nullable String server;
 
-    public Optional<String> getServer() {
+    public Optional<String> server() {
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
     }
 
@@ -58,7 +58,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
     @Import(name="table")
       private final @Nullable String table;
 
-    public Optional<String> getTable() {
+    public Optional<String> table() {
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
     }
 
@@ -70,7 +70,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -81,7 +81,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
     @Import(name="user")
       private final @Nullable String user;
 
-    public Optional<String> getUser() {
+    public Optional<String> user() {
         return this.user == null ? Optional.empty() : Optional.ofNullable(this.user);
     }
 

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @return The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -57,7 +58,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the resource that manages this resource group.
      * 
      */
-    public Output</* @Nullable */ String> getManagedBy() {
+    public Output</* @Nullable */ String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -71,7 +72,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the resource group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @return The resource group properties.
      * 
      */
-    public Output<ResourceGroupPropertiesResponse> getProperties() {
+    public Output<ResourceGroupPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -99,7 +100,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @return The tags attached to the resource group.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +114,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @return The type of the resource group.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -139,7 +140,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceGroup(String name, @Nullable ResourceGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:ResourceGroup", name, args == null ? ResourceGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:resources:ResourceGroup", name, args == null ? ResourceGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.PerInstanceConfigArgs;
 import io.pulumi.gcp.compute.inputs.PerInstanceConfigState;
@@ -60,7 +61,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * @return The instance group manager this instance config is part of.
      * 
      */
-    public Output<String> getInstanceGroupManager() {
+    public Output<String> instanceGroupManager() {
         return this.instanceGroupManager;
     }
     /**
@@ -84,7 +85,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> getMinimalAction() {
+    public Output</* @Nullable */ String> minimalAction() {
         return this.minimalAction;
     }
     /**
@@ -108,7 +109,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> getMostDisruptiveAllowedAction() {
+    public Output</* @Nullable */ String> mostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction;
     }
     /**
@@ -122,7 +123,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * @return The name for this per-instance config and its corresponding instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -138,7 +139,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PerInstanceConfigPreservedState> getPreservedState() {
+    public Output</* @Nullable */ PerInstanceConfigPreservedState> preservedState() {
         return this.preservedState;
     }
     /**
@@ -154,7 +155,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -172,7 +173,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * State will be removed on the next instance recreation or update.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRemoveInstanceStateOnDestroy() {
+    public Output</* @Nullable */ Boolean> removeInstanceStateOnDestroy() {
         return this.removeInstanceStateOnDestroy;
     }
     /**
@@ -186,7 +187,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * @return Zone where the containing instance group manager is located
      * 
      */
-    public Output</* @Nullable */ String> getZone() {
+    public Output</* @Nullable */ String> zone() {
         return this.zone;
     }
 
@@ -212,7 +213,7 @@ public class PerInstanceConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PerInstanceConfig(String name, PerInstanceConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/perInstanceConfig:PerInstanceConfig", name, args == null ? PerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/perInstanceConfig:PerInstanceConfig", name, args == null ? PerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PerInstanceConfig(String name, Output<String> id, @Nullable PerInstanceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

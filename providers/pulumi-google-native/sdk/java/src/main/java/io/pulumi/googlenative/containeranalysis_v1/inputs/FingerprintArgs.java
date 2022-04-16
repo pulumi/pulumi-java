@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="v1Name", required=true)
       private final Output<String> v1Name;
 
-    public Output<String> getV1Name() {
+    public Output<String> v1Name() {
         return this.v1Name;
     }
 
@@ -36,7 +37,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="v2Blob", required=true)
       private final Output<List<String>> v2Blob;
 
-    public Output<List<String>> getV2Blob() {
+    public Output<List<String>> v2Blob() {
         return this.v2Blob;
     }
 
@@ -48,8 +49,8 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FingerprintArgs() {
-        this.v1Name = Output.empty();
-        this.v2Blob = Output.empty();
+        this.v1Name = Codegen.empty();
+        this.v2Blob = Codegen.empty();
     }
 
     public static Builder builder() {

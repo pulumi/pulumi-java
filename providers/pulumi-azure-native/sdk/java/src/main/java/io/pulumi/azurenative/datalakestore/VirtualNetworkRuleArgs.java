@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakestore;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +33,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +44,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -54,8 +55,8 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
-    public Output<String> getVirtualNetworkRuleName() {
-        return this.virtualNetworkRuleName == null ? Output.empty() : this.virtualNetworkRuleName;
+    public Output<String> virtualNetworkRuleName() {
+        return this.virtualNetworkRuleName == null ? Codegen.empty() : this.virtualNetworkRuleName;
     }
 
     public VirtualNetworkRuleArgs(
@@ -70,10 +71,10 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VirtualNetworkRuleArgs() {
-        this.accountName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subnetId = Output.empty();
-        this.virtualNetworkRuleName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.virtualNetworkRuleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = Output.ofNullable(virtualNetworkRuleName);
+            this.virtualNetworkRuleName = Codegen.ofNullable(virtualNetworkRuleName);
             return this;
         }        public VirtualNetworkRuleArgs build() {
             return new VirtualNetworkRuleArgs(accountName, resourceGroupName, subnetId, virtualNetworkRuleName);

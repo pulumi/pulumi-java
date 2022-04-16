@@ -23,7 +23,7 @@ public final class Hl7V2NotificationConfigResponse extends io.pulumi.resources.I
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -34,7 +34,7 @@ public final class Hl7V2NotificationConfigResponse extends io.pulumi.resources.I
     @Import(name="pubsubTopic", required=true)
       private final String pubsubTopic;
 
-    public String getPubsubTopic() {
+    public String pubsubTopic() {
         return this.pubsubTopic;
     }
 

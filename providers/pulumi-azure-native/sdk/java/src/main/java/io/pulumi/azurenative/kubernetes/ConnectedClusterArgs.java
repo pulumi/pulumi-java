@@ -8,6 +8,7 @@ import io.pulumi.azurenative.kubernetes.inputs.ConnectedClusterIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="agentPublicKeyCertificate", required=true)
       private final Output<String> agentPublicKeyCertificate;
 
-    public Output<String> getAgentPublicKeyCertificate() {
+    public Output<String> agentPublicKeyCertificate() {
         return this.agentPublicKeyCertificate;
     }
 
@@ -36,8 +37,8 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="distribution")
       private final @Nullable Output<String> distribution;
 
-    public Output<String> getDistribution() {
-        return this.distribution == null ? Output.empty() : this.distribution;
+    public Output<String> distribution() {
+        return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity", required=true)
       private final Output<ConnectedClusterIdentityArgs> identity;
 
-    public Output<ConnectedClusterIdentityArgs> getIdentity() {
+    public Output<ConnectedClusterIdentityArgs> identity() {
         return this.identity;
     }
 
@@ -69,8 +70,8 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="infrastructure")
       private final @Nullable Output<String> infrastructure;
 
-    public Output<String> getInfrastructure() {
-        return this.infrastructure == null ? Output.empty() : this.infrastructure;
+    public Output<String> infrastructure() {
+        return this.infrastructure == null ? Codegen.empty() : this.infrastructure;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,8 +114,8 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ConnectedClusterArgs(
@@ -139,15 +140,15 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConnectedClusterArgs() {
-        this.agentPublicKeyCertificate = Output.empty();
-        this.clusterName = Output.empty();
-        this.distribution = Output.empty();
-        this.identity = Output.empty();
-        this.infrastructure = Output.empty();
-        this.location = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.agentPublicKeyCertificate = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.distribution = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.infrastructure = Codegen.empty();
+        this.location = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder distribution(@Nullable Output<String> distribution) {
@@ -207,7 +208,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder distribution(@Nullable String distribution) {
-            this.distribution = Output.ofNullable(distribution);
+            this.distribution = Codegen.ofNullable(distribution);
             return this;
         }
         public Builder identity(Output<ConnectedClusterIdentityArgs> identity) {
@@ -223,7 +224,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder infrastructure(@Nullable String infrastructure) {
-            this.infrastructure = Output.ofNullable(infrastructure);
+            this.infrastructure = Codegen.ofNullable(infrastructure);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -231,7 +232,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
@@ -239,7 +240,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -255,7 +256,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ConnectedClusterArgs build() {
             return new ConnectedClusterArgs(agentPublicKeyCertificate, clusterName, distribution, identity, infrastructure, location, provisioningState, resourceGroupName, tags);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleQueryArgumentPro
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonBodyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="allQueryArguments")
       private final @Nullable Output<Object> allQueryArguments;
 
-    public Output<Object> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
+    public Output<Object> allQueryArguments() {
+        return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
     /**
@@ -39,15 +40,15 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="body")
       private final @Nullable Output<Object> body;
 
-    public Output<Object> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<Object> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     @Import(name="jsonBody")
       private final @Nullable Output<WebACLJsonBodyArgs> jsonBody;
 
-    public Output<WebACLJsonBodyArgs> getJsonBody() {
-        return this.jsonBody == null ? Output.empty() : this.jsonBody;
+    public Output<WebACLJsonBodyArgs> jsonBody() {
+        return this.jsonBody == null ? Codegen.empty() : this.jsonBody;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="method")
       private final @Nullable Output<Object> method;
 
-    public Output<Object> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+    public Output<Object> method() {
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -68,15 +69,15 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryString")
       private final @Nullable Output<Object> queryString;
 
-    public Output<Object> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+    public Output<Object> queryString() {
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     @Import(name="singleHeader")
       private final @Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
-    public Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
-        return this.singleHeader == null ? Output.empty() : this.singleHeader;
+    public Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader() {
+        return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="singleQueryArgument")
       private final @Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
-    public Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
+    public Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument() {
+        return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="uriPath")
       private final @Nullable Output<Object> uriPath;
 
-    public Output<Object> getUriPath() {
-        return this.uriPath == null ? Output.empty() : this.uriPath;
+    public Output<Object> uriPath() {
+        return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 
     public WebACLFieldToMatchArgs(
@@ -121,14 +122,14 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
     }
 
     private WebACLFieldToMatchArgs() {
-        this.allQueryArguments = Output.empty();
-        this.body = Output.empty();
-        this.jsonBody = Output.empty();
-        this.method = Output.empty();
-        this.queryString = Output.empty();
-        this.singleHeader = Output.empty();
-        this.singleQueryArgument = Output.empty();
-        this.uriPath = Output.empty();
+        this.allQueryArguments = Codegen.empty();
+        this.body = Codegen.empty();
+        this.jsonBody = Codegen.empty();
+        this.method = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.singleHeader = Codegen.empty();
+        this.singleQueryArgument = Codegen.empty();
+        this.uriPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder allQueryArguments(@Nullable Object allQueryArguments) {
-            this.allQueryArguments = Output.ofNullable(allQueryArguments);
+            this.allQueryArguments = Codegen.ofNullable(allQueryArguments);
             return this;
         }
         public Builder body(@Nullable Output<Object> body) {
@@ -178,7 +179,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder body(@Nullable Object body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder jsonBody(@Nullable Output<WebACLJsonBodyArgs> jsonBody) {
@@ -186,7 +187,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder jsonBody(@Nullable WebACLJsonBodyArgs jsonBody) {
-            this.jsonBody = Output.ofNullable(jsonBody);
+            this.jsonBody = Codegen.ofNullable(jsonBody);
             return this;
         }
         public Builder method(@Nullable Output<Object> method) {
@@ -194,7 +195,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder method(@Nullable Object method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder queryString(@Nullable Output<Object> queryString) {
@@ -202,7 +203,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queryString(@Nullable Object queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder singleHeader(@Nullable Output<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
@@ -210,7 +211,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder singleHeader(@Nullable WebACLFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
-            this.singleHeader = Output.ofNullable(singleHeader);
+            this.singleHeader = Codegen.ofNullable(singleHeader);
             return this;
         }
         public Builder singleQueryArgument(@Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument) {
@@ -218,7 +219,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder singleQueryArgument(@Nullable WebACLFieldToMatchSingleQueryArgumentPropertiesArgs singleQueryArgument) {
-            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Codegen.ofNullable(singleQueryArgument);
             return this;
         }
         public Builder uriPath(@Nullable Output<Object> uriPath) {
@@ -226,7 +227,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder uriPath(@Nullable Object uriPath) {
-            this.uriPath = Output.ofNullable(uriPath);
+            this.uriPath = Codegen.ofNullable(uriPath);
             return this;
         }        public WebACLFieldToMatchArgs build() {
             return new WebACLFieldToMatchArgs(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);

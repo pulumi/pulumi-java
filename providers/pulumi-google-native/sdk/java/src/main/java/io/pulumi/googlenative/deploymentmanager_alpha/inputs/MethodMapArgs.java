@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="create")
       private final @Nullable Output<String> create;
 
-    public Output<String> getCreate() {
-        return this.create == null ? Output.empty() : this.create;
+    public Output<String> create() {
+        return this.create == null ? Codegen.empty() : this.create;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delete")
       private final @Nullable Output<String> delete;
 
-    public Output<String> getDelete() {
-        return this.delete == null ? Output.empty() : this.delete;
+    public Output<String> delete() {
+        return this.delete == null ? Codegen.empty() : this.delete;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="get")
       private final @Nullable Output<String> get;
 
-    public Output<String> getGet() {
-        return this.get == null ? Output.empty() : this.get;
+    public Output<String> get() {
+        return this.get == null ? Codegen.empty() : this.get;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="setIamPolicy")
       private final @Nullable Output<String> setIamPolicy;
 
-    public Output<String> getSetIamPolicy() {
-        return this.setIamPolicy == null ? Output.empty() : this.setIamPolicy;
+    public Output<String> setIamPolicy() {
+        return this.setIamPolicy == null ? Codegen.empty() : this.setIamPolicy;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="update")
       private final @Nullable Output<String> update;
 
-    public Output<String> getUpdate() {
-        return this.update == null ? Output.empty() : this.update;
+    public Output<String> update() {
+        return this.update == null ? Codegen.empty() : this.update;
     }
 
     public MethodMapArgs(
@@ -87,11 +88,11 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodMapArgs() {
-        this.create = Output.empty();
-        this.delete = Output.empty();
-        this.get = Output.empty();
-        this.setIamPolicy = Output.empty();
-        this.update = Output.empty();
+        this.create = Codegen.empty();
+        this.delete = Codegen.empty();
+        this.get = Codegen.empty();
+        this.setIamPolicy = Codegen.empty();
+        this.update = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder create(@Nullable String create) {
-            this.create = Output.ofNullable(create);
+            this.create = Codegen.ofNullable(create);
             return this;
         }
         public Builder delete(@Nullable Output<String> delete) {
@@ -135,7 +136,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delete(@Nullable String delete) {
-            this.delete = Output.ofNullable(delete);
+            this.delete = Codegen.ofNullable(delete);
             return this;
         }
         public Builder get(@Nullable Output<String> get) {
@@ -143,7 +144,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder get(@Nullable String get) {
-            this.get = Output.ofNullable(get);
+            this.get = Codegen.ofNullable(get);
             return this;
         }
         public Builder setIamPolicy(@Nullable Output<String> setIamPolicy) {
@@ -151,7 +152,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder setIamPolicy(@Nullable String setIamPolicy) {
-            this.setIamPolicy = Output.ofNullable(setIamPolicy);
+            this.setIamPolicy = Codegen.ofNullable(setIamPolicy);
             return this;
         }
         public Builder update(@Nullable Output<String> update) {
@@ -159,7 +160,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder update(@Nullable String update) {
-            this.update = Output.ofNullable(update);
+            this.update = Codegen.ofNullable(update);
             return this;
         }        public MethodMapArgs build() {
             return new MethodMapArgs(create, delete, get, setIamPolicy, update);

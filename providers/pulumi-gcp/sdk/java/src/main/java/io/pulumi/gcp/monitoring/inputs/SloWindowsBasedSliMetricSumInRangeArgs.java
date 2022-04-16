@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SloWindowsBasedSliMetricSumInRangeArgs extends io.pulumi.reso
     @Import(name="range", required=true)
       private final Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range;
 
-    public Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> getRange() {
+    public Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range() {
         return this.range;
     }
 
@@ -44,7 +45,7 @@ public final class SloWindowsBasedSliMetricSumInRangeArgs extends io.pulumi.reso
     @Import(name="timeSeries", required=true)
       private final Output<String> timeSeries;
 
-    public Output<String> getTimeSeries() {
+    public Output<String> timeSeries() {
         return this.timeSeries;
     }
 
@@ -56,8 +57,8 @@ public final class SloWindowsBasedSliMetricSumInRangeArgs extends io.pulumi.reso
     }
 
     private SloWindowsBasedSliMetricSumInRangeArgs() {
-        this.range = Output.empty();
-        this.timeSeries = Output.empty();
+        this.range = Codegen.empty();
+        this.timeSeries = Codegen.empty();
     }
 
     public static Builder builder() {

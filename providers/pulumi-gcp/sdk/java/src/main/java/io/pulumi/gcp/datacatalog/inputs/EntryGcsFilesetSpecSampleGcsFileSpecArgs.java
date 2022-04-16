@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
-    public Output<String> getFilePath() {
-        return this.filePath == null ? Output.empty() : this.filePath;
+    public Output<String> filePath() {
+        return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
     @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
-    public Output<Integer> getSizeBytes() {
-        return this.sizeBytes == null ? Output.empty() : this.sizeBytes;
+    public Output<Integer> sizeBytes() {
+        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
     }
 
     public EntryGcsFilesetSpecSampleGcsFileSpecArgs(
@@ -47,8 +48,8 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
     }
 
     private EntryGcsFilesetSpecSampleGcsFileSpecArgs() {
-        this.filePath = Output.empty();
-        this.sizeBytes = Output.empty();
+        this.filePath = Codegen.empty();
+        this.sizeBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
             return this;
         }
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Output.ofNullable(filePath);
+            this.filePath = Codegen.ofNullable(filePath);
             return this;
         }
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
@@ -86,7 +87,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
             return this;
         }
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Output.ofNullable(sizeBytes);
+            this.sizeBytes = Codegen.ofNullable(sizeBytes);
             return this;
         }        public EntryGcsFilesetSpecSampleGcsFileSpecArgs build() {
             return new EntryGcsFilesetSpecSampleGcsFileSpecArgs(filePath, sizeBytes);

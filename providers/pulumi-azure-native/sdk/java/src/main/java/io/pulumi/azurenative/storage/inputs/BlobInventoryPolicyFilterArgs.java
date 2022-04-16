@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     @Import(name="blobTypes", required=true)
       private final Output<List<String>> blobTypes;
 
-    public Output<List<String>> getBlobTypes() {
+    public Output<List<String>> blobTypes() {
         return this.blobTypes;
     }
 
@@ -38,8 +39,8 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     @Import(name="includeBlobVersions")
       private final @Nullable Output<Boolean> includeBlobVersions;
 
-    public Output<Boolean> getIncludeBlobVersions() {
-        return this.includeBlobVersions == null ? Output.empty() : this.includeBlobVersions;
+    public Output<Boolean> includeBlobVersions() {
+        return this.includeBlobVersions == null ? Codegen.empty() : this.includeBlobVersions;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     @Import(name="includeSnapshots")
       private final @Nullable Output<Boolean> includeSnapshots;
 
-    public Output<Boolean> getIncludeSnapshots() {
-        return this.includeSnapshots == null ? Output.empty() : this.includeSnapshots;
+    public Output<Boolean> includeSnapshots() {
+        return this.includeSnapshots == null ? Codegen.empty() : this.includeSnapshots;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     @Import(name="prefixMatch")
       private final @Nullable Output<List<String>> prefixMatch;
 
-    public Output<List<String>> getPrefixMatch() {
-        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
+    public Output<List<String>> prefixMatch() {
+        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
     public BlobInventoryPolicyFilterArgs(
@@ -76,10 +77,10 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     }
 
     private BlobInventoryPolicyFilterArgs() {
-        this.blobTypes = Output.empty();
-        this.includeBlobVersions = Output.empty();
-        this.includeSnapshots = Output.empty();
-        this.prefixMatch = Output.empty();
+        this.blobTypes = Codegen.empty();
+        this.includeBlobVersions = Codegen.empty();
+        this.includeSnapshots = Codegen.empty();
+        this.prefixMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
-            this.includeBlobVersions = Output.ofNullable(includeBlobVersions);
+            this.includeBlobVersions = Codegen.ofNullable(includeBlobVersions);
             return this;
         }
         public Builder includeSnapshots(@Nullable Output<Boolean> includeSnapshots) {
@@ -132,7 +133,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
-            this.includeSnapshots = Output.ofNullable(includeSnapshots);
+            this.includeSnapshots = Codegen.ofNullable(includeSnapshots);
             return this;
         }
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
@@ -140,7 +141,7 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Output.ofNullable(prefixMatch);
+            this.prefixMatch = Codegen.ofNullable(prefixMatch);
             return this;
         }
         public Builder prefixMatch(String... prefixMatch) {

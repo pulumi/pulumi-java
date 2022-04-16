@@ -11,6 +11,7 @@ import io.pulumi.aws.backup.outputs.SelectionSelectionTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @return A list of conditions that you define to assign resources to your backup plans using tags.
      * 
      */
-    public Output<List<SelectionCondition>> getConditions() {
+    public Output<List<SelectionCondition>> conditions() {
         return this.conditions;
     }
     /**
@@ -56,7 +57,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
      * 
      */
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
@@ -70,7 +71,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @return The display name of a resource selection document.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @return An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to exclude from a backup plan.
      * 
      */
-    public Output<List<String>> getNotResources() {
+    public Output<List<String>> notResources() {
         return this.notResources;
     }
     /**
@@ -98,7 +99,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @return The backup plan ID to be associated with the selection of resources.
      * 
      */
-    public Output<String> getPlanId() {
+    public Output<String> planId() {
         return this.planId;
     }
     /**
@@ -112,7 +113,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @return An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan.
      * 
      */
-    public Output</* @Nullable */ List<String>> getResources() {
+    public Output</* @Nullable */ List<String>> resources() {
         return this.resources;
     }
     /**
@@ -126,7 +127,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @return Tag-based conditions used to specify a set of resources to assign to a backup plan.
      * 
      */
-    public Output</* @Nullable */ List<SelectionSelectionTag>> getSelectionTags() {
+    public Output</* @Nullable */ List<SelectionSelectionTag>> selectionTags() {
         return this.selectionTags;
     }
 
@@ -152,7 +153,7 @@ public class Selection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Selection(String name, SelectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/selection:Selection", name, args == null ? SelectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/selection:Selection", name, args == null ? SelectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Selection(String name, Output<String> id, @Nullable SelectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

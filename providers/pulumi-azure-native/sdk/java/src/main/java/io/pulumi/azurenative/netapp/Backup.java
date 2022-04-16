@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return UUID v4 used to identify the Backup
      * 
      */
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
     /**
@@ -56,7 +57,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Type of backup Manual or Scheduled
      * 
      */
-    public Output<String> getBackupType() {
+    public Output<String> backupType() {
         return this.backupType;
     }
     /**
@@ -70,7 +71,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The creation date of the backup
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -84,7 +85,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Failure reason
      * 
      */
-    public Output<String> getFailureReason() {
+    public Output<String> failureReason() {
         return this.failureReason;
     }
     /**
@@ -98,7 +99,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Label for backup
      * 
      */
-    public Output</* @Nullable */ String> getLabel() {
+    public Output</* @Nullable */ String> label() {
         return this.label;
     }
     /**
@@ -112,7 +113,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -126,7 +127,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +141,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Azure lifecycle management
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -154,7 +155,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Size of backup
      * 
      */
-    public Output<Double> getSize() {
+    public Output<Double> size() {
         return this.size;
     }
     /**
@@ -168,7 +169,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -182,7 +183,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Volume name
      * 
      */
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName;
     }
 
@@ -208,7 +209,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backup(String name, BackupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:netapp:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:netapp:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Backup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

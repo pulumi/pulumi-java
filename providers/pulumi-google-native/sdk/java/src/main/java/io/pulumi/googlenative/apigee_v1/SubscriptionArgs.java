@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,14 +22,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiproduct")
       private final @Nullable Output<String> apiproduct;
 
-    public Output<String> getApiproduct() {
-        return this.apiproduct == null ? Output.empty() : this.apiproduct;
+    public Output<String> apiproduct() {
+        return this.apiproduct == null ? Codegen.empty() : this.apiproduct;
     }
 
     @Import(name="developerId", required=true)
       private final Output<String> developerId;
 
-    public Output<String> getDeveloperId() {
+    public Output<String> developerId() {
         return this.developerId;
     }
 
@@ -39,14 +40,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -57,8 +58,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public SubscriptionArgs(
@@ -75,11 +76,11 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.apiproduct = Output.empty();
-        this.developerId = Output.empty();
-        this.endTime = Output.empty();
-        this.organizationId = Output.empty();
-        this.startTime = Output.empty();
+        this.apiproduct = Codegen.empty();
+        this.developerId = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiproduct(@Nullable String apiproduct) {
-            this.apiproduct = Output.ofNullable(apiproduct);
+            this.apiproduct = Codegen.ofNullable(apiproduct);
             return this;
         }
         public Builder developerId(Output<String> developerId) {
@@ -131,7 +132,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -147,7 +148,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public SubscriptionArgs build() {
             return new SubscriptionArgs(apiproduct, developerId, endTime, organizationId, startTime);

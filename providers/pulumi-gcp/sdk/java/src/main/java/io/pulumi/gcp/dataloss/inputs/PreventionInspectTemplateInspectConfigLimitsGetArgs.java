@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
     @Import(name="maxFindingsPerInfoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> getMaxFindingsPerInfoTypes() {
-        return this.maxFindingsPerInfoTypes == null ? Output.empty() : this.maxFindingsPerInfoTypes;
+    public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes() {
+        return this.maxFindingsPerInfoTypes == null ? Codegen.empty() : this.maxFindingsPerInfoTypes;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
     @Import(name="maxFindingsPerItem", required=true)
       private final Output<Integer> maxFindingsPerItem;
 
-    public Output<Integer> getMaxFindingsPerItem() {
+    public Output<Integer> maxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
 
@@ -46,7 +47,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
     @Import(name="maxFindingsPerRequest", required=true)
       private final Output<Integer> maxFindingsPerRequest;
 
-    public Output<Integer> getMaxFindingsPerRequest() {
+    public Output<Integer> maxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
 
@@ -60,9 +61,9 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
     }
 
     private PreventionInspectTemplateInspectConfigLimitsGetArgs() {
-        this.maxFindingsPerInfoTypes = Output.empty();
-        this.maxFindingsPerItem = Output.empty();
-        this.maxFindingsPerRequest = Output.empty();
+        this.maxFindingsPerInfoTypes = Codegen.empty();
+        this.maxFindingsPerItem = Codegen.empty();
+        this.maxFindingsPerRequest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
             return this;
         }
         public Builder maxFindingsPerInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs> maxFindingsPerInfoTypes) {
-            this.maxFindingsPerInfoTypes = Output.ofNullable(maxFindingsPerInfoTypes);
+            this.maxFindingsPerInfoTypes = Codegen.ofNullable(maxFindingsPerInfoTypes);
             return this;
         }
         public Builder maxFindingsPerInfoTypes(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs... maxFindingsPerInfoTypes) {

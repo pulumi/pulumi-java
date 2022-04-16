@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataItemsItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="items")
       private final @Nullable Output<List<MetadataItemsItemArgs>> items;
 
-    public Output<List<MetadataItemsItemArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<List<MetadataItemsItemArgs>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public MetadataArgs(@Nullable Output<List<MetadataItemsItemArgs>> items) {
@@ -35,7 +36,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder items(@Nullable List<MetadataItemsItemArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(MetadataItemsItemArgs... items) {

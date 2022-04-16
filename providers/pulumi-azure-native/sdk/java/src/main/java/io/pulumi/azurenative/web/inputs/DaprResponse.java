@@ -29,7 +29,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId")
       private final @Nullable String appId;
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
@@ -40,7 +40,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="appPort")
       private final @Nullable Integer appPort;
 
-    public Optional<Integer> getAppPort() {
+    public Optional<Integer> appPort() {
         return this.appPort == null ? Optional.empty() : Optional.ofNullable(this.appPort);
     }
 
@@ -51,7 +51,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="components")
       private final @Nullable List<DaprComponentResponse> components;
 
-    public List<DaprComponentResponse> getComponents() {
+    public List<DaprComponentResponse> components() {
         return this.components == null ? List.of() : this.components;
     }
 
@@ -62,7 +62,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 

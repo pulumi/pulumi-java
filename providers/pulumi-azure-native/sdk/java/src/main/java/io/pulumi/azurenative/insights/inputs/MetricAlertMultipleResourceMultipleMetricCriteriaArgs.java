@@ -8,6 +8,7 @@ import io.pulumi.azurenative.insights.inputs.MetricCriteriaArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     @Import(name="allOf")
       private final @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
 
-    public Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> getAllOf() {
-        return this.allOf == null ? Output.empty() : this.allOf;
+    public Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf() {
+        return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -53,8 +54,8 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     }
 
     private MetricAlertMultipleResourceMultipleMetricCriteriaArgs() {
-        this.allOf = Output.empty();
-        this.odataType = Output.empty();
+        this.allOf = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
             return this;
         }
         public Builder allOf(@Nullable List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>> allOf) {
-            this.allOf = Output.ofNullable(allOf);
+            this.allOf = Codegen.ofNullable(allOf);
             return this;
         }
         public Builder allOf(Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>... allOf) {

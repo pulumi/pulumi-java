@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filePattern")
       private final @Nullable Output<String> filePattern;
 
-    public Output<String> getFilePattern() {
-        return this.filePattern == null ? Output.empty() : this.filePattern;
+    public Output<String> filePattern() {
+        return this.filePattern == null ? Codegen.empty() : this.filePattern;
     }
 
     public FileIODetailsArgs(@Nullable Output<String> filePattern) {
@@ -34,7 +35,7 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileIODetailsArgs() {
-        this.filePattern = Output.empty();
+        this.filePattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filePattern(@Nullable String filePattern) {
-            this.filePattern = Output.ofNullable(filePattern);
+            this.filePattern = Codegen.ofNullable(filePattern);
             return this;
         }        public FileIODetailsArgs build() {
             return new FileIODetailsArgs(filePattern);

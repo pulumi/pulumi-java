@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
      * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -55,7 +56,7 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
      * @return Tenant Id.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -83,7 +84,7 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
      * @return Type of Resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class CustomerSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomerSubscription(String name, CustomerSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:azurestack:CustomerSubscription", name, args == null ? CustomerSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:azurestack:CustomerSubscription", name, args == null ? CustomerSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomerSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

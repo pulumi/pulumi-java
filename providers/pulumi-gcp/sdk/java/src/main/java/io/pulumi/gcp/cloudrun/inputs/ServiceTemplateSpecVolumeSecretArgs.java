@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretItemArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
     @Import(name="defaultMode")
       private final @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Output.empty() : this.defaultMode;
+    public Output<Integer> defaultMode() {
+        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
     @Import(name="items")
       private final @Nullable Output<List<ServiceTemplateSpecVolumeSecretItemArgs>> items;
 
-    public Output<List<ServiceTemplateSpecVolumeSecretItemArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<List<ServiceTemplateSpecVolumeSecretItemArgs>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -76,9 +77,9 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
     }
 
     private ServiceTemplateSpecVolumeSecretArgs() {
-        this.defaultMode = Output.empty();
-        this.items = Output.empty();
-        this.secretName = Output.empty();
+        this.defaultMode = Codegen.empty();
+        this.items = Codegen.empty();
+        this.secretName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
             return this;
         }
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Output.ofNullable(defaultMode);
+            this.defaultMode = Codegen.ofNullable(defaultMode);
             return this;
         }
         public Builder items(@Nullable Output<List<ServiceTemplateSpecVolumeSecretItemArgs>> items) {
@@ -118,7 +119,7 @@ public final class ServiceTemplateSpecVolumeSecretArgs extends io.pulumi.resourc
             return this;
         }
         public Builder items(@Nullable List<ServiceTemplateSpecVolumeSecretItemArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(ServiceTemplateSpecVolumeSecretItemArgs... items) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.IncidentSeverity;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="incidentId")
       private final @Nullable Output<String> incidentId;
 
-    public Output<String> getIncidentId() {
-        return this.incidentId == null ? Output.empty() : this.incidentId;
+    public Output<String> incidentId() {
+        return this.incidentId == null ? Codegen.empty() : this.incidentId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationName")
       private final @Nullable Output<String> relationName;
 
-    public Output<String> getRelationName() {
-        return this.relationName == null ? Output.empty() : this.relationName;
+    public Output<String> relationName() {
+        return this.relationName == null ? Codegen.empty() : this.relationName;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity")
       private final @Nullable Output<Either<String,IncidentSeverity>> severity;
 
-    public Output<Either<String,IncidentSeverity>> getSeverity() {
-        return this.severity == null ? Output.empty() : this.severity;
+    public Output<Either<String,IncidentSeverity>> severity() {
+        return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public IncidentInfoArgs(
@@ -76,10 +77,10 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IncidentInfoArgs() {
-        this.incidentId = Output.empty();
-        this.relationName = Output.empty();
-        this.severity = Output.empty();
-        this.title = Output.empty();
+        this.incidentId = Codegen.empty();
+        this.relationName = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incidentId(@Nullable String incidentId) {
-            this.incidentId = Output.ofNullable(incidentId);
+            this.incidentId = Codegen.ofNullable(incidentId);
             return this;
         }
         public Builder relationName(@Nullable Output<String> relationName) {
@@ -121,7 +122,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relationName(@Nullable String relationName) {
-            this.relationName = Output.ofNullable(relationName);
+            this.relationName = Codegen.ofNullable(relationName);
             return this;
         }
         public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
@@ -129,7 +130,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
-            this.severity = Output.ofNullable(severity);
+            this.severity = Codegen.ofNullable(severity);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -137,7 +138,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public IncidentInfoArgs build() {
             return new IncidentInfoArgs(incidentId, relationName, severity, title);

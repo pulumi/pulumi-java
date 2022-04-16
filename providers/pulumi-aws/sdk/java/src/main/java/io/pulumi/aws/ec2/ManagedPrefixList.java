@@ -10,6 +10,7 @@ import io.pulumi.aws.ec2.outputs.ManagedPrefixListEntry;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return Address family (`IPv4` or `IPv6`) of this prefix list.
      * 
      */
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
     /**
@@ -53,7 +54,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return ARN of the prefix list.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +68,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
      * 
      */
-    public Output<List<ManagedPrefixListEntry>> getEntries() {
+    public Output<List<ManagedPrefixListEntry>> entries() {
         return this.entries;
     }
     /**
@@ -81,7 +82,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return Maximum number of entries that this prefix list can contain.
      * 
      */
-    public Output<Integer> getMaxEntries() {
+    public Output<Integer> maxEntries() {
         return this.maxEntries;
     }
     /**
@@ -95,7 +96,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return Name of this resource. The name must not start with `com.amazonaws`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -109,7 +110,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return ID of the AWS account that owns this prefix list.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -123,13 +124,13 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -143,7 +144,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @return Latest version of this prefix list.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 
@@ -169,7 +170,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedPrefixList(String name, ManagedPrefixListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/managedPrefixList:ManagedPrefixList", name, args == null ? ManagedPrefixListArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/managedPrefixList:ManagedPrefixList", name, args == null ? ManagedPrefixListArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedPrefixList(String name, Output<String> id, @Nullable ManagedPrefixListState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

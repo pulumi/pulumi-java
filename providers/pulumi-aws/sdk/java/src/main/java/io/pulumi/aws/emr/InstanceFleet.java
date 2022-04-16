@@ -11,6 +11,7 @@ import io.pulumi.aws.emr.outputs.InstanceFleetLaunchSpecifications;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * @return ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -62,7 +63,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * @return Configuration block for instance fleet
      * 
      */
-    public Output</* @Nullable */ List<InstanceFleetInstanceTypeConfig>> getInstanceTypeConfigs() {
+    public Output</* @Nullable */ List<InstanceFleetInstanceTypeConfig>> instanceTypeConfigs() {
         return this.instanceTypeConfigs;
     }
     /**
@@ -76,7 +77,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * @return Configuration block for launch specification
      * 
      */
-    public Output</* @Nullable */ InstanceFleetLaunchSpecifications> getLaunchSpecifications() {
+    public Output</* @Nullable */ InstanceFleetLaunchSpecifications> launchSpecifications() {
         return this.launchSpecifications;
     }
     /**
@@ -90,19 +91,19 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * @return Friendly name given to the instance fleet.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="provisionedOnDemandCapacity", type=Integer.class, parameters={})
     private Output<Integer> provisionedOnDemandCapacity;
 
-    public Output<Integer> getProvisionedOnDemandCapacity() {
+    public Output<Integer> provisionedOnDemandCapacity() {
         return this.provisionedOnDemandCapacity;
     }
     @Export(name="provisionedSpotCapacity", type=Integer.class, parameters={})
     private Output<Integer> provisionedSpotCapacity;
 
-    public Output<Integer> getProvisionedSpotCapacity() {
+    public Output<Integer> provisionedSpotCapacity() {
         return this.provisionedSpotCapacity;
     }
     /**
@@ -116,7 +117,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * @return The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
      */
-    public Output</* @Nullable */ Integer> getTargetOnDemandCapacity() {
+    public Output</* @Nullable */ Integer> targetOnDemandCapacity() {
         return this.targetOnDemandCapacity;
     }
     /**
@@ -130,7 +131,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * @return The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
      */
-    public Output</* @Nullable */ Integer> getTargetSpotCapacity() {
+    public Output</* @Nullable */ Integer> targetSpotCapacity() {
         return this.targetSpotCapacity;
     }
 
@@ -156,7 +157,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceFleet(String name, InstanceFleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:emr/instanceFleet:InstanceFleet", name, args == null ? InstanceFleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:emr/instanceFleet:InstanceFleet", name, args == null ? InstanceFleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceFleet(String name, Output<String> id, @Nullable InstanceFleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

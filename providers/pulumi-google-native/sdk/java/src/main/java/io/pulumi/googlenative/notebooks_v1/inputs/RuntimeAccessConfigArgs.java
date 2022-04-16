@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.enums.RuntimeAccessConfigAccessType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="accessType")
       private final @Nullable Output<RuntimeAccessConfigAccessType> accessType;
 
-    public Output<RuntimeAccessConfigAccessType> getAccessType() {
-        return this.accessType == null ? Output.empty() : this.accessType;
+    public Output<RuntimeAccessConfigAccessType> accessType() {
+        return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="runtimeOwner")
       private final @Nullable Output<String> runtimeOwner;
 
-    public Output<String> getRuntimeOwner() {
-        return this.runtimeOwner == null ? Output.empty() : this.runtimeOwner;
+    public Output<String> runtimeOwner() {
+        return this.runtimeOwner == null ? Codegen.empty() : this.runtimeOwner;
     }
 
     public RuntimeAccessConfigArgs(
@@ -49,8 +50,8 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private RuntimeAccessConfigArgs() {
-        this.accessType = Output.empty();
-        this.runtimeOwner = Output.empty();
+        this.accessType = Codegen.empty();
+        this.runtimeOwner = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder accessType(@Nullable RuntimeAccessConfigAccessType accessType) {
-            this.accessType = Output.ofNullable(accessType);
+            this.accessType = Codegen.ofNullable(accessType);
             return this;
         }
         public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
@@ -88,7 +89,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder runtimeOwner(@Nullable String runtimeOwner) {
-            this.runtimeOwner = Output.ofNullable(runtimeOwner);
+            this.runtimeOwner = Codegen.ofNullable(runtimeOwner);
             return this;
         }        public RuntimeAccessConfigArgs build() {
             return new RuntimeAccessConfigArgs(accessType, runtimeOwner);

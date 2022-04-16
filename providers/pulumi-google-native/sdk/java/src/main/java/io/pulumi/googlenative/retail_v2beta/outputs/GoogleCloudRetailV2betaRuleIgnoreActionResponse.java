@@ -25,7 +25,7 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
      * Terms to ignore in the search query.
      * 
     */
-    public List<String> getIgnoreTerms() {
+    public List<String> ignoreTerms() {
         return this.ignoreTerms;
     }
 

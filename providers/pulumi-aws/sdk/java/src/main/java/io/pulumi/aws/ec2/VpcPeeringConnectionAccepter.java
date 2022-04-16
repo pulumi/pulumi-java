@@ -11,6 +11,7 @@ import io.pulumi.aws.ec2.outputs.VpcPeeringConnectionAccepterRequester;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -62,7 +63,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return The status of the VPC Peering Connection request.
      * 
      */
-    public Output<String> getAcceptStatus() {
+    public Output<String> acceptStatus() {
         return this.acceptStatus;
     }
     /**
@@ -78,7 +79,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
      * 
      */
-    public Output<VpcPeeringConnectionAccepterAccepter> getAccepter() {
+    public Output<VpcPeeringConnectionAccepterAccepter> accepter() {
         return this.accepter;
     }
     /**
@@ -92,7 +93,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return Whether or not to accept the peering request. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoAccept() {
+    public Output</* @Nullable */ Boolean> autoAccept() {
         return this.autoAccept;
     }
     /**
@@ -106,7 +107,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return The AWS account ID of the owner of the requester VPC.
      * 
      */
-    public Output<String> getPeerOwnerId() {
+    public Output<String> peerOwnerId() {
         return this.peerOwnerId;
     }
     /**
@@ -120,7 +121,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return The region of the accepter VPC.
      * 
      */
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion;
     }
     /**
@@ -134,7 +135,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return The ID of the requester VPC.
      * 
      */
-    public Output<String> getPeerVpcId() {
+    public Output<String> peerVpcId() {
         return this.peerVpcId;
     }
     /**
@@ -150,7 +151,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
      * 
      */
-    public Output<VpcPeeringConnectionAccepterRequester> getRequester() {
+    public Output<VpcPeeringConnectionAccepterRequester> requester() {
         return this.requester;
     }
     /**
@@ -164,7 +165,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -178,7 +179,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -192,7 +193,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return The ID of the accepter VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -206,7 +207,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @return The VPC Peering Connection ID to manage.
      * 
      */
-    public Output<String> getVpcPeeringConnectionId() {
+    public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 
@@ -232,7 +233,7 @@ public class VpcPeeringConnectionAccepter extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcPeeringConnectionAccepter(String name, VpcPeeringConnectionAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcPeeringConnectionAccepter:VpcPeeringConnectionAccepter", name, args == null ? VpcPeeringConnectionAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcPeeringConnectionAccepter:VpcPeeringConnectionAccepter", name, args == null ? VpcPeeringConnectionAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcPeeringConnectionAccepter(String name, Output<String> id, @Nullable VpcPeeringConnectionAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

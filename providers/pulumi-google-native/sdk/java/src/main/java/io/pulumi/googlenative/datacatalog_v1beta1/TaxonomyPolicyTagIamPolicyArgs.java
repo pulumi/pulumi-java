@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+    public Output<List<BindingArgs>> bindings() {
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -35,35 +36,35 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="policyTagId", required=true)
       private final Output<String> policyTagId;
 
-    public Output<String> getPolicyTagId() {
+    public Output<String> policyTagId() {
         return this.policyTagId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="taxonomyId", required=true)
       private final Output<String> taxonomyId;
 
-    public Output<String> getTaxonomyId() {
+    public Output<String> taxonomyId() {
         return this.taxonomyId;
     }
 
@@ -74,8 +75,8 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public TaxonomyPolicyTagIamPolicyArgs(
@@ -96,13 +97,13 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
     }
 
     private TaxonomyPolicyTagIamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.policyTagId = Output.empty();
-        this.project = Output.empty();
-        this.taxonomyId = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.policyTagId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.taxonomyId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -153,7 +154,7 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -161,7 +162,7 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder policyTagId(Output<String> policyTagId) {
@@ -177,7 +178,7 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder taxonomyId(Output<String> taxonomyId) {
@@ -193,7 +194,7 @@ public final class TaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public TaxonomyPolicyTagIamPolicyArgs build() {
             return new TaxonomyPolicyTagIamPolicyArgs(bindings, etag, location, policyTagId, project, taxonomyId, version);

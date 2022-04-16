@@ -27,7 +27,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="applicationReferenceId")
       private final @Nullable String applicationReferenceId;
 
-    public Optional<String> getApplicationReferenceId() {
+    public Optional<String> applicationReferenceId() {
         return this.applicationReferenceId == null ? Optional.empty() : Optional.ofNullable(this.applicationReferenceId);
     }
 
@@ -38,7 +38,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="applyDelimiterStringAdvice", required=true)
       private final Boolean applyDelimiterStringAdvice;
 
-    public Boolean getApplyDelimiterStringAdvice() {
+    public Boolean applyDelimiterStringAdvice() {
         return this.applyDelimiterStringAdvice;
     }
 
@@ -49,7 +49,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="communicationAgreementId")
       private final @Nullable String communicationAgreementId;
 
-    public Optional<String> getCommunicationAgreementId() {
+    public Optional<String> communicationAgreementId() {
         return this.communicationAgreementId == null ? Optional.empty() : Optional.ofNullable(this.communicationAgreementId);
     }
 
@@ -60,7 +60,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="createGroupingSegments", required=true)
       private final Boolean createGroupingSegments;
 
-    public Boolean getCreateGroupingSegments() {
+    public Boolean createGroupingSegments() {
         return this.createGroupingSegments;
     }
 
@@ -71,7 +71,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="enableDefaultGroupHeaders", required=true)
       private final Boolean enableDefaultGroupHeaders;
 
-    public Boolean getEnableDefaultGroupHeaders() {
+    public Boolean enableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
 
@@ -82,7 +82,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="functionalGroupId")
       private final @Nullable String functionalGroupId;
 
-    public Optional<String> getFunctionalGroupId() {
+    public Optional<String> functionalGroupId() {
         return this.functionalGroupId == null ? Optional.empty() : Optional.ofNullable(this.functionalGroupId);
     }
 
@@ -93,7 +93,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupApplicationPassword")
       private final @Nullable String groupApplicationPassword;
 
-    public Optional<String> getGroupApplicationPassword() {
+    public Optional<String> groupApplicationPassword() {
         return this.groupApplicationPassword == null ? Optional.empty() : Optional.ofNullable(this.groupApplicationPassword);
     }
 
@@ -104,7 +104,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupApplicationReceiverId")
       private final @Nullable String groupApplicationReceiverId;
 
-    public Optional<String> getGroupApplicationReceiverId() {
+    public Optional<String> groupApplicationReceiverId() {
         return this.groupApplicationReceiverId == null ? Optional.empty() : Optional.ofNullable(this.groupApplicationReceiverId);
     }
 
@@ -115,7 +115,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupApplicationReceiverQualifier")
       private final @Nullable String groupApplicationReceiverQualifier;
 
-    public Optional<String> getGroupApplicationReceiverQualifier() {
+    public Optional<String> groupApplicationReceiverQualifier() {
         return this.groupApplicationReceiverQualifier == null ? Optional.empty() : Optional.ofNullable(this.groupApplicationReceiverQualifier);
     }
 
@@ -126,7 +126,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupApplicationSenderId")
       private final @Nullable String groupApplicationSenderId;
 
-    public Optional<String> getGroupApplicationSenderId() {
+    public Optional<String> groupApplicationSenderId() {
         return this.groupApplicationSenderId == null ? Optional.empty() : Optional.ofNullable(this.groupApplicationSenderId);
     }
 
@@ -137,7 +137,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupApplicationSenderQualifier")
       private final @Nullable String groupApplicationSenderQualifier;
 
-    public Optional<String> getGroupApplicationSenderQualifier() {
+    public Optional<String> groupApplicationSenderQualifier() {
         return this.groupApplicationSenderQualifier == null ? Optional.empty() : Optional.ofNullable(this.groupApplicationSenderQualifier);
     }
 
@@ -148,7 +148,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupAssociationAssignedCode")
       private final @Nullable String groupAssociationAssignedCode;
 
-    public Optional<String> getGroupAssociationAssignedCode() {
+    public Optional<String> groupAssociationAssignedCode() {
         return this.groupAssociationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.groupAssociationAssignedCode);
     }
 
@@ -159,7 +159,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupControlNumberLowerBound", required=true)
       private final Double groupControlNumberLowerBound;
 
-    public Double getGroupControlNumberLowerBound() {
+    public Double groupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
 
@@ -170,7 +170,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupControlNumberPrefix")
       private final @Nullable String groupControlNumberPrefix;
 
-    public Optional<String> getGroupControlNumberPrefix() {
+    public Optional<String> groupControlNumberPrefix() {
         return this.groupControlNumberPrefix == null ? Optional.empty() : Optional.ofNullable(this.groupControlNumberPrefix);
     }
 
@@ -181,7 +181,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupControlNumberSuffix")
       private final @Nullable String groupControlNumberSuffix;
 
-    public Optional<String> getGroupControlNumberSuffix() {
+    public Optional<String> groupControlNumberSuffix() {
         return this.groupControlNumberSuffix == null ? Optional.empty() : Optional.ofNullable(this.groupControlNumberSuffix);
     }
 
@@ -192,7 +192,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupControlNumberUpperBound", required=true)
       private final Double groupControlNumberUpperBound;
 
-    public Double getGroupControlNumberUpperBound() {
+    public Double groupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
 
@@ -203,7 +203,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupControllingAgencyCode")
       private final @Nullable String groupControllingAgencyCode;
 
-    public Optional<String> getGroupControllingAgencyCode() {
+    public Optional<String> groupControllingAgencyCode() {
         return this.groupControllingAgencyCode == null ? Optional.empty() : Optional.ofNullable(this.groupControllingAgencyCode);
     }
 
@@ -214,7 +214,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupMessageRelease")
       private final @Nullable String groupMessageRelease;
 
-    public Optional<String> getGroupMessageRelease() {
+    public Optional<String> groupMessageRelease() {
         return this.groupMessageRelease == null ? Optional.empty() : Optional.ofNullable(this.groupMessageRelease);
     }
 
@@ -225,7 +225,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="groupMessageVersion")
       private final @Nullable String groupMessageVersion;
 
-    public Optional<String> getGroupMessageVersion() {
+    public Optional<String> groupMessageVersion() {
         return this.groupMessageVersion == null ? Optional.empty() : Optional.ofNullable(this.groupMessageVersion);
     }
 
@@ -236,7 +236,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="interchangeControlNumberLowerBound", required=true)
       private final Double interchangeControlNumberLowerBound;
 
-    public Double getInterchangeControlNumberLowerBound() {
+    public Double interchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
 
@@ -247,7 +247,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="interchangeControlNumberPrefix")
       private final @Nullable String interchangeControlNumberPrefix;
 
-    public Optional<String> getInterchangeControlNumberPrefix() {
+    public Optional<String> interchangeControlNumberPrefix() {
         return this.interchangeControlNumberPrefix == null ? Optional.empty() : Optional.ofNullable(this.interchangeControlNumberPrefix);
     }
 
@@ -258,7 +258,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="interchangeControlNumberSuffix")
       private final @Nullable String interchangeControlNumberSuffix;
 
-    public Optional<String> getInterchangeControlNumberSuffix() {
+    public Optional<String> interchangeControlNumberSuffix() {
         return this.interchangeControlNumberSuffix == null ? Optional.empty() : Optional.ofNullable(this.interchangeControlNumberSuffix);
     }
 
@@ -269,7 +269,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="interchangeControlNumberUpperBound", required=true)
       private final Double interchangeControlNumberUpperBound;
 
-    public Double getInterchangeControlNumberUpperBound() {
+    public Double interchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
 
@@ -280,7 +280,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="isTestInterchange", required=true)
       private final Boolean isTestInterchange;
 
-    public Boolean getIsTestInterchange() {
+    public Boolean isTestInterchange() {
         return this.isTestInterchange;
     }
 
@@ -291,7 +291,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
       private final Boolean overwriteExistingTransactionSetControlNumber;
 
-    public Boolean getOverwriteExistingTransactionSetControlNumber() {
+    public Boolean overwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
 
@@ -302,7 +302,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="processingPriorityCode")
       private final @Nullable String processingPriorityCode;
 
-    public Optional<String> getProcessingPriorityCode() {
+    public Optional<String> processingPriorityCode() {
         return this.processingPriorityCode == null ? Optional.empty() : Optional.ofNullable(this.processingPriorityCode);
     }
 
@@ -313,7 +313,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="receiverInternalIdentification")
       private final @Nullable String receiverInternalIdentification;
 
-    public Optional<String> getReceiverInternalIdentification() {
+    public Optional<String> receiverInternalIdentification() {
         return this.receiverInternalIdentification == null ? Optional.empty() : Optional.ofNullable(this.receiverInternalIdentification);
     }
 
@@ -324,7 +324,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="receiverInternalSubIdentification")
       private final @Nullable String receiverInternalSubIdentification;
 
-    public Optional<String> getReceiverInternalSubIdentification() {
+    public Optional<String> receiverInternalSubIdentification() {
         return this.receiverInternalSubIdentification == null ? Optional.empty() : Optional.ofNullable(this.receiverInternalSubIdentification);
     }
 
@@ -335,7 +335,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="receiverReverseRoutingAddress")
       private final @Nullable String receiverReverseRoutingAddress;
 
-    public Optional<String> getReceiverReverseRoutingAddress() {
+    public Optional<String> receiverReverseRoutingAddress() {
         return this.receiverReverseRoutingAddress == null ? Optional.empty() : Optional.ofNullable(this.receiverReverseRoutingAddress);
     }
 
@@ -346,7 +346,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="recipientReferencePasswordQualifier")
       private final @Nullable String recipientReferencePasswordQualifier;
 
-    public Optional<String> getRecipientReferencePasswordQualifier() {
+    public Optional<String> recipientReferencePasswordQualifier() {
         return this.recipientReferencePasswordQualifier == null ? Optional.empty() : Optional.ofNullable(this.recipientReferencePasswordQualifier);
     }
 
@@ -357,7 +357,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="recipientReferencePasswordValue")
       private final @Nullable String recipientReferencePasswordValue;
 
-    public Optional<String> getRecipientReferencePasswordValue() {
+    public Optional<String> recipientReferencePasswordValue() {
         return this.recipientReferencePasswordValue == null ? Optional.empty() : Optional.ofNullable(this.recipientReferencePasswordValue);
     }
 
@@ -368,7 +368,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="rolloverGroupControlNumber", required=true)
       private final Boolean rolloverGroupControlNumber;
 
-    public Boolean getRolloverGroupControlNumber() {
+    public Boolean rolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
 
@@ -379,7 +379,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="rolloverInterchangeControlNumber", required=true)
       private final Boolean rolloverInterchangeControlNumber;
 
-    public Boolean getRolloverInterchangeControlNumber() {
+    public Boolean rolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
 
@@ -390,7 +390,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="rolloverTransactionSetControlNumber", required=true)
       private final Boolean rolloverTransactionSetControlNumber;
 
-    public Boolean getRolloverTransactionSetControlNumber() {
+    public Boolean rolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
 
@@ -401,7 +401,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="senderInternalIdentification")
       private final @Nullable String senderInternalIdentification;
 
-    public Optional<String> getSenderInternalIdentification() {
+    public Optional<String> senderInternalIdentification() {
         return this.senderInternalIdentification == null ? Optional.empty() : Optional.ofNullable(this.senderInternalIdentification);
     }
 
@@ -412,7 +412,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="senderInternalSubIdentification")
       private final @Nullable String senderInternalSubIdentification;
 
-    public Optional<String> getSenderInternalSubIdentification() {
+    public Optional<String> senderInternalSubIdentification() {
         return this.senderInternalSubIdentification == null ? Optional.empty() : Optional.ofNullable(this.senderInternalSubIdentification);
     }
 
@@ -423,7 +423,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="senderReverseRoutingAddress")
       private final @Nullable String senderReverseRoutingAddress;
 
-    public Optional<String> getSenderReverseRoutingAddress() {
+    public Optional<String> senderReverseRoutingAddress() {
         return this.senderReverseRoutingAddress == null ? Optional.empty() : Optional.ofNullable(this.senderReverseRoutingAddress);
     }
 
@@ -434,7 +434,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="transactionSetControlNumberLowerBound", required=true)
       private final Double transactionSetControlNumberLowerBound;
 
-    public Double getTransactionSetControlNumberLowerBound() {
+    public Double transactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
 
@@ -445,7 +445,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="transactionSetControlNumberPrefix")
       private final @Nullable String transactionSetControlNumberPrefix;
 
-    public Optional<String> getTransactionSetControlNumberPrefix() {
+    public Optional<String> transactionSetControlNumberPrefix() {
         return this.transactionSetControlNumberPrefix == null ? Optional.empty() : Optional.ofNullable(this.transactionSetControlNumberPrefix);
     }
 
@@ -456,7 +456,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="transactionSetControlNumberSuffix")
       private final @Nullable String transactionSetControlNumberSuffix;
 
-    public Optional<String> getTransactionSetControlNumberSuffix() {
+    public Optional<String> transactionSetControlNumberSuffix() {
         return this.transactionSetControlNumberSuffix == null ? Optional.empty() : Optional.ofNullable(this.transactionSetControlNumberSuffix);
     }
 
@@ -467,7 +467,7 @@ public final class EdifactEnvelopeSettingsResponse extends io.pulumi.resources.I
     @Import(name="transactionSetControlNumberUpperBound", required=true)
       private final Double transactionSetControlNumberUpperBound;
 
-    public Double getTransactionSetControlNumberUpperBound() {
+    public Double transactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
 

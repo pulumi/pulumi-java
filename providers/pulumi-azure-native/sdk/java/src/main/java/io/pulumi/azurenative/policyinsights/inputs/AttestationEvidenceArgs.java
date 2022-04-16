@@ -5,6 +5,7 @@ package io.pulumi.azurenative.policyinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceUri")
       private final @Nullable Output<String> sourceUri;
 
-    public Output<String> getSourceUri() {
-        return this.sourceUri == null ? Output.empty() : this.sourceUri;
+    public Output<String> sourceUri() {
+        return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
     }
 
     public AttestationEvidenceArgs(
@@ -48,8 +49,8 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
     }
 
     private AttestationEvidenceArgs() {
-        this.description = Output.empty();
-        this.sourceUri = Output.empty();
+        this.description = Codegen.empty();
+        this.sourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
@@ -87,7 +88,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Output.ofNullable(sourceUri);
+            this.sourceUri = Codegen.ofNullable(sourceUri);
             return this;
         }        public AttestationEvidenceArgs build() {
             return new AttestationEvidenceArgs(description, sourceUri);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appstream;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class ApplicationFleetAssociationArgs extends io.pulumi.resources.R
     @Import(name="applicationArn", required=true)
       private final Output<String> applicationArn;
 
-    public Output<String> getApplicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn;
     }
 
     @Import(name="fleetName", required=true)
       private final Output<String> fleetName;
 
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName;
     }
 
@@ -35,8 +36,8 @@ public final class ApplicationFleetAssociationArgs extends io.pulumi.resources.R
     }
 
     private ApplicationFleetAssociationArgs() {
-        this.applicationArn = Output.empty();
-        this.fleetName = Output.empty();
+        this.applicationArn = Codegen.empty();
+        this.fleetName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -27,6 +27,7 @@ import io.pulumi.azurenative.providerhub.inputs.ThrottlingRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,204 +42,204 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
     @Import(name="allowedUnauthorizedActions")
       private final @Nullable Output<List<String>> allowedUnauthorizedActions;
 
-    public Output<List<String>> getAllowedUnauthorizedActions() {
-        return this.allowedUnauthorizedActions == null ? Output.empty() : this.allowedUnauthorizedActions;
+    public Output<List<String>> allowedUnauthorizedActions() {
+        return this.allowedUnauthorizedActions == null ? Codegen.empty() : this.allowedUnauthorizedActions;
     }
 
     @Import(name="authorizationActionMappings")
       private final @Nullable Output<List<AuthorizationActionMappingArgs>> authorizationActionMappings;
 
-    public Output<List<AuthorizationActionMappingArgs>> getAuthorizationActionMappings() {
-        return this.authorizationActionMappings == null ? Output.empty() : this.authorizationActionMappings;
+    public Output<List<AuthorizationActionMappingArgs>> authorizationActionMappings() {
+        return this.authorizationActionMappings == null ? Codegen.empty() : this.authorizationActionMappings;
     }
 
     @Import(name="checkNameAvailabilitySpecifications")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications;
 
-    public Output<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> getCheckNameAvailabilitySpecifications() {
-        return this.checkNameAvailabilitySpecifications == null ? Output.empty() : this.checkNameAvailabilitySpecifications;
+    public Output<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications() {
+        return this.checkNameAvailabilitySpecifications == null ? Codegen.empty() : this.checkNameAvailabilitySpecifications;
     }
 
     @Import(name="defaultApiVersion")
       private final @Nullable Output<String> defaultApiVersion;
 
-    public Output<String> getDefaultApiVersion() {
-        return this.defaultApiVersion == null ? Output.empty() : this.defaultApiVersion;
+    public Output<String> defaultApiVersion() {
+        return this.defaultApiVersion == null ? Codegen.empty() : this.defaultApiVersion;
     }
 
     @Import(name="disallowedActionVerbs")
       private final @Nullable Output<List<String>> disallowedActionVerbs;
 
-    public Output<List<String>> getDisallowedActionVerbs() {
-        return this.disallowedActionVerbs == null ? Output.empty() : this.disallowedActionVerbs;
+    public Output<List<String>> disallowedActionVerbs() {
+        return this.disallowedActionVerbs == null ? Codegen.empty() : this.disallowedActionVerbs;
     }
 
     @Import(name="enableAsyncOperation")
       private final @Nullable Output<Boolean> enableAsyncOperation;
 
-    public Output<Boolean> getEnableAsyncOperation() {
-        return this.enableAsyncOperation == null ? Output.empty() : this.enableAsyncOperation;
+    public Output<Boolean> enableAsyncOperation() {
+        return this.enableAsyncOperation == null ? Codegen.empty() : this.enableAsyncOperation;
     }
 
     @Import(name="enableThirdPartyS2S")
       private final @Nullable Output<Boolean> enableThirdPartyS2S;
 
-    public Output<Boolean> getEnableThirdPartyS2S() {
-        return this.enableThirdPartyS2S == null ? Output.empty() : this.enableThirdPartyS2S;
+    public Output<Boolean> enableThirdPartyS2S() {
+        return this.enableThirdPartyS2S == null ? Codegen.empty() : this.enableThirdPartyS2S;
     }
 
     @Import(name="endpoints")
       private final @Nullable Output<List<ResourceTypeEndpointArgs>> endpoints;
 
-    public Output<List<ResourceTypeEndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+    public Output<List<ResourceTypeEndpointArgs>> endpoints() {
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     @Import(name="extendedLocations")
       private final @Nullable Output<List<ExtendedLocationOptionsArgs>> extendedLocations;
 
-    public Output<List<ExtendedLocationOptionsArgs>> getExtendedLocations() {
-        return this.extendedLocations == null ? Output.empty() : this.extendedLocations;
+    public Output<List<ExtendedLocationOptionsArgs>> extendedLocations() {
+        return this.extendedLocations == null ? Codegen.empty() : this.extendedLocations;
     }
 
     @Import(name="extensionOptions")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions;
 
-    public Output<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> getExtensionOptions() {
-        return this.extensionOptions == null ? Output.empty() : this.extensionOptions;
+    public Output<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions() {
+        return this.extensionOptions == null ? Codegen.empty() : this.extensionOptions;
     }
 
     @Import(name="featuresRule")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule;
 
-    public Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> getFeaturesRule() {
-        return this.featuresRule == null ? Output.empty() : this.featuresRule;
+    public Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule() {
+        return this.featuresRule == null ? Codegen.empty() : this.featuresRule;
     }
 
     @Import(name="identityManagement")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement;
 
-    public Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> getIdentityManagement() {
-        return this.identityManagement == null ? Output.empty() : this.identityManagement;
+    public Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement() {
+        return this.identityManagement == null ? Codegen.empty() : this.identityManagement;
     }
 
     @Import(name="isPureProxy")
       private final @Nullable Output<Boolean> isPureProxy;
 
-    public Output<Boolean> getIsPureProxy() {
-        return this.isPureProxy == null ? Output.empty() : this.isPureProxy;
+    public Output<Boolean> isPureProxy() {
+        return this.isPureProxy == null ? Codegen.empty() : this.isPureProxy;
     }
 
     @Import(name="linkedAccessChecks")
       private final @Nullable Output<List<LinkedAccessCheckArgs>> linkedAccessChecks;
 
-    public Output<List<LinkedAccessCheckArgs>> getLinkedAccessChecks() {
-        return this.linkedAccessChecks == null ? Output.empty() : this.linkedAccessChecks;
+    public Output<List<LinkedAccessCheckArgs>> linkedAccessChecks() {
+        return this.linkedAccessChecks == null ? Codegen.empty() : this.linkedAccessChecks;
     }
 
     @Import(name="loggingRules")
       private final @Nullable Output<List<LoggingRuleArgs>> loggingRules;
 
-    public Output<List<LoggingRuleArgs>> getLoggingRules() {
-        return this.loggingRules == null ? Output.empty() : this.loggingRules;
+    public Output<List<LoggingRuleArgs>> loggingRules() {
+        return this.loggingRules == null ? Codegen.empty() : this.loggingRules;
     }
 
     @Import(name="marketplaceType")
       private final @Nullable Output<String> marketplaceType;
 
-    public Output<String> getMarketplaceType() {
-        return this.marketplaceType == null ? Output.empty() : this.marketplaceType;
+    public Output<String> marketplaceType() {
+        return this.marketplaceType == null ? Codegen.empty() : this.marketplaceType;
     }
 
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="regionality")
       private final @Nullable Output<Either<String,Regionality>> regionality;
 
-    public Output<Either<String,Regionality>> getRegionality() {
-        return this.regionality == null ? Output.empty() : this.regionality;
+    public Output<Either<String,Regionality>> regionality() {
+        return this.regionality == null ? Codegen.empty() : this.regionality;
     }
 
     @Import(name="requestHeaderOptions")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
-    public Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
-        return this.requestHeaderOptions == null ? Output.empty() : this.requestHeaderOptions;
+    public Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions() {
+        return this.requestHeaderOptions == null ? Codegen.empty() : this.requestHeaderOptions;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
+    public Output<List<String>> requiredFeatures() {
+        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="resourceDeletionPolicy")
       private final @Nullable Output<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy;
 
-    public Output<Either<String,ResourceDeletionPolicy>> getResourceDeletionPolicy() {
-        return this.resourceDeletionPolicy == null ? Output.empty() : this.resourceDeletionPolicy;
+    public Output<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy() {
+        return this.resourceDeletionPolicy == null ? Codegen.empty() : this.resourceDeletionPolicy;
     }
 
     @Import(name="resourceMovePolicy")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy;
 
-    public Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> getResourceMovePolicy() {
-        return this.resourceMovePolicy == null ? Output.empty() : this.resourceMovePolicy;
+    public Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy() {
+        return this.resourceMovePolicy == null ? Codegen.empty() : this.resourceMovePolicy;
     }
 
     @Import(name="routingType")
       private final @Nullable Output<Either<String,RoutingType>> routingType;
 
-    public Output<Either<String,RoutingType>> getRoutingType() {
-        return this.routingType == null ? Output.empty() : this.routingType;
+    public Output<Either<String,RoutingType>> routingType() {
+        return this.routingType == null ? Codegen.empty() : this.routingType;
     }
 
     @Import(name="serviceTreeInfos")
       private final @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
-    public Output<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {
-        return this.serviceTreeInfos == null ? Output.empty() : this.serviceTreeInfos;
+    public Output<List<ServiceTreeInfoArgs>> serviceTreeInfos() {
+        return this.serviceTreeInfos == null ? Codegen.empty() : this.serviceTreeInfos;
     }
 
     @Import(name="subscriptionLifecycleNotificationSpecifications")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
-    public Output<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
-        return this.subscriptionLifecycleNotificationSpecifications == null ? Output.empty() : this.subscriptionLifecycleNotificationSpecifications;
+    public Output<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications() {
+        return this.subscriptionLifecycleNotificationSpecifications == null ? Codegen.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
     @Import(name="subscriptionStateRules")
       private final @Nullable Output<List<SubscriptionStateRuleArgs>> subscriptionStateRules;
 
-    public Output<List<SubscriptionStateRuleArgs>> getSubscriptionStateRules() {
-        return this.subscriptionStateRules == null ? Output.empty() : this.subscriptionStateRules;
+    public Output<List<SubscriptionStateRuleArgs>> subscriptionStateRules() {
+        return this.subscriptionStateRules == null ? Codegen.empty() : this.subscriptionStateRules;
     }
 
     @Import(name="swaggerSpecifications")
       private final @Nullable Output<List<SwaggerSpecificationArgs>> swaggerSpecifications;
 
-    public Output<List<SwaggerSpecificationArgs>> getSwaggerSpecifications() {
-        return this.swaggerSpecifications == null ? Output.empty() : this.swaggerSpecifications;
+    public Output<List<SwaggerSpecificationArgs>> swaggerSpecifications() {
+        return this.swaggerSpecifications == null ? Codegen.empty() : this.swaggerSpecifications;
     }
 
     @Import(name="templateDeploymentOptions")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
-    public Output<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
-        return this.templateDeploymentOptions == null ? Output.empty() : this.templateDeploymentOptions;
+    public Output<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions() {
+        return this.templateDeploymentOptions == null ? Codegen.empty() : this.templateDeploymentOptions;
     }
 
     @Import(name="throttlingRules")
       private final @Nullable Output<List<ThrottlingRuleArgs>> throttlingRules;
 
-    public Output<List<ThrottlingRuleArgs>> getThrottlingRules() {
-        return this.throttlingRules == null ? Output.empty() : this.throttlingRules;
+    public Output<List<ThrottlingRuleArgs>> throttlingRules() {
+        return this.throttlingRules == null ? Codegen.empty() : this.throttlingRules;
     }
 
     public ResourceTypeRegistrationPropertiesArgs(
@@ -303,35 +304,35 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
     }
 
     private ResourceTypeRegistrationPropertiesArgs() {
-        this.allowedUnauthorizedActions = Output.empty();
-        this.authorizationActionMappings = Output.empty();
-        this.checkNameAvailabilitySpecifications = Output.empty();
-        this.defaultApiVersion = Output.empty();
-        this.disallowedActionVerbs = Output.empty();
-        this.enableAsyncOperation = Output.empty();
-        this.enableThirdPartyS2S = Output.empty();
-        this.endpoints = Output.empty();
-        this.extendedLocations = Output.empty();
-        this.extensionOptions = Output.empty();
-        this.featuresRule = Output.empty();
-        this.identityManagement = Output.empty();
-        this.isPureProxy = Output.empty();
-        this.linkedAccessChecks = Output.empty();
-        this.loggingRules = Output.empty();
-        this.marketplaceType = Output.empty();
-        this.provisioningState = Output.empty();
-        this.regionality = Output.empty();
-        this.requestHeaderOptions = Output.empty();
-        this.requiredFeatures = Output.empty();
-        this.resourceDeletionPolicy = Output.empty();
-        this.resourceMovePolicy = Output.empty();
-        this.routingType = Output.empty();
-        this.serviceTreeInfos = Output.empty();
-        this.subscriptionLifecycleNotificationSpecifications = Output.empty();
-        this.subscriptionStateRules = Output.empty();
-        this.swaggerSpecifications = Output.empty();
-        this.templateDeploymentOptions = Output.empty();
-        this.throttlingRules = Output.empty();
+        this.allowedUnauthorizedActions = Codegen.empty();
+        this.authorizationActionMappings = Codegen.empty();
+        this.checkNameAvailabilitySpecifications = Codegen.empty();
+        this.defaultApiVersion = Codegen.empty();
+        this.disallowedActionVerbs = Codegen.empty();
+        this.enableAsyncOperation = Codegen.empty();
+        this.enableThirdPartyS2S = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.extendedLocations = Codegen.empty();
+        this.extensionOptions = Codegen.empty();
+        this.featuresRule = Codegen.empty();
+        this.identityManagement = Codegen.empty();
+        this.isPureProxy = Codegen.empty();
+        this.linkedAccessChecks = Codegen.empty();
+        this.loggingRules = Codegen.empty();
+        this.marketplaceType = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.regionality = Codegen.empty();
+        this.requestHeaderOptions = Codegen.empty();
+        this.requiredFeatures = Codegen.empty();
+        this.resourceDeletionPolicy = Codegen.empty();
+        this.resourceMovePolicy = Codegen.empty();
+        this.routingType = Codegen.empty();
+        this.serviceTreeInfos = Codegen.empty();
+        this.subscriptionLifecycleNotificationSpecifications = Codegen.empty();
+        this.subscriptionStateRules = Codegen.empty();
+        this.swaggerSpecifications = Codegen.empty();
+        this.templateDeploymentOptions = Codegen.empty();
+        this.throttlingRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -415,7 +416,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder allowedUnauthorizedActions(@Nullable List<String> allowedUnauthorizedActions) {
-            this.allowedUnauthorizedActions = Output.ofNullable(allowedUnauthorizedActions);
+            this.allowedUnauthorizedActions = Codegen.ofNullable(allowedUnauthorizedActions);
             return this;
         }
         public Builder allowedUnauthorizedActions(String... allowedUnauthorizedActions) {
@@ -426,7 +427,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder authorizationActionMappings(@Nullable List<AuthorizationActionMappingArgs> authorizationActionMappings) {
-            this.authorizationActionMappings = Output.ofNullable(authorizationActionMappings);
+            this.authorizationActionMappings = Codegen.ofNullable(authorizationActionMappings);
             return this;
         }
         public Builder authorizationActionMappings(AuthorizationActionMappingArgs... authorizationActionMappings) {
@@ -437,7 +438,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder checkNameAvailabilitySpecifications(@Nullable ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs checkNameAvailabilitySpecifications) {
-            this.checkNameAvailabilitySpecifications = Output.ofNullable(checkNameAvailabilitySpecifications);
+            this.checkNameAvailabilitySpecifications = Codegen.ofNullable(checkNameAvailabilitySpecifications);
             return this;
         }
         public Builder defaultApiVersion(@Nullable Output<String> defaultApiVersion) {
@@ -445,7 +446,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder defaultApiVersion(@Nullable String defaultApiVersion) {
-            this.defaultApiVersion = Output.ofNullable(defaultApiVersion);
+            this.defaultApiVersion = Codegen.ofNullable(defaultApiVersion);
             return this;
         }
         public Builder disallowedActionVerbs(@Nullable Output<List<String>> disallowedActionVerbs) {
@@ -453,7 +454,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder disallowedActionVerbs(@Nullable List<String> disallowedActionVerbs) {
-            this.disallowedActionVerbs = Output.ofNullable(disallowedActionVerbs);
+            this.disallowedActionVerbs = Codegen.ofNullable(disallowedActionVerbs);
             return this;
         }
         public Builder disallowedActionVerbs(String... disallowedActionVerbs) {
@@ -464,7 +465,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder enableAsyncOperation(@Nullable Boolean enableAsyncOperation) {
-            this.enableAsyncOperation = Output.ofNullable(enableAsyncOperation);
+            this.enableAsyncOperation = Codegen.ofNullable(enableAsyncOperation);
             return this;
         }
         public Builder enableThirdPartyS2S(@Nullable Output<Boolean> enableThirdPartyS2S) {
@@ -472,7 +473,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder enableThirdPartyS2S(@Nullable Boolean enableThirdPartyS2S) {
-            this.enableThirdPartyS2S = Output.ofNullable(enableThirdPartyS2S);
+            this.enableThirdPartyS2S = Codegen.ofNullable(enableThirdPartyS2S);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<ResourceTypeEndpointArgs>> endpoints) {
@@ -480,7 +481,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder endpoints(@Nullable List<ResourceTypeEndpointArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(ResourceTypeEndpointArgs... endpoints) {
@@ -491,7 +492,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder extendedLocations(@Nullable List<ExtendedLocationOptionsArgs> extendedLocations) {
-            this.extendedLocations = Output.ofNullable(extendedLocations);
+            this.extendedLocations = Codegen.ofNullable(extendedLocations);
             return this;
         }
         public Builder extendedLocations(ExtendedLocationOptionsArgs... extendedLocations) {
@@ -502,7 +503,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder extensionOptions(@Nullable ResourceTypeRegistrationPropertiesExtensionOptionsArgs extensionOptions) {
-            this.extensionOptions = Output.ofNullable(extensionOptions);
+            this.extensionOptions = Codegen.ofNullable(extensionOptions);
             return this;
         }
         public Builder featuresRule(@Nullable Output<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule) {
@@ -510,7 +511,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder featuresRule(@Nullable ResourceTypeRegistrationPropertiesFeaturesRuleArgs featuresRule) {
-            this.featuresRule = Output.ofNullable(featuresRule);
+            this.featuresRule = Codegen.ofNullable(featuresRule);
             return this;
         }
         public Builder identityManagement(@Nullable Output<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement) {
@@ -518,7 +519,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder identityManagement(@Nullable ResourceTypeRegistrationPropertiesIdentityManagementArgs identityManagement) {
-            this.identityManagement = Output.ofNullable(identityManagement);
+            this.identityManagement = Codegen.ofNullable(identityManagement);
             return this;
         }
         public Builder isPureProxy(@Nullable Output<Boolean> isPureProxy) {
@@ -526,7 +527,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder isPureProxy(@Nullable Boolean isPureProxy) {
-            this.isPureProxy = Output.ofNullable(isPureProxy);
+            this.isPureProxy = Codegen.ofNullable(isPureProxy);
             return this;
         }
         public Builder linkedAccessChecks(@Nullable Output<List<LinkedAccessCheckArgs>> linkedAccessChecks) {
@@ -534,7 +535,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder linkedAccessChecks(@Nullable List<LinkedAccessCheckArgs> linkedAccessChecks) {
-            this.linkedAccessChecks = Output.ofNullable(linkedAccessChecks);
+            this.linkedAccessChecks = Codegen.ofNullable(linkedAccessChecks);
             return this;
         }
         public Builder linkedAccessChecks(LinkedAccessCheckArgs... linkedAccessChecks) {
@@ -545,7 +546,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder loggingRules(@Nullable List<LoggingRuleArgs> loggingRules) {
-            this.loggingRules = Output.ofNullable(loggingRules);
+            this.loggingRules = Codegen.ofNullable(loggingRules);
             return this;
         }
         public Builder loggingRules(LoggingRuleArgs... loggingRules) {
@@ -556,7 +557,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder marketplaceType(@Nullable String marketplaceType) {
-            this.marketplaceType = Output.ofNullable(marketplaceType);
+            this.marketplaceType = Codegen.ofNullable(marketplaceType);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
@@ -564,7 +565,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder regionality(@Nullable Output<Either<String,Regionality>> regionality) {
@@ -572,7 +573,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder regionality(@Nullable Either<String,Regionality> regionality) {
-            this.regionality = Output.ofNullable(regionality);
+            this.regionality = Codegen.ofNullable(regionality);
             return this;
         }
         public Builder requestHeaderOptions(@Nullable Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
@@ -580,7 +581,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder requestHeaderOptions(@Nullable ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
-            this.requestHeaderOptions = Output.ofNullable(requestHeaderOptions);
+            this.requestHeaderOptions = Codegen.ofNullable(requestHeaderOptions);
             return this;
         }
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
@@ -588,7 +589,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Output.ofNullable(requiredFeatures);
+            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
             return this;
         }
         public Builder requiredFeatures(String... requiredFeatures) {
@@ -599,7 +600,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder resourceDeletionPolicy(@Nullable Either<String,ResourceDeletionPolicy> resourceDeletionPolicy) {
-            this.resourceDeletionPolicy = Output.ofNullable(resourceDeletionPolicy);
+            this.resourceDeletionPolicy = Codegen.ofNullable(resourceDeletionPolicy);
             return this;
         }
         public Builder resourceMovePolicy(@Nullable Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy) {
@@ -607,7 +608,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder resourceMovePolicy(@Nullable ResourceTypeRegistrationPropertiesResourceMovePolicyArgs resourceMovePolicy) {
-            this.resourceMovePolicy = Output.ofNullable(resourceMovePolicy);
+            this.resourceMovePolicy = Codegen.ofNullable(resourceMovePolicy);
             return this;
         }
         public Builder routingType(@Nullable Output<Either<String,RoutingType>> routingType) {
@@ -615,7 +616,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder routingType(@Nullable Either<String,RoutingType> routingType) {
-            this.routingType = Output.ofNullable(routingType);
+            this.routingType = Codegen.ofNullable(routingType);
             return this;
         }
         public Builder serviceTreeInfos(@Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
@@ -623,7 +624,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
-            this.serviceTreeInfos = Output.ofNullable(serviceTreeInfos);
+            this.serviceTreeInfos = Codegen.ofNullable(serviceTreeInfos);
             return this;
         }
         public Builder serviceTreeInfos(ServiceTreeInfoArgs... serviceTreeInfos) {
@@ -634,7 +635,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
-            this.subscriptionLifecycleNotificationSpecifications = Output.ofNullable(subscriptionLifecycleNotificationSpecifications);
+            this.subscriptionLifecycleNotificationSpecifications = Codegen.ofNullable(subscriptionLifecycleNotificationSpecifications);
             return this;
         }
         public Builder subscriptionStateRules(@Nullable Output<List<SubscriptionStateRuleArgs>> subscriptionStateRules) {
@@ -642,7 +643,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder subscriptionStateRules(@Nullable List<SubscriptionStateRuleArgs> subscriptionStateRules) {
-            this.subscriptionStateRules = Output.ofNullable(subscriptionStateRules);
+            this.subscriptionStateRules = Codegen.ofNullable(subscriptionStateRules);
             return this;
         }
         public Builder subscriptionStateRules(SubscriptionStateRuleArgs... subscriptionStateRules) {
@@ -653,7 +654,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder swaggerSpecifications(@Nullable List<SwaggerSpecificationArgs> swaggerSpecifications) {
-            this.swaggerSpecifications = Output.ofNullable(swaggerSpecifications);
+            this.swaggerSpecifications = Codegen.ofNullable(swaggerSpecifications);
             return this;
         }
         public Builder swaggerSpecifications(SwaggerSpecificationArgs... swaggerSpecifications) {
@@ -664,7 +665,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder templateDeploymentOptions(@Nullable ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
-            this.templateDeploymentOptions = Output.ofNullable(templateDeploymentOptions);
+            this.templateDeploymentOptions = Codegen.ofNullable(templateDeploymentOptions);
             return this;
         }
         public Builder throttlingRules(@Nullable Output<List<ThrottlingRuleArgs>> throttlingRules) {
@@ -672,7 +673,7 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder throttlingRules(@Nullable List<ThrottlingRuleArgs> throttlingRules) {
-            this.throttlingRules = Output.ofNullable(throttlingRules);
+            this.throttlingRules = Codegen.ofNullable(throttlingRules);
             return this;
         }
         public Builder throttlingRules(ThrottlingRuleArgs... throttlingRules) {

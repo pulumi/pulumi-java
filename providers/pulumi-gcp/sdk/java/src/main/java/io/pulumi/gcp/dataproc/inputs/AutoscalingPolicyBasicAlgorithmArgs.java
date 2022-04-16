@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmYarnConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
     @Import(name="cooldownPeriod")
       private final @Nullable Output<String> cooldownPeriod;
 
-    public Output<String> getCooldownPeriod() {
-        return this.cooldownPeriod == null ? Output.empty() : this.cooldownPeriod;
+    public Output<String> cooldownPeriod() {
+        return this.cooldownPeriod == null ? Codegen.empty() : this.cooldownPeriod;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
     @Import(name="yarnConfig", required=true)
       private final Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig;
 
-    public Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> getYarnConfig() {
+    public Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig() {
         return this.yarnConfig;
     }
 
@@ -48,8 +49,8 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
     }
 
     private AutoscalingPolicyBasicAlgorithmArgs() {
-        this.cooldownPeriod = Output.empty();
-        this.yarnConfig = Output.empty();
+        this.cooldownPeriod = Codegen.empty();
+        this.yarnConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
-            this.cooldownPeriod = Output.ofNullable(cooldownPeriod);
+            this.cooldownPeriod = Codegen.ofNullable(cooldownPeriod);
             return this;
         }
         public Builder yarnConfig(Output<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig) {

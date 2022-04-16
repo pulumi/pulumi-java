@@ -26,7 +26,7 @@ public final class OrganizationFeedFeedOutputConfig {
      * Structure is documented below.
      * 
     */
-    public OrganizationFeedFeedOutputConfigPubsubDestination getPubsubDestination() {
+    public OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination() {
         return this.pubsubDestination;
     }
 

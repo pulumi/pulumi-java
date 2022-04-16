@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketStorageClassAnalysisArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -39,22 +40,22 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="storageClassAnalysis", required=true)
       private final Output<BucketStorageClassAnalysisArgs> storageClassAnalysis;
 
-    public Output<BucketStorageClassAnalysisArgs> getStorageClassAnalysis() {
+    public Output<BucketStorageClassAnalysisArgs> storageClassAnalysis() {
         return this.storageClassAnalysis;
     }
 
     @Import(name="tagFilters")
       private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Output<List<BucketTagFilterArgs>> getTagFilters() {
-        return this.tagFilters == null ? Output.empty() : this.tagFilters;
+    public Output<List<BucketTagFilterArgs>> tagFilters() {
+        return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 
     public BucketAnalyticsConfigurationArgs(
@@ -69,10 +70,10 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
     }
 
     private BucketAnalyticsConfigurationArgs() {
-        this.id = Output.empty();
-        this.prefix = Output.empty();
-        this.storageClassAnalysis = Output.empty();
-        this.tagFilters = Output.empty();
+        this.id = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.storageClassAnalysis = Codegen.empty();
+        this.tagFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder storageClassAnalysis(Output<BucketStorageClassAnalysisArgs> storageClassAnalysis) {
@@ -130,7 +131,7 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
-            this.tagFilters = Output.ofNullable(tagFilters);
+            this.tagFilters = Codegen.ofNullable(tagFilters);
             return this;
         }
         public Builder tagFilters(BucketTagFilterArgs... tagFilters) {

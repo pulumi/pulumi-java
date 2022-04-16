@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.outputs.DimensionTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return The ARN (Amazon resource name) of the created dimension.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +48,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the dimension.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -61,7 +62,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return Specifies the value or list of values for the dimension.
      * 
      */
-    public Output<List<String>> getStringValues() {
+    public Output<List<String>> stringValues() {
         return this.stringValues;
     }
     /**
@@ -75,7 +76,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return Metadata that can be used to manage the dimension.
      * 
      */
-    public Output</* @Nullable */ List<DimensionTag>> getTags() {
+    public Output</* @Nullable */ List<DimensionTag>> tags() {
         return this.tags;
     }
     /**
@@ -89,7 +90,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the dimension.
      * 
      */
-    public Output<DimensionType> getType() {
+    public Output<DimensionType> type() {
         return this.type;
     }
 
@@ -115,7 +116,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dimension(String name, DimensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:Dimension", name, args == null ? DimensionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:Dimension", name, args == null ? DimensionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dimension(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

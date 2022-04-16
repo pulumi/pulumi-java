@@ -26,7 +26,7 @@ public final class LabVhdResponse {
      * The URI to the VHD.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

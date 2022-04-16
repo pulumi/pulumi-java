@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,8 +26,8 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmName")
       private final @Nullable Output<String> alarmName;
 
-    public Output<String> getAlarmName() {
-        return this.alarmName == null ? Output.empty() : this.alarmName;
+    public Output<String> alarmName() {
+        return this.alarmName == null ? Codegen.empty() : this.alarmName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -47,8 +48,8 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactProtocols")
       private final @Nullable Output<List<String>> contactProtocols;
 
-    public Output<List<String>> getContactProtocols() {
-        return this.contactProtocols == null ? Output.empty() : this.contactProtocols;
+    public Output<List<String>> contactProtocols() {
+        return this.contactProtocols == null ? Codegen.empty() : this.contactProtocols;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datapointsToAlarm")
       private final @Nullable Output<Integer> datapointsToAlarm;
 
-    public Output<Integer> getDatapointsToAlarm() {
-        return this.datapointsToAlarm == null ? Output.empty() : this.datapointsToAlarm;
+    public Output<Integer> datapointsToAlarm() {
+        return this.datapointsToAlarm == null ? Codegen.empty() : this.datapointsToAlarm;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluationPeriods", required=true)
       private final Output<Integer> evaluationPeriods;
 
-    public Output<Integer> getEvaluationPeriods() {
+    public Output<Integer> evaluationPeriods() {
         return this.evaluationPeriods;
     }
 
@@ -80,7 +81,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -91,7 +92,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoredResourceName", required=true)
       private final Output<String> monitoredResourceName;
 
-    public Output<String> getMonitoredResourceName() {
+    public Output<String> monitoredResourceName() {
         return this.monitoredResourceName;
     }
 
@@ -102,8 +103,8 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationEnabled")
       private final @Nullable Output<Boolean> notificationEnabled;
 
-    public Output<Boolean> getNotificationEnabled() {
-        return this.notificationEnabled == null ? Output.empty() : this.notificationEnabled;
+    public Output<Boolean> notificationEnabled() {
+        return this.notificationEnabled == null ? Codegen.empty() : this.notificationEnabled;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationTriggers")
       private final @Nullable Output<List<String>> notificationTriggers;
 
-    public Output<List<String>> getNotificationTriggers() {
-        return this.notificationTriggers == null ? Output.empty() : this.notificationTriggers;
+    public Output<List<String>> notificationTriggers() {
+        return this.notificationTriggers == null ? Codegen.empty() : this.notificationTriggers;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -135,8 +136,8 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="treatMissingData")
       private final @Nullable Output<String> treatMissingData;
 
-    public Output<String> getTreatMissingData() {
-        return this.treatMissingData == null ? Output.empty() : this.treatMissingData;
+    public Output<String> treatMissingData() {
+        return this.treatMissingData == null ? Codegen.empty() : this.treatMissingData;
     }
 
     public AlarmArgs(
@@ -165,17 +166,17 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlarmArgs() {
-        this.alarmName = Output.empty();
-        this.comparisonOperator = Output.empty();
-        this.contactProtocols = Output.empty();
-        this.datapointsToAlarm = Output.empty();
-        this.evaluationPeriods = Output.empty();
-        this.metricName = Output.empty();
-        this.monitoredResourceName = Output.empty();
-        this.notificationEnabled = Output.empty();
-        this.notificationTriggers = Output.empty();
-        this.threshold = Output.empty();
-        this.treatMissingData = Output.empty();
+        this.alarmName = Codegen.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.contactProtocols = Codegen.empty();
+        this.datapointsToAlarm = Codegen.empty();
+        this.evaluationPeriods = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.monitoredResourceName = Codegen.empty();
+        this.notificationEnabled = Codegen.empty();
+        this.notificationTriggers = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.treatMissingData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alarmName(@Nullable String alarmName) {
-            this.alarmName = Output.ofNullable(alarmName);
+            this.alarmName = Codegen.ofNullable(alarmName);
             return this;
         }
         public Builder comparisonOperator(Output<String> comparisonOperator) {
@@ -239,7 +240,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactProtocols(@Nullable List<String> contactProtocols) {
-            this.contactProtocols = Output.ofNullable(contactProtocols);
+            this.contactProtocols = Codegen.ofNullable(contactProtocols);
             return this;
         }
         public Builder contactProtocols(String... contactProtocols) {
@@ -250,7 +251,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
-            this.datapointsToAlarm = Output.ofNullable(datapointsToAlarm);
+            this.datapointsToAlarm = Codegen.ofNullable(datapointsToAlarm);
             return this;
         }
         public Builder evaluationPeriods(Output<Integer> evaluationPeriods) {
@@ -282,7 +283,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationEnabled(@Nullable Boolean notificationEnabled) {
-            this.notificationEnabled = Output.ofNullable(notificationEnabled);
+            this.notificationEnabled = Codegen.ofNullable(notificationEnabled);
             return this;
         }
         public Builder notificationTriggers(@Nullable Output<List<String>> notificationTriggers) {
@@ -290,7 +291,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationTriggers(@Nullable List<String> notificationTriggers) {
-            this.notificationTriggers = Output.ofNullable(notificationTriggers);
+            this.notificationTriggers = Codegen.ofNullable(notificationTriggers);
             return this;
         }
         public Builder notificationTriggers(String... notificationTriggers) {
@@ -309,7 +310,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder treatMissingData(@Nullable String treatMissingData) {
-            this.treatMissingData = Output.ofNullable(treatMissingData);
+            this.treatMissingData = Codegen.ofNullable(treatMissingData);
             return this;
         }        public AlarmArgs build() {
             return new AlarmArgs(alarmName, comparisonOperator, contactProtocols, datapointsToAlarm, evaluationPeriods, metricName, monitoredResourceName, notificationEnabled, notificationTriggers, threshold, treatMissingData);

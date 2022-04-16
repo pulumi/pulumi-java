@@ -41,21 +41,21 @@ public final class ForwardProxyResponse {
      * The convention used to determine the url of the request made.
      * 
     */
-    public Optional<String> getConvention() {
+    public Optional<String> convention() {
         return Optional.ofNullable(this.convention);
     }
     /**
      * The name of the header containing the host of the request.
      * 
     */
-    public Optional<String> getCustomHostHeaderName() {
+    public Optional<String> customHostHeaderName() {
         return Optional.ofNullable(this.customHostHeaderName);
     }
     /**
      * The name of the header containing the scheme of the request.
      * 
     */
-    public Optional<String> getCustomProtoHeaderName() {
+    public Optional<String> customProtoHeaderName() {
         return Optional.ofNullable(this.customProtoHeaderName);
     }
 

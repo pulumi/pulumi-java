@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The status of the remote management connection of the Azure Stack device.
      * 
      */
-    public Output<String> getDeviceConnectionStatus() {
+    public Output<String> deviceConnectionStatus() {
         return this.deviceConnectionStatus;
     }
     /**
@@ -57,7 +58,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Azure Stack device for remote management.
      * 
      */
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
     /**
@@ -71,7 +72,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The connection state of the Azure Stack device.
      * 
      */
-    public Output<String> getDeviceLinkState() {
+    public Output<String> deviceLinkState() {
         return this.deviceLinkState;
     }
     /**
@@ -85,7 +86,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The object identifier associated with the Azure Stack device connecting to Azure.
      * 
      */
-    public Output<String> getDeviceObjectId() {
+    public Output<String> deviceObjectId() {
         return this.deviceObjectId;
     }
     /**
@@ -99,7 +100,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -113,7 +114,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The kind of the resource.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -127,7 +128,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
      * 
      */
-    public Output<String> getLastConnectedTime() {
+    public Output<String> lastConnectedTime() {
         return this.lastConnectedTime;
     }
     /**
@@ -141,7 +142,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The identifier associated with the device subscription.
      * 
      */
-    public Output</* @Nullable */ String> getLinkedSubscriptionId() {
+    public Output</* @Nullable */ String> linkedSubscriptionId() {
         return this.linkedSubscriptionId;
     }
     /**
@@ -155,7 +156,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return Location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -169,7 +170,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -183,7 +184,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return The identifier associated with the device registration.
      * 
      */
-    public Output</* @Nullable */ String> getRegistrationResourceId() {
+    public Output</* @Nullable */ String> registrationResourceId() {
         return this.registrationResourceId;
     }
     /**
@@ -197,7 +198,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -211,7 +212,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return Custom tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -225,7 +226,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @return Type of Resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -251,7 +252,7 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LinkedSubscription(String name, LinkedSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:azurestack:LinkedSubscription", name, args == null ? LinkedSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:azurestack:LinkedSubscription", name, args == null ? LinkedSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LinkedSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

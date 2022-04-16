@@ -23,7 +23,7 @@ public final class ShieldedVmIntegrityPolicyResponse extends io.pulumi.resources
     @Import(name="updateAutoLearnPolicy", required=true)
       private final Boolean updateAutoLearnPolicy;
 
-    public Boolean getUpdateAutoLearnPolicy() {
+    public Boolean updateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
     }
 

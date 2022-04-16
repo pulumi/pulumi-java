@@ -8,6 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.MethodIntegrationArgs;
 import io.pulumi.awsnative.apigateway.inputs.MethodResponseArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKeyRequired")
       private final @Nullable Output<Boolean> apiKeyRequired;
 
-    public Output<Boolean> getApiKeyRequired() {
-        return this.apiKeyRequired == null ? Output.empty() : this.apiKeyRequired;
+    public Output<Boolean> apiKeyRequired() {
+        return this.apiKeyRequired == null ? Codegen.empty() : this.apiKeyRequired;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationScopes")
       private final @Nullable Output<List<String>> authorizationScopes;
 
-    public Output<List<String>> getAuthorizationScopes() {
-        return this.authorizationScopes == null ? Output.empty() : this.authorizationScopes;
+    public Output<List<String>> authorizationScopes() {
+        return this.authorizationScopes == null ? Codegen.empty() : this.authorizationScopes;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationType")
       private final @Nullable Output<MethodAuthorizationType> authorizationType;
 
-    public Output<MethodAuthorizationType> getAuthorizationType() {
-        return this.authorizationType == null ? Output.empty() : this.authorizationType;
+    public Output<MethodAuthorizationType> authorizationType() {
+        return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerId")
       private final @Nullable Output<String> authorizerId;
 
-    public Output<String> getAuthorizerId() {
-        return this.authorizerId == null ? Output.empty() : this.authorizerId;
+    public Output<String> authorizerId() {
+        return this.authorizerId == null ? Codegen.empty() : this.authorizerId;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
 
@@ -82,8 +83,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="integration")
       private final @Nullable Output<MethodIntegrationArgs> integration;
 
-    public Output<MethodIntegrationArgs> getIntegration() {
-        return this.integration == null ? Output.empty() : this.integration;
+    public Output<MethodIntegrationArgs> integration() {
+        return this.integration == null ? Codegen.empty() : this.integration;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methodResponses")
       private final @Nullable Output<List<MethodResponseArgs>> methodResponses;
 
-    public Output<List<MethodResponseArgs>> getMethodResponses() {
-        return this.methodResponses == null ? Output.empty() : this.methodResponses;
+    public Output<List<MethodResponseArgs>> methodResponses() {
+        return this.methodResponses == null ? Codegen.empty() : this.methodResponses;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationName")
       private final @Nullable Output<String> operationName;
 
-    public Output<String> getOperationName() {
-        return this.operationName == null ? Output.empty() : this.operationName;
+    public Output<String> operationName() {
+        return this.operationName == null ? Codegen.empty() : this.operationName;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestModels")
       private final @Nullable Output<Object> requestModels;
 
-    public Output<Object> getRequestModels() {
-        return this.requestModels == null ? Output.empty() : this.requestModels;
+    public Output<Object> requestModels() {
+        return this.requestModels == null ? Codegen.empty() : this.requestModels;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestParameters")
       private final @Nullable Output<Object> requestParameters;
 
-    public Output<Object> getRequestParameters() {
-        return this.requestParameters == null ? Output.empty() : this.requestParameters;
+    public Output<Object> requestParameters() {
+        return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestValidatorId")
       private final @Nullable Output<String> requestValidatorId;
 
-    public Output<String> getRequestValidatorId() {
-        return this.requestValidatorId == null ? Output.empty() : this.requestValidatorId;
+    public Output<String> requestValidatorId() {
+        return this.requestValidatorId == null ? Codegen.empty() : this.requestValidatorId;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -159,7 +160,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -193,19 +194,19 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodArgs() {
-        this.apiKeyRequired = Output.empty();
-        this.authorizationScopes = Output.empty();
-        this.authorizationType = Output.empty();
-        this.authorizerId = Output.empty();
-        this.httpMethod = Output.empty();
-        this.integration = Output.empty();
-        this.methodResponses = Output.empty();
-        this.operationName = Output.empty();
-        this.requestModels = Output.empty();
-        this.requestParameters = Output.empty();
-        this.requestValidatorId = Output.empty();
-        this.resourceId = Output.empty();
-        this.restApiId = Output.empty();
+        this.apiKeyRequired = Codegen.empty();
+        this.authorizationScopes = Codegen.empty();
+        this.authorizationType = Codegen.empty();
+        this.authorizerId = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.integration = Codegen.empty();
+        this.methodResponses = Codegen.empty();
+        this.operationName = Codegen.empty();
+        this.requestModels = Codegen.empty();
+        this.requestParameters = Codegen.empty();
+        this.requestValidatorId = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.restApiId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -257,7 +258,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
-            this.apiKeyRequired = Output.ofNullable(apiKeyRequired);
+            this.apiKeyRequired = Codegen.ofNullable(apiKeyRequired);
             return this;
         }
         public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
@@ -265,7 +266,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
-            this.authorizationScopes = Output.ofNullable(authorizationScopes);
+            this.authorizationScopes = Codegen.ofNullable(authorizationScopes);
             return this;
         }
         public Builder authorizationScopes(String... authorizationScopes) {
@@ -276,7 +277,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizationType(@Nullable MethodAuthorizationType authorizationType) {
-            this.authorizationType = Output.ofNullable(authorizationType);
+            this.authorizationType = Codegen.ofNullable(authorizationType);
             return this;
         }
         public Builder authorizerId(@Nullable Output<String> authorizerId) {
@@ -284,7 +285,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerId(@Nullable String authorizerId) {
-            this.authorizerId = Output.ofNullable(authorizerId);
+            this.authorizerId = Codegen.ofNullable(authorizerId);
             return this;
         }
         public Builder httpMethod(Output<String> httpMethod) {
@@ -300,7 +301,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integration(@Nullable MethodIntegrationArgs integration) {
-            this.integration = Output.ofNullable(integration);
+            this.integration = Codegen.ofNullable(integration);
             return this;
         }
         public Builder methodResponses(@Nullable Output<List<MethodResponseArgs>> methodResponses) {
@@ -308,7 +309,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methodResponses(@Nullable List<MethodResponseArgs> methodResponses) {
-            this.methodResponses = Output.ofNullable(methodResponses);
+            this.methodResponses = Codegen.ofNullable(methodResponses);
             return this;
         }
         public Builder methodResponses(MethodResponseArgs... methodResponses) {
@@ -319,7 +320,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationName(@Nullable String operationName) {
-            this.operationName = Output.ofNullable(operationName);
+            this.operationName = Codegen.ofNullable(operationName);
             return this;
         }
         public Builder requestModels(@Nullable Output<Object> requestModels) {
@@ -327,7 +328,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestModels(@Nullable Object requestModels) {
-            this.requestModels = Output.ofNullable(requestModels);
+            this.requestModels = Codegen.ofNullable(requestModels);
             return this;
         }
         public Builder requestParameters(@Nullable Output<Object> requestParameters) {
@@ -335,7 +336,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestParameters(@Nullable Object requestParameters) {
-            this.requestParameters = Output.ofNullable(requestParameters);
+            this.requestParameters = Codegen.ofNullable(requestParameters);
             return this;
         }
         public Builder requestValidatorId(@Nullable Output<String> requestValidatorId) {
@@ -343,7 +344,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestValidatorId(@Nullable String requestValidatorId) {
-            this.requestValidatorId = Output.ofNullable(requestValidatorId);
+            this.requestValidatorId = Codegen.ofNullable(requestValidatorId);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

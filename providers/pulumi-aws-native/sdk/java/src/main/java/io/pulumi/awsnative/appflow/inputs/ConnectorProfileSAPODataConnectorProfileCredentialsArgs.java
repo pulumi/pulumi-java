@@ -7,6 +7,7 @@ import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfi
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
     @Import(name="basicAuthCredentials")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> getBasicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Output.empty() : this.basicAuthCredentials;
+    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials() {
+        return this.basicAuthCredentials == null ? Codegen.empty() : this.basicAuthCredentials;
     }
 
     @Import(name="oAuthCredentials")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> getOAuthCredentials() {
-        return this.oAuthCredentials == null ? Output.empty() : this.oAuthCredentials;
+    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials() {
+        return this.oAuthCredentials == null ? Codegen.empty() : this.oAuthCredentials;
     }
 
     public ConnectorProfileSAPODataConnectorProfileCredentialsArgs(
@@ -37,8 +38,8 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
     }
 
     private ConnectorProfileSAPODataConnectorProfileCredentialsArgs() {
-        this.basicAuthCredentials = Output.empty();
-        this.oAuthCredentials = Output.empty();
+        this.basicAuthCredentials = Codegen.empty();
+        this.oAuthCredentials = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
             return this;
         }
         public Builder basicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs basicAuthCredentials) {
-            this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
+            this.basicAuthCredentials = Codegen.ofNullable(basicAuthCredentials);
             return this;
         }
         public Builder oAuthCredentials(@Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials) {
@@ -76,7 +77,7 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
             return this;
         }
         public Builder oAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs oAuthCredentials) {
-            this.oAuthCredentials = Output.ofNullable(oAuthCredentials);
+            this.oAuthCredentials = Codegen.ofNullable(oAuthCredentials);
             return this;
         }        public ConnectorProfileSAPODataConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsArgs(basicAuthCredentials, oAuthCredentials);

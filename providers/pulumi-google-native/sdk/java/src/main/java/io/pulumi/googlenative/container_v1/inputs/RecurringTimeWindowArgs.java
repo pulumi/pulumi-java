@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.TimeWindowArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     @Import(name="recurrence")
       private final @Nullable Output<String> recurrence;
 
-    public Output<String> getRecurrence() {
-        return this.recurrence == null ? Output.empty() : this.recurrence;
+    public Output<String> recurrence() {
+        return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     @Import(name="window")
       private final @Nullable Output<TimeWindowArgs> window;
 
-    public Output<TimeWindowArgs> getWindow() {
-        return this.window == null ? Output.empty() : this.window;
+    public Output<TimeWindowArgs> window() {
+        return this.window == null ? Codegen.empty() : this.window;
     }
 
     public RecurringTimeWindowArgs(
@@ -49,8 +50,8 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     }
 
     private RecurringTimeWindowArgs() {
-        this.recurrence = Output.empty();
-        this.window = Output.empty();
+        this.recurrence = Codegen.empty();
+        this.window = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder recurrence(@Nullable String recurrence) {
-            this.recurrence = Output.ofNullable(recurrence);
+            this.recurrence = Codegen.ofNullable(recurrence);
             return this;
         }
         public Builder window(@Nullable Output<TimeWindowArgs> window) {
@@ -88,7 +89,7 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder window(@Nullable TimeWindowArgs window) {
-            this.window = Output.ofNullable(window);
+            this.window = Codegen.ofNullable(window);
             return this;
         }        public RecurringTimeWindowArgs build() {
             return new RecurringTimeWindowArgs(recurrence, window);

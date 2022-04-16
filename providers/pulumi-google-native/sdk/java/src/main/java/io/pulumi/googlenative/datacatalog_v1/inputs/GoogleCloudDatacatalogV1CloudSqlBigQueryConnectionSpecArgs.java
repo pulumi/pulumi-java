@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<String> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+    public Output<String> instanceId() {
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type;
 
-    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     }
 
     private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs() {
-        this.database = Output.empty();
-        this.instanceId = Output.empty();
-        this.type = Output.empty();
+        this.database = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -104,7 +105,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder type(@Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
@@ -112,7 +113,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
             return this;
         }
         public Builder type(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs(database, instanceId, type);

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
-    public Output<String> getCallerReference() {
-        return this.callerReference == null ? Output.empty() : this.callerReference;
+    public Output<String> callerReference() {
+        return this.callerReference == null ? Codegen.empty() : this.callerReference;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     @Import(name="cloudfrontAccessIdentityPath")
       private final @Nullable Output<String> cloudfrontAccessIdentityPath;
 
-    public Output<String> getCloudfrontAccessIdentityPath() {
-        return this.cloudfrontAccessIdentityPath == null ? Output.empty() : this.cloudfrontAccessIdentityPath;
+    public Output<String> cloudfrontAccessIdentityPath() {
+        return this.cloudfrontAccessIdentityPath == null ? Codegen.empty() : this.cloudfrontAccessIdentityPath;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     @Import(name="iamArn")
       private final @Nullable Output<String> iamArn;
 
-    public Output<String> getIamArn() {
-        return this.iamArn == null ? Output.empty() : this.iamArn;
+    public Output<String> iamArn() {
+        return this.iamArn == null ? Codegen.empty() : this.iamArn;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     @Import(name="s3CanonicalUserId")
       private final @Nullable Output<String> s3CanonicalUserId;
 
-    public Output<String> getS3CanonicalUserId() {
-        return this.s3CanonicalUserId == null ? Output.empty() : this.s3CanonicalUserId;
+    public Output<String> s3CanonicalUserId() {
+        return this.s3CanonicalUserId == null ? Codegen.empty() : this.s3CanonicalUserId;
     }
 
     public OriginAccessIdentityState(
@@ -103,12 +104,12 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     }
 
     private OriginAccessIdentityState() {
-        this.callerReference = Output.empty();
-        this.cloudfrontAccessIdentityPath = Output.empty();
-        this.comment = Output.empty();
-        this.etag = Output.empty();
-        this.iamArn = Output.empty();
-        this.s3CanonicalUserId = Output.empty();
+        this.callerReference = Codegen.empty();
+        this.cloudfrontAccessIdentityPath = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.iamArn = Codegen.empty();
+        this.s3CanonicalUserId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Output.ofNullable(callerReference);
+            this.callerReference = Codegen.ofNullable(callerReference);
             return this;
         }
         public Builder cloudfrontAccessIdentityPath(@Nullable Output<String> cloudfrontAccessIdentityPath) {
@@ -154,7 +155,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cloudfrontAccessIdentityPath(@Nullable String cloudfrontAccessIdentityPath) {
-            this.cloudfrontAccessIdentityPath = Output.ofNullable(cloudfrontAccessIdentityPath);
+            this.cloudfrontAccessIdentityPath = Codegen.ofNullable(cloudfrontAccessIdentityPath);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -162,7 +163,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -170,7 +171,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder iamArn(@Nullable Output<String> iamArn) {
@@ -178,7 +179,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder iamArn(@Nullable String iamArn) {
-            this.iamArn = Output.ofNullable(iamArn);
+            this.iamArn = Codegen.ofNullable(iamArn);
             return this;
         }
         public Builder s3CanonicalUserId(@Nullable Output<String> s3CanonicalUserId) {
@@ -186,7 +187,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder s3CanonicalUserId(@Nullable String s3CanonicalUserId) {
-            this.s3CanonicalUserId = Output.ofNullable(s3CanonicalUserId);
+            this.s3CanonicalUserId = Codegen.ofNullable(s3CanonicalUserId);
             return this;
         }        public OriginAccessIdentityState build() {
             return new OriginAccessIdentityState(callerReference, cloudfrontAccessIdentityPath, comment, etag, iamArn, s3CanonicalUserId);

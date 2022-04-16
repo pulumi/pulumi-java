@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
     @Import(name="humanLoopActivationConditionsConfig")
       private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
 
-    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> getHumanLoopActivationConditionsConfig() {
-        return this.humanLoopActivationConditionsConfig == null ? Output.empty() : this.humanLoopActivationConditionsConfig;
+    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig() {
+        return this.humanLoopActivationConditionsConfig == null ? Codegen.empty() : this.humanLoopActivationConditionsConfig;
     }
 
     public FlowDefinitionHumanLoopActivationConfigArgs(@Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
@@ -30,7 +31,7 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
     }
 
     private FlowDefinitionHumanLoopActivationConfigArgs() {
-        this.humanLoopActivationConditionsConfig = Output.empty();
+        this.humanLoopActivationConditionsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
             return this;
         }
         public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs humanLoopActivationConditionsConfig) {
-            this.humanLoopActivationConditionsConfig = Output.ofNullable(humanLoopActivationConditionsConfig);
+            this.humanLoopActivationConditionsConfig = Codegen.ofNullable(humanLoopActivationConditionsConfig);
             return this;
         }        public FlowDefinitionHumanLoopActivationConfigArgs build() {
             return new FlowDefinitionHumanLoopActivationConfigArgs(humanLoopActivationConditionsConfig);

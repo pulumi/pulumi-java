@@ -9,6 +9,7 @@ import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,37 +23,37 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="firewallPolicy", type=io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy.class, parameters={})
     private Output<io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> firewallPolicy;
 
-    public Output<io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> getFirewallPolicy() {
+    public Output<io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> firewallPolicy() {
         return this.firewallPolicy;
     }
     @Export(name="firewallPolicyArn", type=String.class, parameters={})
     private Output<String> firewallPolicyArn;
 
-    public Output<String> getFirewallPolicyArn() {
+    public Output<String> firewallPolicyArn() {
         return this.firewallPolicyArn;
     }
     @Export(name="firewallPolicyId", type=String.class, parameters={})
     private Output<String> firewallPolicyId;
 
-    public Output<String> getFirewallPolicyId() {
+    public Output<String> firewallPolicyId() {
         return this.firewallPolicyId;
     }
     @Export(name="firewallPolicyName", type=String.class, parameters={})
     private Output<String> firewallPolicyName;
 
-    public Output<String> getFirewallPolicyName() {
+    public Output<String> firewallPolicyName() {
         return this.firewallPolicyName;
     }
     @Export(name="tags", type=List.class, parameters={FirewallPolicyTag.class})
     private Output</* @Nullable */ List<FirewallPolicyTag>> tags;
 
-    public Output</* @Nullable */ List<FirewallPolicyTag>> getTags() {
+    public Output</* @Nullable */ List<FirewallPolicyTag>> tags() {
         return this.tags;
     }
 
@@ -78,7 +79,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallPolicy(String name, FirewallPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkfirewall:FirewallPolicy", name, args == null ? FirewallPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkfirewall:FirewallPolicy", name, args == null ? FirewallPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirewallPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

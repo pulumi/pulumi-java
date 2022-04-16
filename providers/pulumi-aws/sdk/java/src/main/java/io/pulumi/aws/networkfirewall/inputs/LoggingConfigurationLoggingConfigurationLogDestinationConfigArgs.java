@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     @Import(name="logDestination", required=true)
       private final Output<Map<String,String>> logDestination;
 
-    public Output<Map<String,String>> getLogDestination() {
+    public Output<Map<String,String>> logDestination() {
         return this.logDestination;
     }
 
@@ -35,7 +36,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     @Import(name="logDestinationType", required=true)
       private final Output<String> logDestinationType;
 
-    public Output<String> getLogDestinationType() {
+    public Output<String> logDestinationType() {
         return this.logDestinationType;
     }
 
@@ -46,7 +47,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 
@@ -60,9 +61,9 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     }
 
     private LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs() {
-        this.logDestination = Output.empty();
-        this.logDestinationType = Output.empty();
-        this.logType = Output.empty();
+        this.logDestination = Codegen.empty();
+        this.logDestinationType = Codegen.empty();
+        this.logType = Codegen.empty();
     }
 
     public static Builder builder() {

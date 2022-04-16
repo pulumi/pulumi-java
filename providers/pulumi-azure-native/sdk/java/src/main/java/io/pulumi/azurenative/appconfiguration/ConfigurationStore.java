@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The creation date of configuration store.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -60,7 +61,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The encryption settings of the configuration store.
      * 
      */
-    public Output</* @Nullable */ EncryptionPropertiesResponse> getEncryption() {
+    public Output</* @Nullable */ EncryptionPropertiesResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -74,7 +75,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The DNS endpoint where the configuration store API will be available.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -88,7 +89,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The managed identity information, if configured.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -102,7 +103,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +117,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +131,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The list of private endpoint connections that are set up for this resource.
      * 
      */
-    public Output<List<PrivateEndpointConnectionReferenceResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionReferenceResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -144,7 +145,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the configuration store.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -158,7 +159,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -172,7 +173,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The sku of the configuration store.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -186,7 +187,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -200,7 +201,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -226,7 +227,7 @@ public class ConfigurationStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationStore(String name, ConfigurationStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appconfiguration:ConfigurationStore", name, args == null ? ConfigurationStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:appconfiguration:ConfigurationStore", name, args == null ? ConfigurationStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfigurationStore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

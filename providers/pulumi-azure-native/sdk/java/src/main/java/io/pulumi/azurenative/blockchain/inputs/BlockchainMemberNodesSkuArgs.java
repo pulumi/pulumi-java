@@ -5,6 +5,7 @@ package io.pulumi.azurenative.blockchain.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<Integer> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     public BlockchainMemberNodesSkuArgs(@Nullable Output<Integer> capacity) {
@@ -34,7 +35,7 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
     }
 
     private BlockchainMemberNodesSkuArgs() {
-        this.capacity = Output.empty();
+        this.capacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }        public BlockchainMemberNodesSkuArgs build() {
             return new BlockchainMemberNodesSkuArgs(capacity);

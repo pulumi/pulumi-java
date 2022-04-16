@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
 
@@ -35,7 +36,7 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,8 +48,8 @@ public final class AzureAppPushReceiverArgs extends io.pulumi.resources.Resource
     }
 
     private AzureAppPushReceiverArgs() {
-        this.emailAddress = Output.empty();
-        this.name = Output.empty();
+        this.emailAddress = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

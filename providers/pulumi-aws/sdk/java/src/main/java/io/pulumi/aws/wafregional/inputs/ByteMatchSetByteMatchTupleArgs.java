@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleFieldToMatchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     @Import(name="fieldToMatch", required=true)
       private final Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
 
-    public Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> getFieldToMatch() {
+    public Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -33,7 +34,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     @Import(name="positionalConstraint", required=true)
       private final Output<String> positionalConstraint;
 
-    public Output<String> getPositionalConstraint() {
+    public Output<String> positionalConstraint() {
         return this.positionalConstraint;
     }
 
@@ -44,8 +45,8 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     @Import(name="targetString")
       private final @Nullable Output<String> targetString;
 
-    public Output<String> getTargetString() {
-        return this.targetString == null ? Output.empty() : this.targetString;
+    public Output<String> targetString() {
+        return this.targetString == null ? Codegen.empty() : this.targetString;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
@@ -71,10 +72,10 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
     }
 
     private ByteMatchSetByteMatchTupleArgs() {
-        this.fieldToMatch = Output.empty();
-        this.positionalConstraint = Output.empty();
-        this.targetString = Output.empty();
-        this.textTransformation = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.positionalConstraint = Codegen.empty();
+        this.targetString = Codegen.empty();
+        this.textTransformation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder targetString(@Nullable String targetString) {
-            this.targetString = Output.ofNullable(targetString);
+            this.targetString = Codegen.ofNullable(targetString);
             return this;
         }
         public Builder textTransformation(Output<String> textTransformation) {

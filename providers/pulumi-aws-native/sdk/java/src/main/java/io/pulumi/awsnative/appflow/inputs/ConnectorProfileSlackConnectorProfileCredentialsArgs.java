@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+    public Output<String> accessToken() {
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -44,7 +45,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -55,8 +56,8 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
-    public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
-        return this.connectorOAuthRequest == null ? Output.empty() : this.connectorOAuthRequest;
+    public Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest() {
+        return this.connectorOAuthRequest == null ? Codegen.empty() : this.connectorOAuthRequest;
     }
 
     public ConnectorProfileSlackConnectorProfileCredentialsArgs(
@@ -71,10 +72,10 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     }
 
     private ConnectorProfileSlackConnectorProfileCredentialsArgs() {
-        this.accessToken = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.connectorOAuthRequest = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.connectorOAuthRequest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder clientId(Output<String> clientId) {
@@ -132,7 +133,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
             return this;
         }
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
-            this.connectorOAuthRequest = Output.ofNullable(connectorOAuthRequest);
+            this.connectorOAuthRequest = Codegen.ofNullable(connectorOAuthRequest);
             return this;
         }        public ConnectorProfileSlackConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSlackConnectorProfileCredentialsArgs(accessToken, clientId, clientSecret, connectorOAuthRequest);

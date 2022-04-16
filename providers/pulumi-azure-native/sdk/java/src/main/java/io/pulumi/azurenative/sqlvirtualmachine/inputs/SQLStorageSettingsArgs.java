@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="defaultFilePath")
       private final @Nullable Output<String> defaultFilePath;
 
-    public Output<String> getDefaultFilePath() {
-        return this.defaultFilePath == null ? Output.empty() : this.defaultFilePath;
+    public Output<String> defaultFilePath() {
+        return this.defaultFilePath == null ? Codegen.empty() : this.defaultFilePath;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="luns")
       private final @Nullable Output<List<Integer>> luns;
 
-    public Output<List<Integer>> getLuns() {
-        return this.luns == null ? Output.empty() : this.luns;
+    public Output<List<Integer>> luns() {
+        return this.luns == null ? Codegen.empty() : this.luns;
     }
 
     public SQLStorageSettingsArgs(
@@ -50,8 +51,8 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SQLStorageSettingsArgs() {
-        this.defaultFilePath = Output.empty();
-        this.luns = Output.empty();
+        this.defaultFilePath = Codegen.empty();
+        this.luns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder defaultFilePath(@Nullable String defaultFilePath) {
-            this.defaultFilePath = Output.ofNullable(defaultFilePath);
+            this.defaultFilePath = Codegen.ofNullable(defaultFilePath);
             return this;
         }
         public Builder luns(@Nullable Output<List<Integer>> luns) {
@@ -89,7 +90,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder luns(@Nullable List<Integer> luns) {
-            this.luns = Output.ofNullable(luns);
+            this.luns = Codegen.ofNullable(luns);
             return this;
         }
         public Builder luns(Integer... luns) {

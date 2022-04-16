@@ -9,6 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TransformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
 
-    public Output<DataFlowFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+    public Output<DataFlowFolderArgs> folder() {
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+    public Output<String> script() {
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptLines")
       private final @Nullable Output<List<String>> scriptLines;
 
-    public Output<List<String>> getScriptLines() {
-        return this.scriptLines == null ? Output.empty() : this.scriptLines;
+    public Output<List<String>> scriptLines() {
+        return this.scriptLines == null ? Codegen.empty() : this.scriptLines;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinks")
       private final @Nullable Output<List<DataFlowSinkArgs>> sinks;
 
-    public Output<List<DataFlowSinkArgs>> getSinks() {
-        return this.sinks == null ? Output.empty() : this.sinks;
+    public Output<List<DataFlowSinkArgs>> sinks() {
+        return this.sinks == null ? Codegen.empty() : this.sinks;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sources")
       private final @Nullable Output<List<DataFlowSourceArgs>> sources;
 
-    public Output<List<DataFlowSourceArgs>> getSources() {
-        return this.sources == null ? Output.empty() : this.sources;
+    public Output<List<DataFlowSourceArgs>> sources() {
+        return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transformations")
       private final @Nullable Output<List<TransformationArgs>> transformations;
 
-    public Output<List<TransformationArgs>> getTransformations() {
-        return this.transformations == null ? Output.empty() : this.transformations;
+    public Output<List<TransformationArgs>> transformations() {
+        return this.transformations == null ? Codegen.empty() : this.transformations;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -146,15 +147,15 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowletArgs() {
-        this.annotations = Output.empty();
-        this.description = Output.empty();
-        this.folder = Output.empty();
-        this.script = Output.empty();
-        this.scriptLines = Output.empty();
-        this.sinks = Output.empty();
-        this.sources = Output.empty();
-        this.transformations = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.script = Codegen.empty();
+        this.scriptLines = Codegen.empty();
+        this.sinks = Codegen.empty();
+        this.sources = Codegen.empty();
+        this.transformations = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -209,7 +210,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
@@ -217,7 +218,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folder(@Nullable DataFlowFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -225,7 +226,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }
         public Builder scriptLines(@Nullable Output<List<String>> scriptLines) {
@@ -233,7 +234,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptLines(@Nullable List<String> scriptLines) {
-            this.scriptLines = Output.ofNullable(scriptLines);
+            this.scriptLines = Codegen.ofNullable(scriptLines);
             return this;
         }
         public Builder scriptLines(String... scriptLines) {
@@ -244,7 +245,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinks(@Nullable List<DataFlowSinkArgs> sinks) {
-            this.sinks = Output.ofNullable(sinks);
+            this.sinks = Codegen.ofNullable(sinks);
             return this;
         }
         public Builder sinks(DataFlowSinkArgs... sinks) {
@@ -255,7 +256,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sources(@Nullable List<DataFlowSourceArgs> sources) {
-            this.sources = Output.ofNullable(sources);
+            this.sources = Codegen.ofNullable(sources);
             return this;
         }
         public Builder sources(DataFlowSourceArgs... sources) {
@@ -266,7 +267,7 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transformations(@Nullable List<TransformationArgs> transformations) {
-            this.transformations = Output.ofNullable(transformations);
+            this.transformations = Codegen.ofNullable(transformations);
             return this;
         }
         public Builder transformations(TransformationArgs... transformations) {

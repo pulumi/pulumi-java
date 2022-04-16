@@ -21,7 +21,7 @@ public final class AutoUserSpecificationResponse extends io.pulumi.resources.Inv
     @Import(name="elevationLevel")
       private final @Nullable String elevationLevel;
 
-    public Optional<String> getElevationLevel() {
+    public Optional<String> elevationLevel() {
         return this.elevationLevel == null ? Optional.empty() : Optional.ofNullable(this.elevationLevel);
     }
 
@@ -32,7 +32,7 @@ public final class AutoUserSpecificationResponse extends io.pulumi.resources.Inv
     @Import(name="scope")
       private final @Nullable String scope;
 
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 

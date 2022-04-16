@@ -5,6 +5,7 @@ package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -33,8 +34,8 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="organization", required=true)
       private final Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
 
@@ -57,7 +58,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 
@@ -69,7 +70,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="streamingConfig", required=true)
       private final Output<NotificationConfigStreamingConfigArgs> streamingConfig;
 
-    public Output<NotificationConfigStreamingConfigArgs> getStreamingConfig() {
+    public Output<NotificationConfigStreamingConfigArgs> streamingConfig() {
         return this.streamingConfig;
     }
 
@@ -87,11 +88,11 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NotificationConfigArgs() {
-        this.configId = Output.empty();
-        this.description = Output.empty();
-        this.organization = Output.empty();
-        this.pubsubTopic = Output.empty();
-        this.streamingConfig = Output.empty();
+        this.configId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.pubsubTopic = Codegen.empty();
+        this.streamingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder organization(Output<String> organization) {

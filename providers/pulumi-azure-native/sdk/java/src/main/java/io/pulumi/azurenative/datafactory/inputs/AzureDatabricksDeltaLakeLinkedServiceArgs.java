@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken() {
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="clusterId")
       private final @Nullable Output<Object> clusterId;
 
-    public Output<Object> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+    public Output<Object> clusterId() {
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+    public Output<CredentialReferenceArgs> credential() {
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="domain", required=true)
       private final Output<Object> domain;
 
-    public Output<Object> getDomain() {
+    public Output<Object> domain() {
         return this.domain;
     }
 
@@ -111,8 +112,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -145,8 +146,8 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     @Import(name="workspaceResourceId")
       private final @Nullable Output<Object> workspaceResourceId;
 
-    public Output<Object> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
+    public Output<Object> workspaceResourceId() {
+        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 
     public AzureDatabricksDeltaLakeLinkedServiceArgs(
@@ -175,17 +176,17 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
     }
 
     private AzureDatabricksDeltaLakeLinkedServiceArgs() {
-        this.accessToken = Output.empty();
-        this.annotations = Output.empty();
-        this.clusterId = Output.empty();
-        this.connectVia = Output.empty();
-        this.credential = Output.empty();
-        this.description = Output.empty();
-        this.domain = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.type = Output.empty();
-        this.workspaceResourceId = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.description = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
+        this.workspaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -241,7 +242,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -252,7 +253,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder clusterId(@Nullable Object clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -260,7 +261,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
@@ -268,7 +269,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -276,7 +277,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder domain(Output<Object> domain) {
@@ -292,7 +293,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -300,7 +301,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -316,7 +317,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
-            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
             return this;
         }        public AzureDatabricksDeltaLakeLinkedServiceArgs build() {
             return new AzureDatabricksDeltaLakeLinkedServiceArgs(accessToken, annotations, clusterId, connectVia, credential, description, domain, encryptedCredential, parameters, type, workspaceResourceId);

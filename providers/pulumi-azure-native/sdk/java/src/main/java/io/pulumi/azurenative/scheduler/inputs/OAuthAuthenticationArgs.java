@@ -5,6 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+    public Output<String> audience() {
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<String> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
-    public Output<String> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+    public Output<String> tenant() {
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -84,11 +85,11 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     }
 
     private OAuthAuthenticationArgs() {
-        this.audience = Output.empty();
-        this.clientId = Output.empty();
-        this.secret = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
+        this.audience = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -132,7 +133,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -140,7 +141,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder tenant(@Nullable Output<String> tenant) {
@@ -148,7 +149,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tenant(@Nullable String tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }
         public Builder type(Output<String> type) {

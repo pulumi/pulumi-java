@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateMySqlAzureDbForMySqlSyn
 import io.pulumi.azurenative.datamigration.inputs.MySqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -37,7 +38,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -48,7 +49,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -62,9 +63,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
     }
 
     private MigrateMySqlAzureDbForMySqlSyncTaskInputArgs() {
-        this.selectedDatabases = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.selectedDatabases = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {

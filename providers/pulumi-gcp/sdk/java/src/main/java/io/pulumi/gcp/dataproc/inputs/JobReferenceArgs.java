@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
-        return this.jobId == null ? Output.empty() : this.jobId;
+    public Output<String> jobId() {
+        return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     public JobReferenceArgs(@Nullable Output<String> jobId) {
@@ -26,7 +27,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobReferenceArgs() {
-        this.jobId = Output.empty();
+        this.jobId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Output.ofNullable(jobId);
+            this.jobId = Codegen.ofNullable(jobId);
             return this;
         }        public JobReferenceArgs build() {
             return new JobReferenceArgs(jobId);

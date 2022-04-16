@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientValidationCa")
       private final @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
 
-    public Output<List<ValidationCAArgs>> getClientValidationCa() {
-        return this.clientValidationCa == null ? Output.empty() : this.clientValidationCa;
+    public Output<List<ValidationCAArgs>> clientValidationCa() {
+        return this.clientValidationCa == null ? Codegen.empty() : this.clientValidationCa;
     }
 
     public MTLSPolicyArgs(@Nullable Output<List<ValidationCAArgs>> clientValidationCa) {
@@ -35,7 +36,7 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MTLSPolicyArgs() {
-        this.clientValidationCa = Output.empty();
+        this.clientValidationCa = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientValidationCa(@Nullable List<ValidationCAArgs> clientValidationCa) {
-            this.clientValidationCa = Output.ofNullable(clientValidationCa);
+            this.clientValidationCa = Codegen.ofNullable(clientValidationCa);
             return this;
         }
         public Builder clientValidationCa(ValidationCAArgs... clientValidationCa) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.ServerInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="groupMembers", required=true)
       private final Output<List<ServerInfoArgs>> groupMembers;
 
-    public Output<List<ServerInfoArgs>> getGroupMembers() {
+    public Output<List<ServerInfoArgs>> groupMembers() {
         return this.groupMembers;
     }
 
@@ -34,7 +35,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="locationName", required=true)
       private final Output<String> locationName;
 
-    public Output<String> getLocationName() {
+    public Output<String> locationName() {
         return this.locationName;
     }
 
@@ -45,7 +46,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,8 +57,8 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverTrustGroupName")
       private final @Nullable Output<String> serverTrustGroupName;
 
-    public Output<String> getServerTrustGroupName() {
-        return this.serverTrustGroupName == null ? Output.empty() : this.serverTrustGroupName;
+    public Output<String> serverTrustGroupName() {
+        return this.serverTrustGroupName == null ? Codegen.empty() : this.serverTrustGroupName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="trustScopes", required=true)
       private final Output<List<String>> trustScopes;
 
-    public Output<List<String>> getTrustScopes() {
+    public Output<List<String>> trustScopes() {
         return this.trustScopes;
     }
 
@@ -85,11 +86,11 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServerTrustGroupArgs() {
-        this.groupMembers = Output.empty();
-        this.locationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverTrustGroupName = Output.empty();
-        this.trustScopes = Output.empty();
+        this.groupMembers = Codegen.empty();
+        this.locationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverTrustGroupName = Codegen.empty();
+        this.trustScopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serverTrustGroupName(@Nullable String serverTrustGroupName) {
-            this.serverTrustGroupName = Output.ofNullable(serverTrustGroupName);
+            this.serverTrustGroupName = Codegen.ofNullable(serverTrustGroupName);
             return this;
         }
         public Builder trustScopes(Output<List<String>> trustScopes) {

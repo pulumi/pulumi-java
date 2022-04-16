@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="awsServiceName", required=true)
       private final Output<String> awsServiceName;
 
-    public Output<String> getAwsServiceName() {
+    public Output<String> awsServiceName() {
         return this.awsServiceName;
     }
 
@@ -33,8 +34,8 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customSuffix")
       private final @Nullable Output<String> customSuffix;
 
-    public Output<String> getCustomSuffix() {
-        return this.customSuffix == null ? Output.empty() : this.customSuffix;
+    public Output<String> customSuffix() {
+        return this.customSuffix == null ? Codegen.empty() : this.customSuffix;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ServiceLinkedRoleArgs(
@@ -84,11 +85,11 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceLinkedRoleArgs() {
-        this.awsServiceName = Output.empty();
-        this.customSuffix = Output.empty();
-        this.description = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.awsServiceName = Codegen.empty();
+        this.customSuffix = Codegen.empty();
+        this.description = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder customSuffix(@Nullable String customSuffix) {
-            this.customSuffix = Output.ofNullable(customSuffix);
+            this.customSuffix = Codegen.ofNullable(customSuffix);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -140,7 +141,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -148,7 +149,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -156,7 +157,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ServiceLinkedRoleArgs build() {
             return new ServiceLinkedRoleArgs(awsServiceName, customSuffix, description, tags, tagsAll);

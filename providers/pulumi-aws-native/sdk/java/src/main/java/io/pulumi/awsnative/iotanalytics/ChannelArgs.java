@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.ChannelStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,29 +22,29 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
-    public Output<String> getChannelName() {
-        return this.channelName == null ? Output.empty() : this.channelName;
+    public Output<String> channelName() {
+        return this.channelName == null ? Codegen.empty() : this.channelName;
     }
 
     @Import(name="channelStorage")
       private final @Nullable Output<ChannelStorageArgs> channelStorage;
 
-    public Output<ChannelStorageArgs> getChannelStorage() {
-        return this.channelStorage == null ? Output.empty() : this.channelStorage;
+    public Output<ChannelStorageArgs> channelStorage() {
+        return this.channelStorage == null ? Codegen.empty() : this.channelStorage;
     }
 
     @Import(name="retentionPeriod")
       private final @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
 
-    public Output<ChannelRetentionPeriodArgs> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
+    public Output<ChannelRetentionPeriodArgs> retentionPeriod() {
+        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Output<List<ChannelTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ChannelTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ChannelArgs(
@@ -58,10 +59,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.channelName = Output.empty();
-        this.channelStorage = Output.empty();
-        this.retentionPeriod = Output.empty();
-        this.tags = Output.empty();
+        this.channelName = Codegen.empty();
+        this.channelStorage = Codegen.empty();
+        this.retentionPeriod = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelName(@Nullable String channelName) {
-            this.channelName = Output.ofNullable(channelName);
+            this.channelName = Codegen.ofNullable(channelName);
             return this;
         }
         public Builder channelStorage(@Nullable Output<ChannelStorageArgs> channelStorage) {
@@ -103,7 +104,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelStorage(@Nullable ChannelStorageArgs channelStorage) {
-            this.channelStorage = Output.ofNullable(channelStorage);
+            this.channelStorage = Codegen.ofNullable(channelStorage);
             return this;
         }
         public Builder retentionPeriod(@Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod) {
@@ -111,7 +112,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPeriod(@Nullable ChannelRetentionPeriodArgs retentionPeriod) {
-            this.retentionPeriod = Output.ofNullable(retentionPeriod);
+            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
             return this;
         }
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
@@ -119,7 +120,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ChannelTagArgs... tags) {

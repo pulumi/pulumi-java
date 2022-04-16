@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsGetArgs;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationGetArgs;
 import java.lang.Boolean;
@@ -24,8 +25,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="commitment")
       private final @Nullable Output<String> commitment;
 
-    public Output<String> getCommitment() {
-        return this.commitment == null ? Output.empty() : this.commitment;
+    public Output<String> commitment() {
+        return this.commitment == null ? Codegen.empty() : this.commitment;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareSettings")
       private final @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
 
-    public Output<ReservationShareSettingsGetArgs> getShareSettings() {
-        return this.shareSettings == null ? Output.empty() : this.shareSettings;
+    public Output<ReservationShareSettingsGetArgs> shareSettings() {
+        return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="specificReservation")
       private final @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
 
-    public Output<ReservationSpecificReservationGetArgs> getSpecificReservation() {
-        return this.specificReservation == null ? Output.empty() : this.specificReservation;
+    public Output<ReservationSpecificReservationGetArgs> specificReservation() {
+        return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="specificReservationRequired")
       private final @Nullable Output<Boolean> specificReservationRequired;
 
-    public Output<Boolean> getSpecificReservationRequired() {
-        return this.specificReservationRequired == null ? Output.empty() : this.specificReservationRequired;
+    public Output<Boolean> specificReservationRequired() {
+        return this.specificReservationRequired == null ? Codegen.empty() : this.specificReservationRequired;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public ReservationState(
@@ -175,17 +176,17 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReservationState() {
-        this.commitment = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.shareSettings = Output.empty();
-        this.specificReservation = Output.empty();
-        this.specificReservationRequired = Output.empty();
-        this.status = Output.empty();
-        this.zone = Output.empty();
+        this.commitment = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.shareSettings = Codegen.empty();
+        this.specificReservation = Codegen.empty();
+        this.specificReservationRequired = Codegen.empty();
+        this.status = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commitment(@Nullable String commitment) {
-            this.commitment = Output.ofNullable(commitment);
+            this.commitment = Codegen.ofNullable(commitment);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -241,7 +242,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -249,7 +250,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -257,7 +258,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -265,7 +266,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -273,7 +274,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder shareSettings(@Nullable Output<ReservationShareSettingsGetArgs> shareSettings) {
@@ -281,7 +282,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareSettings(@Nullable ReservationShareSettingsGetArgs shareSettings) {
-            this.shareSettings = Output.ofNullable(shareSettings);
+            this.shareSettings = Codegen.ofNullable(shareSettings);
             return this;
         }
         public Builder specificReservation(@Nullable Output<ReservationSpecificReservationGetArgs> specificReservation) {
@@ -289,7 +290,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder specificReservation(@Nullable ReservationSpecificReservationGetArgs specificReservation) {
-            this.specificReservation = Output.ofNullable(specificReservation);
+            this.specificReservation = Codegen.ofNullable(specificReservation);
             return this;
         }
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
@@ -297,7 +298,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
-            this.specificReservationRequired = Output.ofNullable(specificReservationRequired);
+            this.specificReservationRequired = Codegen.ofNullable(specificReservationRequired);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -305,7 +306,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -313,7 +314,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public ReservationState build() {
             return new ReservationState(commitment, creationTimestamp, description, name, project, selfLink, shareSettings, specificReservation, specificReservationRequired, status, zone);

@@ -6,6 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.TriggerPredicateConditionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="conditions", required=true)
       private final Output<List<TriggerPredicateConditionGetArgs>> conditions;
 
-    public Output<List<TriggerPredicateConditionGetArgs>> getConditions() {
+    public Output<List<TriggerPredicateConditionGetArgs>> conditions() {
         return this.conditions;
     }
 
@@ -34,8 +35,8 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="logical")
       private final @Nullable Output<String> logical;
 
-    public Output<String> getLogical() {
-        return this.logical == null ? Output.empty() : this.logical;
+    public Output<String> logical() {
+        return this.logical == null ? Codegen.empty() : this.logical;
     }
 
     public TriggerPredicateGetArgs(
@@ -46,8 +47,8 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private TriggerPredicateGetArgs() {
-        this.conditions = Output.empty();
-        this.logical = Output.empty();
+        this.conditions = Codegen.empty();
+        this.logical = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder logical(@Nullable String logical) {
-            this.logical = Output.ofNullable(logical);
+            this.logical = Codegen.ofNullable(logical);
             return this;
         }        public TriggerPredicateGetArgs build() {
             return new TriggerPredicateGetArgs(conditions, logical);

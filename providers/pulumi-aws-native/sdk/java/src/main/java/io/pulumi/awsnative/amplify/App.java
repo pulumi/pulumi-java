@@ -13,6 +13,7 @@ import io.pulumi.awsnative.amplify.outputs.AppTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,109 +28,109 @@ public class App extends io.pulumi.resources.CustomResource {
     @Export(name="accessToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessToken;
 
-    public Output</* @Nullable */ String> getAccessToken() {
+    public Output</* @Nullable */ String> accessToken() {
         return this.accessToken;
     }
     @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     @Export(name="appName", type=String.class, parameters={})
     private Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="autoBranchCreationConfig", type=AppAutoBranchCreationConfig.class, parameters={})
     private Output</* @Nullable */ AppAutoBranchCreationConfig> autoBranchCreationConfig;
 
-    public Output</* @Nullable */ AppAutoBranchCreationConfig> getAutoBranchCreationConfig() {
+    public Output</* @Nullable */ AppAutoBranchCreationConfig> autoBranchCreationConfig() {
         return this.autoBranchCreationConfig;
     }
     @Export(name="basicAuthConfig", type=AppBasicAuthConfig.class, parameters={})
     private Output</* @Nullable */ AppBasicAuthConfig> basicAuthConfig;
 
-    public Output</* @Nullable */ AppBasicAuthConfig> getBasicAuthConfig() {
+    public Output</* @Nullable */ AppBasicAuthConfig> basicAuthConfig() {
         return this.basicAuthConfig;
     }
     @Export(name="buildSpec", type=String.class, parameters={})
     private Output</* @Nullable */ String> buildSpec;
 
-    public Output</* @Nullable */ String> getBuildSpec() {
+    public Output</* @Nullable */ String> buildSpec() {
         return this.buildSpec;
     }
     @Export(name="customHeaders", type=String.class, parameters={})
     private Output</* @Nullable */ String> customHeaders;
 
-    public Output</* @Nullable */ String> getCustomHeaders() {
+    public Output</* @Nullable */ String> customHeaders() {
         return this.customHeaders;
     }
     @Export(name="customRules", type=List.class, parameters={AppCustomRule.class})
     private Output</* @Nullable */ List<AppCustomRule>> customRules;
 
-    public Output</* @Nullable */ List<AppCustomRule>> getCustomRules() {
+    public Output</* @Nullable */ List<AppCustomRule>> customRules() {
         return this.customRules;
     }
     @Export(name="defaultDomain", type=String.class, parameters={})
     private Output<String> defaultDomain;
 
-    public Output<String> getDefaultDomain() {
+    public Output<String> defaultDomain() {
         return this.defaultDomain;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="enableBranchAutoDeletion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBranchAutoDeletion;
 
-    public Output</* @Nullable */ Boolean> getEnableBranchAutoDeletion() {
+    public Output</* @Nullable */ Boolean> enableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion;
     }
     @Export(name="environmentVariables", type=List.class, parameters={AppEnvironmentVariable.class})
     private Output</* @Nullable */ List<AppEnvironmentVariable>> environmentVariables;
 
-    public Output</* @Nullable */ List<AppEnvironmentVariable>> getEnvironmentVariables() {
+    public Output</* @Nullable */ List<AppEnvironmentVariable>> environmentVariables() {
         return this.environmentVariables;
     }
     @Export(name="iAMServiceRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> iAMServiceRole;
 
-    public Output</* @Nullable */ String> getIAMServiceRole() {
+    public Output</* @Nullable */ String> iAMServiceRole() {
         return this.iAMServiceRole;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="oauthToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> oauthToken;
 
-    public Output</* @Nullable */ String> getOauthToken() {
+    public Output</* @Nullable */ String> oauthToken() {
         return this.oauthToken;
     }
     @Export(name="repository", type=String.class, parameters={})
     private Output</* @Nullable */ String> repository;
 
-    public Output</* @Nullable */ String> getRepository() {
+    public Output</* @Nullable */ String> repository() {
         return this.repository;
     }
     @Export(name="tags", type=List.class, parameters={AppTag.class})
     private Output</* @Nullable */ List<AppTag>> tags;
 
-    public Output</* @Nullable */ List<AppTag>> getTags() {
+    public Output</* @Nullable */ List<AppTag>> tags() {
         return this.tags;
     }
 
@@ -155,7 +156,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public App(String name, @Nullable AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:amplify:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:amplify:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private App(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

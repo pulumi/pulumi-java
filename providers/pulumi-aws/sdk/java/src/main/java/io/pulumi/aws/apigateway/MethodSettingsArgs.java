@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway;
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methodPath", required=true)
       private final Output<String> methodPath;
 
-    public Output<String> getMethodPath() {
+    public Output<String> methodPath() {
         return this.methodPath;
     }
 
@@ -32,7 +33,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -43,7 +44,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="settings", required=true)
       private final Output<MethodSettingsSettingsArgs> settings;
 
-    public Output<MethodSettingsSettingsArgs> getSettings() {
+    public Output<MethodSettingsSettingsArgs> settings() {
         return this.settings;
     }
 
@@ -54,7 +55,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageName", required=true)
       private final Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
 
@@ -70,10 +71,10 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodSettingsArgs() {
-        this.methodPath = Output.empty();
-        this.restApi = Output.empty();
-        this.settings = Output.empty();
-        this.stageName = Output.empty();
+        this.methodPath = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {

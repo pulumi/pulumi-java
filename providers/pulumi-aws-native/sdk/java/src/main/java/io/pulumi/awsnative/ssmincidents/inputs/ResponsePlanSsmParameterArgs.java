@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +22,14 @@ public final class ResponsePlanSsmParameterArgs extends io.pulumi.resources.Reso
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 
@@ -40,8 +41,8 @@ public final class ResponsePlanSsmParameterArgs extends io.pulumi.resources.Reso
     }
 
     private ResponsePlanSsmParameterArgs() {
-        this.key = Output.empty();
-        this.values = Output.empty();
+        this.key = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

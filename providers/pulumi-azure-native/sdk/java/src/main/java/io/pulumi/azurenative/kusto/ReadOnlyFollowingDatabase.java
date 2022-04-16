@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The name of the attached database configuration cluster
      * 
      */
-    public Output<String> getAttachedDatabaseConfigurationName() {
+    public Output<String> attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
@@ -56,7 +57,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The time the data should be kept in cache for fast queries in TimeSpan.
      * 
      */
-    public Output</* @Nullable */ String> getHotCachePeriod() {
+    public Output</* @Nullable */ String> hotCachePeriod() {
         return this.hotCachePeriod;
     }
     /**
@@ -72,7 +73,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * Expected value is 'ReadOnlyFollowing'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -86,7 +87,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The name of the leader cluster
      * 
      */
-    public Output<String> getLeaderClusterResourceId() {
+    public Output<String> leaderClusterResourceId() {
         return this.leaderClusterResourceId;
     }
     /**
@@ -100,7 +101,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -114,7 +115,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The principals modification kind of the database
      * 
      */
-    public Output<String> getPrincipalsModificationKind() {
+    public Output<String> principalsModificationKind() {
         return this.principalsModificationKind;
     }
     /**
@@ -142,7 +143,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -156,7 +157,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
      */
-    public Output<String> getSoftDeletePeriod() {
+    public Output<String> softDeletePeriod() {
         return this.softDeletePeriod;
     }
     /**
@@ -170,7 +171,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The statistics of the database.
      * 
      */
-    public Output<DatabaseStatisticsResponse> getStatistics() {
+    public Output<DatabaseStatisticsResponse> statistics() {
         return this.statistics;
     }
     /**
@@ -184,7 +185,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -210,7 +211,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ReadOnlyFollowingDatabase(String name, ReadOnlyFollowingDatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kusto:ReadOnlyFollowingDatabase", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:kusto:ReadOnlyFollowingDatabase", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReadOnlyFollowingDatabase(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

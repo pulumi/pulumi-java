@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyVaultUri")
       private final @Nullable Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
-        return this.keyVaultUri == null ? Output.empty() : this.keyVaultUri;
+    public Output<String> keyVaultUri() {
+        return this.keyVaultUri == null ? Codegen.empty() : this.keyVaultUri;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
-        return this.keyVersion == null ? Output.empty() : this.keyVersion;
+    public Output<String> keyVersion() {
+        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
     public KeyVaultPropertiesArgs(
@@ -61,9 +62,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private KeyVaultPropertiesArgs() {
-        this.keyName = Output.empty();
-        this.keyVaultUri = Output.empty();
-        this.keyVersion = Output.empty();
+        this.keyName = Codegen.empty();
+        this.keyVaultUri = Codegen.empty();
+        this.keyVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
@@ -103,7 +104,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = Output.ofNullable(keyVaultUri);
+            this.keyVaultUri = Codegen.ofNullable(keyVaultUri);
             return this;
         }
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
@@ -111,7 +112,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Output.ofNullable(keyVersion);
+            this.keyVersion = Codegen.ofNullable(keyVersion);
             return this;
         }        public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(keyName, keyVaultUri, keyVersion);

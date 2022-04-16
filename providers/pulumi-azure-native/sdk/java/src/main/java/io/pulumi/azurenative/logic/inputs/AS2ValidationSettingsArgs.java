@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.enums.SigningAlgorithm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="checkCertificateRevocationListOnReceive", required=true)
       private final Output<Boolean> checkCertificateRevocationListOnReceive;
 
-    public Output<Boolean> getCheckCertificateRevocationListOnReceive() {
+    public Output<Boolean> checkCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
 
@@ -41,7 +42,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="checkCertificateRevocationListOnSend", required=true)
       private final Output<Boolean> checkCertificateRevocationListOnSend;
 
-    public Output<Boolean> getCheckCertificateRevocationListOnSend() {
+    public Output<Boolean> checkCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
 
@@ -52,7 +53,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="checkDuplicateMessage", required=true)
       private final Output<Boolean> checkDuplicateMessage;
 
-    public Output<Boolean> getCheckDuplicateMessage() {
+    public Output<Boolean> checkDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
 
@@ -63,7 +64,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="compressMessage", required=true)
       private final Output<Boolean> compressMessage;
 
-    public Output<Boolean> getCompressMessage() {
+    public Output<Boolean> compressMessage() {
         return this.compressMessage;
     }
 
@@ -74,7 +75,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="encryptMessage", required=true)
       private final Output<Boolean> encryptMessage;
 
-    public Output<Boolean> getEncryptMessage() {
+    public Output<Boolean> encryptMessage() {
         return this.encryptMessage;
     }
 
@@ -85,7 +86,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="encryptionAlgorithm", required=true)
       private final Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
 
-    public Output<Either<String,EncryptionAlgorithm>> getEncryptionAlgorithm() {
+    public Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
@@ -96,7 +97,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="interchangeDuplicatesValidityDays", required=true)
       private final Output<Integer> interchangeDuplicatesValidityDays;
 
-    public Output<Integer> getInterchangeDuplicatesValidityDays() {
+    public Output<Integer> interchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
 
@@ -107,7 +108,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="overrideMessageProperties", required=true)
       private final Output<Boolean> overrideMessageProperties;
 
-    public Output<Boolean> getOverrideMessageProperties() {
+    public Output<Boolean> overrideMessageProperties() {
         return this.overrideMessageProperties;
     }
 
@@ -118,7 +119,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="signMessage", required=true)
       private final Output<Boolean> signMessage;
 
-    public Output<Boolean> getSignMessage() {
+    public Output<Boolean> signMessage() {
         return this.signMessage;
     }
 
@@ -129,8 +130,8 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="signingAlgorithm")
       private final @Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm;
 
-    public Output<Either<String,SigningAlgorithm>> getSigningAlgorithm() {
-        return this.signingAlgorithm == null ? Output.empty() : this.signingAlgorithm;
+    public Output<Either<String,SigningAlgorithm>> signingAlgorithm() {
+        return this.signingAlgorithm == null ? Codegen.empty() : this.signingAlgorithm;
     }
 
     public AS2ValidationSettingsArgs(
@@ -157,16 +158,16 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private AS2ValidationSettingsArgs() {
-        this.checkCertificateRevocationListOnReceive = Output.empty();
-        this.checkCertificateRevocationListOnSend = Output.empty();
-        this.checkDuplicateMessage = Output.empty();
-        this.compressMessage = Output.empty();
-        this.encryptMessage = Output.empty();
-        this.encryptionAlgorithm = Output.empty();
-        this.interchangeDuplicatesValidityDays = Output.empty();
-        this.overrideMessageProperties = Output.empty();
-        this.signMessage = Output.empty();
-        this.signingAlgorithm = Output.empty();
+        this.checkCertificateRevocationListOnReceive = Codegen.empty();
+        this.checkCertificateRevocationListOnSend = Codegen.empty();
+        this.checkDuplicateMessage = Codegen.empty();
+        this.compressMessage = Codegen.empty();
+        this.encryptMessage = Codegen.empty();
+        this.encryptionAlgorithm = Codegen.empty();
+        this.interchangeDuplicatesValidityDays = Codegen.empty();
+        this.overrideMessageProperties = Codegen.empty();
+        this.signMessage = Codegen.empty();
+        this.signingAlgorithm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -284,7 +285,7 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder signingAlgorithm(@Nullable Either<String,SigningAlgorithm> signingAlgorithm) {
-            this.signingAlgorithm = Output.ofNullable(signingAlgorithm);
+            this.signingAlgorithm = Codegen.ofNullable(signingAlgorithm);
             return this;
         }        public AS2ValidationSettingsArgs build() {
             return new AS2ValidationSettingsArgs(checkCertificateRevocationListOnReceive, checkCertificateRevocationListOnSend, checkDuplicateMessage, compressMessage, encryptMessage, encryptionAlgorithm, interchangeDuplicatesValidityDays, overrideMessageProperties, signMessage, signingAlgorithm);

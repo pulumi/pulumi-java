@@ -6,6 +6,7 @@ package io.pulumi.awsnative.nimblestudio;
 import io.pulumi.awsnative.nimblestudio.inputs.StreamingImageTagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ec2ImageId", required=true)
       private final Output<String> ec2ImageId;
 
-    public Output<String> getEc2ImageId() {
+    public Output<String> ec2ImageId() {
         return this.ec2ImageId;
     }
 
@@ -44,8 +45,8 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,15 +56,15 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<StreamingImageTagsArgs> tags;
 
-    public Output<StreamingImageTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<StreamingImageTagsArgs> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StreamingImageArgs(
@@ -80,11 +81,11 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamingImageArgs() {
-        this.description = Output.empty();
-        this.ec2ImageId = Output.empty();
-        this.name = Output.empty();
-        this.studioId = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.ec2ImageId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.studioId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ec2ImageId(Output<String> ec2ImageId) {
@@ -136,7 +137,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder studioId(Output<String> studioId) {
@@ -152,7 +153,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable StreamingImageTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public StreamingImageArgs build() {
             return new StreamingImageArgs(description, ec2ImageId, name, studioId, tags);

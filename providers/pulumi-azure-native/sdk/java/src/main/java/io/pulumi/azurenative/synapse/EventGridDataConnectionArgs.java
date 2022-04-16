@@ -8,6 +8,7 @@ import io.pulumi.azurenative.synapse.enums.EventGridDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="blobStorageEventType")
       private final @Nullable Output<Either<String,BlobStorageEventType>> blobStorageEventType;
 
-    public Output<Either<String,BlobStorageEventType>> getBlobStorageEventType() {
-        return this.blobStorageEventType == null ? Output.empty() : this.blobStorageEventType;
+    public Output<Either<String,BlobStorageEventType>> blobStorageEventType() {
+        return this.blobStorageEventType == null ? Codegen.empty() : this.blobStorageEventType;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
 
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
 
@@ -47,8 +48,8 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
-    public Output<String> getDataConnectionName() {
-        return this.dataConnectionName == null ? Output.empty() : this.dataConnectionName;
+    public Output<String> dataConnectionName() {
+        return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="dataFormat")
       private final @Nullable Output<Either<String,EventGridDataFormat>> dataFormat;
 
-    public Output<Either<String,EventGridDataFormat>> getDataFormat() {
-        return this.dataFormat == null ? Output.empty() : this.dataFormat;
+    public Output<Either<String,EventGridDataFormat>> dataFormat() {
+        return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -80,7 +81,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="eventHubResourceId", required=true)
       private final Output<String> eventHubResourceId;
 
-    public Output<String> getEventHubResourceId() {
+    public Output<String> eventHubResourceId() {
         return this.eventHubResourceId;
     }
 
@@ -91,8 +92,8 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="ignoreFirstRecord")
       private final @Nullable Output<Boolean> ignoreFirstRecord;
 
-    public Output<Boolean> getIgnoreFirstRecord() {
-        return this.ignoreFirstRecord == null ? Output.empty() : this.ignoreFirstRecord;
+    public Output<Boolean> ignoreFirstRecord() {
+        return this.ignoreFirstRecord == null ? Codegen.empty() : this.ignoreFirstRecord;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -114,7 +115,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
-    public Output<String> getKustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -125,8 +126,8 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
 
-    public Output<String> getMappingRuleName() {
-        return this.mappingRuleName == null ? Output.empty() : this.mappingRuleName;
+    public Output<String> mappingRuleName() {
+        return this.mappingRuleName == null ? Codegen.empty() : this.mappingRuleName;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -158,7 +159,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="storageAccountResourceId", required=true)
       private final Output<String> storageAccountResourceId;
 
-    public Output<String> getStorageAccountResourceId() {
+    public Output<String> storageAccountResourceId() {
         return this.storageAccountResourceId;
     }
 
@@ -169,8 +170,8 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<String> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -218,21 +219,21 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     }
 
     private EventGridDataConnectionArgs() {
-        this.blobStorageEventType = Output.empty();
-        this.consumerGroup = Output.empty();
-        this.dataConnectionName = Output.empty();
-        this.dataFormat = Output.empty();
-        this.databaseName = Output.empty();
-        this.eventHubResourceId = Output.empty();
-        this.ignoreFirstRecord = Output.empty();
-        this.kind = Output.empty();
-        this.kustoPoolName = Output.empty();
-        this.location = Output.empty();
-        this.mappingRuleName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountResourceId = Output.empty();
-        this.tableName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.blobStorageEventType = Codegen.empty();
+        this.consumerGroup = Codegen.empty();
+        this.dataConnectionName = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.eventHubResourceId = Codegen.empty();
+        this.ignoreFirstRecord = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.kustoPoolName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mappingRuleName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountResourceId = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -288,7 +289,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder blobStorageEventType(@Nullable Either<String,BlobStorageEventType> blobStorageEventType) {
-            this.blobStorageEventType = Output.ofNullable(blobStorageEventType);
+            this.blobStorageEventType = Codegen.ofNullable(blobStorageEventType);
             return this;
         }
         public Builder consumerGroup(Output<String> consumerGroup) {
@@ -304,7 +305,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
-            this.dataConnectionName = Output.ofNullable(dataConnectionName);
+            this.dataConnectionName = Codegen.ofNullable(dataConnectionName);
             return this;
         }
         public Builder dataFormat(@Nullable Output<Either<String,EventGridDataFormat>> dataFormat) {
@@ -312,7 +313,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dataFormat(@Nullable Either<String,EventGridDataFormat> dataFormat) {
-            this.dataFormat = Output.ofNullable(dataFormat);
+            this.dataFormat = Codegen.ofNullable(dataFormat);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -336,7 +337,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ignoreFirstRecord(@Nullable Boolean ignoreFirstRecord) {
-            this.ignoreFirstRecord = Output.ofNullable(ignoreFirstRecord);
+            this.ignoreFirstRecord = Codegen.ofNullable(ignoreFirstRecord);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -360,7 +361,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
@@ -368,7 +369,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
-            this.mappingRuleName = Output.ofNullable(mappingRuleName);
+            this.mappingRuleName = Codegen.ofNullable(mappingRuleName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -392,7 +393,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

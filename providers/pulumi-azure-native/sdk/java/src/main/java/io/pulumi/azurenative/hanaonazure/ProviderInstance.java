@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * @return A JSON string containing metadata of the provider instance.
      * 
      */
-    public Output</* @Nullable */ String> getMetadata() {
+    public Output</* @Nullable */ String> metadata() {
         return this.metadata;
     }
     /**
@@ -55,7 +56,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * @return A JSON string containing the properties of the provider instance.
      * 
      */
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties;
     }
     /**
@@ -83,7 +84,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * @return State of provisioning of the provider instance
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -97,7 +98,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -123,7 +124,7 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProviderInstance(String name, ProviderInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hanaonazure:ProviderInstance", name, args == null ? ProviderInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:hanaonazure:ProviderInstance", name, args == null ? ProviderInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProviderInstance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

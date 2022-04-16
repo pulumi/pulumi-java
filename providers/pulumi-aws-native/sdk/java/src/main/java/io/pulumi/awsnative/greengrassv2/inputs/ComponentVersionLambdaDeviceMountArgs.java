@@ -6,6 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaFilesystemPermission;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,22 +20,22 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
     @Import(name="addGroupOwner")
       private final @Nullable Output<Boolean> addGroupOwner;
 
-    public Output<Boolean> getAddGroupOwner() {
-        return this.addGroupOwner == null ? Output.empty() : this.addGroupOwner;
+    public Output<Boolean> addGroupOwner() {
+        return this.addGroupOwner == null ? Codegen.empty() : this.addGroupOwner;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="permission")
       private final @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
 
-    public Output<ComponentVersionLambdaFilesystemPermission> getPermission() {
-        return this.permission == null ? Output.empty() : this.permission;
+    public Output<ComponentVersionLambdaFilesystemPermission> permission() {
+        return this.permission == null ? Codegen.empty() : this.permission;
     }
 
     public ComponentVersionLambdaDeviceMountArgs(
@@ -47,9 +48,9 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
     }
 
     private ComponentVersionLambdaDeviceMountArgs() {
-        this.addGroupOwner = Output.empty();
-        this.path = Output.empty();
-        this.permission = Output.empty();
+        this.addGroupOwner = Codegen.empty();
+        this.path = Codegen.empty();
+        this.permission = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
-            this.addGroupOwner = Output.ofNullable(addGroupOwner);
+            this.addGroupOwner = Codegen.ofNullable(addGroupOwner);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -89,7 +90,7 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder permission(@Nullable Output<ComponentVersionLambdaFilesystemPermission> permission) {
@@ -97,7 +98,7 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
-            this.permission = Output.ofNullable(permission);
+            this.permission = Codegen.ofNullable(permission);
             return this;
         }        public ComponentVersionLambdaDeviceMountArgs build() {
             return new ComponentVersionLambdaDeviceMountArgs(addGroupOwner, path, permission);

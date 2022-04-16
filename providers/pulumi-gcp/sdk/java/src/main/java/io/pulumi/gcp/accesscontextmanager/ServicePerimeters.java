@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.ServicePerimetersArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersState;
@@ -55,7 +56,7 @@ public class ServicePerimeters extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -71,7 +72,7 @@ public class ServicePerimeters extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ServicePerimetersServicePerimeter>> getServicePerimeters() {
+    public Output</* @Nullable */ List<ServicePerimetersServicePerimeter>> servicePerimeters() {
         return this.servicePerimeters;
     }
 
@@ -97,7 +98,7 @@ public class ServicePerimeters extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServicePerimeters(String name, ServicePerimetersArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/servicePerimeters:ServicePerimeters", name, args == null ? ServicePerimetersArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/servicePerimeters:ServicePerimeters", name, args == null ? ServicePerimetersArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServicePerimeters(String name, Output<String> id, @Nullable ServicePerimetersState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

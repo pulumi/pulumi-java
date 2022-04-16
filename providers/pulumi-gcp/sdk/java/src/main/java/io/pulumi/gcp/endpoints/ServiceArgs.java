@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grpcConfig")
       private final @Nullable Output<String> grpcConfig;
 
-    public Output<String> getGrpcConfig() {
-        return this.grpcConfig == null ? Output.empty() : this.grpcConfig;
+    public Output<String> grpcConfig() {
+        return this.grpcConfig == null ? Codegen.empty() : this.grpcConfig;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="openapiConfig")
       private final @Nullable Output<String> openapiConfig;
 
-    public Output<String> getOpenapiConfig() {
-        return this.openapiConfig == null ? Output.empty() : this.openapiConfig;
+    public Output<String> openapiConfig() {
+        return this.openapiConfig == null ? Codegen.empty() : this.openapiConfig;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocOutputBase64")
       private final @Nullable Output<String> protocOutputBase64;
 
-    public Output<String> getProtocOutputBase64() {
-        return this.protocOutputBase64 == null ? Output.empty() : this.protocOutputBase64;
+    public Output<String> protocOutputBase64() {
+        return this.protocOutputBase64 == null ? Codegen.empty() : this.protocOutputBase64;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -86,11 +87,11 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.grpcConfig = Output.empty();
-        this.openapiConfig = Output.empty();
-        this.project = Output.empty();
-        this.protocOutputBase64 = Output.empty();
-        this.serviceName = Output.empty();
+        this.grpcConfig = Codegen.empty();
+        this.openapiConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.protocOutputBase64 = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grpcConfig(@Nullable String grpcConfig) {
-            this.grpcConfig = Output.ofNullable(grpcConfig);
+            this.grpcConfig = Codegen.ofNullable(grpcConfig);
             return this;
         }
         public Builder openapiConfig(@Nullable Output<String> openapiConfig) {
@@ -134,7 +135,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder openapiConfig(@Nullable String openapiConfig) {
-            this.openapiConfig = Output.ofNullable(openapiConfig);
+            this.openapiConfig = Codegen.ofNullable(openapiConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -142,7 +143,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder protocOutputBase64(@Nullable Output<String> protocOutputBase64) {
@@ -150,7 +151,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocOutputBase64(@Nullable String protocOutputBase64) {
-            this.protocOutputBase64 = Output.ofNullable(protocOutputBase64);
+            this.protocOutputBase64 = Codegen.ofNullable(protocOutputBase64);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {

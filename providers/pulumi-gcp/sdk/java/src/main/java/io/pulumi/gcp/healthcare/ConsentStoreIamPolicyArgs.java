@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -33,7 +34,7 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
@@ -45,7 +46,7 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -59,9 +60,9 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private ConsentStoreIamPolicyArgs() {
-        this.consentStoreId = Output.empty();
-        this.dataset = Output.empty();
-        this.policyData = Output.empty();
+        this.consentStoreId = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.TargetInstanceArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -42,7 +43,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return A URL to the virtual machine instance that handles traffic for this target instance. When creating a target instance, you can provide the fully-qualified URL or a valid partial URL to the desired virtual machine. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance - zones/zone/instances/instance
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -70,7 +71,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Always compute#targetInstance for target instances.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -84,7 +85,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
      * 
      */
-    public Output<String> getNatPolicy() {
+    public Output<String> natPolicy() {
         return this.natPolicy;
     }
     /**
@@ -112,7 +113,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -126,7 +127,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -140,7 +141,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return URL of the zone where the target instance resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -166,7 +167,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetInstance(String name, @Nullable TargetInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:TargetInstance", name, args == null ? TargetInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/v1:TargetInstance", name, args == null ? TargetInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetInstance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

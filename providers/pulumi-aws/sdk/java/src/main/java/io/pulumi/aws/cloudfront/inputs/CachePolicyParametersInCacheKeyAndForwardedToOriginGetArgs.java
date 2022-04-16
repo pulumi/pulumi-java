@@ -8,6 +8,7 @@ import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForward
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="cookiesConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs> cookiesConfig;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs> getCookiesConfig() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs> cookiesConfig() {
         return this.cookiesConfig;
     }
 
@@ -35,8 +36,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="enableAcceptEncodingBrotli")
       private final @Nullable Output<Boolean> enableAcceptEncodingBrotli;
 
-    public Output<Boolean> getEnableAcceptEncodingBrotli() {
-        return this.enableAcceptEncodingBrotli == null ? Output.empty() : this.enableAcceptEncodingBrotli;
+    public Output<Boolean> enableAcceptEncodingBrotli() {
+        return this.enableAcceptEncodingBrotli == null ? Codegen.empty() : this.enableAcceptEncodingBrotli;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="enableAcceptEncodingGzip")
       private final @Nullable Output<Boolean> enableAcceptEncodingGzip;
 
-    public Output<Boolean> getEnableAcceptEncodingGzip() {
-        return this.enableAcceptEncodingGzip == null ? Output.empty() : this.enableAcceptEncodingGzip;
+    public Output<Boolean> enableAcceptEncodingGzip() {
+        return this.enableAcceptEncodingGzip == null ? Codegen.empty() : this.enableAcceptEncodingGzip;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="headersConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs> headersConfig;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs> getHeadersConfig() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs> headersConfig() {
         return this.headersConfig;
     }
 
@@ -68,7 +69,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="queryStringsConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs> queryStringsConfig;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs> getQueryStringsConfig() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs> queryStringsConfig() {
         return this.queryStringsConfig;
     }
 
@@ -86,11 +87,11 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     }
 
     private CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs() {
-        this.cookiesConfig = Output.empty();
-        this.enableAcceptEncodingBrotli = Output.empty();
-        this.enableAcceptEncodingGzip = Output.empty();
-        this.headersConfig = Output.empty();
-        this.queryStringsConfig = Output.empty();
+        this.cookiesConfig = Codegen.empty();
+        this.enableAcceptEncodingBrotli = Codegen.empty();
+        this.enableAcceptEncodingGzip = Codegen.empty();
+        this.headersConfig = Codegen.empty();
+        this.queryStringsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
             return this;
         }
         public Builder enableAcceptEncodingBrotli(@Nullable Boolean enableAcceptEncodingBrotli) {
-            this.enableAcceptEncodingBrotli = Output.ofNullable(enableAcceptEncodingBrotli);
+            this.enableAcceptEncodingBrotli = Codegen.ofNullable(enableAcceptEncodingBrotli);
             return this;
         }
         public Builder enableAcceptEncodingGzip(@Nullable Output<Boolean> enableAcceptEncodingGzip) {
@@ -142,7 +143,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
             return this;
         }
         public Builder enableAcceptEncodingGzip(@Nullable Boolean enableAcceptEncodingGzip) {
-            this.enableAcceptEncodingGzip = Output.ofNullable(enableAcceptEncodingGzip);
+            this.enableAcceptEncodingGzip = Codegen.ofNullable(enableAcceptEncodingGzip);
             return this;
         }
         public Builder headersConfig(Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs> headersConfig) {

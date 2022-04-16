@@ -5,6 +5,7 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.tags.inputs.TagValueIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,14 +20,14 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="condition")
       private final @Nullable Output<TagValueIamBindingConditionArgs> condition;
 
-    public Output<TagValueIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<TagValueIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -39,7 +40,7 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -50,7 +51,7 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tagValue", required=true)
       private final Output<String> tagValue;
 
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 
@@ -66,10 +67,10 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TagValueIamBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
-        this.tagValue = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
+        this.tagValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable TagValueIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+    public Output<Double> cpu() {
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="cpuLimit")
       private final @Nullable Output<Double> cpuLimit;
 
-    public Output<Double> getCpuLimit() {
-        return this.cpuLimit == null ? Output.empty() : this.cpuLimit;
+    public Output<Double> cpuLimit() {
+        return this.cpuLimit == null ? Codegen.empty() : this.cpuLimit;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="fpga")
       private final @Nullable Output<Integer> fpga;
 
-    public Output<Integer> getFpga() {
-        return this.fpga == null ? Output.empty() : this.fpga;
+    public Output<Integer> fpga() {
+        return this.fpga == null ? Codegen.empty() : this.fpga;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="gpu")
       private final @Nullable Output<Integer> gpu;
 
-    public Output<Integer> getGpu() {
-        return this.gpu == null ? Output.empty() : this.gpu;
+    public Output<Integer> gpu() {
+        return this.gpu == null ? Codegen.empty() : this.gpu;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="memoryInGB")
       private final @Nullable Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
-        return this.memoryInGB == null ? Output.empty() : this.memoryInGB;
+    public Output<Double> memoryInGB() {
+        return this.memoryInGB == null ? Codegen.empty() : this.memoryInGB;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="memoryInGBLimit")
       private final @Nullable Output<Double> memoryInGBLimit;
 
-    public Output<Double> getMemoryInGBLimit() {
-        return this.memoryInGBLimit == null ? Output.empty() : this.memoryInGBLimit;
+    public Output<Double> memoryInGBLimit() {
+        return this.memoryInGBLimit == null ? Codegen.empty() : this.memoryInGBLimit;
     }
 
     public ContainerResourceRequirementsArgs(
@@ -105,12 +106,12 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     }
 
     private ContainerResourceRequirementsArgs() {
-        this.cpu = Output.empty();
-        this.cpuLimit = Output.empty();
-        this.fpga = Output.empty();
-        this.gpu = Output.empty();
-        this.memoryInGB = Output.empty();
-        this.memoryInGBLimit = Output.empty();
+        this.cpu = Codegen.empty();
+        this.cpuLimit = Codegen.empty();
+        this.fpga = Codegen.empty();
+        this.gpu = Codegen.empty();
+        this.memoryInGB = Codegen.empty();
+        this.memoryInGBLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             return this;
         }
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder cpuLimit(@Nullable Output<Double> cpuLimit) {
@@ -156,7 +157,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             return this;
         }
         public Builder cpuLimit(@Nullable Double cpuLimit) {
-            this.cpuLimit = Output.ofNullable(cpuLimit);
+            this.cpuLimit = Codegen.ofNullable(cpuLimit);
             return this;
         }
         public Builder fpga(@Nullable Output<Integer> fpga) {
@@ -164,7 +165,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             return this;
         }
         public Builder fpga(@Nullable Integer fpga) {
-            this.fpga = Output.ofNullable(fpga);
+            this.fpga = Codegen.ofNullable(fpga);
             return this;
         }
         public Builder gpu(@Nullable Output<Integer> gpu) {
@@ -172,7 +173,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             return this;
         }
         public Builder gpu(@Nullable Integer gpu) {
-            this.gpu = Output.ofNullable(gpu);
+            this.gpu = Codegen.ofNullable(gpu);
             return this;
         }
         public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
@@ -180,7 +181,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             return this;
         }
         public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = Output.ofNullable(memoryInGB);
+            this.memoryInGB = Codegen.ofNullable(memoryInGB);
             return this;
         }
         public Builder memoryInGBLimit(@Nullable Output<Double> memoryInGBLimit) {
@@ -188,7 +189,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             return this;
         }
         public Builder memoryInGBLimit(@Nullable Double memoryInGBLimit) {
-            this.memoryInGBLimit = Output.ofNullable(memoryInGBLimit);
+            this.memoryInGBLimit = Codegen.ofNullable(memoryInGBLimit);
             return this;
         }        public ContainerResourceRequirementsArgs build() {
             return new ContainerResourceRequirementsArgs(cpu, cpuLimit, fpga, gpu, memoryInGB, memoryInGBLimit);

@@ -48,28 +48,28 @@ public final class GetJobTargetGroupResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Members of the target group.
      * 
     */
-    public List<JobTargetResponse> getMembers() {
+    public List<JobTargetResponse> members() {
         return this.members;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

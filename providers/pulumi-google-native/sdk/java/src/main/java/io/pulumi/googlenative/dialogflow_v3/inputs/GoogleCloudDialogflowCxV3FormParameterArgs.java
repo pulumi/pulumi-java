@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -28,8 +29,8 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<Object> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     @Import(name="entityType", required=true)
       private final Output<String> entityType;
 
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType;
     }
 
@@ -61,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     @Import(name="fillBehavior", required=true)
       private final Output<GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs> fillBehavior;
 
-    public Output<GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs> getFillBehavior() {
+    public Output<GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs> fillBehavior() {
         return this.fillBehavior;
     }
 
@@ -72,8 +73,8 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> getIsList() {
-        return this.isList == null ? Output.empty() : this.isList;
+    public Output<Boolean> isList() {
+        return this.isList == null ? Codegen.empty() : this.isList;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> getRedact() {
-        return this.redact == null ? Output.empty() : this.redact;
+    public Output<Boolean> redact() {
+        return this.redact == null ? Codegen.empty() : this.redact;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
-    public Output<Boolean> getRequired() {
-        return this.required == null ? Output.empty() : this.required;
+    public Output<Boolean> required() {
+        return this.required == null ? Codegen.empty() : this.required;
     }
 
     public GoogleCloudDialogflowCxV3FormParameterArgs(
@@ -116,13 +117,13 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
     }
 
     private GoogleCloudDialogflowCxV3FormParameterArgs() {
-        this.defaultValue = Output.empty();
-        this.displayName = Output.empty();
-        this.entityType = Output.empty();
-        this.fillBehavior = Output.empty();
-        this.isList = Output.empty();
-        this.redact = Output.empty();
-        this.required = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entityType = Codegen.empty();
+        this.fillBehavior = Codegen.empty();
+        this.isList = Codegen.empty();
+        this.redact = Codegen.empty();
+        this.required = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
             return this;
         }
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -194,7 +195,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
             return this;
         }
         public Builder isList(@Nullable Boolean isList) {
-            this.isList = Output.ofNullable(isList);
+            this.isList = Codegen.ofNullable(isList);
             return this;
         }
         public Builder redact(@Nullable Output<Boolean> redact) {
@@ -202,7 +203,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
             return this;
         }
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Output.ofNullable(redact);
+            this.redact = Codegen.ofNullable(redact);
             return this;
         }
         public Builder required(@Nullable Output<Boolean> required) {
@@ -210,7 +211,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterArgs extends io.pulumi.
             return this;
         }
         public Builder required(@Nullable Boolean required) {
-            this.required = Output.ofNullable(required);
+            this.required = Codegen.ofNullable(required);
             return this;
         }        public GoogleCloudDialogflowCxV3FormParameterArgs build() {
             return new GoogleCloudDialogflowCxV3FormParameterArgs(defaultValue, displayName, entityType, fillBehavior, isList, redact, required);

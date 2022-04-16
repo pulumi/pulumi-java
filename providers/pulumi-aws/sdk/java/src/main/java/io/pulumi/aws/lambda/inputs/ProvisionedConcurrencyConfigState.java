@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
-        return this.functionName == null ? Output.empty() : this.functionName;
+    public Output<String> functionName() {
+        return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
     @Import(name="provisionedConcurrentExecutions")
       private final @Nullable Output<Integer> provisionedConcurrentExecutions;
 
-    public Output<Integer> getProvisionedConcurrentExecutions() {
-        return this.provisionedConcurrentExecutions == null ? Output.empty() : this.provisionedConcurrentExecutions;
+    public Output<Integer> provisionedConcurrentExecutions() {
+        return this.provisionedConcurrentExecutions == null ? Codegen.empty() : this.provisionedConcurrentExecutions;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
-        return this.qualifier == null ? Output.empty() : this.qualifier;
+    public Output<String> qualifier() {
+        return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 
     public ProvisionedConcurrencyConfigState(
@@ -58,9 +59,9 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
     }
 
     private ProvisionedConcurrencyConfigState() {
-        this.functionName = Output.empty();
-        this.provisionedConcurrentExecutions = Output.empty();
-        this.qualifier = Output.empty();
+        this.functionName = Codegen.empty();
+        this.provisionedConcurrentExecutions = Codegen.empty();
+        this.qualifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
             return this;
         }
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Output.ofNullable(functionName);
+            this.functionName = Codegen.ofNullable(functionName);
             return this;
         }
         public Builder provisionedConcurrentExecutions(@Nullable Output<Integer> provisionedConcurrentExecutions) {
@@ -100,7 +101,7 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
             return this;
         }
         public Builder provisionedConcurrentExecutions(@Nullable Integer provisionedConcurrentExecutions) {
-            this.provisionedConcurrentExecutions = Output.ofNullable(provisionedConcurrentExecutions);
+            this.provisionedConcurrentExecutions = Codegen.ofNullable(provisionedConcurrentExecutions);
             return this;
         }
         public Builder qualifier(@Nullable Output<String> qualifier) {
@@ -108,7 +109,7 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
             return this;
         }
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Output.ofNullable(qualifier);
+            this.qualifier = Codegen.ofNullable(qualifier);
             return this;
         }        public ProvisionedConcurrencyConfigState build() {
             return new ProvisionedConcurrencyConfigState(functionName, provisionedConcurrentExecutions, qualifier);

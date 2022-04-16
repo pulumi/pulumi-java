@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesis.inputs.StreamConsumerState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -45,7 +46,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the stream consumer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +60,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * @return Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -73,7 +74,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * @return Name of the stream consumer.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the data stream the consumer is registered with.
      * 
      */
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
 
@@ -113,7 +114,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StreamConsumer(String name, StreamConsumerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesis/streamConsumer:StreamConsumer", name, args == null ? StreamConsumerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesis/streamConsumer:StreamConsumer", name, args == null ? StreamConsumerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StreamConsumer(String name, Output<String> id, @Nullable StreamConsumerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

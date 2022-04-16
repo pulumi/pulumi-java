@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ExecActionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.TCPSocketActionArgs;
@@ -27,8 +28,8 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="exec")
       private final @Nullable Output<ExecActionArgs> exec;
 
-    public Output<ExecActionArgs> getExec() {
-        return this.exec == null ? Output.empty() : this.exec;
+    public Output<ExecActionArgs> exec() {
+        return this.exec == null ? Codegen.empty() : this.exec;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="httpGet")
       private final @Nullable Output<HTTPGetActionArgs> httpGet;
 
-    public Output<HTTPGetActionArgs> getHttpGet() {
-        return this.httpGet == null ? Output.empty() : this.httpGet;
+    public Output<HTTPGetActionArgs> httpGet() {
+        return this.httpGet == null ? Codegen.empty() : this.httpGet;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tcpSocket")
       private final @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
-    public Output<TCPSocketActionArgs> getTcpSocket() {
-        return this.tcpSocket == null ? Output.empty() : this.tcpSocket;
+    public Output<TCPSocketActionArgs> tcpSocket() {
+        return this.tcpSocket == null ? Codegen.empty() : this.tcpSocket;
     }
 
     public LifecycleHandlerArgs(
@@ -63,9 +64,9 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LifecycleHandlerArgs() {
-        this.exec = Output.empty();
-        this.httpGet = Output.empty();
-        this.tcpSocket = Output.empty();
+        this.exec = Codegen.empty();
+        this.httpGet = Codegen.empty();
+        this.tcpSocket = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder exec(@Nullable ExecActionArgs exec) {
-            this.exec = Output.ofNullable(exec);
+            this.exec = Codegen.ofNullable(exec);
             return this;
         }
         public Builder httpGet(@Nullable Output<HTTPGetActionArgs> httpGet) {
@@ -105,7 +106,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder httpGet(@Nullable HTTPGetActionArgs httpGet) {
-            this.httpGet = Output.ofNullable(httpGet);
+            this.httpGet = Codegen.ofNullable(httpGet);
             return this;
         }
         public Builder tcpSocket(@Nullable Output<TCPSocketActionArgs> tcpSocket) {
@@ -113,7 +114,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tcpSocket(@Nullable TCPSocketActionArgs tcpSocket) {
-            this.tcpSocket = Output.ofNullable(tcpSocket);
+            this.tcpSocket = Codegen.ofNullable(tcpSocket);
             return this;
         }        public LifecycleHandlerArgs build() {
             return new LifecycleHandlerArgs(exec, httpGet, tcpSocket);

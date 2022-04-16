@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,8 +28,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionsEnabled")
       private final @Nullable Output<Boolean> actionsEnabled;
 
-    public Output<Boolean> getActionsEnabled() {
-        return this.actionsEnabled == null ? Output.empty() : this.actionsEnabled;
+    public Output<Boolean> actionsEnabled() {
+        return this.actionsEnabled == null ? Codegen.empty() : this.actionsEnabled;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmActions")
       private final @Nullable Output<List<String>> alarmActions;
 
-    public Output<List<String>> getAlarmActions() {
-        return this.alarmActions == null ? Output.empty() : this.alarmActions;
+    public Output<List<String>> alarmActions() {
+        return this.alarmActions == null ? Codegen.empty() : this.alarmActions;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmDescription")
       private final @Nullable Output<String> alarmDescription;
 
-    public Output<String> getAlarmDescription() {
-        return this.alarmDescription == null ? Output.empty() : this.alarmDescription;
+    public Output<String> alarmDescription() {
+        return this.alarmDescription == null ? Codegen.empty() : this.alarmDescription;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -71,8 +72,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datapointsToAlarm")
       private final @Nullable Output<Integer> datapointsToAlarm;
 
-    public Output<Integer> getDatapointsToAlarm() {
-        return this.datapointsToAlarm == null ? Output.empty() : this.datapointsToAlarm;
+    public Output<Integer> datapointsToAlarm() {
+        return this.datapointsToAlarm == null ? Codegen.empty() : this.datapointsToAlarm;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<Map<String,String>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluateLowSampleCountPercentiles")
       private final @Nullable Output<String> evaluateLowSampleCountPercentiles;
 
-    public Output<String> getEvaluateLowSampleCountPercentiles() {
-        return this.evaluateLowSampleCountPercentiles == null ? Output.empty() : this.evaluateLowSampleCountPercentiles;
+    public Output<String> evaluateLowSampleCountPercentiles() {
+        return this.evaluateLowSampleCountPercentiles == null ? Codegen.empty() : this.evaluateLowSampleCountPercentiles;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluationPeriods", required=true)
       private final Output<Integer> evaluationPeriods;
 
-    public Output<Integer> getEvaluationPeriods() {
+    public Output<Integer> evaluationPeriods() {
         return this.evaluationPeriods;
     }
 
@@ -120,8 +121,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedStatistic")
       private final @Nullable Output<String> extendedStatistic;
 
-    public Output<String> getExtendedStatistic() {
-        return this.extendedStatistic == null ? Output.empty() : this.extendedStatistic;
+    public Output<String> extendedStatistic() {
+        return this.extendedStatistic == null ? Codegen.empty() : this.extendedStatistic;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insufficientDataActions")
       private final @Nullable Output<List<String>> insufficientDataActions;
 
-    public Output<List<String>> getInsufficientDataActions() {
-        return this.insufficientDataActions == null ? Output.empty() : this.insufficientDataActions;
+    public Output<List<String>> insufficientDataActions() {
+        return this.insufficientDataActions == null ? Codegen.empty() : this.insufficientDataActions;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
-    public Output<String> getMetricName() {
-        return this.metricName == null ? Output.empty() : this.metricName;
+    public Output<String> metricName() {
+        return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricQueries")
       private final @Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries;
 
-    public Output<List<MetricAlarmMetricQueryArgs>> getMetricQueries() {
-        return this.metricQueries == null ? Output.empty() : this.metricQueries;
+    public Output<List<MetricAlarmMetricQueryArgs>> metricQueries() {
+        return this.metricQueries == null ? Codegen.empty() : this.metricQueries;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="okActions")
       private final @Nullable Output<List<String>> okActions;
 
-    public Output<List<String>> getOkActions() {
-        return this.okActions == null ? Output.empty() : this.okActions;
+    public Output<List<String>> okActions() {
+        return this.okActions == null ? Codegen.empty() : this.okActions;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="period")
       private final @Nullable Output<Integer> period;
 
-    public Output<Integer> getPeriod() {
-        return this.period == null ? Output.empty() : this.period;
+    public Output<Integer> period() {
+        return this.period == null ? Codegen.empty() : this.period;
     }
 
     /**
@@ -211,8 +212,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="statistic")
       private final @Nullable Output<String> statistic;
 
-    public Output<String> getStatistic() {
-        return this.statistic == null ? Output.empty() : this.statistic;
+    public Output<String> statistic() {
+        return this.statistic == null ? Codegen.empty() : this.statistic;
     }
 
     /**
@@ -222,8 +223,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -233,8 +234,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
-        return this.threshold == null ? Output.empty() : this.threshold;
+    public Output<Double> threshold() {
+        return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
     /**
@@ -244,8 +245,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresholdMetricId")
       private final @Nullable Output<String> thresholdMetricId;
 
-    public Output<String> getThresholdMetricId() {
-        return this.thresholdMetricId == null ? Output.empty() : this.thresholdMetricId;
+    public Output<String> thresholdMetricId() {
+        return this.thresholdMetricId == null ? Codegen.empty() : this.thresholdMetricId;
     }
 
     /**
@@ -255,8 +256,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="treatMissingData")
       private final @Nullable Output<String> treatMissingData;
 
-    public Output<String> getTreatMissingData() {
-        return this.treatMissingData == null ? Output.empty() : this.treatMissingData;
+    public Output<String> treatMissingData() {
+        return this.treatMissingData == null ? Codegen.empty() : this.treatMissingData;
     }
 
     /**
@@ -266,8 +267,8 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public MetricAlarmArgs(
@@ -318,28 +319,28 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricAlarmArgs() {
-        this.actionsEnabled = Output.empty();
-        this.alarmActions = Output.empty();
-        this.alarmDescription = Output.empty();
-        this.comparisonOperator = Output.empty();
-        this.datapointsToAlarm = Output.empty();
-        this.dimensions = Output.empty();
-        this.evaluateLowSampleCountPercentiles = Output.empty();
-        this.evaluationPeriods = Output.empty();
-        this.extendedStatistic = Output.empty();
-        this.insufficientDataActions = Output.empty();
-        this.metricName = Output.empty();
-        this.metricQueries = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.okActions = Output.empty();
-        this.period = Output.empty();
-        this.statistic = Output.empty();
-        this.tags = Output.empty();
-        this.threshold = Output.empty();
-        this.thresholdMetricId = Output.empty();
-        this.treatMissingData = Output.empty();
-        this.unit = Output.empty();
+        this.actionsEnabled = Codegen.empty();
+        this.alarmActions = Codegen.empty();
+        this.alarmDescription = Codegen.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.datapointsToAlarm = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.evaluateLowSampleCountPercentiles = Codegen.empty();
+        this.evaluationPeriods = Codegen.empty();
+        this.extendedStatistic = Codegen.empty();
+        this.insufficientDataActions = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.metricQueries = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.okActions = Codegen.empty();
+        this.period = Codegen.empty();
+        this.statistic = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.thresholdMetricId = Codegen.empty();
+        this.treatMissingData = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -409,7 +410,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
-            this.actionsEnabled = Output.ofNullable(actionsEnabled);
+            this.actionsEnabled = Codegen.ofNullable(actionsEnabled);
             return this;
         }
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
@@ -417,7 +418,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alarmActions(@Nullable List<String> alarmActions) {
-            this.alarmActions = Output.ofNullable(alarmActions);
+            this.alarmActions = Codegen.ofNullable(alarmActions);
             return this;
         }
         public Builder alarmActions(String... alarmActions) {
@@ -428,7 +429,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alarmDescription(@Nullable String alarmDescription) {
-            this.alarmDescription = Output.ofNullable(alarmDescription);
+            this.alarmDescription = Codegen.ofNullable(alarmDescription);
             return this;
         }
         public Builder comparisonOperator(Output<String> comparisonOperator) {
@@ -444,7 +445,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
-            this.datapointsToAlarm = Output.ofNullable(datapointsToAlarm);
+            this.datapointsToAlarm = Codegen.ofNullable(datapointsToAlarm);
             return this;
         }
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
@@ -452,7 +453,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder evaluateLowSampleCountPercentiles(@Nullable Output<String> evaluateLowSampleCountPercentiles) {
@@ -460,7 +461,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder evaluateLowSampleCountPercentiles(@Nullable String evaluateLowSampleCountPercentiles) {
-            this.evaluateLowSampleCountPercentiles = Output.ofNullable(evaluateLowSampleCountPercentiles);
+            this.evaluateLowSampleCountPercentiles = Codegen.ofNullable(evaluateLowSampleCountPercentiles);
             return this;
         }
         public Builder evaluationPeriods(Output<Integer> evaluationPeriods) {
@@ -476,7 +477,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedStatistic(@Nullable String extendedStatistic) {
-            this.extendedStatistic = Output.ofNullable(extendedStatistic);
+            this.extendedStatistic = Codegen.ofNullable(extendedStatistic);
             return this;
         }
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
@@ -484,7 +485,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
-            this.insufficientDataActions = Output.ofNullable(insufficientDataActions);
+            this.insufficientDataActions = Codegen.ofNullable(insufficientDataActions);
             return this;
         }
         public Builder insufficientDataActions(String... insufficientDataActions) {
@@ -495,7 +496,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Output.ofNullable(metricName);
+            this.metricName = Codegen.ofNullable(metricName);
             return this;
         }
         public Builder metricQueries(@Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries) {
@@ -503,7 +504,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricQueries(@Nullable List<MetricAlarmMetricQueryArgs> metricQueries) {
-            this.metricQueries = Output.ofNullable(metricQueries);
+            this.metricQueries = Codegen.ofNullable(metricQueries);
             return this;
         }
         public Builder metricQueries(MetricAlarmMetricQueryArgs... metricQueries) {
@@ -514,7 +515,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -522,7 +523,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder okActions(@Nullable Output<List<String>> okActions) {
@@ -530,7 +531,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder okActions(@Nullable List<String> okActions) {
-            this.okActions = Output.ofNullable(okActions);
+            this.okActions = Codegen.ofNullable(okActions);
             return this;
         }
         public Builder okActions(String... okActions) {
@@ -541,7 +542,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder period(@Nullable Integer period) {
-            this.period = Output.ofNullable(period);
+            this.period = Codegen.ofNullable(period);
             return this;
         }
         public Builder statistic(@Nullable Output<String> statistic) {
@@ -549,7 +550,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder statistic(@Nullable String statistic) {
-            this.statistic = Output.ofNullable(statistic);
+            this.statistic = Codegen.ofNullable(statistic);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -557,7 +558,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder threshold(@Nullable Output<Double> threshold) {
@@ -565,7 +566,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Output.ofNullable(threshold);
+            this.threshold = Codegen.ofNullable(threshold);
             return this;
         }
         public Builder thresholdMetricId(@Nullable Output<String> thresholdMetricId) {
@@ -573,7 +574,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thresholdMetricId(@Nullable String thresholdMetricId) {
-            this.thresholdMetricId = Output.ofNullable(thresholdMetricId);
+            this.thresholdMetricId = Codegen.ofNullable(thresholdMetricId);
             return this;
         }
         public Builder treatMissingData(@Nullable Output<String> treatMissingData) {
@@ -581,7 +582,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder treatMissingData(@Nullable String treatMissingData) {
-            this.treatMissingData = Output.ofNullable(treatMissingData);
+            this.treatMissingData = Codegen.ofNullable(treatMissingData);
             return this;
         }
         public Builder unit(@Nullable Output<String> unit) {
@@ -589,7 +590,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public MetricAlarmArgs build() {
             return new MetricAlarmArgs(actionsEnabled, alarmActions, alarmDescription, comparisonOperator, datapointsToAlarm, dimensions, evaluateLowSampleCountPercentiles, evaluationPeriods, extendedStatistic, insufficientDataActions, metricName, metricQueries, name, namespace, okActions, period, statistic, tags, threshold, thresholdMetricId, treatMissingData, unit);

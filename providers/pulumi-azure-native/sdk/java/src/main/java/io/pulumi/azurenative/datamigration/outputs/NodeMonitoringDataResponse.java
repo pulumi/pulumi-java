@@ -85,63 +85,63 @@ public final class NodeMonitoringDataResponse {
      *  Unmatched properties from the message are deserialized in this collection.
      * 
     */
-    public Map<String,Object> getAdditionalProperties() {
+    public Map<String,Object> additionalProperties() {
         return this.additionalProperties;
     }
     /**
      * Available memory (MB) on the integration runtime node.
      * 
     */
-    public Integer getAvailableMemoryInMB() {
+    public Integer availableMemoryInMB() {
         return this.availableMemoryInMB;
     }
     /**
      * Maximum concurrent jobs on the integration runtime node.
      * 
     */
-    public Integer getConcurrentJobsLimit() {
+    public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
     /**
      * The number of jobs currently running on the integration runtime node.
      * 
     */
-    public Integer getConcurrentJobsRunning() {
+    public Integer concurrentJobsRunning() {
         return this.concurrentJobsRunning;
     }
     /**
      * CPU percentage on the integration runtime node.
      * 
     */
-    public Integer getCpuUtilization() {
+    public Integer cpuUtilization() {
         return this.cpuUtilization;
     }
     /**
      * The maximum concurrent jobs in this integration runtime.
      * 
     */
-    public Integer getMaxConcurrentJobs() {
+    public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
     /**
      * Name of the integration runtime node.
      * 
     */
-    public String getNodeName() {
+    public String nodeName() {
         return this.nodeName;
     }
     /**
      * Received bytes on the integration runtime node.
      * 
     */
-    public Double getReceivedBytes() {
+    public Double receivedBytes() {
         return this.receivedBytes;
     }
     /**
      * Sent bytes on the integration runtime node.
      * 
     */
-    public Double getSentBytes() {
+    public Double sentBytes() {
         return this.sentBytes;
     }
 

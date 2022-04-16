@@ -13,6 +13,7 @@ import io.pulumi.awsnative.quicksight.outputs.ThemeVersion;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,13 +35,13 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @return <p>The Amazon Resource Name (ARN) of the theme.</p>
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -60,13 +61,13 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 			within a QuickSight analysis. </p>
      * 
      */
-    public Output</* @Nullable */ String> getBaseThemeId() {
+    public Output</* @Nullable */ String> baseThemeId() {
         return this.baseThemeId;
     }
     @Export(name="configuration", type=ThemeConfiguration.class, parameters={})
     private Output</* @Nullable */ ThemeConfiguration> configuration;
 
-    public Output</* @Nullable */ ThemeConfiguration> getConfiguration() {
+    public Output</* @Nullable */ ThemeConfiguration> configuration() {
         return this.configuration;
     }
     /**
@@ -80,7 +81,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @return <p>The date and time that the theme was created.</p>
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -94,7 +95,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @return <p>The date and time that the theme was last updated.</p>
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -108,7 +109,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @return <p>A display name for the theme.</p>
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -124,7 +125,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 			</p>
      * 
      */
-    public Output</* @Nullable */ List<ThemeResourcePermission>> getPermissions() {
+    public Output</* @Nullable */ List<ThemeResourcePermission>> permissions() {
         return this.permissions;
     }
     /**
@@ -140,25 +141,25 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 			resource.</p>
      * 
      */
-    public Output</* @Nullable */ List<ThemeTag>> getTags() {
+    public Output</* @Nullable */ List<ThemeTag>> tags() {
         return this.tags;
     }
     @Export(name="themeId", type=String.class, parameters={})
     private Output<String> themeId;
 
-    public Output<String> getThemeId() {
+    public Output<String> themeId() {
         return this.themeId;
     }
     @Export(name="type", type=ThemeType.class, parameters={})
     private Output<ThemeType> type;
 
-    public Output<ThemeType> getType() {
+    public Output<ThemeType> type() {
         return this.type;
     }
     @Export(name="version", type=ThemeVersion.class, parameters={})
     private Output<ThemeVersion> version;
 
-    public Output<ThemeVersion> getVersion() {
+    public Output<ThemeVersion> version() {
         return this.version;
     }
     /**
@@ -178,7 +179,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 			field.</p>
      * 
      */
-    public Output</* @Nullable */ String> getVersionDescription() {
+    public Output</* @Nullable */ String> versionDescription() {
         return this.versionDescription;
     }
 
@@ -204,7 +205,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Theme(String name, ThemeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:quicksight:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:quicksight:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Theme(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

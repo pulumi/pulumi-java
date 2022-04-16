@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
     @Import(name="gcePdKmsKeyName")
       private final @Nullable Output<String> gcePdKmsKeyName;
 
-    public Output<String> getGcePdKmsKeyName() {
-        return this.gcePdKmsKeyName == null ? Output.empty() : this.gcePdKmsKeyName;
+    public Output<String> gcePdKmsKeyName() {
+        return this.gcePdKmsKeyName == null ? Codegen.empty() : this.gcePdKmsKeyName;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(@Nullable Output<String> gcePdKmsKeyName) {
@@ -30,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs() {
-        this.gcePdKmsKeyName = Output.empty();
+        this.gcePdKmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
             return this;
         }
         public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = Output.ofNullable(gcePdKmsKeyName);
+            this.gcePdKmsKeyName = Codegen.ofNullable(gcePdKmsKeyName);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(gcePdKmsKeyName);

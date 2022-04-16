@@ -8,6 +8,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.WsfcDomainProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,8 +48,8 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     @Import(name="sqlImageOffer")
       private final @Nullable Output<String> sqlImageOffer;
 
-    public Output<String> getSqlImageOffer() {
-        return this.sqlImageOffer == null ? Output.empty() : this.sqlImageOffer;
+    public Output<String> sqlImageOffer() {
+        return this.sqlImageOffer == null ? Codegen.empty() : this.sqlImageOffer;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     @Import(name="sqlImageSku")
       private final @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku;
 
-    public Output<Either<String,SqlVmGroupImageSku>> getSqlImageSku() {
-        return this.sqlImageSku == null ? Output.empty() : this.sqlImageSku;
+    public Output<Either<String,SqlVmGroupImageSku>> sqlImageSku() {
+        return this.sqlImageSku == null ? Codegen.empty() : this.sqlImageSku;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     @Import(name="sqlVirtualMachineGroupName")
       private final @Nullable Output<String> sqlVirtualMachineGroupName;
 
-    public Output<String> getSqlVirtualMachineGroupName() {
-        return this.sqlVirtualMachineGroupName == null ? Output.empty() : this.sqlVirtualMachineGroupName;
+    public Output<String> sqlVirtualMachineGroupName() {
+        return this.sqlVirtualMachineGroupName == null ? Codegen.empty() : this.sqlVirtualMachineGroupName;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     @Import(name="wsfcDomainProfile")
       private final @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile;
 
-    public Output<WsfcDomainProfileArgs> getWsfcDomainProfile() {
-        return this.wsfcDomainProfile == null ? Output.empty() : this.wsfcDomainProfile;
+    public Output<WsfcDomainProfileArgs> wsfcDomainProfile() {
+        return this.wsfcDomainProfile == null ? Codegen.empty() : this.wsfcDomainProfile;
     }
 
     public SqlVirtualMachineGroupArgs(
@@ -113,13 +114,13 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     }
 
     private SqlVirtualMachineGroupArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sqlImageOffer = Output.empty();
-        this.sqlImageSku = Output.empty();
-        this.sqlVirtualMachineGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.wsfcDomainProfile = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlImageOffer = Codegen.empty();
+        this.sqlImageSku = Codegen.empty();
+        this.sqlVirtualMachineGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.wsfcDomainProfile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -175,7 +176,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
-            this.sqlImageOffer = Output.ofNullable(sqlImageOffer);
+            this.sqlImageOffer = Codegen.ofNullable(sqlImageOffer);
             return this;
         }
         public Builder sqlImageSku(@Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku) {
@@ -183,7 +184,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sqlImageSku(@Nullable Either<String,SqlVmGroupImageSku> sqlImageSku) {
-            this.sqlImageSku = Output.ofNullable(sqlImageSku);
+            this.sqlImageSku = Codegen.ofNullable(sqlImageSku);
             return this;
         }
         public Builder sqlVirtualMachineGroupName(@Nullable Output<String> sqlVirtualMachineGroupName) {
@@ -191,7 +192,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sqlVirtualMachineGroupName(@Nullable String sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = Output.ofNullable(sqlVirtualMachineGroupName);
+            this.sqlVirtualMachineGroupName = Codegen.ofNullable(sqlVirtualMachineGroupName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -199,7 +200,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder wsfcDomainProfile(@Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile) {
@@ -207,7 +208,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder wsfcDomainProfile(@Nullable WsfcDomainProfileArgs wsfcDomainProfile) {
-            this.wsfcDomainProfile = Output.ofNullable(wsfcDomainProfile);
+            this.wsfcDomainProfile = Codegen.ofNullable(wsfcDomainProfile);
             return this;
         }        public SqlVirtualMachineGroupArgs build() {
             return new SqlVirtualMachineGroupArgs(location, resourceGroupName, sqlImageOffer, sqlImageSku, sqlVirtualMachineGroupName, tags, wsfcDomainProfile);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.ConsentArtifactArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.ImageResponse;
@@ -32,7 +33,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
      * 
      */
-    public Output<List<ImageResponse>> getConsentContentScreenshots() {
+    public Output<List<ImageResponse>> consentContentScreenshots() {
         return this.consentContentScreenshots;
     }
     /**
@@ -46,7 +47,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return Optional. An string indicating the version of the consent information shown to the user.
      * 
      */
-    public Output<String> getConsentContentVersion() {
+    public Output<String> consentContentVersion() {
         return this.consentContentVersion;
     }
     /**
@@ -60,7 +61,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return Optional. A signature from a guardian.
      * 
      */
-    public Output<SignatureResponse> getGuardianSignature() {
+    public Output<SignatureResponse> guardianSignature() {
         return this.guardianSignature;
     }
     /**
@@ -74,7 +75,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -88,7 +89,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return User's UUID provided by the client.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
     /**
@@ -116,7 +117,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return Optional. User's signature.
      * 
      */
-    public Output<SignatureResponse> getUserSignature() {
+    public Output<SignatureResponse> userSignature() {
         return this.userSignature;
     }
     /**
@@ -130,7 +131,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @return Optional. A signature from a witness.
      * 
      */
-    public Output<SignatureResponse> getWitnessSignature() {
+    public Output<SignatureResponse> witnessSignature() {
         return this.witnessSignature;
     }
 
@@ -156,7 +157,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConsentArtifact(String name, ConsentArtifactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1:ConsentArtifact", name, args == null ? ConsentArtifactArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1:ConsentArtifact", name, args == null ? ConsentArtifactArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConsentArtifact(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

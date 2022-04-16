@@ -20,10 +20,10 @@ public final class GetBackendServiceCdnPolicyNegativeCachingPolicy {
         this.ttl = ttl;
     }
 
-    public Integer getCode() {
+    public Integer code() {
         return this.code;
     }
-    public Integer getTtl() {
+    public Integer ttl() {
         return this.ttl;
     }
 

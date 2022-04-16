@@ -6,6 +6,7 @@ package io.pulumi.googlenative.metastore_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1beta.MetadataImportArgs;
 import io.pulumi.googlenative.metastore_v1beta.outputs.DatabaseDumpResponse;
@@ -31,7 +32,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The time when the metadata import was started.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +46,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return Immutable. A database dump from a pre-existing metastore's database.
      * 
      */
-    public Output<DatabaseDumpResponse> getDatabaseDump() {
+    public Output<DatabaseDumpResponse> databaseDump() {
         return this.databaseDump;
     }
     /**
@@ -59,7 +60,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The description of the metadata import.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The time when the metadata import finished.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -87,7 +88,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The current state of the metadata import.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -115,7 +116,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The time when the metadata import was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -141,7 +142,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetadataImport(String name, MetadataImportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:metastore/v1beta:MetadataImport", name, args == null ? MetadataImportArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:metastore/v1beta:MetadataImport", name, args == null ? MetadataImportArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MetadataImport(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

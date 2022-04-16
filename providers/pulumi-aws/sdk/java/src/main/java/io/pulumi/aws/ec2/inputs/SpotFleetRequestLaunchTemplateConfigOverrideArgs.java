@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
     @Import(name="priority")
       private final @Nullable Output<Double> priority;
 
-    public Output<Double> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Double> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
-        return this.spotPrice == null ? Output.empty() : this.spotPrice;
+    public Output<String> spotPrice() {
+        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
     @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
-    public Output<Double> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+    public Output<Double> weightedCapacity() {
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public SpotFleetRequestLaunchTemplateConfigOverrideArgs(
@@ -97,12 +98,12 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
     }
 
     private SpotFleetRequestLaunchTemplateConfigOverrideArgs() {
-        this.availabilityZone = Output.empty();
-        this.instanceType = Output.empty();
-        this.priority = Output.empty();
-        this.spotPrice = Output.empty();
-        this.subnetId = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.spotPrice = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -148,7 +149,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder priority(@Nullable Output<Double> priority) {
@@ -156,7 +157,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
             return this;
         }
         public Builder priority(@Nullable Double priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
@@ -164,7 +165,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
             return this;
         }
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Output.ofNullable(spotPrice);
+            this.spotPrice = Codegen.ofNullable(spotPrice);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -172,7 +173,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
@@ -180,7 +181,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
             return this;
         }
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public SpotFleetRequestLaunchTemplateConfigOverrideArgs build() {
             return new SpotFleetRequestLaunchTemplateConfigOverrideArgs(availabilityZone, instanceType, priority, spotPrice, subnetId, weightedCapacity);

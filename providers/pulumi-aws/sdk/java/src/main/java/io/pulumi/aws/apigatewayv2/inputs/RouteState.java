@@ -6,6 +6,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 import io.pulumi.aws.apigatewayv2.inputs.RouteRequestParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKeyRequired")
       private final @Nullable Output<Boolean> apiKeyRequired;
 
-    public Output<Boolean> getApiKeyRequired() {
-        return this.apiKeyRequired == null ? Output.empty() : this.apiKeyRequired;
+    public Output<Boolean> apiKeyRequired() {
+        return this.apiKeyRequired == null ? Codegen.empty() : this.apiKeyRequired;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationScopes")
       private final @Nullable Output<List<String>> authorizationScopes;
 
-    public Output<List<String>> getAuthorizationScopes() {
-        return this.authorizationScopes == null ? Output.empty() : this.authorizationScopes;
+    public Output<List<String>> authorizationScopes() {
+        return this.authorizationScopes == null ? Codegen.empty() : this.authorizationScopes;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationType")
       private final @Nullable Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
-        return this.authorizationType == null ? Output.empty() : this.authorizationType;
+    public Output<String> authorizationType() {
+        return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerId")
       private final @Nullable Output<String> authorizerId;
 
-    public Output<String> getAuthorizerId() {
-        return this.authorizerId == null ? Output.empty() : this.authorizerId;
+    public Output<String> authorizerId() {
+        return this.authorizerId == null ? Codegen.empty() : this.authorizerId;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="modelSelectionExpression")
       private final @Nullable Output<String> modelSelectionExpression;
 
-    public Output<String> getModelSelectionExpression() {
-        return this.modelSelectionExpression == null ? Output.empty() : this.modelSelectionExpression;
+    public Output<String> modelSelectionExpression() {
+        return this.modelSelectionExpression == null ? Codegen.empty() : this.modelSelectionExpression;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationName")
       private final @Nullable Output<String> operationName;
 
-    public Output<String> getOperationName() {
-        return this.operationName == null ? Output.empty() : this.operationName;
+    public Output<String> operationName() {
+        return this.operationName == null ? Codegen.empty() : this.operationName;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestModels")
       private final @Nullable Output<Map<String,String>> requestModels;
 
-    public Output<Map<String,String>> getRequestModels() {
-        return this.requestModels == null ? Output.empty() : this.requestModels;
+    public Output<Map<String,String>> requestModels() {
+        return this.requestModels == null ? Codegen.empty() : this.requestModels;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestParameters")
       private final @Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters;
 
-    public Output<List<RouteRequestParameterGetArgs>> getRequestParameters() {
-        return this.requestParameters == null ? Output.empty() : this.requestParameters;
+    public Output<List<RouteRequestParameterGetArgs>> requestParameters() {
+        return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeKey")
       private final @Nullable Output<String> routeKey;
 
-    public Output<String> getRouteKey() {
-        return this.routeKey == null ? Output.empty() : this.routeKey;
+    public Output<String> routeKey() {
+        return this.routeKey == null ? Codegen.empty() : this.routeKey;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeResponseSelectionExpression")
       private final @Nullable Output<String> routeResponseSelectionExpression;
 
-    public Output<String> getRouteResponseSelectionExpression() {
-        return this.routeResponseSelectionExpression == null ? Output.empty() : this.routeResponseSelectionExpression;
+    public Output<String> routeResponseSelectionExpression() {
+        return this.routeResponseSelectionExpression == null ? Codegen.empty() : this.routeResponseSelectionExpression;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public RouteState(
@@ -181,18 +182,18 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteState() {
-        this.apiId = Output.empty();
-        this.apiKeyRequired = Output.empty();
-        this.authorizationScopes = Output.empty();
-        this.authorizationType = Output.empty();
-        this.authorizerId = Output.empty();
-        this.modelSelectionExpression = Output.empty();
-        this.operationName = Output.empty();
-        this.requestModels = Output.empty();
-        this.requestParameters = Output.empty();
-        this.routeKey = Output.empty();
-        this.routeResponseSelectionExpression = Output.empty();
-        this.target = Output.empty();
+        this.apiId = Codegen.empty();
+        this.apiKeyRequired = Codegen.empty();
+        this.authorizationScopes = Codegen.empty();
+        this.authorizationType = Codegen.empty();
+        this.authorizerId = Codegen.empty();
+        this.modelSelectionExpression = Codegen.empty();
+        this.operationName = Codegen.empty();
+        this.requestModels = Codegen.empty();
+        this.requestParameters = Codegen.empty();
+        this.routeKey = Codegen.empty();
+        this.routeResponseSelectionExpression = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -242,7 +243,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder apiKeyRequired(@Nullable Output<Boolean> apiKeyRequired) {
@@ -250,7 +251,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
-            this.apiKeyRequired = Output.ofNullable(apiKeyRequired);
+            this.apiKeyRequired = Codegen.ofNullable(apiKeyRequired);
             return this;
         }
         public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
@@ -258,7 +259,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
-            this.authorizationScopes = Output.ofNullable(authorizationScopes);
+            this.authorizationScopes = Codegen.ofNullable(authorizationScopes);
             return this;
         }
         public Builder authorizationScopes(String... authorizationScopes) {
@@ -269,7 +270,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizationType(@Nullable String authorizationType) {
-            this.authorizationType = Output.ofNullable(authorizationType);
+            this.authorizationType = Codegen.ofNullable(authorizationType);
             return this;
         }
         public Builder authorizerId(@Nullable Output<String> authorizerId) {
@@ -277,7 +278,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerId(@Nullable String authorizerId) {
-            this.authorizerId = Output.ofNullable(authorizerId);
+            this.authorizerId = Codegen.ofNullable(authorizerId);
             return this;
         }
         public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
@@ -285,7 +286,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
-            this.modelSelectionExpression = Output.ofNullable(modelSelectionExpression);
+            this.modelSelectionExpression = Codegen.ofNullable(modelSelectionExpression);
             return this;
         }
         public Builder operationName(@Nullable Output<String> operationName) {
@@ -293,7 +294,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationName(@Nullable String operationName) {
-            this.operationName = Output.ofNullable(operationName);
+            this.operationName = Codegen.ofNullable(operationName);
             return this;
         }
         public Builder requestModels(@Nullable Output<Map<String,String>> requestModels) {
@@ -301,7 +302,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestModels(@Nullable Map<String,String> requestModels) {
-            this.requestModels = Output.ofNullable(requestModels);
+            this.requestModels = Codegen.ofNullable(requestModels);
             return this;
         }
         public Builder requestParameters(@Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters) {
@@ -309,7 +310,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestParameters(@Nullable List<RouteRequestParameterGetArgs> requestParameters) {
-            this.requestParameters = Output.ofNullable(requestParameters);
+            this.requestParameters = Codegen.ofNullable(requestParameters);
             return this;
         }
         public Builder requestParameters(RouteRequestParameterGetArgs... requestParameters) {
@@ -320,7 +321,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeKey(@Nullable String routeKey) {
-            this.routeKey = Output.ofNullable(routeKey);
+            this.routeKey = Codegen.ofNullable(routeKey);
             return this;
         }
         public Builder routeResponseSelectionExpression(@Nullable Output<String> routeResponseSelectionExpression) {
@@ -328,7 +329,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeResponseSelectionExpression(@Nullable String routeResponseSelectionExpression) {
-            this.routeResponseSelectionExpression = Output.ofNullable(routeResponseSelectionExpression);
+            this.routeResponseSelectionExpression = Codegen.ofNullable(routeResponseSelectionExpression);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -336,7 +337,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public RouteState build() {
             return new RouteState(apiId, apiKeyRequired, authorizationScopes, authorizationType, authorizerId, modelSelectionExpression, operationName, requestModels, requestParameters, routeKey, routeResponseSelectionExpression, target);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.InstructionDataType;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1PdfInstructionArgs;
 import java.lang.String;
@@ -23,7 +24,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType", required=true)
       private final Output<InstructionDataType> dataType;
 
-    public Output<InstructionDataType> getDataType() {
+    public Output<InstructionDataType> dataType() {
         return this.dataType;
     }
 
@@ -34,8 +35,8 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -56,15 +57,15 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pdfInstruction")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
 
-    public Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> getPdfInstruction() {
-        return this.pdfInstruction == null ? Output.empty() : this.pdfInstruction;
+    public Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction() {
+        return this.pdfInstruction == null ? Codegen.empty() : this.pdfInstruction;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public InstructionArgs(
@@ -81,11 +82,11 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstructionArgs() {
-        this.dataType = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.pdfInstruction = Output.empty();
-        this.project = Output.empty();
+        this.dataType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.pdfInstruction = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -145,7 +146,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pdfInstruction(@Nullable GoogleCloudDatalabelingV1beta1PdfInstructionArgs pdfInstruction) {
-            this.pdfInstruction = Output.ofNullable(pdfInstruction);
+            this.pdfInstruction = Codegen.ofNullable(pdfInstruction);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -153,7 +154,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public InstructionArgs build() {
             return new InstructionArgs(dataType, description, displayName, pdfInstruction, project);

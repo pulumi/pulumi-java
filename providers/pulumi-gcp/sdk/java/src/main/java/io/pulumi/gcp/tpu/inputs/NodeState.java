@@ -5,6 +5,7 @@ package io.pulumi.gcp.tpu.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.tpu.inputs.NodeNetworkEndpointGetArgs;
 import io.pulumi.gcp.tpu.inputs.NodeSchedulingConfigGetArgs;
 import java.lang.Boolean;
@@ -26,8 +27,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
+    public Output<String> acceleratorType() {
+        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
-        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
+    public Output<String> cidrBlock() {
+        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkEndpoints")
       private final @Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
 
-    public Output<List<NodeNetworkEndpointGetArgs>> getNetworkEndpoints() {
-        return this.networkEndpoints == null ? Output.empty() : this.networkEndpoints;
+    public Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints() {
+        return this.networkEndpoints == null ? Codegen.empty() : this.networkEndpoints;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulingConfig")
       private final @Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig;
 
-    public Output<NodeSchedulingConfigGetArgs> getSchedulingConfig() {
-        return this.schedulingConfig == null ? Output.empty() : this.schedulingConfig;
+    public Output<NodeSchedulingConfigGetArgs> schedulingConfig() {
+        return this.schedulingConfig == null ? Codegen.empty() : this.schedulingConfig;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tensorflowVersion")
       private final @Nullable Output<String> tensorflowVersion;
 
-    public Output<String> getTensorflowVersion() {
-        return this.tensorflowVersion == null ? Output.empty() : this.tensorflowVersion;
+    public Output<String> tensorflowVersion() {
+        return this.tensorflowVersion == null ? Codegen.empty() : this.tensorflowVersion;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="useServiceNetworking")
       private final @Nullable Output<Boolean> useServiceNetworking;
 
-    public Output<Boolean> getUseServiceNetworking() {
-        return this.useServiceNetworking == null ? Output.empty() : this.useServiceNetworking;
+    public Output<Boolean> useServiceNetworking() {
+        return this.useServiceNetworking == null ? Codegen.empty() : this.useServiceNetworking;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public NodeState(
@@ -209,19 +210,19 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeState() {
-        this.acceleratorType = Output.empty();
-        this.cidrBlock = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.networkEndpoints = Output.empty();
-        this.project = Output.empty();
-        this.schedulingConfig = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.tensorflowVersion = Output.empty();
-        this.useServiceNetworking = Output.empty();
-        this.zone = Output.empty();
+        this.acceleratorType = Codegen.empty();
+        this.cidrBlock = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.networkEndpoints = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schedulingConfig = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.tensorflowVersion = Codegen.empty();
+        this.useServiceNetworking = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -273,7 +274,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Output.ofNullable(acceleratorType);
+            this.acceleratorType = Codegen.ofNullable(acceleratorType);
             return this;
         }
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
@@ -281,7 +282,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Output.ofNullable(cidrBlock);
+            this.cidrBlock = Codegen.ofNullable(cidrBlock);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -289,7 +290,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -297,7 +298,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -305,7 +306,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -313,7 +314,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder networkEndpoints(@Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints) {
@@ -321,7 +322,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkEndpoints(@Nullable List<NodeNetworkEndpointGetArgs> networkEndpoints) {
-            this.networkEndpoints = Output.ofNullable(networkEndpoints);
+            this.networkEndpoints = Codegen.ofNullable(networkEndpoints);
             return this;
         }
         public Builder networkEndpoints(NodeNetworkEndpointGetArgs... networkEndpoints) {
@@ -332,7 +333,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schedulingConfig(@Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig) {
@@ -340,7 +341,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedulingConfig(@Nullable NodeSchedulingConfigGetArgs schedulingConfig) {
-            this.schedulingConfig = Output.ofNullable(schedulingConfig);
+            this.schedulingConfig = Codegen.ofNullable(schedulingConfig);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -348,7 +349,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder tensorflowVersion(@Nullable Output<String> tensorflowVersion) {
@@ -356,7 +357,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tensorflowVersion(@Nullable String tensorflowVersion) {
-            this.tensorflowVersion = Output.ofNullable(tensorflowVersion);
+            this.tensorflowVersion = Codegen.ofNullable(tensorflowVersion);
             return this;
         }
         public Builder useServiceNetworking(@Nullable Output<Boolean> useServiceNetworking) {
@@ -364,7 +365,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
-            this.useServiceNetworking = Output.ofNullable(useServiceNetworking);
+            this.useServiceNetworking = Codegen.ofNullable(useServiceNetworking);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -372,7 +373,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public NodeState build() {
             return new NodeState(acceleratorType, cidrBlock, description, labels, name, network, networkEndpoints, project, schedulingConfig, serviceAccount, tensorflowVersion, useServiceNetworking, zone);

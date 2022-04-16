@@ -5,6 +5,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ListenerRuleConditionSourceIpArgs extends io.pulumi.resources
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 
@@ -30,7 +31,7 @@ public final class ListenerRuleConditionSourceIpArgs extends io.pulumi.resources
     }
 
     private ListenerRuleConditionSourceIpArgs() {
-        this.values = Output.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

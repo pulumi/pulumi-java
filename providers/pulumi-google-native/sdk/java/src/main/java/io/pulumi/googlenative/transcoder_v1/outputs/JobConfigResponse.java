@@ -98,70 +98,70 @@ public final class JobConfigResponse {
      * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
      * 
     */
-    public List<AdBreakResponse> getAdBreaks() {
+    public List<AdBreakResponse> adBreaks() {
         return this.adBreaks;
     }
     /**
      * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
      * 
     */
-    public List<EditAtomResponse> getEditList() {
+    public List<EditAtomResponse> editList() {
         return this.editList;
     }
     /**
      * List of elementary streams.
      * 
     */
-    public List<ElementaryStreamResponse> getElementaryStreams() {
+    public List<ElementaryStreamResponse> elementaryStreams() {
         return this.elementaryStreams;
     }
     /**
      * List of input assets stored in Cloud Storage.
      * 
     */
-    public List<InputResponse> getInputs() {
+    public List<InputResponse> inputs() {
         return this.inputs;
     }
     /**
      * List of output manifests.
      * 
     */
-    public List<ManifestResponse> getManifests() {
+    public List<ManifestResponse> manifests() {
         return this.manifests;
     }
     /**
      * List of multiplexing settings for output streams.
      * 
     */
-    public List<MuxStreamResponse> getMuxStreams() {
+    public List<MuxStreamResponse> muxStreams() {
         return this.muxStreams;
     }
     /**
      * Output configuration.
      * 
     */
-    public OutputResponse getOutput() {
+    public OutputResponse output() {
         return this.output;
     }
     /**
      * List of overlays on the output video, in descending Z-order.
      * 
     */
-    public List<OverlayResponse> getOverlays() {
+    public List<OverlayResponse> overlays() {
         return this.overlays;
     }
     /**
      * Destination on Pub/Sub.
      * 
     */
-    public PubsubDestinationResponse getPubsubDestination() {
+    public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }
     /**
      * List of output sprite sheets.
      * 
     */
-    public List<SpriteSheetResponse> getSpriteSheets() {
+    public List<SpriteSheetResponse> spriteSheets() {
         return this.spriteSheets;
     }
 

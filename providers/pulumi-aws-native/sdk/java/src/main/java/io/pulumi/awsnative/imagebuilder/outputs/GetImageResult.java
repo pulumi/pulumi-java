@@ -48,28 +48,28 @@ public final class GetImageResult {
      * The Amazon Resource Name (ARN) of the image.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
     */
-    public Optional<String> getContainerRecipeArn() {
+    public Optional<String> containerRecipeArn() {
         return Optional.ofNullable(this.containerRecipeArn);
     }
     /**
      * The AMI ID of the EC2 AMI in current region.
      * 
     */
-    public Optional<String> getImageId() {
+    public Optional<String> imageId() {
         return Optional.ofNullable(this.imageId);
     }
     /**
      * The name of the image.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

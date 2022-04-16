@@ -9,6 +9,7 @@ import io.pulumi.awsnative.customerprofiles.outputs.DomainTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The time of this integration got created
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -47,7 +48,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The URL of the SQS dead letter queue
      * 
      */
-    public Output</* @Nullable */ String> getDeadLetterQueueUrl() {
+    public Output</* @Nullable */ String> deadLetterQueueUrl() {
         return this.deadLetterQueueUrl;
     }
     /**
@@ -61,7 +62,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The default encryption key
      * 
      */
-    public Output</* @Nullable */ String> getDefaultEncryptionKey() {
+    public Output</* @Nullable */ String> defaultEncryptionKey() {
         return this.defaultEncryptionKey;
     }
     /**
@@ -75,7 +76,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The default number of days until the data within the domain expires.
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultExpirationDays() {
+    public Output</* @Nullable */ Integer> defaultExpirationDays() {
         return this.defaultExpirationDays;
     }
     /**
@@ -89,7 +90,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The unique name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -103,7 +104,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The time of this integration got last updated at
      * 
      */
-    public Output<String> getLastUpdatedAt() {
+    public Output<String> lastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
@@ -117,7 +118,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the domain
      * 
      */
-    public Output</* @Nullable */ List<DomainTag>> getTags() {
+    public Output</* @Nullable */ List<DomainTag>> tags() {
         return this.tags;
     }
 
@@ -143,7 +144,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, @Nullable DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:customerprofiles:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:customerprofiles:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Domain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

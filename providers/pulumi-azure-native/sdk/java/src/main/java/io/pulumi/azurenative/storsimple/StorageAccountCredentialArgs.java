@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storsimple.enums.SslStatus;
 import io.pulumi.azurenative.storsimple.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     @Import(name="accessKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
 
-    public Output<AsymmetricEncryptedSecretArgs> getAccessKey() {
-        return this.accessKey == null ? Output.empty() : this.accessKey;
+    public Output<AsymmetricEncryptedSecretArgs> accessKey() {
+        return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     @Import(name="endPoint", required=true)
       private final Output<String> endPoint;
 
-    public Output<String> getEndPoint() {
+    public Output<String> endPoint() {
         return this.endPoint;
     }
 
@@ -46,8 +47,8 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<Kind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -68,7 +69,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +80,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     @Import(name="sslStatus", required=true)
       private final Output<SslStatus> sslStatus;
 
-    public Output<SslStatus> getSslStatus() {
+    public Output<SslStatus> sslStatus() {
         return this.sslStatus;
     }
 
@@ -90,8 +91,8 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     @Import(name="storageAccountCredentialName")
       private final @Nullable Output<String> storageAccountCredentialName;
 
-    public Output<String> getStorageAccountCredentialName() {
-        return this.storageAccountCredentialName == null ? Output.empty() : this.storageAccountCredentialName;
+    public Output<String> storageAccountCredentialName() {
+        return this.storageAccountCredentialName == null ? Codegen.empty() : this.storageAccountCredentialName;
     }
 
     public StorageAccountCredentialArgs(
@@ -112,13 +113,13 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     }
 
     private StorageAccountCredentialArgs() {
-        this.accessKey = Output.empty();
-        this.endPoint = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sslStatus = Output.empty();
-        this.storageAccountCredentialName = Output.empty();
+        this.accessKey = Codegen.empty();
+        this.endPoint = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sslStatus = Codegen.empty();
+        this.storageAccountCredentialName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder accessKey(@Nullable AsymmetricEncryptedSecretArgs accessKey) {
-            this.accessKey = Output.ofNullable(accessKey);
+            this.accessKey = Codegen.ofNullable(accessKey);
             return this;
         }
         public Builder endPoint(Output<String> endPoint) {
@@ -174,7 +175,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {
@@ -206,7 +207,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageAccountCredentialName(@Nullable String storageAccountCredentialName) {
-            this.storageAccountCredentialName = Output.ofNullable(storageAccountCredentialName);
+            this.storageAccountCredentialName = Codegen.ofNullable(storageAccountCredentialName);
             return this;
         }        public StorageAccountCredentialArgs build() {
             return new StorageAccountCredentialArgs(accessKey, endPoint, kind, managerName, resourceGroupName, sslStatus, storageAccountCredentialName);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 import io.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesListArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
     @Import(name="virtualNetworks")
       private final @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
-    public Output<VirtualNetworkPropertiesListArgs> getVirtualNetworks() {
-        return this.virtualNetworks == null ? Output.empty() : this.virtualNetworks;
+    public Output<VirtualNetworkPropertiesListArgs> virtualNetworks() {
+        return this.virtualNetworks == null ? Codegen.empty() : this.virtualNetworks;
     }
 
     public PropertiesNetworkInjectionArgs(@Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks) {
@@ -34,7 +35,7 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
     }
 
     private PropertiesNetworkInjectionArgs() {
-        this.virtualNetworks = Output.empty();
+        this.virtualNetworks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListArgs virtualNetworks) {
-            this.virtualNetworks = Output.ofNullable(virtualNetworks);
+            this.virtualNetworks = Codegen.ofNullable(virtualNetworks);
             return this;
         }        public PropertiesNetworkInjectionArgs build() {
             return new PropertiesNetworkInjectionArgs(virtualNetworks);

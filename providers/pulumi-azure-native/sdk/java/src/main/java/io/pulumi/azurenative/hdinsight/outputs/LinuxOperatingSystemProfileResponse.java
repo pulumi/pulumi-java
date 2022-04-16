@@ -42,21 +42,21 @@ public final class LinuxOperatingSystemProfileResponse {
      * The password.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The SSH profile.
      * 
     */
-    public Optional<SshProfileResponse> getSshProfile() {
+    public Optional<SshProfileResponse> sshProfile() {
         return Optional.ofNullable(this.sshProfile);
     }
     /**
      * The username.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

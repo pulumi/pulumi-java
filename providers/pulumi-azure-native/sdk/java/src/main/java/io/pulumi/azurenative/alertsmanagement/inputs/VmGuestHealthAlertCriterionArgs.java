@@ -6,6 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     @Import(name="healthStates", required=true)
       private final Output<List<HealthStateArgs>> healthStates;
 
-    public Output<List<HealthStateArgs>> getHealthStates() {
+    public Output<List<HealthStateArgs>> healthStates() {
         return this.healthStates;
     }
 
@@ -38,8 +39,8 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     @Import(name="monitorNames")
       private final @Nullable Output<List<String>> monitorNames;
 
-    public Output<List<String>> getMonitorNames() {
-        return this.monitorNames == null ? Output.empty() : this.monitorNames;
+    public Output<List<String>> monitorNames() {
+        return this.monitorNames == null ? Codegen.empty() : this.monitorNames;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     @Import(name="monitorTypes")
       private final @Nullable Output<List<String>> monitorTypes;
 
-    public Output<List<String>> getMonitorTypes() {
-        return this.monitorTypes == null ? Output.empty() : this.monitorTypes;
+    public Output<List<String>> monitorTypes() {
+        return this.monitorTypes == null ? Codegen.empty() : this.monitorTypes;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -77,10 +78,10 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     }
 
     private VmGuestHealthAlertCriterionArgs() {
-        this.healthStates = Output.empty();
-        this.monitorNames = Output.empty();
-        this.monitorTypes = Output.empty();
-        this.namespace = Output.empty();
+        this.healthStates = Codegen.empty();
+        this.monitorNames = Codegen.empty();
+        this.monitorTypes = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder monitorNames(@Nullable List<String> monitorNames) {
-            this.monitorNames = Output.ofNullable(monitorNames);
+            this.monitorNames = Codegen.ofNullable(monitorNames);
             return this;
         }
         public Builder monitorNames(String... monitorNames) {
@@ -136,7 +137,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder monitorTypes(@Nullable List<String> monitorTypes) {
-            this.monitorTypes = Output.ofNullable(monitorTypes);
+            this.monitorTypes = Codegen.ofNullable(monitorTypes);
             return this;
         }
         public Builder monitorTypes(String... monitorTypes) {

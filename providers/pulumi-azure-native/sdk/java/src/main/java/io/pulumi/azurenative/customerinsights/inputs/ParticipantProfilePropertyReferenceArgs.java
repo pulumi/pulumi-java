@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
     @Import(name="interactionPropertyName", required=true)
       private final Output<String> interactionPropertyName;
 
-    public Output<String> getInteractionPropertyName() {
+    public Output<String> interactionPropertyName() {
         return this.interactionPropertyName;
     }
 
@@ -35,7 +36,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
     @Import(name="profilePropertyName", required=true)
       private final Output<String> profilePropertyName;
 
-    public Output<String> getProfilePropertyName() {
+    public Output<String> profilePropertyName() {
         return this.profilePropertyName;
     }
 
@@ -47,8 +48,8 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
     }
 
     private ParticipantProfilePropertyReferenceArgs() {
-        this.interactionPropertyName = Output.empty();
-        this.profilePropertyName = Output.empty();
+        this.interactionPropertyName = Codegen.empty();
+        this.profilePropertyName = Codegen.empty();
     }
 
     public static Builder builder() {

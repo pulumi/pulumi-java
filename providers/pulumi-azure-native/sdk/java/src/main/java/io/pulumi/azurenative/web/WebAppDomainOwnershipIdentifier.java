@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public class WebAppDomainOwnershipIdentifier extends io.pulumi.resources.CustomR
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -52,7 +53,7 @@ public class WebAppDomainOwnershipIdentifier extends io.pulumi.resources.CustomR
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -66,7 +67,7 @@ public class WebAppDomainOwnershipIdentifier extends io.pulumi.resources.CustomR
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -80,7 +81,7 @@ public class WebAppDomainOwnershipIdentifier extends io.pulumi.resources.CustomR
      * @return String representation of the identity.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 
@@ -106,7 +107,7 @@ public class WebAppDomainOwnershipIdentifier extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppDomainOwnershipIdentifier(String name, WebAppDomainOwnershipIdentifierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppDomainOwnershipIdentifier", name, args == null ? WebAppDomainOwnershipIdentifierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppDomainOwnershipIdentifier", name, args == null ? WebAppDomainOwnershipIdentifierArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppDomainOwnershipIdentifier(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class ReadinessCheckTagArgs extends io.pulumi.resources.ResourceArg
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final Output<List<String>> value;
 
-    public Output<List<String>> getValue() {
+    public Output<List<String>> value() {
         return this.value;
     }
 
@@ -36,8 +37,8 @@ public final class ReadinessCheckTagArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReadinessCheckTagArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

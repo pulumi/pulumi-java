@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automanage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Output<Integer> instantRpRetentionRangeInDays;
 
-    public Output<Integer> getInstantRpRetentionRangeInDays() {
-        return this.instantRpRetentionRangeInDays == null ? Output.empty() : this.instantRpRetentionRangeInDays;
+    public Output<Integer> instantRpRetentionRangeInDays() {
+        return this.instantRpRetentionRangeInDays == null ? Codegen.empty() : this.instantRpRetentionRangeInDays;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="retentionPolicy")
       private final @Nullable Output<String> retentionPolicy;
 
-    public Output<String> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+    public Output<String> retentionPolicy() {
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="schedulePolicy")
       private final @Nullable Output<String> schedulePolicy;
 
-    public Output<String> getSchedulePolicy() {
-        return this.schedulePolicy == null ? Output.empty() : this.schedulePolicy;
+    public Output<String> schedulePolicy() {
+        return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public ConfigurationProfilePreferenceVmBackupArgs(
@@ -75,10 +76,10 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     }
 
     private ConfigurationProfilePreferenceVmBackupArgs() {
-        this.instantRpRetentionRangeInDays = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.schedulePolicy = Output.empty();
-        this.timeZone = Output.empty();
+        this.instantRpRetentionRangeInDays = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.schedulePolicy = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
             return this;
         }
         public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
-            this.instantRpRetentionRangeInDays = Output.ofNullable(instantRpRetentionRangeInDays);
+            this.instantRpRetentionRangeInDays = Codegen.ofNullable(instantRpRetentionRangeInDays);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<String> retentionPolicy) {
@@ -120,7 +121,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
             return this;
         }
         public Builder retentionPolicy(@Nullable String retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder schedulePolicy(@Nullable Output<String> schedulePolicy) {
@@ -128,7 +129,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
             return this;
         }
         public Builder schedulePolicy(@Nullable String schedulePolicy) {
-            this.schedulePolicy = Output.ofNullable(schedulePolicy);
+            this.schedulePolicy = Codegen.ofNullable(schedulePolicy);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -136,7 +137,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public ConfigurationProfilePreferenceVmBackupArgs build() {
             return new ConfigurationProfilePreferenceVmBackupArgs(instantRpRetentionRangeInDays, retentionPolicy, schedulePolicy, timeZone);

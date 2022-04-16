@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ListenerTargetGroupTupleArgs extends io.pulumi.resources.Reso
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
+    public Output<String> targetGroupArn() {
+        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+    public Output<Integer> weight() {
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public ListenerTargetGroupTupleArgs(
@@ -37,8 +38,8 @@ public final class ListenerTargetGroupTupleArgs extends io.pulumi.resources.Reso
     }
 
     private ListenerTargetGroupTupleArgs() {
-        this.targetGroupArn = Output.empty();
-        this.weight = Output.empty();
+        this.targetGroupArn = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ListenerTargetGroupTupleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Output.ofNullable(targetGroupArn);
+            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -76,7 +77,7 @@ public final class ListenerTargetGroupTupleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public ListenerTargetGroupTupleArgs build() {
             return new ListenerTargetGroupTupleArgs(targetGroupArn, weight);

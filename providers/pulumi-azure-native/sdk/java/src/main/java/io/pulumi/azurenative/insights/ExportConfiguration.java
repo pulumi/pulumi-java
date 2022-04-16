@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the Application Insights component.
      * 
      */
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
     /**
@@ -55,7 +56,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the destination storage container.
      * 
      */
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
     /**
@@ -69,7 +70,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of destination account.
      * 
      */
-    public Output<String> getDestinationAccountId() {
+    public Output<String> destinationAccountId() {
         return this.destinationAccountId;
     }
     /**
@@ -83,7 +84,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The destination account location ID.
      * 
      */
-    public Output<String> getDestinationStorageLocationId() {
+    public Output<String> destinationStorageLocationId() {
         return this.destinationStorageLocationId;
     }
     /**
@@ -97,7 +98,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The destination storage account subscription ID.
      * 
      */
-    public Output<String> getDestinationStorageSubscriptionId() {
+    public Output<String> destinationStorageSubscriptionId() {
         return this.destinationStorageSubscriptionId;
     }
     /**
@@ -111,7 +112,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The destination type.
      * 
      */
-    public Output<String> getDestinationType() {
+    public Output<String> destinationType() {
         return this.destinationType;
     }
     /**
@@ -125,7 +126,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
      * 
      */
-    public Output<String> getExportId() {
+    public Output<String> exportId() {
         return this.exportId;
     }
     /**
@@ -139,7 +140,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
      * 
      */
-    public Output<String> getExportStatus() {
+    public Output<String> exportStatus() {
         return this.exportStatus;
     }
     /**
@@ -153,7 +154,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The instrumentation key of the Application Insights component.
      * 
      */
-    public Output<String> getInstrumentationKey() {
+    public Output<String> instrumentationKey() {
         return this.instrumentationKey;
     }
     /**
@@ -167,7 +168,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
      * 
      */
-    public Output<String> getIsUserEnabled() {
+    public Output<String> isUserEnabled() {
         return this.isUserEnabled;
     }
     /**
@@ -181,7 +182,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The last time the Continuous Export configuration started failing.
      * 
      */
-    public Output<String> getLastGapTime() {
+    public Output<String> lastGapTime() {
         return this.lastGapTime;
     }
     /**
@@ -195,7 +196,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
      * 
      */
-    public Output<String> getLastSuccessTime() {
+    public Output<String> lastSuccessTime() {
         return this.lastSuccessTime;
     }
     /**
@@ -209,7 +210,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return Last time the Continuous Export configuration was updated.
      * 
      */
-    public Output<String> getLastUserUpdate() {
+    public Output<String> lastUserUpdate() {
         return this.lastUserUpdate;
     }
     /**
@@ -223,7 +224,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return Deprecated
      * 
      */
-    public Output</* @Nullable */ String> getNotificationQueueEnabled() {
+    public Output</* @Nullable */ String> notificationQueueEnabled() {
         return this.notificationQueueEnabled;
     }
     /**
@@ -237,7 +238,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
      * 
      */
-    public Output<String> getPermanentErrorReason() {
+    public Output<String> permanentErrorReason() {
         return this.permanentErrorReason;
     }
     /**
@@ -251,7 +252,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
      * 
      */
-    public Output</* @Nullable */ String> getRecordTypes() {
+    public Output</* @Nullable */ String> recordTypes() {
         return this.recordTypes;
     }
     /**
@@ -265,7 +266,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The resource group of the Application Insights component.
      * 
      */
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -279,7 +280,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the destination storage account.
      * 
      */
-    public Output<String> getStorageName() {
+    public Output<String> storageName() {
         return this.storageName;
     }
     /**
@@ -293,7 +294,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @return The subscription of the Application Insights component.
      * 
      */
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -319,7 +320,7 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExportConfiguration(String name, ExportConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:ExportConfiguration", name, args == null ? ExportConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:ExportConfiguration", name, args == null ? ExportConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExportConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

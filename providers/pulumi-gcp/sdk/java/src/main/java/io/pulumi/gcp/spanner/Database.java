@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseArgs;
 import io.pulumi.gcp.spanner.inputs.DatabaseState;
@@ -68,7 +69,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * error in any statement, the database is not created.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDdls() {
+    public Output</* @Nullable */ List<String>> ddls() {
         return this.ddls;
     }
     /**
@@ -84,7 +85,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * in state, a `destroy` or `update` that would delete the instance will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeletionProtection() {
+    public Output</* @Nullable */ Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     /**
@@ -100,7 +101,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DatabaseEncryptionConfig> getEncryptionConfig() {
+    public Output</* @Nullable */ DatabaseEncryptionConfig> encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
@@ -114,7 +115,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The instance to create the database on.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -130,7 +131,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +147,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -160,7 +161,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return An explanation of the status of the database.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -186,7 +187,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/database:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/database:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Database(String name, Output<String> id, @Nullable DatabaseState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

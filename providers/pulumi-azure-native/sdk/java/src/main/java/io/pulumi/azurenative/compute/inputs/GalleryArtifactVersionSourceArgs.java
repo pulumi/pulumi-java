@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public GalleryArtifactVersionSourceArgs(
@@ -48,8 +49,8 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
     }
 
     private GalleryArtifactVersionSourceArgs() {
-        this.id = Output.empty();
-        this.uri = Output.empty();
+        this.id = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -87,7 +88,7 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public GalleryArtifactVersionSourceArgs build() {
             return new GalleryArtifactVersionSourceArgs(id, uri);

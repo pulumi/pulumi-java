@@ -37,147 +37,147 @@ public final class TopicRuleAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudwatchAlarm")
       private final @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm;
 
-    public Optional<TopicRuleCloudwatchAlarmAction> getCloudwatchAlarm() {
+    public Optional<TopicRuleCloudwatchAlarmAction> cloudwatchAlarm() {
         return this.cloudwatchAlarm == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchAlarm);
     }
 
     @Import(name="cloudwatchLogs")
       private final @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs;
 
-    public Optional<TopicRuleCloudwatchLogsAction> getCloudwatchLogs() {
+    public Optional<TopicRuleCloudwatchLogsAction> cloudwatchLogs() {
         return this.cloudwatchLogs == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchLogs);
     }
 
     @Import(name="cloudwatchMetric")
       private final @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric;
 
-    public Optional<TopicRuleCloudwatchMetricAction> getCloudwatchMetric() {
+    public Optional<TopicRuleCloudwatchMetricAction> cloudwatchMetric() {
         return this.cloudwatchMetric == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchMetric);
     }
 
     @Import(name="dynamoDB")
       private final @Nullable TopicRuleDynamoDBAction dynamoDB;
 
-    public Optional<TopicRuleDynamoDBAction> getDynamoDB() {
+    public Optional<TopicRuleDynamoDBAction> dynamoDB() {
         return this.dynamoDB == null ? Optional.empty() : Optional.ofNullable(this.dynamoDB);
     }
 
     @Import(name="dynamoDBv2")
       private final @Nullable TopicRuleDynamoDBv2Action dynamoDBv2;
 
-    public Optional<TopicRuleDynamoDBv2Action> getDynamoDBv2() {
+    public Optional<TopicRuleDynamoDBv2Action> dynamoDBv2() {
         return this.dynamoDBv2 == null ? Optional.empty() : Optional.ofNullable(this.dynamoDBv2);
     }
 
     @Import(name="elasticsearch")
       private final @Nullable TopicRuleElasticsearchAction elasticsearch;
 
-    public Optional<TopicRuleElasticsearchAction> getElasticsearch() {
+    public Optional<TopicRuleElasticsearchAction> elasticsearch() {
         return this.elasticsearch == null ? Optional.empty() : Optional.ofNullable(this.elasticsearch);
     }
 
     @Import(name="firehose")
       private final @Nullable TopicRuleFirehoseAction firehose;
 
-    public Optional<TopicRuleFirehoseAction> getFirehose() {
+    public Optional<TopicRuleFirehoseAction> firehose() {
         return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
     }
 
     @Import(name="http")
       private final @Nullable TopicRuleHttpAction http;
 
-    public Optional<TopicRuleHttpAction> getHttp() {
+    public Optional<TopicRuleHttpAction> http() {
         return this.http == null ? Optional.empty() : Optional.ofNullable(this.http);
     }
 
     @Import(name="iotAnalytics")
       private final @Nullable TopicRuleIotAnalyticsAction iotAnalytics;
 
-    public Optional<TopicRuleIotAnalyticsAction> getIotAnalytics() {
+    public Optional<TopicRuleIotAnalyticsAction> iotAnalytics() {
         return this.iotAnalytics == null ? Optional.empty() : Optional.ofNullable(this.iotAnalytics);
     }
 
     @Import(name="iotEvents")
       private final @Nullable TopicRuleIotEventsAction iotEvents;
 
-    public Optional<TopicRuleIotEventsAction> getIotEvents() {
+    public Optional<TopicRuleIotEventsAction> iotEvents() {
         return this.iotEvents == null ? Optional.empty() : Optional.ofNullable(this.iotEvents);
     }
 
     @Import(name="iotSiteWise")
       private final @Nullable TopicRuleIotSiteWiseAction iotSiteWise;
 
-    public Optional<TopicRuleIotSiteWiseAction> getIotSiteWise() {
+    public Optional<TopicRuleIotSiteWiseAction> iotSiteWise() {
         return this.iotSiteWise == null ? Optional.empty() : Optional.ofNullable(this.iotSiteWise);
     }
 
     @Import(name="kafka")
       private final @Nullable TopicRuleKafkaAction kafka;
 
-    public Optional<TopicRuleKafkaAction> getKafka() {
+    public Optional<TopicRuleKafkaAction> kafka() {
         return this.kafka == null ? Optional.empty() : Optional.ofNullable(this.kafka);
     }
 
     @Import(name="kinesis")
       private final @Nullable TopicRuleKinesisAction kinesis;
 
-    public Optional<TopicRuleKinesisAction> getKinesis() {
+    public Optional<TopicRuleKinesisAction> kinesis() {
         return this.kinesis == null ? Optional.empty() : Optional.ofNullable(this.kinesis);
     }
 
     @Import(name="lambda")
       private final @Nullable TopicRuleLambdaAction lambda;
 
-    public Optional<TopicRuleLambdaAction> getLambda() {
+    public Optional<TopicRuleLambdaAction> lambda() {
         return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
     }
 
     @Import(name="openSearch")
       private final @Nullable TopicRuleOpenSearchAction openSearch;
 
-    public Optional<TopicRuleOpenSearchAction> getOpenSearch() {
+    public Optional<TopicRuleOpenSearchAction> openSearch() {
         return this.openSearch == null ? Optional.empty() : Optional.ofNullable(this.openSearch);
     }
 
     @Import(name="republish")
       private final @Nullable TopicRuleRepublishAction republish;
 
-    public Optional<TopicRuleRepublishAction> getRepublish() {
+    public Optional<TopicRuleRepublishAction> republish() {
         return this.republish == null ? Optional.empty() : Optional.ofNullable(this.republish);
     }
 
     @Import(name="s3")
       private final @Nullable TopicRuleS3Action s3;
 
-    public Optional<TopicRuleS3Action> getS3() {
+    public Optional<TopicRuleS3Action> s3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
     }
 
     @Import(name="sns")
       private final @Nullable TopicRuleSnsAction sns;
 
-    public Optional<TopicRuleSnsAction> getSns() {
+    public Optional<TopicRuleSnsAction> sns() {
         return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
     }
 
     @Import(name="sqs")
       private final @Nullable TopicRuleSqsAction sqs;
 
-    public Optional<TopicRuleSqsAction> getSqs() {
+    public Optional<TopicRuleSqsAction> sqs() {
         return this.sqs == null ? Optional.empty() : Optional.ofNullable(this.sqs);
     }
 
     @Import(name="stepFunctions")
       private final @Nullable TopicRuleStepFunctionsAction stepFunctions;
 
-    public Optional<TopicRuleStepFunctionsAction> getStepFunctions() {
+    public Optional<TopicRuleStepFunctionsAction> stepFunctions() {
         return this.stepFunctions == null ? Optional.empty() : Optional.ofNullable(this.stepFunctions);
     }
 
     @Import(name="timestream")
       private final @Nullable TopicRuleTimestreamAction timestream;
 
-    public Optional<TopicRuleTimestreamAction> getTimestream() {
+    public Optional<TopicRuleTimestreamAction> timestream() {
         return this.timestream == null ? Optional.empty() : Optional.ofNullable(this.timestream);
     }
 

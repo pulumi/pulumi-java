@@ -5,6 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
     @Import(name="from", required=true)
       private final Output<String> from;
 
-    public Output<String> getFrom() {
+    public Output<String> from() {
         return this.from;
     }
 
@@ -35,7 +36,7 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
     @Import(name="to", required=true)
       private final Output<String> to;
 
-    public Output<String> getTo() {
+    public Output<String> to() {
         return this.to;
     }
 
@@ -47,8 +48,8 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
     }
 
     private ReportConfigTimePeriodArgs() {
-        this.from = Output.empty();
-        this.to = Output.empty();
+        this.from = Codegen.empty();
+        this.to = Codegen.empty();
     }
 
     public static Builder builder() {

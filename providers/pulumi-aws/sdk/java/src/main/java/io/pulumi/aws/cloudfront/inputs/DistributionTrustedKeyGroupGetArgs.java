@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedKeyGroupItemGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class DistributionTrustedKeyGroupGetArgs extends io.pulumi.resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DistributionTrustedKeyGroupGetArgs extends io.pulumi.resource
     @Import(name="items")
       private final @Nullable Output<List<DistributionTrustedKeyGroupItemGetArgs>> items;
 
-    public Output<List<DistributionTrustedKeyGroupItemGetArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<List<DistributionTrustedKeyGroupItemGetArgs>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public DistributionTrustedKeyGroupGetArgs(
@@ -46,8 +47,8 @@ public final class DistributionTrustedKeyGroupGetArgs extends io.pulumi.resource
     }
 
     private DistributionTrustedKeyGroupGetArgs() {
-        this.enabled = Output.empty();
-        this.items = Output.empty();
+        this.enabled = Codegen.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DistributionTrustedKeyGroupGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder items(@Nullable Output<List<DistributionTrustedKeyGroupItemGetArgs>> items) {
@@ -85,7 +86,7 @@ public final class DistributionTrustedKeyGroupGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder items(@Nullable List<DistributionTrustedKeyGroupItemGetArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(DistributionTrustedKeyGroupItemGetArgs... items) {

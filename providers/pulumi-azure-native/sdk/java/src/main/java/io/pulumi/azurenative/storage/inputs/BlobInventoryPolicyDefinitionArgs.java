@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
     @Import(name="filters", required=true)
       private final Output<BlobInventoryPolicyFilterArgs> filters;
 
-    public Output<BlobInventoryPolicyFilterArgs> getFilters() {
+    public Output<BlobInventoryPolicyFilterArgs> filters() {
         return this.filters;
     }
 
@@ -33,7 +34,7 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
     }
 
     private BlobInventoryPolicyDefinitionArgs() {
-        this.filters = Output.empty();
+        this.filters = Codegen.empty();
     }
 
     public static Builder builder() {

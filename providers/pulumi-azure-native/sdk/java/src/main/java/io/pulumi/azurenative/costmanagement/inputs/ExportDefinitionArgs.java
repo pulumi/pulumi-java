@@ -10,6 +10,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportTimePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,8 +31,8 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataSet")
       private final @Nullable Output<ExportDatasetArgs> dataSet;
 
-    public Output<ExportDatasetArgs> getDataSet() {
-        return this.dataSet == null ? Output.empty() : this.dataSet;
+    public Output<ExportDatasetArgs> dataSet() {
+        return this.dataSet == null ? Codegen.empty() : this.dataSet;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timePeriod")
       private final @Nullable Output<ExportTimePeriodArgs> timePeriod;
 
-    public Output<ExportTimePeriodArgs> getTimePeriod() {
-        return this.timePeriod == null ? Output.empty() : this.timePeriod;
+    public Output<ExportTimePeriodArgs> timePeriod() {
+        return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timeframe", required=true)
       private final Output<Either<String,TimeframeType>> timeframe;
 
-    public Output<Either<String,TimeframeType>> getTimeframe() {
+    public Output<Either<String,TimeframeType>> timeframe() {
         return this.timeframe;
     }
 
@@ -63,7 +64,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<Either<String,ExportType>> type;
 
-    public Output<Either<String,ExportType>> getType() {
+    public Output<Either<String,ExportType>> type() {
         return this.type;
     }
 
@@ -79,10 +80,10 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ExportDefinitionArgs() {
-        this.dataSet = Output.empty();
-        this.timePeriod = Output.empty();
-        this.timeframe = Output.empty();
-        this.type = Output.empty();
+        this.dataSet = Codegen.empty();
+        this.timePeriod = Codegen.empty();
+        this.timeframe = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataSet(@Nullable ExportDatasetArgs dataSet) {
-            this.dataSet = Output.ofNullable(dataSet);
+            this.dataSet = Codegen.ofNullable(dataSet);
             return this;
         }
         public Builder timePeriod(@Nullable Output<ExportTimePeriodArgs> timePeriod) {
@@ -124,7 +125,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timePeriod(@Nullable ExportTimePeriodArgs timePeriod) {
-            this.timePeriod = Output.ofNullable(timePeriod);
+            this.timePeriod = Codegen.ofNullable(timePeriod);
             return this;
         }
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {

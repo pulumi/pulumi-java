@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InventoryDestinationBucketEncryptionSseKmsArgs extends io.pul
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -29,7 +30,7 @@ public final class InventoryDestinationBucketEncryptionSseKmsArgs extends io.pul
     }
 
     private InventoryDestinationBucketEncryptionSseKmsArgs() {
-        this.keyId = Output.empty();
+        this.keyId = Codegen.empty();
     }
 
     public static Builder builder() {

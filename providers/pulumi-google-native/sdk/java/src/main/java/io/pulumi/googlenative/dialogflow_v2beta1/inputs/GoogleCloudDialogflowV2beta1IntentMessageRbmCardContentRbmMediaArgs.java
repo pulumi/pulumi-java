@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="fileUri", required=true)
       private final Output<String> fileUri;
 
-    public Output<String> getFileUri() {
+    public Output<String> fileUri() {
         return this.fileUri;
     }
 
@@ -37,8 +38,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="height")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height() {
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="thumbnailUri")
       private final @Nullable Output<String> thumbnailUri;
 
-    public Output<String> getThumbnailUri() {
-        return this.thumbnailUri == null ? Output.empty() : this.thumbnailUri;
+    public Output<String> thumbnailUri() {
+        return this.thumbnailUri == null ? Codegen.empty() : this.thumbnailUri;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs() {
-        this.fileUri = Output.empty();
-        this.height = Output.empty();
-        this.thumbnailUri = Output.empty();
+        this.fileUri = Codegen.empty();
+        this.height = Codegen.empty();
+        this.thumbnailUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
             return this;
         }
         public Builder height(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder thumbnailUri(@Nullable Output<String> thumbnailUri) {
@@ -112,7 +113,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
             return this;
         }
         public Builder thumbnailUri(@Nullable String thumbnailUri) {
-            this.thumbnailUri = Output.ofNullable(thumbnailUri);
+            this.thumbnailUri = Codegen.ofNullable(thumbnailUri);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(fileUri, height, thumbnailUri);

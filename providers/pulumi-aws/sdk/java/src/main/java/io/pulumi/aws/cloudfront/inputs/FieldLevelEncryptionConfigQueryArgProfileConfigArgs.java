@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigArgs extends i
     @Import(name="forwardWhenQueryArgProfileIsUnknown", required=true)
       private final Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
 
-    public Output<Boolean> getForwardWhenQueryArgProfileIsUnknown() {
+    public Output<Boolean> forwardWhenQueryArgProfileIsUnknown() {
         return this.forwardWhenQueryArgProfileIsUnknown;
     }
 
@@ -33,8 +34,8 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigArgs extends i
     @Import(name="queryArgProfiles")
       private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs> queryArgProfiles;
 
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs> getQueryArgProfiles() {
-        return this.queryArgProfiles == null ? Output.empty() : this.queryArgProfiles;
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs> queryArgProfiles() {
+        return this.queryArgProfiles == null ? Codegen.empty() : this.queryArgProfiles;
     }
 
     public FieldLevelEncryptionConfigQueryArgProfileConfigArgs(
@@ -45,8 +46,8 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigArgs extends i
     }
 
     private FieldLevelEncryptionConfigQueryArgProfileConfigArgs() {
-        this.forwardWhenQueryArgProfileIsUnknown = Output.empty();
-        this.queryArgProfiles = Output.empty();
+        this.forwardWhenQueryArgProfileIsUnknown = Codegen.empty();
+        this.queryArgProfiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigArgs extends i
             return this;
         }
         public Builder queryArgProfiles(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs queryArgProfiles) {
-            this.queryArgProfiles = Output.ofNullable(queryArgProfiles);
+            this.queryArgProfiles = Codegen.ofNullable(queryArgProfiles);
             return this;
         }        public FieldLevelEncryptionConfigQueryArgProfileConfigArgs build() {
             return new FieldLevelEncryptionConfigQueryArgProfileConfigArgs(forwardWhenQueryArgProfileIsUnknown, queryArgProfiles);

@@ -10,6 +10,7 @@ import io.pulumi.aws.mediaconvert.outputs.QueueReservationPlanSettings;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The Arn of the queue
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A description of the queue
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +70,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A unique identifier describing the queue
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
      * 
      */
-    public Output</* @Nullable */ String> getPricingPlan() {
+    public Output</* @Nullable */ String> pricingPlan() {
         return this.pricingPlan;
     }
     /**
@@ -97,7 +98,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A detail pricing plan of the  reserved queue. See below.
      * 
      */
-    public Output<QueueReservationPlanSettings> getReservationPlanSettings() {
+    public Output<QueueReservationPlanSettings> reservationPlanSettings() {
         return this.reservationPlanSettings;
     }
     /**
@@ -111,7 +112,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -125,7 +126,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -139,7 +140,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -165,7 +166,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Queue(String name, @Nullable QueueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mediaconvert/queue:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mediaconvert/queue:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Queue(String name, Output<String> id, @Nullable QueueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

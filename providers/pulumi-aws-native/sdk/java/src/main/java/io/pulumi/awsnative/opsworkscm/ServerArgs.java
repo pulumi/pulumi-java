@@ -7,6 +7,7 @@ import io.pulumi.awsnative.opsworkscm.inputs.ServerEngineAttributeArgs;
 import io.pulumi.awsnative.opsworkscm.inputs.ServerTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,148 +23,148 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
+    public Output<Boolean> associatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
     @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
-    public Output<String> getBackupId() {
-        return this.backupId == null ? Output.empty() : this.backupId;
+    public Output<String> backupId() {
+        return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
     @Import(name="backupRetentionCount")
       private final @Nullable Output<Integer> backupRetentionCount;
 
-    public Output<Integer> getBackupRetentionCount() {
-        return this.backupRetentionCount == null ? Output.empty() : this.backupRetentionCount;
+    public Output<Integer> backupRetentionCount() {
+        return this.backupRetentionCount == null ? Codegen.empty() : this.backupRetentionCount;
     }
 
     @Import(name="customCertificate")
       private final @Nullable Output<String> customCertificate;
 
-    public Output<String> getCustomCertificate() {
-        return this.customCertificate == null ? Output.empty() : this.customCertificate;
+    public Output<String> customCertificate() {
+        return this.customCertificate == null ? Codegen.empty() : this.customCertificate;
     }
 
     @Import(name="customDomain")
       private final @Nullable Output<String> customDomain;
 
-    public Output<String> getCustomDomain() {
-        return this.customDomain == null ? Output.empty() : this.customDomain;
+    public Output<String> customDomain() {
+        return this.customDomain == null ? Codegen.empty() : this.customDomain;
     }
 
     @Import(name="customPrivateKey")
       private final @Nullable Output<String> customPrivateKey;
 
-    public Output<String> getCustomPrivateKey() {
-        return this.customPrivateKey == null ? Output.empty() : this.customPrivateKey;
+    public Output<String> customPrivateKey() {
+        return this.customPrivateKey == null ? Codegen.empty() : this.customPrivateKey;
     }
 
     @Import(name="disableAutomatedBackup")
       private final @Nullable Output<Boolean> disableAutomatedBackup;
 
-    public Output<Boolean> getDisableAutomatedBackup() {
-        return this.disableAutomatedBackup == null ? Output.empty() : this.disableAutomatedBackup;
+    public Output<Boolean> disableAutomatedBackup() {
+        return this.disableAutomatedBackup == null ? Codegen.empty() : this.disableAutomatedBackup;
     }
 
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
-        return this.engine == null ? Output.empty() : this.engine;
+    public Output<String> engine() {
+        return this.engine == null ? Codegen.empty() : this.engine;
     }
 
     @Import(name="engineAttributes")
       private final @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
 
-    public Output<List<ServerEngineAttributeArgs>> getEngineAttributes() {
-        return this.engineAttributes == null ? Output.empty() : this.engineAttributes;
+    public Output<List<ServerEngineAttributeArgs>> engineAttributes() {
+        return this.engineAttributes == null ? Codegen.empty() : this.engineAttributes;
     }
 
     @Import(name="engineModel")
       private final @Nullable Output<String> engineModel;
 
-    public Output<String> getEngineModel() {
-        return this.engineModel == null ? Output.empty() : this.engineModel;
+    public Output<String> engineModel() {
+        return this.engineModel == null ? Codegen.empty() : this.engineModel;
     }
 
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
-        return this.engineVersion == null ? Output.empty() : this.engineVersion;
+    public Output<String> engineVersion() {
+        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     @Import(name="instanceProfileArn", required=true)
       private final Output<String> instanceProfileArn;
 
-    public Output<String> getInstanceProfileArn() {
+    public Output<String> instanceProfileArn() {
         return this.instanceProfileArn;
     }
 
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
 
-    public Output<String> getKeyPair() {
-        return this.keyPair == null ? Output.empty() : this.keyPair;
+    public Output<String> keyPair() {
+        return this.keyPair == null ? Codegen.empty() : this.keyPair;
     }
 
     @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
-    public Output<String> getPreferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
+    public Output<String> preferredBackupWindow() {
+        return this.preferredBackupWindow == null ? Codegen.empty() : this.preferredBackupWindow;
     }
 
     @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
+    public Output<String> preferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
     }
 
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+    public Output<List<String>> securityGroupIds() {
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
-        return this.serverName == null ? Output.empty() : this.serverName;
+    public Output<String> serverName() {
+        return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     @Import(name="serviceRoleArn", required=true)
       private final Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
 
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServerTagArgs>> tags;
 
-    public Output<List<ServerTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ServerTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServerArgs(
@@ -212,27 +213,27 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerArgs() {
-        this.associatePublicIpAddress = Output.empty();
-        this.backupId = Output.empty();
-        this.backupRetentionCount = Output.empty();
-        this.customCertificate = Output.empty();
-        this.customDomain = Output.empty();
-        this.customPrivateKey = Output.empty();
-        this.disableAutomatedBackup = Output.empty();
-        this.engine = Output.empty();
-        this.engineAttributes = Output.empty();
-        this.engineModel = Output.empty();
-        this.engineVersion = Output.empty();
-        this.instanceProfileArn = Output.empty();
-        this.instanceType = Output.empty();
-        this.keyPair = Output.empty();
-        this.preferredBackupWindow = Output.empty();
-        this.preferredMaintenanceWindow = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.serverName = Output.empty();
-        this.serviceRoleArn = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
+        this.associatePublicIpAddress = Codegen.empty();
+        this.backupId = Codegen.empty();
+        this.backupRetentionCount = Codegen.empty();
+        this.customCertificate = Codegen.empty();
+        this.customDomain = Codegen.empty();
+        this.customPrivateKey = Codegen.empty();
+        this.disableAutomatedBackup = Codegen.empty();
+        this.engine = Codegen.empty();
+        this.engineAttributes = Codegen.empty();
+        this.engineModel = Codegen.empty();
+        this.engineVersion = Codegen.empty();
+        this.instanceProfileArn = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.keyPair = Codegen.empty();
+        this.preferredBackupWindow = Codegen.empty();
+        this.preferredMaintenanceWindow = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.serviceRoleArn = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -300,7 +301,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
             return this;
         }
         public Builder backupId(@Nullable Output<String> backupId) {
@@ -308,7 +309,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = Output.ofNullable(backupId);
+            this.backupId = Codegen.ofNullable(backupId);
             return this;
         }
         public Builder backupRetentionCount(@Nullable Output<Integer> backupRetentionCount) {
@@ -316,7 +317,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupRetentionCount(@Nullable Integer backupRetentionCount) {
-            this.backupRetentionCount = Output.ofNullable(backupRetentionCount);
+            this.backupRetentionCount = Codegen.ofNullable(backupRetentionCount);
             return this;
         }
         public Builder customCertificate(@Nullable Output<String> customCertificate) {
@@ -324,7 +325,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customCertificate(@Nullable String customCertificate) {
-            this.customCertificate = Output.ofNullable(customCertificate);
+            this.customCertificate = Codegen.ofNullable(customCertificate);
             return this;
         }
         public Builder customDomain(@Nullable Output<String> customDomain) {
@@ -332,7 +333,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDomain(@Nullable String customDomain) {
-            this.customDomain = Output.ofNullable(customDomain);
+            this.customDomain = Codegen.ofNullable(customDomain);
             return this;
         }
         public Builder customPrivateKey(@Nullable Output<String> customPrivateKey) {
@@ -340,7 +341,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customPrivateKey(@Nullable String customPrivateKey) {
-            this.customPrivateKey = Output.ofNullable(customPrivateKey);
+            this.customPrivateKey = Codegen.ofNullable(customPrivateKey);
             return this;
         }
         public Builder disableAutomatedBackup(@Nullable Output<Boolean> disableAutomatedBackup) {
@@ -348,7 +349,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableAutomatedBackup(@Nullable Boolean disableAutomatedBackup) {
-            this.disableAutomatedBackup = Output.ofNullable(disableAutomatedBackup);
+            this.disableAutomatedBackup = Codegen.ofNullable(disableAutomatedBackup);
             return this;
         }
         public Builder engine(@Nullable Output<String> engine) {
@@ -356,7 +357,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engine(@Nullable String engine) {
-            this.engine = Output.ofNullable(engine);
+            this.engine = Codegen.ofNullable(engine);
             return this;
         }
         public Builder engineAttributes(@Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes) {
@@ -364,7 +365,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineAttributes(@Nullable List<ServerEngineAttributeArgs> engineAttributes) {
-            this.engineAttributes = Output.ofNullable(engineAttributes);
+            this.engineAttributes = Codegen.ofNullable(engineAttributes);
             return this;
         }
         public Builder engineAttributes(ServerEngineAttributeArgs... engineAttributes) {
@@ -375,7 +376,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineModel(@Nullable String engineModel) {
-            this.engineModel = Output.ofNullable(engineModel);
+            this.engineModel = Codegen.ofNullable(engineModel);
             return this;
         }
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
@@ -383,7 +384,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Output.ofNullable(engineVersion);
+            this.engineVersion = Codegen.ofNullable(engineVersion);
             return this;
         }
         public Builder instanceProfileArn(Output<String> instanceProfileArn) {
@@ -407,7 +408,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyPair(@Nullable String keyPair) {
-            this.keyPair = Output.ofNullable(keyPair);
+            this.keyPair = Codegen.ofNullable(keyPair);
             return this;
         }
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
@@ -415,7 +416,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
+            this.preferredBackupWindow = Codegen.ofNullable(preferredBackupWindow);
             return this;
         }
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
@@ -423,7 +424,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
             return this;
         }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
@@ -431,7 +432,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -442,7 +443,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Output.ofNullable(serverName);
+            this.serverName = Codegen.ofNullable(serverName);
             return this;
         }
         public Builder serviceRoleArn(Output<String> serviceRoleArn) {
@@ -458,7 +459,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -469,7 +470,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ServerTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ServerTagArgs... tags) {

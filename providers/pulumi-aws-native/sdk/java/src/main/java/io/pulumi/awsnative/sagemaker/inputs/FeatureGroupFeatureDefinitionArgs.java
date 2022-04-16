@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.FeatureGroupFeatureDefinitionFeatureType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +18,14 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
     @Import(name="featureName", required=true)
       private final Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName;
     }
 
     @Import(name="featureType", required=true)
       private final Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
 
-    public Output<FeatureGroupFeatureDefinitionFeatureType> getFeatureType() {
+    public Output<FeatureGroupFeatureDefinitionFeatureType> featureType() {
         return this.featureType;
     }
 
@@ -36,8 +37,8 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
     }
 
     private FeatureGroupFeatureDefinitionArgs() {
-        this.featureName = Output.empty();
-        this.featureType = Output.empty();
+        this.featureName = Codegen.empty();
+        this.featureType = Codegen.empty();
     }
 
     public static Builder builder() {

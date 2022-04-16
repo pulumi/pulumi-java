@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @return The id of the source data set.
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -56,7 +57,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @return Gets the status of the data set mapping.
      * 
      */
-    public Output<String> getDataSetMappingStatus() {
+    public Output<String> dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
@@ -72,7 +73,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -86,7 +87,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @return Provisioning state of the data set mapping.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @return Resource id of the Synapse Workspace SQL Pool Table
      * 
      */
-    public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
+    public Output<String> synapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
     /**
@@ -128,7 +129,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -142,7 +143,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * @param options A bag of options that control this resource's behavior.
      */
     public SynapseWorkspaceSqlPoolTableDataSetMapping(String name, SynapseWorkspaceSqlPoolTableDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SynapseWorkspaceSqlPoolTableDataSetMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

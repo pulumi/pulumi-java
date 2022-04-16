@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TransferJobScheduleScheduleEndDateGetArgs extends io.pulumi.r
     @Import(name="day", required=true)
       private final Output<Integer> day;
 
-    public Output<Integer> getDay() {
+    public Output<Integer> day() {
         return this.day;
     }
 
@@ -31,7 +32,7 @@ public final class TransferJobScheduleScheduleEndDateGetArgs extends io.pulumi.r
     @Import(name="month", required=true)
       private final Output<Integer> month;
 
-    public Output<Integer> getMonth() {
+    public Output<Integer> month() {
         return this.month;
     }
 
@@ -42,7 +43,7 @@ public final class TransferJobScheduleScheduleEndDateGetArgs extends io.pulumi.r
     @Import(name="year", required=true)
       private final Output<Integer> year;
 
-    public Output<Integer> getYear() {
+    public Output<Integer> year() {
         return this.year;
     }
 
@@ -56,9 +57,9 @@ public final class TransferJobScheduleScheduleEndDateGetArgs extends io.pulumi.r
     }
 
     private TransferJobScheduleScheduleEndDateGetArgs() {
-        this.day = Output.empty();
-        this.month = Output.empty();
-        this.year = Output.empty();
+        this.day = Codegen.empty();
+        this.month = Codegen.empty();
+        this.year = Codegen.empty();
     }
 
     public static Builder builder() {

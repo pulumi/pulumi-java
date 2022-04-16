@@ -10,6 +10,7 @@ import io.pulumi.awsnative.sso.outputs.InstanceAccessControlAttributeConfigurati
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resou
     @Export(name="accessControlAttributes", type=List.class, parameters={InstanceAccessControlAttributeConfigurationAccessControlAttribute.class})
     private Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> accessControlAttributes;
 
-    public Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> getAccessControlAttributes() {
+    public Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> accessControlAttributes() {
         return this.accessControlAttributes;
     }
     /**
@@ -37,7 +38,7 @@ public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resou
      * @return The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
      */
-    public Output</* @Nullable */ InstanceAccessControlAttributeConfigurationProperties> getInstanceAccessControlAttributeConfiguration() {
+    public Output</* @Nullable */ InstanceAccessControlAttributeConfigurationProperties> instanceAccessControlAttributeConfiguration() {
         return this.instanceAccessControlAttributeConfiguration;
     }
     /**
@@ -51,7 +52,7 @@ public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resou
      * @return The ARN of the AWS SSO instance under which the operation will be executed.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -77,7 +78,7 @@ public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resou
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceAccessControlAttributeConfiguration(String name, InstanceAccessControlAttributeConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sso:InstanceAccessControlAttributeConfiguration", name, args == null ? InstanceAccessControlAttributeConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sso:InstanceAccessControlAttributeConfiguration", name, args == null ? InstanceAccessControlAttributeConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceAccessControlAttributeConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

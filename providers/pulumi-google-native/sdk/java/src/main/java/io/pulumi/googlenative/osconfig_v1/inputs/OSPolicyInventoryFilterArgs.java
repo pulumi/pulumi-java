@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class OSPolicyInventoryFilterArgs extends io.pulumi.resources.Resou
     @Import(name="osShortName", required=true)
       private final Output<String> osShortName;
 
-    public Output<String> getOsShortName() {
+    public Output<String> osShortName() {
         return this.osShortName;
     }
 
@@ -36,8 +37,8 @@ public final class OSPolicyInventoryFilterArgs extends io.pulumi.resources.Resou
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
-        return this.osVersion == null ? Output.empty() : this.osVersion;
+    public Output<String> osVersion() {
+        return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 
     public OSPolicyInventoryFilterArgs(
@@ -48,8 +49,8 @@ public final class OSPolicyInventoryFilterArgs extends io.pulumi.resources.Resou
     }
 
     private OSPolicyInventoryFilterArgs() {
-        this.osShortName = Output.empty();
-        this.osVersion = Output.empty();
+        this.osShortName = Codegen.empty();
+        this.osVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class OSPolicyInventoryFilterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Output.ofNullable(osVersion);
+            this.osVersion = Codegen.ofNullable(osVersion);
             return this;
         }        public OSPolicyInventoryFilterArgs build() {
             return new OSPolicyInventoryFilterArgs(osShortName, osVersion);

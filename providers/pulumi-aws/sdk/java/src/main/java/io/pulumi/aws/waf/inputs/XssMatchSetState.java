@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="xssMatchTuples")
       private final @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
 
-    public Output<List<XssMatchSetXssMatchTupleGetArgs>> getXssMatchTuples() {
-        return this.xssMatchTuples == null ? Output.empty() : this.xssMatchTuples;
+    public Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples() {
+        return this.xssMatchTuples == null ? Codegen.empty() : this.xssMatchTuples;
     }
 
     public XssMatchSetState(
@@ -59,9 +60,9 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private XssMatchSetState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.xssMatchTuples = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.xssMatchTuples = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -101,7 +102,7 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder xssMatchTuples(@Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
@@ -109,7 +110,7 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xssMatchTuples(@Nullable List<XssMatchSetXssMatchTupleGetArgs> xssMatchTuples) {
-            this.xssMatchTuples = Output.ofNullable(xssMatchTuples);
+            this.xssMatchTuples = Codegen.ofNullable(xssMatchTuples);
             return this;
         }
         public Builder xssMatchTuples(XssMatchSetXssMatchTupleGetArgs... xssMatchTuples) {

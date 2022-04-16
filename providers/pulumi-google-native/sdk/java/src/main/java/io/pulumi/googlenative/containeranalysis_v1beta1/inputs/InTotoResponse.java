@@ -26,7 +26,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expectedCommand", required=true)
       private final List<String> expectedCommand;
 
-    public List<String> getExpectedCommand() {
+    public List<String> expectedCommand() {
         return this.expectedCommand;
     }
 
@@ -37,14 +37,14 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expectedMaterials", required=true)
       private final List<ArtifactRuleResponse> expectedMaterials;
 
-    public List<ArtifactRuleResponse> getExpectedMaterials() {
+    public List<ArtifactRuleResponse> expectedMaterials() {
         return this.expectedMaterials;
     }
 
     @Import(name="expectedProducts", required=true)
       private final List<ArtifactRuleResponse> expectedProducts;
 
-    public List<ArtifactRuleResponse> getExpectedProducts() {
+    public List<ArtifactRuleResponse> expectedProducts() {
         return this.expectedProducts;
     }
 
@@ -55,7 +55,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="signingKeys", required=true)
       private final List<SigningKeyResponse> signingKeys;
 
-    public List<SigningKeyResponse> getSigningKeys() {
+    public List<SigningKeyResponse> signingKeys() {
         return this.signingKeys;
     }
 
@@ -66,7 +66,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stepName", required=true)
       private final String stepName;
 
-    public String getStepName() {
+    public String stepName() {
         return this.stepName;
     }
 
@@ -77,7 +77,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="threshold", required=true)
       private final String threshold;
 
-    public String getThreshold() {
+    public String threshold() {
         return this.threshold;
     }
 

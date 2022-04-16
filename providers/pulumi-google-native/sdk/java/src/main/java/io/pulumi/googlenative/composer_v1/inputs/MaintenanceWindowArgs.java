@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
@@ -35,7 +36,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recurrence", required=true)
       private final Output<String> recurrence;
 
-    public Output<String> getRecurrence() {
+    public Output<String> recurrence() {
         return this.recurrence;
     }
 
@@ -46,7 +47,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -60,9 +61,9 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenanceWindowArgs() {
-        this.endTime = Output.empty();
-        this.recurrence = Output.empty();
-        this.startTime = Output.empty();
+        this.endTime = Codegen.empty();
+        this.recurrence = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudchannel_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudchannel_v1.CustomerArgs;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
@@ -32,7 +33,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
      * 
      */
-    public Output<String> getAlternateEmail() {
+    public Output<String> alternateEmail() {
         return this.alternateEmail;
     }
     /**
@@ -46,7 +47,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
-    public Output<String> getChannelPartnerId() {
+    public Output<String> channelPartnerId() {
         return this.channelPartnerId;
     }
     /**
@@ -60,7 +61,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
      */
-    public Output<String> getCloudIdentityId() {
+    public Output<String> cloudIdentityId() {
         return this.cloudIdentityId;
     }
     /**
@@ -74,7 +75,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Cloud Identity information for the customer. Populated only if a Cloud Identity account exists for this customer.
      * 
      */
-    public Output<GoogleCloudChannelV1CloudIdentityInfoResponse> getCloudIdentityInfo() {
+    public Output<GoogleCloudChannelV1CloudIdentityInfoResponse> cloudIdentityInfo() {
         return this.cloudIdentityInfo;
     }
     /**
@@ -88,7 +89,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Time when the customer was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -102,7 +103,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return The customer's primary domain. Must match the primary contact email's domain.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -116,7 +117,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -130,7 +131,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +145,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Name of the organization that the customer entity represents.
      * 
      */
-    public Output<String> getOrgDisplayName() {
+    public Output<String> orgDisplayName() {
         return this.orgDisplayName;
     }
     /**
@@ -158,7 +159,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
      * 
      */
-    public Output<GoogleTypePostalAddressResponse> getOrgPostalAddress() {
+    public Output<GoogleTypePostalAddressResponse> orgPostalAddress() {
         return this.orgPostalAddress;
     }
     /**
@@ -172,7 +173,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Primary contact info.
      * 
      */
-    public Output<GoogleCloudChannelV1ContactInfoResponse> getPrimaryContactInfo() {
+    public Output<GoogleCloudChannelV1ContactInfoResponse> primaryContactInfo() {
         return this.primaryContactInfo;
     }
     /**
@@ -186,7 +187,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @return Time when the customer was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -212,7 +213,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Customer(String name, CustomerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudchannel/v1:Customer", name, args == null ? CustomerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudchannel/v1:Customer", name, args == null ? CustomerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Customer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

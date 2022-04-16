@@ -35,7 +35,7 @@ public final class BucketLogging {
      * The bucket that will receive log objects.
      * 
     */
-    public String getLogBucket() {
+    public String logBucket() {
         return this.logBucket;
     }
     /**
@@ -43,7 +43,7 @@ public final class BucketLogging {
      * by default GCS sets this to this bucket's name.
      * 
     */
-    public Optional<String> getLogObjectPrefix() {
+    public Optional<String> logObjectPrefix() {
         return Optional.ofNullable(this.logObjectPrefix);
     }
 

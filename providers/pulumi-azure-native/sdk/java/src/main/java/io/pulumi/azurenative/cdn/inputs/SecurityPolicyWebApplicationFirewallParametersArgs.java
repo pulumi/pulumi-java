@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     @Import(name="associations")
       private final @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
 
-    public Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> getAssociations() {
-        return this.associations == null ? Output.empty() : this.associations;
+    public Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations() {
+        return this.associations == null ? Codegen.empty() : this.associations;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -51,8 +52,8 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     @Import(name="wafPolicy")
       private final @Nullable Output<ResourceReferenceArgs> wafPolicy;
 
-    public Output<ResourceReferenceArgs> getWafPolicy() {
-        return this.wafPolicy == null ? Output.empty() : this.wafPolicy;
+    public Output<ResourceReferenceArgs> wafPolicy() {
+        return this.wafPolicy == null ? Codegen.empty() : this.wafPolicy;
     }
 
     public SecurityPolicyWebApplicationFirewallParametersArgs(
@@ -65,9 +66,9 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     }
 
     private SecurityPolicyWebApplicationFirewallParametersArgs() {
-        this.associations = Output.empty();
-        this.type = Output.empty();
-        this.wafPolicy = Output.empty();
+        this.associations = Codegen.empty();
+        this.type = Codegen.empty();
+        this.wafPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
             return this;
         }
         public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
-            this.associations = Output.ofNullable(associations);
+            this.associations = Codegen.ofNullable(associations);
             return this;
         }
         public Builder associations(SecurityPolicyWebApplicationFirewallAssociationArgs... associations) {
@@ -118,7 +119,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
             return this;
         }
         public Builder wafPolicy(@Nullable ResourceReferenceArgs wafPolicy) {
-            this.wafPolicy = Output.ofNullable(wafPolicy);
+            this.wafPolicy = Codegen.ofNullable(wafPolicy);
             return this;
         }        public SecurityPolicyWebApplicationFirewallParametersArgs build() {
             return new SecurityPolicyWebApplicationFirewallParametersArgs(associations, type, wafPolicy);

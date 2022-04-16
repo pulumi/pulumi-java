@@ -10,6 +10,7 @@ import io.pulumi.aws.appconfig.outputs.ConfigurationProfileValidator;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -56,7 +57,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AppConfig Configuration Profile.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +71,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The configuration profile ID.
      * 
      */
-    public Output<String> getConfigurationProfileId() {
+    public Output<String> configurationProfileId() {
         return this.configurationProfileId;
     }
     /**
@@ -84,7 +85,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The description of the configuration profile. Can be at most 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -98,7 +99,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return A URI to locate the configuration. You can specify the AWS AppConfig hosted configuration store, Systems Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store, specify `hosted`. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name (ARN). For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey>`.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     /**
@@ -112,7 +113,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The name for the configuration profile. Must be between 1 and 64 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +127,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The ARN of an IAM role with permission to access the configuration at the specified `location_uri`. A retrieval role ARN is not required for configurations stored in the AWS AppConfig `hosted` configuration store. It is required for all other sources that store your configuration.
      * 
      */
-    public Output</* @Nullable */ String> getRetrievalRoleArn() {
+    public Output</* @Nullable */ String> retrievalRoleArn() {
         return this.retrievalRoleArn;
     }
     /**
@@ -140,7 +141,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +155,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -168,7 +169,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
      * 
      */
-    public Output</* @Nullable */ List<ConfigurationProfileValidator>> getValidators() {
+    public Output</* @Nullable */ List<ConfigurationProfileValidator>> validators() {
         return this.validators;
     }
 
@@ -194,7 +195,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationProfile(String name, ConfigurationProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appconfig/configurationProfile:ConfigurationProfile", name, args == null ? ConfigurationProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appconfig/configurationProfile:ConfigurationProfile", name, args == null ? ConfigurationProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfigurationProfile(String name, Output<String> id, @Nullable ConfigurationProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

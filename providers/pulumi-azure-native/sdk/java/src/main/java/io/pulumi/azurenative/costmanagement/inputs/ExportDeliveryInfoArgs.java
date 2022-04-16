@@ -6,6 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destination", required=true)
       private final Output<ExportDeliveryDestinationArgs> destination;
 
-    public Output<ExportDeliveryDestinationArgs> getDestination() {
+    public Output<ExportDeliveryDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -33,7 +34,7 @@ public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ExportDeliveryInfoArgs() {
-        this.destination = Output.empty();
+        this.destination = Codegen.empty();
     }
 
     public static Builder builder() {

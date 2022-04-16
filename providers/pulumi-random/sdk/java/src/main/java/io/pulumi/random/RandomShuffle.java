@@ -6,6 +6,7 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.random.RandomShuffleArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomShuffleState;
@@ -35,7 +36,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @return The list of strings to shuffle.
      * 
      */
-    public Output<List<String>> getInputs() {
+    public Output<List<String>> inputs() {
         return this.inputs;
     }
     /**
@@ -49,7 +50,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -63,7 +64,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @return The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
      * 
      */
-    public Output</* @Nullable */ Integer> getResultCount() {
+    public Output</* @Nullable */ Integer> resultCount() {
         return this.resultCount;
     }
     /**
@@ -77,7 +78,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @return Random permutation of the list of strings given in `input`.
      * 
      */
-    public Output<List<String>> getResults() {
+    public Output<List<String>> results() {
         return this.results;
     }
     /**
@@ -91,7 +92,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @return Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
      * 
      */
-    public Output</* @Nullable */ String> getSeed() {
+    public Output</* @Nullable */ String> seed() {
         return this.seed;
     }
 
@@ -117,7 +118,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomShuffle(String name, RandomShuffleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomShuffle:RandomShuffle", name, args == null ? RandomShuffleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("random:index/randomShuffle:RandomShuffle", name, args == null ? RandomShuffleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RandomShuffle(String name, Output<String> id, @Nullable RandomShuffleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

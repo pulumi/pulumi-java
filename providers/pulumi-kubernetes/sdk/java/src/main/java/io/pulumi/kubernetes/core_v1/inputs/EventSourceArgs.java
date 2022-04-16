@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="component")
       private final @Nullable Output<String> component;
 
-    public Output<String> getComponent() {
-        return this.component == null ? Output.empty() : this.component;
+    public Output<String> component() {
+        return this.component == null ? Codegen.empty() : this.component;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+    public Output<String> host() {
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     public EventSourceArgs(
@@ -48,8 +49,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventSourceArgs() {
-        this.component = Output.empty();
-        this.host = Output.empty();
+        this.component = Codegen.empty();
+        this.host = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder component(@Nullable String component) {
-            this.component = Output.ofNullable(component);
+            this.component = Codegen.ofNullable(component);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -87,7 +88,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }        public EventSourceArgs build() {
             return new EventSourceArgs(component, host);

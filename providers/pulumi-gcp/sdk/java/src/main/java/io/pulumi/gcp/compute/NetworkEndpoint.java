@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkEndpointArgs;
 import io.pulumi.gcp.compute.inputs.NetworkEndpointState;
@@ -66,7 +67,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * The instance must be in the same zone of network endpoint group.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -84,7 +85,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * range).
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -98,7 +99,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return The network endpoint group this endpoint is part of.
      * 
      */
-    public Output<String> getNetworkEndpointGroup() {
+    public Output<String> networkEndpointGroup() {
         return this.networkEndpointGroup;
     }
     /**
@@ -112,7 +113,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return Port number of network endpoint.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -128,7 +129,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -142,7 +143,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return Zone where the containing network endpoint group is located.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -168,7 +169,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkEndpoint(String name, NetworkEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/networkEndpoint:NetworkEndpoint", name, args == null ? NetworkEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/networkEndpoint:NetworkEndpoint", name, args == null ? NetworkEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkEndpoint(String name, Output<String> id, @Nullable NetworkEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

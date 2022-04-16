@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import io.pulumi.azurenative.storsimple.inputs.TimeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="days", required=true)
       private final Output<List<DayOfWeek>> days;
 
-    public Output<List<DayOfWeek>> getDays() {
+    public Output<List<DayOfWeek>> days() {
         return this.days;
     }
 
@@ -38,7 +39,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rateInMbps", required=true)
       private final Output<Integer> rateInMbps;
 
-    public Output<Integer> getRateInMbps() {
+    public Output<Integer> rateInMbps() {
         return this.rateInMbps;
     }
 
@@ -49,7 +50,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="start", required=true)
       private final Output<TimeArgs> start;
 
-    public Output<TimeArgs> getStart() {
+    public Output<TimeArgs> start() {
         return this.start;
     }
 
@@ -60,7 +61,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="stop", required=true)
       private final Output<TimeArgs> stop;
 
-    public Output<TimeArgs> getStop() {
+    public Output<TimeArgs> stop() {
         return this.stop;
     }
 
@@ -76,10 +77,10 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BandwidthScheduleArgs() {
-        this.days = Output.empty();
-        this.rateInMbps = Output.empty();
-        this.start = Output.empty();
-        this.stop = Output.empty();
+        this.days = Codegen.empty();
+        this.rateInMbps = Codegen.empty();
+        this.start = Codegen.empty();
+        this.stop = Codegen.empty();
     }
 
     public static Builder builder() {

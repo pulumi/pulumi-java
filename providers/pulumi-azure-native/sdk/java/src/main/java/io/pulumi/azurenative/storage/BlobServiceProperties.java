@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Deprecated in favor of isVersioningEnabled property.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutomaticSnapshotPolicyEnabled() {
+    public Output</* @Nullable */ Boolean> automaticSnapshotPolicyEnabled() {
         return this.automaticSnapshotPolicyEnabled;
     }
     /**
@@ -62,7 +63,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The blob service properties for change feed events.
      * 
      */
-    public Output</* @Nullable */ ChangeFeedResponse> getChangeFeed() {
+    public Output</* @Nullable */ ChangeFeedResponse> changeFeed() {
         return this.changeFeed;
     }
     /**
@@ -76,7 +77,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The blob service properties for container soft delete.
      * 
      */
-    public Output</* @Nullable */ DeleteRetentionPolicyResponse> getContainerDeleteRetentionPolicy() {
+    public Output</* @Nullable */ DeleteRetentionPolicyResponse> containerDeleteRetentionPolicy() {
         return this.containerDeleteRetentionPolicy;
     }
     /**
@@ -90,7 +91,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
      * 
      */
-    public Output</* @Nullable */ CorsRulesResponse> getCors() {
+    public Output</* @Nullable */ CorsRulesResponse> cors() {
         return this.cors;
     }
     /**
@@ -104,7 +105,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultServiceVersion() {
+    public Output</* @Nullable */ String> defaultServiceVersion() {
         return this.defaultServiceVersion;
     }
     /**
@@ -118,7 +119,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The blob service properties for blob soft delete.
      * 
      */
-    public Output</* @Nullable */ DeleteRetentionPolicyResponse> getDeleteRetentionPolicy() {
+    public Output</* @Nullable */ DeleteRetentionPolicyResponse> deleteRetentionPolicy() {
         return this.deleteRetentionPolicy;
     }
     /**
@@ -132,7 +133,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Versioning is enabled if set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsVersioningEnabled() {
+    public Output</* @Nullable */ Boolean> isVersioningEnabled() {
         return this.isVersioningEnabled;
     }
     /**
@@ -146,7 +147,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The blob service property to configure last access time based tracking policy.
      * 
      */
-    public Output</* @Nullable */ LastAccessTimeTrackingPolicyResponse> getLastAccessTimeTrackingPolicy() {
+    public Output</* @Nullable */ LastAccessTimeTrackingPolicyResponse> lastAccessTimeTrackingPolicy() {
         return this.lastAccessTimeTrackingPolicy;
     }
     /**
@@ -160,7 +161,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -174,7 +175,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The blob service properties for blob restore policy.
      * 
      */
-    public Output</* @Nullable */ RestorePolicyPropertiesResponse> getRestorePolicy() {
+    public Output</* @Nullable */ RestorePolicyPropertiesResponse> restorePolicy() {
         return this.restorePolicy;
     }
     /**
@@ -188,7 +189,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return Sku name and tier.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -202,7 +203,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -228,7 +229,7 @@ public class BlobServiceProperties extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BlobServiceProperties(String name, BlobServicePropertiesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:BlobServiceProperties", name, args == null ? BlobServicePropertiesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storage:BlobServiceProperties", name, args == null ? BlobServicePropertiesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BlobServiceProperties(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

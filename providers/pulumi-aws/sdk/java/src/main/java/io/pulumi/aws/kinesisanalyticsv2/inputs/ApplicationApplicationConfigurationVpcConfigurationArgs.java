@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -33,22 +34,22 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="vpcConfigurationId")
       private final @Nullable Output<String> vpcConfigurationId;
 
-    public Output<String> getVpcConfigurationId() {
-        return this.vpcConfigurationId == null ? Output.empty() : this.vpcConfigurationId;
+    public Output<String> vpcConfigurationId() {
+        return this.vpcConfigurationId == null ? Codegen.empty() : this.vpcConfigurationId;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ApplicationApplicationConfigurationVpcConfigurationArgs(
@@ -63,10 +64,10 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
     }
 
     private ApplicationApplicationConfigurationVpcConfigurationArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcConfigurationId = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcConfigurationId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
             return this;
         }
         public Builder vpcConfigurationId(@Nullable String vpcConfigurationId) {
-            this.vpcConfigurationId = Output.ofNullable(vpcConfigurationId);
+            this.vpcConfigurationId = Codegen.ofNullable(vpcConfigurationId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -130,7 +131,7 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ApplicationApplicationConfigurationVpcConfigurationArgs build() {
             return new ApplicationApplicationConfigurationVpcConfigurationArgs(securityGroupIds, subnetIds, vpcConfigurationId, vpcId);

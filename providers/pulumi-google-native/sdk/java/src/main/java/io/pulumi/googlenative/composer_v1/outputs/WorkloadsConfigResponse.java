@@ -41,21 +41,21 @@ public final class WorkloadsConfigResponse {
      * Optional. Resources used by Airflow schedulers.
      * 
     */
-    public SchedulerResourceResponse getScheduler() {
+    public SchedulerResourceResponse scheduler() {
         return this.scheduler;
     }
     /**
      * Optional. Resources used by Airflow web server.
      * 
     */
-    public WebServerResourceResponse getWebServer() {
+    public WebServerResourceResponse webServer() {
         return this.webServer;
     }
     /**
      * Optional. Resources used by Airflow workers.
      * 
     */
-    public WorkerResourceResponse getWorker() {
+    public WorkerResourceResponse worker() {
         return this.worker;
     }
 

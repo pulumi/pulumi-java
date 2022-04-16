@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -57,7 +58,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -71,7 +72,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -85,7 +86,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return ID of the resource that manages this resource.
      * 
      */
-    public Output</* @Nullable */ String> getManagedBy() {
+    public Output</* @Nullable */ String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -99,7 +100,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The plan of the resource.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> getPlan() {
+    public Output</* @Nullable */ PlanResponse> plan() {
         return this.plan;
     }
     /**
@@ -127,7 +128,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The resource properties.
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -141,7 +142,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -155,7 +156,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -195,7 +196,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:resources:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

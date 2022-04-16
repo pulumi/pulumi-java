@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.inputs.AzureFileVolumeArgs;
 import io.pulumi.azurenative.containerinstance.inputs.GitRepoVolumeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -29,8 +30,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureFile")
       private final @Nullable Output<AzureFileVolumeArgs> azureFile;
 
-    public Output<AzureFileVolumeArgs> getAzureFile() {
-        return this.azureFile == null ? Output.empty() : this.azureFile;
+    public Output<AzureFileVolumeArgs> azureFile() {
+        return this.azureFile == null ? Codegen.empty() : this.azureFile;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="emptyDir")
       private final @Nullable Output<Object> emptyDir;
 
-    public Output<Object> getEmptyDir() {
-        return this.emptyDir == null ? Output.empty() : this.emptyDir;
+    public Output<Object> emptyDir() {
+        return this.emptyDir == null ? Codegen.empty() : this.emptyDir;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gitRepo")
       private final @Nullable Output<GitRepoVolumeArgs> gitRepo;
 
-    public Output<GitRepoVolumeArgs> getGitRepo() {
-        return this.gitRepo == null ? Output.empty() : this.gitRepo;
+    public Output<GitRepoVolumeArgs> gitRepo() {
+        return this.gitRepo == null ? Codegen.empty() : this.gitRepo;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<Map<String,String>> secret;
 
-    public Output<Map<String,String>> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<Map<String,String>> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public VolumeArgs(
@@ -91,11 +92,11 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.azureFile = Output.empty();
-        this.emptyDir = Output.empty();
-        this.gitRepo = Output.empty();
-        this.name = Output.empty();
-        this.secret = Output.empty();
+        this.azureFile = Codegen.empty();
+        this.emptyDir = Codegen.empty();
+        this.gitRepo = Codegen.empty();
+        this.name = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureFile(@Nullable AzureFileVolumeArgs azureFile) {
-            this.azureFile = Output.ofNullable(azureFile);
+            this.azureFile = Codegen.ofNullable(azureFile);
             return this;
         }
         public Builder emptyDir(@Nullable Output<Object> emptyDir) {
@@ -139,7 +140,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder emptyDir(@Nullable Object emptyDir) {
-            this.emptyDir = Output.ofNullable(emptyDir);
+            this.emptyDir = Codegen.ofNullable(emptyDir);
             return this;
         }
         public Builder gitRepo(@Nullable Output<GitRepoVolumeArgs> gitRepo) {
@@ -147,7 +148,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gitRepo(@Nullable GitRepoVolumeArgs gitRepo) {
-            this.gitRepo = Output.ofNullable(gitRepo);
+            this.gitRepo = Codegen.ofNullable(gitRepo);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -163,7 +164,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable Map<String,String> secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public VolumeArgs build() {
             return new VolumeArgs(azureFile, emptyDir, gitRepo, name, secret);

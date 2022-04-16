@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
     @Import(name="kinesisStreamARN", required=true)
       private final Output<String> kinesisStreamARN;
 
-    public Output<String> getKinesisStreamARN() {
+    public Output<String> kinesisStreamARN() {
         return this.kinesisStreamARN;
     }
 
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 
@@ -35,8 +36,8 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
     }
 
     private DeliveryStreamKinesisStreamSourceConfigurationArgs() {
-        this.kinesisStreamARN = Output.empty();
-        this.roleARN = Output.empty();
+        this.kinesisStreamARN = Codegen.empty();
+        this.roleARN = Codegen.empty();
     }
 
     public static Builder builder() {

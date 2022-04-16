@@ -8,6 +8,7 @@ import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
     @Import(name="hub")
       private final @Nullable Output<ResourceIdArgs> hub;
 
-    public Output<ResourceIdArgs> getHub() {
-        return this.hub == null ? Output.empty() : this.hub;
+    public Output<ResourceIdArgs> hub() {
+        return this.hub == null ? Codegen.empty() : this.hub;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
     @Import(name="mesh")
       private final @Nullable Output<List<ResourceIdArgs>> mesh;
 
-    public Output<List<ResourceIdArgs>> getMesh() {
-        return this.mesh == null ? Output.empty() : this.mesh;
+    public Output<List<ResourceIdArgs>> mesh() {
+        return this.mesh == null ? Codegen.empty() : this.mesh;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
     @Import(name="spokes")
       private final @Nullable Output<List<ResourceIdArgs>> spokes;
 
-    public Output<List<ResourceIdArgs>> getSpokes() {
-        return this.spokes == null ? Output.empty() : this.spokes;
+    public Output<List<ResourceIdArgs>> spokes() {
+        return this.spokes == null ? Codegen.empty() : this.spokes;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<Either<String,Type>> type;
 
-    public Output<Either<String,Type>> getType() {
+    public Output<Either<String,Type>> type() {
         return this.type;
     }
 
@@ -78,10 +79,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
     }
 
     private ManagedNetworkPeeringPolicyPropertiesArgs() {
-        this.hub = Output.empty();
-        this.mesh = Output.empty();
-        this.spokes = Output.empty();
-        this.type = Output.empty();
+        this.hub = Codegen.empty();
+        this.mesh = Codegen.empty();
+        this.spokes = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder hub(@Nullable ResourceIdArgs hub) {
-            this.hub = Output.ofNullable(hub);
+            this.hub = Codegen.ofNullable(hub);
             return this;
         }
         public Builder mesh(@Nullable Output<List<ResourceIdArgs>> mesh) {
@@ -123,7 +124,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder mesh(@Nullable List<ResourceIdArgs> mesh) {
-            this.mesh = Output.ofNullable(mesh);
+            this.mesh = Codegen.ofNullable(mesh);
             return this;
         }
         public Builder mesh(ResourceIdArgs... mesh) {
@@ -134,7 +135,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder spokes(@Nullable List<ResourceIdArgs> spokes) {
-            this.spokes = Output.ofNullable(spokes);
+            this.spokes = Codegen.ofNullable(spokes);
             return this;
         }
         public Builder spokes(ResourceIdArgs... spokes) {

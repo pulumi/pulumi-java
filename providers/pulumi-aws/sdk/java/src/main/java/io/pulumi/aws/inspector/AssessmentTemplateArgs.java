@@ -5,6 +5,7 @@ package io.pulumi.aws.inspector;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="duration", required=true)
       private final Output<Integer> duration;
 
-    public Output<Integer> getDuration() {
+    public Output<Integer> duration() {
         return this.duration;
     }
 
@@ -35,8 +36,8 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rulesPackageArns", required=true)
       private final Output<List<String>> rulesPackageArns;
 
-    public Output<List<String>> getRulesPackageArns() {
+    public Output<List<String>> rulesPackageArns() {
         return this.rulesPackageArns;
     }
 
@@ -57,8 +58,8 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 
@@ -86,11 +87,11 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AssessmentTemplateArgs() {
-        this.duration = Output.empty();
-        this.name = Output.empty();
-        this.rulesPackageArns = Output.empty();
-        this.tags = Output.empty();
-        this.targetArn = Output.empty();
+        this.duration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rulesPackageArns = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rulesPackageArns(Output<List<String>> rulesPackageArns) {
@@ -153,7 +154,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetArn(Output<String> targetArn) {

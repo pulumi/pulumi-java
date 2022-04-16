@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     @Import(name="issuerCertificateThumbprint")
       private final @Nullable Output<String> issuerCertificateThumbprint;
 
-    public Output<String> getIssuerCertificateThumbprint() {
-        return this.issuerCertificateThumbprint == null ? Output.empty() : this.issuerCertificateThumbprint;
+    public Output<String> issuerCertificateThumbprint() {
+        return this.issuerCertificateThumbprint == null ? Codegen.empty() : this.issuerCertificateThumbprint;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public X509CertificateNameArgs(
@@ -48,8 +49,8 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     }
 
     private X509CertificateNameArgs() {
-        this.issuerCertificateThumbprint = Output.empty();
-        this.name = Output.empty();
+        this.issuerCertificateThumbprint = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
-            this.issuerCertificateThumbprint = Output.ofNullable(issuerCertificateThumbprint);
+            this.issuerCertificateThumbprint = Codegen.ofNullable(issuerCertificateThumbprint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public X509CertificateNameArgs build() {
             return new X509CertificateNameArgs(issuerCertificateThumbprint, name);

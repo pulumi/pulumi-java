@@ -17,6 +17,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -52,7 +53,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The flag to indicate whether to allow public access when behind VNet.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowPublicAccessWhenBehindVnet() {
+    public Output</* @Nullable */ Boolean> allowPublicAccessWhenBehindVnet() {
         return this.allowPublicAccessWhenBehindVnet;
     }
     /**
@@ -66,7 +67,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> getApplicationInsights() {
+    public Output</* @Nullable */ String> applicationInsights() {
         return this.applicationInsights;
     }
     /**
@@ -80,7 +81,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> getContainerRegistry() {
+    public Output</* @Nullable */ String> containerRegistry() {
         return this.containerRegistry;
     }
     /**
@@ -94,7 +95,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The description of this workspace.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -108,7 +109,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Url for the discovery service to identify regional endpoints for machine learning experimentation services
      * 
      */
-    public Output</* @Nullable */ String> getDiscoveryUrl() {
+    public Output</* @Nullable */ String> discoveryUrl() {
         return this.discoveryUrl;
     }
     /**
@@ -122,7 +123,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The encryption settings of Azure ML workspace.
      * 
      */
-    public Output</* @Nullable */ EncryptionPropertyResponse> getEncryption() {
+    public Output</* @Nullable */ EncryptionPropertyResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -136,7 +137,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The friendly name for this workspace. This name in mutable
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -150,7 +151,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
      * 
      */
-    public Output</* @Nullable */ Boolean> getHbiWorkspace() {
+    public Output</* @Nullable */ Boolean> hbiWorkspace() {
         return this.hbiWorkspace;
     }
     /**
@@ -164,7 +165,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -178,7 +179,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The compute name for image build
      * 
      */
-    public Output</* @Nullable */ String> getImageBuildCompute() {
+    public Output</* @Nullable */ String> imageBuildCompute() {
         return this.imageBuildCompute;
     }
     /**
@@ -192,7 +193,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> getKeyVault() {
+    public Output</* @Nullable */ String> keyVault() {
         return this.keyVault;
     }
     /**
@@ -206,7 +207,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -220,7 +221,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -234,7 +235,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The notebook info of Azure ML workspace.
      * 
      */
-    public Output<NotebookResourceInfoResponse> getNotebookInfo() {
+    public Output<NotebookResourceInfoResponse> notebookInfo() {
         return this.notebookInfo;
     }
     /**
@@ -248,7 +249,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The user assigned identity resource id that represents the workspace identity.
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryUserAssignedIdentity() {
+    public Output</* @Nullable */ String> primaryUserAssignedIdentity() {
         return this.primaryUserAssignedIdentity;
     }
     /**
@@ -262,7 +263,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The list of private endpoint connections in the workspace.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -276,7 +277,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Count of private connections in the workspace
      * 
      */
-    public Output<Integer> getPrivateLinkCount() {
+    public Output<Integer> privateLinkCount() {
         return this.privateLinkCount;
     }
     /**
@@ -290,7 +291,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -304,7 +305,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The service managed resource settings.
      * 
      */
-    public Output</* @Nullable */ ServiceManagedResourcesSettingsResponse> getServiceManagedResourcesSettings() {
+    public Output</* @Nullable */ ServiceManagedResourcesSettingsResponse> serviceManagedResourcesSettings() {
         return this.serviceManagedResourcesSettings;
     }
     /**
@@ -318,7 +319,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
      * 
      */
-    public Output<String> getServiceProvisionedResourceGroup() {
+    public Output<String> serviceProvisionedResourceGroup() {
         return this.serviceProvisionedResourceGroup;
     }
     /**
@@ -332,7 +333,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The list of shared private link resources in this workspace.
      * 
      */
-    public Output</* @Nullable */ List<SharedPrivateLinkResourceResponse>> getSharedPrivateLinkResources() {
+    public Output</* @Nullable */ List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
     /**
@@ -346,7 +347,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The sku of the workspace.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -360,7 +361,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccount() {
+    public Output</* @Nullable */ String> storageAccount() {
         return this.storageAccount;
     }
     /**
@@ -374,7 +375,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -388,7 +389,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -402,7 +403,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -416,7 +417,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The immutable id associated with this workspace.
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -442,7 +443,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningservices:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

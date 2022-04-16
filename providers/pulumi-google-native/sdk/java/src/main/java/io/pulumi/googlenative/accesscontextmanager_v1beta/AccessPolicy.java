@@ -6,6 +6,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.AccessPolicyArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -43,7 +44,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -57,7 +58,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Human readable title. Does not affect behavior.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -83,7 +84,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPolicy(String name, AccessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:accesscontextmanager/v1beta:AccessPolicy", name, args == null ? AccessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:accesscontextmanager/v1beta:AccessPolicy", name, args == null ? AccessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

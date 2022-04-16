@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     public ServiceAccountArgs(@Nullable Output<String> email) {
@@ -34,7 +35,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceAccountArgs() {
-        this.email = Output.empty();
+        this.email = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }        public ServiceAccountArgs build() {
             return new ServiceAccountArgs(email);

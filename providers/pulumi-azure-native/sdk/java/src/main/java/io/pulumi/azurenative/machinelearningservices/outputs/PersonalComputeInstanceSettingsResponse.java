@@ -26,7 +26,7 @@ public final class PersonalComputeInstanceSettingsResponse {
      * A user explicitly assigned to a personal compute instance.
      * 
     */
-    public Optional<AssignedUserResponse> getAssignedUser() {
+    public Optional<AssignedUserResponse> assignedUser() {
         return Optional.ofNullable(this.assignedUser);
     }
 

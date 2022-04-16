@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ResourcefileArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @return The HTTP Content-Type header value specifying the content type of the body.
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -44,7 +45,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @return The HTTP request/response body as raw binary.
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -58,7 +59,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @return Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
      */
-    public Output<List<Map<String,String>>> getExtensions() {
+    public Output<List<Map<String,String>>> extensions() {
         return this.extensions;
     }
 
@@ -84,7 +85,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resourcefile(String name, ResourcefileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Resourcefile", name, args == null ? ResourcefileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Resourcefile", name, args == null ? ResourcefileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resourcefile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

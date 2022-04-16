@@ -20,6 +20,7 @@ import io.pulumi.azurenative.migrate.inputs.VmUptimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +42,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="azureDiskType", required=true)
       private final Output<Either<String,AzureDiskType>> azureDiskType;
 
-    public Output<Either<String,AzureDiskType>> getAzureDiskType() {
+    public Output<Either<String,AzureDiskType>> azureDiskType() {
         return this.azureDiskType;
     }
 
@@ -52,7 +53,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="azureHybridUseBenefit", required=true)
       private final Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
 
-    public Output<Either<String,AzureHybridUseBenefit>> getAzureHybridUseBenefit() {
+    public Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
     }
 
@@ -63,7 +64,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="azureLocation", required=true)
       private final Output<Either<String,AzureLocation>> azureLocation;
 
-    public Output<Either<String,AzureLocation>> getAzureLocation() {
+    public Output<Either<String,AzureLocation>> azureLocation() {
         return this.azureLocation;
     }
 
@@ -74,7 +75,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="azureOfferCode", required=true)
       private final Output<Either<String,AzureOfferCode>> azureOfferCode;
 
-    public Output<Either<String,AzureOfferCode>> getAzureOfferCode() {
+    public Output<Either<String,AzureOfferCode>> azureOfferCode() {
         return this.azureOfferCode;
     }
 
@@ -85,7 +86,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="azurePricingTier", required=true)
       private final Output<Either<String,AzurePricingTier>> azurePricingTier;
 
-    public Output<Either<String,AzurePricingTier>> getAzurePricingTier() {
+    public Output<Either<String,AzurePricingTier>> azurePricingTier() {
         return this.azurePricingTier;
     }
 
@@ -96,7 +97,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="azureStorageRedundancy", required=true)
       private final Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
 
-    public Output<Either<String,AzureStorageRedundancy>> getAzureStorageRedundancy() {
+    public Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy() {
         return this.azureStorageRedundancy;
     }
 
@@ -107,7 +108,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="azureVmFamilies", required=true)
       private final Output<List<Either<String,AzureVmFamily>>> azureVmFamilies;
 
-    public Output<List<Either<String,AzureVmFamily>>> getAzureVmFamilies() {
+    public Output<List<Either<String,AzureVmFamily>>> azureVmFamilies() {
         return this.azureVmFamilies;
     }
 
@@ -118,7 +119,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="currency", required=true)
       private final Output<Either<String,Currency>> currency;
 
-    public Output<Either<String,Currency>> getCurrency() {
+    public Output<Either<String,Currency>> currency() {
         return this.currency;
     }
 
@@ -129,7 +130,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="discountPercentage", required=true)
       private final Output<Double> discountPercentage;
 
-    public Output<Double> getDiscountPercentage() {
+    public Output<Double> discountPercentage() {
         return this.discountPercentage;
     }
 
@@ -140,7 +141,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="percentile", required=true)
       private final Output<Either<String,Percentile>> percentile;
 
-    public Output<Either<String,Percentile>> getPercentile() {
+    public Output<Either<String,Percentile>> percentile() {
         return this.percentile;
     }
 
@@ -151,7 +152,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="reservedInstance", required=true)
       private final Output<Either<String,ReservedInstance>> reservedInstance;
 
-    public Output<Either<String,ReservedInstance>> getReservedInstance() {
+    public Output<Either<String,ReservedInstance>> reservedInstance() {
         return this.reservedInstance;
     }
 
@@ -162,7 +163,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="scalingFactor", required=true)
       private final Output<Double> scalingFactor;
 
-    public Output<Double> getScalingFactor() {
+    public Output<Double> scalingFactor() {
         return this.scalingFactor;
     }
 
@@ -173,7 +174,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="sizingCriterion", required=true)
       private final Output<Either<String,AssessmentSizingCriterion>> sizingCriterion;
 
-    public Output<Either<String,AssessmentSizingCriterion>> getSizingCriterion() {
+    public Output<Either<String,AssessmentSizingCriterion>> sizingCriterion() {
         return this.sizingCriterion;
     }
 
@@ -184,7 +185,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="stage", required=true)
       private final Output<Either<String,AssessmentStage>> stage;
 
-    public Output<Either<String,AssessmentStage>> getStage() {
+    public Output<Either<String,AssessmentStage>> stage() {
         return this.stage;
     }
 
@@ -195,7 +196,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="timeRange", required=true)
       private final Output<Either<String,TimeRange>> timeRange;
 
-    public Output<Either<String,TimeRange>> getTimeRange() {
+    public Output<Either<String,TimeRange>> timeRange() {
         return this.timeRange;
     }
 
@@ -206,7 +207,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="vmUptime", required=true)
       private final Output<VmUptimeArgs> vmUptime;
 
-    public Output<VmUptimeArgs> getVmUptime() {
+    public Output<VmUptimeArgs> vmUptime() {
         return this.vmUptime;
     }
 
@@ -246,22 +247,22 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private AssessmentPropertiesArgs() {
-        this.azureDiskType = Output.empty();
-        this.azureHybridUseBenefit = Output.empty();
-        this.azureLocation = Output.empty();
-        this.azureOfferCode = Output.empty();
-        this.azurePricingTier = Output.empty();
-        this.azureStorageRedundancy = Output.empty();
-        this.azureVmFamilies = Output.empty();
-        this.currency = Output.empty();
-        this.discountPercentage = Output.empty();
-        this.percentile = Output.empty();
-        this.reservedInstance = Output.empty();
-        this.scalingFactor = Output.empty();
-        this.sizingCriterion = Output.empty();
-        this.stage = Output.empty();
-        this.timeRange = Output.empty();
-        this.vmUptime = Output.empty();
+        this.azureDiskType = Codegen.empty();
+        this.azureHybridUseBenefit = Codegen.empty();
+        this.azureLocation = Codegen.empty();
+        this.azureOfferCode = Codegen.empty();
+        this.azurePricingTier = Codegen.empty();
+        this.azureStorageRedundancy = Codegen.empty();
+        this.azureVmFamilies = Codegen.empty();
+        this.currency = Codegen.empty();
+        this.discountPercentage = Codegen.empty();
+        this.percentile = Codegen.empty();
+        this.reservedInstance = Codegen.empty();
+        this.scalingFactor = Codegen.empty();
+        this.sizingCriterion = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.timeRange = Codegen.empty();
+        this.vmUptime = Codegen.empty();
     }
 
     public static Builder builder() {

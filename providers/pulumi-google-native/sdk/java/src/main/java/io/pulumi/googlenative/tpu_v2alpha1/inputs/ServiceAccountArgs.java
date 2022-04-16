@@ -5,6 +5,7 @@ package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<List<String>> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public ServiceAccountArgs(
@@ -49,8 +50,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceAccountArgs() {
-        this.email = Output.empty();
-        this.scope = Output.empty();
+        this.email = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder scope(@Nullable Output<List<String>> scope) {
@@ -88,7 +89,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder scope(String... scope) {

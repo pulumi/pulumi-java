@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return The Relationship Cardinality.
      * 
      */
-    public Output</* @Nullable */ String> getCardinality() {
+    public Output</* @Nullable */ String> cardinality() {
         return this.cardinality;
     }
     /**
@@ -58,7 +59,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Localized descriptions for the Relationship.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDescription() {
+    public Output</* @Nullable */ Map<String,String>> description() {
         return this.description;
     }
     /**
@@ -72,7 +73,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Localized display name for the Relationship.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -86,7 +87,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return The expiry date time in UTC.
      * 
      */
-    public Output</* @Nullable */ String> getExpiryDateTimeUtc() {
+    public Output</* @Nullable */ String> expiryDateTimeUtc() {
         return this.expiryDateTimeUtc;
     }
     /**
@@ -100,7 +101,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return The properties of the Relationship.
      * 
      */
-    public Output</* @Nullable */ List<PropertyDefinitionResponse>> getFields() {
+    public Output</* @Nullable */ List<PropertyDefinitionResponse>> fields() {
         return this.fields;
     }
     /**
@@ -114,7 +115,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Optional property to be used to map fields in profile to their strong ids in related profile.
      * 
      */
-    public Output</* @Nullable */ List<RelationshipTypeMappingResponse>> getLookupMappings() {
+    public Output</* @Nullable */ List<RelationshipTypeMappingResponse>> lookupMappings() {
         return this.lookupMappings;
     }
     /**
@@ -128,7 +129,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Profile type.
      * 
      */
-    public Output<String> getProfileType() {
+    public Output<String> profileType() {
         return this.profileType;
     }
     /**
@@ -156,7 +157,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -170,7 +171,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Related profile being referenced.
      * 
      */
-    public Output<String> getRelatedProfileType() {
+    public Output<String> relatedProfileType() {
         return this.relatedProfileType;
     }
     /**
@@ -184,7 +185,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return The relationship guid id.
      * 
      */
-    public Output<String> getRelationshipGuidId() {
+    public Output<String> relationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
@@ -198,7 +199,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return The Relationship name.
      * 
      */
-    public Output<String> getRelationshipName() {
+    public Output<String> relationshipName() {
         return this.relationshipName;
     }
     /**
@@ -212,7 +213,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -226,7 +227,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -252,7 +253,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Relationship(String name, RelationshipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customerinsights:Relationship", name, args == null ? RelationshipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customerinsights:Relationship", name, args == null ? RelationshipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Relationship(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

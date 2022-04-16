@@ -19,21 +19,21 @@ public final class ConfigAntennaUplinkConfig extends io.pulumi.resources.InvokeA
     @Import(name="spectrumConfig")
       private final @Nullable ConfigUplinkSpectrumConfig spectrumConfig;
 
-    public Optional<ConfigUplinkSpectrumConfig> getSpectrumConfig() {
+    public Optional<ConfigUplinkSpectrumConfig> spectrumConfig() {
         return this.spectrumConfig == null ? Optional.empty() : Optional.ofNullable(this.spectrumConfig);
     }
 
     @Import(name="targetEirp")
       private final @Nullable ConfigEirp targetEirp;
 
-    public Optional<ConfigEirp> getTargetEirp() {
+    public Optional<ConfigEirp> targetEirp() {
         return this.targetEirp == null ? Optional.empty() : Optional.ofNullable(this.targetEirp);
     }
 
     @Import(name="transmitDisabled")
       private final @Nullable Boolean transmitDisabled;
 
-    public Optional<Boolean> getTransmitDisabled() {
+    public Optional<Boolean> transmitDisabled() {
         return this.transmitDisabled == null ? Optional.empty() : Optional.ofNullable(this.transmitDisabled);
     }
 

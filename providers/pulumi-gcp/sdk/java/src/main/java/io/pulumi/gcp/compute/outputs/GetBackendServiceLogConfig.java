@@ -21,10 +21,10 @@ public final class GetBackendServiceLogConfig {
         this.sampleRate = sampleRate;
     }
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
-    public Double getSampleRate() {
+    public Double sampleRate() {
         return this.sampleRate;
     }
 

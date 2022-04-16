@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,7 +48,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Date of the physical port allocation to be used in Letter of Authorization.
      * 
      */
-    public Output<String> getAllocationDate() {
+    public Output<String> allocationDate() {
         return this.allocationDate;
     }
     /**
@@ -61,7 +62,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Bandwidth of procured ports in Gbps.
      * 
      */
-    public Output</* @Nullable */ Integer> getBandwidthInGbps() {
+    public Output</* @Nullable */ Integer> bandwidthInGbps() {
         return this.bandwidthInGbps;
     }
     /**
@@ -75,7 +76,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
      * 
      */
-    public Output<List<SubResourceResponse>> getCircuits() {
+    public Output<List<SubResourceResponse>> circuits() {
         return this.circuits;
     }
     /**
@@ -89,7 +90,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Encapsulation method on physical ports.
      * 
      */
-    public Output</* @Nullable */ String> getEncapsulation() {
+    public Output</* @Nullable */ String> encapsulation() {
         return this.encapsulation;
     }
     /**
@@ -103,7 +104,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -117,7 +118,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Ether type of the physical port.
      * 
      */
-    public Output<String> getEtherType() {
+    public Output<String> etherType() {
         return this.etherType;
     }
     /**
@@ -131,7 +132,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return The identity of ExpressRoutePort, if configured.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -145,7 +146,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return The set of physical links of the ExpressRoutePort resource.
      * 
      */
-    public Output</* @Nullable */ List<ExpressRouteLinkResponse>> getLinks() {
+    public Output</* @Nullable */ List<ExpressRouteLinkResponse>> links() {
         return this.links;
     }
     /**
@@ -159,7 +160,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -173,7 +174,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Maximum transmission unit of the physical port pair(s).
      * 
      */
-    public Output<String> getMtu() {
+    public Output<String> mtu() {
         return this.mtu;
     }
     /**
@@ -187,7 +188,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -201,7 +202,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return The name of the peering location that the ExpressRoutePort is mapped to physically.
      * 
      */
-    public Output</* @Nullable */ String> getPeeringLocation() {
+    public Output</* @Nullable */ String> peeringLocation() {
         return this.peeringLocation;
     }
     /**
@@ -215,7 +216,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Aggregate Gbps of associated circuit bandwidths.
      * 
      */
-    public Output<Double> getProvisionedBandwidthInGbps() {
+    public Output<Double> provisionedBandwidthInGbps() {
         return this.provisionedBandwidthInGbps;
     }
     /**
@@ -229,7 +230,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the express route port resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -243,7 +244,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the express route port resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -257,7 +258,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -271,7 +272,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -297,7 +298,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExpressRoutePort(String name, ExpressRoutePortArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ExpressRoutePort", name, args == null ? ExpressRoutePortArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ExpressRoutePort", name, args == null ? ExpressRoutePortArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExpressRoutePort(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

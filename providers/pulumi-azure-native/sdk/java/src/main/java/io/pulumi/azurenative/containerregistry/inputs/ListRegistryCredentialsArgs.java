@@ -19,7 +19,7 @@ public final class ListRegistryCredentialsArgs extends io.pulumi.resources.Invok
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -30,7 +30,7 @@ public final class ListRegistryCredentialsArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

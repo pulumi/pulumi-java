@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     @Import(name="type")
       private final @Nullable Output<QueryParameterTypeArgs> type;
 
-    public Output<QueryParameterTypeArgs> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<QueryParameterTypeArgs> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public QueryParameterTypeStructTypesItemArgs(
@@ -58,9 +59,9 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     }
 
     private QueryParameterTypeStructTypesItemArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -100,7 +101,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<QueryParameterTypeArgs> type) {
@@ -108,7 +109,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
             return this;
         }
         public Builder type(@Nullable QueryParameterTypeArgs type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public QueryParameterTypeStructTypesItemArgs build() {
             return new QueryParameterTypeStructTypesItemArgs(description, name, type);

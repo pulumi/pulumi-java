@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1beta1.enums.ContactSettingsPrivacy;
 import io.pulumi.googlenative.domains_v1beta1.inputs.ContactArgs;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="adminContact", required=true)
       private final Output<ContactArgs> adminContact;
 
-    public Output<ContactArgs> getAdminContact() {
+    public Output<ContactArgs> adminContact() {
         return this.adminContact;
     }
 
@@ -36,7 +37,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privacy", required=true)
       private final Output<ContactSettingsPrivacy> privacy;
 
-    public Output<ContactSettingsPrivacy> getPrivacy() {
+    public Output<ContactSettingsPrivacy> privacy() {
         return this.privacy;
     }
 
@@ -47,7 +48,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="registrantContact", required=true)
       private final Output<ContactArgs> registrantContact;
 
-    public Output<ContactArgs> getRegistrantContact() {
+    public Output<ContactArgs> registrantContact() {
         return this.registrantContact;
     }
 
@@ -58,7 +59,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="technicalContact", required=true)
       private final Output<ContactArgs> technicalContact;
 
-    public Output<ContactArgs> getTechnicalContact() {
+    public Output<ContactArgs> technicalContact() {
         return this.technicalContact;
     }
 
@@ -74,10 +75,10 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContactSettingsArgs() {
-        this.adminContact = Output.empty();
-        this.privacy = Output.empty();
-        this.registrantContact = Output.empty();
-        this.technicalContact = Output.empty();
+        this.adminContact = Codegen.empty();
+        this.privacy = Codegen.empty();
+        this.registrantContact = Codegen.empty();
+        this.technicalContact = Codegen.empty();
     }
 
     public static Builder builder() {

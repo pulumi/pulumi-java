@@ -5,6 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias", required=true)
       private final Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
 
@@ -33,8 +34,8 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialDuration")
       private final @Nullable Output<Integer> credentialDuration;
 
-    public Output<Integer> getCredentialDuration() {
-        return this.credentialDuration == null ? Output.empty() : this.credentialDuration;
+    public Output<Integer> credentialDuration() {
+        return this.credentialDuration == null ? Codegen.empty() : this.credentialDuration;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -58,9 +59,9 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleAliasArgs() {
-        this.alias = Output.empty();
-        this.credentialDuration = Output.empty();
-        this.roleArn = Output.empty();
+        this.alias = Codegen.empty();
+        this.credentialDuration = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentialDuration(@Nullable Integer credentialDuration) {
-            this.credentialDuration = Output.ofNullable(credentialDuration);
+            this.credentialDuration = Codegen.ofNullable(credentialDuration);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

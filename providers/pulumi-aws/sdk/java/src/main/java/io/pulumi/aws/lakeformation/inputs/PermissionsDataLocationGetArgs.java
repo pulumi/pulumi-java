@@ -5,6 +5,7 @@ package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class PermissionsDataLocationGetArgs extends io.pulumi.resources.Re
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -32,8 +33,8 @@ public final class PermissionsDataLocationGetArgs extends io.pulumi.resources.Re
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     public PermissionsDataLocationGetArgs(
@@ -44,8 +45,8 @@ public final class PermissionsDataLocationGetArgs extends io.pulumi.resources.Re
     }
 
     private PermissionsDataLocationGetArgs() {
-        this.arn = Output.empty();
-        this.catalogId = Output.empty();
+        this.arn = Codegen.empty();
+        this.catalogId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class PermissionsDataLocationGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }        public PermissionsDataLocationGetArgs build() {
             return new PermissionsDataLocationGetArgs(arn, catalogId);

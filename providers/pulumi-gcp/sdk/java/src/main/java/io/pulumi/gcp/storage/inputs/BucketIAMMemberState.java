@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.BucketIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<BucketIAMMemberConditionGetArgs> condition;
 
-    public Output<BucketIAMMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<BucketIAMMemberConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -45,15 +46,15 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+    public Output<String> member() {
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public BucketIAMMemberState(
@@ -83,11 +84,11 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketIAMMemberState() {
-        this.bucket = Output.empty();
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder condition(@Nullable Output<BucketIAMMemberConditionGetArgs> condition) {
@@ -131,7 +132,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable BucketIAMMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -139,7 +140,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -147,7 +148,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -155,7 +156,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public BucketIAMMemberState build() {
             return new BucketIAMMemberState(bucket, condition, etag, member, role);

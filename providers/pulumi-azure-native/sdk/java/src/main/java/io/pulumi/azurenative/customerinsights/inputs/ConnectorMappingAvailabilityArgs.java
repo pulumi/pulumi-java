@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 import io.pulumi.azurenative.customerinsights.enums.FrequencyTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
     @Import(name="frequency")
       private final @Nullable Output<FrequencyTypes> frequency;
 
-    public Output<FrequencyTypes> getFrequency() {
-        return this.frequency == null ? Output.empty() : this.frequency;
+    public Output<FrequencyTypes> frequency() {
+        return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -49,8 +50,8 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
     }
 
     private ConnectorMappingAvailabilityArgs() {
-        this.frequency = Output.empty();
-        this.interval = Output.empty();
+        this.frequency = Codegen.empty();
+        this.interval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder frequency(@Nullable FrequencyTypes frequency) {
-            this.frequency = Output.ofNullable(frequency);
+            this.frequency = Codegen.ofNullable(frequency);
             return this;
         }
         public Builder interval(Output<Integer> interval) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 import io.pulumi.awsnative.gamelift.enums.FleetCertificateConfigurationCertificateType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
     @Import(name="certificateType", required=true)
       private final Output<FleetCertificateConfigurationCertificateType> certificateType;
 
-    public Output<FleetCertificateConfigurationCertificateType> getCertificateType() {
+    public Output<FleetCertificateConfigurationCertificateType> certificateType() {
         return this.certificateType;
     }
 
@@ -29,7 +30,7 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
     }
 
     private FleetCertificateConfigurationArgs() {
-        this.certificateType = Output.empty();
+        this.certificateType = Codegen.empty();
     }
 
     public static Builder builder() {

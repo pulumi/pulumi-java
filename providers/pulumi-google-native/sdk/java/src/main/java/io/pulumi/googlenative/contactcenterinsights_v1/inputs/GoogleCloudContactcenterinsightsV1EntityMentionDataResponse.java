@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
     @Import(name="entityUniqueId", required=true)
       private final String entityUniqueId;
 
-    public String getEntityUniqueId() {
+    public String entityUniqueId() {
         return this.entityUniqueId;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
     @Import(name="sentiment", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
-    public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
+    public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

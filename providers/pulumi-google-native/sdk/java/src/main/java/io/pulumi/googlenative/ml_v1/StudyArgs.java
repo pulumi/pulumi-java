@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__StudyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -36,14 +37,14 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="studyConfig", required=true)
       private final Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 
-    public Output<GoogleCloudMlV1__StudyConfigArgs> getStudyConfig() {
+    public Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig() {
         return this.studyConfig;
     }
 
     @Import(name="studyId", required=true)
       private final Output<String> studyId;
 
-    public Output<String> getStudyId() {
+    public Output<String> studyId() {
         return this.studyId;
     }
 
@@ -59,10 +60,10 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StudyArgs() {
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.studyConfig = Output.empty();
-        this.studyId = Output.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.studyConfig = Codegen.empty();
+        this.studyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -104,7 +105,7 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder studyConfig(Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig) {

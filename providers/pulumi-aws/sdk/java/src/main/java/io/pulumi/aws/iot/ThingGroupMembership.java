@@ -9,6 +9,7 @@ import io.pulumi.aws.iot.inputs.ThingGroupMembershipState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ThingGroupMembership extends io.pulumi.resources.CustomResource {
      * @return Override dynamic thing groups with static thing groups when 10-group limit is reached. If a thing belongs to 10 thing groups, and one or more of those groups are dynamic thing groups, adding a thing to a static group removes the thing from the last dynamic group.
      * 
      */
-    public Output</* @Nullable */ Boolean> getOverrideDynamicGroup() {
+    public Output</* @Nullable */ Boolean> overrideDynamicGroup() {
         return this.overrideDynamicGroup;
     }
     /**
@@ -54,7 +55,7 @@ public class ThingGroupMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the group to which you are adding a thing.
      * 
      */
-    public Output<String> getThingGroupName() {
+    public Output<String> thingGroupName() {
         return this.thingGroupName;
     }
     /**
@@ -68,7 +69,7 @@ public class ThingGroupMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the thing to add to a group.
      * 
      */
-    public Output<String> getThingName() {
+    public Output<String> thingName() {
         return this.thingName;
     }
 
@@ -94,7 +95,7 @@ public class ThingGroupMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ThingGroupMembership(String name, ThingGroupMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iot/thingGroupMembership:ThingGroupMembership", name, args == null ? ThingGroupMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iot/thingGroupMembership:ThingGroupMembership", name, args == null ? ThingGroupMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ThingGroupMembership(String name, Output<String> id, @Nullable ThingGroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

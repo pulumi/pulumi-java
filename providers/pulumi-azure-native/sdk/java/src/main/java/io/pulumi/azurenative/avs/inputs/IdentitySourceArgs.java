@@ -7,6 +7,7 @@ import io.pulumi.azurenative.avs.enums.SslEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+    public Output<String> alias() {
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseGroupDN")
       private final @Nullable Output<String> baseGroupDN;
 
-    public Output<String> getBaseGroupDN() {
-        return this.baseGroupDN == null ? Output.empty() : this.baseGroupDN;
+    public Output<String> baseGroupDN() {
+        return this.baseGroupDN == null ? Codegen.empty() : this.baseGroupDN;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseUserDN")
       private final @Nullable Output<String> baseUserDN;
 
-    public Output<String> getBaseUserDN() {
-        return this.baseUserDN == null ? Output.empty() : this.baseUserDN;
+    public Output<String> baseUserDN() {
+        return this.baseUserDN == null ? Codegen.empty() : this.baseUserDN;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+    public Output<String> domain() {
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryServer")
       private final @Nullable Output<String> primaryServer;
 
-    public Output<String> getPrimaryServer() {
-        return this.primaryServer == null ? Output.empty() : this.primaryServer;
+    public Output<String> primaryServer() {
+        return this.primaryServer == null ? Codegen.empty() : this.primaryServer;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryServer")
       private final @Nullable Output<String> secondaryServer;
 
-    public Output<String> getSecondaryServer() {
-        return this.secondaryServer == null ? Output.empty() : this.secondaryServer;
+    public Output<String> secondaryServer() {
+        return this.secondaryServer == null ? Codegen.empty() : this.secondaryServer;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ssl")
       private final @Nullable Output<Either<String,SslEnum>> ssl;
 
-    public Output<Either<String,SslEnum>> getSsl() {
-        return this.ssl == null ? Output.empty() : this.ssl;
+    public Output<Either<String,SslEnum>> ssl() {
+        return this.ssl == null ? Codegen.empty() : this.ssl;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public IdentitySourceArgs(
@@ -154,16 +155,16 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentitySourceArgs() {
-        this.alias = Output.empty();
-        this.baseGroupDN = Output.empty();
-        this.baseUserDN = Output.empty();
-        this.domain = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.primaryServer = Output.empty();
-        this.secondaryServer = Output.empty();
-        this.ssl = Output.empty();
-        this.username = Output.empty();
+        this.alias = Codegen.empty();
+        this.baseGroupDN = Codegen.empty();
+        this.baseUserDN = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.primaryServer = Codegen.empty();
+        this.secondaryServer = Codegen.empty();
+        this.ssl = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder baseGroupDN(@Nullable Output<String> baseGroupDN) {
@@ -217,7 +218,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseGroupDN(@Nullable String baseGroupDN) {
-            this.baseGroupDN = Output.ofNullable(baseGroupDN);
+            this.baseGroupDN = Codegen.ofNullable(baseGroupDN);
             return this;
         }
         public Builder baseUserDN(@Nullable Output<String> baseUserDN) {
@@ -225,7 +226,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseUserDN(@Nullable String baseUserDN) {
-            this.baseUserDN = Output.ofNullable(baseUserDN);
+            this.baseUserDN = Codegen.ofNullable(baseUserDN);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -233,7 +234,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -241,7 +242,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -249,7 +250,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder primaryServer(@Nullable Output<String> primaryServer) {
@@ -257,7 +258,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryServer(@Nullable String primaryServer) {
-            this.primaryServer = Output.ofNullable(primaryServer);
+            this.primaryServer = Codegen.ofNullable(primaryServer);
             return this;
         }
         public Builder secondaryServer(@Nullable Output<String> secondaryServer) {
@@ -265,7 +266,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryServer(@Nullable String secondaryServer) {
-            this.secondaryServer = Output.ofNullable(secondaryServer);
+            this.secondaryServer = Codegen.ofNullable(secondaryServer);
             return this;
         }
         public Builder ssl(@Nullable Output<Either<String,SslEnum>> ssl) {
@@ -273,7 +274,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ssl(@Nullable Either<String,SslEnum> ssl) {
-            this.ssl = Output.ofNullable(ssl);
+            this.ssl = Codegen.ofNullable(ssl);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -281,7 +282,7 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public IdentitySourceArgs build() {
             return new IdentitySourceArgs(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);

@@ -105,84 +105,84 @@ public final class DetailResponse {
      * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
      * 
     */
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
     /**
      * A vendor-specific description of this note.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The fix for this specific package version.
      * 
     */
-    public VulnerabilityLocationResponse getFixedLocation() {
+    public VulnerabilityLocationResponse fixedLocation() {
         return this.fixedLocation;
     }
     /**
      * Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
      * 
     */
-    public Boolean getIsObsolete() {
+    public Boolean isObsolete() {
         return this.isObsolete;
     }
     /**
      * The max version of the package in which the vulnerability exists.
      * 
     */
-    public VersionResponse getMaxAffectedVersion() {
+    public VersionResponse maxAffectedVersion() {
         return this.maxAffectedVersion;
     }
     /**
      * The min version of the package in which the vulnerability exists.
      * 
     */
-    public VersionResponse getMinAffectedVersion() {
+    public VersionResponse minAffectedVersion() {
         return this.minAffectedVersion;
     }
     /**
      * The name of the package where the vulnerability was found.
      * 
     */
-    public String getPackage_() {
+    public String package_() {
         return this.package_;
     }
     /**
      * The type of package; whether native or non native(ruby gems, node.js packages etc).
      * 
     */
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
     /**
      * The severity (eg: distro assigned severity) for this vulnerability.
      * 
     */
-    public String getSeverityName() {
+    public String severityName() {
         return this.severityName;
     }
     /**
      * The source from which the information in this Detail was obtained.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
      * 
     */
-    public String getSourceUpdateTime() {
+    public String sourceUpdateTime() {
         return this.sourceUpdateTime;
     }
     /**
      * The name of the vendor of the product.
      * 
     */
-    public String getVendor() {
+    public String vendor() {
         return this.vendor;
     }
 

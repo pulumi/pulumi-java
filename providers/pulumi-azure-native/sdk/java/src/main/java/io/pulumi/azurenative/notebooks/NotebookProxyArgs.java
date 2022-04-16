@@ -6,6 +6,7 @@ package io.pulumi.azurenative.notebooks;
 import io.pulumi.azurenative.notebooks.inputs.NotebookResourceSystemDataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
 
-    public Output<String> getPublicDns() {
-        return this.publicDns == null ? Output.empty() : this.publicDns;
+    public Output<String> publicDns() {
+        return this.publicDns == null ? Codegen.empty() : this.publicDns;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<String> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,8 +78,8 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryAppId")
       private final @Nullable Output<String> secondaryAppId;
 
-    public Output<String> getSecondaryAppId() {
-        return this.secondaryAppId == null ? Output.empty() : this.secondaryAppId;
+    public Output<String> secondaryAppId() {
+        return this.secondaryAppId == null ? Codegen.empty() : this.secondaryAppId;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemData")
       private final @Nullable Output<NotebookResourceSystemDataArgs> systemData;
 
-    public Output<NotebookResourceSystemDataArgs> getSystemData() {
-        return this.systemData == null ? Output.empty() : this.systemData;
+    public Output<NotebookResourceSystemDataArgs> systemData() {
+        return this.systemData == null ? Codegen.empty() : this.systemData;
     }
 
     public NotebookProxyArgs(
@@ -123,14 +124,14 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotebookProxyArgs() {
-        this.hostname = Output.empty();
-        this.publicDns = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.region = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.secondaryAppId = Output.empty();
-        this.systemData = Output.empty();
+        this.hostname = Codegen.empty();
+        this.publicDns = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.region = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.secondaryAppId = Codegen.empty();
+        this.systemData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder publicDns(@Nullable Output<String> publicDns) {
@@ -180,7 +181,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicDns(@Nullable String publicDns) {
-            this.publicDns = Output.ofNullable(publicDns);
+            this.publicDns = Codegen.ofNullable(publicDns);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
@@ -188,7 +189,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -196,7 +197,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -212,7 +213,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder secondaryAppId(@Nullable Output<String> secondaryAppId) {
@@ -220,7 +221,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryAppId(@Nullable String secondaryAppId) {
-            this.secondaryAppId = Output.ofNullable(secondaryAppId);
+            this.secondaryAppId = Codegen.ofNullable(secondaryAppId);
             return this;
         }
         public Builder systemData(@Nullable Output<NotebookResourceSystemDataArgs> systemData) {
@@ -228,7 +229,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemData(@Nullable NotebookResourceSystemDataArgs systemData) {
-            this.systemData = Output.ofNullable(systemData);
+            this.systemData = Codegen.ofNullable(systemData);
             return this;
         }        public NotebookProxyArgs build() {
             return new NotebookProxyArgs(hostname, publicDns, publicNetworkAccess, region, resourceGroupName, resourceName, secondaryAppId, systemData);

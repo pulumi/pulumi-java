@@ -119,98 +119,98 @@ public final class GetRegionSslCertificateResult {
      * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
      * 
     */
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
     /**
      * Creation timestamp in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Expire time of the certificate. RFC3339
      * 
     */
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
     /**
      * Type of the resource. Always compute#sslCertificate for SSL certificates.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Configuration and status of a managed SSL certificate.
      * 
     */
-    public SslCertificateManagedSslCertificateResponse getManaged() {
+    public SslCertificateManagedSslCertificateResponse managed() {
         return this.managed;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
      * 
     */
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
     /**
      * URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * [Output only] Server-defined URL for the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
      * 
     */
-    public String getSelfLinkWithId() {
+    public String selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * Configuration and status of a self-managed SSL certificate.
      * 
     */
-    public SslCertificateSelfManagedSslCertificateResponse getSelfManaged() {
+    public SslCertificateSelfManagedSslCertificateResponse selfManaged() {
         return this.selfManaged;
     }
     /**
      * Domains associated with the certificate via Subject Alternative Name.
      * 
     */
-    public List<String> getSubjectAlternativeNames() {
+    public List<String> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
      * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

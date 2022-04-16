@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +57,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the RoutingIntent resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -84,7 +85,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @return List of routing policies.
      * 
      */
-    public Output</* @Nullable */ List<RoutingPolicyResponse>> getRoutingPolicies() {
+    public Output</* @Nullable */ List<RoutingPolicyResponse>> routingPolicies() {
         return this.routingPolicies;
     }
     /**
@@ -98,7 +99,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -124,7 +125,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoutingIntent(String name, RoutingIntentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:RoutingIntent", name, args == null ? RoutingIntentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:RoutingIntent", name, args == null ? RoutingIntentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RoutingIntent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

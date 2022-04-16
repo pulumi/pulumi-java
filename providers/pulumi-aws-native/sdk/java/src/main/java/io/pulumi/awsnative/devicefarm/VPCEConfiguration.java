@@ -9,6 +9,7 @@ import io.pulumi.awsnative.devicefarm.outputs.VPCEConfigurationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,37 +23,37 @@ public class VPCEConfiguration extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="serviceDnsName", type=String.class, parameters={})
     private Output<String> serviceDnsName;
 
-    public Output<String> getServiceDnsName() {
+    public Output<String> serviceDnsName() {
         return this.serviceDnsName;
     }
     @Export(name="tags", type=List.class, parameters={VPCEConfigurationTag.class})
     private Output</* @Nullable */ List<VPCEConfigurationTag>> tags;
 
-    public Output</* @Nullable */ List<VPCEConfigurationTag>> getTags() {
+    public Output</* @Nullable */ List<VPCEConfigurationTag>> tags() {
         return this.tags;
     }
     @Export(name="vpceConfigurationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpceConfigurationDescription;
 
-    public Output</* @Nullable */ String> getVpceConfigurationDescription() {
+    public Output</* @Nullable */ String> vpceConfigurationDescription() {
         return this.vpceConfigurationDescription;
     }
     @Export(name="vpceConfigurationName", type=String.class, parameters={})
     private Output<String> vpceConfigurationName;
 
-    public Output<String> getVpceConfigurationName() {
+    public Output<String> vpceConfigurationName() {
         return this.vpceConfigurationName;
     }
     @Export(name="vpceServiceName", type=String.class, parameters={})
     private Output<String> vpceServiceName;
 
-    public Output<String> getVpceServiceName() {
+    public Output<String> vpceServiceName() {
         return this.vpceServiceName;
     }
 
@@ -78,7 +79,7 @@ public class VPCEConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VPCEConfiguration(String name, VPCEConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:devicefarm:VPCEConfiguration", name, args == null ? VPCEConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:devicefarm:VPCEConfiguration", name, args == null ? VPCEConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VPCEConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

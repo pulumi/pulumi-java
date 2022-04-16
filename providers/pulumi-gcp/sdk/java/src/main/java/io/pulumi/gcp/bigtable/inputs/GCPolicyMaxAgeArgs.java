@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> days;
 
     @Deprecated /* Deprecated in favor of duration */
-    public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+    public Output<Integer> days() {
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     public GCPolicyMaxAgeArgs(
@@ -50,8 +51,8 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GCPolicyMaxAgeArgs() {
-        this.days = Output.empty();
-        this.duration = Output.empty();
+        this.days = Codegen.empty();
+        this.duration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder duration(@Nullable Output<String> duration) {
@@ -89,7 +90,7 @@ public final class GCPolicyMaxAgeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }        public GCPolicyMaxAgeArgs build() {
             return new GCPolicyMaxAgeArgs(days, duration);

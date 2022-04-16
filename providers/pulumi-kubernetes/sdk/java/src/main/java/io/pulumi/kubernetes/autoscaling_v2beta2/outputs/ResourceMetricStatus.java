@@ -33,14 +33,14 @@ public final class ResourceMetricStatus {
      * current contains the current value for the given metric
      * 
     */
-    public MetricValueStatus getCurrent() {
+    public MetricValueStatus current() {
         return this.current;
     }
     /**
      * Name is the name of the resource in question.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

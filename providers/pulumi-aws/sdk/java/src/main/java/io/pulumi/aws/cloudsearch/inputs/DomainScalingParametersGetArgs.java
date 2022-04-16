@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
     @Import(name="desiredInstanceType")
       private final @Nullable Output<String> desiredInstanceType;
 
-    public Output<String> getDesiredInstanceType() {
-        return this.desiredInstanceType == null ? Output.empty() : this.desiredInstanceType;
+    public Output<String> desiredInstanceType() {
+        return this.desiredInstanceType == null ? Codegen.empty() : this.desiredInstanceType;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
     @Import(name="desiredPartitionCount")
       private final @Nullable Output<Integer> desiredPartitionCount;
 
-    public Output<Integer> getDesiredPartitionCount() {
-        return this.desiredPartitionCount == null ? Output.empty() : this.desiredPartitionCount;
+    public Output<Integer> desiredPartitionCount() {
+        return this.desiredPartitionCount == null ? Codegen.empty() : this.desiredPartitionCount;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
     @Import(name="desiredReplicationCount")
       private final @Nullable Output<Integer> desiredReplicationCount;
 
-    public Output<Integer> getDesiredReplicationCount() {
-        return this.desiredReplicationCount == null ? Output.empty() : this.desiredReplicationCount;
+    public Output<Integer> desiredReplicationCount() {
+        return this.desiredReplicationCount == null ? Codegen.empty() : this.desiredReplicationCount;
     }
 
     public DomainScalingParametersGetArgs(
@@ -58,9 +59,9 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
     }
 
     private DomainScalingParametersGetArgs() {
-        this.desiredInstanceType = Output.empty();
-        this.desiredPartitionCount = Output.empty();
-        this.desiredReplicationCount = Output.empty();
+        this.desiredInstanceType = Codegen.empty();
+        this.desiredPartitionCount = Codegen.empty();
+        this.desiredReplicationCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder desiredInstanceType(@Nullable String desiredInstanceType) {
-            this.desiredInstanceType = Output.ofNullable(desiredInstanceType);
+            this.desiredInstanceType = Codegen.ofNullable(desiredInstanceType);
             return this;
         }
         public Builder desiredPartitionCount(@Nullable Output<Integer> desiredPartitionCount) {
@@ -100,7 +101,7 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder desiredPartitionCount(@Nullable Integer desiredPartitionCount) {
-            this.desiredPartitionCount = Output.ofNullable(desiredPartitionCount);
+            this.desiredPartitionCount = Codegen.ofNullable(desiredPartitionCount);
             return this;
         }
         public Builder desiredReplicationCount(@Nullable Output<Integer> desiredReplicationCount) {
@@ -108,7 +109,7 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder desiredReplicationCount(@Nullable Integer desiredReplicationCount) {
-            this.desiredReplicationCount = Output.ofNullable(desiredReplicationCount);
+            this.desiredReplicationCount = Codegen.ofNullable(desiredReplicationCount);
             return this;
         }        public DomainScalingParametersGetArgs build() {
             return new DomainScalingParametersGetArgs(desiredInstanceType, desiredPartitionCount, desiredReplicationCount);

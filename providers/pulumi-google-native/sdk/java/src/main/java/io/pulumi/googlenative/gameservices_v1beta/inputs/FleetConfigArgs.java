@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleetSpec")
       private final @Nullable Output<String> fleetSpec;
 
-    public Output<String> getFleetSpec() {
-        return this.fleetSpec == null ? Output.empty() : this.fleetSpec;
+    public Output<String> fleetSpec() {
+        return this.fleetSpec == null ? Codegen.empty() : this.fleetSpec;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FleetConfigArgs(
@@ -48,8 +49,8 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetConfigArgs() {
-        this.fleetSpec = Output.empty();
-        this.name = Output.empty();
+        this.fleetSpec = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fleetSpec(@Nullable String fleetSpec) {
-            this.fleetSpec = Output.ofNullable(fleetSpec);
+            this.fleetSpec = Codegen.ofNullable(fleetSpec);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FleetConfigArgs build() {
             return new FleetConfigArgs(fleetSpec, name);

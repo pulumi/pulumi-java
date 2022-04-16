@@ -8,6 +8,7 @@ import io.pulumi.awsnative.s3outposts.inputs.BucketAbortIncompleteMultipartUploa
 import io.pulumi.awsnative.s3outposts.inputs.BucketRuleFilterPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
-    public Output<BucketAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
-        return this.abortIncompleteMultipartUpload == null ? Output.empty() : this.abortIncompleteMultipartUpload;
+    public Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload() {
+        return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+    public Output<String> expirationDate() {
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationInDays")
       private final @Nullable Output<Integer> expirationInDays;
 
-    public Output<Integer> getExpirationInDays() {
-        return this.expirationInDays == null ? Output.empty() : this.expirationInDays;
+    public Output<Integer> expirationInDays() {
+        return this.expirationInDays == null ? Codegen.empty() : this.expirationInDays;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<BucketRuleFilterPropertiesArgs> filter;
 
-    public Output<BucketRuleFilterPropertiesArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<BucketRuleFilterPropertiesArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -73,15 +74,15 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="status")
       private final @Nullable Output<BucketRuleStatus> status;
 
-    public Output<BucketRuleStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<BucketRuleStatus> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public BucketRuleArgs(
@@ -100,12 +101,12 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketRuleArgs() {
-        this.abortIncompleteMultipartUpload = Output.empty();
-        this.expirationDate = Output.empty();
-        this.expirationInDays = Output.empty();
-        this.filter = Output.empty();
-        this.id = Output.empty();
-        this.status = Output.empty();
+        this.abortIncompleteMultipartUpload = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.expirationInDays = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.id = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = Output.ofNullable(abortIncompleteMultipartUpload);
+            this.abortIncompleteMultipartUpload = Codegen.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -151,7 +152,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder expirationInDays(@Nullable Output<Integer> expirationInDays) {
@@ -159,7 +160,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
-            this.expirationInDays = Output.ofNullable(expirationInDays);
+            this.expirationInDays = Codegen.ofNullable(expirationInDays);
             return this;
         }
         public Builder filter(@Nullable Output<BucketRuleFilterPropertiesArgs> filter) {
@@ -167,7 +168,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable BucketRuleFilterPropertiesArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -175,7 +176,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder status(@Nullable Output<BucketRuleStatus> status) {
@@ -183,7 +184,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable BucketRuleStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public BucketRuleArgs build() {
             return new BucketRuleArgs(abortIncompleteMultipartUpload, expirationDate, expirationInDays, filter, id, status);

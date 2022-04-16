@@ -19,7 +19,7 @@ public final class RowLevelSecurityStatisticsResponse extends io.pulumi.resource
     @Import(name="rowLevelSecurityApplied", required=true)
       private final Boolean rowLevelSecurityApplied;
 
-    public Boolean getRowLevelSecurityApplied() {
+    public Boolean rowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;
     }
 

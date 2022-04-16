@@ -5,6 +5,7 @@ package io.pulumi.random.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+    public Output<Map<String,Object>> keepers() {
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="length")
       private final @Nullable Output<Integer> length;
 
-    public Output<Integer> getLength() {
-        return this.length == null ? Output.empty() : this.length;
+    public Output<Integer> length() {
+        return this.length == null ? Codegen.empty() : this.length;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="separator")
       private final @Nullable Output<String> separator;
 
-    public Output<String> getSeparator() {
-        return this.separator == null ? Output.empty() : this.separator;
+    public Output<String> separator() {
+        return this.separator == null ? Codegen.empty() : this.separator;
     }
 
     public RandomPetState(
@@ -73,10 +74,10 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomPetState() {
-        this.keepers = Output.empty();
-        this.length = Output.empty();
-        this.prefix = Output.empty();
-        this.separator = Output.empty();
+        this.keepers = Codegen.empty();
+        this.length = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.separator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder length(@Nullable Output<Integer> length) {
@@ -118,7 +119,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder length(@Nullable Integer length) {
-            this.length = Output.ofNullable(length);
+            this.length = Codegen.ofNullable(length);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -126,7 +127,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder separator(@Nullable Output<String> separator) {
@@ -134,7 +135,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder separator(@Nullable String separator) {
-            this.separator = Output.ofNullable(separator);
+            this.separator = Codegen.ofNullable(separator);
             return this;
         }        public RandomPetState build() {
             return new RandomPetState(keepers, length, prefix, separator);

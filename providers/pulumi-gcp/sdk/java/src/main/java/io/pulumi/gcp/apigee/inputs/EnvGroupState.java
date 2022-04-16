@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostnames")
       private final @Nullable Output<List<String>> hostnames;
 
-    public Output<List<String>> getHostnames() {
-        return this.hostnames == null ? Output.empty() : this.hostnames;
+    public Output<List<String>> hostnames() {
+        return this.hostnames == null ? Codegen.empty() : this.hostnames;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+    public Output<String> orgId() {
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     public EnvGroupState(
@@ -59,9 +60,9 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvGroupState() {
-        this.hostnames = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
+        this.hostnames = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostnames(@Nullable List<String> hostnames) {
-            this.hostnames = Output.ofNullable(hostnames);
+            this.hostnames = Codegen.ofNullable(hostnames);
             return this;
         }
         public Builder hostnames(String... hostnames) {
@@ -104,7 +105,7 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(@Nullable Output<String> orgId) {
@@ -112,7 +113,7 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }        public EnvGroupState build() {
             return new EnvGroupState(hostnames, name, orgId);

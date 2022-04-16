@@ -19,7 +19,7 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
     @Import(name="configurationProfileAssignmentName", required=true)
       private final String configurationProfileAssignmentName;
 
-    public String getConfigurationProfileAssignmentName() {
+    public String configurationProfileAssignmentName() {
         return this.configurationProfileAssignmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
     @Import(name="vmName", required=true)
       private final String vmName;
 
-    public String getVmName() {
+    public String vmName() {
         return this.vmName;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.EdifactOneWayAgreementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
     @Import(name="receiveAgreement", required=true)
       private final Output<EdifactOneWayAgreementArgs> receiveAgreement;
 
-    public Output<EdifactOneWayAgreementArgs> getReceiveAgreement() {
+    public Output<EdifactOneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -35,7 +36,7 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
     @Import(name="sendAgreement", required=true)
       private final Output<EdifactOneWayAgreementArgs> sendAgreement;
 
-    public Output<EdifactOneWayAgreementArgs> getSendAgreement() {
+    public Output<EdifactOneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
 
@@ -47,8 +48,8 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
     }
 
     private EdifactAgreementContentArgs() {
-        this.receiveAgreement = Output.empty();
-        this.sendAgreement = Output.empty();
+        this.receiveAgreement = Codegen.empty();
+        this.sendAgreement = Codegen.empty();
     }
 
     public static Builder builder() {

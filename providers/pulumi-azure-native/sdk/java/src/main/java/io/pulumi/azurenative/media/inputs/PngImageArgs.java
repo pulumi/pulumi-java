@@ -9,6 +9,7 @@ import io.pulumi.azurenative.media.inputs.PngLayerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> getKeyFrameInterval() {
-        return this.keyFrameInterval == null ? Output.empty() : this.keyFrameInterval;
+    public Output<String> keyFrameInterval() {
+        return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="layers")
       private final @Nullable Output<List<PngLayerArgs>> layers;
 
-    public Output<List<PngLayerArgs>> getLayers() {
-        return this.layers == null ? Output.empty() : this.layers;
+    public Output<List<PngLayerArgs>> layers() {
+        return this.layers == null ? Codegen.empty() : this.layers;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -75,8 +76,8 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="range")
       private final @Nullable Output<String> range;
 
-    public Output<String> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+    public Output<String> range() {
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="start", required=true)
       private final Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -97,8 +98,8 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="step")
       private final @Nullable Output<String> step;
 
-    public Output<String> getStep() {
-        return this.step == null ? Output.empty() : this.step;
+    public Output<String> step() {
+        return this.step == null ? Codegen.empty() : this.step;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> getStretchMode() {
-        return this.stretchMode == null ? Output.empty() : this.stretchMode;
+    public Output<Either<String,StretchMode>> stretchMode() {
+        return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncMode")
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Output<Either<String,VideoSyncMode>> getSyncMode() {
-        return this.syncMode == null ? Output.empty() : this.syncMode;
+    public Output<Either<String,VideoSyncMode>> syncMode() {
+        return this.syncMode == null ? Codegen.empty() : this.syncMode;
     }
 
     public PngImageArgs(
@@ -145,15 +146,15 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PngImageArgs() {
-        this.keyFrameInterval = Output.empty();
-        this.label = Output.empty();
-        this.layers = Output.empty();
-        this.odataType = Output.empty();
-        this.range = Output.empty();
-        this.start = Output.empty();
-        this.step = Output.empty();
-        this.stretchMode = Output.empty();
-        this.syncMode = Output.empty();
+        this.keyFrameInterval = Codegen.empty();
+        this.label = Codegen.empty();
+        this.layers = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.range = Codegen.empty();
+        this.start = Codegen.empty();
+        this.step = Codegen.empty();
+        this.stretchMode = Codegen.empty();
+        this.syncMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
+            this.keyFrameInterval = Codegen.ofNullable(keyFrameInterval);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -205,7 +206,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder layers(@Nullable Output<List<PngLayerArgs>> layers) {
@@ -213,7 +214,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder layers(@Nullable List<PngLayerArgs> layers) {
-            this.layers = Output.ofNullable(layers);
+            this.layers = Codegen.ofNullable(layers);
             return this;
         }
         public Builder layers(PngLayerArgs... layers) {
@@ -232,7 +233,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder range(@Nullable String range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder start(Output<String> start) {
@@ -248,7 +249,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder step(@Nullable String step) {
-            this.step = Output.ofNullable(step);
+            this.step = Codegen.ofNullable(step);
             return this;
         }
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
@@ -256,7 +257,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Output.ofNullable(stretchMode);
+            this.stretchMode = Codegen.ofNullable(stretchMode);
             return this;
         }
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
@@ -264,7 +265,7 @@ public final class PngImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
-            this.syncMode = Output.ofNullable(syncMode);
+            this.syncMode = Codegen.ofNullable(syncMode);
             return this;
         }        public PngImageArgs build() {
             return new PngImageArgs(keyFrameInterval, label, layers, odataType, range, start, step, stretchMode, syncMode);

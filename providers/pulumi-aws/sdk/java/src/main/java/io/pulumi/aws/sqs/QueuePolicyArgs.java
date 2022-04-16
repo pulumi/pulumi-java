@@ -5,6 +5,7 @@ package io.pulumi.aws.sqs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -31,7 +32,7 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
@@ -43,8 +44,8 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueuePolicyArgs() {
-        this.policy = Output.empty();
-        this.queueUrl = Output.empty();
+        this.policy = Codegen.empty();
+        this.queueUrl = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -26,7 +26,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
 
-    public Integer getComponentSeparator() {
+    public Integer componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -37,7 +37,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
 
-    public Integer getDataElementSeparator() {
+    public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -48,7 +48,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="decimalPointIndicator", required=true)
       private final String decimalPointIndicator;
 
-    public String getDecimalPointIndicator() {
+    public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
 
@@ -59,7 +59,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="messageAssociationAssignedCode")
       private final @Nullable String messageAssociationAssignedCode;
 
-    public Optional<String> getMessageAssociationAssignedCode() {
+    public Optional<String> messageAssociationAssignedCode() {
         return this.messageAssociationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.messageAssociationAssignedCode);
     }
 
@@ -70,7 +70,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="messageId")
       private final @Nullable String messageId;
 
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
     }
 
@@ -81,7 +81,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="messageRelease")
       private final @Nullable String messageRelease;
 
-    public Optional<String> getMessageRelease() {
+    public Optional<String> messageRelease() {
         return this.messageRelease == null ? Optional.empty() : Optional.ofNullable(this.messageRelease);
     }
 
@@ -92,7 +92,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="messageVersion")
       private final @Nullable String messageVersion;
 
-    public Optional<String> getMessageVersion() {
+    public Optional<String> messageVersion() {
         return this.messageVersion == null ? Optional.empty() : Optional.ofNullable(this.messageVersion);
     }
 
@@ -103,7 +103,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="releaseIndicator", required=true)
       private final Integer releaseIndicator;
 
-    public Integer getReleaseIndicator() {
+    public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
 
@@ -114,7 +114,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="repetitionSeparator", required=true)
       private final Integer repetitionSeparator;
 
-    public Integer getRepetitionSeparator() {
+    public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
 
@@ -125,7 +125,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
 
-    public Integer getSegmentTerminator() {
+    public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -136,7 +136,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
 
-    public String getSegmentTerminatorSuffix() {
+    public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -147,7 +147,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
     @Import(name="targetNamespace")
       private final @Nullable String targetNamespace;
 
-    public Optional<String> getTargetNamespace() {
+    public Optional<String> targetNamespace() {
         return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
     }
 

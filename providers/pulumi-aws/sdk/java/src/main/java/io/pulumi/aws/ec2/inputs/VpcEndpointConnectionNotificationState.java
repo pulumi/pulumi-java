@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="connectionEvents")
       private final @Nullable Output<List<String>> connectionEvents;
 
-    public Output<List<String>> getConnectionEvents() {
-        return this.connectionEvents == null ? Output.empty() : this.connectionEvents;
+    public Output<List<String>> connectionEvents() {
+        return this.connectionEvents == null ? Codegen.empty() : this.connectionEvents;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="connectionNotificationArn")
       private final @Nullable Output<String> connectionNotificationArn;
 
-    public Output<String> getConnectionNotificationArn() {
-        return this.connectionNotificationArn == null ? Output.empty() : this.connectionNotificationArn;
+    public Output<String> connectionNotificationArn() {
+        return this.connectionNotificationArn == null ? Codegen.empty() : this.connectionNotificationArn;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="notificationType")
       private final @Nullable Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
-        return this.notificationType == null ? Output.empty() : this.notificationType;
+    public Output<String> notificationType() {
+        return this.notificationType == null ? Codegen.empty() : this.notificationType;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
+    public Output<String> vpcEndpointId() {
+        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="vpcEndpointServiceId")
       private final @Nullable Output<String> vpcEndpointServiceId;
 
-    public Output<String> getVpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Output.empty() : this.vpcEndpointServiceId;
+    public Output<String> vpcEndpointServiceId() {
+        return this.vpcEndpointServiceId == null ? Codegen.empty() : this.vpcEndpointServiceId;
     }
 
     public VpcEndpointConnectionNotificationState(
@@ -97,12 +98,12 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     }
 
     private VpcEndpointConnectionNotificationState() {
-        this.connectionEvents = Output.empty();
-        this.connectionNotificationArn = Output.empty();
-        this.notificationType = Output.empty();
-        this.state = Output.empty();
-        this.vpcEndpointId = Output.empty();
-        this.vpcEndpointServiceId = Output.empty();
+        this.connectionEvents = Codegen.empty();
+        this.connectionNotificationArn = Codegen.empty();
+        this.notificationType = Codegen.empty();
+        this.state = Codegen.empty();
+        this.vpcEndpointId = Codegen.empty();
+        this.vpcEndpointServiceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
             return this;
         }
         public Builder connectionEvents(@Nullable List<String> connectionEvents) {
-            this.connectionEvents = Output.ofNullable(connectionEvents);
+            this.connectionEvents = Codegen.ofNullable(connectionEvents);
             return this;
         }
         public Builder connectionEvents(String... connectionEvents) {
@@ -151,7 +152,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
             return this;
         }
         public Builder connectionNotificationArn(@Nullable String connectionNotificationArn) {
-            this.connectionNotificationArn = Output.ofNullable(connectionNotificationArn);
+            this.connectionNotificationArn = Codegen.ofNullable(connectionNotificationArn);
             return this;
         }
         public Builder notificationType(@Nullable Output<String> notificationType) {
@@ -159,7 +160,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
             return this;
         }
         public Builder notificationType(@Nullable String notificationType) {
-            this.notificationType = Output.ofNullable(notificationType);
+            this.notificationType = Codegen.ofNullable(notificationType);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -167,7 +168,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
@@ -175,7 +176,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
             return this;
         }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
             return this;
         }
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
@@ -183,7 +184,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
             return this;
         }
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
+            this.vpcEndpointServiceId = Codegen.ofNullable(vpcEndpointServiceId);
             return this;
         }        public VpcEndpointConnectionNotificationState build() {
             return new VpcEndpointConnectionNotificationState(connectionEvents, connectionNotificationArn, notificationType, state, vpcEndpointId, vpcEndpointServiceId);

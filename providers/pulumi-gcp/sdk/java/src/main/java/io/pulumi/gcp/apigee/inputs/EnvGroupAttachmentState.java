@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="envgroupId")
       private final @Nullable Output<String> envgroupId;
 
-    public Output<String> getEnvgroupId() {
-        return this.envgroupId == null ? Output.empty() : this.envgroupId;
+    public Output<String> envgroupId() {
+        return this.envgroupId == null ? Codegen.empty() : this.envgroupId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<String> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public EnvGroupAttachmentState(
@@ -58,9 +59,9 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     }
 
     private EnvGroupAttachmentState() {
-        this.envgroupId = Output.empty();
-        this.environment = Output.empty();
-        this.name = Output.empty();
+        this.envgroupId = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder envgroupId(@Nullable String envgroupId) {
-            this.envgroupId = Output.ofNullable(envgroupId);
+            this.envgroupId = Codegen.ofNullable(envgroupId);
             return this;
         }
         public Builder environment(@Nullable Output<String> environment) {
@@ -100,7 +101,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder environment(@Nullable String environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -108,7 +109,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public EnvGroupAttachmentState build() {
             return new EnvGroupAttachmentState(envgroupId, environment, name);

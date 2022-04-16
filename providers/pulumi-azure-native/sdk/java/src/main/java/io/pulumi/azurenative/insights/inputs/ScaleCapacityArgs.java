@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="default", required=true)
       private final Output<String> default_;
 
-    public Output<String> getDefault_() {
+    public Output<String> default_() {
         return this.default_;
     }
 
@@ -35,7 +36,7 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximum", required=true)
       private final Output<String> maximum;
 
-    public Output<String> getMaximum() {
+    public Output<String> maximum() {
         return this.maximum;
     }
 
@@ -46,7 +47,7 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimum", required=true)
       private final Output<String> minimum;
 
-    public Output<String> getMinimum() {
+    public Output<String> minimum() {
         return this.minimum;
     }
 
@@ -60,9 +61,9 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScaleCapacityArgs() {
-        this.default_ = Output.empty();
-        this.maximum = Output.empty();
-        this.minimum = Output.empty();
+        this.default_ = Codegen.empty();
+        this.maximum = Codegen.empty();
+        this.minimum = Codegen.empty();
     }
 
     public static Builder builder() {

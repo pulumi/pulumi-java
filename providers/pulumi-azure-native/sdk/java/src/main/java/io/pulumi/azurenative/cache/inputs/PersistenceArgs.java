@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cache.enums.RdbFrequency;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aofEnabled")
       private final @Nullable Output<Boolean> aofEnabled;
 
-    public Output<Boolean> getAofEnabled() {
-        return this.aofEnabled == null ? Output.empty() : this.aofEnabled;
+    public Output<Boolean> aofEnabled() {
+        return this.aofEnabled == null ? Codegen.empty() : this.aofEnabled;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aofFrequency")
       private final @Nullable Output<Either<String,AofFrequency>> aofFrequency;
 
-    public Output<Either<String,AofFrequency>> getAofFrequency() {
-        return this.aofFrequency == null ? Output.empty() : this.aofFrequency;
+    public Output<Either<String,AofFrequency>> aofFrequency() {
+        return this.aofFrequency == null ? Codegen.empty() : this.aofFrequency;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rdbEnabled")
       private final @Nullable Output<Boolean> rdbEnabled;
 
-    public Output<Boolean> getRdbEnabled() {
-        return this.rdbEnabled == null ? Output.empty() : this.rdbEnabled;
+    public Output<Boolean> rdbEnabled() {
+        return this.rdbEnabled == null ? Codegen.empty() : this.rdbEnabled;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rdbFrequency")
       private final @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
 
-    public Output<Either<String,RdbFrequency>> getRdbFrequency() {
-        return this.rdbFrequency == null ? Output.empty() : this.rdbFrequency;
+    public Output<Either<String,RdbFrequency>> rdbFrequency() {
+        return this.rdbFrequency == null ? Codegen.empty() : this.rdbFrequency;
     }
 
     public PersistenceArgs(
@@ -78,10 +79,10 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PersistenceArgs() {
-        this.aofEnabled = Output.empty();
-        this.aofFrequency = Output.empty();
-        this.rdbEnabled = Output.empty();
-        this.rdbFrequency = Output.empty();
+        this.aofEnabled = Codegen.empty();
+        this.aofFrequency = Codegen.empty();
+        this.rdbEnabled = Codegen.empty();
+        this.rdbFrequency = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aofEnabled(@Nullable Boolean aofEnabled) {
-            this.aofEnabled = Output.ofNullable(aofEnabled);
+            this.aofEnabled = Codegen.ofNullable(aofEnabled);
             return this;
         }
         public Builder aofFrequency(@Nullable Output<Either<String,AofFrequency>> aofFrequency) {
@@ -123,7 +124,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aofFrequency(@Nullable Either<String,AofFrequency> aofFrequency) {
-            this.aofFrequency = Output.ofNullable(aofFrequency);
+            this.aofFrequency = Codegen.ofNullable(aofFrequency);
             return this;
         }
         public Builder rdbEnabled(@Nullable Output<Boolean> rdbEnabled) {
@@ -131,7 +132,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
-            this.rdbEnabled = Output.ofNullable(rdbEnabled);
+            this.rdbEnabled = Codegen.ofNullable(rdbEnabled);
             return this;
         }
         public Builder rdbFrequency(@Nullable Output<Either<String,RdbFrequency>> rdbFrequency) {
@@ -139,7 +140,7 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rdbFrequency(@Nullable Either<String,RdbFrequency> rdbFrequency) {
-            this.rdbFrequency = Output.ofNullable(rdbFrequency);
+            this.rdbFrequency = Codegen.ofNullable(rdbFrequency);
             return this;
         }        public PersistenceArgs build() {
             return new PersistenceArgs(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);

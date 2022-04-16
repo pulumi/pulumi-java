@@ -26,7 +26,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -41,7 +41,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="containerType", required=true)
       private final String containerType;
 
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
 
@@ -52,7 +52,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="extendedInformation")
       private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
 
-    public Optional<GenericContainerExtendedInfoResponse> getExtendedInformation() {
+    public Optional<GenericContainerExtendedInfoResponse> extendedInformation() {
         return this.extendedInformation == null ? Optional.empty() : Optional.ofNullable(this.extendedInformation);
     }
 
@@ -63,7 +63,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fabricName")
       private final @Nullable String fabricName;
 
-    public Optional<String> getFabricName() {
+    public Optional<String> fabricName() {
         return this.fabricName == null ? Optional.empty() : Optional.ofNullable(this.fabricName);
     }
 
@@ -74,7 +74,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -85,7 +85,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
@@ -96,7 +96,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 

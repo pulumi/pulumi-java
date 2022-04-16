@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.DaysOfWeek;
 import io.pulumi.azurenative.datafactory.inputs.RecurrenceScheduleOccurrenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="hours")
       private final @Nullable Output<List<Integer>> hours;
 
-    public Output<List<Integer>> getHours() {
-        return this.hours == null ? Output.empty() : this.hours;
+    public Output<List<Integer>> hours() {
+        return this.hours == null ? Codegen.empty() : this.hours;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="minutes")
       private final @Nullable Output<List<Integer>> minutes;
 
-    public Output<List<Integer>> getMinutes() {
-        return this.minutes == null ? Output.empty() : this.minutes;
+    public Output<List<Integer>> minutes() {
+        return this.minutes == null ? Codegen.empty() : this.minutes;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monthDays")
       private final @Nullable Output<List<Integer>> monthDays;
 
-    public Output<List<Integer>> getMonthDays() {
-        return this.monthDays == null ? Output.empty() : this.monthDays;
+    public Output<List<Integer>> monthDays() {
+        return this.monthDays == null ? Codegen.empty() : this.monthDays;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monthlyOccurrences")
       private final @Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
 
-    public Output<List<RecurrenceScheduleOccurrenceArgs>> getMonthlyOccurrences() {
-        return this.monthlyOccurrences == null ? Output.empty() : this.monthlyOccurrences;
+    public Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences() {
+        return this.monthlyOccurrences == null ? Codegen.empty() : this.monthlyOccurrences;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="weekDays")
       private final @Nullable Output<List<DaysOfWeek>> weekDays;
 
-    public Output<List<DaysOfWeek>> getWeekDays() {
-        return this.weekDays == null ? Output.empty() : this.weekDays;
+    public Output<List<DaysOfWeek>> weekDays() {
+        return this.weekDays == null ? Codegen.empty() : this.weekDays;
     }
 
     public RecurrenceScheduleArgs(
@@ -90,11 +91,11 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RecurrenceScheduleArgs() {
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
-        this.monthDays = Output.empty();
-        this.monthlyOccurrences = Output.empty();
-        this.weekDays = Output.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
+        this.monthDays = Codegen.empty();
+        this.monthlyOccurrences = Codegen.empty();
+        this.weekDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder hours(@Nullable List<Integer> hours) {
-            this.hours = Output.ofNullable(hours);
+            this.hours = Codegen.ofNullable(hours);
             return this;
         }
         public Builder hours(Integer... hours) {
@@ -141,7 +142,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder minutes(@Nullable List<Integer> minutes) {
-            this.minutes = Output.ofNullable(minutes);
+            this.minutes = Codegen.ofNullable(minutes);
             return this;
         }
         public Builder minutes(Integer... minutes) {
@@ -152,7 +153,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder monthDays(@Nullable List<Integer> monthDays) {
-            this.monthDays = Output.ofNullable(monthDays);
+            this.monthDays = Codegen.ofNullable(monthDays);
             return this;
         }
         public Builder monthDays(Integer... monthDays) {
@@ -163,7 +164,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceArgs> monthlyOccurrences) {
-            this.monthlyOccurrences = Output.ofNullable(monthlyOccurrences);
+            this.monthlyOccurrences = Codegen.ofNullable(monthlyOccurrences);
             return this;
         }
         public Builder monthlyOccurrences(RecurrenceScheduleOccurrenceArgs... monthlyOccurrences) {
@@ -174,7 +175,7 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder weekDays(@Nullable List<DaysOfWeek> weekDays) {
-            this.weekDays = Output.ofNullable(weekDays);
+            this.weekDays = Codegen.ofNullable(weekDays);
             return this;
         }
         public Builder weekDays(DaysOfWeek... weekDays) {

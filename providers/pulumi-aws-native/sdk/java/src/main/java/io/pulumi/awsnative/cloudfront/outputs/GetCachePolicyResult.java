@@ -26,13 +26,13 @@ public final class GetCachePolicyResult {
         this.lastModifiedTime = lastModifiedTime;
     }
 
-    public Optional<CachePolicyConfig> getCachePolicyConfig() {
+    public Optional<CachePolicyConfig> cachePolicyConfig() {
         return Optional.ofNullable(this.cachePolicyConfig);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
 

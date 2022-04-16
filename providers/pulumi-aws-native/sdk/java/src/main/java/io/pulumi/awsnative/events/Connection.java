@@ -10,6 +10,7 @@ import io.pulumi.awsnative.events.outputs.AuthParametersProperties;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -32,19 +33,19 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The arn of the connection resource.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="authParameters", type=AuthParametersProperties.class, parameters={})
     private Output<AuthParametersProperties> authParameters;
 
-    public Output<AuthParametersProperties> getAuthParameters() {
+    public Output<AuthParametersProperties> authParameters() {
         return this.authParameters;
     }
     @Export(name="authorizationType", type=ConnectionAuthorizationType.class, parameters={})
     private Output<ConnectionAuthorizationType> authorizationType;
 
-    public Output<ConnectionAuthorizationType> getAuthorizationType() {
+    public Output<ConnectionAuthorizationType> authorizationType() {
         return this.authorizationType;
     }
     /**
@@ -58,7 +59,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Description of the connection.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +73,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Name of the connection.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The arn of the secrets manager secret created in the customer account.
      * 
      */
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
@@ -112,7 +113,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connection(String name, ConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:events:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:events:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

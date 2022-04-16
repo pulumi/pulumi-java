@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends io.pu
     @Import(name="capacityReservationPreference")
       private final @Nullable Output<String> capacityReservationPreference;
 
-    public Output<String> getCapacityReservationPreference() {
-        return this.capacityReservationPreference == null ? Output.empty() : this.capacityReservationPreference;
+    public Output<String> capacityReservationPreference() {
+        return this.capacityReservationPreference == null ? Codegen.empty() : this.capacityReservationPreference;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends io.pu
     @Import(name="capacityReservationTarget")
       private final @Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
-    public Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> getCapacityReservationTarget() {
-        return this.capacityReservationTarget == null ? Output.empty() : this.capacityReservationTarget;
+    public Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget() {
+        return this.capacityReservationTarget == null ? Codegen.empty() : this.capacityReservationTarget;
     }
 
     public InstanceCapacityReservationSpecificationGetArgs(
@@ -45,8 +46,8 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends io.pu
     }
 
     private InstanceCapacityReservationSpecificationGetArgs() {
-        this.capacityReservationPreference = Output.empty();
-        this.capacityReservationTarget = Output.empty();
+        this.capacityReservationPreference = Codegen.empty();
+        this.capacityReservationTarget = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends io.pu
             return this;
         }
         public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
-            this.capacityReservationPreference = Output.ofNullable(capacityReservationPreference);
+            this.capacityReservationPreference = Codegen.ofNullable(capacityReservationPreference);
             return this;
         }
         public Builder capacityReservationTarget(@Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget) {
@@ -84,7 +85,7 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends io.pu
             return this;
         }
         public Builder capacityReservationTarget(@Nullable InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs capacityReservationTarget) {
-            this.capacityReservationTarget = Output.ofNullable(capacityReservationTarget);
+            this.capacityReservationTarget = Codegen.ofNullable(capacityReservationTarget);
             return this;
         }        public InstanceCapacityReservationSpecificationGetArgs build() {
             return new InstanceCapacityReservationSpecificationGetArgs(capacityReservationPreference, capacityReservationTarget);

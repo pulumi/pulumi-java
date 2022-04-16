@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentManagedAp
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     @Import(name="apiName")
       private final @Nullable Output<String> apiName;
 
-    public Output<String> getApiName() {
-        return this.apiName == null ? Output.empty() : this.apiName;
+    public Output<String> apiName() {
+        return this.apiName == null ? Codegen.empty() : this.apiName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     @Import(name="deploymentParameters")
       private final @Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
 
-    public Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> getDeploymentParameters() {
-        return this.deploymentParameters == null ? Output.empty() : this.deploymentParameters;
+    public Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters() {
+        return this.deploymentParameters == null ? Codegen.empty() : this.deploymentParameters;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Output.empty() : this.integrationServiceEnvironment;
+    public Output<ResourceReferenceArgs> integrationServiceEnvironment() {
+        return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     @Import(name="integrationServiceEnvironmentName", required=true)
       private final Output<String> integrationServiceEnvironmentName;
 
-    public Output<String> getIntegrationServiceEnvironmentName() {
+    public Output<String> integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
 
@@ -68,8 +69,8 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -90,8 +91,8 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationServiceEnvironmentManagedApiArgs(
@@ -112,13 +113,13 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     }
 
     private IntegrationServiceEnvironmentManagedApiArgs() {
-        this.apiName = Output.empty();
-        this.deploymentParameters = Output.empty();
-        this.integrationServiceEnvironment = Output.empty();
-        this.integrationServiceEnvironmentName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.tags = Output.empty();
+        this.apiName = Codegen.empty();
+        this.deploymentParameters = Codegen.empty();
+        this.integrationServiceEnvironment = Codegen.empty();
+        this.integrationServiceEnvironmentName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
             return this;
         }
         public Builder apiName(@Nullable String apiName) {
-            this.apiName = Output.ofNullable(apiName);
+            this.apiName = Codegen.ofNullable(apiName);
             return this;
         }
         public Builder deploymentParameters(@Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters) {
@@ -166,7 +167,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
             return this;
         }
         public Builder deploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs deploymentParameters) {
-            this.deploymentParameters = Output.ofNullable(deploymentParameters);
+            this.deploymentParameters = Codegen.ofNullable(deploymentParameters);
             return this;
         }
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
@@ -174,7 +175,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
             return this;
         }
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
+            this.integrationServiceEnvironment = Codegen.ofNullable(integrationServiceEnvironment);
             return this;
         }
         public Builder integrationServiceEnvironmentName(Output<String> integrationServiceEnvironmentName) {
@@ -190,7 +191,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroup(Output<String> resourceGroup) {
@@ -206,7 +207,7 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationServiceEnvironmentManagedApiArgs build() {
             return new IntegrationServiceEnvironmentManagedApiArgs(apiName, deploymentParameters, integrationServiceEnvironment, integrationServiceEnvironmentName, location, resourceGroup, tags);

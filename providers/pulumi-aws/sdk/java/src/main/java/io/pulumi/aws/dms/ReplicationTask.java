@@ -9,6 +9,7 @@ import io.pulumi.aws.dms.inputs.ReplicationTaskState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
      * 
      */
-    public Output</* @Nullable */ String> getCdcStartPosition() {
+    public Output</* @Nullable */ String> cdcStartPosition() {
         return this.cdcStartPosition;
     }
     /**
@@ -54,7 +55,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
      * 
      */
-    public Output</* @Nullable */ String> getCdcStartTime() {
+    public Output</* @Nullable */ String> cdcStartTime() {
         return this.cdcStartTime;
     }
     /**
@@ -68,7 +69,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
      * 
      */
-    public Output<String> getMigrationType() {
+    public Output<String> migrationType() {
         return this.migrationType;
     }
     /**
@@ -82,7 +83,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the replication instance.
      * 
      */
-    public Output<String> getReplicationInstanceArn() {
+    public Output<String> replicationInstanceArn() {
         return this.replicationInstanceArn;
     }
     /**
@@ -96,7 +97,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the replication task.
      * 
      */
-    public Output<String> getReplicationTaskArn() {
+    public Output<String> replicationTaskArn() {
         return this.replicationTaskArn;
     }
     /**
@@ -110,7 +111,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return The replication task identifier.
      * 
      */
-    public Output<String> getReplicationTaskId() {
+    public Output<String> replicationTaskId() {
         return this.replicationTaskId;
     }
     /**
@@ -124,7 +125,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
      * 
      */
-    public Output</* @Nullable */ String> getReplicationTaskSettings() {
+    public Output</* @Nullable */ String> replicationTaskSettings() {
         return this.replicationTaskSettings;
     }
     /**
@@ -138,7 +139,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
      * 
      */
-    public Output<String> getSourceEndpointArn() {
+    public Output<String> sourceEndpointArn() {
         return this.sourceEndpointArn;
     }
     /**
@@ -152,7 +153,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
      * 
      */
-    public Output<String> getTableMappings() {
+    public Output<String> tableMappings() {
         return this.tableMappings;
     }
     /**
@@ -166,7 +167,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -180,7 +181,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -194,7 +195,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
      * 
      */
-    public Output<String> getTargetEndpointArn() {
+    public Output<String> targetEndpointArn() {
         return this.targetEndpointArn;
     }
 
@@ -220,7 +221,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationTask(String name, ReplicationTaskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/replicationTask:ReplicationTask", name, args == null ? ReplicationTaskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dms/replicationTask:ReplicationTask", name, args == null ? ReplicationTaskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationTask(String name, Output<String> id, @Nullable ReplicationTaskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

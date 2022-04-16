@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.NatGatewayState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
      * 
      */
-    public Output</* @Nullable */ String> getAllocationId() {
+    public Output</* @Nullable */ String> allocationId() {
         return this.allocationId;
     }
     /**
@@ -54,7 +55,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
      * 
      */
-    public Output</* @Nullable */ String> getConnectivityType() {
+    public Output</* @Nullable */ String> connectivityType() {
         return this.connectivityType;
     }
     /**
@@ -68,7 +69,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return The ENI ID of the network interface created by the NAT gateway.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -82,7 +83,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return The private IP address of the NAT Gateway.
      * 
      */
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp;
     }
     /**
@@ -96,7 +97,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return The public IP address of the NAT Gateway.
      * 
      */
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp;
     }
     /**
@@ -110,7 +111,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return The Subnet ID of the subnet in which to place the gateway.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -124,7 +125,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -138,7 +139,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -164,7 +165,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NatGateway(String name, NatGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/natGateway:NatGateway", name, args == null ? NatGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/natGateway:NatGateway", name, args == null ? NatGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NatGateway(String name, Output<String> id, @Nullable NatGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

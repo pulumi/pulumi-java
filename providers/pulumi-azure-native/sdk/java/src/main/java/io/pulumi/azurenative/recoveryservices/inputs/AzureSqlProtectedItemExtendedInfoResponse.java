@@ -26,7 +26,7 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends io.pulumi.r
     @Import(name="oldestRecoveryPoint")
       private final @Nullable String oldestRecoveryPoint;
 
-    public Optional<String> getOldestRecoveryPoint() {
+    public Optional<String> oldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
@@ -37,7 +37,7 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends io.pulumi.r
     @Import(name="policyState")
       private final @Nullable String policyState;
 
-    public Optional<String> getPolicyState() {
+    public Optional<String> policyState() {
         return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
     }
 
@@ -48,7 +48,7 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends io.pulumi.r
     @Import(name="recoveryPointCount")
       private final @Nullable Integer recoveryPointCount;
 
-    public Optional<Integer> getRecoveryPointCount() {
+    public Optional<Integer> recoveryPointCount() {
         return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
     }
 

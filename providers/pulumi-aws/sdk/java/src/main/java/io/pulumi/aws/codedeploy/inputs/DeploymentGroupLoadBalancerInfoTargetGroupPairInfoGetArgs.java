@@ -8,6 +8,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGrou
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     @Import(name="prodTrafficRoute", required=true)
       private final Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute;
 
-    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> getProdTrafficRoute() {
+    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute() {
         return this.prodTrafficRoute;
     }
 
@@ -35,7 +36,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     @Import(name="targetGroups", required=true)
       private final Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups;
 
-    public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> getTargetGroups() {
+    public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups() {
         return this.targetGroups;
     }
 
@@ -46,8 +47,8 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     @Import(name="testTrafficRoute")
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute;
 
-    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> getTestTrafficRoute() {
-        return this.testTrafficRoute == null ? Output.empty() : this.testTrafficRoute;
+    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute() {
+        return this.testTrafficRoute == null ? Codegen.empty() : this.testTrafficRoute;
     }
 
     public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs(
@@ -60,9 +61,9 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     }
 
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs() {
-        this.prodTrafficRoute = Output.empty();
-        this.targetGroups = Output.empty();
-        this.testTrafficRoute = Output.empty();
+        this.prodTrafficRoute = Codegen.empty();
+        this.targetGroups = Codegen.empty();
+        this.testTrafficRoute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
             return this;
         }
         public Builder testTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs testTrafficRoute) {
-            this.testTrafficRoute = Output.ofNullable(testTrafficRoute);
+            this.testTrafficRoute = Codegen.ofNullable(testTrafficRoute);
             return this;
         }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs(prodTrafficRoute, targetGroups, testTrafficRoute);

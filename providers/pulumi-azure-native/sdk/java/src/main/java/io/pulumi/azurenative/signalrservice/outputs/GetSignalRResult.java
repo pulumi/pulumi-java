@@ -168,14 +168,14 @@ public final class GetSignalRResult {
      * Cross-Origin Resource Sharing (CORS) settings.
      * 
     */
-    public Optional<SignalRCorsSettingsResponse> getCors() {
+    public Optional<SignalRCorsSettingsResponse> cors() {
         return Optional.ofNullable(this.cors);
     }
     /**
      * The publicly accessible IP of the SignalR service.
      * 
     */
-    public String getExternalIP() {
+    public String externalIP() {
         return this.externalIP;
     }
     /**
@@ -187,14 +187,14 @@ public final class GetSignalRResult {
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
     */
-    public List<SignalRFeatureResponse> getFeatures() {
+    public List<SignalRFeatureResponse> features() {
         return this.features == null ? List.of() : this.features;
     }
     /**
      * FQDN of the SignalR service instance. Format: xxx.service.signalr.net
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
@@ -202,105 +202,105 @@ public final class GetSignalRResult {
      * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
      * 
     */
-    public String getHostNamePrefix() {
+    public String hostNamePrefix() {
         return this.hostNamePrefix;
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Network ACLs
      * 
     */
-    public Optional<SignalRNetworkACLsResponse> getNetworkACLs() {
+    public Optional<SignalRNetworkACLsResponse> networkACLs() {
         return Optional.ofNullable(this.networkACLs);
     }
     /**
      * Private endpoint connections to the SignalR resource.
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The publicly accessible port of the SignalR service which is designed for browser/client side usage.
      * 
     */
-    public Integer getPublicPort() {
+    public Integer publicPort() {
         return this.publicPort;
     }
     /**
      * The publicly accessible port of the SignalR service which is designed for customer server side usage.
      * 
     */
-    public Integer getServerPort() {
+    public Integer serverPort() {
         return this.serverPort;
     }
     /**
      * The billing information of the resource.(e.g. Free, Standard)
      * 
     */
-    public Optional<ResourceSkuResponse> getSku() {
+    public Optional<ResourceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Upstream settings when the Azure SignalR is in server-less mode.
      * 
     */
-    public Optional<ServerlessUpstreamSettingsResponse> getUpstream() {
+    public Optional<ServerlessUpstreamSettingsResponse> upstream() {
         return Optional.ofNullable(this.upstream);
     }
     /**
      * Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

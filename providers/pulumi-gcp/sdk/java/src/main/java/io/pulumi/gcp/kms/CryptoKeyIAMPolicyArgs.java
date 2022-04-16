@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +24,7 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cryptoKeyId", required=true)
       private final Output<String> cryptoKeyId;
 
-    public Output<String> getCryptoKeyId() {
+    public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
 
@@ -35,7 +36,7 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -47,8 +48,8 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CryptoKeyIAMPolicyArgs() {
-        this.cryptoKeyId = Output.empty();
-        this.policyData = Output.empty();
+        this.cryptoKeyId = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeAnalysisTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
     @Import(name="networkInsightsAccessScopeId", required=true)
       private final Output<String> networkInsightsAccessScopeId;
 
-    public Output<String> getNetworkInsightsAccessScopeId() {
+    public Output<String> networkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
 
-    public Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkInsightsAccessScopeAnalysisArgs(
@@ -38,8 +39,8 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
     }
 
     private NetworkInsightsAccessScopeAnalysisArgs() {
-        this.networkInsightsAccessScopeId = Output.empty();
-        this.tags = Output.empty();
+        this.networkInsightsAccessScopeId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
             return this;
         }
         public Builder tags(@Nullable List<NetworkInsightsAccessScopeAnalysisTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(NetworkInsightsAccessScopeAnalysisTagArgs... tags) {

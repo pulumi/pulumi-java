@@ -9,6 +9,7 @@ import io.pulumi.awsnative.networkmanager.outputs.GlobalNetworkTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the global network.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
      * @return The description of the global network.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
      * @return The tags for the global network.
      * 
      */
-    public Output</* @Nullable */ List<GlobalNetworkTag>> getTags() {
+    public Output</* @Nullable */ List<GlobalNetworkTag>> tags() {
         return this.tags;
     }
 
@@ -86,7 +87,7 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GlobalNetwork(String name, @Nullable GlobalNetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkmanager:GlobalNetwork", name, args == null ? GlobalNetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkmanager:GlobalNetwork", name, args == null ? GlobalNetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GlobalNetwork(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.inputs.PeriodicTimerSourceInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.RoleSinkInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="customContextTag")
       private final @Nullable Output<String> customContextTag;
 
-    public Output<String> getCustomContextTag() {
-        return this.customContextTag == null ? Output.empty() : this.customContextTag;
+    public Output<String> customContextTag() {
+        return this.customContextTag == null ? Codegen.empty() : this.customContextTag;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -46,7 +47,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -57,8 +58,8 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +80,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="sinkInfo", required=true)
       private final Output<RoleSinkInfoArgs> sinkInfo;
 
-    public Output<RoleSinkInfoArgs> getSinkInfo() {
+    public Output<RoleSinkInfoArgs> sinkInfo() {
         return this.sinkInfo;
     }
 
@@ -90,7 +91,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="sourceInfo", required=true)
       private final Output<PeriodicTimerSourceInfoArgs> sourceInfo;
 
-    public Output<PeriodicTimerSourceInfoArgs> getSourceInfo() {
+    public Output<PeriodicTimerSourceInfoArgs> sourceInfo() {
         return this.sourceInfo;
     }
 
@@ -112,13 +113,13 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     }
 
     private PeriodicTimerEventTriggerArgs() {
-        this.customContextTag = Output.empty();
-        this.deviceName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sinkInfo = Output.empty();
-        this.sourceInfo = Output.empty();
+        this.customContextTag = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sinkInfo = Codegen.empty();
+        this.sourceInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder customContextTag(@Nullable String customContextTag) {
-            this.customContextTag = Output.ofNullable(customContextTag);
+            this.customContextTag = Codegen.ofNullable(customContextTag);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -182,7 +183,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

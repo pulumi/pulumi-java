@@ -10,6 +10,7 @@ import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * @return Configuration block containing encryption configuration. Detailed below.
      * 
      */
-    public Output<SecurityConfigurationEncryptionConfiguration> getEncryptionConfiguration() {
+    public Output<SecurityConfigurationEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     /**
@@ -54,7 +55,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * @return Name of the security configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -80,7 +81,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityConfiguration(String name, SecurityConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/securityConfiguration:SecurityConfiguration", name, args == null ? SecurityConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/securityConfiguration:SecurityConfiguration", name, args == null ? SecurityConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecurityConfiguration(String name, Output<String> id, @Nullable SecurityConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

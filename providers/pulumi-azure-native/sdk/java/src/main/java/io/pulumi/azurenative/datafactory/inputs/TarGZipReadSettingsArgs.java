@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TarGZipReadSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="preserveCompressionFileNameAsFolder")
       private final @Nullable Output<Object> preserveCompressionFileNameAsFolder;
 
-    public Output<Object> getPreserveCompressionFileNameAsFolder() {
-        return this.preserveCompressionFileNameAsFolder == null ? Output.empty() : this.preserveCompressionFileNameAsFolder;
+    public Output<Object> preserveCompressionFileNameAsFolder() {
+        return this.preserveCompressionFileNameAsFolder == null ? Codegen.empty() : this.preserveCompressionFileNameAsFolder;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TarGZipReadSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -50,8 +51,8 @@ public final class TarGZipReadSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private TarGZipReadSettingsArgs() {
-        this.preserveCompressionFileNameAsFolder = Output.empty();
-        this.type = Output.empty();
+        this.preserveCompressionFileNameAsFolder = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class TarGZipReadSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = Output.ofNullable(preserveCompressionFileNameAsFolder);
+            this.preserveCompressionFileNameAsFolder = Codegen.ofNullable(preserveCompressionFileNameAsFolder);
             return this;
         }
         public Builder type(Output<String> type) {

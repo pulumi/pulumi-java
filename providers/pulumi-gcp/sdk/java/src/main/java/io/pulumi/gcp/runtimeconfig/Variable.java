@@ -6,6 +6,7 @@ package io.pulumi.gcp.runtimeconfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.runtimeconfig.VariableArgs;
 import io.pulumi.gcp.runtimeconfig.inputs.VariableState;
@@ -43,7 +44,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +60,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * variable.
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -75,7 +76,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -95,7 +96,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * is specified, it must be base64 encoded and less than 4096 bytes in length.
      * 
      */
-    public Output</* @Nullable */ String> getText() {
+    public Output</* @Nullable */ String> text() {
         return this.text;
     }
     /**
@@ -113,13 +114,13 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Example: "2016-10-09T12:33:37.578138407Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 
@@ -145,7 +146,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Variable(String name, VariableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:runtimeconfig/variable:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:runtimeconfig/variable:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Variable(String name, Output<String> id, @Nullable VariableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

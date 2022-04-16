@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Cluster type.
      * 
      */
-    public Output<String> getClusterConfiguration() {
+    public Output<String> clusterConfiguration() {
         return this.clusterConfiguration;
     }
     /**
@@ -57,7 +58,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
      * 
      */
-    public Output<String> getClusterManagerType() {
+    public Output<String> clusterManagerType() {
         return this.clusterManagerType;
     }
     /**
@@ -71,7 +72,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -85,7 +86,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Provisioning state to track the async operation status.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +114,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Scale type.
      * 
      */
-    public Output<String> getScaleType() {
+    public Output<String> scaleType() {
         return this.scaleType;
     }
     /**
@@ -127,7 +128,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
-    public Output</* @Nullable */ String> getSqlImageOffer() {
+    public Output</* @Nullable */ String> sqlImageOffer() {
         return this.sqlImageOffer;
     }
     /**
@@ -141,7 +142,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return SQL image sku.
      * 
      */
-    public Output</* @Nullable */ String> getSqlImageSku() {
+    public Output</* @Nullable */ String> sqlImageSku() {
         return this.sqlImageSku;
     }
     /**
@@ -155,7 +156,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -183,7 +184,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @return Cluster Active Directory domain profile.
      * 
      */
-    public Output</* @Nullable */ WsfcDomainProfileResponse> getWsfcDomainProfile() {
+    public Output</* @Nullable */ WsfcDomainProfileResponse> wsfcDomainProfile() {
         return this.wsfcDomainProfile;
     }
 
@@ -209,7 +210,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlVirtualMachineGroup(String name, SqlVirtualMachineGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sqlvirtualmachine:SqlVirtualMachineGroup", name, args == null ? SqlVirtualMachineGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sqlvirtualmachine:SqlVirtualMachineGroup", name, args == null ? SqlVirtualMachineGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SqlVirtualMachineGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

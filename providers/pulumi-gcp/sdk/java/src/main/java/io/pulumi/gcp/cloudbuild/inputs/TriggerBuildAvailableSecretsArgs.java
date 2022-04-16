@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildAvailableSecretsSecretManagerArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class TriggerBuildAvailableSecretsArgs extends io.pulumi.resources.
     @Import(name="secretManagers", required=true)
       private final Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers;
 
-    public Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> getSecretManagers() {
+    public Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers() {
         return this.secretManagers;
     }
 
@@ -31,7 +32,7 @@ public final class TriggerBuildAvailableSecretsArgs extends io.pulumi.resources.
     }
 
     private TriggerBuildAvailableSecretsArgs() {
-        this.secretManagers = Output.empty();
+        this.secretManagers = Codegen.empty();
     }
 
     public static Builder builder() {

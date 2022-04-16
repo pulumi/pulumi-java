@@ -32,14 +32,14 @@ public final class UserAccessRightResponse {
      * Type of access to be allowed for the user.
      * 
     */
-    public String getAccessType() {
+    public String accessType() {
         return this.accessType;
     }
     /**
      * User ID (already existing in the device).
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDependsOn() {
+    public Output</* @Nullable */ List<String>> dependsOn() {
         return this.dependsOn;
     }
     /**
@@ -56,7 +57,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +71,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -86,7 +87,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Expected value is 'roleAssignment'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -100,7 +101,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
      * 
      */
-    public Output<Object> getPrincipalIds() {
+    public Output<Object> principalIds() {
         return this.principalIds;
     }
     /**
@@ -128,7 +129,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
      * 
      */
-    public Output</* @Nullable */ String> getResourceGroup() {
+    public Output</* @Nullable */ String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -142,7 +143,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return Azure resource ID of the RoleDefinition.
      * 
      */
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
@@ -156,7 +157,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoleAssignmentArtifact(String name, RoleAssignmentArtifactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:blueprint:RoleAssignmentArtifact", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:blueprint:RoleAssignmentArtifact", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private RoleAssignmentArtifact(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

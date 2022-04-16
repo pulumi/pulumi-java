@@ -16,6 +16,7 @@ import io.pulumi.aws.ses.outputs.ReceiptRuleWorkmailAction;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of Add Header Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleAddHeaderAction>> getAddHeaderActions() {
+    public Output</* @Nullable */ List<ReceiptRuleAddHeaderAction>> addHeaderActions() {
         return this.addHeaderActions;
     }
     /**
@@ -62,7 +63,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return The name of the rule to place this rule after
      * 
      */
-    public Output</* @Nullable */ String> getAfter() {
+    public Output</* @Nullable */ String> after() {
         return this.after;
     }
     /**
@@ -76,7 +77,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return The SES receipt rule ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -90,7 +91,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of Bounce Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleBounceAction>> getBounceActions() {
+    public Output</* @Nullable */ List<ReceiptRuleBounceAction>> bounceActions() {
         return this.bounceActions;
     }
     /**
@@ -104,7 +105,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return If true, the rule will be enabled
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -118,7 +119,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of Lambda Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleLambdaAction>> getLambdaActions() {
+    public Output</* @Nullable */ List<ReceiptRuleLambdaAction>> lambdaActions() {
         return this.lambdaActions;
     }
     /**
@@ -132,7 +133,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return The name of the rule
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +147,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of email addresses
      * 
      */
-    public Output</* @Nullable */ List<String>> getRecipients() {
+    public Output</* @Nullable */ List<String>> recipients() {
         return this.recipients;
     }
     /**
@@ -160,7 +161,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return The name of the rule set
      * 
      */
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
     /**
@@ -174,7 +175,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of S3 Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleS3Action>> getS3Actions() {
+    public Output</* @Nullable */ List<ReceiptRuleS3Action>> s3Actions() {
         return this.s3Actions;
     }
     /**
@@ -188,7 +189,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return If true, incoming emails will be scanned for spam and viruses
      * 
      */
-    public Output</* @Nullable */ Boolean> getScanEnabled() {
+    public Output</* @Nullable */ Boolean> scanEnabled() {
         return this.scanEnabled;
     }
     /**
@@ -202,7 +203,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of SNS Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleSnsAction>> getSnsActions() {
+    public Output</* @Nullable */ List<ReceiptRuleSnsAction>> snsActions() {
         return this.snsActions;
     }
     /**
@@ -216,7 +217,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of Stop Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleStopAction>> getStopActions() {
+    public Output</* @Nullable */ List<ReceiptRuleStopAction>> stopActions() {
         return this.stopActions;
     }
     /**
@@ -230,7 +231,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return `Require` or `Optional`
      * 
      */
-    public Output<String> getTlsPolicy() {
+    public Output<String> tlsPolicy() {
         return this.tlsPolicy;
     }
     /**
@@ -244,7 +245,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @return A list of WorkMail Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleWorkmailAction>> getWorkmailActions() {
+    public Output</* @Nullable */ List<ReceiptRuleWorkmailAction>> workmailActions() {
         return this.workmailActions;
     }
 
@@ -270,7 +271,7 @@ public class ReceiptRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReceiptRule(String name, ReceiptRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/receiptRule:ReceiptRule", name, args == null ? ReceiptRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/receiptRule:ReceiptRule", name, args == null ? ReceiptRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReceiptRule(String name, Output<String> id, @Nullable ReceiptRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

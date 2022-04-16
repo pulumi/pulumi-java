@@ -5,6 +5,7 @@ package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
     @Import(name="value")
       private final @Nullable Output<Integer> value;
 
-    public Output<Integer> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Integer> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
     @Import(name="valueInIa")
       private final @Nullable Output<Integer> valueInIa;
 
-    public Output<Integer> getValueInIa() {
-        return this.valueInIa == null ? Output.empty() : this.valueInIa;
+    public Output<Integer> valueInIa() {
+        return this.valueInIa == null ? Codegen.empty() : this.valueInIa;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
     @Import(name="valueInStandard")
       private final @Nullable Output<Integer> valueInStandard;
 
-    public Output<Integer> getValueInStandard() {
-        return this.valueInStandard == null ? Output.empty() : this.valueInStandard;
+    public Output<Integer> valueInStandard() {
+        return this.valueInStandard == null ? Codegen.empty() : this.valueInStandard;
     }
 
     public FileSystemSizeInByteArgs(
@@ -57,9 +58,9 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
     }
 
     private FileSystemSizeInByteArgs() {
-        this.value = Output.empty();
-        this.valueInIa = Output.empty();
-        this.valueInStandard = Output.empty();
+        this.value = Codegen.empty();
+        this.valueInIa = Codegen.empty();
+        this.valueInStandard = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder value(@Nullable Integer value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder valueInIa(@Nullable Output<Integer> valueInIa) {
@@ -99,7 +100,7 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder valueInIa(@Nullable Integer valueInIa) {
-            this.valueInIa = Output.ofNullable(valueInIa);
+            this.valueInIa = Codegen.ofNullable(valueInIa);
             return this;
         }
         public Builder valueInStandard(@Nullable Output<Integer> valueInStandard) {
@@ -107,7 +108,7 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder valueInStandard(@Nullable Integer valueInStandard) {
-            this.valueInStandard = Output.ofNullable(valueInStandard);
+            this.valueInStandard = Codegen.ofNullable(valueInStandard);
             return this;
         }        public FileSystemSizeInByteArgs build() {
             return new FileSystemSizeInByteArgs(value, valueInIa, valueInStandard);

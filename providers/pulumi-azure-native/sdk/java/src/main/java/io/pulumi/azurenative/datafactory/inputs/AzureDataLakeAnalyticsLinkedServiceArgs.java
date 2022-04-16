@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="accountName", required=true)
       private final Output<Object> accountName;
 
-    public Output<Object> getAccountName() {
+    public Output<Object> accountName() {
         return this.accountName;
     }
 
@@ -44,8 +45,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="dataLakeAnalyticsUri")
       private final @Nullable Output<Object> dataLakeAnalyticsUri;
 
-    public Output<Object> getDataLakeAnalyticsUri() {
-        return this.dataLakeAnalyticsUri == null ? Output.empty() : this.dataLakeAnalyticsUri;
+    public Output<Object> dataLakeAnalyticsUri() {
+        return this.dataLakeAnalyticsUri == null ? Codegen.empty() : this.dataLakeAnalyticsUri;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="resourceGroupName")
       private final @Nullable Output<Object> resourceGroupName;
 
-    public Output<Object> getResourceGroupName() {
-        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
+    public Output<Object> resourceGroupName() {
+        return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
+    public Output<Object> servicePrincipalId() {
+        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
+        return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="subscriptionId")
       private final @Nullable Output<Object> subscriptionId;
 
-    public Output<Object> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+    public Output<Object> subscriptionId() {
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="tenant", required=true)
       private final Output<Object> tenant;
 
-    public Output<Object> getTenant() {
+    public Output<Object> tenant() {
         return this.tenant;
     }
 
@@ -166,7 +167,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -200,19 +201,19 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
     }
 
     private AzureDataLakeAnalyticsLinkedServiceArgs() {
-        this.accountName = Output.empty();
-        this.annotations = Output.empty();
-        this.connectVia = Output.empty();
-        this.dataLakeAnalyticsUri = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.servicePrincipalId = Output.empty();
-        this.servicePrincipalKey = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
+        this.accountName = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.dataLakeAnalyticsUri = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.servicePrincipalId = Codegen.empty();
+        this.servicePrincipalKey = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -272,7 +273,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -283,7 +284,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder dataLakeAnalyticsUri(@Nullable Output<Object> dataLakeAnalyticsUri) {
@@ -291,7 +292,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder dataLakeAnalyticsUri(@Nullable Object dataLakeAnalyticsUri) {
-            this.dataLakeAnalyticsUri = Output.ofNullable(dataLakeAnalyticsUri);
+            this.dataLakeAnalyticsUri = Codegen.ofNullable(dataLakeAnalyticsUri);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -299,7 +300,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -307,7 +308,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -315,7 +316,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroupName(@Nullable Output<Object> resourceGroupName) {
@@ -323,7 +324,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder resourceGroupName(@Nullable Object resourceGroupName) {
-            this.resourceGroupName = Output.ofNullable(resourceGroupName);
+            this.resourceGroupName = Codegen.ofNullable(resourceGroupName);
             return this;
         }
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
@@ -331,7 +332,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
@@ -339,7 +340,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Codegen.ofNullable(servicePrincipalKey);
             return this;
         }
         public Builder subscriptionId(@Nullable Output<Object> subscriptionId) {
@@ -347,7 +348,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder subscriptionId(@Nullable Object subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder tenant(Output<Object> tenant) {

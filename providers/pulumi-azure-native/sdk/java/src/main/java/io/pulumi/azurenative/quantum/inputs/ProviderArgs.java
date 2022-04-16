@@ -7,6 +7,7 @@ import io.pulumi.azurenative.quantum.enums.Status;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+    public Output<String> applicationName() {
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceUri")
       private final @Nullable Output<String> instanceUri;
 
-    public Output<String> getInstanceUri() {
-        return this.instanceUri == null ? Output.empty() : this.instanceUri;
+    public Output<String> instanceUri() {
+        return this.instanceUri == null ? Codegen.empty() : this.instanceUri;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerId")
       private final @Nullable Output<String> providerId;
 
-    public Output<String> getProviderId() {
-        return this.providerId == null ? Output.empty() : this.providerId;
+    public Output<String> providerId() {
+        return this.providerId == null ? Codegen.empty() : this.providerId;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerSku")
       private final @Nullable Output<String> providerSku;
 
-    public Output<String> getProviderSku() {
-        return this.providerSku == null ? Output.empty() : this.providerSku;
+    public Output<String> providerSku() {
+        return this.providerSku == null ? Codegen.empty() : this.providerSku;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,Status>> provisioningState;
 
-    public Output<Either<String,Status>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,Status>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUsageId")
       private final @Nullable Output<String> resourceUsageId;
 
-    public Output<String> getResourceUsageId() {
-        return this.resourceUsageId == null ? Output.empty() : this.resourceUsageId;
+    public Output<String> resourceUsageId() {
+        return this.resourceUsageId == null ? Codegen.empty() : this.resourceUsageId;
     }
 
     public ProviderArgs(
@@ -102,12 +103,12 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProviderArgs() {
-        this.applicationName = Output.empty();
-        this.instanceUri = Output.empty();
-        this.providerId = Output.empty();
-        this.providerSku = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceUsageId = Output.empty();
+        this.applicationName = Codegen.empty();
+        this.instanceUri = Codegen.empty();
+        this.providerId = Codegen.empty();
+        this.providerSku = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceUsageId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder instanceUri(@Nullable Output<String> instanceUri) {
@@ -153,7 +154,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceUri(@Nullable String instanceUri) {
-            this.instanceUri = Output.ofNullable(instanceUri);
+            this.instanceUri = Codegen.ofNullable(instanceUri);
             return this;
         }
         public Builder providerId(@Nullable Output<String> providerId) {
@@ -161,7 +162,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerId(@Nullable String providerId) {
-            this.providerId = Output.ofNullable(providerId);
+            this.providerId = Codegen.ofNullable(providerId);
             return this;
         }
         public Builder providerSku(@Nullable Output<String> providerSku) {
@@ -169,7 +170,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerSku(@Nullable String providerSku) {
-            this.providerSku = Output.ofNullable(providerSku);
+            this.providerSku = Codegen.ofNullable(providerSku);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,Status>> provisioningState) {
@@ -177,7 +178,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,Status> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceUsageId(@Nullable Output<String> resourceUsageId) {
@@ -185,7 +186,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
-            this.resourceUsageId = Output.ofNullable(resourceUsageId);
+            this.resourceUsageId = Codegen.ofNullable(resourceUsageId);
             return this;
         }        public ProviderArgs build() {
             return new ProviderArgs(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.Custo
      * @return The location of the resource group to which the resource belongs.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,13 +58,13 @@ public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.Custo
      * @return The name of the ARM resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="resource", type=SqlUserDefinedFunctionGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ SqlUserDefinedFunctionGetPropertiesResponseResource> resource;
 
-    public Output</* @Nullable */ SqlUserDefinedFunctionGetPropertiesResponseResource> getResource() {
+    public Output</* @Nullable */ SqlUserDefinedFunctionGetPropertiesResponseResource> resource() {
         return this.resource;
     }
     /**
@@ -77,7 +78,7 @@ public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.Custo
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -91,7 +92,7 @@ public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.Custo
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -117,7 +118,7 @@ public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlResourceSqlUserDefinedFunction(String name, SqlResourceSqlUserDefinedFunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:SqlResourceSqlUserDefinedFunction", name, args == null ? SqlResourceSqlUserDefinedFunctionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:documentdb:SqlResourceSqlUserDefinedFunction", name, args == null ? SqlResourceSqlUserDefinedFunctionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SqlResourceSqlUserDefinedFunction(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

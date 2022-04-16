@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
-        return this.time == null ? Output.empty() : this.time;
+    public Output<String> time() {
+        return this.time == null ? Codegen.empty() : this.time;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weekdays")
       private final @Nullable Output<List<String>> weekdays;
 
-    public Output<List<String>> getWeekdays() {
-        return this.weekdays == null ? Output.empty() : this.weekdays;
+    public Output<List<String>> weekdays() {
+        return this.weekdays == null ? Codegen.empty() : this.weekdays;
     }
 
     public WeekDetailsArgs(
@@ -49,8 +50,8 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WeekDetailsArgs() {
-        this.time = Output.empty();
-        this.weekdays = Output.empty();
+        this.time = Codegen.empty();
+        this.weekdays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder time(@Nullable String time) {
-            this.time = Output.ofNullable(time);
+            this.time = Codegen.ofNullable(time);
             return this;
         }
         public Builder weekdays(@Nullable Output<List<String>> weekdays) {
@@ -88,7 +89,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weekdays(@Nullable List<String> weekdays) {
-            this.weekdays = Output.ofNullable(weekdays);
+            this.weekdays = Codegen.ofNullable(weekdays);
             return this;
         }
         public Builder weekdays(String... weekdays) {

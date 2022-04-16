@@ -5,6 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
-        return this.s3BucketName == null ? Output.empty() : this.s3BucketName;
+    public Output<String> s3BucketName() {
+        return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
+    public Output<String> s3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
     public InfrastructureConfigurationS3LogsArgs(
@@ -48,8 +49,8 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
     }
 
     private InfrastructureConfigurationS3LogsArgs() {
-        this.s3BucketName = Output.empty();
-        this.s3KeyPrefix = Output.empty();
+        this.s3BucketName = Codegen.empty();
+        this.s3KeyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
             return this;
         }
         public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = Output.ofNullable(s3BucketName);
+            this.s3BucketName = Codegen.ofNullable(s3BucketName);
             return this;
         }
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
@@ -87,7 +88,7 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
             return this;
         }
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
             return this;
         }        public InfrastructureConfigurationS3LogsArgs build() {
             return new InfrastructureConfigurationS3LogsArgs(s3BucketName, s3KeyPrefix);

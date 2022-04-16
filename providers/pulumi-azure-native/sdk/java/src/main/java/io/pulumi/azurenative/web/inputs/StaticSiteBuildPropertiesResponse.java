@@ -26,7 +26,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="apiBuildCommand")
       private final @Nullable String apiBuildCommand;
 
-    public Optional<String> getApiBuildCommand() {
+    public Optional<String> apiBuildCommand() {
         return this.apiBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.apiBuildCommand);
     }
 
@@ -37,7 +37,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="apiLocation")
       private final @Nullable String apiLocation;
 
-    public Optional<String> getApiLocation() {
+    public Optional<String> apiLocation() {
         return this.apiLocation == null ? Optional.empty() : Optional.ofNullable(this.apiLocation);
     }
 
@@ -48,7 +48,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="appArtifactLocation")
       private final @Nullable String appArtifactLocation;
 
-    public Optional<String> getAppArtifactLocation() {
+    public Optional<String> appArtifactLocation() {
         return this.appArtifactLocation == null ? Optional.empty() : Optional.ofNullable(this.appArtifactLocation);
     }
 
@@ -59,7 +59,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="appBuildCommand")
       private final @Nullable String appBuildCommand;
 
-    public Optional<String> getAppBuildCommand() {
+    public Optional<String> appBuildCommand() {
         return this.appBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.appBuildCommand);
     }
 
@@ -70,7 +70,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="appLocation")
       private final @Nullable String appLocation;
 
-    public Optional<String> getAppLocation() {
+    public Optional<String> appLocation() {
         return this.appLocation == null ? Optional.empty() : Optional.ofNullable(this.appLocation);
     }
 
@@ -81,7 +81,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="githubActionSecretNameOverride")
       private final @Nullable String githubActionSecretNameOverride;
 
-    public Optional<String> getGithubActionSecretNameOverride() {
+    public Optional<String> githubActionSecretNameOverride() {
         return this.githubActionSecretNameOverride == null ? Optional.empty() : Optional.ofNullable(this.githubActionSecretNameOverride);
     }
 
@@ -92,7 +92,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="outputLocation")
       private final @Nullable String outputLocation;
 
-    public Optional<String> getOutputLocation() {
+    public Optional<String> outputLocation() {
         return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
     }
 
@@ -103,7 +103,7 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
     @Import(name="skipGithubActionWorkflowGeneration")
       private final @Nullable Boolean skipGithubActionWorkflowGeneration;
 
-    public Optional<Boolean> getSkipGithubActionWorkflowGeneration() {
+    public Optional<Boolean> skipGithubActionWorkflowGeneration() {
         return this.skipGithubActionWorkflowGeneration == null ? Optional.empty() : Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
     }
 

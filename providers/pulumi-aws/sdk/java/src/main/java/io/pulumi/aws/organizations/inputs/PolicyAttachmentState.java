@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+    public Output<String> policyId() {
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+    public Output<String> targetId() {
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     public PolicyAttachmentState(
@@ -44,8 +45,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     }
 
     private PolicyAttachmentState() {
-        this.policyId = Output.empty();
-        this.targetId = Output.empty();
+        this.policyId = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder targetId(@Nullable Output<String> targetId) {
@@ -83,7 +84,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }        public PolicyAttachmentState build() {
             return new PolicyAttachmentState(policyId, targetId);

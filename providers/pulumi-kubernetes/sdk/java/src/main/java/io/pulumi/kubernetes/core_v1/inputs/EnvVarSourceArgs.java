@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ConfigMapKeySelectorArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ResourceFieldSelectorArgs;
@@ -28,8 +29,8 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configMapKeyRef")
       private final @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
 
-    public Output<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
-        return this.configMapKeyRef == null ? Output.empty() : this.configMapKeyRef;
+    public Output<ConfigMapKeySelectorArgs> configMapKeyRef() {
+        return this.configMapKeyRef == null ? Codegen.empty() : this.configMapKeyRef;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldRef")
       private final @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
 
-    public Output<ObjectFieldSelectorArgs> getFieldRef() {
-        return this.fieldRef == null ? Output.empty() : this.fieldRef;
+    public Output<ObjectFieldSelectorArgs> fieldRef() {
+        return this.fieldRef == null ? Codegen.empty() : this.fieldRef;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceFieldRef")
       private final @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
 
-    public Output<ResourceFieldSelectorArgs> getResourceFieldRef() {
-        return this.resourceFieldRef == null ? Output.empty() : this.resourceFieldRef;
+    public Output<ResourceFieldSelectorArgs> resourceFieldRef() {
+        return this.resourceFieldRef == null ? Codegen.empty() : this.resourceFieldRef;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretKeyRef")
       private final @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
-    public Output<SecretKeySelectorArgs> getSecretKeyRef() {
-        return this.secretKeyRef == null ? Output.empty() : this.secretKeyRef;
+    public Output<SecretKeySelectorArgs> secretKeyRef() {
+        return this.secretKeyRef == null ? Codegen.empty() : this.secretKeyRef;
     }
 
     public EnvVarSourceArgs(
@@ -77,10 +78,10 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvVarSourceArgs() {
-        this.configMapKeyRef = Output.empty();
-        this.fieldRef = Output.empty();
-        this.resourceFieldRef = Output.empty();
-        this.secretKeyRef = Output.empty();
+        this.configMapKeyRef = Codegen.empty();
+        this.fieldRef = Codegen.empty();
+        this.resourceFieldRef = Codegen.empty();
+        this.secretKeyRef = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configMapKeyRef(@Nullable ConfigMapKeySelectorArgs configMapKeyRef) {
-            this.configMapKeyRef = Output.ofNullable(configMapKeyRef);
+            this.configMapKeyRef = Codegen.ofNullable(configMapKeyRef);
             return this;
         }
         public Builder fieldRef(@Nullable Output<ObjectFieldSelectorArgs> fieldRef) {
@@ -122,7 +123,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
-            this.fieldRef = Output.ofNullable(fieldRef);
+            this.fieldRef = Codegen.ofNullable(fieldRef);
             return this;
         }
         public Builder resourceFieldRef(@Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef) {
@@ -130,7 +131,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
-            this.resourceFieldRef = Output.ofNullable(resourceFieldRef);
+            this.resourceFieldRef = Codegen.ofNullable(resourceFieldRef);
             return this;
         }
         public Builder secretKeyRef(@Nullable Output<SecretKeySelectorArgs> secretKeyRef) {
@@ -138,7 +139,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretKeyRef(@Nullable SecretKeySelectorArgs secretKeyRef) {
-            this.secretKeyRef = Output.ofNullable(secretKeyRef);
+            this.secretKeyRef = Codegen.ofNullable(secretKeyRef);
             return this;
         }        public EnvVarSourceArgs build() {
             return new EnvVarSourceArgs(configMapKeyRef, fieldRef, resourceFieldRef, secretKeyRef);

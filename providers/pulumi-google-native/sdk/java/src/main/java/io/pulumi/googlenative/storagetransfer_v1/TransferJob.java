@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storagetransfer_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storagetransfer_v1.TransferJobArgs;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.LoggingConfigResponse;
@@ -34,7 +35,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return The time that the transfer job was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -48,7 +49,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return The time that the transfer job was deleted.
      * 
      */
-    public Output<String> getDeletionTime() {
+    public Output<String> deletionTime() {
         return this.deletionTime;
     }
     /**
@@ -62,7 +63,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -76,7 +77,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return The time that the transfer job was last modified.
      * 
      */
-    public Output<String> getLastModificationTime() {
+    public Output<String> lastModificationTime() {
         return this.lastModificationTime;
     }
     /**
@@ -90,7 +91,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.
      * 
      */
-    public Output<String> getLatestOperationName() {
+    public Output<String> latestOperationName() {
         return this.latestOperationName;
     }
     /**
@@ -104,7 +105,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Logging configuration.
      * 
      */
-    public Output<LoggingConfigResponse> getLoggingConfig() {
+    public Output<LoggingConfigResponse> loggingConfig() {
         return this.loggingConfig;
     }
     /**
@@ -118,7 +119,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +133,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Notification configuration. This is not supported for transfers involving PosixFilesystem.
      * 
      */
-    public Output<NotificationConfigResponse> getNotificationConfig() {
+    public Output<NotificationConfigResponse> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -146,7 +147,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return The ID of the Google Cloud project that owns the job.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -160,7 +161,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.
      * 
      */
-    public Output<ScheduleResponse> getSchedule() {
+    public Output<ScheduleResponse> schedule() {
         return this.schedule;
     }
     /**
@@ -174,7 +175,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -188,7 +189,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Transfer specification.
      * 
      */
-    public Output<TransferSpecResponse> getTransferSpec() {
+    public Output<TransferSpecResponse> transferSpec() {
         return this.transferSpec;
     }
 
@@ -214,7 +215,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TransferJob(String name, @Nullable TransferJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storagetransfer/v1:TransferJob", name, args == null ? TransferJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storagetransfer/v1:TransferJob", name, args == null ? TransferJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransferJob(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

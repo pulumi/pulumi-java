@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     @Import(name="identityNamespace")
       private final @Nullable Output<String> identityNamespace;
 
-    public Output<String> getIdentityNamespace() {
-        return this.identityNamespace == null ? Output.empty() : this.identityNamespace;
+    public Output<String> identityNamespace() {
+        return this.identityNamespace == null ? Codegen.empty() : this.identityNamespace;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     @Import(name="identityProvider")
       private final @Nullable Output<String> identityProvider;
 
-    public Output<String> getIdentityProvider() {
-        return this.identityProvider == null ? Output.empty() : this.identityProvider;
+    public Output<String> identityProvider() {
+        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     @Import(name="workloadPool")
       private final @Nullable Output<String> workloadPool;
 
-    public Output<String> getWorkloadPool() {
-        return this.workloadPool == null ? Output.empty() : this.workloadPool;
+    public Output<String> workloadPool() {
+        return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
     }
 
     public WorkloadIdentityConfigArgs(
@@ -61,9 +62,9 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadIdentityConfigArgs() {
-        this.identityNamespace = Output.empty();
-        this.identityProvider = Output.empty();
-        this.workloadPool = Output.empty();
+        this.identityNamespace = Codegen.empty();
+        this.identityProvider = Codegen.empty();
+        this.workloadPool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder identityNamespace(@Nullable String identityNamespace) {
-            this.identityNamespace = Output.ofNullable(identityNamespace);
+            this.identityNamespace = Codegen.ofNullable(identityNamespace);
             return this;
         }
         public Builder identityProvider(@Nullable Output<String> identityProvider) {
@@ -103,7 +104,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = Output.ofNullable(identityProvider);
+            this.identityProvider = Codegen.ofNullable(identityProvider);
             return this;
         }
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
@@ -111,7 +112,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Output.ofNullable(workloadPool);
+            this.workloadPool = Codegen.ofNullable(workloadPool);
             return this;
         }        public WorkloadIdentityConfigArgs build() {
             return new WorkloadIdentityConfigArgs(identityNamespace, identityProvider, workloadPool);

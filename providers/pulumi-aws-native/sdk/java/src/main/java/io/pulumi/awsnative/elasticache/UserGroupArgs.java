@@ -6,6 +6,7 @@ package io.pulumi.awsnative.elasticache;
 import io.pulumi.awsnative.elasticache.enums.UserGroupEngine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engine", required=true)
       private final Output<UserGroupEngine> engine;
 
-    public Output<UserGroupEngine> getEngine() {
+    public Output<UserGroupEngine> engine() {
         return this.engine;
     }
 
@@ -34,7 +35,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userGroupId", required=true)
       private final Output<String> userGroupId;
 
-    public Output<String> getUserGroupId() {
+    public Output<String> userGroupId() {
         return this.userGroupId;
     }
 
@@ -45,8 +46,8 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> getUserIds() {
-        return this.userIds == null ? Output.empty() : this.userIds;
+    public Output<List<String>> userIds() {
+        return this.userIds == null ? Codegen.empty() : this.userIds;
     }
 
     public UserGroupArgs(
@@ -59,9 +60,9 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserGroupArgs() {
-        this.engine = Output.empty();
-        this.userGroupId = Output.empty();
-        this.userIds = Output.empty();
+        this.engine = Codegen.empty();
+        this.userGroupId = Codegen.empty();
+        this.userIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Output.ofNullable(userIds);
+            this.userIds = Codegen.ofNullable(userIds);
             return this;
         }
         public Builder userIds(String... userIds) {

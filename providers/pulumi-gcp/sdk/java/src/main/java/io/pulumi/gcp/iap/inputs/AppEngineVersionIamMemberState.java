@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+    public Output<String> appId() {
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     @Import(name="condition")
       private final @Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition;
 
-    public Output<AppEngineVersionIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<AppEngineVersionIamMemberConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -45,15 +46,15 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+    public Output<String> member() {
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
-        return this.versionId == null ? Output.empty() : this.versionId;
+    public Output<String> versionId() {
+        return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
     public AppEngineVersionIamMemberState(
@@ -123,14 +124,14 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
     }
 
     private AppEngineVersionIamMemberState() {
-        this.appId = Output.empty();
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.service = Output.empty();
-        this.versionId = Output.empty();
+        this.appId = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.service = Codegen.empty();
+        this.versionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder condition(@Nullable Output<AppEngineVersionIamMemberConditionGetArgs> condition) {
@@ -180,7 +181,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder condition(@Nullable AppEngineVersionIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -188,7 +189,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -196,7 +197,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -204,7 +205,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -212,7 +213,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -220,7 +221,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder versionId(@Nullable Output<String> versionId) {
@@ -228,7 +229,7 @@ public final class AppEngineVersionIamMemberState extends io.pulumi.resources.Re
             return this;
         }
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Output.ofNullable(versionId);
+            this.versionId = Codegen.ofNullable(versionId);
             return this;
         }        public AppEngineVersionIamMemberState build() {
             return new AppEngineVersionIamMemberState(appId, condition, etag, member, project, role, service, versionId);

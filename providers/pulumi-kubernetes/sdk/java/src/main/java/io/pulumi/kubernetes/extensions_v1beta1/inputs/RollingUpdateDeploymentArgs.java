@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="maxSurge")
       private final @Nullable Output<Either<Integer,String>> maxSurge;
 
-    public Output<Either<Integer,String>> getMaxSurge() {
-        return this.maxSurge == null ? Output.empty() : this.maxSurge;
+    public Output<Either<Integer,String>> maxSurge() {
+        return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
     @Import(name="maxUnavailable")
       private final @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Output<Either<Integer,String>> getMaxUnavailable() {
-        return this.maxUnavailable == null ? Output.empty() : this.maxUnavailable;
+    public Output<Either<Integer,String>> maxUnavailable() {
+        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
     public RollingUpdateDeploymentArgs(
@@ -50,8 +51,8 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
     }
 
     private RollingUpdateDeploymentArgs() {
-        this.maxSurge = Output.empty();
-        this.maxUnavailable = Output.empty();
+        this.maxSurge = Codegen.empty();
+        this.maxUnavailable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maxSurge(@Nullable Either<Integer,String> maxSurge) {
-            this.maxSurge = Output.ofNullable(maxSurge);
+            this.maxSurge = Codegen.ofNullable(maxSurge);
             return this;
         }
         public Builder maxUnavailable(@Nullable Output<Either<Integer,String>> maxUnavailable) {
@@ -89,7 +90,7 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
-            this.maxUnavailable = Output.ofNullable(maxUnavailable);
+            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
             return this;
         }        public RollingUpdateDeploymentArgs build() {
             return new RollingUpdateDeploymentArgs(maxSurge, maxUnavailable);

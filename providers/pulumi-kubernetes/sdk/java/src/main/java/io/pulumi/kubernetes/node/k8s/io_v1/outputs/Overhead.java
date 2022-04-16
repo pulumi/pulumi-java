@@ -26,7 +26,7 @@ public final class Overhead {
      * PodFixed represents the fixed resource overhead associated with running a pod.
      * 
     */
-    public Map<String,String> getPodFixed() {
+    public Map<String,String> podFixed() {
         return this.podFixed == null ? Map.of() : this.podFixed;
     }
 

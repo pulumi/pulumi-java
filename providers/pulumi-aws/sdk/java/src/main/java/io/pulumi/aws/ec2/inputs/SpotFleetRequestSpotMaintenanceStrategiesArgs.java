@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesArgs extends io.pulu
     @Import(name="capacityRebalance")
       private final @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance;
 
-    public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
+    public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance() {
+        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 
     public SpotFleetRequestSpotMaintenanceStrategiesArgs(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance) {
@@ -30,7 +31,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesArgs extends io.pulu
     }
 
     private SpotFleetRequestSpotMaintenanceStrategiesArgs() {
-        this.capacityRebalance = Output.empty();
+        this.capacityRebalance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesArgs extends io.pulu
             return this;
         }
         public Builder capacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs capacityRebalance) {
-            this.capacityRebalance = Output.ofNullable(capacityRebalance);
+            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
             return this;
         }        public SpotFleetRequestSpotMaintenanceStrategiesArgs build() {
             return new SpotFleetRequestSpotMaintenanceStrategiesArgs(capacityRebalance);

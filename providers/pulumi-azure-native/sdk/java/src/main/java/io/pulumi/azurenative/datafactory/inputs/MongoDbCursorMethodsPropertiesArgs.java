@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     @Import(name="limit")
       private final @Nullable Output<Object> limit;
 
-    public Output<Object> getLimit() {
-        return this.limit == null ? Output.empty() : this.limit;
+    public Output<Object> limit() {
+        return this.limit == null ? Codegen.empty() : this.limit;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     @Import(name="project")
       private final @Nullable Output<Object> project;
 
-    public Output<Object> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<Object> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     @Import(name="skip")
       private final @Nullable Output<Object> skip;
 
-    public Output<Object> getSkip() {
-        return this.skip == null ? Output.empty() : this.skip;
+    public Output<Object> skip() {
+        return this.skip == null ? Codegen.empty() : this.skip;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     @Import(name="sort")
       private final @Nullable Output<Object> sort;
 
-    public Output<Object> getSort() {
-        return this.sort == null ? Output.empty() : this.sort;
+    public Output<Object> sort() {
+        return this.sort == null ? Codegen.empty() : this.sort;
     }
 
     public MongoDbCursorMethodsPropertiesArgs(
@@ -74,10 +75,10 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     }
 
     private MongoDbCursorMethodsPropertiesArgs() {
-        this.limit = Output.empty();
-        this.project = Output.empty();
-        this.skip = Output.empty();
-        this.sort = Output.empty();
+        this.limit = Codegen.empty();
+        this.project = Codegen.empty();
+        this.skip = Codegen.empty();
+        this.sort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder limit(@Nullable Object limit) {
-            this.limit = Output.ofNullable(limit);
+            this.limit = Codegen.ofNullable(limit);
             return this;
         }
         public Builder project(@Nullable Output<Object> project) {
@@ -119,7 +120,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder project(@Nullable Object project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder skip(@Nullable Output<Object> skip) {
@@ -127,7 +128,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder skip(@Nullable Object skip) {
-            this.skip = Output.ofNullable(skip);
+            this.skip = Codegen.ofNullable(skip);
             return this;
         }
         public Builder sort(@Nullable Output<Object> sort) {
@@ -135,7 +136,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder sort(@Nullable Object sort) {
-            this.sort = Output.ofNullable(sort);
+            this.sort = Codegen.ofNullable(sort);
             return this;
         }        public MongoDbCursorMethodsPropertiesArgs build() {
             return new MongoDbCursorMethodsPropertiesArgs(limit, project, skip, sort);

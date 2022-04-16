@@ -22,7 +22,7 @@ public final class GetInstanceTypesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetInstanceTypesFilter> filters;
 
-    public List<GetInstanceTypesFilter> getFilters() {
+    public List<GetInstanceTypesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

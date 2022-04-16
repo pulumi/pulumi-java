@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId;
     }
 
@@ -33,7 +34,7 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
     }
 
     private X12MessageIdentifierArgs() {
-        this.messageId = Output.empty();
+        this.messageId = Codegen.empty();
     }
 
     public static Builder builder() {

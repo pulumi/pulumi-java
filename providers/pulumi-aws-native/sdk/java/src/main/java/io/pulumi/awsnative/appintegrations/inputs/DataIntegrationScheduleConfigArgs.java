@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appintegrations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     @Import(name="firstExecutionFrom", required=true)
       private final Output<String> firstExecutionFrom;
 
-    public Output<String> getFirstExecutionFrom() {
+    public Output<String> firstExecutionFrom() {
         return this.firstExecutionFrom;
     }
 
@@ -31,7 +32,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 
@@ -42,7 +43,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 
@@ -56,9 +57,9 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     }
 
     private DataIntegrationScheduleConfigArgs() {
-        this.firstExecutionFrom = Output.empty();
-        this.object = Output.empty();
-        this.scheduleExpression = Output.empty();
+        this.firstExecutionFrom = Codegen.empty();
+        this.object = Codegen.empty();
+        this.scheduleExpression = Codegen.empty();
     }
 
     public static Builder builder() {

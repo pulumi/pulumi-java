@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecLogDriverArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecPlacementArgs;
@@ -24,57 +25,57 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="containerSpec", required=true)
       private final Output<ServiceTaskSpecContainerSpecArgs> containerSpec;
 
-    public Output<ServiceTaskSpecContainerSpecArgs> getContainerSpec() {
+    public Output<ServiceTaskSpecContainerSpecArgs> containerSpec() {
         return this.containerSpec;
     }
 
     @Import(name="forceUpdate")
       private final @Nullable Output<Integer> forceUpdate;
 
-    public Output<Integer> getForceUpdate() {
-        return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
+    public Output<Integer> forceUpdate() {
+        return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
     }
 
     @Import(name="logDriver")
       private final @Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver;
 
-    public Output<ServiceTaskSpecLogDriverArgs> getLogDriver() {
-        return this.logDriver == null ? Output.empty() : this.logDriver;
+    public Output<ServiceTaskSpecLogDriverArgs> logDriver() {
+        return this.logDriver == null ? Codegen.empty() : this.logDriver;
     }
 
     @Import(name="networks")
       private final @Nullable Output<List<String>> networks;
 
-    public Output<List<String>> getNetworks() {
-        return this.networks == null ? Output.empty() : this.networks;
+    public Output<List<String>> networks() {
+        return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     @Import(name="placement")
       private final @Nullable Output<ServiceTaskSpecPlacementArgs> placement;
 
-    public Output<ServiceTaskSpecPlacementArgs> getPlacement() {
-        return this.placement == null ? Output.empty() : this.placement;
+    public Output<ServiceTaskSpecPlacementArgs> placement() {
+        return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     @Import(name="resources")
       private final @Nullable Output<ServiceTaskSpecResourcesArgs> resources;
 
-    public Output<ServiceTaskSpecResourcesArgs> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<ServiceTaskSpecResourcesArgs> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     @Import(name="restartPolicy")
       private final @Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy;
 
-    public Output<ServiceTaskSpecRestartPolicyArgs> getRestartPolicy() {
-        return this.restartPolicy == null ? Output.empty() : this.restartPolicy;
+    public Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy() {
+        return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
     }
 
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
-    public Output<String> getRuntime() {
-        return this.runtime == null ? Output.empty() : this.runtime;
+    public Output<String> runtime() {
+        return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
     public ServiceTaskSpecArgs(
@@ -97,14 +98,14 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceTaskSpecArgs() {
-        this.containerSpec = Output.empty();
-        this.forceUpdate = Output.empty();
-        this.logDriver = Output.empty();
-        this.networks = Output.empty();
-        this.placement = Output.empty();
-        this.resources = Output.empty();
-        this.restartPolicy = Output.empty();
-        this.runtime = Output.empty();
+        this.containerSpec = Codegen.empty();
+        this.forceUpdate = Codegen.empty();
+        this.logDriver = Codegen.empty();
+        this.networks = Codegen.empty();
+        this.placement = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.restartPolicy = Codegen.empty();
+        this.runtime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder forceUpdate(@Nullable Integer forceUpdate) {
-            this.forceUpdate = Output.ofNullable(forceUpdate);
+            this.forceUpdate = Codegen.ofNullable(forceUpdate);
             return this;
         }
         public Builder logDriver(@Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver) {
@@ -162,7 +163,7 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder logDriver(@Nullable ServiceTaskSpecLogDriverArgs logDriver) {
-            this.logDriver = Output.ofNullable(logDriver);
+            this.logDriver = Codegen.ofNullable(logDriver);
             return this;
         }
         public Builder networks(@Nullable Output<List<String>> networks) {
@@ -170,7 +171,7 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder networks(@Nullable List<String> networks) {
-            this.networks = Output.ofNullable(networks);
+            this.networks = Codegen.ofNullable(networks);
             return this;
         }
         public Builder networks(String... networks) {
@@ -181,7 +182,7 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder placement(@Nullable ServiceTaskSpecPlacementArgs placement) {
-            this.placement = Output.ofNullable(placement);
+            this.placement = Codegen.ofNullable(placement);
             return this;
         }
         public Builder resources(@Nullable Output<ServiceTaskSpecResourcesArgs> resources) {
@@ -189,7 +190,7 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resources(@Nullable ServiceTaskSpecResourcesArgs resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder restartPolicy(@Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy) {
@@ -197,7 +198,7 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder restartPolicy(@Nullable ServiceTaskSpecRestartPolicyArgs restartPolicy) {
-            this.restartPolicy = Output.ofNullable(restartPolicy);
+            this.restartPolicy = Codegen.ofNullable(restartPolicy);
             return this;
         }
         public Builder runtime(@Nullable Output<String> runtime) {
@@ -205,7 +206,7 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Output.ofNullable(runtime);
+            this.runtime = Codegen.ofNullable(runtime);
             return this;
         }        public ServiceTaskSpecArgs build() {
             return new ServiceTaskSpecArgs(containerSpec, forceUpdate, logDriver, networks, placement, resources, restartPolicy, runtime);

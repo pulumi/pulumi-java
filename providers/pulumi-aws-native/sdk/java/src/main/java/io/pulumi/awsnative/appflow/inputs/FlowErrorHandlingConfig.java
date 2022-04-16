@@ -18,21 +18,21 @@ public final class FlowErrorHandlingConfig extends io.pulumi.resources.InvokeArg
     @Import(name="bucketName")
       private final @Nullable String bucketName;
 
-    public Optional<String> getBucketName() {
+    public Optional<String> bucketName() {
         return this.bucketName == null ? Optional.empty() : Optional.ofNullable(this.bucketName);
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable String bucketPrefix;
 
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="failOnFirstError")
       private final @Nullable Boolean failOnFirstError;
 
-    public Optional<Boolean> getFailOnFirstError() {
+    public Optional<Boolean> failOnFirstError() {
         return this.failOnFirstError == null ? Optional.empty() : Optional.ofNullable(this.failOnFirstError);
     }
 

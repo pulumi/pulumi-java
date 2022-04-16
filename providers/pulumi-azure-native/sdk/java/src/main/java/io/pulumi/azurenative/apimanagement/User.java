@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Email address.
      * 
      */
-    public Output</* @Nullable */ String> getEmail() {
+    public Output</* @Nullable */ String> email() {
         return this.email;
     }
     /**
@@ -57,7 +58,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return First name.
      * 
      */
-    public Output</* @Nullable */ String> getFirstName() {
+    public Output</* @Nullable */ String> firstName() {
         return this.firstName;
     }
     /**
@@ -71,7 +72,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Collection of groups user is part of.
      * 
      */
-    public Output<List<GroupContractPropertiesResponse>> getGroups() {
+    public Output<List<GroupContractPropertiesResponse>> groups() {
         return this.groups;
     }
     /**
@@ -85,7 +86,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Collection of user identities.
      * 
      */
-    public Output</* @Nullable */ List<UserIdentityContractResponse>> getIdentities() {
+    public Output</* @Nullable */ List<UserIdentityContractResponse>> identities() {
         return this.identities;
     }
     /**
@@ -99,7 +100,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Last name.
      * 
      */
-    public Output</* @Nullable */ String> getLastName() {
+    public Output</* @Nullable */ String> lastName() {
         return this.lastName;
     }
     /**
@@ -113,7 +114,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Optional note about a user set by the administrator.
      * 
      */
-    public Output</* @Nullable */ String> getNote() {
+    public Output</* @Nullable */ String> note() {
         return this.note;
     }
     /**
@@ -141,7 +142,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> getRegistrationDate() {
+    public Output</* @Nullable */ String> registrationDate() {
         return this.registrationDate;
     }
     /**
@@ -155,7 +156,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -169,7 +170,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -195,7 +196,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private User(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="networkSecurityPerimeterName")
       private final @Nullable Output<String> networkSecurityPerimeterName;
 
-    public Output<String> getNetworkSecurityPerimeterName() {
-        return this.networkSecurityPerimeterName == null ? Output.empty() : this.networkSecurityPerimeterName;
+    public Output<String> networkSecurityPerimeterName() {
+        return this.networkSecurityPerimeterName == null ? Codegen.empty() : this.networkSecurityPerimeterName;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,8 +100,8 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkSecurityPerimeterArgs(
@@ -123,14 +124,14 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
     }
 
     private NetworkSecurityPerimeterArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networkSecurityPerimeterName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkSecurityPerimeterName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -180,7 +181,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -188,7 +189,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -196,7 +197,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -204,7 +205,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkSecurityPerimeterName(@Nullable Output<String> networkSecurityPerimeterName) {
@@ -212,7 +213,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder networkSecurityPerimeterName(@Nullable String networkSecurityPerimeterName) {
-            this.networkSecurityPerimeterName = Output.ofNullable(networkSecurityPerimeterName);
+            this.networkSecurityPerimeterName = Codegen.ofNullable(networkSecurityPerimeterName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -228,7 +229,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NetworkSecurityPerimeterArgs build() {
             return new NetworkSecurityPerimeterArgs(description, displayName, id, location, name, networkSecurityPerimeterName, resourceGroupName, tags);

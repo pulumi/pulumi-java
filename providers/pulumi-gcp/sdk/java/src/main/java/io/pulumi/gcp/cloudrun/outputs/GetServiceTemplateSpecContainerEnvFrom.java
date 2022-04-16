@@ -26,13 +26,13 @@ public final class GetServiceTemplateSpecContainerEnvFrom {
         this.secretReves = secretReves;
     }
 
-    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapReves() {
+    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves() {
         return this.configMapReves;
     }
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
-    public List<GetServiceTemplateSpecContainerEnvFromSecretRef> getSecretReves() {
+    public List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves() {
         return this.secretReves;
     }
 

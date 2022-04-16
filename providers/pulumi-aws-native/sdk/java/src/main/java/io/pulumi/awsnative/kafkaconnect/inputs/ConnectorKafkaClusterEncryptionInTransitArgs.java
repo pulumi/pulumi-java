@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 import io.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterEncryptionInTransitType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
     @Import(name="encryptionType", required=true)
       private final Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
 
-    public Output<ConnectorKafkaClusterEncryptionInTransitType> getEncryptionType() {
+    public Output<ConnectorKafkaClusterEncryptionInTransitType> encryptionType() {
         return this.encryptionType;
     }
 
@@ -29,7 +30,7 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
     }
 
     private ConnectorKafkaClusterEncryptionInTransitArgs() {
-        this.encryptionType = Output.empty();
+        this.encryptionType = Codegen.empty();
     }
 
     public static Builder builder() {

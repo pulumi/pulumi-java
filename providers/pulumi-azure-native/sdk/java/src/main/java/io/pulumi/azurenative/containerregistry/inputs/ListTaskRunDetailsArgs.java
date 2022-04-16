@@ -19,7 +19,7 @@ public final class ListTaskRunDetailsArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -30,7 +30,7 @@ public final class ListTaskRunDetailsArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListTaskRunDetailsArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="taskRunName", required=true)
       private final String taskRunName;
 
-    public String getTaskRunName() {
+    public String taskRunName() {
         return this.taskRunName;
     }
 

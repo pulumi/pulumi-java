@@ -6,6 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.ResourceServerScopeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
-    public Output<String> getIdentifier() {
-        return this.identifier == null ? Output.empty() : this.identifier;
+    public Output<String> identifier() {
+        return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="scopeIdentifiers")
       private final @Nullable Output<List<String>> scopeIdentifiers;
 
-    public Output<List<String>> getScopeIdentifiers() {
-        return this.scopeIdentifiers == null ? Output.empty() : this.scopeIdentifiers;
+    public Output<List<String>> scopeIdentifiers() {
+        return this.scopeIdentifiers == null ? Codegen.empty() : this.scopeIdentifiers;
     }
 
     /**
@@ -56,15 +57,15 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="scopes")
       private final @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
 
-    public Output<List<ResourceServerScopeGetArgs>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+    public Output<List<ResourceServerScopeGetArgs>> scopes() {
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
-        return this.userPoolId == null ? Output.empty() : this.userPoolId;
+    public Output<String> userPoolId() {
+        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
     }
 
     public ResourceServerState(
@@ -81,11 +82,11 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ResourceServerState() {
-        this.identifier = Output.empty();
-        this.name = Output.empty();
-        this.scopeIdentifiers = Output.empty();
-        this.scopes = Output.empty();
-        this.userPoolId = Output.empty();
+        this.identifier = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scopeIdentifiers = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Output.ofNullable(identifier);
+            this.identifier = Codegen.ofNullable(identifier);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -129,7 +130,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder scopeIdentifiers(@Nullable Output<List<String>> scopeIdentifiers) {
@@ -137,7 +138,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scopeIdentifiers(@Nullable List<String> scopeIdentifiers) {
-            this.scopeIdentifiers = Output.ofNullable(scopeIdentifiers);
+            this.scopeIdentifiers = Codegen.ofNullable(scopeIdentifiers);
             return this;
         }
         public Builder scopeIdentifiers(String... scopeIdentifiers) {
@@ -148,7 +149,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scopes(@Nullable List<ResourceServerScopeGetArgs> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(ResourceServerScopeGetArgs... scopes) {
@@ -159,7 +160,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Output.ofNullable(userPoolId);
+            this.userPoolId = Codegen.ofNullable(userPoolId);
             return this;
         }        public ResourceServerState build() {
             return new ResourceServerState(identifier, name, scopeIdentifiers, scopes, userPoolId);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleTableArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oracleTables")
       private final @Nullable Output<List<OracleTableArgs>> oracleTables;
 
-    public Output<List<OracleTableArgs>> getOracleTables() {
-        return this.oracleTables == null ? Output.empty() : this.oracleTables;
+    public Output<List<OracleTableArgs>> oracleTables() {
+        return this.oracleTables == null ? Codegen.empty() : this.oracleTables;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
-        return this.schemaName == null ? Output.empty() : this.schemaName;
+    public Output<String> schemaName() {
+        return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 
     public OracleSchemaArgs(
@@ -50,8 +51,8 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OracleSchemaArgs() {
-        this.oracleTables = Output.empty();
-        this.schemaName = Output.empty();
+        this.oracleTables = Codegen.empty();
+        this.schemaName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oracleTables(@Nullable List<OracleTableArgs> oracleTables) {
-            this.oracleTables = Output.ofNullable(oracleTables);
+            this.oracleTables = Codegen.ofNullable(oracleTables);
             return this;
         }
         public Builder oracleTables(OracleTableArgs... oracleTables) {
@@ -92,7 +93,7 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Output.ofNullable(schemaName);
+            this.schemaName = Codegen.ofNullable(schemaName);
             return this;
         }        public OracleSchemaArgs build() {
             return new OracleSchemaArgs(oracleTables, schemaName);

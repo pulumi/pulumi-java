@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return This message will be part of response in case of policy violation.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The display name of the policy assignment.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +75,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
      * 
      */
-    public Output</* @Nullable */ String> getEnforcementMode() {
+    public Output</* @Nullable */ String> enforcementMode() {
         return this.enforcementMode;
     }
     /**
@@ -88,7 +89,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The managed identity associated with the policy assignment.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -102,7 +103,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The location of the policy assignment. Only required when utilizing managed identity.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -116,7 +117,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -130,7 +131,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The name of the policy assignment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +145,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The messages that describe why a resource is non-compliant with the policy.
      * 
      */
-    public Output</* @Nullable */ List<NonComplianceMessageResponse>> getNonComplianceMessages() {
+    public Output</* @Nullable */ List<NonComplianceMessageResponse>> nonComplianceMessages() {
         return this.nonComplianceMessages;
     }
     /**
@@ -158,7 +159,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The policy's excluded scopes.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNotScopes() {
+    public Output</* @Nullable */ List<String>> notScopes() {
         return this.notScopes;
     }
     /**
@@ -172,7 +173,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The parameter values for the assigned policy rule. The keys are the parameter names.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterValuesValueResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,ParameterValuesValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -186,7 +187,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The ID of the policy definition or policy set definition being assigned.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyDefinitionId() {
+    public Output</* @Nullable */ String> policyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
@@ -200,7 +201,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The scope for the policy assignment.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -214,7 +215,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The type of the policy assignment.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -240,7 +241,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyAssignment(String name, PolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:PolicyAssignment", name, args == null ? PolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:PolicyAssignment", name, args == null ? PolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PolicyAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

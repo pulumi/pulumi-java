@@ -5,6 +5,7 @@ package io.pulumi.googlenative;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appendUserAgent")
       private final @Nullable Output<String> appendUserAgent;
 
-    public Output<String> getAppendUserAgent() {
-        return this.appendUserAgent == null ? Output.empty() : this.appendUserAgent;
+    public Output<String> appendUserAgent() {
+        return this.appendUserAgent == null ? Codegen.empty() : this.appendUserAgent;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disablePartnerName", json=true)
       private final @Nullable Output<Boolean> disablePartnerName;
 
-    public Output<Boolean> getDisablePartnerName() {
-        return this.disablePartnerName == null ? Output.empty() : this.disablePartnerName;
+    public Output<Boolean> disablePartnerName() {
+        return this.disablePartnerName == null ? Codegen.empty() : this.disablePartnerName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
-        return this.partnerName == null ? Output.empty() : this.partnerName;
+    public Output<String> partnerName() {
+        return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public ProviderArgs(
@@ -89,21 +90,21 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> project,
         @Nullable Output<String> region,
         @Nullable Output<String> zone) {
-        this.appendUserAgent = appendUserAgent == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_APPEND_USER_AGENT").orElse(null)) : appendUserAgent;
-        this.disablePartnerName = disablePartnerName == null ? Output.ofNullable(Utilities.getEnvBoolean("GOOGLE_DISABLE_PARTNER_NAME").orElse(null)) : disablePartnerName;
-        this.partnerName = partnerName == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_PARTNER_NAME").orElse(null)) : partnerName;
-        this.project = project == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
-        this.region = region == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
-        this.zone = zone == null ? Output.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
+        this.appendUserAgent = appendUserAgent == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_APPEND_USER_AGENT").orElse(null)) : appendUserAgent;
+        this.disablePartnerName = disablePartnerName == null ? Codegen.ofNullable(Utilities.getEnvBoolean("GOOGLE_DISABLE_PARTNER_NAME").orElse(null)) : disablePartnerName;
+        this.partnerName = partnerName == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_PARTNER_NAME").orElse(null)) : partnerName;
+        this.project = project == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").orElse(null)) : project;
+        this.region = region == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").orElse(null)) : region;
+        this.zone = zone == null ? Codegen.ofNullable(Utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").orElse(null)) : zone;
     }
 
     private ProviderArgs() {
-        this.appendUserAgent = Output.empty();
-        this.disablePartnerName = Output.empty();
-        this.partnerName = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.zone = Output.empty();
+        this.appendUserAgent = Codegen.empty();
+        this.disablePartnerName = Codegen.empty();
+        this.partnerName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appendUserAgent(@Nullable String appendUserAgent) {
-            this.appendUserAgent = Output.ofNullable(appendUserAgent);
+            this.appendUserAgent = Codegen.ofNullable(appendUserAgent);
             return this;
         }
         public Builder disablePartnerName(@Nullable Output<Boolean> disablePartnerName) {
@@ -149,7 +150,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disablePartnerName(@Nullable Boolean disablePartnerName) {
-            this.disablePartnerName = Output.ofNullable(disablePartnerName);
+            this.disablePartnerName = Codegen.ofNullable(disablePartnerName);
             return this;
         }
         public Builder partnerName(@Nullable Output<String> partnerName) {
@@ -157,7 +158,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Output.ofNullable(partnerName);
+            this.partnerName = Codegen.ofNullable(partnerName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -165,7 +166,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -173,7 +174,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -181,7 +182,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public ProviderArgs build() {
             return new ProviderArgs(appendUserAgent, disablePartnerName, partnerName, project, region, zone);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3outposts.inputs.BucketFilterAndOperatorArgs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketFilterTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="andOperator")
       private final @Nullable Output<BucketFilterAndOperatorArgs> andOperator;
 
-    public Output<BucketFilterAndOperatorArgs> getAndOperator() {
-        return this.andOperator == null ? Output.empty() : this.andOperator;
+    public Output<BucketFilterAndOperatorArgs> andOperator() {
+        return this.andOperator == null ? Codegen.empty() : this.andOperator;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="tag")
       private final @Nullable Output<BucketFilterTagArgs> tag;
 
-    public Output<BucketFilterTagArgs> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<BucketFilterTagArgs> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public BucketRuleFilterPropertiesArgs(
@@ -63,9 +64,9 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private BucketRuleFilterPropertiesArgs() {
-        this.andOperator = Output.empty();
-        this.prefix = Output.empty();
-        this.tag = Output.empty();
+        this.andOperator = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder andOperator(@Nullable BucketFilterAndOperatorArgs andOperator) {
-            this.andOperator = Output.ofNullable(andOperator);
+            this.andOperator = Codegen.ofNullable(andOperator);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -105,7 +106,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder tag(@Nullable Output<BucketFilterTagArgs> tag) {
@@ -113,7 +114,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder tag(@Nullable BucketFilterTagArgs tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public BucketRuleFilterPropertiesArgs build() {
             return new BucketRuleFilterPropertiesArgs(andOperator, prefix, tag);

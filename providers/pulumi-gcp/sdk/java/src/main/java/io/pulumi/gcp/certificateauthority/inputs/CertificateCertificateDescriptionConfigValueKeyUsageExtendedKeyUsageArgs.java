@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
     @Import(name="clientAuth")
       private final @Nullable Output<Boolean> clientAuth;
 
-    public Output<Boolean> getClientAuth() {
-        return this.clientAuth == null ? Output.empty() : this.clientAuth;
+    public Output<Boolean> clientAuth() {
+        return this.clientAuth == null ? Codegen.empty() : this.clientAuth;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
     @Import(name="codeSigning")
       private final @Nullable Output<Boolean> codeSigning;
 
-    public Output<Boolean> getCodeSigning() {
-        return this.codeSigning == null ? Output.empty() : this.codeSigning;
+    public Output<Boolean> codeSigning() {
+        return this.codeSigning == null ? Codegen.empty() : this.codeSigning;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
     @Import(name="emailProtection")
       private final @Nullable Output<Boolean> emailProtection;
 
-    public Output<Boolean> getEmailProtection() {
-        return this.emailProtection == null ? Output.empty() : this.emailProtection;
+    public Output<Boolean> emailProtection() {
+        return this.emailProtection == null ? Codegen.empty() : this.emailProtection;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
     @Import(name="ocspSigning")
       private final @Nullable Output<Boolean> ocspSigning;
 
-    public Output<Boolean> getOcspSigning() {
-        return this.ocspSigning == null ? Output.empty() : this.ocspSigning;
+    public Output<Boolean> ocspSigning() {
+        return this.ocspSigning == null ? Codegen.empty() : this.ocspSigning;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
     @Import(name="serverAuth")
       private final @Nullable Output<Boolean> serverAuth;
 
-    public Output<Boolean> getServerAuth() {
-        return this.serverAuth == null ? Output.empty() : this.serverAuth;
+    public Output<Boolean> serverAuth() {
+        return this.serverAuth == null ? Codegen.empty() : this.serverAuth;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
     @Import(name="timeStamping")
       private final @Nullable Output<Boolean> timeStamping;
 
-    public Output<Boolean> getTimeStamping() {
-        return this.timeStamping == null ? Output.empty() : this.timeStamping;
+    public Output<Boolean> timeStamping() {
+        return this.timeStamping == null ? Codegen.empty() : this.timeStamping;
     }
 
     public CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs(
@@ -96,12 +97,12 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
     }
 
     private CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs() {
-        this.clientAuth = Output.empty();
-        this.codeSigning = Output.empty();
-        this.emailProtection = Output.empty();
-        this.ocspSigning = Output.empty();
-        this.serverAuth = Output.empty();
-        this.timeStamping = Output.empty();
+        this.clientAuth = Codegen.empty();
+        this.codeSigning = Codegen.empty();
+        this.emailProtection = Codegen.empty();
+        this.ocspSigning = Codegen.empty();
+        this.serverAuth = Codegen.empty();
+        this.timeStamping = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
             return this;
         }
         public Builder clientAuth(@Nullable Boolean clientAuth) {
-            this.clientAuth = Output.ofNullable(clientAuth);
+            this.clientAuth = Codegen.ofNullable(clientAuth);
             return this;
         }
         public Builder codeSigning(@Nullable Output<Boolean> codeSigning) {
@@ -147,7 +148,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
             return this;
         }
         public Builder codeSigning(@Nullable Boolean codeSigning) {
-            this.codeSigning = Output.ofNullable(codeSigning);
+            this.codeSigning = Codegen.ofNullable(codeSigning);
             return this;
         }
         public Builder emailProtection(@Nullable Output<Boolean> emailProtection) {
@@ -155,7 +156,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
             return this;
         }
         public Builder emailProtection(@Nullable Boolean emailProtection) {
-            this.emailProtection = Output.ofNullable(emailProtection);
+            this.emailProtection = Codegen.ofNullable(emailProtection);
             return this;
         }
         public Builder ocspSigning(@Nullable Output<Boolean> ocspSigning) {
@@ -163,7 +164,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
             return this;
         }
         public Builder ocspSigning(@Nullable Boolean ocspSigning) {
-            this.ocspSigning = Output.ofNullable(ocspSigning);
+            this.ocspSigning = Codegen.ofNullable(ocspSigning);
             return this;
         }
         public Builder serverAuth(@Nullable Output<Boolean> serverAuth) {
@@ -171,7 +172,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
             return this;
         }
         public Builder serverAuth(@Nullable Boolean serverAuth) {
-            this.serverAuth = Output.ofNullable(serverAuth);
+            this.serverAuth = Codegen.ofNullable(serverAuth);
             return this;
         }
         public Builder timeStamping(@Nullable Output<Boolean> timeStamping) {
@@ -179,7 +180,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageExtendedK
             return this;
         }
         public Builder timeStamping(@Nullable Boolean timeStamping) {
-            this.timeStamping = Output.ofNullable(timeStamping);
+            this.timeStamping = Codegen.ofNullable(timeStamping);
             return this;
         }        public CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);

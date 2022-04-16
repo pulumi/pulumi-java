@@ -26,7 +26,7 @@ public final class ConnectionMonitorSourceResponse extends io.pulumi.resources.I
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -37,7 +37,7 @@ public final class ConnectionMonitorSourceResponse extends io.pulumi.resources.I
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

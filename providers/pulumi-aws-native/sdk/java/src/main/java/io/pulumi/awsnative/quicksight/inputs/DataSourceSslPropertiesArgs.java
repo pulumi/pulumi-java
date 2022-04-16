@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="disableSsl")
       private final @Nullable Output<Boolean> disableSsl;
 
-    public Output<Boolean> getDisableSsl() {
-        return this.disableSsl == null ? Output.empty() : this.disableSsl;
+    public Output<Boolean> disableSsl() {
+        return this.disableSsl == null ? Codegen.empty() : this.disableSsl;
     }
 
     public DataSourceSslPropertiesArgs(@Nullable Output<Boolean> disableSsl) {
@@ -35,7 +36,7 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private DataSourceSslPropertiesArgs() {
-        this.disableSsl = Output.empty();
+        this.disableSsl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder disableSsl(@Nullable Boolean disableSsl) {
-            this.disableSsl = Output.ofNullable(disableSsl);
+            this.disableSsl = Codegen.ofNullable(disableSsl);
             return this;
         }        public DataSourceSslPropertiesArgs build() {
             return new DataSourceSslPropertiesArgs(disableSsl);

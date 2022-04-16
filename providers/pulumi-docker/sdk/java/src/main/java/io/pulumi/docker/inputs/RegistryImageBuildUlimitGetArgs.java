@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,21 +18,21 @@ public final class RegistryImageBuildUlimitGetArgs extends io.pulumi.resources.R
     @Import(name="hard", required=true)
       private final Output<Integer> hard;
 
-    public Output<Integer> getHard() {
+    public Output<Integer> hard() {
         return this.hard;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="soft", required=true)
       private final Output<Integer> soft;
 
-    public Output<Integer> getSoft() {
+    public Output<Integer> soft() {
         return this.soft;
     }
 
@@ -45,9 +46,9 @@ public final class RegistryImageBuildUlimitGetArgs extends io.pulumi.resources.R
     }
 
     private RegistryImageBuildUlimitGetArgs() {
-        this.hard = Output.empty();
-        this.name = Output.empty();
-        this.soft = Output.empty();
+        this.hard = Codegen.empty();
+        this.name = Codegen.empty();
+        this.soft = Codegen.empty();
     }
 
     public static Builder builder() {

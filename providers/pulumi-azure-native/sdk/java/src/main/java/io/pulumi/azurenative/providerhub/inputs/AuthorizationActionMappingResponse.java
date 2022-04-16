@@ -17,14 +17,14 @@ public final class AuthorizationActionMappingResponse extends io.pulumi.resource
     @Import(name="desired")
       private final @Nullable String desired;
 
-    public Optional<String> getDesired() {
+    public Optional<String> desired() {
         return this.desired == null ? Optional.empty() : Optional.ofNullable(this.desired);
     }
 
     @Import(name="original")
       private final @Nullable String original;
 
-    public Optional<String> getOriginal() {
+    public Optional<String> original() {
         return this.original == null ? Optional.empty() : Optional.ofNullable(this.original);
     }
 

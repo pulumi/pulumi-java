@@ -5,6 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,8 +33,8 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     @Import(name="resourceValue")
       private final @Nullable Output<String> resourceValue;
 
-    public Output<String> getResourceValue() {
-        return this.resourceValue == null ? Output.empty() : this.resourceValue;
+    public Output<String> resourceValue() {
+        return this.resourceValue == null ? Codegen.empty() : this.resourceValue;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     @Import(name="staticValue")
       private final @Nullable Output<String> staticValue;
 
-    public Output<String> getStaticValue() {
-        return this.staticValue == null ? Output.empty() : this.staticValue;
+    public Output<String> staticValue() {
+        return this.staticValue == null ? Codegen.empty() : this.staticValue;
     }
 
     public RemediationConfigurationParameterGetArgs(
@@ -57,9 +58,9 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     }
 
     private RemediationConfigurationParameterGetArgs() {
-        this.name = Output.empty();
-        this.resourceValue = Output.empty();
-        this.staticValue = Output.empty();
+        this.name = Codegen.empty();
+        this.resourceValue = Codegen.empty();
+        this.staticValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
             return this;
         }
         public Builder resourceValue(@Nullable String resourceValue) {
-            this.resourceValue = Output.ofNullable(resourceValue);
+            this.resourceValue = Codegen.ofNullable(resourceValue);
             return this;
         }
         public Builder staticValue(@Nullable Output<String> staticValue) {
@@ -107,7 +108,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
             return this;
         }
         public Builder staticValue(@Nullable String staticValue) {
-            this.staticValue = Output.ofNullable(staticValue);
+            this.staticValue = Codegen.ofNullable(staticValue);
             return this;
         }        public RemediationConfigurationParameterGetArgs build() {
             return new RemediationConfigurationParameterGetArgs(name, resourceValue, staticValue);

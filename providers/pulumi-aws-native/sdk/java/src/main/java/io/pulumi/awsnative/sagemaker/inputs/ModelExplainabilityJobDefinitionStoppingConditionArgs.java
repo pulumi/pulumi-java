@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ModelExplainabilityJobDefinitionStoppingConditionArgs extends
     @Import(name="maxRuntimeInSeconds", required=true)
       private final Output<Integer> maxRuntimeInSeconds;
 
-    public Output<Integer> getMaxRuntimeInSeconds() {
+    public Output<Integer> maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
 
@@ -33,7 +34,7 @@ public final class ModelExplainabilityJobDefinitionStoppingConditionArgs extends
     }
 
     private ModelExplainabilityJobDefinitionStoppingConditionArgs() {
-        this.maxRuntimeInSeconds = Output.empty();
+        this.maxRuntimeInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {

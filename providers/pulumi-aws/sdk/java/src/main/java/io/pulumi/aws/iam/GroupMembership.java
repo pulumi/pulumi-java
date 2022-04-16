@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.GroupMembershipState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The IAM Group name to attach the list of `users` to
      * 
      */
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
     /**
@@ -53,7 +54,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The name to identify the Group Membership
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -67,7 +68,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return A list of IAM User names to associate with the Group
      * 
      */
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users;
     }
 
@@ -93,7 +94,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GroupMembership(String name, GroupMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/groupMembership:GroupMembership", name, args == null ? GroupMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/groupMembership:GroupMembership", name, args == null ? GroupMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GroupMembership(String name, Output<String> id, @Nullable GroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

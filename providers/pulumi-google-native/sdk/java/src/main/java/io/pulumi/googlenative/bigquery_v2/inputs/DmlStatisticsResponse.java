@@ -19,7 +19,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="deletedRowCount", required=true)
       private final String deletedRowCount;
 
-    public String getDeletedRowCount() {
+    public String deletedRowCount() {
         return this.deletedRowCount;
     }
 
@@ -30,7 +30,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="insertedRowCount", required=true)
       private final String insertedRowCount;
 
-    public String getInsertedRowCount() {
+    public String insertedRowCount() {
         return this.insertedRowCount;
     }
 
@@ -41,7 +41,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="updatedRowCount", required=true)
       private final String updatedRowCount;
 
-    public String getUpdatedRowCount() {
+    public String updatedRowCount() {
         return this.updatedRowCount;
     }
 

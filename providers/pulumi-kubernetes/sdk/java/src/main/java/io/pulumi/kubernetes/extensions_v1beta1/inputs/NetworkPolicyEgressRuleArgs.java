@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPeerArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPortArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
     @Import(name="ports")
       private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
-    public Output<List<NetworkPolicyPortArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<NetworkPolicyPortArgs>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
     @Import(name="to")
       private final @Nullable Output<List<NetworkPolicyPeerArgs>> to;
 
-    public Output<List<NetworkPolicyPeerArgs>> getTo() {
-        return this.to == null ? Output.empty() : this.to;
+    public Output<List<NetworkPolicyPeerArgs>> to() {
+        return this.to == null ? Codegen.empty() : this.to;
     }
 
     public NetworkPolicyEgressRuleArgs(
@@ -50,8 +51,8 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
     }
 
     private NetworkPolicyEgressRuleArgs() {
-        this.ports = Output.empty();
-        this.to = Output.empty();
+        this.ports = Codegen.empty();
+        this.to = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ports(@Nullable List<NetworkPolicyPortArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(NetworkPolicyPortArgs... ports) {
@@ -92,7 +93,7 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder to(@Nullable List<NetworkPolicyPeerArgs> to) {
-            this.to = Output.ofNullable(to);
+            this.to = Codegen.ofNullable(to);
             return this;
         }
         public Builder to(NetworkPolicyPeerArgs... to) {

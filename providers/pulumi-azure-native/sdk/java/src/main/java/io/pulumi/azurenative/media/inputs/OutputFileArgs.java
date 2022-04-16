@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels", required=true)
       private final Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels;
     }
 
@@ -34,7 +35,7 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OutputFileArgs() {
-        this.labels = Output.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.codestarconnections;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostArn")
       private final @Nullable Output<String> hostArn;
 
-    public Output<String> getHostArn() {
-        return this.hostArn == null ? Output.empty() : this.hostArn;
+    public Output<String> hostArn() {
+        return this.hostArn == null ? Codegen.empty() : this.hostArn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
-    public Output<String> getProviderType() {
-        return this.providerType == null ? Output.empty() : this.providerType;
+    public Output<String> providerType() {
+        return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ConnectionArgs(
@@ -71,10 +72,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.hostArn = Output.empty();
-        this.name = Output.empty();
-        this.providerType = Output.empty();
-        this.tags = Output.empty();
+        this.hostArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostArn(@Nullable String hostArn) {
-            this.hostArn = Output.ofNullable(hostArn);
+            this.hostArn = Codegen.ofNullable(hostArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -116,7 +117,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder providerType(@Nullable Output<String> providerType) {
@@ -124,7 +125,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Output.ofNullable(providerType);
+            this.providerType = Codegen.ofNullable(providerType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -132,7 +133,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ConnectionArgs build() {
             return new ConnectionArgs(hostArn, name, providerType, tags);

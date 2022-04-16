@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return Gateway which to connect segment to.
      * 
      */
-    public Output</* @Nullable */ String> getConnectedGateway() {
+    public Output</* @Nullable */ String> connectedGateway() {
         return this.connectedGateway;
     }
     /**
@@ -58,7 +59,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return Display name of the segment.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +73,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return Port Vif which segment is associated with.
      * 
      */
-    public Output<List<WorkloadNetworkSegmentPortVifResponse>> getPortVif() {
+    public Output<List<WorkloadNetworkSegmentPortVifResponse>> portVif() {
         return this.portVif;
     }
     /**
@@ -100,7 +101,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return The provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> getRevision() {
+    public Output</* @Nullable */ Double> revision() {
         return this.revision;
     }
     /**
@@ -128,7 +129,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return Segment status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -142,7 +143,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return Subnet which to connect segment to.
      * 
      */
-    public Output</* @Nullable */ WorkloadNetworkSegmentSubnetResponse> getSubnet() {
+    public Output</* @Nullable */ WorkloadNetworkSegmentSubnetResponse> subnet() {
         return this.subnet;
     }
     /**
@@ -156,7 +157,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkloadNetworkSegment(String name, WorkloadNetworkSegmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:avs:WorkloadNetworkSegment", name, args == null ? WorkloadNetworkSegmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:avs:WorkloadNetworkSegment", name, args == null ? WorkloadNetworkSegmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkloadNetworkSegment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

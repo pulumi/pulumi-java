@@ -10,6 +10,7 @@ import io.pulumi.aws.chime.outputs.VoiceConnectorGroupConnector;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class VoiceConnectorGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Chime Voice Connectors to route inbound calls to.
      * 
      */
-    public Output</* @Nullable */ List<VoiceConnectorGroupConnector>> getConnectors() {
+    public Output</* @Nullable */ List<VoiceConnectorGroupConnector>> connectors() {
         return this.connectors;
     }
     /**
@@ -57,7 +58,7 @@ public class VoiceConnectorGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the Amazon Chime Voice Connector group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -83,7 +84,7 @@ public class VoiceConnectorGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VoiceConnectorGroup(String name, @Nullable VoiceConnectorGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:chime/voiceConnectorGroup:VoiceConnectorGroup", name, args == null ? VoiceConnectorGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:chime/voiceConnectorGroup:VoiceConnectorGroup", name, args == null ? VoiceConnectorGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VoiceConnectorGroup(String name, Output<String> id, @Nullable VoiceConnectorGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

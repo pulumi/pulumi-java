@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +50,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -63,7 +64,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -77,7 +78,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +92,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return Service properties
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -105,7 +106,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return The sku of the workspace.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -119,7 +120,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -133,7 +134,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -147,7 +148,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -173,7 +174,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AKSService(String name, AKSServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:AKSService", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningservices:AKSService", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AKSService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

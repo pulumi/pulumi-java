@@ -11,6 +11,7 @@ import io.pulumi.aws.ec2.outputs.PeeringConnectionOptionsRequester;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -54,7 +55,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * the peering connection (a maximum of one).
      * 
      */
-    public Output<PeeringConnectionOptionsAccepter> getAccepter() {
+    public Output<PeeringConnectionOptionsAccepter> accepter() {
         return this.accepter;
     }
     /**
@@ -72,7 +73,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * the peering connection (a maximum of one).
      * 
      */
-    public Output<PeeringConnectionOptionsRequester> getRequester() {
+    public Output<PeeringConnectionOptionsRequester> requester() {
         return this.requester;
     }
     /**
@@ -86,7 +87,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * @return The ID of the requester VPC peering connection.
      * 
      */
-    public Output<String> getVpcPeeringConnectionId() {
+    public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 
@@ -112,7 +113,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public PeeringConnectionOptions(String name, PeeringConnectionOptionsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/peeringConnectionOptions:PeeringConnectionOptions", name, args == null ? PeeringConnectionOptionsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/peeringConnectionOptions:PeeringConnectionOptions", name, args == null ? PeeringConnectionOptionsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PeeringConnectionOptions(String name, Output<String> id, @Nullable PeeringConnectionOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

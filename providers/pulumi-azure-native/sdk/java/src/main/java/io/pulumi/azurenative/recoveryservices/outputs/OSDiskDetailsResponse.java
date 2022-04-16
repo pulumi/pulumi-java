@@ -41,21 +41,21 @@ public final class OSDiskDetailsResponse {
      * The type of the OS on the VM.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The id of the disk containing the OS.
      * 
     */
-    public Optional<String> getOsVhdId() {
+    public Optional<String> osVhdId() {
         return Optional.ofNullable(this.osVhdId);
     }
     /**
      * The OS disk VHD name.
      * 
     */
-    public Optional<String> getVhdName() {
+    public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
 

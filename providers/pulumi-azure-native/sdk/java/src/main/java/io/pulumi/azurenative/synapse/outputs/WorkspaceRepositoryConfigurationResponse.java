@@ -83,63 +83,63 @@ public final class WorkspaceRepositoryConfigurationResponse {
      * Account name
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Collaboration branch
      * 
     */
-    public Optional<String> getCollaborationBranch() {
+    public Optional<String> collaborationBranch() {
         return Optional.ofNullable(this.collaborationBranch);
     }
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
     */
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * The last commit ID
      * 
     */
-    public Optional<String> getLastCommitId() {
+    public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
      * VSTS project name
      * 
     */
-    public Optional<String> getProjectName() {
+    public Optional<String> projectName() {
         return Optional.ofNullable(this.projectName);
     }
     /**
      * Repository name
      * 
     */
-    public Optional<String> getRepositoryName() {
+    public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
      * Root folder to use in the repository
      * 
     */
-    public Optional<String> getRootFolder() {
+    public Optional<String> rootFolder() {
         return Optional.ofNullable(this.rootFolder);
     }
     /**
      * The VSTS tenant ID
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

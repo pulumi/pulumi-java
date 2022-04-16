@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectIdPath", required=true)
       private final Output<List<Integer>> objectIdPath;
 
-    public Output<List<Integer>> getObjectIdPath() {
+    public Output<List<Integer>> objectIdPath() {
         return this.objectIdPath;
     }
 
@@ -34,7 +35,7 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectIdArgs() {
-        this.objectIdPath = Output.empty();
+        this.objectIdPath = Codegen.empty();
     }
 
     public static Builder builder() {

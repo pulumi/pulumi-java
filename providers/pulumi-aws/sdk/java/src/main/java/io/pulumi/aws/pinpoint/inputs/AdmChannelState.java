@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<String> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public AdmChannelState(
@@ -71,10 +72,10 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AdmChannelState() {
-        this.applicationId = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.enabled = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -116,7 +117,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -124,7 +125,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -132,7 +133,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public AdmChannelState build() {
             return new AdmChannelState(applicationId, clientId, clientSecret, enabled);

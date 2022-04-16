@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sasUri", required=true)
       private final Output<String> sasUri;
 
-    public Output<String> getSasUri() {
+    public Output<String> sasUri() {
         return this.sasUri;
     }
 
@@ -33,7 +34,7 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BlobShareArgs() {
-        this.sasUri = Output.empty();
+        this.sasUri = Codegen.empty();
     }
 
     public static Builder builder() {

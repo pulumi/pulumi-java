@@ -6,6 +6,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 import io.pulumi.awsnative.inspectorv2.enums.FilterStringComparison;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +18,14 @@ public final class FilterStringFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="comparison", required=true)
       private final Output<FilterStringComparison> comparison;
 
-    public Output<FilterStringComparison> getComparison() {
+    public Output<FilterStringComparison> comparison() {
         return this.comparison;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -36,8 +37,8 @@ public final class FilterStringFilterArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FilterStringFilterArgs() {
-        this.comparison = Output.empty();
-        this.value = Output.empty();
+        this.comparison = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

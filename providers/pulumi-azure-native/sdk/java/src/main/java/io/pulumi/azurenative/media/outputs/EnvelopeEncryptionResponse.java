@@ -52,28 +52,28 @@ public final class EnvelopeEncryptionResponse {
      * Representing which tracks should not be encrypted
      * 
     */
-    public List<TrackSelectionResponse> getClearTracks() {
+    public List<TrackSelectionResponse> clearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
     }
     /**
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
      * 
     */
-    public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
+    public Optional<StreamingPolicyContentKeysResponse> contentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
     /**
      * Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
      * 
     */
-    public Optional<String> getCustomKeyAcquisitionUrlTemplate() {
+    public Optional<String> customKeyAcquisitionUrlTemplate() {
         return Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
     }
     /**
      * Representing supported protocols
      * 
     */
-    public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
+    public Optional<EnabledProtocolsResponse> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<String>> cidrBlocks;
 
-    public Output<List<String>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
+    public Output<List<String>> cidrBlocks() {
+        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
@@ -57,8 +58,8 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="ipv6CidrBlocks")
       private final @Nullable Output<List<String>> ipv6CidrBlocks;
 
-    public Output<List<String>> getIpv6CidrBlocks() {
-        return this.ipv6CidrBlocks == null ? Output.empty() : this.ipv6CidrBlocks;
+    public Output<List<String>> ipv6CidrBlocks() {
+        return this.ipv6CidrBlocks == null ? Codegen.empty() : this.ipv6CidrBlocks;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="prefixListIds")
       private final @Nullable Output<List<String>> prefixListIds;
 
-    public Output<List<String>> getPrefixListIds() {
-        return this.prefixListIds == null ? Output.empty() : this.prefixListIds;
+    public Output<List<String>> prefixListIds() {
+        return this.prefixListIds == null ? Codegen.empty() : this.prefixListIds;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -90,8 +91,8 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+    public Output<List<String>> securityGroups() {
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="self")
       private final @Nullable Output<Boolean> self;
 
-    public Output<Boolean> getSelf() {
-        return this.self == null ? Output.empty() : this.self;
+    public Output<Boolean> self() {
+        return this.self == null ? Codegen.empty() : this.self;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort;
     }
 
@@ -138,15 +139,15 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
     }
 
     private DefaultSecurityGroupEgressArgs() {
-        this.cidrBlocks = Output.empty();
-        this.description = Output.empty();
-        this.fromPort = Output.empty();
-        this.ipv6CidrBlocks = Output.empty();
-        this.prefixListIds = Output.empty();
-        this.protocol = Output.empty();
-        this.securityGroups = Output.empty();
-        this.self = Output.empty();
-        this.toPort = Output.empty();
+        this.cidrBlocks = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fromPort = Codegen.empty();
+        this.ipv6CidrBlocks = Codegen.empty();
+        this.prefixListIds = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.self = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
-            this.cidrBlocks = Output.ofNullable(cidrBlocks);
+            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
             return this;
         }
         public Builder cidrBlocks(String... cidrBlocks) {
@@ -201,7 +202,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fromPort(Output<Integer> fromPort) {
@@ -217,7 +218,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = Output.ofNullable(ipv6CidrBlocks);
+            this.ipv6CidrBlocks = Codegen.ofNullable(ipv6CidrBlocks);
             return this;
         }
         public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
@@ -228,7 +229,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder prefixListIds(@Nullable List<String> prefixListIds) {
-            this.prefixListIds = Output.ofNullable(prefixListIds);
+            this.prefixListIds = Codegen.ofNullable(prefixListIds);
             return this;
         }
         public Builder prefixListIds(String... prefixListIds) {
@@ -247,7 +248,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -258,7 +259,7 @@ public final class DefaultSecurityGroupEgressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder self(@Nullable Boolean self) {
-            this.self = Output.ofNullable(self);
+            this.self = Codegen.ofNullable(self);
             return this;
         }
         public Builder toPort(Output<Integer> toPort) {

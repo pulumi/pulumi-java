@@ -6,6 +6,7 @@ package io.pulumi.aws.codebuild.inputs;
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="branchFilter")
       private final @Nullable Output<String> branchFilter;
 
-    public Output<String> getBranchFilter() {
-        return this.branchFilter == null ? Output.empty() : this.branchFilter;
+    public Output<String> branchFilter() {
+        return this.branchFilter == null ? Codegen.empty() : this.branchFilter;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildType")
       private final @Nullable Output<String> buildType;
 
-    public Output<String> getBuildType() {
-        return this.buildType == null ? Output.empty() : this.buildType;
+    public Output<String> buildType() {
+        return this.buildType == null ? Codegen.empty() : this.buildType;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterGroups")
       private final @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
 
-    public Output<List<WebhookFilterGroupGetArgs>> getFilterGroups() {
-        return this.filterGroups == null ? Output.empty() : this.filterGroups;
+    public Output<List<WebhookFilterGroupGetArgs>> filterGroups() {
+        return this.filterGroups == null ? Codegen.empty() : this.filterGroups;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="payloadUrl")
       private final @Nullable Output<String> payloadUrl;
 
-    public Output<String> getPayloadUrl() {
-        return this.payloadUrl == null ? Output.empty() : this.payloadUrl;
+    public Output<String> payloadUrl() {
+        return this.payloadUrl == null ? Codegen.empty() : this.payloadUrl;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
-        return this.projectName == null ? Output.empty() : this.projectName;
+    public Output<String> projectName() {
+        return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<String> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public WebhookState(
@@ -111,13 +112,13 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookState() {
-        this.branchFilter = Output.empty();
-        this.buildType = Output.empty();
-        this.filterGroups = Output.empty();
-        this.payloadUrl = Output.empty();
-        this.projectName = Output.empty();
-        this.secret = Output.empty();
-        this.url = Output.empty();
+        this.branchFilter = Codegen.empty();
+        this.buildType = Codegen.empty();
+        this.filterGroups = Codegen.empty();
+        this.payloadUrl = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branchFilter(@Nullable String branchFilter) {
-            this.branchFilter = Output.ofNullable(branchFilter);
+            this.branchFilter = Codegen.ofNullable(branchFilter);
             return this;
         }
         public Builder buildType(@Nullable Output<String> buildType) {
@@ -165,7 +166,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildType(@Nullable String buildType) {
-            this.buildType = Output.ofNullable(buildType);
+            this.buildType = Codegen.ofNullable(buildType);
             return this;
         }
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups) {
@@ -173,7 +174,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterGroups(@Nullable List<WebhookFilterGroupGetArgs> filterGroups) {
-            this.filterGroups = Output.ofNullable(filterGroups);
+            this.filterGroups = Codegen.ofNullable(filterGroups);
             return this;
         }
         public Builder filterGroups(WebhookFilterGroupGetArgs... filterGroups) {
@@ -184,7 +185,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder payloadUrl(@Nullable String payloadUrl) {
-            this.payloadUrl = Output.ofNullable(payloadUrl);
+            this.payloadUrl = Codegen.ofNullable(payloadUrl);
             return this;
         }
         public Builder projectName(@Nullable Output<String> projectName) {
@@ -192,7 +193,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Output.ofNullable(projectName);
+            this.projectName = Codegen.ofNullable(projectName);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -200,7 +201,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -208,7 +209,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public WebhookState build() {
             return new WebhookState(branchFilter, buildType, filterGroups, payloadUrl, projectName, secret, url);

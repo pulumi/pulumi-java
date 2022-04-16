@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2KindExpressionResponse {
      * The name of the kind.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -54,37 +54,37 @@ public final class NetworkInsightsAnalysisPathComponent {
         this.vpc = vpc;
     }
 
-    public Optional<NetworkInsightsAnalysisAnalysisAclRule> getAclRule() {
+    public Optional<NetworkInsightsAnalysisAnalysisAclRule> aclRule() {
         return Optional.ofNullable(this.aclRule);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getComponent() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> component() {
         return Optional.ofNullable(this.component);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getDestinationVpc() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> destinationVpc() {
         return Optional.ofNullable(this.destinationVpc);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> getInboundHeader() {
+    public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> inboundHeader() {
         return Optional.ofNullable(this.inboundHeader);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> getOutboundHeader() {
+    public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> outboundHeader() {
         return Optional.ofNullable(this.outboundHeader);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisRouteTableRoute> getRouteTableRoute() {
+    public Optional<NetworkInsightsAnalysisAnalysisRouteTableRoute> routeTableRoute() {
         return Optional.ofNullable(this.routeTableRoute);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisSecurityGroupRule> getSecurityGroupRule() {
+    public Optional<NetworkInsightsAnalysisAnalysisSecurityGroupRule> securityGroupRule() {
         return Optional.ofNullable(this.securityGroupRule);
     }
-    public Optional<Integer> getSequenceNumber() {
+    public Optional<Integer> sequenceNumber() {
         return Optional.ofNullable(this.sequenceNumber);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getSourceVpc() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> sourceVpc() {
         return Optional.ofNullable(this.sourceVpc);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getSubnet() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> subnet() {
         return Optional.ofNullable(this.subnet);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpc() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> vpc() {
         return Optional.ofNullable(this.vpc);
     }
 

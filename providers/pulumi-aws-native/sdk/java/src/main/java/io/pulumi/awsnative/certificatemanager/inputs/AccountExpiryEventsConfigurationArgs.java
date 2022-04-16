@@ -5,6 +5,7 @@ package io.pulumi.awsnative.certificatemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     @Import(name="daysBeforeExpiry")
       private final @Nullable Output<Integer> daysBeforeExpiry;
 
-    public Output<Integer> getDaysBeforeExpiry() {
-        return this.daysBeforeExpiry == null ? Output.empty() : this.daysBeforeExpiry;
+    public Output<Integer> daysBeforeExpiry() {
+        return this.daysBeforeExpiry == null ? Codegen.empty() : this.daysBeforeExpiry;
     }
 
     public AccountExpiryEventsConfigurationArgs(@Nullable Output<Integer> daysBeforeExpiry) {
@@ -26,7 +27,7 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     }
 
     private AccountExpiryEventsConfigurationArgs() {
-        this.daysBeforeExpiry = Output.empty();
+        this.daysBeforeExpiry = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder daysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
-            this.daysBeforeExpiry = Output.ofNullable(daysBeforeExpiry);
+            this.daysBeforeExpiry = Codegen.ofNullable(daysBeforeExpiry);
             return this;
         }        public AccountExpiryEventsConfigurationArgs build() {
             return new AccountExpiryEventsConfigurationArgs(daysBeforeExpiry);

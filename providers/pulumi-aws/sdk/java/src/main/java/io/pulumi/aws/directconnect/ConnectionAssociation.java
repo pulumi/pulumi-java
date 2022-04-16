@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.ConnectionAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class ConnectionAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the connection.
      * 
      */
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -45,7 +46,7 @@ public class ConnectionAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the LAG with which to associate the connection.
      * 
      */
-    public Output<String> getLagId() {
+    public Output<String> lagId() {
         return this.lagId;
     }
 
@@ -71,7 +72,7 @@ public class ConnectionAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionAssociation(String name, ConnectionAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/connectionAssociation:ConnectionAssociation", name, args == null ? ConnectionAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/connectionAssociation:ConnectionAssociation", name, args == null ? ConnectionAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectionAssociation(String name, Output<String> id, @Nullable ConnectionAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

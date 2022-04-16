@@ -23,7 +23,7 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expireTime", required=true)
       private final String expireTime;
 
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
 

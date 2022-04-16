@@ -10,6 +10,7 @@ import io.pulumi.awsnative.eks.outputs.FargateProfileTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -39,7 +40,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Name of the Cluster
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -53,7 +54,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Name of FargateProfile
      * 
      */
-    public Output</* @Nullable */ String> getFargateProfileName() {
+    public Output</* @Nullable */ String> fargateProfileName() {
         return this.fargateProfileName;
     }
     /**
@@ -67,19 +68,19 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return The IAM policy arn for pods
      * 
      */
-    public Output<String> getPodExecutionRoleArn() {
+    public Output<String> podExecutionRoleArn() {
         return this.podExecutionRoleArn;
     }
     @Export(name="selectors", type=List.class, parameters={FargateProfileSelector.class})
     private Output<List<FargateProfileSelector>> selectors;
 
-    public Output<List<FargateProfileSelector>> getSelectors() {
+    public Output<List<FargateProfileSelector>> selectors() {
         return this.selectors;
     }
     @Export(name="subnets", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnets;
 
-    public Output</* @Nullable */ List<String>> getSubnets() {
+    public Output</* @Nullable */ List<String>> subnets() {
         return this.subnets;
     }
     /**
@@ -93,7 +94,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<FargateProfileTag>> getTags() {
+    public Output</* @Nullable */ List<FargateProfileTag>> tags() {
         return this.tags;
     }
 
@@ -119,7 +120,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FargateProfile(String name, FargateProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:eks:FargateProfile", name, args == null ? FargateProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:eks:FargateProfile", name, args == null ? FargateProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FargateProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

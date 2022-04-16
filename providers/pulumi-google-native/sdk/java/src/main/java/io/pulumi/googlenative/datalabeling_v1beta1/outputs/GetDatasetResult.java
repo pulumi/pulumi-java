@@ -76,56 +76,56 @@ public final class GetDatasetResult {
      * The names of any related resources that are blocking changes to the dataset.
      * 
     */
-    public List<String> getBlockingResources() {
+    public List<String> blockingResources() {
         return this.blockingResources;
     }
     /**
      * Time the dataset is created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The number of data items in the dataset.
      * 
     */
-    public String getDataItemCount() {
+    public String dataItemCount() {
         return this.dataItemCount;
     }
     /**
      * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The display name of the dataset. Maximum of 64 characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
      * 
     */
-    public List<GoogleCloudDatalabelingV1beta1InputConfigResponse> getInputConfigs() {
+    public List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs() {
         return this.inputConfigs;
     }
     /**
      * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
      * 
     */
-    public String getLastMigrateTime() {
+    public String lastMigrateTime() {
         return this.lastMigrateTime;
     }
     /**
      * Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

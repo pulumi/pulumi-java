@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -40,7 +41,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -51,7 +52,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     @Import(name="rules", required=true)
       private final Output<List<BlobInventoryPolicyRuleArgs>> rules;
 
-    public Output<List<BlobInventoryPolicyRuleArgs>> getRules() {
+    public Output<List<BlobInventoryPolicyRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -62,7 +63,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<Either<String,InventoryRuleType>> type;
 
-    public Output<Either<String,InventoryRuleType>> getType() {
+    public Output<Either<String,InventoryRuleType>> type() {
         return this.type;
     }
 
@@ -78,10 +79,10 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     }
 
     private BlobInventoryPolicySchemaArgs() {
-        this.destination = Output.empty();
-        this.enabled = Output.empty();
-        this.rules = Output.empty();
-        this.type = Output.empty();
+        this.destination = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

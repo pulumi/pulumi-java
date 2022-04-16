@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
     @Import(name="kerberosConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> getKerberosConfig() {
-        return this.kerberosConfig == null ? Output.empty() : this.kerberosConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig() {
+        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
@@ -30,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs() {
-        this.kerberosConfig = Output.empty();
+        this.kerberosConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
             return this;
         }
         public Builder kerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Output.ofNullable(kerberosConfig);
+            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs(kerberosConfig);

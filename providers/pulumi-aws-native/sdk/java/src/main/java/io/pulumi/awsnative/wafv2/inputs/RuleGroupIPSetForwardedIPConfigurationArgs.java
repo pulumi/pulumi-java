@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationFal
 import io.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationPosition;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,21 +19,21 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
     @Import(name="fallbackBehavior", required=true)
       private final Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
-    public Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
+    public Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
     @Import(name="position", required=true)
       private final Output<RuleGroupIPSetForwardedIPConfigurationPosition> position;
 
-    public Output<RuleGroupIPSetForwardedIPConfigurationPosition> getPosition() {
+    public Output<RuleGroupIPSetForwardedIPConfigurationPosition> position() {
         return this.position;
     }
 
@@ -46,9 +47,9 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
     }
 
     private RuleGroupIPSetForwardedIPConfigurationArgs() {
-        this.fallbackBehavior = Output.empty();
-        this.headerName = Output.empty();
-        this.position = Output.empty();
+        this.fallbackBehavior = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.position = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     @Import(name="brandId", required=true)
       private final Output<String> brandId;
 
-    public Output<String> getBrandId() {
+    public Output<String> brandId() {
         return this.brandId;
     }
 
@@ -28,15 +29,15 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public IdentityAwareProxyClientArgs(
@@ -49,9 +50,9 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     }
 
     private IdentityAwareProxyClientArgs() {
-        this.brandId = Output.empty();
-        this.displayName = Output.empty();
-        this.project = Output.empty();
+        this.brandId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -99,7 +100,7 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public IdentityAwareProxyClientArgs build() {
             return new IdentityAwareProxyClientArgs(brandId, displayName, project);

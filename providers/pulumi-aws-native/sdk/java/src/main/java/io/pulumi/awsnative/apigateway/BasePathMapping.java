@@ -8,6 +8,7 @@ import io.pulumi.awsnative.apigateway.BasePathMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The base path name that callers of the API must provide in the URL after the domain name.
      * 
      */
-    public Output</* @Nullable */ String> getBasePath() {
+    public Output</* @Nullable */ String> basePath() {
         return this.basePath;
     }
     /**
@@ -42,7 +43,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The DomainName of an AWS::ApiGateway::DomainName resource.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -56,7 +57,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The ID of the API.
      * 
      */
-    public Output</* @Nullable */ String> getRestApiId() {
+    public Output</* @Nullable */ String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -70,7 +71,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The name of the API's stage.
      * 
      */
-    public Output</* @Nullable */ String> getStage() {
+    public Output</* @Nullable */ String> stage() {
         return this.stage;
     }
 
@@ -96,7 +97,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BasePathMapping(String name, BasePathMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:BasePathMapping", name, args == null ? BasePathMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:BasePathMapping", name, args == null ? BasePathMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BasePathMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

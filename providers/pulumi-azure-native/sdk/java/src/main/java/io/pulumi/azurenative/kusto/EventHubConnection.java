@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return The event hub consumer group.
      * 
      */
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
     /**
@@ -55,7 +56,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getDataFormat() {
+    public Output</* @Nullable */ String> dataFormat() {
         return this.dataFormat;
     }
     /**
@@ -69,7 +70,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the event hub to be used to create a data connection.
      * 
      */
-    public Output<String> getEventHubResourceId() {
+    public Output<String> eventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
@@ -83,7 +84,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -97,7 +98,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getMappingRuleName() {
+    public Output</* @Nullable */ String> mappingRuleName() {
         return this.mappingRuleName;
     }
     /**
@@ -111,7 +112,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +126,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getTableName() {
+    public Output</* @Nullable */ String> tableName() {
         return this.tableName;
     }
     /**
@@ -139,7 +140,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -165,7 +166,7 @@ public class EventHubConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventHubConnection(String name, EventHubConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kusto:EventHubConnection", name, args == null ? EventHubConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:kusto:EventHubConnection", name, args == null ? EventHubConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventHubConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.NetworkInterfaceSecurityGroupAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends io.pulumi.resources
      * @return The ID of the network interface to attach to.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -54,7 +55,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends io.pulumi.resources
      * @return The ID of the security group.
      * 
      */
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 
@@ -80,7 +81,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends io.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInterfaceSecurityGroupAttachment(String name, NetworkInterfaceSecurityGroupAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/networkInterfaceSecurityGroupAttachment:NetworkInterfaceSecurityGroupAttachment", name, args == null ? NetworkInterfaceSecurityGroupAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/networkInterfaceSecurityGroupAttachment:NetworkInterfaceSecurityGroupAttachment", name, args == null ? NetworkInterfaceSecurityGroupAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkInterfaceSecurityGroupAttachment(String name, Output<String> id, @Nullable NetworkInterfaceSecurityGroupAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

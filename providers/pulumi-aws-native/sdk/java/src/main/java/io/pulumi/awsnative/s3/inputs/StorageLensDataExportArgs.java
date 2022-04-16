@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.StorageLensCloudWatchMetricsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensS3BucketDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,15 +23,15 @@ public final class StorageLensDataExportArgs extends io.pulumi.resources.Resourc
     @Import(name="cloudWatchMetrics")
       private final @Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics;
 
-    public Output<StorageLensCloudWatchMetricsArgs> getCloudWatchMetrics() {
-        return this.cloudWatchMetrics == null ? Output.empty() : this.cloudWatchMetrics;
+    public Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics() {
+        return this.cloudWatchMetrics == null ? Codegen.empty() : this.cloudWatchMetrics;
     }
 
     @Import(name="s3BucketDestination")
       private final @Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination;
 
-    public Output<StorageLensS3BucketDestinationArgs> getS3BucketDestination() {
-        return this.s3BucketDestination == null ? Output.empty() : this.s3BucketDestination;
+    public Output<StorageLensS3BucketDestinationArgs> s3BucketDestination() {
+        return this.s3BucketDestination == null ? Codegen.empty() : this.s3BucketDestination;
     }
 
     public StorageLensDataExportArgs(
@@ -41,8 +42,8 @@ public final class StorageLensDataExportArgs extends io.pulumi.resources.Resourc
     }
 
     private StorageLensDataExportArgs() {
-        this.cloudWatchMetrics = Output.empty();
-        this.s3BucketDestination = Output.empty();
+        this.cloudWatchMetrics = Codegen.empty();
+        this.s3BucketDestination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class StorageLensDataExportArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cloudWatchMetrics(@Nullable StorageLensCloudWatchMetricsArgs cloudWatchMetrics) {
-            this.cloudWatchMetrics = Output.ofNullable(cloudWatchMetrics);
+            this.cloudWatchMetrics = Codegen.ofNullable(cloudWatchMetrics);
             return this;
         }
         public Builder s3BucketDestination(@Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination) {
@@ -80,7 +81,7 @@ public final class StorageLensDataExportArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder s3BucketDestination(@Nullable StorageLensS3BucketDestinationArgs s3BucketDestination) {
-            this.s3BucketDestination = Output.ofNullable(s3BucketDestination);
+            this.s3BucketDestination = Codegen.ofNullable(s3BucketDestination);
             return this;
         }        public StorageLensDataExportArgs build() {
             return new StorageLensDataExportArgs(cloudWatchMetrics, s3BucketDestination);

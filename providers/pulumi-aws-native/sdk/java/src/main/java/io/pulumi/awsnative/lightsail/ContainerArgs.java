@@ -8,6 +8,7 @@ import io.pulumi.awsnative.lightsail.inputs.ContainerServiceDeploymentArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerServiceDeployment")
       private final @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
 
-    public Output<ContainerServiceDeploymentArgs> getContainerServiceDeployment() {
-        return this.containerServiceDeployment == null ? Output.empty() : this.containerServiceDeployment;
+    public Output<ContainerServiceDeploymentArgs> containerServiceDeployment() {
+        return this.containerServiceDeployment == null ? Codegen.empty() : this.containerServiceDeployment;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
 
-    public Output<Boolean> getIsDisabled() {
-        return this.isDisabled == null ? Output.empty() : this.isDisabled;
+    public Output<Boolean> isDisabled() {
+        return this.isDisabled == null ? Codegen.empty() : this.isDisabled;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="power", required=true)
       private final Output<String> power;
 
-    public Output<String> getPower() {
+    public Output<String> power() {
         return this.power;
     }
 
@@ -60,8 +61,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicDomainNames")
       private final @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
 
-    public Output<List<ContainerPublicDomainNameArgs>> getPublicDomainNames() {
-        return this.publicDomainNames == null ? Output.empty() : this.publicDomainNames;
+    public Output<List<ContainerPublicDomainNameArgs>> publicDomainNames() {
+        return this.publicDomainNames == null ? Codegen.empty() : this.publicDomainNames;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scale", required=true)
       private final Output<Integer> scale;
 
-    public Output<Integer> getScale() {
+    public Output<Integer> scale() {
         return this.scale;
     }
 
@@ -82,7 +83,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -93,8 +94,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ContainerTagArgs>> tags;
 
-    public Output<List<ContainerTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ContainerTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ContainerArgs(
@@ -115,13 +116,13 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.containerServiceDeployment = Output.empty();
-        this.isDisabled = Output.empty();
-        this.power = Output.empty();
-        this.publicDomainNames = Output.empty();
-        this.scale = Output.empty();
-        this.serviceName = Output.empty();
-        this.tags = Output.empty();
+        this.containerServiceDeployment = Codegen.empty();
+        this.isDisabled = Codegen.empty();
+        this.power = Codegen.empty();
+        this.publicDomainNames = Codegen.empty();
+        this.scale = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerServiceDeployment(@Nullable ContainerServiceDeploymentArgs containerServiceDeployment) {
-            this.containerServiceDeployment = Output.ofNullable(containerServiceDeployment);
+            this.containerServiceDeployment = Codegen.ofNullable(containerServiceDeployment);
             return this;
         }
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
@@ -169,7 +170,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDisabled(@Nullable Boolean isDisabled) {
-            this.isDisabled = Output.ofNullable(isDisabled);
+            this.isDisabled = Codegen.ofNullable(isDisabled);
             return this;
         }
         public Builder power(Output<String> power) {
@@ -185,7 +186,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicDomainNames(@Nullable List<ContainerPublicDomainNameArgs> publicDomainNames) {
-            this.publicDomainNames = Output.ofNullable(publicDomainNames);
+            this.publicDomainNames = Codegen.ofNullable(publicDomainNames);
             return this;
         }
         public Builder publicDomainNames(ContainerPublicDomainNameArgs... publicDomainNames) {
@@ -212,7 +213,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ContainerTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ContainerTagArgs... tags) {

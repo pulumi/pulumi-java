@@ -32,14 +32,14 @@ public final class DataStoreInfoBaseResponse {
      * type of datastore; Operational/Vault/Archive
      * 
     */
-    public String getDataStoreType() {
+    public String dataStoreType() {
         return this.dataStoreType;
     }
     /**
      * Type of Datasource object, used to initialize the right inherited type
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

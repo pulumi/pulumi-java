@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     @Import(name="readinessCheckName")
       private final @Nullable Output<String> readinessCheckName;
 
-    public Output<String> getReadinessCheckName() {
-        return this.readinessCheckName == null ? Output.empty() : this.readinessCheckName;
+    public Output<String> readinessCheckName() {
+        return this.readinessCheckName == null ? Codegen.empty() : this.readinessCheckName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
-        return this.resourceSetName == null ? Output.empty() : this.resourceSetName;
+    public Output<String> resourceSetName() {
+        return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ReadinessCheckState(
@@ -84,11 +85,11 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ReadinessCheckState() {
-        this.arn = Output.empty();
-        this.readinessCheckName = Output.empty();
-        this.resourceSetName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.readinessCheckName = Codegen.empty();
+        this.resourceSetName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder readinessCheckName(@Nullable Output<String> readinessCheckName) {
@@ -132,7 +133,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readinessCheckName(@Nullable String readinessCheckName) {
-            this.readinessCheckName = Output.ofNullable(readinessCheckName);
+            this.readinessCheckName = Codegen.ofNullable(readinessCheckName);
             return this;
         }
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
@@ -140,7 +141,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceSetName(@Nullable String resourceSetName) {
-            this.resourceSetName = Output.ofNullable(resourceSetName);
+            this.resourceSetName = Codegen.ofNullable(resourceSetName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -148,7 +149,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -156,7 +157,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ReadinessCheckState build() {
             return new ReadinessCheckState(arn, readinessCheckName, resourceSetName, tags, tagsAll);

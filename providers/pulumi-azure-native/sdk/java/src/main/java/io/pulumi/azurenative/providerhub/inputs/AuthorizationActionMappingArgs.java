@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
     @Import(name="desired")
       private final @Nullable Output<String> desired;
 
-    public Output<String> getDesired() {
-        return this.desired == null ? Output.empty() : this.desired;
+    public Output<String> desired() {
+        return this.desired == null ? Codegen.empty() : this.desired;
     }
 
     @Import(name="original")
       private final @Nullable Output<String> original;
 
-    public Output<String> getOriginal() {
-        return this.original == null ? Output.empty() : this.original;
+    public Output<String> original() {
+        return this.original == null ? Codegen.empty() : this.original;
     }
 
     public AuthorizationActionMappingArgs(
@@ -36,8 +37,8 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
     }
 
     private AuthorizationActionMappingArgs() {
-        this.desired = Output.empty();
-        this.original = Output.empty();
+        this.desired = Codegen.empty();
+        this.original = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder desired(@Nullable String desired) {
-            this.desired = Output.ofNullable(desired);
+            this.desired = Codegen.ofNullable(desired);
             return this;
         }
         public Builder original(@Nullable Output<String> original) {
@@ -75,7 +76,7 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder original(@Nullable String original) {
-            this.original = Output.ofNullable(original);
+            this.original = Codegen.ofNullable(original);
             return this;
         }        public AuthorizationActionMappingArgs build() {
             return new AuthorizationActionMappingArgs(desired, original);

@@ -25,7 +25,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="isPrimaryNic")
       private final @Nullable String isPrimaryNic;
 
-    public Optional<String> getIsPrimaryNic() {
+    public Optional<String> isPrimaryNic() {
         return this.isPrimaryNic == null ? Optional.empty() : Optional.ofNullable(this.isPrimaryNic);
     }
 
@@ -36,7 +36,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="isSelectedForMigration")
       private final @Nullable String isSelectedForMigration;
 
-    public Optional<String> getIsSelectedForMigration() {
+    public Optional<String> isSelectedForMigration() {
         return this.isSelectedForMigration == null ? Optional.empty() : Optional.ofNullable(this.isSelectedForMigration);
     }
 
@@ -47,7 +47,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="nicId", required=true)
       private final String nicId;
 
-    public String getNicId() {
+    public String nicId() {
         return this.nicId;
     }
 
@@ -58,7 +58,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="sourceIPAddress", required=true)
       private final String sourceIPAddress;
 
-    public String getSourceIPAddress() {
+    public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
 
@@ -69,7 +69,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="sourceIPAddressType", required=true)
       private final String sourceIPAddressType;
 
-    public String getSourceIPAddressType() {
+    public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
 
@@ -80,7 +80,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="sourceNetworkId", required=true)
       private final String sourceNetworkId;
 
-    public String getSourceNetworkId() {
+    public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
 
@@ -91,7 +91,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="targetIPAddress")
       private final @Nullable String targetIPAddress;
 
-    public Optional<String> getTargetIPAddress() {
+    public Optional<String> targetIPAddress() {
         return this.targetIPAddress == null ? Optional.empty() : Optional.ofNullable(this.targetIPAddress);
     }
 
@@ -102,7 +102,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="targetIPAddressType")
       private final @Nullable String targetIPAddressType;
 
-    public Optional<String> getTargetIPAddressType() {
+    public Optional<String> targetIPAddressType() {
         return this.targetIPAddressType == null ? Optional.empty() : Optional.ofNullable(this.targetIPAddressType);
     }
 
@@ -113,7 +113,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="targetSubnetName")
       private final @Nullable String targetSubnetName;
 
-    public Optional<String> getTargetSubnetName() {
+    public Optional<String> targetSubnetName() {
         return this.targetSubnetName == null ? Optional.empty() : Optional.ofNullable(this.targetSubnetName);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.orgpolicy_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public PolicyArgs(
@@ -54,9 +55,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.spec = Output.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -96,7 +97,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder spec(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
@@ -104,7 +105,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public PolicyArgs build() {
             return new PolicyArgs(name, project, spec);

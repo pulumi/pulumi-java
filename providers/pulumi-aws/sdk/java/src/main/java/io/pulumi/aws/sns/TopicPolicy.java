@@ -9,6 +9,7 @@ import io.pulumi.aws.sns.inputs.TopicPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * @return The ARN of the SNS topic
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * @return The AWS Account ID of the SNS topic owner
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -69,7 +70,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * @return The fully-formed AWS policy as JSON.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -95,7 +96,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicPolicy(String name, TopicPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sns/topicPolicy:TopicPolicy", name, args == null ? TopicPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sns/topicPolicy:TopicPolicy", name, args == null ? TopicPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TopicPolicy(String name, Output<String> id, @Nullable TopicPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

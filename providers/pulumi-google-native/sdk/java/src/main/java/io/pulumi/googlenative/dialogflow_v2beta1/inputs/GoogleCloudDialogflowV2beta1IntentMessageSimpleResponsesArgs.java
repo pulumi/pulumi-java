@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs 
     @Import(name="simpleResponses", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> getSimpleResponses() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses() {
         return this.simpleResponses;
     }
 
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs 
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs() {
-        this.simpleResponses = Output.empty();
+        this.simpleResponses = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     @Import(name="awsAccessKey")
       private final @Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey;
 
-    public Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> getAwsAccessKey() {
-        return this.awsAccessKey == null ? Output.empty() : this.awsAccessKey;
+    public Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey() {
+        return this.awsAccessKey == null ? Codegen.empty() : this.awsAccessKey;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -44,8 +45,8 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public TransferJobTransferSpecAwsS3DataSourceGetArgs(
@@ -58,9 +59,9 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     }
 
     private TransferJobTransferSpecAwsS3DataSourceGetArgs() {
-        this.awsAccessKey = Output.empty();
-        this.bucketName = Output.empty();
-        this.roleArn = Output.empty();
+        this.awsAccessKey = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
             return this;
         }
         public Builder awsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs awsAccessKey) {
-            this.awsAccessKey = Output.ofNullable(awsAccessKey);
+            this.awsAccessKey = Codegen.ofNullable(awsAccessKey);
             return this;
         }
         public Builder bucketName(Output<String> bucketName) {
@@ -108,7 +109,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public TransferJobTransferSpecAwsS3DataSourceGetArgs build() {
             return new TransferJobTransferSpecAwsS3DataSourceGetArgs(awsAccessKey, bucketName, roleArn);

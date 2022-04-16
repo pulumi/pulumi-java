@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     @Import(name="requestHeaders")
       private final @Nullable Output<Map<String,String>> requestHeaders;
 
-    public Output<Map<String,String>> getRequestHeaders() {
-        return this.requestHeaders == null ? Output.empty() : this.requestHeaders;
+    public Output<Map<String,String>> requestHeaders() {
+        return this.requestHeaders == null ? Codegen.empty() : this.requestHeaders;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -55,8 +56,8 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public FulfillmentGenericWebServiceGetArgs(
@@ -71,10 +72,10 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     }
 
     private FulfillmentGenericWebServiceGetArgs() {
-        this.password = Output.empty();
-        this.requestHeaders = Output.empty();
-        this.uri = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.requestHeaders = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
@@ -116,7 +117,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
-            this.requestHeaders = Output.ofNullable(requestHeaders);
+            this.requestHeaders = Codegen.ofNullable(requestHeaders);
             return this;
         }
         public Builder uri(Output<String> uri) {
@@ -132,7 +133,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public FulfillmentGenericWebServiceGetArgs build() {
             return new FulfillmentGenericWebServiceGetArgs(password, requestHeaders, uri, username);

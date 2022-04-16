@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public CustomHttpPatternArgs(
@@ -48,8 +49,8 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CustomHttpPatternArgs() {
-        this.kind = Output.empty();
-        this.path = Output.empty();
+        this.kind = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -87,7 +88,7 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public CustomHttpPatternArgs build() {
             return new CustomHttpPatternArgs(kind, path);

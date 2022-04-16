@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.IndexesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="indexes")
       private final @Nullable Output<List<IndexesArgs>> indexes;
 
-    public Output<List<IndexesArgs>> getIndexes() {
-        return this.indexes == null ? Output.empty() : this.indexes;
+    public Output<List<IndexesArgs>> indexes() {
+        return this.indexes == null ? Codegen.empty() : this.indexes;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public IncludedPathArgs(
@@ -50,8 +51,8 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IncludedPathArgs() {
-        this.indexes = Output.empty();
-        this.path = Output.empty();
+        this.indexes = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder indexes(@Nullable List<IndexesArgs> indexes) {
-            this.indexes = Output.ofNullable(indexes);
+            this.indexes = Codegen.ofNullable(indexes);
             return this;
         }
         public Builder indexes(IndexesArgs... indexes) {
@@ -92,7 +93,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public IncludedPathArgs build() {
             return new IncludedPathArgs(indexes, path);

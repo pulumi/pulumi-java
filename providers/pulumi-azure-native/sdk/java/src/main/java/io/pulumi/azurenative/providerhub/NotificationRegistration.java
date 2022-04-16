@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,13 +43,13 @@ public class NotificationRegistration extends io.pulumi.resources.CustomResource
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=NotificationRegistrationResponseProperties.class, parameters={})
     private Output<NotificationRegistrationResponseProperties> properties;
 
-    public Output<NotificationRegistrationResponseProperties> getProperties() {
+    public Output<NotificationRegistrationResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -62,7 +63,7 @@ public class NotificationRegistration extends io.pulumi.resources.CustomResource
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -88,7 +89,7 @@ public class NotificationRegistration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationRegistration(String name, NotificationRegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:providerhub:NotificationRegistration", name, args == null ? NotificationRegistrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:providerhub:NotificationRegistration", name, args == null ? NotificationRegistrationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationRegistration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="currentAverageValue", required=true)
       private final Output<String> currentAverageValue;
 
-    public Output<String> getCurrentAverageValue() {
+    public Output<String> currentAverageValue() {
         return this.currentAverageValue;
     }
 
@@ -37,7 +38,7 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -48,8 +49,8 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+    public Output<LabelSelectorArgs> selector() {
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public PodsMetricStatusArgs(
@@ -62,9 +63,9 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PodsMetricStatusArgs() {
-        this.currentAverageValue = Output.empty();
-        this.metricName = Output.empty();
-        this.selector = Output.empty();
+        this.currentAverageValue = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public PodsMetricStatusArgs build() {
             return new PodsMetricStatusArgs(currentAverageValue, metricName, selector);

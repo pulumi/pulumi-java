@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return This is only returned when the certificate provisioningState is 'Failed'.
      * 
      */
-    public Output<DeleteCertificateErrorResponse> getDeleteCertificateError() {
+    public Output<DeleteCertificateErrorResponse> deleteCertificateError() {
         return this.deleteCertificateError;
     }
     /**
@@ -56,7 +57,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The ETag of the resource, used for concurrency statements.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -70,7 +71,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
      * 
      */
-    public Output</* @Nullable */ String> getFormat() {
+    public Output</* @Nullable */ String> format() {
         return this.format;
     }
     /**
@@ -84,7 +85,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,25 +99,25 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The previous provisioned state of the resource
      * 
      */
-    public Output<String> getPreviousProvisioningState() {
+    public Output<String> previousProvisioningState() {
         return this.previousProvisioningState;
     }
     @Export(name="previousProvisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> previousProvisioningStateTransitionTime;
 
-    public Output<String> getPreviousProvisioningStateTransitionTime() {
+    public Output<String> previousProvisioningStateTransitionTime() {
         return this.previousProvisioningStateTransitionTime;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     @Export(name="provisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> provisioningStateTransitionTime;
 
-    public Output<String> getProvisioningStateTransitionTime() {
+    public Output<String> provisioningStateTransitionTime() {
         return this.provisioningStateTransitionTime;
     }
     /**
@@ -130,7 +131,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The public key of the certificate.
      * 
      */
-    public Output<String> getPublicData() {
+    public Output<String> publicData() {
         return this.publicData;
     }
     /**
@@ -144,7 +145,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return This must match the thumbprint from the name.
      * 
      */
-    public Output</* @Nullable */ String> getThumbprint() {
+    public Output</* @Nullable */ String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -158,7 +159,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return This must match the first portion of the certificate name. Currently required to be 'SHA1'.
      * 
      */
-    public Output</* @Nullable */ String> getThumbprintAlgorithm() {
+    public Output</* @Nullable */ String> thumbprintAlgorithm() {
         return this.thumbprintAlgorithm;
     }
     /**
@@ -172,7 +173,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -198,7 +199,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:batch:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:batch:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Certificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

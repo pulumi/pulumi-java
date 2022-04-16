@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DataTransferConfigArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigState;
@@ -63,7 +64,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * Set the value to 0 to use the default value.
      * 
      */
-    public Output</* @Nullable */ Integer> getDataRefreshWindowDays() {
+    public Output</* @Nullable */ Integer> dataRefreshWindowDays() {
         return this.dataRefreshWindowDays;
     }
     /**
@@ -77,7 +78,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * @return The data source id. Cannot be changed once the transfer config is created.
      * 
      */
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
     /**
@@ -91,7 +92,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * @return The BigQuery target dataset id.
      * 
      */
-    public Output</* @Nullable */ String> getDestinationDatasetId() {
+    public Output</* @Nullable */ String> destinationDatasetId() {
         return this.destinationDatasetId;
     }
     /**
@@ -105,7 +106,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * @return When set to true, no runs are scheduled for a given transfer.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -119,7 +120,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * @return The user specified display name for the transfer config.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -137,7 +138,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DataTransferConfigEmailPreferences> getEmailPreferences() {
+    public Output</* @Nullable */ DataTransferConfigEmailPreferences> emailPreferences() {
         return this.emailPreferences;
     }
     /**
@@ -153,7 +154,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * Examples: US, EU, asia-northeast1. The default value is US.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -171,7 +172,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * required. The name is ignored when creating a transfer config.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -187,7 +188,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * associated with this transfer config finish.
      * 
      */
-    public Output</* @Nullable */ String> getNotificationPubsubTopic() {
+    public Output</* @Nullable */ String> notificationPubsubTopic() {
         return this.notificationPubsubTopic;
     }
     /**
@@ -205,7 +206,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
      * 
      */
-    public Output<Map<String,String>> getParams() {
+    public Output<Map<String,String>> params() {
         return this.params;
     }
     /**
@@ -221,7 +222,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -249,7 +250,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * NOTE: the granularity should be at least 8 hours, or less frequent.
      * 
      */
-    public Output</* @Nullable */ String> getSchedule() {
+    public Output</* @Nullable */ String> schedule() {
         return this.schedule;
     }
     /**
@@ -265,7 +266,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DataTransferConfigScheduleOptions> getScheduleOptions() {
+    public Output</* @Nullable */ DataTransferConfigScheduleOptions> scheduleOptions() {
         return this.scheduleOptions;
     }
     /**
@@ -291,7 +292,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DataTransferConfigSensitiveParams> getSensitiveParams() {
+    public Output</* @Nullable */ DataTransferConfigSensitiveParams> sensitiveParams() {
         return this.sensitiveParams;
     }
     /**
@@ -309,7 +310,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * requesting user calling this API has permissions to act as this service account.
      * 
      */
-    public Output</* @Nullable */ String> getServiceAccountName() {
+    public Output</* @Nullable */ String> serviceAccountName() {
         return this.serviceAccountName;
     }
 
@@ -335,7 +336,7 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataTransferConfig(String name, DataTransferConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/dataTransferConfig:DataTransferConfig", name, args == null ? DataTransferConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/dataTransferConfig:DataTransferConfig", name, args == null ? DataTransferConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataTransferConfig(String name, Output<String> id, @Nullable DataTransferConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.automation.inputs.IdentityArgs;
 import io.pulumi.azurenative.automation.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="automationAccountName")
       private final @Nullable Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
-        return this.automationAccountName == null ? Output.empty() : this.automationAccountName;
+    public Output<String> automationAccountName() {
+        return this.automationAccountName == null ? Codegen.empty() : this.automationAccountName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Output<Boolean> getDisableLocalAuth() {
-        return this.disableLocalAuth == null ? Output.empty() : this.disableLocalAuth;
+    public Output<Boolean> disableLocalAuth() {
+        return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
-    public Output<EncryptionPropertiesArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<EncryptionPropertiesArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Boolean> publicNetworkAccess;
 
-    public Output<Boolean> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<Boolean> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,8 +115,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AutomationAccountArgs(
@@ -153,16 +154,16 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutomationAccountArgs() {
-        this.automationAccountName = Output.empty();
-        this.disableLocalAuth = Output.empty();
-        this.encryption = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.disableLocalAuth = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder automationAccountName(@Nullable String automationAccountName) {
-            this.automationAccountName = Output.ofNullable(automationAccountName);
+            this.automationAccountName = Codegen.ofNullable(automationAccountName);
             return this;
         }
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
@@ -216,7 +217,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
+            this.disableLocalAuth = Codegen.ofNullable(disableLocalAuth);
             return this;
         }
         public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
@@ -224,7 +225,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -232,7 +233,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -240,7 +241,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -248,7 +249,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Boolean> publicNetworkAccess) {
@@ -256,7 +257,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Boolean publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -272,7 +273,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -280,7 +281,7 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AutomationAccountArgs build() {
             return new AutomationAccountArgs(automationAccountName, disableLocalAuth, encryption, identity, location, name, publicNetworkAccess, resourceGroupName, sku, tags);

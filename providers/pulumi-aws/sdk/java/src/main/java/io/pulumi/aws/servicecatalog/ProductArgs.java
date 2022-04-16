@@ -6,6 +6,7 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+    public Output<String> acceptLanguage() {
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributor")
       private final @Nullable Output<String> distributor;
 
-    public Output<String> getDistributor() {
-        return this.distributor == null ? Output.empty() : this.distributor;
+    public Output<String> distributor() {
+        return this.distributor == null ? Codegen.empty() : this.distributor;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner", required=true)
       private final Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
 
@@ -78,7 +79,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningArtifactParameters", required=true)
       private final Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters;
 
-    public Output<ProductProvisioningArtifactParametersArgs> getProvisioningArtifactParameters() {
+    public Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters() {
         return this.provisioningArtifactParameters;
     }
 
@@ -89,8 +90,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportDescription")
       private final @Nullable Output<String> supportDescription;
 
-    public Output<String> getSupportDescription() {
-        return this.supportDescription == null ? Output.empty() : this.supportDescription;
+    public Output<String> supportDescription() {
+        return this.supportDescription == null ? Codegen.empty() : this.supportDescription;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
-        return this.supportEmail == null ? Output.empty() : this.supportEmail;
+    public Output<String> supportEmail() {
+        return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportUrl")
       private final @Nullable Output<String> supportUrl;
 
-    public Output<String> getSupportUrl() {
-        return this.supportUrl == null ? Output.empty() : this.supportUrl;
+    public Output<String> supportUrl() {
+        return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -163,17 +164,17 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductArgs() {
-        this.acceptLanguage = Output.empty();
-        this.description = Output.empty();
-        this.distributor = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.provisioningArtifactParameters = Output.empty();
-        this.supportDescription = Output.empty();
-        this.supportEmail = Output.empty();
-        this.supportUrl = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.description = Codegen.empty();
+        this.distributor = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.provisioningArtifactParameters = Codegen.empty();
+        this.supportDescription = Codegen.empty();
+        this.supportEmail = Codegen.empty();
+        this.supportUrl = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -229,7 +230,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder distributor(@Nullable Output<String> distributor) {
@@ -237,7 +238,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distributor(@Nullable String distributor) {
-            this.distributor = Output.ofNullable(distributor);
+            this.distributor = Codegen.ofNullable(distributor);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -245,7 +246,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(Output<String> owner) {
@@ -269,7 +270,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportDescription(@Nullable String supportDescription) {
-            this.supportDescription = Output.ofNullable(supportDescription);
+            this.supportDescription = Codegen.ofNullable(supportDescription);
             return this;
         }
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
@@ -277,7 +278,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Output.ofNullable(supportEmail);
+            this.supportEmail = Codegen.ofNullable(supportEmail);
             return this;
         }
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
@@ -285,7 +286,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Output.ofNullable(supportUrl);
+            this.supportUrl = Codegen.ofNullable(supportUrl);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -293,7 +294,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(Output<String> type) {

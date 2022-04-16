@@ -9,6 +9,7 @@ import io.pulumi.aws.emr.inputs.StudioSessionMappingState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    public Output<String> getIdentityId() {
+    public Output<String> identityId() {
         return this.identityId;
     }
     /**
@@ -53,7 +54,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return The name of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    public Output<String> getIdentityName() {
+    public Output<String> identityName() {
         return this.identityName;
     }
     /**
@@ -67,7 +68,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the identity to map to the Amazon EMR Studio is a `USER` or a `GROUP`.
      * 
      */
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType;
     }
     /**
@@ -81,7 +82,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should specify the ARN for the session policy that you want to apply, not the ARN of your user role.
      * 
      */
-    public Output<String> getSessionPolicyArn() {
+    public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
     }
     /**
@@ -95,7 +96,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -121,7 +122,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StudioSessionMapping(String name, StudioSessionMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:emr/studioSessionMapping:StudioSessionMapping", name, args == null ? StudioSessionMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:emr/studioSessionMapping:StudioSessionMapping", name, args == null ? StudioSessionMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StudioSessionMapping(String name, Output<String> id, @Nullable StudioSessionMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

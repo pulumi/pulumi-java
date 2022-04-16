@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -56,8 +57,8 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SubnetGroupArgs(
@@ -65,17 +66,17 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> name,
         Output<List<String>> subnetIds,
         @Nullable Output<Map<String,String>> tags) {
-        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
         this.name = name;
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
         this.tags = tags;
     }
 
     private SubnetGroupArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -117,7 +118,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subnetIds(Output<List<String>> subnetIds) {
@@ -136,7 +137,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SubnetGroupArgs build() {
             return new SubnetGroupArgs(description, name, subnetIds, tags);

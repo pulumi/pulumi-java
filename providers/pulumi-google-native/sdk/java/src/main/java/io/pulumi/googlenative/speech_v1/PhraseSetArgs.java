@@ -5,6 +5,7 @@ package io.pulumi.googlenative.speech_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.speech_v1.inputs.PhraseArgs;
 import java.lang.Double;
 import java.lang.String;
@@ -24,15 +25,15 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boost")
       private final @Nullable Output<Double> boost;
 
-    public Output<Double> getBoost() {
-        return this.boost == null ? Output.empty() : this.boost;
+    public Output<Double> boost() {
+        return this.boost == null ? Codegen.empty() : this.boost;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phraseSetId", required=true)
       private final Output<String> phraseSetId;
 
-    public Output<String> getPhraseSetId() {
+    public Output<String> phraseSetId() {
         return this.phraseSetId;
     }
 
@@ -64,15 +65,15 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phrases")
       private final @Nullable Output<List<PhraseArgs>> phrases;
 
-    public Output<List<PhraseArgs>> getPhrases() {
-        return this.phrases == null ? Output.empty() : this.phrases;
+    public Output<List<PhraseArgs>> phrases() {
+        return this.phrases == null ? Codegen.empty() : this.phrases;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public PhraseSetArgs(
@@ -91,12 +92,12 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PhraseSetArgs() {
-        this.boost = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.phraseSetId = Output.empty();
-        this.phrases = Output.empty();
-        this.project = Output.empty();
+        this.boost = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.phraseSetId = Codegen.empty();
+        this.phrases = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder boost(@Nullable Double boost) {
-            this.boost = Output.ofNullable(boost);
+            this.boost = Codegen.ofNullable(boost);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -142,7 +143,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -150,7 +151,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder phraseSetId(Output<String> phraseSetId) {
@@ -166,7 +167,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder phrases(@Nullable List<PhraseArgs> phrases) {
-            this.phrases = Output.ofNullable(phrases);
+            this.phrases = Codegen.ofNullable(phrases);
             return this;
         }
         public Builder phrases(PhraseArgs... phrases) {
@@ -177,7 +178,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public PhraseSetArgs build() {
             return new PhraseSetArgs(boost, location, name, phraseSetId, phrases, project);

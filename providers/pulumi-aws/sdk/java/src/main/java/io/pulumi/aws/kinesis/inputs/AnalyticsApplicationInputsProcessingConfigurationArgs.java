@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsProcessingConfigurationLambdaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class AnalyticsApplicationInputsProcessingConfigurationArgs extends
     @Import(name="lambda", required=true)
       private final Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda;
 
-    public Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> getLambda() {
+    public Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda() {
         return this.lambda;
     }
 
@@ -29,7 +30,7 @@ public final class AnalyticsApplicationInputsProcessingConfigurationArgs extends
     }
 
     private AnalyticsApplicationInputsProcessingConfigurationArgs() {
-        this.lambda = Output.empty();
+        this.lambda = Codegen.empty();
     }
 
     public static Builder builder() {

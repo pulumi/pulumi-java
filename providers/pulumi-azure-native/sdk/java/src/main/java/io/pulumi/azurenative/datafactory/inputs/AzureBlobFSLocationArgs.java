@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
-    public Output<Object> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+    public Output<Object> fileName() {
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="fileSystem")
       private final @Nullable Output<Object> fileSystem;
 
-    public Output<Object> getFileSystem() {
-        return this.fileSystem == null ? Output.empty() : this.fileSystem;
+    public Output<Object> fileSystem() {
+        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+    public Output<Object> folderPath() {
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -76,10 +77,10 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     }
 
     private AzureBlobFSLocationArgs() {
-        this.fileName = Output.empty();
-        this.fileSystem = Output.empty();
-        this.folderPath = Output.empty();
-        this.type = Output.empty();
+        this.fileName = Codegen.empty();
+        this.fileSystem = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder fileSystem(@Nullable Output<Object> fileSystem) {
@@ -121,7 +122,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder fileSystem(@Nullable Object fileSystem) {
-            this.fileSystem = Output.ofNullable(fileSystem);
+            this.fileSystem = Codegen.ofNullable(fileSystem);
             return this;
         }
         public Builder folderPath(@Nullable Output<Object> folderPath) {
@@ -129,7 +130,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder type(Output<String> type) {

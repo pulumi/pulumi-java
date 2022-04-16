@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -33,8 +34,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
-        return this.firstName == null ? Output.empty() : this.firstName;
+    public Output<String> firstName() {
+        return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
-        return this.lastName == null ? Output.empty() : this.lastName;
+    public Output<String> lastName() {
+        return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> getSendEmailNotification() {
-        return this.sendEmailNotification == null ? Output.empty() : this.sendEmailNotification;
+    public Output<Boolean> sendEmailNotification() {
+        return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -97,12 +98,12 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.authenticationType = Output.empty();
-        this.enabled = Output.empty();
-        this.firstName = Output.empty();
-        this.lastName = Output.empty();
-        this.sendEmailNotification = Output.empty();
-        this.userName = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.firstName = Codegen.empty();
+        this.lastName = Codegen.empty();
+        this.sendEmailNotification = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder firstName(@Nullable Output<String> firstName) {
@@ -156,7 +157,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Output.ofNullable(firstName);
+            this.firstName = Codegen.ofNullable(firstName);
             return this;
         }
         public Builder lastName(@Nullable Output<String> lastName) {
@@ -164,7 +165,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Output.ofNullable(lastName);
+            this.lastName = Codegen.ofNullable(lastName);
             return this;
         }
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
@@ -172,7 +173,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
+            this.sendEmailNotification = Codegen.ofNullable(sendEmailNotification);
             return this;
         }
         public Builder userName(Output<String> userName) {

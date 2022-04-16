@@ -5,6 +5,7 @@ package io.pulumi.aws.ram;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ResourceShareAccepterArgs extends io.pulumi.resources.Resourc
     @Import(name="shareArn", required=true)
       private final Output<String> shareArn;
 
-    public Output<String> getShareArn() {
+    public Output<String> shareArn() {
         return this.shareArn;
     }
 
@@ -29,7 +30,7 @@ public final class ResourceShareAccepterArgs extends io.pulumi.resources.Resourc
     }
 
     private ResourceShareAccepterArgs() {
-        this.shareArn = Output.empty();
+        this.shareArn = Codegen.empty();
     }
 
     public static Builder builder() {

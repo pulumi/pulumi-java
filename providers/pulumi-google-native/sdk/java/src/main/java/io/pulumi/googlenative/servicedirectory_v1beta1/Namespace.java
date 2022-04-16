@@ -6,6 +6,7 @@ package io.pulumi.googlenative.servicedirectory_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.servicedirectory_v1beta1.NamespaceArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the namespace was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +44,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels associated with this namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -57,7 +58,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the namespace was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -97,7 +98,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Namespace(String name, NamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:servicedirectory/v1beta1:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:servicedirectory/v1beta1:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Namespace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

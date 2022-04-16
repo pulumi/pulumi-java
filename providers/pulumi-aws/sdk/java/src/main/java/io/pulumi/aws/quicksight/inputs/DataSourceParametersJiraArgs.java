@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataSourceParametersJiraArgs extends io.pulumi.resources.Reso
     @Import(name="siteBaseUrl", required=true)
       private final Output<String> siteBaseUrl;
 
-    public Output<String> getSiteBaseUrl() {
+    public Output<String> siteBaseUrl() {
         return this.siteBaseUrl;
     }
 
@@ -29,7 +30,7 @@ public final class DataSourceParametersJiraArgs extends io.pulumi.resources.Reso
     }
 
     private DataSourceParametersJiraArgs() {
-        this.siteBaseUrl = Output.empty();
+        this.siteBaseUrl = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<RepositoryIamMemberConditionArgs> condition;
 
-    public Output<RepositoryIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<RepositoryIamMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,14 +31,14 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -49,8 +50,8 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="repository", required=true)
       private final Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -73,7 +74,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -93,12 +94,12 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
     }
 
     private RepositoryIamMemberArgs() {
-        this.condition = Output.empty();
-        this.location = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.repository = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.location = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.repository = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder condition(@Nullable RepositoryIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -144,7 +145,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder member(Output<String> member) {
@@ -160,7 +161,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder repository(Output<String> repository) {

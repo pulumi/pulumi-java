@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.AttachedVolumeArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerImageArgs;
 import io.pulumi.kubernetes.core_v1.inputs.NodeAddressArgs;
@@ -34,8 +35,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addresses")
       private final @Nullable Output<List<NodeAddressArgs>> addresses;
 
-    public Output<List<NodeAddressArgs>> getAddresses() {
-        return this.addresses == null ? Output.empty() : this.addresses;
+    public Output<List<NodeAddressArgs>> addresses() {
+        return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocatable")
       private final @Nullable Output<Map<String,String>> allocatable;
 
-    public Output<Map<String,String>> getAllocatable() {
-        return this.allocatable == null ? Output.empty() : this.allocatable;
+    public Output<Map<String,String>> allocatable() {
+        return this.allocatable == null ? Codegen.empty() : this.allocatable;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Map<String,String>> capacity;
 
-    public Output<Map<String,String>> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<Map<String,String>> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<NodeConditionArgs>> conditions;
 
-    public Output<List<NodeConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<NodeConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<NodeConfigStatusArgs> config;
 
-    public Output<NodeConfigStatusArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<NodeConfigStatusArgs> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="daemonEndpoints")
       private final @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints;
 
-    public Output<NodeDaemonEndpointsArgs> getDaemonEndpoints() {
-        return this.daemonEndpoints == null ? Output.empty() : this.daemonEndpoints;
+    public Output<NodeDaemonEndpointsArgs> daemonEndpoints() {
+        return this.daemonEndpoints == null ? Codegen.empty() : this.daemonEndpoints;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="images")
       private final @Nullable Output<List<ContainerImageArgs>> images;
 
-    public Output<List<ContainerImageArgs>> getImages() {
-        return this.images == null ? Output.empty() : this.images;
+    public Output<List<ContainerImageArgs>> images() {
+        return this.images == null ? Codegen.empty() : this.images;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeInfo")
       private final @Nullable Output<NodeSystemInfoArgs> nodeInfo;
 
-    public Output<NodeSystemInfoArgs> getNodeInfo() {
-        return this.nodeInfo == null ? Output.empty() : this.nodeInfo;
+    public Output<NodeSystemInfoArgs> nodeInfo() {
+        return this.nodeInfo == null ? Codegen.empty() : this.nodeInfo;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phase")
       private final @Nullable Output<String> phase;
 
-    public Output<String> getPhase() {
-        return this.phase == null ? Output.empty() : this.phase;
+    public Output<String> phase() {
+        return this.phase == null ? Codegen.empty() : this.phase;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumesAttached")
       private final @Nullable Output<List<AttachedVolumeArgs>> volumesAttached;
 
-    public Output<List<AttachedVolumeArgs>> getVolumesAttached() {
-        return this.volumesAttached == null ? Output.empty() : this.volumesAttached;
+    public Output<List<AttachedVolumeArgs>> volumesAttached() {
+        return this.volumesAttached == null ? Codegen.empty() : this.volumesAttached;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumesInUse")
       private final @Nullable Output<List<String>> volumesInUse;
 
-    public Output<List<String>> getVolumesInUse() {
-        return this.volumesInUse == null ? Output.empty() : this.volumesInUse;
+    public Output<List<String>> volumesInUse() {
+        return this.volumesInUse == null ? Codegen.empty() : this.volumesInUse;
     }
 
     public NodeStatusArgs(
@@ -179,17 +180,17 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeStatusArgs() {
-        this.addresses = Output.empty();
-        this.allocatable = Output.empty();
-        this.capacity = Output.empty();
-        this.conditions = Output.empty();
-        this.config = Output.empty();
-        this.daemonEndpoints = Output.empty();
-        this.images = Output.empty();
-        this.nodeInfo = Output.empty();
-        this.phase = Output.empty();
-        this.volumesAttached = Output.empty();
-        this.volumesInUse = Output.empty();
+        this.addresses = Codegen.empty();
+        this.allocatable = Codegen.empty();
+        this.capacity = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.config = Codegen.empty();
+        this.daemonEndpoints = Codegen.empty();
+        this.images = Codegen.empty();
+        this.nodeInfo = Codegen.empty();
+        this.phase = Codegen.empty();
+        this.volumesAttached = Codegen.empty();
+        this.volumesInUse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -237,7 +238,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addresses(@Nullable List<NodeAddressArgs> addresses) {
-            this.addresses = Output.ofNullable(addresses);
+            this.addresses = Codegen.ofNullable(addresses);
             return this;
         }
         public Builder addresses(NodeAddressArgs... addresses) {
@@ -248,7 +249,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocatable(@Nullable Map<String,String> allocatable) {
-            this.allocatable = Output.ofNullable(allocatable);
+            this.allocatable = Codegen.ofNullable(allocatable);
             return this;
         }
         public Builder capacity(@Nullable Output<Map<String,String>> capacity) {
@@ -256,7 +257,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Map<String,String> capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder conditions(@Nullable Output<List<NodeConditionArgs>> conditions) {
@@ -264,7 +265,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<NodeConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(NodeConditionArgs... conditions) {
@@ -275,7 +276,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable NodeConfigStatusArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder daemonEndpoints(@Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints) {
@@ -283,7 +284,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder daemonEndpoints(@Nullable NodeDaemonEndpointsArgs daemonEndpoints) {
-            this.daemonEndpoints = Output.ofNullable(daemonEndpoints);
+            this.daemonEndpoints = Codegen.ofNullable(daemonEndpoints);
             return this;
         }
         public Builder images(@Nullable Output<List<ContainerImageArgs>> images) {
@@ -291,7 +292,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder images(@Nullable List<ContainerImageArgs> images) {
-            this.images = Output.ofNullable(images);
+            this.images = Codegen.ofNullable(images);
             return this;
         }
         public Builder images(ContainerImageArgs... images) {
@@ -302,7 +303,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeInfo(@Nullable NodeSystemInfoArgs nodeInfo) {
-            this.nodeInfo = Output.ofNullable(nodeInfo);
+            this.nodeInfo = Codegen.ofNullable(nodeInfo);
             return this;
         }
         public Builder phase(@Nullable Output<String> phase) {
@@ -310,7 +311,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder phase(@Nullable String phase) {
-            this.phase = Output.ofNullable(phase);
+            this.phase = Codegen.ofNullable(phase);
             return this;
         }
         public Builder volumesAttached(@Nullable Output<List<AttachedVolumeArgs>> volumesAttached) {
@@ -318,7 +319,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumesAttached(@Nullable List<AttachedVolumeArgs> volumesAttached) {
-            this.volumesAttached = Output.ofNullable(volumesAttached);
+            this.volumesAttached = Codegen.ofNullable(volumesAttached);
             return this;
         }
         public Builder volumesAttached(AttachedVolumeArgs... volumesAttached) {
@@ -329,7 +330,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumesInUse(@Nullable List<String> volumesInUse) {
-            this.volumesInUse = Output.ofNullable(volumesInUse);
+            this.volumesInUse = Codegen.ofNullable(volumesInUse);
             return this;
         }
         public Builder volumesInUse(String... volumesInUse) {

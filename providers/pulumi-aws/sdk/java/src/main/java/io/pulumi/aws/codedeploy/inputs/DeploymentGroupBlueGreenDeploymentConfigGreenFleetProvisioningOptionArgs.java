@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(@Nullable Output<String> action) {
@@ -32,7 +33,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
     }
 
     private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs() {
-        this.action = Output.empty();
+        this.action = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }        public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs build() {
             return new DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(action);

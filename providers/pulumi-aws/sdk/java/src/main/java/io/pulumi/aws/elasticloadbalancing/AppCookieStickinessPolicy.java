@@ -9,6 +9,7 @@ import io.pulumi.aws.elasticloadbalancing.inputs.AppCookieStickinessPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * @return The application cookie whose lifetime the ELB's cookie should follow.
      * 
      */
-    public Output<String> getCookieName() {
+    public Output<String> cookieName() {
         return this.cookieName;
     }
     /**
@@ -62,7 +63,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * balancer.
      * 
      */
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
     /**
@@ -78,7 +79,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * should be attached.
      * 
      */
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
     /**
@@ -92,7 +93,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * @return The name of the stickiness policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -118,7 +119,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppCookieStickinessPolicy(String name, AppCookieStickinessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticloadbalancing/appCookieStickinessPolicy:AppCookieStickinessPolicy", name, args == null ? AppCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticloadbalancing/appCookieStickinessPolicy:AppCookieStickinessPolicy", name, args == null ? AppCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppCookieStickinessPolicy(String name, Output<String> id, @Nullable AppCookieStickinessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

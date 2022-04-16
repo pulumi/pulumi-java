@@ -63,42 +63,42 @@ public final class DevicePolicyResponse {
      * Allowed device management levels, an empty list allows all management levels.
      * 
     */
-    public List<String> getAllowedDeviceManagementLevels() {
+    public List<String> allowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels;
     }
     /**
      * Allowed encryptions statuses, an empty list allows all statuses.
      * 
     */
-    public List<String> getAllowedEncryptionStatuses() {
+    public List<String> allowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses;
     }
     /**
      * Allowed OS versions, an empty list allows all types and all versions.
      * 
     */
-    public List<OsConstraintResponse> getOsConstraints() {
+    public List<OsConstraintResponse> osConstraints() {
         return this.osConstraints;
     }
     /**
      * Whether the device needs to be approved by the customer admin.
      * 
     */
-    public Boolean getRequireAdminApproval() {
+    public Boolean requireAdminApproval() {
         return this.requireAdminApproval;
     }
     /**
      * Whether the device needs to be corp owned.
      * 
     */
-    public Boolean getRequireCorpOwned() {
+    public Boolean requireCorpOwned() {
         return this.requireCorpOwned;
     }
     /**
      * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
      * 
     */
-    public Boolean getRequireScreenlock() {
+    public Boolean requireScreenlock() {
         return this.requireScreenlock;
     }
 

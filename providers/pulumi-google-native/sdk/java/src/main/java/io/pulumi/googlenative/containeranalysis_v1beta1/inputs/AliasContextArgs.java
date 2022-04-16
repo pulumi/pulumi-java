@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.AliasContextKind;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<AliasContextKind> kind;
 
-    public Output<AliasContextKind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<AliasContextKind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AliasContextArgs(
@@ -49,8 +50,8 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasContextArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable AliasContextKind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AliasContextArgs build() {
             return new AliasContextArgs(kind, name);

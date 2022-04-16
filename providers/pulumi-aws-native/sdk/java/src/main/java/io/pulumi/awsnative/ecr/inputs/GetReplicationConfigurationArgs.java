@@ -19,7 +19,7 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
     @Import(name="registryId", required=true)
       private final String registryId;
 
-    public String getRegistryId() {
+    public String registryId() {
         return this.registryId;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class OpenZfsFileSystemDiskIopsConfigurationGetArgs extends io.pulu
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class OpenZfsFileSystemDiskIopsConfigurationGetArgs extends io.pulu
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public OpenZfsFileSystemDiskIopsConfigurationGetArgs(
@@ -45,8 +46,8 @@ public final class OpenZfsFileSystemDiskIopsConfigurationGetArgs extends io.pulu
     }
 
     private OpenZfsFileSystemDiskIopsConfigurationGetArgs() {
-        this.iops = Output.empty();
-        this.mode = Output.empty();
+        this.iops = Codegen.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OpenZfsFileSystemDiskIopsConfigurationGetArgs extends io.pulu
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -84,7 +85,7 @@ public final class OpenZfsFileSystemDiskIopsConfigurationGetArgs extends io.pulu
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public OpenZfsFileSystemDiskIopsConfigurationGetArgs build() {
             return new OpenZfsFileSystemDiskIopsConfigurationGetArgs(iops, mode);

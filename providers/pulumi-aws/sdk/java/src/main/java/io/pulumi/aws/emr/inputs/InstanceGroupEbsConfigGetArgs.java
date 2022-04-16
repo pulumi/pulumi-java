@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -44,7 +45,7 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -55,8 +56,8 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="volumesPerInstance")
       private final @Nullable Output<Integer> volumesPerInstance;
 
-    public Output<Integer> getVolumesPerInstance() {
-        return this.volumesPerInstance == null ? Output.empty() : this.volumesPerInstance;
+    public Output<Integer> volumesPerInstance() {
+        return this.volumesPerInstance == null ? Codegen.empty() : this.volumesPerInstance;
     }
 
     public InstanceGroupEbsConfigGetArgs(
@@ -71,10 +72,10 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private InstanceGroupEbsConfigGetArgs() {
-        this.iops = Output.empty();
-        this.size = Output.empty();
-        this.type = Output.empty();
-        this.volumesPerInstance = Output.empty();
+        this.iops = Codegen.empty();
+        this.size = Codegen.empty();
+        this.type = Codegen.empty();
+        this.volumesPerInstance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder size(Output<Integer> size) {
@@ -132,7 +133,7 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
-            this.volumesPerInstance = Output.ofNullable(volumesPerInstance);
+            this.volumesPerInstance = Codegen.ofNullable(volumesPerInstance);
             return this;
         }        public InstanceGroupEbsConfigGetArgs build() {
             return new InstanceGroupEbsConfigGetArgs(iops, size, type, volumesPerInstance);

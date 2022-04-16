@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal;
 import io.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration;
 import java.lang.Boolean;
@@ -31,8 +32,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="additionalExperiments")
       private final @Nullable Output<List<String>> additionalExperiments;
 
-    public Output<List<String>> getAdditionalExperiments() {
-        return this.additionalExperiments == null ? Output.empty() : this.additionalExperiments;
+    public Output<List<String>> additionalExperiments() {
+        return this.additionalExperiments == null ? Codegen.empty() : this.additionalExperiments;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="additionalUserLabels")
       private final @Nullable Output<Map<String,String>> additionalUserLabels;
 
-    public Output<Map<String,String>> getAdditionalUserLabels() {
-        return this.additionalUserLabels == null ? Output.empty() : this.additionalUserLabels;
+    public Output<Map<String,String>> additionalUserLabels() {
+        return this.additionalUserLabels == null ? Codegen.empty() : this.additionalUserLabels;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="enableStreamingEngine")
       private final @Nullable Output<Boolean> enableStreamingEngine;
 
-    public Output<Boolean> getEnableStreamingEngine() {
-        return this.enableStreamingEngine == null ? Output.empty() : this.enableStreamingEngine;
+    public Output<Boolean> enableStreamingEngine() {
+        return this.enableStreamingEngine == null ? Codegen.empty() : this.enableStreamingEngine;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="flexrsGoal")
       private final @Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> flexrsGoal;
 
-    public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> getFlexrsGoal() {
-        return this.flexrsGoal == null ? Output.empty() : this.flexrsGoal;
+    public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> flexrsGoal() {
+        return this.flexrsGoal == null ? Codegen.empty() : this.flexrsGoal;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="ipConfiguration")
       private final @Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> ipConfiguration;
 
-    public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> getIpConfiguration() {
-        return this.ipConfiguration == null ? Output.empty() : this.ipConfiguration;
+    public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> ipConfiguration() {
+        return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+    public Output<String> kmsKeyName() {
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<String> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
 
-    public Output<Integer> getMaxWorkers() {
-        return this.maxWorkers == null ? Output.empty() : this.maxWorkers;
+    public Output<Integer> maxWorkers() {
+        return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="numWorkers")
       private final @Nullable Output<Integer> numWorkers;
 
-    public Output<Integer> getNumWorkers() {
-        return this.numWorkers == null ? Output.empty() : this.numWorkers;
+    public Output<Integer> numWorkers() {
+        return this.numWorkers == null ? Codegen.empty() : this.numWorkers;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+    public Output<String> serviceAccountEmail() {
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+    public Output<String> subnetwork() {
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="tempLocation")
       private final @Nullable Output<String> tempLocation;
 
-    public Output<String> getTempLocation() {
-        return this.tempLocation == null ? Output.empty() : this.tempLocation;
+    public Output<String> tempLocation() {
+        return this.tempLocation == null ? Codegen.empty() : this.tempLocation;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="workerRegion")
       private final @Nullable Output<String> workerRegion;
 
-    public Output<String> getWorkerRegion() {
-        return this.workerRegion == null ? Output.empty() : this.workerRegion;
+    public Output<String> workerRegion() {
+        return this.workerRegion == null ? Codegen.empty() : this.workerRegion;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="workerZone")
       private final @Nullable Output<String> workerZone;
 
-    public Output<String> getWorkerZone() {
-        return this.workerZone == null ? Output.empty() : this.workerZone;
+    public Output<String> workerZone() {
+        return this.workerZone == null ? Codegen.empty() : this.workerZone;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs(
@@ -236,22 +237,22 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
     }
 
     private GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs() {
-        this.additionalExperiments = Output.empty();
-        this.additionalUserLabels = Output.empty();
-        this.enableStreamingEngine = Output.empty();
-        this.flexrsGoal = Output.empty();
-        this.ipConfiguration = Output.empty();
-        this.kmsKeyName = Output.empty();
-        this.machineType = Output.empty();
-        this.maxWorkers = Output.empty();
-        this.network = Output.empty();
-        this.numWorkers = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.subnetwork = Output.empty();
-        this.tempLocation = Output.empty();
-        this.workerRegion = Output.empty();
-        this.workerZone = Output.empty();
-        this.zone = Output.empty();
+        this.additionalExperiments = Codegen.empty();
+        this.additionalUserLabels = Codegen.empty();
+        this.enableStreamingEngine = Codegen.empty();
+        this.flexrsGoal = Codegen.empty();
+        this.ipConfiguration = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.maxWorkers = Codegen.empty();
+        this.network = Codegen.empty();
+        this.numWorkers = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.subnetwork = Codegen.empty();
+        this.tempLocation = Codegen.empty();
+        this.workerRegion = Codegen.empty();
+        this.workerZone = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -309,7 +310,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
-            this.additionalExperiments = Output.ofNullable(additionalExperiments);
+            this.additionalExperiments = Codegen.ofNullable(additionalExperiments);
             return this;
         }
         public Builder additionalExperiments(String... additionalExperiments) {
@@ -320,7 +321,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder additionalUserLabels(@Nullable Map<String,String> additionalUserLabels) {
-            this.additionalUserLabels = Output.ofNullable(additionalUserLabels);
+            this.additionalUserLabels = Codegen.ofNullable(additionalUserLabels);
             return this;
         }
         public Builder enableStreamingEngine(@Nullable Output<Boolean> enableStreamingEngine) {
@@ -328,7 +329,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
-            this.enableStreamingEngine = Output.ofNullable(enableStreamingEngine);
+            this.enableStreamingEngine = Codegen.ofNullable(enableStreamingEngine);
             return this;
         }
         public Builder flexrsGoal(@Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> flexrsGoal) {
@@ -336,7 +337,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder flexrsGoal(@Nullable GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal flexrsGoal) {
-            this.flexrsGoal = Output.ofNullable(flexrsGoal);
+            this.flexrsGoal = Codegen.ofNullable(flexrsGoal);
             return this;
         }
         public Builder ipConfiguration(@Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> ipConfiguration) {
@@ -344,7 +345,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder ipConfiguration(@Nullable GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration ipConfiguration) {
-            this.ipConfiguration = Output.ofNullable(ipConfiguration);
+            this.ipConfiguration = Codegen.ofNullable(ipConfiguration);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -352,7 +353,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -360,7 +361,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
@@ -368,7 +369,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
-            this.maxWorkers = Output.ofNullable(maxWorkers);
+            this.maxWorkers = Codegen.ofNullable(maxWorkers);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -376,7 +377,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder numWorkers(@Nullable Output<Integer> numWorkers) {
@@ -384,7 +385,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder numWorkers(@Nullable Integer numWorkers) {
-            this.numWorkers = Output.ofNullable(numWorkers);
+            this.numWorkers = Codegen.ofNullable(numWorkers);
             return this;
         }
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
@@ -392,7 +393,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -400,7 +401,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }
         public Builder tempLocation(@Nullable Output<String> tempLocation) {
@@ -408,7 +409,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder tempLocation(@Nullable String tempLocation) {
-            this.tempLocation = Output.ofNullable(tempLocation);
+            this.tempLocation = Codegen.ofNullable(tempLocation);
             return this;
         }
         public Builder workerRegion(@Nullable Output<String> workerRegion) {
@@ -416,7 +417,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder workerRegion(@Nullable String workerRegion) {
-            this.workerRegion = Output.ofNullable(workerRegion);
+            this.workerRegion = Codegen.ofNullable(workerRegion);
             return this;
         }
         public Builder workerZone(@Nullable Output<String> workerZone) {
@@ -424,7 +425,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder workerZone(@Nullable String workerZone) {
-            this.workerZone = Output.ofNullable(workerZone);
+            this.workerZone = Codegen.ofNullable(workerZone);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -432,7 +433,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs build() {
             return new GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs(additionalExperiments, additionalUserLabels, enableStreamingEngine, flexrsGoal, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);

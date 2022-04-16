@@ -7,6 +7,7 @@ import io.pulumi.azurenative.resourceconnector.enums.Provider;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
     @Import(name="provider")
       private final @Nullable Output<Either<String,Provider>> provider;
 
-    public Output<Either<String,Provider>> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<Either<String,Provider>> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public AppliancePropertiesInfrastructureConfigArgs(@Nullable Output<Either<String,Provider>> provider) {
@@ -36,7 +37,7 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
     }
 
     private AppliancePropertiesInfrastructureConfigArgs() {
-        this.provider = Output.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
             return this;
         }
         public Builder provider(@Nullable Either<String,Provider> provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public AppliancePropertiesInfrastructureConfigArgs build() {
             return new AppliancePropertiesInfrastructureConfigArgs(provider);

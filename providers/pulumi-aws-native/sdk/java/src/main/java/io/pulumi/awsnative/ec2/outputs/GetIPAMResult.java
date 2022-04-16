@@ -76,52 +76,52 @@ public final class GetIPAMResult {
      * The Amazon Resource Name (ARN) of the IPAM.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Id of the IPAM.
      * 
     */
-    public Optional<String> getIpamId() {
+    public Optional<String> ipamId() {
         return Optional.ofNullable(this.ipamId);
     }
     /**
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
      * 
     */
-    public List<IPAMIpamOperatingRegion> getOperatingRegions() {
+    public List<IPAMIpamOperatingRegion> operatingRegions() {
         return this.operatingRegions == null ? List.of() : this.operatingRegions;
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
     */
-    public Optional<String> getPrivateDefaultScopeId() {
+    public Optional<String> privateDefaultScopeId() {
         return Optional.ofNullable(this.privateDefaultScopeId);
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
     */
-    public Optional<String> getPublicDefaultScopeId() {
+    public Optional<String> publicDefaultScopeId() {
         return Optional.ofNullable(this.publicDefaultScopeId);
     }
     /**
      * The number of scopes that currently exist in this IPAM.
      * 
     */
-    public Optional<Integer> getScopeCount() {
+    public Optional<Integer> scopeCount() {
         return Optional.ofNullable(this.scopeCount);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<IPAMTag> getTags() {
+    public List<IPAMTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -1,7 +1,7 @@
 package io.pulumi.deployment.internal;
 
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
+import io.pulumi.resources.Stack;
 import io.pulumi.resources.StackOptions;
 
 import java.util.List;
@@ -17,9 +17,6 @@ public interface Runner {
     CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback);
 
     CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options);
-
-    @Deprecated
-    <T extends Stack> CompletableFuture<Integer> runAsync(Class<T> stackType);
 
     <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory);
 }

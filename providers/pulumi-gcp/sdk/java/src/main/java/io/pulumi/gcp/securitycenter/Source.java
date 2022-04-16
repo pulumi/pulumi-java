@@ -6,6 +6,7 @@ package io.pulumi.gcp.securitycenter;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.securitycenter.SourceArgs;
 import io.pulumi.gcp.securitycenter.inputs.SourceState;
@@ -52,7 +53,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The description of the source (max of 1024 characters).
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -74,7 +75,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * and underscores, and can be no longer than 32 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +89,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +105,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * lives in.
      * 
      */
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
 
@@ -130,7 +131,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Source(String name, SourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:securitycenter/source:Source", name, args == null ? SourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:securitycenter/source:Source", name, args == null ? SourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Source(String name, Output<String> id, @Nullable SourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

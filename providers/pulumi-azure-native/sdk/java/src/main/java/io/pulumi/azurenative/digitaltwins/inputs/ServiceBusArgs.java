@@ -7,6 +7,7 @@ import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> getDeadLetterSecret() {
-        return this.deadLetterSecret == null ? Output.empty() : this.deadLetterSecret;
+    public Output<String> deadLetterSecret() {
+        return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
 
-    public Output<String> getDeadLetterUri() {
-        return this.deadLetterUri == null ? Output.empty() : this.deadLetterUri;
+    public Output<String> deadLetterUri() {
+        return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -72,8 +73,8 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
-        return this.endpointUri == null ? Output.empty() : this.endpointUri;
+    public Output<String> endpointUri() {
+        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
-    public Output<String> getEntityPath() {
-        return this.entityPath == null ? Output.empty() : this.entityPath;
+    public Output<String> entityPath() {
+        return this.entityPath == null ? Codegen.empty() : this.entityPath;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryConnectionString")
       private final @Nullable Output<String> primaryConnectionString;
 
-    public Output<String> getPrimaryConnectionString() {
-        return this.primaryConnectionString == null ? Output.empty() : this.primaryConnectionString;
+    public Output<String> primaryConnectionString() {
+        return this.primaryConnectionString == null ? Codegen.empty() : this.primaryConnectionString;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryConnectionString")
       private final @Nullable Output<String> secondaryConnectionString;
 
-    public Output<String> getSecondaryConnectionString() {
-        return this.secondaryConnectionString == null ? Output.empty() : this.secondaryConnectionString;
+    public Output<String> secondaryConnectionString() {
+        return this.secondaryConnectionString == null ? Codegen.empty() : this.secondaryConnectionString;
     }
 
     public ServiceBusArgs(
@@ -129,14 +130,14 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceBusArgs() {
-        this.authenticationType = Output.empty();
-        this.deadLetterSecret = Output.empty();
-        this.deadLetterUri = Output.empty();
-        this.endpointType = Output.empty();
-        this.endpointUri = Output.empty();
-        this.entityPath = Output.empty();
-        this.primaryConnectionString = Output.empty();
-        this.secondaryConnectionString = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.deadLetterSecret = Codegen.empty();
+        this.deadLetterUri = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.endpointUri = Codegen.empty();
+        this.entityPath = Codegen.empty();
+        this.primaryConnectionString = Codegen.empty();
+        this.secondaryConnectionString = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
@@ -186,7 +187,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = Output.ofNullable(deadLetterSecret);
+            this.deadLetterSecret = Codegen.ofNullable(deadLetterSecret);
             return this;
         }
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
@@ -194,7 +195,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = Output.ofNullable(deadLetterUri);
+            this.deadLetterUri = Codegen.ofNullable(deadLetterUri);
             return this;
         }
         public Builder endpointType(Output<String> endpointType) {
@@ -210,7 +211,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Output.ofNullable(endpointUri);
+            this.endpointUri = Codegen.ofNullable(endpointUri);
             return this;
         }
         public Builder entityPath(@Nullable Output<String> entityPath) {
@@ -218,7 +219,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = Output.ofNullable(entityPath);
+            this.entityPath = Codegen.ofNullable(entityPath);
             return this;
         }
         public Builder primaryConnectionString(@Nullable Output<String> primaryConnectionString) {
@@ -226,7 +227,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
-            this.primaryConnectionString = Output.ofNullable(primaryConnectionString);
+            this.primaryConnectionString = Codegen.ofNullable(primaryConnectionString);
             return this;
         }
         public Builder secondaryConnectionString(@Nullable Output<String> secondaryConnectionString) {
@@ -234,7 +235,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
-            this.secondaryConnectionString = Output.ofNullable(secondaryConnectionString);
+            this.secondaryConnectionString = Codegen.ofNullable(secondaryConnectionString);
             return this;
         }        public ServiceBusArgs build() {
             return new ServiceBusArgs(authenticationType, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, primaryConnectionString, secondaryConnectionString);

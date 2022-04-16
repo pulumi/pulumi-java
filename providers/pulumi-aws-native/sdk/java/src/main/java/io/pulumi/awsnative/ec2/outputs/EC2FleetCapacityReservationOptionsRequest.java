@@ -18,7 +18,7 @@ public final class EC2FleetCapacityReservationOptionsRequest {
         this.usageStrategy = usageStrategy;
     }
 
-    public Optional<EC2FleetCapacityReservationOptionsRequestUsageStrategy> getUsageStrategy() {
+    public Optional<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy() {
         return Optional.ofNullable(this.usageStrategy);
     }
 

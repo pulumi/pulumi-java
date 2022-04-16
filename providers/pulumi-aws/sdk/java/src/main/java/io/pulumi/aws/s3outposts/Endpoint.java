@@ -10,6 +10,7 @@ import io.pulumi.aws.s3outposts.outputs.EndpointNetworkInterface;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return VPC CIDR block of the endpoint.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -69,7 +70,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return UTC creation time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -83,7 +84,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Set of nested attributes for associated Elastic Network Interfaces (ENIs).
      * 
      */
-    public Output<List<EndpointNetworkInterface>> getNetworkInterfaces() {
+    public Output<List<EndpointNetworkInterface>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -97,7 +98,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Identifier of the Outpost to contain this endpoint.
      * 
      */
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
     /**
@@ -111,7 +112,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Identifier of the EC2 Security Group.
      * 
      */
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
     /**
@@ -125,7 +126,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Identifier of the EC2 Subnet.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -151,7 +152,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Endpoint(String name, EndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3outposts/endpoint:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3outposts/endpoint:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Endpoint(String name, Output<String> id, @Nullable EndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

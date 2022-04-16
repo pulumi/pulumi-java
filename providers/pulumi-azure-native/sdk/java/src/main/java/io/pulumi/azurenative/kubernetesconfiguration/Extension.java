@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Flag to note if this instance participates in auto upgrade of minor version, or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
+    public Output</* @Nullable */ Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
@@ -62,7 +63,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getConfigurationProtectedSettings() {
+    public Output</* @Nullable */ Map<String,String>> configurationProtectedSettings() {
         return this.configurationProtectedSettings;
     }
     /**
@@ -76,7 +77,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Configuration settings, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getConfigurationSettings() {
+    public Output</* @Nullable */ Map<String,String>> configurationSettings() {
         return this.configurationSettings;
     }
     /**
@@ -90,7 +91,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -104,7 +105,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Error information from the Agent - e.g. errors during installation.
      * 
      */
-    public Output<ErrorDefinitionResponse> getErrorInfo() {
+    public Output<ErrorDefinitionResponse> errorInfo() {
         return this.errorInfo;
     }
     /**
@@ -118,7 +119,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
      * 
      */
-    public Output</* @Nullable */ String> getExtensionType() {
+    public Output</* @Nullable */ String> extensionType() {
         return this.extensionType;
     }
     /**
@@ -132,7 +133,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The identity of the configuration.
      * 
      */
-    public Output</* @Nullable */ ConfigurationIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ConfigurationIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -146,7 +147,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Status of installation of this instance of the extension.
      * 
      */
-    public Output<String> getInstallState() {
+    public Output<String> installState() {
         return this.installState;
     }
     /**
@@ -160,7 +161,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -174,7 +175,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return DateLiteral (per ISO8601) noting the time of last status from the agent.
      * 
      */
-    public Output<String> getLastStatusTime() {
+    public Output<String> lastStatusTime() {
         return this.lastStatusTime;
     }
     /**
@@ -188,7 +189,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -202,7 +203,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
      * 
      */
-    public Output</* @Nullable */ String> getReleaseTrain() {
+    public Output</* @Nullable */ String> releaseTrain() {
         return this.releaseTrain;
     }
     /**
@@ -216,7 +217,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Scope at which the extension instance is installed.
      * 
      */
-    public Output</* @Nullable */ ScopeResponse> getScope() {
+    public Output</* @Nullable */ ScopeResponse> scope() {
         return this.scope;
     }
     /**
@@ -230,7 +231,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Status from this instance of the extension.
      * 
      */
-    public Output</* @Nullable */ List<ExtensionStatusResponse>> getStatuses() {
+    public Output</* @Nullable */ List<ExtensionStatusResponse>> statuses() {
         return this.statuses;
     }
     /**
@@ -244,7 +245,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> getSystemData() {
+    public Output</* @Nullable */ SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -258,7 +259,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -272,7 +273,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 
@@ -298,7 +299,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Extension(String name, ExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kubernetesconfiguration:Extension", name, args == null ? ExtensionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:kubernetesconfiguration:Extension", name, args == null ? ExtensionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Extension(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

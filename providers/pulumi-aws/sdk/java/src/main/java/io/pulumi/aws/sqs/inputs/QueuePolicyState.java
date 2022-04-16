@@ -5,6 +5,7 @@ package io.pulumi.aws.sqs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="queueUrl")
       private final @Nullable Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
-        return this.queueUrl == null ? Output.empty() : this.queueUrl;
+    public Output<String> queueUrl() {
+        return this.queueUrl == null ? Codegen.empty() : this.queueUrl;
     }
 
     public QueuePolicyState(
@@ -44,8 +45,8 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueuePolicyState() {
-        this.policy = Output.empty();
-        this.queueUrl = Output.empty();
+        this.policy = Codegen.empty();
+        this.queueUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueUrl(@Nullable String queueUrl) {
-            this.queueUrl = Output.ofNullable(queueUrl);
+            this.queueUrl = Codegen.ofNullable(queueUrl);
             return this;
         }        public QueuePolicyState build() {
             return new QueuePolicyState(policy, queueUrl);

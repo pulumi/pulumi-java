@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @return The time the hybrid connection was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -57,7 +58,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @return The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
      * 
      */
-    public Output<Integer> getListenerCount() {
+    public Output<Integer> listenerCount() {
         return this.listenerCount;
     }
     /**
@@ -71,7 +72,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @return Returns true if client authorization is needed for this hybrid connection; otherwise, false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequiresClientAuthorization() {
+    public Output</* @Nullable */ Boolean> requiresClientAuthorization() {
         return this.requiresClientAuthorization;
     }
     /**
@@ -99,7 +100,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -113,7 +114,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
     /**
@@ -127,7 +128,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @return The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
      */
-    public Output</* @Nullable */ String> getUserMetadata() {
+    public Output</* @Nullable */ String> userMetadata() {
         return this.userMetadata;
     }
 
@@ -153,7 +154,7 @@ public class HybridConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HybridConnection(String name, HybridConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:relay:HybridConnection", name, args == null ? HybridConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:relay:HybridConnection", name, args == null ? HybridConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HybridConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

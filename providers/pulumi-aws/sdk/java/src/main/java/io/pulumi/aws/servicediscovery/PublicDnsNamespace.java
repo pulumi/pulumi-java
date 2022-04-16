@@ -9,6 +9,7 @@ import io.pulumi.aws.servicediscovery.inputs.PublicDnsNamespaceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * @return The ARN that Amazon Route 53 assigns to the namespace when you create it.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * @return The description that you specify for the namespace when you create it.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +69,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * @return The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
      * 
      */
-    public Output<String> getHostedZone() {
+    public Output<String> hostedZone() {
         return this.hostedZone;
     }
     /**
@@ -82,7 +83,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * @return The name of the namespace.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -96,7 +97,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the namespace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -110,7 +111,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -136,7 +137,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicDnsNamespace(String name, @Nullable PublicDnsNamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace", name, args == null ? PublicDnsNamespaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace", name, args == null ? PublicDnsNamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublicDnsNamespace(String name, Output<String> id, @Nullable PublicDnsNamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

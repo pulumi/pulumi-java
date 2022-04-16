@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.SessionEntityTypeEntityOverrideMode;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs;
 import java.lang.String;
@@ -20,7 +21,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -31,7 +32,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entities", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> getEntities() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities() {
         return this.entities;
     }
 
@@ -42,22 +43,22 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entityOverrideMode", required=true)
       private final Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
-    public Output<SessionEntityTypeEntityOverrideMode> getEntityOverrideMode() {
+    public Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode() {
         return this.entityOverrideMode;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,21 +68,21 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="sessionId", required=true)
       private final Output<String> sessionId;
 
-    public Output<String> getSessionId() {
+    public Output<String> sessionId() {
         return this.sessionId;
     }
 
@@ -105,14 +106,14 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SessionEntityTypeArgs() {
-        this.agentId = Output.empty();
-        this.entities = Output.empty();
-        this.entityOverrideMode = Output.empty();
-        this.environmentId = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.sessionId = Output.empty();
+        this.agentId = Codegen.empty();
+        this.entities = Codegen.empty();
+        this.entityOverrideMode = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.sessionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -197,7 +198,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -205,7 +206,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder sessionId(Output<String> sessionId) {

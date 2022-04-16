@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
     @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
 
@@ -36,7 +37,7 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
     @Import(name="workerConfigurationArn", required=true)
       private final Output<String> workerConfigurationArn;
 
-    public Output<String> getWorkerConfigurationArn() {
+    public Output<String> workerConfigurationArn() {
         return this.workerConfigurationArn;
     }
 
@@ -48,8 +49,8 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
     }
 
     private ConnectorWorkerConfigurationArgs() {
-        this.revision = Output.empty();
-        this.workerConfigurationArn = Output.empty();
+        this.revision = Codegen.empty();
+        this.workerConfigurationArn = Codegen.empty();
     }
 
     public static Builder builder() {

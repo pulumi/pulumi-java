@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardArn")
       private final @Nullable Output<String> dashboardArn;
 
-    public Output<String> getDashboardArn() {
-        return this.dashboardArn == null ? Output.empty() : this.dashboardArn;
+    public Output<String> dashboardArn() {
+        return this.dashboardArn == null ? Codegen.empty() : this.dashboardArn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardBody")
       private final @Nullable Output<String> dashboardBody;
 
-    public Output<String> getDashboardBody() {
-        return this.dashboardBody == null ? Output.empty() : this.dashboardBody;
+    public Output<String> dashboardBody() {
+        return this.dashboardBody == null ? Codegen.empty() : this.dashboardBody;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardName")
       private final @Nullable Output<String> dashboardName;
 
-    public Output<String> getDashboardName() {
-        return this.dashboardName == null ? Output.empty() : this.dashboardName;
+    public Output<String> dashboardName() {
+        return this.dashboardName == null ? Codegen.empty() : this.dashboardName;
     }
 
     public DashboardState(
@@ -57,9 +58,9 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardState() {
-        this.dashboardArn = Output.empty();
-        this.dashboardBody = Output.empty();
-        this.dashboardName = Output.empty();
+        this.dashboardArn = Codegen.empty();
+        this.dashboardBody = Codegen.empty();
+        this.dashboardName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashboardArn(@Nullable String dashboardArn) {
-            this.dashboardArn = Output.ofNullable(dashboardArn);
+            this.dashboardArn = Codegen.ofNullable(dashboardArn);
             return this;
         }
         public Builder dashboardBody(@Nullable Output<String> dashboardBody) {
@@ -99,7 +100,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashboardBody(@Nullable String dashboardBody) {
-            this.dashboardBody = Output.ofNullable(dashboardBody);
+            this.dashboardBody = Codegen.ofNullable(dashboardBody);
             return this;
         }
         public Builder dashboardName(@Nullable Output<String> dashboardName) {
@@ -107,7 +108,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Output.ofNullable(dashboardName);
+            this.dashboardName = Codegen.ofNullable(dashboardName);
             return this;
         }        public DashboardState build() {
             return new DashboardState(dashboardArn, dashboardBody, dashboardName);

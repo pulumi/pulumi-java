@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class CxPageFormParameterFillBehaviorArgs extends io.pulumi.resourc
     @Import(name="initialPromptFulfillment")
       private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs> initialPromptFulfillment;
 
-    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs> getInitialPromptFulfillment() {
-        return this.initialPromptFulfillment == null ? Output.empty() : this.initialPromptFulfillment;
+    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs> initialPromptFulfillment() {
+        return this.initialPromptFulfillment == null ? Codegen.empty() : this.initialPromptFulfillment;
     }
 
     public CxPageFormParameterFillBehaviorArgs(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs> initialPromptFulfillment) {
@@ -31,7 +32,7 @@ public final class CxPageFormParameterFillBehaviorArgs extends io.pulumi.resourc
     }
 
     private CxPageFormParameterFillBehaviorArgs() {
-        this.initialPromptFulfillment = Output.empty();
+        this.initialPromptFulfillment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class CxPageFormParameterFillBehaviorArgs extends io.pulumi.resourc
             return this;
         }
         public Builder initialPromptFulfillment(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentArgs initialPromptFulfillment) {
-            this.initialPromptFulfillment = Output.ofNullable(initialPromptFulfillment);
+            this.initialPromptFulfillment = Codegen.ofNullable(initialPromptFulfillment);
             return this;
         }        public CxPageFormParameterFillBehaviorArgs build() {
             return new CxPageFormParameterFillBehaviorArgs(initialPromptFulfillment);

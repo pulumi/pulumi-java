@@ -34,7 +34,7 @@ public final class ClusterReleaseChannel {
      * * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
      * 
     */
-    public String getChannel() {
+    public String channel() {
         return this.channel;
     }
 

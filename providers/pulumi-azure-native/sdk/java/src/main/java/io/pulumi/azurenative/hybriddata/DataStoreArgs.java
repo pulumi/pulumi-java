@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hybriddata.enums.State;
 import io.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerSecrets")
       private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
-    public Output<List<CustomerSecretArgs>> getCustomerSecrets() {
-        return this.customerSecrets == null ? Output.empty() : this.customerSecrets;
+    public Output<List<CustomerSecretArgs>> customerSecrets() {
+        return this.customerSecrets == null ? Codegen.empty() : this.customerSecrets;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataManagerName", required=true)
       private final Output<String> dataManagerName;
 
-    public Output<String> getDataManagerName() {
+    public Output<String> dataManagerName() {
         return this.dataManagerName;
     }
 
@@ -47,8 +48,8 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataStoreName")
       private final @Nullable Output<String> dataStoreName;
 
-    public Output<String> getDataStoreName() {
-        return this.dataStoreName == null ? Output.empty() : this.dataStoreName;
+    public Output<String> dataStoreName() {
+        return this.dataStoreName == null ? Codegen.empty() : this.dataStoreName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataStoreTypeId", required=true)
       private final Output<String> dataStoreTypeId;
 
-    public Output<String> getDataStoreTypeId() {
+    public Output<String> dataStoreTypeId() {
         return this.dataStoreTypeId;
     }
 
@@ -69,8 +70,8 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedProperties")
       private final @Nullable Output<Object> extendedProperties;
 
-    public Output<Object> getExtendedProperties() {
-        return this.extendedProperties == null ? Output.empty() : this.extendedProperties;
+    public Output<Object> extendedProperties() {
+        return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
-    public Output<String> getRepositoryId() {
-        return this.repositoryId == null ? Output.empty() : this.repositoryId;
+    public Output<String> repositoryId() {
+        return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +103,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
       private final Output<State> state;
 
-    public Output<State> getState() {
+    public Output<State> state() {
         return this.state;
     }
 
@@ -126,14 +127,14 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataStoreArgs() {
-        this.customerSecrets = Output.empty();
-        this.dataManagerName = Output.empty();
-        this.dataStoreName = Output.empty();
-        this.dataStoreTypeId = Output.empty();
-        this.extendedProperties = Output.empty();
-        this.repositoryId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.state = Output.empty();
+        this.customerSecrets = Codegen.empty();
+        this.dataManagerName = Codegen.empty();
+        this.dataStoreName = Codegen.empty();
+        this.dataStoreTypeId = Codegen.empty();
+        this.extendedProperties = Codegen.empty();
+        this.repositoryId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
-            this.customerSecrets = Output.ofNullable(customerSecrets);
+            this.customerSecrets = Codegen.ofNullable(customerSecrets);
             return this;
         }
         public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
@@ -194,7 +195,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataStoreName(@Nullable String dataStoreName) {
-            this.dataStoreName = Output.ofNullable(dataStoreName);
+            this.dataStoreName = Codegen.ofNullable(dataStoreName);
             return this;
         }
         public Builder dataStoreTypeId(Output<String> dataStoreTypeId) {
@@ -210,7 +211,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedProperties(@Nullable Object extendedProperties) {
-            this.extendedProperties = Output.ofNullable(extendedProperties);
+            this.extendedProperties = Codegen.ofNullable(extendedProperties);
             return this;
         }
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
@@ -218,7 +219,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Output.ofNullable(repositoryId);
+            this.repositoryId = Codegen.ofNullable(repositoryId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

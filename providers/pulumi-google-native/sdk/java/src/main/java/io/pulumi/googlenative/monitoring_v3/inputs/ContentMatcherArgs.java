@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.enums.ContentMatcherMatcher;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matcher")
       private final @Nullable Output<ContentMatcherMatcher> matcher;
 
-    public Output<ContentMatcherMatcher> getMatcher() {
-        return this.matcher == null ? Output.empty() : this.matcher;
+    public Output<ContentMatcherMatcher> matcher() {
+        return this.matcher == null ? Codegen.empty() : this.matcher;
     }
 
     public ContentMatcherArgs(
@@ -49,8 +50,8 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentMatcherArgs() {
-        this.content = Output.empty();
-        this.matcher = Output.empty();
+        this.content = Codegen.empty();
+        this.matcher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder matcher(@Nullable Output<ContentMatcherMatcher> matcher) {
@@ -88,7 +89,7 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder matcher(@Nullable ContentMatcherMatcher matcher) {
-            this.matcher = Output.ofNullable(matcher);
+            this.matcher = Codegen.ofNullable(matcher);
             return this;
         }        public ContentMatcherArgs build() {
             return new ContentMatcherArgs(content, matcher);

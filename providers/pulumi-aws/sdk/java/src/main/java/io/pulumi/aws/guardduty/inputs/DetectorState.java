@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty.inputs;
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasources")
       private final @Nullable Output<DetectorDatasourcesGetArgs> datasources;
 
-    public Output<DetectorDatasourcesGetArgs> getDatasources() {
-        return this.datasources == null ? Output.empty() : this.datasources;
+    public Output<DetectorDatasourcesGetArgs> datasources() {
+        return this.datasources == null ? Codegen.empty() : this.datasources;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+    public Output<Boolean> enable() {
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
       private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
+    public Output<String> findingPublishingFrequency() {
+        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public DetectorState(
@@ -112,13 +113,13 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorState() {
-        this.accountId = Output.empty();
-        this.arn = Output.empty();
-        this.datasources = Output.empty();
-        this.enable = Output.empty();
-        this.findingPublishingFrequency = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.accountId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.datasources = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.findingPublishingFrequency = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -166,7 +167,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder datasources(@Nullable Output<DetectorDatasourcesGetArgs> datasources) {
@@ -174,7 +175,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasources(@Nullable DetectorDatasourcesGetArgs datasources) {
-            this.datasources = Output.ofNullable(datasources);
+            this.datasources = Codegen.ofNullable(datasources);
             return this;
         }
         public Builder enable(@Nullable Output<Boolean> enable) {
@@ -182,7 +183,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
@@ -190,7 +191,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -198,7 +199,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -206,7 +207,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public DetectorState build() {
             return new DetectorState(accountId, arn, datasources, enable, findingPublishingFrequency, tags, tagsAll);

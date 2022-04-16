@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getApprovalRequired() {
+    public Output</* @Nullable */ Boolean> approvalRequired() {
         return this.approvalRequired;
     }
     /**
@@ -57,7 +58,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Product description. May include HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Product name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +86,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -113,7 +114,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSubscriptionRequired() {
+    public Output</* @Nullable */ Boolean> subscriptionRequired() {
         return this.subscriptionRequired;
     }
     /**
@@ -127,7 +128,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
      * 
      */
-    public Output</* @Nullable */ Integer> getSubscriptionsLimit() {
+    public Output</* @Nullable */ Integer> subscriptionsLimit() {
         return this.subscriptionsLimit;
     }
     /**
@@ -141,7 +142,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
      * 
      */
-    public Output</* @Nullable */ String> getTerms() {
+    public Output</* @Nullable */ String> terms() {
         return this.terms;
     }
     /**
@@ -155,7 +156,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +182,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Product(String name, ProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Product(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

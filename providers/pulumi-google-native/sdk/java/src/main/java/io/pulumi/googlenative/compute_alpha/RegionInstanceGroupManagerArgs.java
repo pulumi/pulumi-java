@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.RegionInstanceGroupManagerFailoverAction;
 import io.pulumi.googlenative.compute_alpha.inputs.DistributionPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerAllInstancesConfigArgs;
@@ -33,8 +34,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="allInstancesConfig")
       private final @Nullable Output<InstanceGroupManagerAllInstancesConfigArgs> allInstancesConfig;
 
-    public Output<InstanceGroupManagerAllInstancesConfigArgs> getAllInstancesConfig() {
-        return this.allInstancesConfig == null ? Output.empty() : this.allInstancesConfig;
+    public Output<InstanceGroupManagerAllInstancesConfigArgs> allInstancesConfig() {
+        return this.allInstancesConfig == null ? Codegen.empty() : this.allInstancesConfig;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="autoHealingPolicies")
       private final @Nullable Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies;
 
-    public Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> getAutoHealingPolicies() {
-        return this.autoHealingPolicies == null ? Output.empty() : this.autoHealingPolicies;
+    public Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies() {
+        return this.autoHealingPolicies == null ? Codegen.empty() : this.autoHealingPolicies;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="baseInstanceName")
       private final @Nullable Output<String> baseInstanceName;
 
-    public Output<String> getBaseInstanceName() {
-        return this.baseInstanceName == null ? Output.empty() : this.baseInstanceName;
+    public Output<String> baseInstanceName() {
+        return this.baseInstanceName == null ? Codegen.empty() : this.baseInstanceName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="distributionPolicy")
       private final @Nullable Output<DistributionPolicyArgs> distributionPolicy;
 
-    public Output<DistributionPolicyArgs> getDistributionPolicy() {
-        return this.distributionPolicy == null ? Output.empty() : this.distributionPolicy;
+    public Output<DistributionPolicyArgs> distributionPolicy() {
+        return this.distributionPolicy == null ? Codegen.empty() : this.distributionPolicy;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="failoverAction")
       private final @Nullable Output<RegionInstanceGroupManagerFailoverAction> failoverAction;
 
-    public Output<RegionInstanceGroupManagerFailoverAction> getFailoverAction() {
-        return this.failoverAction == null ? Output.empty() : this.failoverAction;
+    public Output<RegionInstanceGroupManagerFailoverAction> failoverAction() {
+        return this.failoverAction == null ? Codegen.empty() : this.failoverAction;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="instanceLifecyclePolicy")
       private final @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyArgs> instanceLifecyclePolicy;
 
-    public Output<InstanceGroupManagerInstanceLifecyclePolicyArgs> getInstanceLifecyclePolicy() {
-        return this.instanceLifecyclePolicy == null ? Output.empty() : this.instanceLifecyclePolicy;
+    public Output<InstanceGroupManagerInstanceLifecyclePolicyArgs> instanceLifecyclePolicy() {
+        return this.instanceLifecyclePolicy == null ? Codegen.empty() : this.instanceLifecyclePolicy;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="instanceTemplate")
       private final @Nullable Output<String> instanceTemplate;
 
-    public Output<String> getInstanceTemplate() {
-        return this.instanceTemplate == null ? Output.empty() : this.instanceTemplate;
+    public Output<String> instanceTemplate() {
+        return this.instanceTemplate == null ? Codegen.empty() : this.instanceTemplate;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -132,29 +133,29 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="namedPorts")
       private final @Nullable Output<List<NamedPortArgs>> namedPorts;
 
-    public Output<List<NamedPortArgs>> getNamedPorts() {
-        return this.namedPorts == null ? Output.empty() : this.namedPorts;
+    public Output<List<NamedPortArgs>> namedPorts() {
+        return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="standbyPolicy")
       private final @Nullable Output<InstanceGroupManagerStandbyPolicyArgs> standbyPolicy;
 
-    public Output<InstanceGroupManagerStandbyPolicyArgs> getStandbyPolicy() {
-        return this.standbyPolicy == null ? Output.empty() : this.standbyPolicy;
+    public Output<InstanceGroupManagerStandbyPolicyArgs> standbyPolicy() {
+        return this.standbyPolicy == null ? Codegen.empty() : this.standbyPolicy;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="statefulPolicy")
       private final @Nullable Output<StatefulPolicyArgs> statefulPolicy;
 
-    public Output<StatefulPolicyArgs> getStatefulPolicy() {
-        return this.statefulPolicy == null ? Output.empty() : this.statefulPolicy;
+    public Output<StatefulPolicyArgs> statefulPolicy() {
+        return this.statefulPolicy == null ? Codegen.empty() : this.statefulPolicy;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
 
-    public Output<List<String>> getTargetPools() {
-        return this.targetPools == null ? Output.empty() : this.targetPools;
+    public Output<List<String>> targetPools() {
+        return this.targetPools == null ? Codegen.empty() : this.targetPools;
     }
 
     /**
@@ -208,8 +209,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
 
-    public Output<Integer> getTargetSize() {
-        return this.targetSize == null ? Output.empty() : this.targetSize;
+    public Output<Integer> targetSize() {
+        return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 
     /**
@@ -219,8 +220,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="targetStoppedSize")
       private final @Nullable Output<Integer> targetStoppedSize;
 
-    public Output<Integer> getTargetStoppedSize() {
-        return this.targetStoppedSize == null ? Output.empty() : this.targetStoppedSize;
+    public Output<Integer> targetStoppedSize() {
+        return this.targetStoppedSize == null ? Codegen.empty() : this.targetStoppedSize;
     }
 
     /**
@@ -230,8 +231,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="targetSuspendedSize")
       private final @Nullable Output<Integer> targetSuspendedSize;
 
-    public Output<Integer> getTargetSuspendedSize() {
-        return this.targetSuspendedSize == null ? Output.empty() : this.targetSuspendedSize;
+    public Output<Integer> targetSuspendedSize() {
+        return this.targetSuspendedSize == null ? Codegen.empty() : this.targetSuspendedSize;
     }
 
     /**
@@ -241,8 +242,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="updatePolicy")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
-    public Output<InstanceGroupManagerUpdatePolicyArgs> getUpdatePolicy() {
-        return this.updatePolicy == null ? Output.empty() : this.updatePolicy;
+    public Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy() {
+        return this.updatePolicy == null ? Codegen.empty() : this.updatePolicy;
     }
 
     /**
@@ -252,8 +253,8 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     @Import(name="versions")
       private final @Nullable Output<List<InstanceGroupManagerVersionArgs>> versions;
 
-    public Output<List<InstanceGroupManagerVersionArgs>> getVersions() {
-        return this.versions == null ? Output.empty() : this.versions;
+    public Output<List<InstanceGroupManagerVersionArgs>> versions() {
+        return this.versions == null ? Codegen.empty() : this.versions;
     }
 
     public RegionInstanceGroupManagerArgs(
@@ -304,28 +305,28 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     }
 
     private RegionInstanceGroupManagerArgs() {
-        this.allInstancesConfig = Output.empty();
-        this.autoHealingPolicies = Output.empty();
-        this.baseInstanceName = Output.empty();
-        this.description = Output.empty();
-        this.distributionPolicy = Output.empty();
-        this.failoverAction = Output.empty();
-        this.instanceLifecyclePolicy = Output.empty();
-        this.instanceTemplate = Output.empty();
-        this.name = Output.empty();
-        this.namedPorts = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.standbyPolicy = Output.empty();
-        this.statefulPolicy = Output.empty();
-        this.targetPools = Output.empty();
-        this.targetSize = Output.empty();
-        this.targetStoppedSize = Output.empty();
-        this.targetSuspendedSize = Output.empty();
-        this.updatePolicy = Output.empty();
-        this.versions = Output.empty();
+        this.allInstancesConfig = Codegen.empty();
+        this.autoHealingPolicies = Codegen.empty();
+        this.baseInstanceName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.distributionPolicy = Codegen.empty();
+        this.failoverAction = Codegen.empty();
+        this.instanceLifecyclePolicy = Codegen.empty();
+        this.instanceTemplate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namedPorts = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.standbyPolicy = Codegen.empty();
+        this.statefulPolicy = Codegen.empty();
+        this.targetPools = Codegen.empty();
+        this.targetSize = Codegen.empty();
+        this.targetStoppedSize = Codegen.empty();
+        this.targetSuspendedSize = Codegen.empty();
+        this.updatePolicy = Codegen.empty();
+        this.versions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -395,7 +396,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allInstancesConfig(@Nullable InstanceGroupManagerAllInstancesConfigArgs allInstancesConfig) {
-            this.allInstancesConfig = Output.ofNullable(allInstancesConfig);
+            this.allInstancesConfig = Codegen.ofNullable(allInstancesConfig);
             return this;
         }
         public Builder autoHealingPolicies(@Nullable Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies) {
@@ -403,7 +404,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder autoHealingPolicies(@Nullable List<InstanceGroupManagerAutoHealingPolicyArgs> autoHealingPolicies) {
-            this.autoHealingPolicies = Output.ofNullable(autoHealingPolicies);
+            this.autoHealingPolicies = Codegen.ofNullable(autoHealingPolicies);
             return this;
         }
         public Builder autoHealingPolicies(InstanceGroupManagerAutoHealingPolicyArgs... autoHealingPolicies) {
@@ -414,7 +415,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder baseInstanceName(@Nullable String baseInstanceName) {
-            this.baseInstanceName = Output.ofNullable(baseInstanceName);
+            this.baseInstanceName = Codegen.ofNullable(baseInstanceName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -422,7 +423,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder distributionPolicy(@Nullable Output<DistributionPolicyArgs> distributionPolicy) {
@@ -430,7 +431,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder distributionPolicy(@Nullable DistributionPolicyArgs distributionPolicy) {
-            this.distributionPolicy = Output.ofNullable(distributionPolicy);
+            this.distributionPolicy = Codegen.ofNullable(distributionPolicy);
             return this;
         }
         public Builder failoverAction(@Nullable Output<RegionInstanceGroupManagerFailoverAction> failoverAction) {
@@ -438,7 +439,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder failoverAction(@Nullable RegionInstanceGroupManagerFailoverAction failoverAction) {
-            this.failoverAction = Output.ofNullable(failoverAction);
+            this.failoverAction = Codegen.ofNullable(failoverAction);
             return this;
         }
         public Builder instanceLifecyclePolicy(@Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyArgs> instanceLifecyclePolicy) {
@@ -446,7 +447,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder instanceLifecyclePolicy(@Nullable InstanceGroupManagerInstanceLifecyclePolicyArgs instanceLifecyclePolicy) {
-            this.instanceLifecyclePolicy = Output.ofNullable(instanceLifecyclePolicy);
+            this.instanceLifecyclePolicy = Codegen.ofNullable(instanceLifecyclePolicy);
             return this;
         }
         public Builder instanceTemplate(@Nullable Output<String> instanceTemplate) {
@@ -454,7 +455,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder instanceTemplate(@Nullable String instanceTemplate) {
-            this.instanceTemplate = Output.ofNullable(instanceTemplate);
+            this.instanceTemplate = Codegen.ofNullable(instanceTemplate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -462,7 +463,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namedPorts(@Nullable Output<List<NamedPortArgs>> namedPorts) {
@@ -470,7 +471,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder namedPorts(@Nullable List<NamedPortArgs> namedPorts) {
-            this.namedPorts = Output.ofNullable(namedPorts);
+            this.namedPorts = Codegen.ofNullable(namedPorts);
             return this;
         }
         public Builder namedPorts(NamedPortArgs... namedPorts) {
@@ -481,7 +482,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -497,7 +498,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -505,7 +506,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder standbyPolicy(@Nullable Output<InstanceGroupManagerStandbyPolicyArgs> standbyPolicy) {
@@ -513,7 +514,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder standbyPolicy(@Nullable InstanceGroupManagerStandbyPolicyArgs standbyPolicy) {
-            this.standbyPolicy = Output.ofNullable(standbyPolicy);
+            this.standbyPolicy = Codegen.ofNullable(standbyPolicy);
             return this;
         }
         public Builder statefulPolicy(@Nullable Output<StatefulPolicyArgs> statefulPolicy) {
@@ -521,7 +522,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder statefulPolicy(@Nullable StatefulPolicyArgs statefulPolicy) {
-            this.statefulPolicy = Output.ofNullable(statefulPolicy);
+            this.statefulPolicy = Codegen.ofNullable(statefulPolicy);
             return this;
         }
         public Builder targetPools(@Nullable Output<List<String>> targetPools) {
@@ -529,7 +530,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder targetPools(@Nullable List<String> targetPools) {
-            this.targetPools = Output.ofNullable(targetPools);
+            this.targetPools = Codegen.ofNullable(targetPools);
             return this;
         }
         public Builder targetPools(String... targetPools) {
@@ -540,7 +541,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder targetSize(@Nullable Integer targetSize) {
-            this.targetSize = Output.ofNullable(targetSize);
+            this.targetSize = Codegen.ofNullable(targetSize);
             return this;
         }
         public Builder targetStoppedSize(@Nullable Output<Integer> targetStoppedSize) {
@@ -548,7 +549,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder targetStoppedSize(@Nullable Integer targetStoppedSize) {
-            this.targetStoppedSize = Output.ofNullable(targetStoppedSize);
+            this.targetStoppedSize = Codegen.ofNullable(targetStoppedSize);
             return this;
         }
         public Builder targetSuspendedSize(@Nullable Output<Integer> targetSuspendedSize) {
@@ -556,7 +557,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder targetSuspendedSize(@Nullable Integer targetSuspendedSize) {
-            this.targetSuspendedSize = Output.ofNullable(targetSuspendedSize);
+            this.targetSuspendedSize = Codegen.ofNullable(targetSuspendedSize);
             return this;
         }
         public Builder updatePolicy(@Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
@@ -564,7 +565,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
-            this.updatePolicy = Output.ofNullable(updatePolicy);
+            this.updatePolicy = Codegen.ofNullable(updatePolicy);
             return this;
         }
         public Builder versions(@Nullable Output<List<InstanceGroupManagerVersionArgs>> versions) {
@@ -572,7 +573,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder versions(@Nullable List<InstanceGroupManagerVersionArgs> versions) {
-            this.versions = Output.ofNullable(versions);
+            this.versions = Codegen.ofNullable(versions);
             return this;
         }
         public Builder versions(InstanceGroupManagerVersionArgs... versions) {

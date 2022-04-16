@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scheduleFrequencyInMins")
       private final @Nullable Output<Integer> scheduleFrequencyInMins;
 
-    public Output<Integer> getScheduleFrequencyInMins() {
-        return this.scheduleFrequencyInMins == null ? Output.empty() : this.scheduleFrequencyInMins;
+    public Output<Integer> scheduleFrequencyInMins() {
+        return this.scheduleFrequencyInMins == null ? Codegen.empty() : this.scheduleFrequencyInMins;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="schedulePolicyType", required=true)
       private final Output<String> schedulePolicyType;
 
-    public Output<String> getSchedulePolicyType() {
+    public Output<String> schedulePolicyType() {
         return this.schedulePolicyType;
     }
 
@@ -50,8 +51,8 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LogSchedulePolicyArgs() {
-        this.scheduleFrequencyInMins = Output.empty();
-        this.schedulePolicyType = Output.empty();
+        this.scheduleFrequencyInMins = Codegen.empty();
+        this.schedulePolicyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
-            this.scheduleFrequencyInMins = Output.ofNullable(scheduleFrequencyInMins);
+            this.scheduleFrequencyInMins = Codegen.ofNullable(scheduleFrequencyInMins);
             return this;
         }
         public Builder schedulePolicyType(Output<String> schedulePolicyType) {

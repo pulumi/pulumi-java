@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayProbeHealthRespons
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,8 +31,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+    public Output<String> host() {
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+    public Output<Integer> interval() {
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="match")
       private final @Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match;
 
-    public Output<ApplicationGatewayProbeHealthResponseMatchArgs> getMatch() {
-        return this.match == null ? Output.empty() : this.match;
+    public Output<ApplicationGatewayProbeHealthResponseMatchArgs> match() {
+        return this.match == null ? Codegen.empty() : this.match;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="minServers")
       private final @Nullable Output<Integer> minServers;
 
-    public Output<Integer> getMinServers() {
-        return this.minServers == null ? Output.empty() : this.minServers;
+    public Output<Integer> minServers() {
+        return this.minServers == null ? Codegen.empty() : this.minServers;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="pickHostNameFromBackendHttpSettings")
       private final @Nullable Output<Boolean> pickHostNameFromBackendHttpSettings;
 
-    public Output<Boolean> getPickHostNameFromBackendHttpSettings() {
-        return this.pickHostNameFromBackendHttpSettings == null ? Output.empty() : this.pickHostNameFromBackendHttpSettings;
+    public Output<Boolean> pickHostNameFromBackendHttpSettings() {
+        return this.pickHostNameFromBackendHttpSettings == null ? Codegen.empty() : this.pickHostNameFromBackendHttpSettings;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
-    public Output<Either<String,ApplicationGatewayProtocol>> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<Either<String,ApplicationGatewayProtocol>> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<Integer> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
+    public Output<Integer> unhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 
     public ApplicationGatewayProbeArgs(
@@ -183,18 +184,18 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     }
 
     private ApplicationGatewayProbeArgs() {
-        this.host = Output.empty();
-        this.id = Output.empty();
-        this.interval = Output.empty();
-        this.match = Output.empty();
-        this.minServers = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.pickHostNameFromBackendHttpSettings = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.timeout = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.host = Codegen.empty();
+        this.id = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.match = Codegen.empty();
+        this.minServers = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.pickHostNameFromBackendHttpSettings = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -244,7 +245,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -252,7 +253,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder interval(@Nullable Output<Integer> interval) {
@@ -260,7 +261,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder match(@Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match) {
@@ -268,7 +269,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchArgs match) {
-            this.match = Output.ofNullable(match);
+            this.match = Codegen.ofNullable(match);
             return this;
         }
         public Builder minServers(@Nullable Output<Integer> minServers) {
@@ -276,7 +277,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder minServers(@Nullable Integer minServers) {
-            this.minServers = Output.ofNullable(minServers);
+            this.minServers = Codegen.ofNullable(minServers);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -284,7 +285,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -292,7 +293,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Output<Boolean> pickHostNameFromBackendHttpSettings) {
@@ -300,7 +301,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
-            this.pickHostNameFromBackendHttpSettings = Output.ofNullable(pickHostNameFromBackendHttpSettings);
+            this.pickHostNameFromBackendHttpSettings = Codegen.ofNullable(pickHostNameFromBackendHttpSettings);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -308,7 +309,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
@@ -316,7 +317,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -324,7 +325,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
@@ -332,7 +333,7 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
             return this;
         }        public ApplicationGatewayProbeArgs build() {
             return new ApplicationGatewayProbeArgs(host, id, interval, match, minServers, name, path, pickHostNameFromBackendHttpSettings, port, protocol, timeout, unhealthyThreshold);

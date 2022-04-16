@@ -6,6 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.inputs.WorkloadNetworkSegmentSubnetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     @Import(name="connectedGateway")
       private final @Nullable Output<String> connectedGateway;
 
-    public Output<String> getConnectedGateway() {
-        return this.connectedGateway == null ? Output.empty() : this.connectedGateway;
+    public Output<String> connectedGateway() {
+        return this.connectedGateway == null ? Codegen.empty() : this.connectedGateway;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -56,7 +57,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+    public Output<Double> revision() {
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     @Import(name="segmentId")
       private final @Nullable Output<String> segmentId;
 
-    public Output<String> getSegmentId() {
-        return this.segmentId == null ? Output.empty() : this.segmentId;
+    public Output<String> segmentId() {
+        return this.segmentId == null ? Codegen.empty() : this.segmentId;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     @Import(name="subnet")
       private final @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
 
-    public Output<WorkloadNetworkSegmentSubnetArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<WorkloadNetworkSegmentSubnetArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public WorkloadNetworkSegmentArgs(
@@ -111,13 +112,13 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadNetworkSegmentArgs() {
-        this.connectedGateway = Output.empty();
-        this.displayName = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.revision = Output.empty();
-        this.segmentId = Output.empty();
-        this.subnet = Output.empty();
+        this.connectedGateway = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.revision = Codegen.empty();
+        this.segmentId = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder connectedGateway(@Nullable String connectedGateway) {
-            this.connectedGateway = Output.ofNullable(connectedGateway);
+            this.connectedGateway = Codegen.ofNullable(connectedGateway);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -165,7 +166,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {
@@ -189,7 +190,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder revision(@Nullable Double revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }
         public Builder segmentId(@Nullable Output<String> segmentId) {
@@ -197,7 +198,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder segmentId(@Nullable String segmentId) {
-            this.segmentId = Output.ofNullable(segmentId);
+            this.segmentId = Codegen.ofNullable(segmentId);
             return this;
         }
         public Builder subnet(@Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet) {
@@ -205,7 +206,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subnet(@Nullable WorkloadNetworkSegmentSubnetArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public WorkloadNetworkSegmentArgs build() {
             return new WorkloadNetworkSegmentArgs(connectedGateway, displayName, privateCloudName, resourceGroupName, revision, segmentId, subnet);

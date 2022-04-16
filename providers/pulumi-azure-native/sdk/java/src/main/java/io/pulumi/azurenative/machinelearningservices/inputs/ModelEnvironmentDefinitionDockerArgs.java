@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelDockerSectionBaseImageRegistryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
     @Import(name="baseDockerfile")
       private final @Nullable Output<String> baseDockerfile;
 
-    public Output<String> getBaseDockerfile() {
-        return this.baseDockerfile == null ? Output.empty() : this.baseDockerfile;
+    public Output<String> baseDockerfile() {
+        return this.baseDockerfile == null ? Codegen.empty() : this.baseDockerfile;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
     @Import(name="baseImage")
       private final @Nullable Output<String> baseImage;
 
-    public Output<String> getBaseImage() {
-        return this.baseImage == null ? Output.empty() : this.baseImage;
+    public Output<String> baseImage() {
+        return this.baseImage == null ? Codegen.empty() : this.baseImage;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
     @Import(name="baseImageRegistry")
       private final @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
 
-    public Output<ModelDockerSectionBaseImageRegistryArgs> getBaseImageRegistry() {
-        return this.baseImageRegistry == null ? Output.empty() : this.baseImageRegistry;
+    public Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry() {
+        return this.baseImageRegistry == null ? Codegen.empty() : this.baseImageRegistry;
     }
 
     public ModelEnvironmentDefinitionDockerArgs(
@@ -62,9 +63,9 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
     }
 
     private ModelEnvironmentDefinitionDockerArgs() {
-        this.baseDockerfile = Output.empty();
-        this.baseImage = Output.empty();
-        this.baseImageRegistry = Output.empty();
+        this.baseDockerfile = Codegen.empty();
+        this.baseImage = Codegen.empty();
+        this.baseImageRegistry = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
             return this;
         }
         public Builder baseDockerfile(@Nullable String baseDockerfile) {
-            this.baseDockerfile = Output.ofNullable(baseDockerfile);
+            this.baseDockerfile = Codegen.ofNullable(baseDockerfile);
             return this;
         }
         public Builder baseImage(@Nullable Output<String> baseImage) {
@@ -104,7 +105,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
             return this;
         }
         public Builder baseImage(@Nullable String baseImage) {
-            this.baseImage = Output.ofNullable(baseImage);
+            this.baseImage = Codegen.ofNullable(baseImage);
             return this;
         }
         public Builder baseImageRegistry(@Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry) {
@@ -112,7 +113,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
             return this;
         }
         public Builder baseImageRegistry(@Nullable ModelDockerSectionBaseImageRegistryArgs baseImageRegistry) {
-            this.baseImageRegistry = Output.ofNullable(baseImageRegistry);
+            this.baseImageRegistry = Codegen.ofNullable(baseImageRegistry);
             return this;
         }        public ModelEnvironmentDefinitionDockerArgs build() {
             return new ModelEnvironmentDefinitionDockerArgs(baseDockerfile, baseImage, baseImageRegistry);

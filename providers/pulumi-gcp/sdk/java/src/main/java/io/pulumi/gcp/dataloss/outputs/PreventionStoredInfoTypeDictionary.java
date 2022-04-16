@@ -38,7 +38,7 @@ public final class PreventionStoredInfoTypeDictionary {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionStoredInfoTypeDictionaryCloudStoragePath> getCloudStoragePath() {
+    public Optional<PreventionStoredInfoTypeDictionaryCloudStoragePath> cloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
     /**
@@ -46,7 +46,7 @@ public final class PreventionStoredInfoTypeDictionary {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionStoredInfoTypeDictionaryWordList> getWordList() {
+    public Optional<PreventionStoredInfoTypeDictionaryWordList> wordList() {
         return Optional.ofNullable(this.wordList);
     }
 

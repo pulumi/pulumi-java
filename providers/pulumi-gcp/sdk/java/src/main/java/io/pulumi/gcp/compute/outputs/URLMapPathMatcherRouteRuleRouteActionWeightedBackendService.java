@@ -52,7 +52,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendService {
      * The full or partial URL to the BackendService resource being mirrored to.
      * 
     */
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
     /**
@@ -63,7 +63,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendService {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction> getHeaderAction() {
+    public Optional<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
@@ -75,7 +75,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendService {
      * The value must be between 0 and 1000
      * 
     */
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

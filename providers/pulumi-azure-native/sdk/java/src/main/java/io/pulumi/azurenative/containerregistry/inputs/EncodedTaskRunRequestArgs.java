@@ -9,6 +9,7 @@ import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,8 +33,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="agentConfiguration")
       private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Output<AgentPropertiesArgs> getAgentConfiguration() {
-        return this.agentConfiguration == null ? Output.empty() : this.agentConfiguration;
+    public Output<AgentPropertiesArgs> agentConfiguration() {
+        return this.agentConfiguration == null ? Codegen.empty() : this.agentConfiguration;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
+    public Output<String> agentPoolName() {
+        return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="credentials")
       private final @Nullable Output<CredentialsArgs> credentials;
 
-    public Output<CredentialsArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+    public Output<CredentialsArgs> credentials() {
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="encodedTaskContent", required=true)
       private final Output<String> encodedTaskContent;
 
-    public Output<String> getEncodedTaskContent() {
+    public Output<String> encodedTaskContent() {
         return this.encodedTaskContent;
     }
 
@@ -76,8 +77,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="encodedValuesContent")
       private final @Nullable Output<String> encodedValuesContent;
 
-    public Output<String> getEncodedValuesContent() {
-        return this.encodedValuesContent == null ? Output.empty() : this.encodedValuesContent;
+    public Output<String> encodedValuesContent() {
+        return this.encodedValuesContent == null ? Codegen.empty() : this.encodedValuesContent;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Output<Boolean> getIsArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Output.empty() : this.isArchiveEnabled;
+    public Output<Boolean> isArchiveEnabled() {
+        return this.isArchiveEnabled == null ? Codegen.empty() : this.isArchiveEnabled;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
 
-    public Output<String> getLogTemplate() {
-        return this.logTemplate == null ? Output.empty() : this.logTemplate;
+    public Output<String> logTemplate() {
+        return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="platform", required=true)
       private final Output<PlatformPropertiesArgs> platform;
 
-    public Output<PlatformPropertiesArgs> getPlatform() {
+    public Output<PlatformPropertiesArgs> platform() {
         return this.platform;
     }
 
@@ -121,8 +122,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="sourceLocation")
       private final @Nullable Output<String> sourceLocation;
 
-    public Output<String> getSourceLocation() {
-        return this.sourceLocation == null ? Output.empty() : this.sourceLocation;
+    public Output<String> sourceLocation() {
+        return this.sourceLocation == null ? Codegen.empty() : this.sourceLocation;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<Integer> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,8 +156,8 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<SetValueArgs>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public EncodedTaskRunRequestArgs(
@@ -177,28 +178,28 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
         this.credentials = credentials;
         this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
         this.encodedValuesContent = encodedValuesContent;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Output.ofNullable(false) : isArchiveEnabled;
+        this.isArchiveEnabled = isArchiveEnabled == null ? Codegen.ofNullable(false) : isArchiveEnabled;
         this.logTemplate = logTemplate;
         this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
         this.sourceLocation = sourceLocation;
-        this.timeout = timeout == null ? Output.ofNullable(3600) : timeout;
+        this.timeout = timeout == null ? Codegen.ofNullable(3600) : timeout;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.values = values;
     }
 
     private EncodedTaskRunRequestArgs() {
-        this.agentConfiguration = Output.empty();
-        this.agentPoolName = Output.empty();
-        this.credentials = Output.empty();
-        this.encodedTaskContent = Output.empty();
-        this.encodedValuesContent = Output.empty();
-        this.isArchiveEnabled = Output.empty();
-        this.logTemplate = Output.empty();
-        this.platform = Output.empty();
-        this.sourceLocation = Output.empty();
-        this.timeout = Output.empty();
-        this.type = Output.empty();
-        this.values = Output.empty();
+        this.agentConfiguration = Codegen.empty();
+        this.agentPoolName = Codegen.empty();
+        this.credentials = Codegen.empty();
+        this.encodedTaskContent = Codegen.empty();
+        this.encodedValuesContent = Codegen.empty();
+        this.isArchiveEnabled = Codegen.empty();
+        this.logTemplate = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.sourceLocation = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.type = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
-            this.agentConfiguration = Output.ofNullable(agentConfiguration);
+            this.agentConfiguration = Codegen.ofNullable(agentConfiguration);
             return this;
         }
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
@@ -256,7 +257,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Output.ofNullable(agentPoolName);
+            this.agentPoolName = Codegen.ofNullable(agentPoolName);
             return this;
         }
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
@@ -264,7 +265,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder credentials(@Nullable CredentialsArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder encodedTaskContent(Output<String> encodedTaskContent) {
@@ -280,7 +281,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
-            this.encodedValuesContent = Output.ofNullable(encodedValuesContent);
+            this.encodedValuesContent = Codegen.ofNullable(encodedValuesContent);
             return this;
         }
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
@@ -288,7 +289,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
+            this.isArchiveEnabled = Codegen.ofNullable(isArchiveEnabled);
             return this;
         }
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
@@ -296,7 +297,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Output.ofNullable(logTemplate);
+            this.logTemplate = Codegen.ofNullable(logTemplate);
             return this;
         }
         public Builder platform(Output<PlatformPropertiesArgs> platform) {
@@ -312,7 +313,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sourceLocation(@Nullable String sourceLocation) {
-            this.sourceLocation = Output.ofNullable(sourceLocation);
+            this.sourceLocation = Codegen.ofNullable(sourceLocation);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -320,7 +321,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -336,7 +337,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(SetValueArgs... values) {

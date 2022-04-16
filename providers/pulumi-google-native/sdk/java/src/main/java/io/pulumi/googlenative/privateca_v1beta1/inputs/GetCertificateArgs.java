@@ -17,28 +17,28 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="certificateAuthorityId", required=true)
       private final String certificateAuthorityId;
 
-    public String getCertificateAuthorityId() {
+    public String certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @Import(name="certificateId", required=true)
       private final String certificateId;
 
-    public String getCertificateId() {
+    public String certificateId() {
         return this.certificateId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

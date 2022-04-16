@@ -9,6 +9,7 @@ import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return The unique string (ID) used to identify a hosted zone.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -43,7 +44,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
      * 
      */
-    public Output<String> getKeyManagementServiceArn() {
+    public Output<String> keyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
     /**
@@ -57,7 +58,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @return A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
      * 
      */
-    public Output<KeySigningKeyStatus> getStatus() {
+    public Output<KeySigningKeyStatus> status() {
         return this.status;
     }
 
@@ -97,7 +98,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeySigningKey(String name, KeySigningKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeySigningKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

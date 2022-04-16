@@ -6,6 +6,7 @@ package io.pulumi.aws.route53.inputs;
 import io.pulumi.aws.route53.inputs.ZoneVpcGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="delegationSetId")
       private final @Nullable Output<String> delegationSetId;
 
-    public Output<String> getDelegationSetId() {
-        return this.delegationSetId == null ? Output.empty() : this.delegationSetId;
+    public Output<String> delegationSetId() {
+        return this.delegationSetId == null ? Codegen.empty() : this.delegationSetId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameServers")
       private final @Nullable Output<List<String>> nameServers;
 
-    public Output<List<String>> getNameServers() {
-        return this.nameServers == null ? Output.empty() : this.nameServers;
+    public Output<List<String>> nameServers() {
+        return this.nameServers == null ? Codegen.empty() : this.nameServers;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcs")
       private final @Nullable Output<List<ZoneVpcGetArgs>> vpcs;
 
-    public Output<List<ZoneVpcGetArgs>> getVpcs() {
-        return this.vpcs == null ? Output.empty() : this.vpcs;
+    public Output<List<ZoneVpcGetArgs>> vpcs() {
+        return this.vpcs == null ? Codegen.empty() : this.vpcs;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
-    public Output<String> getZoneId() {
-        return this.zoneId == null ? Output.empty() : this.zoneId;
+    public Output<String> zoneId() {
+        return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 
     public ZoneState(
@@ -141,7 +142,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<List<ZoneVpcGetArgs>> vpcs,
         @Nullable Output<String> zoneId) {
         this.arn = arn;
-        this.comment = comment == null ? Output.ofNullable("Managed by Pulumi") : comment;
+        this.comment = comment == null ? Codegen.ofNullable("Managed by Pulumi") : comment;
         this.delegationSetId = delegationSetId;
         this.forceDestroy = forceDestroy;
         this.name = name;
@@ -153,16 +154,16 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ZoneState() {
-        this.arn = Output.empty();
-        this.comment = Output.empty();
-        this.delegationSetId = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.name = Output.empty();
-        this.nameServers = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcs = Output.empty();
-        this.zoneId = Output.empty();
+        this.arn = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.delegationSetId = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nameServers = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcs = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -216,7 +217,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder delegationSetId(@Nullable Output<String> delegationSetId) {
@@ -224,7 +225,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delegationSetId(@Nullable String delegationSetId) {
-            this.delegationSetId = Output.ofNullable(delegationSetId);
+            this.delegationSetId = Codegen.ofNullable(delegationSetId);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -232,7 +233,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -240,7 +241,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nameServers(@Nullable Output<List<String>> nameServers) {
@@ -248,7 +249,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nameServers(@Nullable List<String> nameServers) {
-            this.nameServers = Output.ofNullable(nameServers);
+            this.nameServers = Codegen.ofNullable(nameServers);
             return this;
         }
         public Builder nameServers(String... nameServers) {
@@ -259,7 +260,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -267,7 +268,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcs(@Nullable Output<List<ZoneVpcGetArgs>> vpcs) {
@@ -275,7 +276,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcs(@Nullable List<ZoneVpcGetArgs> vpcs) {
-            this.vpcs = Output.ofNullable(vpcs);
+            this.vpcs = Codegen.ofNullable(vpcs);
             return this;
         }
         public Builder vpcs(ZoneVpcGetArgs... vpcs) {
@@ -286,7 +287,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Output.ofNullable(zoneId);
+            this.zoneId = Codegen.ofNullable(zoneId);
             return this;
         }        public ZoneState build() {
             return new ZoneState(arn, comment, delegationSetId, forceDestroy, name, nameServers, tags, tagsAll, vpcs, zoneId);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="default")
       private final @Nullable Output<String> default_;
 
-    public Output<String> getDefault_() {
-        return this.default_ == null ? Output.empty() : this.default_;
+    public Output<String> default_() {
+        return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,7 +61,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
 
@@ -76,10 +77,10 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     }
 
     private ParameterDeclarationArgs() {
-        this.default_ = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.default_ = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder default_(@Nullable String default_) {
-            this.default_ = Output.ofNullable(default_);
+            this.default_ = Codegen.ofNullable(default_);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -121,7 +122,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {

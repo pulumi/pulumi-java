@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    public Output</* @Nullable */ HealthProbeParametersResponse> getHealthProbeSettings() {
+    public Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings() {
         return this.healthProbeSettings;
     }
     /**
@@ -60,7 +61,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return The source of the content being delivered via CDN within given origin group.
      * 
      */
-    public Output<List<ResourceReferenceResponse>> getOrigins() {
+    public Output<List<ResourceReferenceResponse>> origins() {
         return this.origins;
     }
     /**
@@ -88,7 +89,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return Provisioning status of the origin group.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -102,7 +103,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return Resource status of the origin group.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -116,7 +117,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedOriginErrorDetectionSettings() {
+    public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings() {
         return this.responseBasedOriginErrorDetectionSettings;
     }
     /**
@@ -130,7 +131,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -144,7 +145,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+    public Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
     /**
@@ -158,7 +159,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -184,7 +185,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OriginGroup(String name, OriginGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:OriginGroup", name, args == null ? OriginGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cdn:OriginGroup", name, args == null ? OriginGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OriginGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

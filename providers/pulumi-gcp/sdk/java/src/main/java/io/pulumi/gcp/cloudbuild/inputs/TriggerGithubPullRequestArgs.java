@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
     @Import(name="branch", required=true)
       private final Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch;
     }
 
@@ -34,8 +35,8 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
     @Import(name="commentControl")
       private final @Nullable Output<String> commentControl;
 
-    public Output<String> getCommentControl() {
-        return this.commentControl == null ? Output.empty() : this.commentControl;
+    public Output<String> commentControl() {
+        return this.commentControl == null ? Codegen.empty() : this.commentControl;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
     @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> getInvertRegex() {
-        return this.invertRegex == null ? Output.empty() : this.invertRegex;
+    public Output<Boolean> invertRegex() {
+        return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 
     public TriggerGithubPullRequestArgs(
@@ -59,9 +60,9 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
     }
 
     private TriggerGithubPullRequestArgs() {
-        this.branch = Output.empty();
-        this.commentControl = Output.empty();
-        this.invertRegex = Output.empty();
+        this.branch = Codegen.empty();
+        this.commentControl = Codegen.empty();
+        this.invertRegex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder commentControl(@Nullable String commentControl) {
-            this.commentControl = Output.ofNullable(commentControl);
+            this.commentControl = Codegen.ofNullable(commentControl);
             return this;
         }
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
@@ -109,7 +110,7 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Output.ofNullable(invertRegex);
+            this.invertRegex = Codegen.ofNullable(invertRegex);
             return this;
         }        public TriggerGithubPullRequestArgs build() {
             return new TriggerGithubPullRequestArgs(branch, commentControl, invertRegex);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.NetworkManagerPropertiesNetworkManag
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkManagerName")
       private final @Nullable Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
-        return this.networkManagerName == null ? Output.empty() : this.networkManagerName;
+    public Output<String> networkManagerName() {
+        return this.networkManagerName == null ? Codegen.empty() : this.networkManagerName;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkManagerScopeAccesses")
       private final @Nullable Output<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses;
 
-    public Output<List<Either<String,ConfigurationType>>> getNetworkManagerScopeAccesses() {
-        return this.networkManagerScopeAccesses == null ? Output.empty() : this.networkManagerScopeAccesses;
+    public Output<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses() {
+        return this.networkManagerScopeAccesses == null ? Codegen.empty() : this.networkManagerScopeAccesses;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkManagerScopes")
       private final @Nullable Output<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes;
 
-    public Output<NetworkManagerPropertiesNetworkManagerScopesArgs> getNetworkManagerScopes() {
-        return this.networkManagerScopes == null ? Output.empty() : this.networkManagerScopes;
+    public Output<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes() {
+        return this.networkManagerScopes == null ? Codegen.empty() : this.networkManagerScopes;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,8 +115,8 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkManagerArgs(
@@ -140,15 +141,15 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkManagerArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.networkManagerName = Output.empty();
-        this.networkManagerScopeAccesses = Output.empty();
-        this.networkManagerScopes = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkManagerName = Codegen.empty();
+        this.networkManagerScopeAccesses = Codegen.empty();
+        this.networkManagerScopes = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -200,7 +201,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -208,7 +209,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -216,7 +217,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkManagerName(@Nullable Output<String> networkManagerName) {
@@ -224,7 +225,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkManagerName(@Nullable String networkManagerName) {
-            this.networkManagerName = Output.ofNullable(networkManagerName);
+            this.networkManagerName = Codegen.ofNullable(networkManagerName);
             return this;
         }
         public Builder networkManagerScopeAccesses(@Nullable Output<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses) {
@@ -232,7 +233,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkManagerScopeAccesses(@Nullable List<Either<String,ConfigurationType>> networkManagerScopeAccesses) {
-            this.networkManagerScopeAccesses = Output.ofNullable(networkManagerScopeAccesses);
+            this.networkManagerScopeAccesses = Codegen.ofNullable(networkManagerScopeAccesses);
             return this;
         }
         public Builder networkManagerScopeAccesses(Either<String,ConfigurationType>... networkManagerScopeAccesses) {
@@ -243,7 +244,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkManagerScopes(@Nullable NetworkManagerPropertiesNetworkManagerScopesArgs networkManagerScopes) {
-            this.networkManagerScopes = Output.ofNullable(networkManagerScopes);
+            this.networkManagerScopes = Codegen.ofNullable(networkManagerScopes);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -259,7 +260,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NetworkManagerArgs build() {
             return new NetworkManagerArgs(description, displayName, id, location, networkManagerName, networkManagerScopeAccesses, networkManagerScopes, resourceGroupName, tags);

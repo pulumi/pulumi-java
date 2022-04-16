@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class FleetSpotOptionsMaintenanceStrategiesArgs extends io.pulumi.r
     @Import(name="capacityRebalance")
       private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance;
 
-    public Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
+    public Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance() {
+        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 
     public FleetSpotOptionsMaintenanceStrategiesArgs(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance) {
@@ -30,7 +31,7 @@ public final class FleetSpotOptionsMaintenanceStrategiesArgs extends io.pulumi.r
     }
 
     private FleetSpotOptionsMaintenanceStrategiesArgs() {
-        this.capacityRebalance = Output.empty();
+        this.capacityRebalance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class FleetSpotOptionsMaintenanceStrategiesArgs extends io.pulumi.r
             return this;
         }
         public Builder capacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs capacityRebalance) {
-            this.capacityRebalance = Output.ofNullable(capacityRebalance);
+            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
             return this;
         }        public FleetSpotOptionsMaintenanceStrategiesArgs build() {
             return new FleetSpotOptionsMaintenanceStrategiesArgs(capacityRebalance);

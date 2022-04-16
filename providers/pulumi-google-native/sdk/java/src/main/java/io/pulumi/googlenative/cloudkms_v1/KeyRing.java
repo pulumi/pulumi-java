@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.KeyRingArgs;
 import java.lang.String;
@@ -31,7 +32,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * @return The time at which this KeyRing was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +46,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * @return The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -71,7 +72,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRing(String name, KeyRingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudkms/v1:KeyRing", name, args == null ? KeyRingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudkms/v1:KeyRing", name, args == null ? KeyRingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRing(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

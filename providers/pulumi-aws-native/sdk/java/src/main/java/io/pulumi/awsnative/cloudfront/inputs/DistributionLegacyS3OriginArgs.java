@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class DistributionLegacyS3OriginArgs extends io.pulumi.resources.Re
     @Import(name="dNSName", required=true)
       private final Output<String> dNSName;
 
-    public Output<String> getDNSName() {
+    public Output<String> dNSName() {
         return this.dNSName;
     }
 
     @Import(name="originAccessIdentity")
       private final @Nullable Output<String> originAccessIdentity;
 
-    public Output<String> getOriginAccessIdentity() {
-        return this.originAccessIdentity == null ? Output.empty() : this.originAccessIdentity;
+    public Output<String> originAccessIdentity() {
+        return this.originAccessIdentity == null ? Codegen.empty() : this.originAccessIdentity;
     }
 
     public DistributionLegacyS3OriginArgs(
@@ -36,8 +37,8 @@ public final class DistributionLegacyS3OriginArgs extends io.pulumi.resources.Re
     }
 
     private DistributionLegacyS3OriginArgs() {
-        this.dNSName = Output.empty();
-        this.originAccessIdentity = Output.empty();
+        this.dNSName = Codegen.empty();
+        this.originAccessIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DistributionLegacyS3OriginArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
-            this.originAccessIdentity = Output.ofNullable(originAccessIdentity);
+            this.originAccessIdentity = Codegen.ofNullable(originAccessIdentity);
             return this;
         }        public DistributionLegacyS3OriginArgs build() {
             return new DistributionLegacyS3OriginArgs(dNSName, originAccessIdentity);

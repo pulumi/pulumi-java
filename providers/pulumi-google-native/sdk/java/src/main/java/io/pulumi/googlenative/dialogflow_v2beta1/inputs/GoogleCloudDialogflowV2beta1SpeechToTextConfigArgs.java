@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
     @Import(name="speechModelVariant")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
-    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> getSpeechModelVariant() {
-        return this.speechModelVariant == null ? Output.empty() : this.speechModelVariant;
+    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant() {
+        return this.speechModelVariant == null ? Codegen.empty() : this.speechModelVariant;
     }
 
     public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(@Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
     }
 
     private GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs() {
-        this.speechModelVariant = Output.empty();
+        this.speechModelVariant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
             return this;
         }
         public Builder speechModelVariant(@Nullable GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant speechModelVariant) {
-            this.speechModelVariant = Output.ofNullable(speechModelVariant);
+            this.speechModelVariant = Codegen.ofNullable(speechModelVariant);
             return this;
         }        public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(speechModelVariant);

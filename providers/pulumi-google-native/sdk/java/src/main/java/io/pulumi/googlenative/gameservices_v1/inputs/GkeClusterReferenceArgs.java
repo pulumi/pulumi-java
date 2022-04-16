@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GkeClusterReferenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
-        return this.cluster == null ? Output.empty() : this.cluster;
+    public Output<String> cluster() {
+        return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     public GkeClusterReferenceArgs(@Nullable Output<String> cluster) {
@@ -34,7 +35,7 @@ public final class GkeClusterReferenceArgs extends io.pulumi.resources.ResourceA
     }
 
     private GkeClusterReferenceArgs() {
-        this.cluster = Output.empty();
+        this.cluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GkeClusterReferenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Output.ofNullable(cluster);
+            this.cluster = Codegen.ofNullable(cluster);
             return this;
         }        public GkeClusterReferenceArgs build() {
             return new GkeClusterReferenceArgs(cluster);

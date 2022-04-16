@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.ValidatingWebhookConfigurationArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs.ValidatingWebhook;
@@ -32,7 +33,7 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -46,7 +47,7 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -60,7 +61,7 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
      * @return Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -74,7 +75,7 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
      * @return Webhooks is a list of webhooks and the affected resources and operations.
      * 
      */
-    public Output</* @Nullable */ List<ValidatingWebhook>> getWebhooks() {
+    public Output</* @Nullable */ List<ValidatingWebhook>> webhooks() {
         return this.webhooks;
     }
 
@@ -100,7 +101,7 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public ValidatingWebhookConfiguration(String name, @Nullable ValidatingWebhookConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:admissionregistration.k8s.io/v1:ValidatingWebhookConfiguration", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:admissionregistration.k8s.io/v1:ValidatingWebhookConfiguration", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ValidatingWebhookConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

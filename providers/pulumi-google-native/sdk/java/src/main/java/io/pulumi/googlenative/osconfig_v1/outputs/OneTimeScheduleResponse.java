@@ -24,7 +24,7 @@ public final class OneTimeScheduleResponse {
      * The desired patch job execution time.
      * 
     */
-    public String getExecuteTime() {
+    public String executeTime() {
         return this.executeTime;
     }
 

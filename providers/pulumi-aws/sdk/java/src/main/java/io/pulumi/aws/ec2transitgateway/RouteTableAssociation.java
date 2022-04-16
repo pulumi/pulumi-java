@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2transitgateway.inputs.RouteTableAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @return Identifier of the resource
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -53,7 +54,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @return Type of the resource
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -67,7 +68,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -81,7 +82,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    public Output<String> getTransitGatewayRouteTableId() {
+    public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
@@ -107,7 +108,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouteTableAssociation(String name, RouteTableAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2transitgateway/routeTableAssociation:RouteTableAssociation", name, args == null ? RouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2transitgateway/routeTableAssociation:RouteTableAssociation", name, args == null ? RouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RouteTableAssociation(String name, Output<String> id, @Nullable RouteTableAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.apigatewayv2.inputs.DeploymentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -60,7 +61,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Whether the deployment was automatically released.
      * 
      */
-    public Output<Boolean> getAutoDeployed() {
+    public Output<Boolean> autoDeployed() {
         return this.autoDeployed;
     }
     /**
@@ -74,7 +75,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The description for the deployment resource. Must be less than or equal to 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return A map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTriggers() {
+    public Output</* @Nullable */ Map<String,String>> triggers() {
         return this.triggers;
     }
 
@@ -114,7 +115,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Deployment(String name, DeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/deployment:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/deployment:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Deployment(String name, Output<String> id, @Nullable DeploymentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

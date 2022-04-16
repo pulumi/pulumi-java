@@ -50,28 +50,28 @@ public final class GetCarrierGatewayResult {
      * The ID of the carrier gateway.
      * 
     */
-    public Optional<String> getCarrierGatewayId() {
+    public Optional<String> carrierGatewayId() {
         return Optional.ofNullable(this.carrierGatewayId);
     }
     /**
      * The ID of the owner.
      * 
     */
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * The state of the carrier gateway.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the carrier gateway.
      * 
     */
-    public List<CarrierGatewayTag> getTags() {
+    public List<CarrierGatewayTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

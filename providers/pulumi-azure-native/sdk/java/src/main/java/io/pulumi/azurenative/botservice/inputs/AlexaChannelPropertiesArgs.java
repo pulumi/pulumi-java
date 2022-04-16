@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="alexaSkillId", required=true)
       private final Output<String> alexaSkillId;
 
-    public Output<String> getAlexaSkillId() {
+    public Output<String> alexaSkillId() {
         return this.alexaSkillId;
     }
 
@@ -36,7 +37,7 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -48,8 +49,8 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private AlexaChannelPropertiesArgs() {
-        this.alexaSkillId = Output.empty();
-        this.isEnabled = Output.empty();
+        this.alexaSkillId = Codegen.empty();
+        this.isEnabled = Codegen.empty();
     }
 
     public static Builder builder() {

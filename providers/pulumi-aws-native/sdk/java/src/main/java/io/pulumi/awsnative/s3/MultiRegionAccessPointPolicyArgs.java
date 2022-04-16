@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     @Import(name="mrapName", required=true)
       private final Output<String> mrapName;
 
-    public Output<String> getMrapName() {
+    public Output<String> mrapName() {
         return this.mrapName;
     }
 
@@ -32,7 +33,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     @Import(name="policy", required=true)
       private final Output<Object> policy;
 
-    public Output<Object> getPolicy() {
+    public Output<Object> policy() {
         return this.policy;
     }
 
@@ -44,8 +45,8 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     }
 
     private MultiRegionAccessPointPolicyArgs() {
-        this.mrapName = Output.empty();
-        this.policy = Output.empty();
+        this.mrapName = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {

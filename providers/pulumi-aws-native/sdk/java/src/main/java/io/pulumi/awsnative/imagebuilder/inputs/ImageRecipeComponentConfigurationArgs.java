@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
     @Import(name="componentArn")
       private final @Nullable Output<String> componentArn;
 
-    public Output<String> getComponentArn() {
-        return this.componentArn == null ? Output.empty() : this.componentArn;
+    public Output<String> componentArn() {
+        return this.componentArn == null ? Codegen.empty() : this.componentArn;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
     @Import(name="parameters")
       private final @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
 
-    public Output<List<ImageRecipeComponentParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<ImageRecipeComponentParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public ImageRecipeComponentConfigurationArgs(
@@ -50,8 +51,8 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
     }
 
     private ImageRecipeComponentConfigurationArgs() {
-        this.componentArn = Output.empty();
-        this.parameters = Output.empty();
+        this.componentArn = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder componentArn(@Nullable String componentArn) {
-            this.componentArn = Output.ofNullable(componentArn);
+            this.componentArn = Codegen.ofNullable(componentArn);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
@@ -89,7 +90,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder parameters(@Nullable List<ImageRecipeComponentParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ImageRecipeComponentParameterArgs... parameters) {

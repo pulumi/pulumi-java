@@ -5,6 +5,7 @@ package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="weeklyMaintenanceWindows")
       private final @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows;
 
-    public Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindows() {
-        return this.weeklyMaintenanceWindows == null ? Output.empty() : this.weeklyMaintenanceWindows;
+    public Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows() {
+        return this.weeklyMaintenanceWindows == null ? Codegen.empty() : this.weeklyMaintenanceWindows;
     }
 
     public InstanceMaintenancePolicyArgs(
@@ -83,10 +84,10 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     }
 
     private InstanceMaintenancePolicyArgs() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.updateTime = Output.empty();
-        this.weeklyMaintenanceWindows = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.weeklyMaintenanceWindows = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -128,7 +129,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -136,7 +137,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder weeklyMaintenanceWindows(@Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows) {
@@ -144,7 +145,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder weeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs> weeklyMaintenanceWindows) {
-            this.weeklyMaintenanceWindows = Output.ofNullable(weeklyMaintenanceWindows);
+            this.weeklyMaintenanceWindows = Codegen.ofNullable(weeklyMaintenanceWindows);
             return this;
         }
         public Builder weeklyMaintenanceWindows(InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs... weeklyMaintenanceWindows) {

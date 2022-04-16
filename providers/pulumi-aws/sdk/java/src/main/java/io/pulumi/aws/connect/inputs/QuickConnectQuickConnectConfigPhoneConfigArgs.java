@@ -5,6 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class QuickConnectQuickConnectConfigPhoneConfigArgs extends io.pulu
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 
@@ -29,7 +30,7 @@ public final class QuickConnectQuickConnectConfigPhoneConfigArgs extends io.pulu
     }
 
     private QuickConnectQuickConnectConfigPhoneConfigArgs() {
-        this.phoneNumber = Output.empty();
+        this.phoneNumber = Codegen.empty();
     }
 
     public static Builder builder() {

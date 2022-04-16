@@ -29,7 +29,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="initialReplicationDetails")
       private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
-    public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
+    public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
         return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
     }
 
@@ -41,7 +41,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -52,7 +52,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="lastReplicatedTime")
       private final @Nullable String lastReplicatedTime;
 
-    public Optional<String> getLastReplicatedTime() {
+    public Optional<String> lastReplicatedTime() {
         return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
     }
 
@@ -63,7 +63,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="vMDiskDetails")
       private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
 
-    public List<DiskDetailsResponse> getVMDiskDetails() {
+    public List<DiskDetailsResponse> vMDiskDetails() {
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
 
@@ -74,7 +74,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="vmId")
       private final @Nullable String vmId;
 
-    public Optional<String> getVmId() {
+    public Optional<String> vmId() {
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
     }
 
@@ -85,7 +85,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
 
-    public List<VMNicDetailsResponse> getVmNics() {
+    public List<VMNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
@@ -96,7 +96,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
 
-    public Optional<String> getVmProtectionState() {
+    public Optional<String> vmProtectionState() {
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
@@ -107,7 +107,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;
 
-    public Optional<String> getVmProtectionStateDescription() {
+    public Optional<String> vmProtectionStateDescription() {
         return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
     }
 

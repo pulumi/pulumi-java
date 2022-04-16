@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,8 +37,8 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -59,8 +60,8 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public PSCredentialExecutionParameterArgs(
@@ -75,10 +76,10 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     }
 
     private PSCredentialExecutionParameterArgs() {
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.type = Output.empty();
-        this.username = Output.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.type = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -136,7 +137,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public PSCredentialExecutionParameterArgs build() {
             return new PSCredentialExecutionParameterArgs(name, password, type, username);

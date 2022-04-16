@@ -41,7 +41,7 @@ public final class SubnetworkSecondaryIpRange {
      * secondary IP ranges within a network. Only IPv4 is supported.
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -51,7 +51,7 @@ public final class SubnetworkSecondaryIpRange {
      * must be unique within the subnetwork.
      * 
     */
-    public String getRangeName() {
+    public String rangeName() {
         return this.rangeName;
     }
 

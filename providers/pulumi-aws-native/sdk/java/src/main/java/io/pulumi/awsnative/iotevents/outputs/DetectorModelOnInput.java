@@ -35,14 +35,14 @@ public final class DetectorModelOnInput {
      * Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
      * 
     */
-    public List<DetectorModelEvent> getEvents() {
+    public List<DetectorModelEvent> events() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
      * 
     */
-    public List<DetectorModelTransitionEvent> getTransitionEvents() {
+    public List<DetectorModelTransitionEvent> transitionEvents() {
         return this.transitionEvents == null ? List.of() : this.transitionEvents;
     }
 

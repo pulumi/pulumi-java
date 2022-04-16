@@ -5,6 +5,7 @@ package io.pulumi.gcp.datastore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class DataStoreIndexPropertyGetArgs extends io.pulumi.resources.Res
     @Import(name="direction", required=true)
       private final Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
 
@@ -32,7 +33,7 @@ public final class DataStoreIndexPropertyGetArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,8 +45,8 @@ public final class DataStoreIndexPropertyGetArgs extends io.pulumi.resources.Res
     }
 
     private DataStoreIndexPropertyGetArgs() {
-        this.direction = Output.empty();
-        this.name = Output.empty();
+        this.direction = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

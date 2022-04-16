@@ -17,21 +17,21 @@ public final class DeliveryStreamCopyCommand extends io.pulumi.resources.InvokeA
     @Import(name="copyOptions")
       private final @Nullable String copyOptions;
 
-    public Optional<String> getCopyOptions() {
+    public Optional<String> copyOptions() {
         return this.copyOptions == null ? Optional.empty() : Optional.ofNullable(this.copyOptions);
     }
 
     @Import(name="dataTableColumns")
       private final @Nullable String dataTableColumns;
 
-    public Optional<String> getDataTableColumns() {
+    public Optional<String> dataTableColumns() {
         return this.dataTableColumns == null ? Optional.empty() : Optional.ofNullable(this.dataTableColumns);
     }
 
     @Import(name="dataTableName", required=true)
       private final String dataTableName;
 
-    public String getDataTableName() {
+    public String dataTableName() {
         return this.dataTableName;
     }
 

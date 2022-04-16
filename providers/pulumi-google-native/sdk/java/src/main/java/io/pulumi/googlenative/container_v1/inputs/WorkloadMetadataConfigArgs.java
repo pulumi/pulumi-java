@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.enums.WorkloadMetadataConfigMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     @Import(name="mode")
       private final @Nullable Output<WorkloadMetadataConfigMode> mode;
 
-    public Output<WorkloadMetadataConfigMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<WorkloadMetadataConfigMode> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public WorkloadMetadataConfigArgs(@Nullable Output<WorkloadMetadataConfigMode> mode) {
@@ -34,7 +35,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadMetadataConfigArgs() {
-        this.mode = Output.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mode(@Nullable WorkloadMetadataConfigMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public WorkloadMetadataConfigArgs build() {
             return new WorkloadMetadataConfigArgs(mode);

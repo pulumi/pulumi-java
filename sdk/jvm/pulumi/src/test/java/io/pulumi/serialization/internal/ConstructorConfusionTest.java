@@ -1,7 +1,6 @@
 package io.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
@@ -14,6 +13,7 @@ import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;
+import io.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +32,7 @@ public class ConstructorConfusionTest {
                 .setOptions(new TestOptions(true))
                 .setMocks(new ConfusionMocks())
                 .setSpyGlobalInstance();
-        var resources = mock.testAsync(ConfusionStack.class).join();
+        var resources = mock.testAsync(ConfusionStack::new).join();
         assertThat(resources).isNotEmpty();
     }
 

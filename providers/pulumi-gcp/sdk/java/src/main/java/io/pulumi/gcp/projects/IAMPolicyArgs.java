@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -34,7 +35,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -46,8 +47,8 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMPolicyArgs() {
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {

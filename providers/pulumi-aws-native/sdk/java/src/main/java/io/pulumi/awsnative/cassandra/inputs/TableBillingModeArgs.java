@@ -7,6 +7,7 @@ import io.pulumi.awsnative.cassandra.enums.TableMode;
 import io.pulumi.awsnative.cassandra.inputs.TableProvisionedThroughputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mode", required=true)
       private final Output<TableMode> mode;
 
-    public Output<TableMode> getMode() {
+    public Output<TableMode> mode() {
         return this.mode;
     }
 
     @Import(name="provisionedThroughput")
       private final @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput;
 
-    public Output<TableProvisionedThroughputArgs> getProvisionedThroughput() {
-        return this.provisionedThroughput == null ? Output.empty() : this.provisionedThroughput;
+    public Output<TableProvisionedThroughputArgs> provisionedThroughput() {
+        return this.provisionedThroughput == null ? Codegen.empty() : this.provisionedThroughput;
     }
 
     public TableBillingModeArgs(
@@ -37,8 +38,8 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TableBillingModeArgs() {
-        this.mode = Output.empty();
-        this.provisionedThroughput = Output.empty();
+        this.mode = Codegen.empty();
+        this.provisionedThroughput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder provisionedThroughput(@Nullable TableProvisionedThroughputArgs provisionedThroughput) {
-            this.provisionedThroughput = Output.ofNullable(provisionedThroughput);
+            this.provisionedThroughput = Codegen.ofNullable(provisionedThroughput);
             return this;
         }        public TableBillingModeArgs build() {
             return new TableBillingModeArgs(mode, provisionedThroughput);

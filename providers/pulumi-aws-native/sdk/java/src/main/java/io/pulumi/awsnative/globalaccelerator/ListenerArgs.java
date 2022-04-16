@@ -8,6 +8,7 @@ import io.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import io.pulumi.awsnative.globalaccelerator.inputs.ListenerPortRangeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorArn", required=true)
       private final Output<String> acceleratorArn;
 
-    public Output<String> getAcceleratorArn() {
+    public Output<String> acceleratorArn() {
         return this.acceleratorArn;
     }
 
@@ -36,14 +37,14 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientAffinity")
       private final @Nullable Output<ListenerClientAffinity> clientAffinity;
 
-    public Output<ListenerClientAffinity> getClientAffinity() {
-        return this.clientAffinity == null ? Output.empty() : this.clientAffinity;
+    public Output<ListenerClientAffinity> clientAffinity() {
+        return this.clientAffinity == null ? Codegen.empty() : this.clientAffinity;
     }
 
     @Import(name="portRanges", required=true)
       private final Output<List<ListenerPortRangeArgs>> portRanges;
 
-    public Output<List<ListenerPortRangeArgs>> getPortRanges() {
+    public Output<List<ListenerPortRangeArgs>> portRanges() {
         return this.portRanges;
     }
 
@@ -54,7 +55,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<ListenerProtocol> protocol;
 
-    public Output<ListenerProtocol> getProtocol() {
+    public Output<ListenerProtocol> protocol() {
         return this.protocol;
     }
 
@@ -70,10 +71,10 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerArgs() {
-        this.acceleratorArn = Output.empty();
-        this.clientAffinity = Output.empty();
-        this.portRanges = Output.empty();
-        this.protocol = Output.empty();
+        this.acceleratorArn = Codegen.empty();
+        this.clientAffinity = Codegen.empty();
+        this.portRanges = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientAffinity(@Nullable ListenerClientAffinity clientAffinity) {
-            this.clientAffinity = Output.ofNullable(clientAffinity);
+            this.clientAffinity = Codegen.ofNullable(clientAffinity);
             return this;
         }
         public Builder portRanges(Output<List<ListenerPortRangeArgs>> portRanges) {

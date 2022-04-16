@@ -34,14 +34,14 @@ public final class ConsortiumResponse {
      * Gets or sets the blockchain member name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the protocol for the consortium.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

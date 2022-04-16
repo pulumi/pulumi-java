@@ -5,6 +5,7 @@ package io.pulumi.googlenative.translate_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.translate_v3.inputs.GlossaryInputConfigArgs;
 import io.pulumi.googlenative.translate_v3.inputs.LanguageCodePairArgs;
 import io.pulumi.googlenative.translate_v3.inputs.LanguageCodesSetArgs;
@@ -24,7 +25,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputConfig", required=true)
       private final Output<GlossaryInputConfigArgs> inputConfig;
 
-    public Output<GlossaryInputConfigArgs> getInputConfig() {
+    public Output<GlossaryInputConfigArgs> inputConfig() {
         return this.inputConfig;
     }
 
@@ -35,8 +36,8 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCodesSet")
       private final @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
 
-    public Output<LanguageCodesSetArgs> getLanguageCodesSet() {
-        return this.languageCodesSet == null ? Output.empty() : this.languageCodesSet;
+    public Output<LanguageCodesSetArgs> languageCodesSet() {
+        return this.languageCodesSet == null ? Codegen.empty() : this.languageCodesSet;
     }
 
     /**
@@ -46,15 +47,15 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languagePair")
       private final @Nullable Output<LanguageCodePairArgs> languagePair;
 
-    public Output<LanguageCodePairArgs> getLanguagePair() {
-        return this.languagePair == null ? Output.empty() : this.languagePair;
+    public Output<LanguageCodePairArgs> languagePair() {
+        return this.languagePair == null ? Codegen.empty() : this.languagePair;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -64,15 +65,15 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public GlossaryArgs(
@@ -91,12 +92,12 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlossaryArgs() {
-        this.inputConfig = Output.empty();
-        this.languageCodesSet = Output.empty();
-        this.languagePair = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.inputConfig = Codegen.empty();
+        this.languageCodesSet = Codegen.empty();
+        this.languagePair = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCodesSet(@Nullable LanguageCodesSetArgs languageCodesSet) {
-            this.languageCodesSet = Output.ofNullable(languageCodesSet);
+            this.languageCodesSet = Codegen.ofNullable(languageCodesSet);
             return this;
         }
         public Builder languagePair(@Nullable Output<LanguageCodePairArgs> languagePair) {
@@ -150,7 +151,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languagePair(@Nullable LanguageCodePairArgs languagePair) {
-            this.languagePair = Output.ofNullable(languagePair);
+            this.languagePair = Codegen.ofNullable(languagePair);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -158,7 +159,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -166,7 +167,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -174,7 +175,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public GlossaryArgs build() {
             return new GlossaryArgs(inputConfig, languageCodesSet, languagePair, location, name, project);

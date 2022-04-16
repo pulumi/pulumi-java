@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class IncidentLabelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelName", required=true)
       private final Output<String> labelName;
 
-    public Output<String> getLabelName() {
+    public Output<String> labelName() {
         return this.labelName;
     }
 
@@ -33,7 +34,7 @@ public final class IncidentLabelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IncidentLabelArgs() {
-        this.labelName = Output.empty();
+        this.labelName = Codegen.empty();
     }
 
     public static Builder builder() {

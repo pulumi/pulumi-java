@@ -48,10 +48,10 @@ public final class OrganizationPolicyListPolicy {
      * or `deny` - (Optional) One or the other must be set.
      * 
     */
-    public Optional<OrganizationPolicyListPolicyAllow> getAllow() {
+    public Optional<OrganizationPolicyListPolicyAllow> allow() {
         return Optional.ofNullable(this.allow);
     }
-    public Optional<OrganizationPolicyListPolicyDeny> getDeny() {
+    public Optional<OrganizationPolicyListPolicyDeny> deny() {
         return Optional.ofNullable(this.deny);
     }
     /**
@@ -59,14 +59,14 @@ public final class OrganizationPolicyListPolicy {
      * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
      * 
     */
-    public Optional<Boolean> getInheritFromParent() {
+    public Optional<Boolean> inheritFromParent() {
         return Optional.ofNullable(this.inheritFromParent);
     }
     /**
      * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
      * 
     */
-    public Optional<String> getSuggestedValue() {
+    public Optional<String> suggestedValue() {
         return Optional.ofNullable(this.suggestedValue);
     }
 

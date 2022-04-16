@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
     @Import(name="viewQuery")
       private final @Nullable Output<String> viewQuery;
 
-    public Output<String> getViewQuery() {
-        return this.viewQuery == null ? Output.empty() : this.viewQuery;
+    public Output<String> viewQuery() {
+        return this.viewQuery == null ? Codegen.empty() : this.viewQuery;
     }
 
     public EntryBigqueryTableSpecViewSpecGetArgs(@Nullable Output<String> viewQuery) {
@@ -26,7 +27,7 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
     }
 
     private EntryBigqueryTableSpecViewSpecGetArgs() {
-        this.viewQuery = Output.empty();
+        this.viewQuery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder viewQuery(@Nullable String viewQuery) {
-            this.viewQuery = Output.ofNullable(viewQuery);
+            this.viewQuery = Codegen.ofNullable(viewQuery);
             return this;
         }        public EntryBigqueryTableSpecViewSpecGetArgs build() {
             return new EntryBigqueryTableSpecViewSpecGetArgs(viewQuery);

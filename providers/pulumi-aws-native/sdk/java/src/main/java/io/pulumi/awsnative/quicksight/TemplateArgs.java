@@ -8,6 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.TemplateSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
@@ -32,8 +33,8 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,14 +44,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
 
-    public Output<List<TemplateResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<List<TemplateResourcePermissionArgs>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="sourceEntity", required=true)
       private final Output<TemplateSourceEntityArgs> sourceEntity;
 
-    public Output<TemplateSourceEntityArgs> getSourceEntity() {
+    public Output<TemplateSourceEntityArgs> sourceEntity() {
         return this.sourceEntity;
     }
 
@@ -61,14 +62,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TemplateTagArgs>> tags;
 
-    public Output<List<TemplateTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<TemplateTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="templateId", required=true)
       private final Output<String> templateId;
 
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId;
     }
 
@@ -82,8 +83,8 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
-    public Output<String> getVersionDescription() {
-        return this.versionDescription == null ? Output.empty() : this.versionDescription;
+    public Output<String> versionDescription() {
+        return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
     }
 
     public TemplateArgs(
@@ -104,13 +105,13 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.awsAccountId = Output.empty();
-        this.name = Output.empty();
-        this.permissions = Output.empty();
-        this.sourceEntity = Output.empty();
-        this.tags = Output.empty();
-        this.templateId = Output.empty();
-        this.versionDescription = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.sourceEntity = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateId = Codegen.empty();
+        this.versionDescription = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder permissions(@Nullable Output<List<TemplateResourcePermissionArgs>> permissions) {
@@ -166,7 +167,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable List<TemplateResourcePermissionArgs> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(TemplateResourcePermissionArgs... permissions) {
@@ -185,7 +186,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TemplateTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TemplateTagArgs... tags) {
@@ -204,7 +205,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Output.ofNullable(versionDescription);
+            this.versionDescription = Codegen.ofNullable(versionDescription);
             return this;
         }        public TemplateArgs build() {
             return new TemplateArgs(awsAccountId, name, permissions, sourceEntity, tags, templateId, versionDescription);

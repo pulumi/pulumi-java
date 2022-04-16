@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="associateCarrierIpAddress")
       private final @Nullable Output<String> associateCarrierIpAddress;
 
-    public Output<String> getAssociateCarrierIpAddress() {
-        return this.associateCarrierIpAddress == null ? Output.empty() : this.associateCarrierIpAddress;
+    public Output<String> associateCarrierIpAddress() {
+        return this.associateCarrierIpAddress == null ? Codegen.empty() : this.associateCarrierIpAddress;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<String> associatePublicIpAddress;
 
-    public Output<String> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
+    public Output<String> associatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="deleteOnTermination")
       private final @Nullable Output<String> deleteOnTermination;
 
-    public Output<String> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+    public Output<String> deleteOnTermination() {
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="deviceIndex")
       private final @Nullable Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
-        return this.deviceIndex == null ? Output.empty() : this.deviceIndex;
+    public Output<Integer> deviceIndex() {
+        return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="interfaceType")
       private final @Nullable Output<String> interfaceType;
 
-    public Output<String> getInterfaceType() {
-        return this.interfaceType == null ? Output.empty() : this.interfaceType;
+    public Output<String> interfaceType() {
+        return this.interfaceType == null ? Codegen.empty() : this.interfaceType;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="ipv4AddressCount")
       private final @Nullable Output<Integer> ipv4AddressCount;
 
-    public Output<Integer> getIpv4AddressCount() {
-        return this.ipv4AddressCount == null ? Output.empty() : this.ipv4AddressCount;
+    public Output<Integer> ipv4AddressCount() {
+        return this.ipv4AddressCount == null ? Codegen.empty() : this.ipv4AddressCount;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="ipv4Addresses")
       private final @Nullable Output<List<String>> ipv4Addresses;
 
-    public Output<List<String>> getIpv4Addresses() {
-        return this.ipv4Addresses == null ? Output.empty() : this.ipv4Addresses;
+    public Output<List<String>> ipv4Addresses() {
+        return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> getIpv6AddressCount() {
-        return this.ipv6AddressCount == null ? Output.empty() : this.ipv6AddressCount;
+    public Output<Integer> ipv6AddressCount() {
+        return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
+    public Output<List<String>> ipv6Addresses() {
+        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="networkCardIndex")
       private final @Nullable Output<Integer> networkCardIndex;
 
-    public Output<Integer> getNetworkCardIndex() {
-        return this.networkCardIndex == null ? Output.empty() : this.networkCardIndex;
+    public Output<Integer> networkCardIndex() {
+        return this.networkCardIndex == null ? Codegen.empty() : this.networkCardIndex;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+    public Output<String> networkInterfaceId() {
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
+    public Output<String> privateIpAddress() {
+        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+    public Output<List<String>> securityGroups() {
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public LaunchTemplateNetworkInterfaceArgs(
@@ -215,21 +216,21 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     }
 
     private LaunchTemplateNetworkInterfaceArgs() {
-        this.associateCarrierIpAddress = Output.empty();
-        this.associatePublicIpAddress = Output.empty();
-        this.deleteOnTermination = Output.empty();
-        this.description = Output.empty();
-        this.deviceIndex = Output.empty();
-        this.interfaceType = Output.empty();
-        this.ipv4AddressCount = Output.empty();
-        this.ipv4Addresses = Output.empty();
-        this.ipv6AddressCount = Output.empty();
-        this.ipv6Addresses = Output.empty();
-        this.networkCardIndex = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.privateIpAddress = Output.empty();
-        this.securityGroups = Output.empty();
-        this.subnetId = Output.empty();
+        this.associateCarrierIpAddress = Codegen.empty();
+        this.associatePublicIpAddress = Codegen.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.description = Codegen.empty();
+        this.deviceIndex = Codegen.empty();
+        this.interfaceType = Codegen.empty();
+        this.ipv4AddressCount = Codegen.empty();
+        this.ipv4Addresses = Codegen.empty();
+        this.ipv6AddressCount = Codegen.empty();
+        this.ipv6Addresses = Codegen.empty();
+        this.networkCardIndex = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -285,7 +286,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder associateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
-            this.associateCarrierIpAddress = Output.ofNullable(associateCarrierIpAddress);
+            this.associateCarrierIpAddress = Codegen.ofNullable(associateCarrierIpAddress);
             return this;
         }
         public Builder associatePublicIpAddress(@Nullable Output<String> associatePublicIpAddress) {
@@ -293,7 +294,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder associatePublicIpAddress(@Nullable String associatePublicIpAddress) {
-            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
             return this;
         }
         public Builder deleteOnTermination(@Nullable Output<String> deleteOnTermination) {
@@ -301,7 +302,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -309,7 +310,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
@@ -317,7 +318,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder deviceIndex(@Nullable Integer deviceIndex) {
-            this.deviceIndex = Output.ofNullable(deviceIndex);
+            this.deviceIndex = Codegen.ofNullable(deviceIndex);
             return this;
         }
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
@@ -325,7 +326,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder interfaceType(@Nullable String interfaceType) {
-            this.interfaceType = Output.ofNullable(interfaceType);
+            this.interfaceType = Codegen.ofNullable(interfaceType);
             return this;
         }
         public Builder ipv4AddressCount(@Nullable Output<Integer> ipv4AddressCount) {
@@ -333,7 +334,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder ipv4AddressCount(@Nullable Integer ipv4AddressCount) {
-            this.ipv4AddressCount = Output.ofNullable(ipv4AddressCount);
+            this.ipv4AddressCount = Codegen.ofNullable(ipv4AddressCount);
             return this;
         }
         public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
@@ -341,7 +342,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
-            this.ipv4Addresses = Output.ofNullable(ipv4Addresses);
+            this.ipv4Addresses = Codegen.ofNullable(ipv4Addresses);
             return this;
         }
         public Builder ipv4Addresses(String... ipv4Addresses) {
@@ -352,7 +353,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
+            this.ipv6AddressCount = Codegen.ofNullable(ipv6AddressCount);
             return this;
         }
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
@@ -360,7 +361,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
             return this;
         }
         public Builder ipv6Addresses(String... ipv6Addresses) {
@@ -371,7 +372,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
-            this.networkCardIndex = Output.ofNullable(networkCardIndex);
+            this.networkCardIndex = Codegen.ofNullable(networkCardIndex);
             return this;
         }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
@@ -379,7 +380,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
@@ -387,7 +388,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Output.ofNullable(privateIpAddress);
+            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -395,7 +396,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -406,7 +407,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public LaunchTemplateNetworkInterfaceArgs build() {
             return new LaunchTemplateNetworkInterfaceArgs(associateCarrierIpAddress, associatePublicIpAddress, deleteOnTermination, description, deviceIndex, interfaceType, ipv4AddressCount, ipv4Addresses, ipv6AddressCount, ipv6Addresses, networkCardIndex, networkInterfaceId, privateIpAddress, securityGroups, subnetId);

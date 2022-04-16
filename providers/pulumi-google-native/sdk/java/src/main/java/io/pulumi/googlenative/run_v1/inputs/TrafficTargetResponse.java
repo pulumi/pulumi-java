@@ -25,7 +25,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="configurationName", required=true)
       private final String configurationName;
 
-    public String getConfigurationName() {
+    public String configurationName() {
         return this.configurationName;
     }
 
@@ -36,7 +36,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="latestRevision", required=true)
       private final Boolean latestRevision;
 
-    public Boolean getLatestRevision() {
+    public Boolean latestRevision() {
         return this.latestRevision;
     }
 
@@ -47,7 +47,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="percent", required=true)
       private final Integer percent;
 
-    public Integer getPercent() {
+    public Integer percent() {
         return this.percent;
     }
 
@@ -58,7 +58,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="revisionName", required=true)
       private final String revisionName;
 
-    public String getRevisionName() {
+    public String revisionName() {
         return this.revisionName;
     }
 
@@ -69,7 +69,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 
@@ -80,7 +80,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

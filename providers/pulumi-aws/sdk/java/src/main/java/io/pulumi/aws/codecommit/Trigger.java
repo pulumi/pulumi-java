@@ -10,6 +10,7 @@ import io.pulumi.aws.codecommit.outputs.TriggerTrigger;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return System-generated unique identifier.
      * 
      */
-    public Output<String> getConfigurationId() {
+    public Output<String> configurationId() {
         return this.configurationId;
     }
     /**
@@ -41,13 +42,13 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The name for the repository. This needs to be less than 100 characters.
      * 
      */
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
     @Export(name="triggers", type=List.class, parameters={TriggerTrigger.class})
     private Output<List<TriggerTrigger>> triggers;
 
-    public Output<List<TriggerTrigger>> getTriggers() {
+    public Output<List<TriggerTrigger>> triggers() {
         return this.triggers;
     }
 
@@ -73,7 +74,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Trigger(String name, TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codecommit/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codecommit/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Trigger(String name, Output<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

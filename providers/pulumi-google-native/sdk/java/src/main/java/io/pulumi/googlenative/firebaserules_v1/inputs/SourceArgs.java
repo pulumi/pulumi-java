@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebaserules_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.firebaserules_v1.inputs.FileArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="files", required=true)
       private final Output<List<FileArgs>> files;
 
-    public Output<List<FileArgs>> getFiles() {
+    public Output<List<FileArgs>> files() {
         return this.files;
     }
 
@@ -34,7 +35,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.files = Output.empty();
+        this.files = Codegen.empty();
     }
 
     public static Builder builder() {

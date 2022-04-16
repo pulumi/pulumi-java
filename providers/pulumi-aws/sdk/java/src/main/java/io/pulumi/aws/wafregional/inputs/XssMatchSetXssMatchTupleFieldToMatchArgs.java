@@ -5,6 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class XssMatchSetXssMatchTupleFieldToMatchArgs extends io.pulumi.re
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<String> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class XssMatchSetXssMatchTupleFieldToMatchArgs extends io.pulumi.re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -44,8 +45,8 @@ public final class XssMatchSetXssMatchTupleFieldToMatchArgs extends io.pulumi.re
     }
 
     private XssMatchSetXssMatchTupleFieldToMatchArgs() {
-        this.data = Output.empty();
-        this.type = Output.empty();
+        this.data = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class XssMatchSetXssMatchTupleFieldToMatchArgs extends io.pulumi.re
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder type(Output<String> type) {

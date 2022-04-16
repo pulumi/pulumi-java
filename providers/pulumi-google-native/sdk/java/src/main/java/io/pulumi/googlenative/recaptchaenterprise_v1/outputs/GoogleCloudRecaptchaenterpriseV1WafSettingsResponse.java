@@ -32,14 +32,14 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
      * The WAF feature for which this key is enabled.
      * 
     */
-    public String getWafFeature() {
+    public String wafFeature() {
         return this.wafFeature;
     }
     /**
      * The WAF service that uses this key.
      * 
     */
-    public String getWafService() {
+    public String wafService() {
         return this.wafService;
     }
 

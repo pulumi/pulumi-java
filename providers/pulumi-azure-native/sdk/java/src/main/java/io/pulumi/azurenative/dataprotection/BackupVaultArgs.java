@@ -6,6 +6,7 @@ package io.pulumi.azurenative.dataprotection;
 import io.pulumi.azurenative.dataprotection.inputs.DppIdentityDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<DppIdentityDetailsArgs> identity;
 
-    public Output<DppIdentityDetailsArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<DppIdentityDetailsArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
 
-    public Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> getProperties() {
+    public Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties() {
         return this.properties;
     }
 
@@ -67,7 +68,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,8 +79,8 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;
 
-    public Output<String> getVaultName() {
-        return this.vaultName == null ? Output.empty() : this.vaultName;
+    public Output<String> vaultName() {
+        return this.vaultName == null ? Codegen.empty() : this.vaultName;
     }
 
     public BackupVaultArgs(
@@ -111,13 +112,13 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupVaultArgs() {
-        this.eTag = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vaultName = Output.empty();
+        this.eTag = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder identity(@Nullable Output<DppIdentityDetailsArgs> identity) {
@@ -165,7 +166,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable DppIdentityDetailsArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -173,7 +174,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties) {
@@ -197,7 +198,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vaultName(@Nullable Output<String> vaultName) {
@@ -205,7 +206,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vaultName(@Nullable String vaultName) {
-            this.vaultName = Output.ofNullable(vaultName);
+            this.vaultName = Codegen.ofNullable(vaultName);
             return this;
         }        public BackupVaultArgs build() {
             return new BackupVaultArgs(eTag, identity, location, properties, resourceGroupName, tags, vaultName);

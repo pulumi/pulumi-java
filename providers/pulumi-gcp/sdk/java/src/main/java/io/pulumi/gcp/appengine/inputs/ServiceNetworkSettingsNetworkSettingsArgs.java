@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ServiceNetworkSettingsNetworkSettingsArgs extends io.pulumi.r
     @Import(name="ingressTrafficAllowed")
       private final @Nullable Output<String> ingressTrafficAllowed;
 
-    public Output<String> getIngressTrafficAllowed() {
-        return this.ingressTrafficAllowed == null ? Output.empty() : this.ingressTrafficAllowed;
+    public Output<String> ingressTrafficAllowed() {
+        return this.ingressTrafficAllowed == null ? Codegen.empty() : this.ingressTrafficAllowed;
     }
 
     public ServiceNetworkSettingsNetworkSettingsArgs(@Nullable Output<String> ingressTrafficAllowed) {
@@ -32,7 +33,7 @@ public final class ServiceNetworkSettingsNetworkSettingsArgs extends io.pulumi.r
     }
 
     private ServiceNetworkSettingsNetworkSettingsArgs() {
-        this.ingressTrafficAllowed = Output.empty();
+        this.ingressTrafficAllowed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class ServiceNetworkSettingsNetworkSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
-            this.ingressTrafficAllowed = Output.ofNullable(ingressTrafficAllowed);
+            this.ingressTrafficAllowed = Codegen.ofNullable(ingressTrafficAllowed);
             return this;
         }        public ServiceNetworkSettingsNetworkSettingsArgs build() {
             return new ServiceNetworkSettingsNetworkSettingsArgs(ingressTrafficAllowed);

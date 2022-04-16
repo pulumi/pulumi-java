@@ -10,6 +10,7 @@ import io.pulumi.azurenative.web.inputs.StaticSiteBuildPropertiesArgs;
 import io.pulumi.azurenative.web.inputs.StaticSiteTemplateOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowConfigFileUpdates")
       private final @Nullable Output<Boolean> allowConfigFileUpdates;
 
-    public Output<Boolean> getAllowConfigFileUpdates() {
-        return this.allowConfigFileUpdates == null ? Output.empty() : this.allowConfigFileUpdates;
+    public Output<Boolean> allowConfigFileUpdates() {
+        return this.allowConfigFileUpdates == null ? Codegen.empty() : this.allowConfigFileUpdates;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+    public Output<String> branch() {
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildProperties")
       private final @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties;
 
-    public Output<StaticSiteBuildPropertiesArgs> getBuildProperties() {
-        return this.buildProperties == null ? Output.empty() : this.buildProperties;
+    public Output<StaticSiteBuildPropertiesArgs> buildProperties() {
+        return this.buildProperties == null ? Codegen.empty() : this.buildProperties;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryToken")
       private final @Nullable Output<String> repositoryToken;
 
-    public Output<String> getRepositoryToken() {
-        return this.repositoryToken == null ? Output.empty() : this.repositoryToken;
+    public Output<String> repositoryToken() {
+        return this.repositoryToken == null ? Codegen.empty() : this.repositoryToken;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryUrl")
       private final @Nullable Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
-        return this.repositoryUrl == null ? Output.empty() : this.repositoryUrl;
+    public Output<String> repositoryUrl() {
+        return this.repositoryUrl == null ? Codegen.empty() : this.repositoryUrl;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -138,8 +139,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuDescriptionArgs> sku;
 
-    public Output<SkuDescriptionArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuDescriptionArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stagingEnvironmentPolicy")
       private final @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
 
-    public Output<StagingEnvironmentPolicy> getStagingEnvironmentPolicy() {
-        return this.stagingEnvironmentPolicy == null ? Output.empty() : this.stagingEnvironmentPolicy;
+    public Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy() {
+        return this.stagingEnvironmentPolicy == null ? Codegen.empty() : this.stagingEnvironmentPolicy;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateProperties")
       private final @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties;
 
-    public Output<StaticSiteTemplateOptionsArgs> getTemplateProperties() {
-        return this.templateProperties == null ? Output.empty() : this.templateProperties;
+    public Output<StaticSiteTemplateOptionsArgs> templateProperties() {
+        return this.templateProperties == null ? Codegen.empty() : this.templateProperties;
     }
 
     public StaticSiteArgs(
@@ -207,20 +208,20 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StaticSiteArgs() {
-        this.allowConfigFileUpdates = Output.empty();
-        this.branch = Output.empty();
-        this.buildProperties = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.repositoryToken = Output.empty();
-        this.repositoryUrl = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.stagingEnvironmentPolicy = Output.empty();
-        this.tags = Output.empty();
-        this.templateProperties = Output.empty();
+        this.allowConfigFileUpdates = Codegen.empty();
+        this.branch = Codegen.empty();
+        this.buildProperties = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.repositoryToken = Codegen.empty();
+        this.repositoryUrl = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.stagingEnvironmentPolicy = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -274,7 +275,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
-            this.allowConfigFileUpdates = Output.ofNullable(allowConfigFileUpdates);
+            this.allowConfigFileUpdates = Codegen.ofNullable(allowConfigFileUpdates);
             return this;
         }
         public Builder branch(@Nullable Output<String> branch) {
@@ -282,7 +283,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder buildProperties(@Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties) {
@@ -290,7 +291,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildProperties(@Nullable StaticSiteBuildPropertiesArgs buildProperties) {
-            this.buildProperties = Output.ofNullable(buildProperties);
+            this.buildProperties = Codegen.ofNullable(buildProperties);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -298,7 +299,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -306,7 +307,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -314,7 +315,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -322,7 +323,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder repositoryToken(@Nullable Output<String> repositoryToken) {
@@ -330,7 +331,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryToken(@Nullable String repositoryToken) {
-            this.repositoryToken = Output.ofNullable(repositoryToken);
+            this.repositoryToken = Codegen.ofNullable(repositoryToken);
             return this;
         }
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
@@ -338,7 +339,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
-            this.repositoryUrl = Output.ofNullable(repositoryUrl);
+            this.repositoryUrl = Codegen.ofNullable(repositoryUrl);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -354,7 +355,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuDescriptionArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder stagingEnvironmentPolicy(@Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
@@ -362,7 +363,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stagingEnvironmentPolicy(@Nullable StagingEnvironmentPolicy stagingEnvironmentPolicy) {
-            this.stagingEnvironmentPolicy = Output.ofNullable(stagingEnvironmentPolicy);
+            this.stagingEnvironmentPolicy = Codegen.ofNullable(stagingEnvironmentPolicy);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -370,7 +371,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder templateProperties(@Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties) {
@@ -378,7 +379,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateProperties(@Nullable StaticSiteTemplateOptionsArgs templateProperties) {
-            this.templateProperties = Output.ofNullable(templateProperties);
+            this.templateProperties = Codegen.ofNullable(templateProperties);
             return this;
         }        public StaticSiteArgs build() {
             return new StaticSiteArgs(allowConfigFileUpdates, branch, buildProperties, identity, kind, location, name, repositoryToken, repositoryUrl, resourceGroupName, sku, stagingEnvironmentPolicy, tags, templateProperties);

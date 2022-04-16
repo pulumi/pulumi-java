@@ -5,6 +5,7 @@ package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="assignedManagedNetwork")
       private final @Nullable Output<String> assignedManagedNetwork;
 
-    public Output<String> getAssignedManagedNetwork() {
-        return this.assignedManagedNetwork == null ? Output.empty() : this.assignedManagedNetwork;
+    public Output<String> assignedManagedNetwork() {
+        return this.assignedManagedNetwork == null ? Codegen.empty() : this.assignedManagedNetwork;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -54,8 +55,8 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scopeAssignmentName")
       private final @Nullable Output<String> scopeAssignmentName;
 
-    public Output<String> getScopeAssignmentName() {
-        return this.scopeAssignmentName == null ? Output.empty() : this.scopeAssignmentName;
+    public Output<String> scopeAssignmentName() {
+        return this.scopeAssignmentName == null ? Codegen.empty() : this.scopeAssignmentName;
     }
 
     public ScopeAssignmentArgs(
@@ -70,10 +71,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScopeAssignmentArgs() {
-        this.assignedManagedNetwork = Output.empty();
-        this.location = Output.empty();
-        this.scope = Output.empty();
-        this.scopeAssignmentName = Output.empty();
+        this.assignedManagedNetwork = Codegen.empty();
+        this.location = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.scopeAssignmentName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder assignedManagedNetwork(@Nullable String assignedManagedNetwork) {
-            this.assignedManagedNetwork = Output.ofNullable(assignedManagedNetwork);
+            this.assignedManagedNetwork = Codegen.ofNullable(assignedManagedNetwork);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -115,7 +116,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder scope(Output<String> scope) {
@@ -131,7 +132,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scopeAssignmentName(@Nullable String scopeAssignmentName) {
-            this.scopeAssignmentName = Output.ofNullable(scopeAssignmentName);
+            this.scopeAssignmentName = Codegen.ofNullable(scopeAssignmentName);
             return this;
         }        public ScopeAssignmentArgs build() {
             return new ScopeAssignmentArgs(assignedManagedNetwork, location, scope, scopeAssignmentName);

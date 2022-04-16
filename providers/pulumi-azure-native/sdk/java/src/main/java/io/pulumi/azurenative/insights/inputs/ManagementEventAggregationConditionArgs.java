@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.ConditionOperator;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
     @Import(name="operator")
       private final @Nullable Output<ConditionOperator> operator;
 
-    public Output<ConditionOperator> getOperator() {
-        return this.operator == null ? Output.empty() : this.operator;
+    public Output<ConditionOperator> operator() {
+        return this.operator == null ? Codegen.empty() : this.operator;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
     @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
-        return this.threshold == null ? Output.empty() : this.threshold;
+    public Output<Double> threshold() {
+        return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
     @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;
 
-    public Output<String> getWindowSize() {
-        return this.windowSize == null ? Output.empty() : this.windowSize;
+    public Output<String> windowSize() {
+        return this.windowSize == null ? Codegen.empty() : this.windowSize;
     }
 
     public ManagementEventAggregationConditionArgs(
@@ -63,9 +64,9 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
     }
 
     private ManagementEventAggregationConditionArgs() {
-        this.operator = Output.empty();
-        this.threshold = Output.empty();
-        this.windowSize = Output.empty();
+        this.operator = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.windowSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
             return this;
         }
         public Builder operator(@Nullable ConditionOperator operator) {
-            this.operator = Output.ofNullable(operator);
+            this.operator = Codegen.ofNullable(operator);
             return this;
         }
         public Builder threshold(@Nullable Output<Double> threshold) {
@@ -105,7 +106,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
             return this;
         }
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Output.ofNullable(threshold);
+            this.threshold = Codegen.ofNullable(threshold);
             return this;
         }
         public Builder windowSize(@Nullable Output<String> windowSize) {
@@ -113,7 +114,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
             return this;
         }
         public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Output.ofNullable(windowSize);
+            this.windowSize = Codegen.ofNullable(windowSize);
             return this;
         }        public ManagementEventAggregationConditionArgs build() {
             return new ManagementEventAggregationConditionArgs(operator, threshold, windowSize);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CustomReportMetricArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ReportPropertyArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chartType")
       private final @Nullable Output<String> chartType;
 
-    public Output<String> getChartType() {
-        return this.chartType == null ? Output.empty() : this.chartType;
+    public Output<String> chartType() {
+        return this.chartType == null ? Codegen.empty() : this.chartType;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comments")
       private final @Nullable Output<List<String>> comments;
 
-    public Output<List<String>> getComments() {
-        return this.comments == null ? Output.empty() : this.comments;
+    public Output<List<String>> comments() {
+        return this.comments == null ? Codegen.empty() : this.comments;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<String>> dimensions;
 
-    public Output<List<String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<List<String>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fromTime")
       private final @Nullable Output<String> fromTime;
 
-    public Output<String> getFromTime() {
-        return this.fromTime == null ? Output.empty() : this.fromTime;
+    public Output<String> fromTime() {
+        return this.fromTime == null ? Codegen.empty() : this.fromTime;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limit")
       private final @Nullable Output<String> limit;
 
-    public Output<String> getLimit() {
-        return this.limit == null ? Output.empty() : this.limit;
+    public Output<String> limit() {
+        return this.limit == null ? Codegen.empty() : this.limit;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metrics", required=true)
       private final Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
 
-    public Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> getMetrics() {
+    public Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics() {
         return this.metrics;
     }
 
@@ -112,8 +113,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -123,14 +124,14 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="offset")
       private final @Nullable Output<String> offset;
 
-    public Output<String> getOffset() {
-        return this.offset == null ? Output.empty() : this.offset;
+    public Output<String> offset() {
+        return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -141,8 +142,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
 
-    public Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sortByCols")
       private final @Nullable Output<List<String>> sortByCols;
 
-    public Output<List<String>> getSortByCols() {
-        return this.sortByCols == null ? Output.empty() : this.sortByCols;
+    public Output<List<String>> sortByCols() {
+        return this.sortByCols == null ? Codegen.empty() : this.sortByCols;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sortOrder")
       private final @Nullable Output<String> sortOrder;
 
-    public Output<String> getSortOrder() {
-        return this.sortOrder == null ? Output.empty() : this.sortOrder;
+    public Output<String> sortOrder() {
+        return this.sortOrder == null ? Codegen.empty() : this.sortOrder;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
-        return this.timeUnit == null ? Output.empty() : this.timeUnit;
+    public Output<String> timeUnit() {
+        return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toTime")
       private final @Nullable Output<String> toTime;
 
-    public Output<String> getToTime() {
-        return this.toTime == null ? Output.empty() : this.toTime;
+    public Output<String> toTime() {
+        return this.toTime == null ? Codegen.empty() : this.toTime;
     }
 
     /**
@@ -207,8 +208,8 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topk")
       private final @Nullable Output<String> topk;
 
-    public Output<String> getTopk() {
-        return this.topk == null ? Output.empty() : this.topk;
+    public Output<String> topk() {
+        return this.topk == null ? Codegen.empty() : this.topk;
     }
 
     public ReportArgs(
@@ -251,24 +252,24 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportArgs() {
-        this.chartType = Output.empty();
-        this.comments = Output.empty();
-        this.dimensions = Output.empty();
-        this.displayName = Output.empty();
-        this.filter = Output.empty();
-        this.fromTime = Output.empty();
-        this.limit = Output.empty();
-        this.metrics = Output.empty();
-        this.name = Output.empty();
-        this.offset = Output.empty();
-        this.organizationId = Output.empty();
-        this.properties = Output.empty();
-        this.sortByCols = Output.empty();
-        this.sortOrder = Output.empty();
-        this.tags = Output.empty();
-        this.timeUnit = Output.empty();
-        this.toTime = Output.empty();
-        this.topk = Output.empty();
+        this.chartType = Codegen.empty();
+        this.comments = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.fromTime = Codegen.empty();
+        this.limit = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.name = Codegen.empty();
+        this.offset = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.sortByCols = Codegen.empty();
+        this.sortOrder = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeUnit = Codegen.empty();
+        this.toTime = Codegen.empty();
+        this.topk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -330,7 +331,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder chartType(@Nullable String chartType) {
-            this.chartType = Output.ofNullable(chartType);
+            this.chartType = Codegen.ofNullable(chartType);
             return this;
         }
         public Builder comments(@Nullable Output<List<String>> comments) {
@@ -338,7 +339,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comments(@Nullable List<String> comments) {
-            this.comments = Output.ofNullable(comments);
+            this.comments = Codegen.ofNullable(comments);
             return this;
         }
         public Builder comments(String... comments) {
@@ -349,7 +350,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensions(@Nullable List<String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder dimensions(String... dimensions) {
@@ -360,7 +361,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder filter(@Nullable Output<String> filter) {
@@ -368,7 +369,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder fromTime(@Nullable Output<String> fromTime) {
@@ -376,7 +377,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fromTime(@Nullable String fromTime) {
-            this.fromTime = Output.ofNullable(fromTime);
+            this.fromTime = Codegen.ofNullable(fromTime);
             return this;
         }
         public Builder limit(@Nullable Output<String> limit) {
@@ -384,7 +385,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder limit(@Nullable String limit) {
-            this.limit = Output.ofNullable(limit);
+            this.limit = Codegen.ofNullable(limit);
             return this;
         }
         public Builder metrics(Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
@@ -403,7 +404,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder offset(@Nullable Output<String> offset) {
@@ -411,7 +412,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder offset(@Nullable String offset) {
-            this.offset = Output.ofNullable(offset);
+            this.offset = Codegen.ofNullable(offset);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -427,7 +428,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder properties(GoogleCloudApigeeV1ReportPropertyArgs... properties) {
@@ -438,7 +439,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sortByCols(@Nullable List<String> sortByCols) {
-            this.sortByCols = Output.ofNullable(sortByCols);
+            this.sortByCols = Codegen.ofNullable(sortByCols);
             return this;
         }
         public Builder sortByCols(String... sortByCols) {
@@ -449,7 +450,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sortOrder(@Nullable String sortOrder) {
-            this.sortOrder = Output.ofNullable(sortOrder);
+            this.sortOrder = Codegen.ofNullable(sortOrder);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -457,7 +458,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -468,7 +469,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Output.ofNullable(timeUnit);
+            this.timeUnit = Codegen.ofNullable(timeUnit);
             return this;
         }
         public Builder toTime(@Nullable Output<String> toTime) {
@@ -476,7 +477,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toTime(@Nullable String toTime) {
-            this.toTime = Output.ofNullable(toTime);
+            this.toTime = Codegen.ofNullable(toTime);
             return this;
         }
         public Builder topk(@Nullable Output<String> topk) {
@@ -484,7 +485,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topk(@Nullable String topk) {
-            this.topk = Output.ofNullable(topk);
+            this.topk = Codegen.ofNullable(topk);
             return this;
         }        public ReportArgs build() {
             return new ReportArgs(chartType, comments, dimensions, displayName, filter, fromTime, limit, metrics, name, offset, organizationId, properties, sortByCols, sortOrder, tags, timeUnit, toTime, topk);

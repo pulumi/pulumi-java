@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs exten
     @Import(name="aggregationWindowLength")
       private final @Nullable Output<String> aggregationWindowLength;
 
-    public Output<String> getAggregationWindowLength() {
-        return this.aggregationWindowLength == null ? Output.empty() : this.aggregationWindowLength;
+    public Output<String> aggregationWindowLength() {
+        return this.aggregationWindowLength == null ? Codegen.empty() : this.aggregationWindowLength;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs exten
     @Import(name="targetUtilization", required=true)
       private final Output<Double> targetUtilization;
 
-    public Output<Double> getTargetUtilization() {
+    public Output<Double> targetUtilization() {
         return this.targetUtilization;
     }
 
@@ -45,8 +46,8 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs exten
     }
 
     private FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs() {
-        this.aggregationWindowLength = Output.empty();
-        this.targetUtilization = Output.empty();
+        this.aggregationWindowLength = Codegen.empty();
+        this.targetUtilization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs exten
             return this;
         }
         public Builder aggregationWindowLength(@Nullable String aggregationWindowLength) {
-            this.aggregationWindowLength = Output.ofNullable(aggregationWindowLength);
+            this.aggregationWindowLength = Codegen.ofNullable(aggregationWindowLength);
             return this;
         }
         public Builder targetUtilization(Output<Double> targetUtilization) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.HostedPublicVirtualInterfaceAccepterSt
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @return The ARN of the virtual interface.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -69,7 +70,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -83,7 +84,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @return The ID of the Direct Connect virtual interface to accept.
      * 
      */
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 
@@ -109,7 +110,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedPublicVirtualInterfaceAccepter(String name, HostedPublicVirtualInterfaceAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter", name, args == null ? HostedPublicVirtualInterfaceAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter", name, args == null ? HostedPublicVirtualInterfaceAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HostedPublicVirtualInterfaceAccepter(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

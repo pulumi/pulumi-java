@@ -9,6 +9,7 @@ import io.pulumi.awsnative.elasticache.enums.UserGroupEngine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the user account.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -44,7 +45,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return Must be redis.
      * 
      */
-    public Output<UserGroupEngine> getEngine() {
+    public Output<UserGroupEngine> engine() {
         return this.engine;
     }
     /**
@@ -58,7 +59,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return Indicates user group status. Can be "creating", "active", "modifying", "deleting".
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -72,7 +73,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the user group.
      * 
      */
-    public Output<String> getUserGroupId() {
+    public Output<String> userGroupId() {
         return this.userGroupId;
     }
     /**
@@ -86,7 +87,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return List of users associated to this user group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUserIds() {
+    public Output</* @Nullable */ List<String>> userIds() {
         return this.userIds;
     }
 
@@ -112,7 +113,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserGroup(String name, UserGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:elasticache:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:elasticache:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

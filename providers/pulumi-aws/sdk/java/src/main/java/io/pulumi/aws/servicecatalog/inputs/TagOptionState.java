@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
-        return this.active == null ? Output.empty() : this.active;
+    public Output<Boolean> active() {
+        return this.active == null ? Codegen.empty() : this.active;
     }
 
     /**
@@ -33,15 +34,15 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+    public Output<String> owner() {
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TagOptionState(
@@ -67,10 +68,10 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagOptionState() {
-        this.active = Output.empty();
-        this.key = Output.empty();
-        this.owner = Output.empty();
-        this.value = Output.empty();
+        this.active = Codegen.empty();
+        this.key = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder active(@Nullable Boolean active) {
-            this.active = Output.ofNullable(active);
+            this.active = Codegen.ofNullable(active);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -112,7 +113,7 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -120,7 +121,7 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -128,7 +129,7 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public TagOptionState build() {
             return new TagOptionState(active, key, owner, value);

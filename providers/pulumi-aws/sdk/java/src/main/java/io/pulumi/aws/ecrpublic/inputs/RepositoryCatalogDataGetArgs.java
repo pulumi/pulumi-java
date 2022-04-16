@@ -5,6 +5,7 @@ package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     @Import(name="aboutText")
       private final @Nullable Output<String> aboutText;
 
-    public Output<String> getAboutText() {
-        return this.aboutText == null ? Output.empty() : this.aboutText;
+    public Output<String> aboutText() {
+        return this.aboutText == null ? Codegen.empty() : this.aboutText;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     @Import(name="architectures")
       private final @Nullable Output<List<String>> architectures;
 
-    public Output<List<String>> getArchitectures() {
-        return this.architectures == null ? Output.empty() : this.architectures;
+    public Output<List<String>> architectures() {
+        return this.architectures == null ? Codegen.empty() : this.architectures;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     @Import(name="logoImageBlob")
       private final @Nullable Output<String> logoImageBlob;
 
-    public Output<String> getLogoImageBlob() {
-        return this.logoImageBlob == null ? Output.empty() : this.logoImageBlob;
+    public Output<String> logoImageBlob() {
+        return this.logoImageBlob == null ? Codegen.empty() : this.logoImageBlob;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     @Import(name="operatingSystems")
       private final @Nullable Output<List<String>> operatingSystems;
 
-    public Output<List<String>> getOperatingSystems() {
-        return this.operatingSystems == null ? Output.empty() : this.operatingSystems;
+    public Output<List<String>> operatingSystems() {
+        return this.operatingSystems == null ? Codegen.empty() : this.operatingSystems;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     @Import(name="usageText")
       private final @Nullable Output<String> usageText;
 
-    public Output<String> getUsageText() {
-        return this.usageText == null ? Output.empty() : this.usageText;
+    public Output<String> usageText() {
+        return this.usageText == null ? Codegen.empty() : this.usageText;
     }
 
     public RepositoryCatalogDataGetArgs(
@@ -97,12 +98,12 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     }
 
     private RepositoryCatalogDataGetArgs() {
-        this.aboutText = Output.empty();
-        this.architectures = Output.empty();
-        this.description = Output.empty();
-        this.logoImageBlob = Output.empty();
-        this.operatingSystems = Output.empty();
-        this.usageText = Output.empty();
+        this.aboutText = Codegen.empty();
+        this.architectures = Codegen.empty();
+        this.description = Codegen.empty();
+        this.logoImageBlob = Codegen.empty();
+        this.operatingSystems = Codegen.empty();
+        this.usageText = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder aboutText(@Nullable String aboutText) {
-            this.aboutText = Output.ofNullable(aboutText);
+            this.aboutText = Codegen.ofNullable(aboutText);
             return this;
         }
         public Builder architectures(@Nullable Output<List<String>> architectures) {
@@ -148,7 +149,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder architectures(@Nullable List<String> architectures) {
-            this.architectures = Output.ofNullable(architectures);
+            this.architectures = Codegen.ofNullable(architectures);
             return this;
         }
         public Builder architectures(String... architectures) {
@@ -159,7 +160,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder logoImageBlob(@Nullable Output<String> logoImageBlob) {
@@ -167,7 +168,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder logoImageBlob(@Nullable String logoImageBlob) {
-            this.logoImageBlob = Output.ofNullable(logoImageBlob);
+            this.logoImageBlob = Codegen.ofNullable(logoImageBlob);
             return this;
         }
         public Builder operatingSystems(@Nullable Output<List<String>> operatingSystems) {
@@ -175,7 +176,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder operatingSystems(@Nullable List<String> operatingSystems) {
-            this.operatingSystems = Output.ofNullable(operatingSystems);
+            this.operatingSystems = Codegen.ofNullable(operatingSystems);
             return this;
         }
         public Builder operatingSystems(String... operatingSystems) {
@@ -186,7 +187,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder usageText(@Nullable String usageText) {
-            this.usageText = Output.ofNullable(usageText);
+            this.usageText = Codegen.ofNullable(usageText);
             return this;
         }        public RepositoryCatalogDataGetArgs build() {
             return new RepositoryCatalogDataGetArgs(aboutText, architectures, description, logoImageBlob, operatingSystems, usageText);

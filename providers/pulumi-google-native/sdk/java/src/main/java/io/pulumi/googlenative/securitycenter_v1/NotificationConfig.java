@@ -6,6 +6,7 @@ package io.pulumi.googlenative.securitycenter_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.NotificationConfigArgs;
 import io.pulumi.googlenative.securitycenter_v1.outputs.StreamingConfigResponse;
@@ -29,7 +30,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return The description of the notification config (max of 1024 characters).
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -43,7 +44,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
      * 
      */
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
     /**
@@ -71,7 +72,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -85,7 +86,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return The config for triggering streaming-based notifications.
      * 
      */
-    public Output<StreamingConfigResponse> getStreamingConfig() {
+    public Output<StreamingConfigResponse> streamingConfig() {
         return this.streamingConfig;
     }
 
@@ -111,7 +112,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationConfig(String name, NotificationConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:securitycenter/v1:NotificationConfig", name, args == null ? NotificationConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:securitycenter/v1:NotificationConfig", name, args == null ? NotificationConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

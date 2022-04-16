@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 
@@ -31,7 +32,7 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -43,8 +44,8 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
     }
 
     private RolePolicyAttachmentArgs() {
-        this.policyArn = Output.empty();
-        this.role = Output.empty();
+        this.policyArn = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorRequirementArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchExpressions")
       private final @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
 
-    public Output<List<LabelSelectorRequirementArgs>> getMatchExpressions() {
-        return this.matchExpressions == null ? Output.empty() : this.matchExpressions;
+    public Output<List<LabelSelectorRequirementArgs>> matchExpressions() {
+        return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchLabels")
       private final @Nullable Output<Map<String,String>> matchLabels;
 
-    public Output<Map<String,String>> getMatchLabels() {
-        return this.matchLabels == null ? Output.empty() : this.matchLabels;
+    public Output<Map<String,String>> matchLabels() {
+        return this.matchLabels == null ? Codegen.empty() : this.matchLabels;
     }
 
     public LabelSelectorArgs(
@@ -51,8 +52,8 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabelSelectorArgs() {
-        this.matchExpressions = Output.empty();
-        this.matchLabels = Output.empty();
+        this.matchExpressions = Codegen.empty();
+        this.matchLabels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder matchExpressions(@Nullable List<LabelSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Output.ofNullable(matchExpressions);
+            this.matchExpressions = Codegen.ofNullable(matchExpressions);
             return this;
         }
         public Builder matchExpressions(LabelSelectorRequirementArgs... matchExpressions) {
@@ -93,7 +94,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder matchLabels(@Nullable Map<String,String> matchLabels) {
-            this.matchLabels = Output.ofNullable(matchLabels);
+            this.matchLabels = Codegen.ofNullable(matchLabels);
             return this;
         }        public LabelSelectorArgs build() {
             return new LabelSelectorArgs(matchExpressions, matchLabels);

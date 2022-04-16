@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AddressArgs;
 import io.pulumi.gcp.compute.inputs.AddressState;
@@ -79,7 +80,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * if any.
      * 
      */
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
     /**
@@ -97,7 +98,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * Possible values are `INTERNAL` and `EXTERNAL`.
      * 
      */
-    public Output</* @Nullable */ String> getAddressType() {
+    public Output</* @Nullable */ String> addressType() {
         return this.addressType;
     }
     /**
@@ -111,7 +112,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -125,7 +126,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -139,7 +140,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -153,7 +154,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this address.  A list of key->value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -177,7 +178,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -195,7 +196,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * IPSEC_INTERCONNECT purposes.
      * 
      */
-    public Output</* @Nullable */ String> getNetwork() {
+    public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
@@ -213,7 +214,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * Possible values are `PREMIUM` and `STANDARD`.
      * 
      */
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier;
     }
     /**
@@ -227,7 +228,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @return The prefix length if the resource represents an IP range.
      * 
      */
-    public Output</* @Nullable */ Integer> getPrefixLength() {
+    public Output</* @Nullable */ Integer> prefixLength() {
         return this.prefixLength;
     }
     /**
@@ -243,7 +244,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -281,7 +282,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      *   This should only be set when using an Internal address.
      * 
      */
-    public Output<String> getPurpose() {
+    public Output<String> purpose() {
         return this.purpose;
     }
     /**
@@ -297,7 +298,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -311,7 +312,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -331,7 +332,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * GCE_ENDPOINT/DNS_RESOLVER purposes.
      * 
      */
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
     /**
@@ -345,7 +346,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @return The URLs of the resources that are using this address.
      * 
      */
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users;
     }
 
@@ -371,7 +372,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Address(String name, @Nullable AddressArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/address:Address", name, args == null ? AddressArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/address:Address", name, args == null ? AddressArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Address(String name, Output<String> id, @Nullable AddressState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

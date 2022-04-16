@@ -6,6 +6,7 @@ package io.pulumi.aws.connect.inputs;
 import io.pulumi.aws.connect.inputs.BotAssociationLexBotGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class BotAssociationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+    public Output<String> instanceId() {
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BotAssociationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="lexBot")
       private final @Nullable Output<BotAssociationLexBotGetArgs> lexBot;
 
-    public Output<BotAssociationLexBotGetArgs> getLexBot() {
-        return this.lexBot == null ? Output.empty() : this.lexBot;
+    public Output<BotAssociationLexBotGetArgs> lexBot() {
+        return this.lexBot == null ? Codegen.empty() : this.lexBot;
     }
 
     public BotAssociationState(
@@ -45,8 +46,8 @@ public final class BotAssociationState extends io.pulumi.resources.ResourceArgs 
     }
 
     private BotAssociationState() {
-        this.instanceId = Output.empty();
-        this.lexBot = Output.empty();
+        this.instanceId = Codegen.empty();
+        this.lexBot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BotAssociationState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder lexBot(@Nullable Output<BotAssociationLexBotGetArgs> lexBot) {
@@ -84,7 +85,7 @@ public final class BotAssociationState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder lexBot(@Nullable BotAssociationLexBotGetArgs lexBot) {
-            this.lexBot = Output.ofNullable(lexBot);
+            this.lexBot = Codegen.ofNullable(lexBot);
             return this;
         }        public BotAssociationState build() {
             return new BotAssociationState(instanceId, lexBot);

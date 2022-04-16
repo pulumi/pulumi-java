@@ -17,70 +17,70 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute extends io.pul
     @Import(name="destinationCidr")
       private final @Nullable String destinationCidr;
 
-    public Optional<String> getDestinationCidr() {
+    public Optional<String> destinationCidr() {
         return this.destinationCidr == null ? Optional.empty() : Optional.ofNullable(this.destinationCidr);
     }
 
     @Import(name="destinationPrefixListId")
       private final @Nullable String destinationPrefixListId;
 
-    public Optional<String> getDestinationPrefixListId() {
+    public Optional<String> destinationPrefixListId() {
         return this.destinationPrefixListId == null ? Optional.empty() : Optional.ofNullable(this.destinationPrefixListId);
     }
 
     @Import(name="egressOnlyInternetGatewayId")
       private final @Nullable String egressOnlyInternetGatewayId;
 
-    public Optional<String> getEgressOnlyInternetGatewayId() {
+    public Optional<String> egressOnlyInternetGatewayId() {
         return this.egressOnlyInternetGatewayId == null ? Optional.empty() : Optional.ofNullable(this.egressOnlyInternetGatewayId);
     }
 
     @Import(name="gatewayId")
       private final @Nullable String gatewayId;
 
-    public Optional<String> getGatewayId() {
+    public Optional<String> gatewayId() {
         return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
     }
 
     @Import(name="instanceId")
       private final @Nullable String instanceId;
 
-    public Optional<String> getInstanceId() {
+    public Optional<String> instanceId() {
         return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
     }
 
     @Import(name="natGatewayId")
       private final @Nullable String natGatewayId;
 
-    public Optional<String> getNatGatewayId() {
+    public Optional<String> natGatewayId() {
         return this.natGatewayId == null ? Optional.empty() : Optional.ofNullable(this.natGatewayId);
     }
 
     @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
 
-    public Optional<String> getNetworkInterfaceId() {
+    public Optional<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
     }
 
     @Import(name="origin")
       private final @Nullable String origin;
 
-    public Optional<String> getOrigin() {
+    public Optional<String> origin() {
         return this.origin == null ? Optional.empty() : Optional.ofNullable(this.origin);
     }
 
     @Import(name="transitGatewayId")
       private final @Nullable String transitGatewayId;
 
-    public Optional<String> getTransitGatewayId() {
+    public Optional<String> transitGatewayId() {
         return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
     }
 
     @Import(name="vpcPeeringConnectionId")
       private final @Nullable String vpcPeeringConnectionId;
 
-    public Optional<String> getVpcPeeringConnectionId() {
+    public Optional<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId == null ? Optional.empty() : Optional.ofNullable(this.vpcPeeringConnectionId);
     }
 

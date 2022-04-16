@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     @Import(name="sns")
       private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
 
-    public Output<AccountAuditConfigurationAuditNotificationTargetArgs> getSns() {
-        return this.sns == null ? Output.empty() : this.sns;
+    public Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns() {
+        return this.sns == null ? Codegen.empty() : this.sns;
     }
 
     public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(@Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
@@ -30,7 +31,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     }
 
     private AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs() {
-        this.sns = Output.empty();
+        this.sns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
             return this;
         }
         public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTargetArgs sns) {
-            this.sns = Output.ofNullable(sns);
+            this.sns = Codegen.ofNullable(sns);
             return this;
         }        public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs build() {
             return new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(sns);

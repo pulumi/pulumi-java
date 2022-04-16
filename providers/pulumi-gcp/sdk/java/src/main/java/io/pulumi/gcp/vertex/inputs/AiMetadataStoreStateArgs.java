@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class AiMetadataStoreStateArgs extends io.pulumi.resources.Resource
     @Import(name="diskUtilizationBytes")
       private final @Nullable Output<String> diskUtilizationBytes;
 
-    public Output<String> getDiskUtilizationBytes() {
-        return this.diskUtilizationBytes == null ? Output.empty() : this.diskUtilizationBytes;
+    public Output<String> diskUtilizationBytes() {
+        return this.diskUtilizationBytes == null ? Codegen.empty() : this.diskUtilizationBytes;
     }
 
     public AiMetadataStoreStateArgs(@Nullable Output<String> diskUtilizationBytes) {
@@ -26,7 +27,7 @@ public final class AiMetadataStoreStateArgs extends io.pulumi.resources.Resource
     }
 
     private AiMetadataStoreStateArgs() {
-        this.diskUtilizationBytes = Output.empty();
+        this.diskUtilizationBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class AiMetadataStoreStateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder diskUtilizationBytes(@Nullable String diskUtilizationBytes) {
-            this.diskUtilizationBytes = Output.ofNullable(diskUtilizationBytes);
+            this.diskUtilizationBytes = Codegen.ofNullable(diskUtilizationBytes);
             return this;
         }        public AiMetadataStoreStateArgs build() {
             return new AiMetadataStoreStateArgs(diskUtilizationBytes);

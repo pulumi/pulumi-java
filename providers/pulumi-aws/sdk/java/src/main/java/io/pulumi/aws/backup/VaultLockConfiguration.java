@@ -9,6 +9,7 @@ import io.pulumi.aws.backup.inputs.VaultLockConfigurationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The ARN of the vault.
      * 
      */
-    public Output<String> getBackupVaultArn() {
+    public Output<String> backupVaultArn() {
         return this.backupVaultArn;
     }
     /**
@@ -54,7 +55,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return Name of the backup vault to add a lock configuration for.
      * 
      */
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
     /**
@@ -68,7 +69,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The number of days before the lock date.
      * 
      */
-    public Output</* @Nullable */ Integer> getChangeableForDays() {
+    public Output</* @Nullable */ Integer> changeableForDays() {
         return this.changeableForDays;
     }
     /**
@@ -82,7 +83,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The maximum retention period that the vault retains its recovery points.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxRetentionDays() {
+    public Output</* @Nullable */ Integer> maxRetentionDays() {
         return this.maxRetentionDays;
     }
     /**
@@ -96,7 +97,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The minimum retention period that the vault retains its recovery points.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinRetentionDays() {
+    public Output</* @Nullable */ Integer> minRetentionDays() {
         return this.minRetentionDays;
     }
 
@@ -122,7 +123,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VaultLockConfiguration(String name, VaultLockConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/vaultLockConfiguration:VaultLockConfiguration", name, args == null ? VaultLockConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/vaultLockConfiguration:VaultLockConfiguration", name, args == null ? VaultLockConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VaultLockConfiguration(String name, Output<String> id, @Nullable VaultLockConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -24,7 +24,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="containerImageSources", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getContainerImageSources() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources() {
         return this.containerImageSources;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="dockerAddCapabilities", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerAddCapabilities() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities() {
         return this.dockerAddCapabilities;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="dockerChrootPath", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerChrootPath() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath() {
         return this.dockerChrootPath;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="dockerNetwork", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerNetwork() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork() {
         return this.dockerNetwork;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="dockerPrivileged", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerPrivileged() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged() {
         return this.dockerPrivileged;
     }
 
@@ -79,7 +79,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="dockerRunAsRoot", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerRunAsRoot() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot() {
         return this.dockerRunAsRoot;
     }
 
@@ -90,7 +90,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="dockerRuntime", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerRuntime() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime() {
         return this.dockerRuntime;
     }
 
@@ -101,7 +101,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="dockerSiblingContainers", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerSiblingContainers() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers() {
         return this.dockerSiblingContainers;
     }
 
@@ -112,7 +112,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     @Import(name="linuxIsolation", required=true)
       private final String linuxIsolation;
 
-    public String getLinuxIsolation() {
+    public String linuxIsolation() {
         return this.linuxIsolation;
     }
 

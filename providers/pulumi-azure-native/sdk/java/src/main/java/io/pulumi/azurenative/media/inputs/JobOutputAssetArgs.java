@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -36,8 +37,8 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -62,9 +63,9 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobOutputAssetArgs() {
-        this.assetName = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
+        this.assetName = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.codeguruprofiler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,14 +22,14 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
     @Import(name="channelId")
       private final @Nullable Output<String> channelId;
 
-    public Output<String> getChannelId() {
-        return this.channelId == null ? Output.empty() : this.channelId;
+    public Output<String> channelId() {
+        return this.channelId == null ? Codegen.empty() : this.channelId;
     }
 
     @Import(name="channelUri", required=true)
       private final Output<String> channelUri;
 
-    public Output<String> getChannelUri() {
+    public Output<String> channelUri() {
         return this.channelUri;
     }
 
@@ -40,8 +41,8 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
     }
 
     private ProfilingGroupChannelArgs() {
-        this.channelId = Output.empty();
-        this.channelUri = Output.empty();
+        this.channelId = Codegen.empty();
+        this.channelUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder channelId(@Nullable String channelId) {
-            this.channelId = Output.ofNullable(channelId);
+            this.channelId = Codegen.ofNullable(channelId);
             return this;
         }
         public Builder channelUri(Output<String> channelUri) {

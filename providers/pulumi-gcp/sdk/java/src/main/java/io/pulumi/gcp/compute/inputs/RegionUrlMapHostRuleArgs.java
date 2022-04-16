@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
     @Import(name="hosts", required=true)
       private final Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts;
     }
 
@@ -48,7 +49,7 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
     @Import(name="pathMatcher", required=true)
       private final Output<String> pathMatcher;
 
-    public Output<String> getPathMatcher() {
+    public Output<String> pathMatcher() {
         return this.pathMatcher;
     }
 
@@ -62,9 +63,9 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
     }
 
     private RegionUrlMapHostRuleArgs() {
-        this.description = Output.empty();
-        this.hosts = Output.empty();
-        this.pathMatcher = Output.empty();
+        this.description = Codegen.empty();
+        this.hosts = Codegen.empty();
+        this.pathMatcher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hosts(Output<List<String>> hosts) {

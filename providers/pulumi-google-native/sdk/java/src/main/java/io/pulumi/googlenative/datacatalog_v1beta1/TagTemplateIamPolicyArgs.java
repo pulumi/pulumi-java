@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+    public Output<List<BindingArgs>> bindings() {
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -35,28 +36,28 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="tagTemplateId", required=true)
       private final Output<String> tagTemplateId;
 
-    public Output<String> getTagTemplateId() {
+    public Output<String> tagTemplateId() {
         return this.tagTemplateId;
     }
 
@@ -67,8 +68,8 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public TagTemplateIamPolicyArgs(
@@ -87,12 +88,12 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private TagTemplateIamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.tagTemplateId = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tagTemplateId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -141,7 +142,7 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -149,7 +150,7 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -157,7 +158,7 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tagTemplateId(Output<String> tagTemplateId) {
@@ -173,7 +174,7 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public TagTemplateIamPolicyArgs build() {
             return new TagTemplateIamPolicyArgs(bindings, etag, location, project, tagTemplateId, version);

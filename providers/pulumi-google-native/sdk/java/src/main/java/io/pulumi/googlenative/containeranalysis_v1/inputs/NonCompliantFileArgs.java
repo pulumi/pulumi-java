@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayCommand")
       private final @Nullable Output<String> displayCommand;
 
-    public Output<String> getDisplayCommand() {
-        return this.displayCommand == null ? Output.empty() : this.displayCommand;
+    public Output<String> displayCommand() {
+        return this.displayCommand == null ? Codegen.empty() : this.displayCommand;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     public NonCompliantFileArgs(
@@ -61,9 +62,9 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NonCompliantFileArgs() {
-        this.displayCommand = Output.empty();
-        this.path = Output.empty();
-        this.reason = Output.empty();
+        this.displayCommand = Codegen.empty();
+        this.path = Codegen.empty();
+        this.reason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder displayCommand(@Nullable String displayCommand) {
-            this.displayCommand = Output.ofNullable(displayCommand);
+            this.displayCommand = Codegen.ofNullable(displayCommand);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -103,7 +104,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -111,7 +112,7 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }        public NonCompliantFileArgs build() {
             return new NonCompliantFileArgs(displayCommand, path, reason);

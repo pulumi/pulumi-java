@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerinstance.inputs.HttpHeadersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="httpHeaders")
       private final @Nullable Output<HttpHeadersArgs> httpHeaders;
 
-    public Output<HttpHeadersArgs> getHttpHeaders() {
-        return this.httpHeaders == null ? Output.empty() : this.httpHeaders;
+    public Output<HttpHeadersArgs> httpHeaders() {
+        return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -62,8 +63,8 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="scheme")
       private final @Nullable Output<Either<String,Scheme>> scheme;
 
-    public Output<Either<String,Scheme>> getScheme() {
-        return this.scheme == null ? Output.empty() : this.scheme;
+    public Output<Either<String,Scheme>> scheme() {
+        return this.scheme == null ? Codegen.empty() : this.scheme;
     }
 
     public ContainerHttpGetArgs(
@@ -78,10 +79,10 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ContainerHttpGetArgs() {
-        this.httpHeaders = Output.empty();
-        this.path = Output.empty();
-        this.port = Output.empty();
-        this.scheme = Output.empty();
+        this.httpHeaders = Codegen.empty();
+        this.path = Codegen.empty();
+        this.port = Codegen.empty();
+        this.scheme = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder httpHeaders(@Nullable HttpHeadersArgs httpHeaders) {
-            this.httpHeaders = Output.ofNullable(httpHeaders);
+            this.httpHeaders = Codegen.ofNullable(httpHeaders);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -123,7 +124,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder port(Output<Integer> port) {
@@ -139,7 +140,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scheme(@Nullable Either<String,Scheme> scheme) {
-            this.scheme = Output.ofNullable(scheme);
+            this.scheme = Codegen.ofNullable(scheme);
             return this;
         }        public ContainerHttpGetArgs build() {
             return new ContainerHttpGetArgs(httpHeaders, path, port, scheme);

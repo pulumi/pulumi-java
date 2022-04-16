@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketRedirectAllRequestsToProtocol;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -37,8 +38,8 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
     @Import(name="protocol")
       private final @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol;
 
-    public Output<BucketRedirectAllRequestsToProtocol> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<BucketRedirectAllRequestsToProtocol> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public BucketRedirectAllRequestsToArgs(
@@ -49,8 +50,8 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
     }
 
     private BucketRedirectAllRequestsToArgs() {
-        this.hostName = Output.empty();
-        this.protocol = Output.empty();
+        this.hostName = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder protocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public BucketRedirectAllRequestsToArgs build() {
             return new BucketRedirectAllRequestsToArgs(hostName, protocol);

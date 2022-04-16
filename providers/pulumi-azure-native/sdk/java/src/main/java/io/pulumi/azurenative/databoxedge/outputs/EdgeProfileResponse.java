@@ -26,7 +26,7 @@ public final class EdgeProfileResponse {
      * Edge Profile Subscription
      * 
     */
-    public Optional<EdgeProfileSubscriptionResponse> getSubscription() {
+    public Optional<EdgeProfileSubscriptionResponse> subscription() {
         return Optional.ofNullable(this.subscription);
     }
 

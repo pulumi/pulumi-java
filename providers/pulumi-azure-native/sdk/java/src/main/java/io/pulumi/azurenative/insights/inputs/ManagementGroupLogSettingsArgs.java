@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
     @Import(name="category", required=true)
       private final Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
 
@@ -36,7 +37,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -48,8 +49,8 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
     }
 
     private ManagementGroupLogSettingsArgs() {
-        this.category = Output.empty();
-        this.enabled = Output.empty();
+        this.category = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.SourceVaultArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
     @Import(name="keyUrl", required=true)
       private final Output<String> keyUrl;
 
-    public Output<String> getKeyUrl() {
+    public Output<String> keyUrl() {
         return this.keyUrl;
     }
 
@@ -36,7 +37,7 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
     @Import(name="sourceVault", required=true)
       private final Output<SourceVaultArgs> sourceVault;
 
-    public Output<SourceVaultArgs> getSourceVault() {
+    public Output<SourceVaultArgs> sourceVault() {
         return this.sourceVault;
     }
 
@@ -48,8 +49,8 @@ public final class KeyVaultAndKeyReferenceArgs extends io.pulumi.resources.Resou
     }
 
     private KeyVaultAndKeyReferenceArgs() {
-        this.keyUrl = Output.empty();
-        this.sourceVault = Output.empty();
+        this.keyUrl = Codegen.empty();
+        this.sourceVault = Codegen.empty();
     }
 
     public static Builder builder() {

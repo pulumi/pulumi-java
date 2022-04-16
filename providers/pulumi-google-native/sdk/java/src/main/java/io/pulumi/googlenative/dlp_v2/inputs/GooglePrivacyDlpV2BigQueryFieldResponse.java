@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
     @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
     @Import(name="table", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
 

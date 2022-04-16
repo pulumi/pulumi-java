@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.InstanceIAMBindingArgs;
 import io.pulumi.gcp.spanner.inputs.InstanceIAMBindingState;
@@ -64,7 +65,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=InstanceIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ InstanceIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ InstanceIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -78,7 +79,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the instance's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -92,13 +93,13 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * @return The name of the instance.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -114,7 +115,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -132,7 +133,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -158,7 +159,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceIAMBinding(String name, InstanceIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/instanceIAMBinding:InstanceIAMBinding", name, args == null ? InstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/instanceIAMBinding:InstanceIAMBinding", name, args == null ? InstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceIAMBinding(String name, Output<String> id, @Nullable InstanceIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

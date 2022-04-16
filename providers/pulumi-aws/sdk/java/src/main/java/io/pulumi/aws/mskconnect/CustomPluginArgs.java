@@ -6,6 +6,7 @@ package io.pulumi.aws.mskconnect;
 import io.pulumi.aws.mskconnect.inputs.CustomPluginLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -33,8 +34,8 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<CustomPluginLocationArgs> location;
 
-    public Output<CustomPluginLocationArgs> getLocation() {
+    public Output<CustomPluginLocationArgs> location() {
         return this.location;
     }
 
@@ -55,8 +56,8 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public CustomPluginArgs(
@@ -71,10 +72,10 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomPluginArgs() {
-        this.contentType = Output.empty();
-        this.description = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
+        this.contentType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder location(Output<CustomPluginLocationArgs> location) {
@@ -132,7 +133,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public CustomPluginArgs build() {
             return new CustomPluginArgs(contentType, description, location, name);

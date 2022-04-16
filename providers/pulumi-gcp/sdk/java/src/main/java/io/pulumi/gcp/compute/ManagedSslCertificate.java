@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ManagedSslCertificateArgs;
 import io.pulumi.gcp.compute.inputs.ManagedSslCertificateState;
@@ -75,7 +76,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getCertificateId() {
+    public Output<Integer> certificateId() {
         return this.certificateId;
     }
     /**
@@ -89,7 +90,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -103,7 +104,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -117,7 +118,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Expire time of the certificate.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -135,7 +136,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedSslCertificateManaged> getManaged() {
+    public Output</* @Nullable */ ManagedSslCertificateManaged> managed() {
         return this.managed;
     }
     /**
@@ -161,7 +162,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -177,7 +178,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -191,7 +192,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -205,7 +206,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Domains associated with the certificate via Subject Alternative Name.
      * 
      */
-    public Output<List<String>> getSubjectAlternativeNames() {
+    public Output<List<String>> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
@@ -225,7 +226,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * Possible values are `MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 
@@ -251,7 +252,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedSslCertificate(String name, @Nullable ManagedSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/managedSslCertificate:ManagedSslCertificate", name, args == null ? ManagedSslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/managedSslCertificate:ManagedSslCertificate", name, args == null ? ManagedSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedSslCertificate(String name, Output<String> id, @Nullable ManagedSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

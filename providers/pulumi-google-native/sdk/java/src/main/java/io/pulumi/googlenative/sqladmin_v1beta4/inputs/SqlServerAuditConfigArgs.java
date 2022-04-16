@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     public SqlServerAuditConfigArgs(
@@ -48,8 +49,8 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
     }
 
     private SqlServerAuditConfigArgs() {
-        this.bucket = Output.empty();
-        this.kind = Output.empty();
+        this.bucket = Codegen.empty();
+        this.kind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -87,7 +88,7 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }        public SqlServerAuditConfigArgs build() {
             return new SqlServerAuditConfigArgs(bucket, kind);

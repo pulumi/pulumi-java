@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.Hl7StoreIamMemberArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberState;
@@ -62,7 +63,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=Hl7StoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ Hl7StoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ Hl7StoreIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ Hl7StoreIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -76,7 +77,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the HL7v2 store's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -96,13 +97,13 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -120,7 +121,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -146,7 +147,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hl7StoreIamMember(String name, Hl7StoreIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember", name, args == null ? Hl7StoreIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember", name, args == null ? Hl7StoreIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Hl7StoreIamMember(String name, Output<String> id, @Nullable Hl7StoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

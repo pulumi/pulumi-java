@@ -22,10 +22,10 @@ public final class EnvironmentSettingResponse {
         this.value = value;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

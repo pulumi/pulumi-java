@@ -10,6 +10,7 @@ import io.pulumi.azurenative.guestconfiguration.inputs.ConfigurationSettingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,8 +32,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="assignmentType")
       private final @Nullable Output<Either<String,AssignmentType>> assignmentType;
 
-    public Output<Either<String,AssignmentType>> getAssignmentType() {
-        return this.assignmentType == null ? Output.empty() : this.assignmentType;
+    public Output<Either<String,AssignmentType>> assignmentType() {
+        return this.assignmentType == null ? Codegen.empty() : this.assignmentType;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="configurationParameter")
       private final @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
 
-    public Output<List<ConfigurationParameterArgs>> getConfigurationParameter() {
-        return this.configurationParameter == null ? Output.empty() : this.configurationParameter;
+    public Output<List<ConfigurationParameterArgs>> configurationParameter() {
+        return this.configurationParameter == null ? Codegen.empty() : this.configurationParameter;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="configurationProtectedParameter")
       private final @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
 
-    public Output<List<ConfigurationParameterArgs>> getConfigurationProtectedParameter() {
-        return this.configurationProtectedParameter == null ? Output.empty() : this.configurationProtectedParameter;
+    public Output<List<ConfigurationParameterArgs>> configurationProtectedParameter() {
+        return this.configurationProtectedParameter == null ? Codegen.empty() : this.configurationProtectedParameter;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="configurationSetting")
       private final @Nullable Output<ConfigurationSettingArgs> configurationSetting;
 
-    public Output<ConfigurationSettingArgs> getConfigurationSetting() {
-        return this.configurationSetting == null ? Output.empty() : this.configurationSetting;
+    public Output<ConfigurationSettingArgs> configurationSetting() {
+        return this.configurationSetting == null ? Codegen.empty() : this.configurationSetting;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
 
-    public Output<String> getContentHash() {
-        return this.contentHash == null ? Output.empty() : this.contentHash;
+    public Output<String> contentHash() {
+        return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="contentUri")
       private final @Nullable Output<String> contentUri;
 
-    public Output<String> getContentUri() {
-        return this.contentUri == null ? Output.empty() : this.contentUri;
+    public Output<String> contentUri() {
+        return this.contentUri == null ? Codegen.empty() : this.contentUri;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<Either<String,Kind>> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GuestConfigurationNavigationArgs(
@@ -145,15 +146,15 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     }
 
     private GuestConfigurationNavigationArgs() {
-        this.assignmentType = Output.empty();
-        this.configurationParameter = Output.empty();
-        this.configurationProtectedParameter = Output.empty();
-        this.configurationSetting = Output.empty();
-        this.contentHash = Output.empty();
-        this.contentUri = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.version = Output.empty();
+        this.assignmentType = Codegen.empty();
+        this.configurationParameter = Codegen.empty();
+        this.configurationProtectedParameter = Codegen.empty();
+        this.configurationSetting = Codegen.empty();
+        this.contentHash = Codegen.empty();
+        this.contentUri = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder assignmentType(@Nullable Either<String,AssignmentType> assignmentType) {
-            this.assignmentType = Output.ofNullable(assignmentType);
+            this.assignmentType = Codegen.ofNullable(assignmentType);
             return this;
         }
         public Builder configurationParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationParameter) {
@@ -205,7 +206,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder configurationParameter(@Nullable List<ConfigurationParameterArgs> configurationParameter) {
-            this.configurationParameter = Output.ofNullable(configurationParameter);
+            this.configurationParameter = Codegen.ofNullable(configurationParameter);
             return this;
         }
         public Builder configurationParameter(ConfigurationParameterArgs... configurationParameter) {
@@ -216,7 +217,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterArgs> configurationProtectedParameter) {
-            this.configurationProtectedParameter = Output.ofNullable(configurationProtectedParameter);
+            this.configurationProtectedParameter = Codegen.ofNullable(configurationProtectedParameter);
             return this;
         }
         public Builder configurationProtectedParameter(ConfigurationParameterArgs... configurationProtectedParameter) {
@@ -227,7 +228,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder configurationSetting(@Nullable ConfigurationSettingArgs configurationSetting) {
-            this.configurationSetting = Output.ofNullable(configurationSetting);
+            this.configurationSetting = Codegen.ofNullable(configurationSetting);
             return this;
         }
         public Builder contentHash(@Nullable Output<String> contentHash) {
@@ -235,7 +236,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder contentHash(@Nullable String contentHash) {
-            this.contentHash = Output.ofNullable(contentHash);
+            this.contentHash = Codegen.ofNullable(contentHash);
             return this;
         }
         public Builder contentUri(@Nullable Output<String> contentUri) {
@@ -243,7 +244,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder contentUri(@Nullable String contentUri) {
-            this.contentUri = Output.ofNullable(contentUri);
+            this.contentUri = Codegen.ofNullable(contentUri);
             return this;
         }
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
@@ -251,7 +252,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -259,7 +260,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -267,7 +268,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GuestConfigurationNavigationArgs build() {
             return new GuestConfigurationNavigationArgs(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentUri, kind, name, version);

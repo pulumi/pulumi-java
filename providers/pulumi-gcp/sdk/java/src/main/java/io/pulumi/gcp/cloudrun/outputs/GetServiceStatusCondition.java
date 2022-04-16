@@ -26,16 +26,16 @@ public final class GetServiceStatusCondition {
         this.type = type;
     }
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

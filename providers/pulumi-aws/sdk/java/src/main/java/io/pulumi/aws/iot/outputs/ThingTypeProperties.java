@@ -35,14 +35,14 @@ public final class ThingTypeProperties {
      * The description of the thing type.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of searchable thing attribute names.
      * 
     */
-    public List<String> getSearchableAttributes() {
+    public List<String> searchableAttributes() {
         return this.searchableAttributes == null ? List.of() : this.searchableAttributes;
     }
 

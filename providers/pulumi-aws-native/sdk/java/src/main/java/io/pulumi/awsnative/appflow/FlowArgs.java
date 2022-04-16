@@ -10,6 +10,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowTaskArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTriggerConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationFlowConfigList", required=true)
       private final Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
-    public Output<List<FlowDestinationFlowConfigArgs>> getDestinationFlowConfigList() {
+    public Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList() {
         return this.destinationFlowConfigList;
     }
 
@@ -49,8 +50,8 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flowName")
       private final @Nullable Output<String> flowName;
 
-    public Output<String> getFlowName() {
-        return this.flowName == null ? Output.empty() : this.flowName;
+    public Output<String> flowName() {
+        return this.flowName == null ? Codegen.empty() : this.flowName;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kMSArn")
       private final @Nullable Output<String> kMSArn;
 
-    public Output<String> getKMSArn() {
-        return this.kMSArn == null ? Output.empty() : this.kMSArn;
+    public Output<String> kMSArn() {
+        return this.kMSArn == null ? Codegen.empty() : this.kMSArn;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceFlowConfig", required=true)
       private final Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
-    public Output<FlowSourceFlowConfigArgs> getSourceFlowConfig() {
+    public Output<FlowSourceFlowConfigArgs> sourceFlowConfig() {
         return this.sourceFlowConfig;
     }
 
@@ -82,8 +83,8 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FlowTagArgs>> tags;
 
-    public Output<List<FlowTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<FlowTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tasks", required=true)
       private final Output<List<FlowTaskArgs>> tasks;
 
-    public Output<List<FlowTaskArgs>> getTasks() {
+    public Output<List<FlowTaskArgs>> tasks() {
         return this.tasks;
     }
 
@@ -104,7 +105,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerConfig", required=true)
       private final Output<FlowTriggerConfigArgs> triggerConfig;
 
-    public Output<FlowTriggerConfigArgs> getTriggerConfig() {
+    public Output<FlowTriggerConfigArgs> triggerConfig() {
         return this.triggerConfig;
     }
 
@@ -128,14 +129,14 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowArgs() {
-        this.description = Output.empty();
-        this.destinationFlowConfigList = Output.empty();
-        this.flowName = Output.empty();
-        this.kMSArn = Output.empty();
-        this.sourceFlowConfig = Output.empty();
-        this.tags = Output.empty();
-        this.tasks = Output.empty();
-        this.triggerConfig = Output.empty();
+        this.description = Codegen.empty();
+        this.destinationFlowConfigList = Codegen.empty();
+        this.flowName = Codegen.empty();
+        this.kMSArn = Codegen.empty();
+        this.sourceFlowConfig = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tasks = Codegen.empty();
+        this.triggerConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationFlowConfigList(Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
@@ -196,7 +197,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flowName(@Nullable String flowName) {
-            this.flowName = Output.ofNullable(flowName);
+            this.flowName = Codegen.ofNullable(flowName);
             return this;
         }
         public Builder kMSArn(@Nullable Output<String> kMSArn) {
@@ -204,7 +205,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kMSArn(@Nullable String kMSArn) {
-            this.kMSArn = Output.ofNullable(kMSArn);
+            this.kMSArn = Codegen.ofNullable(kMSArn);
             return this;
         }
         public Builder sourceFlowConfig(Output<FlowSourceFlowConfigArgs> sourceFlowConfig) {
@@ -220,7 +221,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<FlowTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FlowTagArgs... tags) {

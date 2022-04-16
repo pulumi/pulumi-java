@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleActionS
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
     @Import(name="actionSet")
       private final @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
 
-    public Output<ApplicationGatewayRewriteRuleActionSetArgs> getActionSet() {
-        return this.actionSet == null ? Output.empty() : this.actionSet;
+    public Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet() {
+        return this.actionSet == null ? Codegen.empty() : this.actionSet;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
     @Import(name="conditions")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
 
-    public Output<List<ApplicationGatewayRewriteRuleConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
     @Import(name="ruleSequence")
       private final @Nullable Output<Integer> ruleSequence;
 
-    public Output<Integer> getRuleSequence() {
-        return this.ruleSequence == null ? Output.empty() : this.ruleSequence;
+    public Output<Integer> ruleSequence() {
+        return this.ruleSequence == null ? Codegen.empty() : this.ruleSequence;
     }
 
     public ApplicationGatewayRewriteRuleArgs(
@@ -78,10 +79,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
     }
 
     private ApplicationGatewayRewriteRuleArgs() {
-        this.actionSet = Output.empty();
-        this.conditions = Output.empty();
-        this.name = Output.empty();
-        this.ruleSequence = Output.empty();
+        this.actionSet = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ruleSequence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
             return this;
         }
         public Builder actionSet(@Nullable ApplicationGatewayRewriteRuleActionSetArgs actionSet) {
-            this.actionSet = Output.ofNullable(actionSet);
+            this.actionSet = Codegen.ofNullable(actionSet);
             return this;
         }
         public Builder conditions(@Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions) {
@@ -123,7 +124,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
             return this;
         }
         public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(ApplicationGatewayRewriteRuleConditionArgs... conditions) {
@@ -134,7 +135,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ruleSequence(@Nullable Output<Integer> ruleSequence) {
@@ -142,7 +143,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
             return this;
         }
         public Builder ruleSequence(@Nullable Integer ruleSequence) {
-            this.ruleSequence = Output.ofNullable(ruleSequence);
+            this.ruleSequence = Codegen.ofNullable(ruleSequence);
             return this;
         }        public ApplicationGatewayRewriteRuleArgs build() {
             return new ApplicationGatewayRewriteRuleArgs(actionSet, conditions, name, ruleSequence);

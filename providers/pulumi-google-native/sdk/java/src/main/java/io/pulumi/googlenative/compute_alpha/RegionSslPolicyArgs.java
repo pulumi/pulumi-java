@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.RegionSslPolicyMinTlsVersion;
 import io.pulumi.googlenative.compute_alpha.enums.RegionSslPolicyProfile;
 import io.pulumi.googlenative.compute_alpha.inputs.ServerTlsSettingsArgs;
@@ -25,8 +26,8 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customFeatures")
       private final @Nullable Output<List<String>> customFeatures;
 
-    public Output<List<String>> getCustomFeatures() {
-        return this.customFeatures == null ? Output.empty() : this.customFeatures;
+    public Output<List<String>> customFeatures() {
+        return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="minTlsVersion")
       private final @Nullable Output<RegionSslPolicyMinTlsVersion> minTlsVersion;
 
-    public Output<RegionSslPolicyMinTlsVersion> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
+    public Output<RegionSslPolicyMinTlsVersion> minTlsVersion() {
+        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,29 +70,29 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="profile")
       private final @Nullable Output<RegionSslPolicyProfile> profile;
 
-    public Output<RegionSslPolicyProfile> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+    public Output<RegionSslPolicyProfile> profile() {
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tlsSettings")
       private final @Nullable Output<ServerTlsSettingsArgs> tlsSettings;
 
-    public Output<ServerTlsSettingsArgs> getTlsSettings() {
-        return this.tlsSettings == null ? Output.empty() : this.tlsSettings;
+    public Output<ServerTlsSettingsArgs> tlsSettings() {
+        return this.tlsSettings == null ? Codegen.empty() : this.tlsSettings;
     }
 
     public RegionSslPolicyArgs(
@@ -127,15 +128,15 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RegionSslPolicyArgs() {
-        this.customFeatures = Output.empty();
-        this.description = Output.empty();
-        this.minTlsVersion = Output.empty();
-        this.name = Output.empty();
-        this.profile = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.tlsSettings = Output.empty();
+        this.customFeatures = Codegen.empty();
+        this.description = Codegen.empty();
+        this.minTlsVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.profile = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.tlsSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Output.ofNullable(customFeatures);
+            this.customFeatures = Codegen.ofNullable(customFeatures);
             return this;
         }
         public Builder customFeatures(String... customFeatures) {
@@ -190,7 +191,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder minTlsVersion(@Nullable Output<RegionSslPolicyMinTlsVersion> minTlsVersion) {
@@ -198,7 +199,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder minTlsVersion(@Nullable RegionSslPolicyMinTlsVersion minTlsVersion) {
-            this.minTlsVersion = Output.ofNullable(minTlsVersion);
+            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -206,7 +207,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder profile(@Nullable Output<RegionSslPolicyProfile> profile) {
@@ -214,7 +215,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder profile(@Nullable RegionSslPolicyProfile profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -222,7 +223,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -238,7 +239,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder tlsSettings(@Nullable Output<ServerTlsSettingsArgs> tlsSettings) {
@@ -246,7 +247,7 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tlsSettings(@Nullable ServerTlsSettingsArgs tlsSettings) {
-            this.tlsSettings = Output.ofNullable(tlsSettings);
+            this.tlsSettings = Codegen.ofNullable(tlsSettings);
             return this;
         }        public RegionSslPolicyArgs build() {
             return new RegionSslPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project, region, requestId, tlsSettings);

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Non versioned Container App configuration properties.
      * 
      */
-    public Output</* @Nullable */ ConfigurationResponse> getConfiguration() {
+    public Output</* @Nullable */ ConfigurationResponse> configuration() {
         return this.configuration;
     }
     /**
@@ -58,7 +59,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +73,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the Container App's KubeEnvironment.
      * 
      */
-    public Output</* @Nullable */ String> getKubeEnvironmentId() {
+    public Output</* @Nullable */ String> kubeEnvironmentId() {
         return this.kubeEnvironmentId;
     }
     /**
@@ -86,7 +87,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Fully Qualified Domain Name of the latest revision of the Container App.
      * 
      */
-    public Output<String> getLatestRevisionFqdn() {
+    public Output<String> latestRevisionFqdn() {
         return this.latestRevisionFqdn;
     }
     /**
@@ -100,7 +101,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Name of the latest revision of the Container App.
      * 
      */
-    public Output<String> getLatestRevisionName() {
+    public Output<String> latestRevisionName() {
         return this.latestRevisionName;
     }
     /**
@@ -114,7 +115,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -128,7 +129,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the Container App.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -156,7 +157,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -170,7 +171,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Container App versioned application definition.
      * 
      */
-    public Output</* @Nullable */ TemplateResponse> getTemplate() {
+    public Output</* @Nullable */ TemplateResponse> template() {
         return this.template;
     }
     /**
@@ -184,7 +185,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -210,7 +211,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ContainerApp(String name, ContainerAppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:ContainerApp", name, args == null ? ContainerAppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:ContainerApp", name, args == null ? ContainerAppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ContainerApp(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

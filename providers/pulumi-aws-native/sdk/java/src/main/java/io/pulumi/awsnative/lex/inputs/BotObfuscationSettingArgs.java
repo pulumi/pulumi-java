@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.enums.BotObfuscationSettingObfuscationSettingType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
     @Import(name="obfuscationSettingType", required=true)
       private final Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
 
-    public Output<BotObfuscationSettingObfuscationSettingType> getObfuscationSettingType() {
+    public Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType() {
         return this.obfuscationSettingType;
     }
 
@@ -33,7 +34,7 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
     }
 
     private BotObfuscationSettingArgs() {
-        this.obfuscationSettingType = Output.empty();
+        this.obfuscationSettingType = Codegen.empty();
     }
 
     public static Builder builder() {

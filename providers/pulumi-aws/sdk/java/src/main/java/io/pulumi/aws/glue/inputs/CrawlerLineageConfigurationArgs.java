@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CrawlerLineageConfigurationArgs extends io.pulumi.resources.R
     @Import(name="crawlerLineageSettings")
       private final @Nullable Output<String> crawlerLineageSettings;
 
-    public Output<String> getCrawlerLineageSettings() {
-        return this.crawlerLineageSettings == null ? Output.empty() : this.crawlerLineageSettings;
+    public Output<String> crawlerLineageSettings() {
+        return this.crawlerLineageSettings == null ? Codegen.empty() : this.crawlerLineageSettings;
     }
 
     public CrawlerLineageConfigurationArgs(@Nullable Output<String> crawlerLineageSettings) {
@@ -30,7 +31,7 @@ public final class CrawlerLineageConfigurationArgs extends io.pulumi.resources.R
     }
 
     private CrawlerLineageConfigurationArgs() {
-        this.crawlerLineageSettings = Output.empty();
+        this.crawlerLineageSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CrawlerLineageConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder crawlerLineageSettings(@Nullable String crawlerLineageSettings) {
-            this.crawlerLineageSettings = Output.ofNullable(crawlerLineageSettings);
+            this.crawlerLineageSettings = Codegen.ofNullable(crawlerLineageSettings);
             return this;
         }        public CrawlerLineageConfigurationArgs build() {
             return new CrawlerLineageConfigurationArgs(crawlerLineageSettings);

@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationSnapshotState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
      * 
      */
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
     /**
@@ -55,7 +56,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The current application version ID when the snapshot was created.
      * 
      */
-    public Output<Integer> getApplicationVersionId() {
+    public Output<Integer> applicationVersionId() {
         return this.applicationVersionId;
     }
     /**
@@ -69,7 +70,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The timestamp of the application snapshot.
      * 
      */
-    public Output<String> getSnapshotCreationTimestamp() {
+    public Output<String> snapshotCreationTimestamp() {
         return this.snapshotCreationTimestamp;
     }
     /**
@@ -83,7 +84,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The name of the application snapshot.
      * 
      */
-    public Output<String> getSnapshotName() {
+    public Output<String> snapshotName() {
         return this.snapshotName;
     }
 
@@ -109,7 +110,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationSnapshot(String name, ApplicationSnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesisanalyticsv2/applicationSnapshot:ApplicationSnapshot", name, args == null ? ApplicationSnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesisanalyticsv2/applicationSnapshot:ApplicationSnapshot", name, args == null ? ApplicationSnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplicationSnapshot(String name, Output<String> id, @Nullable ApplicationSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

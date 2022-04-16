@@ -12,6 +12,7 @@ import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +50,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
      * 
      */
-    public Output<String> getCertificateSigningRequest() {
+    public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
@@ -63,7 +64,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
      * 
      */
-    public Output</* @Nullable */ CertificateAuthorityCsrExtensions> getCsrExtensions() {
+    public Output</* @Nullable */ CertificateAuthorityCsrExtensions> csrExtensions() {
         return this.csrExtensions;
     }
     /**
@@ -77,7 +78,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
      * 
      */
-    public Output<String> getKeyAlgorithm() {
+    public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
     /**
@@ -91,7 +92,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
      * 
      */
-    public Output</* @Nullable */ String> getKeyStorageSecurityStandard() {
+    public Output</* @Nullable */ String> keyStorageSecurityStandard() {
         return this.keyStorageSecurityStandard;
     }
     /**
@@ -105,7 +106,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
      */
-    public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> getRevocationConfiguration() {
+    public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration() {
         return this.revocationConfiguration;
     }
     /**
@@ -119,7 +120,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Algorithm your CA uses to sign certificate requests.
      * 
      */
-    public Output<String> getSigningAlgorithm() {
+    public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
     /**
@@ -133,13 +134,13 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Structure that contains X.500 distinguished name information for your CA.
      * 
      */
-    public Output<CertificateAuthoritySubject> getSubject() {
+    public Output<CertificateAuthoritySubject> subject() {
         return this.subject;
     }
     @Export(name="tags", type=List.class, parameters={CertificateAuthorityTag.class})
     private Output</* @Nullable */ List<CertificateAuthorityTag>> tags;
 
-    public Output</* @Nullable */ List<CertificateAuthorityTag>> getTags() {
+    public Output</* @Nullable */ List<CertificateAuthorityTag>> tags() {
         return this.tags;
     }
     /**
@@ -153,7 +154,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The type of the certificate authority.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -179,7 +180,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateAuthority(String name, CertificateAuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:acmpca:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:acmpca:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateAuthority(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

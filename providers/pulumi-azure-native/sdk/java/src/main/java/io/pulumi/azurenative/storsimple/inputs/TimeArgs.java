@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hours", required=true)
       private final Output<Integer> hours;
 
-    public Output<Integer> getHours() {
+    public Output<Integer> hours() {
         return this.hours;
     }
 
@@ -35,7 +36,7 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes;
     }
 
@@ -46,7 +47,7 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="seconds", required=true)
       private final Output<Integer> seconds;
 
-    public Output<Integer> getSeconds() {
+    public Output<Integer> seconds() {
         return this.seconds;
     }
 
@@ -60,9 +61,9 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimeArgs() {
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
-        this.seconds = Output.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
+        this.seconds = Codegen.empty();
     }
 
     public static Builder builder() {

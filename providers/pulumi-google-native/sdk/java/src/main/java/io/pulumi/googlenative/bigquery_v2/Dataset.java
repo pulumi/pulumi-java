@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigquery_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigquery_v2.DatasetArgs;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetAccessItemResponse;
@@ -36,7 +37,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
      * 
      */
-    public Output<List<DatasetAccessItemResponse>> getAccess() {
+    public Output<List<DatasetAccessItemResponse>> access() {
         return this.access;
     }
     /**
@@ -50,7 +51,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The time when this dataset was created, in milliseconds since the epoch.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -64,7 +65,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Required] A reference that identifies the dataset.
      * 
      */
-    public Output<DatasetReferenceResponse> getDatasetReference() {
+    public Output<DatasetReferenceResponse> datasetReference() {
         return this.datasetReference;
     }
     /**
@@ -78,13 +79,13 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The default collation of the dataset.
      * 
      */
-    public Output<String> getDefaultCollation() {
+    public Output<String> defaultCollation() {
         return this.defaultCollation;
     }
     @Export(name="defaultEncryptionConfiguration", type=EncryptionConfigurationResponse.class, parameters={})
     private Output<EncryptionConfigurationResponse> defaultEncryptionConfiguration;
 
-    public Output<EncryptionConfigurationResponse> getDefaultEncryptionConfiguration() {
+    public Output<EncryptionConfigurationResponse> defaultEncryptionConfiguration() {
         return this.defaultEncryptionConfiguration;
     }
     /**
@@ -98,7 +99,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
      * 
      */
-    public Output<String> getDefaultPartitionExpirationMs() {
+    public Output<String> defaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs;
     }
     /**
@@ -112,7 +113,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table's expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
      * 
      */
-    public Output<String> getDefaultTableExpirationMs() {
+    public Output<String> defaultTableExpirationMs() {
         return this.defaultTableExpirationMs;
     }
     /**
@@ -126,7 +127,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Optional] A user-friendly description of the dataset.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -140,7 +141,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return A hash of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -154,7 +155,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Optional] A descriptive name for the dataset.
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -168,7 +169,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Optional] Indicates if table names are case insensitive in the dataset.
      * 
      */
-    public Output<Boolean> getIsCaseInsensitive() {
+    public Output<Boolean> isCaseInsensitive() {
         return this.isCaseInsensitive;
     }
     /**
@@ -182,7 +183,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -196,7 +197,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -210,7 +211,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -224,7 +225,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -238,7 +239,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return Reserved for future use.
      * 
      */
-    public Output<Boolean> getSatisfiesPZS() {
+    public Output<Boolean> satisfiesPZS() {
         return this.satisfiesPZS;
     }
     /**
@@ -252,7 +253,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -266,7 +267,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return [Optional]The tags associated with this dataset. Tag keys are globally unique.
      * 
      */
-    public Output<List<DatasetTagsItemResponse>> getTags() {
+    public Output<List<DatasetTagsItemResponse>> tags() {
         return this.tags;
     }
 
@@ -292,7 +293,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dataset(String name, @Nullable DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigquery/v2:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigquery/v2:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dataset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

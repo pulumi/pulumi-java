@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FleetOnDemandOptionsArgs extends io.pulumi.resources.Resource
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
+    public Output<String> allocationStrategy() {
+        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     public FleetOnDemandOptionsArgs(@Nullable Output<String> allocationStrategy) {
@@ -30,7 +31,7 @@ public final class FleetOnDemandOptionsArgs extends io.pulumi.resources.Resource
     }
 
     private FleetOnDemandOptionsArgs() {
-        this.allocationStrategy = Output.empty();
+        this.allocationStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class FleetOnDemandOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Output.ofNullable(allocationStrategy);
+            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
             return this;
         }        public FleetOnDemandOptionsArgs build() {
             return new FleetOnDemandOptionsArgs(allocationStrategy);

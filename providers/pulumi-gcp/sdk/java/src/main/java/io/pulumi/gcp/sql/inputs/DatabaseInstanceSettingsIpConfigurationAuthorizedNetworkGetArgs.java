@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+    public Output<String> expirationTime() {
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -60,9 +61,9 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
     }
 
     private DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs() {
-        this.expirationTime = Output.empty();
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.expirationTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -102,7 +103,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder value(Output<String> value) {

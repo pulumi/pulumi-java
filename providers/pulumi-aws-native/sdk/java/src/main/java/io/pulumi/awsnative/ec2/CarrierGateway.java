@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.CarrierGatewayTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The ID of the carrier gateway.
      * 
      */
-    public Output<String> getCarrierGatewayId() {
+    public Output<String> carrierGatewayId() {
         return this.carrierGatewayId;
     }
     /**
@@ -44,7 +45,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The ID of the owner.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -58,7 +59,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The state of the carrier gateway.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -72,7 +73,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The tags for the carrier gateway.
      * 
      */
-    public Output</* @Nullable */ List<CarrierGatewayTag>> getTags() {
+    public Output</* @Nullable */ List<CarrierGatewayTag>> tags() {
         return this.tags;
     }
     /**
@@ -86,7 +87,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -112,7 +113,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CarrierGateway(String name, CarrierGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:CarrierGateway", name, args == null ? CarrierGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:CarrierGateway", name, args == null ? CarrierGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CarrierGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

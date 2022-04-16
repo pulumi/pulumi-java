@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationAddress", required=true)
       private final Output<String> destinationAddress;
 
-    public Output<String> getDestinationAddress() {
+    public Output<String> destinationAddress() {
         return this.destinationAddress;
     }
 
@@ -34,8 +35,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Output.empty() : this.destinationPort;
+    public Output<Integer> destinationPort() {
+        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -56,42 +57,42 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="privateConnectionId", required=true)
       private final Output<String> privateConnectionId;
 
-    public Output<String> getPrivateConnectionId() {
+    public Output<String> privateConnectionId() {
         return this.privateConnectionId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="routeId", required=true)
       private final Output<String> routeId;
 
-    public Output<String> getRouteId() {
+    public Output<String> routeId() {
         return this.routeId;
     }
 
@@ -117,15 +118,15 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.destinationAddress = Output.empty();
-        this.destinationPort = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.privateConnectionId = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.routeId = Output.empty();
+        this.destinationAddress = Codegen.empty();
+        this.destinationPort = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.privateConnectionId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.routeId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Output.ofNullable(destinationPort);
+            this.destinationPort = Codegen.ofNullable(destinationPort);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -193,7 +194,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -201,7 +202,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder privateConnectionId(Output<String> privateConnectionId) {
@@ -217,7 +218,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -225,7 +226,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder routeId(Output<String> routeId) {

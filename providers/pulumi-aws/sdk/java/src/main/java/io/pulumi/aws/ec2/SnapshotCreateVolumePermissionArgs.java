@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class SnapshotCreateVolumePermissionArgs extends io.pulumi.resource
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -31,7 +32,7 @@ public final class SnapshotCreateVolumePermissionArgs extends io.pulumi.resource
     @Import(name="snapshotId", required=true)
       private final Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
 
@@ -43,8 +44,8 @@ public final class SnapshotCreateVolumePermissionArgs extends io.pulumi.resource
     }
 
     private SnapshotCreateVolumePermissionArgs() {
-        this.accountId = Output.empty();
-        this.snapshotId = Output.empty();
+        this.accountId = Codegen.empty();
+        this.snapshotId = Codegen.empty();
     }
 
     public static Builder builder() {

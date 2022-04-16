@@ -5,6 +5,7 @@ package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+    public Output<String> domain() {
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pullSecret")
       private final @Nullable Output<String> pullSecret;
 
-    public Output<String> getPullSecret() {
-        return this.pullSecret == null ? Output.empty() : this.pullSecret;
+    public Output<String> pullSecret() {
+        return this.pullSecret == null ? Codegen.empty() : this.pullSecret;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupId")
       private final @Nullable Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
-        return this.resourceGroupId == null ? Output.empty() : this.resourceGroupId;
+    public Output<String> resourceGroupId() {
+        return this.resourceGroupId == null ? Codegen.empty() : this.resourceGroupId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ClusterProfileArgs(
@@ -74,10 +75,10 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterProfileArgs() {
-        this.domain = Output.empty();
-        this.pullSecret = Output.empty();
-        this.resourceGroupId = Output.empty();
-        this.version = Output.empty();
+        this.domain = Codegen.empty();
+        this.pullSecret = Codegen.empty();
+        this.resourceGroupId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder pullSecret(@Nullable Output<String> pullSecret) {
@@ -119,7 +120,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pullSecret(@Nullable String pullSecret) {
-            this.pullSecret = Output.ofNullable(pullSecret);
+            this.pullSecret = Codegen.ofNullable(pullSecret);
             return this;
         }
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
@@ -127,7 +128,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
-            this.resourceGroupId = Output.ofNullable(resourceGroupId);
+            this.resourceGroupId = Codegen.ofNullable(resourceGroupId);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -135,7 +136,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ClusterProfileArgs build() {
             return new ClusterProfileArgs(domain, pullSecret, resourceGroupId, version);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.WorkflowTriggerRecurrenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
-        return this.batchSize == null ? Output.empty() : this.batchSize;
+    public Output<Integer> batchSize() {
+        return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     @Import(name="messageCount")
       private final @Nullable Output<Integer> messageCount;
 
-    public Output<Integer> getMessageCount() {
-        return this.messageCount == null ? Output.empty() : this.messageCount;
+    public Output<Integer> messageCount() {
+        return this.messageCount == null ? Codegen.empty() : this.messageCount;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     @Import(name="recurrence")
       private final @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence;
 
-    public Output<WorkflowTriggerRecurrenceArgs> getRecurrence() {
-        return this.recurrence == null ? Output.empty() : this.recurrence;
+    public Output<WorkflowTriggerRecurrenceArgs> recurrence() {
+        return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
     public BatchReleaseCriteriaArgs(
@@ -62,9 +63,9 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     }
 
     private BatchReleaseCriteriaArgs() {
-        this.batchSize = Output.empty();
-        this.messageCount = Output.empty();
-        this.recurrence = Output.empty();
+        this.batchSize = Codegen.empty();
+        this.messageCount = Codegen.empty();
+        this.recurrence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Output.ofNullable(batchSize);
+            this.batchSize = Codegen.ofNullable(batchSize);
             return this;
         }
         public Builder messageCount(@Nullable Output<Integer> messageCount) {
@@ -104,7 +105,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder messageCount(@Nullable Integer messageCount) {
-            this.messageCount = Output.ofNullable(messageCount);
+            this.messageCount = Codegen.ofNullable(messageCount);
             return this;
         }
         public Builder recurrence(@Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence) {
@@ -112,7 +113,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder recurrence(@Nullable WorkflowTriggerRecurrenceArgs recurrence) {
-            this.recurrence = Output.ofNullable(recurrence);
+            this.recurrence = Codegen.ofNullable(recurrence);
             return this;
         }        public BatchReleaseCriteriaArgs build() {
             return new BatchReleaseCriteriaArgs(batchSize, messageCount, recurrence);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The description of the details or intents of the Experiment
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The state of the Experiment
      * 
      */
-    public Output</* @Nullable */ String> getEnabledState() {
+    public Output</* @Nullable */ String> enabledState() {
         return this.enabledState;
     }
     /**
@@ -71,7 +72,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The endpoint A of an experiment
      * 
      */
-    public Output</* @Nullable */ ExperimentEndpointResponse> getEndpointA() {
+    public Output</* @Nullable */ ExperimentEndpointResponse> endpointA() {
         return this.endpointA;
     }
     /**
@@ -85,7 +86,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The endpoint B of an experiment
      * 
      */
-    public Output</* @Nullable */ ExperimentEndpointResponse> getEndpointB() {
+    public Output</* @Nullable */ ExperimentEndpointResponse> endpointB() {
         return this.endpointB;
     }
     /**
@@ -99,7 +100,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -113,7 +114,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Resource status.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -141,7 +142,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The uri to the Script used in the Experiment
      * 
      */
-    public Output<String> getScriptFileUri() {
+    public Output<String> scriptFileUri() {
         return this.scriptFileUri;
     }
     /**
@@ -155,7 +156,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The description of Experiment status from the server side
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -169,7 +170,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -183,7 +184,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -209,7 +210,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Experiment(String name, ExperimentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Experiment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

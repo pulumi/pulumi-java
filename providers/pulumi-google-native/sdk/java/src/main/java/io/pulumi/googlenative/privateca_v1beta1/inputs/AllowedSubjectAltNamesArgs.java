@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     @Import(name="allowCustomSans")
       private final @Nullable Output<Boolean> allowCustomSans;
 
-    public Output<Boolean> getAllowCustomSans() {
-        return this.allowCustomSans == null ? Output.empty() : this.allowCustomSans;
+    public Output<Boolean> allowCustomSans() {
+        return this.allowCustomSans == null ? Codegen.empty() : this.allowCustomSans;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     @Import(name="allowGlobbingDnsWildcards")
       private final @Nullable Output<Boolean> allowGlobbingDnsWildcards;
 
-    public Output<Boolean> getAllowGlobbingDnsWildcards() {
-        return this.allowGlobbingDnsWildcards == null ? Output.empty() : this.allowGlobbingDnsWildcards;
+    public Output<Boolean> allowGlobbingDnsWildcards() {
+        return this.allowGlobbingDnsWildcards == null ? Codegen.empty() : this.allowGlobbingDnsWildcards;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     @Import(name="allowedDnsNames")
       private final @Nullable Output<List<String>> allowedDnsNames;
 
-    public Output<List<String>> getAllowedDnsNames() {
-        return this.allowedDnsNames == null ? Output.empty() : this.allowedDnsNames;
+    public Output<List<String>> allowedDnsNames() {
+        return this.allowedDnsNames == null ? Codegen.empty() : this.allowedDnsNames;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     @Import(name="allowedEmailAddresses")
       private final @Nullable Output<List<String>> allowedEmailAddresses;
 
-    public Output<List<String>> getAllowedEmailAddresses() {
-        return this.allowedEmailAddresses == null ? Output.empty() : this.allowedEmailAddresses;
+    public Output<List<String>> allowedEmailAddresses() {
+        return this.allowedEmailAddresses == null ? Codegen.empty() : this.allowedEmailAddresses;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     @Import(name="allowedIps")
       private final @Nullable Output<List<String>> allowedIps;
 
-    public Output<List<String>> getAllowedIps() {
-        return this.allowedIps == null ? Output.empty() : this.allowedIps;
+    public Output<List<String>> allowedIps() {
+        return this.allowedIps == null ? Codegen.empty() : this.allowedIps;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     @Import(name="allowedUris")
       private final @Nullable Output<List<String>> allowedUris;
 
-    public Output<List<String>> getAllowedUris() {
-        return this.allowedUris == null ? Output.empty() : this.allowedUris;
+    public Output<List<String>> allowedUris() {
+        return this.allowedUris == null ? Codegen.empty() : this.allowedUris;
     }
 
     public AllowedSubjectAltNamesArgs(
@@ -102,12 +103,12 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     }
 
     private AllowedSubjectAltNamesArgs() {
-        this.allowCustomSans = Output.empty();
-        this.allowGlobbingDnsWildcards = Output.empty();
-        this.allowedDnsNames = Output.empty();
-        this.allowedEmailAddresses = Output.empty();
-        this.allowedIps = Output.empty();
-        this.allowedUris = Output.empty();
+        this.allowCustomSans = Codegen.empty();
+        this.allowGlobbingDnsWildcards = Codegen.empty();
+        this.allowedDnsNames = Codegen.empty();
+        this.allowedEmailAddresses = Codegen.empty();
+        this.allowedIps = Codegen.empty();
+        this.allowedUris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowCustomSans(@Nullable Boolean allowCustomSans) {
-            this.allowCustomSans = Output.ofNullable(allowCustomSans);
+            this.allowCustomSans = Codegen.ofNullable(allowCustomSans);
             return this;
         }
         public Builder allowGlobbingDnsWildcards(@Nullable Output<Boolean> allowGlobbingDnsWildcards) {
@@ -153,7 +154,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowGlobbingDnsWildcards(@Nullable Boolean allowGlobbingDnsWildcards) {
-            this.allowGlobbingDnsWildcards = Output.ofNullable(allowGlobbingDnsWildcards);
+            this.allowGlobbingDnsWildcards = Codegen.ofNullable(allowGlobbingDnsWildcards);
             return this;
         }
         public Builder allowedDnsNames(@Nullable Output<List<String>> allowedDnsNames) {
@@ -161,7 +162,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowedDnsNames(@Nullable List<String> allowedDnsNames) {
-            this.allowedDnsNames = Output.ofNullable(allowedDnsNames);
+            this.allowedDnsNames = Codegen.ofNullable(allowedDnsNames);
             return this;
         }
         public Builder allowedDnsNames(String... allowedDnsNames) {
@@ -172,7 +173,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowedEmailAddresses(@Nullable List<String> allowedEmailAddresses) {
-            this.allowedEmailAddresses = Output.ofNullable(allowedEmailAddresses);
+            this.allowedEmailAddresses = Codegen.ofNullable(allowedEmailAddresses);
             return this;
         }
         public Builder allowedEmailAddresses(String... allowedEmailAddresses) {
@@ -183,7 +184,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowedIps(@Nullable List<String> allowedIps) {
-            this.allowedIps = Output.ofNullable(allowedIps);
+            this.allowedIps = Codegen.ofNullable(allowedIps);
             return this;
         }
         public Builder allowedIps(String... allowedIps) {
@@ -194,7 +195,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowedUris(@Nullable List<String> allowedUris) {
-            this.allowedUris = Output.ofNullable(allowedUris);
+            this.allowedUris = Codegen.ofNullable(allowedUris);
             return this;
         }
         public Builder allowedUris(String... allowedUris) {

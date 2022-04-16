@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -37,7 +38,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,8 +49,8 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="targetAverageUtilization")
       private final @Nullable Output<Integer> targetAverageUtilization;
 
-    public Output<Integer> getTargetAverageUtilization() {
-        return this.targetAverageUtilization == null ? Output.empty() : this.targetAverageUtilization;
+    public Output<Integer> targetAverageUtilization() {
+        return this.targetAverageUtilization == null ? Codegen.empty() : this.targetAverageUtilization;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="targetAverageValue")
       private final @Nullable Output<String> targetAverageValue;
 
-    public Output<String> getTargetAverageValue() {
-        return this.targetAverageValue == null ? Output.empty() : this.targetAverageValue;
+    public Output<String> targetAverageValue() {
+        return this.targetAverageValue == null ? Codegen.empty() : this.targetAverageValue;
     }
 
     public ContainerResourceMetricSourceArgs(
@@ -75,10 +76,10 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     }
 
     private ContainerResourceMetricSourceArgs() {
-        this.container = Output.empty();
-        this.name = Output.empty();
-        this.targetAverageUtilization = Output.empty();
-        this.targetAverageValue = Output.empty();
+        this.container = Codegen.empty();
+        this.name = Codegen.empty();
+        this.targetAverageUtilization = Codegen.empty();
+        this.targetAverageValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder targetAverageUtilization(@Nullable Integer targetAverageUtilization) {
-            this.targetAverageUtilization = Output.ofNullable(targetAverageUtilization);
+            this.targetAverageUtilization = Codegen.ofNullable(targetAverageUtilization);
             return this;
         }
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
@@ -136,7 +137,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
-            this.targetAverageValue = Output.ofNullable(targetAverageValue);
+            this.targetAverageValue = Codegen.ofNullable(targetAverageValue);
             return this;
         }        public ContainerResourceMetricSourceArgs build() {
             return new ContainerResourceMetricSourceArgs(container, name, targetAverageUtilization, targetAverageValue);

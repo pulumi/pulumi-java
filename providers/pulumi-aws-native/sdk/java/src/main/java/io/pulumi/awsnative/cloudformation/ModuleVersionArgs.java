@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moduleName", required=true)
       private final Output<String> moduleName;
 
-    public Output<String> getModuleName() {
+    public Output<String> moduleName() {
         return this.moduleName;
     }
 
@@ -33,7 +34,7 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modulePackage", required=true)
       private final Output<String> modulePackage;
 
-    public Output<String> getModulePackage() {
+    public Output<String> modulePackage() {
         return this.modulePackage;
     }
 
@@ -45,8 +46,8 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModuleVersionArgs() {
-        this.moduleName = Output.empty();
-        this.modulePackage = Output.empty();
+        this.moduleName = Codegen.empty();
+        this.modulePackage = Codegen.empty();
     }
 
     public static Builder builder() {

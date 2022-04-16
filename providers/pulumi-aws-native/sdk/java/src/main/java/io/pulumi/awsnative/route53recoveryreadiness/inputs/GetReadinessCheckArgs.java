@@ -19,7 +19,7 @@ public final class GetReadinessCheckArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="readinessCheckName", required=true)
       private final String readinessCheckName;
 
-    public String getReadinessCheckName() {
+    public String readinessCheckName() {
         return this.readinessCheckName;
     }
 

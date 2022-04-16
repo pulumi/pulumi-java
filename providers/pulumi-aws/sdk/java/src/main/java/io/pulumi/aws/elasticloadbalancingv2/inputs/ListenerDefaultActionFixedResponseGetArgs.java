@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -32,8 +33,8 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
     @Import(name="messageBody")
       private final @Nullable Output<String> messageBody;
 
-    public Output<String> getMessageBody() {
-        return this.messageBody == null ? Output.empty() : this.messageBody;
+    public Output<String> messageBody() {
+        return this.messageBody == null ? Codegen.empty() : this.messageBody;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
-        return this.statusCode == null ? Output.empty() : this.statusCode;
+    public Output<String> statusCode() {
+        return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
     public ListenerDefaultActionFixedResponseGetArgs(
@@ -57,9 +58,9 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
     }
 
     private ListenerDefaultActionFixedResponseGetArgs() {
-        this.contentType = Output.empty();
-        this.messageBody = Output.empty();
-        this.statusCode = Output.empty();
+        this.contentType = Codegen.empty();
+        this.messageBody = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
             return this;
         }
         public Builder messageBody(@Nullable String messageBody) {
-            this.messageBody = Output.ofNullable(messageBody);
+            this.messageBody = Codegen.ofNullable(messageBody);
             return this;
         }
         public Builder statusCode(@Nullable Output<String> statusCode) {
@@ -107,7 +108,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
             return this;
         }
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Output.ofNullable(statusCode);
+            this.statusCode = Codegen.ofNullable(statusCode);
             return this;
         }        public ListenerDefaultActionFixedResponseGetArgs build() {
             return new ListenerDefaultActionFixedResponseGetArgs(contentType, messageBody, statusCode);

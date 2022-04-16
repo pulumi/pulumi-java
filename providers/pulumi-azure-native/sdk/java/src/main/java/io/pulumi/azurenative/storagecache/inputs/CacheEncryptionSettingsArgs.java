@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
-    public Output<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
+    public Output<KeyVaultKeyReferenceArgs> keyEncryptionKey() {
+        return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 
     public CacheEncryptionSettingsArgs(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
@@ -34,7 +35,7 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private CacheEncryptionSettingsArgs() {
-        this.keyEncryptionKey = Output.empty();
+        this.keyEncryptionKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Codegen.ofNullable(keyEncryptionKey);
             return this;
         }        public CacheEncryptionSettingsArgs build() {
             return new CacheEncryptionSettingsArgs(keyEncryptionKey);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
     @Import(name="kafkaBootstrapServers")
       private final @Nullable Output<List<String>> kafkaBootstrapServers;
 
-    public Output<List<String>> getKafkaBootstrapServers() {
-        return this.kafkaBootstrapServers == null ? Output.empty() : this.kafkaBootstrapServers;
+    public Output<List<String>> kafkaBootstrapServers() {
+        return this.kafkaBootstrapServers == null ? Codegen.empty() : this.kafkaBootstrapServers;
     }
 
     public EventSourceMappingEndpointsArgs(@Nullable Output<List<String>> kafkaBootstrapServers) {
@@ -35,7 +36,7 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
     }
 
     private EventSourceMappingEndpointsArgs() {
-        this.kafkaBootstrapServers = Output.empty();
+        this.kafkaBootstrapServers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder kafkaBootstrapServers(@Nullable List<String> kafkaBootstrapServers) {
-            this.kafkaBootstrapServers = Output.ofNullable(kafkaBootstrapServers);
+            this.kafkaBootstrapServers = Codegen.ofNullable(kafkaBootstrapServers);
             return this;
         }
         public Builder kafkaBootstrapServers(String... kafkaBootstrapServers) {

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Entity Tag
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +57,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The location of the private endpoint connection
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -70,7 +71,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Resource properties.
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -98,7 +99,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -124,7 +125,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cognitiveservices:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cognitiveservices:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

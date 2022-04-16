@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheId")
       private final @Nullable Output<String> cacheId;
 
-    public Output<String> getCacheId() {
-        return this.cacheId == null ? Output.empty() : this.cacheId;
+    public Output<String> cacheId() {
+        return this.cacheId == null ? Codegen.empty() : this.cacheId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
@@ -43,8 +44,8 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,8 +66,8 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -87,7 +88,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useFromLocation", required=true)
       private final Output<String> useFromLocation;
 
-    public Output<String> getUseFromLocation() {
+    public Output<String> useFromLocation() {
         return this.useFromLocation;
     }
 
@@ -109,13 +110,13 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CacheArgs() {
-        this.cacheId = Output.empty();
-        this.connectionString = Output.empty();
-        this.description = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.serviceName = Output.empty();
-        this.useFromLocation = Output.empty();
+        this.cacheId = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.description = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.useFromLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheId(@Nullable String cacheId) {
-            this.cacheId = Output.ofNullable(cacheId);
+            this.cacheId = Codegen.ofNullable(cacheId);
             return this;
         }
         public Builder connectionString(Output<String> connectionString) {
@@ -171,7 +172,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -187,7 +188,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {

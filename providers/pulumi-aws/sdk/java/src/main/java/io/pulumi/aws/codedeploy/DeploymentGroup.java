@@ -19,6 +19,7 @@ import io.pulumi.aws.codedeploy.outputs.DeploymentGroupTriggerConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -55,7 +56,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block of alarms associated with the deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupAlarmConfiguration> getAlarmConfiguration() {
+    public Output</* @Nullable */ DeploymentGroupAlarmConfiguration> alarmConfiguration() {
         return this.alarmConfiguration;
     }
     /**
@@ -69,7 +70,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the application.
      * 
      */
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName;
     }
     /**
@@ -83,7 +84,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return The ARN of the CodeDeploy deployment group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -97,7 +98,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupAutoRollbackConfiguration> getAutoRollbackConfiguration() {
+    public Output</* @Nullable */ DeploymentGroupAutoRollbackConfiguration> autoRollbackConfiguration() {
         return this.autoRollbackConfiguration;
     }
     /**
@@ -111,7 +112,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Autoscaling groups associated with the deployment group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAutoscalingGroups() {
+    public Output</* @Nullable */ List<String>> autoscalingGroups() {
         return this.autoscalingGroups;
     }
     /**
@@ -125,7 +126,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block of the blue/green deployment options for a deployment group (documented below).
      * 
      */
-    public Output<DeploymentGroupBlueGreenDeploymentConfig> getBlueGreenDeploymentConfig() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfig> blueGreenDeploymentConfig() {
         return this.blueGreenDeploymentConfig;
     }
     /**
@@ -139,7 +140,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return The destination platform type for the deployment.
      * 
      */
-    public Output<String> getComputePlatform() {
+    public Output<String> computePlatform() {
         return this.computePlatform;
     }
     /**
@@ -153,7 +154,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
      * 
      */
-    public Output</* @Nullable */ String> getDeploymentConfigName() {
+    public Output</* @Nullable */ String> deploymentConfigName() {
         return this.deploymentConfigName;
     }
     /**
@@ -167,7 +168,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the CodeDeploy deployment group.
      * 
      */
-    public Output<String> getDeploymentGroupId() {
+    public Output<String> deploymentGroupId() {
         return this.deploymentGroupId;
     }
     /**
@@ -181,7 +182,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the deployment group.
      * 
      */
-    public Output<String> getDeploymentGroupName() {
+    public Output<String> deploymentGroupName() {
         return this.deploymentGroupName;
     }
     /**
@@ -195,7 +196,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupDeploymentStyle> getDeploymentStyle() {
+    public Output</* @Nullable */ DeploymentGroupDeploymentStyle> deploymentStyle() {
         return this.deploymentStyle;
     }
     /**
@@ -209,7 +210,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Tag filters associated with the deployment group. See the AWS docs for details.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupEc2TagFilter>> getEc2TagFilters() {
+    public Output</* @Nullable */ List<DeploymentGroupEc2TagFilter>> ec2TagFilters() {
         return this.ec2TagFilters;
     }
     /**
@@ -223,7 +224,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupEc2TagSet>> getEc2TagSets() {
+    public Output</* @Nullable */ List<DeploymentGroupEc2TagSet>> ec2TagSets() {
         return this.ec2TagSets;
     }
     /**
@@ -237,7 +238,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block(s) of the ECS services for a deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupEcsService> getEcsService() {
+    public Output</* @Nullable */ DeploymentGroupEcsService> ecsService() {
         return this.ecsService;
     }
     /**
@@ -251,7 +252,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Single configuration block of the load balancer to use in a blue/green deployment (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupLoadBalancerInfo> getLoadBalancerInfo() {
+    public Output</* @Nullable */ DeploymentGroupLoadBalancerInfo> loadBalancerInfo() {
         return this.loadBalancerInfo;
     }
     /**
@@ -265,7 +266,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return On premise tag filters associated with the group. See the AWS docs for details.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupOnPremisesInstanceTagFilter>> getOnPremisesInstanceTagFilters() {
+    public Output</* @Nullable */ List<DeploymentGroupOnPremisesInstanceTagFilter>> onPremisesInstanceTagFilters() {
         return this.onPremisesInstanceTagFilters;
     }
     /**
@@ -279,7 +280,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return The service role ARN that allows deployments.
      * 
      */
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
     /**
@@ -293,7 +294,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -307,7 +308,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -321,7 +322,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block(s) of the triggers for the deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupTriggerConfiguration>> getTriggerConfigurations() {
+    public Output</* @Nullable */ List<DeploymentGroupTriggerConfiguration>> triggerConfigurations() {
         return this.triggerConfigurations;
     }
 
@@ -347,7 +348,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentGroup(String name, DeploymentGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codedeploy/deploymentGroup:DeploymentGroup", name, args == null ? DeploymentGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codedeploy/deploymentGroup:DeploymentGroup", name, args == null ? DeploymentGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeploymentGroup(String name, Output<String> id, @Nullable DeploymentGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.globalaccelerator;
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<AcceleratorAttributesArgs> attributes;
 
-    public Output<AcceleratorAttributesArgs> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<AcceleratorAttributesArgs> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
 
-    public Output<String> getIpAddressType() {
-        return this.ipAddressType == null ? Output.empty() : this.ipAddressType;
+    public Output<String> ipAddressType() {
+        return this.ipAddressType == null ? Codegen.empty() : this.ipAddressType;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AcceleratorArgs(
@@ -86,11 +87,11 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AcceleratorArgs() {
-        this.attributes = Output.empty();
-        this.enabled = Output.empty();
-        this.ipAddressType = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.attributes = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.ipAddressType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable AcceleratorAttributesArgs attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -134,7 +135,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
@@ -142,7 +143,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddressType(@Nullable String ipAddressType) {
-            this.ipAddressType = Output.ofNullable(ipAddressType);
+            this.ipAddressType = Codegen.ofNullable(ipAddressType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -150,7 +151,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -158,7 +159,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AcceleratorArgs build() {
             return new AcceleratorArgs(attributes, enabled, ipAddressType, name, tags);

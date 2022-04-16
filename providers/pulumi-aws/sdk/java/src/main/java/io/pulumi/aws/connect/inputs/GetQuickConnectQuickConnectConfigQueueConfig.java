@@ -19,7 +19,7 @@ public final class GetQuickConnectQuickConnectConfigQueueConfig extends io.pulum
     @Import(name="contactFlowId", required=true)
       private final String contactFlowId;
 
-    public String getContactFlowId() {
+    public String contactFlowId() {
         return this.contactFlowId;
     }
 
@@ -30,7 +30,7 @@ public final class GetQuickConnectQuickConnectConfigQueueConfig extends io.pulum
     @Import(name="queueId", required=true)
       private final String queueId;
 
-    public String getQueueId() {
+    public String queueId() {
         return this.queueId;
     }
 

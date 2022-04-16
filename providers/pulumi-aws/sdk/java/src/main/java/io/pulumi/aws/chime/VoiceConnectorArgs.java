@@ -5,6 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
-    public Output<String> getAwsRegion() {
-        return this.awsRegion == null ? Output.empty() : this.awsRegion;
+    public Output<String> awsRegion() {
+        return this.awsRegion == null ? Codegen.empty() : this.awsRegion;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireEncryption", required=true)
       private final Output<Boolean> requireEncryption;
 
-    public Output<Boolean> getRequireEncryption() {
+    public Output<Boolean> requireEncryption() {
         return this.requireEncryption;
     }
 
@@ -58,9 +59,9 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VoiceConnectorArgs() {
-        this.awsRegion = Output.empty();
-        this.name = Output.empty();
-        this.requireEncryption = Output.empty();
+        this.awsRegion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.requireEncryption = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Output.ofNullable(awsRegion);
+            this.awsRegion = Codegen.ofNullable(awsRegion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -100,7 +101,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder requireEncryption(Output<Boolean> requireEncryption) {

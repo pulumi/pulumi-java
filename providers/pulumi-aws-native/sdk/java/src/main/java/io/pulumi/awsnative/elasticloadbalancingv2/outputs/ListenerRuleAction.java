@@ -46,28 +46,28 @@ public final class ListenerRuleAction {
         this.type = type;
     }
 
-    public Optional<ListenerRuleAuthenticateCognitoConfig> getAuthenticateCognitoConfig() {
+    public Optional<ListenerRuleAuthenticateCognitoConfig> authenticateCognitoConfig() {
         return Optional.ofNullable(this.authenticateCognitoConfig);
     }
-    public Optional<ListenerRuleAuthenticateOidcConfig> getAuthenticateOidcConfig() {
+    public Optional<ListenerRuleAuthenticateOidcConfig> authenticateOidcConfig() {
         return Optional.ofNullable(this.authenticateOidcConfig);
     }
-    public Optional<ListenerRuleFixedResponseConfig> getFixedResponseConfig() {
+    public Optional<ListenerRuleFixedResponseConfig> fixedResponseConfig() {
         return Optional.ofNullable(this.fixedResponseConfig);
     }
-    public Optional<ListenerRuleForwardConfig> getForwardConfig() {
+    public Optional<ListenerRuleForwardConfig> forwardConfig() {
         return Optional.ofNullable(this.forwardConfig);
     }
-    public Optional<Integer> getOrder() {
+    public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
-    public Optional<ListenerRuleRedirectConfig> getRedirectConfig() {
+    public Optional<ListenerRuleRedirectConfig> redirectConfig() {
         return Optional.ofNullable(this.redirectConfig);
     }
-    public Optional<String> getTargetGroupArn() {
+    public Optional<String> targetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

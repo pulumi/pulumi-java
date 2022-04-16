@@ -5,6 +5,7 @@ package io.pulumi.gcp.tags.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagValue")
       private final @Nullable Output<String> tagValue;
 
-    public Output<String> getTagValue() {
-        return this.tagValue == null ? Output.empty() : this.tagValue;
+    public Output<String> tagValue() {
+        return this.tagValue == null ? Codegen.empty() : this.tagValue;
     }
 
     public TagBindingState(
@@ -57,9 +58,9 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagBindingState() {
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.tagValue = Output.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.tagValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -99,7 +100,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder tagValue(@Nullable Output<String> tagValue) {
@@ -107,7 +108,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Output.ofNullable(tagValue);
+            this.tagValue = Codegen.ofNullable(tagValue);
             return this;
         }        public TagBindingState build() {
             return new TagBindingState(name, parent, tagValue);

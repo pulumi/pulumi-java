@@ -5,6 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> getPointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Output.empty() : this.pointInTimeRecoveryEnabled;
+    public Output<Boolean> pointInTimeRecoveryEnabled() {
+        return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
     }
 
     public GlobalTablePointInTimeRecoverySpecificationArgs(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
@@ -26,7 +27,7 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
     }
 
     private GlobalTablePointInTimeRecoverySpecificationArgs() {
-        this.pointInTimeRecoveryEnabled = Output.empty();
+        this.pointInTimeRecoveryEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
             return this;
         }
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
+            this.pointInTimeRecoveryEnabled = Codegen.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }        public GlobalTablePointInTimeRecoverySpecificationArgs build() {
             return new GlobalTablePointInTimeRecoverySpecificationArgs(pointInTimeRecoveryEnabled);

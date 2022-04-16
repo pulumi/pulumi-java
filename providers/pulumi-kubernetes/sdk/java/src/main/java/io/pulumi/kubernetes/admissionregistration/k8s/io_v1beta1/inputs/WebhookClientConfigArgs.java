@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.ServiceReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="caBundle")
       private final @Nullable Output<String> caBundle;
 
-    public Output<String> getCaBundle() {
-        return this.caBundle == null ? Output.empty() : this.caBundle;
+    public Output<String> caBundle() {
+        return this.caBundle == null ? Codegen.empty() : this.caBundle;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="service")
       private final @Nullable Output<ServiceReferenceArgs> service;
 
-    public Output<ServiceReferenceArgs> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<ServiceReferenceArgs> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public WebhookClientConfigArgs(
@@ -74,9 +75,9 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private WebhookClientConfigArgs() {
-        this.caBundle = Output.empty();
-        this.service = Output.empty();
-        this.url = Output.empty();
+        this.caBundle = Codegen.empty();
+        this.service = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder caBundle(@Nullable String caBundle) {
-            this.caBundle = Output.ofNullable(caBundle);
+            this.caBundle = Codegen.ofNullable(caBundle);
             return this;
         }
         public Builder service(@Nullable Output<ServiceReferenceArgs> service) {
@@ -116,7 +117,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder service(@Nullable ServiceReferenceArgs service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -124,7 +125,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public WebhookClientConfigArgs build() {
             return new WebhookClientConfigArgs(caBundle, service, url);

@@ -26,7 +26,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="groupLabels", required=true)
       private final List<AssignmentGroupLabelResponse> groupLabels;
 
-    public List<AssignmentGroupLabelResponse> getGroupLabels() {
+    public List<AssignmentGroupLabelResponse> groupLabels() {
         return this.groupLabels;
     }
 
@@ -37,7 +37,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceNamePrefixes", required=true)
       private final List<String> instanceNamePrefixes;
 
-    public List<String> getInstanceNamePrefixes() {
+    public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes;
     }
 
@@ -48,7 +48,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instances", required=true)
       private final List<String> instances;
 
-    public List<String> getInstances() {
+    public List<String> instances() {
         return this.instances;
     }
 
@@ -59,7 +59,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="osTypes", required=true)
       private final List<AssignmentOsTypeResponse> osTypes;
 
-    public List<AssignmentOsTypeResponse> getOsTypes() {
+    public List<AssignmentOsTypeResponse> osTypes() {
         return this.osTypes;
     }
 
@@ -70,7 +70,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zones", required=true)
       private final List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones;
     }
 

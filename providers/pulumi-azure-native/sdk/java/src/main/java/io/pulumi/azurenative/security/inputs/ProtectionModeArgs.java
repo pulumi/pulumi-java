@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exe")
       private final @Nullable Output<String> exe;
 
-    public Output<String> getExe() {
-        return this.exe == null ? Output.empty() : this.exe;
+    public Output<String> exe() {
+        return this.exe == null ? Codegen.empty() : this.exe;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executable")
       private final @Nullable Output<String> executable;
 
-    public Output<String> getExecutable() {
-        return this.executable == null ? Output.empty() : this.executable;
+    public Output<String> executable() {
+        return this.executable == null ? Codegen.empty() : this.executable;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="msi")
       private final @Nullable Output<String> msi;
 
-    public Output<String> getMsi() {
-        return this.msi == null ? Output.empty() : this.msi;
+    public Output<String> msi() {
+        return this.msi == null ? Codegen.empty() : this.msi;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+    public Output<String> script() {
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     public ProtectionModeArgs(
@@ -74,10 +75,10 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProtectionModeArgs() {
-        this.exe = Output.empty();
-        this.executable = Output.empty();
-        this.msi = Output.empty();
-        this.script = Output.empty();
+        this.exe = Codegen.empty();
+        this.executable = Codegen.empty();
+        this.msi = Codegen.empty();
+        this.script = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exe(@Nullable String exe) {
-            this.exe = Output.ofNullable(exe);
+            this.exe = Codegen.ofNullable(exe);
             return this;
         }
         public Builder executable(@Nullable Output<String> executable) {
@@ -119,7 +120,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executable(@Nullable String executable) {
-            this.executable = Output.ofNullable(executable);
+            this.executable = Codegen.ofNullable(executable);
             return this;
         }
         public Builder msi(@Nullable Output<String> msi) {
@@ -127,7 +128,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msi(@Nullable String msi) {
-            this.msi = Output.ofNullable(msi);
+            this.msi = Codegen.ofNullable(msi);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -135,7 +136,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }        public ProtectionModeArgs build() {
             return new ProtectionModeArgs(exe, executable, msi, script);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.inputs.VirtualMachineConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachineConfig")
       private final @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
 
-    public Output<VirtualMachineConfigArgs> getVirtualMachineConfig() {
-        return this.virtualMachineConfig == null ? Output.empty() : this.virtualMachineConfig;
+    public Output<VirtualMachineConfigArgs> virtualMachineConfig() {
+        return this.virtualMachineConfig == null ? Codegen.empty() : this.virtualMachineConfig;
     }
 
     public VirtualMachineArgs(@Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig) {
@@ -34,7 +35,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualMachineArgs() {
-        this.virtualMachineConfig = Output.empty();
+        this.virtualMachineConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualMachineConfig(@Nullable VirtualMachineConfigArgs virtualMachineConfig) {
-            this.virtualMachineConfig = Output.ofNullable(virtualMachineConfig);
+            this.virtualMachineConfig = Codegen.ofNullable(virtualMachineConfig);
             return this;
         }        public VirtualMachineArgs build() {
             return new VirtualMachineArgs(virtualMachineConfig);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.TransitGatewayMulticastDomainAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The ID of the resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -42,7 +43,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The type of resource, for example a VPC attachment.
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -56,7 +57,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The state of the subnet association.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -70,7 +71,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The IDs of the subnets to associate with the transit gateway multicast domain.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -84,7 +85,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -98,7 +99,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -124,7 +125,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitGatewayMulticastDomainAssociation(String name, TransitGatewayMulticastDomainAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:TransitGatewayMulticastDomainAssociation", name, args == null ? TransitGatewayMulticastDomainAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:TransitGatewayMulticastDomainAssociation", name, args == null ? TransitGatewayMulticastDomainAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitGatewayMulticastDomainAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

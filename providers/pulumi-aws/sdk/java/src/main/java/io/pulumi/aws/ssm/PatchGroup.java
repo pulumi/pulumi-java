@@ -9,6 +9,7 @@ import io.pulumi.aws.ssm.inputs.PatchGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class PatchGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the patch baseline to register the patch group with.
      * 
      */
-    public Output<String> getBaselineId() {
+    public Output<String> baselineId() {
         return this.baselineId;
     }
     /**
@@ -45,7 +46,7 @@ public class PatchGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the patch group that should be registered with the patch baseline.
      * 
      */
-    public Output<String> getPatchGroup() {
+    public Output<String> patchGroup() {
         return this.patchGroup;
     }
 
@@ -71,7 +72,7 @@ public class PatchGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PatchGroup(String name, PatchGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/patchGroup:PatchGroup", name, args == null ? PatchGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ssm/patchGroup:PatchGroup", name, args == null ? PatchGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PatchGroup(String name, Output<String> id, @Nullable PatchGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudfunctions_v1.enums.HttpsTriggerSecurityLevel;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityLevel")
       private final @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;
 
-    public Output<HttpsTriggerSecurityLevel> getSecurityLevel() {
-        return this.securityLevel == null ? Output.empty() : this.securityLevel;
+    public Output<HttpsTriggerSecurityLevel> securityLevel() {
+        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
     public HttpsTriggerArgs(@Nullable Output<HttpsTriggerSecurityLevel> securityLevel) {
@@ -34,7 +35,7 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpsTriggerArgs() {
-        this.securityLevel = Output.empty();
+        this.securityLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityLevel(@Nullable HttpsTriggerSecurityLevel securityLevel) {
-            this.securityLevel = Output.ofNullable(securityLevel);
+            this.securityLevel = Codegen.ofNullable(securityLevel);
             return this;
         }        public HttpsTriggerArgs build() {
             return new HttpsTriggerArgs(securityLevel);

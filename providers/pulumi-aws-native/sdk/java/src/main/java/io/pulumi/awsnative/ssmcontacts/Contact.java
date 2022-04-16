@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ssmcontacts.outputs.ContactStage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -45,7 +46,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the contact.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +60,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +74,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The stages that an escalation plan or engagement plan engages contacts and contact methods in.
      * 
      */
-    public Output<List<ContactStage>> getPlan() {
+    public Output<List<ContactStage>> plan() {
         return this.plan;
     }
     /**
@@ -87,7 +88,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
      * 
      */
-    public Output<ContactType> getType() {
+    public Output<ContactType> type() {
         return this.type;
     }
 
@@ -113,7 +114,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Contact(String name, ContactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ssmcontacts:Contact", name, args == null ? ContactArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ssmcontacts:Contact", name, args == null ? ContactArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Contact(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

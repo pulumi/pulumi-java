@@ -7,6 +7,7 @@ import io.pulumi.aws.waf.inputs.WebAclRuleActionArgs;
 import io.pulumi.aws.waf.inputs.WebAclRuleOverrideActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<WebAclRuleActionArgs> action;
 
-    public Output<WebAclRuleActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<WebAclRuleActionArgs> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideAction")
       private final @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
 
-    public Output<WebAclRuleOverrideActionArgs> getOverrideAction() {
-        return this.overrideAction == null ? Output.empty() : this.overrideAction;
+    public Output<WebAclRuleOverrideActionArgs> overrideAction() {
+        return this.overrideAction == null ? Codegen.empty() : this.overrideAction;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -58,7 +59,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -69,8 +70,8 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public WebAclRuleArgs(
@@ -87,11 +88,11 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAclRuleArgs() {
-        this.action = Output.empty();
-        this.overrideAction = Output.empty();
-        this.priority = Output.empty();
-        this.ruleId = Output.empty();
-        this.type = Output.empty();
+        this.action = Codegen.empty();
+        this.overrideAction = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable WebAclRuleActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder overrideAction(@Nullable Output<WebAclRuleOverrideActionArgs> overrideAction) {
@@ -135,7 +136,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
-            this.overrideAction = Output.ofNullable(overrideAction);
+            this.overrideAction = Codegen.ofNullable(overrideAction);
             return this;
         }
         public Builder priority(Output<Integer> priority) {
@@ -159,7 +160,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public WebAclRuleArgs build() {
             return new WebAclRuleArgs(action, overrideAction, priority, ruleId, type);

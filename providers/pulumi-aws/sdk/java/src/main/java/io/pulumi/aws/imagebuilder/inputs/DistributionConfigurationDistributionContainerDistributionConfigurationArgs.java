@@ -6,6 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="containerTags")
       private final @Nullable Output<List<String>> containerTags;
 
-    public Output<List<String>> getContainerTags() {
-        return this.containerTags == null ? Output.empty() : this.containerTags;
+    public Output<List<String>> containerTags() {
+        return this.containerTags == null ? Codegen.empty() : this.containerTags;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="targetRepository", required=true)
       private final Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository;
 
-    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> getTargetRepository() {
+    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository() {
         return this.targetRepository;
     }
 
@@ -59,9 +60,9 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     }
 
     private DistributionConfigurationDistributionContainerDistributionConfigurationArgs() {
-        this.containerTags = Output.empty();
-        this.description = Output.empty();
-        this.targetRepository = Output.empty();
+        this.containerTags = Codegen.empty();
+        this.description = Codegen.empty();
+        this.targetRepository = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             return this;
         }
         public Builder containerTags(@Nullable List<String> containerTags) {
-            this.containerTags = Output.ofNullable(containerTags);
+            this.containerTags = Codegen.ofNullable(containerTags);
             return this;
         }
         public Builder containerTags(String... containerTags) {
@@ -104,7 +105,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder targetRepository(Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository) {

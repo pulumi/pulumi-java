@@ -24,7 +24,7 @@ public final class AllowedCSIDriver {
      * Name is the registered name of the CSI driver
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

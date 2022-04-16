@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<String> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ExperimentEndpointArgs(
@@ -48,8 +49,8 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ExperimentEndpointArgs() {
-        this.endpoint = Output.empty();
-        this.name = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class ExperimentEndpointArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ExperimentEndpointArgs build() {
             return new ExperimentEndpointArgs(endpoint, name);

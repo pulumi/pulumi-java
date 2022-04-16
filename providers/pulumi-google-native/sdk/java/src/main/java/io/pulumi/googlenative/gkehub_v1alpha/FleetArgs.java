@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -32,22 +33,22 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleetName")
       private final @Nullable Output<String> fleetName;
 
-    public Output<String> getFleetName() {
-        return this.fleetName == null ? Output.empty() : this.fleetName;
+    public Output<String> fleetName() {
+        return this.fleetName == null ? Codegen.empty() : this.fleetName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public FleetArgs(
@@ -62,10 +63,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.displayName = Output.empty();
-        this.fleetName = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
+        this.displayName = Codegen.empty();
+        this.fleetName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder fleetName(@Nullable Output<String> fleetName) {
@@ -107,7 +108,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fleetName(@Nullable String fleetName) {
-            this.fleetName = Output.ofNullable(fleetName);
+            this.fleetName = Codegen.ofNullable(fleetName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -115,7 +116,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -123,7 +124,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public FleetArgs build() {
             return new FleetArgs(displayName, fleetName, location, project);

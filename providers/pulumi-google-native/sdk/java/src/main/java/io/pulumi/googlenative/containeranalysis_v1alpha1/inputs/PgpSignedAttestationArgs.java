@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.PgpSignedAttestationContentType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
     @Import(name="contentType")
       private final @Nullable Output<PgpSignedAttestationContentType> contentType;
 
-    public Output<PgpSignedAttestationContentType> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<PgpSignedAttestationContentType> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
     @Import(name="pgpKeyId")
       private final @Nullable Output<String> pgpKeyId;
 
-    public Output<String> getPgpKeyId() {
-        return this.pgpKeyId == null ? Output.empty() : this.pgpKeyId;
+    public Output<String> pgpKeyId() {
+        return this.pgpKeyId == null ? Codegen.empty() : this.pgpKeyId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
     @Import(name="signature")
       private final @Nullable Output<String> signature;
 
-    public Output<String> getSignature() {
-        return this.signature == null ? Output.empty() : this.signature;
+    public Output<String> signature() {
+        return this.signature == null ? Codegen.empty() : this.signature;
     }
 
     public PgpSignedAttestationArgs(
@@ -62,9 +63,9 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
     }
 
     private PgpSignedAttestationArgs() {
-        this.contentType = Output.empty();
-        this.pgpKeyId = Output.empty();
-        this.signature = Output.empty();
+        this.contentType = Codegen.empty();
+        this.pgpKeyId = Codegen.empty();
+        this.signature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder contentType(@Nullable PgpSignedAttestationContentType contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder pgpKeyId(@Nullable Output<String> pgpKeyId) {
@@ -104,7 +105,7 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder pgpKeyId(@Nullable String pgpKeyId) {
-            this.pgpKeyId = Output.ofNullable(pgpKeyId);
+            this.pgpKeyId = Codegen.ofNullable(pgpKeyId);
             return this;
         }
         public Builder signature(@Nullable Output<String> signature) {
@@ -112,7 +113,7 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder signature(@Nullable String signature) {
-            this.signature = Output.ofNullable(signature);
+            this.signature = Codegen.ofNullable(signature);
             return this;
         }        public PgpSignedAttestationArgs build() {
             return new PgpSignedAttestationArgs(contentType, pgpKeyId, signature);

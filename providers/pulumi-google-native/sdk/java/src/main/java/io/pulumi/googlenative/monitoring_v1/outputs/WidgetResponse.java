@@ -81,56 +81,56 @@ public final class WidgetResponse {
      * A chart of alert policy data.
      * 
     */
-    public AlertChartResponse getAlertChart() {
+    public AlertChartResponse alertChart() {
         return this.alertChart;
     }
     /**
      * A blank space.
      * 
     */
-    public EmptyResponse getBlank() {
+    public EmptyResponse blank() {
         return this.blank;
     }
     /**
      * A widget that shows a stream of logs.
      * 
     */
-    public LogsPanelResponse getLogsPanel() {
+    public LogsPanelResponse logsPanel() {
         return this.logsPanel;
     }
     /**
      * A scorecard summarizing time series data.
      * 
     */
-    public ScorecardResponse getScorecard() {
+    public ScorecardResponse scorecard() {
         return this.scorecard;
     }
     /**
      * A raw string or markdown displaying textual content.
      * 
     */
-    public TextResponse getText() {
+    public TextResponse text() {
         return this.text;
     }
     /**
      * A widget that displays time series data in a tabular format.
      * 
     */
-    public TimeSeriesTableResponse getTimeSeriesTable() {
+    public TimeSeriesTableResponse timeSeriesTable() {
         return this.timeSeriesTable;
     }
     /**
      * Optional. The title of the widget.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
     /**
      * A chart of time series data.
      * 
     */
-    public XyChartResponse getXyChart() {
+    public XyChartResponse xyChart() {
         return this.xyChart;
     }
 

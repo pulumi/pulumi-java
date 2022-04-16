@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityandcompliance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -33,7 +34,7 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceAccessPolicyEntryArgs() {
-        this.objectId = Output.empty();
+        this.objectId = Codegen.empty();
     }
 
     public static Builder builder() {

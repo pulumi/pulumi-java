@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExclusionRuleArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
     @Import(name="exclusionRule")
       private final @Nullable Output<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule;
 
-    public Output<GooglePrivacyDlpV2ExclusionRuleArgs> getExclusionRule() {
-        return this.exclusionRule == null ? Output.empty() : this.exclusionRule;
+    public Output<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule() {
+        return this.exclusionRule == null ? Codegen.empty() : this.exclusionRule;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
     @Import(name="hotwordRule")
       private final @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
-    public Output<GooglePrivacyDlpV2HotwordRuleArgs> getHotwordRule() {
-        return this.hotwordRule == null ? Output.empty() : this.hotwordRule;
+    public Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule() {
+        return this.hotwordRule == null ? Codegen.empty() : this.hotwordRule;
     }
 
     public GooglePrivacyDlpV2InspectionRuleArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
     }
 
     private GooglePrivacyDlpV2InspectionRuleArgs() {
-        this.exclusionRule = Output.empty();
-        this.hotwordRule = Output.empty();
+        this.exclusionRule = Codegen.empty();
+        this.hotwordRule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
             return this;
         }
         public Builder exclusionRule(@Nullable GooglePrivacyDlpV2ExclusionRuleArgs exclusionRule) {
-            this.exclusionRule = Output.ofNullable(exclusionRule);
+            this.exclusionRule = Codegen.ofNullable(exclusionRule);
             return this;
         }
         public Builder hotwordRule(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
@@ -88,7 +89,7 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
             return this;
         }
         public Builder hotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
-            this.hotwordRule = Output.ofNullable(hotwordRule);
+            this.hotwordRule = Codegen.ofNullable(hotwordRule);
             return this;
         }        public GooglePrivacyDlpV2InspectionRuleArgs build() {
             return new GooglePrivacyDlpV2InspectionRuleArgs(exclusionRule, hotwordRule);

@@ -23,7 +23,7 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
     @Import(name="memberRestrictionEvaluation", required=true)
       private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
-    public MembershipRoleRestrictionEvaluationResponse getMemberRestrictionEvaluation() {
+    public MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation;
     }
 

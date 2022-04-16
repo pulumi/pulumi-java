@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gameservices_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1beta.GameServerClusterArgs;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.GameServerClusterConnectionInfoResponse;
@@ -31,7 +32,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
      * 
      */
-    public Output<KubernetesClusterStateResponse> getClusterState() {
+    public Output<KubernetesClusterStateResponse> clusterState() {
         return this.clusterState;
     }
     /**
@@ -45,7 +46,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return The game server cluster connection information. This information is used to manage game server clusters.
      * 
      */
-    public Output<GameServerClusterConnectionInfoResponse> getConnectionInfo() {
+    public Output<GameServerClusterConnectionInfoResponse> connectionInfo() {
         return this.connectionInfo;
     }
     /**
@@ -59,7 +60,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -73,7 +74,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return Human readable description of the cluster.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -87,7 +88,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return ETag of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -101,7 +102,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this game server cluster. Each label is a key-value pair.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -115,7 +116,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +130,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @return The last-modified time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -155,7 +156,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerCluster(String name, GameServerClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gameservices/v1beta:GameServerCluster", name, args == null ? GameServerClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gameservices/v1beta:GameServerCluster", name, args == null ? GameServerClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GameServerCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

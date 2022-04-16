@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1ColumnSchemaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends io.pulumi.res
     @Import(name="columns", required=true)
       private final Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns;
 
-    public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> getColumns() {
+    public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns() {
         return this.columns;
     }
 
@@ -34,7 +35,7 @@ public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends io.pulumi.res
     }
 
     private GoogleCloudDatacatalogV1beta1SchemaArgs() {
-        this.columns = Output.empty();
+        this.columns = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -33,7 +34,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     @Import(name="layerName", required=true)
       private final Output<String> layerName;
 
-    public Output<String> getLayerName() {
+    public Output<String> layerName() {
         return this.layerName;
     }
 
@@ -44,8 +45,8 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
-        return this.organizationId == null ? Output.empty() : this.organizationId;
+    public Output<String> organizationId() {
+        return this.organizationId == null ? Codegen.empty() : this.organizationId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -66,7 +67,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     @Import(name="statementId", required=true)
       private final Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 
@@ -77,7 +78,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     @Import(name="versionNumber", required=true)
       private final Output<Integer> versionNumber;
 
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber;
     }
 
@@ -97,12 +98,12 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     }
 
     private LayerVersionPermissionArgs() {
-        this.action = Output.empty();
-        this.layerName = Output.empty();
-        this.organizationId = Output.empty();
-        this.principal = Output.empty();
-        this.statementId = Output.empty();
-        this.versionNumber = Output.empty();
+        this.action = Codegen.empty();
+        this.layerName = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.statementId = Codegen.empty();
+        this.versionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder organizationId(@Nullable String organizationId) {
-            this.organizationId = Output.ofNullable(organizationId);
+            this.organizationId = Codegen.ofNullable(organizationId);
             return this;
         }
         public Builder principal(Output<String> principal) {

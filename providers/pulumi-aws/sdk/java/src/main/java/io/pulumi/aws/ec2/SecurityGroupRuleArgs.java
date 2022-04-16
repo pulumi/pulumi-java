@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.enums.ProtocolType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<String>> cidrBlocks;
 
-    public Output<List<String>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
+    public Output<List<String>> cidrBlocks() {
+        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
@@ -59,8 +60,8 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ipv6CidrBlocks")
       private final @Nullable Output<List<String>> ipv6CidrBlocks;
 
-    public Output<List<String>> getIpv6CidrBlocks() {
-        return this.ipv6CidrBlocks == null ? Output.empty() : this.ipv6CidrBlocks;
+    public Output<List<String>> ipv6CidrBlocks() {
+        return this.ipv6CidrBlocks == null ? Codegen.empty() : this.ipv6CidrBlocks;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="prefixListIds")
       private final @Nullable Output<List<String>> prefixListIds;
 
-    public Output<List<String>> getPrefixListIds() {
-        return this.prefixListIds == null ? Output.empty() : this.prefixListIds;
+    public Output<List<String>> prefixListIds() {
+        return this.prefixListIds == null ? Codegen.empty() : this.prefixListIds;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol", required=true)
       private final Output<Either<String,ProtocolType>> protocol;
 
-    public Output<Either<String,ProtocolType>> getProtocol() {
+    public Output<Either<String,ProtocolType>> protocol() {
         return this.protocol;
     }
 
@@ -92,7 +93,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 
@@ -103,8 +104,8 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="self")
       private final @Nullable Output<Boolean> self;
 
-    public Output<Boolean> getSelf() {
-        return this.self == null ? Output.empty() : this.self;
+    public Output<Boolean> self() {
+        return this.self == null ? Codegen.empty() : this.self;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceSecurityGroupId")
       private final @Nullable Output<String> sourceSecurityGroupId;
 
-    public Output<String> getSourceSecurityGroupId() {
-        return this.sourceSecurityGroupId == null ? Output.empty() : this.sourceSecurityGroupId;
+    public Output<String> sourceSecurityGroupId() {
+        return this.sourceSecurityGroupId == null ? Codegen.empty() : this.sourceSecurityGroupId;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort;
     }
 
@@ -137,7 +138,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,17 +168,17 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SecurityGroupRuleArgs() {
-        this.cidrBlocks = Output.empty();
-        this.description = Output.empty();
-        this.fromPort = Output.empty();
-        this.ipv6CidrBlocks = Output.empty();
-        this.prefixListIds = Output.empty();
-        this.protocol = Output.empty();
-        this.securityGroupId = Output.empty();
-        this.self = Output.empty();
-        this.sourceSecurityGroupId = Output.empty();
-        this.toPort = Output.empty();
-        this.type = Output.empty();
+        this.cidrBlocks = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fromPort = Codegen.empty();
+        this.ipv6CidrBlocks = Codegen.empty();
+        this.prefixListIds = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
+        this.self = Codegen.empty();
+        this.sourceSecurityGroupId = Codegen.empty();
+        this.toPort = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
-            this.cidrBlocks = Output.ofNullable(cidrBlocks);
+            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
             return this;
         }
         public Builder cidrBlocks(String... cidrBlocks) {
@@ -236,7 +237,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fromPort(Output<Integer> fromPort) {
@@ -252,7 +253,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = Output.ofNullable(ipv6CidrBlocks);
+            this.ipv6CidrBlocks = Codegen.ofNullable(ipv6CidrBlocks);
             return this;
         }
         public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
@@ -263,7 +264,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder prefixListIds(@Nullable List<String> prefixListIds) {
-            this.prefixListIds = Output.ofNullable(prefixListIds);
+            this.prefixListIds = Codegen.ofNullable(prefixListIds);
             return this;
         }
         public Builder prefixListIds(String... prefixListIds) {
@@ -290,7 +291,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder self(@Nullable Boolean self) {
-            this.self = Output.ofNullable(self);
+            this.self = Codegen.ofNullable(self);
             return this;
         }
         public Builder sourceSecurityGroupId(@Nullable Output<String> sourceSecurityGroupId) {
@@ -298,7 +299,7 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sourceSecurityGroupId(@Nullable String sourceSecurityGroupId) {
-            this.sourceSecurityGroupId = Output.ofNullable(sourceSecurityGroupId);
+            this.sourceSecurityGroupId = Codegen.ofNullable(sourceSecurityGroupId);
             return this;
         }
         public Builder toPort(Output<Integer> toPort) {

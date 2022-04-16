@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.LaunchTemplateInstanceMarketOptionsSpotOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
     @Import(name="marketType")
       private final @Nullable Output<String> marketType;
 
-    public Output<String> getMarketType() {
-        return this.marketType == null ? Output.empty() : this.marketType;
+    public Output<String> marketType() {
+        return this.marketType == null ? Codegen.empty() : this.marketType;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
     @Import(name="spotOptions")
       private final @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions;
 
-    public Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> getSpotOptions() {
-        return this.spotOptions == null ? Output.empty() : this.spotOptions;
+    public Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions() {
+        return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
     }
 
     public LaunchTemplateInstanceMarketOptionsArgs(
@@ -45,8 +46,8 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
     }
 
     private LaunchTemplateInstanceMarketOptionsArgs() {
-        this.marketType = Output.empty();
-        this.spotOptions = Output.empty();
+        this.marketType = Codegen.empty();
+        this.spotOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
             return this;
         }
         public Builder marketType(@Nullable String marketType) {
-            this.marketType = Output.ofNullable(marketType);
+            this.marketType = Codegen.ofNullable(marketType);
             return this;
         }
         public Builder spotOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions) {
@@ -84,7 +85,7 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
             return this;
         }
         public Builder spotOptions(@Nullable LaunchTemplateInstanceMarketOptionsSpotOptionsArgs spotOptions) {
-            this.spotOptions = Output.ofNullable(spotOptions);
+            this.spotOptions = Codegen.ofNullable(spotOptions);
             return this;
         }        public LaunchTemplateInstanceMarketOptionsArgs build() {
             return new LaunchTemplateInstanceMarketOptionsArgs(marketType, spotOptions);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role management policy name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return Additional properties of scope, role definition and policy
      * 
      */
-    public Output<PolicyAssignmentPropertiesResponse> getPolicyAssignmentProperties() {
+    public Output<PolicyAssignmentPropertiesResponse> policyAssignmentProperties() {
         return this.policyAssignmentProperties;
     }
     /**
@@ -70,7 +71,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The policy id role management policy assignment.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyId() {
+    public Output</* @Nullable */ String> policyId() {
         return this.policyId;
     }
     /**
@@ -84,7 +85,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role definition of management policy assignment.
      * 
      */
-    public Output</* @Nullable */ String> getRoleDefinitionId() {
+    public Output</* @Nullable */ String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
@@ -98,7 +99,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role management policy scope.
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -112,7 +113,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role management policy type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +139,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public RoleManagementPolicyAssignment(String name, RoleManagementPolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:RoleManagementPolicyAssignment", name, args == null ? RoleManagementPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:RoleManagementPolicyAssignment", name, args == null ? RoleManagementPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RoleManagementPolicyAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

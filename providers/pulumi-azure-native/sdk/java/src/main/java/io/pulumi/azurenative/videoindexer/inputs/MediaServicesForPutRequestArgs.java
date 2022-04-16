@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoindexer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
     @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
+    public Output<String> userAssignedIdentity() {
+        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 
     public MediaServicesForPutRequestArgs(
@@ -48,8 +49,8 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
     }
 
     private MediaServicesForPutRequestArgs() {
-        this.resourceId = Output.empty();
-        this.userAssignedIdentity = Output.empty();
+        this.resourceId = Codegen.empty();
+        this.userAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
@@ -87,7 +88,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
             return this;
         }        public MediaServicesForPutRequestArgs build() {
             return new MediaServicesForPutRequestArgs(resourceId, userAssignedIdentity);

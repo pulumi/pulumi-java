@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.EgressOnlyInternetGatewayArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
      * @return The ID of the VPC for which to create the egress-only internet gateway.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -54,7 +55,7 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public EgressOnlyInternetGateway(String name, EgressOnlyInternetGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:EgressOnlyInternetGateway", name, args == null ? EgressOnlyInternetGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:EgressOnlyInternetGateway", name, args == null ? EgressOnlyInternetGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EgressOnlyInternetGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

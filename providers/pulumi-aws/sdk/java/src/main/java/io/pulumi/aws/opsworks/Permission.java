@@ -9,6 +9,7 @@ import io.pulumi.aws.opsworks.inputs.PermissionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return Whether the user is allowed to use SSH to communicate with the instance
      * 
      */
-    public Output<Boolean> getAllowSsh() {
+    public Output<Boolean> allowSsh() {
         return this.allowSsh;
     }
     /**
@@ -46,7 +47,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return Whether the user is allowed to use sudo to elevate privileges
      * 
      */
-    public Output<Boolean> getAllowSudo() {
+    public Output<Boolean> allowSudo() {
         return this.allowSudo;
     }
     /**
@@ -60,7 +61,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
      * 
      */
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level;
     }
     /**
@@ -74,7 +75,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The stack to set the permissions for
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
     /**
@@ -88,7 +89,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The user's IAM ARN to set permissions for
      * 
      */
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 
@@ -114,7 +115,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Permission(String name, PermissionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/permission:Permission", name, args == null ? PermissionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:opsworks/permission:Permission", name, args == null ? PermissionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Permission(String name, Output<String> id, @Nullable PermissionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

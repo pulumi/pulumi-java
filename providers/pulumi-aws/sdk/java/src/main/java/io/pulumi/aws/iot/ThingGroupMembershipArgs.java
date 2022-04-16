@@ -5,6 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     @Import(name="overrideDynamicGroup")
       private final @Nullable Output<Boolean> overrideDynamicGroup;
 
-    public Output<Boolean> getOverrideDynamicGroup() {
-        return this.overrideDynamicGroup == null ? Output.empty() : this.overrideDynamicGroup;
+    public Output<Boolean> overrideDynamicGroup() {
+        return this.overrideDynamicGroup == null ? Codegen.empty() : this.overrideDynamicGroup;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     @Import(name="thingGroupName", required=true)
       private final Output<String> thingGroupName;
 
-    public Output<String> getThingGroupName() {
+    public Output<String> thingGroupName() {
         return this.thingGroupName;
     }
 
@@ -44,7 +45,7 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     @Import(name="thingName", required=true)
       private final Output<String> thingName;
 
-    public Output<String> getThingName() {
+    public Output<String> thingName() {
         return this.thingName;
     }
 
@@ -58,9 +59,9 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     }
 
     private ThingGroupMembershipArgs() {
-        this.overrideDynamicGroup = Output.empty();
-        this.thingGroupName = Output.empty();
-        this.thingName = Output.empty();
+        this.overrideDynamicGroup = Codegen.empty();
+        this.thingGroupName = Codegen.empty();
+        this.thingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder overrideDynamicGroup(@Nullable Boolean overrideDynamicGroup) {
-            this.overrideDynamicGroup = Output.ofNullable(overrideDynamicGroup);
+            this.overrideDynamicGroup = Codegen.ofNullable(overrideDynamicGroup);
             return this;
         }
         public Builder thingGroupName(Output<String> thingGroupName) {

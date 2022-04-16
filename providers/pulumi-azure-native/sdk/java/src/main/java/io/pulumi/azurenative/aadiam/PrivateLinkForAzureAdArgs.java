@@ -5,6 +5,7 @@ package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="allTenants")
       private final @Nullable Output<Boolean> allTenants;
 
-    public Output<Boolean> getAllTenants() {
-        return this.allTenants == null ? Output.empty() : this.allTenants;
+    public Output<Boolean> allTenants() {
+        return this.allTenants == null ? Codegen.empty() : this.allTenants;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="ownerTenantId")
       private final @Nullable Output<String> ownerTenantId;
 
-    public Output<String> getOwnerTenantId() {
-        return this.ownerTenantId == null ? Output.empty() : this.ownerTenantId;
+    public Output<String> ownerTenantId() {
+        return this.ownerTenantId == null ? Codegen.empty() : this.ownerTenantId;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+    public Output<String> policyName() {
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
-        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
+    public Output<String> resourceGroup() {
+        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,8 +91,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+    public Output<String> subscriptionId() {
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     @Import(name="tenants")
       private final @Nullable Output<List<String>> tenants;
 
-    public Output<List<String>> getTenants() {
-        return this.tenants == null ? Output.empty() : this.tenants;
+    public Output<List<String>> tenants() {
+        return this.tenants == null ? Codegen.empty() : this.tenants;
     }
 
     public PrivateLinkForAzureAdArgs(
@@ -151,16 +152,16 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     }
 
     private PrivateLinkForAzureAdArgs() {
-        this.allTenants = Output.empty();
-        this.name = Output.empty();
-        this.ownerTenantId = Output.empty();
-        this.policyName = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tags = Output.empty();
-        this.tenants = Output.empty();
+        this.allTenants = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerTenantId = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tenants = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allTenants(@Nullable Boolean allTenants) {
-            this.allTenants = Output.ofNullable(allTenants);
+            this.allTenants = Codegen.ofNullable(allTenants);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -214,7 +215,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerTenantId(@Nullable Output<String> ownerTenantId) {
@@ -222,7 +223,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ownerTenantId(@Nullable String ownerTenantId) {
-            this.ownerTenantId = Output.ofNullable(ownerTenantId);
+            this.ownerTenantId = Codegen.ofNullable(ownerTenantId);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -230,7 +231,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
@@ -238,7 +239,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Output.ofNullable(resourceGroup);
+            this.resourceGroup = Codegen.ofNullable(resourceGroup);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -254,7 +255,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
@@ -262,7 +263,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -270,7 +271,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tenants(@Nullable Output<List<String>> tenants) {
@@ -278,7 +279,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tenants(@Nullable List<String> tenants) {
-            this.tenants = Output.ofNullable(tenants);
+            this.tenants = Codegen.ofNullable(tenants);
             return this;
         }
         public Builder tenants(String... tenants) {

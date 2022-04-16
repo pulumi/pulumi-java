@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ProjectTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ServiceCatalogProvisioningDetailsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,15 +21,15 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
-    public Output<String> getProjectDescription() {
-        return this.projectDescription == null ? Output.empty() : this.projectDescription;
+    public Output<String> projectDescription() {
+        return this.projectDescription == null ? Codegen.empty() : this.projectDescription;
     }
 
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
-        return this.projectName == null ? Output.empty() : this.projectName;
+    public Output<String> projectName() {
+        return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceCatalogProvisioningDetails", required=true)
       private final Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
 
-    public Output<ServiceCatalogProvisioningDetailsPropertiesArgs> getServiceCatalogProvisioningDetails() {
+    public Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
 
@@ -49,8 +50,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ProjectTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ProjectArgs(
@@ -65,10 +66,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.projectDescription = Output.empty();
-        this.projectName = Output.empty();
-        this.serviceCatalogProvisioningDetails = Output.empty();
-        this.tags = Output.empty();
+        this.projectDescription = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.serviceCatalogProvisioningDetails = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectDescription(@Nullable String projectDescription) {
-            this.projectDescription = Output.ofNullable(projectDescription);
+            this.projectDescription = Codegen.ofNullable(projectDescription);
             return this;
         }
         public Builder projectName(@Nullable Output<String> projectName) {
@@ -110,7 +111,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Output.ofNullable(projectName);
+            this.projectName = Codegen.ofNullable(projectName);
             return this;
         }
         public Builder serviceCatalogProvisioningDetails(Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails) {
@@ -126,7 +127,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ProjectTagArgs... tags) {

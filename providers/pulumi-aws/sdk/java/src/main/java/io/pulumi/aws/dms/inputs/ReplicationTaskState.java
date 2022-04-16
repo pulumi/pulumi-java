@@ -5,6 +5,7 @@ package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="cdcStartPosition")
       private final @Nullable Output<String> cdcStartPosition;
 
-    public Output<String> getCdcStartPosition() {
-        return this.cdcStartPosition == null ? Output.empty() : this.cdcStartPosition;
+    public Output<String> cdcStartPosition() {
+        return this.cdcStartPosition == null ? Codegen.empty() : this.cdcStartPosition;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="cdcStartTime")
       private final @Nullable Output<String> cdcStartTime;
 
-    public Output<String> getCdcStartTime() {
-        return this.cdcStartTime == null ? Output.empty() : this.cdcStartTime;
+    public Output<String> cdcStartTime() {
+        return this.cdcStartTime == null ? Codegen.empty() : this.cdcStartTime;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="migrationType")
       private final @Nullable Output<String> migrationType;
 
-    public Output<String> getMigrationType() {
-        return this.migrationType == null ? Output.empty() : this.migrationType;
+    public Output<String> migrationType() {
+        return this.migrationType == null ? Codegen.empty() : this.migrationType;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="replicationInstanceArn")
       private final @Nullable Output<String> replicationInstanceArn;
 
-    public Output<String> getReplicationInstanceArn() {
-        return this.replicationInstanceArn == null ? Output.empty() : this.replicationInstanceArn;
+    public Output<String> replicationInstanceArn() {
+        return this.replicationInstanceArn == null ? Codegen.empty() : this.replicationInstanceArn;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="replicationTaskArn")
       private final @Nullable Output<String> replicationTaskArn;
 
-    public Output<String> getReplicationTaskArn() {
-        return this.replicationTaskArn == null ? Output.empty() : this.replicationTaskArn;
+    public Output<String> replicationTaskArn() {
+        return this.replicationTaskArn == null ? Codegen.empty() : this.replicationTaskArn;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="replicationTaskId")
       private final @Nullable Output<String> replicationTaskId;
 
-    public Output<String> getReplicationTaskId() {
-        return this.replicationTaskId == null ? Output.empty() : this.replicationTaskId;
+    public Output<String> replicationTaskId() {
+        return this.replicationTaskId == null ? Codegen.empty() : this.replicationTaskId;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="replicationTaskSettings")
       private final @Nullable Output<String> replicationTaskSettings;
 
-    public Output<String> getReplicationTaskSettings() {
-        return this.replicationTaskSettings == null ? Output.empty() : this.replicationTaskSettings;
+    public Output<String> replicationTaskSettings() {
+        return this.replicationTaskSettings == null ? Codegen.empty() : this.replicationTaskSettings;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceEndpointArn")
       private final @Nullable Output<String> sourceEndpointArn;
 
-    public Output<String> getSourceEndpointArn() {
-        return this.sourceEndpointArn == null ? Output.empty() : this.sourceEndpointArn;
+    public Output<String> sourceEndpointArn() {
+        return this.sourceEndpointArn == null ? Codegen.empty() : this.sourceEndpointArn;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="tableMappings")
       private final @Nullable Output<String> tableMappings;
 
-    public Output<String> getTableMappings() {
-        return this.tableMappings == null ? Output.empty() : this.tableMappings;
+    public Output<String> tableMappings() {
+        return this.tableMappings == null ? Codegen.empty() : this.tableMappings;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     @Import(name="targetEndpointArn")
       private final @Nullable Output<String> targetEndpointArn;
 
-    public Output<String> getTargetEndpointArn() {
-        return this.targetEndpointArn == null ? Output.empty() : this.targetEndpointArn;
+    public Output<String> targetEndpointArn() {
+        return this.targetEndpointArn == null ? Codegen.empty() : this.targetEndpointArn;
     }
 
     public ReplicationTaskState(
@@ -175,18 +176,18 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     }
 
     private ReplicationTaskState() {
-        this.cdcStartPosition = Output.empty();
-        this.cdcStartTime = Output.empty();
-        this.migrationType = Output.empty();
-        this.replicationInstanceArn = Output.empty();
-        this.replicationTaskArn = Output.empty();
-        this.replicationTaskId = Output.empty();
-        this.replicationTaskSettings = Output.empty();
-        this.sourceEndpointArn = Output.empty();
-        this.tableMappings = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.targetEndpointArn = Output.empty();
+        this.cdcStartPosition = Codegen.empty();
+        this.cdcStartTime = Codegen.empty();
+        this.migrationType = Codegen.empty();
+        this.replicationInstanceArn = Codegen.empty();
+        this.replicationTaskArn = Codegen.empty();
+        this.replicationTaskId = Codegen.empty();
+        this.replicationTaskSettings = Codegen.empty();
+        this.sourceEndpointArn = Codegen.empty();
+        this.tableMappings = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.targetEndpointArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -236,7 +237,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cdcStartPosition(@Nullable String cdcStartPosition) {
-            this.cdcStartPosition = Output.ofNullable(cdcStartPosition);
+            this.cdcStartPosition = Codegen.ofNullable(cdcStartPosition);
             return this;
         }
         public Builder cdcStartTime(@Nullable Output<String> cdcStartTime) {
@@ -244,7 +245,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cdcStartTime(@Nullable String cdcStartTime) {
-            this.cdcStartTime = Output.ofNullable(cdcStartTime);
+            this.cdcStartTime = Codegen.ofNullable(cdcStartTime);
             return this;
         }
         public Builder migrationType(@Nullable Output<String> migrationType) {
@@ -252,7 +253,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder migrationType(@Nullable String migrationType) {
-            this.migrationType = Output.ofNullable(migrationType);
+            this.migrationType = Codegen.ofNullable(migrationType);
             return this;
         }
         public Builder replicationInstanceArn(@Nullable Output<String> replicationInstanceArn) {
@@ -260,7 +261,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder replicationInstanceArn(@Nullable String replicationInstanceArn) {
-            this.replicationInstanceArn = Output.ofNullable(replicationInstanceArn);
+            this.replicationInstanceArn = Codegen.ofNullable(replicationInstanceArn);
             return this;
         }
         public Builder replicationTaskArn(@Nullable Output<String> replicationTaskArn) {
@@ -268,7 +269,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder replicationTaskArn(@Nullable String replicationTaskArn) {
-            this.replicationTaskArn = Output.ofNullable(replicationTaskArn);
+            this.replicationTaskArn = Codegen.ofNullable(replicationTaskArn);
             return this;
         }
         public Builder replicationTaskId(@Nullable Output<String> replicationTaskId) {
@@ -276,7 +277,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder replicationTaskId(@Nullable String replicationTaskId) {
-            this.replicationTaskId = Output.ofNullable(replicationTaskId);
+            this.replicationTaskId = Codegen.ofNullable(replicationTaskId);
             return this;
         }
         public Builder replicationTaskSettings(@Nullable Output<String> replicationTaskSettings) {
@@ -284,7 +285,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder replicationTaskSettings(@Nullable String replicationTaskSettings) {
-            this.replicationTaskSettings = Output.ofNullable(replicationTaskSettings);
+            this.replicationTaskSettings = Codegen.ofNullable(replicationTaskSettings);
             return this;
         }
         public Builder sourceEndpointArn(@Nullable Output<String> sourceEndpointArn) {
@@ -292,7 +293,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceEndpointArn(@Nullable String sourceEndpointArn) {
-            this.sourceEndpointArn = Output.ofNullable(sourceEndpointArn);
+            this.sourceEndpointArn = Codegen.ofNullable(sourceEndpointArn);
             return this;
         }
         public Builder tableMappings(@Nullable Output<String> tableMappings) {
@@ -300,7 +301,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tableMappings(@Nullable String tableMappings) {
-            this.tableMappings = Output.ofNullable(tableMappings);
+            this.tableMappings = Codegen.ofNullable(tableMappings);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -308,7 +309,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -316,7 +317,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder targetEndpointArn(@Nullable Output<String> targetEndpointArn) {
@@ -324,7 +325,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targetEndpointArn(@Nullable String targetEndpointArn) {
-            this.targetEndpointArn = Output.ofNullable(targetEndpointArn);
+            this.targetEndpointArn = Codegen.ofNullable(targetEndpointArn);
             return this;
         }        public ReplicationTaskState build() {
             return new ReplicationTaskState(cdcStartPosition, cdcStartTime, migrationType, replicationInstanceArn, replicationTaskArn, replicationTaskId, replicationTaskSettings, sourceEndpointArn, tableMappings, tags, tagsAll, targetEndpointArn);

@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InsightFiltersResourceContainerImageNameGetArgs extends io.pu
     @Import(name="comparison", required=true)
       private final Output<String> comparison;
 
-    public Output<String> getComparison() {
+    public Output<String> comparison() {
         return this.comparison;
     }
 
@@ -31,7 +32,7 @@ public final class InsightFiltersResourceContainerImageNameGetArgs extends io.pu
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -43,8 +44,8 @@ public final class InsightFiltersResourceContainerImageNameGetArgs extends io.pu
     }
 
     private InsightFiltersResourceContainerImageNameGetArgs() {
-        this.comparison = Output.empty();
-        this.value = Output.empty();
+        this.comparison = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

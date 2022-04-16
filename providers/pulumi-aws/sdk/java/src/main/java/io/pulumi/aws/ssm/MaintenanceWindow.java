@@ -9,6 +9,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -44,7 +45,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowUnassociatedTargets() {
+    public Output</* @Nullable */ Boolean> allowUnassociatedTargets() {
         return this.allowUnassociatedTargets;
     }
     /**
@@ -58,7 +59,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
      * 
      */
-    public Output<Integer> getCutoff() {
+    public Output<Integer> cutoff() {
         return this.cutoff;
     }
     /**
@@ -72,7 +73,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return A description for the maintenance window.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -86,7 +87,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return The duration of the Maintenance Window in hours.
      * 
      */
-    public Output<Integer> getDuration() {
+    public Output<Integer> duration() {
         return this.duration;
     }
     /**
@@ -100,7 +101,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return Whether the maintenance window is enabled. Default: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -114,7 +115,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
      * 
      */
-    public Output</* @Nullable */ String> getEndDate() {
+    public Output</* @Nullable */ String> endDate() {
         return this.endDate;
     }
     /**
@@ -128,7 +129,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return The name of the maintenance window.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
      * 
      */
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
     /**
@@ -156,7 +157,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
      * 
      */
-    public Output</* @Nullable */ Integer> getScheduleOffset() {
+    public Output</* @Nullable */ Integer> scheduleOffset() {
         return this.scheduleOffset;
     }
     /**
@@ -170,7 +171,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
      * 
      */
-    public Output</* @Nullable */ String> getScheduleTimezone() {
+    public Output</* @Nullable */ String> scheduleTimezone() {
         return this.scheduleTimezone;
     }
     /**
@@ -184,7 +185,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
      * 
      */
-    public Output</* @Nullable */ String> getStartDate() {
+    public Output</* @Nullable */ String> startDate() {
         return this.startDate;
     }
     /**
@@ -198,7 +199,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -212,7 +213,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -238,7 +239,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MaintenanceWindow(String name, MaintenanceWindowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/maintenanceWindow:MaintenanceWindow", name, args == null ? MaintenanceWindowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ssm/maintenanceWindow:MaintenanceWindow", name, args == null ? MaintenanceWindowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MaintenanceWindow(String name, Output<String> id, @Nullable MaintenanceWindowState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

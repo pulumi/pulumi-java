@@ -19,7 +19,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
     @Import(name="containerName", required=true)
       private final String containerName;
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
 
@@ -41,7 +41,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
     @Import(name="storageAccountName", required=true)
       private final String storageAccountName;
 
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
 

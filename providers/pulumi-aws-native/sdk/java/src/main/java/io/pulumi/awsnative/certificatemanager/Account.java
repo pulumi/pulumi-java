@@ -9,6 +9,7 @@ import io.pulumi.awsnative.certificatemanager.outputs.AccountExpiryEventsConfigu
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -21,13 +22,13 @@ public class Account extends io.pulumi.resources.CustomResource {
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     @Export(name="expiryEventsConfiguration", type=AccountExpiryEventsConfiguration.class, parameters={})
     private Output<AccountExpiryEventsConfiguration> expiryEventsConfiguration;
 
-    public Output<AccountExpiryEventsConfiguration> getExpiryEventsConfiguration() {
+    public Output<AccountExpiryEventsConfiguration> expiryEventsConfiguration() {
         return this.expiryEventsConfiguration;
     }
 
@@ -53,7 +54,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:certificatemanager:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:certificatemanager:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

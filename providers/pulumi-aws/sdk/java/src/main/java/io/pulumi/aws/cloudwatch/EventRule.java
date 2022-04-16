@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the rule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return The description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return The event bus to associate with this rule. If you omit this, the `default` event bus is used.
      * 
      */
-    public Output</* @Nullable */ String> getEventBusName() {
+    public Output</* @Nullable */ String> eventBusName() {
         return this.eventBusName;
     }
     /**
@@ -85,7 +86,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
      * 
      */
-    public Output</* @Nullable */ String> getEventPattern() {
+    public Output</* @Nullable */ String> eventPattern() {
         return this.eventPattern;
     }
     /**
@@ -99,7 +100,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return Whether the rule should be enabled (defaults to `true`).
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -113,7 +114,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return The name of the rule. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -141,7 +142,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
      * 
      */
-    public Output</* @Nullable */ String> getRoleArn() {
+    public Output</* @Nullable */ String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -155,7 +156,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus. For more information, refer to the AWS documentation [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
      * 
      */
-    public Output</* @Nullable */ String> getScheduleExpression() {
+    public Output</* @Nullable */ String> scheduleExpression() {
         return this.scheduleExpression;
     }
     /**
@@ -169,7 +170,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -183,7 +184,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -209,7 +210,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventRule(String name, @Nullable EventRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventRule:EventRule", name, args == null ? EventRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/eventRule:EventRule", name, args == null ? EventRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventRule(String name, Output<String> id, @Nullable EventRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

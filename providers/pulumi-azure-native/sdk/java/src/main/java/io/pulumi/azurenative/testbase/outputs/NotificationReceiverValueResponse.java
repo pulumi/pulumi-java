@@ -43,21 +43,21 @@ public final class NotificationReceiverValueResponse {
      * The user object receiver value.
      * 
     */
-    public Optional<DistributionGroupListReceiverValueResponse> getDistributionGroupListReceiverValue() {
+    public Optional<DistributionGroupListReceiverValueResponse> distributionGroupListReceiverValue() {
         return Optional.ofNullable(this.distributionGroupListReceiverValue);
     }
     /**
      * The user object receiver value.
      * 
     */
-    public Optional<SubscriptionReceiverValueResponse> getSubscriptionReceiverValue() {
+    public Optional<SubscriptionReceiverValueResponse> subscriptionReceiverValue() {
         return Optional.ofNullable(this.subscriptionReceiverValue);
     }
     /**
      * The user object receiver value.
      * 
     */
-    public Optional<UserObjectReceiverValueResponse> getUserObjectReceiverValue() {
+    public Optional<UserObjectReceiverValueResponse> userObjectReceiverValue() {
         return Optional.ofNullable(this.userObjectReceiverValue);
     }
 

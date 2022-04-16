@@ -12,6 +12,7 @@ import io.pulumi.aws.route53.inputs.RecordWeightedRoutingPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,8 +33,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aliases")
       private final @Nullable Output<List<RecordAliasArgs>> aliases;
 
-    public Output<List<RecordAliasArgs>> getAliases() {
-        return this.aliases == null ? Output.empty() : this.aliases;
+    public Output<List<RecordAliasArgs>> aliases() {
+        return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowOverwrite")
       private final @Nullable Output<Boolean> allowOverwrite;
 
-    public Output<Boolean> getAllowOverwrite() {
-        return this.allowOverwrite == null ? Output.empty() : this.allowOverwrite;
+    public Output<Boolean> allowOverwrite() {
+        return this.allowOverwrite == null ? Codegen.empty() : this.allowOverwrite;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failoverRoutingPolicies")
       private final @Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies;
 
-    public Output<List<RecordFailoverRoutingPolicyArgs>> getFailoverRoutingPolicies() {
-        return this.failoverRoutingPolicies == null ? Output.empty() : this.failoverRoutingPolicies;
+    public Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies() {
+        return this.failoverRoutingPolicies == null ? Codegen.empty() : this.failoverRoutingPolicies;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="geolocationRoutingPolicies")
       private final @Nullable Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies;
 
-    public Output<List<RecordGeolocationRoutingPolicyArgs>> getGeolocationRoutingPolicies() {
-        return this.geolocationRoutingPolicies == null ? Output.empty() : this.geolocationRoutingPolicies;
+    public Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies() {
+        return this.geolocationRoutingPolicies == null ? Codegen.empty() : this.geolocationRoutingPolicies;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckId")
       private final @Nullable Output<String> healthCheckId;
 
-    public Output<String> getHealthCheckId() {
-        return this.healthCheckId == null ? Output.empty() : this.healthCheckId;
+    public Output<String> healthCheckId() {
+        return this.healthCheckId == null ? Codegen.empty() : this.healthCheckId;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latencyRoutingPolicies")
       private final @Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies;
 
-    public Output<List<RecordLatencyRoutingPolicyArgs>> getLatencyRoutingPolicies() {
-        return this.latencyRoutingPolicies == null ? Output.empty() : this.latencyRoutingPolicies;
+    public Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies() {
+        return this.latencyRoutingPolicies == null ? Codegen.empty() : this.latencyRoutingPolicies;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multivalueAnswerRoutingPolicy")
       private final @Nullable Output<Boolean> multivalueAnswerRoutingPolicy;
 
-    public Output<Boolean> getMultivalueAnswerRoutingPolicy() {
-        return this.multivalueAnswerRoutingPolicy == null ? Output.empty() : this.multivalueAnswerRoutingPolicy;
+    public Output<Boolean> multivalueAnswerRoutingPolicy() {
+        return this.multivalueAnswerRoutingPolicy == null ? Codegen.empty() : this.multivalueAnswerRoutingPolicy;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -120,8 +121,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="records")
       private final @Nullable Output<List<String>> records;
 
-    public Output<List<String>> getRecords() {
-        return this.records == null ? Output.empty() : this.records;
+    public Output<List<String>> records() {
+        return this.records == null ? Codegen.empty() : this.records;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="setIdentifier")
       private final @Nullable Output<String> setIdentifier;
 
-    public Output<String> getSetIdentifier() {
-        return this.setIdentifier == null ? Output.empty() : this.setIdentifier;
+    public Output<String> setIdentifier() {
+        return this.setIdentifier == null ? Codegen.empty() : this.setIdentifier;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<Integer> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,RecordType>> type;
 
-    public Output<Either<String,RecordType>> getType() {
+    public Output<Either<String,RecordType>> type() {
         return this.type;
     }
 
@@ -164,8 +165,8 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weightedRoutingPolicies")
       private final @Nullable Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies;
 
-    public Output<List<RecordWeightedRoutingPolicyArgs>> getWeightedRoutingPolicies() {
-        return this.weightedRoutingPolicies == null ? Output.empty() : this.weightedRoutingPolicies;
+    public Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies() {
+        return this.weightedRoutingPolicies == null ? Codegen.empty() : this.weightedRoutingPolicies;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 
@@ -211,20 +212,20 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecordArgs() {
-        this.aliases = Output.empty();
-        this.allowOverwrite = Output.empty();
-        this.failoverRoutingPolicies = Output.empty();
-        this.geolocationRoutingPolicies = Output.empty();
-        this.healthCheckId = Output.empty();
-        this.latencyRoutingPolicies = Output.empty();
-        this.multivalueAnswerRoutingPolicy = Output.empty();
-        this.name = Output.empty();
-        this.records = Output.empty();
-        this.setIdentifier = Output.empty();
-        this.ttl = Output.empty();
-        this.type = Output.empty();
-        this.weightedRoutingPolicies = Output.empty();
-        this.zoneId = Output.empty();
+        this.aliases = Codegen.empty();
+        this.allowOverwrite = Codegen.empty();
+        this.failoverRoutingPolicies = Codegen.empty();
+        this.geolocationRoutingPolicies = Codegen.empty();
+        this.healthCheckId = Codegen.empty();
+        this.latencyRoutingPolicies = Codegen.empty();
+        this.multivalueAnswerRoutingPolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.records = Codegen.empty();
+        this.setIdentifier = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.type = Codegen.empty();
+        this.weightedRoutingPolicies = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -278,7 +279,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aliases(@Nullable List<RecordAliasArgs> aliases) {
-            this.aliases = Output.ofNullable(aliases);
+            this.aliases = Codegen.ofNullable(aliases);
             return this;
         }
         public Builder aliases(RecordAliasArgs... aliases) {
@@ -289,7 +290,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowOverwrite(@Nullable Boolean allowOverwrite) {
-            this.allowOverwrite = Output.ofNullable(allowOverwrite);
+            this.allowOverwrite = Codegen.ofNullable(allowOverwrite);
             return this;
         }
         public Builder failoverRoutingPolicies(@Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies) {
@@ -297,7 +298,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failoverRoutingPolicies(@Nullable List<RecordFailoverRoutingPolicyArgs> failoverRoutingPolicies) {
-            this.failoverRoutingPolicies = Output.ofNullable(failoverRoutingPolicies);
+            this.failoverRoutingPolicies = Codegen.ofNullable(failoverRoutingPolicies);
             return this;
         }
         public Builder failoverRoutingPolicies(RecordFailoverRoutingPolicyArgs... failoverRoutingPolicies) {
@@ -308,7 +309,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder geolocationRoutingPolicies(@Nullable List<RecordGeolocationRoutingPolicyArgs> geolocationRoutingPolicies) {
-            this.geolocationRoutingPolicies = Output.ofNullable(geolocationRoutingPolicies);
+            this.geolocationRoutingPolicies = Codegen.ofNullable(geolocationRoutingPolicies);
             return this;
         }
         public Builder geolocationRoutingPolicies(RecordGeolocationRoutingPolicyArgs... geolocationRoutingPolicies) {
@@ -319,7 +320,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckId(@Nullable String healthCheckId) {
-            this.healthCheckId = Output.ofNullable(healthCheckId);
+            this.healthCheckId = Codegen.ofNullable(healthCheckId);
             return this;
         }
         public Builder latencyRoutingPolicies(@Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies) {
@@ -327,7 +328,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latencyRoutingPolicies(@Nullable List<RecordLatencyRoutingPolicyArgs> latencyRoutingPolicies) {
-            this.latencyRoutingPolicies = Output.ofNullable(latencyRoutingPolicies);
+            this.latencyRoutingPolicies = Codegen.ofNullable(latencyRoutingPolicies);
             return this;
         }
         public Builder latencyRoutingPolicies(RecordLatencyRoutingPolicyArgs... latencyRoutingPolicies) {
@@ -338,7 +339,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multivalueAnswerRoutingPolicy(@Nullable Boolean multivalueAnswerRoutingPolicy) {
-            this.multivalueAnswerRoutingPolicy = Output.ofNullable(multivalueAnswerRoutingPolicy);
+            this.multivalueAnswerRoutingPolicy = Codegen.ofNullable(multivalueAnswerRoutingPolicy);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -354,7 +355,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder records(@Nullable List<String> records) {
-            this.records = Output.ofNullable(records);
+            this.records = Codegen.ofNullable(records);
             return this;
         }
         public Builder records(String... records) {
@@ -365,7 +366,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder setIdentifier(@Nullable String setIdentifier) {
-            this.setIdentifier = Output.ofNullable(setIdentifier);
+            this.setIdentifier = Codegen.ofNullable(setIdentifier);
             return this;
         }
         public Builder ttl(@Nullable Output<Integer> ttl) {
@@ -373,7 +374,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder type(Output<Either<String,RecordType>> type) {
@@ -389,7 +390,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weightedRoutingPolicies(@Nullable List<RecordWeightedRoutingPolicyArgs> weightedRoutingPolicies) {
-            this.weightedRoutingPolicies = Output.ofNullable(weightedRoutingPolicies);
+            this.weightedRoutingPolicies = Codegen.ofNullable(weightedRoutingPolicies);
             return this;
         }
         public Builder weightedRoutingPolicies(RecordWeightedRoutingPolicyArgs... weightedRoutingPolicies) {

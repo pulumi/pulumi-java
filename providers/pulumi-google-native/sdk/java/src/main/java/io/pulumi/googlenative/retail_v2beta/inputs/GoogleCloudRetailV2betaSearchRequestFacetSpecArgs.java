@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,8 +30,8 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
     @Import(name="enableDynamicPosition")
       private final @Nullable Output<Boolean> enableDynamicPosition;
 
-    public Output<Boolean> getEnableDynamicPosition() {
-        return this.enableDynamicPosition == null ? Output.empty() : this.enableDynamicPosition;
+    public Output<Boolean> enableDynamicPosition() {
+        return this.enableDynamicPosition == null ? Codegen.empty() : this.enableDynamicPosition;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
     @Import(name="excludedFilterKeys")
       private final @Nullable Output<List<String>> excludedFilterKeys;
 
-    public Output<List<String>> getExcludedFilterKeys() {
-        return this.excludedFilterKeys == null ? Output.empty() : this.excludedFilterKeys;
+    public Output<List<String>> excludedFilterKeys() {
+        return this.excludedFilterKeys == null ? Codegen.empty() : this.excludedFilterKeys;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
     @Import(name="facetKey", required=true)
       private final Output<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> facetKey;
 
-    public Output<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> getFacetKey() {
+    public Output<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> facetKey() {
         return this.facetKey;
     }
 
@@ -62,8 +63,8 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
-        return this.limit == null ? Output.empty() : this.limit;
+    public Output<Integer> limit() {
+        return this.limit == null ? Codegen.empty() : this.limit;
     }
 
     public GoogleCloudRetailV2betaSearchRequestFacetSpecArgs(
@@ -78,10 +79,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
     }
 
     private GoogleCloudRetailV2betaSearchRequestFacetSpecArgs() {
-        this.enableDynamicPosition = Output.empty();
-        this.excludedFilterKeys = Output.empty();
-        this.facetKey = Output.empty();
-        this.limit = Output.empty();
+        this.enableDynamicPosition = Codegen.empty();
+        this.excludedFilterKeys = Codegen.empty();
+        this.facetKey = Codegen.empty();
+        this.limit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
             return this;
         }
         public Builder enableDynamicPosition(@Nullable Boolean enableDynamicPosition) {
-            this.enableDynamicPosition = Output.ofNullable(enableDynamicPosition);
+            this.enableDynamicPosition = Codegen.ofNullable(enableDynamicPosition);
             return this;
         }
         public Builder excludedFilterKeys(@Nullable Output<List<String>> excludedFilterKeys) {
@@ -123,7 +124,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
             return this;
         }
         public Builder excludedFilterKeys(@Nullable List<String> excludedFilterKeys) {
-            this.excludedFilterKeys = Output.ofNullable(excludedFilterKeys);
+            this.excludedFilterKeys = Codegen.ofNullable(excludedFilterKeys);
             return this;
         }
         public Builder excludedFilterKeys(String... excludedFilterKeys) {
@@ -142,7 +143,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
             return this;
         }
         public Builder limit(@Nullable Integer limit) {
-            this.limit = Output.ofNullable(limit);
+            this.limit = Codegen.ofNullable(limit);
             return this;
         }        public GoogleCloudRetailV2betaSearchRequestFacetSpecArgs build() {
             return new GoogleCloudRetailV2betaSearchRequestFacetSpecArgs(enableDynamicPosition, excludedFilterKeys, facetKey, limit);

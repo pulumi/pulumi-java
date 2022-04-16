@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
 
-    public Output<String> getEndIpAddress() {
-        return this.endIpAddress == null ? Output.empty() : this.endIpAddress;
+    public Output<String> endIpAddress() {
+        return this.endIpAddress == null ? Codegen.empty() : this.endIpAddress;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
-    public Output<String> getFirewallRuleName() {
-        return this.firewallRuleName == null ? Output.empty() : this.firewallRuleName;
+    public Output<String> firewallRuleName() {
+        return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +66,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -76,8 +77,8 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
 
-    public Output<String> getStartIpAddress() {
-        return this.startIpAddress == null ? Output.empty() : this.startIpAddress;
+    public Output<String> startIpAddress() {
+        return this.startIpAddress == null ? Codegen.empty() : this.startIpAddress;
     }
 
     public FirewallRuleArgs(
@@ -96,12 +97,12 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallRuleArgs() {
-        this.endIpAddress = Output.empty();
-        this.firewallRuleName = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.startIpAddress = Output.empty();
+        this.endIpAddress = Codegen.empty();
+        this.firewallRuleName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.startIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endIpAddress(@Nullable String endIpAddress) {
-            this.endIpAddress = Output.ofNullable(endIpAddress);
+            this.endIpAddress = Codegen.ofNullable(endIpAddress);
             return this;
         }
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
@@ -147,7 +148,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Output.ofNullable(firewallRuleName);
+            this.firewallRuleName = Codegen.ofNullable(firewallRuleName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -155,7 +156,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -179,7 +180,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startIpAddress(@Nullable String startIpAddress) {
-            this.startIpAddress = Output.ofNullable(startIpAddress);
+            this.startIpAddress = Codegen.ofNullable(startIpAddress);
             return this;
         }        public FirewallRuleArgs build() {
             return new FirewallRuleArgs(endIpAddress, firewallRuleName, name, resourceGroupName, serverName, startIpAddress);

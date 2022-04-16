@@ -9,6 +9,7 @@ import io.pulumi.aws.cfg.inputs.AggregateAuthorizationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class AggregateAuthorization extends io.pulumi.resources.CustomResource {
      * @return Account ID
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -54,7 +55,7 @@ public class AggregateAuthorization extends io.pulumi.resources.CustomResource {
      * @return The ARN of the authorization
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +69,7 @@ public class AggregateAuthorization extends io.pulumi.resources.CustomResource {
      * @return Region
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -82,7 +83,7 @@ public class AggregateAuthorization extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -96,7 +97,7 @@ public class AggregateAuthorization extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -122,7 +123,7 @@ public class AggregateAuthorization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AggregateAuthorization(String name, AggregateAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/aggregateAuthorization:AggregateAuthorization", name, args == null ? AggregateAuthorizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/aggregateAuthorization:AggregateAuthorization", name, args == null ? AggregateAuthorizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AggregateAuthorization(String name, Output<String> id, @Nullable AggregateAuthorizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

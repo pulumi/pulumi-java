@@ -27,13 +27,13 @@ public final class BucketTransition {
         this.transitionInDays = transitionInDays;
     }
 
-    public BucketTransitionStorageClass getStorageClass() {
+    public BucketTransitionStorageClass storageClass() {
         return this.storageClass;
     }
-    public Optional<String> getTransitionDate() {
+    public Optional<String> transitionDate() {
         return Optional.ofNullable(this.transitionDate);
     }
-    public Optional<Integer> getTransitionInDays() {
+    public Optional<Integer> transitionInDays() {
         return Optional.ofNullable(this.transitionInDays);
     }
 

@@ -23,10 +23,10 @@ public final class ServiceTaskSpecContainerSpecPrivileges {
         this.seLinuxContext = seLinuxContext;
     }
 
-    public Optional<ServiceTaskSpecContainerSpecPrivilegesCredentialSpec> getCredentialSpec() {
+    public Optional<ServiceTaskSpecContainerSpecPrivilegesCredentialSpec> credentialSpec() {
         return Optional.ofNullable(this.credentialSpec);
     }
-    public Optional<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext> getSeLinuxContext() {
+    public Optional<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext> seLinuxContext() {
         return Optional.ofNullable(this.seLinuxContext);
     }
 

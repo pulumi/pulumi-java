@@ -10,6 +10,7 @@ import io.pulumi.azurenative.authorization.inputs.AccessReviewReviewerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="autoApplyDecisionsEnabled")
       private final @Nullable Output<Boolean> autoApplyDecisionsEnabled;
 
-    public Output<Boolean> getAutoApplyDecisionsEnabled() {
-        return this.autoApplyDecisionsEnabled == null ? Output.empty() : this.autoApplyDecisionsEnabled;
+    public Output<Boolean> autoApplyDecisionsEnabled() {
+        return this.autoApplyDecisionsEnabled == null ? Codegen.empty() : this.autoApplyDecisionsEnabled;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="backupReviewers")
       private final @Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers;
 
-    public Output<List<AccessReviewReviewerArgs>> getBackupReviewers() {
-        return this.backupReviewers == null ? Output.empty() : this.backupReviewers;
+    public Output<List<AccessReviewReviewerArgs>> backupReviewers() {
+        return this.backupReviewers == null ? Codegen.empty() : this.backupReviewers;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="defaultDecision")
       private final @Nullable Output<Either<String,DefaultDecisionType>> defaultDecision;
 
-    public Output<Either<String,DefaultDecisionType>> getDefaultDecision() {
-        return this.defaultDecision == null ? Output.empty() : this.defaultDecision;
+    public Output<Either<String,DefaultDecisionType>> defaultDecision() {
+        return this.defaultDecision == null ? Codegen.empty() : this.defaultDecision;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="defaultDecisionEnabled")
       private final @Nullable Output<Boolean> defaultDecisionEnabled;
 
-    public Output<Boolean> getDefaultDecisionEnabled() {
-        return this.defaultDecisionEnabled == null ? Output.empty() : this.defaultDecisionEnabled;
+    public Output<Boolean> defaultDecisionEnabled() {
+        return this.defaultDecisionEnabled == null ? Codegen.empty() : this.defaultDecisionEnabled;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="descriptionForAdmins")
       private final @Nullable Output<String> descriptionForAdmins;
 
-    public Output<String> getDescriptionForAdmins() {
-        return this.descriptionForAdmins == null ? Output.empty() : this.descriptionForAdmins;
+    public Output<String> descriptionForAdmins() {
+        return this.descriptionForAdmins == null ? Codegen.empty() : this.descriptionForAdmins;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="descriptionForReviewers")
       private final @Nullable Output<String> descriptionForReviewers;
 
-    public Output<String> getDescriptionForReviewers() {
-        return this.descriptionForReviewers == null ? Output.empty() : this.descriptionForReviewers;
+    public Output<String> descriptionForReviewers() {
+        return this.descriptionForReviewers == null ? Codegen.empty() : this.descriptionForReviewers;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
-        return this.endDate == null ? Output.empty() : this.endDate;
+    public Output<String> endDate() {
+        return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="inactiveDuration")
       private final @Nullable Output<String> inactiveDuration;
 
-    public Output<String> getInactiveDuration() {
-        return this.inactiveDuration == null ? Output.empty() : this.inactiveDuration;
+    public Output<String> inactiveDuration() {
+        return this.inactiveDuration == null ? Codegen.empty() : this.inactiveDuration;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="instanceDurationInDays")
       private final @Nullable Output<Integer> instanceDurationInDays;
 
-    public Output<Integer> getInstanceDurationInDays() {
-        return this.instanceDurationInDays == null ? Output.empty() : this.instanceDurationInDays;
+    public Output<Integer> instanceDurationInDays() {
+        return this.instanceDurationInDays == null ? Codegen.empty() : this.instanceDurationInDays;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="instances")
       private final @Nullable Output<List<AccessReviewInstanceArgs>> instances;
 
-    public Output<List<AccessReviewInstanceArgs>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+    public Output<List<AccessReviewInstanceArgs>> instances() {
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+    public Output<Integer> interval() {
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="justificationRequiredOnApproval")
       private final @Nullable Output<Boolean> justificationRequiredOnApproval;
 
-    public Output<Boolean> getJustificationRequiredOnApproval() {
-        return this.justificationRequiredOnApproval == null ? Output.empty() : this.justificationRequiredOnApproval;
+    public Output<Boolean> justificationRequiredOnApproval() {
+        return this.justificationRequiredOnApproval == null ? Codegen.empty() : this.justificationRequiredOnApproval;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="mailNotificationsEnabled")
       private final @Nullable Output<Boolean> mailNotificationsEnabled;
 
-    public Output<Boolean> getMailNotificationsEnabled() {
-        return this.mailNotificationsEnabled == null ? Output.empty() : this.mailNotificationsEnabled;
+    public Output<Boolean> mailNotificationsEnabled() {
+        return this.mailNotificationsEnabled == null ? Codegen.empty() : this.mailNotificationsEnabled;
     }
 
     /**
@@ -183,8 +184,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="numberOfOccurrences")
       private final @Nullable Output<Integer> numberOfOccurrences;
 
-    public Output<Integer> getNumberOfOccurrences() {
-        return this.numberOfOccurrences == null ? Output.empty() : this.numberOfOccurrences;
+    public Output<Integer> numberOfOccurrences() {
+        return this.numberOfOccurrences == null ? Codegen.empty() : this.numberOfOccurrences;
     }
 
     /**
@@ -194,8 +195,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="recommendationsEnabled")
       private final @Nullable Output<Boolean> recommendationsEnabled;
 
-    public Output<Boolean> getRecommendationsEnabled() {
-        return this.recommendationsEnabled == null ? Output.empty() : this.recommendationsEnabled;
+    public Output<Boolean> recommendationsEnabled() {
+        return this.recommendationsEnabled == null ? Codegen.empty() : this.recommendationsEnabled;
     }
 
     /**
@@ -205,8 +206,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="reminderNotificationsEnabled")
       private final @Nullable Output<Boolean> reminderNotificationsEnabled;
 
-    public Output<Boolean> getReminderNotificationsEnabled() {
-        return this.reminderNotificationsEnabled == null ? Output.empty() : this.reminderNotificationsEnabled;
+    public Output<Boolean> reminderNotificationsEnabled() {
+        return this.reminderNotificationsEnabled == null ? Codegen.empty() : this.reminderNotificationsEnabled;
     }
 
     /**
@@ -216,8 +217,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="reviewers")
       private final @Nullable Output<List<AccessReviewReviewerArgs>> reviewers;
 
-    public Output<List<AccessReviewReviewerArgs>> getReviewers() {
-        return this.reviewers == null ? Output.empty() : this.reviewers;
+    public Output<List<AccessReviewReviewerArgs>> reviewers() {
+        return this.reviewers == null ? Codegen.empty() : this.reviewers;
     }
 
     /**
@@ -227,8 +228,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="scheduleDefinitionId")
       private final @Nullable Output<String> scheduleDefinitionId;
 
-    public Output<String> getScheduleDefinitionId() {
-        return this.scheduleDefinitionId == null ? Output.empty() : this.scheduleDefinitionId;
+    public Output<String> scheduleDefinitionId() {
+        return this.scheduleDefinitionId == null ? Codegen.empty() : this.scheduleDefinitionId;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
-    public Output<String> getStartDate() {
-        return this.startDate == null ? Output.empty() : this.startDate;
+    public Output<String> startDate() {
+        return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
     /**
@@ -249,8 +250,8 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
-    public Output<Either<String,AccessReviewRecurrenceRangeType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,AccessReviewRecurrenceRangeType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AccessReviewScheduleDefinitionByIdArgs(
@@ -299,27 +300,27 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     }
 
     private AccessReviewScheduleDefinitionByIdArgs() {
-        this.autoApplyDecisionsEnabled = Output.empty();
-        this.backupReviewers = Output.empty();
-        this.defaultDecision = Output.empty();
-        this.defaultDecisionEnabled = Output.empty();
-        this.descriptionForAdmins = Output.empty();
-        this.descriptionForReviewers = Output.empty();
-        this.displayName = Output.empty();
-        this.endDate = Output.empty();
-        this.inactiveDuration = Output.empty();
-        this.instanceDurationInDays = Output.empty();
-        this.instances = Output.empty();
-        this.interval = Output.empty();
-        this.justificationRequiredOnApproval = Output.empty();
-        this.mailNotificationsEnabled = Output.empty();
-        this.numberOfOccurrences = Output.empty();
-        this.recommendationsEnabled = Output.empty();
-        this.reminderNotificationsEnabled = Output.empty();
-        this.reviewers = Output.empty();
-        this.scheduleDefinitionId = Output.empty();
-        this.startDate = Output.empty();
-        this.type = Output.empty();
+        this.autoApplyDecisionsEnabled = Codegen.empty();
+        this.backupReviewers = Codegen.empty();
+        this.defaultDecision = Codegen.empty();
+        this.defaultDecisionEnabled = Codegen.empty();
+        this.descriptionForAdmins = Codegen.empty();
+        this.descriptionForReviewers = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.endDate = Codegen.empty();
+        this.inactiveDuration = Codegen.empty();
+        this.instanceDurationInDays = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.justificationRequiredOnApproval = Codegen.empty();
+        this.mailNotificationsEnabled = Codegen.empty();
+        this.numberOfOccurrences = Codegen.empty();
+        this.recommendationsEnabled = Codegen.empty();
+        this.reminderNotificationsEnabled = Codegen.empty();
+        this.reviewers = Codegen.empty();
+        this.scheduleDefinitionId = Codegen.empty();
+        this.startDate = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -387,7 +388,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder autoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
-            this.autoApplyDecisionsEnabled = Output.ofNullable(autoApplyDecisionsEnabled);
+            this.autoApplyDecisionsEnabled = Codegen.ofNullable(autoApplyDecisionsEnabled);
             return this;
         }
         public Builder backupReviewers(@Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers) {
@@ -395,7 +396,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder backupReviewers(@Nullable List<AccessReviewReviewerArgs> backupReviewers) {
-            this.backupReviewers = Output.ofNullable(backupReviewers);
+            this.backupReviewers = Codegen.ofNullable(backupReviewers);
             return this;
         }
         public Builder backupReviewers(AccessReviewReviewerArgs... backupReviewers) {
@@ -406,7 +407,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder defaultDecision(@Nullable Either<String,DefaultDecisionType> defaultDecision) {
-            this.defaultDecision = Output.ofNullable(defaultDecision);
+            this.defaultDecision = Codegen.ofNullable(defaultDecision);
             return this;
         }
         public Builder defaultDecisionEnabled(@Nullable Output<Boolean> defaultDecisionEnabled) {
@@ -414,7 +415,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder defaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
-            this.defaultDecisionEnabled = Output.ofNullable(defaultDecisionEnabled);
+            this.defaultDecisionEnabled = Codegen.ofNullable(defaultDecisionEnabled);
             return this;
         }
         public Builder descriptionForAdmins(@Nullable Output<String> descriptionForAdmins) {
@@ -422,7 +423,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder descriptionForAdmins(@Nullable String descriptionForAdmins) {
-            this.descriptionForAdmins = Output.ofNullable(descriptionForAdmins);
+            this.descriptionForAdmins = Codegen.ofNullable(descriptionForAdmins);
             return this;
         }
         public Builder descriptionForReviewers(@Nullable Output<String> descriptionForReviewers) {
@@ -430,7 +431,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder descriptionForReviewers(@Nullable String descriptionForReviewers) {
-            this.descriptionForReviewers = Output.ofNullable(descriptionForReviewers);
+            this.descriptionForReviewers = Codegen.ofNullable(descriptionForReviewers);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -438,7 +439,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder endDate(@Nullable Output<String> endDate) {
@@ -446,7 +447,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Output.ofNullable(endDate);
+            this.endDate = Codegen.ofNullable(endDate);
             return this;
         }
         public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
@@ -454,7 +455,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
-            this.inactiveDuration = Output.ofNullable(inactiveDuration);
+            this.inactiveDuration = Codegen.ofNullable(inactiveDuration);
             return this;
         }
         public Builder instanceDurationInDays(@Nullable Output<Integer> instanceDurationInDays) {
@@ -462,7 +463,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder instanceDurationInDays(@Nullable Integer instanceDurationInDays) {
-            this.instanceDurationInDays = Output.ofNullable(instanceDurationInDays);
+            this.instanceDurationInDays = Codegen.ofNullable(instanceDurationInDays);
             return this;
         }
         public Builder instances(@Nullable Output<List<AccessReviewInstanceArgs>> instances) {
@@ -470,7 +471,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder instances(@Nullable List<AccessReviewInstanceArgs> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(AccessReviewInstanceArgs... instances) {
@@ -481,7 +482,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder justificationRequiredOnApproval(@Nullable Output<Boolean> justificationRequiredOnApproval) {
@@ -489,7 +490,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder justificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
-            this.justificationRequiredOnApproval = Output.ofNullable(justificationRequiredOnApproval);
+            this.justificationRequiredOnApproval = Codegen.ofNullable(justificationRequiredOnApproval);
             return this;
         }
         public Builder mailNotificationsEnabled(@Nullable Output<Boolean> mailNotificationsEnabled) {
@@ -497,7 +498,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder mailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
-            this.mailNotificationsEnabled = Output.ofNullable(mailNotificationsEnabled);
+            this.mailNotificationsEnabled = Codegen.ofNullable(mailNotificationsEnabled);
             return this;
         }
         public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
@@ -505,7 +506,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
-            this.numberOfOccurrences = Output.ofNullable(numberOfOccurrences);
+            this.numberOfOccurrences = Codegen.ofNullable(numberOfOccurrences);
             return this;
         }
         public Builder recommendationsEnabled(@Nullable Output<Boolean> recommendationsEnabled) {
@@ -513,7 +514,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder recommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
-            this.recommendationsEnabled = Output.ofNullable(recommendationsEnabled);
+            this.recommendationsEnabled = Codegen.ofNullable(recommendationsEnabled);
             return this;
         }
         public Builder reminderNotificationsEnabled(@Nullable Output<Boolean> reminderNotificationsEnabled) {
@@ -521,7 +522,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder reminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
-            this.reminderNotificationsEnabled = Output.ofNullable(reminderNotificationsEnabled);
+            this.reminderNotificationsEnabled = Codegen.ofNullable(reminderNotificationsEnabled);
             return this;
         }
         public Builder reviewers(@Nullable Output<List<AccessReviewReviewerArgs>> reviewers) {
@@ -529,7 +530,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder reviewers(@Nullable List<AccessReviewReviewerArgs> reviewers) {
-            this.reviewers = Output.ofNullable(reviewers);
+            this.reviewers = Codegen.ofNullable(reviewers);
             return this;
         }
         public Builder reviewers(AccessReviewReviewerArgs... reviewers) {
@@ -540,7 +541,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder scheduleDefinitionId(@Nullable String scheduleDefinitionId) {
-            this.scheduleDefinitionId = Output.ofNullable(scheduleDefinitionId);
+            this.scheduleDefinitionId = Codegen.ofNullable(scheduleDefinitionId);
             return this;
         }
         public Builder startDate(@Nullable Output<String> startDate) {
@@ -548,7 +549,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Output.ofNullable(startDate);
+            this.startDate = Codegen.ofNullable(startDate);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
@@ -556,7 +557,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
             return this;
         }
         public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AccessReviewScheduleDefinitionByIdArgs build() {
             return new AccessReviewScheduleDefinitionByIdArgs(autoApplyDecisionsEnabled, backupReviewers, defaultDecision, defaultDecisionEnabled, descriptionForAdmins, descriptionForReviewers, displayName, endDate, inactiveDuration, instanceDurationInDays, instances, interval, justificationRequiredOnApproval, mailNotificationsEnabled, numberOfOccurrences, recommendationsEnabled, reminderNotificationsEnabled, reviewers, scheduleDefinitionId, startDate, type);

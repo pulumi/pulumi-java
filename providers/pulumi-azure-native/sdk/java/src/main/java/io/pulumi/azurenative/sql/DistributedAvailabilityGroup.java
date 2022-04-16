@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The distributed availability group id
      * 
      */
-    public Output<String> getDistributedAvailabilityGroupId() {
+    public Output<String> distributedAvailabilityGroupId() {
         return this.distributedAvailabilityGroupId;
     }
     /**
@@ -55,7 +56,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The last hardened lsn
      * 
      */
-    public Output<String> getLastHardenedLsn() {
+    public Output<String> lastHardenedLsn() {
         return this.lastHardenedLsn;
     }
     /**
@@ -69,7 +70,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The link state
      * 
      */
-    public Output<String> getLinkState() {
+    public Output<String> linkState() {
         return this.linkState;
     }
     /**
@@ -83,7 +84,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +98,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The primary availability group name
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryAvailabilityGroupName() {
+    public Output</* @Nullable */ String> primaryAvailabilityGroupName() {
         return this.primaryAvailabilityGroupName;
     }
     /**
@@ -111,7 +112,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The replication mode of a distributed availability group. Parameter will be ignored during link creation.
      * 
      */
-    public Output</* @Nullable */ String> getReplicationMode() {
+    public Output</* @Nullable */ String> replicationMode() {
         return this.replicationMode;
     }
     /**
@@ -125,7 +126,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The secondary availability group name
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryAvailabilityGroupName() {
+    public Output</* @Nullable */ String> secondaryAvailabilityGroupName() {
         return this.secondaryAvailabilityGroupName;
     }
     /**
@@ -139,7 +140,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The source endpoint
      * 
      */
-    public Output</* @Nullable */ String> getSourceEndpoint() {
+    public Output</* @Nullable */ String> sourceEndpoint() {
         return this.sourceEndpoint;
     }
     /**
@@ -153,7 +154,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The source replica id
      * 
      */
-    public Output<String> getSourceReplicaId() {
+    public Output<String> sourceReplicaId() {
         return this.sourceReplicaId;
     }
     /**
@@ -167,7 +168,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The name of the target database
      * 
      */
-    public Output</* @Nullable */ String> getTargetDatabase() {
+    public Output</* @Nullable */ String> targetDatabase() {
         return this.targetDatabase;
     }
     /**
@@ -181,7 +182,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return The target replica id
      * 
      */
-    public Output<String> getTargetReplicaId() {
+    public Output<String> targetReplicaId() {
         return this.targetReplicaId;
     }
     /**
@@ -195,7 +196,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -221,7 +222,7 @@ public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public DistributedAvailabilityGroup(String name, DistributedAvailabilityGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:DistributedAvailabilityGroup", name, args == null ? DistributedAvailabilityGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:DistributedAvailabilityGroup", name, args == null ? DistributedAvailabilityGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DistributedAvailabilityGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

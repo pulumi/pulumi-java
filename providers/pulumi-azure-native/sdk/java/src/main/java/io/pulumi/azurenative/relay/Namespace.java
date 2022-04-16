@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -57,7 +58,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Identifier for Azure Insights metrics.
      * 
      */
-    public Output<String> getMetricId() {
+    public Output<String> metricId() {
         return this.metricId;
     }
     /**
@@ -85,13 +86,13 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -105,7 +106,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Endpoint you can use to perform Service Bus operations.
      * 
      */
-    public Output<String> getServiceBusEndpoint() {
+    public Output<String> serviceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
@@ -119,7 +120,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return SKU of the namespace.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -133,7 +134,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -147,7 +148,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -161,7 +162,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 
@@ -187,7 +188,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Namespace(String name, NamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:relay:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:relay:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Namespace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

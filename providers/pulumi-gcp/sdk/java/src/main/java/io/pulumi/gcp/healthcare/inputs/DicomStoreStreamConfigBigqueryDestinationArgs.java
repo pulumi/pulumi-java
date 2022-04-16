@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
     @Import(name="tableUri", required=true)
       private final Output<String> tableUri;
 
-    public Output<String> getTableUri() {
+    public Output<String> tableUri() {
         return this.tableUri;
     }
 
@@ -29,7 +30,7 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
     }
 
     private DicomStoreStreamConfigBigqueryDestinationArgs() {
-        this.tableUri = Output.empty();
+        this.tableUri = Codegen.empty();
     }
 
     public static Builder builder() {

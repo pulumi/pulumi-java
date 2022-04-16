@@ -18,28 +18,28 @@ public final class GetRouterBgp extends io.pulumi.resources.InvokeArgs {
     @Import(name="advertiseMode", required=true)
       private final String advertiseMode;
 
-    public String getAdvertiseMode() {
+    public String advertiseMode() {
         return this.advertiseMode;
     }
 
     @Import(name="advertisedGroups", required=true)
       private final List<String> advertisedGroups;
 
-    public List<String> getAdvertisedGroups() {
+    public List<String> advertisedGroups() {
         return this.advertisedGroups;
     }
 
     @Import(name="advertisedIpRanges", required=true)
       private final List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges;
 
-    public List<GetRouterBgpAdvertisedIpRange> getAdvertisedIpRanges() {
+    public List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges() {
         return this.advertisedIpRanges;
     }
 
     @Import(name="asn", required=true)
       private final Integer asn;
 
-    public Integer getAsn() {
+    public Integer asn() {
         return this.asn;
     }
 

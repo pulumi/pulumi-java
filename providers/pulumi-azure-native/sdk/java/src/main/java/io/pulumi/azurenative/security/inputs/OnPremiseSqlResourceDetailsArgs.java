@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -35,7 +36,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
-    public Output<String> getMachineName() {
+    public Output<String> machineName() {
         return this.machineName;
     }
 
@@ -46,7 +47,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -58,7 +59,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -69,7 +70,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     @Import(name="sourceComputerId", required=true)
       private final Output<String> sourceComputerId;
 
-    public Output<String> getSourceComputerId() {
+    public Output<String> sourceComputerId() {
         return this.sourceComputerId;
     }
 
@@ -80,7 +81,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     @Import(name="vmuuid", required=true)
       private final Output<String> vmuuid;
 
-    public Output<String> getVmuuid() {
+    public Output<String> vmuuid() {
         return this.vmuuid;
     }
 
@@ -91,7 +92,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -113,13 +114,13 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     }
 
     private OnPremiseSqlResourceDetailsArgs() {
-        this.databaseName = Output.empty();
-        this.machineName = Output.empty();
-        this.serverName = Output.empty();
-        this.source = Output.empty();
-        this.sourceComputerId = Output.empty();
-        this.vmuuid = Output.empty();
-        this.workspaceId = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.machineName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceComputerId = Codegen.empty();
+        this.vmuuid = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {

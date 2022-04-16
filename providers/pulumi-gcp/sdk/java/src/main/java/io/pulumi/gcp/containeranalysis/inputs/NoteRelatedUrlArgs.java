@@ -5,6 +5,7 @@ package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -44,8 +45,8 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NoteRelatedUrlArgs() {
-        this.label = Output.empty();
-        this.url = Output.empty();
+        this.label = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder url(Output<String> url) {

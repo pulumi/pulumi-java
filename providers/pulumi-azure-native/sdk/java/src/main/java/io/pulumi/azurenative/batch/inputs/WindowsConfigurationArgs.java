@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="enableAutomaticUpdates")
       private final @Nullable Output<Boolean> enableAutomaticUpdates;
 
-    public Output<Boolean> getEnableAutomaticUpdates() {
-        return this.enableAutomaticUpdates == null ? Output.empty() : this.enableAutomaticUpdates;
+    public Output<Boolean> enableAutomaticUpdates() {
+        return this.enableAutomaticUpdates == null ? Codegen.empty() : this.enableAutomaticUpdates;
     }
 
     public WindowsConfigurationArgs(@Nullable Output<Boolean> enableAutomaticUpdates) {
@@ -30,7 +31,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private WindowsConfigurationArgs() {
-        this.enableAutomaticUpdates = Output.empty();
+        this.enableAutomaticUpdates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = Output.ofNullable(enableAutomaticUpdates);
+            this.enableAutomaticUpdates = Codegen.ofNullable(enableAutomaticUpdates);
             return this;
         }        public WindowsConfigurationArgs build() {
             return new WindowsConfigurationArgs(enableAutomaticUpdates);

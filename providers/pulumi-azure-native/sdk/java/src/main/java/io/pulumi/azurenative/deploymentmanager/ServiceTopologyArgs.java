@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="artifactSourceId")
       private final @Nullable Output<String> artifactSourceId;
 
-    public Output<String> getArtifactSourceId() {
-        return this.artifactSourceId == null ? Output.empty() : this.artifactSourceId;
+    public Output<String> artifactSourceId() {
+        return this.artifactSourceId == null ? Codegen.empty() : this.artifactSourceId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceTopologyName")
       private final @Nullable Output<String> serviceTopologyName;
 
-    public Output<String> getServiceTopologyName() {
-        return this.serviceTopologyName == null ? Output.empty() : this.serviceTopologyName;
+    public Output<String> serviceTopologyName() {
+        return this.serviceTopologyName == null ? Codegen.empty() : this.serviceTopologyName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServiceTopologyArgs(
@@ -84,11 +85,11 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceTopologyArgs() {
-        this.artifactSourceId = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceTopologyName = Output.empty();
-        this.tags = Output.empty();
+        this.artifactSourceId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceTopologyName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder artifactSourceId(@Nullable String artifactSourceId) {
-            this.artifactSourceId = Output.ofNullable(artifactSourceId);
+            this.artifactSourceId = Codegen.ofNullable(artifactSourceId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -132,7 +133,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -148,7 +149,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serviceTopologyName(@Nullable String serviceTopologyName) {
-            this.serviceTopologyName = Output.ofNullable(serviceTopologyName);
+            this.serviceTopologyName = Codegen.ofNullable(serviceTopologyName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -156,7 +157,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServiceTopologyArgs build() {
             return new ServiceTopologyArgs(artifactSourceId, location, resourceGroupName, serviceTopologyName, tags);

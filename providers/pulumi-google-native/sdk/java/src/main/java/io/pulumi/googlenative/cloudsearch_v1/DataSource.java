@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudsearch_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsearch_v1.DataSourceArgs;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.GSuitePrincipalResponse;
@@ -31,7 +32,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
      * 
      */
-    public Output<Boolean> getDisableModifications() {
+    public Output<Boolean> disableModifications() {
         return this.disableModifications;
     }
     /**
@@ -45,7 +46,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return Disable serving any search or assist results.
      * 
      */
-    public Output<Boolean> getDisableServing() {
+    public Output<Boolean> disableServing() {
         return this.disableServing;
     }
     /**
@@ -59,7 +60,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return Display name of the datasource The maximum length is 300 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +74,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return List of service accounts that have indexing access.
      * 
      */
-    public Output<List<String>> getIndexingServiceAccounts() {
+    public Output<List<String>> indexingServiceAccounts() {
         return this.indexingServiceAccounts;
     }
     /**
@@ -87,7 +88,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
      * 
      */
-    public Output<List<GSuitePrincipalResponse>> getItemsVisibility() {
+    public Output<List<GSuitePrincipalResponse>> itemsVisibility() {
         return this.itemsVisibility;
     }
     /**
@@ -101,7 +102,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return IDs of the Long Running Operations (LROs) currently running for this schema.
      * 
      */
-    public Output<List<String>> getOperationIds() {
+    public Output<List<String>> operationIds() {
         return this.operationIds;
     }
     /**
@@ -129,7 +130,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return Can a user request to get thumbnail URI for Items indexed in this data source.
      * 
      */
-    public Output<Boolean> getReturnThumbnailUrls() {
+    public Output<Boolean> returnThumbnailUrls() {
         return this.returnThumbnailUrls;
     }
     /**
@@ -143,7 +144,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @return A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
 
@@ -169,7 +170,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataSource(String name, DataSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudsearch/v1:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudsearch/v1:DataSource", name, args == null ? DataSourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataSource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

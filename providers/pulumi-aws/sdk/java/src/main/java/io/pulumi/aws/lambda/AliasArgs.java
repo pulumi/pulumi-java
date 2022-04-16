@@ -6,6 +6,7 @@ package io.pulumi.aws.lambda;
 import io.pulumi.aws.lambda.inputs.AliasRoutingConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -44,7 +45,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion", required=true)
       private final Output<String> functionVersion;
 
-    public Output<String> getFunctionVersion() {
+    public Output<String> functionVersion() {
         return this.functionVersion;
     }
 
@@ -55,8 +56,8 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
       private final @Nullable Output<AliasRoutingConfigArgs> routingConfig;
 
-    public Output<AliasRoutingConfigArgs> getRoutingConfig() {
-        return this.routingConfig == null ? Output.empty() : this.routingConfig;
+    public Output<AliasRoutingConfigArgs> routingConfig() {
+        return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
     }
 
     public AliasArgs(
@@ -84,11 +85,11 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasArgs() {
-        this.description = Output.empty();
-        this.functionName = Output.empty();
-        this.functionVersion = Output.empty();
-        this.name = Output.empty();
-        this.routingConfig = Output.empty();
+        this.description = Codegen.empty();
+        this.functionName = Codegen.empty();
+        this.functionVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.routingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder functionName(Output<String> functionName) {
@@ -148,7 +149,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder routingConfig(@Nullable Output<AliasRoutingConfigArgs> routingConfig) {
@@ -156,7 +157,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingConfig(@Nullable AliasRoutingConfigArgs routingConfig) {
-            this.routingConfig = Output.ofNullable(routingConfig);
+            this.routingConfig = Codegen.ofNullable(routingConfig);
             return this;
         }        public AliasArgs build() {
             return new AliasArgs(description, functionName, functionVersion, name, routingConfig);

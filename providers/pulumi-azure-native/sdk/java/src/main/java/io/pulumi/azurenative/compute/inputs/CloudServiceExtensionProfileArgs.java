@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ExtensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
     @Import(name="extensions")
       private final @Nullable Output<List<ExtensionArgs>> extensions;
 
-    public Output<List<ExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+    public Output<List<ExtensionArgs>> extensions() {
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     public CloudServiceExtensionProfileArgs(@Nullable Output<List<ExtensionArgs>> extensions) {
@@ -35,7 +36,7 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
     }
 
     private CloudServiceExtensionProfileArgs() {
-        this.extensions = Output.empty();
+        this.extensions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder extensions(@Nullable List<ExtensionArgs> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder extensions(ExtensionArgs... extensions) {

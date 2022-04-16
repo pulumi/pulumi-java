@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.enums.AdditionalWorkspaceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     @Import(name="dataTypes")
       private final @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
 
-    public Output<List<Either<String,AdditionalWorkspaceDataType>>> getDataTypes() {
-        return this.dataTypes == null ? Output.empty() : this.dataTypes;
+    public Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes() {
+        return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     @Import(name="type")
       private final @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
 
-    public Output<Either<String,AdditionalWorkspaceType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,AdditionalWorkspaceType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     @Import(name="workspace")
       private final @Nullable Output<String> workspace;
 
-    public Output<String> getWorkspace() {
-        return this.workspace == null ? Output.empty() : this.workspace;
+    public Output<String> workspace() {
+        return this.workspace == null ? Codegen.empty() : this.workspace;
     }
 
     public AdditionalWorkspacesPropertiesArgs(
@@ -65,9 +66,9 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     }
 
     private AdditionalWorkspacesPropertiesArgs() {
-        this.dataTypes = Output.empty();
-        this.type = Output.empty();
-        this.workspace = Output.empty();
+        this.dataTypes = Codegen.empty();
+        this.type = Codegen.empty();
+        this.workspace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder dataTypes(@Nullable List<Either<String,AdditionalWorkspaceDataType>> dataTypes) {
-            this.dataTypes = Output.ofNullable(dataTypes);
+            this.dataTypes = Codegen.ofNullable(dataTypes);
             return this;
         }
         public Builder dataTypes(Either<String,AdditionalWorkspaceDataType>... dataTypes) {
@@ -110,7 +111,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder type(@Nullable Either<String,AdditionalWorkspaceType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder workspace(@Nullable Output<String> workspace) {
@@ -118,7 +119,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder workspace(@Nullable String workspace) {
-            this.workspace = Output.ofNullable(workspace);
+            this.workspace = Codegen.ofNullable(workspace);
             return this;
         }        public AdditionalWorkspacesPropertiesArgs build() {
             return new AdditionalWorkspacesPropertiesArgs(dataTypes, type, workspace);

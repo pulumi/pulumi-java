@@ -5,6 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class IntentFollowUpPromptRejectionStatementMessageArgs extends io.
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -33,7 +34,7 @@ public final class IntentFollowUpPromptRejectionStatementMessageArgs extends io.
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -45,8 +46,8 @@ public final class IntentFollowUpPromptRejectionStatementMessageArgs extends io.
     @Import(name="groupNumber")
       private final @Nullable Output<Integer> groupNumber;
 
-    public Output<Integer> getGroupNumber() {
-        return this.groupNumber == null ? Output.empty() : this.groupNumber;
+    public Output<Integer> groupNumber() {
+        return this.groupNumber == null ? Codegen.empty() : this.groupNumber;
     }
 
     public IntentFollowUpPromptRejectionStatementMessageArgs(
@@ -59,9 +60,9 @@ public final class IntentFollowUpPromptRejectionStatementMessageArgs extends io.
     }
 
     private IntentFollowUpPromptRejectionStatementMessageArgs() {
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.groupNumber = Output.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.groupNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class IntentFollowUpPromptRejectionStatementMessageArgs extends io.
             return this;
         }
         public Builder groupNumber(@Nullable Integer groupNumber) {
-            this.groupNumber = Output.ofNullable(groupNumber);
+            this.groupNumber = Codegen.ofNullable(groupNumber);
             return this;
         }        public IntentFollowUpPromptRejectionStatementMessageArgs build() {
             return new IntentFollowUpPromptRejectionStatementMessageArgs(content, contentType, groupNumber);

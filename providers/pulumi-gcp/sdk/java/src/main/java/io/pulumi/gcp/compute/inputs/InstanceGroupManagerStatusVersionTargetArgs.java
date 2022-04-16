@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class InstanceGroupManagerStatusVersionTargetArgs extends io.pulumi
     @Import(name="isReached")
       private final @Nullable Output<Boolean> isReached;
 
-    public Output<Boolean> getIsReached() {
-        return this.isReached == null ? Output.empty() : this.isReached;
+    public Output<Boolean> isReached() {
+        return this.isReached == null ? Codegen.empty() : this.isReached;
     }
 
     public InstanceGroupManagerStatusVersionTargetArgs(@Nullable Output<Boolean> isReached) {
@@ -26,7 +27,7 @@ public final class InstanceGroupManagerStatusVersionTargetArgs extends io.pulumi
     }
 
     private InstanceGroupManagerStatusVersionTargetArgs() {
-        this.isReached = Output.empty();
+        this.isReached = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class InstanceGroupManagerStatusVersionTargetArgs extends io.pulumi
             return this;
         }
         public Builder isReached(@Nullable Boolean isReached) {
-            this.isReached = Output.ofNullable(isReached);
+            this.isReached = Codegen.ofNullable(isReached);
             return this;
         }        public InstanceGroupManagerStatusVersionTargetArgs build() {
             return new InstanceGroupManagerStatusVersionTargetArgs(isReached);

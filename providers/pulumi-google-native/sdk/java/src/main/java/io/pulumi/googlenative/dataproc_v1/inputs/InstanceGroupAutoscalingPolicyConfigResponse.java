@@ -23,7 +23,7 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse extends io.pulum
     @Import(name="maxInstances", required=true)
       private final Integer maxInstances;
 
-    public Integer getMaxInstances() {
+    public Integer maxInstances() {
         return this.maxInstances;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse extends io.pulum
     @Import(name="minInstances", required=true)
       private final Integer minInstances;
 
-    public Integer getMinInstances() {
+    public Integer minInstances() {
         return this.minInstances;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse extends io.pulum
     @Import(name="weight", required=true)
       private final Integer weight;
 
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

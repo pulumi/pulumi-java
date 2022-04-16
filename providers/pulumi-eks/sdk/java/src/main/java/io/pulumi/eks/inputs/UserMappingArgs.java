@@ -5,6 +5,7 @@ package io.pulumi.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groups", required=true)
       private final Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups;
     }
 
@@ -36,7 +37,7 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 
@@ -47,7 +48,7 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -61,9 +62,9 @@ public final class UserMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserMappingArgs() {
-        this.groups = Output.empty();
-        this.userArn = Output.empty();
-        this.username = Output.empty();
+        this.groups = Codegen.empty();
+        this.userArn = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

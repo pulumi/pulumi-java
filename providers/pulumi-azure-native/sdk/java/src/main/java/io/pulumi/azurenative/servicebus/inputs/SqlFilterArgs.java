@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compatibilityLevel")
       private final @Nullable Output<Integer> compatibilityLevel;
 
-    public Output<Integer> getCompatibilityLevel() {
-        return this.compatibilityLevel == null ? Output.empty() : this.compatibilityLevel;
+    public Output<Integer> compatibilityLevel() {
+        return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiresPreprocessing")
       private final @Nullable Output<Boolean> requiresPreprocessing;
 
-    public Output<Boolean> getRequiresPreprocessing() {
-        return this.requiresPreprocessing == null ? Output.empty() : this.requiresPreprocessing;
+    public Output<Boolean> requiresPreprocessing() {
+        return this.requiresPreprocessing == null ? Codegen.empty() : this.requiresPreprocessing;
     }
 
     /**
@@ -49,23 +50,23 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlExpression")
       private final @Nullable Output<String> sqlExpression;
 
-    public Output<String> getSqlExpression() {
-        return this.sqlExpression == null ? Output.empty() : this.sqlExpression;
+    public Output<String> sqlExpression() {
+        return this.sqlExpression == null ? Codegen.empty() : this.sqlExpression;
     }
 
     public SqlFilterArgs(
         @Nullable Output<Integer> compatibilityLevel,
         @Nullable Output<Boolean> requiresPreprocessing,
         @Nullable Output<String> sqlExpression) {
-        this.compatibilityLevel = compatibilityLevel == null ? Output.ofNullable(20) : compatibilityLevel;
-        this.requiresPreprocessing = requiresPreprocessing == null ? Output.ofNullable(true) : requiresPreprocessing;
+        this.compatibilityLevel = compatibilityLevel == null ? Codegen.ofNullable(20) : compatibilityLevel;
+        this.requiresPreprocessing = requiresPreprocessing == null ? Codegen.ofNullable(true) : requiresPreprocessing;
         this.sqlExpression = sqlExpression;
     }
 
     private SqlFilterArgs() {
-        this.compatibilityLevel = Output.empty();
-        this.requiresPreprocessing = Output.empty();
-        this.sqlExpression = Output.empty();
+        this.compatibilityLevel = Codegen.empty();
+        this.requiresPreprocessing = Codegen.empty();
+        this.sqlExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
-            this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
+            this.compatibilityLevel = Codegen.ofNullable(compatibilityLevel);
             return this;
         }
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
@@ -105,7 +106,7 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
-            this.requiresPreprocessing = Output.ofNullable(requiresPreprocessing);
+            this.requiresPreprocessing = Codegen.ofNullable(requiresPreprocessing);
             return this;
         }
         public Builder sqlExpression(@Nullable Output<String> sqlExpression) {
@@ -113,7 +114,7 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlExpression(@Nullable String sqlExpression) {
-            this.sqlExpression = Output.ofNullable(sqlExpression);
+            this.sqlExpression = Codegen.ofNullable(sqlExpression);
             return this;
         }        public SqlFilterArgs build() {
             return new SqlFilterArgs(compatibilityLevel, requiresPreprocessing, sqlExpression);

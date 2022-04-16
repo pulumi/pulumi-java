@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,8 +20,8 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> payload() {
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
@@ -41,8 +42,8 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="useBase64")
       private final @Nullable Output<Boolean> useBase64;
 
-    public Output<Boolean> getUseBase64() {
-        return this.useBase64 == null ? Output.empty() : this.useBase64;
+    public Output<Boolean> useBase64() {
+        return this.useBase64 == null ? Codegen.empty() : this.useBase64;
     }
 
     public DetectorModelSqsArgs(
@@ -55,9 +56,9 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DetectorModelSqsArgs() {
-        this.payload = Output.empty();
-        this.queueUrl = Output.empty();
-        this.useBase64 = Output.empty();
+        this.payload = Codegen.empty();
+        this.queueUrl = Codegen.empty();
+        this.useBase64 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder queueUrl(Output<String> queueUrl) {
@@ -105,7 +106,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder useBase64(@Nullable Boolean useBase64) {
-            this.useBase64 = Output.ofNullable(useBase64);
+            this.useBase64 = Codegen.ofNullable(useBase64);
             return this;
         }        public DetectorModelSqsArgs build() {
             return new DetectorModelSqsArgs(payload, queueUrl, useBase64);

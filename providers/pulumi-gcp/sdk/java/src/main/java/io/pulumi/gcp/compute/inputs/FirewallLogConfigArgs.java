@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metadata", required=true)
       private final Output<String> metadata;
 
-    public Output<String> getMetadata() {
+    public Output<String> metadata() {
         return this.metadata;
     }
 
@@ -30,7 +31,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FirewallLogConfigArgs() {
-        this.metadata = Output.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {

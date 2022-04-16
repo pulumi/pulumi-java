@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     @Import(name="sizeInGib", required=true)
       private final Output<Integer> sizeInGib;
 
-    public Output<Integer> getSizeInGib() {
+    public Output<Integer> sizeInGib() {
         return this.sizeInGib;
     }
 
@@ -29,7 +30,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     }
 
     private TaskDefinitionEphemeralStorageArgs() {
-        this.sizeInGib = Output.empty();
+        this.sizeInGib = Codegen.empty();
     }
 
     public static Builder builder() {

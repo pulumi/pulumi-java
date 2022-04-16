@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.AgentArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse;
@@ -32,7 +33,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse> getAdvancedSettings() {
+    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse> advancedSettings() {
         return this.advancedSettings;
     }
     /**
@@ -46,7 +47,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
      */
-    public Output<String> getAvatarUri() {
+    public Output<String> avatarUri() {
         return this.avatarUri;
     }
     /**
@@ -60,7 +61,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
      * 
      */
-    public Output<String> getDefaultLanguageCode() {
+    public Output<String> defaultLanguageCode() {
         return this.defaultLanguageCode;
     }
     /**
@@ -74,7 +75,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the agent, unique within the location.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -102,7 +103,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Indicates if automatic spell correction is enabled in detect intent requests.
      * 
      */
-    public Output<Boolean> getEnableSpellCorrection() {
+    public Output<Boolean> enableSpellCorrection() {
         return this.enableSpellCorrection;
     }
     /**
@@ -116,7 +117,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
      * 
      */
-    public Output<Boolean> getEnableStackdriverLogging() {
+    public Output<Boolean> enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
     /**
@@ -130,7 +131,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +145,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
      */
-    public Output<String> getSecuritySettings() {
+    public Output<String> securitySettings() {
         return this.securitySettings;
     }
     /**
@@ -158,7 +159,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Speech recognition related settings.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse> getSpeechToTextSettings() {
+    public Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse> speechToTextSettings() {
         return this.speechToTextSettings;
     }
     /**
@@ -172,7 +173,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
      * 
      */
-    public Output<String> getStartFlow() {
+    public Output<String> startFlow() {
         return this.startFlow;
     }
     /**
@@ -186,7 +187,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The list of all languages supported by the agent (except for the `default_language_code`).
      * 
      */
-    public Output<List<String>> getSupportedLanguageCodes() {
+    public Output<List<String>> supportedLanguageCodes() {
         return this.supportedLanguageCodes;
     }
     /**
@@ -200,7 +201,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 
@@ -226,7 +227,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Agent(String name, AgentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3beta1:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3beta1:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Agent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

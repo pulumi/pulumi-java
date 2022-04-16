@@ -5,6 +5,7 @@ package io.pulumi.azurenative.offazure;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="peConnectionName")
       private final @Nullable Output<String> peConnectionName;
 
-    public Output<String> getPeConnectionName() {
-        return this.peConnectionName == null ? Output.empty() : this.peConnectionName;
+    public Output<String> peConnectionName() {
+        return this.peConnectionName == null ? Codegen.empty() : this.peConnectionName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +44,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 
@@ -57,9 +58,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.peConnectionName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.siteName = Output.empty();
+        this.peConnectionName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.siteName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder peConnectionName(@Nullable String peConnectionName) {
-            this.peConnectionName = Output.ofNullable(peConnectionName);
+            this.peConnectionName = Codegen.ofNullable(peConnectionName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

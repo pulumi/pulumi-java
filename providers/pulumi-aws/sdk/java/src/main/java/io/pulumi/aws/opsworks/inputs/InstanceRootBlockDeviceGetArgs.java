@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,29 +20,29 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+    public Output<Boolean> deleteOnTermination() {
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+    public Output<Integer> volumeSize() {
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+    public Output<String> volumeType() {
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public InstanceRootBlockDeviceGetArgs(
@@ -56,10 +57,10 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
     }
 
     private InstanceRootBlockDeviceGetArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.iops = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -101,7 +102,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -109,7 +110,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -117,7 +118,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public InstanceRootBlockDeviceGetArgs build() {
             return new InstanceRootBlockDeviceGetArgs(deleteOnTermination, iops, volumeSize, volumeType);

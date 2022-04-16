@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Type of the managed instance administrator.
      * 
      */
-    public Output<String> getAdministratorType() {
+    public Output<String> administratorType() {
         return this.administratorType;
     }
     /**
@@ -55,7 +56,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Login name of the managed instance administrator.
      * 
      */
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
     /**
@@ -69,7 +70,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return SID (object ID) of the managed instance administrator.
      * 
      */
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
     /**
@@ -97,7 +98,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Tenant ID of the managed instance administrator.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -111,7 +112,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -137,7 +138,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedInstanceAdministrator(String name, ManagedInstanceAdministratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ManagedInstanceAdministrator", name, args == null ? ManagedInstanceAdministratorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:ManagedInstanceAdministrator", name, args == null ? ManagedInstanceAdministratorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedInstanceAdministrator(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecr.inputs;
 import io.pulumi.awsnative.ecr.enums.RepositoryEncryptionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,15 +27,15 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
     @Import(name="encryptionType", required=true)
       private final Output<RepositoryEncryptionType> encryptionType;
 
-    public Output<RepositoryEncryptionType> getEncryptionType() {
+    public Output<RepositoryEncryptionType> encryptionType() {
         return this.encryptionType;
     }
 
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+    public Output<String> kmsKey() {
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     public RepositoryEncryptionConfigurationArgs(
@@ -45,8 +46,8 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
     }
 
     private RepositoryEncryptionConfigurationArgs() {
-        this.encryptionType = Output.empty();
-        this.kmsKey = Output.empty();
+        this.encryptionType = Codegen.empty();
+        this.kmsKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }        public RepositoryEncryptionConfigurationArgs build() {
             return new RepositoryEncryptionConfigurationArgs(encryptionType, kmsKey);

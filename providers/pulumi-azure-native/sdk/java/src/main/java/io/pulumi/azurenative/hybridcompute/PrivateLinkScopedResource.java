@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResourc
      * @return The resource id of the scoped Azure monitor resource.
      * 
      */
-    public Output</* @Nullable */ String> getLinkedResourceId() {
+    public Output</* @Nullable */ String> linkedResourceId() {
         return this.linkedResourceId;
     }
     /**
@@ -55,7 +56,7 @@ public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResourc
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResourc
      * @return State of the private endpoint connection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -83,7 +84,7 @@ public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResourc
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateLinkScopedResource(String name, PrivateLinkScopedResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hybridcompute:PrivateLinkScopedResource", name, args == null ? PrivateLinkScopedResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:hybridcompute:PrivateLinkScopedResource", name, args == null ? PrivateLinkScopedResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateLinkScopedResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

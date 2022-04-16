@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetPipConfidentialityScope;
 import io.pulumi.azurenative.logic.enums.RosettaNetResponseType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="actionType", required=true)
       private final Output<RosettaNetActionType> actionType;
 
-    public Output<RosettaNetActionType> getActionType() {
+    public Output<RosettaNetActionType> actionType() {
         return this.actionType;
     }
 
@@ -39,7 +40,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="isAuthorizationRequired", required=true)
       private final Output<Boolean> isAuthorizationRequired;
 
-    public Output<Boolean> getIsAuthorizationRequired() {
+    public Output<Boolean> isAuthorizationRequired() {
         return this.isAuthorizationRequired;
     }
 
@@ -50,7 +51,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="isSecuredTransportRequired", required=true)
       private final Output<Boolean> isSecuredTransportRequired;
 
-    public Output<Boolean> getIsSecuredTransportRequired() {
+    public Output<Boolean> isSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
     }
 
@@ -61,7 +62,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="nonRepudiationOfOriginAndContent", required=true)
       private final Output<Boolean> nonRepudiationOfOriginAndContent;
 
-    public Output<Boolean> getNonRepudiationOfOriginAndContent() {
+    public Output<Boolean> nonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
     }
 
@@ -72,7 +73,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="persistentConfidentialityScope", required=true)
       private final Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
 
-    public Output<RosettaNetPipConfidentialityScope> getPersistentConfidentialityScope() {
+    public Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
     }
 
@@ -83,7 +84,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="responseType", required=true)
       private final Output<RosettaNetResponseType> responseType;
 
-    public Output<RosettaNetResponseType> getResponseType() {
+    public Output<RosettaNetResponseType> responseType() {
         return this.responseType;
     }
 
@@ -94,7 +95,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="retryCount", required=true)
       private final Output<Integer> retryCount;
 
-    public Output<Integer> getRetryCount() {
+    public Output<Integer> retryCount() {
         return this.retryCount;
     }
 
@@ -105,7 +106,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     @Import(name="timeToPerformInSeconds", required=true)
       private final Output<Integer> timeToPerformInSeconds;
 
-    public Output<Integer> getTimeToPerformInSeconds() {
+    public Output<Integer> timeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
     }
 
@@ -129,14 +130,14 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     }
 
     private RosettaNetPipActivityBehaviorArgs() {
-        this.actionType = Output.empty();
-        this.isAuthorizationRequired = Output.empty();
-        this.isSecuredTransportRequired = Output.empty();
-        this.nonRepudiationOfOriginAndContent = Output.empty();
-        this.persistentConfidentialityScope = Output.empty();
-        this.responseType = Output.empty();
-        this.retryCount = Output.empty();
-        this.timeToPerformInSeconds = Output.empty();
+        this.actionType = Codegen.empty();
+        this.isAuthorizationRequired = Codegen.empty();
+        this.isSecuredTransportRequired = Codegen.empty();
+        this.nonRepudiationOfOriginAndContent = Codegen.empty();
+        this.persistentConfidentialityScope = Codegen.empty();
+        this.responseType = Codegen.empty();
+        this.retryCount = Codegen.empty();
+        this.timeToPerformInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {

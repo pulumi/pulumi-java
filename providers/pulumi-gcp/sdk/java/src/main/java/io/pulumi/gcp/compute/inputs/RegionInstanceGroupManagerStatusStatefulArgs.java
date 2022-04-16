@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
     @Import(name="hasStatefulConfig")
       private final @Nullable Output<Boolean> hasStatefulConfig;
 
-    public Output<Boolean> getHasStatefulConfig() {
-        return this.hasStatefulConfig == null ? Output.empty() : this.hasStatefulConfig;
+    public Output<Boolean> hasStatefulConfig() {
+        return this.hasStatefulConfig == null ? Codegen.empty() : this.hasStatefulConfig;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
     @Import(name="perInstanceConfigs")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
 
-    public Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> getPerInstanceConfigs() {
-        return this.perInstanceConfigs == null ? Output.empty() : this.perInstanceConfigs;
+    public Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs() {
+        return this.perInstanceConfigs == null ? Codegen.empty() : this.perInstanceConfigs;
     }
 
     public RegionInstanceGroupManagerStatusStatefulArgs(
@@ -46,8 +47,8 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
     }
 
     private RegionInstanceGroupManagerStatusStatefulArgs() {
-        this.hasStatefulConfig = Output.empty();
-        this.perInstanceConfigs = Output.empty();
+        this.hasStatefulConfig = Codegen.empty();
+        this.perInstanceConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
             return this;
         }
         public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
-            this.hasStatefulConfig = Output.ofNullable(hasStatefulConfig);
+            this.hasStatefulConfig = Codegen.ofNullable(hasStatefulConfig);
             return this;
         }
         public Builder perInstanceConfigs(@Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
@@ -85,7 +86,7 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
             return this;
         }
         public Builder perInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs> perInstanceConfigs) {
-            this.perInstanceConfigs = Output.ofNullable(perInstanceConfigs);
+            this.perInstanceConfigs = Codegen.ofNullable(perInstanceConfigs);
             return this;
         }
         public Builder perInstanceConfigs(RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs... perInstanceConfigs) {

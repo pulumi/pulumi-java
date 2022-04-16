@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ResolverDnsSecConfigArgs extends io.pulumi.resources.Resource
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -29,7 +30,7 @@ public final class ResolverDnsSecConfigArgs extends io.pulumi.resources.Resource
     }
 
     private ResolverDnsSecConfigArgs() {
-        this.resourceId = Output.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {

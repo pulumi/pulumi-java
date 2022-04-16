@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
     @Import(name="grpcServiceName")
       private final @Nullable Output<String> grpcServiceName;
 
-    public Output<String> getGrpcServiceName() {
-        return this.grpcServiceName == null ? Output.empty() : this.grpcServiceName;
+    public Output<String> grpcServiceName() {
+        return this.grpcServiceName == null ? Codegen.empty() : this.grpcServiceName;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
     @Import(name="portName")
       private final @Nullable Output<String> portName;
 
-    public Output<String> getPortName() {
-        return this.portName == null ? Output.empty() : this.portName;
+    public Output<String> portName() {
+        return this.portName == null ? Codegen.empty() : this.portName;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
     @Import(name="portSpecification")
       private final @Nullable Output<String> portSpecification;
 
-    public Output<String> getPortSpecification() {
-        return this.portSpecification == null ? Output.empty() : this.portSpecification;
+    public Output<String> portSpecification() {
+        return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
     }
 
     public RegionHealthCheckGrpcHealthCheckArgs(
@@ -88,10 +89,10 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
     }
 
     private RegionHealthCheckGrpcHealthCheckArgs() {
-        this.grpcServiceName = Output.empty();
-        this.port = Output.empty();
-        this.portName = Output.empty();
-        this.portSpecification = Output.empty();
+        this.grpcServiceName = Codegen.empty();
+        this.port = Codegen.empty();
+        this.portName = Codegen.empty();
+        this.portSpecification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
             return this;
         }
         public Builder grpcServiceName(@Nullable String grpcServiceName) {
-            this.grpcServiceName = Output.ofNullable(grpcServiceName);
+            this.grpcServiceName = Codegen.ofNullable(grpcServiceName);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -133,7 +134,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder portName(@Nullable Output<String> portName) {
@@ -141,7 +142,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
             return this;
         }
         public Builder portName(@Nullable String portName) {
-            this.portName = Output.ofNullable(portName);
+            this.portName = Codegen.ofNullable(portName);
             return this;
         }
         public Builder portSpecification(@Nullable Output<String> portSpecification) {
@@ -149,7 +150,7 @@ public final class RegionHealthCheckGrpcHealthCheckArgs extends io.pulumi.resour
             return this;
         }
         public Builder portSpecification(@Nullable String portSpecification) {
-            this.portSpecification = Output.ofNullable(portSpecification);
+            this.portSpecification = Codegen.ofNullable(portSpecification);
             return this;
         }        public RegionHealthCheckGrpcHealthCheckArgs build() {
             return new RegionHealthCheckGrpcHealthCheckArgs(grpcServiceName, port, portName, portSpecification);

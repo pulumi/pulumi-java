@@ -25,7 +25,7 @@ public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
     @Import(name="downloadSpeed")
       private final @Nullable Integer downloadSpeed;
 
-    public Optional<Integer> getDownloadSpeed() {
+    public Optional<Integer> downloadSpeed() {
         return this.downloadSpeed == null ? Optional.empty() : Optional.ofNullable(this.downloadSpeed);
     }
 
@@ -36,7 +36,7 @@ public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
     @Import(name="uploadSpeed")
       private final @Nullable Integer uploadSpeed;
 
-    public Optional<Integer> getUploadSpeed() {
+    public Optional<Integer> uploadSpeed() {
         return this.uploadSpeed == null ? Optional.empty() : Optional.ofNullable(this.uploadSpeed);
     }
 

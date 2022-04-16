@@ -5,6 +5,7 @@ package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -28,8 +29,8 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
-        return this.registryId == null ? Output.empty() : this.registryId;
+    public Output<String> registryId() {
+        return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+    public Output<String> repositoryName() {
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     public RepositoryPolicyState(
@@ -53,9 +54,9 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     private RepositoryPolicyState() {
-        this.policy = Output.empty();
-        this.registryId = Output.empty();
-        this.repositoryName = Output.empty();
+        this.policy = Codegen.empty();
+        this.registryId = Codegen.empty();
+        this.repositoryName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder registryId(@Nullable Output<String> registryId) {
@@ -95,7 +96,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Output.ofNullable(registryId);
+            this.registryId = Codegen.ofNullable(registryId);
             return this;
         }
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
@@ -103,7 +104,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }        public RepositoryPolicyState build() {
             return new RepositoryPolicyState(policy, registryId, repositoryName);

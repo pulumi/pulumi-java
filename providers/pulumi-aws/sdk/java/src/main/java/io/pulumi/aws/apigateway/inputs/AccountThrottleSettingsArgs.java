@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="burstLimit")
       private final @Nullable Output<Integer> burstLimit;
 
-    public Output<Integer> getBurstLimit() {
-        return this.burstLimit == null ? Output.empty() : this.burstLimit;
+    public Output<Integer> burstLimit() {
+        return this.burstLimit == null ? Codegen.empty() : this.burstLimit;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="rateLimit")
       private final @Nullable Output<Double> rateLimit;
 
-    public Output<Double> getRateLimit() {
-        return this.rateLimit == null ? Output.empty() : this.rateLimit;
+    public Output<Double> rateLimit() {
+        return this.rateLimit == null ? Codegen.empty() : this.rateLimit;
     }
 
     public AccountThrottleSettingsArgs(
@@ -45,8 +46,8 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private AccountThrottleSettingsArgs() {
-        this.burstLimit = Output.empty();
-        this.rateLimit = Output.empty();
+        this.burstLimit = Codegen.empty();
+        this.rateLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder burstLimit(@Nullable Integer burstLimit) {
-            this.burstLimit = Output.ofNullable(burstLimit);
+            this.burstLimit = Codegen.ofNullable(burstLimit);
             return this;
         }
         public Builder rateLimit(@Nullable Output<Double> rateLimit) {
@@ -84,7 +85,7 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder rateLimit(@Nullable Double rateLimit) {
-            this.rateLimit = Output.ofNullable(rateLimit);
+            this.rateLimit = Codegen.ofNullable(rateLimit);
             return this;
         }        public AccountThrottleSettingsArgs build() {
             return new AccountThrottleSettingsArgs(burstLimit, rateLimit);

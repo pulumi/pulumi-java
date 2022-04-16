@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.GitHubActionCodeConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.GitHubActionContainerConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="codeConfiguration")
       private final @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration;
 
-    public Output<GitHubActionCodeConfigurationArgs> getCodeConfiguration() {
-        return this.codeConfiguration == null ? Output.empty() : this.codeConfiguration;
+    public Output<GitHubActionCodeConfigurationArgs> codeConfiguration() {
+        return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="containerConfiguration")
       private final @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration;
 
-    public Output<GitHubActionContainerConfigurationArgs> getContainerConfiguration() {
-        return this.containerConfiguration == null ? Output.empty() : this.containerConfiguration;
+    public Output<GitHubActionContainerConfigurationArgs> containerConfiguration() {
+        return this.containerConfiguration == null ? Codegen.empty() : this.containerConfiguration;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="generateWorkflowFile")
       private final @Nullable Output<Boolean> generateWorkflowFile;
 
-    public Output<Boolean> getGenerateWorkflowFile() {
-        return this.generateWorkflowFile == null ? Output.empty() : this.generateWorkflowFile;
+    public Output<Boolean> generateWorkflowFile() {
+        return this.generateWorkflowFile == null ? Codegen.empty() : this.generateWorkflowFile;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="isLinux")
       private final @Nullable Output<Boolean> isLinux;
 
-    public Output<Boolean> getIsLinux() {
-        return this.isLinux == null ? Output.empty() : this.isLinux;
+    public Output<Boolean> isLinux() {
+        return this.isLinux == null ? Codegen.empty() : this.isLinux;
     }
 
     public GitHubActionConfigurationArgs(
@@ -76,10 +77,10 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private GitHubActionConfigurationArgs() {
-        this.codeConfiguration = Output.empty();
-        this.containerConfiguration = Output.empty();
-        this.generateWorkflowFile = Output.empty();
-        this.isLinux = Output.empty();
+        this.codeConfiguration = Codegen.empty();
+        this.containerConfiguration = Codegen.empty();
+        this.generateWorkflowFile = Codegen.empty();
+        this.isLinux = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder codeConfiguration(@Nullable GitHubActionCodeConfigurationArgs codeConfiguration) {
-            this.codeConfiguration = Output.ofNullable(codeConfiguration);
+            this.codeConfiguration = Codegen.ofNullable(codeConfiguration);
             return this;
         }
         public Builder containerConfiguration(@Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration) {
@@ -121,7 +122,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationArgs containerConfiguration) {
-            this.containerConfiguration = Output.ofNullable(containerConfiguration);
+            this.containerConfiguration = Codegen.ofNullable(containerConfiguration);
             return this;
         }
         public Builder generateWorkflowFile(@Nullable Output<Boolean> generateWorkflowFile) {
@@ -129,7 +130,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
-            this.generateWorkflowFile = Output.ofNullable(generateWorkflowFile);
+            this.generateWorkflowFile = Codegen.ofNullable(generateWorkflowFile);
             return this;
         }
         public Builder isLinux(@Nullable Output<Boolean> isLinux) {
@@ -137,7 +138,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder isLinux(@Nullable Boolean isLinux) {
-            this.isLinux = Output.ofNullable(isLinux);
+            this.isLinux = Codegen.ofNullable(isLinux);
             return this;
         }        public GitHubActionConfigurationArgs build() {
             return new GitHubActionConfigurationArgs(codeConfiguration, containerConfiguration, generateWorkflowFile, isLinux);

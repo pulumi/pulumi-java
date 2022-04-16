@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -32,8 +33,8 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="ingestionRole", required=true)
       private final Output<String> ingestionRole;
 
-    public Output<String> getIngestionRole() {
+    public Output<String> ingestionRole() {
         return this.ingestionRole;
     }
 
@@ -54,7 +55,7 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceEngine", required=true)
       private final Output<String> sourceEngine;
 
-    public Output<String> getSourceEngine() {
+    public Output<String> sourceEngine() {
         return this.sourceEngine;
     }
 
@@ -65,7 +66,7 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceEngineVersion", required=true)
       private final Output<String> sourceEngineVersion;
 
-    public Output<String> getSourceEngineVersion() {
+    public Output<String> sourceEngineVersion() {
         return this.sourceEngineVersion;
     }
 
@@ -83,11 +84,11 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private InstanceS3ImportGetArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.ingestionRole = Output.empty();
-        this.sourceEngine = Output.empty();
-        this.sourceEngineVersion = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.ingestionRole = Codegen.empty();
+        this.sourceEngine = Codegen.empty();
+        this.sourceEngineVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder ingestionRole(Output<String> ingestionRole) {

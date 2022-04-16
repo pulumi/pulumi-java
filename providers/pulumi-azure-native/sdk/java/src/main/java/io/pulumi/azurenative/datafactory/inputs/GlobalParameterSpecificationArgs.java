@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.GlobalParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<Either<String,GlobalParameterType>> type;
 
-    public Output<Either<String,GlobalParameterType>> getType() {
+    public Output<Either<String,GlobalParameterType>> type() {
         return this.type;
     }
 
@@ -38,7 +39,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     @Import(name="value", required=true)
       private final Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value;
     }
 
@@ -50,8 +51,8 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     }
 
     private GlobalParameterSpecificationArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

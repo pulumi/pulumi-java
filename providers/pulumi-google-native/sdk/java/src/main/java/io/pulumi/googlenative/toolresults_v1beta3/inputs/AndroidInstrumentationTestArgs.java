@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testPackageId")
       private final @Nullable Output<String> testPackageId;
 
-    public Output<String> getTestPackageId() {
-        return this.testPackageId == null ? Output.empty() : this.testPackageId;
+    public Output<String> testPackageId() {
+        return this.testPackageId == null ? Codegen.empty() : this.testPackageId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testRunnerClass")
       private final @Nullable Output<String> testRunnerClass;
 
-    public Output<String> getTestRunnerClass() {
-        return this.testRunnerClass == null ? Output.empty() : this.testRunnerClass;
+    public Output<String> testRunnerClass() {
+        return this.testRunnerClass == null ? Codegen.empty() : this.testRunnerClass;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testTargets")
       private final @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> getTestTargets() {
-        return this.testTargets == null ? Output.empty() : this.testTargets;
+    public Output<List<String>> testTargets() {
+        return this.testTargets == null ? Codegen.empty() : this.testTargets;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="useOrchestrator")
       private final @Nullable Output<Boolean> useOrchestrator;
 
-    public Output<Boolean> getUseOrchestrator() {
-        return this.useOrchestrator == null ? Output.empty() : this.useOrchestrator;
+    public Output<Boolean> useOrchestrator() {
+        return this.useOrchestrator == null ? Codegen.empty() : this.useOrchestrator;
     }
 
     public AndroidInstrumentationTestArgs(
@@ -76,10 +77,10 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     }
 
     private AndroidInstrumentationTestArgs() {
-        this.testPackageId = Output.empty();
-        this.testRunnerClass = Output.empty();
-        this.testTargets = Output.empty();
-        this.useOrchestrator = Output.empty();
+        this.testPackageId = Codegen.empty();
+        this.testRunnerClass = Codegen.empty();
+        this.testTargets = Codegen.empty();
+        this.useOrchestrator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder testPackageId(@Nullable String testPackageId) {
-            this.testPackageId = Output.ofNullable(testPackageId);
+            this.testPackageId = Codegen.ofNullable(testPackageId);
             return this;
         }
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
@@ -121,7 +122,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder testRunnerClass(@Nullable String testRunnerClass) {
-            this.testRunnerClass = Output.ofNullable(testRunnerClass);
+            this.testRunnerClass = Codegen.ofNullable(testRunnerClass);
             return this;
         }
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
@@ -129,7 +130,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Output.ofNullable(testTargets);
+            this.testTargets = Codegen.ofNullable(testTargets);
             return this;
         }
         public Builder testTargets(String... testTargets) {
@@ -140,7 +141,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder useOrchestrator(@Nullable Boolean useOrchestrator) {
-            this.useOrchestrator = Output.ofNullable(useOrchestrator);
+            this.useOrchestrator = Codegen.ofNullable(useOrchestrator);
             return this;
         }        public AndroidInstrumentationTestArgs build() {
             return new AndroidInstrumentationTestArgs(testPackageId, testRunnerClass, testTargets, useOrchestrator);

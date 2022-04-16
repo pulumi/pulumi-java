@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
     @Import(name="maximum")
       private final @Nullable Output<Integer> maximum;
 
-    public Output<Integer> getMaximum() {
-        return this.maximum == null ? Output.empty() : this.maximum;
+    public Output<Integer> maximum() {
+        return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
     @Import(name="minimum")
       private final @Nullable Output<Integer> minimum;
 
-    public Output<Integer> getMinimum() {
-        return this.minimum == null ? Output.empty() : this.minimum;
+    public Output<Integer> minimum() {
+        return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -60,9 +61,9 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
     }
 
     private ClusterClusterAutoscalingResourceLimitArgs() {
-        this.maximum = Output.empty();
-        this.minimum = Output.empty();
-        this.resourceType = Output.empty();
+        this.maximum = Codegen.empty();
+        this.minimum = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
             return this;
         }
         public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = Output.ofNullable(maximum);
+            this.maximum = Codegen.ofNullable(maximum);
             return this;
         }
         public Builder minimum(@Nullable Output<Integer> minimum) {
@@ -102,7 +103,7 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends io.pulumi.
             return this;
         }
         public Builder minimum(@Nullable Integer minimum) {
-            this.minimum = Output.ofNullable(minimum);
+            this.minimum = Codegen.ofNullable(minimum);
             return this;
         }
         public Builder resourceType(Output<String> resourceType) {

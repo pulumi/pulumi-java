@@ -23,7 +23,7 @@ public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="filePattern", required=true)
       private final String filePattern;
 
-    public String getFilePattern() {
+    public String filePattern() {
         return this.filePattern;
     }
 

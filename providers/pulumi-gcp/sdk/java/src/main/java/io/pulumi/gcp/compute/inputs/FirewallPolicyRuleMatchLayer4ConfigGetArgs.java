@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class FirewallPolicyRuleMatchLayer4ConfigGetArgs extends io.pulumi.
     @Import(name="ipProtocol", required=true)
       private final Output<String> ipProtocol;
 
-    public Output<String> getIpProtocol() {
+    public Output<String> ipProtocol() {
         return this.ipProtocol;
     }
 
@@ -33,8 +34,8 @@ public final class FirewallPolicyRuleMatchLayer4ConfigGetArgs extends io.pulumi.
     @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<String>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     public FirewallPolicyRuleMatchLayer4ConfigGetArgs(
@@ -45,8 +46,8 @@ public final class FirewallPolicyRuleMatchLayer4ConfigGetArgs extends io.pulumi.
     }
 
     private FirewallPolicyRuleMatchLayer4ConfigGetArgs() {
-        this.ipProtocol = Output.empty();
-        this.ports = Output.empty();
+        this.ipProtocol = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class FirewallPolicyRuleMatchLayer4ConfigGetArgs extends io.pulumi.
             return this;
         }
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(String... ports) {

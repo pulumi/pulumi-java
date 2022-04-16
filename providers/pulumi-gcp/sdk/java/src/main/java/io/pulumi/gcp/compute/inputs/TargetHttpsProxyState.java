@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="proxyBind")
       private final @Nullable Output<Boolean> proxyBind;
 
-    public Output<Boolean> getProxyBind() {
-        return this.proxyBind == null ? Output.empty() : this.proxyBind;
+    public Output<Boolean> proxyBind() {
+        return this.proxyBind == null ? Codegen.empty() : this.proxyBind;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="proxyId")
       private final @Nullable Output<Integer> proxyId;
 
-    public Output<Integer> getProxyId() {
-        return this.proxyId == null ? Output.empty() : this.proxyId;
+    public Output<Integer> proxyId() {
+        return this.proxyId == null ? Codegen.empty() : this.proxyId;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="quicOverride")
       private final @Nullable Output<String> quicOverride;
 
-    public Output<String> getQuicOverride() {
-        return this.quicOverride == null ? Output.empty() : this.quicOverride;
+    public Output<String> quicOverride() {
+        return this.quicOverride == null ? Codegen.empty() : this.quicOverride;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="sslCertificates")
       private final @Nullable Output<List<String>> sslCertificates;
 
-    public Output<List<String>> getSslCertificates() {
-        return this.sslCertificates == null ? Output.empty() : this.sslCertificates;
+    public Output<List<String>> sslCertificates() {
+        return this.sslCertificates == null ? Codegen.empty() : this.sslCertificates;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
-        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
+    public Output<String> sslPolicy() {
+        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     @Import(name="urlMap")
       private final @Nullable Output<String> urlMap;
 
-    public Output<String> getUrlMap() {
-        return this.urlMap == null ? Output.empty() : this.urlMap;
+    public Output<String> urlMap() {
+        return this.urlMap == null ? Codegen.empty() : this.urlMap;
     }
 
     public TargetHttpsProxyState(
@@ -183,17 +184,17 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
     }
 
     private TargetHttpsProxyState() {
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.proxyBind = Output.empty();
-        this.proxyId = Output.empty();
-        this.quicOverride = Output.empty();
-        this.selfLink = Output.empty();
-        this.sslCertificates = Output.empty();
-        this.sslPolicy = Output.empty();
-        this.urlMap = Output.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.proxyBind = Codegen.empty();
+        this.proxyId = Codegen.empty();
+        this.quicOverride = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sslCertificates = Codegen.empty();
+        this.sslPolicy = Codegen.empty();
+        this.urlMap = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -249,7 +250,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -257,7 +258,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -265,7 +266,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
@@ -273,7 +274,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder proxyBind(@Nullable Boolean proxyBind) {
-            this.proxyBind = Output.ofNullable(proxyBind);
+            this.proxyBind = Codegen.ofNullable(proxyBind);
             return this;
         }
         public Builder proxyId(@Nullable Output<Integer> proxyId) {
@@ -281,7 +282,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder proxyId(@Nullable Integer proxyId) {
-            this.proxyId = Output.ofNullable(proxyId);
+            this.proxyId = Codegen.ofNullable(proxyId);
             return this;
         }
         public Builder quicOverride(@Nullable Output<String> quicOverride) {
@@ -289,7 +290,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder quicOverride(@Nullable String quicOverride) {
-            this.quicOverride = Output.ofNullable(quicOverride);
+            this.quicOverride = Codegen.ofNullable(quicOverride);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -297,7 +298,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
@@ -305,7 +306,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sslCertificates(@Nullable List<String> sslCertificates) {
-            this.sslCertificates = Output.ofNullable(sslCertificates);
+            this.sslCertificates = Codegen.ofNullable(sslCertificates);
             return this;
         }
         public Builder sslCertificates(String... sslCertificates) {
@@ -316,7 +317,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Output.ofNullable(sslPolicy);
+            this.sslPolicy = Codegen.ofNullable(sslPolicy);
             return this;
         }
         public Builder urlMap(@Nullable Output<String> urlMap) {
@@ -324,7 +325,7 @@ public final class TargetHttpsProxyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder urlMap(@Nullable String urlMap) {
-            this.urlMap = Output.ofNullable(urlMap);
+            this.urlMap = Codegen.ofNullable(urlMap);
             return this;
         }        public TargetHttpsProxyState build() {
             return new TargetHttpsProxyState(creationTimestamp, description, name, project, proxyBind, proxyId, quicOverride, selfLink, sslCertificates, sslPolicy, urlMap);

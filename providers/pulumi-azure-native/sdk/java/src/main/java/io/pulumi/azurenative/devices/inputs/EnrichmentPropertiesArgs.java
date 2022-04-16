@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="endpointNames", required=true)
       private final Output<List<String>> endpointNames;
 
-    public Output<List<String>> getEndpointNames() {
+    public Output<List<String>> endpointNames() {
         return this.endpointNames;
     }
 
@@ -36,7 +37,7 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -47,7 +48,7 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -61,9 +62,9 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private EnrichmentPropertiesArgs() {
-        this.endpointNames = Output.empty();
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.endpointNames = Codegen.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

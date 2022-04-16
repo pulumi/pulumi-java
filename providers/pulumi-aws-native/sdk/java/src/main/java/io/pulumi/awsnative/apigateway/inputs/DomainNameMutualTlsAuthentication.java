@@ -17,14 +17,14 @@ public final class DomainNameMutualTlsAuthentication extends io.pulumi.resources
     @Import(name="truststoreUri")
       private final @Nullable String truststoreUri;
 
-    public Optional<String> getTruststoreUri() {
+    public Optional<String> truststoreUri() {
         return this.truststoreUri == null ? Optional.empty() : Optional.ofNullable(this.truststoreUri);
     }
 
     @Import(name="truststoreVersion")
       private final @Nullable String truststoreVersion;
 
-    public Optional<String> getTruststoreVersion() {
+    public Optional<String> truststoreVersion() {
         return this.truststoreVersion == null ? Optional.empty() : Optional.ofNullable(this.truststoreVersion);
     }
 

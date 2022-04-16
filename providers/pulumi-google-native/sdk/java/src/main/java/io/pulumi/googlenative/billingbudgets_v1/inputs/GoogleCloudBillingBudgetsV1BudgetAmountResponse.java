@@ -24,7 +24,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends io.pu
     @Import(name="lastPeriodAmount", required=true)
       private final GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount;
 
-    public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse getLastPeriodAmount() {
+    public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount() {
         return this.lastPeriodAmount;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends io.pu
     @Import(name="specifiedAmount", required=true)
       private final GoogleTypeMoneyResponse specifiedAmount;
 
-    public GoogleTypeMoneyResponse getSpecifiedAmount() {
+    public GoogleTypeMoneyResponse specifiedAmount() {
         return this.specifiedAmount;
     }
 

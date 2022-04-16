@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     @Import(name="propertyGroupId", required=true)
       private final Output<String> propertyGroupId;
 
-    public Output<String> getPropertyGroupId() {
+    public Output<String> propertyGroupId() {
         return this.propertyGroupId;
     }
 
@@ -32,7 +33,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     @Import(name="propertyMap", required=true)
       private final Output<Map<String,String>> propertyMap;
 
-    public Output<Map<String,String>> getPropertyMap() {
+    public Output<Map<String,String>> propertyMap() {
         return this.propertyMap;
     }
 
@@ -44,8 +45,8 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     }
 
     private ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs() {
-        this.propertyGroupId = Output.empty();
-        this.propertyMap = Output.empty();
+        this.propertyGroupId = Codegen.empty();
+        this.propertyMap = Codegen.empty();
     }
 
     public static Builder builder() {

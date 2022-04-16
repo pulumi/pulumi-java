@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="hours")
       private final @Nullable Output<Integer> hours;
 
-    public Output<Integer> getHours() {
-        return this.hours == null ? Output.empty() : this.hours;
+    public Output<Integer> hours() {
+        return this.hours == null ? Codegen.empty() : this.hours;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="minutes")
       private final @Nullable Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
-        return this.minutes == null ? Output.empty() : this.minutes;
+    public Output<Integer> minutes() {
+        return this.minutes == null ? Codegen.empty() : this.minutes;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
-    public Output<Integer> getNanos() {
-        return this.nanos == null ? Output.empty() : this.nanos;
+    public Output<Integer> nanos() {
+        return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="seconds")
       private final @Nullable Output<Integer> seconds;
 
-    public Output<Integer> getSeconds() {
-        return this.seconds == null ? Output.empty() : this.seconds;
+    public Output<Integer> seconds() {
+        return this.seconds == null ? Codegen.empty() : this.seconds;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs(
@@ -70,10 +71,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs() {
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
-        this.nanos = Output.empty();
-        this.seconds = Output.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
+        this.nanos = Codegen.empty();
+        this.seconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder hours(@Nullable Integer hours) {
-            this.hours = Output.ofNullable(hours);
+            this.hours = Codegen.ofNullable(hours);
             return this;
         }
         public Builder minutes(@Nullable Output<Integer> minutes) {
@@ -115,7 +116,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder minutes(@Nullable Integer minutes) {
-            this.minutes = Output.ofNullable(minutes);
+            this.minutes = Codegen.ofNullable(minutes);
             return this;
         }
         public Builder nanos(@Nullable Output<Integer> nanos) {
@@ -123,7 +124,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Output.ofNullable(nanos);
+            this.nanos = Codegen.ofNullable(nanos);
             return this;
         }
         public Builder seconds(@Nullable Output<Integer> seconds) {
@@ -131,7 +132,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder seconds(@Nullable Integer seconds) {
-            this.seconds = Output.ofNullable(seconds);
+            this.seconds = Codegen.ofNullable(seconds);
             return this;
         }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs(hours, minutes, nanos, seconds);

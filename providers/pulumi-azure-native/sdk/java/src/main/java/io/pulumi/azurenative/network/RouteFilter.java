@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return A collection of references to express route circuit ipv6 peerings.
      * 
      */
-    public Output<List<ExpressRouteCircuitPeeringResponse>> getIpv6Peerings() {
+    public Output<List<ExpressRouteCircuitPeeringResponse>> ipv6Peerings() {
         return this.ipv6Peerings;
     }
     /**
@@ -72,7 +73,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return A collection of references to express route circuit peerings.
      * 
      */
-    public Output<List<ExpressRouteCircuitPeeringResponse>> getPeerings() {
+    public Output<List<ExpressRouteCircuitPeeringResponse>> peerings() {
         return this.peerings;
     }
     /**
@@ -114,7 +115,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the route filter resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +129,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return Collection of RouteFilterRules contained within a route filter.
      * 
      */
-    public Output</* @Nullable */ List<RouteFilterRuleResponse>> getRules() {
+    public Output</* @Nullable */ List<RouteFilterRuleResponse>> rules() {
         return this.rules;
     }
     /**
@@ -142,7 +143,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class RouteFilter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouteFilter(String name, RouteFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:RouteFilter", name, args == null ? RouteFilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:RouteFilter", name, args == null ? RouteFilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RouteFilter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

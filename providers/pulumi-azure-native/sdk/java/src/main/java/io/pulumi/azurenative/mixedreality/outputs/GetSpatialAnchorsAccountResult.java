@@ -115,91 +115,91 @@ public final class GetSpatialAnchorsAccountResult {
      * Correspond domain name of certain Spatial Anchors Account
      * 
     */
-    public String getAccountDomain() {
+    public String accountDomain() {
         return this.accountDomain;
     }
     /**
      * unique id of certain account.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity associated with this account
      * 
     */
-    public Optional<IdentityResponse> getIdentity() {
+    public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of account, if supported
      * 
     */
-    public Optional<SkuResponse> getKind() {
+    public Optional<SkuResponse> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The plan associated with this account
      * 
     */
-    public Optional<IdentityResponse> getPlan() {
+    public Optional<IdentityResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The sku associated with this account
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The name of the storage account associated with this accountId
      * 
     */
-    public Optional<String> getStorageAccountName() {
+    public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
     /**
      * System metadata for this account
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

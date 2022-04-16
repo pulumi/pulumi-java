@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appsync;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class DomainNameApiAssociationArgs extends io.pulumi.resources.Reso
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -35,8 +36,8 @@ public final class DomainNameApiAssociationArgs extends io.pulumi.resources.Reso
     }
 
     private DomainNameApiAssociationArgs() {
-        this.apiId = Output.empty();
-        this.domainName = Output.empty();
+        this.apiId = Codegen.empty();
+        this.domainName = Codegen.empty();
     }
 
     public static Builder builder() {

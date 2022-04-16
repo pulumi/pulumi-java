@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhrasePartGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
     @Import(name="parts", required=true)
       private final Output<List<CxIntentTrainingPhrasePartGetArgs>> parts;
 
-    public Output<List<CxIntentTrainingPhrasePartGetArgs>> getParts() {
+    public Output<List<CxIntentTrainingPhrasePartGetArgs>> parts() {
         return this.parts;
     }
 
@@ -53,8 +54,8 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
     @Import(name="repeatCount")
       private final @Nullable Output<Integer> repeatCount;
 
-    public Output<Integer> getRepeatCount() {
-        return this.repeatCount == null ? Output.empty() : this.repeatCount;
+    public Output<Integer> repeatCount() {
+        return this.repeatCount == null ? Codegen.empty() : this.repeatCount;
     }
 
     public CxIntentTrainingPhraseGetArgs(
@@ -67,9 +68,9 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
     }
 
     private CxIntentTrainingPhraseGetArgs() {
-        this.id = Output.empty();
-        this.parts = Output.empty();
-        this.repeatCount = Output.empty();
+        this.id = Codegen.empty();
+        this.parts = Codegen.empty();
+        this.repeatCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder parts(Output<List<CxIntentTrainingPhrasePartGetArgs>> parts) {
@@ -120,7 +121,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder repeatCount(@Nullable Integer repeatCount) {
-            this.repeatCount = Output.ofNullable(repeatCount);
+            this.repeatCount = Codegen.ofNullable(repeatCount);
             return this;
         }        public CxIntentTrainingPhraseGetArgs build() {
             return new CxIntentTrainingPhraseGetArgs(id, parts, repeatCount);

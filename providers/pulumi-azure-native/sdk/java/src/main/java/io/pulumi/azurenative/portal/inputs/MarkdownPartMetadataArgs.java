@@ -6,6 +6,7 @@ package io.pulumi.azurenative.portal.inputs;
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
     @Import(name="inputs")
       private final @Nullable Output<List<Object>> inputs;
 
-    public Output<List<Object>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+    public Output<List<Object>> inputs() {
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
     @Import(name="settings")
       private final @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
 
-    public Output<MarkdownPartMetadataSettingsArgs> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+    public Output<MarkdownPartMetadataSettingsArgs> settings() {
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -65,9 +66,9 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
     }
 
     private MarkdownPartMetadataArgs() {
-        this.inputs = Output.empty();
-        this.settings = Output.empty();
-        this.type = Output.empty();
+        this.inputs = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(Object... inputs) {
@@ -110,7 +111,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder settings(@Nullable MarkdownPartMetadataSettingsArgs settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder type(Output<String> type) {

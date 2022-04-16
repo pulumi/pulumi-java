@@ -6,6 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.inputs.DirectLineSiteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
     @Import(name="directLineEmbedCode")
       private final @Nullable Output<String> directLineEmbedCode;
 
-    public Output<String> getDirectLineEmbedCode() {
-        return this.directLineEmbedCode == null ? Output.empty() : this.directLineEmbedCode;
+    public Output<String> directLineEmbedCode() {
+        return this.directLineEmbedCode == null ? Codegen.empty() : this.directLineEmbedCode;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
     @Import(name="sites")
       private final @Nullable Output<List<DirectLineSiteArgs>> sites;
 
-    public Output<List<DirectLineSiteArgs>> getSites() {
-        return this.sites == null ? Output.empty() : this.sites;
+    public Output<List<DirectLineSiteArgs>> sites() {
+        return this.sites == null ? Codegen.empty() : this.sites;
     }
 
     public DirectLineChannelPropertiesArgs(
@@ -50,8 +51,8 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
     }
 
     private DirectLineChannelPropertiesArgs() {
-        this.directLineEmbedCode = Output.empty();
-        this.sites = Output.empty();
+        this.directLineEmbedCode = Codegen.empty();
+        this.sites = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
-            this.directLineEmbedCode = Output.ofNullable(directLineEmbedCode);
+            this.directLineEmbedCode = Codegen.ofNullable(directLineEmbedCode);
             return this;
         }
         public Builder sites(@Nullable Output<List<DirectLineSiteArgs>> sites) {
@@ -89,7 +90,7 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sites(@Nullable List<DirectLineSiteArgs> sites) {
-            this.sites = Output.ofNullable(sites);
+            this.sites = Codegen.ofNullable(sites);
             return this;
         }
         public Builder sites(DirectLineSiteArgs... sites) {

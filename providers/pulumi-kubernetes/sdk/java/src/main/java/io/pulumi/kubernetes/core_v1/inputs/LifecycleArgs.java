@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LifecycleHandlerArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postStart")
       private final @Nullable Output<LifecycleHandlerArgs> postStart;
 
-    public Output<LifecycleHandlerArgs> getPostStart() {
-        return this.postStart == null ? Output.empty() : this.postStart;
+    public Output<LifecycleHandlerArgs> postStart() {
+        return this.postStart == null ? Codegen.empty() : this.postStart;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preStop")
       private final @Nullable Output<LifecycleHandlerArgs> preStop;
 
-    public Output<LifecycleHandlerArgs> getPreStop() {
-        return this.preStop == null ? Output.empty() : this.preStop;
+    public Output<LifecycleHandlerArgs> preStop() {
+        return this.preStop == null ? Codegen.empty() : this.preStop;
     }
 
     public LifecycleArgs(
@@ -48,8 +49,8 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LifecycleArgs() {
-        this.postStart = Output.empty();
-        this.preStop = Output.empty();
+        this.postStart = Codegen.empty();
+        this.preStop = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postStart(@Nullable LifecycleHandlerArgs postStart) {
-            this.postStart = Output.ofNullable(postStart);
+            this.postStart = Codegen.ofNullable(postStart);
             return this;
         }
         public Builder preStop(@Nullable Output<LifecycleHandlerArgs> preStop) {
@@ -87,7 +88,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preStop(@Nullable LifecycleHandlerArgs preStop) {
-            this.preStop = Output.ofNullable(preStop);
+            this.preStop = Codegen.ofNullable(preStop);
             return this;
         }        public LifecycleArgs build() {
             return new LifecycleArgs(postStart, preStop);

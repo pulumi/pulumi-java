@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventBusPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -43,13 +44,13 @@ public class EventBusPolicy extends io.pulumi.resources.CustomResource {
      * @return The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
      * 
      */
-    public Output</* @Nullable */ String> getEventBusName() {
+    public Output</* @Nullable */ String> eventBusName() {
         return this.eventBusName;
     }
     @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -75,7 +76,7 @@ public class EventBusPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventBusPolicy(String name, EventBusPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventBusPolicy:EventBusPolicy", name, args == null ? EventBusPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/eventBusPolicy:EventBusPolicy", name, args == null ? EventBusPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventBusPolicy(String name, Output<String> id, @Nullable EventBusPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

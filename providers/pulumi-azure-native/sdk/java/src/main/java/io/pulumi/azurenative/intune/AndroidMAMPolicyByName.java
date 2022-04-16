@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,85 +33,85 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
     @Export(name="accessRecheckOfflineTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessRecheckOfflineTimeout;
 
-    public Output</* @Nullable */ String> getAccessRecheckOfflineTimeout() {
+    public Output</* @Nullable */ String> accessRecheckOfflineTimeout() {
         return this.accessRecheckOfflineTimeout;
     }
     @Export(name="accessRecheckOnlineTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessRecheckOnlineTimeout;
 
-    public Output</* @Nullable */ String> getAccessRecheckOnlineTimeout() {
+    public Output</* @Nullable */ String> accessRecheckOnlineTimeout() {
         return this.accessRecheckOnlineTimeout;
     }
     @Export(name="appSharingFromLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> appSharingFromLevel;
 
-    public Output</* @Nullable */ String> getAppSharingFromLevel() {
+    public Output</* @Nullable */ String> appSharingFromLevel() {
         return this.appSharingFromLevel;
     }
     @Export(name="appSharingToLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> appSharingToLevel;
 
-    public Output</* @Nullable */ String> getAppSharingToLevel() {
+    public Output</* @Nullable */ String> appSharingToLevel() {
         return this.appSharingToLevel;
     }
     @Export(name="authentication", type=String.class, parameters={})
     private Output</* @Nullable */ String> authentication;
 
-    public Output</* @Nullable */ String> getAuthentication() {
+    public Output</* @Nullable */ String> authentication() {
         return this.authentication;
     }
     @Export(name="clipboardSharingLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> clipboardSharingLevel;
 
-    public Output</* @Nullable */ String> getClipboardSharingLevel() {
+    public Output</* @Nullable */ String> clipboardSharingLevel() {
         return this.clipboardSharingLevel;
     }
     @Export(name="dataBackup", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataBackup;
 
-    public Output</* @Nullable */ String> getDataBackup() {
+    public Output</* @Nullable */ String> dataBackup() {
         return this.dataBackup;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="deviceCompliance", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceCompliance;
 
-    public Output</* @Nullable */ String> getDeviceCompliance() {
+    public Output</* @Nullable */ String> deviceCompliance() {
         return this.deviceCompliance;
     }
     @Export(name="fileEncryption", type=String.class, parameters={})
     private Output</* @Nullable */ String> fileEncryption;
 
-    public Output</* @Nullable */ String> getFileEncryption() {
+    public Output</* @Nullable */ String> fileEncryption() {
         return this.fileEncryption;
     }
     @Export(name="fileSharingSaveAs", type=String.class, parameters={})
     private Output</* @Nullable */ String> fileSharingSaveAs;
 
-    public Output</* @Nullable */ String> getFileSharingSaveAs() {
+    public Output</* @Nullable */ String> fileSharingSaveAs() {
         return this.fileSharingSaveAs;
     }
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     @Export(name="groupStatus", type=String.class, parameters={})
     private Output<String> groupStatus;
 
-    public Output<String> getGroupStatus() {
+    public Output<String> groupStatus() {
         return this.groupStatus;
     }
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -124,13 +125,13 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     @Export(name="managedBrowser", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBrowser;
 
-    public Output</* @Nullable */ String> getManagedBrowser() {
+    public Output</* @Nullable */ String> managedBrowser() {
         return this.managedBrowser;
     }
     /**
@@ -144,37 +145,37 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="numOfApps", type=Integer.class, parameters={})
     private Output<Integer> numOfApps;
 
-    public Output<Integer> getNumOfApps() {
+    public Output<Integer> numOfApps() {
         return this.numOfApps;
     }
     @Export(name="offlineWipeTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> offlineWipeTimeout;
 
-    public Output</* @Nullable */ String> getOfflineWipeTimeout() {
+    public Output</* @Nullable */ String> offlineWipeTimeout() {
         return this.offlineWipeTimeout;
     }
     @Export(name="pin", type=String.class, parameters={})
     private Output</* @Nullable */ String> pin;
 
-    public Output</* @Nullable */ String> getPin() {
+    public Output</* @Nullable */ String> pin() {
         return this.pin;
     }
     @Export(name="pinNumRetry", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> pinNumRetry;
 
-    public Output</* @Nullable */ Integer> getPinNumRetry() {
+    public Output</* @Nullable */ Integer> pinNumRetry() {
         return this.pinNumRetry;
     }
     @Export(name="screenCapture", type=String.class, parameters={})
     private Output</* @Nullable */ String> screenCapture;
 
-    public Output</* @Nullable */ String> getScreenCapture() {
+    public Output</* @Nullable */ String> screenCapture() {
         return this.screenCapture;
     }
     /**
@@ -188,7 +189,7 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
      * @return Resource Tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -202,7 +203,7 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -228,7 +229,7 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AndroidMAMPolicyByName(String name, AndroidMAMPolicyByNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:intune:AndroidMAMPolicyByName", name, args == null ? AndroidMAMPolicyByNameArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:intune:AndroidMAMPolicyByName", name, args == null ? AndroidMAMPolicyByNameArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AndroidMAMPolicyByName(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

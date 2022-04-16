@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ObjectAccessControlProjectTeamGetArgs extends io.pulumi.resou
     @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
-    public Output<String> getProjectNumber() {
-        return this.projectNumber == null ? Output.empty() : this.projectNumber;
+    public Output<String> projectNumber() {
+        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 
     @Import(name="team")
       private final @Nullable Output<String> team;
 
-    public Output<String> getTeam() {
-        return this.team == null ? Output.empty() : this.team;
+    public Output<String> team() {
+        return this.team == null ? Codegen.empty() : this.team;
     }
 
     public ObjectAccessControlProjectTeamGetArgs(
@@ -36,8 +37,8 @@ public final class ObjectAccessControlProjectTeamGetArgs extends io.pulumi.resou
     }
 
     private ObjectAccessControlProjectTeamGetArgs() {
-        this.projectNumber = Output.empty();
-        this.team = Output.empty();
+        this.projectNumber = Codegen.empty();
+        this.team = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ObjectAccessControlProjectTeamGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Output.ofNullable(projectNumber);
+            this.projectNumber = Codegen.ofNullable(projectNumber);
             return this;
         }
         public Builder team(@Nullable Output<String> team) {
@@ -75,7 +76,7 @@ public final class ObjectAccessControlProjectTeamGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder team(@Nullable String team) {
-            this.team = Output.ofNullable(team);
+            this.team = Codegen.ofNullable(team);
             return this;
         }        public ObjectAccessControlProjectTeamGetArgs build() {
             return new ObjectAccessControlProjectTeamGetArgs(projectNumber, team);

@@ -12,6 +12,7 @@ import io.pulumi.awsnative.apigateway.outputs.UsagePlanThrottleSettings;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return The API stages to associate with this usage plan.
      * 
      */
-    public Output</* @Nullable */ List<UsagePlanApiStage>> getApiStages() {
+    public Output</* @Nullable */ List<UsagePlanApiStage>> apiStages() {
         return this.apiStages;
     }
     /**
@@ -47,7 +48,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return A description of the usage plan.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -61,7 +62,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return Configures the number of requests that users can make within a given interval.
      * 
      */
-    public Output</* @Nullable */ UsagePlanQuotaSettings> getQuota() {
+    public Output</* @Nullable */ UsagePlanQuotaSettings> quota() {
         return this.quota;
     }
     /**
@@ -75,7 +76,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
      */
-    public Output</* @Nullable */ List<UsagePlanTag>> getTags() {
+    public Output</* @Nullable */ List<UsagePlanTag>> tags() {
         return this.tags;
     }
     /**
@@ -89,7 +90,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return Configures the overall request rate (average requests per second) and burst capacity.
      * 
      */
-    public Output</* @Nullable */ UsagePlanThrottleSettings> getThrottle() {
+    public Output</* @Nullable */ UsagePlanThrottleSettings> throttle() {
         return this.throttle;
     }
     /**
@@ -103,7 +104,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return A name for the usage plan.
      * 
      */
-    public Output</* @Nullable */ String> getUsagePlanName() {
+    public Output</* @Nullable */ String> usagePlanName() {
         return this.usagePlanName;
     }
 
@@ -129,7 +130,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UsagePlan(String name, @Nullable UsagePlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:UsagePlan", name, args == null ? UsagePlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:UsagePlan", name, args == null ? UsagePlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UsagePlan(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

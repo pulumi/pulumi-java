@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -37,8 +38,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="urlTypeHint")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> urlTypeHint;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> getUrlTypeHint() {
-        return this.urlTypeHint == null ? Output.empty() : this.urlTypeHint;
+    public Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> urlTypeHint() {
+        return this.urlTypeHint == null ? Codegen.empty() : this.urlTypeHint;
     }
 
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     }
 
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs() {
-        this.url = Output.empty();
-        this.urlTypeHint = Output.empty();
+        this.url = Codegen.empty();
+        this.urlTypeHint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
             return this;
         }
         public Builder urlTypeHint(@Nullable GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint urlTypeHint) {
-            this.urlTypeHint = Output.ofNullable(urlTypeHint);
+            this.urlTypeHint = Codegen.ofNullable(urlTypeHint);
             return this;
         }        public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs(url, urlTypeHint);

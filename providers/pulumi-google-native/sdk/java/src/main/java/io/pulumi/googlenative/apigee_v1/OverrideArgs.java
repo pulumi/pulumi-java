@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TraceSamplingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,14 +23,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiProxy")
       private final @Nullable Output<String> apiProxy;
 
-    public Output<String> getApiProxy() {
-        return this.apiProxy == null ? Output.empty() : this.apiProxy;
+    public Output<String> apiProxy() {
+        return this.apiProxy == null ? Codegen.empty() : this.apiProxy;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -40,14 +41,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -58,8 +59,8 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="samplingConfig")
       private final @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 
-    public Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> getSamplingConfig() {
-        return this.samplingConfig == null ? Output.empty() : this.samplingConfig;
+    public Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig() {
+        return this.samplingConfig == null ? Codegen.empty() : this.samplingConfig;
     }
 
     public OverrideArgs(
@@ -76,11 +77,11 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OverrideArgs() {
-        this.apiProxy = Output.empty();
-        this.environmentId = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.samplingConfig = Output.empty();
+        this.apiProxy = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.samplingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiProxy(@Nullable String apiProxy) {
-            this.apiProxy = Output.ofNullable(apiProxy);
+            this.apiProxy = Codegen.ofNullable(apiProxy);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -132,7 +133,7 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -148,7 +149,7 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingConfig(@Nullable GoogleCloudApigeeV1TraceSamplingConfigArgs samplingConfig) {
-            this.samplingConfig = Output.ofNullable(samplingConfig);
+            this.samplingConfig = Codegen.ofNullable(samplingConfig);
             return this;
         }        public OverrideArgs build() {
             return new OverrideArgs(apiProxy, environmentId, name, organizationId, samplingConfig);

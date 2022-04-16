@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyPortalArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyProjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,15 +23,15 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
     @Import(name="portal")
       private final @Nullable Output<AccessPolicyPortalArgs> portal;
 
-    public Output<AccessPolicyPortalArgs> getPortal() {
-        return this.portal == null ? Output.empty() : this.portal;
+    public Output<AccessPolicyPortalArgs> portal() {
+        return this.portal == null ? Codegen.empty() : this.portal;
     }
 
     @Import(name="project")
       private final @Nullable Output<AccessPolicyProjectArgs> project;
 
-    public Output<AccessPolicyProjectArgs> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<AccessPolicyProjectArgs> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public AccessPolicyResourceArgs(
@@ -41,8 +42,8 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
     }
 
     private AccessPolicyResourceArgs() {
-        this.portal = Output.empty();
-        this.project = Output.empty();
+        this.portal = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder portal(@Nullable AccessPolicyPortalArgs portal) {
-            this.portal = Output.ofNullable(portal);
+            this.portal = Codegen.ofNullable(portal);
             return this;
         }
         public Builder project(@Nullable Output<AccessPolicyProjectArgs> project) {
@@ -80,7 +81,7 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable AccessPolicyProjectArgs project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public AccessPolicyResourceArgs build() {
             return new AccessPolicyResourceArgs(portal, project);

@@ -12,6 +12,7 @@ import io.pulumi.aws.organizations.outputs.OrganizationRoot;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
      * 
      */
-    public Output<List<OrganizationAccount>> getAccounts() {
+    public Output<List<OrganizationAccount>> accounts() {
         return this.accounts;
     }
     /**
@@ -59,7 +60,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return ARN of the root
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -73,7 +74,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
      * 
      */
-    public Output</* @Nullable */ List<String>> getAwsServiceAccessPrincipals() {
+    public Output</* @Nullable */ List<String>> awsServiceAccessPrincipals() {
         return this.awsServiceAccessPrincipals;
     }
     /**
@@ -87,7 +88,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
      * 
      */
-    public Output</* @Nullable */ List<String>> getEnabledPolicyTypes() {
+    public Output</* @Nullable */ List<String>> enabledPolicyTypes() {
         return this.enabledPolicyTypes;
     }
     /**
@@ -101,7 +102,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Specify "ALL" (default) or "CONSOLIDATED_BILLING".
      * 
      */
-    public Output</* @Nullable */ String> getFeatureSet() {
+    public Output</* @Nullable */ String> featureSet() {
         return this.featureSet;
     }
     /**
@@ -115,7 +116,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return ARN of the master account
      * 
      */
-    public Output<String> getMasterAccountArn() {
+    public Output<String> masterAccountArn() {
         return this.masterAccountArn;
     }
     /**
@@ -129,7 +130,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Email address of the master account
      * 
      */
-    public Output<String> getMasterAccountEmail() {
+    public Output<String> masterAccountEmail() {
         return this.masterAccountEmail;
     }
     /**
@@ -143,7 +144,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Identifier of the master account
      * 
      */
-    public Output<String> getMasterAccountId() {
+    public Output<String> masterAccountId() {
         return this.masterAccountId;
     }
     /**
@@ -157,7 +158,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
      * 
      */
-    public Output<List<OrganizationNonMasterAccount>> getNonMasterAccounts() {
+    public Output<List<OrganizationNonMasterAccount>> nonMasterAccounts() {
         return this.nonMasterAccounts;
     }
     /**
@@ -171,7 +172,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return List of organization roots. All elements have these attributes:
      * 
      */
-    public Output<List<OrganizationRoot>> getRoots() {
+    public Output<List<OrganizationRoot>> roots() {
         return this.roots;
     }
 
@@ -197,7 +198,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Organization(String name, @Nullable OrganizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:organizations/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:organizations/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Organization(String name, Output<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

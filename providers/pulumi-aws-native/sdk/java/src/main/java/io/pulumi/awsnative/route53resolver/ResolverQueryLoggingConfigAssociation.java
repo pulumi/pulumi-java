@@ -10,6 +10,7 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssoc
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -44,7 +45,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigAssociationError
      * 
      */
-    public Output<ResolverQueryLoggingConfigAssociationError> getError() {
+    public Output<ResolverQueryLoggingConfigAssociationError> error() {
         return this.error;
     }
     /**
@@ -58,7 +59,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigAssociationErrorMessage
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -72,7 +73,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigId
      * 
      */
-    public Output</* @Nullable */ String> getResolverQueryLogConfigId() {
+    public Output</* @Nullable */ String> resolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
     }
     /**
@@ -86,7 +87,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResourceId
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -100,7 +101,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigAssociationStatus
      * 
      */
-    public Output<ResolverQueryLoggingConfigAssociationStatus> getStatus() {
+    public Output<ResolverQueryLoggingConfigAssociationStatus> status() {
         return this.status;
     }
 
@@ -126,7 +127,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverQueryLoggingConfigAssociation(String name, @Nullable ResolverQueryLoggingConfigAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, args == null ? ResolverQueryLoggingConfigAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53resolver:ResolverQueryLoggingConfigAssociation", name, args == null ? ResolverQueryLoggingConfigAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverQueryLoggingConfigAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

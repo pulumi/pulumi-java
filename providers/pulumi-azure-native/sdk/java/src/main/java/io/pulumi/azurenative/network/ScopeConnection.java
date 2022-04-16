@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @return A description of the scope connection.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -70,7 +71,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @return Resource ID.
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -98,7 +99,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -112,7 +113,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @return Tenant ID.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -126,7 +127,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -152,7 +153,7 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScopeConnection(String name, ScopeConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ScopeConnection", name, args == null ? ScopeConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ScopeConnection", name, args == null ? ScopeConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScopeConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

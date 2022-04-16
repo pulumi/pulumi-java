@@ -1,7 +1,6 @@
 package io.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.internal.DeploymentInstanceHolder;
@@ -9,6 +8,7 @@ import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.InvokeArgs;
 import io.pulumi.resources.Resource;
+import io.pulumi.resources.Stack;
 import io.pulumi.resources.StackOptions;
 
 import javax.annotation.Nonnull;
@@ -155,18 +155,6 @@ public interface Deployment {
      * @param callback Callback that creates stack resources.
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
      */
-    static CompletableFuture<Integer> runAsyncFutureVoid(Supplier<CompletableFuture<Void>> callback) {
-        return runAsyncFuture(() -> callback.get()
-                .thenApply(ignore -> ImmutableMap.of())
-        );
-    }
-
-    /**
-     * An entry-point to a Pulumi application.
-     * Deployment will instantiate a default stack instance based on the callback passed as {@code callback} parameter.
-     * @param callback Callback that creates stack resources.
-     * @see #runAsyncFuture(Supplier, StackOptions) for more details.
-     */
     static CompletableFuture<Integer> runAsyncFuture(
             Supplier<CompletableFuture<Map<String, Output<?>>>> callback
     ) {
@@ -206,7 +194,6 @@ public interface Deployment {
      * The function passed to @see #runAsyncFuture(Supplier, StackOptions)
      * can optionally return a @see {@link java.util.Map}.
      * The keys and values in this map will become the outputs for the Pulumi Stack that is created.
-     * @see #runAsyncStack(Class) for more information
      * @see #runAsyncStack(Supplier) for more information.
      */
     static CompletableFuture<Integer> runAsyncFuture(
@@ -216,43 +203,6 @@ public interface Deployment {
         return DeploymentInternal.createRunnerAndRunAsync(
                 DeploymentInternal.deploymentFactory(),
                 runner -> runner.runAsyncFuture(callback, options)
-        );
-    }
-
-    /**
-     * An entry-point to a Pulumi application.
-     * Deployment will instantiate a new stack instance based on the type passed as {@code stackType} parameter.
-     * @param stackType The stack type to be instantiated
-     * JVM applications should perform all startup logic they
-     * need in their {@code main} method and then end with:
-     * <p>
-     * <code>
-     * public static void main(String[] args) {
-     *     // program initialization code ...
-     * <p>
-     *     return Deployment.runAsyncStack(MyStack.class);
-     * }
-     * </code>
-     * </p>
-     * <p>
-     * Importantly: cloud resources cannot be created outside of the @see Stack component.
-     * </p>
-     * <p>
-     * Because cloud Resource construction is inherently asynchronous, the
-     * result of this function is a @see {@link CompletableFuture} which should then
-     * be returned or awaited. This will ensure that any problems that are
-     * encountered during the running of the program are properly reported.
-     * Failure to do this may lead to the program ending early before all
-     * resources are properly registered.
-     * </p>
-     * @see #runAsyncFuture(Supplier, StackOptions) for more information.
-     * @see #runAsyncStack(Supplier) for more information.
-     */
-    @Deprecated
-    static <S extends Stack> CompletableFuture<Integer> runAsyncStack(Class<S> stackType) {
-        return DeploymentInternal.createRunnerAndRunAsync(
-                DeploymentInternal.deploymentFactory(),
-                runner -> runner.runAsync(stackType)
         );
     }
 
@@ -283,7 +233,6 @@ public interface Deployment {
      * resources are properly registered.
      * </p>
      * @see #runAsyncFuture(Supplier, StackOptions) for more information.
-     * @see #runAsyncStack(Class) for more information.
      */
     static <S extends Stack> CompletableFuture<Integer> runAsyncStack(Supplier<S> stackFactory) {
         return DeploymentInternal.createRunnerAndRunAsync(
@@ -291,6 +240,4 @@ public interface Deployment {
                 runner -> runner.runAsync(stackFactory)
         );
     }
-
-    // TODO: consider adding: runBlockingStack / runBlockingFuture that blocks and returns an int
 }

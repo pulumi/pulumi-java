@@ -12,6 +12,7 @@ import io.pulumi.awsnative.s3.outputs.PolicyStatusProperties;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The alias of this Access Point. This alias can be used for compatibility purposes with other AWS services and third-party applications.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -47,7 +48,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified accesspoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +62,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket that you want to associate this Access Point with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -75,7 +76,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The name you want to assign to this Access Point. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +90,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this Access Point allows access from the public Internet. If VpcConfiguration is specified for this Access Point, then NetworkOrigin is VPC, and the Access Point doesn't allow access from the public Internet. Otherwise, NetworkOrigin is Internet, and the Access Point allows access from the public Internet, subject to the Access Point and bucket access policies.
      * 
      */
-    public Output<AccessPointNetworkOrigin> getNetworkOrigin() {
+    public Output<AccessPointNetworkOrigin> networkOrigin() {
         return this.networkOrigin;
     }
     /**
@@ -103,13 +104,13 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The Access Point Policy you want to apply to this access point.
      * 
      */
-    public Output</* @Nullable */ Object> getPolicy() {
+    public Output</* @Nullable */ Object> policy() {
         return this.policy;
     }
     @Export(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
     private Output</* @Nullable */ PolicyStatusProperties> policyStatus;
 
-    public Output</* @Nullable */ PolicyStatusProperties> getPolicyStatus() {
+    public Output</* @Nullable */ PolicyStatusProperties> policyStatus() {
         return this.policyStatus;
     }
     /**
@@ -123,7 +124,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    public Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
+    public Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration;
     }
     /**
@@ -137,7 +138,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return If you include this field, Amazon S3 restricts access to this Access Point to requests from the specified Virtual Private Cloud (VPC).
      * 
      */
-    public Output</* @Nullable */ AccessPointVpcConfiguration> getVpcConfiguration() {
+    public Output</* @Nullable */ AccessPointVpcConfiguration> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 
@@ -163,7 +164,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPoint(String name, AccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:s3:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:s3:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessPoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

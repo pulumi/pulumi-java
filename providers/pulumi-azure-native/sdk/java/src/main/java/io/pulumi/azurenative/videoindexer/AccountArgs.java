@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoindexer.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.videoindexer.inputs.MediaServicesForPutRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mediaServices")
       private final @Nullable Output<MediaServicesForPutRequestArgs> mediaServices;
 
-    public Output<MediaServicesForPutRequestArgs> getMediaServices() {
-        return this.mediaServices == null ? Output.empty() : this.mediaServices;
+    public Output<MediaServicesForPutRequestArgs> mediaServices() {
+        return this.mediaServices == null ? Codegen.empty() : this.mediaServices;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,8 +91,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AccountArgs(
@@ -112,13 +113,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountId = Output.empty();
-        this.accountName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.mediaServices = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountId = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mediaServices = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder accountName(@Nullable Output<String> accountName) {
@@ -166,7 +167,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -174,7 +175,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -182,7 +183,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mediaServices(@Nullable Output<MediaServicesForPutRequestArgs> mediaServices) {
@@ -190,7 +191,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mediaServices(@Nullable MediaServicesForPutRequestArgs mediaServices) {
-            this.mediaServices = Output.ofNullable(mediaServices);
+            this.mediaServices = Codegen.ofNullable(mediaServices);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -206,7 +207,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(accountId, accountName, identity, location, mediaServices, resourceGroupName, tags);

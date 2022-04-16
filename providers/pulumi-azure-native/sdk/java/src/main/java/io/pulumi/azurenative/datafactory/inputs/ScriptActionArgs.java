@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,8 +38,8 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<String> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roles", required=true)
       private final Output<Object> roles;
 
-    public Output<Object> getRoles() {
+    public Output<Object> roles() {
         return this.roles;
     }
 
@@ -59,7 +60,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -75,10 +76,10 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScriptActionArgs() {
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.roles = Output.empty();
-        this.uri = Output.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.roles = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder roles(Output<Object> roles) {

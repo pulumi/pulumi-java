@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.enums.PatchConfigRebootConfig;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AptSettingsArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.ExecStepArgs;
@@ -32,8 +33,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apt")
       private final @Nullable Output<AptSettingsArgs> apt;
 
-    public Output<AptSettingsArgs> getApt() {
-        return this.apt == null ? Output.empty() : this.apt;
+    public Output<AptSettingsArgs> apt() {
+        return this.apt == null ? Codegen.empty() : this.apt;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="goo")
       private final @Nullable Output<GooSettingsArgs> goo;
 
-    public Output<GooSettingsArgs> getGoo() {
-        return this.goo == null ? Output.empty() : this.goo;
+    public Output<GooSettingsArgs> goo() {
+        return this.goo == null ? Codegen.empty() : this.goo;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="migInstancesAllowed")
       private final @Nullable Output<Boolean> migInstancesAllowed;
 
-    public Output<Boolean> getMigInstancesAllowed() {
-        return this.migInstancesAllowed == null ? Output.empty() : this.migInstancesAllowed;
+    public Output<Boolean> migInstancesAllowed() {
+        return this.migInstancesAllowed == null ? Codegen.empty() : this.migInstancesAllowed;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postStep")
       private final @Nullable Output<ExecStepArgs> postStep;
 
-    public Output<ExecStepArgs> getPostStep() {
-        return this.postStep == null ? Output.empty() : this.postStep;
+    public Output<ExecStepArgs> postStep() {
+        return this.postStep == null ? Codegen.empty() : this.postStep;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preStep")
       private final @Nullable Output<ExecStepArgs> preStep;
 
-    public Output<ExecStepArgs> getPreStep() {
-        return this.preStep == null ? Output.empty() : this.preStep;
+    public Output<ExecStepArgs> preStep() {
+        return this.preStep == null ? Codegen.empty() : this.preStep;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rebootConfig")
       private final @Nullable Output<PatchConfigRebootConfig> rebootConfig;
 
-    public Output<PatchConfigRebootConfig> getRebootConfig() {
-        return this.rebootConfig == null ? Output.empty() : this.rebootConfig;
+    public Output<PatchConfigRebootConfig> rebootConfig() {
+        return this.rebootConfig == null ? Codegen.empty() : this.rebootConfig;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowsUpdate")
       private final @Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate;
 
-    public Output<WindowsUpdateSettingsArgs> getWindowsUpdate() {
-        return this.windowsUpdate == null ? Output.empty() : this.windowsUpdate;
+    public Output<WindowsUpdateSettingsArgs> windowsUpdate() {
+        return this.windowsUpdate == null ? Codegen.empty() : this.windowsUpdate;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="yum")
       private final @Nullable Output<YumSettingsArgs> yum;
 
-    public Output<YumSettingsArgs> getYum() {
-        return this.yum == null ? Output.empty() : this.yum;
+    public Output<YumSettingsArgs> yum() {
+        return this.yum == null ? Codegen.empty() : this.yum;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zypper")
       private final @Nullable Output<ZypperSettingsArgs> zypper;
 
-    public Output<ZypperSettingsArgs> getZypper() {
-        return this.zypper == null ? Output.empty() : this.zypper;
+    public Output<ZypperSettingsArgs> zypper() {
+        return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 
     public PatchConfigArgs(
@@ -146,15 +147,15 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchConfigArgs() {
-        this.apt = Output.empty();
-        this.goo = Output.empty();
-        this.migInstancesAllowed = Output.empty();
-        this.postStep = Output.empty();
-        this.preStep = Output.empty();
-        this.rebootConfig = Output.empty();
-        this.windowsUpdate = Output.empty();
-        this.yum = Output.empty();
-        this.zypper = Output.empty();
+        this.apt = Codegen.empty();
+        this.goo = Codegen.empty();
+        this.migInstancesAllowed = Codegen.empty();
+        this.postStep = Codegen.empty();
+        this.preStep = Codegen.empty();
+        this.rebootConfig = Codegen.empty();
+        this.windowsUpdate = Codegen.empty();
+        this.yum = Codegen.empty();
+        this.zypper = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apt(@Nullable AptSettingsArgs apt) {
-            this.apt = Output.ofNullable(apt);
+            this.apt = Codegen.ofNullable(apt);
             return this;
         }
         public Builder goo(@Nullable Output<GooSettingsArgs> goo) {
@@ -206,7 +207,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder goo(@Nullable GooSettingsArgs goo) {
-            this.goo = Output.ofNullable(goo);
+            this.goo = Codegen.ofNullable(goo);
             return this;
         }
         public Builder migInstancesAllowed(@Nullable Output<Boolean> migInstancesAllowed) {
@@ -214,7 +215,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder migInstancesAllowed(@Nullable Boolean migInstancesAllowed) {
-            this.migInstancesAllowed = Output.ofNullable(migInstancesAllowed);
+            this.migInstancesAllowed = Codegen.ofNullable(migInstancesAllowed);
             return this;
         }
         public Builder postStep(@Nullable Output<ExecStepArgs> postStep) {
@@ -222,7 +223,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postStep(@Nullable ExecStepArgs postStep) {
-            this.postStep = Output.ofNullable(postStep);
+            this.postStep = Codegen.ofNullable(postStep);
             return this;
         }
         public Builder preStep(@Nullable Output<ExecStepArgs> preStep) {
@@ -230,7 +231,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preStep(@Nullable ExecStepArgs preStep) {
-            this.preStep = Output.ofNullable(preStep);
+            this.preStep = Codegen.ofNullable(preStep);
             return this;
         }
         public Builder rebootConfig(@Nullable Output<PatchConfigRebootConfig> rebootConfig) {
@@ -238,7 +239,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rebootConfig(@Nullable PatchConfigRebootConfig rebootConfig) {
-            this.rebootConfig = Output.ofNullable(rebootConfig);
+            this.rebootConfig = Codegen.ofNullable(rebootConfig);
             return this;
         }
         public Builder windowsUpdate(@Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate) {
@@ -246,7 +247,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder windowsUpdate(@Nullable WindowsUpdateSettingsArgs windowsUpdate) {
-            this.windowsUpdate = Output.ofNullable(windowsUpdate);
+            this.windowsUpdate = Codegen.ofNullable(windowsUpdate);
             return this;
         }
         public Builder yum(@Nullable Output<YumSettingsArgs> yum) {
@@ -254,7 +255,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder yum(@Nullable YumSettingsArgs yum) {
-            this.yum = Output.ofNullable(yum);
+            this.yum = Codegen.ofNullable(yum);
             return this;
         }
         public Builder zypper(@Nullable Output<ZypperSettingsArgs> zypper) {
@@ -262,7 +263,7 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zypper(@Nullable ZypperSettingsArgs zypper) {
-            this.zypper = Output.ofNullable(zypper);
+            this.zypper = Codegen.ofNullable(zypper);
             return this;
         }        public PatchConfigArgs build() {
             return new PatchConfigArgs(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);

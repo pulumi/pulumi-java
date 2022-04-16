@@ -9,6 +9,7 @@ import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleRuleConfigArg
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assertionRule")
       private final @Nullable Output<SafetyRuleAssertionRuleArgs> assertionRule;
 
-    public Output<SafetyRuleAssertionRuleArgs> getAssertionRule() {
-        return this.assertionRule == null ? Output.empty() : this.assertionRule;
+    public Output<SafetyRuleAssertionRuleArgs> assertionRule() {
+        return this.assertionRule == null ? Codegen.empty() : this.assertionRule;
     }
 
     /**
@@ -33,29 +34,29 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
 
-    public Output<String> getControlPanelArn() {
-        return this.controlPanelArn == null ? Output.empty() : this.controlPanelArn;
+    public Output<String> controlPanelArn() {
+        return this.controlPanelArn == null ? Codegen.empty() : this.controlPanelArn;
     }
 
     @Import(name="gatingRule")
       private final @Nullable Output<SafetyRuleGatingRuleArgs> gatingRule;
 
-    public Output<SafetyRuleGatingRuleArgs> getGatingRule() {
-        return this.gatingRule == null ? Output.empty() : this.gatingRule;
+    public Output<SafetyRuleGatingRuleArgs> gatingRule() {
+        return this.gatingRule == null ? Codegen.empty() : this.gatingRule;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="ruleConfig")
       private final @Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
-    public Output<SafetyRuleRuleConfigArgs> getRuleConfig() {
-        return this.ruleConfig == null ? Output.empty() : this.ruleConfig;
+    public Output<SafetyRuleRuleConfigArgs> ruleConfig() {
+        return this.ruleConfig == null ? Codegen.empty() : this.ruleConfig;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<SafetyRuleTagArgs>> tags;
 
-    public Output<List<SafetyRuleTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<SafetyRuleTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SafetyRuleArgs(
@@ -85,12 +86,12 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SafetyRuleArgs() {
-        this.assertionRule = Output.empty();
-        this.controlPanelArn = Output.empty();
-        this.gatingRule = Output.empty();
-        this.name = Output.empty();
-        this.ruleConfig = Output.empty();
-        this.tags = Output.empty();
+        this.assertionRule = Codegen.empty();
+        this.controlPanelArn = Codegen.empty();
+        this.gatingRule = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ruleConfig = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assertionRule(@Nullable SafetyRuleAssertionRuleArgs assertionRule) {
-            this.assertionRule = Output.ofNullable(assertionRule);
+            this.assertionRule = Codegen.ofNullable(assertionRule);
             return this;
         }
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
@@ -136,7 +137,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder controlPanelArn(@Nullable String controlPanelArn) {
-            this.controlPanelArn = Output.ofNullable(controlPanelArn);
+            this.controlPanelArn = Codegen.ofNullable(controlPanelArn);
             return this;
         }
         public Builder gatingRule(@Nullable Output<SafetyRuleGatingRuleArgs> gatingRule) {
@@ -144,7 +145,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatingRule(@Nullable SafetyRuleGatingRuleArgs gatingRule) {
-            this.gatingRule = Output.ofNullable(gatingRule);
+            this.gatingRule = Codegen.ofNullable(gatingRule);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -152,7 +153,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ruleConfig(@Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig) {
@@ -160,7 +161,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleConfig(@Nullable SafetyRuleRuleConfigArgs ruleConfig) {
-            this.ruleConfig = Output.ofNullable(ruleConfig);
+            this.ruleConfig = Codegen.ofNullable(ruleConfig);
             return this;
         }
         public Builder tags(@Nullable Output<List<SafetyRuleTagArgs>> tags) {
@@ -168,7 +169,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<SafetyRuleTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SafetyRuleTagArgs... tags) {

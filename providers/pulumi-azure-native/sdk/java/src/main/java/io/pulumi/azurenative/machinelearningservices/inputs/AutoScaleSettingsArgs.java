@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Output.empty() : this.maxInstances;
+    public Output<Integer> maxInstances() {
+        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> getMinInstances() {
-        return this.minInstances == null ? Output.empty() : this.minInstances;
+    public Output<Integer> minInstances() {
+        return this.minInstances == null ? Codegen.empty() : this.minInstances;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="pollingInterval")
       private final @Nullable Output<String> pollingInterval;
 
-    public Output<String> getPollingInterval() {
-        return this.pollingInterval == null ? Output.empty() : this.pollingInterval;
+    public Output<String> pollingInterval() {
+        return this.pollingInterval == null ? Codegen.empty() : this.pollingInterval;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scaleType", required=true)
       private final Output<String> scaleType;
 
-    public Output<String> getScaleType() {
+    public Output<String> scaleType() {
         return this.scaleType;
     }
 
@@ -66,8 +67,8 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetUtilizationPercentage")
       private final @Nullable Output<Integer> targetUtilizationPercentage;
 
-    public Output<Integer> getTargetUtilizationPercentage() {
-        return this.targetUtilizationPercentage == null ? Output.empty() : this.targetUtilizationPercentage;
+    public Output<Integer> targetUtilizationPercentage() {
+        return this.targetUtilizationPercentage == null ? Codegen.empty() : this.targetUtilizationPercentage;
     }
 
     public AutoScaleSettingsArgs(
@@ -84,11 +85,11 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutoScaleSettingsArgs() {
-        this.maxInstances = Output.empty();
-        this.minInstances = Output.empty();
-        this.pollingInterval = Output.empty();
-        this.scaleType = Output.empty();
-        this.targetUtilizationPercentage = Output.empty();
+        this.maxInstances = Codegen.empty();
+        this.minInstances = Codegen.empty();
+        this.pollingInterval = Codegen.empty();
+        this.scaleType = Codegen.empty();
+        this.targetUtilizationPercentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Output.ofNullable(maxInstances);
+            this.maxInstances = Codegen.ofNullable(maxInstances);
             return this;
         }
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
@@ -132,7 +133,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Output.ofNullable(minInstances);
+            this.minInstances = Codegen.ofNullable(minInstances);
             return this;
         }
         public Builder pollingInterval(@Nullable Output<String> pollingInterval) {
@@ -140,7 +141,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder pollingInterval(@Nullable String pollingInterval) {
-            this.pollingInterval = Output.ofNullable(pollingInterval);
+            this.pollingInterval = Codegen.ofNullable(pollingInterval);
             return this;
         }
         public Builder scaleType(Output<String> scaleType) {
@@ -156,7 +157,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder targetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
-            this.targetUtilizationPercentage = Output.ofNullable(targetUtilizationPercentage);
+            this.targetUtilizationPercentage = Codegen.ofNullable(targetUtilizationPercentage);
             return this;
         }        public AutoScaleSettingsArgs build() {
             return new AutoScaleSettingsArgs(maxInstances, minInstances, pollingInterval, scaleType, targetUtilizationPercentage);

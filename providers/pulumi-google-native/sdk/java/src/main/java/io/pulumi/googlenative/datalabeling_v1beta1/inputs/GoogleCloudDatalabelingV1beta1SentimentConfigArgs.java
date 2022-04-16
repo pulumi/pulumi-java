@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
     @Import(name="enableLabelSentimentSelection")
       private final @Nullable Output<Boolean> enableLabelSentimentSelection;
 
-    public Output<Boolean> getEnableLabelSentimentSelection() {
-        return this.enableLabelSentimentSelection == null ? Output.empty() : this.enableLabelSentimentSelection;
+    public Output<Boolean> enableLabelSentimentSelection() {
+        return this.enableLabelSentimentSelection == null ? Codegen.empty() : this.enableLabelSentimentSelection;
     }
 
     public GoogleCloudDatalabelingV1beta1SentimentConfigArgs(@Nullable Output<Boolean> enableLabelSentimentSelection) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
     }
 
     private GoogleCloudDatalabelingV1beta1SentimentConfigArgs() {
-        this.enableLabelSentimentSelection = Output.empty();
+        this.enableLabelSentimentSelection = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
             return this;
         }
         public Builder enableLabelSentimentSelection(@Nullable Boolean enableLabelSentimentSelection) {
-            this.enableLabelSentimentSelection = Output.ofNullable(enableLabelSentimentSelection);
+            this.enableLabelSentimentSelection = Codegen.ofNullable(enableLabelSentimentSelection);
             return this;
         }        public GoogleCloudDatalabelingV1beta1SentimentConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1SentimentConfigArgs(enableLabelSentimentSelection);

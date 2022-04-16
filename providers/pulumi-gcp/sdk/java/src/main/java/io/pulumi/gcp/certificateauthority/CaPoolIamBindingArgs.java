@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,15 +24,15 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="caPool", required=true)
       private final Output<String> caPool;
 
-    public Output<String> getCaPool() {
+    public Output<String> caPool() {
         return this.caPool;
     }
 
     @Import(name="condition")
       private final @Nullable Output<CaPoolIamBindingConditionArgs> condition;
 
-    public Output<CaPoolIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<CaPoolIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -43,14 +44,14 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -62,8 +63,8 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -95,12 +96,12 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CaPoolIamBindingArgs() {
-        this.caPool = Output.empty();
-        this.condition = Output.empty();
-        this.location = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.caPool = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.location = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable CaPoolIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -154,7 +155,7 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -173,7 +174,7 @@ public final class CaPoolIamBindingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

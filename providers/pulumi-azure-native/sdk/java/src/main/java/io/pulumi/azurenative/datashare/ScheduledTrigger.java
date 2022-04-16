@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Time at which the trigger was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -58,7 +59,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Expected value is 'ScheduleBased'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +73,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Gets the provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Recurrence Interval
      * 
      */
-    public Output<String> getRecurrenceInterval() {
+    public Output<String> recurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
@@ -114,7 +115,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Synchronization mode
      * 
      */
-    public Output</* @Nullable */ String> getSynchronizationMode() {
+    public Output</* @Nullable */ String> synchronizationMode() {
         return this.synchronizationMode;
     }
     /**
@@ -128,7 +129,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Synchronization time
      * 
      */
-    public Output<String> getSynchronizationTime() {
+    public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
     /**
@@ -142,7 +143,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -156,7 +157,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Gets the trigger state
      * 
      */
-    public Output<String> getTriggerStatus() {
+    public Output<String> triggerStatus() {
         return this.triggerStatus;
     }
     /**
@@ -170,7 +171,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -184,7 +185,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @return Name of the user who created the trigger.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -210,7 +211,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScheduledTrigger(String name, ScheduledTriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:ScheduledTrigger", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:ScheduledTrigger", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScheduledTrigger(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

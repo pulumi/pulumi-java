@@ -10,6 +10,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
     @Import(name="definition", required=true)
       private final Output<ReportDefinitionArgs> definition;
 
-    public Output<ReportDefinitionArgs> getDefinition() {
+    public Output<ReportDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -37,7 +38,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
     @Import(name="deliveryInfo", required=true)
       private final Output<ReportDeliveryInfoArgs> deliveryInfo;
 
-    public Output<ReportDeliveryInfoArgs> getDeliveryInfo() {
+    public Output<ReportDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo;
     }
 
@@ -48,8 +49,8 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
     @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
 
-    public Output<Either<String,FormatType>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<Either<String,FormatType>> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
     @Import(name="reportName")
       private final @Nullable Output<String> reportName;
 
-    public Output<String> getReportName() {
-        return this.reportName == null ? Output.empty() : this.reportName;
+    public Output<String> reportName() {
+        return this.reportName == null ? Codegen.empty() : this.reportName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,8 +82,8 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
     @Import(name="schedule")
       private final @Nullable Output<ReportScheduleArgs> schedule;
 
-    public Output<ReportScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<ReportScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     public ReportByResourceGroupNameArgs(
@@ -101,12 +102,12 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
     }
 
     private ReportByResourceGroupNameArgs() {
-        this.definition = Output.empty();
-        this.deliveryInfo = Output.empty();
-        this.format = Output.empty();
-        this.reportName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schedule = Output.empty();
+        this.definition = Codegen.empty();
+        this.deliveryInfo = Codegen.empty();
+        this.format = Codegen.empty();
+        this.reportName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder format(@Nullable Either<String,FormatType> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder reportName(@Nullable Output<String> reportName) {
@@ -168,7 +169,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder reportName(@Nullable String reportName) {
-            this.reportName = Output.ofNullable(reportName);
+            this.reportName = Codegen.ofNullable(reportName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -184,7 +185,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder schedule(@Nullable ReportScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }        public ReportByResourceGroupNameArgs build() {
             return new ReportByResourceGroupNameArgs(definition, deliveryInfo, format, reportName, resourceGroupName, schedule);

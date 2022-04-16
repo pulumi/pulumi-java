@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Object> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,ParameterType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Object> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public WorkflowParameterArgs(
@@ -77,10 +78,10 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WorkflowParameterArgs() {
-        this.description = Output.empty();
-        this.metadata = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.description = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -122,7 +123,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
@@ -130,7 +131,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable Either<String,ParameterType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<Object> value) {
@@ -138,7 +139,7 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder value(@Nullable Object value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public WorkflowParameterArgs build() {
             return new WorkflowParameterArgs(description, metadata, type, value);

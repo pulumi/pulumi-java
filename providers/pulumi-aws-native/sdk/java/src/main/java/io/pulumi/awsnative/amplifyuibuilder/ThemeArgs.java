@@ -7,6 +7,7 @@ import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValuesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,28 +21,28 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="overrides")
       private final @Nullable Output<List<ThemeValuesArgs>> overrides;
 
-    public Output<List<ThemeValuesArgs>> getOverrides() {
-        return this.overrides == null ? Output.empty() : this.overrides;
+    public Output<List<ThemeValuesArgs>> overrides() {
+        return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     @Import(name="tags")
       private final @Nullable Output<ThemeTagsArgs> tags;
 
-    public Output<ThemeTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<ThemeTagsArgs> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="values", required=true)
       private final Output<List<ThemeValuesArgs>> values;
 
-    public Output<List<ThemeValuesArgs>> getValues() {
+    public Output<List<ThemeValuesArgs>> values() {
         return this.values;
     }
 
@@ -57,10 +58,10 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeArgs() {
-        this.name = Output.empty();
-        this.overrides = Output.empty();
-        this.tags = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.overrides = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder overrides(@Nullable Output<List<ThemeValuesArgs>> overrides) {
@@ -102,7 +103,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overrides(@Nullable List<ThemeValuesArgs> overrides) {
-            this.overrides = Output.ofNullable(overrides);
+            this.overrides = Codegen.ofNullable(overrides);
             return this;
         }
         public Builder overrides(ThemeValuesArgs... overrides) {
@@ -113,7 +114,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable ThemeTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder values(Output<List<ThemeValuesArgs>> values) {

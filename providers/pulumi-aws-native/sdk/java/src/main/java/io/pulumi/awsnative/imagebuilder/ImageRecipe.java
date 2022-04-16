@@ -11,6 +11,7 @@ import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeInstanceBlockDeviceMa
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return Specify additional settings and launch scripts for your build instances.
      * 
      */
-    public Output</* @Nullable */ ImageRecipeAdditionalInstanceConfiguration> getAdditionalInstanceConfiguration() {
+    public Output</* @Nullable */ ImageRecipeAdditionalInstanceConfiguration> additionalInstanceConfiguration() {
         return this.additionalInstanceConfiguration;
     }
     /**
@@ -47,7 +48,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +62,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The block device mappings to apply when creating images from this recipe.
      * 
      */
-    public Output</* @Nullable */ List<ImageRecipeInstanceBlockDeviceMapping>> getBlockDeviceMappings() {
+    public Output</* @Nullable */ List<ImageRecipeInstanceBlockDeviceMapping>> blockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
@@ -75,7 +76,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The components of the image recipe.
      * 
      */
-    public Output<List<ImageRecipeComponentConfiguration>> getComponents() {
+    public Output<List<ImageRecipeComponentConfiguration>> components() {
         return this.components;
     }
     /**
@@ -89,7 +90,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The description of the image recipe.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +104,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The name of the image recipe.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +118,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The parent image of the image recipe.
      * 
      */
-    public Output<String> getParentImage() {
+    public Output<String> parentImage() {
         return this.parentImage;
     }
     /**
@@ -131,7 +132,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The tags of the image recipe.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     /**
@@ -145,7 +146,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The version of the image recipe.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
     /**
@@ -159,7 +160,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @return The working directory to be used during build and test workflows.
      * 
      */
-    public Output</* @Nullable */ String> getWorkingDirectory() {
+    public Output</* @Nullable */ String> workingDirectory() {
         return this.workingDirectory;
     }
 
@@ -185,7 +186,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImageRecipe(String name, ImageRecipeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:imagebuilder:ImageRecipe", name, args == null ? ImageRecipeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:imagebuilder:ImageRecipe", name, args == null ? ImageRecipeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImageRecipe(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

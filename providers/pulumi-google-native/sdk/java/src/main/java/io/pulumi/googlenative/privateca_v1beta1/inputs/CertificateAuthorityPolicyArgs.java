@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedConfigListArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedSubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.IssuanceModesArgs;
@@ -31,8 +32,8 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedCommonNames")
       private final @Nullable Output<List<String>> allowedCommonNames;
 
-    public Output<List<String>> getAllowedCommonNames() {
-        return this.allowedCommonNames == null ? Output.empty() : this.allowedCommonNames;
+    public Output<List<String>> allowedCommonNames() {
+        return this.allowedCommonNames == null ? Codegen.empty() : this.allowedCommonNames;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedConfigList")
       private final @Nullable Output<AllowedConfigListArgs> allowedConfigList;
 
-    public Output<AllowedConfigListArgs> getAllowedConfigList() {
-        return this.allowedConfigList == null ? Output.empty() : this.allowedConfigList;
+    public Output<AllowedConfigListArgs> allowedConfigList() {
+        return this.allowedConfigList == null ? Codegen.empty() : this.allowedConfigList;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedIssuanceModes")
       private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
-    public Output<IssuanceModesArgs> getAllowedIssuanceModes() {
-        return this.allowedIssuanceModes == null ? Output.empty() : this.allowedIssuanceModes;
+    public Output<IssuanceModesArgs> allowedIssuanceModes() {
+        return this.allowedIssuanceModes == null ? Codegen.empty() : this.allowedIssuanceModes;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedLocationsAndOrganizations")
       private final @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
 
-    public Output<List<SubjectArgs>> getAllowedLocationsAndOrganizations() {
-        return this.allowedLocationsAndOrganizations == null ? Output.empty() : this.allowedLocationsAndOrganizations;
+    public Output<List<SubjectArgs>> allowedLocationsAndOrganizations() {
+        return this.allowedLocationsAndOrganizations == null ? Codegen.empty() : this.allowedLocationsAndOrganizations;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedSans")
       private final @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
 
-    public Output<AllowedSubjectAltNamesArgs> getAllowedSans() {
-        return this.allowedSans == null ? Output.empty() : this.allowedSans;
+    public Output<AllowedSubjectAltNamesArgs> allowedSans() {
+        return this.allowedSans == null ? Codegen.empty() : this.allowedSans;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="maximumLifetime")
       private final @Nullable Output<String> maximumLifetime;
 
-    public Output<String> getMaximumLifetime() {
-        return this.maximumLifetime == null ? Output.empty() : this.maximumLifetime;
+    public Output<String> maximumLifetime() {
+        return this.maximumLifetime == null ? Codegen.empty() : this.maximumLifetime;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="overwriteConfigValues")
       private final @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;
 
-    public Output<ReusableConfigWrapperArgs> getOverwriteConfigValues() {
-        return this.overwriteConfigValues == null ? Output.empty() : this.overwriteConfigValues;
+    public Output<ReusableConfigWrapperArgs> overwriteConfigValues() {
+        return this.overwriteConfigValues == null ? Codegen.empty() : this.overwriteConfigValues;
     }
 
     public CertificateAuthorityPolicyArgs(
@@ -119,13 +120,13 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     }
 
     private CertificateAuthorityPolicyArgs() {
-        this.allowedCommonNames = Output.empty();
-        this.allowedConfigList = Output.empty();
-        this.allowedIssuanceModes = Output.empty();
-        this.allowedLocationsAndOrganizations = Output.empty();
-        this.allowedSans = Output.empty();
-        this.maximumLifetime = Output.empty();
-        this.overwriteConfigValues = Output.empty();
+        this.allowedCommonNames = Codegen.empty();
+        this.allowedConfigList = Codegen.empty();
+        this.allowedIssuanceModes = Codegen.empty();
+        this.allowedLocationsAndOrganizations = Codegen.empty();
+        this.allowedSans = Codegen.empty();
+        this.maximumLifetime = Codegen.empty();
+        this.overwriteConfigValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allowedCommonNames(@Nullable List<String> allowedCommonNames) {
-            this.allowedCommonNames = Output.ofNullable(allowedCommonNames);
+            this.allowedCommonNames = Codegen.ofNullable(allowedCommonNames);
             return this;
         }
         public Builder allowedCommonNames(String... allowedCommonNames) {
@@ -176,7 +177,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allowedConfigList(@Nullable AllowedConfigListArgs allowedConfigList) {
-            this.allowedConfigList = Output.ofNullable(allowedConfigList);
+            this.allowedConfigList = Codegen.ofNullable(allowedConfigList);
             return this;
         }
         public Builder allowedIssuanceModes(@Nullable Output<IssuanceModesArgs> allowedIssuanceModes) {
@@ -184,7 +185,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
-            this.allowedIssuanceModes = Output.ofNullable(allowedIssuanceModes);
+            this.allowedIssuanceModes = Codegen.ofNullable(allowedIssuanceModes);
             return this;
         }
         public Builder allowedLocationsAndOrganizations(@Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations) {
@@ -192,7 +193,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allowedLocationsAndOrganizations(@Nullable List<SubjectArgs> allowedLocationsAndOrganizations) {
-            this.allowedLocationsAndOrganizations = Output.ofNullable(allowedLocationsAndOrganizations);
+            this.allowedLocationsAndOrganizations = Codegen.ofNullable(allowedLocationsAndOrganizations);
             return this;
         }
         public Builder allowedLocationsAndOrganizations(SubjectArgs... allowedLocationsAndOrganizations) {
@@ -203,7 +204,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allowedSans(@Nullable AllowedSubjectAltNamesArgs allowedSans) {
-            this.allowedSans = Output.ofNullable(allowedSans);
+            this.allowedSans = Codegen.ofNullable(allowedSans);
             return this;
         }
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
@@ -211,7 +212,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maximumLifetime(@Nullable String maximumLifetime) {
-            this.maximumLifetime = Output.ofNullable(maximumLifetime);
+            this.maximumLifetime = Codegen.ofNullable(maximumLifetime);
             return this;
         }
         public Builder overwriteConfigValues(@Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues) {
@@ -219,7 +220,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder overwriteConfigValues(@Nullable ReusableConfigWrapperArgs overwriteConfigValues) {
-            this.overwriteConfigValues = Output.ofNullable(overwriteConfigValues);
+            this.overwriteConfigValues = Codegen.ofNullable(overwriteConfigValues);
             return this;
         }        public CertificateAuthorityPolicyArgs build() {
             return new CertificateAuthorityPolicyArgs(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);

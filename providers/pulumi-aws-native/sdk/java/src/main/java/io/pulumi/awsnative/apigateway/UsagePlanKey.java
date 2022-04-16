@@ -9,6 +9,7 @@ import io.pulumi.awsnative.apigateway.enums.UsagePlanKeyKeyType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @return The ID of the usage plan key.
      * 
      */
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
     /**
@@ -43,7 +44,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @return The type of usage plan key. Currently, the only valid key type is API_KEY.
      * 
      */
-    public Output<UsagePlanKeyKeyType> getKeyType() {
+    public Output<UsagePlanKeyKeyType> keyType() {
         return this.keyType;
     }
     /**
@@ -57,7 +58,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @return The ID of the usage plan.
      * 
      */
-    public Output<String> getUsagePlanId() {
+    public Output<String> usagePlanId() {
         return this.usagePlanId;
     }
 
@@ -83,7 +84,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UsagePlanKey(String name, UsagePlanKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:UsagePlanKey", name, args == null ? UsagePlanKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:UsagePlanKey", name, args == null ? UsagePlanKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UsagePlanKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

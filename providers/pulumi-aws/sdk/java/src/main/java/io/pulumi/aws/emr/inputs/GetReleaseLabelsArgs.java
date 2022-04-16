@@ -21,7 +21,7 @@ public final class GetReleaseLabelsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable GetReleaseLabelsFilters filters;
 
-    public Optional<GetReleaseLabelsFilters> getFilters() {
+    public Optional<GetReleaseLabelsFilters> filters() {
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
     }
 

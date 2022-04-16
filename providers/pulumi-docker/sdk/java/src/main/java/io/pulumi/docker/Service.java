@@ -6,6 +6,7 @@ package io.pulumi.docker;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.ServiceArgs;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.ServiceState;
@@ -70,7 +71,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Configuration for the authentication for pulling the images of the service
      * 
      */
-    public Output</* @Nullable */ ServiceAuth> getAuth() {
+    public Output</* @Nullable */ ServiceAuth> auth() {
         return this.auth;
     }
     /**
@@ -84,7 +85,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A configuration to ensure that a service converges aka reaches the desired that of all task up and running
      * 
      */
-    public Output</* @Nullable */ ServiceConvergeConfig> getConvergeConfig() {
+    public Output</* @Nullable */ ServiceConvergeConfig> convergeConfig() {
         return this.convergeConfig;
     }
     /**
@@ -98,7 +99,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Properties that can be configured to access and load balance a service
      * 
      */
-    public Output<ServiceEndpointSpec> getEndpointSpec() {
+    public Output<ServiceEndpointSpec> endpointSpec() {
         return this.endpointSpec;
     }
     /**
@@ -112,7 +113,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output<List<ServiceLabel>> getLabels() {
+    public Output<List<ServiceLabel>> labels() {
         return this.labels;
     }
     /**
@@ -126,7 +127,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Scheduling mode for the service
      * 
      */
-    public Output<ServiceMode> getMode() {
+    public Output<ServiceMode> mode() {
         return this.mode;
     }
     /**
@@ -140,7 +141,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Name of the service
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -154,7 +155,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Specification for the rollback strategy of the service
      * 
      */
-    public Output</* @Nullable */ ServiceRollbackConfig> getRollbackConfig() {
+    public Output</* @Nullable */ ServiceRollbackConfig> rollbackConfig() {
         return this.rollbackConfig;
     }
     /**
@@ -168,7 +169,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return User modifiable task configuration
      * 
      */
-    public Output<ServiceTaskSpec> getTaskSpec() {
+    public Output<ServiceTaskSpec> taskSpec() {
         return this.taskSpec;
     }
     /**
@@ -182,7 +183,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Specification for the update strategy of the service
      * 
      */
-    public Output</* @Nullable */ ServiceUpdateConfig> getUpdateConfig() {
+    public Output</* @Nullable */ ServiceUpdateConfig> updateConfig() {
         return this.updateConfig;
     }
 
@@ -208,7 +209,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("docker:index/service:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable ServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

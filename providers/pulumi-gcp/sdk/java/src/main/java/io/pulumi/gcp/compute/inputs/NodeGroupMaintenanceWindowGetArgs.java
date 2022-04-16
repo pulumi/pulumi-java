@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class NodeGroupMaintenanceWindowGetArgs extends io.pulumi.resources
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -29,7 +30,7 @@ public final class NodeGroupMaintenanceWindowGetArgs extends io.pulumi.resources
     }
 
     private NodeGroupMaintenanceWindowGetArgs() {
-        this.startTime = Output.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="networkServices")
       private final @Nullable Output<List<String>> networkServices;
 
-    public Output<List<String>> getNetworkServices() {
-        return this.networkServices == null ? Output.empty() : this.networkServices;
+    public Output<List<String>> networkServices() {
+        return this.networkServices == null ? Codegen.empty() : this.networkServices;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TrafficMirrorFilterArgs(
@@ -59,9 +60,9 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     }
 
     private TrafficMirrorFilterArgs() {
-        this.description = Output.empty();
-        this.networkServices = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.networkServices = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder networkServices(@Nullable Output<List<String>> networkServices) {
@@ -101,7 +102,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder networkServices(@Nullable List<String> networkServices) {
-            this.networkServices = Output.ofNullable(networkServices);
+            this.networkServices = Codegen.ofNullable(networkServices);
             return this;
         }
         public Builder networkServices(String... networkServices) {
@@ -112,7 +113,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public TrafficMirrorFilterArgs build() {
             return new TrafficMirrorFilterArgs(description, networkServices, tags);

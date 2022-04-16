@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.RegionHealthCheckServiceArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -43,7 +44,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-to-date fingerprint must be provided in order to patch/update the HealthCheckService; Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve the HealthCheckService.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -71,7 +72,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix of regional and global HealthChecks is not supported. Multiple regional HealthChecks must belong to the same region. Regional HealthChecks must belong to the same region as zones of NEGs.
      * 
      */
-    public Output<List<String>> getHealthChecks() {
+    public Output<List<String>> healthChecks() {
         return this.healthChecks;
     }
     /**
@@ -85,7 +86,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return Optional. Policy for how the results from multiple health checks for the same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth message is returned for each pair in the health check service. - AND. If any health check of an endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health checks report HEALTHY, the HealthState of the endpoint is HEALTHY. .
      * 
      */
-    public Output<String> getHealthStatusAggregationPolicy() {
+    public Output<String> healthStatusAggregationPolicy() {
         return this.healthStatusAggregationPolicy;
     }
     /**
@@ -99,7 +100,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -113,7 +114,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional HealthCheckService, NEGs must be in zones in the region of the HealthCheckService.
      * 
      */
-    public Output<List<String>> getNetworkEndpointGroups() {
+    public Output<List<String>> networkEndpointGroups() {
         return this.networkEndpointGroups;
     }
     /**
@@ -141,7 +142,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of endpoints for receiving notifications of change in health status. For regional HealthCheckService, NotificationEndpoint must be regional and in the same region. For global HealthCheckService, NotificationEndpoint must be global.
      * 
      */
-    public Output<List<String>> getNotificationEndpoints() {
+    public Output<List<String>> notificationEndpoints() {
         return this.notificationEndpoints;
     }
     /**
@@ -155,7 +156,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return URL of the region where the health check service resides. This field is not applicable to global health check services. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -169,7 +170,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -195,7 +196,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionHealthCheckService(String name, RegionHealthCheckServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:RegionHealthCheckService", name, args == null ? RegionHealthCheckServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:RegionHealthCheckService", name, args == null ? RegionHealthCheckServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionHealthCheckService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

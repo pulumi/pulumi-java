@@ -23,10 +23,10 @@ public final class TokenCredentialsPropertiesResponse {
         this.passwords = passwords;
     }
 
-    public List<TokenCertificateResponse> getCertificates() {
+    public List<TokenCertificateResponse> certificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
-    public List<TokenPasswordResponse> getPasswords() {
+    public List<TokenPasswordResponse> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
 

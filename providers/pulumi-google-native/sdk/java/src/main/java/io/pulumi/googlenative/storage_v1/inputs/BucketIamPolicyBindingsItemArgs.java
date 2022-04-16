@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storage_v1.inputs.ExprArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
     @Import(name="condition")
       private final @Nullable Output<ExprArgs> condition;
 
-    public Output<ExprArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<ExprArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public BucketIamPolicyBindingsItemArgs(
@@ -78,9 +79,9 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
     }
 
     private BucketIamPolicyBindingsItemArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder condition(@Nullable ExprArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -120,7 +121,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -131,7 +132,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public BucketIamPolicyBindingsItemArgs build() {
             return new BucketIamPolicyBindingsItemArgs(condition, members, role);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
     @Import(name="hoursInCycle")
       private final @Nullable Output<Integer> hoursInCycle;
 
-    public Output<Integer> getHoursInCycle() {
-        return this.hoursInCycle == null ? Output.empty() : this.hoursInCycle;
+    public Output<Integer> hoursInCycle() {
+        return this.hoursInCycle == null ? Codegen.empty() : this.hoursInCycle;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public ResourcePolicyHourlyCycleArgs(
@@ -49,8 +50,8 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
     }
 
     private ResourcePolicyHourlyCycleArgs() {
-        this.hoursInCycle = Output.empty();
-        this.startTime = Output.empty();
+        this.hoursInCycle = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder hoursInCycle(@Nullable Integer hoursInCycle) {
-            this.hoursInCycle = Output.ofNullable(hoursInCycle);
+            this.hoursInCycle = Codegen.ofNullable(hoursInCycle);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -88,7 +89,7 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public ResourcePolicyHourlyCycleArgs build() {
             return new ResourcePolicyHourlyCycleArgs(hoursInCycle, startTime);

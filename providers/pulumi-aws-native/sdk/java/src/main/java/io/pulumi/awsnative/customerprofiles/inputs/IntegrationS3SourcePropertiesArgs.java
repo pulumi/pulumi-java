@@ -5,6 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class IntegrationS3SourcePropertiesArgs extends io.pulumi.resources
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     public IntegrationS3SourcePropertiesArgs(
@@ -36,8 +37,8 @@ public final class IntegrationS3SourcePropertiesArgs extends io.pulumi.resources
     }
 
     private IntegrationS3SourcePropertiesArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class IntegrationS3SourcePropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }        public IntegrationS3SourcePropertiesArgs build() {
             return new IntegrationS3SourcePropertiesArgs(bucketName, bucketPrefix);

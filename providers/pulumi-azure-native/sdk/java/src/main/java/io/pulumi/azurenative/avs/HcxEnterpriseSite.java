@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return The activation key
      * 
      */
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey;
     }
     /**
@@ -55,7 +56,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return The status of the HCX Enterprise Site
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -83,7 +84,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HcxEnterpriseSite(String name, HcxEnterpriseSiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:avs:HcxEnterpriseSite", name, args == null ? HcxEnterpriseSiteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:avs:HcxEnterpriseSite", name, args == null ? HcxEnterpriseSiteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HcxEnterpriseSite(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

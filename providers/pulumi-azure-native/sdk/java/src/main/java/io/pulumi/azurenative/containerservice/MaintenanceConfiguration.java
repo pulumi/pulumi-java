@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +59,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Time slots on which upgrade is not allowed.
      * 
      */
-    public Output</* @Nullable */ List<TimeSpanResponse>> getNotAllowedTime() {
+    public Output</* @Nullable */ List<TimeSpanResponse>> notAllowedTime() {
         return this.notAllowedTime;
     }
     /**
@@ -72,7 +73,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +87,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Weekday time slots allowed to upgrade.
      * 
      */
-    public Output</* @Nullable */ List<TimeInWeekResponse>> getTimeInWeek() {
+    public Output</* @Nullable */ List<TimeInWeekResponse>> timeInWeek() {
         return this.timeInWeek;
     }
     /**
@@ -100,7 +101,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -126,7 +127,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public MaintenanceConfiguration(String name, MaintenanceConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerservice:MaintenanceConfiguration", name, args == null ? MaintenanceConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:containerservice:MaintenanceConfiguration", name, args == null ? MaintenanceConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MaintenanceConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.enums.CacheIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<CacheIdentityType> type;
 
-    public Output<CacheIdentityType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<CacheIdentityType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public CacheIdentityArgs(@Nullable Output<CacheIdentityType> type) {
@@ -34,7 +35,7 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CacheIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable CacheIdentityType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public CacheIdentityArgs build() {
             return new CacheIdentityArgs(type);

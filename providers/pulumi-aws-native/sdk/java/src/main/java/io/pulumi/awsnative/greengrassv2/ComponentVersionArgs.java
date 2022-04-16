@@ -6,6 +6,7 @@ package io.pulumi.awsnative.greengrassv2;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaFunctionRecipeSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,22 +20,22 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="inlineRecipe")
       private final @Nullable Output<String> inlineRecipe;
 
-    public Output<String> getInlineRecipe() {
-        return this.inlineRecipe == null ? Output.empty() : this.inlineRecipe;
+    public Output<String> inlineRecipe() {
+        return this.inlineRecipe == null ? Codegen.empty() : this.inlineRecipe;
     }
 
     @Import(name="lambdaFunction")
       private final @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
 
-    public Output<ComponentVersionLambdaFunctionRecipeSourceArgs> getLambdaFunction() {
-        return this.lambdaFunction == null ? Output.empty() : this.lambdaFunction;
+    public Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction() {
+        return this.lambdaFunction == null ? Codegen.empty() : this.lambdaFunction;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Object> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ComponentVersionArgs(
@@ -47,9 +48,9 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ComponentVersionArgs() {
-        this.inlineRecipe = Output.empty();
-        this.lambdaFunction = Output.empty();
-        this.tags = Output.empty();
+        this.inlineRecipe = Codegen.empty();
+        this.lambdaFunction = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder inlineRecipe(@Nullable String inlineRecipe) {
-            this.inlineRecipe = Output.ofNullable(inlineRecipe);
+            this.inlineRecipe = Codegen.ofNullable(inlineRecipe);
             return this;
         }
         public Builder lambdaFunction(@Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction) {
@@ -89,7 +90,7 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lambdaFunction(@Nullable ComponentVersionLambdaFunctionRecipeSourceArgs lambdaFunction) {
-            this.lambdaFunction = Output.ofNullable(lambdaFunction);
+            this.lambdaFunction = Codegen.ofNullable(lambdaFunction);
             return this;
         }
         public Builder tags(@Nullable Output<Object> tags) {
@@ -97,7 +98,7 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Object tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ComponentVersionArgs build() {
             return new ComponentVersionArgs(inlineRecipe, lambdaFunction, tags);

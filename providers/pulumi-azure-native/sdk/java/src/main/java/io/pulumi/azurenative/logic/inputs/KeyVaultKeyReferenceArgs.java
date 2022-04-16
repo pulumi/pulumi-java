@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceKeyVaultArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -37,7 +38,7 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="keyVault", required=true)
       private final Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
 
-    public Output<KeyVaultKeyReferenceKeyVaultArgs> getKeyVault() {
+    public Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault() {
         return this.keyVault;
     }
 
@@ -48,8 +49,8 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
-        return this.keyVersion == null ? Output.empty() : this.keyVersion;
+    public Output<String> keyVersion() {
+        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
     public KeyVaultKeyReferenceArgs(
@@ -62,9 +63,9 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     }
 
     private KeyVaultKeyReferenceArgs() {
-        this.keyName = Output.empty();
-        this.keyVault = Output.empty();
-        this.keyVersion = Output.empty();
+        this.keyName = Codegen.empty();
+        this.keyVault = Codegen.empty();
+        this.keyVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Output.ofNullable(keyVersion);
+            this.keyVersion = Codegen.ofNullable(keyVersion);
             return this;
         }        public KeyVaultKeyReferenceArgs build() {
             return new KeyVaultKeyReferenceArgs(keyName, keyVault, keyVersion);

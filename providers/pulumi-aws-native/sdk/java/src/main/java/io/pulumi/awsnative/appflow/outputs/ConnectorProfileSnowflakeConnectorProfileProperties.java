@@ -70,35 +70,35 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
      * The name of the account.
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * The name of the Amazon S3 bucket associated with Snowﬂake.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * The bucket prefix that refers to the Amazon S3 bucket associated with Snowﬂake.
      * 
     */
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
      * The Snowﬂake Private Link service name to be used for private data transfers.
      * 
     */
-    public Optional<String> getPrivateLinkServiceName() {
+    public Optional<String> privateLinkServiceName() {
         return Optional.ofNullable(this.privateLinkServiceName);
     }
     /**
      * The region of the Snowﬂake account.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
@@ -106,14 +106,14 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
      * Snowﬂake account. This is written in the following format: < Database>< Schema><Stage Name>.
      * 
     */
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
     /**
      * The name of the Snowﬂake warehouse.
      * 
     */
-    public String getWarehouse() {
+    public String warehouse() {
         return this.warehouse;
     }
 

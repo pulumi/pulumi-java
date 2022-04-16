@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerPortArgs;
@@ -35,8 +36,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> getCommands() {
-        return this.commands == null ? Output.empty() : this.commands;
+    public Output<List<String>> commands() {
+        return this.commands == null ? Codegen.empty() : this.commands;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
       private final @Nullable Output<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<List<ServiceTemplateSpecContainerEnvFromArgs>> getEnvFroms() {
-        return this.envFroms == null ? Output.empty() : this.envFroms;
+    public Output<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms() {
+        return this.envFroms == null ? Codegen.empty() : this.envFroms;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     @Import(name="envs")
       private final @Nullable Output<List<ServiceTemplateSpecContainerEnvArgs>> envs;
 
-    public Output<List<ServiceTemplateSpecContainerEnvArgs>> getEnvs() {
-        return this.envs == null ? Output.empty() : this.envs;
+    public Output<List<ServiceTemplateSpecContainerEnvArgs>> envs() {
+        return this.envs == null ? Codegen.empty() : this.envs;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -116,8 +117,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     @Import(name="ports")
       private final @Nullable Output<List<ServiceTemplateSpecContainerPortArgs>> ports;
 
-    public Output<List<ServiceTemplateSpecContainerPortArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<ServiceTemplateSpecContainerPortArgs>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     @Import(name="resources")
       private final @Nullable Output<ServiceTemplateSpecContainerResourcesArgs> resources;
 
-    public Output<ServiceTemplateSpecContainerResourcesArgs> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<ServiceTemplateSpecContainerResourcesArgs> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     @Import(name="volumeMounts")
       private final @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
 
-    public Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
+    public Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts() {
+        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
       private final @Nullable Output<String> workingDir;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<String> getWorkingDir() {
-        return this.workingDir == null ? Output.empty() : this.workingDir;
+    public Output<String> workingDir() {
+        return this.workingDir == null ? Codegen.empty() : this.workingDir;
     }
 
     public ServiceTemplateSpecContainerArgs(
@@ -189,15 +190,15 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     }
 
     private ServiceTemplateSpecContainerArgs() {
-        this.args = Output.empty();
-        this.commands = Output.empty();
-        this.envFroms = Output.empty();
-        this.envs = Output.empty();
-        this.image = Output.empty();
-        this.ports = Output.empty();
-        this.resources = Output.empty();
-        this.volumeMounts = Output.empty();
-        this.workingDir = Output.empty();
+        this.args = Codegen.empty();
+        this.commands = Codegen.empty();
+        this.envFroms = Codegen.empty();
+        this.envs = Codegen.empty();
+        this.image = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.volumeMounts = Codegen.empty();
+        this.workingDir = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -252,7 +253,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = Output.ofNullable(commands);
+            this.commands = Codegen.ofNullable(commands);
             return this;
         }
         public Builder commands(String... commands) {
@@ -263,7 +264,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder envFroms(@Nullable List<ServiceTemplateSpecContainerEnvFromArgs> envFroms) {
-            this.envFroms = Output.ofNullable(envFroms);
+            this.envFroms = Codegen.ofNullable(envFroms);
             return this;
         }
         public Builder envFroms(ServiceTemplateSpecContainerEnvFromArgs... envFroms) {
@@ -274,7 +275,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder envs(@Nullable List<ServiceTemplateSpecContainerEnvArgs> envs) {
-            this.envs = Output.ofNullable(envs);
+            this.envs = Codegen.ofNullable(envs);
             return this;
         }
         public Builder envs(ServiceTemplateSpecContainerEnvArgs... envs) {
@@ -293,7 +294,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ports(@Nullable List<ServiceTemplateSpecContainerPortArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(ServiceTemplateSpecContainerPortArgs... ports) {
@@ -304,7 +305,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resources(@Nullable ServiceTemplateSpecContainerResourcesArgs resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder volumeMounts(@Nullable Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts) {
@@ -312,7 +313,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder volumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Output.ofNullable(volumeMounts);
+            this.volumeMounts = Codegen.ofNullable(volumeMounts);
             return this;
         }
         public Builder volumeMounts(ServiceTemplateSpecContainerVolumeMountArgs... volumeMounts) {
@@ -323,7 +324,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Output.ofNullable(workingDir);
+            this.workingDir = Codegen.ofNullable(workingDir);
             return this;
         }        public ServiceTemplateSpecContainerArgs build() {
             return new ServiceTemplateSpecContainerArgs(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);

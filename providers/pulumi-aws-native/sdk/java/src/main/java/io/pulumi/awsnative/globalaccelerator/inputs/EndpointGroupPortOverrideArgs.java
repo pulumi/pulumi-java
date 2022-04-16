@@ -5,6 +5,7 @@ package io.pulumi.awsnative.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,14 +21,14 @@ public final class EndpointGroupPortOverrideArgs extends io.pulumi.resources.Res
     @Import(name="endpointPort", required=true)
       private final Output<Integer> endpointPort;
 
-    public Output<Integer> getEndpointPort() {
+    public Output<Integer> endpointPort() {
         return this.endpointPort;
     }
 
     @Import(name="listenerPort", required=true)
       private final Output<Integer> listenerPort;
 
-    public Output<Integer> getListenerPort() {
+    public Output<Integer> listenerPort() {
         return this.listenerPort;
     }
 
@@ -39,8 +40,8 @@ public final class EndpointGroupPortOverrideArgs extends io.pulumi.resources.Res
     }
 
     private EndpointGroupPortOverrideArgs() {
-        this.endpointPort = Output.empty();
-        this.listenerPort = Output.empty();
+        this.endpointPort = Codegen.empty();
+        this.listenerPort = Codegen.empty();
     }
 
     public static Builder builder() {

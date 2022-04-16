@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +50,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The customIpPrefix that this prefix is associated with.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getCustomIPPrefix() {
+    public Output</* @Nullable */ SubResourceResponse> customIPPrefix() {
         return this.customIPPrefix;
     }
     /**
@@ -63,7 +64,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -77,7 +78,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The extended location of the public ip address.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -91,7 +92,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The allocated Prefix.
      * 
      */
-    public Output<String> getIpPrefix() {
+    public Output<String> ipPrefix() {
         return this.ipPrefix;
     }
     /**
@@ -105,7 +106,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The list of tags associated with the public IP prefix.
      * 
      */
-    public Output</* @Nullable */ List<IpTagResponse>> getIpTags() {
+    public Output</* @Nullable */ List<IpTagResponse>> ipTags() {
         return this.ipTags;
     }
     /**
@@ -119,7 +120,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The reference to load balancer frontend IP configuration associated with the public IP prefix.
      * 
      */
-    public Output<SubResourceResponse> getLoadBalancerFrontendIpConfiguration() {
+    public Output<SubResourceResponse> loadBalancerFrontendIpConfiguration() {
         return this.loadBalancerFrontendIpConfiguration;
     }
     /**
@@ -133,7 +134,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -147,7 +148,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -161,7 +162,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return NatGateway of Public IP Prefix.
      * 
      */
-    public Output</* @Nullable */ NatGatewayResponse> getNatGateway() {
+    public Output</* @Nullable */ NatGatewayResponse> natGateway() {
         return this.natGateway;
     }
     /**
@@ -175,7 +176,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The Length of the Public IP Prefix.
      * 
      */
-    public Output</* @Nullable */ Integer> getPrefixLength() {
+    public Output</* @Nullable */ Integer> prefixLength() {
         return this.prefixLength;
     }
     /**
@@ -189,7 +190,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the public IP prefix resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -203,7 +204,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The public IP address version.
      * 
      */
-    public Output</* @Nullable */ String> getPublicIPAddressVersion() {
+    public Output</* @Nullable */ String> publicIPAddressVersion() {
         return this.publicIPAddressVersion;
     }
     /**
@@ -217,7 +218,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The list of all referenced PublicIPAddresses.
      * 
      */
-    public Output<List<ReferencedPublicIpAddressResponse>> getPublicIPAddresses() {
+    public Output<List<ReferencedPublicIpAddressResponse>> publicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
@@ -231,7 +232,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the public IP prefix resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -245,7 +246,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return The public IP prefix SKU.
      * 
      */
-    public Output</* @Nullable */ PublicIPPrefixSkuResponse> getSku() {
+    public Output</* @Nullable */ PublicIPPrefixSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -259,7 +260,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -273,7 +274,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -287,7 +288,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 
@@ -313,7 +314,7 @@ public class PublicIPPrefix extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicIPPrefix(String name, PublicIPPrefixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:PublicIPPrefix", name, args == null ? PublicIPPrefixArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:PublicIPPrefix", name, args == null ? PublicIPPrefixArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublicIPPrefix(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

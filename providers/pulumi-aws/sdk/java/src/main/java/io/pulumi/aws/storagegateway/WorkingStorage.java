@@ -9,6 +9,7 @@ import io.pulumi.aws.storagegateway.inputs.WorkingStorageState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class WorkingStorage extends io.pulumi.resources.CustomResource {
      * @return Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
      * 
      */
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId;
     }
     /**
@@ -55,7 +56,7 @@ public class WorkingStorage extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -81,7 +82,7 @@ public class WorkingStorage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkingStorage(String name, WorkingStorageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:storagegateway/workingStorage:WorkingStorage", name, args == null ? WorkingStorageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:storagegateway/workingStorage:WorkingStorage", name, args == null ? WorkingStorageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkingStorage(String name, Output<String> id, @Nullable WorkingStorageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

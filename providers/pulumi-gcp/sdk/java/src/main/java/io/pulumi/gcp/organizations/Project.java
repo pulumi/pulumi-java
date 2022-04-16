@@ -6,6 +6,7 @@ package io.pulumi.gcp.organizations;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.ProjectArgs;
 import io.pulumi.gcp.organizations.inputs.ProjectState;
@@ -63,7 +64,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * you set `auto_create_network` to `false`, since the network will exist momentarily.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoCreateNetwork() {
+    public Output</* @Nullable */ Boolean> autoCreateNetwork() {
         return this.autoCreateNetwork;
     }
     /**
@@ -85,7 +86,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * for more details.
      * 
      */
-    public Output</* @Nullable */ String> getBillingAccount() {
+    public Output</* @Nullable */ String> billingAccount() {
         return this.billingAccount;
     }
     /**
@@ -107,7 +108,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * project to be migrated to the newly specified folder.
      * 
      */
-    public Output</* @Nullable */ String> getFolderId() {
+    public Output</* @Nullable */ String> folderId() {
         return this.folderId;
     }
     /**
@@ -121,7 +122,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to the project.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -135,7 +136,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The display name of the project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -149,7 +150,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The numeric identifier of the project.
      * 
      */
-    public Output<String> getNumber() {
+    public Output<String> number() {
         return this.number;
     }
     /**
@@ -173,7 +174,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * organization.
      * 
      */
-    public Output</* @Nullable */ String> getOrgId() {
+    public Output</* @Nullable */ String> orgId() {
         return this.orgId;
     }
     /**
@@ -187,7 +188,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The project ID. Changing this forces a new project to be created.
      * 
      */
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     /**
@@ -203,7 +204,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * without deleting the Project via the Google API.
      * 
      */
-    public Output<Boolean> getSkipDelete() {
+    public Output<Boolean> skipDelete() {
         return this.skipDelete;
     }
 
@@ -229,7 +230,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:organizations/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:organizations/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable ProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

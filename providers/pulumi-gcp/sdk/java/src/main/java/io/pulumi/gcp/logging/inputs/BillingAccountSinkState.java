@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.logging.inputs.BillingAccountSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.BillingAccountSinkExclusionGetArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="bigqueryOptions")
       private final @Nullable Output<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
-    public Output<BillingAccountSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
-        return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
+    public Output<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions() {
+        return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
-        return this.billingAccount == null ? Output.empty() : this.billingAccount;
+    public Output<String> billingAccount() {
+        return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<String> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="exclusions")
       private final @Nullable Output<List<BillingAccountSinkExclusionGetArgs>> exclusions;
 
-    public Output<List<BillingAccountSinkExclusionGetArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+    public Output<List<BillingAccountSinkExclusionGetArgs>> exclusions() {
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     @Import(name="writerIdentity")
       private final @Nullable Output<String> writerIdentity;
 
-    public Output<String> getWriterIdentity() {
-        return this.writerIdentity == null ? Output.empty() : this.writerIdentity;
+    public Output<String> writerIdentity() {
+        return this.writerIdentity == null ? Codegen.empty() : this.writerIdentity;
     }
 
     public BillingAccountSinkState(
@@ -144,15 +145,15 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     }
 
     private BillingAccountSinkState() {
-        this.bigqueryOptions = Output.empty();
-        this.billingAccount = Output.empty();
-        this.description = Output.empty();
-        this.destination = Output.empty();
-        this.disabled = Output.empty();
-        this.exclusions = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.writerIdentity = Output.empty();
+        this.bigqueryOptions = Codegen.empty();
+        this.billingAccount = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.writerIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder bigqueryOptions(@Nullable BillingAccountSinkBigqueryOptionsGetArgs bigqueryOptions) {
-            this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
+            this.bigqueryOptions = Codegen.ofNullable(bigqueryOptions);
             return this;
         }
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
@@ -204,7 +205,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Output.ofNullable(billingAccount);
+            this.billingAccount = Codegen.ofNullable(billingAccount);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -212,7 +213,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destination(@Nullable Output<String> destination) {
@@ -220,7 +221,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -228,7 +229,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder exclusions(@Nullable Output<List<BillingAccountSinkExclusionGetArgs>> exclusions) {
@@ -236,7 +237,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder exclusions(@Nullable List<BillingAccountSinkExclusionGetArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(BillingAccountSinkExclusionGetArgs... exclusions) {
@@ -247,7 +248,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -255,7 +256,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder writerIdentity(@Nullable Output<String> writerIdentity) {
@@ -263,7 +264,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder writerIdentity(@Nullable String writerIdentity) {
-            this.writerIdentity = Output.ofNullable(writerIdentity);
+            this.writerIdentity = Codegen.ofNullable(writerIdentity);
             return this;
         }        public BillingAccountSinkState build() {
             return new BillingAccountSinkState(bigqueryOptions, billingAccount, description, destination, disabled, exclusions, filter, name, writerIdentity);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +18,14 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
-        return this.expression == null ? Output.empty() : this.expression;
+    public Output<String> expression() {
+        return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -36,8 +37,8 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
     }
 
     private TaskDefinitionPlacementConstraintArgs() {
-        this.expression = Output.empty();
-        this.type = Output.empty();
+        this.expression = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
             return this;
         }
         public Builder expression(@Nullable String expression) {
-            this.expression = Output.ofNullable(expression);
+            this.expression = Codegen.ofNullable(expression);
             return this;
         }
         public Builder type(Output<String> type) {

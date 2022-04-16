@@ -29,19 +29,19 @@ public final class GetInstanceServerCaCert {
         this.sha1Fingerprint = sha1Fingerprint;
     }
 
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

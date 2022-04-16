@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.DomainDkimState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -52,7 +53,7 @@ public class DomainDkim extends io.pulumi.resources.CustomResource {
      * in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
      * 
      */
-    public Output<List<String>> getDkimTokens() {
+    public Output<List<String>> dkimTokens() {
         return this.dkimTokens;
     }
     /**
@@ -66,7 +67,7 @@ public class DomainDkim extends io.pulumi.resources.CustomResource {
      * @return Verified domain name to generate DKIM tokens for.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -92,7 +93,7 @@ public class DomainDkim extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainDkim(String name, DomainDkimArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/domainDkim:DomainDkim", name, args == null ? DomainDkimArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/domainDkim:DomainDkim", name, args == null ? DomainDkimArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainDkim(String name, Output<String> id, @Nullable DomainDkimState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

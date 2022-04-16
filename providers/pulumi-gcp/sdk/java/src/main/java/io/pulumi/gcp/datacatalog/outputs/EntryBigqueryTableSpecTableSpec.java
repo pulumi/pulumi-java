@@ -18,7 +18,7 @@ public final class EntryBigqueryTableSpecTableSpec {
         this.groupedEntry = groupedEntry;
     }
 
-    public Optional<String> getGroupedEntry() {
+    public Optional<String> groupedEntry() {
         return Optional.ofNullable(this.groupedEntry);
     }
 

@@ -12,6 +12,7 @@ import io.pulumi.awsnative.ecs.outputs.ClusterTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,13 +34,13 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon ECS cluster, such as arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> capacityProviders;
 
-    public Output</* @Nullable */ List<String>> getCapacityProviders() {
+    public Output</* @Nullable */ List<String>> capacityProviders() {
         return this.capacityProviders;
     }
     /**
@@ -53,31 +54,31 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
      * 
      */
-    public Output</* @Nullable */ String> getClusterName() {
+    public Output</* @Nullable */ String> clusterName() {
         return this.clusterName;
     }
     @Export(name="clusterSettings", type=List.class, parameters={ClusterSettings.class})
     private Output</* @Nullable */ List<ClusterSettings>> clusterSettings;
 
-    public Output</* @Nullable */ List<ClusterSettings>> getClusterSettings() {
+    public Output</* @Nullable */ List<ClusterSettings>> clusterSettings() {
         return this.clusterSettings;
     }
     @Export(name="configuration", type=ClusterConfiguration.class, parameters={})
     private Output</* @Nullable */ ClusterConfiguration> configuration;
 
-    public Output</* @Nullable */ ClusterConfiguration> getConfiguration() {
+    public Output</* @Nullable */ ClusterConfiguration> configuration() {
         return this.configuration;
     }
     @Export(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderStrategyItem.class})
     private Output</* @Nullable */ List<ClusterCapacityProviderStrategyItem>> defaultCapacityProviderStrategy;
 
-    public Output</* @Nullable */ List<ClusterCapacityProviderStrategyItem>> getDefaultCapacityProviderStrategy() {
+    public Output</* @Nullable */ List<ClusterCapacityProviderStrategyItem>> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
     }
     @Export(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
-    public Output</* @Nullable */ List<ClusterTag>> getTags() {
+    public Output</* @Nullable */ List<ClusterTag>> tags() {
         return this.tags;
     }
 
@@ -103,7 +104,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ecs:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ecs:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

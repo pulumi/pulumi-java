@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceIamBindingArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceIamBindingState;
@@ -19,37 +20,37 @@ public class BackendServiceIamBinding extends io.pulumi.resources.CustomResource
     @Export(name="condition", type=BackendServiceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ BackendServiceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ BackendServiceIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ BackendServiceIamBindingCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -75,7 +76,7 @@ public class BackendServiceIamBinding extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendServiceIamBinding(String name, BackendServiceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/backendServiceIamBinding:BackendServiceIamBinding", name, args == null ? BackendServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/backendServiceIamBinding:BackendServiceIamBinding", name, args == null ? BackendServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendServiceIamBinding(String name, Output<String> id, @Nullable BackendServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

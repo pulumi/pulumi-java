@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.logging.inputs.MetricMetricDescriptorLabelGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
     @Import(name="labels")
       private final @Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels;
 
-    public Output<List<MetricMetricDescriptorLabelGetArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<MetricMetricDescriptorLabelGetArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
     @Import(name="metricKind", required=true)
       private final Output<String> metricKind;
 
-    public Output<String> getMetricKind() {
+    public Output<String> metricKind() {
         return this.metricKind;
     }
 
@@ -67,8 +68,8 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
     @Import(name="valueType", required=true)
       private final Output<String> valueType;
 
-    public Output<String> getValueType() {
+    public Output<String> valueType() {
         return this.valueType;
     }
 
@@ -98,11 +99,11 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
     }
 
     private MetricMetricDescriptorGetArgs() {
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.metricKind = Output.empty();
-        this.unit = Output.empty();
-        this.valueType = Output.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.metricKind = Codegen.empty();
+        this.unit = Codegen.empty();
+        this.valueType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels) {
@@ -146,7 +147,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder labels(@Nullable List<MetricMetricDescriptorLabelGetArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(MetricMetricDescriptorLabelGetArgs... labels) {
@@ -165,7 +166,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder valueType(Output<String> valueType) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionDiskIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
     @Import(name="condition")
       private final @Nullable Output<RegionDiskIamBindingConditionGetArgs> condition;
 
-    public Output<RegionDiskIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<RegionDiskIamBindingConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,15 +31,15 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,15 +61,15 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public RegionDiskIamBindingState(
@@ -102,13 +103,13 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
     }
 
     private RegionDiskIamBindingState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.members = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.members = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder condition(@Nullable RegionDiskIamBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -156,7 +157,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -164,7 +165,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -175,7 +176,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -183,7 +184,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -191,7 +192,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -199,7 +200,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public RegionDiskIamBindingState build() {
             return new RegionDiskIamBindingState(condition, etag, members, name, project, region, role);

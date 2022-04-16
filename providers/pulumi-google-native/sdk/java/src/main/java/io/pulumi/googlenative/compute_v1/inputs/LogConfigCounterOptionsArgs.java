@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.LogConfigCounterOptionsCustomFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="customFields")
       private final @Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
 
-    public Output<List<LogConfigCounterOptionsCustomFieldArgs>> getCustomFields() {
-        return this.customFields == null ? Output.empty() : this.customFields;
+    public Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields() {
+        return this.customFields == null ? Codegen.empty() : this.customFields;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+    public Output<String> field() {
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="metric")
       private final @Nullable Output<String> metric;
 
-    public Output<String> getMetric() {
-        return this.metric == null ? Output.empty() : this.metric;
+    public Output<String> metric() {
+        return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     public LogConfigCounterOptionsArgs(
@@ -63,9 +64,9 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private LogConfigCounterOptionsArgs() {
-        this.customFields = Output.empty();
-        this.field = Output.empty();
-        this.metric = Output.empty();
+        this.customFields = Codegen.empty();
+        this.field = Codegen.empty();
+        this.metric = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customFields(@Nullable List<LogConfigCounterOptionsCustomFieldArgs> customFields) {
-            this.customFields = Output.ofNullable(customFields);
+            this.customFields = Codegen.ofNullable(customFields);
             return this;
         }
         public Builder customFields(LogConfigCounterOptionsCustomFieldArgs... customFields) {
@@ -108,7 +109,7 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder metric(@Nullable Output<String> metric) {
@@ -116,7 +117,7 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder metric(@Nullable String metric) {
-            this.metric = Output.ofNullable(metric);
+            this.metric = Codegen.ofNullable(metric);
             return this;
         }        public LogConfigCounterOptionsArgs build() {
             return new LogConfigCounterOptionsArgs(customFields, field, metric);

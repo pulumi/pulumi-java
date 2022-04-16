@@ -5,6 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -36,7 +37,7 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -48,8 +49,8 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
     }
 
     private LocationHDFSNameNodeArgs() {
-        this.hostname = Output.empty();
-        this.port = Output.empty();
+        this.hostname = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

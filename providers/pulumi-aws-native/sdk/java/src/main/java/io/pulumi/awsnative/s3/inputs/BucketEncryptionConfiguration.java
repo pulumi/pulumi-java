@@ -23,7 +23,7 @@ public final class BucketEncryptionConfiguration extends io.pulumi.resources.Inv
     @Import(name="replicaKmsKeyID", required=true)
       private final String replicaKmsKeyID;
 
-    public String getReplicaKmsKeyID() {
+    public String replicaKmsKeyID() {
         return this.replicaKmsKeyID;
     }
 

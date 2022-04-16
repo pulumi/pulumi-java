@@ -18,14 +18,14 @@ public final class IndexValueImportanceItem extends io.pulumi.resources.InvokeAr
     @Import(name="key")
       private final @Nullable String key;
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
       private final @Nullable Integer value;
 
-    public Optional<Integer> getValue() {
+    public Optional<Integer> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

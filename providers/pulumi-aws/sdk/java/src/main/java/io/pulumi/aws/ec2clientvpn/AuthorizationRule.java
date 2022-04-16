@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2clientvpn.inputs.AuthorizationRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * @return The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    public Output</* @Nullable */ String> getAccessGroupId() {
+    public Output</* @Nullable */ String> accessGroupId() {
         return this.accessGroupId;
     }
     /**
@@ -59,7 +60,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAuthorizeAllGroups() {
+    public Output</* @Nullable */ Boolean> authorizeAllGroups() {
         return this.authorizeAllGroups;
     }
     /**
@@ -73,7 +74,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * @return The ID of the Client VPN endpoint.
      * 
      */
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
     /**
@@ -87,7 +88,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * @return A brief description of the authorization rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -101,7 +102,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * @return The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
      * 
      */
-    public Output<String> getTargetNetworkCidr() {
+    public Output<String> targetNetworkCidr() {
         return this.targetNetworkCidr;
     }
 
@@ -127,7 +128,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AuthorizationRule(String name, AuthorizationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2clientvpn/authorizationRule:AuthorizationRule", name, args == null ? AuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2clientvpn/authorizationRule:AuthorizationRule", name, args == null ? AuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AuthorizationRule(String name, Output<String> id, @Nullable AuthorizationRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

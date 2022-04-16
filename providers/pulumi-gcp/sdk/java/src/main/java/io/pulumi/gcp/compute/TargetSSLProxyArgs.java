@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
 
@@ -33,8 +34,8 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="proxyHeader")
       private final @Nullable Output<String> proxyHeader;
 
-    public Output<String> getProxyHeader() {
-        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
+    public Output<String> proxyHeader() {
+        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslCertificates", required=true)
       private final Output<List<String>> sslCertificates;
 
-    public Output<List<String>> getSslCertificates() {
+    public Output<List<String>> sslCertificates() {
         return this.sslCertificates;
     }
 
@@ -102,8 +103,8 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
-        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
+    public Output<String> sslPolicy() {
+        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
     public TargetSSLProxyArgs(
@@ -124,13 +125,13 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetSSLProxyArgs() {
-        this.backendService = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.proxyHeader = Output.empty();
-        this.sslCertificates = Output.empty();
-        this.sslPolicy = Output.empty();
+        this.backendService = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.proxyHeader = Codegen.empty();
+        this.sslCertificates = Codegen.empty();
+        this.sslPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -186,7 +187,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -194,7 +195,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder proxyHeader(@Nullable Output<String> proxyHeader) {
@@ -202,7 +203,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder proxyHeader(@Nullable String proxyHeader) {
-            this.proxyHeader = Output.ofNullable(proxyHeader);
+            this.proxyHeader = Codegen.ofNullable(proxyHeader);
             return this;
         }
         public Builder sslCertificates(Output<List<String>> sslCertificates) {
@@ -221,7 +222,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Output.ofNullable(sslPolicy);
+            this.sslPolicy = Codegen.ofNullable(sslPolicy);
             return this;
         }        public TargetSSLProxyArgs build() {
             return new TargetSSLProxyArgs(backendService, description, name, project, proxyHeader, sslCertificates, sslPolicy);

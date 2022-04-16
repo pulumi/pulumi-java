@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="envgroupId", required=true)
       private final Output<String> envgroupId;
 
-    public Output<String> getEnvgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId;
     }
 
@@ -28,7 +29,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environment", required=true)
       private final Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
 
@@ -39,14 +40,14 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -62,10 +63,10 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EnvgroupAttachmentArgs() {
-        this.envgroupId = Output.empty();
-        this.environment = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
+        this.envgroupId = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncGitArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     @Import(name="git")
       private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
 
-    public Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> getGit() {
-        return this.git == null ? Output.empty() : this.git;
+    public Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git() {
+        return this.git == null ? Codegen.empty() : this.git;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     @Import(name="sourceFormat")
       private final @Nullable Output<String> sourceFormat;
 
-    public Output<String> getSourceFormat() {
-        return this.sourceFormat == null ? Output.empty() : this.sourceFormat;
+    public Output<String> sourceFormat() {
+        return this.sourceFormat == null ? Codegen.empty() : this.sourceFormat;
     }
 
     public FeatureMembershipConfigmanagementConfigSyncArgs(
@@ -46,8 +47,8 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     }
 
     private FeatureMembershipConfigmanagementConfigSyncArgs() {
-        this.git = Output.empty();
-        this.sourceFormat = Output.empty();
+        this.git = Codegen.empty();
+        this.sourceFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
             return this;
         }
         public Builder git(@Nullable FeatureMembershipConfigmanagementConfigSyncGitArgs git) {
-            this.git = Output.ofNullable(git);
+            this.git = Codegen.ofNullable(git);
             return this;
         }
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
@@ -85,7 +86,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
             return this;
         }
         public Builder sourceFormat(@Nullable String sourceFormat) {
-            this.sourceFormat = Output.ofNullable(sourceFormat);
+            this.sourceFormat = Codegen.ofNullable(sourceFormat);
             return this;
         }        public FeatureMembershipConfigmanagementConfigSyncArgs build() {
             return new FeatureMembershipConfigmanagementConfigSyncArgs(git, sourceFormat);

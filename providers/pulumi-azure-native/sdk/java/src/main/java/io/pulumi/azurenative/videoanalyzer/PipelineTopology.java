@@ -17,6 +17,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -54,7 +55,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +69,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return Topology kind.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -82,7 +83,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -96,7 +97,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
      */
-    public Output</* @Nullable */ List<ParameterDeclarationResponse>> getParameters() {
+    public Output</* @Nullable */ List<ParameterDeclarationResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -110,7 +111,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
      * 
      */
-    public Output</* @Nullable */ List<EncoderProcessorResponse>> getProcessors() {
+    public Output</* @Nullable */ List<EncoderProcessorResponse>> processors() {
         return this.processors;
     }
     /**
@@ -124,7 +125,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
      * 
      */
-    public Output<List<VideoSinkResponse>> getSinks() {
+    public Output<List<VideoSinkResponse>> sinks() {
         return this.sinks;
     }
     /**
@@ -138,7 +139,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return Describes the properties of a SKU.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -152,7 +153,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
      * 
      */
-    public Output<List<Either<RtspSourceResponse,VideoSourceResponse>>> getSources() {
+    public Output<List<Either<RtspSourceResponse,VideoSourceResponse>>> sources() {
         return this.sources;
     }
     /**
@@ -166,7 +167,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -180,7 +181,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -206,7 +207,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PipelineTopology(String name, PipelineTopologyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:videoanalyzer:PipelineTopology", name, args == null ? PipelineTopologyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:videoanalyzer:PipelineTopology", name, args == null ? PipelineTopologyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PipelineTopology(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

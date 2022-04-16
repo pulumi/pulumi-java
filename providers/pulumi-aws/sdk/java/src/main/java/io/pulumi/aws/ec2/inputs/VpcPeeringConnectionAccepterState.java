@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterAccepterGetArgs;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterRequesterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="acceptStatus")
       private final @Nullable Output<String> acceptStatus;
 
-    public Output<String> getAcceptStatus() {
-        return this.acceptStatus == null ? Output.empty() : this.acceptStatus;
+    public Output<String> acceptStatus() {
+        return this.acceptStatus == null ? Codegen.empty() : this.acceptStatus;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="accepter")
       private final @Nullable Output<VpcPeeringConnectionAccepterAccepterGetArgs> accepter;
 
-    public Output<VpcPeeringConnectionAccepterAccepterGetArgs> getAccepter() {
-        return this.accepter == null ? Output.empty() : this.accepter;
+    public Output<VpcPeeringConnectionAccepterAccepterGetArgs> accepter() {
+        return this.accepter == null ? Codegen.empty() : this.accepter;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> getAutoAccept() {
-        return this.autoAccept == null ? Output.empty() : this.autoAccept;
+    public Output<Boolean> autoAccept() {
+        return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="peerOwnerId")
       private final @Nullable Output<String> peerOwnerId;
 
-    public Output<String> getPeerOwnerId() {
-        return this.peerOwnerId == null ? Output.empty() : this.peerOwnerId;
+    public Output<String> peerOwnerId() {
+        return this.peerOwnerId == null ? Codegen.empty() : this.peerOwnerId;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="peerRegion")
       private final @Nullable Output<String> peerRegion;
 
-    public Output<String> getPeerRegion() {
-        return this.peerRegion == null ? Output.empty() : this.peerRegion;
+    public Output<String> peerRegion() {
+        return this.peerRegion == null ? Codegen.empty() : this.peerRegion;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="peerVpcId")
       private final @Nullable Output<String> peerVpcId;
 
-    public Output<String> getPeerVpcId() {
-        return this.peerVpcId == null ? Output.empty() : this.peerVpcId;
+    public Output<String> peerVpcId() {
+        return this.peerVpcId == null ? Codegen.empty() : this.peerVpcId;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="requester")
       private final @Nullable Output<VpcPeeringConnectionAccepterRequesterGetArgs> requester;
 
-    public Output<VpcPeeringConnectionAccepterRequesterGetArgs> getRequester() {
-        return this.requester == null ? Output.empty() : this.requester;
+    public Output<VpcPeeringConnectionAccepterRequesterGetArgs> requester() {
+        return this.requester == null ? Codegen.empty() : this.requester;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     @Import(name="vpcPeeringConnectionId")
       private final @Nullable Output<String> vpcPeeringConnectionId;
 
-    public Output<String> getVpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId == null ? Output.empty() : this.vpcPeeringConnectionId;
+    public Output<String> vpcPeeringConnectionId() {
+        return this.vpcPeeringConnectionId == null ? Codegen.empty() : this.vpcPeeringConnectionId;
     }
 
     public VpcPeeringConnectionAccepterState(
@@ -167,17 +168,17 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
     }
 
     private VpcPeeringConnectionAccepterState() {
-        this.acceptStatus = Output.empty();
-        this.accepter = Output.empty();
-        this.autoAccept = Output.empty();
-        this.peerOwnerId = Output.empty();
-        this.peerRegion = Output.empty();
-        this.peerVpcId = Output.empty();
-        this.requester = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
-        this.vpcPeeringConnectionId = Output.empty();
+        this.acceptStatus = Codegen.empty();
+        this.accepter = Codegen.empty();
+        this.autoAccept = Codegen.empty();
+        this.peerOwnerId = Codegen.empty();
+        this.peerRegion = Codegen.empty();
+        this.peerVpcId = Codegen.empty();
+        this.requester = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.vpcPeeringConnectionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder acceptStatus(@Nullable String acceptStatus) {
-            this.acceptStatus = Output.ofNullable(acceptStatus);
+            this.acceptStatus = Codegen.ofNullable(acceptStatus);
             return this;
         }
         public Builder accepter(@Nullable Output<VpcPeeringConnectionAccepterAccepterGetArgs> accepter) {
@@ -233,7 +234,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder accepter(@Nullable VpcPeeringConnectionAccepterAccepterGetArgs accepter) {
-            this.accepter = Output.ofNullable(accepter);
+            this.accepter = Codegen.ofNullable(accepter);
             return this;
         }
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
@@ -241,7 +242,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder autoAccept(@Nullable Boolean autoAccept) {
-            this.autoAccept = Output.ofNullable(autoAccept);
+            this.autoAccept = Codegen.ofNullable(autoAccept);
             return this;
         }
         public Builder peerOwnerId(@Nullable Output<String> peerOwnerId) {
@@ -249,7 +250,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder peerOwnerId(@Nullable String peerOwnerId) {
-            this.peerOwnerId = Output.ofNullable(peerOwnerId);
+            this.peerOwnerId = Codegen.ofNullable(peerOwnerId);
             return this;
         }
         public Builder peerRegion(@Nullable Output<String> peerRegion) {
@@ -257,7 +258,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder peerRegion(@Nullable String peerRegion) {
-            this.peerRegion = Output.ofNullable(peerRegion);
+            this.peerRegion = Codegen.ofNullable(peerRegion);
             return this;
         }
         public Builder peerVpcId(@Nullable Output<String> peerVpcId) {
@@ -265,7 +266,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder peerVpcId(@Nullable String peerVpcId) {
-            this.peerVpcId = Output.ofNullable(peerVpcId);
+            this.peerVpcId = Codegen.ofNullable(peerVpcId);
             return this;
         }
         public Builder requester(@Nullable Output<VpcPeeringConnectionAccepterRequesterGetArgs> requester) {
@@ -273,7 +274,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder requester(@Nullable VpcPeeringConnectionAccepterRequesterGetArgs requester) {
-            this.requester = Output.ofNullable(requester);
+            this.requester = Codegen.ofNullable(requester);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -281,7 +282,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -289,7 +290,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -297,7 +298,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder vpcPeeringConnectionId(@Nullable Output<String> vpcPeeringConnectionId) {
@@ -305,7 +306,7 @@ public final class VpcPeeringConnectionAccepterState extends io.pulumi.resources
             return this;
         }
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = Output.ofNullable(vpcPeeringConnectionId);
+            this.vpcPeeringConnectionId = Codegen.ofNullable(vpcPeeringConnectionId);
             return this;
         }        public VpcPeeringConnectionAccepterState build() {
             return new VpcPeeringConnectionAccepterState(acceptStatus, accepter, autoAccept, peerOwnerId, peerRegion, peerVpcId, requester, tags, tagsAll, vpcId, vpcPeeringConnectionId);

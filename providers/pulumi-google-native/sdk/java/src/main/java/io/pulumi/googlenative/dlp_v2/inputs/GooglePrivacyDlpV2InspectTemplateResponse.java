@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
     @Import(name="inspectConfig", required=true)
       private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
-    public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
+    public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
     }
 
@@ -68,7 +68,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

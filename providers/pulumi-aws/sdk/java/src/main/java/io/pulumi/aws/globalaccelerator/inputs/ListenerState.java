@@ -6,6 +6,7 @@ package io.pulumi.aws.globalaccelerator.inputs;
 import io.pulumi.aws.globalaccelerator.inputs.ListenerPortRangeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorArn")
       private final @Nullable Output<String> acceleratorArn;
 
-    public Output<String> getAcceleratorArn() {
-        return this.acceleratorArn == null ? Output.empty() : this.acceleratorArn;
+    public Output<String> acceleratorArn() {
+        return this.acceleratorArn == null ? Codegen.empty() : this.acceleratorArn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientAffinity")
       private final @Nullable Output<String> clientAffinity;
 
-    public Output<String> getClientAffinity() {
-        return this.clientAffinity == null ? Output.empty() : this.clientAffinity;
+    public Output<String> clientAffinity() {
+        return this.clientAffinity == null ? Codegen.empty() : this.clientAffinity;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="portRanges")
       private final @Nullable Output<List<ListenerPortRangeGetArgs>> portRanges;
 
-    public Output<List<ListenerPortRangeGetArgs>> getPortRanges() {
-        return this.portRanges == null ? Output.empty() : this.portRanges;
+    public Output<List<ListenerPortRangeGetArgs>> portRanges() {
+        return this.portRanges == null ? Codegen.empty() : this.portRanges;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public ListenerState(
@@ -72,10 +73,10 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerState() {
-        this.acceleratorArn = Output.empty();
-        this.clientAffinity = Output.empty();
-        this.portRanges = Output.empty();
-        this.protocol = Output.empty();
+        this.acceleratorArn = Codegen.empty();
+        this.clientAffinity = Codegen.empty();
+        this.portRanges = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceleratorArn(@Nullable String acceleratorArn) {
-            this.acceleratorArn = Output.ofNullable(acceleratorArn);
+            this.acceleratorArn = Codegen.ofNullable(acceleratorArn);
             return this;
         }
         public Builder clientAffinity(@Nullable Output<String> clientAffinity) {
@@ -117,7 +118,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientAffinity(@Nullable String clientAffinity) {
-            this.clientAffinity = Output.ofNullable(clientAffinity);
+            this.clientAffinity = Codegen.ofNullable(clientAffinity);
             return this;
         }
         public Builder portRanges(@Nullable Output<List<ListenerPortRangeGetArgs>> portRanges) {
@@ -125,7 +126,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portRanges(@Nullable List<ListenerPortRangeGetArgs> portRanges) {
-            this.portRanges = Output.ofNullable(portRanges);
+            this.portRanges = Codegen.ofNullable(portRanges);
             return this;
         }
         public Builder portRanges(ListenerPortRangeGetArgs... portRanges) {
@@ -136,7 +137,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public ListenerState build() {
             return new ListenerState(acceleratorArn, clientAffinity, portRanges, protocol);

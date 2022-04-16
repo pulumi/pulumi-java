@@ -22,10 +22,10 @@ public final class GetSecretReplication {
         this.userManageds = userManageds;
     }
 
-    public Boolean getAutomatic() {
+    public Boolean automatic() {
         return this.automatic;
     }
-    public List<GetSecretReplicationUserManaged> getUserManageds() {
+    public List<GetSecretReplicationUserManaged> userManageds() {
         return this.userManageds;
     }
 

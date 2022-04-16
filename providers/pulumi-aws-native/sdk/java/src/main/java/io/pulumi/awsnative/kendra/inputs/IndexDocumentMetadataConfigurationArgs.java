@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kendra.inputs.IndexRelevanceArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexSearchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,28 +21,28 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="relevance")
       private final @Nullable Output<IndexRelevanceArgs> relevance;
 
-    public Output<IndexRelevanceArgs> getRelevance() {
-        return this.relevance == null ? Output.empty() : this.relevance;
+    public Output<IndexRelevanceArgs> relevance() {
+        return this.relevance == null ? Codegen.empty() : this.relevance;
     }
 
     @Import(name="search")
       private final @Nullable Output<IndexSearchArgs> search;
 
-    public Output<IndexSearchArgs> getSearch() {
-        return this.search == null ? Output.empty() : this.search;
+    public Output<IndexSearchArgs> search() {
+        return this.search == null ? Codegen.empty() : this.search;
     }
 
     @Import(name="type", required=true)
       private final Output<IndexDocumentAttributeValueType> type;
 
-    public Output<IndexDocumentAttributeValueType> getType() {
+    public Output<IndexDocumentAttributeValueType> type() {
         return this.type;
     }
 
@@ -57,10 +58,10 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     }
 
     private IndexDocumentMetadataConfigurationArgs() {
-        this.name = Output.empty();
-        this.relevance = Output.empty();
-        this.search = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.relevance = Codegen.empty();
+        this.search = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder relevance(@Nullable IndexRelevanceArgs relevance) {
-            this.relevance = Output.ofNullable(relevance);
+            this.relevance = Codegen.ofNullable(relevance);
             return this;
         }
         public Builder search(@Nullable Output<IndexSearchArgs> search) {
@@ -110,7 +111,7 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder search(@Nullable IndexSearchArgs search) {
-            this.search = Output.ofNullable(search);
+            this.search = Codegen.ofNullable(search);
             return this;
         }
         public Builder type(Output<IndexDocumentAttributeValueType> type) {

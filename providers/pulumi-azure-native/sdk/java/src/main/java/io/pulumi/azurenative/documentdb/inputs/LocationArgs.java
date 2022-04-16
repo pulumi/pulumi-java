@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failoverPriority")
       private final @Nullable Output<Integer> failoverPriority;
 
-    public Output<Integer> getFailoverPriority() {
-        return this.failoverPriority == null ? Output.empty() : this.failoverPriority;
+    public Output<Integer> failoverPriority() {
+        return this.failoverPriority == null ? Codegen.empty() : this.failoverPriority;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isZoneRedundant")
       private final @Nullable Output<Boolean> isZoneRedundant;
 
-    public Output<Boolean> getIsZoneRedundant() {
-        return this.isZoneRedundant == null ? Output.empty() : this.isZoneRedundant;
+    public Output<Boolean> isZoneRedundant() {
+        return this.isZoneRedundant == null ? Codegen.empty() : this.isZoneRedundant;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationName")
       private final @Nullable Output<String> locationName;
 
-    public Output<String> getLocationName() {
-        return this.locationName == null ? Output.empty() : this.locationName;
+    public Output<String> locationName() {
+        return this.locationName == null ? Codegen.empty() : this.locationName;
     }
 
     public LocationArgs(
@@ -63,9 +64,9 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationArgs() {
-        this.failoverPriority = Output.empty();
-        this.isZoneRedundant = Output.empty();
-        this.locationName = Output.empty();
+        this.failoverPriority = Codegen.empty();
+        this.isZoneRedundant = Codegen.empty();
+        this.locationName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failoverPriority(@Nullable Integer failoverPriority) {
-            this.failoverPriority = Output.ofNullable(failoverPriority);
+            this.failoverPriority = Codegen.ofNullable(failoverPriority);
             return this;
         }
         public Builder isZoneRedundant(@Nullable Output<Boolean> isZoneRedundant) {
@@ -105,7 +106,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isZoneRedundant(@Nullable Boolean isZoneRedundant) {
-            this.isZoneRedundant = Output.ofNullable(isZoneRedundant);
+            this.isZoneRedundant = Codegen.ofNullable(isZoneRedundant);
             return this;
         }
         public Builder locationName(@Nullable Output<String> locationName) {
@@ -113,7 +114,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationName(@Nullable String locationName) {
-            this.locationName = Output.ofNullable(locationName);
+            this.locationName = Codegen.ofNullable(locationName);
             return this;
         }        public LocationArgs build() {
             return new LocationArgs(failoverPriority, isZoneRedundant, locationName);

@@ -57,7 +57,7 @@ public final class ReportGroupExportConfigS3Destination {
      * The name of the S3 bucket where the raw data of a report are exported.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
@@ -65,28 +65,28 @@ public final class ReportGroupExportConfigS3Destination {
      * **Note: the API does not currently allow setting encryption as disabled**
      * 
     */
-    public Optional<Boolean> getEncryptionDisabled() {
+    public Optional<Boolean> encryptionDisabled() {
         return Optional.ofNullable(this.encryptionDisabled);
     }
     /**
      * The encryption key for the report's encrypted raw data. The KMS key ARN.
      * 
     */
-    public String getEncryptionKey() {
+    public String encryptionKey() {
         return this.encryptionKey;
     }
     /**
      * The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
      * 
     */
-    public Optional<String> getPackaging() {
+    public Optional<String> packaging() {
         return Optional.ofNullable(this.packaging);
     }
     /**
      * The path to the exported report's raw data results.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
 

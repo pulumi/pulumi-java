@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewaySslPolicyArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     @Import(name="clientAuthConfiguration")
       private final @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
 
-    public Output<ApplicationGatewayClientAuthConfigurationArgs> getClientAuthConfiguration() {
-        return this.clientAuthConfiguration == null ? Output.empty() : this.clientAuthConfiguration;
+    public Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration() {
+        return this.clientAuthConfiguration == null ? Codegen.empty() : this.clientAuthConfiguration;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     @Import(name="sslPolicy")
       private final @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
-    public Output<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
-        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
+    public Output<ApplicationGatewaySslPolicyArgs> sslPolicy() {
+        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     @Import(name="trustedClientCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedClientCertificates;
 
-    public Output<List<SubResourceArgs>> getTrustedClientCertificates() {
-        return this.trustedClientCertificates == null ? Output.empty() : this.trustedClientCertificates;
+    public Output<List<SubResourceArgs>> trustedClientCertificates() {
+        return this.trustedClientCertificates == null ? Codegen.empty() : this.trustedClientCertificates;
     }
 
     public ApplicationGatewaySslProfileArgs(
@@ -91,11 +92,11 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     }
 
     private ApplicationGatewaySslProfileArgs() {
-        this.clientAuthConfiguration = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.sslPolicy = Output.empty();
-        this.trustedClientCertificates = Output.empty();
+        this.clientAuthConfiguration = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sslPolicy = Codegen.empty();
+        this.trustedClientCertificates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder clientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationArgs clientAuthConfiguration) {
-            this.clientAuthConfiguration = Output.ofNullable(clientAuthConfiguration);
+            this.clientAuthConfiguration = Codegen.ofNullable(clientAuthConfiguration);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -139,7 +140,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -147,7 +148,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sslPolicy(@Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy) {
@@ -155,7 +156,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyArgs sslPolicy) {
-            this.sslPolicy = Output.ofNullable(sslPolicy);
+            this.sslPolicy = Codegen.ofNullable(sslPolicy);
             return this;
         }
         public Builder trustedClientCertificates(@Nullable Output<List<SubResourceArgs>> trustedClientCertificates) {
@@ -163,7 +164,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder trustedClientCertificates(@Nullable List<SubResourceArgs> trustedClientCertificates) {
-            this.trustedClientCertificates = Output.ofNullable(trustedClientCertificates);
+            this.trustedClientCertificates = Codegen.ofNullable(trustedClientCertificates);
             return this;
         }
         public Builder trustedClientCertificates(SubResourceArgs... trustedClientCertificates) {

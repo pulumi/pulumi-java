@@ -50,28 +50,28 @@ public final class TestExecutionStepResponse {
      * Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
      * 
     */
-    public List<TestIssueResponse> getTestIssues() {
+    public List<TestIssueResponse> testIssues() {
         return this.testIssues;
     }
     /**
      * List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
      * 
     */
-    public List<TestSuiteOverviewResponse> getTestSuiteOverviews() {
+    public List<TestSuiteOverviewResponse> testSuiteOverviews() {
         return this.testSuiteOverviews;
     }
     /**
      * The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional
      * 
     */
-    public TestTimingResponse getTestTiming() {
+    public TestTimingResponse testTiming() {
         return this.testTiming;
     }
     /**
      * Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional
      * 
     */
-    public ToolExecutionResponse getToolExecution() {
+    public ToolExecutionResponse toolExecution() {
         return this.toolExecution;
     }
 

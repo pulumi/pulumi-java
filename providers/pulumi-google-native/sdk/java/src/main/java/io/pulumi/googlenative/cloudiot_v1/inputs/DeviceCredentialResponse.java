@@ -24,7 +24,7 @@ public final class DeviceCredentialResponse extends io.pulumi.resources.InvokeAr
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
@@ -35,7 +35,7 @@ public final class DeviceCredentialResponse extends io.pulumi.resources.InvokeAr
     @Import(name="publicKey", required=true)
       private final PublicKeyCredentialResponse publicKey;
 
-    public PublicKeyCredentialResponse getPublicKey() {
+    public PublicKeyCredentialResponse publicKey() {
         return this.publicKey;
     }
 

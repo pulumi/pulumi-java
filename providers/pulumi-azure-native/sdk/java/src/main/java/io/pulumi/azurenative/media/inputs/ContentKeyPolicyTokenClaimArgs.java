@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
     @Import(name="claimType")
       private final @Nullable Output<String> claimType;
 
-    public Output<String> getClaimType() {
-        return this.claimType == null ? Output.empty() : this.claimType;
+    public Output<String> claimType() {
+        return this.claimType == null ? Codegen.empty() : this.claimType;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
     @Import(name="claimValue")
       private final @Nullable Output<String> claimValue;
 
-    public Output<String> getClaimValue() {
-        return this.claimValue == null ? Output.empty() : this.claimValue;
+    public Output<String> claimValue() {
+        return this.claimValue == null ? Codegen.empty() : this.claimValue;
     }
 
     public ContentKeyPolicyTokenClaimArgs(
@@ -48,8 +49,8 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
     }
 
     private ContentKeyPolicyTokenClaimArgs() {
-        this.claimType = Output.empty();
-        this.claimValue = Output.empty();
+        this.claimType = Codegen.empty();
+        this.claimValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder claimType(@Nullable String claimType) {
-            this.claimType = Output.ofNullable(claimType);
+            this.claimType = Codegen.ofNullable(claimType);
             return this;
         }
         public Builder claimValue(@Nullable Output<String> claimValue) {
@@ -87,7 +88,7 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder claimValue(@Nullable String claimValue) {
-            this.claimValue = Output.ofNullable(claimValue);
+            this.claimValue = Codegen.ofNullable(claimValue);
             return this;
         }        public ContentKeyPolicyTokenClaimArgs build() {
             return new ContentKeyPolicyTokenClaimArgs(claimType, claimValue);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationConfiguration
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationValuesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="codeConfigurationValues")
       private final @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
 
-    public Output<ServiceCodeConfigurationValuesArgs> getCodeConfigurationValues() {
-        return this.codeConfigurationValues == null ? Output.empty() : this.codeConfigurationValues;
+    public Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues() {
+        return this.codeConfigurationValues == null ? Codegen.empty() : this.codeConfigurationValues;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="configurationSource", required=true)
       private final Output<ServiceCodeConfigurationConfigurationSource> configurationSource;
 
-    public Output<ServiceCodeConfigurationConfigurationSource> getConfigurationSource() {
+    public Output<ServiceCodeConfigurationConfigurationSource> configurationSource() {
         return this.configurationSource;
     }
 
@@ -45,8 +46,8 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceCodeConfigurationArgs() {
-        this.codeConfigurationValues = Output.empty();
-        this.configurationSource = Output.empty();
+        this.codeConfigurationValues = Codegen.empty();
+        this.configurationSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder codeConfigurationValues(@Nullable ServiceCodeConfigurationValuesArgs codeConfigurationValues) {
-            this.codeConfigurationValues = Output.ofNullable(codeConfigurationValues);
+            this.codeConfigurationValues = Codegen.ofNullable(codeConfigurationValues);
             return this;
         }
         public Builder configurationSource(Output<ServiceCodeConfigurationConfigurationSource> configurationSource) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -33,8 +34,8 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> getSendEmailNotification() {
-        return this.sendEmailNotification == null ? Output.empty() : this.sendEmailNotification;
+    public Output<Boolean> sendEmailNotification() {
+        return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -55,7 +56,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -71,10 +72,10 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     }
 
     private UserStackAssociationArgs() {
-        this.authenticationType = Output.empty();
-        this.sendEmailNotification = Output.empty();
-        this.stackName = Output.empty();
-        this.userName = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.sendEmailNotification = Codegen.empty();
+        this.stackName = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
+            this.sendEmailNotification = Codegen.ofNullable(sendEmailNotification);
             return this;
         }
         public Builder stackName(Output<String> stackName) {

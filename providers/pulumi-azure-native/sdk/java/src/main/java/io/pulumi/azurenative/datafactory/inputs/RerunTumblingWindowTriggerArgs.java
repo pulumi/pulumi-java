@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     @Import(name="parentTrigger", required=true)
       private final Output<Object> parentTrigger;
 
-    public Output<Object> getParentTrigger() {
+    public Output<Object> parentTrigger() {
         return this.parentTrigger;
     }
 
@@ -61,7 +62,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     @Import(name="requestedEndTime", required=true)
       private final Output<String> requestedEndTime;
 
-    public Output<String> getRequestedEndTime() {
+    public Output<String> requestedEndTime() {
         return this.requestedEndTime;
     }
 
@@ -72,7 +73,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     @Import(name="requestedStartTime", required=true)
       private final Output<String> requestedStartTime;
 
-    public Output<String> getRequestedStartTime() {
+    public Output<String> requestedStartTime() {
         return this.requestedStartTime;
     }
 
@@ -83,7 +84,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     @Import(name="rerunConcurrency", required=true)
       private final Output<Integer> rerunConcurrency;
 
-    public Output<Integer> getRerunConcurrency() {
+    public Output<Integer> rerunConcurrency() {
         return this.rerunConcurrency;
     }
 
@@ -95,7 +96,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -117,13 +118,13 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     }
 
     private RerunTumblingWindowTriggerArgs() {
-        this.annotations = Output.empty();
-        this.description = Output.empty();
-        this.parentTrigger = Output.empty();
-        this.requestedEndTime = Output.empty();
-        this.requestedStartTime = Output.empty();
-        this.rerunConcurrency = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.parentTrigger = Codegen.empty();
+        this.requestedEndTime = Codegen.empty();
+        this.requestedStartTime = Codegen.empty();
+        this.rerunConcurrency = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -174,7 +175,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder parentTrigger(Output<Object> parentTrigger) {

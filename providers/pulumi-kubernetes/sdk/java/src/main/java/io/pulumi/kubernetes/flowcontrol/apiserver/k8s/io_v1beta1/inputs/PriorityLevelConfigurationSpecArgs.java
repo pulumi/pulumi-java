@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.LimitedPriorityLevelConfigurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     @Import(name="limited")
       private final @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
 
-    public Output<LimitedPriorityLevelConfigurationArgs> getLimited() {
-        return this.limited == null ? Output.empty() : this.limited;
+    public Output<LimitedPriorityLevelConfigurationArgs> limited() {
+        return this.limited == null ? Codegen.empty() : this.limited;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -49,8 +50,8 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     }
 
     private PriorityLevelConfigurationSpecArgs() {
-        this.limited = Output.empty();
-        this.type = Output.empty();
+        this.limited = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder limited(@Nullable LimitedPriorityLevelConfigurationArgs limited) {
-            this.limited = Output.ofNullable(limited);
+            this.limited = Codegen.ofNullable(limited);
             return this;
         }
         public Builder type(Output<String> type) {

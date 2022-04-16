@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public RecipeS3LocationArgs(
@@ -40,8 +41,8 @@ public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RecipeS3LocationArgs() {
-        this.bucket = Output.empty();
-        this.key = Output.empty();
+        this.bucket = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RecipeS3LocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public RecipeS3LocationArgs build() {
             return new RecipeS3LocationArgs(bucket, key);

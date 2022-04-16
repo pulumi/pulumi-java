@@ -5,6 +5,7 @@ package io.pulumi.aws.fms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class PolicyIncludeMapArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> getAccounts() {
-        return this.accounts == null ? Output.empty() : this.accounts;
+    public Output<List<String>> accounts() {
+        return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class PolicyIncludeMapArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="orgunits")
       private final @Nullable Output<List<String>> orgunits;
 
-    public Output<List<String>> getOrgunits() {
-        return this.orgunits == null ? Output.empty() : this.orgunits;
+    public Output<List<String>> orgunits() {
+        return this.orgunits == null ? Codegen.empty() : this.orgunits;
     }
 
     public PolicyIncludeMapArgs(
@@ -45,8 +46,8 @@ public final class PolicyIncludeMapArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolicyIncludeMapArgs() {
-        this.accounts = Output.empty();
-        this.orgunits = Output.empty();
+        this.accounts = Codegen.empty();
+        this.orgunits = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class PolicyIncludeMapArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Output.ofNullable(accounts);
+            this.accounts = Codegen.ofNullable(accounts);
             return this;
         }
         public Builder accounts(String... accounts) {
@@ -87,7 +88,7 @@ public final class PolicyIncludeMapArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder orgunits(@Nullable List<String> orgunits) {
-            this.orgunits = Output.ofNullable(orgunits);
+            this.orgunits = Codegen.ofNullable(orgunits);
             return this;
         }
         public Builder orgunits(String... orgunits) {

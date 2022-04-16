@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.FrequencyUnit;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frequencyInterval", required=true)
       private final Output<Integer> frequencyInterval;
 
-    public Output<Integer> getFrequencyInterval() {
+    public Output<Integer> frequencyInterval() {
         return this.frequencyInterval;
     }
 
@@ -39,7 +40,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frequencyUnit", required=true)
       private final Output<FrequencyUnit> frequencyUnit;
 
-    public Output<FrequencyUnit> getFrequencyUnit() {
+    public Output<FrequencyUnit> frequencyUnit() {
         return this.frequencyUnit;
     }
 
@@ -50,7 +51,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepAtLeastOneBackup", required=true)
       private final Output<Boolean> keepAtLeastOneBackup;
 
-    public Output<Boolean> getKeepAtLeastOneBackup() {
+    public Output<Boolean> keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
 
@@ -61,7 +62,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPeriodInDays", required=true)
       private final Output<Integer> retentionPeriodInDays;
 
-    public Output<Integer> getRetentionPeriodInDays() {
+    public Output<Integer> retentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 
@@ -72,8 +73,8 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public BackupScheduleArgs(
@@ -82,19 +83,19 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
         Output<Boolean> keepAtLeastOneBackup,
         Output<Integer> retentionPeriodInDays,
         @Nullable Output<String> startTime) {
-        this.frequencyInterval = frequencyInterval == null ? Output.ofNullable(7) : Objects.requireNonNull(frequencyInterval, "expected parameter 'frequencyInterval' to be non-null");
-        this.frequencyUnit = frequencyUnit == null ? Output.ofNullable(io.pulumi.azurenative.web.enums.FrequencyUnit.Day) : Objects.requireNonNull(frequencyUnit, "expected parameter 'frequencyUnit' to be non-null");
-        this.keepAtLeastOneBackup = keepAtLeastOneBackup == null ? Output.ofNullable(true) : Objects.requireNonNull(keepAtLeastOneBackup, "expected parameter 'keepAtLeastOneBackup' to be non-null");
-        this.retentionPeriodInDays = retentionPeriodInDays == null ? Output.ofNullable(30) : Objects.requireNonNull(retentionPeriodInDays, "expected parameter 'retentionPeriodInDays' to be non-null");
+        this.frequencyInterval = frequencyInterval == null ? Codegen.ofNullable(7) : Objects.requireNonNull(frequencyInterval, "expected parameter 'frequencyInterval' to be non-null");
+        this.frequencyUnit = frequencyUnit == null ? Codegen.ofNullable(io.pulumi.azurenative.web.enums.FrequencyUnit.Day) : Objects.requireNonNull(frequencyUnit, "expected parameter 'frequencyUnit' to be non-null");
+        this.keepAtLeastOneBackup = keepAtLeastOneBackup == null ? Codegen.ofNullable(true) : Objects.requireNonNull(keepAtLeastOneBackup, "expected parameter 'keepAtLeastOneBackup' to be non-null");
+        this.retentionPeriodInDays = retentionPeriodInDays == null ? Codegen.ofNullable(30) : Objects.requireNonNull(retentionPeriodInDays, "expected parameter 'retentionPeriodInDays' to be non-null");
         this.startTime = startTime;
     }
 
     private BackupScheduleArgs() {
-        this.frequencyInterval = Output.empty();
-        this.frequencyUnit = Output.empty();
-        this.keepAtLeastOneBackup = Output.empty();
-        this.retentionPeriodInDays = Output.empty();
-        this.startTime = Output.empty();
+        this.frequencyInterval = Codegen.empty();
+        this.frequencyUnit = Codegen.empty();
+        this.keepAtLeastOneBackup = Codegen.empty();
+        this.retentionPeriodInDays = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public BackupScheduleArgs build() {
             return new BackupScheduleArgs(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, retentionPeriodInDays, startTime);

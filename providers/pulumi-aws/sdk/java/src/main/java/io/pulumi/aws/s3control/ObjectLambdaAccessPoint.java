@@ -10,6 +10,7 @@ import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -33,7 +34,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -47,7 +48,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * @return Amazon Resource Name (ARN) of the Object Lambda Access Point.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +62,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * @return A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
      * 
      */
-    public Output<ObjectLambdaAccessPointConfiguration> getConfiguration() {
+    public Output<ObjectLambdaAccessPointConfiguration> configuration() {
         return this.configuration;
     }
     /**
@@ -75,7 +76,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * @return The name for this Object Lambda Access Point.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -101,7 +102,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectLambdaAccessPoint(String name, ObjectLambdaAccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint", name, args == null ? ObjectLambdaAccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint", name, args == null ? ObjectLambdaAccessPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectLambdaAccessPoint(String name, Output<String> id, @Nullable ObjectLambdaAccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

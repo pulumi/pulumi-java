@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="durationMs")
       private final @Nullable Output<String> durationMs;
 
-    public Output<String> getDurationMs() {
-        return this.durationMs == null ? Output.empty() : this.durationMs;
+    public Output<String> durationMs() {
+        return this.durationMs == null ? Codegen.empty() : this.durationMs;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="evalLoss")
       private final @Nullable Output<Double> evalLoss;
 
-    public Output<Double> getEvalLoss() {
-        return this.evalLoss == null ? Output.empty() : this.evalLoss;
+    public Output<Double> evalLoss() {
+        return this.evalLoss == null ? Codegen.empty() : this.evalLoss;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="index")
       private final @Nullable Output<Integer> index;
 
-    public Output<Integer> getIndex() {
-        return this.index == null ? Output.empty() : this.index;
+    public Output<Integer> index() {
+        return this.index == null ? Codegen.empty() : this.index;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="learnRate")
       private final @Nullable Output<Double> learnRate;
 
-    public Output<Double> getLearnRate() {
-        return this.learnRate == null ? Output.empty() : this.learnRate;
+    public Output<Double> learnRate() {
+        return this.learnRate == null ? Codegen.empty() : this.learnRate;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="trainingLoss")
       private final @Nullable Output<Double> trainingLoss;
 
-    public Output<Double> getTrainingLoss() {
-        return this.trainingLoss == null ? Output.empty() : this.trainingLoss;
+    public Output<Double> trainingLoss() {
+        return this.trainingLoss == null ? Codegen.empty() : this.trainingLoss;
     }
 
     public BqmlIterationResultArgs(
@@ -85,11 +86,11 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     }
 
     private BqmlIterationResultArgs() {
-        this.durationMs = Output.empty();
-        this.evalLoss = Output.empty();
-        this.index = Output.empty();
-        this.learnRate = Output.empty();
-        this.trainingLoss = Output.empty();
+        this.durationMs = Codegen.empty();
+        this.evalLoss = Codegen.empty();
+        this.index = Codegen.empty();
+        this.learnRate = Codegen.empty();
+        this.trainingLoss = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder durationMs(@Nullable String durationMs) {
-            this.durationMs = Output.ofNullable(durationMs);
+            this.durationMs = Codegen.ofNullable(durationMs);
             return this;
         }
         public Builder evalLoss(@Nullable Output<Double> evalLoss) {
@@ -133,7 +134,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder evalLoss(@Nullable Double evalLoss) {
-            this.evalLoss = Output.ofNullable(evalLoss);
+            this.evalLoss = Codegen.ofNullable(evalLoss);
             return this;
         }
         public Builder index(@Nullable Output<Integer> index) {
@@ -141,7 +142,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder index(@Nullable Integer index) {
-            this.index = Output.ofNullable(index);
+            this.index = Codegen.ofNullable(index);
             return this;
         }
         public Builder learnRate(@Nullable Output<Double> learnRate) {
@@ -149,7 +150,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder learnRate(@Nullable Double learnRate) {
-            this.learnRate = Output.ofNullable(learnRate);
+            this.learnRate = Codegen.ofNullable(learnRate);
             return this;
         }
         public Builder trainingLoss(@Nullable Output<Double> trainingLoss) {
@@ -157,7 +158,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder trainingLoss(@Nullable Double trainingLoss) {
-            this.trainingLoss = Output.ofNullable(trainingLoss);
+            this.trainingLoss = Codegen.ofNullable(trainingLoss);
             return this;
         }        public BqmlIterationResultArgs build() {
             return new BqmlIterationResultArgs(durationMs, evalLoss, index, learnRate, trainingLoss);

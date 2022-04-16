@@ -40,21 +40,21 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
     */
-    public Boolean getAllowPlaybackInterruption() {
+    public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
      * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
      * 
     */
-    public String getSsml() {
+    public String ssml() {
         return this.ssml;
     }
     /**
      * The raw text to be synthesized.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

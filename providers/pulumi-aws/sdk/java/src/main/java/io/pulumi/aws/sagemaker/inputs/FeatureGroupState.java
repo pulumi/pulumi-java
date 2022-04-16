@@ -8,6 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTimeFeatureName")
       private final @Nullable Output<String> eventTimeFeatureName;
 
-    public Output<String> getEventTimeFeatureName() {
-        return this.eventTimeFeatureName == null ? Output.empty() : this.eventTimeFeatureName;
+    public Output<String> eventTimeFeatureName() {
+        return this.eventTimeFeatureName == null ? Codegen.empty() : this.eventTimeFeatureName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureDefinitions")
       private final @Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
 
-    public Output<List<FeatureGroupFeatureDefinitionGetArgs>> getFeatureDefinitions() {
-        return this.featureDefinitions == null ? Output.empty() : this.featureDefinitions;
+    public Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions() {
+        return this.featureDefinitions == null ? Codegen.empty() : this.featureDefinitions;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureGroupName")
       private final @Nullable Output<String> featureGroupName;
 
-    public Output<String> getFeatureGroupName() {
-        return this.featureGroupName == null ? Output.empty() : this.featureGroupName;
+    public Output<String> featureGroupName() {
+        return this.featureGroupName == null ? Codegen.empty() : this.featureGroupName;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="offlineStoreConfig")
       private final @Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
 
-    public Output<FeatureGroupOfflineStoreConfigGetArgs> getOfflineStoreConfig() {
-        return this.offlineStoreConfig == null ? Output.empty() : this.offlineStoreConfig;
+    public Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig() {
+        return this.offlineStoreConfig == null ? Codegen.empty() : this.offlineStoreConfig;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="onlineStoreConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
 
-    public Output<FeatureGroupOnlineStoreConfigGetArgs> getOnlineStoreConfig() {
-        return this.onlineStoreConfig == null ? Output.empty() : this.onlineStoreConfig;
+    public Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig() {
+        return this.onlineStoreConfig == null ? Codegen.empty() : this.onlineStoreConfig;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="recordIdentifierFeatureName")
       private final @Nullable Output<String> recordIdentifierFeatureName;
 
-    public Output<String> getRecordIdentifierFeatureName() {
-        return this.recordIdentifierFeatureName == null ? Output.empty() : this.recordIdentifierFeatureName;
+    public Output<String> recordIdentifierFeatureName() {
+        return this.recordIdentifierFeatureName == null ? Codegen.empty() : this.recordIdentifierFeatureName;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public FeatureGroupState(
@@ -166,17 +167,17 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureGroupState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.eventTimeFeatureName = Output.empty();
-        this.featureDefinitions = Output.empty();
-        this.featureGroupName = Output.empty();
-        this.offlineStoreConfig = Output.empty();
-        this.onlineStoreConfig = Output.empty();
-        this.recordIdentifierFeatureName = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.eventTimeFeatureName = Codegen.empty();
+        this.featureDefinitions = Codegen.empty();
+        this.featureGroupName = Codegen.empty();
+        this.offlineStoreConfig = Codegen.empty();
+        this.onlineStoreConfig = Codegen.empty();
+        this.recordIdentifierFeatureName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -232,7 +233,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder eventTimeFeatureName(@Nullable Output<String> eventTimeFeatureName) {
@@ -240,7 +241,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventTimeFeatureName(@Nullable String eventTimeFeatureName) {
-            this.eventTimeFeatureName = Output.ofNullable(eventTimeFeatureName);
+            this.eventTimeFeatureName = Codegen.ofNullable(eventTimeFeatureName);
             return this;
         }
         public Builder featureDefinitions(@Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions) {
@@ -248,7 +249,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureDefinitions(@Nullable List<FeatureGroupFeatureDefinitionGetArgs> featureDefinitions) {
-            this.featureDefinitions = Output.ofNullable(featureDefinitions);
+            this.featureDefinitions = Codegen.ofNullable(featureDefinitions);
             return this;
         }
         public Builder featureDefinitions(FeatureGroupFeatureDefinitionGetArgs... featureDefinitions) {
@@ -259,7 +260,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureGroupName(@Nullable String featureGroupName) {
-            this.featureGroupName = Output.ofNullable(featureGroupName);
+            this.featureGroupName = Codegen.ofNullable(featureGroupName);
             return this;
         }
         public Builder offlineStoreConfig(@Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig) {
@@ -267,7 +268,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder offlineStoreConfig(@Nullable FeatureGroupOfflineStoreConfigGetArgs offlineStoreConfig) {
-            this.offlineStoreConfig = Output.ofNullable(offlineStoreConfig);
+            this.offlineStoreConfig = Codegen.ofNullable(offlineStoreConfig);
             return this;
         }
         public Builder onlineStoreConfig(@Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig) {
@@ -275,7 +276,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onlineStoreConfig(@Nullable FeatureGroupOnlineStoreConfigGetArgs onlineStoreConfig) {
-            this.onlineStoreConfig = Output.ofNullable(onlineStoreConfig);
+            this.onlineStoreConfig = Codegen.ofNullable(onlineStoreConfig);
             return this;
         }
         public Builder recordIdentifierFeatureName(@Nullable Output<String> recordIdentifierFeatureName) {
@@ -283,7 +284,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recordIdentifierFeatureName(@Nullable String recordIdentifierFeatureName) {
-            this.recordIdentifierFeatureName = Output.ofNullable(recordIdentifierFeatureName);
+            this.recordIdentifierFeatureName = Codegen.ofNullable(recordIdentifierFeatureName);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -291,7 +292,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -299,7 +300,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -307,7 +308,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public FeatureGroupState build() {
             return new FeatureGroupState(arn, description, eventTimeFeatureName, featureDefinitions, featureGroupName, offlineStoreConfig, onlineStoreConfig, recordIdentifierFeatureName, roleArn, tags, tagsAll);

@@ -40,21 +40,21 @@ public final class FileNoteResponse {
      * Provide a unique identifier to match analysis information on each specific file in a package
      * 
     */
-    public List<String> getChecksum() {
+    public List<String> checksum() {
         return this.checksum;
     }
     /**
      * This field provides information about the type of file identified
      * 
     */
-    public String getFileType() {
+    public String fileType() {
         return this.fileType;
     }
     /**
      * Identify the full path and filename that corresponds to the file information in this section
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

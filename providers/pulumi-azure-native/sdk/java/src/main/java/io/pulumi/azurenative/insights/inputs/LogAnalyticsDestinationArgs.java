@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
     @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
+    public Output<String> workspaceResourceId() {
+        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 
     public LogAnalyticsDestinationArgs(
@@ -49,8 +50,8 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
     }
 
     private LogAnalyticsDestinationArgs() {
-        this.name = Output.empty();
-        this.workspaceResourceId = Output.empty();
+        this.name = Codegen.empty();
+        this.workspaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
@@ -88,7 +89,7 @@ public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
             return this;
         }        public LogAnalyticsDestinationArgs build() {
             return new LogAnalyticsDestinationArgs(name, workspaceResourceId);

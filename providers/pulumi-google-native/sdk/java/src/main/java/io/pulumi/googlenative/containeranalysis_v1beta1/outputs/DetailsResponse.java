@@ -24,7 +24,7 @@ public final class DetailsResponse {
      * Attestation for the resource.
      * 
     */
-    public AttestationResponse getAttestation() {
+    public AttestationResponse attestation() {
         return this.attestation;
     }
 

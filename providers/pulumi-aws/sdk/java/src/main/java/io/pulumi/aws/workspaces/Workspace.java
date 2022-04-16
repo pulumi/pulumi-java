@@ -10,6 +10,7 @@ import io.pulumi.aws.workspaces.outputs.WorkspaceWorkspaceProperties;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The ID of the bundle for the WorkSpace.
      * 
      */
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
     /**
@@ -58,7 +59,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The name of the WorkSpace, as seen by the operating system.
      * 
      */
-    public Output<String> getComputerName() {
+    public Output<String> computerName() {
         return this.computerName;
     }
     /**
@@ -72,7 +73,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The ID of the directory for the WorkSpace.
      * 
      */
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
     /**
@@ -86,7 +87,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The IP address of the WorkSpace.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -100,7 +101,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the data stored on the root volume is encrypted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRootVolumeEncryptionEnabled() {
+    public Output</* @Nullable */ Boolean> rootVolumeEncryptionEnabled() {
         return this.rootVolumeEncryptionEnabled;
     }
     /**
@@ -114,7 +115,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The operational state of the WorkSpace.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -128,7 +129,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The tags for the WorkSpace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -156,7 +157,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
     /**
@@ -170,7 +171,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the data stored on the user volume is encrypted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUserVolumeEncryptionEnabled() {
+    public Output</* @Nullable */ Boolean> userVolumeEncryptionEnabled() {
         return this.userVolumeEncryptionEnabled;
     }
     /**
@@ -184,7 +185,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
      * 
      */
-    public Output</* @Nullable */ String> getVolumeEncryptionKey() {
+    public Output</* @Nullable */ String> volumeEncryptionKey() {
         return this.volumeEncryptionKey;
     }
     /**
@@ -198,7 +199,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The WorkSpace properties.
      * 
      */
-    public Output<WorkspaceWorkspaceProperties> getWorkspaceProperties() {
+    public Output<WorkspaceWorkspaceProperties> workspaceProperties() {
         return this.workspaceProperties;
     }
 
@@ -224,7 +225,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:workspaces/workspace:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:workspaces/workspace:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workspace(String name, Output<String> id, @Nullable WorkspaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

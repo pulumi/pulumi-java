@@ -50,31 +50,31 @@ public final class GetLocationResult {
      * The available port speeds for the location.
      * 
     */
-    public List<String> getAvailablePortSpeeds() {
+    public List<String> availablePortSpeeds() {
         return this.availablePortSpeeds;
     }
     /**
      * The names of the service providers for the location.
      * 
     */
-    public List<String> getAvailableProviders() {
+    public List<String> availableProviders() {
         return this.availableProviders;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLocationCode() {
+    public String locationCode() {
         return this.locationCode;
     }
     /**
      * The name of the location. This includes the name of the colocation partner and the physical site of the building.
      * 
     */
-    public String getLocationName() {
+    public String locationName() {
         return this.locationName;
     }
 

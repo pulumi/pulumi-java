@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectAltNameGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectGetArgs;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
     @Import(name="subject", required=true)
       private final Output<AuthorityConfigSubjectConfigSubjectGetArgs> subject;
 
-    public Output<AuthorityConfigSubjectConfigSubjectGetArgs> getSubject() {
+    public Output<AuthorityConfigSubjectConfigSubjectGetArgs> subject() {
         return this.subject;
     }
 
@@ -35,8 +36,8 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
     @Import(name="subjectAltName")
       private final @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
-    public Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
+    public Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName() {
+        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 
     public AuthorityConfigSubjectConfigGetArgs(
@@ -47,8 +48,8 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
     }
 
     private AuthorityConfigSubjectConfigGetArgs() {
-        this.subject = Output.empty();
-        this.subjectAltName = Output.empty();
+        this.subject = Codegen.empty();
+        this.subjectAltName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder subjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
-            this.subjectAltName = Output.ofNullable(subjectAltName);
+            this.subjectAltName = Codegen.ofNullable(subjectAltName);
             return this;
         }        public AuthorityConfigSubjectConfigGetArgs build() {
             return new AuthorityConfigSubjectConfigGetArgs(subject, subjectAltName);

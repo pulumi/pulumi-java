@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.MetricDescriptorLabelGetArgs;
 import io.pulumi.gcp.monitoring.inputs.MetricDescriptorMetadataGetArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<List<MetricDescriptorLabelGetArgs>> labels;
 
-    public Output<List<MetricDescriptorLabelGetArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<MetricDescriptorLabelGetArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="launchStage")
       private final @Nullable Output<String> launchStage;
 
-    public Output<String> getLaunchStage() {
-        return this.launchStage == null ? Output.empty() : this.launchStage;
+    public Output<String> launchStage() {
+        return this.launchStage == null ? Codegen.empty() : this.launchStage;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="metadata")
       private final @Nullable Output<MetricDescriptorMetadataGetArgs> metadata;
 
-    public Output<MetricDescriptorMetadataGetArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<MetricDescriptorMetadataGetArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="metricKind")
       private final @Nullable Output<String> metricKind;
 
-    public Output<String> getMetricKind() {
-        return this.metricKind == null ? Output.empty() : this.metricKind;
+    public Output<String> metricKind() {
+        return this.metricKind == null ? Codegen.empty() : this.metricKind;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="monitoredResourceTypes")
       private final @Nullable Output<List<String>> monitoredResourceTypes;
 
-    public Output<List<String>> getMonitoredResourceTypes() {
-        return this.monitoredResourceTypes == null ? Output.empty() : this.monitoredResourceTypes;
+    public Output<List<String>> monitoredResourceTypes() {
+        return this.monitoredResourceTypes == null ? Codegen.empty() : this.monitoredResourceTypes;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     @Import(name="valueType")
       private final @Nullable Output<String> valueType;
 
-    public Output<String> getValueType() {
-        return this.valueType == null ? Output.empty() : this.valueType;
+    public Output<String> valueType() {
+        return this.valueType == null ? Codegen.empty() : this.valueType;
     }
 
     public MetricDescriptorState(
@@ -203,18 +204,18 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
     }
 
     private MetricDescriptorState() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.launchStage = Output.empty();
-        this.metadata = Output.empty();
-        this.metricKind = Output.empty();
-        this.monitoredResourceTypes = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.type = Output.empty();
-        this.unit = Output.empty();
-        this.valueType = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.launchStage = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.metricKind = Codegen.empty();
+        this.monitoredResourceTypes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.type = Codegen.empty();
+        this.unit = Codegen.empty();
+        this.valueType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -264,7 +265,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -272,7 +273,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<List<MetricDescriptorLabelGetArgs>> labels) {
@@ -280,7 +281,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder labels(@Nullable List<MetricDescriptorLabelGetArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(MetricDescriptorLabelGetArgs... labels) {
@@ -291,7 +292,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder launchStage(@Nullable String launchStage) {
-            this.launchStage = Output.ofNullable(launchStage);
+            this.launchStage = Codegen.ofNullable(launchStage);
             return this;
         }
         public Builder metadata(@Nullable Output<MetricDescriptorMetadataGetArgs> metadata) {
@@ -299,7 +300,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder metadata(@Nullable MetricDescriptorMetadataGetArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder metricKind(@Nullable Output<String> metricKind) {
@@ -307,7 +308,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder metricKind(@Nullable String metricKind) {
-            this.metricKind = Output.ofNullable(metricKind);
+            this.metricKind = Codegen.ofNullable(metricKind);
             return this;
         }
         public Builder monitoredResourceTypes(@Nullable Output<List<String>> monitoredResourceTypes) {
@@ -315,7 +316,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder monitoredResourceTypes(@Nullable List<String> monitoredResourceTypes) {
-            this.monitoredResourceTypes = Output.ofNullable(monitoredResourceTypes);
+            this.monitoredResourceTypes = Codegen.ofNullable(monitoredResourceTypes);
             return this;
         }
         public Builder monitoredResourceTypes(String... monitoredResourceTypes) {
@@ -326,7 +327,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -334,7 +335,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -342,7 +343,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder unit(@Nullable Output<String> unit) {
@@ -350,7 +351,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder valueType(@Nullable Output<String> valueType) {
@@ -358,7 +359,7 @@ public final class MetricDescriptorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder valueType(@Nullable String valueType) {
-            this.valueType = Output.ofNullable(valueType);
+            this.valueType = Codegen.ofNullable(valueType);
             return this;
         }        public MetricDescriptorState build() {
             return new MetricDescriptorState(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, project, type, unit, valueType);

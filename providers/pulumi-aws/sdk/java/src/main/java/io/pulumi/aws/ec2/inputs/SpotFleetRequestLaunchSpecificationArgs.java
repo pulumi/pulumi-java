@@ -8,6 +8,7 @@ import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationEphemeralBloc
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,15 +24,15 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="ami", required=true)
       private final Output<String> ami;
 
-    public Output<String> getAmi() {
+    public Output<String> ami() {
         return this.ami;
     }
 
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
+    public Output<Boolean> associatePublicIpAddress() {
+        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
     /**
@@ -41,43 +42,43 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
+    public Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> ebsBlockDevices() {
+        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+    public Output<Boolean> ebsOptimized() {
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
+    public Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
+        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
-    public Output<String> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
+    public Output<String> iamInstanceProfile() {
+        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
     @Import(name="iamInstanceProfileArn")
       private final @Nullable Output<String> iamInstanceProfileArn;
 
-    public Output<String> getIamInstanceProfileArn() {
-        return this.iamInstanceProfileArn == null ? Output.empty() : this.iamInstanceProfileArn;
+    public Output<String> iamInstanceProfileArn() {
+        return this.iamInstanceProfileArn == null ? Codegen.empty() : this.iamInstanceProfileArn;
     }
 
     /**
@@ -87,43 +88,43 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     @Import(name="monitoring")
       private final @Nullable Output<Boolean> monitoring;
 
-    public Output<Boolean> getMonitoring() {
-        return this.monitoring == null ? Output.empty() : this.monitoring;
+    public Output<Boolean> monitoring() {
+        return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
     @Import(name="placementGroup")
       private final @Nullable Output<String> placementGroup;
 
-    public Output<String> getPlacementGroup() {
-        return this.placementGroup == null ? Output.empty() : this.placementGroup;
+    public Output<String> placementGroup() {
+        return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
     }
 
     @Import(name="placementTenancy")
       private final @Nullable Output<String> placementTenancy;
 
-    public Output<String> getPlacementTenancy() {
-        return this.placementTenancy == null ? Output.empty() : this.placementTenancy;
+    public Output<String> placementTenancy() {
+        return this.placementTenancy == null ? Codegen.empty() : this.placementTenancy;
     }
 
     @Import(name="rootBlockDevices")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> rootBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> getRootBlockDevices() {
-        return this.rootBlockDevices == null ? Output.empty() : this.rootBlockDevices;
+    public Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> rootBlockDevices() {
+        return this.rootBlockDevices == null ? Codegen.empty() : this.rootBlockDevices;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
-        return this.spotPrice == null ? Output.empty() : this.spotPrice;
+    public Output<String> spotPrice() {
+        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -155,22 +156,22 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+    public Output<String> userData() {
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> vpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     @Import(name="weightedCapacity")
       private final @Nullable Output<String> weightedCapacity;
 
-    public Output<String> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+    public Output<String> weightedCapacity() {
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public SpotFleetRequestLaunchSpecificationArgs(
@@ -228,26 +229,26 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     }
 
     private SpotFleetRequestLaunchSpecificationArgs() {
-        this.ami = Output.empty();
-        this.associatePublicIpAddress = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.ebsBlockDevices = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.ephemeralBlockDevices = Output.empty();
-        this.iamInstanceProfile = Output.empty();
-        this.iamInstanceProfileArn = Output.empty();
-        this.instanceType = Output.empty();
-        this.keyName = Output.empty();
-        this.monitoring = Output.empty();
-        this.placementGroup = Output.empty();
-        this.placementTenancy = Output.empty();
-        this.rootBlockDevices = Output.empty();
-        this.spotPrice = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.userData = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.ami = Codegen.empty();
+        this.associatePublicIpAddress = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.ebsBlockDevices = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.ephemeralBlockDevices = Codegen.empty();
+        this.iamInstanceProfile = Codegen.empty();
+        this.iamInstanceProfileArn = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.monitoring = Codegen.empty();
+        this.placementGroup = Codegen.empty();
+        this.placementTenancy = Codegen.empty();
+        this.rootBlockDevices = Codegen.empty();
+        this.spotPrice = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userData = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -321,7 +322,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -329,7 +330,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder ebsBlockDevices(@Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> ebsBlockDevices) {
@@ -337,7 +338,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder ebsBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
             return this;
         }
         public Builder ebsBlockDevices(SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs... ebsBlockDevices) {
@@ -348,7 +349,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder ephemeralBlockDevices(@Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
@@ -356,7 +357,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder ephemeralBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
             return this;
         }
         public Builder ephemeralBlockDevices(SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
@@ -367,7 +368,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
-            this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
+            this.iamInstanceProfile = Codegen.ofNullable(iamInstanceProfile);
             return this;
         }
         public Builder iamInstanceProfileArn(@Nullable Output<String> iamInstanceProfileArn) {
@@ -375,7 +376,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder iamInstanceProfileArn(@Nullable String iamInstanceProfileArn) {
-            this.iamInstanceProfileArn = Output.ofNullable(iamInstanceProfileArn);
+            this.iamInstanceProfileArn = Codegen.ofNullable(iamInstanceProfileArn);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {
@@ -391,7 +392,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder monitoring(@Nullable Output<Boolean> monitoring) {
@@ -399,7 +400,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder monitoring(@Nullable Boolean monitoring) {
-            this.monitoring = Output.ofNullable(monitoring);
+            this.monitoring = Codegen.ofNullable(monitoring);
             return this;
         }
         public Builder placementGroup(@Nullable Output<String> placementGroup) {
@@ -407,7 +408,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder placementGroup(@Nullable String placementGroup) {
-            this.placementGroup = Output.ofNullable(placementGroup);
+            this.placementGroup = Codegen.ofNullable(placementGroup);
             return this;
         }
         public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
@@ -415,7 +416,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder placementTenancy(@Nullable String placementTenancy) {
-            this.placementTenancy = Output.ofNullable(placementTenancy);
+            this.placementTenancy = Codegen.ofNullable(placementTenancy);
             return this;
         }
         public Builder rootBlockDevices(@Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> rootBlockDevices) {
@@ -423,7 +424,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder rootBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs> rootBlockDevices) {
-            this.rootBlockDevices = Output.ofNullable(rootBlockDevices);
+            this.rootBlockDevices = Codegen.ofNullable(rootBlockDevices);
             return this;
         }
         public Builder rootBlockDevices(SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs... rootBlockDevices) {
@@ -434,7 +435,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Output.ofNullable(spotPrice);
+            this.spotPrice = Codegen.ofNullable(spotPrice);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -442,7 +443,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -450,7 +451,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -458,7 +459,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
@@ -466,7 +467,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
@@ -477,7 +478,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
             return this;
         }
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public SpotFleetRequestLaunchSpecificationArgs build() {
             return new SpotFleetRequestLaunchSpecificationArgs(ami, associatePublicIpAddress, availabilityZone, ebsBlockDevices, ebsOptimized, ephemeralBlockDevices, iamInstanceProfile, iamInstanceProfileArn, instanceType, keyName, monitoring, placementGroup, placementTenancy, rootBlockDevices, spotPrice, subnetId, tags, userData, vpcSecurityGroupIds, weightedCapacity);

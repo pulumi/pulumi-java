@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.events.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.EventSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import io.pulumi.kubernetes.events.k8s.io_v1.inputs.EventSeriesArgs;
@@ -30,8 +31,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedCount")
       private final @Nullable Output<Integer> deprecatedCount;
 
-    public Output<Integer> getDeprecatedCount() {
-        return this.deprecatedCount == null ? Output.empty() : this.deprecatedCount;
+    public Output<Integer> deprecatedCount() {
+        return this.deprecatedCount == null ? Codegen.empty() : this.deprecatedCount;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedFirstTimestamp")
       private final @Nullable Output<String> deprecatedFirstTimestamp;
 
-    public Output<String> getDeprecatedFirstTimestamp() {
-        return this.deprecatedFirstTimestamp == null ? Output.empty() : this.deprecatedFirstTimestamp;
+    public Output<String> deprecatedFirstTimestamp() {
+        return this.deprecatedFirstTimestamp == null ? Codegen.empty() : this.deprecatedFirstTimestamp;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedLastTimestamp")
       private final @Nullable Output<String> deprecatedLastTimestamp;
 
-    public Output<String> getDeprecatedLastTimestamp() {
-        return this.deprecatedLastTimestamp == null ? Output.empty() : this.deprecatedLastTimestamp;
+    public Output<String> deprecatedLastTimestamp() {
+        return this.deprecatedLastTimestamp == null ? Codegen.empty() : this.deprecatedLastTimestamp;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedSource")
       private final @Nullable Output<EventSourceArgs> deprecatedSource;
 
-    public Output<EventSourceArgs> getDeprecatedSource() {
-        return this.deprecatedSource == null ? Output.empty() : this.deprecatedSource;
+    public Output<EventSourceArgs> deprecatedSource() {
+        return this.deprecatedSource == null ? Codegen.empty() : this.deprecatedSource;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTime", required=true)
       private final Output<String> eventTime;
 
-    public Output<String> getEventTime() {
+    public Output<String> eventTime() {
         return this.eventTime;
     }
 
@@ -107,8 +108,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ObjectMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="note")
       private final @Nullable Output<String> note;
 
-    public Output<String> getNote() {
-        return this.note == null ? Output.empty() : this.note;
+    public Output<String> note() {
+        return this.note == null ? Codegen.empty() : this.note;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regarding")
       private final @Nullable Output<ObjectReferenceArgs> regarding;
 
-    public Output<ObjectReferenceArgs> getRegarding() {
-        return this.regarding == null ? Output.empty() : this.regarding;
+    public Output<ObjectReferenceArgs> regarding() {
+        return this.regarding == null ? Codegen.empty() : this.regarding;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="related")
       private final @Nullable Output<ObjectReferenceArgs> related;
 
-    public Output<ObjectReferenceArgs> getRelated() {
-        return this.related == null ? Output.empty() : this.related;
+    public Output<ObjectReferenceArgs> related() {
+        return this.related == null ? Codegen.empty() : this.related;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportingController")
       private final @Nullable Output<String> reportingController;
 
-    public Output<String> getReportingController() {
-        return this.reportingController == null ? Output.empty() : this.reportingController;
+    public Output<String> reportingController() {
+        return this.reportingController == null ? Codegen.empty() : this.reportingController;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportingInstance")
       private final @Nullable Output<String> reportingInstance;
 
-    public Output<String> getReportingInstance() {
-        return this.reportingInstance == null ? Output.empty() : this.reportingInstance;
+    public Output<String> reportingInstance() {
+        return this.reportingInstance == null ? Codegen.empty() : this.reportingInstance;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="series")
       private final @Nullable Output<EventSeriesArgs> series;
 
-    public Output<EventSeriesArgs> getSeries() {
-        return this.series == null ? Output.empty() : this.series;
+    public Output<EventSeriesArgs> series() {
+        return this.series == null ? Codegen.empty() : this.series;
     }
 
     /**
@@ -206,8 +207,8 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public EventArgs(
@@ -248,23 +249,23 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventArgs() {
-        this.action = Output.empty();
-        this.apiVersion = Output.empty();
-        this.deprecatedCount = Output.empty();
-        this.deprecatedFirstTimestamp = Output.empty();
-        this.deprecatedLastTimestamp = Output.empty();
-        this.deprecatedSource = Output.empty();
-        this.eventTime = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.note = Output.empty();
-        this.reason = Output.empty();
-        this.regarding = Output.empty();
-        this.related = Output.empty();
-        this.reportingController = Output.empty();
-        this.reportingInstance = Output.empty();
-        this.series = Output.empty();
-        this.type = Output.empty();
+        this.action = Codegen.empty();
+        this.apiVersion = Codegen.empty();
+        this.deprecatedCount = Codegen.empty();
+        this.deprecatedFirstTimestamp = Codegen.empty();
+        this.deprecatedLastTimestamp = Codegen.empty();
+        this.deprecatedSource = Codegen.empty();
+        this.eventTime = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.note = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.regarding = Codegen.empty();
+        this.related = Codegen.empty();
+        this.reportingController = Codegen.empty();
+        this.reportingInstance = Codegen.empty();
+        this.series = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -324,7 +325,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
@@ -332,7 +333,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder deprecatedCount(@Nullable Output<Integer> deprecatedCount) {
@@ -340,7 +341,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deprecatedCount(@Nullable Integer deprecatedCount) {
-            this.deprecatedCount = Output.ofNullable(deprecatedCount);
+            this.deprecatedCount = Codegen.ofNullable(deprecatedCount);
             return this;
         }
         public Builder deprecatedFirstTimestamp(@Nullable Output<String> deprecatedFirstTimestamp) {
@@ -348,7 +349,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deprecatedFirstTimestamp(@Nullable String deprecatedFirstTimestamp) {
-            this.deprecatedFirstTimestamp = Output.ofNullable(deprecatedFirstTimestamp);
+            this.deprecatedFirstTimestamp = Codegen.ofNullable(deprecatedFirstTimestamp);
             return this;
         }
         public Builder deprecatedLastTimestamp(@Nullable Output<String> deprecatedLastTimestamp) {
@@ -356,7 +357,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deprecatedLastTimestamp(@Nullable String deprecatedLastTimestamp) {
-            this.deprecatedLastTimestamp = Output.ofNullable(deprecatedLastTimestamp);
+            this.deprecatedLastTimestamp = Codegen.ofNullable(deprecatedLastTimestamp);
             return this;
         }
         public Builder deprecatedSource(@Nullable Output<EventSourceArgs> deprecatedSource) {
@@ -364,7 +365,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deprecatedSource(@Nullable EventSourceArgs deprecatedSource) {
-            this.deprecatedSource = Output.ofNullable(deprecatedSource);
+            this.deprecatedSource = Codegen.ofNullable(deprecatedSource);
             return this;
         }
         public Builder eventTime(Output<String> eventTime) {
@@ -380,7 +381,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -388,7 +389,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder note(@Nullable Output<String> note) {
@@ -396,7 +397,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder note(@Nullable String note) {
-            this.note = Output.ofNullable(note);
+            this.note = Codegen.ofNullable(note);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -404,7 +405,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }
         public Builder regarding(@Nullable Output<ObjectReferenceArgs> regarding) {
@@ -412,7 +413,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regarding(@Nullable ObjectReferenceArgs regarding) {
-            this.regarding = Output.ofNullable(regarding);
+            this.regarding = Codegen.ofNullable(regarding);
             return this;
         }
         public Builder related(@Nullable Output<ObjectReferenceArgs> related) {
@@ -420,7 +421,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder related(@Nullable ObjectReferenceArgs related) {
-            this.related = Output.ofNullable(related);
+            this.related = Codegen.ofNullable(related);
             return this;
         }
         public Builder reportingController(@Nullable Output<String> reportingController) {
@@ -428,7 +429,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportingController(@Nullable String reportingController) {
-            this.reportingController = Output.ofNullable(reportingController);
+            this.reportingController = Codegen.ofNullable(reportingController);
             return this;
         }
         public Builder reportingInstance(@Nullable Output<String> reportingInstance) {
@@ -436,7 +437,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportingInstance(@Nullable String reportingInstance) {
-            this.reportingInstance = Output.ofNullable(reportingInstance);
+            this.reportingInstance = Codegen.ofNullable(reportingInstance);
             return this;
         }
         public Builder series(@Nullable Output<EventSeriesArgs> series) {
@@ -444,7 +445,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder series(@Nullable EventSeriesArgs series) {
-            this.series = Output.ofNullable(series);
+            this.series = Codegen.ofNullable(series);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -452,7 +453,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public EventArgs build() {
             return new EventArgs(action, apiVersion, deprecatedCount, deprecatedFirstTimestamp, deprecatedLastTimestamp, deprecatedSource, eventTime, kind, metadata, note, reason, regarding, related, reportingController, reportingInstance, series, type);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="buttonId", required=true)
       private final Output<String> buttonId;
 
-    public Output<String> getButtonId() {
+    public Output<String> buttonId() {
         return this.buttonId;
     }
 
@@ -35,7 +36,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="deploymentId", required=true)
       private final Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
 
@@ -46,7 +47,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="endpointDomain", required=true)
       private final Output<String> endpointDomain;
 
-    public Output<String> getEndpointDomain() {
+    public Output<String> endpointDomain() {
         return this.endpointDomain;
     }
 
@@ -57,7 +58,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -73,10 +74,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     }
 
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs() {
-        this.buttonId = Output.empty();
-        this.deploymentId = Output.empty();
-        this.endpointDomain = Output.empty();
-        this.organizationId = Output.empty();
+        this.buttonId = Codegen.empty();
+        this.deploymentId = Codegen.empty();
+        this.endpointDomain = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ByProductsArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.EnvironmentArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoArtifactArgs;
@@ -29,8 +30,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="byproducts")
       private final @Nullable Output<ByProductsArgs> byproducts;
 
-    public Output<ByProductsArgs> getByproducts() {
-        return this.byproducts == null ? Output.empty() : this.byproducts;
+    public Output<ByProductsArgs> byproducts() {
+        return this.byproducts == null ? Codegen.empty() : this.byproducts;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+    public Output<List<String>> command() {
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<EnvironmentArgs> environment;
 
-    public Output<EnvironmentArgs> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<EnvironmentArgs> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="materials")
       private final @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
 
-    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> getMaterials() {
-        return this.materials == null ? Output.empty() : this.materials;
+    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials() {
+        return this.materials == null ? Codegen.empty() : this.materials;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="products")
       private final @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products;
 
-    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> getProducts() {
-        return this.products == null ? Output.empty() : this.products;
+    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> products() {
+        return this.products == null ? Codegen.empty() : this.products;
     }
 
     public LinkArgs(
@@ -91,11 +92,11 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkArgs() {
-        this.byproducts = Output.empty();
-        this.command = Output.empty();
-        this.environment = Output.empty();
-        this.materials = Output.empty();
-        this.products = Output.empty();
+        this.byproducts = Codegen.empty();
+        this.command = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.materials = Codegen.empty();
+        this.products = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder byproducts(@Nullable ByProductsArgs byproducts) {
-            this.byproducts = Output.ofNullable(byproducts);
+            this.byproducts = Codegen.ofNullable(byproducts);
             return this;
         }
         public Builder command(@Nullable Output<List<String>> command) {
@@ -139,7 +140,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -150,7 +151,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environment(@Nullable EnvironmentArgs environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder materials(@Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials) {
@@ -158,7 +159,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder materials(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> materials) {
-            this.materials = Output.ofNullable(materials);
+            this.materials = Codegen.ofNullable(materials);
             return this;
         }
         public Builder materials(GrafeasV1beta1IntotoArtifactArgs... materials) {
@@ -169,7 +170,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder products(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> products) {
-            this.products = Output.ofNullable(products);
+            this.products = Codegen.ofNullable(products);
             return this;
         }
         public Builder products(GrafeasV1beta1IntotoArtifactArgs... products) {

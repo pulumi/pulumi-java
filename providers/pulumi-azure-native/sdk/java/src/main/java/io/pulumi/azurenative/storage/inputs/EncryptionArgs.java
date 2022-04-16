@@ -10,6 +10,7 @@ import io.pulumi.azurenative.storage.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -31,8 +32,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionIdentity")
       private final @Nullable Output<EncryptionIdentityArgs> encryptionIdentity;
 
-    public Output<EncryptionIdentityArgs> getEncryptionIdentity() {
-        return this.encryptionIdentity == null ? Output.empty() : this.encryptionIdentity;
+    public Output<EncryptionIdentityArgs> encryptionIdentity() {
+        return this.encryptionIdentity == null ? Codegen.empty() : this.encryptionIdentity;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySource", required=true)
       private final Output<Either<String,KeySource>> keySource;
 
-    public Output<Either<String,KeySource>> getKeySource() {
+    public Output<Either<String,KeySource>> keySource() {
         return this.keySource;
     }
 
@@ -53,8 +54,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
+        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireInfrastructureEncryption")
       private final @Nullable Output<Boolean> requireInfrastructureEncryption;
 
-    public Output<Boolean> getRequireInfrastructureEncryption() {
-        return this.requireInfrastructureEncryption == null ? Output.empty() : this.requireInfrastructureEncryption;
+    public Output<Boolean> requireInfrastructureEncryption() {
+        return this.requireInfrastructureEncryption == null ? Codegen.empty() : this.requireInfrastructureEncryption;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="services")
       private final @Nullable Output<EncryptionServicesArgs> services;
 
-    public Output<EncryptionServicesArgs> getServices() {
-        return this.services == null ? Output.empty() : this.services;
+    public Output<EncryptionServicesArgs> services() {
+        return this.services == null ? Codegen.empty() : this.services;
     }
 
     public EncryptionArgs(
@@ -93,11 +94,11 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EncryptionArgs() {
-        this.encryptionIdentity = Output.empty();
-        this.keySource = Output.empty();
-        this.keyVaultProperties = Output.empty();
-        this.requireInfrastructureEncryption = Output.empty();
-        this.services = Output.empty();
+        this.encryptionIdentity = Codegen.empty();
+        this.keySource = Codegen.empty();
+        this.keyVaultProperties = Codegen.empty();
+        this.requireInfrastructureEncryption = Codegen.empty();
+        this.services = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionIdentity(@Nullable EncryptionIdentityArgs encryptionIdentity) {
-            this.encryptionIdentity = Output.ofNullable(encryptionIdentity);
+            this.encryptionIdentity = Codegen.ofNullable(encryptionIdentity);
             return this;
         }
         public Builder keySource(Output<Either<String,KeySource>> keySource) {
@@ -149,7 +150,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
             return this;
         }
         public Builder requireInfrastructureEncryption(@Nullable Output<Boolean> requireInfrastructureEncryption) {
@@ -157,7 +158,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
-            this.requireInfrastructureEncryption = Output.ofNullable(requireInfrastructureEncryption);
+            this.requireInfrastructureEncryption = Codegen.ofNullable(requireInfrastructureEncryption);
             return this;
         }
         public Builder services(@Nullable Output<EncryptionServicesArgs> services) {
@@ -165,7 +166,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder services(@Nullable EncryptionServicesArgs services) {
-            this.services = Output.ofNullable(services);
+            this.services = Codegen.ofNullable(services);
             return this;
         }        public EncryptionArgs build() {
             return new EncryptionArgs(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);

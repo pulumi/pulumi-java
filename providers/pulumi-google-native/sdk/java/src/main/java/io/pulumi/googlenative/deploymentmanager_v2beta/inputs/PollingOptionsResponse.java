@@ -21,7 +21,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="diagnostics", required=true)
       private final List<DiagnosticResponse> diagnostics;
 
-    public List<DiagnosticResponse> getDiagnostics() {
+    public List<DiagnosticResponse> diagnostics() {
         return this.diagnostics;
     }
 
@@ -32,7 +32,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="failCondition", required=true)
       private final String failCondition;
 
-    public String getFailCondition() {
+    public String failCondition() {
         return this.failCondition;
     }
 
@@ -43,7 +43,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="finishCondition", required=true)
       private final String finishCondition;
 
-    public String getFinishCondition() {
+    public String finishCondition() {
         return this.finishCondition;
     }
 
@@ -54,7 +54,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="pollingLink", required=true)
       private final String pollingLink;
 
-    public String getPollingLink() {
+    public String pollingLink() {
         return this.pollingLink;
     }
 
@@ -65,7 +65,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="targetLink", required=true)
       private final String targetLink;
 
-    public String getTargetLink() {
+    public String targetLink() {
         return this.targetLink;
     }
 

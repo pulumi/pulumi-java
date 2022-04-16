@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method")
       private final @Nullable Output<String> method;
 
-    public Output<String> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+    public Output<String> method() {
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permission")
       private final @Nullable Output<String> permission;
 
-    public Output<String> getPermission() {
-        return this.permission == null ? Output.empty() : this.permission;
+    public Output<String> permission() {
+        return this.permission == null ? Codegen.empty() : this.permission;
     }
 
     public MethodSelectorArgs(
@@ -48,8 +49,8 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodSelectorArgs() {
-        this.method = Output.empty();
-        this.permission = Output.empty();
+        this.method = Codegen.empty();
+        this.permission = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder method(@Nullable String method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder permission(@Nullable Output<String> permission) {
@@ -87,7 +88,7 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permission(@Nullable String permission) {
-            this.permission = Output.ofNullable(permission);
+            this.permission = Codegen.ofNullable(permission);
             return this;
         }        public MethodSelectorArgs build() {
             return new MethodSelectorArgs(method, permission);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountKey", required=true)
       private final Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey;
     }
 
@@ -35,7 +36,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -47,7 +48,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageType", required=true)
       private final Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType;
     }
 
@@ -61,9 +62,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.storageType = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.storageType = Codegen.empty();
     }
 
     public static Builder builder() {

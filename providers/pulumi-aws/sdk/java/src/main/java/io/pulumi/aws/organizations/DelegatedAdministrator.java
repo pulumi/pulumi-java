@@ -9,6 +9,7 @@ import io.pulumi.aws.organizations.inputs.DelegatedAdministratorState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The account ID number of the member account in the organization to register as a delegated administrator.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -53,7 +54,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the delegated administrator's account.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +68,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The date when the account was made a delegated administrator.
      * 
      */
-    public Output<String> getDelegationEnabledDate() {
+    public Output<String> delegationEnabledDate() {
         return this.delegationEnabledDate;
     }
     /**
@@ -81,7 +82,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The email address that is associated with the delegated administrator's AWS account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -95,7 +96,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The method by which the delegated administrator's account joined the organization.
      * 
      */
-    public Output<String> getJoinedMethod() {
+    public Output<String> joinedMethod() {
         return this.joinedMethod;
     }
     /**
@@ -109,7 +110,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The date when the delegated administrator's account became a part of the organization.
      * 
      */
-    public Output<String> getJoinedTimestamp() {
+    public Output<String> joinedTimestamp() {
         return this.joinedTimestamp;
     }
     /**
@@ -123,7 +124,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The friendly name of the delegated administrator's account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -137,7 +138,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The service principal of the AWS service for which you want to make the member account a delegated administrator.
      * 
      */
-    public Output<String> getServicePrincipal() {
+    public Output<String> servicePrincipal() {
         return this.servicePrincipal;
     }
     /**
@@ -151,7 +152,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @return The status of the delegated administrator's account in the organization.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -177,7 +178,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DelegatedAdministrator(String name, DelegatedAdministratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:organizations/delegatedAdministrator:DelegatedAdministrator", name, args == null ? DelegatedAdministratorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:organizations/delegatedAdministrator:DelegatedAdministrator", name, args == null ? DelegatedAdministratorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DelegatedAdministrator(String name, Output<String> id, @Nullable DelegatedAdministratorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

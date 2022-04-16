@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
     @Import(name="snapshotAnalysis")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> getSnapshotAnalysis() {
-        return this.snapshotAnalysis == null ? Output.empty() : this.snapshotAnalysis;
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis() {
+        return this.snapshotAnalysis == null ? Codegen.empty() : this.snapshotAnalysis;
     }
 
     public AiFeatureStoreEntityTypeMonitoringConfigGetArgs(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis) {
@@ -31,7 +32,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
     }
 
     private AiFeatureStoreEntityTypeMonitoringConfigGetArgs() {
-        this.snapshotAnalysis = Output.empty();
+        this.snapshotAnalysis = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
             return this;
         }
         public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs snapshotAnalysis) {
-            this.snapshotAnalysis = Output.ofNullable(snapshotAnalysis);
+            this.snapshotAnalysis = Codegen.ofNullable(snapshotAnalysis);
             return this;
         }        public AiFeatureStoreEntityTypeMonitoringConfigGetArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigGetArgs(snapshotAnalysis);

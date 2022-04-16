@@ -5,6 +5,7 @@ package io.pulumi.aws.neptune;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -31,7 +32,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dbClusterSnapshotIdentifier", required=true)
       private final Output<String> dbClusterSnapshotIdentifier;
 
-    public Output<String> getDbClusterSnapshotIdentifier() {
+    public Output<String> dbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
     }
 
@@ -43,8 +44,8 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterSnapshotArgs() {
-        this.dbClusterIdentifier = Output.empty();
-        this.dbClusterSnapshotIdentifier = Output.empty();
+        this.dbClusterIdentifier = Codegen.empty();
+        this.dbClusterSnapshotIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {

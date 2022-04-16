@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
     @Import(name="allowedIps")
       private final @Nullable Output<List<String>> allowedIps;
 
-    public Output<List<String>> getAllowedIps() {
-        return this.allowedIps == null ? Output.empty() : this.allowedIps;
+    public Output<List<String>> allowedIps() {
+        return this.allowedIps == null ? Codegen.empty() : this.allowedIps;
     }
 
     public V2ServerKeyRestrictionsArgs(@Nullable Output<List<String>> allowedIps) {
@@ -35,7 +36,7 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
     }
 
     private V2ServerKeyRestrictionsArgs() {
-        this.allowedIps = Output.empty();
+        this.allowedIps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder allowedIps(@Nullable List<String> allowedIps) {
-            this.allowedIps = Output.ofNullable(allowedIps);
+            this.allowedIps = Codegen.ofNullable(allowedIps);
             return this;
         }
         public Builder allowedIps(String... allowedIps) {

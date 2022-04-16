@@ -26,7 +26,7 @@ public final class InstanceState extends io.pulumi.resources.InvokeArgs {
     @Import(name="code")
       private final @Nullable Integer code;
 
-    public Optional<Integer> getCode() {
+    public Optional<Integer> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -37,7 +37,7 @@ public final class InstanceState extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

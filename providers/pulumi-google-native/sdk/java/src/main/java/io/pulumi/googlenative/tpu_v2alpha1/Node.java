@@ -6,6 +6,7 @@ package io.pulumi.googlenative.tpu_v2alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.tpu_v2alpha1.NodeArgs;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.AttachedDiskResponse;
@@ -37,7 +38,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The type of hardware accelerators associated with this node.
      * 
      */
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
     /**
@@ -51,7 +52,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The API version that created this Node.
      * 
      */
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -65,7 +66,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -79,7 +80,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The time when the node was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -93,7 +94,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The additional data disks for the Node.
      * 
      */
-    public Output<List<AttachedDiskResponse>> getDataDisks() {
+    public Output<List<AttachedDiskResponse>> dataDisks() {
         return this.dataDisks;
     }
     /**
@@ -107,7 +108,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The user-supplied description of the TPU. Maximum of 512 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -121,7 +122,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The health status of the TPU node.
      * 
      */
-    public Output<String> getHealth() {
+    public Output<String> health() {
         return this.health;
     }
     /**
@@ -135,7 +136,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return If this field is populated, it contains a description of why the TPU Node is unhealthy.
      * 
      */
-    public Output<String> getHealthDescription() {
+    public Output<String> healthDescription() {
         return this.healthDescription;
     }
     /**
@@ -149,7 +150,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -163,7 +164,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -177,7 +178,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of the TPU.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -191,7 +192,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return Network configurations for the TPU node.
      * 
      */
-    public Output<NetworkConfigResponse> getNetworkConfig() {
+    public Output<NetworkConfigResponse> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -205,7 +206,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
      * 
      */
-    public Output<List<NetworkEndpointResponse>> getNetworkEndpoints() {
+    public Output<List<NetworkEndpointResponse>> networkEndpoints() {
         return this.networkEndpoints;
     }
     /**
@@ -219,7 +220,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The runtime version running in the Node.
      * 
      */
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
     /**
@@ -233,7 +234,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The scheduling options for this node.
      * 
      */
-    public Output<SchedulingConfigResponse> getSchedulingConfig() {
+    public Output<SchedulingConfigResponse> schedulingConfig() {
         return this.schedulingConfig;
     }
     /**
@@ -247,7 +248,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
      * 
      */
-    public Output<ServiceAccountResponse> getServiceAccount() {
+    public Output<ServiceAccountResponse> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -261,7 +262,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The current state for the TPU Node.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -275,7 +276,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return The Symptoms that have occurred to the TPU Node.
      * 
      */
-    public Output<List<SymptomResponse>> getSymptoms() {
+    public Output<List<SymptomResponse>> symptoms() {
         return this.symptoms;
     }
     /**
@@ -289,7 +290,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @return Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
 
@@ -315,7 +316,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Node(String name, NodeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:tpu/v2alpha1:Node", name, args == null ? NodeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:tpu/v2alpha1:Node", name, args == null ? NodeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Node(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

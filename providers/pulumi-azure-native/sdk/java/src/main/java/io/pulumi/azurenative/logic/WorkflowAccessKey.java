@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * @return Gets the workflow access key name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -51,7 +52,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the not-after time.
      * 
      */
-    public Output</* @Nullable */ String> getNotAfter() {
+    public Output</* @Nullable */ String> notAfter() {
         return this.notAfter;
     }
     /**
@@ -65,7 +66,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the not-before time.
      * 
      */
-    public Output</* @Nullable */ String> getNotBefore() {
+    public Output</* @Nullable */ String> notBefore() {
         return this.notBefore;
     }
     /**
@@ -79,7 +80,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * @return Gets the workflow access key type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -105,7 +106,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkflowAccessKey(String name, WorkflowAccessKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logic:WorkflowAccessKey", name, args == null ? WorkflowAccessKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:logic:WorkflowAccessKey", name, args == null ? WorkflowAccessKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkflowAccessKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

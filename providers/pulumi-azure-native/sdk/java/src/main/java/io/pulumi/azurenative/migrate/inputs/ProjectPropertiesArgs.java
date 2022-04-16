@@ -7,6 +7,7 @@ import io.pulumi.azurenative.migrate.enums.ProjectStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="assessmentSolutionId")
       private final @Nullable Output<String> assessmentSolutionId;
 
-    public Output<String> getAssessmentSolutionId() {
-        return this.assessmentSolutionId == null ? Output.empty() : this.assessmentSolutionId;
+    public Output<String> assessmentSolutionId() {
+        return this.assessmentSolutionId == null ? Codegen.empty() : this.assessmentSolutionId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customerStorageAccountArmId")
       private final @Nullable Output<String> customerStorageAccountArmId;
 
-    public Output<String> getCustomerStorageAccountArmId() {
-        return this.customerStorageAccountArmId == null ? Output.empty() : this.customerStorageAccountArmId;
+    public Output<String> customerStorageAccountArmId() {
+        return this.customerStorageAccountArmId == null ? Codegen.empty() : this.customerStorageAccountArmId;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customerWorkspaceId")
       private final @Nullable Output<String> customerWorkspaceId;
 
-    public Output<String> getCustomerWorkspaceId() {
-        return this.customerWorkspaceId == null ? Output.empty() : this.customerWorkspaceId;
+    public Output<String> customerWorkspaceId() {
+        return this.customerWorkspaceId == null ? Codegen.empty() : this.customerWorkspaceId;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customerWorkspaceLocation")
       private final @Nullable Output<String> customerWorkspaceLocation;
 
-    public Output<String> getCustomerWorkspaceLocation() {
-        return this.customerWorkspaceLocation == null ? Output.empty() : this.customerWorkspaceLocation;
+    public Output<String> customerWorkspaceLocation() {
+        return this.customerWorkspaceLocation == null ? Codegen.empty() : this.customerWorkspaceLocation;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="projectStatus")
       private final @Nullable Output<Either<String,ProjectStatus>> projectStatus;
 
-    public Output<Either<String,ProjectStatus>> getProjectStatus() {
-        return this.projectStatus == null ? Output.empty() : this.projectStatus;
+    public Output<Either<String,ProjectStatus>> projectStatus() {
+        return this.projectStatus == null ? Codegen.empty() : this.projectStatus;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<String> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     public ProjectPropertiesArgs(
@@ -102,12 +103,12 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ProjectPropertiesArgs() {
-        this.assessmentSolutionId = Output.empty();
-        this.customerStorageAccountArmId = Output.empty();
-        this.customerWorkspaceId = Output.empty();
-        this.customerWorkspaceLocation = Output.empty();
-        this.projectStatus = Output.empty();
-        this.publicNetworkAccess = Output.empty();
+        this.assessmentSolutionId = Codegen.empty();
+        this.customerStorageAccountArmId = Codegen.empty();
+        this.customerWorkspaceId = Codegen.empty();
+        this.customerWorkspaceLocation = Codegen.empty();
+        this.projectStatus = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
-            this.assessmentSolutionId = Output.ofNullable(assessmentSolutionId);
+            this.assessmentSolutionId = Codegen.ofNullable(assessmentSolutionId);
             return this;
         }
         public Builder customerStorageAccountArmId(@Nullable Output<String> customerStorageAccountArmId) {
@@ -153,7 +154,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
-            this.customerStorageAccountArmId = Output.ofNullable(customerStorageAccountArmId);
+            this.customerStorageAccountArmId = Codegen.ofNullable(customerStorageAccountArmId);
             return this;
         }
         public Builder customerWorkspaceId(@Nullable Output<String> customerWorkspaceId) {
@@ -161,7 +162,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
-            this.customerWorkspaceId = Output.ofNullable(customerWorkspaceId);
+            this.customerWorkspaceId = Codegen.ofNullable(customerWorkspaceId);
             return this;
         }
         public Builder customerWorkspaceLocation(@Nullable Output<String> customerWorkspaceLocation) {
@@ -169,7 +170,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
-            this.customerWorkspaceLocation = Output.ofNullable(customerWorkspaceLocation);
+            this.customerWorkspaceLocation = Codegen.ofNullable(customerWorkspaceLocation);
             return this;
         }
         public Builder projectStatus(@Nullable Output<Either<String,ProjectStatus>> projectStatus) {
@@ -177,7 +178,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder projectStatus(@Nullable Either<String,ProjectStatus> projectStatus) {
-            this.projectStatus = Output.ofNullable(projectStatus);
+            this.projectStatus = Codegen.ofNullable(projectStatus);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
@@ -185,7 +186,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }        public ProjectPropertiesArgs build() {
             return new ProjectPropertiesArgs(assessmentSolutionId, customerStorageAccountArmId, customerWorkspaceId, customerWorkspaceLocation, projectStatus, publicNetworkAccess);

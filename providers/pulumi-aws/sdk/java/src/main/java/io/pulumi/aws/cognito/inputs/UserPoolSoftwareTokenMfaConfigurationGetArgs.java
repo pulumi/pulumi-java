@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class UserPoolSoftwareTokenMfaConfigurationGetArgs extends io.pulum
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -29,7 +30,7 @@ public final class UserPoolSoftwareTokenMfaConfigurationGetArgs extends io.pulum
     }
 
     private UserPoolSoftwareTokenMfaConfigurationGetArgs() {
-        this.enabled = Output.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {

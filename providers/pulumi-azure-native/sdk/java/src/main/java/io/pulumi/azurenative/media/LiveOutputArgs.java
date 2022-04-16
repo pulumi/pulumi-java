@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.HlsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +35,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveWindowLength", required=true)
       private final Output<String> archiveWindowLength;
 
-    public Output<String> getArchiveWindowLength() {
+    public Output<String> archiveWindowLength() {
         return this.archiveWindowLength;
     }
 
@@ -45,7 +46,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -56,8 +57,8 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hls")
       private final @Nullable Output<HlsArgs> hls;
 
-    public Output<HlsArgs> getHls() {
-        return this.hls == null ? Output.empty() : this.hls;
+    public Output<HlsArgs> hls() {
+        return this.hls == null ? Codegen.empty() : this.hls;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="liveEventName", required=true)
       private final Output<String> liveEventName;
 
-    public Output<String> getLiveEventName() {
+    public Output<String> liveEventName() {
         return this.liveEventName;
     }
 
@@ -89,8 +90,8 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="liveOutputName")
       private final @Nullable Output<String> liveOutputName;
 
-    public Output<String> getLiveOutputName() {
-        return this.liveOutputName == null ? Output.empty() : this.liveOutputName;
+    public Output<String> liveOutputName() {
+        return this.liveOutputName == null ? Codegen.empty() : this.liveOutputName;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
-        return this.manifestName == null ? Output.empty() : this.manifestName;
+    public Output<String> manifestName() {
+        return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputSnapTime")
       private final @Nullable Output<Double> outputSnapTime;
 
-    public Output<Double> getOutputSnapTime() {
-        return this.outputSnapTime == null ? Output.empty() : this.outputSnapTime;
+    public Output<Double> outputSnapTime() {
+        return this.outputSnapTime == null ? Codegen.empty() : this.outputSnapTime;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -150,16 +151,16 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LiveOutputArgs() {
-        this.accountName = Output.empty();
-        this.archiveWindowLength = Output.empty();
-        this.assetName = Output.empty();
-        this.description = Output.empty();
-        this.hls = Output.empty();
-        this.liveEventName = Output.empty();
-        this.liveOutputName = Output.empty();
-        this.manifestName = Output.empty();
-        this.outputSnapTime = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.archiveWindowLength = Codegen.empty();
+        this.assetName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.hls = Codegen.empty();
+        this.liveEventName = Codegen.empty();
+        this.liveOutputName = Codegen.empty();
+        this.manifestName = Codegen.empty();
+        this.outputSnapTime = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -229,7 +230,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hls(@Nullable Output<HlsArgs> hls) {
@@ -237,7 +238,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hls(@Nullable HlsArgs hls) {
-            this.hls = Output.ofNullable(hls);
+            this.hls = Codegen.ofNullable(hls);
             return this;
         }
         public Builder liveEventName(Output<String> liveEventName) {
@@ -253,7 +254,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder liveOutputName(@Nullable String liveOutputName) {
-            this.liveOutputName = Output.ofNullable(liveOutputName);
+            this.liveOutputName = Codegen.ofNullable(liveOutputName);
             return this;
         }
         public Builder manifestName(@Nullable Output<String> manifestName) {
@@ -261,7 +262,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Output.ofNullable(manifestName);
+            this.manifestName = Codegen.ofNullable(manifestName);
             return this;
         }
         public Builder outputSnapTime(@Nullable Output<Double> outputSnapTime) {
@@ -269,7 +270,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputSnapTime(@Nullable Double outputSnapTime) {
-            this.outputSnapTime = Output.ofNullable(outputSnapTime);
+            this.outputSnapTime = Codegen.ofNullable(outputSnapTime);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

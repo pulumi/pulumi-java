@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     @Import(name="forwardedPorts")
       private final @Nullable Output<List<String>> forwardedPorts;
 
-    public Output<List<String>> getForwardedPorts() {
-        return this.forwardedPorts == null ? Output.empty() : this.forwardedPorts;
+    public Output<List<String>> forwardedPorts() {
+        return this.forwardedPorts == null ? Codegen.empty() : this.forwardedPorts;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     @Import(name="instanceTag")
       private final @Nullable Output<String> instanceTag;
 
-    public Output<String> getInstanceTag() {
-        return this.instanceTag == null ? Output.empty() : this.instanceTag;
+    public Output<String> instanceTag() {
+        return this.instanceTag == null ? Codegen.empty() : this.instanceTag;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -56,8 +57,8 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     @Import(name="sessionAffinity")
       private final @Nullable Output<Boolean> sessionAffinity;
 
-    public Output<Boolean> getSessionAffinity() {
-        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
+    public Output<Boolean> sessionAffinity() {
+        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+    public Output<String> subnetwork() {
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public FlexibleAppVersionNetworkArgs(
@@ -89,11 +90,11 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
     }
 
     private FlexibleAppVersionNetworkArgs() {
-        this.forwardedPorts = Output.empty();
-        this.instanceTag = Output.empty();
-        this.name = Output.empty();
-        this.sessionAffinity = Output.empty();
-        this.subnetwork = Output.empty();
+        this.forwardedPorts = Codegen.empty();
+        this.instanceTag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sessionAffinity = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder forwardedPorts(@Nullable List<String> forwardedPorts) {
-            this.forwardedPorts = Output.ofNullable(forwardedPorts);
+            this.forwardedPorts = Codegen.ofNullable(forwardedPorts);
             return this;
         }
         public Builder forwardedPorts(String... forwardedPorts) {
@@ -140,7 +141,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder instanceTag(@Nullable String instanceTag) {
-            this.instanceTag = Output.ofNullable(instanceTag);
+            this.instanceTag = Codegen.ofNullable(instanceTag);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -156,7 +157,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
-            this.sessionAffinity = Output.ofNullable(sessionAffinity);
+            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -164,7 +165,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public FlexibleAppVersionNetworkArgs build() {
             return new FlexibleAppVersionNetworkArgs(forwardedPorts, instanceTag, name, sessionAffinity, subnetwork);

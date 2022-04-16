@@ -5,6 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
     @Import(name="shareIdentifier", required=true)
       private final Output<String> shareIdentifier;
 
-    public Output<String> getShareIdentifier() {
+    public Output<String> shareIdentifier() {
         return this.shareIdentifier;
     }
 
@@ -33,8 +34,8 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
     @Import(name="weightFactor")
       private final @Nullable Output<Double> weightFactor;
 
-    public Output<Double> getWeightFactor() {
-        return this.weightFactor == null ? Output.empty() : this.weightFactor;
+    public Output<Double> weightFactor() {
+        return this.weightFactor == null ? Codegen.empty() : this.weightFactor;
     }
 
     public SchedulingPolicyFairSharePolicyShareDistributionGetArgs(
@@ -45,8 +46,8 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
     }
 
     private SchedulingPolicyFairSharePolicyShareDistributionGetArgs() {
-        this.shareIdentifier = Output.empty();
-        this.weightFactor = Output.empty();
+        this.shareIdentifier = Codegen.empty();
+        this.weightFactor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
             return this;
         }
         public Builder weightFactor(@Nullable Double weightFactor) {
-            this.weightFactor = Output.ofNullable(weightFactor);
+            this.weightFactor = Codegen.ofNullable(weightFactor);
             return this;
         }        public SchedulingPolicyFairSharePolicyShareDistributionGetArgs build() {
             return new SchedulingPolicyFairSharePolicyShareDistributionGetArgs(shareIdentifier, weightFactor);

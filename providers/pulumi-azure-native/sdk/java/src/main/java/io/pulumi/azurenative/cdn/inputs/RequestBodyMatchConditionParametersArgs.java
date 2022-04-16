@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.enums.Transform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,8 +31,8 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
     @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
 
-    public Output<List<String>> getMatchValues() {
-        return this.matchValues == null ? Output.empty() : this.matchValues;
+    public Output<List<String>> matchValues() {
+        return this.matchValues == null ? Codegen.empty() : this.matchValues;
     }
 
     /**
@@ -41,14 +42,14 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> getNegateCondition() {
-        return this.negateCondition == null ? Output.empty() : this.negateCondition;
+    public Output<Boolean> negateCondition() {
+        return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -59,7 +60,7 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
     @Import(name="operator", required=true)
       private final Output<Either<String,RequestBodyOperator>> operator;
 
-    public Output<Either<String,RequestBodyOperator>> getOperator() {
+    public Output<Either<String,RequestBodyOperator>> operator() {
         return this.operator;
     }
 
@@ -70,8 +71,8 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
-    public Output<List<Either<String,Transform>>> getTransforms() {
-        return this.transforms == null ? Output.empty() : this.transforms;
+    public Output<List<Either<String,Transform>>> transforms() {
+        return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 
     public RequestBodyMatchConditionParametersArgs(
@@ -88,11 +89,11 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
     }
 
     private RequestBodyMatchConditionParametersArgs() {
-        this.matchValues = Output.empty();
-        this.negateCondition = Output.empty();
-        this.odataType = Output.empty();
-        this.operator = Output.empty();
-        this.transforms = Output.empty();
+        this.matchValues = Codegen.empty();
+        this.negateCondition = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.transforms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
             return this;
         }
         public Builder matchValues(@Nullable List<String> matchValues) {
-            this.matchValues = Output.ofNullable(matchValues);
+            this.matchValues = Codegen.ofNullable(matchValues);
             return this;
         }
         public Builder matchValues(String... matchValues) {
@@ -139,7 +140,7 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
             return this;
         }
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Output.ofNullable(negateCondition);
+            this.negateCondition = Codegen.ofNullable(negateCondition);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -163,7 +164,7 @@ public final class RequestBodyMatchConditionParametersArgs extends io.pulumi.res
             return this;
         }
         public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
-            this.transforms = Output.ofNullable(transforms);
+            this.transforms = Codegen.ofNullable(transforms);
             return this;
         }
         public Builder transforms(Either<String,Transform>... transforms) {

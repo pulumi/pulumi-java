@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyGetArgs extends io.pulum
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -33,7 +34,7 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyGetArgs extends io.pulum
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -45,8 +46,8 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyGetArgs extends io.pulum
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
-        return this.overwrite == null ? Output.empty() : this.overwrite;
+    public Output<Boolean> overwrite() {
+        return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyGetArgs extends io.pulum
     @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
-    public Output<String> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<String> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     public GuestPoliciesRecipeUpdateStepFileCopyGetArgs(
@@ -77,10 +78,10 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyGetArgs extends io.pulum
     }
 
     private GuestPoliciesRecipeUpdateStepFileCopyGetArgs() {
-        this.artifactId = Output.empty();
-        this.destination = Output.empty();
-        this.overwrite = Output.empty();
-        this.permissions = Output.empty();
+        this.artifactId = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.overwrite = Codegen.empty();
+        this.permissions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyGetArgs extends io.pulum
             return this;
         }
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Output.ofNullable(overwrite);
+            this.overwrite = Codegen.ofNullable(overwrite);
             return this;
         }
         public Builder permissions(@Nullable Output<String> permissions) {
@@ -138,7 +139,7 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyGetArgs extends io.pulum
             return this;
         }
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }        public GuestPoliciesRecipeUpdateStepFileCopyGetArgs build() {
             return new GuestPoliciesRecipeUpdateStepFileCopyGetArgs(artifactId, destination, overwrite, permissions);

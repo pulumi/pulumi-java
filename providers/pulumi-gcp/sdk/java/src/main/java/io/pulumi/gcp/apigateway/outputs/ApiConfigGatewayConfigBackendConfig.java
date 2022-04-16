@@ -26,7 +26,7 @@ public final class ApiConfigGatewayConfigBackendConfig {
      * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
      * 
     */
-    public String getGoogleServiceAccount() {
+    public String googleServiceAccount() {
         return this.googleServiceAccount;
     }
 

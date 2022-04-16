@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="containerGroupName")
       private final @Nullable Output<String> containerGroupName;
 
-    public Output<String> getContainerGroupName() {
-        return this.containerGroupName == null ? Output.empty() : this.containerGroupName;
+    public Output<String> containerGroupName() {
+        return this.containerGroupName == null ? Codegen.empty() : this.containerGroupName;
     }
 
     public ContainerConfigurationArgs(@Nullable Output<String> containerGroupName) {
@@ -34,7 +35,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private ContainerConfigurationArgs() {
-        this.containerGroupName = Output.empty();
+        this.containerGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder containerGroupName(@Nullable String containerGroupName) {
-            this.containerGroupName = Output.ofNullable(containerGroupName);
+            this.containerGroupName = Codegen.ofNullable(containerGroupName);
             return this;
         }        public ContainerConfigurationArgs build() {
             return new ContainerConfigurationArgs(containerGroupName);

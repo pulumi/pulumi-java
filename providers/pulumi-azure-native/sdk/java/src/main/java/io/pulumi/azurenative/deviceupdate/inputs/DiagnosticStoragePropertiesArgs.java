@@ -7,6 +7,7 @@ import io.pulumi.azurenative.deviceupdate.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
 
@@ -38,8 +39,8 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+    public Output<String> connectionString() {
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -63,9 +64,9 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
     }
 
     private DiagnosticStoragePropertiesArgs() {
-        this.authenticationType = Output.empty();
-        this.connectionString = Output.empty();
-        this.resourceId = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class DiagnosticStoragePropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

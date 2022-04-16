@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -33,7 +34,7 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
     @Import(name="rules", required=true)
       private final Output<List<BucketReplicationConfigurationRuleArgs>> rules;
 
-    public Output<List<BucketReplicationConfigurationRuleArgs>> getRules() {
+    public Output<List<BucketReplicationConfigurationRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -45,8 +46,8 @@ public final class BucketReplicationConfigurationArgs extends io.pulumi.resource
     }
 
     private BucketReplicationConfigurationArgs() {
-        this.role = Output.empty();
-        this.rules = Output.empty();
+        this.role = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
     @Import(name="alias", required=true)
       private final String alias;
 
-    public String getAlias() {
+    public String alias() {
         return this.alias;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
     @Import(name="entityType", required=true)
       private final String entityType;
 
-    public String getEntityType() {
+    public String entityType() {
         return this.entityType;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
     @Import(name="userDefined", required=true)
       private final Boolean userDefined;
 
-    public Boolean getUserDefined() {
+    public Boolean userDefined() {
         return this.userDefined;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.iam_v1.inputs.AwsArgs;
 import io.pulumi.googlenative.iam_v1.inputs.OidcArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributeCondition")
       private final @Nullable Output<String> attributeCondition;
 
-    public Output<String> getAttributeCondition() {
-        return this.attributeCondition == null ? Output.empty() : this.attributeCondition;
+    public Output<String> attributeCondition() {
+        return this.attributeCondition == null ? Codegen.empty() : this.attributeCondition;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributeMapping")
       private final @Nullable Output<Map<String,String>> attributeMapping;
 
-    public Output<Map<String,String>> getAttributeMapping() {
-        return this.attributeMapping == null ? Output.empty() : this.attributeMapping;
+    public Output<Map<String,String>> attributeMapping() {
+        return this.attributeMapping == null ? Codegen.empty() : this.attributeMapping;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aws")
       private final @Nullable Output<AwsArgs> aws;
 
-    public Output<AwsArgs> getAws() {
-        return this.aws == null ? Output.empty() : this.aws;
+    public Output<AwsArgs> aws() {
+        return this.aws == null ? Codegen.empty() : this.aws;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -80,15 +81,15 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -98,28 +99,28 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidc")
       private final @Nullable Output<OidcArgs> oidc;
 
-    public Output<OidcArgs> getOidc() {
-        return this.oidc == null ? Output.empty() : this.oidc;
+    public Output<OidcArgs> oidc() {
+        return this.oidc == null ? Codegen.empty() : this.oidc;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="workloadIdentityPoolId", required=true)
       private final Output<String> workloadIdentityPoolId;
 
-    public Output<String> getWorkloadIdentityPoolId() {
+    public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
     @Import(name="workloadIdentityPoolProviderId", required=true)
       private final Output<String> workloadIdentityPoolProviderId;
 
-    public Output<String> getWorkloadIdentityPoolProviderId() {
+    public Output<String> workloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
     }
 
@@ -149,17 +150,17 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProviderArgs() {
-        this.attributeCondition = Output.empty();
-        this.attributeMapping = Output.empty();
-        this.aws = Output.empty();
-        this.description = Output.empty();
-        this.disabled = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.oidc = Output.empty();
-        this.project = Output.empty();
-        this.workloadIdentityPoolId = Output.empty();
-        this.workloadIdentityPoolProviderId = Output.empty();
+        this.attributeCondition = Codegen.empty();
+        this.attributeMapping = Codegen.empty();
+        this.aws = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.oidc = Codegen.empty();
+        this.project = Codegen.empty();
+        this.workloadIdentityPoolId = Codegen.empty();
+        this.workloadIdentityPoolProviderId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributeCondition(@Nullable String attributeCondition) {
-            this.attributeCondition = Output.ofNullable(attributeCondition);
+            this.attributeCondition = Codegen.ofNullable(attributeCondition);
             return this;
         }
         public Builder attributeMapping(@Nullable Output<Map<String,String>> attributeMapping) {
@@ -215,7 +216,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Output.ofNullable(attributeMapping);
+            this.attributeMapping = Codegen.ofNullable(attributeMapping);
             return this;
         }
         public Builder aws(@Nullable Output<AwsArgs> aws) {
@@ -223,7 +224,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aws(@Nullable AwsArgs aws) {
-            this.aws = Output.ofNullable(aws);
+            this.aws = Codegen.ofNullable(aws);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -231,7 +232,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -239,7 +240,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -247,7 +248,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -255,7 +256,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder oidc(@Nullable Output<OidcArgs> oidc) {
@@ -263,7 +264,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oidc(@Nullable OidcArgs oidc) {
-            this.oidc = Output.ofNullable(oidc);
+            this.oidc = Codegen.ofNullable(oidc);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -271,7 +272,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder workloadIdentityPoolId(Output<String> workloadIdentityPoolId) {

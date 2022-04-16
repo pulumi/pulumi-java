@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Endpoint for the domain.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -60,7 +61,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    public Output</* @Nullable */ List<InboundIpRuleResponse>> getInboundIpRules() {
+    public Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules() {
         return this.inboundIpRules;
     }
     /**
@@ -74,7 +75,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return This determines the format that Event Grid should expect for incoming events published to the domain.
      * 
      */
-    public Output</* @Nullable */ String> getInputSchema() {
+    public Output</* @Nullable */ String> inputSchema() {
         return this.inputSchema;
     }
     /**
@@ -88,7 +89,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Information about the InputSchemaMapping which specified the info about mapping event payload.
      * 
      */
-    public Output</* @Nullable */ JsonInputSchemaMappingResponse> getInputSchemaMapping() {
+    public Output</* @Nullable */ JsonInputSchemaMappingResponse> inputSchemaMapping() {
         return this.inputSchemaMapping;
     }
     /**
@@ -102,7 +103,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +117,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Metric resource id for the domain.
      * 
      */
-    public Output<String> getMetricResourceId() {
+    public Output<String> metricResourceId() {
         return this.metricResourceId;
     }
     /**
@@ -130,7 +131,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +145,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return List of private endpoint connections.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -158,7 +159,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the domain.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -174,7 +175,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -188,7 +189,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to Domain resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -202,7 +203,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -216,7 +217,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -242,7 +243,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventgrid:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Domain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

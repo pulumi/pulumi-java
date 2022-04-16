@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsublite_v1.inputs.DeliveryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryConfig")
       private final @Nullable Output<DeliveryConfigArgs> deliveryConfig;
 
-    public Output<DeliveryConfigArgs> getDeliveryConfig() {
-        return this.deliveryConfig == null ? Output.empty() : this.deliveryConfig;
+    public Output<DeliveryConfigArgs> deliveryConfig() {
+        return this.deliveryConfig == null ? Codegen.empty() : this.deliveryConfig;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -40,28 +41,28 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="skipBacklog")
       private final @Nullable Output<String> skipBacklog;
 
-    public Output<String> getSkipBacklog() {
-        return this.skipBacklog == null ? Output.empty() : this.skipBacklog;
+    public Output<String> skipBacklog() {
+        return this.skipBacklog == null ? Codegen.empty() : this.skipBacklog;
     }
 
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -72,8 +73,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public SubscriptionArgs(
@@ -94,13 +95,13 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.deliveryConfig = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.skipBacklog = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.topic = Output.empty();
+        this.deliveryConfig = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.skipBacklog = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryConfig(@Nullable DeliveryConfigArgs deliveryConfig) {
-            this.deliveryConfig = Output.ofNullable(deliveryConfig);
+            this.deliveryConfig = Codegen.ofNullable(deliveryConfig);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -148,7 +149,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -156,7 +157,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -164,7 +165,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder skipBacklog(@Nullable Output<String> skipBacklog) {
@@ -172,7 +173,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipBacklog(@Nullable String skipBacklog) {
-            this.skipBacklog = Output.ofNullable(skipBacklog);
+            this.skipBacklog = Codegen.ofNullable(skipBacklog);
             return this;
         }
         public Builder subscriptionId(Output<String> subscriptionId) {
@@ -188,7 +189,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public SubscriptionArgs build() {
             return new SubscriptionArgs(deliveryConfig, location, name, project, skipBacklog, subscriptionId, topic);

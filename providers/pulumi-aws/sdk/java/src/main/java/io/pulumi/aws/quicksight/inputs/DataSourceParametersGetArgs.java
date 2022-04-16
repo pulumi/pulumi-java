@@ -25,6 +25,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourceParametersTeradataGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersTwitterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -40,8 +41,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="amazonElasticsearch")
       private final @Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
 
-    public Output<DataSourceParametersAmazonElasticsearchGetArgs> getAmazonElasticsearch() {
-        return this.amazonElasticsearch == null ? Output.empty() : this.amazonElasticsearch;
+    public Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch() {
+        return this.amazonElasticsearch == null ? Codegen.empty() : this.amazonElasticsearch;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="athena")
       private final @Nullable Output<DataSourceParametersAthenaGetArgs> athena;
 
-    public Output<DataSourceParametersAthenaGetArgs> getAthena() {
-        return this.athena == null ? Output.empty() : this.athena;
+    public Output<DataSourceParametersAthenaGetArgs> athena() {
+        return this.athena == null ? Codegen.empty() : this.athena;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="aurora")
       private final @Nullable Output<DataSourceParametersAuroraGetArgs> aurora;
 
-    public Output<DataSourceParametersAuroraGetArgs> getAurora() {
-        return this.aurora == null ? Output.empty() : this.aurora;
+    public Output<DataSourceParametersAuroraGetArgs> aurora() {
+        return this.aurora == null ? Codegen.empty() : this.aurora;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="auroraPostgresql")
       private final @Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
 
-    public Output<DataSourceParametersAuroraPostgresqlGetArgs> getAuroraPostgresql() {
-        return this.auroraPostgresql == null ? Output.empty() : this.auroraPostgresql;
+    public Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql() {
+        return this.auroraPostgresql == null ? Codegen.empty() : this.auroraPostgresql;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="awsIotAnalytics")
       private final @Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
 
-    public Output<DataSourceParametersAwsIotAnalyticsGetArgs> getAwsIotAnalytics() {
-        return this.awsIotAnalytics == null ? Output.empty() : this.awsIotAnalytics;
+    public Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics() {
+        return this.awsIotAnalytics == null ? Codegen.empty() : this.awsIotAnalytics;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="jira")
       private final @Nullable Output<DataSourceParametersJiraGetArgs> jira;
 
-    public Output<DataSourceParametersJiraGetArgs> getJira() {
-        return this.jira == null ? Output.empty() : this.jira;
+    public Output<DataSourceParametersJiraGetArgs> jira() {
+        return this.jira == null ? Codegen.empty() : this.jira;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="mariaDb")
       private final @Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb;
 
-    public Output<DataSourceParametersMariaDbGetArgs> getMariaDb() {
-        return this.mariaDb == null ? Output.empty() : this.mariaDb;
+    public Output<DataSourceParametersMariaDbGetArgs> mariaDb() {
+        return this.mariaDb == null ? Codegen.empty() : this.mariaDb;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="mysql")
       private final @Nullable Output<DataSourceParametersMysqlGetArgs> mysql;
 
-    public Output<DataSourceParametersMysqlGetArgs> getMysql() {
-        return this.mysql == null ? Output.empty() : this.mysql;
+    public Output<DataSourceParametersMysqlGetArgs> mysql() {
+        return this.mysql == null ? Codegen.empty() : this.mysql;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="oracle")
       private final @Nullable Output<DataSourceParametersOracleGetArgs> oracle;
 
-    public Output<DataSourceParametersOracleGetArgs> getOracle() {
-        return this.oracle == null ? Output.empty() : this.oracle;
+    public Output<DataSourceParametersOracleGetArgs> oracle() {
+        return this.oracle == null ? Codegen.empty() : this.oracle;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="postgresql")
       private final @Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql;
 
-    public Output<DataSourceParametersPostgresqlGetArgs> getPostgresql() {
-        return this.postgresql == null ? Output.empty() : this.postgresql;
+    public Output<DataSourceParametersPostgresqlGetArgs> postgresql() {
+        return this.postgresql == null ? Codegen.empty() : this.postgresql;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="presto")
       private final @Nullable Output<DataSourceParametersPrestoGetArgs> presto;
 
-    public Output<DataSourceParametersPrestoGetArgs> getPresto() {
-        return this.presto == null ? Output.empty() : this.presto;
+    public Output<DataSourceParametersPrestoGetArgs> presto() {
+        return this.presto == null ? Codegen.empty() : this.presto;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="rds")
       private final @Nullable Output<DataSourceParametersRdsGetArgs> rds;
 
-    public Output<DataSourceParametersRdsGetArgs> getRds() {
-        return this.rds == null ? Output.empty() : this.rds;
+    public Output<DataSourceParametersRdsGetArgs> rds() {
+        return this.rds == null ? Codegen.empty() : this.rds;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="redshift")
       private final @Nullable Output<DataSourceParametersRedshiftGetArgs> redshift;
 
-    public Output<DataSourceParametersRedshiftGetArgs> getRedshift() {
-        return this.redshift == null ? Output.empty() : this.redshift;
+    public Output<DataSourceParametersRedshiftGetArgs> redshift() {
+        return this.redshift == null ? Codegen.empty() : this.redshift;
     }
 
     /**
@@ -183,8 +184,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="s3")
       private final @Nullable Output<DataSourceParametersS3GetArgs> s3;
 
-    public Output<DataSourceParametersS3GetArgs> getS3() {
-        return this.s3 == null ? Output.empty() : this.s3;
+    public Output<DataSourceParametersS3GetArgs> s3() {
+        return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     /**
@@ -194,8 +195,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="serviceNow")
       private final @Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow;
 
-    public Output<DataSourceParametersServiceNowGetArgs> getServiceNow() {
-        return this.serviceNow == null ? Output.empty() : this.serviceNow;
+    public Output<DataSourceParametersServiceNowGetArgs> serviceNow() {
+        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     /**
@@ -205,8 +206,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="snowflake")
       private final @Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake;
 
-    public Output<DataSourceParametersSnowflakeGetArgs> getSnowflake() {
-        return this.snowflake == null ? Output.empty() : this.snowflake;
+    public Output<DataSourceParametersSnowflakeGetArgs> snowflake() {
+        return this.snowflake == null ? Codegen.empty() : this.snowflake;
     }
 
     /**
@@ -216,8 +217,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="spark")
       private final @Nullable Output<DataSourceParametersSparkGetArgs> spark;
 
-    public Output<DataSourceParametersSparkGetArgs> getSpark() {
-        return this.spark == null ? Output.empty() : this.spark;
+    public Output<DataSourceParametersSparkGetArgs> spark() {
+        return this.spark == null ? Codegen.empty() : this.spark;
     }
 
     /**
@@ -227,8 +228,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="sqlServer")
       private final @Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer;
 
-    public Output<DataSourceParametersSqlServerGetArgs> getSqlServer() {
-        return this.sqlServer == null ? Output.empty() : this.sqlServer;
+    public Output<DataSourceParametersSqlServerGetArgs> sqlServer() {
+        return this.sqlServer == null ? Codegen.empty() : this.sqlServer;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="teradata")
       private final @Nullable Output<DataSourceParametersTeradataGetArgs> teradata;
 
-    public Output<DataSourceParametersTeradataGetArgs> getTeradata() {
-        return this.teradata == null ? Output.empty() : this.teradata;
+    public Output<DataSourceParametersTeradataGetArgs> teradata() {
+        return this.teradata == null ? Codegen.empty() : this.teradata;
     }
 
     /**
@@ -249,8 +250,8 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     @Import(name="twitter")
       private final @Nullable Output<DataSourceParametersTwitterGetArgs> twitter;
 
-    public Output<DataSourceParametersTwitterGetArgs> getTwitter() {
-        return this.twitter == null ? Output.empty() : this.twitter;
+    public Output<DataSourceParametersTwitterGetArgs> twitter() {
+        return this.twitter == null ? Codegen.empty() : this.twitter;
     }
 
     public DataSourceParametersGetArgs(
@@ -297,26 +298,26 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
     }
 
     private DataSourceParametersGetArgs() {
-        this.amazonElasticsearch = Output.empty();
-        this.athena = Output.empty();
-        this.aurora = Output.empty();
-        this.auroraPostgresql = Output.empty();
-        this.awsIotAnalytics = Output.empty();
-        this.jira = Output.empty();
-        this.mariaDb = Output.empty();
-        this.mysql = Output.empty();
-        this.oracle = Output.empty();
-        this.postgresql = Output.empty();
-        this.presto = Output.empty();
-        this.rds = Output.empty();
-        this.redshift = Output.empty();
-        this.s3 = Output.empty();
-        this.serviceNow = Output.empty();
-        this.snowflake = Output.empty();
-        this.spark = Output.empty();
-        this.sqlServer = Output.empty();
-        this.teradata = Output.empty();
-        this.twitter = Output.empty();
+        this.amazonElasticsearch = Codegen.empty();
+        this.athena = Codegen.empty();
+        this.aurora = Codegen.empty();
+        this.auroraPostgresql = Codegen.empty();
+        this.awsIotAnalytics = Codegen.empty();
+        this.jira = Codegen.empty();
+        this.mariaDb = Codegen.empty();
+        this.mysql = Codegen.empty();
+        this.oracle = Codegen.empty();
+        this.postgresql = Codegen.empty();
+        this.presto = Codegen.empty();
+        this.rds = Codegen.empty();
+        this.redshift = Codegen.empty();
+        this.s3 = Codegen.empty();
+        this.serviceNow = Codegen.empty();
+        this.snowflake = Codegen.empty();
+        this.spark = Codegen.empty();
+        this.sqlServer = Codegen.empty();
+        this.teradata = Codegen.empty();
+        this.twitter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -382,7 +383,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder amazonElasticsearch(@Nullable DataSourceParametersAmazonElasticsearchGetArgs amazonElasticsearch) {
-            this.amazonElasticsearch = Output.ofNullable(amazonElasticsearch);
+            this.amazonElasticsearch = Codegen.ofNullable(amazonElasticsearch);
             return this;
         }
         public Builder athena(@Nullable Output<DataSourceParametersAthenaGetArgs> athena) {
@@ -390,7 +391,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder athena(@Nullable DataSourceParametersAthenaGetArgs athena) {
-            this.athena = Output.ofNullable(athena);
+            this.athena = Codegen.ofNullable(athena);
             return this;
         }
         public Builder aurora(@Nullable Output<DataSourceParametersAuroraGetArgs> aurora) {
@@ -398,7 +399,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder aurora(@Nullable DataSourceParametersAuroraGetArgs aurora) {
-            this.aurora = Output.ofNullable(aurora);
+            this.aurora = Codegen.ofNullable(aurora);
             return this;
         }
         public Builder auroraPostgresql(@Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql) {
@@ -406,7 +407,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder auroraPostgresql(@Nullable DataSourceParametersAuroraPostgresqlGetArgs auroraPostgresql) {
-            this.auroraPostgresql = Output.ofNullable(auroraPostgresql);
+            this.auroraPostgresql = Codegen.ofNullable(auroraPostgresql);
             return this;
         }
         public Builder awsIotAnalytics(@Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics) {
@@ -414,7 +415,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder awsIotAnalytics(@Nullable DataSourceParametersAwsIotAnalyticsGetArgs awsIotAnalytics) {
-            this.awsIotAnalytics = Output.ofNullable(awsIotAnalytics);
+            this.awsIotAnalytics = Codegen.ofNullable(awsIotAnalytics);
             return this;
         }
         public Builder jira(@Nullable Output<DataSourceParametersJiraGetArgs> jira) {
@@ -422,7 +423,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder jira(@Nullable DataSourceParametersJiraGetArgs jira) {
-            this.jira = Output.ofNullable(jira);
+            this.jira = Codegen.ofNullable(jira);
             return this;
         }
         public Builder mariaDb(@Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb) {
@@ -430,7 +431,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mariaDb(@Nullable DataSourceParametersMariaDbGetArgs mariaDb) {
-            this.mariaDb = Output.ofNullable(mariaDb);
+            this.mariaDb = Codegen.ofNullable(mariaDb);
             return this;
         }
         public Builder mysql(@Nullable Output<DataSourceParametersMysqlGetArgs> mysql) {
@@ -438,7 +439,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mysql(@Nullable DataSourceParametersMysqlGetArgs mysql) {
-            this.mysql = Output.ofNullable(mysql);
+            this.mysql = Codegen.ofNullable(mysql);
             return this;
         }
         public Builder oracle(@Nullable Output<DataSourceParametersOracleGetArgs> oracle) {
@@ -446,7 +447,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder oracle(@Nullable DataSourceParametersOracleGetArgs oracle) {
-            this.oracle = Output.ofNullable(oracle);
+            this.oracle = Codegen.ofNullable(oracle);
             return this;
         }
         public Builder postgresql(@Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql) {
@@ -454,7 +455,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder postgresql(@Nullable DataSourceParametersPostgresqlGetArgs postgresql) {
-            this.postgresql = Output.ofNullable(postgresql);
+            this.postgresql = Codegen.ofNullable(postgresql);
             return this;
         }
         public Builder presto(@Nullable Output<DataSourceParametersPrestoGetArgs> presto) {
@@ -462,7 +463,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder presto(@Nullable DataSourceParametersPrestoGetArgs presto) {
-            this.presto = Output.ofNullable(presto);
+            this.presto = Codegen.ofNullable(presto);
             return this;
         }
         public Builder rds(@Nullable Output<DataSourceParametersRdsGetArgs> rds) {
@@ -470,7 +471,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder rds(@Nullable DataSourceParametersRdsGetArgs rds) {
-            this.rds = Output.ofNullable(rds);
+            this.rds = Codegen.ofNullable(rds);
             return this;
         }
         public Builder redshift(@Nullable Output<DataSourceParametersRedshiftGetArgs> redshift) {
@@ -478,7 +479,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder redshift(@Nullable DataSourceParametersRedshiftGetArgs redshift) {
-            this.redshift = Output.ofNullable(redshift);
+            this.redshift = Codegen.ofNullable(redshift);
             return this;
         }
         public Builder s3(@Nullable Output<DataSourceParametersS3GetArgs> s3) {
@@ -486,7 +487,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder s3(@Nullable DataSourceParametersS3GetArgs s3) {
-            this.s3 = Output.ofNullable(s3);
+            this.s3 = Codegen.ofNullable(s3);
             return this;
         }
         public Builder serviceNow(@Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow) {
@@ -494,7 +495,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder serviceNow(@Nullable DataSourceParametersServiceNowGetArgs serviceNow) {
-            this.serviceNow = Output.ofNullable(serviceNow);
+            this.serviceNow = Codegen.ofNullable(serviceNow);
             return this;
         }
         public Builder snowflake(@Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake) {
@@ -502,7 +503,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder snowflake(@Nullable DataSourceParametersSnowflakeGetArgs snowflake) {
-            this.snowflake = Output.ofNullable(snowflake);
+            this.snowflake = Codegen.ofNullable(snowflake);
             return this;
         }
         public Builder spark(@Nullable Output<DataSourceParametersSparkGetArgs> spark) {
@@ -510,7 +511,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder spark(@Nullable DataSourceParametersSparkGetArgs spark) {
-            this.spark = Output.ofNullable(spark);
+            this.spark = Codegen.ofNullable(spark);
             return this;
         }
         public Builder sqlServer(@Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer) {
@@ -518,7 +519,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sqlServer(@Nullable DataSourceParametersSqlServerGetArgs sqlServer) {
-            this.sqlServer = Output.ofNullable(sqlServer);
+            this.sqlServer = Codegen.ofNullable(sqlServer);
             return this;
         }
         public Builder teradata(@Nullable Output<DataSourceParametersTeradataGetArgs> teradata) {
@@ -526,7 +527,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder teradata(@Nullable DataSourceParametersTeradataGetArgs teradata) {
-            this.teradata = Output.ofNullable(teradata);
+            this.teradata = Codegen.ofNullable(teradata);
             return this;
         }
         public Builder twitter(@Nullable Output<DataSourceParametersTwitterGetArgs> twitter) {
@@ -534,7 +535,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder twitter(@Nullable DataSourceParametersTwitterGetArgs twitter) {
-            this.twitter = Output.ofNullable(twitter);
+            this.twitter = Codegen.ofNullable(twitter);
             return this;
         }        public DataSourceParametersGetArgs build() {
             return new DataSourceParametersGetArgs(amazonElasticsearch, athena, aurora, auroraPostgresql, awsIotAnalytics, jira, mariaDb, mysql, oracle, postgresql, presto, rds, redshift, s3, serviceNow, snowflake, spark, sqlServer, teradata, twitter);

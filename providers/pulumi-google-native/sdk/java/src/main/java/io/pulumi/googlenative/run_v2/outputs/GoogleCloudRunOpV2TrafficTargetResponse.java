@@ -47,28 +47,28 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
      * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
      * 
     */
-    public Integer getPercent() {
+    public Integer percent() {
         return this.percent;
     }
     /**
      * Revision to which to send this portion of traffic, if traffic allocation is by revision.
      * 
     */
-    public String getRevision() {
+    public String revision() {
         return this.revision;
     }
     /**
      * Indicates a string to be part of the URI to exclusively reference this target.
      * 
     */
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
     /**
      * The allocation type for this traffic target.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

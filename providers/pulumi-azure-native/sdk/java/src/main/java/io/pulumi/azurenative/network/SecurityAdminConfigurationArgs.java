@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.SecurityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
-        return this.configurationName == null ? Output.empty() : this.configurationName;
+    public Output<String> configurationName() {
+        return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="deleteExistingNSGs")
       private final @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
 
-    public Output<Either<String,DeleteExistingNSGs>> getDeleteExistingNSGs() {
-        return this.deleteExistingNSGs == null ? Output.empty() : this.deleteExistingNSGs;
+    public Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs() {
+        return this.deleteExistingNSGs == null ? Codegen.empty() : this.deleteExistingNSGs;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -79,7 +80,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,8 +91,8 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="securityType")
       private final @Nullable Output<Either<String,SecurityType>> securityType;
 
-    public Output<Either<String,SecurityType>> getSecurityType() {
-        return this.securityType == null ? Output.empty() : this.securityType;
+    public Output<Either<String,SecurityType>> securityType() {
+        return this.securityType == null ? Codegen.empty() : this.securityType;
     }
 
     public SecurityAdminConfigurationArgs(
@@ -112,13 +113,13 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private SecurityAdminConfigurationArgs() {
-        this.configurationName = Output.empty();
-        this.deleteExistingNSGs = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.networkManagerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.securityType = Output.empty();
+        this.configurationName = Codegen.empty();
+        this.deleteExistingNSGs = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.networkManagerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.securityType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Output.ofNullable(configurationName);
+            this.configurationName = Codegen.ofNullable(configurationName);
             return this;
         }
         public Builder deleteExistingNSGs(@Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs) {
@@ -166,7 +167,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder deleteExistingNSGs(@Nullable Either<String,DeleteExistingNSGs> deleteExistingNSGs) {
-            this.deleteExistingNSGs = Output.ofNullable(deleteExistingNSGs);
+            this.deleteExistingNSGs = Codegen.ofNullable(deleteExistingNSGs);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -174,7 +175,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -182,7 +183,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder networkManagerName(Output<String> networkManagerName) {
@@ -206,7 +207,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder securityType(@Nullable Either<String,SecurityType> securityType) {
-            this.securityType = Output.ofNullable(securityType);
+            this.securityType = Codegen.ofNullable(securityType);
             return this;
         }        public SecurityAdminConfigurationArgs build() {
             return new SecurityAdminConfigurationArgs(configurationName, deleteExistingNSGs, description, displayName, networkManagerName, resourceGroupName, securityType);

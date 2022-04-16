@@ -26,7 +26,7 @@ public final class AdhocBasedTaggingCriteriaResponse {
      * Retention tag information
      * 
     */
-    public Optional<RetentionTagResponse> getTagInfo() {
+    public Optional<RetentionTagResponse> tagInfo() {
         return Optional.ofNullable(this.tagInfo);
     }
 

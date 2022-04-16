@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse extend
     @Import(name="items", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items;
 
-    public List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> getItems() {
+    public List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items() {
         return this.items;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse extend
     @Import(name="subtitle", required=true)
       private final String subtitle;
 
-    public String getSubtitle() {
+    public String subtitle() {
         return this.subtitle;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse extend
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

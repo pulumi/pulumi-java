@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.certificates.k8s.io_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.CertificateSigningRequestListArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequest;
@@ -31,7 +32,7 @@ public class CertificateSigningRequestList extends io.pulumi.resources.CustomRes
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -45,7 +46,7 @@ public class CertificateSigningRequestList extends io.pulumi.resources.CustomRes
      * @return items is a collection of CertificateSigningRequest objects
      * 
      */
-    public Output<List<CertificateSigningRequest>> getItems() {
+    public Output<List<CertificateSigningRequest>> items() {
         return this.items;
     }
     /**
@@ -59,13 +60,13 @@ public class CertificateSigningRequestList extends io.pulumi.resources.CustomRes
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
-    public Output</* @Nullable */ ListMeta> getMetadata() {
+    public Output</* @Nullable */ ListMeta> metadata() {
         return this.metadata;
     }
 
@@ -91,7 +92,7 @@ public class CertificateSigningRequestList extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateSigningRequestList(String name, CertificateSigningRequestListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:certificates.k8s.io/v1:CertificateSigningRequestList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:certificates.k8s.io/v1:CertificateSigningRequestList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateSigningRequestList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

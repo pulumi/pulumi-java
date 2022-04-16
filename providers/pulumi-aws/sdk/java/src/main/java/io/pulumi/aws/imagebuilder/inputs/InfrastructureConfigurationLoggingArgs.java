@@ -6,6 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingS3LogsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
     @Import(name="s3Logs", required=true)
       private final Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
 
-    public Output<InfrastructureConfigurationLoggingS3LogsArgs> getS3Logs() {
+    public Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs() {
         return this.s3Logs;
     }
 
@@ -29,7 +30,7 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
     }
 
     private InfrastructureConfigurationLoggingArgs() {
-        this.s3Logs = Output.empty();
+        this.s3Logs = Codegen.empty();
     }
 
     public static Builder builder() {

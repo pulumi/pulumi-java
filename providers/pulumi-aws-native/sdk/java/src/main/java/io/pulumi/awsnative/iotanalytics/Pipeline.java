@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.PipelineTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -25,19 +26,19 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
     @Export(name="pipelineActivities", type=List.class, parameters={PipelineActivity.class})
     private Output<List<PipelineActivity>> pipelineActivities;
 
-    public Output<List<PipelineActivity>> getPipelineActivities() {
+    public Output<List<PipelineActivity>> pipelineActivities() {
         return this.pipelineActivities;
     }
     @Export(name="pipelineName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineName;
 
-    public Output</* @Nullable */ String> getPipelineName() {
+    public Output</* @Nullable */ String> pipelineName() {
         return this.pipelineName;
     }
     @Export(name="tags", type=List.class, parameters={PipelineTag.class})
     private Output</* @Nullable */ List<PipelineTag>> tags;
 
-    public Output</* @Nullable */ List<PipelineTag>> getTags() {
+    public Output</* @Nullable */ List<PipelineTag>> tags() {
         return this.tags;
     }
 
@@ -63,7 +64,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Pipeline(String name, PipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotanalytics:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotanalytics:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Pipeline(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

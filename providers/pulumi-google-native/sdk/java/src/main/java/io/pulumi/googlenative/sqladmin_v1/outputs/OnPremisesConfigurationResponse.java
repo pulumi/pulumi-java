@@ -82,63 +82,63 @@ public final class OnPremisesConfigurationResponse {
      * PEM representation of the trusted CA's x509 certificate.
      * 
     */
-    public String getCaCertificate() {
+    public String caCertificate() {
         return this.caCertificate;
     }
     /**
      * PEM representation of the replica's x509 certificate.
      * 
     */
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
     /**
      * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
      * 
     */
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
     /**
      * The dump file to create the Cloud SQL replica.
      * 
     */
-    public String getDumpFilePath() {
+    public String dumpFilePath() {
         return this.dumpFilePath;
     }
     /**
      * The host and port of the on-premises instance in host:port format
      * 
     */
-    public String getHostPort() {
+    public String hostPort() {
         return this.hostPort;
     }
     /**
      * This is always `sql#onPremisesConfiguration`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The password for connecting to on-premises instance.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The reference to Cloud SQL instance if the source is Cloud SQL.
      * 
     */
-    public InstanceReferenceResponse getSourceInstance() {
+    public InstanceReferenceResponse sourceInstance() {
         return this.sourceInstance;
     }
     /**
      * The username for connecting to on-premises instance.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

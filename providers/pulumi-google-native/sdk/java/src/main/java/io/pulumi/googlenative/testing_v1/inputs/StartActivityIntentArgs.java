@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
-        return this.categories == null ? Output.empty() : this.categories;
+    public Output<List<String>> categories() {
+        return this.categories == null ? Codegen.empty() : this.categories;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public StartActivityIntentArgs(
@@ -62,9 +63,9 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     }
 
     private StartActivityIntentArgs() {
-        this.action = Output.empty();
-        this.categories = Output.empty();
-        this.uri = Output.empty();
+        this.action = Codegen.empty();
+        this.categories = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder categories(@Nullable Output<List<String>> categories) {
@@ -104,7 +105,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Output.ofNullable(categories);
+            this.categories = Codegen.ofNullable(categories);
             return this;
         }
         public Builder categories(String... categories) {
@@ -115,7 +116,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public StartActivityIntentArgs build() {
             return new StartActivityIntentArgs(action, categories, uri);

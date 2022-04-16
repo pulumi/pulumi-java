@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<List<String>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<String>> roles;
 
-    public Output<List<String>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+    public Output<List<String>> roles() {
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     public AccessSelectorArgs(
@@ -49,8 +50,8 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessSelectorArgs() {
-        this.permissions = Output.empty();
-        this.roles = Output.empty();
+        this.permissions = Codegen.empty();
+        this.roles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(String... permissions) {
@@ -91,7 +92,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roles(@Nullable List<String> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(String... roles) {

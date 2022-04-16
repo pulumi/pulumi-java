@@ -34,14 +34,14 @@ public final class RunAsAccountResponse {
      * The CS RunAs account Id.
      * 
     */
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * The CS RunAs account name.
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
 

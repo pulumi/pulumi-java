@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyTimestampArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyVariantArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +20,21 @@ public final class TopicRuleAssetPropertyValueArgs extends io.pulumi.resources.R
     @Import(name="quality")
       private final @Nullable Output<String> quality;
 
-    public Output<String> getQuality() {
-        return this.quality == null ? Output.empty() : this.quality;
+    public Output<String> quality() {
+        return this.quality == null ? Codegen.empty() : this.quality;
     }
 
     @Import(name="timestamp", required=true)
       private final Output<TopicRuleAssetPropertyTimestampArgs> timestamp;
 
-    public Output<TopicRuleAssetPropertyTimestampArgs> getTimestamp() {
+    public Output<TopicRuleAssetPropertyTimestampArgs> timestamp() {
         return this.timestamp;
     }
 
     @Import(name="value", required=true)
       private final Output<TopicRuleAssetPropertyVariantArgs> value;
 
-    public Output<TopicRuleAssetPropertyVariantArgs> getValue() {
+    public Output<TopicRuleAssetPropertyVariantArgs> value() {
         return this.value;
     }
 
@@ -47,9 +48,9 @@ public final class TopicRuleAssetPropertyValueArgs extends io.pulumi.resources.R
     }
 
     private TopicRuleAssetPropertyValueArgs() {
-        this.quality = Output.empty();
-        this.timestamp = Output.empty();
-        this.value = Output.empty();
+        this.quality = Codegen.empty();
+        this.timestamp = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class TopicRuleAssetPropertyValueArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder quality(@Nullable String quality) {
-            this.quality = Output.ofNullable(quality);
+            this.quality = Codegen.ofNullable(quality);
             return this;
         }
         public Builder timestamp(Output<TopicRuleAssetPropertyTimestampArgs> timestamp) {

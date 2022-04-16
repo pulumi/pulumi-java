@@ -6,6 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.inputs.ApplicationNotificationEndpointArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
     @Import(name="notificationEndpoints", required=true)
       private final Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 
-    public Output<List<ApplicationNotificationEndpointArgs>> getNotificationEndpoints() {
+    public Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints() {
         return this.notificationEndpoints;
     }
 
@@ -34,7 +35,7 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
     }
 
     private ApplicationNotificationPolicyArgs() {
-        this.notificationEndpoints = Output.empty();
+        this.notificationEndpoints = Codegen.empty();
     }
 
     public static Builder builder() {

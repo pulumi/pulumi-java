@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 
@@ -33,7 +34,7 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
     }
 
     private BotSlotValueRegexFilterArgs() {
-        this.pattern = Output.empty();
+        this.pattern = Codegen.empty();
     }
 
     public static Builder builder() {

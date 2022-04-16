@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
     @Import(name="terminationWaitTimeInMinutes")
       private final @Nullable Output<Integer> terminationWaitTimeInMinutes;
 
-    public Output<Integer> getTerminationWaitTimeInMinutes() {
-        return this.terminationWaitTimeInMinutes == null ? Output.empty() : this.terminationWaitTimeInMinutes;
+    public Output<Integer> terminationWaitTimeInMinutes() {
+        return this.terminationWaitTimeInMinutes == null ? Codegen.empty() : this.terminationWaitTimeInMinutes;
     }
 
     public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs(
@@ -47,8 +48,8 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
     }
 
     private DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs() {
-        this.action = Output.empty();
-        this.terminationWaitTimeInMinutes = Output.empty();
+        this.action = Codegen.empty();
+        this.terminationWaitTimeInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder terminationWaitTimeInMinutes(@Nullable Output<Integer> terminationWaitTimeInMinutes) {
@@ -86,7 +87,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
             return this;
         }
         public Builder terminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
-            this.terminationWaitTimeInMinutes = Output.ofNullable(terminationWaitTimeInMinutes);
+            this.terminationWaitTimeInMinutes = Codegen.ofNullable(terminationWaitTimeInMinutes);
             return this;
         }        public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs build() {
             return new DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs(action, terminationWaitTimeInMinutes);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<String> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     public CertificatePropertiesArgs(@Nullable Output<String> certificate) {
@@ -34,7 +35,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private CertificatePropertiesArgs() {
-        this.certificate = Output.empty();
+        this.certificate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }        public CertificatePropertiesArgs build() {
             return new CertificatePropertiesArgs(certificate);

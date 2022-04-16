@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.TileArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columns")
       private final @Nullable Output<Integer> columns;
 
-    public Output<Integer> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+    public Output<Integer> columns() {
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tiles")
       private final @Nullable Output<List<TileArgs>> tiles;
 
-    public Output<List<TileArgs>> getTiles() {
-        return this.tiles == null ? Output.empty() : this.tiles;
+    public Output<List<TileArgs>> tiles() {
+        return this.tiles == null ? Codegen.empty() : this.tiles;
     }
 
     public MosaicLayoutArgs(
@@ -50,8 +51,8 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MosaicLayoutArgs() {
-        this.columns = Output.empty();
-        this.tiles = Output.empty();
+        this.columns = Codegen.empty();
+        this.tiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columns(@Nullable Integer columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder tiles(@Nullable Output<List<TileArgs>> tiles) {
@@ -89,7 +90,7 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tiles(@Nullable List<TileArgs> tiles) {
-            this.tiles = Output.ofNullable(tiles);
+            this.tiles = Codegen.ofNullable(tiles);
             return this;
         }
         public Builder tiles(TileArgs... tiles) {

@@ -34,14 +34,14 @@ public final class GooglePrivacyDlpV2ErrorResponse {
      * Detailed error codes and messages.
      * 
     */
-    public GoogleRpcStatusResponse getDetails() {
+    public GoogleRpcStatusResponse details() {
         return this.details;
     }
     /**
      * The times the error occurred.
      * 
     */
-    public List<String> getTimestamps() {
+    public List<String> timestamps() {
         return this.timestamps;
     }
 

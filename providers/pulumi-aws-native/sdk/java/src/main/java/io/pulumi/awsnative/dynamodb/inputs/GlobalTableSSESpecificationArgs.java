@@ -5,6 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
     @Import(name="sSEEnabled", required=true)
       private final Output<Boolean> sSEEnabled;
 
-    public Output<Boolean> getSSEEnabled() {
+    public Output<Boolean> sSEEnabled() {
         return this.sSEEnabled;
     }
 
     @Import(name="sSEType")
       private final @Nullable Output<String> sSEType;
 
-    public Output<String> getSSEType() {
-        return this.sSEType == null ? Output.empty() : this.sSEType;
+    public Output<String> sSEType() {
+        return this.sSEType == null ? Codegen.empty() : this.sSEType;
     }
 
     public GlobalTableSSESpecificationArgs(
@@ -37,8 +38,8 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
     }
 
     private GlobalTableSSESpecificationArgs() {
-        this.sSEEnabled = Output.empty();
-        this.sSEType = Output.empty();
+        this.sSEEnabled = Codegen.empty();
+        this.sSEType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sSEType(@Nullable String sSEType) {
-            this.sSEType = Output.ofNullable(sSEType);
+            this.sSEType = Codegen.ofNullable(sSEType);
             return this;
         }        public GlobalTableSSESpecificationArgs build() {
             return new GlobalTableSSESpecificationArgs(sSEEnabled, sSEType);

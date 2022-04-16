@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
-        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
+    public Output<String> cidrBlock() {
+        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="egress")
       private final @Nullable Output<Boolean> egress;
 
-    public Output<Boolean> getEgress() {
-        return this.egress == null ? Output.empty() : this.egress;
+    public Output<Boolean> egress() {
+        return this.egress == null ? Codegen.empty() : this.egress;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
-        return this.fromPort == null ? Output.empty() : this.fromPort;
+    public Output<Integer> fromPort() {
+        return this.fromPort == null ? Codegen.empty() : this.fromPort;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="icmpCode")
       private final @Nullable Output<String> icmpCode;
 
-    public Output<String> getIcmpCode() {
-        return this.icmpCode == null ? Output.empty() : this.icmpCode;
+    public Output<String> icmpCode() {
+        return this.icmpCode == null ? Codegen.empty() : this.icmpCode;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="icmpType")
       private final @Nullable Output<String> icmpType;
 
-    public Output<String> getIcmpType() {
-        return this.icmpType == null ? Output.empty() : this.icmpType;
+    public Output<String> icmpType() {
+        return this.icmpType == null ? Codegen.empty() : this.icmpType;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
+    public Output<String> ipv6CidrBlock() {
+        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkAclId", required=true)
       private final Output<String> networkAclId;
 
-    public Output<String> getNetworkAclId() {
+    public Output<String> networkAclId() {
         return this.networkAclId;
     }
 
@@ -100,7 +101,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -111,7 +112,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleAction", required=true)
       private final Output<String> ruleAction;
 
-    public Output<String> getRuleAction() {
+    public Output<String> ruleAction() {
         return this.ruleAction;
     }
 
@@ -122,7 +123,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleNumber", required=true)
       private final Output<Integer> ruleNumber;
 
-    public Output<Integer> getRuleNumber() {
+    public Output<Integer> ruleNumber() {
         return this.ruleNumber;
     }
 
@@ -133,8 +134,8 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
-        return this.toPort == null ? Output.empty() : this.toPort;
+    public Output<Integer> toPort() {
+        return this.toPort == null ? Codegen.empty() : this.toPort;
     }
 
     public NetworkAclRuleArgs(
@@ -163,17 +164,17 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkAclRuleArgs() {
-        this.cidrBlock = Output.empty();
-        this.egress = Output.empty();
-        this.fromPort = Output.empty();
-        this.icmpCode = Output.empty();
-        this.icmpType = Output.empty();
-        this.ipv6CidrBlock = Output.empty();
-        this.networkAclId = Output.empty();
-        this.protocol = Output.empty();
-        this.ruleAction = Output.empty();
-        this.ruleNumber = Output.empty();
-        this.toPort = Output.empty();
+        this.cidrBlock = Codegen.empty();
+        this.egress = Codegen.empty();
+        this.fromPort = Codegen.empty();
+        this.icmpCode = Codegen.empty();
+        this.icmpType = Codegen.empty();
+        this.ipv6CidrBlock = Codegen.empty();
+        this.networkAclId = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.ruleAction = Codegen.empty();
+        this.ruleNumber = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Output.ofNullable(cidrBlock);
+            this.cidrBlock = Codegen.ofNullable(cidrBlock);
             return this;
         }
         public Builder egress(@Nullable Output<Boolean> egress) {
@@ -229,7 +230,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egress(@Nullable Boolean egress) {
-            this.egress = Output.ofNullable(egress);
+            this.egress = Codegen.ofNullable(egress);
             return this;
         }
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
@@ -237,7 +238,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Output.ofNullable(fromPort);
+            this.fromPort = Codegen.ofNullable(fromPort);
             return this;
         }
         public Builder icmpCode(@Nullable Output<String> icmpCode) {
@@ -245,7 +246,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder icmpCode(@Nullable String icmpCode) {
-            this.icmpCode = Output.ofNullable(icmpCode);
+            this.icmpCode = Codegen.ofNullable(icmpCode);
             return this;
         }
         public Builder icmpType(@Nullable Output<String> icmpType) {
@@ -253,7 +254,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder icmpType(@Nullable String icmpType) {
-            this.icmpType = Output.ofNullable(icmpType);
+            this.icmpType = Codegen.ofNullable(icmpType);
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
@@ -261,7 +262,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
             return this;
         }
         public Builder networkAclId(Output<String> networkAclId) {
@@ -301,7 +302,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Output.ofNullable(toPort);
+            this.toPort = Codegen.ofNullable(toPort);
             return this;
         }        public NetworkAclRuleArgs build() {
             return new NetworkAclRuleArgs(cidrBlock, egress, fromPort, icmpCode, icmpType, ipv6CidrBlock, networkAclId, protocol, ruleAction, ruleNumber, toPort);

@@ -18,7 +18,7 @@ public final class GetProjectResult {
         this.arn = arn;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
 

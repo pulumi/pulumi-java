@@ -7,6 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeTileLayoutStyleArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTileStyleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,15 +23,15 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tile")
       private final @Nullable Output<ThemeTileStyleArgs> tile;
 
-    public Output<ThemeTileStyleArgs> getTile() {
-        return this.tile == null ? Output.empty() : this.tile;
+    public Output<ThemeTileStyleArgs> tile() {
+        return this.tile == null ? Codegen.empty() : this.tile;
     }
 
     @Import(name="tileLayout")
       private final @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
 
-    public Output<ThemeTileLayoutStyleArgs> getTileLayout() {
-        return this.tileLayout == null ? Output.empty() : this.tileLayout;
+    public Output<ThemeTileLayoutStyleArgs> tileLayout() {
+        return this.tileLayout == null ? Codegen.empty() : this.tileLayout;
     }
 
     public ThemeSheetStyleArgs(
@@ -41,8 +42,8 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ThemeSheetStyleArgs() {
-        this.tile = Output.empty();
-        this.tileLayout = Output.empty();
+        this.tile = Codegen.empty();
+        this.tileLayout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tile(@Nullable ThemeTileStyleArgs tile) {
-            this.tile = Output.ofNullable(tile);
+            this.tile = Codegen.ofNullable(tile);
             return this;
         }
         public Builder tileLayout(@Nullable Output<ThemeTileLayoutStyleArgs> tileLayout) {
@@ -80,7 +81,7 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tileLayout(@Nullable ThemeTileLayoutStyleArgs tileLayout) {
-            this.tileLayout = Output.ofNullable(tileLayout);
+            this.tileLayout = Codegen.ofNullable(tileLayout);
             return this;
         }        public ThemeSheetStyleArgs build() {
             return new ThemeSheetStyleArgs(tile, tileLayout);

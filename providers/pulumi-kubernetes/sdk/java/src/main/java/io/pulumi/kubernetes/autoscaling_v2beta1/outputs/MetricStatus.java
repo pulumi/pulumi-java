@@ -67,42 +67,42 @@ public final class MetricStatus {
      * container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
      * 
     */
-    public Optional<ContainerResourceMetricStatus> getContainerResource() {
+    public Optional<ContainerResourceMetricStatus> containerResource() {
         return Optional.ofNullable(this.containerResource);
     }
     /**
      * external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).
      * 
     */
-    public Optional<ExternalMetricStatus> getExternal() {
+    public Optional<ExternalMetricStatus> external() {
         return Optional.ofNullable(this.external);
     }
     /**
      * object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).
      * 
     */
-    public Optional<ObjectMetricStatus> getObject() {
+    public Optional<ObjectMetricStatus> object() {
         return Optional.ofNullable(this.object);
     }
     /**
      * pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.
      * 
     */
-    public Optional<PodsMetricStatus> getPods() {
+    public Optional<PodsMetricStatus> pods() {
         return Optional.ofNullable(this.pods);
     }
     /**
      * resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
      * 
     */
-    public Optional<ResourceMetricStatus> getResource() {
+    public Optional<ResourceMetricStatus> resource() {
         return Optional.ofNullable(this.resource);
     }
     /**
      * type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

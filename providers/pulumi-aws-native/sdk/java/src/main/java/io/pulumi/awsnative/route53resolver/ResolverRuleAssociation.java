@@ -8,6 +8,7 @@ import io.pulumi.awsnative.route53resolver.ResolverRuleAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * @return The name of an association between a Resolver rule and a VPC.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -42,7 +43,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * @return Primary Identifier for Resolver Rule Association
      * 
      */
-    public Output<String> getResolverRuleAssociationId() {
+    public Output<String> resolverRuleAssociationId() {
         return this.resolverRuleAssociationId;
     }
     /**
@@ -56,7 +57,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * @return The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
      * 
      */
-    public Output<String> getResolverRuleId() {
+    public Output<String> resolverRuleId() {
         return this.resolverRuleId;
     }
     /**
@@ -70,7 +71,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * @return The ID of the VPC that you associated the Resolver rule with.
      * 
      */
-    public Output<String> getVPCId() {
+    public Output<String> vPCId() {
         return this.vPCId;
     }
 
@@ -96,7 +97,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverRuleAssociation(String name, ResolverRuleAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:ResolverRuleAssociation", name, args == null ? ResolverRuleAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53resolver:ResolverRuleAssociation", name, args == null ? ResolverRuleAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverRuleAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

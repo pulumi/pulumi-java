@@ -40,21 +40,21 @@ public final class NotificationConfigResponse {
      * Event types for which a notification is desired. If empty, send notifications for all event types.
      * 
     */
-    public List<String> getEventTypes() {
+    public List<String> eventTypes() {
         return this.eventTypes;
     }
     /**
      * The desired format of the notification message payloads.
      * 
     */
-    public String getPayloadFormat() {
+    public String payloadFormat() {
         return this.payloadFormat;
     }
     /**
      * The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
      * 
     */
-    public String getPubsubTopic() {
+    public String pubsubTopic() {
         return this.pubsubTopic;
     }
 

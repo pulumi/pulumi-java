@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.DeploymentConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
 
-    public Output<Integer> getAvailableReplicas() {
-        return this.availableReplicas == null ? Output.empty() : this.availableReplicas;
+    public Output<Integer> availableReplicas() {
+        return this.availableReplicas == null ? Codegen.empty() : this.availableReplicas;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
 
-    public Output<Integer> getCollisionCount() {
-        return this.collisionCount == null ? Output.empty() : this.collisionCount;
+    public Output<Integer> collisionCount() {
+        return this.collisionCount == null ? Codegen.empty() : this.collisionCount;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="conditions")
       private final @Nullable Output<List<DeploymentConditionArgs>> conditions;
 
-    public Output<List<DeploymentConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<DeploymentConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+    public Output<Integer> observedGeneration() {
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
-    public Output<Integer> getReadyReplicas() {
-        return this.readyReplicas == null ? Output.empty() : this.readyReplicas;
+    public Output<Integer> readyReplicas() {
+        return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
-        return this.replicas == null ? Output.empty() : this.replicas;
+    public Output<Integer> replicas() {
+        return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="unavailableReplicas")
       private final @Nullable Output<Integer> unavailableReplicas;
 
-    public Output<Integer> getUnavailableReplicas() {
-        return this.unavailableReplicas == null ? Output.empty() : this.unavailableReplicas;
+    public Output<Integer> unavailableReplicas() {
+        return this.unavailableReplicas == null ? Codegen.empty() : this.unavailableReplicas;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="updatedReplicas")
       private final @Nullable Output<Integer> updatedReplicas;
 
-    public Output<Integer> getUpdatedReplicas() {
-        return this.updatedReplicas == null ? Output.empty() : this.updatedReplicas;
+    public Output<Integer> updatedReplicas() {
+        return this.updatedReplicas == null ? Codegen.empty() : this.updatedReplicas;
     }
 
     public DeploymentStatusArgs(
@@ -128,14 +129,14 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeploymentStatusArgs() {
-        this.availableReplicas = Output.empty();
-        this.collisionCount = Output.empty();
-        this.conditions = Output.empty();
-        this.observedGeneration = Output.empty();
-        this.readyReplicas = Output.empty();
-        this.replicas = Output.empty();
-        this.unavailableReplicas = Output.empty();
-        this.updatedReplicas = Output.empty();
+        this.availableReplicas = Codegen.empty();
+        this.collisionCount = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
+        this.readyReplicas = Codegen.empty();
+        this.replicas = Codegen.empty();
+        this.unavailableReplicas = Codegen.empty();
+        this.updatedReplicas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
-            this.availableReplicas = Output.ofNullable(availableReplicas);
+            this.availableReplicas = Codegen.ofNullable(availableReplicas);
             return this;
         }
         public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
@@ -185,7 +186,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Output.ofNullable(collisionCount);
+            this.collisionCount = Codegen.ofNullable(collisionCount);
             return this;
         }
         public Builder conditions(@Nullable Output<List<DeploymentConditionArgs>> conditions) {
@@ -193,7 +194,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder conditions(@Nullable List<DeploymentConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(DeploymentConditionArgs... conditions) {
@@ -204,7 +205,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
@@ -212,7 +213,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Output.ofNullable(readyReplicas);
+            this.readyReplicas = Codegen.ofNullable(readyReplicas);
             return this;
         }
         public Builder replicas(@Nullable Output<Integer> replicas) {
@@ -220,7 +221,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Output.ofNullable(replicas);
+            this.replicas = Codegen.ofNullable(replicas);
             return this;
         }
         public Builder unavailableReplicas(@Nullable Output<Integer> unavailableReplicas) {
@@ -228,7 +229,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder unavailableReplicas(@Nullable Integer unavailableReplicas) {
-            this.unavailableReplicas = Output.ofNullable(unavailableReplicas);
+            this.unavailableReplicas = Codegen.ofNullable(unavailableReplicas);
             return this;
         }
         public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
@@ -236,7 +237,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
-            this.updatedReplicas = Output.ofNullable(updatedReplicas);
+            this.updatedReplicas = Codegen.ofNullable(updatedReplicas);
             return this;
         }        public DeploymentStatusArgs build() {
             return new DeploymentStatusArgs(availableReplicas, collisionCount, conditions, observedGeneration, readyReplicas, replicas, unavailableReplicas, updatedReplicas);

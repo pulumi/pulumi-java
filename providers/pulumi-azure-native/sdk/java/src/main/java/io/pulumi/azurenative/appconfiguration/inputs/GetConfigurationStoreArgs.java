@@ -19,7 +19,7 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
     @Import(name="configStoreName", required=true)
       private final String configStoreName;
 
-    public String getConfigStoreName() {
+    public String configStoreName() {
         return this.configStoreName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

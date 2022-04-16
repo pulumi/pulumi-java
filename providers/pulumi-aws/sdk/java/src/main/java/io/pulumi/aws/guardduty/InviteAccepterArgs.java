@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -31,7 +32,7 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterAccountId", required=true)
       private final Output<String> masterAccountId;
 
-    public Output<String> getMasterAccountId() {
+    public Output<String> masterAccountId() {
         return this.masterAccountId;
     }
 
@@ -43,8 +44,8 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InviteAccepterArgs() {
-        this.detectorId = Output.empty();
-        this.masterAccountId = Output.empty();
+        this.detectorId = Codegen.empty();
+        this.masterAccountId = Codegen.empty();
     }
 
     public static Builder builder() {

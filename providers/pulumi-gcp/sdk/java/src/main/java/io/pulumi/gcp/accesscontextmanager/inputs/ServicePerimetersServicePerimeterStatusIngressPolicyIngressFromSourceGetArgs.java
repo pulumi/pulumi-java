@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     @Import(name="accessLevel")
       private final @Nullable Output<String> accessLevel;
 
-    public Output<String> getAccessLevel() {
-        return this.accessLevel == null ? Output.empty() : this.accessLevel;
+    public Output<String> accessLevel() {
+        return this.accessLevel == null ? Codegen.empty() : this.accessLevel;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+    public Output<String> resource() {
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs(
@@ -56,8 +57,8 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     }
 
     private ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs() {
-        this.accessLevel = Output.empty();
-        this.resource = Output.empty();
+        this.accessLevel = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
             return this;
         }
         public Builder accessLevel(@Nullable String accessLevel) {
-            this.accessLevel = Output.ofNullable(accessLevel);
+            this.accessLevel = Codegen.ofNullable(accessLevel);
             return this;
         }
         public Builder resource(@Nullable Output<String> resource) {
@@ -95,7 +96,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
             return this;
         }
         public Builder resource(@Nullable String resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }        public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs(accessLevel, resource);

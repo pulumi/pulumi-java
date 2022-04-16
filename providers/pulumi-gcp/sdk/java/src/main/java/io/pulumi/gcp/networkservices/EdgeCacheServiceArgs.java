@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceLogConfigArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingArgs;
 import java.lang.Boolean;
@@ -26,8 +27,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableQuic")
       private final @Nullable Output<Boolean> disableQuic;
 
-    public Output<Boolean> getDisableQuic() {
-        return this.disableQuic == null ? Output.empty() : this.disableQuic;
+    public Output<Boolean> disableQuic() {
+        return this.disableQuic == null ? Codegen.empty() : this.disableQuic;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="edgeSecurityPolicy")
       private final @Nullable Output<String> edgeSecurityPolicy;
 
-    public Output<String> getEdgeSecurityPolicy() {
-        return this.edgeSecurityPolicy == null ? Output.empty() : this.edgeSecurityPolicy;
+    public Output<String> edgeSecurityPolicy() {
+        return this.edgeSecurityPolicy == null ? Codegen.empty() : this.edgeSecurityPolicy;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="edgeSslCertificates")
       private final @Nullable Output<List<String>> edgeSslCertificates;
 
-    public Output<List<String>> getEdgeSslCertificates() {
-        return this.edgeSslCertificates == null ? Output.empty() : this.edgeSslCertificates;
+    public Output<List<String>> edgeSslCertificates() {
+        return this.edgeSslCertificates == null ? Codegen.empty() : this.edgeSslCertificates;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="logConfig")
       private final @Nullable Output<EdgeCacheServiceLogConfigArgs> logConfig;
 
-    public Output<EdgeCacheServiceLogConfigArgs> getLogConfig() {
-        return this.logConfig == null ? Output.empty() : this.logConfig;
+    public Output<EdgeCacheServiceLogConfigArgs> logConfig() {
+        return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="requireTls")
       private final @Nullable Output<Boolean> requireTls;
 
-    public Output<Boolean> getRequireTls() {
-        return this.requireTls == null ? Output.empty() : this.requireTls;
+    public Output<Boolean> requireTls() {
+        return this.requireTls == null ? Codegen.empty() : this.requireTls;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="routing", required=true)
       private final Output<EdgeCacheServiceRoutingArgs> routing;
 
-    public Output<EdgeCacheServiceRoutingArgs> getRouting() {
+    public Output<EdgeCacheServiceRoutingArgs> routing() {
         return this.routing;
     }
 
@@ -143,8 +144,8 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
-        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
+    public Output<String> sslPolicy() {
+        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
     public EdgeCacheServiceArgs(
@@ -173,17 +174,17 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EdgeCacheServiceArgs() {
-        this.description = Output.empty();
-        this.disableQuic = Output.empty();
-        this.edgeSecurityPolicy = Output.empty();
-        this.edgeSslCertificates = Output.empty();
-        this.labels = Output.empty();
-        this.logConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requireTls = Output.empty();
-        this.routing = Output.empty();
-        this.sslPolicy = Output.empty();
+        this.description = Codegen.empty();
+        this.disableQuic = Codegen.empty();
+        this.edgeSecurityPolicy = Codegen.empty();
+        this.edgeSslCertificates = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.logConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requireTls = Codegen.empty();
+        this.routing = Codegen.empty();
+        this.sslPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -231,7 +232,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disableQuic(@Nullable Output<Boolean> disableQuic) {
@@ -239,7 +240,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disableQuic(@Nullable Boolean disableQuic) {
-            this.disableQuic = Output.ofNullable(disableQuic);
+            this.disableQuic = Codegen.ofNullable(disableQuic);
             return this;
         }
         public Builder edgeSecurityPolicy(@Nullable Output<String> edgeSecurityPolicy) {
@@ -247,7 +248,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder edgeSecurityPolicy(@Nullable String edgeSecurityPolicy) {
-            this.edgeSecurityPolicy = Output.ofNullable(edgeSecurityPolicy);
+            this.edgeSecurityPolicy = Codegen.ofNullable(edgeSecurityPolicy);
             return this;
         }
         public Builder edgeSslCertificates(@Nullable Output<List<String>> edgeSslCertificates) {
@@ -255,7 +256,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder edgeSslCertificates(@Nullable List<String> edgeSslCertificates) {
-            this.edgeSslCertificates = Output.ofNullable(edgeSslCertificates);
+            this.edgeSslCertificates = Codegen.ofNullable(edgeSslCertificates);
             return this;
         }
         public Builder edgeSslCertificates(String... edgeSslCertificates) {
@@ -266,7 +267,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder logConfig(@Nullable Output<EdgeCacheServiceLogConfigArgs> logConfig) {
@@ -274,7 +275,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder logConfig(@Nullable EdgeCacheServiceLogConfigArgs logConfig) {
-            this.logConfig = Output.ofNullable(logConfig);
+            this.logConfig = Codegen.ofNullable(logConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -282,7 +283,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -290,7 +291,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requireTls(@Nullable Output<Boolean> requireTls) {
@@ -298,7 +299,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requireTls(@Nullable Boolean requireTls) {
-            this.requireTls = Output.ofNullable(requireTls);
+            this.requireTls = Codegen.ofNullable(requireTls);
             return this;
         }
         public Builder routing(Output<EdgeCacheServiceRoutingArgs> routing) {
@@ -314,7 +315,7 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Output.ofNullable(sslPolicy);
+            this.sslPolicy = Codegen.ofNullable(sslPolicy);
             return this;
         }        public EdgeCacheServiceArgs build() {
             return new EdgeCacheServiceArgs(description, disableQuic, edgeSecurityPolicy, edgeSslCertificates, labels, logConfig, name, project, requireTls, routing, sslPolicy);

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.devicefarm.outputs.InstanceProfileTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,43 +24,43 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="excludeAppPackagesFromCleanup", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanup;
 
-    public Output</* @Nullable */ List<String>> getExcludeAppPackagesFromCleanup() {
+    public Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanup() {
         return this.excludeAppPackagesFromCleanup;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="packageCleanup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> packageCleanup;
 
-    public Output</* @Nullable */ Boolean> getPackageCleanup() {
+    public Output</* @Nullable */ Boolean> packageCleanup() {
         return this.packageCleanup;
     }
     @Export(name="rebootAfterUse", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rebootAfterUse;
 
-    public Output</* @Nullable */ Boolean> getRebootAfterUse() {
+    public Output</* @Nullable */ Boolean> rebootAfterUse() {
         return this.rebootAfterUse;
     }
     @Export(name="tags", type=List.class, parameters={InstanceProfileTag.class})
     private Output</* @Nullable */ List<InstanceProfileTag>> tags;
 
-    public Output</* @Nullable */ List<InstanceProfileTag>> getTags() {
+    public Output</* @Nullable */ List<InstanceProfileTag>> tags() {
         return this.tags;
     }
 
@@ -85,7 +86,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceProfile(String name, @Nullable InstanceProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:devicefarm:InstanceProfile", name, args == null ? InstanceProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:devicefarm:InstanceProfile", name, args == null ? InstanceProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

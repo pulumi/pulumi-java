@@ -6,6 +6,7 @@ package io.pulumi.aws.iot.inputs;
 import io.pulumi.aws.iot.inputs.ThingGroupMetadataRootToParentGroupGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,8 +20,8 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
-        return this.creationDate == null ? Output.empty() : this.creationDate;
+    public Output<String> creationDate() {
+        return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
     /**
@@ -30,15 +31,15 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
     @Import(name="parentGroupName")
       private final @Nullable Output<String> parentGroupName;
 
-    public Output<String> getParentGroupName() {
-        return this.parentGroupName == null ? Output.empty() : this.parentGroupName;
+    public Output<String> parentGroupName() {
+        return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
     }
 
     @Import(name="rootToParentGroups")
       private final @Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups;
 
-    public Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> getRootToParentGroups() {
-        return this.rootToParentGroups == null ? Output.empty() : this.rootToParentGroups;
+    public Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups() {
+        return this.rootToParentGroups == null ? Codegen.empty() : this.rootToParentGroups;
     }
 
     public ThingGroupMetadataGetArgs(
@@ -51,9 +52,9 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ThingGroupMetadataGetArgs() {
-        this.creationDate = Output.empty();
-        this.parentGroupName = Output.empty();
-        this.rootToParentGroups = Output.empty();
+        this.creationDate = Codegen.empty();
+        this.parentGroupName = Codegen.empty();
+        this.rootToParentGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Output.ofNullable(creationDate);
+            this.creationDate = Codegen.ofNullable(creationDate);
             return this;
         }
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
@@ -93,7 +94,7 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Output.ofNullable(parentGroupName);
+            this.parentGroupName = Codegen.ofNullable(parentGroupName);
             return this;
         }
         public Builder rootToParentGroups(@Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups) {
@@ -101,7 +102,7 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder rootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroupGetArgs> rootToParentGroups) {
-            this.rootToParentGroups = Output.ofNullable(rootToParentGroups);
+            this.rootToParentGroups = Codegen.ofNullable(rootToParentGroups);
             return this;
         }
         public Builder rootToParentGroups(ThingGroupMetadataRootToParentGroupGetArgs... rootToParentGroups) {

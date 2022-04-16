@@ -15,6 +15,7 @@ import io.pulumi.azurenative.insights.inputs.VoiceReceiverArgs;
 import io.pulumi.azurenative.insights.inputs.WebhookReceiverArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionGroupName")
       private final @Nullable Output<String> actionGroupName;
 
-    public Output<String> getActionGroupName() {
-        return this.actionGroupName == null ? Output.empty() : this.actionGroupName;
+    public Output<String> actionGroupName() {
+        return this.actionGroupName == null ? Codegen.empty() : this.actionGroupName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="armRoleReceivers")
       private final @Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers;
 
-    public Output<List<ArmRoleReceiverArgs>> getArmRoleReceivers() {
-        return this.armRoleReceivers == null ? Output.empty() : this.armRoleReceivers;
+    public Output<List<ArmRoleReceiverArgs>> armRoleReceivers() {
+        return this.armRoleReceivers == null ? Codegen.empty() : this.armRoleReceivers;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationRunbookReceivers")
       private final @Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
 
-    public Output<List<AutomationRunbookReceiverArgs>> getAutomationRunbookReceivers() {
-        return this.automationRunbookReceivers == null ? Output.empty() : this.automationRunbookReceivers;
+    public Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers() {
+        return this.automationRunbookReceivers == null ? Codegen.empty() : this.automationRunbookReceivers;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureAppPushReceivers")
       private final @Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
 
-    public Output<List<AzureAppPushReceiverArgs>> getAzureAppPushReceivers() {
-        return this.azureAppPushReceivers == null ? Output.empty() : this.azureAppPushReceivers;
+    public Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers() {
+        return this.azureAppPushReceivers == null ? Codegen.empty() : this.azureAppPushReceivers;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureFunctionReceivers")
       private final @Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
 
-    public Output<List<AzureFunctionReceiverArgs>> getAzureFunctionReceivers() {
-        return this.azureFunctionReceivers == null ? Output.empty() : this.azureFunctionReceivers;
+    public Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers() {
+        return this.azureFunctionReceivers == null ? Codegen.empty() : this.azureFunctionReceivers;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="emailReceivers")
       private final @Nullable Output<List<EmailReceiverArgs>> emailReceivers;
 
-    public Output<List<EmailReceiverArgs>> getEmailReceivers() {
-        return this.emailReceivers == null ? Output.empty() : this.emailReceivers;
+    public Output<List<EmailReceiverArgs>> emailReceivers() {
+        return this.emailReceivers == null ? Codegen.empty() : this.emailReceivers;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -111,7 +112,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupShortName", required=true)
       private final Output<String> groupShortName;
 
-    public Output<String> getGroupShortName() {
+    public Output<String> groupShortName() {
         return this.groupShortName;
     }
 
@@ -122,8 +123,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="itsmReceivers")
       private final @Nullable Output<List<ItsmReceiverArgs>> itsmReceivers;
 
-    public Output<List<ItsmReceiverArgs>> getItsmReceivers() {
-        return this.itsmReceivers == null ? Output.empty() : this.itsmReceivers;
+    public Output<List<ItsmReceiverArgs>> itsmReceivers() {
+        return this.itsmReceivers == null ? Codegen.empty() : this.itsmReceivers;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logicAppReceivers")
       private final @Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers;
 
-    public Output<List<LogicAppReceiverArgs>> getLogicAppReceivers() {
-        return this.logicAppReceivers == null ? Output.empty() : this.logicAppReceivers;
+    public Output<List<LogicAppReceiverArgs>> logicAppReceivers() {
+        return this.logicAppReceivers == null ? Codegen.empty() : this.logicAppReceivers;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -166,8 +167,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="smsReceivers")
       private final @Nullable Output<List<SmsReceiverArgs>> smsReceivers;
 
-    public Output<List<SmsReceiverArgs>> getSmsReceivers() {
-        return this.smsReceivers == null ? Output.empty() : this.smsReceivers;
+    public Output<List<SmsReceiverArgs>> smsReceivers() {
+        return this.smsReceivers == null ? Codegen.empty() : this.smsReceivers;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="voiceReceivers")
       private final @Nullable Output<List<VoiceReceiverArgs>> voiceReceivers;
 
-    public Output<List<VoiceReceiverArgs>> getVoiceReceivers() {
-        return this.voiceReceivers == null ? Output.empty() : this.voiceReceivers;
+    public Output<List<VoiceReceiverArgs>> voiceReceivers() {
+        return this.voiceReceivers == null ? Codegen.empty() : this.voiceReceivers;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookReceivers")
       private final @Nullable Output<List<WebhookReceiverArgs>> webhookReceivers;
 
-    public Output<List<WebhookReceiverArgs>> getWebhookReceivers() {
-        return this.webhookReceivers == null ? Output.empty() : this.webhookReceivers;
+    public Output<List<WebhookReceiverArgs>> webhookReceivers() {
+        return this.webhookReceivers == null ? Codegen.empty() : this.webhookReceivers;
     }
 
     public ActionGroupArgs(
@@ -226,7 +227,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         this.azureAppPushReceivers = azureAppPushReceivers;
         this.azureFunctionReceivers = azureFunctionReceivers;
         this.emailReceivers = emailReceivers;
-        this.enabled = enabled == null ? Output.ofNullable(true) : Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
+        this.enabled = enabled == null ? Codegen.ofNullable(true) : Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.groupShortName = Objects.requireNonNull(groupShortName, "expected parameter 'groupShortName' to be non-null");
         this.itsmReceivers = itsmReceivers;
         this.location = location;
@@ -239,22 +240,22 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionGroupArgs() {
-        this.actionGroupName = Output.empty();
-        this.armRoleReceivers = Output.empty();
-        this.automationRunbookReceivers = Output.empty();
-        this.azureAppPushReceivers = Output.empty();
-        this.azureFunctionReceivers = Output.empty();
-        this.emailReceivers = Output.empty();
-        this.enabled = Output.empty();
-        this.groupShortName = Output.empty();
-        this.itsmReceivers = Output.empty();
-        this.location = Output.empty();
-        this.logicAppReceivers = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.smsReceivers = Output.empty();
-        this.tags = Output.empty();
-        this.voiceReceivers = Output.empty();
-        this.webhookReceivers = Output.empty();
+        this.actionGroupName = Codegen.empty();
+        this.armRoleReceivers = Codegen.empty();
+        this.automationRunbookReceivers = Codegen.empty();
+        this.azureAppPushReceivers = Codegen.empty();
+        this.azureFunctionReceivers = Codegen.empty();
+        this.emailReceivers = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.groupShortName = Codegen.empty();
+        this.itsmReceivers = Codegen.empty();
+        this.location = Codegen.empty();
+        this.logicAppReceivers = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.smsReceivers = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.voiceReceivers = Codegen.empty();
+        this.webhookReceivers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -312,7 +313,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionGroupName(@Nullable String actionGroupName) {
-            this.actionGroupName = Output.ofNullable(actionGroupName);
+            this.actionGroupName = Codegen.ofNullable(actionGroupName);
             return this;
         }
         public Builder armRoleReceivers(@Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers) {
@@ -320,7 +321,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder armRoleReceivers(@Nullable List<ArmRoleReceiverArgs> armRoleReceivers) {
-            this.armRoleReceivers = Output.ofNullable(armRoleReceivers);
+            this.armRoleReceivers = Codegen.ofNullable(armRoleReceivers);
             return this;
         }
         public Builder armRoleReceivers(ArmRoleReceiverArgs... armRoleReceivers) {
@@ -331,7 +332,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automationRunbookReceivers(@Nullable List<AutomationRunbookReceiverArgs> automationRunbookReceivers) {
-            this.automationRunbookReceivers = Output.ofNullable(automationRunbookReceivers);
+            this.automationRunbookReceivers = Codegen.ofNullable(automationRunbookReceivers);
             return this;
         }
         public Builder automationRunbookReceivers(AutomationRunbookReceiverArgs... automationRunbookReceivers) {
@@ -342,7 +343,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureAppPushReceivers(@Nullable List<AzureAppPushReceiverArgs> azureAppPushReceivers) {
-            this.azureAppPushReceivers = Output.ofNullable(azureAppPushReceivers);
+            this.azureAppPushReceivers = Codegen.ofNullable(azureAppPushReceivers);
             return this;
         }
         public Builder azureAppPushReceivers(AzureAppPushReceiverArgs... azureAppPushReceivers) {
@@ -353,7 +354,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureFunctionReceivers(@Nullable List<AzureFunctionReceiverArgs> azureFunctionReceivers) {
-            this.azureFunctionReceivers = Output.ofNullable(azureFunctionReceivers);
+            this.azureFunctionReceivers = Codegen.ofNullable(azureFunctionReceivers);
             return this;
         }
         public Builder azureFunctionReceivers(AzureFunctionReceiverArgs... azureFunctionReceivers) {
@@ -364,7 +365,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder emailReceivers(@Nullable List<EmailReceiverArgs> emailReceivers) {
-            this.emailReceivers = Output.ofNullable(emailReceivers);
+            this.emailReceivers = Codegen.ofNullable(emailReceivers);
             return this;
         }
         public Builder emailReceivers(EmailReceiverArgs... emailReceivers) {
@@ -391,7 +392,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder itsmReceivers(@Nullable List<ItsmReceiverArgs> itsmReceivers) {
-            this.itsmReceivers = Output.ofNullable(itsmReceivers);
+            this.itsmReceivers = Codegen.ofNullable(itsmReceivers);
             return this;
         }
         public Builder itsmReceivers(ItsmReceiverArgs... itsmReceivers) {
@@ -402,7 +403,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder logicAppReceivers(@Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers) {
@@ -410,7 +411,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logicAppReceivers(@Nullable List<LogicAppReceiverArgs> logicAppReceivers) {
-            this.logicAppReceivers = Output.ofNullable(logicAppReceivers);
+            this.logicAppReceivers = Codegen.ofNullable(logicAppReceivers);
             return this;
         }
         public Builder logicAppReceivers(LogicAppReceiverArgs... logicAppReceivers) {
@@ -429,7 +430,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smsReceivers(@Nullable List<SmsReceiverArgs> smsReceivers) {
-            this.smsReceivers = Output.ofNullable(smsReceivers);
+            this.smsReceivers = Codegen.ofNullable(smsReceivers);
             return this;
         }
         public Builder smsReceivers(SmsReceiverArgs... smsReceivers) {
@@ -440,7 +441,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder voiceReceivers(@Nullable Output<List<VoiceReceiverArgs>> voiceReceivers) {
@@ -448,7 +449,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder voiceReceivers(@Nullable List<VoiceReceiverArgs> voiceReceivers) {
-            this.voiceReceivers = Output.ofNullable(voiceReceivers);
+            this.voiceReceivers = Codegen.ofNullable(voiceReceivers);
             return this;
         }
         public Builder voiceReceivers(VoiceReceiverArgs... voiceReceivers) {
@@ -459,7 +460,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webhookReceivers(@Nullable List<WebhookReceiverArgs> webhookReceivers) {
-            this.webhookReceivers = Output.ofNullable(webhookReceivers);
+            this.webhookReceivers = Codegen.ofNullable(webhookReceivers);
             return this;
         }
         public Builder webhookReceivers(WebhookReceiverArgs... webhookReceivers) {

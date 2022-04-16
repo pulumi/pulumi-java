@@ -46,7 +46,7 @@ public final class MetastoreServiceHiveMetastoreConfig {
      * The mappings override system defaults (some keys cannot be overridden)
      * 
     */
-    public Map<String,String> getConfigOverrides() {
+    public Map<String,String> configOverrides() {
         return this.configOverrides == null ? Map.of() : this.configOverrides;
     }
     /**
@@ -54,14 +54,14 @@ public final class MetastoreServiceHiveMetastoreConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<MetastoreServiceHiveMetastoreConfigKerberosConfig> getKerberosConfig() {
+    public Optional<MetastoreServiceHiveMetastoreConfigKerberosConfig> kerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
     /**
      * The Hive metastore schema version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

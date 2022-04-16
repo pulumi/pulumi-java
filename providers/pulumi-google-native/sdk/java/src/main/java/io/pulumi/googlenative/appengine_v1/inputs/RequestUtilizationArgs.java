@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetConcurrentRequests")
       private final @Nullable Output<Integer> targetConcurrentRequests;
 
-    public Output<Integer> getTargetConcurrentRequests() {
-        return this.targetConcurrentRequests == null ? Output.empty() : this.targetConcurrentRequests;
+    public Output<Integer> targetConcurrentRequests() {
+        return this.targetConcurrentRequests == null ? Codegen.empty() : this.targetConcurrentRequests;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetRequestCountPerSecond")
       private final @Nullable Output<Integer> targetRequestCountPerSecond;
 
-    public Output<Integer> getTargetRequestCountPerSecond() {
-        return this.targetRequestCountPerSecond == null ? Output.empty() : this.targetRequestCountPerSecond;
+    public Output<Integer> targetRequestCountPerSecond() {
+        return this.targetRequestCountPerSecond == null ? Codegen.empty() : this.targetRequestCountPerSecond;
     }
 
     public RequestUtilizationArgs(
@@ -48,8 +49,8 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RequestUtilizationArgs() {
-        this.targetConcurrentRequests = Output.empty();
-        this.targetRequestCountPerSecond = Output.empty();
+        this.targetConcurrentRequests = Codegen.empty();
+        this.targetRequestCountPerSecond = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder targetConcurrentRequests(@Nullable Integer targetConcurrentRequests) {
-            this.targetConcurrentRequests = Output.ofNullable(targetConcurrentRequests);
+            this.targetConcurrentRequests = Codegen.ofNullable(targetConcurrentRequests);
             return this;
         }
         public Builder targetRequestCountPerSecond(@Nullable Output<Integer> targetRequestCountPerSecond) {
@@ -87,7 +88,7 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder targetRequestCountPerSecond(@Nullable Integer targetRequestCountPerSecond) {
-            this.targetRequestCountPerSecond = Output.ofNullable(targetRequestCountPerSecond);
+            this.targetRequestCountPerSecond = Codegen.ofNullable(targetRequestCountPerSecond);
             return this;
         }        public RequestUtilizationArgs build() {
             return new RequestUtilizationArgs(targetConcurrentRequests, targetRequestCountPerSecond);

@@ -24,7 +24,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
       private final Map<String,String> details;
 
-    public Map<String,String> getDetails() {
+    public Map<String,String> details() {
         return this.details;
     }
 
@@ -35,7 +35,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorTime", required=true)
       private final String errorTime;
 
-    public String getErrorTime() {
+    public String errorTime() {
         return this.errorTime;
     }
 
@@ -46,7 +46,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorUuid", required=true)
       private final String errorUuid;
 
-    public String getErrorUuid() {
+    public String errorUuid() {
         return this.errorUuid;
     }
 
@@ -57,7 +57,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -68,7 +68,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 

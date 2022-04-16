@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ExternalRefArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.Boolean;
@@ -29,8 +30,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="analyzed")
       private final @Nullable Output<Boolean> analyzed;
 
-    public Output<Boolean> getAnalyzed() {
-        return this.analyzed == null ? Output.empty() : this.analyzed;
+    public Output<Boolean> analyzed() {
+        return this.analyzed == null ? Codegen.empty() : this.analyzed;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="attribution")
       private final @Nullable Output<String> attribution;
 
-    public Output<String> getAttribution() {
-        return this.attribution == null ? Output.empty() : this.attribution;
+    public Output<String> attribution() {
+        return this.attribution == null ? Codegen.empty() : this.attribution;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
-        return this.checksum == null ? Output.empty() : this.checksum;
+    public Output<String> checksum() {
+        return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="copyright")
       private final @Nullable Output<String> copyright;
 
-    public Output<String> getCopyright() {
-        return this.copyright == null ? Output.empty() : this.copyright;
+    public Output<String> copyright() {
+        return this.copyright == null ? Codegen.empty() : this.copyright;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="detailedDescription")
       private final @Nullable Output<String> detailedDescription;
 
-    public Output<String> getDetailedDescription() {
-        return this.detailedDescription == null ? Output.empty() : this.detailedDescription;
+    public Output<String> detailedDescription() {
+        return this.detailedDescription == null ? Codegen.empty() : this.detailedDescription;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="downloadLocation")
       private final @Nullable Output<String> downloadLocation;
 
-    public Output<String> getDownloadLocation() {
-        return this.downloadLocation == null ? Output.empty() : this.downloadLocation;
+    public Output<String> downloadLocation() {
+        return this.downloadLocation == null ? Codegen.empty() : this.downloadLocation;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="externalRefs")
       private final @Nullable Output<List<ExternalRefArgs>> externalRefs;
 
-    public Output<List<ExternalRefArgs>> getExternalRefs() {
-        return this.externalRefs == null ? Output.empty() : this.externalRefs;
+    public Output<List<ExternalRefArgs>> externalRefs() {
+        return this.externalRefs == null ? Codegen.empty() : this.externalRefs;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="filesLicenseInfo")
       private final @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Output<List<String>> getFilesLicenseInfo() {
-        return this.filesLicenseInfo == null ? Output.empty() : this.filesLicenseInfo;
+    public Output<List<String>> filesLicenseInfo() {
+        return this.filesLicenseInfo == null ? Codegen.empty() : this.filesLicenseInfo;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="homePage")
       private final @Nullable Output<String> homePage;
 
-    public Output<String> getHomePage() {
-        return this.homePage == null ? Output.empty() : this.homePage;
+    public Output<String> homePage() {
+        return this.homePage == null ? Codegen.empty() : this.homePage;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="licenseDeclared")
       private final @Nullable Output<LicenseArgs> licenseDeclared;
 
-    public Output<LicenseArgs> getLicenseDeclared() {
-        return this.licenseDeclared == null ? Output.empty() : this.licenseDeclared;
+    public Output<LicenseArgs> licenseDeclared() {
+        return this.licenseDeclared == null ? Codegen.empty() : this.licenseDeclared;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="originator")
       private final @Nullable Output<String> originator;
 
-    public Output<String> getOriginator() {
-        return this.originator == null ? Output.empty() : this.originator;
+    public Output<String> originator() {
+        return this.originator == null ? Codegen.empty() : this.originator;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
-        return this.packageType == null ? Output.empty() : this.packageType;
+    public Output<String> packageType() {
+        return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="summaryDescription")
       private final @Nullable Output<String> summaryDescription;
 
-    public Output<String> getSummaryDescription() {
-        return this.summaryDescription == null ? Output.empty() : this.summaryDescription;
+    public Output<String> summaryDescription() {
+        return this.summaryDescription == null ? Codegen.empty() : this.summaryDescription;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="supplier")
       private final @Nullable Output<String> supplier;
 
-    public Output<String> getSupplier() {
-        return this.supplier == null ? Output.empty() : this.supplier;
+    public Output<String> supplier() {
+        return this.supplier == null ? Codegen.empty() : this.supplier;
     }
 
     /**
@@ -183,8 +184,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -194,8 +195,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="verificationCode")
       private final @Nullable Output<String> verificationCode;
 
-    public Output<String> getVerificationCode() {
-        return this.verificationCode == null ? Output.empty() : this.verificationCode;
+    public Output<String> verificationCode() {
+        return this.verificationCode == null ? Codegen.empty() : this.verificationCode;
     }
 
     /**
@@ -205,8 +206,8 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public PackageInfoNoteArgs(
@@ -247,23 +248,23 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PackageInfoNoteArgs() {
-        this.analyzed = Output.empty();
-        this.attribution = Output.empty();
-        this.checksum = Output.empty();
-        this.copyright = Output.empty();
-        this.detailedDescription = Output.empty();
-        this.downloadLocation = Output.empty();
-        this.externalRefs = Output.empty();
-        this.filesLicenseInfo = Output.empty();
-        this.homePage = Output.empty();
-        this.licenseDeclared = Output.empty();
-        this.originator = Output.empty();
-        this.packageType = Output.empty();
-        this.summaryDescription = Output.empty();
-        this.supplier = Output.empty();
-        this.title = Output.empty();
-        this.verificationCode = Output.empty();
-        this.version = Output.empty();
+        this.analyzed = Codegen.empty();
+        this.attribution = Codegen.empty();
+        this.checksum = Codegen.empty();
+        this.copyright = Codegen.empty();
+        this.detailedDescription = Codegen.empty();
+        this.downloadLocation = Codegen.empty();
+        this.externalRefs = Codegen.empty();
+        this.filesLicenseInfo = Codegen.empty();
+        this.homePage = Codegen.empty();
+        this.licenseDeclared = Codegen.empty();
+        this.originator = Codegen.empty();
+        this.packageType = Codegen.empty();
+        this.summaryDescription = Codegen.empty();
+        this.supplier = Codegen.empty();
+        this.title = Codegen.empty();
+        this.verificationCode = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -323,7 +324,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder analyzed(@Nullable Boolean analyzed) {
-            this.analyzed = Output.ofNullable(analyzed);
+            this.analyzed = Codegen.ofNullable(analyzed);
             return this;
         }
         public Builder attribution(@Nullable Output<String> attribution) {
@@ -331,7 +332,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder attribution(@Nullable String attribution) {
-            this.attribution = Output.ofNullable(attribution);
+            this.attribution = Codegen.ofNullable(attribution);
             return this;
         }
         public Builder checksum(@Nullable Output<String> checksum) {
@@ -339,7 +340,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Output.ofNullable(checksum);
+            this.checksum = Codegen.ofNullable(checksum);
             return this;
         }
         public Builder copyright(@Nullable Output<String> copyright) {
@@ -347,7 +348,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder copyright(@Nullable String copyright) {
-            this.copyright = Output.ofNullable(copyright);
+            this.copyright = Codegen.ofNullable(copyright);
             return this;
         }
         public Builder detailedDescription(@Nullable Output<String> detailedDescription) {
@@ -355,7 +356,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder detailedDescription(@Nullable String detailedDescription) {
-            this.detailedDescription = Output.ofNullable(detailedDescription);
+            this.detailedDescription = Codegen.ofNullable(detailedDescription);
             return this;
         }
         public Builder downloadLocation(@Nullable Output<String> downloadLocation) {
@@ -363,7 +364,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder downloadLocation(@Nullable String downloadLocation) {
-            this.downloadLocation = Output.ofNullable(downloadLocation);
+            this.downloadLocation = Codegen.ofNullable(downloadLocation);
             return this;
         }
         public Builder externalRefs(@Nullable Output<List<ExternalRefArgs>> externalRefs) {
@@ -371,7 +372,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder externalRefs(@Nullable List<ExternalRefArgs> externalRefs) {
-            this.externalRefs = Output.ofNullable(externalRefs);
+            this.externalRefs = Codegen.ofNullable(externalRefs);
             return this;
         }
         public Builder externalRefs(ExternalRefArgs... externalRefs) {
@@ -382,7 +383,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Output.ofNullable(filesLicenseInfo);
+            this.filesLicenseInfo = Codegen.ofNullable(filesLicenseInfo);
             return this;
         }
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
@@ -393,7 +394,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder homePage(@Nullable String homePage) {
-            this.homePage = Output.ofNullable(homePage);
+            this.homePage = Codegen.ofNullable(homePage);
             return this;
         }
         public Builder licenseDeclared(@Nullable Output<LicenseArgs> licenseDeclared) {
@@ -401,7 +402,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder licenseDeclared(@Nullable LicenseArgs licenseDeclared) {
-            this.licenseDeclared = Output.ofNullable(licenseDeclared);
+            this.licenseDeclared = Codegen.ofNullable(licenseDeclared);
             return this;
         }
         public Builder originator(@Nullable Output<String> originator) {
@@ -409,7 +410,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder originator(@Nullable String originator) {
-            this.originator = Output.ofNullable(originator);
+            this.originator = Codegen.ofNullable(originator);
             return this;
         }
         public Builder packageType(@Nullable Output<String> packageType) {
@@ -417,7 +418,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Output.ofNullable(packageType);
+            this.packageType = Codegen.ofNullable(packageType);
             return this;
         }
         public Builder summaryDescription(@Nullable Output<String> summaryDescription) {
@@ -425,7 +426,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder summaryDescription(@Nullable String summaryDescription) {
-            this.summaryDescription = Output.ofNullable(summaryDescription);
+            this.summaryDescription = Codegen.ofNullable(summaryDescription);
             return this;
         }
         public Builder supplier(@Nullable Output<String> supplier) {
@@ -433,7 +434,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder supplier(@Nullable String supplier) {
-            this.supplier = Output.ofNullable(supplier);
+            this.supplier = Codegen.ofNullable(supplier);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -441,7 +442,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder verificationCode(@Nullable Output<String> verificationCode) {
@@ -449,7 +450,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder verificationCode(@Nullable String verificationCode) {
-            this.verificationCode = Output.ofNullable(verificationCode);
+            this.verificationCode = Codegen.ofNullable(verificationCode);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -457,7 +458,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public PackageInfoNoteArgs build() {
             return new PackageInfoNoteArgs(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);

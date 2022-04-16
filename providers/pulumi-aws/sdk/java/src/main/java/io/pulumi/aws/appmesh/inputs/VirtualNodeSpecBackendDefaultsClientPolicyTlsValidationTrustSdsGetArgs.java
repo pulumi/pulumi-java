@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustS
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustS
     }
 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs() {
-        this.secretName = Output.empty();
+        this.secretName = Codegen.empty();
     }
 
     public static Builder builder() {

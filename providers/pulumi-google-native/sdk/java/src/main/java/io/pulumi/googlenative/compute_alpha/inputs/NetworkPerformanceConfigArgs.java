@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkPerformanceConfigExternalIpEgressBandwidthTier;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkPerformanceConfigTotalEgressBandwidthTier;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
     @Import(name="externalIpEgressBandwidthTier")
       private final @Nullable Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier;
 
-    public Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> getExternalIpEgressBandwidthTier() {
-        return this.externalIpEgressBandwidthTier == null ? Output.empty() : this.externalIpEgressBandwidthTier;
+    public Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier() {
+        return this.externalIpEgressBandwidthTier == null ? Codegen.empty() : this.externalIpEgressBandwidthTier;
     }
 
     @Import(name="totalEgressBandwidthTier")
       private final @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
 
-    public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> getTotalEgressBandwidthTier() {
-        return this.totalEgressBandwidthTier == null ? Output.empty() : this.totalEgressBandwidthTier;
+    public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier() {
+        return this.totalEgressBandwidthTier == null ? Codegen.empty() : this.totalEgressBandwidthTier;
     }
 
     public NetworkPerformanceConfigArgs(
@@ -37,8 +38,8 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
     }
 
     private NetworkPerformanceConfigArgs() {
-        this.externalIpEgressBandwidthTier = Output.empty();
-        this.totalEgressBandwidthTier = Output.empty();
+        this.externalIpEgressBandwidthTier = Codegen.empty();
+        this.totalEgressBandwidthTier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder externalIpEgressBandwidthTier(@Nullable NetworkPerformanceConfigExternalIpEgressBandwidthTier externalIpEgressBandwidthTier) {
-            this.externalIpEgressBandwidthTier = Output.ofNullable(externalIpEgressBandwidthTier);
+            this.externalIpEgressBandwidthTier = Codegen.ofNullable(externalIpEgressBandwidthTier);
             return this;
         }
         public Builder totalEgressBandwidthTier(@Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier) {
@@ -76,7 +77,7 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder totalEgressBandwidthTier(@Nullable NetworkPerformanceConfigTotalEgressBandwidthTier totalEgressBandwidthTier) {
-            this.totalEgressBandwidthTier = Output.ofNullable(totalEgressBandwidthTier);
+            this.totalEgressBandwidthTier = Codegen.ofNullable(totalEgressBandwidthTier);
             return this;
         }        public NetworkPerformanceConfigArgs build() {
             return new NetworkPerformanceConfigArgs(externalIpEgressBandwidthTier, totalEgressBandwidthTier);

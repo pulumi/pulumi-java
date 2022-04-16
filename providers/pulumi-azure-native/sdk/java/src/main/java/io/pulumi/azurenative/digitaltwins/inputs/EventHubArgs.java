@@ -7,6 +7,7 @@ import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionStringPrimaryKey")
       private final @Nullable Output<String> connectionStringPrimaryKey;
 
-    public Output<String> getConnectionStringPrimaryKey() {
-        return this.connectionStringPrimaryKey == null ? Output.empty() : this.connectionStringPrimaryKey;
+    public Output<String> connectionStringPrimaryKey() {
+        return this.connectionStringPrimaryKey == null ? Codegen.empty() : this.connectionStringPrimaryKey;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionStringSecondaryKey")
       private final @Nullable Output<String> connectionStringSecondaryKey;
 
-    public Output<String> getConnectionStringSecondaryKey() {
-        return this.connectionStringSecondaryKey == null ? Output.empty() : this.connectionStringSecondaryKey;
+    public Output<String> connectionStringSecondaryKey() {
+        return this.connectionStringSecondaryKey == null ? Codegen.empty() : this.connectionStringSecondaryKey;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> getDeadLetterSecret() {
-        return this.deadLetterSecret == null ? Output.empty() : this.deadLetterSecret;
+    public Output<String> deadLetterSecret() {
+        return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
 
-    public Output<String> getDeadLetterUri() {
-        return this.deadLetterUri == null ? Output.empty() : this.deadLetterUri;
+    public Output<String> deadLetterUri() {
+        return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -94,8 +95,8 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
-        return this.endpointUri == null ? Output.empty() : this.endpointUri;
+    public Output<String> endpointUri() {
+        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
-    public Output<String> getEntityPath() {
-        return this.entityPath == null ? Output.empty() : this.entityPath;
+    public Output<String> entityPath() {
+        return this.entityPath == null ? Codegen.empty() : this.entityPath;
     }
 
     public EventHubArgs(
@@ -129,14 +130,14 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventHubArgs() {
-        this.authenticationType = Output.empty();
-        this.connectionStringPrimaryKey = Output.empty();
-        this.connectionStringSecondaryKey = Output.empty();
-        this.deadLetterSecret = Output.empty();
-        this.deadLetterUri = Output.empty();
-        this.endpointType = Output.empty();
-        this.endpointUri = Output.empty();
-        this.entityPath = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.connectionStringPrimaryKey = Codegen.empty();
+        this.connectionStringSecondaryKey = Codegen.empty();
+        this.deadLetterSecret = Codegen.empty();
+        this.deadLetterUri = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.endpointUri = Codegen.empty();
+        this.entityPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder connectionStringPrimaryKey(@Nullable Output<String> connectionStringPrimaryKey) {
@@ -186,7 +187,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionStringPrimaryKey(@Nullable String connectionStringPrimaryKey) {
-            this.connectionStringPrimaryKey = Output.ofNullable(connectionStringPrimaryKey);
+            this.connectionStringPrimaryKey = Codegen.ofNullable(connectionStringPrimaryKey);
             return this;
         }
         public Builder connectionStringSecondaryKey(@Nullable Output<String> connectionStringSecondaryKey) {
@@ -194,7 +195,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionStringSecondaryKey(@Nullable String connectionStringSecondaryKey) {
-            this.connectionStringSecondaryKey = Output.ofNullable(connectionStringSecondaryKey);
+            this.connectionStringSecondaryKey = Codegen.ofNullable(connectionStringSecondaryKey);
             return this;
         }
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
@@ -202,7 +203,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = Output.ofNullable(deadLetterSecret);
+            this.deadLetterSecret = Codegen.ofNullable(deadLetterSecret);
             return this;
         }
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
@@ -210,7 +211,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = Output.ofNullable(deadLetterUri);
+            this.deadLetterUri = Codegen.ofNullable(deadLetterUri);
             return this;
         }
         public Builder endpointType(Output<String> endpointType) {
@@ -226,7 +227,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Output.ofNullable(endpointUri);
+            this.endpointUri = Codegen.ofNullable(endpointUri);
             return this;
         }
         public Builder entityPath(@Nullable Output<String> entityPath) {
@@ -234,7 +235,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = Output.ofNullable(entityPath);
+            this.entityPath = Codegen.ofNullable(entityPath);
             return this;
         }        public EventHubArgs build() {
             return new EventHubArgs(authenticationType, connectionStringPrimaryKey, connectionStringSecondaryKey, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath);

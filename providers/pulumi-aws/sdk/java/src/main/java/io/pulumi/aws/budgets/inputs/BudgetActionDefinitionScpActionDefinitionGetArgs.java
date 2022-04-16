@@ -5,6 +5,7 @@ package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class BudgetActionDefinitionScpActionDefinitionGetArgs extends io.p
     @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -32,7 +33,7 @@ public final class BudgetActionDefinitionScpActionDefinitionGetArgs extends io.p
     @Import(name="targetIds", required=true)
       private final Output<List<String>> targetIds;
 
-    public Output<List<String>> getTargetIds() {
+    public Output<List<String>> targetIds() {
         return this.targetIds;
     }
 
@@ -44,8 +45,8 @@ public final class BudgetActionDefinitionScpActionDefinitionGetArgs extends io.p
     }
 
     private BudgetActionDefinitionScpActionDefinitionGetArgs() {
-        this.policyId = Output.empty();
-        this.targetIds = Output.empty();
+        this.policyId = Codegen.empty();
+        this.targetIds = Codegen.empty();
     }
 
     public static Builder builder() {

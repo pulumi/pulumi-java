@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.CreateRecoveryPlanInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="properties", required=true)
       private final Output<CreateRecoveryPlanInputPropertiesArgs> properties;
 
-    public Output<CreateRecoveryPlanInputPropertiesArgs> getProperties() {
+    public Output<CreateRecoveryPlanInputPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -33,8 +34,8 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="recoveryPlanName")
       private final @Nullable Output<String> recoveryPlanName;
 
-    public Output<String> getRecoveryPlanName() {
-        return this.recoveryPlanName == null ? Output.empty() : this.recoveryPlanName;
+    public Output<String> recoveryPlanName() {
+        return this.recoveryPlanName == null ? Codegen.empty() : this.recoveryPlanName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +56,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -71,10 +72,10 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     }
 
     private ReplicationRecoveryPlanArgs() {
-        this.properties = Output.empty();
-        this.recoveryPlanName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.properties = Codegen.empty();
+        this.recoveryPlanName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder recoveryPlanName(@Nullable String recoveryPlanName) {
-            this.recoveryPlanName = Output.ofNullable(recoveryPlanName);
+            this.recoveryPlanName = Codegen.ofNullable(recoveryPlanName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

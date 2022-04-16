@@ -7,6 +7,7 @@ import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterAction", required=true)
       private final Output<FilterAction> filterAction;
 
-    public Output<FilterAction> getFilterAction() {
+    public Output<FilterAction> filterAction() {
         return this.filterAction;
     }
 
@@ -45,7 +46,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterCriteria", required=true)
       private final Output<FilterCriteriaArgs> filterCriteria;
 
-    public Output<FilterCriteriaArgs> getFilterCriteria() {
+    public Output<FilterCriteriaArgs> filterCriteria() {
         return this.filterCriteria;
     }
 
@@ -56,8 +57,8 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FilterArgs(
@@ -72,10 +73,10 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterArgs() {
-        this.description = Output.empty();
-        this.filterAction = Output.empty();
-        this.filterCriteria = Output.empty();
-        this.name = Output.empty();
+        this.description = Codegen.empty();
+        this.filterAction = Codegen.empty();
+        this.filterCriteria = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder filterAction(Output<FilterAction> filterAction) {
@@ -133,7 +134,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FilterArgs build() {
             return new FilterArgs(description, filterAction, filterCriteria, name);

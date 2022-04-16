@@ -7,6 +7,7 @@ import io.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
-        return this.creationDate == null ? Output.empty() : this.creationDate;
+    public Output<String> creationDate() {
+        return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
 
-    public Output<List<MetricStreamExcludeFilterGetArgs>> getExcludeFilters() {
-        return this.excludeFilters == null ? Output.empty() : this.excludeFilters;
+    public Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters() {
+        return this.excludeFilters == null ? Codegen.empty() : this.excludeFilters;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="firehoseArn")
       private final @Nullable Output<String> firehoseArn;
 
-    public Output<String> getFirehoseArn() {
-        return this.firehoseArn == null ? Output.empty() : this.firehoseArn;
+    public Output<String> firehoseArn() {
+        return this.firehoseArn == null ? Codegen.empty() : this.firehoseArn;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
 
-    public Output<List<MetricStreamIncludeFilterGetArgs>> getIncludeFilters() {
-        return this.includeFilters == null ? Output.empty() : this.includeFilters;
+    public Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters() {
+        return this.includeFilters == null ? Codegen.empty() : this.includeFilters;
     }
 
     /**
@@ -80,15 +81,15 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdateDate")
       private final @Nullable Output<String> lastUpdateDate;
 
-    public Output<String> getLastUpdateDate() {
-        return this.lastUpdateDate == null ? Output.empty() : this.lastUpdateDate;
+    public Output<String> lastUpdateDate() {
+        return this.lastUpdateDate == null ? Codegen.empty() : this.lastUpdateDate;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
-        return this.outputFormat == null ? Output.empty() : this.outputFormat;
+    public Output<String> outputFormat() {
+        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public MetricStreamState(
@@ -187,19 +188,19 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricStreamState() {
-        this.arn = Output.empty();
-        this.creationDate = Output.empty();
-        this.excludeFilters = Output.empty();
-        this.firehoseArn = Output.empty();
-        this.includeFilters = Output.empty();
-        this.lastUpdateDate = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.outputFormat = Output.empty();
-        this.roleArn = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.creationDate = Codegen.empty();
+        this.excludeFilters = Codegen.empty();
+        this.firehoseArn = Codegen.empty();
+        this.includeFilters = Codegen.empty();
+        this.lastUpdateDate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.outputFormat = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -251,7 +252,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder creationDate(@Nullable Output<String> creationDate) {
@@ -259,7 +260,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Output.ofNullable(creationDate);
+            this.creationDate = Codegen.ofNullable(creationDate);
             return this;
         }
         public Builder excludeFilters(@Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
@@ -267,7 +268,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludeFilters(@Nullable List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
-            this.excludeFilters = Output.ofNullable(excludeFilters);
+            this.excludeFilters = Codegen.ofNullable(excludeFilters);
             return this;
         }
         public Builder excludeFilters(MetricStreamExcludeFilterGetArgs... excludeFilters) {
@@ -278,7 +279,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firehoseArn(@Nullable String firehoseArn) {
-            this.firehoseArn = Output.ofNullable(firehoseArn);
+            this.firehoseArn = Codegen.ofNullable(firehoseArn);
             return this;
         }
         public Builder includeFilters(@Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
@@ -286,7 +287,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includeFilters(@Nullable List<MetricStreamIncludeFilterGetArgs> includeFilters) {
-            this.includeFilters = Output.ofNullable(includeFilters);
+            this.includeFilters = Codegen.ofNullable(includeFilters);
             return this;
         }
         public Builder includeFilters(MetricStreamIncludeFilterGetArgs... includeFilters) {
@@ -297,7 +298,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
-            this.lastUpdateDate = Output.ofNullable(lastUpdateDate);
+            this.lastUpdateDate = Codegen.ofNullable(lastUpdateDate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -305,7 +306,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -313,7 +314,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
@@ -321,7 +322,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Output.ofNullable(outputFormat);
+            this.outputFormat = Codegen.ofNullable(outputFormat);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -329,7 +330,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -337,7 +338,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -345,7 +346,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -353,7 +354,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public MetricStreamState build() {
             return new MetricStreamState(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, name, namePrefix, outputFormat, roleArn, state, tags, tagsAll);

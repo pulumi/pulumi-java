@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cert")
       private final @Nullable Output<String> cert;
 
-    public Output<String> getCert() {
-        return this.cert == null ? Output.empty() : this.cert;
+    public Output<String> cert() {
+        return this.cert == null ? Codegen.empty() : this.cert;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cname")
       private final @Nullable Output<String> cname;
 
-    public Output<String> getCname() {
-        return this.cname == null ? Output.empty() : this.cname;
+    public Output<String> cname() {
+        return this.cname == null ? Codegen.empty() : this.cname;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public SslConfigurationArgs(
@@ -74,10 +75,10 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SslConfigurationArgs() {
-        this.cert = Output.empty();
-        this.cname = Output.empty();
-        this.key = Output.empty();
-        this.status = Output.empty();
+        this.cert = Codegen.empty();
+        this.cname = Codegen.empty();
+        this.key = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cert(@Nullable String cert) {
-            this.cert = Output.ofNullable(cert);
+            this.cert = Codegen.ofNullable(cert);
             return this;
         }
         public Builder cname(@Nullable Output<String> cname) {
@@ -119,7 +120,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cname(@Nullable String cname) {
-            this.cname = Output.ofNullable(cname);
+            this.cname = Codegen.ofNullable(cname);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -127,7 +128,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -135,7 +136,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public SslConfigurationArgs build() {
             return new SslConfigurationArgs(cert, cname, key, status);

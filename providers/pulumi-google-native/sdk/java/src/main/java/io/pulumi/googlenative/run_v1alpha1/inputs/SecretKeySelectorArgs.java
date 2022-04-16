@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="localObjectReference")
       private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
-    public Output<LocalObjectReferenceArgs> getLocalObjectReference() {
-        return this.localObjectReference == null ? Output.empty() : this.localObjectReference;
+    public Output<LocalObjectReferenceArgs> localObjectReference() {
+        return this.localObjectReference == null ? Codegen.empty() : this.localObjectReference;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> getOptional() {
-        return this.optional == null ? Output.empty() : this.optional;
+    public Output<Boolean> optional() {
+        return this.optional == null ? Codegen.empty() : this.optional;
     }
 
     public SecretKeySelectorArgs(
@@ -76,10 +77,10 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SecretKeySelectorArgs() {
-        this.key = Output.empty();
-        this.localObjectReference = Output.empty();
-        this.name = Output.empty();
-        this.optional = Output.empty();
+        this.key = Codegen.empty();
+        this.localObjectReference = Codegen.empty();
+        this.name = Codegen.empty();
+        this.optional = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder localObjectReference(@Nullable Output<LocalObjectReferenceArgs> localObjectReference) {
@@ -121,7 +122,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder localObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
-            this.localObjectReference = Output.ofNullable(localObjectReference);
+            this.localObjectReference = Codegen.ofNullable(localObjectReference);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -129,7 +130,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder optional(@Nullable Output<Boolean> optional) {
@@ -137,7 +138,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Output.ofNullable(optional);
+            this.optional = Codegen.ofNullable(optional);
             return this;
         }        public SecretKeySelectorArgs build() {
             return new SecretKeySelectorArgs(key, localObjectReference, name, optional);

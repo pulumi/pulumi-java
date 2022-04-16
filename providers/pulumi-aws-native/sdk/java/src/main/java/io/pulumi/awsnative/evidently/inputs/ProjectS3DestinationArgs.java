@@ -5,6 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public ProjectS3DestinationArgs(
@@ -36,8 +37,8 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     }
 
     private ProjectS3DestinationArgs() {
-        this.bucketName = Output.empty();
-        this.prefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public ProjectS3DestinationArgs build() {
             return new ProjectS3DestinationArgs(bucketName, prefix);

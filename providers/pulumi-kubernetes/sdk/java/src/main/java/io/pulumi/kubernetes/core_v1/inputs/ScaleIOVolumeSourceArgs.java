@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="gateway", required=true)
       private final Output<String> gateway;
 
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway;
     }
 
@@ -49,8 +50,8 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="protectionDomain")
       private final @Nullable Output<String> protectionDomain;
 
-    public Output<String> getProtectionDomain() {
-        return this.protectionDomain == null ? Output.empty() : this.protectionDomain;
+    public Output<String> protectionDomain() {
+        return this.protectionDomain == null ? Codegen.empty() : this.protectionDomain;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="secretRef", required=true)
       private final Output<LocalObjectReferenceArgs> secretRef;
 
-    public Output<LocalObjectReferenceArgs> getSecretRef() {
+    public Output<LocalObjectReferenceArgs> secretRef() {
         return this.secretRef;
     }
 
@@ -82,8 +83,8 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="sslEnabled")
       private final @Nullable Output<Boolean> sslEnabled;
 
-    public Output<Boolean> getSslEnabled() {
-        return this.sslEnabled == null ? Output.empty() : this.sslEnabled;
+    public Output<Boolean> sslEnabled() {
+        return this.sslEnabled == null ? Codegen.empty() : this.sslEnabled;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="storageMode")
       private final @Nullable Output<String> storageMode;
 
-    public Output<String> getStorageMode() {
-        return this.storageMode == null ? Output.empty() : this.storageMode;
+    public Output<String> storageMode() {
+        return this.storageMode == null ? Codegen.empty() : this.storageMode;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="storagePool")
       private final @Nullable Output<String> storagePool;
 
-    public Output<String> getStoragePool() {
-        return this.storagePool == null ? Output.empty() : this.storagePool;
+    public Output<String> storagePool() {
+        return this.storagePool == null ? Codegen.empty() : this.storagePool;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="system", required=true)
       private final Output<String> system;
 
-    public Output<String> getSystem() {
+    public Output<String> system() {
         return this.system;
     }
 
@@ -126,8 +127,8 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
-        return this.volumeName == null ? Output.empty() : this.volumeName;
+    public Output<String> volumeName() {
+        return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
     public ScaleIOVolumeSourceArgs(
@@ -154,16 +155,16 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ScaleIOVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.gateway = Output.empty();
-        this.protectionDomain = Output.empty();
-        this.readOnly = Output.empty();
-        this.secretRef = Output.empty();
-        this.sslEnabled = Output.empty();
-        this.storageMode = Output.empty();
-        this.storagePool = Output.empty();
-        this.system = Output.empty();
-        this.volumeName = Output.empty();
+        this.fsType = Codegen.empty();
+        this.gateway = Codegen.empty();
+        this.protectionDomain = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secretRef = Codegen.empty();
+        this.sslEnabled = Codegen.empty();
+        this.storageMode = Codegen.empty();
+        this.storagePool = Codegen.empty();
+        this.system = Codegen.empty();
+        this.volumeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder gateway(Output<String> gateway) {
@@ -225,7 +226,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder protectionDomain(@Nullable String protectionDomain) {
-            this.protectionDomain = Output.ofNullable(protectionDomain);
+            this.protectionDomain = Codegen.ofNullable(protectionDomain);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -233,7 +234,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretRef(Output<LocalObjectReferenceArgs> secretRef) {
@@ -249,7 +250,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sslEnabled(@Nullable Boolean sslEnabled) {
-            this.sslEnabled = Output.ofNullable(sslEnabled);
+            this.sslEnabled = Codegen.ofNullable(sslEnabled);
             return this;
         }
         public Builder storageMode(@Nullable Output<String> storageMode) {
@@ -257,7 +258,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder storageMode(@Nullable String storageMode) {
-            this.storageMode = Output.ofNullable(storageMode);
+            this.storageMode = Codegen.ofNullable(storageMode);
             return this;
         }
         public Builder storagePool(@Nullable Output<String> storagePool) {
@@ -265,7 +266,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder storagePool(@Nullable String storagePool) {
-            this.storagePool = Output.ofNullable(storagePool);
+            this.storagePool = Codegen.ofNullable(storagePool);
             return this;
         }
         public Builder system(Output<String> system) {
@@ -281,7 +282,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Output.ofNullable(volumeName);
+            this.volumeName = Codegen.ofNullable(volumeName);
             return this;
         }        public ScaleIOVolumeSourceArgs build() {
             return new ScaleIOVolumeSourceArgs(fsType, gateway, protectionDomain, readOnly, secretRef, sslEnabled, storageMode, storagePool, system, volumeName);

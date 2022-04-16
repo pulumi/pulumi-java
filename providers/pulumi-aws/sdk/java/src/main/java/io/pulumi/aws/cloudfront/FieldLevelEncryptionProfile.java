@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionProfileEncryptionEnt
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * @return Internal value used by CloudFront to allow future updates to the Field Level Encryption Profile.
      * 
      */
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference;
     }
     /**
@@ -54,7 +55,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * @return An optional comment about the Field Level Encryption Profile.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -68,7 +69,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * @return The encryption entities config block for field-level encryption profiles that contains an attribute `items` which includes the encryption key and field pattern specifications.
      * 
      */
-    public Output<FieldLevelEncryptionProfileEncryptionEntities> getEncryptionEntities() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntities> encryptionEntities() {
         return this.encryptionEntities;
     }
     /**
@@ -82,7 +83,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * @return The current version of the Field Level Encryption Profile. For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -96,7 +97,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * @return The name of the Field Level Encryption Profile.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -122,7 +123,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public FieldLevelEncryptionProfile(String name, FieldLevelEncryptionProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/fieldLevelEncryptionProfile:FieldLevelEncryptionProfile", name, args == null ? FieldLevelEncryptionProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/fieldLevelEncryptionProfile:FieldLevelEncryptionProfile", name, args == null ? FieldLevelEncryptionProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FieldLevelEncryptionProfile(String name, Output<String> id, @Nullable FieldLevelEncryptionProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

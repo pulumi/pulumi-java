@@ -36,14 +36,14 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
      * Must be specified in CIDR notation.
      * 
     */
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
      * Field for users to identify CIDR blocks.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 

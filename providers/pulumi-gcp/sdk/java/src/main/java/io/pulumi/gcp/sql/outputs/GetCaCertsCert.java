@@ -53,35 +53,35 @@ public final class GetCaCertsCert {
      * The CA certificate used to connect to the SQL instance via SSL.
      * 
     */
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
     /**
      * The CN valid for the CA cert.
      * 
     */
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
     /**
      * Creation time of the CA cert.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Expiration time of the CA cert.
      * 
     */
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
     /**
      * SHA1 fingerprint of the CA cert.
      * 
     */
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
     @Import(name="level", required=true)
       private final Output<Either<String,LockLevel>> level;
 
-    public Output<Either<String,LockLevel>> getLevel() {
+    public Output<Either<String,LockLevel>> level() {
         return this.level;
     }
 
@@ -36,8 +37,8 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
     @Import(name="lockName")
       private final @Nullable Output<String> lockName;
 
-    public Output<String> getLockName() {
-        return this.lockName == null ? Output.empty() : this.lockName;
+    public Output<String> lockName() {
+        return this.lockName == null ? Codegen.empty() : this.lockName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+    public Output<String> notes() {
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
     @Import(name="owners")
       private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
-    public Output<List<ManagementLockOwnerArgs>> getOwners() {
-        return this.owners == null ? Output.empty() : this.owners;
+    public Output<List<ManagementLockOwnerArgs>> owners() {
+        return this.owners == null ? Codegen.empty() : this.owners;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,11 +88,11 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
     }
 
     private ManagementLockAtResourceGroupLevelArgs() {
-        this.level = Output.empty();
-        this.lockName = Output.empty();
-        this.notes = Output.empty();
-        this.owners = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.level = Codegen.empty();
+        this.lockName = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.owners = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
             return this;
         }
         public Builder lockName(@Nullable String lockName) {
-            this.lockName = Output.ofNullable(lockName);
+            this.lockName = Codegen.ofNullable(lockName);
             return this;
         }
         public Builder notes(@Nullable Output<String> notes) {
@@ -143,7 +144,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
@@ -151,7 +152,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
             return this;
         }
         public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
-            this.owners = Output.ofNullable(owners);
+            this.owners = Codegen.ofNullable(owners);
             return this;
         }
         public Builder owners(ManagementLockOwnerArgs... owners) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs ex
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -33,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs ex
     }
 
     private GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs() {
-        this.value = Output.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

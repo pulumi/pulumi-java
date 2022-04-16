@@ -19,7 +19,7 @@ public final class GetHealthAlertArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHealthAlertArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ruleName", required=true)
       private final String ruleName;
 
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
     @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
-    public Output<String> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+    public Output<String> cpu() {
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
     @Import(name="instanceRoleArn")
       private final @Nullable Output<String> instanceRoleArn;
 
-    public Output<String> getInstanceRoleArn() {
-        return this.instanceRoleArn == null ? Output.empty() : this.instanceRoleArn;
+    public Output<String> instanceRoleArn() {
+        return this.instanceRoleArn == null ? Codegen.empty() : this.instanceRoleArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+    public Output<String> memory() {
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     public ServiceInstanceConfigurationGetArgs(
@@ -57,9 +58,9 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
     }
 
     private ServiceInstanceConfigurationGetArgs() {
-        this.cpu = Output.empty();
-        this.instanceRoleArn = Output.empty();
-        this.memory = Output.empty();
+        this.cpu = Codegen.empty();
+        this.instanceRoleArn = Codegen.empty();
+        this.memory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
@@ -99,7 +100,7 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
-            this.instanceRoleArn = Output.ofNullable(instanceRoleArn);
+            this.instanceRoleArn = Codegen.ofNullable(instanceRoleArn);
             return this;
         }
         public Builder memory(@Nullable Output<String> memory) {
@@ -107,7 +108,7 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder memory(@Nullable String memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }        public ServiceInstanceConfigurationGetArgs build() {
             return new ServiceInstanceConfigurationGetArgs(cpu, instanceRoleArn, memory);

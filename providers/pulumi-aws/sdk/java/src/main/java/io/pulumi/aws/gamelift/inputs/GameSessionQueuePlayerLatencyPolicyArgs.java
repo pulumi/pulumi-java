@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class GameSessionQueuePlayerLatencyPolicyArgs extends io.pulumi.res
     @Import(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
       private final Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
 
-    public Output<Integer> getMaximumIndividualPlayerLatencyMilliseconds() {
+    public Output<Integer> maximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
     }
 
@@ -32,8 +33,8 @@ public final class GameSessionQueuePlayerLatencyPolicyArgs extends io.pulumi.res
     @Import(name="policyDurationSeconds")
       private final @Nullable Output<Integer> policyDurationSeconds;
 
-    public Output<Integer> getPolicyDurationSeconds() {
-        return this.policyDurationSeconds == null ? Output.empty() : this.policyDurationSeconds;
+    public Output<Integer> policyDurationSeconds() {
+        return this.policyDurationSeconds == null ? Codegen.empty() : this.policyDurationSeconds;
     }
 
     public GameSessionQueuePlayerLatencyPolicyArgs(
@@ -44,8 +45,8 @@ public final class GameSessionQueuePlayerLatencyPolicyArgs extends io.pulumi.res
     }
 
     private GameSessionQueuePlayerLatencyPolicyArgs() {
-        this.maximumIndividualPlayerLatencyMilliseconds = Output.empty();
-        this.policyDurationSeconds = Output.empty();
+        this.maximumIndividualPlayerLatencyMilliseconds = Codegen.empty();
+        this.policyDurationSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class GameSessionQueuePlayerLatencyPolicyArgs extends io.pulumi.res
             return this;
         }
         public Builder policyDurationSeconds(@Nullable Integer policyDurationSeconds) {
-            this.policyDurationSeconds = Output.ofNullable(policyDurationSeconds);
+            this.policyDurationSeconds = Codegen.ofNullable(policyDurationSeconds);
             return this;
         }        public GameSessionQueuePlayerLatencyPolicyArgs build() {
             return new GameSessionQueuePlayerLatencyPolicyArgs(maximumIndividualPlayerLatencyMilliseconds, policyDurationSeconds);

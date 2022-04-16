@@ -11,6 +11,7 @@ import io.pulumi.awsnative.macie.outputs.FindingsFilterListItem;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Findings filter action.
      * 
      */
-    public Output</* @Nullable */ FindingsFilterFindingFilterAction> getAction() {
+    public Output</* @Nullable */ FindingsFilterFindingFilterAction> action() {
         return this.action;
     }
     /**
@@ -47,7 +48,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Findings filter ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +62,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Findings filter description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +76,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Findings filter criteria.
      * 
      */
-    public Output<FindingsFilterFindingCriteria> getFindingCriteria() {
+    public Output<FindingsFilterFindingCriteria> findingCriteria() {
         return this.findingCriteria;
     }
     /**
@@ -89,7 +90,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Findings filters list.
      * 
      */
-    public Output<List<FindingsFilterListItem>> getFindingsFilterListItems() {
+    public Output<List<FindingsFilterListItem>> findingsFilterListItems() {
         return this.findingsFilterListItems;
     }
     /**
@@ -103,7 +104,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Findings filter name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +118,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Findings filter position.
      * 
      */
-    public Output</* @Nullable */ Integer> getPosition() {
+    public Output</* @Nullable */ Integer> position() {
         return this.position;
     }
 
@@ -143,7 +144,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FindingsFilter(String name, FindingsFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:macie:FindingsFilter", name, args == null ? FindingsFilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:macie:FindingsFilter", name, args == null ? FindingsFilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FindingsFilter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

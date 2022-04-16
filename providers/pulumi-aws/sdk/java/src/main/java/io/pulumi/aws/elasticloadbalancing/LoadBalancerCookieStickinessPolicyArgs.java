@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends io.pulumi.reso
     @Import(name="cookieExpirationPeriod")
       private final @Nullable Output<Integer> cookieExpirationPeriod;
 
-    public Output<Integer> getCookieExpirationPeriod() {
-        return this.cookieExpirationPeriod == null ? Output.empty() : this.cookieExpirationPeriod;
+    public Output<Integer> cookieExpirationPeriod() {
+        return this.cookieExpirationPeriod == null ? Codegen.empty() : this.cookieExpirationPeriod;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends io.pulumi.reso
     @Import(name="lbPort", required=true)
       private final Output<Integer> lbPort;
 
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
 
@@ -48,7 +49,7 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends io.pulumi.reso
     @Import(name="loadBalancer", required=true)
       private final Output<String> loadBalancer;
 
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
 
@@ -59,8 +60,8 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public LoadBalancerCookieStickinessPolicyArgs(
@@ -75,10 +76,10 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends io.pulumi.reso
     }
 
     private LoadBalancerCookieStickinessPolicyArgs() {
-        this.cookieExpirationPeriod = Output.empty();
-        this.lbPort = Output.empty();
-        this.loadBalancer = Output.empty();
-        this.name = Output.empty();
+        this.cookieExpirationPeriod = Codegen.empty();
+        this.lbPort = Codegen.empty();
+        this.loadBalancer = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends io.pulumi.reso
             return this;
         }
         public Builder cookieExpirationPeriod(@Nullable Integer cookieExpirationPeriod) {
-            this.cookieExpirationPeriod = Output.ofNullable(cookieExpirationPeriod);
+            this.cookieExpirationPeriod = Codegen.ofNullable(cookieExpirationPeriod);
             return this;
         }
         public Builder lbPort(Output<Integer> lbPort) {
@@ -136,7 +137,7 @@ public final class LoadBalancerCookieStickinessPolicyArgs extends io.pulumi.reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public LoadBalancerCookieStickinessPolicyArgs build() {
             return new LoadBalancerCookieStickinessPolicyArgs(cookieExpirationPeriod, lbPort, loadBalancer, name);

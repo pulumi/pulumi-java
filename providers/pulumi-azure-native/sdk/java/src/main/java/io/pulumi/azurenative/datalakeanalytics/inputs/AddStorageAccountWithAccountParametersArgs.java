@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakeanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
     @Import(name="accessKey", required=true)
       private final Output<String> accessKey;
 
-    public Output<String> getAccessKey() {
+    public Output<String> accessKey() {
         return this.accessKey;
     }
 
@@ -36,7 +37,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,8 +48,8 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
     @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
-    public Output<String> getSuffix() {
-        return this.suffix == null ? Output.empty() : this.suffix;
+    public Output<String> suffix() {
+        return this.suffix == null ? Codegen.empty() : this.suffix;
     }
 
     public AddStorageAccountWithAccountParametersArgs(
@@ -57,13 +58,13 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
         @Nullable Output<String> suffix) {
         this.accessKey = Objects.requireNonNull(accessKey, "expected parameter 'accessKey' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.suffix = suffix == null ? Output.ofNullable("azuredatalakestore.net") : suffix;
+        this.suffix = suffix == null ? Codegen.ofNullable("azuredatalakestore.net") : suffix;
     }
 
     private AddStorageAccountWithAccountParametersArgs() {
-        this.accessKey = Output.empty();
-        this.name = Output.empty();
-        this.suffix = Output.empty();
+        this.accessKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.suffix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
             return this;
         }
         public Builder suffix(@Nullable String suffix) {
-            this.suffix = Output.ofNullable(suffix);
+            this.suffix = Codegen.ofNullable(suffix);
             return this;
         }        public AddStorageAccountWithAccountParametersArgs build() {
             return new AddStorageAccountWithAccountParametersArgs(accessKey, name, suffix);

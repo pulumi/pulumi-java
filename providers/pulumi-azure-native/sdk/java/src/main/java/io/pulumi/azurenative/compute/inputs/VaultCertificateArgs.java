@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="certificateStore")
       private final @Nullable Output<String> certificateStore;
 
-    public Output<String> getCertificateStore() {
-        return this.certificateStore == null ? Output.empty() : this.certificateStore;
+    public Output<String> certificateStore() {
+        return this.certificateStore == null ? Codegen.empty() : this.certificateStore;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
 
-    public Output<String> getCertificateUrl() {
-        return this.certificateUrl == null ? Output.empty() : this.certificateUrl;
+    public Output<String> certificateUrl() {
+        return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
     }
 
     public VaultCertificateArgs(
@@ -48,8 +49,8 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VaultCertificateArgs() {
-        this.certificateStore = Output.empty();
-        this.certificateUrl = Output.empty();
+        this.certificateStore = Codegen.empty();
+        this.certificateUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder certificateStore(@Nullable String certificateStore) {
-            this.certificateStore = Output.ofNullable(certificateStore);
+            this.certificateStore = Codegen.ofNullable(certificateStore);
             return this;
         }
         public Builder certificateUrl(@Nullable Output<String> certificateUrl) {
@@ -87,7 +88,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Output.ofNullable(certificateUrl);
+            this.certificateUrl = Codegen.ofNullable(certificateUrl);
             return this;
         }        public VaultCertificateArgs build() {
             return new VaultCertificateArgs(certificateStore, certificateUrl);

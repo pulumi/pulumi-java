@@ -7,6 +7,7 @@ import io.pulumi.azurenative.chaos.enums.SelectorType;
 import io.pulumi.azurenative.chaos.inputs.TargetReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -38,7 +39,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targets", required=true)
       private final Output<List<TargetReferenceArgs>> targets;
 
-    public Output<List<TargetReferenceArgs>> getTargets() {
+    public Output<List<TargetReferenceArgs>> targets() {
         return this.targets;
     }
 
@@ -49,7 +50,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<SelectorType> type;
 
-    public Output<SelectorType> getType() {
+    public Output<SelectorType> type() {
         return this.type;
     }
 
@@ -63,9 +64,9 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SelectorArgs() {
-        this.id = Output.empty();
-        this.targets = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.targets = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

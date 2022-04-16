@@ -35,22 +35,22 @@ public final class ValueResponse {
         this.timestampValue = timestampValue;
     }
 
-    public Boolean getBooleanValue() {
+    public Boolean booleanValue() {
         return this.booleanValue;
     }
-    public DateResponse getDateValue() {
+    public DateResponse dateValue() {
         return this.dateValue;
     }
-    public Double getDoubleValue() {
+    public Double doubleValue() {
         return this.doubleValue;
     }
-    public String getIntegerValue() {
+    public String integerValue() {
         return this.integerValue;
     }
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
-    public String getTimestampValue() {
+    public String timestampValue() {
         return this.timestampValue;
     }
 

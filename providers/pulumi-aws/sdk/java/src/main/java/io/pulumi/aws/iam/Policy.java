@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.PolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS to this policy.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Description of the IAM policy.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +69,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The name of the policy. If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -82,7 +83,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -98,7 +99,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     /**
@@ -112,7 +113,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -126,7 +127,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The policy's ID.
      * 
      */
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
     /**
@@ -140,7 +141,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Map of resource tags for the IAM Policy
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +155,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -180,7 +181,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Policy(String name, PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Policy(String name, Output<String> id, @Nullable PolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

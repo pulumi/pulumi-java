@@ -6,6 +6,7 @@ package io.pulumi.googlenative.notebooks_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.EnvironmentArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
@@ -31,7 +32,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Use a container image to start the notebook instance.
      * 
      */
-    public Output<ContainerImageResponse> getContainerImage() {
+    public Output<ContainerImageResponse> containerImage() {
         return this.containerImage;
     }
     /**
@@ -45,7 +46,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The time at which this environment was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +60,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return A brief description of this environment.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Display name of this environment for the UI.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -87,7 +88,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
      * 
      */
-    public Output<String> getPostStartupScript() {
+    public Output<String> postStartupScript() {
         return this.postStartupScript;
     }
     /**
@@ -115,7 +116,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Use a Compute Engine VM image to start the notebook instance.
      * 
      */
-    public Output<VmImageResponse> getVmImage() {
+    public Output<VmImageResponse> vmImage() {
         return this.vmImage;
     }
 
@@ -141,7 +142,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:notebooks/v1:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:notebooks/v1:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Environment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

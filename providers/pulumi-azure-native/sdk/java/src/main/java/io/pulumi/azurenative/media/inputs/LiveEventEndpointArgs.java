@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public LiveEventEndpointArgs(
@@ -48,8 +49,8 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LiveEventEndpointArgs() {
-        this.protocol = Output.empty();
-        this.url = Output.empty();
+        this.protocol = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -87,7 +88,7 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public LiveEventEndpointArgs build() {
             return new LiveEventEndpointArgs(protocol, url);

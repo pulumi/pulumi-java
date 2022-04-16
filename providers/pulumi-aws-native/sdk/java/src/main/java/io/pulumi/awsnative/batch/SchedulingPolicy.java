@@ -9,6 +9,7 @@ import io.pulumi.awsnative.batch.outputs.SchedulingPolicyFairsharePolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,13 +23,13 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="fairsharePolicy", type=SchedulingPolicyFairsharePolicy.class, parameters={})
     private Output</* @Nullable */ SchedulingPolicyFairsharePolicy> fairsharePolicy;
 
-    public Output</* @Nullable */ SchedulingPolicyFairsharePolicy> getFairsharePolicy() {
+    public Output</* @Nullable */ SchedulingPolicyFairsharePolicy> fairsharePolicy() {
         return this.fairsharePolicy;
     }
     /**
@@ -42,7 +43,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of Scheduling Policy.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * @return A key-value pair to associate with a resource.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
 
@@ -82,7 +83,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SchedulingPolicy(String name, @Nullable SchedulingPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:batch:SchedulingPolicy", name, args == null ? SchedulingPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:batch:SchedulingPolicy", name, args == null ? SchedulingPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SchedulingPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

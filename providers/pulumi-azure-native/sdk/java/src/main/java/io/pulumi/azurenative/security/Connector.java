@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Settings for authentication management, these settings are relevant only for the cloud connector.
      * 
      */
-    public Output</* @Nullable */ Object> getAuthenticationDetails() {
+    public Output</* @Nullable */ Object> authenticationDetails() {
         return this.authenticationDetails;
     }
     /**
@@ -60,7 +61,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
      * 
      */
-    public Output</* @Nullable */ HybridComputeSettingsPropertiesResponse> getHybridComputeSettings() {
+    public Output</* @Nullable */ HybridComputeSettingsPropertiesResponse> hybridComputeSettings() {
         return this.hybridComputeSettings;
     }
     /**
@@ -74,7 +75,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +89,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -114,7 +115,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connector(String name, @Nullable ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:security:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:security:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

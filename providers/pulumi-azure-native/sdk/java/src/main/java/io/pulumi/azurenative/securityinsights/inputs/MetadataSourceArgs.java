@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.SourceKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,SourceKind>> kind;
 
-    public Output<Either<String,SourceKind>> getKind() {
+    public Output<Either<String,SourceKind>> kind() {
         return this.kind;
     }
 
@@ -38,8 +39,8 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
-    public Output<String> getSourceId() {
-        return this.sourceId == null ? Output.empty() : this.sourceId;
+    public Output<String> sourceId() {
+        return this.sourceId == null ? Codegen.empty() : this.sourceId;
     }
 
     public MetadataSourceArgs(
@@ -63,9 +64,9 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataSourceArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.sourceId = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sourceId(@Nullable Output<String> sourceId) {
@@ -113,7 +114,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Output.ofNullable(sourceId);
+            this.sourceId = Codegen.ofNullable(sourceId);
             return this;
         }        public MetadataSourceArgs build() {
             return new MetadataSourceArgs(kind, name, sourceId);

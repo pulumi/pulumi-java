@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkInterfaceNicType;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkInterfaceStackType;
 import io.pulumi.googlenative.compute_alpha.inputs.AccessConfigArgs;
@@ -32,8 +33,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accessConfigs")
       private final @Nullable Output<List<AccessConfigArgs>> accessConfigs;
 
-    public Output<List<AccessConfigArgs>> getAccessConfigs() {
-        return this.accessConfigs == null ? Output.empty() : this.accessConfigs;
+    public Output<List<AccessConfigArgs>> accessConfigs() {
+        return this.accessConfigs == null ? Codegen.empty() : this.accessConfigs;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="aliasIpRanges")
       private final @Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges;
 
-    public Output<List<AliasIpRangeArgs>> getAliasIpRanges() {
-        return this.aliasIpRanges == null ? Output.empty() : this.aliasIpRanges;
+    public Output<List<AliasIpRangeArgs>> aliasIpRanges() {
+        return this.aliasIpRanges == null ? Codegen.empty() : this.aliasIpRanges;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="internalIpv6PrefixLength")
       private final @Nullable Output<Integer> internalIpv6PrefixLength;
 
-    public Output<Integer> getInternalIpv6PrefixLength() {
-        return this.internalIpv6PrefixLength == null ? Output.empty() : this.internalIpv6PrefixLength;
+    public Output<Integer> internalIpv6PrefixLength() {
+        return this.internalIpv6PrefixLength == null ? Codegen.empty() : this.internalIpv6PrefixLength;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipv6AccessConfigs")
       private final @Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs;
 
-    public Output<List<AccessConfigArgs>> getIpv6AccessConfigs() {
-        return this.ipv6AccessConfigs == null ? Output.empty() : this.ipv6AccessConfigs;
+    public Output<List<AccessConfigArgs>> ipv6AccessConfigs() {
+        return this.ipv6AccessConfigs == null ? Codegen.empty() : this.ipv6AccessConfigs;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
-    public Output<String> getIpv6Address() {
-        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
+    public Output<String> ipv6Address() {
+        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="networkIP")
       private final @Nullable Output<String> networkIP;
 
-    public Output<String> getNetworkIP() {
-        return this.networkIP == null ? Output.empty() : this.networkIP;
+    public Output<String> networkIP() {
+        return this.networkIP == null ? Codegen.empty() : this.networkIP;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="nicType")
       private final @Nullable Output<NetworkInterfaceNicType> nicType;
 
-    public Output<NetworkInterfaceNicType> getNicType() {
-        return this.nicType == null ? Output.empty() : this.nicType;
+    public Output<NetworkInterfaceNicType> nicType() {
+        return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="queueCount")
       private final @Nullable Output<Integer> queueCount;
 
-    public Output<Integer> getQueueCount() {
-        return this.queueCount == null ? Output.empty() : this.queueCount;
+    public Output<Integer> queueCount() {
+        return this.queueCount == null ? Codegen.empty() : this.queueCount;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="stackType")
       private final @Nullable Output<NetworkInterfaceStackType> stackType;
 
-    public Output<NetworkInterfaceStackType> getStackType() {
-        return this.stackType == null ? Output.empty() : this.stackType;
+    public Output<NetworkInterfaceStackType> stackType() {
+        return this.stackType == null ? Codegen.empty() : this.stackType;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subinterfaces")
       private final @Nullable Output<List<NetworkInterfaceSubInterfaceArgs>> subinterfaces;
 
-    public Output<List<NetworkInterfaceSubInterfaceArgs>> getSubinterfaces() {
-        return this.subinterfaces == null ? Output.empty() : this.subinterfaces;
+    public Output<List<NetworkInterfaceSubInterfaceArgs>> subinterfaces() {
+        return this.subinterfaces == null ? Codegen.empty() : this.subinterfaces;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+    public Output<String> subnetwork() {
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public NetworkInterfaceArgs(
@@ -185,18 +186,18 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.accessConfigs = Output.empty();
-        this.aliasIpRanges = Output.empty();
-        this.internalIpv6PrefixLength = Output.empty();
-        this.ipv6AccessConfigs = Output.empty();
-        this.ipv6Address = Output.empty();
-        this.network = Output.empty();
-        this.networkIP = Output.empty();
-        this.nicType = Output.empty();
-        this.queueCount = Output.empty();
-        this.stackType = Output.empty();
-        this.subinterfaces = Output.empty();
-        this.subnetwork = Output.empty();
+        this.accessConfigs = Codegen.empty();
+        this.aliasIpRanges = Codegen.empty();
+        this.internalIpv6PrefixLength = Codegen.empty();
+        this.ipv6AccessConfigs = Codegen.empty();
+        this.ipv6Address = Codegen.empty();
+        this.network = Codegen.empty();
+        this.networkIP = Codegen.empty();
+        this.nicType = Codegen.empty();
+        this.queueCount = Codegen.empty();
+        this.stackType = Codegen.empty();
+        this.subinterfaces = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder accessConfigs(@Nullable List<AccessConfigArgs> accessConfigs) {
-            this.accessConfigs = Output.ofNullable(accessConfigs);
+            this.accessConfigs = Codegen.ofNullable(accessConfigs);
             return this;
         }
         public Builder accessConfigs(AccessConfigArgs... accessConfigs) {
@@ -257,7 +258,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder aliasIpRanges(@Nullable List<AliasIpRangeArgs> aliasIpRanges) {
-            this.aliasIpRanges = Output.ofNullable(aliasIpRanges);
+            this.aliasIpRanges = Codegen.ofNullable(aliasIpRanges);
             return this;
         }
         public Builder aliasIpRanges(AliasIpRangeArgs... aliasIpRanges) {
@@ -268,7 +269,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder internalIpv6PrefixLength(@Nullable Integer internalIpv6PrefixLength) {
-            this.internalIpv6PrefixLength = Output.ofNullable(internalIpv6PrefixLength);
+            this.internalIpv6PrefixLength = Codegen.ofNullable(internalIpv6PrefixLength);
             return this;
         }
         public Builder ipv6AccessConfigs(@Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs) {
@@ -276,7 +277,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6AccessConfigs(@Nullable List<AccessConfigArgs> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = Output.ofNullable(ipv6AccessConfigs);
+            this.ipv6AccessConfigs = Codegen.ofNullable(ipv6AccessConfigs);
             return this;
         }
         public Builder ipv6AccessConfigs(AccessConfigArgs... ipv6AccessConfigs) {
@@ -287,7 +288,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Output.ofNullable(ipv6Address);
+            this.ipv6Address = Codegen.ofNullable(ipv6Address);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -295,7 +296,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder networkIP(@Nullable Output<String> networkIP) {
@@ -303,7 +304,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkIP(@Nullable String networkIP) {
-            this.networkIP = Output.ofNullable(networkIP);
+            this.networkIP = Codegen.ofNullable(networkIP);
             return this;
         }
         public Builder nicType(@Nullable Output<NetworkInterfaceNicType> nicType) {
@@ -311,7 +312,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder nicType(@Nullable NetworkInterfaceNicType nicType) {
-            this.nicType = Output.ofNullable(nicType);
+            this.nicType = Codegen.ofNullable(nicType);
             return this;
         }
         public Builder queueCount(@Nullable Output<Integer> queueCount) {
@@ -319,7 +320,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder queueCount(@Nullable Integer queueCount) {
-            this.queueCount = Output.ofNullable(queueCount);
+            this.queueCount = Codegen.ofNullable(queueCount);
             return this;
         }
         public Builder stackType(@Nullable Output<NetworkInterfaceStackType> stackType) {
@@ -327,7 +328,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stackType(@Nullable NetworkInterfaceStackType stackType) {
-            this.stackType = Output.ofNullable(stackType);
+            this.stackType = Codegen.ofNullable(stackType);
             return this;
         }
         public Builder subinterfaces(@Nullable Output<List<NetworkInterfaceSubInterfaceArgs>> subinterfaces) {
@@ -335,7 +336,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder subinterfaces(@Nullable List<NetworkInterfaceSubInterfaceArgs> subinterfaces) {
-            this.subinterfaces = Output.ofNullable(subinterfaces);
+            this.subinterfaces = Codegen.ofNullable(subinterfaces);
             return this;
         }
         public Builder subinterfaces(NetworkInterfaceSubInterfaceArgs... subinterfaces) {
@@ -346,7 +347,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(accessConfigs, aliasIpRanges, internalIpv6PrefixLength, ipv6AccessConfigs, ipv6Address, network, networkIP, nicType, queueCount, stackType, subinterfaces, subnetwork);

@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="externalId", required=true)
       private final Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId;
     }
 
@@ -31,7 +32,7 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="snsCallerArn", required=true)
       private final Output<String> snsCallerArn;
 
-    public Output<String> getSnsCallerArn() {
+    public Output<String> snsCallerArn() {
         return this.snsCallerArn;
     }
 
@@ -43,8 +44,8 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private UserPoolSmsConfigurationArgs() {
-        this.externalId = Output.empty();
-        this.snsCallerArn = Output.empty();
+        this.externalId = Codegen.empty();
+        this.snsCallerArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -9,6 +9,7 @@ import io.pulumi.aws.cognito.inputs.IdentityProviderState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
      * 
      */
-    public Output<Map<String,String>> getAttributeMapping() {
+    public Output<Map<String,String>> attributeMapping() {
         return this.attributeMapping;
     }
     /**
@@ -55,7 +56,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return The list of identity providers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIdpIdentifiers() {
+    public Output</* @Nullable */ List<String>> idpIdentifiers() {
         return this.idpIdentifiers;
     }
     /**
@@ -69,7 +70,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return The map of identity details, such as access token
      * 
      */
-    public Output<Map<String,String>> getProviderDetails() {
+    public Output<Map<String,String>> providerDetails() {
         return this.providerDetails;
     }
     /**
@@ -83,7 +84,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return The provider name
      * 
      */
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
     /**
@@ -97,7 +98,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType)
      * 
      */
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
     /**
@@ -111,7 +112,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @return The user pool id
      * 
      */
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -137,7 +138,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityProvider(String name, IdentityProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/identityProvider:IdentityProvider", name, args == null ? IdentityProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/identityProvider:IdentityProvider", name, args == null ? IdentityProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityProvider(String name, Output<String> id, @Nullable IdentityProviderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

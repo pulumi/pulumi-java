@@ -10,6 +10,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,8 +34,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="affinityCookieName")
       private final @Nullable Output<String> affinityCookieName;
 
-    public Output<String> getAffinityCookieName() {
-        return this.affinityCookieName == null ? Output.empty() : this.affinityCookieName;
+    public Output<String> affinityCookieName() {
+        return this.affinityCookieName == null ? Codegen.empty() : this.affinityCookieName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="authenticationCertificates")
       private final @Nullable Output<List<SubResourceArgs>> authenticationCertificates;
 
-    public Output<List<SubResourceArgs>> getAuthenticationCertificates() {
-        return this.authenticationCertificates == null ? Output.empty() : this.authenticationCertificates;
+    public Output<List<SubResourceArgs>> authenticationCertificates() {
+        return this.authenticationCertificates == null ? Codegen.empty() : this.authenticationCertificates;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="connectionDraining")
       private final @Nullable Output<ApplicationGatewayConnectionDrainingArgs> connectionDraining;
 
-    public Output<ApplicationGatewayConnectionDrainingArgs> getConnectionDraining() {
-        return this.connectionDraining == null ? Output.empty() : this.connectionDraining;
+    public Output<ApplicationGatewayConnectionDrainingArgs> connectionDraining() {
+        return this.connectionDraining == null ? Codegen.empty() : this.connectionDraining;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="cookieBasedAffinity")
       private final @Nullable Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity;
 
-    public Output<Either<String,ApplicationGatewayCookieBasedAffinity>> getCookieBasedAffinity() {
-        return this.cookieBasedAffinity == null ? Output.empty() : this.cookieBasedAffinity;
+    public Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity() {
+        return this.cookieBasedAffinity == null ? Codegen.empty() : this.cookieBasedAffinity;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
-        return this.hostName == null ? Output.empty() : this.hostName;
+    public Output<String> hostName() {
+        return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="pickHostNameFromBackendAddress")
       private final @Nullable Output<Boolean> pickHostNameFromBackendAddress;
 
-    public Output<Boolean> getPickHostNameFromBackendAddress() {
-        return this.pickHostNameFromBackendAddress == null ? Output.empty() : this.pickHostNameFromBackendAddress;
+    public Output<Boolean> pickHostNameFromBackendAddress() {
+        return this.pickHostNameFromBackendAddress == null ? Codegen.empty() : this.pickHostNameFromBackendAddress;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="probe")
       private final @Nullable Output<SubResourceArgs> probe;
 
-    public Output<SubResourceArgs> getProbe() {
-        return this.probe == null ? Output.empty() : this.probe;
+    public Output<SubResourceArgs> probe() {
+        return this.probe == null ? Codegen.empty() : this.probe;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="probeEnabled")
       private final @Nullable Output<Boolean> probeEnabled;
 
-    public Output<Boolean> getProbeEnabled() {
-        return this.probeEnabled == null ? Output.empty() : this.probeEnabled;
+    public Output<Boolean> probeEnabled() {
+        return this.probeEnabled == null ? Codegen.empty() : this.probeEnabled;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
-    public Output<Either<String,ApplicationGatewayProtocol>> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<Either<String,ApplicationGatewayProtocol>> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -176,8 +177,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="requestTimeout")
       private final @Nullable Output<Integer> requestTimeout;
 
-    public Output<Integer> getRequestTimeout() {
-        return this.requestTimeout == null ? Output.empty() : this.requestTimeout;
+    public Output<Integer> requestTimeout() {
+        return this.requestTimeout == null ? Codegen.empty() : this.requestTimeout;
     }
 
     /**
@@ -187,8 +188,8 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     @Import(name="trustedRootCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedRootCertificates;
 
-    public Output<List<SubResourceArgs>> getTrustedRootCertificates() {
-        return this.trustedRootCertificates == null ? Output.empty() : this.trustedRootCertificates;
+    public Output<List<SubResourceArgs>> trustedRootCertificates() {
+        return this.trustedRootCertificates == null ? Codegen.empty() : this.trustedRootCertificates;
     }
 
     public ApplicationGatewayBackendHttpSettingsArgs(
@@ -225,21 +226,21 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     }
 
     private ApplicationGatewayBackendHttpSettingsArgs() {
-        this.affinityCookieName = Output.empty();
-        this.authenticationCertificates = Output.empty();
-        this.connectionDraining = Output.empty();
-        this.cookieBasedAffinity = Output.empty();
-        this.hostName = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.pickHostNameFromBackendAddress = Output.empty();
-        this.port = Output.empty();
-        this.probe = Output.empty();
-        this.probeEnabled = Output.empty();
-        this.protocol = Output.empty();
-        this.requestTimeout = Output.empty();
-        this.trustedRootCertificates = Output.empty();
+        this.affinityCookieName = Codegen.empty();
+        this.authenticationCertificates = Codegen.empty();
+        this.connectionDraining = Codegen.empty();
+        this.cookieBasedAffinity = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.pickHostNameFromBackendAddress = Codegen.empty();
+        this.port = Codegen.empty();
+        this.probe = Codegen.empty();
+        this.probeEnabled = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.requestTimeout = Codegen.empty();
+        this.trustedRootCertificates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -295,7 +296,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder affinityCookieName(@Nullable String affinityCookieName) {
-            this.affinityCookieName = Output.ofNullable(affinityCookieName);
+            this.affinityCookieName = Codegen.ofNullable(affinityCookieName);
             return this;
         }
         public Builder authenticationCertificates(@Nullable Output<List<SubResourceArgs>> authenticationCertificates) {
@@ -303,7 +304,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder authenticationCertificates(@Nullable List<SubResourceArgs> authenticationCertificates) {
-            this.authenticationCertificates = Output.ofNullable(authenticationCertificates);
+            this.authenticationCertificates = Codegen.ofNullable(authenticationCertificates);
             return this;
         }
         public Builder authenticationCertificates(SubResourceArgs... authenticationCertificates) {
@@ -314,7 +315,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingArgs connectionDraining) {
-            this.connectionDraining = Output.ofNullable(connectionDraining);
+            this.connectionDraining = Codegen.ofNullable(connectionDraining);
             return this;
         }
         public Builder cookieBasedAffinity(@Nullable Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity) {
@@ -322,7 +323,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder cookieBasedAffinity(@Nullable Either<String,ApplicationGatewayCookieBasedAffinity> cookieBasedAffinity) {
-            this.cookieBasedAffinity = Output.ofNullable(cookieBasedAffinity);
+            this.cookieBasedAffinity = Codegen.ofNullable(cookieBasedAffinity);
             return this;
         }
         public Builder hostName(@Nullable Output<String> hostName) {
@@ -330,7 +331,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Output.ofNullable(hostName);
+            this.hostName = Codegen.ofNullable(hostName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -338,7 +339,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -346,7 +347,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -354,7 +355,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder pickHostNameFromBackendAddress(@Nullable Output<Boolean> pickHostNameFromBackendAddress) {
@@ -362,7 +363,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
-            this.pickHostNameFromBackendAddress = Output.ofNullable(pickHostNameFromBackendAddress);
+            this.pickHostNameFromBackendAddress = Codegen.ofNullable(pickHostNameFromBackendAddress);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -370,7 +371,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder probe(@Nullable Output<SubResourceArgs> probe) {
@@ -378,7 +379,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder probe(@Nullable SubResourceArgs probe) {
-            this.probe = Output.ofNullable(probe);
+            this.probe = Codegen.ofNullable(probe);
             return this;
         }
         public Builder probeEnabled(@Nullable Output<Boolean> probeEnabled) {
@@ -386,7 +387,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder probeEnabled(@Nullable Boolean probeEnabled) {
-            this.probeEnabled = Output.ofNullable(probeEnabled);
+            this.probeEnabled = Codegen.ofNullable(probeEnabled);
             return this;
         }
         public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
@@ -394,7 +395,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder requestTimeout(@Nullable Output<Integer> requestTimeout) {
@@ -402,7 +403,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder requestTimeout(@Nullable Integer requestTimeout) {
-            this.requestTimeout = Output.ofNullable(requestTimeout);
+            this.requestTimeout = Codegen.ofNullable(requestTimeout);
             return this;
         }
         public Builder trustedRootCertificates(@Nullable Output<List<SubResourceArgs>> trustedRootCertificates) {
@@ -410,7 +411,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
             return this;
         }
         public Builder trustedRootCertificates(@Nullable List<SubResourceArgs> trustedRootCertificates) {
-            this.trustedRootCertificates = Output.ofNullable(trustedRootCertificates);
+            this.trustedRootCertificates = Codegen.ofNullable(trustedRootCertificates);
             return this;
         }
         public Builder trustedRootCertificates(SubResourceArgs... trustedRootCertificates) {

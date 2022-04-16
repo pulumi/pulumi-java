@@ -24,7 +24,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowCors", required=true)
       private final Boolean allowCors;
 
-    public Boolean getAllowCors() {
+    public Boolean allowCors() {
         return this.allowCors;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

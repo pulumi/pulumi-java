@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+    public Output<String> dataType() {
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     public FunctionOutputArgs(@Nullable Output<String> dataType) {
@@ -34,7 +35,7 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionOutputArgs() {
-        this.dataType = Output.empty();
+        this.dataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }        public FunctionOutputArgs build() {
             return new FunctionOutputArgs(dataType);

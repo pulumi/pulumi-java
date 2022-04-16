@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesLimitsGetArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationGetArgs;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
     @Import(name="limits")
       private final @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
 
-    public Output<ServiceTaskSpecResourcesLimitsGetArgs> getLimits() {
-        return this.limits == null ? Output.empty() : this.limits;
+    public Output<ServiceTaskSpecResourcesLimitsGetArgs> limits() {
+        return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     @Import(name="reservation")
       private final @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
 
-    public Output<ServiceTaskSpecResourcesReservationGetArgs> getReservation() {
-        return this.reservation == null ? Output.empty() : this.reservation;
+    public Output<ServiceTaskSpecResourcesReservationGetArgs> reservation() {
+        return this.reservation == null ? Codegen.empty() : this.reservation;
     }
 
     public ServiceTaskSpecResourcesGetArgs(
@@ -37,8 +38,8 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
     }
 
     private ServiceTaskSpecResourcesGetArgs() {
-        this.limits = Output.empty();
-        this.reservation = Output.empty();
+        this.limits = Codegen.empty();
+        this.reservation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder limits(@Nullable ServiceTaskSpecResourcesLimitsGetArgs limits) {
-            this.limits = Output.ofNullable(limits);
+            this.limits = Codegen.ofNullable(limits);
             return this;
         }
         public Builder reservation(@Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
@@ -76,7 +77,7 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder reservation(@Nullable ServiceTaskSpecResourcesReservationGetArgs reservation) {
-            this.reservation = Output.ofNullable(reservation);
+            this.reservation = Codegen.ofNullable(reservation);
             return this;
         }        public ServiceTaskSpecResourcesGetArgs build() {
             return new ServiceTaskSpecResourcesGetArgs(limits, reservation);

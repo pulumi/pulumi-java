@@ -5,6 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     @Import(name="dataRetention", required=true)
       private final Output<Integer> dataRetention;
 
-    public Output<Integer> getDataRetention() {
+    public Output<Integer> dataRetention() {
         return this.dataRetention;
     }
 
@@ -35,8 +36,8 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     @Import(name="streamingNotificationTargets")
       private final @Nullable Output<List<String>> streamingNotificationTargets;
 
-    public Output<List<String>> getStreamingNotificationTargets() {
-        return this.streamingNotificationTargets == null ? Output.empty() : this.streamingNotificationTargets;
+    public Output<List<String>> streamingNotificationTargets() {
+        return this.streamingNotificationTargets == null ? Codegen.empty() : this.streamingNotificationTargets;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     @Import(name="voiceConnectorId", required=true)
       private final Output<String> voiceConnectorId;
 
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 
@@ -73,10 +74,10 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     }
 
     private VoiceConnectorStreamingArgs() {
-        this.dataRetention = Output.empty();
-        this.disabled = Output.empty();
-        this.streamingNotificationTargets = Output.empty();
-        this.voiceConnectorId = Output.empty();
+        this.dataRetention = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.streamingNotificationTargets = Codegen.empty();
+        this.voiceConnectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder streamingNotificationTargets(@Nullable Output<List<String>> streamingNotificationTargets) {
@@ -126,7 +127,7 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder streamingNotificationTargets(@Nullable List<String> streamingNotificationTargets) {
-            this.streamingNotificationTargets = Output.ofNullable(streamingNotificationTargets);
+            this.streamingNotificationTargets = Codegen.ofNullable(streamingNotificationTargets);
             return this;
         }
         public Builder streamingNotificationTargets(String... streamingNotificationTargets) {

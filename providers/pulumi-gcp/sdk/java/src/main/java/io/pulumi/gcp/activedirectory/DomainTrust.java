@@ -6,6 +6,7 @@ package io.pulumi.gcp.activedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.activedirectory.DomainTrustArgs;
 import io.pulumi.gcp.activedirectory.inputs.DomainTrustState;
@@ -60,7 +61,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -76,7 +77,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -90,7 +91,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * @return Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSelectiveAuthentication() {
+    public Output</* @Nullable */ Boolean> selectiveAuthentication() {
         return this.selectiveAuthentication;
     }
     /**
@@ -104,7 +105,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * @return The target DNS server IP addresses which can resolve the remote domain involved in the trust.
      * 
      */
-    public Output<List<String>> getTargetDnsIpAddresses() {
+    public Output<List<String>> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
     /**
@@ -118,7 +119,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * @return The fully qualified target domain name which will be in trust with the current domain.
      * 
      */
-    public Output<String> getTargetDomainName() {
+    public Output<String> targetDomainName() {
         return this.targetDomainName;
     }
     /**
@@ -134,7 +135,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
      * 
      */
-    public Output<String> getTrustDirection() {
+    public Output<String> trustDirection() {
         return this.trustDirection;
     }
     /**
@@ -150,7 +151,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getTrustHandshakeSecret() {
+    public Output<String> trustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
     /**
@@ -166,7 +167,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * Possible values are `FOREST` and `EXTERNAL`.
      * 
      */
-    public Output<String> getTrustType() {
+    public Output<String> trustType() {
         return this.trustType;
     }
 
@@ -192,7 +193,7 @@ public class DomainTrust extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainTrust(String name, DomainTrustArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:activedirectory/domainTrust:DomainTrust", name, args == null ? DomainTrustArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:activedirectory/domainTrust:DomainTrust", name, args == null ? DomainTrustArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainTrust(String name, Output<String> id, @Nullable DomainTrustState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

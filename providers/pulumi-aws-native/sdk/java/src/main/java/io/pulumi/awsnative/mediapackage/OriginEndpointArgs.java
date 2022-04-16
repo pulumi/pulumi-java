@@ -12,6 +12,7 @@ import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointMssPackageArgs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorization")
       private final @Nullable Output<OriginEndpointAuthorizationArgs> authorization;
 
-    public Output<OriginEndpointAuthorizationArgs> getAuthorization() {
-        return this.authorization == null ? Output.empty() : this.authorization;
+    public Output<OriginEndpointAuthorizationArgs> authorization() {
+        return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
     /**
@@ -37,22 +38,22 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelId", required=true)
       private final Output<String> channelId;
 
-    public Output<String> getChannelId() {
+    public Output<String> channelId() {
         return this.channelId;
     }
 
     @Import(name="cmafPackage")
       private final @Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage;
 
-    public Output<OriginEndpointCmafPackageArgs> getCmafPackage() {
-        return this.cmafPackage == null ? Output.empty() : this.cmafPackage;
+    public Output<OriginEndpointCmafPackageArgs> cmafPackage() {
+        return this.cmafPackage == null ? Codegen.empty() : this.cmafPackage;
     }
 
     @Import(name="dashPackage")
       private final @Nullable Output<OriginEndpointDashPackageArgs> dashPackage;
 
-    public Output<OriginEndpointDashPackageArgs> getDashPackage() {
-        return this.dashPackage == null ? Output.empty() : this.dashPackage;
+    public Output<OriginEndpointDashPackageArgs> dashPackage() {
+        return this.dashPackage == null ? Codegen.empty() : this.dashPackage;
     }
 
     /**
@@ -62,15 +63,15 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="hlsPackage")
       private final @Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage;
 
-    public Output<OriginEndpointHlsPackageArgs> getHlsPackage() {
-        return this.hlsPackage == null ? Output.empty() : this.hlsPackage;
+    public Output<OriginEndpointHlsPackageArgs> hlsPackage() {
+        return this.hlsPackage == null ? Codegen.empty() : this.hlsPackage;
     }
 
     /**
@@ -80,15 +81,15 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
-        return this.manifestName == null ? Output.empty() : this.manifestName;
+    public Output<String> manifestName() {
+        return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
     @Import(name="mssPackage")
       private final @Nullable Output<OriginEndpointMssPackageArgs> mssPackage;
 
-    public Output<OriginEndpointMssPackageArgs> getMssPackage() {
-        return this.mssPackage == null ? Output.empty() : this.mssPackage;
+    public Output<OriginEndpointMssPackageArgs> mssPackage() {
+        return this.mssPackage == null ? Codegen.empty() : this.mssPackage;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="origination")
       private final @Nullable Output<OriginEndpointOrigination> origination;
 
-    public Output<OriginEndpointOrigination> getOrigination() {
-        return this.origination == null ? Output.empty() : this.origination;
+    public Output<OriginEndpointOrigination> origination() {
+        return this.origination == null ? Codegen.empty() : this.origination;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startoverWindowSeconds")
       private final @Nullable Output<Integer> startoverWindowSeconds;
 
-    public Output<Integer> getStartoverWindowSeconds() {
-        return this.startoverWindowSeconds == null ? Output.empty() : this.startoverWindowSeconds;
+    public Output<Integer> startoverWindowSeconds() {
+        return this.startoverWindowSeconds == null ? Codegen.empty() : this.startoverWindowSeconds;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<OriginEndpointTagArgs>> tags;
 
-    public Output<List<OriginEndpointTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<OriginEndpointTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeDelaySeconds")
       private final @Nullable Output<Integer> timeDelaySeconds;
 
-    public Output<Integer> getTimeDelaySeconds() {
-        return this.timeDelaySeconds == null ? Output.empty() : this.timeDelaySeconds;
+    public Output<Integer> timeDelaySeconds() {
+        return this.timeDelaySeconds == null ? Codegen.empty() : this.timeDelaySeconds;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="whitelist")
       private final @Nullable Output<List<String>> whitelist;
 
-    public Output<List<String>> getWhitelist() {
-        return this.whitelist == null ? Output.empty() : this.whitelist;
+    public Output<List<String>> whitelist() {
+        return this.whitelist == null ? Codegen.empty() : this.whitelist;
     }
 
     public OriginEndpointArgs(
@@ -176,19 +177,19 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OriginEndpointArgs() {
-        this.authorization = Output.empty();
-        this.channelId = Output.empty();
-        this.cmafPackage = Output.empty();
-        this.dashPackage = Output.empty();
-        this.description = Output.empty();
-        this.hlsPackage = Output.empty();
-        this.manifestName = Output.empty();
-        this.mssPackage = Output.empty();
-        this.origination = Output.empty();
-        this.startoverWindowSeconds = Output.empty();
-        this.tags = Output.empty();
-        this.timeDelaySeconds = Output.empty();
-        this.whitelist = Output.empty();
+        this.authorization = Codegen.empty();
+        this.channelId = Codegen.empty();
+        this.cmafPackage = Codegen.empty();
+        this.dashPackage = Codegen.empty();
+        this.description = Codegen.empty();
+        this.hlsPackage = Codegen.empty();
+        this.manifestName = Codegen.empty();
+        this.mssPackage = Codegen.empty();
+        this.origination = Codegen.empty();
+        this.startoverWindowSeconds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeDelaySeconds = Codegen.empty();
+        this.whitelist = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorization(@Nullable OriginEndpointAuthorizationArgs authorization) {
-            this.authorization = Output.ofNullable(authorization);
+            this.authorization = Codegen.ofNullable(authorization);
             return this;
         }
         public Builder channelId(Output<String> channelId) {
@@ -256,7 +257,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cmafPackage(@Nullable OriginEndpointCmafPackageArgs cmafPackage) {
-            this.cmafPackage = Output.ofNullable(cmafPackage);
+            this.cmafPackage = Codegen.ofNullable(cmafPackage);
             return this;
         }
         public Builder dashPackage(@Nullable Output<OriginEndpointDashPackageArgs> dashPackage) {
@@ -264,7 +265,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashPackage(@Nullable OriginEndpointDashPackageArgs dashPackage) {
-            this.dashPackage = Output.ofNullable(dashPackage);
+            this.dashPackage = Codegen.ofNullable(dashPackage);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -272,7 +273,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hlsPackage(@Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage) {
@@ -280,7 +281,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hlsPackage(@Nullable OriginEndpointHlsPackageArgs hlsPackage) {
-            this.hlsPackage = Output.ofNullable(hlsPackage);
+            this.hlsPackage = Codegen.ofNullable(hlsPackage);
             return this;
         }
         public Builder manifestName(@Nullable Output<String> manifestName) {
@@ -288,7 +289,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Output.ofNullable(manifestName);
+            this.manifestName = Codegen.ofNullable(manifestName);
             return this;
         }
         public Builder mssPackage(@Nullable Output<OriginEndpointMssPackageArgs> mssPackage) {
@@ -296,7 +297,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mssPackage(@Nullable OriginEndpointMssPackageArgs mssPackage) {
-            this.mssPackage = Output.ofNullable(mssPackage);
+            this.mssPackage = Codegen.ofNullable(mssPackage);
             return this;
         }
         public Builder origination(@Nullable Output<OriginEndpointOrigination> origination) {
@@ -304,7 +305,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder origination(@Nullable OriginEndpointOrigination origination) {
-            this.origination = Output.ofNullable(origination);
+            this.origination = Codegen.ofNullable(origination);
             return this;
         }
         public Builder startoverWindowSeconds(@Nullable Output<Integer> startoverWindowSeconds) {
@@ -312,7 +313,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
-            this.startoverWindowSeconds = Output.ofNullable(startoverWindowSeconds);
+            this.startoverWindowSeconds = Codegen.ofNullable(startoverWindowSeconds);
             return this;
         }
         public Builder tags(@Nullable Output<List<OriginEndpointTagArgs>> tags) {
@@ -320,7 +321,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<OriginEndpointTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(OriginEndpointTagArgs... tags) {
@@ -331,7 +332,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeDelaySeconds(@Nullable Integer timeDelaySeconds) {
-            this.timeDelaySeconds = Output.ofNullable(timeDelaySeconds);
+            this.timeDelaySeconds = Codegen.ofNullable(timeDelaySeconds);
             return this;
         }
         public Builder whitelist(@Nullable Output<List<String>> whitelist) {
@@ -339,7 +340,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder whitelist(@Nullable List<String> whitelist) {
-            this.whitelist = Output.ofNullable(whitelist);
+            this.whitelist = Codegen.ofNullable(whitelist);
             return this;
         }
         public Builder whitelist(String... whitelist) {

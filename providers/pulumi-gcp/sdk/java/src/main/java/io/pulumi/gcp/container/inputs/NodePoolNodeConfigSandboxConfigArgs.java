@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class NodePoolNodeConfigSandboxConfigArgs extends io.pulumi.resourc
     @Import(name="sandboxType", required=true)
       private final Output<String> sandboxType;
 
-    public Output<String> getSandboxType() {
+    public Output<String> sandboxType() {
         return this.sandboxType;
     }
 
@@ -25,7 +26,7 @@ public final class NodePoolNodeConfigSandboxConfigArgs extends io.pulumi.resourc
     }
 
     private NodePoolNodeConfigSandboxConfigArgs() {
-        this.sandboxType = Output.empty();
+        this.sandboxType = Codegen.empty();
     }
 
     public static Builder builder() {

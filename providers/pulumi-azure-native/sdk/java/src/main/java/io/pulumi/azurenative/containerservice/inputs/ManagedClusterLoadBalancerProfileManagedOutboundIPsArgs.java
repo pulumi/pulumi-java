@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,16 +26,16 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(@Nullable Output<Integer> count) {
-        this.count = count == null ? Output.ofNullable(1) : count;
+        this.count = count == null ? Codegen.ofNullable(1) : count;
     }
 
     private ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs() {
-        this.count = Output.empty();
+        this.count = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }        public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs build() {
             return new ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(count);

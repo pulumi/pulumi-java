@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.BigtableColumnFamilyArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="columnFamilies")
       private final @Nullable Output<List<BigtableColumnFamilyArgs>> columnFamilies;
 
-    public Output<List<BigtableColumnFamilyArgs>> getColumnFamilies() {
-        return this.columnFamilies == null ? Output.empty() : this.columnFamilies;
+    public Output<List<BigtableColumnFamilyArgs>> columnFamilies() {
+        return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ignoreUnspecifiedColumnFamilies")
       private final @Nullable Output<Boolean> ignoreUnspecifiedColumnFamilies;
 
-    public Output<Boolean> getIgnoreUnspecifiedColumnFamilies() {
-        return this.ignoreUnspecifiedColumnFamilies == null ? Output.empty() : this.ignoreUnspecifiedColumnFamilies;
+    public Output<Boolean> ignoreUnspecifiedColumnFamilies() {
+        return this.ignoreUnspecifiedColumnFamilies == null ? Codegen.empty() : this.ignoreUnspecifiedColumnFamilies;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readRowkeyAsString")
       private final @Nullable Output<Boolean> readRowkeyAsString;
 
-    public Output<Boolean> getReadRowkeyAsString() {
-        return this.readRowkeyAsString == null ? Output.empty() : this.readRowkeyAsString;
+    public Output<Boolean> readRowkeyAsString() {
+        return this.readRowkeyAsString == null ? Codegen.empty() : this.readRowkeyAsString;
     }
 
     public BigtableOptionsArgs(
@@ -59,9 +60,9 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BigtableOptionsArgs() {
-        this.columnFamilies = Output.empty();
-        this.ignoreUnspecifiedColumnFamilies = Output.empty();
-        this.readRowkeyAsString = Output.empty();
+        this.columnFamilies = Codegen.empty();
+        this.ignoreUnspecifiedColumnFamilies = Codegen.empty();
+        this.readRowkeyAsString = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder columnFamilies(@Nullable List<BigtableColumnFamilyArgs> columnFamilies) {
-            this.columnFamilies = Output.ofNullable(columnFamilies);
+            this.columnFamilies = Codegen.ofNullable(columnFamilies);
             return this;
         }
         public Builder columnFamilies(BigtableColumnFamilyArgs... columnFamilies) {
@@ -104,7 +105,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ignoreUnspecifiedColumnFamilies(@Nullable Boolean ignoreUnspecifiedColumnFamilies) {
-            this.ignoreUnspecifiedColumnFamilies = Output.ofNullable(ignoreUnspecifiedColumnFamilies);
+            this.ignoreUnspecifiedColumnFamilies = Codegen.ofNullable(ignoreUnspecifiedColumnFamilies);
             return this;
         }
         public Builder readRowkeyAsString(@Nullable Output<Boolean> readRowkeyAsString) {
@@ -112,7 +113,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readRowkeyAsString(@Nullable Boolean readRowkeyAsString) {
-            this.readRowkeyAsString = Output.ofNullable(readRowkeyAsString);
+            this.readRowkeyAsString = Codegen.ofNullable(readRowkeyAsString);
             return this;
         }        public BigtableOptionsArgs build() {
             return new BigtableOptionsArgs(columnFamilies, ignoreUnspecifiedColumnFamilies, readRowkeyAsString);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 
@@ -36,7 +37,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
     @Import(name="patternName", required=true)
       private final Output<String> patternName;
 
-    public Output<String> getPatternName() {
+    public Output<String> patternName() {
         return this.patternName;
     }
 
@@ -47,7 +48,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
     @Import(name="rank", required=true)
       private final Output<Integer> rank;
 
-    public Output<Integer> getRank() {
+    public Output<Integer> rank() {
         return this.rank;
     }
 
@@ -61,9 +62,9 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
     }
 
     private ApplicationLogPatternArgs() {
-        this.pattern = Output.empty();
-        this.patternName = Output.empty();
-        this.rank = Output.empty();
+        this.pattern = Codegen.empty();
+        this.patternName = Codegen.empty();
+        this.rank = Codegen.empty();
     }
 
     public static Builder builder() {

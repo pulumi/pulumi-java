@@ -14,6 +14,7 @@ import io.pulumi.azurenative.databoxedge.inputs.UserAccessRightArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessProtocol", required=true)
       private final Output<Either<String,ShareAccessProtocol>> accessProtocol;
 
-    public Output<Either<String,ShareAccessProtocol>> getAccessProtocol() {
+    public Output<Either<String,ShareAccessProtocol>> accessProtocol() {
         return this.accessProtocol;
     }
 
@@ -42,8 +43,8 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureContainerInfo")
       private final @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
 
-    public Output<AzureContainerInfoArgs> getAzureContainerInfo() {
-        return this.azureContainerInfo == null ? Output.empty() : this.azureContainerInfo;
+    public Output<AzureContainerInfoArgs> azureContainerInfo() {
+        return this.azureContainerInfo == null ? Codegen.empty() : this.azureContainerInfo;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientAccessRights")
       private final @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
 
-    public Output<List<ClientAccessRightArgs>> getClientAccessRights() {
-        return this.clientAccessRights == null ? Output.empty() : this.clientAccessRights;
+    public Output<List<ClientAccessRightArgs>> clientAccessRights() {
+        return this.clientAccessRights == null ? Codegen.empty() : this.clientAccessRights;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataPolicy")
       private final @Nullable Output<Either<String,DataPolicy>> dataPolicy;
 
-    public Output<Either<String,DataPolicy>> getDataPolicy() {
-        return this.dataPolicy == null ? Output.empty() : this.dataPolicy;
+    public Output<Either<String,DataPolicy>> dataPolicy() {
+        return this.dataPolicy == null ? Codegen.empty() : this.dataPolicy;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -97,7 +98,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoringStatus", required=true)
       private final Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
         return this.monitoringStatus;
     }
 
@@ -108,8 +109,8 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="refreshDetails")
       private final @Nullable Output<RefreshDetailsArgs> refreshDetails;
 
-    public Output<RefreshDetailsArgs> getRefreshDetails() {
-        return this.refreshDetails == null ? Output.empty() : this.refreshDetails;
+    public Output<RefreshDetailsArgs> refreshDetails() {
+        return this.refreshDetails == null ? Codegen.empty() : this.refreshDetails;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -141,7 +142,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareStatus", required=true)
       private final Output<Either<String,ShareStatus>> shareStatus;
 
-    public Output<Either<String,ShareStatus>> getShareStatus() {
+    public Output<Either<String,ShareStatus>> shareStatus() {
         return this.shareStatus;
     }
 
@@ -152,8 +153,8 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAccessRights")
       private final @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
 
-    public Output<List<UserAccessRightArgs>> getUserAccessRights() {
-        return this.userAccessRights == null ? Output.empty() : this.userAccessRights;
+    public Output<List<UserAccessRightArgs>> userAccessRights() {
+        return this.userAccessRights == null ? Codegen.empty() : this.userAccessRights;
     }
 
     public ShareArgs(
@@ -184,18 +185,18 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ShareArgs() {
-        this.accessProtocol = Output.empty();
-        this.azureContainerInfo = Output.empty();
-        this.clientAccessRights = Output.empty();
-        this.dataPolicy = Output.empty();
-        this.description = Output.empty();
-        this.deviceName = Output.empty();
-        this.monitoringStatus = Output.empty();
-        this.name = Output.empty();
-        this.refreshDetails = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareStatus = Output.empty();
-        this.userAccessRights = Output.empty();
+        this.accessProtocol = Codegen.empty();
+        this.azureContainerInfo = Codegen.empty();
+        this.clientAccessRights = Codegen.empty();
+        this.dataPolicy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.monitoringStatus = Codegen.empty();
+        this.name = Codegen.empty();
+        this.refreshDetails = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareStatus = Codegen.empty();
+        this.userAccessRights = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -253,7 +254,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureContainerInfo(@Nullable AzureContainerInfoArgs azureContainerInfo) {
-            this.azureContainerInfo = Output.ofNullable(azureContainerInfo);
+            this.azureContainerInfo = Codegen.ofNullable(azureContainerInfo);
             return this;
         }
         public Builder clientAccessRights(@Nullable Output<List<ClientAccessRightArgs>> clientAccessRights) {
@@ -261,7 +262,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientAccessRights(@Nullable List<ClientAccessRightArgs> clientAccessRights) {
-            this.clientAccessRights = Output.ofNullable(clientAccessRights);
+            this.clientAccessRights = Codegen.ofNullable(clientAccessRights);
             return this;
         }
         public Builder clientAccessRights(ClientAccessRightArgs... clientAccessRights) {
@@ -272,7 +273,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataPolicy(@Nullable Either<String,DataPolicy> dataPolicy) {
-            this.dataPolicy = Output.ofNullable(dataPolicy);
+            this.dataPolicy = Codegen.ofNullable(dataPolicy);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -280,7 +281,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -304,7 +305,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder refreshDetails(@Nullable Output<RefreshDetailsArgs> refreshDetails) {
@@ -312,7 +313,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder refreshDetails(@Nullable RefreshDetailsArgs refreshDetails) {
-            this.refreshDetails = Output.ofNullable(refreshDetails);
+            this.refreshDetails = Codegen.ofNullable(refreshDetails);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -336,7 +337,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAccessRights(@Nullable List<UserAccessRightArgs> userAccessRights) {
-            this.userAccessRights = Output.ofNullable(userAccessRights);
+            this.userAccessRights = Codegen.ofNullable(userAccessRights);
             return this;
         }
         public Builder userAccessRights(UserAccessRightArgs... userAccessRights) {

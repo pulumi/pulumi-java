@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataType", required=true)
       private final Output<AssetModelDataType> dataType;
 
-    public Output<AssetModelDataType> getDataType() {
+    public Output<AssetModelDataType> dataType() {
         return this.dataType;
     }
 
@@ -39,8 +40,8 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataTypeSpec")
       private final @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
 
-    public Output<AssetModelDataTypeSpec> getDataTypeSpec() {
-        return this.dataTypeSpec == null ? Output.empty() : this.dataTypeSpec;
+    public Output<AssetModelDataTypeSpec> dataTypeSpec() {
+        return this.dataTypeSpec == null ? Codegen.empty() : this.dataTypeSpec;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
 
-    public Output<String> getLogicalId() {
+    public Output<String> logicalId() {
         return this.logicalId;
     }
 
@@ -61,7 +62,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -72,7 +73,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<AssetModelPropertyTypeArgs> type;
 
-    public Output<AssetModelPropertyTypeArgs> getType() {
+    public Output<AssetModelPropertyTypeArgs> type() {
         return this.type;
     }
 
@@ -83,8 +84,8 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+    public Output<String> unit() {
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public AssetModelPropertyArgs(
@@ -103,12 +104,12 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AssetModelPropertyArgs() {
-        this.dataType = Output.empty();
-        this.dataTypeSpec = Output.empty();
-        this.logicalId = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.unit = Output.empty();
+        this.dataType = Codegen.empty();
+        this.dataTypeSpec = Codegen.empty();
+        this.logicalId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
-            this.dataTypeSpec = Output.ofNullable(dataTypeSpec);
+            this.dataTypeSpec = Codegen.ofNullable(dataTypeSpec);
             return this;
         }
         public Builder logicalId(Output<String> logicalId) {
@@ -186,7 +187,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public AssetModelPropertyArgs build() {
             return new AssetModelPropertyArgs(dataType, dataTypeSpec, logicalId, name, type, unit);

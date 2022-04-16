@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyGroupPlacementPolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyArgs;
@@ -24,8 +25,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupPlacementPolicy")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
-    public Output<ResourcePolicyGroupPlacementPolicyArgs> getGroupPlacementPolicy() {
-        return this.groupPlacementPolicy == null ? Output.empty() : this.groupPlacementPolicy;
+    public Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy() {
+        return this.groupPlacementPolicy == null ? Codegen.empty() : this.groupPlacementPolicy;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceSchedulePolicy")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
-    public Output<ResourcePolicyInstanceSchedulePolicyArgs> getInstanceSchedulePolicy() {
-        return this.instanceSchedulePolicy == null ? Output.empty() : this.instanceSchedulePolicy;
+    public Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy() {
+        return this.instanceSchedulePolicy == null ? Codegen.empty() : this.instanceSchedulePolicy;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotSchedulePolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyArgs> getSnapshotSchedulePolicy() {
-        return this.snapshotSchedulePolicy == null ? Output.empty() : this.snapshotSchedulePolicy;
+    public Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy() {
+        return this.snapshotSchedulePolicy == null ? Codegen.empty() : this.snapshotSchedulePolicy;
     }
 
     public ResourcePolicyArgs(
@@ -122,13 +123,13 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcePolicyArgs() {
-        this.description = Output.empty();
-        this.groupPlacementPolicy = Output.empty();
-        this.instanceSchedulePolicy = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.snapshotSchedulePolicy = Output.empty();
+        this.description = Codegen.empty();
+        this.groupPlacementPolicy = Codegen.empty();
+        this.instanceSchedulePolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.snapshotSchedulePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy) {
@@ -176,7 +177,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupPlacementPolicy(@Nullable ResourcePolicyGroupPlacementPolicyArgs groupPlacementPolicy) {
-            this.groupPlacementPolicy = Output.ofNullable(groupPlacementPolicy);
+            this.groupPlacementPolicy = Codegen.ofNullable(groupPlacementPolicy);
             return this;
         }
         public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy) {
@@ -184,7 +185,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceSchedulePolicy(@Nullable ResourcePolicyInstanceSchedulePolicyArgs instanceSchedulePolicy) {
-            this.instanceSchedulePolicy = Output.ofNullable(instanceSchedulePolicy);
+            this.instanceSchedulePolicy = Codegen.ofNullable(instanceSchedulePolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -192,7 +193,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -200,7 +201,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -208,7 +209,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
@@ -216,7 +217,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotSchedulePolicy(@Nullable ResourcePolicySnapshotSchedulePolicyArgs snapshotSchedulePolicy) {
-            this.snapshotSchedulePolicy = Output.ofNullable(snapshotSchedulePolicy);
+            this.snapshotSchedulePolicy = Codegen.ofNullable(snapshotSchedulePolicy);
             return this;
         }        public ResourcePolicyArgs build() {
             return new ResourcePolicyArgs(description, groupPlacementPolicy, instanceSchedulePolicy, name, project, region, snapshotSchedulePolicy);

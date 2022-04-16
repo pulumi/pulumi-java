@@ -24,7 +24,7 @@ public final class FirewallLogConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="enable", required=true)
       private final Boolean enable;
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
 
@@ -35,7 +35,7 @@ public final class FirewallLogConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="metadata", required=true)
       private final String metadata;
 
-    public String getMetadata() {
+    public String metadata() {
         return this.metadata;
     }
 

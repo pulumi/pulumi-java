@@ -6,6 +6,7 @@ package io.pulumi.googlenative.transcoder_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.transcoder_v1.JobTemplateArgs;
 import io.pulumi.googlenative.transcoder_v1.outputs.JobConfigResponse;
@@ -29,7 +30,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * @return The configuration for this template.
      * 
      */
-    public Output<JobConfigResponse> getConfig() {
+    public Output<JobConfigResponse> config() {
         return this.config;
     }
     /**
@@ -43,7 +44,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * @return The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -69,7 +70,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobTemplate(String name, JobTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:transcoder/v1:JobTemplate", name, args == null ? JobTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:transcoder/v1:JobTemplate", name, args == null ? JobTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private JobTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

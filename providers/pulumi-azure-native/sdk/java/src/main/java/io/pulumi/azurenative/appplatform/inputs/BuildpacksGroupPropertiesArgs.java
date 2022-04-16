@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.BuildpackPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="buildpacks")
       private final @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
 
-    public Output<List<BuildpackPropertiesArgs>> getBuildpacks() {
-        return this.buildpacks == null ? Output.empty() : this.buildpacks;
+    public Output<List<BuildpackPropertiesArgs>> buildpacks() {
+        return this.buildpacks == null ? Codegen.empty() : this.buildpacks;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public BuildpacksGroupPropertiesArgs(
@@ -50,8 +51,8 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private BuildpacksGroupPropertiesArgs() {
-        this.buildpacks = Output.empty();
-        this.name = Output.empty();
+        this.buildpacks = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder buildpacks(@Nullable List<BuildpackPropertiesArgs> buildpacks) {
-            this.buildpacks = Output.ofNullable(buildpacks);
+            this.buildpacks = Codegen.ofNullable(buildpacks);
             return this;
         }
         public Builder buildpacks(BuildpackPropertiesArgs... buildpacks) {
@@ -92,7 +93,7 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public BuildpacksGroupPropertiesArgs build() {
             return new BuildpacksGroupPropertiesArgs(buildpacks, name);

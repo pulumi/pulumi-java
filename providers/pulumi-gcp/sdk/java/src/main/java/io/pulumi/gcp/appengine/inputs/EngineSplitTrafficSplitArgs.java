@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
     @Import(name="allocations", required=true)
       private final Output<Map<String,String>> allocations;
 
-    public Output<Map<String,String>> getAllocations() {
+    public Output<Map<String,String>> allocations() {
         return this.allocations;
     }
 
@@ -34,8 +35,8 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
     @Import(name="shardBy")
       private final @Nullable Output<String> shardBy;
 
-    public Output<String> getShardBy() {
-        return this.shardBy == null ? Output.empty() : this.shardBy;
+    public Output<String> shardBy() {
+        return this.shardBy == null ? Codegen.empty() : this.shardBy;
     }
 
     public EngineSplitTrafficSplitArgs(
@@ -46,8 +47,8 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
     }
 
     private EngineSplitTrafficSplitArgs() {
-        this.allocations = Output.empty();
-        this.shardBy = Output.empty();
+        this.allocations = Codegen.empty();
+        this.shardBy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder shardBy(@Nullable String shardBy) {
-            this.shardBy = Output.ofNullable(shardBy);
+            this.shardBy = Codegen.ofNullable(shardBy);
             return this;
         }        public EngineSplitTrafficSplitArgs build() {
             return new EngineSplitTrafficSplitArgs(allocations, shardBy);

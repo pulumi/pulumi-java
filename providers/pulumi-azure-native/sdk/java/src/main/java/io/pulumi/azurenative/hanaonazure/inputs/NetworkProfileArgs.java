@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 import io.pulumi.azurenative.hanaonazure.inputs.IpAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<IpAddressArgs>> networkInterfaces;
 
-    public Output<List<IpAddressArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+    public Output<List<IpAddressArgs>> networkInterfaces() {
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     public NetworkProfileArgs(@Nullable Output<List<IpAddressArgs>> networkInterfaces) {
@@ -35,7 +36,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkProfileArgs() {
-        this.networkInterfaces = Output.empty();
+        this.networkInterfaces = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaces(@Nullable List<IpAddressArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(IpAddressArgs... networkInterfaces) {

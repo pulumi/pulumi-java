@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ConnectionGatewayReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     @Import(name="backendUri")
       private final @Nullable Output<String> backendUri;
 
-    public Output<String> getBackendUri() {
-        return this.backendUri == null ? Output.empty() : this.backendUri;
+    public Output<String> backendUri() {
+        return this.backendUri == null ? Codegen.empty() : this.backendUri;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     @Import(name="connectionGatewayInstallation")
       private final @Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
 
-    public Output<ConnectionGatewayReferenceArgs> getConnectionGatewayInstallation() {
-        return this.connectionGatewayInstallation == null ? Output.empty() : this.connectionGatewayInstallation;
+    public Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation() {
+        return this.connectionGatewayInstallation == null ? Codegen.empty() : this.connectionGatewayInstallation;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     @Import(name="contactInformation")
       private final @Nullable Output<List<String>> contactInformation;
 
-    public Output<List<String>> getContactInformation() {
-        return this.contactInformation == null ? Output.empty() : this.contactInformation;
+    public Output<List<String>> contactInformation() {
+        return this.contactInformation == null ? Codegen.empty() : this.contactInformation;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     @Import(name="machineName")
       private final @Nullable Output<String> machineName;
 
-    public Output<String> getMachineName() {
-        return this.machineName == null ? Output.empty() : this.machineName;
+    public Output<String> machineName() {
+        return this.machineName == null ? Codegen.empty() : this.machineName;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     @Import(name="status")
       private final @Nullable Output<Object> status;
 
-    public Output<Object> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Object> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ConnectionGatewayDefinitionPropertiesArgs(
@@ -112,13 +113,13 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     }
 
     private ConnectionGatewayDefinitionPropertiesArgs() {
-        this.backendUri = Output.empty();
-        this.connectionGatewayInstallation = Output.empty();
-        this.contactInformation = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.machineName = Output.empty();
-        this.status = Output.empty();
+        this.backendUri = Codegen.empty();
+        this.connectionGatewayInstallation = Codegen.empty();
+        this.contactInformation = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.machineName = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder backendUri(@Nullable String backendUri) {
-            this.backendUri = Output.ofNullable(backendUri);
+            this.backendUri = Codegen.ofNullable(backendUri);
             return this;
         }
         public Builder connectionGatewayInstallation(@Nullable Output<ConnectionGatewayReferenceArgs> connectionGatewayInstallation) {
@@ -166,7 +167,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceArgs connectionGatewayInstallation) {
-            this.connectionGatewayInstallation = Output.ofNullable(connectionGatewayInstallation);
+            this.connectionGatewayInstallation = Codegen.ofNullable(connectionGatewayInstallation);
             return this;
         }
         public Builder contactInformation(@Nullable Output<List<String>> contactInformation) {
@@ -174,7 +175,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder contactInformation(@Nullable List<String> contactInformation) {
-            this.contactInformation = Output.ofNullable(contactInformation);
+            this.contactInformation = Codegen.ofNullable(contactInformation);
             return this;
         }
         public Builder contactInformation(String... contactInformation) {
@@ -185,7 +186,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -193,7 +194,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder machineName(@Nullable Output<String> machineName) {
@@ -201,7 +202,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder machineName(@Nullable String machineName) {
-            this.machineName = Output.ofNullable(machineName);
+            this.machineName = Codegen.ofNullable(machineName);
             return this;
         }
         public Builder status(@Nullable Output<Object> status) {
@@ -209,7 +210,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder status(@Nullable Object status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ConnectionGatewayDefinitionPropertiesArgs build() {
             return new ConnectionGatewayDefinitionPropertiesArgs(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);

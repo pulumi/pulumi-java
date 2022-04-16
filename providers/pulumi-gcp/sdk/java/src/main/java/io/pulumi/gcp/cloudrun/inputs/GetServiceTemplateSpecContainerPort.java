@@ -16,7 +16,7 @@ public final class GetServiceTemplateSpecContainerPort extends io.pulumi.resourc
     @Import(name="containerPort", required=true)
       private final Integer containerPort;
 
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
 
@@ -27,14 +27,14 @@ public final class GetServiceTemplateSpecContainerPort extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

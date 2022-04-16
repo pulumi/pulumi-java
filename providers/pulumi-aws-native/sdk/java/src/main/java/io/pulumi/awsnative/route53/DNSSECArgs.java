@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId", required=true)
       private final Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -29,7 +30,7 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DNSSECArgs() {
-        this.hostedZoneId = Output.empty();
+        this.hostedZoneId = Codegen.empty();
     }
 
     public static Builder builder() {

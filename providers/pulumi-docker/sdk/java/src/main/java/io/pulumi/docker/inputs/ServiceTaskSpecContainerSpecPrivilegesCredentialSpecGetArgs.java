@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs e
     @Import(name="file")
       private final @Nullable Output<String> file;
 
-    public Output<String> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+    public Output<String> file() {
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     @Import(name="registry")
       private final @Nullable Output<String> registry;
 
-    public Output<String> getRegistry() {
-        return this.registry == null ? Output.empty() : this.registry;
+    public Output<String> registry() {
+        return this.registry == null ? Codegen.empty() : this.registry;
     }
 
     public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs(
@@ -36,8 +37,8 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs e
     }
 
     private ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs() {
-        this.file = Output.empty();
-        this.registry = Output.empty();
+        this.file = Codegen.empty();
+        this.registry = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs e
             return this;
         }
         public Builder file(@Nullable String file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder registry(@Nullable Output<String> registry) {
@@ -75,7 +76,7 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs e
             return this;
         }
         public Builder registry(@Nullable String registry) {
-            this.registry = Output.ofNullable(registry);
+            this.registry = Codegen.ofNullable(registry);
             return this;
         }        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs build() {
             return new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs(file, registry);

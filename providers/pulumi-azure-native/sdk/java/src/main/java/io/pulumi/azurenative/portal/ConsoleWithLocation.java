@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class ConsoleWithLocation extends io.pulumi.resources.CustomResource {
      * @return Cloud shell console properties.
      * 
      */
-    public Output<ConsolePropertiesResponse> getProperties() {
+    public Output<ConsolePropertiesResponse> properties() {
         return this.properties;
     }
 
@@ -67,7 +68,7 @@ public class ConsoleWithLocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConsoleWithLocation(String name, ConsoleWithLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:portal:ConsoleWithLocation", name, args == null ? ConsoleWithLocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:portal:ConsoleWithLocation", name, args == null ? ConsoleWithLocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConsoleWithLocation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

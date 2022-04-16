@@ -5,6 +5,7 @@ package io.pulumi.aws.worklink.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="samlMetadata", required=true)
       private final Output<String> samlMetadata;
 
-    public Output<String> getSamlMetadata() {
+    public Output<String> samlMetadata() {
         return this.samlMetadata;
     }
 
@@ -31,7 +32,7 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -43,8 +44,8 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     }
 
     private FleetIdentityProviderArgs() {
-        this.samlMetadata = Output.empty();
-        this.type = Output.empty();
+        this.samlMetadata = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

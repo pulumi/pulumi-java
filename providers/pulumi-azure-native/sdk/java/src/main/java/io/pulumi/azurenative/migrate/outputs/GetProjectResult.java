@@ -71,49 +71,49 @@ public final class GetProjectResult {
      * For optimistic concurrency control.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure location in which project is created.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the project.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the project.
      * 
     */
-    public ProjectPropertiesResponse getProperties() {
+    public ProjectPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Tags provided by Azure Tagging service.
      * 
     */
-    public Optional<Object> getTags() {
+    public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ClusterClusterConfigMasterConfigAcceleratorArgs extends io.pu
     @Import(name="acceleratorCount", required=true)
       private final Output<Integer> acceleratorCount;
 
-    public Output<Integer> getAcceleratorCount() {
+    public Output<Integer> acceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -32,7 +33,7 @@ public final class ClusterClusterConfigMasterConfigAcceleratorArgs extends io.pu
     @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
 
@@ -44,8 +45,8 @@ public final class ClusterClusterConfigMasterConfigAcceleratorArgs extends io.pu
     }
 
     private ClusterClusterConfigMasterConfigAcceleratorArgs() {
-        this.acceleratorCount = Output.empty();
-        this.acceleratorType = Output.empty();
+        this.acceleratorCount = Codegen.empty();
+        this.acceleratorType = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebase_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+    public Output<String> appId() {
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appUrls")
       private final @Nullable Output<List<String>> appUrls;
 
-    public Output<List<String>> getAppUrls() {
-        return this.appUrls == null ? Output.empty() : this.appUrls;
+    public Output<List<String>> appUrls() {
+        return this.appUrls == null ? Codegen.empty() : this.appUrls;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public WebAppArgs(
@@ -84,11 +85,11 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAppArgs() {
-        this.appId = Output.empty();
-        this.appUrls = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.appId = Codegen.empty();
+        this.appUrls = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder appUrls(@Nullable Output<List<String>> appUrls) {
@@ -132,7 +133,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appUrls(@Nullable List<String> appUrls) {
-            this.appUrls = Output.ofNullable(appUrls);
+            this.appUrls = Codegen.ofNullable(appUrls);
             return this;
         }
         public Builder appUrls(String... appUrls) {
@@ -143,7 +144,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -151,7 +152,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -159,7 +160,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public WebAppArgs build() {
             return new WebAppArgs(appId, appUrls, displayName, name, project);

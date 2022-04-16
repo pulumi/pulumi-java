@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Notes for this schedule.
      * 
      */
-    public Output</* @Nullable */ String> getNotes() {
+    public Output</* @Nullable */ String> notes() {
         return this.notes;
     }
     /**
@@ -71,7 +72,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Current provisioning state of the schedule.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -85,7 +86,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The recurrence pattern of the scheduled actions.
      * 
      */
-    public Output</* @Nullable */ RecurrencePatternResponse> getRecurrencePattern() {
+    public Output</* @Nullable */ RecurrencePatternResponse> recurrencePattern() {
         return this.recurrencePattern;
     }
     /**
@@ -99,7 +100,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
      * 
      */
-    public Output</* @Nullable */ String> getStartAt() {
+    public Output</* @Nullable */ String> startAt() {
         return this.startAt;
     }
     /**
@@ -113,7 +114,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
      * 
      */
-    public Output<String> getStopAt() {
+    public Output<String> stopAt() {
         return this.stopAt;
     }
     /**
@@ -127,7 +128,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the schedule.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -141,7 +142,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The IANA timezone id for the schedule.
      * 
      */
-    public Output<String> getTimeZoneId() {
+    public Output<String> timeZoneId() {
         return this.timeZoneId;
     }
     /**
@@ -155,7 +156,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +182,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schedule(String name, ScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:labservices:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:labservices:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Schedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

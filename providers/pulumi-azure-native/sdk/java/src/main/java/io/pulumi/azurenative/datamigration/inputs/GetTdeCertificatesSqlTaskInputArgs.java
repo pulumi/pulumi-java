@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     @Import(name="backupFileShare", required=true)
       private final Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> getBackupFileShare() {
+    public Output<FileShareArgs> backupFileShare() {
         return this.backupFileShare;
     }
 
@@ -38,7 +39,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     @Import(name="connectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> connectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> connectionInfo() {
         return this.connectionInfo;
     }
 
@@ -49,7 +50,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     @Import(name="selectedCertificates", required=true)
       private final Output<List<SelectedCertificateInputArgs>> selectedCertificates;
 
-    public Output<List<SelectedCertificateInputArgs>> getSelectedCertificates() {
+    public Output<List<SelectedCertificateInputArgs>> selectedCertificates() {
         return this.selectedCertificates;
     }
 
@@ -63,9 +64,9 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     }
 
     private GetTdeCertificatesSqlTaskInputArgs() {
-        this.backupFileShare = Output.empty();
-        this.connectionInfo = Output.empty();
-        this.selectedCertificates = Output.empty();
+        this.backupFileShare = Codegen.empty();
+        this.connectionInfo = Codegen.empty();
+        this.selectedCertificates = Codegen.empty();
     }
 
     public static Builder builder() {

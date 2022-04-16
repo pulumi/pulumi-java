@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeEngineTargetDefaultsArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.SchedulePolicyArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeEngineTargetDefaults")
       private final @Nullable Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
 
-    public Output<ComputeEngineTargetDefaultsArgs> getComputeEngineTargetDefaults() {
-        return this.computeEngineTargetDefaults == null ? Output.empty() : this.computeEngineTargetDefaults;
+    public Output<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults() {
+        return this.computeEngineTargetDefaults == null ? Codegen.empty() : this.computeEngineTargetDefaults;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -57,21 +58,21 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="migratingVmId", required=true)
       private final Output<String> migratingVmId;
 
-    public Output<String> getMigratingVmId() {
+    public Output<String> migratingVmId() {
         return this.migratingVmId;
     }
 
@@ -82,28 +83,28 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<SchedulePolicyArgs> policy;
 
-    public Output<SchedulePolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<SchedulePolicyArgs> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
@@ -114,8 +115,8 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceVmId")
       private final @Nullable Output<String> sourceVmId;
 
-    public Output<String> getSourceVmId() {
-        return this.sourceVmId == null ? Output.empty() : this.sourceVmId;
+    public Output<String> sourceVmId() {
+        return this.sourceVmId == null ? Codegen.empty() : this.sourceVmId;
     }
 
     public MigratingVmArgs(
@@ -144,17 +145,17 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MigratingVmArgs() {
-        this.computeEngineTargetDefaults = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.migratingVmId = Output.empty();
-        this.policy = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.sourceId = Output.empty();
-        this.sourceVmId = Output.empty();
+        this.computeEngineTargetDefaults = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.migratingVmId = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.sourceId = Codegen.empty();
+        this.sourceVmId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computeEngineTargetDefaults(@Nullable ComputeEngineTargetDefaultsArgs computeEngineTargetDefaults) {
-            this.computeEngineTargetDefaults = Output.ofNullable(computeEngineTargetDefaults);
+            this.computeEngineTargetDefaults = Codegen.ofNullable(computeEngineTargetDefaults);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -210,7 +211,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -218,7 +219,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -226,7 +227,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -234,7 +235,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder migratingVmId(Output<String> migratingVmId) {
@@ -250,7 +251,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable SchedulePolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -258,7 +259,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -266,7 +267,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder sourceId(Output<String> sourceId) {
@@ -282,7 +283,7 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceVmId(@Nullable String sourceVmId) {
-            this.sourceVmId = Output.ofNullable(sourceVmId);
+            this.sourceVmId = Codegen.ofNullable(sourceVmId);
             return this;
         }        public MigratingVmArgs build() {
             return new MigratingVmArgs(computeEngineTargetDefaults, description, displayName, labels, location, migratingVmId, policy, project, requestId, sourceId, sourceVmId);

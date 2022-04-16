@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -47,7 +48,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -66,8 +67,8 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger;
 
-    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> getTrigger() {
-        return this.trigger == null ? Output.empty() : this.trigger;
+    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger() {
+        return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 
     public AlertPolicyConditionConditionMonitoringQueryLanguageArgs(
@@ -80,9 +81,9 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     }
 
     private AlertPolicyConditionConditionMonitoringQueryLanguageArgs() {
-        this.duration = Output.empty();
-        this.query = Output.empty();
-        this.trigger = Output.empty();
+        this.duration = Codegen.empty();
+        this.query = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
             return this;
         }
         public Builder trigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs trigger) {
-            this.trigger = Output.ofNullable(trigger);
+            this.trigger = Codegen.ofNullable(trigger);
             return this;
         }        public AlertPolicyConditionConditionMonitoringQueryLanguageArgs build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguageArgs(duration, query, trigger);

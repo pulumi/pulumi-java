@@ -6,6 +6,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.ServicePerimeterArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.ServicePerimeterConfigResponse;
@@ -29,7 +30,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Description of the `ServicePerimeter` and its use. Does not affect behavior.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -43,7 +44,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
      * 
      */
-    public Output<String> getPerimeterType() {
+    public Output<String> perimeterType() {
         return this.perimeterType;
     }
     /**
@@ -71,7 +72,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
      * 
      */
-    public Output<ServicePerimeterConfigResponse> getStatus() {
+    public Output<ServicePerimeterConfigResponse> status() {
         return this.status;
     }
     /**
@@ -85,7 +86,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @return Human readable title. Must be unique within the Policy.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -111,7 +112,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServicePerimeter(String name, ServicePerimeterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:accesscontextmanager/v1beta:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:accesscontextmanager/v1beta:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServicePerimeter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

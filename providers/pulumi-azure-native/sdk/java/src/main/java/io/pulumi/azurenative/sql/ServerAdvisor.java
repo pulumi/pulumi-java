@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
      * 
      */
-    public Output<String> getAdvisorStatus() {
+    public Output<String> advisorStatus() {
         return this.advisorStatus;
     }
     /**
@@ -56,7 +57,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
      * 
      */
-    public Output<String> getAutoExecuteStatus() {
+    public Output<String> autoExecuteStatus() {
         return this.autoExecuteStatus;
     }
     /**
@@ -70,7 +71,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
      * 
      */
-    public Output<String> getAutoExecuteStatusInheritedFrom() {
+    public Output<String> autoExecuteStatusInheritedFrom() {
         return this.autoExecuteStatusInheritedFrom;
     }
     /**
@@ -84,7 +85,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Resource kind.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -98,7 +99,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Gets the time when the current resource was analyzed for recommendations by this advisor.
      * 
      */
-    public Output<String> getLastChecked() {
+    public Output<String> lastChecked() {
         return this.lastChecked;
     }
     /**
@@ -112,7 +113,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -126,7 +127,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +141,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
      * 
      */
-    public Output<String> getRecommendationsStatus() {
+    public Output<String> recommendationsStatus() {
         return this.recommendationsStatus;
     }
     /**
@@ -154,7 +155,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Gets the recommended actions for this advisor.
      * 
      */
-    public Output<List<RecommendedActionResponse>> getRecommendedActions() {
+    public Output<List<RecommendedActionResponse>> recommendedActions() {
         return this.recommendedActions;
     }
     /**
@@ -168,7 +169,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -194,7 +195,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerAdvisor(String name, ServerAdvisorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ServerAdvisor", name, args == null ? ServerAdvisorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:ServerAdvisor", name, args == null ? ServerAdvisorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerAdvisor(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

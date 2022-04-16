@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datadog.inputs.MonitorPropertiesArgs;
 import io.pulumi.azurenative.datadog.inputs.ResourceSkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,15 +22,15 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityPropertiesArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitorName")
       private final @Nullable Output<String> monitorName;
 
-    public Output<String> getMonitorName() {
-        return this.monitorName == null ? Output.empty() : this.monitorName;
+    public Output<String> monitorName() {
+        return this.monitorName == null ? Codegen.empty() : this.monitorName;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<MonitorPropertiesArgs> properties;
 
-    public Output<MonitorPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<MonitorPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -61,22 +62,22 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Output<ResourceSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<ResourceSkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MonitorArgs(
@@ -97,13 +98,13 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MonitorArgs() {
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.monitorName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.monitorName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -151,7 +152,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder monitorName(@Nullable Output<String> monitorName) {
@@ -159,7 +160,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder monitorName(@Nullable String monitorName) {
-            this.monitorName = Output.ofNullable(monitorName);
+            this.monitorName = Codegen.ofNullable(monitorName);
             return this;
         }
         public Builder properties(@Nullable Output<MonitorPropertiesArgs> properties) {
@@ -167,7 +168,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable MonitorPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -183,7 +184,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable ResourceSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -191,7 +192,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public MonitorArgs build() {
             return new MonitorArgs(identity, location, monitorName, properties, resourceGroupName, sku, tags);

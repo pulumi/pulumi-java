@@ -10,6 +10,7 @@ import io.pulumi.awsnative.apigateway.outputs.DeploymentStageDescription;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Specifies settings for the canary deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentCanarySettings> getDeploymentCanarySettings() {
+    public Output</* @Nullable */ DeploymentCanarySettings> deploymentCanarySettings() {
         return this.deploymentCanarySettings;
     }
     /**
@@ -44,7 +45,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Primary Id for this resource
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -58,7 +59,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return A description of the purpose of the API Gateway deployment.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +73,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The ID of the RestApi resource to deploy.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -86,7 +87,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Configures the stage that API Gateway creates with this deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentStageDescription> getStageDescription() {
+    public Output</* @Nullable */ DeploymentStageDescription> stageDescription() {
         return this.stageDescription;
     }
     /**
@@ -100,7 +101,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
      * 
      */
-    public Output</* @Nullable */ String> getStageName() {
+    public Output</* @Nullable */ String> stageName() {
         return this.stageName;
     }
 
@@ -126,7 +127,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Deployment(String name, DeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Deployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

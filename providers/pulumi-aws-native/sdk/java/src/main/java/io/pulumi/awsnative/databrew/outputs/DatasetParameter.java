@@ -47,23 +47,23 @@ public final class DatasetParameter {
      * Add the value of this parameter as a column in a dataset.
      * 
     */
-    public Optional<Boolean> getCreateColumn() {
+    public Optional<Boolean> createColumn() {
         return Optional.ofNullable(this.createColumn);
     }
-    public Optional<DatasetDatetimeOptions> getDatetimeOptions() {
+    public Optional<DatasetDatetimeOptions> datetimeOptions() {
         return Optional.ofNullable(this.datetimeOptions);
     }
-    public Optional<DatasetFilterExpression> getFilter() {
+    public Optional<DatasetFilterExpression> filter() {
         return Optional.ofNullable(this.filter);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Parameter type
      * 
     */
-    public DatasetParameterType getType() {
+    public DatasetParameterType type() {
         return this.type;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.aws.mediapackage.inputs;
 import io.pulumi.aws.mediapackage.inputs.ChannelHlsIngestIngestEndpointGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ChannelHlsIngestGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="ingestEndpoints")
       private final @Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints;
 
-    public Output<List<ChannelHlsIngestIngestEndpointGetArgs>> getIngestEndpoints() {
-        return this.ingestEndpoints == null ? Output.empty() : this.ingestEndpoints;
+    public Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints() {
+        return this.ingestEndpoints == null ? Codegen.empty() : this.ingestEndpoints;
     }
 
     public ChannelHlsIngestGetArgs(@Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints) {
@@ -31,7 +32,7 @@ public final class ChannelHlsIngestGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ChannelHlsIngestGetArgs() {
-        this.ingestEndpoints = Output.empty();
+        this.ingestEndpoints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ChannelHlsIngestGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ingestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpointGetArgs> ingestEndpoints) {
-            this.ingestEndpoints = Output.ofNullable(ingestEndpoints);
+            this.ingestEndpoints = Codegen.ofNullable(ingestEndpoints);
             return this;
         }
         public Builder ingestEndpoints(ChannelHlsIngestIngestEndpointGetArgs... ingestEndpoints) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<GatewayIamMemberConditionGetArgs> condition;
 
-    public Output<GatewayIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<GatewayIamMemberConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -29,22 +30,22 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
-    public Output<String> getGateway() {
-        return this.gateway == null ? Output.empty() : this.gateway;
+    public Output<String> gateway() {
+        return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+    public Output<String> member() {
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public GatewayIamMemberState(
@@ -104,13 +105,13 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
     }
 
     private GatewayIamMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.gateway = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.gateway = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable GatewayIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -158,7 +159,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder gateway(@Nullable Output<String> gateway) {
@@ -166,7 +167,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = Output.ofNullable(gateway);
+            this.gateway = Codegen.ofNullable(gateway);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -174,7 +175,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -182,7 +183,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -190,7 +191,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -198,7 +199,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public GatewayIamMemberState build() {
             return new GatewayIamMemberState(condition, etag, gateway, member, project, region, role);

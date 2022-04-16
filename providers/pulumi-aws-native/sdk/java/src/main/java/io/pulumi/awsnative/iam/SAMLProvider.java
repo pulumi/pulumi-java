@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iam.outputs.SAMLProviderTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,25 +31,25 @@ public class SAMLProvider extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the SAML provider
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="samlMetadataDocument", type=String.class, parameters={})
     private Output<String> samlMetadataDocument;
 
-    public Output<String> getSamlMetadataDocument() {
+    public Output<String> samlMetadataDocument() {
         return this.samlMetadataDocument;
     }
     @Export(name="tags", type=List.class, parameters={SAMLProviderTag.class})
     private Output</* @Nullable */ List<SAMLProviderTag>> tags;
 
-    public Output</* @Nullable */ List<SAMLProviderTag>> getTags() {
+    public Output</* @Nullable */ List<SAMLProviderTag>> tags() {
         return this.tags;
     }
 
@@ -74,7 +75,7 @@ public class SAMLProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SAMLProvider(String name, SAMLProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iam:SAMLProvider", name, args == null ? SAMLProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iam:SAMLProvider", name, args == null ? SAMLProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SAMLProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<String> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -48,8 +49,8 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
     }
 
     private SqlUserDefinedFunctionResourceArgs() {
-        this.body = Output.empty();
-        this.id = Output.empty();
+        this.body = Codegen.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder id(Output<String> id) {

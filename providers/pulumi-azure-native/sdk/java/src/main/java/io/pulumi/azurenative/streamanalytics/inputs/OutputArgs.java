@@ -17,6 +17,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSou
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -38,8 +39,8 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasource")
       private final @Nullable Output<Object> datasource;
 
-    public Output<Object> getDatasource() {
-        return this.datasource == null ? Output.empty() : this.datasource;
+    public Output<Object> datasource() {
+        return this.datasource == null ? Codegen.empty() : this.datasource;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
-    public Output<Object> getSerialization() {
-        return this.serialization == null ? Output.empty() : this.serialization;
+    public Output<Object> serialization() {
+        return this.serialization == null ? Codegen.empty() : this.serialization;
     }
 
     public OutputArgs(
@@ -74,9 +75,9 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OutputArgs() {
-        this.datasource = Output.empty();
-        this.name = Output.empty();
-        this.serialization = Output.empty();
+        this.datasource = Codegen.empty();
+        this.name = Codegen.empty();
+        this.serialization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasource(@Nullable Object datasource) {
-            this.datasource = Output.ofNullable(datasource);
+            this.datasource = Codegen.ofNullable(datasource);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -116,7 +117,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder serialization(@Nullable Output<Object> serialization) {
@@ -124,7 +125,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Output.ofNullable(serialization);
+            this.serialization = Codegen.ofNullable(serialization);
             return this;
         }        public OutputArgs build() {
             return new OutputArgs(datasource, name, serialization);

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.resources.inputs.StorageAccountConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,8 +30,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<String> arguments;
 
-    public Output<String> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+    public Output<String> arguments() {
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azCliVersion", required=true)
       private final Output<String> azCliVersion;
 
-    public Output<String> getAzCliVersion() {
+    public Output<String> azCliVersion() {
         return this.azCliVersion;
     }
 
@@ -51,8 +52,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cleanupPreference")
       private final @Nullable Output<Either<String,CleanupOptions>> cleanupPreference;
 
-    public Output<Either<String,CleanupOptions>> getCleanupPreference() {
-        return this.cleanupPreference == null ? Output.empty() : this.cleanupPreference;
+    public Output<Either<String,CleanupOptions>> cleanupPreference() {
+        return this.cleanupPreference == null ? Codegen.empty() : this.cleanupPreference;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerSettings")
       private final @Nullable Output<ContainerConfigurationArgs> containerSettings;
 
-    public Output<ContainerConfigurationArgs> getContainerSettings() {
-        return this.containerSettings == null ? Output.empty() : this.containerSettings;
+    public Output<ContainerConfigurationArgs> containerSettings() {
+        return this.containerSettings == null ? Codegen.empty() : this.containerSettings;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
+    public Output<String> forceUpdateTag() {
+        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -118,8 +119,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryScriptUri")
       private final @Nullable Output<String> primaryScriptUri;
 
-    public Output<String> getPrimaryScriptUri() {
-        return this.primaryScriptUri == null ? Output.empty() : this.primaryScriptUri;
+    public Output<String> primaryScriptUri() {
+        return this.primaryScriptUri == null ? Codegen.empty() : this.primaryScriptUri;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -151,7 +152,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionInterval", required=true)
       private final Output<String> retentionInterval;
 
-    public Output<String> getRetentionInterval() {
+    public Output<String> retentionInterval() {
         return this.retentionInterval;
     }
 
@@ -162,8 +163,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptContent")
       private final @Nullable Output<String> scriptContent;
 
-    public Output<String> getScriptContent() {
-        return this.scriptContent == null ? Output.empty() : this.scriptContent;
+    public Output<String> scriptContent() {
+        return this.scriptContent == null ? Codegen.empty() : this.scriptContent;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
-    public Output<String> getScriptName() {
-        return this.scriptName == null ? Output.empty() : this.scriptName;
+    public Output<String> scriptName() {
+        return this.scriptName == null ? Codegen.empty() : this.scriptName;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountSettings")
       private final @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings;
 
-    public Output<StorageAccountConfigurationArgs> getStorageAccountSettings() {
-        return this.storageAccountSettings == null ? Output.empty() : this.storageAccountSettings;
+    public Output<StorageAccountConfigurationArgs> storageAccountSettings() {
+        return this.storageAccountSettings == null ? Codegen.empty() : this.storageAccountSettings;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportingScriptUris")
       private final @Nullable Output<List<String>> supportingScriptUris;
 
-    public Output<List<String>> getSupportingScriptUris() {
-        return this.supportingScriptUris == null ? Output.empty() : this.supportingScriptUris;
+    public Output<List<String>> supportingScriptUris() {
+        return this.supportingScriptUris == null ? Codegen.empty() : this.supportingScriptUris;
     }
 
     /**
@@ -206,8 +207,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -217,8 +218,8 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public AzureCliScriptArgs(
@@ -257,28 +258,28 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
         this.storageAccountSettings = storageAccountSettings;
         this.supportingScriptUris = supportingScriptUris;
         this.tags = tags;
-        this.timeout = timeout == null ? Output.ofNullable("P1D") : timeout;
+        this.timeout = timeout == null ? Codegen.ofNullable("P1D") : timeout;
     }
 
     private AzureCliScriptArgs() {
-        this.arguments = Output.empty();
-        this.azCliVersion = Output.empty();
-        this.cleanupPreference = Output.empty();
-        this.containerSettings = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.forceUpdateTag = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.primaryScriptUri = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retentionInterval = Output.empty();
-        this.scriptContent = Output.empty();
-        this.scriptName = Output.empty();
-        this.storageAccountSettings = Output.empty();
-        this.supportingScriptUris = Output.empty();
-        this.tags = Output.empty();
-        this.timeout = Output.empty();
+        this.arguments = Codegen.empty();
+        this.azCliVersion = Codegen.empty();
+        this.cleanupPreference = Codegen.empty();
+        this.containerSettings = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.forceUpdateTag = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.primaryScriptUri = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retentionInterval = Codegen.empty();
+        this.scriptContent = Codegen.empty();
+        this.scriptName = Codegen.empty();
+        this.storageAccountSettings = Codegen.empty();
+        this.supportingScriptUris = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -340,7 +341,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arguments(@Nullable String arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder azCliVersion(Output<String> azCliVersion) {
@@ -356,7 +357,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cleanupPreference(@Nullable Either<String,CleanupOptions> cleanupPreference) {
-            this.cleanupPreference = Output.ofNullable(cleanupPreference);
+            this.cleanupPreference = Codegen.ofNullable(cleanupPreference);
             return this;
         }
         public Builder containerSettings(@Nullable Output<ContainerConfigurationArgs> containerSettings) {
@@ -364,7 +365,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerSettings(@Nullable ContainerConfigurationArgs containerSettings) {
-            this.containerSettings = Output.ofNullable(containerSettings);
+            this.containerSettings = Codegen.ofNullable(containerSettings);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
@@ -372,7 +373,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
@@ -383,7 +384,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -391,7 +392,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -407,7 +408,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder primaryScriptUri(@Nullable Output<String> primaryScriptUri) {
@@ -415,7 +416,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryScriptUri(@Nullable String primaryScriptUri) {
-            this.primaryScriptUri = Output.ofNullable(primaryScriptUri);
+            this.primaryScriptUri = Codegen.ofNullable(primaryScriptUri);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -439,7 +440,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptContent(@Nullable String scriptContent) {
-            this.scriptContent = Output.ofNullable(scriptContent);
+            this.scriptContent = Codegen.ofNullable(scriptContent);
             return this;
         }
         public Builder scriptName(@Nullable Output<String> scriptName) {
@@ -447,7 +448,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Output.ofNullable(scriptName);
+            this.scriptName = Codegen.ofNullable(scriptName);
             return this;
         }
         public Builder storageAccountSettings(@Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings) {
@@ -455,7 +456,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountSettings(@Nullable StorageAccountConfigurationArgs storageAccountSettings) {
-            this.storageAccountSettings = Output.ofNullable(storageAccountSettings);
+            this.storageAccountSettings = Codegen.ofNullable(storageAccountSettings);
             return this;
         }
         public Builder supportingScriptUris(@Nullable Output<List<String>> supportingScriptUris) {
@@ -463,7 +464,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportingScriptUris(@Nullable List<String> supportingScriptUris) {
-            this.supportingScriptUris = Output.ofNullable(supportingScriptUris);
+            this.supportingScriptUris = Codegen.ofNullable(supportingScriptUris);
             return this;
         }
         public Builder supportingScriptUris(String... supportingScriptUris) {
@@ -474,7 +475,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -482,7 +483,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public AzureCliScriptArgs build() {
             return new AzureCliScriptArgs(arguments, azCliVersion, cleanupPreference, containerSettings, environmentVariables, forceUpdateTag, identity, kind, location, primaryScriptUri, resourceGroupName, retentionInterval, scriptContent, scriptName, storageAccountSettings, supportingScriptUris, tags, timeout);

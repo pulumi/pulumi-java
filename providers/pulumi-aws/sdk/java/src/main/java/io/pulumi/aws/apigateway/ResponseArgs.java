@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseParameters")
       private final @Nullable Output<Map<String,String>> responseParameters;
 
-    public Output<Map<String,String>> getResponseParameters() {
-        return this.responseParameters == null ? Output.empty() : this.responseParameters;
+    public Output<Map<String,String>> responseParameters() {
+        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> getResponseTemplates() {
-        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
+    public Output<Map<String,String>> responseTemplates() {
+        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseType", required=true)
       private final Output<String> responseType;
 
-    public Output<String> getResponseType() {
+    public Output<String> responseType() {
         return this.responseType;
     }
 
@@ -55,7 +56,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -66,8 +67,8 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
-        return this.statusCode == null ? Output.empty() : this.statusCode;
+    public Output<String> statusCode() {
+        return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
     public ResponseArgs(
@@ -84,11 +85,11 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResponseArgs() {
-        this.responseParameters = Output.empty();
-        this.responseTemplates = Output.empty();
-        this.responseType = Output.empty();
-        this.restApiId = Output.empty();
-        this.statusCode = Output.empty();
+        this.responseParameters = Codegen.empty();
+        this.responseTemplates = Codegen.empty();
+        this.responseType = Codegen.empty();
+        this.restApiId = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
-            this.responseParameters = Output.ofNullable(responseParameters);
+            this.responseParameters = Codegen.ofNullable(responseParameters);
             return this;
         }
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
@@ -132,7 +133,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Output.ofNullable(responseTemplates);
+            this.responseTemplates = Codegen.ofNullable(responseTemplates);
             return this;
         }
         public Builder responseType(Output<String> responseType) {
@@ -156,7 +157,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Output.ofNullable(statusCode);
+            this.statusCode = Codegen.ofNullable(statusCode);
             return this;
         }        public ResponseArgs build() {
             return new ResponseArgs(responseParameters, responseTemplates, responseType, restApiId, statusCode);

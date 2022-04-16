@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
     @Import(name="isRServicesEnabled")
       private final @Nullable Output<Boolean> isRServicesEnabled;
 
-    public Output<Boolean> getIsRServicesEnabled() {
-        return this.isRServicesEnabled == null ? Output.empty() : this.isRServicesEnabled;
+    public Output<Boolean> isRServicesEnabled() {
+        return this.isRServicesEnabled == null ? Codegen.empty() : this.isRServicesEnabled;
     }
 
     public AdditionalFeaturesServerConfigurationsArgs(@Nullable Output<Boolean> isRServicesEnabled) {
@@ -34,7 +35,7 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
     }
 
     private AdditionalFeaturesServerConfigurationsArgs() {
-        this.isRServicesEnabled = Output.empty();
+        this.isRServicesEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
             return this;
         }
         public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
-            this.isRServicesEnabled = Output.ofNullable(isRServicesEnabled);
+            this.isRServicesEnabled = Codegen.ofNullable(isRServicesEnabled);
             return this;
         }        public AdditionalFeaturesServerConfigurationsArgs build() {
             return new AdditionalFeaturesServerConfigurationsArgs(isRServicesEnabled);

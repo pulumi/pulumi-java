@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -32,7 +33,7 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="slotName", required=true)
       private final Output<String> slotName;
 
-    public Output<String> getSlotName() {
+    public Output<String> slotName() {
         return this.slotName;
     }
 
@@ -44,8 +45,8 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BotSlotPriorityArgs() {
-        this.priority = Output.empty();
-        this.slotName = Output.empty();
+        this.priority = Codegen.empty();
+        this.slotName = Codegen.empty();
     }
 
     public static Builder builder() {

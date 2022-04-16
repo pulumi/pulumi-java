@@ -6,6 +6,7 @@ package io.pulumi.aws.ecs.inputs;
 import io.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
     @Import(name="executeCommandConfiguration")
       private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
 
-    public Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> getExecuteCommandConfiguration() {
-        return this.executeCommandConfiguration == null ? Output.empty() : this.executeCommandConfiguration;
+    public Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration() {
+        return this.executeCommandConfiguration == null ? Codegen.empty() : this.executeCommandConfiguration;
     }
 
     public ClusterConfigurationGetArgs(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration) {
@@ -30,7 +31,7 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
     }
 
     private ClusterConfigurationGetArgs() {
-        this.executeCommandConfiguration = Output.empty();
+        this.executeCommandConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder executeCommandConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationGetArgs executeCommandConfiguration) {
-            this.executeCommandConfiguration = Output.ofNullable(executeCommandConfiguration);
+            this.executeCommandConfiguration = Codegen.ofNullable(executeCommandConfiguration);
             return this;
         }        public ClusterConfigurationGetArgs build() {
             return new ClusterConfigurationGetArgs(executeCommandConfiguration);

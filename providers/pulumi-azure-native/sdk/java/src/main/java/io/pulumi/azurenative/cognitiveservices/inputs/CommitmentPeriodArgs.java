@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public CommitmentPeriodArgs(
@@ -49,8 +50,8 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CommitmentPeriodArgs() {
-        this.count = Output.empty();
-        this.tier = Output.empty();
+        this.count = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -88,7 +89,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public CommitmentPeriodArgs build() {
             return new CommitmentPeriodArgs(count, tier);

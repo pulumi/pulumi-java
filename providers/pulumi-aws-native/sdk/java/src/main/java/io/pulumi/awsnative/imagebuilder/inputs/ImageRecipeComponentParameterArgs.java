@@ -5,6 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +37,7 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
     @Import(name="value", required=true)
       private final Output<List<String>> value;
 
-    public Output<List<String>> getValue() {
+    public Output<List<String>> value() {
         return this.value;
     }
 
@@ -48,8 +49,8 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
     }
 
     private ImageRecipeComponentParameterArgs() {
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

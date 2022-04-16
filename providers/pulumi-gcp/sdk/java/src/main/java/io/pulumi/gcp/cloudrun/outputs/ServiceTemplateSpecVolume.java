@@ -36,7 +36,7 @@ public final class ServiceTemplateSpecVolume {
      * Volume's name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -46,7 +46,7 @@ public final class ServiceTemplateSpecVolume {
      * Structure is documented below.
      * 
     */
-    public ServiceTemplateSpecVolumeSecret getSecret() {
+    public ServiceTemplateSpecVolumeSecret secret() {
         return this.secret;
     }
 

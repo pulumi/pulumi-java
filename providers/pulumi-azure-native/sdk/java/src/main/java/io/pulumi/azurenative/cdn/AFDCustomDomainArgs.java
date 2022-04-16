@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cdn.inputs.AFDDomainHttpsParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="azureDnsZone")
       private final @Nullable Output<ResourceReferenceArgs> azureDnsZone;
 
-    public Output<ResourceReferenceArgs> getAzureDnsZone() {
-        return this.azureDnsZone == null ? Output.empty() : this.azureDnsZone;
+    public Output<ResourceReferenceArgs> azureDnsZone() {
+        return this.azureDnsZone == null ? Codegen.empty() : this.azureDnsZone;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customDomainName")
       private final @Nullable Output<String> customDomainName;
 
-    public Output<String> getCustomDomainName() {
-        return this.customDomainName == null ? Output.empty() : this.customDomainName;
+    public Output<String> customDomainName() {
+        return this.customDomainName == null ? Codegen.empty() : this.customDomainName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -56,7 +57,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -67,7 +68,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,8 +79,8 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tlsSettings")
       private final @Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings;
 
-    public Output<AFDDomainHttpsParametersArgs> getTlsSettings() {
-        return this.tlsSettings == null ? Output.empty() : this.tlsSettings;
+    public Output<AFDDomainHttpsParametersArgs> tlsSettings() {
+        return this.tlsSettings == null ? Codegen.empty() : this.tlsSettings;
     }
 
     public AFDCustomDomainArgs(
@@ -98,12 +99,12 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AFDCustomDomainArgs() {
-        this.azureDnsZone = Output.empty();
-        this.customDomainName = Output.empty();
-        this.hostName = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tlsSettings = Output.empty();
+        this.azureDnsZone = Codegen.empty();
+        this.customDomainName = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tlsSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder azureDnsZone(@Nullable ResourceReferenceArgs azureDnsZone) {
-            this.azureDnsZone = Output.ofNullable(azureDnsZone);
+            this.azureDnsZone = Codegen.ofNullable(azureDnsZone);
             return this;
         }
         public Builder customDomainName(@Nullable Output<String> customDomainName) {
@@ -149,7 +150,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder customDomainName(@Nullable String customDomainName) {
-            this.customDomainName = Output.ofNullable(customDomainName);
+            this.customDomainName = Codegen.ofNullable(customDomainName);
             return this;
         }
         public Builder hostName(Output<String> hostName) {
@@ -181,7 +182,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tlsSettings(@Nullable AFDDomainHttpsParametersArgs tlsSettings) {
-            this.tlsSettings = Output.ofNullable(tlsSettings);
+            this.tlsSettings = Codegen.ofNullable(tlsSettings);
             return this;
         }        public AFDCustomDomainArgs build() {
             return new AFDCustomDomainArgs(azureDnsZone, customDomainName, hostName, profileName, resourceGroupName, tlsSettings);

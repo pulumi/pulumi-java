@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.inputs.ContainerImageArgs;
 import io.pulumi.googlenative.notebooks_v1.inputs.VmImageArgs;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
       private final @Nullable Output<ContainerImageArgs> containerImage;
 
-    public Output<ContainerImageArgs> getContainerImage() {
-        return this.containerImage == null ? Output.empty() : this.containerImage;
+    public Output<ContainerImageArgs> containerImage() {
+        return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,22 +46,22 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,15 +71,15 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
-    public Output<String> getPostStartupScript() {
-        return this.postStartupScript == null ? Output.empty() : this.postStartupScript;
+    public Output<String> postStartupScript() {
+        return this.postStartupScript == null ? Codegen.empty() : this.postStartupScript;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImage")
       private final @Nullable Output<VmImageArgs> vmImage;
 
-    public Output<VmImageArgs> getVmImage() {
-        return this.vmImage == null ? Output.empty() : this.vmImage;
+    public Output<VmImageArgs> vmImage() {
+        return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 
     public EnvironmentArgs(
@@ -112,14 +113,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.containerImage = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.environmentId = Output.empty();
-        this.location = Output.empty();
-        this.postStartupScript = Output.empty();
-        this.project = Output.empty();
-        this.vmImage = Output.empty();
+        this.containerImage = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.postStartupScript = Codegen.empty();
+        this.project = Codegen.empty();
+        this.vmImage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerImage(@Nullable ContainerImageArgs containerImage) {
-            this.containerImage = Output.ofNullable(containerImage);
+            this.containerImage = Codegen.ofNullable(containerImage);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -169,7 +170,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -177,7 +178,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -193,7 +194,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
@@ -201,7 +202,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postStartupScript(@Nullable String postStartupScript) {
-            this.postStartupScript = Output.ofNullable(postStartupScript);
+            this.postStartupScript = Codegen.ofNullable(postStartupScript);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -209,7 +210,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder vmImage(@Nullable Output<VmImageArgs> vmImage) {
@@ -217,7 +218,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmImage(@Nullable VmImageArgs vmImage) {
-            this.vmImage = Output.ofNullable(vmImage);
+            this.vmImage = Codegen.ofNullable(vmImage);
             return this;
         }        public EnvironmentArgs build() {
             return new EnvironmentArgs(containerImage, description, displayName, environmentId, location, postStartupScript, project, vmImage);

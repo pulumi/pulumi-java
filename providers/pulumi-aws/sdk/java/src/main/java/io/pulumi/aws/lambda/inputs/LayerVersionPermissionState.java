@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="layerName")
       private final @Nullable Output<String> layerName;
 
-    public Output<String> getLayerName() {
-        return this.layerName == null ? Output.empty() : this.layerName;
+    public Output<String> layerName() {
+        return this.layerName == null ? Codegen.empty() : this.layerName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
-        return this.organizationId == null ? Output.empty() : this.organizationId;
+    public Output<String> organizationId() {
+        return this.organizationId == null ? Codegen.empty() : this.organizationId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
-        return this.principal == null ? Output.empty() : this.principal;
+    public Output<String> principal() {
+        return this.principal == null ? Codegen.empty() : this.principal;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+    public Output<String> revisionId() {
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="statementId")
       private final @Nullable Output<String> statementId;
 
-    public Output<String> getStatementId() {
-        return this.statementId == null ? Output.empty() : this.statementId;
+    public Output<String> statementId() {
+        return this.statementId == null ? Codegen.empty() : this.statementId;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     @Import(name="versionNumber")
       private final @Nullable Output<Integer> versionNumber;
 
-    public Output<Integer> getVersionNumber() {
-        return this.versionNumber == null ? Output.empty() : this.versionNumber;
+    public Output<Integer> versionNumber() {
+        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
     }
 
     public LayerVersionPermissionState(
@@ -123,14 +124,14 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
     }
 
     private LayerVersionPermissionState() {
-        this.action = Output.empty();
-        this.layerName = Output.empty();
-        this.organizationId = Output.empty();
-        this.policy = Output.empty();
-        this.principal = Output.empty();
-        this.revisionId = Output.empty();
-        this.statementId = Output.empty();
-        this.versionNumber = Output.empty();
+        this.action = Codegen.empty();
+        this.layerName = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.revisionId = Codegen.empty();
+        this.statementId = Codegen.empty();
+        this.versionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder layerName(@Nullable Output<String> layerName) {
@@ -180,7 +181,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder layerName(@Nullable String layerName) {
-            this.layerName = Output.ofNullable(layerName);
+            this.layerName = Codegen.ofNullable(layerName);
             return this;
         }
         public Builder organizationId(@Nullable Output<String> organizationId) {
@@ -188,7 +189,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder organizationId(@Nullable String organizationId) {
-            this.organizationId = Output.ofNullable(organizationId);
+            this.organizationId = Codegen.ofNullable(organizationId);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -196,7 +197,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder principal(@Nullable Output<String> principal) {
@@ -204,7 +205,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder principal(@Nullable String principal) {
-            this.principal = Output.ofNullable(principal);
+            this.principal = Codegen.ofNullable(principal);
             return this;
         }
         public Builder revisionId(@Nullable Output<String> revisionId) {
@@ -212,7 +213,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }
         public Builder statementId(@Nullable Output<String> statementId) {
@@ -220,7 +221,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder statementId(@Nullable String statementId) {
-            this.statementId = Output.ofNullable(statementId);
+            this.statementId = Codegen.ofNullable(statementId);
             return this;
         }
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
@@ -228,7 +229,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Output.ofNullable(versionNumber);
+            this.versionNumber = Codegen.ofNullable(versionNumber);
             return this;
         }        public LayerVersionPermissionState build() {
             return new LayerVersionPermissionState(action, layerName, organizationId, policy, principal, revisionId, statementId, versionNumber);

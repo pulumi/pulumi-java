@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.DashboardTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The ARN of the dashboard.
      * 
      */
-    public Output<String> getDashboardArn() {
+    public Output<String> dashboardArn() {
         return this.dashboardArn;
     }
     /**
@@ -44,7 +45,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The dashboard definition specified in a JSON literal.
      * 
      */
-    public Output<String> getDashboardDefinition() {
+    public Output<String> dashboardDefinition() {
         return this.dashboardDefinition;
     }
     /**
@@ -58,7 +59,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return A description for the dashboard.
      * 
      */
-    public Output<String> getDashboardDescription() {
+    public Output<String> dashboardDescription() {
         return this.dashboardDescription;
     }
     /**
@@ -72,7 +73,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The ID of the dashboard.
      * 
      */
-    public Output<String> getDashboardId() {
+    public Output<String> dashboardId() {
         return this.dashboardId;
     }
     /**
@@ -86,7 +87,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return A friendly name for the dashboard.
      * 
      */
-    public Output<String> getDashboardName() {
+    public Output<String> dashboardName() {
         return this.dashboardName;
     }
     /**
@@ -100,7 +101,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The ID of the project in which to create the dashboard.
      * 
      */
-    public Output</* @Nullable */ String> getProjectId() {
+    public Output</* @Nullable */ String> projectId() {
         return this.projectId;
     }
     /**
@@ -114,7 +115,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the dashboard.
      * 
      */
-    public Output</* @Nullable */ List<DashboardTag>> getTags() {
+    public Output</* @Nullable */ List<DashboardTag>> tags() {
         return this.tags;
     }
 
@@ -140,7 +141,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dashboard(String name, DashboardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotsitewise:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotsitewise:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dashboard(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

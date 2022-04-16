@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="controlId")
       private final @Nullable Output<String> controlId;
 
-    public Output<String> getControlId() {
-        return this.controlId == null ? Output.empty() : this.controlId;
+    public Output<String> controlId() {
+        return this.controlId == null ? Codegen.empty() : this.controlId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="controlStatus")
       private final @Nullable Output<String> controlStatus;
 
-    public Output<String> getControlStatus() {
-        return this.controlStatus == null ? Output.empty() : this.controlStatus;
+    public Output<String> controlStatus() {
+        return this.controlStatus == null ? Codegen.empty() : this.controlStatus;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="controlStatusUpdatedAt")
       private final @Nullable Output<String> controlStatusUpdatedAt;
 
-    public Output<String> getControlStatusUpdatedAt() {
-        return this.controlStatusUpdatedAt == null ? Output.empty() : this.controlStatusUpdatedAt;
+    public Output<String> controlStatusUpdatedAt() {
+        return this.controlStatusUpdatedAt == null ? Codegen.empty() : this.controlStatusUpdatedAt;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
-    public Output<String> getDisabledReason() {
-        return this.disabledReason == null ? Output.empty() : this.disabledReason;
+    public Output<String> disabledReason() {
+        return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="relatedRequirements")
       private final @Nullable Output<List<String>> relatedRequirements;
 
-    public Output<List<String>> getRelatedRequirements() {
-        return this.relatedRequirements == null ? Output.empty() : this.relatedRequirements;
+    public Output<List<String>> relatedRequirements() {
+        return this.relatedRequirements == null ? Codegen.empty() : this.relatedRequirements;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="remediationUrl")
       private final @Nullable Output<String> remediationUrl;
 
-    public Output<String> getRemediationUrl() {
-        return this.remediationUrl == null ? Output.empty() : this.remediationUrl;
+    public Output<String> remediationUrl() {
+        return this.remediationUrl == null ? Codegen.empty() : this.remediationUrl;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="severityRating")
       private final @Nullable Output<String> severityRating;
 
-    public Output<String> getSeverityRating() {
-        return this.severityRating == null ? Output.empty() : this.severityRating;
+    public Output<String> severityRating() {
+        return this.severityRating == null ? Codegen.empty() : this.severityRating;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="standardsControlArn")
       private final @Nullable Output<String> standardsControlArn;
 
-    public Output<String> getStandardsControlArn() {
-        return this.standardsControlArn == null ? Output.empty() : this.standardsControlArn;
+    public Output<String> standardsControlArn() {
+        return this.standardsControlArn == null ? Codegen.empty() : this.standardsControlArn;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public StandardsControlState(
@@ -149,16 +150,16 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     }
 
     private StandardsControlState() {
-        this.controlId = Output.empty();
-        this.controlStatus = Output.empty();
-        this.controlStatusUpdatedAt = Output.empty();
-        this.description = Output.empty();
-        this.disabledReason = Output.empty();
-        this.relatedRequirements = Output.empty();
-        this.remediationUrl = Output.empty();
-        this.severityRating = Output.empty();
-        this.standardsControlArn = Output.empty();
-        this.title = Output.empty();
+        this.controlId = Codegen.empty();
+        this.controlStatus = Codegen.empty();
+        this.controlStatusUpdatedAt = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disabledReason = Codegen.empty();
+        this.relatedRequirements = Codegen.empty();
+        this.remediationUrl = Codegen.empty();
+        this.severityRating = Codegen.empty();
+        this.standardsControlArn = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -204,7 +205,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder controlId(@Nullable String controlId) {
-            this.controlId = Output.ofNullable(controlId);
+            this.controlId = Codegen.ofNullable(controlId);
             return this;
         }
         public Builder controlStatus(@Nullable Output<String> controlStatus) {
@@ -212,7 +213,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder controlStatus(@Nullable String controlStatus) {
-            this.controlStatus = Output.ofNullable(controlStatus);
+            this.controlStatus = Codegen.ofNullable(controlStatus);
             return this;
         }
         public Builder controlStatusUpdatedAt(@Nullable Output<String> controlStatusUpdatedAt) {
@@ -220,7 +221,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder controlStatusUpdatedAt(@Nullable String controlStatusUpdatedAt) {
-            this.controlStatusUpdatedAt = Output.ofNullable(controlStatusUpdatedAt);
+            this.controlStatusUpdatedAt = Codegen.ofNullable(controlStatusUpdatedAt);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -228,7 +229,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
@@ -236,7 +237,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Output.ofNullable(disabledReason);
+            this.disabledReason = Codegen.ofNullable(disabledReason);
             return this;
         }
         public Builder relatedRequirements(@Nullable Output<List<String>> relatedRequirements) {
@@ -244,7 +245,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder relatedRequirements(@Nullable List<String> relatedRequirements) {
-            this.relatedRequirements = Output.ofNullable(relatedRequirements);
+            this.relatedRequirements = Codegen.ofNullable(relatedRequirements);
             return this;
         }
         public Builder relatedRequirements(String... relatedRequirements) {
@@ -255,7 +256,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder remediationUrl(@Nullable String remediationUrl) {
-            this.remediationUrl = Output.ofNullable(remediationUrl);
+            this.remediationUrl = Codegen.ofNullable(remediationUrl);
             return this;
         }
         public Builder severityRating(@Nullable Output<String> severityRating) {
@@ -263,7 +264,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder severityRating(@Nullable String severityRating) {
-            this.severityRating = Output.ofNullable(severityRating);
+            this.severityRating = Codegen.ofNullable(severityRating);
             return this;
         }
         public Builder standardsControlArn(@Nullable Output<String> standardsControlArn) {
@@ -271,7 +272,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder standardsControlArn(@Nullable String standardsControlArn) {
-            this.standardsControlArn = Output.ofNullable(standardsControlArn);
+            this.standardsControlArn = Codegen.ofNullable(standardsControlArn);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -279,7 +280,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public StandardsControlState build() {
             return new StandardsControlState(controlId, controlStatus, controlStatusUpdatedAt, description, disabledReason, relatedRequirements, remediationUrl, severityRating, standardsControlArn, title);

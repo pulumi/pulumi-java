@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<String> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -59,8 +60,8 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="landingPageUrl")
       private final @Nullable Output<String> landingPageUrl;
 
-    public Output<String> getLandingPageUrl() {
-        return this.landingPageUrl == null ? Output.empty() : this.landingPageUrl;
+    public Output<String> landingPageUrl() {
+        return this.landingPageUrl == null ? Codegen.empty() : this.landingPageUrl;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="signingSecret")
       private final @Nullable Output<String> signingSecret;
 
-    public Output<String> getSigningSecret() {
-        return this.signingSecret == null ? Output.empty() : this.signingSecret;
+    public Output<String> signingSecret() {
+        return this.signingSecret == null ? Codegen.empty() : this.signingSecret;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="verificationToken")
       private final @Nullable Output<String> verificationToken;
 
-    public Output<String> getVerificationToken() {
-        return this.verificationToken == null ? Output.empty() : this.verificationToken;
+    public Output<String> verificationToken() {
+        return this.verificationToken == null ? Codegen.empty() : this.verificationToken;
     }
 
     public SlackChannelPropertiesArgs(
@@ -101,12 +102,12 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private SlackChannelPropertiesArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.isEnabled = Output.empty();
-        this.landingPageUrl = Output.empty();
-        this.signingSecret = Output.empty();
-        this.verificationToken = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.landingPageUrl = Codegen.empty();
+        this.signingSecret = Codegen.empty();
+        this.verificationToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -152,7 +153,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {
@@ -168,7 +169,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder landingPageUrl(@Nullable String landingPageUrl) {
-            this.landingPageUrl = Output.ofNullable(landingPageUrl);
+            this.landingPageUrl = Codegen.ofNullable(landingPageUrl);
             return this;
         }
         public Builder signingSecret(@Nullable Output<String> signingSecret) {
@@ -176,7 +177,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder signingSecret(@Nullable String signingSecret) {
-            this.signingSecret = Output.ofNullable(signingSecret);
+            this.signingSecret = Codegen.ofNullable(signingSecret);
             return this;
         }
         public Builder verificationToken(@Nullable Output<String> verificationToken) {
@@ -184,7 +185,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder verificationToken(@Nullable String verificationToken) {
-            this.verificationToken = Output.ofNullable(verificationToken);
+            this.verificationToken = Codegen.ofNullable(verificationToken);
             return this;
         }        public SlackChannelPropertiesArgs build() {
             return new SlackChannelPropertiesArgs(clientId, clientSecret, isEnabled, landingPageUrl, signingSecret, verificationToken);

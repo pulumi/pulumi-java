@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskCount")
       private final @Nullable Output<Integer> diskCount;
 
-    public Output<Integer> getDiskCount() {
-        return this.diskCount == null ? Output.empty() : this.diskCount;
+    public Output<Integer> diskCount() {
+        return this.diskCount == null ? Codegen.empty() : this.diskCount;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<Integer> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+    public Output<String> diskType() {
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     public LocalDiskArgs(
@@ -58,9 +59,9 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocalDiskArgs() {
-        this.diskCount = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.diskType = Output.empty();
+        this.diskCount = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.diskType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = Output.ofNullable(diskCount);
+            this.diskCount = Codegen.ofNullable(diskCount);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
@@ -100,7 +101,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder diskType(@Nullable Output<String> diskType) {
@@ -108,7 +109,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }        public LocalDiskArgs build() {
             return new LocalDiskArgs(diskCount, diskSizeGb, diskType);

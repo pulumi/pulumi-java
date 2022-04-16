@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The supported Azure location where the dedicated HSM should be created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +59,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The name of the dedicated HSM.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Specifies the network interfaces of the dedicated hsm.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> getNetworkProfile() {
+    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
         return this.networkProfile;
     }
     /**
@@ -86,7 +87,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return SKU details
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -114,7 +115,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return This field will be used when RP does not support Availability zones.
      * 
      */
-    public Output</* @Nullable */ String> getStampId() {
+    public Output</* @Nullable */ String> stampId() {
         return this.stampId;
     }
     /**
@@ -128,7 +129,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Resource Status Message.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -142,7 +143,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The resource type of the dedicated HSM.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -170,7 +171,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The Dedicated Hsm zones.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 
@@ -196,7 +197,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DedicatedHsm(String name, DedicatedHsmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hardwaresecuritymodules:DedicatedHsm", name, args == null ? DedicatedHsmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:hardwaresecuritymodules:DedicatedHsm", name, args == null ? DedicatedHsmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DedicatedHsm(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

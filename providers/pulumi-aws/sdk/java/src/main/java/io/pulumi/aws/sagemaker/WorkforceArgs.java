@@ -8,6 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cognitoConfig")
       private final @Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig;
 
-    public Output<WorkforceCognitoConfigArgs> getCognitoConfig() {
-        return this.cognitoConfig == null ? Output.empty() : this.cognitoConfig;
+    public Output<WorkforceCognitoConfigArgs> cognitoConfig() {
+        return this.cognitoConfig == null ? Codegen.empty() : this.cognitoConfig;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcConfig")
       private final @Nullable Output<WorkforceOidcConfigArgs> oidcConfig;
 
-    public Output<WorkforceOidcConfigArgs> getOidcConfig() {
-        return this.oidcConfig == null ? Output.empty() : this.oidcConfig;
+    public Output<WorkforceOidcConfigArgs> oidcConfig() {
+        return this.oidcConfig == null ? Codegen.empty() : this.oidcConfig;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceIpConfig")
       private final @Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig;
 
-    public Output<WorkforceSourceIpConfigArgs> getSourceIpConfig() {
-        return this.sourceIpConfig == null ? Output.empty() : this.sourceIpConfig;
+    public Output<WorkforceSourceIpConfigArgs> sourceIpConfig() {
+        return this.sourceIpConfig == null ? Codegen.empty() : this.sourceIpConfig;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workforceName", required=true)
       private final Output<String> workforceName;
 
-    public Output<String> getWorkforceName() {
+    public Output<String> workforceName() {
         return this.workforceName;
     }
 
@@ -73,10 +74,10 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkforceArgs() {
-        this.cognitoConfig = Output.empty();
-        this.oidcConfig = Output.empty();
-        this.sourceIpConfig = Output.empty();
-        this.workforceName = Output.empty();
+        this.cognitoConfig = Codegen.empty();
+        this.oidcConfig = Codegen.empty();
+        this.sourceIpConfig = Codegen.empty();
+        this.workforceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cognitoConfig(@Nullable WorkforceCognitoConfigArgs cognitoConfig) {
-            this.cognitoConfig = Output.ofNullable(cognitoConfig);
+            this.cognitoConfig = Codegen.ofNullable(cognitoConfig);
             return this;
         }
         public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigArgs> oidcConfig) {
@@ -118,7 +119,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oidcConfig(@Nullable WorkforceOidcConfigArgs oidcConfig) {
-            this.oidcConfig = Output.ofNullable(oidcConfig);
+            this.oidcConfig = Codegen.ofNullable(oidcConfig);
             return this;
         }
         public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig) {
@@ -126,7 +127,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigArgs sourceIpConfig) {
-            this.sourceIpConfig = Output.ofNullable(sourceIpConfig);
+            this.sourceIpConfig = Codegen.ofNullable(sourceIpConfig);
             return this;
         }
         public Builder workforceName(Output<String> workforceName) {

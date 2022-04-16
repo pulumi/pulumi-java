@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.IntentArgs;
 import io.pulumi.gcp.diagflow.inputs.IntentState;
@@ -52,7 +53,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Note: The action name must not contain whitespaces.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -70,7 +71,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDefaultResponsePlatforms() {
+    public Output</* @Nullable */ List<String>> defaultResponsePlatforms() {
         return this.defaultResponsePlatforms;
     }
     /**
@@ -84,7 +85,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * @return The name of this intent to be displayed on the console.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -102,7 +103,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEvents() {
+    public Output</* @Nullable */ List<String>> events() {
         return this.events;
     }
     /**
@@ -118,7 +119,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * in the output.
      * 
      */
-    public Output<List<IntentFollowupIntentInfo>> getFollowupIntentInfos() {
+    public Output<List<IntentFollowupIntentInfo>> followupIntentInfos() {
         return this.followupIntentInfos;
     }
     /**
@@ -134,7 +135,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInputContextNames() {
+    public Output</* @Nullable */ List<String>> inputContextNames() {
         return this.inputContextNames;
     }
     /**
@@ -148,7 +149,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this is a fallback intent.
      * 
      */
-    public Output<Boolean> getIsFallback() {
+    public Output<Boolean> isFallback() {
         return this.isFallback;
     }
     /**
@@ -166,7 +167,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * ONLY match mode. Also, auto-markup in the UI is turned off.
      * 
      */
-    public Output<Boolean> getMlDisabled() {
+    public Output<Boolean> mlDisabled() {
         return this.mlDisabled;
     }
     /**
@@ -180,7 +181,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -196,7 +197,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    public Output<String> getParentFollowupIntentName() {
+    public Output<String> parentFollowupIntentName() {
         return this.parentFollowupIntentName;
     }
     /**
@@ -216,7 +217,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -232,7 +233,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -246,7 +247,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to delete all contexts in the current session when this intent is matched.
      * 
      */
-    public Output<Boolean> getResetContexts() {
+    public Output<Boolean> resetContexts() {
         return this.resetContexts;
     }
     /**
@@ -262,7 +263,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    public Output<String> getRootFollowupIntentName() {
+    public Output<String> rootFollowupIntentName() {
         return this.rootFollowupIntentName;
     }
     /**
@@ -284,7 +285,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      *   Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
      * 
      */
-    public Output<String> getWebhookState() {
+    public Output<String> webhookState() {
         return this.webhookState;
     }
 
@@ -310,7 +311,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Intent(String name, IntentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/intent:Intent", name, args == null ? IntentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/intent:Intent", name, args == null ? IntentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Intent(String name, Output<String> id, @Nullable IntentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

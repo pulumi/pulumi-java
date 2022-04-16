@@ -44,14 +44,14 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
      * Whether to perform a 'guest aware' snapshot.
      * 
     */
-    public Optional<Boolean> getGuestFlush() {
+    public Optional<Boolean> guestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
     /**
      * A set of key-value pairs.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
@@ -59,7 +59,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
      * (regional or multi-regional)
      * 
     */
-    public Optional<String> getStorageLocations() {
+    public Optional<String> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
 

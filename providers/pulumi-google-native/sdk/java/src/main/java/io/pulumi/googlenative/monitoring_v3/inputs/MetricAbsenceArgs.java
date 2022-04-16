@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.AggregationArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aggregations")
       private final @Nullable Output<List<AggregationArgs>> aggregations;
 
-    public Output<List<AggregationArgs>> getAggregations() {
-        return this.aggregations == null ? Output.empty() : this.aggregations;
+    public Output<List<AggregationArgs>> aggregations() {
+        return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -61,8 +62,8 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trigger")
       private final @Nullable Output<TriggerArgs> trigger;
 
-    public Output<TriggerArgs> getTrigger() {
-        return this.trigger == null ? Output.empty() : this.trigger;
+    public Output<TriggerArgs> trigger() {
+        return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 
     public MetricAbsenceArgs(
@@ -77,10 +78,10 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricAbsenceArgs() {
-        this.aggregations = Output.empty();
-        this.duration = Output.empty();
-        this.filter = Output.empty();
-        this.trigger = Output.empty();
+        this.aggregations = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aggregations(@Nullable List<AggregationArgs> aggregations) {
-            this.aggregations = Output.ofNullable(aggregations);
+            this.aggregations = Codegen.ofNullable(aggregations);
             return this;
         }
         public Builder aggregations(AggregationArgs... aggregations) {
@@ -125,7 +126,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder filter(Output<String> filter) {
@@ -141,7 +142,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trigger(@Nullable TriggerArgs trigger) {
-            this.trigger = Output.ofNullable(trigger);
+            this.trigger = Codegen.ofNullable(trigger);
             return this;
         }        public MetricAbsenceArgs build() {
             return new MetricAbsenceArgs(aggregations, duration, filter, trigger);

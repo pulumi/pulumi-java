@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return For optimistic concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -57,7 +58,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Azure location in which project is created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Name of the project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Properties of the project.
      * 
      */
-    public Output<ProjectPropertiesResponse> getProperties() {
+    public Output<ProjectPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -99,7 +100,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Tags provided by Azure Tagging service.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +114,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -139,7 +140,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:migrate:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:migrate:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

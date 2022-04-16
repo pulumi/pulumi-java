@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<String> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     public AssetModelAttributeArgs(@Nullable Output<String> defaultValue) {
@@ -26,7 +27,7 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
     }
 
     private AssetModelAttributeArgs() {
-        this.defaultValue = Output.empty();
+        this.defaultValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class AssetModelAttributeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }        public AssetModelAttributeArgs build() {
             return new AssetModelAttributeArgs(defaultValue);

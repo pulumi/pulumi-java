@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.inputs.KeyTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -28,8 +29,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableKeyRotation")
       private final @Nullable Output<Boolean> enableKeyRotation;
 
-    public Output<Boolean> getEnableKeyRotation() {
-        return this.enableKeyRotation == null ? Output.empty() : this.enableKeyRotation;
+    public Output<Boolean> enableKeyRotation() {
+        return this.enableKeyRotation == null ? Codegen.empty() : this.enableKeyRotation;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyPolicy", required=true)
       private final Output<Object> keyPolicy;
 
-    public Output<Object> getKeyPolicy() {
+    public Output<Object> keyPolicy() {
         return this.keyPolicy;
     }
 
@@ -72,8 +73,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySpec")
       private final @Nullable Output<KeySpec> keySpec;
 
-    public Output<KeySpec> getKeySpec() {
-        return this.keySpec == null ? Output.empty() : this.keySpec;
+    public Output<KeySpec> keySpec() {
+        return this.keySpec == null ? Codegen.empty() : this.keySpec;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyUsage")
       private final @Nullable Output<KeyUsage> keyUsage;
 
-    public Output<KeyUsage> getKeyUsage() {
-        return this.keyUsage == null ? Output.empty() : this.keyUsage;
+    public Output<KeyUsage> keyUsage() {
+        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiRegion")
       private final @Nullable Output<Boolean> multiRegion;
 
-    public Output<Boolean> getMultiRegion() {
-        return this.multiRegion == null ? Output.empty() : this.multiRegion;
+    public Output<Boolean> multiRegion() {
+        return this.multiRegion == null ? Codegen.empty() : this.multiRegion;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pendingWindowInDays")
       private final @Nullable Output<Integer> pendingWindowInDays;
 
-    public Output<Integer> getPendingWindowInDays() {
-        return this.pendingWindowInDays == null ? Output.empty() : this.pendingWindowInDays;
+    public Output<Integer> pendingWindowInDays() {
+        return this.pendingWindowInDays == null ? Codegen.empty() : this.pendingWindowInDays;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<KeyTagArgs>> tags;
 
-    public Output<List<KeyTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<KeyTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public KeyArgs(
@@ -142,15 +143,15 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.description = Output.empty();
-        this.enableKeyRotation = Output.empty();
-        this.enabled = Output.empty();
-        this.keyPolicy = Output.empty();
-        this.keySpec = Output.empty();
-        this.keyUsage = Output.empty();
-        this.multiRegion = Output.empty();
-        this.pendingWindowInDays = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.enableKeyRotation = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.keyPolicy = Codegen.empty();
+        this.keySpec = Codegen.empty();
+        this.keyUsage = Codegen.empty();
+        this.multiRegion = Codegen.empty();
+        this.pendingWindowInDays = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableKeyRotation(@Nullable Output<Boolean> enableKeyRotation) {
@@ -202,7 +203,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableKeyRotation(@Nullable Boolean enableKeyRotation) {
-            this.enableKeyRotation = Output.ofNullable(enableKeyRotation);
+            this.enableKeyRotation = Codegen.ofNullable(enableKeyRotation);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -210,7 +211,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder keyPolicy(Output<Object> keyPolicy) {
@@ -226,7 +227,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keySpec(@Nullable KeySpec keySpec) {
-            this.keySpec = Output.ofNullable(keySpec);
+            this.keySpec = Codegen.ofNullable(keySpec);
             return this;
         }
         public Builder keyUsage(@Nullable Output<KeyUsage> keyUsage) {
@@ -234,7 +235,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyUsage(@Nullable KeyUsage keyUsage) {
-            this.keyUsage = Output.ofNullable(keyUsage);
+            this.keyUsage = Codegen.ofNullable(keyUsage);
             return this;
         }
         public Builder multiRegion(@Nullable Output<Boolean> multiRegion) {
@@ -242,7 +243,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multiRegion(@Nullable Boolean multiRegion) {
-            this.multiRegion = Output.ofNullable(multiRegion);
+            this.multiRegion = Codegen.ofNullable(multiRegion);
             return this;
         }
         public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
@@ -250,7 +251,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
-            this.pendingWindowInDays = Output.ofNullable(pendingWindowInDays);
+            this.pendingWindowInDays = Codegen.ofNullable(pendingWindowInDays);
             return this;
         }
         public Builder tags(@Nullable Output<List<KeyTagArgs>> tags) {
@@ -258,7 +259,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<KeyTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(KeyTagArgs... tags) {

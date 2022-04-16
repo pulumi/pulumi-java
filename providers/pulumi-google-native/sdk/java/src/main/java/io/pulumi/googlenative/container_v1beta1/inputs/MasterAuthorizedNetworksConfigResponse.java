@@ -25,7 +25,7 @@ public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.reso
     @Import(name="cidrBlocks", required=true)
       private final List<CidrBlockResponse> cidrBlocks;
 
-    public List<CidrBlockResponse> getCidrBlocks() {
+    public List<CidrBlockResponse> cidrBlocks() {
         return this.cidrBlocks;
     }
 
@@ -36,7 +36,7 @@ public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.reso
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

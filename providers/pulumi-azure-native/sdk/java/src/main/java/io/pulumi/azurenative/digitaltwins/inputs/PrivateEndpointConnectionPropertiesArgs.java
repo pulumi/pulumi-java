@@ -6,6 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.inputs.ConnectionPropertiesPrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,15 +24,15 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> getGroupIds() {
-        return this.groupIds == null ? Output.empty() : this.groupIds;
+    public Output<List<String>> groupIds() {
+        return this.groupIds == null ? Codegen.empty() : this.groupIds;
     }
 
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<ConnectionPropertiesPrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+    public Output<ConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     public PrivateEndpointConnectionPropertiesArgs(
@@ -42,8 +43,8 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     }
 
     private PrivateEndpointConnectionPropertiesArgs() {
-        this.groupIds = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
+        this.groupIds = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Output.ofNullable(groupIds);
+            this.groupIds = Codegen.ofNullable(groupIds);
             return this;
         }
         public Builder groupIds(String... groupIds) {
@@ -84,7 +85,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable ConnectionPropertiesPrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }        public PrivateEndpointConnectionPropertiesArgs build() {
             return new PrivateEndpointConnectionPropertiesArgs(groupIds, privateLinkServiceConnectionState);

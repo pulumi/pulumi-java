@@ -6,6 +6,7 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.portal.inputs.UserPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -33,7 +34,7 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
     @Import(name="properties", required=true)
       private final Output<UserPropertiesArgs> properties;
 
-    public Output<UserPropertiesArgs> getProperties() {
+    public Output<UserPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -44,8 +45,8 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
     @Import(name="userSettingsName")
       private final @Nullable Output<String> userSettingsName;
 
-    public Output<String> getUserSettingsName() {
-        return this.userSettingsName == null ? Output.empty() : this.userSettingsName;
+    public Output<String> userSettingsName() {
+        return this.userSettingsName == null ? Codegen.empty() : this.userSettingsName;
     }
 
     public UserSettingsWithLocationArgs(
@@ -58,9 +59,9 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
     }
 
     private UserSettingsWithLocationArgs() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.userSettingsName = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.userSettingsName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder userSettingsName(@Nullable String userSettingsName) {
-            this.userSettingsName = Output.ofNullable(userSettingsName);
+            this.userSettingsName = Codegen.ofNullable(userSettingsName);
             return this;
         }        public UserSettingsWithLocationArgs build() {
             return new UserSettingsWithLocationArgs(location, properties, userSettingsName);

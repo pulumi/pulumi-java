@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
     @Import(name="bigqueryConnectionSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
 
-    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> getBigqueryConnectionSpec() {
-        return this.bigqueryConnectionSpec == null ? Output.empty() : this.bigqueryConnectionSpec;
+    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec() {
+        return this.bigqueryConnectionSpec == null ? Codegen.empty() : this.bigqueryConnectionSpec;
     }
 
     public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
     }
 
     private GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs() {
-        this.bigqueryConnectionSpec = Output.empty();
+        this.bigqueryConnectionSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
             return this;
         }
         public Builder bigqueryConnectionSpec(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs bigqueryConnectionSpec) {
-            this.bigqueryConnectionSpec = Output.ofNullable(bigqueryConnectionSpec);
+            this.bigqueryConnectionSpec = Codegen.ofNullable(bigqueryConnectionSpec);
             return this;
         }        public GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs build() {
             return new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(bigqueryConnectionSpec);

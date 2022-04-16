@@ -32,7 +32,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="adMarkers")
       private final @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
 
-    public Optional<OriginEndpointHlsManifestAdMarkers> getAdMarkers() {
+    public Optional<OriginEndpointHlsManifestAdMarkers> adMarkers() {
         return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
     }
 
@@ -43,14 +43,14 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="adTriggers")
       private final @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
 
-    public List<OriginEndpointHlsManifestAdTriggersItem> getAdTriggers() {
+    public List<OriginEndpointHlsManifestAdTriggersItem> adTriggers() {
         return this.adTriggers == null ? List.of() : this.adTriggers;
     }
 
     @Import(name="adsOnDeliveryRestrictions")
       private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
 
-    public Optional<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
+    public Optional<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
         return this.adsOnDeliveryRestrictions == null ? Optional.empty() : Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
 
@@ -61,7 +61,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -72,7 +72,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="includeIframeOnlyStream")
       private final @Nullable Boolean includeIframeOnlyStream;
 
-    public Optional<Boolean> getIncludeIframeOnlyStream() {
+    public Optional<Boolean> includeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
@@ -83,7 +83,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="manifestName")
       private final @Nullable String manifestName;
 
-    public Optional<String> getManifestName() {
+    public Optional<String> manifestName() {
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
     }
 
@@ -94,7 +94,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="playlistType")
       private final @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
 
-    public Optional<OriginEndpointHlsManifestPlaylistType> getPlaylistType() {
+    public Optional<OriginEndpointHlsManifestPlaylistType> playlistType() {
         return this.playlistType == null ? Optional.empty() : Optional.ofNullable(this.playlistType);
     }
 
@@ -105,7 +105,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="playlistWindowSeconds")
       private final @Nullable Integer playlistWindowSeconds;
 
-    public Optional<Integer> getPlaylistWindowSeconds() {
+    public Optional<Integer> playlistWindowSeconds() {
         return this.playlistWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.playlistWindowSeconds);
     }
 
@@ -116,7 +116,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="programDateTimeIntervalSeconds")
       private final @Nullable Integer programDateTimeIntervalSeconds;
 
-    public Optional<Integer> getProgramDateTimeIntervalSeconds() {
+    public Optional<Integer> programDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
 
@@ -127,7 +127,7 @@ public final class OriginEndpointHlsManifest extends io.pulumi.resources.InvokeA
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

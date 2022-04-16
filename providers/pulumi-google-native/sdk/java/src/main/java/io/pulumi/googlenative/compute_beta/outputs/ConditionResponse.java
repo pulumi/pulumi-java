@@ -54,35 +54,35 @@ public final class ConditionResponse {
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public String getIam() {
+    public String iam() {
         return this.iam;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public String getOp() {
+    public String op() {
         return this.op;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public String getSvc() {
+    public String svc() {
         return this.svc;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public String getSys() {
+    public String sys() {
         return this.sys;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

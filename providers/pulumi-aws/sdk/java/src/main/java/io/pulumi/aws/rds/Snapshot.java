@@ -9,6 +9,7 @@ import io.pulumi.aws.rds.inputs.SnapshotState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the allocated storage size in gigabytes (GB).
      * 
      */
-    public Output<Integer> getAllocatedStorage() {
+    public Output<Integer> allocatedStorage() {
         return this.allocatedStorage;
     }
     /**
@@ -56,7 +57,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -70,7 +71,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The DB Instance Identifier from which to take the snapshot.
      * 
      */
-    public Output<String> getDbInstanceIdentifier() {
+    public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
     /**
@@ -84,7 +85,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the DB snapshot.
      * 
      */
-    public Output<String> getDbSnapshotArn() {
+    public Output<String> dbSnapshotArn() {
         return this.dbSnapshotArn;
     }
     /**
@@ -98,7 +99,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The Identifier for the snapshot.
      * 
      */
-    public Output<String> getDbSnapshotIdentifier() {
+    public Output<String> dbSnapshotIdentifier() {
         return this.dbSnapshotIdentifier;
     }
     /**
@@ -112,7 +113,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the DB snapshot is encrypted.
      * 
      */
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted;
     }
     /**
@@ -126,7 +127,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the database engine.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     /**
@@ -140,7 +141,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the version of the database engine.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -154,7 +155,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
      * 
      */
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops;
     }
     /**
@@ -168,7 +169,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The ARN for the KMS encryption key.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -182,7 +183,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return License model information for the restored DB instance.
      * 
      */
-    public Output<String> getLicenseModel() {
+    public Output<String> licenseModel() {
         return this.licenseModel;
     }
     /**
@@ -196,19 +197,19 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Provides the option group name for the DB snapshot.
      * 
      */
-    public Output<String> getOptionGroupName() {
+    public Output<String> optionGroupName() {
         return this.optionGroupName;
     }
     @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     @Export(name="snapshotType", type=String.class, parameters={})
     private Output<String> snapshotType;
 
-    public Output<String> getSnapshotType() {
+    public Output<String> snapshotType() {
         return this.snapshotType;
     }
     /**
@@ -222,7 +223,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
      * 
      */
-    public Output<String> getSourceDbSnapshotIdentifier() {
+    public Output<String> sourceDbSnapshotIdentifier() {
         return this.sourceDbSnapshotIdentifier;
     }
     /**
@@ -236,7 +237,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The region that the DB snapshot was created in or copied from.
      * 
      */
-    public Output<String> getSourceRegion() {
+    public Output<String> sourceRegion() {
         return this.sourceRegion;
     }
     /**
@@ -250,7 +251,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the status of this DB snapshot.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -264,7 +265,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the storage type associated with DB snapshot.
      * 
      */
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType;
     }
     /**
@@ -278,7 +279,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -292,7 +293,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -306,7 +307,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Provides the VPC ID associated with the DB snapshot.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -332,7 +333,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Snapshot(String name, Output<String> id, @Nullable SnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.JobCsvOutputOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
     @Import(name="csv")
       private final @Nullable Output<JobCsvOutputOptionsArgs> csv;
 
-    public Output<JobCsvOutputOptionsArgs> getCsv() {
-        return this.csv == null ? Output.empty() : this.csv;
+    public Output<JobCsvOutputOptionsArgs> csv() {
+        return this.csv == null ? Codegen.empty() : this.csv;
     }
 
     public JobOutputFormatOptionsArgs(@Nullable Output<JobCsvOutputOptionsArgs> csv) {
@@ -30,7 +31,7 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
     }
 
     private JobOutputFormatOptionsArgs() {
-        this.csv = Output.empty();
+        this.csv = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder csv(@Nullable JobCsvOutputOptionsArgs csv) {
-            this.csv = Output.ofNullable(csv);
+            this.csv = Codegen.ofNullable(csv);
             return this;
         }        public JobOutputFormatOptionsArgs build() {
             return new JobOutputFormatOptionsArgs(csv);

@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
     @Import(name="datasetName", required=true)
       private final String datasetName;
 
-    public String getDatasetName() {
+    public String datasetName() {
         return this.datasetName;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -67,7 +67,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
     @Import(name="tablePrefix", required=true)
       private final String tablePrefix;
 
-    public String getTablePrefix() {
+    public String tablePrefix() {
         return this.tablePrefix;
     }
 

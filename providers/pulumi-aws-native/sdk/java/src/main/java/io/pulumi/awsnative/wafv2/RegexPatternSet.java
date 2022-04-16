@@ -10,6 +10,7 @@ import io.pulumi.awsnative.wafv2.outputs.RegexPatternSetTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return ARN of the WAF entity.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return Description of the entity.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,13 +60,13 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return Name of the RegexPatternSet.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="regularExpressionList", type=List.class, parameters={String.class})
     private Output<List<String>> regularExpressionList;
 
-    public Output<List<String>> getRegularExpressionList() {
+    public Output<List<String>> regularExpressionList() {
         return this.regularExpressionList;
     }
     /**
@@ -79,13 +80,13 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
      * 
      */
-    public Output<RegexPatternSetScope> getScope() {
+    public Output<RegexPatternSetScope> scope() {
         return this.scope;
     }
     @Export(name="tags", type=List.class, parameters={RegexPatternSetTag.class})
     private Output</* @Nullable */ List<RegexPatternSetTag>> tags;
 
-    public Output</* @Nullable */ List<RegexPatternSetTag>> getTags() {
+    public Output</* @Nullable */ List<RegexPatternSetTag>> tags() {
         return this.tags;
     }
 
@@ -111,7 +112,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegexPatternSet(String name, RegexPatternSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:wafv2:RegexPatternSet", name, args == null ? RegexPatternSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:wafv2:RegexPatternSet", name, args == null ? RegexPatternSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegexPatternSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

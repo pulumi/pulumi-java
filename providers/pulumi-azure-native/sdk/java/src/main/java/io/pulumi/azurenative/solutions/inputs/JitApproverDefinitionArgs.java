@@ -7,6 +7,7 @@ import io.pulumi.azurenative.solutions.enums.JitApproverType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -49,8 +50,8 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,JitApproverType>> type;
 
-    public Output<Either<String,JitApproverType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,JitApproverType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public JitApproverDefinitionArgs(
@@ -63,9 +64,9 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
     }
 
     private JitApproverDefinitionArgs() {
-        this.displayName = Output.empty();
-        this.id = Output.empty();
-        this.type = Output.empty();
+        this.displayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -113,7 +114,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder type(@Nullable Either<String,JitApproverType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public JitApproverDefinitionArgs build() {
             return new JitApproverDefinitionArgs(displayName, id, type);

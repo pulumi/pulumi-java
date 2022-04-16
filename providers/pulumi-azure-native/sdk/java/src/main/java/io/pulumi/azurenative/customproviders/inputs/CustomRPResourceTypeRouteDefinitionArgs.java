@@ -7,6 +7,7 @@ import io.pulumi.azurenative.customproviders.enums.ResourceTypeRouting;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -38,7 +39,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,8 +50,8 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
     @Import(name="routingType")
       private final @Nullable Output<Either<String,ResourceTypeRouting>> routingType;
 
-    public Output<Either<String,ResourceTypeRouting>> getRoutingType() {
-        return this.routingType == null ? Output.empty() : this.routingType;
+    public Output<Either<String,ResourceTypeRouting>> routingType() {
+        return this.routingType == null ? Codegen.empty() : this.routingType;
     }
 
     public CustomRPResourceTypeRouteDefinitionArgs(
@@ -63,9 +64,9 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
     }
 
     private CustomRPResourceTypeRouteDefinitionArgs() {
-        this.endpoint = Output.empty();
-        this.name = Output.empty();
-        this.routingType = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.routingType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
             return this;
         }
         public Builder routingType(@Nullable Either<String,ResourceTypeRouting> routingType) {
-            this.routingType = Output.ofNullable(routingType);
+            this.routingType = Codegen.ofNullable(routingType);
             return this;
         }        public CustomRPResourceTypeRouteDefinitionArgs build() {
             return new CustomRPResourceTypeRouteDefinitionArgs(endpoint, name, routingType);

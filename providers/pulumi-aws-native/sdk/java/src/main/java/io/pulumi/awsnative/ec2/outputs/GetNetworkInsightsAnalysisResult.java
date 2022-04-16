@@ -56,37 +56,37 @@ public final class GetNetworkInsightsAnalysisResult {
         this.tags = tags;
     }
 
-    public List<NetworkInsightsAnalysisAlternatePathHint> getAlternatePathHints() {
+    public List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints() {
         return this.alternatePathHints == null ? List.of() : this.alternatePathHints;
     }
-    public List<NetworkInsightsAnalysisExplanation> getExplanations() {
+    public List<NetworkInsightsAnalysisExplanation> explanations() {
         return this.explanations == null ? List.of() : this.explanations;
     }
-    public List<NetworkInsightsAnalysisPathComponent> getForwardPathComponents() {
+    public List<NetworkInsightsAnalysisPathComponent> forwardPathComponents() {
         return this.forwardPathComponents == null ? List.of() : this.forwardPathComponents;
     }
-    public Optional<String> getNetworkInsightsAnalysisArn() {
+    public Optional<String> networkInsightsAnalysisArn() {
         return Optional.ofNullable(this.networkInsightsAnalysisArn);
     }
-    public Optional<String> getNetworkInsightsAnalysisId() {
+    public Optional<String> networkInsightsAnalysisId() {
         return Optional.ofNullable(this.networkInsightsAnalysisId);
     }
-    public Optional<Boolean> getNetworkPathFound() {
+    public Optional<Boolean> networkPathFound() {
         return Optional.ofNullable(this.networkPathFound);
     }
-    public List<NetworkInsightsAnalysisPathComponent> getReturnPathComponents() {
+    public List<NetworkInsightsAnalysisPathComponent> returnPathComponents() {
         return this.returnPathComponents == null ? List.of() : this.returnPathComponents;
     }
-    public Optional<String> getStartDate() {
+    public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
-    public Optional<NetworkInsightsAnalysisStatus> getStatus() {
+    public Optional<NetworkInsightsAnalysisStatus> status() {
         return Optional.ofNullable(this.status);
     }
-    public Optional<String> getStatusMessage() {
+    public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
-    public List<NetworkInsightsAnalysisTag> getTags() {
+    public List<NetworkInsightsAnalysisTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

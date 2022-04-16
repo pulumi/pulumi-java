@@ -42,21 +42,21 @@ public final class PackagingConfigurationStreamSelection {
      * The maximum video bitrate (bps) to include in output.
      * 
     */
-    public Optional<Integer> getMaxVideoBitsPerSecond() {
+    public Optional<Integer> maxVideoBitsPerSecond() {
         return Optional.ofNullable(this.maxVideoBitsPerSecond);
     }
     /**
      * The minimum video bitrate (bps) to include in output.
      * 
     */
-    public Optional<Integer> getMinVideoBitsPerSecond() {
+    public Optional<Integer> minVideoBitsPerSecond() {
         return Optional.ofNullable(this.minVideoBitsPerSecond);
     }
     /**
      * A directive that determines the order of streams in the output.
      * 
     */
-    public Optional<PackagingConfigurationStreamSelectionStreamOrder> getStreamOrder() {
+    public Optional<PackagingConfigurationStreamSelectionStreamOrder> streamOrder() {
         return Optional.ofNullable(this.streamOrder);
     }
 

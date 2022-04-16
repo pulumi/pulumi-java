@@ -5,6 +5,7 @@ package io.pulumi.azurenative.portal;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="consoleName")
       private final @Nullable Output<String> consoleName;
 
-    public Output<String> getConsoleName() {
-        return this.consoleName == null ? Output.empty() : this.consoleName;
+    public Output<String> consoleName() {
+        return this.consoleName == null ? Codegen.empty() : this.consoleName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -44,8 +45,8 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ConsoleWithLocationArgs() {
-        this.consoleName = Output.empty();
-        this.location = Output.empty();
+        this.consoleName = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder consoleName(@Nullable String consoleName) {
-            this.consoleName = Output.ofNullable(consoleName);
+            this.consoleName = Codegen.ofNullable(consoleName);
             return this;
         }
         public Builder location(Output<String> location) {

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.media.inputs.UtcClipTimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -44,8 +45,8 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="end")
       private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
-    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end() {
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="files")
       private final @Nullable Output<List<String>> files;
 
-    public Output<List<String>> getFiles() {
-        return this.files == null ? Output.empty() : this.files;
+    public Output<List<String>> files() {
+        return this.files == null ? Codegen.empty() : this.files;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputDefinitions")
       private final @Nullable Output<List<Object>> inputDefinitions;
 
-    public Output<List<Object>> getInputDefinitions() {
-        return this.inputDefinitions == null ? Output.empty() : this.inputDefinitions;
+    public Output<List<Object>> inputDefinitions() {
+        return this.inputDefinitions == null ? Codegen.empty() : this.inputDefinitions;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -100,8 +101,8 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="start")
       private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
-    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start() {
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public JobInputAssetArgs(
@@ -122,13 +123,13 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobInputAssetArgs() {
-        this.assetName = Output.empty();
-        this.end = Output.empty();
-        this.files = Output.empty();
-        this.inputDefinitions = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
-        this.start = Output.empty();
+        this.assetName = Codegen.empty();
+        this.end = Codegen.empty();
+        this.files = Codegen.empty();
+        this.inputDefinitions = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder end(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder files(@Nullable Output<List<String>> files) {
@@ -184,7 +185,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder files(@Nullable List<String> files) {
-            this.files = Output.ofNullable(files);
+            this.files = Codegen.ofNullable(files);
             return this;
         }
         public Builder files(String... files) {
@@ -195,7 +196,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
-            this.inputDefinitions = Output.ofNullable(inputDefinitions);
+            this.inputDefinitions = Codegen.ofNullable(inputDefinitions);
             return this;
         }
         public Builder inputDefinitions(Object... inputDefinitions) {
@@ -206,7 +207,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -222,7 +223,7 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder start(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public JobInputAssetArgs build() {
             return new JobInputAssetArgs(assetName, end, files, inputDefinitions, label, odataType, start);

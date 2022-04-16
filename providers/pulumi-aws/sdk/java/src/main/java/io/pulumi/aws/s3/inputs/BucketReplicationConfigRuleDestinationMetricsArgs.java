@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends io.
     @Import(name="eventThreshold")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold;
 
-    public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> getEventThreshold() {
-        return this.eventThreshold == null ? Output.empty() : this.eventThreshold;
+    public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs> eventThreshold() {
+        return this.eventThreshold == null ? Codegen.empty() : this.eventThreshold;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends io.
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -45,8 +46,8 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends io.
     }
 
     private BucketReplicationConfigRuleDestinationMetricsArgs() {
-        this.eventThreshold = Output.empty();
-        this.status = Output.empty();
+        this.eventThreshold = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends io.
             return this;
         }
         public Builder eventThreshold(@Nullable BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs eventThreshold) {
-            this.eventThreshold = Output.ofNullable(eventThreshold);
+            this.eventThreshold = Codegen.ofNullable(eventThreshold);
             return this;
         }
         public Builder status(Output<String> status) {

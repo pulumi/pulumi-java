@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse extends io
     @Import(name="fullMatch", required=true)
       private final Boolean fullMatch;
 
-    public Boolean getFullMatch() {
+    public Boolean fullMatch() {
         return this.fullMatch;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse extends io
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

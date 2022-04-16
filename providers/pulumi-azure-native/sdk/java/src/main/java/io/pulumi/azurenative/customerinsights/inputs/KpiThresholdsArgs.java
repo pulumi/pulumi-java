@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="increasingKpi", required=true)
       private final Output<Boolean> increasingKpi;
 
-    public Output<Boolean> getIncreasingKpi() {
+    public Output<Boolean> increasingKpi() {
         return this.increasingKpi;
     }
 
@@ -36,7 +37,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lowerLimit", required=true)
       private final Output<Double> lowerLimit;
 
-    public Output<Double> getLowerLimit() {
+    public Output<Double> lowerLimit() {
         return this.lowerLimit;
     }
 
@@ -47,7 +48,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upperLimit", required=true)
       private final Output<Double> upperLimit;
 
-    public Output<Double> getUpperLimit() {
+    public Output<Double> upperLimit() {
         return this.upperLimit;
     }
 
@@ -61,9 +62,9 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KpiThresholdsArgs() {
-        this.increasingKpi = Output.empty();
-        this.lowerLimit = Output.empty();
-        this.upperLimit = Output.empty();
+        this.increasingKpi = Codegen.empty();
+        this.lowerLimit = Codegen.empty();
+        this.upperLimit = Codegen.empty();
     }
 
     public static Builder builder() {

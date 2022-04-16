@@ -9,6 +9,7 @@ import io.pulumi.awsnative.datasync.inputs.TaskScheduleArgs;
 import io.pulumi.awsnative.datasync.inputs.TaskTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
-    public Output<String> getCloudWatchLogGroupArn() {
-        return this.cloudWatchLogGroupArn == null ? Output.empty() : this.cloudWatchLogGroupArn;
+    public Output<String> cloudWatchLogGroupArn() {
+        return this.cloudWatchLogGroupArn == null ? Codegen.empty() : this.cloudWatchLogGroupArn;
     }
 
     /**
@@ -37,22 +38,22 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationLocationArn", required=true)
       private final Output<String> destinationLocationArn;
 
-    public Output<String> getDestinationLocationArn() {
+    public Output<String> destinationLocationArn() {
         return this.destinationLocationArn;
     }
 
     @Import(name="excludes")
       private final @Nullable Output<List<TaskFilterRuleArgs>> excludes;
 
-    public Output<List<TaskFilterRuleArgs>> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+    public Output<List<TaskFilterRuleArgs>> excludes() {
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     @Import(name="includes")
       private final @Nullable Output<List<TaskFilterRuleArgs>> includes;
 
-    public Output<List<TaskFilterRuleArgs>> getIncludes() {
-        return this.includes == null ? Output.empty() : this.includes;
+    public Output<List<TaskFilterRuleArgs>> includes() {
+        return this.includes == null ? Codegen.empty() : this.includes;
     }
 
     /**
@@ -62,22 +63,22 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="options")
       private final @Nullable Output<TaskOptionsArgs> options;
 
-    public Output<TaskOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<TaskOptionsArgs> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="schedule")
       private final @Nullable Output<TaskScheduleArgs> schedule;
 
-    public Output<TaskScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<TaskScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceLocationArn", required=true)
       private final Output<String> sourceLocationArn;
 
-    public Output<String> getSourceLocationArn() {
+    public Output<String> sourceLocationArn() {
         return this.sourceLocationArn;
     }
 
@@ -98,8 +99,8 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TaskTagArgs>> tags;
 
-    public Output<List<TaskTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<TaskTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TaskArgs(
@@ -124,15 +125,15 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskArgs() {
-        this.cloudWatchLogGroupArn = Output.empty();
-        this.destinationLocationArn = Output.empty();
-        this.excludes = Output.empty();
-        this.includes = Output.empty();
-        this.name = Output.empty();
-        this.options = Output.empty();
-        this.schedule = Output.empty();
-        this.sourceLocationArn = Output.empty();
-        this.tags = Output.empty();
+        this.cloudWatchLogGroupArn = Codegen.empty();
+        this.destinationLocationArn = Codegen.empty();
+        this.excludes = Codegen.empty();
+        this.includes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.options = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.sourceLocationArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
-            this.cloudWatchLogGroupArn = Output.ofNullable(cloudWatchLogGroupArn);
+            this.cloudWatchLogGroupArn = Codegen.ofNullable(cloudWatchLogGroupArn);
             return this;
         }
         public Builder destinationLocationArn(Output<String> destinationLocationArn) {
@@ -192,7 +193,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludes(@Nullable List<TaskFilterRuleArgs> excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder excludes(TaskFilterRuleArgs... excludes) {
@@ -203,7 +204,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includes(@Nullable List<TaskFilterRuleArgs> includes) {
-            this.includes = Output.ofNullable(includes);
+            this.includes = Codegen.ofNullable(includes);
             return this;
         }
         public Builder includes(TaskFilterRuleArgs... includes) {
@@ -214,7 +215,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder options(@Nullable Output<TaskOptionsArgs> options) {
@@ -222,7 +223,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable TaskOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder schedule(@Nullable Output<TaskScheduleArgs> schedule) {
@@ -230,7 +231,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable TaskScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder sourceLocationArn(Output<String> sourceLocationArn) {
@@ -246,7 +247,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TaskTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TaskTagArgs... tags) {

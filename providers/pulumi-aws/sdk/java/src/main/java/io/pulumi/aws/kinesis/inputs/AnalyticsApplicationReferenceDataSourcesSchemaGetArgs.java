@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSche
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
     @Import(name="recordColumns", required=true)
       private final Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
 
-    public Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> getRecordColumns() {
+    public Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns() {
         return this.recordColumns;
     }
 
@@ -36,8 +37,8 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
     @Import(name="recordEncoding")
       private final @Nullable Output<String> recordEncoding;
 
-    public Output<String> getRecordEncoding() {
-        return this.recordEncoding == null ? Output.empty() : this.recordEncoding;
+    public Output<String> recordEncoding() {
+        return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
     @Import(name="recordFormat", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> getRecordFormat() {
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat() {
         return this.recordFormat;
     }
 
@@ -62,9 +63,9 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
     }
 
     private AnalyticsApplicationReferenceDataSourcesSchemaGetArgs() {
-        this.recordColumns = Output.empty();
-        this.recordEncoding = Output.empty();
-        this.recordFormat = Output.empty();
+        this.recordColumns = Codegen.empty();
+        this.recordEncoding = Codegen.empty();
+        this.recordFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
             return this;
         }
         public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Output.ofNullable(recordEncoding);
+            this.recordEncoding = Codegen.ofNullable(recordEncoding);
             return this;
         }
         public Builder recordFormat(Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {

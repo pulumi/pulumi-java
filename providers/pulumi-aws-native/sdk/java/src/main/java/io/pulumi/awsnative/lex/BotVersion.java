@@ -9,6 +9,7 @@ import io.pulumi.awsnative.lex.outputs.BotVersionLocaleSpecification;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,25 +23,25 @@ public class BotVersion extends io.pulumi.resources.CustomResource {
     @Export(name="botId", type=String.class, parameters={})
     private Output<String> botId;
 
-    public Output<String> getBotId() {
+    public Output<String> botId() {
         return this.botId;
     }
     @Export(name="botVersion", type=String.class, parameters={})
     private Output<String> botVersion;
 
-    public Output<String> getBotVersion() {
+    public Output<String> botVersion() {
         return this.botVersion;
     }
     @Export(name="botVersionLocaleSpecification", type=List.class, parameters={BotVersionLocaleSpecification.class})
     private Output<List<BotVersionLocaleSpecification>> botVersionLocaleSpecification;
 
-    public Output<List<BotVersionLocaleSpecification>> getBotVersionLocaleSpecification() {
+    public Output<List<BotVersionLocaleSpecification>> botVersionLocaleSpecification() {
         return this.botVersionLocaleSpecification;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
 
@@ -66,7 +67,7 @@ public class BotVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BotVersion(String name, BotVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lex:BotVersion", name, args == null ? BotVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:lex:BotVersion", name, args == null ? BotVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

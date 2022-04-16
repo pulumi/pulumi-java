@@ -26,7 +26,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="key")
       private final @Nullable KeyPropertiesResponse key;
 
-    public Optional<KeyPropertiesResponse> getKey() {
+    public Optional<KeyPropertiesResponse> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 

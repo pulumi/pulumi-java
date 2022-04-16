@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -33,8 +34,8 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+    public Output<String> kmsKeyName() {
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> getNumNodes() {
-        return this.numNodes == null ? Output.empty() : this.numNodes;
+    public Output<Integer> numNodes() {
+        return this.numNodes == null ? Codegen.empty() : this.numNodes;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+    public Output<String> storageType() {
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceClusterArgs(
@@ -89,11 +90,11 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InstanceClusterArgs() {
-        this.clusterId = Output.empty();
-        this.kmsKeyName = Output.empty();
-        this.numNodes = Output.empty();
-        this.storageType = Output.empty();
-        this.zone = Output.empty();
+        this.clusterId = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.numNodes = Codegen.empty();
+        this.storageType = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
@@ -145,7 +146,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Output.ofNullable(numNodes);
+            this.numNodes = Codegen.ofNullable(numNodes);
             return this;
         }
         public Builder storageType(@Nullable Output<String> storageType) {
@@ -153,7 +154,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -161,7 +162,7 @@ public final class InstanceClusterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceClusterArgs build() {
             return new InstanceClusterArgs(clusterId, kmsKeyName, numNodes, storageType, zone);

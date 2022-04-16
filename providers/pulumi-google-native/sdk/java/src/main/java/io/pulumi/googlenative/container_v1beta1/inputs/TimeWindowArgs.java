@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.inputs.MaintenanceExclusionOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceExclusionOptions")
       private final @Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
 
-    public Output<MaintenanceExclusionOptionsArgs> getMaintenanceExclusionOptions() {
-        return this.maintenanceExclusionOptions == null ? Output.empty() : this.maintenanceExclusionOptions;
+    public Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions() {
+        return this.maintenanceExclusionOptions == null ? Codegen.empty() : this.maintenanceExclusionOptions;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public TimeWindowArgs(
@@ -62,9 +63,9 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimeWindowArgs() {
-        this.endTime = Output.empty();
-        this.maintenanceExclusionOptions = Output.empty();
-        this.startTime = Output.empty();
+        this.endTime = Codegen.empty();
+        this.maintenanceExclusionOptions = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder maintenanceExclusionOptions(@Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions) {
@@ -104,7 +105,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceExclusionOptions(@Nullable MaintenanceExclusionOptionsArgs maintenanceExclusionOptions) {
-            this.maintenanceExclusionOptions = Output.ofNullable(maintenanceExclusionOptions);
+            this.maintenanceExclusionOptions = Codegen.ofNullable(maintenanceExclusionOptions);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -112,7 +113,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public TimeWindowArgs build() {
             return new TimeWindowArgs(endTime, maintenanceExclusionOptions, startTime);

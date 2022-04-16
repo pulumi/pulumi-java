@@ -7,6 +7,7 @@ import io.pulumi.azurenative.digitaltwins.enums.DigitalTwinsIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;
 
-    public Output<Either<String,DigitalTwinsIdentityType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,DigitalTwinsIdentityType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DigitalTwinsIdentityArgs(@Nullable Output<Either<String,DigitalTwinsIdentityType>> type) {
@@ -36,7 +37,7 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
     }
 
     private DigitalTwinsIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder type(@Nullable Either<String,DigitalTwinsIdentityType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DigitalTwinsIdentityArgs build() {
             return new DigitalTwinsIdentityArgs(type);

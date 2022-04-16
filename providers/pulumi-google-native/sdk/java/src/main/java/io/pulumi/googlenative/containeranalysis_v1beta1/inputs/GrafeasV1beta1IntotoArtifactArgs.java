@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactHashesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
     @Import(name="hashes")
       private final @Nullable Output<ArtifactHashesArgs> hashes;
 
-    public Output<ArtifactHashesArgs> getHashes() {
-        return this.hashes == null ? Output.empty() : this.hashes;
+    public Output<ArtifactHashesArgs> hashes() {
+        return this.hashes == null ? Codegen.empty() : this.hashes;
     }
 
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
-        return this.resourceUri == null ? Output.empty() : this.resourceUri;
+    public Output<String> resourceUri() {
+        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
     public GrafeasV1beta1IntotoArtifactArgs(
@@ -37,8 +38,8 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
     }
 
     private GrafeasV1beta1IntotoArtifactArgs() {
-        this.hashes = Output.empty();
-        this.resourceUri = Output.empty();
+        this.hashes = Codegen.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
             return this;
         }
         public Builder hashes(@Nullable ArtifactHashesArgs hashes) {
-            this.hashes = Output.ofNullable(hashes);
+            this.hashes = Codegen.ofNullable(hashes);
             return this;
         }
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
@@ -76,7 +77,7 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Output.ofNullable(resourceUri);
+            this.resourceUri = Codegen.ofNullable(resourceUri);
             return this;
         }        public GrafeasV1beta1IntotoArtifactArgs build() {
             return new GrafeasV1beta1IntotoArtifactArgs(hashes, resourceUri);

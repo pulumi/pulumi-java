@@ -6,6 +6,7 @@ package io.pulumi.googlenative.appengine_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1.IngressRuleArgs;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public class IngressRule extends io.pulumi.resources.CustomResource {
      * @return The action to take on matched requests.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -44,7 +45,7 @@ public class IngressRule extends io.pulumi.resources.CustomResource {
      * @return An optional string description of this rule. This field has a maximum length of 400 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class IngressRule extends io.pulumi.resources.CustomResource {
      * @return A positive integer between 1, Int32.MaxValue-1 that defines the order of rule evaluation. Rules with the lowest priority are evaluated first.A default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action of this rule can be modified by the user.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -72,7 +73,7 @@ public class IngressRule extends io.pulumi.resources.CustomResource {
      * @return IP address or range, defined using CIDR notation, of requests that this rule applies to. You can use the wildcard character "*" to match all IPs equivalent to "0/0" and "::/0" together. Examples: 192.168.1.1 or 192.168.0.0/16 or 2001:db8::/32 or 2001:0db8:0000:0042:0000:8a2e:0370:7334. Truncation will be silently performed on addresses which are not properly truncated. For example, 1.2.3.4/24 is accepted as the same address as 1.2.3.0/24. Similarly, for IPv6, 2001:db8::1/32 is accepted as the same address as 2001:db8::/32.
      * 
      */
-    public Output<String> getSourceRange() {
+    public Output<String> sourceRange() {
         return this.sourceRange;
     }
 
@@ -98,7 +99,7 @@ public class IngressRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IngressRule(String name, IngressRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:appengine/v1:IngressRule", name, args == null ? IngressRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:appengine/v1:IngressRule", name, args == null ? IngressRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IngressRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

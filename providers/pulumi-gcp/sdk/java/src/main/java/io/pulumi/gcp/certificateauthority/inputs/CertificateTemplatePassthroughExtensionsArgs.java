@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions;
 
-    public Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
+    public Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions() {
+        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
     @Import(name="knownExtensions")
       private final @Nullable Output<List<String>> knownExtensions;
 
-    public Output<List<String>> getKnownExtensions() {
-        return this.knownExtensions == null ? Output.empty() : this.knownExtensions;
+    public Output<List<String>> knownExtensions() {
+        return this.knownExtensions == null ? Codegen.empty() : this.knownExtensions;
     }
 
     public CertificateTemplatePassthroughExtensionsArgs(
@@ -46,8 +47,8 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
     }
 
     private CertificateTemplatePassthroughExtensionsArgs() {
-        this.additionalExtensions = Output.empty();
-        this.knownExtensions = Output.empty();
+        this.additionalExtensions = Codegen.empty();
+        this.knownExtensions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
             return this;
         }
         public Builder additionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Output.ofNullable(additionalExtensions);
+            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
             return this;
         }
         public Builder additionalExtensions(CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs... additionalExtensions) {
@@ -88,7 +89,7 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
             return this;
         }
         public Builder knownExtensions(@Nullable List<String> knownExtensions) {
-            this.knownExtensions = Output.ofNullable(knownExtensions);
+            this.knownExtensions = Codegen.ofNullable(knownExtensions);
             return this;
         }
         public Builder knownExtensions(String... knownExtensions) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleGetArgs;
 import java.lang.Integer;
@@ -27,8 +28,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="authentication")
       private final @Nullable Output<SecurityScanConfigAuthenticationGetArgs> authentication;
 
-    public Output<SecurityScanConfigAuthenticationGetArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<SecurityScanConfigAuthenticationGetArgs> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="blacklistPatterns")
       private final @Nullable Output<List<String>> blacklistPatterns;
 
-    public Output<List<String>> getBlacklistPatterns() {
-        return this.blacklistPatterns == null ? Output.empty() : this.blacklistPatterns;
+    public Output<List<String>> blacklistPatterns() {
+        return this.blacklistPatterns == null ? Codegen.empty() : this.blacklistPatterns;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="exportToSecurityCommandCenter")
       private final @Nullable Output<String> exportToSecurityCommandCenter;
 
-    public Output<String> getExportToSecurityCommandCenter() {
-        return this.exportToSecurityCommandCenter == null ? Output.empty() : this.exportToSecurityCommandCenter;
+    public Output<String> exportToSecurityCommandCenter() {
+        return this.exportToSecurityCommandCenter == null ? Codegen.empty() : this.exportToSecurityCommandCenter;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="maxQps")
       private final @Nullable Output<Integer> maxQps;
 
-    public Output<Integer> getMaxQps() {
-        return this.maxQps == null ? Output.empty() : this.maxQps;
+    public Output<Integer> maxQps() {
+        return this.maxQps == null ? Codegen.empty() : this.maxQps;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="schedule")
       private final @Nullable Output<SecurityScanConfigScheduleGetArgs> schedule;
 
-    public Output<SecurityScanConfigScheduleGetArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<SecurityScanConfigScheduleGetArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="startingUrls")
       private final @Nullable Output<List<String>> startingUrls;
 
-    public Output<List<String>> getStartingUrls() {
-        return this.startingUrls == null ? Output.empty() : this.startingUrls;
+    public Output<List<String>> startingUrls() {
+        return this.startingUrls == null ? Codegen.empty() : this.startingUrls;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="targetPlatforms")
       private final @Nullable Output<List<String>> targetPlatforms;
 
-    public Output<List<String>> getTargetPlatforms() {
-        return this.targetPlatforms == null ? Output.empty() : this.targetPlatforms;
+    public Output<List<String>> targetPlatforms() {
+        return this.targetPlatforms == null ? Codegen.empty() : this.targetPlatforms;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     @Import(name="userAgent")
       private final @Nullable Output<String> userAgent;
 
-    public Output<String> getUserAgent() {
-        return this.userAgent == null ? Output.empty() : this.userAgent;
+    public Output<String> userAgent() {
+        return this.userAgent == null ? Codegen.empty() : this.userAgent;
     }
 
     public SecurityScanConfigState(
@@ -176,17 +177,17 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     }
 
     private SecurityScanConfigState() {
-        this.authentication = Output.empty();
-        this.blacklistPatterns = Output.empty();
-        this.displayName = Output.empty();
-        this.exportToSecurityCommandCenter = Output.empty();
-        this.maxQps = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.schedule = Output.empty();
-        this.startingUrls = Output.empty();
-        this.targetPlatforms = Output.empty();
-        this.userAgent = Output.empty();
+        this.authentication = Codegen.empty();
+        this.blacklistPatterns = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.exportToSecurityCommandCenter = Codegen.empty();
+        this.maxQps = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.startingUrls = Codegen.empty();
+        this.targetPlatforms = Codegen.empty();
+        this.userAgent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -234,7 +235,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder authentication(@Nullable SecurityScanConfigAuthenticationGetArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder blacklistPatterns(@Nullable Output<List<String>> blacklistPatterns) {
@@ -242,7 +243,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
-            this.blacklistPatterns = Output.ofNullable(blacklistPatterns);
+            this.blacklistPatterns = Codegen.ofNullable(blacklistPatterns);
             return this;
         }
         public Builder blacklistPatterns(String... blacklistPatterns) {
@@ -253,7 +254,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder exportToSecurityCommandCenter(@Nullable Output<String> exportToSecurityCommandCenter) {
@@ -261,7 +262,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder exportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
-            this.exportToSecurityCommandCenter = Output.ofNullable(exportToSecurityCommandCenter);
+            this.exportToSecurityCommandCenter = Codegen.ofNullable(exportToSecurityCommandCenter);
             return this;
         }
         public Builder maxQps(@Nullable Output<Integer> maxQps) {
@@ -269,7 +270,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder maxQps(@Nullable Integer maxQps) {
-            this.maxQps = Output.ofNullable(maxQps);
+            this.maxQps = Codegen.ofNullable(maxQps);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -277,7 +278,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -285,7 +286,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schedule(@Nullable Output<SecurityScanConfigScheduleGetArgs> schedule) {
@@ -293,7 +294,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schedule(@Nullable SecurityScanConfigScheduleGetArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder startingUrls(@Nullable Output<List<String>> startingUrls) {
@@ -301,7 +302,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder startingUrls(@Nullable List<String> startingUrls) {
-            this.startingUrls = Output.ofNullable(startingUrls);
+            this.startingUrls = Codegen.ofNullable(startingUrls);
             return this;
         }
         public Builder startingUrls(String... startingUrls) {
@@ -312,7 +313,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targetPlatforms(@Nullable List<String> targetPlatforms) {
-            this.targetPlatforms = Output.ofNullable(targetPlatforms);
+            this.targetPlatforms = Codegen.ofNullable(targetPlatforms);
             return this;
         }
         public Builder targetPlatforms(String... targetPlatforms) {
@@ -323,7 +324,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userAgent(@Nullable String userAgent) {
-            this.userAgent = Output.ofNullable(userAgent);
+            this.userAgent = Codegen.ofNullable(userAgent);
             return this;
         }        public SecurityScanConfigState build() {
             return new SecurityScanConfigState(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, maxQps, name, project, schedule, startingUrls, targetPlatforms, userAgent);

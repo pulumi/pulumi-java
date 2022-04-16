@@ -10,6 +10,7 @@ import io.pulumi.aws.connect.outputs.BotAssociationLexBot;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -43,7 +44,7 @@ public class BotAssociation extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -57,7 +58,7 @@ public class BotAssociation extends io.pulumi.resources.CustomResource {
      * @return Configuration information of an Amazon Lex (V1) bot. Detailed below.
      * 
      */
-    public Output<BotAssociationLexBot> getLexBot() {
+    public Output<BotAssociationLexBot> lexBot() {
         return this.lexBot;
     }
 
@@ -83,7 +84,7 @@ public class BotAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BotAssociation(String name, BotAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:connect/botAssociation:BotAssociation", name, args == null ? BotAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:connect/botAssociation:BotAssociation", name, args == null ? BotAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotAssociation(String name, Output<String> id, @Nullable BotAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

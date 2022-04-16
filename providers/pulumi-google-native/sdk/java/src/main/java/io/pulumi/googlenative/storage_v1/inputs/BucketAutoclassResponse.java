@@ -24,7 +24,7 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
     @Import(name="toggleTime", required=true)
       private final String toggleTime;
 
-    public String getToggleTime() {
+    public String toggleTime() {
         return this.toggleTime;
     }
 

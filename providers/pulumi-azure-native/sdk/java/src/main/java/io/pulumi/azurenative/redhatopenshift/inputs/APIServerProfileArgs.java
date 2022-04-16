@@ -5,6 +5,7 @@ package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+    public Output<String> ip() {
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
-    public Output<String> getVisibility() {
-        return this.visibility == null ? Output.empty() : this.visibility;
+    public Output<String> visibility() {
+        return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 
     public APIServerProfileArgs(
@@ -61,9 +62,9 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private APIServerProfileArgs() {
-        this.ip = Output.empty();
-        this.url = Output.empty();
-        this.visibility = Output.empty();
+        this.ip = Codegen.empty();
+        this.url = Codegen.empty();
+        this.visibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -103,7 +104,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }
         public Builder visibility(@Nullable Output<String> visibility) {
@@ -111,7 +112,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = Output.ofNullable(visibility);
+            this.visibility = Codegen.ofNullable(visibility);
             return this;
         }        public APIServerProfileArgs build() {
             return new APIServerProfileArgs(ip, url, visibility);

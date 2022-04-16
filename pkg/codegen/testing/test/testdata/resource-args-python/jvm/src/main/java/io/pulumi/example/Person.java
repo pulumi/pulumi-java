@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.PersonArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Pet;
@@ -18,13 +19,13 @@ public class Person extends io.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="pets", type=List.class, parameters={Pet.class})
     private Output</* @Nullable */ List<Pet>> pets;
 
-    public Output</* @Nullable */ List<Pet>> getPets() {
+    public Output</* @Nullable */ List<Pet>> pets() {
         return this.pets;
     }
 
@@ -50,7 +51,7 @@ public class Person extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Person(String name, @Nullable PersonArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Person", name, args == null ? PersonArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::Person", name, args == null ? PersonArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Person(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

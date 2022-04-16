@@ -26,7 +26,7 @@ public final class EventSourceMappingEndpoints {
      * A list of Kafka server endpoints.
      * 
     */
-    public List<String> getKafkaBootstrapServers() {
+    public List<String> kafkaBootstrapServers() {
         return this.kafkaBootstrapServers == null ? List.of() : this.kafkaBootstrapServers;
     }
 

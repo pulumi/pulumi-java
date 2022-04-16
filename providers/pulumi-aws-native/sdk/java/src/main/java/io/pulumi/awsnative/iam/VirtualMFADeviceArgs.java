@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iam;
 import io.pulumi.awsnative.iam.inputs.VirtualMFADeviceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,29 +20,29 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
 
-    public Output<List<VirtualMFADeviceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<VirtualMFADeviceTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="users", required=true)
       private final Output<List<String>> users;
 
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users;
     }
 
     @Import(name="virtualMfaDeviceName")
       private final @Nullable Output<String> virtualMfaDeviceName;
 
-    public Output<String> getVirtualMfaDeviceName() {
-        return this.virtualMfaDeviceName == null ? Output.empty() : this.virtualMfaDeviceName;
+    public Output<String> virtualMfaDeviceName() {
+        return this.virtualMfaDeviceName == null ? Codegen.empty() : this.virtualMfaDeviceName;
     }
 
     public VirtualMFADeviceArgs(
@@ -56,10 +57,10 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VirtualMFADeviceArgs() {
-        this.path = Output.empty();
-        this.tags = Output.empty();
-        this.users = Output.empty();
-        this.virtualMfaDeviceName = Output.empty();
+        this.path = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.users = Codegen.empty();
+        this.virtualMfaDeviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder tags(@Nullable Output<List<VirtualMFADeviceTagArgs>> tags) {
@@ -101,7 +102,7 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable List<VirtualMFADeviceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(VirtualMFADeviceTagArgs... tags) {
@@ -123,7 +124,7 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder virtualMfaDeviceName(@Nullable String virtualMfaDeviceName) {
-            this.virtualMfaDeviceName = Output.ofNullable(virtualMfaDeviceName);
+            this.virtualMfaDeviceName = Codegen.ofNullable(virtualMfaDeviceName);
             return this;
         }        public VirtualMFADeviceArgs build() {
             return new VirtualMFADeviceArgs(path, tags, users, virtualMfaDeviceName);

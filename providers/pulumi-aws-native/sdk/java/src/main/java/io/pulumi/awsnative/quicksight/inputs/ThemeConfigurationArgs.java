@@ -9,6 +9,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeTypographyArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeUIColorPaletteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,29 +26,29 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataColorPalette")
       private final @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette;
 
-    public Output<ThemeDataColorPaletteArgs> getDataColorPalette() {
-        return this.dataColorPalette == null ? Output.empty() : this.dataColorPalette;
+    public Output<ThemeDataColorPaletteArgs> dataColorPalette() {
+        return this.dataColorPalette == null ? Codegen.empty() : this.dataColorPalette;
     }
 
     @Import(name="sheet")
       private final @Nullable Output<ThemeSheetStyleArgs> sheet;
 
-    public Output<ThemeSheetStyleArgs> getSheet() {
-        return this.sheet == null ? Output.empty() : this.sheet;
+    public Output<ThemeSheetStyleArgs> sheet() {
+        return this.sheet == null ? Codegen.empty() : this.sheet;
     }
 
     @Import(name="typography")
       private final @Nullable Output<ThemeTypographyArgs> typography;
 
-    public Output<ThemeTypographyArgs> getTypography() {
-        return this.typography == null ? Output.empty() : this.typography;
+    public Output<ThemeTypographyArgs> typography() {
+        return this.typography == null ? Codegen.empty() : this.typography;
     }
 
     @Import(name="uIColorPalette")
       private final @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette;
 
-    public Output<ThemeUIColorPaletteArgs> getUIColorPalette() {
-        return this.uIColorPalette == null ? Output.empty() : this.uIColorPalette;
+    public Output<ThemeUIColorPaletteArgs> uIColorPalette() {
+        return this.uIColorPalette == null ? Codegen.empty() : this.uIColorPalette;
     }
 
     public ThemeConfigurationArgs(
@@ -62,10 +63,10 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ThemeConfigurationArgs() {
-        this.dataColorPalette = Output.empty();
-        this.sheet = Output.empty();
-        this.typography = Output.empty();
-        this.uIColorPalette = Output.empty();
+        this.dataColorPalette = Codegen.empty();
+        this.sheet = Codegen.empty();
+        this.typography = Codegen.empty();
+        this.uIColorPalette = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataColorPalette(@Nullable ThemeDataColorPaletteArgs dataColorPalette) {
-            this.dataColorPalette = Output.ofNullable(dataColorPalette);
+            this.dataColorPalette = Codegen.ofNullable(dataColorPalette);
             return this;
         }
         public Builder sheet(@Nullable Output<ThemeSheetStyleArgs> sheet) {
@@ -107,7 +108,7 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sheet(@Nullable ThemeSheetStyleArgs sheet) {
-            this.sheet = Output.ofNullable(sheet);
+            this.sheet = Codegen.ofNullable(sheet);
             return this;
         }
         public Builder typography(@Nullable Output<ThemeTypographyArgs> typography) {
@@ -115,7 +116,7 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder typography(@Nullable ThemeTypographyArgs typography) {
-            this.typography = Output.ofNullable(typography);
+            this.typography = Codegen.ofNullable(typography);
             return this;
         }
         public Builder uIColorPalette(@Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette) {
@@ -123,7 +124,7 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder uIColorPalette(@Nullable ThemeUIColorPaletteArgs uIColorPalette) {
-            this.uIColorPalette = Output.ofNullable(uIColorPalette);
+            this.uIColorPalette = Codegen.ofNullable(uIColorPalette);
             return this;
         }        public ThemeConfigurationArgs build() {
             return new ThemeConfigurationArgs(dataColorPalette, sheet, typography, uIColorPalette);

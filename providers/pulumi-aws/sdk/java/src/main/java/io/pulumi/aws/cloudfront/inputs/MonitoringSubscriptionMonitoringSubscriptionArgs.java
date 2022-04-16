@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionArgs extends io.p
     @Import(name="realtimeMetricsSubscriptionConfig", required=true)
       private final Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig;
 
-    public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> getRealtimeMetricsSubscriptionConfig() {
+    public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }
 
@@ -29,7 +30,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionArgs extends io.p
     }
 
     private MonitoringSubscriptionMonitoringSubscriptionArgs() {
-        this.realtimeMetricsSubscriptionConfig = Output.empty();
+        this.realtimeMetricsSubscriptionConfig = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends io.pu
     @Import(name="diskEncryptionSet")
       private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Output.empty() : this.diskEncryptionSet;
+    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
+        return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends io.pu
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     public VirtualMachineScaleSetManagedDiskParametersArgs(
@@ -51,8 +52,8 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends io.pu
     }
 
     private VirtualMachineScaleSetManagedDiskParametersArgs() {
-        this.diskEncryptionSet = Output.empty();
-        this.storageAccountType = Output.empty();
+        this.diskEncryptionSet = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends io.pu
             return this;
         }
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
-            this.diskEncryptionSet = Output.ofNullable(diskEncryptionSet);
+            this.diskEncryptionSet = Codegen.ofNullable(diskEncryptionSet);
             return this;
         }
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
@@ -90,7 +91,7 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends io.pu
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }        public VirtualMachineScaleSetManagedDiskParametersArgs build() {
             return new VirtualMachineScaleSetManagedDiskParametersArgs(diskEncryptionSet, storageAccountType);

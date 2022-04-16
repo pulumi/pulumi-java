@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="brand")
       private final @Nullable Output<String> brand;
 
-    public Output<String> getBrand() {
-        return this.brand == null ? Output.empty() : this.brand;
+    public Output<String> brand() {
+        return this.brand == null ? Codegen.empty() : this.brand;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<String> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public ClientState(
@@ -72,10 +73,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClientState() {
-        this.brand = Output.empty();
-        this.clientId = Output.empty();
-        this.displayName = Output.empty();
-        this.secret = Output.empty();
+        this.brand = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder brand(@Nullable String brand) {
-            this.brand = Output.ofNullable(brand);
+            this.brand = Codegen.ofNullable(brand);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -117,7 +118,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -125,7 +126,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -133,7 +134,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public ClientState build() {
             return new ClientState(brand, clientId, displayName, secret);

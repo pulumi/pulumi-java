@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.ResourceAttributesArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     @Import(name="nonResourceAttributes")
       private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
-    public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
-        return this.nonResourceAttributes == null ? Output.empty() : this.nonResourceAttributes;
+    public Output<NonResourceAttributesArgs> nonResourceAttributes() {
+        return this.nonResourceAttributes == null ? Codegen.empty() : this.nonResourceAttributes;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     @Import(name="resourceAttributes")
       private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
-    public Output<ResourceAttributesArgs> getResourceAttributes() {
-        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
+    public Output<ResourceAttributesArgs> resourceAttributes() {
+        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 
     public SelfSubjectAccessReviewSpecArgs(
@@ -49,8 +50,8 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     }
 
     private SelfSubjectAccessReviewSpecArgs() {
-        this.nonResourceAttributes = Output.empty();
-        this.resourceAttributes = Output.empty();
+        this.nonResourceAttributes = Codegen.empty();
+        this.resourceAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
-            this.nonResourceAttributes = Output.ofNullable(nonResourceAttributes);
+            this.nonResourceAttributes = Codegen.ofNullable(nonResourceAttributes);
             return this;
         }
         public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
@@ -88,7 +89,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
-            this.resourceAttributes = Output.ofNullable(resourceAttributes);
+            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
             return this;
         }        public SelfSubjectAccessReviewSpecArgs build() {
             return new SelfSubjectAccessReviewSpecArgs(nonResourceAttributes, resourceAttributes);

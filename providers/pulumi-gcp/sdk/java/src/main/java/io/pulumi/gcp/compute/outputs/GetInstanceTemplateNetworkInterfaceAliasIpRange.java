@@ -42,7 +42,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
      * error.
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -51,7 +51,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
     */
-    public String getSubnetworkRangeName() {
+    public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }
 

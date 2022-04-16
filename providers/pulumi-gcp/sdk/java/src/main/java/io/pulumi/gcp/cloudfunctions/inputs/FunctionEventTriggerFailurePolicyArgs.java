@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FunctionEventTriggerFailurePolicyArgs extends io.pulumi.resou
     @Import(name="retry", required=true)
       private final Output<Boolean> retry;
 
-    public Output<Boolean> getRetry() {
+    public Output<Boolean> retry() {
         return this.retry;
     }
 
@@ -29,7 +30,7 @@ public final class FunctionEventTriggerFailurePolicyArgs extends io.pulumi.resou
     }
 
     private FunctionEventTriggerFailurePolicyArgs() {
-        this.retry = Output.empty();
+        this.retry = Codegen.empty();
     }
 
     public static Builder builder() {

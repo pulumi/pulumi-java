@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
     @Import(name="imageVersionId", required=true)
       private final Output<String> imageVersionId;
 
-    public Output<String> getImageVersionId() {
+    public Output<String> imageVersionId() {
         return this.imageVersionId;
     }
 
@@ -36,7 +37,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -48,8 +49,8 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
     }
 
     private ImageTemplateSharedImageVersionSourceArgs() {
-        this.imageVersionId = Output.empty();
-        this.type = Output.empty();
+        this.imageVersionId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

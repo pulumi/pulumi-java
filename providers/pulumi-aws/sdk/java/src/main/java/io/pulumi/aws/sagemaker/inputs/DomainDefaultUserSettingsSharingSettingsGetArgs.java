@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DomainDefaultUserSettingsSharingSettingsGetArgs extends io.pu
     @Import(name="notebookOutputOption")
       private final @Nullable Output<String> notebookOutputOption;
 
-    public Output<String> getNotebookOutputOption() {
-        return this.notebookOutputOption == null ? Output.empty() : this.notebookOutputOption;
+    public Output<String> notebookOutputOption() {
+        return this.notebookOutputOption == null ? Codegen.empty() : this.notebookOutputOption;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DomainDefaultUserSettingsSharingSettingsGetArgs extends io.pu
     @Import(name="s3KmsKeyId")
       private final @Nullable Output<String> s3KmsKeyId;
 
-    public Output<String> getS3KmsKeyId() {
-        return this.s3KmsKeyId == null ? Output.empty() : this.s3KmsKeyId;
+    public Output<String> s3KmsKeyId() {
+        return this.s3KmsKeyId == null ? Codegen.empty() : this.s3KmsKeyId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DomainDefaultUserSettingsSharingSettingsGetArgs extends io.pu
     @Import(name="s3OutputPath")
       private final @Nullable Output<String> s3OutputPath;
 
-    public Output<String> getS3OutputPath() {
-        return this.s3OutputPath == null ? Output.empty() : this.s3OutputPath;
+    public Output<String> s3OutputPath() {
+        return this.s3OutputPath == null ? Codegen.empty() : this.s3OutputPath;
     }
 
     public DomainDefaultUserSettingsSharingSettingsGetArgs(
@@ -57,9 +58,9 @@ public final class DomainDefaultUserSettingsSharingSettingsGetArgs extends io.pu
     }
 
     private DomainDefaultUserSettingsSharingSettingsGetArgs() {
-        this.notebookOutputOption = Output.empty();
-        this.s3KmsKeyId = Output.empty();
-        this.s3OutputPath = Output.empty();
+        this.notebookOutputOption = Codegen.empty();
+        this.s3KmsKeyId = Codegen.empty();
+        this.s3OutputPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class DomainDefaultUserSettingsSharingSettingsGetArgs extends io.pu
             return this;
         }
         public Builder notebookOutputOption(@Nullable String notebookOutputOption) {
-            this.notebookOutputOption = Output.ofNullable(notebookOutputOption);
+            this.notebookOutputOption = Codegen.ofNullable(notebookOutputOption);
             return this;
         }
         public Builder s3KmsKeyId(@Nullable Output<String> s3KmsKeyId) {
@@ -99,7 +100,7 @@ public final class DomainDefaultUserSettingsSharingSettingsGetArgs extends io.pu
             return this;
         }
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
-            this.s3KmsKeyId = Output.ofNullable(s3KmsKeyId);
+            this.s3KmsKeyId = Codegen.ofNullable(s3KmsKeyId);
             return this;
         }
         public Builder s3OutputPath(@Nullable Output<String> s3OutputPath) {
@@ -107,7 +108,7 @@ public final class DomainDefaultUserSettingsSharingSettingsGetArgs extends io.pu
             return this;
         }
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
-            this.s3OutputPath = Output.ofNullable(s3OutputPath);
+            this.s3OutputPath = Codegen.ofNullable(s3OutputPath);
             return this;
         }        public DomainDefaultUserSettingsSharingSettingsGetArgs build() {
             return new DomainDefaultUserSettingsSharingSettingsGetArgs(notebookOutputOption, s3KmsKeyId, s3OutputPath);

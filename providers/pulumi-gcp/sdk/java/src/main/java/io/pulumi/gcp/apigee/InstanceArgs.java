@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKeyName")
       private final @Nullable Output<String> diskEncryptionKeyName;
 
-    public Output<String> getDiskEncryptionKeyName() {
-        return this.diskEncryptionKeyName == null ? Output.empty() : this.diskEncryptionKeyName;
+    public Output<String> diskEncryptionKeyName() {
+        return this.diskEncryptionKeyName == null ? Codegen.empty() : this.diskEncryptionKeyName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
-    public Output<String> getIpRange() {
-        return this.ipRange == null ? Output.empty() : this.ipRange;
+    public Output<String> ipRange() {
+        return this.ipRange == null ? Codegen.empty() : this.ipRange;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -85,8 +86,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -109,8 +110,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringCidrRange")
       private final @Nullable Output<String> peeringCidrRange;
 
-    public Output<String> getPeeringCidrRange() {
-        return this.peeringCidrRange == null ? Output.empty() : this.peeringCidrRange;
+    public Output<String> peeringCidrRange() {
+        return this.peeringCidrRange == null ? Codegen.empty() : this.peeringCidrRange;
     }
 
     public InstanceArgs(
@@ -133,14 +134,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.description = Output.empty();
-        this.diskEncryptionKeyName = Output.empty();
-        this.displayName = Output.empty();
-        this.ipRange = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
-        this.peeringCidrRange = Output.empty();
+        this.description = Codegen.empty();
+        this.diskEncryptionKeyName = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.ipRange = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.peeringCidrRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diskEncryptionKeyName(@Nullable Output<String> diskEncryptionKeyName) {
@@ -190,7 +191,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
-            this.diskEncryptionKeyName = Output.ofNullable(diskEncryptionKeyName);
+            this.diskEncryptionKeyName = Codegen.ofNullable(diskEncryptionKeyName);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -198,7 +199,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder ipRange(@Nullable Output<String> ipRange) {
@@ -206,7 +207,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Output.ofNullable(ipRange);
+            this.ipRange = Codegen.ofNullable(ipRange);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -222,7 +223,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(Output<String> orgId) {
@@ -238,7 +239,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peeringCidrRange(@Nullable String peeringCidrRange) {
-            this.peeringCidrRange = Output.ofNullable(peeringCidrRange);
+            this.peeringCidrRange = Codegen.ofNullable(peeringCidrRange);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(description, diskEncryptionKeyName, displayName, ipRange, location, name, orgId, peeringCidrRange);

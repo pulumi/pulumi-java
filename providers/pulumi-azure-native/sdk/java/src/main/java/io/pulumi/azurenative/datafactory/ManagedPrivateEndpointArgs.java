@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -32,8 +33,8 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="managedPrivateEndpointName")
       private final @Nullable Output<String> managedPrivateEndpointName;
 
-    public Output<String> getManagedPrivateEndpointName() {
-        return this.managedPrivateEndpointName == null ? Output.empty() : this.managedPrivateEndpointName;
+    public Output<String> managedPrivateEndpointName() {
+        return this.managedPrivateEndpointName == null ? Codegen.empty() : this.managedPrivateEndpointName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="managedVirtualNetworkName", required=true)
       private final Output<String> managedVirtualNetworkName;
 
-    public Output<String> getManagedVirtualNetworkName() {
+    public Output<String> managedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
     }
 
@@ -54,7 +55,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
 
-    public Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> getProperties() {
+    public Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties() {
         return this.properties;
     }
 
@@ -65,7 +66,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -83,11 +84,11 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedPrivateEndpointArgs() {
-        this.factoryName = Output.empty();
-        this.managedPrivateEndpointName = Output.empty();
-        this.managedVirtualNetworkName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.factoryName = Codegen.empty();
+        this.managedPrivateEndpointName = Codegen.empty();
+        this.managedVirtualNetworkName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = Output.ofNullable(managedPrivateEndpointName);
+            this.managedPrivateEndpointName = Codegen.ofNullable(managedPrivateEndpointName);
             return this;
         }
         public Builder managedVirtualNetworkName(Output<String> managedVirtualNetworkName) {

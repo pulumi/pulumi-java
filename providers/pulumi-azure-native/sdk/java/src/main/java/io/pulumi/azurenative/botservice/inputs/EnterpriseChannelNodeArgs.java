@@ -7,6 +7,7 @@ import io.pulumi.azurenative.botservice.enums.EnterpriseChannelNodeState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     @Import(name="azureLocation", required=true)
       private final Output<String> azureLocation;
 
-    public Output<String> getAzureLocation() {
+    public Output<String> azureLocation() {
         return this.azureLocation;
     }
 
@@ -38,7 +39,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     @Import(name="azureSku", required=true)
       private final Output<String> azureSku;
 
-    public Output<String> getAzureSku() {
+    public Output<String> azureSku() {
         return this.azureSku;
     }
 
@@ -49,7 +50,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,8 +61,8 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     @Import(name="state")
       private final @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
-    public Output<Either<String,EnterpriseChannelNodeState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,EnterpriseChannelNodeState>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public EnterpriseChannelNodeArgs(
@@ -76,10 +77,10 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     }
 
     private EnterpriseChannelNodeArgs() {
-        this.azureLocation = Output.empty();
-        this.azureSku = Output.empty();
-        this.name = Output.empty();
-        this.state = Output.empty();
+        this.azureLocation = Codegen.empty();
+        this.azureSku = Codegen.empty();
+        this.name = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder state(@Nullable Either<String,EnterpriseChannelNodeState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public EnterpriseChannelNodeArgs build() {
             return new EnterpriseChannelNodeArgs(azureLocation, azureSku, name, state);

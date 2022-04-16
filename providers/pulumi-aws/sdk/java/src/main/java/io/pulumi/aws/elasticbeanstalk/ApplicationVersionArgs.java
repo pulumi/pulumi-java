@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticbeanstalk;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="application", required=true)
       private final Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
 
@@ -34,7 +35,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -45,8 +46,8 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Output.empty() : this.forceDelete;
+    public Output<Boolean> forceDelete() {
+        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -78,8 +79,8 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationVersionArgs(
@@ -111,13 +112,13 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApplicationVersionArgs() {
-        this.application = Output.empty();
-        this.bucket = Output.empty();
-        this.description = Output.empty();
-        this.forceDelete = Output.empty();
-        this.key = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.application = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.description = Codegen.empty();
+        this.forceDelete = Codegen.empty();
+        this.key = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
@@ -173,7 +174,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Output.ofNullable(forceDelete);
+            this.forceDelete = Codegen.ofNullable(forceDelete);
             return this;
         }
         public Builder key(Output<String> key) {
@@ -189,7 +190,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -197,7 +198,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ApplicationVersionArgs build() {
             return new ApplicationVersionArgs(application, bucket, description, forceDelete, key, name, tags);

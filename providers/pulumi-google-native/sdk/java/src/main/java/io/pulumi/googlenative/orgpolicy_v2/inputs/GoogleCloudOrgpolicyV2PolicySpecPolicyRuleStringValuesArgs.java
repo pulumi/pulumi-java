@@ -5,6 +5,7 @@ package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
     @Import(name="allowedValues")
       private final @Nullable Output<List<String>> allowedValues;
 
-    public Output<List<String>> getAllowedValues() {
-        return this.allowedValues == null ? Output.empty() : this.allowedValues;
+    public Output<List<String>> allowedValues() {
+        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
     @Import(name="deniedValues")
       private final @Nullable Output<List<String>> deniedValues;
 
-    public Output<List<String>> getDeniedValues() {
-        return this.deniedValues == null ? Output.empty() : this.deniedValues;
+    public Output<List<String>> deniedValues() {
+        return this.deniedValues == null ? Codegen.empty() : this.deniedValues;
     }
 
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
     }
 
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs() {
-        this.allowedValues = Output.empty();
-        this.deniedValues = Output.empty();
+        this.allowedValues = Codegen.empty();
+        this.deniedValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
             return this;
         }
         public Builder allowedValues(@Nullable List<String> allowedValues) {
-            this.allowedValues = Output.ofNullable(allowedValues);
+            this.allowedValues = Codegen.ofNullable(allowedValues);
             return this;
         }
         public Builder allowedValues(String... allowedValues) {
@@ -91,7 +92,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
             return this;
         }
         public Builder deniedValues(@Nullable List<String> deniedValues) {
-            this.deniedValues = Output.ofNullable(deniedValues);
+            this.deniedValues = Codegen.ofNullable(deniedValues);
             return this;
         }
         public Builder deniedValues(String... deniedValues) {

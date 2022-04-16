@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.IpAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessEndpointIpAddresses")
       private final @Nullable Output<List<IpAddressArgs>> accessEndpointIpAddresses;
 
-    public Output<List<IpAddressArgs>> getAccessEndpointIpAddresses() {
-        return this.accessEndpointIpAddresses == null ? Output.empty() : this.accessEndpointIpAddresses;
+    public Output<List<IpAddressArgs>> accessEndpointIpAddresses() {
+        return this.accessEndpointIpAddresses == null ? Codegen.empty() : this.accessEndpointIpAddresses;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outgoingIpAddresses")
       private final @Nullable Output<List<IpAddressArgs>> outgoingIpAddresses;
 
-    public Output<List<IpAddressArgs>> getOutgoingIpAddresses() {
-        return this.outgoingIpAddresses == null ? Output.empty() : this.outgoingIpAddresses;
+    public Output<List<IpAddressArgs>> outgoingIpAddresses() {
+        return this.outgoingIpAddresses == null ? Codegen.empty() : this.outgoingIpAddresses;
     }
 
     public FlowEndpointsArgs(
@@ -49,8 +50,8 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowEndpointsArgs() {
-        this.accessEndpointIpAddresses = Output.empty();
-        this.outgoingIpAddresses = Output.empty();
+        this.accessEndpointIpAddresses = Codegen.empty();
+        this.outgoingIpAddresses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessEndpointIpAddresses(@Nullable List<IpAddressArgs> accessEndpointIpAddresses) {
-            this.accessEndpointIpAddresses = Output.ofNullable(accessEndpointIpAddresses);
+            this.accessEndpointIpAddresses = Codegen.ofNullable(accessEndpointIpAddresses);
             return this;
         }
         public Builder accessEndpointIpAddresses(IpAddressArgs... accessEndpointIpAddresses) {
@@ -91,7 +92,7 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outgoingIpAddresses(@Nullable List<IpAddressArgs> outgoingIpAddresses) {
-            this.outgoingIpAddresses = Output.ofNullable(outgoingIpAddresses);
+            this.outgoingIpAddresses = Codegen.ofNullable(outgoingIpAddresses);
             return this;
         }
         public Builder outgoingIpAddresses(IpAddressArgs... outgoingIpAddresses) {

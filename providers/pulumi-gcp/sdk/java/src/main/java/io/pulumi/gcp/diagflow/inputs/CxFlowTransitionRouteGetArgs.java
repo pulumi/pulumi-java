@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteTriggerFulfillmentGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<String> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
     @Import(name="intent")
       private final @Nullable Output<String> intent;
 
-    public Output<String> getIntent() {
-        return this.intent == null ? Output.empty() : this.intent;
+    public Output<String> intent() {
+        return this.intent == null ? Codegen.empty() : this.intent;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
     @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
-    public Output<String> getTargetFlow() {
-        return this.targetFlow == null ? Output.empty() : this.targetFlow;
+    public Output<String> targetFlow() {
+        return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
     @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
-    public Output<String> getTargetPage() {
-        return this.targetPage == null ? Output.empty() : this.targetPage;
+    public Output<String> targetPage() {
+        return this.targetPage == null ? Codegen.empty() : this.targetPage;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
     @Import(name="triggerFulfillment")
       private final @Nullable Output<CxFlowTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment;
 
-    public Output<CxFlowTransitionRouteTriggerFulfillmentGetArgs> getTriggerFulfillment() {
-        return this.triggerFulfillment == null ? Output.empty() : this.triggerFulfillment;
+    public Output<CxFlowTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment() {
+        return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
     }
 
     public CxFlowTransitionRouteGetArgs(
@@ -103,12 +104,12 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
     }
 
     private CxFlowTransitionRouteGetArgs() {
-        this.condition = Output.empty();
-        this.intent = Output.empty();
-        this.name = Output.empty();
-        this.targetFlow = Output.empty();
-        this.targetPage = Output.empty();
-        this.triggerFulfillment = Output.empty();
+        this.condition = Codegen.empty();
+        this.intent = Codegen.empty();
+        this.name = Codegen.empty();
+        this.targetFlow = Codegen.empty();
+        this.targetPage = Codegen.empty();
+        this.triggerFulfillment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder intent(@Nullable Output<String> intent) {
@@ -154,7 +155,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder intent(@Nullable String intent) {
-            this.intent = Output.ofNullable(intent);
+            this.intent = Codegen.ofNullable(intent);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -162,7 +163,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
@@ -170,7 +171,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Output.ofNullable(targetFlow);
+            this.targetFlow = Codegen.ofNullable(targetFlow);
             return this;
         }
         public Builder targetPage(@Nullable Output<String> targetPage) {
@@ -178,7 +179,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Output.ofNullable(targetPage);
+            this.targetPage = Codegen.ofNullable(targetPage);
             return this;
         }
         public Builder triggerFulfillment(@Nullable Output<CxFlowTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment) {
@@ -186,7 +187,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder triggerFulfillment(@Nullable CxFlowTransitionRouteTriggerFulfillmentGetArgs triggerFulfillment) {
-            this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
+            this.triggerFulfillment = Codegen.ofNullable(triggerFulfillment);
             return this;
         }        public CxFlowTransitionRouteGetArgs build() {
             return new CxFlowTransitionRouteGetArgs(condition, intent, name, targetFlow, targetPage, triggerFulfillment);

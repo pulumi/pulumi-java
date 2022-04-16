@@ -61,43 +61,43 @@ public final class GetPolicyResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<PolicyIEMap> getExcludeMap() {
+    public Optional<PolicyIEMap> excludeMap() {
         return Optional.ofNullable(this.excludeMap);
     }
-    public Optional<Boolean> getExcludeResourceTags() {
+    public Optional<Boolean> excludeResourceTags() {
         return Optional.ofNullable(this.excludeResourceTags);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<PolicyIEMap> getIncludeMap() {
+    public Optional<PolicyIEMap> includeMap() {
         return Optional.ofNullable(this.includeMap);
     }
-    public Optional<String> getPolicyName() {
+    public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
-    public Optional<Boolean> getRemediationEnabled() {
+    public Optional<Boolean> remediationEnabled() {
         return Optional.ofNullable(this.remediationEnabled);
     }
-    public List<PolicyResourceTag> getResourceTags() {
+    public List<PolicyResourceTag> resourceTags() {
         return this.resourceTags == null ? List.of() : this.resourceTags;
     }
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
-    public List<String> getResourceTypeList() {
+    public List<String> resourceTypeList() {
         return this.resourceTypeList == null ? List.of() : this.resourceTypeList;
     }
-    public Optional<Boolean> getResourcesCleanUp() {
+    public Optional<Boolean> resourcesCleanUp() {
         return Optional.ofNullable(this.resourcesCleanUp);
     }
-    public Optional<SecurityServicePolicyDataProperties> getSecurityServicePolicyData() {
+    public Optional<SecurityServicePolicyDataProperties> securityServicePolicyData() {
         return Optional.ofNullable(this.securityServicePolicyData);
     }
-    public List<PolicyTag> getTags() {
+    public List<PolicyTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

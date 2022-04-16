@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.ProxyProtocolPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {
      * should be applied. This can be specified if the protocol is SSL or TCP.
      * 
      */
-    public Output<List<String>> getInstancePorts() {
+    public Output<List<String>> instancePorts() {
         return this.instancePorts;
     }
     /**
@@ -50,7 +51,7 @@ public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {
      * should be attached.
      * 
      */
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
 
@@ -76,7 +77,7 @@ public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProxyProtocolPolicy(String name, ProxyProtocolPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/proxyProtocolPolicy:ProxyProtocolPolicy", name, args == null ? ProxyProtocolPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/proxyProtocolPolicy:ProxyProtocolPolicy", name, args == null ? ProxyProtocolPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProxyProtocolPolicy(String name, Output<String> id, @Nullable ProxyProtocolPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

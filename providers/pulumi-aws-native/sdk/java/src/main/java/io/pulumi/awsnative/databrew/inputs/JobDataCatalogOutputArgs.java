@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.JobS3TableOutputOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,42 +21,42 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databaseOptions")
       private final @Nullable Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
-    public Output<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
-        return this.databaseOptions == null ? Output.empty() : this.databaseOptions;
+    public Output<JobDatabaseTableOutputOptionsArgs> databaseOptions() {
+        return this.databaseOptions == null ? Codegen.empty() : this.databaseOptions;
     }
 
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
-        return this.overwrite == null ? Output.empty() : this.overwrite;
+    public Output<Boolean> overwrite() {
+        return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     @Import(name="s3Options")
       private final @Nullable Output<JobS3TableOutputOptionsArgs> s3Options;
 
-    public Output<JobS3TableOutputOptionsArgs> getS3Options() {
-        return this.s3Options == null ? Output.empty() : this.s3Options;
+    public Output<JobS3TableOutputOptionsArgs> s3Options() {
+        return this.s3Options == null ? Codegen.empty() : this.s3Options;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -75,12 +76,12 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     }
 
     private JobDataCatalogOutputArgs() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.databaseOptions = Output.empty();
-        this.overwrite = Output.empty();
-        this.s3Options = Output.empty();
-        this.tableName = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.databaseOptions = Codegen.empty();
+        this.overwrite = Codegen.empty();
+        this.s3Options = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -134,7 +135,7 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder databaseOptions(@Nullable JobDatabaseTableOutputOptionsArgs databaseOptions) {
-            this.databaseOptions = Output.ofNullable(databaseOptions);
+            this.databaseOptions = Codegen.ofNullable(databaseOptions);
             return this;
         }
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
@@ -142,7 +143,7 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Output.ofNullable(overwrite);
+            this.overwrite = Codegen.ofNullable(overwrite);
             return this;
         }
         public Builder s3Options(@Nullable Output<JobS3TableOutputOptionsArgs> s3Options) {
@@ -150,7 +151,7 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder s3Options(@Nullable JobS3TableOutputOptionsArgs s3Options) {
-            this.s3Options = Output.ofNullable(s3Options);
+            this.s3Options = Codegen.ofNullable(s3Options);
             return this;
         }
         public Builder tableName(Output<String> tableName) {

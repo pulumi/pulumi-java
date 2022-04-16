@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
     @Import(name="fleetName")
       private final @Nullable Output<String> fleetName;
 
-    public Output<String> getFleetName() {
-        return this.fleetName == null ? Output.empty() : this.fleetName;
+    public Output<String> fleetName() {
+        return this.fleetName == null ? Codegen.empty() : this.fleetName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
     @Import(name="stackName")
       private final @Nullable Output<String> stackName;
 
-    public Output<String> getStackName() {
-        return this.stackName == null ? Output.empty() : this.stackName;
+    public Output<String> stackName() {
+        return this.stackName == null ? Codegen.empty() : this.stackName;
     }
 
     public FleetStackAssociationState(
@@ -44,8 +45,8 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
     }
 
     private FleetStackAssociationState() {
-        this.fleetName = Output.empty();
-        this.stackName = Output.empty();
+        this.fleetName = Codegen.empty();
+        this.stackName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder fleetName(@Nullable String fleetName) {
-            this.fleetName = Output.ofNullable(fleetName);
+            this.fleetName = Codegen.ofNullable(fleetName);
             return this;
         }
         public Builder stackName(@Nullable Output<String> stackName) {
@@ -83,7 +84,7 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder stackName(@Nullable String stackName) {
-            this.stackName = Output.ofNullable(stackName);
+            this.stackName = Codegen.ofNullable(stackName);
             return this;
         }        public FleetStackAssociationState build() {
             return new FleetStackAssociationState(fleetName, stackName);

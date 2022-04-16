@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketOwnershipControlsRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
     @Import(name="rule")
       private final @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
 
-    public Output<BucketOwnershipControlsRuleGetArgs> getRule() {
-        return this.rule == null ? Output.empty() : this.rule;
+    public Output<BucketOwnershipControlsRuleGetArgs> rule() {
+        return this.rule == null ? Codegen.empty() : this.rule;
     }
 
     public BucketOwnershipControlsState(
@@ -45,8 +46,8 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
     }
 
     private BucketOwnershipControlsState() {
-        this.bucket = Output.empty();
-        this.rule = Output.empty();
+        this.bucket = Codegen.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder rule(@Nullable Output<BucketOwnershipControlsRuleGetArgs> rule) {
@@ -84,7 +85,7 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder rule(@Nullable BucketOwnershipControlsRuleGetArgs rule) {
-            this.rule = Output.ofNullable(rule);
+            this.rule = Codegen.ofNullable(rule);
             return this;
         }        public BucketOwnershipControlsState build() {
             return new BucketOwnershipControlsState(bucket, rule);

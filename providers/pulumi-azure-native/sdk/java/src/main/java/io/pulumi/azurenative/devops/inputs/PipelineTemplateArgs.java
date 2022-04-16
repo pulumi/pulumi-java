@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -37,8 +38,8 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public PipelineTemplateArgs(
@@ -49,8 +50,8 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PipelineTemplateArgs() {
-        this.id = Output.empty();
-        this.parameters = Output.empty();
+        this.id = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public PipelineTemplateArgs build() {
             return new PipelineTemplateArgs(id, parameters);

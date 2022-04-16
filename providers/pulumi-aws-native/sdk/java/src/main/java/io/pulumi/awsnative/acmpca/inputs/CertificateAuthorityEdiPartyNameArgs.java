@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,14 +21,14 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
     @Import(name="nameAssigner", required=true)
       private final Output<String> nameAssigner;
 
-    public Output<String> getNameAssigner() {
+    public Output<String> nameAssigner() {
         return this.nameAssigner;
     }
 
     @Import(name="partyName", required=true)
       private final Output<String> partyName;
 
-    public Output<String> getPartyName() {
+    public Output<String> partyName() {
         return this.partyName;
     }
 
@@ -39,8 +40,8 @@ public final class CertificateAuthorityEdiPartyNameArgs extends io.pulumi.resour
     }
 
     private CertificateAuthorityEdiPartyNameArgs() {
-        this.nameAssigner = Output.empty();
-        this.partyName = Output.empty();
+        this.nameAssigner = Codegen.empty();
+        this.partyName = Codegen.empty();
     }
 
     public static Builder builder() {

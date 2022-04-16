@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.IotHubSku;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
 
-    public Output<Double> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<Double> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,IotHubSku>> name;
 
-    public Output<Either<String,IotHubSku>> getName() {
+    public Output<Either<String,IotHubSku>> name() {
         return this.name;
     }
 
@@ -51,8 +52,8 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IotHubSkuInfoArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(Output<Either<String,IotHubSku>> name) {

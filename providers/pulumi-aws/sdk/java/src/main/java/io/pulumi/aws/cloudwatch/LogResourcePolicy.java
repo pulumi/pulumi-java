@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.LogResourcePolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class LogResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
      * 
      */
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument;
     }
     /**
@@ -53,7 +54,7 @@ public class LogResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the resource policy.
      * 
      */
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 
@@ -79,7 +80,7 @@ public class LogResourcePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LogResourcePolicy(String name, LogResourcePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/logResourcePolicy:LogResourcePolicy", name, args == null ? LogResourcePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/logResourcePolicy:LogResourcePolicy", name, args == null ? LogResourcePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LogResourcePolicy(String name, Output<String> id, @Nullable LogResourcePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

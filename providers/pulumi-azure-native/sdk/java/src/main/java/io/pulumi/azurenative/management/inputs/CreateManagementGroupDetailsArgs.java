@@ -6,6 +6,7 @@ package io.pulumi.azurenative.management.inputs;
 import io.pulumi.azurenative.management.inputs.CreateParentGroupInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
     @Import(name="parent")
       private final @Nullable Output<CreateParentGroupInfoArgs> parent;
 
-    public Output<CreateParentGroupInfoArgs> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<CreateParentGroupInfoArgs> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     public CreateManagementGroupDetailsArgs(@Nullable Output<CreateParentGroupInfoArgs> parent) {
@@ -34,7 +35,7 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
     }
 
     private CreateManagementGroupDetailsArgs() {
-        this.parent = Output.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder parent(@Nullable CreateParentGroupInfoArgs parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }        public CreateManagementGroupDetailsArgs build() {
             return new CreateManagementGroupDetailsArgs(parent);

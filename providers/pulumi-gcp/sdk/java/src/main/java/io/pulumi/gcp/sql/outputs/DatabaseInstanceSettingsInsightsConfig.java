@@ -49,28 +49,28 @@ public final class DatabaseInstanceSettingsInsightsConfig {
      * True if Query Insights feature is enabled.
      * 
     */
-    public Optional<Boolean> getQueryInsightsEnabled() {
+    public Optional<Boolean> queryInsightsEnabled() {
         return Optional.ofNullable(this.queryInsightsEnabled);
     }
     /**
      * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
      * 
     */
-    public Optional<Integer> getQueryStringLength() {
+    public Optional<Integer> queryStringLength() {
         return Optional.ofNullable(this.queryStringLength);
     }
     /**
      * True if Query Insights will record application tags from query when enabled.
      * 
     */
-    public Optional<Boolean> getRecordApplicationTags() {
+    public Optional<Boolean> recordApplicationTags() {
         return Optional.ofNullable(this.recordApplicationTags);
     }
     /**
      * True if Query Insights will record client address when enabled.
      * 
     */
-    public Optional<Boolean> getRecordClientAddress() {
+    public Optional<Boolean> recordClientAddress() {
         return Optional.ofNullable(this.recordClientAddress);
     }
 

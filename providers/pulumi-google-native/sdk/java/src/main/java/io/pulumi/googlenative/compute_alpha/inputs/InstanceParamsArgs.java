@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceManagerTags")
       private final @Nullable Output<Map<String,String>> resourceManagerTags;
 
-    public Output<Map<String,String>> getResourceManagerTags() {
-        return this.resourceManagerTags == null ? Output.empty() : this.resourceManagerTags;
+    public Output<Map<String,String>> resourceManagerTags() {
+        return this.resourceManagerTags == null ? Codegen.empty() : this.resourceManagerTags;
     }
 
     public InstanceParamsArgs(@Nullable Output<Map<String,String>> resourceManagerTags) {
@@ -35,7 +36,7 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceParamsArgs() {
-        this.resourceManagerTags = Output.empty();
+        this.resourceManagerTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceManagerTags(@Nullable Map<String,String> resourceManagerTags) {
-            this.resourceManagerTags = Output.ofNullable(resourceManagerTags);
+            this.resourceManagerTags = Codegen.ofNullable(resourceManagerTags);
             return this;
         }        public InstanceParamsArgs build() {
             return new InstanceParamsArgs(resourceManagerTags);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.O365BreakOutCategoryPoliciesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="breakOutCategories")
       private final @Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
 
-    public Output<O365BreakOutCategoryPoliciesArgs> getBreakOutCategories() {
-        return this.breakOutCategories == null ? Output.empty() : this.breakOutCategories;
+    public Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories() {
+        return this.breakOutCategories == null ? Codegen.empty() : this.breakOutCategories;
     }
 
     public O365PolicyPropertiesArgs(@Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories) {
@@ -34,7 +35,7 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private O365PolicyPropertiesArgs() {
-        this.breakOutCategories = Output.empty();
+        this.breakOutCategories = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder breakOutCategories(@Nullable O365BreakOutCategoryPoliciesArgs breakOutCategories) {
-            this.breakOutCategories = Output.ofNullable(breakOutCategories);
+            this.breakOutCategories = Codegen.ofNullable(breakOutCategories);
             return this;
         }        public O365PolicyPropertiesArgs build() {
             return new O365PolicyPropertiesArgs(breakOutCategories);

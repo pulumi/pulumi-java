@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
     @Import(name="maxInstances", required=true)
       private final Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances;
     }
 
@@ -34,8 +35,8 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> getMinInstances() {
-        return this.minInstances == null ? Output.empty() : this.minInstances;
+    public Output<Integer> minInstances() {
+        return this.minInstances == null ? Codegen.empty() : this.minInstances;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+    public Output<Integer> weight() {
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public AutoscalingPolicyWorkerConfigArgs(
@@ -70,9 +71,9 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
     }
 
     private AutoscalingPolicyWorkerConfigArgs() {
-        this.maxInstances = Output.empty();
-        this.minInstances = Output.empty();
-        this.weight = Output.empty();
+        this.maxInstances = Codegen.empty();
+        this.minInstances = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Output.ofNullable(minInstances);
+            this.minInstances = Codegen.ofNullable(minInstances);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -120,7 +121,7 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public AutoscalingPolicyWorkerConfigArgs build() {
             return new AutoscalingPolicyWorkerConfigArgs(maxInstances, minInstances, weight);

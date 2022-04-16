@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gkehub_v1alpha2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gkehub_v1alpha2.MembershipArgs;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.AuthorityResponse;
@@ -33,7 +34,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
      * 
      */
-    public Output<AuthorityResponse> getAuthority() {
+    public Output<AuthorityResponse> authority() {
         return this.authority;
     }
     /**
@@ -47,7 +48,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return When the Membership was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -61,7 +62,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return When the Membership was deleted.
      * 
      */
-    public Output<String> getDeleteTime() {
+    public Output<String> deleteTime() {
         return this.deleteTime;
     }
     /**
@@ -75,7 +76,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Description of this membership, limited to 63 characters. Must match the regex: `a-zA-Z0-9*` This field is present for legacy purposes.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -89,7 +90,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Optional. Endpoint information to reach this member.
      * 
      */
-    public Output<MembershipEndpointResponse> getEndpoint() {
+    public Output<MembershipEndpointResponse> endpoint() {
         return this.endpoint;
     }
     /**
@@ -103,7 +104,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. For GKE clusters, external_id is managed by the Hub API and updates will be ignored. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
      * 
      */
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId;
     }
     /**
@@ -117,7 +118,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Optional. The infrastructure type this Membership is running on.
      * 
      */
-    public Output<String> getInfrastructureType() {
+    public Output<String> infrastructureType() {
         return this.infrastructureType;
     }
     /**
@@ -131,7 +132,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Optional. GCP labels for this membership.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -145,7 +146,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return For clusters using Connect, the timestamp of the most recent connection established with Google Cloud. This time is updated every several minutes, not continuously. For clusters that do not use GKE Connect, or that have never connected successfully, this field will be unset.
      * 
      */
-    public Output<String> getLastConnectionTime() {
+    public Output<String> lastConnectionTime() {
         return this.lastConnectionTime;
     }
     /**
@@ -159,7 +160,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The full, unique name of this Membership resource in the format `projects/*{@literal /}locations/*{@literal /}memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -173,7 +174,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return State of the Membership resource.
      * 
      */
-    public Output<MembershipStateResponse> getState() {
+    public Output<MembershipStateResponse> state() {
         return this.state;
     }
     /**
@@ -187,7 +188,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Google-generated UUID for this resource. This is unique across all Membership resources. If a Membership resource is deleted and another resource with the same name is created, it gets a different unique_id.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -201,7 +202,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return When the Membership was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -227,7 +228,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Membership(String name, MembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gkehub/v1alpha2:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gkehub/v1alpha2:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Membership(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.PasswordValidationPolicyComplexity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,8 +29,8 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="complexity")
       private final @Nullable Output<PasswordValidationPolicyComplexity> complexity;
 
-    public Output<PasswordValidationPolicyComplexity> getComplexity() {
-        return this.complexity == null ? Output.empty() : this.complexity;
+    public Output<PasswordValidationPolicyComplexity> complexity() {
+        return this.complexity == null ? Codegen.empty() : this.complexity;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="disallowUsernameSubstring")
       private final @Nullable Output<Boolean> disallowUsernameSubstring;
 
-    public Output<Boolean> getDisallowUsernameSubstring() {
-        return this.disallowUsernameSubstring == null ? Output.empty() : this.disallowUsernameSubstring;
+    public Output<Boolean> disallowUsernameSubstring() {
+        return this.disallowUsernameSubstring == null ? Codegen.empty() : this.disallowUsernameSubstring;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="minLength")
       private final @Nullable Output<Integer> minLength;
 
-    public Output<Integer> getMinLength() {
-        return this.minLength == null ? Output.empty() : this.minLength;
+    public Output<Integer> minLength() {
+        return this.minLength == null ? Codegen.empty() : this.minLength;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="passwordChangeInterval")
       private final @Nullable Output<String> passwordChangeInterval;
 
-    public Output<String> getPasswordChangeInterval() {
-        return this.passwordChangeInterval == null ? Output.empty() : this.passwordChangeInterval;
+    public Output<String> passwordChangeInterval() {
+        return this.passwordChangeInterval == null ? Codegen.empty() : this.passwordChangeInterval;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="reuseInterval")
       private final @Nullable Output<Integer> reuseInterval;
 
-    public Output<Integer> getReuseInterval() {
-        return this.reuseInterval == null ? Output.empty() : this.reuseInterval;
+    public Output<Integer> reuseInterval() {
+        return this.reuseInterval == null ? Codegen.empty() : this.reuseInterval;
     }
 
     public PasswordValidationPolicyArgs(
@@ -90,11 +91,11 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private PasswordValidationPolicyArgs() {
-        this.complexity = Output.empty();
-        this.disallowUsernameSubstring = Output.empty();
-        this.minLength = Output.empty();
-        this.passwordChangeInterval = Output.empty();
-        this.reuseInterval = Output.empty();
+        this.complexity = Codegen.empty();
+        this.disallowUsernameSubstring = Codegen.empty();
+        this.minLength = Codegen.empty();
+        this.passwordChangeInterval = Codegen.empty();
+        this.reuseInterval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder complexity(@Nullable PasswordValidationPolicyComplexity complexity) {
-            this.complexity = Output.ofNullable(complexity);
+            this.complexity = Codegen.ofNullable(complexity);
             return this;
         }
         public Builder disallowUsernameSubstring(@Nullable Output<Boolean> disallowUsernameSubstring) {
@@ -138,7 +139,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder disallowUsernameSubstring(@Nullable Boolean disallowUsernameSubstring) {
-            this.disallowUsernameSubstring = Output.ofNullable(disallowUsernameSubstring);
+            this.disallowUsernameSubstring = Codegen.ofNullable(disallowUsernameSubstring);
             return this;
         }
         public Builder minLength(@Nullable Output<Integer> minLength) {
@@ -146,7 +147,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder minLength(@Nullable Integer minLength) {
-            this.minLength = Output.ofNullable(minLength);
+            this.minLength = Codegen.ofNullable(minLength);
             return this;
         }
         public Builder passwordChangeInterval(@Nullable Output<String> passwordChangeInterval) {
@@ -154,7 +155,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder passwordChangeInterval(@Nullable String passwordChangeInterval) {
-            this.passwordChangeInterval = Output.ofNullable(passwordChangeInterval);
+            this.passwordChangeInterval = Codegen.ofNullable(passwordChangeInterval);
             return this;
         }
         public Builder reuseInterval(@Nullable Output<Integer> reuseInterval) {
@@ -162,7 +163,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder reuseInterval(@Nullable Integer reuseInterval) {
-            this.reuseInterval = Output.ofNullable(reuseInterval);
+            this.reuseInterval = Codegen.ofNullable(reuseInterval);
             return this;
         }        public PasswordValidationPolicyArgs build() {
             return new PasswordValidationPolicyArgs(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);

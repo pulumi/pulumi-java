@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.ArcConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,8 +23,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="aksResourceID")
       private final @Nullable Output<String> aksResourceID;
 
-    public Output<String> getAksResourceID() {
-        return this.aksResourceID == null ? Output.empty() : this.aksResourceID;
+    public Output<String> aksResourceID() {
+        return this.aksResourceID == null ? Codegen.empty() : this.aksResourceID;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="appLogsConfiguration")
       private final @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
 
-    public Output<AppLogsConfigurationArgs> getAppLogsConfiguration() {
-        return this.appLogsConfiguration == null ? Output.empty() : this.appLogsConfiguration;
+    public Output<AppLogsConfigurationArgs> appLogsConfiguration() {
+        return this.appLogsConfiguration == null ? Codegen.empty() : this.appLogsConfiguration;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="arcConfiguration")
       private final @Nullable Output<ArcConfigurationArgs> arcConfiguration;
 
-    public Output<ArcConfigurationArgs> getArcConfiguration() {
-        return this.arcConfiguration == null ? Output.empty() : this.arcConfiguration;
+    public Output<ArcConfigurationArgs> arcConfiguration() {
+        return this.arcConfiguration == null ? Codegen.empty() : this.arcConfiguration;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> extendedLocation() {
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="internalLoadBalancerEnabled")
       private final @Nullable Output<Boolean> internalLoadBalancerEnabled;
 
-    public Output<Boolean> getInternalLoadBalancerEnabled() {
-        return this.internalLoadBalancerEnabled == null ? Output.empty() : this.internalLoadBalancerEnabled;
+    public Output<Boolean> internalLoadBalancerEnabled() {
+        return this.internalLoadBalancerEnabled == null ? Codegen.empty() : this.internalLoadBalancerEnabled;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,8 +126,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="staticIp")
       private final @Nullable Output<String> staticIp;
 
-    public Output<String> getStaticIp() {
-        return this.staticIp == null ? Output.empty() : this.staticIp;
+    public Output<String> staticIp() {
+        return this.staticIp == null ? Codegen.empty() : this.staticIp;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public KubeEnvironmentArgs(
@@ -166,17 +167,17 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private KubeEnvironmentArgs() {
-        this.aksResourceID = Output.empty();
-        this.appLogsConfiguration = Output.empty();
-        this.arcConfiguration = Output.empty();
-        this.extendedLocation = Output.empty();
-        this.internalLoadBalancerEnabled = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.staticIp = Output.empty();
-        this.tags = Output.empty();
+        this.aksResourceID = Codegen.empty();
+        this.appLogsConfiguration = Codegen.empty();
+        this.arcConfiguration = Codegen.empty();
+        this.extendedLocation = Codegen.empty();
+        this.internalLoadBalancerEnabled = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.staticIp = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder aksResourceID(@Nullable String aksResourceID) {
-            this.aksResourceID = Output.ofNullable(aksResourceID);
+            this.aksResourceID = Codegen.ofNullable(aksResourceID);
             return this;
         }
         public Builder appLogsConfiguration(@Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration) {
@@ -232,7 +233,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder appLogsConfiguration(@Nullable AppLogsConfigurationArgs appLogsConfiguration) {
-            this.appLogsConfiguration = Output.ofNullable(appLogsConfiguration);
+            this.appLogsConfiguration = Codegen.ofNullable(appLogsConfiguration);
             return this;
         }
         public Builder arcConfiguration(@Nullable Output<ArcConfigurationArgs> arcConfiguration) {
@@ -240,7 +241,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arcConfiguration(@Nullable ArcConfigurationArgs arcConfiguration) {
-            this.arcConfiguration = Output.ofNullable(arcConfiguration);
+            this.arcConfiguration = Codegen.ofNullable(arcConfiguration);
             return this;
         }
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
@@ -248,7 +249,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder internalLoadBalancerEnabled(@Nullable Output<Boolean> internalLoadBalancerEnabled) {
@@ -256,7 +257,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder internalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
-            this.internalLoadBalancerEnabled = Output.ofNullable(internalLoadBalancerEnabled);
+            this.internalLoadBalancerEnabled = Codegen.ofNullable(internalLoadBalancerEnabled);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -264,7 +265,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -272,7 +273,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -280,7 +281,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -296,7 +297,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder staticIp(@Nullable String staticIp) {
-            this.staticIp = Output.ofNullable(staticIp);
+            this.staticIp = Codegen.ofNullable(staticIp);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -304,7 +305,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public KubeEnvironmentArgs build() {
             return new KubeEnvironmentArgs(aksResourceID, appLogsConfiguration, arcConfiguration, extendedLocation, internalLoadBalancerEnabled, kind, location, name, resourceGroupName, staticIp, tags);

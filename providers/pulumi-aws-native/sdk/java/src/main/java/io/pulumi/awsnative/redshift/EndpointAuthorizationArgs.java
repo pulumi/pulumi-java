@@ -5,6 +5,7 @@ package io.pulumi.awsnative.redshift;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     @Import(name="account", required=true)
       private final Output<String> account;
 
-    public Output<String> getAccount() {
+    public Output<String> account() {
         return this.account;
     }
 
@@ -34,7 +35,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -45,8 +46,8 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
-        return this.force == null ? Output.empty() : this.force;
+    public Output<Boolean> force() {
+        return this.force == null ? Codegen.empty() : this.force;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     @Import(name="vpcIds")
       private final @Nullable Output<List<String>> vpcIds;
 
-    public Output<List<String>> getVpcIds() {
-        return this.vpcIds == null ? Output.empty() : this.vpcIds;
+    public Output<List<String>> vpcIds() {
+        return this.vpcIds == null ? Codegen.empty() : this.vpcIds;
     }
 
     public EndpointAuthorizationArgs(
@@ -72,10 +73,10 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     }
 
     private EndpointAuthorizationArgs() {
-        this.account = Output.empty();
-        this.clusterIdentifier = Output.empty();
-        this.force = Output.empty();
-        this.vpcIds = Output.empty();
+        this.account = Codegen.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.force = Codegen.empty();
+        this.vpcIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder force(@Nullable Boolean force) {
-            this.force = Output.ofNullable(force);
+            this.force = Codegen.ofNullable(force);
             return this;
         }
         public Builder vpcIds(@Nullable Output<List<String>> vpcIds) {
@@ -133,7 +134,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder vpcIds(@Nullable List<String> vpcIds) {
-            this.vpcIds = Output.ofNullable(vpcIds);
+            this.vpcIds = Codegen.ofNullable(vpcIds);
             return this;
         }
         public Builder vpcIds(String... vpcIds) {

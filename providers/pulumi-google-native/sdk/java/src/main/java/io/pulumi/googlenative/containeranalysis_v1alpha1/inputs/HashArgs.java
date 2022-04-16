@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.HashType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<HashType> type;
 
-    public Output<HashType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<HashType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public HashArgs(
@@ -49,8 +50,8 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HashArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable HashType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -88,7 +89,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public HashArgs build() {
             return new HashArgs(type, value);

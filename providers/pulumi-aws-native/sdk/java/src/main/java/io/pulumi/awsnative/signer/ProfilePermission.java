@@ -8,6 +8,7 @@ import io.pulumi.awsnative.signer.ProfilePermissionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,31 +21,31 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
     @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
     @Export(name="profileName", type=String.class, parameters={})
     private Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
     @Export(name="profileVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileVersion;
 
-    public Output</* @Nullable */ String> getProfileVersion() {
+    public Output</* @Nullable */ String> profileVersion() {
         return this.profileVersion;
     }
     @Export(name="statementId", type=String.class, parameters={})
     private Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 
@@ -70,7 +71,7 @@ public class ProfilePermission extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProfilePermission(String name, ProfilePermissionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:signer:ProfilePermission", name, args == null ? ProfilePermissionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:signer:ProfilePermission", name, args == null ? ProfilePermissionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProfilePermission(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

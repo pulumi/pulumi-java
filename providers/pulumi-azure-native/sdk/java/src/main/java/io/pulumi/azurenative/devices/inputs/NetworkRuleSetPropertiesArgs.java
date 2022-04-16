@@ -8,6 +8,7 @@ import io.pulumi.azurenative.devices.inputs.NetworkRuleSetIpRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="applyToBuiltInEventHubEndpoint", required=true)
       private final Output<Boolean> applyToBuiltInEventHubEndpoint;
 
-    public Output<Boolean> getApplyToBuiltInEventHubEndpoint() {
+    public Output<Boolean> applyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
     }
 
@@ -41,8 +42,8 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="defaultAction")
       private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
-    public Output<Either<String,DefaultAction>> getDefaultAction() {
-        return this.defaultAction == null ? Output.empty() : this.defaultAction;
+    public Output<Either<String,DefaultAction>> defaultAction() {
+        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="ipRules", required=true)
       private final Output<List<NetworkRuleSetIpRuleArgs>> ipRules;
 
-    public Output<List<NetworkRuleSetIpRuleArgs>> getIpRules() {
+    public Output<List<NetworkRuleSetIpRuleArgs>> ipRules() {
         return this.ipRules;
     }
 
@@ -66,9 +67,9 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private NetworkRuleSetPropertiesArgs() {
-        this.applyToBuiltInEventHubEndpoint = Output.empty();
-        this.defaultAction = Output.empty();
-        this.ipRules = Output.empty();
+        this.applyToBuiltInEventHubEndpoint = Codegen.empty();
+        this.defaultAction = Codegen.empty();
+        this.ipRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
-            this.defaultAction = Output.ofNullable(defaultAction);
+            this.defaultAction = Codegen.ofNullable(defaultAction);
             return this;
         }
         public Builder ipRules(Output<List<NetworkRuleSetIpRuleArgs>> ipRules) {

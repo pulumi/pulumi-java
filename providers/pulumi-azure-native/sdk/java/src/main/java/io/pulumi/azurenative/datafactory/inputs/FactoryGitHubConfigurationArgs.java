@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.GitHubClientSecretArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,8 +38,8 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="clientSecret")
       private final @Nullable Output<GitHubClientSecretArgs> clientSecret;
 
-    public Output<GitHubClientSecretArgs> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<GitHubClientSecretArgs> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="collaborationBranch", required=true)
       private final Output<String> collaborationBranch;
 
-    public Output<String> getCollaborationBranch() {
+    public Output<String> collaborationBranch() {
         return this.collaborationBranch;
     }
 
@@ -70,8 +71,8 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
-        return this.hostName == null ? Output.empty() : this.hostName;
+    public Output<String> hostName() {
+        return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="lastCommitId")
       private final @Nullable Output<String> lastCommitId;
 
-    public Output<String> getLastCommitId() {
-        return this.lastCommitId == null ? Output.empty() : this.lastCommitId;
+    public Output<String> lastCommitId() {
+        return this.lastCommitId == null ? Codegen.empty() : this.lastCommitId;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -103,7 +104,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="rootFolder", required=true)
       private final Output<String> rootFolder;
 
-    public Output<String> getRootFolder() {
+    public Output<String> rootFolder() {
         return this.rootFolder;
     }
 
@@ -115,7 +116,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -141,15 +142,15 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private FactoryGitHubConfigurationArgs() {
-        this.accountName = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.collaborationBranch = Output.empty();
-        this.hostName = Output.empty();
-        this.lastCommitId = Output.empty();
-        this.repositoryName = Output.empty();
-        this.rootFolder = Output.empty();
-        this.type = Output.empty();
+        this.accountName = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.collaborationBranch = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.lastCommitId = Codegen.empty();
+        this.repositoryName = Codegen.empty();
+        this.rootFolder = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -201,7 +202,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<GitHubClientSecretArgs> clientSecret) {
@@ -209,7 +210,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder clientSecret(@Nullable GitHubClientSecretArgs clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder collaborationBranch(Output<String> collaborationBranch) {
@@ -225,7 +226,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Output.ofNullable(hostName);
+            this.hostName = Codegen.ofNullable(hostName);
             return this;
         }
         public Builder lastCommitId(@Nullable Output<String> lastCommitId) {
@@ -233,7 +234,7 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = Output.ofNullable(lastCommitId);
+            this.lastCommitId = Codegen.ofNullable(lastCommitId);
             return this;
         }
         public Builder repositoryName(Output<String> repositoryName) {

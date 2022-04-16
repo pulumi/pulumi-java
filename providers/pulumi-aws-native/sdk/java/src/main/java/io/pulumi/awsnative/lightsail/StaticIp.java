@@ -8,6 +8,7 @@ import io.pulumi.awsnative.lightsail.StaticIpArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return The instance where the static IP is attached.
      * 
      */
-    public Output</* @Nullable */ String> getAttachedTo() {
+    public Output</* @Nullable */ String> attachedTo() {
         return this.attachedTo;
     }
     /**
@@ -43,7 +44,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return The static IP address.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -57,13 +58,13 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return A Boolean value indicating whether the static IP is attached.
      * 
      */
-    public Output<Boolean> getIsAttached() {
+    public Output<Boolean> isAttached() {
         return this.isAttached;
     }
     @Export(name="staticIpArn", type=String.class, parameters={})
     private Output<String> staticIpArn;
 
-    public Output<String> getStaticIpArn() {
+    public Output<String> staticIpArn() {
         return this.staticIpArn;
     }
     /**
@@ -77,7 +78,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return The name of the static IP address.
      * 
      */
-    public Output<String> getStaticIpName() {
+    public Output<String> staticIpName() {
         return this.staticIpName;
     }
 
@@ -103,7 +104,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StaticIp(String name, @Nullable StaticIpArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lightsail:StaticIp", name, args == null ? StaticIpArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:lightsail:StaticIp", name, args == null ? StaticIpArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StaticIp(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

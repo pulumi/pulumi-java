@@ -25,7 +25,7 @@ public final class AuditConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="auditLogConfigs", required=true)
       private final List<AuditLogConfigResponse> auditLogConfigs;
 
-    public List<AuditLogConfigResponse> getAuditLogConfigs() {
+    public List<AuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
@@ -36,7 +36,7 @@ public final class AuditConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

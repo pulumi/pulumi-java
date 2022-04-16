@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.ZoneAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -49,7 +50,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * @return The account ID of the account that created the hosted zone.
      * 
      */
-    public Output<String> getOwningAccount() {
+    public Output<String> owningAccount() {
         return this.owningAccount;
     }
     /**
@@ -63,7 +64,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * @return The VPC to associate with the private hosted zone.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -77,7 +78,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * @return The VPC's region. Defaults to the region of the AWS provider.
      * 
      */
-    public Output<String> getVpcRegion() {
+    public Output<String> vpcRegion() {
         return this.vpcRegion;
     }
     /**
@@ -91,7 +92,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * @return The private hosted zone to associate.
      * 
      */
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 
@@ -117,7 +118,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ZoneAssociation(String name, ZoneAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/zoneAssociation:ZoneAssociation", name, args == null ? ZoneAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/zoneAssociation:ZoneAssociation", name, args == null ? ZoneAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ZoneAssociation(String name, Output<String> id, @Nullable ZoneAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

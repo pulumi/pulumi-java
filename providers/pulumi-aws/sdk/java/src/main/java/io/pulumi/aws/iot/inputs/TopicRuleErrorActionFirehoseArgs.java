@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
     @Import(name="deliveryStreamName", required=true)
       private final Output<String> deliveryStreamName;
 
-    public Output<String> getDeliveryStreamName() {
+    public Output<String> deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
@@ -32,7 +33,7 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -43,8 +44,8 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
     @Import(name="separator")
       private final @Nullable Output<String> separator;
 
-    public Output<String> getSeparator() {
-        return this.separator == null ? Output.empty() : this.separator;
+    public Output<String> separator() {
+        return this.separator == null ? Codegen.empty() : this.separator;
     }
 
     public TopicRuleErrorActionFirehoseArgs(
@@ -57,9 +58,9 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
     }
 
     private TopicRuleErrorActionFirehoseArgs() {
-        this.deliveryStreamName = Output.empty();
-        this.roleArn = Output.empty();
-        this.separator = Output.empty();
+        this.deliveryStreamName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.separator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
             return this;
         }
         public Builder separator(@Nullable String separator) {
-            this.separator = Output.ofNullable(separator);
+            this.separator = Codegen.ofNullable(separator);
             return this;
         }        public TopicRuleErrorActionFirehoseArgs build() {
             return new TopicRuleErrorActionFirehoseArgs(deliveryStreamName, roleArn, separator);

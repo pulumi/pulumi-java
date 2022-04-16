@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -50,7 +51,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return Allow classic operations.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowClassicOperations() {
+    public Output</* @Nullable */ Boolean> allowClassicOperations() {
         return this.allowClassicOperations;
     }
     /**
@@ -64,7 +65,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The list of authorizations.
      * 
      */
-    public Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> getAuthorizations() {
+    public Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> authorizations() {
         return this.authorizations;
     }
     /**
@@ -78,7 +79,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    public Output</* @Nullable */ Double> getBandwidthInGbps() {
+    public Output</* @Nullable */ Double> bandwidthInGbps() {
         return this.bandwidthInGbps;
     }
     /**
@@ -92,7 +93,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The CircuitProvisioningState state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCircuitProvisioningState() {
+    public Output</* @Nullable */ String> circuitProvisioningState() {
         return this.circuitProvisioningState;
     }
     /**
@@ -106,7 +107,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -120,7 +121,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getExpressRoutePort() {
+    public Output</* @Nullable */ SubResourceResponse> expressRoutePort() {
         return this.expressRoutePort;
     }
     /**
@@ -134,7 +135,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The GatewayManager Etag.
      * 
      */
-    public Output</* @Nullable */ String> getGatewayManagerEtag() {
+    public Output</* @Nullable */ String> gatewayManagerEtag() {
         return this.gatewayManagerEtag;
     }
     /**
@@ -148,7 +149,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return Flag denoting global reach status.
      * 
      */
-    public Output</* @Nullable */ Boolean> getGlobalReachEnabled() {
+    public Output</* @Nullable */ Boolean> globalReachEnabled() {
         return this.globalReachEnabled;
     }
     /**
@@ -162,7 +163,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -176,7 +177,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -190,7 +191,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The list of peerings.
      * 
      */
-    public Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> getPeerings() {
+    public Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> peerings() {
         return this.peerings;
     }
     /**
@@ -204,7 +205,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the express route circuit resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -218,7 +219,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The ServiceKey.
      * 
      */
-    public Output</* @Nullable */ String> getServiceKey() {
+    public Output</* @Nullable */ String> serviceKey() {
         return this.serviceKey;
     }
     /**
@@ -232,7 +233,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The ServiceProviderNotes.
      * 
      */
-    public Output</* @Nullable */ String> getServiceProviderNotes() {
+    public Output</* @Nullable */ String> serviceProviderNotes() {
         return this.serviceProviderNotes;
     }
     /**
@@ -246,7 +247,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The ServiceProviderProperties.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> getServiceProviderProperties() {
+    public Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> serviceProviderProperties() {
         return this.serviceProviderProperties;
     }
     /**
@@ -260,7 +261,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The ServiceProviderProvisioningState state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getServiceProviderProvisioningState() {
+    public Output</* @Nullable */ String> serviceProviderProvisioningState() {
         return this.serviceProviderProvisioningState;
     }
     /**
@@ -274,7 +275,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The SKU.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitSkuResponse> getSku() {
+    public Output</* @Nullable */ ExpressRouteCircuitSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -288,7 +289,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
      * 
      */
-    public Output<Integer> getStag() {
+    public Output<Integer> stag() {
         return this.stag;
     }
     /**
@@ -302,7 +303,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -316,7 +317,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -342,7 +343,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExpressRouteCircuit(String name, ExpressRouteCircuitArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ExpressRouteCircuit", name, args == null ? ExpressRouteCircuitArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ExpressRouteCircuit", name, args == null ? ExpressRouteCircuitArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExpressRouteCircuit(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

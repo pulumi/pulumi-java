@@ -21,7 +21,7 @@ public final class GetDomainAutoTuneOption extends io.pulumi.resources.InvokeArg
     @Import(name="desiredState", required=true)
       private final String desiredState;
 
-    public String getDesiredState() {
+    public String desiredState() {
         return this.desiredState;
     }
 
@@ -32,7 +32,7 @@ public final class GetDomainAutoTuneOption extends io.pulumi.resources.InvokeArg
     @Import(name="maintenanceSchedules", required=true)
       private final List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules;
 
-    public List<GetDomainAutoTuneOptionMaintenanceSchedule> getMaintenanceSchedules() {
+    public List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules() {
         return this.maintenanceSchedules;
     }
 
@@ -43,7 +43,7 @@ public final class GetDomainAutoTuneOption extends io.pulumi.resources.InvokeArg
     @Import(name="rollbackOnDisable", required=true)
       private final String rollbackOnDisable;
 
-    public String getRollbackOnDisable() {
+    public String rollbackOnDisable() {
         return this.rollbackOnDisable;
     }
 

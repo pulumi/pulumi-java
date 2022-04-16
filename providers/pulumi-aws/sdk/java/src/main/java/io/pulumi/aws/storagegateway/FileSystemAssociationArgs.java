@@ -6,6 +6,7 @@ package io.pulumi.aws.storagegateway;
 import io.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="auditDestinationArn")
       private final @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> getAuditDestinationArn() {
-        return this.auditDestinationArn == null ? Output.empty() : this.auditDestinationArn;
+    public Output<String> auditDestinationArn() {
+        return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="cacheAttributes")
       private final @Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
 
-    public Output<FileSystemAssociationCacheAttributesArgs> getCacheAttributes() {
-        return this.cacheAttributes == null ? Output.empty() : this.cacheAttributes;
+    public Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes() {
+        return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -56,7 +57,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="locationArn", required=true)
       private final Output<String> locationArn;
 
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
 
@@ -67,7 +68,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -78,8 +79,8 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -111,13 +112,13 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private FileSystemAssociationArgs() {
-        this.auditDestinationArn = Output.empty();
-        this.cacheAttributes = Output.empty();
-        this.gatewayArn = Output.empty();
-        this.locationArn = Output.empty();
-        this.password = Output.empty();
-        this.tags = Output.empty();
-        this.username = Output.empty();
+        this.auditDestinationArn = Codegen.empty();
+        this.cacheAttributes = Codegen.empty();
+        this.gatewayArn = Codegen.empty();
+        this.locationArn = Codegen.empty();
+        this.password = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Output.ofNullable(auditDestinationArn);
+            this.auditDestinationArn = Codegen.ofNullable(auditDestinationArn);
             return this;
         }
         public Builder cacheAttributes(@Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes) {
@@ -165,7 +166,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cacheAttributes(@Nullable FileSystemAssociationCacheAttributesArgs cacheAttributes) {
-            this.cacheAttributes = Output.ofNullable(cacheAttributes);
+            this.cacheAttributes = Codegen.ofNullable(cacheAttributes);
             return this;
         }
         public Builder gatewayArn(Output<String> gatewayArn) {
@@ -197,7 +198,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder username(Output<String> username) {

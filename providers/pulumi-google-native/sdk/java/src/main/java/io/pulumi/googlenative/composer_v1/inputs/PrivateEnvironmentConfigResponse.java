@@ -25,7 +25,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
     @Import(name="cloudComposerNetworkIpv4CidrBlock", required=true)
       private final String cloudComposerNetworkIpv4CidrBlock;
 
-    public String getCloudComposerNetworkIpv4CidrBlock() {
+    public String cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
 
@@ -36,7 +36,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
     @Import(name="cloudComposerNetworkIpv4ReservedRange", required=true)
       private final String cloudComposerNetworkIpv4ReservedRange;
 
-    public String getCloudComposerNetworkIpv4ReservedRange() {
+    public String cloudComposerNetworkIpv4ReservedRange() {
         return this.cloudComposerNetworkIpv4ReservedRange;
     }
 
@@ -47,7 +47,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
     @Import(name="cloudSqlIpv4CidrBlock", required=true)
       private final String cloudSqlIpv4CidrBlock;
 
-    public String getCloudSqlIpv4CidrBlock() {
+    public String cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
     }
 
@@ -58,7 +58,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
     @Import(name="enablePrivateEnvironment", required=true)
       private final Boolean enablePrivateEnvironment;
 
-    public Boolean getEnablePrivateEnvironment() {
+    public Boolean enablePrivateEnvironment() {
         return this.enablePrivateEnvironment;
     }
 
@@ -69,7 +69,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
     @Import(name="privateClusterConfig", required=true)
       private final PrivateClusterConfigResponse privateClusterConfig;
 
-    public PrivateClusterConfigResponse getPrivateClusterConfig() {
+    public PrivateClusterConfigResponse privateClusterConfig() {
         return this.privateClusterConfig;
     }
 
@@ -80,7 +80,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
     @Import(name="webServerIpv4CidrBlock", required=true)
       private final String webServerIpv4CidrBlock;
 
-    public String getWebServerIpv4CidrBlock() {
+    public String webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock;
     }
 
@@ -91,7 +91,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
     @Import(name="webServerIpv4ReservedRange", required=true)
       private final String webServerIpv4ReservedRange;
 
-    public String getWebServerIpv4ReservedRange() {
+    public String webServerIpv4ReservedRange() {
         return this.webServerIpv4ReservedRange;
     }
 

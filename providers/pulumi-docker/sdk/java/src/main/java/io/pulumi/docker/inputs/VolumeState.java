@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.VolumeLabelGetArgs;
 import java.lang.Object;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="driver")
       private final @Nullable Output<String> driver;
 
-    public Output<String> getDriver() {
-        return this.driver == null ? Output.empty() : this.driver;
+    public Output<String> driver() {
+        return this.driver == null ? Codegen.empty() : this.driver;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="driverOpts")
       private final @Nullable Output<Map<String,Object>> driverOpts;
 
-    public Output<Map<String,Object>> getDriverOpts() {
-        return this.driverOpts == null ? Output.empty() : this.driverOpts;
+    public Output<Map<String,Object>> driverOpts() {
+        return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<VolumeLabelGetArgs>> labels;
 
-    public Output<List<VolumeLabelGetArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<VolumeLabelGetArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountpoint")
       private final @Nullable Output<String> mountpoint;
 
-    public Output<String> getMountpoint() {
-        return this.mountpoint == null ? Output.empty() : this.mountpoint;
+    public Output<String> mountpoint() {
+        return this.mountpoint == null ? Codegen.empty() : this.mountpoint;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public VolumeState(
@@ -87,11 +88,11 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeState() {
-        this.driver = Output.empty();
-        this.driverOpts = Output.empty();
-        this.labels = Output.empty();
-        this.mountpoint = Output.empty();
-        this.name = Output.empty();
+        this.driver = Codegen.empty();
+        this.driverOpts = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.mountpoint = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driver(@Nullable String driver) {
-            this.driver = Output.ofNullable(driver);
+            this.driver = Codegen.ofNullable(driver);
             return this;
         }
         public Builder driverOpts(@Nullable Output<Map<String,Object>> driverOpts) {
@@ -135,7 +136,7 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driverOpts(@Nullable Map<String,Object> driverOpts) {
-            this.driverOpts = Output.ofNullable(driverOpts);
+            this.driverOpts = Codegen.ofNullable(driverOpts);
             return this;
         }
         public Builder labels(@Nullable Output<List<VolumeLabelGetArgs>> labels) {
@@ -143,7 +144,7 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<VolumeLabelGetArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(VolumeLabelGetArgs... labels) {
@@ -154,7 +155,7 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountpoint(@Nullable String mountpoint) {
-            this.mountpoint = Output.ofNullable(mountpoint);
+            this.mountpoint = Codegen.ofNullable(mountpoint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -162,7 +163,7 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public VolumeState build() {
             return new VolumeState(driver, driverOpts, labels, mountpoint, name);

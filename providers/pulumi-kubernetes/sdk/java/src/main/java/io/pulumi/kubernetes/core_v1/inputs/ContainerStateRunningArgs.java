@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
     @Import(name="startedAt")
       private final @Nullable Output<String> startedAt;
 
-    public Output<String> getStartedAt() {
-        return this.startedAt == null ? Output.empty() : this.startedAt;
+    public Output<String> startedAt() {
+        return this.startedAt == null ? Codegen.empty() : this.startedAt;
     }
 
     public ContainerStateRunningArgs(@Nullable Output<String> startedAt) {
@@ -34,7 +35,7 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
     }
 
     private ContainerStateRunningArgs() {
-        this.startedAt = Output.empty();
+        this.startedAt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder startedAt(@Nullable String startedAt) {
-            this.startedAt = Output.ofNullable(startedAt);
+            this.startedAt = Codegen.ofNullable(startedAt);
             return this;
         }        public ContainerStateRunningArgs build() {
             return new ContainerStateRunningArgs(startedAt);

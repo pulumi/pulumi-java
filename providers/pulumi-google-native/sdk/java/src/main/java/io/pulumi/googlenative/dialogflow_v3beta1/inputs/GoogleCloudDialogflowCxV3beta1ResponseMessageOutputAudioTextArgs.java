@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
     @Import(name="ssml")
       private final @Nullable Output<String> ssml;
 
-    public Output<String> getSsml() {
-        return this.ssml == null ? Output.empty() : this.ssml;
+    public Output<String> ssml() {
+        return this.ssml == null ? Codegen.empty() : this.ssml;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<String> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
     }
 
     private GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs() {
-        this.ssml = Output.empty();
-        this.text = Output.empty();
+        this.ssml = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
             return this;
         }
         public Builder ssml(@Nullable String ssml) {
-            this.ssml = Output.ofNullable(ssml);
+            this.ssml = Codegen.ofNullable(ssml);
             return this;
         }
         public Builder text(@Nullable Output<String> text) {
@@ -87,7 +88,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
             return this;
         }
         public Builder text(@Nullable String text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs(ssml, text);

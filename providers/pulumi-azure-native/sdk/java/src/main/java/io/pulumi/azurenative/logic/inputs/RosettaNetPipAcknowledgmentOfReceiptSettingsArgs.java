@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
     @Import(name="isNonRepudiationRequired", required=true)
       private final Output<Boolean> isNonRepudiationRequired;
 
-    public Output<Boolean> getIsNonRepudiationRequired() {
+    public Output<Boolean> isNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
     }
 
@@ -36,7 +37,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
     @Import(name="timeToAcknowledgeInSeconds", required=true)
       private final Output<Integer> timeToAcknowledgeInSeconds;
 
-    public Output<Integer> getTimeToAcknowledgeInSeconds() {
+    public Output<Integer> timeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }
 
@@ -48,8 +49,8 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
     }
 
     private RosettaNetPipAcknowledgmentOfReceiptSettingsArgs() {
-        this.isNonRepudiationRequired = Output.empty();
-        this.timeToAcknowledgeInSeconds = Output.empty();
+        this.isNonRepudiationRequired = Codegen.empty();
+        this.timeToAcknowledgeInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {

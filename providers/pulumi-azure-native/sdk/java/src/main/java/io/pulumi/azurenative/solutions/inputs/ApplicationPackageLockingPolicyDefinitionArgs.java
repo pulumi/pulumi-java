@@ -5,6 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
     @Import(name="allowedActions")
       private final @Nullable Output<List<String>> allowedActions;
 
-    public Output<List<String>> getAllowedActions() {
-        return this.allowedActions == null ? Output.empty() : this.allowedActions;
+    public Output<List<String>> allowedActions() {
+        return this.allowedActions == null ? Codegen.empty() : this.allowedActions;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
     @Import(name="allowedDataActions")
       private final @Nullable Output<List<String>> allowedDataActions;
 
-    public Output<List<String>> getAllowedDataActions() {
-        return this.allowedDataActions == null ? Output.empty() : this.allowedDataActions;
+    public Output<List<String>> allowedDataActions() {
+        return this.allowedDataActions == null ? Codegen.empty() : this.allowedDataActions;
     }
 
     public ApplicationPackageLockingPolicyDefinitionArgs(
@@ -49,8 +50,8 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
     }
 
     private ApplicationPackageLockingPolicyDefinitionArgs() {
-        this.allowedActions = Output.empty();
-        this.allowedDataActions = Output.empty();
+        this.allowedActions = Codegen.empty();
+        this.allowedDataActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
             return this;
         }
         public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = Output.ofNullable(allowedActions);
+            this.allowedActions = Codegen.ofNullable(allowedActions);
             return this;
         }
         public Builder allowedActions(String... allowedActions) {
@@ -91,7 +92,7 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
             return this;
         }
         public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
-            this.allowedDataActions = Output.ofNullable(allowedDataActions);
+            this.allowedDataActions = Codegen.ofNullable(allowedDataActions);
             return this;
         }
         public Builder allowedDataActions(String... allowedDataActions) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class WorkflowTemplateJobPigJobQueryListGetArgs extends io.pulumi.r
     @Import(name="queries", required=true)
       private final Output<List<String>> queries;
 
-    public Output<List<String>> getQueries() {
+    public Output<List<String>> queries() {
         return this.queries;
     }
 
@@ -30,7 +31,7 @@ public final class WorkflowTemplateJobPigJobQueryListGetArgs extends io.pulumi.r
     }
 
     private WorkflowTemplateJobPigJobQueryListGetArgs() {
-        this.queries = Output.empty();
+        this.queries = Codegen.empty();
     }
 
     public static Builder builder() {

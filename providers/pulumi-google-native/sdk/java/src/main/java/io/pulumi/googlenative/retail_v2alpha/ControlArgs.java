@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.retail_v2alpha.enums.ControlSolutionTypesItem;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleArgs;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs;
@@ -21,14 +22,14 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
     @Import(name="controlId", required=true)
       private final Output<String> controlId;
 
-    public Output<String> getControlId() {
+    public Output<String> controlId() {
         return this.controlId;
     }
 
@@ -39,7 +40,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -50,15 +51,15 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="facetSpec")
       private final @Nullable Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec;
 
-    public Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> getFacetSpec() {
-        return this.facetSpec == null ? Output.empty() : this.facetSpec;
+    public Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec() {
+        return this.facetSpec == null ? Codegen.empty() : this.facetSpec;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,15 +69,15 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rule")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule;
 
-    public Output<GoogleCloudRetailV2alphaRuleArgs> getRule() {
-        return this.rule == null ? Output.empty() : this.rule;
+    public Output<GoogleCloudRetailV2alphaRuleArgs> rule() {
+        return this.rule == null ? Codegen.empty() : this.rule;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="solutionTypes", required=true)
       private final Output<List<ControlSolutionTypesItem>> solutionTypes;
 
-    public Output<List<ControlSolutionTypesItem>> getSolutionTypes() {
+    public Output<List<ControlSolutionTypesItem>> solutionTypes() {
         return this.solutionTypes;
     }
 
@@ -123,15 +124,15 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControlArgs() {
-        this.catalogId = Output.empty();
-        this.controlId = Output.empty();
-        this.displayName = Output.empty();
-        this.facetSpec = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rule = Output.empty();
-        this.solutionTypes = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.controlId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.facetSpec = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rule = Codegen.empty();
+        this.solutionTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder facetSpec(@Nullable GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs facetSpec) {
-            this.facetSpec = Output.ofNullable(facetSpec);
+            this.facetSpec = Codegen.ofNullable(facetSpec);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -207,7 +208,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -215,7 +216,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -223,7 +224,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rule(@Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule) {
@@ -231,7 +232,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rule(@Nullable GoogleCloudRetailV2alphaRuleArgs rule) {
-            this.rule = Output.ofNullable(rule);
+            this.rule = Codegen.ofNullable(rule);
             return this;
         }
         public Builder solutionTypes(Output<List<ControlSolutionTypesItem>> solutionTypes) {

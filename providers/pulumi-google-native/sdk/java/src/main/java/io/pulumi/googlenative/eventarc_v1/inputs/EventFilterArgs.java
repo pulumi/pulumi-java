@@ -5,6 +5,7 @@ package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class EventFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attribute", required=true)
       private final Output<String> attribute;
 
-    public Output<String> getAttribute() {
+    public Output<String> attribute() {
         return this.attribute;
     }
 
@@ -35,7 +36,7 @@ public final class EventFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -47,8 +48,8 @@ public final class EventFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventFilterArgs() {
-        this.attribute = Output.empty();
-        this.value = Output.empty();
+        this.attribute = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

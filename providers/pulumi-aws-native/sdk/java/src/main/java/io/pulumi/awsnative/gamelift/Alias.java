@@ -9,6 +9,7 @@ import io.pulumi.awsnative.gamelift.outputs.AliasRoutingStrategy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Unique alias ID
      * 
      */
-    public Output<String> getAliasId() {
+    public Output<String> aliasId() {
         return this.aliasId;
     }
     /**
@@ -45,7 +46,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of the alias.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return A descriptive label that is associated with an alias. Alias names do not need to be unique.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
      * 
      */
-    public Output<AliasRoutingStrategy> getRoutingStrategy() {
+    public Output<AliasRoutingStrategy> routingStrategy() {
         return this.routingStrategy;
     }
 
@@ -99,7 +100,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Alias(String name, AliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:gamelift:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:gamelift:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Alias(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

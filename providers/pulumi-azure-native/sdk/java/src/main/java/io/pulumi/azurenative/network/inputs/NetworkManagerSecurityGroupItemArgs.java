@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
     @Import(name="networkGroupId")
       private final @Nullable Output<String> networkGroupId;
 
-    public Output<String> getNetworkGroupId() {
-        return this.networkGroupId == null ? Output.empty() : this.networkGroupId;
+    public Output<String> networkGroupId() {
+        return this.networkGroupId == null ? Codegen.empty() : this.networkGroupId;
     }
 
     public NetworkManagerSecurityGroupItemArgs(@Nullable Output<String> networkGroupId) {
@@ -34,7 +35,7 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
     }
 
     private NetworkManagerSecurityGroupItemArgs() {
-        this.networkGroupId = Output.empty();
+        this.networkGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
             return this;
         }
         public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = Output.ofNullable(networkGroupId);
+            this.networkGroupId = Codegen.ofNullable(networkGroupId);
             return this;
         }        public NetworkManagerSecurityGroupItemArgs build() {
             return new NetworkManagerSecurityGroupItemArgs(networkGroupId);

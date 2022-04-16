@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +33,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -43,8 +44,8 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
+    public Output<String> dataSetMappingName() {
+        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="fileSystem", required=true)
       private final Output<String> fileSystem;
 
-    public Output<String> getFileSystem() {
+    public Output<String> fileSystem() {
         return this.fileSystem;
     }
 
@@ -65,7 +66,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="folderPath", required=true)
       private final Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath;
     }
 
@@ -77,7 +78,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -88,7 +89,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -99,7 +100,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,7 +111,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -121,7 +122,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -132,7 +133,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -162,17 +163,17 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
     }
 
     private ADLSGen2FolderDataSetMappingArgs() {
-        this.accountName = Output.empty();
-        this.dataSetId = Output.empty();
-        this.dataSetMappingName = Output.empty();
-        this.fileSystem = Output.empty();
-        this.folderPath = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
-        this.storageAccountName = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetId = Codegen.empty();
+        this.dataSetMappingName = Codegen.empty();
+        this.fileSystem = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -236,7 +237,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
             return this;
         }
         public Builder fileSystem(Output<String> fileSystem) {

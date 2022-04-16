@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databox.enums.DataAccountType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataAccountType", required=true)
       private final Output<Either<String,DataAccountType>> dataAccountType;
 
-    public Output<Either<String,DataAccountType>> getDataAccountType() {
+    public Output<Either<String,DataAccountType>> dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -39,8 +40,8 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="transferAllBlobs")
       private final @Nullable Output<Boolean> transferAllBlobs;
 
-    public Output<Boolean> getTransferAllBlobs() {
-        return this.transferAllBlobs == null ? Output.empty() : this.transferAllBlobs;
+    public Output<Boolean> transferAllBlobs() {
+        return this.transferAllBlobs == null ? Codegen.empty() : this.transferAllBlobs;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="transferAllFiles")
       private final @Nullable Output<Boolean> transferAllFiles;
 
-    public Output<Boolean> getTransferAllFiles() {
-        return this.transferAllFiles == null ? Output.empty() : this.transferAllFiles;
+    public Output<Boolean> transferAllFiles() {
+        return this.transferAllFiles == null ? Codegen.empty() : this.transferAllFiles;
     }
 
     public TransferAllDetailsArgs(
@@ -64,9 +65,9 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TransferAllDetailsArgs() {
-        this.dataAccountType = Output.empty();
-        this.transferAllBlobs = Output.empty();
-        this.transferAllFiles = Output.empty();
+        this.dataAccountType = Codegen.empty();
+        this.transferAllBlobs = Codegen.empty();
+        this.transferAllFiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
-            this.transferAllBlobs = Output.ofNullable(transferAllBlobs);
+            this.transferAllBlobs = Codegen.ofNullable(transferAllBlobs);
             return this;
         }
         public Builder transferAllFiles(@Nullable Output<Boolean> transferAllFiles) {
@@ -114,7 +115,7 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
-            this.transferAllFiles = Output.ofNullable(transferAllFiles);
+            this.transferAllFiles = Codegen.ofNullable(transferAllFiles);
             return this;
         }        public TransferAllDetailsArgs build() {
             return new TransferAllDetailsArgs(dataAccountType, transferAllBlobs, transferAllFiles);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiGroups", required=true)
       private final Output<List<String>> apiGroups;
 
-    public Output<List<String>> getApiGroups() {
+    public Output<List<String>> apiGroups() {
         return this.apiGroups;
     }
 
@@ -38,8 +39,8 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clusterScope")
       private final @Nullable Output<Boolean> clusterScope;
 
-    public Output<Boolean> getClusterScope() {
-        return this.clusterScope == null ? Output.empty() : this.clusterScope;
+    public Output<Boolean> clusterScope() {
+        return this.clusterScope == null ? Codegen.empty() : this.clusterScope;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="namespaces")
       private final @Nullable Output<List<String>> namespaces;
 
-    public Output<List<String>> getNamespaces() {
-        return this.namespaces == null ? Output.empty() : this.namespaces;
+    public Output<List<String>> namespaces() {
+        return this.namespaces == null ? Codegen.empty() : this.namespaces;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resources", required=true)
       private final Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources;
     }
 
@@ -71,7 +72,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;
 
-    public Output<List<String>> getVerbs() {
+    public Output<List<String>> verbs() {
         return this.verbs;
     }
 
@@ -89,11 +90,11 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourcePolicyRuleArgs() {
-        this.apiGroups = Output.empty();
-        this.clusterScope = Output.empty();
-        this.namespaces = Output.empty();
-        this.resources = Output.empty();
-        this.verbs = Output.empty();
+        this.apiGroups = Codegen.empty();
+        this.clusterScope = Codegen.empty();
+        this.namespaces = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.verbs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder clusterScope(@Nullable Boolean clusterScope) {
-            this.clusterScope = Output.ofNullable(clusterScope);
+            this.clusterScope = Codegen.ofNullable(clusterScope);
             return this;
         }
         public Builder namespaces(@Nullable Output<List<String>> namespaces) {
@@ -148,7 +149,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder namespaces(@Nullable List<String> namespaces) {
-            this.namespaces = Output.ofNullable(namespaces);
+            this.namespaces = Codegen.ofNullable(namespaces);
             return this;
         }
         public Builder namespaces(String... namespaces) {

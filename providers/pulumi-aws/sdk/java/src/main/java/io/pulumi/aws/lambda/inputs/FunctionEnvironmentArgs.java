@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
     @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+    public Output<Map<String,String>> variables() {
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     public FunctionEnvironmentArgs(@Nullable Output<Map<String,String>> variables) {
@@ -31,7 +32,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
     }
 
     private FunctionEnvironmentArgs() {
-        this.variables = Output.empty();
+        this.variables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }        public FunctionEnvironmentArgs build() {
             return new FunctionEnvironmentArgs(variables);

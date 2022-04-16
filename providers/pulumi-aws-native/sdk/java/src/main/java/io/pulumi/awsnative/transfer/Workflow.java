@@ -10,6 +10,7 @@ import io.pulumi.awsnative.transfer.outputs.WorkflowTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Specifies the unique Amazon Resource Name (ARN) for the workflow.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return A textual description for the workflow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowStep>> getOnExceptionSteps() {
+    public Output</* @Nullable */ List<WorkflowStep>> onExceptionSteps() {
         return this.onExceptionSteps;
     }
     /**
@@ -73,7 +74,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Specifies the details for the steps that are in the specified workflow.
      * 
      */
-    public Output<List<WorkflowStep>> getSteps() {
+    public Output<List<WorkflowStep>> steps() {
         return this.steps;
     }
     /**
@@ -87,7 +88,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowTag>> getTags() {
+    public Output</* @Nullable */ List<WorkflowTag>> tags() {
         return this.tags;
     }
     /**
@@ -101,7 +102,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the workflow.
      * 
      */
-    public Output<String> getWorkflowId() {
+    public Output<String> workflowId() {
         return this.workflowId;
     }
 
@@ -127,7 +128,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workflow(String name, WorkflowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:transfer:Workflow", name, args == null ? WorkflowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:transfer:Workflow", name, args == null ? WorkflowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workflow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetReadBytesPerSecond")
       private final @Nullable Output<Integer> targetReadBytesPerSecond;
 
-    public Output<Integer> getTargetReadBytesPerSecond() {
-        return this.targetReadBytesPerSecond == null ? Output.empty() : this.targetReadBytesPerSecond;
+    public Output<Integer> targetReadBytesPerSecond() {
+        return this.targetReadBytesPerSecond == null ? Codegen.empty() : this.targetReadBytesPerSecond;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetReadOpsPerSecond")
       private final @Nullable Output<Integer> targetReadOpsPerSecond;
 
-    public Output<Integer> getTargetReadOpsPerSecond() {
-        return this.targetReadOpsPerSecond == null ? Output.empty() : this.targetReadOpsPerSecond;
+    public Output<Integer> targetReadOpsPerSecond() {
+        return this.targetReadOpsPerSecond == null ? Codegen.empty() : this.targetReadOpsPerSecond;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetWriteBytesPerSecond")
       private final @Nullable Output<Integer> targetWriteBytesPerSecond;
 
-    public Output<Integer> getTargetWriteBytesPerSecond() {
-        return this.targetWriteBytesPerSecond == null ? Output.empty() : this.targetWriteBytesPerSecond;
+    public Output<Integer> targetWriteBytesPerSecond() {
+        return this.targetWriteBytesPerSecond == null ? Codegen.empty() : this.targetWriteBytesPerSecond;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetWriteOpsPerSecond")
       private final @Nullable Output<Integer> targetWriteOpsPerSecond;
 
-    public Output<Integer> getTargetWriteOpsPerSecond() {
-        return this.targetWriteOpsPerSecond == null ? Output.empty() : this.targetWriteOpsPerSecond;
+    public Output<Integer> targetWriteOpsPerSecond() {
+        return this.targetWriteOpsPerSecond == null ? Codegen.empty() : this.targetWriteOpsPerSecond;
     }
 
     public DiskUtilizationArgs(
@@ -74,10 +75,10 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DiskUtilizationArgs() {
-        this.targetReadBytesPerSecond = Output.empty();
-        this.targetReadOpsPerSecond = Output.empty();
-        this.targetWriteBytesPerSecond = Output.empty();
-        this.targetWriteOpsPerSecond = Output.empty();
+        this.targetReadBytesPerSecond = Codegen.empty();
+        this.targetReadOpsPerSecond = Codegen.empty();
+        this.targetWriteBytesPerSecond = Codegen.empty();
+        this.targetWriteOpsPerSecond = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetReadBytesPerSecond(@Nullable Integer targetReadBytesPerSecond) {
-            this.targetReadBytesPerSecond = Output.ofNullable(targetReadBytesPerSecond);
+            this.targetReadBytesPerSecond = Codegen.ofNullable(targetReadBytesPerSecond);
             return this;
         }
         public Builder targetReadOpsPerSecond(@Nullable Output<Integer> targetReadOpsPerSecond) {
@@ -119,7 +120,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetReadOpsPerSecond(@Nullable Integer targetReadOpsPerSecond) {
-            this.targetReadOpsPerSecond = Output.ofNullable(targetReadOpsPerSecond);
+            this.targetReadOpsPerSecond = Codegen.ofNullable(targetReadOpsPerSecond);
             return this;
         }
         public Builder targetWriteBytesPerSecond(@Nullable Output<Integer> targetWriteBytesPerSecond) {
@@ -127,7 +128,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetWriteBytesPerSecond(@Nullable Integer targetWriteBytesPerSecond) {
-            this.targetWriteBytesPerSecond = Output.ofNullable(targetWriteBytesPerSecond);
+            this.targetWriteBytesPerSecond = Codegen.ofNullable(targetWriteBytesPerSecond);
             return this;
         }
         public Builder targetWriteOpsPerSecond(@Nullable Output<Integer> targetWriteOpsPerSecond) {
@@ -135,7 +136,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetWriteOpsPerSecond(@Nullable Integer targetWriteOpsPerSecond) {
-            this.targetWriteOpsPerSecond = Output.ofNullable(targetWriteOpsPerSecond);
+            this.targetWriteOpsPerSecond = Codegen.ofNullable(targetWriteOpsPerSecond);
             return this;
         }        public DiskUtilizationArgs build() {
             return new DiskUtilizationArgs(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);

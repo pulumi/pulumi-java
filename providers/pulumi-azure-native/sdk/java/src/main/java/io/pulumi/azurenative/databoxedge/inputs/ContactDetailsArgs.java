@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="companyName", required=true)
       private final Output<String> companyName;
 
-    public Output<String> getCompanyName() {
+    public Output<String> companyName() {
         return this.companyName;
     }
 
@@ -36,7 +37,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactPerson", required=true)
       private final Output<String> contactPerson;
 
-    public Output<String> getContactPerson() {
+    public Output<String> contactPerson() {
         return this.contactPerson;
     }
 
@@ -47,7 +48,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="emailList", required=true)
       private final Output<List<String>> emailList;
 
-    public Output<List<String>> getEmailList() {
+    public Output<List<String>> emailList() {
         return this.emailList;
     }
 
@@ -58,7 +59,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phone", required=true)
       private final Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone;
     }
 
@@ -74,10 +75,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactDetailsArgs() {
-        this.companyName = Output.empty();
-        this.contactPerson = Output.empty();
-        this.emailList = Output.empty();
-        this.phone = Output.empty();
+        this.companyName = Codegen.empty();
+        this.contactPerson = Codegen.empty();
+        this.emailList = Codegen.empty();
+        this.phone = Codegen.empty();
     }
 
     public static Builder builder() {

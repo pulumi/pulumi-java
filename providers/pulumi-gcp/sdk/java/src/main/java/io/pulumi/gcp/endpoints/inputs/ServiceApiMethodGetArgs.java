@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,29 +18,29 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="requestType")
       private final @Nullable Output<String> requestType;
 
-    public Output<String> getRequestType() {
-        return this.requestType == null ? Output.empty() : this.requestType;
+    public Output<String> requestType() {
+        return this.requestType == null ? Codegen.empty() : this.requestType;
     }
 
     @Import(name="responseType")
       private final @Nullable Output<String> responseType;
 
-    public Output<String> getResponseType() {
-        return this.responseType == null ? Output.empty() : this.responseType;
+    public Output<String> responseType() {
+        return this.responseType == null ? Codegen.empty() : this.responseType;
     }
 
     @Import(name="syntax")
       private final @Nullable Output<String> syntax;
 
-    public Output<String> getSyntax() {
-        return this.syntax == null ? Output.empty() : this.syntax;
+    public Output<String> syntax() {
+        return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 
     public ServiceApiMethodGetArgs(
@@ -54,10 +55,10 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServiceApiMethodGetArgs() {
-        this.name = Output.empty();
-        this.requestType = Output.empty();
-        this.responseType = Output.empty();
-        this.syntax = Output.empty();
+        this.name = Codegen.empty();
+        this.requestType = Codegen.empty();
+        this.responseType = Codegen.empty();
+        this.syntax = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder requestType(@Nullable Output<String> requestType) {
@@ -99,7 +100,7 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder requestType(@Nullable String requestType) {
-            this.requestType = Output.ofNullable(requestType);
+            this.requestType = Codegen.ofNullable(requestType);
             return this;
         }
         public Builder responseType(@Nullable Output<String> responseType) {
@@ -107,7 +108,7 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder responseType(@Nullable String responseType) {
-            this.responseType = Output.ofNullable(responseType);
+            this.responseType = Codegen.ofNullable(responseType);
             return this;
         }
         public Builder syntax(@Nullable Output<String> syntax) {
@@ -115,7 +116,7 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder syntax(@Nullable String syntax) {
-            this.syntax = Output.ofNullable(syntax);
+            this.syntax = Codegen.ofNullable(syntax);
             return this;
         }        public ServiceApiMethodGetArgs build() {
             return new ServiceApiMethodGetArgs(name, requestType, responseType, syntax);

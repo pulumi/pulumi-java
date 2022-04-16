@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.RouteTableTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return The route table ID.
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     /**
@@ -44,7 +45,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return Any tags assigned to the route table.
      * 
      */
-    public Output</* @Nullable */ List<RouteTableTag>> getTags() {
+    public Output</* @Nullable */ List<RouteTableTag>> tags() {
         return this.tags;
     }
     /**
@@ -58,7 +59,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -84,7 +85,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouteTable(String name, RouteTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:RouteTable", name, args == null ? RouteTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:RouteTable", name, args == null ? RouteTableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RouteTable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

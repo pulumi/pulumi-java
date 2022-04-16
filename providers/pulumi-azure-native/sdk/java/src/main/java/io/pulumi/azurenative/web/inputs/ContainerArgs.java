@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.ContainerResourcesArgs;
 import io.pulumi.azurenative.web.inputs.EnvironmentVarArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+    public Output<List<String>> command() {
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<List<EnvironmentVarArgs>> env;
 
-    public Output<List<EnvironmentVarArgs>> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+    public Output<List<EnvironmentVarArgs>> env() {
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<String> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<ContainerResourcesArgs> resources;
 
-    public Output<ContainerResourcesArgs> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<ContainerResourcesArgs> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     public ContainerArgs(
@@ -103,12 +104,12 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.args = Output.empty();
-        this.command = Output.empty();
-        this.env = Output.empty();
-        this.image = Output.empty();
-        this.name = Output.empty();
-        this.resources = Output.empty();
+        this.args = Codegen.empty();
+        this.command = Codegen.empty();
+        this.env = Codegen.empty();
+        this.image = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -157,7 +158,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -168,7 +169,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder env(@Nullable List<EnvironmentVarArgs> env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder env(EnvironmentVarArgs... env) {
@@ -179,7 +180,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -187,7 +188,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resources(@Nullable Output<ContainerResourcesArgs> resources) {
@@ -195,7 +196,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable ContainerResourcesArgs resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }        public ContainerArgs build() {
             return new ContainerArgs(args, command, env, image, name, resources);

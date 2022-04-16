@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
-        return this.bundleId == null ? Output.empty() : this.bundleId;
+    public Output<String> bundleId() {
+        return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
     public IosTestLoopArgs(@Nullable Output<String> bundleId) {
@@ -34,7 +35,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosTestLoopArgs() {
-        this.bundleId = Output.empty();
+        this.bundleId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Output.ofNullable(bundleId);
+            this.bundleId = Codegen.ofNullable(bundleId);
             return this;
         }        public IosTestLoopArgs build() {
             return new IosTestLoopArgs(bundleId);

@@ -10,6 +10,7 @@ import io.pulumi.aws.glue.outputs.PartitionIndexPartitionIndex;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -38,7 +39,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * @return The catalog ID where the table resides.
      * 
      */
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -52,7 +53,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * @return Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -66,7 +67,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * @return Configuration block for a partition index. See `partition_index` below.
      * 
      */
-    public Output<PartitionIndexPartitionIndex> getPartitionIndex() {
+    public Output<PartitionIndexPartitionIndex> partitionIndex() {
         return this.partitionIndex;
     }
     /**
@@ -80,7 +81,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * @return Name of the table. For Hive compatibility, this must be entirely lowercase.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -106,7 +107,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PartitionIndex(String name, PartitionIndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/partitionIndex:PartitionIndex", name, args == null ? PartitionIndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/partitionIndex:PartitionIndex", name, args == null ? PartitionIndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PartitionIndex(String name, Output<String> id, @Nullable PartitionIndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

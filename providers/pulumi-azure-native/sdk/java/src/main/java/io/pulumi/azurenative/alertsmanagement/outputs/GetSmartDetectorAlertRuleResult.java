@@ -116,91 +116,91 @@ public final class GetSmartDetectorAlertRuleResult {
      * The alert rule actions.
      * 
     */
-    public ActionGroupsInformationResponse getActionGroups() {
+    public ActionGroupsInformationResponse actionGroups() {
         return this.actionGroups;
     }
     /**
      * The alert rule description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The alert rule's detector.
      * 
     */
-    public DetectorResponse getDetector() {
+    public DetectorResponse detector() {
         return this.detector;
     }
     /**
      * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
      * 
     */
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The alert rule resources scope.
      * 
     */
-    public List<String> getScope() {
+    public List<String> scope() {
         return this.scope;
     }
     /**
      * The alert rule severity.
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * The alert rule state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The alert rule throttling information.
      * 
     */
-    public Optional<ThrottlingInformationResponse> getThrottling() {
+    public Optional<ThrottlingInformationResponse> throttling() {
         return Optional.ofNullable(this.throttling);
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

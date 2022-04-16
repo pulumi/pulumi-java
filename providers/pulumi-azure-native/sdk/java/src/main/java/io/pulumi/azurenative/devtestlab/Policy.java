@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The creation date of the policy.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -56,7 +57,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The description of the policy.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +71,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
      * 
      */
-    public Output</* @Nullable */ String> getEvaluatorType() {
+    public Output</* @Nullable */ String> evaluatorType() {
         return this.evaluatorType;
     }
     /**
@@ -84,7 +85,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The fact data of the policy.
      * 
      */
-    public Output</* @Nullable */ String> getFactData() {
+    public Output</* @Nullable */ String> factData() {
         return this.factData;
     }
     /**
@@ -98,7 +99,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
      * 
      */
-    public Output</* @Nullable */ String> getFactName() {
+    public Output</* @Nullable */ String> factName() {
         return this.factName;
     }
     /**
@@ -112,7 +113,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -126,7 +127,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +141,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -154,7 +155,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The status of the policy.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -168,7 +169,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -182,7 +183,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
      * 
      */
-    public Output</* @Nullable */ String> getThreshold() {
+    public Output</* @Nullable */ String> threshold() {
         return this.threshold;
     }
     /**
@@ -196,7 +197,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -210,7 +211,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
@@ -236,7 +237,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Policy(String name, PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devtestlab:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Policy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

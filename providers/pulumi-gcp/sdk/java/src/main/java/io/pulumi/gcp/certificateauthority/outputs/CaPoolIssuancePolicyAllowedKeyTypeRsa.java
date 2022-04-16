@@ -37,7 +37,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
      * service will not enforce an explicit upper bound on RSA modulus sizes.
      * 
     */
-    public Optional<String> getMaxModulusSize() {
+    public Optional<String> maxModulusSize() {
         return Optional.ofNullable(this.maxModulusSize);
     }
     /**
@@ -45,7 +45,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
      * service-level min RSA modulus size will continue to apply.
      * 
     */
-    public Optional<String> getMinModulusSize() {
+    public Optional<String> minModulusSize() {
         return Optional.ofNullable(this.minModulusSize);
     }
 

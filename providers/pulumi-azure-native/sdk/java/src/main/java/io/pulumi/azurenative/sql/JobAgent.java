@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the database to store job metadata in.
      * 
      */
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
     /**
@@ -57,7 +58,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @return The name and tier of the SKU.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -99,7 +100,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @return The state of the job agent.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -113,7 +114,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +128,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -153,7 +154,7 @@ public class JobAgent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobAgent(String name, JobAgentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:JobAgent", name, args == null ? JobAgentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:JobAgent", name, args == null ? JobAgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private JobAgent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,22 +18,22 @@ public final class DatabaseInstanceIpAddressGetArgs extends io.pulumi.resources.
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="timeToRetire")
       private final @Nullable Output<String> timeToRetire;
 
-    public Output<String> getTimeToRetire() {
-        return this.timeToRetire == null ? Output.empty() : this.timeToRetire;
+    public Output<String> timeToRetire() {
+        return this.timeToRetire == null ? Codegen.empty() : this.timeToRetire;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DatabaseInstanceIpAddressGetArgs(
@@ -45,9 +46,9 @@ public final class DatabaseInstanceIpAddressGetArgs extends io.pulumi.resources.
     }
 
     private DatabaseInstanceIpAddressGetArgs() {
-        this.ipAddress = Output.empty();
-        this.timeToRetire = Output.empty();
-        this.type = Output.empty();
+        this.ipAddress = Codegen.empty();
+        this.timeToRetire = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DatabaseInstanceIpAddressGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder timeToRetire(@Nullable Output<String> timeToRetire) {
@@ -87,7 +88,7 @@ public final class DatabaseInstanceIpAddressGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder timeToRetire(@Nullable String timeToRetire) {
-            this.timeToRetire = Output.ofNullable(timeToRetire);
+            this.timeToRetire = Codegen.ofNullable(timeToRetire);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -95,7 +96,7 @@ public final class DatabaseInstanceIpAddressGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DatabaseInstanceIpAddressGetArgs build() {
             return new DatabaseInstanceIpAddressGetArgs(ipAddress, timeToRetire, type);

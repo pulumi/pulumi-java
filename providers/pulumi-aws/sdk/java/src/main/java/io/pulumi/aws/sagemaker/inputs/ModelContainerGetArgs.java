@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.ModelContainerImageConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="containerHostname")
       private final @Nullable Output<String> containerHostname;
 
-    public Output<String> getContainerHostname() {
-        return this.containerHostname == null ? Output.empty() : this.containerHostname;
+    public Output<String> containerHostname() {
+        return this.containerHostname == null ? Codegen.empty() : this.containerHostname;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="environment")
       private final @Nullable Output<Map<String,String>> environment;
 
-    public Output<Map<String,String>> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<Map<String,String>> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -57,8 +58,8 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="imageConfig")
       private final @Nullable Output<ModelContainerImageConfigGetArgs> imageConfig;
 
-    public Output<ModelContainerImageConfigGetArgs> getImageConfig() {
-        return this.imageConfig == null ? Output.empty() : this.imageConfig;
+    public Output<ModelContainerImageConfigGetArgs> imageConfig() {
+        return this.imageConfig == null ? Codegen.empty() : this.imageConfig;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="modelDataUrl")
       private final @Nullable Output<String> modelDataUrl;
 
-    public Output<String> getModelDataUrl() {
-        return this.modelDataUrl == null ? Output.empty() : this.modelDataUrl;
+    public Output<String> modelDataUrl() {
+        return this.modelDataUrl == null ? Codegen.empty() : this.modelDataUrl;
     }
 
     public ModelContainerGetArgs(
@@ -99,12 +100,12 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ModelContainerGetArgs() {
-        this.containerHostname = Output.empty();
-        this.environment = Output.empty();
-        this.image = Output.empty();
-        this.imageConfig = Output.empty();
-        this.mode = Output.empty();
-        this.modelDataUrl = Output.empty();
+        this.containerHostname = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.image = Codegen.empty();
+        this.imageConfig = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.modelDataUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder containerHostname(@Nullable String containerHostname) {
-            this.containerHostname = Output.ofNullable(containerHostname);
+            this.containerHostname = Codegen.ofNullable(containerHostname);
             return this;
         }
         public Builder environment(@Nullable Output<Map<String,String>> environment) {
@@ -150,7 +151,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder environment(@Nullable Map<String,String> environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder image(Output<String> image) {
@@ -166,7 +167,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder imageConfig(@Nullable ModelContainerImageConfigGetArgs imageConfig) {
-            this.imageConfig = Output.ofNullable(imageConfig);
+            this.imageConfig = Codegen.ofNullable(imageConfig);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -174,7 +175,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder modelDataUrl(@Nullable Output<String> modelDataUrl) {
@@ -182,7 +183,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder modelDataUrl(@Nullable String modelDataUrl) {
-            this.modelDataUrl = Output.ofNullable(modelDataUrl);
+            this.modelDataUrl = Codegen.ofNullable(modelDataUrl);
             return this;
         }        public ModelContainerGetArgs build() {
             return new ModelContainerGetArgs(containerHostname, environment, image, imageConfig, mode, modelDataUrl);

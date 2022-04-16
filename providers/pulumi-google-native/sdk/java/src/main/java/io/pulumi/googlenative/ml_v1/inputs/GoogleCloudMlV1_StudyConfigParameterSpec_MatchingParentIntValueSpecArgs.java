@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs(@Nullable Output<List<String>> values) {
@@ -35,7 +36,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
     }
 
     private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs() {
-        this.values = Output.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

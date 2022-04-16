@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<FileReferenceArgs> location;
 
-    public Output<FileReferenceArgs> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<FileReferenceArgs> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+    public Output<String> packageName() {
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     public ApkArgs(
@@ -49,8 +50,8 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApkArgs() {
-        this.location = Output.empty();
-        this.packageName = Output.empty();
+        this.location = Codegen.empty();
+        this.packageName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable FileReferenceArgs location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder packageName(@Nullable Output<String> packageName) {
@@ -88,7 +89,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }        public ApkArgs build() {
             return new ApkArgs(location, packageName);

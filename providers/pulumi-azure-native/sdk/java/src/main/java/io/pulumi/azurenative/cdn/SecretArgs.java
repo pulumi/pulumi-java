@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.inputs.ManagedCertificateParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningKeyParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
-    public Output<Object> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Object> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -47,7 +48,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,8 +59,8 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
-    public Output<String> getSecretName() {
-        return this.secretName == null ? Output.empty() : this.secretName;
+    public Output<String> secretName() {
+        return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 
     public SecretArgs(
@@ -74,10 +75,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.parameters = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.secretName = Output.empty();
+        this.parameters = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.secretName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder profileName(Output<String> profileName) {
@@ -135,7 +136,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Output.ofNullable(secretName);
+            this.secretName = Codegen.ofNullable(secretName);
             return this;
         }        public SecretArgs build() {
             return new SecretArgs(parameters, profileName, resourceGroupName, secretName);

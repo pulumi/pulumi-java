@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -33,8 +34,8 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -58,9 +59,9 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
     }
 
     private ProjectMetadataItemArgs() {
-        this.key = Output.empty();
-        this.project = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.project = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder value(Output<String> value) {

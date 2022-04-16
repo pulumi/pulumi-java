@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIp
     @Import(name="fallbackBehavior", required=true)
       private final Output<String> fallbackBehavior;
 
-    public Output<String> getFallbackBehavior() {
+    public Output<String> fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
@@ -31,7 +32,7 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIp
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -42,7 +43,7 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIp
     @Import(name="position", required=true)
       private final Output<String> position;
 
-    public Output<String> getPosition() {
+    public Output<String> position() {
         return this.position;
     }
 
@@ -56,9 +57,9 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIp
     }
 
     private RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs() {
-        this.fallbackBehavior = Output.empty();
-        this.headerName = Output.empty();
-        this.position = Output.empty();
+        this.fallbackBehavior = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.position = Codegen.empty();
     }
 
     public static Builder builder() {

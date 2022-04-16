@@ -8,6 +8,7 @@ import io.pulumi.awsnative.eventschemas.RegistryPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,19 +24,19 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="policy", type=Object.class, parameters={})
     private Output<Object> policy;
 
-    public Output<Object> getPolicy() {
+    public Output<Object> policy() {
         return this.policy;
     }
     @Export(name="registryName", type=String.class, parameters={})
     private Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
     @Export(name="revisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> revisionId;
 
-    public Output</* @Nullable */ String> getRevisionId() {
+    public Output</* @Nullable */ String> revisionId() {
         return this.revisionId;
     }
 
@@ -61,7 +62,7 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistryPolicy(String name, RegistryPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:eventschemas:RegistryPolicy", name, args == null ? RegistryPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:eventschemas:RegistryPolicy", name, args == null ? RegistryPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegistryPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

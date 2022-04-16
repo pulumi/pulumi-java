@@ -8,6 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.VideoCreationPropertiesArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoPublishingOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputs", required=true)
       private final Output<List<NodeInputArgs>> inputs;
 
-    public Output<List<NodeInputArgs>> getInputs() {
+    public Output<List<NodeInputArgs>> inputs() {
         return this.inputs;
     }
 
@@ -40,7 +41,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -52,7 +53,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -63,8 +64,8 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="videoCreationProperties")
       private final @Nullable Output<VideoCreationPropertiesArgs> videoCreationProperties;
 
-    public Output<VideoCreationPropertiesArgs> getVideoCreationProperties() {
-        return this.videoCreationProperties == null ? Output.empty() : this.videoCreationProperties;
+    public Output<VideoCreationPropertiesArgs> videoCreationProperties() {
+        return this.videoCreationProperties == null ? Codegen.empty() : this.videoCreationProperties;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="videoName", required=true)
       private final Output<String> videoName;
 
-    public Output<String> getVideoName() {
+    public Output<String> videoName() {
         return this.videoName;
     }
 
@@ -85,8 +86,8 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="videoPublishingOptions")
       private final @Nullable Output<VideoPublishingOptionsArgs> videoPublishingOptions;
 
-    public Output<VideoPublishingOptionsArgs> getVideoPublishingOptions() {
-        return this.videoPublishingOptions == null ? Output.empty() : this.videoPublishingOptions;
+    public Output<VideoPublishingOptionsArgs> videoPublishingOptions() {
+        return this.videoPublishingOptions == null ? Codegen.empty() : this.videoPublishingOptions;
     }
 
     public VideoSinkArgs(
@@ -105,12 +106,12 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoSinkArgs() {
-        this.inputs = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.videoCreationProperties = Output.empty();
-        this.videoName = Output.empty();
-        this.videoPublishingOptions = Output.empty();
+        this.inputs = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.videoCreationProperties = Codegen.empty();
+        this.videoName = Codegen.empty();
+        this.videoPublishingOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder videoCreationProperties(@Nullable VideoCreationPropertiesArgs videoCreationProperties) {
-            this.videoCreationProperties = Output.ofNullable(videoCreationProperties);
+            this.videoCreationProperties = Codegen.ofNullable(videoCreationProperties);
             return this;
         }
         public Builder videoName(Output<String> videoName) {
@@ -191,7 +192,7 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder videoPublishingOptions(@Nullable VideoPublishingOptionsArgs videoPublishingOptions) {
-            this.videoPublishingOptions = Output.ofNullable(videoPublishingOptions);
+            this.videoPublishingOptions = Codegen.ofNullable(videoPublishingOptions);
             return this;
         }        public VideoSinkArgs build() {
             return new VideoSinkArgs(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);

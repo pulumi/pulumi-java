@@ -46,28 +46,28 @@ public final class AndroidAppInfoResponse {
      * The name of the app. Optional
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The package name of the app. Required.
      * 
     */
-    public String getPackageName() {
+    public String packageName() {
         return this.packageName;
     }
     /**
      * The internal version code of the app. Optional.
      * 
     */
-    public String getVersionCode() {
+    public String versionCode() {
         return this.versionCode;
     }
     /**
      * The version name of the app. Optional.
      * 
     */
-    public String getVersionName() {
+    public String versionName() {
         return this.versionName;
     }
 

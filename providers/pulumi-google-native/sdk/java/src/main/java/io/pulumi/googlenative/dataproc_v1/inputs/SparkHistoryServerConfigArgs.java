@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
     @Import(name="dataprocCluster")
       private final @Nullable Output<String> dataprocCluster;
 
-    public Output<String> getDataprocCluster() {
-        return this.dataprocCluster == null ? Output.empty() : this.dataprocCluster;
+    public Output<String> dataprocCluster() {
+        return this.dataprocCluster == null ? Codegen.empty() : this.dataprocCluster;
     }
 
     public SparkHistoryServerConfigArgs(@Nullable Output<String> dataprocCluster) {
@@ -34,7 +35,7 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
     }
 
     private SparkHistoryServerConfigArgs() {
-        this.dataprocCluster = Output.empty();
+        this.dataprocCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder dataprocCluster(@Nullable String dataprocCluster) {
-            this.dataprocCluster = Output.ofNullable(dataprocCluster);
+            this.dataprocCluster = Codegen.ofNullable(dataprocCluster);
             return this;
         }        public SparkHistoryServerConfigArgs build() {
             return new SparkHistoryServerConfigArgs(dataprocCluster);

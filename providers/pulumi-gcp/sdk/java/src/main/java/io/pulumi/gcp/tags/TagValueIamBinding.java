@@ -6,6 +6,7 @@ package io.pulumi.gcp.tags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagValueIamBindingArgs;
 import io.pulumi.gcp.tags.inputs.TagValueIamBindingState;
@@ -61,7 +62,7 @@ public class TagValueIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagValueIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TagValueIamBindingCondition> condition;
 
-    public Output</* @Nullable */ TagValueIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ TagValueIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,13 +76,13 @@ public class TagValueIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -99,7 +100,7 @@ public class TagValueIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -113,7 +114,7 @@ public class TagValueIamBinding extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 
@@ -139,7 +140,7 @@ public class TagValueIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagValueIamBinding(String name, TagValueIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:tags/tagValueIamBinding:TagValueIamBinding", name, args == null ? TagValueIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:tags/tagValueIamBinding:TagValueIamBinding", name, args == null ? TagValueIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagValueIamBinding(String name, Output<String> id, @Nullable TagValueIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -37,8 +38,8 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="metricSelector")
       private final @Nullable Output<LabelSelectorArgs> metricSelector;
 
-    public Output<LabelSelectorArgs> getMetricSelector() {
-        return this.metricSelector == null ? Output.empty() : this.metricSelector;
+    public Output<LabelSelectorArgs> metricSelector() {
+        return this.metricSelector == null ? Codegen.empty() : this.metricSelector;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="targetAverageValue")
       private final @Nullable Output<String> targetAverageValue;
 
-    public Output<String> getTargetAverageValue() {
-        return this.targetAverageValue == null ? Output.empty() : this.targetAverageValue;
+    public Output<String> targetAverageValue() {
+        return this.targetAverageValue == null ? Codegen.empty() : this.targetAverageValue;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="targetValue")
       private final @Nullable Output<String> targetValue;
 
-    public Output<String> getTargetValue() {
-        return this.targetValue == null ? Output.empty() : this.targetValue;
+    public Output<String> targetValue() {
+        return this.targetValue == null ? Codegen.empty() : this.targetValue;
     }
 
     public ExternalMetricSourceArgs(
@@ -75,10 +76,10 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     }
 
     private ExternalMetricSourceArgs() {
-        this.metricName = Output.empty();
-        this.metricSelector = Output.empty();
-        this.targetAverageValue = Output.empty();
-        this.targetValue = Output.empty();
+        this.metricName = Codegen.empty();
+        this.metricSelector = Codegen.empty();
+        this.targetAverageValue = Codegen.empty();
+        this.targetValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
-            this.metricSelector = Output.ofNullable(metricSelector);
+            this.metricSelector = Codegen.ofNullable(metricSelector);
             return this;
         }
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
@@ -128,7 +129,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
-            this.targetAverageValue = Output.ofNullable(targetAverageValue);
+            this.targetAverageValue = Codegen.ofNullable(targetAverageValue);
             return this;
         }
         public Builder targetValue(@Nullable Output<String> targetValue) {
@@ -136,7 +137,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder targetValue(@Nullable String targetValue) {
-            this.targetValue = Output.ofNullable(targetValue);
+            this.targetValue = Codegen.ofNullable(targetValue);
             return this;
         }        public ExternalMetricSourceArgs build() {
             return new ExternalMetricSourceArgs(metricName, metricSelector, targetAverageValue, targetValue);

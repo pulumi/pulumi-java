@@ -8,6 +8,7 @@ import io.pulumi.azurenative.orbital.enums.Polarization;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bandwidthMHz", required=true)
       private final Output<Double> bandwidthMHz;
 
-    public Output<Double> getBandwidthMHz() {
+    public Output<Double> bandwidthMHz() {
         return this.bandwidthMHz;
     }
 
@@ -39,7 +40,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="centerFrequencyMHz", required=true)
       private final Output<Double> centerFrequencyMHz;
 
-    public Output<Double> getCenterFrequencyMHz() {
+    public Output<Double> centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
 
@@ -50,7 +51,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="direction", required=true)
       private final Output<Either<String,Direction>> direction;
 
-    public Output<Either<String,Direction>> getDirection() {
+    public Output<Either<String,Direction>> direction() {
         return this.direction;
     }
 
@@ -61,7 +62,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="polarization", required=true)
       private final Output<Either<String,Polarization>> polarization;
 
-    public Output<Either<String,Polarization>> getPolarization() {
+    public Output<Either<String,Polarization>> polarization() {
         return this.polarization;
     }
 
@@ -77,10 +78,10 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpacecraftLinkArgs() {
-        this.bandwidthMHz = Output.empty();
-        this.centerFrequencyMHz = Output.empty();
-        this.direction = Output.empty();
-        this.polarization = Output.empty();
+        this.bandwidthMHz = Codegen.empty();
+        this.centerFrequencyMHz = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.polarization = Codegen.empty();
     }
 
     public static Builder builder() {

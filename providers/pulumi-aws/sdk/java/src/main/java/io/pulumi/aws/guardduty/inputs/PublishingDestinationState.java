@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
     @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
-        return this.destinationArn == null ? Output.empty() : this.destinationArn;
+    public Output<String> destinationArn() {
+        return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
     @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
-    public Output<String> getDestinationType() {
-        return this.destinationType == null ? Output.empty() : this.destinationType;
+    public Output<String> destinationType() {
+        return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
-        return this.detectorId == null ? Output.empty() : this.detectorId;
+    public Output<String> detectorId() {
+        return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     public PublishingDestinationState(
@@ -70,10 +71,10 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
     }
 
     private PublishingDestinationState() {
-        this.destinationArn = Output.empty();
-        this.destinationType = Output.empty();
-        this.detectorId = Output.empty();
-        this.kmsKeyArn = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.destinationType = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Output.ofNullable(destinationArn);
+            this.destinationArn = Codegen.ofNullable(destinationArn);
             return this;
         }
         public Builder destinationType(@Nullable Output<String> destinationType) {
@@ -115,7 +116,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Output.ofNullable(destinationType);
+            this.destinationType = Codegen.ofNullable(destinationType);
             return this;
         }
         public Builder detectorId(@Nullable Output<String> detectorId) {
@@ -123,7 +124,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Output.ofNullable(detectorId);
+            this.detectorId = Codegen.ofNullable(detectorId);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -131,7 +132,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }        public PublishingDestinationState build() {
             return new PublishingDestinationState(destinationArn, destinationType, detectorId, kmsKeyArn);

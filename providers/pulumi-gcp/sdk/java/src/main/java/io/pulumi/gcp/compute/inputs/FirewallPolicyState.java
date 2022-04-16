@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+    public Output<String> fingerprint() {
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="firewallPolicyId")
       private final @Nullable Output<String> firewallPolicyId;
 
-    public Output<String> getFirewallPolicyId() {
-        return this.firewallPolicyId == null ? Output.empty() : this.firewallPolicyId;
+    public Output<String> firewallPolicyId() {
+        return this.firewallPolicyId == null ? Codegen.empty() : this.firewallPolicyId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="ruleTupleCount")
       private final @Nullable Output<Integer> ruleTupleCount;
 
-    public Output<Integer> getRuleTupleCount() {
-        return this.ruleTupleCount == null ? Output.empty() : this.ruleTupleCount;
+    public Output<Integer> ruleTupleCount() {
+        return this.ruleTupleCount == null ? Codegen.empty() : this.ruleTupleCount;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="selfLinkWithId")
       private final @Nullable Output<String> selfLinkWithId;
 
-    public Output<String> getSelfLinkWithId() {
-        return this.selfLinkWithId == null ? Output.empty() : this.selfLinkWithId;
+    public Output<String> selfLinkWithId() {
+        return this.selfLinkWithId == null ? Codegen.empty() : this.selfLinkWithId;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
-        return this.shortName == null ? Output.empty() : this.shortName;
+    public Output<String> shortName() {
+        return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
     public FirewallPolicyState(
@@ -149,16 +150,16 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private FirewallPolicyState() {
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.fingerprint = Output.empty();
-        this.firewallPolicyId = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.ruleTupleCount = Output.empty();
-        this.selfLink = Output.empty();
-        this.selfLinkWithId = Output.empty();
-        this.shortName = Output.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.firewallPolicyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.ruleTupleCount = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.selfLinkWithId = Codegen.empty();
+        this.shortName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -204,7 +205,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -212,7 +213,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
@@ -220,7 +221,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder firewallPolicyId(@Nullable Output<String> firewallPolicyId) {
@@ -228,7 +229,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder firewallPolicyId(@Nullable String firewallPolicyId) {
-            this.firewallPolicyId = Output.ofNullable(firewallPolicyId);
+            this.firewallPolicyId = Codegen.ofNullable(firewallPolicyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -236,7 +237,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -244,7 +245,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder ruleTupleCount(@Nullable Output<Integer> ruleTupleCount) {
@@ -252,7 +253,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ruleTupleCount(@Nullable Integer ruleTupleCount) {
-            this.ruleTupleCount = Output.ofNullable(ruleTupleCount);
+            this.ruleTupleCount = Codegen.ofNullable(ruleTupleCount);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -260,7 +261,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder selfLinkWithId(@Nullable Output<String> selfLinkWithId) {
@@ -268,7 +269,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
-            this.selfLinkWithId = Output.ofNullable(selfLinkWithId);
+            this.selfLinkWithId = Codegen.ofNullable(selfLinkWithId);
             return this;
         }
         public Builder shortName(@Nullable Output<String> shortName) {
@@ -276,7 +277,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Output.ofNullable(shortName);
+            this.shortName = Codegen.ofNullable(shortName);
             return this;
         }        public FirewallPolicyState build() {
             return new FirewallPolicyState(creationTimestamp, description, fingerprint, firewallPolicyId, name, parent, ruleTupleCount, selfLink, selfLinkWithId, shortName);

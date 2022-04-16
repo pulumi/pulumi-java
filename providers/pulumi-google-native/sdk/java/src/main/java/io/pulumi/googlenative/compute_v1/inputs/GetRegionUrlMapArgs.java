@@ -17,21 +17,21 @@ public final class GetRegionUrlMapArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
     @Import(name="urlMap", required=true)
       private final String urlMap;
 
-    public String getUrlMap() {
+    public String urlMap() {
         return this.urlMap;
     }
 

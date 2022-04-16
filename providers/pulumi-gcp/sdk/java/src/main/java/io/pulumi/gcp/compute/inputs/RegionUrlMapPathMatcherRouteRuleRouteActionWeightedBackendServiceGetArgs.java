@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
 
@@ -39,8 +40,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="headerAction")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
-        return this.headerAction == null ? Output.empty() : this.headerAction;
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction() {
+        return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 
@@ -69,9 +70,9 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     }
 
     private RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceGetArgs() {
-        this.backendService = Output.empty();
-        this.headerAction = Output.empty();
-        this.weight = Output.empty();
+        this.backendService = Codegen.empty();
+        this.headerAction = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             return this;
         }
         public Builder headerAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs headerAction) {
-            this.headerAction = Output.ofNullable(headerAction);
+            this.headerAction = Codegen.ofNullable(headerAction);
             return this;
         }
         public Builder weight(Output<Integer> weight) {

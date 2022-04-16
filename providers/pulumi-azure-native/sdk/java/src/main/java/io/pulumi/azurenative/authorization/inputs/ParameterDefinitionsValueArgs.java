@@ -8,6 +8,7 @@ import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueMetad
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,8 +31,8 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="allowedValues")
       private final @Nullable Output<List<Object>> allowedValues;
 
-    public Output<List<Object>> getAllowedValues() {
-        return this.allowedValues == null ? Output.empty() : this.allowedValues;
+    public Output<List<Object>> allowedValues() {
+        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<Object> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="metadata")
       private final @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
 
-    public Output<ParameterDefinitionsValueMetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ParameterDefinitionsValueMetadataArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,ParameterType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ParameterDefinitionsValueArgs(
@@ -79,10 +80,10 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     }
 
     private ParameterDefinitionsValueArgs() {
-        this.allowedValues = Output.empty();
-        this.defaultValue = Output.empty();
-        this.metadata = Output.empty();
-        this.type = Output.empty();
+        this.allowedValues = Codegen.empty();
+        this.defaultValue = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = Output.ofNullable(allowedValues);
+            this.allowedValues = Codegen.ofNullable(allowedValues);
             return this;
         }
         public Builder allowedValues(Object... allowedValues) {
@@ -127,7 +128,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder metadata(@Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata) {
@@ -135,7 +136,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder metadata(@Nullable ParameterDefinitionsValueMetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
@@ -143,7 +144,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder type(@Nullable Either<String,ParameterType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ParameterDefinitionsValueArgs build() {
             return new ParameterDefinitionsValueArgs(allowedValues, defaultValue, metadata, type);

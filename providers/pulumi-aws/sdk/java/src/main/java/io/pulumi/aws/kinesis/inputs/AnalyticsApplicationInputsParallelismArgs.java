@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AnalyticsApplicationInputsParallelismArgs extends io.pulumi.r
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     public AnalyticsApplicationInputsParallelismArgs(@Nullable Output<Integer> count) {
@@ -30,7 +31,7 @@ public final class AnalyticsApplicationInputsParallelismArgs extends io.pulumi.r
     }
 
     private AnalyticsApplicationInputsParallelismArgs() {
-        this.count = Output.empty();
+        this.count = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AnalyticsApplicationInputsParallelismArgs extends io.pulumi.r
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }        public AnalyticsApplicationInputsParallelismArgs build() {
             return new AnalyticsApplicationInputsParallelismArgs(count);

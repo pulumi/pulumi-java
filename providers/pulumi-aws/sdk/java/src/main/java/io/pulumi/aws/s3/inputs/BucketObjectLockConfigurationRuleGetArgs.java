@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketObjectLockConfigurationRuleDefaultRetentionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class BucketObjectLockConfigurationRuleGetArgs extends io.pulumi.re
     @Import(name="defaultRetention", required=true)
       private final Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention;
 
-    public Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> getDefaultRetention() {
+    public Output<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention() {
         return this.defaultRetention;
     }
 
@@ -29,7 +30,7 @@ public final class BucketObjectLockConfigurationRuleGetArgs extends io.pulumi.re
     }
 
     private BucketObjectLockConfigurationRuleGetArgs() {
-        this.defaultRetention = Output.empty();
+        this.defaultRetention = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -22,7 +22,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="responseModels")
       private final @Nullable Object responseModels;
 
-    public Optional<Object> getResponseModels() {
+    public Optional<Object> responseModels() {
         return this.responseModels == null ? Optional.empty() : Optional.ofNullable(this.responseModels);
     }
 
@@ -33,7 +33,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="responseParameters")
       private final @Nullable Object responseParameters;
 
-    public Optional<Object> getResponseParameters() {
+    public Optional<Object> responseParameters() {
         return this.responseParameters == null ? Optional.empty() : Optional.ofNullable(this.responseParameters);
     }
 
@@ -44,7 +44,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="statusCode", required=true)
       private final String statusCode;
 
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

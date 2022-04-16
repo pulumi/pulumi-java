@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionCookiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,29 +21,29 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
     @Import(name="cookies")
       private final @Nullable Output<DistributionCookiesArgs> cookies;
 
-    public Output<DistributionCookiesArgs> getCookies() {
-        return this.cookies == null ? Output.empty() : this.cookies;
+    public Output<DistributionCookiesArgs> cookies() {
+        return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<String>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     @Import(name="queryString", required=true)
       private final Output<Boolean> queryString;
 
-    public Output<Boolean> getQueryString() {
+    public Output<Boolean> queryString() {
         return this.queryString;
     }
 
     @Import(name="queryStringCacheKeys")
       private final @Nullable Output<List<String>> queryStringCacheKeys;
 
-    public Output<List<String>> getQueryStringCacheKeys() {
-        return this.queryStringCacheKeys == null ? Output.empty() : this.queryStringCacheKeys;
+    public Output<List<String>> queryStringCacheKeys() {
+        return this.queryStringCacheKeys == null ? Codegen.empty() : this.queryStringCacheKeys;
     }
 
     public DistributionForwardedValuesArgs(
@@ -57,10 +58,10 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
     }
 
     private DistributionForwardedValuesArgs() {
-        this.cookies = Output.empty();
-        this.headers = Output.empty();
-        this.queryString = Output.empty();
-        this.queryStringCacheKeys = Output.empty();
+        this.cookies = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.queryStringCacheKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder cookies(@Nullable DistributionCookiesArgs cookies) {
-            this.cookies = Output.ofNullable(cookies);
+            this.cookies = Codegen.ofNullable(cookies);
             return this;
         }
         public Builder headers(@Nullable Output<List<String>> headers) {
@@ -102,7 +103,7 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(String... headers) {
@@ -121,7 +122,7 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
-            this.queryStringCacheKeys = Output.ofNullable(queryStringCacheKeys);
+            this.queryStringCacheKeys = Codegen.ofNullable(queryStringCacheKeys);
             return this;
         }
         public Builder queryStringCacheKeys(String... queryStringCacheKeys) {

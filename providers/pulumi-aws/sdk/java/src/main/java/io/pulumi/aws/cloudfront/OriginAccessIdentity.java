@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudfront.inputs.OriginAccessIdentityState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -63,7 +64,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * updates to the origin access identity.
      * 
      */
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference;
     }
     /**
@@ -79,7 +80,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * origin access identity to use in CloudFront, see below.
      * 
      */
-    public Output<String> getCloudfrontAccessIdentityPath() {
+    public Output<String> cloudfrontAccessIdentityPath() {
         return this.cloudfrontAccessIdentityPath;
     }
     /**
@@ -93,7 +94,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * @return An optional comment for the origin access identity.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -109,7 +110,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -127,7 +128,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * E2QWRUHAPOMQZL`.
      * 
      */
-    public Output<String> getIamArn() {
+    public Output<String> iamArn() {
         return this.iamArn;
     }
     /**
@@ -145,7 +146,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * permission to an object in Amazon S3.
      * 
      */
-    public Output<String> getS3CanonicalUserId() {
+    public Output<String> s3CanonicalUserId() {
         return this.s3CanonicalUserId;
     }
 
@@ -171,7 +172,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OriginAccessIdentity(String name, @Nullable OriginAccessIdentityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/originAccessIdentity:OriginAccessIdentity", name, args == null ? OriginAccessIdentityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/originAccessIdentity:OriginAccessIdentity", name, args == null ? OriginAccessIdentityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OriginAccessIdentity(String name, Output<String> id, @Nullable OriginAccessIdentityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

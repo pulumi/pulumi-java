@@ -8,6 +8,7 @@ import io.pulumi.aws.s3.inputs.InventoryFilterGetArgs;
 import io.pulumi.aws.s3.inputs.InventoryScheduleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination")
       private final @Nullable Output<InventoryDestinationGetArgs> destination;
 
-    public Output<InventoryDestinationGetArgs> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<InventoryDestinationGetArgs> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<InventoryFilterGetArgs> filter;
 
-    public Output<InventoryFilterGetArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<InventoryFilterGetArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="includedObjectVersions")
       private final @Nullable Output<String> includedObjectVersions;
 
-    public Output<String> getIncludedObjectVersions() {
-        return this.includedObjectVersions == null ? Output.empty() : this.includedObjectVersions;
+    public Output<String> includedObjectVersions() {
+        return this.includedObjectVersions == null ? Codegen.empty() : this.includedObjectVersions;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="optionalFields")
       private final @Nullable Output<List<String>> optionalFields;
 
-    public Output<List<String>> getOptionalFields() {
-        return this.optionalFields == null ? Output.empty() : this.optionalFields;
+    public Output<List<String>> optionalFields() {
+        return this.optionalFields == null ? Codegen.empty() : this.optionalFields;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<InventoryScheduleGetArgs> schedule;
 
-    public Output<InventoryScheduleGetArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<InventoryScheduleGetArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     public InventoryState(
@@ -127,14 +128,14 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InventoryState() {
-        this.bucket = Output.empty();
-        this.destination = Output.empty();
-        this.enabled = Output.empty();
-        this.filter = Output.empty();
-        this.includedObjectVersions = Output.empty();
-        this.name = Output.empty();
-        this.optionalFields = Output.empty();
-        this.schedule = Output.empty();
+        this.bucket = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.includedObjectVersions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.optionalFields = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder destination(@Nullable Output<InventoryDestinationGetArgs> destination) {
@@ -184,7 +185,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destination(@Nullable InventoryDestinationGetArgs destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -192,7 +193,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder filter(@Nullable Output<InventoryFilterGetArgs> filter) {
@@ -200,7 +201,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable InventoryFilterGetArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder includedObjectVersions(@Nullable Output<String> includedObjectVersions) {
@@ -208,7 +209,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includedObjectVersions(@Nullable String includedObjectVersions) {
-            this.includedObjectVersions = Output.ofNullable(includedObjectVersions);
+            this.includedObjectVersions = Codegen.ofNullable(includedObjectVersions);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -216,7 +217,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder optionalFields(@Nullable Output<List<String>> optionalFields) {
@@ -224,7 +225,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder optionalFields(@Nullable List<String> optionalFields) {
-            this.optionalFields = Output.ofNullable(optionalFields);
+            this.optionalFields = Codegen.ofNullable(optionalFields);
             return this;
         }
         public Builder optionalFields(String... optionalFields) {
@@ -235,7 +236,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable InventoryScheduleGetArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }        public InventoryState build() {
             return new InventoryState(bucket, destination, enabled, filter, includedObjectVersions, name, optionalFields, schedule);

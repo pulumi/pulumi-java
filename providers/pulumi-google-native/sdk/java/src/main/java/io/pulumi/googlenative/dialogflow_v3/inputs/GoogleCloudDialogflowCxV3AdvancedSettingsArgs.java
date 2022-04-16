@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsArgs extends io.pulu
     @Import(name="loggingSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 
-    public Output<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> getLoggingSettings() {
-        return this.loggingSettings == null ? Output.empty() : this.loggingSettings;
+    public Output<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> loggingSettings() {
+        return this.loggingSettings == null ? Codegen.empty() : this.loggingSettings;
     }
 
     public GoogleCloudDialogflowCxV3AdvancedSettingsArgs(@Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsArgs extends io.pulu
     }
 
     private GoogleCloudDialogflowCxV3AdvancedSettingsArgs() {
-        this.loggingSettings = Output.empty();
+        this.loggingSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsArgs extends io.pulu
             return this;
         }
         public Builder loggingSettings(@Nullable GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs loggingSettings) {
-            this.loggingSettings = Output.ofNullable(loggingSettings);
+            this.loggingSettings = Codegen.ofNullable(loggingSettings);
             return this;
         }        public GoogleCloudDialogflowCxV3AdvancedSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3AdvancedSettingsArgs(loggingSettings);

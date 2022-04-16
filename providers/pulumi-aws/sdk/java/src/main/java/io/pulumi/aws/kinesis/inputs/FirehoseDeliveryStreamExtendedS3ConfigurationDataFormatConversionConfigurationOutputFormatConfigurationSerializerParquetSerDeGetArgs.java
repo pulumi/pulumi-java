@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="blockSizeBytes")
       private final @Nullable Output<Integer> blockSizeBytes;
 
-    public Output<Integer> getBlockSizeBytes() {
-        return this.blockSizeBytes == null ? Output.empty() : this.blockSizeBytes;
+    public Output<Integer> blockSizeBytes() {
+        return this.blockSizeBytes == null ? Codegen.empty() : this.blockSizeBytes;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+    public Output<String> compression() {
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="enableDictionaryCompression")
       private final @Nullable Output<Boolean> enableDictionaryCompression;
 
-    public Output<Boolean> getEnableDictionaryCompression() {
-        return this.enableDictionaryCompression == null ? Output.empty() : this.enableDictionaryCompression;
+    public Output<Boolean> enableDictionaryCompression() {
+        return this.enableDictionaryCompression == null ? Codegen.empty() : this.enableDictionaryCompression;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="maxPaddingBytes")
       private final @Nullable Output<Integer> maxPaddingBytes;
 
-    public Output<Integer> getMaxPaddingBytes() {
-        return this.maxPaddingBytes == null ? Output.empty() : this.maxPaddingBytes;
+    public Output<Integer> maxPaddingBytes() {
+        return this.maxPaddingBytes == null ? Codegen.empty() : this.maxPaddingBytes;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="pageSizeBytes")
       private final @Nullable Output<Integer> pageSizeBytes;
 
-    public Output<Integer> getPageSizeBytes() {
-        return this.pageSizeBytes == null ? Output.empty() : this.pageSizeBytes;
+    public Output<Integer> pageSizeBytes() {
+        return this.pageSizeBytes == null ? Codegen.empty() : this.pageSizeBytes;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="writerVersion")
       private final @Nullable Output<String> writerVersion;
 
-    public Output<String> getWriterVersion() {
-        return this.writerVersion == null ? Output.empty() : this.writerVersion;
+    public Output<String> writerVersion() {
+        return this.writerVersion == null ? Codegen.empty() : this.writerVersion;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs(
@@ -98,12 +99,12 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs() {
-        this.blockSizeBytes = Output.empty();
-        this.compression = Output.empty();
-        this.enableDictionaryCompression = Output.empty();
-        this.maxPaddingBytes = Output.empty();
-        this.pageSizeBytes = Output.empty();
-        this.writerVersion = Output.empty();
+        this.blockSizeBytes = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.enableDictionaryCompression = Codegen.empty();
+        this.maxPaddingBytes = Codegen.empty();
+        this.pageSizeBytes = Codegen.empty();
+        this.writerVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
-            this.blockSizeBytes = Output.ofNullable(blockSizeBytes);
+            this.blockSizeBytes = Codegen.ofNullable(blockSizeBytes);
             return this;
         }
         public Builder compression(@Nullable Output<String> compression) {
@@ -149,7 +150,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder compression(@Nullable String compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder enableDictionaryCompression(@Nullable Output<Boolean> enableDictionaryCompression) {
@@ -157,7 +158,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
-            this.enableDictionaryCompression = Output.ofNullable(enableDictionaryCompression);
+            this.enableDictionaryCompression = Codegen.ofNullable(enableDictionaryCompression);
             return this;
         }
         public Builder maxPaddingBytes(@Nullable Output<Integer> maxPaddingBytes) {
@@ -165,7 +166,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
-            this.maxPaddingBytes = Output.ofNullable(maxPaddingBytes);
+            this.maxPaddingBytes = Codegen.ofNullable(maxPaddingBytes);
             return this;
         }
         public Builder pageSizeBytes(@Nullable Output<Integer> pageSizeBytes) {
@@ -173,7 +174,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
-            this.pageSizeBytes = Output.ofNullable(pageSizeBytes);
+            this.pageSizeBytes = Codegen.ofNullable(pageSizeBytes);
             return this;
         }
         public Builder writerVersion(@Nullable Output<String> writerVersion) {
@@ -181,7 +182,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder writerVersion(@Nullable String writerVersion) {
-            this.writerVersion = Output.ofNullable(writerVersion);
+            this.writerVersion = Codegen.ofNullable(writerVersion);
             return this;
         }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs(blockSizeBytes, compression, enableDictionaryCompression, maxPaddingBytes, pageSizeBytes, writerVersion);

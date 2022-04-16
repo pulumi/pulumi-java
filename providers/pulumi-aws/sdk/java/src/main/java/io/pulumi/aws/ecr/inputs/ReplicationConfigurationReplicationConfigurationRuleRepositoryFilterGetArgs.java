@@ -5,6 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -31,7 +32,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     @Import(name="filterType", required=true)
       private final Output<String> filterType;
 
-    public Output<String> getFilterType() {
+    public Output<String> filterType() {
         return this.filterType;
     }
 
@@ -43,8 +44,8 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     }
 
     private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs() {
-        this.filter = Output.empty();
-        this.filterType = Output.empty();
+        this.filter = Codegen.empty();
+        this.filterType = Codegen.empty();
     }
 
     public static Builder builder() {

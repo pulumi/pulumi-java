@@ -7,6 +7,7 @@ import io.pulumi.awsnative.location.enums.TrackerPositionFiltering;
 import io.pulumi.awsnative.location.enums.TrackerPricingPlan;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,43 +20,43 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="positionFiltering")
       private final @Nullable Output<TrackerPositionFiltering> positionFiltering;
 
-    public Output<TrackerPositionFiltering> getPositionFiltering() {
-        return this.positionFiltering == null ? Output.empty() : this.positionFiltering;
+    public Output<TrackerPositionFiltering> positionFiltering() {
+        return this.positionFiltering == null ? Codegen.empty() : this.positionFiltering;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<TrackerPricingPlan> pricingPlan;
 
-    public Output<TrackerPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
+    public Output<TrackerPricingPlan> pricingPlan() {
+        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     @Import(name="pricingPlanDataSource")
       private final @Nullable Output<String> pricingPlanDataSource;
 
-    public Output<String> getPricingPlanDataSource() {
-        return this.pricingPlanDataSource == null ? Output.empty() : this.pricingPlanDataSource;
+    public Output<String> pricingPlanDataSource() {
+        return this.pricingPlanDataSource == null ? Codegen.empty() : this.pricingPlanDataSource;
     }
 
     @Import(name="trackerName")
       private final @Nullable Output<String> trackerName;
 
-    public Output<String> getTrackerName() {
-        return this.trackerName == null ? Output.empty() : this.trackerName;
+    public Output<String> trackerName() {
+        return this.trackerName == null ? Codegen.empty() : this.trackerName;
     }
 
     public TrackerArgs(
@@ -74,12 +75,12 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrackerArgs() {
-        this.description = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.positionFiltering = Output.empty();
-        this.pricingPlan = Output.empty();
-        this.pricingPlanDataSource = Output.empty();
-        this.trackerName = Output.empty();
+        this.description = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.positionFiltering = Codegen.empty();
+        this.pricingPlan = Codegen.empty();
+        this.pricingPlanDataSource = Codegen.empty();
+        this.trackerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -125,7 +126,7 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder positionFiltering(@Nullable Output<TrackerPositionFiltering> positionFiltering) {
@@ -133,7 +134,7 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder positionFiltering(@Nullable TrackerPositionFiltering positionFiltering) {
-            this.positionFiltering = Output.ofNullable(positionFiltering);
+            this.positionFiltering = Codegen.ofNullable(positionFiltering);
             return this;
         }
         public Builder pricingPlan(@Nullable Output<TrackerPricingPlan> pricingPlan) {
@@ -141,7 +142,7 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pricingPlan(@Nullable TrackerPricingPlan pricingPlan) {
-            this.pricingPlan = Output.ofNullable(pricingPlan);
+            this.pricingPlan = Codegen.ofNullable(pricingPlan);
             return this;
         }
         public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
@@ -149,7 +150,7 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
-            this.pricingPlanDataSource = Output.ofNullable(pricingPlanDataSource);
+            this.pricingPlanDataSource = Codegen.ofNullable(pricingPlanDataSource);
             return this;
         }
         public Builder trackerName(@Nullable Output<String> trackerName) {
@@ -157,7 +158,7 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trackerName(@Nullable String trackerName) {
-            this.trackerName = Output.ofNullable(trackerName);
+            this.trackerName = Codegen.ofNullable(trackerName);
             return this;
         }        public TrackerArgs build() {
             return new TrackerArgs(description, kmsKeyId, positionFiltering, pricingPlan, pricingPlanDataSource, trackerName);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClusterNodeConfigEphemeralStorageConfigGetArgs extends io.pul
     @Import(name="localSsdCount", required=true)
       private final Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
+    public Output<Integer> localSsdCount() {
         return this.localSsdCount;
     }
 
@@ -29,7 +30,7 @@ public final class ClusterNodeConfigEphemeralStorageConfigGetArgs extends io.pul
     }
 
     private ClusterNodeConfigEphemeralStorageConfigGetArgs() {
-        this.localSsdCount = Output.empty();
+        this.localSsdCount = Codegen.empty();
     }
 
     public static Builder builder() {

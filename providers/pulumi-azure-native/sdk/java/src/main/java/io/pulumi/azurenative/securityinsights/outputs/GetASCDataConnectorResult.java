@@ -71,21 +71,21 @@ public final class GetASCDataConnectorResult {
      * The available data types for the connector.
      * 
     */
-    public Optional<AlertsDataTypeOfDataConnectorResponse> getDataTypes() {
+    public Optional<AlertsDataTypeOfDataConnectorResponse> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -93,28 +93,28 @@ public final class GetASCDataConnectorResult {
      * Expected value is 'AzureSecurityCenter'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The subscription id to connect to, and get the data from.
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

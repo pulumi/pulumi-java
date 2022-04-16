@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="activate")
       private final @Nullable Output<Boolean> activate;
 
-    public Output<Boolean> getActivate() {
-        return this.activate == null ? Output.empty() : this.activate;
+    public Output<Boolean> activate() {
+        return this.activate == null ? Codegen.empty() : this.activate;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
-        return this.detectorId == null ? Output.empty() : this.detectorId;
+    public Output<String> detectorId() {
+        return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<String> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ThreatIntelSetState(
@@ -124,14 +125,14 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ThreatIntelSetState() {
-        this.activate = Output.empty();
-        this.arn = Output.empty();
-        this.detectorId = Output.empty();
-        this.format = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.activate = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.format = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder activate(@Nullable Boolean activate) {
-            this.activate = Output.ofNullable(activate);
+            this.activate = Codegen.ofNullable(activate);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -181,7 +182,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder detectorId(@Nullable Output<String> detectorId) {
@@ -189,7 +190,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Output.ofNullable(detectorId);
+            this.detectorId = Codegen.ofNullable(detectorId);
             return this;
         }
         public Builder format(@Nullable Output<String> format) {
@@ -197,7 +198,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -205,7 +206,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -213,7 +214,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -221,7 +222,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -229,7 +230,7 @@ public final class ThreatIntelSetState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ThreatIntelSetState build() {
             return new ThreatIntelSetState(activate, arn, detectorId, format, location, name, tags, tagsAll);

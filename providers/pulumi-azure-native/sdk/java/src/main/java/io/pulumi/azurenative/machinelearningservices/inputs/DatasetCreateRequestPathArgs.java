@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequestDataPathArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     @Import(name="dataPath")
       private final @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
 
-    public Output<DatasetCreateRequestDataPathArgs> getDataPath() {
-        return this.dataPath == null ? Output.empty() : this.dataPath;
+    public Output<DatasetCreateRequestDataPathArgs> dataPath() {
+        return this.dataPath == null ? Codegen.empty() : this.dataPath;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     @Import(name="httpUrl")
       private final @Nullable Output<String> httpUrl;
 
-    public Output<String> getHttpUrl() {
-        return this.httpUrl == null ? Output.empty() : this.httpUrl;
+    public Output<String> httpUrl() {
+        return this.httpUrl == null ? Codegen.empty() : this.httpUrl;
     }
 
     public DatasetCreateRequestPathArgs(
@@ -41,8 +42,8 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     }
 
     private DatasetCreateRequestPathArgs() {
-        this.dataPath = Output.empty();
-        this.httpUrl = Output.empty();
+        this.dataPath = Codegen.empty();
+        this.httpUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder dataPath(@Nullable DatasetCreateRequestDataPathArgs dataPath) {
-            this.dataPath = Output.ofNullable(dataPath);
+            this.dataPath = Codegen.ofNullable(dataPath);
             return this;
         }
         public Builder httpUrl(@Nullable Output<String> httpUrl) {
@@ -80,7 +81,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder httpUrl(@Nullable String httpUrl) {
-            this.httpUrl = Output.ofNullable(httpUrl);
+            this.httpUrl = Codegen.ofNullable(httpUrl);
             return this;
         }        public DatasetCreateRequestPathArgs build() {
             return new DatasetCreateRequestPathArgs(dataPath, httpUrl);

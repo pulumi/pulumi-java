@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesS3Ar
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     @Import(name="s3", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesS3Args> getS3() {
+    public Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3() {
         return this.s3;
     }
 
@@ -45,7 +46,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> getSchema() {
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema() {
         return this.schema;
     }
 
@@ -56,7 +57,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -72,10 +73,10 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     }
 
     private AnalyticsApplicationReferenceDataSourcesArgs() {
-        this.id = Output.empty();
-        this.s3 = Output.empty();
-        this.schema = Output.empty();
-        this.tableName = Output.empty();
+        this.id = Codegen.empty();
+        this.s3 = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder s3(Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3) {

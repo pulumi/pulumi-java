@@ -27,7 +27,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="authInfo", required=true)
       private final BasicAuthenticationResponse authInfo;
 
-    public BasicAuthenticationResponse getAuthInfo() {
+    public BasicAuthenticationResponse authInfo() {
         return this.authInfo;
     }
 
@@ -38,7 +38,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="body", required=true)
       private final String body;
 
-    public String getBody() {
+    public String body() {
         return this.body;
     }
 
@@ -49,7 +49,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="contentType", required=true)
       private final String contentType;
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
 
@@ -60,7 +60,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headers", required=true)
       private final Map<String,String> headers;
 
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers;
     }
 
@@ -71,7 +71,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maskHeaders", required=true)
       private final Boolean maskHeaders;
 
-    public Boolean getMaskHeaders() {
+    public Boolean maskHeaders() {
         return this.maskHeaders;
     }
 
@@ -82,7 +82,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -93,7 +93,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -104,7 +104,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestMethod", required=true)
       private final String requestMethod;
 
-    public String getRequestMethod() {
+    public String requestMethod() {
         return this.requestMethod;
     }
 
@@ -115,7 +115,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="useSsl", required=true)
       private final Boolean useSsl;
 
-    public Boolean getUseSsl() {
+    public Boolean useSsl() {
         return this.useSsl;
     }
 
@@ -126,7 +126,7 @@ public final class HttpCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="validateSsl", required=true)
       private final Boolean validateSsl;
 
-    public Boolean getValidateSsl() {
+    public Boolean validateSsl() {
         return this.validateSsl;
     }
 

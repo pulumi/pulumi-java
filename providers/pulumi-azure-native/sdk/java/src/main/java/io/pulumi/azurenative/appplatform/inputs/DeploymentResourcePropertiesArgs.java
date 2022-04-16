@@ -7,6 +7,7 @@ import io.pulumi.azurenative.appplatform.inputs.DeploymentSettingsArgs;
 import io.pulumi.azurenative.appplatform.inputs.UserSourceInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
     @Import(name="deploymentSettings")
       private final @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
 
-    public Output<DeploymentSettingsArgs> getDeploymentSettings() {
-        return this.deploymentSettings == null ? Output.empty() : this.deploymentSettings;
+    public Output<DeploymentSettingsArgs> deploymentSettings() {
+        return this.deploymentSettings == null ? Codegen.empty() : this.deploymentSettings;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
     @Import(name="source")
       private final @Nullable Output<UserSourceInfoArgs> source;
 
-    public Output<UserSourceInfoArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<UserSourceInfoArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public DeploymentResourcePropertiesArgs(
@@ -49,8 +50,8 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
     }
 
     private DeploymentResourcePropertiesArgs() {
-        this.deploymentSettings = Output.empty();
-        this.source = Output.empty();
+        this.deploymentSettings = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder deploymentSettings(@Nullable DeploymentSettingsArgs deploymentSettings) {
-            this.deploymentSettings = Output.ofNullable(deploymentSettings);
+            this.deploymentSettings = Codegen.ofNullable(deploymentSettings);
             return this;
         }
         public Builder source(@Nullable Output<UserSourceInfoArgs> source) {
@@ -88,7 +89,7 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder source(@Nullable UserSourceInfoArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public DeploymentResourcePropertiesArgs build() {
             return new DeploymentResourcePropertiesArgs(deploymentSettings, source);

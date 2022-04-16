@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
-    public Output<String> getUniqueId() {
-        return this.uniqueId == null ? Output.empty() : this.uniqueId;
+    public Output<String> uniqueId() {
+        return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
     }
 
     public GroupState(
@@ -70,10 +71,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.uniqueId = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.uniqueId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -115,7 +116,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -123,7 +124,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
@@ -131,7 +132,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Output.ofNullable(uniqueId);
+            this.uniqueId = Codegen.ofNullable(uniqueId);
             return this;
         }        public GroupState build() {
             return new GroupState(arn, name, path, uniqueId);

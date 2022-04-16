@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
     @Import(name="customerManagedEncryption")
       private final @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
 
-    public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> getCustomerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Output.empty() : this.customerManagedEncryption;
+    public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption() {
+        return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -46,8 +47,8 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
     }
 
     private SecretReplicationUserManagedReplicaGetArgs() {
-        this.customerManagedEncryption = Output.empty();
-        this.location = Output.empty();
+        this.customerManagedEncryption = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
             return this;
         }
         public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
+            this.customerManagedEncryption = Codegen.ofNullable(customerManagedEncryption);
             return this;
         }
         public Builder location(Output<String> location) {

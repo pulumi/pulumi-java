@@ -24,7 +24,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
       private final List<BackendRuleResponse> rules;
 
-    public List<BackendRuleResponse> getRules() {
+    public List<BackendRuleResponse> rules() {
         return this.rules;
     }
 

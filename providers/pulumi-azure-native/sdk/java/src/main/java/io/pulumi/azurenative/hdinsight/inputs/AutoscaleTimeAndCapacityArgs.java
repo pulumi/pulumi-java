@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     @Import(name="maxInstanceCount")
       private final @Nullable Output<Integer> maxInstanceCount;
 
-    public Output<Integer> getMaxInstanceCount() {
-        return this.maxInstanceCount == null ? Output.empty() : this.maxInstanceCount;
+    public Output<Integer> maxInstanceCount() {
+        return this.maxInstanceCount == null ? Codegen.empty() : this.maxInstanceCount;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;
 
-    public Output<Integer> getMinInstanceCount() {
-        return this.minInstanceCount == null ? Output.empty() : this.minInstanceCount;
+    public Output<Integer> minInstanceCount() {
+        return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
-        return this.time == null ? Output.empty() : this.time;
+    public Output<String> time() {
+        return this.time == null ? Codegen.empty() : this.time;
     }
 
     public AutoscaleTimeAndCapacityArgs(
@@ -62,9 +63,9 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
     }
 
     private AutoscaleTimeAndCapacityArgs() {
-        this.maxInstanceCount = Output.empty();
-        this.minInstanceCount = Output.empty();
-        this.time = Output.empty();
+        this.maxInstanceCount = Codegen.empty();
+        this.minInstanceCount = Codegen.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
-            this.maxInstanceCount = Output.ofNullable(maxInstanceCount);
+            this.maxInstanceCount = Codegen.ofNullable(maxInstanceCount);
             return this;
         }
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
@@ -104,7 +105,7 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Output.ofNullable(minInstanceCount);
+            this.minInstanceCount = Codegen.ofNullable(minInstanceCount);
             return this;
         }
         public Builder time(@Nullable Output<String> time) {
@@ -112,7 +113,7 @@ public final class AutoscaleTimeAndCapacityArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder time(@Nullable String time) {
-            this.time = Output.ofNullable(time);
+            this.time = Codegen.ofNullable(time);
             return this;
         }        public AutoscaleTimeAndCapacityArgs build() {
             return new AutoscaleTimeAndCapacityArgs(maxInstanceCount, minInstanceCount, time);

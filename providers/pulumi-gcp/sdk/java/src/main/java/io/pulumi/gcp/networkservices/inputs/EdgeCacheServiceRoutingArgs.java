@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingHostRuleArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherArgs;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     @Import(name="hostRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
 
-    public Output<List<EdgeCacheServiceRoutingHostRuleArgs>> getHostRules() {
+    public Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules() {
         return this.hostRules;
     }
 
@@ -34,7 +35,7 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     @Import(name="pathMatchers", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
 
-    public Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> getPathMatchers() {
+    public Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers() {
         return this.pathMatchers;
     }
 
@@ -46,8 +47,8 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     }
 
     private EdgeCacheServiceRoutingArgs() {
-        this.hostRules = Output.empty();
-        this.pathMatchers = Output.empty();
+        this.hostRules = Codegen.empty();
+        this.pathMatchers = Codegen.empty();
     }
 
     public static Builder builder() {

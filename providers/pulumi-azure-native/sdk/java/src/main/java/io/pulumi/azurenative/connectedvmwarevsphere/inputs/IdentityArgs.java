@@ -7,6 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.IdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,IdentityType>> type;
 
-    public Output<Either<String,IdentityType>> getType() {
+    public Output<Either<String,IdentityType>> type() {
         return this.type;
     }
 
@@ -35,7 +36,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

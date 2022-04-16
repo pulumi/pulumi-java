@@ -6,6 +6,7 @@ package io.pulumi.googlenative.transcoder_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.transcoder_v1.JobArgs;
 import io.pulumi.googlenative.transcoder_v1.outputs.JobConfigResponse;
@@ -31,7 +32,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The configuration for this job.
      * 
      */
-    public Output<JobConfigResponse> getConfig() {
+    public Output<JobConfigResponse> config() {
         return this.config;
     }
     /**
@@ -45,7 +46,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The time the job was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +60,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The time the transcoding finished.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -73,7 +74,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return An error object that describes the reason for the failure. This property is always present when `state` is `FAILED`.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -87,7 +88,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Input only. Specify the `input_uri` to populate empty `uri` fields in each element of `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
      * 
      */
-    public Output<String> getInputUri() {
+    public Output<String> inputUri() {
         return this.inputUri;
     }
     /**
@@ -101,7 +102,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`.
      * 
      */
-    public Output<String> getOutputUri() {
+    public Output<String> outputUri() {
         return this.outputUri;
     }
     /**
@@ -129,7 +130,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The time the transcoding started.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -143,7 +144,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The current state of the job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -157,7 +158,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
      * 
      */
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId;
     }
     /**
@@ -171,7 +172,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
      * 
      */
-    public Output<Integer> getTtlAfterCompletionDays() {
+    public Output<Integer> ttlAfterCompletionDays() {
         return this.ttlAfterCompletionDays;
     }
 
@@ -197,7 +198,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, @Nullable JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:transcoder/v1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:transcoder/v1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

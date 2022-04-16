@@ -9,6 +9,7 @@ import io.pulumi.awsnative.codeartifact.outputs.RepositoryTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The ARN of the repository.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return A text description of the repository.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The name of the domain that contains the repository.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -73,7 +74,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The 12-digit account ID of the AWS account that owns the domain.
      * 
      */
-    public Output<String> getDomainOwner() {
+    public Output<String> domainOwner() {
         return this.domainOwner;
     }
     /**
@@ -87,7 +88,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return A list of external connections associated with the repository.
      * 
      */
-    public Output</* @Nullable */ List<String>> getExternalConnections() {
+    public Output</* @Nullable */ List<String>> externalConnections() {
         return this.externalConnections;
     }
     /**
@@ -101,7 +102,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The name of the repository. This is used for GetAtt
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The access control resource policy on the provided repository.
      * 
      */
-    public Output</* @Nullable */ Object> getPermissionsPolicyDocument() {
+    public Output</* @Nullable */ Object> permissionsPolicyDocument() {
         return this.permissionsPolicyDocument;
     }
     /**
@@ -129,7 +130,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The name of the repository.
      * 
      */
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
     /**
@@ -143,7 +144,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<RepositoryTag>> getTags() {
+    public Output</* @Nullable */ List<RepositoryTag>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +158,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return A list of upstream repositories associated with the repository.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUpstreams() {
+    public Output</* @Nullable */ List<String>> upstreams() {
         return this.upstreams;
     }
 
@@ -183,7 +184,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Repository(String name, @Nullable RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:codeartifact:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:codeartifact:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Repository(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

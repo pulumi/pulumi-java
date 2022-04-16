@@ -23,7 +23,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hint", required=true)
       private final HintResponse hint;
 
-    public HintResponse getHint() {
+    public HintResponse hint() {
         return this.hint;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,8 +55,8 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="videoName")
       private final @Nullable Output<String> videoName;
 
-    public Output<String> getVideoName() {
-        return this.videoName == null ? Output.empty() : this.videoName;
+    public Output<String> videoName() {
+        return this.videoName == null ? Codegen.empty() : this.videoName;
     }
 
     public VideoArgs(
@@ -83,11 +84,11 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoArgs() {
-        this.accountName = Output.empty();
-        this.description = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.title = Output.empty();
-        this.videoName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.title = Codegen.empty();
+        this.videoName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -147,7 +148,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder videoName(@Nullable Output<String> videoName) {
@@ -155,7 +156,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder videoName(@Nullable String videoName) {
-            this.videoName = Output.ofNullable(videoName);
+            this.videoName = Codegen.ofNullable(videoName);
             return this;
         }        public VideoArgs build() {
             return new VideoArgs(accountName, description, resourceGroupName, title, videoName);

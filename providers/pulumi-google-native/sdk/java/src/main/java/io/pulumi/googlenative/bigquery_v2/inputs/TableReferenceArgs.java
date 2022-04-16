@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+    public Output<String> datasetId() {
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
-    public Output<String> getTableId() {
-        return this.tableId == null ? Output.empty() : this.tableId;
+    public Output<String> tableId() {
+        return this.tableId == null ? Codegen.empty() : this.tableId;
     }
 
     public TableReferenceArgs(
@@ -57,9 +58,9 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableReferenceArgs() {
-        this.datasetId = Output.empty();
-        this.project = Output.empty();
-        this.tableId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -99,7 +100,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tableId(@Nullable Output<String> tableId) {
@@ -107,7 +108,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableId(@Nullable String tableId) {
-            this.tableId = Output.ofNullable(tableId);
+            this.tableId = Codegen.ofNullable(tableId);
             return this;
         }        public TableReferenceArgs build() {
             return new TableReferenceArgs(datasetId, project, tableId);

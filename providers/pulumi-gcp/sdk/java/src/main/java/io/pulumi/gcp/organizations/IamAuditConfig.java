@@ -6,6 +6,7 @@ package io.pulumi.gcp.organizations;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.IamAuditConfigArgs;
 import io.pulumi.gcp.organizations.inputs.IamAuditConfigState;
@@ -41,7 +42,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    public Output<List<IamAuditConfigAuditLogConfig>> getAuditLogConfigs() {
+    public Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
@@ -55,7 +56,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The etag of iam policy
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -69,7 +70,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -83,7 +84,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -109,7 +110,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamAuditConfig(String name, IamAuditConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:organizations/iamAuditConfig:IamAuditConfig", name, args == null ? IamAuditConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:organizations/iamAuditConfig:IamAuditConfig", name, args == null ? IamAuditConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamAuditConfig(String name, Output<String> id, @Nullable IamAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorFrequency;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class AnomalyDetectorConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="anomalyDetectorFrequency", required=true)
       private final Output<AnomalyDetectorFrequency> anomalyDetectorFrequency;
 
-    public Output<AnomalyDetectorFrequency> getAnomalyDetectorFrequency() {
+    public Output<AnomalyDetectorFrequency> anomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }
 
@@ -29,7 +30,7 @@ public final class AnomalyDetectorConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private AnomalyDetectorConfigArgs() {
-        this.anomalyDetectorFrequency = Output.empty();
+        this.anomalyDetectorFrequency = Codegen.empty();
     }
 
     public static Builder builder() {

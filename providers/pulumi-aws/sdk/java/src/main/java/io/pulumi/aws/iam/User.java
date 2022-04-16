@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.UserState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS for this user.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +62,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * a user with non-provider-managed access keys and login profile will fail to be destroyed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -75,7 +76,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +90,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Path in which to create the user.
      * 
      */
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     /**
@@ -103,7 +104,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The ARN of the policy that is used to set the permissions boundary for the user.
      * 
      */
-    public Output</* @Nullable */ String> getPermissionsBoundary() {
+    public Output</* @Nullable */ String> permissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
@@ -117,7 +118,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of tags for the IAM user
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -131,7 +132,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -145,7 +146,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The [unique ID][1] assigned by AWS.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 
@@ -171,7 +172,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public User(String name, @Nullable UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/user:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/user:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private User(String name, Output<String> id, @Nullable UserState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

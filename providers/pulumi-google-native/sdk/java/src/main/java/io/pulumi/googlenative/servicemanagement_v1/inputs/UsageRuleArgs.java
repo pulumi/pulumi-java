@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowUnregisteredCalls")
       private final @Nullable Output<Boolean> allowUnregisteredCalls;
 
-    public Output<Boolean> getAllowUnregisteredCalls() {
-        return this.allowUnregisteredCalls == null ? Output.empty() : this.allowUnregisteredCalls;
+    public Output<Boolean> allowUnregisteredCalls() {
+        return this.allowUnregisteredCalls == null ? Codegen.empty() : this.allowUnregisteredCalls;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+    public Output<String> selector() {
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipServiceControl")
       private final @Nullable Output<Boolean> skipServiceControl;
 
-    public Output<Boolean> getSkipServiceControl() {
-        return this.skipServiceControl == null ? Output.empty() : this.skipServiceControl;
+    public Output<Boolean> skipServiceControl() {
+        return this.skipServiceControl == null ? Codegen.empty() : this.skipServiceControl;
     }
 
     public UsageRuleArgs(
@@ -62,9 +63,9 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UsageRuleArgs() {
-        this.allowUnregisteredCalls = Output.empty();
-        this.selector = Output.empty();
-        this.skipServiceControl = Output.empty();
+        this.allowUnregisteredCalls = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.skipServiceControl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowUnregisteredCalls(@Nullable Boolean allowUnregisteredCalls) {
-            this.allowUnregisteredCalls = Output.ofNullable(allowUnregisteredCalls);
+            this.allowUnregisteredCalls = Codegen.ofNullable(allowUnregisteredCalls);
             return this;
         }
         public Builder selector(@Nullable Output<String> selector) {
@@ -104,7 +105,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }
         public Builder skipServiceControl(@Nullable Output<Boolean> skipServiceControl) {
@@ -112,7 +113,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipServiceControl(@Nullable Boolean skipServiceControl) {
-            this.skipServiceControl = Output.ofNullable(skipServiceControl);
+            this.skipServiceControl = Codegen.ofNullable(skipServiceControl);
             return this;
         }        public UsageRuleArgs build() {
             return new UsageRuleArgs(allowUnregisteredCalls, selector, skipServiceControl);

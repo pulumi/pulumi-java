@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
     @Import(name="keyData", required=true)
       private final Output<String> keyData;
 
-    public Output<String> getKeyData() {
+    public Output<String> keyData() {
         return this.keyData;
     }
 
@@ -33,7 +34,7 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
     }
 
     private ContainerServiceSshPublicKeyArgs() {
-        this.keyData = Output.empty();
+        this.keyData = Codegen.empty();
     }
 
     public static Builder builder() {

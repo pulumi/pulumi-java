@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+    public Output<String> certificateId() {
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
@@ -44,8 +45,8 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="hcId")
       private final @Nullable Output<String> hcId;
 
-    public Output<String> getHcId() {
-        return this.hcId == null ? Output.empty() : this.hcId;
+    public Output<String> hcId() {
+        return this.hcId == null ? Codegen.empty() : this.hcId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="http2Enabled")
       private final @Nullable Output<Boolean> http2Enabled;
 
-    public Output<Boolean> getHttp2Enabled() {
-        return this.http2Enabled == null ? Output.empty() : this.http2Enabled;
+    public Output<Boolean> http2Enabled() {
+        return this.http2Enabled == null ? Codegen.empty() : this.http2Enabled;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="negotiateClientCertificate")
       private final @Nullable Output<Boolean> negotiateClientCertificate;
 
-    public Output<Boolean> getNegotiateClientCertificate() {
-        return this.negotiateClientCertificate == null ? Output.empty() : this.negotiateClientCertificate;
+    public Output<Boolean> negotiateClientCertificate() {
+        return this.negotiateClientCertificate == null ? Codegen.empty() : this.negotiateClientCertificate;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,7 +100,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -110,8 +111,8 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="tls10Enabled")
       private final @Nullable Output<Boolean> tls10Enabled;
 
-    public Output<Boolean> getTls10Enabled() {
-        return this.tls10Enabled == null ? Output.empty() : this.tls10Enabled;
+    public Output<Boolean> tls10Enabled() {
+        return this.tls10Enabled == null ? Codegen.empty() : this.tls10Enabled;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     @Import(name="tls11Enabled")
       private final @Nullable Output<Boolean> tls11Enabled;
 
-    public Output<Boolean> getTls11Enabled() {
-        return this.tls11Enabled == null ? Output.empty() : this.tls11Enabled;
+    public Output<Boolean> tls11Enabled() {
+        return this.tls11Enabled == null ? Codegen.empty() : this.tls11Enabled;
     }
 
     public GatewayHostnameConfigurationArgs(
@@ -149,16 +150,16 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     }
 
     private GatewayHostnameConfigurationArgs() {
-        this.certificateId = Output.empty();
-        this.gatewayId = Output.empty();
-        this.hcId = Output.empty();
-        this.hostname = Output.empty();
-        this.http2Enabled = Output.empty();
-        this.negotiateClientCertificate = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.tls10Enabled = Output.empty();
-        this.tls11Enabled = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.gatewayId = Codegen.empty();
+        this.hcId = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.http2Enabled = Codegen.empty();
+        this.negotiateClientCertificate = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.tls10Enabled = Codegen.empty();
+        this.tls11Enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -204,7 +205,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder gatewayId(Output<String> gatewayId) {
@@ -220,7 +221,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder hcId(@Nullable String hcId) {
-            this.hcId = Output.ofNullable(hcId);
+            this.hcId = Codegen.ofNullable(hcId);
             return this;
         }
         public Builder hostname(@Nullable Output<String> hostname) {
@@ -228,7 +229,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder http2Enabled(@Nullable Output<Boolean> http2Enabled) {
@@ -236,7 +237,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder http2Enabled(@Nullable Boolean http2Enabled) {
-            this.http2Enabled = Output.ofNullable(http2Enabled);
+            this.http2Enabled = Codegen.ofNullable(http2Enabled);
             return this;
         }
         public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
@@ -244,7 +245,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
-            this.negotiateClientCertificate = Output.ofNullable(negotiateClientCertificate);
+            this.negotiateClientCertificate = Codegen.ofNullable(negotiateClientCertificate);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -268,7 +269,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tls10Enabled(@Nullable Boolean tls10Enabled) {
-            this.tls10Enabled = Output.ofNullable(tls10Enabled);
+            this.tls10Enabled = Codegen.ofNullable(tls10Enabled);
             return this;
         }
         public Builder tls11Enabled(@Nullable Output<Boolean> tls11Enabled) {
@@ -276,7 +277,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tls11Enabled(@Nullable Boolean tls11Enabled) {
-            this.tls11Enabled = Output.ofNullable(tls11Enabled);
+            this.tls11Enabled = Codegen.ofNullable(tls11Enabled);
             return this;
         }        public GatewayHostnameConfigurationArgs build() {
             return new GatewayHostnameConfigurationArgs(certificateId, gatewayId, hcId, hostname, http2Enabled, negotiateClientCertificate, resourceGroupName, serviceName, tls10Enabled, tls11Enabled);

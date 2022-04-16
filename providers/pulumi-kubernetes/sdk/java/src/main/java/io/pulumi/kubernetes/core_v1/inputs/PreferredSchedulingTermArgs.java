@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
     @Import(name="preference", required=true)
       private final Output<NodeSelectorTermArgs> preference;
 
-    public Output<NodeSelectorTermArgs> getPreference() {
+    public Output<NodeSelectorTermArgs> preference() {
         return this.preference;
     }
 
@@ -36,7 +37,7 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 
@@ -48,8 +49,8 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
     }
 
     private PreferredSchedulingTermArgs() {
-        this.preference = Output.empty();
-        this.weight = Output.empty();
+        this.preference = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {

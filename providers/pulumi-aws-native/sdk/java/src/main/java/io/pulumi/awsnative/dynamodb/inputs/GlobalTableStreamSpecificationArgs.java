@@ -5,6 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
     @Import(name="streamViewType", required=true)
       private final Output<String> streamViewType;
 
-    public Output<String> getStreamViewType() {
+    public Output<String> streamViewType() {
         return this.streamViewType;
     }
 
@@ -25,7 +26,7 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
     }
 
     private GlobalTableStreamSpecificationArgs() {
-        this.streamViewType = Output.empty();
+        this.streamViewType = Codegen.empty();
     }
 
     public static Builder builder() {

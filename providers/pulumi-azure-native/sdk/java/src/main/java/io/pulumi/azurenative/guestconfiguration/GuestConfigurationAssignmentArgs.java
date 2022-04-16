@@ -6,6 +6,7 @@ package io.pulumi.azurenative.guestconfiguration;
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationAssignmentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     @Import(name="guestConfigurationAssignmentName")
       private final @Nullable Output<String> guestConfigurationAssignmentName;
 
-    public Output<String> getGuestConfigurationAssignmentName() {
-        return this.guestConfigurationAssignmentName == null ? Output.empty() : this.guestConfigurationAssignmentName;
+    public Output<String> guestConfigurationAssignmentName() {
+        return this.guestConfigurationAssignmentName == null ? Codegen.empty() : this.guestConfigurationAssignmentName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     @Import(name="properties")
       private final @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
 
-    public Output<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<GuestConfigurationAssignmentPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     @Import(name="vmName", required=true)
       private final Output<String> vmName;
 
-    public Output<String> getVmName() {
+    public Output<String> vmName() {
         return this.vmName;
     }
 
@@ -97,12 +98,12 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     }
 
     private GuestConfigurationAssignmentArgs() {
-        this.guestConfigurationAssignmentName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.vmName = Output.empty();
+        this.guestConfigurationAssignmentName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.vmName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder guestConfigurationAssignmentName(@Nullable String guestConfigurationAssignmentName) {
-            this.guestConfigurationAssignmentName = Output.ofNullable(guestConfigurationAssignmentName);
+            this.guestConfigurationAssignmentName = Codegen.ofNullable(guestConfigurationAssignmentName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -148,7 +149,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -156,7 +157,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties) {
@@ -164,7 +165,7 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder properties(@Nullable GuestConfigurationAssignmentPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

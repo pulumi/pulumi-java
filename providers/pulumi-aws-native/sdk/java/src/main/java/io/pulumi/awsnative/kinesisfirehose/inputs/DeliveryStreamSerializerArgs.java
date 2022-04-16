@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOrcSerDeArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamParquetSerDeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
     @Import(name="orcSerDe")
       private final @Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe;
 
-    public Output<DeliveryStreamOrcSerDeArgs> getOrcSerDe() {
-        return this.orcSerDe == null ? Output.empty() : this.orcSerDe;
+    public Output<DeliveryStreamOrcSerDeArgs> orcSerDe() {
+        return this.orcSerDe == null ? Codegen.empty() : this.orcSerDe;
     }
 
     @Import(name="parquetSerDe")
       private final @Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe;
 
-    public Output<DeliveryStreamParquetSerDeArgs> getParquetSerDe() {
-        return this.parquetSerDe == null ? Output.empty() : this.parquetSerDe;
+    public Output<DeliveryStreamParquetSerDeArgs> parquetSerDe() {
+        return this.parquetSerDe == null ? Codegen.empty() : this.parquetSerDe;
     }
 
     public DeliveryStreamSerializerArgs(
@@ -37,8 +38,8 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
     }
 
     private DeliveryStreamSerializerArgs() {
-        this.orcSerDe = Output.empty();
-        this.parquetSerDe = Output.empty();
+        this.orcSerDe = Codegen.empty();
+        this.parquetSerDe = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder orcSerDe(@Nullable DeliveryStreamOrcSerDeArgs orcSerDe) {
-            this.orcSerDe = Output.ofNullable(orcSerDe);
+            this.orcSerDe = Codegen.ofNullable(orcSerDe);
             return this;
         }
         public Builder parquetSerDe(@Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe) {
@@ -76,7 +77,7 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder parquetSerDe(@Nullable DeliveryStreamParquetSerDeArgs parquetSerDe) {
-            this.parquetSerDe = Output.ofNullable(parquetSerDe);
+            this.parquetSerDe = Codegen.ofNullable(parquetSerDe);
             return this;
         }        public DeliveryStreamSerializerArgs build() {
             return new DeliveryStreamSerializerArgs(orcSerDe, parquetSerDe);

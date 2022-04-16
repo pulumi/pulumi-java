@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iot.inputs.DomainConfigurationAuthorizerConfigArgs;
 import io.pulumi.awsnative.iot.inputs.DomainConfigurationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,57 +23,57 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="authorizerConfig")
       private final @Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
 
-    public Output<DomainConfigurationAuthorizerConfigArgs> getAuthorizerConfig() {
-        return this.authorizerConfig == null ? Output.empty() : this.authorizerConfig;
+    public Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig() {
+        return this.authorizerConfig == null ? Codegen.empty() : this.authorizerConfig;
     }
 
     @Import(name="domainConfigurationName")
       private final @Nullable Output<String> domainConfigurationName;
 
-    public Output<String> getDomainConfigurationName() {
-        return this.domainConfigurationName == null ? Output.empty() : this.domainConfigurationName;
+    public Output<String> domainConfigurationName() {
+        return this.domainConfigurationName == null ? Codegen.empty() : this.domainConfigurationName;
     }
 
     @Import(name="domainConfigurationStatus")
       private final @Nullable Output<DomainConfigurationStatus> domainConfigurationStatus;
 
-    public Output<DomainConfigurationStatus> getDomainConfigurationStatus() {
-        return this.domainConfigurationStatus == null ? Output.empty() : this.domainConfigurationStatus;
+    public Output<DomainConfigurationStatus> domainConfigurationStatus() {
+        return this.domainConfigurationStatus == null ? Codegen.empty() : this.domainConfigurationStatus;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     @Import(name="serverCertificateArns")
       private final @Nullable Output<List<String>> serverCertificateArns;
 
-    public Output<List<String>> getServerCertificateArns() {
-        return this.serverCertificateArns == null ? Output.empty() : this.serverCertificateArns;
+    public Output<List<String>> serverCertificateArns() {
+        return this.serverCertificateArns == null ? Codegen.empty() : this.serverCertificateArns;
     }
 
     @Import(name="serviceType")
       private final @Nullable Output<DomainConfigurationServiceType> serviceType;
 
-    public Output<DomainConfigurationServiceType> getServiceType() {
-        return this.serviceType == null ? Output.empty() : this.serviceType;
+    public Output<DomainConfigurationServiceType> serviceType() {
+        return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DomainConfigurationTagArgs>> tags;
 
-    public Output<List<DomainConfigurationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DomainConfigurationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="validationCertificateArn")
       private final @Nullable Output<String> validationCertificateArn;
 
-    public Output<String> getValidationCertificateArn() {
-        return this.validationCertificateArn == null ? Output.empty() : this.validationCertificateArn;
+    public Output<String> validationCertificateArn() {
+        return this.validationCertificateArn == null ? Codegen.empty() : this.validationCertificateArn;
     }
 
     public DomainConfigurationArgs(
@@ -95,14 +96,14 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private DomainConfigurationArgs() {
-        this.authorizerConfig = Output.empty();
-        this.domainConfigurationName = Output.empty();
-        this.domainConfigurationStatus = Output.empty();
-        this.domainName = Output.empty();
-        this.serverCertificateArns = Output.empty();
-        this.serviceType = Output.empty();
-        this.tags = Output.empty();
-        this.validationCertificateArn = Output.empty();
+        this.authorizerConfig = Codegen.empty();
+        this.domainConfigurationName = Codegen.empty();
+        this.domainConfigurationStatus = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.serverCertificateArns = Codegen.empty();
+        this.serviceType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.validationCertificateArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder authorizerConfig(@Nullable DomainConfigurationAuthorizerConfigArgs authorizerConfig) {
-            this.authorizerConfig = Output.ofNullable(authorizerConfig);
+            this.authorizerConfig = Codegen.ofNullable(authorizerConfig);
             return this;
         }
         public Builder domainConfigurationName(@Nullable Output<String> domainConfigurationName) {
@@ -152,7 +153,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder domainConfigurationName(@Nullable String domainConfigurationName) {
-            this.domainConfigurationName = Output.ofNullable(domainConfigurationName);
+            this.domainConfigurationName = Codegen.ofNullable(domainConfigurationName);
             return this;
         }
         public Builder domainConfigurationStatus(@Nullable Output<DomainConfigurationStatus> domainConfigurationStatus) {
@@ -160,7 +161,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder domainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
-            this.domainConfigurationStatus = Output.ofNullable(domainConfigurationStatus);
+            this.domainConfigurationStatus = Codegen.ofNullable(domainConfigurationStatus);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -168,7 +169,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder serverCertificateArns(@Nullable Output<List<String>> serverCertificateArns) {
@@ -176,7 +177,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serverCertificateArns(@Nullable List<String> serverCertificateArns) {
-            this.serverCertificateArns = Output.ofNullable(serverCertificateArns);
+            this.serverCertificateArns = Codegen.ofNullable(serverCertificateArns);
             return this;
         }
         public Builder serverCertificateArns(String... serverCertificateArns) {
@@ -187,7 +188,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serviceType(@Nullable DomainConfigurationServiceType serviceType) {
-            this.serviceType = Output.ofNullable(serviceType);
+            this.serviceType = Codegen.ofNullable(serviceType);
             return this;
         }
         public Builder tags(@Nullable Output<List<DomainConfigurationTagArgs>> tags) {
@@ -195,7 +196,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable List<DomainConfigurationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DomainConfigurationTagArgs... tags) {
@@ -206,7 +207,7 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder validationCertificateArn(@Nullable String validationCertificateArn) {
-            this.validationCertificateArn = Output.ofNullable(validationCertificateArn);
+            this.validationCertificateArn = Codegen.ofNullable(validationCertificateArn);
             return this;
         }        public DomainConfigurationArgs build() {
             return new DomainConfigurationArgs(authorizerConfig, domainConfigurationName, domainConfigurationStatus, domainName, serverCertificateArns, serviceType, tags, validationCertificateArn);

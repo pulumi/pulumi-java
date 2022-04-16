@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<String> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="schema", required=true)
       private final Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema;
     }
 
@@ -49,8 +50,8 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private TopicSchemaSettingsArgs() {
-        this.encoding = Output.empty();
-        this.schema = Output.empty();
+        this.encoding = Codegen.empty();
+        this.schema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder schema(Output<String> schema) {

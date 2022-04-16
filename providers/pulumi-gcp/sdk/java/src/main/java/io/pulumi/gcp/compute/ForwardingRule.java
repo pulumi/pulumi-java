@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ForwardingRuleArgs;
 import io.pulumi.gcp.compute.inputs.ForwardingRuleState;
@@ -74,7 +75,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * Cannot be set if port or portRange are set.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllPorts() {
+    public Output</* @Nullable */ Boolean> allPorts() {
         return this.allPorts;
     }
     /**
@@ -90,7 +91,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * Otherwise only allows from the local region the ILB is located at.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowGlobalAccess() {
+    public Output</* @Nullable */ Boolean> allowGlobalAccess() {
         return this.allowGlobalAccess;
     }
     /**
@@ -106,7 +107,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * for INTERNAL load balancing.
      * 
      */
-    public Output</* @Nullable */ String> getBackendService() {
+    public Output</* @Nullable */ String> backendService() {
         return this.backendService;
     }
     /**
@@ -120,7 +121,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * @return [Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -136,7 +137,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -174,7 +175,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * Google APIs, IP address must be provided.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -194,7 +195,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
      * 
      */
-    public Output<String> getIpProtocol() {
+    public Output<String> ipProtocol() {
         return this.ipProtocol;
     }
     /**
@@ -218,7 +219,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * loadBalancingScheme set to INTERNAL.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsMirroringCollector() {
+    public Output</* @Nullable */ Boolean> isMirroringCollector() {
         return this.isMirroringCollector;
     }
     /**
@@ -232,7 +233,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * @return Used internally during label updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -246,7 +247,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this forwarding rule.  A list of key->value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -278,7 +279,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> getLoadBalancingScheme() {
+    public Output</* @Nullable */ String> loadBalancingScheme() {
         return this.loadBalancingScheme;
     }
     /**
@@ -304,7 +305,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -324,7 +325,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * This field is only used for INTERNAL load balancing.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -342,7 +343,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `PREMIUM` and `STANDARD`.
      * 
      */
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier;
     }
     /**
@@ -386,7 +387,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * * TargetVpnGateway: 500, 4500
      * 
      */
-    public Output</* @Nullable */ String> getPortRange() {
+    public Output</* @Nullable */ String> portRange() {
         return this.portRange;
     }
     /**
@@ -416,7 +417,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * You may specify a maximum of up to 5 ports, which can be non-contiguous.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPorts() {
+    public Output</* @Nullable */ List<String>> ports() {
         return this.ports;
     }
     /**
@@ -432,7 +433,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -448,7 +449,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * This field is not applicable to global forwarding rules.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -462,7 +463,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -494,7 +495,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * This field is only used for INTERNAL load balancing.
      * 
      */
-    public Output</* @Nullable */ String> getServiceLabel() {
+    public Output</* @Nullable */ String> serviceLabel() {
         return this.serviceLabel;
     }
     /**
@@ -510,7 +511,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * load balancing.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -532,7 +533,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * subnetwork must be specified.
      * 
      */
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
     /**
@@ -552,7 +553,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * object.
      * 
      */
-    public Output</* @Nullable */ String> getTarget() {
+    public Output</* @Nullable */ String> target() {
         return this.target;
     }
 
@@ -578,7 +579,7 @@ public class ForwardingRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ForwardingRule(String name, @Nullable ForwardingRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/forwardingRule:ForwardingRule", name, args == null ? ForwardingRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/forwardingRule:ForwardingRule", name, args == null ? ForwardingRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ForwardingRule(String name, Output<String> id, @Nullable ForwardingRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

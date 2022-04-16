@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     @Import(name="outboundRuleFqdn")
       private final @Nullable Output<String> outboundRuleFqdn;
 
-    public Output<String> getOutboundRuleFqdn() {
-        return this.outboundRuleFqdn == null ? Output.empty() : this.outboundRuleFqdn;
+    public Output<String> outboundRuleFqdn() {
+        return this.outboundRuleFqdn == null ? Codegen.empty() : this.outboundRuleFqdn;
     }
 
     /**
@@ -28,7 +29,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -39,7 +40,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -53,9 +54,9 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     }
 
     private OutboundFirewallRuleArgs() {
-        this.outboundRuleFqdn = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.outboundRuleFqdn = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder outboundRuleFqdn(@Nullable String outboundRuleFqdn) {
-            this.outboundRuleFqdn = Output.ofNullable(outboundRuleFqdn);
+            this.outboundRuleFqdn = Codegen.ofNullable(outboundRuleFqdn);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.TrafficMirrorSessionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return The ARN of the traffic mirror session.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return A description of the traffic mirror session.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +71,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return ID of the source network interface. Not all network interfaces are eligible as mirror sources. On EC2 instances only nitro based instances support mirroring.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -84,7 +85,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the session owner.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -98,7 +99,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return The number of bytes in each packet to mirror. These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror the entire packet. To mirror a subset of the packet, set this to the length (in bytes) that you want to mirror.
      * 
      */
-    public Output</* @Nullable */ Integer> getPacketLength() {
+    public Output</* @Nullable */ Integer> packetLength() {
         return this.packetLength;
     }
     /**
@@ -112,7 +113,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return - The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.
      * 
      */
-    public Output<Integer> getSessionNumber() {
+    public Output<Integer> sessionNumber() {
         return this.sessionNumber;
     }
     /**
@@ -126,7 +127,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +141,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -154,7 +155,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return ID of the traffic mirror filter to be used
      * 
      */
-    public Output<String> getTrafficMirrorFilterId() {
+    public Output<String> trafficMirrorFilterId() {
         return this.trafficMirrorFilterId;
     }
     /**
@@ -168,7 +169,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return ID of the traffic mirror target to be used
      * 
      */
-    public Output<String> getTrafficMirrorTargetId() {
+    public Output<String> trafficMirrorTargetId() {
         return this.trafficMirrorTargetId;
     }
     /**
@@ -182,7 +183,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @return - The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see RFC 7348. If you do not specify a VirtualNetworkId, an account-wide unique id is chosen at random.
      * 
      */
-    public Output<Integer> getVirtualNetworkId() {
+    public Output<Integer> virtualNetworkId() {
         return this.virtualNetworkId;
     }
 
@@ -208,7 +209,7 @@ public class TrafficMirrorSession extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TrafficMirrorSession(String name, TrafficMirrorSessionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/trafficMirrorSession:TrafficMirrorSession", name, args == null ? TrafficMirrorSessionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/trafficMirrorSession:TrafficMirrorSession", name, args == null ? TrafficMirrorSessionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TrafficMirrorSession(String name, Output<String> id, @Nullable TrafficMirrorSessionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

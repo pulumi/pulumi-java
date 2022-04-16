@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Specifies for what type of messages sampling settings should not apply.
      * 
      */
-    public Output</* @Nullable */ String> getAlwaysLog() {
+    public Output</* @Nullable */ String> alwaysLog() {
         return this.alwaysLog;
     }
     /**
@@ -58,7 +59,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Diagnostic settings for incoming/outgoing HTTP messages to the Backend
      * 
      */
-    public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> getBackend() {
+    public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> backend() {
         return this.backend;
     }
     /**
@@ -72,7 +73,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
      * 
      */
-    public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> getFrontend() {
+    public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> frontend() {
         return this.frontend;
     }
     /**
@@ -86,7 +87,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Sets correlation protocol to use for Application Insights diagnostics.
      * 
      */
-    public Output</* @Nullable */ String> getHttpCorrelationProtocol() {
+    public Output</* @Nullable */ String> httpCorrelationProtocol() {
         return this.httpCorrelationProtocol;
     }
     /**
@@ -100,7 +101,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Log the ClientIP. Default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLogClientIp() {
+    public Output</* @Nullable */ Boolean> logClientIp() {
         return this.logClientIp;
     }
     /**
@@ -114,7 +115,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Resource Id of a target logger.
      * 
      */
-    public Output<String> getLoggerId() {
+    public Output<String> loggerId() {
         return this.loggerId;
     }
     /**
@@ -128,7 +129,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return The format of the Operation Name for Application Insights telemetries. Default is Name.
      * 
      */
-    public Output</* @Nullable */ String> getOperationNameFormat() {
+    public Output</* @Nullable */ String> operationNameFormat() {
         return this.operationNameFormat;
     }
     /**
@@ -156,7 +157,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Sampling settings for Diagnostic.
      * 
      */
-    public Output</* @Nullable */ SamplingSettingsResponse> getSampling() {
+    public Output</* @Nullable */ SamplingSettingsResponse> sampling() {
         return this.sampling;
     }
     /**
@@ -170,7 +171,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -184,7 +185,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @return The verbosity level applied to traces emitted by trace policies.
      * 
      */
-    public Output</* @Nullable */ String> getVerbosity() {
+    public Output</* @Nullable */ String> verbosity() {
         return this.verbosity;
     }
 
@@ -210,7 +211,7 @@ public class ApiDiagnostic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiDiagnostic(String name, ApiDiagnosticArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiDiagnostic", name, args == null ? ApiDiagnosticArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:ApiDiagnostic", name, args == null ? ApiDiagnosticArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiDiagnostic(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

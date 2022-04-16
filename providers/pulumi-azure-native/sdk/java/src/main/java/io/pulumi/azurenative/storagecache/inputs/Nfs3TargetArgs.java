@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usageModel")
       private final @Nullable Output<String> usageModel;
 
-    public Output<String> getUsageModel() {
-        return this.usageModel == null ? Output.empty() : this.usageModel;
+    public Output<String> usageModel() {
+        return this.usageModel == null ? Codegen.empty() : this.usageModel;
     }
 
     public Nfs3TargetArgs(
@@ -48,8 +49,8 @@ public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private Nfs3TargetArgs() {
-        this.target = Output.empty();
-        this.usageModel = Output.empty();
+        this.target = Codegen.empty();
+        this.usageModel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder usageModel(@Nullable Output<String> usageModel) {
@@ -87,7 +88,7 @@ public final class Nfs3TargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usageModel(@Nullable String usageModel) {
-            this.usageModel = Output.ofNullable(usageModel);
+            this.usageModel = Codegen.ofNullable(usageModel);
             return this;
         }        public Nfs3TargetArgs build() {
             return new Nfs3TargetArgs(target, usageModel);

@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -44,8 +45,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageDescription")
       private final @Nullable Output<String> stageDescription;
 
-    public Output<String> getStageDescription() {
-        return this.stageDescription == null ? Output.empty() : this.stageDescription;
+    public Output<String> stageDescription() {
+        return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+    public Output<String> stageName() {
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+    public Output<Map<String,String>> triggers() {
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+    public Output<Map<String,String>> variables() {
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     public DeploymentArgs(
@@ -97,12 +98,12 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.description = Output.empty();
-        this.restApi = Output.empty();
-        this.stageDescription = Output.empty();
-        this.stageName = Output.empty();
-        this.triggers = Output.empty();
-        this.variables = Output.empty();
+        this.description = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.stageDescription = Codegen.empty();
+        this.stageName = Codegen.empty();
+        this.triggers = Codegen.empty();
+        this.variables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder restApi(Output<String> restApi) {
@@ -152,7 +153,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageDescription(@Nullable String stageDescription) {
-            this.stageDescription = Output.ofNullable(stageDescription);
+            this.stageDescription = Codegen.ofNullable(stageDescription);
             return this;
         }
         public Builder stageName(@Nullable Output<String> stageName) {
@@ -160,7 +161,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
@@ -168,7 +169,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
@@ -176,7 +177,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }        public DeploymentArgs build() {
             return new DeploymentArgs(description, restApi, stageDescription, stageName, triggers, variables);

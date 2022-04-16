@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SSLPolicyArgs;
 import io.pulumi.gcp.compute.inputs.SSLPolicyState;
@@ -55,7 +56,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -85,7 +86,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * *must not* be present when using any other profile.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomFeatures() {
+    public Output</* @Nullable */ List<String>> customFeatures() {
         return this.customFeatures;
     }
     /**
@@ -99,7 +100,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -113,7 +114,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @return The list of features enabled in the SSL policy.
      * 
      */
-    public Output<List<String>> getEnabledFeatures() {
+    public Output<List<String>> enabledFeatures() {
         return this.enabledFeatures;
     }
     /**
@@ -127,7 +128,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -147,7 +148,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * Possible values are `TLS_1_0`, `TLS_1_1`, and `TLS_1_2`.
      * 
      */
-    public Output</* @Nullable */ String> getMinTlsVersion() {
+    public Output</* @Nullable */ String> minTlsVersion() {
         return this.minTlsVersion;
     }
     /**
@@ -173,7 +174,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -203,7 +204,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * Possible values are `COMPATIBLE`, `MODERN`, `RESTRICTED`, and `CUSTOM`.
      * 
      */
-    public Output</* @Nullable */ String> getProfile() {
+    public Output</* @Nullable */ String> profile() {
         return this.profile;
     }
     /**
@@ -219,7 +220,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -233,7 +234,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -259,7 +260,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SSLPolicy(String name, @Nullable SSLPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/sSLPolicy:SSLPolicy", name, args == null ? SSLPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/sSLPolicy:SSLPolicy", name, args == null ? SSLPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SSLPolicy(String name, Output<String> id, @Nullable SSLPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

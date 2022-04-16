@@ -9,6 +9,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.HelmOperatorProperti
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -38,7 +39,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
 
-    public Output<String> getClusterResourceName() {
+    public Output<String> clusterResourceName() {
         return this.clusterResourceName;
     }
 
@@ -49,7 +50,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
 
-    public Output<String> getClusterRp() {
+    public Output<String> clusterRp() {
         return this.clusterRp;
     }
 
@@ -60,8 +61,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
-    public Output<Map<String,String>> getConfigurationProtectedSettings() {
-        return this.configurationProtectedSettings == null ? Output.empty() : this.configurationProtectedSettings;
+    public Output<Map<String,String>> configurationProtectedSettings() {
+        return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="enableHelmOperator")
       private final @Nullable Output<Boolean> enableHelmOperator;
 
-    public Output<Boolean> getEnableHelmOperator() {
-        return this.enableHelmOperator == null ? Output.empty() : this.enableHelmOperator;
+    public Output<Boolean> enableHelmOperator() {
+        return this.enableHelmOperator == null ? Codegen.empty() : this.enableHelmOperator;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="helmOperatorProperties")
       private final @Nullable Output<HelmOperatorPropertiesArgs> helmOperatorProperties;
 
-    public Output<HelmOperatorPropertiesArgs> getHelmOperatorProperties() {
-        return this.helmOperatorProperties == null ? Output.empty() : this.helmOperatorProperties;
+    public Output<HelmOperatorPropertiesArgs> helmOperatorProperties() {
+        return this.helmOperatorProperties == null ? Codegen.empty() : this.helmOperatorProperties;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="operatorInstanceName")
       private final @Nullable Output<String> operatorInstanceName;
 
-    public Output<String> getOperatorInstanceName() {
-        return this.operatorInstanceName == null ? Output.empty() : this.operatorInstanceName;
+    public Output<String> operatorInstanceName() {
+        return this.operatorInstanceName == null ? Codegen.empty() : this.operatorInstanceName;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="operatorNamespace")
       private final @Nullable Output<String> operatorNamespace;
 
-    public Output<String> getOperatorNamespace() {
-        return this.operatorNamespace == null ? Output.empty() : this.operatorNamespace;
+    public Output<String> operatorNamespace() {
+        return this.operatorNamespace == null ? Codegen.empty() : this.operatorNamespace;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="operatorParams")
       private final @Nullable Output<String> operatorParams;
 
-    public Output<String> getOperatorParams() {
-        return this.operatorParams == null ? Output.empty() : this.operatorParams;
+    public Output<String> operatorParams() {
+        return this.operatorParams == null ? Codegen.empty() : this.operatorParams;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="operatorScope")
       private final @Nullable Output<Either<String,OperatorScopeType>> operatorScope;
 
-    public Output<Either<String,OperatorScopeType>> getOperatorScope() {
-        return this.operatorScope == null ? Output.empty() : this.operatorScope;
+    public Output<Either<String,OperatorScopeType>> operatorScope() {
+        return this.operatorScope == null ? Codegen.empty() : this.operatorScope;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="operatorType")
       private final @Nullable Output<Either<String,OperatorType>> operatorType;
 
-    public Output<Either<String,OperatorType>> getOperatorType() {
-        return this.operatorType == null ? Output.empty() : this.operatorType;
+    public Output<Either<String,OperatorType>> operatorType() {
+        return this.operatorType == null ? Codegen.empty() : this.operatorType;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="repositoryUrl")
       private final @Nullable Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
-        return this.repositoryUrl == null ? Output.empty() : this.repositoryUrl;
+    public Output<String> repositoryUrl() {
+        return this.repositoryUrl == null ? Codegen.empty() : this.repositoryUrl;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -170,8 +171,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="sourceControlConfigurationName")
       private final @Nullable Output<String> sourceControlConfigurationName;
 
-    public Output<String> getSourceControlConfigurationName() {
-        return this.sourceControlConfigurationName == null ? Output.empty() : this.sourceControlConfigurationName;
+    public Output<String> sourceControlConfigurationName() {
+        return this.sourceControlConfigurationName == null ? Codegen.empty() : this.sourceControlConfigurationName;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="sshKnownHostsContents")
       private final @Nullable Output<String> sshKnownHostsContents;
 
-    public Output<String> getSshKnownHostsContents() {
-        return this.sshKnownHostsContents == null ? Output.empty() : this.sshKnownHostsContents;
+    public Output<String> sshKnownHostsContents() {
+        return this.sshKnownHostsContents == null ? Codegen.empty() : this.sshKnownHostsContents;
     }
 
     public SourceControlConfigurationArgs(
@@ -208,7 +209,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
         this.enableHelmOperator = enableHelmOperator;
         this.helmOperatorProperties = helmOperatorProperties;
         this.operatorInstanceName = operatorInstanceName;
-        this.operatorNamespace = operatorNamespace == null ? Output.ofNullable("default") : operatorNamespace;
+        this.operatorNamespace = operatorNamespace == null ? Codegen.ofNullable("default") : operatorNamespace;
         this.operatorParams = operatorParams;
         this.operatorScope = operatorScope;
         this.operatorType = operatorType;
@@ -219,21 +220,21 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private SourceControlConfigurationArgs() {
-        this.clusterName = Output.empty();
-        this.clusterResourceName = Output.empty();
-        this.clusterRp = Output.empty();
-        this.configurationProtectedSettings = Output.empty();
-        this.enableHelmOperator = Output.empty();
-        this.helmOperatorProperties = Output.empty();
-        this.operatorInstanceName = Output.empty();
-        this.operatorNamespace = Output.empty();
-        this.operatorParams = Output.empty();
-        this.operatorScope = Output.empty();
-        this.operatorType = Output.empty();
-        this.repositoryUrl = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sourceControlConfigurationName = Output.empty();
-        this.sshKnownHostsContents = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.clusterResourceName = Codegen.empty();
+        this.clusterRp = Codegen.empty();
+        this.configurationProtectedSettings = Codegen.empty();
+        this.enableHelmOperator = Codegen.empty();
+        this.helmOperatorProperties = Codegen.empty();
+        this.operatorInstanceName = Codegen.empty();
+        this.operatorNamespace = Codegen.empty();
+        this.operatorParams = Codegen.empty();
+        this.operatorScope = Codegen.empty();
+        this.operatorType = Codegen.empty();
+        this.repositoryUrl = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sourceControlConfigurationName = Codegen.empty();
+        this.sshKnownHostsContents = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -313,7 +314,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
-            this.configurationProtectedSettings = Output.ofNullable(configurationProtectedSettings);
+            this.configurationProtectedSettings = Codegen.ofNullable(configurationProtectedSettings);
             return this;
         }
         public Builder enableHelmOperator(@Nullable Output<Boolean> enableHelmOperator) {
@@ -321,7 +322,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enableHelmOperator(@Nullable Boolean enableHelmOperator) {
-            this.enableHelmOperator = Output.ofNullable(enableHelmOperator);
+            this.enableHelmOperator = Codegen.ofNullable(enableHelmOperator);
             return this;
         }
         public Builder helmOperatorProperties(@Nullable Output<HelmOperatorPropertiesArgs> helmOperatorProperties) {
@@ -329,7 +330,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder helmOperatorProperties(@Nullable HelmOperatorPropertiesArgs helmOperatorProperties) {
-            this.helmOperatorProperties = Output.ofNullable(helmOperatorProperties);
+            this.helmOperatorProperties = Codegen.ofNullable(helmOperatorProperties);
             return this;
         }
         public Builder operatorInstanceName(@Nullable Output<String> operatorInstanceName) {
@@ -337,7 +338,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder operatorInstanceName(@Nullable String operatorInstanceName) {
-            this.operatorInstanceName = Output.ofNullable(operatorInstanceName);
+            this.operatorInstanceName = Codegen.ofNullable(operatorInstanceName);
             return this;
         }
         public Builder operatorNamespace(@Nullable Output<String> operatorNamespace) {
@@ -345,7 +346,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder operatorNamespace(@Nullable String operatorNamespace) {
-            this.operatorNamespace = Output.ofNullable(operatorNamespace);
+            this.operatorNamespace = Codegen.ofNullable(operatorNamespace);
             return this;
         }
         public Builder operatorParams(@Nullable Output<String> operatorParams) {
@@ -353,7 +354,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder operatorParams(@Nullable String operatorParams) {
-            this.operatorParams = Output.ofNullable(operatorParams);
+            this.operatorParams = Codegen.ofNullable(operatorParams);
             return this;
         }
         public Builder operatorScope(@Nullable Output<Either<String,OperatorScopeType>> operatorScope) {
@@ -361,7 +362,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder operatorScope(@Nullable Either<String,OperatorScopeType> operatorScope) {
-            this.operatorScope = Output.ofNullable(operatorScope);
+            this.operatorScope = Codegen.ofNullable(operatorScope);
             return this;
         }
         public Builder operatorType(@Nullable Output<Either<String,OperatorType>> operatorType) {
@@ -369,7 +370,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder operatorType(@Nullable Either<String,OperatorType> operatorType) {
-            this.operatorType = Output.ofNullable(operatorType);
+            this.operatorType = Codegen.ofNullable(operatorType);
             return this;
         }
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
@@ -377,7 +378,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
-            this.repositoryUrl = Output.ofNullable(repositoryUrl);
+            this.repositoryUrl = Codegen.ofNullable(repositoryUrl);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -393,7 +394,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sourceControlConfigurationName(@Nullable String sourceControlConfigurationName) {
-            this.sourceControlConfigurationName = Output.ofNullable(sourceControlConfigurationName);
+            this.sourceControlConfigurationName = Codegen.ofNullable(sourceControlConfigurationName);
             return this;
         }
         public Builder sshKnownHostsContents(@Nullable Output<String> sshKnownHostsContents) {
@@ -401,7 +402,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sshKnownHostsContents(@Nullable String sshKnownHostsContents) {
-            this.sshKnownHostsContents = Output.ofNullable(sshKnownHostsContents);
+            this.sshKnownHostsContents = Codegen.ofNullable(sshKnownHostsContents);
             return this;
         }        public SourceControlConfigurationArgs build() {
             return new SourceControlConfigurationArgs(clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, enableHelmOperator, helmOperatorProperties, operatorInstanceName, operatorNamespace, operatorParams, operatorScope, operatorType, repositoryUrl, resourceGroupName, sourceControlConfigurationName, sshKnownHostsContents);

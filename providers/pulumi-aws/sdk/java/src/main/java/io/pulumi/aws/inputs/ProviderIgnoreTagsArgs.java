@@ -5,6 +5,7 @@ package io.pulumi.aws.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyPrefixes")
       private final @Nullable Output<List<String>> keyPrefixes;
 
-    public Output<List<String>> getKeyPrefixes() {
-        return this.keyPrefixes == null ? Output.empty() : this.keyPrefixes;
+    public Output<List<String>> keyPrefixes() {
+        return this.keyPrefixes == null ? Codegen.empty() : this.keyPrefixes;
     }
 
     @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+    public Output<List<String>> keys() {
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     public ProviderIgnoreTagsArgs(
@@ -37,8 +38,8 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ProviderIgnoreTagsArgs() {
-        this.keyPrefixes = Output.empty();
-        this.keys = Output.empty();
+        this.keyPrefixes = Codegen.empty();
+        this.keys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
-            this.keyPrefixes = Output.ofNullable(keyPrefixes);
+            this.keyPrefixes = Codegen.ofNullable(keyPrefixes);
             return this;
         }
         public Builder keyPrefixes(String... keyPrefixes) {
@@ -79,7 +80,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder keys(String... keys) {

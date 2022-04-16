@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public final class NodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pulumi.re
     @Import(name="sysctls", required=true)
       private final Output<Map<String,String>> sysctls;
 
-    public Output<Map<String,String>> getSysctls() {
+    public Output<Map<String,String>> sysctls() {
         return this.sysctls;
     }
 
@@ -26,7 +27,7 @@ public final class NodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pulumi.re
     }
 
     private NodePoolNodeConfigLinuxNodeConfigGetArgs() {
-        this.sysctls = Output.empty();
+        this.sysctls = Codegen.empty();
     }
 
     public static Builder builder() {

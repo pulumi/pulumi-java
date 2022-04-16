@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+    public Output<String> branch() {
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="commit")
       private final @Nullable Output<String> commit;
 
-    public Output<String> getCommit() {
-        return this.commit == null ? Output.empty() : this.commit;
+    public Output<String> commit() {
+        return this.commit == null ? Codegen.empty() : this.commit;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="semver")
       private final @Nullable Output<String> semver;
 
-    public Output<String> getSemver() {
-        return this.semver == null ? Output.empty() : this.semver;
+    public Output<String> semver() {
+        return this.semver == null ? Codegen.empty() : this.semver;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<String> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public RepositoryRefDefinitionArgs(
@@ -74,10 +75,10 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private RepositoryRefDefinitionArgs() {
-        this.branch = Output.empty();
-        this.commit = Output.empty();
-        this.semver = Output.empty();
-        this.tag = Output.empty();
+        this.branch = Codegen.empty();
+        this.commit = Codegen.empty();
+        this.semver = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder commit(@Nullable Output<String> commit) {
@@ -119,7 +120,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder commit(@Nullable String commit) {
-            this.commit = Output.ofNullable(commit);
+            this.commit = Codegen.ofNullable(commit);
             return this;
         }
         public Builder semver(@Nullable Output<String> semver) {
@@ -127,7 +128,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder semver(@Nullable String semver) {
-            this.semver = Output.ofNullable(semver);
+            this.semver = Codegen.ofNullable(semver);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -135,7 +136,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public RepositoryRefDefinitionArgs build() {
             return new RepositoryRefDefinitionArgs(branch, commit, semver, tag);

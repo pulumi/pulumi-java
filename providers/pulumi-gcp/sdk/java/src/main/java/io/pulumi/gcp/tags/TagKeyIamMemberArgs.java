@@ -5,6 +5,7 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.tags.inputs.TagKeyIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,14 +19,14 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="condition")
       private final @Nullable Output<TagKeyIamMemberConditionArgs> condition;
 
-    public Output<TagKeyIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<TagKeyIamMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -38,7 +39,7 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -49,7 +50,7 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagKey", required=true)
       private final Output<String> tagKey;
 
-    public Output<String> getTagKey() {
+    public Output<String> tagKey() {
         return this.tagKey;
     }
 
@@ -65,10 +66,10 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TagKeyIamMemberArgs() {
-        this.condition = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
-        this.tagKey = Output.empty();
+        this.condition = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
+        this.tagKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder condition(@Nullable TagKeyIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder member(Output<String> member) {

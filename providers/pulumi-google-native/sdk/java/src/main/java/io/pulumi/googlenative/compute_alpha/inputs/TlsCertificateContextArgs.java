@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.TlsCertificateContextCertificateSource;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
@@ -27,8 +28,8 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     @Import(name="certificatePaths")
       private final @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
 
-    public Output<TlsCertificatePathsArgs> getCertificatePaths() {
-        return this.certificatePaths == null ? Output.empty() : this.certificatePaths;
+    public Output<TlsCertificatePathsArgs> certificatePaths() {
+        return this.certificatePaths == null ? Codegen.empty() : this.certificatePaths;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     @Import(name="certificateSource")
       private final @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
 
-    public Output<TlsCertificateContextCertificateSource> getCertificateSource() {
-        return this.certificateSource == null ? Output.empty() : this.certificateSource;
+    public Output<TlsCertificateContextCertificateSource> certificateSource() {
+        return this.certificateSource == null ? Codegen.empty() : this.certificateSource;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     @Import(name="sdsConfig")
       private final @Nullable Output<SdsConfigArgs> sdsConfig;
 
-    public Output<SdsConfigArgs> getSdsConfig() {
-        return this.sdsConfig == null ? Output.empty() : this.sdsConfig;
+    public Output<SdsConfigArgs> sdsConfig() {
+        return this.sdsConfig == null ? Codegen.empty() : this.sdsConfig;
     }
 
     public TlsCertificateContextArgs(
@@ -63,9 +64,9 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     }
 
     private TlsCertificateContextArgs() {
-        this.certificatePaths = Output.empty();
-        this.certificateSource = Output.empty();
-        this.sdsConfig = Output.empty();
+        this.certificatePaths = Codegen.empty();
+        this.certificateSource = Codegen.empty();
+        this.sdsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificatePaths(@Nullable TlsCertificatePathsArgs certificatePaths) {
-            this.certificatePaths = Output.ofNullable(certificatePaths);
+            this.certificatePaths = Codegen.ofNullable(certificatePaths);
             return this;
         }
         public Builder certificateSource(@Nullable Output<TlsCertificateContextCertificateSource> certificateSource) {
@@ -105,7 +106,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificateSource(@Nullable TlsCertificateContextCertificateSource certificateSource) {
-            this.certificateSource = Output.ofNullable(certificateSource);
+            this.certificateSource = Codegen.ofNullable(certificateSource);
             return this;
         }
         public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
@@ -113,7 +114,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sdsConfig(@Nullable SdsConfigArgs sdsConfig) {
-            this.sdsConfig = Output.ofNullable(sdsConfig);
+            this.sdsConfig = Codegen.ofNullable(sdsConfig);
             return this;
         }        public TlsCertificateContextArgs build() {
             return new TlsCertificateContextArgs(certificatePaths, certificateSource, sdsConfig);

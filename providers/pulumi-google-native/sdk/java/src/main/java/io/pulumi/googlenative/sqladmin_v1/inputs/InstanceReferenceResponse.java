@@ -23,7 +23,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

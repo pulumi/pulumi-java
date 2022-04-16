@@ -11,6 +11,7 @@ import io.pulumi.azurenative.insights.inputs.SourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action", required=true)
       private final Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
 
-    public Output<Either<AlertingActionArgs,LogToMetricActionArgs>> getAction() {
+    public Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action() {
         return this.action;
     }
 
@@ -40,8 +41,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="autoMitigate")
       private final @Nullable Output<Boolean> autoMitigate;
 
-    public Output<Boolean> getAutoMitigate() {
-        return this.autoMitigate == null ? Output.empty() : this.autoMitigate;
+    public Output<Boolean> autoMitigate() {
+        return this.autoMitigate == null ? Codegen.empty() : this.autoMitigate;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Either<String,Enabled>> enabled;
 
-    public Output<Either<String,Enabled>> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Either<String,Enabled>> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -106,8 +107,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="schedule")
       private final @Nullable Output<ScheduleArgs> schedule;
 
-    public Output<ScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<ScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="source", required=true)
       private final Output<SourceArgs> source;
 
-    public Output<SourceArgs> getSource() {
+    public Output<SourceArgs> source() {
         return this.source;
     }
 
@@ -139,8 +140,8 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ScheduledQueryRuleArgs(
@@ -156,7 +157,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         Output<SourceArgs> source,
         @Nullable Output<Map<String,String>> tags) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.autoMitigate = autoMitigate == null ? Output.ofNullable(false) : autoMitigate;
+        this.autoMitigate = autoMitigate == null ? Codegen.ofNullable(false) : autoMitigate;
         this.description = description;
         this.displayName = displayName;
         this.enabled = enabled;
@@ -169,17 +170,17 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ScheduledQueryRuleArgs() {
-        this.action = Output.empty();
-        this.autoMitigate = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.schedule = Output.empty();
-        this.source = Output.empty();
-        this.tags = Output.empty();
+        this.action = Codegen.empty();
+        this.autoMitigate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -235,7 +236,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder autoMitigate(@Nullable Boolean autoMitigate) {
-            this.autoMitigate = Output.ofNullable(autoMitigate);
+            this.autoMitigate = Codegen.ofNullable(autoMitigate);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -243,7 +244,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -251,7 +252,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enabled(@Nullable Output<Either<String,Enabled>> enabled) {
@@ -259,7 +260,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enabled(@Nullable Either<String,Enabled> enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -267,7 +268,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -283,7 +284,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
@@ -291,7 +292,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder schedule(@Nullable ScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder source(Output<SourceArgs> source) {
@@ -307,7 +308,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ScheduledQueryRuleArgs build() {
             return new ScheduledQueryRuleArgs(action, autoMitigate, description, displayName, enabled, location, resourceGroupName, ruleName, schedule, source, tags);

@@ -9,6 +9,7 @@ import io.pulumi.aws.sqs.inputs.QueuePolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class QueuePolicy extends io.pulumi.resources.CustomResource {
      * @return The JSON policy for the SQS queue.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -54,7 +55,7 @@ public class QueuePolicy extends io.pulumi.resources.CustomResource {
      * @return The URL of the SQS Queue to which to attach the policy
      * 
      */
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
@@ -80,7 +81,7 @@ public class QueuePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public QueuePolicy(String name, QueuePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sqs/queuePolicy:QueuePolicy", name, args == null ? QueuePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sqs/queuePolicy:QueuePolicy", name, args == null ? QueuePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private QueuePolicy(String name, Output<String> id, @Nullable QueuePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

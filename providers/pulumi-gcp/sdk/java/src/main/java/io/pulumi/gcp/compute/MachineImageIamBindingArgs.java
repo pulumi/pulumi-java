@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.MachineImageIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="condition")
       private final @Nullable Output<MachineImageIamBindingConditionArgs> condition;
 
-    public Output<MachineImageIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<MachineImageIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="machineImage", required=true)
       private final Output<String> machineImage;
 
-    public Output<String> getMachineImage() {
+    public Output<String> machineImage() {
         return this.machineImage;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -54,8 +55,8 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -85,11 +86,11 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
     }
 
     private MachineImageIamBindingArgs() {
-        this.condition = Output.empty();
-        this.machineImage = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.machineImage = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder condition(@Nullable MachineImageIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder machineImage(Output<String> machineImage) {
@@ -152,7 +153,7 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

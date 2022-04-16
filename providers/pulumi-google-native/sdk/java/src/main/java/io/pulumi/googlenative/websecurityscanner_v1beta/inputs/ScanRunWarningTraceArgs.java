@@ -5,6 +5,7 @@ package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunWarningTraceCode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
     @Import(name="code")
       private final @Nullable Output<ScanRunWarningTraceCode> code;
 
-    public Output<ScanRunWarningTraceCode> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+    public Output<ScanRunWarningTraceCode> code() {
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     public ScanRunWarningTraceArgs(@Nullable Output<ScanRunWarningTraceCode> code) {
@@ -34,7 +35,7 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ScanRunWarningTraceArgs() {
-        this.code = Output.empty();
+        this.code = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder code(@Nullable ScanRunWarningTraceCode code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }        public ScanRunWarningTraceArgs build() {
             return new ScanRunWarningTraceArgs(code);

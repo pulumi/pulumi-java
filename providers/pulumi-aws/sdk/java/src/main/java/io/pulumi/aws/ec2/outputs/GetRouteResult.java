@@ -60,50 +60,50 @@ public final class GetRouteResult {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
     }
 
-    public String getCarrierGatewayId() {
+    public String carrierGatewayId() {
         return this.carrierGatewayId;
     }
-    public String getDestinationCidrBlock() {
+    public String destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
-    public String getDestinationIpv6CidrBlock() {
+    public String destinationIpv6CidrBlock() {
         return this.destinationIpv6CidrBlock;
     }
-    public String getDestinationPrefixListId() {
+    public String destinationPrefixListId() {
         return this.destinationPrefixListId;
     }
-    public String getEgressOnlyGatewayId() {
+    public String egressOnlyGatewayId() {
         return this.egressOnlyGatewayId;
     }
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
-    public String getLocalGatewayId() {
+    public String localGatewayId() {
         return this.localGatewayId;
     }
-    public String getNatGatewayId() {
+    public String natGatewayId() {
         return this.natGatewayId;
     }
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
-    public String getRouteTableId() {
+    public String routeTableId() {
         return this.routeTableId;
     }
-    public String getTransitGatewayId() {
+    public String transitGatewayId() {
         return this.transitGatewayId;
     }
-    public String getVpcPeeringConnectionId() {
+    public String vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 

@@ -64,10 +64,10 @@ public final class GetInstanceTemplateScheduling {
      * terminated by a user). This defaults to true.
      * 
     */
-    public Boolean getAutomaticRestart() {
+    public Boolean automaticRestart() {
         return this.automaticRestart;
     }
-    public Integer getMinNodeCpus() {
+    public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
     /**
@@ -78,7 +78,7 @@ public final class GetInstanceTemplateScheduling {
      * Structure documented below.
      * 
     */
-    public List<GetInstanceTemplateSchedulingNodeAffinity> getNodeAffinities() {
+    public List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities;
     }
     /**
@@ -86,7 +86,7 @@ public final class GetInstanceTemplateScheduling {
      * instance.
      * 
     */
-    public String getOnHostMaintenance() {
+    public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
@@ -95,7 +95,7 @@ public final class GetInstanceTemplateScheduling {
      * [here](https://cloud.google.com/compute/docs/instances/preemptible).
      * 
     */
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 

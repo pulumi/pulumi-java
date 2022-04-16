@@ -28,7 +28,7 @@ public final class AiMetadataStoreEncryptionSpec {
      * Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
      * 
     */
-    public Optional<String> getKmsKeyName() {
+    public Optional<String> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
 

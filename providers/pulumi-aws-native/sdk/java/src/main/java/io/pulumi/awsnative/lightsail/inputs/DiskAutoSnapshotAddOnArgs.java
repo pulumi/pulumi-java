@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
     @Import(name="snapshotTimeOfDay")
       private final @Nullable Output<String> snapshotTimeOfDay;
 
-    public Output<String> getSnapshotTimeOfDay() {
-        return this.snapshotTimeOfDay == null ? Output.empty() : this.snapshotTimeOfDay;
+    public Output<String> snapshotTimeOfDay() {
+        return this.snapshotTimeOfDay == null ? Codegen.empty() : this.snapshotTimeOfDay;
     }
 
     public DiskAutoSnapshotAddOnArgs(@Nullable Output<String> snapshotTimeOfDay) {
@@ -34,7 +35,7 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
     }
 
     private DiskAutoSnapshotAddOnArgs() {
-        this.snapshotTimeOfDay = Output.empty();
+        this.snapshotTimeOfDay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = Output.ofNullable(snapshotTimeOfDay);
+            this.snapshotTimeOfDay = Codegen.ofNullable(snapshotTimeOfDay);
             return this;
         }        public DiskAutoSnapshotAddOnArgs build() {
             return new DiskAutoSnapshotAddOnArgs(snapshotTimeOfDay);

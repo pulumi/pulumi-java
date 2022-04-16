@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.InternetGatewayState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Internet Gateway.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the internet gateway.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -68,7 +69,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -82,7 +83,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -96,7 +97,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * @return The VPC ID to create in.
      * 
      */
-    public Output</* @Nullable */ String> getVpcId() {
+    public Output</* @Nullable */ String> vpcId() {
         return this.vpcId;
     }
 
@@ -122,7 +123,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InternetGateway(String name, @Nullable InternetGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/internetGateway:InternetGateway", name, args == null ? InternetGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/internetGateway:InternetGateway", name, args == null ? InternetGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InternetGateway(String name, Output<String> id, @Nullable InternetGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

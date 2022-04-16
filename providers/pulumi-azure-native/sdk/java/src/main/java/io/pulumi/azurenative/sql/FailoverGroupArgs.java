@@ -8,6 +8,7 @@ import io.pulumi.azurenative.sql.inputs.FailoverGroupReadWriteEndpointArgs;
 import io.pulumi.azurenative.sql.inputs.PartnerInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databases")
       private final @Nullable Output<List<String>> databases;
 
-    public Output<List<String>> getDatabases() {
-        return this.databases == null ? Output.empty() : this.databases;
+    public Output<List<String>> databases() {
+        return this.databases == null ? Codegen.empty() : this.databases;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failoverGroupName")
       private final @Nullable Output<String> failoverGroupName;
 
-    public Output<String> getFailoverGroupName() {
-        return this.failoverGroupName == null ? Output.empty() : this.failoverGroupName;
+    public Output<String> failoverGroupName() {
+        return this.failoverGroupName == null ? Codegen.empty() : this.failoverGroupName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerServers", required=true)
       private final Output<List<PartnerInfoArgs>> partnerServers;
 
-    public Output<List<PartnerInfoArgs>> getPartnerServers() {
+    public Output<List<PartnerInfoArgs>> partnerServers() {
         return this.partnerServers;
     }
 
@@ -59,8 +60,8 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnlyEndpoint")
       private final @Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
-    public Output<FailoverGroupReadOnlyEndpointArgs> getReadOnlyEndpoint() {
-        return this.readOnlyEndpoint == null ? Output.empty() : this.readOnlyEndpoint;
+    public Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint() {
+        return this.readOnlyEndpoint == null ? Codegen.empty() : this.readOnlyEndpoint;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readWriteEndpoint", required=true)
       private final Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
-    public Output<FailoverGroupReadWriteEndpointArgs> getReadWriteEndpoint() {
+    public Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
 
@@ -81,7 +82,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +93,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -103,8 +104,8 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FailoverGroupArgs(
@@ -127,14 +128,14 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FailoverGroupArgs() {
-        this.databases = Output.empty();
-        this.failoverGroupName = Output.empty();
-        this.partnerServers = Output.empty();
-        this.readOnlyEndpoint = Output.empty();
-        this.readWriteEndpoint = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.tags = Output.empty();
+        this.databases = Codegen.empty();
+        this.failoverGroupName = Codegen.empty();
+        this.partnerServers = Codegen.empty();
+        this.readOnlyEndpoint = Codegen.empty();
+        this.readWriteEndpoint = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databases(@Nullable List<String> databases) {
-            this.databases = Output.ofNullable(databases);
+            this.databases = Codegen.ofNullable(databases);
             return this;
         }
         public Builder databases(String... databases) {
@@ -187,7 +188,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failoverGroupName(@Nullable String failoverGroupName) {
-            this.failoverGroupName = Output.ofNullable(failoverGroupName);
+            this.failoverGroupName = Codegen.ofNullable(failoverGroupName);
             return this;
         }
         public Builder partnerServers(Output<List<PartnerInfoArgs>> partnerServers) {
@@ -206,7 +207,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
-            this.readOnlyEndpoint = Output.ofNullable(readOnlyEndpoint);
+            this.readOnlyEndpoint = Codegen.ofNullable(readOnlyEndpoint);
             return this;
         }
         public Builder readWriteEndpoint(Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
@@ -238,7 +239,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public FailoverGroupArgs build() {
             return new FailoverGroupArgs(databases, failoverGroupName, partnerServers, readOnlyEndpoint, readWriteEndpoint, resourceGroupName, serverName, tags);

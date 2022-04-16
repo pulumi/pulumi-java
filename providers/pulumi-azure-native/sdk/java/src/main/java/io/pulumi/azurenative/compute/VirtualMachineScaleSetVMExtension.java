@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -44,7 +45,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
+    public Output</* @Nullable */ Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
@@ -58,7 +59,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableAutomaticUpgrade() {
+    public Output</* @Nullable */ Boolean> enableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade;
     }
     /**
@@ -72,7 +73,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    public Output</* @Nullable */ String> getForceUpdateTag() {
+    public Output</* @Nullable */ String> forceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
@@ -86,7 +87,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return The virtual machine extension instance view.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> getInstanceView() {
+    public Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> instanceView() {
         return this.instanceView;
     }
     /**
@@ -100,7 +101,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return The name of the extension.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    public Output</* @Nullable */ Object> getProtectedSettings() {
+    public Output</* @Nullable */ Object> protectedSettings() {
         return this.protectedSettings;
     }
     /**
@@ -128,7 +129,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -142,7 +143,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return The name of the extension handler publisher.
      * 
      */
-    public Output</* @Nullable */ String> getPublisher() {
+    public Output</* @Nullable */ String> publisher() {
         return this.publisher;
     }
     /**
@@ -156,7 +157,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return Json formatted public settings for the extension.
      * 
      */
-    public Output</* @Nullable */ Object> getSettings() {
+    public Output</* @Nullable */ Object> settings() {
         return this.settings;
     }
     /**
@@ -170,7 +171,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -184,7 +185,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @return Specifies the version of the script handler.
      * 
      */
-    public Output</* @Nullable */ String> getTypeHandlerVersion() {
+    public Output</* @Nullable */ String> typeHandlerVersion() {
         return this.typeHandlerVersion;
     }
 
@@ -210,7 +211,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineScaleSetVMExtension(String name, VirtualMachineScaleSetVMExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:VirtualMachineScaleSetVMExtension", name, args == null ? VirtualMachineScaleSetVMExtensionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:VirtualMachineScaleSetVMExtension", name, args == null ? VirtualMachineScaleSetVMExtensionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualMachineScaleSetVMExtension(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

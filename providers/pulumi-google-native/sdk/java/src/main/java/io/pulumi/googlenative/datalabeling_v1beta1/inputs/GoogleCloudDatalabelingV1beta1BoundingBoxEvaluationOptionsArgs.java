@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
     @Import(name="iouThreshold")
       private final @Nullable Output<Double> iouThreshold;
 
-    public Output<Double> getIouThreshold() {
-        return this.iouThreshold == null ? Output.empty() : this.iouThreshold;
+    public Output<Double> iouThreshold() {
+        return this.iouThreshold == null ? Codegen.empty() : this.iouThreshold;
     }
 
     public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(@Nullable Output<Double> iouThreshold) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
     }
 
     private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs() {
-        this.iouThreshold = Output.empty();
+        this.iouThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
             return this;
         }
         public Builder iouThreshold(@Nullable Double iouThreshold) {
-            this.iouThreshold = Output.ofNullable(iouThreshold);
+            this.iouThreshold = Codegen.ofNullable(iouThreshold);
             return this;
         }        public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs build() {
             return new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(iouThreshold);

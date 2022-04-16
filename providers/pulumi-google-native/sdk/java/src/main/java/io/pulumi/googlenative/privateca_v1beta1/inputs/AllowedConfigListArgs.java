@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="allowedConfigValues", required=true)
       private final Output<List<ReusableConfigWrapperArgs>> allowedConfigValues;
 
-    public Output<List<ReusableConfigWrapperArgs>> getAllowedConfigValues() {
+    public Output<List<ReusableConfigWrapperArgs>> allowedConfigValues() {
         return this.allowedConfigValues;
     }
 
@@ -30,7 +31,7 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AllowedConfigListArgs() {
-        this.allowedConfigValues = Output.empty();
+        this.allowedConfigValues = Codegen.empty();
     }
 
     public static Builder builder() {

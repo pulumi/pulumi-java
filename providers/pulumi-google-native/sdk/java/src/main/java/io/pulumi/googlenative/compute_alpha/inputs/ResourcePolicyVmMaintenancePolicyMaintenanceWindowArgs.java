@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     @Import(name="dailyMaintenanceWindow")
       private final @Nullable Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
 
-    public Output<ResourcePolicyDailyCycleArgs> getDailyMaintenanceWindow() {
-        return this.dailyMaintenanceWindow == null ? Output.empty() : this.dailyMaintenanceWindow;
+    public Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow() {
+        return this.dailyMaintenanceWindow == null ? Codegen.empty() : this.dailyMaintenanceWindow;
     }
 
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs(@Nullable Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow) {
@@ -30,7 +31,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     }
 
     private ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs() {
-        this.dailyMaintenanceWindow = Output.empty();
+        this.dailyMaintenanceWindow = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
             return this;
         }
         public Builder dailyMaintenanceWindow(@Nullable ResourcePolicyDailyCycleArgs dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Output.ofNullable(dailyMaintenanceWindow);
+            this.dailyMaintenanceWindow = Codegen.ofNullable(dailyMaintenanceWindow);
             return this;
         }        public ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs build() {
             return new ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs(dailyMaintenanceWindow);

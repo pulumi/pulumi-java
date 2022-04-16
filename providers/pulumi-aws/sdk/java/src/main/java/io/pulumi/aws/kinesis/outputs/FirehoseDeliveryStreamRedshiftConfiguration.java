@@ -108,84 +108,84 @@ public final class FirehoseDeliveryStreamRedshiftConfiguration {
      * The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
     */
-    public Optional<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions> getCloudwatchLoggingOptions() {
+    public Optional<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions> cloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
     /**
      * The jdbcurl of the redshift cluster.
      * 
     */
-    public String getClusterJdbcurl() {
+    public String clusterJdbcurl() {
         return this.clusterJdbcurl;
     }
     /**
      * Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
      * 
     */
-    public Optional<String> getCopyOptions() {
+    public Optional<String> copyOptions() {
         return Optional.ofNullable(this.copyOptions);
     }
     /**
      * The data table columns that will be targeted by the copy command.
      * 
     */
-    public Optional<String> getDataTableColumns() {
+    public Optional<String> dataTableColumns() {
         return Optional.ofNullable(this.dataTableColumns);
     }
     /**
      * The name of the table in the redshift cluster that the s3 bucket will copy to.
      * 
     */
-    public String getDataTableName() {
+    public String dataTableName() {
         return this.dataTableName;
     }
     /**
      * The password for the username above.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The data processing configuration.  More details are given below.
      * 
     */
-    public Optional<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
      * The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
      * 
     */
-    public Optional<Integer> getRetryDuration() {
+    public Optional<Integer> retryDuration() {
         return Optional.ofNullable(this.retryDuration);
     }
     /**
      * The arn of the role the stream assumes.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
      * 
     */
-    public Optional<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration> getS3BackupConfiguration() {
+    public Optional<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration> s3BackupConfiguration() {
         return Optional.ofNullable(this.s3BackupConfiguration);
     }
     /**
      * The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
      * 
     */
-    public Optional<String> getS3BackupMode() {
+    public Optional<String> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
     /**
      * The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

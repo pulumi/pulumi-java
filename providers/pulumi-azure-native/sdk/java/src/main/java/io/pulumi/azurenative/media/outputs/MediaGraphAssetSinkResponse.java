@@ -48,21 +48,21 @@ public final class MediaGraphAssetSinkResponse {
      * Asset name.
      * 
     */
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
     /**
      * Sink inputs.
      * 
     */
-    public List<String> getInputs() {
+    public List<String> inputs() {
         return this.inputs;
     }
     /**
      * Sink name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public final class MediaGraphAssetSinkResponse {
      * Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

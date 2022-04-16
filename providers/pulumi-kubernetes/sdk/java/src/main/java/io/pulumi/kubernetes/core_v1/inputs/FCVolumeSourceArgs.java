@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lun")
       private final @Nullable Output<Integer> lun;
 
-    public Output<Integer> getLun() {
-        return this.lun == null ? Output.empty() : this.lun;
+    public Output<Integer> lun() {
+        return this.lun == null ? Codegen.empty() : this.lun;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetWWNs")
       private final @Nullable Output<List<String>> targetWWNs;
 
-    public Output<List<String>> getTargetWWNs() {
-        return this.targetWWNs == null ? Output.empty() : this.targetWWNs;
+    public Output<List<String>> targetWWNs() {
+        return this.targetWWNs == null ? Codegen.empty() : this.targetWWNs;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="wwids")
       private final @Nullable Output<List<String>> wwids;
 
-    public Output<List<String>> getWwids() {
-        return this.wwids == null ? Output.empty() : this.wwids;
+    public Output<List<String>> wwids() {
+        return this.wwids == null ? Codegen.empty() : this.wwids;
     }
 
     public FCVolumeSourceArgs(
@@ -90,11 +91,11 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FCVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.lun = Output.empty();
-        this.readOnly = Output.empty();
-        this.targetWWNs = Output.empty();
-        this.wwids = Output.empty();
+        this.fsType = Codegen.empty();
+        this.lun = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.targetWWNs = Codegen.empty();
+        this.wwids = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder lun(@Nullable Output<Integer> lun) {
@@ -138,7 +139,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lun(@Nullable Integer lun) {
-            this.lun = Output.ofNullable(lun);
+            this.lun = Codegen.ofNullable(lun);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -146,7 +147,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder targetWWNs(@Nullable Output<List<String>> targetWWNs) {
@@ -154,7 +155,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetWWNs(@Nullable List<String> targetWWNs) {
-            this.targetWWNs = Output.ofNullable(targetWWNs);
+            this.targetWWNs = Codegen.ofNullable(targetWWNs);
             return this;
         }
         public Builder targetWWNs(String... targetWWNs) {
@@ -165,7 +166,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder wwids(@Nullable List<String> wwids) {
-            this.wwids = Output.ofNullable(wwids);
+            this.wwids = Codegen.ofNullable(wwids);
             return this;
         }
         public Builder wwids(String... wwids) {

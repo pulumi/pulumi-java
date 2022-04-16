@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionS3OutputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends io.pulumi.
     @Import(name="s3Output", required=true)
       private final Output<ModelBiasJobDefinitionS3OutputArgs> s3Output;
 
-    public Output<ModelBiasJobDefinitionS3OutputArgs> getS3Output() {
+    public Output<ModelBiasJobDefinitionS3OutputArgs> s3Output() {
         return this.s3Output;
     }
 
@@ -29,7 +30,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends io.pulumi.
     }
 
     private ModelBiasJobDefinitionMonitoringOutputArgs() {
-        this.s3Output = Output.empty();
+        this.s3Output = Codegen.empty();
     }
 
     public static Builder builder() {

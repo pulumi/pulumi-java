@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1beta.enums.IngressRuleAction;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,14 +24,14 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<IngressRuleAction> action;
 
-    public Output<IngressRuleAction> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<IngressRuleAction> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -41,8 +42,8 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRange")
       private final @Nullable Output<String> sourceRange;
 
-    public Output<String> getSourceRange() {
-        return this.sourceRange == null ? Output.empty() : this.sourceRange;
+    public Output<String> sourceRange() {
+        return this.sourceRange == null ? Codegen.empty() : this.sourceRange;
     }
 
     public IngressRuleArgs(
@@ -81,11 +82,11 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressRuleArgs() {
-        this.action = Output.empty();
-        this.appId = Output.empty();
-        this.description = Output.empty();
-        this.priority = Output.empty();
-        this.sourceRange = Output.empty();
+        this.action = Codegen.empty();
+        this.appId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.sourceRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable IngressRuleAction action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder appId(Output<String> appId) {
@@ -137,7 +138,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -145,7 +146,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder sourceRange(@Nullable Output<String> sourceRange) {
@@ -153,7 +154,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRange(@Nullable String sourceRange) {
-            this.sourceRange = Output.ofNullable(sourceRange);
+            this.sourceRange = Codegen.ofNullable(sourceRange);
             return this;
         }        public IngressRuleArgs build() {
             return new IngressRuleArgs(action, appId, description, priority, sourceRange);

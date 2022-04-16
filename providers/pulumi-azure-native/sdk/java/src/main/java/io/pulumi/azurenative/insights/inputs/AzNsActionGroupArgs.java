@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="actionGroup")
       private final @Nullable Output<List<String>> actionGroup;
 
-    public Output<List<String>> getActionGroup() {
-        return this.actionGroup == null ? Output.empty() : this.actionGroup;
+    public Output<List<String>> actionGroup() {
+        return this.actionGroup == null ? Codegen.empty() : this.actionGroup;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customWebhookPayload")
       private final @Nullable Output<String> customWebhookPayload;
 
-    public Output<String> getCustomWebhookPayload() {
-        return this.customWebhookPayload == null ? Output.empty() : this.customWebhookPayload;
+    public Output<String> customWebhookPayload() {
+        return this.customWebhookPayload == null ? Codegen.empty() : this.customWebhookPayload;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
-    public Output<String> getEmailSubject() {
-        return this.emailSubject == null ? Output.empty() : this.emailSubject;
+    public Output<String> emailSubject() {
+        return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
     }
 
     public AzNsActionGroupArgs(
@@ -62,9 +63,9 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AzNsActionGroupArgs() {
-        this.actionGroup = Output.empty();
-        this.customWebhookPayload = Output.empty();
-        this.emailSubject = Output.empty();
+        this.actionGroup = Codegen.empty();
+        this.customWebhookPayload = Codegen.empty();
+        this.emailSubject = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder actionGroup(@Nullable List<String> actionGroup) {
-            this.actionGroup = Output.ofNullable(actionGroup);
+            this.actionGroup = Codegen.ofNullable(actionGroup);
             return this;
         }
         public Builder actionGroup(String... actionGroup) {
@@ -107,7 +108,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
-            this.customWebhookPayload = Output.ofNullable(customWebhookPayload);
+            this.customWebhookPayload = Codegen.ofNullable(customWebhookPayload);
             return this;
         }
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
@@ -115,7 +116,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Output.ofNullable(emailSubject);
+            this.emailSubject = Codegen.ofNullable(emailSubject);
             return this;
         }        public AzNsActionGroupArgs build() {
             return new AzNsActionGroupArgs(actionGroup, customWebhookPayload, emailSubject);

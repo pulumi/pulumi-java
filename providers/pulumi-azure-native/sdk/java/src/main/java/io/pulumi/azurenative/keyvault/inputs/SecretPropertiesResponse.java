@@ -26,7 +26,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="attributes")
       private final @Nullable SecretAttributesResponse attributes;
 
-    public Optional<SecretAttributesResponse> getAttributes() {
+    public Optional<SecretAttributesResponse> attributes() {
         return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
     }
 
@@ -37,7 +37,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -48,7 +48,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="secretUri", required=true)
       private final String secretUri;
 
-    public String getSecretUri() {
+    public String secretUri() {
         return this.secretUri;
     }
 
@@ -59,7 +59,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="secretUriWithVersion", required=true)
       private final String secretUriWithVersion;
 
-    public String getSecretUriWithVersion() {
+    public String secretUriWithVersion() {
         return this.secretUriWithVersion;
     }
 
@@ -70,7 +70,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

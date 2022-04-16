@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobSpecArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobStatusArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ObjectMetaArgs;
@@ -24,8 +25,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -46,14 +47,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ObjectMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     @Import(name="namespaceId", required=true)
       private final Output<String> namespaceId;
 
-    public Output<String> getNamespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId;
     }
 
@@ -64,8 +65,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<JobSpecArgs> spec;
 
-    public Output<JobSpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<JobSpecArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<JobStatusArgs> status;
 
-    public Output<JobStatusArgs> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<JobStatusArgs> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public JobArgs(
@@ -95,12 +96,12 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.apiVersion = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.namespaceId = Output.empty();
-        this.spec = Output.empty();
-        this.status = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.namespaceId = Codegen.empty();
+        this.spec = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -146,7 +147,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -154,7 +155,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder namespaceId(Output<String> namespaceId) {
@@ -170,7 +171,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spec(@Nullable JobSpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }
         public Builder status(@Nullable Output<JobStatusArgs> status) {
@@ -178,7 +179,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable JobStatusArgs status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public JobArgs build() {
             return new JobArgs(apiVersion, kind, metadata, namespaceId, spec, status);

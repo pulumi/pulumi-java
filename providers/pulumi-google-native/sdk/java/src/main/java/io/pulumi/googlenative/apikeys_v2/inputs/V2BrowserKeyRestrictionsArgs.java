@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
     @Import(name="allowedReferrers")
       private final @Nullable Output<List<String>> allowedReferrers;
 
-    public Output<List<String>> getAllowedReferrers() {
-        return this.allowedReferrers == null ? Output.empty() : this.allowedReferrers;
+    public Output<List<String>> allowedReferrers() {
+        return this.allowedReferrers == null ? Codegen.empty() : this.allowedReferrers;
     }
 
     public V2BrowserKeyRestrictionsArgs(@Nullable Output<List<String>> allowedReferrers) {
@@ -35,7 +36,7 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
     }
 
     private V2BrowserKeyRestrictionsArgs() {
-        this.allowedReferrers = Output.empty();
+        this.allowedReferrers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowedReferrers(@Nullable List<String> allowedReferrers) {
-            this.allowedReferrers = Output.ofNullable(allowedReferrers);
+            this.allowedReferrers = Codegen.ofNullable(allowedReferrers);
             return this;
         }
         public Builder allowedReferrers(String... allowedReferrers) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineServiceIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamMemberState;
@@ -72,7 +73,7 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * @return Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -88,7 +89,7 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AppEngineServiceIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ AppEngineServiceIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -102,13 +103,13 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -124,7 +125,7 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -142,7 +143,7 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -156,7 +157,7 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * @return Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -182,7 +183,7 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineServiceIamMember(String name, AppEngineServiceIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineServiceIamMember:AppEngineServiceIamMember", name, args == null ? AppEngineServiceIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/appEngineServiceIamMember:AppEngineServiceIamMember", name, args == null ? AppEngineServiceIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppEngineServiceIamMember(String name, Output<String> id, @Nullable AppEngineServiceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

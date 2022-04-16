@@ -5,6 +5,7 @@ package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -34,7 +35,7 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
     @Import(name="enforcementMode", required=true)
       private final Output<String> enforcementMode;
 
-    public Output<String> getEnforcementMode() {
+    public Output<String> enforcementMode() {
         return this.enforcementMode;
     }
 
@@ -46,7 +47,7 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
     @Import(name="evaluationMode", required=true)
       private final Output<String> evaluationMode;
 
-    public Output<String> getEvaluationMode() {
+    public Output<String> evaluationMode() {
         return this.evaluationMode;
     }
 
@@ -64,8 +65,8 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
     @Import(name="requireAttestationsBies")
       private final @Nullable Output<List<String>> requireAttestationsBies;
 
-    public Output<List<String>> getRequireAttestationsBies() {
-        return this.requireAttestationsBies == null ? Output.empty() : this.requireAttestationsBies;
+    public Output<List<String>> requireAttestationsBies() {
+        return this.requireAttestationsBies == null ? Codegen.empty() : this.requireAttestationsBies;
     }
 
     public PolicyClusterAdmissionRuleGetArgs(
@@ -80,10 +81,10 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
     }
 
     private PolicyClusterAdmissionRuleGetArgs() {
-        this.cluster = Output.empty();
-        this.enforcementMode = Output.empty();
-        this.evaluationMode = Output.empty();
-        this.requireAttestationsBies = Output.empty();
+        this.cluster = Codegen.empty();
+        this.enforcementMode = Codegen.empty();
+        this.evaluationMode = Codegen.empty();
+        this.requireAttestationsBies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class PolicyClusterAdmissionRuleGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
-            this.requireAttestationsBies = Output.ofNullable(requireAttestationsBies);
+            this.requireAttestationsBies = Codegen.ofNullable(requireAttestationsBies);
             return this;
         }
         public Builder requireAttestationsBies(String... requireAttestationsBies) {

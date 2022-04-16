@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -31,7 +32,7 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -43,8 +44,8 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
     }
 
     private EventConnectionAuthParametersOauthClientParametersGetArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
     }
 
     public static Builder builder() {

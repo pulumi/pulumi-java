@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dbformariadb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -31,7 +32,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -43,8 +44,8 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
     }
 
     private PrivateLinkServiceConnectionStatePropertyArgs() {
-        this.description = Output.empty();
-        this.status = Output.empty();
+        this.description = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

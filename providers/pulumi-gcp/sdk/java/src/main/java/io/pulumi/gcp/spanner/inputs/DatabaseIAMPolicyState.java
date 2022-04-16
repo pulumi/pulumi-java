@@ -5,6 +5,7 @@ package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<String> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+    public Output<String> instance() {
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatabaseIAMPolicyState(
@@ -85,11 +86,11 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
     }
 
     private DatabaseIAMPolicyState() {
-        this.database = Output.empty();
-        this.etag = Output.empty();
-        this.instance = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.database = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -133,7 +134,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -141,7 +142,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -149,7 +150,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -157,7 +158,7 @@ public final class DatabaseIAMPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatabaseIAMPolicyState build() {
             return new DatabaseIAMPolicyState(database, etag, instance, policyData, project);

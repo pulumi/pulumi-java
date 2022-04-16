@@ -7,6 +7,7 @@ import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetNLBResourc
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetR53ResourceRecordArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,15 +23,15 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
     @Import(name="nLBResource")
       private final @Nullable Output<ResourceSetNLBResourceArgs> nLBResource;
 
-    public Output<ResourceSetNLBResourceArgs> getNLBResource() {
-        return this.nLBResource == null ? Output.empty() : this.nLBResource;
+    public Output<ResourceSetNLBResourceArgs> nLBResource() {
+        return this.nLBResource == null ? Codegen.empty() : this.nLBResource;
     }
 
     @Import(name="r53Resource")
       private final @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource;
 
-    public Output<ResourceSetR53ResourceRecordArgs> getR53Resource() {
-        return this.r53Resource == null ? Output.empty() : this.r53Resource;
+    public Output<ResourceSetR53ResourceRecordArgs> r53Resource() {
+        return this.r53Resource == null ? Codegen.empty() : this.r53Resource;
     }
 
     public ResourceSetTargetResourceArgs(
@@ -41,8 +42,8 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
     }
 
     private ResourceSetTargetResourceArgs() {
-        this.nLBResource = Output.empty();
-        this.r53Resource = Output.empty();
+        this.nLBResource = Codegen.empty();
+        this.r53Resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder nLBResource(@Nullable ResourceSetNLBResourceArgs nLBResource) {
-            this.nLBResource = Output.ofNullable(nLBResource);
+            this.nLBResource = Codegen.ofNullable(nLBResource);
             return this;
         }
         public Builder r53Resource(@Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource) {
@@ -80,7 +81,7 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder r53Resource(@Nullable ResourceSetR53ResourceRecordArgs r53Resource) {
-            this.r53Resource = Output.ofNullable(r53Resource);
+            this.r53Resource = Codegen.ofNullable(r53Resource);
             return this;
         }        public ResourceSetTargetResourceArgs build() {
             return new ResourceSetTargetResourceArgs(nLBResource, r53Resource);

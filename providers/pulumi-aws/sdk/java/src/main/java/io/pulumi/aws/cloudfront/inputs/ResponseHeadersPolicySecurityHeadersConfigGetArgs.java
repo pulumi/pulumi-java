@@ -11,6 +11,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfi
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     @Import(name="contentSecurityPolicy")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> getContentSecurityPolicy() {
-        return this.contentSecurityPolicy == null ? Output.empty() : this.contentSecurityPolicy;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy() {
+        return this.contentSecurityPolicy == null ? Codegen.empty() : this.contentSecurityPolicy;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     @Import(name="contentTypeOptions")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> getContentTypeOptions() {
-        return this.contentTypeOptions == null ? Output.empty() : this.contentTypeOptions;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions() {
+        return this.contentTypeOptions == null ? Codegen.empty() : this.contentTypeOptions;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     @Import(name="frameOptions")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> getFrameOptions() {
-        return this.frameOptions == null ? Output.empty() : this.frameOptions;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions() {
+        return this.frameOptions == null ? Codegen.empty() : this.frameOptions;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     @Import(name="referrerPolicy")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> getReferrerPolicy() {
-        return this.referrerPolicy == null ? Output.empty() : this.referrerPolicy;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy() {
+        return this.referrerPolicy == null ? Codegen.empty() : this.referrerPolicy;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     @Import(name="strictTransportSecurity")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> getStrictTransportSecurity() {
-        return this.strictTransportSecurity == null ? Output.empty() : this.strictTransportSecurity;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity() {
+        return this.strictTransportSecurity == null ? Codegen.empty() : this.strictTransportSecurity;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     @Import(name="xssProtection")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
 
-    public Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> getXssProtection() {
-        return this.xssProtection == null ? Output.empty() : this.xssProtection;
+    public Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection() {
+        return this.xssProtection == null ? Codegen.empty() : this.xssProtection;
     }
 
     public ResponseHeadersPolicySecurityHeadersConfigGetArgs(
@@ -101,12 +102,12 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     }
 
     private ResponseHeadersPolicySecurityHeadersConfigGetArgs() {
-        this.contentSecurityPolicy = Output.empty();
-        this.contentTypeOptions = Output.empty();
-        this.frameOptions = Output.empty();
-        this.referrerPolicy = Output.empty();
-        this.strictTransportSecurity = Output.empty();
-        this.xssProtection = Output.empty();
+        this.contentSecurityPolicy = Codegen.empty();
+        this.contentTypeOptions = Codegen.empty();
+        this.frameOptions = Codegen.empty();
+        this.referrerPolicy = Codegen.empty();
+        this.strictTransportSecurity = Codegen.empty();
+        this.xssProtection = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
             return this;
         }
         public Builder contentSecurityPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs contentSecurityPolicy) {
-            this.contentSecurityPolicy = Output.ofNullable(contentSecurityPolicy);
+            this.contentSecurityPolicy = Codegen.ofNullable(contentSecurityPolicy);
             return this;
         }
         public Builder contentTypeOptions(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions) {
@@ -152,7 +153,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
             return this;
         }
         public Builder contentTypeOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs contentTypeOptions) {
-            this.contentTypeOptions = Output.ofNullable(contentTypeOptions);
+            this.contentTypeOptions = Codegen.ofNullable(contentTypeOptions);
             return this;
         }
         public Builder frameOptions(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions) {
@@ -160,7 +161,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
             return this;
         }
         public Builder frameOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs frameOptions) {
-            this.frameOptions = Output.ofNullable(frameOptions);
+            this.frameOptions = Codegen.ofNullable(frameOptions);
             return this;
         }
         public Builder referrerPolicy(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy) {
@@ -168,7 +169,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
             return this;
         }
         public Builder referrerPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs referrerPolicy) {
-            this.referrerPolicy = Output.ofNullable(referrerPolicy);
+            this.referrerPolicy = Codegen.ofNullable(referrerPolicy);
             return this;
         }
         public Builder strictTransportSecurity(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity) {
@@ -176,7 +177,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
             return this;
         }
         public Builder strictTransportSecurity(@Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs strictTransportSecurity) {
-            this.strictTransportSecurity = Output.ofNullable(strictTransportSecurity);
+            this.strictTransportSecurity = Codegen.ofNullable(strictTransportSecurity);
             return this;
         }
         public Builder xssProtection(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
@@ -184,7 +185,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
             return this;
         }
         public Builder xssProtection(@Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs xssProtection) {
-            this.xssProtection = Output.ofNullable(xssProtection);
+            this.xssProtection = Codegen.ofNullable(xssProtection);
             return this;
         }        public ResponseHeadersPolicySecurityHeadersConfigGetArgs build() {
             return new ResponseHeadersPolicySecurityHeadersConfigGetArgs(contentSecurityPolicy, contentTypeOptions, frameOptions, referrerPolicy, strictTransportSecurity, xssProtection);

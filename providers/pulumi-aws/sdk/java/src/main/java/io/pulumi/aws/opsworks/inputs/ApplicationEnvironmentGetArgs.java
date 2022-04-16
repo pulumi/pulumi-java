@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -33,8 +34,8 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
     @Import(name="secure")
       private final @Nullable Output<Boolean> secure;
 
-    public Output<Boolean> getSecure() {
-        return this.secure == null ? Output.empty() : this.secure;
+    public Output<Boolean> secure() {
+        return this.secure == null ? Codegen.empty() : this.secure;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -58,9 +59,9 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
     }
 
     private ApplicationEnvironmentGetArgs() {
-        this.key = Output.empty();
-        this.secure = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.secure = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder secure(@Nullable Boolean secure) {
-            this.secure = Output.ofNullable(secure);
+            this.secure = Codegen.ofNullable(secure);
             return this;
         }
         public Builder value(Output<String> value) {

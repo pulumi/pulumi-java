@@ -25,7 +25,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
     @Import(name="diskId")
       private final @Nullable String diskId;
 
-    public Optional<String> getDiskId() {
+    public Optional<String> diskId() {
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
     }
 
@@ -36,7 +36,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
     @Import(name="replicaDiskType")
       private final @Nullable String replicaDiskType;
 
-    public Optional<String> getReplicaDiskType() {
+    public Optional<String> replicaDiskType() {
         return this.replicaDiskType == null ? Optional.empty() : Optional.ofNullable(this.replicaDiskType);
     }
 
@@ -47,7 +47,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
     @Import(name="seedManagedDiskId")
       private final @Nullable String seedManagedDiskId;
 
-    public Optional<String> getSeedManagedDiskId() {
+    public Optional<String> seedManagedDiskId() {
         return this.seedManagedDiskId == null ? Optional.empty() : Optional.ofNullable(this.seedManagedDiskId);
     }
 

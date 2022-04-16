@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
     @Import(name="colors")
       private final @Nullable Output<List<String>> colors;
 
-    public Output<List<String>> getColors() {
-        return this.colors == null ? Output.empty() : this.colors;
+    public Output<List<String>> colors() {
+        return this.colors == null ? Codegen.empty() : this.colors;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
     @Import(name="emptyFillColor")
       private final @Nullable Output<String> emptyFillColor;
 
-    public Output<String> getEmptyFillColor() {
-        return this.emptyFillColor == null ? Output.empty() : this.emptyFillColor;
+    public Output<String> emptyFillColor() {
+        return this.emptyFillColor == null ? Codegen.empty() : this.emptyFillColor;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
     @Import(name="minMaxGradient")
       private final @Nullable Output<List<String>> minMaxGradient;
 
-    public Output<List<String>> getMinMaxGradient() {
-        return this.minMaxGradient == null ? Output.empty() : this.minMaxGradient;
+    public Output<List<String>> minMaxGradient() {
+        return this.minMaxGradient == null ? Codegen.empty() : this.minMaxGradient;
     }
 
     public ThemeDataColorPaletteArgs(
@@ -65,9 +66,9 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
     }
 
     private ThemeDataColorPaletteArgs() {
-        this.colors = Output.empty();
-        this.emptyFillColor = Output.empty();
-        this.minMaxGradient = Output.empty();
+        this.colors = Codegen.empty();
+        this.emptyFillColor = Codegen.empty();
+        this.minMaxGradient = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder colors(@Nullable List<String> colors) {
-            this.colors = Output.ofNullable(colors);
+            this.colors = Codegen.ofNullable(colors);
             return this;
         }
         public Builder colors(String... colors) {
@@ -110,7 +111,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder emptyFillColor(@Nullable String emptyFillColor) {
-            this.emptyFillColor = Output.ofNullable(emptyFillColor);
+            this.emptyFillColor = Codegen.ofNullable(emptyFillColor);
             return this;
         }
         public Builder minMaxGradient(@Nullable Output<List<String>> minMaxGradient) {
@@ -118,7 +119,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder minMaxGradient(@Nullable List<String> minMaxGradient) {
-            this.minMaxGradient = Output.ofNullable(minMaxGradient);
+            this.minMaxGradient = Codegen.ofNullable(minMaxGradient);
             return this;
         }
         public Builder minMaxGradient(String... minMaxGradient) {

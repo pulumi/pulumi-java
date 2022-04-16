@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.CustomResourceDefinitionListArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinition;
@@ -31,7 +32,7 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -45,7 +46,7 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
      * @return items list individual CustomResourceDefinition objects
      * 
      */
-    public Output<List<CustomResourceDefinition>> getItems() {
+    public Output<List<CustomResourceDefinition>> items() {
         return this.items;
     }
     /**
@@ -59,7 +60,7 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -73,7 +74,7 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
      * @return Standard object's metadata More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ListMeta> getMetadata() {
+    public Output</* @Nullable */ ListMeta> metadata() {
         return this.metadata;
     }
 
@@ -99,7 +100,7 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomResourceDefinitionList(String name, CustomResourceDefinitionListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:apiextensions.k8s.io/v1:CustomResourceDefinitionList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:apiextensions.k8s.io/v1:CustomResourceDefinitionList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomResourceDefinitionList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

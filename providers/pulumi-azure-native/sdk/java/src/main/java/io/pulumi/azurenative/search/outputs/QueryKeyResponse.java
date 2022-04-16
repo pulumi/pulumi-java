@@ -32,14 +32,14 @@ public final class QueryKeyResponse {
      * The value of the query API key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The name of the query API key; may be empty.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

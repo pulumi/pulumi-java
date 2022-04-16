@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -32,8 +33,8 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+    public Output<String> notes() {
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="releaseId")
       private final @Nullable Output<String> releaseId;
 
-    public Output<String> getReleaseId() {
-        return this.releaseId == null ? Output.empty() : this.releaseId;
+    public Output<String> releaseId() {
+        return this.releaseId == null ? Codegen.empty() : this.releaseId;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +66,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -83,11 +84,11 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiReleaseArgs() {
-        this.apiId = Output.empty();
-        this.notes = Output.empty();
-        this.releaseId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.apiId = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.releaseId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder releaseId(@Nullable Output<String> releaseId) {
@@ -139,7 +140,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder releaseId(@Nullable String releaseId) {
-            this.releaseId = Output.ofNullable(releaseId);
+            this.releaseId = Codegen.ofNullable(releaseId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

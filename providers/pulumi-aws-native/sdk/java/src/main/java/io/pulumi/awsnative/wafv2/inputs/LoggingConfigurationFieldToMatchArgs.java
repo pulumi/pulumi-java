@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBody
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     @Import(name="jsonBody")
       private final @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
 
-    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> getJsonBody() {
-        return this.jsonBody == null ? Output.empty() : this.jsonBody;
+    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody() {
+        return this.jsonBody == null ? Codegen.empty() : this.jsonBody;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     @Import(name="method")
       private final @Nullable Output<Object> method;
 
-    public Output<Object> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+    public Output<Object> method() {
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     @Import(name="queryString")
       private final @Nullable Output<Object> queryString;
 
-    public Output<Object> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+    public Output<Object> queryString() {
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     @Import(name="singleHeader")
       private final @Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
-    public Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
-        return this.singleHeader == null ? Output.empty() : this.singleHeader;
+    public Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader() {
+        return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     @Import(name="uriPath")
       private final @Nullable Output<Object> uriPath;
 
-    public Output<Object> getUriPath() {
-        return this.uriPath == null ? Output.empty() : this.uriPath;
+    public Output<Object> uriPath() {
+        return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 
     public LoggingConfigurationFieldToMatchArgs(
@@ -89,11 +90,11 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     }
 
     private LoggingConfigurationFieldToMatchArgs() {
-        this.jsonBody = Output.empty();
-        this.method = Output.empty();
-        this.queryString = Output.empty();
-        this.singleHeader = Output.empty();
-        this.uriPath = Output.empty();
+        this.jsonBody = Codegen.empty();
+        this.method = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.singleHeader = Codegen.empty();
+        this.uriPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
             return this;
         }
         public Builder jsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs jsonBody) {
-            this.jsonBody = Output.ofNullable(jsonBody);
+            this.jsonBody = Codegen.ofNullable(jsonBody);
             return this;
         }
         public Builder method(@Nullable Output<Object> method) {
@@ -137,7 +138,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
             return this;
         }
         public Builder method(@Nullable Object method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder queryString(@Nullable Output<Object> queryString) {
@@ -145,7 +146,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
             return this;
         }
         public Builder queryString(@Nullable Object queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder singleHeader(@Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
@@ -153,7 +154,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
             return this;
         }
         public Builder singleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
-            this.singleHeader = Output.ofNullable(singleHeader);
+            this.singleHeader = Codegen.ofNullable(singleHeader);
             return this;
         }
         public Builder uriPath(@Nullable Output<Object> uriPath) {
@@ -161,7 +162,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
             return this;
         }
         public Builder uriPath(@Nullable Object uriPath) {
-            this.uriPath = Output.ofNullable(uriPath);
+            this.uriPath = Codegen.ofNullable(uriPath);
             return this;
         }        public LoggingConfigurationFieldToMatchArgs build() {
             return new LoggingConfigurationFieldToMatchArgs(jsonBody, method, queryString, singleHeader, uriPath);

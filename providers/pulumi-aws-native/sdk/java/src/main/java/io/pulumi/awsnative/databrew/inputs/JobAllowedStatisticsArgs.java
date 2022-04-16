@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
     @Import(name="statistics", required=true)
       private final Output<List<String>> statistics;
 
-    public Output<List<String>> getStatistics() {
+    public Output<List<String>> statistics() {
         return this.statistics;
     }
 
@@ -26,7 +27,7 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
     }
 
     private JobAllowedStatisticsArgs() {
-        this.statistics = Output.empty();
+        this.statistics = Codegen.empty();
     }
 
     public static Builder builder() {

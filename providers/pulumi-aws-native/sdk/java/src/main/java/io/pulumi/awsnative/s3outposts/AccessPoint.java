@@ -9,6 +9,7 @@ import io.pulumi.awsnative.s3outposts.outputs.AccessPointVpcConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified AccessPoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -44,7 +45,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -58,7 +59,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return A name for the AccessPoint.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The access point policy associated with this access point.
      * 
      */
-    public Output</* @Nullable */ Object> getPolicy() {
+    public Output</* @Nullable */ Object> policy() {
         return this.policy;
     }
     /**
@@ -86,7 +87,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
      * 
      */
-    public Output<AccessPointVpcConfiguration> getVpcConfiguration() {
+    public Output<AccessPointVpcConfiguration> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 
@@ -112,7 +113,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPoint(String name, AccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:s3outposts:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:s3outposts:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessPoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

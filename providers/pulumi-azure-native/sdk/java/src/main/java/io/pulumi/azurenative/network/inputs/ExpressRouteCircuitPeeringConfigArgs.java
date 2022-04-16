@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     @Import(name="advertisedCommunities")
       private final @Nullable Output<List<String>> advertisedCommunities;
 
-    public Output<List<String>> getAdvertisedCommunities() {
-        return this.advertisedCommunities == null ? Output.empty() : this.advertisedCommunities;
+    public Output<List<String>> advertisedCommunities() {
+        return this.advertisedCommunities == null ? Codegen.empty() : this.advertisedCommunities;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     @Import(name="advertisedPublicPrefixes")
       private final @Nullable Output<List<String>> advertisedPublicPrefixes;
 
-    public Output<List<String>> getAdvertisedPublicPrefixes() {
-        return this.advertisedPublicPrefixes == null ? Output.empty() : this.advertisedPublicPrefixes;
+    public Output<List<String>> advertisedPublicPrefixes() {
+        return this.advertisedPublicPrefixes == null ? Codegen.empty() : this.advertisedPublicPrefixes;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     @Import(name="customerASN")
       private final @Nullable Output<Integer> customerASN;
 
-    public Output<Integer> getCustomerASN() {
-        return this.customerASN == null ? Output.empty() : this.customerASN;
+    public Output<Integer> customerASN() {
+        return this.customerASN == null ? Codegen.empty() : this.customerASN;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     @Import(name="legacyMode")
       private final @Nullable Output<Integer> legacyMode;
 
-    public Output<Integer> getLegacyMode() {
-        return this.legacyMode == null ? Output.empty() : this.legacyMode;
+    public Output<Integer> legacyMode() {
+        return this.legacyMode == null ? Codegen.empty() : this.legacyMode;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     @Import(name="routingRegistryName")
       private final @Nullable Output<String> routingRegistryName;
 
-    public Output<String> getRoutingRegistryName() {
-        return this.routingRegistryName == null ? Output.empty() : this.routingRegistryName;
+    public Output<String> routingRegistryName() {
+        return this.routingRegistryName == null ? Codegen.empty() : this.routingRegistryName;
     }
 
     public ExpressRouteCircuitPeeringConfigArgs(
@@ -89,11 +90,11 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     }
 
     private ExpressRouteCircuitPeeringConfigArgs() {
-        this.advertisedCommunities = Output.empty();
-        this.advertisedPublicPrefixes = Output.empty();
-        this.customerASN = Output.empty();
-        this.legacyMode = Output.empty();
-        this.routingRegistryName = Output.empty();
+        this.advertisedCommunities = Codegen.empty();
+        this.advertisedPublicPrefixes = Codegen.empty();
+        this.customerASN = Codegen.empty();
+        this.legacyMode = Codegen.empty();
+        this.routingRegistryName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
-            this.advertisedCommunities = Output.ofNullable(advertisedCommunities);
+            this.advertisedCommunities = Codegen.ofNullable(advertisedCommunities);
             return this;
         }
         public Builder advertisedCommunities(String... advertisedCommunities) {
@@ -140,7 +141,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
-            this.advertisedPublicPrefixes = Output.ofNullable(advertisedPublicPrefixes);
+            this.advertisedPublicPrefixes = Codegen.ofNullable(advertisedPublicPrefixes);
             return this;
         }
         public Builder advertisedPublicPrefixes(String... advertisedPublicPrefixes) {
@@ -151,7 +152,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder customerASN(@Nullable Integer customerASN) {
-            this.customerASN = Output.ofNullable(customerASN);
+            this.customerASN = Codegen.ofNullable(customerASN);
             return this;
         }
         public Builder legacyMode(@Nullable Output<Integer> legacyMode) {
@@ -159,7 +160,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder legacyMode(@Nullable Integer legacyMode) {
-            this.legacyMode = Output.ofNullable(legacyMode);
+            this.legacyMode = Codegen.ofNullable(legacyMode);
             return this;
         }
         public Builder routingRegistryName(@Nullable Output<String> routingRegistryName) {
@@ -167,7 +168,7 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder routingRegistryName(@Nullable String routingRegistryName) {
-            this.routingRegistryName = Output.ofNullable(routingRegistryName);
+            this.routingRegistryName = Codegen.ofNullable(routingRegistryName);
             return this;
         }        public ExpressRouteCircuitPeeringConfigArgs build() {
             return new ExpressRouteCircuitPeeringConfigArgs(advertisedCommunities, advertisedPublicPrefixes, customerASN, legacyMode, routingRegistryName);

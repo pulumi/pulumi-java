@@ -6,6 +6,7 @@ package io.pulumi.aws.efs.inputs;
 import io.pulumi.aws.efs.inputs.AccessPointRootDirectoryCreationInfoGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class AccessPointRootDirectoryGetArgs extends io.pulumi.resources.R
     @Import(name="creationInfo")
       private final @Nullable Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo;
 
-    public Output<AccessPointRootDirectoryCreationInfoGetArgs> getCreationInfo() {
-        return this.creationInfo == null ? Output.empty() : this.creationInfo;
+    public Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo() {
+        return this.creationInfo == null ? Codegen.empty() : this.creationInfo;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AccessPointRootDirectoryGetArgs extends io.pulumi.resources.R
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public AccessPointRootDirectoryGetArgs(
@@ -45,8 +46,8 @@ public final class AccessPointRootDirectoryGetArgs extends io.pulumi.resources.R
     }
 
     private AccessPointRootDirectoryGetArgs() {
-        this.creationInfo = Output.empty();
-        this.path = Output.empty();
+        this.creationInfo = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AccessPointRootDirectoryGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder creationInfo(@Nullable AccessPointRootDirectoryCreationInfoGetArgs creationInfo) {
-            this.creationInfo = Output.ofNullable(creationInfo);
+            this.creationInfo = Codegen.ofNullable(creationInfo);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -84,7 +85,7 @@ public final class AccessPointRootDirectoryGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public AccessPointRootDirectoryGetArgs build() {
             return new AccessPointRootDirectoryGetArgs(creationInfo, path);

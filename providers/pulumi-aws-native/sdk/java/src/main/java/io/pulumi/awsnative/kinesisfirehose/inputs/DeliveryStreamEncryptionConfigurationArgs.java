@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigu
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamKMSEncryptionConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
     @Import(name="kMSEncryptionConfig")
       private final @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
 
-    public Output<DeliveryStreamKMSEncryptionConfigArgs> getKMSEncryptionConfig() {
-        return this.kMSEncryptionConfig == null ? Output.empty() : this.kMSEncryptionConfig;
+    public Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig() {
+        return this.kMSEncryptionConfig == null ? Codegen.empty() : this.kMSEncryptionConfig;
     }
 
     @Import(name="noEncryptionConfig")
       private final @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
 
-    public Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> getNoEncryptionConfig() {
-        return this.noEncryptionConfig == null ? Output.empty() : this.noEncryptionConfig;
+    public Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig() {
+        return this.noEncryptionConfig == null ? Codegen.empty() : this.noEncryptionConfig;
     }
 
     public DeliveryStreamEncryptionConfigurationArgs(
@@ -37,8 +38,8 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
     }
 
     private DeliveryStreamEncryptionConfigurationArgs() {
-        this.kMSEncryptionConfig = Output.empty();
-        this.noEncryptionConfig = Output.empty();
+        this.kMSEncryptionConfig = Codegen.empty();
+        this.noEncryptionConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder kMSEncryptionConfig(@Nullable DeliveryStreamKMSEncryptionConfigArgs kMSEncryptionConfig) {
-            this.kMSEncryptionConfig = Output.ofNullable(kMSEncryptionConfig);
+            this.kMSEncryptionConfig = Codegen.ofNullable(kMSEncryptionConfig);
             return this;
         }
         public Builder noEncryptionConfig(@Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
@@ -76,7 +77,7 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder noEncryptionConfig(@Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
-            this.noEncryptionConfig = Output.ofNullable(noEncryptionConfig);
+            this.noEncryptionConfig = Codegen.ofNullable(noEncryptionConfig);
             return this;
         }        public DeliveryStreamEncryptionConfigurationArgs build() {
             return new DeliveryStreamEncryptionConfigurationArgs(kMSEncryptionConfig, noEncryptionConfig);

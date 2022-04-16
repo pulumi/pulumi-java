@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strength")
       private final @Nullable Output<Double> strength;
 
-    public Output<Double> getStrength() {
-        return this.strength == null ? Output.empty() : this.strength;
+    public Output<Double> strength() {
+        return this.strength == null ? Codegen.empty() : this.strength;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tune")
       private final @Nullable Output<String> tune;
 
-    public Output<String> getTune() {
-        return this.tune == null ? Output.empty() : this.tune;
+    public Output<String> tune() {
+        return this.tune == null ? Codegen.empty() : this.tune;
     }
 
     public DenoiseArgs(
@@ -49,8 +50,8 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DenoiseArgs() {
-        this.strength = Output.empty();
-        this.tune = Output.empty();
+        this.strength = Codegen.empty();
+        this.tune = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder strength(@Nullable Double strength) {
-            this.strength = Output.ofNullable(strength);
+            this.strength = Codegen.ofNullable(strength);
             return this;
         }
         public Builder tune(@Nullable Output<String> tune) {
@@ -88,7 +89,7 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tune(@Nullable String tune) {
-            this.tune = Output.ofNullable(tune);
+            this.tune = Codegen.ofNullable(tune);
             return this;
         }        public DenoiseArgs build() {
             return new DenoiseArgs(strength, tune);

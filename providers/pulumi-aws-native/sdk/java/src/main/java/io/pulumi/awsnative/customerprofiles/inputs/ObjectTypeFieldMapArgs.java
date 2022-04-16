@@ -6,6 +6,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="objectTypeField")
       private final @Nullable Output<ObjectTypeFieldArgs> objectTypeField;
 
-    public Output<ObjectTypeFieldArgs> getObjectTypeField() {
-        return this.objectTypeField == null ? Output.empty() : this.objectTypeField;
+    public Output<ObjectTypeFieldArgs> objectTypeField() {
+        return this.objectTypeField == null ? Codegen.empty() : this.objectTypeField;
     }
 
     public ObjectTypeFieldMapArgs(
@@ -37,8 +38,8 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ObjectTypeFieldMapArgs() {
-        this.name = Output.empty();
-        this.objectTypeField = Output.empty();
+        this.name = Codegen.empty();
+        this.objectTypeField = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder objectTypeField(@Nullable Output<ObjectTypeFieldArgs> objectTypeField) {
@@ -76,7 +77,7 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder objectTypeField(@Nullable ObjectTypeFieldArgs objectTypeField) {
-            this.objectTypeField = Output.ofNullable(objectTypeField);
+            this.objectTypeField = Codegen.ofNullable(objectTypeField);
             return this;
         }        public ObjectTypeFieldMapArgs build() {
             return new ObjectTypeFieldMapArgs(name, objectTypeField);

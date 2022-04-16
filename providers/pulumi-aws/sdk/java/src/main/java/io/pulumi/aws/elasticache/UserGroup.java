@@ -9,6 +9,7 @@ import io.pulumi.aws.elasticache.inputs.UserGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +34,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,19 +48,19 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The current supported value is `REDIS`.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -73,7 +74,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the user group.
      * 
      */
-    public Output<String> getUserGroupId() {
+    public Output<String> userGroupId() {
         return this.userGroupId;
     }
     /**
@@ -87,7 +88,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The list of user IDs that belong to the user group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUserIds() {
+    public Output</* @Nullable */ List<String>> userIds() {
         return this.userIds;
     }
 
@@ -113,7 +114,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserGroup(String name, UserGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticache/userGroup:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticache/userGroup:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserGroup(String name, Output<String> id, @Nullable UserGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

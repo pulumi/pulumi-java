@@ -6,6 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs ext
     @Import(name="clientConfigurations", required=true)
       private final Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationGetArgs>> clientConfigurations;
 
-    public Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationGetArgs>> getClientConfigurations() {
+    public Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationGetArgs>> clientConfigurations() {
         return this.clientConfigurations;
     }
 
@@ -30,7 +31,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs ext
     }
 
     private OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs() {
-        this.clientConfigurations = Output.empty();
+        this.clientConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {

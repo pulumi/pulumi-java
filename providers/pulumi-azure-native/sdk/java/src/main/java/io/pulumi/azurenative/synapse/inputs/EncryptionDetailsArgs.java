@@ -6,6 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.CustomerManagedKeyDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cmk")
       private final @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
 
-    public Output<CustomerManagedKeyDetailsArgs> getCmk() {
-        return this.cmk == null ? Output.empty() : this.cmk;
+    public Output<CustomerManagedKeyDetailsArgs> cmk() {
+        return this.cmk == null ? Codegen.empty() : this.cmk;
     }
 
     public EncryptionDetailsArgs(@Nullable Output<CustomerManagedKeyDetailsArgs> cmk) {
@@ -34,7 +35,7 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EncryptionDetailsArgs() {
-        this.cmk = Output.empty();
+        this.cmk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cmk(@Nullable CustomerManagedKeyDetailsArgs cmk) {
-            this.cmk = Output.ofNullable(cmk);
+            this.cmk = Codegen.ofNullable(cmk);
             return this;
         }        public EncryptionDetailsArgs build() {
             return new EncryptionDetailsArgs(cmk);

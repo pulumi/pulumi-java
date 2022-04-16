@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +35,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="destinationAccount", required=true)
       private final Output<String> destinationAccount;
 
-    public Output<String> getDestinationAccount() {
+    public Output<String> destinationAccount() {
         return this.destinationAccount;
     }
 
@@ -45,8 +46,8 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="objectReplicationPolicyId")
       private final @Nullable Output<String> objectReplicationPolicyId;
 
-    public Output<String> getObjectReplicationPolicyId() {
-        return this.objectReplicationPolicyId == null ? Output.empty() : this.objectReplicationPolicyId;
+    public Output<String> objectReplicationPolicyId() {
+        return this.objectReplicationPolicyId == null ? Codegen.empty() : this.objectReplicationPolicyId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="rules")
       private final @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules;
 
-    public Output<List<ObjectReplicationPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<ObjectReplicationPolicyRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="sourceAccount", required=true)
       private final Output<String> sourceAccount;
 
-    public Output<String> getSourceAccount() {
+    public Output<String> sourceAccount() {
         return this.sourceAccount;
     }
 
@@ -98,12 +99,12 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private ObjectReplicationPolicyArgs() {
-        this.accountName = Output.empty();
-        this.destinationAccount = Output.empty();
-        this.objectReplicationPolicyId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rules = Output.empty();
-        this.sourceAccount = Output.empty();
+        this.accountName = Codegen.empty();
+        this.destinationAccount = Codegen.empty();
+        this.objectReplicationPolicyId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.sourceAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder objectReplicationPolicyId(@Nullable String objectReplicationPolicyId) {
-            this.objectReplicationPolicyId = Output.ofNullable(objectReplicationPolicyId);
+            this.objectReplicationPolicyId = Codegen.ofNullable(objectReplicationPolicyId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -173,7 +174,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder rules(@Nullable List<ObjectReplicationPolicyRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(ObjectReplicationPolicyRuleArgs... rules) {

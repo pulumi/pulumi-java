@@ -12,6 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,8 +36,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="aadResourceId")
       private final @Nullable Output<Object> aadResourceId;
 
-    public Output<Object> getAadResourceId() {
-        return this.aadResourceId == null ? Output.empty() : this.aadResourceId;
+    public Output<Object> aadResourceId() {
+        return this.aadResourceId == null ? Codegen.empty() : this.aadResourceId;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="aadServicePrincipalCredentialType")
       private final @Nullable Output<Either<String,ODataAadServicePrincipalCredentialType>> aadServicePrincipalCredentialType;
 
-    public Output<Either<String,ODataAadServicePrincipalCredentialType>> getAadServicePrincipalCredentialType() {
-        return this.aadServicePrincipalCredentialType == null ? Output.empty() : this.aadServicePrincipalCredentialType;
+    public Output<Either<String,ODataAadServicePrincipalCredentialType>> aadServicePrincipalCredentialType() {
+        return this.aadServicePrincipalCredentialType == null ? Codegen.empty() : this.aadServicePrincipalCredentialType;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="authHeaders")
       private final @Nullable Output<Object> authHeaders;
 
-    public Output<Object> getAuthHeaders() {
-        return this.authHeaders == null ? Output.empty() : this.authHeaders;
+    public Output<Object> authHeaders() {
+        return this.authHeaders == null ? Codegen.empty() : this.authHeaders;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,ODataAuthenticationType>> authenticationType;
 
-    public Output<Either<String,ODataAuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<Either<String,ODataAuthenticationType>> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
-    public Output<Object> getAzureCloudType() {
-        return this.azureCloudType == null ? Output.empty() : this.azureCloudType;
+    public Output<Object> azureCloudType() {
+        return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicePrincipalEmbeddedCert")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCert;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalEmbeddedCert() {
-        return this.servicePrincipalEmbeddedCert == null ? Output.empty() : this.servicePrincipalEmbeddedCert;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCert() {
+        return this.servicePrincipalEmbeddedCert == null ? Codegen.empty() : this.servicePrincipalEmbeddedCert;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicePrincipalEmbeddedCertPassword")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCertPassword;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalEmbeddedCertPassword() {
-        return this.servicePrincipalEmbeddedCertPassword == null ? Output.empty() : this.servicePrincipalEmbeddedCertPassword;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCertPassword() {
+        return this.servicePrincipalEmbeddedCertPassword == null ? Codegen.empty() : this.servicePrincipalEmbeddedCertPassword;
     }
 
     /**
@@ -178,8 +179,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
+    public Output<Object> servicePrincipalId() {
+        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -189,8 +190,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
+        return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
     /**
@@ -200,8 +201,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
-    public Output<Object> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+    public Output<Object> tenant() {
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -223,7 +224,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -234,8 +235,8 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<Object> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public ODataLinkedServiceArgs(
@@ -280,25 +281,25 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ODataLinkedServiceArgs() {
-        this.aadResourceId = Output.empty();
-        this.aadServicePrincipalCredentialType = Output.empty();
-        this.annotations = Output.empty();
-        this.authHeaders = Output.empty();
-        this.authenticationType = Output.empty();
-        this.azureCloudType = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.servicePrincipalEmbeddedCert = Output.empty();
-        this.servicePrincipalEmbeddedCertPassword = Output.empty();
-        this.servicePrincipalId = Output.empty();
-        this.servicePrincipalKey = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
-        this.userName = Output.empty();
+        this.aadResourceId = Codegen.empty();
+        this.aadServicePrincipalCredentialType = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.authHeaders = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.azureCloudType = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.servicePrincipalEmbeddedCert = Codegen.empty();
+        this.servicePrincipalEmbeddedCertPassword = Codegen.empty();
+        this.servicePrincipalId = Codegen.empty();
+        this.servicePrincipalKey = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -362,7 +363,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder aadResourceId(@Nullable Object aadResourceId) {
-            this.aadResourceId = Output.ofNullable(aadResourceId);
+            this.aadResourceId = Codegen.ofNullable(aadResourceId);
             return this;
         }
         public Builder aadServicePrincipalCredentialType(@Nullable Output<Either<String,ODataAadServicePrincipalCredentialType>> aadServicePrincipalCredentialType) {
@@ -370,7 +371,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder aadServicePrincipalCredentialType(@Nullable Either<String,ODataAadServicePrincipalCredentialType> aadServicePrincipalCredentialType) {
-            this.aadServicePrincipalCredentialType = Output.ofNullable(aadServicePrincipalCredentialType);
+            this.aadServicePrincipalCredentialType = Codegen.ofNullable(aadServicePrincipalCredentialType);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -378,7 +379,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -389,7 +390,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder authHeaders(@Nullable Object authHeaders) {
-            this.authHeaders = Output.ofNullable(authHeaders);
+            this.authHeaders = Codegen.ofNullable(authHeaders);
             return this;
         }
         public Builder authenticationType(@Nullable Output<Either<String,ODataAuthenticationType>> authenticationType) {
@@ -397,7 +398,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,ODataAuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
@@ -405,7 +406,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = Output.ofNullable(azureCloudType);
+            this.azureCloudType = Codegen.ofNullable(azureCloudType);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -413,7 +414,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -421,7 +422,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -429,7 +430,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -437,7 +438,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -445,7 +446,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder servicePrincipalEmbeddedCert(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCert) {
@@ -453,7 +454,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder servicePrincipalEmbeddedCert(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalEmbeddedCert) {
-            this.servicePrincipalEmbeddedCert = Output.ofNullable(servicePrincipalEmbeddedCert);
+            this.servicePrincipalEmbeddedCert = Codegen.ofNullable(servicePrincipalEmbeddedCert);
             return this;
         }
         public Builder servicePrincipalEmbeddedCertPassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCertPassword) {
@@ -461,7 +462,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder servicePrincipalEmbeddedCertPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalEmbeddedCertPassword) {
-            this.servicePrincipalEmbeddedCertPassword = Output.ofNullable(servicePrincipalEmbeddedCertPassword);
+            this.servicePrincipalEmbeddedCertPassword = Codegen.ofNullable(servicePrincipalEmbeddedCertPassword);
             return this;
         }
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
@@ -469,7 +470,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
@@ -477,7 +478,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Codegen.ofNullable(servicePrincipalKey);
             return this;
         }
         public Builder tenant(@Nullable Output<Object> tenant) {
@@ -485,7 +486,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -509,7 +510,7 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder userName(@Nullable Object userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public ODataLinkedServiceArgs build() {
             return new ODataLinkedServiceArgs(aadResourceId, aadServicePrincipalCredentialType, annotations, authHeaders, authenticationType, azureCloudType, connectVia, description, encryptedCredential, parameters, password, servicePrincipalEmbeddedCert, servicePrincipalEmbeddedCertPassword, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);

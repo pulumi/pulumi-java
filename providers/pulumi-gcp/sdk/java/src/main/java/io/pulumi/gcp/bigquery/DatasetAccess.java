@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetAccessArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessState;
@@ -35,7 +36,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * stored in state as a different member type
      * 
      */
-    public Output<Boolean> getApiUpdatedMember() {
+    public Output<Boolean> apiUpdatedMember() {
         return this.apiUpdatedMember;
     }
     /**
@@ -49,7 +50,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * @return The ID of the dataset containing this table.
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -65,7 +66,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * domain specified will be granted the specified access
      * 
      */
-    public Output</* @Nullable */ String> getDomain() {
+    public Output</* @Nullable */ String> domain() {
         return this.domain;
     }
     /**
@@ -79,7 +80,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * @return An email address of a Google Group to grant access to.
      * 
      */
-    public Output</* @Nullable */ String> getGroupByEmail() {
+    public Output</* @Nullable */ String> groupByEmail() {
         return this.groupByEmail;
     }
     /**
@@ -95,7 +96,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * group, domain, or special group. For example: `allUsers`
      * 
      */
-    public Output</* @Nullable */ String> getIamMember() {
+    public Output</* @Nullable */ String> iamMember() {
         return this.iamMember;
     }
     /**
@@ -111,7 +112,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -135,7 +136,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * [official docs](https://cloud.google.com/bigquery/docs/access-control).
      * 
      */
-    public Output</* @Nullable */ String> getRole() {
+    public Output</* @Nullable */ String> role() {
         return this.role;
     }
     /**
@@ -149,7 +150,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * @return A special group to grant access to. Possible values include:
      * 
      */
-    public Output</* @Nullable */ String> getSpecialGroup() {
+    public Output</* @Nullable */ String> specialGroup() {
         return this.specialGroup;
     }
     /**
@@ -165,7 +166,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * fred@example.com
      * 
      */
-    public Output</* @Nullable */ String> getUserByEmail() {
+    public Output</* @Nullable */ String> userByEmail() {
         return this.userByEmail;
     }
     /**
@@ -189,7 +190,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DatasetAccessView> getView() {
+    public Output</* @Nullable */ DatasetAccessView> view() {
         return this.view;
     }
 
@@ -215,7 +216,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatasetAccess(String name, DatasetAccessArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/datasetAccess:DatasetAccess", name, args == null ? DatasetAccessArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/datasetAccess:DatasetAccess", name, args == null ? DatasetAccessArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatasetAccess(String name, Output<String> id, @Nullable DatasetAccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

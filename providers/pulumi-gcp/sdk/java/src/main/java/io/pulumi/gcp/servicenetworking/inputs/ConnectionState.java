@@ -5,6 +5,7 @@ package io.pulumi.gcp.servicenetworking.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="peering")
       private final @Nullable Output<String> peering;
 
-    public Output<String> getPeering() {
-        return this.peering == null ? Output.empty() : this.peering;
+    public Output<String> peering() {
+        return this.peering == null ? Codegen.empty() : this.peering;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservedPeeringRanges")
       private final @Nullable Output<List<String>> reservedPeeringRanges;
 
-    public Output<List<String>> getReservedPeeringRanges() {
-        return this.reservedPeeringRanges == null ? Output.empty() : this.reservedPeeringRanges;
+    public Output<List<String>> reservedPeeringRanges() {
+        return this.reservedPeeringRanges == null ? Codegen.empty() : this.reservedPeeringRanges;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public ConnectionState(
@@ -71,10 +72,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionState() {
-        this.network = Output.empty();
-        this.peering = Output.empty();
-        this.reservedPeeringRanges = Output.empty();
-        this.service = Output.empty();
+        this.network = Codegen.empty();
+        this.peering = Codegen.empty();
+        this.reservedPeeringRanges = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder peering(@Nullable Output<String> peering) {
@@ -116,7 +117,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peering(@Nullable String peering) {
-            this.peering = Output.ofNullable(peering);
+            this.peering = Codegen.ofNullable(peering);
             return this;
         }
         public Builder reservedPeeringRanges(@Nullable Output<List<String>> reservedPeeringRanges) {
@@ -124,7 +125,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservedPeeringRanges(@Nullable List<String> reservedPeeringRanges) {
-            this.reservedPeeringRanges = Output.ofNullable(reservedPeeringRanges);
+            this.reservedPeeringRanges = Codegen.ofNullable(reservedPeeringRanges);
             return this;
         }
         public Builder reservedPeeringRanges(String... reservedPeeringRanges) {
@@ -135,7 +136,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public ConnectionState build() {
             return new ConnectionState(network, peering, reservedPeeringRanges, service);

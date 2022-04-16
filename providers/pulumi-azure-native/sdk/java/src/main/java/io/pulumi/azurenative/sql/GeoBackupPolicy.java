@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Kind of geo backup policy.  This is metadata used for the Azure portal experience.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -55,7 +56,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Backup policy location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -69,7 +70,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The state of the geo backup policy.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -97,7 +98,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The storage type of the geo backup policy.
      * 
      */
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType;
     }
     /**
@@ -111,7 +112,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -137,7 +138,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GeoBackupPolicy(String name, GeoBackupPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:GeoBackupPolicy", name, args == null ? GeoBackupPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:GeoBackupPolicy", name, args == null ? GeoBackupPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GeoBackupPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

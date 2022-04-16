@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.NonResourcePolicyRuleArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.ResourcePolicyRuleArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.SubjectArgs;
@@ -28,8 +29,8 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     @Import(name="nonResourceRules")
       private final @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
 
-    public Output<List<NonResourcePolicyRuleArgs>> getNonResourceRules() {
-        return this.nonResourceRules == null ? Output.empty() : this.nonResourceRules;
+    public Output<List<NonResourcePolicyRuleArgs>> nonResourceRules() {
+        return this.nonResourceRules == null ? Codegen.empty() : this.nonResourceRules;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     @Import(name="resourceRules")
       private final @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
 
-    public Output<List<ResourcePolicyRuleArgs>> getResourceRules() {
-        return this.resourceRules == null ? Output.empty() : this.resourceRules;
+    public Output<List<ResourcePolicyRuleArgs>> resourceRules() {
+        return this.resourceRules == null ? Codegen.empty() : this.resourceRules;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     @Import(name="subjects", required=true)
       private final Output<List<SubjectArgs>> subjects;
 
-    public Output<List<SubjectArgs>> getSubjects() {
+    public Output<List<SubjectArgs>> subjects() {
         return this.subjects;
     }
 
@@ -64,9 +65,9 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     }
 
     private PolicyRulesWithSubjectsArgs() {
-        this.nonResourceRules = Output.empty();
-        this.resourceRules = Output.empty();
-        this.subjects = Output.empty();
+        this.nonResourceRules = Codegen.empty();
+        this.resourceRules = Codegen.empty();
+        this.subjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nonResourceRules(@Nullable List<NonResourcePolicyRuleArgs> nonResourceRules) {
-            this.nonResourceRules = Output.ofNullable(nonResourceRules);
+            this.nonResourceRules = Codegen.ofNullable(nonResourceRules);
             return this;
         }
         public Builder nonResourceRules(NonResourcePolicyRuleArgs... nonResourceRules) {
@@ -109,7 +110,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourceRules(@Nullable List<ResourcePolicyRuleArgs> resourceRules) {
-            this.resourceRules = Output.ofNullable(resourceRules);
+            this.resourceRules = Codegen.ofNullable(resourceRules);
             return this;
         }
         public Builder resourceRules(ResourcePolicyRuleArgs... resourceRules) {

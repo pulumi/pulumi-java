@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.SchemaConfigSchemaType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recursiveStructureDepth")
       private final @Nullable Output<String> recursiveStructureDepth;
 
-    public Output<String> getRecursiveStructureDepth() {
-        return this.recursiveStructureDepth == null ? Output.empty() : this.recursiveStructureDepth;
+    public Output<String> recursiveStructureDepth() {
+        return this.recursiveStructureDepth == null ? Codegen.empty() : this.recursiveStructureDepth;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaType")
       private final @Nullable Output<SchemaConfigSchemaType> schemaType;
 
-    public Output<SchemaConfigSchemaType> getSchemaType() {
-        return this.schemaType == null ? Output.empty() : this.schemaType;
+    public Output<SchemaConfigSchemaType> schemaType() {
+        return this.schemaType == null ? Codegen.empty() : this.schemaType;
     }
 
     public SchemaConfigArgs(
@@ -49,8 +50,8 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaConfigArgs() {
-        this.recursiveStructureDepth = Output.empty();
-        this.schemaType = Output.empty();
+        this.recursiveStructureDepth = Codegen.empty();
+        this.schemaType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recursiveStructureDepth(@Nullable String recursiveStructureDepth) {
-            this.recursiveStructureDepth = Output.ofNullable(recursiveStructureDepth);
+            this.recursiveStructureDepth = Codegen.ofNullable(recursiveStructureDepth);
             return this;
         }
         public Builder schemaType(@Nullable Output<SchemaConfigSchemaType> schemaType) {
@@ -88,7 +89,7 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaType(@Nullable SchemaConfigSchemaType schemaType) {
-            this.schemaType = Output.ofNullable(schemaType);
+            this.schemaType = Codegen.ofNullable(schemaType);
             return this;
         }        public SchemaConfigArgs build() {
             return new SchemaConfigArgs(recursiveStructureDepth, schemaType);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.gkehub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.FeatureMembershipArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipState;
@@ -44,7 +45,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * @return Config Management-specific spec. Structure is documented below.
      * 
      */
-    public Output<FeatureMembershipConfigmanagement> getConfigmanagement() {
+    public Output<FeatureMembershipConfigmanagement> configmanagement() {
         return this.configmanagement;
     }
     /**
@@ -58,7 +59,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the feature
      * 
      */
-    public Output<String> getFeature() {
+    public Output<String> feature() {
         return this.feature;
     }
     /**
@@ -72,7 +73,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * @return The location of the feature
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the membership
      * 
      */
-    public Output<String> getMembership() {
+    public Output<String> membership() {
         return this.membership;
     }
     /**
@@ -100,7 +101,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * @return The project of the feature
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -126,7 +127,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FeatureMembership(String name, FeatureMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gkehub/featureMembership:FeatureMembership", name, args == null ? FeatureMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:gkehub/featureMembership:FeatureMembership", name, args == null ? FeatureMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FeatureMembership(String name, Output<String> id, @Nullable FeatureMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

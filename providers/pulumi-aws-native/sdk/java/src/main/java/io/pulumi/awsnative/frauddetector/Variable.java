@@ -12,6 +12,7 @@ import io.pulumi.awsnative.frauddetector.outputs.VariableTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The ARN of the variable.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +48,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The time when the variable was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -61,7 +62,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The source of the data.
      * 
      */
-    public Output<VariableDataSource> getDataSource() {
+    public Output<VariableDataSource> dataSource() {
         return this.dataSource;
     }
     /**
@@ -75,7 +76,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The data type.
      * 
      */
-    public Output<VariableDataType> getDataType() {
+    public Output<VariableDataType> dataType() {
         return this.dataType;
     }
     /**
@@ -89,7 +90,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The default value for the variable when no value is received.
      * 
      */
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue;
     }
     /**
@@ -103,7 +104,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -117,7 +118,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The time when the variable was last updated.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -131,7 +132,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The name of the variable.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return Tags associated with this variable.
      * 
      */
-    public Output</* @Nullable */ List<VariableTag>> getTags() {
+    public Output</* @Nullable */ List<VariableTag>> tags() {
         return this.tags;
     }
     /**
@@ -159,7 +160,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
      * 
      */
-    public Output</* @Nullable */ VariableType> getVariableType() {
+    public Output</* @Nullable */ VariableType> variableType() {
         return this.variableType;
     }
 
@@ -185,7 +186,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Variable(String name, VariableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:frauddetector:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:frauddetector:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Variable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

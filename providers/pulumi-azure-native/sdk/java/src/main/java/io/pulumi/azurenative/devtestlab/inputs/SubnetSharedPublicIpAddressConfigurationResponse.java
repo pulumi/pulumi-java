@@ -26,7 +26,7 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.p
     @Import(name="allowedPorts")
       private final @Nullable List<PortResponse> allowedPorts;
 
-    public List<PortResponse> getAllowedPorts() {
+    public List<PortResponse> allowedPorts() {
         return this.allowedPorts == null ? List.of() : this.allowedPorts;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.gcp.monitoring;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.GroupArgs;
 import io.pulumi.gcp.monitoring.inputs.GroupState;
@@ -51,7 +52,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * purposes.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -67,7 +68,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * belong to this group.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -85,7 +86,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups that are clusters.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsCluster() {
+    public Output</* @Nullable */ Boolean> isCluster() {
         return this.isCluster;
     }
     /**
@@ -99,7 +100,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +118,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups with no parent, parentName is the empty string, "".
      * 
      */
-    public Output</* @Nullable */ String> getParentName() {
+    public Output</* @Nullable */ String> parentName() {
         return this.parentName;
     }
     /**
@@ -133,7 +134,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -159,7 +160,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:monitoring/group:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:monitoring/group:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable GroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

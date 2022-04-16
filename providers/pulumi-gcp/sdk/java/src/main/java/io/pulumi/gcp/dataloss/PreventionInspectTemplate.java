@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataloss;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateState;
@@ -50,7 +51,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * @return A description of the inspect template.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -64,7 +65,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * @return User set display name of the inspect template.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -80,7 +81,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionInspectTemplateInspectConfig> getInspectConfig() {
+    public Output</* @Nullable */ PreventionInspectTemplateInspectConfig> inspectConfig() {
         return this.inspectConfig;
     }
     /**
@@ -96,7 +97,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * or `projects/project-id/storedInfoTypes/432452342`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +119,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -144,7 +145,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PreventionInspectTemplate(String name, PreventionInspectTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, args == null ? PreventionInspectTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, args == null ? PreventionInspectTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PreventionInspectTemplate(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.iot.inputs.ThingGroupMetadataGetArgs;
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,15 +27,15 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="metadatas")
       private final @Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas;
 
-    public Output<List<ThingGroupMetadataGetArgs>> getMetadatas() {
-        return this.metadatas == null ? Output.empty() : this.metadatas;
+    public Output<List<ThingGroupMetadataGetArgs>> metadatas() {
+        return this.metadatas == null ? Codegen.empty() : this.metadatas;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentGroupName")
       private final @Nullable Output<String> parentGroupName;
 
-    public Output<String> getParentGroupName() {
-        return this.parentGroupName == null ? Output.empty() : this.parentGroupName;
+    public Output<String> parentGroupName() {
+        return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ThingGroupPropertiesGetArgs> properties;
 
-    public Output<ThingGroupPropertiesGetArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ThingGroupPropertiesGetArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -77,15 +78,15 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ThingGroupState(
@@ -119,14 +120,14 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingGroupState() {
-        this.arn = Output.empty();
-        this.metadatas = Output.empty();
-        this.name = Output.empty();
-        this.parentGroupName = Output.empty();
-        this.properties = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.version = Output.empty();
+        this.arn = Codegen.empty();
+        this.metadatas = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentGroupName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder metadatas(@Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas) {
@@ -176,7 +177,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadatas(@Nullable List<ThingGroupMetadataGetArgs> metadatas) {
-            this.metadatas = Output.ofNullable(metadatas);
+            this.metadatas = Codegen.ofNullable(metadatas);
             return this;
         }
         public Builder metadatas(ThingGroupMetadataGetArgs... metadatas) {
@@ -187,7 +188,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
@@ -195,7 +196,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Output.ofNullable(parentGroupName);
+            this.parentGroupName = Codegen.ofNullable(parentGroupName);
             return this;
         }
         public Builder properties(@Nullable Output<ThingGroupPropertiesGetArgs> properties) {
@@ -203,7 +204,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ThingGroupPropertiesGetArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -211,7 +212,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -219,7 +220,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -227,7 +228,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ThingGroupState build() {
             return new ThingGroupState(arn, metadatas, name, parentGroupName, properties, tags, tagsAll, version);

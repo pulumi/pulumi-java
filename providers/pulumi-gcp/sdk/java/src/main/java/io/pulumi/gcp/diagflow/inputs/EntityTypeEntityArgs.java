@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class EntityTypeEntityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="synonyms", required=true)
       private final Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
+    public Output<List<String>> synonyms() {
         return this.synonyms;
     }
 
@@ -40,7 +41,7 @@ public final class EntityTypeEntityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -52,8 +53,8 @@ public final class EntityTypeEntityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EntityTypeEntityArgs() {
-        this.synonyms = Output.empty();
-        this.value = Output.empty();
+        this.synonyms = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

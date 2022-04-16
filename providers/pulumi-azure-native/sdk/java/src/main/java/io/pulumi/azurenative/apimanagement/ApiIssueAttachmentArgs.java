@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -32,8 +33,8 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
-    public Output<String> getAttachmentId() {
-        return this.attachmentId == null ? Output.empty() : this.attachmentId;
+    public Output<String> attachmentId() {
+        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -54,7 +55,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="contentFormat", required=true)
       private final Output<String> contentFormat;
 
-    public Output<String> getContentFormat() {
+    public Output<String> contentFormat() {
         return this.contentFormat;
     }
 
@@ -65,7 +66,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="issueId", required=true)
       private final Output<String> issueId;
 
-    public Output<String> getIssueId() {
+    public Output<String> issueId() {
         return this.issueId;
     }
 
@@ -76,7 +77,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,7 +88,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -98,7 +99,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -122,14 +123,14 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApiIssueAttachmentArgs() {
-        this.apiId = Output.empty();
-        this.attachmentId = Output.empty();
-        this.content = Output.empty();
-        this.contentFormat = Output.empty();
-        this.issueId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.title = Output.empty();
+        this.apiId = Codegen.empty();
+        this.attachmentId = Codegen.empty();
+        this.content = Codegen.empty();
+        this.contentFormat = Codegen.empty();
+        this.issueId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Output.ofNullable(attachmentId);
+            this.attachmentId = Codegen.ofNullable(attachmentId);
             return this;
         }
         public Builder content(Output<String> content) {

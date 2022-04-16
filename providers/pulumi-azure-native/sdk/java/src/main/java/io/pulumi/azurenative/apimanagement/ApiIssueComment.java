@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Date and time when the comment was created.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedDate() {
+    public Output</* @Nullable */ String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -55,7 +56,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Comment text.
      * 
      */
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
     /**
@@ -83,7 +84,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -97,7 +98,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return A resource identifier for the user who left the comment.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -123,7 +124,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiIssueComment(String name, ApiIssueCommentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiIssueComment", name, args == null ? ApiIssueCommentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:ApiIssueComment", name, args == null ? ApiIssueCommentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiIssueComment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

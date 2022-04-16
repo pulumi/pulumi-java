@@ -5,6 +5,7 @@ package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
     @Import(name="userObjectIds")
       private final @Nullable Output<List<String>> userObjectIds;
 
-    public Output<List<String>> getUserObjectIds() {
-        return this.userObjectIds == null ? Output.empty() : this.userObjectIds;
+    public Output<List<String>> userObjectIds() {
+        return this.userObjectIds == null ? Codegen.empty() : this.userObjectIds;
     }
 
     public UserObjectReceiverValueArgs(@Nullable Output<List<String>> userObjectIds) {
@@ -35,7 +36,7 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
     }
 
     private UserObjectReceiverValueArgs() {
-        this.userObjectIds = Output.empty();
+        this.userObjectIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder userObjectIds(@Nullable List<String> userObjectIds) {
-            this.userObjectIds = Output.ofNullable(userObjectIds);
+            this.userObjectIds = Codegen.ofNullable(userObjectIds);
             return this;
         }
         public Builder userObjectIds(String... userObjectIds) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataLicence")
       private final @Nullable Output<String> dataLicence;
 
-    public Output<String> getDataLicence() {
-        return this.dataLicence == null ? Output.empty() : this.dataLicence;
+    public Output<String> dataLicence() {
+        return this.dataLicence == null ? Codegen.empty() : this.dataLicence;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxVersion")
       private final @Nullable Output<String> spdxVersion;
 
-    public Output<String> getSpdxVersion() {
-        return this.spdxVersion == null ? Output.empty() : this.spdxVersion;
+    public Output<String> spdxVersion() {
+        return this.spdxVersion == null ? Codegen.empty() : this.spdxVersion;
     }
 
     public DocumentNoteArgs(
@@ -48,8 +49,8 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentNoteArgs() {
-        this.dataLicence = Output.empty();
-        this.spdxVersion = Output.empty();
+        this.dataLicence = Codegen.empty();
+        this.spdxVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataLicence(@Nullable String dataLicence) {
-            this.dataLicence = Output.ofNullable(dataLicence);
+            this.dataLicence = Codegen.ofNullable(dataLicence);
             return this;
         }
         public Builder spdxVersion(@Nullable Output<String> spdxVersion) {
@@ -87,7 +88,7 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spdxVersion(@Nullable String spdxVersion) {
-            this.spdxVersion = Output.ofNullable(spdxVersion);
+            this.spdxVersion = Codegen.ofNullable(spdxVersion);
             return this;
         }        public DocumentNoteArgs build() {
             return new DocumentNoteArgs(dataLicence, spdxVersion);

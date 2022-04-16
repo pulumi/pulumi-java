@@ -6,6 +6,7 @@ package io.pulumi.aws.eks.inputs;
 import io.pulumi.aws.eks.inputs.NodeGroupResourceAutoscalingGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="autoscalingGroups")
       private final @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
 
-    public Output<List<NodeGroupResourceAutoscalingGroupArgs>> getAutoscalingGroups() {
-        return this.autoscalingGroups == null ? Output.empty() : this.autoscalingGroups;
+    public Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups() {
+        return this.autoscalingGroups == null ? Codegen.empty() : this.autoscalingGroups;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="remoteAccessSecurityGroupId")
       private final @Nullable Output<String> remoteAccessSecurityGroupId;
 
-    public Output<String> getRemoteAccessSecurityGroupId() {
-        return this.remoteAccessSecurityGroupId == null ? Output.empty() : this.remoteAccessSecurityGroupId;
+    public Output<String> remoteAccessSecurityGroupId() {
+        return this.remoteAccessSecurityGroupId == null ? Codegen.empty() : this.remoteAccessSecurityGroupId;
     }
 
     public NodeGroupResourceArgs(
@@ -46,8 +47,8 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NodeGroupResourceArgs() {
-        this.autoscalingGroups = Output.empty();
-        this.remoteAccessSecurityGroupId = Output.empty();
+        this.autoscalingGroups = Codegen.empty();
+        this.remoteAccessSecurityGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder autoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroupArgs> autoscalingGroups) {
-            this.autoscalingGroups = Output.ofNullable(autoscalingGroups);
+            this.autoscalingGroups = Codegen.ofNullable(autoscalingGroups);
             return this;
         }
         public Builder autoscalingGroups(NodeGroupResourceAutoscalingGroupArgs... autoscalingGroups) {
@@ -88,7 +89,7 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder remoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
-            this.remoteAccessSecurityGroupId = Output.ofNullable(remoteAccessSecurityGroupId);
+            this.remoteAccessSecurityGroupId = Codegen.ofNullable(remoteAccessSecurityGroupId);
             return this;
         }        public NodeGroupResourceArgs build() {
             return new NodeGroupResourceArgs(autoscalingGroups, remoteAccessSecurityGroupId);

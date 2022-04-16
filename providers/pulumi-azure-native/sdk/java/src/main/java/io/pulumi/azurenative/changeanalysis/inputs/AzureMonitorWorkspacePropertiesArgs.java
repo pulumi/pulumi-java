@@ -7,6 +7,7 @@ import io.pulumi.azurenative.changeanalysis.enums.ChangeDetailsMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
     @Import(name="includeChangeDetails")
       private final @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails;
 
-    public Output<Either<String,ChangeDetailsMode>> getIncludeChangeDetails() {
-        return this.includeChangeDetails == null ? Output.empty() : this.includeChangeDetails;
+    public Output<Either<String,ChangeDetailsMode>> includeChangeDetails() {
+        return this.includeChangeDetails == null ? Codegen.empty() : this.includeChangeDetails;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
-        return this.workspaceId == null ? Output.empty() : this.workspaceId;
+    public Output<String> workspaceId() {
+        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
     @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
+    public Output<String> workspaceResourceId() {
+        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 
     public AzureMonitorWorkspacePropertiesArgs(
@@ -63,9 +64,9 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
     }
 
     private AzureMonitorWorkspacePropertiesArgs() {
-        this.includeChangeDetails = Output.empty();
-        this.workspaceId = Output.empty();
-        this.workspaceResourceId = Output.empty();
+        this.includeChangeDetails = Codegen.empty();
+        this.workspaceId = Codegen.empty();
+        this.workspaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder includeChangeDetails(@Nullable Either<String,ChangeDetailsMode> includeChangeDetails) {
-            this.includeChangeDetails = Output.ofNullable(includeChangeDetails);
+            this.includeChangeDetails = Codegen.ofNullable(includeChangeDetails);
             return this;
         }
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
@@ -105,7 +106,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Output.ofNullable(workspaceId);
+            this.workspaceId = Codegen.ofNullable(workspaceId);
             return this;
         }
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
@@ -113,7 +114,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
             return this;
         }        public AzureMonitorWorkspacePropertiesArgs build() {
             return new AzureMonitorWorkspacePropertiesArgs(includeChangeDetails, workspaceId, workspaceResourceId);

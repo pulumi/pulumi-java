@@ -80,56 +80,56 @@ public final class GetJobResult {
      * Specifies the resource identifier of the job.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies the job identity details
      * 
     */
-    public Optional<IdentityDetailsResponse> getIdentity() {
+    public Optional<IdentityDetailsResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Specifies the Azure location where the job is created.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the job.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the job properties
      * 
     */
-    public JobDetailsResponse getProperties() {
+    public JobDetailsResponse properties() {
         return this.properties;
     }
     /**
      * SystemData of ImportExport Jobs.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Specifies the tags that are assigned to the job.
      * 
     */
-    public Optional<Object> getTags() {
+    public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Specifies the type of the job resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

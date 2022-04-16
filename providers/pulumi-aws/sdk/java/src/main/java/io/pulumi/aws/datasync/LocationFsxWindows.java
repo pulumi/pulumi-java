@@ -9,6 +9,7 @@ import io.pulumi.aws.datasync.inputs.LocationFsxWindowsState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return The time that the FSx for Windows location was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -69,7 +70,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return The name of the Windows domain that the FSx for Windows server belongs to.
      * 
      */
-    public Output</* @Nullable */ String> getDomain() {
+    public Output</* @Nullable */ String> domain() {
         return this.domain;
     }
     /**
@@ -83,7 +84,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the FSx for Windows file system.
      * 
      */
-    public Output<String> getFsxFilesystemArn() {
+    public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
     /**
@@ -97,7 +98,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
      * 
      */
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
     /**
@@ -111,7 +112,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Windows file system.
      * 
      */
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
@@ -125,7 +126,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return Subdirectory to perform actions as source or destination.
      * 
      */
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -139,7 +140,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -153,7 +154,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -167,7 +168,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return The URL of the FSx for Windows location that was described.
      * 
      */
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
     /**
@@ -181,7 +182,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @return The user who has the permissions to access files and folders in the FSx for Windows file system.
      * 
      */
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 
@@ -207,7 +208,7 @@ public class LocationFsxWindows extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationFsxWindows(String name, LocationFsxWindowsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/locationFsxWindows:LocationFsxWindows", name, args == null ? LocationFsxWindowsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:datasync/locationFsxWindows:LocationFsxWindows", name, args == null ? LocationFsxWindowsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocationFsxWindows(String name, Output<String> id, @Nullable LocationFsxWindowsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

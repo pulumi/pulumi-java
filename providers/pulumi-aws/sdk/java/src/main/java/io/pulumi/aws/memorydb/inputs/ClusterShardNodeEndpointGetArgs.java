@@ -5,6 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ClusterShardNodeEndpointGetArgs extends io.pulumi.resources.R
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+    public Output<String> address() {
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClusterShardNodeEndpointGetArgs extends io.pulumi.resources.R
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ClusterShardNodeEndpointGetArgs(
@@ -45,8 +46,8 @@ public final class ClusterShardNodeEndpointGetArgs extends io.pulumi.resources.R
     }
 
     private ClusterShardNodeEndpointGetArgs() {
-        this.address = Output.empty();
-        this.port = Output.empty();
+        this.address = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ClusterShardNodeEndpointGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -84,7 +85,7 @@ public final class ClusterShardNodeEndpointGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ClusterShardNodeEndpointGetArgs build() {
             return new ClusterShardNodeEndpointGetArgs(address, port);

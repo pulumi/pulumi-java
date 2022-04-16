@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.connectors_v1.inputs.JwtClaimsArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clientKey")
       private final @Nullable Output<SecretArgs> clientKey;
 
-    public Output<SecretArgs> getClientKey() {
-        return this.clientKey == null ? Output.empty() : this.clientKey;
+    public Output<SecretArgs> clientKey() {
+        return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="jwtClaims")
       private final @Nullable Output<JwtClaimsArgs> jwtClaims;
 
-    public Output<JwtClaimsArgs> getJwtClaims() {
-        return this.jwtClaims == null ? Output.empty() : this.jwtClaims;
+    public Output<JwtClaimsArgs> jwtClaims() {
+        return this.jwtClaims == null ? Codegen.empty() : this.jwtClaims;
     }
 
     public Oauth2JwtBearerArgs(
@@ -49,8 +50,8 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private Oauth2JwtBearerArgs() {
-        this.clientKey = Output.empty();
-        this.jwtClaims = Output.empty();
+        this.clientKey = Codegen.empty();
+        this.jwtClaims = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clientKey(@Nullable SecretArgs clientKey) {
-            this.clientKey = Output.ofNullable(clientKey);
+            this.clientKey = Codegen.ofNullable(clientKey);
             return this;
         }
         public Builder jwtClaims(@Nullable Output<JwtClaimsArgs> jwtClaims) {
@@ -88,7 +89,7 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder jwtClaims(@Nullable JwtClaimsArgs jwtClaims) {
-            this.jwtClaims = Output.ofNullable(jwtClaims);
+            this.jwtClaims = Codegen.ofNullable(jwtClaims);
             return this;
         }        public Oauth2JwtBearerArgs build() {
             return new Oauth2JwtBearerArgs(clientKey, jwtClaims);

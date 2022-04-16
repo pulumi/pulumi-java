@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
     @Import(name="pullDeps")
       private final @Nullable Output<Boolean> pullDeps;
 
-    public Output<Boolean> getPullDeps() {
-        return this.pullDeps == null ? Output.empty() : this.pullDeps;
+    public Output<Boolean> pullDeps() {
+        return this.pullDeps == null ? Codegen.empty() : this.pullDeps;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
     @Import(name="source", required=true)
       private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> getSource() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source() {
         return this.source;
     }
 
@@ -45,8 +46,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs() {
-        this.pullDeps = Output.empty();
-        this.source = Output.empty();
+        this.pullDeps = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
             return this;
         }
         public Builder pullDeps(@Nullable Boolean pullDeps) {
-            this.pullDeps = Output.ofNullable(pullDeps);
+            this.pullDeps = Codegen.ofNullable(pullDeps);
             return this;
         }
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source) {

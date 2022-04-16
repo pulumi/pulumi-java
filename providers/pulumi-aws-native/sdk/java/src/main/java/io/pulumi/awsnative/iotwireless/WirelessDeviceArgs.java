@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceLoRaWANDeviceArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationName", required=true)
       private final Output<String> destinationName;
 
-    public Output<String> getDestinationName() {
+    public Output<String> destinationName() {
         return this.destinationName;
     }
 
@@ -47,8 +48,8 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUplinkReceivedAt")
       private final @Nullable Output<String> lastUplinkReceivedAt;
 
-    public Output<String> getLastUplinkReceivedAt() {
-        return this.lastUplinkReceivedAt == null ? Output.empty() : this.lastUplinkReceivedAt;
+    public Output<String> lastUplinkReceivedAt() {
+        return this.lastUplinkReceivedAt == null ? Codegen.empty() : this.lastUplinkReceivedAt;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loRaWAN")
       private final @Nullable Output<WirelessDeviceLoRaWANDeviceArgs> loRaWAN;
 
-    public Output<WirelessDeviceLoRaWANDeviceArgs> getLoRaWAN() {
-        return this.loRaWAN == null ? Output.empty() : this.loRaWAN;
+    public Output<WirelessDeviceLoRaWANDeviceArgs> loRaWAN() {
+        return this.loRaWAN == null ? Codegen.empty() : this.loRaWAN;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<WirelessDeviceTagArgs>> tags;
 
-    public Output<List<WirelessDeviceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<WirelessDeviceTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thingArn")
       private final @Nullable Output<String> thingArn;
 
-    public Output<String> getThingArn() {
-        return this.thingArn == null ? Output.empty() : this.thingArn;
+    public Output<String> thingArn() {
+        return this.thingArn == null ? Codegen.empty() : this.thingArn;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<WirelessDeviceType> type;
 
-    public Output<WirelessDeviceType> getType() {
+    public Output<WirelessDeviceType> type() {
         return this.type;
     }
 
@@ -126,14 +127,14 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WirelessDeviceArgs() {
-        this.description = Output.empty();
-        this.destinationName = Output.empty();
-        this.lastUplinkReceivedAt = Output.empty();
-        this.loRaWAN = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.thingArn = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.destinationName = Codegen.empty();
+        this.lastUplinkReceivedAt = Codegen.empty();
+        this.loRaWAN = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.thingArn = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationName(Output<String> destinationName) {
@@ -191,7 +192,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
-            this.lastUplinkReceivedAt = Output.ofNullable(lastUplinkReceivedAt);
+            this.lastUplinkReceivedAt = Codegen.ofNullable(lastUplinkReceivedAt);
             return this;
         }
         public Builder loRaWAN(@Nullable Output<WirelessDeviceLoRaWANDeviceArgs> loRaWAN) {
@@ -199,7 +200,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loRaWAN(@Nullable WirelessDeviceLoRaWANDeviceArgs loRaWAN) {
-            this.loRaWAN = Output.ofNullable(loRaWAN);
+            this.loRaWAN = Codegen.ofNullable(loRaWAN);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -207,7 +208,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<WirelessDeviceTagArgs>> tags) {
@@ -215,7 +216,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<WirelessDeviceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(WirelessDeviceTagArgs... tags) {
@@ -226,7 +227,7 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thingArn(@Nullable String thingArn) {
-            this.thingArn = Output.ofNullable(thingArn);
+            this.thingArn = Codegen.ofNullable(thingArn);
             return this;
         }
         public Builder type(Output<WirelessDeviceType> type) {

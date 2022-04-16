@@ -16,56 +16,56 @@ public final class GetLaunchTemplateBlockDeviceMappingEb extends io.pulumi.resou
     @Import(name="deleteOnTermination", required=true)
       private final String deleteOnTermination;
 
-    public String getDeleteOnTermination() {
+    public String deleteOnTermination() {
         return this.deleteOnTermination;
     }
 
     @Import(name="encrypted", required=true)
       private final String encrypted;
 
-    public String getEncrypted() {
+    public String encrypted() {
         return this.encrypted;
     }
 
     @Import(name="iops", required=true)
       private final Integer iops;
 
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
 
     @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
 
     @Import(name="snapshotId", required=true)
       private final String snapshotId;
 
-    public String getSnapshotId() {
+    public String snapshotId() {
         return this.snapshotId;
     }
 
     @Import(name="throughput", required=true)
       private final Integer throughput;
 
-    public Integer getThroughput() {
+    public Integer throughput() {
         return this.throughput;
     }
 
     @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
 
     @Import(name="volumeType", required=true)
       private final String volumeType;
 
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

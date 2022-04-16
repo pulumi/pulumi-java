@@ -5,6 +5,7 @@ package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentLabelGetArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetGetArgs;
 import java.lang.Boolean;
@@ -31,8 +32,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createPolicy")
       private final @Nullable Output<String> createPolicy;
 
-    public Output<String> getCreatePolicy() {
-        return this.createPolicy == null ? Output.empty() : this.createPolicy;
+    public Output<String> createPolicy() {
+        return this.createPolicy == null ? Codegen.empty() : this.createPolicy;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletePolicy")
       private final @Nullable Output<String> deletePolicy;
 
-    public Output<String> getDeletePolicy() {
-        return this.deletePolicy == null ? Output.empty() : this.deletePolicy;
+    public Output<String> deletePolicy() {
+        return this.deletePolicy == null ? Codegen.empty() : this.deletePolicy;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
-        return this.deploymentId == null ? Output.empty() : this.deploymentId;
+    public Output<String> deploymentId() {
+        return this.deploymentId == null ? Codegen.empty() : this.deploymentId;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<DeploymentLabelGetArgs>> labels;
 
-    public Output<List<DeploymentLabelGetArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<DeploymentLabelGetArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="manifest")
       private final @Nullable Output<String> manifest;
 
-    public Output<String> getManifest() {
-        return this.manifest == null ? Output.empty() : this.manifest;
+    public Output<String> manifest() {
+        return this.manifest == null ? Codegen.empty() : this.manifest;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> getPreview() {
-        return this.preview == null ? Output.empty() : this.preview;
+    public Output<Boolean> preview() {
+        return this.preview == null ? Codegen.empty() : this.preview;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<DeploymentTargetGetArgs> target;
 
-    public Output<DeploymentTargetGetArgs> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<DeploymentTargetGetArgs> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public DeploymentState(
@@ -190,17 +191,17 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentState() {
-        this.createPolicy = Output.empty();
-        this.deletePolicy = Output.empty();
-        this.deploymentId = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.manifest = Output.empty();
-        this.name = Output.empty();
-        this.preview = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.target = Output.empty();
+        this.createPolicy = Codegen.empty();
+        this.deletePolicy = Codegen.empty();
+        this.deploymentId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.manifest = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preview = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createPolicy(@Nullable String createPolicy) {
-            this.createPolicy = Output.ofNullable(createPolicy);
+            this.createPolicy = Codegen.ofNullable(createPolicy);
             return this;
         }
         public Builder deletePolicy(@Nullable Output<String> deletePolicy) {
@@ -256,7 +257,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletePolicy(@Nullable String deletePolicy) {
-            this.deletePolicy = Output.ofNullable(deletePolicy);
+            this.deletePolicy = Codegen.ofNullable(deletePolicy);
             return this;
         }
         public Builder deploymentId(@Nullable Output<String> deploymentId) {
@@ -264,7 +265,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentId(@Nullable String deploymentId) {
-            this.deploymentId = Output.ofNullable(deploymentId);
+            this.deploymentId = Codegen.ofNullable(deploymentId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -272,7 +273,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<List<DeploymentLabelGetArgs>> labels) {
@@ -280,7 +281,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<DeploymentLabelGetArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(DeploymentLabelGetArgs... labels) {
@@ -291,7 +292,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifest(@Nullable String manifest) {
-            this.manifest = Output.ofNullable(manifest);
+            this.manifest = Codegen.ofNullable(manifest);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -299,7 +300,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder preview(@Nullable Output<Boolean> preview) {
@@ -307,7 +308,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Output.ofNullable(preview);
+            this.preview = Codegen.ofNullable(preview);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -315,7 +316,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -323,7 +324,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder target(@Nullable Output<DeploymentTargetGetArgs> target) {
@@ -331,7 +332,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable DeploymentTargetGetArgs target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public DeploymentState build() {
             return new DeploymentState(createPolicy, deletePolicy, deploymentId, description, labels, manifest, name, preview, project, selfLink, target);

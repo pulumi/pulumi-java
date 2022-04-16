@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
     @Import(name="isMultiLabel")
       private final @Nullable Output<Boolean> isMultiLabel;
 
-    public Output<Boolean> getIsMultiLabel() {
-        return this.isMultiLabel == null ? Output.empty() : this.isMultiLabel;
+    public Output<Boolean> isMultiLabel() {
+        return this.isMultiLabel == null ? Codegen.empty() : this.isMultiLabel;
     }
 
     public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(@Nullable Output<Boolean> isMultiLabel) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
     }
 
     private GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs() {
-        this.isMultiLabel = Output.empty();
+        this.isMultiLabel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
             return this;
         }
         public Builder isMultiLabel(@Nullable Boolean isMultiLabel) {
-            this.isMultiLabel = Output.ofNullable(isMultiLabel);
+            this.isMultiLabel = Codegen.ofNullable(isMultiLabel);
             return this;
         }        public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(isMultiLabel);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCredentialArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+    public Output<String> expirationTime() {
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="publicKey")
       private final @Nullable Output<PublicKeyCredentialArgs> publicKey;
 
-    public Output<PublicKeyCredentialArgs> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<PublicKeyCredentialArgs> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     public DeviceCredentialArgs(
@@ -49,8 +50,8 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeviceCredentialArgs() {
-        this.expirationTime = Output.empty();
-        this.publicKey = Output.empty();
+        this.expirationTime = Codegen.empty();
+        this.publicKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder publicKey(@Nullable Output<PublicKeyCredentialArgs> publicKey) {
@@ -88,7 +89,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder publicKey(@Nullable PublicKeyCredentialArgs publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }        public DeviceCredentialArgs build() {
             return new DeviceCredentialArgs(expirationTime, publicKey);

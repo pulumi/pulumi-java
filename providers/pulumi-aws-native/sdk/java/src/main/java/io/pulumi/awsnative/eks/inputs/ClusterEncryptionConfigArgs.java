@@ -6,6 +6,7 @@ package io.pulumi.awsnative.eks.inputs;
 import io.pulumi.awsnative.eks.inputs.ClusterEncryptionConfigProviderPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     @Import(name="provider")
       private final @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
 
-    public Output<ClusterEncryptionConfigProviderPropertiesArgs> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<ClusterEncryptionConfigProviderPropertiesArgs> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<String>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     public ClusterEncryptionConfigArgs(
@@ -50,8 +51,8 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ClusterEncryptionConfigArgs() {
-        this.provider = Output.empty();
-        this.resources = Output.empty();
+        this.provider = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder provider(@Nullable ClusterEncryptionConfigProviderPropertiesArgs provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }
         public Builder resources(@Nullable Output<List<String>> resources) {
@@ -89,7 +90,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {

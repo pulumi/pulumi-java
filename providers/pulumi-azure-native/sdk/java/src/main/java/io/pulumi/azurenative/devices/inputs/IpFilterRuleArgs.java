@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.IpFilterActionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class IpFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<IpFilterActionType> action;
 
-    public Output<IpFilterActionType> getAction() {
+    public Output<IpFilterActionType> action() {
         return this.action;
     }
 
@@ -36,7 +37,7 @@ public final class IpFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterName", required=true)
       private final Output<String> filterName;
 
-    public Output<String> getFilterName() {
+    public Output<String> filterName() {
         return this.filterName;
     }
 
@@ -47,7 +48,7 @@ public final class IpFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipMask", required=true)
       private final Output<String> ipMask;
 
-    public Output<String> getIpMask() {
+    public Output<String> ipMask() {
         return this.ipMask;
     }
 
@@ -61,9 +62,9 @@ public final class IpFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpFilterRuleArgs() {
-        this.action = Output.empty();
-        this.filterName = Output.empty();
-        this.ipMask = Output.empty();
+        this.action = Codegen.empty();
+        this.filterName = Codegen.empty();
+        this.ipMask = Codegen.empty();
     }
 
     public static Builder builder() {

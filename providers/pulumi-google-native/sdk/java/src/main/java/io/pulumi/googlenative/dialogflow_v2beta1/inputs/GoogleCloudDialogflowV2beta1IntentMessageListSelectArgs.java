@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs exten
     @Import(name="items", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs>> items;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs>> getItems() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs>> items() {
         return this.items;
     }
 
@@ -38,8 +39,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs exten
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
-        return this.subtitle == null ? Output.empty() : this.subtitle;
+    public Output<String> subtitle() {
+        return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs exten
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs exten
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs() {
-        this.items = Output.empty();
-        this.subtitle = Output.empty();
-        this.title = Output.empty();
+        this.items = Codegen.empty();
+        this.subtitle = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs exten
             return this;
         }
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Output.ofNullable(subtitle);
+            this.subtitle = Codegen.ofNullable(subtitle);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -116,7 +117,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs exten
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs(items, subtitle, title);

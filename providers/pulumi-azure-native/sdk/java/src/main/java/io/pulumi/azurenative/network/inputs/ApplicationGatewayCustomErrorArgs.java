@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewayCustomErrorStatusCo
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
     @Import(name="customErrorPageUrl")
       private final @Nullable Output<String> customErrorPageUrl;
 
-    public Output<String> getCustomErrorPageUrl() {
-        return this.customErrorPageUrl == null ? Output.empty() : this.customErrorPageUrl;
+    public Output<String> customErrorPageUrl() {
+        return this.customErrorPageUrl == null ? Codegen.empty() : this.customErrorPageUrl;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
     @Import(name="statusCode")
       private final @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 
-    public Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> getStatusCode() {
-        return this.statusCode == null ? Output.empty() : this.statusCode;
+    public Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode() {
+        return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
     public ApplicationGatewayCustomErrorArgs(
@@ -50,8 +51,8 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
     }
 
     private ApplicationGatewayCustomErrorArgs() {
-        this.customErrorPageUrl = Output.empty();
-        this.statusCode = Output.empty();
+        this.customErrorPageUrl = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
             return this;
         }
         public Builder customErrorPageUrl(@Nullable String customErrorPageUrl) {
-            this.customErrorPageUrl = Output.ofNullable(customErrorPageUrl);
+            this.customErrorPageUrl = Codegen.ofNullable(customErrorPageUrl);
             return this;
         }
         public Builder statusCode(@Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
@@ -89,7 +90,7 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
             return this;
         }
         public Builder statusCode(@Nullable Either<String,ApplicationGatewayCustomErrorStatusCode> statusCode) {
-            this.statusCode = Output.ofNullable(statusCode);
+            this.statusCode = Codegen.ofNullable(statusCode);
             return this;
         }        public ApplicationGatewayCustomErrorArgs build() {
             return new ApplicationGatewayCustomErrorArgs(customErrorPageUrl, statusCode);

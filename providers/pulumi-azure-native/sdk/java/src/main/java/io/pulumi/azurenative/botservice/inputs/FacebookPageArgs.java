@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+    public Output<String> accessToken() {
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -48,8 +49,8 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FacebookPageArgs() {
-        this.accessToken = Output.empty();
-        this.id = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder id(Output<String> id) {

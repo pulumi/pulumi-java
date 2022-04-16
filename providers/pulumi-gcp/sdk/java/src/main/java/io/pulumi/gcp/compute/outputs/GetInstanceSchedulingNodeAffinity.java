@@ -24,13 +24,13 @@ public final class GetInstanceSchedulingNodeAffinity {
         this.values = values;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

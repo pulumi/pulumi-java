@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.inputs.ManagementPolicyDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     @Import(name="definition", required=true)
       private final Output<ManagementPolicyDefinitionArgs> definition;
 
-    public Output<ManagementPolicyDefinitionArgs> getDefinition() {
+    public Output<ManagementPolicyDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -40,8 +41,8 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -62,7 +63,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<Either<String,RuleType>> type;
 
-    public Output<Either<String,RuleType>> getType() {
+    public Output<Either<String,RuleType>> type() {
         return this.type;
     }
 
@@ -78,10 +79,10 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     }
 
     private ManagementPolicyRuleArgs() {
-        this.definition = Output.empty();
-        this.enabled = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.definition = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder name(Output<String> name) {

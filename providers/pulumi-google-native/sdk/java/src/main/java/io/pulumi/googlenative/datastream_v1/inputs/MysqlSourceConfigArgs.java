@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlRdbmsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="excludeObjects")
       private final @Nullable Output<MysqlRdbmsArgs> excludeObjects;
 
-    public Output<MysqlRdbmsArgs> getExcludeObjects() {
-        return this.excludeObjects == null ? Output.empty() : this.excludeObjects;
+    public Output<MysqlRdbmsArgs> excludeObjects() {
+        return this.excludeObjects == null ? Codegen.empty() : this.excludeObjects;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="includeObjects")
       private final @Nullable Output<MysqlRdbmsArgs> includeObjects;
 
-    public Output<MysqlRdbmsArgs> getIncludeObjects() {
-        return this.includeObjects == null ? Output.empty() : this.includeObjects;
+    public Output<MysqlRdbmsArgs> includeObjects() {
+        return this.includeObjects == null ? Codegen.empty() : this.includeObjects;
     }
 
     public MysqlSourceConfigArgs(
@@ -48,8 +49,8 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MysqlSourceConfigArgs() {
-        this.excludeObjects = Output.empty();
-        this.includeObjects = Output.empty();
+        this.excludeObjects = Codegen.empty();
+        this.includeObjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder excludeObjects(@Nullable MysqlRdbmsArgs excludeObjects) {
-            this.excludeObjects = Output.ofNullable(excludeObjects);
+            this.excludeObjects = Codegen.ofNullable(excludeObjects);
             return this;
         }
         public Builder includeObjects(@Nullable Output<MysqlRdbmsArgs> includeObjects) {
@@ -87,7 +88,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder includeObjects(@Nullable MysqlRdbmsArgs includeObjects) {
-            this.includeObjects = Output.ofNullable(includeObjects);
+            this.includeObjects = Codegen.ofNullable(includeObjects);
             return this;
         }        public MysqlSourceConfigArgs build() {
             return new MysqlSourceConfigArgs(excludeObjects, includeObjects);

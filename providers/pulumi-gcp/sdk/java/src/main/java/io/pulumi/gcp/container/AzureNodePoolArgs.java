@@ -5,6 +5,7 @@ package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AzureNodePoolAutoscalingArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolMaxPodsConstraintArgs;
@@ -25,8 +26,8 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling", required=true)
       private final Output<AzureNodePoolAutoscalingArgs> autoscaling;
 
-    public Output<AzureNodePoolAutoscalingArgs> getAutoscaling() {
+    public Output<AzureNodePoolAutoscalingArgs> autoscaling() {
         return this.autoscaling;
     }
 
@@ -47,8 +48,8 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureAvailabilityZone")
       private final @Nullable Output<String> azureAvailabilityZone;
 
-    public Output<String> getAzureAvailabilityZone() {
-        return this.azureAvailabilityZone == null ? Output.empty() : this.azureAvailabilityZone;
+    public Output<String> azureAvailabilityZone() {
+        return this.azureAvailabilityZone == null ? Codegen.empty() : this.azureAvailabilityZone;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -69,7 +70,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
       private final Output<AzureNodePoolConfigArgs> config;
 
-    public Output<AzureNodePoolConfigArgs> getConfig() {
+    public Output<AzureNodePoolConfigArgs> config() {
         return this.config;
     }
 
@@ -80,7 +81,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -91,7 +92,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsConstraint", required=true)
       private final Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
-    public Output<AzureNodePoolMaxPodsConstraintArgs> getMaxPodsConstraint() {
+    public Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
 
@@ -102,8 +103,8 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -135,7 +136,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -165,17 +166,17 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AzureNodePoolArgs() {
-        this.annotations = Output.empty();
-        this.autoscaling = Output.empty();
-        this.azureAvailabilityZone = Output.empty();
-        this.cluster = Output.empty();
-        this.config = Output.empty();
-        this.location = Output.empty();
-        this.maxPodsConstraint = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.subnetId = Output.empty();
-        this.version = Output.empty();
+        this.annotations = Codegen.empty();
+        this.autoscaling = Codegen.empty();
+        this.azureAvailabilityZone = Codegen.empty();
+        this.cluster = Codegen.empty();
+        this.config = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxPodsConstraint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder autoscaling(Output<AzureNodePoolAutoscalingArgs> autoscaling) {
@@ -239,7 +240,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureAvailabilityZone(@Nullable String azureAvailabilityZone) {
-            this.azureAvailabilityZone = Output.ofNullable(azureAvailabilityZone);
+            this.azureAvailabilityZone = Codegen.ofNullable(azureAvailabilityZone);
             return this;
         }
         public Builder cluster(Output<String> cluster) {
@@ -279,7 +280,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -287,7 +288,7 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder subnetId(Output<String> subnetId) {

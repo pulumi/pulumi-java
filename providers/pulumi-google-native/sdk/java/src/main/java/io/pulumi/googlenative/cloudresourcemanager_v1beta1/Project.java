@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v1beta1.ProjectArgs;
 import io.pulumi.googlenative.cloudresourcemanager_v1beta1.outputs.ResourceIdResponse;
@@ -30,7 +31,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return Creation time. Read-only.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +45,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"environment" : "dev"` Read-write.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -58,7 +59,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The Project lifecycle state. Read-only.
      * 
      */
-    public Output<String> getLifecycleState() {
+    public Output<String> lifecycleState() {
         return this.lifecycleState;
     }
     /**
@@ -72,7 +73,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return An optional reference to a parent Resource. Supported parent types include "organization" and "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
      * 
      */
-    public Output<ResourceIdResponse> getParent() {
+    public Output<ResourceIdResponse> parent() {
         return this.parent;
     }
     /**
@@ -100,7 +101,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
      * 
      */
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     /**
@@ -114,7 +115,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The number uniquely identifying the project. Example: `415104041262` Read-only.
      * 
      */
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber;
     }
 
@@ -140,7 +141,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, @Nullable ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudresourcemanager/v1beta1:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudresourcemanager/v1beta1:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

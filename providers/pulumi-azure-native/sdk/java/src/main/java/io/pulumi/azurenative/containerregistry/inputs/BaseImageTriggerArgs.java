@@ -9,6 +9,7 @@ import io.pulumi.azurenative.containerregistry.enums.UpdateTriggerPayloadType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="baseImageTriggerType", required=true)
       private final Output<Either<String,BaseImageTriggerType>> baseImageTriggerType;
 
-    public Output<Either<String,BaseImageTriggerType>> getBaseImageTriggerType() {
+    public Output<Either<String,BaseImageTriggerType>> baseImageTriggerType() {
         return this.baseImageTriggerType;
     }
 
@@ -40,7 +41,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,8 +52,8 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Output<Either<String,TriggerStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,TriggerStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="updateTriggerEndpoint")
       private final @Nullable Output<String> updateTriggerEndpoint;
 
-    public Output<String> getUpdateTriggerEndpoint() {
-        return this.updateTriggerEndpoint == null ? Output.empty() : this.updateTriggerEndpoint;
+    public Output<String> updateTriggerEndpoint() {
+        return this.updateTriggerEndpoint == null ? Codegen.empty() : this.updateTriggerEndpoint;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="updateTriggerPayloadType")
       private final @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
 
-    public Output<Either<String,UpdateTriggerPayloadType>> getUpdateTriggerPayloadType() {
-        return this.updateTriggerPayloadType == null ? Output.empty() : this.updateTriggerPayloadType;
+    public Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType() {
+        return this.updateTriggerPayloadType == null ? Codegen.empty() : this.updateTriggerPayloadType;
     }
 
     public BaseImageTriggerArgs(
@@ -91,11 +92,11 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BaseImageTriggerArgs() {
-        this.baseImageTriggerType = Output.empty();
-        this.name = Output.empty();
-        this.status = Output.empty();
-        this.updateTriggerEndpoint = Output.empty();
-        this.updateTriggerPayloadType = Output.empty();
+        this.baseImageTriggerType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
+        this.updateTriggerEndpoint = Codegen.empty();
+        this.updateTriggerPayloadType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder updateTriggerEndpoint(@Nullable Output<String> updateTriggerEndpoint) {
@@ -155,7 +156,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
-            this.updateTriggerEndpoint = Output.ofNullable(updateTriggerEndpoint);
+            this.updateTriggerEndpoint = Codegen.ofNullable(updateTriggerEndpoint);
             return this;
         }
         public Builder updateTriggerPayloadType(@Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
@@ -163,7 +164,7 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder updateTriggerPayloadType(@Nullable Either<String,UpdateTriggerPayloadType> updateTriggerPayloadType) {
-            this.updateTriggerPayloadType = Output.ofNullable(updateTriggerPayloadType);
+            this.updateTriggerPayloadType = Codegen.ofNullable(updateTriggerPayloadType);
             return this;
         }        public BaseImageTriggerArgs build() {
             return new BaseImageTriggerArgs(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);

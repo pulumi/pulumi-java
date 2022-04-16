@@ -53,31 +53,31 @@ public final class MonitorPropertiesResponse {
      * Elastic cloud properties.
      * 
     */
-    public Optional<ElasticPropertiesResponse> getElasticProperties() {
+    public Optional<ElasticPropertiesResponse> elasticProperties() {
         return Optional.ofNullable(this.elasticProperties);
     }
-    public String getLiftrResourceCategory() {
+    public String liftrResourceCategory() {
         return this.liftrResourceCategory;
     }
     /**
      * The priority of the resource.
      * 
     */
-    public Integer getLiftrResourcePreference() {
+    public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
     */
-    public Optional<String> getMonitoringStatus() {
+    public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
     /**
      * Provisioning state of the monitor resource.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
 

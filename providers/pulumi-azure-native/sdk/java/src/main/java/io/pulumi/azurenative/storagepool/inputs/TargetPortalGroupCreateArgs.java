@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     @Import(name="acls", required=true)
       private final Output<List<AclArgs>> acls;
 
-    public Output<List<AclArgs>> getAcls() {
+    public Output<List<AclArgs>> acls() {
         return this.acls;
     }
 
@@ -38,7 +39,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     @Import(name="attributes", required=true)
       private final Output<AttributesArgs> attributes;
 
-    public Output<AttributesArgs> getAttributes() {
+    public Output<AttributesArgs> attributes() {
         return this.attributes;
     }
 
@@ -49,7 +50,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     @Import(name="luns", required=true)
       private final Output<List<IscsiLunArgs>> luns;
 
-    public Output<List<IscsiLunArgs>> getLuns() {
+    public Output<List<IscsiLunArgs>> luns() {
         return this.luns;
     }
 
@@ -63,9 +64,9 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     }
 
     private TargetPortalGroupCreateArgs() {
-        this.acls = Output.empty();
-        this.attributes = Output.empty();
-        this.luns = Output.empty();
+        this.acls = Codegen.empty();
+        this.attributes = Codegen.empty();
+        this.luns = Codegen.empty();
     }
 
     public static Builder builder() {

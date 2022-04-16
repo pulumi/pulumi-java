@@ -6,6 +6,7 @@ package io.pulumi.gcp.certificateauthority;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CertificateArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateState;
@@ -55,7 +56,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Certificate Authority name.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateAuthority() {
+    public Output</* @Nullable */ String> certificateAuthority() {
         return this.certificateAuthority;
     }
     /**
@@ -71,7 +72,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * this field is present.
      * 
      */
-    public Output<List<CertificateCertificateDescription>> getCertificateDescriptions() {
+    public Output<List<CertificateCertificateDescription>> certificateDescriptions() {
         return this.certificateDescriptions;
     }
     /**
@@ -93,7 +94,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * as the Certificate.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateTemplate() {
+    public Output</* @Nullable */ String> certificateTemplate() {
         return this.certificateTemplate;
     }
     /**
@@ -109,7 +110,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CertificateConfig> getConfig() {
+    public Output</* @Nullable */ CertificateConfig> config() {
         return this.config;
     }
     /**
@@ -123,7 +124,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The time that this resource was created on the server. This is in RFC3339 text format.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -137,7 +138,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Labels with user-defined metadata to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -155,7 +156,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    public Output</* @Nullable */ String> getLifetime() {
+    public Output</* @Nullable */ String> lifetime() {
         return this.lifetime;
     }
     /**
@@ -171,7 +172,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * running `gcloud privateca locations list`.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -185,7 +186,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The name for this Certificate.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -199,7 +200,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Output only. The pem-encoded, signed X.509 certificate.
      * 
      */
-    public Output<String> getPemCertificate() {
+    public Output<String> pemCertificate() {
         return this.pemCertificate;
     }
     /**
@@ -213,7 +214,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Required. Expected to be in leaf-to-root order according to RFC 5246.
      * 
      */
-    public Output<List<String>> getPemCertificates() {
+    public Output<List<String>> pemCertificates() {
         return this.pemCertificates;
     }
     /**
@@ -227,7 +228,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    public Output</* @Nullable */ String> getPemCsr() {
+    public Output</* @Nullable */ String> pemCsr() {
         return this.pemCsr;
     }
     /**
@@ -241,7 +242,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The name of the CaPool this Certificate belongs to.
      * 
      */
-    public Output<String> getPool() {
+    public Output<String> pool() {
         return this.pool;
     }
     /**
@@ -257,7 +258,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -273,7 +274,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * this field is present.
      * 
      */
-    public Output<List<CertificateRevocationDetail>> getRevocationDetails() {
+    public Output<List<CertificateRevocationDetail>> revocationDetails() {
         return this.revocationDetails;
     }
     /**
@@ -287,7 +288,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -313,7 +314,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:certificateauthority/certificate:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:certificateauthority/certificate:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Certificate(String name, Output<String> id, @Nullable CertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

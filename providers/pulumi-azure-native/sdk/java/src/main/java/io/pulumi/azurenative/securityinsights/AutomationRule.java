@@ -14,6 +14,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return The actions to execute when the automation rule is triggered
      * 
      */
-    public Output<List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>>> getActions() {
+    public Output<List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>>> actions() {
         return this.actions;
     }
     /**
@@ -61,7 +62,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return Describes the client that created the automation rule
      * 
      */
-    public Output<ClientInfoResponse> getCreatedBy() {
+    public Output<ClientInfoResponse> createdBy() {
         return this.createdBy;
     }
     /**
@@ -75,7 +76,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return The time the automation rule was created
      * 
      */
-    public Output<String> getCreatedTimeUtc() {
+    public Output<String> createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
@@ -89,7 +90,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return The display name of the automation  rule
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -103,7 +104,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -117,7 +118,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return Describes the client that last updated the automation rule
      * 
      */
-    public Output<ClientInfoResponse> getLastModifiedBy() {
+    public Output<ClientInfoResponse> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -131,7 +132,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return The last time the automation rule was updated
      * 
      */
-    public Output<String> getLastModifiedTimeUtc() {
+    public Output<String> lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
@@ -145,7 +146,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +160,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return The order of execution of the automation rule
      * 
      */
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
     /**
@@ -173,7 +174,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return The triggering logic of the automation rule
      * 
      */
-    public Output<AutomationRuleTriggeringLogicResponse> getTriggeringLogic() {
+    public Output<AutomationRuleTriggeringLogicResponse> triggeringLogic() {
         return this.triggeringLogic;
     }
     /**
@@ -187,7 +188,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -213,7 +214,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AutomationRule(String name, AutomationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:AutomationRule", name, args == null ? AutomationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:AutomationRule", name, args == null ? AutomationRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AutomationRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

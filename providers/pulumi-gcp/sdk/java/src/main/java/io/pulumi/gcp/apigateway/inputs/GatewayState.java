@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiConfig")
       private final @Nullable Output<String> apiConfig;
 
-    public Output<String> getApiConfig() {
-        return this.apiConfig == null ? Output.empty() : this.apiConfig;
+    public Output<String> apiConfig() {
+        return this.apiConfig == null ? Codegen.empty() : this.apiConfig;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultHostname")
       private final @Nullable Output<String> defaultHostname;
 
-    public Output<String> getDefaultHostname() {
-        return this.defaultHostname == null ? Output.empty() : this.defaultHostname;
+    public Output<String> defaultHostname() {
+        return this.defaultHostname == null ? Codegen.empty() : this.defaultHostname;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
-        return this.gatewayId == null ? Output.empty() : this.gatewayId;
+    public Output<String> gatewayId() {
+        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public GatewayState(
@@ -125,14 +126,14 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayState() {
-        this.apiConfig = Output.empty();
-        this.defaultHostname = Output.empty();
-        this.displayName = Output.empty();
-        this.gatewayId = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.apiConfig = Codegen.empty();
+        this.defaultHostname = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.gatewayId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiConfig(@Nullable String apiConfig) {
-            this.apiConfig = Output.ofNullable(apiConfig);
+            this.apiConfig = Codegen.ofNullable(apiConfig);
             return this;
         }
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
@@ -182,7 +183,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultHostname(@Nullable String defaultHostname) {
-            this.defaultHostname = Output.ofNullable(defaultHostname);
+            this.defaultHostname = Codegen.ofNullable(defaultHostname);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -190,7 +191,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
@@ -198,7 +199,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Output.ofNullable(gatewayId);
+            this.gatewayId = Codegen.ofNullable(gatewayId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -206,7 +207,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -214,7 +215,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -222,7 +223,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -230,7 +231,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public GatewayState build() {
             return new GatewayState(apiConfig, defaultHostname, displayName, gatewayId, labels, name, project, region);

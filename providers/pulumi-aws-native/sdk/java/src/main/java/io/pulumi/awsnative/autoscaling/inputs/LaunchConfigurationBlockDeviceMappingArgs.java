@@ -6,6 +6,7 @@ package io.pulumi.awsnative.autoscaling.inputs;
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationBlockDeviceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -38,8 +39,8 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="ebs")
       private final @Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs;
 
-    public Output<LaunchConfigurationBlockDeviceArgs> getEbs() {
-        return this.ebs == null ? Output.empty() : this.ebs;
+    public Output<LaunchConfigurationBlockDeviceArgs> ebs() {
+        return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
-    public Output<Boolean> getNoDevice() {
-        return this.noDevice == null ? Output.empty() : this.noDevice;
+    public Output<Boolean> noDevice() {
+        return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
-        return this.virtualName == null ? Output.empty() : this.virtualName;
+    public Output<String> virtualName() {
+        return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 
     public LaunchConfigurationBlockDeviceMappingArgs(
@@ -76,10 +77,10 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
     }
 
     private LaunchConfigurationBlockDeviceMappingArgs() {
-        this.deviceName = Output.empty();
-        this.ebs = Output.empty();
-        this.noDevice = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.ebs = Codegen.empty();
+        this.noDevice = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
             return this;
         }
         public Builder ebs(@Nullable LaunchConfigurationBlockDeviceArgs ebs) {
-            this.ebs = Output.ofNullable(ebs);
+            this.ebs = Codegen.ofNullable(ebs);
             return this;
         }
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
@@ -129,7 +130,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
             return this;
         }
         public Builder noDevice(@Nullable Boolean noDevice) {
-            this.noDevice = Output.ofNullable(noDevice);
+            this.noDevice = Codegen.ofNullable(noDevice);
             return this;
         }
         public Builder virtualName(@Nullable Output<String> virtualName) {
@@ -137,7 +138,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
             return this;
         }
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Output.ofNullable(virtualName);
+            this.virtualName = Codegen.ofNullable(virtualName);
             return this;
         }        public LaunchConfigurationBlockDeviceMappingArgs build() {
             return new LaunchConfigurationBlockDeviceMappingArgs(deviceName, ebs, noDevice, virtualName);

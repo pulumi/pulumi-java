@@ -19,7 +19,7 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
     @Import(name="subscriptionName", required=true)
       private final String subscriptionName;
 
-    public String getSubscriptionName() {
+    public String subscriptionName() {
         return this.subscriptionName;
     }
 

@@ -25,7 +25,7 @@ public final class PrivateAtlasPropertiesResponse extends io.pulumi.resources.In
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 

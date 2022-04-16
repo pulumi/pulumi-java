@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return The key creation date.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -55,7 +56,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Kind of encryption protector used to protect the key.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -69,7 +70,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return The key type like 'AzureKeyVault'.
      * 
      */
-    public Output<String> getServerKeyType() {
+    public Output<String> serverKeyType() {
         return this.serverKeyType;
     }
     /**
@@ -97,7 +98,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -111,7 +112,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return The URI of the key.
      * 
      */
-    public Output</* @Nullable */ String> getUri() {
+    public Output</* @Nullable */ String> uri() {
         return this.uri;
     }
 
@@ -137,7 +138,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerKey(String name, ServerKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dbforpostgresql:ServerKey", name, args == null ? ServerKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dbforpostgresql:ServerKey", name, args == null ? ServerKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

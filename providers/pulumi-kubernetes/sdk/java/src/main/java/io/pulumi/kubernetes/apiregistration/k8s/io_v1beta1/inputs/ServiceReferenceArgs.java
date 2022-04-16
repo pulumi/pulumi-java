@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ServiceReferenceArgs(
@@ -62,9 +63,9 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServiceReferenceArgs() {
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.port = Output.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -104,7 +105,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -112,7 +113,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ServiceReferenceArgs build() {
             return new ServiceReferenceArgs(name, namespace, port);

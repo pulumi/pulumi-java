@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -35,7 +36,7 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
      * @return CIDR block of this entry.
      * 
      */
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
     /**
@@ -49,7 +50,7 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
      * @return Description of this entry. Due to API limitations, updating only the description of an entry requires recreating the entry.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -63,7 +64,7 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
      * @return CIDR block of this entry.
      * 
      */
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
 
@@ -89,7 +90,7 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedPrefixListEntry(String name, ManagedPrefixListEntryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/managedPrefixListEntry:ManagedPrefixListEntry", name, args == null ? ManagedPrefixListEntryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/managedPrefixListEntry:ManagedPrefixListEntry", name, args == null ? ManagedPrefixListEntryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedPrefixListEntry(String name, Output<String> id, @Nullable ManagedPrefixListEntryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

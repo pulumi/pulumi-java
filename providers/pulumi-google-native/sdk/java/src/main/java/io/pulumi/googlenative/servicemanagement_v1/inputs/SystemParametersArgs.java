@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterRuleArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rules")
       private final @Nullable Output<List<SystemParameterRuleArgs>> rules;
 
-    public Output<List<SystemParameterRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<SystemParameterRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public SystemParametersArgs(@Nullable Output<List<SystemParameterRuleArgs>> rules) {
@@ -35,7 +36,7 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SystemParametersArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder rules(@Nullable List<SystemParameterRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(SystemParameterRuleArgs... rules) {

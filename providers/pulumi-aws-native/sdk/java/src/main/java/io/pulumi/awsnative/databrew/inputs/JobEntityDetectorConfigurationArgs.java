@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.JobAllowedStatisticsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
     @Import(name="allowedStatistics")
       private final @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
 
-    public Output<JobAllowedStatisticsArgs> getAllowedStatistics() {
-        return this.allowedStatistics == null ? Output.empty() : this.allowedStatistics;
+    public Output<JobAllowedStatisticsArgs> allowedStatistics() {
+        return this.allowedStatistics == null ? Codegen.empty() : this.allowedStatistics;
     }
 
     @Import(name="entityTypes", required=true)
       private final Output<List<String>> entityTypes;
 
-    public Output<List<String>> getEntityTypes() {
+    public Output<List<String>> entityTypes() {
         return this.entityTypes;
     }
 
@@ -38,8 +39,8 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
     }
 
     private JobEntityDetectorConfigurationArgs() {
-        this.allowedStatistics = Output.empty();
-        this.entityTypes = Output.empty();
+        this.allowedStatistics = Codegen.empty();
+        this.entityTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder allowedStatistics(@Nullable JobAllowedStatisticsArgs allowedStatistics) {
-            this.allowedStatistics = Output.ofNullable(allowedStatistics);
+            this.allowedStatistics = Codegen.ofNullable(allowedStatistics);
             return this;
         }
         public Builder entityTypes(Output<List<String>> entityTypes) {

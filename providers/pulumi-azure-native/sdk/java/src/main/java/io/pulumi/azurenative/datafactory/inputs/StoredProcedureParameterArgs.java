@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.StoredProcedureParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     @Import(name="type")
       private final @Nullable Output<Either<String,StoredProcedureParameterType>> type;
 
-    public Output<Either<String,StoredProcedureParameterType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,StoredProcedureParameterType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Object> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public StoredProcedureParameterArgs(
@@ -51,8 +52,8 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     }
 
     private StoredProcedureParameterArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder type(@Nullable Either<String,StoredProcedureParameterType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<Object> value) {
@@ -90,7 +91,7 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder value(@Nullable Object value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public StoredProcedureParameterArgs build() {
             return new StoredProcedureParameterArgs(type, value);

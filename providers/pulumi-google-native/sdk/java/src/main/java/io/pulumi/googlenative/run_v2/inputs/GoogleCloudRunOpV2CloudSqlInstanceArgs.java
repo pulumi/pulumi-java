@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
     @Import(name="connections")
       private final @Nullable Output<List<String>> connections;
 
-    public Output<List<String>> getConnections() {
-        return this.connections == null ? Output.empty() : this.connections;
+    public Output<List<String>> connections() {
+        return this.connections == null ? Codegen.empty() : this.connections;
     }
 
     public GoogleCloudRunOpV2CloudSqlInstanceArgs(@Nullable Output<List<String>> connections) {
@@ -35,7 +36,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
     }
 
     private GoogleCloudRunOpV2CloudSqlInstanceArgs() {
-        this.connections = Output.empty();
+        this.connections = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
             return this;
         }
         public Builder connections(@Nullable List<String> connections) {
-            this.connections = Output.ofNullable(connections);
+            this.connections = Codegen.ofNullable(connections);
             return this;
         }
         public Builder connections(String... connections) {

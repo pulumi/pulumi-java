@@ -9,6 +9,7 @@ import io.pulumi.aws.organizations.inputs.PolicyAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The unique identifier (ID) of the policy that you want to attach to the target.
      * 
      */
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
     /**
@@ -53,7 +54,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -79,7 +80,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyAttachment(String name, PolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:organizations/policyAttachment:PolicyAttachment", name, args == null ? PolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:organizations/policyAttachment:PolicyAttachment", name, args == null ? PolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PolicyAttachment(String name, Output<String> id, @Nullable PolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

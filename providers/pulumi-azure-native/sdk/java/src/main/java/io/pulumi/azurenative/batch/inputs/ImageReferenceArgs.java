@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="offer")
       private final @Nullable Output<String> offer;
 
-    public Output<String> getOffer() {
-        return this.offer == null ? Output.empty() : this.offer;
+    public Output<String> offer() {
+        return this.offer == null ? Codegen.empty() : this.offer;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+    public Output<String> publisher() {
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<String> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ImageReferenceArgs(
@@ -83,11 +84,11 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageReferenceArgs() {
-        this.id = Output.empty();
-        this.offer = Output.empty();
-        this.publisher = Output.empty();
-        this.sku = Output.empty();
-        this.version = Output.empty();
+        this.id = Codegen.empty();
+        this.offer = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder offer(@Nullable Output<String> offer) {
@@ -131,7 +132,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder offer(@Nullable String offer) {
-            this.offer = Output.ofNullable(offer);
+            this.offer = Codegen.ofNullable(offer);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -139,7 +140,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }
         public Builder sku(@Nullable Output<String> sku) {
@@ -147,7 +148,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable String sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -155,7 +156,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ImageReferenceArgs build() {
             return new ImageReferenceArgs(id, offer, publisher, sku, version);

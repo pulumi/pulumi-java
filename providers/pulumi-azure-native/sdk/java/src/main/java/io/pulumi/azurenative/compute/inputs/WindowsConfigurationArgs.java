@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.PatchSettingsArgs;
 import io.pulumi.azurenative.compute.inputs.WinRMConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,8 +31,8 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="additionalUnattendContent")
       private final @Nullable Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent;
 
-    public Output<List<AdditionalUnattendContentArgs>> getAdditionalUnattendContent() {
-        return this.additionalUnattendContent == null ? Output.empty() : this.additionalUnattendContent;
+    public Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent() {
+        return this.additionalUnattendContent == null ? Codegen.empty() : this.additionalUnattendContent;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="enableAutomaticUpdates")
       private final @Nullable Output<Boolean> enableAutomaticUpdates;
 
-    public Output<Boolean> getEnableAutomaticUpdates() {
-        return this.enableAutomaticUpdates == null ? Output.empty() : this.enableAutomaticUpdates;
+    public Output<Boolean> enableAutomaticUpdates() {
+        return this.enableAutomaticUpdates == null ? Codegen.empty() : this.enableAutomaticUpdates;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="patchSettings")
       private final @Nullable Output<PatchSettingsArgs> patchSettings;
 
-    public Output<PatchSettingsArgs> getPatchSettings() {
-        return this.patchSettings == null ? Output.empty() : this.patchSettings;
+    public Output<PatchSettingsArgs> patchSettings() {
+        return this.patchSettings == null ? Codegen.empty() : this.patchSettings;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="provisionVMAgent")
       private final @Nullable Output<Boolean> provisionVMAgent;
 
-    public Output<Boolean> getProvisionVMAgent() {
-        return this.provisionVMAgent == null ? Output.empty() : this.provisionVMAgent;
+    public Output<Boolean> provisionVMAgent() {
+        return this.provisionVMAgent == null ? Codegen.empty() : this.provisionVMAgent;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="winRM")
       private final @Nullable Output<WinRMConfigurationArgs> winRM;
 
-    public Output<WinRMConfigurationArgs> getWinRM() {
-        return this.winRM == null ? Output.empty() : this.winRM;
+    public Output<WinRMConfigurationArgs> winRM() {
+        return this.winRM == null ? Codegen.empty() : this.winRM;
     }
 
     public WindowsConfigurationArgs(
@@ -105,12 +106,12 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private WindowsConfigurationArgs() {
-        this.additionalUnattendContent = Output.empty();
-        this.enableAutomaticUpdates = Output.empty();
-        this.patchSettings = Output.empty();
-        this.provisionVMAgent = Output.empty();
-        this.timeZone = Output.empty();
-        this.winRM = Output.empty();
+        this.additionalUnattendContent = Codegen.empty();
+        this.enableAutomaticUpdates = Codegen.empty();
+        this.patchSettings = Codegen.empty();
+        this.provisionVMAgent = Codegen.empty();
+        this.timeZone = Codegen.empty();
+        this.winRM = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder additionalUnattendContent(@Nullable List<AdditionalUnattendContentArgs> additionalUnattendContent) {
-            this.additionalUnattendContent = Output.ofNullable(additionalUnattendContent);
+            this.additionalUnattendContent = Codegen.ofNullable(additionalUnattendContent);
             return this;
         }
         public Builder additionalUnattendContent(AdditionalUnattendContentArgs... additionalUnattendContent) {
@@ -159,7 +160,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = Output.ofNullable(enableAutomaticUpdates);
+            this.enableAutomaticUpdates = Codegen.ofNullable(enableAutomaticUpdates);
             return this;
         }
         public Builder patchSettings(@Nullable Output<PatchSettingsArgs> patchSettings) {
@@ -167,7 +168,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder patchSettings(@Nullable PatchSettingsArgs patchSettings) {
-            this.patchSettings = Output.ofNullable(patchSettings);
+            this.patchSettings = Codegen.ofNullable(patchSettings);
             return this;
         }
         public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
@@ -175,7 +176,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
-            this.provisionVMAgent = Output.ofNullable(provisionVMAgent);
+            this.provisionVMAgent = Codegen.ofNullable(provisionVMAgent);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -183,7 +184,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }
         public Builder winRM(@Nullable Output<WinRMConfigurationArgs> winRM) {
@@ -191,7 +192,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder winRM(@Nullable WinRMConfigurationArgs winRM) {
-            this.winRM = Output.ofNullable(winRM);
+            this.winRM = Codegen.ofNullable(winRM);
             return this;
         }        public WindowsConfigurationArgs build() {
             return new WindowsConfigurationArgs(additionalUnattendContent, enableAutomaticUpdates, patchSettings, provisionVMAgent, timeZone, winRM);

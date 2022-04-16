@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.enums.DeviceLogLevel;
 import io.pulumi.googlenative.cloudiot_v1.inputs.DeviceConfigArgs;
 import io.pulumi.googlenative.cloudiot_v1.inputs.DeviceCredentialArgs;
@@ -28,8 +29,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blocked")
       private final @Nullable Output<Boolean> blocked;
 
-    public Output<Boolean> getBlocked() {
-        return this.blocked == null ? Output.empty() : this.blocked;
+    public Output<Boolean> blocked() {
+        return this.blocked == null ? Codegen.empty() : this.blocked;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<DeviceConfigArgs> config;
 
-    public Output<DeviceConfigArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<DeviceConfigArgs> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<List<DeviceCredentialArgs>> credentials;
 
-    public Output<List<DeviceCredentialArgs>> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+    public Output<List<DeviceCredentialArgs>> credentials() {
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
       private final @Nullable Output<GatewayConfigArgs> gatewayConfig;
 
-    public Output<GatewayConfigArgs> getGatewayConfig() {
-        return this.gatewayConfig == null ? Output.empty() : this.gatewayConfig;
+    public Output<GatewayConfigArgs> gatewayConfig() {
+        return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
     }
 
     /**
@@ -72,15 +73,15 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<DeviceLogLevel> logLevel;
 
-    public Output<DeviceLogLevel> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+    public Output<DeviceLogLevel> logLevel() {
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -112,21 +113,21 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="registryId", required=true)
       private final Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -156,17 +157,17 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.blocked = Output.empty();
-        this.config = Output.empty();
-        this.credentials = Output.empty();
-        this.gatewayConfig = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.logLevel = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.registryId = Output.empty();
+        this.blocked = Codegen.empty();
+        this.config = Codegen.empty();
+        this.credentials = Codegen.empty();
+        this.gatewayConfig = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.logLevel = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.registryId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -214,7 +215,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blocked(@Nullable Boolean blocked) {
-            this.blocked = Output.ofNullable(blocked);
+            this.blocked = Codegen.ofNullable(blocked);
             return this;
         }
         public Builder config(@Nullable Output<DeviceConfigArgs> config) {
@@ -222,7 +223,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable DeviceConfigArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder credentials(@Nullable Output<List<DeviceCredentialArgs>> credentials) {
@@ -230,7 +231,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable List<DeviceCredentialArgs> credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder credentials(DeviceCredentialArgs... credentials) {
@@ -241,7 +242,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayConfig(@Nullable GatewayConfigArgs gatewayConfig) {
-            this.gatewayConfig = Output.ofNullable(gatewayConfig);
+            this.gatewayConfig = Codegen.ofNullable(gatewayConfig);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -249,7 +250,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -257,7 +258,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder logLevel(@Nullable Output<DeviceLogLevel> logLevel) {
@@ -265,7 +266,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logLevel(@Nullable DeviceLogLevel logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -273,7 +274,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -281,7 +282,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -289,7 +290,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder registryId(Output<String> registryId) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableReliableLogging")
       private final @Nullable Output<Object> enableReliableLogging;
 
-    public Output<Object> getEnableReliableLogging() {
-        return this.enableReliableLogging == null ? Output.empty() : this.enableReliableLogging;
+    public Output<Object> enableReliableLogging() {
+        return this.enableReliableLogging == null ? Codegen.empty() : this.enableReliableLogging;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -48,8 +49,8 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logLevel")
       private final @Nullable Output<Object> logLevel;
 
-    public Output<Object> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+    public Output<Object> logLevel() {
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="path")
       private final @Nullable Output<Object> path;
 
-    public Output<Object> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<Object> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public LogStorageSettingsArgs(
@@ -75,10 +76,10 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LogStorageSettingsArgs() {
-        this.enableReliableLogging = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.logLevel = Output.empty();
-        this.path = Output.empty();
+        this.enableReliableLogging = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.logLevel = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
-            this.enableReliableLogging = Output.ofNullable(enableReliableLogging);
+            this.enableReliableLogging = Codegen.ofNullable(enableReliableLogging);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -128,7 +129,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder logLevel(@Nullable Object logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }
         public Builder path(@Nullable Output<Object> path) {
@@ -136,7 +137,7 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder path(@Nullable Object path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public LogStorageSettingsArgs build() {
             return new LogStorageSettingsArgs(enableReliableLogging, linkedServiceName, logLevel, path);

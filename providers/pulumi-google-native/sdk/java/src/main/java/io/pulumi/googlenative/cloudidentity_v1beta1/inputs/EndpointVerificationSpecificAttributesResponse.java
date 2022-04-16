@@ -24,7 +24,7 @@ public final class EndpointVerificationSpecificAttributesResponse extends io.pul
     @Import(name="certificateAttributes", required=true)
       private final List<CertificateAttributesResponse> certificateAttributes;
 
-    public List<CertificateAttributesResponse> getCertificateAttributes() {
+    public List<CertificateAttributesResponse> certificateAttributes() {
         return this.certificateAttributes;
     }
 

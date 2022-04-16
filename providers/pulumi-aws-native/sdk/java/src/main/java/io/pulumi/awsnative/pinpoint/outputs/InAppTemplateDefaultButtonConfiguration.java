@@ -36,22 +36,22 @@ public final class InAppTemplateDefaultButtonConfiguration {
         this.textColor = textColor;
     }
 
-    public Optional<String> getBackgroundColor() {
+    public Optional<String> backgroundColor() {
         return Optional.ofNullable(this.backgroundColor);
     }
-    public Optional<Integer> getBorderRadius() {
+    public Optional<Integer> borderRadius() {
         return Optional.ofNullable(this.borderRadius);
     }
-    public Optional<InAppTemplateButtonAction> getButtonAction() {
+    public Optional<InAppTemplateButtonAction> buttonAction() {
         return Optional.ofNullable(this.buttonAction);
     }
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
-    public Optional<String> getText() {
+    public Optional<String> text() {
         return Optional.ofNullable(this.text);
     }
-    public Optional<String> getTextColor() {
+    public Optional<String> textColor() {
         return Optional.ofNullable(this.textColor);
     }
 

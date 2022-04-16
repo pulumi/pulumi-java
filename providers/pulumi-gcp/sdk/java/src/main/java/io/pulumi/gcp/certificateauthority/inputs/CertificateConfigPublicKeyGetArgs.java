@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -33,8 +34,8 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public CertificateConfigPublicKeyGetArgs(
@@ -45,8 +46,8 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
     }
 
     private CertificateConfigPublicKeyGetArgs() {
-        this.format = Output.empty();
-        this.key = Output.empty();
+        this.format = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public CertificateConfigPublicKeyGetArgs build() {
             return new CertificateConfigPublicKeyGetArgs(format, key);

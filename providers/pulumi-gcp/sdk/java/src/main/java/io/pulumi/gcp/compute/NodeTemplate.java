@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NodeTemplateArgs;
 import io.pulumi.gcp.compute.inputs.NodeTemplateState;
@@ -66,7 +67,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Possible values are `ENABLED` and `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> getCpuOvercommitType() {
+    public Output</* @Nullable */ String> cpuOvercommitType() {
         return this.cpuOvercommitType;
     }
     /**
@@ -80,7 +81,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -94,7 +95,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -108,7 +109,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -124,7 +125,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * instance scheduling.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getNodeAffinityLabels() {
+    public Output</* @Nullable */ Map<String,String>> nodeAffinityLabels() {
         return this.nodeAffinityLabels;
     }
     /**
@@ -140,7 +141,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Only one of nodeTypeFlexibility and nodeType can be specified.
      * 
      */
-    public Output</* @Nullable */ String> getNodeType() {
+    public Output</* @Nullable */ String> nodeType() {
         return this.nodeType;
     }
     /**
@@ -162,7 +163,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodeTemplateNodeTypeFlexibility> getNodeTypeFlexibility() {
+    public Output</* @Nullable */ NodeTemplateNodeTypeFlexibility> nodeTypeFlexibility() {
         return this.nodeTypeFlexibility;
     }
     /**
@@ -178,7 +179,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -194,7 +195,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -208,7 +209,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -226,7 +227,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<NodeTemplateServerBinding> getServerBinding() {
+    public Output<NodeTemplateServerBinding> serverBinding() {
         return this.serverBinding;
     }
 
@@ -252,7 +253,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeTemplate(String name, @Nullable NodeTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/nodeTemplate:NodeTemplate", name, args == null ? NodeTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/nodeTemplate:NodeTemplate", name, args == null ? NodeTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NodeTemplate(String name, Output<String> id, @Nullable NodeTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

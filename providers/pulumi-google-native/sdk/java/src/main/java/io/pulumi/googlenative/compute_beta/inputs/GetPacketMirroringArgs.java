@@ -17,21 +17,21 @@ public final class GetPacketMirroringArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="packetMirroring", required=true)
       private final String packetMirroring;
 
-    public String getPacketMirroring() {
+    public String packetMirroring() {
         return this.packetMirroring;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

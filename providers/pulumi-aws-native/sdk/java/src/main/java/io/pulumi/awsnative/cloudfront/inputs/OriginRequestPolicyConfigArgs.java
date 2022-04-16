@@ -8,6 +8,7 @@ import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyHeadersConfigArg
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,35 +21,35 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="cookiesConfig", required=true)
       private final Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
-    public Output<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
+    public Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig() {
         return this.cookiesConfig;
     }
 
     @Import(name="headersConfig", required=true)
       private final Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
-    public Output<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
+    public Output<OriginRequestPolicyHeadersConfigArgs> headersConfig() {
         return this.headersConfig;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="queryStringsConfig", required=true)
       private final Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
-    public Output<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {
+    public Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig() {
         return this.queryStringsConfig;
     }
 
@@ -66,11 +67,11 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
     }
 
     private OriginRequestPolicyConfigArgs() {
-        this.comment = Output.empty();
-        this.cookiesConfig = Output.empty();
-        this.headersConfig = Output.empty();
-        this.name = Output.empty();
-        this.queryStringsConfig = Output.empty();
+        this.comment = Codegen.empty();
+        this.cookiesConfig = Codegen.empty();
+        this.headersConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.queryStringsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder cookiesConfig(Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {

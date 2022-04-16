@@ -7,6 +7,7 @@ import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionArg
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? Output.empty() : this.manualPrivateLinkServiceConnections;
+    public Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections() {
+        return this.manualPrivateLinkServiceConnections == null ? Codegen.empty() : this.manualPrivateLinkServiceConnections;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="privateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
-        return this.privateLinkServiceConnections == null ? Output.empty() : this.privateLinkServiceConnections;
+    public Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections() {
+        return this.privateLinkServiceConnections == null ? Codegen.empty() : this.privateLinkServiceConnections;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="privateLinkServiceProxies")
       private final @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
 
-    public Output<List<PrivateLinkServiceProxyArgs>> getPrivateLinkServiceProxies() {
-        return this.privateLinkServiceProxies == null ? Output.empty() : this.privateLinkServiceProxies;
+    public Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies() {
+        return this.privateLinkServiceProxies == null ? Codegen.empty() : this.privateLinkServiceProxies;
     }
 
     public RemotePrivateEndpointArgs(
@@ -77,10 +78,10 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
     }
 
     private RemotePrivateEndpointArgs() {
-        this.id = Output.empty();
-        this.manualPrivateLinkServiceConnections = Output.empty();
-        this.privateLinkServiceConnections = Output.empty();
-        this.privateLinkServiceProxies = Output.empty();
+        this.id = Codegen.empty();
+        this.manualPrivateLinkServiceConnections = Codegen.empty();
+        this.privateLinkServiceConnections = Codegen.empty();
+        this.privateLinkServiceProxies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
@@ -122,7 +123,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = Output.ofNullable(manualPrivateLinkServiceConnections);
+            this.manualPrivateLinkServiceConnections = Codegen.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
@@ -133,7 +134,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = Output.ofNullable(privateLinkServiceConnections);
+            this.privateLinkServiceConnections = Codegen.ofNullable(privateLinkServiceConnections);
             return this;
         }
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionArgs... privateLinkServiceConnections) {
@@ -144,7 +145,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder privateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyArgs> privateLinkServiceProxies) {
-            this.privateLinkServiceProxies = Output.ofNullable(privateLinkServiceProxies);
+            this.privateLinkServiceProxies = Codegen.ofNullable(privateLinkServiceProxies);
             return this;
         }
         public Builder privateLinkServiceProxies(PrivateLinkServiceProxyArgs... privateLinkServiceProxies) {

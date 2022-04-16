@@ -24,7 +24,7 @@ public final class OutputResponse {
      * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

@@ -50,14 +50,14 @@ public final class MediaGraphRtspSourceResponse {
      * RTSP endpoint of the stream being connected to.
      * 
     */
-    public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> getEndpoint() {
+    public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint() {
         return this.endpoint;
     }
     /**
      * Source name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -65,14 +65,14 @@ public final class MediaGraphRtspSourceResponse {
      * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
      * 
     */
-    public String getTransport() {
+    public String transport() {
         return this.transport;
     }
 

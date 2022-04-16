@@ -9,6 +9,7 @@ import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSkewedInfoArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSortColumnArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="bucketColumns")
       private final @Nullable Output<List<String>> bucketColumns;
 
-    public Output<List<String>> getBucketColumns() {
-        return this.bucketColumns == null ? Output.empty() : this.bucketColumns;
+    public Output<List<String>> bucketColumns() {
+        return this.bucketColumns == null ? Codegen.empty() : this.bucketColumns;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="columns")
       private final @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns;
 
-    public Output<List<PartitionStorageDescriptorColumnArgs>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+    public Output<List<PartitionStorageDescriptorColumnArgs>> columns() {
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="compressed")
       private final @Nullable Output<Boolean> compressed;
 
-    public Output<Boolean> getCompressed() {
-        return this.compressed == null ? Output.empty() : this.compressed;
+    public Output<Boolean> compressed() {
+        return this.compressed == null ? Codegen.empty() : this.compressed;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="inputFormat")
       private final @Nullable Output<String> inputFormat;
 
-    public Output<String> getInputFormat() {
-        return this.inputFormat == null ? Output.empty() : this.inputFormat;
+    public Output<String> inputFormat() {
+        return this.inputFormat == null ? Codegen.empty() : this.inputFormat;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="numberOfBuckets")
       private final @Nullable Output<Integer> numberOfBuckets;
 
-    public Output<Integer> getNumberOfBuckets() {
-        return this.numberOfBuckets == null ? Output.empty() : this.numberOfBuckets;
+    public Output<Integer> numberOfBuckets() {
+        return this.numberOfBuckets == null ? Codegen.empty() : this.numberOfBuckets;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
-        return this.outputFormat == null ? Output.empty() : this.outputFormat;
+    public Output<String> outputFormat() {
+        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="serDeInfo")
       private final @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
 
-    public Output<PartitionStorageDescriptorSerDeInfoArgs> getSerDeInfo() {
-        return this.serDeInfo == null ? Output.empty() : this.serDeInfo;
+    public Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo() {
+        return this.serDeInfo == null ? Codegen.empty() : this.serDeInfo;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="skewedInfo")
       private final @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
 
-    public Output<PartitionStorageDescriptorSkewedInfoArgs> getSkewedInfo() {
-        return this.skewedInfo == null ? Output.empty() : this.skewedInfo;
+    public Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo() {
+        return this.skewedInfo == null ? Codegen.empty() : this.skewedInfo;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="sortColumns")
       private final @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
 
-    public Output<List<PartitionStorageDescriptorSortColumnArgs>> getSortColumns() {
-        return this.sortColumns == null ? Output.empty() : this.sortColumns;
+    public Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns() {
+        return this.sortColumns == null ? Codegen.empty() : this.sortColumns;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     @Import(name="storedAsSubDirectories")
       private final @Nullable Output<Boolean> storedAsSubDirectories;
 
-    public Output<Boolean> getStoredAsSubDirectories() {
-        return this.storedAsSubDirectories == null ? Output.empty() : this.storedAsSubDirectories;
+    public Output<Boolean> storedAsSubDirectories() {
+        return this.storedAsSubDirectories == null ? Codegen.empty() : this.storedAsSubDirectories;
     }
 
     public PartitionStorageDescriptorArgs(
@@ -182,18 +183,18 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
     }
 
     private PartitionStorageDescriptorArgs() {
-        this.bucketColumns = Output.empty();
-        this.columns = Output.empty();
-        this.compressed = Output.empty();
-        this.inputFormat = Output.empty();
-        this.location = Output.empty();
-        this.numberOfBuckets = Output.empty();
-        this.outputFormat = Output.empty();
-        this.parameters = Output.empty();
-        this.serDeInfo = Output.empty();
-        this.skewedInfo = Output.empty();
-        this.sortColumns = Output.empty();
-        this.storedAsSubDirectories = Output.empty();
+        this.bucketColumns = Codegen.empty();
+        this.columns = Codegen.empty();
+        this.compressed = Codegen.empty();
+        this.inputFormat = Codegen.empty();
+        this.location = Codegen.empty();
+        this.numberOfBuckets = Codegen.empty();
+        this.outputFormat = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.serDeInfo = Codegen.empty();
+        this.skewedInfo = Codegen.empty();
+        this.sortColumns = Codegen.empty();
+        this.storedAsSubDirectories = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder bucketColumns(@Nullable List<String> bucketColumns) {
-            this.bucketColumns = Output.ofNullable(bucketColumns);
+            this.bucketColumns = Codegen.ofNullable(bucketColumns);
             return this;
         }
         public Builder bucketColumns(String... bucketColumns) {
@@ -254,7 +255,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder columns(@Nullable List<PartitionStorageDescriptorColumnArgs> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(PartitionStorageDescriptorColumnArgs... columns) {
@@ -265,7 +266,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder compressed(@Nullable Boolean compressed) {
-            this.compressed = Output.ofNullable(compressed);
+            this.compressed = Codegen.ofNullable(compressed);
             return this;
         }
         public Builder inputFormat(@Nullable Output<String> inputFormat) {
@@ -273,7 +274,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder inputFormat(@Nullable String inputFormat) {
-            this.inputFormat = Output.ofNullable(inputFormat);
+            this.inputFormat = Codegen.ofNullable(inputFormat);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -281,7 +282,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder numberOfBuckets(@Nullable Output<Integer> numberOfBuckets) {
@@ -289,7 +290,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
-            this.numberOfBuckets = Output.ofNullable(numberOfBuckets);
+            this.numberOfBuckets = Codegen.ofNullable(numberOfBuckets);
             return this;
         }
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
@@ -297,7 +298,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Output.ofNullable(outputFormat);
+            this.outputFormat = Codegen.ofNullable(outputFormat);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -305,7 +306,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder serDeInfo(@Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo) {
@@ -313,7 +314,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serDeInfo(@Nullable PartitionStorageDescriptorSerDeInfoArgs serDeInfo) {
-            this.serDeInfo = Output.ofNullable(serDeInfo);
+            this.serDeInfo = Codegen.ofNullable(serDeInfo);
             return this;
         }
         public Builder skewedInfo(@Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo) {
@@ -321,7 +322,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder skewedInfo(@Nullable PartitionStorageDescriptorSkewedInfoArgs skewedInfo) {
-            this.skewedInfo = Output.ofNullable(skewedInfo);
+            this.skewedInfo = Codegen.ofNullable(skewedInfo);
             return this;
         }
         public Builder sortColumns(@Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns) {
@@ -329,7 +330,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sortColumns(@Nullable List<PartitionStorageDescriptorSortColumnArgs> sortColumns) {
-            this.sortColumns = Output.ofNullable(sortColumns);
+            this.sortColumns = Codegen.ofNullable(sortColumns);
             return this;
         }
         public Builder sortColumns(PartitionStorageDescriptorSortColumnArgs... sortColumns) {
@@ -340,7 +341,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
-            this.storedAsSubDirectories = Output.ofNullable(storedAsSubDirectories);
+            this.storedAsSubDirectories = Codegen.ofNullable(storedAsSubDirectories);
             return this;
         }        public PartitionStorageDescriptorArgs build() {
             return new PartitionStorageDescriptorArgs(bucketColumns, columns, compressed, inputFormat, location, numberOfBuckets, outputFormat, parameters, serDeInfo, skewedInfo, sortColumns, storedAsSubDirectories);

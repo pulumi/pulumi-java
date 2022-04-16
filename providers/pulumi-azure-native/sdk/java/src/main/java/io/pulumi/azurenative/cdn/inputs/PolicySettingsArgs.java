@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.enums.PolicyMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultCustomBlockResponseBody")
       private final @Nullable Output<String> defaultCustomBlockResponseBody;
 
-    public Output<String> getDefaultCustomBlockResponseBody() {
-        return this.defaultCustomBlockResponseBody == null ? Output.empty() : this.defaultCustomBlockResponseBody;
+    public Output<String> defaultCustomBlockResponseBody() {
+        return this.defaultCustomBlockResponseBody == null ? Codegen.empty() : this.defaultCustomBlockResponseBody;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultCustomBlockResponseStatusCode")
       private final @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
 
-    public Output<Integer> getDefaultCustomBlockResponseStatusCode() {
-        return this.defaultCustomBlockResponseStatusCode == null ? Output.empty() : this.defaultCustomBlockResponseStatusCode;
+    public Output<Integer> defaultCustomBlockResponseStatusCode() {
+        return this.defaultCustomBlockResponseStatusCode == null ? Codegen.empty() : this.defaultCustomBlockResponseStatusCode;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRedirectUrl")
       private final @Nullable Output<String> defaultRedirectUrl;
 
-    public Output<String> getDefaultRedirectUrl() {
-        return this.defaultRedirectUrl == null ? Output.empty() : this.defaultRedirectUrl;
+    public Output<String> defaultRedirectUrl() {
+        return this.defaultRedirectUrl == null ? Codegen.empty() : this.defaultRedirectUrl;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
-    public Output<Either<String,PolicyEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+    public Output<Either<String,PolicyEnabledState>> enabledState() {
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Either<String,PolicyMode>> mode;
 
-    public Output<Either<String,PolicyMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<Either<String,PolicyMode>> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public PolicySettingsArgs(
@@ -91,11 +92,11 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicySettingsArgs() {
-        this.defaultCustomBlockResponseBody = Output.empty();
-        this.defaultCustomBlockResponseStatusCode = Output.empty();
-        this.defaultRedirectUrl = Output.empty();
-        this.enabledState = Output.empty();
-        this.mode = Output.empty();
+        this.defaultCustomBlockResponseBody = Codegen.empty();
+        this.defaultCustomBlockResponseStatusCode = Codegen.empty();
+        this.defaultRedirectUrl = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
-            this.defaultCustomBlockResponseBody = Output.ofNullable(defaultCustomBlockResponseBody);
+            this.defaultCustomBlockResponseBody = Codegen.ofNullable(defaultCustomBlockResponseBody);
             return this;
         }
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Output<Integer> defaultCustomBlockResponseStatusCode) {
@@ -139,7 +140,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
-            this.defaultCustomBlockResponseStatusCode = Output.ofNullable(defaultCustomBlockResponseStatusCode);
+            this.defaultCustomBlockResponseStatusCode = Codegen.ofNullable(defaultCustomBlockResponseStatusCode);
             return this;
         }
         public Builder defaultRedirectUrl(@Nullable Output<String> defaultRedirectUrl) {
@@ -147,7 +148,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
-            this.defaultRedirectUrl = Output.ofNullable(defaultRedirectUrl);
+            this.defaultRedirectUrl = Codegen.ofNullable(defaultRedirectUrl);
             return this;
         }
         public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
@@ -155,7 +156,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
@@ -163,7 +164,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable Either<String,PolicyMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public PolicySettingsArgs build() {
             return new PolicySettingsArgs(defaultCustomBlockResponseBody, defaultCustomBlockResponseStatusCode, defaultRedirectUrl, enabledState, mode);

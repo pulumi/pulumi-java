@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.NamedPortArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,29 +46,29 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namedPorts")
       private final @Nullable Output<List<NamedPortArgs>> namedPorts;
 
-    public Output<List<NamedPortArgs>> getNamedPorts() {
-        return this.namedPorts == null ? Output.empty() : this.namedPorts;
+    public Output<List<NamedPortArgs>> namedPorts() {
+        return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceGroupArgs(
@@ -86,12 +87,12 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceGroupArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.namedPorts = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.zone = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namedPorts = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -137,7 +138,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namedPorts(@Nullable Output<List<NamedPortArgs>> namedPorts) {
@@ -145,7 +146,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namedPorts(@Nullable List<NamedPortArgs> namedPorts) {
-            this.namedPorts = Output.ofNullable(namedPorts);
+            this.namedPorts = Codegen.ofNullable(namedPorts);
             return this;
         }
         public Builder namedPorts(NamedPortArgs... namedPorts) {
@@ -156,7 +157,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -164,7 +165,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -172,7 +173,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceGroupArgs build() {
             return new InstanceGroupArgs(description, name, namedPorts, project, requestId, zone);

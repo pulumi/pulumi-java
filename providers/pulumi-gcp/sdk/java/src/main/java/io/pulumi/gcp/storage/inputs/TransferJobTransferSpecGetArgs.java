@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAwsS3DataSourceGetArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecGcsDataSinkGetArgs;
@@ -27,8 +28,8 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     @Import(name="awsS3DataSource")
       private final @Nullable Output<TransferJobTransferSpecAwsS3DataSourceGetArgs> awsS3DataSource;
 
-    public Output<TransferJobTransferSpecAwsS3DataSourceGetArgs> getAwsS3DataSource() {
-        return this.awsS3DataSource == null ? Output.empty() : this.awsS3DataSource;
+    public Output<TransferJobTransferSpecAwsS3DataSourceGetArgs> awsS3DataSource() {
+        return this.awsS3DataSource == null ? Codegen.empty() : this.awsS3DataSource;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     @Import(name="azureBlobStorageDataSource")
       private final @Nullable Output<TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs> azureBlobStorageDataSource;
 
-    public Output<TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs> getAzureBlobStorageDataSource() {
-        return this.azureBlobStorageDataSource == null ? Output.empty() : this.azureBlobStorageDataSource;
+    public Output<TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs> azureBlobStorageDataSource() {
+        return this.azureBlobStorageDataSource == null ? Codegen.empty() : this.azureBlobStorageDataSource;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     @Import(name="gcsDataSink")
       private final @Nullable Output<TransferJobTransferSpecGcsDataSinkGetArgs> gcsDataSink;
 
-    public Output<TransferJobTransferSpecGcsDataSinkGetArgs> getGcsDataSink() {
-        return this.gcsDataSink == null ? Output.empty() : this.gcsDataSink;
+    public Output<TransferJobTransferSpecGcsDataSinkGetArgs> gcsDataSink() {
+        return this.gcsDataSink == null ? Codegen.empty() : this.gcsDataSink;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     @Import(name="gcsDataSource")
       private final @Nullable Output<TransferJobTransferSpecGcsDataSourceGetArgs> gcsDataSource;
 
-    public Output<TransferJobTransferSpecGcsDataSourceGetArgs> getGcsDataSource() {
-        return this.gcsDataSource == null ? Output.empty() : this.gcsDataSource;
+    public Output<TransferJobTransferSpecGcsDataSourceGetArgs> gcsDataSource() {
+        return this.gcsDataSource == null ? Codegen.empty() : this.gcsDataSource;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     @Import(name="httpDataSource")
       private final @Nullable Output<TransferJobTransferSpecHttpDataSourceGetArgs> httpDataSource;
 
-    public Output<TransferJobTransferSpecHttpDataSourceGetArgs> getHttpDataSource() {
-        return this.httpDataSource == null ? Output.empty() : this.httpDataSource;
+    public Output<TransferJobTransferSpecHttpDataSourceGetArgs> httpDataSource() {
+        return this.httpDataSource == null ? Codegen.empty() : this.httpDataSource;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     @Import(name="objectConditions")
       private final @Nullable Output<TransferJobTransferSpecObjectConditionsGetArgs> objectConditions;
 
-    public Output<TransferJobTransferSpecObjectConditionsGetArgs> getObjectConditions() {
-        return this.objectConditions == null ? Output.empty() : this.objectConditions;
+    public Output<TransferJobTransferSpecObjectConditionsGetArgs> objectConditions() {
+        return this.objectConditions == null ? Codegen.empty() : this.objectConditions;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     @Import(name="transferOptions")
       private final @Nullable Output<TransferJobTransferSpecTransferOptionsGetArgs> transferOptions;
 
-    public Output<TransferJobTransferSpecTransferOptionsGetArgs> getTransferOptions() {
-        return this.transferOptions == null ? Output.empty() : this.transferOptions;
+    public Output<TransferJobTransferSpecTransferOptionsGetArgs> transferOptions() {
+        return this.transferOptions == null ? Codegen.empty() : this.transferOptions;
     }
 
     public TransferJobTransferSpecGetArgs(
@@ -115,13 +116,13 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     }
 
     private TransferJobTransferSpecGetArgs() {
-        this.awsS3DataSource = Output.empty();
-        this.azureBlobStorageDataSource = Output.empty();
-        this.gcsDataSink = Output.empty();
-        this.gcsDataSource = Output.empty();
-        this.httpDataSource = Output.empty();
-        this.objectConditions = Output.empty();
-        this.transferOptions = Output.empty();
+        this.awsS3DataSource = Codegen.empty();
+        this.azureBlobStorageDataSource = Codegen.empty();
+        this.gcsDataSink = Codegen.empty();
+        this.gcsDataSource = Codegen.empty();
+        this.httpDataSource = Codegen.empty();
+        this.objectConditions = Codegen.empty();
+        this.transferOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder awsS3DataSource(@Nullable TransferJobTransferSpecAwsS3DataSourceGetArgs awsS3DataSource) {
-            this.awsS3DataSource = Output.ofNullable(awsS3DataSource);
+            this.awsS3DataSource = Codegen.ofNullable(awsS3DataSource);
             return this;
         }
         public Builder azureBlobStorageDataSource(@Nullable Output<TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs> azureBlobStorageDataSource) {
@@ -169,7 +170,7 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder azureBlobStorageDataSource(@Nullable TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs azureBlobStorageDataSource) {
-            this.azureBlobStorageDataSource = Output.ofNullable(azureBlobStorageDataSource);
+            this.azureBlobStorageDataSource = Codegen.ofNullable(azureBlobStorageDataSource);
             return this;
         }
         public Builder gcsDataSink(@Nullable Output<TransferJobTransferSpecGcsDataSinkGetArgs> gcsDataSink) {
@@ -177,7 +178,7 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder gcsDataSink(@Nullable TransferJobTransferSpecGcsDataSinkGetArgs gcsDataSink) {
-            this.gcsDataSink = Output.ofNullable(gcsDataSink);
+            this.gcsDataSink = Codegen.ofNullable(gcsDataSink);
             return this;
         }
         public Builder gcsDataSource(@Nullable Output<TransferJobTransferSpecGcsDataSourceGetArgs> gcsDataSource) {
@@ -185,7 +186,7 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder gcsDataSource(@Nullable TransferJobTransferSpecGcsDataSourceGetArgs gcsDataSource) {
-            this.gcsDataSource = Output.ofNullable(gcsDataSource);
+            this.gcsDataSource = Codegen.ofNullable(gcsDataSource);
             return this;
         }
         public Builder httpDataSource(@Nullable Output<TransferJobTransferSpecHttpDataSourceGetArgs> httpDataSource) {
@@ -193,7 +194,7 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder httpDataSource(@Nullable TransferJobTransferSpecHttpDataSourceGetArgs httpDataSource) {
-            this.httpDataSource = Output.ofNullable(httpDataSource);
+            this.httpDataSource = Codegen.ofNullable(httpDataSource);
             return this;
         }
         public Builder objectConditions(@Nullable Output<TransferJobTransferSpecObjectConditionsGetArgs> objectConditions) {
@@ -201,7 +202,7 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder objectConditions(@Nullable TransferJobTransferSpecObjectConditionsGetArgs objectConditions) {
-            this.objectConditions = Output.ofNullable(objectConditions);
+            this.objectConditions = Codegen.ofNullable(objectConditions);
             return this;
         }
         public Builder transferOptions(@Nullable Output<TransferJobTransferSpecTransferOptionsGetArgs> transferOptions) {
@@ -209,7 +210,7 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder transferOptions(@Nullable TransferJobTransferSpecTransferOptionsGetArgs transferOptions) {
-            this.transferOptions = Output.ofNullable(transferOptions);
+            this.transferOptions = Codegen.ofNullable(transferOptions);
             return this;
         }        public TransferJobTransferSpecGetArgs build() {
             return new TransferJobTransferSpecGetArgs(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, httpDataSource, objectConditions, transferOptions);

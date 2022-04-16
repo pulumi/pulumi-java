@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+    public Output<String> appId() {
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="appSecretSettingName")
       private final @Nullable Output<String> appSecretSettingName;
 
-    public Output<String> getAppSecretSettingName() {
-        return this.appSecretSettingName == null ? Output.empty() : this.appSecretSettingName;
+    public Output<String> appSecretSettingName() {
+        return this.appSecretSettingName == null ? Codegen.empty() : this.appSecretSettingName;
     }
 
     public AppRegistrationArgs(
@@ -48,8 +49,8 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AppRegistrationArgs() {
-        this.appId = Output.empty();
-        this.appSecretSettingName = Output.empty();
+        this.appId = Codegen.empty();
+        this.appSecretSettingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder appSecretSettingName(@Nullable Output<String> appSecretSettingName) {
@@ -87,7 +88,7 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder appSecretSettingName(@Nullable String appSecretSettingName) {
-            this.appSecretSettingName = Output.ofNullable(appSecretSettingName);
+            this.appSecretSettingName = Codegen.ofNullable(appSecretSettingName);
             return this;
         }        public AppRegistrationArgs build() {
             return new AppRegistrationArgs(appId, appSecretSettingName);

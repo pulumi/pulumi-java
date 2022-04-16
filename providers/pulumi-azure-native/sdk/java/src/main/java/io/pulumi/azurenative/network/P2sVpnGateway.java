@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,7 +48,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return List of all customer specified DNS servers IP addresses.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomDnsServers() {
+    public Output</* @Nullable */ List<String>> customDnsServers() {
         return this.customDnsServers;
     }
     /**
@@ -61,7 +62,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -75,7 +76,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsRoutingPreferenceInternet() {
+    public Output</* @Nullable */ Boolean> isRoutingPreferenceInternet() {
         return this.isRoutingPreferenceInternet;
     }
     /**
@@ -89,7 +90,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -103,7 +104,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +118,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return List of all p2s connection configurations of the gateway.
      * 
      */
-    public Output</* @Nullable */ List<P2SConnectionConfigurationResponse>> getP2SConnectionConfigurations() {
+    public Output</* @Nullable */ List<P2SConnectionConfigurationResponse>> p2SConnectionConfigurations() {
         return this.p2SConnectionConfigurations;
     }
     /**
@@ -131,7 +132,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the P2S VPN gateway resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -145,7 +146,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -159,7 +160,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -173,7 +174,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The VirtualHub to which the gateway belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
+    public Output</* @Nullable */ SubResourceResponse> virtualHub() {
         return this.virtualHub;
     }
     /**
@@ -187,7 +188,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return All P2S VPN clients' connection health status.
      * 
      */
-    public Output<VpnClientConnectionHealthResponse> getVpnClientConnectionHealth() {
+    public Output<VpnClientConnectionHealthResponse> vpnClientConnectionHealth() {
         return this.vpnClientConnectionHealth;
     }
     /**
@@ -201,7 +202,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The scale unit for this p2s vpn gateway.
      * 
      */
-    public Output</* @Nullable */ Integer> getVpnGatewayScaleUnit() {
+    public Output</* @Nullable */ Integer> vpnGatewayScaleUnit() {
         return this.vpnGatewayScaleUnit;
     }
     /**
@@ -215,7 +216,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @return The VpnServerConfiguration to which the p2sVpnGateway is attached to.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVpnServerConfiguration() {
+    public Output</* @Nullable */ SubResourceResponse> vpnServerConfiguration() {
         return this.vpnServerConfiguration;
     }
 
@@ -241,7 +242,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public P2sVpnGateway(String name, P2sVpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:P2sVpnGateway", name, args == null ? P2sVpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:P2sVpnGateway", name, args == null ? P2sVpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private P2sVpnGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

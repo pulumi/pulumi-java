@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogFileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
     @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file;
 
-    public Output<VirtualNodeSpecLoggingAccessLogFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+    public Output<VirtualNodeSpecLoggingAccessLogFileArgs> file() {
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     public VirtualNodeSpecLoggingAccessLogArgs(@Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
@@ -30,7 +31,7 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
     }
 
     private VirtualNodeSpecLoggingAccessLogArgs() {
-        this.file = Output.empty();
+        this.file = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
             return this;
         }
         public Builder file(@Nullable VirtualNodeSpecLoggingAccessLogFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }        public VirtualNodeSpecLoggingAccessLogArgs build() {
             return new VirtualNodeSpecLoggingAccessLogArgs(file);

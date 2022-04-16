@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="managedInstanceResourceId", required=true)
       private final Output<String> managedInstanceResourceId;
 
-    public Output<String> getManagedInstanceResourceId() {
+    public Output<String> managedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
 
@@ -36,8 +37,8 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -59,8 +60,8 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public MiSqlConnectionInfoArgs(
@@ -75,10 +76,10 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     private MiSqlConnectionInfoArgs() {
-        this.managedInstanceResourceId = Output.empty();
-        this.password = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.managedInstanceResourceId = Codegen.empty();
+        this.password = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -136,7 +137,7 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public MiSqlConnectionInfoArgs build() {
             return new MiSqlConnectionInfoArgs(managedInstanceResourceId, password, type, userName);

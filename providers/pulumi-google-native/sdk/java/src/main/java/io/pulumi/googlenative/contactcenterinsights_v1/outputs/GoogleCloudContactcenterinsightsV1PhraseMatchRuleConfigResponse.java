@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
      * The configuration for the exact match rule.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse getExactMatchConfig() {
+    public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig() {
         return this.exactMatchConfig;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dns_v1beta2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.ResponsePolicyArgs;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyGKEClusterResponse;
@@ -32,7 +33,7 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return User-provided description for this Response Policy.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -46,13 +47,13 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return The list of Google Kubernetes Engine clusters to which this response policy is applied.
      * 
      */
-    public Output<List<ResponsePolicyGKEClusterResponse>> getGkeClusters() {
+    public Output<List<ResponsePolicyGKEClusterResponse>> gkeClusters() {
         return this.gkeClusters;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -66,7 +67,7 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return List of network names specifying networks to which this policy is applied.
      * 
      */
-    public Output<List<ResponsePolicyNetworkResponse>> getNetworks() {
+    public Output<List<ResponsePolicyNetworkResponse>> networks() {
         return this.networks;
     }
     /**
@@ -80,7 +81,7 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return User assigned name for this Response Policy.
      * 
      */
-    public Output<String> getResponsePolicyName() {
+    public Output<String> responsePolicyName() {
         return this.responsePolicyName;
     }
 
@@ -106,7 +107,7 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResponsePolicy(String name, @Nullable ResponsePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dns/v1beta2:ResponsePolicy", name, args == null ? ResponsePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dns/v1beta2:ResponsePolicy", name, args == null ? ResponsePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResponsePolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

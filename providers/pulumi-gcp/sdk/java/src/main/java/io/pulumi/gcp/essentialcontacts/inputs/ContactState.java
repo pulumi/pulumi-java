@@ -5,6 +5,7 @@ package io.pulumi.gcp.essentialcontacts.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageTag")
       private final @Nullable Output<String> languageTag;
 
-    public Output<String> getLanguageTag() {
-        return this.languageTag == null ? Output.empty() : this.languageTag;
+    public Output<String> languageTag() {
+        return this.languageTag == null ? Codegen.empty() : this.languageTag;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationCategorySubscriptions")
       private final @Nullable Output<List<String>> notificationCategorySubscriptions;
 
-    public Output<List<String>> getNotificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Output.empty() : this.notificationCategorySubscriptions;
+    public Output<List<String>> notificationCategorySubscriptions() {
+        return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     public ContactState(
@@ -84,11 +85,11 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactState() {
-        this.email = Output.empty();
-        this.languageTag = Output.empty();
-        this.name = Output.empty();
-        this.notificationCategorySubscriptions = Output.empty();
-        this.parent = Output.empty();
+        this.email = Codegen.empty();
+        this.languageTag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationCategorySubscriptions = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder languageTag(@Nullable Output<String> languageTag) {
@@ -132,7 +133,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Output.ofNullable(languageTag);
+            this.languageTag = Codegen.ofNullable(languageTag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationCategorySubscriptions(@Nullable Output<List<String>> notificationCategorySubscriptions) {
@@ -148,7 +149,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationCategorySubscriptions(@Nullable List<String> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
+            this.notificationCategorySubscriptions = Codegen.ofNullable(notificationCategorySubscriptions);
             return this;
         }
         public Builder notificationCategorySubscriptions(String... notificationCategorySubscriptions) {
@@ -159,7 +160,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }        public ContactState build() {
             return new ContactState(email, languageTag, name, notificationCategorySubscriptions, parent);

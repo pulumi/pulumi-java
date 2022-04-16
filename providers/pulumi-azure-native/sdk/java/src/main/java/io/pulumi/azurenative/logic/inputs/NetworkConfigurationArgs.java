@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentAccessEnd
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="accessEndpoint")
       private final @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
 
-    public Output<IntegrationServiceEnvironmentAccessEndpointArgs> getAccessEndpoint() {
-        return this.accessEndpoint == null ? Output.empty() : this.accessEndpoint;
+    public Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint() {
+        return this.accessEndpoint == null ? Codegen.empty() : this.accessEndpoint;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="subnets")
       private final @Nullable Output<List<ResourceReferenceArgs>> subnets;
 
-    public Output<List<ResourceReferenceArgs>> getSubnets() {
-        return this.subnets == null ? Output.empty() : this.subnets;
+    public Output<List<ResourceReferenceArgs>> subnets() {
+        return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="virtualNetworkAddressSpace")
       private final @Nullable Output<String> virtualNetworkAddressSpace;
 
-    public Output<String> getVirtualNetworkAddressSpace() {
-        return this.virtualNetworkAddressSpace == null ? Output.empty() : this.virtualNetworkAddressSpace;
+    public Output<String> virtualNetworkAddressSpace() {
+        return this.virtualNetworkAddressSpace == null ? Codegen.empty() : this.virtualNetworkAddressSpace;
     }
 
     public NetworkConfigurationArgs(
@@ -64,9 +65,9 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkConfigurationArgs() {
-        this.accessEndpoint = Output.empty();
-        this.subnets = Output.empty();
-        this.virtualNetworkAddressSpace = Output.empty();
+        this.accessEndpoint = Codegen.empty();
+        this.subnets = Codegen.empty();
+        this.virtualNetworkAddressSpace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder accessEndpoint(@Nullable IntegrationServiceEnvironmentAccessEndpointArgs accessEndpoint) {
-            this.accessEndpoint = Output.ofNullable(accessEndpoint);
+            this.accessEndpoint = Codegen.ofNullable(accessEndpoint);
             return this;
         }
         public Builder subnets(@Nullable Output<List<ResourceReferenceArgs>> subnets) {
@@ -106,7 +107,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnets(@Nullable List<ResourceReferenceArgs> subnets) {
-            this.subnets = Output.ofNullable(subnets);
+            this.subnets = Codegen.ofNullable(subnets);
             return this;
         }
         public Builder subnets(ResourceReferenceArgs... subnets) {
@@ -117,7 +118,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder virtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
-            this.virtualNetworkAddressSpace = Output.ofNullable(virtualNetworkAddressSpace);
+            this.virtualNetworkAddressSpace = Codegen.ofNullable(virtualNetworkAddressSpace);
             return this;
         }        public NetworkConfigurationArgs build() {
             return new NetworkConfigurationArgs(accessEndpoint, subnets, virtualNetworkAddressSpace);

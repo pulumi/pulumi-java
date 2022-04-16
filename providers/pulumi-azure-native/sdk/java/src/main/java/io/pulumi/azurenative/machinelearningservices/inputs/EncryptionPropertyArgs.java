@@ -9,6 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.KeyVaultPropertiesAr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="identity")
       private final @Nullable Output<IdentityForCmkArgs> identity;
 
-    public Output<IdentityForCmkArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityForCmkArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyVaultProperties", required=true)
       private final Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties;
     }
 
@@ -47,7 +48,7 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="status", required=true)
       private final Output<Either<String,EncryptionStatus>> status;
 
-    public Output<Either<String,EncryptionStatus>> getStatus() {
+    public Output<Either<String,EncryptionStatus>> status() {
         return this.status;
     }
 
@@ -61,9 +62,9 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EncryptionPropertyArgs() {
-        this.identity = Output.empty();
-        this.keyVaultProperties = Output.empty();
-        this.status = Output.empty();
+        this.identity = Codegen.empty();
+        this.keyVaultProperties = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder identity(@Nullable IdentityForCmkArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyVaultProperties(Output<KeyVaultPropertiesArgs> keyVaultProperties) {

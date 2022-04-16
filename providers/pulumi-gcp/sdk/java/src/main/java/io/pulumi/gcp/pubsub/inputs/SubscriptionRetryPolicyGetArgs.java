@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
     @Import(name="maximumBackoff")
       private final @Nullable Output<String> maximumBackoff;
 
-    public Output<String> getMaximumBackoff() {
-        return this.maximumBackoff == null ? Output.empty() : this.maximumBackoff;
+    public Output<String> maximumBackoff() {
+        return this.maximumBackoff == null ? Codegen.empty() : this.maximumBackoff;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
     @Import(name="minimumBackoff")
       private final @Nullable Output<String> minimumBackoff;
 
-    public Output<String> getMinimumBackoff() {
-        return this.minimumBackoff == null ? Output.empty() : this.minimumBackoff;
+    public Output<String> minimumBackoff() {
+        return this.minimumBackoff == null ? Codegen.empty() : this.minimumBackoff;
     }
 
     public SubscriptionRetryPolicyGetArgs(
@@ -46,8 +47,8 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
     }
 
     private SubscriptionRetryPolicyGetArgs() {
-        this.maximumBackoff = Output.empty();
-        this.minimumBackoff = Output.empty();
+        this.maximumBackoff = Codegen.empty();
+        this.minimumBackoff = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maximumBackoff(@Nullable String maximumBackoff) {
-            this.maximumBackoff = Output.ofNullable(maximumBackoff);
+            this.maximumBackoff = Codegen.ofNullable(maximumBackoff);
             return this;
         }
         public Builder minimumBackoff(@Nullable Output<String> minimumBackoff) {
@@ -85,7 +86,7 @@ public final class SubscriptionRetryPolicyGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder minimumBackoff(@Nullable String minimumBackoff) {
-            this.minimumBackoff = Output.ofNullable(minimumBackoff);
+            this.minimumBackoff = Codegen.ofNullable(minimumBackoff);
             return this;
         }        public SubscriptionRetryPolicyGetArgs build() {
             return new SubscriptionRetryPolicyGetArgs(maximumBackoff, minimumBackoff);

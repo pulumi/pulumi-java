@@ -39,7 +39,7 @@ public final class DeploymentStrategy {
      * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
      * 
     */
-    public Optional<RollingUpdateDeployment> getRollingUpdate() {
+    public Optional<RollingUpdateDeployment> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
@@ -50,7 +50,7 @@ public final class DeploymentStrategy {
      *  - `"RollingUpdate"` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

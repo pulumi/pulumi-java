@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
     @Import(name="serializationLibrary")
       private final @Nullable Output<String> serializationLibrary;
 
-    public Output<String> getSerializationLibrary() {
-        return this.serializationLibrary == null ? Output.empty() : this.serializationLibrary;
+    public Output<String> serializationLibrary() {
+        return this.serializationLibrary == null ? Codegen.empty() : this.serializationLibrary;
     }
 
     public PartitionStorageDescriptorSerDeInfoGetArgs(
@@ -58,9 +59,9 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
     }
 
     private PartitionStorageDescriptorSerDeInfoGetArgs() {
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.serializationLibrary = Output.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.serializationLibrary = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -100,7 +101,7 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder serializationLibrary(@Nullable Output<String> serializationLibrary) {
@@ -108,7 +109,7 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
             return this;
         }
         public Builder serializationLibrary(@Nullable String serializationLibrary) {
-            this.serializationLibrary = Output.ofNullable(serializationLibrary);
+            this.serializationLibrary = Codegen.ofNullable(serializationLibrary);
             return this;
         }        public PartitionStorageDescriptorSerDeInfoGetArgs build() {
             return new PartitionStorageDescriptorSerDeInfoGetArgs(name, parameters, serializationLibrary);

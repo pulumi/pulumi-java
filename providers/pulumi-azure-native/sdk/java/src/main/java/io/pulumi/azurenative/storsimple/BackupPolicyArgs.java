@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
 
-    public Output<String> getBackupPolicyName() {
-        return this.backupPolicyName == null ? Output.empty() : this.backupPolicyName;
+    public Output<String> backupPolicyName() {
+        return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -45,8 +46,8 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<Kind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -67,7 +68,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +79,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeIds", required=true)
       private final Output<List<String>> volumeIds;
 
-    public Output<List<String>> getVolumeIds() {
+    public Output<List<String>> volumeIds() {
         return this.volumeIds;
     }
 
@@ -98,12 +99,12 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.backupPolicyName = Output.empty();
-        this.deviceName = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.volumeIds = Output.empty();
+        this.backupPolicyName = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.volumeIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
-            this.backupPolicyName = Output.ofNullable(backupPolicyName);
+            this.backupPolicyName = Codegen.ofNullable(backupPolicyName);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -157,7 +158,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {

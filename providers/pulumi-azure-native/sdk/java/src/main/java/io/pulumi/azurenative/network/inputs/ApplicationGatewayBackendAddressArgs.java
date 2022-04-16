@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+    public Output<String> fqdn() {
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     public ApplicationGatewayBackendAddressArgs(
@@ -48,8 +49,8 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
     }
 
     private ApplicationGatewayBackendAddressArgs() {
-        this.fqdn = Output.empty();
-        this.ipAddress = Output.empty();
+        this.fqdn = Codegen.empty();
+        this.ipAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -87,7 +88,7 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }        public ApplicationGatewayBackendAddressArgs build() {
             return new ApplicationGatewayBackendAddressArgs(fqdn, ipAddress);

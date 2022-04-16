@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudfunctions_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudfunctions_v1.enums.FunctionIngressSettings;
 import io.pulumi.googlenative.cloudfunctions_v1.enums.FunctionVpcConnectorEgressSettings;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.EventTriggerArgs;
@@ -31,8 +32,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availableMemoryMb")
       private final @Nullable Output<Integer> availableMemoryMb;
 
-    public Output<Integer> getAvailableMemoryMb() {
-        return this.availableMemoryMb == null ? Output.empty() : this.availableMemoryMb;
+    public Output<Integer> availableMemoryMb() {
+        return this.availableMemoryMb == null ? Codegen.empty() : this.availableMemoryMb;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildEnvironmentVariables")
       private final @Nullable Output<Map<String,String>> buildEnvironmentVariables;
 
-    public Output<Map<String,String>> getBuildEnvironmentVariables() {
-        return this.buildEnvironmentVariables == null ? Output.empty() : this.buildEnvironmentVariables;
+    public Output<Map<String,String>> buildEnvironmentVariables() {
+        return this.buildEnvironmentVariables == null ? Codegen.empty() : this.buildEnvironmentVariables;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildWorkerPool")
       private final @Nullable Output<String> buildWorkerPool;
 
-    public Output<String> getBuildWorkerPool() {
-        return this.buildWorkerPool == null ? Output.empty() : this.buildWorkerPool;
+    public Output<String> buildWorkerPool() {
+        return this.buildWorkerPool == null ? Codegen.empty() : this.buildWorkerPool;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dockerRepository")
       private final @Nullable Output<String> dockerRepository;
 
-    public Output<String> getDockerRepository() {
-        return this.dockerRepository == null ? Output.empty() : this.dockerRepository;
+    public Output<String> dockerRepository() {
+        return this.dockerRepository == null ? Codegen.empty() : this.dockerRepository;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryPoint")
       private final @Nullable Output<String> entryPoint;
 
-    public Output<String> getEntryPoint() {
-        return this.entryPoint == null ? Output.empty() : this.entryPoint;
+    public Output<String> entryPoint() {
+        return this.entryPoint == null ? Codegen.empty() : this.entryPoint;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+    public Output<Map<String,String>> environmentVariables() {
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTrigger")
       private final @Nullable Output<EventTriggerArgs> eventTrigger;
 
-    public Output<EventTriggerArgs> getEventTrigger() {
-        return this.eventTrigger == null ? Output.empty() : this.eventTrigger;
+    public Output<EventTriggerArgs> eventTrigger() {
+        return this.eventTrigger == null ? Codegen.empty() : this.eventTrigger;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpsTrigger")
       private final @Nullable Output<HttpsTriggerArgs> httpsTrigger;
 
-    public Output<HttpsTriggerArgs> getHttpsTrigger() {
-        return this.httpsTrigger == null ? Output.empty() : this.httpsTrigger;
+    public Output<HttpsTriggerArgs> httpsTrigger() {
+        return this.httpsTrigger == null ? Codegen.empty() : this.httpsTrigger;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingressSettings")
       private final @Nullable Output<FunctionIngressSettings> ingressSettings;
 
-    public Output<FunctionIngressSettings> getIngressSettings() {
-        return this.ingressSettings == null ? Output.empty() : this.ingressSettings;
+    public Output<FunctionIngressSettings> ingressSettings() {
+        return this.ingressSettings == null ? Codegen.empty() : this.ingressSettings;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+    public Output<String> kmsKeyName() {
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -152,15 +153,15 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Output.empty() : this.maxInstances;
+    public Output<Integer> maxInstances() {
+        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> getMinInstances() {
-        return this.minInstances == null ? Output.empty() : this.minInstances;
+    public Output<Integer> minInstances() {
+        return this.minInstances == null ? Codegen.empty() : this.minInstances;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -203,15 +204,15 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -221,8 +222,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
-    public Output<String> getRuntime() {
-        return this.runtime == null ? Output.empty() : this.runtime;
+    public Output<String> runtime() {
+        return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
     /**
@@ -232,8 +233,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretEnvironmentVariables")
       private final @Nullable Output<List<SecretEnvVarArgs>> secretEnvironmentVariables;
 
-    public Output<List<SecretEnvVarArgs>> getSecretEnvironmentVariables() {
-        return this.secretEnvironmentVariables == null ? Output.empty() : this.secretEnvironmentVariables;
+    public Output<List<SecretEnvVarArgs>> secretEnvironmentVariables() {
+        return this.secretEnvironmentVariables == null ? Codegen.empty() : this.secretEnvironmentVariables;
     }
 
     /**
@@ -243,8 +244,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretVolumes")
       private final @Nullable Output<List<SecretVolumeArgs>> secretVolumes;
 
-    public Output<List<SecretVolumeArgs>> getSecretVolumes() {
-        return this.secretVolumes == null ? Output.empty() : this.secretVolumes;
+    public Output<List<SecretVolumeArgs>> secretVolumes() {
+        return this.secretVolumes == null ? Codegen.empty() : this.secretVolumes;
     }
 
     /**
@@ -254,8 +255,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+    public Output<String> serviceAccountEmail() {
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -265,8 +266,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceArchiveUrl")
       private final @Nullable Output<String> sourceArchiveUrl;
 
-    public Output<String> getSourceArchiveUrl() {
-        return this.sourceArchiveUrl == null ? Output.empty() : this.sourceArchiveUrl;
+    public Output<String> sourceArchiveUrl() {
+        return this.sourceArchiveUrl == null ? Codegen.empty() : this.sourceArchiveUrl;
     }
 
     /**
@@ -276,8 +277,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRepository")
       private final @Nullable Output<SourceRepositoryArgs> sourceRepository;
 
-    public Output<SourceRepositoryArgs> getSourceRepository() {
-        return this.sourceRepository == null ? Output.empty() : this.sourceRepository;
+    public Output<SourceRepositoryArgs> sourceRepository() {
+        return this.sourceRepository == null ? Codegen.empty() : this.sourceRepository;
     }
 
     /**
@@ -287,8 +288,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceToken")
       private final @Nullable Output<String> sourceToken;
 
-    public Output<String> getSourceToken() {
-        return this.sourceToken == null ? Output.empty() : this.sourceToken;
+    public Output<String> sourceToken() {
+        return this.sourceToken == null ? Codegen.empty() : this.sourceToken;
     }
 
     /**
@@ -298,8 +299,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceUploadUrl")
       private final @Nullable Output<String> sourceUploadUrl;
 
-    public Output<String> getSourceUploadUrl() {
-        return this.sourceUploadUrl == null ? Output.empty() : this.sourceUploadUrl;
+    public Output<String> sourceUploadUrl() {
+        return this.sourceUploadUrl == null ? Codegen.empty() : this.sourceUploadUrl;
     }
 
     /**
@@ -309,8 +310,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -320,8 +321,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnector")
       private final @Nullable Output<String> vpcConnector;
 
-    public Output<String> getVpcConnector() {
-        return this.vpcConnector == null ? Output.empty() : this.vpcConnector;
+    public Output<String> vpcConnector() {
+        return this.vpcConnector == null ? Codegen.empty() : this.vpcConnector;
     }
 
     /**
@@ -331,8 +332,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnectorEgressSettings")
       private final @Nullable Output<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings;
 
-    public Output<FunctionVpcConnectorEgressSettings> getVpcConnectorEgressSettings() {
-        return this.vpcConnectorEgressSettings == null ? Output.empty() : this.vpcConnectorEgressSettings;
+    public Output<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings() {
+        return this.vpcConnectorEgressSettings == null ? Codegen.empty() : this.vpcConnectorEgressSettings;
     }
 
     public FunctionArgs(
@@ -397,35 +398,35 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.availableMemoryMb = Output.empty();
-        this.buildEnvironmentVariables = Output.empty();
-        this.buildWorkerPool = Output.empty();
-        this.description = Output.empty();
-        this.dockerRepository = Output.empty();
-        this.entryPoint = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.eventTrigger = Output.empty();
-        this.httpsTrigger = Output.empty();
-        this.ingressSettings = Output.empty();
-        this.kmsKeyName = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.maxInstances = Output.empty();
-        this.minInstances = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.runtime = Output.empty();
-        this.secretEnvironmentVariables = Output.empty();
-        this.secretVolumes = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.sourceArchiveUrl = Output.empty();
-        this.sourceRepository = Output.empty();
-        this.sourceToken = Output.empty();
-        this.sourceUploadUrl = Output.empty();
-        this.timeout = Output.empty();
-        this.vpcConnector = Output.empty();
-        this.vpcConnectorEgressSettings = Output.empty();
+        this.availableMemoryMb = Codegen.empty();
+        this.buildEnvironmentVariables = Codegen.empty();
+        this.buildWorkerPool = Codegen.empty();
+        this.description = Codegen.empty();
+        this.dockerRepository = Codegen.empty();
+        this.entryPoint = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.eventTrigger = Codegen.empty();
+        this.httpsTrigger = Codegen.empty();
+        this.ingressSettings = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxInstances = Codegen.empty();
+        this.minInstances = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.runtime = Codegen.empty();
+        this.secretEnvironmentVariables = Codegen.empty();
+        this.secretVolumes = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.sourceArchiveUrl = Codegen.empty();
+        this.sourceRepository = Codegen.empty();
+        this.sourceToken = Codegen.empty();
+        this.sourceUploadUrl = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.vpcConnector = Codegen.empty();
+        this.vpcConnectorEgressSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -509,7 +510,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availableMemoryMb(@Nullable Integer availableMemoryMb) {
-            this.availableMemoryMb = Output.ofNullable(availableMemoryMb);
+            this.availableMemoryMb = Codegen.ofNullable(availableMemoryMb);
             return this;
         }
         public Builder buildEnvironmentVariables(@Nullable Output<Map<String,String>> buildEnvironmentVariables) {
@@ -517,7 +518,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildEnvironmentVariables(@Nullable Map<String,String> buildEnvironmentVariables) {
-            this.buildEnvironmentVariables = Output.ofNullable(buildEnvironmentVariables);
+            this.buildEnvironmentVariables = Codegen.ofNullable(buildEnvironmentVariables);
             return this;
         }
         public Builder buildWorkerPool(@Nullable Output<String> buildWorkerPool) {
@@ -525,7 +526,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildWorkerPool(@Nullable String buildWorkerPool) {
-            this.buildWorkerPool = Output.ofNullable(buildWorkerPool);
+            this.buildWorkerPool = Codegen.ofNullable(buildWorkerPool);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -533,7 +534,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dockerRepository(@Nullable Output<String> dockerRepository) {
@@ -541,7 +542,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dockerRepository(@Nullable String dockerRepository) {
-            this.dockerRepository = Output.ofNullable(dockerRepository);
+            this.dockerRepository = Codegen.ofNullable(dockerRepository);
             return this;
         }
         public Builder entryPoint(@Nullable Output<String> entryPoint) {
@@ -549,7 +550,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entryPoint(@Nullable String entryPoint) {
-            this.entryPoint = Output.ofNullable(entryPoint);
+            this.entryPoint = Codegen.ofNullable(entryPoint);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
@@ -557,7 +558,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder eventTrigger(@Nullable Output<EventTriggerArgs> eventTrigger) {
@@ -565,7 +566,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventTrigger(@Nullable EventTriggerArgs eventTrigger) {
-            this.eventTrigger = Output.ofNullable(eventTrigger);
+            this.eventTrigger = Codegen.ofNullable(eventTrigger);
             return this;
         }
         public Builder httpsTrigger(@Nullable Output<HttpsTriggerArgs> httpsTrigger) {
@@ -573,7 +574,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpsTrigger(@Nullable HttpsTriggerArgs httpsTrigger) {
-            this.httpsTrigger = Output.ofNullable(httpsTrigger);
+            this.httpsTrigger = Codegen.ofNullable(httpsTrigger);
             return this;
         }
         public Builder ingressSettings(@Nullable Output<FunctionIngressSettings> ingressSettings) {
@@ -581,7 +582,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingressSettings(@Nullable FunctionIngressSettings ingressSettings) {
-            this.ingressSettings = Output.ofNullable(ingressSettings);
+            this.ingressSettings = Codegen.ofNullable(ingressSettings);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -589,7 +590,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -597,7 +598,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -605,7 +606,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
@@ -613,7 +614,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Output.ofNullable(maxInstances);
+            this.maxInstances = Codegen.ofNullable(maxInstances);
             return this;
         }
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
@@ -621,7 +622,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Output.ofNullable(minInstances);
+            this.minInstances = Codegen.ofNullable(minInstances);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -629,7 +630,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -637,7 +638,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -645,7 +646,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder runtime(@Nullable Output<String> runtime) {
@@ -653,7 +654,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Output.ofNullable(runtime);
+            this.runtime = Codegen.ofNullable(runtime);
             return this;
         }
         public Builder secretEnvironmentVariables(@Nullable Output<List<SecretEnvVarArgs>> secretEnvironmentVariables) {
@@ -661,7 +662,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretEnvironmentVariables(@Nullable List<SecretEnvVarArgs> secretEnvironmentVariables) {
-            this.secretEnvironmentVariables = Output.ofNullable(secretEnvironmentVariables);
+            this.secretEnvironmentVariables = Codegen.ofNullable(secretEnvironmentVariables);
             return this;
         }
         public Builder secretEnvironmentVariables(SecretEnvVarArgs... secretEnvironmentVariables) {
@@ -672,7 +673,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretVolumes(@Nullable List<SecretVolumeArgs> secretVolumes) {
-            this.secretVolumes = Output.ofNullable(secretVolumes);
+            this.secretVolumes = Codegen.ofNullable(secretVolumes);
             return this;
         }
         public Builder secretVolumes(SecretVolumeArgs... secretVolumes) {
@@ -683,7 +684,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder sourceArchiveUrl(@Nullable Output<String> sourceArchiveUrl) {
@@ -691,7 +692,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceArchiveUrl(@Nullable String sourceArchiveUrl) {
-            this.sourceArchiveUrl = Output.ofNullable(sourceArchiveUrl);
+            this.sourceArchiveUrl = Codegen.ofNullable(sourceArchiveUrl);
             return this;
         }
         public Builder sourceRepository(@Nullable Output<SourceRepositoryArgs> sourceRepository) {
@@ -699,7 +700,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRepository(@Nullable SourceRepositoryArgs sourceRepository) {
-            this.sourceRepository = Output.ofNullable(sourceRepository);
+            this.sourceRepository = Codegen.ofNullable(sourceRepository);
             return this;
         }
         public Builder sourceToken(@Nullable Output<String> sourceToken) {
@@ -707,7 +708,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceToken(@Nullable String sourceToken) {
-            this.sourceToken = Output.ofNullable(sourceToken);
+            this.sourceToken = Codegen.ofNullable(sourceToken);
             return this;
         }
         public Builder sourceUploadUrl(@Nullable Output<String> sourceUploadUrl) {
@@ -715,7 +716,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceUploadUrl(@Nullable String sourceUploadUrl) {
-            this.sourceUploadUrl = Output.ofNullable(sourceUploadUrl);
+            this.sourceUploadUrl = Codegen.ofNullable(sourceUploadUrl);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -723,7 +724,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder vpcConnector(@Nullable Output<String> vpcConnector) {
@@ -731,7 +732,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConnector(@Nullable String vpcConnector) {
-            this.vpcConnector = Output.ofNullable(vpcConnector);
+            this.vpcConnector = Codegen.ofNullable(vpcConnector);
             return this;
         }
         public Builder vpcConnectorEgressSettings(@Nullable Output<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings) {
@@ -739,7 +740,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConnectorEgressSettings(@Nullable FunctionVpcConnectorEgressSettings vpcConnectorEgressSettings) {
-            this.vpcConnectorEgressSettings = Output.ofNullable(vpcConnectorEgressSettings);
+            this.vpcConnectorEgressSettings = Codegen.ofNullable(vpcConnectorEgressSettings);
             return this;
         }        public FunctionArgs build() {
             return new FunctionArgs(availableMemoryMb, buildEnvironmentVariables, buildWorkerPool, description, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, location, maxInstances, minInstances, name, network, project, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, timeout, vpcConnector, vpcConnectorEgressSettings);

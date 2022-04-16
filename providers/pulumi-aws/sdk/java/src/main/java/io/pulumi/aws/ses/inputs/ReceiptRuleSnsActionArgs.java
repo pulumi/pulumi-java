@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<String> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -44,7 +45,7 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 
@@ -58,9 +59,9 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
     }
 
     private ReceiptRuleSnsActionArgs() {
-        this.encoding = Output.empty();
-        this.position = Output.empty();
-        this.topicArn = Output.empty();
+        this.encoding = Codegen.empty();
+        this.position = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder position(Output<Integer> position) {

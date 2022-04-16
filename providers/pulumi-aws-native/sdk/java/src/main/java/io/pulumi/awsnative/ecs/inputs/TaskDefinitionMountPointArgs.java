@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
-        return this.containerPath == null ? Output.empty() : this.containerPath;
+    public Output<String> containerPath() {
+        return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="sourceVolume")
       private final @Nullable Output<String> sourceVolume;
 
-    public Output<String> getSourceVolume() {
-        return this.sourceVolume == null ? Output.empty() : this.sourceVolume;
+    public Output<String> sourceVolume() {
+        return this.sourceVolume == null ? Codegen.empty() : this.sourceVolume;
     }
 
     public TaskDefinitionMountPointArgs(
@@ -46,9 +47,9 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
     }
 
     private TaskDefinitionMountPointArgs() {
-        this.containerPath = Output.empty();
-        this.readOnly = Output.empty();
-        this.sourceVolume = Output.empty();
+        this.containerPath = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.sourceVolume = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Output.ofNullable(containerPath);
+            this.containerPath = Codegen.ofNullable(containerPath);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -88,7 +89,7 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder sourceVolume(@Nullable Output<String> sourceVolume) {
@@ -96,7 +97,7 @@ public final class TaskDefinitionMountPointArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder sourceVolume(@Nullable String sourceVolume) {
-            this.sourceVolume = Output.ofNullable(sourceVolume);
+            this.sourceVolume = Codegen.ofNullable(sourceVolume);
             return this;
         }        public TaskDefinitionMountPointArgs build() {
             return new TaskDefinitionMountPointArgs(containerPath, readOnly, sourceVolume);

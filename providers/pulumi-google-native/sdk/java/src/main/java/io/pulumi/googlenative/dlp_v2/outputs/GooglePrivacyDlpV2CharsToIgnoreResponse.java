@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
      * Characters to not transform when masking.
      * 
     */
-    public String getCharactersToSkip() {
+    public String charactersToSkip() {
         return this.charactersToSkip;
     }
     /**
      * Common characters to not transform when masking. Useful to avoid removing punctuation.
      * 
     */
-    public String getCommonCharactersToIgnore() {
+    public String commonCharactersToIgnore() {
         return this.commonCharactersToIgnore;
     }
 

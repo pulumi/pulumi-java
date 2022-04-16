@@ -6,6 +6,7 @@ package io.pulumi.gcp.folder;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IamAuditConfigArgs;
 import io.pulumi.gcp.folder.inputs.IamAuditConfigState;
@@ -27,7 +28,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The configuration for logging of each type of permission. This can be specified multiple times.
      * 
      */
-    public Output<List<IamAuditConfigAuditLogConfig>> getAuditLogConfigs() {
+    public Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
@@ -41,13 +42,13 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The etag of iam policy
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -61,7 +62,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return Service which will be enabled for audit logging. The special value allServices covers all services.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -87,7 +88,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamAuditConfig(String name, IamAuditConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:folder/iamAuditConfig:IamAuditConfig", name, args == null ? IamAuditConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:folder/iamAuditConfig:IamAuditConfig", name, args == null ? IamAuditConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamAuditConfig(String name, Output<String> id, @Nullable IamAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

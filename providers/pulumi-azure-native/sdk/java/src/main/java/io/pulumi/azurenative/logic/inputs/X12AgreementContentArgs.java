@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.X12OneWayAgreementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
     @Import(name="receiveAgreement", required=true)
       private final Output<X12OneWayAgreementArgs> receiveAgreement;
 
-    public Output<X12OneWayAgreementArgs> getReceiveAgreement() {
+    public Output<X12OneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -35,7 +36,7 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
     @Import(name="sendAgreement", required=true)
       private final Output<X12OneWayAgreementArgs> sendAgreement;
 
-    public Output<X12OneWayAgreementArgs> getSendAgreement() {
+    public Output<X12OneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
 
@@ -47,8 +48,8 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12AgreementContentArgs() {
-        this.receiveAgreement = Output.empty();
-        this.sendAgreement = Output.empty();
+        this.receiveAgreement = Codegen.empty();
+        this.sendAgreement = Codegen.empty();
     }
 
     public static Builder builder() {

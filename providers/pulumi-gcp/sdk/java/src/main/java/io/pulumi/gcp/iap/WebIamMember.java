@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.WebIamMemberState;
@@ -74,7 +75,7 @@ public class WebIamMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ WebIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -88,13 +89,13 @@ public class WebIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -110,7 +111,7 @@ public class WebIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -128,7 +129,7 @@ public class WebIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -154,7 +155,7 @@ public class WebIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebIamMember(String name, WebIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webIamMember:WebIamMember", name, args == null ? WebIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/webIamMember:WebIamMember", name, args == null ? WebIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebIamMember(String name, Output<String> id, @Nullable WebIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

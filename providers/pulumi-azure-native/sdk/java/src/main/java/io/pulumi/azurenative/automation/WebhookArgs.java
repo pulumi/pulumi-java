@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -35,8 +36,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
 
-    public Output<String> getExpiryTime() {
-        return this.expiryTime == null ? Output.empty() : this.expiryTime;
+    public Output<String> expiryTime() {
+        return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+    public Output<Boolean> isEnabled() {
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -68,8 +69,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,8 +91,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runOn")
       private final @Nullable Output<String> runOn;
 
-    public Output<String> getRunOn() {
-        return this.runOn == null ? Output.empty() : this.runOn;
+    public Output<String> runOn() {
+        return this.runOn == null ? Codegen.empty() : this.runOn;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runbook")
       private final @Nullable Output<RunbookAssociationPropertyArgs> runbook;
 
-    public Output<RunbookAssociationPropertyArgs> getRunbook() {
-        return this.runbook == null ? Output.empty() : this.runbook;
+    public Output<RunbookAssociationPropertyArgs> runbook() {
+        return this.runbook == null ? Codegen.empty() : this.runbook;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookName")
       private final @Nullable Output<String> webhookName;
 
-    public Output<String> getWebhookName() {
-        return this.webhookName == null ? Output.empty() : this.webhookName;
+    public Output<String> webhookName() {
+        return this.webhookName == null ? Codegen.empty() : this.webhookName;
     }
 
     public WebhookArgs(
@@ -151,16 +152,16 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.automationAccountName = Output.empty();
-        this.expiryTime = Output.empty();
-        this.isEnabled = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.runOn = Output.empty();
-        this.runbook = Output.empty();
-        this.uri = Output.empty();
-        this.webhookName = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.expiryTime = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.runOn = Codegen.empty();
+        this.runbook = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.webhookName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -214,7 +215,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = Output.ofNullable(expiryTime);
+            this.expiryTime = Codegen.ofNullable(expiryTime);
             return this;
         }
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
@@ -222,7 +223,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -238,7 +239,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -254,7 +255,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runOn(@Nullable String runOn) {
-            this.runOn = Output.ofNullable(runOn);
+            this.runOn = Codegen.ofNullable(runOn);
             return this;
         }
         public Builder runbook(@Nullable Output<RunbookAssociationPropertyArgs> runbook) {
@@ -262,7 +263,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runbook(@Nullable RunbookAssociationPropertyArgs runbook) {
-            this.runbook = Output.ofNullable(runbook);
+            this.runbook = Codegen.ofNullable(runbook);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -270,7 +271,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }
         public Builder webhookName(@Nullable Output<String> webhookName) {
@@ -278,7 +279,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webhookName(@Nullable String webhookName) {
-            this.webhookName = Output.ofNullable(webhookName);
+            this.webhookName = Codegen.ofNullable(webhookName);
             return this;
         }        public WebhookArgs build() {
             return new WebhookArgs(automationAccountName, expiryTime, isEnabled, name, parameters, resourceGroupName, runOn, runbook, uri, webhookName);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     public TaskDefinitionHostEntryArgs(
@@ -36,8 +37,8 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
     }
 
     private TaskDefinitionHostEntryArgs() {
-        this.hostname = Output.empty();
-        this.ipAddress = Output.empty();
+        this.hostname = Codegen.empty();
+        this.ipAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -75,7 +76,7 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }        public TaskDefinitionHostEntryArgs build() {
             return new TaskDefinitionHostEntryArgs(hostname, ipAddress);

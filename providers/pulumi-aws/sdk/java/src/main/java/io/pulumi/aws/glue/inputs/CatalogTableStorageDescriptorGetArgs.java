@@ -10,6 +10,7 @@ import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSkewedInfoGetArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSortColumnGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,8 +31,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="bucketColumns")
       private final @Nullable Output<List<String>> bucketColumns;
 
-    public Output<List<String>> getBucketColumns() {
-        return this.bucketColumns == null ? Output.empty() : this.bucketColumns;
+    public Output<List<String>> bucketColumns() {
+        return this.bucketColumns == null ? Codegen.empty() : this.bucketColumns;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="columns")
       private final @Nullable Output<List<CatalogTableStorageDescriptorColumnGetArgs>> columns;
 
-    public Output<List<CatalogTableStorageDescriptorColumnGetArgs>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+    public Output<List<CatalogTableStorageDescriptorColumnGetArgs>> columns() {
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="compressed")
       private final @Nullable Output<Boolean> compressed;
 
-    public Output<Boolean> getCompressed() {
-        return this.compressed == null ? Output.empty() : this.compressed;
+    public Output<Boolean> compressed() {
+        return this.compressed == null ? Codegen.empty() : this.compressed;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="inputFormat")
       private final @Nullable Output<String> inputFormat;
 
-    public Output<String> getInputFormat() {
-        return this.inputFormat == null ? Output.empty() : this.inputFormat;
+    public Output<String> inputFormat() {
+        return this.inputFormat == null ? Codegen.empty() : this.inputFormat;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="numberOfBuckets")
       private final @Nullable Output<Integer> numberOfBuckets;
 
-    public Output<Integer> getNumberOfBuckets() {
-        return this.numberOfBuckets == null ? Output.empty() : this.numberOfBuckets;
+    public Output<Integer> numberOfBuckets() {
+        return this.numberOfBuckets == null ? Codegen.empty() : this.numberOfBuckets;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
-        return this.outputFormat == null ? Output.empty() : this.outputFormat;
+    public Output<String> outputFormat() {
+        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="schemaReference")
       private final @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference;
 
-    public Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> getSchemaReference() {
-        return this.schemaReference == null ? Output.empty() : this.schemaReference;
+    public Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference() {
+        return this.schemaReference == null ? Codegen.empty() : this.schemaReference;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="serDeInfo")
       private final @Nullable Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo;
 
-    public Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> getSerDeInfo() {
-        return this.serDeInfo == null ? Output.empty() : this.serDeInfo;
+    public Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo() {
+        return this.serDeInfo == null ? Codegen.empty() : this.serDeInfo;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="skewedInfo")
       private final @Nullable Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo;
 
-    public Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> getSkewedInfo() {
-        return this.skewedInfo == null ? Output.empty() : this.skewedInfo;
+    public Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo() {
+        return this.skewedInfo == null ? Codegen.empty() : this.skewedInfo;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="sortColumns")
       private final @Nullable Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns;
 
-    public Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> getSortColumns() {
-        return this.sortColumns == null ? Output.empty() : this.sortColumns;
+    public Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns() {
+        return this.sortColumns == null ? Codegen.empty() : this.sortColumns;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     @Import(name="storedAsSubDirectories")
       private final @Nullable Output<Boolean> storedAsSubDirectories;
 
-    public Output<Boolean> getStoredAsSubDirectories() {
-        return this.storedAsSubDirectories == null ? Output.empty() : this.storedAsSubDirectories;
+    public Output<Boolean> storedAsSubDirectories() {
+        return this.storedAsSubDirectories == null ? Codegen.empty() : this.storedAsSubDirectories;
     }
 
     public CatalogTableStorageDescriptorGetArgs(
@@ -196,19 +197,19 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     }
 
     private CatalogTableStorageDescriptorGetArgs() {
-        this.bucketColumns = Output.empty();
-        this.columns = Output.empty();
-        this.compressed = Output.empty();
-        this.inputFormat = Output.empty();
-        this.location = Output.empty();
-        this.numberOfBuckets = Output.empty();
-        this.outputFormat = Output.empty();
-        this.parameters = Output.empty();
-        this.schemaReference = Output.empty();
-        this.serDeInfo = Output.empty();
-        this.skewedInfo = Output.empty();
-        this.sortColumns = Output.empty();
-        this.storedAsSubDirectories = Output.empty();
+        this.bucketColumns = Codegen.empty();
+        this.columns = Codegen.empty();
+        this.compressed = Codegen.empty();
+        this.inputFormat = Codegen.empty();
+        this.location = Codegen.empty();
+        this.numberOfBuckets = Codegen.empty();
+        this.outputFormat = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.schemaReference = Codegen.empty();
+        this.serDeInfo = Codegen.empty();
+        this.skewedInfo = Codegen.empty();
+        this.sortColumns = Codegen.empty();
+        this.storedAsSubDirectories = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -260,7 +261,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder bucketColumns(@Nullable List<String> bucketColumns) {
-            this.bucketColumns = Output.ofNullable(bucketColumns);
+            this.bucketColumns = Codegen.ofNullable(bucketColumns);
             return this;
         }
         public Builder bucketColumns(String... bucketColumns) {
@@ -271,7 +272,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder columns(@Nullable List<CatalogTableStorageDescriptorColumnGetArgs> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(CatalogTableStorageDescriptorColumnGetArgs... columns) {
@@ -282,7 +283,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder compressed(@Nullable Boolean compressed) {
-            this.compressed = Output.ofNullable(compressed);
+            this.compressed = Codegen.ofNullable(compressed);
             return this;
         }
         public Builder inputFormat(@Nullable Output<String> inputFormat) {
@@ -290,7 +291,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder inputFormat(@Nullable String inputFormat) {
-            this.inputFormat = Output.ofNullable(inputFormat);
+            this.inputFormat = Codegen.ofNullable(inputFormat);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -298,7 +299,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder numberOfBuckets(@Nullable Output<Integer> numberOfBuckets) {
@@ -306,7 +307,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
-            this.numberOfBuckets = Output.ofNullable(numberOfBuckets);
+            this.numberOfBuckets = Codegen.ofNullable(numberOfBuckets);
             return this;
         }
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
@@ -314,7 +315,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Output.ofNullable(outputFormat);
+            this.outputFormat = Codegen.ofNullable(outputFormat);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -322,7 +323,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder schemaReference(@Nullable Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference) {
@@ -330,7 +331,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder schemaReference(@Nullable CatalogTableStorageDescriptorSchemaReferenceGetArgs schemaReference) {
-            this.schemaReference = Output.ofNullable(schemaReference);
+            this.schemaReference = Codegen.ofNullable(schemaReference);
             return this;
         }
         public Builder serDeInfo(@Nullable Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo) {
@@ -338,7 +339,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder serDeInfo(@Nullable CatalogTableStorageDescriptorSerDeInfoGetArgs serDeInfo) {
-            this.serDeInfo = Output.ofNullable(serDeInfo);
+            this.serDeInfo = Codegen.ofNullable(serDeInfo);
             return this;
         }
         public Builder skewedInfo(@Nullable Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo) {
@@ -346,7 +347,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder skewedInfo(@Nullable CatalogTableStorageDescriptorSkewedInfoGetArgs skewedInfo) {
-            this.skewedInfo = Output.ofNullable(skewedInfo);
+            this.skewedInfo = Codegen.ofNullable(skewedInfo);
             return this;
         }
         public Builder sortColumns(@Nullable Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns) {
@@ -354,7 +355,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder sortColumns(@Nullable List<CatalogTableStorageDescriptorSortColumnGetArgs> sortColumns) {
-            this.sortColumns = Output.ofNullable(sortColumns);
+            this.sortColumns = Codegen.ofNullable(sortColumns);
             return this;
         }
         public Builder sortColumns(CatalogTableStorageDescriptorSortColumnGetArgs... sortColumns) {
@@ -365,7 +366,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
-            this.storedAsSubDirectories = Output.ofNullable(storedAsSubDirectories);
+            this.storedAsSubDirectories = Codegen.ofNullable(storedAsSubDirectories);
             return this;
         }        public CatalogTableStorageDescriptorGetArgs build() {
             return new CatalogTableStorageDescriptorGetArgs(bucketColumns, columns, compressed, inputFormat, location, numberOfBuckets, outputFormat, parameters, schemaReference, serDeInfo, skewedInfo, sortColumns, storedAsSubDirectories);

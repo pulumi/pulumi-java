@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
     @Import(name="rules")
       private final @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
 
-    public Output<List<BucketReplicationConfigRuleGetArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<BucketReplicationConfigRuleGetArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public BucketReplicationConfigState(
@@ -59,9 +60,9 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
     }
 
     private BucketReplicationConfigState() {
-        this.bucket = Output.empty();
-        this.role = Output.empty();
-        this.rules = Output.empty();
+        this.bucket = Codegen.empty();
+        this.role = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -101,7 +102,7 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder rules(@Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules) {
@@ -109,7 +110,7 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder rules(@Nullable List<BucketReplicationConfigRuleGetArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(BucketReplicationConfigRuleGetArgs... rules) {

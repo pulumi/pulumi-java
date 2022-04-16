@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies")
       private final @Nullable Output<String> accessPolicies;
 
-    public Output<String> getAccessPolicies() {
-        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
+    public Output<String> accessPolicies() {
+        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     public DomainPolicyState(
@@ -44,8 +45,8 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainPolicyState() {
-        this.accessPolicies = Output.empty();
-        this.domainName = Output.empty();
+        this.accessPolicies = Codegen.empty();
+        this.domainName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }        public DomainPolicyState build() {
             return new DomainPolicyState(accessPolicies, domainName);

@@ -11,6 +11,7 @@ import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpoint;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -58,7 +59,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.
      * 
      */
-    public Output</* @Nullable */ OntapStorageVirtualMachineActiveDirectoryConfiguration> getActiveDirectoryConfiguration() {
+    public Output</* @Nullable */ OntapStorageVirtualMachineActiveDirectoryConfiguration> activeDirectoryConfiguration() {
         return this.activeDirectoryConfiguration;
     }
     /**
@@ -72,7 +73,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return Amazon Resource Name of the storage virtual machine.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -86,7 +87,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return The endpoints that are used to access data or to manage the storage virtual machine using the NetApp ONTAP CLI, REST API, or NetApp SnapMirror. See Endpoints below.
      * 
      */
-    public Output<List<OntapStorageVirtualMachineEndpoint>> getEndpoints() {
+    public Output<List<OntapStorageVirtualMachineEndpoint>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -100,7 +101,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return The ID of the Amazon FSx ONTAP File System that this SVM will be created on.
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     /**
@@ -114,7 +115,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return The name of the SVM. You can use a maximum of 47 alphanumeric characters, plus the underscore (_) special character.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return Specifies the root volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. All volumes created under this SVM will inherit the root security style unless the security style is specified on the volume. Default value is `UNIX`.
      * 
      */
-    public Output</* @Nullable */ String> getRootVolumeSecurityStyle() {
+    public Output</* @Nullable */ String> rootVolumeSecurityStyle() {
         return this.rootVolumeSecurityStyle;
     }
     /**
@@ -142,13 +143,13 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return Describes the SVM's subtype, e.g. `DEFAULT`
      * 
      */
-    public Output<String> getSubtype() {
+    public Output<String> subtype() {
         return this.subtype;
     }
     @Export(name="svmAdminPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> svmAdminPassword;
 
-    public Output</* @Nullable */ String> getSvmAdminPassword() {
+    public Output</* @Nullable */ String> svmAdminPassword() {
         return this.svmAdminPassword;
     }
     /**
@@ -162,7 +163,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return A map of tags to assign to the storage virtual machine. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -176,7 +177,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -190,7 +191,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @return The SVM's UUID (universally unique identifier).
      * 
      */
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid;
     }
 
@@ -216,7 +217,7 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public OntapStorageVirtualMachine(String name, OntapStorageVirtualMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine", name, args == null ? OntapStorageVirtualMachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:fsx/ontapStorageVirtualMachine:OntapStorageVirtualMachine", name, args == null ? OntapStorageVirtualMachineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OntapStorageVirtualMachine(String name, Output<String> id, @Nullable OntapStorageVirtualMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

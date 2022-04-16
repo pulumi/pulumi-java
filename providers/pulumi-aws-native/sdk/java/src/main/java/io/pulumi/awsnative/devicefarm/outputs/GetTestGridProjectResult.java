@@ -30,16 +30,16 @@ public final class GetTestGridProjectResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public List<TestGridProjectTag> getTags() {
+    public List<TestGridProjectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

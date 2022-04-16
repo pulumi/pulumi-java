@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.BucketIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -35,8 +36,8 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<BucketIAMBindingConditionArgs> condition;
 
-    public Output<BucketIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<BucketIAMBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -69,7 +70,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -85,10 +86,10 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketIAMBindingArgs() {
-        this.bucket = Output.empty();
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable BucketIAMBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="assignPublicIp")
       private final @Nullable Output<Boolean> assignPublicIp;
 
-    public Output<Boolean> getAssignPublicIp() {
-        return this.assignPublicIp == null ? Output.empty() : this.assignPublicIp;
+    public Output<Boolean> assignPublicIp() {
+        return this.assignPublicIp == null ? Codegen.empty() : this.assignPublicIp;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+    public Output<List<String>> securityGroups() {
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 
@@ -59,9 +60,9 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     private ServiceNetworkConfigurationArgs() {
-        this.assignPublicIp = Output.empty();
-        this.securityGroups = Output.empty();
-        this.subnets = Output.empty();
+        this.assignPublicIp = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.subnets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder assignPublicIp(@Nullable Boolean assignPublicIp) {
-            this.assignPublicIp = Output.ofNullable(assignPublicIp);
+            this.assignPublicIp = Codegen.ofNullable(assignPublicIp);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -101,7 +102,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {

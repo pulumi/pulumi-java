@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="hashKeyField", required=true)
       private final Output<String> hashKeyField;
 
-    public Output<String> getHashKeyField() {
+    public Output<String> hashKeyField() {
         return this.hashKeyField;
     }
 
@@ -32,8 +33,8 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="hashKeyType")
       private final @Nullable Output<String> hashKeyType;
 
-    public Output<String> getHashKeyType() {
-        return this.hashKeyType == null ? Output.empty() : this.hashKeyType;
+    public Output<String> hashKeyType() {
+        return this.hashKeyType == null ? Codegen.empty() : this.hashKeyType;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="hashKeyValue", required=true)
       private final Output<String> hashKeyValue;
 
-    public Output<String> getHashKeyValue() {
+    public Output<String> hashKeyValue() {
         return this.hashKeyValue;
     }
 
@@ -54,8 +55,8 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
-        return this.operation == null ? Output.empty() : this.operation;
+    public Output<String> operation() {
+        return this.operation == null ? Codegen.empty() : this.operation;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="payloadField")
       private final @Nullable Output<String> payloadField;
 
-    public Output<String> getPayloadField() {
-        return this.payloadField == null ? Output.empty() : this.payloadField;
+    public Output<String> payloadField() {
+        return this.payloadField == null ? Codegen.empty() : this.payloadField;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="rangeKeyField")
       private final @Nullable Output<String> rangeKeyField;
 
-    public Output<String> getRangeKeyField() {
-        return this.rangeKeyField == null ? Output.empty() : this.rangeKeyField;
+    public Output<String> rangeKeyField() {
+        return this.rangeKeyField == null ? Codegen.empty() : this.rangeKeyField;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="rangeKeyType")
       private final @Nullable Output<String> rangeKeyType;
 
-    public Output<String> getRangeKeyType() {
-        return this.rangeKeyType == null ? Output.empty() : this.rangeKeyType;
+    public Output<String> rangeKeyType() {
+        return this.rangeKeyType == null ? Codegen.empty() : this.rangeKeyType;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="rangeKeyValue")
       private final @Nullable Output<String> rangeKeyValue;
 
-    public Output<String> getRangeKeyValue() {
-        return this.rangeKeyValue == null ? Output.empty() : this.rangeKeyValue;
+    public Output<String> rangeKeyValue() {
+        return this.rangeKeyValue == null ? Codegen.empty() : this.rangeKeyValue;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -120,7 +121,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -148,16 +149,16 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
     }
 
     private TopicRuleErrorActionDynamodbGetArgs() {
-        this.hashKeyField = Output.empty();
-        this.hashKeyType = Output.empty();
-        this.hashKeyValue = Output.empty();
-        this.operation = Output.empty();
-        this.payloadField = Output.empty();
-        this.rangeKeyField = Output.empty();
-        this.rangeKeyType = Output.empty();
-        this.rangeKeyValue = Output.empty();
-        this.roleArn = Output.empty();
-        this.tableName = Output.empty();
+        this.hashKeyField = Codegen.empty();
+        this.hashKeyType = Codegen.empty();
+        this.hashKeyValue = Codegen.empty();
+        this.operation = Codegen.empty();
+        this.payloadField = Codegen.empty();
+        this.rangeKeyField = Codegen.empty();
+        this.rangeKeyType = Codegen.empty();
+        this.rangeKeyValue = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder hashKeyType(@Nullable String hashKeyType) {
-            this.hashKeyType = Output.ofNullable(hashKeyType);
+            this.hashKeyType = Codegen.ofNullable(hashKeyType);
             return this;
         }
         public Builder hashKeyValue(Output<String> hashKeyValue) {
@@ -227,7 +228,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder operation(@Nullable String operation) {
-            this.operation = Output.ofNullable(operation);
+            this.operation = Codegen.ofNullable(operation);
             return this;
         }
         public Builder payloadField(@Nullable Output<String> payloadField) {
@@ -235,7 +236,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder payloadField(@Nullable String payloadField) {
-            this.payloadField = Output.ofNullable(payloadField);
+            this.payloadField = Codegen.ofNullable(payloadField);
             return this;
         }
         public Builder rangeKeyField(@Nullable Output<String> rangeKeyField) {
@@ -243,7 +244,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
-            this.rangeKeyField = Output.ofNullable(rangeKeyField);
+            this.rangeKeyField = Codegen.ofNullable(rangeKeyField);
             return this;
         }
         public Builder rangeKeyType(@Nullable Output<String> rangeKeyType) {
@@ -251,7 +252,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
-            this.rangeKeyType = Output.ofNullable(rangeKeyType);
+            this.rangeKeyType = Codegen.ofNullable(rangeKeyType);
             return this;
         }
         public Builder rangeKeyValue(@Nullable Output<String> rangeKeyValue) {
@@ -259,7 +260,7 @@ public final class TopicRuleErrorActionDynamodbGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
-            this.rangeKeyValue = Output.ofNullable(rangeKeyValue);
+            this.rangeKeyValue = Codegen.ofNullable(rangeKeyValue);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The entity query content to display in timeline
      * 
      */
-    public Output</* @Nullable */ String> getContent() {
+    public Output</* @Nullable */ String> content() {
         return this.content;
     }
     /**
@@ -59,7 +60,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The time the activity was created
      * 
      */
-    public Output<String> getCreatedTimeUtc() {
+    public Output<String> createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
@@ -73,7 +74,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The entity query description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +88,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return Determines whether this activity is enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -101,7 +102,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The query applied only to entities matching to all filters
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> getEntitiesFilter() {
+    public Output</* @Nullable */ Map<String,List<String>>> entitiesFilter() {
         return this.entitiesFilter;
     }
     /**
@@ -115,7 +116,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -129,7 +130,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The type of the query's source entity
      * 
      */
-    public Output</* @Nullable */ String> getInputEntityType() {
+    public Output</* @Nullable */ String> inputEntityType() {
         return this.inputEntityType;
     }
     /**
@@ -145,7 +146,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * Expected value is 'Activity'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -159,7 +160,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The last time the activity was updated
      * 
      */
-    public Output<String> getLastModifiedTimeUtc() {
+    public Output<String> lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
@@ -173,7 +174,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -187,7 +188,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The Activity query definitions
      * 
      */
-    public Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> getQueryDefinitions() {
+    public Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> queryDefinitions() {
         return this.queryDefinitions;
     }
     /**
@@ -201,7 +202,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return List of the fields of the source entity that are required to run the query
      * 
      */
-    public Output</* @Nullable */ List<List<String>>> getRequiredInputFieldsSets() {
+    public Output</* @Nullable */ List<List<String>>> requiredInputFieldsSets() {
         return this.requiredInputFieldsSets;
     }
     /**
@@ -215,7 +216,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -229,7 +230,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The template id this activity was created from
      * 
      */
-    public Output</* @Nullable */ String> getTemplateName() {
+    public Output</* @Nullable */ String> templateName() {
         return this.templateName;
     }
     /**
@@ -243,7 +244,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return The entity query title
      * 
      */
-    public Output</* @Nullable */ String> getTitle() {
+    public Output</* @Nullable */ String> title() {
         return this.title;
     }
     /**
@@ -257,7 +258,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -283,7 +284,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ActivityCustomEntityQuery(String name, ActivityCustomEntityQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:ActivityCustomEntityQuery", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:ActivityCustomEntityQuery", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ActivityCustomEntityQuery(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

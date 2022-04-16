@@ -27,7 +27,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
     @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
 
-    public Optional<Boolean> getNegateCondition() {
+    public Optional<Boolean> negateCondition() {
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
@@ -38,7 +38,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
     @Import(name="rulesEngineMatchValue", required=true)
       private final List<String> rulesEngineMatchValue;
 
-    public List<String> getRulesEngineMatchValue() {
+    public List<String> rulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
 
@@ -49,7 +49,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
     @Import(name="rulesEngineMatchVariable", required=true)
       private final String rulesEngineMatchVariable;
 
-    public String getRulesEngineMatchVariable() {
+    public String rulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
 
@@ -60,7 +60,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
     @Import(name="rulesEngineOperator", required=true)
       private final String rulesEngineOperator;
 
-    public String getRulesEngineOperator() {
+    public String rulesEngineOperator() {
         return this.rulesEngineOperator;
     }
 
@@ -71,7 +71,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
     @Import(name="selector")
       private final @Nullable String selector;
 
-    public Optional<String> getSelector() {
+    public Optional<String> selector() {
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
@@ -82,7 +82,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
     @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

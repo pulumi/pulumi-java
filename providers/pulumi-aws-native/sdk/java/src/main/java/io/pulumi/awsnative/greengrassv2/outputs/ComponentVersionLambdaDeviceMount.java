@@ -27,13 +27,13 @@ public final class ComponentVersionLambdaDeviceMount {
         this.permission = permission;
     }
 
-    public Optional<Boolean> getAddGroupOwner() {
+    public Optional<Boolean> addGroupOwner() {
         return Optional.ofNullable(this.addGroupOwner);
     }
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
-    public Optional<ComponentVersionLambdaFilesystemPermission> getPermission() {
+    public Optional<ComponentVersionLambdaFilesystemPermission> permission() {
         return Optional.ofNullable(this.permission);
     }
 

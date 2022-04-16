@@ -9,6 +9,7 @@ import io.pulumi.aws.apigatewayv2.inputs.ModelState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -53,7 +54,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -67,7 +68,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The description of the model. Must be between 1 and 128 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -81,7 +82,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +96,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
      * 
      */
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema;
     }
 
@@ -121,7 +122,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Model(String name, ModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/model:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/model:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Model(String name, Output<String> id, @Nullable ModelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

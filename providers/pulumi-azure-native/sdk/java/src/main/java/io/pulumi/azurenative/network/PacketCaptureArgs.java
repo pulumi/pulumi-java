@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.PacketCaptureFilterArgs;
 import io.pulumi.azurenative.network.inputs.PacketCaptureStorageLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bytesToCapturePerPacket")
       private final @Nullable Output<Double> bytesToCapturePerPacket;
 
-    public Output<Double> getBytesToCapturePerPacket() {
-        return this.bytesToCapturePerPacket == null ? Output.empty() : this.bytesToCapturePerPacket;
+    public Output<Double> bytesToCapturePerPacket() {
+        return this.bytesToCapturePerPacket == null ? Codegen.empty() : this.bytesToCapturePerPacket;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filters")
       private final @Nullable Output<List<PacketCaptureFilterArgs>> filters;
 
-    public Output<List<PacketCaptureFilterArgs>> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+    public Output<List<PacketCaptureFilterArgs>> filters() {
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkWatcherName", required=true)
       private final Output<String> networkWatcherName;
 
-    public Output<String> getNetworkWatcherName() {
+    public Output<String> networkWatcherName() {
         return this.networkWatcherName;
     }
 
@@ -59,8 +60,8 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packetCaptureName")
       private final @Nullable Output<String> packetCaptureName;
 
-    public Output<String> getPacketCaptureName() {
-        return this.packetCaptureName == null ? Output.empty() : this.packetCaptureName;
+    public Output<String> packetCaptureName() {
+        return this.packetCaptureName == null ? Codegen.empty() : this.packetCaptureName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +82,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocation", required=true)
       private final Output<PacketCaptureStorageLocationArgs> storageLocation;
 
-    public Output<PacketCaptureStorageLocationArgs> getStorageLocation() {
+    public Output<PacketCaptureStorageLocationArgs> storageLocation() {
         return this.storageLocation;
     }
 
@@ -92,7 +93,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -103,8 +104,8 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeLimitInSeconds")
       private final @Nullable Output<Integer> timeLimitInSeconds;
 
-    public Output<Integer> getTimeLimitInSeconds() {
-        return this.timeLimitInSeconds == null ? Output.empty() : this.timeLimitInSeconds;
+    public Output<Integer> timeLimitInSeconds() {
+        return this.timeLimitInSeconds == null ? Codegen.empty() : this.timeLimitInSeconds;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="totalBytesPerSession")
       private final @Nullable Output<Double> totalBytesPerSession;
 
-    public Output<Double> getTotalBytesPerSession() {
-        return this.totalBytesPerSession == null ? Output.empty() : this.totalBytesPerSession;
+    public Output<Double> totalBytesPerSession() {
+        return this.totalBytesPerSession == null ? Codegen.empty() : this.totalBytesPerSession;
     }
 
     public PacketCaptureArgs(
@@ -128,27 +129,27 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
         Output<String> target,
         @Nullable Output<Integer> timeLimitInSeconds,
         @Nullable Output<Double> totalBytesPerSession) {
-        this.bytesToCapturePerPacket = bytesToCapturePerPacket == null ? Output.ofNullable(0e+00) : bytesToCapturePerPacket;
+        this.bytesToCapturePerPacket = bytesToCapturePerPacket == null ? Codegen.ofNullable(0e+00) : bytesToCapturePerPacket;
         this.filters = filters;
         this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
         this.packetCaptureName = packetCaptureName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.storageLocation = Objects.requireNonNull(storageLocation, "expected parameter 'storageLocation' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-        this.timeLimitInSeconds = timeLimitInSeconds == null ? Output.ofNullable(18000) : timeLimitInSeconds;
-        this.totalBytesPerSession = totalBytesPerSession == null ? Output.ofNullable(1.073741824e+09) : totalBytesPerSession;
+        this.timeLimitInSeconds = timeLimitInSeconds == null ? Codegen.ofNullable(18000) : timeLimitInSeconds;
+        this.totalBytesPerSession = totalBytesPerSession == null ? Codegen.ofNullable(1.073741824e+09) : totalBytesPerSession;
     }
 
     private PacketCaptureArgs() {
-        this.bytesToCapturePerPacket = Output.empty();
-        this.filters = Output.empty();
-        this.networkWatcherName = Output.empty();
-        this.packetCaptureName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageLocation = Output.empty();
-        this.target = Output.empty();
-        this.timeLimitInSeconds = Output.empty();
-        this.totalBytesPerSession = Output.empty();
+        this.bytesToCapturePerPacket = Codegen.empty();
+        this.filters = Codegen.empty();
+        this.networkWatcherName = Codegen.empty();
+        this.packetCaptureName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageLocation = Codegen.empty();
+        this.target = Codegen.empty();
+        this.timeLimitInSeconds = Codegen.empty();
+        this.totalBytesPerSession = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bytesToCapturePerPacket(@Nullable Double bytesToCapturePerPacket) {
-            this.bytesToCapturePerPacket = Output.ofNullable(bytesToCapturePerPacket);
+            this.bytesToCapturePerPacket = Codegen.ofNullable(bytesToCapturePerPacket);
             return this;
         }
         public Builder filters(@Nullable Output<List<PacketCaptureFilterArgs>> filters) {
@@ -200,7 +201,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filters(@Nullable List<PacketCaptureFilterArgs> filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder filters(PacketCaptureFilterArgs... filters) {
@@ -219,7 +220,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packetCaptureName(@Nullable String packetCaptureName) {
-            this.packetCaptureName = Output.ofNullable(packetCaptureName);
+            this.packetCaptureName = Codegen.ofNullable(packetCaptureName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -251,7 +252,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
-            this.timeLimitInSeconds = Output.ofNullable(timeLimitInSeconds);
+            this.timeLimitInSeconds = Codegen.ofNullable(timeLimitInSeconds);
             return this;
         }
         public Builder totalBytesPerSession(@Nullable Output<Double> totalBytesPerSession) {
@@ -259,7 +260,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder totalBytesPerSession(@Nullable Double totalBytesPerSession) {
-            this.totalBytesPerSession = Output.ofNullable(totalBytesPerSession);
+            this.totalBytesPerSession = Codegen.ofNullable(totalBytesPerSession);
             return this;
         }        public PacketCaptureArgs build() {
             return new PacketCaptureArgs(bytesToCapturePerPacket, filters, networkWatcherName, packetCaptureName, resourceGroupName, storageLocation, target, timeLimitInSeconds, totalBytesPerSession);

@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expires")
       private final @Nullable Output<String> expires;
 
-    public Output<String> getExpires() {
-        return this.expires == null ? Output.empty() : this.expires;
+    public Output<String> expires() {
+        return this.expires == null ? Codegen.empty() : this.expires;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public ApiKeyState(
@@ -64,16 +65,16 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> expires,
         @Nullable Output<String> key) {
         this.apiId = apiId;
-        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
         this.expires = expires;
         this.key = key;
     }
 
     private ApiKeyState() {
-        this.apiId = Output.empty();
-        this.description = Output.empty();
-        this.expires = Output.empty();
-        this.key = Output.empty();
+        this.apiId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expires = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -115,7 +116,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expires(@Nullable Output<String> expires) {
@@ -123,7 +124,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expires(@Nullable String expires) {
-            this.expires = Output.ofNullable(expires);
+            this.expires = Codegen.ofNullable(expires);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -131,7 +132,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public ApiKeyState build() {
             return new ApiKeyState(apiId, description, expires, key);

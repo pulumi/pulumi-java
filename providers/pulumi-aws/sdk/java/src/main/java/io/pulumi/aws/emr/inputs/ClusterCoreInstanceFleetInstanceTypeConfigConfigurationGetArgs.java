@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArg
     @Import(name="classification")
       private final @Nullable Output<String> classification;
 
-    public Output<String> getClassification() {
-        return this.classification == null ? Output.empty() : this.classification;
+    public Output<String> classification() {
+        return this.classification == null ? Codegen.empty() : this.classification;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArg
     @Import(name="properties")
       private final @Nullable Output<Map<String,Object>> properties;
 
-    public Output<Map<String,Object>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,Object>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArgs(
@@ -46,8 +47,8 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArg
     }
 
     private ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArgs() {
-        this.classification = Output.empty();
-        this.properties = Output.empty();
+        this.classification = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArg
             return this;
         }
         public Builder classification(@Nullable String classification) {
-            this.classification = Output.ofNullable(classification);
+            this.classification = Codegen.ofNullable(classification);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,Object>> properties) {
@@ -85,7 +86,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArg
             return this;
         }
         public Builder properties(@Nullable Map<String,Object> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArgs build() {
             return new ClusterCoreInstanceFleetInstanceTypeConfigConfigurationGetArgs(classification, properties);

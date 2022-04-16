@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databricks.enums.KeySource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySource")
       private final @Nullable Output<Either<String,KeySource>> keySource;
 
-    public Output<Either<String,KeySource>> getKeySource() {
-        return this.keySource == null ? Output.empty() : this.keySource;
+    public Output<Either<String,KeySource>> keySource() {
+        return this.keySource == null ? Codegen.empty() : this.keySource;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultUri")
       private final @Nullable Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
-        return this.keyVaultUri == null ? Output.empty() : this.keyVaultUri;
+    public Output<String> keyVaultUri() {
+        return this.keyVaultUri == null ? Codegen.empty() : this.keyVaultUri;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
-        return this.keyVersion == null ? Output.empty() : this.keyVersion;
+    public Output<String> keyVersion() {
+        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
     public EncryptionArgs(
@@ -76,10 +77,10 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EncryptionArgs() {
-        this.keyName = Output.empty();
-        this.keySource = Output.empty();
-        this.keyVaultUri = Output.empty();
-        this.keyVersion = Output.empty();
+        this.keyName = Codegen.empty();
+        this.keySource = Codegen.empty();
+        this.keyVaultUri = Codegen.empty();
+        this.keyVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder keySource(@Nullable Output<Either<String,KeySource>> keySource) {
@@ -121,7 +122,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keySource(@Nullable Either<String,KeySource> keySource) {
-            this.keySource = Output.ofNullable(keySource);
+            this.keySource = Codegen.ofNullable(keySource);
             return this;
         }
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
@@ -129,7 +130,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = Output.ofNullable(keyVaultUri);
+            this.keyVaultUri = Codegen.ofNullable(keyVaultUri);
             return this;
         }
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
@@ -137,7 +138,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Output.ofNullable(keyVersion);
+            this.keyVersion = Codegen.ofNullable(keyVersion);
             return this;
         }        public EncryptionArgs build() {
             return new EncryptionArgs(keyName, keySource, keyVaultUri, keyVersion);

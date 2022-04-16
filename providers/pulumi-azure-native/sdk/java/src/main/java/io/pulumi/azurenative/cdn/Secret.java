@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +39,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -52,7 +53,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -66,7 +67,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return object which contains secret parameters
      * 
      */
-    public Output</* @Nullable */ Object> getParameters() {
+    public Output</* @Nullable */ Object> parameters() {
         return this.parameters;
     }
     /**
@@ -80,7 +81,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Provisioning status
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -94,7 +95,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -108,7 +109,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -134,7 +135,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Secret(String name, SecretArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cdn:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Secret(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

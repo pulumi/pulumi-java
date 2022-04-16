@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
     @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
-        return this.localSsdCount == null ? Output.empty() : this.localSsdCount;
+    public Output<Integer> localSsdCount() {
+        return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
     }
 
     public EphemeralStorageConfigArgs(@Nullable Output<Integer> localSsdCount) {
@@ -34,7 +35,7 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
     }
 
     private EphemeralStorageConfigArgs() {
-        this.localSsdCount = Output.empty();
+        this.localSsdCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder localSsdCount(@Nullable Integer localSsdCount) {
-            this.localSsdCount = Output.ofNullable(localSsdCount);
+            this.localSsdCount = Codegen.ofNullable(localSsdCount);
             return this;
         }        public EphemeralStorageConfigArgs build() {
             return new EphemeralStorageConfigArgs(localSsdCount);

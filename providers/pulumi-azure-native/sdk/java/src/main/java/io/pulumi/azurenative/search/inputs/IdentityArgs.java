@@ -6,6 +6,7 @@ package io.pulumi.azurenative.search.inputs;
 import io.pulumi.azurenative.search.enums.IdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<IdentityType> type;
 
-    public Output<IdentityType> getType() {
+    public Output<IdentityType> type() {
         return this.type;
     }
 
@@ -33,7 +34,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

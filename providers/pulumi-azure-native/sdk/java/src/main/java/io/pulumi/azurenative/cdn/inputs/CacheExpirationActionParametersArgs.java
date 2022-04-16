@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.enums.CacheType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
     @Import(name="cacheBehavior", required=true)
       private final Output<Either<String,CacheBehavior>> cacheBehavior;
 
-    public Output<Either<String,CacheBehavior>> getCacheBehavior() {
+    public Output<Either<String,CacheBehavior>> cacheBehavior() {
         return this.cacheBehavior;
     }
 
@@ -39,8 +40,8 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
     @Import(name="cacheDuration")
       private final @Nullable Output<String> cacheDuration;
 
-    public Output<String> getCacheDuration() {
-        return this.cacheDuration == null ? Output.empty() : this.cacheDuration;
+    public Output<String> cacheDuration() {
+        return this.cacheDuration == null ? Codegen.empty() : this.cacheDuration;
     }
 
     /**
@@ -50,14 +51,14 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
     @Import(name="cacheType", required=true)
       private final Output<Either<String,CacheType>> cacheType;
 
-    public Output<Either<String,CacheType>> getCacheType() {
+    public Output<Either<String,CacheType>> cacheType() {
         return this.cacheType;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -73,10 +74,10 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
     }
 
     private CacheExpirationActionParametersArgs() {
-        this.cacheBehavior = Output.empty();
-        this.cacheDuration = Output.empty();
-        this.cacheType = Output.empty();
-        this.odataType = Output.empty();
+        this.cacheBehavior = Codegen.empty();
+        this.cacheDuration = Codegen.empty();
+        this.cacheType = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cacheDuration(@Nullable String cacheDuration) {
-            this.cacheDuration = Output.ofNullable(cacheDuration);
+            this.cacheDuration = Codegen.ofNullable(cacheDuration);
             return this;
         }
         public Builder cacheType(Output<Either<String,CacheType>> cacheType) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs
     @Import(name="id", required=true)
       private final Output<Integer> id;
 
-    public Output<Integer> getId() {
+    public Output<Integer> id() {
         return this.id;
     }
 
@@ -32,14 +33,14 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs
     @Import(name="storageCapacityQuotaGib", required=true)
       private final Output<Integer> storageCapacityQuotaGib;
 
-    public Output<Integer> getStorageCapacityQuotaGib() {
+    public Output<Integer> storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -53,9 +54,9 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs
     }
 
     private OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs() {
-        this.id = Output.empty();
-        this.storageCapacityQuotaGib = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.storageCapacityQuotaGib = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

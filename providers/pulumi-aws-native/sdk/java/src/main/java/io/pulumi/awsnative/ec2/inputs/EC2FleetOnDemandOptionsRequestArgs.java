@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetCapacityReservationOptionsRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,43 +21,43 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
+    public Output<String> allocationStrategy() {
+        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="capacityReservationOptions")
       private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
 
-    public Output<EC2FleetCapacityReservationOptionsRequestArgs> getCapacityReservationOptions() {
-        return this.capacityReservationOptions == null ? Output.empty() : this.capacityReservationOptions;
+    public Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions() {
+        return this.capacityReservationOptions == null ? Codegen.empty() : this.capacityReservationOptions;
     }
 
     @Import(name="maxTotalPrice")
       private final @Nullable Output<String> maxTotalPrice;
 
-    public Output<String> getMaxTotalPrice() {
-        return this.maxTotalPrice == null ? Output.empty() : this.maxTotalPrice;
+    public Output<String> maxTotalPrice() {
+        return this.maxTotalPrice == null ? Codegen.empty() : this.maxTotalPrice;
     }
 
     @Import(name="minTargetCapacity")
       private final @Nullable Output<Integer> minTargetCapacity;
 
-    public Output<Integer> getMinTargetCapacity() {
-        return this.minTargetCapacity == null ? Output.empty() : this.minTargetCapacity;
+    public Output<Integer> minTargetCapacity() {
+        return this.minTargetCapacity == null ? Codegen.empty() : this.minTargetCapacity;
     }
 
     @Import(name="singleAvailabilityZone")
       private final @Nullable Output<Boolean> singleAvailabilityZone;
 
-    public Output<Boolean> getSingleAvailabilityZone() {
-        return this.singleAvailabilityZone == null ? Output.empty() : this.singleAvailabilityZone;
+    public Output<Boolean> singleAvailabilityZone() {
+        return this.singleAvailabilityZone == null ? Codegen.empty() : this.singleAvailabilityZone;
     }
 
     @Import(name="singleInstanceType")
       private final @Nullable Output<Boolean> singleInstanceType;
 
-    public Output<Boolean> getSingleInstanceType() {
-        return this.singleInstanceType == null ? Output.empty() : this.singleInstanceType;
+    public Output<Boolean> singleInstanceType() {
+        return this.singleInstanceType == null ? Codegen.empty() : this.singleInstanceType;
     }
 
     public EC2FleetOnDemandOptionsRequestArgs(
@@ -75,12 +76,12 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
     }
 
     private EC2FleetOnDemandOptionsRequestArgs() {
-        this.allocationStrategy = Output.empty();
-        this.capacityReservationOptions = Output.empty();
-        this.maxTotalPrice = Output.empty();
-        this.minTargetCapacity = Output.empty();
-        this.singleAvailabilityZone = Output.empty();
-        this.singleInstanceType = Output.empty();
+        this.allocationStrategy = Codegen.empty();
+        this.capacityReservationOptions = Codegen.empty();
+        this.maxTotalPrice = Codegen.empty();
+        this.minTargetCapacity = Codegen.empty();
+        this.singleAvailabilityZone = Codegen.empty();
+        this.singleInstanceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             return this;
         }
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Output.ofNullable(allocationStrategy);
+            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
             return this;
         }
         public Builder capacityReservationOptions(@Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions) {
@@ -126,7 +127,7 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             return this;
         }
         public Builder capacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequestArgs capacityReservationOptions) {
-            this.capacityReservationOptions = Output.ofNullable(capacityReservationOptions);
+            this.capacityReservationOptions = Codegen.ofNullable(capacityReservationOptions);
             return this;
         }
         public Builder maxTotalPrice(@Nullable Output<String> maxTotalPrice) {
@@ -134,7 +135,7 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             return this;
         }
         public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
-            this.maxTotalPrice = Output.ofNullable(maxTotalPrice);
+            this.maxTotalPrice = Codegen.ofNullable(maxTotalPrice);
             return this;
         }
         public Builder minTargetCapacity(@Nullable Output<Integer> minTargetCapacity) {
@@ -142,7 +143,7 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             return this;
         }
         public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
-            this.minTargetCapacity = Output.ofNullable(minTargetCapacity);
+            this.minTargetCapacity = Codegen.ofNullable(minTargetCapacity);
             return this;
         }
         public Builder singleAvailabilityZone(@Nullable Output<Boolean> singleAvailabilityZone) {
@@ -150,7 +151,7 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             return this;
         }
         public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
-            this.singleAvailabilityZone = Output.ofNullable(singleAvailabilityZone);
+            this.singleAvailabilityZone = Codegen.ofNullable(singleAvailabilityZone);
             return this;
         }
         public Builder singleInstanceType(@Nullable Output<Boolean> singleInstanceType) {
@@ -158,7 +159,7 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             return this;
         }
         public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
-            this.singleInstanceType = Output.ofNullable(singleInstanceType);
+            this.singleInstanceType = Codegen.ofNullable(singleInstanceType);
             return this;
         }        public EC2FleetOnDemandOptionsRequestArgs build() {
             return new EC2FleetOnDemandOptionsRequestArgs(allocationStrategy, capacityReservationOptions, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);

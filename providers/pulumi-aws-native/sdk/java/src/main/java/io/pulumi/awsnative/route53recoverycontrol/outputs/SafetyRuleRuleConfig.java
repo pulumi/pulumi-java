@@ -37,17 +37,17 @@ public final class SafetyRuleRuleConfig {
      * Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.
      * 
     */
-    public Boolean getInverted() {
+    public Boolean inverted() {
         return this.inverted;
     }
     /**
      * The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
      * 
     */
-    public Integer getThreshold() {
+    public Integer threshold() {
         return this.threshold;
     }
-    public SafetyRuleRuleType getType() {
+    public SafetyRuleRuleType type() {
         return this.type;
     }
 

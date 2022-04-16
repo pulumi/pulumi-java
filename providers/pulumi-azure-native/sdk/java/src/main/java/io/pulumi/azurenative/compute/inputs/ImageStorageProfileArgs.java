@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.ImageDataDiskArgs;
 import io.pulumi.azurenative.compute.inputs.ImageOSDiskArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="dataDisks")
       private final @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
 
-    public Output<List<ImageDataDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Output.empty() : this.dataDisks;
+    public Output<List<ImageDataDiskArgs>> dataDisks() {
+        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="osDisk")
       private final @Nullable Output<ImageOSDiskArgs> osDisk;
 
-    public Output<ImageOSDiskArgs> getOsDisk() {
-        return this.osDisk == null ? Output.empty() : this.osDisk;
+    public Output<ImageOSDiskArgs> osDisk() {
+        return this.osDisk == null ? Codegen.empty() : this.osDisk;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
     @Import(name="zoneResilient")
       private final @Nullable Output<Boolean> zoneResilient;
 
-    public Output<Boolean> getZoneResilient() {
-        return this.zoneResilient == null ? Output.empty() : this.zoneResilient;
+    public Output<Boolean> zoneResilient() {
+        return this.zoneResilient == null ? Codegen.empty() : this.zoneResilient;
     }
 
     public ImageStorageProfileArgs(
@@ -64,9 +65,9 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
     }
 
     private ImageStorageProfileArgs() {
-        this.dataDisks = Output.empty();
-        this.osDisk = Output.empty();
-        this.zoneResilient = Output.empty();
+        this.dataDisks = Codegen.empty();
+        this.osDisk = Codegen.empty();
+        this.zoneResilient = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dataDisks(@Nullable List<ImageDataDiskArgs> dataDisks) {
-            this.dataDisks = Output.ofNullable(dataDisks);
+            this.dataDisks = Codegen.ofNullable(dataDisks);
             return this;
         }
         public Builder dataDisks(ImageDataDiskArgs... dataDisks) {
@@ -109,7 +110,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder osDisk(@Nullable ImageOSDiskArgs osDisk) {
-            this.osDisk = Output.ofNullable(osDisk);
+            this.osDisk = Codegen.ofNullable(osDisk);
             return this;
         }
         public Builder zoneResilient(@Nullable Output<Boolean> zoneResilient) {
@@ -117,7 +118,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder zoneResilient(@Nullable Boolean zoneResilient) {
-            this.zoneResilient = Output.ofNullable(zoneResilient);
+            this.zoneResilient = Codegen.ofNullable(zoneResilient);
             return this;
         }        public ImageStorageProfileArgs build() {
             return new ImageStorageProfileArgs(dataDisks, osDisk, zoneResilient);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+    public Output<List<ArgumentArgs>> arguments() {
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
-    public Output<String> getContextPath() {
-        return this.contextPath == null ? Output.empty() : this.contextPath;
+    public Output<String> contextPath() {
+        return this.contextPath == null ? Codegen.empty() : this.contextPath;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="file")
       private final @Nullable Output<String> file;
 
-    public Output<String> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+    public Output<String> file() {
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="updateTriggerToken")
       private final @Nullable Output<String> updateTriggerToken;
 
-    public Output<String> getUpdateTriggerToken() {
-        return this.updateTriggerToken == null ? Output.empty() : this.updateTriggerToken;
+    public Output<String> updateTriggerToken() {
+        return this.updateTriggerToken == null ? Codegen.empty() : this.updateTriggerToken;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<SetValueArgs>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public OverrideTaskStepPropertiesArgs(
@@ -100,12 +101,12 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private OverrideTaskStepPropertiesArgs() {
-        this.arguments = Output.empty();
-        this.contextPath = Output.empty();
-        this.file = Output.empty();
-        this.target = Output.empty();
-        this.updateTriggerToken = Output.empty();
-        this.values = Output.empty();
+        this.arguments = Codegen.empty();
+        this.contextPath = Codegen.empty();
+        this.file = Codegen.empty();
+        this.target = Codegen.empty();
+        this.updateTriggerToken = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder arguments(ArgumentArgs... arguments) {
@@ -154,7 +155,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Output.ofNullable(contextPath);
+            this.contextPath = Codegen.ofNullable(contextPath);
             return this;
         }
         public Builder file(@Nullable Output<String> file) {
@@ -162,7 +163,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder file(@Nullable String file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -170,7 +171,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder updateTriggerToken(@Nullable Output<String> updateTriggerToken) {
@@ -178,7 +179,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
-            this.updateTriggerToken = Output.ofNullable(updateTriggerToken);
+            this.updateTriggerToken = Codegen.ofNullable(updateTriggerToken);
             return this;
         }
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
@@ -186,7 +187,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(SetValueArgs... values) {

@@ -13,6 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.ScheduleTriggerArgs;
 import io.pulumi.azurenative.datafactory.inputs.TumblingWindowTriggerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -41,7 +42,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -52,7 +53,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,8 +64,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerName")
       private final @Nullable Output<String> triggerName;
 
-    public Output<String> getTriggerName() {
-        return this.triggerName == null ? Output.empty() : this.triggerName;
+    public Output<String> triggerName() {
+        return this.triggerName == null ? Codegen.empty() : this.triggerName;
     }
 
     public TriggerArgs(
@@ -79,10 +80,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.factoryName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.triggerName = Output.empty();
+        this.factoryName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.triggerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggerName(@Nullable String triggerName) {
-            this.triggerName = Output.ofNullable(triggerName);
+            this.triggerName = Codegen.ofNullable(triggerName);
             return this;
         }        public TriggerArgs build() {
             return new TriggerArgs(factoryName, properties, resourceGroupName, triggerName);

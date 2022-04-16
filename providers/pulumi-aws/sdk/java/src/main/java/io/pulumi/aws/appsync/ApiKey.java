@@ -9,6 +9,7 @@ import io.pulumi.aws.appsync.inputs.ApiKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated AppSync API
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -53,7 +54,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @return The API key description. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -67,7 +68,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @return RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
      * 
      */
-    public Output</* @Nullable */ String> getExpires() {
+    public Output</* @Nullable */ String> expires() {
         return this.expires;
     }
     /**
@@ -81,7 +82,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @return The API key
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -107,7 +108,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiKey(String name, ApiKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/apiKey:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/apiKey:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiKey(String name, Output<String> id, @Nullable ApiKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

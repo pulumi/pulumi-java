@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn", required=true)
       private final Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
 
@@ -31,7 +32,7 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 
@@ -43,8 +44,8 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryLogArgs() {
-        this.cloudwatchLogGroupArn = Output.empty();
-        this.zoneId = Output.empty();
+        this.cloudwatchLogGroupArn = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {

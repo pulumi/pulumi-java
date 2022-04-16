@@ -82,63 +82,63 @@ public final class PackageInfoOccurrenceResponse {
      * A place for the SPDX file creator to record any general comments about the package being described
      * 
     */
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
     /**
      * Provide the actual file name of the package, or path of the directory being treated as a package
      * 
     */
-    public String getFilename() {
+    public String filename() {
         return this.filename;
     }
     /**
      * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
      * 
     */
-    public String getHomePage() {
+    public String homePage() {
         return this.homePage;
     }
     /**
      * package or alternative values, if the governing license cannot be determined
      * 
     */
-    public LicenseResponse getLicenseConcluded() {
+    public LicenseResponse licenseConcluded() {
         return this.licenseConcluded;
     }
     /**
      * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
      * 
     */
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
     /**
      * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
      * 
     */
-    public String getSourceInfo() {
+    public String sourceInfo() {
         return this.sourceInfo;
     }
     /**
      * A short description of the package
      * 
     */
-    public String getSummaryDescription() {
+    public String summaryDescription() {
         return this.summaryDescription;
     }
     /**
      * Identify the full name of the package as given by the Package Originator
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
     /**
      * Identify the version of the package
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

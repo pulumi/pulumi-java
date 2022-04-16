@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends io.pulumi.resour
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends io.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

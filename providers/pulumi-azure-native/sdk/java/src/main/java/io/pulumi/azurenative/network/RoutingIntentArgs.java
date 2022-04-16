@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.RoutingPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,8 +57,8 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingIntentName")
       private final @Nullable Output<String> routingIntentName;
 
-    public Output<String> getRoutingIntentName() {
-        return this.routingIntentName == null ? Output.empty() : this.routingIntentName;
+    public Output<String> routingIntentName() {
+        return this.routingIntentName == null ? Codegen.empty() : this.routingIntentName;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingPolicies")
       private final @Nullable Output<List<RoutingPolicyArgs>> routingPolicies;
 
-    public Output<List<RoutingPolicyArgs>> getRoutingPolicies() {
-        return this.routingPolicies == null ? Output.empty() : this.routingPolicies;
+    public Output<List<RoutingPolicyArgs>> routingPolicies() {
+        return this.routingPolicies == null ? Codegen.empty() : this.routingPolicies;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
-    public Output<String> getVirtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
@@ -98,12 +99,12 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoutingIntentArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routingIntentName = Output.empty();
-        this.routingPolicies = Output.empty();
-        this.virtualHubName = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routingIntentName = Codegen.empty();
+        this.routingPolicies = Codegen.empty();
+        this.virtualHubName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -149,7 +150,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -165,7 +166,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingIntentName(@Nullable String routingIntentName) {
-            this.routingIntentName = Output.ofNullable(routingIntentName);
+            this.routingIntentName = Codegen.ofNullable(routingIntentName);
             return this;
         }
         public Builder routingPolicies(@Nullable Output<List<RoutingPolicyArgs>> routingPolicies) {
@@ -173,7 +174,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingPolicies(@Nullable List<RoutingPolicyArgs> routingPolicies) {
-            this.routingPolicies = Output.ofNullable(routingPolicies);
+            this.routingPolicies = Codegen.ofNullable(routingPolicies);
             return this;
         }
         public Builder routingPolicies(RoutingPolicyArgs... routingPolicies) {

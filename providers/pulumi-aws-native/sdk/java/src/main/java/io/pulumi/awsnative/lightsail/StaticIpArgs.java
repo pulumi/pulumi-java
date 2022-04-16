@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attachedTo")
       private final @Nullable Output<String> attachedTo;
 
-    public Output<String> getAttachedTo() {
-        return this.attachedTo == null ? Output.empty() : this.attachedTo;
+    public Output<String> attachedTo() {
+        return this.attachedTo == null ? Codegen.empty() : this.attachedTo;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticIpName")
       private final @Nullable Output<String> staticIpName;
 
-    public Output<String> getStaticIpName() {
-        return this.staticIpName == null ? Output.empty() : this.staticIpName;
+    public Output<String> staticIpName() {
+        return this.staticIpName == null ? Codegen.empty() : this.staticIpName;
     }
 
     public StaticIpArgs(
@@ -44,8 +45,8 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StaticIpArgs() {
-        this.attachedTo = Output.empty();
-        this.staticIpName = Output.empty();
+        this.attachedTo = Codegen.empty();
+        this.staticIpName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attachedTo(@Nullable String attachedTo) {
-            this.attachedTo = Output.ofNullable(attachedTo);
+            this.attachedTo = Codegen.ofNullable(attachedTo);
             return this;
         }
         public Builder staticIpName(@Nullable Output<String> staticIpName) {
@@ -83,7 +84,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticIpName(@Nullable String staticIpName) {
-            this.staticIpName = Output.ofNullable(staticIpName);
+            this.staticIpName = Codegen.ofNullable(staticIpName);
             return this;
         }        public StaticIpArgs build() {
             return new StaticIpArgs(attachedTo, staticIpName);

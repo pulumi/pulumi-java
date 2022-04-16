@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1beta1.enums.ManagementSettingsTransferLockState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="transferLockState")
       private final @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
 
-    public Output<ManagementSettingsTransferLockState> getTransferLockState() {
-        return this.transferLockState == null ? Output.empty() : this.transferLockState;
+    public Output<ManagementSettingsTransferLockState> transferLockState() {
+        return this.transferLockState == null ? Codegen.empty() : this.transferLockState;
     }
 
     public ManagementSettingsArgs(@Nullable Output<ManagementSettingsTransferLockState> transferLockState) {
@@ -34,7 +35,7 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ManagementSettingsArgs() {
-        this.transferLockState = Output.empty();
+        this.transferLockState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder transferLockState(@Nullable ManagementSettingsTransferLockState transferLockState) {
-            this.transferLockState = Output.ofNullable(transferLockState);
+            this.transferLockState = Codegen.ofNullable(transferLockState);
             return this;
         }        public ManagementSettingsArgs build() {
             return new ManagementSettingsArgs(transferLockState);

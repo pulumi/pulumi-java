@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.enums.CisBenchmarkSeverity;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileLevel")
       private final @Nullable Output<Integer> profileLevel;
 
-    public Output<Integer> getProfileLevel() {
-        return this.profileLevel == null ? Output.empty() : this.profileLevel;
+    public Output<Integer> profileLevel() {
+        return this.profileLevel == null ? Codegen.empty() : this.profileLevel;
     }
 
     @Import(name="severity")
       private final @Nullable Output<CisBenchmarkSeverity> severity;
 
-    public Output<CisBenchmarkSeverity> getSeverity() {
-        return this.severity == null ? Output.empty() : this.severity;
+    public Output<CisBenchmarkSeverity> severity() {
+        return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     public CisBenchmarkArgs(
@@ -41,8 +42,8 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CisBenchmarkArgs() {
-        this.profileLevel = Output.empty();
-        this.severity = Output.empty();
+        this.profileLevel = Codegen.empty();
+        this.severity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profileLevel(@Nullable Integer profileLevel) {
-            this.profileLevel = Output.ofNullable(profileLevel);
+            this.profileLevel = Codegen.ofNullable(profileLevel);
             return this;
         }
         public Builder severity(@Nullable Output<CisBenchmarkSeverity> severity) {
@@ -80,7 +81,7 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder severity(@Nullable CisBenchmarkSeverity severity) {
-            this.severity = Output.ofNullable(severity);
+            this.severity = Codegen.ofNullable(severity);
             return this;
         }        public CisBenchmarkArgs build() {
             return new CisBenchmarkArgs(profileLevel, severity);

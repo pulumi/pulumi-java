@@ -7,6 +7,7 @@ import io.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import io.pulumi.awsnative.refactorspaces.enums.RouteMethod;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,29 +22,29 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     @Import(name="activationState", required=true)
       private final Output<RouteActivationState> activationState;
 
-    public Output<RouteActivationState> getActivationState() {
+    public Output<RouteActivationState> activationState() {
         return this.activationState;
     }
 
     @Import(name="includeChildPaths")
       private final @Nullable Output<Boolean> includeChildPaths;
 
-    public Output<Boolean> getIncludeChildPaths() {
-        return this.includeChildPaths == null ? Output.empty() : this.includeChildPaths;
+    public Output<Boolean> includeChildPaths() {
+        return this.includeChildPaths == null ? Codegen.empty() : this.includeChildPaths;
     }
 
     @Import(name="methods")
       private final @Nullable Output<List<RouteMethod>> methods;
 
-    public Output<List<RouteMethod>> getMethods() {
-        return this.methods == null ? Output.empty() : this.methods;
+    public Output<List<RouteMethod>> methods() {
+        return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     @Import(name="sourcePath")
       private final @Nullable Output<String> sourcePath;
 
-    public Output<String> getSourcePath() {
-        return this.sourcePath == null ? Output.empty() : this.sourcePath;
+    public Output<String> sourcePath() {
+        return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
     }
 
     public RouteUriPathRouteInputArgs(
@@ -58,10 +59,10 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     }
 
     private RouteUriPathRouteInputArgs() {
-        this.activationState = Output.empty();
-        this.includeChildPaths = Output.empty();
-        this.methods = Output.empty();
-        this.sourcePath = Output.empty();
+        this.activationState = Codegen.empty();
+        this.includeChildPaths = Codegen.empty();
+        this.methods = Codegen.empty();
+        this.sourcePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder includeChildPaths(@Nullable Boolean includeChildPaths) {
-            this.includeChildPaths = Output.ofNullable(includeChildPaths);
+            this.includeChildPaths = Codegen.ofNullable(includeChildPaths);
             return this;
         }
         public Builder methods(@Nullable Output<List<RouteMethod>> methods) {
@@ -111,7 +112,7 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder methods(@Nullable List<RouteMethod> methods) {
-            this.methods = Output.ofNullable(methods);
+            this.methods = Codegen.ofNullable(methods);
             return this;
         }
         public Builder methods(RouteMethod... methods) {
@@ -122,7 +123,7 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sourcePath(@Nullable String sourcePath) {
-            this.sourcePath = Output.ofNullable(sourcePath);
+            this.sourcePath = Codegen.ofNullable(sourcePath);
             return this;
         }        public RouteUriPathRouteInputArgs build() {
             return new RouteUriPathRouteInputArgs(activationState, includeChildPaths, methods, sourcePath);

@@ -12,6 +12,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualHardDiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,8 +35,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caching")
       private final @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> getCaching() {
-        return this.caching == null ? Output.empty() : this.caching;
+    public Output<CachingTypes> caching() {
+        return this.caching == null ? Codegen.empty() : this.caching;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createOption", required=true)
       private final Output<Either<String,DiskCreateOptionTypes>> createOption;
 
-    public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
+    public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption;
     }
 
@@ -56,8 +57,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
-    public Output<Either<String,DiskDeleteOptionTypes>> getDeleteOption() {
-        return this.deleteOption == null ? Output.empty() : this.deleteOption;
+    public Output<Either<String,DiskDeleteOptionTypes>> deleteOption() {
+        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detachOption")
       private final @Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption;
 
-    public Output<Either<String,DiskDetachOptionTypes>> getDetachOption() {
-        return this.detachOption == null ? Output.empty() : this.detachOption;
+    public Output<Either<String,DiskDetachOptionTypes>> detachOption() {
+        return this.detachOption == null ? Codegen.empty() : this.detachOption;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+    public Output<Integer> diskSizeGB() {
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<VirtualHardDiskArgs> image;
 
-    public Output<VirtualHardDiskArgs> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<VirtualHardDiskArgs> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -111,8 +112,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedDisk")
       private final @Nullable Output<ManagedDiskParametersArgs> managedDisk;
 
-    public Output<ManagedDiskParametersArgs> getManagedDisk() {
-        return this.managedDisk == null ? Output.empty() : this.managedDisk;
+    public Output<ManagedDiskParametersArgs> managedDisk() {
+        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toBeDetached")
       private final @Nullable Output<Boolean> toBeDetached;
 
-    public Output<Boolean> getToBeDetached() {
-        return this.toBeDetached == null ? Output.empty() : this.toBeDetached;
+    public Output<Boolean> toBeDetached() {
+        return this.toBeDetached == null ? Codegen.empty() : this.toBeDetached;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
       private final @Nullable Output<VirtualHardDiskArgs> vhd;
 
-    public Output<VirtualHardDiskArgs> getVhd() {
-        return this.vhd == null ? Output.empty() : this.vhd;
+    public Output<VirtualHardDiskArgs> vhd() {
+        return this.vhd == null ? Codegen.empty() : this.vhd;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeAcceleratorEnabled")
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;
 
-    public Output<Boolean> getWriteAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Output.empty() : this.writeAcceleratorEnabled;
+    public Output<Boolean> writeAcceleratorEnabled() {
+        return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
     }
 
     public DataDiskArgs(
@@ -187,18 +188,18 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataDiskArgs() {
-        this.caching = Output.empty();
-        this.createOption = Output.empty();
-        this.deleteOption = Output.empty();
-        this.detachOption = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.image = Output.empty();
-        this.lun = Output.empty();
-        this.managedDisk = Output.empty();
-        this.name = Output.empty();
-        this.toBeDetached = Output.empty();
-        this.vhd = Output.empty();
-        this.writeAcceleratorEnabled = Output.empty();
+        this.caching = Codegen.empty();
+        this.createOption = Codegen.empty();
+        this.deleteOption = Codegen.empty();
+        this.detachOption = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.image = Codegen.empty();
+        this.lun = Codegen.empty();
+        this.managedDisk = Codegen.empty();
+        this.name = Codegen.empty();
+        this.toBeDetached = Codegen.empty();
+        this.vhd = Codegen.empty();
+        this.writeAcceleratorEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Output.ofNullable(caching);
+            this.caching = Codegen.ofNullable(caching);
             return this;
         }
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
@@ -264,7 +265,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteOption(@Nullable Either<String,DiskDeleteOptionTypes> deleteOption) {
-            this.deleteOption = Output.ofNullable(deleteOption);
+            this.deleteOption = Codegen.ofNullable(deleteOption);
             return this;
         }
         public Builder detachOption(@Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption) {
@@ -272,7 +273,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detachOption(@Nullable Either<String,DiskDetachOptionTypes> detachOption) {
-            this.detachOption = Output.ofNullable(detachOption);
+            this.detachOption = Codegen.ofNullable(detachOption);
             return this;
         }
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
@@ -280,7 +281,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder image(@Nullable Output<VirtualHardDiskArgs> image) {
@@ -288,7 +289,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable VirtualHardDiskArgs image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder lun(Output<Integer> lun) {
@@ -304,7 +305,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedDisk(@Nullable ManagedDiskParametersArgs managedDisk) {
-            this.managedDisk = Output.ofNullable(managedDisk);
+            this.managedDisk = Codegen.ofNullable(managedDisk);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -312,7 +313,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder toBeDetached(@Nullable Output<Boolean> toBeDetached) {
@@ -320,7 +321,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toBeDetached(@Nullable Boolean toBeDetached) {
-            this.toBeDetached = Output.ofNullable(toBeDetached);
+            this.toBeDetached = Codegen.ofNullable(toBeDetached);
             return this;
         }
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
@@ -328,7 +329,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
-            this.vhd = Output.ofNullable(vhd);
+            this.vhd = Codegen.ofNullable(vhd);
             return this;
         }
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
@@ -336,7 +337,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = Output.ofNullable(writeAcceleratorEnabled);
+            this.writeAcceleratorEnabled = Codegen.ofNullable(writeAcceleratorEnabled);
             return this;
         }        public DataDiskArgs build() {
             return new DataDiskArgs(caching, createOption, deleteOption, detachOption, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);

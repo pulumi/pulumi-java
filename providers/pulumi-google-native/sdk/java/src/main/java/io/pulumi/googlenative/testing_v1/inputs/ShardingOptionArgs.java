@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.ManualShardingArgs;
 import io.pulumi.googlenative.testing_v1.inputs.UniformShardingArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manualSharding")
       private final @Nullable Output<ManualShardingArgs> manualSharding;
 
-    public Output<ManualShardingArgs> getManualSharding() {
-        return this.manualSharding == null ? Output.empty() : this.manualSharding;
+    public Output<ManualShardingArgs> manualSharding() {
+        return this.manualSharding == null ? Codegen.empty() : this.manualSharding;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniformSharding")
       private final @Nullable Output<UniformShardingArgs> uniformSharding;
 
-    public Output<UniformShardingArgs> getUniformSharding() {
-        return this.uniformSharding == null ? Output.empty() : this.uniformSharding;
+    public Output<UniformShardingArgs> uniformSharding() {
+        return this.uniformSharding == null ? Codegen.empty() : this.uniformSharding;
     }
 
     public ShardingOptionArgs(
@@ -49,8 +50,8 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ShardingOptionArgs() {
-        this.manualSharding = Output.empty();
-        this.uniformSharding = Output.empty();
+        this.manualSharding = Codegen.empty();
+        this.uniformSharding = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manualSharding(@Nullable ManualShardingArgs manualSharding) {
-            this.manualSharding = Output.ofNullable(manualSharding);
+            this.manualSharding = Codegen.ofNullable(manualSharding);
             return this;
         }
         public Builder uniformSharding(@Nullable Output<UniformShardingArgs> uniformSharding) {
@@ -88,7 +89,7 @@ public final class ShardingOptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uniformSharding(@Nullable UniformShardingArgs uniformSharding) {
-            this.uniformSharding = Output.ofNullable(uniformSharding);
+            this.uniformSharding = Codegen.ofNullable(uniformSharding);
             return this;
         }        public ShardingOptionArgs build() {
             return new ShardingOptionArgs(manualSharding, uniformSharding);

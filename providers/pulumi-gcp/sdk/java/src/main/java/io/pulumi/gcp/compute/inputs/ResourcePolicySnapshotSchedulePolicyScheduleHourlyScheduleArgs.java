@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArg
     @Import(name="hoursInCycle", required=true)
       private final Output<Integer> hoursInCycle;
 
-    public Output<Integer> getHoursInCycle() {
+    public Output<Integer> hoursInCycle() {
         return this.hoursInCycle;
     }
 
@@ -32,7 +33,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArg
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -44,8 +45,8 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArg
     }
 
     private ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs() {
-        this.hoursInCycle = Output.empty();
-        this.startTime = Output.empty();
+        this.hoursInCycle = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

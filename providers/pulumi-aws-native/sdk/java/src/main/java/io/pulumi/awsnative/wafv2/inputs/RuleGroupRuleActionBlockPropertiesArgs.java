@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomResponseArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class RuleGroupRuleActionBlockPropertiesArgs extends io.pulumi.reso
     @Import(name="customResponse")
       private final @Nullable Output<RuleGroupCustomResponseArgs> customResponse;
 
-    public Output<RuleGroupCustomResponseArgs> getCustomResponse() {
-        return this.customResponse == null ? Output.empty() : this.customResponse;
+    public Output<RuleGroupCustomResponseArgs> customResponse() {
+        return this.customResponse == null ? Codegen.empty() : this.customResponse;
     }
 
     public RuleGroupRuleActionBlockPropertiesArgs(@Nullable Output<RuleGroupCustomResponseArgs> customResponse) {
@@ -30,7 +31,7 @@ public final class RuleGroupRuleActionBlockPropertiesArgs extends io.pulumi.reso
     }
 
     private RuleGroupRuleActionBlockPropertiesArgs() {
-        this.customResponse = Output.empty();
+        this.customResponse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class RuleGroupRuleActionBlockPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder customResponse(@Nullable RuleGroupCustomResponseArgs customResponse) {
-            this.customResponse = Output.ofNullable(customResponse);
+            this.customResponse = Codegen.ofNullable(customResponse);
             return this;
         }        public RuleGroupRuleActionBlockPropertiesArgs build() {
             return new RuleGroupRuleActionBlockPropertiesArgs(customResponse);

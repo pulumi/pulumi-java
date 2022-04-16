@@ -50,21 +50,21 @@ public final class GuestPoliciesPackageRepositoryZypper {
      * The location of the repository directory.
      * 
     */
-    public String getBaseUrl() {
+    public String baseUrl() {
         return this.baseUrl;
     }
     /**
      * The display name of the repository.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * URIs of GPG keys.
      * 
     */
-    public List<String> getGpgKeys() {
+    public List<String> gpgKeys() {
         return this.gpgKeys == null ? List.of() : this.gpgKeys;
     }
     /**
@@ -72,7 +72,7 @@ public final class GuestPoliciesPackageRepositoryZypper {
      * Artifacts in a recipe cannot have the same id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

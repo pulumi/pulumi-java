@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
     @Import(name="galleries")
       private final @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
-    public Output<List<WorkbookTemplateGalleryArgs>> getGalleries() {
-        return this.galleries == null ? Output.empty() : this.galleries;
+    public Output<List<WorkbookTemplateGalleryArgs>> galleries() {
+        return this.galleries == null ? Codegen.empty() : this.galleries;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
     @Import(name="templateData")
       private final @Nullable Output<Object> templateData;
 
-    public Output<Object> getTemplateData() {
-        return this.templateData == null ? Output.empty() : this.templateData;
+    public Output<Object> templateData() {
+        return this.templateData == null ? Codegen.empty() : this.templateData;
     }
 
     public WorkbookTemplateLocalizedGalleryArgs(
@@ -50,8 +51,8 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
     }
 
     private WorkbookTemplateLocalizedGalleryArgs() {
-        this.galleries = Output.empty();
-        this.templateData = Output.empty();
+        this.galleries = Codegen.empty();
+        this.templateData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
             return this;
         }
         public Builder galleries(@Nullable List<WorkbookTemplateGalleryArgs> galleries) {
-            this.galleries = Output.ofNullable(galleries);
+            this.galleries = Codegen.ofNullable(galleries);
             return this;
         }
         public Builder galleries(WorkbookTemplateGalleryArgs... galleries) {
@@ -92,7 +93,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
             return this;
         }
         public Builder templateData(@Nullable Object templateData) {
-            this.templateData = Output.ofNullable(templateData);
+            this.templateData = Codegen.ofNullable(templateData);
             return this;
         }        public WorkbookTemplateLocalizedGalleryArgs build() {
             return new WorkbookTemplateLocalizedGalleryArgs(galleries, templateData);

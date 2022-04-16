@@ -25,7 +25,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
     @Import(name="agentJobs", required=true)
       private final List<String> agentJobs;
 
-    public List<String> getAgentJobs() {
+    public List<String> agentJobs() {
         return this.agentJobs;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
     @Import(name="logins", required=true)
       private final List<String> logins;
 
-    public List<String> getLogins() {
+    public List<String> logins() {
         return this.logins;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 
@@ -80,7 +80,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

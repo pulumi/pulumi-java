@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecArgs;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -35,8 +36,8 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSpec")
       private final @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
-    public Output<AiDatasetEncryptionSpecArgs> getEncryptionSpec() {
-        return this.encryptionSpec == null ? Output.empty() : this.encryptionSpec;
+    public Output<AiDatasetEncryptionSpecArgs> encryptionSpec() {
+        return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadataSchemaUri", required=true)
       private final Output<String> metadataSchemaUri;
 
-    public Output<String> getMetadataSchemaUri() {
+    public Output<String> metadataSchemaUri() {
         return this.metadataSchemaUri;
     }
 
@@ -69,8 +70,8 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public AiDatasetArgs(
@@ -100,12 +101,12 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AiDatasetArgs() {
-        this.displayName = Output.empty();
-        this.encryptionSpec = Output.empty();
-        this.labels = Output.empty();
-        this.metadataSchemaUri = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.displayName = Codegen.empty();
+        this.encryptionSpec = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.metadataSchemaUri = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecArgs encryptionSpec) {
-            this.encryptionSpec = Output.ofNullable(encryptionSpec);
+            this.encryptionSpec = Codegen.ofNullable(encryptionSpec);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -159,7 +160,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder metadataSchemaUri(Output<String> metadataSchemaUri) {
@@ -175,7 +176,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -183,7 +184,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public AiDatasetArgs build() {
             return new AiDatasetArgs(displayName, encryptionSpec, labels, metadataSchemaUri, project, region);

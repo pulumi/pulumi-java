@@ -13,6 +13,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.DatastoreTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -28,37 +29,37 @@ public class Datastore extends io.pulumi.resources.CustomResource {
     @Export(name="datastoreName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datastoreName;
 
-    public Output</* @Nullable */ String> getDatastoreName() {
+    public Output</* @Nullable */ String> datastoreName() {
         return this.datastoreName;
     }
     @Export(name="datastorePartitions", type=DatastorePartitions.class, parameters={})
     private Output</* @Nullable */ DatastorePartitions> datastorePartitions;
 
-    public Output</* @Nullable */ DatastorePartitions> getDatastorePartitions() {
+    public Output</* @Nullable */ DatastorePartitions> datastorePartitions() {
         return this.datastorePartitions;
     }
     @Export(name="datastoreStorage", type=DatastoreStorage.class, parameters={})
     private Output</* @Nullable */ DatastoreStorage> datastoreStorage;
 
-    public Output</* @Nullable */ DatastoreStorage> getDatastoreStorage() {
+    public Output</* @Nullable */ DatastoreStorage> datastoreStorage() {
         return this.datastoreStorage;
     }
     @Export(name="fileFormatConfiguration", type=DatastoreFileFormatConfiguration.class, parameters={})
     private Output</* @Nullable */ DatastoreFileFormatConfiguration> fileFormatConfiguration;
 
-    public Output</* @Nullable */ DatastoreFileFormatConfiguration> getFileFormatConfiguration() {
+    public Output</* @Nullable */ DatastoreFileFormatConfiguration> fileFormatConfiguration() {
         return this.fileFormatConfiguration;
     }
     @Export(name="retentionPeriod", type=DatastoreRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ DatastoreRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ DatastoreRetentionPeriod> getRetentionPeriod() {
+    public Output</* @Nullable */ DatastoreRetentionPeriod> retentionPeriod() {
         return this.retentionPeriod;
     }
     @Export(name="tags", type=List.class, parameters={DatastoreTag.class})
     private Output</* @Nullable */ List<DatastoreTag>> tags;
 
-    public Output</* @Nullable */ List<DatastoreTag>> getTags() {
+    public Output</* @Nullable */ List<DatastoreTag>> tags() {
         return this.tags;
     }
 
@@ -84,7 +85,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Datastore(String name, @Nullable DatastoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotanalytics:Datastore", name, args == null ? DatastoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotanalytics:Datastore", name, args == null ? DatastoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Datastore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

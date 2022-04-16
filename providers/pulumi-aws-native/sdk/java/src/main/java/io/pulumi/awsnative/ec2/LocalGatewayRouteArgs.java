@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -31,7 +32,7 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     @Import(name="localGatewayRouteTableId", required=true)
       private final Output<String> localGatewayRouteTableId;
 
-    public Output<String> getLocalGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
 
@@ -42,7 +43,7 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     @Import(name="localGatewayVirtualInterfaceGroupId", required=true)
       private final Output<String> localGatewayVirtualInterfaceGroupId;
 
-    public Output<String> getLocalGatewayVirtualInterfaceGroupId() {
+    public Output<String> localGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId;
     }
 
@@ -56,9 +57,9 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LocalGatewayRouteArgs() {
-        this.destinationCidrBlock = Output.empty();
-        this.localGatewayRouteTableId = Output.empty();
-        this.localGatewayVirtualInterfaceGroupId = Output.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.localGatewayRouteTableId = Codegen.empty();
+        this.localGatewayVirtualInterfaceGroupId = Codegen.empty();
     }
 
     public static Builder builder() {

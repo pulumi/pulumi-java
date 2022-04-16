@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionArgs;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultUrlRedirectArgs;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionArgs;
@@ -33,8 +34,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRouteAction")
       private final @Nullable Output<URLMapDefaultRouteActionArgs> defaultRouteAction;
 
-    public Output<URLMapDefaultRouteActionArgs> getDefaultRouteAction() {
-        return this.defaultRouteAction == null ? Output.empty() : this.defaultRouteAction;
+    public Output<URLMapDefaultRouteActionArgs> defaultRouteAction() {
+        return this.defaultRouteAction == null ? Codegen.empty() : this.defaultRouteAction;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
-    public Output<String> getDefaultService() {
-        return this.defaultService == null ? Output.empty() : this.defaultService;
+    public Output<String> defaultService() {
+        return this.defaultService == null ? Codegen.empty() : this.defaultService;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultUrlRedirect")
       private final @Nullable Output<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
-    public Output<URLMapDefaultUrlRedirectArgs> getDefaultUrlRedirect() {
-        return this.defaultUrlRedirect == null ? Output.empty() : this.defaultUrlRedirect;
+    public Output<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect() {
+        return this.defaultUrlRedirect == null ? Codegen.empty() : this.defaultUrlRedirect;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headerAction")
       private final @Nullable Output<URLMapHeaderActionArgs> headerAction;
 
-    public Output<URLMapHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Output.empty() : this.headerAction;
+    public Output<URLMapHeaderActionArgs> headerAction() {
+        return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostRules")
       private final @Nullable Output<List<URLMapHostRuleArgs>> hostRules;
 
-    public Output<List<URLMapHostRuleArgs>> getHostRules() {
-        return this.hostRules == null ? Output.empty() : this.hostRules;
+    public Output<List<URLMapHostRuleArgs>> hostRules() {
+        return this.hostRules == null ? Codegen.empty() : this.hostRules;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pathMatchers")
       private final @Nullable Output<List<URLMapPathMatcherArgs>> pathMatchers;
 
-    public Output<List<URLMapPathMatcherArgs>> getPathMatchers() {
-        return this.pathMatchers == null ? Output.empty() : this.pathMatchers;
+    public Output<List<URLMapPathMatcherArgs>> pathMatchers() {
+        return this.pathMatchers == null ? Codegen.empty() : this.pathMatchers;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tests")
       private final @Nullable Output<List<URLMapTestArgs>> tests;
 
-    public Output<List<URLMapTestArgs>> getTests() {
-        return this.tests == null ? Output.empty() : this.tests;
+    public Output<List<URLMapTestArgs>> tests() {
+        return this.tests == null ? Codegen.empty() : this.tests;
     }
 
     public URLMapArgs(
@@ -174,16 +175,16 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private URLMapArgs() {
-        this.defaultRouteAction = Output.empty();
-        this.defaultService = Output.empty();
-        this.defaultUrlRedirect = Output.empty();
-        this.description = Output.empty();
-        this.headerAction = Output.empty();
-        this.hostRules = Output.empty();
-        this.name = Output.empty();
-        this.pathMatchers = Output.empty();
-        this.project = Output.empty();
-        this.tests = Output.empty();
+        this.defaultRouteAction = Codegen.empty();
+        this.defaultService = Codegen.empty();
+        this.defaultUrlRedirect = Codegen.empty();
+        this.description = Codegen.empty();
+        this.headerAction = Codegen.empty();
+        this.hostRules = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pathMatchers = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tests = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -229,7 +230,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRouteAction(@Nullable URLMapDefaultRouteActionArgs defaultRouteAction) {
-            this.defaultRouteAction = Output.ofNullable(defaultRouteAction);
+            this.defaultRouteAction = Codegen.ofNullable(defaultRouteAction);
             return this;
         }
         public Builder defaultService(@Nullable Output<String> defaultService) {
@@ -237,7 +238,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultService(@Nullable String defaultService) {
-            this.defaultService = Output.ofNullable(defaultService);
+            this.defaultService = Codegen.ofNullable(defaultService);
             return this;
         }
         public Builder defaultUrlRedirect(@Nullable Output<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
@@ -245,7 +246,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultUrlRedirect(@Nullable URLMapDefaultUrlRedirectArgs defaultUrlRedirect) {
-            this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
+            this.defaultUrlRedirect = Codegen.ofNullable(defaultUrlRedirect);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -253,7 +254,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headerAction(@Nullable Output<URLMapHeaderActionArgs> headerAction) {
@@ -261,7 +262,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder headerAction(@Nullable URLMapHeaderActionArgs headerAction) {
-            this.headerAction = Output.ofNullable(headerAction);
+            this.headerAction = Codegen.ofNullable(headerAction);
             return this;
         }
         public Builder hostRules(@Nullable Output<List<URLMapHostRuleArgs>> hostRules) {
@@ -269,7 +270,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostRules(@Nullable List<URLMapHostRuleArgs> hostRules) {
-            this.hostRules = Output.ofNullable(hostRules);
+            this.hostRules = Codegen.ofNullable(hostRules);
             return this;
         }
         public Builder hostRules(URLMapHostRuleArgs... hostRules) {
@@ -280,7 +281,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pathMatchers(@Nullable Output<List<URLMapPathMatcherArgs>> pathMatchers) {
@@ -288,7 +289,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pathMatchers(@Nullable List<URLMapPathMatcherArgs> pathMatchers) {
-            this.pathMatchers = Output.ofNullable(pathMatchers);
+            this.pathMatchers = Codegen.ofNullable(pathMatchers);
             return this;
         }
         public Builder pathMatchers(URLMapPathMatcherArgs... pathMatchers) {
@@ -299,7 +300,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tests(@Nullable Output<List<URLMapTestArgs>> tests) {
@@ -307,7 +308,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tests(@Nullable List<URLMapTestArgs> tests) {
-            this.tests = Output.ofNullable(tests);
+            this.tests = Codegen.ofNullable(tests);
             return this;
         }
         public Builder tests(URLMapTestArgs... tests) {

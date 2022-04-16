@@ -7,6 +7,7 @@ import io.pulumi.aws.apigatewayv2.inputs.IntegrationResponseParameterArgs;
 import io.pulumi.aws.apigatewayv2.inputs.IntegrationTlsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -37,8 +38,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
-        return this.connectionId == null ? Output.empty() : this.connectionId;
+    public Output<String> connectionId() {
+        return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionType")
       private final @Nullable Output<String> connectionType;
 
-    public Output<String> getConnectionType() {
-        return this.connectionType == null ? Output.empty() : this.connectionType;
+    public Output<String> connectionType() {
+        return this.connectionType == null ? Codegen.empty() : this.connectionType;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentHandlingStrategy")
       private final @Nullable Output<String> contentHandlingStrategy;
 
-    public Output<String> getContentHandlingStrategy() {
-        return this.contentHandlingStrategy == null ? Output.empty() : this.contentHandlingStrategy;
+    public Output<String> contentHandlingStrategy() {
+        return this.contentHandlingStrategy == null ? Codegen.empty() : this.contentHandlingStrategy;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialsArn")
       private final @Nullable Output<String> credentialsArn;
 
-    public Output<String> getCredentialsArn() {
-        return this.credentialsArn == null ? Output.empty() : this.credentialsArn;
+    public Output<String> credentialsArn() {
+        return this.credentialsArn == null ? Codegen.empty() : this.credentialsArn;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="integrationMethod")
       private final @Nullable Output<String> integrationMethod;
 
-    public Output<String> getIntegrationMethod() {
-        return this.integrationMethod == null ? Output.empty() : this.integrationMethod;
+    public Output<String> integrationMethod() {
+        return this.integrationMethod == null ? Codegen.empty() : this.integrationMethod;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="integrationSubtype")
       private final @Nullable Output<String> integrationSubtype;
 
-    public Output<String> getIntegrationSubtype() {
-        return this.integrationSubtype == null ? Output.empty() : this.integrationSubtype;
+    public Output<String> integrationSubtype() {
+        return this.integrationSubtype == null ? Codegen.empty() : this.integrationSubtype;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="integrationType", required=true)
       private final Output<String> integrationType;
 
-    public Output<String> getIntegrationType() {
+    public Output<String> integrationType() {
         return this.integrationType;
     }
 
@@ -127,8 +128,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="integrationUri")
       private final @Nullable Output<String> integrationUri;
 
-    public Output<String> getIntegrationUri() {
-        return this.integrationUri == null ? Output.empty() : this.integrationUri;
+    public Output<String> integrationUri() {
+        return this.integrationUri == null ? Codegen.empty() : this.integrationUri;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="passthroughBehavior")
       private final @Nullable Output<String> passthroughBehavior;
 
-    public Output<String> getPassthroughBehavior() {
-        return this.passthroughBehavior == null ? Output.empty() : this.passthroughBehavior;
+    public Output<String> passthroughBehavior() {
+        return this.passthroughBehavior == null ? Codegen.empty() : this.passthroughBehavior;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payloadFormatVersion")
       private final @Nullable Output<String> payloadFormatVersion;
 
-    public Output<String> getPayloadFormatVersion() {
-        return this.payloadFormatVersion == null ? Output.empty() : this.payloadFormatVersion;
+    public Output<String> payloadFormatVersion() {
+        return this.payloadFormatVersion == null ? Codegen.empty() : this.payloadFormatVersion;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestParameters")
       private final @Nullable Output<Map<String,String>> requestParameters;
 
-    public Output<Map<String,String>> getRequestParameters() {
-        return this.requestParameters == null ? Output.empty() : this.requestParameters;
+    public Output<Map<String,String>> requestParameters() {
+        return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestTemplates")
       private final @Nullable Output<Map<String,String>> requestTemplates;
 
-    public Output<Map<String,String>> getRequestTemplates() {
-        return this.requestTemplates == null ? Output.empty() : this.requestTemplates;
+    public Output<Map<String,String>> requestTemplates() {
+        return this.requestTemplates == null ? Codegen.empty() : this.requestTemplates;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseParameters")
       private final @Nullable Output<List<IntegrationResponseParameterArgs>> responseParameters;
 
-    public Output<List<IntegrationResponseParameterArgs>> getResponseParameters() {
-        return this.responseParameters == null ? Output.empty() : this.responseParameters;
+    public Output<List<IntegrationResponseParameterArgs>> responseParameters() {
+        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateSelectionExpression")
       private final @Nullable Output<String> templateSelectionExpression;
 
-    public Output<String> getTemplateSelectionExpression() {
-        return this.templateSelectionExpression == null ? Output.empty() : this.templateSelectionExpression;
+    public Output<String> templateSelectionExpression() {
+        return this.templateSelectionExpression == null ? Codegen.empty() : this.templateSelectionExpression;
     }
 
     /**
@@ -210,8 +211,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeoutMilliseconds")
       private final @Nullable Output<Integer> timeoutMilliseconds;
 
-    public Output<Integer> getTimeoutMilliseconds() {
-        return this.timeoutMilliseconds == null ? Output.empty() : this.timeoutMilliseconds;
+    public Output<Integer> timeoutMilliseconds() {
+        return this.timeoutMilliseconds == null ? Codegen.empty() : this.timeoutMilliseconds;
     }
 
     /**
@@ -221,8 +222,8 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tlsConfig")
       private final @Nullable Output<IntegrationTlsConfigArgs> tlsConfig;
 
-    public Output<IntegrationTlsConfigArgs> getTlsConfig() {
-        return this.tlsConfig == null ? Output.empty() : this.tlsConfig;
+    public Output<IntegrationTlsConfigArgs> tlsConfig() {
+        return this.tlsConfig == null ? Codegen.empty() : this.tlsConfig;
     }
 
     public IntegrationArgs(
@@ -265,24 +266,24 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntegrationArgs() {
-        this.apiId = Output.empty();
-        this.connectionId = Output.empty();
-        this.connectionType = Output.empty();
-        this.contentHandlingStrategy = Output.empty();
-        this.credentialsArn = Output.empty();
-        this.description = Output.empty();
-        this.integrationMethod = Output.empty();
-        this.integrationSubtype = Output.empty();
-        this.integrationType = Output.empty();
-        this.integrationUri = Output.empty();
-        this.passthroughBehavior = Output.empty();
-        this.payloadFormatVersion = Output.empty();
-        this.requestParameters = Output.empty();
-        this.requestTemplates = Output.empty();
-        this.responseParameters = Output.empty();
-        this.templateSelectionExpression = Output.empty();
-        this.timeoutMilliseconds = Output.empty();
-        this.tlsConfig = Output.empty();
+        this.apiId = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.connectionType = Codegen.empty();
+        this.contentHandlingStrategy = Codegen.empty();
+        this.credentialsArn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.integrationMethod = Codegen.empty();
+        this.integrationSubtype = Codegen.empty();
+        this.integrationType = Codegen.empty();
+        this.integrationUri = Codegen.empty();
+        this.passthroughBehavior = Codegen.empty();
+        this.payloadFormatVersion = Codegen.empty();
+        this.requestParameters = Codegen.empty();
+        this.requestTemplates = Codegen.empty();
+        this.responseParameters = Codegen.empty();
+        this.templateSelectionExpression = Codegen.empty();
+        this.timeoutMilliseconds = Codegen.empty();
+        this.tlsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -352,7 +353,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Output.ofNullable(connectionId);
+            this.connectionId = Codegen.ofNullable(connectionId);
             return this;
         }
         public Builder connectionType(@Nullable Output<String> connectionType) {
@@ -360,7 +361,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionType(@Nullable String connectionType) {
-            this.connectionType = Output.ofNullable(connectionType);
+            this.connectionType = Codegen.ofNullable(connectionType);
             return this;
         }
         public Builder contentHandlingStrategy(@Nullable Output<String> contentHandlingStrategy) {
@@ -368,7 +369,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
-            this.contentHandlingStrategy = Output.ofNullable(contentHandlingStrategy);
+            this.contentHandlingStrategy = Codegen.ofNullable(contentHandlingStrategy);
             return this;
         }
         public Builder credentialsArn(@Nullable Output<String> credentialsArn) {
@@ -376,7 +377,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentialsArn(@Nullable String credentialsArn) {
-            this.credentialsArn = Output.ofNullable(credentialsArn);
+            this.credentialsArn = Codegen.ofNullable(credentialsArn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -384,7 +385,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder integrationMethod(@Nullable Output<String> integrationMethod) {
@@ -392,7 +393,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integrationMethod(@Nullable String integrationMethod) {
-            this.integrationMethod = Output.ofNullable(integrationMethod);
+            this.integrationMethod = Codegen.ofNullable(integrationMethod);
             return this;
         }
         public Builder integrationSubtype(@Nullable Output<String> integrationSubtype) {
@@ -400,7 +401,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integrationSubtype(@Nullable String integrationSubtype) {
-            this.integrationSubtype = Output.ofNullable(integrationSubtype);
+            this.integrationSubtype = Codegen.ofNullable(integrationSubtype);
             return this;
         }
         public Builder integrationType(Output<String> integrationType) {
@@ -416,7 +417,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integrationUri(@Nullable String integrationUri) {
-            this.integrationUri = Output.ofNullable(integrationUri);
+            this.integrationUri = Codegen.ofNullable(integrationUri);
             return this;
         }
         public Builder passthroughBehavior(@Nullable Output<String> passthroughBehavior) {
@@ -424,7 +425,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder passthroughBehavior(@Nullable String passthroughBehavior) {
-            this.passthroughBehavior = Output.ofNullable(passthroughBehavior);
+            this.passthroughBehavior = Codegen.ofNullable(passthroughBehavior);
             return this;
         }
         public Builder payloadFormatVersion(@Nullable Output<String> payloadFormatVersion) {
@@ -432,7 +433,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder payloadFormatVersion(@Nullable String payloadFormatVersion) {
-            this.payloadFormatVersion = Output.ofNullable(payloadFormatVersion);
+            this.payloadFormatVersion = Codegen.ofNullable(payloadFormatVersion);
             return this;
         }
         public Builder requestParameters(@Nullable Output<Map<String,String>> requestParameters) {
@@ -440,7 +441,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestParameters(@Nullable Map<String,String> requestParameters) {
-            this.requestParameters = Output.ofNullable(requestParameters);
+            this.requestParameters = Codegen.ofNullable(requestParameters);
             return this;
         }
         public Builder requestTemplates(@Nullable Output<Map<String,String>> requestTemplates) {
@@ -448,7 +449,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestTemplates(@Nullable Map<String,String> requestTemplates) {
-            this.requestTemplates = Output.ofNullable(requestTemplates);
+            this.requestTemplates = Codegen.ofNullable(requestTemplates);
             return this;
         }
         public Builder responseParameters(@Nullable Output<List<IntegrationResponseParameterArgs>> responseParameters) {
@@ -456,7 +457,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseParameters(@Nullable List<IntegrationResponseParameterArgs> responseParameters) {
-            this.responseParameters = Output.ofNullable(responseParameters);
+            this.responseParameters = Codegen.ofNullable(responseParameters);
             return this;
         }
         public Builder responseParameters(IntegrationResponseParameterArgs... responseParameters) {
@@ -467,7 +468,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
-            this.templateSelectionExpression = Output.ofNullable(templateSelectionExpression);
+            this.templateSelectionExpression = Codegen.ofNullable(templateSelectionExpression);
             return this;
         }
         public Builder timeoutMilliseconds(@Nullable Output<Integer> timeoutMilliseconds) {
@@ -475,7 +476,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
-            this.timeoutMilliseconds = Output.ofNullable(timeoutMilliseconds);
+            this.timeoutMilliseconds = Codegen.ofNullable(timeoutMilliseconds);
             return this;
         }
         public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigArgs> tlsConfig) {
@@ -483,7 +484,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tlsConfig(@Nullable IntegrationTlsConfigArgs tlsConfig) {
-            this.tlsConfig = Output.ofNullable(tlsConfig);
+            this.tlsConfig = Codegen.ofNullable(tlsConfig);
             return this;
         }        public IntegrationArgs build() {
             return new IntegrationArgs(apiId, connectionId, connectionType, contentHandlingStrategy, credentialsArn, description, integrationMethod, integrationSubtype, integrationType, integrationUri, passthroughBehavior, payloadFormatVersion, requestParameters, requestTemplates, responseParameters, templateSelectionExpression, timeoutMilliseconds, tlsConfig);

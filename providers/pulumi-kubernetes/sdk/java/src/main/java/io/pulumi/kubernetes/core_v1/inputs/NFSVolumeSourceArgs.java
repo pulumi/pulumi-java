@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -37,8 +38,8 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="server", required=true)
       private final Output<String> server;
 
-    public Output<String> getServer() {
+    public Output<String> server() {
         return this.server;
     }
 
@@ -62,9 +63,9 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NFSVolumeSourceArgs() {
-        this.path = Output.empty();
-        this.readOnly = Output.empty();
-        this.server = Output.empty();
+        this.path = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.server = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder server(Output<String> server) {

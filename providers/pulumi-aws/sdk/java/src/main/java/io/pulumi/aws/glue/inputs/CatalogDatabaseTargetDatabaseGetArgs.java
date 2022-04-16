@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
     @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -31,7 +32,7 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -43,8 +44,8 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
     }
 
     private CatalogDatabaseTargetDatabaseGetArgs() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.GpuResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cpu", required=true)
       private final Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu;
     }
 
@@ -37,8 +38,8 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="gpu")
       private final @Nullable Output<GpuResourceArgs> gpu;
 
-    public Output<GpuResourceArgs> getGpu() {
-        return this.gpu == null ? Output.empty() : this.gpu;
+    public Output<GpuResourceArgs> gpu() {
+        return this.gpu == null ? Codegen.empty() : this.gpu;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
+    public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
 
@@ -62,9 +63,9 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceRequestsArgs() {
-        this.cpu = Output.empty();
-        this.gpu = Output.empty();
-        this.memoryInGB = Output.empty();
+        this.cpu = Codegen.empty();
+        this.gpu = Codegen.empty();
+        this.memoryInGB = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder gpu(@Nullable GpuResourceArgs gpu) {
-            this.gpu = Output.ofNullable(gpu);
+            this.gpu = Codegen.ofNullable(gpu);
             return this;
         }
         public Builder memoryInGB(Output<Double> memoryInGB) {

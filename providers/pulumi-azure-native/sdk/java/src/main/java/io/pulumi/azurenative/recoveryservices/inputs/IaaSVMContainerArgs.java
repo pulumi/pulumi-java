@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
+        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
-    public Output<String> getContainerType() {
+    public Output<String> containerType() {
         return this.containerType;
     }
 
@@ -53,8 +54,8 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
-    public Output<String> getHealthStatus() {
-        return this.healthStatus == null ? Output.empty() : this.healthStatus;
+    public Output<String> healthStatus() {
+        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
-    public Output<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
+    public Output<String> registrationStatus() {
+        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
-        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
+    public Output<String> resourceGroup() {
+        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="virtualMachineId")
       private final @Nullable Output<String> virtualMachineId;
 
-    public Output<String> getVirtualMachineId() {
-        return this.virtualMachineId == null ? Output.empty() : this.virtualMachineId;
+    public Output<String> virtualMachineId() {
+        return this.virtualMachineId == null ? Codegen.empty() : this.virtualMachineId;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="virtualMachineVersion")
       private final @Nullable Output<String> virtualMachineVersion;
 
-    public Output<String> getVirtualMachineVersion() {
-        return this.virtualMachineVersion == null ? Output.empty() : this.virtualMachineVersion;
+    public Output<String> virtualMachineVersion() {
+        return this.virtualMachineVersion == null ? Codegen.empty() : this.virtualMachineVersion;
     }
 
     public IaaSVMContainerArgs(
@@ -132,14 +133,14 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private IaaSVMContainerArgs() {
-        this.backupManagementType = Output.empty();
-        this.containerType = Output.empty();
-        this.friendlyName = Output.empty();
-        this.healthStatus = Output.empty();
-        this.registrationStatus = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.virtualMachineId = Output.empty();
-        this.virtualMachineVersion = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.containerType = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.healthStatus = Codegen.empty();
+        this.registrationStatus = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.virtualMachineId = Codegen.empty();
+        this.virtualMachineVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Output.ofNullable(backupManagementType);
+            this.backupManagementType = Codegen.ofNullable(backupManagementType);
             return this;
         }
         public Builder containerType(Output<String> containerType) {
@@ -197,7 +198,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
@@ -205,7 +206,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Output.ofNullable(healthStatus);
+            this.healthStatus = Codegen.ofNullable(healthStatus);
             return this;
         }
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
@@ -213,7 +214,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Output.ofNullable(registrationStatus);
+            this.registrationStatus = Codegen.ofNullable(registrationStatus);
             return this;
         }
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
@@ -221,7 +222,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Output.ofNullable(resourceGroup);
+            this.resourceGroup = Codegen.ofNullable(resourceGroup);
             return this;
         }
         public Builder virtualMachineId(@Nullable Output<String> virtualMachineId) {
@@ -229,7 +230,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
-            this.virtualMachineId = Output.ofNullable(virtualMachineId);
+            this.virtualMachineId = Codegen.ofNullable(virtualMachineId);
             return this;
         }
         public Builder virtualMachineVersion(@Nullable Output<String> virtualMachineVersion) {
@@ -237,7 +238,7 @@ public final class IaaSVMContainerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder virtualMachineVersion(@Nullable String virtualMachineVersion) {
-            this.virtualMachineVersion = Output.ofNullable(virtualMachineVersion);
+            this.virtualMachineVersion = Codegen.ofNullable(virtualMachineVersion);
             return this;
         }        public IaaSVMContainerArgs build() {
             return new IaaSVMContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);

@@ -9,6 +9,7 @@ import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -46,7 +47,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @return Indicates whether this access point currently has a policy that allows public access.
      * 
      */
-    public Output<Boolean> getHasPublicAccessPolicy() {
+    public Output<Boolean> hasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy;
     }
     /**
@@ -60,7 +61,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @return The name of the Object Lambda Access Point.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @return The Object Lambda Access Point resource policy document.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -100,7 +101,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectLambdaAccessPointPolicy(String name, ObjectLambdaAccessPointPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/objectLambdaAccessPointPolicy:ObjectLambdaAccessPointPolicy", name, args == null ? ObjectLambdaAccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/objectLambdaAccessPointPolicy:ObjectLambdaAccessPointPolicy", name, args == null ? ObjectLambdaAccessPointPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectLambdaAccessPointPolicy(String name, Output<String> id, @Nullable ObjectLambdaAccessPointPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

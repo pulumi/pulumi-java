@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterIdentityProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends io.pulumi.reso
     @Import(name="identityProviders")
       private final @Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
 
-    public Output<List<OpenShiftManagedClusterIdentityProviderArgs>> getIdentityProviders() {
-        return this.identityProviders == null ? Output.empty() : this.identityProviders;
+    public Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders() {
+        return this.identityProviders == null ? Codegen.empty() : this.identityProviders;
     }
 
     public OpenShiftManagedClusterAuthProfileArgs(@Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders) {
@@ -35,7 +36,7 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends io.pulumi.reso
     }
 
     private OpenShiftManagedClusterAuthProfileArgs() {
-        this.identityProviders = Output.empty();
+        this.identityProviders = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends io.pulumi.reso
             return this;
         }
         public Builder identityProviders(@Nullable List<OpenShiftManagedClusterIdentityProviderArgs> identityProviders) {
-            this.identityProviders = Output.ofNullable(identityProviders);
+            this.identityProviders = Codegen.ofNullable(identityProviders);
             return this;
         }
         public Builder identityProviders(OpenShiftManagedClusterIdentityProviderArgs... identityProviders) {

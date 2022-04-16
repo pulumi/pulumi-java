@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.HTTPHeaderArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,8 +32,8 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="method")
       private final @Nullable Output<Either<String,HTTPConfigurationMethod>> method;
 
-    public Output<Either<String,HTTPConfigurationMethod>> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+    public Output<Either<String,HTTPConfigurationMethod>> method() {
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="preferHTTPS")
       private final @Nullable Output<Boolean> preferHTTPS;
 
-    public Output<Boolean> getPreferHTTPS() {
-        return this.preferHTTPS == null ? Output.empty() : this.preferHTTPS;
+    public Output<Boolean> preferHTTPS() {
+        return this.preferHTTPS == null ? Codegen.empty() : this.preferHTTPS;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="requestHeaders")
       private final @Nullable Output<List<HTTPHeaderArgs>> requestHeaders;
 
-    public Output<List<HTTPHeaderArgs>> getRequestHeaders() {
-        return this.requestHeaders == null ? Output.empty() : this.requestHeaders;
+    public Output<List<HTTPHeaderArgs>> requestHeaders() {
+        return this.requestHeaders == null ? Codegen.empty() : this.requestHeaders;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="validStatusCodeRanges")
       private final @Nullable Output<List<String>> validStatusCodeRanges;
 
-    public Output<List<String>> getValidStatusCodeRanges() {
-        return this.validStatusCodeRanges == null ? Output.empty() : this.validStatusCodeRanges;
+    public Output<List<String>> validStatusCodeRanges() {
+        return this.validStatusCodeRanges == null ? Codegen.empty() : this.validStatusCodeRanges;
     }
 
     public ConnectionMonitorHttpConfigurationArgs(
@@ -106,12 +107,12 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     }
 
     private ConnectionMonitorHttpConfigurationArgs() {
-        this.method = Output.empty();
-        this.path = Output.empty();
-        this.port = Output.empty();
-        this.preferHTTPS = Output.empty();
-        this.requestHeaders = Output.empty();
-        this.validStatusCodeRanges = Output.empty();
+        this.method = Codegen.empty();
+        this.path = Codegen.empty();
+        this.port = Codegen.empty();
+        this.preferHTTPS = Codegen.empty();
+        this.requestHeaders = Codegen.empty();
+        this.validStatusCodeRanges = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder method(@Nullable Either<String,HTTPConfigurationMethod> method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -157,7 +158,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -165,7 +166,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder preferHTTPS(@Nullable Output<Boolean> preferHTTPS) {
@@ -173,7 +174,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder preferHTTPS(@Nullable Boolean preferHTTPS) {
-            this.preferHTTPS = Output.ofNullable(preferHTTPS);
+            this.preferHTTPS = Codegen.ofNullable(preferHTTPS);
             return this;
         }
         public Builder requestHeaders(@Nullable Output<List<HTTPHeaderArgs>> requestHeaders) {
@@ -181,7 +182,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder requestHeaders(@Nullable List<HTTPHeaderArgs> requestHeaders) {
-            this.requestHeaders = Output.ofNullable(requestHeaders);
+            this.requestHeaders = Codegen.ofNullable(requestHeaders);
             return this;
         }
         public Builder requestHeaders(HTTPHeaderArgs... requestHeaders) {
@@ -192,7 +193,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder validStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
-            this.validStatusCodeRanges = Output.ofNullable(validStatusCodeRanges);
+            this.validStatusCodeRanges = Codegen.ofNullable(validStatusCodeRanges);
             return this;
         }
         public Builder validStatusCodeRanges(String... validStatusCodeRanges) {

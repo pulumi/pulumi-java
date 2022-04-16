@@ -20,6 +20,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -54,7 +55,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of A records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<ARecordResponse>> getARecords() {
+    public Output</* @Nullable */ List<ARecordResponse>> aRecords() {
         return this.aRecords;
     }
     /**
@@ -68,7 +69,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of AAAA records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<AaaaRecordResponse>> getAaaaRecords() {
+    public Output</* @Nullable */ List<AaaaRecordResponse>> aaaaRecords() {
         return this.aaaaRecords;
     }
     /**
@@ -82,7 +83,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of CAA records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<CaaRecordResponse>> getCaaRecords() {
+    public Output</* @Nullable */ List<CaaRecordResponse>> caaRecords() {
         return this.caaRecords;
     }
     /**
@@ -96,7 +97,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The CNAME record in the  record set.
      * 
      */
-    public Output</* @Nullable */ CnameRecordResponse> getCnameRecord() {
+    public Output</* @Nullable */ CnameRecordResponse> cnameRecord() {
         return this.cnameRecord;
     }
     /**
@@ -110,7 +111,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The etag of the record set.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -124,7 +125,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return Fully qualified domain name of the record set.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -138,7 +139,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The metadata attached to the record set.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -152,7 +153,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of MX records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<MxRecordResponse>> getMxRecords() {
+    public Output</* @Nullable */ List<MxRecordResponse>> mxRecords() {
         return this.mxRecords;
     }
     /**
@@ -166,7 +167,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The name of the record set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -180,7 +181,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of NS records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<NsRecordResponse>> getNsRecords() {
+    public Output</* @Nullable */ List<NsRecordResponse>> nsRecords() {
         return this.nsRecords;
     }
     /**
@@ -194,7 +195,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return provisioning State of the record set.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -208,7 +209,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of PTR records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<PtrRecordResponse>> getPtrRecords() {
+    public Output</* @Nullable */ List<PtrRecordResponse>> ptrRecords() {
         return this.ptrRecords;
     }
     /**
@@ -222,7 +223,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The SOA record in the record set.
      * 
      */
-    public Output</* @Nullable */ SoaRecordResponse> getSoaRecord() {
+    public Output</* @Nullable */ SoaRecordResponse> soaRecord() {
         return this.soaRecord;
     }
     /**
@@ -236,7 +237,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of SRV records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<SrvRecordResponse>> getSrvRecords() {
+    public Output</* @Nullable */ List<SrvRecordResponse>> srvRecords() {
         return this.srvRecords;
     }
     /**
@@ -250,7 +251,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return A reference to an azure resource from where the dns resource value is taken.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getTargetResource() {
+    public Output</* @Nullable */ SubResourceResponse> targetResource() {
         return this.targetResource;
     }
     /**
@@ -264,7 +265,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The TTL (time-to-live) of the records in the record set.
      * 
      */
-    public Output</* @Nullable */ Double> getTtl() {
+    public Output</* @Nullable */ Double> ttl() {
         return this.ttl;
     }
     /**
@@ -278,7 +279,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of TXT records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<TxtRecordResponse>> getTxtRecords() {
+    public Output</* @Nullable */ List<TxtRecordResponse>> txtRecords() {
         return this.txtRecords;
     }
     /**
@@ -292,7 +293,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The type of the record set.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -318,7 +319,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RecordSet(String name, RecordSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:RecordSet", name, args == null ? RecordSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:RecordSet", name, args == null ? RecordSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RecordSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

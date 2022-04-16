@@ -6,6 +6,7 @@ package io.pulumi.azurenative.management;
 import io.pulumi.azurenative.management.inputs.CreateManagementGroupDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="details")
       private final @Nullable Output<CreateManagementGroupDetailsArgs> details;
 
-    public Output<CreateManagementGroupDetailsArgs> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<CreateManagementGroupDetailsArgs> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+    public Output<String> groupId() {
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ManagementGroupArgs(
@@ -71,10 +72,10 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ManagementGroupArgs() {
-        this.details = Output.empty();
-        this.displayName = Output.empty();
-        this.groupId = Output.empty();
-        this.name = Output.empty();
+        this.details = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder details(@Nullable CreateManagementGroupDetailsArgs details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -116,7 +117,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder groupId(@Nullable Output<String> groupId) {
@@ -124,7 +125,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -132,7 +133,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ManagementGroupArgs build() {
             return new ManagementGroupArgs(details, displayName, groupId, name);

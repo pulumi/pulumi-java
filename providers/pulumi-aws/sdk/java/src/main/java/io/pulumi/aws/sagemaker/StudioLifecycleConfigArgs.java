@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="studioLifecycleConfigAppType", required=true)
       private final Output<String> studioLifecycleConfigAppType;
 
-    public Output<String> getStudioLifecycleConfigAppType() {
+    public Output<String> studioLifecycleConfigAppType() {
         return this.studioLifecycleConfigAppType;
     }
 
@@ -33,7 +34,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="studioLifecycleConfigContent", required=true)
       private final Output<String> studioLifecycleConfigContent;
 
-    public Output<String> getStudioLifecycleConfigContent() {
+    public Output<String> studioLifecycleConfigContent() {
         return this.studioLifecycleConfigContent;
     }
 
@@ -44,7 +45,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="studioLifecycleConfigName", required=true)
       private final Output<String> studioLifecycleConfigName;
 
-    public Output<String> getStudioLifecycleConfigName() {
+    public Output<String> studioLifecycleConfigName() {
         return this.studioLifecycleConfigName;
     }
 
@@ -55,8 +56,8 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StudioLifecycleConfigArgs(
@@ -71,10 +72,10 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private StudioLifecycleConfigArgs() {
-        this.studioLifecycleConfigAppType = Output.empty();
-        this.studioLifecycleConfigContent = Output.empty();
-        this.studioLifecycleConfigName = Output.empty();
-        this.tags = Output.empty();
+        this.studioLifecycleConfigAppType = Codegen.empty();
+        this.studioLifecycleConfigContent = Codegen.empty();
+        this.studioLifecycleConfigName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public StudioLifecycleConfigArgs build() {
             return new StudioLifecycleConfigArgs(studioLifecycleConfigAppType, studioLifecycleConfigContent, studioLifecycleConfigName, tags);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionEndpointInp
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -21,14 +22,14 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends io.
     @Import(name="endpointInput", required=true)
       private final Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
 
-    public Output<ModelQualityJobDefinitionEndpointInputArgs> getEndpointInput() {
+    public Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 
     @Import(name="groundTruthS3Input", required=true)
       private final Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
-    public Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> getGroundTruthS3Input() {
+    public Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input() {
         return this.groundTruthS3Input;
     }
 
@@ -40,8 +41,8 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends io.
     }
 
     private ModelQualityJobDefinitionModelQualityJobInputArgs() {
-        this.endpointInput = Output.empty();
-        this.groundTruthS3Input = Output.empty();
+        this.endpointInput = Codegen.empty();
+        this.groundTruthS3Input = Codegen.empty();
     }
 
     public static Builder builder() {

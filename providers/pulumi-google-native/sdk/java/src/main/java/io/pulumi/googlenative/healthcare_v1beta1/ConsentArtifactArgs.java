@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ImageArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SignatureArgs;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="consentContentScreenshots")
       private final @Nullable Output<List<ImageArgs>> consentContentScreenshots;
 
-    public Output<List<ImageArgs>> getConsentContentScreenshots() {
-        return this.consentContentScreenshots == null ? Output.empty() : this.consentContentScreenshots;
+    public Output<List<ImageArgs>> consentContentScreenshots() {
+        return this.consentContentScreenshots == null ? Codegen.empty() : this.consentContentScreenshots;
     }
 
     /**
@@ -36,21 +37,21 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="consentContentVersion")
       private final @Nullable Output<String> consentContentVersion;
 
-    public Output<String> getConsentContentVersion() {
-        return this.consentContentVersion == null ? Output.empty() : this.consentContentVersion;
+    public Output<String> consentContentVersion() {
+        return this.consentContentVersion == null ? Codegen.empty() : this.consentContentVersion;
     }
 
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -61,15 +62,15 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="guardianSignature")
       private final @Nullable Output<SignatureArgs> guardianSignature;
 
-    public Output<SignatureArgs> getGuardianSignature() {
-        return this.guardianSignature == null ? Output.empty() : this.guardianSignature;
+    public Output<SignatureArgs> guardianSignature() {
+        return this.guardianSignature == null ? Codegen.empty() : this.guardianSignature;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -90,15 +91,15 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -119,8 +120,8 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userSignature")
       private final @Nullable Output<SignatureArgs> userSignature;
 
-    public Output<SignatureArgs> getUserSignature() {
-        return this.userSignature == null ? Output.empty() : this.userSignature;
+    public Output<SignatureArgs> userSignature() {
+        return this.userSignature == null ? Codegen.empty() : this.userSignature;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="witnessSignature")
       private final @Nullable Output<SignatureArgs> witnessSignature;
 
-    public Output<SignatureArgs> getWitnessSignature() {
-        return this.witnessSignature == null ? Output.empty() : this.witnessSignature;
+    public Output<SignatureArgs> witnessSignature() {
+        return this.witnessSignature == null ? Codegen.empty() : this.witnessSignature;
     }
 
     public ConsentArtifactArgs(
@@ -162,18 +163,18 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConsentArtifactArgs() {
-        this.consentContentScreenshots = Output.empty();
-        this.consentContentVersion = Output.empty();
-        this.consentStoreId = Output.empty();
-        this.datasetId = Output.empty();
-        this.guardianSignature = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.userId = Output.empty();
-        this.userSignature = Output.empty();
-        this.witnessSignature = Output.empty();
+        this.consentContentScreenshots = Codegen.empty();
+        this.consentContentVersion = Codegen.empty();
+        this.consentStoreId = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.guardianSignature = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.userId = Codegen.empty();
+        this.userSignature = Codegen.empty();
+        this.witnessSignature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder consentContentScreenshots(@Nullable List<ImageArgs> consentContentScreenshots) {
-            this.consentContentScreenshots = Output.ofNullable(consentContentScreenshots);
+            this.consentContentScreenshots = Codegen.ofNullable(consentContentScreenshots);
             return this;
         }
         public Builder consentContentScreenshots(ImageArgs... consentContentScreenshots) {
@@ -234,7 +235,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder consentContentVersion(@Nullable String consentContentVersion) {
-            this.consentContentVersion = Output.ofNullable(consentContentVersion);
+            this.consentContentVersion = Codegen.ofNullable(consentContentVersion);
             return this;
         }
         public Builder consentStoreId(Output<String> consentStoreId) {
@@ -258,7 +259,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder guardianSignature(@Nullable SignatureArgs guardianSignature) {
-            this.guardianSignature = Output.ofNullable(guardianSignature);
+            this.guardianSignature = Codegen.ofNullable(guardianSignature);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -266,7 +267,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -274,7 +275,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -282,7 +283,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -290,7 +291,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder userId(Output<String> userId) {
@@ -306,7 +307,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder userSignature(@Nullable SignatureArgs userSignature) {
-            this.userSignature = Output.ofNullable(userSignature);
+            this.userSignature = Codegen.ofNullable(userSignature);
             return this;
         }
         public Builder witnessSignature(@Nullable Output<SignatureArgs> witnessSignature) {
@@ -314,7 +315,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder witnessSignature(@Nullable SignatureArgs witnessSignature) {
-            this.witnessSignature = Output.ofNullable(witnessSignature);
+            this.witnessSignature = Codegen.ofNullable(witnessSignature);
             return this;
         }        public ConsentArtifactArgs build() {
             return new ConsentArtifactArgs(consentContentScreenshots, consentContentVersion, consentStoreId, datasetId, guardianSignature, location, metadata, name, project, userId, userSignature, witnessSignature);

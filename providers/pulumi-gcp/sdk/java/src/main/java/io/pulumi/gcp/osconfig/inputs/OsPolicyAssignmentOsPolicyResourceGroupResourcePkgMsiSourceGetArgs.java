@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs;
 import java.lang.Boolean;
@@ -24,8 +25,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
     @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> getAllowInsecure() {
-        return this.allowInsecure == null ? Output.empty() : this.allowInsecure;
+    public Output<Boolean> allowInsecure() {
+        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
     @Import(name="gcs")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs> gcs;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs> getGcs() {
-        return this.gcs == null ? Output.empty() : this.gcs;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs> gcs() {
+        return this.gcs == null ? Codegen.empty() : this.gcs;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
-        return this.localPath == null ? Output.empty() : this.localPath;
+    public Output<String> localPath() {
+        return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
     @Import(name="remote")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs> remote;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs> getRemote() {
-        return this.remote == null ? Output.empty() : this.remote;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs> remote() {
+        return this.remote == null ? Codegen.empty() : this.remote;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs(
@@ -73,10 +74,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs() {
-        this.allowInsecure = Output.empty();
-        this.gcs = Output.empty();
-        this.localPath = Output.empty();
-        this.remote = Output.empty();
+        this.allowInsecure = Codegen.empty();
+        this.gcs = Codegen.empty();
+        this.localPath = Codegen.empty();
+        this.remote = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
             return this;
         }
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Output.ofNullable(allowInsecure);
+            this.allowInsecure = Codegen.ofNullable(allowInsecure);
             return this;
         }
         public Builder gcs(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs> gcs) {
@@ -118,7 +119,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
             return this;
         }
         public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs gcs) {
-            this.gcs = Output.ofNullable(gcs);
+            this.gcs = Codegen.ofNullable(gcs);
             return this;
         }
         public Builder localPath(@Nullable Output<String> localPath) {
@@ -126,7 +127,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
             return this;
         }
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Output.ofNullable(localPath);
+            this.localPath = Codegen.ofNullable(localPath);
             return this;
         }
         public Builder remote(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs> remote) {
@@ -134,7 +135,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
             return this;
         }
         public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs remote) {
-            this.remote = Output.ofNullable(remote);
+            this.remote = Codegen.ofNullable(remote);
             return this;
         }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs(allowInsecure, gcs, localPath, remote);

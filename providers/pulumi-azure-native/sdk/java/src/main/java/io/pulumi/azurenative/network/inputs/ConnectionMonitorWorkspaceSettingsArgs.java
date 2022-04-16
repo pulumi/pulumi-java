@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
     @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
+    public Output<String> workspaceResourceId() {
+        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 
     public ConnectionMonitorWorkspaceSettingsArgs(@Nullable Output<String> workspaceResourceId) {
@@ -34,7 +35,7 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
     }
 
     private ConnectionMonitorWorkspaceSettingsArgs() {
-        this.workspaceResourceId = Output.empty();
+        this.workspaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
             return this;
         }
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
             return this;
         }        public ConnectionMonitorWorkspaceSettingsArgs build() {
             return new ConnectionMonitorWorkspaceSettingsArgs(workspaceResourceId);

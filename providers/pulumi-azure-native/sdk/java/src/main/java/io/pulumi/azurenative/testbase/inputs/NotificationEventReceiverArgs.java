@@ -6,6 +6,7 @@ package io.pulumi.azurenative.testbase.inputs;
 import io.pulumi.azurenative.testbase.inputs.NotificationReceiverValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
     @Import(name="receiverType")
       private final @Nullable Output<String> receiverType;
 
-    public Output<String> getReceiverType() {
-        return this.receiverType == null ? Output.empty() : this.receiverType;
+    public Output<String> receiverType() {
+        return this.receiverType == null ? Codegen.empty() : this.receiverType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
     @Import(name="receiverValue")
       private final @Nullable Output<NotificationReceiverValueArgs> receiverValue;
 
-    public Output<NotificationReceiverValueArgs> getReceiverValue() {
-        return this.receiverValue == null ? Output.empty() : this.receiverValue;
+    public Output<NotificationReceiverValueArgs> receiverValue() {
+        return this.receiverValue == null ? Codegen.empty() : this.receiverValue;
     }
 
     public NotificationEventReceiverArgs(
@@ -49,8 +50,8 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
     }
 
     private NotificationEventReceiverArgs() {
-        this.receiverType = Output.empty();
-        this.receiverValue = Output.empty();
+        this.receiverType = Codegen.empty();
+        this.receiverValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder receiverType(@Nullable String receiverType) {
-            this.receiverType = Output.ofNullable(receiverType);
+            this.receiverType = Codegen.ofNullable(receiverType);
             return this;
         }
         public Builder receiverValue(@Nullable Output<NotificationReceiverValueArgs> receiverValue) {
@@ -88,7 +89,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder receiverValue(@Nullable NotificationReceiverValueArgs receiverValue) {
-            this.receiverValue = Output.ofNullable(receiverValue);
+            this.receiverValue = Codegen.ofNullable(receiverValue);
             return this;
         }        public NotificationEventReceiverArgs build() {
             return new NotificationEventReceiverArgs(receiverType, receiverValue);

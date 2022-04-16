@@ -9,6 +9,7 @@ import io.pulumi.aws.route53recoveryreadiness.inputs.ReadinessCheckState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return ARN of the readiness_check
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return Unique name describing the readiness check.
      * 
      */
-    public Output<String> getReadinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName;
     }
     /**
@@ -68,7 +69,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return Name describing the resource set that will be monitored for readiness.
      * 
      */
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName;
     }
     /**
@@ -82,7 +83,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -96,7 +97,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -122,7 +123,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReadinessCheck(String name, ReadinessCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53recoveryreadiness/readinessCheck:ReadinessCheck", name, args == null ? ReadinessCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53recoveryreadiness/readinessCheck:ReadinessCheck", name, args == null ? ReadinessCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReadinessCheck(String name, Output<String> id, @Nullable ReadinessCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

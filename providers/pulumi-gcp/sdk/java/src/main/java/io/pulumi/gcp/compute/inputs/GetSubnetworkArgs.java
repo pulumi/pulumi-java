@@ -22,7 +22,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -34,7 +34,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -46,7 +46,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -58,7 +58,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="selfLink")
       private final @Nullable String selfLink;
 
-    public Optional<String> getSelfLink() {
+    public Optional<String> selfLink() {
         return this.selfLink == null ? Optional.empty() : Optional.ofNullable(this.selfLink);
     }
 

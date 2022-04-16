@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnDelimiter")
       private final @Nullable Output<Object> columnDelimiter;
 
-    public Output<Object> getColumnDelimiter() {
-        return this.columnDelimiter == null ? Output.empty() : this.columnDelimiter;
+    public Output<Object> columnDelimiter() {
+        return this.columnDelimiter == null ? Codegen.empty() : this.columnDelimiter;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
 
-    public Output<Object> getDeserializer() {
-        return this.deserializer == null ? Output.empty() : this.deserializer;
+    public Output<Object> deserializer() {
+        return this.deserializer == null ? Codegen.empty() : this.deserializer;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encodingName")
       private final @Nullable Output<Object> encodingName;
 
-    public Output<Object> getEncodingName() {
-        return this.encodingName == null ? Output.empty() : this.encodingName;
+    public Output<Object> encodingName() {
+        return this.encodingName == null ? Codegen.empty() : this.encodingName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="escapeChar")
       private final @Nullable Output<Object> escapeChar;
 
-    public Output<Object> getEscapeChar() {
-        return this.escapeChar == null ? Output.empty() : this.escapeChar;
+    public Output<Object> escapeChar() {
+        return this.escapeChar == null ? Codegen.empty() : this.escapeChar;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstRowAsHeader")
       private final @Nullable Output<Object> firstRowAsHeader;
 
-    public Output<Object> getFirstRowAsHeader() {
-        return this.firstRowAsHeader == null ? Output.empty() : this.firstRowAsHeader;
+    public Output<Object> firstRowAsHeader() {
+        return this.firstRowAsHeader == null ? Codegen.empty() : this.firstRowAsHeader;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nullValue")
       private final @Nullable Output<Object> nullValue;
 
-    public Output<Object> getNullValue() {
-        return this.nullValue == null ? Output.empty() : this.nullValue;
+    public Output<Object> nullValue() {
+        return this.nullValue == null ? Codegen.empty() : this.nullValue;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quoteChar")
       private final @Nullable Output<Object> quoteChar;
 
-    public Output<Object> getQuoteChar() {
-        return this.quoteChar == null ? Output.empty() : this.quoteChar;
+    public Output<Object> quoteChar() {
+        return this.quoteChar == null ? Codegen.empty() : this.quoteChar;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rowDelimiter")
       private final @Nullable Output<Object> rowDelimiter;
 
-    public Output<Object> getRowDelimiter() {
-        return this.rowDelimiter == null ? Output.empty() : this.rowDelimiter;
+    public Output<Object> rowDelimiter() {
+        return this.rowDelimiter == null ? Codegen.empty() : this.rowDelimiter;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
 
-    public Output<Object> getSerializer() {
-        return this.serializer == null ? Output.empty() : this.serializer;
+    public Output<Object> serializer() {
+        return this.serializer == null ? Codegen.empty() : this.serializer;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipLineCount")
       private final @Nullable Output<Object> skipLineCount;
 
-    public Output<Object> getSkipLineCount() {
-        return this.skipLineCount == null ? Output.empty() : this.skipLineCount;
+    public Output<Object> skipLineCount() {
+        return this.skipLineCount == null ? Codegen.empty() : this.skipLineCount;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="treatEmptyAsNull")
       private final @Nullable Output<Object> treatEmptyAsNull;
 
-    public Output<Object> getTreatEmptyAsNull() {
-        return this.treatEmptyAsNull == null ? Output.empty() : this.treatEmptyAsNull;
+    public Output<Object> treatEmptyAsNull() {
+        return this.treatEmptyAsNull == null ? Codegen.empty() : this.treatEmptyAsNull;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -180,18 +181,18 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TextFormatArgs() {
-        this.columnDelimiter = Output.empty();
-        this.deserializer = Output.empty();
-        this.encodingName = Output.empty();
-        this.escapeChar = Output.empty();
-        this.firstRowAsHeader = Output.empty();
-        this.nullValue = Output.empty();
-        this.quoteChar = Output.empty();
-        this.rowDelimiter = Output.empty();
-        this.serializer = Output.empty();
-        this.skipLineCount = Output.empty();
-        this.treatEmptyAsNull = Output.empty();
-        this.type = Output.empty();
+        this.columnDelimiter = Codegen.empty();
+        this.deserializer = Codegen.empty();
+        this.encodingName = Codegen.empty();
+        this.escapeChar = Codegen.empty();
+        this.firstRowAsHeader = Codegen.empty();
+        this.nullValue = Codegen.empty();
+        this.quoteChar = Codegen.empty();
+        this.rowDelimiter = Codegen.empty();
+        this.serializer = Codegen.empty();
+        this.skipLineCount = Codegen.empty();
+        this.treatEmptyAsNull = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columnDelimiter(@Nullable Object columnDelimiter) {
-            this.columnDelimiter = Output.ofNullable(columnDelimiter);
+            this.columnDelimiter = Codegen.ofNullable(columnDelimiter);
             return this;
         }
         public Builder deserializer(@Nullable Output<Object> deserializer) {
@@ -249,7 +250,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = Output.ofNullable(deserializer);
+            this.deserializer = Codegen.ofNullable(deserializer);
             return this;
         }
         public Builder encodingName(@Nullable Output<Object> encodingName) {
@@ -257,7 +258,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encodingName(@Nullable Object encodingName) {
-            this.encodingName = Output.ofNullable(encodingName);
+            this.encodingName = Codegen.ofNullable(encodingName);
             return this;
         }
         public Builder escapeChar(@Nullable Output<Object> escapeChar) {
@@ -265,7 +266,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder escapeChar(@Nullable Object escapeChar) {
-            this.escapeChar = Output.ofNullable(escapeChar);
+            this.escapeChar = Codegen.ofNullable(escapeChar);
             return this;
         }
         public Builder firstRowAsHeader(@Nullable Output<Object> firstRowAsHeader) {
@@ -273,7 +274,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
-            this.firstRowAsHeader = Output.ofNullable(firstRowAsHeader);
+            this.firstRowAsHeader = Codegen.ofNullable(firstRowAsHeader);
             return this;
         }
         public Builder nullValue(@Nullable Output<Object> nullValue) {
@@ -281,7 +282,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nullValue(@Nullable Object nullValue) {
-            this.nullValue = Output.ofNullable(nullValue);
+            this.nullValue = Codegen.ofNullable(nullValue);
             return this;
         }
         public Builder quoteChar(@Nullable Output<Object> quoteChar) {
@@ -289,7 +290,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quoteChar(@Nullable Object quoteChar) {
-            this.quoteChar = Output.ofNullable(quoteChar);
+            this.quoteChar = Codegen.ofNullable(quoteChar);
             return this;
         }
         public Builder rowDelimiter(@Nullable Output<Object> rowDelimiter) {
@@ -297,7 +298,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rowDelimiter(@Nullable Object rowDelimiter) {
-            this.rowDelimiter = Output.ofNullable(rowDelimiter);
+            this.rowDelimiter = Codegen.ofNullable(rowDelimiter);
             return this;
         }
         public Builder serializer(@Nullable Output<Object> serializer) {
@@ -305,7 +306,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serializer(@Nullable Object serializer) {
-            this.serializer = Output.ofNullable(serializer);
+            this.serializer = Codegen.ofNullable(serializer);
             return this;
         }
         public Builder skipLineCount(@Nullable Output<Object> skipLineCount) {
@@ -313,7 +314,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipLineCount(@Nullable Object skipLineCount) {
-            this.skipLineCount = Output.ofNullable(skipLineCount);
+            this.skipLineCount = Codegen.ofNullable(skipLineCount);
             return this;
         }
         public Builder treatEmptyAsNull(@Nullable Output<Object> treatEmptyAsNull) {
@@ -321,7 +322,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
-            this.treatEmptyAsNull = Output.ofNullable(treatEmptyAsNull);
+            this.treatEmptyAsNull = Codegen.ofNullable(treatEmptyAsNull);
             return this;
         }
         public Builder type(Output<String> type) {

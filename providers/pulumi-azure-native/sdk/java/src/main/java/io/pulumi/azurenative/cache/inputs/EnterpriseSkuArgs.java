@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cache.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<Integer> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
 
-    public Output<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 
@@ -51,8 +52,8 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnterpriseSkuArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(Output<Either<String,SkuName>> name) {

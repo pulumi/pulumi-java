@@ -21,7 +21,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     @Import(name="headerBehavior", required=true)
       private final String headerBehavior;
 
-    public String getHeaderBehavior() {
+    public String headerBehavior() {
         return this.headerBehavior;
     }
 
@@ -32,7 +32,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     @Import(name="headers", required=true)
       private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
 
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> getHeaders() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers() {
         return this.headers;
     }
 

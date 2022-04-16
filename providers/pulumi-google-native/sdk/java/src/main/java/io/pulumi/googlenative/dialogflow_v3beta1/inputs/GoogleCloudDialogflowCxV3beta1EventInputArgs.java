@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulum
     @Import(name="event")
       private final @Nullable Output<String> event;
 
-    public Output<String> getEvent() {
-        return this.event == null ? Output.empty() : this.event;
+    public Output<String> event() {
+        return this.event == null ? Codegen.empty() : this.event;
     }
 
     public GoogleCloudDialogflowCxV3beta1EventInputArgs(@Nullable Output<String> event) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowCxV3beta1EventInputArgs() {
-        this.event = Output.empty();
+        this.event = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulum
             return this;
         }
         public Builder event(@Nullable String event) {
-            this.event = Output.ofNullable(event);
+            this.event = Codegen.ofNullable(event);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1EventInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1EventInputArgs(event);

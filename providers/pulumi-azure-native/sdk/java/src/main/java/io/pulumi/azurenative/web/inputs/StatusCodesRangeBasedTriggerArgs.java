@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,15 +27,15 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
     @Import(name="statusCodes")
       private final @Nullable Output<String> statusCodes;
 
-    public Output<String> getStatusCodes() {
-        return this.statusCodes == null ? Output.empty() : this.statusCodes;
+    public Output<String> statusCodes() {
+        return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
-    public Output<String> getTimeInterval() {
-        return this.timeInterval == null ? Output.empty() : this.timeInterval;
+    public Output<String> timeInterval() {
+        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 
     public StatusCodesRangeBasedTriggerArgs(
@@ -71,10 +72,10 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
     }
 
     private StatusCodesRangeBasedTriggerArgs() {
-        this.count = Output.empty();
-        this.path = Output.empty();
-        this.statusCodes = Output.empty();
-        this.timeInterval = Output.empty();
+        this.count = Codegen.empty();
+        this.path = Codegen.empty();
+        this.statusCodes = Codegen.empty();
+        this.timeInterval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -116,7 +117,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder statusCodes(@Nullable Output<String> statusCodes) {
@@ -124,7 +125,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder statusCodes(@Nullable String statusCodes) {
-            this.statusCodes = Output.ofNullable(statusCodes);
+            this.statusCodes = Codegen.ofNullable(statusCodes);
             return this;
         }
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
@@ -132,7 +133,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Output.ofNullable(timeInterval);
+            this.timeInterval = Codegen.ofNullable(timeInterval);
             return this;
         }        public StatusCodesRangeBasedTriggerArgs build() {
             return new StatusCodesRangeBasedTriggerArgs(count, path, statusCodes, timeInterval);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * @return The properties of a private endpoint connection
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -70,7 +71,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -96,7 +97,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public IotDpsResourcePrivateEndpointConnection(String name, IotDpsResourcePrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devices:IotDpsResourcePrivateEndpointConnection", name, args == null ? IotDpsResourcePrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devices:IotDpsResourcePrivateEndpointConnection", name, args == null ? IotDpsResourcePrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IotDpsResourcePrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

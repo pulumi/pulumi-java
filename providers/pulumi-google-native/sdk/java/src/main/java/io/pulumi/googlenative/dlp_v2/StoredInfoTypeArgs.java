@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StoredInfoTypeConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,22 +23,22 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
       private final Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
 
-    public Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> getConfig() {
+    public Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config() {
         return this.config;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storedInfoTypeId")
       private final @Nullable Output<String> storedInfoTypeId;
 
-    public Output<String> getStoredInfoTypeId() {
-        return this.storedInfoTypeId == null ? Output.empty() : this.storedInfoTypeId;
+    public Output<String> storedInfoTypeId() {
+        return this.storedInfoTypeId == null ? Codegen.empty() : this.storedInfoTypeId;
     }
 
     public StoredInfoTypeArgs(
@@ -63,10 +64,10 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StoredInfoTypeArgs() {
-        this.config = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.storedInfoTypeId = Output.empty();
+        this.config = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.storedInfoTypeId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -116,7 +117,7 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder storedInfoTypeId(@Nullable Output<String> storedInfoTypeId) {
@@ -124,7 +125,7 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storedInfoTypeId(@Nullable String storedInfoTypeId) {
-            this.storedInfoTypeId = Output.ofNullable(storedInfoTypeId);
+            this.storedInfoTypeId = Codegen.ofNullable(storedInfoTypeId);
             return this;
         }        public StoredInfoTypeArgs build() {
             return new StoredInfoTypeArgs(config, location, project, storedInfoTypeId);

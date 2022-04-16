@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -54,8 +55,8 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="natPolicy")
       private final @Nullable Output<String> natPolicy;
 
-    public Output<String> getNatPolicy() {
-        return this.natPolicy == null ? Output.empty() : this.natPolicy;
+    public Output<String> natPolicy() {
+        return this.natPolicy == null ? Codegen.empty() : this.natPolicy;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public TargetInstanceArgs(
@@ -124,13 +125,13 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetInstanceArgs() {
-        this.description = Output.empty();
-        this.instance = Output.empty();
-        this.name = Output.empty();
-        this.natPolicy = Output.empty();
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.description = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.name = Codegen.empty();
+        this.natPolicy = Codegen.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instance(Output<String> instance) {
@@ -186,7 +187,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder natPolicy(@Nullable Output<String> natPolicy) {
@@ -194,7 +195,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder natPolicy(@Nullable String natPolicy) {
-            this.natPolicy = Output.ofNullable(natPolicy);
+            this.natPolicy = Codegen.ofNullable(natPolicy);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -202,7 +203,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -210,7 +211,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -218,7 +219,7 @@ public final class TargetInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public TargetInstanceArgs build() {
             return new TargetInstanceArgs(description, instance, name, natPolicy, network, project, zone);

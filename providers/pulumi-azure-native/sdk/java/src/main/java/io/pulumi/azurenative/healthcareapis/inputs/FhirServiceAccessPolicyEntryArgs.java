@@ -5,6 +5,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class FhirServiceAccessPolicyEntryArgs extends io.pulumi.resources.
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -33,7 +34,7 @@ public final class FhirServiceAccessPolicyEntryArgs extends io.pulumi.resources.
     }
 
     private FhirServiceAccessPolicyEntryArgs() {
-        this.objectId = Output.empty();
+        this.objectId = Codegen.empty();
     }
 
     public static Builder builder() {

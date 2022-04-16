@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AzureClusterAuthorizationAdminUserGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class AzureClusterAuthorizationGetArgs extends io.pulumi.resources.
     @Import(name="adminUsers", required=true)
       private final Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
-    public Output<List<AzureClusterAuthorizationAdminUserGetArgs>> getAdminUsers() {
+    public Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers() {
         return this.adminUsers;
     }
 
@@ -30,7 +31,7 @@ public final class AzureClusterAuthorizationGetArgs extends io.pulumi.resources.
     }
 
     private AzureClusterAuthorizationGetArgs() {
-        this.adminUsers = Output.empty();
+        this.adminUsers = Codegen.empty();
     }
 
     public static Builder builder() {

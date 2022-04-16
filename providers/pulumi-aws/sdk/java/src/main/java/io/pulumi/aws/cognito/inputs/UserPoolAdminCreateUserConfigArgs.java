@@ -6,6 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.UserPoolAdminCreateUserConfigInviteMessageTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
     @Import(name="allowAdminCreateUserOnly")
       private final @Nullable Output<Boolean> allowAdminCreateUserOnly;
 
-    public Output<Boolean> getAllowAdminCreateUserOnly() {
-        return this.allowAdminCreateUserOnly == null ? Output.empty() : this.allowAdminCreateUserOnly;
+    public Output<Boolean> allowAdminCreateUserOnly() {
+        return this.allowAdminCreateUserOnly == null ? Codegen.empty() : this.allowAdminCreateUserOnly;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
     @Import(name="inviteMessageTemplate")
       private final @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate;
 
-    public Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> getInviteMessageTemplate() {
-        return this.inviteMessageTemplate == null ? Output.empty() : this.inviteMessageTemplate;
+    public Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate() {
+        return this.inviteMessageTemplate == null ? Codegen.empty() : this.inviteMessageTemplate;
     }
 
     public UserPoolAdminCreateUserConfigArgs(
@@ -45,8 +46,8 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
     }
 
     private UserPoolAdminCreateUserConfigArgs() {
-        this.allowAdminCreateUserOnly = Output.empty();
-        this.inviteMessageTemplate = Output.empty();
+        this.allowAdminCreateUserOnly = Codegen.empty();
+        this.inviteMessageTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder allowAdminCreateUserOnly(@Nullable Boolean allowAdminCreateUserOnly) {
-            this.allowAdminCreateUserOnly = Output.ofNullable(allowAdminCreateUserOnly);
+            this.allowAdminCreateUserOnly = Codegen.ofNullable(allowAdminCreateUserOnly);
             return this;
         }
         public Builder inviteMessageTemplate(@Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate) {
@@ -84,7 +85,7 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder inviteMessageTemplate(@Nullable UserPoolAdminCreateUserConfigInviteMessageTemplateArgs inviteMessageTemplate) {
-            this.inviteMessageTemplate = Output.ofNullable(inviteMessageTemplate);
+            this.inviteMessageTemplate = Codegen.ofNullable(inviteMessageTemplate);
             return this;
         }        public UserPoolAdminCreateUserConfigArgs build() {
             return new UserPoolAdminCreateUserConfigArgs(allowAdminCreateUserOnly, inviteMessageTemplate);

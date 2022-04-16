@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     @Import(name="fields")
       private final @Nullable Output<List<StandardSqlFieldArgs>> fields;
 
-    public Output<List<StandardSqlFieldArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+    public Output<List<StandardSqlFieldArgs>> fields() {
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     public StandardSqlStructTypeArgs(@Nullable Output<List<StandardSqlFieldArgs>> fields) {
@@ -27,7 +28,7 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     }
 
     private StandardSqlStructTypeArgs() {
-        this.fields = Output.empty();
+        this.fields = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder fields(@Nullable List<StandardSqlFieldArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(StandardSqlFieldArgs... fields) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.marketplace.enums.Accessibility;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessibility")
       private final @Nullable Output<Either<String,Accessibility>> accessibility;
 
-    public Output<Either<String,Accessibility>> getAccessibility() {
-        return this.accessibility == null ? Output.empty() : this.accessibility;
+    public Output<Either<String,Accessibility>> accessibility() {
+        return this.accessibility == null ? Codegen.empty() : this.accessibility;
     }
 
     public PlanArgs(@Nullable Output<Either<String,Accessibility>> accessibility) {
@@ -32,7 +33,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlanArgs() {
-        this.accessibility = Output.empty();
+        this.accessibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessibility(@Nullable Either<String,Accessibility> accessibility) {
-            this.accessibility = Output.ofNullable(accessibility);
+            this.accessibility = Codegen.ofNullable(accessibility);
             return this;
         }        public PlanArgs build() {
             return new PlanArgs(accessibility);

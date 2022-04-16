@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="envgroupId", required=true)
       private final Output<String> envgroupId;
 
-    public Output<String> getEnvgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId;
     }
 
@@ -32,7 +33,7 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environment", required=true)
       private final Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
 
@@ -44,8 +45,8 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EnvGroupAttachmentArgs() {
-        this.envgroupId = Output.empty();
-        this.environment = Output.empty();
+        this.envgroupId = Codegen.empty();
+        this.environment = Codegen.empty();
     }
 
     public static Builder builder() {

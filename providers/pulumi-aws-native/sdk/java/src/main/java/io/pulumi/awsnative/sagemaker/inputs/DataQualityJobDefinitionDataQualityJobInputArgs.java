@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionEndpointInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends io.pu
     @Import(name="endpointInput", required=true)
       private final Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
 
-    public Output<DataQualityJobDefinitionEndpointInputArgs> getEndpointInput() {
+    public Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 
@@ -29,7 +30,7 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends io.pu
     }
 
     private DataQualityJobDefinitionDataQualityJobInputArgs() {
-        this.endpointInput = Output.empty();
+        this.endpointInput = Codegen.empty();
     }
 
     public static Builder builder() {

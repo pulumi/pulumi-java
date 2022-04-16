@@ -5,6 +5,7 @@ package io.pulumi.googlenative.secretmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerManagedEncryption")
       private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
-    public Output<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Output.empty() : this.customerManagedEncryption;
+    public Output<CustomerManagedEncryptionArgs> customerManagedEncryption() {
+        return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     public ReplicaArgs(
@@ -49,8 +50,8 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaArgs() {
-        this.customerManagedEncryption = Output.empty();
-        this.location = Output.empty();
+        this.customerManagedEncryption = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
+            this.customerManagedEncryption = Codegen.ofNullable(customerManagedEncryption);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -88,7 +89,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }        public ReplicaArgs build() {
             return new ReplicaArgs(customerManagedEncryption, location);

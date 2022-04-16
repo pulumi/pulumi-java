@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+    public Output<String> branch() {
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -43,8 +44,8 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
-        return this.secretArn == null ? Output.empty() : this.secretArn;
+    public Output<String> secretArn() {
+        return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
     public CodeRepositoryGitConfigGetArgs(
@@ -57,9 +58,9 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     }
 
     private CodeRepositoryGitConfigGetArgs() {
-        this.branch = Output.empty();
-        this.repositoryUrl = Output.empty();
-        this.secretArn = Output.empty();
+        this.branch = Codegen.empty();
+        this.repositoryUrl = Codegen.empty();
+        this.secretArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder repositoryUrl(Output<String> repositoryUrl) {
@@ -107,7 +108,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Output.ofNullable(secretArn);
+            this.secretArn = Codegen.ofNullable(secretArn);
             return this;
         }        public CodeRepositoryGitConfigGetArgs build() {
             return new CodeRepositoryGitConfigGetArgs(branch, repositoryUrl, secretArn);

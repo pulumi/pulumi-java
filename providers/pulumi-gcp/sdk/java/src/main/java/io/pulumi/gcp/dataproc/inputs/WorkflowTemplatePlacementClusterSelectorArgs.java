@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends io.pulum
     @Import(name="clusterLabels", required=true)
       private final Output<Map<String,String>> clusterLabels;
 
-    public Output<Map<String,String>> getClusterLabels() {
+    public Output<Map<String,String>> clusterLabels() {
         return this.clusterLabels;
     }
 
@@ -33,8 +34,8 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends io.pulum
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public WorkflowTemplatePlacementClusterSelectorArgs(
@@ -45,8 +46,8 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends io.pulum
     }
 
     private WorkflowTemplatePlacementClusterSelectorArgs() {
-        this.clusterLabels = Output.empty();
-        this.zone = Output.empty();
+        this.clusterLabels = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends io.pulum
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public WorkflowTemplatePlacementClusterSelectorArgs build() {
             return new WorkflowTemplatePlacementClusterSelectorArgs(clusterLabels, zone);

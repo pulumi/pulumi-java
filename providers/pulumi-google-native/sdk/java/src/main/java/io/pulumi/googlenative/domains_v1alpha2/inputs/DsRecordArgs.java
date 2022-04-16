@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1alpha2.enums.DsRecordAlgorithm;
 import io.pulumi.googlenative.domains_v1alpha2.enums.DsRecordDigestType;
 import java.lang.Integer;
@@ -28,8 +29,8 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="algorithm")
       private final @Nullable Output<DsRecordAlgorithm> algorithm;
 
-    public Output<DsRecordAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+    public Output<DsRecordAlgorithm> algorithm() {
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="digest")
       private final @Nullable Output<String> digest;
 
-    public Output<String> getDigest() {
-        return this.digest == null ? Output.empty() : this.digest;
+    public Output<String> digest() {
+        return this.digest == null ? Codegen.empty() : this.digest;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="digestType")
       private final @Nullable Output<DsRecordDigestType> digestType;
 
-    public Output<DsRecordDigestType> getDigestType() {
-        return this.digestType == null ? Output.empty() : this.digestType;
+    public Output<DsRecordDigestType> digestType() {
+        return this.digestType == null ? Codegen.empty() : this.digestType;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyTag")
       private final @Nullable Output<Integer> keyTag;
 
-    public Output<Integer> getKeyTag() {
-        return this.keyTag == null ? Output.empty() : this.keyTag;
+    public Output<Integer> keyTag() {
+        return this.keyTag == null ? Codegen.empty() : this.keyTag;
     }
 
     public DsRecordArgs(
@@ -77,10 +78,10 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DsRecordArgs() {
-        this.algorithm = Output.empty();
-        this.digest = Output.empty();
-        this.digestType = Output.empty();
-        this.keyTag = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.digest = Codegen.empty();
+        this.digestType = Codegen.empty();
+        this.keyTag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder algorithm(@Nullable DsRecordAlgorithm algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder digest(@Nullable Output<String> digest) {
@@ -122,7 +123,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder digest(@Nullable String digest) {
-            this.digest = Output.ofNullable(digest);
+            this.digest = Codegen.ofNullable(digest);
             return this;
         }
         public Builder digestType(@Nullable Output<DsRecordDigestType> digestType) {
@@ -130,7 +131,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder digestType(@Nullable DsRecordDigestType digestType) {
-            this.digestType = Output.ofNullable(digestType);
+            this.digestType = Codegen.ofNullable(digestType);
             return this;
         }
         public Builder keyTag(@Nullable Output<Integer> keyTag) {
@@ -138,7 +139,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyTag(@Nullable Integer keyTag) {
-            this.keyTag = Output.ofNullable(keyTag);
+            this.keyTag = Codegen.ofNullable(keyTag);
             return this;
         }        public DsRecordArgs build() {
             return new DsRecordArgs(algorithm, digest, digestType, keyTag);

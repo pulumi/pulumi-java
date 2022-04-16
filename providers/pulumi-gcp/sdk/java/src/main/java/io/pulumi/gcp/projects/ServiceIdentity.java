@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.ServiceIdentityArgs;
 import io.pulumi.gcp.projects.inputs.ServiceIdentityState;
@@ -46,7 +47,7 @@ public class ServiceIdentity extends io.pulumi.resources.CustomResource {
      * @return The email address of the Google managed service account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -62,7 +63,7 @@ public class ServiceIdentity extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -76,7 +77,7 @@ public class ServiceIdentity extends io.pulumi.resources.CustomResource {
      * @return The service to generate identity for.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -102,7 +103,7 @@ public class ServiceIdentity extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceIdentity(String name, ServiceIdentityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/serviceIdentity:ServiceIdentity", name, args == null ? ServiceIdentityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/serviceIdentity:ServiceIdentity", name, args == null ? ServiceIdentityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceIdentity(String name, Output<String> id, @Nullable ServiceIdentityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

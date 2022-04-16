@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
+    public Output<Integer> healthyThreshold() {
+        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+    public Output<Integer> interval() {
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="matcher")
       private final @Nullable Output<String> matcher;
 
-    public Output<String> getMatcher() {
-        return this.matcher == null ? Output.empty() : this.matcher;
+    public Output<String> matcher() {
+        return this.matcher == null ? Codegen.empty() : this.matcher;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<String> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<Integer> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
+    public Output<Integer> unhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 
     public TargetGroupHealthCheckArgs(
@@ -137,15 +138,15 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
     }
 
     private TargetGroupHealthCheckArgs() {
-        this.enabled = Output.empty();
-        this.healthyThreshold = Output.empty();
-        this.interval = Output.empty();
-        this.matcher = Output.empty();
-        this.path = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.timeout = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.enabled = Codegen.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.matcher = Codegen.empty();
+        this.path = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
@@ -197,7 +198,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Output.ofNullable(healthyThreshold);
+            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
             return this;
         }
         public Builder interval(@Nullable Output<Integer> interval) {
@@ -205,7 +206,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder matcher(@Nullable Output<String> matcher) {
@@ -213,7 +214,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder matcher(@Nullable String matcher) {
-            this.matcher = Output.ofNullable(matcher);
+            this.matcher = Codegen.ofNullable(matcher);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -221,7 +222,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder port(@Nullable Output<String> port) {
@@ -229,7 +230,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -237,7 +238,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -245,7 +246,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
@@ -253,7 +254,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
             return this;
         }        public TargetGroupHealthCheckArgs build() {
             return new TargetGroupHealthCheckArgs(enabled, healthyThreshold, interval, matcher, path, port, protocol, timeout, unhealthyThreshold);

@@ -9,6 +9,7 @@ import io.pulumi.aws.glue.inputs.DevEndpointState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return A map of arguments used to configure the endpoint.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getArguments() {
+    public Output</* @Nullable */ Map<String,Object>> arguments() {
         return this.arguments;
     }
     /**
@@ -57,7 +58,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ARN of the endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +72,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The AWS availability zone where this endpoint is located.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -85,7 +86,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getExtraJarsS3Path() {
+    public Output</* @Nullable */ String> extraJarsS3Path() {
         return this.extraJarsS3Path;
     }
     /**
@@ -99,7 +100,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
      * 
      */
-    public Output</* @Nullable */ String> getExtraPythonLibsS3Path() {
+    public Output</* @Nullable */ String> extraPythonLibsS3Path() {
         return this.extraPythonLibsS3Path;
     }
     /**
@@ -113,7 +114,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The reason for a current failure in this endpoint.
      * 
      */
-    public Output<String> getFailureReason() {
+    public Output<String> failureReason() {
         return this.failureReason;
     }
     /**
@@ -127,7 +128,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return -  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
      * 
      */
-    public Output</* @Nullable */ String> getGlueVersion() {
+    public Output</* @Nullable */ String> glueVersion() {
         return this.glueVersion;
     }
     /**
@@ -141,7 +142,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of this endpoint. It must be unique in your account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +156,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
      * 
      */
-    public Output</* @Nullable */ Integer> getNumberOfNodes() {
+    public Output</* @Nullable */ Integer> numberOfNodes() {
         return this.numberOfNodes;
     }
     /**
@@ -169,7 +170,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
      * 
      */
-    public Output</* @Nullable */ Integer> getNumberOfWorkers() {
+    public Output</* @Nullable */ Integer> numberOfWorkers() {
         return this.numberOfWorkers;
     }
     /**
@@ -183,7 +184,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
      * 
      */
-    public Output<String> getPrivateAddress() {
+    public Output<String> privateAddress() {
         return this.privateAddress;
     }
     /**
@@ -197,7 +198,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
      * 
      */
-    public Output<String> getPublicAddress() {
+    public Output<String> publicAddress() {
         return this.publicAddress;
     }
     /**
@@ -211,7 +212,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The public key to be used by this endpoint for authentication.
      * 
      */
-    public Output</* @Nullable */ String> getPublicKey() {
+    public Output</* @Nullable */ String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -225,7 +226,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return A list of public keys to be used by this endpoint for authentication.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPublicKeys() {
+    public Output</* @Nullable */ List<String>> publicKeys() {
         return this.publicKeys;
     }
     /**
@@ -239,7 +240,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The IAM role for this endpoint.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -253,7 +254,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the Security Configuration structure to be used with this endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityConfiguration() {
+    public Output</* @Nullable */ String> securityConfiguration() {
         return this.securityConfiguration;
     }
     /**
@@ -267,7 +268,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return Security group IDs for the security groups to be used by this endpoint.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -281,7 +282,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The current status of this endpoint.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -295,7 +296,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The subnet ID for the new endpoint to use.
      * 
      */
-    public Output</* @Nullable */ String> getSubnetId() {
+    public Output</* @Nullable */ String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -309,7 +310,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -323,7 +324,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -337,7 +338,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return he ID of the VPC used by this endpoint.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -351,7 +352,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
      * 
      */
-    public Output</* @Nullable */ String> getWorkerType() {
+    public Output</* @Nullable */ String> workerType() {
         return this.workerType;
     }
     /**
@@ -365,7 +366,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The YARN endpoint address used by this endpoint.
      * 
      */
-    public Output<String> getYarnEndpointAddress() {
+    public Output<String> yarnEndpointAddress() {
         return this.yarnEndpointAddress;
     }
     /**
@@ -379,7 +380,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @return The Apache Zeppelin port for the remote Apache Spark interpreter.
      * 
      */
-    public Output<Integer> getZeppelinRemoteSparkInterpreterPort() {
+    public Output<Integer> zeppelinRemoteSparkInterpreterPort() {
         return this.zeppelinRemoteSparkInterpreterPort;
     }
 
@@ -405,7 +406,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DevEndpoint(String name, DevEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/devEndpoint:DevEndpoint", name, args == null ? DevEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/devEndpoint:DevEndpoint", name, args == null ? DevEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DevEndpoint(String name, Output<String> id, @Nullable DevEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

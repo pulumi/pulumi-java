@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateExtensionConstraintsArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateIdentityConstraintsArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
@@ -21,7 +22,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="certificateTemplateId", required=true)
       private final Output<String> certificateTemplateId;
 
-    public Output<String> getCertificateTemplateId() {
+    public Output<String> certificateTemplateId() {
         return this.certificateTemplateId;
     }
 
@@ -32,8 +33,8 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="identityConstraints")
       private final @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
 
-    public Output<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
-        return this.identityConstraints == null ? Output.empty() : this.identityConstraints;
+    public Output<CertificateIdentityConstraintsArgs> identityConstraints() {
+        return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
     }
 
     /**
@@ -54,15 +55,15 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="passthroughExtensions")
       private final @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
-    public Output<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
-        return this.passthroughExtensions == null ? Output.empty() : this.passthroughExtensions;
+    public Output<CertificateExtensionConstraintsArgs> passthroughExtensions() {
+        return this.passthroughExtensions == null ? Codegen.empty() : this.passthroughExtensions;
     }
 
     /**
@@ -83,22 +84,22 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="predefinedValues")
       private final @Nullable Output<X509ParametersArgs> predefinedValues;
 
-    public Output<X509ParametersArgs> getPredefinedValues() {
-        return this.predefinedValues == null ? Output.empty() : this.predefinedValues;
+    public Output<X509ParametersArgs> predefinedValues() {
+        return this.predefinedValues == null ? Codegen.empty() : this.predefinedValues;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     public CertificateTemplateArgs(
@@ -123,15 +124,15 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     }
 
     private CertificateTemplateArgs() {
-        this.certificateTemplateId = Output.empty();
-        this.description = Output.empty();
-        this.identityConstraints = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.passthroughExtensions = Output.empty();
-        this.predefinedValues = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
+        this.certificateTemplateId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.identityConstraints = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.passthroughExtensions = Codegen.empty();
+        this.predefinedValues = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder identityConstraints(@Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints) {
@@ -191,7 +192,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder identityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
-            this.identityConstraints = Output.ofNullable(identityConstraints);
+            this.identityConstraints = Codegen.ofNullable(identityConstraints);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -199,7 +200,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -207,7 +208,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder passthroughExtensions(@Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions) {
@@ -215,7 +216,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder passthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
-            this.passthroughExtensions = Output.ofNullable(passthroughExtensions);
+            this.passthroughExtensions = Codegen.ofNullable(passthroughExtensions);
             return this;
         }
         public Builder predefinedValues(@Nullable Output<X509ParametersArgs> predefinedValues) {
@@ -223,7 +224,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder predefinedValues(@Nullable X509ParametersArgs predefinedValues) {
-            this.predefinedValues = Output.ofNullable(predefinedValues);
+            this.predefinedValues = Codegen.ofNullable(predefinedValues);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -231,7 +232,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -239,7 +240,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }        public CertificateTemplateArgs build() {
             return new CertificateTemplateArgs(certificateTemplateId, description, identityConstraints, labels, location, passthroughExtensions, predefinedValues, project, requestId);

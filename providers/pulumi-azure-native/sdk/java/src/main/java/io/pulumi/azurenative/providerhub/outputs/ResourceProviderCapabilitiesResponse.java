@@ -25,13 +25,13 @@ public final class ResourceProviderCapabilitiesResponse {
         this.requiredFeatures = requiredFeatures;
     }
 
-    public String getEffect() {
+    public String effect() {
         return this.effect;
     }
-    public String getQuotaId() {
+    public String quotaId() {
         return this.quotaId;
     }
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 

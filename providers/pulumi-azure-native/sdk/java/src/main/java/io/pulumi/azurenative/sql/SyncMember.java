@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Database name of the member database in the sync member.
      * 
      */
-    public Output</* @Nullable */ String> getDatabaseName() {
+    public Output</* @Nullable */ String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -56,7 +57,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Database type of the sync member.
      * 
      */
-    public Output</* @Nullable */ String> getDatabaseType() {
+    public Output</* @Nullable */ String> databaseType() {
         return this.databaseType;
     }
     /**
@@ -70,7 +71,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
      * 
      */
-    public Output<String> getPrivateEndpointName() {
+    public Output<String> privateEndpointName() {
         return this.privateEndpointName;
     }
     /**
@@ -98,7 +99,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Server name of the member database in the sync member
      * 
      */
-    public Output</* @Nullable */ String> getServerName() {
+    public Output</* @Nullable */ String> serverName() {
         return this.serverName;
     }
     /**
@@ -112,7 +113,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return SQL Server database id of the sync member.
      * 
      */
-    public Output</* @Nullable */ String> getSqlServerDatabaseId() {
+    public Output</* @Nullable */ String> sqlServerDatabaseId() {
         return this.sqlServerDatabaseId;
     }
     /**
@@ -126,7 +127,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync agent in the sync member.
      * 
      */
-    public Output</* @Nullable */ String> getSyncAgentId() {
+    public Output</* @Nullable */ String> syncAgentId() {
         return this.syncAgentId;
     }
     /**
@@ -140,7 +141,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Sync direction of the sync member.
      * 
      */
-    public Output</* @Nullable */ String> getSyncDirection() {
+    public Output</* @Nullable */ String> syncDirection() {
         return this.syncDirection;
     }
     /**
@@ -154,7 +155,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync member logical database, for sync members in Azure.
      * 
      */
-    public Output</* @Nullable */ String> getSyncMemberAzureDatabaseResourceId() {
+    public Output</* @Nullable */ String> syncMemberAzureDatabaseResourceId() {
         return this.syncMemberAzureDatabaseResourceId;
     }
     /**
@@ -168,7 +169,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Sync state of the sync member.
      * 
      */
-    public Output<String> getSyncState() {
+    public Output<String> syncState() {
         return this.syncState;
     }
     /**
@@ -182,7 +183,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -196,7 +197,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return Whether to use private link connection.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUsePrivateLinkConnection() {
+    public Output</* @Nullable */ Boolean> usePrivateLinkConnection() {
         return this.usePrivateLinkConnection;
     }
     /**
@@ -210,7 +211,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @return User name of the member database in the sync member.
      * 
      */
-    public Output</* @Nullable */ String> getUserName() {
+    public Output</* @Nullable */ String> userName() {
         return this.userName;
     }
 
@@ -236,7 +237,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SyncMember(String name, SyncMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:SyncMember", name, args == null ? SyncMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:SyncMember", name, args == null ? SyncMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SyncMember(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

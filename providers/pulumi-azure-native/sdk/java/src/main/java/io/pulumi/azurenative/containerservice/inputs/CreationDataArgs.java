@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
+    public Output<String> sourceResourceId() {
+        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
     public CreationDataArgs(@Nullable Output<String> sourceResourceId) {
@@ -34,7 +35,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CreationDataArgs() {
-        this.sourceResourceId = Output.empty();
+        this.sourceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Output.ofNullable(sourceResourceId);
+            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
             return this;
         }        public CreationDataArgs build() {
             return new CreationDataArgs(sourceResourceId);

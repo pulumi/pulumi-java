@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="grade", required=true)
       private final Output<String> grade;
 
-    public Output<String> getGrade() {
+    public Output<String> grade() {
         return this.grade;
     }
 
@@ -35,7 +36,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="reason", required=true)
       private final Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
 
@@ -46,7 +47,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="score", required=true)
       private final Output<String> score;
 
-    public Output<String> getScore() {
+    public Output<String> score() {
         return this.score;
     }
 
@@ -60,9 +61,9 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PredictionMappingsArgs() {
-        this.grade = Output.empty();
-        this.reason = Output.empty();
-        this.score = Output.empty();
+        this.grade = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.score = Codegen.empty();
     }
 
     public static Builder builder() {

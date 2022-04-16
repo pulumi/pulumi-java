@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
     @Import(name="concurrentExecutions", required=true)
       private final Output<Integer> concurrentExecutions;
 
-    public Output<Integer> getConcurrentExecutions() {
+    public Output<Integer> concurrentExecutions() {
         return this.concurrentExecutions;
     }
 
@@ -33,7 +34,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
     @Import(name="launchPath", required=true)
       private final Output<String> launchPath;
 
-    public Output<String> getLaunchPath() {
+    public Output<String> launchPath() {
         return this.launchPath;
     }
 
@@ -44,8 +45,8 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<String> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public FleetRuntimeConfigurationServerProcessArgs(
@@ -58,9 +59,9 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
     }
 
     private FleetRuntimeConfigurationServerProcessArgs() {
-        this.concurrentExecutions = Output.empty();
-        this.launchPath = Output.empty();
-        this.parameters = Output.empty();
+        this.concurrentExecutions = Codegen.empty();
+        this.launchPath = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public FleetRuntimeConfigurationServerProcessArgs build() {
             return new FleetRuntimeConfigurationServerProcessArgs(concurrentExecutions, launchPath, parameters);

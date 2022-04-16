@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
       private final @Nullable Output<List<String>> resourceNames;
 
-    public Output<List<String>> getResourceNames() {
-        return this.resourceNames == null ? Output.empty() : this.resourceNames;
+    public Output<List<String>> resourceNames() {
+        return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
     }
 
     public LogsPanelArgs(
@@ -49,8 +50,8 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogsPanelArgs() {
-        this.filter = Output.empty();
-        this.resourceNames = Output.empty();
+        this.filter = Codegen.empty();
+        this.resourceNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
@@ -88,7 +89,7 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceNames(@Nullable List<String> resourceNames) {
-            this.resourceNames = Output.ofNullable(resourceNames);
+            this.resourceNames = Codegen.ofNullable(resourceNames);
             return this;
         }
         public Builder resourceNames(String... resourceNames) {

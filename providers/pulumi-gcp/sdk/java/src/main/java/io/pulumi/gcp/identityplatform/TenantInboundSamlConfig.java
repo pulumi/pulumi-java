@@ -6,6 +6,7 @@ package io.pulumi.gcp.identityplatform;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.TenantInboundSamlConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigState;
@@ -54,7 +55,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * @return Human friendly display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -68,7 +69,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * @return If this config allows users to sign in with the provider.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -84,7 +85,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * Structure is documented below.
      * 
      */
-    public Output<TenantInboundSamlConfigIdpConfig> getIdpConfig() {
+    public Output<TenantInboundSamlConfigIdpConfig> idpConfig() {
         return this.idpConfig;
     }
     /**
@@ -102,7 +103,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * alphanumeric character, and have at least 2 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +119,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -136,7 +137,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * Structure is documented below.
      * 
      */
-    public Output<TenantInboundSamlConfigSpConfig> getSpConfig() {
+    public Output<TenantInboundSamlConfigSpConfig> spConfig() {
         return this.spConfig;
     }
     /**
@@ -150,7 +151,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * @return The name of the tenant where this inbound SAML config resource exists
      * 
      */
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant;
     }
 
@@ -176,7 +177,7 @@ public class TenantInboundSamlConfig extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public TenantInboundSamlConfig(String name, TenantInboundSamlConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig", name, args == null ? TenantInboundSamlConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig", name, args == null ? TenantInboundSamlConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TenantInboundSamlConfig(String name, Output<String> id, @Nullable TenantInboundSamlConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

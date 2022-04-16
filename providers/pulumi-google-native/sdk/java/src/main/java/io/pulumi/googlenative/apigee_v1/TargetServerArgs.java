@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.enums.TargetServerProtocol;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TlsInfoArgs;
 import java.lang.Boolean;
@@ -25,14 +26,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -43,7 +44,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -54,8 +55,8 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+    public Output<Boolean> isEnabled() {
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     /**
@@ -65,14 +66,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -83,7 +84,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -94,8 +95,8 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<TargetServerProtocol> protocol;
 
-    public Output<TargetServerProtocol> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<TargetServerProtocol> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sSLInfo")
       private final @Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
 
-    public Output<GoogleCloudApigeeV1TlsInfoArgs> getSSLInfo() {
-        return this.sSLInfo == null ? Output.empty() : this.sSLInfo;
+    public Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo() {
+        return this.sSLInfo == null ? Codegen.empty() : this.sSLInfo;
     }
 
     public TargetServerArgs(
@@ -131,15 +132,15 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetServerArgs() {
-        this.description = Output.empty();
-        this.environmentId = Output.empty();
-        this.host = Output.empty();
-        this.isEnabled = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.sSLInfo = Output.empty();
+        this.description = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.host = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.sSLInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -207,7 +208,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -215,7 +216,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -239,7 +240,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable TargetServerProtocol protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder sSLInfo(@Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
@@ -247,7 +248,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sSLInfo(@Nullable GoogleCloudApigeeV1TlsInfoArgs sSLInfo) {
-            this.sSLInfo = Output.ofNullable(sSLInfo);
+            this.sSLInfo = Codegen.ofNullable(sSLInfo);
             return this;
         }        public TargetServerArgs build() {
             return new TargetServerArgs(description, environmentId, host, isEnabled, name, organizationId, port, protocol, sSLInfo);

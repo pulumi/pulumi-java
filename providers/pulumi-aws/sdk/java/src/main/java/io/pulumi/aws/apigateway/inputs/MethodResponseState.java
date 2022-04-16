@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
-        return this.httpMethod == null ? Output.empty() : this.httpMethod;
+    public Output<String> httpMethod() {
+        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     @Import(name="responseModels")
       private final @Nullable Output<Map<String,String>> responseModels;
 
-    public Output<Map<String,String>> getResponseModels() {
-        return this.responseModels == null ? Output.empty() : this.responseModels;
+    public Output<Map<String,String>> responseModels() {
+        return this.responseModels == null ? Codegen.empty() : this.responseModels;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     @Import(name="responseParameters")
       private final @Nullable Output<Map<String,Boolean>> responseParameters;
 
-    public Output<Map<String,Boolean>> getResponseParameters() {
-        return this.responseParameters == null ? Output.empty() : this.responseParameters;
+    public Output<Map<String,Boolean>> responseParameters() {
+        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+    public Output<String> restApi() {
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
-        return this.statusCode == null ? Output.empty() : this.statusCode;
+    public Output<String> statusCode() {
+        return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
     public MethodResponseState(
@@ -100,12 +101,12 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     }
 
     private MethodResponseState() {
-        this.httpMethod = Output.empty();
-        this.resourceId = Output.empty();
-        this.responseModels = Output.empty();
-        this.responseParameters = Output.empty();
-        this.restApi = Output.empty();
-        this.statusCode = Output.empty();
+        this.httpMethod = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.responseModels = Codegen.empty();
+        this.responseParameters = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Output.ofNullable(httpMethod);
+            this.httpMethod = Codegen.ofNullable(httpMethod);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -151,7 +152,7 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
@@ -159,7 +160,7 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
-            this.responseModels = Output.ofNullable(responseModels);
+            this.responseModels = Codegen.ofNullable(responseModels);
             return this;
         }
         public Builder responseParameters(@Nullable Output<Map<String,Boolean>> responseParameters) {
@@ -167,7 +168,7 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder responseParameters(@Nullable Map<String,Boolean> responseParameters) {
-            this.responseParameters = Output.ofNullable(responseParameters);
+            this.responseParameters = Codegen.ofNullable(responseParameters);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {
@@ -179,7 +180,7 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Output.ofNullable(statusCode);
+            this.statusCode = Codegen.ofNullable(statusCode);
             return this;
         }        public MethodResponseState build() {
             return new MethodResponseState(httpMethod, resourceId, responseModels, responseParameters, restApi, statusCode);

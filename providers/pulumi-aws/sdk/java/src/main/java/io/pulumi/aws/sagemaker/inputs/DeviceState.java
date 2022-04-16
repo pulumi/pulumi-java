@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
-        return this.agentVersion == null ? Output.empty() : this.agentVersion;
+    public Output<String> agentVersion() {
+        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="device")
       private final @Nullable Output<DeviceDeviceGetArgs> device;
 
-    public Output<DeviceDeviceGetArgs> getDevice() {
-        return this.device == null ? Output.empty() : this.device;
+    public Output<DeviceDeviceGetArgs> device() {
+        return this.device == null ? Codegen.empty() : this.device;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName")
       private final @Nullable Output<String> deviceFleetName;
 
-    public Output<String> getDeviceFleetName() {
-        return this.deviceFleetName == null ? Output.empty() : this.deviceFleetName;
+    public Output<String> deviceFleetName() {
+        return this.deviceFleetName == null ? Codegen.empty() : this.deviceFleetName;
     }
 
     public DeviceState(
@@ -67,10 +68,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceState() {
-        this.agentVersion = Output.empty();
-        this.arn = Output.empty();
-        this.device = Output.empty();
-        this.deviceFleetName = Output.empty();
+        this.agentVersion = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.device = Codegen.empty();
+        this.deviceFleetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Output.ofNullable(agentVersion);
+            this.agentVersion = Codegen.ofNullable(agentVersion);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -112,7 +113,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder device(@Nullable Output<DeviceDeviceGetArgs> device) {
@@ -120,7 +121,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder device(@Nullable DeviceDeviceGetArgs device) {
-            this.device = Output.ofNullable(device);
+            this.device = Codegen.ofNullable(device);
             return this;
         }
         public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
@@ -128,7 +129,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
-            this.deviceFleetName = Output.ofNullable(deviceFleetName);
+            this.deviceFleetName = Codegen.ofNullable(deviceFleetName);
             return this;
         }        public DeviceState build() {
             return new DeviceState(agentVersion, arn, device, deviceFleetName);

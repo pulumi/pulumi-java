@@ -7,6 +7,7 @@ import io.pulumi.aws.connect.inputs.HoursOfOperationConfigEndTimeArgs;
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigStartTimeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     @Import(name="day", required=true)
       private final Output<String> day;
 
-    public Output<String> getDay() {
+    public Output<String> day() {
         return this.day;
     }
 
@@ -33,7 +34,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     @Import(name="endTime", required=true)
       private final Output<HoursOfOperationConfigEndTimeArgs> endTime;
 
-    public Output<HoursOfOperationConfigEndTimeArgs> getEndTime() {
+    public Output<HoursOfOperationConfigEndTimeArgs> endTime() {
         return this.endTime;
     }
 
@@ -44,7 +45,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     @Import(name="startTime", required=true)
       private final Output<HoursOfOperationConfigStartTimeArgs> startTime;
 
-    public Output<HoursOfOperationConfigStartTimeArgs> getStartTime() {
+    public Output<HoursOfOperationConfigStartTimeArgs> startTime() {
         return this.startTime;
     }
 
@@ -58,9 +59,9 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     }
 
     private HoursOfOperationConfigArgs() {
-        this.day = Output.empty();
-        this.endTime = Output.empty();
-        this.startTime = Output.empty();
+        this.day = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

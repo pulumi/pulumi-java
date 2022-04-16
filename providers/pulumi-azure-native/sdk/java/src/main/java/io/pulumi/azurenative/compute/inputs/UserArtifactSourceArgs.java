@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="defaultConfigurationLink")
       private final @Nullable Output<String> defaultConfigurationLink;
 
-    public Output<String> getDefaultConfigurationLink() {
-        return this.defaultConfigurationLink == null ? Output.empty() : this.defaultConfigurationLink;
+    public Output<String> defaultConfigurationLink() {
+        return this.defaultConfigurationLink == null ? Codegen.empty() : this.defaultConfigurationLink;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="mediaLink", required=true)
       private final Output<String> mediaLink;
 
-    public Output<String> getMediaLink() {
+    public Output<String> mediaLink() {
         return this.mediaLink;
     }
 
@@ -48,8 +49,8 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private UserArtifactSourceArgs() {
-        this.defaultConfigurationLink = Output.empty();
-        this.mediaLink = Output.empty();
+        this.defaultConfigurationLink = Codegen.empty();
+        this.mediaLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder defaultConfigurationLink(@Nullable String defaultConfigurationLink) {
-            this.defaultConfigurationLink = Output.ofNullable(defaultConfigurationLink);
+            this.defaultConfigurationLink = Codegen.ofNullable(defaultConfigurationLink);
             return this;
         }
         public Builder mediaLink(Output<String> mediaLink) {

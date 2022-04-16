@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
     @Import(name="aadAudience")
       private final @Nullable Output<String> aadAudience;
 
-    public Output<String> getAadAudience() {
-        return this.aadAudience == null ? Output.empty() : this.aadAudience;
+    public Output<String> aadAudience() {
+        return this.aadAudience == null ? Codegen.empty() : this.aadAudience;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
     @Import(name="aadIssuer")
       private final @Nullable Output<String> aadIssuer;
 
-    public Output<String> getAadIssuer() {
-        return this.aadIssuer == null ? Output.empty() : this.aadIssuer;
+    public Output<String> aadIssuer() {
+        return this.aadIssuer == null ? Codegen.empty() : this.aadIssuer;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
     @Import(name="aadTenant")
       private final @Nullable Output<String> aadTenant;
 
-    public Output<String> getAadTenant() {
-        return this.aadTenant == null ? Output.empty() : this.aadTenant;
+    public Output<String> aadTenant() {
+        return this.aadTenant == null ? Codegen.empty() : this.aadTenant;
     }
 
     public AadAuthenticationParametersArgs(
@@ -61,9 +62,9 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
     }
 
     private AadAuthenticationParametersArgs() {
-        this.aadAudience = Output.empty();
-        this.aadIssuer = Output.empty();
-        this.aadTenant = Output.empty();
+        this.aadAudience = Codegen.empty();
+        this.aadIssuer = Codegen.empty();
+        this.aadTenant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder aadAudience(@Nullable String aadAudience) {
-            this.aadAudience = Output.ofNullable(aadAudience);
+            this.aadAudience = Codegen.ofNullable(aadAudience);
             return this;
         }
         public Builder aadIssuer(@Nullable Output<String> aadIssuer) {
@@ -103,7 +104,7 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder aadIssuer(@Nullable String aadIssuer) {
-            this.aadIssuer = Output.ofNullable(aadIssuer);
+            this.aadIssuer = Codegen.ofNullable(aadIssuer);
             return this;
         }
         public Builder aadTenant(@Nullable Output<String> aadTenant) {
@@ -111,7 +112,7 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder aadTenant(@Nullable String aadTenant) {
-            this.aadTenant = Output.ofNullable(aadTenant);
+            this.aadTenant = Codegen.ofNullable(aadTenant);
             return this;
         }        public AadAuthenticationParametersArgs build() {
             return new AadAuthenticationParametersArgs(aadAudience, aadIssuer, aadTenant);

@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="csvMappingParameters")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> getCsvMappingParameters() {
-        return this.csvMappingParameters == null ? Output.empty() : this.csvMappingParameters;
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters() {
+        return this.csvMappingParameters == null ? Codegen.empty() : this.csvMappingParameters;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="jsonMappingParameters")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> getJsonMappingParameters() {
-        return this.jsonMappingParameters == null ? Output.empty() : this.jsonMappingParameters;
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters() {
+        return this.jsonMappingParameters == null ? Codegen.empty() : this.jsonMappingParameters;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs(
@@ -45,8 +46,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs() {
-        this.csvMappingParameters = Output.empty();
-        this.jsonMappingParameters = Output.empty();
+        this.csvMappingParameters = Codegen.empty();
+        this.jsonMappingParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder csvMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs csvMappingParameters) {
-            this.csvMappingParameters = Output.ofNullable(csvMappingParameters);
+            this.csvMappingParameters = Codegen.ofNullable(csvMappingParameters);
             return this;
         }
         public Builder jsonMappingParameters(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters) {
@@ -84,7 +85,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder jsonMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs jsonMappingParameters) {
-            this.jsonMappingParameters = Output.ofNullable(jsonMappingParameters);
+            this.jsonMappingParameters = Codegen.ofNullable(jsonMappingParameters);
             return this;
         }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs(csvMappingParameters, jsonMappingParameters);

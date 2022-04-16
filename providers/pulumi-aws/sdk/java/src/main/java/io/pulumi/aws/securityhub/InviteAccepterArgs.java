@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterId", required=true)
       private final Output<String> masterId;
 
-    public Output<String> getMasterId() {
+    public Output<String> masterId() {
         return this.masterId;
     }
 
@@ -29,7 +30,7 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InviteAccepterArgs() {
-        this.masterId = Output.empty();
+        this.masterId = Codegen.empty();
     }
 
     public static Builder builder() {

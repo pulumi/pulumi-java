@@ -22,10 +22,10 @@ public final class GrafeasV1beta1IntotoDetailsResponse {
         this.signed = signed;
     }
 
-    public List<GrafeasV1beta1IntotoSignatureResponse> getSignatures() {
+    public List<GrafeasV1beta1IntotoSignatureResponse> signatures() {
         return this.signatures;
     }
-    public LinkResponse getSigned() {
+    public LinkResponse signed() {
         return this.signed;
     }
 

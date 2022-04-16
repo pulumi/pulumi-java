@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ConfigMapNodeConfigSourceArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="configMap")
       private final @Nullable Output<ConfigMapNodeConfigSourceArgs> configMap;
 
-    public Output<ConfigMapNodeConfigSourceArgs> getConfigMap() {
-        return this.configMap == null ? Output.empty() : this.configMap;
+    public Output<ConfigMapNodeConfigSourceArgs> configMap() {
+        return this.configMap == null ? Codegen.empty() : this.configMap;
     }
 
     public NodeConfigSourceArgs(@Nullable Output<ConfigMapNodeConfigSourceArgs> configMap) {
@@ -34,7 +35,7 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NodeConfigSourceArgs() {
-        this.configMap = Output.empty();
+        this.configMap = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder configMap(@Nullable ConfigMapNodeConfigSourceArgs configMap) {
-            this.configMap = Output.ofNullable(configMap);
+            this.configMap = Codegen.ofNullable(configMap);
             return this;
         }        public NodeConfigSourceArgs build() {
             return new NodeConfigSourceArgs(configMap);

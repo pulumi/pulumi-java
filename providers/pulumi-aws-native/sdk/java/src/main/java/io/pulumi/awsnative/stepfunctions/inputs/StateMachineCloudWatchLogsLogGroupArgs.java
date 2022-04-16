@@ -5,6 +5,7 @@ package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
     @Import(name="logGroupArn")
       private final @Nullable Output<String> logGroupArn;
 
-    public Output<String> getLogGroupArn() {
-        return this.logGroupArn == null ? Output.empty() : this.logGroupArn;
+    public Output<String> logGroupArn() {
+        return this.logGroupArn == null ? Codegen.empty() : this.logGroupArn;
     }
 
     public StateMachineCloudWatchLogsLogGroupArgs(@Nullable Output<String> logGroupArn) {
@@ -26,7 +27,7 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
     }
 
     private StateMachineCloudWatchLogsLogGroupArgs() {
-        this.logGroupArn = Output.empty();
+        this.logGroupArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
             return this;
         }
         public Builder logGroupArn(@Nullable String logGroupArn) {
-            this.logGroupArn = Output.ofNullable(logGroupArn);
+            this.logGroupArn = Codegen.ofNullable(logGroupArn);
             return this;
         }        public StateMachineCloudWatchLogsLogGroupArgs build() {
             return new StateMachineCloudWatchLogsLogGroupArgs(logGroupArn);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     public ConfigFileArgs(@Nullable Output<String> content) {
@@ -30,7 +31,7 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigFileArgs() {
-        this.content = Output.empty();
+        this.content = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }        public ConfigFileArgs build() {
             return new ConfigFileArgs(content);

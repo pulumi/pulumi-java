@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     @Import(name="categories", required=true)
       private final Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories;
     }
 
@@ -34,7 +35,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     }
 
     private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs() {
-        this.categories = Output.empty();
+        this.categories = Codegen.empty();
     }
 
     public static Builder builder() {

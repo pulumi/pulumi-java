@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetInstanceTypeSpecif
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetTagSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,64 +25,64 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
+    public Output<String> allocationStrategy() {
+        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
-        return this.endDate == null ? Output.empty() : this.endDate;
+    public Output<String> endDate() {
+        return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     @Import(name="instanceMatchCriteria")
       private final @Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
-    public Output<CapacityReservationFleetInstanceMatchCriteria> getInstanceMatchCriteria() {
-        return this.instanceMatchCriteria == null ? Output.empty() : this.instanceMatchCriteria;
+    public Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria() {
+        return this.instanceMatchCriteria == null ? Codegen.empty() : this.instanceMatchCriteria;
     }
 
     @Import(name="instanceTypeSpecifications")
       private final @Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
 
-    public Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> getInstanceTypeSpecifications() {
-        return this.instanceTypeSpecifications == null ? Output.empty() : this.instanceTypeSpecifications;
+    public Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications() {
+        return this.instanceTypeSpecifications == null ? Codegen.empty() : this.instanceTypeSpecifications;
     }
 
     @Import(name="noRemoveEndDate")
       private final @Nullable Output<Boolean> noRemoveEndDate;
 
-    public Output<Boolean> getNoRemoveEndDate() {
-        return this.noRemoveEndDate == null ? Output.empty() : this.noRemoveEndDate;
+    public Output<Boolean> noRemoveEndDate() {
+        return this.noRemoveEndDate == null ? Codegen.empty() : this.noRemoveEndDate;
     }
 
     @Import(name="removeEndDate")
       private final @Nullable Output<Boolean> removeEndDate;
 
-    public Output<Boolean> getRemoveEndDate() {
-        return this.removeEndDate == null ? Output.empty() : this.removeEndDate;
+    public Output<Boolean> removeEndDate() {
+        return this.removeEndDate == null ? Codegen.empty() : this.removeEndDate;
     }
 
     @Import(name="tagSpecifications")
       private final @Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
 
-    public Output<List<CapacityReservationFleetTagSpecificationArgs>> getTagSpecifications() {
-        return this.tagSpecifications == null ? Output.empty() : this.tagSpecifications;
+    public Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications() {
+        return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
     @Import(name="tenancy")
       private final @Nullable Output<CapacityReservationFleetTenancy> tenancy;
 
-    public Output<CapacityReservationFleetTenancy> getTenancy() {
-        return this.tenancy == null ? Output.empty() : this.tenancy;
+    public Output<CapacityReservationFleetTenancy> tenancy() {
+        return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 
     @Import(name="totalTargetCapacity")
       private final @Nullable Output<Integer> totalTargetCapacity;
 
-    public Output<Integer> getTotalTargetCapacity() {
-        return this.totalTargetCapacity == null ? Output.empty() : this.totalTargetCapacity;
+    public Output<Integer> totalTargetCapacity() {
+        return this.totalTargetCapacity == null ? Codegen.empty() : this.totalTargetCapacity;
     }
 
     public CapacityReservationFleetArgs(
@@ -106,15 +107,15 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
     }
 
     private CapacityReservationFleetArgs() {
-        this.allocationStrategy = Output.empty();
-        this.endDate = Output.empty();
-        this.instanceMatchCriteria = Output.empty();
-        this.instanceTypeSpecifications = Output.empty();
-        this.noRemoveEndDate = Output.empty();
-        this.removeEndDate = Output.empty();
-        this.tagSpecifications = Output.empty();
-        this.tenancy = Output.empty();
-        this.totalTargetCapacity = Output.empty();
+        this.allocationStrategy = Codegen.empty();
+        this.endDate = Codegen.empty();
+        this.instanceMatchCriteria = Codegen.empty();
+        this.instanceTypeSpecifications = Codegen.empty();
+        this.noRemoveEndDate = Codegen.empty();
+        this.removeEndDate = Codegen.empty();
+        this.tagSpecifications = Codegen.empty();
+        this.tenancy = Codegen.empty();
+        this.totalTargetCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Output.ofNullable(allocationStrategy);
+            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
             return this;
         }
         public Builder endDate(@Nullable Output<String> endDate) {
@@ -166,7 +167,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Output.ofNullable(endDate);
+            this.endDate = Codegen.ofNullable(endDate);
             return this;
         }
         public Builder instanceMatchCriteria(@Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria) {
@@ -174,7 +175,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instanceMatchCriteria(@Nullable CapacityReservationFleetInstanceMatchCriteria instanceMatchCriteria) {
-            this.instanceMatchCriteria = Output.ofNullable(instanceMatchCriteria);
+            this.instanceMatchCriteria = Codegen.ofNullable(instanceMatchCriteria);
             return this;
         }
         public Builder instanceTypeSpecifications(@Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications) {
@@ -182,7 +183,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instanceTypeSpecifications(@Nullable List<CapacityReservationFleetInstanceTypeSpecificationArgs> instanceTypeSpecifications) {
-            this.instanceTypeSpecifications = Output.ofNullable(instanceTypeSpecifications);
+            this.instanceTypeSpecifications = Codegen.ofNullable(instanceTypeSpecifications);
             return this;
         }
         public Builder instanceTypeSpecifications(CapacityReservationFleetInstanceTypeSpecificationArgs... instanceTypeSpecifications) {
@@ -193,7 +194,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder noRemoveEndDate(@Nullable Boolean noRemoveEndDate) {
-            this.noRemoveEndDate = Output.ofNullable(noRemoveEndDate);
+            this.noRemoveEndDate = Codegen.ofNullable(noRemoveEndDate);
             return this;
         }
         public Builder removeEndDate(@Nullable Output<Boolean> removeEndDate) {
@@ -201,7 +202,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder removeEndDate(@Nullable Boolean removeEndDate) {
-            this.removeEndDate = Output.ofNullable(removeEndDate);
+            this.removeEndDate = Codegen.ofNullable(removeEndDate);
             return this;
         }
         public Builder tagSpecifications(@Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications) {
@@ -209,7 +210,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tagSpecifications(@Nullable List<CapacityReservationFleetTagSpecificationArgs> tagSpecifications) {
-            this.tagSpecifications = Output.ofNullable(tagSpecifications);
+            this.tagSpecifications = Codegen.ofNullable(tagSpecifications);
             return this;
         }
         public Builder tagSpecifications(CapacityReservationFleetTagSpecificationArgs... tagSpecifications) {
@@ -220,7 +221,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tenancy(@Nullable CapacityReservationFleetTenancy tenancy) {
-            this.tenancy = Output.ofNullable(tenancy);
+            this.tenancy = Codegen.ofNullable(tenancy);
             return this;
         }
         public Builder totalTargetCapacity(@Nullable Output<Integer> totalTargetCapacity) {
@@ -228,7 +229,7 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder totalTargetCapacity(@Nullable Integer totalTargetCapacity) {
-            this.totalTargetCapacity = Output.ofNullable(totalTargetCapacity);
+            this.totalTargetCapacity = Codegen.ofNullable(totalTargetCapacity);
             return this;
         }        public CapacityReservationFleetArgs build() {
             return new CapacityReservationFleetArgs(allocationStrategy, endDate, instanceMatchCriteria, instanceTypeSpecifications, noRemoveEndDate, removeEndDate, tagSpecifications, tenancy, totalTargetCapacity);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public DeploymentTargetImportArgs(
@@ -45,8 +46,8 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
     }
 
     private DeploymentTargetImportArgs() {
-        this.content = Output.empty();
-        this.name = Output.empty();
+        this.content = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -84,7 +85,7 @@ public final class DeploymentTargetImportArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public DeploymentTargetImportArgs build() {
             return new DeploymentTargetImportArgs(content, name);

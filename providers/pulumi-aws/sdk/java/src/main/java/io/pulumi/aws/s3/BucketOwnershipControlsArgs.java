@@ -6,6 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.BucketOwnershipControlsRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -32,7 +33,7 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     @Import(name="rule", required=true)
       private final Output<BucketOwnershipControlsRuleArgs> rule;
 
-    public Output<BucketOwnershipControlsRuleArgs> getRule() {
+    public Output<BucketOwnershipControlsRuleArgs> rule() {
         return this.rule;
     }
 
@@ -44,8 +45,8 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     }
 
     private BucketOwnershipControlsArgs() {
-        this.bucket = Output.empty();
-        this.rule = Output.empty();
+        this.bucket = Codegen.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {

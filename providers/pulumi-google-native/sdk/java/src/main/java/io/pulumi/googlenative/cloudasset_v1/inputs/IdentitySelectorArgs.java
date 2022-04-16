@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity", required=true)
       private final Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
 
@@ -33,7 +34,7 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IdentitySelectorArgs() {
-        this.identity = Output.empty();
+        this.identity = Codegen.empty();
     }
 
     public static Builder builder() {

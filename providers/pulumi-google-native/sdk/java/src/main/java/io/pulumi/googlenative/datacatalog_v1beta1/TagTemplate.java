@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.TagTemplateArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @return The display name for this template. Defaults to an empty string.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -43,7 +44,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @return Map of tag template field IDs to the settings for the field. This map is an exhaustive list of the allowed fields. This map must contain at least one field and at most 500 fields. The keys to this map are tag template field IDs. Field IDs can contain letters (both uppercase and lowercase), numbers (0-9) and underscores (_). Field IDs must be at least 1 character long and at most 64 characters long. Field IDs must start with a letter or underscore.
      * 
      */
-    public Output<Map<String,String>> getFields() {
+    public Output<Map<String,String>> fields() {
         return this.fields;
     }
     /**
@@ -57,7 +58,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @return The resource name of the tag template in URL format. Example: * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this TagTemplate and its child resources may not actually be stored in the location in this name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -83,7 +84,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagTemplate(String name, TagTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datacatalog/v1beta1:TagTemplate", name, args == null ? TagTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datacatalog/v1beta1:TagTemplate", name, args == null ? TagTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -25,7 +25,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cooldown", required=true)
       private final String cooldown;
 
-    public String getCooldown() {
+    public String cooldown() {
         return this.cooldown;
     }
 
@@ -36,7 +36,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -47,7 +47,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -58,7 +58,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

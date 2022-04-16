@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
 
-    public Output<String> getApiKey() {
-        return this.apiKey == null ? Output.empty() : this.apiKey;
+    public Output<String> apiKey() {
+        return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public GcmChannelState(
@@ -58,9 +59,9 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GcmChannelState() {
-        this.apiKey = Output.empty();
-        this.applicationId = Output.empty();
-        this.enabled = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Output.ofNullable(apiKey);
+            this.apiKey = Codegen.ofNullable(apiKey);
             return this;
         }
         public Builder applicationId(@Nullable Output<String> applicationId) {
@@ -100,7 +101,7 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -108,7 +109,7 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public GcmChannelState build() {
             return new GcmChannelState(apiKey, applicationId, enabled);

@@ -26,7 +26,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="keyName")
       private final @Nullable String keyName;
 
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="keyRsaSize")
       private final @Nullable Integer keyRsaSize;
 
-    public Optional<Integer> getKeyRsaSize() {
+    public Optional<Integer> keyRsaSize() {
         return this.keyRsaSize == null ? Optional.empty() : Optional.ofNullable(this.keyRsaSize);
     }
 
@@ -48,7 +48,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 
@@ -59,7 +59,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 

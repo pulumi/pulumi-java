@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * @return When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnforcePrivateMarkdownStorage() {
+    public Output</* @Nullable */ Boolean> enforcePrivateMarkdownStorage() {
         return this.enforcePrivateMarkdownStorage;
     }
     /**
@@ -56,7 +57,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -96,7 +97,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TenantConfiguration(String name, @Nullable TenantConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:portal:TenantConfiguration", name, args == null ? TenantConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:portal:TenantConfiguration", name, args == null ? TenantConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TenantConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

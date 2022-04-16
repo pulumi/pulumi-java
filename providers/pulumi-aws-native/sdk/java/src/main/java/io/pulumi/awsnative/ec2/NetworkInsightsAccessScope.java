@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,43 +24,43 @@ public class NetworkInsightsAccessScope extends io.pulumi.resources.CustomResour
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     @Export(name="excludePaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> excludePaths;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> getExcludePaths() {
+    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> excludePaths() {
         return this.excludePaths;
     }
     @Export(name="matchPaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> matchPaths;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> getMatchPaths() {
+    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> matchPaths() {
         return this.matchPaths;
     }
     @Export(name="networkInsightsAccessScopeArn", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeArn;
 
-    public Output<String> getNetworkInsightsAccessScopeArn() {
+    public Output<String> networkInsightsAccessScopeArn() {
         return this.networkInsightsAccessScopeArn;
     }
     @Export(name="networkInsightsAccessScopeId", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeId;
 
-    public Output<String> getNetworkInsightsAccessScopeId() {
+    public Output<String> networkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
     @Export(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeTag>> getTags() {
+    public Output</* @Nullable */ List<NetworkInsightsAccessScopeTag>> tags() {
         return this.tags;
     }
     @Export(name="updatedDate", type=String.class, parameters={})
     private Output<String> updatedDate;
 
-    public Output<String> getUpdatedDate() {
+    public Output<String> updatedDate() {
         return this.updatedDate;
     }
 
@@ -85,7 +86,7 @@ public class NetworkInsightsAccessScope extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInsightsAccessScope(String name, @Nullable NetworkInsightsAccessScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:NetworkInsightsAccessScope", name, args == null ? NetworkInsightsAccessScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:NetworkInsightsAccessScope", name, args == null ? NetworkInsightsAccessScopeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkInsightsAccessScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

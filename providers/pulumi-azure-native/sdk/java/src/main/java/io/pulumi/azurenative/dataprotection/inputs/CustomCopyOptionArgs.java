@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -49,8 +50,8 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CustomCopyOptionArgs() {
-        this.duration = Output.empty();
-        this.objectType = Output.empty();
+        this.duration = Codegen.empty();
+        this.objectType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder objectType(Output<String> objectType) {

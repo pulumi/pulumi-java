@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
 
-    public Output<String> getAppImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
 
@@ -34,8 +35,8 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kernelGatewayImageConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
-    public Output<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
-        return this.kernelGatewayImageConfig == null ? Output.empty() : this.kernelGatewayImageConfig;
+    public Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig() {
+        return this.kernelGatewayImageConfig == null ? Codegen.empty() : this.kernelGatewayImageConfig;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AppImageConfigArgs(
@@ -59,9 +60,9 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppImageConfigArgs() {
-        this.appImageConfigName = Output.empty();
-        this.kernelGatewayImageConfig = Output.empty();
-        this.tags = Output.empty();
+        this.appImageConfigName = Codegen.empty();
+        this.kernelGatewayImageConfig = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
-            this.kernelGatewayImageConfig = Output.ofNullable(kernelGatewayImageConfig);
+            this.kernelGatewayImageConfig = Codegen.ofNullable(kernelGatewayImageConfig);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -109,7 +110,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AppImageConfigArgs build() {
             return new AppImageConfigArgs(appImageConfigName, kernelGatewayImageConfig, tags);

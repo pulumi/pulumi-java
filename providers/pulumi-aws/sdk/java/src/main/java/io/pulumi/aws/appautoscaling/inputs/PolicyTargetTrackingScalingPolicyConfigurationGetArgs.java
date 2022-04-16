@@ -7,6 +7,7 @@ import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConf
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,8 +26,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="customizedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
-    public Output<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> getCustomizedMetricSpecification() {
-        return this.customizedMetricSpecification == null ? Output.empty() : this.customizedMetricSpecification;
+    public Output<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification() {
+        return this.customizedMetricSpecification == null ? Codegen.empty() : this.customizedMetricSpecification;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="disableScaleIn")
       private final @Nullable Output<Boolean> disableScaleIn;
 
-    public Output<Boolean> getDisableScaleIn() {
-        return this.disableScaleIn == null ? Output.empty() : this.disableScaleIn;
+    public Output<Boolean> disableScaleIn() {
+        return this.disableScaleIn == null ? Codegen.empty() : this.disableScaleIn;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="predefinedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
-    public Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> getPredefinedMetricSpecification() {
-        return this.predefinedMetricSpecification == null ? Output.empty() : this.predefinedMetricSpecification;
+    public Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification() {
+        return this.predefinedMetricSpecification == null ? Codegen.empty() : this.predefinedMetricSpecification;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="scaleInCooldown")
       private final @Nullable Output<Integer> scaleInCooldown;
 
-    public Output<Integer> getScaleInCooldown() {
-        return this.scaleInCooldown == null ? Output.empty() : this.scaleInCooldown;
+    public Output<Integer> scaleInCooldown() {
+        return this.scaleInCooldown == null ? Codegen.empty() : this.scaleInCooldown;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="scaleOutCooldown")
       private final @Nullable Output<Integer> scaleOutCooldown;
 
-    public Output<Integer> getScaleOutCooldown() {
-        return this.scaleOutCooldown == null ? Output.empty() : this.scaleOutCooldown;
+    public Output<Integer> scaleOutCooldown() {
+        return this.scaleOutCooldown == null ? Codegen.empty() : this.scaleOutCooldown;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
-    public Output<Double> getTargetValue() {
+    public Output<Double> targetValue() {
         return this.targetValue;
     }
 
@@ -100,12 +101,12 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     }
 
     private PolicyTargetTrackingScalingPolicyConfigurationGetArgs() {
-        this.customizedMetricSpecification = Output.empty();
-        this.disableScaleIn = Output.empty();
-        this.predefinedMetricSpecification = Output.empty();
-        this.scaleInCooldown = Output.empty();
-        this.scaleOutCooldown = Output.empty();
-        this.targetValue = Output.empty();
+        this.customizedMetricSpecification = Codegen.empty();
+        this.disableScaleIn = Codegen.empty();
+        this.predefinedMetricSpecification = Codegen.empty();
+        this.scaleInCooldown = Codegen.empty();
+        this.scaleOutCooldown = Codegen.empty();
+        this.targetValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
             return this;
         }
         public Builder customizedMetricSpecification(@Nullable PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs customizedMetricSpecification) {
-            this.customizedMetricSpecification = Output.ofNullable(customizedMetricSpecification);
+            this.customizedMetricSpecification = Codegen.ofNullable(customizedMetricSpecification);
             return this;
         }
         public Builder disableScaleIn(@Nullable Output<Boolean> disableScaleIn) {
@@ -151,7 +152,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
             return this;
         }
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
-            this.disableScaleIn = Output.ofNullable(disableScaleIn);
+            this.disableScaleIn = Codegen.ofNullable(disableScaleIn);
             return this;
         }
         public Builder predefinedMetricSpecification(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification) {
@@ -159,7 +160,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
             return this;
         }
         public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs predefinedMetricSpecification) {
-            this.predefinedMetricSpecification = Output.ofNullable(predefinedMetricSpecification);
+            this.predefinedMetricSpecification = Codegen.ofNullable(predefinedMetricSpecification);
             return this;
         }
         public Builder scaleInCooldown(@Nullable Output<Integer> scaleInCooldown) {
@@ -167,7 +168,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
             return this;
         }
         public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
-            this.scaleInCooldown = Output.ofNullable(scaleInCooldown);
+            this.scaleInCooldown = Codegen.ofNullable(scaleInCooldown);
             return this;
         }
         public Builder scaleOutCooldown(@Nullable Output<Integer> scaleOutCooldown) {
@@ -175,7 +176,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
             return this;
         }
         public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
-            this.scaleOutCooldown = Output.ofNullable(scaleOutCooldown);
+            this.scaleOutCooldown = Codegen.ofNullable(scaleOutCooldown);
             return this;
         }
         public Builder targetValue(Output<Double> targetValue) {

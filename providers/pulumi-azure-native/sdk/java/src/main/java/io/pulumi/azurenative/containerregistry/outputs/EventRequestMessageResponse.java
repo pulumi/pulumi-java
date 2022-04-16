@@ -57,35 +57,35 @@ public final class EventRequestMessageResponse {
      * The content of the event request message.
      * 
     */
-    public Optional<EventContentResponse> getContent() {
+    public Optional<EventContentResponse> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The headers of the event request message.
      * 
     */
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
      * The HTTP method used to send the event request message.
      * 
     */
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * The URI used to send the event request message.
      * 
     */
-    public Optional<String> getRequestUri() {
+    public Optional<String> requestUri() {
         return Optional.ofNullable(this.requestUri);
     }
     /**
      * The HTTP message version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

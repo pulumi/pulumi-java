@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
     @Import(name="vpcRegion")
       private final @Nullable Output<String> vpcRegion;
 
-    public Output<String> getVpcRegion() {
-        return this.vpcRegion == null ? Output.empty() : this.vpcRegion;
+    public Output<String> vpcRegion() {
+        return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
     @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
-    public Output<String> getZoneId() {
-        return this.zoneId == null ? Output.empty() : this.zoneId;
+    public Output<String> zoneId() {
+        return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 
     public VpcAssociationAuthorizationState(
@@ -57,9 +58,9 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
     }
 
     private VpcAssociationAuthorizationState() {
-        this.vpcId = Output.empty();
-        this.vpcRegion = Output.empty();
-        this.zoneId = Output.empty();
+        this.vpcId = Codegen.empty();
+        this.vpcRegion = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
@@ -99,7 +100,7 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
             return this;
         }
         public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Output.ofNullable(vpcRegion);
+            this.vpcRegion = Codegen.ofNullable(vpcRegion);
             return this;
         }
         public Builder zoneId(@Nullable Output<String> zoneId) {
@@ -107,7 +108,7 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
             return this;
         }
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Output.ofNullable(zoneId);
+            this.zoneId = Codegen.ofNullable(zoneId);
             return this;
         }        public VpcAssociationAuthorizationState build() {
             return new VpcAssociationAuthorizationState(vpcId, vpcRegion, zoneId);

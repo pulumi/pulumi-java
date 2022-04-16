@@ -25,7 +25,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="exactMatch", required=true)
       private final String exactMatch;
 
-    public String getExactMatch() {
+    public String exactMatch() {
         return this.exactMatch;
     }
 
@@ -36,7 +36,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
@@ -47,7 +47,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="invertMatch", required=true)
       private final Boolean invertMatch;
 
-    public Boolean getInvertMatch() {
+    public Boolean invertMatch() {
         return this.invertMatch;
     }
 
@@ -58,7 +58,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="prefixMatch", required=true)
       private final String prefixMatch;
 
-    public String getPrefixMatch() {
+    public String prefixMatch() {
         return this.prefixMatch;
     }
 
@@ -69,7 +69,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="presentMatch", required=true)
       private final Boolean presentMatch;
 
-    public Boolean getPresentMatch() {
+    public Boolean presentMatch() {
         return this.presentMatch;
     }
 
@@ -80,7 +80,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="rangeMatch", required=true)
       private final Int64RangeMatchResponse rangeMatch;
 
-    public Int64RangeMatchResponse getRangeMatch() {
+    public Int64RangeMatchResponse rangeMatch() {
         return this.rangeMatch;
     }
 
@@ -91,7 +91,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="regexMatch", required=true)
       private final String regexMatch;
 
-    public String getRegexMatch() {
+    public String regexMatch() {
         return this.regexMatch;
     }
 
@@ -102,7 +102,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="suffixMatch", required=true)
       private final String suffixMatch;
 
-    public String getSuffixMatch() {
+    public String suffixMatch() {
         return this.suffixMatch;
     }
 

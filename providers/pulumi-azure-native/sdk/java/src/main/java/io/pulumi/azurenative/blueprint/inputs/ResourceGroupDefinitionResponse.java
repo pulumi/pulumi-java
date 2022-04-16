@@ -27,7 +27,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
     @Import(name="dependsOn")
       private final @Nullable List<String> dependsOn;
 
-    public List<String> getDependsOn() {
+    public List<String> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -60,7 +60,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -71,7 +71,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -82,7 +82,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
     @Import(name="strongType")
       private final @Nullable String strongType;
 
-    public Optional<String> getStrongType() {
+    public Optional<String> strongType() {
         return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
     }
 
@@ -93,7 +93,7 @@ public final class ResourceGroupDefinitionResponse extends io.pulumi.resources.I
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

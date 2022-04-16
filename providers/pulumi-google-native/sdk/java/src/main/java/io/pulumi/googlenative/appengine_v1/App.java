@@ -6,6 +6,7 @@ package io.pulumi.googlenative.appengine_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1.AppArgs;
 import io.pulumi.googlenative.appengine_v1.outputs.FeatureSettingsResponse;
@@ -35,7 +36,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.
      * 
      */
-    public Output<String> getAuthDomain() {
+    public Output<String> authDomain() {
         return this.authDomain;
     }
     /**
@@ -49,7 +50,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Google Cloud Storage bucket that can be used for storing files associated with this application. This bucket is associated with the application and can be used by the gcloud deployment commands.
      * 
      */
-    public Output<String> getCodeBucket() {
+    public Output<String> codeBucket() {
         return this.codeBucket;
     }
     /**
@@ -63,7 +64,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The type of the Cloud Firestore or Cloud Datastore database associated with this application.
      * 
      */
-    public Output<String> getDatabaseType() {
+    public Output<String> databaseType() {
         return this.databaseType;
     }
     /**
@@ -77,7 +78,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Google Cloud Storage bucket that can be used by this application to store content.
      * 
      */
-    public Output<String> getDefaultBucket() {
+    public Output<String> defaultBucket() {
         return this.defaultBucket;
     }
     /**
@@ -91,7 +92,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Cookie expiration policy for this application.
      * 
      */
-    public Output<String> getDefaultCookieExpiration() {
+    public Output<String> defaultCookieExpiration() {
         return this.defaultCookieExpiration;
     }
     /**
@@ -105,7 +106,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Hostname used to reach this application, as resolved by App Engine.
      * 
      */
-    public Output<String> getDefaultHostname() {
+    public Output<String> defaultHostname() {
         return this.defaultHostname;
     }
     /**
@@ -119,7 +120,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
      * 
      */
-    public Output<List<UrlDispatchRuleResponse>> getDispatchRules() {
+    public Output<List<UrlDispatchRuleResponse>> dispatchRules() {
         return this.dispatchRules;
     }
     /**
@@ -133,7 +134,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The feature specific settings to be used in the application.
      * 
      */
-    public Output<FeatureSettingsResponse> getFeatureSettings() {
+    public Output<FeatureSettingsResponse> featureSettings() {
         return this.featureSettings;
     }
     /**
@@ -147,13 +148,13 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The Google Container Registry domain used for storing managed build docker images for this application.
      * 
      */
-    public Output<String> getGcrDomain() {
+    public Output<String> gcrDomain() {
         return this.gcrDomain;
     }
     @Export(name="iap", type=IdentityAwareProxyResponse.class, parameters={})
     private Output<IdentityAwareProxyResponse> iap;
 
-    public Output<IdentityAwareProxyResponse> getIap() {
+    public Output<IdentityAwareProxyResponse> iap() {
         return this.iap;
     }
     /**
@@ -167,7 +168,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -181,7 +182,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Full path to the Application resource in the API. Example: apps/myapp.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -195,7 +196,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -209,7 +210,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Serving status of this application.
      * 
      */
-    public Output<String> getServingStatus() {
+    public Output<String> servingStatus() {
         return this.servingStatus;
     }
 
@@ -235,7 +236,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public App(String name, @Nullable AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:appengine/v1:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:appengine/v1:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private App(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

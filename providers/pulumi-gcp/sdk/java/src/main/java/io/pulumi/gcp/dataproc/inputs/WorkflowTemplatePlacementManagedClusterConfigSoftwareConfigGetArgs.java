@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,15 +24,15 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
     @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
-    public Output<String> getImageVersion() {
-        return this.imageVersion == null ? Output.empty() : this.imageVersion;
+    public Output<String> imageVersion() {
+        return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
     }
 
     @Import(name="optionalComponents")
       private final @Nullable Output<List<String>> optionalComponents;
 
-    public Output<List<String>> getOptionalComponents() {
-        return this.optionalComponents == null ? Output.empty() : this.optionalComponents;
+    public Output<List<String>> optionalComponents() {
+        return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs(
@@ -55,9 +56,9 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs() {
-        this.imageVersion = Output.empty();
-        this.optionalComponents = Output.empty();
-        this.properties = Output.empty();
+        this.imageVersion = Codegen.empty();
+        this.optionalComponents = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
             return this;
         }
         public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Output.ofNullable(imageVersion);
+            this.imageVersion = Codegen.ofNullable(imageVersion);
             return this;
         }
         public Builder optionalComponents(@Nullable Output<List<String>> optionalComponents) {
@@ -97,7 +98,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
             return this;
         }
         public Builder optionalComponents(@Nullable List<String> optionalComponents) {
-            this.optionalComponents = Output.ofNullable(optionalComponents);
+            this.optionalComponents = Codegen.ofNullable(optionalComponents);
             return this;
         }
         public Builder optionalComponents(String... optionalComponents) {
@@ -108,7 +109,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs(imageVersion, optionalComponents, properties);

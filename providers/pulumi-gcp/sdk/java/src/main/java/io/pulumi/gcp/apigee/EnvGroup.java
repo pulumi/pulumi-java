@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigee;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvGroupArgs;
 import io.pulumi.gcp.apigee.inputs.EnvGroupState;
@@ -50,7 +51,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @return Hostnames of the environment group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getHostnames() {
+    public Output</* @Nullable */ List<String>> hostnames() {
         return this.hostnames;
     }
     /**
@@ -64,7 +65,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the environment group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -80,7 +81,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -106,7 +107,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvGroup(String name, EnvGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/envGroup:EnvGroup", name, args == null ? EnvGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigee/envGroup:EnvGroup", name, args == null ? EnvGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvGroup(String name, Output<String> id, @Nullable EnvGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

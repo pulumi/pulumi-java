@@ -5,6 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,22 +18,22 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="masterUserARN")
       private final @Nullable Output<String> masterUserARN;
 
-    public Output<String> getMasterUserARN() {
-        return this.masterUserARN == null ? Output.empty() : this.masterUserARN;
+    public Output<String> masterUserARN() {
+        return this.masterUserARN == null ? Codegen.empty() : this.masterUserARN;
     }
 
     @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
-    public Output<String> getMasterUserName() {
-        return this.masterUserName == null ? Output.empty() : this.masterUserName;
+    public Output<String> masterUserName() {
+        return this.masterUserName == null ? Codegen.empty() : this.masterUserName;
     }
 
     @Import(name="masterUserPassword")
       private final @Nullable Output<String> masterUserPassword;
 
-    public Output<String> getMasterUserPassword() {
-        return this.masterUserPassword == null ? Output.empty() : this.masterUserPassword;
+    public Output<String> masterUserPassword() {
+        return this.masterUserPassword == null ? Codegen.empty() : this.masterUserPassword;
     }
 
     public DomainMasterUserOptionsArgs(
@@ -45,9 +46,9 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private DomainMasterUserOptionsArgs() {
-        this.masterUserARN = Output.empty();
-        this.masterUserName = Output.empty();
-        this.masterUserPassword = Output.empty();
+        this.masterUserARN = Codegen.empty();
+        this.masterUserName = Codegen.empty();
+        this.masterUserPassword = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder masterUserARN(@Nullable String masterUserARN) {
-            this.masterUserARN = Output.ofNullable(masterUserARN);
+            this.masterUserARN = Codegen.ofNullable(masterUserARN);
             return this;
         }
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
@@ -87,7 +88,7 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder masterUserName(@Nullable String masterUserName) {
-            this.masterUserName = Output.ofNullable(masterUserName);
+            this.masterUserName = Codegen.ofNullable(masterUserName);
             return this;
         }
         public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
@@ -95,7 +96,7 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
-            this.masterUserPassword = Output.ofNullable(masterUserPassword);
+            this.masterUserPassword = Codegen.ofNullable(masterUserPassword);
             return this;
         }        public DomainMasterUserOptionsArgs build() {
             return new DomainMasterUserOptionsArgs(masterUserARN, masterUserName, masterUserPassword);

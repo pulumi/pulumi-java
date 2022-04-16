@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
     @Import(name="customPluginArn", required=true)
       private final Output<String> customPluginArn;
 
-    public Output<String> getCustomPluginArn() {
+    public Output<String> customPluginArn() {
         return this.customPluginArn;
     }
 
@@ -36,7 +37,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
     @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
 
@@ -48,8 +49,8 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectorCustomPluginArgs() {
-        this.customPluginArn = Output.empty();
-        this.revision = Output.empty();
+        this.customPluginArn = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {

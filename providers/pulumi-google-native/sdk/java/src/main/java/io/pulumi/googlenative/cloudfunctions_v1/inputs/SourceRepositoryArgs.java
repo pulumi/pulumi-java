@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public SourceRepositoryArgs(@Nullable Output<String> url) {
@@ -34,7 +35,7 @@ public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SourceRepositoryArgs() {
-        this.url = Output.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SourceRepositoryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public SourceRepositoryArgs build() {
             return new SourceRepositoryArgs(url);

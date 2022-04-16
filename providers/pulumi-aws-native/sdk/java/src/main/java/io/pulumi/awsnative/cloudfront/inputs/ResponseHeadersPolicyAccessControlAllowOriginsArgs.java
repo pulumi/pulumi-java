@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public final class ResponseHeadersPolicyAccessControlAllowOriginsArgs extends io
     @Import(name="items", required=true)
       private final Output<List<String>> items;
 
-    public Output<List<String>> getItems() {
+    public Output<List<String>> items() {
         return this.items;
     }
 
@@ -26,7 +27,7 @@ public final class ResponseHeadersPolicyAccessControlAllowOriginsArgs extends io
     }
 
     private ResponseHeadersPolicyAccessControlAllowOriginsArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {

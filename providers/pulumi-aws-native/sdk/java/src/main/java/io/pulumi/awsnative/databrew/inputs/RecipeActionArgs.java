@@ -8,6 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.RecipeParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,15 +25,15 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operation", required=true)
       private final Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
 
     @Import(name="parameters")
       private final @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
-    public Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public RecipeActionArgs(
@@ -43,8 +44,8 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecipeActionArgs() {
-        this.operation = Output.empty();
-        this.parameters = Output.empty();
+        this.operation = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Either<RecipeParametersArgs,RecipeParameterMapArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public RecipeActionArgs build() {
             return new RecipeActionArgs(operation, parameters);

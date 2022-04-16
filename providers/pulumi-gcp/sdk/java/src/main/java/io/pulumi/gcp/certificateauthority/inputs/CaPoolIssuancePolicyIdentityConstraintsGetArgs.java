@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
       private final Output<Boolean> allowSubjectAltNamesPassthrough;
 
-    public Output<Boolean> getAllowSubjectAltNamesPassthrough() {
+    public Output<Boolean> allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
 
@@ -35,7 +36,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
     @Import(name="allowSubjectPassthrough", required=true)
       private final Output<Boolean> allowSubjectPassthrough;
 
-    public Output<Boolean> getAllowSubjectPassthrough() {
+    public Output<Boolean> allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
 
@@ -49,8 +50,8 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
     @Import(name="celExpression")
       private final @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
 
-    public Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> getCelExpression() {
-        return this.celExpression == null ? Output.empty() : this.celExpression;
+    public Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression() {
+        return this.celExpression == null ? Codegen.empty() : this.celExpression;
     }
 
     public CaPoolIssuancePolicyIdentityConstraintsGetArgs(
@@ -63,9 +64,9 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
     }
 
     private CaPoolIssuancePolicyIdentityConstraintsGetArgs() {
-        this.allowSubjectAltNamesPassthrough = Output.empty();
-        this.allowSubjectPassthrough = Output.empty();
-        this.celExpression = Output.empty();
+        this.allowSubjectAltNamesPassthrough = Codegen.empty();
+        this.allowSubjectPassthrough = Codegen.empty();
+        this.celExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
             return this;
         }
         public Builder celExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs celExpression) {
-            this.celExpression = Output.ofNullable(celExpression);
+            this.celExpression = Codegen.ofNullable(celExpression);
             return this;
         }        public CaPoolIssuancePolicyIdentityConstraintsGetArgs build() {
             return new CaPoolIssuancePolicyIdentityConstraintsGetArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);

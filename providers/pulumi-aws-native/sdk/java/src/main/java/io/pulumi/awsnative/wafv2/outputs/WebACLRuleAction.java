@@ -31,16 +31,16 @@ public final class WebACLRuleAction {
         this.count = count;
     }
 
-    public Optional<WebACLAllowAction> getAllow() {
+    public Optional<WebACLAllowAction> allow() {
         return Optional.ofNullable(this.allow);
     }
-    public Optional<WebACLBlockAction> getBlock() {
+    public Optional<WebACLBlockAction> block() {
         return Optional.ofNullable(this.block);
     }
-    public Optional<WebACLCaptchaAction> getCaptcha() {
+    public Optional<WebACLCaptchaAction> captcha() {
         return Optional.ofNullable(this.captcha);
     }
-    public Optional<WebACLCountAction> getCount() {
+    public Optional<WebACLCountAction> count() {
         return Optional.ofNullable(this.count);
     }
 

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Email Template Body. This should be a valid XDocument
      * 
      */
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body;
     }
     /**
@@ -57,7 +58,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Description of the Email Template.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Whether the template is the default template provided by Api Management or has been edited.
      * 
      */
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
     /**
@@ -85,7 +86,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Email Template Parameter values.
      * 
      */
-    public Output</* @Nullable */ List<EmailTemplateParametersContractPropertiesResponse>> getParameters() {
+    public Output</* @Nullable */ List<EmailTemplateParametersContractPropertiesResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -113,7 +114,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Subject of the Template.
      * 
      */
-    public Output<String> getSubject() {
+    public Output<String> subject() {
         return this.subject;
     }
     /**
@@ -127,7 +128,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Title of the Template.
      * 
      */
-    public Output</* @Nullable */ String> getTitle() {
+    public Output</* @Nullable */ String> title() {
         return this.title;
     }
     /**
@@ -141,7 +142,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EmailTemplate(String name, EmailTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:EmailTemplate", name, args == null ? EmailTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:EmailTemplate", name, args == null ? EmailTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EmailTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

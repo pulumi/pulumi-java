@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LBBackendAddressPoolResourceSettingsArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public LBBackendAddressPoolResourceSettingsArgs(@Nullable Output<String> name) {
@@ -34,7 +35,7 @@ public final class LBBackendAddressPoolResourceSettingsArgs extends io.pulumi.re
     }
 
     private LBBackendAddressPoolResourceSettingsArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LBBackendAddressPoolResourceSettingsArgs extends io.pulumi.re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public LBBackendAddressPoolResourceSettingsArgs build() {
             return new LBBackendAddressPoolResourceSettingsArgs(name);

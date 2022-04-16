@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,57 +18,57 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
     @Import(name="auth")
       private final @Nullable Output<String> auth;
 
-    public Output<String> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+    public Output<String> auth() {
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
     @Import(name="identityToken")
       private final @Nullable Output<String> identityToken;
 
-    public Output<String> getIdentityToken() {
-        return this.identityToken == null ? Output.empty() : this.identityToken;
+    public Output<String> identityToken() {
+        return this.identityToken == null ? Codegen.empty() : this.identityToken;
     }
 
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="registryToken")
       private final @Nullable Output<String> registryToken;
 
-    public Output<String> getRegistryToken() {
-        return this.registryToken == null ? Output.empty() : this.registryToken;
+    public Output<String> registryToken() {
+        return this.registryToken == null ? Codegen.empty() : this.registryToken;
     }
 
     @Import(name="serverAddress")
       private final @Nullable Output<String> serverAddress;
 
-    public Output<String> getServerAddress() {
-        return this.serverAddress == null ? Output.empty() : this.serverAddress;
+    public Output<String> serverAddress() {
+        return this.serverAddress == null ? Codegen.empty() : this.serverAddress;
     }
 
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public RegistryImageBuildAuthConfigGetArgs(
@@ -90,14 +91,14 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
     }
 
     private RegistryImageBuildAuthConfigGetArgs() {
-        this.auth = Output.empty();
-        this.email = Output.empty();
-        this.hostName = Output.empty();
-        this.identityToken = Output.empty();
-        this.password = Output.empty();
-        this.registryToken = Output.empty();
-        this.serverAddress = Output.empty();
-        this.userName = Output.empty();
+        this.auth = Codegen.empty();
+        this.email = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.identityToken = Codegen.empty();
+        this.password = Codegen.empty();
+        this.registryToken = Codegen.empty();
+        this.serverAddress = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder auth(@Nullable String auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -147,7 +148,7 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder hostName(Output<String> hostName) {
@@ -163,7 +164,7 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder identityToken(@Nullable String identityToken) {
-            this.identityToken = Output.ofNullable(identityToken);
+            this.identityToken = Codegen.ofNullable(identityToken);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -171,7 +172,7 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder registryToken(@Nullable Output<String> registryToken) {
@@ -179,7 +180,7 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder registryToken(@Nullable String registryToken) {
-            this.registryToken = Output.ofNullable(registryToken);
+            this.registryToken = Codegen.ofNullable(registryToken);
             return this;
         }
         public Builder serverAddress(@Nullable Output<String> serverAddress) {
@@ -187,7 +188,7 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder serverAddress(@Nullable String serverAddress) {
-            this.serverAddress = Output.ofNullable(serverAddress);
+            this.serverAddress = Codegen.ofNullable(serverAddress);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -195,7 +196,7 @@ public final class RegistryImageBuildAuthConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public RegistryImageBuildAuthConfigGetArgs build() {
             return new RegistryImageBuildAuthConfigGetArgs(auth, email, hostName, identityToken, password, registryToken, serverAddress, userName);

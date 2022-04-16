@@ -11,6 +11,7 @@ import io.pulumi.aws.opsworks.outputs.RailsAppLayerEbsVolume;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +38,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Keyword for the app server to use. Defaults to "apache_passenger".
      * 
      */
-    public Output</* @Nullable */ String> getAppServer() {
+    public Output</* @Nullable */ String> appServer() {
         return this.appServer;
     }
     /**
@@ -51,7 +52,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name(ARN) of the layer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -65,7 +66,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Whether to automatically assign an elastic IP address to the layer's instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoAssignElasticIps() {
+    public Output</* @Nullable */ Boolean> autoAssignElasticIps() {
         return this.autoAssignElasticIps;
     }
     /**
@@ -79,7 +80,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoAssignPublicIps() {
+    public Output</* @Nullable */ Boolean> autoAssignPublicIps() {
         return this.autoAssignPublicIps;
     }
     /**
@@ -93,7 +94,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Whether to enable auto-healing for the layer.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoHealing() {
+    public Output</* @Nullable */ Boolean> autoHealing() {
         return this.autoHealing;
     }
     /**
@@ -107,25 +108,25 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
      * 
      */
-    public Output</* @Nullable */ String> getBundlerVersion() {
+    public Output</* @Nullable */ String> bundlerVersion() {
         return this.bundlerVersion;
     }
     @Export(name="cloudwatchConfiguration", type=RailsAppLayerCloudwatchConfiguration.class, parameters={})
     private Output</* @Nullable */ RailsAppLayerCloudwatchConfiguration> cloudwatchConfiguration;
 
-    public Output</* @Nullable */ RailsAppLayerCloudwatchConfiguration> getCloudwatchConfiguration() {
+    public Output</* @Nullable */ RailsAppLayerCloudwatchConfiguration> cloudwatchConfiguration() {
         return this.cloudwatchConfiguration;
     }
     @Export(name="customConfigureRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customConfigureRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomConfigureRecipes() {
+    public Output</* @Nullable */ List<String>> customConfigureRecipes() {
         return this.customConfigureRecipes;
     }
     @Export(name="customDeployRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customDeployRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomDeployRecipes() {
+    public Output</* @Nullable */ List<String>> customDeployRecipes() {
         return this.customDeployRecipes;
     }
     /**
@@ -139,7 +140,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return The ARN of an IAM profile that will be used for the layer's instances.
      * 
      */
-    public Output</* @Nullable */ String> getCustomInstanceProfileArn() {
+    public Output</* @Nullable */ String> customInstanceProfileArn() {
         return this.customInstanceProfileArn;
     }
     /**
@@ -153,7 +154,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Custom JSON attributes to apply to the layer.
      * 
      */
-    public Output</* @Nullable */ String> getCustomJson() {
+    public Output</* @Nullable */ String> customJson() {
         return this.customJson;
     }
     /**
@@ -167,25 +168,25 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Ids for a set of security groups to apply to the layer's instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomSecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> customSecurityGroupIds() {
         return this.customSecurityGroupIds;
     }
     @Export(name="customSetupRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customSetupRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomSetupRecipes() {
+    public Output</* @Nullable */ List<String>> customSetupRecipes() {
         return this.customSetupRecipes;
     }
     @Export(name="customShutdownRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customShutdownRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomShutdownRecipes() {
+    public Output</* @Nullable */ List<String>> customShutdownRecipes() {
         return this.customShutdownRecipes;
     }
     @Export(name="customUndeployRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customUndeployRecipes;
 
-    public Output</* @Nullable */ List<String>> getCustomUndeployRecipes() {
+    public Output</* @Nullable */ List<String>> customUndeployRecipes() {
         return this.customUndeployRecipes;
     }
     /**
@@ -199,7 +200,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Whether to enable Elastic Load Balancing connection draining.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDrainElbOnShutdown() {
+    public Output</* @Nullable */ Boolean> drainElbOnShutdown() {
         return this.drainElbOnShutdown;
     }
     /**
@@ -213,7 +214,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
      * 
      */
-    public Output</* @Nullable */ List<RailsAppLayerEbsVolume>> getEbsVolumes() {
+    public Output</* @Nullable */ List<RailsAppLayerEbsVolume>> ebsVolumes() {
         return this.ebsVolumes;
     }
     /**
@@ -227,7 +228,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Name of an Elastic Load Balancer to attach to this layer
      * 
      */
-    public Output</* @Nullable */ String> getElasticLoadBalancer() {
+    public Output</* @Nullable */ String> elasticLoadBalancer() {
         return this.elasticLoadBalancer;
     }
     /**
@@ -241,7 +242,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Whether to install OS and package updates on each instance when it boots.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInstallUpdatesOnBoot() {
+    public Output</* @Nullable */ Boolean> installUpdatesOnBoot() {
         return this.installUpdatesOnBoot;
     }
     /**
@@ -255,7 +256,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
      * 
      */
-    public Output</* @Nullable */ Integer> getInstanceShutdownTimeout() {
+    public Output</* @Nullable */ Integer> instanceShutdownTimeout() {
         return this.instanceShutdownTimeout;
     }
     /**
@@ -269,7 +270,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Whether OpsWorks should manage bundler. On by default.
      * 
      */
-    public Output</* @Nullable */ Boolean> getManageBundler() {
+    public Output</* @Nullable */ Boolean> manageBundler() {
         return this.manageBundler;
     }
     /**
@@ -283,7 +284,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return A human-readable name for the layer.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -297,7 +298,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return The version of Passenger to use. Defaults to "4.0.46".
      * 
      */
-    public Output</* @Nullable */ String> getPassengerVersion() {
+    public Output</* @Nullable */ String> passengerVersion() {
         return this.passengerVersion;
     }
     /**
@@ -311,7 +312,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return The version of Ruby to use. Defaults to "2.0.0".
      * 
      */
-    public Output</* @Nullable */ String> getRubyVersion() {
+    public Output</* @Nullable */ String> rubyVersion() {
         return this.rubyVersion;
     }
     /**
@@ -325,7 +326,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return The version of RubyGems to use. Defaults to "2.2.2".
      * 
      */
-    public Output</* @Nullable */ String> getRubygemsVersion() {
+    public Output</* @Nullable */ String> rubygemsVersion() {
         return this.rubygemsVersion;
     }
     /**
@@ -339,7 +340,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return The id of the stack the layer will belong to.
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
     /**
@@ -353,7 +354,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Names of a set of system packages to install on the layer's instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSystemPackages() {
+    public Output</* @Nullable */ List<String>> systemPackages() {
         return this.systemPackages;
     }
     /**
@@ -367,7 +368,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -381,7 +382,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -395,7 +396,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @return Whether to use EBS-optimized instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseEbsOptimizedInstances() {
+    public Output</* @Nullable */ Boolean> useEbsOptimizedInstances() {
         return this.useEbsOptimizedInstances;
     }
 
@@ -421,7 +422,7 @@ public class RailsAppLayer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RailsAppLayer(String name, RailsAppLayerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/railsAppLayer:RailsAppLayer", name, args == null ? RailsAppLayerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:opsworks/railsAppLayer:RailsAppLayer", name, args == null ? RailsAppLayerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RailsAppLayer(String name, Output<String> id, @Nullable RailsAppLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

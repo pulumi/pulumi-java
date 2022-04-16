@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionTargetHttpProxyArgs;
 import io.pulumi.gcp.compute.inputs.RegionTargetHttpProxyState;
@@ -59,7 +60,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -73,7 +74,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -99,7 +100,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -129,7 +130,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getProxyId() {
+    public Output<Integer> proxyId() {
         return this.proxyId;
     }
     /**
@@ -145,7 +146,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -159,7 +160,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -175,7 +176,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * to the BackendService.
      * 
      */
-    public Output<String> getUrlMap() {
+    public Output<String> urlMap() {
         return this.urlMap;
     }
 
@@ -201,7 +202,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionTargetHttpProxy(String name, RegionTargetHttpProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy", name, args == null ? RegionTargetHttpProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy", name, args == null ? RegionTargetHttpProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionTargetHttpProxy(String name, Output<String> id, @Nullable RegionTargetHttpProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

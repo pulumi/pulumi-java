@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +24,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
 
-    public Output<String> getAnnotationSpecSet() {
+    public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -34,7 +35,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -45,7 +46,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluationJobConfig", required=true)
       private final Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> getEvaluationJobConfig() {
+    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig() {
         return this.evaluationJobConfig;
     }
 
@@ -56,7 +57,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelMissingGroundTruth", required=true)
       private final Output<Boolean> labelMissingGroundTruth;
 
-    public Output<Boolean> getLabelMissingGroundTruth() {
+    public Output<Boolean> labelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
     }
 
@@ -67,15 +68,15 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modelVersion", required=true)
       private final Output<String> modelVersion;
 
-    public Output<String> getModelVersion() {
+    public Output<String> modelVersion() {
         return this.modelVersion;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 
@@ -107,13 +108,13 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EvaluationJobArgs() {
-        this.annotationSpecSet = Output.empty();
-        this.description = Output.empty();
-        this.evaluationJobConfig = Output.empty();
-        this.labelMissingGroundTruth = Output.empty();
-        this.modelVersion = Output.empty();
-        this.project = Output.empty();
-        this.schedule = Output.empty();
+        this.annotationSpecSet = Codegen.empty();
+        this.description = Codegen.empty();
+        this.evaluationJobConfig = Codegen.empty();
+        this.labelMissingGroundTruth = Codegen.empty();
+        this.modelVersion = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schedule(Output<String> schedule) {

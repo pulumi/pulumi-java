@@ -15,6 +15,7 @@ import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentVariant;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -28,85 +29,85 @@ public class Component extends io.pulumi.resources.CustomResource {
     @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     @Export(name="bindingProperties", type=ComponentBindingProperties.class, parameters={})
     private Output</* @Nullable */ ComponentBindingProperties> bindingProperties;
 
-    public Output</* @Nullable */ ComponentBindingProperties> getBindingProperties() {
+    public Output</* @Nullable */ ComponentBindingProperties> bindingProperties() {
         return this.bindingProperties;
     }
     @Export(name="children", type=List.class, parameters={ComponentChild.class})
     private Output</* @Nullable */ List<ComponentChild>> children;
 
-    public Output</* @Nullable */ List<ComponentChild>> getChildren() {
+    public Output</* @Nullable */ List<ComponentChild>> children() {
         return this.children;
     }
     @Export(name="collectionProperties", type=ComponentCollectionProperties.class, parameters={})
     private Output</* @Nullable */ ComponentCollectionProperties> collectionProperties;
 
-    public Output</* @Nullable */ ComponentCollectionProperties> getCollectionProperties() {
+    public Output</* @Nullable */ ComponentCollectionProperties> collectionProperties() {
         return this.collectionProperties;
     }
     @Export(name="componentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> componentType;
 
-    public Output</* @Nullable */ String> getComponentType() {
+    public Output</* @Nullable */ String> componentType() {
         return this.componentType;
     }
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     @Export(name="environmentName", type=String.class, parameters={})
     private Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
     @Export(name="modifiedAt", type=String.class, parameters={})
     private Output<String> modifiedAt;
 
-    public Output<String> getModifiedAt() {
+    public Output<String> modifiedAt() {
         return this.modifiedAt;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="overrides", type=ComponentOverrides.class, parameters={})
     private Output</* @Nullable */ ComponentOverrides> overrides;
 
-    public Output</* @Nullable */ ComponentOverrides> getOverrides() {
+    public Output</* @Nullable */ ComponentOverrides> overrides() {
         return this.overrides;
     }
     @Export(name="properties", type=ComponentProperties.class, parameters={})
     private Output</* @Nullable */ ComponentProperties> properties;
 
-    public Output</* @Nullable */ ComponentProperties> getProperties() {
+    public Output</* @Nullable */ ComponentProperties> properties() {
         return this.properties;
     }
     @Export(name="sourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceId;
 
-    public Output</* @Nullable */ String> getSourceId() {
+    public Output</* @Nullable */ String> sourceId() {
         return this.sourceId;
     }
     @Export(name="tags", type=ComponentTags.class, parameters={})
     private Output</* @Nullable */ ComponentTags> tags;
 
-    public Output</* @Nullable */ ComponentTags> getTags() {
+    public Output</* @Nullable */ ComponentTags> tags() {
         return this.tags;
     }
     @Export(name="variants", type=List.class, parameters={ComponentVariant.class})
     private Output</* @Nullable */ List<ComponentVariant>> variants;
 
-    public Output</* @Nullable */ List<ComponentVariant>> getVariants() {
+    public Output</* @Nullable */ List<ComponentVariant>> variants() {
         return this.variants;
     }
 
@@ -132,7 +133,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Component(String name, @Nullable ComponentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:amplifyuibuilder:Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:amplifyuibuilder:Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Component(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -35,14 +35,14 @@ public final class GetAppImageConfigResult {
      * The Amazon Resource Name (ARN) of the AppImageConfig.
      * 
     */
-    public Optional<String> getAppImageConfigArn() {
+    public Optional<String> appImageConfigArn() {
         return Optional.ofNullable(this.appImageConfigArn);
     }
     /**
      * The KernelGatewayImageConfig.
      * 
     */
-    public Optional<AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
+    public Optional<AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig() {
         return Optional.ofNullable(this.kernelGatewayImageConfig);
     }
 

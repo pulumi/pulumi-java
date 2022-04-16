@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
     @Import(name="ipProtocol")
       private final @Nullable Output<String> ipProtocol;
 
-    public Output<String> getIpProtocol() {
-        return this.ipProtocol == null ? Output.empty() : this.ipProtocol;
+    public Output<String> ipProtocol() {
+        return this.ipProtocol == null ? Codegen.empty() : this.ipProtocol;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
     @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<String>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     public SecurityPolicyRuleMatcherConfigLayer4ConfigArgs(
@@ -45,8 +46,8 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
     }
 
     private SecurityPolicyRuleMatcherConfigLayer4ConfigArgs() {
-        this.ipProtocol = Output.empty();
-        this.ports = Output.empty();
+        this.ipProtocol = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
             return this;
         }
         public Builder ipProtocol(@Nullable String ipProtocol) {
-            this.ipProtocol = Output.ofNullable(ipProtocol);
+            this.ipProtocol = Codegen.ofNullable(ipProtocol);
             return this;
         }
         public Builder ports(@Nullable Output<List<String>> ports) {
@@ -84,7 +85,7 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
             return this;
         }
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(String... ports) {

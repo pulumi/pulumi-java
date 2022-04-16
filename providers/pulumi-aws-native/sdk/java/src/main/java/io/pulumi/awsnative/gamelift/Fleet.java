@@ -15,6 +15,7 @@ import io.pulumi.awsnative.gamelift.outputs.FleetRuntimeConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for a build to be deployed on the new fleet. If you are deploying the fleet with a custom game build, you must specify this property. The build must have been successfully uploaded to Amazon GameLift and be in a READY status. This fleet setting cannot be changed once the fleet is created.
      * 
      */
-    public Output</* @Nullable */ String> getBuildId() {
+    public Output</* @Nullable */ String> buildId() {
         return this.buildId;
     }
     /**
@@ -51,7 +52,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to generate a TLS/SSL certificate for the new fleet. TLS certificates are used for encrypting traffic between game clients and game servers running on GameLift. If this parameter is not set, certificate generation is disabled. This fleet setting cannot be changed once the fleet is created.
      * 
      */
-    public Output</* @Nullable */ FleetCertificateConfiguration> getCertificateConfiguration() {
+    public Output</* @Nullable */ FleetCertificateConfiguration> certificateConfiguration() {
         return this.certificateConfiguration;
     }
     /**
@@ -65,7 +66,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of a fleet.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -79,7 +80,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to "1" and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
      */
-    public Output</* @Nullable */ Integer> getDesiredEC2Instances() {
+    public Output</* @Nullable */ Integer> desiredEC2Instances() {
         return this.desiredEC2Instances;
     }
     /**
@@ -93,7 +94,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
      * 
      */
-    public Output</* @Nullable */ List<FleetIpPermission>> getEC2InboundPermissions() {
+    public Output</* @Nullable */ List<FleetIpPermission>> eC2InboundPermissions() {
         return this.eC2InboundPermissions;
     }
     /**
@@ -107,7 +108,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The name of an EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Amazon GameLift supports the following EC2 instance types. See Amazon EC2 Instance Types for detailed descriptions.
      * 
      */
-    public Output</* @Nullable */ String> getEC2InstanceType() {
+    public Output</* @Nullable */ String> eC2InstanceType() {
         return this.eC2InstanceType;
     }
     /**
@@ -121,7 +122,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Unique fleet ID
      * 
      */
-    public Output<String> getFleetId() {
+    public Output<String> fleetId() {
         return this.fleetId;
     }
     /**
@@ -135,7 +136,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to use On-Demand instances or Spot instances for this fleet. If empty, the default is ON_DEMAND. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet.
      * 
      */
-    public Output</* @Nullable */ FleetType> getFleetType() {
+    public Output</* @Nullable */ FleetType> fleetType() {
         return this.fleetType;
     }
     /**
@@ -149,13 +150,13 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN from the IAM dashboard in the AWS Management Console.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceRoleARN() {
+    public Output</* @Nullable */ String> instanceRoleARN() {
         return this.instanceRoleARN;
     }
     @Export(name="locations", type=List.class, parameters={FleetLocationConfiguration.class})
     private Output</* @Nullable */ List<FleetLocationConfiguration>> locations;
 
-    public Output</* @Nullable */ List<FleetLocationConfiguration>> getLocations() {
+    public Output</* @Nullable */ List<FleetLocationConfiguration>> locations() {
         return this.locations;
     }
     /**
@@ -169,7 +170,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return This parameter is no longer used. When hosting a custom game build, specify where Amazon GameLift should store log files using the Amazon GameLift server API call ProcessReady()
      * 
      */
-    public Output</* @Nullable */ List<String>> getLogPaths() {
+    public Output</* @Nullable */ List<String>> logPaths() {
         return this.logPaths;
     }
     /**
@@ -183,7 +184,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return [DEPRECATED] The maximum value that is allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxSize() {
+    public Output</* @Nullable */ Integer> maxSize() {
         return this.maxSize;
     }
     /**
@@ -197,7 +198,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
      * 
      */
-    public Output</* @Nullable */ List<String>> getMetricGroups() {
+    public Output</* @Nullable */ List<String>> metricGroups() {
         return this.metricGroups;
     }
     /**
@@ -211,7 +212,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return [DEPRECATED] The minimum value allowed for the fleet's instance count. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinSize() {
+    public Output</* @Nullable */ Integer> minSize() {
         return this.minSize;
     }
     /**
@@ -225,7 +226,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -239,7 +240,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet's protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
      */
-    public Output</* @Nullable */ FleetNewGameSessionProtectionPolicy> getNewGameSessionProtectionPolicy() {
+    public Output</* @Nullable */ FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy() {
         return this.newGameSessionProtectionPolicy;
     }
     /**
@@ -253,7 +254,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the AWS account with the VPC that you want to peer your Amazon GameLift fleet with. You can find your account ID in the AWS Management Console under account settings.
      * 
      */
-    public Output</* @Nullable */ String> getPeerVpcAwsAccountId() {
+    public Output</* @Nullable */ String> peerVpcAwsAccountId() {
         return this.peerVpcAwsAccountId;
     }
     /**
@@ -267,7 +268,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet. The VPC must be in the same Region as your fleet. To look up a VPC ID, use the VPC Dashboard in the AWS Management Console.
      * 
      */
-    public Output</* @Nullable */ String> getPeerVpcId() {
+    public Output</* @Nullable */ String> peerVpcId() {
         return this.peerVpcId;
     }
     /**
@@ -281,7 +282,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
      * 
      */
-    public Output</* @Nullable */ FleetResourceCreationLimitPolicy> getResourceCreationLimitPolicy() {
+    public Output</* @Nullable */ FleetResourceCreationLimitPolicy> resourceCreationLimitPolicy() {
         return this.resourceCreationLimitPolicy;
     }
     /**
@@ -299,7 +300,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * This parameter is required unless the parameters ServerLaunchPath and ServerLaunchParameters are defined. Runtime configuration has replaced these parameters, but fleets that use them will continue to work.
      * 
      */
-    public Output</* @Nullable */ FleetRuntimeConfiguration> getRuntimeConfiguration() {
+    public Output</* @Nullable */ FleetRuntimeConfiguration> runtimeConfiguration() {
         return this.runtimeConfiguration;
     }
     /**
@@ -317,7 +318,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Note: It is not currently possible to use the !Ref command to reference a script created with a CloudFormation template for the fleet property ScriptId. Instead, use Fn::GetAtt Script.Arn or Fn::GetAtt Script.Id to retrieve either of these properties as input for ScriptId. Alternatively, enter a ScriptId string manually.
      * 
      */
-    public Output</* @Nullable */ String> getScriptId() {
+    public Output</* @Nullable */ String> scriptId() {
         return this.scriptId;
     }
     /**
@@ -331,7 +332,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return This parameter is no longer used but is retained for backward compatibility. Instead, specify server launch parameters in the RuntimeConfiguration parameter. A request must specify either a runtime configuration or values for both ServerLaunchParameters and ServerLaunchPath.
      * 
      */
-    public Output</* @Nullable */ String> getServerLaunchParameters() {
+    public Output</* @Nullable */ String> serverLaunchParameters() {
         return this.serverLaunchParameters;
     }
     /**
@@ -345,7 +346,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return This parameter is no longer used. Instead, specify a server launch path using the RuntimeConfiguration parameter. Requests that specify a server launch path and launch parameters instead of a runtime configuration will continue to work.
      * 
      */
-    public Output</* @Nullable */ String> getServerLaunchPath() {
+    public Output</* @Nullable */ String> serverLaunchPath() {
         return this.serverLaunchPath;
     }
 
@@ -371,7 +372,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fleet(String name, @Nullable FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:gamelift:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:gamelift:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Fleet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

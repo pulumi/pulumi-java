@@ -8,6 +8,7 @@ import io.pulumi.azurenative.devtestlab.enums.SourceControlType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="armTemplateFolderPath")
       private final @Nullable Output<String> armTemplateFolderPath;
 
-    public Output<String> getArmTemplateFolderPath() {
-        return this.armTemplateFolderPath == null ? Output.empty() : this.armTemplateFolderPath;
+    public Output<String> armTemplateFolderPath() {
+        return this.armTemplateFolderPath == null ? Codegen.empty() : this.armTemplateFolderPath;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branchRef")
       private final @Nullable Output<String> branchRef;
 
-    public Output<String> getBranchRef() {
-        return this.branchRef == null ? Output.empty() : this.branchRef;
+    public Output<String> branchRef() {
+        return this.branchRef == null ? Codegen.empty() : this.branchRef;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+    public Output<String> folderPath() {
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -80,8 +81,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,8 +114,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityToken")
       private final @Nullable Output<String> securityToken;
 
-    public Output<String> getSecurityToken() {
-        return this.securityToken == null ? Output.empty() : this.securityToken;
+    public Output<String> securityToken() {
+        return this.securityToken == null ? Codegen.empty() : this.securityToken;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceControlType>> sourceType;
 
-    public Output<Either<String,SourceControlType>> getSourceType() {
-        return this.sourceType == null ? Output.empty() : this.sourceType;
+    public Output<Either<String,SourceControlType>> sourceType() {
+        return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,EnableStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ArtifactSourceArgs(
@@ -191,19 +192,19 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactSourceArgs() {
-        this.armTemplateFolderPath = Output.empty();
-        this.branchRef = Output.empty();
-        this.displayName = Output.empty();
-        this.folderPath = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.securityToken = Output.empty();
-        this.sourceType = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.uri = Output.empty();
+        this.armTemplateFolderPath = Codegen.empty();
+        this.branchRef = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.securityToken = Codegen.empty();
+        this.sourceType = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -255,7 +256,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder armTemplateFolderPath(@Nullable String armTemplateFolderPath) {
-            this.armTemplateFolderPath = Output.ofNullable(armTemplateFolderPath);
+            this.armTemplateFolderPath = Codegen.ofNullable(armTemplateFolderPath);
             return this;
         }
         public Builder branchRef(@Nullable Output<String> branchRef) {
@@ -263,7 +264,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branchRef(@Nullable String branchRef) {
-            this.branchRef = Output.ofNullable(branchRef);
+            this.branchRef = Codegen.ofNullable(branchRef);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -271,7 +272,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder folderPath(@Nullable Output<String> folderPath) {
@@ -279,7 +280,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folderPath(@Nullable String folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -295,7 +296,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -303,7 +304,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -319,7 +320,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityToken(@Nullable String securityToken) {
-            this.securityToken = Output.ofNullable(securityToken);
+            this.securityToken = Codegen.ofNullable(securityToken);
             return this;
         }
         public Builder sourceType(@Nullable Output<Either<String,SourceControlType>> sourceType) {
@@ -327,7 +328,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceType(@Nullable Either<String,SourceControlType> sourceType) {
-            this.sourceType = Output.ofNullable(sourceType);
+            this.sourceType = Codegen.ofNullable(sourceType);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
@@ -335,7 +336,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -343,7 +344,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -351,7 +352,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ArtifactSourceArgs build() {
             return new ArtifactSourceArgs(armTemplateFolderPath, branchRef, displayName, folderPath, labName, location, name, resourceGroupName, securityToken, sourceType, status, tags, uri);

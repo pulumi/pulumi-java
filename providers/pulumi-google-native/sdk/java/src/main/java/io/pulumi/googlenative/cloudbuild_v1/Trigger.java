@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudbuild_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.TriggerArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalConfigResponse;
@@ -40,7 +41,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Configuration for manual approval to start a build invocation of this BuildTrigger.
      * 
      */
-    public Output<ApprovalConfigResponse> getApprovalConfig() {
+    public Output<ApprovalConfigResponse> approvalConfig() {
         return this.approvalConfig;
     }
     /**
@@ -54,7 +55,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Autodetect build configuration. The following precedence is used (case insensitive): 1. cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for GitHub App Triggers.
      * 
      */
-    public Output<Boolean> getAutodetect() {
+    public Output<Boolean> autodetect() {
         return this.autodetect;
     }
     /**
@@ -68,7 +69,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received.
      * 
      */
-    public Output<BitbucketServerTriggerConfigResponse> getBitbucketServerTriggerConfig() {
+    public Output<BitbucketServerTriggerConfigResponse> bitbucketServerTriggerConfig() {
         return this.bitbucketServerTriggerConfig;
     }
     /**
@@ -82,7 +83,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Contents of the build template.
      * 
      */
-    public Output<BuildResponse> getBuild() {
+    public Output<BuildResponse> build() {
         return this.build;
     }
     /**
@@ -96,7 +97,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Time when the trigger was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -110,7 +111,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Human-readable description of this trigger.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -124,7 +125,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return If true, the trigger will never automatically execute a build.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -138,7 +139,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
      * 
      */
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
     /**
@@ -152,7 +153,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
      * 
      */
-    public Output<String> getFilename() {
+    public Output<String> filename() {
         return this.filename;
     }
     /**
@@ -166,7 +167,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return A Common Expression Language string.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -180,7 +181,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The file source describing the local or remote Build template.
      * 
      */
-    public Output<GitFileSourceResponse> getGitFileSource() {
+    public Output<GitFileSourceResponse> gitFileSource() {
         return this.gitFileSource;
     }
     /**
@@ -194,7 +195,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received. Mutually exclusive with `trigger_template`.
      * 
      */
-    public Output<GitHubEventsConfigResponse> getGithub() {
+    public Output<GitHubEventsConfigResponse> github() {
         return this.github;
     }
     /**
@@ -208,7 +209,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return ignored_files and included_files are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for "**". If ignored_files and changed files are both empty, then they are not used to determine whether or not to trigger a build. If ignored_files is not empty, then we ignore any files that match any of the ignored_file globs. If the change has no files that are outside of the ignored_files globs, then we do not trigger a build.
      * 
      */
-    public Output<List<String>> getIgnoredFiles() {
+    public Output<List<String>> ignoredFiles() {
         return this.ignoredFiles;
     }
     /**
@@ -222,7 +223,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.
      * 
      */
-    public Output<List<String>> getIncludedFiles() {
+    public Output<List<String>> includedFiles() {
         return this.includedFiles;
     }
     /**
@@ -236,7 +237,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -250,7 +251,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
      * 
      */
-    public Output<PubsubConfigResponse> getPubsubConfig() {
+    public Output<PubsubConfigResponse> pubsubConfig() {
         return this.pubsubConfig;
     }
     /**
@@ -264,7 +265,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.
      * 
      */
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
     /**
@@ -278,7 +279,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The service account used for all user-controlled operations including UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -292,7 +293,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
      * 
      */
-    public Output<GitRepoSourceResponse> getSourceToBuild() {
+    public Output<GitRepoSourceResponse> sourceToBuild() {
         return this.sourceToBuild;
     }
     /**
@@ -306,7 +307,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Substitutions for Build resource. The keys must match the following regular expression: `^_[A-Z0-9_]+$`.
      * 
      */
-    public Output<Map<String,String>> getSubstitutions() {
+    public Output<Map<String,String>> substitutions() {
         return this.substitutions;
     }
     /**
@@ -320,7 +321,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Tags for annotation of a `BuildTrigger`
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
     /**
@@ -334,7 +335,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. Mutually exclusive with `github`.
      * 
      */
-    public Output<RepoSourceResponse> getTriggerTemplate() {
+    public Output<RepoSourceResponse> triggerTemplate() {
         return this.triggerTemplate;
     }
     /**
@@ -348,7 +349,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.
      * 
      */
-    public Output<WebhookConfigResponse> getWebhookConfig() {
+    public Output<WebhookConfigResponse> webhookConfig() {
         return this.webhookConfig;
     }
 
@@ -374,7 +375,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Trigger(String name, TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudbuild/v1:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudbuild/v1:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Trigger(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

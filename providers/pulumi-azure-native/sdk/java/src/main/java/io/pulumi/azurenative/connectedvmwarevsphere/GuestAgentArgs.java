@@ -9,6 +9,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.inputs.HttpProxyConfiguratio
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<GuestCredentialArgs> credentials;
 
-    public Output<GuestCredentialArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+    public Output<GuestCredentialArgs> credentials() {
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpProxyConfig")
       private final @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
 
-    public Output<HttpProxyConfigurationArgs> getHttpProxyConfig() {
-        return this.httpProxyConfig == null ? Output.empty() : this.httpProxyConfig;
+    public Output<HttpProxyConfigurationArgs> httpProxyConfig() {
+        return this.httpProxyConfig == null ? Codegen.empty() : this.httpProxyConfig;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningAction")
       private final @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
 
-    public Output<Either<String,ProvisioningAction>> getProvisioningAction() {
-        return this.provisioningAction == null ? Output.empty() : this.provisioningAction;
+    public Output<Either<String,ProvisioningAction>> provisioningAction() {
+        return this.provisioningAction == null ? Codegen.empty() : this.provisioningAction;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +81,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;
 
-    public Output<String> getVirtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -100,12 +101,12 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GuestAgentArgs() {
-        this.credentials = Output.empty();
-        this.httpProxyConfig = Output.empty();
-        this.name = Output.empty();
-        this.provisioningAction = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.virtualMachineName = Output.empty();
+        this.credentials = Codegen.empty();
+        this.httpProxyConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.provisioningAction = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.virtualMachineName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable GuestCredentialArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder httpProxyConfig(@Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig) {
@@ -151,7 +152,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpProxyConfig(@Nullable HttpProxyConfigurationArgs httpProxyConfig) {
-            this.httpProxyConfig = Output.ofNullable(httpProxyConfig);
+            this.httpProxyConfig = Codegen.ofNullable(httpProxyConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -159,7 +160,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder provisioningAction(@Nullable Output<Either<String,ProvisioningAction>> provisioningAction) {
@@ -167,7 +168,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningAction(@Nullable Either<String,ProvisioningAction> provisioningAction) {
-            this.provisioningAction = Output.ofNullable(provisioningAction);
+            this.provisioningAction = Codegen.ofNullable(provisioningAction);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

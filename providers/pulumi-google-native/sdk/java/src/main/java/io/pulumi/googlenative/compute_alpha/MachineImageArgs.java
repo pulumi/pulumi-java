@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SavedDiskArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SourceDiskEncryptionKeyArgs;
@@ -26,8 +27,8 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> getGuestFlush() {
-        return this.guestFlush == null ? Output.empty() : this.guestFlush;
+    public Output<Boolean> guestFlush() {
+        return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> machineImageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getMachineImageEncryptionKey() {
-        return this.machineImageEncryptionKey == null ? Output.empty() : this.machineImageEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> machineImageEncryptionKey() {
+        return this.machineImageEncryptionKey == null ? Codegen.empty() : this.machineImageEncryptionKey;
     }
 
     /**
@@ -59,22 +60,22 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="savedDisks")
       private final @Nullable Output<List<SavedDiskArgs>> savedDisks;
 
-    public Output<List<SavedDiskArgs>> getSavedDisks() {
-        return this.savedDisks == null ? Output.empty() : this.savedDisks;
+    public Output<List<SavedDiskArgs>> savedDisks() {
+        return this.savedDisks == null ? Codegen.empty() : this.savedDisks;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKeys")
       private final @Nullable Output<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys;
 
-    public Output<List<SourceDiskEncryptionKeyArgs>> getSourceDiskEncryptionKeys() {
-        return this.sourceDiskEncryptionKeys == null ? Output.empty() : this.sourceDiskEncryptionKeys;
+    public Output<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys() {
+        return this.sourceDiskEncryptionKeys == null ? Codegen.empty() : this.sourceDiskEncryptionKeys;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceInstance", required=true)
       private final Output<String> sourceInstance;
 
-    public Output<String> getSourceInstance() {
+    public Output<String> sourceInstance() {
         return this.sourceInstance;
     }
 
@@ -117,8 +118,8 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> getStorageLocations() {
-        return this.storageLocations == null ? Output.empty() : this.storageLocations;
+    public Output<List<String>> storageLocations() {
+        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 
     public MachineImageArgs(
@@ -145,16 +146,16 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MachineImageArgs() {
-        this.description = Output.empty();
-        this.guestFlush = Output.empty();
-        this.machineImageEncryptionKey = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.savedDisks = Output.empty();
-        this.sourceDiskEncryptionKeys = Output.empty();
-        this.sourceInstance = Output.empty();
-        this.storageLocations = Output.empty();
+        this.description = Codegen.empty();
+        this.guestFlush = Codegen.empty();
+        this.machineImageEncryptionKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.savedDisks = Codegen.empty();
+        this.sourceDiskEncryptionKeys = Codegen.empty();
+        this.sourceInstance = Codegen.empty();
+        this.storageLocations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
@@ -208,7 +209,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder guestFlush(@Nullable Boolean guestFlush) {
-            this.guestFlush = Output.ofNullable(guestFlush);
+            this.guestFlush = Codegen.ofNullable(guestFlush);
             return this;
         }
         public Builder machineImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> machineImageEncryptionKey) {
@@ -216,7 +217,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs machineImageEncryptionKey) {
-            this.machineImageEncryptionKey = Output.ofNullable(machineImageEncryptionKey);
+            this.machineImageEncryptionKey = Codegen.ofNullable(machineImageEncryptionKey);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -224,7 +225,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -232,7 +233,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -240,7 +241,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder savedDisks(@Nullable Output<List<SavedDiskArgs>> savedDisks) {
@@ -248,7 +249,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder savedDisks(@Nullable List<SavedDiskArgs> savedDisks) {
-            this.savedDisks = Output.ofNullable(savedDisks);
+            this.savedDisks = Codegen.ofNullable(savedDisks);
             return this;
         }
         public Builder savedDisks(SavedDiskArgs... savedDisks) {
@@ -259,7 +260,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDiskEncryptionKeys(@Nullable List<SourceDiskEncryptionKeyArgs> sourceDiskEncryptionKeys) {
-            this.sourceDiskEncryptionKeys = Output.ofNullable(sourceDiskEncryptionKeys);
+            this.sourceDiskEncryptionKeys = Codegen.ofNullable(sourceDiskEncryptionKeys);
             return this;
         }
         public Builder sourceDiskEncryptionKeys(SourceDiskEncryptionKeyArgs... sourceDiskEncryptionKeys) {
@@ -278,7 +279,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Output.ofNullable(storageLocations);
+            this.storageLocations = Codegen.ofNullable(storageLocations);
             return this;
         }
         public Builder storageLocations(String... storageLocations) {

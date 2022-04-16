@@ -9,6 +9,7 @@ import io.pulumi.aws.ebs.inputs.EncryptionByDefaultState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class EncryptionByDefault extends io.pulumi.resources.CustomResource {
      * @return Whether or not default EBS encryption is enabled. Valid values are `true` or `false`. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
 
@@ -67,7 +68,7 @@ public class EncryptionByDefault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EncryptionByDefault(String name, @Nullable EncryptionByDefaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ebs/encryptionByDefault:EncryptionByDefault", name, args == null ? EncryptionByDefaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ebs/encryptionByDefault:EncryptionByDefault", name, args == null ? EncryptionByDefaultArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EncryptionByDefault(String name, Output<String> id, @Nullable EncryptionByDefaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

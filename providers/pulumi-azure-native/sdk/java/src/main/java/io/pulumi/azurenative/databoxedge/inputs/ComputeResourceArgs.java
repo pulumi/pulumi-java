@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
+    public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
 
@@ -36,7 +37,7 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="processorCount", required=true)
       private final Output<Integer> processorCount;
 
-    public Output<Integer> getProcessorCount() {
+    public Output<Integer> processorCount() {
         return this.processorCount;
     }
 
@@ -48,8 +49,8 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ComputeResourceArgs() {
-        this.memoryInGB = Output.empty();
-        this.processorCount = Output.empty();
+        this.memoryInGB = Codegen.empty();
+        this.processorCount = Codegen.empty();
     }
 
     public static Builder builder() {

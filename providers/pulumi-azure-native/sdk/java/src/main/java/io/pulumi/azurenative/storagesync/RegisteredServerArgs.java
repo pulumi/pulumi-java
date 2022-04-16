@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
-        return this.agentVersion == null ? Output.empty() : this.agentVersion;
+    public Output<String> agentVersion() {
+        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+    public Output<String> clusterId() {
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lastHeartBeat")
       private final @Nullable Output<String> lastHeartBeat;
 
-    public Output<String> getLastHeartBeat() {
-        return this.lastHeartBeat == null ? Output.empty() : this.lastHeartBeat;
+    public Output<String> lastHeartBeat() {
+        return this.lastHeartBeat == null ? Codegen.empty() : this.lastHeartBeat;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,8 +88,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverCertificate")
       private final @Nullable Output<String> serverCertificate;
 
-    public Output<String> getServerCertificate() {
-        return this.serverCertificate == null ? Output.empty() : this.serverCertificate;
+    public Output<String> serverCertificate() {
+        return this.serverCertificate == null ? Codegen.empty() : this.serverCertificate;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverId")
       private final @Nullable Output<String> serverId;
 
-    public Output<String> getServerId() {
-        return this.serverId == null ? Output.empty() : this.serverId;
+    public Output<String> serverId() {
+        return this.serverId == null ? Codegen.empty() : this.serverId;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverOSVersion")
       private final @Nullable Output<String> serverOSVersion;
 
-    public Output<String> getServerOSVersion() {
-        return this.serverOSVersion == null ? Output.empty() : this.serverOSVersion;
+    public Output<String> serverOSVersion() {
+        return this.serverOSVersion == null ? Codegen.empty() : this.serverOSVersion;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverRole")
       private final @Nullable Output<String> serverRole;
 
-    public Output<String> getServerRole() {
-        return this.serverRole == null ? Output.empty() : this.serverRole;
+    public Output<String> serverRole() {
+        return this.serverRole == null ? Codegen.empty() : this.serverRole;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
-    public Output<String> getStorageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -161,17 +162,17 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegisteredServerArgs() {
-        this.agentVersion = Output.empty();
-        this.clusterId = Output.empty();
-        this.clusterName = Output.empty();
-        this.friendlyName = Output.empty();
-        this.lastHeartBeat = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverCertificate = Output.empty();
-        this.serverId = Output.empty();
-        this.serverOSVersion = Output.empty();
-        this.serverRole = Output.empty();
-        this.storageSyncServiceName = Output.empty();
+        this.agentVersion = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.lastHeartBeat = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverCertificate = Codegen.empty();
+        this.serverId = Codegen.empty();
+        this.serverOSVersion = Codegen.empty();
+        this.serverRole = Codegen.empty();
+        this.storageSyncServiceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Output.ofNullable(agentVersion);
+            this.agentVersion = Codegen.ofNullable(agentVersion);
             return this;
         }
         public Builder clusterId(@Nullable Output<String> clusterId) {
@@ -227,7 +228,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -235,7 +236,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -243,7 +244,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder lastHeartBeat(@Nullable Output<String> lastHeartBeat) {
@@ -251,7 +252,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
-            this.lastHeartBeat = Output.ofNullable(lastHeartBeat);
+            this.lastHeartBeat = Codegen.ofNullable(lastHeartBeat);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -267,7 +268,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serverCertificate(@Nullable String serverCertificate) {
-            this.serverCertificate = Output.ofNullable(serverCertificate);
+            this.serverCertificate = Codegen.ofNullable(serverCertificate);
             return this;
         }
         public Builder serverId(@Nullable Output<String> serverId) {
@@ -275,7 +276,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serverId(@Nullable String serverId) {
-            this.serverId = Output.ofNullable(serverId);
+            this.serverId = Codegen.ofNullable(serverId);
             return this;
         }
         public Builder serverOSVersion(@Nullable Output<String> serverOSVersion) {
@@ -283,7 +284,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serverOSVersion(@Nullable String serverOSVersion) {
-            this.serverOSVersion = Output.ofNullable(serverOSVersion);
+            this.serverOSVersion = Codegen.ofNullable(serverOSVersion);
             return this;
         }
         public Builder serverRole(@Nullable Output<String> serverRole) {
@@ -291,7 +292,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serverRole(@Nullable String serverRole) {
-            this.serverRole = Output.ofNullable(serverRole);
+            this.serverRole = Codegen.ofNullable(serverRole);
             return this;
         }
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {

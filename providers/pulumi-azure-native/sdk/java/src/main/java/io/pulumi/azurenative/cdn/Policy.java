@@ -16,6 +16,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -49,7 +50,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes custom rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ CustomRuleListResponse> getCustomRules() {
+    public Output</* @Nullable */ CustomRuleListResponse> customRules() {
         return this.customRules;
     }
     /**
@@ -63,7 +64,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes Azure CDN endpoints associated with this Web Application Firewall policy.
      * 
      */
-    public Output<List<CdnEndpointResponse>> getEndpointLinks() {
+    public Output<List<CdnEndpointResponse>> endpointLinks() {
         return this.endpointLinks;
     }
     /**
@@ -77,7 +78,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -91,7 +92,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -105,7 +106,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes managed rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ ManagedRuleSetListResponse> getManagedRules() {
+    public Output</* @Nullable */ ManagedRuleSetListResponse> managedRules() {
         return this.managedRules;
     }
     /**
@@ -119,7 +120,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +134,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes  policySettings for policy
      * 
      */
-    public Output</* @Nullable */ PolicySettingsResponse> getPolicySettings() {
+    public Output</* @Nullable */ PolicySettingsResponse> policySettings() {
         return this.policySettings;
     }
     /**
@@ -147,7 +148,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the WebApplicationFirewallPolicy.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -161,13 +162,13 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes rate limit rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ RateLimitRuleListResponse> getRateLimitRules() {
+    public Output</* @Nullable */ RateLimitRuleListResponse> rateLimitRules() {
         return this.rateLimitRules;
     }
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -181,7 +182,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -195,7 +196,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -209,7 +210,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -223,7 +224,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -249,7 +250,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Policy(String name, PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cdn:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Policy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

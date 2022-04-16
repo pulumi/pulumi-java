@@ -27,7 +27,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
     @Import(name="locationPlacementId")
       private final @Nullable String locationPlacementId;
 
-    public Optional<String> getLocationPlacementId() {
+    public Optional<String> locationPlacementId() {
         return this.locationPlacementId == null ? Optional.empty() : Optional.ofNullable(this.locationPlacementId);
     }
 
@@ -38,7 +38,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
     @Import(name="quotaId", required=true)
       private final String quotaId;
 
-    public String getQuotaId() {
+    public String quotaId() {
         return this.quotaId;
     }
 
@@ -49,7 +49,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
     @Import(name="registeredFeatures")
       private final @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
 
-    public List<CustomerSubscriptionRegisteredFeatures> getRegisteredFeatures() {
+    public List<CustomerSubscriptionRegisteredFeatures> registeredFeatures() {
         return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
     }
 

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The Id of the frontdoor.
      * 
      */
-    public Output<String> getFrontdoorId() {
+    public Output<String> frontdoorId() {
         return this.frontdoorId;
     }
     /**
@@ -58,7 +59,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Provisioning status of the profile.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Resource status of the profile.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -114,7 +115,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -128,7 +129,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -142,7 +143,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Profile(String name, ProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:Profile", name, args == null ? ProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cdn:Profile", name, args == null ? ProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Profile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

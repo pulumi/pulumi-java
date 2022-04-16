@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.inputs.MetricAlertSingleResourceMultipleMe
 import io.pulumi.azurenative.insights.inputs.WebtestLocationAvailabilityCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -30,8 +31,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<List<MetricAlertActionArgs>> actions;
 
-    public Output<List<MetricAlertActionArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+    public Output<List<MetricAlertActionArgs>> actions() {
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoMitigate")
       private final @Nullable Output<Boolean> autoMitigate;
 
-    public Output<Boolean> getAutoMitigate() {
-        return this.autoMitigate == null ? Output.empty() : this.autoMitigate;
+    public Output<Boolean> autoMitigate() {
+        return this.autoMitigate == null ? Codegen.empty() : this.autoMitigate;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="criteria", required=true)
       private final Output<Object> criteria;
 
-    public Output<Object> getCriteria() {
+    public Output<Object> criteria() {
         return this.criteria;
     }
 
@@ -63,8 +64,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -85,7 +86,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluationFrequency", required=true)
       private final Output<String> evaluationFrequency;
 
-    public Output<String> getEvaluationFrequency() {
+    public Output<String> evaluationFrequency() {
         return this.evaluationFrequency;
     }
 
@@ -96,8 +97,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -118,8 +119,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
 
@@ -140,7 +141,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
       private final Output<Integer> severity;
 
-    public Output<Integer> getSeverity() {
+    public Output<Integer> severity() {
         return this.severity;
     }
 
@@ -151,8 +152,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceRegion")
       private final @Nullable Output<String> targetResourceRegion;
 
-    public Output<String> getTargetResourceRegion() {
-        return this.targetResourceRegion == null ? Output.empty() : this.targetResourceRegion;
+    public Output<String> targetResourceRegion() {
+        return this.targetResourceRegion == null ? Codegen.empty() : this.targetResourceRegion;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceType")
       private final @Nullable Output<String> targetResourceType;
 
-    public Output<String> getTargetResourceType() {
-        return this.targetResourceType == null ? Output.empty() : this.targetResourceType;
+    public Output<String> targetResourceType() {
+        return this.targetResourceType == null ? Codegen.empty() : this.targetResourceType;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowSize", required=true)
       private final Output<String> windowSize;
 
-    public Output<String> getWindowSize() {
+    public Output<String> windowSize() {
         return this.windowSize;
     }
 
@@ -222,21 +223,21 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricAlertArgs() {
-        this.actions = Output.empty();
-        this.autoMitigate = Output.empty();
-        this.criteria = Output.empty();
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.evaluationFrequency = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.scopes = Output.empty();
-        this.severity = Output.empty();
-        this.tags = Output.empty();
-        this.targetResourceRegion = Output.empty();
-        this.targetResourceType = Output.empty();
-        this.windowSize = Output.empty();
+        this.actions = Codegen.empty();
+        this.autoMitigate = Codegen.empty();
+        this.criteria = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.evaluationFrequency = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetResourceRegion = Codegen.empty();
+        this.targetResourceType = Codegen.empty();
+        this.windowSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actions(@Nullable List<MetricAlertActionArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(MetricAlertActionArgs... actions) {
@@ -303,7 +304,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoMitigate(@Nullable Boolean autoMitigate) {
-            this.autoMitigate = Output.ofNullable(autoMitigate);
+            this.autoMitigate = Codegen.ofNullable(autoMitigate);
             return this;
         }
         public Builder criteria(Output<Object> criteria) {
@@ -319,7 +320,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {
@@ -343,7 +344,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -359,7 +360,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder scopes(Output<List<String>> scopes) {
@@ -386,7 +387,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetResourceRegion(@Nullable Output<String> targetResourceRegion) {
@@ -394,7 +395,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetResourceRegion(@Nullable String targetResourceRegion) {
-            this.targetResourceRegion = Output.ofNullable(targetResourceRegion);
+            this.targetResourceRegion = Codegen.ofNullable(targetResourceRegion);
             return this;
         }
         public Builder targetResourceType(@Nullable Output<String> targetResourceType) {
@@ -402,7 +403,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetResourceType(@Nullable String targetResourceType) {
-            this.targetResourceType = Output.ofNullable(targetResourceType);
+            this.targetResourceType = Codegen.ofNullable(targetResourceType);
             return this;
         }
         public Builder windowSize(Output<String> windowSize) {

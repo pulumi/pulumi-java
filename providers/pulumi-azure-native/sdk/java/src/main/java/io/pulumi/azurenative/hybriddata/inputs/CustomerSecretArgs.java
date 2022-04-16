@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hybriddata.inputs;
 import io.pulumi.azurenative.hybriddata.enums.SupportedAlgorithm;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="algorithm", required=true)
       private final Output<SupportedAlgorithm> algorithm;
 
-    public Output<SupportedAlgorithm> getAlgorithm() {
+    public Output<SupportedAlgorithm> algorithm() {
         return this.algorithm;
     }
 
@@ -36,7 +37,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyIdentifier", required=true)
       private final Output<String> keyIdentifier;
 
-    public Output<String> getKeyIdentifier() {
+    public Output<String> keyIdentifier() {
         return this.keyIdentifier;
     }
 
@@ -47,7 +48,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyValue", required=true)
       private final Output<String> keyValue;
 
-    public Output<String> getKeyValue() {
+    public Output<String> keyValue() {
         return this.keyValue;
     }
 
@@ -61,9 +62,9 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomerSecretArgs() {
-        this.algorithm = Output.empty();
-        this.keyIdentifier = Output.empty();
-        this.keyValue = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.keyIdentifier = Codegen.empty();
+        this.keyValue = Codegen.empty();
     }
 
     public static Builder builder() {

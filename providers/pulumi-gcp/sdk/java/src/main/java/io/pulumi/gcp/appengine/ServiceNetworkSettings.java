@@ -6,6 +6,7 @@ package io.pulumi.gcp.appengine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ServiceNetworkSettingsArgs;
 import io.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsState;
@@ -54,7 +55,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ServiceNetworkSettingsNetworkSettings> getNetworkSettings() {
+    public Output<ServiceNetworkSettingsNetworkSettings> networkSettings() {
         return this.networkSettings;
     }
     /**
@@ -70,7 +71,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -84,7 +85,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * @return The name of the service these settings apply to.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -110,7 +111,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceNetworkSettings(String name, ServiceNetworkSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings", name, args == null ? ServiceNetworkSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings", name, args == null ? ServiceNetworkSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceNetworkSettings(String name, Output<String> id, @Nullable ServiceNetworkSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * repositories/repository-name/metadata/write
      * 
      */
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
     /**
@@ -60,7 +61,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @return The creation date of scope map.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -74,7 +75,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @return The user friendly description of the scope map.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -116,7 +117,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -130,7 +131,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -156,7 +157,7 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScopeMap(String name, ScopeMapArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:ScopeMap", name, args == null ? ScopeMapArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:containerregistry:ScopeMap", name, args == null ? ScopeMapArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScopeMap(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

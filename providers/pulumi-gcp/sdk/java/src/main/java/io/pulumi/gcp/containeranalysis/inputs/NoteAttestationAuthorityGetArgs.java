@@ -5,6 +5,7 @@ package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityHintGetArgs;
 import java.util.Objects;
 
@@ -28,7 +29,7 @@ public final class NoteAttestationAuthorityGetArgs extends io.pulumi.resources.R
     @Import(name="hint", required=true)
       private final Output<NoteAttestationAuthorityHintGetArgs> hint;
 
-    public Output<NoteAttestationAuthorityHintGetArgs> getHint() {
+    public Output<NoteAttestationAuthorityHintGetArgs> hint() {
         return this.hint;
     }
 
@@ -37,7 +38,7 @@ public final class NoteAttestationAuthorityGetArgs extends io.pulumi.resources.R
     }
 
     private NoteAttestationAuthorityGetArgs() {
-        this.hint = Output.empty();
+        this.hint = Codegen.empty();
     }
 
     public static Builder builder() {

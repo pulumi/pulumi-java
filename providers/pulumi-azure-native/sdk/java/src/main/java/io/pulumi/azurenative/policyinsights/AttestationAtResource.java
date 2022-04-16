@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return Comments describing why this attestation was created.
      * 
      */
-    public Output</* @Nullable */ String> getComments() {
+    public Output</* @Nullable */ String> comments() {
         return this.comments;
     }
     /**
@@ -57,7 +58,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The compliance state that should be set on the resource.
      * 
      */
-    public Output</* @Nullable */ String> getComplianceState() {
+    public Output</* @Nullable */ String> complianceState() {
         return this.complianceState;
     }
     /**
@@ -71,7 +72,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The evidence supporting the compliance state set in this attestation.
      * 
      */
-    public Output</* @Nullable */ List<AttestationEvidenceResponse>> getEvidence() {
+    public Output</* @Nullable */ List<AttestationEvidenceResponse>> evidence() {
         return this.evidence;
     }
     /**
@@ -85,7 +86,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The time the compliance state should expire.
      * 
      */
-    public Output</* @Nullable */ String> getExpiresOn() {
+    public Output</* @Nullable */ String> expiresOn() {
         return this.expiresOn;
     }
     /**
@@ -99,7 +100,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The time the compliance state was last changed in this attestation.
      * 
      */
-    public Output<String> getLastComplianceStateChangeAt() {
+    public Output<String> lastComplianceStateChangeAt() {
         return this.lastComplianceStateChangeAt;
     }
     /**
@@ -113,7 +114,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
      * 
      */
-    public Output</* @Nullable */ String> getOwner() {
+    public Output</* @Nullable */ String> owner() {
         return this.owner;
     }
     /**
@@ -141,7 +142,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the policy assignment that the attestation is setting the state for.
      * 
      */
-    public Output<String> getPolicyAssignmentId() {
+    public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
@@ -155,7 +156,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyDefinitionReferenceId() {
+    public Output</* @Nullable */ String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId;
     }
     /**
@@ -169,7 +170,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The status of the attestation.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -183,7 +184,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -197,7 +198,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -223,7 +224,7 @@ public class AttestationAtResource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AttestationAtResource(String name, AttestationAtResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:policyinsights:AttestationAtResource", name, args == null ? AttestationAtResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:policyinsights:AttestationAtResource", name, args == null ? AttestationAtResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AttestationAtResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

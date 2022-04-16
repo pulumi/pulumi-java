@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends i
     @Import(name="infoTypeTransformations", required=true)
       private final Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> getInfoTypeTransformations() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations() {
         return this.infoTypeTransformations;
     }
 
@@ -30,7 +31,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends i
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigGetArgs() {
-        this.infoTypeTransformations = Output.empty();
+        this.infoTypeTransformations = Codegen.empty();
     }
 
     public static Builder builder() {

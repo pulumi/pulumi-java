@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * @return Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -56,7 +57,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * @return Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.
      * 
      */
-    public Output</* @Nullable */ Object> getDefinitions() {
+    public Output</* @Nullable */ Object> definitions() {
         return this.definitions;
     }
     /**
@@ -70,7 +71,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -98,7 +99,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * @return Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 
@@ -124,7 +125,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiSchema(String name, ApiSchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiSchema", name, args == null ? ApiSchemaArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:ApiSchema", name, args == null ? ApiSchemaArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiSchema(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

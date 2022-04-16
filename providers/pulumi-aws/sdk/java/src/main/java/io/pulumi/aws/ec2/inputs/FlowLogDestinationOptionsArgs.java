@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
     @Import(name="fileFormat")
       private final @Nullable Output<String> fileFormat;
 
-    public Output<String> getFileFormat() {
-        return this.fileFormat == null ? Output.empty() : this.fileFormat;
+    public Output<String> fileFormat() {
+        return this.fileFormat == null ? Codegen.empty() : this.fileFormat;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
     @Import(name="hiveCompatiblePartitions")
       private final @Nullable Output<Boolean> hiveCompatiblePartitions;
 
-    public Output<Boolean> getHiveCompatiblePartitions() {
-        return this.hiveCompatiblePartitions == null ? Output.empty() : this.hiveCompatiblePartitions;
+    public Output<Boolean> hiveCompatiblePartitions() {
+        return this.hiveCompatiblePartitions == null ? Codegen.empty() : this.hiveCompatiblePartitions;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
     @Import(name="perHourPartition")
       private final @Nullable Output<Boolean> perHourPartition;
 
-    public Output<Boolean> getPerHourPartition() {
-        return this.perHourPartition == null ? Output.empty() : this.perHourPartition;
+    public Output<Boolean> perHourPartition() {
+        return this.perHourPartition == null ? Codegen.empty() : this.perHourPartition;
     }
 
     public FlowLogDestinationOptionsArgs(
@@ -58,9 +59,9 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
     }
 
     private FlowLogDestinationOptionsArgs() {
-        this.fileFormat = Output.empty();
-        this.hiveCompatiblePartitions = Output.empty();
-        this.perHourPartition = Output.empty();
+        this.fileFormat = Codegen.empty();
+        this.hiveCompatiblePartitions = Codegen.empty();
+        this.perHourPartition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder fileFormat(@Nullable String fileFormat) {
-            this.fileFormat = Output.ofNullable(fileFormat);
+            this.fileFormat = Codegen.ofNullable(fileFormat);
             return this;
         }
         public Builder hiveCompatiblePartitions(@Nullable Output<Boolean> hiveCompatiblePartitions) {
@@ -100,7 +101,7 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder hiveCompatiblePartitions(@Nullable Boolean hiveCompatiblePartitions) {
-            this.hiveCompatiblePartitions = Output.ofNullable(hiveCompatiblePartitions);
+            this.hiveCompatiblePartitions = Codegen.ofNullable(hiveCompatiblePartitions);
             return this;
         }
         public Builder perHourPartition(@Nullable Output<Boolean> perHourPartition) {
@@ -108,7 +109,7 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder perHourPartition(@Nullable Boolean perHourPartition) {
-            this.perHourPartition = Output.ofNullable(perHourPartition);
+            this.perHourPartition = Codegen.ofNullable(perHourPartition);
             return this;
         }        public FlowLogDestinationOptionsArgs build() {
             return new FlowLogDestinationOptionsArgs(fileFormat, hiveCompatiblePartitions, perHourPartition);

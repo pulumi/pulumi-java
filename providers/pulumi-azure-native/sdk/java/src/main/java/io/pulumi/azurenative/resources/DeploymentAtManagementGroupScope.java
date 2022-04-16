@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @return the location of the deployment.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,7 +58,7 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @return The name of the deployment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @return Deployment properties.
      * 
      */
-    public Output<DeploymentPropertiesExtendedResponse> getProperties() {
+    public Output<DeploymentPropertiesExtendedResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +86,7 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @return Deployment tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +100,7 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @return The type of the deployment.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -125,7 +126,7 @@ public class DeploymentAtManagementGroupScope extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentAtManagementGroupScope(String name, DeploymentAtManagementGroupScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:DeploymentAtManagementGroupScope", name, args == null ? DeploymentAtManagementGroupScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:resources:DeploymentAtManagementGroupScope", name, args == null ? DeploymentAtManagementGroupScopeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeploymentAtManagementGroupScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

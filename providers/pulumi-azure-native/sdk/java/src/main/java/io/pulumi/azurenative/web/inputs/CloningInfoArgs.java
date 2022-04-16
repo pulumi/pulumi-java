@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appSettingsOverrides")
       private final @Nullable Output<Map<String,String>> appSettingsOverrides;
 
-    public Output<Map<String,String>> getAppSettingsOverrides() {
-        return this.appSettingsOverrides == null ? Output.empty() : this.appSettingsOverrides;
+    public Output<Map<String,String>> appSettingsOverrides() {
+        return this.appSettingsOverrides == null ? Codegen.empty() : this.appSettingsOverrides;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloneCustomHostNames")
       private final @Nullable Output<Boolean> cloneCustomHostNames;
 
-    public Output<Boolean> getCloneCustomHostNames() {
-        return this.cloneCustomHostNames == null ? Output.empty() : this.cloneCustomHostNames;
+    public Output<Boolean> cloneCustomHostNames() {
+        return this.cloneCustomHostNames == null ? Codegen.empty() : this.cloneCustomHostNames;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloneSourceControl")
       private final @Nullable Output<Boolean> cloneSourceControl;
 
-    public Output<Boolean> getCloneSourceControl() {
-        return this.cloneSourceControl == null ? Output.empty() : this.cloneSourceControl;
+    public Output<Boolean> cloneSourceControl() {
+        return this.cloneSourceControl == null ? Codegen.empty() : this.cloneSourceControl;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configureLoadBalancing")
       private final @Nullable Output<Boolean> configureLoadBalancing;
 
-    public Output<Boolean> getConfigureLoadBalancing() {
-        return this.configureLoadBalancing == null ? Output.empty() : this.configureLoadBalancing;
+    public Output<Boolean> configureLoadBalancing() {
+        return this.configureLoadBalancing == null ? Codegen.empty() : this.configureLoadBalancing;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
 
-    public Output<String> getCorrelationId() {
-        return this.correlationId == null ? Output.empty() : this.correlationId;
+    public Output<String> correlationId() {
+        return this.correlationId == null ? Codegen.empty() : this.correlationId;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostingEnvironment")
       private final @Nullable Output<String> hostingEnvironment;
 
-    public Output<String> getHostingEnvironment() {
-        return this.hostingEnvironment == null ? Output.empty() : this.hostingEnvironment;
+    public Output<String> hostingEnvironment() {
+        return this.hostingEnvironment == null ? Codegen.empty() : this.hostingEnvironment;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
-        return this.overwrite == null ? Output.empty() : this.overwrite;
+    public Output<Boolean> overwrite() {
+        return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceWebAppId", required=true)
       private final Output<String> sourceWebAppId;
 
-    public Output<String> getSourceWebAppId() {
+    public Output<String> sourceWebAppId() {
         return this.sourceWebAppId;
     }
 
@@ -119,8 +120,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceWebAppLocation")
       private final @Nullable Output<String> sourceWebAppLocation;
 
-    public Output<String> getSourceWebAppLocation() {
-        return this.sourceWebAppLocation == null ? Output.empty() : this.sourceWebAppLocation;
+    public Output<String> sourceWebAppLocation() {
+        return this.sourceWebAppLocation == null ? Codegen.empty() : this.sourceWebAppLocation;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficManagerProfileId")
       private final @Nullable Output<String> trafficManagerProfileId;
 
-    public Output<String> getTrafficManagerProfileId() {
-        return this.trafficManagerProfileId == null ? Output.empty() : this.trafficManagerProfileId;
+    public Output<String> trafficManagerProfileId() {
+        return this.trafficManagerProfileId == null ? Codegen.empty() : this.trafficManagerProfileId;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficManagerProfileName")
       private final @Nullable Output<String> trafficManagerProfileName;
 
-    public Output<String> getTrafficManagerProfileName() {
-        return this.trafficManagerProfileName == null ? Output.empty() : this.trafficManagerProfileName;
+    public Output<String> trafficManagerProfileName() {
+        return this.trafficManagerProfileName == null ? Codegen.empty() : this.trafficManagerProfileName;
     }
 
     public CloningInfoArgs(
@@ -172,17 +173,17 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CloningInfoArgs() {
-        this.appSettingsOverrides = Output.empty();
-        this.cloneCustomHostNames = Output.empty();
-        this.cloneSourceControl = Output.empty();
-        this.configureLoadBalancing = Output.empty();
-        this.correlationId = Output.empty();
-        this.hostingEnvironment = Output.empty();
-        this.overwrite = Output.empty();
-        this.sourceWebAppId = Output.empty();
-        this.sourceWebAppLocation = Output.empty();
-        this.trafficManagerProfileId = Output.empty();
-        this.trafficManagerProfileName = Output.empty();
+        this.appSettingsOverrides = Codegen.empty();
+        this.cloneCustomHostNames = Codegen.empty();
+        this.cloneSourceControl = Codegen.empty();
+        this.configureLoadBalancing = Codegen.empty();
+        this.correlationId = Codegen.empty();
+        this.hostingEnvironment = Codegen.empty();
+        this.overwrite = Codegen.empty();
+        this.sourceWebAppId = Codegen.empty();
+        this.sourceWebAppLocation = Codegen.empty();
+        this.trafficManagerProfileId = Codegen.empty();
+        this.trafficManagerProfileName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -230,7 +231,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appSettingsOverrides(@Nullable Map<String,String> appSettingsOverrides) {
-            this.appSettingsOverrides = Output.ofNullable(appSettingsOverrides);
+            this.appSettingsOverrides = Codegen.ofNullable(appSettingsOverrides);
             return this;
         }
         public Builder cloneCustomHostNames(@Nullable Output<Boolean> cloneCustomHostNames) {
@@ -238,7 +239,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloneCustomHostNames(@Nullable Boolean cloneCustomHostNames) {
-            this.cloneCustomHostNames = Output.ofNullable(cloneCustomHostNames);
+            this.cloneCustomHostNames = Codegen.ofNullable(cloneCustomHostNames);
             return this;
         }
         public Builder cloneSourceControl(@Nullable Output<Boolean> cloneSourceControl) {
@@ -246,7 +247,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloneSourceControl(@Nullable Boolean cloneSourceControl) {
-            this.cloneSourceControl = Output.ofNullable(cloneSourceControl);
+            this.cloneSourceControl = Codegen.ofNullable(cloneSourceControl);
             return this;
         }
         public Builder configureLoadBalancing(@Nullable Output<Boolean> configureLoadBalancing) {
@@ -254,7 +255,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configureLoadBalancing(@Nullable Boolean configureLoadBalancing) {
-            this.configureLoadBalancing = Output.ofNullable(configureLoadBalancing);
+            this.configureLoadBalancing = Codegen.ofNullable(configureLoadBalancing);
             return this;
         }
         public Builder correlationId(@Nullable Output<String> correlationId) {
@@ -262,7 +263,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = Output.ofNullable(correlationId);
+            this.correlationId = Codegen.ofNullable(correlationId);
             return this;
         }
         public Builder hostingEnvironment(@Nullable Output<String> hostingEnvironment) {
@@ -270,7 +271,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostingEnvironment(@Nullable String hostingEnvironment) {
-            this.hostingEnvironment = Output.ofNullable(hostingEnvironment);
+            this.hostingEnvironment = Codegen.ofNullable(hostingEnvironment);
             return this;
         }
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
@@ -278,7 +279,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Output.ofNullable(overwrite);
+            this.overwrite = Codegen.ofNullable(overwrite);
             return this;
         }
         public Builder sourceWebAppId(Output<String> sourceWebAppId) {
@@ -294,7 +295,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceWebAppLocation(@Nullable String sourceWebAppLocation) {
-            this.sourceWebAppLocation = Output.ofNullable(sourceWebAppLocation);
+            this.sourceWebAppLocation = Codegen.ofNullable(sourceWebAppLocation);
             return this;
         }
         public Builder trafficManagerProfileId(@Nullable Output<String> trafficManagerProfileId) {
@@ -302,7 +303,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficManagerProfileId(@Nullable String trafficManagerProfileId) {
-            this.trafficManagerProfileId = Output.ofNullable(trafficManagerProfileId);
+            this.trafficManagerProfileId = Codegen.ofNullable(trafficManagerProfileId);
             return this;
         }
         public Builder trafficManagerProfileName(@Nullable Output<String> trafficManagerProfileName) {
@@ -310,7 +311,7 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficManagerProfileName(@Nullable String trafficManagerProfileName) {
-            this.trafficManagerProfileName = Output.ofNullable(trafficManagerProfileName);
+            this.trafficManagerProfileName = Codegen.ofNullable(trafficManagerProfileName);
             return this;
         }        public CloningInfoArgs build() {
             return new CloningInfoArgs(appSettingsOverrides, cloneCustomHostNames, cloneSourceControl, configureLoadBalancing, correlationId, hostingEnvironment, overwrite, sourceWebAppId, sourceWebAppLocation, trafficManagerProfileId, trafficManagerProfileName);

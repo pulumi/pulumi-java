@@ -5,6 +5,7 @@ package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
-        return this.instanceArn == null ? Output.empty() : this.instanceArn;
+    public Output<String> instanceArn() {
+        return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="managedPolicyArn")
       private final @Nullable Output<String> managedPolicyArn;
 
-    public Output<String> getManagedPolicyArn() {
-        return this.managedPolicyArn == null ? Output.empty() : this.managedPolicyArn;
+    public Output<String> managedPolicyArn() {
+        return this.managedPolicyArn == null ? Codegen.empty() : this.managedPolicyArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="managedPolicyName")
       private final @Nullable Output<String> managedPolicyName;
 
-    public Output<String> getManagedPolicyName() {
-        return this.managedPolicyName == null ? Output.empty() : this.managedPolicyName;
+    public Output<String> managedPolicyName() {
+        return this.managedPolicyName == null ? Codegen.empty() : this.managedPolicyName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="permissionSetArn")
       private final @Nullable Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
-        return this.permissionSetArn == null ? Output.empty() : this.permissionSetArn;
+    public Output<String> permissionSetArn() {
+        return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
     }
 
     public ManagedPolicyAttachmentState(
@@ -70,10 +71,10 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     }
 
     private ManagedPolicyAttachmentState() {
-        this.instanceArn = Output.empty();
-        this.managedPolicyArn = Output.empty();
-        this.managedPolicyName = Output.empty();
-        this.permissionSetArn = Output.empty();
+        this.instanceArn = Codegen.empty();
+        this.managedPolicyArn = Codegen.empty();
+        this.managedPolicyName = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Output.ofNullable(instanceArn);
+            this.instanceArn = Codegen.ofNullable(instanceArn);
             return this;
         }
         public Builder managedPolicyArn(@Nullable Output<String> managedPolicyArn) {
@@ -115,7 +116,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder managedPolicyArn(@Nullable String managedPolicyArn) {
-            this.managedPolicyArn = Output.ofNullable(managedPolicyArn);
+            this.managedPolicyArn = Codegen.ofNullable(managedPolicyArn);
             return this;
         }
         public Builder managedPolicyName(@Nullable Output<String> managedPolicyName) {
@@ -123,7 +124,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder managedPolicyName(@Nullable String managedPolicyName) {
-            this.managedPolicyName = Output.ofNullable(managedPolicyName);
+            this.managedPolicyName = Codegen.ofNullable(managedPolicyName);
             return this;
         }
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
@@ -131,7 +132,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Output.ofNullable(permissionSetArn);
+            this.permissionSetArn = Codegen.ofNullable(permissionSetArn);
             return this;
         }        public ManagedPolicyAttachmentState build() {
             return new ManagedPolicyAttachmentState(instanceArn, managedPolicyArn, managedPolicyName, permissionSetArn);

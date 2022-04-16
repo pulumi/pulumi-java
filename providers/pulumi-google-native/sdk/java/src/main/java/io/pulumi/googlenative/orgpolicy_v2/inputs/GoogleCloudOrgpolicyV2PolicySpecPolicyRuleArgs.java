@@ -5,6 +5,7 @@ package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleTypeExprArgs;
 import java.lang.Boolean;
@@ -27,8 +28,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="allowAll")
       private final @Nullable Output<Boolean> allowAll;
 
-    public Output<Boolean> getAllowAll() {
-        return this.allowAll == null ? Output.empty() : this.allowAll;
+    public Output<Boolean> allowAll() {
+        return this.allowAll == null ? Codegen.empty() : this.allowAll;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="condition")
       private final @Nullable Output<GoogleTypeExprArgs> condition;
 
-    public Output<GoogleTypeExprArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<GoogleTypeExprArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="denyAll")
       private final @Nullable Output<Boolean> denyAll;
 
-    public Output<Boolean> getDenyAll() {
-        return this.denyAll == null ? Output.empty() : this.denyAll;
+    public Output<Boolean> denyAll() {
+        return this.denyAll == null ? Codegen.empty() : this.denyAll;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="enforce")
       private final @Nullable Output<Boolean> enforce;
 
-    public Output<Boolean> getEnforce() {
-        return this.enforce == null ? Output.empty() : this.enforce;
+    public Output<Boolean> enforce() {
+        return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="values")
       private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(
@@ -89,11 +90,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     }
 
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs() {
-        this.allowAll = Output.empty();
-        this.condition = Output.empty();
-        this.denyAll = Output.empty();
-        this.enforce = Output.empty();
-        this.values = Output.empty();
+        this.allowAll = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.denyAll = Codegen.empty();
+        this.enforce = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
             return this;
         }
         public Builder allowAll(@Nullable Boolean allowAll) {
-            this.allowAll = Output.ofNullable(allowAll);
+            this.allowAll = Codegen.ofNullable(allowAll);
             return this;
         }
         public Builder condition(@Nullable Output<GoogleTypeExprArgs> condition) {
@@ -137,7 +138,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
             return this;
         }
         public Builder condition(@Nullable GoogleTypeExprArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder denyAll(@Nullable Output<Boolean> denyAll) {
@@ -145,7 +146,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
             return this;
         }
         public Builder denyAll(@Nullable Boolean denyAll) {
-            this.denyAll = Output.ofNullable(denyAll);
+            this.denyAll = Codegen.ofNullable(denyAll);
             return this;
         }
         public Builder enforce(@Nullable Output<Boolean> enforce) {
@@ -153,7 +154,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
             return this;
         }
         public Builder enforce(@Nullable Boolean enforce) {
-            this.enforce = Output.ofNullable(enforce);
+            this.enforce = Codegen.ofNullable(enforce);
             return this;
         }
         public Builder values(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
@@ -161,7 +162,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
             return this;
         }
         public Builder values(@Nullable GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(allowAll, condition, denyAll, enforce, values);

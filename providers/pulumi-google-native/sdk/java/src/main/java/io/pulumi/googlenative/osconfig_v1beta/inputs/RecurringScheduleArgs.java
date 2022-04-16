@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.enums.RecurringScheduleFrequency;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.MonthlyScheduleArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.TimeOfDayArgs;
@@ -30,8 +31,8 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frequency", required=true)
       private final Output<RecurringScheduleFrequency> frequency;
 
-    public Output<RecurringScheduleFrequency> getFrequency() {
+    public Output<RecurringScheduleFrequency> frequency() {
         return this.frequency;
     }
 
@@ -52,7 +53,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="monthly", required=true)
       private final Output<MonthlyScheduleArgs> monthly;
 
-    public Output<MonthlyScheduleArgs> getMonthly() {
+    public Output<MonthlyScheduleArgs> monthly() {
         return this.monthly;
     }
 
@@ -63,8 +64,8 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeOfDay", required=true)
       private final Output<TimeOfDayArgs> timeOfDay;
 
-    public Output<TimeOfDayArgs> getTimeOfDay() {
+    public Output<TimeOfDayArgs> timeOfDay() {
         return this.timeOfDay;
     }
 
@@ -85,7 +86,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeZone", required=true)
       private final Output<TimeZoneArgs> timeZone;
 
-    public Output<TimeZoneArgs> getTimeZone() {
+    public Output<TimeZoneArgs> timeZone() {
         return this.timeZone;
     }
 
@@ -96,7 +97,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="weekly", required=true)
       private final Output<WeeklyScheduleArgs> weekly;
 
-    public Output<WeeklyScheduleArgs> getWeekly() {
+    public Output<WeeklyScheduleArgs> weekly() {
         return this.weekly;
     }
 
@@ -118,13 +119,13 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RecurringScheduleArgs() {
-        this.endTime = Output.empty();
-        this.frequency = Output.empty();
-        this.monthly = Output.empty();
-        this.startTime = Output.empty();
-        this.timeOfDay = Output.empty();
-        this.timeZone = Output.empty();
-        this.weekly = Output.empty();
+        this.endTime = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.monthly = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.timeOfDay = Codegen.empty();
+        this.timeZone = Codegen.empty();
+        this.weekly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder frequency(Output<RecurringScheduleFrequency> frequency) {
@@ -188,7 +189,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder timeOfDay(Output<TimeOfDayArgs> timeOfDay) {

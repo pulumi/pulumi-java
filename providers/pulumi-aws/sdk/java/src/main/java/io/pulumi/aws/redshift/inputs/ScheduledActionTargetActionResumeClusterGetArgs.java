@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ScheduledActionTargetActionResumeClusterGetArgs extends io.pu
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -29,7 +30,7 @@ public final class ScheduledActionTargetActionResumeClusterGetArgs extends io.pu
     }
 
     private ScheduledActionTargetActionResumeClusterGetArgs() {
-        this.clusterIdentifier = Output.empty();
+        this.clusterIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {

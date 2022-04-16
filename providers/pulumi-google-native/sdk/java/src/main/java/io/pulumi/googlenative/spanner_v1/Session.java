@@ -6,6 +6,7 @@ package io.pulumi.googlenative.spanner_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.SessionArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return The approximate timestamp when the session is last used. It is typically earlier than the actual last use time.
      * 
      */
-    public Output<String> getApproximateLastUseTime() {
+    public Output<String> approximateLastUseTime() {
         return this.approximateLastUseTime;
     }
     /**
@@ -44,7 +45,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the session is created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -58,7 +59,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return The labels for the session. * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. * No more than 64 labels can be associated with a given session. See https://goo.gl/xmQnxf for more information on and examples of labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -72,7 +73,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @return The name of the session. This is always system-assigned.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -98,7 +99,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Session(String name, SessionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:spanner/v1:Session", name, args == null ? SessionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:spanner/v1:Session", name, args == null ? SessionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Session(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

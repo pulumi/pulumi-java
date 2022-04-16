@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs;
 import java.lang.Boolean;
@@ -20,7 +21,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -31,8 +32,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -53,15 +54,15 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="genericWebService")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
 
-    public Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> getGenericWebService() {
-        return this.genericWebService == null ? Output.empty() : this.genericWebService;
+    public Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService() {
+        return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -71,15 +72,15 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceDirectory")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
 
-    public Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> getServiceDirectory() {
-        return this.serviceDirectory == null ? Output.empty() : this.serviceDirectory;
+    public Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory() {
+        return this.serviceDirectory == null ? Codegen.empty() : this.serviceDirectory;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public WebhookArgs(
@@ -126,15 +127,15 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.agentId = Output.empty();
-        this.disabled = Output.empty();
-        this.displayName = Output.empty();
-        this.genericWebService = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.serviceDirectory = Output.empty();
-        this.timeout = Output.empty();
+        this.agentId = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.genericWebService = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceDirectory = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -202,7 +203,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder genericWebService(@Nullable GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Output.ofNullable(genericWebService);
+            this.genericWebService = Codegen.ofNullable(genericWebService);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -210,7 +211,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -218,7 +219,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -226,7 +227,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceDirectory(@Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory) {
@@ -234,7 +235,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceDirectory(@Nullable GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs serviceDirectory) {
-            this.serviceDirectory = Output.ofNullable(serviceDirectory);
+            this.serviceDirectory = Codegen.ofNullable(serviceDirectory);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -242,7 +243,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public WebhookArgs build() {
             return new WebhookArgs(agentId, disabled, displayName, genericWebService, location, name, project, serviceDirectory, timeout);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecr;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyText", required=true)
       private final Output<Object> policyText;
 
-    public Output<Object> getPolicyText() {
+    public Output<Object> policyText() {
         return this.policyText;
     }
 
@@ -29,7 +30,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistryPolicyArgs() {
-        this.policyText = Output.empty();
+        this.policyText = Codegen.empty();
     }
 
     public static Builder builder() {

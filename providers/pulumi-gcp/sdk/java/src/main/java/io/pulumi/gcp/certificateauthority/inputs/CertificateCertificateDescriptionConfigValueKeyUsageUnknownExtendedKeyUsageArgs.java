@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs;
 import java.util.List;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     @Import(name="obectIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> getObectIds() {
-        return this.obectIds == null ? Output.empty() : this.obectIds;
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds() {
+        return this.obectIds == null ? Codegen.empty() : this.obectIds;
     }
 
     public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds) {
@@ -27,7 +28,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     }
 
     private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs() {
-        this.obectIds = Output.empty();
+        this.obectIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
             return this;
         }
         public Builder obectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs> obectIds) {
-            this.obectIds = Output.ofNullable(obectIds);
+            this.obectIds = Codegen.ofNullable(obectIds);
             return this;
         }
         public Builder obectIds(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs... obectIds) {

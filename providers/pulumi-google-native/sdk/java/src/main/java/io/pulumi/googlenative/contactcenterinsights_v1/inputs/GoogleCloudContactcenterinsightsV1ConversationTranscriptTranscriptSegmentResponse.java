@@ -30,7 +30,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="channelTag", required=true)
       private final Integer channelTag;
 
-    public Integer getChannelTag() {
+    public Integer channelTag() {
         return this.channelTag;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="confidence", required=true)
       private final Double confidence;
 
-    public Double getConfidence() {
+    public Double confidence() {
         return this.confidence;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="dialogflowSegmentMetadata", required=true)
       private final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
 
-    public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse getDialogflowSegmentMetadata() {
+    public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata() {
         return this.dialogflowSegmentMetadata;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="languageCode", required=true)
       private final String languageCode;
 
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="messageTime", required=true)
       private final String messageTime;
 
-    public String getMessageTime() {
+    public String messageTime() {
         return this.messageTime;
     }
 
@@ -85,7 +85,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="segmentParticipant", required=true)
       private final GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
 
-    public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse getSegmentParticipant() {
+    public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant() {
         return this.segmentParticipant;
     }
 
@@ -96,7 +96,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="sentiment", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
-    public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
+    public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
     }
 
@@ -107,7 +107,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 
@@ -118,7 +118,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="words", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
 
-    public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> getWords() {
+    public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words() {
         return this.words;
     }
 

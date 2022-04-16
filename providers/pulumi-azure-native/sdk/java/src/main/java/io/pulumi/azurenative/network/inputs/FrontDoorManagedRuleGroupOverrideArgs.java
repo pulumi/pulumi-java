@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleOverrideArgs;
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
     @Import(name="exclusions")
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
-    public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+    public Output<List<ManagedRuleExclusionArgs>> exclusions() {
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
     @Import(name="ruleGroupName", required=true)
       private final Output<String> ruleGroupName;
 
-    public Output<String> getRuleGroupName() {
+    public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -50,8 +51,8 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
     @Import(name="rules")
       private final @Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules;
 
-    public Output<List<FrontDoorManagedRuleOverrideArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<FrontDoorManagedRuleOverrideArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public FrontDoorManagedRuleGroupOverrideArgs(
@@ -64,9 +65,9 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
     }
 
     private FrontDoorManagedRuleGroupOverrideArgs() {
-        this.exclusions = Output.empty();
-        this.ruleGroupName = Output.empty();
-        this.rules = Output.empty();
+        this.exclusions = Codegen.empty();
+        this.ruleGroupName = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
             return this;
         }
         public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(ManagedRuleExclusionArgs... exclusions) {
@@ -117,7 +118,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends io.pulumi.resou
             return this;
         }
         public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(FrontDoorManagedRuleOverrideArgs... rules) {

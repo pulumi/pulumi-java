@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
     @Import(name="logLevel", required=true)
       private final Output<ResourceSpecificLoggingLogLevel> logLevel;
 
-    public Output<ResourceSpecificLoggingLogLevel> getLogLevel() {
+    public Output<ResourceSpecificLoggingLogLevel> logLevel() {
         return this.logLevel;
     }
 
@@ -33,7 +34,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
     @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
 
@@ -44,7 +45,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
     @Import(name="targetType", required=true)
       private final Output<ResourceSpecificLoggingTargetType> targetType;
 
-    public Output<ResourceSpecificLoggingTargetType> getTargetType() {
+    public Output<ResourceSpecificLoggingTargetType> targetType() {
         return this.targetType;
     }
 
@@ -58,9 +59,9 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
     }
 
     private ResourceSpecificLoggingArgs() {
-        this.logLevel = Output.empty();
-        this.targetName = Output.empty();
-        this.targetType = Output.empty();
+        this.logLevel = Codegen.empty();
+        this.targetName = Codegen.empty();
+        this.targetType = Codegen.empty();
     }
 
     public static Builder builder() {

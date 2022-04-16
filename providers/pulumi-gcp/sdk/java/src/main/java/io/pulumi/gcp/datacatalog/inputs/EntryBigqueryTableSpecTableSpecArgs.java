@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
     @Import(name="groupedEntry")
       private final @Nullable Output<String> groupedEntry;
 
-    public Output<String> getGroupedEntry() {
-        return this.groupedEntry == null ? Output.empty() : this.groupedEntry;
+    public Output<String> groupedEntry() {
+        return this.groupedEntry == null ? Codegen.empty() : this.groupedEntry;
     }
 
     public EntryBigqueryTableSpecTableSpecArgs(@Nullable Output<String> groupedEntry) {
@@ -26,7 +27,7 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
     }
 
     private EntryBigqueryTableSpecTableSpecArgs() {
-        this.groupedEntry = Output.empty();
+        this.groupedEntry = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
             return this;
         }
         public Builder groupedEntry(@Nullable String groupedEntry) {
-            this.groupedEntry = Output.ofNullable(groupedEntry);
+            this.groupedEntry = Codegen.ofNullable(groupedEntry);
             return this;
         }        public EntryBigqueryTableSpecTableSpecArgs build() {
             return new EntryBigqueryTableSpecTableSpecArgs(groupedEntry);

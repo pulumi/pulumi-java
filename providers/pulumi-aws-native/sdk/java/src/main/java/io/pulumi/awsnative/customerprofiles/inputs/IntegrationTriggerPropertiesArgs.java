@@ -6,6 +6,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationScheduledTriggerPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class IntegrationTriggerPropertiesArgs extends io.pulumi.resources.
     @Import(name="scheduled")
       private final @Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled;
 
-    public Output<IntegrationScheduledTriggerPropertiesArgs> getScheduled() {
-        return this.scheduled == null ? Output.empty() : this.scheduled;
+    public Output<IntegrationScheduledTriggerPropertiesArgs> scheduled() {
+        return this.scheduled == null ? Codegen.empty() : this.scheduled;
     }
 
     public IntegrationTriggerPropertiesArgs(@Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled) {
@@ -26,7 +27,7 @@ public final class IntegrationTriggerPropertiesArgs extends io.pulumi.resources.
     }
 
     private IntegrationTriggerPropertiesArgs() {
-        this.scheduled = Output.empty();
+        this.scheduled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class IntegrationTriggerPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder scheduled(@Nullable IntegrationScheduledTriggerPropertiesArgs scheduled) {
-            this.scheduled = Output.ofNullable(scheduled);
+            this.scheduled = Codegen.ofNullable(scheduled);
             return this;
         }        public IntegrationTriggerPropertiesArgs build() {
             return new IntegrationTriggerPropertiesArgs(scheduled);

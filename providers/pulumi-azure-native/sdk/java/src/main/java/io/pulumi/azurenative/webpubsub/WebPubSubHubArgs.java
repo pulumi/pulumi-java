@@ -6,6 +6,7 @@ package io.pulumi.azurenative.webpubsub;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubHubPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubName")
       private final @Nullable Output<String> hubName;
 
-    public Output<String> getHubName() {
-        return this.hubName == null ? Output.empty() : this.hubName;
+    public Output<String> hubName() {
+        return this.hubName == null ? Codegen.empty() : this.hubName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<WebPubSubHubPropertiesArgs> properties;
 
-    public Output<WebPubSubHubPropertiesArgs> getProperties() {
+    public Output<WebPubSubHubPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -44,7 +45,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +56,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -71,10 +72,10 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebPubSubHubArgs() {
-        this.hubName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.hubName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hubName(@Nullable String hubName) {
-            this.hubName = Output.ofNullable(hubName);
+            this.hubName = Codegen.ofNullable(hubName);
             return this;
         }
         public Builder properties(Output<WebPubSubHubPropertiesArgs> properties) {

@@ -18,7 +18,7 @@ public final class RuleGroupStatefulRuleOptions {
         this.ruleOrder = ruleOrder;
     }
 
-    public Optional<RuleGroupRuleOrder> getRuleOrder() {
+    public Optional<RuleGroupRuleOrder> ruleOrder() {
         return Optional.ofNullable(this.ruleOrder);
     }
 

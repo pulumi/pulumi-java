@@ -7,6 +7,7 @@ import io.pulumi.awsnative.licensemanager.inputs.LicenseBorrowConfigurationArgs;
 import io.pulumi.awsnative.licensemanager.inputs.LicenseProvisionalConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,22 +20,22 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
     @Import(name="borrowConfiguration")
       private final @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration;
 
-    public Output<LicenseBorrowConfigurationArgs> getBorrowConfiguration() {
-        return this.borrowConfiguration == null ? Output.empty() : this.borrowConfiguration;
+    public Output<LicenseBorrowConfigurationArgs> borrowConfiguration() {
+        return this.borrowConfiguration == null ? Codegen.empty() : this.borrowConfiguration;
     }
 
     @Import(name="provisionalConfiguration")
       private final @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
 
-    public Output<LicenseProvisionalConfigurationArgs> getProvisionalConfiguration() {
-        return this.provisionalConfiguration == null ? Output.empty() : this.provisionalConfiguration;
+    public Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration() {
+        return this.provisionalConfiguration == null ? Codegen.empty() : this.provisionalConfiguration;
     }
 
     @Import(name="renewType")
       private final @Nullable Output<String> renewType;
 
-    public Output<String> getRenewType() {
-        return this.renewType == null ? Output.empty() : this.renewType;
+    public Output<String> renewType() {
+        return this.renewType == null ? Codegen.empty() : this.renewType;
     }
 
     public LicenseConsumptionConfigurationArgs(
@@ -47,9 +48,9 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
     }
 
     private LicenseConsumptionConfigurationArgs() {
-        this.borrowConfiguration = Output.empty();
-        this.provisionalConfiguration = Output.empty();
-        this.renewType = Output.empty();
+        this.borrowConfiguration = Codegen.empty();
+        this.provisionalConfiguration = Codegen.empty();
+        this.renewType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder borrowConfiguration(@Nullable LicenseBorrowConfigurationArgs borrowConfiguration) {
-            this.borrowConfiguration = Output.ofNullable(borrowConfiguration);
+            this.borrowConfiguration = Codegen.ofNullable(borrowConfiguration);
             return this;
         }
         public Builder provisionalConfiguration(@Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration) {
@@ -89,7 +90,7 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder provisionalConfiguration(@Nullable LicenseProvisionalConfigurationArgs provisionalConfiguration) {
-            this.provisionalConfiguration = Output.ofNullable(provisionalConfiguration);
+            this.provisionalConfiguration = Codegen.ofNullable(provisionalConfiguration);
             return this;
         }
         public Builder renewType(@Nullable Output<String> renewType) {
@@ -97,7 +98,7 @@ public final class LicenseConsumptionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder renewType(@Nullable String renewType) {
-            this.renewType = Output.ofNullable(renewType);
+            this.renewType = Codegen.ofNullable(renewType);
             return this;
         }        public LicenseConsumptionConfigurationArgs build() {
             return new LicenseConsumptionConfigurationArgs(borrowConfiguration, provisionalConfiguration, renewType);

@@ -32,14 +32,14 @@ public final class SpecificationResponse {
      * Name of the specification
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Value of the specification
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

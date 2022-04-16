@@ -40,21 +40,21 @@ public final class SchedulingNodeAffinityResponse {
      * Corresponds to the label key of Node resource.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * Corresponds to the label values of Node resource.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

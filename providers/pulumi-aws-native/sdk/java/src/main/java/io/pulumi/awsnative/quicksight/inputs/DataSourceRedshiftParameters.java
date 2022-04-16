@@ -29,7 +29,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
     @Import(name="clusterId")
       private final @Nullable String clusterId;
 
-    public Optional<String> getClusterId() {
+    public Optional<String> clusterId() {
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
     }
 
@@ -40,7 +40,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
     @Import(name="database", required=true)
       private final String database;
 
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
 
@@ -51,7 +51,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
     @Import(name="host")
       private final @Nullable String host;
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
@@ -62,7 +62,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
     @Import(name="port")
       private final @Nullable Double port;
 
-    public Optional<Double> getPort() {
+    public Optional<Double> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.inputs.EmailTemplateParametersContractPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<String> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
 
-    public Output<List<EmailTemplateParametersContractPropertiesArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -78,8 +79,8 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subject")
       private final @Nullable Output<String> subject;
 
-    public Output<String> getSubject() {
-        return this.subject == null ? Output.empty() : this.subject;
+    public Output<String> subject() {
+        return this.subject == null ? Codegen.empty() : this.subject;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
-    public Output<String> getTemplateName() {
-        return this.templateName == null ? Output.empty() : this.templateName;
+    public Output<String> templateName() {
+        return this.templateName == null ? Codegen.empty() : this.templateName;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public EmailTemplateArgs(
@@ -124,14 +125,14 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EmailTemplateArgs() {
-        this.body = Output.empty();
-        this.description = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.subject = Output.empty();
-        this.templateName = Output.empty();
-        this.title = Output.empty();
+        this.body = Codegen.empty();
+        this.description = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.subject = Codegen.empty();
+        this.templateName = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -181,7 +182,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder parameters(@Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters) {
@@ -189,7 +190,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<EmailTemplateParametersContractPropertiesArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(EmailTemplateParametersContractPropertiesArgs... parameters) {
@@ -216,7 +217,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subject(@Nullable String subject) {
-            this.subject = Output.ofNullable(subject);
+            this.subject = Codegen.ofNullable(subject);
             return this;
         }
         public Builder templateName(@Nullable Output<String> templateName) {
@@ -224,7 +225,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = Output.ofNullable(templateName);
+            this.templateName = Codegen.ofNullable(templateName);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -232,7 +233,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public EmailTemplateArgs build() {
             return new EmailTemplateArgs(body, description, parameters, resourceGroupName, serviceName, subject, templateName, title);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsActivationPolicy;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsDataDiskType;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsDatabaseVersion;
@@ -31,8 +32,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="activationPolicy")
       private final @Nullable Output<CloudSqlSettingsActivationPolicy> activationPolicy;
 
-    public Output<CloudSqlSettingsActivationPolicy> getActivationPolicy() {
-        return this.activationPolicy == null ? Output.empty() : this.activationPolicy;
+    public Output<CloudSqlSettingsActivationPolicy> activationPolicy() {
+        return this.activationPolicy == null ? Codegen.empty() : this.activationPolicy;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoStorageIncrease")
       private final @Nullable Output<Boolean> autoStorageIncrease;
 
-    public Output<Boolean> getAutoStorageIncrease() {
-        return this.autoStorageIncrease == null ? Output.empty() : this.autoStorageIncrease;
+    public Output<Boolean> autoStorageIncrease() {
+        return this.autoStorageIncrease == null ? Codegen.empty() : this.autoStorageIncrease;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataDiskSizeGb")
       private final @Nullable Output<String> dataDiskSizeGb;
 
-    public Output<String> getDataDiskSizeGb() {
-        return this.dataDiskSizeGb == null ? Output.empty() : this.dataDiskSizeGb;
+    public Output<String> dataDiskSizeGb() {
+        return this.dataDiskSizeGb == null ? Codegen.empty() : this.dataDiskSizeGb;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataDiskType")
       private final @Nullable Output<CloudSqlSettingsDataDiskType> dataDiskType;
 
-    public Output<CloudSqlSettingsDataDiskType> getDataDiskType() {
-        return this.dataDiskType == null ? Output.empty() : this.dataDiskType;
+    public Output<CloudSqlSettingsDataDiskType> dataDiskType() {
+        return this.dataDiskType == null ? Codegen.empty() : this.dataDiskType;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="databaseFlags")
       private final @Nullable Output<Map<String,String>> databaseFlags;
 
-    public Output<Map<String,String>> getDatabaseFlags() {
-        return this.databaseFlags == null ? Output.empty() : this.databaseFlags;
+    public Output<Map<String,String>> databaseFlags() {
+        return this.databaseFlags == null ? Codegen.empty() : this.databaseFlags;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="databaseVersion")
       private final @Nullable Output<CloudSqlSettingsDatabaseVersion> databaseVersion;
 
-    public Output<CloudSqlSettingsDatabaseVersion> getDatabaseVersion() {
-        return this.databaseVersion == null ? Output.empty() : this.databaseVersion;
+    public Output<CloudSqlSettingsDatabaseVersion> databaseVersion() {
+        return this.databaseVersion == null ? Codegen.empty() : this.databaseVersion;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipConfig")
       private final @Nullable Output<SqlIpConfigArgs> ipConfig;
 
-    public Output<SqlIpConfigArgs> getIpConfig() {
-        return this.ipConfig == null ? Output.empty() : this.ipConfig;
+    public Output<SqlIpConfigArgs> ipConfig() {
+        return this.ipConfig == null ? Codegen.empty() : this.ipConfig;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rootPassword")
       private final @Nullable Output<String> rootPassword;
 
-    public Output<String> getRootPassword() {
-        return this.rootPassword == null ? Output.empty() : this.rootPassword;
+    public Output<String> rootPassword() {
+        return this.rootPassword == null ? Codegen.empty() : this.rootPassword;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
-    public Output<String> getSourceId() {
-        return this.sourceId == null ? Output.empty() : this.sourceId;
+    public Output<String> sourceId() {
+        return this.sourceId == null ? Codegen.empty() : this.sourceId;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="storageAutoResizeLimit")
       private final @Nullable Output<String> storageAutoResizeLimit;
 
-    public Output<String> getStorageAutoResizeLimit() {
-        return this.storageAutoResizeLimit == null ? Output.empty() : this.storageAutoResizeLimit;
+    public Output<String> storageAutoResizeLimit() {
+        return this.storageAutoResizeLimit == null ? Codegen.empty() : this.storageAutoResizeLimit;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Output.empty() : this.userLabels;
+    public Output<Map<String,String>> userLabels() {
+        return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public CloudSqlSettingsArgs(
@@ -197,19 +198,19 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CloudSqlSettingsArgs() {
-        this.activationPolicy = Output.empty();
-        this.autoStorageIncrease = Output.empty();
-        this.dataDiskSizeGb = Output.empty();
-        this.dataDiskType = Output.empty();
-        this.databaseFlags = Output.empty();
-        this.databaseVersion = Output.empty();
-        this.ipConfig = Output.empty();
-        this.rootPassword = Output.empty();
-        this.sourceId = Output.empty();
-        this.storageAutoResizeLimit = Output.empty();
-        this.tier = Output.empty();
-        this.userLabels = Output.empty();
-        this.zone = Output.empty();
+        this.activationPolicy = Codegen.empty();
+        this.autoStorageIncrease = Codegen.empty();
+        this.dataDiskSizeGb = Codegen.empty();
+        this.dataDiskType = Codegen.empty();
+        this.databaseFlags = Codegen.empty();
+        this.databaseVersion = Codegen.empty();
+        this.ipConfig = Codegen.empty();
+        this.rootPassword = Codegen.empty();
+        this.sourceId = Codegen.empty();
+        this.storageAutoResizeLimit = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.userLabels = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -261,7 +262,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder activationPolicy(@Nullable CloudSqlSettingsActivationPolicy activationPolicy) {
-            this.activationPolicy = Output.ofNullable(activationPolicy);
+            this.activationPolicy = Codegen.ofNullable(activationPolicy);
             return this;
         }
         public Builder autoStorageIncrease(@Nullable Output<Boolean> autoStorageIncrease) {
@@ -269,7 +270,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder autoStorageIncrease(@Nullable Boolean autoStorageIncrease) {
-            this.autoStorageIncrease = Output.ofNullable(autoStorageIncrease);
+            this.autoStorageIncrease = Codegen.ofNullable(autoStorageIncrease);
             return this;
         }
         public Builder dataDiskSizeGb(@Nullable Output<String> dataDiskSizeGb) {
@@ -277,7 +278,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
-            this.dataDiskSizeGb = Output.ofNullable(dataDiskSizeGb);
+            this.dataDiskSizeGb = Codegen.ofNullable(dataDiskSizeGb);
             return this;
         }
         public Builder dataDiskType(@Nullable Output<CloudSqlSettingsDataDiskType> dataDiskType) {
@@ -285,7 +286,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataDiskType(@Nullable CloudSqlSettingsDataDiskType dataDiskType) {
-            this.dataDiskType = Output.ofNullable(dataDiskType);
+            this.dataDiskType = Codegen.ofNullable(dataDiskType);
             return this;
         }
         public Builder databaseFlags(@Nullable Output<Map<String,String>> databaseFlags) {
@@ -293,7 +294,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder databaseFlags(@Nullable Map<String,String> databaseFlags) {
-            this.databaseFlags = Output.ofNullable(databaseFlags);
+            this.databaseFlags = Codegen.ofNullable(databaseFlags);
             return this;
         }
         public Builder databaseVersion(@Nullable Output<CloudSqlSettingsDatabaseVersion> databaseVersion) {
@@ -301,7 +302,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder databaseVersion(@Nullable CloudSqlSettingsDatabaseVersion databaseVersion) {
-            this.databaseVersion = Output.ofNullable(databaseVersion);
+            this.databaseVersion = Codegen.ofNullable(databaseVersion);
             return this;
         }
         public Builder ipConfig(@Nullable Output<SqlIpConfigArgs> ipConfig) {
@@ -309,7 +310,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipConfig(@Nullable SqlIpConfigArgs ipConfig) {
-            this.ipConfig = Output.ofNullable(ipConfig);
+            this.ipConfig = Codegen.ofNullable(ipConfig);
             return this;
         }
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
@@ -317,7 +318,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Output.ofNullable(rootPassword);
+            this.rootPassword = Codegen.ofNullable(rootPassword);
             return this;
         }
         public Builder sourceId(@Nullable Output<String> sourceId) {
@@ -325,7 +326,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Output.ofNullable(sourceId);
+            this.sourceId = Codegen.ofNullable(sourceId);
             return this;
         }
         public Builder storageAutoResizeLimit(@Nullable Output<String> storageAutoResizeLimit) {
@@ -333,7 +334,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
-            this.storageAutoResizeLimit = Output.ofNullable(storageAutoResizeLimit);
+            this.storageAutoResizeLimit = Codegen.ofNullable(storageAutoResizeLimit);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -341,7 +342,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
@@ -349,7 +350,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Output.ofNullable(userLabels);
+            this.userLabels = Codegen.ofNullable(userLabels);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -357,7 +358,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public CloudSqlSettingsArgs build() {
             return new CloudSqlSettingsArgs(activationPolicy, autoStorageIncrease, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, sourceId, storageAutoResizeLimit, tier, userLabels, zone);

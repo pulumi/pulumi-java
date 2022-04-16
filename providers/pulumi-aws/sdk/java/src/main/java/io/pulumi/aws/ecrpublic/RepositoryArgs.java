@@ -6,6 +6,7 @@ package io.pulumi.aws.ecrpublic;
 import io.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,15 +24,15 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogData")
       private final @Nullable Output<RepositoryCatalogDataArgs> catalogData;
 
-    public Output<RepositoryCatalogDataArgs> getCatalogData() {
-        return this.catalogData == null ? Output.empty() : this.catalogData;
+    public Output<RepositoryCatalogDataArgs> catalogData() {
+        return this.catalogData == null ? Codegen.empty() : this.catalogData;
     }
 
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -55,9 +56,9 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.catalogData = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.repositoryName = Output.empty();
+        this.catalogData = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.repositoryName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder catalogData(@Nullable RepositoryCatalogDataArgs catalogData) {
-            this.catalogData = Output.ofNullable(catalogData);
+            this.catalogData = Codegen.ofNullable(catalogData);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -97,7 +98,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder repositoryName(Output<String> repositoryName) {

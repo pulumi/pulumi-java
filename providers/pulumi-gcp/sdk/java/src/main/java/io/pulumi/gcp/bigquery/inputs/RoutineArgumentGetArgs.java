@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="argumentKind")
       private final @Nullable Output<String> argumentKind;
 
-    public Output<String> getArgumentKind() {
-        return this.argumentKind == null ? Output.empty() : this.argumentKind;
+    public Output<String> argumentKind() {
+        return this.argumentKind == null ? Codegen.empty() : this.argumentKind;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+    public Output<String> dataType() {
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public RoutineArgumentGetArgs(
@@ -79,10 +80,10 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RoutineArgumentGetArgs() {
-        this.argumentKind = Output.empty();
-        this.dataType = Output.empty();
-        this.mode = Output.empty();
-        this.name = Output.empty();
+        this.argumentKind = Codegen.empty();
+        this.dataType = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder argumentKind(@Nullable String argumentKind) {
-            this.argumentKind = Output.ofNullable(argumentKind);
+            this.argumentKind = Codegen.ofNullable(argumentKind);
             return this;
         }
         public Builder dataType(@Nullable Output<String> dataType) {
@@ -124,7 +125,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -132,7 +133,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public RoutineArgumentGetArgs build() {
             return new RoutineArgumentGetArgs(argumentKind, dataType, mode, name);

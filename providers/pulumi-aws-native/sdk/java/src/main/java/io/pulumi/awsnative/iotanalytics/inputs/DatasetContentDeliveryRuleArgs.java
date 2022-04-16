@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentDeliveryRuleDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     @Import(name="destination", required=true)
       private final Output<DatasetContentDeliveryRuleDestinationArgs> destination;
 
-    public Output<DatasetContentDeliveryRuleDestinationArgs> getDestination() {
+    public Output<DatasetContentDeliveryRuleDestinationArgs> destination() {
         return this.destination;
     }
 
     @Import(name="entryName")
       private final @Nullable Output<String> entryName;
 
-    public Output<String> getEntryName() {
-        return this.entryName == null ? Output.empty() : this.entryName;
+    public Output<String> entryName() {
+        return this.entryName == null ? Codegen.empty() : this.entryName;
     }
 
     public DatasetContentDeliveryRuleArgs(
@@ -37,8 +38,8 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     }
 
     private DatasetContentDeliveryRuleArgs() {
-        this.destination = Output.empty();
-        this.entryName = Output.empty();
+        this.destination = Codegen.empty();
+        this.entryName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder entryName(@Nullable String entryName) {
-            this.entryName = Output.ofNullable(entryName);
+            this.entryName = Codegen.ofNullable(entryName);
             return this;
         }        public DatasetContentDeliveryRuleArgs build() {
             return new DatasetContentDeliveryRuleArgs(destination, entryName);

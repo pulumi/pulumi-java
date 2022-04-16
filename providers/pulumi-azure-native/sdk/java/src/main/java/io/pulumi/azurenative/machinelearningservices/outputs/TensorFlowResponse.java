@@ -44,21 +44,21 @@ public final class TensorFlowResponse {
      * Expected value is 'TensorFlow'.
      * 
     */
-    public String getDistributionType() {
+    public String distributionType() {
         return this.distributionType;
     }
     /**
      * Number of parameter server tasks.
      * 
     */
-    public Optional<Integer> getParameterServerCount() {
+    public Optional<Integer> parameterServerCount() {
         return Optional.ofNullable(this.parameterServerCount);
     }
     /**
      * Number of workers. Overwrites the node count in compute binding.
      * 
     */
-    public Optional<Integer> getWorkerCount() {
+    public Optional<Integer> workerCount() {
         return Optional.ofNullable(this.workerCount);
     }
 

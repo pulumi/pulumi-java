@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SecurityPolicyArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyState;
@@ -36,7 +37,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecurityPolicyAdaptiveProtectionConfig> getAdaptiveProtectionConfig() {
+    public Output</* @Nullable */ SecurityPolicyAdaptiveProtectionConfig> adaptiveProtectionConfig() {
         return this.adaptiveProtectionConfig;
     }
     /**
@@ -50,7 +51,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this rule. Max size is 64.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -64,7 +65,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -78,7 +79,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the security policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -94,7 +95,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -112,7 +113,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * security policy, a default rule with action "allow" will be added. Structure is documented below.
      * 
      */
-    public Output<List<SecurityPolicyRule>> getRules() {
+    public Output<List<SecurityPolicyRule>> rules() {
         return this.rules;
     }
     /**
@@ -126,7 +127,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resourc
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -152,7 +153,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityPolicy(String name, @Nullable SecurityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/securityPolicy:SecurityPolicy", name, args == null ? SecurityPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/securityPolicy:SecurityPolicy", name, args == null ? SecurityPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecurityPolicy(String name, Output<String> id, @Nullable SecurityPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

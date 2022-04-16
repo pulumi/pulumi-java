@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
       private final Output<GatewayDestinationArgs> destination;
 
-    public Output<GatewayDestinationArgs> getDestination() {
+    public Output<GatewayDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -37,7 +38,7 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +49,7 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -62,9 +63,9 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TcpConfigArgs() {
-        this.destination = Output.empty();
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.destination = Codegen.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

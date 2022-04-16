@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.TopicRuleHttpActionHeaderArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleHttpAuthorizationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,28 +21,28 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="auth")
       private final @Nullable Output<TopicRuleHttpAuthorizationArgs> auth;
 
-    public Output<TopicRuleHttpAuthorizationArgs> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+    public Output<TopicRuleHttpAuthorizationArgs> auth() {
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     @Import(name="confirmationUrl")
       private final @Nullable Output<String> confirmationUrl;
 
-    public Output<String> getConfirmationUrl() {
-        return this.confirmationUrl == null ? Output.empty() : this.confirmationUrl;
+    public Output<String> confirmationUrl() {
+        return this.confirmationUrl == null ? Codegen.empty() : this.confirmationUrl;
     }
 
     @Import(name="headers")
       private final @Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers;
 
-    public Output<List<TopicRuleHttpActionHeaderArgs>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<TopicRuleHttpActionHeaderArgs>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -57,10 +58,10 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private TopicRuleHttpActionArgs() {
-        this.auth = Output.empty();
-        this.confirmationUrl = Output.empty();
-        this.headers = Output.empty();
-        this.url = Output.empty();
+        this.auth = Codegen.empty();
+        this.confirmationUrl = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder auth(@Nullable TopicRuleHttpAuthorizationArgs auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder confirmationUrl(@Nullable Output<String> confirmationUrl) {
@@ -102,7 +103,7 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
-            this.confirmationUrl = Output.ofNullable(confirmationUrl);
+            this.confirmationUrl = Codegen.ofNullable(confirmationUrl);
             return this;
         }
         public Builder headers(@Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers) {
@@ -110,7 +111,7 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder headers(@Nullable List<TopicRuleHttpActionHeaderArgs> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(TopicRuleHttpActionHeaderArgs... headers) {

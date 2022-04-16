@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.SupportTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="link")
       private final @Nullable Output<String> link;
 
-    public Output<String> getLink() {
-        return this.link == null ? Output.empty() : this.link;
+    public Output<String> link() {
+        return this.link == null ? Codegen.empty() : this.link;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tier", required=true)
       private final Output<Either<String,SupportTier>> tier;
 
-    public Output<Either<String,SupportTier>> getTier() {
+    public Output<Either<String,SupportTier>> tier() {
         return this.tier;
     }
 
@@ -76,10 +77,10 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private MetadataSupportArgs() {
-        this.email = Output.empty();
-        this.link = Output.empty();
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.email = Codegen.empty();
+        this.link = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder link(@Nullable Output<String> link) {
@@ -121,7 +122,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder link(@Nullable String link) {
-            this.link = Output.ofNullable(link);
+            this.link = Codegen.ofNullable(link);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -129,7 +130,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tier(Output<Either<String,SupportTier>> tier) {

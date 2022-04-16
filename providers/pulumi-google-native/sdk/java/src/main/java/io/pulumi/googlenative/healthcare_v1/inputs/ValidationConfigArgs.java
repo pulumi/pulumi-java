@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableFhirpathValidation")
       private final @Nullable Output<Boolean> disableFhirpathValidation;
 
-    public Output<Boolean> getDisableFhirpathValidation() {
-        return this.disableFhirpathValidation == null ? Output.empty() : this.disableFhirpathValidation;
+    public Output<Boolean> disableFhirpathValidation() {
+        return this.disableFhirpathValidation == null ? Codegen.empty() : this.disableFhirpathValidation;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableProfileValidation")
       private final @Nullable Output<Boolean> disableProfileValidation;
 
-    public Output<Boolean> getDisableProfileValidation() {
-        return this.disableProfileValidation == null ? Output.empty() : this.disableProfileValidation;
+    public Output<Boolean> disableProfileValidation() {
+        return this.disableProfileValidation == null ? Codegen.empty() : this.disableProfileValidation;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableReferenceTypeValidation")
       private final @Nullable Output<Boolean> disableReferenceTypeValidation;
 
-    public Output<Boolean> getDisableReferenceTypeValidation() {
-        return this.disableReferenceTypeValidation == null ? Output.empty() : this.disableReferenceTypeValidation;
+    public Output<Boolean> disableReferenceTypeValidation() {
+        return this.disableReferenceTypeValidation == null ? Codegen.empty() : this.disableReferenceTypeValidation;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disableRequiredFieldValidation")
       private final @Nullable Output<Boolean> disableRequiredFieldValidation;
 
-    public Output<Boolean> getDisableRequiredFieldValidation() {
-        return this.disableRequiredFieldValidation == null ? Output.empty() : this.disableRequiredFieldValidation;
+    public Output<Boolean> disableRequiredFieldValidation() {
+        return this.disableRequiredFieldValidation == null ? Codegen.empty() : this.disableRequiredFieldValidation;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enabledImplementationGuides")
       private final @Nullable Output<List<String>> enabledImplementationGuides;
 
-    public Output<List<String>> getEnabledImplementationGuides() {
-        return this.enabledImplementationGuides == null ? Output.empty() : this.enabledImplementationGuides;
+    public Output<List<String>> enabledImplementationGuides() {
+        return this.enabledImplementationGuides == null ? Codegen.empty() : this.enabledImplementationGuides;
     }
 
     public ValidationConfigArgs(
@@ -89,11 +90,11 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ValidationConfigArgs() {
-        this.disableFhirpathValidation = Output.empty();
-        this.disableProfileValidation = Output.empty();
-        this.disableReferenceTypeValidation = Output.empty();
-        this.disableRequiredFieldValidation = Output.empty();
-        this.enabledImplementationGuides = Output.empty();
+        this.disableFhirpathValidation = Codegen.empty();
+        this.disableProfileValidation = Codegen.empty();
+        this.disableReferenceTypeValidation = Codegen.empty();
+        this.disableRequiredFieldValidation = Codegen.empty();
+        this.enabledImplementationGuides = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disableFhirpathValidation(@Nullable Boolean disableFhirpathValidation) {
-            this.disableFhirpathValidation = Output.ofNullable(disableFhirpathValidation);
+            this.disableFhirpathValidation = Codegen.ofNullable(disableFhirpathValidation);
             return this;
         }
         public Builder disableProfileValidation(@Nullable Output<Boolean> disableProfileValidation) {
@@ -137,7 +138,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disableProfileValidation(@Nullable Boolean disableProfileValidation) {
-            this.disableProfileValidation = Output.ofNullable(disableProfileValidation);
+            this.disableProfileValidation = Codegen.ofNullable(disableProfileValidation);
             return this;
         }
         public Builder disableReferenceTypeValidation(@Nullable Output<Boolean> disableReferenceTypeValidation) {
@@ -145,7 +146,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disableReferenceTypeValidation(@Nullable Boolean disableReferenceTypeValidation) {
-            this.disableReferenceTypeValidation = Output.ofNullable(disableReferenceTypeValidation);
+            this.disableReferenceTypeValidation = Codegen.ofNullable(disableReferenceTypeValidation);
             return this;
         }
         public Builder disableRequiredFieldValidation(@Nullable Output<Boolean> disableRequiredFieldValidation) {
@@ -153,7 +154,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disableRequiredFieldValidation(@Nullable Boolean disableRequiredFieldValidation) {
-            this.disableRequiredFieldValidation = Output.ofNullable(disableRequiredFieldValidation);
+            this.disableRequiredFieldValidation = Codegen.ofNullable(disableRequiredFieldValidation);
             return this;
         }
         public Builder enabledImplementationGuides(@Nullable Output<List<String>> enabledImplementationGuides) {
@@ -161,7 +162,7 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enabledImplementationGuides(@Nullable List<String> enabledImplementationGuides) {
-            this.enabledImplementationGuides = Output.ofNullable(enabledImplementationGuides);
+            this.enabledImplementationGuides = Codegen.ofNullable(enabledImplementationGuides);
             return this;
         }
         public Builder enabledImplementationGuides(String... enabledImplementationGuides) {

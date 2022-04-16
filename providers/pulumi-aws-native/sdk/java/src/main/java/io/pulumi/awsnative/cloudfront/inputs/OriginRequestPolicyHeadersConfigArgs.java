@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class OriginRequestPolicyHeadersConfigArgs extends io.pulumi.resour
     @Import(name="headerBehavior", required=true)
       private final Output<String> headerBehavior;
 
-    public Output<String> getHeaderBehavior() {
+    public Output<String> headerBehavior() {
         return this.headerBehavior;
     }
 
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<String>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     public OriginRequestPolicyHeadersConfigArgs(
@@ -37,8 +38,8 @@ public final class OriginRequestPolicyHeadersConfigArgs extends io.pulumi.resour
     }
 
     private OriginRequestPolicyHeadersConfigArgs() {
-        this.headerBehavior = Output.empty();
-        this.headers = Output.empty();
+        this.headerBehavior = Codegen.empty();
+        this.headers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OriginRequestPolicyHeadersConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(String... headers) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.containeranalysis;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.containeranalysis.OccurenceArgs;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceState;
@@ -71,7 +72,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<OccurenceAttestation> getAttestation() {
+    public Output<OccurenceAttestation> attestation() {
         return this.attestation;
     }
     /**
@@ -85,7 +86,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * @return The time when the repository was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -101,7 +102,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * in list requests.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -115,7 +116,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * @return The name of the occurrence.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +134,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * filter in list requests.
      * 
      */
-    public Output<String> getNoteName() {
+    public Output<String> noteName() {
         return this.noteName;
     }
     /**
@@ -149,7 +150,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -163,7 +164,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * @return A description of actions that can be taken to remedy the note.
      * 
      */
-    public Output</* @Nullable */ String> getRemediation() {
+    public Output</* @Nullable */ String> remediation() {
         return this.remediation;
     }
     /**
@@ -181,7 +182,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * https://gcr.io/project/image@sha256:123abc for a Docker image.
      * 
      */
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
     /**
@@ -195,7 +196,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * @return The time when the repository was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -221,7 +222,7 @@ public class Occurence extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Occurence(String name, OccurenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:containeranalysis/occurence:Occurence", name, args == null ? OccurenceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:containeranalysis/occurence:Occurence", name, args == null ? OccurenceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Occurence(String name, Output<String> id, @Nullable OccurenceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

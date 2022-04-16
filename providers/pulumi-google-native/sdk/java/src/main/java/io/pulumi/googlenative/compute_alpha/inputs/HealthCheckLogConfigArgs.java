@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HealthCheckLogConfigArgs extends io.pulumi.resources.Resource
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+    public Output<Boolean> enable() {
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     public HealthCheckLogConfigArgs(@Nullable Output<Boolean> enable) {
@@ -34,7 +35,7 @@ public final class HealthCheckLogConfigArgs extends io.pulumi.resources.Resource
     }
 
     private HealthCheckLogConfigArgs() {
-        this.enable = Output.empty();
+        this.enable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HealthCheckLogConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }        public HealthCheckLogConfigArgs build() {
             return new HealthCheckLogConfigArgs(enable);

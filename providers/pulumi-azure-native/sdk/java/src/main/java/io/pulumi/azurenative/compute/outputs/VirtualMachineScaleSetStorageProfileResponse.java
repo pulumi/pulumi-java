@@ -44,21 +44,21 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
      * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
     */
-    public List<VirtualMachineScaleSetDataDiskResponse> getDataDisks() {
+    public List<VirtualMachineScaleSetDataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
      * 
     */
-    public Optional<ImageReferenceResponse> getImageReference() {
+    public Optional<ImageReferenceResponse> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
     /**
      * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
     */
-    public Optional<VirtualMachineScaleSetOSDiskResponse> getOsDisk() {
+    public Optional<VirtualMachineScaleSetOSDiskResponse> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
 

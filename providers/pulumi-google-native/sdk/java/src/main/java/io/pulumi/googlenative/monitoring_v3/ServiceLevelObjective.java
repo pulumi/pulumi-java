@@ -6,6 +6,7 @@ package io.pulumi.googlenative.monitoring_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v3.ServiceLevelObjectiveArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.ServiceLevelIndicatorResponse;
@@ -32,7 +33,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @return A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
      */
-    public Output<String> getCalendarPeriod() {
+    public Output<String> calendarPeriod() {
         return this.calendarPeriod;
     }
     /**
@@ -46,7 +47,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @return Name used for UI elements listing this SLO.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -60,7 +61,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @return The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.
      * 
      */
-    public Output<Double> getGoal() {
+    public Output<Double> goal() {
         return this.goal;
     }
     /**
@@ -74,7 +75,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @return Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +89,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @return A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.
      * 
      */
-    public Output<String> getRollingPeriod() {
+    public Output<String> rollingPeriod() {
         return this.rollingPeriod;
     }
     /**
@@ -102,7 +103,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @return The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.
      * 
      */
-    public Output<ServiceLevelIndicatorResponse> getServiceLevelIndicator() {
+    public Output<ServiceLevelIndicatorResponse> serviceLevelIndicator() {
         return this.serviceLevelIndicator;
     }
     /**
@@ -116,7 +117,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @return Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
      */
-    public Output<Map<String,String>> getUserLabels() {
+    public Output<Map<String,String>> userLabels() {
         return this.userLabels;
     }
 
@@ -142,7 +143,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceLevelObjective(String name, ServiceLevelObjectiveArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:monitoring/v3:ServiceLevelObjective", name, args == null ? ServiceLevelObjectiveArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:monitoring/v3:ServiceLevelObjective", name, args == null ? ServiceLevelObjectiveArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceLevelObjective(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingArgs extends io.pul
     @Import(name="insertHeaders", required=true)
       private final Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
 
-    public Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> getInsertHeaders() {
+    public Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 
@@ -30,7 +31,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingArgs extends io.pul
     }
 
     private WebAclRuleActionAllowCustomRequestHandlingArgs() {
-        this.insertHeaders = Output.empty();
+        this.insertHeaders = Codegen.empty();
     }
 
     public static Builder builder() {

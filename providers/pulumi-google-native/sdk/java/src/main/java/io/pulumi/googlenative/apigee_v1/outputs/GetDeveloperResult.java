@@ -118,98 +118,98 @@ public final class GetDeveloperResult {
      * Access type.
      * 
     */
-    public String getAccessType() {
+    public String accessType() {
         return this.accessType;
     }
     /**
      * Developer app family.
      * 
     */
-    public String getAppFamily() {
+    public String appFamily() {
         return this.appFamily;
     }
     /**
      * List of apps associated with the developer.
      * 
     */
-    public List<String> getApps() {
+    public List<String> apps() {
         return this.apps;
     }
     /**
      * Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
      * 
     */
-    public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
+    public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
     /**
      * List of companies associated with the developer.
      * 
     */
-    public List<String> getCompanies() {
+    public List<String> companies() {
         return this.companies;
     }
     /**
      * Time at which the developer was created in milliseconds since epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
      * 
     */
-    public String getDeveloperId() {
+    public String developerId() {
         return this.developerId;
     }
     /**
      * Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * First name of the developer.
      * 
     */
-    public String getFirstName() {
+    public String firstName() {
         return this.firstName;
     }
     /**
      * Time at which the developer was last modified in milliseconds since epoch.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Last name of the developer.
      * 
     */
-    public String getLastName() {
+    public String lastName() {
         return this.lastName;
     }
     /**
      * Name of the Apigee organization in which the developer resides.
      * 
     */
-    public String getOrganizationName() {
+    public String organizationName() {
         return this.organizationName;
     }
     /**
      * Status of the developer. Valid values are `active` and `inactive`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * User name of the developer. Not used by Apigee hybrid.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

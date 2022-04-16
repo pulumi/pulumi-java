@@ -48,28 +48,28 @@ public final class RepositoryRefDefinitionResponse {
      * The git repository branch name to checkout.
      * 
     */
-    public Optional<String> getBranch() {
+    public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
      * 
     */
-    public Optional<String> getCommit() {
+    public Optional<String> commit() {
         return Optional.ofNullable(this.commit);
     }
     /**
      * The semver range used to match against git repository tags. This takes precedence over tag.
      * 
     */
-    public Optional<String> getSemver() {
+    public Optional<String> semver() {
         return Optional.ofNullable(this.semver);
     }
     /**
      * The git repository tag name to checkout. This takes precedence over branch.
      * 
     */
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
 

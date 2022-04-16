@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueArgs extends io.pulum
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -29,7 +30,7 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueArgs extends io.pulum
     }
 
     private TagTemplateFieldTypeEnumTypeAllowedValueArgs() {
-        this.displayName = Output.empty();
+        this.displayName = Codegen.empty();
     }
 
     public static Builder builder() {

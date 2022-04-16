@@ -5,6 +5,7 @@ package io.pulumi.awsnative.fms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aCCOUNT")
       private final @Nullable Output<List<String>> aCCOUNT;
 
-    public Output<List<String>> getACCOUNT() {
-        return this.aCCOUNT == null ? Output.empty() : this.aCCOUNT;
+    public Output<List<String>> aCCOUNT() {
+        return this.aCCOUNT == null ? Codegen.empty() : this.aCCOUNT;
     }
 
     @Import(name="oRGUNIT")
       private final @Nullable Output<List<String>> oRGUNIT;
 
-    public Output<List<String>> getORGUNIT() {
-        return this.oRGUNIT == null ? Output.empty() : this.oRGUNIT;
+    public Output<List<String>> oRGUNIT() {
+        return this.oRGUNIT == null ? Codegen.empty() : this.oRGUNIT;
     }
 
     public PolicyIEMapArgs(
@@ -41,8 +42,8 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyIEMapArgs() {
-        this.aCCOUNT = Output.empty();
-        this.oRGUNIT = Output.empty();
+        this.aCCOUNT = Codegen.empty();
+        this.oRGUNIT = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
-            this.aCCOUNT = Output.ofNullable(aCCOUNT);
+            this.aCCOUNT = Codegen.ofNullable(aCCOUNT);
             return this;
         }
         public Builder aCCOUNT(String... aCCOUNT) {
@@ -83,7 +84,7 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
-            this.oRGUNIT = Output.ofNullable(oRGUNIT);
+            this.oRGUNIT = Codegen.ofNullable(oRGUNIT);
             return this;
         }
         public Builder oRGUNIT(String... oRGUNIT) {

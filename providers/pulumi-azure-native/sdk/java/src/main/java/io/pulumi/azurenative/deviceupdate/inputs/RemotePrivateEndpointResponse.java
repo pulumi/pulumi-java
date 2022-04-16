@@ -29,7 +29,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
     @Import(name="connectionDetails")
       private final @Nullable List<ConnectionDetailsResponse> connectionDetails;
 
-    public List<ConnectionDetailsResponse> getConnectionDetails() {
+    public List<ConnectionDetailsResponse> connectionDetails() {
         return this.connectionDetails == null ? List.of() : this.connectionDetails;
     }
 
@@ -40,7 +40,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -51,7 +51,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
+    public List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
 
@@ -62,7 +62,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
     @Import(name="privateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> getPrivateLinkServiceConnections() {
+    public List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections() {
         return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
     }
 
@@ -73,7 +73,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
     @Import(name="privateLinkServiceProxies")
       private final @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
 
-    public List<PrivateLinkServiceProxyResponse> getPrivateLinkServiceProxies() {
+    public List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies() {
         return this.privateLinkServiceProxies == null ? List.of() : this.privateLinkServiceProxies;
     }
 
@@ -84,7 +84,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
     @Import(name="vnetTrafficTag", required=true)
       private final String vnetTrafficTag;
 
-    public String getVnetTrafficTag() {
+    public String vnetTrafficTag() {
         return this.vnetTrafficTag;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceArgs extends
     @Import(name="azureCredentials", required=true)
       private final Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs> azureCredentials;
 
-    public Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs> getAzureCredentials() {
+    public Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs> azureCredentials() {
         return this.azureCredentials;
     }
 
@@ -33,7 +34,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceArgs extends
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -44,8 +45,8 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceArgs extends
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceArgs extends
     @Import(name="storageAccount", required=true)
       private final Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
+    public Output<String> storageAccount() {
         return this.storageAccount;
     }
 
@@ -71,10 +72,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceArgs extends
     }
 
     private TransferJobTransferSpecAzureBlobStorageDataSourceArgs() {
-        this.azureCredentials = Output.empty();
-        this.container = Output.empty();
-        this.path = Output.empty();
-        this.storageAccount = Output.empty();
+        this.azureCredentials = Codegen.empty();
+        this.container = Codegen.empty();
+        this.path = Codegen.empty();
+        this.storageAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceArgs extends
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder storageAccount(Output<String> storageAccount) {

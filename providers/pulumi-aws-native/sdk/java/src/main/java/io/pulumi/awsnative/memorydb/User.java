@@ -10,6 +10,7 @@ import io.pulumi.awsnative.memorydb.outputs.UserTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Access permissions string used for this user account.
      * 
      */
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString;
     }
     /**
@@ -45,13 +46,13 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the user account.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="authenticationMode", type=AuthenticationModeProperties.class, parameters={})
     private Output<AuthenticationModeProperties> authenticationMode;
 
-    public Output<AuthenticationModeProperties> getAuthenticationMode() {
+    public Output<AuthenticationModeProperties> authenticationMode() {
         return this.authenticationMode;
     }
     /**
@@ -65,7 +66,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Indicates the user status. Can be "active", "modifying" or "deleting".
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -79,7 +80,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this user.
      * 
      */
-    public Output</* @Nullable */ List<UserTag>> getTags() {
+    public Output</* @Nullable */ List<UserTag>> tags() {
         return this.tags;
     }
     /**
@@ -93,7 +94,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The name of the user.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -119,7 +120,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:memorydb:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:memorydb:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private User(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

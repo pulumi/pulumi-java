@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     @Import(name="pem")
       private final @Nullable Output<String> pem;
 
-    public Output<String> getPem() {
-        return this.pem == null ? Output.empty() : this.pem;
+    public Output<String> pem() {
+        return this.pem == null ? Codegen.empty() : this.pem;
     }
 
     public KeyRingImportJobPublicKeyGetArgs(@Nullable Output<String> pem) {
@@ -26,7 +27,7 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     }
 
     private KeyRingImportJobPublicKeyGetArgs() {
-        this.pem = Output.empty();
+        this.pem = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder pem(@Nullable String pem) {
-            this.pem = Output.ofNullable(pem);
+            this.pem = Codegen.ofNullable(pem);
             return this;
         }        public KeyRingImportJobPublicKeyGetArgs build() {
             return new KeyRingImportJobPublicKeyGetArgs(pem);

@@ -39,21 +39,21 @@ public final class ShieldedInstanceConfigResponse {
      * Optional. Defines whether instances have integrity monitoring enabled.
      * 
     */
-    public Boolean getEnableIntegrityMonitoring() {
+    public Boolean enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
     /**
      * Optional. Defines whether instances have Secure Boot enabled.
      * 
     */
-    public Boolean getEnableSecureBoot() {
+    public Boolean enableSecureBoot() {
         return this.enableSecureBoot;
     }
     /**
      * Optional. Defines whether instances have the vTPM enabled.
      * 
     */
-    public Boolean getEnableVtpm() {
+    public Boolean enableVtpm() {
         return this.enableVtpm;
     }
 

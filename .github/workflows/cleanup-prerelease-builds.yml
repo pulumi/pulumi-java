@@ -1,0 +1,38 @@
+"on":
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 */6 * * *
+
+jobs:
+  cleanup-sdk-prerelease-builds:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/delete-package-versions@v3
+        with:
+          package-name: 'io.pulumi.pulumi'
+          min-versions-to-keep: 20
+          delete-only-pre-release-versions: "true"
+
+  cleanup-provider-prerelease-builds:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        provider:
+        - aws
+        - aws-native
+        - azure-native
+        - docker
+        - eks
+        - gcp
+        - google-native
+        - kubernetes
+        - random
+    steps:
+      - uses: actions/delete-package-versions@v3
+        with:
+          package-name: 'io.pulumi.${{ matrix.provider }}'
+          min-versions-to-keep: 20
+          delete-only-pre-release-versions: "true"

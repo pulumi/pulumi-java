@@ -6,6 +6,7 @@ package io.pulumi.googlenative.sqladmin_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1.SslCertArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return PEM representation.
      * 
      */
-    public Output<String> getCert() {
+    public Output<String> cert() {
         return this.cert;
     }
     /**
@@ -43,7 +44,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return Serial number, as extracted from the certificate.
      * 
      */
-    public Output<String> getCertSerialNumber() {
+    public Output<String> certSerialNumber() {
         return this.certSerialNumber;
     }
     /**
@@ -57,7 +58,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return User supplied name. Constrained to [a-zA-Z.-_ ]+.
      * 
      */
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName;
     }
     /**
@@ -71,7 +72,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -85,7 +86,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -99,7 +100,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return Name of the database instance.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -113,7 +114,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return This is always `sql#sslCert`.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -127,7 +128,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The URI of this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -141,7 +142,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return Sha1 Fingerprint.
      * 
      */
-    public Output<String> getSha1Fingerprint() {
+    public Output<String> sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
@@ -167,7 +168,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SslCert(String name, SslCertArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:sqladmin/v1:SslCert", name, args == null ? SslCertArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:sqladmin/v1:SslCert", name, args == null ? SslCertArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SslCert(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

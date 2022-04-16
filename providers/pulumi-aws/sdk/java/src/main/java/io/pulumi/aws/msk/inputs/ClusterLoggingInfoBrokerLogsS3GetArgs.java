@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -44,8 +45,8 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public ClusterLoggingInfoBrokerLogsS3GetArgs(
@@ -58,9 +59,9 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
     }
 
     private ClusterLoggingInfoBrokerLogsS3GetArgs() {
-        this.bucket = Output.empty();
-        this.enabled = Output.empty();
-        this.prefix = Output.empty();
+        this.bucket = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {
@@ -108,7 +109,7 @@ public final class ClusterLoggingInfoBrokerLogsS3GetArgs extends io.pulumi.resou
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public ClusterLoggingInfoBrokerLogsS3GetArgs build() {
             return new ClusterLoggingInfoBrokerLogsS3GetArgs(bucket, enabled, prefix);

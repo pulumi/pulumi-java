@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accessKeyName")
       private final @Nullable Output<String> accessKeyName;
 
-    public Output<String> getAccessKeyName() {
-        return this.accessKeyName == null ? Output.empty() : this.accessKeyName;
+    public Output<String> accessKeyName() {
+        return this.accessKeyName == null ? Codegen.empty() : this.accessKeyName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="notAfter")
       private final @Nullable Output<String> notAfter;
 
-    public Output<String> getNotAfter() {
-        return this.notAfter == null ? Output.empty() : this.notAfter;
+    public Output<String> notAfter() {
+        return this.notAfter == null ? Codegen.empty() : this.notAfter;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="notBefore")
       private final @Nullable Output<String> notBefore;
 
-    public Output<String> getNotBefore() {
-        return this.notBefore == null ? Output.empty() : this.notBefore;
+    public Output<String> notBefore() {
+        return this.notBefore == null ? Codegen.empty() : this.notBefore;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,7 +77,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workflowName", required=true)
       private final Output<String> workflowName;
 
-    public Output<String> getWorkflowName() {
+    public Output<String> workflowName() {
         return this.workflowName;
     }
 
@@ -96,12 +97,12 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WorkflowAccessKeyArgs() {
-        this.accessKeyName = Output.empty();
-        this.id = Output.empty();
-        this.notAfter = Output.empty();
-        this.notBefore = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workflowName = Output.empty();
+        this.accessKeyName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.notAfter = Codegen.empty();
+        this.notBefore = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workflowName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder accessKeyName(@Nullable String accessKeyName) {
-            this.accessKeyName = Output.ofNullable(accessKeyName);
+            this.accessKeyName = Codegen.ofNullable(accessKeyName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -147,7 +148,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder notAfter(@Nullable Output<String> notAfter) {
@@ -155,7 +156,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = Output.ofNullable(notAfter);
+            this.notAfter = Codegen.ofNullable(notAfter);
             return this;
         }
         public Builder notBefore(@Nullable Output<String> notBefore) {
@@ -163,7 +164,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder notBefore(@Nullable String notBefore) {
-            this.notBefore = Output.ofNullable(notBefore);
+            this.notBefore = Codegen.ofNullable(notBefore);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

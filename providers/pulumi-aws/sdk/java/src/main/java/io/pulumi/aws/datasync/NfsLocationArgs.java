@@ -7,6 +7,7 @@ import io.pulumi.aws.datasync.inputs.NfsLocationMountOptionsArgs;
 import io.pulumi.aws.datasync.inputs.NfsLocationOnPremConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountOptions")
       private final @Nullable Output<NfsLocationMountOptionsArgs> mountOptions;
 
-    public Output<NfsLocationMountOptionsArgs> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+    public Output<NfsLocationMountOptionsArgs> mountOptions() {
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onPremConfig", required=true)
       private final Output<NfsLocationOnPremConfigArgs> onPremConfig;
 
-    public Output<NfsLocationOnPremConfigArgs> getOnPremConfig() {
+    public Output<NfsLocationOnPremConfigArgs> onPremConfig() {
         return this.onPremConfig;
     }
 
@@ -46,7 +47,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
 
@@ -57,7 +58,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
 
@@ -68,8 +69,8 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NfsLocationArgs(
@@ -86,11 +87,11 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NfsLocationArgs() {
-        this.mountOptions = Output.empty();
-        this.onPremConfig = Output.empty();
-        this.serverHostname = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
+        this.mountOptions = Codegen.empty();
+        this.onPremConfig = Codegen.empty();
+        this.serverHostname = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountOptions(@Nullable NfsLocationMountOptionsArgs mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder onPremConfig(Output<NfsLocationOnPremConfigArgs> onPremConfig) {
@@ -158,7 +159,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NfsLocationArgs build() {
             return new NfsLocationArgs(mountOptions, onPremConfig, serverHostname, subdirectory, tags);

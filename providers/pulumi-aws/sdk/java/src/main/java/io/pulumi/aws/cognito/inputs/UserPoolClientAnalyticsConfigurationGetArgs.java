@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
     @Import(name="applicationArn")
       private final @Nullable Output<String> applicationArn;
 
-    public Output<String> getApplicationArn() {
-        return this.applicationArn == null ? Output.empty() : this.applicationArn;
+    public Output<String> applicationArn() {
+        return this.applicationArn == null ? Codegen.empty() : this.applicationArn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
-        return this.externalId == null ? Output.empty() : this.externalId;
+    public Output<String> externalId() {
+        return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
     @Import(name="userDataShared")
       private final @Nullable Output<Boolean> userDataShared;
 
-    public Output<Boolean> getUserDataShared() {
-        return this.userDataShared == null ? Output.empty() : this.userDataShared;
+    public Output<Boolean> userDataShared() {
+        return this.userDataShared == null ? Codegen.empty() : this.userDataShared;
     }
 
     public UserPoolClientAnalyticsConfigurationGetArgs(
@@ -84,11 +85,11 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
     }
 
     private UserPoolClientAnalyticsConfigurationGetArgs() {
-        this.applicationArn = Output.empty();
-        this.applicationId = Output.empty();
-        this.externalId = Output.empty();
-        this.roleArn = Output.empty();
-        this.userDataShared = Output.empty();
+        this.applicationArn = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.userDataShared = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
             return this;
         }
         public Builder applicationArn(@Nullable String applicationArn) {
-            this.applicationArn = Output.ofNullable(applicationArn);
+            this.applicationArn = Codegen.ofNullable(applicationArn);
             return this;
         }
         public Builder applicationId(@Nullable Output<String> applicationId) {
@@ -132,7 +133,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder externalId(@Nullable Output<String> externalId) {
@@ -140,7 +141,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
             return this;
         }
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Output.ofNullable(externalId);
+            this.externalId = Codegen.ofNullable(externalId);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -148,7 +149,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder userDataShared(@Nullable Output<Boolean> userDataShared) {
@@ -156,7 +157,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
             return this;
         }
         public Builder userDataShared(@Nullable Boolean userDataShared) {
-            this.userDataShared = Output.ofNullable(userDataShared);
+            this.userDataShared = Codegen.ofNullable(userDataShared);
             return this;
         }        public UserPoolClientAnalyticsConfigurationGetArgs build() {
             return new UserPoolClientAnalyticsConfigurationGetArgs(applicationArn, applicationId, externalId, roleArn, userDataShared);

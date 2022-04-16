@@ -6,6 +6,7 @@ package io.pulumi.aws.cfg.inputs;
 import io.pulumi.aws.cfg.inputs.ConformancePackInputParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
 
-    public Output<String> getDeliveryS3Bucket() {
-        return this.deliveryS3Bucket == null ? Output.empty() : this.deliveryS3Bucket;
+    public Output<String> deliveryS3Bucket() {
+        return this.deliveryS3Bucket == null ? Codegen.empty() : this.deliveryS3Bucket;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
 
-    public Output<String> getDeliveryS3KeyPrefix() {
-        return this.deliveryS3KeyPrefix == null ? Output.empty() : this.deliveryS3KeyPrefix;
+    public Output<String> deliveryS3KeyPrefix() {
+        return this.deliveryS3KeyPrefix == null ? Codegen.empty() : this.deliveryS3KeyPrefix;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     @Import(name="inputParameters")
       private final @Nullable Output<List<ConformancePackInputParameterGetArgs>> inputParameters;
 
-    public Output<List<ConformancePackInputParameterGetArgs>> getInputParameters() {
-        return this.inputParameters == null ? Output.empty() : this.inputParameters;
+    public Output<List<ConformancePackInputParameterGetArgs>> inputParameters() {
+        return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
-        return this.templateBody == null ? Output.empty() : this.templateBody;
+    public Output<String> templateBody() {
+        return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;
 
-    public Output<String> getTemplateS3Uri() {
-        return this.templateS3Uri == null ? Output.empty() : this.templateS3Uri;
+    public Output<String> templateS3Uri() {
+        return this.templateS3Uri == null ? Codegen.empty() : this.templateS3Uri;
     }
 
     public ConformancePackState(
@@ -111,13 +112,13 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
     }
 
     private ConformancePackState() {
-        this.arn = Output.empty();
-        this.deliveryS3Bucket = Output.empty();
-        this.deliveryS3KeyPrefix = Output.empty();
-        this.inputParameters = Output.empty();
-        this.name = Output.empty();
-        this.templateBody = Output.empty();
-        this.templateS3Uri = Output.empty();
+        this.arn = Codegen.empty();
+        this.deliveryS3Bucket = Codegen.empty();
+        this.deliveryS3KeyPrefix = Codegen.empty();
+        this.inputParameters = Codegen.empty();
+        this.name = Codegen.empty();
+        this.templateBody = Codegen.empty();
+        this.templateS3Uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder deliveryS3Bucket(@Nullable Output<String> deliveryS3Bucket) {
@@ -165,7 +166,7 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
-            this.deliveryS3Bucket = Output.ofNullable(deliveryS3Bucket);
+            this.deliveryS3Bucket = Codegen.ofNullable(deliveryS3Bucket);
             return this;
         }
         public Builder deliveryS3KeyPrefix(@Nullable Output<String> deliveryS3KeyPrefix) {
@@ -173,7 +174,7 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
-            this.deliveryS3KeyPrefix = Output.ofNullable(deliveryS3KeyPrefix);
+            this.deliveryS3KeyPrefix = Codegen.ofNullable(deliveryS3KeyPrefix);
             return this;
         }
         public Builder inputParameters(@Nullable Output<List<ConformancePackInputParameterGetArgs>> inputParameters) {
@@ -181,7 +182,7 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder inputParameters(@Nullable List<ConformancePackInputParameterGetArgs> inputParameters) {
-            this.inputParameters = Output.ofNullable(inputParameters);
+            this.inputParameters = Codegen.ofNullable(inputParameters);
             return this;
         }
         public Builder inputParameters(ConformancePackInputParameterGetArgs... inputParameters) {
@@ -192,7 +193,7 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder templateBody(@Nullable Output<String> templateBody) {
@@ -200,7 +201,7 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Output.ofNullable(templateBody);
+            this.templateBody = Codegen.ofNullable(templateBody);
             return this;
         }
         public Builder templateS3Uri(@Nullable Output<String> templateS3Uri) {
@@ -208,7 +209,7 @@ public final class ConformancePackState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder templateS3Uri(@Nullable String templateS3Uri) {
-            this.templateS3Uri = Output.ofNullable(templateS3Uri);
+            this.templateS3Uri = Codegen.ofNullable(templateS3Uri);
             return this;
         }        public ConformancePackState build() {
             return new ConformancePackState(arn, deliveryS3Bucket, deliveryS3KeyPrefix, inputParameters, name, templateBody, templateS3Uri);

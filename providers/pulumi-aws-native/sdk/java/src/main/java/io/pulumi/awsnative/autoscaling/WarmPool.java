@@ -9,6 +9,7 @@ import io.pulumi.awsnative.autoscaling.outputs.WarmPoolInstanceReusePolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,31 +23,31 @@ public class WarmPool extends io.pulumi.resources.CustomResource {
     @Export(name="autoScalingGroupName", type=String.class, parameters={})
     private Output<String> autoScalingGroupName;
 
-    public Output<String> getAutoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
     @Export(name="instanceReusePolicy", type=WarmPoolInstanceReusePolicy.class, parameters={})
     private Output</* @Nullable */ WarmPoolInstanceReusePolicy> instanceReusePolicy;
 
-    public Output</* @Nullable */ WarmPoolInstanceReusePolicy> getInstanceReusePolicy() {
+    public Output</* @Nullable */ WarmPoolInstanceReusePolicy> instanceReusePolicy() {
         return this.instanceReusePolicy;
     }
     @Export(name="maxGroupPreparedCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxGroupPreparedCapacity;
 
-    public Output</* @Nullable */ Integer> getMaxGroupPreparedCapacity() {
+    public Output</* @Nullable */ Integer> maxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity;
     }
     @Export(name="minSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSize;
 
-    public Output</* @Nullable */ Integer> getMinSize() {
+    public Output</* @Nullable */ Integer> minSize() {
         return this.minSize;
     }
     @Export(name="poolState", type=String.class, parameters={})
     private Output</* @Nullable */ String> poolState;
 
-    public Output</* @Nullable */ String> getPoolState() {
+    public Output</* @Nullable */ String> poolState() {
         return this.poolState;
     }
 
@@ -72,7 +73,7 @@ public class WarmPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WarmPool(String name, WarmPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:autoscaling:WarmPool", name, args == null ? WarmPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:autoscaling:WarmPool", name, args == null ? WarmPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WarmPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

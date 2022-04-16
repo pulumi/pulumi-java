@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nfsFilePath")
       private final @Nullable Output<String> nfsFilePath;
 
-    public Output<String> getNfsFilePath() {
-        return this.nfsFilePath == null ? Output.empty() : this.nfsFilePath;
+    public Output<String> nfsFilePath() {
+        return this.nfsFilePath == null ? Codegen.empty() : this.nfsFilePath;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nfsProviderIp")
       private final @Nullable Output<String> nfsProviderIp;
 
-    public Output<String> getNfsProviderIp() {
-        return this.nfsProviderIp == null ? Output.empty() : this.nfsProviderIp;
+    public Output<String> nfsProviderIp() {
+        return this.nfsProviderIp == null ? Codegen.empty() : this.nfsProviderIp;
     }
 
     public NetAppVolumeArgs(
@@ -48,8 +49,8 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetAppVolumeArgs() {
-        this.nfsFilePath = Output.empty();
-        this.nfsProviderIp = Output.empty();
+        this.nfsFilePath = Codegen.empty();
+        this.nfsProviderIp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nfsFilePath(@Nullable String nfsFilePath) {
-            this.nfsFilePath = Output.ofNullable(nfsFilePath);
+            this.nfsFilePath = Codegen.ofNullable(nfsFilePath);
             return this;
         }
         public Builder nfsProviderIp(@Nullable Output<String> nfsProviderIp) {
@@ -87,7 +88,7 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nfsProviderIp(@Nullable String nfsProviderIp) {
-            this.nfsProviderIp = Output.ofNullable(nfsProviderIp);
+            this.nfsProviderIp = Codegen.ofNullable(nfsProviderIp);
             return this;
         }        public NetAppVolumeArgs build() {
             return new NetAppVolumeArgs(nfsFilePath, nfsProviderIp);

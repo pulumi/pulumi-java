@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.DayOfWeek;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="days", required=true)
       private final Output<List<Either<String,DayOfWeek>>> days;
 
-    public Output<List<Either<String,DayOfWeek>>> getDays() {
+    public Output<List<Either<String,DayOfWeek>>> days() {
         return this.days;
     }
 
@@ -36,7 +37,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -47,8 +48,8 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rateInMbps", required=true)
       private final Output<Integer> rateInMbps;
 
-    public Output<Integer> getRateInMbps() {
+    public Output<Integer> rateInMbps() {
         return this.rateInMbps;
     }
 
@@ -69,7 +70,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +81,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="start", required=true)
       private final Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -91,7 +92,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="stop", required=true)
       private final Output<String> stop;
 
-    public Output<String> getStop() {
+    public Output<String> stop() {
         return this.stop;
     }
 
@@ -113,13 +114,13 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BandwidthScheduleArgs() {
-        this.days = Output.empty();
-        this.deviceName = Output.empty();
-        this.name = Output.empty();
-        this.rateInMbps = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.start = Output.empty();
-        this.stop = Output.empty();
+        this.days = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rateInMbps = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.start = Codegen.empty();
+        this.stop = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rateInMbps(Output<Integer> rateInMbps) {

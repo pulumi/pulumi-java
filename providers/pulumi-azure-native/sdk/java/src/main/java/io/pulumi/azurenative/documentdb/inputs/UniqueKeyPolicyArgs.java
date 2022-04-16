@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uniqueKeys")
       private final @Nullable Output<List<UniqueKeyArgs>> uniqueKeys;
 
-    public Output<List<UniqueKeyArgs>> getUniqueKeys() {
-        return this.uniqueKeys == null ? Output.empty() : this.uniqueKeys;
+    public Output<List<UniqueKeyArgs>> uniqueKeys() {
+        return this.uniqueKeys == null ? Codegen.empty() : this.uniqueKeys;
     }
 
     public UniqueKeyPolicyArgs(@Nullable Output<List<UniqueKeyArgs>> uniqueKeys) {
@@ -35,7 +36,7 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UniqueKeyPolicyArgs() {
-        this.uniqueKeys = Output.empty();
+        this.uniqueKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uniqueKeys(@Nullable List<UniqueKeyArgs> uniqueKeys) {
-            this.uniqueKeys = Output.ofNullable(uniqueKeys);
+            this.uniqueKeys = Codegen.ofNullable(uniqueKeys);
             return this;
         }
         public Builder uniqueKeys(UniqueKeyArgs... uniqueKeys) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayBackendAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
     @Import(name="backendAddresses")
       private final @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
 
-    public Output<List<ApplicationGatewayBackendAddressArgs>> getBackendAddresses() {
-        return this.backendAddresses == null ? Output.empty() : this.backendAddresses;
+    public Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses() {
+        return this.backendAddresses == null ? Codegen.empty() : this.backendAddresses;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ApplicationGatewayBackendAddressPoolArgs(
@@ -63,9 +64,9 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
     }
 
     private ApplicationGatewayBackendAddressPoolArgs() {
-        this.backendAddresses = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
+        this.backendAddresses = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
             return this;
         }
         public Builder backendAddresses(@Nullable List<ApplicationGatewayBackendAddressArgs> backendAddresses) {
-            this.backendAddresses = Output.ofNullable(backendAddresses);
+            this.backendAddresses = Codegen.ofNullable(backendAddresses);
             return this;
         }
         public Builder backendAddresses(ApplicationGatewayBackendAddressArgs... backendAddresses) {
@@ -108,7 +109,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -116,7 +117,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ApplicationGatewayBackendAddressPoolArgs build() {
             return new ApplicationGatewayBackendAddressPoolArgs(backendAddresses, id, name);

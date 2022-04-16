@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
     @Import(name="deactivateTime")
       private final @Nullable Output<String> deactivateTime;
 
-    public Output<String> getDeactivateTime() {
-        return this.deactivateTime == null ? Output.empty() : this.deactivateTime;
+    public Output<String> deactivateTime() {
+        return this.deactivateTime == null ? Codegen.empty() : this.deactivateTime;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
     @Import(name="networkUrl")
       private final @Nullable Output<String> networkUrl;
 
-    public Output<String> getNetworkUrl() {
-        return this.networkUrl == null ? Output.empty() : this.networkUrl;
+    public Output<String> networkUrl() {
+        return this.networkUrl == null ? Codegen.empty() : this.networkUrl;
     }
 
     public ManagedZonePeeringConfigTargetNetworkArgs(
@@ -53,9 +54,9 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
     }
 
     private ManagedZonePeeringConfigTargetNetworkArgs() {
-        this.deactivateTime = Output.empty();
-        this.kind = Output.empty();
-        this.networkUrl = Output.empty();
+        this.deactivateTime = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.networkUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
             return this;
         }
         public Builder deactivateTime(@Nullable String deactivateTime) {
-            this.deactivateTime = Output.ofNullable(deactivateTime);
+            this.deactivateTime = Codegen.ofNullable(deactivateTime);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -95,7 +96,7 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder networkUrl(@Nullable Output<String> networkUrl) {
@@ -103,7 +104,7 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
             return this;
         }
         public Builder networkUrl(@Nullable String networkUrl) {
-            this.networkUrl = Output.ofNullable(networkUrl);
+            this.networkUrl = Codegen.ofNullable(networkUrl);
             return this;
         }        public ManagedZonePeeringConfigTargetNetworkArgs build() {
             return new ManagedZonePeeringConfigTargetNetworkArgs(deactivateTime, kind, networkUrl);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     @Import(name="deviceIndex", required=true)
       private final Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
 
@@ -32,7 +33,7 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -43,7 +44,7 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -57,9 +58,9 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     }
 
     private NetworkInterfaceAttachmentArgs() {
-        this.deviceIndex = Output.empty();
-        this.instanceId = Output.empty();
-        this.networkInterfaceId = Output.empty();
+        this.deviceIndex = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
     }
 
     public static Builder builder() {

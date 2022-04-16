@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionIAMPolicyArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMPolicyState;
@@ -63,7 +64,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the subscription's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -79,7 +80,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -95,7 +96,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -109,7 +110,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription;
     }
 
@@ -135,7 +136,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubscriptionIAMPolicy(String name, SubscriptionIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, args == null ? SubscriptionIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, args == null ? SubscriptionIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SubscriptionIAMPolicy(String name, Output<String> id, @Nullable SubscriptionIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

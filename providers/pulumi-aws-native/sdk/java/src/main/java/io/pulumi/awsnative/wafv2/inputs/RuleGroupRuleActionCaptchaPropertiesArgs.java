@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomRequestHandlingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class RuleGroupRuleActionCaptchaPropertiesArgs extends io.pulumi.re
     @Import(name="customRequestHandling")
       private final @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<RuleGroupCustomRequestHandlingArgs> getCustomRequestHandling() {
-        return this.customRequestHandling == null ? Output.empty() : this.customRequestHandling;
+    public Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling() {
+        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 
     public RuleGroupRuleActionCaptchaPropertiesArgs(@Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling) {
@@ -30,7 +31,7 @@ public final class RuleGroupRuleActionCaptchaPropertiesArgs extends io.pulumi.re
     }
 
     private RuleGroupRuleActionCaptchaPropertiesArgs() {
-        this.customRequestHandling = Output.empty();
+        this.customRequestHandling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class RuleGroupRuleActionCaptchaPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Output.ofNullable(customRequestHandling);
+            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
             return this;
         }        public RuleGroupRuleActionCaptchaPropertiesArgs build() {
             return new RuleGroupRuleActionCaptchaPropertiesArgs(customRequestHandling);

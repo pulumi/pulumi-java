@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     @Import(name="offer", required=true)
       private final Output<String> offer;
 
-    public Output<String> getOffer() {
+    public Output<String> offer() {
         return this.offer;
     }
 
@@ -35,7 +36,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher;
     }
 
@@ -46,7 +47,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     @Import(name="sku", required=true)
       private final Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku;
     }
 
@@ -60,9 +61,9 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     }
 
     private GalleryImageIdentifierArgs() {
-        this.offer = Output.empty();
-        this.publisher = Output.empty();
-        this.sku = Output.empty();
+        this.offer = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {

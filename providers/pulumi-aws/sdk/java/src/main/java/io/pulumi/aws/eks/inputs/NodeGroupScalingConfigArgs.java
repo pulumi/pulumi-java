@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class NodeGroupScalingConfigArgs extends io.pulumi.resources.Resour
     @Import(name="desiredSize", required=true)
       private final Output<Integer> desiredSize;
 
-    public Output<Integer> getDesiredSize() {
+    public Output<Integer> desiredSize() {
         return this.desiredSize;
     }
 
@@ -31,7 +32,7 @@ public final class NodeGroupScalingConfigArgs extends io.pulumi.resources.Resour
     @Import(name="maxSize", required=true)
       private final Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize;
     }
 
@@ -42,7 +43,7 @@ public final class NodeGroupScalingConfigArgs extends io.pulumi.resources.Resour
     @Import(name="minSize", required=true)
       private final Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize;
     }
 
@@ -56,9 +57,9 @@ public final class NodeGroupScalingConfigArgs extends io.pulumi.resources.Resour
     }
 
     private NodeGroupScalingConfigArgs() {
-        this.desiredSize = Output.empty();
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
+        this.desiredSize = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
     }
 
     public static Builder builder() {

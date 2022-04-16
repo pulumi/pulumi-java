@@ -5,6 +5,7 @@ package io.pulumi.awsnative.robomaker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
     @Import(name="application", required=true)
       private final Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
 
@@ -28,8 +29,8 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
-    public Output<String> getCurrentRevisionId() {
-        return this.currentRevisionId == null ? Output.empty() : this.currentRevisionId;
+    public Output<String> currentRevisionId() {
+        return this.currentRevisionId == null ? Codegen.empty() : this.currentRevisionId;
     }
 
     public RobotApplicationVersionArgs(
@@ -40,8 +41,8 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
     }
 
     private RobotApplicationVersionArgs() {
-        this.application = Output.empty();
-        this.currentRevisionId = Output.empty();
+        this.application = Codegen.empty();
+        this.currentRevisionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
-            this.currentRevisionId = Output.ofNullable(currentRevisionId);
+            this.currentRevisionId = Codegen.ofNullable(currentRevisionId);
             return this;
         }        public RobotApplicationVersionArgs build() {
             return new RobotApplicationVersionArgs(application, currentRevisionId);

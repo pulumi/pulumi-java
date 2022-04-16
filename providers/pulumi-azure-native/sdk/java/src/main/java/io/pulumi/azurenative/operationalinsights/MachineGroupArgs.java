@@ -8,6 +8,7 @@ import io.pulumi.azurenative.operationalinsights.inputs.MachineReferenceWithHint
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -48,8 +49,8 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupType")
       private final @Nullable Output<Either<String,MachineGroupType>> groupType;
 
-    public Output<Either<String,MachineGroupType>> getGroupType() {
-        return this.groupType == null ? Output.empty() : this.groupType;
+    public Output<Either<String,MachineGroupType>> groupType() {
+        return this.groupType == null ? Codegen.empty() : this.groupType;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -71,8 +72,8 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineGroupName")
       private final @Nullable Output<String> machineGroupName;
 
-    public Output<String> getMachineGroupName() {
-        return this.machineGroupName == null ? Output.empty() : this.machineGroupName;
+    public Output<String> machineGroupName() {
+        return this.machineGroupName == null ? Codegen.empty() : this.machineGroupName;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machines")
       private final @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
 
-    public Output<List<MachineReferenceWithHintsArgs>> getMachines() {
-        return this.machines == null ? Output.empty() : this.machines;
+    public Output<List<MachineReferenceWithHintsArgs>> machines() {
+        return this.machines == null ? Codegen.empty() : this.machines;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +105,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -128,14 +129,14 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MachineGroupArgs() {
-        this.count = Output.empty();
-        this.displayName = Output.empty();
-        this.groupType = Output.empty();
-        this.kind = Output.empty();
-        this.machineGroupName = Output.empty();
-        this.machines = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.count = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.groupType = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.machineGroupName = Codegen.empty();
+        this.machines = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -193,7 +194,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupType(@Nullable Either<String,MachineGroupType> groupType) {
-            this.groupType = Output.ofNullable(groupType);
+            this.groupType = Codegen.ofNullable(groupType);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -209,7 +210,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineGroupName(@Nullable String machineGroupName) {
-            this.machineGroupName = Output.ofNullable(machineGroupName);
+            this.machineGroupName = Codegen.ofNullable(machineGroupName);
             return this;
         }
         public Builder machines(@Nullable Output<List<MachineReferenceWithHintsArgs>> machines) {
@@ -217,7 +218,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machines(@Nullable List<MachineReferenceWithHintsArgs> machines) {
-            this.machines = Output.ofNullable(machines);
+            this.machines = Codegen.ofNullable(machines);
             return this;
         }
         public Builder machines(MachineReferenceWithHintsArgs... machines) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateAttachmentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
     @Import(name="attachments")
       private final @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> attachments;
 
-    public Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> getAttachments() {
-        return this.attachments == null ? Output.empty() : this.attachments;
+    public Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> attachments() {
+        return this.attachments == null ? Codegen.empty() : this.attachments;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     public FirewallFirewallStatusSyncStateArgs(
@@ -46,8 +47,8 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
     }
 
     private FirewallFirewallStatusSyncStateArgs() {
-        this.attachments = Output.empty();
-        this.availabilityZone = Output.empty();
+        this.attachments = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
             return this;
         }
         public Builder attachments(@Nullable List<FirewallFirewallStatusSyncStateAttachmentArgs> attachments) {
-            this.attachments = Output.ofNullable(attachments);
+            this.attachments = Codegen.ofNullable(attachments);
             return this;
         }
         public Builder attachments(FirewallFirewallStatusSyncStateAttachmentArgs... attachments) {
@@ -88,7 +89,7 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }        public FirewallFirewallStatusSyncStateArgs build() {
             return new FirewallFirewallStatusSyncStateArgs(attachments, availabilityZone);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.managednetwork;
 import io.pulumi.azurenative.managednetwork.inputs.ScopeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedNetworkName")
       private final @Nullable Output<String> managedNetworkName;
 
-    public Output<String> getManagedNetworkName() {
-        return this.managedNetworkName == null ? Output.empty() : this.managedNetworkName;
+    public Output<String> managedNetworkName() {
+        return this.managedNetworkName == null ? Codegen.empty() : this.managedNetworkName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,8 +57,8 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<ScopeArgs> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ManagedNetworkArgs(
@@ -85,11 +86,11 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedNetworkArgs() {
-        this.location = Output.empty();
-        this.managedNetworkName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.managedNetworkName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedNetworkName(@Nullable Output<String> managedNetworkName) {
@@ -133,7 +134,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedNetworkName(@Nullable String managedNetworkName) {
-            this.managedNetworkName = Output.ofNullable(managedNetworkName);
+            this.managedNetworkName = Codegen.ofNullable(managedNetworkName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -149,7 +150,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -157,7 +158,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ManagedNetworkArgs build() {
             return new ManagedNetworkArgs(location, managedNetworkName, resourceGroupName, scope, tags);

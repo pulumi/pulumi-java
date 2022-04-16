@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FunctionFileSystemConfigGetArgs extends io.pulumi.resources.R
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -31,7 +32,7 @@ public final class FunctionFileSystemConfigGetArgs extends io.pulumi.resources.R
     @Import(name="localMountPath", required=true)
       private final Output<String> localMountPath;
 
-    public Output<String> getLocalMountPath() {
+    public Output<String> localMountPath() {
         return this.localMountPath;
     }
 
@@ -43,8 +44,8 @@ public final class FunctionFileSystemConfigGetArgs extends io.pulumi.resources.R
     }
 
     private FunctionFileSystemConfigGetArgs() {
-        this.arn = Output.empty();
-        this.localMountPath = Output.empty();
+        this.arn = Codegen.empty();
+        this.localMountPath = Codegen.empty();
     }
 
     public static Builder builder() {

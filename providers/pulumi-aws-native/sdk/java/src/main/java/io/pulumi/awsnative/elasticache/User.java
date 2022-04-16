@@ -9,6 +9,7 @@ import io.pulumi.awsnative.elasticache.enums.UserEngine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Access permissions string used for this user account.
      * 
      */
-    public Output</* @Nullable */ String> getAccessString() {
+    public Output</* @Nullable */ String> accessString() {
         return this.accessString;
     }
     /**
@@ -45,7 +46,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the user account.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +60,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Must be redis.
      * 
      */
-    public Output<UserEngine> getEngine() {
+    public Output<UserEngine> engine() {
         return this.engine;
     }
     /**
@@ -73,7 +74,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Indicates a password is not required for this user account.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNoPasswordRequired() {
+    public Output</* @Nullable */ Boolean> noPasswordRequired() {
         return this.noPasswordRequired;
     }
     /**
@@ -87,7 +88,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Passwords used for this user account. You can create up to two passwords for each user.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPasswords() {
+    public Output</* @Nullable */ List<String>> passwords() {
         return this.passwords;
     }
     /**
@@ -101,7 +102,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return Indicates the user status. Can be "active", "modifying" or "deleting".
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -115,7 +116,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The ID of the user.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
     /**
@@ -129,7 +130,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @return The username of the user.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -155,7 +156,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:elasticache:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:elasticache:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private User(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

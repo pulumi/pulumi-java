@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return Properties of capture description
      * 
      */
-    public Output</* @Nullable */ CaptureDescriptionResponse> getCaptureDescription() {
+    public Output</* @Nullable */ CaptureDescriptionResponse> captureDescription() {
         return this.captureDescription;
     }
     /**
@@ -57,7 +58,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return Exact time the Event Hub was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -71,7 +72,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
      */
-    public Output</* @Nullable */ Double> getMessageRetentionInDays() {
+    public Output</* @Nullable */ Double> messageRetentionInDays() {
         return this.messageRetentionInDays;
     }
     /**
@@ -85,7 +86,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
      */
-    public Output</* @Nullable */ Double> getPartitionCount() {
+    public Output</* @Nullable */ Double> partitionCount() {
         return this.partitionCount;
     }
     /**
@@ -113,7 +114,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return Current number of shards on the Event Hub.
      * 
      */
-    public Output<List<String>> getPartitionIds() {
+    public Output<List<String>> partitionIds() {
         return this.partitionIds;
     }
     /**
@@ -127,7 +128,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return Enumerates the possible values for the status of the Event Hub.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -141,7 +142,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -155,7 +156,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @return The exact time the message was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 
@@ -181,7 +182,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventHub(String name, EventHubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventhub:EventHub", name, args == null ? EventHubArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventhub:EventHub", name, args == null ? EventHubArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventHub(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

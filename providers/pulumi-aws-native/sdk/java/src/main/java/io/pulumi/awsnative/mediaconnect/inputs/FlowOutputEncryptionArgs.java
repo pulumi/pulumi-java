@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionKeyType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     @Import(name="algorithm")
       private final @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
 
-    public Output<FlowOutputEncryptionAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+    public Output<FlowOutputEncryptionAlgorithm> algorithm() {
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     @Import(name="keyType")
       private final @Nullable Output<FlowOutputEncryptionKeyType> keyType;
 
-    public Output<FlowOutputEncryptionKeyType> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+    public Output<FlowOutputEncryptionKeyType> keyType() {
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -60,7 +61,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
@@ -76,10 +77,10 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     }
 
     private FlowOutputEncryptionArgs() {
-        this.algorithm = Output.empty();
-        this.keyType = Output.empty();
-        this.roleArn = Output.empty();
-        this.secretArn = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.secretArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder algorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder keyType(@Nullable Output<FlowOutputEncryptionKeyType> keyType) {
@@ -121,7 +122,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder keyType(@Nullable FlowOutputEncryptionKeyType keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

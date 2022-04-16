@@ -6,6 +6,7 @@ package io.pulumi.gcp.eventarc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.eventarc.TriggerArgs;
 import io.pulumi.gcp.eventarc.inputs.TriggerState;
@@ -52,7 +53,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Output only. The creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -66,7 +67,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Required. Destination specifies where the events should be sent to.
      * 
      */
-    public Output<TriggerDestination> getDestination() {
+    public Output<TriggerDestination> destination() {
         return this.destination;
     }
     /**
@@ -82,7 +83,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -96,7 +97,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Optional. User labels attached to the triggers that can be used to group resources.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -110,7 +111,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -124,7 +125,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.
      * 
      */
-    public Output<List<TriggerMatchingCriteria>> getMatchingCriterias() {
+    public Output<List<TriggerMatchingCriteria>> matchingCriterias() {
         return this.matchingCriterias;
     }
     /**
@@ -138,7 +139,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Required. The resource name of the trigger. Must be unique within the location on the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -152,7 +153,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -166,7 +167,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have `roles/eventarc.eventReceiver` IAM role.
      * 
      */
-    public Output</* @Nullable */ String> getServiceAccount() {
+    public Output</* @Nullable */ String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -180,7 +181,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
      */
-    public Output<List<TriggerTransport>> getTransports() {
+    public Output<List<TriggerTransport>> transports() {
         return this.transports;
     }
     /**
@@ -196,7 +197,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * unchanged until the resource is deleted.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -210,7 +211,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @return Output only. The last-modified time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -236,7 +237,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Trigger(String name, TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:eventarc/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:eventarc/trigger:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Trigger(String name, Output<String> id, @Nullable TriggerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

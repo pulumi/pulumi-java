@@ -9,6 +9,7 @@ import io.pulumi.aws.pinpoint.inputs.GcmChannelState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class GcmChannel extends io.pulumi.resources.CustomResource {
      * @return Platform credential API key from Google.
      * 
      */
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
     /**
@@ -54,7 +55,7 @@ public class GcmChannel extends io.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -68,7 +69,7 @@ public class GcmChannel extends io.pulumi.resources.CustomResource {
      * @return Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
 
@@ -94,7 +95,7 @@ public class GcmChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GcmChannel(String name, GcmChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:pinpoint/gcmChannel:GcmChannel", name, args == null ? GcmChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:pinpoint/gcmChannel:GcmChannel", name, args == null ? GcmChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GcmChannel(String name, Output<String> id, @Nullable GcmChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.route53.outputs.HealthCheckTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,13 +32,13 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * @return A complex type that contains information about the health check.
      * 
      */
-    public Output<HealthCheckConfigProperties> getHealthCheckConfig() {
+    public Output<HealthCheckConfigProperties> healthCheckConfig() {
         return this.healthCheckConfig;
     }
     @Export(name="healthCheckId", type=String.class, parameters={})
     private Output<String> healthCheckId;
 
-    public Output<String> getHealthCheckId() {
+    public Output<String> healthCheckId() {
         return this.healthCheckId;
     }
     /**
@@ -51,7 +52,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<HealthCheckTag>> getHealthCheckTags() {
+    public Output</* @Nullable */ List<HealthCheckTag>> healthCheckTags() {
         return this.healthCheckTags;
     }
 
@@ -77,7 +78,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HealthCheck(String name, HealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53:HealthCheck", name, args == null ? HealthCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53:HealthCheck", name, args == null ? HealthCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HealthCheck(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

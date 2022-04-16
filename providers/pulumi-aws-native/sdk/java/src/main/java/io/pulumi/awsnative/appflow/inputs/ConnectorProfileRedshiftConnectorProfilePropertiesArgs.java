@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -32,8 +33,8 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="databaseUrl", required=true)
       private final Output<String> databaseUrl;
 
-    public Output<String> getDatabaseUrl() {
+    public Output<String> databaseUrl() {
         return this.databaseUrl;
     }
 
@@ -54,7 +55,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -70,10 +71,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     }
 
     private ConnectorProfileRedshiftConnectorProfilePropertiesArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.databaseUrl = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.databaseUrl = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder databaseUrl(Output<String> databaseUrl) {

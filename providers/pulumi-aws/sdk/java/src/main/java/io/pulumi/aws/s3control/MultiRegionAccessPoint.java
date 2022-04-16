@@ -10,6 +10,7 @@ import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointDetails;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID for the owner of the buckets for which you want to create a Multi-Region Access Point. Defaults to automatically determined account ID of the AWS provider.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -54,7 +55,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * @return The alias for the Multi-Region Access Point.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -68,7 +69,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Multi-Region Access Point.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -82,7 +83,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * @return A configuration block containing details about the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    public Output<MultiRegionAccessPointDetails> getDetails() {
+    public Output<MultiRegionAccessPointDetails> details() {
         return this.details;
     }
     /**
@@ -96,7 +97,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * @return The DNS domain name of the S3 Multi-Region Access Point in the format _`alias`_.accesspoint.s3-global.amazonaws.com. For more information, see the documentation on [Multi-Region Access Point Requests](https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRequests.html).
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -110,7 +111,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * @return The current status of the Multi-Region Access Point. One of: `READY`, `INCONSISTENT_ACROSS_REGIONS`, `CREATING`, `PARTIALLY_CREATED`, `PARTIALLY_DELETED`, `DELETING`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -136,7 +137,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MultiRegionAccessPoint(String name, MultiRegionAccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/multiRegionAccessPoint:MultiRegionAccessPoint", name, args == null ? MultiRegionAccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/multiRegionAccessPoint:MultiRegionAccessPoint", name, args == null ? MultiRegionAccessPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MultiRegionAccessPoint(String name, Output<String> id, @Nullable MultiRegionAccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

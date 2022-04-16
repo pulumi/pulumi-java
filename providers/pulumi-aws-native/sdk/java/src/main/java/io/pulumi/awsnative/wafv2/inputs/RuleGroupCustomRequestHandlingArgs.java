@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeaderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resource
     @Import(name="insertHeaders", required=true)
       private final Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
 
-    public Output<List<RuleGroupCustomHTTPHeaderArgs>> getInsertHeaders() {
+    public Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 
@@ -34,7 +35,7 @@ public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resource
     }
 
     private RuleGroupCustomRequestHandlingArgs() {
-        this.insertHeaders = Output.empty();
+        this.insertHeaders = Codegen.empty();
     }
 
     public static Builder builder() {

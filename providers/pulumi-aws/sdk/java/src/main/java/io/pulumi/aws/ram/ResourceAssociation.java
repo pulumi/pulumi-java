@@ -9,6 +9,7 @@ import io.pulumi.aws.ram.inputs.ResourceAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the resource to associate with the RAM Resource Share.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -55,7 +56,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the RAM Resource Share.
      * 
      */
-    public Output<String> getResourceShareArn() {
+    public Output<String> resourceShareArn() {
         return this.resourceShareArn;
     }
 
@@ -81,7 +82,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceAssociation(String name, ResourceAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ram/resourceAssociation:ResourceAssociation", name, args == null ? ResourceAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ram/resourceAssociation:ResourceAssociation", name, args == null ? ResourceAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceAssociation(String name, Output<String> id, @Nullable ResourceAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

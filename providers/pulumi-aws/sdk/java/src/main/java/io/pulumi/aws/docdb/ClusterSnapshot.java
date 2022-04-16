@@ -9,6 +9,7 @@ import io.pulumi.aws.docdb.inputs.ClusterSnapshotState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return List of EC2 Availability Zones that instances in the DocDB cluster snapshot can be restored in.
      * 
      */
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -56,7 +57,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The DocDB Cluster Identifier from which to take the snapshot.
      * 
      */
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
     /**
@@ -70,7 +71,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the DocDB Cluster Snapshot.
      * 
      */
-    public Output<String> getDbClusterSnapshotArn() {
+    public Output<String> dbClusterSnapshotArn() {
         return this.dbClusterSnapshotArn;
     }
     /**
@@ -84,7 +85,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The Identifier for the snapshot.
      * 
      */
-    public Output<String> getDbClusterSnapshotIdentifier() {
+    public Output<String> dbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
     }
     /**
@@ -98,7 +99,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the database engine.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     /**
@@ -112,7 +113,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Version of the database engine for this DocDB cluster snapshot.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -126,7 +127,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return If storage_encrypted is true, the AWS KMS key identifier for the encrypted DocDB cluster snapshot.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -140,19 +141,19 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Port that the DocDB cluster was listening on at the time of the snapshot.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     @Export(name="snapshotType", type=String.class, parameters={})
     private Output<String> snapshotType;
 
-    public Output<String> getSnapshotType() {
+    public Output<String> snapshotType() {
         return this.snapshotType;
     }
     @Export(name="sourceDbClusterSnapshotArn", type=String.class, parameters={})
     private Output<String> sourceDbClusterSnapshotArn;
 
-    public Output<String> getSourceDbClusterSnapshotArn() {
+    public Output<String> sourceDbClusterSnapshotArn() {
         return this.sourceDbClusterSnapshotArn;
     }
     /**
@@ -166,7 +167,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The status of this DocDB Cluster Snapshot.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -180,7 +181,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the DocDB cluster snapshot is encrypted.
      * 
      */
-    public Output<Boolean> getStorageEncrypted() {
+    public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
@@ -194,7 +195,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The VPC ID associated with the DocDB cluster snapshot.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -220,7 +221,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterSnapshot(String name, ClusterSnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:docdb/clusterSnapshot:ClusterSnapshot", name, args == null ? ClusterSnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:docdb/clusterSnapshot:ClusterSnapshot", name, args == null ? ClusterSnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterSnapshot(String name, Output<String> id, @Nullable ClusterSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

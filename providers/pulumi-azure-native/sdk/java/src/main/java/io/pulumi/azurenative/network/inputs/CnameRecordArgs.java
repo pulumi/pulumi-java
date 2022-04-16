@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cname")
       private final @Nullable Output<String> cname;
 
-    public Output<String> getCname() {
-        return this.cname == null ? Output.empty() : this.cname;
+    public Output<String> cname() {
+        return this.cname == null ? Codegen.empty() : this.cname;
     }
 
     public CnameRecordArgs(@Nullable Output<String> cname) {
@@ -34,7 +35,7 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CnameRecordArgs() {
-        this.cname = Output.empty();
+        this.cname = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cname(@Nullable String cname) {
-            this.cname = Output.ofNullable(cname);
+            this.cname = Codegen.ofNullable(cname);
             return this;
         }        public CnameRecordArgs build() {
             return new CnameRecordArgs(cname);

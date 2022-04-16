@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
      * 
      */
-    public Output</* @Nullable */ String> getAlpnPolicy() {
+    public Output</* @Nullable */ String> alpnPolicy() {
         return this.alpnPolicy;
     }
     /**
@@ -60,7 +61,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return ARN of the target group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -74,7 +75,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateArn() {
+    public Output</* @Nullable */ String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -88,7 +89,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return Configuration block for default actions. Detailed below.
      * 
      */
-    public Output<List<ListenerDefaultAction>> getDefaultActions() {
+    public Output<List<ListenerDefaultAction>> defaultActions() {
         return this.defaultActions;
     }
     /**
@@ -102,7 +103,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return ARN of the load balancer.
      * 
      */
-    public Output<String> getLoadBalancerArn() {
+    public Output<String> loadBalancerArn() {
         return this.loadBalancerArn;
     }
     /**
@@ -116,7 +117,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -130,7 +131,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -144,7 +145,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
      * 
      */
-    public Output<String> getSslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy;
     }
     /**
@@ -158,7 +159,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +173,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -198,7 +199,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Listener(String name, ListenerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lb/listener:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lb/listener:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Listener(String name, Output<String> id, @Nullable ListenerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

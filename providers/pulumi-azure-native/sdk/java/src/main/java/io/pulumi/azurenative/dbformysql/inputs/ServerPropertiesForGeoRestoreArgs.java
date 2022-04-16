@@ -12,6 +12,7 @@ import io.pulumi.azurenative.dbformysql.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="createMode", required=true)
       private final Output<String> createMode;
 
-    public Output<String> getCreateMode() {
+    public Output<String> createMode() {
         return this.createMode;
     }
 
@@ -44,8 +45,8 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="infrastructureEncryption")
       private final @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
 
-    public Output<Either<String,InfrastructureEncryption>> getInfrastructureEncryption() {
-        return this.infrastructureEncryption == null ? Output.empty() : this.infrastructureEncryption;
+    public Output<Either<String,InfrastructureEncryption>> infrastructureEncryption() {
+        return this.infrastructureEncryption == null ? Codegen.empty() : this.infrastructureEncryption;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
-    public Output<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Output.empty() : this.minimalTlsVersion;
+    public Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion() {
+        return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="sourceServerId", required=true)
       private final Output<String> sourceServerId;
 
-    public Output<String> getSourceServerId() {
+    public Output<String> sourceServerId() {
         return this.sourceServerId;
     }
 
@@ -88,8 +89,8 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
-    public Output<SslEnforcementEnum> getSslEnforcement() {
-        return this.sslEnforcement == null ? Output.empty() : this.sslEnforcement;
+    public Output<SslEnforcementEnum> sslEnforcement() {
+        return this.sslEnforcement == null ? Codegen.empty() : this.sslEnforcement;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Output.empty() : this.storageProfile;
+    public Output<StorageProfileArgs> storageProfile() {
+        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;
 
-    public Output<Either<String,ServerVersion>> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Either<String,ServerVersion>> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ServerPropertiesForGeoRestoreArgs(
@@ -134,14 +135,14 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     }
 
     private ServerPropertiesForGeoRestoreArgs() {
-        this.createMode = Output.empty();
-        this.infrastructureEncryption = Output.empty();
-        this.minimalTlsVersion = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.sourceServerId = Output.empty();
-        this.sslEnforcement = Output.empty();
-        this.storageProfile = Output.empty();
-        this.version = Output.empty();
+        this.createMode = Codegen.empty();
+        this.infrastructureEncryption = Codegen.empty();
+        this.minimalTlsVersion = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.sourceServerId = Codegen.empty();
+        this.sslEnforcement = Codegen.empty();
+        this.storageProfile = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
             return this;
         }
         public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryption> infrastructureEncryption) {
-            this.infrastructureEncryption = Output.ofNullable(infrastructureEncryption);
+            this.infrastructureEncryption = Codegen.ofNullable(infrastructureEncryption);
             return this;
         }
         public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
@@ -199,7 +200,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
             return this;
         }
         public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
-            this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
+            this.minimalTlsVersion = Codegen.ofNullable(minimalTlsVersion);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
@@ -207,7 +208,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder sourceServerId(Output<String> sourceServerId) {
@@ -223,7 +224,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
             return this;
         }
         public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
-            this.sslEnforcement = Output.ofNullable(sslEnforcement);
+            this.sslEnforcement = Codegen.ofNullable(sslEnforcement);
             return this;
         }
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
@@ -231,7 +232,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
             return this;
         }
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Output.ofNullable(storageProfile);
+            this.storageProfile = Codegen.ofNullable(storageProfile);
             return this;
         }
         public Builder version(@Nullable Output<Either<String,ServerVersion>> version) {
@@ -239,7 +240,7 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
             return this;
         }
         public Builder version(@Nullable Either<String,ServerVersion> version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ServerPropertiesForGeoRestoreArgs build() {
             return new ServerPropertiesForGeoRestoreArgs(createMode, infrastructureEncryption, minimalTlsVersion, publicNetworkAccess, sourceServerId, sslEnforcement, storageProfile, version);

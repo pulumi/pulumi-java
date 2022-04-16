@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class GatewayRouteSpecGrpcRouteMatchArgs extends io.pulumi.resource
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -29,7 +30,7 @@ public final class GatewayRouteSpecGrpcRouteMatchArgs extends io.pulumi.resource
     }
 
     private GatewayRouteSpecGrpcRouteMatchArgs() {
-        this.serviceName = Output.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {

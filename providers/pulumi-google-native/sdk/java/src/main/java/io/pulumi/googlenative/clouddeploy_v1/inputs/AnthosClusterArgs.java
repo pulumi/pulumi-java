@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="membership")
       private final @Nullable Output<String> membership;
 
-    public Output<String> getMembership() {
-        return this.membership == null ? Output.empty() : this.membership;
+    public Output<String> membership() {
+        return this.membership == null ? Codegen.empty() : this.membership;
     }
 
     public AnthosClusterArgs(@Nullable Output<String> membership) {
@@ -34,7 +35,7 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnthosClusterArgs() {
-        this.membership = Output.empty();
+        this.membership = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder membership(@Nullable String membership) {
-            this.membership = Output.ofNullable(membership);
+            this.membership = Codegen.ofNullable(membership);
             return this;
         }        public AnthosClusterArgs build() {
             return new AnthosClusterArgs(membership);

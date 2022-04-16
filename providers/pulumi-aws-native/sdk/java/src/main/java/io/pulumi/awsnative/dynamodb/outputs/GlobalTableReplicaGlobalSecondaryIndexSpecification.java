@@ -27,13 +27,13 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification {
         this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
     }
 
-    public Optional<GlobalTableContributorInsightsSpecification> getContributorInsightsSpecification() {
+    public Optional<GlobalTableContributorInsightsSpecification> contributorInsightsSpecification() {
         return Optional.ofNullable(this.contributorInsightsSpecification);
     }
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
-    public Optional<GlobalTableReadProvisionedThroughputSettings> getReadProvisionedThroughputSettings() {
+    public Optional<GlobalTableReadProvisionedThroughputSettings> readProvisionedThroughputSettings() {
         return Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
 

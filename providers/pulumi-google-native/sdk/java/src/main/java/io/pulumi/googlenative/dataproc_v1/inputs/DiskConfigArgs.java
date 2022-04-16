@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootDiskSizeGb")
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> getBootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Output.empty() : this.bootDiskSizeGb;
+    public Output<Integer> bootDiskSizeGb() {
+        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootDiskType")
       private final @Nullable Output<String> bootDiskType;
 
-    public Output<String> getBootDiskType() {
-        return this.bootDiskType == null ? Output.empty() : this.bootDiskType;
+    public Output<String> bootDiskType() {
+        return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localSsdInterface")
       private final @Nullable Output<String> localSsdInterface;
 
-    public Output<String> getLocalSsdInterface() {
-        return this.localSsdInterface == null ? Output.empty() : this.localSsdInterface;
+    public Output<String> localSsdInterface() {
+        return this.localSsdInterface == null ? Codegen.empty() : this.localSsdInterface;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numLocalSsds")
       private final @Nullable Output<Integer> numLocalSsds;
 
-    public Output<Integer> getNumLocalSsds() {
-        return this.numLocalSsds == null ? Output.empty() : this.numLocalSsds;
+    public Output<Integer> numLocalSsds() {
+        return this.numLocalSsds == null ? Codegen.empty() : this.numLocalSsds;
     }
 
     public DiskConfigArgs(
@@ -75,10 +76,10 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskConfigArgs() {
-        this.bootDiskSizeGb = Output.empty();
-        this.bootDiskType = Output.empty();
-        this.localSsdInterface = Output.empty();
-        this.numLocalSsds = Output.empty();
+        this.bootDiskSizeGb = Codegen.empty();
+        this.bootDiskType = Codegen.empty();
+        this.localSsdInterface = Codegen.empty();
+        this.numLocalSsds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
+            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
             return this;
         }
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
@@ -120,7 +121,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Output.ofNullable(bootDiskType);
+            this.bootDiskType = Codegen.ofNullable(bootDiskType);
             return this;
         }
         public Builder localSsdInterface(@Nullable Output<String> localSsdInterface) {
@@ -128,7 +129,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localSsdInterface(@Nullable String localSsdInterface) {
-            this.localSsdInterface = Output.ofNullable(localSsdInterface);
+            this.localSsdInterface = Codegen.ofNullable(localSsdInterface);
             return this;
         }
         public Builder numLocalSsds(@Nullable Output<Integer> numLocalSsds) {
@@ -136,7 +137,7 @@ public final class DiskConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
-            this.numLocalSsds = Output.ofNullable(numLocalSsds);
+            this.numLocalSsds = Codegen.ofNullable(numLocalSsds);
             return this;
         }        public DiskConfigArgs build() {
             return new DiskConfigArgs(bootDiskSizeGb, bootDiskType, localSsdInterface, numLocalSsds);

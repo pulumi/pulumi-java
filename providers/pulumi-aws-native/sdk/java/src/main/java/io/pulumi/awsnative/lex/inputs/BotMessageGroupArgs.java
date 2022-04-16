@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotMessageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="message", required=true)
       private final Output<BotMessageArgs> message;
 
-    public Output<BotMessageArgs> getMessage() {
+    public Output<BotMessageArgs> message() {
         return this.message;
     }
 
@@ -33,8 +34,8 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="variations")
       private final @Nullable Output<List<BotMessageArgs>> variations;
 
-    public Output<List<BotMessageArgs>> getVariations() {
-        return this.variations == null ? Output.empty() : this.variations;
+    public Output<List<BotMessageArgs>> variations() {
+        return this.variations == null ? Codegen.empty() : this.variations;
     }
 
     public BotMessageGroupArgs(
@@ -45,8 +46,8 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BotMessageGroupArgs() {
-        this.message = Output.empty();
-        this.variations = Output.empty();
+        this.message = Codegen.empty();
+        this.variations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder variations(@Nullable List<BotMessageArgs> variations) {
-            this.variations = Output.ofNullable(variations);
+            this.variations = Codegen.ofNullable(variations);
             return this;
         }
         public Builder variations(BotMessageArgs... variations) {

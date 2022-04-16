@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,36 +19,36 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+    public Output<Double> cpu() {
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
-    public Output<Integer> getMaxCount() {
-        return this.maxCount == null ? Output.empty() : this.maxCount;
+    public Output<Integer> maxCount() {
+        return this.maxCount == null ? Codegen.empty() : this.maxCount;
     }
 
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
-    public Output<Double> getMemoryGb() {
-        return this.memoryGb == null ? Output.empty() : this.memoryGb;
+    public Output<Double> memoryGb() {
+        return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
     @Import(name="minCount")
       private final @Nullable Output<Integer> minCount;
 
-    public Output<Integer> getMinCount() {
-        return this.minCount == null ? Output.empty() : this.minCount;
+    public Output<Integer> minCount() {
+        return this.minCount == null ? Codegen.empty() : this.minCount;
     }
 
     @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;
 
-    public Output<Double> getStorageGb() {
-        return this.storageGb == null ? Output.empty() : this.storageGb;
+    public Output<Double> storageGb() {
+        return this.storageGb == null ? Codegen.empty() : this.storageGb;
     }
 
     public EnvironmentConfigWorkloadsConfigWorkerArgs(
@@ -64,11 +65,11 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
     }
 
     private EnvironmentConfigWorkloadsConfigWorkerArgs() {
-        this.cpu = Output.empty();
-        this.maxCount = Output.empty();
-        this.memoryGb = Output.empty();
-        this.minCount = Output.empty();
-        this.storageGb = Output.empty();
+        this.cpu = Codegen.empty();
+        this.maxCount = Codegen.empty();
+        this.memoryGb = Codegen.empty();
+        this.minCount = Codegen.empty();
+        this.storageGb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
             return this;
         }
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
@@ -112,7 +113,7 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
             return this;
         }
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Output.ofNullable(maxCount);
+            this.maxCount = Codegen.ofNullable(maxCount);
             return this;
         }
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
@@ -120,7 +121,7 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
             return this;
         }
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Output.ofNullable(memoryGb);
+            this.memoryGb = Codegen.ofNullable(memoryGb);
             return this;
         }
         public Builder minCount(@Nullable Output<Integer> minCount) {
@@ -128,7 +129,7 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
             return this;
         }
         public Builder minCount(@Nullable Integer minCount) {
-            this.minCount = Output.ofNullable(minCount);
+            this.minCount = Codegen.ofNullable(minCount);
             return this;
         }
         public Builder storageGb(@Nullable Output<Double> storageGb) {
@@ -136,7 +137,7 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
             return this;
         }
         public Builder storageGb(@Nullable Double storageGb) {
-            this.storageGb = Output.ofNullable(storageGb);
+            this.storageGb = Codegen.ofNullable(storageGb);
             return this;
         }        public EnvironmentConfigWorkloadsConfigWorkerArgs build() {
             return new EnvironmentConfigWorkloadsConfigWorkerArgs(cpu, maxCount, memoryGb, minCount, storageGb);

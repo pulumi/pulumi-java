@@ -8,6 +8,7 @@ import io.pulumi.awsnative.cloudwatch.CompositeAlarmArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
      * 
      */
-    public Output</* @Nullable */ Boolean> getActionsEnabled() {
+    public Output</* @Nullable */ Boolean> actionsEnabled() {
         return this.actionsEnabled;
     }
     /**
@@ -44,7 +45,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> getAlarmActions() {
+    public Output</* @Nullable */ List<String>> alarmActions() {
         return this.alarmActions;
     }
     /**
@@ -58,7 +59,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The description of the alarm
      * 
      */
-    public Output</* @Nullable */ String> getAlarmDescription() {
+    public Output</* @Nullable */ String> alarmDescription() {
         return this.alarmDescription;
     }
     /**
@@ -72,7 +73,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The name of the Composite Alarm
      * 
      */
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
     /**
@@ -86,7 +87,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
      * 
      */
-    public Output<String> getAlarmRule() {
+    public Output<String> alarmRule() {
         return this.alarmRule;
     }
     /**
@@ -100,7 +101,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the alarm
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -114,7 +115,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> getInsufficientDataActions() {
+    public Output</* @Nullable */ List<String>> insufficientDataActions() {
         return this.insufficientDataActions;
     }
     /**
@@ -128,7 +129,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> getOKActions() {
+    public Output</* @Nullable */ List<String>> oKActions() {
         return this.oKActions;
     }
 
@@ -154,7 +155,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CompositeAlarm(String name, CompositeAlarmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudwatch:CompositeAlarm", name, args == null ? CompositeAlarmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudwatch:CompositeAlarm", name, args == null ? CompositeAlarmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CompositeAlarm(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

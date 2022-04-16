@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,14 +22,14 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="evaluationInterval")
       private final @Nullable Output<String> evaluationInterval;
 
-    public Output<String> getEvaluationInterval() {
-        return this.evaluationInterval == null ? Output.empty() : this.evaluationInterval;
+    public Output<String> evaluationInterval() {
+        return this.evaluationInterval == null ? Codegen.empty() : this.evaluationInterval;
     }
 
     @Import(name="formula", required=true)
       private final Output<String> formula;
 
-    public Output<String> getFormula() {
+    public Output<String> formula() {
         return this.formula;
     }
 
@@ -40,8 +41,8 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutoScaleSettingsArgs() {
-        this.evaluationInterval = Output.empty();
-        this.formula = Output.empty();
+        this.evaluationInterval = Codegen.empty();
+        this.formula = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder evaluationInterval(@Nullable String evaluationInterval) {
-            this.evaluationInterval = Output.ofNullable(evaluationInterval);
+            this.evaluationInterval = Codegen.ofNullable(evaluationInterval);
             return this;
         }
         public Builder formula(Output<String> formula) {

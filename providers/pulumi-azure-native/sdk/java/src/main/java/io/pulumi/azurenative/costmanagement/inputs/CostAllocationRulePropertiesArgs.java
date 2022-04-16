@@ -8,6 +8,7 @@ import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRuleDetailsArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     @Import(name="details", required=true)
       private final Output<CostAllocationRuleDetailsArgs> details;
 
-    public Output<CostAllocationRuleDetailsArgs> getDetails() {
+    public Output<CostAllocationRuleDetailsArgs> details() {
         return this.details;
     }
 
@@ -50,7 +51,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     @Import(name="status", required=true)
       private final Output<Either<String,RuleStatus>> status;
 
-    public Output<Either<String,RuleStatus>> getStatus() {
+    public Output<Either<String,RuleStatus>> status() {
         return this.status;
     }
 
@@ -64,9 +65,9 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     }
 
     private CostAllocationRulePropertiesArgs() {
-        this.description = Output.empty();
-        this.details = Output.empty();
-        this.status = Output.empty();
+        this.description = Codegen.empty();
+        this.details = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder details(Output<CostAllocationRuleDetailsArgs> details) {

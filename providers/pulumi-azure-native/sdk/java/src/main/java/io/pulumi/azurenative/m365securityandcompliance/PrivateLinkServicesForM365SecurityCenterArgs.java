@@ -8,6 +8,7 @@ import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesProperties
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesResourceIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     @Import(name="identity")
       private final @Nullable Output<ServicesResourceIdentityArgs> identity;
 
-    public Output<ServicesResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ServicesResourceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     @Import(name="kind", required=true)
       private final Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind;
     }
 
@@ -47,8 +48,8 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     @Import(name="properties")
       private final @Nullable Output<ServicesPropertiesArgs> properties;
 
-    public Output<ServicesPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ServicesPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,8 +81,8 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PrivateLinkServicesForM365SecurityCenterArgs(
@@ -113,13 +114,13 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
     }
 
     private PrivateLinkServicesForM365SecurityCenterArgs() {
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
             return this;
         }
         public Builder identity(@Nullable ServicesResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(Output<Kind> kind) {
@@ -175,7 +176,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<ServicesPropertiesArgs> properties) {
@@ -183,7 +184,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
             return this;
         }
         public Builder properties(@Nullable ServicesPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -199,7 +200,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -207,7 +208,7 @@ public final class PrivateLinkServicesForM365SecurityCenterArgs extends io.pulum
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PrivateLinkServicesForM365SecurityCenterArgs build() {
             return new PrivateLinkServicesForM365SecurityCenterArgs(identity, kind, location, properties, resourceGroupName, resourceName, tags);

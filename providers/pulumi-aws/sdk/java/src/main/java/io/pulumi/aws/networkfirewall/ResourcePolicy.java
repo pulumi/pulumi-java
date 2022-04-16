@@ -9,6 +9,7 @@ import io.pulumi.aws.networkfirewall.inputs.ResourcePolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
     @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -45,7 +46,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the rule group or firewall policy.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -71,7 +72,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourcePolicy(String name, ResourcePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:networkfirewall/resourcePolicy:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:networkfirewall/resourcePolicy:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourcePolicy(String name, Output<String> id, @Nullable ResourcePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

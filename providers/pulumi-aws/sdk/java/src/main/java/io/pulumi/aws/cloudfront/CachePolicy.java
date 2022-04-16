@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudfront.outputs.CachePolicyParametersInCacheKeyAndForwar
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @return A comment to describe the cache policy.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -53,7 +54,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @return The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultTtl() {
+    public Output</* @Nullable */ Integer> defaultTtl() {
         return this.defaultTtl;
     }
     /**
@@ -67,7 +68,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @return The current version of the cache policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -81,7 +82,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @return The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxTtl() {
+    public Output</* @Nullable */ Integer> maxTtl() {
         return this.maxTtl;
     }
     /**
@@ -95,7 +96,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @return The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinTtl() {
+    public Output</* @Nullable */ Integer> minTtl() {
         return this.minTtl;
     }
     /**
@@ -109,7 +110,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @return A unique name to identify the cache policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -123,7 +124,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @return The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
      * 
      */
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOrigin> getParametersInCacheKeyAndForwardedToOrigin() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 
@@ -149,7 +150,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CachePolicy(String name, CachePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/cachePolicy:CachePolicy", name, args == null ? CachePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/cachePolicy:CachePolicy", name, args == null ? CachePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CachePolicy(String name, Output<String> id, @Nullable CachePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

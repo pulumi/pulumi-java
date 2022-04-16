@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamBindingConditionArgs> condition;
 
-    public Output<ConsentStoreIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<ConsentStoreIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -43,14 +44,14 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -63,7 +64,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -81,11 +82,11 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     }
 
     private ConsentStoreIamBindingArgs() {
-        this.condition = Output.empty();
-        this.consentStoreId = Output.empty();
-        this.dataset = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.consentStoreId = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder condition(@Nullable ConsentStoreIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder consentStoreId(Output<String> consentStoreId) {

@@ -41,21 +41,21 @@ public final class ExpressRouteCircuitSkuResponse {
      * The family of the SKU.
      * 
     */
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The name of the SKU.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The tier of the SKU.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

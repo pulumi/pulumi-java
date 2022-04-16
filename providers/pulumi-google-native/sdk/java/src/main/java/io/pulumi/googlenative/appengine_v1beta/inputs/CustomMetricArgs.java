@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
-    public Output<String> getMetricName() {
-        return this.metricName == null ? Output.empty() : this.metricName;
+    public Output<String> metricName() {
+        return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="singleInstanceAssignment")
       private final @Nullable Output<Double> singleInstanceAssignment;
 
-    public Output<Double> getSingleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Output.empty() : this.singleInstanceAssignment;
+    public Output<Double> singleInstanceAssignment() {
+        return this.singleInstanceAssignment == null ? Codegen.empty() : this.singleInstanceAssignment;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+    public Output<String> targetType() {
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetUtilization")
       private final @Nullable Output<Double> targetUtilization;
 
-    public Output<Double> getTargetUtilization() {
-        return this.targetUtilization == null ? Output.empty() : this.targetUtilization;
+    public Output<Double> targetUtilization() {
+        return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
     }
 
     public CustomMetricArgs(
@@ -88,11 +89,11 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomMetricArgs() {
-        this.filter = Output.empty();
-        this.metricName = Output.empty();
-        this.singleInstanceAssignment = Output.empty();
-        this.targetType = Output.empty();
-        this.targetUtilization = Output.empty();
+        this.filter = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.singleInstanceAssignment = Codegen.empty();
+        this.targetType = Codegen.empty();
+        this.targetUtilization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder metricName(@Nullable Output<String> metricName) {
@@ -136,7 +137,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Output.ofNullable(metricName);
+            this.metricName = Codegen.ofNullable(metricName);
             return this;
         }
         public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
@@ -144,7 +145,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
+            this.singleInstanceAssignment = Codegen.ofNullable(singleInstanceAssignment);
             return this;
         }
         public Builder targetType(@Nullable Output<String> targetType) {
@@ -152,7 +153,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
@@ -160,7 +161,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetUtilization(@Nullable Double targetUtilization) {
-            this.targetUtilization = Output.ofNullable(targetUtilization);
+            this.targetUtilization = Codegen.ofNullable(targetUtilization);
             return this;
         }        public CustomMetricArgs build() {
             return new CustomMetricArgs(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);

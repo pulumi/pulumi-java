@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.DeprecationStatusState;
 import io.pulumi.googlenative.compute_alpha.inputs.RolloutPolicyArgs;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deleted")
       private final @Nullable Output<String> deleted;
 
-    public Output<String> getDeleted() {
-        return this.deleted == null ? Output.empty() : this.deleted;
+    public Output<String> deleted() {
+        return this.deleted == null ? Codegen.empty() : this.deleted;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deprecated")
       private final @Nullable Output<String> deprecated;
 
-    public Output<String> getDeprecated() {
-        return this.deprecated == null ? Output.empty() : this.deprecated;
+    public Output<String> deprecated() {
+        return this.deprecated == null ? Codegen.empty() : this.deprecated;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="obsolete")
       private final @Nullable Output<String> obsolete;
 
-    public Output<String> getObsolete() {
-        return this.obsolete == null ? Output.empty() : this.obsolete;
+    public Output<String> obsolete() {
+        return this.obsolete == null ? Codegen.empty() : this.obsolete;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="replacement")
       private final @Nullable Output<String> replacement;
 
-    public Output<String> getReplacement() {
-        return this.replacement == null ? Output.empty() : this.replacement;
+    public Output<String> replacement() {
+        return this.replacement == null ? Codegen.empty() : this.replacement;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<DeprecationStatusState> state;
 
-    public Output<DeprecationStatusState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<DeprecationStatusState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="stateOverride")
       private final @Nullable Output<RolloutPolicyArgs> stateOverride;
 
-    public Output<RolloutPolicyArgs> getStateOverride() {
-        return this.stateOverride == null ? Output.empty() : this.stateOverride;
+    public Output<RolloutPolicyArgs> stateOverride() {
+        return this.stateOverride == null ? Codegen.empty() : this.stateOverride;
     }
 
     public DeprecationStatusArgs(
@@ -102,12 +103,12 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DeprecationStatusArgs() {
-        this.deleted = Output.empty();
-        this.deprecated = Output.empty();
-        this.obsolete = Output.empty();
-        this.replacement = Output.empty();
-        this.state = Output.empty();
-        this.stateOverride = Output.empty();
+        this.deleted = Codegen.empty();
+        this.deprecated = Codegen.empty();
+        this.obsolete = Codegen.empty();
+        this.replacement = Codegen.empty();
+        this.state = Codegen.empty();
+        this.stateOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deleted(@Nullable String deleted) {
-            this.deleted = Output.ofNullable(deleted);
+            this.deleted = Codegen.ofNullable(deleted);
             return this;
         }
         public Builder deprecated(@Nullable Output<String> deprecated) {
@@ -153,7 +154,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deprecated(@Nullable String deprecated) {
-            this.deprecated = Output.ofNullable(deprecated);
+            this.deprecated = Codegen.ofNullable(deprecated);
             return this;
         }
         public Builder obsolete(@Nullable Output<String> obsolete) {
@@ -161,7 +162,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder obsolete(@Nullable String obsolete) {
-            this.obsolete = Output.ofNullable(obsolete);
+            this.obsolete = Codegen.ofNullable(obsolete);
             return this;
         }
         public Builder replacement(@Nullable Output<String> replacement) {
@@ -169,7 +170,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder replacement(@Nullable String replacement) {
-            this.replacement = Output.ofNullable(replacement);
+            this.replacement = Codegen.ofNullable(replacement);
             return this;
         }
         public Builder state(@Nullable Output<DeprecationStatusState> state) {
@@ -177,7 +178,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder state(@Nullable DeprecationStatusState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder stateOverride(@Nullable Output<RolloutPolicyArgs> stateOverride) {
@@ -185,7 +186,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder stateOverride(@Nullable RolloutPolicyArgs stateOverride) {
-            this.stateOverride = Output.ofNullable(stateOverride);
+            this.stateOverride = Codegen.ofNullable(stateOverride);
             return this;
         }        public DeprecationStatusArgs build() {
             return new DeprecationStatusArgs(deleted, deprecated, obsolete, replacement, state, stateOverride);

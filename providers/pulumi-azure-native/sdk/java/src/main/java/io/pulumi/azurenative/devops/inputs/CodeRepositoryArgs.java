@@ -8,6 +8,7 @@ import io.pulumi.azurenative.devops.inputs.AuthorizationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorization")
       private final @Nullable Output<AuthorizationArgs> authorization;
 
-    public Output<AuthorizationArgs> getAuthorization() {
-        return this.authorization == null ? Output.empty() : this.authorization;
+    public Output<AuthorizationArgs> authorization() {
+        return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultBranch", required=true)
       private final Output<String> defaultBranch;
 
-    public Output<String> getDefaultBranch() {
+    public Output<String> defaultBranch() {
         return this.defaultBranch;
     }
 
@@ -51,7 +52,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -62,8 +63,8 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryType", required=true)
       private final Output<Either<String,CodeRepositoryType>> repositoryType;
 
-    public Output<Either<String,CodeRepositoryType>> getRepositoryType() {
+    public Output<Either<String,CodeRepositoryType>> repositoryType() {
         return this.repositoryType;
     }
 
@@ -91,11 +92,11 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CodeRepositoryArgs() {
-        this.authorization = Output.empty();
-        this.defaultBranch = Output.empty();
-        this.id = Output.empty();
-        this.properties = Output.empty();
-        this.repositoryType = Output.empty();
+        this.authorization = Codegen.empty();
+        this.defaultBranch = Codegen.empty();
+        this.id = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.repositoryType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorization(@Nullable AuthorizationArgs authorization) {
-            this.authorization = Output.ofNullable(authorization);
+            this.authorization = Codegen.ofNullable(authorization);
             return this;
         }
         public Builder defaultBranch(Output<String> defaultBranch) {
@@ -155,7 +156,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder repositoryType(Output<Either<String,CodeRepositoryType>> repositoryType) {

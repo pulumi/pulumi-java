@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class ContainerCapabilitiesArgs extends io.pulumi.resources.Resourc
     @Import(name="adds")
       private final @Nullable Output<List<String>> adds;
 
-    public Output<List<String>> getAdds() {
-        return this.adds == null ? Output.empty() : this.adds;
+    public Output<List<String>> adds() {
+        return this.adds == null ? Codegen.empty() : this.adds;
     }
 
     @Import(name="drops")
       private final @Nullable Output<List<String>> drops;
 
-    public Output<List<String>> getDrops() {
-        return this.drops == null ? Output.empty() : this.drops;
+    public Output<List<String>> drops() {
+        return this.drops == null ? Codegen.empty() : this.drops;
     }
 
     public ContainerCapabilitiesArgs(
@@ -37,8 +38,8 @@ public final class ContainerCapabilitiesArgs extends io.pulumi.resources.Resourc
     }
 
     private ContainerCapabilitiesArgs() {
-        this.adds = Output.empty();
-        this.drops = Output.empty();
+        this.adds = Codegen.empty();
+        this.drops = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ContainerCapabilitiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder adds(@Nullable List<String> adds) {
-            this.adds = Output.ofNullable(adds);
+            this.adds = Codegen.ofNullable(adds);
             return this;
         }
         public Builder adds(String... adds) {
@@ -79,7 +80,7 @@ public final class ContainerCapabilitiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder drops(@Nullable List<String> drops) {
-            this.drops = Output.ofNullable(drops);
+            this.drops = Codegen.ofNullable(drops);
             return this;
         }
         public Builder drops(String... drops) {

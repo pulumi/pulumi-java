@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     @Import(name="authType", required=true)
       private final Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
 
@@ -36,7 +37,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -47,7 +48,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -61,9 +62,9 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     }
 
     private UserAssignedIdentityAuthInfoArgs() {
-        this.authType = Output.empty();
-        this.clientId = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.authType = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {

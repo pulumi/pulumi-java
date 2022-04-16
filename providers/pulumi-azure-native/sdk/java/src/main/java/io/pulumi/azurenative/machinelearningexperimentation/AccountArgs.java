@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningexperimentation;
 import io.pulumi.azurenative.machinelearningexperimentation.inputs.StorageAccountPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultId", required=true)
       private final Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
 
@@ -67,8 +68,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="seats")
       private final @Nullable Output<String> seats;
 
-    public Output<String> getSeats() {
-        return this.seats == null ? Output.empty() : this.seats;
+    public Output<String> seats() {
+        return this.seats == null ? Codegen.empty() : this.seats;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount", required=true)
       private final Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Output<StorageAccountPropertiesArgs> getStorageAccount() {
+    public Output<StorageAccountPropertiesArgs> storageAccount() {
         return this.storageAccount;
     }
 
@@ -111,8 +112,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vsoAccountId", required=true)
       private final Output<String> vsoAccountId;
 
-    public Output<String> getVsoAccountId() {
+    public Output<String> vsoAccountId() {
         return this.vsoAccountId;
     }
 
@@ -150,16 +151,16 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountName = Output.empty();
-        this.description = Output.empty();
-        this.friendlyName = Output.empty();
-        this.keyVaultId = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.seats = Output.empty();
-        this.storageAccount = Output.empty();
-        this.tags = Output.empty();
-        this.vsoAccountId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.keyVaultId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.seats = Codegen.empty();
+        this.storageAccount = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vsoAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -213,7 +214,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -221,7 +222,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder keyVaultId(Output<String> keyVaultId) {
@@ -237,7 +238,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -253,7 +254,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder seats(@Nullable String seats) {
-            this.seats = Output.ofNullable(seats);
+            this.seats = Codegen.ofNullable(seats);
             return this;
         }
         public Builder storageAccount(Output<StorageAccountPropertiesArgs> storageAccount) {
@@ -269,7 +270,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vsoAccountId(Output<String> vsoAccountId) {

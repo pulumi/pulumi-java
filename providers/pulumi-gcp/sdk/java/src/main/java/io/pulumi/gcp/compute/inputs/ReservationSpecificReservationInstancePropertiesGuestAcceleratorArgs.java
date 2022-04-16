@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
     @Import(name="acceleratorCount", required=true)
       private final Output<Integer> acceleratorCount;
 
-    public Output<Integer> getAcceleratorCount() {
+    public Output<Integer> acceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -36,7 +37,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
     @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
 
@@ -48,8 +49,8 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
     }
 
     private ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs() {
-        this.acceleratorCount = Output.empty();
-        this.acceleratorType = Output.empty();
+        this.acceleratorCount = Codegen.empty();
+        this.acceleratorType = Codegen.empty();
     }
 
     public static Builder builder() {

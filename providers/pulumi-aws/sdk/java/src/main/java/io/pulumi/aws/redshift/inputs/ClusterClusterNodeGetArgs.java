@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
     @Import(name="nodeRole")
       private final @Nullable Output<String> nodeRole;
 
-    public Output<String> getNodeRole() {
-        return this.nodeRole == null ? Output.empty() : this.nodeRole;
+    public Output<String> nodeRole() {
+        return this.nodeRole == null ? Codegen.empty() : this.nodeRole;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
+    public Output<String> privateIpAddress() {
+        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
     @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
-    public Output<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
+    public Output<String> publicIpAddress() {
+        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 
     public ClusterClusterNodeGetArgs(
@@ -57,9 +58,9 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ClusterClusterNodeGetArgs() {
-        this.nodeRole = Output.empty();
-        this.privateIpAddress = Output.empty();
-        this.publicIpAddress = Output.empty();
+        this.nodeRole = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
+        this.publicIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder nodeRole(@Nullable String nodeRole) {
-            this.nodeRole = Output.ofNullable(nodeRole);
+            this.nodeRole = Codegen.ofNullable(nodeRole);
             return this;
         }
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
@@ -99,7 +100,7 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Output.ofNullable(privateIpAddress);
+            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
             return this;
         }
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
@@ -107,7 +108,7 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Output.ofNullable(publicIpAddress);
+            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
             return this;
         }        public ClusterClusterNodeGetArgs build() {
             return new ClusterClusterNodeGetArgs(nodeRole, privateIpAddress, publicIpAddress);

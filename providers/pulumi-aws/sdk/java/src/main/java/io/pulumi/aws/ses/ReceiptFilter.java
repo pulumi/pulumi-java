@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.ReceiptFilterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * @return The SES receipt filter ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -53,7 +54,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * @return The IP address or address range to filter, in CIDR notation
      * 
      */
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
     /**
@@ -67,7 +68,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * @return The name of the filter
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -81,7 +82,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * @return Block or Allow
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -107,7 +108,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReceiptFilter(String name, ReceiptFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/receiptFilter:ReceiptFilter", name, args == null ? ReceiptFilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/receiptFilter:ReceiptFilter", name, args == null ? ReceiptFilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReceiptFilter(String name, Output<String> id, @Nullable ReceiptFilterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

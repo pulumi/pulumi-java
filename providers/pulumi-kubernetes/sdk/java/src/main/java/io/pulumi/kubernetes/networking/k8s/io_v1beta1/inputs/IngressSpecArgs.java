@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressBackendArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressRuleArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressTLSArgs;
@@ -29,8 +30,8 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backend")
       private final @Nullable Output<IngressBackendArgs> backend;
 
-    public Output<IngressBackendArgs> getBackend() {
-        return this.backend == null ? Output.empty() : this.backend;
+    public Output<IngressBackendArgs> backend() {
+        return this.backend == null ? Codegen.empty() : this.backend;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingressClassName")
       private final @Nullable Output<String> ingressClassName;
 
-    public Output<String> getIngressClassName() {
-        return this.ingressClassName == null ? Output.empty() : this.ingressClassName;
+    public Output<String> ingressClassName() {
+        return this.ingressClassName == null ? Codegen.empty() : this.ingressClassName;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<IngressRuleArgs>> rules;
 
-    public Output<List<IngressRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<IngressRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tls")
       private final @Nullable Output<List<IngressTLSArgs>> tls;
 
-    public Output<List<IngressTLSArgs>> getTls() {
-        return this.tls == null ? Output.empty() : this.tls;
+    public Output<List<IngressTLSArgs>> tls() {
+        return this.tls == null ? Codegen.empty() : this.tls;
     }
 
     public IngressSpecArgs(
@@ -78,10 +79,10 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressSpecArgs() {
-        this.backend = Output.empty();
-        this.ingressClassName = Output.empty();
-        this.rules = Output.empty();
-        this.tls = Output.empty();
+        this.backend = Codegen.empty();
+        this.ingressClassName = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.tls = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backend(@Nullable IngressBackendArgs backend) {
-            this.backend = Output.ofNullable(backend);
+            this.backend = Codegen.ofNullable(backend);
             return this;
         }
         public Builder ingressClassName(@Nullable Output<String> ingressClassName) {
@@ -123,7 +124,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingressClassName(@Nullable String ingressClassName) {
-            this.ingressClassName = Output.ofNullable(ingressClassName);
+            this.ingressClassName = Codegen.ofNullable(ingressClassName);
             return this;
         }
         public Builder rules(@Nullable Output<List<IngressRuleArgs>> rules) {
@@ -131,7 +132,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<IngressRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(IngressRuleArgs... rules) {
@@ -142,7 +143,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tls(@Nullable List<IngressTLSArgs> tls) {
-            this.tls = Output.ofNullable(tls);
+            this.tls = Codegen.ofNullable(tls);
             return this;
         }
         public Builder tls(IngressTLSArgs... tls) {

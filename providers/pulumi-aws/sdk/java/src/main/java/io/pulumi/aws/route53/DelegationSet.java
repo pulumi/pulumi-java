@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.DelegationSetState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Delegation Set.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * (effectively a list of NS records).
      * 
      */
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     /**
@@ -72,7 +73,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * (helpful for identifying single delegation set amongst others)
      * 
      */
-    public Output</* @Nullable */ String> getReferenceName() {
+    public Output</* @Nullable */ String> referenceName() {
         return this.referenceName;
     }
 
@@ -98,7 +99,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DelegationSet(String name, @Nullable DelegationSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/delegationSet:DelegationSet", name, args == null ? DelegationSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/delegationSet:DelegationSet", name, args == null ? DelegationSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DelegationSet(String name, Output<String> id, @Nullable DelegationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

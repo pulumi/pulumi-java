@@ -6,6 +6,7 @@ package io.pulumi.gcp.memcache;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.memcache.InstanceArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceState;
@@ -65,7 +66,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 'default' will be used.
      * 
      */
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
     /**
@@ -79,7 +80,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -93,7 +94,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Endpoint for Discovery API
      * 
      */
-    public Output<String> getDiscoveryEndpoint() {
+    public Output<String> discoveryEndpoint() {
         return this.discoveryEndpoint;
     }
     /**
@@ -107,7 +108,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A user-visible name for the instance.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -121,7 +122,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -135,7 +136,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The full version of memcached server running on this instance.
      * 
      */
-    public Output<String> getMemcacheFullVersion() {
+    public Output<String> memcacheFullVersion() {
         return this.memcacheFullVersion;
     }
     /**
@@ -149,7 +150,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Additional information about the instance state, if available.
      * 
      */
-    public Output<List<InstanceMemcacheNode>> getMemcacheNodes() {
+    public Output<List<InstanceMemcacheNode>> memcacheNodes() {
         return this.memcacheNodes;
     }
     /**
@@ -165,7 +166,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceMemcacheParameters> getMemcacheParameters() {
+    public Output</* @Nullable */ InstanceMemcacheParameters> memcacheParameters() {
         return this.memcacheParameters;
     }
     /**
@@ -187,7 +188,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `MEMCACHE_1_5`.
      * 
      */
-    public Output</* @Nullable */ String> getMemcacheVersion() {
+    public Output</* @Nullable */ String> memcacheVersion() {
         return this.memcacheVersion;
     }
     /**
@@ -201,7 +202,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The resource name of the instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -217,7 +218,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<InstanceNodeConfig> getNodeConfig() {
+    public Output<InstanceNodeConfig> nodeConfig() {
         return this.nodeConfig;
     }
     /**
@@ -231,7 +232,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Number of nodes in the memcache instance.
      * 
      */
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -247,7 +248,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -261,7 +262,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The region of the Memcache instance. If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -277,7 +278,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * provided, all zones will be used.
      * 
      */
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones;
     }
 
@@ -303,7 +304,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:memcache/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:memcache/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable InstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

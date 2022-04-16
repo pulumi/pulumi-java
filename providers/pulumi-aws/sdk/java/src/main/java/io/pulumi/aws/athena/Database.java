@@ -10,6 +10,7 @@ import io.pulumi.aws.athena.outputs.DatabaseEncryptionConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Name of s3 bucket to save the results of the query execution.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -47,7 +48,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
      * 
      */
-    public Output</* @Nullable */ DatabaseEncryptionConfiguration> getEncryptionConfiguration() {
+    public Output</* @Nullable */ DatabaseEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     /**
@@ -61,7 +62,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -75,7 +76,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Name of the database to create.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -101,7 +102,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:athena/database:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:athena/database:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Database(String name, Output<String> id, @Nullable DatabaseState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

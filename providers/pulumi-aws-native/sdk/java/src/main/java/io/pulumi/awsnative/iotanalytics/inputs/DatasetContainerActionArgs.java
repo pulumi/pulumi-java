@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetResourceConfigurationArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetVariableArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,29 +21,29 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
     @Import(name="resourceConfiguration", required=true)
       private final Output<DatasetResourceConfigurationArgs> resourceConfiguration;
 
-    public Output<DatasetResourceConfigurationArgs> getResourceConfiguration() {
+    public Output<DatasetResourceConfigurationArgs> resourceConfiguration() {
         return this.resourceConfiguration;
     }
 
     @Import(name="variables")
       private final @Nullable Output<List<DatasetVariableArgs>> variables;
 
-    public Output<List<DatasetVariableArgs>> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+    public Output<List<DatasetVariableArgs>> variables() {
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     public DatasetContainerActionArgs(
@@ -57,10 +58,10 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     }
 
     private DatasetContainerActionArgs() {
-        this.executionRoleArn = Output.empty();
-        this.image = Output.empty();
-        this.resourceConfiguration = Output.empty();
-        this.variables = Output.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.image = Codegen.empty();
+        this.resourceConfiguration = Codegen.empty();
+        this.variables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder variables(@Nullable List<DatasetVariableArgs> variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }
         public Builder variables(DatasetVariableArgs... variables) {

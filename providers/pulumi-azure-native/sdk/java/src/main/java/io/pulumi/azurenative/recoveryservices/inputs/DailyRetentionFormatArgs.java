@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DayArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class DailyRetentionFormatArgs extends io.pulumi.resources.Resource
     @Import(name="daysOfTheMonth")
       private final @Nullable Output<List<DayArgs>> daysOfTheMonth;
 
-    public Output<List<DayArgs>> getDaysOfTheMonth() {
-        return this.daysOfTheMonth == null ? Output.empty() : this.daysOfTheMonth;
+    public Output<List<DayArgs>> daysOfTheMonth() {
+        return this.daysOfTheMonth == null ? Codegen.empty() : this.daysOfTheMonth;
     }
 
     public DailyRetentionFormatArgs(@Nullable Output<List<DayArgs>> daysOfTheMonth) {
@@ -35,7 +36,7 @@ public final class DailyRetentionFormatArgs extends io.pulumi.resources.Resource
     }
 
     private DailyRetentionFormatArgs() {
-        this.daysOfTheMonth = Output.empty();
+        this.daysOfTheMonth = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DailyRetentionFormatArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder daysOfTheMonth(@Nullable List<DayArgs> daysOfTheMonth) {
-            this.daysOfTheMonth = Output.ofNullable(daysOfTheMonth);
+            this.daysOfTheMonth = Codegen.ofNullable(daysOfTheMonth);
             return this;
         }
         public Builder daysOfTheMonth(DayArgs... daysOfTheMonth) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterAADIdentityProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
     @Import(name="provider")
       private final @Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
 
-    public Output<OpenShiftManagedClusterAADIdentityProviderArgs> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public OpenShiftManagedClusterIdentityProviderArgs(
@@ -49,8 +50,8 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
     }
 
     private OpenShiftManagedClusterIdentityProviderArgs() {
-        this.name = Output.empty();
-        this.provider = Output.empty();
+        this.name = Codegen.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder provider(@Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider) {
@@ -88,7 +89,7 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
             return this;
         }
         public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderArgs provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public OpenShiftManagedClusterIdentityProviderArgs build() {
             return new OpenShiftManagedClusterIdentityProviderArgs(name, provider);

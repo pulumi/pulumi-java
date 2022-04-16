@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The immutable id of the team account which contains this project.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -56,7 +57,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The creation date of the project in ISO8601 format.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -70,7 +71,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The description of this project.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,7 +85,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The friendly name for this project.
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -98,7 +99,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The reference to git repo for this project.
      * 
      */
-    public Output</* @Nullable */ String> getGitrepo() {
+    public Output</* @Nullable */ String> gitrepo() {
         return this.gitrepo;
     }
     /**
@@ -112,7 +113,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -126,7 +127,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +141,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The immutable id of this project.
      * 
      */
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     /**
@@ -154,7 +155,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -168,7 +169,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -182,7 +183,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -196,7 +197,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The immutable id of the workspace which contains this project.
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -222,7 +223,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningexperimentation:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningexperimentation:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

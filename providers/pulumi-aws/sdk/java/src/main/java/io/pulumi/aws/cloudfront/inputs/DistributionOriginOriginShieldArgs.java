@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class DistributionOriginOriginShieldArgs extends io.pulumi.resource
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -32,7 +33,7 @@ public final class DistributionOriginOriginShieldArgs extends io.pulumi.resource
     @Import(name="originShieldRegion", required=true)
       private final Output<String> originShieldRegion;
 
-    public Output<String> getOriginShieldRegion() {
+    public Output<String> originShieldRegion() {
         return this.originShieldRegion;
     }
 
@@ -44,8 +45,8 @@ public final class DistributionOriginOriginShieldArgs extends io.pulumi.resource
     }
 
     private DistributionOriginOriginShieldArgs() {
-        this.enabled = Output.empty();
-        this.originShieldRegion = Output.empty();
+        this.enabled = Codegen.empty();
+        this.originShieldRegion = Codegen.empty();
     }
 
     public static Builder builder() {

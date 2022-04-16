@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
-    public Output<String> getIdentityClientId() {
-        return this.identityClientId == null ? Output.empty() : this.identityClientId;
+    public Output<String> identityClientId() {
+        return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyIdentifier", required=true)
       private final Output<String> keyIdentifier;
 
-    public Output<String> getKeyIdentifier() {
+    public Output<String> keyIdentifier() {
         return this.keyIdentifier;
     }
 
@@ -43,7 +44,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyVaultArmId", required=true)
       private final Output<String> keyVaultArmId;
 
-    public Output<String> getKeyVaultArmId() {
+    public Output<String> keyVaultArmId() {
         return this.keyVaultArmId;
     }
 
@@ -57,9 +58,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private KeyVaultPropertiesArgs() {
-        this.identityClientId = Output.empty();
-        this.keyIdentifier = Output.empty();
-        this.keyVaultArmId = Output.empty();
+        this.identityClientId = Codegen.empty();
+        this.keyIdentifier = Codegen.empty();
+        this.keyVaultArmId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Output.ofNullable(identityClientId);
+            this.identityClientId = Codegen.ofNullable(identityClientId);
             return this;
         }
         public Builder keyIdentifier(Output<String> keyIdentifier) {

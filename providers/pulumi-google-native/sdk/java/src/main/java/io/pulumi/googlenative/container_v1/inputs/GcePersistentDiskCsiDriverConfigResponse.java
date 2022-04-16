@@ -23,7 +23,7 @@ public final class GcePersistentDiskCsiDriverConfigResponse extends io.pulumi.re
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

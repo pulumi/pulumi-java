@@ -9,6 +9,7 @@ import io.pulumi.awsnative.imagebuilder.outputs.ImageTestsConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +32,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the image.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
-    public Output</* @Nullable */ String> getContainerRecipeArn() {
+    public Output</* @Nullable */ String> containerRecipeArn() {
         return this.containerRecipeArn;
     }
     /**
@@ -59,7 +60,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDistributionConfigurationArn() {
+    public Output</* @Nullable */ String> distributionConfigurationArn() {
         return this.distributionConfigurationArn;
     }
     /**
@@ -73,7 +74,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnhancedImageMetadataEnabled() {
+    public Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled;
     }
     /**
@@ -87,7 +88,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The AMI ID of the EC2 AMI in current region.
      * 
      */
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
     /**
@@ -101,7 +102,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      */
-    public Output</* @Nullable */ String> getImageRecipeArn() {
+    public Output</* @Nullable */ String> imageRecipeArn() {
         return this.imageRecipeArn;
     }
     /**
@@ -115,7 +116,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The image tests configuration used when creating this image.
      * 
      */
-    public Output</* @Nullable */ ImageTestsConfiguration> getImageTestsConfiguration() {
+    public Output</* @Nullable */ ImageTestsConfiguration> imageTestsConfiguration() {
         return this.imageTestsConfiguration;
     }
     /**
@@ -129,7 +130,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ String> getInfrastructureConfigurationArn() {
+    public Output</* @Nullable */ String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
     /**
@@ -143,7 +144,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The name of the image.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +158,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @return The tags associated with the image.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
 
@@ -183,7 +184,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Image(String name, @Nullable ImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:imagebuilder:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:imagebuilder:Image", name, args == null ? ImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Image(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

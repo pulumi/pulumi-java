@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketIAMBindingArgs;
 import io.pulumi.gcp.storage.inputs.BucketIAMBindingState;
@@ -73,7 +74,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -89,7 +90,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ BucketIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -103,7 +104,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -137,7 +138,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * * **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
      * 
      */
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -155,7 +156,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -181,7 +182,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketIAMBinding(String name, BucketIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/bucketIAMBinding:BucketIAMBinding", name, args == null ? BucketIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/bucketIAMBinding:BucketIAMBinding", name, args == null ? BucketIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketIAMBinding(String name, Output<String> id, @Nullable BucketIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

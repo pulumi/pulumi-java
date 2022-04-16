@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * @return List of all connections attached to this route table v2.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAttachedConnections() {
+    public Output</* @Nullable */ List<String>> attachedConnections() {
         return this.attachedConnections;
     }
     /**
@@ -56,7 +57,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -70,7 +71,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the virtual hub route table v2 resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -98,7 +99,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * @return List of all routes.
      * 
      */
-    public Output</* @Nullable */ List<VirtualHubRouteV2Response>> getRoutes() {
+    public Output</* @Nullable */ List<VirtualHubRouteV2Response>> routes() {
         return this.routes;
     }
 
@@ -124,7 +125,7 @@ public class VirtualHubRouteTableV2 extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualHubRouteTableV2(String name, VirtualHubRouteTableV2Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualHubRouteTableV2", name, args == null ? VirtualHubRouteTableV2Args.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualHubRouteTableV2", name, args == null ? VirtualHubRouteTableV2Args.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualHubRouteTableV2(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

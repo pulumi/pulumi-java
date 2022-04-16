@@ -8,6 +8,7 @@ import io.pulumi.azurenative.customerinsights.inputs.AssignmentPrincipalArgs;
 import io.pulumi.azurenative.customerinsights.inputs.ResourceSetDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignmentName")
       private final @Nullable Output<String> assignmentName;
 
-    public Output<String> getAssignmentName() {
-        return this.assignmentName == null ? Output.empty() : this.assignmentName;
+    public Output<String> assignmentName() {
+        return this.assignmentName == null ? Codegen.empty() : this.assignmentName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conflationPolicies")
       private final @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
 
-    public Output<ResourceSetDescriptionArgs> getConflationPolicies() {
-        return this.conflationPolicies == null ? Output.empty() : this.conflationPolicies;
+    public Output<ResourceSetDescriptionArgs> conflationPolicies() {
+        return this.conflationPolicies == null ? Codegen.empty() : this.conflationPolicies;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectors")
       private final @Nullable Output<ResourceSetDescriptionArgs> connectors;
 
-    public Output<ResourceSetDescriptionArgs> getConnectors() {
-        return this.connectors == null ? Output.empty() : this.connectors;
+    public Output<ResourceSetDescriptionArgs> connectors() {
+        return this.connectors == null ? Codegen.empty() : this.connectors;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<Map<String,String>> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<Map<String,String>> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -92,8 +93,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interactions")
       private final @Nullable Output<ResourceSetDescriptionArgs> interactions;
 
-    public Output<ResourceSetDescriptionArgs> getInteractions() {
-        return this.interactions == null ? Output.empty() : this.interactions;
+    public Output<ResourceSetDescriptionArgs> interactions() {
+        return this.interactions == null ? Codegen.empty() : this.interactions;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kpis")
       private final @Nullable Output<ResourceSetDescriptionArgs> kpis;
 
-    public Output<ResourceSetDescriptionArgs> getKpis() {
-        return this.kpis == null ? Output.empty() : this.kpis;
+    public Output<ResourceSetDescriptionArgs> kpis() {
+        return this.kpis == null ? Codegen.empty() : this.kpis;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="links")
       private final @Nullable Output<ResourceSetDescriptionArgs> links;
 
-    public Output<ResourceSetDescriptionArgs> getLinks() {
-        return this.links == null ? Output.empty() : this.links;
+    public Output<ResourceSetDescriptionArgs> links() {
+        return this.links == null ? Codegen.empty() : this.links;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principals", required=true)
       private final Output<List<AssignmentPrincipalArgs>> principals;
 
-    public Output<List<AssignmentPrincipalArgs>> getPrincipals() {
+    public Output<List<AssignmentPrincipalArgs>> principals() {
         return this.principals;
     }
 
@@ -136,8 +137,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profiles")
       private final @Nullable Output<ResourceSetDescriptionArgs> profiles;
 
-    public Output<ResourceSetDescriptionArgs> getProfiles() {
-        return this.profiles == null ? Output.empty() : this.profiles;
+    public Output<ResourceSetDescriptionArgs> profiles() {
+        return this.profiles == null ? Codegen.empty() : this.profiles;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationshipLinks")
       private final @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
 
-    public Output<ResourceSetDescriptionArgs> getRelationshipLinks() {
-        return this.relationshipLinks == null ? Output.empty() : this.relationshipLinks;
+    public Output<ResourceSetDescriptionArgs> relationshipLinks() {
+        return this.relationshipLinks == null ? Codegen.empty() : this.relationshipLinks;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationships")
       private final @Nullable Output<ResourceSetDescriptionArgs> relationships;
 
-    public Output<ResourceSetDescriptionArgs> getRelationships() {
-        return this.relationships == null ? Output.empty() : this.relationships;
+    public Output<ResourceSetDescriptionArgs> relationships() {
+        return this.relationships == null ? Codegen.empty() : this.relationships;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -180,7 +181,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<RoleTypes> role;
 
-    public Output<RoleTypes> getRole() {
+    public Output<RoleTypes> role() {
         return this.role;
     }
 
@@ -191,8 +192,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleAssignments")
       private final @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
 
-    public Output<ResourceSetDescriptionArgs> getRoleAssignments() {
-        return this.roleAssignments == null ? Output.empty() : this.roleAssignments;
+    public Output<ResourceSetDescriptionArgs> roleAssignments() {
+        return this.roleAssignments == null ? Codegen.empty() : this.roleAssignments;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sasPolicies")
       private final @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
 
-    public Output<ResourceSetDescriptionArgs> getSasPolicies() {
-        return this.sasPolicies == null ? Output.empty() : this.sasPolicies;
+    public Output<ResourceSetDescriptionArgs> sasPolicies() {
+        return this.sasPolicies == null ? Codegen.empty() : this.sasPolicies;
     }
 
     /**
@@ -213,8 +214,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="segments")
       private final @Nullable Output<ResourceSetDescriptionArgs> segments;
 
-    public Output<ResourceSetDescriptionArgs> getSegments() {
-        return this.segments == null ? Output.empty() : this.segments;
+    public Output<ResourceSetDescriptionArgs> segments() {
+        return this.segments == null ? Codegen.empty() : this.segments;
     }
 
     /**
@@ -224,8 +225,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="views")
       private final @Nullable Output<ResourceSetDescriptionArgs> views;
 
-    public Output<ResourceSetDescriptionArgs> getViews() {
-        return this.views == null ? Output.empty() : this.views;
+    public Output<ResourceSetDescriptionArgs> views() {
+        return this.views == null ? Codegen.empty() : this.views;
     }
 
     /**
@@ -235,8 +236,8 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="widgetTypes")
       private final @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
 
-    public Output<ResourceSetDescriptionArgs> getWidgetTypes() {
-        return this.widgetTypes == null ? Output.empty() : this.widgetTypes;
+    public Output<ResourceSetDescriptionArgs> widgetTypes() {
+        return this.widgetTypes == null ? Codegen.empty() : this.widgetTypes;
     }
 
     public RoleAssignmentArgs(
@@ -283,26 +284,26 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleAssignmentArgs() {
-        this.assignmentName = Output.empty();
-        this.conflationPolicies = Output.empty();
-        this.connectors = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.hubName = Output.empty();
-        this.interactions = Output.empty();
-        this.kpis = Output.empty();
-        this.links = Output.empty();
-        this.principals = Output.empty();
-        this.profiles = Output.empty();
-        this.relationshipLinks = Output.empty();
-        this.relationships = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.role = Output.empty();
-        this.roleAssignments = Output.empty();
-        this.sasPolicies = Output.empty();
-        this.segments = Output.empty();
-        this.views = Output.empty();
-        this.widgetTypes = Output.empty();
+        this.assignmentName = Codegen.empty();
+        this.conflationPolicies = Codegen.empty();
+        this.connectors = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.interactions = Codegen.empty();
+        this.kpis = Codegen.empty();
+        this.links = Codegen.empty();
+        this.principals = Codegen.empty();
+        this.profiles = Codegen.empty();
+        this.relationshipLinks = Codegen.empty();
+        this.relationships = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.role = Codegen.empty();
+        this.roleAssignments = Codegen.empty();
+        this.sasPolicies = Codegen.empty();
+        this.segments = Codegen.empty();
+        this.views = Codegen.empty();
+        this.widgetTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -368,7 +369,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assignmentName(@Nullable String assignmentName) {
-            this.assignmentName = Output.ofNullable(assignmentName);
+            this.assignmentName = Codegen.ofNullable(assignmentName);
             return this;
         }
         public Builder conflationPolicies(@Nullable Output<ResourceSetDescriptionArgs> conflationPolicies) {
@@ -376,7 +377,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conflationPolicies(@Nullable ResourceSetDescriptionArgs conflationPolicies) {
-            this.conflationPolicies = Output.ofNullable(conflationPolicies);
+            this.conflationPolicies = Codegen.ofNullable(conflationPolicies);
             return this;
         }
         public Builder connectors(@Nullable Output<ResourceSetDescriptionArgs> connectors) {
@@ -384,7 +385,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectors(@Nullable ResourceSetDescriptionArgs connectors) {
-            this.connectors = Output.ofNullable(connectors);
+            this.connectors = Codegen.ofNullable(connectors);
             return this;
         }
         public Builder description(@Nullable Output<Map<String,String>> description) {
@@ -392,7 +393,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -400,7 +401,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hubName(Output<String> hubName) {
@@ -416,7 +417,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interactions(@Nullable ResourceSetDescriptionArgs interactions) {
-            this.interactions = Output.ofNullable(interactions);
+            this.interactions = Codegen.ofNullable(interactions);
             return this;
         }
         public Builder kpis(@Nullable Output<ResourceSetDescriptionArgs> kpis) {
@@ -424,7 +425,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kpis(@Nullable ResourceSetDescriptionArgs kpis) {
-            this.kpis = Output.ofNullable(kpis);
+            this.kpis = Codegen.ofNullable(kpis);
             return this;
         }
         public Builder links(@Nullable Output<ResourceSetDescriptionArgs> links) {
@@ -432,7 +433,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder links(@Nullable ResourceSetDescriptionArgs links) {
-            this.links = Output.ofNullable(links);
+            this.links = Codegen.ofNullable(links);
             return this;
         }
         public Builder principals(Output<List<AssignmentPrincipalArgs>> principals) {
@@ -451,7 +452,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profiles(@Nullable ResourceSetDescriptionArgs profiles) {
-            this.profiles = Output.ofNullable(profiles);
+            this.profiles = Codegen.ofNullable(profiles);
             return this;
         }
         public Builder relationshipLinks(@Nullable Output<ResourceSetDescriptionArgs> relationshipLinks) {
@@ -459,7 +460,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relationshipLinks(@Nullable ResourceSetDescriptionArgs relationshipLinks) {
-            this.relationshipLinks = Output.ofNullable(relationshipLinks);
+            this.relationshipLinks = Codegen.ofNullable(relationshipLinks);
             return this;
         }
         public Builder relationships(@Nullable Output<ResourceSetDescriptionArgs> relationships) {
@@ -467,7 +468,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relationships(@Nullable ResourceSetDescriptionArgs relationships) {
-            this.relationships = Output.ofNullable(relationships);
+            this.relationships = Codegen.ofNullable(relationships);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -491,7 +492,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleAssignments(@Nullable ResourceSetDescriptionArgs roleAssignments) {
-            this.roleAssignments = Output.ofNullable(roleAssignments);
+            this.roleAssignments = Codegen.ofNullable(roleAssignments);
             return this;
         }
         public Builder sasPolicies(@Nullable Output<ResourceSetDescriptionArgs> sasPolicies) {
@@ -499,7 +500,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sasPolicies(@Nullable ResourceSetDescriptionArgs sasPolicies) {
-            this.sasPolicies = Output.ofNullable(sasPolicies);
+            this.sasPolicies = Codegen.ofNullable(sasPolicies);
             return this;
         }
         public Builder segments(@Nullable Output<ResourceSetDescriptionArgs> segments) {
@@ -507,7 +508,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder segments(@Nullable ResourceSetDescriptionArgs segments) {
-            this.segments = Output.ofNullable(segments);
+            this.segments = Codegen.ofNullable(segments);
             return this;
         }
         public Builder views(@Nullable Output<ResourceSetDescriptionArgs> views) {
@@ -515,7 +516,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder views(@Nullable ResourceSetDescriptionArgs views) {
-            this.views = Output.ofNullable(views);
+            this.views = Codegen.ofNullable(views);
             return this;
         }
         public Builder widgetTypes(@Nullable Output<ResourceSetDescriptionArgs> widgetTypes) {
@@ -523,7 +524,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder widgetTypes(@Nullable ResourceSetDescriptionArgs widgetTypes) {
-            this.widgetTypes = Output.ofNullable(widgetTypes);
+            this.widgetTypes = Codegen.ofNullable(widgetTypes);
             return this;
         }        public RoleAssignmentArgs build() {
             return new RoleAssignmentArgs(assignmentName, conflationPolicies, connectors, description, displayName, hubName, interactions, kpis, links, principals, profiles, relationshipLinks, relationships, resourceGroupName, role, roleAssignments, sasPolicies, segments, views, widgetTypes);

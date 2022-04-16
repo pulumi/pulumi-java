@@ -24,7 +24,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
     @Import(name="index", required=true)
       private final Integer index;
 
-    public Integer getIndex() {
+    public Integer index() {
         return this.index;
     }
 

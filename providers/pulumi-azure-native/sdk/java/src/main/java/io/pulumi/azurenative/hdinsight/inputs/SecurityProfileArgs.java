@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.enums.DirectoryType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="aaddsResourceId")
       private final @Nullable Output<String> aaddsResourceId;
 
-    public Output<String> getAaddsResourceId() {
-        return this.aaddsResourceId == null ? Output.empty() : this.aaddsResourceId;
+    public Output<String> aaddsResourceId() {
+        return this.aaddsResourceId == null ? Codegen.empty() : this.aaddsResourceId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterUsersGroupDNs")
       private final @Nullable Output<List<String>> clusterUsersGroupDNs;
 
-    public Output<List<String>> getClusterUsersGroupDNs() {
-        return this.clusterUsersGroupDNs == null ? Output.empty() : this.clusterUsersGroupDNs;
+    public Output<List<String>> clusterUsersGroupDNs() {
+        return this.clusterUsersGroupDNs == null ? Codegen.empty() : this.clusterUsersGroupDNs;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="directoryType")
       private final @Nullable Output<DirectoryType> directoryType;
 
-    public Output<DirectoryType> getDirectoryType() {
-        return this.directoryType == null ? Output.empty() : this.directoryType;
+    public Output<DirectoryType> directoryType() {
+        return this.directoryType == null ? Codegen.empty() : this.directoryType;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+    public Output<String> domain() {
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="domainUserPassword")
       private final @Nullable Output<String> domainUserPassword;
 
-    public Output<String> getDomainUserPassword() {
-        return this.domainUserPassword == null ? Output.empty() : this.domainUserPassword;
+    public Output<String> domainUserPassword() {
+        return this.domainUserPassword == null ? Codegen.empty() : this.domainUserPassword;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="domainUsername")
       private final @Nullable Output<String> domainUsername;
 
-    public Output<String> getDomainUsername() {
-        return this.domainUsername == null ? Output.empty() : this.domainUsername;
+    public Output<String> domainUsername() {
+        return this.domainUsername == null ? Codegen.empty() : this.domainUsername;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ldapsUrls")
       private final @Nullable Output<List<String>> ldapsUrls;
 
-    public Output<List<String>> getLdapsUrls() {
-        return this.ldapsUrls == null ? Output.empty() : this.ldapsUrls;
+    public Output<List<String>> ldapsUrls() {
+        return this.ldapsUrls == null ? Codegen.empty() : this.ldapsUrls;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="msiResourceId")
       private final @Nullable Output<String> msiResourceId;
 
-    public Output<String> getMsiResourceId() {
-        return this.msiResourceId == null ? Output.empty() : this.msiResourceId;
+    public Output<String> msiResourceId() {
+        return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="organizationalUnitDN")
       private final @Nullable Output<String> organizationalUnitDN;
 
-    public Output<String> getOrganizationalUnitDN() {
-        return this.organizationalUnitDN == null ? Output.empty() : this.organizationalUnitDN;
+    public Output<String> organizationalUnitDN() {
+        return this.organizationalUnitDN == null ? Codegen.empty() : this.organizationalUnitDN;
     }
 
     public SecurityProfileArgs(
@@ -141,15 +142,15 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityProfileArgs() {
-        this.aaddsResourceId = Output.empty();
-        this.clusterUsersGroupDNs = Output.empty();
-        this.directoryType = Output.empty();
-        this.domain = Output.empty();
-        this.domainUserPassword = Output.empty();
-        this.domainUsername = Output.empty();
-        this.ldapsUrls = Output.empty();
-        this.msiResourceId = Output.empty();
-        this.organizationalUnitDN = Output.empty();
+        this.aaddsResourceId = Codegen.empty();
+        this.clusterUsersGroupDNs = Codegen.empty();
+        this.directoryType = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.domainUserPassword = Codegen.empty();
+        this.domainUsername = Codegen.empty();
+        this.ldapsUrls = Codegen.empty();
+        this.msiResourceId = Codegen.empty();
+        this.organizationalUnitDN = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
-            this.aaddsResourceId = Output.ofNullable(aaddsResourceId);
+            this.aaddsResourceId = Codegen.ofNullable(aaddsResourceId);
             return this;
         }
         public Builder clusterUsersGroupDNs(@Nullable Output<List<String>> clusterUsersGroupDNs) {
@@ -201,7 +202,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
-            this.clusterUsersGroupDNs = Output.ofNullable(clusterUsersGroupDNs);
+            this.clusterUsersGroupDNs = Codegen.ofNullable(clusterUsersGroupDNs);
             return this;
         }
         public Builder clusterUsersGroupDNs(String... clusterUsersGroupDNs) {
@@ -212,7 +213,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder directoryType(@Nullable DirectoryType directoryType) {
-            this.directoryType = Output.ofNullable(directoryType);
+            this.directoryType = Codegen.ofNullable(directoryType);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -220,7 +221,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder domainUserPassword(@Nullable Output<String> domainUserPassword) {
@@ -228,7 +229,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder domainUserPassword(@Nullable String domainUserPassword) {
-            this.domainUserPassword = Output.ofNullable(domainUserPassword);
+            this.domainUserPassword = Codegen.ofNullable(domainUserPassword);
             return this;
         }
         public Builder domainUsername(@Nullable Output<String> domainUsername) {
@@ -236,7 +237,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder domainUsername(@Nullable String domainUsername) {
-            this.domainUsername = Output.ofNullable(domainUsername);
+            this.domainUsername = Codegen.ofNullable(domainUsername);
             return this;
         }
         public Builder ldapsUrls(@Nullable Output<List<String>> ldapsUrls) {
@@ -244,7 +245,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
-            this.ldapsUrls = Output.ofNullable(ldapsUrls);
+            this.ldapsUrls = Codegen.ofNullable(ldapsUrls);
             return this;
         }
         public Builder ldapsUrls(String... ldapsUrls) {
@@ -255,7 +256,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = Output.ofNullable(msiResourceId);
+            this.msiResourceId = Codegen.ofNullable(msiResourceId);
             return this;
         }
         public Builder organizationalUnitDN(@Nullable Output<String> organizationalUnitDN) {
@@ -263,7 +264,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
-            this.organizationalUnitDN = Output.ofNullable(organizationalUnitDN);
+            this.organizationalUnitDN = Codegen.ofNullable(organizationalUnitDN);
             return this;
         }        public SecurityProfileArgs build() {
             return new SecurityProfileArgs(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);

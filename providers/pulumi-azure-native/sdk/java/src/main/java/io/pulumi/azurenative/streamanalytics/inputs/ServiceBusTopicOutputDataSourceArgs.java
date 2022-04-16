@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     @Import(name="propertyColumns")
       private final @Nullable Output<List<String>> propertyColumns;
 
-    public Output<List<String>> getPropertyColumns() {
-        return this.propertyColumns == null ? Output.empty() : this.propertyColumns;
+    public Output<List<String>> propertyColumns() {
+        return this.propertyColumns == null ? Codegen.empty() : this.propertyColumns;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
-    public Output<String> getServiceBusNamespace() {
-        return this.serviceBusNamespace == null ? Output.empty() : this.serviceBusNamespace;
+    public Output<String> serviceBusNamespace() {
+        return this.serviceBusNamespace == null ? Codegen.empty() : this.serviceBusNamespace;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Output<String> getSharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Output.empty() : this.sharedAccessPolicyKey;
+    public Output<String> sharedAccessPolicyKey() {
+        return this.sharedAccessPolicyKey == null ? Codegen.empty() : this.sharedAccessPolicyKey;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Output<String> getSharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Output.empty() : this.sharedAccessPolicyName;
+    public Output<String> sharedAccessPolicyName() {
+        return this.sharedAccessPolicyName == null ? Codegen.empty() : this.sharedAccessPolicyName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     @Import(name="topicName")
       private final @Nullable Output<String> topicName;
 
-    public Output<String> getTopicName() {
-        return this.topicName == null ? Output.empty() : this.topicName;
+    public Output<String> topicName() {
+        return this.topicName == null ? Codegen.empty() : this.topicName;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -102,12 +103,12 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
     }
 
     private ServiceBusTopicOutputDataSourceArgs() {
-        this.propertyColumns = Output.empty();
-        this.serviceBusNamespace = Output.empty();
-        this.sharedAccessPolicyKey = Output.empty();
-        this.sharedAccessPolicyName = Output.empty();
-        this.topicName = Output.empty();
-        this.type = Output.empty();
+        this.propertyColumns = Codegen.empty();
+        this.serviceBusNamespace = Codegen.empty();
+        this.sharedAccessPolicyKey = Codegen.empty();
+        this.sharedAccessPolicyName = Codegen.empty();
+        this.topicName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder propertyColumns(@Nullable List<String> propertyColumns) {
-            this.propertyColumns = Output.ofNullable(propertyColumns);
+            this.propertyColumns = Codegen.ofNullable(propertyColumns);
             return this;
         }
         public Builder propertyColumns(String... propertyColumns) {
@@ -156,7 +157,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
+            this.serviceBusNamespace = Codegen.ofNullable(serviceBusNamespace);
             return this;
         }
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
@@ -164,7 +165,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
+            this.sharedAccessPolicyKey = Codegen.ofNullable(sharedAccessPolicyKey);
             return this;
         }
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
@@ -172,7 +173,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
+            this.sharedAccessPolicyName = Codegen.ofNullable(sharedAccessPolicyName);
             return this;
         }
         public Builder topicName(@Nullable Output<String> topicName) {
@@ -180,7 +181,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder topicName(@Nullable String topicName) {
-            this.topicName = Output.ofNullable(topicName);
+            this.topicName = Codegen.ofNullable(topicName);
             return this;
         }
         public Builder type(Output<String> type) {

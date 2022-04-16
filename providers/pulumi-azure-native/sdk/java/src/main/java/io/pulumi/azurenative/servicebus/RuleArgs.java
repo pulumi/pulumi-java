@@ -9,6 +9,7 @@ import io.pulumi.azurenative.servicebus.inputs.CorrelationFilterArgs;
 import io.pulumi.azurenative.servicebus.inputs.SqlFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<ActionArgs> action;
 
-    public Output<ActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<ActionArgs> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="correlationFilter")
       private final @Nullable Output<CorrelationFilterArgs> correlationFilter;
 
-    public Output<CorrelationFilterArgs> getCorrelationFilter() {
-        return this.correlationFilter == null ? Output.empty() : this.correlationFilter;
+    public Output<CorrelationFilterArgs> correlationFilter() {
+        return this.correlationFilter == null ? Codegen.empty() : this.correlationFilter;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterType")
       private final @Nullable Output<FilterType> filterType;
 
-    public Output<FilterType> getFilterType() {
-        return this.filterType == null ? Output.empty() : this.filterType;
+    public Output<FilterType> filterType() {
+        return this.filterType == null ? Codegen.empty() : this.filterType;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -69,7 +70,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,8 +81,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlFilter")
       private final @Nullable Output<SqlFilterArgs> sqlFilter;
 
-    public Output<SqlFilterArgs> getSqlFilter() {
-        return this.sqlFilter == null ? Output.empty() : this.sqlFilter;
+    public Output<SqlFilterArgs> sqlFilter() {
+        return this.sqlFilter == null ? Codegen.empty() : this.sqlFilter;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionName", required=true)
       private final Output<String> subscriptionName;
 
-    public Output<String> getSubscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
 
@@ -113,7 +114,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 
@@ -139,15 +140,15 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleArgs() {
-        this.action = Output.empty();
-        this.correlationFilter = Output.empty();
-        this.filterType = Output.empty();
-        this.namespaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.sqlFilter = Output.empty();
-        this.subscriptionName = Output.empty();
-        this.topicName = Output.empty();
+        this.action = Codegen.empty();
+        this.correlationFilter = Codegen.empty();
+        this.filterType = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.sqlFilter = Codegen.empty();
+        this.subscriptionName = Codegen.empty();
+        this.topicName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable ActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder correlationFilter(@Nullable Output<CorrelationFilterArgs> correlationFilter) {
@@ -199,7 +200,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder correlationFilter(@Nullable CorrelationFilterArgs correlationFilter) {
-            this.correlationFilter = Output.ofNullable(correlationFilter);
+            this.correlationFilter = Codegen.ofNullable(correlationFilter);
             return this;
         }
         public Builder filterType(@Nullable Output<FilterType> filterType) {
@@ -207,7 +208,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterType(@Nullable FilterType filterType) {
-            this.filterType = Output.ofNullable(filterType);
+            this.filterType = Codegen.ofNullable(filterType);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {
@@ -231,7 +232,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder sqlFilter(@Nullable Output<SqlFilterArgs> sqlFilter) {
@@ -239,7 +240,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlFilter(@Nullable SqlFilterArgs sqlFilter) {
-            this.sqlFilter = Output.ofNullable(sqlFilter);
+            this.sqlFilter = Codegen.ofNullable(sqlFilter);
             return this;
         }
         public Builder subscriptionName(Output<String> subscriptionName) {

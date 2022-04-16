@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return The friendly string identifier of the creator of the NotebookProxy resource.
      * 
      */
-    public Output</* @Nullable */ String> getHostname() {
+    public Output</* @Nullable */ String> hostname() {
         return this.hostname;
     }
     /**
@@ -56,7 +57,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return The public DNS name
      * 
      */
-    public Output</* @Nullable */ String> getPublicDns() {
+    public Output</* @Nullable */ String> publicDns() {
         return this.publicDns;
     }
     /**
@@ -84,7 +85,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return Allow public network access on a V-Net locked notebook resource
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -98,7 +99,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return The region of the NotebookProxy resource.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -112,7 +113,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return The unique identifier (a GUID) generated for every resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -126,7 +127,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return The alternate application ID used for auth token request in the data plane
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryAppId() {
+    public Output</* @Nullable */ String> secondaryAppId() {
         return this.secondaryAppId;
     }
     /**
@@ -140,7 +141,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return System data for notebook resource
      * 
      */
-    public Output</* @Nullable */ NotebookResourceSystemDataResponse> getSystemData() {
+    public Output</* @Nullable */ NotebookResourceSystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -154,7 +155,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -180,7 +181,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotebookProxy(String name, NotebookProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:notebooks:NotebookProxy", name, args == null ? NotebookProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:notebooks:NotebookProxy", name, args == null ? NotebookProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotebookProxy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

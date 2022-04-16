@@ -7,6 +7,7 @@ import io.pulumi.azurenative.changeanalysis.inputs.ConfigurationProfileResourceP
 import io.pulumi.azurenative.changeanalysis.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ResourceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
-    public Output<String> getProfileName() {
-        return this.profileName == null ? Output.empty() : this.profileName;
+    public Output<String> profileName() {
+        return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="properties")
       private final @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;
 
-    public Output<ConfigurationProfileResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ConfigurationProfileResourcePropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public ConfigurationProfileArgs(
@@ -72,10 +73,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     }
 
     private ConfigurationProfileArgs() {
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.profileName = Output.empty();
-        this.properties = Output.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -117,7 +118,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder profileName(@Nullable Output<String> profileName) {
@@ -125,7 +126,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Output.ofNullable(profileName);
+            this.profileName = Codegen.ofNullable(profileName);
             return this;
         }
         public Builder properties(@Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties) {
@@ -133,7 +134,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder properties(@Nullable ConfigurationProfileResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public ConfigurationProfileArgs build() {
             return new ConfigurationProfileArgs(identity, location, profileName, properties);

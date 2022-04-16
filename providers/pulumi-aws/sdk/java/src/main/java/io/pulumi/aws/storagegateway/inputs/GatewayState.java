@@ -7,6 +7,7 @@ import io.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceGetArgs
 import io.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="activationKey")
       private final @Nullable Output<String> activationKey;
 
-    public Output<String> getActivationKey() {
-        return this.activationKey == null ? Output.empty() : this.activationKey;
+    public Output<String> activationKey() {
+        return this.activationKey == null ? Codegen.empty() : this.activationKey;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="averageDownloadRateLimitInBitsPerSec")
       private final @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
 
-    public Output<Integer> getAverageDownloadRateLimitInBitsPerSec() {
-        return this.averageDownloadRateLimitInBitsPerSec == null ? Output.empty() : this.averageDownloadRateLimitInBitsPerSec;
+    public Output<Integer> averageDownloadRateLimitInBitsPerSec() {
+        return this.averageDownloadRateLimitInBitsPerSec == null ? Codegen.empty() : this.averageDownloadRateLimitInBitsPerSec;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="averageUploadRateLimitInBitsPerSec")
       private final @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
 
-    public Output<Integer> getAverageUploadRateLimitInBitsPerSec() {
-        return this.averageUploadRateLimitInBitsPerSec == null ? Output.empty() : this.averageUploadRateLimitInBitsPerSec;
+    public Output<Integer> averageUploadRateLimitInBitsPerSec() {
+        return this.averageUploadRateLimitInBitsPerSec == null ? Codegen.empty() : this.averageUploadRateLimitInBitsPerSec;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn == null ? Output.empty() : this.cloudwatchLogGroupArn;
+    public Output<String> cloudwatchLogGroupArn() {
+        return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ec2InstanceId")
       private final @Nullable Output<String> ec2InstanceId;
 
-    public Output<String> getEc2InstanceId() {
-        return this.ec2InstanceId == null ? Output.empty() : this.ec2InstanceId;
+    public Output<String> ec2InstanceId() {
+        return this.ec2InstanceId == null ? Codegen.empty() : this.ec2InstanceId;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointType")
       private final @Nullable Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
-        return this.endpointType == null ? Output.empty() : this.endpointType;
+    public Output<String> endpointType() {
+        return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
-        return this.gatewayId == null ? Output.empty() : this.gatewayId;
+    public Output<String> gatewayId() {
+        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayIpAddress")
       private final @Nullable Output<String> gatewayIpAddress;
 
-    public Output<String> getGatewayIpAddress() {
-        return this.gatewayIpAddress == null ? Output.empty() : this.gatewayIpAddress;
+    public Output<String> gatewayIpAddress() {
+        return this.gatewayIpAddress == null ? Codegen.empty() : this.gatewayIpAddress;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
-        return this.gatewayName == null ? Output.empty() : this.gatewayName;
+    public Output<String> gatewayName() {
+        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayNetworkInterfaces")
       private final @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
 
-    public Output<List<GatewayGatewayNetworkInterfaceGetArgs>> getGatewayNetworkInterfaces() {
-        return this.gatewayNetworkInterfaces == null ? Output.empty() : this.gatewayNetworkInterfaces;
+    public Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces() {
+        return this.gatewayNetworkInterfaces == null ? Codegen.empty() : this.gatewayNetworkInterfaces;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayTimezone")
       private final @Nullable Output<String> gatewayTimezone;
 
-    public Output<String> getGatewayTimezone() {
-        return this.gatewayTimezone == null ? Output.empty() : this.gatewayTimezone;
+    public Output<String> gatewayTimezone() {
+        return this.gatewayTimezone == null ? Codegen.empty() : this.gatewayTimezone;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayType")
       private final @Nullable Output<String> gatewayType;
 
-    public Output<String> getGatewayType() {
-        return this.gatewayType == null ? Output.empty() : this.gatewayType;
+    public Output<String> gatewayType() {
+        return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayVpcEndpoint")
       private final @Nullable Output<String> gatewayVpcEndpoint;
 
-    public Output<String> getGatewayVpcEndpoint() {
-        return this.gatewayVpcEndpoint == null ? Output.empty() : this.gatewayVpcEndpoint;
+    public Output<String> gatewayVpcEndpoint() {
+        return this.gatewayVpcEndpoint == null ? Codegen.empty() : this.gatewayVpcEndpoint;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostEnvironment")
       private final @Nullable Output<String> hostEnvironment;
 
-    public Output<String> getHostEnvironment() {
-        return this.hostEnvironment == null ? Output.empty() : this.hostEnvironment;
+    public Output<String> hostEnvironment() {
+        return this.hostEnvironment == null ? Codegen.empty() : this.hostEnvironment;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mediumChangerType")
       private final @Nullable Output<String> mediumChangerType;
 
-    public Output<String> getMediumChangerType() {
-        return this.mediumChangerType == null ? Output.empty() : this.mediumChangerType;
+    public Output<String> mediumChangerType() {
+        return this.mediumChangerType == null ? Codegen.empty() : this.mediumChangerType;
     }
 
     /**
@@ -203,8 +204,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="smbActiveDirectorySettings")
       private final @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
 
-    public Output<GatewaySmbActiveDirectorySettingsGetArgs> getSmbActiveDirectorySettings() {
-        return this.smbActiveDirectorySettings == null ? Output.empty() : this.smbActiveDirectorySettings;
+    public Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings() {
+        return this.smbActiveDirectorySettings == null ? Codegen.empty() : this.smbActiveDirectorySettings;
     }
 
     /**
@@ -214,8 +215,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="smbFileShareVisibility")
       private final @Nullable Output<Boolean> smbFileShareVisibility;
 
-    public Output<Boolean> getSmbFileShareVisibility() {
-        return this.smbFileShareVisibility == null ? Output.empty() : this.smbFileShareVisibility;
+    public Output<Boolean> smbFileShareVisibility() {
+        return this.smbFileShareVisibility == null ? Codegen.empty() : this.smbFileShareVisibility;
     }
 
     /**
@@ -225,8 +226,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="smbGuestPassword")
       private final @Nullable Output<String> smbGuestPassword;
 
-    public Output<String> getSmbGuestPassword() {
-        return this.smbGuestPassword == null ? Output.empty() : this.smbGuestPassword;
+    public Output<String> smbGuestPassword() {
+        return this.smbGuestPassword == null ? Codegen.empty() : this.smbGuestPassword;
     }
 
     /**
@@ -236,8 +237,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="smbSecurityStrategy")
       private final @Nullable Output<String> smbSecurityStrategy;
 
-    public Output<String> getSmbSecurityStrategy() {
-        return this.smbSecurityStrategy == null ? Output.empty() : this.smbSecurityStrategy;
+    public Output<String> smbSecurityStrategy() {
+        return this.smbSecurityStrategy == null ? Codegen.empty() : this.smbSecurityStrategy;
     }
 
     /**
@@ -247,8 +248,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -258,8 +259,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -269,8 +270,8 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tapeDriveType")
       private final @Nullable Output<String> tapeDriveType;
 
-    public Output<String> getTapeDriveType() {
-        return this.tapeDriveType == null ? Output.empty() : this.tapeDriveType;
+    public Output<String> tapeDriveType() {
+        return this.tapeDriveType == null ? Codegen.empty() : this.tapeDriveType;
     }
 
     public GatewayState(
@@ -323,29 +324,29 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayState() {
-        this.activationKey = Output.empty();
-        this.arn = Output.empty();
-        this.averageDownloadRateLimitInBitsPerSec = Output.empty();
-        this.averageUploadRateLimitInBitsPerSec = Output.empty();
-        this.cloudwatchLogGroupArn = Output.empty();
-        this.ec2InstanceId = Output.empty();
-        this.endpointType = Output.empty();
-        this.gatewayId = Output.empty();
-        this.gatewayIpAddress = Output.empty();
-        this.gatewayName = Output.empty();
-        this.gatewayNetworkInterfaces = Output.empty();
-        this.gatewayTimezone = Output.empty();
-        this.gatewayType = Output.empty();
-        this.gatewayVpcEndpoint = Output.empty();
-        this.hostEnvironment = Output.empty();
-        this.mediumChangerType = Output.empty();
-        this.smbActiveDirectorySettings = Output.empty();
-        this.smbFileShareVisibility = Output.empty();
-        this.smbGuestPassword = Output.empty();
-        this.smbSecurityStrategy = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.tapeDriveType = Output.empty();
+        this.activationKey = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.averageDownloadRateLimitInBitsPerSec = Codegen.empty();
+        this.averageUploadRateLimitInBitsPerSec = Codegen.empty();
+        this.cloudwatchLogGroupArn = Codegen.empty();
+        this.ec2InstanceId = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.gatewayId = Codegen.empty();
+        this.gatewayIpAddress = Codegen.empty();
+        this.gatewayName = Codegen.empty();
+        this.gatewayNetworkInterfaces = Codegen.empty();
+        this.gatewayTimezone = Codegen.empty();
+        this.gatewayType = Codegen.empty();
+        this.gatewayVpcEndpoint = Codegen.empty();
+        this.hostEnvironment = Codegen.empty();
+        this.mediumChangerType = Codegen.empty();
+        this.smbActiveDirectorySettings = Codegen.empty();
+        this.smbFileShareVisibility = Codegen.empty();
+        this.smbGuestPassword = Codegen.empty();
+        this.smbSecurityStrategy = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.tapeDriveType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -417,7 +418,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activationKey(@Nullable String activationKey) {
-            this.activationKey = Output.ofNullable(activationKey);
+            this.activationKey = Codegen.ofNullable(activationKey);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -425,7 +426,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec) {
@@ -433,7 +434,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Integer averageDownloadRateLimitInBitsPerSec) {
-            this.averageDownloadRateLimitInBitsPerSec = Output.ofNullable(averageDownloadRateLimitInBitsPerSec);
+            this.averageDownloadRateLimitInBitsPerSec = Codegen.ofNullable(averageDownloadRateLimitInBitsPerSec);
             return this;
         }
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Output<Integer> averageUploadRateLimitInBitsPerSec) {
@@ -441,7 +442,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Integer averageUploadRateLimitInBitsPerSec) {
-            this.averageUploadRateLimitInBitsPerSec = Output.ofNullable(averageUploadRateLimitInBitsPerSec);
+            this.averageUploadRateLimitInBitsPerSec = Codegen.ofNullable(averageUploadRateLimitInBitsPerSec);
             return this;
         }
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
@@ -449,7 +450,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
+            this.cloudwatchLogGroupArn = Codegen.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
         public Builder ec2InstanceId(@Nullable Output<String> ec2InstanceId) {
@@ -457,7 +458,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ec2InstanceId(@Nullable String ec2InstanceId) {
-            this.ec2InstanceId = Output.ofNullable(ec2InstanceId);
+            this.ec2InstanceId = Codegen.ofNullable(ec2InstanceId);
             return this;
         }
         public Builder endpointType(@Nullable Output<String> endpointType) {
@@ -465,7 +466,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = Output.ofNullable(endpointType);
+            this.endpointType = Codegen.ofNullable(endpointType);
             return this;
         }
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
@@ -473,7 +474,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Output.ofNullable(gatewayId);
+            this.gatewayId = Codegen.ofNullable(gatewayId);
             return this;
         }
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
@@ -481,7 +482,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
-            this.gatewayIpAddress = Output.ofNullable(gatewayIpAddress);
+            this.gatewayIpAddress = Codegen.ofNullable(gatewayIpAddress);
             return this;
         }
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
@@ -489,7 +490,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Output.ofNullable(gatewayName);
+            this.gatewayName = Codegen.ofNullable(gatewayName);
             return this;
         }
         public Builder gatewayNetworkInterfaces(@Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces) {
@@ -497,7 +498,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayNetworkInterfaces(@Nullable List<GatewayGatewayNetworkInterfaceGetArgs> gatewayNetworkInterfaces) {
-            this.gatewayNetworkInterfaces = Output.ofNullable(gatewayNetworkInterfaces);
+            this.gatewayNetworkInterfaces = Codegen.ofNullable(gatewayNetworkInterfaces);
             return this;
         }
         public Builder gatewayNetworkInterfaces(GatewayGatewayNetworkInterfaceGetArgs... gatewayNetworkInterfaces) {
@@ -508,7 +509,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayTimezone(@Nullable String gatewayTimezone) {
-            this.gatewayTimezone = Output.ofNullable(gatewayTimezone);
+            this.gatewayTimezone = Codegen.ofNullable(gatewayTimezone);
             return this;
         }
         public Builder gatewayType(@Nullable Output<String> gatewayType) {
@@ -516,7 +517,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayType(@Nullable String gatewayType) {
-            this.gatewayType = Output.ofNullable(gatewayType);
+            this.gatewayType = Codegen.ofNullable(gatewayType);
             return this;
         }
         public Builder gatewayVpcEndpoint(@Nullable Output<String> gatewayVpcEndpoint) {
@@ -524,7 +525,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayVpcEndpoint(@Nullable String gatewayVpcEndpoint) {
-            this.gatewayVpcEndpoint = Output.ofNullable(gatewayVpcEndpoint);
+            this.gatewayVpcEndpoint = Codegen.ofNullable(gatewayVpcEndpoint);
             return this;
         }
         public Builder hostEnvironment(@Nullable Output<String> hostEnvironment) {
@@ -532,7 +533,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostEnvironment(@Nullable String hostEnvironment) {
-            this.hostEnvironment = Output.ofNullable(hostEnvironment);
+            this.hostEnvironment = Codegen.ofNullable(hostEnvironment);
             return this;
         }
         public Builder mediumChangerType(@Nullable Output<String> mediumChangerType) {
@@ -540,7 +541,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mediumChangerType(@Nullable String mediumChangerType) {
-            this.mediumChangerType = Output.ofNullable(mediumChangerType);
+            this.mediumChangerType = Codegen.ofNullable(mediumChangerType);
             return this;
         }
         public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings) {
@@ -548,7 +549,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smbActiveDirectorySettings(@Nullable GatewaySmbActiveDirectorySettingsGetArgs smbActiveDirectorySettings) {
-            this.smbActiveDirectorySettings = Output.ofNullable(smbActiveDirectorySettings);
+            this.smbActiveDirectorySettings = Codegen.ofNullable(smbActiveDirectorySettings);
             return this;
         }
         public Builder smbFileShareVisibility(@Nullable Output<Boolean> smbFileShareVisibility) {
@@ -556,7 +557,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smbFileShareVisibility(@Nullable Boolean smbFileShareVisibility) {
-            this.smbFileShareVisibility = Output.ofNullable(smbFileShareVisibility);
+            this.smbFileShareVisibility = Codegen.ofNullable(smbFileShareVisibility);
             return this;
         }
         public Builder smbGuestPassword(@Nullable Output<String> smbGuestPassword) {
@@ -564,7 +565,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smbGuestPassword(@Nullable String smbGuestPassword) {
-            this.smbGuestPassword = Output.ofNullable(smbGuestPassword);
+            this.smbGuestPassword = Codegen.ofNullable(smbGuestPassword);
             return this;
         }
         public Builder smbSecurityStrategy(@Nullable Output<String> smbSecurityStrategy) {
@@ -572,7 +573,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smbSecurityStrategy(@Nullable String smbSecurityStrategy) {
-            this.smbSecurityStrategy = Output.ofNullable(smbSecurityStrategy);
+            this.smbSecurityStrategy = Codegen.ofNullable(smbSecurityStrategy);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -580,7 +581,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -588,7 +589,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder tapeDriveType(@Nullable Output<String> tapeDriveType) {
@@ -596,7 +597,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tapeDriveType(@Nullable String tapeDriveType) {
-            this.tapeDriveType = Output.ofNullable(tapeDriveType);
+            this.tapeDriveType = Codegen.ofNullable(tapeDriveType);
             return this;
         }        public GatewayState build() {
             return new GatewayState(activationKey, arn, averageDownloadRateLimitInBitsPerSec, averageUploadRateLimitInBitsPerSec, cloudwatchLogGroupArn, ec2InstanceId, endpointType, gatewayId, gatewayIpAddress, gatewayName, gatewayNetworkInterfaces, gatewayTimezone, gatewayType, gatewayVpcEndpoint, hostEnvironment, mediumChangerType, smbActiveDirectorySettings, smbFileShareVisibility, smbGuestPassword, smbSecurityStrategy, tags, tagsAll, tapeDriveType);

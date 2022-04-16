@@ -7,6 +7,7 @@ import io.pulumi.aws.transfer.inputs.UserHomeDirectoryMappingGetArgs;
 import io.pulumi.aws.transfer.inputs.UserPosixProfileGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectory")
       private final @Nullable Output<String> homeDirectory;
 
-    public Output<String> getHomeDirectory() {
-        return this.homeDirectory == null ? Output.empty() : this.homeDirectory;
+    public Output<String> homeDirectory() {
+        return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryMappings")
       private final @Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
 
-    public Output<List<UserHomeDirectoryMappingGetArgs>> getHomeDirectoryMappings() {
-        return this.homeDirectoryMappings == null ? Output.empty() : this.homeDirectoryMappings;
+    public Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings() {
+        return this.homeDirectoryMappings == null ? Codegen.empty() : this.homeDirectoryMappings;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryType")
       private final @Nullable Output<String> homeDirectoryType;
 
-    public Output<String> getHomeDirectoryType() {
-        return this.homeDirectoryType == null ? Output.empty() : this.homeDirectoryType;
+    public Output<String> homeDirectoryType() {
+        return this.homeDirectoryType == null ? Codegen.empty() : this.homeDirectoryType;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixProfile")
       private final @Nullable Output<UserPosixProfileGetArgs> posixProfile;
 
-    public Output<UserPosixProfileGetArgs> getPosixProfile() {
-        return this.posixProfile == null ? Output.empty() : this.posixProfile;
+    public Output<UserPosixProfileGetArgs> posixProfile() {
+        return this.posixProfile == null ? Codegen.empty() : this.posixProfile;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverId")
       private final @Nullable Output<String> serverId;
 
-    public Output<String> getServerId() {
-        return this.serverId == null ? Output.empty() : this.serverId;
+    public Output<String> serverId() {
+        return this.serverId == null ? Codegen.empty() : this.serverId;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public UserState(
@@ -165,17 +166,17 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.arn = Output.empty();
-        this.homeDirectory = Output.empty();
-        this.homeDirectoryMappings = Output.empty();
-        this.homeDirectoryType = Output.empty();
-        this.policy = Output.empty();
-        this.posixProfile = Output.empty();
-        this.role = Output.empty();
-        this.serverId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userName = Output.empty();
+        this.arn = Codegen.empty();
+        this.homeDirectory = Codegen.empty();
+        this.homeDirectoryMappings = Codegen.empty();
+        this.homeDirectoryType = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.posixProfile = Codegen.empty();
+        this.role = Codegen.empty();
+        this.serverId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
@@ -231,7 +232,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Output.ofNullable(homeDirectory);
+            this.homeDirectory = Codegen.ofNullable(homeDirectory);
             return this;
         }
         public Builder homeDirectoryMappings(@Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
@@ -239,7 +240,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder homeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
-            this.homeDirectoryMappings = Output.ofNullable(homeDirectoryMappings);
+            this.homeDirectoryMappings = Codegen.ofNullable(homeDirectoryMappings);
             return this;
         }
         public Builder homeDirectoryMappings(UserHomeDirectoryMappingGetArgs... homeDirectoryMappings) {
@@ -250,7 +251,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
-            this.homeDirectoryType = Output.ofNullable(homeDirectoryType);
+            this.homeDirectoryType = Codegen.ofNullable(homeDirectoryType);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -258,7 +259,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder posixProfile(@Nullable Output<UserPosixProfileGetArgs> posixProfile) {
@@ -266,7 +267,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder posixProfile(@Nullable UserPosixProfileGetArgs posixProfile) {
-            this.posixProfile = Output.ofNullable(posixProfile);
+            this.posixProfile = Codegen.ofNullable(posixProfile);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -274,7 +275,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder serverId(@Nullable Output<String> serverId) {
@@ -282,7 +283,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverId(@Nullable String serverId) {
-            this.serverId = Output.ofNullable(serverId);
+            this.serverId = Codegen.ofNullable(serverId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -290,7 +291,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -298,7 +299,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -306,7 +307,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public UserState build() {
             return new UserState(arn, homeDirectory, homeDirectoryMappings, homeDirectoryType, policy, posixProfile, role, serverId, tags, tagsAll, userName);

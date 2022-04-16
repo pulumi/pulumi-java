@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+    public Output<String> certificateArn() {
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
     @Import(name="listenerArn")
       private final @Nullable Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
-        return this.listenerArn == null ? Output.empty() : this.listenerArn;
+    public Output<String> listenerArn() {
+        return this.listenerArn == null ? Codegen.empty() : this.listenerArn;
     }
 
     public ListenerCertificateState(
@@ -44,8 +45,8 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
     }
 
     private ListenerCertificateState() {
-        this.certificateArn = Output.empty();
-        this.listenerArn = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.listenerArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder listenerArn(@Nullable Output<String> listenerArn) {
@@ -83,7 +84,7 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder listenerArn(@Nullable String listenerArn) {
-            this.listenerArn = Output.ofNullable(listenerArn);
+            this.listenerArn = Codegen.ofNullable(listenerArn);
             return this;
         }        public ListenerCertificateState build() {
             return new ListenerCertificateState(certificateArn, listenerArn);

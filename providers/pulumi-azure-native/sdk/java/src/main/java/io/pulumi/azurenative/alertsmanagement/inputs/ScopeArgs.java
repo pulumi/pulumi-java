@@ -7,6 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.enums.ScopeType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopeType")
       private final @Nullable Output<Either<String,ScopeType>> scopeType;
 
-    public Output<Either<String,ScopeType>> getScopeType() {
-        return this.scopeType == null ? Output.empty() : this.scopeType;
+    public Output<Either<String,ScopeType>> scopeType() {
+        return this.scopeType == null ? Codegen.empty() : this.scopeType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ScopeArgs(
@@ -51,8 +52,8 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeArgs() {
-        this.scopeType = Output.empty();
-        this.values = Output.empty();
+        this.scopeType = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopeType(@Nullable Either<String,ScopeType> scopeType) {
-            this.scopeType = Output.ofNullable(scopeType);
+            this.scopeType = Codegen.ofNullable(scopeType);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -90,7 +91,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

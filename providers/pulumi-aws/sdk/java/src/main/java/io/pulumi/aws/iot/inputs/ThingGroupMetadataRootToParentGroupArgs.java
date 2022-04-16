@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ThingGroupMetadataRootToParentGroupArgs extends io.pulumi.res
     @Import(name="groupArn")
       private final @Nullable Output<String> groupArn;
 
-    public Output<String> getGroupArn() {
-        return this.groupArn == null ? Output.empty() : this.groupArn;
+    public Output<String> groupArn() {
+        return this.groupArn == null ? Codegen.empty() : this.groupArn;
     }
 
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+    public Output<String> groupName() {
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     public ThingGroupMetadataRootToParentGroupArgs(
@@ -36,8 +37,8 @@ public final class ThingGroupMetadataRootToParentGroupArgs extends io.pulumi.res
     }
 
     private ThingGroupMetadataRootToParentGroupArgs() {
-        this.groupArn = Output.empty();
-        this.groupName = Output.empty();
+        this.groupArn = Codegen.empty();
+        this.groupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ThingGroupMetadataRootToParentGroupArgs extends io.pulumi.res
             return this;
         }
         public Builder groupArn(@Nullable String groupArn) {
-            this.groupArn = Output.ofNullable(groupArn);
+            this.groupArn = Codegen.ofNullable(groupArn);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -75,7 +76,7 @@ public final class ThingGroupMetadataRootToParentGroupArgs extends io.pulumi.res
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }        public ThingGroupMetadataRootToParentGroupArgs build() {
             return new ThingGroupMetadataRootToParentGroupArgs(groupArn, groupName);

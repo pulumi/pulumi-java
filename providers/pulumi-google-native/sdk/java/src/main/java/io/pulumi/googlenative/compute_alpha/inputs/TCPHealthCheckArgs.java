@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.TCPHealthCheckPortSpecification;
 import io.pulumi.googlenative.compute_alpha.enums.TCPHealthCheckProxyHeader;
 import java.lang.Integer;
@@ -24,8 +25,8 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portName")
       private final @Nullable Output<String> portName;
 
-    public Output<String> getPortName() {
-        return this.portName == null ? Output.empty() : this.portName;
+    public Output<String> portName() {
+        return this.portName == null ? Codegen.empty() : this.portName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portSpecification")
       private final @Nullable Output<TCPHealthCheckPortSpecification> portSpecification;
 
-    public Output<TCPHealthCheckPortSpecification> getPortSpecification() {
-        return this.portSpecification == null ? Output.empty() : this.portSpecification;
+    public Output<TCPHealthCheckPortSpecification> portSpecification() {
+        return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="proxyHeader")
       private final @Nullable Output<TCPHealthCheckProxyHeader> proxyHeader;
 
-    public Output<TCPHealthCheckProxyHeader> getProxyHeader() {
-        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
+    public Output<TCPHealthCheckProxyHeader> proxyHeader() {
+        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="request")
       private final @Nullable Output<String> request;
 
-    public Output<String> getRequest() {
-        return this.request == null ? Output.empty() : this.request;
+    public Output<String> request() {
+        return this.request == null ? Codegen.empty() : this.request;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="response")
       private final @Nullable Output<String> response;
 
-    public Output<String> getResponse() {
-        return this.response == null ? Output.empty() : this.response;
+    public Output<String> response() {
+        return this.response == null ? Codegen.empty() : this.response;
     }
 
     public TCPHealthCheckArgs(
@@ -99,12 +100,12 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TCPHealthCheckArgs() {
-        this.port = Output.empty();
-        this.portName = Output.empty();
-        this.portSpecification = Output.empty();
-        this.proxyHeader = Output.empty();
-        this.request = Output.empty();
-        this.response = Output.empty();
+        this.port = Codegen.empty();
+        this.portName = Codegen.empty();
+        this.portSpecification = Codegen.empty();
+        this.proxyHeader = Codegen.empty();
+        this.request = Codegen.empty();
+        this.response = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder portName(@Nullable Output<String> portName) {
@@ -150,7 +151,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portName(@Nullable String portName) {
-            this.portName = Output.ofNullable(portName);
+            this.portName = Codegen.ofNullable(portName);
             return this;
         }
         public Builder portSpecification(@Nullable Output<TCPHealthCheckPortSpecification> portSpecification) {
@@ -158,7 +159,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portSpecification(@Nullable TCPHealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Output.ofNullable(portSpecification);
+            this.portSpecification = Codegen.ofNullable(portSpecification);
             return this;
         }
         public Builder proxyHeader(@Nullable Output<TCPHealthCheckProxyHeader> proxyHeader) {
@@ -166,7 +167,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder proxyHeader(@Nullable TCPHealthCheckProxyHeader proxyHeader) {
-            this.proxyHeader = Output.ofNullable(proxyHeader);
+            this.proxyHeader = Codegen.ofNullable(proxyHeader);
             return this;
         }
         public Builder request(@Nullable Output<String> request) {
@@ -174,7 +175,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder request(@Nullable String request) {
-            this.request = Output.ofNullable(request);
+            this.request = Codegen.ofNullable(request);
             return this;
         }
         public Builder response(@Nullable Output<String> response) {
@@ -182,7 +183,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder response(@Nullable String response) {
-            this.response = Output.ofNullable(response);
+            this.response = Codegen.ofNullable(response);
             return this;
         }        public TCPHealthCheckArgs build() {
             return new TCPHealthCheckArgs(port, portName, portSpecification, proxyHeader, request, response);

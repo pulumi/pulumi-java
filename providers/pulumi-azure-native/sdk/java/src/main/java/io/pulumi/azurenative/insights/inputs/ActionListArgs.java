@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.ActionGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionGroups")
       private final @Nullable Output<List<ActionGroupArgs>> actionGroups;
 
-    public Output<List<ActionGroupArgs>> getActionGroups() {
-        return this.actionGroups == null ? Output.empty() : this.actionGroups;
+    public Output<List<ActionGroupArgs>> actionGroups() {
+        return this.actionGroups == null ? Codegen.empty() : this.actionGroups;
     }
 
     public ActionListArgs(@Nullable Output<List<ActionGroupArgs>> actionGroups) {
@@ -35,7 +36,7 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionListArgs() {
-        this.actionGroups = Output.empty();
+        this.actionGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionGroups(@Nullable List<ActionGroupArgs> actionGroups) {
-            this.actionGroups = Output.ofNullable(actionGroups);
+            this.actionGroups = Codegen.ofNullable(actionGroups);
             return this;
         }
         public Builder actionGroups(ActionGroupArgs... actionGroups) {

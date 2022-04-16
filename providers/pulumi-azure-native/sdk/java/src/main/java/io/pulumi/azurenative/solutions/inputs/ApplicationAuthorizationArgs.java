@@ -5,6 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ApplicationAuthorizationArgs extends io.pulumi.resources.Reso
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -35,7 +36,7 @@ public final class ApplicationAuthorizationArgs extends io.pulumi.resources.Reso
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
@@ -47,8 +48,8 @@ public final class ApplicationAuthorizationArgs extends io.pulumi.resources.Reso
     }
 
     private ApplicationAuthorizationArgs() {
-        this.principalId = Output.empty();
-        this.roleDefinitionId = Output.empty();
+        this.principalId = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
     }
 
     public static Builder builder() {

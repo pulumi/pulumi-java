@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigateway_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="auditLogConfigs")
       private final @Nullable Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<ApigatewayAuditLogConfigArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
+    public Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs() {
+        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public ApigatewayAuditConfigArgs(
@@ -50,8 +51,8 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private ApigatewayAuditConfigArgs() {
-        this.auditLogConfigs = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder auditLogConfigs(@Nullable List<ApigatewayAuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
             return this;
         }
         public Builder auditLogConfigs(ApigatewayAuditLogConfigArgs... auditLogConfigs) {
@@ -92,7 +93,7 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public ApigatewayAuditConfigArgs build() {
             return new ApigatewayAuditConfigArgs(auditLogConfigs, service);

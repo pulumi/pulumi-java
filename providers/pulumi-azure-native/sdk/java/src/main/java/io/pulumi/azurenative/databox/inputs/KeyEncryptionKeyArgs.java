@@ -8,6 +8,7 @@ import io.pulumi.azurenative.databox.inputs.IdentityPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identityProperties")
       private final @Nullable Output<IdentityPropertiesArgs> identityProperties;
 
-    public Output<IdentityPropertiesArgs> getIdentityProperties() {
-        return this.identityProperties == null ? Output.empty() : this.identityProperties;
+    public Output<IdentityPropertiesArgs> identityProperties() {
+        return this.identityProperties == null ? Codegen.empty() : this.identityProperties;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kekType", required=true)
       private final Output<Either<String,KekType>> kekType;
 
-    public Output<Either<String,KekType>> getKekType() {
+    public Output<Either<String,KekType>> kekType() {
         return this.kekType;
     }
 
@@ -50,8 +51,8 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kekUrl")
       private final @Nullable Output<String> kekUrl;
 
-    public Output<String> getKekUrl() {
-        return this.kekUrl == null ? Output.empty() : this.kekUrl;
+    public Output<String> kekUrl() {
+        return this.kekUrl == null ? Codegen.empty() : this.kekUrl;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kekVaultResourceID")
       private final @Nullable Output<String> kekVaultResourceID;
 
-    public Output<String> getKekVaultResourceID() {
-        return this.kekVaultResourceID == null ? Output.empty() : this.kekVaultResourceID;
+    public Output<String> kekVaultResourceID() {
+        return this.kekVaultResourceID == null ? Codegen.empty() : this.kekVaultResourceID;
     }
 
     public KeyEncryptionKeyArgs(
@@ -77,10 +78,10 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private KeyEncryptionKeyArgs() {
-        this.identityProperties = Output.empty();
-        this.kekType = Output.empty();
-        this.kekUrl = Output.empty();
-        this.kekVaultResourceID = Output.empty();
+        this.identityProperties = Codegen.empty();
+        this.kekType = Codegen.empty();
+        this.kekUrl = Codegen.empty();
+        this.kekVaultResourceID = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identityProperties(@Nullable IdentityPropertiesArgs identityProperties) {
-            this.identityProperties = Output.ofNullable(identityProperties);
+            this.identityProperties = Codegen.ofNullable(identityProperties);
             return this;
         }
         public Builder kekType(Output<Either<String,KekType>> kekType) {
@@ -130,7 +131,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kekUrl(@Nullable String kekUrl) {
-            this.kekUrl = Output.ofNullable(kekUrl);
+            this.kekUrl = Codegen.ofNullable(kekUrl);
             return this;
         }
         public Builder kekVaultResourceID(@Nullable Output<String> kekVaultResourceID) {
@@ -138,7 +139,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
-            this.kekVaultResourceID = Output.ofNullable(kekVaultResourceID);
+            this.kekVaultResourceID = Codegen.ofNullable(kekVaultResourceID);
             return this;
         }        public KeyEncryptionKeyArgs build() {
             return new KeyEncryptionKeyArgs(identityProperties, kekType, kekUrl, kekVaultResourceID);

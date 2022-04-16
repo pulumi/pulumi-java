@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     @Import(name="destinationRegion", required=true)
       private final Output<String> destinationRegion;
 
-    public Output<String> getDestinationRegion() {
+    public Output<String> destinationRegion() {
         return this.destinationRegion;
     }
 
@@ -33,8 +34,8 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     @Import(name="grantName")
       private final @Nullable Output<String> grantName;
 
-    public Output<String> getGrantName() {
-        return this.grantName == null ? Output.empty() : this.grantName;
+    public Output<String> grantName() {
+        return this.grantName == null ? Codegen.empty() : this.grantName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     @Import(name="retentionPeriod")
       private final @Nullable Output<Integer> retentionPeriod;
 
-    public Output<Integer> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
+    public Output<Integer> retentionPeriod() {
+        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     public ClusterSnapshotCopyGetArgs(
@@ -58,9 +59,9 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     }
 
     private ClusterSnapshotCopyGetArgs() {
-        this.destinationRegion = Output.empty();
-        this.grantName = Output.empty();
-        this.retentionPeriod = Output.empty();
+        this.destinationRegion = Codegen.empty();
+        this.grantName = Codegen.empty();
+        this.retentionPeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder grantName(@Nullable String grantName) {
-            this.grantName = Output.ofNullable(grantName);
+            this.grantName = Codegen.ofNullable(grantName);
             return this;
         }
         public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
@@ -108,7 +109,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
-            this.retentionPeriod = Output.ofNullable(retentionPeriod);
+            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
             return this;
         }        public ClusterSnapshotCopyGetArgs build() {
             return new ClusterSnapshotCopyGetArgs(destinationRegion, grantName, retentionPeriod);

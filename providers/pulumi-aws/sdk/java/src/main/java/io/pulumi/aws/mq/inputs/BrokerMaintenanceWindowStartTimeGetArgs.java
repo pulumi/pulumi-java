@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends io.pulumi.res
     @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
-    public Output<String> getDayOfWeek() {
+    public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -31,7 +32,7 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends io.pulumi.res
     @Import(name="timeOfDay", required=true)
       private final Output<String> timeOfDay;
 
-    public Output<String> getTimeOfDay() {
+    public Output<String> timeOfDay() {
         return this.timeOfDay;
     }
 
@@ -42,7 +43,7 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends io.pulumi.res
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 
@@ -56,9 +57,9 @@ public final class BrokerMaintenanceWindowStartTimeGetArgs extends io.pulumi.res
     }
 
     private BrokerMaintenanceWindowStartTimeGetArgs() {
-        this.dayOfWeek = Output.empty();
-        this.timeOfDay = Output.empty();
-        this.timeZone = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.timeOfDay = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {

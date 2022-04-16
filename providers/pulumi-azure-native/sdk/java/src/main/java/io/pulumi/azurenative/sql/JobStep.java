@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return The action payload of the job step.
      * 
      */
-    public Output<JobStepActionResponse> getAction() {
+    public Output<JobStepActionResponse> action() {
         return this.action;
     }
     /**
@@ -59,7 +60,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the job credential that will be used to connect to the targets.
      * 
      */
-    public Output<String> getCredential() {
+    public Output<String> credential() {
         return this.credential;
     }
     /**
@@ -73,7 +74,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return Execution options for the job step.
      * 
      */
-    public Output</* @Nullable */ JobStepExecutionOptionsResponse> getExecutionOptions() {
+    public Output</* @Nullable */ JobStepExecutionOptionsResponse> executionOptions() {
         return this.executionOptions;
     }
     /**
@@ -87,7 +88,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return Output destination properties of the job step.
      * 
      */
-    public Output</* @Nullable */ JobStepOutputResponse> getOutput() {
+    public Output</* @Nullable */ JobStepOutputResponse> output() {
         return this.output;
     }
     /**
@@ -115,7 +116,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
-    public Output</* @Nullable */ Integer> getStepId() {
+    public Output</* @Nullable */ Integer> stepId() {
         return this.stepId;
     }
     /**
@@ -129,7 +130,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the target group that the job step will be executed on.
      * 
      */
-    public Output<String> getTargetGroup() {
+    public Output<String> targetGroup() {
         return this.targetGroup;
     }
     /**
@@ -143,7 +144,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -169,7 +170,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobStep(String name, JobStepArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:JobStep", name, args == null ? JobStepArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:JobStep", name, args == null ? JobStepArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private JobStep(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

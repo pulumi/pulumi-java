@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+    public Output<List<String>> ipAddresses() {
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipGroupsName")
       private final @Nullable Output<String> ipGroupsName;
 
-    public Output<String> getIpGroupsName() {
-        return this.ipGroupsName == null ? Output.empty() : this.ipGroupsName;
+    public Output<String> ipGroupsName() {
+        return this.ipGroupsName == null ? Codegen.empty() : this.ipGroupsName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,8 +79,8 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IpGroupArgs(
@@ -98,12 +99,12 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpGroupArgs() {
-        this.id = Output.empty();
-        this.ipAddresses = Output.empty();
-        this.ipGroupsName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.id = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
+        this.ipGroupsName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
@@ -149,7 +150,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {
@@ -160,7 +161,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipGroupsName(@Nullable String ipGroupsName) {
-            this.ipGroupsName = Output.ofNullable(ipGroupsName);
+            this.ipGroupsName = Codegen.ofNullable(ipGroupsName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -168,7 +169,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -184,7 +185,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IpGroupArgs build() {
             return new IpGroupArgs(id, ipAddresses, ipGroupsName, location, resourceGroupName, tags);

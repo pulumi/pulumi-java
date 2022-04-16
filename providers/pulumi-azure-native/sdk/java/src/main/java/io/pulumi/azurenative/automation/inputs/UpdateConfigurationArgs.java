@@ -9,6 +9,7 @@ import io.pulumi.azurenative.automation.inputs.TargetPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.WindowsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="azureVirtualMachines")
       private final @Nullable Output<List<String>> azureVirtualMachines;
 
-    public Output<List<String>> getAzureVirtualMachines() {
-        return this.azureVirtualMachines == null ? Output.empty() : this.azureVirtualMachines;
+    public Output<List<String>> azureVirtualMachines() {
+        return this.azureVirtualMachines == null ? Codegen.empty() : this.azureVirtualMachines;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="linux")
       private final @Nullable Output<LinuxPropertiesArgs> linux;
 
-    public Output<LinuxPropertiesArgs> getLinux() {
-        return this.linux == null ? Output.empty() : this.linux;
+    public Output<LinuxPropertiesArgs> linux() {
+        return this.linux == null ? Codegen.empty() : this.linux;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="nonAzureComputerNames")
       private final @Nullable Output<List<String>> nonAzureComputerNames;
 
-    public Output<List<String>> getNonAzureComputerNames() {
-        return this.nonAzureComputerNames == null ? Output.empty() : this.nonAzureComputerNames;
+    public Output<List<String>> nonAzureComputerNames() {
+        return this.nonAzureComputerNames == null ? Codegen.empty() : this.nonAzureComputerNames;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="operatingSystem", required=true)
       private final Output<OperatingSystemType> operatingSystem;
 
-    public Output<OperatingSystemType> getOperatingSystem() {
+    public Output<OperatingSystemType> operatingSystem() {
         return this.operatingSystem;
     }
 
@@ -85,8 +86,8 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="targets")
       private final @Nullable Output<TargetPropertiesArgs> targets;
 
-    public Output<TargetPropertiesArgs> getTargets() {
-        return this.targets == null ? Output.empty() : this.targets;
+    public Output<TargetPropertiesArgs> targets() {
+        return this.targets == null ? Codegen.empty() : this.targets;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="windows")
       private final @Nullable Output<WindowsPropertiesArgs> windows;
 
-    public Output<WindowsPropertiesArgs> getWindows() {
-        return this.windows == null ? Output.empty() : this.windows;
+    public Output<WindowsPropertiesArgs> windows() {
+        return this.windows == null ? Codegen.empty() : this.windows;
     }
 
     public UpdateConfigurationArgs(
@@ -118,13 +119,13 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private UpdateConfigurationArgs() {
-        this.azureVirtualMachines = Output.empty();
-        this.duration = Output.empty();
-        this.linux = Output.empty();
-        this.nonAzureComputerNames = Output.empty();
-        this.operatingSystem = Output.empty();
-        this.targets = Output.empty();
-        this.windows = Output.empty();
+        this.azureVirtualMachines = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.linux = Codegen.empty();
+        this.nonAzureComputerNames = Codegen.empty();
+        this.operatingSystem = Codegen.empty();
+        this.targets = Codegen.empty();
+        this.windows = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
-            this.azureVirtualMachines = Output.ofNullable(azureVirtualMachines);
+            this.azureVirtualMachines = Codegen.ofNullable(azureVirtualMachines);
             return this;
         }
         public Builder azureVirtualMachines(String... azureVirtualMachines) {
@@ -175,7 +176,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder linux(@Nullable Output<LinuxPropertiesArgs> linux) {
@@ -183,7 +184,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder linux(@Nullable LinuxPropertiesArgs linux) {
-            this.linux = Output.ofNullable(linux);
+            this.linux = Codegen.ofNullable(linux);
             return this;
         }
         public Builder nonAzureComputerNames(@Nullable Output<List<String>> nonAzureComputerNames) {
@@ -191,7 +192,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
-            this.nonAzureComputerNames = Output.ofNullable(nonAzureComputerNames);
+            this.nonAzureComputerNames = Codegen.ofNullable(nonAzureComputerNames);
             return this;
         }
         public Builder nonAzureComputerNames(String... nonAzureComputerNames) {
@@ -210,7 +211,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targets(@Nullable TargetPropertiesArgs targets) {
-            this.targets = Output.ofNullable(targets);
+            this.targets = Codegen.ofNullable(targets);
             return this;
         }
         public Builder windows(@Nullable Output<WindowsPropertiesArgs> windows) {
@@ -218,7 +219,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder windows(@Nullable WindowsPropertiesArgs windows) {
-            this.windows = Output.ofNullable(windows);
+            this.windows = Codegen.ofNullable(windows);
             return this;
         }        public UpdateConfigurationArgs build() {
             return new UpdateConfigurationArgs(azureVirtualMachines, duration, linux, nonAzureComputerNames, operatingSystem, targets, windows);

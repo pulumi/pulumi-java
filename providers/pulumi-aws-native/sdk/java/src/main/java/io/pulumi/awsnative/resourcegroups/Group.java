@@ -11,6 +11,7 @@ import io.pulumi.awsnative.resourcegroups.outputs.GroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,13 +33,13 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The Resource Group ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="configuration", type=List.class, parameters={GroupConfigurationItem.class})
     private Output</* @Nullable */ List<GroupConfigurationItem>> configuration;
 
-    public Output</* @Nullable */ List<GroupConfigurationItem>> getConfiguration() {
+    public Output</* @Nullable */ List<GroupConfigurationItem>> configuration() {
         return this.configuration;
     }
     /**
@@ -52,7 +53,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The description of the resource group
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -66,25 +67,25 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The name of the resource group
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="resourceQuery", type=GroupResourceQuery.class, parameters={})
     private Output</* @Nullable */ GroupResourceQuery> resourceQuery;
 
-    public Output</* @Nullable */ GroupResourceQuery> getResourceQuery() {
+    public Output</* @Nullable */ GroupResourceQuery> resourceQuery() {
         return this.resourceQuery;
     }
     @Export(name="resources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> resources;
 
-    public Output</* @Nullable */ List<String>> getResources() {
+    public Output</* @Nullable */ List<String>> resources() {
         return this.resources;
     }
     @Export(name="tags", type=List.class, parameters={GroupTag.class})
     private Output</* @Nullable */ List<GroupTag>> tags;
 
-    public Output</* @Nullable */ List<GroupTag>> getTags() {
+    public Output</* @Nullable */ List<GroupTag>> tags() {
         return this.tags;
     }
 
@@ -110,7 +111,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, @Nullable GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:resourcegroups:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:resourcegroups:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

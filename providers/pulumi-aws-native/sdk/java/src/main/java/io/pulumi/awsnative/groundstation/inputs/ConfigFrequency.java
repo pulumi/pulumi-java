@@ -18,14 +18,14 @@ public final class ConfigFrequency extends io.pulumi.resources.InvokeArgs {
     @Import(name="units")
       private final @Nullable ConfigFrequencyUnits units;
 
-    public Optional<ConfigFrequencyUnits> getUnits() {
+    public Optional<ConfigFrequencyUnits> units() {
         return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
       private final @Nullable Double value;
 
-    public Optional<Double> getValue() {
+    public Optional<Double> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

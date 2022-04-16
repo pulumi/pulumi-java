@@ -6,6 +6,7 @@ package io.pulumi.googlenative.pubsublite_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsublite_v1.SubscriptionArgs;
 import io.pulumi.googlenative.pubsublite_v1.outputs.DeliveryConfigResponse;
@@ -29,7 +30,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The settings for this subscription's message delivery.
      * 
      */
-    public Output<DeliveryConfigResponse> getDeliveryConfig() {
+    public Output<DeliveryConfigResponse> deliveryConfig() {
         return this.deliveryConfig;
     }
     /**
@@ -43,7 +44,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -83,7 +84,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Subscription(String name, SubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:pubsublite/v1:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:pubsublite/v1:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Subscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

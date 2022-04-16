@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     @Import(name="distributionFilter", required=true)
       private final Output<String> distributionFilter;
 
-    public Output<String> getDistributionFilter() {
+    public Output<String> distributionFilter() {
         return this.distributionFilter;
     }
 
@@ -41,7 +42,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     @Import(name="range", required=true)
       private final Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> getRange() {
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeGetArgs> range() {
         return this.range;
     }
 
@@ -53,8 +54,8 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     }
 
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs() {
-        this.distributionFilter = Output.empty();
-        this.range = Output.empty();
+        this.distributionFilter = Codegen.empty();
+        this.range = Codegen.empty();
     }
 
     public static Builder builder() {

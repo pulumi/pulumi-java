@@ -25,7 +25,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
      * 
     */
-    public List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatement> getStatements() {
+    public List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatement> statements() {
         return this.statements;
     }
 

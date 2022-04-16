@@ -11,6 +11,7 @@ import io.pulumi.aws.datasync.outputs.NfsLocationOnPremConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @return Configuration block containing mount options used by DataSync to access the NFS Server.
      * 
      */
-    public Output</* @Nullable */ NfsLocationMountOptions> getMountOptions() {
+    public Output</* @Nullable */ NfsLocationMountOptions> mountOptions() {
         return this.mountOptions;
     }
     /**
@@ -72,7 +73,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @return Configuration block containing information for connecting to the NFS File System.
      * 
      */
-    public Output<NfsLocationOnPremConfig> getOnPremConfig() {
+    public Output<NfsLocationOnPremConfig> onPremConfig() {
         return this.onPremConfig;
     }
     /**
@@ -86,7 +87,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @return Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.
      * 
      */
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
     /**
@@ -100,7 +101,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @return Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
      * 
      */
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -114,7 +115,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,13 +129,13 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -160,7 +161,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NfsLocation(String name, NfsLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/nfsLocation:NfsLocation", name, args == null ? NfsLocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:datasync/nfsLocation:NfsLocation", name, args == null ? NfsLocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NfsLocation(String name, Output<String> id, @Nullable NfsLocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

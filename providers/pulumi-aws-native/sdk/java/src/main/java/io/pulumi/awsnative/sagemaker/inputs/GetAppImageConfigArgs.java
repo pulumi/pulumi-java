@@ -19,7 +19,7 @@ public final class GetAppImageConfigArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="appImageConfigName", required=true)
       private final String appImageConfigName;
 
-    public String getAppImageConfigName() {
+    public String appImageConfigName() {
         return this.appImageConfigName;
     }
 

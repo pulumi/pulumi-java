@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigateway;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiConfigArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigState;
@@ -57,7 +58,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @return The API to attach the config to.
      * 
      */
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
     /**
@@ -71,7 +72,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @return Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
      * 
      */
-    public Output<String> getApiConfigId() {
+    public Output<String> apiConfigId() {
         return this.apiConfigId;
     }
     /**
@@ -87,7 +88,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
      * 
      */
-    public Output<String> getApiConfigIdPrefix() {
+    public Output<String> apiConfigIdPrefix() {
         return this.apiConfigIdPrefix;
     }
     /**
@@ -101,7 +102,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @return A user-visible name for the API.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -119,7 +120,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ApiConfigGatewayConfig> getGatewayConfig() {
+    public Output</* @Nullable */ ApiConfigGatewayConfig> gatewayConfig() {
         return this.gatewayConfig;
     }
     /**
@@ -133,7 +134,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -147,7 +148,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @return The resource name of the API Config.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +164,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<ApiConfigOpenapiDocument>> getOpenapiDocuments() {
+    public Output<List<ApiConfigOpenapiDocument>> openapiDocuments() {
         return this.openapiDocuments;
     }
     /**
@@ -179,7 +180,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -193,7 +194,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
      * 
      */
-    public Output<String> getServiceConfigId() {
+    public Output<String> serviceConfigId() {
         return this.serviceConfigId;
     }
 
@@ -219,7 +220,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiConfig(String name, ApiConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/apiConfig:ApiConfig", name, args == null ? ApiConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigateway/apiConfig:ApiConfig", name, args == null ? ApiConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiConfig(String name, Output<String> id, @Nullable ApiConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

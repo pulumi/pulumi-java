@@ -5,6 +5,7 @@ package io.pulumi.aws.dms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     @Import(name="replicationSubnetGroupDescription", required=true)
       private final Output<String> replicationSubnetGroupDescription;
 
-    public Output<String> getReplicationSubnetGroupDescription() {
+    public Output<String> replicationSubnetGroupDescription() {
         return this.replicationSubnetGroupDescription;
     }
 
@@ -34,7 +35,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     @Import(name="replicationSubnetGroupId", required=true)
       private final Output<String> replicationSubnetGroupId;
 
-    public Output<String> getReplicationSubnetGroupId() {
+    public Output<String> replicationSubnetGroupId() {
         return this.replicationSubnetGroupId;
     }
 
@@ -45,7 +46,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -56,8 +57,8 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ReplicationSubnetGroupArgs(
@@ -72,10 +73,10 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     }
 
     private ReplicationSubnetGroupArgs() {
-        this.replicationSubnetGroupDescription = Output.empty();
-        this.replicationSubnetGroupId = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
+        this.replicationSubnetGroupDescription = Codegen.empty();
+        this.replicationSubnetGroupId = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ReplicationSubnetGroupArgs build() {
             return new ReplicationSubnetGroupArgs(replicationSubnetGroupDescription, replicationSubnetGroupId, subnetIds, tags);

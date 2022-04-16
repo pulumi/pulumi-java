@@ -18,21 +18,21 @@ public final class DeliveryStreamOpenXJsonSerDe extends io.pulumi.resources.Invo
     @Import(name="caseInsensitive")
       private final @Nullable Boolean caseInsensitive;
 
-    public Optional<Boolean> getCaseInsensitive() {
+    public Optional<Boolean> caseInsensitive() {
         return this.caseInsensitive == null ? Optional.empty() : Optional.ofNullable(this.caseInsensitive);
     }
 
     @Import(name="columnToJsonKeyMappings")
       private final @Nullable Object columnToJsonKeyMappings;
 
-    public Optional<Object> getColumnToJsonKeyMappings() {
+    public Optional<Object> columnToJsonKeyMappings() {
         return this.columnToJsonKeyMappings == null ? Optional.empty() : Optional.ofNullable(this.columnToJsonKeyMappings);
     }
 
     @Import(name="convertDotsInJsonKeysToUnderscores")
       private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
-    public Optional<Boolean> getConvertDotsInJsonKeysToUnderscores() {
+    public Optional<Boolean> convertDotsInJsonKeysToUnderscores() {
         return this.convertDotsInJsonKeysToUnderscores == null ? Optional.empty() : Optional.ofNullable(this.convertDotsInJsonKeysToUnderscores);
     }
 

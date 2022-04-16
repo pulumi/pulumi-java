@@ -8,6 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetDatetimeOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,28 +26,28 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="createColumn")
       private final @Nullable Output<Boolean> createColumn;
 
-    public Output<Boolean> getCreateColumn() {
-        return this.createColumn == null ? Output.empty() : this.createColumn;
+    public Output<Boolean> createColumn() {
+        return this.createColumn == null ? Codegen.empty() : this.createColumn;
     }
 
     @Import(name="datetimeOptions")
       private final @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
 
-    public Output<DatasetDatetimeOptionsArgs> getDatetimeOptions() {
-        return this.datetimeOptions == null ? Output.empty() : this.datetimeOptions;
+    public Output<DatasetDatetimeOptionsArgs> datetimeOptions() {
+        return this.datetimeOptions == null ? Codegen.empty() : this.datetimeOptions;
     }
 
     @Import(name="filter")
       private final @Nullable Output<DatasetFilterExpressionArgs> filter;
 
-    public Output<DatasetFilterExpressionArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<DatasetFilterExpressionArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -57,7 +58,7 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<DatasetParameterType> type;
 
-    public Output<DatasetParameterType> getType() {
+    public Output<DatasetParameterType> type() {
         return this.type;
     }
 
@@ -75,11 +76,11 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatasetParameterArgs() {
-        this.createColumn = Output.empty();
-        this.datetimeOptions = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.createColumn = Codegen.empty();
+        this.datetimeOptions = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder createColumn(@Nullable Boolean createColumn) {
-            this.createColumn = Output.ofNullable(createColumn);
+            this.createColumn = Codegen.ofNullable(createColumn);
             return this;
         }
         public Builder datetimeOptions(@Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions) {
@@ -123,7 +124,7 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datetimeOptions(@Nullable DatasetDatetimeOptionsArgs datetimeOptions) {
-            this.datetimeOptions = Output.ofNullable(datetimeOptions);
+            this.datetimeOptions = Codegen.ofNullable(datetimeOptions);
             return this;
         }
         public Builder filter(@Nullable Output<DatasetFilterExpressionArgs> filter) {
@@ -131,7 +132,7 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder filter(@Nullable DatasetFilterExpressionArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(Output<String> name) {

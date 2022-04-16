@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configFilePath")
       private final @Nullable Output<String> configFilePath;
 
-    public Output<String> getConfigFilePath() {
-        return this.configFilePath == null ? Output.empty() : this.configFilePath;
+    public Output<String> configFilePath() {
+        return this.configFilePath == null ? Codegen.empty() : this.configFilePath;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
+    public Output<String> runtimeVersion() {
+        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
     public AuthPlatformArgs(
@@ -64,9 +65,9 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthPlatformArgs() {
-        this.configFilePath = Output.empty();
-        this.enabled = Output.empty();
-        this.runtimeVersion = Output.empty();
+        this.configFilePath = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.runtimeVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configFilePath(@Nullable String configFilePath) {
-            this.configFilePath = Output.ofNullable(configFilePath);
+            this.configFilePath = Codegen.ofNullable(configFilePath);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -106,7 +107,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
@@ -114,7 +115,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Output.ofNullable(runtimeVersion);
+            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
             return this;
         }        public AuthPlatformArgs build() {
             return new AuthPlatformArgs(configFilePath, enabled, runtimeVersion);

@@ -11,6 +11,7 @@ import io.pulumi.aws.servicecatalog.outputs.ProvisionedProductStackSetProvisioni
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -52,7 +53,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> getAcceptLanguage() {
+    public Output</* @Nullable */ String> acceptLanguage() {
         return this.acceptLanguage;
     }
     /**
@@ -66,7 +67,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return ARN of the provisioned product.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -80,7 +81,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Set of CloudWatch dashboards that were created when provisioning the product.
      * 
      */
-    public Output<List<String>> getCloudwatchDashboardNames() {
+    public Output<List<String>> cloudwatchDashboardNames() {
         return this.cloudwatchDashboardNames;
     }
     /**
@@ -94,7 +95,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Time when the provisioned product was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -108,7 +109,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return _Only applies to deleting._ If set to `true`, AWS Service Catalog stops managing the specified provisioned product even if it cannot delete the underlying resources. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnoreErrors() {
+    public Output</* @Nullable */ Boolean> ignoreErrors() {
         return this.ignoreErrors;
     }
     /**
@@ -122,7 +123,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Record identifier of the last request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
      * 
      */
-    public Output<String> getLastProvisioningRecordId() {
+    public Output<String> lastProvisioningRecordId() {
         return this.lastProvisioningRecordId;
     }
     /**
@@ -136,7 +137,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Record identifier of the last request performed on this provisioned product.
      * 
      */
-    public Output<String> getLastRecordId() {
+    public Output<String> lastRecordId() {
         return this.lastRecordId;
     }
     /**
@@ -150,7 +151,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Record identifier of the last successful request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
      * 
      */
-    public Output<String> getLastSuccessfulProvisioningRecordId() {
+    public Output<String> lastSuccessfulProvisioningRecordId() {
         return this.lastSuccessfulProvisioningRecordId;
     }
     /**
@@ -164,7 +165,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return ARN of the launch role associated with the provisioned product.
      * 
      */
-    public Output<String> getLaunchRoleArn() {
+    public Output<String> launchRoleArn() {
         return this.launchRoleArn;
     }
     /**
@@ -178,7 +179,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return User-friendly name of the provisioned product.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -192,7 +193,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Passed to CloudFormation. The SNS topic ARNs to which to publish stack-related events.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNotificationArns() {
+    public Output</* @Nullable */ List<String>> notificationArns() {
         return this.notificationArns;
     }
     /**
@@ -206,7 +207,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path. To list the paths for a product, use `aws.servicecatalog.getLaunchPaths`. When required, you must provide `path_id` or `path_name`, but not both.
      * 
      */
-    public Output<String> getPathId() {
+    public Output<String> pathId() {
         return this.pathId;
     }
     /**
@@ -220,7 +221,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Name of the path. You must provide `path_id` or `path_name`, but not both.
      * 
      */
-    public Output</* @Nullable */ String> getPathName() {
+    public Output</* @Nullable */ String> pathName() {
         return this.pathName;
     }
     /**
@@ -234,7 +235,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Product identifier. For example, `prod-abcdzk7xy33qa`. You must provide `product_id` or `product_name`, but not both.
      * 
      */
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
     /**
@@ -248,7 +249,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Name of the product. You must provide `product_id` or `product_name`, but not both.
      * 
      */
-    public Output</* @Nullable */ String> getProductName() {
+    public Output</* @Nullable */ String> productName() {
         return this.productName;
     }
     /**
@@ -262,7 +263,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Identifier of the provisioning artifact. For example, `pa-4abcdjnxjj6ne`. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
      * 
      */
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
     /**
@@ -276,7 +277,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Name of the provisioning artifact. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningArtifactName() {
+    public Output</* @Nullable */ String> provisioningArtifactName() {
         return this.provisioningArtifactName;
     }
     /**
@@ -290,7 +291,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
      * 
      */
-    public Output</* @Nullable */ List<ProvisionedProductProvisioningParameter>> getProvisioningParameters() {
+    public Output</* @Nullable */ List<ProvisionedProductProvisioningParameter>> provisioningParameters() {
         return this.provisioningParameters;
     }
     /**
@@ -304,7 +305,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return _Only applies to deleting._ Whether to delete the Service Catalog provisioned product but leave the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRetainPhysicalResources() {
+    public Output</* @Nullable */ Boolean> retainPhysicalResources() {
         return this.retainPhysicalResources;
     }
     /**
@@ -318,7 +319,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Configuration block with information about the provisioning preferences for a stack set. See details below.
      * 
      */
-    public Output</* @Nullable */ ProvisionedProductStackSetProvisioningPreferences> getStackSetProvisioningPreferences() {
+    public Output</* @Nullable */ ProvisionedProductStackSetProvisioningPreferences> stackSetProvisioningPreferences() {
         return this.stackSetProvisioningPreferences;
     }
     /**
@@ -332,7 +333,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Current status of the provisioned product. See meanings below.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -346,7 +347,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Current status message of the provisioned product.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -360,7 +361,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Tags to apply to the provisioned product. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -374,7 +375,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -388,7 +389,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @return Type of provisioned product. Valid values are `CFN_STACK` and `CFN_STACKSET`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -414,7 +415,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProvisionedProduct(String name, @Nullable ProvisionedProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/provisionedProduct:ProvisionedProduct", name, args == null ? ProvisionedProductArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/provisionedProduct:ProvisionedProduct", name, args == null ? ProvisionedProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProvisionedProduct(String name, Output<String> id, @Nullable ProvisionedProductState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

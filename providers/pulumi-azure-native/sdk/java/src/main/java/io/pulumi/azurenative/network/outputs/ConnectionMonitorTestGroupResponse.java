@@ -57,35 +57,35 @@ public final class ConnectionMonitorTestGroupResponse {
      * List of destination endpoint names.
      * 
     */
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations;
     }
     /**
      * Value indicating whether test group is disabled.
      * 
     */
-    public Optional<Boolean> getDisable() {
+    public Optional<Boolean> disable() {
         return Optional.ofNullable(this.disable);
     }
     /**
      * The name of the connection monitor test group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of source endpoint names.
      * 
     */
-    public List<String> getSources() {
+    public List<String> sources() {
         return this.sources;
     }
     /**
      * List of test configuration names.
      * 
     */
-    public List<String> getTestConfigurations() {
+    public List<String> testConfigurations() {
         return this.testConfigurations;
     }
 

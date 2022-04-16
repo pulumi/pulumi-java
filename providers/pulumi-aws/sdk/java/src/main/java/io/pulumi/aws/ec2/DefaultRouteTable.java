@@ -10,6 +10,7 @@ import io.pulumi.aws.ec2.outputs.DefaultRouteTableRoute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -50,7 +51,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return The ARN of the route table.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -64,7 +65,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return ID of the default route table.
      * 
      */
-    public Output<String> getDefaultRouteTableId() {
+    public Output<String> defaultRouteTableId() {
         return this.defaultRouteTableId;
     }
     /**
@@ -78,7 +79,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return ID of the AWS account that owns the route table.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -92,7 +93,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return List of virtual gateways for propagation.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPropagatingVgws() {
+    public Output</* @Nullable */ List<String>> propagatingVgws() {
         return this.propagatingVgws;
     }
     /**
@@ -106,7 +107,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return Set of objects. Detailed below
      * 
      */
-    public Output<List<DefaultRouteTableRoute>> getRoutes() {
+    public Output<List<DefaultRouteTableRoute>> routes() {
         return this.routes;
     }
     /**
@@ -120,7 +121,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -134,7 +135,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -148,7 +149,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @return ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -174,7 +175,7 @@ public class DefaultRouteTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultRouteTable(String name, DefaultRouteTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/defaultRouteTable:DefaultRouteTable", name, args == null ? DefaultRouteTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/defaultRouteTable:DefaultRouteTable", name, args == null ? DefaultRouteTableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DefaultRouteTable(String name, Output<String> id, @Nullable DefaultRouteTableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -11,6 +11,7 @@ import io.pulumi.aws.lakeformation.outputs.DataLakeSettingsCreateTableDefaultPer
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * @return Set of ARNs of AWS Lake Formation principals (IAM users or roles).
      * 
      */
-    public Output<List<String>> getAdmins() {
+    public Output<List<String>> admins() {
         return this.admins;
     }
     /**
@@ -50,7 +51,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * @return Identifier for the Data Catalog. By default, the account ID.
      * 
      */
-    public Output</* @Nullable */ String> getCatalogId() {
+    public Output</* @Nullable */ String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -64,7 +65,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * @return Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
      * 
      */
-    public Output<List<DataLakeSettingsCreateDatabaseDefaultPermission>> getCreateDatabaseDefaultPermissions() {
+    public Output<List<DataLakeSettingsCreateDatabaseDefaultPermission>> createDatabaseDefaultPermissions() {
         return this.createDatabaseDefaultPermissions;
     }
     /**
@@ -78,7 +79,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * @return Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
      * 
      */
-    public Output<List<DataLakeSettingsCreateTableDefaultPermission>> getCreateTableDefaultPermissions() {
+    public Output<List<DataLakeSettingsCreateTableDefaultPermission>> createTableDefaultPermissions() {
         return this.createTableDefaultPermissions;
     }
     /**
@@ -92,7 +93,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * @return List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
      * 
      */
-    public Output<List<String>> getTrustedResourceOwners() {
+    public Output<List<String>> trustedResourceOwners() {
         return this.trustedResourceOwners;
     }
 
@@ -118,7 +119,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataLakeSettings(String name, @Nullable DataLakeSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lakeformation/dataLakeSettings:DataLakeSettings", name, args == null ? DataLakeSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lakeformation/dataLakeSettings:DataLakeSettings", name, args == null ? DataLakeSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataLakeSettings(String name, Output<String> id, @Nullable DataLakeSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

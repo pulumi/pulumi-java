@@ -7,6 +7,7 @@ import io.pulumi.azurenative.elastic.enums.TagAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<Either<String,TagAction>> action;
 
-    public Output<Either<String,TagAction>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<Either<String,TagAction>> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public FilteringTagArgs(
@@ -63,9 +64,9 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilteringTagArgs() {
-        this.action = Output.empty();
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.action = Codegen.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable Either<String,TagAction> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -105,7 +106,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -113,7 +114,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public FilteringTagArgs build() {
             return new FilteringTagArgs(action, name, value);

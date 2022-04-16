@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions;
     }
 
@@ -45,8 +46,8 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 
@@ -69,8 +70,8 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stage")
       private final @Nullable Output<String> stage;
 
-    public Output<String> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+    public Output<String> stage() {
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -100,12 +101,12 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMCustomRoleArgs() {
-        this.description = Output.empty();
-        this.permissions = Output.empty();
-        this.project = Output.empty();
-        this.roleId = Output.empty();
-        this.stage = Output.empty();
-        this.title = Output.empty();
+        this.description = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.project = Codegen.empty();
+        this.roleId = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder permissions(Output<List<String>> permissions) {
@@ -162,7 +163,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder roleId(Output<String> roleId) {
@@ -178,7 +179,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stage(@Nullable String stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }
         public Builder title(Output<String> title) {

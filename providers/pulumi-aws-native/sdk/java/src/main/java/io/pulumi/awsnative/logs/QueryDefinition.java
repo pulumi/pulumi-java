@@ -8,6 +8,7 @@ import io.pulumi.awsnative.logs.QueryDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return Optionally define specific log groups as part of your query definition
      * 
      */
-    public Output</* @Nullable */ List<String>> getLogGroupNames() {
+    public Output</* @Nullable */ List<String>> logGroupNames() {
         return this.logGroupNames;
     }
     /**
@@ -43,7 +44,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return A name for the saved query definition
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of a query definition
      * 
      */
-    public Output<String> getQueryDefinitionId() {
+    public Output<String> queryDefinitionId() {
         return this.queryDefinitionId;
     }
     /**
@@ -71,7 +72,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return The query string to use for this definition
      * 
      */
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
 
@@ -97,7 +98,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public QueryDefinition(String name, QueryDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:logs:QueryDefinition", name, args == null ? QueryDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:logs:QueryDefinition", name, args == null ? QueryDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private QueryDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

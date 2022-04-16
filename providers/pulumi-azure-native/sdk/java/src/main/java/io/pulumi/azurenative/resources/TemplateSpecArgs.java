@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Object> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,8 +79,8 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateSpecName")
       private final @Nullable Output<String> templateSpecName;
 
-    public Output<String> getTemplateSpecName() {
-        return this.templateSpecName == null ? Output.empty() : this.templateSpecName;
+    public Output<String> templateSpecName() {
+        return this.templateSpecName == null ? Codegen.empty() : this.templateSpecName;
     }
 
     public TemplateSpecArgs(
@@ -111,13 +112,13 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateSpecArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.templateSpecName = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateSpecName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -165,7 +166,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -173,7 +174,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -181,7 +182,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -197,7 +198,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder templateSpecName(@Nullable Output<String> templateSpecName) {
@@ -205,7 +206,7 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateSpecName(@Nullable String templateSpecName) {
-            this.templateSpecName = Output.ofNullable(templateSpecName);
+            this.templateSpecName = Codegen.ofNullable(templateSpecName);
             return this;
         }        public TemplateSpecArgs build() {
             return new TemplateSpecArgs(description, displayName, location, metadata, resourceGroupName, tags, templateSpecName);

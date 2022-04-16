@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.IPAMScopeTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,8 +20,8 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamId", required=true)
       private final Output<String> ipamId;
 
-    public Output<String> getIpamId() {
+    public Output<String> ipamId() {
         return this.ipamId;
     }
 
@@ -41,8 +42,8 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<IPAMScopeTagArgs>> tags;
 
-    public Output<List<IPAMScopeTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<IPAMScopeTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IPAMScopeArgs(
@@ -55,9 +56,9 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPAMScopeArgs() {
-        this.description = Output.empty();
-        this.ipamId = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.ipamId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipamId(Output<String> ipamId) {
@@ -105,7 +106,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<IPAMScopeTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(IPAMScopeTagArgs... tags) {

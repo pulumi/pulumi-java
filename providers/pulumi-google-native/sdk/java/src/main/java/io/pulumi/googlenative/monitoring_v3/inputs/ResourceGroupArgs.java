@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.enums.ResourceGroupResourceType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+    public Output<String> groupId() {
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
       private final @Nullable Output<ResourceGroupResourceType> resourceType;
 
-    public Output<ResourceGroupResourceType> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<ResourceGroupResourceType> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public ResourceGroupArgs(
@@ -49,8 +50,8 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceGroupArgs() {
-        this.groupId = Output.empty();
-        this.resourceType = Output.empty();
+        this.groupId = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder resourceType(@Nullable Output<ResourceGroupResourceType> resourceType) {
@@ -88,7 +89,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceType(@Nullable ResourceGroupResourceType resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public ResourceGroupArgs build() {
             return new ResourceGroupArgs(groupId, resourceType);

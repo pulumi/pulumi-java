@@ -7,6 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.ReportColumnType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +38,7 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,ReportColumnType>> type;
 
-    public Output<Either<String,ReportColumnType>> getType() {
+    public Output<Either<String,ReportColumnType>> type() {
         return this.type;
     }
 
@@ -49,8 +50,8 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportGroupingArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

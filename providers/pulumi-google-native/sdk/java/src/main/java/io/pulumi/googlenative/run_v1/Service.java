@@ -6,6 +6,7 @@ package io.pulumi.googlenative.run_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.run_v1.ServiceArgs;
 import io.pulumi.googlenative.run_v1.outputs.ObjectMetaResponse;
@@ -32,7 +33,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The API version for this call such as "serving.knative.dev/v1".
      * 
      */
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -46,7 +47,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The kind of resource, in this case "Service".
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -60,7 +61,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
      * 
      */
-    public Output<ObjectMetaResponse> getMetadata() {
+    public Output<ObjectMetaResponse> metadata() {
         return this.metadata;
     }
     /**
@@ -74,7 +75,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Spec holds the desired state of the Service (from the client).
      * 
      */
-    public Output<ServiceSpecResponse> getSpec() {
+    public Output<ServiceSpecResponse> spec() {
         return this.spec;
     }
     /**
@@ -88,7 +89,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Status communicates the observed state of the Service (from the controller).
      * 
      */
-    public Output<ServiceStatusResponse> getStatus() {
+    public Output<ServiceStatusResponse> status() {
         return this.status;
     }
 
@@ -114,7 +115,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, @Nullable ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:run/v1:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:run/v1:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

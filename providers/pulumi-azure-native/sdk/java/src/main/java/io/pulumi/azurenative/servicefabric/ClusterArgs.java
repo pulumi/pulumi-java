@@ -15,6 +15,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNamesAr
 import io.pulumi.azurenative.servicefabric.inputs.SettingsSectionDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addOnFeatures")
       private final @Nullable Output<List<String>> addOnFeatures;
 
-    public Output<List<String>> getAddOnFeatures() {
-        return this.addOnFeatures == null ? Output.empty() : this.addOnFeatures;
+    public Output<List<String>> addOnFeatures() {
+        return this.addOnFeatures == null ? Codegen.empty() : this.addOnFeatures;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationTypeVersionsCleanupPolicy")
       private final @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
 
-    public Output<ApplicationTypeVersionsCleanupPolicyArgs> getApplicationTypeVersionsCleanupPolicy() {
-        return this.applicationTypeVersionsCleanupPolicy == null ? Output.empty() : this.applicationTypeVersionsCleanupPolicy;
+    public Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy() {
+        return this.applicationTypeVersionsCleanupPolicy == null ? Codegen.empty() : this.applicationTypeVersionsCleanupPolicy;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
-        return this.azureActiveDirectory == null ? Output.empty() : this.azureActiveDirectory;
+    public Output<AzureActiveDirectoryArgs> azureActiveDirectory() {
+        return this.azureActiveDirectory == null ? Codegen.empty() : this.azureActiveDirectory;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificate")
       private final @Nullable Output<CertificateDescriptionArgs> certificate;
 
-    public Output<CertificateDescriptionArgs> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<CertificateDescriptionArgs> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
 
-    public Output<ServerCertificateCommonNamesArgs> getCertificateCommonNames() {
-        return this.certificateCommonNames == null ? Output.empty() : this.certificateCommonNames;
+    public Output<ServerCertificateCommonNamesArgs> certificateCommonNames() {
+        return this.certificateCommonNames == null ? Codegen.empty() : this.certificateCommonNames;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateCommonNames")
       private final @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
 
-    public Output<List<ClientCertificateCommonNameArgs>> getClientCertificateCommonNames() {
-        return this.clientCertificateCommonNames == null ? Output.empty() : this.clientCertificateCommonNames;
+    public Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames() {
+        return this.clientCertificateCommonNames == null ? Codegen.empty() : this.clientCertificateCommonNames;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateThumbprints")
       private final @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
 
-    public Output<List<ClientCertificateThumbprintArgs>> getClientCertificateThumbprints() {
-        return this.clientCertificateThumbprints == null ? Output.empty() : this.clientCertificateThumbprints;
+    public Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints() {
+        return this.clientCertificateThumbprints == null ? Codegen.empty() : this.clientCertificateThumbprints;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterCodeVersion")
       private final @Nullable Output<String> clusterCodeVersion;
 
-    public Output<String> getClusterCodeVersion() {
-        return this.clusterCodeVersion == null ? Output.empty() : this.clusterCodeVersion;
+    public Output<String> clusterCodeVersion() {
+        return this.clusterCodeVersion == null ? Codegen.empty() : this.clusterCodeVersion;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diagnosticsStorageAccountConfig")
       private final @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
 
-    public Output<DiagnosticsStorageAccountConfigArgs> getDiagnosticsStorageAccountConfig() {
-        return this.diagnosticsStorageAccountConfig == null ? Output.empty() : this.diagnosticsStorageAccountConfig;
+    public Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig() {
+        return this.diagnosticsStorageAccountConfig == null ? Codegen.empty() : this.diagnosticsStorageAccountConfig;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventStoreServiceEnabled")
       private final @Nullable Output<Boolean> eventStoreServiceEnabled;
 
-    public Output<Boolean> getEventStoreServiceEnabled() {
-        return this.eventStoreServiceEnabled == null ? Output.empty() : this.eventStoreServiceEnabled;
+    public Output<Boolean> eventStoreServiceEnabled() {
+        return this.eventStoreServiceEnabled == null ? Codegen.empty() : this.eventStoreServiceEnabled;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fabricSettings")
       private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
-    public Output<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
-        return this.fabricSettings == null ? Output.empty() : this.fabricSettings;
+    public Output<List<SettingsSectionDescriptionArgs>> fabricSettings() {
+        return this.fabricSettings == null ? Codegen.empty() : this.fabricSettings;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managementEndpoint", required=true)
       private final Output<String> managementEndpoint;
 
-    public Output<String> getManagementEndpoint() {
+    public Output<String> managementEndpoint() {
         return this.managementEndpoint;
     }
 
@@ -188,7 +189,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTypes", required=true)
       private final Output<List<NodeTypeDescriptionArgs>> nodeTypes;
 
-    public Output<List<NodeTypeDescriptionArgs>> getNodeTypes() {
+    public Output<List<NodeTypeDescriptionArgs>> nodeTypes() {
         return this.nodeTypes;
     }
 
@@ -205,8 +206,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reliabilityLevel")
       private final @Nullable Output<String> reliabilityLevel;
 
-    public Output<String> getReliabilityLevel() {
-        return this.reliabilityLevel == null ? Output.empty() : this.reliabilityLevel;
+    public Output<String> reliabilityLevel() {
+        return this.reliabilityLevel == null ? Codegen.empty() : this.reliabilityLevel;
     }
 
     /**
@@ -216,7 +217,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -227,8 +228,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reverseProxyCertificate")
       private final @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
 
-    public Output<CertificateDescriptionArgs> getReverseProxyCertificate() {
-        return this.reverseProxyCertificate == null ? Output.empty() : this.reverseProxyCertificate;
+    public Output<CertificateDescriptionArgs> reverseProxyCertificate() {
+        return this.reverseProxyCertificate == null ? Codegen.empty() : this.reverseProxyCertificate;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reverseProxyCertificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
 
-    public Output<ServerCertificateCommonNamesArgs> getReverseProxyCertificateCommonNames() {
-        return this.reverseProxyCertificateCommonNames == null ? Output.empty() : this.reverseProxyCertificateCommonNames;
+    public Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames() {
+        return this.reverseProxyCertificateCommonNames == null ? Codegen.empty() : this.reverseProxyCertificateCommonNames;
     }
 
     /**
@@ -249,8 +250,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -260,8 +261,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgradeDescription")
       private final @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
 
-    public Output<ClusterUpgradePolicyArgs> getUpgradeDescription() {
-        return this.upgradeDescription == null ? Output.empty() : this.upgradeDescription;
+    public Output<ClusterUpgradePolicyArgs> upgradeDescription() {
+        return this.upgradeDescription == null ? Codegen.empty() : this.upgradeDescription;
     }
 
     /**
@@ -274,8 +275,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgradeMode")
       private final @Nullable Output<String> upgradeMode;
 
-    public Output<String> getUpgradeMode() {
-        return this.upgradeMode == null ? Output.empty() : this.upgradeMode;
+    public Output<String> upgradeMode() {
+        return this.upgradeMode == null ? Codegen.empty() : this.upgradeMode;
     }
 
     /**
@@ -285,8 +286,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;
 
-    public Output<String> getVmImage() {
-        return this.vmImage == null ? Output.empty() : this.vmImage;
+    public Output<String> vmImage() {
+        return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 
     public ClusterArgs(
@@ -339,29 +340,29 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.addOnFeatures = Output.empty();
-        this.applicationTypeVersionsCleanupPolicy = Output.empty();
-        this.azureActiveDirectory = Output.empty();
-        this.certificate = Output.empty();
-        this.certificateCommonNames = Output.empty();
-        this.clientCertificateCommonNames = Output.empty();
-        this.clientCertificateThumbprints = Output.empty();
-        this.clusterCodeVersion = Output.empty();
-        this.clusterName = Output.empty();
-        this.diagnosticsStorageAccountConfig = Output.empty();
-        this.eventStoreServiceEnabled = Output.empty();
-        this.fabricSettings = Output.empty();
-        this.location = Output.empty();
-        this.managementEndpoint = Output.empty();
-        this.nodeTypes = Output.empty();
-        this.reliabilityLevel = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.reverseProxyCertificate = Output.empty();
-        this.reverseProxyCertificateCommonNames = Output.empty();
-        this.tags = Output.empty();
-        this.upgradeDescription = Output.empty();
-        this.upgradeMode = Output.empty();
-        this.vmImage = Output.empty();
+        this.addOnFeatures = Codegen.empty();
+        this.applicationTypeVersionsCleanupPolicy = Codegen.empty();
+        this.azureActiveDirectory = Codegen.empty();
+        this.certificate = Codegen.empty();
+        this.certificateCommonNames = Codegen.empty();
+        this.clientCertificateCommonNames = Codegen.empty();
+        this.clientCertificateThumbprints = Codegen.empty();
+        this.clusterCodeVersion = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.diagnosticsStorageAccountConfig = Codegen.empty();
+        this.eventStoreServiceEnabled = Codegen.empty();
+        this.fabricSettings = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managementEndpoint = Codegen.empty();
+        this.nodeTypes = Codegen.empty();
+        this.reliabilityLevel = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.reverseProxyCertificate = Codegen.empty();
+        this.reverseProxyCertificateCommonNames = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.upgradeDescription = Codegen.empty();
+        this.upgradeMode = Codegen.empty();
+        this.vmImage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -433,7 +434,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addOnFeatures(@Nullable List<String> addOnFeatures) {
-            this.addOnFeatures = Output.ofNullable(addOnFeatures);
+            this.addOnFeatures = Codegen.ofNullable(addOnFeatures);
             return this;
         }
         public Builder addOnFeatures(String... addOnFeatures) {
@@ -444,7 +445,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyArgs applicationTypeVersionsCleanupPolicy) {
-            this.applicationTypeVersionsCleanupPolicy = Output.ofNullable(applicationTypeVersionsCleanupPolicy);
+            this.applicationTypeVersionsCleanupPolicy = Codegen.ofNullable(applicationTypeVersionsCleanupPolicy);
             return this;
         }
         public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
@@ -452,7 +453,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
-            this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
+            this.azureActiveDirectory = Codegen.ofNullable(azureActiveDirectory);
             return this;
         }
         public Builder certificate(@Nullable Output<CertificateDescriptionArgs> certificate) {
@@ -460,7 +461,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificate(@Nullable CertificateDescriptionArgs certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames) {
@@ -468,7 +469,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateCommonNames(@Nullable ServerCertificateCommonNamesArgs certificateCommonNames) {
-            this.certificateCommonNames = Output.ofNullable(certificateCommonNames);
+            this.certificateCommonNames = Codegen.ofNullable(certificateCommonNames);
             return this;
         }
         public Builder clientCertificateCommonNames(@Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames) {
@@ -476,7 +477,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameArgs> clientCertificateCommonNames) {
-            this.clientCertificateCommonNames = Output.ofNullable(clientCertificateCommonNames);
+            this.clientCertificateCommonNames = Codegen.ofNullable(clientCertificateCommonNames);
             return this;
         }
         public Builder clientCertificateCommonNames(ClientCertificateCommonNameArgs... clientCertificateCommonNames) {
@@ -487,7 +488,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintArgs> clientCertificateThumbprints) {
-            this.clientCertificateThumbprints = Output.ofNullable(clientCertificateThumbprints);
+            this.clientCertificateThumbprints = Codegen.ofNullable(clientCertificateThumbprints);
             return this;
         }
         public Builder clientCertificateThumbprints(ClientCertificateThumbprintArgs... clientCertificateThumbprints) {
@@ -498,7 +499,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
-            this.clusterCodeVersion = Output.ofNullable(clusterCodeVersion);
+            this.clusterCodeVersion = Codegen.ofNullable(clusterCodeVersion);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -506,7 +507,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder diagnosticsStorageAccountConfig(@Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig) {
@@ -514,7 +515,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigArgs diagnosticsStorageAccountConfig) {
-            this.diagnosticsStorageAccountConfig = Output.ofNullable(diagnosticsStorageAccountConfig);
+            this.diagnosticsStorageAccountConfig = Codegen.ofNullable(diagnosticsStorageAccountConfig);
             return this;
         }
         public Builder eventStoreServiceEnabled(@Nullable Output<Boolean> eventStoreServiceEnabled) {
@@ -522,7 +523,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
-            this.eventStoreServiceEnabled = Output.ofNullable(eventStoreServiceEnabled);
+            this.eventStoreServiceEnabled = Codegen.ofNullable(eventStoreServiceEnabled);
             return this;
         }
         public Builder fabricSettings(@Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings) {
@@ -530,7 +531,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
-            this.fabricSettings = Output.ofNullable(fabricSettings);
+            this.fabricSettings = Codegen.ofNullable(fabricSettings);
             return this;
         }
         public Builder fabricSettings(SettingsSectionDescriptionArgs... fabricSettings) {
@@ -541,7 +542,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managementEndpoint(Output<String> managementEndpoint) {
@@ -568,7 +569,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reliabilityLevel(@Nullable String reliabilityLevel) {
-            this.reliabilityLevel = Output.ofNullable(reliabilityLevel);
+            this.reliabilityLevel = Codegen.ofNullable(reliabilityLevel);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -584,7 +585,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reverseProxyCertificate(@Nullable CertificateDescriptionArgs reverseProxyCertificate) {
-            this.reverseProxyCertificate = Output.ofNullable(reverseProxyCertificate);
+            this.reverseProxyCertificate = Codegen.ofNullable(reverseProxyCertificate);
             return this;
         }
         public Builder reverseProxyCertificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames) {
@@ -592,7 +593,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesArgs reverseProxyCertificateCommonNames) {
-            this.reverseProxyCertificateCommonNames = Output.ofNullable(reverseProxyCertificateCommonNames);
+            this.reverseProxyCertificateCommonNames = Codegen.ofNullable(reverseProxyCertificateCommonNames);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -600,7 +601,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder upgradeDescription(@Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription) {
@@ -608,7 +609,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upgradeDescription(@Nullable ClusterUpgradePolicyArgs upgradeDescription) {
-            this.upgradeDescription = Output.ofNullable(upgradeDescription);
+            this.upgradeDescription = Codegen.ofNullable(upgradeDescription);
             return this;
         }
         public Builder upgradeMode(@Nullable Output<String> upgradeMode) {
@@ -616,7 +617,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upgradeMode(@Nullable String upgradeMode) {
-            this.upgradeMode = Output.ofNullable(upgradeMode);
+            this.upgradeMode = Codegen.ofNullable(upgradeMode);
             return this;
         }
         public Builder vmImage(@Nullable Output<String> vmImage) {
@@ -624,7 +625,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmImage(@Nullable String vmImage) {
-            this.vmImage = Output.ofNullable(vmImage);
+            this.vmImage = Codegen.ofNullable(vmImage);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(addOnFeatures, applicationTypeVersionsCleanupPolicy, azureActiveDirectory, certificate, certificateCommonNames, clientCertificateCommonNames, clientCertificateThumbprints, clusterCodeVersion, clusterName, diagnosticsStorageAccountConfig, eventStoreServiceEnabled, fabricSettings, location, managementEndpoint, nodeTypes, reliabilityLevel, resourceGroupName, reverseProxyCertificate, reverseProxyCertificateCommonNames, tags, upgradeDescription, upgradeMode, vmImage);

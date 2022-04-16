@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.ProjectTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The IDs of the assets to be associated to the project.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssetIds() {
+    public Output</* @Nullable */ List<String>> assetIds() {
         return this.assetIds;
     }
     /**
@@ -44,7 +45,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The ID of the portal in which to create the project.
      * 
      */
-    public Output<String> getPortalId() {
+    public Output<String> portalId() {
         return this.portalId;
     }
     /**
@@ -58,7 +59,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The ARN of the project.
      * 
      */
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     /**
@@ -72,7 +73,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A description for the project.
      * 
      */
-    public Output</* @Nullable */ String> getProjectDescription() {
+    public Output</* @Nullable */ String> projectDescription() {
         return this.projectDescription;
     }
     /**
@@ -86,7 +87,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The ID of the project.
      * 
      */
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     /**
@@ -100,7 +101,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A friendly name for the project.
      * 
      */
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
     /**
@@ -114,7 +115,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the project.
      * 
      */
-    public Output</* @Nullable */ List<ProjectTag>> getTags() {
+    public Output</* @Nullable */ List<ProjectTag>> tags() {
         return this.tags;
     }
 
@@ -140,7 +141,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotsitewise:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotsitewise:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

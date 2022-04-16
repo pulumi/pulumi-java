@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +59,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -86,7 +87,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return The publishing profile of a gallery image version.
      * 
      */
-    public Output<GalleryApplicationVersionPublishingProfileResponse> getPublishingProfile() {
+    public Output<GalleryApplicationVersionPublishingProfileResponse> publishingProfile() {
         return this.publishingProfile;
     }
     /**
@@ -100,7 +101,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return This is the replication status of the gallery image version.
      * 
      */
-    public Output<ReplicationStatusResponse> getReplicationStatus() {
+    public Output<ReplicationStatusResponse> replicationStatus() {
         return this.replicationStatus;
     }
     /**
@@ -114,7 +115,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +129,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -154,7 +155,7 @@ public class GalleryApplicationVersion extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public GalleryApplicationVersion(String name, GalleryApplicationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:GalleryApplicationVersion", name, args == null ? GalleryApplicationVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:GalleryApplicationVersion", name, args == null ? GalleryApplicationVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GalleryApplicationVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudhsmv2.outputs.ClusterClusterCertificate;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -59,7 +60,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
      * 
      */
-    public Output<List<ClusterClusterCertificate>> getClusterCertificates() {
+    public Output<List<ClusterClusterCertificate>> clusterCertificates() {
         return this.clusterCertificates;
     }
     /**
@@ -73,7 +74,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The id of the CloudHSM cluster.
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -87,7 +88,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The state of the CloudHSM cluster.
      * 
      */
-    public Output<String> getClusterState() {
+    public Output<String> clusterState() {
         return this.clusterState;
     }
     /**
@@ -101,7 +102,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
      * 
      */
-    public Output<String> getHsmType() {
+    public Output<String> hsmType() {
         return this.hsmType;
     }
     /**
@@ -115,7 +116,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The ID of the security group associated with the CloudHSM cluster.
      * 
      */
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
     /**
@@ -129,7 +130,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The id of Cloud HSM v2 cluster backup to be restored.
      * 
      */
-    public Output</* @Nullable */ String> getSourceBackupIdentifier() {
+    public Output</* @Nullable */ String> sourceBackupIdentifier() {
         return this.sourceBackupIdentifier;
     }
     /**
@@ -143,7 +144,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The IDs of subnets in which cluster will operate.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -157,7 +158,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +172,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -185,7 +186,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The id of the VPC that the CloudHSM cluster resides in.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -211,7 +212,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudhsmv2/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudhsmv2/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

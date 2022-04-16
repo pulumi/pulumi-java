@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="finalizers")
       private final @Nullable Output<List<String>> finalizers;
 
-    public Output<List<String>> getFinalizers() {
-        return this.finalizers == null ? Output.empty() : this.finalizers;
+    public Output<List<String>> finalizers() {
+        return this.finalizers == null ? Codegen.empty() : this.finalizers;
     }
 
     public NamespaceSpecArgs(@Nullable Output<List<String>> finalizers) {
@@ -35,7 +36,7 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamespaceSpecArgs() {
-        this.finalizers = Output.empty();
+        this.finalizers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder finalizers(@Nullable List<String> finalizers) {
-            this.finalizers = Output.ofNullable(finalizers);
+            this.finalizers = Codegen.ofNullable(finalizers);
             return this;
         }
         public Builder finalizers(String... finalizers) {

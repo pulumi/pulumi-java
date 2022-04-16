@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.ManagedRuleSetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
     @Import(name="managedRuleSets")
       private final @Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
-    public Output<List<ManagedRuleSetArgs>> getManagedRuleSets() {
-        return this.managedRuleSets == null ? Output.empty() : this.managedRuleSets;
+    public Output<List<ManagedRuleSetArgs>> managedRuleSets() {
+        return this.managedRuleSets == null ? Codegen.empty() : this.managedRuleSets;
     }
 
     public ManagedRuleSetListArgs(@Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets) {
@@ -35,7 +36,7 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ManagedRuleSetListArgs() {
-        this.managedRuleSets = Output.empty();
+        this.managedRuleSets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder managedRuleSets(@Nullable List<ManagedRuleSetArgs> managedRuleSets) {
-            this.managedRuleSets = Output.ofNullable(managedRuleSets);
+            this.managedRuleSets = Codegen.ofNullable(managedRuleSets);
             return this;
         }
         public Builder managedRuleSets(ManagedRuleSetArgs... managedRuleSets) {

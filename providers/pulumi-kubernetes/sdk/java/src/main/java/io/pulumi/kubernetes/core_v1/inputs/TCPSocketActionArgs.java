@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+    public Output<String> host() {
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="port", required=true)
       private final Output<Either<Integer,String>> port;
 
-    public Output<Either<Integer,String>> getPort() {
+    public Output<Either<Integer,String>> port() {
         return this.port;
     }
 
@@ -50,8 +51,8 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TCPSocketActionArgs() {
-        this.host = Output.empty();
-        this.port = Output.empty();
+        this.host = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder port(Output<Either<Integer,String>> port) {

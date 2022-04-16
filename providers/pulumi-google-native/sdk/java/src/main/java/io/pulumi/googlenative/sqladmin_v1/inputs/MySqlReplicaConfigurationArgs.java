@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
-        return this.caCertificate == null ? Output.empty() : this.caCertificate;
+    public Output<String> caCertificate() {
+        return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
-    public Output<String> getClientCertificate() {
-        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
+    public Output<String> clientCertificate() {
+        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
-    public Output<String> getClientKey() {
-        return this.clientKey == null ? Output.empty() : this.clientKey;
+    public Output<String> clientKey() {
+        return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="connectRetryInterval")
       private final @Nullable Output<Integer> connectRetryInterval;
 
-    public Output<Integer> getConnectRetryInterval() {
-        return this.connectRetryInterval == null ? Output.empty() : this.connectRetryInterval;
+    public Output<Integer> connectRetryInterval() {
+        return this.connectRetryInterval == null ? Codegen.empty() : this.connectRetryInterval;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
 
-    public Output<String> getDumpFilePath() {
-        return this.dumpFilePath == null ? Output.empty() : this.dumpFilePath;
+    public Output<String> dumpFilePath() {
+        return this.dumpFilePath == null ? Codegen.empty() : this.dumpFilePath;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="masterHeartbeatPeriod")
       private final @Nullable Output<String> masterHeartbeatPeriod;
 
-    public Output<String> getMasterHeartbeatPeriod() {
-        return this.masterHeartbeatPeriod == null ? Output.empty() : this.masterHeartbeatPeriod;
+    public Output<String> masterHeartbeatPeriod() {
+        return this.masterHeartbeatPeriod == null ? Codegen.empty() : this.masterHeartbeatPeriod;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="sslCipher")
       private final @Nullable Output<String> sslCipher;
 
-    public Output<String> getSslCipher() {
-        return this.sslCipher == null ? Output.empty() : this.sslCipher;
+    public Output<String> sslCipher() {
+        return this.sslCipher == null ? Codegen.empty() : this.sslCipher;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="verifyServerCertificate")
       private final @Nullable Output<Boolean> verifyServerCertificate;
 
-    public Output<Boolean> getVerifyServerCertificate() {
-        return this.verifyServerCertificate == null ? Output.empty() : this.verifyServerCertificate;
+    public Output<Boolean> verifyServerCertificate() {
+        return this.verifyServerCertificate == null ? Codegen.empty() : this.verifyServerCertificate;
     }
 
     public MySqlReplicaConfigurationArgs(
@@ -167,17 +168,17 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private MySqlReplicaConfigurationArgs() {
-        this.caCertificate = Output.empty();
-        this.clientCertificate = Output.empty();
-        this.clientKey = Output.empty();
-        this.connectRetryInterval = Output.empty();
-        this.dumpFilePath = Output.empty();
-        this.kind = Output.empty();
-        this.masterHeartbeatPeriod = Output.empty();
-        this.password = Output.empty();
-        this.sslCipher = Output.empty();
-        this.username = Output.empty();
-        this.verifyServerCertificate = Output.empty();
+        this.caCertificate = Codegen.empty();
+        this.clientCertificate = Codegen.empty();
+        this.clientKey = Codegen.empty();
+        this.connectRetryInterval = Codegen.empty();
+        this.dumpFilePath = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.masterHeartbeatPeriod = Codegen.empty();
+        this.password = Codegen.empty();
+        this.sslCipher = Codegen.empty();
+        this.username = Codegen.empty();
+        this.verifyServerCertificate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Output.ofNullable(caCertificate);
+            this.caCertificate = Codegen.ofNullable(caCertificate);
             return this;
         }
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
@@ -233,7 +234,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Output.ofNullable(clientCertificate);
+            this.clientCertificate = Codegen.ofNullable(clientCertificate);
             return this;
         }
         public Builder clientKey(@Nullable Output<String> clientKey) {
@@ -241,7 +242,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Output.ofNullable(clientKey);
+            this.clientKey = Codegen.ofNullable(clientKey);
             return this;
         }
         public Builder connectRetryInterval(@Nullable Output<Integer> connectRetryInterval) {
@@ -249,7 +250,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder connectRetryInterval(@Nullable Integer connectRetryInterval) {
-            this.connectRetryInterval = Output.ofNullable(connectRetryInterval);
+            this.connectRetryInterval = Codegen.ofNullable(connectRetryInterval);
             return this;
         }
         public Builder dumpFilePath(@Nullable Output<String> dumpFilePath) {
@@ -257,7 +258,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder dumpFilePath(@Nullable String dumpFilePath) {
-            this.dumpFilePath = Output.ofNullable(dumpFilePath);
+            this.dumpFilePath = Codegen.ofNullable(dumpFilePath);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -265,7 +266,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder masterHeartbeatPeriod(@Nullable Output<String> masterHeartbeatPeriod) {
@@ -273,7 +274,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder masterHeartbeatPeriod(@Nullable String masterHeartbeatPeriod) {
-            this.masterHeartbeatPeriod = Output.ofNullable(masterHeartbeatPeriod);
+            this.masterHeartbeatPeriod = Codegen.ofNullable(masterHeartbeatPeriod);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -281,7 +282,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder sslCipher(@Nullable Output<String> sslCipher) {
@@ -289,7 +290,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sslCipher(@Nullable String sslCipher) {
-            this.sslCipher = Output.ofNullable(sslCipher);
+            this.sslCipher = Codegen.ofNullable(sslCipher);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -297,7 +298,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }
         public Builder verifyServerCertificate(@Nullable Output<Boolean> verifyServerCertificate) {
@@ -305,7 +306,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder verifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
-            this.verifyServerCertificate = Output.ofNullable(verifyServerCertificate);
+            this.verifyServerCertificate = Codegen.ofNullable(verifyServerCertificate);
             return this;
         }        public MySqlReplicaConfigurationArgs build() {
             return new MySqlReplicaConfigurationArgs(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, kind, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);

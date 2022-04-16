@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.DatasetArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return Resource name of the dataset, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -42,7 +43,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 
@@ -68,7 +69,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dataset(String name, @Nullable DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dataset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

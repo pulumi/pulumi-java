@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="delay")
       private final @Nullable Output<String> delay;
 
-    public Output<String> getDelay() {
-        return this.delay == null ? Output.empty() : this.delay;
+    public Output<String> delay() {
+        return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ServiceConvergeConfigGetArgs(
@@ -36,8 +37,8 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceConvergeConfigGetArgs() {
-        this.delay = Output.empty();
-        this.timeout = Output.empty();
+        this.delay = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder delay(@Nullable String delay) {
-            this.delay = Output.ofNullable(delay);
+            this.delay = Codegen.ofNullable(delay);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -75,7 +76,7 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ServiceConvergeConfigGetArgs build() {
             return new ServiceConvergeConfigGetArgs(delay, timeout);

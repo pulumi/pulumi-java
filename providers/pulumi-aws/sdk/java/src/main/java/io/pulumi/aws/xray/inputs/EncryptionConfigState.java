@@ -5,6 +5,7 @@ package io.pulumi.aws.xray.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class EncryptionConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+    public Output<String> keyId() {
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class EncryptionConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public EncryptionConfigState(
@@ -44,8 +45,8 @@ public final class EncryptionConfigState extends io.pulumi.resources.ResourceArg
     }
 
     private EncryptionConfigState() {
-        this.keyId = Output.empty();
-        this.type = Output.empty();
+        this.keyId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class EncryptionConfigState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -83,7 +84,7 @@ public final class EncryptionConfigState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public EncryptionConfigState build() {
             return new EncryptionConfigState(keyId, type);

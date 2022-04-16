@@ -6,6 +6,7 @@ package io.pulumi.gcp.notebooks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.LocationArgs;
 import io.pulumi.gcp.notebooks.inputs.LocationState;
@@ -45,7 +46,7 @@ public class Location extends io.pulumi.resources.CustomResource {
      * @return Name of the Location resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -61,7 +62,7 @@ public class Location extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -75,7 +76,7 @@ public class Location extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -101,7 +102,7 @@ public class Location extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Location(String name, @Nullable LocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/location:Location", name, args == null ? LocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:notebooks/location:Location", name, args == null ? LocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Location(String name, Output<String> id, @Nullable LocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

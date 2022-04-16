@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payload")
       private final @Nullable Output<String> payload;
 
-    public Output<String> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+    public Output<String> payload() {
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<String> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public PullMessageArgs(
@@ -48,8 +49,8 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PullMessageArgs() {
-        this.payload = Output.empty();
-        this.tag = Output.empty();
+        this.payload = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder payload(@Nullable String payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -87,7 +88,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public PullMessageArgs build() {
             return new PullMessageArgs(payload, tag);

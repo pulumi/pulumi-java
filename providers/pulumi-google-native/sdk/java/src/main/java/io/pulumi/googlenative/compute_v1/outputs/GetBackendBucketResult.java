@@ -91,70 +91,70 @@ public final class GetBackendBucketResult {
      * Cloud Storage bucket name.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * Cloud CDN configuration for this BackendBucket.
      * 
     */
-    public BackendBucketCdnPolicyResponse getCdnPolicy() {
+    public BackendBucketCdnPolicyResponse cdnPolicy() {
         return this.cdnPolicy;
     }
     /**
      * Creation timestamp in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * Headers that the HTTP/S load balancer should add to proxied responses.
      * 
     */
-    public List<String> getCustomResponseHeaders() {
+    public List<String> customResponseHeaders() {
         return this.customResponseHeaders;
     }
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The resource URL for the edge security policy associated with this backend bucket.
      * 
     */
-    public String getEdgeSecurityPolicy() {
+    public String edgeSecurityPolicy() {
         return this.edgeSecurityPolicy;
     }
     /**
      * If true, enable Cloud CDN for this BackendBucket.
      * 
     */
-    public Boolean getEnableCdn() {
+    public Boolean enableCdn() {
         return this.enableCdn;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Server-defined URL for the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

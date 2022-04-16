@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionCommitmentArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.LicenseResourceCommitmentResponse;
@@ -35,7 +36,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
      * 
      */
-    public Output<Boolean> getAutoRenew() {
+    public Output<Boolean> autoRenew() {
         return this.autoRenew;
     }
     /**
@@ -49,7 +50,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.
      * 
      */
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
     /**
@@ -63,7 +64,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -77,7 +78,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -91,7 +92,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Commitment end time in RFC3339 text format.
      * 
      */
-    public Output<String> getEndTimestamp() {
+    public Output<String> endTimestamp() {
         return this.endTimestamp;
     }
     /**
@@ -105,7 +106,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#commitment for commitments.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -119,7 +120,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return The license specification required as part of a license commitment.
      * 
      */
-    public Output<LicenseResourceCommitmentResponse> getLicenseResource() {
+    public Output<LicenseResourceCommitmentResponse> licenseResource() {
         return this.licenseResource;
     }
     /**
@@ -133,7 +134,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return List of source commitments to be merged into a new commitment.
      * 
      */
-    public Output<List<String>> getMergeSourceCommitments() {
+    public Output<List<String>> mergeSourceCommitments() {
         return this.mergeSourceCommitments;
     }
     /**
@@ -147,7 +148,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -161,7 +162,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
      * 
      */
-    public Output<String> getPlan() {
+    public Output<String> plan() {
         return this.plan;
     }
     /**
@@ -175,7 +176,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return URL of the region where this commitment may be used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -189,7 +190,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return List of reservations in this commitment.
      * 
      */
-    public Output<List<ReservationResponse>> getReservations() {
+    public Output<List<ReservationResponse>> reservations() {
         return this.reservations;
     }
     /**
@@ -203,7 +204,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.
      * 
      */
-    public Output<List<ResourceCommitmentResponse>> getResources() {
+    public Output<List<ResourceCommitmentResponse>> resources() {
         return this.resources;
     }
     /**
@@ -217,7 +218,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -231,7 +232,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -245,7 +246,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Source commitment to be splitted into a new commitment.
      * 
      */
-    public Output<String> getSplitSourceCommitment() {
+    public Output<String> splitSourceCommitment() {
         return this.splitSourceCommitment;
     }
     /**
@@ -259,7 +260,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Commitment start time in RFC3339 text format.
      * 
      */
-    public Output<String> getStartTimestamp() {
+    public Output<String> startTimestamp() {
         return this.startTimestamp;
     }
     /**
@@ -273,7 +274,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -287,7 +288,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return An optional, human-readable explanation of the status.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -301,7 +302,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @return The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -327,7 +328,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionCommitment(String name, RegionCommitmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionCommitment", name, args == null ? RegionCommitmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionCommitment", name, args == null ? RegionCommitmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionCommitment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

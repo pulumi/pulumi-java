@@ -5,6 +5,7 @@ package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,8 +33,8 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
     @Import(name="refValue")
       private final @Nullable Output<String> refValue;
 
-    public Output<String> getRefValue() {
-        return this.refValue == null ? Output.empty() : this.refValue;
+    public Output<String> refValue() {
+        return this.refValue == null ? Codegen.empty() : this.refValue;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+    public Output<String> stringValue() {
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     public PipelineDefinitionPipelineObjectFieldGetArgs(
@@ -57,9 +58,9 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
     }
 
     private PipelineDefinitionPipelineObjectFieldGetArgs() {
-        this.key = Output.empty();
-        this.refValue = Output.empty();
-        this.stringValue = Output.empty();
+        this.key = Codegen.empty();
+        this.refValue = Codegen.empty();
+        this.stringValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
             return this;
         }
         public Builder refValue(@Nullable String refValue) {
-            this.refValue = Output.ofNullable(refValue);
+            this.refValue = Codegen.ofNullable(refValue);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -107,7 +108,7 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }        public PipelineDefinitionPipelineObjectFieldGetArgs build() {
             return new PipelineDefinitionPipelineObjectFieldGetArgs(key, refValue, stringValue);

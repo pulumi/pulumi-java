@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.AttestationAuthorityHintArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="hint")
       private final @Nullable Output<AttestationAuthorityHintArgs> hint;
 
-    public Output<AttestationAuthorityHintArgs> getHint() {
-        return this.hint == null ? Output.empty() : this.hint;
+    public Output<AttestationAuthorityHintArgs> hint() {
+        return this.hint == null ? Codegen.empty() : this.hint;
     }
 
     public AttestationAuthorityArgs(@Nullable Output<AttestationAuthorityHintArgs> hint) {
@@ -30,7 +31,7 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     private AttestationAuthorityArgs() {
-        this.hint = Output.empty();
+        this.hint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder hint(@Nullable AttestationAuthorityHintArgs hint) {
-            this.hint = Output.ofNullable(hint);
+            this.hint = Codegen.ofNullable(hint);
             return this;
         }        public AttestationAuthorityArgs build() {
             return new AttestationAuthorityArgs(hint);

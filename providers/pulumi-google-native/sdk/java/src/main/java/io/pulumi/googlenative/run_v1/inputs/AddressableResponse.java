@@ -19,7 +19,7 @@ public final class AddressableResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -24,7 +24,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipv4CidrBlock", required=true)
       private final String ipv4CidrBlock;
 
-    public String getIpv4CidrBlock() {
+    public String ipv4CidrBlock() {
         return this.ipv4CidrBlock;
     }
 
@@ -46,7 +46,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="useServiceNetworking", required=true)
       private final Boolean useServiceNetworking;
 
-    public Boolean getUseServiceNetworking() {
+    public Boolean useServiceNetworking() {
         return this.useServiceNetworking;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     @Import(name="certificateAuthorityArns", required=true)
       private final Output<List<String>> certificateAuthorityArns;
 
-    public Output<List<String>> getCertificateAuthorityArns() {
+    public Output<List<String>> certificateAuthorityArns() {
         return this.certificateAuthorityArns;
     }
 
@@ -30,7 +31,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     }
 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs() {
-        this.certificateAuthorityArns = Output.empty();
+        this.certificateAuthorityArns = Codegen.empty();
     }
 
     public static Builder builder() {

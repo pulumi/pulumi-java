@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     @Import(name="revisionId", required=true)
       private final Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
 
@@ -36,8 +37,8 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(
@@ -48,8 +49,8 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     }
 
     private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs() {
-        this.revisionId = Output.empty();
-        this.url = Output.empty();
+        this.revisionId = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(revisionId, url);

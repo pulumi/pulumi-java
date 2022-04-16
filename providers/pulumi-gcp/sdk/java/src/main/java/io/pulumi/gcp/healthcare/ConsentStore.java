@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.ConsentStoreArgs;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreState;
@@ -49,7 +50,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
     /**
@@ -65,7 +66,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    public Output</* @Nullable */ String> getDefaultConsentTtl() {
+    public Output</* @Nullable */ String> defaultConsentTtl() {
         return this.defaultConsentTtl;
     }
     /**
@@ -79,7 +80,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * @return If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableConsentCreateOnUpdate() {
+    public Output</* @Nullable */ Boolean> enableConsentCreateOnUpdate() {
         return this.enableConsentCreateOnUpdate;
     }
     /**
@@ -107,7 +108,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -123,7 +124,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * "consent1"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -149,7 +150,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConsentStore(String name, ConsentStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/consentStore:ConsentStore", name, args == null ? ConsentStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/consentStore:ConsentStore", name, args == null ? ConsentStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConsentStore(String name, Output<String> id, @Nullable ConsentStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -13,6 +13,7 @@ import io.pulumi.azurenative.securityandcompliance.inputs.ServiceExportConfigura
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,8 +35,8 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accessPolicies")
       private final @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
 
-    public Output<List<ServiceAccessPolicyEntryArgs>> getAccessPolicies() {
-        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
+    public Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies() {
+        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
 
-    public Output<ServiceAuthenticationConfigurationInfoArgs> getAuthenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Output.empty() : this.authenticationConfiguration;
+    public Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration() {
+        return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="corsConfiguration")
       private final @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration;
 
-    public Output<ServiceCorsConfigurationInfoArgs> getCorsConfiguration() {
-        return this.corsConfiguration == null ? Output.empty() : this.corsConfiguration;
+    public Output<ServiceCorsConfigurationInfoArgs> corsConfiguration() {
+        return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cosmosDbConfiguration")
       private final @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
 
-    public Output<ServiceCosmosDbConfigurationInfoArgs> getCosmosDbConfiguration() {
-        return this.cosmosDbConfiguration == null ? Output.empty() : this.cosmosDbConfiguration;
+    public Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration() {
+        return this.cosmosDbConfiguration == null ? Codegen.empty() : this.cosmosDbConfiguration;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="exportConfiguration")
       private final @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration;
 
-    public Output<ServiceExportConfigurationInfoArgs> getExportConfiguration() {
-        return this.exportConfiguration == null ? Output.empty() : this.exportConfiguration;
+    public Output<ServiceExportConfigurationInfoArgs> exportConfiguration() {
+        return this.exportConfiguration == null ? Codegen.empty() : this.exportConfiguration;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Output.empty() : this.privateEndpointConnections;
+    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
+        return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     public ServicesPropertiesArgs(
@@ -122,13 +123,13 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ServicesPropertiesArgs() {
-        this.accessPolicies = Output.empty();
-        this.authenticationConfiguration = Output.empty();
-        this.corsConfiguration = Output.empty();
-        this.cosmosDbConfiguration = Output.empty();
-        this.exportConfiguration = Output.empty();
-        this.privateEndpointConnections = Output.empty();
-        this.publicNetworkAccess = Output.empty();
+        this.accessPolicies = Codegen.empty();
+        this.authenticationConfiguration = Codegen.empty();
+        this.corsConfiguration = Codegen.empty();
+        this.cosmosDbConfiguration = Codegen.empty();
+        this.exportConfiguration = Codegen.empty();
+        this.privateEndpointConnections = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder accessPolicies(@Nullable List<ServiceAccessPolicyEntryArgs> accessPolicies) {
-            this.accessPolicies = Output.ofNullable(accessPolicies);
+            this.accessPolicies = Codegen.ofNullable(accessPolicies);
             return this;
         }
         public Builder accessPolicies(ServiceAccessPolicyEntryArgs... accessPolicies) {
@@ -179,7 +180,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
+            this.authenticationConfiguration = Codegen.ofNullable(authenticationConfiguration);
             return this;
         }
         public Builder corsConfiguration(@Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration) {
@@ -187,7 +188,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoArgs corsConfiguration) {
-            this.corsConfiguration = Output.ofNullable(corsConfiguration);
+            this.corsConfiguration = Codegen.ofNullable(corsConfiguration);
             return this;
         }
         public Builder cosmosDbConfiguration(@Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration) {
@@ -195,7 +196,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoArgs cosmosDbConfiguration) {
-            this.cosmosDbConfiguration = Output.ofNullable(cosmosDbConfiguration);
+            this.cosmosDbConfiguration = Codegen.ofNullable(cosmosDbConfiguration);
             return this;
         }
         public Builder exportConfiguration(@Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration) {
@@ -203,7 +204,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoArgs exportConfiguration) {
-            this.exportConfiguration = Output.ofNullable(exportConfiguration);
+            this.exportConfiguration = Codegen.ofNullable(exportConfiguration);
             return this;
         }
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
@@ -211,7 +212,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
+            this.privateEndpointConnections = Codegen.ofNullable(privateEndpointConnections);
             return this;
         }
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
@@ -222,7 +223,7 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }        public ServicesPropertiesArgs build() {
             return new ServicesPropertiesArgs(accessPolicies, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, publicNetworkAccess);

@@ -12,6 +12,7 @@ import io.pulumi.azurenative.apimanagement.inputs.SamplingSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alwaysLog")
       private final @Nullable Output<Either<String,AlwaysLog>> alwaysLog;
 
-    public Output<Either<String,AlwaysLog>> getAlwaysLog() {
-        return this.alwaysLog == null ? Output.empty() : this.alwaysLog;
+    public Output<Either<String,AlwaysLog>> alwaysLog() {
+        return this.alwaysLog == null ? Codegen.empty() : this.alwaysLog;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backend")
       private final @Nullable Output<PipelineDiagnosticSettingsArgs> backend;
 
-    public Output<PipelineDiagnosticSettingsArgs> getBackend() {
-        return this.backend == null ? Output.empty() : this.backend;
+    public Output<PipelineDiagnosticSettingsArgs> backend() {
+        return this.backend == null ? Codegen.empty() : this.backend;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diagnosticId")
       private final @Nullable Output<String> diagnosticId;
 
-    public Output<String> getDiagnosticId() {
-        return this.diagnosticId == null ? Output.empty() : this.diagnosticId;
+    public Output<String> diagnosticId() {
+        return this.diagnosticId == null ? Codegen.empty() : this.diagnosticId;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frontend")
       private final @Nullable Output<PipelineDiagnosticSettingsArgs> frontend;
 
-    public Output<PipelineDiagnosticSettingsArgs> getFrontend() {
-        return this.frontend == null ? Output.empty() : this.frontend;
+    public Output<PipelineDiagnosticSettingsArgs> frontend() {
+        return this.frontend == null ? Codegen.empty() : this.frontend;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpCorrelationProtocol")
       private final @Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
 
-    public Output<Either<String,HttpCorrelationProtocol>> getHttpCorrelationProtocol() {
-        return this.httpCorrelationProtocol == null ? Output.empty() : this.httpCorrelationProtocol;
+    public Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol() {
+        return this.httpCorrelationProtocol == null ? Codegen.empty() : this.httpCorrelationProtocol;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logClientIp")
       private final @Nullable Output<Boolean> logClientIp;
 
-    public Output<Boolean> getLogClientIp() {
-        return this.logClientIp == null ? Output.empty() : this.logClientIp;
+    public Output<Boolean> logClientIp() {
+        return this.logClientIp == null ? Codegen.empty() : this.logClientIp;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggerId", required=true)
       private final Output<String> loggerId;
 
-    public Output<String> getLoggerId() {
+    public Output<String> loggerId() {
         return this.loggerId;
     }
 
@@ -106,8 +107,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationNameFormat")
       private final @Nullable Output<Either<String,OperationNameFormat>> operationNameFormat;
 
-    public Output<Either<String,OperationNameFormat>> getOperationNameFormat() {
-        return this.operationNameFormat == null ? Output.empty() : this.operationNameFormat;
+    public Output<Either<String,OperationNameFormat>> operationNameFormat() {
+        return this.operationNameFormat == null ? Codegen.empty() : this.operationNameFormat;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,8 +129,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sampling")
       private final @Nullable Output<SamplingSettingsArgs> sampling;
 
-    public Output<SamplingSettingsArgs> getSampling() {
-        return this.sampling == null ? Output.empty() : this.sampling;
+    public Output<SamplingSettingsArgs> sampling() {
+        return this.sampling == null ? Codegen.empty() : this.sampling;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -150,8 +151,8 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verbosity")
       private final @Nullable Output<Either<String,Verbosity>> verbosity;
 
-    public Output<Either<String,Verbosity>> getVerbosity() {
-        return this.verbosity == null ? Output.empty() : this.verbosity;
+    public Output<Either<String,Verbosity>> verbosity() {
+        return this.verbosity == null ? Codegen.empty() : this.verbosity;
     }
 
     public DiagnosticArgs(
@@ -182,18 +183,18 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiagnosticArgs() {
-        this.alwaysLog = Output.empty();
-        this.backend = Output.empty();
-        this.diagnosticId = Output.empty();
-        this.frontend = Output.empty();
-        this.httpCorrelationProtocol = Output.empty();
-        this.logClientIp = Output.empty();
-        this.loggerId = Output.empty();
-        this.operationNameFormat = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sampling = Output.empty();
-        this.serviceName = Output.empty();
-        this.verbosity = Output.empty();
+        this.alwaysLog = Codegen.empty();
+        this.backend = Codegen.empty();
+        this.diagnosticId = Codegen.empty();
+        this.frontend = Codegen.empty();
+        this.httpCorrelationProtocol = Codegen.empty();
+        this.logClientIp = Codegen.empty();
+        this.loggerId = Codegen.empty();
+        this.operationNameFormat = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sampling = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.verbosity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alwaysLog(@Nullable Either<String,AlwaysLog> alwaysLog) {
-            this.alwaysLog = Output.ofNullable(alwaysLog);
+            this.alwaysLog = Codegen.ofNullable(alwaysLog);
             return this;
         }
         public Builder backend(@Nullable Output<PipelineDiagnosticSettingsArgs> backend) {
@@ -251,7 +252,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backend(@Nullable PipelineDiagnosticSettingsArgs backend) {
-            this.backend = Output.ofNullable(backend);
+            this.backend = Codegen.ofNullable(backend);
             return this;
         }
         public Builder diagnosticId(@Nullable Output<String> diagnosticId) {
@@ -259,7 +260,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diagnosticId(@Nullable String diagnosticId) {
-            this.diagnosticId = Output.ofNullable(diagnosticId);
+            this.diagnosticId = Codegen.ofNullable(diagnosticId);
             return this;
         }
         public Builder frontend(@Nullable Output<PipelineDiagnosticSettingsArgs> frontend) {
@@ -267,7 +268,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frontend(@Nullable PipelineDiagnosticSettingsArgs frontend) {
-            this.frontend = Output.ofNullable(frontend);
+            this.frontend = Codegen.ofNullable(frontend);
             return this;
         }
         public Builder httpCorrelationProtocol(@Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol) {
@@ -275,7 +276,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpCorrelationProtocol(@Nullable Either<String,HttpCorrelationProtocol> httpCorrelationProtocol) {
-            this.httpCorrelationProtocol = Output.ofNullable(httpCorrelationProtocol);
+            this.httpCorrelationProtocol = Codegen.ofNullable(httpCorrelationProtocol);
             return this;
         }
         public Builder logClientIp(@Nullable Output<Boolean> logClientIp) {
@@ -283,7 +284,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logClientIp(@Nullable Boolean logClientIp) {
-            this.logClientIp = Output.ofNullable(logClientIp);
+            this.logClientIp = Codegen.ofNullable(logClientIp);
             return this;
         }
         public Builder loggerId(Output<String> loggerId) {
@@ -299,7 +300,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationNameFormat(@Nullable Either<String,OperationNameFormat> operationNameFormat) {
-            this.operationNameFormat = Output.ofNullable(operationNameFormat);
+            this.operationNameFormat = Codegen.ofNullable(operationNameFormat);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -315,7 +316,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sampling(@Nullable SamplingSettingsArgs sampling) {
-            this.sampling = Output.ofNullable(sampling);
+            this.sampling = Codegen.ofNullable(sampling);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -331,7 +332,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder verbosity(@Nullable Either<String,Verbosity> verbosity) {
-            this.verbosity = Output.ofNullable(verbosity);
+            this.verbosity = Codegen.ofNullable(verbosity);
             return this;
         }        public DiagnosticArgs build() {
             return new DiagnosticArgs(alwaysLog, backend, diagnosticId, frontend, httpCorrelationProtocol, logClientIp, loggerId, operationNameFormat, resourceGroupName, sampling, serviceName, verbosity);

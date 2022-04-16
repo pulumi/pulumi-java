@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="humanTaskUiName", required=true)
       private final Output<String> humanTaskUiName;
 
-    public Output<String> getHumanTaskUiName() {
+    public Output<String> humanTaskUiName() {
         return this.humanTaskUiName;
     }
 
@@ -34,8 +35,8 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uiTemplate", required=true)
       private final Output<HumanTaskUIUiTemplateArgs> uiTemplate;
 
-    public Output<HumanTaskUIUiTemplateArgs> getUiTemplate() {
+    public Output<HumanTaskUIUiTemplateArgs> uiTemplate() {
         return this.uiTemplate;
     }
 
@@ -59,9 +60,9 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HumanTaskUIArgs() {
-        this.humanTaskUiName = Output.empty();
-        this.tags = Output.empty();
-        this.uiTemplate = Output.empty();
+        this.humanTaskUiName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uiTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uiTemplate(Output<HumanTaskUIUiTemplateArgs> uiTemplate) {

@@ -25,14 +25,14 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends io.pulumi.resourc
     @Import(name="items", required=true)
       private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
 
-    public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> getItems() {
+    public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items() {
         return this.items;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

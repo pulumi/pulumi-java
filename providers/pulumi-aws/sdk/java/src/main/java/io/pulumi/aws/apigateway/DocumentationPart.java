@@ -10,6 +10,7 @@ import io.pulumi.aws.apigateway.outputs.DocumentationPartLocation;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
      * @return The location of the targeted API entity of the to-be-created documentation part. See below.
      * 
      */
-    public Output<DocumentationPartLocation> getLocation() {
+    public Output<DocumentationPartLocation> location() {
         return this.location;
     }
     /**
@@ -54,7 +55,7 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
      * @return A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
      * 
      */
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties;
     }
     /**
@@ -68,7 +69,7 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated Rest API
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -94,7 +95,7 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DocumentationPart(String name, DocumentationPartArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/documentationPart:DocumentationPart", name, args == null ? DocumentationPartArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/documentationPart:DocumentationPart", name, args == null ? DocumentationPartArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DocumentationPart(String name, Output<String> id, @Nullable DocumentationPartState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

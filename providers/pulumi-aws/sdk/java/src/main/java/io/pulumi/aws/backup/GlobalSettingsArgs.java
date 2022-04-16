@@ -5,6 +5,7 @@ package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class GlobalSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalSettings", required=true)
       private final Output<Map<String,String>> globalSettings;
 
-    public Output<Map<String,String>> getGlobalSettings() {
+    public Output<Map<String,String>> globalSettings() {
         return this.globalSettings;
     }
 
@@ -30,7 +31,7 @@ public final class GlobalSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalSettingsArgs() {
-        this.globalSettings = Output.empty();
+        this.globalSettings = Codegen.empty();
     }
 
     public static Builder builder() {

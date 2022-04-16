@@ -28,7 +28,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="action")
       private final @Nullable String action;
 
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -39,7 +39,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -65,7 +65,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="headers")
       private final @Nullable Map<String,List<String>> headers;
 
-    public Map<String,List<String>> getHeaders() {
+    public Map<String,List<String>> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
 
@@ -79,7 +79,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -90,7 +90,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -101,7 +101,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -112,7 +112,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="subnetMask")
       private final @Nullable String subnetMask;
 
-    public Optional<String> getSubnetMask() {
+    public Optional<String> subnetMask() {
         return this.subnetMask == null ? Optional.empty() : Optional.ofNullable(this.subnetMask);
     }
 
@@ -123,7 +123,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="subnetTrafficTag")
       private final @Nullable Integer subnetTrafficTag;
 
-    public Optional<Integer> getSubnetTrafficTag() {
+    public Optional<Integer> subnetTrafficTag() {
         return this.subnetTrafficTag == null ? Optional.empty() : Optional.ofNullable(this.subnetTrafficTag);
     }
 
@@ -134,7 +134,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="tag")
       private final @Nullable String tag;
 
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 
@@ -145,7 +145,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="vnetSubnetResourceId")
       private final @Nullable String vnetSubnetResourceId;
 
-    public Optional<String> getVnetSubnetResourceId() {
+    public Optional<String> vnetSubnetResourceId() {
         return this.vnetSubnetResourceId == null ? Optional.empty() : Optional.ofNullable(this.vnetSubnetResourceId);
     }
 
@@ -156,7 +156,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="vnetTrafficTag")
       private final @Nullable Integer vnetTrafficTag;
 
-    public Optional<Integer> getVnetTrafficTag() {
+    public Optional<Integer> vnetTrafficTag() {
         return this.vnetTrafficTag == null ? Optional.empty() : Optional.ofNullable(this.vnetTrafficTag);
     }
 

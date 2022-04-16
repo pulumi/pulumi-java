@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.AgentArgs;
 import io.pulumi.gcp.diagflow.inputs.AgentState;
@@ -63,7 +64,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      *   Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
      * 
      */
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -81,7 +82,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * from the API will be shown in the [avatarUriBackend] field.
      * 
      */
-    public Output</* @Nullable */ String> getAvatarUri() {
+    public Output</* @Nullable */ String> avatarUri() {
         return this.avatarUri;
     }
     /**
@@ -97,7 +98,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * [avatarUri] field can be used.
      * 
      */
-    public Output<String> getAvatarUriBackend() {
+    public Output<String> avatarUriBackend() {
         return this.avatarUriBackend;
     }
     /**
@@ -119,7 +120,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * default of 0.3 is used.
      * 
      */
-    public Output</* @Nullable */ Double> getClassificationThreshold() {
+    public Output</* @Nullable */ Double> classificationThreshold() {
         return this.classificationThreshold;
     }
     /**
@@ -135,7 +136,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * for a list of the currently supported language codes. This field cannot be updated after creation.
      * 
      */
-    public Output<String> getDefaultLanguageCode() {
+    public Output<String> defaultLanguageCode() {
         return this.defaultLanguageCode;
     }
     /**
@@ -149,7 +150,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -163,7 +164,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The name of this agent.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -177,7 +178,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Determines whether this agent should log conversation queries.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableLogging() {
+    public Output</* @Nullable */ Boolean> enableLogging() {
         return this.enableLogging;
     }
     /**
@@ -201,7 +202,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      *   Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
      * 
      */
-    public Output<String> getMatchMode() {
+    public Output<String> matchMode() {
         return this.matchMode;
     }
     /**
@@ -217,7 +218,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -231,7 +232,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The list of all languages supported by this agent (except for the defaultLanguageCode).
      * 
      */
-    public Output</* @Nullable */ List<String>> getSupportedLanguageCodes() {
+    public Output</* @Nullable */ List<String>> supportedLanguageCodes() {
         return this.supportedLanguageCodes;
     }
     /**
@@ -255,7 +256,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      *   the the provider state and Dialogflow if the agent tier is changed outside of the provider.
      * 
      */
-    public Output</* @Nullable */ String> getTier() {
+    public Output</* @Nullable */ String> tier() {
         return this.tier;
     }
     /**
@@ -271,7 +272,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Europe/Paris.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 
@@ -297,7 +298,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Agent(String name, AgentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/agent:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/agent:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Agent(String name, Output<String> id, @Nullable AgentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

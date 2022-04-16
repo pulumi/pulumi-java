@@ -11,6 +11,7 @@ import io.pulumi.aws.cfg.outputs.RemediationConfigurationParameter;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -46,7 +47,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return ARN of the Config Remediation Configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +61,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Remediation is triggered automatically if `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutomatic() {
+    public Output</* @Nullable */ Boolean> automatic() {
         return this.automatic;
     }
     /**
@@ -74,7 +75,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Name of the AWS Config rule.
      * 
      */
-    public Output<String> getConfigRuleName() {
+    public Output<String> configRuleName() {
         return this.configRuleName;
     }
     /**
@@ -88,7 +89,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Configuration block for execution controls. See below.
      * 
      */
-    public Output</* @Nullable */ RemediationConfigurationExecutionControls> getExecutionControls() {
+    public Output</* @Nullable */ RemediationConfigurationExecutionControls> executionControls() {
         return this.executionControls;
     }
     /**
@@ -102,7 +103,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Maximum number of failed attempts for auto-remediation. If you do not select a number, the default is 5.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumAutomaticAttempts() {
+    public Output</* @Nullable */ Integer> maximumAutomaticAttempts() {
         return this.maximumAutomaticAttempts;
     }
     /**
@@ -116,7 +117,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Can be specified multiple times for each parameter. Each parameter block supports arguments below.
      * 
      */
-    public Output</* @Nullable */ List<RemediationConfigurationParameter>> getParameters() {
+    public Output</* @Nullable */ List<RemediationConfigurationParameter>> parameters() {
         return this.parameters;
     }
     /**
@@ -130,7 +131,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Type of resource.
      * 
      */
-    public Output</* @Nullable */ String> getPropResourceType() {
+    public Output</* @Nullable */ String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -144,7 +145,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Maximum time in seconds that AWS Config runs auto-remediation. If you do not select a number, the default is 60 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetryAttemptSeconds() {
+    public Output</* @Nullable */ Integer> retryAttemptSeconds() {
         return this.retryAttemptSeconds;
     }
     /**
@@ -158,7 +159,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Target ID is the name of the public document.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
     /**
@@ -172,7 +173,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Type of the target. Target executes remediation. For example, SSM document.
      * 
      */
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType;
     }
     /**
@@ -186,7 +187,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @return Version of the target. For example, version of the SSM document
      * 
      */
-    public Output</* @Nullable */ String> getTargetVersion() {
+    public Output</* @Nullable */ String> targetVersion() {
         return this.targetVersion;
     }
 
@@ -212,7 +213,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public RemediationConfiguration(String name, RemediationConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/remediationConfiguration:RemediationConfiguration", name, args == null ? RemediationConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/remediationConfiguration:RemediationConfiguration", name, args == null ? RemediationConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RemediationConfiguration(String name, Output<String> id, @Nullable RemediationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

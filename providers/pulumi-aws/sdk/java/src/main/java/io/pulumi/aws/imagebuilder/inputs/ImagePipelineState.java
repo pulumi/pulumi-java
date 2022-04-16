@@ -7,6 +7,7 @@ import io.pulumi.aws.imagebuilder.inputs.ImagePipelineImageTestsConfigurationGet
 import io.pulumi.aws.imagebuilder.inputs.ImagePipelineScheduleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
-    public Output<String> getDateCreated() {
-        return this.dateCreated == null ? Output.empty() : this.dateCreated;
+    public Output<String> dateCreated() {
+        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateLastRun")
       private final @Nullable Output<String> dateLastRun;
 
-    public Output<String> getDateLastRun() {
-        return this.dateLastRun == null ? Output.empty() : this.dateLastRun;
+    public Output<String> dateLastRun() {
+        return this.dateLastRun == null ? Codegen.empty() : this.dateLastRun;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateNextRun")
       private final @Nullable Output<String> dateNextRun;
 
-    public Output<String> getDateNextRun() {
-        return this.dateNextRun == null ? Output.empty() : this.dateNextRun;
+    public Output<String> dateNextRun() {
+        return this.dateNextRun == null ? Codegen.empty() : this.dateNextRun;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateUpdated")
       private final @Nullable Output<String> dateUpdated;
 
-    public Output<String> getDateUpdated() {
-        return this.dateUpdated == null ? Output.empty() : this.dateUpdated;
+    public Output<String> dateUpdated() {
+        return this.dateUpdated == null ? Codegen.empty() : this.dateUpdated;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> getDistributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Output.empty() : this.distributionConfigurationArn;
+    public Output<String> distributionConfigurationArn() {
+        return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> getEnhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Output.empty() : this.enhancedImageMetadataEnabled;
+    public Output<Boolean> enhancedImageMetadataEnabled() {
+        return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageRecipeArn")
       private final @Nullable Output<String> imageRecipeArn;
 
-    public Output<String> getImageRecipeArn() {
-        return this.imageRecipeArn == null ? Output.empty() : this.imageRecipeArn;
+    public Output<String> imageRecipeArn() {
+        return this.imageRecipeArn == null ? Codegen.empty() : this.imageRecipeArn;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
-    public Output<ImagePipelineImageTestsConfigurationGetArgs> getImageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Output.empty() : this.imageTestsConfiguration;
+    public Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration() {
+        return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfigurationArn")
       private final @Nullable Output<String> infrastructureConfigurationArn;
 
-    public Output<String> getInfrastructureConfigurationArn() {
-        return this.infrastructureConfigurationArn == null ? Output.empty() : this.infrastructureConfigurationArn;
+    public Output<String> infrastructureConfigurationArn() {
+        return this.infrastructureConfigurationArn == null ? Codegen.empty() : this.infrastructureConfigurationArn;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+    public Output<String> platform() {
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ImagePipelineScheduleGetArgs> schedule;
 
-    public Output<ImagePipelineScheduleGetArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<ImagePipelineScheduleGetArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ImagePipelineState(
@@ -243,23 +244,23 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImagePipelineState() {
-        this.arn = Output.empty();
-        this.dateCreated = Output.empty();
-        this.dateLastRun = Output.empty();
-        this.dateNextRun = Output.empty();
-        this.dateUpdated = Output.empty();
-        this.description = Output.empty();
-        this.distributionConfigurationArn = Output.empty();
-        this.enhancedImageMetadataEnabled = Output.empty();
-        this.imageRecipeArn = Output.empty();
-        this.imageTestsConfiguration = Output.empty();
-        this.infrastructureConfigurationArn = Output.empty();
-        this.name = Output.empty();
-        this.platform = Output.empty();
-        this.schedule = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.dateCreated = Codegen.empty();
+        this.dateLastRun = Codegen.empty();
+        this.dateNextRun = Codegen.empty();
+        this.dateUpdated = Codegen.empty();
+        this.description = Codegen.empty();
+        this.distributionConfigurationArn = Codegen.empty();
+        this.enhancedImageMetadataEnabled = Codegen.empty();
+        this.imageRecipeArn = Codegen.empty();
+        this.imageTestsConfiguration = Codegen.empty();
+        this.infrastructureConfigurationArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -319,7 +320,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
@@ -327,7 +328,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Output.ofNullable(dateCreated);
+            this.dateCreated = Codegen.ofNullable(dateCreated);
             return this;
         }
         public Builder dateLastRun(@Nullable Output<String> dateLastRun) {
@@ -335,7 +336,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dateLastRun(@Nullable String dateLastRun) {
-            this.dateLastRun = Output.ofNullable(dateLastRun);
+            this.dateLastRun = Codegen.ofNullable(dateLastRun);
             return this;
         }
         public Builder dateNextRun(@Nullable Output<String> dateNextRun) {
@@ -343,7 +344,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dateNextRun(@Nullable String dateNextRun) {
-            this.dateNextRun = Output.ofNullable(dateNextRun);
+            this.dateNextRun = Codegen.ofNullable(dateNextRun);
             return this;
         }
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
@@ -351,7 +352,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dateUpdated(@Nullable String dateUpdated) {
-            this.dateUpdated = Output.ofNullable(dateUpdated);
+            this.dateUpdated = Codegen.ofNullable(dateUpdated);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -359,7 +360,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
@@ -367,7 +368,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Output.ofNullable(distributionConfigurationArn);
+            this.distributionConfigurationArn = Codegen.ofNullable(distributionConfigurationArn);
             return this;
         }
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
@@ -375,7 +376,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Output.ofNullable(enhancedImageMetadataEnabled);
+            this.enhancedImageMetadataEnabled = Codegen.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
         public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
@@ -383,7 +384,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
-            this.imageRecipeArn = Output.ofNullable(imageRecipeArn);
+            this.imageRecipeArn = Codegen.ofNullable(imageRecipeArn);
             return this;
         }
         public Builder imageTestsConfiguration(@Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration) {
@@ -391,7 +392,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageTestsConfiguration(@Nullable ImagePipelineImageTestsConfigurationGetArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Output.ofNullable(imageTestsConfiguration);
+            this.imageTestsConfiguration = Codegen.ofNullable(imageTestsConfiguration);
             return this;
         }
         public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
@@ -399,7 +400,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Output.ofNullable(infrastructureConfigurationArn);
+            this.infrastructureConfigurationArn = Codegen.ofNullable(infrastructureConfigurationArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -407,7 +408,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder platform(@Nullable Output<String> platform) {
@@ -415,7 +416,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable String platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder schedule(@Nullable Output<ImagePipelineScheduleGetArgs> schedule) {
@@ -423,7 +424,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable ImagePipelineScheduleGetArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -431,7 +432,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -439,7 +440,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -447,7 +448,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ImagePipelineState build() {
             return new ImagePipelineState(arn, dateCreated, dateLastRun, dateNextRun, dateUpdated, description, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, name, platform, schedule, status, tags, tagsAll);

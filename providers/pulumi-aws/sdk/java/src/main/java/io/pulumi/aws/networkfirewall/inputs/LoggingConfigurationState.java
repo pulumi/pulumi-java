@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
     @Import(name="firewallArn")
       private final @Nullable Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
-        return this.firewallArn == null ? Output.empty() : this.firewallArn;
+    public Output<String> firewallArn() {
+        return this.firewallArn == null ? Codegen.empty() : this.firewallArn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
     @Import(name="loggingConfiguration")
       private final @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Output<LoggingConfigurationLoggingConfigurationGetArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
+    public Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration() {
+        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
     public LoggingConfigurationState(
@@ -45,8 +46,8 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
     }
 
     private LoggingConfigurationState() {
-        this.firewallArn = Output.empty();
-        this.loggingConfiguration = Output.empty();
+        this.firewallArn = Codegen.empty();
+        this.loggingConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder firewallArn(@Nullable String firewallArn) {
-            this.firewallArn = Output.ofNullable(firewallArn);
+            this.firewallArn = Codegen.ofNullable(firewallArn);
             return this;
         }
         public Builder loggingConfiguration(@Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
@@ -84,7 +85,7 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder loggingConfiguration(@Nullable LoggingConfigurationLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
             return this;
         }        public LoggingConfigurationState build() {
             return new LoggingConfigurationState(firewallArn, loggingConfiguration);

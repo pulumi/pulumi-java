@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InsightFiltersNetworkDestinationIpv4Args extends io.pulumi.re
     @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
 
@@ -29,7 +30,7 @@ public final class InsightFiltersNetworkDestinationIpv4Args extends io.pulumi.re
     }
 
     private InsightFiltersNetworkDestinationIpv4Args() {
-        this.cidr = Output.empty();
+        this.cidr = Codegen.empty();
     }
 
     public static Builder builder() {

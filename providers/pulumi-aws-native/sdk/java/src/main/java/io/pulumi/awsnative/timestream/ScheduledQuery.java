@@ -13,6 +13,7 @@ import io.pulumi.awsnative.timestream.outputs.ScheduledQueryTargetConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -26,37 +27,37 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="clientToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientToken;
 
-    public Output</* @Nullable */ String> getClientToken() {
+    public Output</* @Nullable */ String> clientToken() {
         return this.clientToken;
     }
     @Export(name="errorReportConfiguration", type=ScheduledQueryErrorReportConfiguration.class, parameters={})
     private Output<ScheduledQueryErrorReportConfiguration> errorReportConfiguration;
 
-    public Output<ScheduledQueryErrorReportConfiguration> getErrorReportConfiguration() {
+    public Output<ScheduledQueryErrorReportConfiguration> errorReportConfiguration() {
         return this.errorReportConfiguration;
     }
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     @Export(name="notificationConfiguration", type=ScheduledQueryNotificationConfiguration.class, parameters={})
     private Output<ScheduledQueryNotificationConfiguration> notificationConfiguration;
 
-    public Output<ScheduledQueryNotificationConfiguration> getNotificationConfiguration() {
+    public Output<ScheduledQueryNotificationConfiguration> notificationConfiguration() {
         return this.notificationConfiguration;
     }
     @Export(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
     /**
@@ -70,7 +71,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return Configuration for error reporting. Error reports will be generated when a problem is encountered when writing the query results.
      * 
      */
-    public Output<String> getSQErrorReportConfiguration() {
+    public Output<String> sQErrorReportConfiguration() {
         return this.sQErrorReportConfiguration;
     }
     /**
@@ -84,7 +85,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return The Amazon KMS key used to encrypt the scheduled query resource, at-rest. If the Amazon KMS key is not specified, the scheduled query resource will be encrypted with a Timestream owned Amazon KMS key. To specify a KMS key, use the key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix the name with alias/. If ErrorReportConfiguration uses SSE_KMS as encryption type, the same KmsKeyId is used to encrypt the error report at rest.
      * 
      */
-    public Output<String> getSQKmsKeyId() {
+    public Output<String> sQKmsKeyId() {
         return this.sQKmsKeyId;
     }
     /**
@@ -98,7 +99,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return The name of the scheduled query. Scheduled query names must be unique within each Region.
      * 
      */
-    public Output<String> getSQName() {
+    public Output<String> sQName() {
         return this.sQName;
     }
     /**
@@ -112,7 +113,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return Notification configuration for the scheduled query. A notification is sent by Timestream when a query run finishes, when the state is updated or when you delete it.
      * 
      */
-    public Output<String> getSQNotificationConfiguration() {
+    public Output<String> sQNotificationConfiguration() {
         return this.sQNotificationConfiguration;
     }
     /**
@@ -126,7 +127,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return The query string to run. Parameter names can be specified in the query string @ character followed by an identifier. The named Parameter @scheduled_runtime is reserved and can be used in the query to get the time at which the query is scheduled to run. The timestamp calculated according to the ScheduleConfiguration parameter, will be the value of @scheduled_runtime paramater for each query run. For example, consider an instance of a scheduled query executing on 2021-12-01 00:00:00. For this instance, the @scheduled_runtime parameter is initialized to the timestamp 2021-12-01 00:00:00 when invoking the query.
      * 
      */
-    public Output<String> getSQQueryString() {
+    public Output<String> sQQueryString() {
         return this.sQQueryString;
     }
     /**
@@ -140,7 +141,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return Configuration for when the scheduled query is executed.
      * 
      */
-    public Output<String> getSQScheduleConfiguration() {
+    public Output<String> sQScheduleConfiguration() {
         return this.sQScheduleConfiguration;
     }
     /**
@@ -154,7 +155,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return The ARN for the IAM role that Timestream will assume when running the scheduled query.
      * 
      */
-    public Output<String> getSQScheduledQueryExecutionRoleArn() {
+    public Output<String> sQScheduledQueryExecutionRoleArn() {
         return this.sQScheduledQueryExecutionRoleArn;
     }
     /**
@@ -168,37 +169,37 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @return Configuration of target store where scheduled query results are written to.
      * 
      */
-    public Output<String> getSQTargetConfiguration() {
+    public Output<String> sQTargetConfiguration() {
         return this.sQTargetConfiguration;
     }
     @Export(name="scheduleConfiguration", type=ScheduledQueryScheduleConfiguration.class, parameters={})
     private Output<ScheduledQueryScheduleConfiguration> scheduleConfiguration;
 
-    public Output<ScheduledQueryScheduleConfiguration> getScheduleConfiguration() {
+    public Output<ScheduledQueryScheduleConfiguration> scheduleConfiguration() {
         return this.scheduleConfiguration;
     }
     @Export(name="scheduledQueryExecutionRoleArn", type=String.class, parameters={})
     private Output<String> scheduledQueryExecutionRoleArn;
 
-    public Output<String> getScheduledQueryExecutionRoleArn() {
+    public Output<String> scheduledQueryExecutionRoleArn() {
         return this.scheduledQueryExecutionRoleArn;
     }
     @Export(name="scheduledQueryName", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduledQueryName;
 
-    public Output</* @Nullable */ String> getScheduledQueryName() {
+    public Output</* @Nullable */ String> scheduledQueryName() {
         return this.scheduledQueryName;
     }
     @Export(name="tags", type=List.class, parameters={ScheduledQueryTag.class})
     private Output</* @Nullable */ List<ScheduledQueryTag>> tags;
 
-    public Output</* @Nullable */ List<ScheduledQueryTag>> getTags() {
+    public Output</* @Nullable */ List<ScheduledQueryTag>> tags() {
         return this.tags;
     }
     @Export(name="targetConfiguration", type=ScheduledQueryTargetConfiguration.class, parameters={})
     private Output</* @Nullable */ ScheduledQueryTargetConfiguration> targetConfiguration;
 
-    public Output</* @Nullable */ ScheduledQueryTargetConfiguration> getTargetConfiguration() {
+    public Output</* @Nullable */ ScheduledQueryTargetConfiguration> targetConfiguration() {
         return this.targetConfiguration;
     }
 
@@ -224,7 +225,7 @@ public class ScheduledQuery extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScheduledQuery(String name, ScheduledQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:timestream:ScheduledQuery", name, args == null ? ScheduledQueryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:timestream:ScheduledQuery", name, args == null ? ScheduledQueryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScheduledQuery(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

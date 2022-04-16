@@ -8,6 +8,7 @@ import io.pulumi.awsnative.configuration.inputs.ConfigurationAggregatorOrganizat
 import io.pulumi.awsnative.configuration.inputs.ConfigurationAggregatorTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,8 +22,8 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     @Import(name="accountAggregationSources")
       private final @Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
 
-    public Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> getAccountAggregationSources() {
-        return this.accountAggregationSources == null ? Output.empty() : this.accountAggregationSources;
+    public Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources() {
+        return this.accountAggregationSources == null ? Codegen.empty() : this.accountAggregationSources;
     }
 
     /**
@@ -32,15 +33,15 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     @Import(name="configurationAggregatorName")
       private final @Nullable Output<String> configurationAggregatorName;
 
-    public Output<String> getConfigurationAggregatorName() {
-        return this.configurationAggregatorName == null ? Output.empty() : this.configurationAggregatorName;
+    public Output<String> configurationAggregatorName() {
+        return this.configurationAggregatorName == null ? Codegen.empty() : this.configurationAggregatorName;
     }
 
     @Import(name="organizationAggregationSource")
       private final @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
 
-    public Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> getOrganizationAggregationSource() {
-        return this.organizationAggregationSource == null ? Output.empty() : this.organizationAggregationSource;
+    public Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource() {
+        return this.organizationAggregationSource == null ? Codegen.empty() : this.organizationAggregationSource;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;
 
-    public Output<List<ConfigurationAggregatorTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ConfigurationAggregatorTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ConfigurationAggregatorArgs(
@@ -66,10 +67,10 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     }
 
     private ConfigurationAggregatorArgs() {
-        this.accountAggregationSources = Output.empty();
-        this.configurationAggregatorName = Output.empty();
-        this.organizationAggregationSource = Output.empty();
-        this.tags = Output.empty();
+        this.accountAggregationSources = Codegen.empty();
+        this.configurationAggregatorName = Codegen.empty();
+        this.organizationAggregationSource = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder accountAggregationSources(@Nullable List<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSources) {
-            this.accountAggregationSources = Output.ofNullable(accountAggregationSources);
+            this.accountAggregationSources = Codegen.ofNullable(accountAggregationSources);
             return this;
         }
         public Builder accountAggregationSources(ConfigurationAggregatorAccountAggregationSourceArgs... accountAggregationSources) {
@@ -114,7 +115,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder configurationAggregatorName(@Nullable String configurationAggregatorName) {
-            this.configurationAggregatorName = Output.ofNullable(configurationAggregatorName);
+            this.configurationAggregatorName = Codegen.ofNullable(configurationAggregatorName);
             return this;
         }
         public Builder organizationAggregationSource(@Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource) {
@@ -122,7 +123,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder organizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
-            this.organizationAggregationSource = Output.ofNullable(organizationAggregationSource);
+            this.organizationAggregationSource = Codegen.ofNullable(organizationAggregationSource);
             return this;
         }
         public Builder tags(@Nullable Output<List<ConfigurationAggregatorTagArgs>> tags) {
@@ -130,7 +131,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable List<ConfigurationAggregatorTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ConfigurationAggregatorTagArgs... tags) {

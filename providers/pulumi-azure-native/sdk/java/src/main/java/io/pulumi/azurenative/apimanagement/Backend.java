@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Backend Credentials Contract Properties
      * 
      */
-    public Output</* @Nullable */ BackendCredentialsContractResponse> getCredentials() {
+    public Output</* @Nullable */ BackendCredentialsContractResponse> credentials() {
         return this.credentials;
     }
     /**
@@ -59,7 +60,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Backend Description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Backend Properties contract
      * 
      */
-    public Output<BackendPropertiesResponse> getProperties() {
+    public Output<BackendPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -101,7 +102,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Backend communication protocol.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -115,7 +116,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Backend Proxy Contract Properties
      * 
      */
-    public Output</* @Nullable */ BackendProxyContractResponse> getProxy() {
+    public Output</* @Nullable */ BackendProxyContractResponse> proxy() {
         return this.proxy;
     }
     /**
@@ -129,7 +130,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -143,7 +144,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Backend Title.
      * 
      */
-    public Output</* @Nullable */ String> getTitle() {
+    public Output</* @Nullable */ String> title() {
         return this.title;
     }
     /**
@@ -157,7 +158,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Backend TLS Properties
      * 
      */
-    public Output</* @Nullable */ BackendTlsPropertiesResponse> getTls() {
+    public Output</* @Nullable */ BackendTlsPropertiesResponse> tls() {
         return this.tls;
     }
     /**
@@ -171,7 +172,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -185,7 +186,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @return Runtime Url of the Backend.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -211,7 +212,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backend(String name, BackendArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Backend", name, args == null ? BackendArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:Backend", name, args == null ? BackendArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Backend(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

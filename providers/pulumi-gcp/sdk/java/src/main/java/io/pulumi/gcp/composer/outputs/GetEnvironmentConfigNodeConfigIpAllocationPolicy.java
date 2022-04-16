@@ -30,19 +30,19 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy {
         this.useIpAliases = useIpAliases;
     }
 
-    public String getClusterIpv4CidrBlock() {
+    public String clusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock;
     }
-    public String getClusterSecondaryRangeName() {
+    public String clusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName;
     }
-    public String getServicesIpv4CidrBlock() {
+    public String servicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock;
     }
-    public String getServicesSecondaryRangeName() {
+    public String servicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName;
     }
-    public Boolean getUseIpAliases() {
+    public Boolean useIpAliases() {
         return this.useIpAliases;
     }
 

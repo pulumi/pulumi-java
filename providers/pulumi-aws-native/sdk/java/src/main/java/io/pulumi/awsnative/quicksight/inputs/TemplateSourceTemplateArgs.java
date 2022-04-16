@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -33,7 +34,7 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
     }
 
     private TemplateSourceTemplateArgs() {
-        this.arn = Output.empty();
+        this.arn = Codegen.empty();
     }
 
     public static Builder builder() {

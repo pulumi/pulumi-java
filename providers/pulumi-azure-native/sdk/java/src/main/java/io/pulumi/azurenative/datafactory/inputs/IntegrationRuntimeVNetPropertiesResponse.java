@@ -26,7 +26,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
     @Import(name="publicIPs")
       private final @Nullable List<String> publicIPs;
 
-    public List<String> getPublicIPs() {
+    public List<String> publicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;
     }
 
@@ -37,7 +37,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
     @Import(name="subnet")
       private final @Nullable String subnet;
 
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -48,7 +48,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
@@ -59,7 +59,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
     @Import(name="vNetId")
       private final @Nullable String vNetId;
 
-    public Optional<String> getVNetId() {
+    public Optional<String> vNetId() {
         return this.vNetId == null ? Optional.empty() : Optional.ofNullable(this.vNetId);
     }
 

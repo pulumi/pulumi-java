@@ -15,14 +15,14 @@ public final class GetOrganizationContactArgs extends io.pulumi.resources.Invoke
     @Import(name="contactId", required=true)
       private final String contactId;
 
-    public String getContactId() {
+    public String contactId() {
         return this.contactId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

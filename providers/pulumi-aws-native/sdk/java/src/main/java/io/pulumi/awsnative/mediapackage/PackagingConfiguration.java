@@ -13,6 +13,7 @@ import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @return The ARN of the PackagingConfiguration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +49,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @return A CMAF packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationCmafPackage> getCmafPackage() {
+    public Output</* @Nullable */ PackagingConfigurationCmafPackage> cmafPackage() {
         return this.cmafPackage;
     }
     /**
@@ -62,7 +63,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @return A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationDashPackage> getDashPackage() {
+    public Output</* @Nullable */ PackagingConfigurationDashPackage> dashPackage() {
         return this.dashPackage;
     }
     /**
@@ -76,7 +77,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @return An HTTP Live Streaming (HLS) packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationHlsPackage> getHlsPackage() {
+    public Output</* @Nullable */ PackagingConfigurationHlsPackage> hlsPackage() {
         return this.hlsPackage;
     }
     /**
@@ -90,7 +91,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @return A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationMssPackage> getMssPackage() {
+    public Output</* @Nullable */ PackagingConfigurationMssPackage> mssPackage() {
         return this.mssPackage;
     }
     /**
@@ -104,7 +105,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @return The ID of a PackagingGroup.
      * 
      */
-    public Output<String> getPackagingGroupId() {
+    public Output<String> packagingGroupId() {
         return this.packagingGroupId;
     }
     /**
@@ -118,7 +119,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<PackagingConfigurationTag>> getTags() {
+    public Output</* @Nullable */ List<PackagingConfigurationTag>> tags() {
         return this.tags;
     }
 
@@ -144,7 +145,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PackagingConfiguration(String name, PackagingConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediapackage:PackagingConfiguration", name, args == null ? PackagingConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediapackage:PackagingConfiguration", name, args == null ? PackagingConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PackagingConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

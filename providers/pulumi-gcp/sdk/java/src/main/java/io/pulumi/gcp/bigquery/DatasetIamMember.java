@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetIamMemberArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetIamMemberState;
@@ -74,7 +75,7 @@ public class DatasetIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatasetIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DatasetIamMemberCondition> condition;
 
-    public Output</* @Nullable */ DatasetIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ DatasetIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -88,7 +89,7 @@ public class DatasetIamMember extends io.pulumi.resources.CustomResource {
      * @return The dataset ID.
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -102,13 +103,13 @@ public class DatasetIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the dataset's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -124,7 +125,7 @@ public class DatasetIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -142,7 +143,7 @@ public class DatasetIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -168,7 +169,7 @@ public class DatasetIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatasetIamMember(String name, DatasetIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/datasetIamMember:DatasetIamMember", name, args == null ? DatasetIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/datasetIamMember:DatasetIamMember", name, args == null ? DatasetIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatasetIamMember(String name, Output<String> id, @Nullable DatasetIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

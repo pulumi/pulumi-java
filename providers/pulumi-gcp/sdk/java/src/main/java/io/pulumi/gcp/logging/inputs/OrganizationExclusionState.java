@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+    public Output<String> orgId() {
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     public OrganizationExclusionState(
@@ -87,11 +88,11 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
     }
 
     private OrganizationExclusionState() {
-        this.description = Output.empty();
-        this.disabled = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
+        this.description = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -135,7 +136,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder filter(@Nullable Output<String> filter) {
@@ -143,7 +144,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -151,7 +152,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(@Nullable Output<String> orgId) {
@@ -159,7 +160,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }        public OrganizationExclusionState build() {
             return new OrganizationExclusionState(description, disabled, filter, name, orgId);

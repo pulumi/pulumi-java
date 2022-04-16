@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="connectVersion")
       private final @Nullable Output<String> connectVersion;
 
-    public Output<String> getConnectVersion() {
-        return this.connectVersion == null ? Output.empty() : this.connectVersion;
+    public Output<String> connectVersion() {
+        return this.connectVersion == null ? Codegen.empty() : this.connectVersion;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="k8sVersion")
       private final @Nullable Output<String> k8sVersion;
 
-    public Output<String> getK8sVersion() {
-        return this.k8sVersion == null ? Output.empty() : this.k8sVersion;
+    public Output<String> k8sVersion() {
+        return this.k8sVersion == null ? Codegen.empty() : this.k8sVersion;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="v1beta1Crd")
       private final @Nullable Output<Boolean> v1beta1Crd;
 
-    public Output<Boolean> getV1beta1Crd() {
-        return this.v1beta1Crd == null ? Output.empty() : this.v1beta1Crd;
+    public Output<Boolean> v1beta1Crd() {
+        return this.v1beta1Crd == null ? Codegen.empty() : this.v1beta1Crd;
     }
 
     public ResourceOptionsArgs(
@@ -62,9 +63,9 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ResourceOptionsArgs() {
-        this.connectVersion = Output.empty();
-        this.k8sVersion = Output.empty();
-        this.v1beta1Crd = Output.empty();
+        this.connectVersion = Codegen.empty();
+        this.k8sVersion = Codegen.empty();
+        this.v1beta1Crd = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder connectVersion(@Nullable String connectVersion) {
-            this.connectVersion = Output.ofNullable(connectVersion);
+            this.connectVersion = Codegen.ofNullable(connectVersion);
             return this;
         }
         public Builder k8sVersion(@Nullable Output<String> k8sVersion) {
@@ -104,7 +105,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder k8sVersion(@Nullable String k8sVersion) {
-            this.k8sVersion = Output.ofNullable(k8sVersion);
+            this.k8sVersion = Codegen.ofNullable(k8sVersion);
             return this;
         }
         public Builder v1beta1Crd(@Nullable Output<Boolean> v1beta1Crd) {
@@ -112,7 +113,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder v1beta1Crd(@Nullable Boolean v1beta1Crd) {
-            this.v1beta1Crd = Output.ofNullable(v1beta1Crd);
+            this.v1beta1Crd = Codegen.ofNullable(v1beta1Crd);
             return this;
         }        public ResourceOptionsArgs build() {
             return new ResourceOptionsArgs(connectVersion, k8sVersion, v1beta1Crd);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.TerminateNotificationProfileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class ScheduledEventsProfileArgs extends io.pulumi.resources.Resour
     @Import(name="terminateNotificationProfile")
       private final @Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile;
 
-    public Output<TerminateNotificationProfileArgs> getTerminateNotificationProfile() {
-        return this.terminateNotificationProfile == null ? Output.empty() : this.terminateNotificationProfile;
+    public Output<TerminateNotificationProfileArgs> terminateNotificationProfile() {
+        return this.terminateNotificationProfile == null ? Codegen.empty() : this.terminateNotificationProfile;
     }
 
     public ScheduledEventsProfileArgs(@Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile) {
@@ -30,7 +31,7 @@ public final class ScheduledEventsProfileArgs extends io.pulumi.resources.Resour
     }
 
     private ScheduledEventsProfileArgs() {
-        this.terminateNotificationProfile = Output.empty();
+        this.terminateNotificationProfile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ScheduledEventsProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileArgs terminateNotificationProfile) {
-            this.terminateNotificationProfile = Output.ofNullable(terminateNotificationProfile);
+            this.terminateNotificationProfile = Codegen.ofNullable(terminateNotificationProfile);
             return this;
         }        public ScheduledEventsProfileArgs build() {
             return new ScheduledEventsProfileArgs(terminateNotificationProfile);

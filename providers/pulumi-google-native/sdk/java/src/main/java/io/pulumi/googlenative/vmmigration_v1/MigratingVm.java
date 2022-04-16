@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.MigratingVmArgs;
 import io.pulumi.googlenative.vmmigration_v1.outputs.CloneJobResponse;
@@ -38,7 +39,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return Details of the target VM in Compute Engine.
      * 
      */
-    public Output<ComputeEngineTargetDefaultsResponse> getComputeEngineTargetDefaults() {
+    public Output<ComputeEngineTargetDefaultsResponse> computeEngineTargetDefaults() {
         return this.computeEngineTargetDefaults;
     }
     /**
@@ -52,7 +53,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The time the migrating VM was created (this refers to this resource and not to the time it was installed in the source).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -66,7 +67,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The percentage progress of the current running replication cycle.
      * 
      */
-    public Output<ReplicationCycleResponse> getCurrentSyncInfo() {
+    public Output<ReplicationCycleResponse> currentSyncInfo() {
         return this.currentSyncInfo;
     }
     /**
@@ -80,7 +81,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The description attached to the migrating VM by the user.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -94,7 +95,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The display name attached to the MigratingVm by the user.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -108,7 +109,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return Provides details on the state of the Migrating VM in case of an error in replication.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -122,7 +123,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The group this migrating vm is included in, if any. The group is represented by the full path of the appropriate Group resource.
      * 
      */
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
     /**
@@ -136,7 +137,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The labels of the migrating VM.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -150,7 +151,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The most updated snapshot created time in the source that finished replication.
      * 
      */
-    public Output<ReplicationSyncResponse> getLastSync() {
+    public Output<ReplicationSyncResponse> lastSync() {
         return this.lastSync;
     }
     /**
@@ -164,7 +165,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The identifier of the MigratingVm.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -178,7 +179,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The replication schedule policy.
      * 
      */
-    public Output<SchedulePolicyResponse> getPolicy() {
+    public Output<SchedulePolicyResponse> policy() {
         return this.policy;
     }
     /**
@@ -192,7 +193,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The recent clone jobs performed on the migrating VM. This field holds the vm's last completed clone job and the vm's running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
      * 
      */
-    public Output<List<CloneJobResponse>> getRecentCloneJobs() {
+    public Output<List<CloneJobResponse>> recentCloneJobs() {
         return this.recentCloneJobs;
     }
     /**
@@ -206,7 +207,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The recent cutover jobs performed on the migrating VM. This field holds the vm's last completed cutover job and the vm's running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
      * 
      */
-    public Output<List<CutoverJobResponse>> getRecentCutoverJobs() {
+    public Output<List<CutoverJobResponse>> recentCutoverJobs() {
         return this.recentCutoverJobs;
     }
     /**
@@ -220,7 +221,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
      * 
      */
-    public Output<String> getSourceVmId() {
+    public Output<String> sourceVmId() {
         return this.sourceVmId;
     }
     /**
@@ -234,7 +235,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return State of the MigratingVm.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -248,7 +249,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The last time the migrating VM state was updated.
      * 
      */
-    public Output<String> getStateTime() {
+    public Output<String> stateTime() {
         return this.stateTime;
     }
     /**
@@ -262,7 +263,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @return The last time the migrating VM resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -288,7 +289,7 @@ public class MigratingVm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MigratingVm(String name, MigratingVmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1:MigratingVm", name, args == null ? MigratingVmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1:MigratingVm", name, args == null ? MigratingVmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MigratingVm(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

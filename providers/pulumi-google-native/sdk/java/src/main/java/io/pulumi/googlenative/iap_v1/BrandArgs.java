@@ -5,6 +5,7 @@ package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationTitle")
       private final @Nullable Output<String> applicationTitle;
 
-    public Output<String> getApplicationTitle() {
-        return this.applicationTitle == null ? Output.empty() : this.applicationTitle;
+    public Output<String> applicationTitle() {
+        return this.applicationTitle == null ? Codegen.empty() : this.applicationTitle;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
-        return this.supportEmail == null ? Output.empty() : this.supportEmail;
+    public Output<String> supportEmail() {
+        return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 
     public BrandArgs(
@@ -53,9 +54,9 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BrandArgs() {
-        this.applicationTitle = Output.empty();
-        this.project = Output.empty();
-        this.supportEmail = Output.empty();
+        this.applicationTitle = Codegen.empty();
+        this.project = Codegen.empty();
+        this.supportEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationTitle(@Nullable String applicationTitle) {
-            this.applicationTitle = Output.ofNullable(applicationTitle);
+            this.applicationTitle = Codegen.ofNullable(applicationTitle);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -95,7 +96,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
@@ -103,7 +104,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Output.ofNullable(supportEmail);
+            this.supportEmail = Codegen.ofNullable(supportEmail);
             return this;
         }        public BrandArgs build() {
             return new BrandArgs(applicationTitle, project, supportEmail);

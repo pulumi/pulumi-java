@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorWorkspaceSettingsAr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<Either<String,OutputType>> type;
 
-    public Output<Either<String,OutputType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,OutputType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     @Import(name="workspaceSettings")
       private final @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
-    public Output<ConnectionMonitorWorkspaceSettingsArgs> getWorkspaceSettings() {
-        return this.workspaceSettings == null ? Output.empty() : this.workspaceSettings;
+    public Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings() {
+        return this.workspaceSettings == null ? Codegen.empty() : this.workspaceSettings;
     }
 
     public ConnectionMonitorOutputArgs(
@@ -51,8 +52,8 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     }
 
     private ConnectionMonitorOutputArgs() {
-        this.type = Output.empty();
-        this.workspaceSettings = Output.empty();
+        this.type = Codegen.empty();
+        this.workspaceSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable Either<String,OutputType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder workspaceSettings(@Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
@@ -90,7 +91,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
-            this.workspaceSettings = Output.ofNullable(workspaceSettings);
+            this.workspaceSettings = Codegen.ofNullable(workspaceSettings);
             return this;
         }        public ConnectionMonitorOutputArgs build() {
             return new ConnectionMonitorOutputArgs(type, workspaceSettings);

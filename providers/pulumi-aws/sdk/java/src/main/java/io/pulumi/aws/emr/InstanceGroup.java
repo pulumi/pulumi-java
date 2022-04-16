@@ -10,6 +10,7 @@ import io.pulumi.aws.emr.outputs.InstanceGroupEbsConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,7 +49,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
      * 
      */
-    public Output</* @Nullable */ String> getAutoscalingPolicy() {
+    public Output</* @Nullable */ String> autoscalingPolicy() {
         return this.autoscalingPolicy;
     }
     /**
@@ -62,7 +63,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
      * 
      */
-    public Output</* @Nullable */ String> getBidPrice() {
+    public Output</* @Nullable */ String> bidPrice() {
         return this.bidPrice;
     }
     /**
@@ -76,7 +77,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -90,7 +91,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
      * 
      */
-    public Output</* @Nullable */ String> getConfigurationsJson() {
+    public Output</* @Nullable */ String> configurationsJson() {
         return this.configurationsJson;
     }
     /**
@@ -104,7 +105,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
      * 
      */
-    public Output<List<InstanceGroupEbsConfig>> getEbsConfigs() {
+    public Output<List<InstanceGroupEbsConfig>> ebsConfigs() {
         return this.ebsConfigs;
     }
     /**
@@ -118,7 +119,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEbsOptimized() {
+    public Output</* @Nullable */ Boolean> ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
@@ -132,7 +133,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return target number of instances for the instance group. defaults to 0.
      * 
      */
-    public Output</* @Nullable */ Integer> getInstanceCount() {
+    public Output</* @Nullable */ Integer> instanceCount() {
         return this.instanceCount;
     }
     /**
@@ -146,7 +147,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -160,19 +161,19 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return Human friendly name given to the instance group. Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="runningInstanceCount", type=Integer.class, parameters={})
     private Output<Integer> runningInstanceCount;
 
-    public Output<Integer> getRunningInstanceCount() {
+    public Output<Integer> runningInstanceCount() {
         return this.runningInstanceCount;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -198,7 +199,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceGroup(String name, InstanceGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:emr/instanceGroup:InstanceGroup", name, args == null ? InstanceGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:emr/instanceGroup:InstanceGroup", name, args == null ? InstanceGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceGroup(String name, Output<String> id, @Nullable InstanceGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

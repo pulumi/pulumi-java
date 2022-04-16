@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsub_v1.inputs.MessageStoragePolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.inputs.SchemaSettingsArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+    public Output<String> kmsKeyName() {
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionDuration")
       private final @Nullable Output<String> messageRetentionDuration;
 
-    public Output<String> getMessageRetentionDuration() {
-        return this.messageRetentionDuration == null ? Output.empty() : this.messageRetentionDuration;
+    public Output<String> messageRetentionDuration() {
+        return this.messageRetentionDuration == null ? Codegen.empty() : this.messageRetentionDuration;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageStoragePolicy")
       private final @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
 
-    public Output<MessageStoragePolicyArgs> getMessageStoragePolicy() {
-        return this.messageStoragePolicy == null ? Output.empty() : this.messageStoragePolicy;
+    public Output<MessageStoragePolicyArgs> messageStoragePolicy() {
+        return this.messageStoragePolicy == null ? Codegen.empty() : this.messageStoragePolicy;
     }
 
     /**
@@ -69,15 +70,15 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPzs")
       private final @Nullable Output<Boolean> satisfiesPzs;
 
-    public Output<Boolean> getSatisfiesPzs() {
-        return this.satisfiesPzs == null ? Output.empty() : this.satisfiesPzs;
+    public Output<Boolean> satisfiesPzs() {
+        return this.satisfiesPzs == null ? Codegen.empty() : this.satisfiesPzs;
     }
 
     /**
@@ -98,14 +99,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaSettings")
       private final @Nullable Output<SchemaSettingsArgs> schemaSettings;
 
-    public Output<SchemaSettingsArgs> getSchemaSettings() {
-        return this.schemaSettings == null ? Output.empty() : this.schemaSettings;
+    public Output<SchemaSettingsArgs> schemaSettings() {
+        return this.schemaSettings == null ? Codegen.empty() : this.schemaSettings;
     }
 
     @Import(name="topicId", required=true)
       private final Output<String> topicId;
 
-    public Output<String> getTopicId() {
+    public Output<String> topicId() {
         return this.topicId;
     }
 
@@ -131,15 +132,15 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicArgs() {
-        this.kmsKeyName = Output.empty();
-        this.labels = Output.empty();
-        this.messageRetentionDuration = Output.empty();
-        this.messageStoragePolicy = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.satisfiesPzs = Output.empty();
-        this.schemaSettings = Output.empty();
-        this.topicId = Output.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.messageRetentionDuration = Codegen.empty();
+        this.messageStoragePolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.satisfiesPzs = Codegen.empty();
+        this.schemaSettings = Codegen.empty();
+        this.topicId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -191,7 +192,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
@@ -199,7 +200,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
-            this.messageRetentionDuration = Output.ofNullable(messageRetentionDuration);
+            this.messageRetentionDuration = Codegen.ofNullable(messageRetentionDuration);
             return this;
         }
         public Builder messageStoragePolicy(@Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy) {
@@ -207,7 +208,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messageStoragePolicy(@Nullable MessageStoragePolicyArgs messageStoragePolicy) {
-            this.messageStoragePolicy = Output.ofNullable(messageStoragePolicy);
+            this.messageStoragePolicy = Codegen.ofNullable(messageStoragePolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -215,7 +216,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -223,7 +224,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
@@ -231,7 +232,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
-            this.satisfiesPzs = Output.ofNullable(satisfiesPzs);
+            this.satisfiesPzs = Codegen.ofNullable(satisfiesPzs);
             return this;
         }
         public Builder schemaSettings(@Nullable Output<SchemaSettingsArgs> schemaSettings) {
@@ -239,7 +240,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaSettings(@Nullable SchemaSettingsArgs schemaSettings) {
-            this.schemaSettings = Output.ofNullable(schemaSettings);
+            this.schemaSettings = Codegen.ofNullable(schemaSettings);
             return this;
         }
         public Builder topicId(Output<String> topicId) {

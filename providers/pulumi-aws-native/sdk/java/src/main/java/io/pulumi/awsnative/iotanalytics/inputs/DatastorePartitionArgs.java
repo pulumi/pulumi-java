@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreTimestampPartitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,15 +18,15 @@ public final class DatastorePartitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="partition")
       private final @Nullable Output<DatastorePartitionArgs> partition;
 
-    public Output<DatastorePartitionArgs> getPartition() {
-        return this.partition == null ? Output.empty() : this.partition;
+    public Output<DatastorePartitionArgs> partition() {
+        return this.partition == null ? Codegen.empty() : this.partition;
     }
 
     @Import(name="timestampPartition")
       private final @Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition;
 
-    public Output<DatastoreTimestampPartitionArgs> getTimestampPartition() {
-        return this.timestampPartition == null ? Output.empty() : this.timestampPartition;
+    public Output<DatastoreTimestampPartitionArgs> timestampPartition() {
+        return this.timestampPartition == null ? Codegen.empty() : this.timestampPartition;
     }
 
     public DatastorePartitionArgs(
@@ -36,8 +37,8 @@ public final class DatastorePartitionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatastorePartitionArgs() {
-        this.partition = Output.empty();
-        this.timestampPartition = Output.empty();
+        this.partition = Codegen.empty();
+        this.timestampPartition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class DatastorePartitionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder partition(@Nullable DatastorePartitionArgs partition) {
-            this.partition = Output.ofNullable(partition);
+            this.partition = Codegen.ofNullable(partition);
             return this;
         }
         public Builder timestampPartition(@Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition) {
@@ -75,7 +76,7 @@ public final class DatastorePartitionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder timestampPartition(@Nullable DatastoreTimestampPartitionArgs timestampPartition) {
-            this.timestampPartition = Output.ofNullable(timestampPartition);
+            this.timestampPartition = Codegen.ofNullable(timestampPartition);
             return this;
         }        public DatastorePartitionArgs build() {
             return new DatastorePartitionArgs(partition, timestampPartition);

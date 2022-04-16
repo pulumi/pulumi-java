@@ -64,42 +64,42 @@ public final class GetIntegrationAccountAssemblyResult {
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The assembly properties.
      * 
     */
-    public AssemblyPropertiesResponse getProperties() {
+    public AssemblyPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

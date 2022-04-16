@@ -8,6 +8,7 @@ import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionString")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
-    public Output<AsymmetricEncryptedSecretArgs> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+    public Output<AsymmetricEncryptedSecretArgs> connectionString() {
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -47,7 +48,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -58,8 +59,8 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +81,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;
 
-    public Output<Either<String,RoleStatus>> getRoleStatus() {
+    public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
 
@@ -100,12 +101,12 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MECRoleArgs() {
-        this.connectionString = Output.empty();
-        this.deviceName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleStatus = Output.empty();
+        this.connectionString = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionString(@Nullable AsymmetricEncryptedSecretArgs connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -167,7 +168,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

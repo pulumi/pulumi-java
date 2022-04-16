@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
     @Import(name="distributionId")
       private final @Nullable Output<String> distributionId;
 
-    public Output<String> getDistributionId() {
-        return this.distributionId == null ? Output.empty() : this.distributionId;
+    public Output<String> distributionId() {
+        return this.distributionId == null ? Codegen.empty() : this.distributionId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
     @Import(name="monitoringSubscription")
       private final @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
 
-    public Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> getMonitoringSubscription() {
-        return this.monitoringSubscription == null ? Output.empty() : this.monitoringSubscription;
+    public Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription() {
+        return this.monitoringSubscription == null ? Codegen.empty() : this.monitoringSubscription;
     }
 
     public MonitoringSubscriptionState(
@@ -45,8 +46,8 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
     }
 
     private MonitoringSubscriptionState() {
-        this.distributionId = Output.empty();
-        this.monitoringSubscription = Output.empty();
+        this.distributionId = Codegen.empty();
+        this.monitoringSubscription = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder distributionId(@Nullable String distributionId) {
-            this.distributionId = Output.ofNullable(distributionId);
+            this.distributionId = Codegen.ofNullable(distributionId);
             return this;
         }
         public Builder monitoringSubscription(@Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
@@ -84,7 +85,7 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder monitoringSubscription(@Nullable MonitoringSubscriptionMonitoringSubscriptionGetArgs monitoringSubscription) {
-            this.monitoringSubscription = Output.ofNullable(monitoringSubscription);
+            this.monitoringSubscription = Codegen.ofNullable(monitoringSubscription);
             return this;
         }        public MonitoringSubscriptionState build() {
             return new MonitoringSubscriptionState(distributionId, monitoringSubscription);

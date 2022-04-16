@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.OperatingSystemType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
     @Import(name="operatingSystemType")
       private final @Nullable Output<Either<String,OperatingSystemType>> operatingSystemType;
 
-    public Output<Either<String,OperatingSystemType>> getOperatingSystemType() {
-        return this.operatingSystemType == null ? Output.empty() : this.operatingSystemType;
+    public Output<Either<String,OperatingSystemType>> operatingSystemType() {
+        return this.operatingSystemType == null ? Codegen.empty() : this.operatingSystemType;
     }
 
     public DockerImagePlatformArgs(@Nullable Output<Either<String,OperatingSystemType>> operatingSystemType) {
@@ -32,7 +33,7 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
     }
 
     private DockerImagePlatformArgs() {
-        this.operatingSystemType = Output.empty();
+        this.operatingSystemType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder operatingSystemType(@Nullable Either<String,OperatingSystemType> operatingSystemType) {
-            this.operatingSystemType = Output.ofNullable(operatingSystemType);
+            this.operatingSystemType = Codegen.ofNullable(operatingSystemType);
             return this;
         }        public DockerImagePlatformArgs build() {
             return new DockerImagePlatformArgs(operatingSystemType);

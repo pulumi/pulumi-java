@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="kendraIndex", required=true)
       private final Output<String> kendraIndex;
 
-    public Output<String> getKendraIndex() {
+    public Output<String> kendraIndex() {
         return this.kendraIndex;
     }
 
     @Import(name="queryFilterString")
       private final @Nullable Output<String> queryFilterString;
 
-    public Output<String> getQueryFilterString() {
-        return this.queryFilterString == null ? Output.empty() : this.queryFilterString;
+    public Output<String> queryFilterString() {
+        return this.queryFilterString == null ? Codegen.empty() : this.queryFilterString;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="queryFilterStringEnabled")
       private final @Nullable Output<Boolean> queryFilterStringEnabled;
 
-    public Output<Boolean> getQueryFilterStringEnabled() {
-        return this.queryFilterStringEnabled == null ? Output.empty() : this.queryFilterStringEnabled;
+    public Output<Boolean> queryFilterStringEnabled() {
+        return this.queryFilterStringEnabled == null ? Codegen.empty() : this.queryFilterStringEnabled;
     }
 
     public BotKendraConfigurationArgs(
@@ -54,9 +55,9 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private BotKendraConfigurationArgs() {
-        this.kendraIndex = Output.empty();
-        this.queryFilterString = Output.empty();
-        this.queryFilterStringEnabled = Output.empty();
+        this.kendraIndex = Codegen.empty();
+        this.queryFilterString = Codegen.empty();
+        this.queryFilterStringEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder queryFilterString(@Nullable String queryFilterString) {
-            this.queryFilterString = Output.ofNullable(queryFilterString);
+            this.queryFilterString = Codegen.ofNullable(queryFilterString);
             return this;
         }
         public Builder queryFilterStringEnabled(@Nullable Output<Boolean> queryFilterStringEnabled) {
@@ -104,7 +105,7 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder queryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
-            this.queryFilterStringEnabled = Output.ofNullable(queryFilterStringEnabled);
+            this.queryFilterStringEnabled = Codegen.ofNullable(queryFilterStringEnabled);
             return this;
         }        public BotKendraConfigurationArgs build() {
             return new BotKendraConfigurationArgs(kendraIndex, queryFilterString, queryFilterStringEnabled);

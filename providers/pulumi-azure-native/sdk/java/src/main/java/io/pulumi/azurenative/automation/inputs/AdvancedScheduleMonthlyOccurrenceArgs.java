@@ -7,6 +7,7 @@ import io.pulumi.azurenative.automation.enums.ScheduleDay;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
     @Import(name="day")
       private final @Nullable Output<Either<String,ScheduleDay>> day;
 
-    public Output<Either<String,ScheduleDay>> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+    public Output<Either<String,ScheduleDay>> day() {
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
     @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;
 
-    public Output<Integer> getOccurrence() {
-        return this.occurrence == null ? Output.empty() : this.occurrence;
+    public Output<Integer> occurrence() {
+        return this.occurrence == null ? Codegen.empty() : this.occurrence;
     }
 
     public AdvancedScheduleMonthlyOccurrenceArgs(
@@ -51,8 +52,8 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
     }
 
     private AdvancedScheduleMonthlyOccurrenceArgs() {
-        this.day = Output.empty();
-        this.occurrence = Output.empty();
+        this.day = Codegen.empty();
+        this.occurrence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
             return this;
         }
         public Builder day(@Nullable Either<String,ScheduleDay> day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
@@ -90,7 +91,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
             return this;
         }
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Output.ofNullable(occurrence);
+            this.occurrence = Codegen.ofNullable(occurrence);
             return this;
         }        public AdvancedScheduleMonthlyOccurrenceArgs build() {
             return new AdvancedScheduleMonthlyOccurrenceArgs(day, occurrence);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="shownColumns")
       private final @Nullable Output<List<String>> shownColumns;
 
-    public Output<List<String>> getShownColumns() {
-        return this.shownColumns == null ? Output.empty() : this.shownColumns;
+    public Output<List<String>> shownColumns() {
+        return this.shownColumns == null ? Codegen.empty() : this.shownColumns;
     }
 
     public TableDisplayOptionsArgs(@Nullable Output<List<String>> shownColumns) {
@@ -35,7 +36,7 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     private TableDisplayOptionsArgs() {
-        this.shownColumns = Output.empty();
+        this.shownColumns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder shownColumns(@Nullable List<String> shownColumns) {
-            this.shownColumns = Output.ofNullable(shownColumns);
+            this.shownColumns = Codegen.ofNullable(shownColumns);
             return this;
         }
         public Builder shownColumns(String... shownColumns) {

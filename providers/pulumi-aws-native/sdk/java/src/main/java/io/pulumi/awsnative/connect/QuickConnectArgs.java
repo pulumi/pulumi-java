@@ -7,6 +7,7 @@ import io.pulumi.awsnative.connect.inputs.QuickConnectConfigArgs;
 import io.pulumi.awsnative.connect.inputs.QuickConnectTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -46,8 +47,8 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quickConnectConfig", required=true)
       private final Output<QuickConnectConfigArgs> quickConnectConfig;
 
-    public Output<QuickConnectConfigArgs> getQuickConnectConfig() {
+    public Output<QuickConnectConfigArgs> quickConnectConfig() {
         return this.quickConnectConfig;
     }
 
@@ -68,8 +69,8 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<QuickConnectTagArgs>> tags;
 
-    public Output<List<QuickConnectTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<QuickConnectTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public QuickConnectArgs(
@@ -86,11 +87,11 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QuickConnectArgs() {
-        this.description = Output.empty();
-        this.instanceArn = Output.empty();
-        this.name = Output.empty();
-        this.quickConnectConfig = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.instanceArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.quickConnectConfig = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instanceArn(Output<String> instanceArn) {
@@ -142,7 +143,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder quickConnectConfig(Output<QuickConnectConfigArgs> quickConnectConfig) {
@@ -158,7 +159,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<QuickConnectTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(QuickConnectTagArgs... tags) {

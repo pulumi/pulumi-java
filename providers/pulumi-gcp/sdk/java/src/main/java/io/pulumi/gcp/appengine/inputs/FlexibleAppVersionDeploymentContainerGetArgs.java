@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class FlexibleAppVersionDeploymentContainerGetArgs extends io.pulum
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -30,7 +31,7 @@ public final class FlexibleAppVersionDeploymentContainerGetArgs extends io.pulum
     }
 
     private FlexibleAppVersionDeploymentContainerGetArgs() {
-        this.image = Output.empty();
+        this.image = Codegen.empty();
     }
 
     public static Builder builder() {

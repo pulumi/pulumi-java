@@ -9,6 +9,7 @@ import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesStatusAr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,22 +26,22 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="specification")
       private final @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
 
-    public Output<DefaultRolloutPropertiesSpecificationArgs> getSpecification() {
-        return this.specification == null ? Output.empty() : this.specification;
+    public Output<DefaultRolloutPropertiesSpecificationArgs> specification() {
+        return this.specification == null ? Codegen.empty() : this.specification;
     }
 
     @Import(name="status")
       private final @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
 
-    public Output<DefaultRolloutPropertiesStatusArgs> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<DefaultRolloutPropertiesStatusArgs> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public DefaultRolloutPropertiesArgs(
@@ -53,9 +54,9 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private DefaultRolloutPropertiesArgs() {
-        this.provisioningState = Output.empty();
-        this.specification = Output.empty();
-        this.status = Output.empty();
+        this.provisioningState = Codegen.empty();
+        this.specification = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder specification(@Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification) {
@@ -95,7 +96,7 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder specification(@Nullable DefaultRolloutPropertiesSpecificationArgs specification) {
-            this.specification = Output.ofNullable(specification);
+            this.specification = Codegen.ofNullable(specification);
             return this;
         }
         public Builder status(@Nullable Output<DefaultRolloutPropertiesStatusArgs> status) {
@@ -103,7 +104,7 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder status(@Nullable DefaultRolloutPropertiesStatusArgs status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public DefaultRolloutPropertiesArgs build() {
             return new DefaultRolloutPropertiesArgs(provisioningState, specification, status);

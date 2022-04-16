@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.TypeUsesArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Object;
@@ -18,19 +19,19 @@ public class TypeUses extends io.pulumi.resources.CustomResource {
     @Export(name="bar", type=SomeOtherObject.class, parameters={})
     private Output</* @Nullable */ SomeOtherObject> bar;
 
-    public Output</* @Nullable */ SomeOtherObject> getBar() {
+    public Output</* @Nullable */ SomeOtherObject> bar() {
         return this.bar;
     }
     @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
-    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> getBaz() {
+    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz() {
         return this.baz;
     }
     @Export(name="foo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> foo;
 
-    public Output</* @Nullable */ Object> getFoo() {
+    public Output</* @Nullable */ Object> foo() {
         return this.foo;
     }
 
@@ -56,7 +57,7 @@ public class TypeUses extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TypeUses(String name, @Nullable TypeUsesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::TypeUses", name, args == null ? TypeUsesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::TypeUses", name, args == null ? TypeUsesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TypeUses(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

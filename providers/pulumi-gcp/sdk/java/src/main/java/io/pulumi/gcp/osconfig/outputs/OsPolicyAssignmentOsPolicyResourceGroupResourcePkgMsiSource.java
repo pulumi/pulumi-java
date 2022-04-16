@@ -51,28 +51,28 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource {
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
      * 
     */
-    public Optional<Boolean> getAllowInsecure() {
+    public Optional<Boolean> allowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
     /**
      * A Cloud Storage object.
      * 
     */
-    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs> getGcs() {
+    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs> gcs() {
         return Optional.ofNullable(this.gcs);
     }
     /**
      * A local path within the VM to use.
      * 
     */
-    public Optional<String> getLocalPath() {
+    public Optional<String> localPath() {
         return Optional.ofNullable(this.localPath);
     }
     /**
      * A generic remote file.
      * 
     */
-    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote> getRemote() {
+    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote> remote() {
         return Optional.ofNullable(this.remote);
     }
 

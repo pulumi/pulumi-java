@@ -9,6 +9,7 @@ import io.pulumi.aws.lambda.inputs.LayerVersionPermissionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return Action, which will be allowed. `lambda:GetLayerVersion` value is suggested by AWS documantation.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -58,7 +59,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return The name or ARN of the Lambda Layer, which you want to grant access to.
      * 
      */
-    public Output<String> getLayerName() {
+    public Output<String> layerName() {
         return this.layerName;
     }
     /**
@@ -72,7 +73,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return An identifier of AWS Organization, which should be able to use your Lambda Layer. `principal` should be equal to `*` if `organization_id` provided.
      * 
      */
-    public Output</* @Nullable */ String> getOrganizationId() {
+    public Output</* @Nullable */ String> organizationId() {
         return this.organizationId;
     }
     /**
@@ -86,7 +87,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return Full Lambda Layer Permission policy.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -100,7 +101,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return AWS account ID which should be able to use your Lambda Layer. `*` can be used here, if you want to share your Lambda Layer widely.
      * 
      */
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
     /**
@@ -114,7 +115,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the current revision of the policy.
      * 
      */
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
     /**
@@ -128,7 +129,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return The name of Lambda Layer Permission, for example `dev-account` - human readable note about what is this permission for.
      * 
      */
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
     /**
@@ -142,7 +143,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @return Version of Lambda Layer, which you want to grant access to. Note: permissions only apply to a single version of a layer.
      * 
      */
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber;
     }
 
@@ -168,7 +169,7 @@ public class LayerVersionPermission extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LayerVersionPermission(String name, LayerVersionPermissionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lambda/layerVersionPermission:LayerVersionPermission", name, args == null ? LayerVersionPermissionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lambda/layerVersionPermission:LayerVersionPermission", name, args == null ? LayerVersionPermissionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LayerVersionPermission(String name, Output<String> id, @Nullable LayerVersionPermissionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

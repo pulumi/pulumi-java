@@ -7,6 +7,7 @@ import io.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationA
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyType")
       private final @Nullable Output<String> policyType;
 
-    public Output<String> getPolicyType() {
-        return this.policyType == null ? Output.empty() : this.policyType;
+    public Output<String> policyType() {
+        return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -56,7 +57,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalableDimension", required=true)
       private final Output<String> scalableDimension;
 
-    public Output<String> getScalableDimension() {
+    public Output<String> scalableDimension() {
         return this.scalableDimension;
     }
 
@@ -67,7 +68,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceNamespace", required=true)
       private final Output<String> serviceNamespace;
 
-    public Output<String> getServiceNamespace() {
+    public Output<String> serviceNamespace() {
         return this.serviceNamespace;
     }
 
@@ -78,8 +79,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepScalingPolicyConfiguration")
       private final @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
 
-    public Output<PolicyStepScalingPolicyConfigurationArgs> getStepScalingPolicyConfiguration() {
-        return this.stepScalingPolicyConfiguration == null ? Output.empty() : this.stepScalingPolicyConfiguration;
+    public Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration() {
+        return this.stepScalingPolicyConfiguration == null ? Codegen.empty() : this.stepScalingPolicyConfiguration;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetTrackingScalingPolicyConfiguration")
       private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
-    public Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> getTargetTrackingScalingPolicyConfiguration() {
-        return this.targetTrackingScalingPolicyConfiguration == null ? Output.empty() : this.targetTrackingScalingPolicyConfiguration;
+    public Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration() {
+        return this.targetTrackingScalingPolicyConfiguration == null ? Codegen.empty() : this.targetTrackingScalingPolicyConfiguration;
     }
 
     public PolicyArgs(
@@ -111,13 +112,13 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.name = Output.empty();
-        this.policyType = Output.empty();
-        this.resourceId = Output.empty();
-        this.scalableDimension = Output.empty();
-        this.serviceNamespace = Output.empty();
-        this.stepScalingPolicyConfiguration = Output.empty();
-        this.targetTrackingScalingPolicyConfiguration = Output.empty();
+        this.name = Codegen.empty();
+        this.policyType = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.scalableDimension = Codegen.empty();
+        this.serviceNamespace = Codegen.empty();
+        this.stepScalingPolicyConfiguration = Codegen.empty();
+        this.targetTrackingScalingPolicyConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policyType(@Nullable Output<String> policyType) {
@@ -165,7 +166,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyType(@Nullable String policyType) {
-            this.policyType = Output.ofNullable(policyType);
+            this.policyType = Codegen.ofNullable(policyType);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {
@@ -197,7 +198,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stepScalingPolicyConfiguration(@Nullable PolicyStepScalingPolicyConfigurationArgs stepScalingPolicyConfiguration) {
-            this.stepScalingPolicyConfiguration = Output.ofNullable(stepScalingPolicyConfiguration);
+            this.stepScalingPolicyConfiguration = Codegen.ofNullable(stepScalingPolicyConfiguration);
             return this;
         }
         public Builder targetTrackingScalingPolicyConfiguration(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
@@ -205,7 +206,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetTrackingScalingPolicyConfiguration(@Nullable PolicyTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
-            this.targetTrackingScalingPolicyConfiguration = Output.ofNullable(targetTrackingScalingPolicyConfiguration);
+            this.targetTrackingScalingPolicyConfiguration = Codegen.ofNullable(targetTrackingScalingPolicyConfiguration);
             return this;
         }        public PolicyArgs build() {
             return new PolicyArgs(name, policyType, resourceId, scalableDimension, serviceNamespace, stepScalingPolicyConfiguration, targetTrackingScalingPolicyConfiguration);

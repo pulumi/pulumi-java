@@ -23,7 +23,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -34,7 +34,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="mimeType", required=true)
       private final String mimeType;
 
-    public String getMimeType() {
+    public String mimeType() {
         return this.mimeType;
     }
 

@@ -14,7 +14,6 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
-	"syscall"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
@@ -32,10 +31,10 @@ import (
 func main() {
 	var tracing string
 	var root string
-	var jar string
+	var binary string
 	flag.StringVar(&tracing, "tracing", "", "Emit tracing to a Zipkin-compatible tracing endpoint")
 	flag.StringVar(&root, "root", "", "Project root path to use")
-	flag.StringVar(&jar, "jar", "", "A relative or an absolute path to a JAR to execute")
+	flag.StringVar(&binary, "binary", "", "A relative or an absolute path to a JAR to execute")
 
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
@@ -57,13 +56,13 @@ func main() {
 		if err != nil {
 			cmdutil.Exit(err)
 		}
-	case jar != "":
-		logging.V(3).Infof("language host asked to use specific JAR: `%s`", jar)
+	case binary != "":
+		logging.V(3).Infof("language host asked to use specific JAR: `%s`", binary)
 		cmd, err := lookupPath("java")
 		if err != nil {
 			cmdutil.Exit(err)
 		}
-		jvmExec, err = newJarExecutor(cmd, jar)
+		jvmExec, err = newJarExecutor(cmd, binary)
 		if err != nil {
 			cmdutil.Exit(err)
 		}
@@ -108,6 +107,7 @@ func main() {
 
 type jvmExecutor struct {
 	cmd        string
+	buildArgs  []string
 	runArgs    []string
 	pluginArgs []string
 }
@@ -255,29 +255,12 @@ func (host *jvmLanguageHost) RunJvmCommand(
 		return "", err
 	}
 
-	if err := cmd.Run(); err != nil {
+	if err := runCommand(cmd); err != nil {
 		// The command failed. Dump any data we collected to the actual stdout/stderr streams,
 		// so they get displayed to the user.
 		os.Stdout.Write(infoBuffer.Bytes())
 		os.Stderr.Write(errorBuffer.Bytes())
-
-		if exiterr, ok := err.(*exec.ExitError); ok {
-			// If the program ran, but exited with a non-zero error code.
-			// This will happen often, since user errors will trigger this.
-			// So, the error message should look as nice as possible.
-			if status, stok := exiterr.Sys().(syscall.WaitStatus); stok {
-				return "", errors.Errorf(
-					"'%v %v' exited with non-zero exit code: %d", name, commandStr, status.ExitStatus())
-			}
-
-			return "", errors.Wrapf(exiterr, "'%v %v' exited unexpectedly", name, commandStr)
-		}
-
-		// Otherwise, we didn't even get to run the program.
-		// This ought to never happen unless there's a bug
-		// or system condition that prevented us from running the language exec.
-		// Issue a scarier error.
-		return "", errors.Wrapf(err, "Problem executing '%v %v'", name, commandStr)
+		return "", err
 	}
 
 	_, err = infoWriter.LogToUser(fmt.Sprintf("'%v %v' completed successfully", name, commandStr))
@@ -350,21 +333,7 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Env = host.constructEnv(req, config, configSecretKeys)
-	if err := cmd.Run(); err != nil {
-		if exiterr, ok := err.(*exec.ExitError); ok {
-			// If the program ran, but exited with a non-zero error code.  This will happen often, since user
-			// errors will trigger this.  So, the error message should look as nice as possible.
-			if status, stok := exiterr.Sys().(syscall.WaitStatus); stok {
-				err = errors.Errorf("Program exited with non-zero exit code: %d", status.ExitStatus())
-			} else {
-				err = errors.Wrapf(exiterr, "Program exited unexpectedly")
-			}
-		} else {
-			// Otherwise, we didn't even get to run the program.  This ought to never happen unless there's
-			// a bug or system condition that prevented us from running the language exec.  Issue a scarier error.
-			err = errors.Wrapf(err, "Problem executing program (could not run language executor)")
-		}
-
+	if err := runCommand(cmd); err != nil {
 		errResult = err.Error()
 	}
 
@@ -435,6 +404,37 @@ func (host *jvmLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Emp
 	}, nil
 }
 
+func (host *jvmLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
+	server pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
+
+	// Executor may not support the build command (for example, jar executor).
+	if host.exec.buildArgs == nil {
+		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory)
+		return nil
+	}
+
+	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory)
+
+	closer, stdout, stderr, err := rpcutil.MakeStreams(server, req.IsTerminal)
+	if err != nil {
+		return err
+	}
+	defer closer.Close()
+
+	// intentionally running dynamic program name.
+	cmd := exec.Command(host.exec.cmd, host.exec.buildArgs...) // nolint: gas
+	cmd.Stdout = stdout
+	cmd.Stderr = stderr
+
+	if err := runCommand(cmd); err != nil {
+		logging.V(5).Infof("InstallDependencies(Directory=%s): failed", req.Directory)
+		return err
+	}
+
+	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
+	return nil
+}
+
 func probeExecutor() (string, error) {
 	pwd, err := os.Getwd()
 	if err != nil {
@@ -494,8 +494,9 @@ func resolveExecutor(exec string) (*jvmExecutor, error) {
 
 func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"run", "--console=plain"},
+		cmd:       cmd,
+		buildArgs: []string{"build", "--console=plain"},
+		runArgs:   []string{"run", "--console=plain"},
 		pluginArgs: []string{
 			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
 			"run", "--console=plain",
@@ -507,8 +508,9 @@ func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 
 func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"--no-transfer-progress", "compile", "exec:java"},
+		cmd:       cmd,
+		buildArgs: []string{"--no-transfer-progress", "compile"},
+		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
 		pluginArgs: []string{
 			"--quiet", "--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=io.pulumi.bootstrap.internal.Main",
@@ -520,6 +522,7 @@ func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
 	return &jvmExecutor{
 		cmd:        cmd,
+		buildArgs:  nil, // not supported
 		runArgs:    []string{"-jar", filepath.Clean(path)},
 		pluginArgs: []string{"-cp", filepath.Clean(path), "io.pulumi.bootstrap.internal.Main", "packages"},
 	}, nil

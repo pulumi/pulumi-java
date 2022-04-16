@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 import io.pulumi.aws.elasticsearch.inputs.DomainAutoTuneOptionsMaintenanceScheduleDurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends io.pulum
     @Import(name="cronExpressionForRecurrence", required=true)
       private final Output<String> cronExpressionForRecurrence;
 
-    public Output<String> getCronExpressionForRecurrence() {
+    public Output<String> cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
     }
 
@@ -32,7 +33,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends io.pulum
     @Import(name="duration", required=true)
       private final Output<DomainAutoTuneOptionsMaintenanceScheduleDurationArgs> duration;
 
-    public Output<DomainAutoTuneOptionsMaintenanceScheduleDurationArgs> getDuration() {
+    public Output<DomainAutoTuneOptionsMaintenanceScheduleDurationArgs> duration() {
         return this.duration;
     }
 
@@ -43,7 +44,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends io.pulum
     @Import(name="startAt", required=true)
       private final Output<String> startAt;
 
-    public Output<String> getStartAt() {
+    public Output<String> startAt() {
         return this.startAt;
     }
 
@@ -57,9 +58,9 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends io.pulum
     }
 
     private DomainAutoTuneOptionsMaintenanceScheduleArgs() {
-        this.cronExpressionForRecurrence = Output.empty();
-        this.duration = Output.empty();
-        this.startAt = Output.empty();
+        this.cronExpressionForRecurrence = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.startAt = Codegen.empty();
     }
 
     public static Builder builder() {

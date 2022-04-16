@@ -28,17 +28,17 @@ public final class GetServiceTemplateSpecContainerPort {
         this.protocol = protocol;
     }
 
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
     /**
      * The name of the Cloud Run Service.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

@@ -11,6 +11,7 @@ import io.pulumi.awsnative.connect.outputs.ContactFlowTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The identifier of the contact flow (ARN).
      * 
      */
-    public Output<String> getContactFlowArn() {
+    public Output<String> contactFlowArn() {
         return this.contactFlowArn;
     }
     /**
@@ -48,7 +49,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The content of the contact flow in JSON format.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -62,7 +63,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The description of the contact flow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -76,7 +77,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance (ARN).
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -90,7 +91,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The name of the contact flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +105,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The state of the contact flow.
      * 
      */
-    public Output</* @Nullable */ ContactFlowState> getState() {
+    public Output</* @Nullable */ ContactFlowState> state() {
         return this.state;
     }
     /**
@@ -118,7 +119,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<ContactFlowTag>> getTags() {
+    public Output</* @Nullable */ List<ContactFlowTag>> tags() {
         return this.tags;
     }
     /**
@@ -132,7 +133,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The type of the contact flow.
      * 
      */
-    public Output</* @Nullable */ ContactFlowType> getType() {
+    public Output</* @Nullable */ ContactFlowType> type() {
         return this.type;
     }
 
@@ -158,7 +159,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ContactFlow(String name, ContactFlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:connect:ContactFlow", name, args == null ? ContactFlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:connect:ContactFlow", name, args == null ? ContactFlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ContactFlow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

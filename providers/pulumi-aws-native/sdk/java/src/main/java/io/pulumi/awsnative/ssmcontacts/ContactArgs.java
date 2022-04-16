@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias", required=true)
       private final Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
 
@@ -34,7 +35,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -45,7 +46,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="plan", required=true)
       private final Output<List<ContactStageArgs>> plan;
 
-    public Output<List<ContactStageArgs>> getPlan() {
+    public Output<List<ContactStageArgs>> plan() {
         return this.plan;
     }
 
@@ -56,7 +57,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<ContactType> type;
 
-    public Output<ContactType> getType() {
+    public Output<ContactType> type() {
         return this.type;
     }
 
@@ -72,10 +73,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.alias = Output.empty();
-        this.displayName = Output.empty();
-        this.plan = Output.empty();
-        this.type = Output.empty();
+        this.alias = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

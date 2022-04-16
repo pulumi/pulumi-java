@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Output<AutoscalingPolicyArgs> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
+    public Output<AutoscalingPolicyArgs> autoscalingPolicy() {
+        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,29 +45,29 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public RegionAutoscalerArgs(
@@ -98,13 +99,13 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegionAutoscalerArgs() {
-        this.autoscalingPolicy = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.target = Output.empty();
+        this.autoscalingPolicy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder autoscalingPolicy(@Nullable AutoscalingPolicyArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -152,7 +153,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -160,7 +161,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -168,7 +169,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -184,7 +185,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -192,7 +193,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public RegionAutoscalerArgs build() {
             return new RegionAutoscalerArgs(autoscalingPolicy, description, name, project, region, requestId, target);

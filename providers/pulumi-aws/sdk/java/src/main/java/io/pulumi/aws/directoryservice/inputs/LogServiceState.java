@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
-        return this.directoryId == null ? Output.empty() : this.directoryId;
+    public Output<String> directoryId() {
+        return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+    public Output<String> logGroupName() {
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     public LogServiceState(
@@ -44,8 +45,8 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogServiceState() {
-        this.directoryId = Output.empty();
-        this.logGroupName = Output.empty();
+        this.directoryId = Codegen.empty();
+        this.logGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Output.ofNullable(directoryId);
+            this.directoryId = Codegen.ofNullable(directoryId);
             return this;
         }
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
@@ -83,7 +84,7 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }        public LogServiceState build() {
             return new LogServiceState(directoryId, logGroupName);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.robomaker.enums.RobotArchitecture;
 import io.pulumi.awsnative.robomaker.inputs.RobotTagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="architecture", required=true)
       private final Output<RobotArchitecture> architecture;
 
-    public Output<RobotArchitecture> getArchitecture() {
+    public Output<RobotArchitecture> architecture() {
         return this.architecture;
     }
 
@@ -34,8 +35,8 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleet")
       private final @Nullable Output<String> fleet;
 
-    public Output<String> getFleet() {
-        return this.fleet == null ? Output.empty() : this.fleet;
+    public Output<String> fleet() {
+        return this.fleet == null ? Codegen.empty() : this.fleet;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="greengrassGroupId", required=true)
       private final Output<String> greengrassGroupId;
 
-    public Output<String> getGreengrassGroupId() {
+    public Output<String> greengrassGroupId() {
         return this.greengrassGroupId;
     }
 
@@ -56,15 +57,15 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<RobotTagsArgs> tags;
 
-    public Output<RobotTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<RobotTagsArgs> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RobotArgs(
@@ -81,11 +82,11 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RobotArgs() {
-        this.architecture = Output.empty();
-        this.fleet = Output.empty();
-        this.greengrassGroupId = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.architecture = Codegen.empty();
+        this.fleet = Codegen.empty();
+        this.greengrassGroupId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fleet(@Nullable String fleet) {
-            this.fleet = Output.ofNullable(fleet);
+            this.fleet = Codegen.ofNullable(fleet);
             return this;
         }
         public Builder greengrassGroupId(Output<String> greengrassGroupId) {
@@ -145,7 +146,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<RobotTagsArgs> tags) {
@@ -153,7 +154,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable RobotTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RobotArgs build() {
             return new RobotArgs(architecture, fleet, greengrassGroupId, name, tags);

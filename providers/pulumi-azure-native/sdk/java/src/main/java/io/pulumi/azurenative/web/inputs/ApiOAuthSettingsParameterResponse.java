@@ -26,7 +26,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
     @Import(name="options")
       private final @Nullable Object options;
 
-    public Optional<Object> getOptions() {
+    public Optional<Object> options() {
         return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
     }
 
@@ -37,7 +37,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
     @Import(name="uiDefinition")
       private final @Nullable Object uiDefinition;
 
-    public Optional<Object> getUiDefinition() {
+    public Optional<Object> uiDefinition() {
         return this.uiDefinition == null ? Optional.empty() : Optional.ofNullable(this.uiDefinition);
     }
 
@@ -48,7 +48,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

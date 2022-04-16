@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -36,7 +37,7 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -48,8 +49,8 @@ public final class AbsoluteDeleteOptionArgs extends io.pulumi.resources.Resource
     }
 
     private AbsoluteDeleteOptionArgs() {
-        this.duration = Output.empty();
-        this.objectType = Output.empty();
+        this.duration = Codegen.empty();
+        this.objectType = Codegen.empty();
     }
 
     public static Builder builder() {

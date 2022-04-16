@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
     @Import(name="resourceLink", required=true)
       private final Output<String> resourceLink;
 
-    public Output<String> getResourceLink() {
+    public Output<String> resourceLink() {
         return this.resourceLink;
     }
 
@@ -25,7 +26,7 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
     }
 
     private MembershipEndpointGkeClusterArgs() {
-        this.resourceLink = Output.empty();
+        this.resourceLink = Codegen.empty();
     }
 
     public static Builder builder() {

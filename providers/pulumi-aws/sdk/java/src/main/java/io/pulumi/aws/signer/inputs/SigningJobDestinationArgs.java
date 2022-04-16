@@ -6,6 +6,7 @@ package io.pulumi.aws.signer.inputs;
 import io.pulumi.aws.signer.inputs.SigningJobDestinationS3Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class SigningJobDestinationArgs extends io.pulumi.resources.Resourc
     @Import(name="s3", required=true)
       private final Output<SigningJobDestinationS3Args> s3;
 
-    public Output<SigningJobDestinationS3Args> getS3() {
+    public Output<SigningJobDestinationS3Args> s3() {
         return this.s3;
     }
 
@@ -29,7 +30,7 @@ public final class SigningJobDestinationArgs extends io.pulumi.resources.Resourc
     }
 
     private SigningJobDestinationArgs() {
-        this.s3 = Output.empty();
+        this.s3 = Codegen.empty();
     }
 
     public static Builder builder() {

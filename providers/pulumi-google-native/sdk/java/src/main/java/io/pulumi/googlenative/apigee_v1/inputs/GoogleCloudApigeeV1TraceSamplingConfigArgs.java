@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.enums.GoogleCloudApigeeV1TraceSamplingConfigSampler;
 import java.lang.Double;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
     @Import(name="sampler")
       private final @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler;
 
-    public Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> getSampler() {
-        return this.sampler == null ? Output.empty() : this.sampler;
+    public Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler() {
+        return this.sampler == null ? Codegen.empty() : this.sampler;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
     @Import(name="samplingRate")
       private final @Nullable Output<Double> samplingRate;
 
-    public Output<Double> getSamplingRate() {
-        return this.samplingRate == null ? Output.empty() : this.samplingRate;
+    public Output<Double> samplingRate() {
+        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 
     public GoogleCloudApigeeV1TraceSamplingConfigArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
     }
 
     private GoogleCloudApigeeV1TraceSamplingConfigArgs() {
-        this.sampler = Output.empty();
-        this.samplingRate = Output.empty();
+        this.sampler = Codegen.empty();
+        this.samplingRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
             return this;
         }
         public Builder sampler(@Nullable GoogleCloudApigeeV1TraceSamplingConfigSampler sampler) {
-            this.sampler = Output.ofNullable(sampler);
+            this.sampler = Codegen.ofNullable(sampler);
             return this;
         }
         public Builder samplingRate(@Nullable Output<Double> samplingRate) {
@@ -88,7 +89,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
             return this;
         }
         public Builder samplingRate(@Nullable Double samplingRate) {
-            this.samplingRate = Output.ofNullable(samplingRate);
+            this.samplingRate = Codegen.ofNullable(samplingRate);
             return this;
         }        public GoogleCloudApigeeV1TraceSamplingConfigArgs build() {
             return new GoogleCloudApigeeV1TraceSamplingConfigArgs(sampler, samplingRate);

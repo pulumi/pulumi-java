@@ -24,7 +24,7 @@ public final class GatewayGreengrass {
      * The ARN of the Greengrass group.
      * 
     */
-    public String getGroupArn() {
+    public String groupArn() {
         return this.groupArn;
     }
 

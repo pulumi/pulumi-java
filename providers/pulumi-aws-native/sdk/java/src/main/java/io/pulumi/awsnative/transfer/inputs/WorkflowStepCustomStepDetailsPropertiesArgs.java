@@ -5,6 +5,7 @@ package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
+    public Output<Integer> timeoutSeconds() {
+        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     public WorkflowStepCustomStepDetailsPropertiesArgs(
@@ -62,9 +63,9 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     }
 
     private WorkflowStepCustomStepDetailsPropertiesArgs() {
-        this.name = Output.empty();
-        this.target = Output.empty();
-        this.timeoutSeconds = Output.empty();
+        this.name = Codegen.empty();
+        this.target = Codegen.empty();
+        this.timeoutSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -104,7 +105,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
@@ -112,7 +113,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
             return this;
         }        public WorkflowStepCustomStepDetailsPropertiesArgs build() {
             return new WorkflowStepCustomStepDetailsPropertiesArgs(name, target, timeoutSeconds);

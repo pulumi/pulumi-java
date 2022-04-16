@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,14 +25,14 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
+    public Output<Boolean> autoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -42,8 +43,8 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> getProtectedSettings() {
-        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
+    public Output<Object> protectedSettings() {
+        return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
     /**
@@ -53,36 +54,36 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionAfterExtensions")
       private final @Nullable Output<List<String>> provisionAfterExtensions;
 
-    public Output<List<String>> getProvisionAfterExtensions() {
-        return this.provisionAfterExtensions == null ? Output.empty() : this.provisionAfterExtensions;
+    public Output<List<String>> provisionAfterExtensions() {
+        return this.provisionAfterExtensions == null ? Codegen.empty() : this.provisionAfterExtensions;
     }
 
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher;
     }
 
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
-    public Output<Object> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+    public Output<Object> settings() {
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
+    public Output<String> typeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 
     public VMExtensionArgs(
@@ -105,14 +106,14 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VMExtensionArgs() {
-        this.autoUpgradeMinorVersion = Output.empty();
-        this.name = Output.empty();
-        this.protectedSettings = Output.empty();
-        this.provisionAfterExtensions = Output.empty();
-        this.publisher = Output.empty();
-        this.settings = Output.empty();
-        this.type = Output.empty();
-        this.typeHandlerVersion = Output.empty();
+        this.autoUpgradeMinorVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protectedSettings = Codegen.empty();
+        this.provisionAfterExtensions = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeHandlerVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -170,7 +171,7 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Output.ofNullable(protectedSettings);
+            this.protectedSettings = Codegen.ofNullable(protectedSettings);
             return this;
         }
         public Builder provisionAfterExtensions(@Nullable Output<List<String>> provisionAfterExtensions) {
@@ -178,7 +179,7 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
-            this.provisionAfterExtensions = Output.ofNullable(provisionAfterExtensions);
+            this.provisionAfterExtensions = Codegen.ofNullable(provisionAfterExtensions);
             return this;
         }
         public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
@@ -197,7 +198,7 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder settings(@Nullable Object settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -213,7 +214,7 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
             return this;
         }        public VMExtensionArgs build() {
             return new VMExtensionArgs(autoUpgradeMinorVersion, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);

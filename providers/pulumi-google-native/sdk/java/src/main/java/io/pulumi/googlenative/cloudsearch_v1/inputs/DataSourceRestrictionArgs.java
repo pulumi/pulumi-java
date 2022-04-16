@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FilterOptionsArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
     @Import(name="filterOptions")
       private final @Nullable Output<List<FilterOptionsArgs>> filterOptions;
 
-    public Output<List<FilterOptionsArgs>> getFilterOptions() {
-        return this.filterOptions == null ? Output.empty() : this.filterOptions;
+    public Output<List<FilterOptionsArgs>> filterOptions() {
+        return this.filterOptions == null ? Codegen.empty() : this.filterOptions;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
     @Import(name="source")
       private final @Nullable Output<SourceArgs> source;
 
-    public Output<SourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<SourceArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public DataSourceRestrictionArgs(
@@ -50,8 +51,8 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
     }
 
     private DataSourceRestrictionArgs() {
-        this.filterOptions = Output.empty();
-        this.source = Output.empty();
+        this.filterOptions = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filterOptions(@Nullable List<FilterOptionsArgs> filterOptions) {
-            this.filterOptions = Output.ofNullable(filterOptions);
+            this.filterOptions = Codegen.ofNullable(filterOptions);
             return this;
         }
         public Builder filterOptions(FilterOptionsArgs... filterOptions) {
@@ -92,7 +93,7 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder source(@Nullable SourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public DataSourceRestrictionArgs build() {
             return new DataSourceRestrictionArgs(filterOptions, source);

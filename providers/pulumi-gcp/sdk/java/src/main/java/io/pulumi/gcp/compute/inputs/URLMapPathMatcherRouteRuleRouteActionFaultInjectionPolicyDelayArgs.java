@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
     @Import(name="fixedDelay")
       private final @Nullable Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
-    public Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> getFixedDelay() {
-        return this.fixedDelay == null ? Output.empty() : this.fixedDelay;
+    public Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay() {
+        return this.fixedDelay == null ? Codegen.empty() : this.fixedDelay;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
     @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
-        return this.percentage == null ? Output.empty() : this.percentage;
+    public Output<Double> percentage() {
+        return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 
     public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs(
@@ -47,8 +48,8 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
     }
 
     private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs() {
-        this.fixedDelay = Output.empty();
-        this.percentage = Output.empty();
+        this.fixedDelay = Codegen.empty();
+        this.percentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
             return this;
         }
         public Builder fixedDelay(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs fixedDelay) {
-            this.fixedDelay = Output.ofNullable(fixedDelay);
+            this.fixedDelay = Codegen.ofNullable(fixedDelay);
             return this;
         }
         public Builder percentage(@Nullable Output<Double> percentage) {
@@ -86,7 +87,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
             return this;
         }
         public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Output.ofNullable(percentage);
+            this.percentage = Codegen.ofNullable(percentage);
             return this;
         }        public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs(fixedDelay, percentage);

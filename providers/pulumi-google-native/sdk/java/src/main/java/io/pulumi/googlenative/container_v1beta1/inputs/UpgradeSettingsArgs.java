@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxSurge")
       private final @Nullable Output<Integer> maxSurge;
 
-    public Output<Integer> getMaxSurge() {
-        return this.maxSurge == null ? Output.empty() : this.maxSurge;
+    public Output<Integer> maxSurge() {
+        return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxUnavailable")
       private final @Nullable Output<Integer> maxUnavailable;
 
-    public Output<Integer> getMaxUnavailable() {
-        return this.maxUnavailable == null ? Output.empty() : this.maxUnavailable;
+    public Output<Integer> maxUnavailable() {
+        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
     public UpgradeSettingsArgs(
@@ -44,8 +45,8 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UpgradeSettingsArgs() {
-        this.maxSurge = Output.empty();
-        this.maxUnavailable = Output.empty();
+        this.maxSurge = Codegen.empty();
+        this.maxUnavailable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxSurge(@Nullable Integer maxSurge) {
-            this.maxSurge = Output.ofNullable(maxSurge);
+            this.maxSurge = Codegen.ofNullable(maxSurge);
             return this;
         }
         public Builder maxUnavailable(@Nullable Output<Integer> maxUnavailable) {
@@ -83,7 +84,7 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxUnavailable(@Nullable Integer maxUnavailable) {
-            this.maxUnavailable = Output.ofNullable(maxUnavailable);
+            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
             return this;
         }        public UpgradeSettingsArgs build() {
             return new UpgradeSettingsArgs(maxSurge, maxUnavailable);

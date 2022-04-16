@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class WebAclVisibilityConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="cloudwatchMetricsEnabled", required=true)
       private final Output<Boolean> cloudwatchMetricsEnabled;
 
-    public Output<Boolean> getCloudwatchMetricsEnabled() {
+    public Output<Boolean> cloudwatchMetricsEnabled() {
         return this.cloudwatchMetricsEnabled;
     }
 
@@ -32,7 +33,7 @@ public final class WebAclVisibilityConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -43,7 +44,7 @@ public final class WebAclVisibilityConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="sampledRequestsEnabled", required=true)
       private final Output<Boolean> sampledRequestsEnabled;
 
-    public Output<Boolean> getSampledRequestsEnabled() {
+    public Output<Boolean> sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 
@@ -57,9 +58,9 @@ public final class WebAclVisibilityConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private WebAclVisibilityConfigGetArgs() {
-        this.cloudwatchMetricsEnabled = Output.empty();
-        this.metricName = Output.empty();
-        this.sampledRequestsEnabled = Output.empty();
+        this.cloudwatchMetricsEnabled = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.sampledRequestsEnabled = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -25,7 +25,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="displayData", required=true)
       private final List<DisplayDataResponse> displayData;
 
-    public List<DisplayDataResponse> getDisplayData() {
+    public List<DisplayDataResponse> displayData() {
         return this.displayData;
     }
 
@@ -36,7 +36,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="inputCollectionName", required=true)
       private final List<String> inputCollectionName;
 
-    public List<String> getInputCollectionName() {
+    public List<String> inputCollectionName() {
         return this.inputCollectionName;
     }
 
@@ -47,7 +47,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -58,7 +58,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -69,7 +69,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="outputCollectionName", required=true)
       private final List<String> outputCollectionName;
 
-    public List<String> getOutputCollectionName() {
+    public List<String> outputCollectionName() {
         return this.outputCollectionName;
     }
 

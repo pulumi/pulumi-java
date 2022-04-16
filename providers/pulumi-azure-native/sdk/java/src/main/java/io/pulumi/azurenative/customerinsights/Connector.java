@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -45,7 +46,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return ID of the connector.
      * 
      */
-    public Output<Integer> getConnectorId() {
+    public Output<Integer> connectorId() {
         return this.connectorId;
     }
     /**
@@ -59,7 +60,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Name of the connector.
      * 
      */
-    public Output</* @Nullable */ String> getConnectorName() {
+    public Output</* @Nullable */ String> connectorName() {
         return this.connectorName;
     }
     /**
@@ -73,7 +74,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The connector properties.
      * 
      */
-    public Output<Map<String,Object>> getConnectorProperties() {
+    public Output<Map<String,Object>> connectorProperties() {
         return this.connectorProperties;
     }
     /**
@@ -87,7 +88,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Type of connector.
      * 
      */
-    public Output<String> getConnectorType() {
+    public Output<String> connectorType() {
         return this.connectorType;
     }
     /**
@@ -101,7 +102,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The created time.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -115,7 +116,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Description of the connector.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -129,7 +130,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Display name of the connector.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -143,7 +144,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return If this is an internal connector.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsInternal() {
+    public Output</* @Nullable */ Boolean> isInternal() {
         return this.isInternal;
     }
     /**
@@ -157,7 +158,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The last modified time.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -171,7 +172,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -185,7 +186,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return State of connector.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -199,7 +200,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -213,7 +214,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -239,7 +240,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connector(String name, ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customerinsights:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customerinsights:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

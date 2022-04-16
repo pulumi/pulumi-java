@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
     @Import(name="fixedDelay", required=true)
       private final Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
-    public Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> getFixedDelay() {
+    public Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay() {
         return this.fixedDelay;
     }
 
@@ -34,7 +35,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
     @Import(name="percentage", required=true)
       private final Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage;
     }
 
@@ -46,8 +47,8 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
     }
 
     private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs() {
-        this.fixedDelay = Output.empty();
-        this.percentage = Output.empty();
+        this.fixedDelay = Codegen.empty();
+        this.percentage = Codegen.empty();
     }
 
     public static Builder builder() {

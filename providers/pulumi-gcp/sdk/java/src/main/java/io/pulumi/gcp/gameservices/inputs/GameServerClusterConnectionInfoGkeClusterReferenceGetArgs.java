@@ -5,6 +5,7 @@ package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceGetArgs ext
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -36,7 +37,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceGetArgs ext
     }
 
     private GameServerClusterConnectionInfoGkeClusterReferenceGetArgs() {
-        this.cluster = Output.empty();
+        this.cluster = Codegen.empty();
     }
 
     public static Builder builder() {

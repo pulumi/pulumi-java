@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.SerialPipelineArgs;
 import java.lang.String;
 import java.util.Map;
@@ -23,14 +24,14 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     @Import(name="deliveryPipelineId", required=true)
       private final Output<String> deliveryPipelineId;
 
-    public Output<String> getDeliveryPipelineId() {
+    public Output<String> deliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
@@ -41,8 +42,8 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -63,15 +64,15 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,22 +82,22 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -106,15 +107,15 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serialPipeline")
       private final @Nullable Output<SerialPipelineArgs> serialPipeline;
 
-    public Output<SerialPipelineArgs> getSerialPipeline() {
-        return this.serialPipeline == null ? Output.empty() : this.serialPipeline;
+    public Output<SerialPipelineArgs> serialPipeline() {
+        return this.serialPipeline == null ? Codegen.empty() : this.serialPipeline;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+    public Output<String> validateOnly() {
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public DeliveryPipelineArgs(
@@ -143,17 +144,17 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeliveryPipelineArgs() {
-        this.annotations = Output.empty();
-        this.deliveryPipelineId = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.serialPipeline = Output.empty();
-        this.validateOnly = Output.empty();
+        this.annotations = Codegen.empty();
+        this.deliveryPipelineId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.serialPipeline = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -201,7 +202,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder deliveryPipelineId(Output<String> deliveryPipelineId) {
@@ -217,7 +218,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -225,7 +226,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -233,7 +234,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -241,7 +242,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -249,7 +250,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -257,7 +258,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -265,7 +266,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder serialPipeline(@Nullable Output<SerialPipelineArgs> serialPipeline) {
@@ -273,7 +274,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serialPipeline(@Nullable SerialPipelineArgs serialPipeline) {
-            this.serialPipeline = Output.ofNullable(serialPipeline);
+            this.serialPipeline = Codegen.ofNullable(serialPipeline);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -281,7 +282,7 @@ public final class DeliveryPipelineArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public DeliveryPipelineArgs build() {
             return new DeliveryPipelineArgs(annotations, deliveryPipelineId, description, etag, labels, location, name, project, requestId, serialPipeline, validateOnly);

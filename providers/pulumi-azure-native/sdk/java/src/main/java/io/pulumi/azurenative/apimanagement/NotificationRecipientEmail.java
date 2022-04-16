@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class NotificationRecipientEmail extends io.pulumi.resources.CustomResour
      * @return User Email subscribed to notification.
      * 
      */
-    public Output</* @Nullable */ String> getEmail() {
+    public Output</* @Nullable */ String> email() {
         return this.email;
     }
     /**
@@ -55,7 +56,7 @@ public class NotificationRecipientEmail extends io.pulumi.resources.CustomResour
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class NotificationRecipientEmail extends io.pulumi.resources.CustomResour
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -95,7 +96,7 @@ public class NotificationRecipientEmail extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationRecipientEmail(String name, NotificationRecipientEmailArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:NotificationRecipientEmail", name, args == null ? NotificationRecipientEmailArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:NotificationRecipientEmail", name, args == null ? NotificationRecipientEmailArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationRecipientEmail(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

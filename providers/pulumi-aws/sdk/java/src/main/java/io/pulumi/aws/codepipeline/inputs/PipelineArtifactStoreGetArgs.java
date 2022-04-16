@@ -6,6 +6,7 @@ package io.pulumi.aws.codepipeline.inputs;
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreEncryptionKeyGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="encryptionKey")
       private final @Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey;
 
-    public Output<PipelineArtifactStoreEncryptionKeyGetArgs> getEncryptionKey() {
-        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
+    public Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey() {
+        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -44,8 +45,8 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -71,10 +72,10 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     }
 
     private PipelineArtifactStoreGetArgs() {
-        this.encryptionKey = Output.empty();
-        this.location = Output.empty();
-        this.region = Output.empty();
-        this.type = Output.empty();
+        this.encryptionKey = Codegen.empty();
+        this.location = Codegen.empty();
+        this.region = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder encryptionKey(@Nullable PipelineArtifactStoreEncryptionKeyGetArgs encryptionKey) {
-            this.encryptionKey = Output.ofNullable(encryptionKey);
+            this.encryptionKey = Codegen.ofNullable(encryptionKey);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -124,7 +125,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder type(Output<String> type) {

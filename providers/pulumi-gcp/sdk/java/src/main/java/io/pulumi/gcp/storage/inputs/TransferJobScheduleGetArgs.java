@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleEndDateGetArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleStartDateGetArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleStartTimeOfDayGetArgs;
@@ -23,8 +24,8 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
     @Import(name="scheduleEndDate")
       private final @Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate;
 
-    public Output<TransferJobScheduleScheduleEndDateGetArgs> getScheduleEndDate() {
-        return this.scheduleEndDate == null ? Output.empty() : this.scheduleEndDate;
+    public Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate() {
+        return this.scheduleEndDate == null ? Codegen.empty() : this.scheduleEndDate;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
     @Import(name="scheduleStartDate", required=true)
       private final Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate;
 
-    public Output<TransferJobScheduleScheduleStartDateGetArgs> getScheduleStartDate() {
+    public Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate() {
         return this.scheduleStartDate;
     }
 
@@ -45,8 +46,8 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
     @Import(name="startTimeOfDay")
       private final @Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay;
 
-    public Output<TransferJobScheduleStartTimeOfDayGetArgs> getStartTimeOfDay() {
-        return this.startTimeOfDay == null ? Output.empty() : this.startTimeOfDay;
+    public Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay() {
+        return this.startTimeOfDay == null ? Codegen.empty() : this.startTimeOfDay;
     }
 
     public TransferJobScheduleGetArgs(
@@ -59,9 +60,9 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
     }
 
     private TransferJobScheduleGetArgs() {
-        this.scheduleEndDate = Output.empty();
-        this.scheduleStartDate = Output.empty();
-        this.startTimeOfDay = Output.empty();
+        this.scheduleEndDate = Codegen.empty();
+        this.scheduleStartDate = Codegen.empty();
+        this.startTimeOfDay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder scheduleEndDate(@Nullable TransferJobScheduleScheduleEndDateGetArgs scheduleEndDate) {
-            this.scheduleEndDate = Output.ofNullable(scheduleEndDate);
+            this.scheduleEndDate = Codegen.ofNullable(scheduleEndDate);
             return this;
         }
         public Builder scheduleStartDate(Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate) {
@@ -109,7 +110,7 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder startTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDayGetArgs startTimeOfDay) {
-            this.startTimeOfDay = Output.ofNullable(startTimeOfDay);
+            this.startTimeOfDay = Codegen.ofNullable(startTimeOfDay);
             return this;
         }        public TransferJobScheduleGetArgs build() {
             return new TransferJobScheduleGetArgs(scheduleEndDate, scheduleStartDate, startTimeOfDay);

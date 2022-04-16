@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeaderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,14 +29,14 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
     @Import(name="customResponseBodyKey")
       private final @Nullable Output<String> customResponseBodyKey;
 
-    public Output<String> getCustomResponseBodyKey() {
-        return this.customResponseBodyKey == null ? Output.empty() : this.customResponseBodyKey;
+    public Output<String> customResponseBodyKey() {
+        return this.customResponseBodyKey == null ? Codegen.empty() : this.customResponseBodyKey;
     }
 
     @Import(name="responseCode", required=true)
       private final Output<Integer> responseCode;
 
-    public Output<Integer> getResponseCode() {
+    public Output<Integer> responseCode() {
         return this.responseCode;
     }
 
@@ -46,8 +47,8 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
     @Import(name="responseHeaders")
       private final @Nullable Output<List<RuleGroupCustomHTTPHeaderArgs>> responseHeaders;
 
-    public Output<List<RuleGroupCustomHTTPHeaderArgs>> getResponseHeaders() {
-        return this.responseHeaders == null ? Output.empty() : this.responseHeaders;
+    public Output<List<RuleGroupCustomHTTPHeaderArgs>> responseHeaders() {
+        return this.responseHeaders == null ? Codegen.empty() : this.responseHeaders;
     }
 
     public RuleGroupCustomResponseArgs(
@@ -60,9 +61,9 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
     }
 
     private RuleGroupCustomResponseArgs() {
-        this.customResponseBodyKey = Output.empty();
-        this.responseCode = Output.empty();
-        this.responseHeaders = Output.empty();
+        this.customResponseBodyKey = Codegen.empty();
+        this.responseCode = Codegen.empty();
+        this.responseHeaders = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
-            this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
+            this.customResponseBodyKey = Codegen.ofNullable(customResponseBodyKey);
             return this;
         }
         public Builder responseCode(Output<Integer> responseCode) {
@@ -110,7 +111,7 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder responseHeaders(@Nullable List<RuleGroupCustomHTTPHeaderArgs> responseHeaders) {
-            this.responseHeaders = Output.ofNullable(responseHeaders);
+            this.responseHeaders = Codegen.ofNullable(responseHeaders);
             return this;
         }
         public Builder responseHeaders(RuleGroupCustomHTTPHeaderArgs... responseHeaders) {

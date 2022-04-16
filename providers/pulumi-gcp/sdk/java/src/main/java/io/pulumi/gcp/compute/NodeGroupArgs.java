@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyArgs;
 import io.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowArgs;
 import java.lang.Integer;
@@ -26,8 +27,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Output<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
+    public Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy() {
+        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialSize")
       private final @Nullable Output<Integer> initialSize;
 
-    public Output<Integer> getInitialSize() {
-        return this.initialSize == null ? Output.empty() : this.initialSize;
+    public Output<Integer> initialSize() {
+        return this.initialSize == null ? Codegen.empty() : this.initialSize;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
       private final @Nullable Output<String> maintenancePolicy;
 
-    public Output<String> getMaintenancePolicy() {
-        return this.maintenancePolicy == null ? Output.empty() : this.maintenancePolicy;
+    public Output<String> maintenancePolicy() {
+        return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
       private final @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
+    public Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow() {
+        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTemplate", required=true)
       private final Output<String> nodeTemplate;
 
-    public Output<String> getNodeTemplate() {
+    public Output<String> nodeTemplate() {
         return this.nodeTemplate;
     }
 
@@ -105,8 +106,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<Integer> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public NodeGroupArgs(
@@ -155,16 +156,16 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeGroupArgs() {
-        this.autoscalingPolicy = Output.empty();
-        this.description = Output.empty();
-        this.initialSize = Output.empty();
-        this.maintenancePolicy = Output.empty();
-        this.maintenanceWindow = Output.empty();
-        this.name = Output.empty();
-        this.nodeTemplate = Output.empty();
-        this.project = Output.empty();
-        this.size = Output.empty();
-        this.zone = Output.empty();
+        this.autoscalingPolicy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.initialSize = Codegen.empty();
+        this.maintenancePolicy = Codegen.empty();
+        this.maintenanceWindow = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodeTemplate = Codegen.empty();
+        this.project = Codegen.empty();
+        this.size = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -218,7 +219,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder initialSize(@Nullable Output<Integer> initialSize) {
@@ -226,7 +227,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initialSize(@Nullable Integer initialSize) {
-            this.initialSize = Output.ofNullable(initialSize);
+            this.initialSize = Codegen.ofNullable(initialSize);
             return this;
         }
         public Builder maintenancePolicy(@Nullable Output<String> maintenancePolicy) {
@@ -234,7 +235,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenancePolicy(@Nullable String maintenancePolicy) {
-            this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
+            this.maintenancePolicy = Codegen.ofNullable(maintenancePolicy);
             return this;
         }
         public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
@@ -242,7 +243,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -250,7 +251,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nodeTemplate(Output<String> nodeTemplate) {
@@ -266,7 +267,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder size(@Nullable Output<Integer> size) {
@@ -274,7 +275,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable Integer size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -282,7 +283,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public NodeGroupArgs build() {
             return new NodeGroupArgs(autoscalingPolicy, description, initialSize, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, size, zone);

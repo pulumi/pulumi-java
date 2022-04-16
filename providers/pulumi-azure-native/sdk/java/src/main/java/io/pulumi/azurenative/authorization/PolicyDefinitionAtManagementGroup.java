@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The policy definition description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The display name of the policy definition.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +73,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -86,7 +87,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
      * 
      */
-    public Output</* @Nullable */ String> getMode() {
+    public Output</* @Nullable */ String> mode() {
         return this.mode;
     }
     /**
@@ -100,7 +101,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The name of the policy definition.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -128,7 +129,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The policy rule.
      * 
      */
-    public Output</* @Nullable */ Object> getPolicyRule() {
+    public Output</* @Nullable */ Object> policyRule() {
         return this.policyRule;
     }
     /**
@@ -142,7 +143,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyType() {
+    public Output</* @Nullable */ String> policyType() {
         return this.policyType;
     }
     /**
@@ -156,7 +157,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @return The type of the resource (Microsoft.Authorization/policyDefinitions).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyDefinitionAtManagementGroup(String name, PolicyDefinitionAtManagementGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:PolicyDefinitionAtManagementGroup", name, args == null ? PolicyDefinitionAtManagementGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:PolicyDefinitionAtManagementGroup", name, args == null ? PolicyDefinitionAtManagementGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PolicyDefinitionAtManagementGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

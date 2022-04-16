@@ -5,6 +5,7 @@ package io.pulumi.azurenative.policyinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+    public Output<List<String>> locations() {
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     public RemediationFiltersArgs(@Nullable Output<List<String>> locations) {
@@ -35,7 +36,7 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RemediationFiltersArgs() {
-        this.locations = Output.empty();
+        this.locations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {

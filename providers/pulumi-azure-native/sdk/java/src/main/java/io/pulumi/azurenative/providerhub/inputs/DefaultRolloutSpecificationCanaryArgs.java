@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+    public Output<List<String>> regions() {
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     @Import(name="skipRegions")
       private final @Nullable Output<List<String>> skipRegions;
 
-    public Output<List<String>> getSkipRegions() {
-        return this.skipRegions == null ? Output.empty() : this.skipRegions;
+    public Output<List<String>> skipRegions() {
+        return this.skipRegions == null ? Codegen.empty() : this.skipRegions;
     }
 
     public DefaultRolloutSpecificationCanaryArgs(
@@ -37,8 +38,8 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     }
 
     private DefaultRolloutSpecificationCanaryArgs() {
-        this.regions = Output.empty();
-        this.skipRegions = Output.empty();
+        this.regions = Codegen.empty();
+        this.skipRegions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {
@@ -79,7 +80,7 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
             return this;
         }
         public Builder skipRegions(@Nullable List<String> skipRegions) {
-            this.skipRegions = Output.ofNullable(skipRegions);
+            this.skipRegions = Codegen.ofNullable(skipRegions);
             return this;
         }
         public Builder skipRegions(String... skipRegions) {

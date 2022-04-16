@@ -8,6 +8,7 @@ import io.pulumi.azurenative.machinelearning.inputs.GraphNodeArgs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,8 +31,8 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="edges")
       private final @Nullable Output<List<GraphEdgeArgs>> edges;
 
-    public Output<List<GraphEdgeArgs>> getEdges() {
-        return this.edges == null ? Output.empty() : this.edges;
+    public Output<List<GraphEdgeArgs>> edges() {
+        return this.edges == null ? Codegen.empty() : this.edges;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="graphParameters")
       private final @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
 
-    public Output<Map<String,GraphParameterArgs>> getGraphParameters() {
-        return this.graphParameters == null ? Output.empty() : this.graphParameters;
+    public Output<Map<String,GraphParameterArgs>> graphParameters() {
+        return this.graphParameters == null ? Codegen.empty() : this.graphParameters;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodes")
       private final @Nullable Output<Map<String,GraphNodeArgs>> nodes;
 
-    public Output<Map<String,GraphNodeArgs>> getNodes() {
-        return this.nodes == null ? Output.empty() : this.nodes;
+    public Output<Map<String,GraphNodeArgs>> nodes() {
+        return this.nodes == null ? Codegen.empty() : this.nodes;
     }
 
     public GraphPackageArgs(
@@ -66,9 +67,9 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphPackageArgs() {
-        this.edges = Output.empty();
-        this.graphParameters = Output.empty();
-        this.nodes = Output.empty();
+        this.edges = Codegen.empty();
+        this.graphParameters = Codegen.empty();
+        this.nodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder edges(@Nullable List<GraphEdgeArgs> edges) {
-            this.edges = Output.ofNullable(edges);
+            this.edges = Codegen.ofNullable(edges);
             return this;
         }
         public Builder edges(GraphEdgeArgs... edges) {
@@ -111,7 +112,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder graphParameters(@Nullable Map<String,GraphParameterArgs> graphParameters) {
-            this.graphParameters = Output.ofNullable(graphParameters);
+            this.graphParameters = Codegen.ofNullable(graphParameters);
             return this;
         }
         public Builder nodes(@Nullable Output<Map<String,GraphNodeArgs>> nodes) {
@@ -119,7 +120,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodes(@Nullable Map<String,GraphNodeArgs> nodes) {
-            this.nodes = Output.ofNullable(nodes);
+            this.nodes = Codegen.ofNullable(nodes);
             return this;
         }        public GraphPackageArgs build() {
             return new GraphPackageArgs(edges, graphParameters, nodes);

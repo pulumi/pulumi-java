@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -44,7 +45,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies the UTC creation time of the policy.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -58,7 +59,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
      * 
      */
-    public Output</* @Nullable */ List<String>> getDisabledAlerts() {
+    public Output</* @Nullable */ List<String>> disabledAlerts() {
         return this.disabledAlerts;
     }
     /**
@@ -72,7 +73,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies that the alert is sent to the account administrators.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEmailAccountAdmins() {
+    public Output</* @Nullable */ Boolean> emailAccountAdmins() {
         return this.emailAccountAdmins;
     }
     /**
@@ -86,7 +87,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies an array of e-mail addresses to which the alert is sent.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEmailAddresses() {
+    public Output</* @Nullable */ List<String>> emailAddresses() {
         return this.emailAddresses;
     }
     /**
@@ -100,7 +101,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies the number of days to keep in the Threat Detection audit logs.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
     /**
@@ -128,7 +129,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -142,7 +143,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies the identifier key of the Threat Detection audit storage account.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountAccessKey() {
+    public Output</* @Nullable */ String> storageAccountAccessKey() {
         return this.storageAccountAccessKey;
     }
     /**
@@ -156,7 +157,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
      */
-    public Output</* @Nullable */ String> getStorageEndpoint() {
+    public Output</* @Nullable */ String> storageEndpoint() {
         return this.storageEndpoint;
     }
     /**
@@ -170,7 +171,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return SystemData of SecurityAlertPolicyResource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -184,7 +185,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -210,7 +211,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabaseSecurityAlertPolicy(String name, DatabaseSecurityAlertPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:DatabaseSecurityAlertPolicy", name, args == null ? DatabaseSecurityAlertPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:DatabaseSecurityAlertPolicy", name, args == null ? DatabaseSecurityAlertPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatabaseSecurityAlertPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

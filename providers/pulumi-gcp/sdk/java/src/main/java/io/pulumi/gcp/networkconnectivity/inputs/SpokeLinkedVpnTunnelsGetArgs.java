@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
     @Import(name="siteToSiteDataTransfer", required=true)
       private final Output<Boolean> siteToSiteDataTransfer;
 
-    public Output<Boolean> getSiteToSiteDataTransfer() {
+    public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 
@@ -33,7 +34,7 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
     @Import(name="uris", required=true)
       private final Output<List<String>> uris;
 
-    public Output<List<String>> getUris() {
+    public Output<List<String>> uris() {
         return this.uris;
     }
 
@@ -45,8 +46,8 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
     }
 
     private SpokeLinkedVpnTunnelsGetArgs() {
-        this.siteToSiteDataTransfer = Output.empty();
-        this.uris = Output.empty();
+        this.siteToSiteDataTransfer = Codegen.empty();
+        this.uris = Codegen.empty();
     }
 
     public static Builder builder() {

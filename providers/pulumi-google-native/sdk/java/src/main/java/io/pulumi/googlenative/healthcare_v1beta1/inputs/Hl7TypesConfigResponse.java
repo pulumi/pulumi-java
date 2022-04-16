@@ -25,7 +25,7 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final List<TypeResponse> type;
 
-    public List<TypeResponse> getType() {
+    public List<TypeResponse> type() {
         return this.type;
     }
 
@@ -36,7 +36,7 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="version", required=true)
       private final List<VersionSourceResponse> version;
 
-    public List<VersionSourceResponse> getVersion() {
+    public List<VersionSourceResponse> version() {
         return this.version;
     }
 

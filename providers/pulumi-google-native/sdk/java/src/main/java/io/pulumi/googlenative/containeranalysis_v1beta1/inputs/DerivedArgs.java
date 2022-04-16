@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.FingerprintArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LayerArgs;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint", required=true)
       private final Output<FingerprintArgs> fingerprint;
 
-    public Output<FingerprintArgs> getFingerprint() {
+    public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint;
     }
 
@@ -38,8 +39,8 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="layerInfo")
       private final @Nullable Output<List<LayerArgs>> layerInfo;
 
-    public Output<List<LayerArgs>> getLayerInfo() {
-        return this.layerInfo == null ? Output.empty() : this.layerInfo;
+    public Output<List<LayerArgs>> layerInfo() {
+        return this.layerInfo == null ? Codegen.empty() : this.layerInfo;
     }
 
     public DerivedArgs(
@@ -50,8 +51,8 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DerivedArgs() {
-        this.fingerprint = Output.empty();
-        this.layerInfo = Output.empty();
+        this.fingerprint = Codegen.empty();
+        this.layerInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder layerInfo(@Nullable List<LayerArgs> layerInfo) {
-            this.layerInfo = Output.ofNullable(layerInfo);
+            this.layerInfo = Codegen.ofNullable(layerInfo);
             return this;
         }
         public Builder layerInfo(LayerArgs... layerInfo) {

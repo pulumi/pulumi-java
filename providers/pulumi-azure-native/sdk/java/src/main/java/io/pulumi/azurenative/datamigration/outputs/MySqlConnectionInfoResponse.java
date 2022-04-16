@@ -57,21 +57,21 @@ public final class MySqlConnectionInfoResponse {
      * Password credential.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Port for Server
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * Name of the server
      * 
     */
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
     /**
@@ -79,14 +79,14 @@ public final class MySqlConnectionInfoResponse {
      * Expected value is 'MySqlConnectionInfo'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * User name
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

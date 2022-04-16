@@ -5,6 +5,7 @@ package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -33,8 +34,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
     @Import(name="intervalUnit")
       private final @Nullable Output<String> intervalUnit;
 
-    public Output<String> getIntervalUnit() {
-        return this.intervalUnit == null ? Output.empty() : this.intervalUnit;
+    public Output<String> intervalUnit() {
+        return this.intervalUnit == null ? Codegen.empty() : this.intervalUnit;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
     @Import(name="times")
       private final @Nullable Output<String> times;
 
-    public Output<String> getTimes() {
-        return this.times == null ? Output.empty() : this.times;
+    public Output<String> times() {
+        return this.times == null ? Codegen.empty() : this.times;
     }
 
     public LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs(
@@ -58,9 +59,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
     }
 
     private LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs() {
-        this.interval = Output.empty();
-        this.intervalUnit = Output.empty();
-        this.times = Output.empty();
+        this.interval = Codegen.empty();
+        this.intervalUnit = Codegen.empty();
+        this.times = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
             return this;
         }
         public Builder intervalUnit(@Nullable String intervalUnit) {
-            this.intervalUnit = Output.ofNullable(intervalUnit);
+            this.intervalUnit = Codegen.ofNullable(intervalUnit);
             return this;
         }
         public Builder times(@Nullable Output<String> times) {
@@ -108,7 +109,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
             return this;
         }
         public Builder times(@Nullable String times) {
-            this.times = Output.ofNullable(times);
+            this.times = Codegen.ofNullable(times);
             return this;
         }        public LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs build() {
             return new LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs(interval, intervalUnit, times);

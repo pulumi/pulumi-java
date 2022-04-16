@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -45,7 +46,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return The time the watchlist item was created
      * 
      */
-    public Output</* @Nullable */ String> getCreated() {
+    public Output</* @Nullable */ String> created() {
         return this.created;
     }
     /**
@@ -59,7 +60,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return Describes a user that created the watchlist item
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> getCreatedBy() {
+    public Output</* @Nullable */ WatchlistUserInfoResponse> createdBy() {
         return this.createdBy;
     }
     /**
@@ -73,7 +74,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return key-value pairs for a watchlist item entity mapping
      * 
      */
-    public Output</* @Nullable */ Object> getEntityMapping() {
+    public Output</* @Nullable */ Object> entityMapping() {
         return this.entityMapping;
     }
     /**
@@ -87,7 +88,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -101,7 +102,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return A flag that indicates if the watchlist item is deleted or not
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsDeleted() {
+    public Output</* @Nullable */ Boolean> isDeleted() {
         return this.isDeleted;
     }
     /**
@@ -115,7 +116,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return key-value pairs for a watchlist item
      * 
      */
-    public Output<Object> getItemsKeyValue() {
+    public Output<Object> itemsKeyValue() {
         return this.itemsKeyValue;
     }
     /**
@@ -129,7 +130,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +144,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -157,7 +158,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return The tenantId to which the watchlist item belongs to
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -171,7 +172,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -185,7 +186,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return The last time the watchlist item was updated
      * 
      */
-    public Output</* @Nullable */ String> getUpdated() {
+    public Output</* @Nullable */ String> updated() {
         return this.updated;
     }
     /**
@@ -199,7 +200,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return Describes a user that updated the watchlist item
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> getUpdatedBy() {
+    public Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy() {
         return this.updatedBy;
     }
     /**
@@ -213,7 +214,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return The id (a Guid) of the watchlist item
      * 
      */
-    public Output</* @Nullable */ String> getWatchlistItemId() {
+    public Output</* @Nullable */ String> watchlistItemId() {
         return this.watchlistItemId;
     }
     /**
@@ -227,7 +228,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @return The type of the watchlist item
      * 
      */
-    public Output</* @Nullable */ String> getWatchlistItemType() {
+    public Output</* @Nullable */ String> watchlistItemType() {
         return this.watchlistItemType;
     }
 
@@ -253,7 +254,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WatchlistItem(String name, WatchlistItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:WatchlistItem", name, args == null ? WatchlistItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:WatchlistItem", name, args == null ? WatchlistItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WatchlistItem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

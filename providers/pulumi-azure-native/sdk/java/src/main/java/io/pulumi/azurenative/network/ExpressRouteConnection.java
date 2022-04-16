@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +46,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return Authorization key to establish the connection.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizationKey() {
+    public Output</* @Nullable */ String> authorizationKey() {
         return this.authorizationKey;
     }
     /**
@@ -59,7 +60,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return Enable internet security.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableInternetSecurity() {
+    public Output</* @Nullable */ Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity;
     }
     /**
@@ -73,7 +74,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The ExpressRoute circuit peering.
      * 
      */
-    public Output<ExpressRouteCircuitPeeringIdResponse> getExpressRouteCircuitPeering() {
+    public Output<ExpressRouteCircuitPeeringIdResponse> expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
     /**
@@ -87,7 +88,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return Enable FastPath to vWan Firewall hub.
      * 
      */
-    public Output</* @Nullable */ Boolean> getExpressRouteGatewayBypass() {
+    public Output</* @Nullable */ Boolean> expressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass;
     }
     /**
@@ -101,7 +102,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the express route connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +130,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    public Output</* @Nullable */ RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration() {
         return this.routingConfiguration;
     }
     /**
@@ -143,7 +144,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The routing weight associated to the connection.
      * 
      */
-    public Output</* @Nullable */ Integer> getRoutingWeight() {
+    public Output</* @Nullable */ Integer> routingWeight() {
         return this.routingWeight;
     }
 
@@ -169,7 +170,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExpressRouteConnection(String name, ExpressRouteConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ExpressRouteConnection", name, args == null ? ExpressRouteConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ExpressRouteConnection", name, args == null ? ExpressRouteConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExpressRouteConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

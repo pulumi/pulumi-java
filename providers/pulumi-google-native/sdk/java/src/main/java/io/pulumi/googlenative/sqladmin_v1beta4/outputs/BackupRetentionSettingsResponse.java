@@ -33,14 +33,14 @@ public final class BackupRetentionSettingsResponse {
      * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
      * 
     */
-    public Integer getRetainedBackups() {
+    public Integer retainedBackups() {
         return this.retainedBackups;
     }
     /**
      * The unit that 'retained_backups' represents.
      * 
     */
-    public String getRetentionUnit() {
+    public String retentionUnit() {
         return this.retentionUnit;
     }
 

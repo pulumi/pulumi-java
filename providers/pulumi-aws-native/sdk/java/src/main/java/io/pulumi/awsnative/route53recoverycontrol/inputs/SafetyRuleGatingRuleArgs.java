@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     @Import(name="gatingControls", required=true)
       private final Output<List<String>> gatingControls;
 
-    public Output<List<String>> getGatingControls() {
+    public Output<List<String>> gatingControls() {
         return this.gatingControls;
     }
 
@@ -38,7 +39,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     @Import(name="targetControls", required=true)
       private final Output<List<String>> targetControls;
 
-    public Output<List<String>> getTargetControls() {
+    public Output<List<String>> targetControls() {
         return this.targetControls;
     }
 
@@ -49,7 +50,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     @Import(name="waitPeriodMs", required=true)
       private final Output<Integer> waitPeriodMs;
 
-    public Output<Integer> getWaitPeriodMs() {
+    public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 
@@ -63,9 +64,9 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     }
 
     private SafetyRuleGatingRuleArgs() {
-        this.gatingControls = Output.empty();
-        this.targetControls = Output.empty();
-        this.waitPeriodMs = Output.empty();
+        this.gatingControls = Codegen.empty();
+        this.targetControls = Codegen.empty();
+        this.waitPeriodMs = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationType", required=true)
       private final Output<String> destinationType;
 
-    public Output<String> getDestinationType() {
+    public Output<String> destinationType() {
         return this.destinationType;
     }
 
@@ -36,7 +37,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
+    public Output<List<String>> destinations() {
         return this.destinations;
     }
 
@@ -47,7 +48,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -58,7 +59,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHop", required=true)
       private final Output<String> nextHop;
 
-    public Output<String> getNextHop() {
+    public Output<String> nextHop() {
         return this.nextHop;
     }
 
@@ -69,7 +70,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopType", required=true)
       private final Output<String> nextHopType;
 
-    public Output<String> getNextHopType() {
+    public Output<String> nextHopType() {
         return this.nextHopType;
     }
 
@@ -87,11 +88,11 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubRouteArgs() {
-        this.destinationType = Output.empty();
-        this.destinations = Output.empty();
-        this.name = Output.empty();
-        this.nextHop = Output.empty();
-        this.nextHopType = Output.empty();
+        this.destinationType = Codegen.empty();
+        this.destinations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nextHop = Codegen.empty();
+        this.nextHopType = Codegen.empty();
     }
 
     public static Builder builder() {

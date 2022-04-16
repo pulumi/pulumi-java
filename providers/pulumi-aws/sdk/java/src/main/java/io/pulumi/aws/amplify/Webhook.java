@@ -9,6 +9,7 @@ import io.pulumi.aws.amplify.inputs.WebhookState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The unique ID for an Amplify app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -53,7 +54,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the webhook.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +68,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The name for a branch that is part of the Amplify app.
      * 
      */
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName;
     }
     /**
@@ -81,7 +82,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The description for a webhook.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -95,7 +96,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The URL of the webhook.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -121,7 +122,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Webhook(String name, WebhookArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amplify/webhook:Webhook", name, args == null ? WebhookArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:amplify/webhook:Webhook", name, args == null ? WebhookArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Webhook(String name, Output<String> id, @Nullable WebhookState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

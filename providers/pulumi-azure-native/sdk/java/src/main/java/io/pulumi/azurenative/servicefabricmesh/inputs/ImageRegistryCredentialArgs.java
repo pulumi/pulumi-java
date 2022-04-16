@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="server", required=true)
       private final Output<String> server;
 
-    public Output<String> getServer() {
+    public Output<String> server() {
         return this.server;
     }
 
@@ -47,7 +48,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -61,9 +62,9 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     }
 
     private ImageRegistryCredentialArgs() {
-        this.password = Output.empty();
-        this.server = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.server = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder server(Output<String> server) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.enums.GitRepoSourceRepoType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ref")
       private final @Nullable Output<String> ref;
 
-    public Output<String> getRef() {
-        return this.ref == null ? Output.empty() : this.ref;
+    public Output<String> ref() {
+        return this.ref == null ? Codegen.empty() : this.ref;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoType")
       private final @Nullable Output<GitRepoSourceRepoType> repoType;
 
-    public Output<GitRepoSourceRepoType> getRepoType() {
-        return this.repoType == null ? Output.empty() : this.repoType;
+    public Output<GitRepoSourceRepoType> repoType() {
+        return this.repoType == null ? Codegen.empty() : this.repoType;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public GitRepoSourceArgs(
@@ -62,9 +63,9 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GitRepoSourceArgs() {
-        this.ref = Output.empty();
-        this.repoType = Output.empty();
-        this.uri = Output.empty();
+        this.ref = Codegen.empty();
+        this.repoType = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ref(@Nullable String ref) {
-            this.ref = Output.ofNullable(ref);
+            this.ref = Codegen.ofNullable(ref);
             return this;
         }
         public Builder repoType(@Nullable Output<GitRepoSourceRepoType> repoType) {
@@ -104,7 +105,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repoType(@Nullable GitRepoSourceRepoType repoType) {
-            this.repoType = Output.ofNullable(repoType);
+            this.repoType = Codegen.ofNullable(repoType);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -112,7 +113,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public GitRepoSourceArgs build() {
             return new GitRepoSourceArgs(ref, repoType, uri);

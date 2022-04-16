@@ -31,19 +31,19 @@ public final class ClusterClusterCertificate {
         this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
     }
 
-    public Optional<String> getAwsHardwareCertificate() {
+    public Optional<String> awsHardwareCertificate() {
         return Optional.ofNullable(this.awsHardwareCertificate);
     }
-    public Optional<String> getClusterCertificate() {
+    public Optional<String> clusterCertificate() {
         return Optional.ofNullable(this.clusterCertificate);
     }
-    public Optional<String> getClusterCsr() {
+    public Optional<String> clusterCsr() {
         return Optional.ofNullable(this.clusterCsr);
     }
-    public Optional<String> getHsmCertificate() {
+    public Optional<String> hsmCertificate() {
         return Optional.ofNullable(this.hsmCertificate);
     }
-    public Optional<String> getManufacturerHardwareCertificate() {
+    public Optional<String> manufacturerHardwareCertificate() {
         return Optional.ofNullable(this.manufacturerHardwareCertificate);
     }
 

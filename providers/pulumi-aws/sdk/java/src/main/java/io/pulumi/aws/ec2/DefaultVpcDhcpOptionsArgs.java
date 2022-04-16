@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
 
-    public Output<List<String>> getNetbiosNameServers() {
-        return this.netbiosNameServers == null ? Output.empty() : this.netbiosNameServers;
+    public Output<List<String>> netbiosNameServers() {
+        return this.netbiosNameServers == null ? Codegen.empty() : this.netbiosNameServers;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="netbiosNodeType")
       private final @Nullable Output<String> netbiosNodeType;
 
-    public Output<String> getNetbiosNodeType() {
-        return this.netbiosNodeType == null ? Output.empty() : this.netbiosNodeType;
+    public Output<String> netbiosNodeType() {
+        return this.netbiosNodeType == null ? Codegen.empty() : this.netbiosNodeType;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DefaultVpcDhcpOptionsArgs(
@@ -72,10 +73,10 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
     }
 
     private DefaultVpcDhcpOptionsArgs() {
-        this.netbiosNameServers = Output.empty();
-        this.netbiosNodeType = Output.empty();
-        this.ownerId = Output.empty();
-        this.tags = Output.empty();
+        this.netbiosNameServers = Codegen.empty();
+        this.netbiosNodeType = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder netbiosNameServers(@Nullable List<String> netbiosNameServers) {
-            this.netbiosNameServers = Output.ofNullable(netbiosNameServers);
+            this.netbiosNameServers = Codegen.ofNullable(netbiosNameServers);
             return this;
         }
         public Builder netbiosNameServers(String... netbiosNameServers) {
@@ -120,7 +121,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder netbiosNodeType(@Nullable String netbiosNodeType) {
-            this.netbiosNodeType = Output.ofNullable(netbiosNodeType);
+            this.netbiosNodeType = Codegen.ofNullable(netbiosNodeType);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -128,7 +129,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -136,7 +137,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DefaultVpcDhcpOptionsArgs build() {
             return new DefaultVpcDhcpOptionsArgs(netbiosNameServers, netbiosNodeType, ownerId, tags);

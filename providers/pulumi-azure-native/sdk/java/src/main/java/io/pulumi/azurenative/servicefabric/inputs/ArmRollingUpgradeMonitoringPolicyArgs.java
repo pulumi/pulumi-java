@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabric.enums.ArmUpgradeFailureAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     @Import(name="failureAction")
       private final @Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction;
 
-    public Output<Either<String,ArmUpgradeFailureAction>> getFailureAction() {
-        return this.failureAction == null ? Output.empty() : this.failureAction;
+    public Output<Either<String,ArmUpgradeFailureAction>> failureAction() {
+        return this.failureAction == null ? Codegen.empty() : this.failureAction;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     @Import(name="healthCheckRetryTimeout")
       private final @Nullable Output<String> healthCheckRetryTimeout;
 
-    public Output<String> getHealthCheckRetryTimeout() {
-        return this.healthCheckRetryTimeout == null ? Output.empty() : this.healthCheckRetryTimeout;
+    public Output<String> healthCheckRetryTimeout() {
+        return this.healthCheckRetryTimeout == null ? Codegen.empty() : this.healthCheckRetryTimeout;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     @Import(name="healthCheckStableDuration")
       private final @Nullable Output<String> healthCheckStableDuration;
 
-    public Output<String> getHealthCheckStableDuration() {
-        return this.healthCheckStableDuration == null ? Output.empty() : this.healthCheckStableDuration;
+    public Output<String> healthCheckStableDuration() {
+        return this.healthCheckStableDuration == null ? Codegen.empty() : this.healthCheckStableDuration;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     @Import(name="healthCheckWaitDuration")
       private final @Nullable Output<String> healthCheckWaitDuration;
 
-    public Output<String> getHealthCheckWaitDuration() {
-        return this.healthCheckWaitDuration == null ? Output.empty() : this.healthCheckWaitDuration;
+    public Output<String> healthCheckWaitDuration() {
+        return this.healthCheckWaitDuration == null ? Codegen.empty() : this.healthCheckWaitDuration;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     @Import(name="upgradeDomainTimeout")
       private final @Nullable Output<String> upgradeDomainTimeout;
 
-    public Output<String> getUpgradeDomainTimeout() {
-        return this.upgradeDomainTimeout == null ? Output.empty() : this.upgradeDomainTimeout;
+    public Output<String> upgradeDomainTimeout() {
+        return this.upgradeDomainTimeout == null ? Codegen.empty() : this.upgradeDomainTimeout;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     @Import(name="upgradeTimeout")
       private final @Nullable Output<String> upgradeTimeout;
 
-    public Output<String> getUpgradeTimeout() {
-        return this.upgradeTimeout == null ? Output.empty() : this.upgradeTimeout;
+    public Output<String> upgradeTimeout() {
+        return this.upgradeTimeout == null ? Codegen.empty() : this.upgradeTimeout;
     }
 
     public ArmRollingUpgradeMonitoringPolicyArgs(
@@ -102,12 +103,12 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     }
 
     private ArmRollingUpgradeMonitoringPolicyArgs() {
-        this.failureAction = Output.empty();
-        this.healthCheckRetryTimeout = Output.empty();
-        this.healthCheckStableDuration = Output.empty();
-        this.healthCheckWaitDuration = Output.empty();
-        this.upgradeDomainTimeout = Output.empty();
-        this.upgradeTimeout = Output.empty();
+        this.failureAction = Codegen.empty();
+        this.healthCheckRetryTimeout = Codegen.empty();
+        this.healthCheckStableDuration = Codegen.empty();
+        this.healthCheckWaitDuration = Codegen.empty();
+        this.upgradeDomainTimeout = Codegen.empty();
+        this.upgradeTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder failureAction(@Nullable Either<String,ArmUpgradeFailureAction> failureAction) {
-            this.failureAction = Output.ofNullable(failureAction);
+            this.failureAction = Codegen.ofNullable(failureAction);
             return this;
         }
         public Builder healthCheckRetryTimeout(@Nullable Output<String> healthCheckRetryTimeout) {
@@ -153,7 +154,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder healthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
-            this.healthCheckRetryTimeout = Output.ofNullable(healthCheckRetryTimeout);
+            this.healthCheckRetryTimeout = Codegen.ofNullable(healthCheckRetryTimeout);
             return this;
         }
         public Builder healthCheckStableDuration(@Nullable Output<String> healthCheckStableDuration) {
@@ -161,7 +162,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder healthCheckStableDuration(@Nullable String healthCheckStableDuration) {
-            this.healthCheckStableDuration = Output.ofNullable(healthCheckStableDuration);
+            this.healthCheckStableDuration = Codegen.ofNullable(healthCheckStableDuration);
             return this;
         }
         public Builder healthCheckWaitDuration(@Nullable Output<String> healthCheckWaitDuration) {
@@ -169,7 +170,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder healthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
-            this.healthCheckWaitDuration = Output.ofNullable(healthCheckWaitDuration);
+            this.healthCheckWaitDuration = Codegen.ofNullable(healthCheckWaitDuration);
             return this;
         }
         public Builder upgradeDomainTimeout(@Nullable Output<String> upgradeDomainTimeout) {
@@ -177,7 +178,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder upgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
-            this.upgradeDomainTimeout = Output.ofNullable(upgradeDomainTimeout);
+            this.upgradeDomainTimeout = Codegen.ofNullable(upgradeDomainTimeout);
             return this;
         }
         public Builder upgradeTimeout(@Nullable Output<String> upgradeTimeout) {
@@ -185,7 +186,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder upgradeTimeout(@Nullable String upgradeTimeout) {
-            this.upgradeTimeout = Output.ofNullable(upgradeTimeout);
+            this.upgradeTimeout = Codegen.ofNullable(upgradeTimeout);
             return this;
         }        public ArmRollingUpgradeMonitoringPolicyArgs build() {
             return new ArmRollingUpgradeMonitoringPolicyArgs(failureAction, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, upgradeDomainTimeout, upgradeTimeout);

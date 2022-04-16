@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.FolderExclusionArgs;
 import io.pulumi.gcp.logging.inputs.FolderExclusionState;
@@ -46,7 +47,7 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
      * @return A human-readable description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -62,7 +63,7 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
      * false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -80,7 +81,7 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -96,7 +97,7 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
      * accepted.
      * 
      */
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -110,7 +111,7 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
      * @return The name of the logging exclusion.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -136,7 +137,7 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderExclusion(String name, FolderExclusionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/folderExclusion:FolderExclusion", name, args == null ? FolderExclusionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/folderExclusion:FolderExclusion", name, args == null ? FolderExclusionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FolderExclusion(String name, Output<String> id, @Nullable FolderExclusionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

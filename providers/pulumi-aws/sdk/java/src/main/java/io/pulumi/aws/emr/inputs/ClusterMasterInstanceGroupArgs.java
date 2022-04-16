@@ -6,6 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupEbsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
-    public Output<String> getBidPrice() {
-        return this.bidPrice == null ? Output.empty() : this.bidPrice;
+    public Output<String> bidPrice() {
+        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="ebsConfigs")
       private final @Nullable Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> ebsConfigs;
 
-    public Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> getEbsConfigs() {
-        return this.ebsConfigs == null ? Output.empty() : this.ebsConfigs;
+    public Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> ebsConfigs() {
+        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+    public Output<Integer> instanceCount() {
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -79,8 +80,8 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ClusterMasterInstanceGroupArgs(
@@ -99,12 +100,12 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     }
 
     private ClusterMasterInstanceGroupArgs() {
-        this.bidPrice = Output.empty();
-        this.ebsConfigs = Output.empty();
-        this.id = Output.empty();
-        this.instanceCount = Output.empty();
-        this.instanceType = Output.empty();
-        this.name = Output.empty();
+        this.bidPrice = Codegen.empty();
+        this.ebsConfigs = Codegen.empty();
+        this.id = Codegen.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Output.ofNullable(bidPrice);
+            this.bidPrice = Codegen.ofNullable(bidPrice);
             return this;
         }
         public Builder ebsConfigs(@Nullable Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> ebsConfigs) {
@@ -150,7 +151,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder ebsConfigs(@Nullable List<ClusterMasterInstanceGroupEbsConfigArgs> ebsConfigs) {
-            this.ebsConfigs = Output.ofNullable(ebsConfigs);
+            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
             return this;
         }
         public Builder ebsConfigs(ClusterMasterInstanceGroupEbsConfigArgs... ebsConfigs) {
@@ -161,7 +162,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
@@ -169,7 +170,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {
@@ -185,7 +186,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ClusterMasterInstanceGroupArgs build() {
             return new ClusterMasterInstanceGroupArgs(bidPrice, ebsConfigs, id, instanceCount, instanceType, name);

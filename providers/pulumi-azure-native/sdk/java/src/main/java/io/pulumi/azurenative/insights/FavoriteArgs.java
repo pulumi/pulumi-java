@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.enums.FavoriteType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+    public Output<String> category() {
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<String> config;
 
-    public Output<String> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<String> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="favoriteId")
       private final @Nullable Output<String> favoriteId;
 
-    public Output<String> getFavoriteId() {
-        return this.favoriteId == null ? Output.empty() : this.favoriteId;
+    public Output<String> favoriteId() {
+        return this.favoriteId == null ? Codegen.empty() : this.favoriteId;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="favoriteType")
       private final @Nullable Output<FavoriteType> favoriteType;
 
-    public Output<FavoriteType> getFavoriteType() {
-        return this.favoriteType == null ? Output.empty() : this.favoriteType;
+    public Output<FavoriteType> favoriteType() {
+        return this.favoriteType == null ? Codegen.empty() : this.favoriteType;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isGeneratedFromTemplate")
       private final @Nullable Output<Boolean> isGeneratedFromTemplate;
 
-    public Output<Boolean> getIsGeneratedFromTemplate() {
-        return this.isGeneratedFromTemplate == null ? Output.empty() : this.isGeneratedFromTemplate;
+    public Output<Boolean> isGeneratedFromTemplate() {
+        return this.isGeneratedFromTemplate == null ? Codegen.empty() : this.isGeneratedFromTemplate;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +102,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -112,8 +113,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
-    public Output<String> getSourceType() {
-        return this.sourceType == null ? Output.empty() : this.sourceType;
+    public Output<String> sourceType() {
+        return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public FavoriteArgs(
@@ -164,17 +165,17 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FavoriteArgs() {
-        this.category = Output.empty();
-        this.config = Output.empty();
-        this.favoriteId = Output.empty();
-        this.favoriteType = Output.empty();
-        this.isGeneratedFromTemplate = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.sourceType = Output.empty();
-        this.tags = Output.empty();
-        this.version = Output.empty();
+        this.category = Codegen.empty();
+        this.config = Codegen.empty();
+        this.favoriteId = Codegen.empty();
+        this.favoriteType = Codegen.empty();
+        this.isGeneratedFromTemplate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.sourceType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder category(@Nullable String category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder config(@Nullable Output<String> config) {
@@ -230,7 +231,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable String config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder favoriteId(@Nullable Output<String> favoriteId) {
@@ -238,7 +239,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder favoriteId(@Nullable String favoriteId) {
-            this.favoriteId = Output.ofNullable(favoriteId);
+            this.favoriteId = Codegen.ofNullable(favoriteId);
             return this;
         }
         public Builder favoriteType(@Nullable Output<FavoriteType> favoriteType) {
@@ -246,7 +247,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder favoriteType(@Nullable FavoriteType favoriteType) {
-            this.favoriteType = Output.ofNullable(favoriteType);
+            this.favoriteType = Codegen.ofNullable(favoriteType);
             return this;
         }
         public Builder isGeneratedFromTemplate(@Nullable Output<Boolean> isGeneratedFromTemplate) {
@@ -254,7 +255,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
-            this.isGeneratedFromTemplate = Output.ofNullable(isGeneratedFromTemplate);
+            this.isGeneratedFromTemplate = Codegen.ofNullable(isGeneratedFromTemplate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -262,7 +263,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -286,7 +287,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = Output.ofNullable(sourceType);
+            this.sourceType = Codegen.ofNullable(sourceType);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -294,7 +295,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -305,7 +306,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public FavoriteArgs build() {
             return new FavoriteArgs(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, resourceGroupName, resourceName, sourceType, tags, version);

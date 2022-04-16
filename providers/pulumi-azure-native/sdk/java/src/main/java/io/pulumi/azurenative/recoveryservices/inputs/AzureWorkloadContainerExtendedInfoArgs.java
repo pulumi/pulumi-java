@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.DistributedNodesInfoArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
     @Import(name="hostServerName")
       private final @Nullable Output<String> hostServerName;
 
-    public Output<String> getHostServerName() {
-        return this.hostServerName == null ? Output.empty() : this.hostServerName;
+    public Output<String> hostServerName() {
+        return this.hostServerName == null ? Codegen.empty() : this.hostServerName;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
     @Import(name="inquiryInfo")
       private final @Nullable Output<InquiryInfoArgs> inquiryInfo;
 
-    public Output<InquiryInfoArgs> getInquiryInfo() {
-        return this.inquiryInfo == null ? Output.empty() : this.inquiryInfo;
+    public Output<InquiryInfoArgs> inquiryInfo() {
+        return this.inquiryInfo == null ? Codegen.empty() : this.inquiryInfo;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
     @Import(name="nodesList")
       private final @Nullable Output<List<DistributedNodesInfoArgs>> nodesList;
 
-    public Output<List<DistributedNodesInfoArgs>> getNodesList() {
-        return this.nodesList == null ? Output.empty() : this.nodesList;
+    public Output<List<DistributedNodesInfoArgs>> nodesList() {
+        return this.nodesList == null ? Codegen.empty() : this.nodesList;
     }
 
     public AzureWorkloadContainerExtendedInfoArgs(
@@ -64,9 +65,9 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
     }
 
     private AzureWorkloadContainerExtendedInfoArgs() {
-        this.hostServerName = Output.empty();
-        this.inquiryInfo = Output.empty();
-        this.nodesList = Output.empty();
+        this.hostServerName = Codegen.empty();
+        this.inquiryInfo = Codegen.empty();
+        this.nodesList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
             return this;
         }
         public Builder hostServerName(@Nullable String hostServerName) {
-            this.hostServerName = Output.ofNullable(hostServerName);
+            this.hostServerName = Codegen.ofNullable(hostServerName);
             return this;
         }
         public Builder inquiryInfo(@Nullable Output<InquiryInfoArgs> inquiryInfo) {
@@ -106,7 +107,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
             return this;
         }
         public Builder inquiryInfo(@Nullable InquiryInfoArgs inquiryInfo) {
-            this.inquiryInfo = Output.ofNullable(inquiryInfo);
+            this.inquiryInfo = Codegen.ofNullable(inquiryInfo);
             return this;
         }
         public Builder nodesList(@Nullable Output<List<DistributedNodesInfoArgs>> nodesList) {
@@ -114,7 +115,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
             return this;
         }
         public Builder nodesList(@Nullable List<DistributedNodesInfoArgs> nodesList) {
-            this.nodesList = Output.ofNullable(nodesList);
+            this.nodesList = Codegen.ofNullable(nodesList);
             return this;
         }
         public Builder nodesList(DistributedNodesInfoArgs... nodesList) {

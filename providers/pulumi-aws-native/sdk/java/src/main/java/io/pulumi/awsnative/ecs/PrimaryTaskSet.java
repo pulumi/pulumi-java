@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ecs.PrimaryTaskSetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
      * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
      */
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     /**
@@ -42,7 +43,7 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
      * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -56,7 +57,7 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
      * @return The ID or full Amazon Resource Name (ARN) of the task set.
      * 
      */
-    public Output<String> getTaskSetId() {
+    public Output<String> taskSetId() {
         return this.taskSetId;
     }
 
@@ -82,7 +83,7 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrimaryTaskSet(String name, PrimaryTaskSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ecs:PrimaryTaskSet", name, args == null ? PrimaryTaskSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ecs:PrimaryTaskSet", name, args == null ? PrimaryTaskSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrimaryTaskSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

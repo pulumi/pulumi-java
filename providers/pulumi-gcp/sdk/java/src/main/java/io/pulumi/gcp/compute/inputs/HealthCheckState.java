@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.HealthCheckGrpcHealthCheckGetArgs;
 import io.pulumi.gcp.compute.inputs.HealthCheckHttp2HealthCheckGetArgs;
 import io.pulumi.gcp.compute.inputs.HealthCheckHttpHealthCheckGetArgs;
@@ -30,8 +31,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="checkIntervalSec")
       private final @Nullable Output<Integer> checkIntervalSec;
 
-    public Output<Integer> getCheckIntervalSec() {
-        return this.checkIntervalSec == null ? Output.empty() : this.checkIntervalSec;
+    public Output<Integer> checkIntervalSec() {
+        return this.checkIntervalSec == null ? Codegen.empty() : this.checkIntervalSec;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="grpcHealthCheck")
       private final @Nullable Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck;
 
-    public Output<HealthCheckGrpcHealthCheckGetArgs> getGrpcHealthCheck() {
-        return this.grpcHealthCheck == null ? Output.empty() : this.grpcHealthCheck;
+    public Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck() {
+        return this.grpcHealthCheck == null ? Codegen.empty() : this.grpcHealthCheck;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
+    public Output<Integer> healthyThreshold() {
+        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="http2HealthCheck")
       private final @Nullable Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck;
 
-    public Output<HealthCheckHttp2HealthCheckGetArgs> getHttp2HealthCheck() {
-        return this.http2HealthCheck == null ? Output.empty() : this.http2HealthCheck;
+    public Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck() {
+        return this.http2HealthCheck == null ? Codegen.empty() : this.http2HealthCheck;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpHealthCheck")
       private final @Nullable Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck;
 
-    public Output<HealthCheckHttpHealthCheckGetArgs> getHttpHealthCheck() {
-        return this.httpHealthCheck == null ? Output.empty() : this.httpHealthCheck;
+    public Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck() {
+        return this.httpHealthCheck == null ? Codegen.empty() : this.httpHealthCheck;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpsHealthCheck")
       private final @Nullable Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck;
 
-    public Output<HealthCheckHttpsHealthCheckGetArgs> getHttpsHealthCheck() {
-        return this.httpsHealthCheck == null ? Output.empty() : this.httpsHealthCheck;
+    public Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck() {
+        return this.httpsHealthCheck == null ? Codegen.empty() : this.httpsHealthCheck;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
       private final @Nullable Output<HealthCheckLogConfigGetArgs> logConfig;
 
-    public Output<HealthCheckLogConfigGetArgs> getLogConfig() {
-        return this.logConfig == null ? Output.empty() : this.logConfig;
+    public Output<HealthCheckLogConfigGetArgs> logConfig() {
+        return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslHealthCheck")
       private final @Nullable Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck;
 
-    public Output<HealthCheckSslHealthCheckGetArgs> getSslHealthCheck() {
-        return this.sslHealthCheck == null ? Output.empty() : this.sslHealthCheck;
+    public Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck() {
+        return this.sslHealthCheck == null ? Codegen.empty() : this.sslHealthCheck;
     }
 
     /**
@@ -189,8 +190,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tcpHealthCheck")
       private final @Nullable Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck;
 
-    public Output<HealthCheckTcpHealthCheckGetArgs> getTcpHealthCheck() {
-        return this.tcpHealthCheck == null ? Output.empty() : this.tcpHealthCheck;
+    public Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck() {
+        return this.tcpHealthCheck == null ? Codegen.empty() : this.tcpHealthCheck;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
+    public Output<Integer> timeoutSec() {
+        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
     /**
@@ -213,8 +214,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -225,8 +226,8 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
+    public Output<Integer> unhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 
     public HealthCheckState(
@@ -267,23 +268,23 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthCheckState() {
-        this.checkIntervalSec = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.grpcHealthCheck = Output.empty();
-        this.healthyThreshold = Output.empty();
-        this.http2HealthCheck = Output.empty();
-        this.httpHealthCheck = Output.empty();
-        this.httpsHealthCheck = Output.empty();
-        this.logConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.sslHealthCheck = Output.empty();
-        this.tcpHealthCheck = Output.empty();
-        this.timeoutSec = Output.empty();
-        this.type = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.checkIntervalSec = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.grpcHealthCheck = Codegen.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.http2HealthCheck = Codegen.empty();
+        this.httpHealthCheck = Codegen.empty();
+        this.httpsHealthCheck = Codegen.empty();
+        this.logConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sslHealthCheck = Codegen.empty();
+        this.tcpHealthCheck = Codegen.empty();
+        this.timeoutSec = Codegen.empty();
+        this.type = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -343,7 +344,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
-            this.checkIntervalSec = Output.ofNullable(checkIntervalSec);
+            this.checkIntervalSec = Codegen.ofNullable(checkIntervalSec);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -351,7 +352,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -359,7 +360,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder grpcHealthCheck(@Nullable Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck) {
@@ -367,7 +368,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grpcHealthCheck(@Nullable HealthCheckGrpcHealthCheckGetArgs grpcHealthCheck) {
-            this.grpcHealthCheck = Output.ofNullable(grpcHealthCheck);
+            this.grpcHealthCheck = Codegen.ofNullable(grpcHealthCheck);
             return this;
         }
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
@@ -375,7 +376,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Output.ofNullable(healthyThreshold);
+            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
             return this;
         }
         public Builder http2HealthCheck(@Nullable Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck) {
@@ -383,7 +384,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder http2HealthCheck(@Nullable HealthCheckHttp2HealthCheckGetArgs http2HealthCheck) {
-            this.http2HealthCheck = Output.ofNullable(http2HealthCheck);
+            this.http2HealthCheck = Codegen.ofNullable(http2HealthCheck);
             return this;
         }
         public Builder httpHealthCheck(@Nullable Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck) {
@@ -391,7 +392,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpHealthCheck(@Nullable HealthCheckHttpHealthCheckGetArgs httpHealthCheck) {
-            this.httpHealthCheck = Output.ofNullable(httpHealthCheck);
+            this.httpHealthCheck = Codegen.ofNullable(httpHealthCheck);
             return this;
         }
         public Builder httpsHealthCheck(@Nullable Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck) {
@@ -399,7 +400,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpsHealthCheck(@Nullable HealthCheckHttpsHealthCheckGetArgs httpsHealthCheck) {
-            this.httpsHealthCheck = Output.ofNullable(httpsHealthCheck);
+            this.httpsHealthCheck = Codegen.ofNullable(httpsHealthCheck);
             return this;
         }
         public Builder logConfig(@Nullable Output<HealthCheckLogConfigGetArgs> logConfig) {
@@ -407,7 +408,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logConfig(@Nullable HealthCheckLogConfigGetArgs logConfig) {
-            this.logConfig = Output.ofNullable(logConfig);
+            this.logConfig = Codegen.ofNullable(logConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -415,7 +416,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -423,7 +424,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -431,7 +432,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sslHealthCheck(@Nullable Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck) {
@@ -439,7 +440,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslHealthCheck(@Nullable HealthCheckSslHealthCheckGetArgs sslHealthCheck) {
-            this.sslHealthCheck = Output.ofNullable(sslHealthCheck);
+            this.sslHealthCheck = Codegen.ofNullable(sslHealthCheck);
             return this;
         }
         public Builder tcpHealthCheck(@Nullable Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck) {
@@ -447,7 +448,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tcpHealthCheck(@Nullable HealthCheckTcpHealthCheckGetArgs tcpHealthCheck) {
-            this.tcpHealthCheck = Output.ofNullable(tcpHealthCheck);
+            this.tcpHealthCheck = Codegen.ofNullable(tcpHealthCheck);
             return this;
         }
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
@@ -455,7 +456,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Output.ofNullable(timeoutSec);
+            this.timeoutSec = Codegen.ofNullable(timeoutSec);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -463,7 +464,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
@@ -471,7 +472,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
             return this;
         }        public HealthCheckState build() {
             return new HealthCheckState(checkIntervalSec, creationTimestamp, description, grpcHealthCheck, healthyThreshold, http2HealthCheck, httpHealthCheck, httpsHealthCheck, logConfig, name, project, selfLink, sslHealthCheck, tcpHealthCheck, timeoutSec, type, unhealthyThreshold);

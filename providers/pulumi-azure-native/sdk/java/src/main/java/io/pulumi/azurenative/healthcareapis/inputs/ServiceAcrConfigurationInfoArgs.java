@@ -5,6 +5,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ServiceAcrConfigurationInfoArgs extends io.pulumi.resources.R
     @Import(name="loginServers")
       private final @Nullable Output<List<String>> loginServers;
 
-    public Output<List<String>> getLoginServers() {
-        return this.loginServers == null ? Output.empty() : this.loginServers;
+    public Output<List<String>> loginServers() {
+        return this.loginServers == null ? Codegen.empty() : this.loginServers;
     }
 
     public ServiceAcrConfigurationInfoArgs(@Nullable Output<List<String>> loginServers) {
@@ -35,7 +36,7 @@ public final class ServiceAcrConfigurationInfoArgs extends io.pulumi.resources.R
     }
 
     private ServiceAcrConfigurationInfoArgs() {
-        this.loginServers = Output.empty();
+        this.loginServers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ServiceAcrConfigurationInfoArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder loginServers(@Nullable List<String> loginServers) {
-            this.loginServers = Output.ofNullable(loginServers);
+            this.loginServers = Codegen.ofNullable(loginServers);
             return this;
         }
         public Builder loginServers(String... loginServers) {

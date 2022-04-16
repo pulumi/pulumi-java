@@ -17,35 +17,35 @@ public final class GetDatasetFhirStoreIamPolicyArgs extends io.pulumi.resources.
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="fhirStoreId", required=true)
       private final String fhirStoreId;
 
-    public String getFhirStoreId() {
+    public String fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

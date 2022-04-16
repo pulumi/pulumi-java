@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+    public Output<String> code() {
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     public OperationErrorArgs(
@@ -61,9 +62,9 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OperationErrorArgs() {
-        this.code = Output.empty();
-        this.kind = Output.empty();
-        this.message = Output.empty();
+        this.code = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.message = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -103,7 +104,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -111,7 +112,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }        public OperationErrorArgs build() {
             return new OperationErrorArgs(code, kind, message);

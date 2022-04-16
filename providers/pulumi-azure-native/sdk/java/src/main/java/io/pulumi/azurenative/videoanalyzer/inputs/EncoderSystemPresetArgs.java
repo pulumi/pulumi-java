@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.EncoderSystemPresetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<Either<String,EncoderSystemPresetType>> name;
 
-    public Output<Either<String,EncoderSystemPresetType>> getName() {
+    public Output<Either<String,EncoderSystemPresetType>> name() {
         return this.name;
     }
 
@@ -38,7 +39,7 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -50,8 +51,8 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     private EncoderSystemPresetArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

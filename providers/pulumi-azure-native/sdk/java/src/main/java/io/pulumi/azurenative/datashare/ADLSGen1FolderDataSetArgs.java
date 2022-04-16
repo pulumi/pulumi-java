@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
-        return this.dataSetName == null ? Output.empty() : this.dataSetName;
+    public Output<String> dataSetName() {
+        return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="folderPath", required=true)
       private final Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath;
     }
 
@@ -55,7 +56,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -66,7 +67,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -77,7 +78,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +89,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -99,7 +100,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -123,14 +124,14 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
     }
 
     private ADLSGen1FolderDataSetArgs() {
-        this.accountName = Output.empty();
-        this.dataSetName = Output.empty();
-        this.folderPath = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareName = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetName = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Output.ofNullable(dataSetName);
+            this.dataSetName = Codegen.ofNullable(dataSetName);
             return this;
         }
         public Builder folderPath(Output<String> folderPath) {

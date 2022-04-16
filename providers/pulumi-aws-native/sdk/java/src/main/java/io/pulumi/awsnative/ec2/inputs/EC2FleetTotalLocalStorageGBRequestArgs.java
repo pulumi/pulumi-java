@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class EC2FleetTotalLocalStorageGBRequestArgs extends io.pulumi.reso
     @Import(name="max")
       private final @Nullable Output<Double> max;
 
-    public Output<Double> getMax() {
-        return this.max == null ? Output.empty() : this.max;
+    public Output<Double> max() {
+        return this.max == null ? Codegen.empty() : this.max;
     }
 
     @Import(name="min")
       private final @Nullable Output<Double> min;
 
-    public Output<Double> getMin() {
-        return this.min == null ? Output.empty() : this.min;
+    public Output<Double> min() {
+        return this.min == null ? Codegen.empty() : this.min;
     }
 
     public EC2FleetTotalLocalStorageGBRequestArgs(
@@ -36,8 +37,8 @@ public final class EC2FleetTotalLocalStorageGBRequestArgs extends io.pulumi.reso
     }
 
     private EC2FleetTotalLocalStorageGBRequestArgs() {
-        this.max = Output.empty();
-        this.min = Output.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class EC2FleetTotalLocalStorageGBRequestArgs extends io.pulumi.reso
             return this;
         }
         public Builder max(@Nullable Double max) {
-            this.max = Output.ofNullable(max);
+            this.max = Codegen.ofNullable(max);
             return this;
         }
         public Builder min(@Nullable Output<Double> min) {
@@ -75,7 +76,7 @@ public final class EC2FleetTotalLocalStorageGBRequestArgs extends io.pulumi.reso
             return this;
         }
         public Builder min(@Nullable Double min) {
-            this.min = Output.ofNullable(min);
+            this.min = Codegen.ofNullable(min);
             return this;
         }        public EC2FleetTotalLocalStorageGBRequestArgs build() {
             return new EC2FleetTotalLocalStorageGBRequestArgs(max, min);

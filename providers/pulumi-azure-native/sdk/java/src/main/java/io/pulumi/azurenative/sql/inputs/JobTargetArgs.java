@@ -8,6 +8,7 @@ import io.pulumi.azurenative.sql.enums.JobTargetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticPoolName")
       private final @Nullable Output<String> elasticPoolName;
 
-    public Output<String> getElasticPoolName() {
-        return this.elasticPoolName == null ? Output.empty() : this.elasticPoolName;
+    public Output<String> elasticPoolName() {
+        return this.elasticPoolName == null ? Codegen.empty() : this.elasticPoolName;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="membershipType")
       private final @Nullable Output<JobTargetGroupMembershipType> membershipType;
 
-    public Output<JobTargetGroupMembershipType> getMembershipType() {
-        return this.membershipType == null ? Output.empty() : this.membershipType;
+    public Output<JobTargetGroupMembershipType> membershipType() {
+        return this.membershipType == null ? Codegen.empty() : this.membershipType;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="refreshCredential")
       private final @Nullable Output<String> refreshCredential;
 
-    public Output<String> getRefreshCredential() {
-        return this.refreshCredential == null ? Output.empty() : this.refreshCredential;
+    public Output<String> refreshCredential() {
+        return this.refreshCredential == null ? Codegen.empty() : this.refreshCredential;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
-        return this.serverName == null ? Output.empty() : this.serverName;
+    public Output<String> serverName() {
+        return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shardMapName")
       private final @Nullable Output<String> shardMapName;
 
-    public Output<String> getShardMapName() {
-        return this.shardMapName == null ? Output.empty() : this.shardMapName;
+    public Output<String> shardMapName() {
+        return this.shardMapName == null ? Codegen.empty() : this.shardMapName;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,JobTargetType>> type;
 
-    public Output<Either<String,JobTargetType>> getType() {
+    public Output<Either<String,JobTargetType>> type() {
         return this.type;
     }
 
@@ -108,7 +109,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
         Output<Either<String,JobTargetType>> type) {
         this.databaseName = databaseName;
         this.elasticPoolName = elasticPoolName;
-        this.membershipType = membershipType == null ? Output.ofNullable(io.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType.Include) : membershipType;
+        this.membershipType = membershipType == null ? Codegen.ofNullable(io.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType.Include) : membershipType;
         this.refreshCredential = refreshCredential;
         this.serverName = serverName;
         this.shardMapName = shardMapName;
@@ -116,13 +117,13 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobTargetArgs() {
-        this.databaseName = Output.empty();
-        this.elasticPoolName = Output.empty();
-        this.membershipType = Output.empty();
-        this.refreshCredential = Output.empty();
-        this.serverName = Output.empty();
-        this.shardMapName = Output.empty();
-        this.type = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.elasticPoolName = Codegen.empty();
+        this.membershipType = Codegen.empty();
+        this.refreshCredential = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.shardMapName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder elasticPoolName(@Nullable Output<String> elasticPoolName) {
@@ -170,7 +171,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
-            this.elasticPoolName = Output.ofNullable(elasticPoolName);
+            this.elasticPoolName = Codegen.ofNullable(elasticPoolName);
             return this;
         }
         public Builder membershipType(@Nullable Output<JobTargetGroupMembershipType> membershipType) {
@@ -178,7 +179,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder membershipType(@Nullable JobTargetGroupMembershipType membershipType) {
-            this.membershipType = Output.ofNullable(membershipType);
+            this.membershipType = Codegen.ofNullable(membershipType);
             return this;
         }
         public Builder refreshCredential(@Nullable Output<String> refreshCredential) {
@@ -186,7 +187,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder refreshCredential(@Nullable String refreshCredential) {
-            this.refreshCredential = Output.ofNullable(refreshCredential);
+            this.refreshCredential = Codegen.ofNullable(refreshCredential);
             return this;
         }
         public Builder serverName(@Nullable Output<String> serverName) {
@@ -194,7 +195,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Output.ofNullable(serverName);
+            this.serverName = Codegen.ofNullable(serverName);
             return this;
         }
         public Builder shardMapName(@Nullable Output<String> shardMapName) {
@@ -202,7 +203,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shardMapName(@Nullable String shardMapName) {
-            this.shardMapName = Output.ofNullable(shardMapName);
+            this.shardMapName = Codegen.ofNullable(shardMapName);
             return this;
         }
         public Builder type(Output<Either<String,JobTargetType>> type) {

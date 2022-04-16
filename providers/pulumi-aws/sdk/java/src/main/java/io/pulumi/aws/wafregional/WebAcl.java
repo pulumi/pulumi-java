@@ -12,6 +12,7 @@ import io.pulumi.aws.wafregional.outputs.WebAclRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the WAF Regional WebACL.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
      * 
      */
-    public Output<WebAclDefaultAction> getDefaultAction() {
+    public Output<WebAclDefaultAction> defaultAction() {
         return this.defaultAction;
     }
     /**
@@ -72,7 +73,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return Configuration block to enable WAF logging. Detailed below.
      * 
      */
-    public Output</* @Nullable */ WebAclLoggingConfiguration> getLoggingConfiguration() {
+    public Output</* @Nullable */ WebAclLoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
     /**
@@ -86,7 +87,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The name or description for the Amazon CloudWatch metric of this web ACL.
      * 
      */
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
     /**
@@ -100,7 +101,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The name or description of the web ACL.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return Set of configuration blocks containing rules for the web ACL. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<WebAclRule>> getRules() {
+    public Output</* @Nullable */ List<WebAclRule>> rules() {
         return this.rules;
     }
     /**
@@ -128,7 +129,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -168,7 +169,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAcl(String name, WebAclArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/webAcl:WebAcl", name, args == null ? WebAclArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafregional/webAcl:WebAcl", name, args == null ? WebAclArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAcl(String name, Output<String> id, @Nullable WebAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

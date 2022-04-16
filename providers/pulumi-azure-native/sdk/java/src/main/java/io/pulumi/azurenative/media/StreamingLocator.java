@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return Alternative Media ID of this Streaming Locator
      * 
      */
-    public Output</* @Nullable */ String> getAlternativeMediaId() {
+    public Output</* @Nullable */ String> alternativeMediaId() {
         return this.alternativeMediaId;
     }
     /**
@@ -57,7 +58,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return Asset Name
      * 
      */
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
     /**
@@ -71,7 +72,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The ContentKeys used by this Streaming Locator.
      * 
      */
-    public Output</* @Nullable */ List<StreamingLocatorContentKeyResponse>> getContentKeys() {
+    public Output</* @Nullable */ List<StreamingLocatorContentKeyResponse>> contentKeys() {
         return this.contentKeys;
     }
     /**
@@ -85,7 +86,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The creation time of the Streaming Locator.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -99,7 +100,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultContentKeyPolicyName() {
+    public Output</* @Nullable */ String> defaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
     /**
@@ -113,7 +114,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The end time of the Streaming Locator.
      * 
      */
-    public Output</* @Nullable */ String> getEndTime() {
+    public Output</* @Nullable */ String> endTime() {
         return this.endTime;
     }
     /**
@@ -127,7 +128,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return A list of asset or account filters which apply to this streaming locator
      * 
      */
-    public Output</* @Nullable */ List<String>> getFilters() {
+    public Output</* @Nullable */ List<String>> filters() {
         return this.filters;
     }
     /**
@@ -141,7 +142,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +156,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The start time of the Streaming Locator.
      * 
      */
-    public Output</* @Nullable */ String> getStartTime() {
+    public Output</* @Nullable */ String> startTime() {
         return this.startTime;
     }
     /**
@@ -169,7 +170,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The StreamingLocatorId of the Streaming Locator.
      * 
      */
-    public Output</* @Nullable */ String> getStreamingLocatorId() {
+    public Output</* @Nullable */ String> streamingLocatorId() {
         return this.streamingLocatorId;
     }
     /**
@@ -183,7 +184,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
      * 
      */
-    public Output<String> getStreamingPolicyName() {
+    public Output<String> streamingPolicyName() {
         return this.streamingPolicyName;
     }
     /**
@@ -197,7 +198,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -211,7 +212,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -237,7 +238,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StreamingLocator(String name, StreamingLocatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:media:StreamingLocator", name, args == null ? StreamingLocatorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:media:StreamingLocator", name, args == null ? StreamingLocatorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StreamingLocator(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

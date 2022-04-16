@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SubnetworkIAMPolicyArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkIAMPolicyState;
@@ -71,7 +72,7 @@ public class SubnetworkIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -87,7 +88,7 @@ public class SubnetworkIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -103,7 +104,7 @@ public class SubnetworkIAMPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -123,7 +124,7 @@ public class SubnetworkIAMPolicy extends io.pulumi.resources.CustomResource {
      * region is specified, it is taken from the provider configuration.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -137,7 +138,7 @@ public class SubnetworkIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
 
@@ -163,7 +164,7 @@ public class SubnetworkIAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubnetworkIAMPolicy(String name, SubnetworkIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/subnetworkIAMPolicy:SubnetworkIAMPolicy", name, args == null ? SubnetworkIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/subnetworkIAMPolicy:SubnetworkIAMPolicy", name, args == null ? SubnetworkIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SubnetworkIAMPolicy(String name, Output<String> id, @Nullable SubnetworkIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

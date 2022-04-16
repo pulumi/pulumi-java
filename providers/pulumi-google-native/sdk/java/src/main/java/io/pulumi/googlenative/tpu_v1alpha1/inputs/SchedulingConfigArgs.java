@@ -5,6 +5,7 @@ package io.pulumi.googlenative.tpu_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
-        return this.preemptible == null ? Output.empty() : this.preemptible;
+    public Output<Boolean> preemptible() {
+        return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
-        return this.reserved == null ? Output.empty() : this.reserved;
+    public Output<Boolean> reserved() {
+        return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 
     public SchedulingConfigArgs(
@@ -48,8 +49,8 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SchedulingConfigArgs() {
-        this.preemptible = Output.empty();
-        this.reserved = Output.empty();
+        this.preemptible = Codegen.empty();
+        this.reserved = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Output.ofNullable(preemptible);
+            this.preemptible = Codegen.ofNullable(preemptible);
             return this;
         }
         public Builder reserved(@Nullable Output<Boolean> reserved) {
@@ -87,7 +88,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Output.ofNullable(reserved);
+            this.reserved = Codegen.ofNullable(reserved);
             return this;
         }        public SchedulingConfigArgs build() {
             return new SchedulingConfigArgs(preemptible, reserved);

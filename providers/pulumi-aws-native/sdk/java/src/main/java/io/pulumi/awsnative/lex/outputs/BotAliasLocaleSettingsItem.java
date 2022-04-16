@@ -25,14 +25,14 @@ public final class BotAliasLocaleSettingsItem {
         this.localeId = localeId;
     }
 
-    public BotAliasLocaleSettings getBotAliasLocaleSetting() {
+    public BotAliasLocaleSettings botAliasLocaleSetting() {
         return this.botAliasLocaleSetting;
     }
     /**
      * A string used to identify the locale
      * 
     */
-    public String getLocaleId() {
+    public String localeId() {
         return this.localeId;
     }
 

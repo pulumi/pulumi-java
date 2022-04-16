@@ -9,6 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="command", required=true)
       private final Output<Object> command;
 
-    public Output<Object> getCommand() {
+    public Output<Object> command() {
         return this.command;
     }
 
@@ -42,8 +43,8 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="commandTimeout")
       private final @Nullable Output<Object> commandTimeout;
 
-    public Output<Object> getCommandTimeout() {
-        return this.commandTimeout == null ? Output.empty() : this.commandTimeout;
+    public Output<Object> commandTimeout() {
+        return this.commandTimeout == null ? Codegen.empty() : this.commandTimeout;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -97,8 +98,8 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<ActivityPolicyArgs> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -120,8 +121,8 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> userProperties() {
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public AzureDataExplorerCommandActivityArgs(
@@ -146,15 +147,15 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     }
 
     private AzureDataExplorerCommandActivityArgs() {
-        this.command = Output.empty();
-        this.commandTimeout = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.command = Codegen.empty();
+        this.commandTimeout = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder commandTimeout(@Nullable Object commandTimeout) {
-            this.commandTimeout = Output.ofNullable(commandTimeout);
+            this.commandTimeout = Codegen.ofNullable(commandTimeout);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
@@ -214,7 +215,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -225,7 +226,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -233,7 +234,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -249,7 +250,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -265,7 +266,7 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

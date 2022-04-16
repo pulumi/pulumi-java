@@ -9,6 +9,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdTrigger
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestPlaylistType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,8 +33,8 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="adMarkers")
       private final @Nullable Output<OriginEndpointHlsManifestAdMarkers> adMarkers;
 
-    public Output<OriginEndpointHlsManifestAdMarkers> getAdMarkers() {
-        return this.adMarkers == null ? Output.empty() : this.adMarkers;
+    public Output<OriginEndpointHlsManifestAdMarkers> adMarkers() {
+        return this.adMarkers == null ? Codegen.empty() : this.adMarkers;
     }
 
     /**
@@ -43,15 +44,15 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="adTriggers")
       private final @Nullable Output<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers;
 
-    public Output<List<OriginEndpointHlsManifestAdTriggersItem>> getAdTriggers() {
-        return this.adTriggers == null ? Output.empty() : this.adTriggers;
+    public Output<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers() {
+        return this.adTriggers == null ? Codegen.empty() : this.adTriggers;
     }
 
     @Import(name="adsOnDeliveryRestrictions")
       private final @Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
 
-    public Output<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
-        return this.adsOnDeliveryRestrictions == null ? Output.empty() : this.adsOnDeliveryRestrictions;
+    public Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
+        return this.adsOnDeliveryRestrictions == null ? Codegen.empty() : this.adsOnDeliveryRestrictions;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -72,8 +73,8 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="includeIframeOnlyStream")
       private final @Nullable Output<Boolean> includeIframeOnlyStream;
 
-    public Output<Boolean> getIncludeIframeOnlyStream() {
-        return this.includeIframeOnlyStream == null ? Output.empty() : this.includeIframeOnlyStream;
+    public Output<Boolean> includeIframeOnlyStream() {
+        return this.includeIframeOnlyStream == null ? Codegen.empty() : this.includeIframeOnlyStream;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
-        return this.manifestName == null ? Output.empty() : this.manifestName;
+    public Output<String> manifestName() {
+        return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="playlistType")
       private final @Nullable Output<OriginEndpointHlsManifestPlaylistType> playlistType;
 
-    public Output<OriginEndpointHlsManifestPlaylistType> getPlaylistType() {
-        return this.playlistType == null ? Output.empty() : this.playlistType;
+    public Output<OriginEndpointHlsManifestPlaylistType> playlistType() {
+        return this.playlistType == null ? Codegen.empty() : this.playlistType;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="playlistWindowSeconds")
       private final @Nullable Output<Integer> playlistWindowSeconds;
 
-    public Output<Integer> getPlaylistWindowSeconds() {
-        return this.playlistWindowSeconds == null ? Output.empty() : this.playlistWindowSeconds;
+    public Output<Integer> playlistWindowSeconds() {
+        return this.playlistWindowSeconds == null ? Codegen.empty() : this.playlistWindowSeconds;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="programDateTimeIntervalSeconds")
       private final @Nullable Output<Integer> programDateTimeIntervalSeconds;
 
-    public Output<Integer> getProgramDateTimeIntervalSeconds() {
-        return this.programDateTimeIntervalSeconds == null ? Output.empty() : this.programDateTimeIntervalSeconds;
+    public Output<Integer> programDateTimeIntervalSeconds() {
+        return this.programDateTimeIntervalSeconds == null ? Codegen.empty() : this.programDateTimeIntervalSeconds;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public OriginEndpointHlsManifestArgs(
@@ -155,16 +156,16 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     }
 
     private OriginEndpointHlsManifestArgs() {
-        this.adMarkers = Output.empty();
-        this.adTriggers = Output.empty();
-        this.adsOnDeliveryRestrictions = Output.empty();
-        this.id = Output.empty();
-        this.includeIframeOnlyStream = Output.empty();
-        this.manifestName = Output.empty();
-        this.playlistType = Output.empty();
-        this.playlistWindowSeconds = Output.empty();
-        this.programDateTimeIntervalSeconds = Output.empty();
-        this.url = Output.empty();
+        this.adMarkers = Codegen.empty();
+        this.adTriggers = Codegen.empty();
+        this.adsOnDeliveryRestrictions = Codegen.empty();
+        this.id = Codegen.empty();
+        this.includeIframeOnlyStream = Codegen.empty();
+        this.manifestName = Codegen.empty();
+        this.playlistType = Codegen.empty();
+        this.playlistWindowSeconds = Codegen.empty();
+        this.programDateTimeIntervalSeconds = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder adMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
-            this.adMarkers = Output.ofNullable(adMarkers);
+            this.adMarkers = Codegen.ofNullable(adMarkers);
             return this;
         }
         public Builder adTriggers(@Nullable Output<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers) {
@@ -218,7 +219,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder adTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
-            this.adTriggers = Output.ofNullable(adTriggers);
+            this.adTriggers = Codegen.ofNullable(adTriggers);
             return this;
         }
         public Builder adTriggers(OriginEndpointHlsManifestAdTriggersItem... adTriggers) {
@@ -229,7 +230,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
-            this.adsOnDeliveryRestrictions = Output.ofNullable(adsOnDeliveryRestrictions);
+            this.adsOnDeliveryRestrictions = Codegen.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -245,7 +246,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
-            this.includeIframeOnlyStream = Output.ofNullable(includeIframeOnlyStream);
+            this.includeIframeOnlyStream = Codegen.ofNullable(includeIframeOnlyStream);
             return this;
         }
         public Builder manifestName(@Nullable Output<String> manifestName) {
@@ -253,7 +254,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Output.ofNullable(manifestName);
+            this.manifestName = Codegen.ofNullable(manifestName);
             return this;
         }
         public Builder playlistType(@Nullable Output<OriginEndpointHlsManifestPlaylistType> playlistType) {
@@ -261,7 +262,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder playlistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
-            this.playlistType = Output.ofNullable(playlistType);
+            this.playlistType = Codegen.ofNullable(playlistType);
             return this;
         }
         public Builder playlistWindowSeconds(@Nullable Output<Integer> playlistWindowSeconds) {
@@ -269,7 +270,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
-            this.playlistWindowSeconds = Output.ofNullable(playlistWindowSeconds);
+            this.playlistWindowSeconds = Codegen.ofNullable(playlistWindowSeconds);
             return this;
         }
         public Builder programDateTimeIntervalSeconds(@Nullable Output<Integer> programDateTimeIntervalSeconds) {
@@ -277,7 +278,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
-            this.programDateTimeIntervalSeconds = Output.ofNullable(programDateTimeIntervalSeconds);
+            this.programDateTimeIntervalSeconds = Codegen.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -285,7 +286,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public OriginEndpointHlsManifestArgs build() {
             return new OriginEndpointHlsManifestArgs(adMarkers, adTriggers, adsOnDeliveryRestrictions, id, includeIframeOnlyStream, manifestName, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, url);

@@ -26,7 +26,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="devicePolicy", required=true)
       private final DevicePolicyResponse devicePolicy;
 
-    public DevicePolicyResponse getDevicePolicy() {
+    public DevicePolicyResponse devicePolicy() {
         return this.devicePolicy;
     }
 
@@ -37,7 +37,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipSubnetworks", required=true)
       private final List<String> ipSubnetworks;
 
-    public List<String> getIpSubnetworks() {
+    public List<String> ipSubnetworks() {
         return this.ipSubnetworks;
     }
 
@@ -48,7 +48,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="members", required=true)
       private final List<String> members;
 
-    public List<String> getMembers() {
+    public List<String> members() {
         return this.members;
     }
 
@@ -59,7 +59,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="negate", required=true)
       private final Boolean negate;
 
-    public Boolean getNegate() {
+    public Boolean negate() {
         return this.negate;
     }
 
@@ -70,7 +70,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="regions", required=true)
       private final List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions;
     }
 
@@ -81,7 +81,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requiredAccessLevels", required=true)
       private final List<String> requiredAccessLevels;
 
-    public List<String> getRequiredAccessLevels() {
+    public List<String> requiredAccessLevels() {
         return this.requiredAccessLevels;
     }
 

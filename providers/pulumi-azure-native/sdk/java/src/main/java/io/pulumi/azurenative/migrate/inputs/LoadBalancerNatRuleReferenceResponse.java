@@ -25,7 +25,7 @@ public final class LoadBalancerNatRuleReferenceResponse extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class LoadBalancerNatRuleReferenceResponse extends io.pulumi.resour
     @Import(name="sourceArmResourceId", required=true)
       private final String sourceArmResourceId;
 
-    public String getSourceArmResourceId() {
+    public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 

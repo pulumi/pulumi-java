@@ -27,7 +27,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetInstanceFilter> filters;
 
-    public List<GetInstanceFilter> getFilters() {
+    public List<GetInstanceFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -38,7 +38,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="getPasswordData")
       private final @Nullable Boolean getPasswordData;
 
-    public Optional<Boolean> getGetPasswordData() {
+    public Optional<Boolean> getPasswordData() {
         return this.getPasswordData == null ? Optional.empty() : Optional.ofNullable(this.getPasswordData);
     }
 
@@ -49,7 +49,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="getUserData")
       private final @Nullable Boolean getUserData;
 
-    public Optional<Boolean> getGetUserData() {
+    public Optional<Boolean> getUserData() {
         return this.getUserData == null ? Optional.empty() : Optional.ofNullable(this.getUserData);
     }
 
@@ -60,7 +60,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceId")
       private final @Nullable String instanceId;
 
-    public Optional<String> getInstanceId() {
+    public Optional<String> instanceId() {
         return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
     }
 
@@ -72,7 +72,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceTags")
       private final @Nullable Map<String,String> instanceTags;
 
-    public Map<String,String> getInstanceTags() {
+    public Map<String,String> instanceTags() {
         return this.instanceTags == null ? Map.of() : this.instanceTags;
     }
 
@@ -83,7 +83,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

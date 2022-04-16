@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.CertificateSigningRequestArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestSpec;
@@ -39,7 +40,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -53,13 +54,13 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -73,7 +74,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
      * 
      */
-    public Output<CertificateSigningRequestSpec> getSpec() {
+    public Output<CertificateSigningRequestSpec> spec() {
         return this.spec;
     }
     /**
@@ -87,7 +88,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
      * 
      */
-    public Output</* @Nullable */ CertificateSigningRequestStatus> getStatus() {
+    public Output</* @Nullable */ CertificateSigningRequestStatus> status() {
         return this.status;
     }
 
@@ -113,7 +114,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateSigningRequest(String name, CertificateSigningRequestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:certificates.k8s.io/v1:CertificateSigningRequest", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:certificates.k8s.io/v1:CertificateSigningRequest", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateSigningRequest(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

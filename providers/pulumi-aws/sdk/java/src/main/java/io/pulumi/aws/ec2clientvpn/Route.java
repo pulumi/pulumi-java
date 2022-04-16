@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2clientvpn.inputs.RouteState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The ID of the Client VPN endpoint.
      * 
      */
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
     /**
@@ -54,7 +55,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return A brief description of the authorization rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +69,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The IPv4 address range, in CIDR notation, of the route destination.
      * 
      */
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
     /**
@@ -82,7 +83,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
      * 
      */
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin;
     }
     /**
@@ -96,7 +97,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The ID of the Subnet to route the traffic through. It must already be attached to the Client VPN.
      * 
      */
-    public Output<String> getTargetVpcSubnetId() {
+    public Output<String> targetVpcSubnetId() {
         return this.targetVpcSubnetId;
     }
     /**
@@ -110,7 +111,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The type of the route.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -136,7 +137,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Route(String name, RouteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2clientvpn/route:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2clientvpn/route:Route", name, args == null ? RouteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Route(String name, Output<String> id, @Nullable RouteState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

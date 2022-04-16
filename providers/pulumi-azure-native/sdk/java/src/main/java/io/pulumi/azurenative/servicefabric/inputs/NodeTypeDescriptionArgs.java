@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.inputs.EndpointRangeDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getApplicationPorts() {
-        return this.applicationPorts == null ? Output.empty() : this.applicationPorts;
+    public Output<EndpointRangeDescriptionArgs> applicationPorts() {
+        return this.applicationPorts == null ? Codegen.empty() : this.applicationPorts;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
 
-    public Output<Map<String,String>> getCapacities() {
-        return this.capacities == null ? Output.empty() : this.capacities;
+    public Output<Map<String,String>> capacities() {
+        return this.capacities == null ? Codegen.empty() : this.capacities;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="clientConnectionEndpointPort", required=true)
       private final Output<Integer> clientConnectionEndpointPort;
 
-    public Output<Integer> getClientConnectionEndpointPort() {
+    public Output<Integer> clientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
     }
 
@@ -66,8 +67,8 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="durabilityLevel")
       private final @Nullable Output<String> durabilityLevel;
 
-    public Output<String> getDurabilityLevel() {
-        return this.durabilityLevel == null ? Output.empty() : this.durabilityLevel;
+    public Output<String> durabilityLevel() {
+        return this.durabilityLevel == null ? Codegen.empty() : this.durabilityLevel;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getEphemeralPorts() {
-        return this.ephemeralPorts == null ? Output.empty() : this.ephemeralPorts;
+    public Output<EndpointRangeDescriptionArgs> ephemeralPorts() {
+        return this.ephemeralPorts == null ? Codegen.empty() : this.ephemeralPorts;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="httpGatewayEndpointPort", required=true)
       private final Output<Integer> httpGatewayEndpointPort;
 
-    public Output<Integer> getHttpGatewayEndpointPort() {
+    public Output<Integer> httpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
     }
 
@@ -99,7 +100,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
 
-    public Output<Boolean> getIsPrimary() {
+    public Output<Boolean> isPrimary() {
         return this.isPrimary;
     }
 
@@ -110,7 +111,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -121,8 +122,8 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
 
-    public Output<Map<String,String>> getPlacementProperties() {
-        return this.placementProperties == null ? Output.empty() : this.placementProperties;
+    public Output<Map<String,String>> placementProperties() {
+        return this.placementProperties == null ? Codegen.empty() : this.placementProperties;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="reverseProxyEndpointPort")
       private final @Nullable Output<Integer> reverseProxyEndpointPort;
 
-    public Output<Integer> getReverseProxyEndpointPort() {
-        return this.reverseProxyEndpointPort == null ? Output.empty() : this.reverseProxyEndpointPort;
+    public Output<Integer> reverseProxyEndpointPort() {
+        return this.reverseProxyEndpointPort == null ? Codegen.empty() : this.reverseProxyEndpointPort;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;
 
-    public Output<Integer> getVmInstanceCount() {
+    public Output<Integer> vmInstanceCount() {
         return this.vmInstanceCount;
     }
 
@@ -173,17 +174,17 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     }
 
     private NodeTypeDescriptionArgs() {
-        this.applicationPorts = Output.empty();
-        this.capacities = Output.empty();
-        this.clientConnectionEndpointPort = Output.empty();
-        this.durabilityLevel = Output.empty();
-        this.ephemeralPorts = Output.empty();
-        this.httpGatewayEndpointPort = Output.empty();
-        this.isPrimary = Output.empty();
-        this.name = Output.empty();
-        this.placementProperties = Output.empty();
-        this.reverseProxyEndpointPort = Output.empty();
-        this.vmInstanceCount = Output.empty();
+        this.applicationPorts = Codegen.empty();
+        this.capacities = Codegen.empty();
+        this.clientConnectionEndpointPort = Codegen.empty();
+        this.durabilityLevel = Codegen.empty();
+        this.ephemeralPorts = Codegen.empty();
+        this.httpGatewayEndpointPort = Codegen.empty();
+        this.isPrimary = Codegen.empty();
+        this.name = Codegen.empty();
+        this.placementProperties = Codegen.empty();
+        this.reverseProxyEndpointPort = Codegen.empty();
+        this.vmInstanceCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -231,7 +232,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
-            this.applicationPorts = Output.ofNullable(applicationPorts);
+            this.applicationPorts = Codegen.ofNullable(applicationPorts);
             return this;
         }
         public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
@@ -239,7 +240,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder capacities(@Nullable Map<String,String> capacities) {
-            this.capacities = Output.ofNullable(capacities);
+            this.capacities = Codegen.ofNullable(capacities);
             return this;
         }
         public Builder clientConnectionEndpointPort(Output<Integer> clientConnectionEndpointPort) {
@@ -255,7 +256,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder durabilityLevel(@Nullable String durabilityLevel) {
-            this.durabilityLevel = Output.ofNullable(durabilityLevel);
+            this.durabilityLevel = Codegen.ofNullable(durabilityLevel);
             return this;
         }
         public Builder ephemeralPorts(@Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts) {
@@ -263,7 +264,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
-            this.ephemeralPorts = Output.ofNullable(ephemeralPorts);
+            this.ephemeralPorts = Codegen.ofNullable(ephemeralPorts);
             return this;
         }
         public Builder httpGatewayEndpointPort(Output<Integer> httpGatewayEndpointPort) {
@@ -295,7 +296,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
-            this.placementProperties = Output.ofNullable(placementProperties);
+            this.placementProperties = Codegen.ofNullable(placementProperties);
             return this;
         }
         public Builder reverseProxyEndpointPort(@Nullable Output<Integer> reverseProxyEndpointPort) {
@@ -303,7 +304,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder reverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
-            this.reverseProxyEndpointPort = Output.ofNullable(reverseProxyEndpointPort);
+            this.reverseProxyEndpointPort = Codegen.ofNullable(reverseProxyEndpointPort);
             return this;
         }
         public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {

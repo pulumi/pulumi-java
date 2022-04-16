@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.DatabaseRelationalDatabaseParameterA
 import io.pulumi.awsnative.lightsail.inputs.DatabaseTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupRetention")
       private final @Nullable Output<Boolean> backupRetention;
 
-    public Output<Boolean> getBackupRetention() {
-        return this.backupRetention == null ? Output.empty() : this.backupRetention;
+    public Output<Boolean> backupRetention() {
+        return this.backupRetention == null ? Codegen.empty() : this.backupRetention;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caCertificateIdentifier")
       private final @Nullable Output<String> caCertificateIdentifier;
 
-    public Output<String> getCaCertificateIdentifier() {
-        return this.caCertificateIdentifier == null ? Output.empty() : this.caCertificateIdentifier;
+    public Output<String> caCertificateIdentifier() {
+        return this.caCertificateIdentifier == null ? Codegen.empty() : this.caCertificateIdentifier;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterDatabaseName", required=true)
       private final Output<String> masterDatabaseName;
 
-    public Output<String> getMasterDatabaseName() {
+    public Output<String> masterDatabaseName() {
         return this.masterDatabaseName;
     }
 
@@ -69,8 +70,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterUserPassword")
       private final @Nullable Output<String> masterUserPassword;
 
-    public Output<String> getMasterUserPassword() {
-        return this.masterUserPassword == null ? Output.empty() : this.masterUserPassword;
+    public Output<String> masterUserPassword() {
+        return this.masterUserPassword == null ? Codegen.empty() : this.masterUserPassword;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterUsername", required=true)
       private final Output<String> masterUsername;
 
-    public Output<String> getMasterUsername() {
+    public Output<String> masterUsername() {
         return this.masterUsername;
     }
 
@@ -91,8 +92,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
-    public Output<String> getPreferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
+    public Output<String> preferredBackupWindow() {
+        return this.preferredBackupWindow == null ? Codegen.empty() : this.preferredBackupWindow;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
+    public Output<String> preferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Output<Boolean> getPubliclyAccessible() {
-        return this.publiclyAccessible == null ? Output.empty() : this.publiclyAccessible;
+    public Output<Boolean> publiclyAccessible() {
+        return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationalDatabaseBlueprintId", required=true)
       private final Output<String> relationalDatabaseBlueprintId;
 
-    public Output<String> getRelationalDatabaseBlueprintId() {
+    public Output<String> relationalDatabaseBlueprintId() {
         return this.relationalDatabaseBlueprintId;
     }
 
@@ -135,7 +136,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationalDatabaseBundleId", required=true)
       private final Output<String> relationalDatabaseBundleId;
 
-    public Output<String> getRelationalDatabaseBundleId() {
+    public Output<String> relationalDatabaseBundleId() {
         return this.relationalDatabaseBundleId;
     }
 
@@ -146,7 +147,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationalDatabaseName", required=true)
       private final Output<String> relationalDatabaseName;
 
-    public Output<String> getRelationalDatabaseName() {
+    public Output<String> relationalDatabaseName() {
         return this.relationalDatabaseName;
     }
 
@@ -157,8 +158,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationalDatabaseParameters")
       private final @Nullable Output<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters;
 
-    public Output<List<DatabaseRelationalDatabaseParameterArgs>> getRelationalDatabaseParameters() {
-        return this.relationalDatabaseParameters == null ? Output.empty() : this.relationalDatabaseParameters;
+    public Output<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters() {
+        return this.relationalDatabaseParameters == null ? Codegen.empty() : this.relationalDatabaseParameters;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotateMasterUserPassword")
       private final @Nullable Output<Boolean> rotateMasterUserPassword;
 
-    public Output<Boolean> getRotateMasterUserPassword() {
-        return this.rotateMasterUserPassword == null ? Output.empty() : this.rotateMasterUserPassword;
+    public Output<Boolean> rotateMasterUserPassword() {
+        return this.rotateMasterUserPassword == null ? Codegen.empty() : this.rotateMasterUserPassword;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DatabaseTagArgs>> tags;
 
-    public Output<List<DatabaseTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DatabaseTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DatabaseArgs(
@@ -217,21 +218,21 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.availabilityZone = Output.empty();
-        this.backupRetention = Output.empty();
-        this.caCertificateIdentifier = Output.empty();
-        this.masterDatabaseName = Output.empty();
-        this.masterUserPassword = Output.empty();
-        this.masterUsername = Output.empty();
-        this.preferredBackupWindow = Output.empty();
-        this.preferredMaintenanceWindow = Output.empty();
-        this.publiclyAccessible = Output.empty();
-        this.relationalDatabaseBlueprintId = Output.empty();
-        this.relationalDatabaseBundleId = Output.empty();
-        this.relationalDatabaseName = Output.empty();
-        this.relationalDatabaseParameters = Output.empty();
-        this.rotateMasterUserPassword = Output.empty();
-        this.tags = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.backupRetention = Codegen.empty();
+        this.caCertificateIdentifier = Codegen.empty();
+        this.masterDatabaseName = Codegen.empty();
+        this.masterUserPassword = Codegen.empty();
+        this.masterUsername = Codegen.empty();
+        this.preferredBackupWindow = Codegen.empty();
+        this.preferredMaintenanceWindow = Codegen.empty();
+        this.publiclyAccessible = Codegen.empty();
+        this.relationalDatabaseBlueprintId = Codegen.empty();
+        this.relationalDatabaseBundleId = Codegen.empty();
+        this.relationalDatabaseName = Codegen.empty();
+        this.relationalDatabaseParameters = Codegen.empty();
+        this.rotateMasterUserPassword = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -287,7 +288,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder backupRetention(@Nullable Output<Boolean> backupRetention) {
@@ -295,7 +296,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupRetention(@Nullable Boolean backupRetention) {
-            this.backupRetention = Output.ofNullable(backupRetention);
+            this.backupRetention = Codegen.ofNullable(backupRetention);
             return this;
         }
         public Builder caCertificateIdentifier(@Nullable Output<String> caCertificateIdentifier) {
@@ -303,7 +304,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caCertificateIdentifier(@Nullable String caCertificateIdentifier) {
-            this.caCertificateIdentifier = Output.ofNullable(caCertificateIdentifier);
+            this.caCertificateIdentifier = Codegen.ofNullable(caCertificateIdentifier);
             return this;
         }
         public Builder masterDatabaseName(Output<String> masterDatabaseName) {
@@ -319,7 +320,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterUserPassword(@Nullable String masterUserPassword) {
-            this.masterUserPassword = Output.ofNullable(masterUserPassword);
+            this.masterUserPassword = Codegen.ofNullable(masterUserPassword);
             return this;
         }
         public Builder masterUsername(Output<String> masterUsername) {
@@ -335,7 +336,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
+            this.preferredBackupWindow = Codegen.ofNullable(preferredBackupWindow);
             return this;
         }
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
@@ -343,7 +344,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
             return this;
         }
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
@@ -351,7 +352,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
+            this.publiclyAccessible = Codegen.ofNullable(publiclyAccessible);
             return this;
         }
         public Builder relationalDatabaseBlueprintId(Output<String> relationalDatabaseBlueprintId) {
@@ -383,7 +384,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relationalDatabaseParameters(@Nullable List<DatabaseRelationalDatabaseParameterArgs> relationalDatabaseParameters) {
-            this.relationalDatabaseParameters = Output.ofNullable(relationalDatabaseParameters);
+            this.relationalDatabaseParameters = Codegen.ofNullable(relationalDatabaseParameters);
             return this;
         }
         public Builder relationalDatabaseParameters(DatabaseRelationalDatabaseParameterArgs... relationalDatabaseParameters) {
@@ -394,7 +395,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rotateMasterUserPassword(@Nullable Boolean rotateMasterUserPassword) {
-            this.rotateMasterUserPassword = Output.ofNullable(rotateMasterUserPassword);
+            this.rotateMasterUserPassword = Codegen.ofNullable(rotateMasterUserPassword);
             return this;
         }
         public Builder tags(@Nullable Output<List<DatabaseTagArgs>> tags) {
@@ -402,7 +403,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DatabaseTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DatabaseTagArgs... tags) {

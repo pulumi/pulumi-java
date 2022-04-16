@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyEgressFromArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyEgressToArgs;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends io.pulumi.reso
     @Import(name="egressFrom")
       private final @Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
 
-    public Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> getEgressFrom() {
-        return this.egressFrom == null ? Output.empty() : this.egressFrom;
+    public Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom() {
+        return this.egressFrom == null ? Codegen.empty() : this.egressFrom;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends io.pulumi.reso
     @Import(name="egressTo")
       private final @Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
 
-    public Output<ServicePerimeterStatusEgressPolicyEgressToArgs> getEgressTo() {
-        return this.egressTo == null ? Output.empty() : this.egressTo;
+    public Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo() {
+        return this.egressTo == null ? Codegen.empty() : this.egressTo;
     }
 
     public ServicePerimeterStatusEgressPolicyArgs(
@@ -48,8 +49,8 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends io.pulumi.reso
     }
 
     private ServicePerimeterStatusEgressPolicyArgs() {
-        this.egressFrom = Output.empty();
-        this.egressTo = Output.empty();
+        this.egressFrom = Codegen.empty();
+        this.egressTo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends io.pulumi.reso
             return this;
         }
         public Builder egressFrom(@Nullable ServicePerimeterStatusEgressPolicyEgressFromArgs egressFrom) {
-            this.egressFrom = Output.ofNullable(egressFrom);
+            this.egressFrom = Codegen.ofNullable(egressFrom);
             return this;
         }
         public Builder egressTo(@Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo) {
@@ -87,7 +88,7 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends io.pulumi.reso
             return this;
         }
         public Builder egressTo(@Nullable ServicePerimeterStatusEgressPolicyEgressToArgs egressTo) {
-            this.egressTo = Output.ofNullable(egressTo);
+            this.egressTo = Codegen.ofNullable(egressTo);
             return this;
         }        public ServicePerimeterStatusEgressPolicyArgs build() {
             return new ServicePerimeterStatusEgressPolicyArgs(egressFrom, egressTo);

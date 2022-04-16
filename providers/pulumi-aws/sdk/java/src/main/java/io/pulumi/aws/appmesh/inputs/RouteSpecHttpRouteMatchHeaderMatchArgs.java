@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteMatchHeaderMatchRangeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
     @Import(name="exact")
       private final @Nullable Output<String> exact;
 
-    public Output<String> getExact() {
-        return this.exact == null ? Output.empty() : this.exact;
+    public Output<String> exact() {
+        return this.exact == null ? Codegen.empty() : this.exact;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
     @Import(name="range")
       private final @Nullable Output<RouteSpecHttpRouteMatchHeaderMatchRangeArgs> range;
 
-    public Output<RouteSpecHttpRouteMatchHeaderMatchRangeArgs> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+    public Output<RouteSpecHttpRouteMatchHeaderMatchRangeArgs> range() {
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
     @Import(name="regex")
       private final @Nullable Output<String> regex;
 
-    public Output<String> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+    public Output<String> regex() {
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
     @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
-    public Output<String> getSuffix() {
-        return this.suffix == null ? Output.empty() : this.suffix;
+    public Output<String> suffix() {
+        return this.suffix == null ? Codegen.empty() : this.suffix;
     }
 
     public RouteSpecHttpRouteMatchHeaderMatchArgs(
@@ -85,11 +86,11 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
     }
 
     private RouteSpecHttpRouteMatchHeaderMatchArgs() {
-        this.exact = Output.empty();
-        this.prefix = Output.empty();
-        this.range = Output.empty();
-        this.regex = Output.empty();
-        this.suffix = Output.empty();
+        this.exact = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.range = Codegen.empty();
+        this.regex = Codegen.empty();
+        this.suffix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
             return this;
         }
         public Builder exact(@Nullable String exact) {
-            this.exact = Output.ofNullable(exact);
+            this.exact = Codegen.ofNullable(exact);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -133,7 +134,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder range(@Nullable Output<RouteSpecHttpRouteMatchHeaderMatchRangeArgs> range) {
@@ -141,7 +142,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
             return this;
         }
         public Builder range(@Nullable RouteSpecHttpRouteMatchHeaderMatchRangeArgs range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder regex(@Nullable Output<String> regex) {
@@ -149,7 +150,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
             return this;
         }
         public Builder regex(@Nullable String regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }
         public Builder suffix(@Nullable Output<String> suffix) {
@@ -157,7 +158,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends io.pulumi.reso
             return this;
         }
         public Builder suffix(@Nullable String suffix) {
-            this.suffix = Output.ofNullable(suffix);
+            this.suffix = Codegen.ofNullable(suffix);
             return this;
         }        public RouteSpecHttpRouteMatchHeaderMatchArgs build() {
             return new RouteSpecHttpRouteMatchHeaderMatchArgs(exact, prefix, range, regex, suffix);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @return the array of data source object which are configured to collect and send data
      * 
      */
-    public Output</* @Nullable */ List<DataSourceResponse>> getDataSources() {
+    public Output</* @Nullable */ List<DataSourceResponse>> dataSources() {
         return this.dataSources;
     }
     /**
@@ -57,7 +58,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,13 +86,13 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @return Operating system type for the configuration
      * 
      */
-    public Output</* @Nullable */ String> getOsType() {
+    public Output</* @Nullable */ String> osType() {
         return this.osType;
     }
     @Export(name="proxySetting", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxySetting;
 
-    public Output</* @Nullable */ String> getProxySetting() {
+    public Output</* @Nullable */ String> proxySetting() {
         return this.proxySetting;
     }
     /**
@@ -105,7 +106,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -119,7 +120,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -145,7 +146,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public GuestDiagnosticsSetting(String name, GuestDiagnosticsSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:guestDiagnosticsSetting", name, args == null ? GuestDiagnosticsSettingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:guestDiagnosticsSetting", name, args == null ? GuestDiagnosticsSettingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GuestDiagnosticsSetting(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

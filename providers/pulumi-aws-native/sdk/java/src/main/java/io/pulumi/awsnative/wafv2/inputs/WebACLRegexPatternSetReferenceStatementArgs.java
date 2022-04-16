@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,21 +20,21 @@ public final class WebACLRegexPatternSetReferenceStatementArgs extends io.pulumi
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="fieldToMatch", required=true)
       private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
@@ -47,9 +48,9 @@ public final class WebACLRegexPatternSetReferenceStatementArgs extends io.pulumi
     }
 
     private WebACLRegexPatternSetReferenceStatementArgs() {
-        this.arn = Output.empty();
-        this.fieldToMatch = Output.empty();
-        this.textTransformations = Output.empty();
+        this.arn = Codegen.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public CapabilityArgs(
@@ -61,9 +62,9 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CapabilityArgs() {
-        this.name = Output.empty();
-        this.reason = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -103,7 +104,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -111,7 +112,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public CapabilityArgs build() {
             return new CapabilityArgs(name, reason, value);

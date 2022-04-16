@@ -6,6 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.SkuDefinition;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<SkuDefinition> name;
 
-    public Output<SkuDefinition> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<SkuDefinition> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SkuArgs(@Nullable Output<SkuDefinition> name) {
@@ -30,7 +31,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable SkuDefinition name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SkuArgs build() {
             return new SkuArgs(name);

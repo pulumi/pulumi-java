@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public final class MangedSslCertificateManagedArgs extends io.pulumi.resources.R
     @Import(name="domains", required=true)
       private final Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
+    public Output<List<String>> domains() {
         return this.domains;
     }
 
@@ -26,7 +27,7 @@ public final class MangedSslCertificateManagedArgs extends io.pulumi.resources.R
     }
 
     private MangedSslCertificateManagedArgs() {
-        this.domains = Output.empty();
+        this.domains = Codegen.empty();
     }
 
     public static Builder builder() {

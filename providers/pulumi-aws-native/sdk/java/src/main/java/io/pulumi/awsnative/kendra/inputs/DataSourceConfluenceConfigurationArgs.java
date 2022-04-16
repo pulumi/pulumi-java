@@ -11,6 +11,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceSpaceConfigurationA
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,71 +25,71 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
     @Import(name="attachmentConfiguration")
       private final @Nullable Output<DataSourceConfluenceAttachmentConfigurationArgs> attachmentConfiguration;
 
-    public Output<DataSourceConfluenceAttachmentConfigurationArgs> getAttachmentConfiguration() {
-        return this.attachmentConfiguration == null ? Output.empty() : this.attachmentConfiguration;
+    public Output<DataSourceConfluenceAttachmentConfigurationArgs> attachmentConfiguration() {
+        return this.attachmentConfiguration == null ? Codegen.empty() : this.attachmentConfiguration;
     }
 
     @Import(name="blogConfiguration")
       private final @Nullable Output<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration;
 
-    public Output<DataSourceConfluenceBlogConfigurationArgs> getBlogConfiguration() {
-        return this.blogConfiguration == null ? Output.empty() : this.blogConfiguration;
+    public Output<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration() {
+        return this.blogConfiguration == null ? Codegen.empty() : this.blogConfiguration;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
+    public Output<List<String>> exclusionPatterns() {
+        return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
+    public Output<List<String>> inclusionPatterns() {
+        return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="pageConfiguration")
       private final @Nullable Output<DataSourceConfluencePageConfigurationArgs> pageConfiguration;
 
-    public Output<DataSourceConfluencePageConfigurationArgs> getPageConfiguration() {
-        return this.pageConfiguration == null ? Output.empty() : this.pageConfiguration;
+    public Output<DataSourceConfluencePageConfigurationArgs> pageConfiguration() {
+        return this.pageConfiguration == null ? Codegen.empty() : this.pageConfiguration;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serverUrl", required=true)
       private final Output<String> serverUrl;
 
-    public Output<String> getServerUrl() {
+    public Output<String> serverUrl() {
         return this.serverUrl;
     }
 
     @Import(name="spaceConfiguration")
       private final @Nullable Output<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration;
 
-    public Output<DataSourceConfluenceSpaceConfigurationArgs> getSpaceConfiguration() {
-        return this.spaceConfiguration == null ? Output.empty() : this.spaceConfiguration;
+    public Output<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration() {
+        return this.spaceConfiguration == null ? Codegen.empty() : this.spaceConfiguration;
     }
 
     @Import(name="version", required=true)
       private final Output<DataSourceConfluenceVersion> version;
 
-    public Output<DataSourceConfluenceVersion> getVersion() {
+    public Output<DataSourceConfluenceVersion> version() {
         return this.version;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<DataSourceVpcConfigurationArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
+    public Output<DataSourceVpcConfigurationArgs> vpcConfiguration() {
+        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 
     public DataSourceConfluenceConfigurationArgs(
@@ -115,16 +116,16 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceConfluenceConfigurationArgs() {
-        this.attachmentConfiguration = Output.empty();
-        this.blogConfiguration = Output.empty();
-        this.exclusionPatterns = Output.empty();
-        this.inclusionPatterns = Output.empty();
-        this.pageConfiguration = Output.empty();
-        this.secretArn = Output.empty();
-        this.serverUrl = Output.empty();
-        this.spaceConfiguration = Output.empty();
-        this.version = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.attachmentConfiguration = Codegen.empty();
+        this.blogConfiguration = Codegen.empty();
+        this.exclusionPatterns = Codegen.empty();
+        this.inclusionPatterns = Codegen.empty();
+        this.pageConfiguration = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.serverUrl = Codegen.empty();
+        this.spaceConfiguration = Codegen.empty();
+        this.version = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder attachmentConfiguration(@Nullable DataSourceConfluenceAttachmentConfigurationArgs attachmentConfiguration) {
-            this.attachmentConfiguration = Output.ofNullable(attachmentConfiguration);
+            this.attachmentConfiguration = Codegen.ofNullable(attachmentConfiguration);
             return this;
         }
         public Builder blogConfiguration(@Nullable Output<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration) {
@@ -178,7 +179,7 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder blogConfiguration(@Nullable DataSourceConfluenceBlogConfigurationArgs blogConfiguration) {
-            this.blogConfiguration = Output.ofNullable(blogConfiguration);
+            this.blogConfiguration = Codegen.ofNullable(blogConfiguration);
             return this;
         }
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
@@ -186,7 +187,7 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Codegen.ofNullable(exclusionPatterns);
             return this;
         }
         public Builder exclusionPatterns(String... exclusionPatterns) {
@@ -197,7 +198,7 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Codegen.ofNullable(inclusionPatterns);
             return this;
         }
         public Builder inclusionPatterns(String... inclusionPatterns) {
@@ -208,7 +209,7 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder pageConfiguration(@Nullable DataSourceConfluencePageConfigurationArgs pageConfiguration) {
-            this.pageConfiguration = Output.ofNullable(pageConfiguration);
+            this.pageConfiguration = Codegen.ofNullable(pageConfiguration);
             return this;
         }
         public Builder secretArn(Output<String> secretArn) {
@@ -232,7 +233,7 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder spaceConfiguration(@Nullable DataSourceConfluenceSpaceConfigurationArgs spaceConfiguration) {
-            this.spaceConfiguration = Output.ofNullable(spaceConfiguration);
+            this.spaceConfiguration = Codegen.ofNullable(spaceConfiguration);
             return this;
         }
         public Builder version(Output<DataSourceConfluenceVersion> version) {
@@ -248,7 +249,7 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
             return this;
         }        public DataSourceConfluenceConfigurationArgs build() {
             return new DataSourceConfluenceConfigurationArgs(attachmentConfiguration, blogConfiguration, exclusionPatterns, inclusionPatterns, pageConfiguration, secretArn, serverUrl, spaceConfiguration, version, vpcConfiguration);

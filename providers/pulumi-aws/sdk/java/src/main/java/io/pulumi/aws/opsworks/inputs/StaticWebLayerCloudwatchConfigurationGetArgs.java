@@ -6,6 +6,7 @@ package io.pulumi.aws.opsworks.inputs;
 import io.pulumi.aws.opsworks.inputs.StaticWebLayerCloudwatchConfigurationLogStreamGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class StaticWebLayerCloudwatchConfigurationGetArgs extends io.pulum
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
-    public Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
-        return this.logStreams == null ? Output.empty() : this.logStreams;
+    public Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams() {
+        return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 
     public StaticWebLayerCloudwatchConfigurationGetArgs(
@@ -38,8 +39,8 @@ public final class StaticWebLayerCloudwatchConfigurationGetArgs extends io.pulum
     }
 
     private StaticWebLayerCloudwatchConfigurationGetArgs() {
-        this.enabled = Output.empty();
-        this.logStreams = Output.empty();
+        this.enabled = Codegen.empty();
+        this.logStreams = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class StaticWebLayerCloudwatchConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder logStreams(@Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
@@ -77,7 +78,7 @@ public final class StaticWebLayerCloudwatchConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder logStreams(@Nullable List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
-            this.logStreams = Output.ofNullable(logStreams);
+            this.logStreams = Codegen.ofNullable(logStreams);
             return this;
         }
         public Builder logStreams(StaticWebLayerCloudwatchConfigurationLogStreamGetArgs... logStreams) {

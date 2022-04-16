@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
     @Import(name="clientSecret")
       private final @Nullable Output<SecretArgs> clientSecret;
 
-    public Output<SecretArgs> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<SecretArgs> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     public Oauth2ClientCredentialsArgs(
@@ -49,8 +50,8 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
     }
 
     private Oauth2ClientCredentialsArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<SecretArgs> clientSecret) {
@@ -88,7 +89,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientSecret(@Nullable SecretArgs clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }        public Oauth2ClientCredentialsArgs build() {
             return new Oauth2ClientCredentialsArgs(clientId, clientSecret);

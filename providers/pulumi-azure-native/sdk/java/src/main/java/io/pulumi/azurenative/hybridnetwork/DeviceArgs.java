@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.enums.DeviceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+    public Output<String> deviceName() {
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceType", required=true)
       private final Output<Either<String,DeviceType>> deviceType;
 
-    public Output<Either<String,DeviceType>> getDeviceType() {
+    public Output<Either<String,DeviceType>> deviceType() {
         return this.deviceType;
     }
 
@@ -46,8 +47,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,8 +69,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeviceArgs(
@@ -86,11 +87,11 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.deviceName = Output.empty();
-        this.deviceType = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.deviceType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder deviceType(Output<Either<String,DeviceType>> deviceType) {
@@ -142,7 +143,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -158,7 +159,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DeviceArgs build() {
             return new DeviceArgs(deviceName, deviceType, location, resourceGroupName, tags);

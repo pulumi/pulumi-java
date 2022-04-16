@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.LocalGatewayRouteTableVpcAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
     @Export(name="localGatewayId", type=String.class, parameters={})
     private Output<String> localGatewayId;
 
-    public Output<String> getLocalGatewayId() {
+    public Output<String> localGatewayId() {
         return this.localGatewayId;
     }
     /**
@@ -46,7 +47,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return Identifier of EC2 Local Gateway Route Table.
      * 
      */
-    public Output<String> getLocalGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
     /**
@@ -60,7 +61,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -74,7 +75,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -88,7 +89,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return Identifier of EC2 VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -114,7 +115,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public LocalGatewayRouteTableVpcAssociation(String name, LocalGatewayRouteTableVpcAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/localGatewayRouteTableVpcAssociation:LocalGatewayRouteTableVpcAssociation", name, args == null ? LocalGatewayRouteTableVpcAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/localGatewayRouteTableVpcAssociation:LocalGatewayRouteTableVpcAssociation", name, args == null ? LocalGatewayRouteTableVpcAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocalGatewayRouteTableVpcAssociation(String name, Output<String> id, @Nullable LocalGatewayRouteTableVpcAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

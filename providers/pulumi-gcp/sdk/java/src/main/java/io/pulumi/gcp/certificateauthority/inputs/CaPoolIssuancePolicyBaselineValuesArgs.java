@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesCaOptionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageArgs;
@@ -27,8 +28,8 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
 
-    public Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
+    public Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions() {
+        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
+    public Output<List<String>> aiaOcspServers() {
+        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="caOptions", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> getCaOptions() {
+    public Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions() {
         return this.caOptions;
     }
 
@@ -63,7 +64,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="keyUsage", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> getKeyUsage() {
+    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage() {
         return this.keyUsage;
     }
 
@@ -75,8 +76,8 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="policyIds")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
 
-    public Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> getPolicyIds() {
-        return this.policyIds == null ? Output.empty() : this.policyIds;
+    public Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds() {
+        return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 
     public CaPoolIssuancePolicyBaselineValuesArgs(
@@ -93,11 +94,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     }
 
     private CaPoolIssuancePolicyBaselineValuesArgs() {
-        this.additionalExtensions = Output.empty();
-        this.aiaOcspServers = Output.empty();
-        this.caOptions = Output.empty();
-        this.keyUsage = Output.empty();
-        this.policyIds = Output.empty();
+        this.additionalExtensions = Codegen.empty();
+        this.aiaOcspServers = Codegen.empty();
+        this.caOptions = Codegen.empty();
+        this.keyUsage = Codegen.empty();
+        this.policyIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
             return this;
         }
         public Builder additionalExtensions(@Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Output.ofNullable(additionalExtensions);
+            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
             return this;
         }
         public Builder additionalExtensions(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs... additionalExtensions) {
@@ -144,7 +145,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
             return this;
         }
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
             return this;
         }
         public Builder aiaOcspServers(String... aiaOcspServers) {
@@ -171,7 +172,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
             return this;
         }
         public Builder policyIds(@Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs> policyIds) {
-            this.policyIds = Output.ofNullable(policyIds);
+            this.policyIds = Codegen.ofNullable(policyIds);
             return this;
         }
         public Builder policyIds(CaPoolIssuancePolicyBaselineValuesPolicyIdArgs... policyIds) {

@@ -17,28 +17,28 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="entityTypeId", required=true)
       private final String entityTypeId;
 
-    public String getEntityTypeId() {
+    public String entityTypeId() {
         return this.entityTypeId;
     }
 
     @Import(name="languageCode")
       private final @Nullable String languageCode;
 
-    public Optional<String> getLanguageCode() {
+    public Optional<String> languageCode() {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

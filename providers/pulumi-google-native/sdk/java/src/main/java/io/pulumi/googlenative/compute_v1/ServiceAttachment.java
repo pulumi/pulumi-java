@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.ServiceAttachmentArgs;
 import io.pulumi.googlenative.compute_v1.outputs.ServiceAttachmentConnectedEndpointResponse;
@@ -33,7 +34,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return An array of connections for all the consumers connected to this service attachment.
      * 
      */
-    public Output<List<ServiceAttachmentConnectedEndpointResponse>> getConnectedEndpoints() {
+    public Output<List<ServiceAttachmentConnectedEndpointResponse>> connectedEndpoints() {
         return this.connectedEndpoints;
     }
     /**
@@ -47,7 +48,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.
      * 
      */
-    public Output<String> getConnectionPreference() {
+    public Output<String> connectionPreference() {
         return this.connectionPreference;
     }
     /**
@@ -61,7 +62,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Projects that are allowed to connect to this service attachment.
      * 
      */
-    public Output<List<ServiceAttachmentConsumerProjectLimitResponse>> getConsumerAcceptLists() {
+    public Output<List<ServiceAttachmentConsumerProjectLimitResponse>> consumerAcceptLists() {
         return this.consumerAcceptLists;
     }
     /**
@@ -75,7 +76,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Projects that are not allowed to connect to this service attachment. The project can be specified using its id or number.
      * 
      */
-    public Output<List<String>> getConsumerRejectLists() {
+    public Output<List<String>> consumerRejectLists() {
         return this.consumerRejectLists;
     }
     /**
@@ -89,7 +90,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -103,7 +104,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -117,7 +118,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return If specified, the domain name will be used during the integration between the PSC connected endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com.". Current max number of domain names supported is 1.
      * 
      */
-    public Output<List<String>> getDomainNames() {
+    public Output<List<String>> domainNames() {
         return this.domainNames;
     }
     /**
@@ -131,7 +132,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP connections that traverse proxies on their way to destination servers.
      * 
      */
-    public Output<Boolean> getEnableProxyProtocol() {
+    public Output<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol;
     }
     /**
@@ -145,7 +146,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a ServiceAttachment. An up-to-date fingerprint must be provided in order to patch/update the ServiceAttachment; otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve the ServiceAttachment.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -159,7 +160,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#serviceAttachment for service attachments.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -173,7 +174,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -187,7 +188,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return An array of URLs where each entry is the URL of a subnet provided by the service producer to use for NAT in this service attachment.
      * 
      */
-    public Output<List<String>> getNatSubnets() {
+    public Output<List<String>> natSubnets() {
         return this.natSubnets;
     }
     /**
@@ -201,7 +202,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return The URL of a forwarding rule with loadBalancingScheme INTERNAL* that is serving the endpoint identified by this service attachment.
      * 
      */
-    public Output<String> getProducerForwardingRule() {
+    public Output<String> producerForwardingRule() {
         return this.producerForwardingRule;
     }
     /**
@@ -215,7 +216,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return An 128-bit global unique ID of the PSC service attachment.
      * 
      */
-    public Output<Uint128Response> getPscServiceAttachmentId() {
+    public Output<Uint128Response> pscServiceAttachmentId() {
         return this.pscServiceAttachmentId;
     }
     /**
@@ -229,7 +230,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -243,7 +244,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -257,7 +258,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @return The URL of a service serving the endpoint identified by this service attachment.
      * 
      */
-    public Output<String> getTargetService() {
+    public Output<String> targetService() {
         return this.targetService;
     }
 
@@ -283,7 +284,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceAttachment(String name, ServiceAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:ServiceAttachment", name, args == null ? ServiceAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/v1:ServiceAttachment", name, args == null ? ServiceAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceAttachment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

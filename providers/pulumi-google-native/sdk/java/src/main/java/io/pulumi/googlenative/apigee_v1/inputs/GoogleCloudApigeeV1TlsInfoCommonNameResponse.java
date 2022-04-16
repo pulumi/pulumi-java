@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
     @Import(name="wildcardMatch", required=true)
       private final Boolean wildcardMatch;
 
-    public Boolean getWildcardMatch() {
+    public Boolean wildcardMatch() {
         return this.wildcardMatch;
     }
 

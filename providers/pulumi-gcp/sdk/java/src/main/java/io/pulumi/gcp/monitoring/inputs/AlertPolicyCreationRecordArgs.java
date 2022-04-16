@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class AlertPolicyCreationRecordArgs extends io.pulumi.resources.Res
     @Import(name="mutateTime")
       private final @Nullable Output<String> mutateTime;
 
-    public Output<String> getMutateTime() {
-        return this.mutateTime == null ? Output.empty() : this.mutateTime;
+    public Output<String> mutateTime() {
+        return this.mutateTime == null ? Codegen.empty() : this.mutateTime;
     }
 
     @Import(name="mutatedBy")
       private final @Nullable Output<String> mutatedBy;
 
-    public Output<String> getMutatedBy() {
-        return this.mutatedBy == null ? Output.empty() : this.mutatedBy;
+    public Output<String> mutatedBy() {
+        return this.mutatedBy == null ? Codegen.empty() : this.mutatedBy;
     }
 
     public AlertPolicyCreationRecordArgs(
@@ -36,8 +37,8 @@ public final class AlertPolicyCreationRecordArgs extends io.pulumi.resources.Res
     }
 
     private AlertPolicyCreationRecordArgs() {
-        this.mutateTime = Output.empty();
-        this.mutatedBy = Output.empty();
+        this.mutateTime = Codegen.empty();
+        this.mutatedBy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class AlertPolicyCreationRecordArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder mutateTime(@Nullable String mutateTime) {
-            this.mutateTime = Output.ofNullable(mutateTime);
+            this.mutateTime = Codegen.ofNullable(mutateTime);
             return this;
         }
         public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
@@ -75,7 +76,7 @@ public final class AlertPolicyCreationRecordArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder mutatedBy(@Nullable String mutatedBy) {
-            this.mutatedBy = Output.ofNullable(mutatedBy);
+            this.mutatedBy = Codegen.ofNullable(mutatedBy);
             return this;
         }        public AlertPolicyCreationRecordArgs build() {
             return new AlertPolicyCreationRecordArgs(mutateTime, mutatedBy);

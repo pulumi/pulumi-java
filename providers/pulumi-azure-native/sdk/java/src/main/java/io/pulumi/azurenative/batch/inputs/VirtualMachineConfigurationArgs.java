@@ -12,6 +12,7 @@ import io.pulumi.azurenative.batch.inputs.VMExtensionArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="containerConfiguration")
       private final @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
 
-    public Output<ContainerConfigurationArgs> getContainerConfiguration() {
-        return this.containerConfiguration == null ? Output.empty() : this.containerConfiguration;
+    public Output<ContainerConfigurationArgs> containerConfiguration() {
+        return this.containerConfiguration == null ? Codegen.empty() : this.containerConfiguration;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="dataDisks")
       private final @Nullable Output<List<DataDiskArgs>> dataDisks;
 
-    public Output<List<DataDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Output.empty() : this.dataDisks;
+    public Output<List<DataDiskArgs>> dataDisks() {
+        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="diskEncryptionConfiguration")
       private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
-        return this.diskEncryptionConfiguration == null ? Output.empty() : this.diskEncryptionConfiguration;
+    public Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration() {
+        return this.diskEncryptionConfiguration == null ? Codegen.empty() : this.diskEncryptionConfiguration;
     }
 
     /**
@@ -62,14 +63,14 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="extensions")
       private final @Nullable Output<List<VMExtensionArgs>> extensions;
 
-    public Output<List<VMExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+    public Output<List<VMExtensionArgs>> extensions() {
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="imageReference", required=true)
       private final Output<ImageReferenceArgs> imageReference;
 
-    public Output<ImageReferenceArgs> getImageReference() {
+    public Output<ImageReferenceArgs> imageReference() {
         return this.imageReference;
     }
 
@@ -83,8 +84,8 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+    public Output<String> licenseType() {
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="nodeAgentSkuId", required=true)
       private final Output<String> nodeAgentSkuId;
 
-    public Output<String> getNodeAgentSkuId() {
+    public Output<String> nodeAgentSkuId() {
         return this.nodeAgentSkuId;
     }
 
@@ -105,8 +106,8 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="nodePlacementConfiguration")
       private final @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
 
-    public Output<NodePlacementConfigurationArgs> getNodePlacementConfiguration() {
-        return this.nodePlacementConfiguration == null ? Output.empty() : this.nodePlacementConfiguration;
+    public Output<NodePlacementConfigurationArgs> nodePlacementConfiguration() {
+        return this.nodePlacementConfiguration == null ? Codegen.empty() : this.nodePlacementConfiguration;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     @Import(name="windowsConfiguration")
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
-        return this.windowsConfiguration == null ? Output.empty() : this.windowsConfiguration;
+    public Output<WindowsConfigurationArgs> windowsConfiguration() {
+        return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
     }
 
     public VirtualMachineConfigurationArgs(
@@ -142,15 +143,15 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     }
 
     private VirtualMachineConfigurationArgs() {
-        this.containerConfiguration = Output.empty();
-        this.dataDisks = Output.empty();
-        this.diskEncryptionConfiguration = Output.empty();
-        this.extensions = Output.empty();
-        this.imageReference = Output.empty();
-        this.licenseType = Output.empty();
-        this.nodeAgentSkuId = Output.empty();
-        this.nodePlacementConfiguration = Output.empty();
-        this.windowsConfiguration = Output.empty();
+        this.containerConfiguration = Codegen.empty();
+        this.dataDisks = Codegen.empty();
+        this.diskEncryptionConfiguration = Codegen.empty();
+        this.extensions = Codegen.empty();
+        this.imageReference = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.nodeAgentSkuId = Codegen.empty();
+        this.nodePlacementConfiguration = Codegen.empty();
+        this.windowsConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder containerConfiguration(@Nullable ContainerConfigurationArgs containerConfiguration) {
-            this.containerConfiguration = Output.ofNullable(containerConfiguration);
+            this.containerConfiguration = Codegen.ofNullable(containerConfiguration);
             return this;
         }
         public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
@@ -202,7 +203,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
-            this.dataDisks = Output.ofNullable(dataDisks);
+            this.dataDisks = Codegen.ofNullable(dataDisks);
             return this;
         }
         public Builder dataDisks(DataDiskArgs... dataDisks) {
@@ -213,7 +214,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = Output.ofNullable(diskEncryptionConfiguration);
+            this.diskEncryptionConfiguration = Codegen.ofNullable(diskEncryptionConfiguration);
             return this;
         }
         public Builder extensions(@Nullable Output<List<VMExtensionArgs>> extensions) {
@@ -221,7 +222,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder extensions(@Nullable List<VMExtensionArgs> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder extensions(VMExtensionArgs... extensions) {
@@ -240,7 +241,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder nodeAgentSkuId(Output<String> nodeAgentSkuId) {
@@ -256,7 +257,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationArgs nodePlacementConfiguration) {
-            this.nodePlacementConfiguration = Output.ofNullable(nodePlacementConfiguration);
+            this.nodePlacementConfiguration = Codegen.ofNullable(nodePlacementConfiguration);
             return this;
         }
         public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
@@ -264,7 +265,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
+            this.windowsConfiguration = Codegen.ofNullable(windowsConfiguration);
             return this;
         }        public VirtualMachineConfigurationArgs build() {
             return new VirtualMachineConfigurationArgs(containerConfiguration, dataDisks, diskEncryptionConfiguration, extensions, imageReference, licenseType, nodeAgentSkuId, nodePlacementConfiguration, windowsConfiguration);

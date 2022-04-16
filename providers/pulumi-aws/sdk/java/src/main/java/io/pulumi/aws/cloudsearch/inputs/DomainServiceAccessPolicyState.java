@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
     @Import(name="accessPolicy")
       private final @Nullable Output<String> accessPolicy;
 
-    public Output<String> getAccessPolicy() {
-        return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
+    public Output<String> accessPolicy() {
+        return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     public DomainServiceAccessPolicyState(
@@ -44,8 +45,8 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
     }
 
     private DomainServiceAccessPolicyState() {
-        this.accessPolicy = Output.empty();
-        this.domainName = Output.empty();
+        this.accessPolicy = Codegen.empty();
+        this.domainName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder accessPolicy(@Nullable String accessPolicy) {
-            this.accessPolicy = Output.ofNullable(accessPolicy);
+            this.accessPolicy = Codegen.ofNullable(accessPolicy);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -83,7 +84,7 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }        public DomainServiceAccessPolicyState build() {
             return new DomainServiceAccessPolicyState(accessPolicy, domainName);

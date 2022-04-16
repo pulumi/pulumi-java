@@ -5,6 +5,7 @@ package io.pulumi.googlenative.logging_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="usePartitionedTables")
       private final @Nullable Output<Boolean> usePartitionedTables;
 
-    public Output<Boolean> getUsePartitionedTables() {
-        return this.usePartitionedTables == null ? Output.empty() : this.usePartitionedTables;
+    public Output<Boolean> usePartitionedTables() {
+        return this.usePartitionedTables == null ? Codegen.empty() : this.usePartitionedTables;
     }
 
     public BigQueryOptionsArgs(@Nullable Output<Boolean> usePartitionedTables) {
@@ -34,7 +35,7 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BigQueryOptionsArgs() {
-        this.usePartitionedTables = Output.empty();
+        this.usePartitionedTables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder usePartitionedTables(@Nullable Boolean usePartitionedTables) {
-            this.usePartitionedTables = Output.ofNullable(usePartitionedTables);
+            this.usePartitionedTables = Codegen.ofNullable(usePartitionedTables);
             return this;
         }        public BigQueryOptionsArgs build() {
             return new BigQueryOptionsArgs(usePartitionedTables);

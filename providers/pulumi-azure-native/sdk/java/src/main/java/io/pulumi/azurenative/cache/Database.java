@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
      * 
      */
-    public Output</* @Nullable */ String> getClientProtocol() {
+    public Output</* @Nullable */ String> clientProtocol() {
         return this.clientProtocol;
     }
     /**
@@ -58,7 +59,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Clustering policy - default is OSSCluster. Specified at create time.
      * 
      */
-    public Output</* @Nullable */ String> getClusteringPolicy() {
+    public Output</* @Nullable */ String> clusteringPolicy() {
         return this.clusteringPolicy;
     }
     /**
@@ -72,7 +73,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Redis eviction policy - default is VolatileLRU
      * 
      */
-    public Output</* @Nullable */ String> getEvictionPolicy() {
+    public Output</* @Nullable */ String> evictionPolicy() {
         return this.evictionPolicy;
     }
     /**
@@ -86,7 +87,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Optional set of redis modules to enable in this database - modules can only be added at creation time.
      * 
      */
-    public Output</* @Nullable */ List<ModuleResponse>> getModules() {
+    public Output</* @Nullable */ List<ModuleResponse>> modules() {
         return this.modules;
     }
     /**
@@ -100,7 +101,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Persistence settings
      * 
      */
-    public Output</* @Nullable */ PersistenceResponse> getPersistence() {
+    public Output</* @Nullable */ PersistenceResponse> persistence() {
         return this.persistence;
     }
     /**
@@ -128,7 +129,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return TCP port of the database endpoint. Specified at create time. Defaults to an available port.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -142,7 +143,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Current provisioning status of the database
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -156,7 +157,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Current resource status of the database
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -170,7 +171,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -196,7 +197,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cache:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cache:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Database(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

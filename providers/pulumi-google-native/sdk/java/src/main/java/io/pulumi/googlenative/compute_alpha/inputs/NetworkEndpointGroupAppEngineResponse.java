@@ -23,7 +23,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends io.pulumi.resou
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends io.pulumi.resou
     @Import(name="urlMask", required=true)
       private final String urlMask;
 
-    public String getUrlMask() {
+    public String urlMask() {
         return this.urlMask;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends io.pulumi.resou
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

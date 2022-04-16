@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
     @Import(name="nameservers", required=true)
       private final Output<List<String>> nameservers;
 
-    public Output<List<String>> getNameservers() {
+    public Output<List<String>> nameservers() {
         return this.nameservers;
     }
 
     @Import(name="options")
       private final @Nullable Output<List<String>> options;
 
-    public Output<List<String>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<List<String>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="searches")
       private final @Nullable Output<List<String>> searches;
 
-    public Output<List<String>> getSearches() {
-        return this.searches == null ? Output.empty() : this.searches;
+    public Output<List<String>> searches() {
+        return this.searches == null ? Codegen.empty() : this.searches;
     }
 
     public ServiceTaskSpecContainerSpecDnsConfigArgs(
@@ -46,9 +47,9 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
     }
 
     private ServiceTaskSpecContainerSpecDnsConfigArgs() {
-        this.nameservers = Output.empty();
-        this.options = Output.empty();
-        this.searches = Output.empty();
+        this.nameservers = Codegen.empty();
+        this.options = Codegen.empty();
+        this.searches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder options(@Nullable List<String> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(String... options) {
@@ -102,7 +103,7 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder searches(@Nullable List<String> searches) {
-            this.searches = Output.ofNullable(searches);
+            this.searches = Codegen.ofNullable(searches);
             return this;
         }
         public Builder searches(String... searches) {

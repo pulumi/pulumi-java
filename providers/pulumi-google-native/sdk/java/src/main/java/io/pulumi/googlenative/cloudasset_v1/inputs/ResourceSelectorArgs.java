@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fullResourceName", required=true)
       private final Output<String> fullResourceName;
 
-    public Output<String> getFullResourceName() {
+    public Output<String> fullResourceName() {
         return this.fullResourceName;
     }
 
@@ -33,7 +34,7 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceSelectorArgs() {
-        this.fullResourceName = Output.empty();
+        this.fullResourceName = Codegen.empty();
     }
 
     public static Builder builder() {

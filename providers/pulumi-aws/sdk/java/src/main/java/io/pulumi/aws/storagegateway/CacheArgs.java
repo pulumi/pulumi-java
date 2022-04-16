@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskId", required=true)
       private final Output<String> diskId;
 
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId;
     }
 
@@ -31,7 +32,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -43,8 +44,8 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CacheArgs() {
-        this.diskId = Output.empty();
-        this.gatewayArn = Output.empty();
+        this.diskId = Codegen.empty();
+        this.gatewayArn = Codegen.empty();
     }
 
     public static Builder builder() {

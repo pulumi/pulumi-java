@@ -7,6 +7,7 @@ import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCo
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
     @Import(name="codeConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
 
-    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> getCodeConfiguration() {
-        return this.codeConfiguration == null ? Output.empty() : this.codeConfiguration;
+    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration() {
+        return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -45,7 +46,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
     @Import(name="sourceCodeVersion", required=true)
       private final Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
 
-    public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> getSourceCodeVersion() {
+    public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 
@@ -59,9 +60,9 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
     }
 
     private ServiceSourceConfigurationCodeRepositoryGetArgs() {
-        this.codeConfiguration = Output.empty();
-        this.repositoryUrl = Output.empty();
-        this.sourceCodeVersion = Output.empty();
+        this.codeConfiguration = Codegen.empty();
+        this.repositoryUrl = Codegen.empty();
+        this.sourceCodeVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
             return this;
         }
         public Builder codeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs codeConfiguration) {
-            this.codeConfiguration = Output.ofNullable(codeConfiguration);
+            this.codeConfiguration = Codegen.ofNullable(codeConfiguration);
             return this;
         }
         public Builder repositoryUrl(Output<String> repositoryUrl) {

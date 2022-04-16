@@ -56,35 +56,35 @@ public final class GetReplicationFabricResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource Location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Fabric related data.
      * 
     */
-    public FabricPropertiesResponse getProperties() {
+    public FabricPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource Type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.aws.acmpca;
 import io.pulumi.aws.acmpca.inputs.CertificateValidityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -33,7 +34,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateSigningRequest", required=true)
       private final Output<String> certificateSigningRequest;
 
-    public Output<String> getCertificateSigningRequest() {
+    public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
 
@@ -44,7 +45,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
-    public Output<String> getSigningAlgorithm() {
+    public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
 
@@ -55,8 +56,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateArn")
       private final @Nullable Output<String> templateArn;
 
-    public Output<String> getTemplateArn() {
-        return this.templateArn == null ? Output.empty() : this.templateArn;
+    public Output<String> templateArn() {
+        return this.templateArn == null ? Codegen.empty() : this.templateArn;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validity", required=true)
       private final Output<CertificateValidityArgs> validity;
 
-    public Output<CertificateValidityArgs> getValidity() {
+    public Output<CertificateValidityArgs> validity() {
         return this.validity;
     }
 
@@ -84,11 +85,11 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateAuthorityArn = Output.empty();
-        this.certificateSigningRequest = Output.empty();
-        this.signingAlgorithm = Output.empty();
-        this.templateArn = Output.empty();
-        this.validity = Output.empty();
+        this.certificateAuthorityArn = Codegen.empty();
+        this.certificateSigningRequest = Codegen.empty();
+        this.signingAlgorithm = Codegen.empty();
+        this.templateArn = Codegen.empty();
+        this.validity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateArn(@Nullable String templateArn) {
-            this.templateArn = Output.ofNullable(templateArn);
+            this.templateArn = Codegen.ofNullable(templateArn);
             return this;
         }
         public Builder validity(Output<CertificateValidityArgs> validity) {

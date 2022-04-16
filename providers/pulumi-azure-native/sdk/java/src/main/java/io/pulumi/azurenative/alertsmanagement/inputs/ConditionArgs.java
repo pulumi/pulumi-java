@@ -7,6 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.enums.Operator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> getOperator() {
-        return this.operator == null ? Output.empty() : this.operator;
+    public Output<Either<String,Operator>> operator() {
+        return this.operator == null ? Codegen.empty() : this.operator;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ConditionArgs(
@@ -51,8 +52,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionArgs() {
-        this.operator = Output.empty();
-        this.values = Output.empty();
+        this.operator = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Output.ofNullable(operator);
+            this.operator = Codegen.ofNullable(operator);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -90,7 +91,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

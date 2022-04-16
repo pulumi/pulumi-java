@@ -9,6 +9,7 @@ import io.pulumi.aws.cur.inputs.ReportDefinitionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAdditionalArtifacts() {
+    public Output</* @Nullable */ List<String>> additionalArtifacts() {
         return this.additionalArtifacts;
     }
     /**
@@ -59,7 +60,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return A list of schema elements. Valid values are: `RESOURCES`.
      * 
      */
-    public Output<List<String>> getAdditionalSchemaElements() {
+    public Output<List<String>> additionalSchemaElements() {
         return this.additionalSchemaElements;
     }
     /**
@@ -73,7 +74,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) specifying the cur report.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -87,7 +88,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
      * 
      */
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression;
     }
     /**
@@ -101,7 +102,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
      * 
      */
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
     /**
@@ -115,7 +116,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Set to true to update your reports after they have been finalized if AWS detects charges related to previous months.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRefreshClosedReports() {
+    public Output</* @Nullable */ Boolean> refreshClosedReports() {
         return this.refreshClosedReports;
     }
     /**
@@ -129,7 +130,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
      * 
      */
-    public Output<String> getReportName() {
+    public Output<String> reportName() {
         return this.reportName;
     }
     /**
@@ -143,7 +144,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
      * 
      */
-    public Output</* @Nullable */ String> getReportVersioning() {
+    public Output</* @Nullable */ String> reportVersioning() {
         return this.reportVersioning;
     }
     /**
@@ -157,7 +158,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Name of the existing S3 bucket to hold generated reports.
      * 
      */
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
     /**
@@ -171,7 +172,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Report path prefix. Limited to 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getS3Prefix() {
+    public Output</* @Nullable */ String> s3Prefix() {
         return this.s3Prefix;
     }
     /**
@@ -185,7 +186,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return Region of the existing S3 bucket to hold generated reports.
      * 
      */
-    public Output<String> getS3Region() {
+    public Output<String> s3Region() {
         return this.s3Region;
     }
     /**
@@ -199,7 +200,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @return The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
      * 
      */
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit;
     }
 
@@ -225,7 +226,7 @@ public class ReportDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReportDefinition(String name, ReportDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cur/reportDefinition:ReportDefinition", name, args == null ? ReportDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cur/reportDefinition:ReportDefinition", name, args == null ? ReportDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReportDefinition(String name, Output<String> id, @Nullable ReportDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

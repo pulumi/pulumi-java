@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     @Import(name="dataflowSinks")
       private final @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
 
-    public Output<List<PowerQuerySinkArgs>> getDataflowSinks() {
-        return this.dataflowSinks == null ? Output.empty() : this.dataflowSinks;
+    public Output<List<PowerQuerySinkArgs>> dataflowSinks() {
+        return this.dataflowSinks == null ? Codegen.empty() : this.dataflowSinks;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     @Import(name="queryName")
       private final @Nullable Output<String> queryName;
 
-    public Output<String> getQueryName() {
-        return this.queryName == null ? Output.empty() : this.queryName;
+    public Output<String> queryName() {
+        return this.queryName == null ? Codegen.empty() : this.queryName;
     }
 
     public PowerQuerySinkMappingArgs(
@@ -50,8 +51,8 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     }
 
     private PowerQuerySinkMappingArgs() {
-        this.dataflowSinks = Output.empty();
-        this.queryName = Output.empty();
+        this.dataflowSinks = Codegen.empty();
+        this.queryName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dataflowSinks(@Nullable List<PowerQuerySinkArgs> dataflowSinks) {
-            this.dataflowSinks = Output.ofNullable(dataflowSinks);
+            this.dataflowSinks = Codegen.ofNullable(dataflowSinks);
             return this;
         }
         public Builder dataflowSinks(PowerQuerySinkArgs... dataflowSinks) {
@@ -92,7 +93,7 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder queryName(@Nullable String queryName) {
-            this.queryName = Output.ofNullable(queryName);
+            this.queryName = Codegen.ofNullable(queryName);
             return this;
         }        public PowerQuerySinkMappingArgs build() {
             return new PowerQuerySinkMappingArgs(dataflowSinks, queryName);

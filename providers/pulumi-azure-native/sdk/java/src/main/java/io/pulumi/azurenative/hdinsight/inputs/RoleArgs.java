@@ -11,6 +11,7 @@ import io.pulumi.azurenative.hdinsight.inputs.ScriptActionArgs;
 import io.pulumi.azurenative.hdinsight.inputs.VirtualNetworkProfileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,8 +35,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaleConfiguration")
       private final @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
 
-    public Output<AutoscaleArgs> getAutoscaleConfiguration() {
-        return this.autoscaleConfiguration == null ? Output.empty() : this.autoscaleConfiguration;
+    public Output<AutoscaleArgs> autoscaleConfiguration() {
+        return this.autoscaleConfiguration == null ? Codegen.empty() : this.autoscaleConfiguration;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDisksGroups")
       private final @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
 
-    public Output<List<DataDisksGroupsArgs>> getDataDisksGroups() {
-        return this.dataDisksGroups == null ? Output.empty() : this.dataDisksGroups;
+    public Output<List<DataDisksGroupsArgs>> dataDisksGroups() {
+        return this.dataDisksGroups == null ? Codegen.empty() : this.dataDisksGroups;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptDataDisks")
       private final @Nullable Output<Boolean> encryptDataDisks;
 
-    public Output<Boolean> getEncryptDataDisks() {
-        return this.encryptDataDisks == null ? Output.empty() : this.encryptDataDisks;
+    public Output<Boolean> encryptDataDisks() {
+        return this.encryptDataDisks == null ? Codegen.empty() : this.encryptDataDisks;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> getHardwareProfile() {
-        return this.hardwareProfile == null ? Output.empty() : this.hardwareProfile;
+    public Output<HardwareProfileArgs> hardwareProfile() {
+        return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;
 
-    public Output<Integer> getMinInstanceCount() {
-        return this.minInstanceCount == null ? Output.empty() : this.minInstanceCount;
+    public Output<Integer> minInstanceCount() {
+        return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osProfile")
       private final @Nullable Output<OsProfileArgs> osProfile;
 
-    public Output<OsProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Output.empty() : this.osProfile;
+    public Output<OsProfileArgs> osProfile() {
+        return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptActions")
       private final @Nullable Output<List<ScriptActionArgs>> scriptActions;
 
-    public Output<List<ScriptActionArgs>> getScriptActions() {
-        return this.scriptActions == null ? Output.empty() : this.scriptActions;
+    public Output<List<ScriptActionArgs>> scriptActions() {
+        return this.scriptActions == null ? Codegen.empty() : this.scriptActions;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetInstanceCount")
       private final @Nullable Output<Integer> targetInstanceCount;
 
-    public Output<Integer> getTargetInstanceCount() {
-        return this.targetInstanceCount == null ? Output.empty() : this.targetInstanceCount;
+    public Output<Integer> targetInstanceCount() {
+        return this.targetInstanceCount == null ? Codegen.empty() : this.targetInstanceCount;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vMGroupName")
       private final @Nullable Output<String> vMGroupName;
 
-    public Output<String> getVMGroupName() {
-        return this.vMGroupName == null ? Output.empty() : this.vMGroupName;
+    public Output<String> vMGroupName() {
+        return this.vMGroupName == null ? Codegen.empty() : this.vMGroupName;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkProfile")
       private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
-    public Output<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
-        return this.virtualNetworkProfile == null ? Output.empty() : this.virtualNetworkProfile;
+    public Output<VirtualNetworkProfileArgs> virtualNetworkProfile() {
+        return this.virtualNetworkProfile == null ? Codegen.empty() : this.virtualNetworkProfile;
     }
 
     public RoleArgs(
@@ -162,7 +163,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
         this.autoscaleConfiguration = autoscaleConfiguration;
         this.dataDisksGroups = dataDisksGroups;
-        this.encryptDataDisks = encryptDataDisks == null ? Output.ofNullable(false) : encryptDataDisks;
+        this.encryptDataDisks = encryptDataDisks == null ? Codegen.ofNullable(false) : encryptDataDisks;
         this.hardwareProfile = hardwareProfile;
         this.minInstanceCount = minInstanceCount;
         this.name = name;
@@ -174,17 +175,17 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleArgs() {
-        this.autoscaleConfiguration = Output.empty();
-        this.dataDisksGroups = Output.empty();
-        this.encryptDataDisks = Output.empty();
-        this.hardwareProfile = Output.empty();
-        this.minInstanceCount = Output.empty();
-        this.name = Output.empty();
-        this.osProfile = Output.empty();
-        this.scriptActions = Output.empty();
-        this.targetInstanceCount = Output.empty();
-        this.vMGroupName = Output.empty();
-        this.virtualNetworkProfile = Output.empty();
+        this.autoscaleConfiguration = Codegen.empty();
+        this.dataDisksGroups = Codegen.empty();
+        this.encryptDataDisks = Codegen.empty();
+        this.hardwareProfile = Codegen.empty();
+        this.minInstanceCount = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osProfile = Codegen.empty();
+        this.scriptActions = Codegen.empty();
+        this.targetInstanceCount = Codegen.empty();
+        this.vMGroupName = Codegen.empty();
+        this.virtualNetworkProfile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -232,7 +233,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscaleConfiguration(@Nullable AutoscaleArgs autoscaleConfiguration) {
-            this.autoscaleConfiguration = Output.ofNullable(autoscaleConfiguration);
+            this.autoscaleConfiguration = Codegen.ofNullable(autoscaleConfiguration);
             return this;
         }
         public Builder dataDisksGroups(@Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups) {
@@ -240,7 +241,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDisksGroups(@Nullable List<DataDisksGroupsArgs> dataDisksGroups) {
-            this.dataDisksGroups = Output.ofNullable(dataDisksGroups);
+            this.dataDisksGroups = Codegen.ofNullable(dataDisksGroups);
             return this;
         }
         public Builder dataDisksGroups(DataDisksGroupsArgs... dataDisksGroups) {
@@ -251,7 +252,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptDataDisks(@Nullable Boolean encryptDataDisks) {
-            this.encryptDataDisks = Output.ofNullable(encryptDataDisks);
+            this.encryptDataDisks = Codegen.ofNullable(encryptDataDisks);
             return this;
         }
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
@@ -259,7 +260,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Output.ofNullable(hardwareProfile);
+            this.hardwareProfile = Codegen.ofNullable(hardwareProfile);
             return this;
         }
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
@@ -267,7 +268,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Output.ofNullable(minInstanceCount);
+            this.minInstanceCount = Codegen.ofNullable(minInstanceCount);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -275,7 +276,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
@@ -283,7 +284,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osProfile(@Nullable OsProfileArgs osProfile) {
-            this.osProfile = Output.ofNullable(osProfile);
+            this.osProfile = Codegen.ofNullable(osProfile);
             return this;
         }
         public Builder scriptActions(@Nullable Output<List<ScriptActionArgs>> scriptActions) {
@@ -291,7 +292,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
-            this.scriptActions = Output.ofNullable(scriptActions);
+            this.scriptActions = Codegen.ofNullable(scriptActions);
             return this;
         }
         public Builder scriptActions(ScriptActionArgs... scriptActions) {
@@ -302,7 +303,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetInstanceCount(@Nullable Integer targetInstanceCount) {
-            this.targetInstanceCount = Output.ofNullable(targetInstanceCount);
+            this.targetInstanceCount = Codegen.ofNullable(targetInstanceCount);
             return this;
         }
         public Builder vMGroupName(@Nullable Output<String> vMGroupName) {
@@ -310,7 +311,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vMGroupName(@Nullable String vMGroupName) {
-            this.vMGroupName = Output.ofNullable(vMGroupName);
+            this.vMGroupName = Codegen.ofNullable(vMGroupName);
             return this;
         }
         public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
@@ -318,7 +319,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
-            this.virtualNetworkProfile = Output.ofNullable(virtualNetworkProfile);
+            this.virtualNetworkProfile = Codegen.ofNullable(virtualNetworkProfile);
             return this;
         }        public RoleArgs build() {
             return new RoleArgs(autoscaleConfiguration, dataDisksGroups, encryptDataDisks, hardwareProfile, minInstanceCount, name, osProfile, scriptActions, targetInstanceCount, vMGroupName, virtualNetworkProfile);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupHeaderArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleOptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,21 +20,21 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="action", required=true)
       private final Output<RuleGroupStatefulRuleAction> action;
 
-    public Output<RuleGroupStatefulRuleAction> getAction() {
+    public Output<RuleGroupStatefulRuleAction> action() {
         return this.action;
     }
 
     @Import(name="header", required=true)
       private final Output<RuleGroupHeaderArgs> header;
 
-    public Output<RuleGroupHeaderArgs> getHeader() {
+    public Output<RuleGroupHeaderArgs> header() {
         return this.header;
     }
 
     @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleOptionArgs>> ruleOptions;
 
-    public Output<List<RuleGroupRuleOptionArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleOptionArgs>> ruleOptions() {
         return this.ruleOptions;
     }
 
@@ -47,9 +48,9 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private RuleGroupStatefulRuleArgs() {
-        this.action = Output.empty();
-        this.header = Output.empty();
-        this.ruleOptions = Output.empty();
+        this.action = Codegen.empty();
+        this.header = Codegen.empty();
+        this.ruleOptions = Codegen.empty();
     }
 
     public static Builder builder() {

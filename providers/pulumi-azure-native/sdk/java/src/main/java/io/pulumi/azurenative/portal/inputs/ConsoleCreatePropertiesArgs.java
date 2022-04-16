@@ -8,6 +8,7 @@ import io.pulumi.azurenative.portal.enums.ProvisioningState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="osType", required=true)
       private final Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> getOsType() {
+    public Output<Either<String,OsType>> osType() {
         return this.osType;
     }
 
@@ -39,8 +40,8 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ConsoleCreatePropertiesArgs(
@@ -64,9 +65,9 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private ConsoleCreatePropertiesArgs() {
-        this.osType = Output.empty();
-        this.provisioningState = Output.empty();
-        this.uri = Output.empty();
+        this.osType = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -114,7 +115,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ConsoleCreatePropertiesArgs build() {
             return new ConsoleCreatePropertiesArgs(osType, provisioningState, uri);

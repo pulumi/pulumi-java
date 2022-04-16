@@ -6,6 +6,7 @@ package io.pulumi.gcp.activedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.activedirectory.DomainArgs;
 import io.pulumi.gcp.activedirectory.inputs.DomainState;
@@ -49,7 +50,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * If not specified, setupadmin will be used.
      * 
      */
-    public Output</* @Nullable */ String> getAdmin() {
+    public Output</* @Nullable */ String> admin() {
         return this.admin;
     }
     /**
@@ -65,7 +66,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * If CIDR subnets overlap between networks, domain creation will fail.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAuthorizedNetworks() {
+    public Output</* @Nullable */ List<String>> authorizedNetworks() {
         return this.authorizedNetworks;
     }
     /**
@@ -81,7 +82,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -97,7 +98,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * be chosen for an Active Directory set up on an internal network.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -111,7 +112,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Resource labels that can contain user-provided metadata
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -127,7 +128,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
      */
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations;
     }
     /**
@@ -141,7 +142,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +158,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -173,7 +174,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
      * 
      */
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange;
     }
 
@@ -199,7 +200,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:activedirectory/domain:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:activedirectory/domain:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Domain(String name, Output<String> id, @Nullable DomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

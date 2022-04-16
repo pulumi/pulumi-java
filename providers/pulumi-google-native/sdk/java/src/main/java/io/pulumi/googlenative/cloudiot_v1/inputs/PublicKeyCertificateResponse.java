@@ -24,7 +24,7 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
     @Import(name="certificate", required=true)
       private final String certificate;
 
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
 
@@ -35,7 +35,7 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
     @Import(name="format", required=true)
       private final String format;
 
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
 
@@ -46,7 +46,7 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
     @Import(name="x509Details", required=true)
       private final X509CertificateDetailsResponse x509Details;
 
-    public X509CertificateDetailsResponse getX509Details() {
+    public X509CertificateDetailsResponse x509Details() {
         return this.x509Details;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.confluent.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     @Import(name="planId")
       private final @Nullable Output<String> planId;
 
-    public Output<String> getPlanId() {
-        return this.planId == null ? Output.empty() : this.planId;
+    public Output<String> planId() {
+        return this.planId == null ? Codegen.empty() : this.planId;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     @Import(name="planName")
       private final @Nullable Output<String> planName;
 
-    public Output<String> getPlanName() {
-        return this.planName == null ? Output.empty() : this.planName;
+    public Output<String> planName() {
+        return this.planName == null ? Codegen.empty() : this.planName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     @Import(name="publisherId")
       private final @Nullable Output<String> publisherId;
 
-    public Output<String> getPublisherId() {
-        return this.publisherId == null ? Output.empty() : this.publisherId;
+    public Output<String> publisherId() {
+        return this.publisherId == null ? Codegen.empty() : this.publisherId;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     @Import(name="termUnit")
       private final @Nullable Output<String> termUnit;
 
-    public Output<String> getTermUnit() {
-        return this.termUnit == null ? Output.empty() : this.termUnit;
+    public Output<String> termUnit() {
+        return this.termUnit == null ? Codegen.empty() : this.termUnit;
     }
 
     public OrganizationResourcePropertiesOfferDetailArgs(
@@ -87,11 +88,11 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     }
 
     private OrganizationResourcePropertiesOfferDetailArgs() {
-        this.id = Output.empty();
-        this.planId = Output.empty();
-        this.planName = Output.empty();
-        this.publisherId = Output.empty();
-        this.termUnit = Output.empty();
+        this.id = Codegen.empty();
+        this.planId = Codegen.empty();
+        this.planName = Codegen.empty();
+        this.publisherId = Codegen.empty();
+        this.termUnit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder planId(@Nullable Output<String> planId) {
@@ -135,7 +136,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
             return this;
         }
         public Builder planId(@Nullable String planId) {
-            this.planId = Output.ofNullable(planId);
+            this.planId = Codegen.ofNullable(planId);
             return this;
         }
         public Builder planName(@Nullable Output<String> planName) {
@@ -143,7 +144,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
             return this;
         }
         public Builder planName(@Nullable String planName) {
-            this.planName = Output.ofNullable(planName);
+            this.planName = Codegen.ofNullable(planName);
             return this;
         }
         public Builder publisherId(@Nullable Output<String> publisherId) {
@@ -151,7 +152,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
             return this;
         }
         public Builder publisherId(@Nullable String publisherId) {
-            this.publisherId = Output.ofNullable(publisherId);
+            this.publisherId = Codegen.ofNullable(publisherId);
             return this;
         }
         public Builder termUnit(@Nullable Output<String> termUnit) {
@@ -159,7 +160,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
             return this;
         }
         public Builder termUnit(@Nullable String termUnit) {
-            this.termUnit = Output.ofNullable(termUnit);
+            this.termUnit = Codegen.ofNullable(termUnit);
             return this;
         }        public OrganizationResourcePropertiesOfferDetailArgs build() {
             return new OrganizationResourcePropertiesOfferDetailArgs(id, planId, planName, publisherId, termUnit);

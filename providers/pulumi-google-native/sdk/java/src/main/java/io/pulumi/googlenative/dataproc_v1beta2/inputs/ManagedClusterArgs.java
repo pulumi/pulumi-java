@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -38,7 +39,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
       private final Output<ClusterConfigArgs> config;
 
-    public Output<ClusterConfigArgs> getConfig() {
+    public Output<ClusterConfigArgs> config() {
         return this.config;
     }
 
@@ -49,8 +50,8 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public ManagedClusterArgs(
@@ -63,9 +64,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedClusterArgs() {
-        this.clusterName = Output.empty();
-        this.config = Output.empty();
-        this.labels = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.config = Codegen.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }        public ManagedClusterArgs build() {
             return new ManagedClusterArgs(clusterName, config, labels);

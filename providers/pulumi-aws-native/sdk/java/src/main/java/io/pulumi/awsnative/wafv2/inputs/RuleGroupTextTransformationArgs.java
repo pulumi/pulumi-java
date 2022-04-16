@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupTextTransformationType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,14 +22,14 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
       private final Output<RuleGroupTextTransformationType> type;
 
-    public Output<RuleGroupTextTransformationType> getType() {
+    public Output<RuleGroupTextTransformationType> type() {
         return this.type;
     }
 
@@ -40,8 +41,8 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
     }
 
     private RuleGroupTextTransformationArgs() {
-        this.priority = Output.empty();
-        this.type = Output.empty();
+        this.priority = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

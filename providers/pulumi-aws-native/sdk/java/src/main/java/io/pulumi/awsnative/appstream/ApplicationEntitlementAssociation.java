@@ -8,6 +8,7 @@ import io.pulumi.awsnative.appstream.ApplicationEntitlementAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,19 +21,19 @@ public class ApplicationEntitlementAssociation extends io.pulumi.resources.Custo
     @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
     @Export(name="entitlementName", type=String.class, parameters={})
     private Output<String> entitlementName;
 
-    public Output<String> getEntitlementName() {
+    public Output<String> entitlementName() {
         return this.entitlementName;
     }
     @Export(name="stackName", type=String.class, parameters={})
     private Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -58,7 +59,7 @@ public class ApplicationEntitlementAssociation extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationEntitlementAssociation(String name, ApplicationEntitlementAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appstream:ApplicationEntitlementAssociation", name, args == null ? ApplicationEntitlementAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:appstream:ApplicationEntitlementAssociation", name, args == null ? ApplicationEntitlementAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplicationEntitlementAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

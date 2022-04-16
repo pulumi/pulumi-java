@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
     @Import(name="events", required=true)
       private final Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events;
     }
 
@@ -33,8 +34,8 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
     @Import(name="filterPrefix")
       private final @Nullable Output<String> filterPrefix;
 
-    public Output<String> getFilterPrefix() {
-        return this.filterPrefix == null ? Output.empty() : this.filterPrefix;
+    public Output<String> filterPrefix() {
+        return this.filterPrefix == null ? Codegen.empty() : this.filterPrefix;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
     @Import(name="filterSuffix")
       private final @Nullable Output<String> filterSuffix;
 
-    public Output<String> getFilterSuffix() {
-        return this.filterSuffix == null ? Output.empty() : this.filterSuffix;
+    public Output<String> filterSuffix() {
+        return this.filterSuffix == null ? Codegen.empty() : this.filterSuffix;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
     @Import(name="queueArn", required=true)
       private final Output<String> queueArn;
 
-    public Output<String> getQueueArn() {
+    public Output<String> queueArn() {
         return this.queueArn;
     }
 
@@ -84,11 +85,11 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
     }
 
     private BucketNotificationQueueArgs() {
-        this.events = Output.empty();
-        this.filterPrefix = Output.empty();
-        this.filterSuffix = Output.empty();
-        this.id = Output.empty();
-        this.queueArn = Output.empty();
+        this.events = Codegen.empty();
+        this.filterPrefix = Codegen.empty();
+        this.filterSuffix = Codegen.empty();
+        this.id = Codegen.empty();
+        this.queueArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder filterPrefix(@Nullable String filterPrefix) {
-            this.filterPrefix = Output.ofNullable(filterPrefix);
+            this.filterPrefix = Codegen.ofNullable(filterPrefix);
             return this;
         }
         public Builder filterSuffix(@Nullable Output<String> filterSuffix) {
@@ -143,7 +144,7 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder filterSuffix(@Nullable String filterSuffix) {
-            this.filterSuffix = Output.ofNullable(filterSuffix);
+            this.filterSuffix = Codegen.ofNullable(filterSuffix);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -151,7 +152,7 @@ public final class BucketNotificationQueueArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder queueArn(Output<String> queueArn) {

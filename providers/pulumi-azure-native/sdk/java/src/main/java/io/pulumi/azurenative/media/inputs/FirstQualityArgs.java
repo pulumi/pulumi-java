@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bitrate", required=true)
       private final Output<Integer> bitrate;
 
-    public Output<Integer> getBitrate() {
+    public Output<Integer> bitrate() {
         return this.bitrate;
     }
 
@@ -33,7 +34,7 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirstQualityArgs() {
-        this.bitrate = Output.empty();
+        this.bitrate = Codegen.empty();
     }
 
     public static Builder builder() {

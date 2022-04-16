@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Describes the Revision of the Api. If no value is provided, default revision 1 is created
      * 
      */
-    public Output</* @Nullable */ String> getApiRevision() {
+    public Output</* @Nullable */ String> apiRevision() {
         return this.apiRevision;
     }
     /**
@@ -59,7 +60,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Description of the Api Revision.
      * 
      */
-    public Output</* @Nullable */ String> getApiRevisionDescription() {
+    public Output</* @Nullable */ String> apiRevisionDescription() {
         return this.apiRevisionDescription;
     }
     /**
@@ -73,7 +74,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Type of API.
      * 
      */
-    public Output</* @Nullable */ String> getApiType() {
+    public Output</* @Nullable */ String> apiType() {
         return this.apiType;
     }
     /**
@@ -87,7 +88,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Indicates the Version identifier of the API if the API is versioned
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -101,7 +102,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Description of the Api Version.
      * 
      */
-    public Output</* @Nullable */ String> getApiVersionDescription() {
+    public Output</* @Nullable */ String> apiVersionDescription() {
         return this.apiVersionDescription;
     }
     /**
@@ -115,7 +116,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Version set details
      * 
      */
-    public Output</* @Nullable */ ApiVersionSetContractDetailsResponse> getApiVersionSet() {
+    public Output</* @Nullable */ ApiVersionSetContractDetailsResponse> apiVersionSet() {
         return this.apiVersionSet;
     }
     /**
@@ -129,7 +130,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return A resource identifier for the related ApiVersionSet.
      * 
      */
-    public Output</* @Nullable */ String> getApiVersionSetId() {
+    public Output</* @Nullable */ String> apiVersionSetId() {
         return this.apiVersionSetId;
     }
     /**
@@ -143,7 +144,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Collection of authentication settings included into this API.
      * 
      */
-    public Output</* @Nullable */ AuthenticationSettingsContractResponse> getAuthenticationSettings() {
+    public Output</* @Nullable */ AuthenticationSettingsContractResponse> authenticationSettings() {
         return this.authenticationSettings;
     }
     /**
@@ -157,7 +158,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Description of the API. May include HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -171,7 +172,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return API name. Must be 1 to 300 characters long.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -185,7 +186,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Indicates if API revision is current api revision.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsCurrent() {
+    public Output</* @Nullable */ Boolean> isCurrent() {
         return this.isCurrent;
     }
     /**
@@ -199,7 +200,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Indicates if API revision is accessible via the gateway.
      * 
      */
-    public Output<Boolean> getIsOnline() {
+    public Output<Boolean> isOnline() {
         return this.isOnline;
     }
     /**
@@ -213,7 +214,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -227,7 +228,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
      * 
      */
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
     /**
@@ -241,7 +242,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Describes on which protocols the operations in this API can be invoked.
      * 
      */
-    public Output</* @Nullable */ List<String>> getProtocols() {
+    public Output</* @Nullable */ List<String>> protocols() {
         return this.protocols;
     }
     /**
@@ -255,7 +256,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
      * 
      */
-    public Output</* @Nullable */ String> getServiceUrl() {
+    public Output</* @Nullable */ String> serviceUrl() {
         return this.serviceUrl;
     }
     /**
@@ -269,7 +270,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return API identifier of the source API.
      * 
      */
-    public Output</* @Nullable */ String> getSourceApiId() {
+    public Output</* @Nullable */ String> sourceApiId() {
         return this.sourceApiId;
     }
     /**
@@ -283,7 +284,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Protocols over which API is made available.
      * 
      */
-    public Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> getSubscriptionKeyParameterNames() {
+    public Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> subscriptionKeyParameterNames() {
         return this.subscriptionKeyParameterNames;
     }
     /**
@@ -297,7 +298,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Specifies whether an API or Product subscription is required for accessing the API.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSubscriptionRequired() {
+    public Output</* @Nullable */ Boolean> subscriptionRequired() {
         return this.subscriptionRequired;
     }
     /**
@@ -311,7 +312,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -337,7 +338,7 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProductApi(String name, ProductApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ProductApi", name, args == null ? ProductApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:ProductApi", name, args == null ? ProductApiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProductApi(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

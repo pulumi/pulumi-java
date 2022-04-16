@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
     @Import(name="numberOfDays")
       private final @Nullable Output<Integer> numberOfDays;
 
-    public Output<Integer> getNumberOfDays() {
-        return this.numberOfDays == null ? Output.empty() : this.numberOfDays;
+    public Output<Integer> numberOfDays() {
+        return this.numberOfDays == null ? Codegen.empty() : this.numberOfDays;
     }
 
     @Import(name="unlimited")
       private final @Nullable Output<Boolean> unlimited;
 
-    public Output<Boolean> getUnlimited() {
-        return this.unlimited == null ? Output.empty() : this.unlimited;
+    public Output<Boolean> unlimited() {
+        return this.unlimited == null ? Codegen.empty() : this.unlimited;
     }
 
     public DatastoreRetentionPeriodArgs(
@@ -37,8 +38,8 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
     }
 
     private DatastoreRetentionPeriodArgs() {
-        this.numberOfDays = Output.empty();
-        this.unlimited = Output.empty();
+        this.numberOfDays = Codegen.empty();
+        this.unlimited = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder numberOfDays(@Nullable Integer numberOfDays) {
-            this.numberOfDays = Output.ofNullable(numberOfDays);
+            this.numberOfDays = Codegen.ofNullable(numberOfDays);
             return this;
         }
         public Builder unlimited(@Nullable Output<Boolean> unlimited) {
@@ -76,7 +77,7 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder unlimited(@Nullable Boolean unlimited) {
-            this.unlimited = Output.ofNullable(unlimited);
+            this.unlimited = Codegen.ofNullable(unlimited);
             return this;
         }        public DatastoreRetentionPeriodArgs build() {
             return new DatastoreRetentionPeriodArgs(numberOfDays, unlimited);

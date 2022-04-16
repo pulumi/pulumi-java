@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
     @Import(name="servicePerimeters")
       private final @Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
 
-    public Output<List<ServicePerimetersServicePerimeterGetArgs>> getServicePerimeters() {
-        return this.servicePerimeters == null ? Output.empty() : this.servicePerimeters;
+    public Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters() {
+        return this.servicePerimeters == null ? Codegen.empty() : this.servicePerimeters;
     }
 
     public ServicePerimetersState(
@@ -48,8 +49,8 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
     }
 
     private ServicePerimetersState() {
-        this.parent = Output.empty();
-        this.servicePerimeters = Output.empty();
+        this.parent = Codegen.empty();
+        this.servicePerimeters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder servicePerimeters(@Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
@@ -87,7 +88,7 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder servicePerimeters(@Nullable List<ServicePerimetersServicePerimeterGetArgs> servicePerimeters) {
-            this.servicePerimeters = Output.ofNullable(servicePerimeters);
+            this.servicePerimeters = Codegen.ofNullable(servicePerimeters);
             return this;
         }
         public Builder servicePerimeters(ServicePerimetersServicePerimeterGetArgs... servicePerimeters) {

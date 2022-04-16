@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ssmcontacts.enums.ContactChannelChannelType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the engagement to a contact channel.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -44,7 +45,7 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
      * @return The details that SSM Incident Manager uses when trying to engage the contact channel.
      * 
      */
-    public Output</* @Nullable */ String> getChannelAddress() {
+    public Output</* @Nullable */ String> channelAddress() {
         return this.channelAddress;
     }
     /**
@@ -58,7 +59,7 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
      * @return The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
      * 
      */
-    public Output</* @Nullable */ String> getChannelName() {
+    public Output</* @Nullable */ String> channelName() {
         return this.channelName;
     }
     /**
@@ -72,7 +73,7 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
      * @return Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
      * 
      */
-    public Output</* @Nullable */ ContactChannelChannelType> getChannelType() {
+    public Output</* @Nullable */ ContactChannelChannelType> channelType() {
         return this.channelType;
     }
     /**
@@ -86,7 +87,7 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
      * @return ARN of the contact resource
      * 
      */
-    public Output</* @Nullable */ String> getContactId() {
+    public Output</* @Nullable */ String> contactId() {
         return this.contactId;
     }
     /**
@@ -100,7 +101,7 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
      * @return If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeferActivation() {
+    public Output</* @Nullable */ Boolean> deferActivation() {
         return this.deferActivation;
     }
 
@@ -126,7 +127,7 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ContactChannel(String name, @Nullable ContactChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ssmcontacts:ContactChannel", name, args == null ? ContactChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ssmcontacts:ContactChannel", name, args == null ? ContactChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ContactChannel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

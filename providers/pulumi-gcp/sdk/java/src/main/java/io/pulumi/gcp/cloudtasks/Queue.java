@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudtasks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudtasks.QueueArgs;
 import io.pulumi.gcp.cloudtasks.inputs.QueueState;
@@ -60,7 +61,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ QueueAppEngineRoutingOverride> getAppEngineRoutingOverride() {
+    public Output</* @Nullable */ QueueAppEngineRoutingOverride> appEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
     }
     /**
@@ -74,7 +75,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The location of the queue
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +89,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The queue name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +105,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -132,7 +133,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      *   Structure is documented below.
      * 
      */
-    public Output<QueueRateLimits> getRateLimits() {
+    public Output<QueueRateLimits> rateLimits() {
         return this.rateLimits;
     }
     /**
@@ -148,7 +149,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<QueueRetryConfig> getRetryConfig() {
+    public Output<QueueRetryConfig> retryConfig() {
         return this.retryConfig;
     }
     /**
@@ -164,7 +165,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ QueueStackdriverLoggingConfig> getStackdriverLoggingConfig() {
+    public Output</* @Nullable */ QueueStackdriverLoggingConfig> stackdriverLoggingConfig() {
         return this.stackdriverLoggingConfig;
     }
 
@@ -190,7 +191,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Queue(String name, QueueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudtasks/queue:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudtasks/queue:Queue", name, args == null ? QueueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Queue(String name, Output<String> id, @Nullable QueueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

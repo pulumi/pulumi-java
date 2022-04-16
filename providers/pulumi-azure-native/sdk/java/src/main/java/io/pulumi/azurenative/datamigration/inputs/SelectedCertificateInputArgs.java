@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
     @Import(name="certificateName", required=true)
       private final Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -35,7 +36,7 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -47,8 +48,8 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
     }
 
     private SelectedCertificateInputArgs() {
-        this.certificateName = Output.empty();
-        this.password = Output.empty();
+        this.certificateName = Codegen.empty();
+        this.password = Codegen.empty();
     }
 
     public static Builder builder() {

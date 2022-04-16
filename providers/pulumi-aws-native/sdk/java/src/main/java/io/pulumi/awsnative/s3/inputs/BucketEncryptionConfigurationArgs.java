@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class BucketEncryptionConfigurationArgs extends io.pulumi.resources
     @Import(name="replicaKmsKeyID", required=true)
       private final Output<String> replicaKmsKeyID;
 
-    public Output<String> getReplicaKmsKeyID() {
+    public Output<String> replicaKmsKeyID() {
         return this.replicaKmsKeyID;
     }
 
@@ -33,7 +34,7 @@ public final class BucketEncryptionConfigurationArgs extends io.pulumi.resources
     }
 
     private BucketEncryptionConfigurationArgs() {
-        this.replicaKmsKeyID = Output.empty();
+        this.replicaKmsKeyID = Codegen.empty();
     }
 
     public static Builder builder() {

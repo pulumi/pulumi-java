@@ -7,6 +7,7 @@ import io.pulumi.azurenative.avs.enums.DhcpTypeEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="dhcpId")
       private final @Nullable Output<String> dhcpId;
 
-    public Output<String> getDhcpId() {
-        return this.dhcpId == null ? Output.empty() : this.dhcpId;
+    public Output<String> dhcpId() {
+        return this.dhcpId == null ? Codegen.empty() : this.dhcpId;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="dhcpType", required=true)
       private final Output<Either<String,DhcpTypeEnum>> dhcpType;
 
-    public Output<Either<String,DhcpTypeEnum>> getDhcpType() {
+    public Output<Either<String,DhcpTypeEnum>> dhcpType() {
         return this.dhcpType;
     }
 
@@ -46,8 +47,8 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -68,7 +69,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,8 +80,8 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+    public Output<Double> revision() {
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     public WorkloadNetworkDhcpArgs(
@@ -99,12 +100,12 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkloadNetworkDhcpArgs() {
-        this.dhcpId = Output.empty();
-        this.dhcpType = Output.empty();
-        this.displayName = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.revision = Output.empty();
+        this.dhcpId = Codegen.empty();
+        this.dhcpType = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dhcpId(@Nullable String dhcpId) {
-            this.dhcpId = Output.ofNullable(dhcpId);
+            this.dhcpId = Codegen.ofNullable(dhcpId);
             return this;
         }
         public Builder dhcpType(Output<Either<String,DhcpTypeEnum>> dhcpType) {
@@ -158,7 +159,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {
@@ -182,7 +183,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder revision(@Nullable Double revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }        public WorkloadNetworkDhcpArgs build() {
             return new WorkloadNetworkDhcpArgs(dhcpId, dhcpType, displayName, privateCloudName, resourceGroupName, revision);

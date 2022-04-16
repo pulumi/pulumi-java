@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,22 +23,22 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="lossType")
       private final @Nullable Output<String> lossType;
 
-    public Output<String> getLossType() {
-        return this.lossType == null ? Output.empty() : this.lossType;
+    public Output<String> lossType() {
+        return this.lossType == null ? Codegen.empty() : this.lossType;
     }
 
     @Import(name="modelType")
       private final @Nullable Output<String> modelType;
 
-    public Output<String> getModelType() {
-        return this.modelType == null ? Output.empty() : this.modelType;
+    public Output<String> modelType() {
+        return this.modelType == null ? Codegen.empty() : this.modelType;
     }
 
     public ModelDefinitionModelOptionsArgs(
@@ -50,9 +51,9 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
     }
 
     private ModelDefinitionModelOptionsArgs() {
-        this.labels = Output.empty();
-        this.lossType = Output.empty();
-        this.modelType = Output.empty();
+        this.labels = Codegen.empty();
+        this.lossType = Codegen.empty();
+        this.modelType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(String... labels) {
@@ -95,7 +96,7 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder lossType(@Nullable String lossType) {
-            this.lossType = Output.ofNullable(lossType);
+            this.lossType = Codegen.ofNullable(lossType);
             return this;
         }
         public Builder modelType(@Nullable Output<String> modelType) {
@@ -103,7 +104,7 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder modelType(@Nullable String modelType) {
-            this.modelType = Output.ofNullable(modelType);
+            this.modelType = Codegen.ofNullable(modelType);
             return this;
         }        public ModelDefinitionModelOptionsArgs build() {
             return new ModelDefinitionModelOptionsArgs(labels, lossType, modelType);

@@ -26,7 +26,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="body", required=true)
       private final String body;
 
-    public String getBody() {
+    public String body() {
         return this.body;
     }
 
@@ -37,7 +37,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headers", required=true)
       private final Map<String,String> headers;
 
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers;
     }
 
@@ -48,7 +48,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpMethod", required=true)
       private final String httpMethod;
 
-    public String getHttpMethod() {
+    public String httpMethod() {
         return this.httpMethod;
     }
 
@@ -59,7 +59,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oauthToken", required=true)
       private final OAuthTokenResponse oauthToken;
 
-    public OAuthTokenResponse getOauthToken() {
+    public OAuthTokenResponse oauthToken() {
         return this.oauthToken;
     }
 
@@ -70,7 +70,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oidcToken", required=true)
       private final OidcTokenResponse oidcToken;
 
-    public OidcTokenResponse getOidcToken() {
+    public OidcTokenResponse oidcToken() {
         return this.oidcToken;
     }
 
@@ -81,7 +81,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentParameterArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs;
 import java.lang.Boolean;
@@ -31,8 +32,8 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -53,8 +54,8 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> getIsFallback() {
-        return this.isFallback == null ? Output.empty() : this.isFallback;
+    public Output<Boolean> isFallback() {
+        return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="trainingPhrases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases;
 
-    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> getTrainingPhrases() {
-        return this.trainingPhrases == null ? Output.empty() : this.trainingPhrases;
+    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases() {
+        return this.trainingPhrases == null ? Codegen.empty() : this.trainingPhrases;
     }
 
     public GoogleCloudDialogflowCxV3IntentArgs(
@@ -132,14 +133,14 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudDialogflowCxV3IntentArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.isFallback = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.priority = Output.empty();
-        this.trainingPhrases = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.isFallback = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.trainingPhrases = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -197,7 +198,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder isFallback(@Nullable Boolean isFallback) {
-            this.isFallback = Output.ofNullable(isFallback);
+            this.isFallback = Codegen.ofNullable(isFallback);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -205,7 +206,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -213,7 +214,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters) {
@@ -221,7 +222,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3IntentParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(GoogleCloudDialogflowCxV3IntentParameterArgs... parameters) {
@@ -232,7 +233,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder trainingPhrases(@Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases) {
@@ -240,7 +241,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder trainingPhrases(@Nullable List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs> trainingPhrases) {
-            this.trainingPhrases = Output.ofNullable(trainingPhrases);
+            this.trainingPhrases = Codegen.ofNullable(trainingPhrases);
             return this;
         }
         public Builder trainingPhrases(GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs... trainingPhrases) {

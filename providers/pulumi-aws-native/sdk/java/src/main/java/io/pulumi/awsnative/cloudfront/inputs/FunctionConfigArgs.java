@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class FunctionConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment", required=true)
       private final Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment;
     }
 
     @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
 
@@ -35,8 +36,8 @@ public final class FunctionConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionConfigArgs() {
-        this.comment = Output.empty();
-        this.runtime = Output.empty();
+        this.comment = Codegen.empty();
+        this.runtime = Codegen.empty();
     }
 
     public static Builder builder() {

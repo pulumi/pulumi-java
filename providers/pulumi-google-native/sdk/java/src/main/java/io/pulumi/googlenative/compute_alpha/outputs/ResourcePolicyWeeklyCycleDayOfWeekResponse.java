@@ -39,21 +39,21 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
      * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
      * 
     */
-    public String getDay() {
+    public String day() {
         return this.day;
     }
     /**
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

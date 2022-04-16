@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Custom settings for changing the behavior of the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ List<NameValuePairResponse>> getClusterSettings() {
+    public Output</* @Nullable */ List<NameValuePairResponse>> clusterSettings() {
         return this.clusterSettings;
     }
     /**
@@ -57,7 +58,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Dedicated Host Count
      * 
      */
-    public Output<Integer> getDedicatedHostCount() {
+    public Output<Integer> dedicatedHostCount() {
         return this.dedicatedHostCount;
     }
     /**
@@ -71,7 +72,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return DNS suffix of the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ String> getDnsSuffix() {
+    public Output</* @Nullable */ String> dnsSuffix() {
         return this.dnsSuffix;
     }
     /**
@@ -85,7 +86,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Scale factor for front-ends.
      * 
      */
-    public Output</* @Nullable */ Integer> getFrontEndScaleFactor() {
+    public Output</* @Nullable */ Integer> frontEndScaleFactor() {
         return this.frontEndScaleFactor;
     }
     /**
@@ -99,7 +100,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Flag that displays whether an ASE has linux workers or not
      * 
      */
-    public Output<Boolean> getHasLinuxWorkers() {
+    public Output<Boolean> hasLinuxWorkers() {
         return this.hasLinuxWorkers;
     }
     /**
@@ -113,7 +114,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ String> getInternalLoadBalancingMode() {
+    public Output</* @Nullable */ String> internalLoadBalancingMode() {
         return this.internalLoadBalancingMode;
     }
     /**
@@ -127,7 +128,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Number of IP SSL addresses reserved for the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ Integer> getIpsslAddressCount() {
+    public Output</* @Nullable */ Integer> ipsslAddressCount() {
         return this.ipsslAddressCount;
     }
     /**
@@ -141,7 +142,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -155,7 +156,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -169,7 +170,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Maximum number of VMs in the App Service Environment.
      * 
      */
-    public Output<Integer> getMaximumNumberOfMachines() {
+    public Output<Integer> maximumNumberOfMachines() {
         return this.maximumNumberOfMachines;
     }
     /**
@@ -183,7 +184,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Number of front-end instances.
      * 
      */
-    public Output<Integer> getMultiRoleCount() {
+    public Output<Integer> multiRoleCount() {
         return this.multiRoleCount;
     }
     /**
@@ -197,7 +198,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Front-end VM size, e.g. "Medium", "Large".
      * 
      */
-    public Output</* @Nullable */ String> getMultiSize() {
+    public Output</* @Nullable */ String> multiSize() {
         return this.multiSize;
     }
     /**
@@ -211,7 +212,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -225,7 +226,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the App Service Environment.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -239,7 +240,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Current status of the App Service Environment.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -255,7 +256,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      *  (most likely because NSG blocked the incoming traffic).
      * 
      */
-    public Output<Boolean> getSuspended() {
+    public Output<Boolean> suspended() {
         return this.suspended;
     }
     /**
@@ -269,7 +270,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -283,7 +284,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -297,7 +298,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return User added ip ranges to whitelist on ASE db
      * 
      */
-    public Output</* @Nullable */ List<String>> getUserWhitelistedIpRanges() {
+    public Output</* @Nullable */ List<String>> userWhitelistedIpRanges() {
         return this.userWhitelistedIpRanges;
     }
     /**
@@ -311,7 +312,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @return Description of the Virtual Network.
      * 
      */
-    public Output<VirtualNetworkProfileResponse> getVirtualNetwork() {
+    public Output<VirtualNetworkProfileResponse> virtualNetwork() {
         return this.virtualNetwork;
     }
 
@@ -337,7 +338,7 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppServiceEnvironment(String name, AppServiceEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:AppServiceEnvironment", name, args == null ? AppServiceEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:AppServiceEnvironment", name, args == null ? AppServiceEnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppServiceEnvironment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

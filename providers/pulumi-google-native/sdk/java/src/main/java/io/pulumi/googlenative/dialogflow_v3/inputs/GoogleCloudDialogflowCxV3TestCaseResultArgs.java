@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3TestCaseResultTestResult;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnArgs;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="conversationTurns")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
 
-    public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> getConversationTurns() {
-        return this.conversationTurns == null ? Output.empty() : this.conversationTurns;
+    public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns() {
+        return this.conversationTurns == null ? Codegen.empty() : this.conversationTurns;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<String> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="testResult")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
 
-    public Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> getTestResult() {
-        return this.testResult == null ? Output.empty() : this.testResult;
+    public Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult() {
+        return this.testResult == null ? Codegen.empty() : this.testResult;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="testTime")
       private final @Nullable Output<String> testTime;
 
-    public Output<String> getTestTime() {
-        return this.testTime == null ? Output.empty() : this.testTime;
+    public Output<String> testTime() {
+        return this.testTime == null ? Codegen.empty() : this.testTime;
     }
 
     public GoogleCloudDialogflowCxV3TestCaseResultArgs(
@@ -90,11 +91,11 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     }
 
     private GoogleCloudDialogflowCxV3TestCaseResultArgs() {
-        this.conversationTurns = Output.empty();
-        this.environment = Output.empty();
-        this.name = Output.empty();
-        this.testResult = Output.empty();
-        this.testTime = Output.empty();
+        this.conversationTurns = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.name = Codegen.empty();
+        this.testResult = Codegen.empty();
+        this.testTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
             return this;
         }
         public Builder conversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> conversationTurns) {
-            this.conversationTurns = Output.ofNullable(conversationTurns);
+            this.conversationTurns = Codegen.ofNullable(conversationTurns);
             return this;
         }
         public Builder conversationTurns(GoogleCloudDialogflowCxV3ConversationTurnArgs... conversationTurns) {
@@ -141,7 +142,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
             return this;
         }
         public Builder environment(@Nullable String environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -149,7 +150,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder testResult(@Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult) {
@@ -157,7 +158,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
             return this;
         }
         public Builder testResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultTestResult testResult) {
-            this.testResult = Output.ofNullable(testResult);
+            this.testResult = Codegen.ofNullable(testResult);
             return this;
         }
         public Builder testTime(@Nullable Output<String> testTime) {
@@ -165,7 +166,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
             return this;
         }
         public Builder testTime(@Nullable String testTime) {
-            this.testTime = Output.ofNullable(testTime);
+            this.testTime = Codegen.ofNullable(testTime);
             return this;
         }        public GoogleCloudDialogflowCxV3TestCaseResultArgs build() {
             return new GoogleCloudDialogflowCxV3TestCaseResultArgs(conversationTurns, environment, name, testResult, testTime);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
     @Import(name="apiToken", required=true)
       private final Output<String> apiToken;
 
-    public Output<String> getApiToken() {
+    public Output<String> apiToken() {
         return this.apiToken;
     }
 
@@ -29,7 +30,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
     }
 
     private ConnectorProfileDynatraceConnectorProfileCredentialsArgs() {
-        this.apiToken = Output.empty();
+        this.apiToken = Codegen.empty();
     }
 
     public static Builder builder() {

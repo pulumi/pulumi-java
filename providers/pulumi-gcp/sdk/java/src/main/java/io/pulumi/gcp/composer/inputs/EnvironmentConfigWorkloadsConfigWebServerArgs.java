@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,22 +18,22 @@ public final class EnvironmentConfigWorkloadsConfigWebServerArgs extends io.pulu
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+    public Output<Double> cpu() {
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
-    public Output<Double> getMemoryGb() {
-        return this.memoryGb == null ? Output.empty() : this.memoryGb;
+    public Output<Double> memoryGb() {
+        return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
     @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;
 
-    public Output<Double> getStorageGb() {
-        return this.storageGb == null ? Output.empty() : this.storageGb;
+    public Output<Double> storageGb() {
+        return this.storageGb == null ? Codegen.empty() : this.storageGb;
     }
 
     public EnvironmentConfigWorkloadsConfigWebServerArgs(
@@ -45,9 +46,9 @@ public final class EnvironmentConfigWorkloadsConfigWebServerArgs extends io.pulu
     }
 
     private EnvironmentConfigWorkloadsConfigWebServerArgs() {
-        this.cpu = Output.empty();
-        this.memoryGb = Output.empty();
-        this.storageGb = Output.empty();
+        this.cpu = Codegen.empty();
+        this.memoryGb = Codegen.empty();
+        this.storageGb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class EnvironmentConfigWorkloadsConfigWebServerArgs extends io.pulu
             return this;
         }
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
@@ -87,7 +88,7 @@ public final class EnvironmentConfigWorkloadsConfigWebServerArgs extends io.pulu
             return this;
         }
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Output.ofNullable(memoryGb);
+            this.memoryGb = Codegen.ofNullable(memoryGb);
             return this;
         }
         public Builder storageGb(@Nullable Output<Double> storageGb) {
@@ -95,7 +96,7 @@ public final class EnvironmentConfigWorkloadsConfigWebServerArgs extends io.pulu
             return this;
         }
         public Builder storageGb(@Nullable Double storageGb) {
-            this.storageGb = Output.ofNullable(storageGb);
+            this.storageGb = Codegen.ofNullable(storageGb);
             return this;
         }        public EnvironmentConfigWorkloadsConfigWebServerArgs build() {
             return new EnvironmentConfigWorkloadsConfigWebServerArgs(cpu, memoryGb, storageGb);

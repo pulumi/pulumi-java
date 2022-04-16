@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateMetadataGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecGetArgs;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metadata")
       private final @Nullable Output<ServiceTemplateMetadataGetArgs> metadata;
 
-    public Output<ServiceTemplateMetadataGetArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ServiceTemplateMetadataGetArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="spec")
       private final @Nullable Output<ServiceTemplateSpecGetArgs> spec;
 
-    public Output<ServiceTemplateSpecGetArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<ServiceTemplateSpecGetArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public ServiceTemplateGetArgs(
@@ -48,8 +49,8 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ServiceTemplateGetArgs() {
-        this.metadata = Output.empty();
-        this.spec = Output.empty();
+        this.metadata = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder metadata(@Nullable ServiceTemplateMetadataGetArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder spec(@Nullable Output<ServiceTemplateSpecGetArgs> spec) {
@@ -87,7 +88,7 @@ public final class ServiceTemplateGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder spec(@Nullable ServiceTemplateSpecGetArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public ServiceTemplateGetArgs build() {
             return new ServiceTemplateGetArgs(metadata, spec);

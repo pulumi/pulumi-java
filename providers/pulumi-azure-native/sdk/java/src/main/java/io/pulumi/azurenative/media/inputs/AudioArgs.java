@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bitrate")
       private final @Nullable Output<Integer> bitrate;
 
-    public Output<Integer> getBitrate() {
-        return this.bitrate == null ? Output.empty() : this.bitrate;
+    public Output<Integer> bitrate() {
+        return this.bitrate == null ? Codegen.empty() : this.bitrate;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channels")
       private final @Nullable Output<Integer> channels;
 
-    public Output<Integer> getChannels() {
-        return this.channels == null ? Output.empty() : this.channels;
+    public Output<Integer> channels() {
+        return this.channels == null ? Codegen.empty() : this.channels;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -71,8 +72,8 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> getSamplingRate() {
-        return this.samplingRate == null ? Output.empty() : this.samplingRate;
+    public Output<Integer> samplingRate() {
+        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 
     public AudioArgs(
@@ -89,11 +90,11 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AudioArgs() {
-        this.bitrate = Output.empty();
-        this.channels = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
-        this.samplingRate = Output.empty();
+        this.bitrate = Codegen.empty();
+        this.channels = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.samplingRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bitrate(@Nullable Integer bitrate) {
-            this.bitrate = Output.ofNullable(bitrate);
+            this.bitrate = Codegen.ofNullable(bitrate);
             return this;
         }
         public Builder channels(@Nullable Output<Integer> channels) {
@@ -137,7 +138,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channels(@Nullable Integer channels) {
-            this.channels = Output.ofNullable(channels);
+            this.channels = Codegen.ofNullable(channels);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -145,7 +146,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -161,7 +162,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Output.ofNullable(samplingRate);
+            this.samplingRate = Codegen.ofNullable(samplingRate);
             return this;
         }        public AudioArgs build() {
             return new AudioArgs(bitrate, channels, label, odataType, samplingRate);

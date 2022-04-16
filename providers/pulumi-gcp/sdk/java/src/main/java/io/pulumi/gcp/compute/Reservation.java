@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ReservationArgs;
 import io.pulumi.gcp.compute.inputs.ReservationState;
@@ -67,7 +68,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
      * 
      */
-    public Output<String> getCommitment() {
+    public Output<String> commitment() {
         return this.commitment;
     }
     /**
@@ -81,7 +82,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -95,7 +96,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -121,7 +122,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -137,7 +138,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -151,7 +152,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -167,7 +168,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ReservationShareSettings> getShareSettings() {
+    public Output<ReservationShareSettings> shareSettings() {
         return this.shareSettings;
     }
     /**
@@ -183,7 +184,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ReservationSpecificReservation> getSpecificReservation() {
+    public Output<ReservationSpecificReservation> specificReservation() {
         return this.specificReservation;
     }
     /**
@@ -201,7 +202,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * affinity for any reservation. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSpecificReservationRequired() {
+    public Output</* @Nullable */ Boolean> specificReservationRequired() {
         return this.specificReservationRequired;
     }
     /**
@@ -215,7 +216,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return The status of the reservation.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -229,7 +230,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return The zone where the reservation is made.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -255,7 +256,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Reservation(String name, ReservationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/reservation:Reservation", name, args == null ? ReservationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/reservation:Reservation", name, args == null ? ReservationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Reservation(String name, Output<String> id, @Nullable ReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
     @Import(name="offset", required=true)
       private final Output<String> offset;
 
-    public Output<String> getOffset() {
+    public Output<String> offset() {
         return this.offset;
     }
 
@@ -36,8 +37,8 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<String> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -62,9 +63,9 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
     }
 
     private SelfDependencyTumblingWindowTriggerReferenceArgs() {
-        this.offset = Output.empty();
-        this.size = Output.empty();
-        this.type = Output.empty();
+        this.offset = Codegen.empty();
+        this.size = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
             return this;
         }
         public Builder size(@Nullable String size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder type(Output<String> type) {

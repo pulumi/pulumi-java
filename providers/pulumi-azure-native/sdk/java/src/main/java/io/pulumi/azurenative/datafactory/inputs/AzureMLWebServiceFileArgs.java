@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
     @Import(name="filePath", required=true)
       private final Output<Object> filePath;
 
-    public Output<Object> getFilePath() {
+    public Output<Object> filePath() {
         return this.filePath;
     }
 
@@ -36,7 +37,7 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -48,8 +49,8 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureMLWebServiceFileArgs() {
-        this.filePath = Output.empty();
-        this.linkedServiceName = Output.empty();
+        this.filePath = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="filePathList")
       private final @Nullable Output<List<String>> filePathList;
 
-    public Output<List<String>> getFilePathList() {
-        return this.filePathList == null ? Output.empty() : this.filePathList;
+    public Output<List<String>> filePathList() {
+        return this.filePathList == null ? Codegen.empty() : this.filePathList;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="filePrefixList")
       private final @Nullable Output<List<String>> filePrefixList;
 
-    public Output<List<String>> getFilePrefixList() {
-        return this.filePrefixList == null ? Output.empty() : this.filePrefixList;
+    public Output<List<String>> filePrefixList() {
+        return this.filePrefixList == null ? Codegen.empty() : this.filePrefixList;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="fileShareList")
       private final @Nullable Output<List<String>> fileShareList;
 
-    public Output<List<String>> getFileShareList() {
-        return this.fileShareList == null ? Output.empty() : this.fileShareList;
+    public Output<List<String>> fileShareList() {
+        return this.fileShareList == null ? Codegen.empty() : this.fileShareList;
     }
 
     public AzureFileFilterDetailsArgs(
@@ -62,9 +63,9 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     }
 
     private AzureFileFilterDetailsArgs() {
-        this.filePathList = Output.empty();
-        this.filePrefixList = Output.empty();
-        this.fileShareList = Output.empty();
+        this.filePathList = Codegen.empty();
+        this.filePrefixList = Codegen.empty();
+        this.fileShareList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder filePathList(@Nullable List<String> filePathList) {
-            this.filePathList = Output.ofNullable(filePathList);
+            this.filePathList = Codegen.ofNullable(filePathList);
             return this;
         }
         public Builder filePathList(String... filePathList) {
@@ -107,7 +108,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder filePrefixList(@Nullable List<String> filePrefixList) {
-            this.filePrefixList = Output.ofNullable(filePrefixList);
+            this.filePrefixList = Codegen.ofNullable(filePrefixList);
             return this;
         }
         public Builder filePrefixList(String... filePrefixList) {
@@ -118,7 +119,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder fileShareList(@Nullable List<String> fileShareList) {
-            this.fileShareList = Output.ofNullable(fileShareList);
+            this.fileShareList = Codegen.ofNullable(fileShareList);
             return this;
         }
         public Builder fileShareList(String... fileShareList) {

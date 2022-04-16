@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastObservedTime")
       private final @Nullable Output<String> lastObservedTime;
 
-    public Output<String> getLastObservedTime() {
-        return this.lastObservedTime == null ? Output.empty() : this.lastObservedTime;
+    public Output<String> lastObservedTime() {
+        return this.lastObservedTime == null ? Codegen.empty() : this.lastObservedTime;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public EventSeriesArgs(
@@ -62,9 +63,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventSeriesArgs() {
-        this.count = Output.empty();
-        this.lastObservedTime = Output.empty();
-        this.state = Output.empty();
+        this.count = Codegen.empty();
+        this.lastObservedTime = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder lastObservedTime(@Nullable Output<String> lastObservedTime) {
@@ -104,7 +105,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastObservedTime(@Nullable String lastObservedTime) {
-            this.lastObservedTime = Output.ofNullable(lastObservedTime);
+            this.lastObservedTime = Codegen.ofNullable(lastObservedTime);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -112,7 +113,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public EventSeriesArgs build() {
             return new EventSeriesArgs(count, lastObservedTime, state);

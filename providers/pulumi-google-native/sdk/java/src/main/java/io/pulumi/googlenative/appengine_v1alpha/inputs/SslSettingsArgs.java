@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+    public Output<String> certificateId() {
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     public SslSettingsArgs(@Nullable Output<String> certificateId) {
@@ -34,7 +35,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslSettingsArgs() {
-        this.certificateId = Output.empty();
+        this.certificateId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }        public SslSettingsArgs build() {
             return new SslSettingsArgs(certificateId);

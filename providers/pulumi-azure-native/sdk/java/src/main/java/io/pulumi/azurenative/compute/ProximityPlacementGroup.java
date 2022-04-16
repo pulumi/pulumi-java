@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return A list of references to all availability sets in the proximity placement group.
      * 
      */
-    public Output<List<SubResourceWithColocationStatusResponse>> getAvailabilitySets() {
+    public Output<List<SubResourceWithColocationStatusResponse>> availabilitySets() {
         return this.availabilitySets;
     }
     /**
@@ -58,7 +59,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return Describes colocation status of the Proximity Placement Group.
      * 
      */
-    public Output</* @Nullable */ InstanceViewStatusResponse> getColocationStatus() {
+    public Output</* @Nullable */ InstanceViewStatusResponse> colocationStatus() {
         return this.colocationStatus;
     }
     /**
@@ -72,7 +73,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
      * 
      */
-    public Output</* @Nullable */ String> getProximityPlacementGroupType() {
+    public Output</* @Nullable */ String> proximityPlacementGroupType() {
         return this.proximityPlacementGroupType;
     }
     /**
@@ -114,7 +115,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +129,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -142,7 +143,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return A list of references to all virtual machine scale sets in the proximity placement group.
      * 
      */
-    public Output<List<SubResourceWithColocationStatusResponse>> getVirtualMachineScaleSets() {
+    public Output<List<SubResourceWithColocationStatusResponse>> virtualMachineScaleSets() {
         return this.virtualMachineScaleSets;
     }
     /**
@@ -156,7 +157,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @return A list of references to all virtual machines in the proximity placement group.
      * 
      */
-    public Output<List<SubResourceWithColocationStatusResponse>> getVirtualMachines() {
+    public Output<List<SubResourceWithColocationStatusResponse>> virtualMachines() {
         return this.virtualMachines;
     }
 
@@ -182,7 +183,7 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ProximityPlacementGroup(String name, ProximityPlacementGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:ProximityPlacementGroup", name, args == null ? ProximityPlacementGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:ProximityPlacementGroup", name, args == null ? ProximityPlacementGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProximityPlacementGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

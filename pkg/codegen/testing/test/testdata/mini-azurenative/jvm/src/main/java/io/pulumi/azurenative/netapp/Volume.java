@@ -8,6 +8,7 @@ import io.pulumi.azurenative.netapp.VolumeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import javax.annotation.Nullable;
 
@@ -16,7 +17,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
     @Export(name="throughputMibps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> throughputMibps;
 
-    public Output</* @Nullable */ Double> getThroughputMibps() {
+    public Output</* @Nullable */ Double> throughputMibps() {
         return this.throughputMibps;
     }
     /**
@@ -30,7 +31,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
      * 
      */
-    public Output<Double> getUsageThreshold() {
+    public Output<Double> usageThreshold() {
         return this.usageThreshold;
     }
 
@@ -56,7 +57,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Volume(String name, VolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:netapp:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:netapp:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Volume(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

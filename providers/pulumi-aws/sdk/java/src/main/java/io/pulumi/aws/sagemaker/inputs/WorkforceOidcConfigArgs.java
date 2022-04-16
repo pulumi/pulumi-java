@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -31,7 +32,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -42,7 +43,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -53,7 +54,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 
@@ -64,7 +65,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="jwksUri", required=true)
       private final Output<String> jwksUri;
 
-    public Output<String> getJwksUri() {
+    public Output<String> jwksUri() {
         return this.jwksUri;
     }
 
@@ -75,7 +76,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="logoutEndpoint", required=true)
       private final Output<String> logoutEndpoint;
 
-    public Output<String> getLogoutEndpoint() {
+    public Output<String> logoutEndpoint() {
         return this.logoutEndpoint;
     }
 
@@ -86,7 +87,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="tokenEndpoint", required=true)
       private final Output<String> tokenEndpoint;
 
-    public Output<String> getTokenEndpoint() {
+    public Output<String> tokenEndpoint() {
         return this.tokenEndpoint;
     }
 
@@ -97,7 +98,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="userInfoEndpoint", required=true)
       private final Output<String> userInfoEndpoint;
 
-    public Output<String> getUserInfoEndpoint() {
+    public Output<String> userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 
@@ -121,14 +122,14 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkforceOidcConfigArgs() {
-        this.authorizationEndpoint = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.issuer = Output.empty();
-        this.jwksUri = Output.empty();
-        this.logoutEndpoint = Output.empty();
-        this.tokenEndpoint = Output.empty();
-        this.userInfoEndpoint = Output.empty();
+        this.authorizationEndpoint = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.issuer = Codegen.empty();
+        this.jwksUri = Codegen.empty();
+        this.logoutEndpoint = Codegen.empty();
+        this.tokenEndpoint = Codegen.empty();
+        this.userInfoEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {

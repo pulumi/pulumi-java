@@ -12,6 +12,7 @@ import io.pulumi.awsnative.sagemaker.outputs.DomainUserSettings;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
      * 
      */
-    public Output</* @Nullable */ DomainAppNetworkAccessType> getAppNetworkAccessType() {
+    public Output</* @Nullable */ DomainAppNetworkAccessType> appNetworkAccessType() {
         return this.appNetworkAccessType;
     }
     /**
@@ -47,7 +48,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The mode of authentication that members use to access the domain.
      * 
      */
-    public Output<DomainAuthMode> getAuthMode() {
+    public Output<DomainAuthMode> authMode() {
         return this.authMode;
     }
     /**
@@ -61,7 +62,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The default user settings.
      * 
      */
-    public Output<DomainUserSettings> getDefaultUserSettings() {
+    public Output<DomainUserSettings> defaultUserSettings() {
         return this.defaultUserSettings;
     }
     /**
@@ -75,7 +76,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the created domain.
      * 
      */
-    public Output<String> getDomainArn() {
+    public Output<String> domainArn() {
         return this.domainArn;
     }
     /**
@@ -89,7 +90,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The domain name.
      * 
      */
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
     /**
@@ -103,7 +104,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return A name for the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -117,7 +118,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
      */
-    public Output<String> getHomeEfsFileSystemId() {
+    public Output<String> homeEfsFileSystemId() {
         return this.homeEfsFileSystemId;
     }
     /**
@@ -131,7 +132,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -145,7 +146,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The SSO managed application instance ID.
      * 
      */
-    public Output<String> getSingleSignOnManagedApplicationInstanceId() {
+    public Output<String> singleSignOnManagedApplicationInstanceId() {
         return this.singleSignOnManagedApplicationInstanceId;
     }
     /**
@@ -159,7 +160,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The VPC subnets that Studio uses for communication.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -173,7 +174,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the user profile.
      * 
      */
-    public Output</* @Nullable */ List<DomainTag>> getTags() {
+    public Output</* @Nullable */ List<DomainTag>> tags() {
         return this.tags;
     }
     /**
@@ -187,7 +188,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The URL to the created domain.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
     /**
@@ -201,7 +202,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -227,7 +228,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Domain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

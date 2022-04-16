@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cache.inputs.EnterpriseSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
-    public Output<Either<String,TlsVersion>> getMinimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Output.empty() : this.minimumTlsVersion;
+    public Output<Either<String,TlsVersion>> minimumTlsVersion() {
+        return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +71,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
       private final Output<EnterpriseSkuArgs> sku;
 
-    public Output<EnterpriseSkuArgs> getSku() {
+    public Output<EnterpriseSkuArgs> sku() {
         return this.sku;
     }
 
@@ -81,8 +82,8 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+    public Output<List<String>> zones() {
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public RedisEnterpriseArgs(
@@ -114,13 +115,13 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RedisEnterpriseArgs() {
-        this.clusterName = Output.empty();
-        this.location = Output.empty();
-        this.minimumTlsVersion = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.zones = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.minimumTlsVersion = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -168,7 +169,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder minimumTlsVersion(@Nullable Output<Either<String,TlsVersion>> minimumTlsVersion) {
@@ -176,7 +177,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder minimumTlsVersion(@Nullable Either<String,TlsVersion> minimumTlsVersion) {
-            this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
+            this.minimumTlsVersion = Codegen.ofNullable(minimumTlsVersion);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -200,7 +201,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -208,7 +209,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

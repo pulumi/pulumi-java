@@ -6,6 +6,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 import io.pulumi.aws.apigatewayv2.inputs.AuthorizerJwtConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerCredentialsArn")
       private final @Nullable Output<String> authorizerCredentialsArn;
 
-    public Output<String> getAuthorizerCredentialsArn() {
-        return this.authorizerCredentialsArn == null ? Output.empty() : this.authorizerCredentialsArn;
+    public Output<String> authorizerCredentialsArn() {
+        return this.authorizerCredentialsArn == null ? Codegen.empty() : this.authorizerCredentialsArn;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerPayloadFormatVersion")
       private final @Nullable Output<String> authorizerPayloadFormatVersion;
 
-    public Output<String> getAuthorizerPayloadFormatVersion() {
-        return this.authorizerPayloadFormatVersion == null ? Output.empty() : this.authorizerPayloadFormatVersion;
+    public Output<String> authorizerPayloadFormatVersion() {
+        return this.authorizerPayloadFormatVersion == null ? Codegen.empty() : this.authorizerPayloadFormatVersion;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
-    public Output<Integer> getAuthorizerResultTtlInSeconds() {
-        return this.authorizerResultTtlInSeconds == null ? Output.empty() : this.authorizerResultTtlInSeconds;
+    public Output<Integer> authorizerResultTtlInSeconds() {
+        return this.authorizerResultTtlInSeconds == null ? Codegen.empty() : this.authorizerResultTtlInSeconds;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerType")
       private final @Nullable Output<String> authorizerType;
 
-    public Output<String> getAuthorizerType() {
-        return this.authorizerType == null ? Output.empty() : this.authorizerType;
+    public Output<String> authorizerType() {
+        return this.authorizerType == null ? Codegen.empty() : this.authorizerType;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerUri")
       private final @Nullable Output<String> authorizerUri;
 
-    public Output<String> getAuthorizerUri() {
-        return this.authorizerUri == null ? Output.empty() : this.authorizerUri;
+    public Output<String> authorizerUri() {
+        return this.authorizerUri == null ? Codegen.empty() : this.authorizerUri;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableSimpleResponses")
       private final @Nullable Output<Boolean> enableSimpleResponses;
 
-    public Output<Boolean> getEnableSimpleResponses() {
-        return this.enableSimpleResponses == null ? Output.empty() : this.enableSimpleResponses;
+    public Output<Boolean> enableSimpleResponses() {
+        return this.enableSimpleResponses == null ? Codegen.empty() : this.enableSimpleResponses;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="identitySources")
       private final @Nullable Output<List<String>> identitySources;
 
-    public Output<List<String>> getIdentitySources() {
-        return this.identitySources == null ? Output.empty() : this.identitySources;
+    public Output<List<String>> identitySources() {
+        return this.identitySources == null ? Codegen.empty() : this.identitySources;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jwtConfiguration")
       private final @Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration;
 
-    public Output<AuthorizerJwtConfigurationGetArgs> getJwtConfiguration() {
-        return this.jwtConfiguration == null ? Output.empty() : this.jwtConfiguration;
+    public Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration() {
+        return this.jwtConfiguration == null ? Codegen.empty() : this.jwtConfiguration;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AuthorizerState(
@@ -164,16 +165,16 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorizerState() {
-        this.apiId = Output.empty();
-        this.authorizerCredentialsArn = Output.empty();
-        this.authorizerPayloadFormatVersion = Output.empty();
-        this.authorizerResultTtlInSeconds = Output.empty();
-        this.authorizerType = Output.empty();
-        this.authorizerUri = Output.empty();
-        this.enableSimpleResponses = Output.empty();
-        this.identitySources = Output.empty();
-        this.jwtConfiguration = Output.empty();
-        this.name = Output.empty();
+        this.apiId = Codegen.empty();
+        this.authorizerCredentialsArn = Codegen.empty();
+        this.authorizerPayloadFormatVersion = Codegen.empty();
+        this.authorizerResultTtlInSeconds = Codegen.empty();
+        this.authorizerType = Codegen.empty();
+        this.authorizerUri = Codegen.empty();
+        this.enableSimpleResponses = Codegen.empty();
+        this.identitySources = Codegen.empty();
+        this.jwtConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder authorizerCredentialsArn(@Nullable Output<String> authorizerCredentialsArn) {
@@ -227,7 +228,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerCredentialsArn(@Nullable String authorizerCredentialsArn) {
-            this.authorizerCredentialsArn = Output.ofNullable(authorizerCredentialsArn);
+            this.authorizerCredentialsArn = Codegen.ofNullable(authorizerCredentialsArn);
             return this;
         }
         public Builder authorizerPayloadFormatVersion(@Nullable Output<String> authorizerPayloadFormatVersion) {
@@ -235,7 +236,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerPayloadFormatVersion(@Nullable String authorizerPayloadFormatVersion) {
-            this.authorizerPayloadFormatVersion = Output.ofNullable(authorizerPayloadFormatVersion);
+            this.authorizerPayloadFormatVersion = Codegen.ofNullable(authorizerPayloadFormatVersion);
             return this;
         }
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
@@ -243,7 +244,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
-            this.authorizerResultTtlInSeconds = Output.ofNullable(authorizerResultTtlInSeconds);
+            this.authorizerResultTtlInSeconds = Codegen.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
         public Builder authorizerType(@Nullable Output<String> authorizerType) {
@@ -251,7 +252,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerType(@Nullable String authorizerType) {
-            this.authorizerType = Output.ofNullable(authorizerType);
+            this.authorizerType = Codegen.ofNullable(authorizerType);
             return this;
         }
         public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
@@ -259,7 +260,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerUri(@Nullable String authorizerUri) {
-            this.authorizerUri = Output.ofNullable(authorizerUri);
+            this.authorizerUri = Codegen.ofNullable(authorizerUri);
             return this;
         }
         public Builder enableSimpleResponses(@Nullable Output<Boolean> enableSimpleResponses) {
@@ -267,7 +268,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableSimpleResponses(@Nullable Boolean enableSimpleResponses) {
-            this.enableSimpleResponses = Output.ofNullable(enableSimpleResponses);
+            this.enableSimpleResponses = Codegen.ofNullable(enableSimpleResponses);
             return this;
         }
         public Builder identitySources(@Nullable Output<List<String>> identitySources) {
@@ -275,7 +276,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identitySources(@Nullable List<String> identitySources) {
-            this.identitySources = Output.ofNullable(identitySources);
+            this.identitySources = Codegen.ofNullable(identitySources);
             return this;
         }
         public Builder identitySources(String... identitySources) {
@@ -286,7 +287,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jwtConfiguration(@Nullable AuthorizerJwtConfigurationGetArgs jwtConfiguration) {
-            this.jwtConfiguration = Output.ofNullable(jwtConfiguration);
+            this.jwtConfiguration = Codegen.ofNullable(jwtConfiguration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -294,7 +295,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AuthorizerState build() {
             return new AuthorizerState(apiId, authorizerCredentialsArn, authorizerPayloadFormatVersion, authorizerResultTtlInSeconds, authorizerType, authorizerUri, enableSimpleResponses, identitySources, jwtConfiguration, name);

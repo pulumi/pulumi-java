@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ServiceDeploymentControllerArgs(@Nullable Output<String> type) {
@@ -30,7 +31,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
     }
 
     private ServiceDeploymentControllerArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ServiceDeploymentControllerArgs build() {
             return new ServiceDeploymentControllerArgs(type);

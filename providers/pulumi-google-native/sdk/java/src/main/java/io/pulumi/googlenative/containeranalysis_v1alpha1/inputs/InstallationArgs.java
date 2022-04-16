@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LocationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<List<LocationArgs>> location;
 
-    public Output<List<LocationArgs>> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<List<LocationArgs>> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     public InstallationArgs(@Nullable Output<List<LocationArgs>> location) {
@@ -35,7 +36,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstallationArgs() {
-        this.location = Output.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable List<LocationArgs> location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder location(LocationArgs... location) {

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.CsvSerializationArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="datasource")
       private final @Nullable Output<BlobReferenceInputDataSourceArgs> datasource;
 
-    public Output<BlobReferenceInputDataSourceArgs> getDatasource() {
-        return this.datasource == null ? Output.empty() : this.datasource;
+    public Output<BlobReferenceInputDataSourceArgs> datasource() {
+        return this.datasource == null ? Codegen.empty() : this.datasource;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
-    public Output<Object> getSerialization() {
-        return this.serialization == null ? Output.empty() : this.serialization;
+    public Output<Object> serialization() {
+        return this.serialization == null ? Codegen.empty() : this.serialization;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -67,9 +68,9 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private ReferenceInputPropertiesArgs() {
-        this.datasource = Output.empty();
-        this.serialization = Output.empty();
-        this.type = Output.empty();
+        this.datasource = Codegen.empty();
+        this.serialization = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder datasource(@Nullable BlobReferenceInputDataSourceArgs datasource) {
-            this.datasource = Output.ofNullable(datasource);
+            this.datasource = Codegen.ofNullable(datasource);
             return this;
         }
         public Builder serialization(@Nullable Output<Object> serialization) {
@@ -109,7 +110,7 @@ public final class ReferenceInputPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Output.ofNullable(serialization);
+            this.serialization = Codegen.ofNullable(serialization);
             return this;
         }
         public Builder type(Output<String> type) {

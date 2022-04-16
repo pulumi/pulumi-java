@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.ExternalRefCategory;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<ExternalRefCategory> category;
 
-    public Output<ExternalRefCategory> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+    public Output<ExternalRefCategory> category() {
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locator")
       private final @Nullable Output<String> locator;
 
-    public Output<String> getLocator() {
-        return this.locator == null ? Output.empty() : this.locator;
+    public Output<String> locator() {
+        return this.locator == null ? Codegen.empty() : this.locator;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ExternalRefArgs(
@@ -75,10 +76,10 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExternalRefArgs() {
-        this.category = Output.empty();
-        this.comment = Output.empty();
-        this.locator = Output.empty();
-        this.type = Output.empty();
+        this.category = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.locator = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder category(@Nullable ExternalRefCategory category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -120,7 +121,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder locator(@Nullable Output<String> locator) {
@@ -128,7 +129,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locator(@Nullable String locator) {
-            this.locator = Output.ofNullable(locator);
+            this.locator = Codegen.ofNullable(locator);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -136,7 +137,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ExternalRefArgs build() {
             return new ExternalRefArgs(category, comment, locator, type);

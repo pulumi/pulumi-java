@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="additionalProperties")
       private final @Nullable Output<String> additionalProperties;
 
-    public Output<String> getAdditionalProperties() {
-        return this.additionalProperties == null ? Output.empty() : this.additionalProperties;
+    public Output<String> additionalProperties() {
+        return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
     }
 
     public MigrateProjectTagsArgs(@Nullable Output<String> additionalProperties) {
@@ -30,7 +31,7 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private MigrateProjectTagsArgs() {
-        this.additionalProperties = Output.empty();
+        this.additionalProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder additionalProperties(@Nullable String additionalProperties) {
-            this.additionalProperties = Output.ofNullable(additionalProperties);
+            this.additionalProperties = Codegen.ofNullable(additionalProperties);
             return this;
         }        public MigrateProjectTagsArgs build() {
             return new MigrateProjectTagsArgs(additionalProperties);

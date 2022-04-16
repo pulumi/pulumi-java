@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+    public Output<String> instanceId() {
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
-    public Output<String> getTableId() {
-        return this.tableId == null ? Output.empty() : this.tableId;
+    public Output<String> tableId() {
+        return this.tableId == null ? Codegen.empty() : this.tableId;
     }
 
     public BigTableIODetailsArgs(
@@ -61,9 +62,9 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BigTableIODetailsArgs() {
-        this.instanceId = Output.empty();
-        this.project = Output.empty();
-        this.tableId = Output.empty();
+        this.instanceId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -103,7 +104,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tableId(@Nullable Output<String> tableId) {
@@ -111,7 +112,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tableId(@Nullable String tableId) {
-            this.tableId = Output.ofNullable(tableId);
+            this.tableId = Codegen.ofNullable(tableId);
             return this;
         }        public BigTableIODetailsArgs build() {
             return new BigTableIODetailsArgs(instanceId, project, tableId);

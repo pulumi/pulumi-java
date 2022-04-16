@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
@@ -26,7 +27,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="current", required=true)
       private final Output<MetricValueStatusArgs> current;
 
-    public Output<MetricValueStatusArgs> getCurrent() {
+    public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
 
@@ -37,7 +38,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="describedObject", required=true)
       private final Output<CrossVersionObjectReferenceArgs> describedObject;
 
-    public Output<CrossVersionObjectReferenceArgs> getDescribedObject() {
+    public Output<CrossVersionObjectReferenceArgs> describedObject() {
         return this.describedObject;
     }
 
@@ -48,7 +49,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
 
-    public Output<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 
@@ -62,9 +63,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ObjectMetricStatusArgs() {
-        this.current = Output.empty();
-        this.describedObject = Output.empty();
-        this.metric = Output.empty();
+        this.current = Codegen.empty();
+        this.describedObject = Codegen.empty();
+        this.metric = Codegen.empty();
     }
 
     public static Builder builder() {

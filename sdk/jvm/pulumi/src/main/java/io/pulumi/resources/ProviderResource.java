@@ -2,7 +2,6 @@ package io.pulumi.resources;
 
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
@@ -22,10 +21,6 @@ public class ProviderResource extends CustomResource {
     private static final String ProviderResourceTypePrefix = "pulumi:providers:";
     private final String aPackage;
     private final CompletableFuture<String> registrationId;
-
-    @SuppressWarnings("unused")
-    @InternalField
-    private final ProviderResourceInternal internal = new ProviderResourceInternal(this);
 
     /**
      * Creates and registers a new provider resource for a particular package.
@@ -82,6 +77,10 @@ public class ProviderResource extends CustomResource {
         private ProviderResourceInternal(ProviderResource resource) {
             super(resource);
             this.resource = requireNonNull(resource);
+        }
+
+        public static ProviderResourceInternal from(ProviderResource r) {
+            return new ProviderResourceInternal(r);
         }
 
         @InternalUse

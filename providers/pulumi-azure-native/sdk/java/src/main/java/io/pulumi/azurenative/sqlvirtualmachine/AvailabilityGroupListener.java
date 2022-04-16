@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -44,7 +45,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @return Name of the availability group.
      * 
      */
-    public Output</* @Nullable */ String> getAvailabilityGroupName() {
+    public Output</* @Nullable */ String> availabilityGroupName() {
         return this.availabilityGroupName;
     }
     /**
@@ -58,7 +59,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @return Create a default availability group if it does not exist.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
+    public Output</* @Nullable */ Boolean> createDefaultAvailabilityGroupIfNotExist() {
         return this.createDefaultAvailabilityGroupIfNotExist;
     }
     /**
@@ -72,7 +73,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @return List of load balancer configurations for an availability group listener.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancerConfigurationResponse>> getLoadBalancerConfigurations() {
+    public Output</* @Nullable */ List<LoadBalancerConfigurationResponse>> loadBalancerConfigurations() {
         return this.loadBalancerConfigurations;
     }
     /**
@@ -86,7 +87,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @return Listener port.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -114,7 +115,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @return Provisioning state to track the async operation status.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +129,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -154,7 +155,7 @@ public class AvailabilityGroupListener extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AvailabilityGroupListener(String name, AvailabilityGroupListenerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sqlvirtualmachine:AvailabilityGroupListener", name, args == null ? AvailabilityGroupListenerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sqlvirtualmachine:AvailabilityGroupListener", name, args == null ? AvailabilityGroupListenerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AvailabilityGroupListener(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

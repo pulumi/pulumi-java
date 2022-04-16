@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.MappingDataFlowArgs;
 import io.pulumi.azurenative.datafactory.inputs.WranglingDataFlowArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataFlowName")
       private final @Nullable Output<String> dataFlowName;
 
-    public Output<String> getDataFlowName() {
-        return this.dataFlowName == null ? Output.empty() : this.dataFlowName;
+    public Output<String> dataFlowName() {
+        return this.dataFlowName == null ? Codegen.empty() : this.dataFlowName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -47,7 +48,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -58,7 +59,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,10 +75,10 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataFlowArgs() {
-        this.dataFlowName = Output.empty();
-        this.factoryName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.dataFlowName = Codegen.empty();
+        this.factoryName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataFlowName(@Nullable String dataFlowName) {
-            this.dataFlowName = Output.ofNullable(dataFlowName);
+            this.dataFlowName = Codegen.ofNullable(dataFlowName);
             return this;
         }
         public Builder factoryName(Output<String> factoryName) {

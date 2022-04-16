@@ -103,77 +103,77 @@ public final class GetInstanceResult {
      * Parent Device Update Account name which Instance belongs to.
      * 
     */
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
     /**
      * Customer-initiated diagnostic log collection storage properties
      * 
     */
-    public Optional<DiagnosticStoragePropertiesResponse> getDiagnosticStorageProperties() {
+    public Optional<DiagnosticStoragePropertiesResponse> diagnosticStorageProperties() {
         return Optional.ofNullable(this.diagnosticStorageProperties);
     }
     /**
      * Enables or Disables the diagnostic logs collection
      * 
     */
-    public Optional<Boolean> getEnableDiagnostics() {
+    public Optional<Boolean> enableDiagnostics() {
         return Optional.ofNullable(this.enableDiagnostics);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of IoT Hubs associated with the account.
      * 
     */
-    public List<IotHubSettingsResponse> getIotHubs() {
+    public List<IotHubSettingsResponse> iotHubs() {
         return this.iotHubs == null ? List.of() : this.iotHubs;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

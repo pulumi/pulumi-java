@@ -30,7 +30,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -41,7 +41,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -52,7 +52,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="flowAnalyticsConfiguration")
       private final @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
 
-    public Optional<TrafficAnalyticsPropertiesResponse> getFlowAnalyticsConfiguration() {
+    public Optional<TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration() {
         return this.flowAnalyticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.flowAnalyticsConfiguration);
     }
 
@@ -63,7 +63,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="format")
       private final @Nullable FlowLogFormatParametersResponse format;
 
-    public Optional<FlowLogFormatParametersResponse> getFormat() {
+    public Optional<FlowLogFormatParametersResponse> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
@@ -74,7 +74,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -85,7 +85,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -96,7 +96,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -107,7 +107,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -118,7 +118,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="retentionPolicy")
       private final @Nullable RetentionPolicyParametersResponse retentionPolicy;
 
-    public Optional<RetentionPolicyParametersResponse> getRetentionPolicy() {
+    public Optional<RetentionPolicyParametersResponse> retentionPolicy() {
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
     }
 
@@ -129,7 +129,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageId", required=true)
       private final String storageId;
 
-    public String getStorageId() {
+    public String storageId() {
         return this.storageId;
     }
 
@@ -140,7 +140,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -151,7 +151,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceGuid", required=true)
       private final String targetResourceGuid;
 
-    public String getTargetResourceGuid() {
+    public String targetResourceGuid() {
         return this.targetResourceGuid;
     }
 
@@ -162,7 +162,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceId", required=true)
       private final String targetResourceId;
 
-    public String getTargetResourceId() {
+    public String targetResourceId() {
         return this.targetResourceId;
     }
 
@@ -173,7 +173,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

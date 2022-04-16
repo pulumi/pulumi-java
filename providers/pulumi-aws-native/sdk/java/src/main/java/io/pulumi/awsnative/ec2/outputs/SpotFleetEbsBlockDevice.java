@@ -37,22 +37,22 @@ public final class SpotFleetEbsBlockDevice {
         this.volumeType = volumeType;
     }
 
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
-    public Optional<Boolean> getEncrypted() {
+    public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
-    public Optional<String> getSnapshotId() {
+    public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
-    public Optional<Integer> getVolumeSize() {
+    public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
-    public Optional<SpotFleetEbsBlockDeviceVolumeType> getVolumeType() {
+    public Optional<SpotFleetEbsBlockDeviceVolumeType> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

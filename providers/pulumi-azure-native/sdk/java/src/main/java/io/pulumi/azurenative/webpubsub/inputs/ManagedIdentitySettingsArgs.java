@@ -5,6 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+    public Output<String> resource() {
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     public ManagedIdentitySettingsArgs(@Nullable Output<String> resource) {
@@ -35,7 +36,7 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
     }
 
     private ManagedIdentitySettingsArgs() {
-        this.resource = Output.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resource(@Nullable String resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }        public ManagedIdentitySettingsArgs build() {
             return new ManagedIdentitySettingsArgs(resource);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.ModelDefinitionModelOptionsArgs;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="modelOptions")
       private final @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
 
-    public Output<ModelDefinitionModelOptionsArgs> getModelOptions() {
-        return this.modelOptions == null ? Output.empty() : this.modelOptions;
+    public Output<ModelDefinitionModelOptionsArgs> modelOptions() {
+        return this.modelOptions == null ? Codegen.empty() : this.modelOptions;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="trainingRuns")
       private final @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
 
-    public Output<List<BqmlTrainingRunArgs>> getTrainingRuns() {
-        return this.trainingRuns == null ? Output.empty() : this.trainingRuns;
+    public Output<List<BqmlTrainingRunArgs>> trainingRuns() {
+        return this.trainingRuns == null ? Codegen.empty() : this.trainingRuns;
     }
 
     public ModelDefinitionArgs(
@@ -46,8 +47,8 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ModelDefinitionArgs() {
-        this.modelOptions = Output.empty();
-        this.trainingRuns = Output.empty();
+        this.modelOptions = Codegen.empty();
+        this.trainingRuns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder modelOptions(@Nullable ModelDefinitionModelOptionsArgs modelOptions) {
-            this.modelOptions = Output.ofNullable(modelOptions);
+            this.modelOptions = Codegen.ofNullable(modelOptions);
             return this;
         }
         public Builder trainingRuns(@Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns) {
@@ -85,7 +86,7 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder trainingRuns(@Nullable List<BqmlTrainingRunArgs> trainingRuns) {
-            this.trainingRuns = Output.ofNullable(trainingRuns);
+            this.trainingRuns = Codegen.ofNullable(trainingRuns);
             return this;
         }
         public Builder trainingRuns(BqmlTrainingRunArgs... trainingRuns) {

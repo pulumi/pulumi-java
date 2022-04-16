@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entity")
       private final @Nullable Output<String> entity;
 
-    public Output<String> getEntity() {
-        return this.entity == null ? Output.empty() : this.entity;
+    public Output<String> entity() {
+        return this.entity == null ? Codegen.empty() : this.entity;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entityId")
       private final @Nullable Output<String> entityId;
 
-    public Output<String> getEntityId() {
-        return this.entityId == null ? Output.empty() : this.entityId;
+    public Output<String> entityId() {
+        return this.entityId == null ? Codegen.empty() : this.entityId;
     }
 
     public BucketObjectOwnerArgs(
@@ -48,8 +49,8 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BucketObjectOwnerArgs() {
-        this.entity = Output.empty();
-        this.entityId = Output.empty();
+        this.entity = Codegen.empty();
+        this.entityId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder entity(@Nullable String entity) {
-            this.entity = Output.ofNullable(entity);
+            this.entity = Codegen.ofNullable(entity);
             return this;
         }
         public Builder entityId(@Nullable Output<String> entityId) {
@@ -87,7 +88,7 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder entityId(@Nullable String entityId) {
-            this.entityId = Output.ofNullable(entityId);
+            this.entityId = Codegen.ofNullable(entityId);
             return this;
         }        public BucketObjectOwnerArgs build() {
             return new BucketObjectOwnerArgs(entity, entityId);

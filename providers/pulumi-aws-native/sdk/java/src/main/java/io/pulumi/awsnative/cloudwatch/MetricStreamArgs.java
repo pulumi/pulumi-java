@@ -7,6 +7,7 @@ import io.pulumi.awsnative.cloudwatch.inputs.MetricStreamFilterArgs;
 import io.pulumi.awsnative.cloudwatch.inputs.MetricStreamTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> excludeFilters;
 
-    public Output<List<MetricStreamFilterArgs>> getExcludeFilters() {
-        return this.excludeFilters == null ? Output.empty() : this.excludeFilters;
+    public Output<List<MetricStreamFilterArgs>> excludeFilters() {
+        return this.excludeFilters == null ? Codegen.empty() : this.excludeFilters;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firehoseArn", required=true)
       private final Output<String> firehoseArn;
 
-    public Output<String> getFirehoseArn() {
+    public Output<String> firehoseArn() {
         return this.firehoseArn;
     }
 
@@ -46,8 +47,8 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> includeFilters;
 
-    public Output<List<MetricStreamFilterArgs>> getIncludeFilters() {
-        return this.includeFilters == null ? Output.empty() : this.includeFilters;
+    public Output<List<MetricStreamFilterArgs>> includeFilters() {
+        return this.includeFilters == null ? Codegen.empty() : this.includeFilters;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat", required=true)
       private final Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat;
     }
 
@@ -79,7 +80,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -90,8 +91,8 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<MetricStreamTagArgs>> tags;
 
-    public Output<List<MetricStreamTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<MetricStreamTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MetricStreamArgs(
@@ -112,13 +113,13 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricStreamArgs() {
-        this.excludeFilters = Output.empty();
-        this.firehoseArn = Output.empty();
-        this.includeFilters = Output.empty();
-        this.name = Output.empty();
-        this.outputFormat = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.excludeFilters = Codegen.empty();
+        this.firehoseArn = Codegen.empty();
+        this.includeFilters = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputFormat = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludeFilters(@Nullable List<MetricStreamFilterArgs> excludeFilters) {
-            this.excludeFilters = Output.ofNullable(excludeFilters);
+            this.excludeFilters = Codegen.ofNullable(excludeFilters);
             return this;
         }
         public Builder excludeFilters(MetricStreamFilterArgs... excludeFilters) {
@@ -177,7 +178,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includeFilters(@Nullable List<MetricStreamFilterArgs> includeFilters) {
-            this.includeFilters = Output.ofNullable(includeFilters);
+            this.includeFilters = Codegen.ofNullable(includeFilters);
             return this;
         }
         public Builder includeFilters(MetricStreamFilterArgs... includeFilters) {
@@ -188,7 +189,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputFormat(Output<String> outputFormat) {
@@ -212,7 +213,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<MetricStreamTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(MetricStreamTagArgs... tags) {

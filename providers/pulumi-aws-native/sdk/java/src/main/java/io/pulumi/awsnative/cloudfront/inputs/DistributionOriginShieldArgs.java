@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class DistributionOriginShieldArgs extends io.pulumi.resources.Reso
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="originShieldRegion")
       private final @Nullable Output<String> originShieldRegion;
 
-    public Output<String> getOriginShieldRegion() {
-        return this.originShieldRegion == null ? Output.empty() : this.originShieldRegion;
+    public Output<String> originShieldRegion() {
+        return this.originShieldRegion == null ? Codegen.empty() : this.originShieldRegion;
     }
 
     public DistributionOriginShieldArgs(
@@ -37,8 +38,8 @@ public final class DistributionOriginShieldArgs extends io.pulumi.resources.Reso
     }
 
     private DistributionOriginShieldArgs() {
-        this.enabled = Output.empty();
-        this.originShieldRegion = Output.empty();
+        this.enabled = Codegen.empty();
+        this.originShieldRegion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DistributionOriginShieldArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder originShieldRegion(@Nullable Output<String> originShieldRegion) {
@@ -76,7 +77,7 @@ public final class DistributionOriginShieldArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder originShieldRegion(@Nullable String originShieldRegion) {
-            this.originShieldRegion = Output.ofNullable(originShieldRegion);
+            this.originShieldRegion = Codegen.ofNullable(originShieldRegion);
             return this;
         }        public DistributionOriginShieldArgs build() {
             return new DistributionOriginShieldArgs(enabled, originShieldRegion);

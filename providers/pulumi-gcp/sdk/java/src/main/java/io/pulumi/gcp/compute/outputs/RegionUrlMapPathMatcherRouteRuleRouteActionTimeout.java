@@ -40,7 +40,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionTimeout {
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
     */
-    public Optional<Integer> getNanos() {
+    public Optional<Integer> nanos() {
         return Optional.ofNullable(this.nanos);
     }
     /**
@@ -48,7 +48,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionTimeout {
      * inclusive.
      * 
     */
-    public String getSeconds() {
+    public String seconds() {
         return this.seconds;
     }
 

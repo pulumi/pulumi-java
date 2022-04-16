@@ -6,6 +6,7 @@ package io.pulumi.docker;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.VolumeArgs;
 import io.pulumi.docker.inputs.VolumeState;
@@ -67,7 +68,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Driver type for the volume. Defaults to `local`.
      * 
      */
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver;
     }
     /**
@@ -81,7 +82,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Options specific to the driver.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getDriverOpts() {
+    public Output</* @Nullable */ Map<String,Object>> driverOpts() {
         return this.driverOpts;
     }
     /**
@@ -95,7 +96,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output</* @Nullable */ List<VolumeLabel>> getLabels() {
+    public Output</* @Nullable */ List<VolumeLabel>> labels() {
         return this.labels;
     }
     /**
@@ -109,7 +110,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The mountpoint of the volume.
      * 
      */
-    public Output<String> getMountpoint() {
+    public Output<String> mountpoint() {
         return this.mountpoint;
     }
     /**
@@ -123,7 +124,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The name of the Docker volume (will be generated if not provided).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -149,7 +150,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Volume(String name, @Nullable VolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/volume:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("docker:index/volume:Volume", name, args == null ? VolumeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Volume(String name, Output<String> id, @Nullable VolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

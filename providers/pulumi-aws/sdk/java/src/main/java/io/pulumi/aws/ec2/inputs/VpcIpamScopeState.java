@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,8 +21,8 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -31,8 +32,8 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamArn")
       private final @Nullable Output<String> ipamArn;
 
-    public Output<String> getIpamArn() {
-        return this.ipamArn == null ? Output.empty() : this.ipamArn;
+    public Output<String> ipamArn() {
+        return this.ipamArn == null ? Codegen.empty() : this.ipamArn;
     }
 
     /**
@@ -53,15 +54,15 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamId")
       private final @Nullable Output<String> ipamId;
 
-    public Output<String> getIpamId() {
-        return this.ipamId == null ? Output.empty() : this.ipamId;
+    public Output<String> ipamId() {
+        return this.ipamId == null ? Codegen.empty() : this.ipamId;
     }
 
     @Import(name="ipamScopeType")
       private final @Nullable Output<String> ipamScopeType;
 
-    public Output<String> getIpamScopeType() {
-        return this.ipamScopeType == null ? Output.empty() : this.ipamScopeType;
+    public Output<String> ipamScopeType() {
+        return this.ipamScopeType == null ? Codegen.empty() : this.ipamScopeType;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
-        return this.isDefault == null ? Output.empty() : this.isDefault;
+    public Output<Boolean> isDefault() {
+        return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
     /**
@@ -82,22 +83,22 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolCount")
       private final @Nullable Output<Integer> poolCount;
 
-    public Output<Integer> getPoolCount() {
-        return this.poolCount == null ? Output.empty() : this.poolCount;
+    public Output<Integer> poolCount() {
+        return this.poolCount == null ? Codegen.empty() : this.poolCount;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public VpcIpamScopeState(
@@ -122,15 +123,15 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcIpamScopeState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.ipamArn = Output.empty();
-        this.ipamId = Output.empty();
-        this.ipamScopeType = Output.empty();
-        this.isDefault = Output.empty();
-        this.poolCount = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ipamArn = Codegen.empty();
+        this.ipamId = Codegen.empty();
+        this.ipamScopeType = Codegen.empty();
+        this.isDefault = Codegen.empty();
+        this.poolCount = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -182,7 +183,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipamArn(@Nullable Output<String> ipamArn) {
@@ -190,7 +191,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipamArn(@Nullable String ipamArn) {
-            this.ipamArn = Output.ofNullable(ipamArn);
+            this.ipamArn = Codegen.ofNullable(ipamArn);
             return this;
         }
         public Builder ipamId(@Nullable Output<String> ipamId) {
@@ -198,7 +199,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipamId(@Nullable String ipamId) {
-            this.ipamId = Output.ofNullable(ipamId);
+            this.ipamId = Codegen.ofNullable(ipamId);
             return this;
         }
         public Builder ipamScopeType(@Nullable Output<String> ipamScopeType) {
@@ -206,7 +207,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipamScopeType(@Nullable String ipamScopeType) {
-            this.ipamScopeType = Output.ofNullable(ipamScopeType);
+            this.ipamScopeType = Codegen.ofNullable(ipamScopeType);
             return this;
         }
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
@@ -214,7 +215,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Output.ofNullable(isDefault);
+            this.isDefault = Codegen.ofNullable(isDefault);
             return this;
         }
         public Builder poolCount(@Nullable Output<Integer> poolCount) {
@@ -222,7 +223,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder poolCount(@Nullable Integer poolCount) {
-            this.poolCount = Output.ofNullable(poolCount);
+            this.poolCount = Codegen.ofNullable(poolCount);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -230,7 +231,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -238,7 +239,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public VpcIpamScopeState build() {
             return new VpcIpamScopeState(arn, description, ipamArn, ipamId, ipamScopeType, isDefault, poolCount, tags, tagsAll);

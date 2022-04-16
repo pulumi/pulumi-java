@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.AttributeArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ExprArgs;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyArgs extends io.pulu
     @Import(name="authorizationRule", required=true)
       private final Output<ExprArgs> authorizationRule;
 
-    public Output<ExprArgs> getAuthorizationRule() {
+    public Output<ExprArgs> authorizationRule() {
         return this.authorizationRule;
     }
 
@@ -38,8 +39,8 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyArgs extends io.pulu
     @Import(name="resourceAttributes")
       private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
-    public Output<List<AttributeArgs>> getResourceAttributes() {
-        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
+    public Output<List<AttributeArgs>> resourceAttributes() {
+        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 
     public GoogleCloudHealthcareV1beta1ConsentPolicyArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyArgs extends io.pulu
     }
 
     private GoogleCloudHealthcareV1beta1ConsentPolicyArgs() {
-        this.authorizationRule = Output.empty();
-        this.resourceAttributes = Output.empty();
+        this.authorizationRule = Codegen.empty();
+        this.resourceAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyArgs extends io.pulu
             return this;
         }
         public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
-            this.resourceAttributes = Output.ofNullable(resourceAttributes);
+            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
             return this;
         }
         public Builder resourceAttributes(AttributeArgs... resourceAttributes) {

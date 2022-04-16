@@ -7,6 +7,7 @@ import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinat
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -22,21 +23,21 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
     @Import(name="logDestination", required=true)
       private final Output<Object> logDestination;
 
-    public Output<Object> getLogDestination() {
+    public Output<Object> logDestination() {
         return this.logDestination;
     }
 
     @Import(name="logDestinationType", required=true)
       private final Output<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType;
 
-    public Output<LoggingConfigurationLogDestinationConfigLogDestinationType> getLogDestinationType() {
+    public Output<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType() {
         return this.logDestinationType;
     }
 
     @Import(name="logType", required=true)
       private final Output<LoggingConfigurationLogDestinationConfigLogType> logType;
 
-    public Output<LoggingConfigurationLogDestinationConfigLogType> getLogType() {
+    public Output<LoggingConfigurationLogDestinationConfigLogType> logType() {
         return this.logType;
     }
 
@@ -50,9 +51,9 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
     }
 
     private LoggingConfigurationLogDestinationConfigArgs() {
-        this.logDestination = Output.empty();
-        this.logDestinationType = Output.empty();
-        this.logType = Output.empty();
+        this.logDestination = Codegen.empty();
+        this.logDestinationType = Codegen.empty();
+        this.logType = Codegen.empty();
     }
 
     public static Builder builder() {

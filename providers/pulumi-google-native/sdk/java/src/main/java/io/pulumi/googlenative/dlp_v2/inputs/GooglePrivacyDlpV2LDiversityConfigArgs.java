@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     @Import(name="quasiIds")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getQuasiIds() {
-        return this.quasiIds == null ? Output.empty() : this.quasiIds;
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds() {
+        return this.quasiIds == null ? Codegen.empty() : this.quasiIds;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     @Import(name="sensitiveAttribute")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getSensitiveAttribute() {
-        return this.sensitiveAttribute == null ? Output.empty() : this.sensitiveAttribute;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute() {
+        return this.sensitiveAttribute == null ? Codegen.empty() : this.sensitiveAttribute;
     }
 
     public GooglePrivacyDlpV2LDiversityConfigArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     }
 
     private GooglePrivacyDlpV2LDiversityConfigArgs() {
-        this.quasiIds = Output.empty();
-        this.sensitiveAttribute = Output.empty();
+        this.quasiIds = Codegen.empty();
+        this.sensitiveAttribute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
-            this.quasiIds = Output.ofNullable(quasiIds);
+            this.quasiIds = Codegen.ofNullable(quasiIds);
             return this;
         }
         public Builder quasiIds(GooglePrivacyDlpV2FieldIdArgs... quasiIds) {
@@ -91,7 +92,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder sensitiveAttribute(@Nullable GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
-            this.sensitiveAttribute = Output.ofNullable(sensitiveAttribute);
+            this.sensitiveAttribute = Codegen.ofNullable(sensitiveAttribute);
             return this;
         }        public GooglePrivacyDlpV2LDiversityConfigArgs build() {
             return new GooglePrivacyDlpV2LDiversityConfigArgs(quasiIds, sensitiveAttribute);

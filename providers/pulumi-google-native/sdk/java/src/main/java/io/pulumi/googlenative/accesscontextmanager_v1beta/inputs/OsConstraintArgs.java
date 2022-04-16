@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.enums.OsConstraintOsType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumVersion")
       private final @Nullable Output<String> minimumVersion;
 
-    public Output<String> getMinimumVersion() {
-        return this.minimumVersion == null ? Output.empty() : this.minimumVersion;
+    public Output<String> minimumVersion() {
+        return this.minimumVersion == null ? Codegen.empty() : this.minimumVersion;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType", required=true)
       private final Output<OsConstraintOsType> osType;
 
-    public Output<OsConstraintOsType> getOsType() {
+    public Output<OsConstraintOsType> osType() {
         return this.osType;
     }
 
@@ -49,8 +50,8 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireVerifiedChromeOs")
       private final @Nullable Output<Boolean> requireVerifiedChromeOs;
 
-    public Output<Boolean> getRequireVerifiedChromeOs() {
-        return this.requireVerifiedChromeOs == null ? Output.empty() : this.requireVerifiedChromeOs;
+    public Output<Boolean> requireVerifiedChromeOs() {
+        return this.requireVerifiedChromeOs == null ? Codegen.empty() : this.requireVerifiedChromeOs;
     }
 
     public OsConstraintArgs(
@@ -63,9 +64,9 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OsConstraintArgs() {
-        this.minimumVersion = Output.empty();
-        this.osType = Output.empty();
-        this.requireVerifiedChromeOs = Output.empty();
+        this.minimumVersion = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.requireVerifiedChromeOs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumVersion(@Nullable String minimumVersion) {
-            this.minimumVersion = Output.ofNullable(minimumVersion);
+            this.minimumVersion = Codegen.ofNullable(minimumVersion);
             return this;
         }
         public Builder osType(Output<OsConstraintOsType> osType) {
@@ -113,7 +114,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
-            this.requireVerifiedChromeOs = Output.ofNullable(requireVerifiedChromeOs);
+            this.requireVerifiedChromeOs = Codegen.ofNullable(requireVerifiedChromeOs);
             return this;
         }        public OsConstraintArgs build() {
             return new OsConstraintArgs(minimumVersion, osType, requireVerifiedChromeOs);

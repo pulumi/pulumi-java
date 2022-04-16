@@ -8,6 +8,7 @@ import io.pulumi.azurenative.insights.inputs.WebTestGeolocationArgs;
 import io.pulumi.azurenative.insights.inputs.WebTestPropertiesConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<WebTestPropertiesConfigurationArgs> configuration;
 
-    public Output<WebTestPropertiesConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+    public Output<WebTestPropertiesConfigurationArgs> configuration() {
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frequency")
       private final @Nullable Output<Integer> frequency;
 
-    public Output<Integer> getFrequency() {
-        return this.frequency == null ? Output.empty() : this.frequency;
+    public Output<Integer> frequency() {
+        return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<WebTestKind> kind;
 
-    public Output<WebTestKind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<WebTestKind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
       private final Output<List<WebTestGeolocationArgs>> locations;
 
-    public Output<List<WebTestGeolocationArgs>> getLocations() {
+    public Output<List<WebTestGeolocationArgs>> locations() {
         return this.locations;
     }
 
@@ -105,7 +106,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,8 +117,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryEnabled")
       private final @Nullable Output<Boolean> retryEnabled;
 
-    public Output<Boolean> getRetryEnabled() {
-        return this.retryEnabled == null ? Output.empty() : this.retryEnabled;
+    public Output<Boolean> retryEnabled() {
+        return this.retryEnabled == null ? Codegen.empty() : this.retryEnabled;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syntheticMonitorId", required=true)
       private final Output<String> syntheticMonitorId;
 
-    public Output<String> getSyntheticMonitorId() {
+    public Output<String> syntheticMonitorId() {
         return this.syntheticMonitorId;
     }
 
@@ -138,8 +139,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<Integer> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webTestKind", required=true)
       private final Output<WebTestKind> webTestKind;
 
-    public Output<WebTestKind> getWebTestKind() {
+    public Output<WebTestKind> webTestKind() {
         return this.webTestKind;
     }
 
@@ -171,8 +172,8 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webTestName")
       private final @Nullable Output<String> webTestName;
 
-    public Output<String> getWebTestName() {
-        return this.webTestName == null ? Output.empty() : this.webTestName;
+    public Output<String> webTestName() {
+        return this.webTestName == null ? Codegen.empty() : this.webTestName;
     }
 
     public WebTestArgs(
@@ -193,34 +194,34 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         this.configuration = configuration;
         this.description = description;
         this.enabled = enabled;
-        this.frequency = frequency == null ? Output.ofNullable(300) : frequency;
-        this.kind = kind == null ? Output.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : kind;
+        this.frequency = frequency == null ? Codegen.ofNullable(300) : frequency;
+        this.kind = kind == null ? Codegen.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : kind;
         this.location = location;
         this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.retryEnabled = retryEnabled;
         this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId, "expected parameter 'syntheticMonitorId' to be non-null");
         this.tags = tags;
-        this.timeout = timeout == null ? Output.ofNullable(30) : timeout;
-        this.webTestKind = webTestKind == null ? Output.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : Objects.requireNonNull(webTestKind, "expected parameter 'webTestKind' to be non-null");
+        this.timeout = timeout == null ? Codegen.ofNullable(30) : timeout;
+        this.webTestKind = webTestKind == null ? Codegen.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : Objects.requireNonNull(webTestKind, "expected parameter 'webTestKind' to be non-null");
         this.webTestName = webTestName;
     }
 
     private WebTestArgs() {
-        this.configuration = Output.empty();
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.frequency = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.locations = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retryEnabled = Output.empty();
-        this.syntheticMonitorId = Output.empty();
-        this.tags = Output.empty();
-        this.timeout = Output.empty();
-        this.webTestKind = Output.empty();
-        this.webTestName = Output.empty();
+        this.configuration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retryEnabled = Codegen.empty();
+        this.syntheticMonitorId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.webTestKind = Codegen.empty();
+        this.webTestName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -274,7 +275,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable WebTestPropertiesConfigurationArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -282,7 +283,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -290,7 +291,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder frequency(@Nullable Output<Integer> frequency) {
@@ -298,7 +299,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frequency(@Nullable Integer frequency) {
-            this.frequency = Output.ofNullable(frequency);
+            this.frequency = Codegen.ofNullable(frequency);
             return this;
         }
         public Builder kind(@Nullable Output<WebTestKind> kind) {
@@ -306,7 +307,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable WebTestKind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -314,7 +315,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder locations(Output<List<WebTestGeolocationArgs>> locations) {
@@ -341,7 +342,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryEnabled(@Nullable Boolean retryEnabled) {
-            this.retryEnabled = Output.ofNullable(retryEnabled);
+            this.retryEnabled = Codegen.ofNullable(retryEnabled);
             return this;
         }
         public Builder syntheticMonitorId(Output<String> syntheticMonitorId) {
@@ -357,7 +358,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -365,7 +366,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder webTestKind(Output<WebTestKind> webTestKind) {
@@ -381,7 +382,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webTestName(@Nullable String webTestName) {
-            this.webTestName = Output.ofNullable(webTestName);
+            this.webTestName = Codegen.ofNullable(webTestName);
             return this;
         }        public WebTestArgs build() {
             return new WebTestArgs(configuration, description, enabled, frequency, kind, location, locations, resourceGroupName, retryEnabled, syntheticMonitorId, tags, timeout, webTestKind, webTestName);

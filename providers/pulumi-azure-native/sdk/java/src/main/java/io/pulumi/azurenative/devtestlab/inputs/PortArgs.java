@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.TransportProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendPort")
       private final @Nullable Output<Integer> backendPort;
 
-    public Output<Integer> getBackendPort() {
-        return this.backendPort == null ? Output.empty() : this.backendPort;
+    public Output<Integer> backendPort() {
+        return this.backendPort == null ? Codegen.empty() : this.backendPort;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transportProtocol")
       private final @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
-    public Output<Either<String,TransportProtocol>> getTransportProtocol() {
-        return this.transportProtocol == null ? Output.empty() : this.transportProtocol;
+    public Output<Either<String,TransportProtocol>> transportProtocol() {
+        return this.transportProtocol == null ? Codegen.empty() : this.transportProtocol;
     }
 
     public PortArgs(
@@ -51,8 +52,8 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PortArgs() {
-        this.backendPort = Output.empty();
-        this.transportProtocol = Output.empty();
+        this.backendPort = Codegen.empty();
+        this.transportProtocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = Output.ofNullable(backendPort);
+            this.backendPort = Codegen.ofNullable(backendPort);
             return this;
         }
         public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
@@ -90,7 +91,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transportProtocol(@Nullable Either<String,TransportProtocol> transportProtocol) {
-            this.transportProtocol = Output.ofNullable(transportProtocol);
+            this.transportProtocol = Codegen.ofNullable(transportProtocol);
             return this;
         }        public PortArgs build() {
             return new PortArgs(backendPort, transportProtocol);

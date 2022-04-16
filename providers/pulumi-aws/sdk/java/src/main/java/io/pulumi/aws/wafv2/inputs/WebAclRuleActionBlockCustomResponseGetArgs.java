@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
     @Import(name="customResponseBodyKey")
       private final @Nullable Output<String> customResponseBodyKey;
 
-    public Output<String> getCustomResponseBodyKey() {
-        return this.customResponseBodyKey == null ? Output.empty() : this.customResponseBodyKey;
+    public Output<String> customResponseBodyKey() {
+        return this.customResponseBodyKey == null ? Codegen.empty() : this.customResponseBodyKey;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
     @Import(name="responseCode", required=true)
       private final Output<Integer> responseCode;
 
-    public Output<Integer> getResponseCode() {
+    public Output<Integer> responseCode() {
         return this.responseCode;
     }
 
@@ -46,8 +47,8 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
     @Import(name="responseHeaders")
       private final @Nullable Output<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
 
-    public Output<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> getResponseHeaders() {
-        return this.responseHeaders == null ? Output.empty() : this.responseHeaders;
+    public Output<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders() {
+        return this.responseHeaders == null ? Codegen.empty() : this.responseHeaders;
     }
 
     public WebAclRuleActionBlockCustomResponseGetArgs(
@@ -60,9 +61,9 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
     }
 
     private WebAclRuleActionBlockCustomResponseGetArgs() {
-        this.customResponseBodyKey = Output.empty();
-        this.responseCode = Output.empty();
-        this.responseHeaders = Output.empty();
+        this.customResponseBodyKey = Codegen.empty();
+        this.responseCode = Codegen.empty();
+        this.responseHeaders = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
             return this;
         }
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
-            this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
+            this.customResponseBodyKey = Codegen.ofNullable(customResponseBodyKey);
             return this;
         }
         public Builder responseCode(Output<Integer> responseCode) {
@@ -110,7 +111,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
             return this;
         }
         public Builder responseHeaders(@Nullable List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs> responseHeaders) {
-            this.responseHeaders = Output.ofNullable(responseHeaders);
+            this.responseHeaders = Codegen.ofNullable(responseHeaders);
             return this;
         }
         public Builder responseHeaders(WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs... responseHeaders) {

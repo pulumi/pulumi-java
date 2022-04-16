@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     @Import(name="amount")
       private final @Nullable Output<String> amount;
 
-    public Output<String> getAmount() {
-        return this.amount == null ? Output.empty() : this.amount;
+    public Output<String> amount() {
+        return this.amount == null ? Codegen.empty() : this.amount;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     @Import(name="coresPerLicense")
       private final @Nullable Output<String> coresPerLicense;
 
-    public Output<String> getCoresPerLicense() {
-        return this.coresPerLicense == null ? Output.empty() : this.coresPerLicense;
+    public Output<String> coresPerLicense() {
+        return this.coresPerLicense == null ? Codegen.empty() : this.coresPerLicense;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     @Import(name="license")
       private final @Nullable Output<String> license;
 
-    public Output<String> getLicense() {
-        return this.license == null ? Output.empty() : this.license;
+    public Output<String> license() {
+        return this.license == null ? Codegen.empty() : this.license;
     }
 
     public LicenseResourceCommitmentArgs(
@@ -61,9 +62,9 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     }
 
     private LicenseResourceCommitmentArgs() {
-        this.amount = Output.empty();
-        this.coresPerLicense = Output.empty();
-        this.license = Output.empty();
+        this.amount = Codegen.empty();
+        this.coresPerLicense = Codegen.empty();
+        this.license = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder amount(@Nullable String amount) {
-            this.amount = Output.ofNullable(amount);
+            this.amount = Codegen.ofNullable(amount);
             return this;
         }
         public Builder coresPerLicense(@Nullable Output<String> coresPerLicense) {
@@ -103,7 +104,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder coresPerLicense(@Nullable String coresPerLicense) {
-            this.coresPerLicense = Output.ofNullable(coresPerLicense);
+            this.coresPerLicense = Codegen.ofNullable(coresPerLicense);
             return this;
         }
         public Builder license(@Nullable Output<String> license) {
@@ -111,7 +112,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder license(@Nullable String license) {
-            this.license = Output.ofNullable(license);
+            this.license = Codegen.ofNullable(license);
             return this;
         }        public LicenseResourceCommitmentArgs build() {
             return new LicenseResourceCommitmentArgs(amount, coresPerLicense, license);

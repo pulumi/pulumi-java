@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iot.RegistryArgs;
 import io.pulumi.gcp.iot.inputs.RegistryState;
@@ -65,7 +66,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegistryCredential>> getCredentials() {
+    public Output</* @Nullable */ List<RegistryCredential>> credentials() {
         return this.credentials;
     }
     /**
@@ -83,7 +84,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<RegistryEventNotificationConfigItem>> getEventNotificationConfigs() {
+    public Output<List<RegistryEventNotificationConfigItem>> eventNotificationConfigs() {
         return this.eventNotificationConfigs;
     }
     /**
@@ -99,7 +100,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The structure is documented below.
      * 
      */
-    public Output<Map<String,Object>> getHttpConfig() {
+    public Output<Map<String,Object>> httpConfig() {
         return this.httpConfig;
     }
     /**
@@ -125,7 +126,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    public Output</* @Nullable */ String> getLogLevel() {
+    public Output</* @Nullable */ String> logLevel() {
         return this.logLevel;
     }
     /**
@@ -141,7 +142,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The structure is documented below.
      * 
      */
-    public Output<Map<String,Object>> getMqttConfig() {
+    public Output<Map<String,Object>> mqttConfig() {
         return this.mqttConfig;
     }
     /**
@@ -155,7 +156,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A unique name for the resource, required by device registry.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -171,7 +172,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -187,7 +188,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -203,7 +204,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The structure is documented below.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getStateNotificationConfig() {
+    public Output</* @Nullable */ Map<String,Object>> stateNotificationConfig() {
         return this.stateNotificationConfig;
     }
 
@@ -229,7 +230,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Registry(String name, @Nullable RegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iot/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iot/registry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Registry(String name, Output<String> id, @Nullable RegistryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -43,21 +43,21 @@ public final class GetEntityResult {
      * Total count of records that match the filter
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * The URL to use for getting the next set of results.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * The list of entities.
      * 
     */
-    public List<EntityInfoResponse> getValue() {
+    public List<EntityInfoResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

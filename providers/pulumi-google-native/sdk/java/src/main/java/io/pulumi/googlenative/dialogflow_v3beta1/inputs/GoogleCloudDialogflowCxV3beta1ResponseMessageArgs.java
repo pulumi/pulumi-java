@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs;
@@ -32,8 +33,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     @Import(name="conversationSuccess")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> conversationSuccess;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> getConversationSuccess() {
-        return this.conversationSuccess == null ? Output.empty() : this.conversationSuccess;
+    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> conversationSuccess() {
+        return this.conversationSuccess == null ? Codegen.empty() : this.conversationSuccess;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     @Import(name="liveAgentHandoff")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> getLiveAgentHandoff() {
-        return this.liveAgentHandoff == null ? Output.empty() : this.liveAgentHandoff;
+    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff() {
+        return this.liveAgentHandoff == null ? Codegen.empty() : this.liveAgentHandoff;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     @Import(name="outputAudioText")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> getOutputAudioText() {
-        return this.outputAudioText == null ? Output.empty() : this.outputAudioText;
+    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText() {
+        return this.outputAudioText == null ? Codegen.empty() : this.outputAudioText;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     @Import(name="payload")
       private final @Nullable Output<Map<String,String>> payload;
 
-    public Output<Map<String,String>> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+    public Output<Map<String,String>> payload() {
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     @Import(name="playAudio")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> getPlayAudio() {
-        return this.playAudio == null ? Output.empty() : this.playAudio;
+    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio() {
+        return this.playAudio == null ? Codegen.empty() : this.playAudio;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     @Import(name="telephonyTransferCall")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> getTelephonyTransferCall() {
-        return this.telephonyTransferCall == null ? Output.empty() : this.telephonyTransferCall;
+    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall() {
+        return this.telephonyTransferCall == null ? Codegen.empty() : this.telephonyTransferCall;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     @Import(name="text")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageArgs(
@@ -120,13 +121,13 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     }
 
     private GoogleCloudDialogflowCxV3beta1ResponseMessageArgs() {
-        this.conversationSuccess = Output.empty();
-        this.liveAgentHandoff = Output.empty();
-        this.outputAudioText = Output.empty();
-        this.payload = Output.empty();
-        this.playAudio = Output.empty();
-        this.telephonyTransferCall = Output.empty();
-        this.text = Output.empty();
+        this.conversationSuccess = Codegen.empty();
+        this.liveAgentHandoff = Codegen.empty();
+        this.outputAudioText = Codegen.empty();
+        this.payload = Codegen.empty();
+        this.playAudio = Codegen.empty();
+        this.telephonyTransferCall = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             return this;
         }
         public Builder conversationSuccess(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs conversationSuccess) {
-            this.conversationSuccess = Output.ofNullable(conversationSuccess);
+            this.conversationSuccess = Codegen.ofNullable(conversationSuccess);
             return this;
         }
         public Builder liveAgentHandoff(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff) {
@@ -174,7 +175,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             return this;
         }
         public Builder liveAgentHandoff(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs liveAgentHandoff) {
-            this.liveAgentHandoff = Output.ofNullable(liveAgentHandoff);
+            this.liveAgentHandoff = Codegen.ofNullable(liveAgentHandoff);
             return this;
         }
         public Builder outputAudioText(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText) {
@@ -182,7 +183,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             return this;
         }
         public Builder outputAudioText(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs outputAudioText) {
-            this.outputAudioText = Output.ofNullable(outputAudioText);
+            this.outputAudioText = Codegen.ofNullable(outputAudioText);
             return this;
         }
         public Builder payload(@Nullable Output<Map<String,String>> payload) {
@@ -190,7 +191,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             return this;
         }
         public Builder payload(@Nullable Map<String,String> payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder playAudio(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio) {
@@ -198,7 +199,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             return this;
         }
         public Builder playAudio(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs playAudio) {
-            this.playAudio = Output.ofNullable(playAudio);
+            this.playAudio = Codegen.ofNullable(playAudio);
             return this;
         }
         public Builder telephonyTransferCall(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall) {
@@ -206,7 +207,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             return this;
         }
         public Builder telephonyTransferCall(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs telephonyTransferCall) {
-            this.telephonyTransferCall = Output.ofNullable(telephonyTransferCall);
+            this.telephonyTransferCall = Codegen.ofNullable(telephonyTransferCall);
             return this;
         }
         public Builder text(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text) {
@@ -214,7 +215,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             return this;
         }
         public Builder text(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1ResponseMessageArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageArgs(conversationSuccess, liveAgentHandoff, outputAudioText, payload, playAudio, telephonyTransferCall, text);

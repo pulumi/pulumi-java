@@ -17,6 +17,7 @@ import io.pulumi.awsnative.ecs.inputs.ServiceRegistryArgs;
 import io.pulumi.awsnative.ecs.inputs.ServiceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,148 +33,148 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviderStrategy")
       private final @Nullable Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy;
 
-    public Output<List<ServiceCapacityProviderStrategyItemArgs>> getCapacityProviderStrategy() {
-        return this.capacityProviderStrategy == null ? Output.empty() : this.capacityProviderStrategy;
+    public Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy() {
+        return this.capacityProviderStrategy == null ? Codegen.empty() : this.capacityProviderStrategy;
     }
 
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
-        return this.cluster == null ? Output.empty() : this.cluster;
+    public Output<String> cluster() {
+        return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     @Import(name="deploymentConfiguration")
       private final @Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration;
 
-    public Output<ServiceDeploymentConfigurationArgs> getDeploymentConfiguration() {
-        return this.deploymentConfiguration == null ? Output.empty() : this.deploymentConfiguration;
+    public Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration() {
+        return this.deploymentConfiguration == null ? Codegen.empty() : this.deploymentConfiguration;
     }
 
     @Import(name="deploymentController")
       private final @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
 
-    public Output<ServiceDeploymentControllerArgs> getDeploymentController() {
-        return this.deploymentController == null ? Output.empty() : this.deploymentController;
+    public Output<ServiceDeploymentControllerArgs> deploymentController() {
+        return this.deploymentController == null ? Codegen.empty() : this.deploymentController;
     }
 
     @Import(name="desiredCount")
       private final @Nullable Output<Integer> desiredCount;
 
-    public Output<Integer> getDesiredCount() {
-        return this.desiredCount == null ? Output.empty() : this.desiredCount;
+    public Output<Integer> desiredCount() {
+        return this.desiredCount == null ? Codegen.empty() : this.desiredCount;
     }
 
     @Import(name="enableECSManagedTags")
       private final @Nullable Output<Boolean> enableECSManagedTags;
 
-    public Output<Boolean> getEnableECSManagedTags() {
-        return this.enableECSManagedTags == null ? Output.empty() : this.enableECSManagedTags;
+    public Output<Boolean> enableECSManagedTags() {
+        return this.enableECSManagedTags == null ? Codegen.empty() : this.enableECSManagedTags;
     }
 
     @Import(name="enableExecuteCommand")
       private final @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Output<Boolean> getEnableExecuteCommand() {
-        return this.enableExecuteCommand == null ? Output.empty() : this.enableExecuteCommand;
+    public Output<Boolean> enableExecuteCommand() {
+        return this.enableExecuteCommand == null ? Codegen.empty() : this.enableExecuteCommand;
     }
 
     @Import(name="healthCheckGracePeriodSeconds")
       private final @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
-    public Output<Integer> getHealthCheckGracePeriodSeconds() {
-        return this.healthCheckGracePeriodSeconds == null ? Output.empty() : this.healthCheckGracePeriodSeconds;
+    public Output<Integer> healthCheckGracePeriodSeconds() {
+        return this.healthCheckGracePeriodSeconds == null ? Codegen.empty() : this.healthCheckGracePeriodSeconds;
     }
 
     @Import(name="launchType")
       private final @Nullable Output<ServiceLaunchType> launchType;
 
-    public Output<ServiceLaunchType> getLaunchType() {
-        return this.launchType == null ? Output.empty() : this.launchType;
+    public Output<ServiceLaunchType> launchType() {
+        return this.launchType == null ? Codegen.empty() : this.launchType;
     }
 
     @Import(name="loadBalancers")
       private final @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
 
-    public Output<List<ServiceLoadBalancerArgs>> getLoadBalancers() {
-        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
+    public Output<List<ServiceLoadBalancerArgs>> loadBalancers() {
+        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
     @Import(name="networkConfiguration")
       private final @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
 
-    public Output<ServiceNetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
+    public Output<ServiceNetworkConfigurationArgs> networkConfiguration() {
+        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     @Import(name="placementConstraints")
       private final @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
 
-    public Output<List<ServicePlacementConstraintArgs>> getPlacementConstraints() {
-        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
+    public Output<List<ServicePlacementConstraintArgs>> placementConstraints() {
+        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
     @Import(name="placementStrategies")
       private final @Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies;
 
-    public Output<List<ServicePlacementStrategyArgs>> getPlacementStrategies() {
-        return this.placementStrategies == null ? Output.empty() : this.placementStrategies;
+    public Output<List<ServicePlacementStrategyArgs>> placementStrategies() {
+        return this.placementStrategies == null ? Codegen.empty() : this.placementStrategies;
     }
 
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
-        return this.platformVersion == null ? Output.empty() : this.platformVersion;
+    public Output<String> platformVersion() {
+        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
     @Import(name="propagateTags")
       private final @Nullable Output<ServicePropagateTags> propagateTags;
 
-    public Output<ServicePropagateTags> getPropagateTags() {
-        return this.propagateTags == null ? Output.empty() : this.propagateTags;
+    public Output<ServicePropagateTags> propagateTags() {
+        return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="schedulingStrategy")
       private final @Nullable Output<ServiceSchedulingStrategy> schedulingStrategy;
 
-    public Output<ServiceSchedulingStrategy> getSchedulingStrategy() {
-        return this.schedulingStrategy == null ? Output.empty() : this.schedulingStrategy;
+    public Output<ServiceSchedulingStrategy> schedulingStrategy() {
+        return this.schedulingStrategy == null ? Codegen.empty() : this.schedulingStrategy;
     }
 
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     @Import(name="serviceRegistries")
       private final @Nullable Output<List<ServiceRegistryArgs>> serviceRegistries;
 
-    public Output<List<ServiceRegistryArgs>> getServiceRegistries() {
-        return this.serviceRegistries == null ? Output.empty() : this.serviceRegistries;
+    public Output<List<ServiceRegistryArgs>> serviceRegistries() {
+        return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Output<List<ServiceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ServiceTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="taskDefinition")
       private final @Nullable Output<String> taskDefinition;
 
-    public Output<String> getTaskDefinition() {
-        return this.taskDefinition == null ? Output.empty() : this.taskDefinition;
+    public Output<String> taskDefinition() {
+        return this.taskDefinition == null ? Codegen.empty() : this.taskDefinition;
     }
 
     public ServiceArgs(
@@ -222,27 +223,27 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.capacityProviderStrategy = Output.empty();
-        this.cluster = Output.empty();
-        this.deploymentConfiguration = Output.empty();
-        this.deploymentController = Output.empty();
-        this.desiredCount = Output.empty();
-        this.enableECSManagedTags = Output.empty();
-        this.enableExecuteCommand = Output.empty();
-        this.healthCheckGracePeriodSeconds = Output.empty();
-        this.launchType = Output.empty();
-        this.loadBalancers = Output.empty();
-        this.networkConfiguration = Output.empty();
-        this.placementConstraints = Output.empty();
-        this.placementStrategies = Output.empty();
-        this.platformVersion = Output.empty();
-        this.propagateTags = Output.empty();
-        this.role = Output.empty();
-        this.schedulingStrategy = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceRegistries = Output.empty();
-        this.tags = Output.empty();
-        this.taskDefinition = Output.empty();
+        this.capacityProviderStrategy = Codegen.empty();
+        this.cluster = Codegen.empty();
+        this.deploymentConfiguration = Codegen.empty();
+        this.deploymentController = Codegen.empty();
+        this.desiredCount = Codegen.empty();
+        this.enableECSManagedTags = Codegen.empty();
+        this.enableExecuteCommand = Codegen.empty();
+        this.healthCheckGracePeriodSeconds = Codegen.empty();
+        this.launchType = Codegen.empty();
+        this.loadBalancers = Codegen.empty();
+        this.networkConfiguration = Codegen.empty();
+        this.placementConstraints = Codegen.empty();
+        this.placementStrategies = Codegen.empty();
+        this.platformVersion = Codegen.empty();
+        this.propagateTags = Codegen.empty();
+        this.role = Codegen.empty();
+        this.schedulingStrategy = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceRegistries = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.taskDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -310,7 +311,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityProviderStrategy(@Nullable List<ServiceCapacityProviderStrategyItemArgs> capacityProviderStrategy) {
-            this.capacityProviderStrategy = Output.ofNullable(capacityProviderStrategy);
+            this.capacityProviderStrategy = Codegen.ofNullable(capacityProviderStrategy);
             return this;
         }
         public Builder capacityProviderStrategy(ServiceCapacityProviderStrategyItemArgs... capacityProviderStrategy) {
@@ -321,7 +322,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Output.ofNullable(cluster);
+            this.cluster = Codegen.ofNullable(cluster);
             return this;
         }
         public Builder deploymentConfiguration(@Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration) {
@@ -329,7 +330,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentConfiguration(@Nullable ServiceDeploymentConfigurationArgs deploymentConfiguration) {
-            this.deploymentConfiguration = Output.ofNullable(deploymentConfiguration);
+            this.deploymentConfiguration = Codegen.ofNullable(deploymentConfiguration);
             return this;
         }
         public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerArgs> deploymentController) {
@@ -337,7 +338,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentController(@Nullable ServiceDeploymentControllerArgs deploymentController) {
-            this.deploymentController = Output.ofNullable(deploymentController);
+            this.deploymentController = Codegen.ofNullable(deploymentController);
             return this;
         }
         public Builder desiredCount(@Nullable Output<Integer> desiredCount) {
@@ -345,7 +346,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desiredCount(@Nullable Integer desiredCount) {
-            this.desiredCount = Output.ofNullable(desiredCount);
+            this.desiredCount = Codegen.ofNullable(desiredCount);
             return this;
         }
         public Builder enableECSManagedTags(@Nullable Output<Boolean> enableECSManagedTags) {
@@ -353,7 +354,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableECSManagedTags(@Nullable Boolean enableECSManagedTags) {
-            this.enableECSManagedTags = Output.ofNullable(enableECSManagedTags);
+            this.enableECSManagedTags = Codegen.ofNullable(enableECSManagedTags);
             return this;
         }
         public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
@@ -361,7 +362,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
-            this.enableExecuteCommand = Output.ofNullable(enableExecuteCommand);
+            this.enableExecuteCommand = Codegen.ofNullable(enableExecuteCommand);
             return this;
         }
         public Builder healthCheckGracePeriodSeconds(@Nullable Output<Integer> healthCheckGracePeriodSeconds) {
@@ -369,7 +370,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
-            this.healthCheckGracePeriodSeconds = Output.ofNullable(healthCheckGracePeriodSeconds);
+            this.healthCheckGracePeriodSeconds = Codegen.ofNullable(healthCheckGracePeriodSeconds);
             return this;
         }
         public Builder launchType(@Nullable Output<ServiceLaunchType> launchType) {
@@ -377,7 +378,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchType(@Nullable ServiceLaunchType launchType) {
-            this.launchType = Output.ofNullable(launchType);
+            this.launchType = Codegen.ofNullable(launchType);
             return this;
         }
         public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers) {
@@ -385,7 +386,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancers(@Nullable List<ServiceLoadBalancerArgs> loadBalancers) {
-            this.loadBalancers = Output.ofNullable(loadBalancers);
+            this.loadBalancers = Codegen.ofNullable(loadBalancers);
             return this;
         }
         public Builder loadBalancers(ServiceLoadBalancerArgs... loadBalancers) {
@@ -396,7 +397,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfiguration(@Nullable ServiceNetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Output.ofNullable(networkConfiguration);
+            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
             return this;
         }
         public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints) {
@@ -404,7 +405,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder placementConstraints(@Nullable List<ServicePlacementConstraintArgs> placementConstraints) {
-            this.placementConstraints = Output.ofNullable(placementConstraints);
+            this.placementConstraints = Codegen.ofNullable(placementConstraints);
             return this;
         }
         public Builder placementConstraints(ServicePlacementConstraintArgs... placementConstraints) {
@@ -415,7 +416,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder placementStrategies(@Nullable List<ServicePlacementStrategyArgs> placementStrategies) {
-            this.placementStrategies = Output.ofNullable(placementStrategies);
+            this.placementStrategies = Codegen.ofNullable(placementStrategies);
             return this;
         }
         public Builder placementStrategies(ServicePlacementStrategyArgs... placementStrategies) {
@@ -426,7 +427,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Output.ofNullable(platformVersion);
+            this.platformVersion = Codegen.ofNullable(platformVersion);
             return this;
         }
         public Builder propagateTags(@Nullable Output<ServicePropagateTags> propagateTags) {
@@ -434,7 +435,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder propagateTags(@Nullable ServicePropagateTags propagateTags) {
-            this.propagateTags = Output.ofNullable(propagateTags);
+            this.propagateTags = Codegen.ofNullable(propagateTags);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -442,7 +443,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder schedulingStrategy(@Nullable Output<ServiceSchedulingStrategy> schedulingStrategy) {
@@ -450,7 +451,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedulingStrategy(@Nullable ServiceSchedulingStrategy schedulingStrategy) {
-            this.schedulingStrategy = Output.ofNullable(schedulingStrategy);
+            this.schedulingStrategy = Codegen.ofNullable(schedulingStrategy);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -458,7 +459,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder serviceRegistries(@Nullable Output<List<ServiceRegistryArgs>> serviceRegistries) {
@@ -466,7 +467,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceRegistries(@Nullable List<ServiceRegistryArgs> serviceRegistries) {
-            this.serviceRegistries = Output.ofNullable(serviceRegistries);
+            this.serviceRegistries = Codegen.ofNullable(serviceRegistries);
             return this;
         }
         public Builder serviceRegistries(ServiceRegistryArgs... serviceRegistries) {
@@ -477,7 +478,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ServiceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ServiceTagArgs... tags) {
@@ -488,7 +489,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskDefinition(@Nullable String taskDefinition) {
-            this.taskDefinition = Output.ofNullable(taskDefinition);
+            this.taskDefinition = Codegen.ofNullable(taskDefinition);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(capacityProviderStrategy, cluster, deploymentConfiguration, deploymentController, desiredCount, enableECSManagedTags, enableExecuteCommand, healthCheckGracePeriodSeconds, launchType, loadBalancers, networkConfiguration, placementConstraints, placementStrategies, platformVersion, propagateTags, role, schedulingStrategy, serviceName, serviceRegistries, tags, taskDefinition);

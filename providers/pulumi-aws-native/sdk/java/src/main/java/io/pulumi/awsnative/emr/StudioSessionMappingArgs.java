@@ -6,6 +6,7 @@ package io.pulumi.awsnative.emr;
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="identityName", required=true)
       private final Output<String> identityName;
 
-    public Output<String> getIdentityName() {
+    public Output<String> identityName() {
         return this.identityName;
     }
 
@@ -32,7 +33,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="identityType", required=true)
       private final Output<StudioSessionMappingIdentityType> identityType;
 
-    public Output<StudioSessionMappingIdentityType> getIdentityType() {
+    public Output<StudioSessionMappingIdentityType> identityType() {
         return this.identityType;
     }
 
@@ -43,7 +44,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="sessionPolicyArn", required=true)
       private final Output<String> sessionPolicyArn;
 
-    public Output<String> getSessionPolicyArn() {
+    public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
     }
 
@@ -54,7 +55,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -70,10 +71,10 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     }
 
     private StudioSessionMappingArgs() {
-        this.identityName = Output.empty();
-        this.identityType = Output.empty();
-        this.sessionPolicyArn = Output.empty();
-        this.studioId = Output.empty();
+        this.identityName = Codegen.empty();
+        this.identityType = Codegen.empty();
+        this.sessionPolicyArn = Codegen.empty();
+        this.studioId = Codegen.empty();
     }
 
     public static Builder builder() {

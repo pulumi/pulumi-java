@@ -9,6 +9,7 @@ import io.pulumi.aws.dms.inputs.ReplicationInstanceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The amount of storage (in gigabytes) to be initially allocated for the replication instance.
      * 
      */
-    public Output<Integer> getAllocatedStorage() {
+    public Output<Integer> allocatedStorage() {
         return this.allocatedStorage;
     }
     /**
@@ -57,7 +58,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return Indicates that major version upgrades are allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowMajorVersionUpgrade() {
+    public Output</* @Nullable */ Boolean> allowMajorVersionUpgrade() {
         return this.allowMajorVersionUpgrade;
     }
     /**
@@ -71,7 +72,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
      * 
      */
-    public Output</* @Nullable */ Boolean> getApplyImmediately() {
+    public Output</* @Nullable */ Boolean> applyImmediately() {
         return this.applyImmediately;
     }
     /**
@@ -85,7 +86,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
      * 
      */
-    public Output<Boolean> getAutoMinorVersionUpgrade() {
+    public Output<Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade;
     }
     /**
@@ -99,7 +100,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The EC2 Availability Zone that the replication instance will be created in.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -113,7 +114,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The engine version number of the replication instance.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -127,7 +128,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -141,7 +142,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
      * 
      */
-    public Output<Boolean> getMultiAz() {
+    public Output<Boolean> multiAz() {
         return this.multiAz;
     }
     /**
@@ -155,7 +156,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
      * 
      */
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
@@ -169,7 +170,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
      * 
      */
-    public Output<Boolean> getPubliclyAccessible() {
+    public Output<Boolean> publiclyAccessible() {
         return this.publiclyAccessible;
     }
     /**
@@ -183,7 +184,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the replication instance.
      * 
      */
-    public Output<String> getReplicationInstanceArn() {
+    public Output<String> replicationInstanceArn() {
         return this.replicationInstanceArn;
     }
     /**
@@ -197,7 +198,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The compute and memory capacity of the replication instance as specified by the replication instance class. See [AWS DMS User Guide](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.Types.html) for available instance sizes and advice on which one to choose.
      * 
      */
-    public Output<String> getReplicationInstanceClass() {
+    public Output<String> replicationInstanceClass() {
         return this.replicationInstanceClass;
     }
     /**
@@ -211,7 +212,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return The replication instance identifier. This parameter is stored as a lowercase string.
      * 
      */
-    public Output<String> getReplicationInstanceId() {
+    public Output<String> replicationInstanceId() {
         return this.replicationInstanceId;
     }
     /**
@@ -225,7 +226,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return A list of the private IP addresses of the replication instance.
      * 
      */
-    public Output<List<String>> getReplicationInstancePrivateIps() {
+    public Output<List<String>> replicationInstancePrivateIps() {
         return this.replicationInstancePrivateIps;
     }
     /**
@@ -239,7 +240,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return A list of the public IP addresses of the replication instance.
      * 
      */
-    public Output<List<String>> getReplicationInstancePublicIps() {
+    public Output<List<String>> replicationInstancePublicIps() {
         return this.replicationInstancePublicIps;
     }
     /**
@@ -253,7 +254,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return A subnet group to associate with the replication instance.
      * 
      */
-    public Output<String> getReplicationSubnetGroupId() {
+    public Output<String> replicationSubnetGroupId() {
         return this.replicationSubnetGroupId;
     }
     /**
@@ -267,7 +268,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -281,7 +282,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -295,7 +296,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @return A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
      * 
      */
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 
@@ -321,7 +322,7 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationInstance(String name, ReplicationInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/replicationInstance:ReplicationInstance", name, args == null ? ReplicationInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dms/replicationInstance:ReplicationInstance", name, args == null ? ReplicationInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationInstance(String name, Output<String> id, @Nullable ReplicationInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

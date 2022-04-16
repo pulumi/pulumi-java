@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.DaprMetadataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<List<DaprMetadataArgs>> metadata;
 
-    public Output<List<DaprMetadataArgs>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<List<DaprMetadataArgs>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public DaprComponentArgs(
@@ -76,10 +77,10 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DaprComponentArgs() {
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable List<DaprMetadataArgs> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder metadata(DaprMetadataArgs... metadata) {
@@ -124,7 +125,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -132,7 +133,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -140,7 +141,7 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public DaprComponentArgs build() {
             return new DaprComponentArgs(metadata, name, type, version);

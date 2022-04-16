@@ -9,6 +9,7 @@ import io.pulumi.aws.redshift.inputs.EventSubscriptionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Redshift event notification subscription
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The AWS customer account associated with the Redshift event notification subscription
      * 
      */
-    public Output<String> getCustomerAwsId() {
+    public Output<String> customerAwsId() {
         return this.customerAwsId;
     }
     /**
@@ -70,7 +71,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return A boolean flag to enable/disable the subscription. Defaults to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -84,7 +85,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEventCategories() {
+    public Output</* @Nullable */ List<String>> eventCategories() {
         return this.eventCategories;
     }
     /**
@@ -98,7 +99,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The name of the Redshift event subscription.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
      * 
      */
-    public Output</* @Nullable */ String> getSeverity() {
+    public Output</* @Nullable */ String> severity() {
         return this.severity;
     }
     /**
@@ -126,7 +127,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The ARN of the SNS topic to send events to.
      * 
      */
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
     /**
@@ -140,7 +141,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSourceIds() {
+    public Output</* @Nullable */ List<String>> sourceIds() {
         return this.sourceIds;
     }
     /**
@@ -154,13 +155,13 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
      * 
      */
-    public Output</* @Nullable */ String> getSourceType() {
+    public Output</* @Nullable */ String> sourceType() {
         return this.sourceType;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -174,7 +175,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -188,7 +189,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -214,7 +215,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventSubscription(String name, EventSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:redshift/eventSubscription:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:redshift/eventSubscription:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventSubscription(String name, Output<String> id, @Nullable EventSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="api", required=true)
       private final Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
 
@@ -36,8 +37,8 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiConfigId")
       private final @Nullable Output<String> apiConfigId;
 
-    public Output<String> getApiConfigId() {
-        return this.apiConfigId == null ? Output.empty() : this.apiConfigId;
+    public Output<String> apiConfigId() {
+        return this.apiConfigId == null ? Codegen.empty() : this.apiConfigId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiConfigIdPrefix")
       private final @Nullable Output<String> apiConfigIdPrefix;
 
-    public Output<String> getApiConfigIdPrefix() {
-        return this.apiConfigIdPrefix == null ? Output.empty() : this.apiConfigIdPrefix;
+    public Output<String> apiConfigIdPrefix() {
+        return this.apiConfigIdPrefix == null ? Codegen.empty() : this.apiConfigIdPrefix;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
       private final @Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig;
 
-    public Output<ApiConfigGatewayConfigArgs> getGatewayConfig() {
-        return this.gatewayConfig == null ? Output.empty() : this.gatewayConfig;
+    public Output<ApiConfigGatewayConfigArgs> gatewayConfig() {
+        return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="openapiDocuments", required=true)
       private final Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments;
 
-    public Output<List<ApiConfigOpenapiDocumentArgs>> getOpenapiDocuments() {
+    public Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments() {
         return this.openapiDocuments;
     }
 
@@ -107,8 +108,8 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ApiConfigArgs(
@@ -131,14 +132,14 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiConfigArgs() {
-        this.api = Output.empty();
-        this.apiConfigId = Output.empty();
-        this.apiConfigIdPrefix = Output.empty();
-        this.displayName = Output.empty();
-        this.gatewayConfig = Output.empty();
-        this.labels = Output.empty();
-        this.openapiDocuments = Output.empty();
-        this.project = Output.empty();
+        this.api = Codegen.empty();
+        this.apiConfigId = Codegen.empty();
+        this.apiConfigIdPrefix = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.gatewayConfig = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.openapiDocuments = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiConfigId(@Nullable String apiConfigId) {
-            this.apiConfigId = Output.ofNullable(apiConfigId);
+            this.apiConfigId = Codegen.ofNullable(apiConfigId);
             return this;
         }
         public Builder apiConfigIdPrefix(@Nullable Output<String> apiConfigIdPrefix) {
@@ -196,7 +197,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
-            this.apiConfigIdPrefix = Output.ofNullable(apiConfigIdPrefix);
+            this.apiConfigIdPrefix = Codegen.ofNullable(apiConfigIdPrefix);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -204,7 +205,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder gatewayConfig(@Nullable Output<ApiConfigGatewayConfigArgs> gatewayConfig) {
@@ -212,7 +213,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayConfig(@Nullable ApiConfigGatewayConfigArgs gatewayConfig) {
-            this.gatewayConfig = Output.ofNullable(gatewayConfig);
+            this.gatewayConfig = Codegen.ofNullable(gatewayConfig);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -220,7 +221,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder openapiDocuments(Output<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
@@ -239,7 +240,7 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ApiConfigArgs build() {
             return new ApiConfigArgs(api, apiConfigId, apiConfigIdPrefix, displayName, gatewayConfig, labels, openapiDocuments, project);

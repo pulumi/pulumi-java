@@ -5,6 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="certificateExpirationDate")
       private final @Nullable Output<String> certificateExpirationDate;
 
-    public Output<String> getCertificateExpirationDate() {
-        return this.certificateExpirationDate == null ? Output.empty() : this.certificateExpirationDate;
+    public Output<String> certificateExpirationDate() {
+        return this.certificateExpirationDate == null ? Codegen.empty() : this.certificateExpirationDate;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="certificateSubjectName")
       private final @Nullable Output<String> certificateSubjectName;
 
-    public Output<String> getCertificateSubjectName() {
-        return this.certificateSubjectName == null ? Output.empty() : this.certificateSubjectName;
+    public Output<String> certificateSubjectName() {
+        return this.certificateSubjectName == null ? Codegen.empty() : this.certificateSubjectName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="certificateThumbprint")
       private final @Nullable Output<String> certificateThumbprint;
 
-    public Output<String> getCertificateThumbprint() {
-        return this.certificateThumbprint == null ? Output.empty() : this.certificateThumbprint;
+    public Output<String> certificateThumbprint() {
+        return this.certificateThumbprint == null ? Codegen.empty() : this.certificateThumbprint;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="pfx")
       private final @Nullable Output<String> pfx;
 
-    public Output<String> getPfx() {
-        return this.pfx == null ? Output.empty() : this.pfx;
+    public Output<String> pfx() {
+        return this.pfx == null ? Codegen.empty() : this.pfx;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -97,12 +98,12 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     }
 
     private ClientCertAuthenticationArgs() {
-        this.certificateExpirationDate = Output.empty();
-        this.certificateSubjectName = Output.empty();
-        this.certificateThumbprint = Output.empty();
-        this.password = Output.empty();
-        this.pfx = Output.empty();
-        this.type = Output.empty();
+        this.certificateExpirationDate = Codegen.empty();
+        this.certificateSubjectName = Codegen.empty();
+        this.certificateThumbprint = Codegen.empty();
+        this.password = Codegen.empty();
+        this.pfx = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder certificateExpirationDate(@Nullable String certificateExpirationDate) {
-            this.certificateExpirationDate = Output.ofNullable(certificateExpirationDate);
+            this.certificateExpirationDate = Codegen.ofNullable(certificateExpirationDate);
             return this;
         }
         public Builder certificateSubjectName(@Nullable Output<String> certificateSubjectName) {
@@ -148,7 +149,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
-            this.certificateSubjectName = Output.ofNullable(certificateSubjectName);
+            this.certificateSubjectName = Codegen.ofNullable(certificateSubjectName);
             return this;
         }
         public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
@@ -156,7 +157,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
-            this.certificateThumbprint = Output.ofNullable(certificateThumbprint);
+            this.certificateThumbprint = Codegen.ofNullable(certificateThumbprint);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -164,7 +165,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder pfx(@Nullable Output<String> pfx) {
@@ -172,7 +173,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder pfx(@Nullable String pfx) {
-            this.pfx = Output.ofNullable(pfx);
+            this.pfx = Codegen.ofNullable(pfx);
             return this;
         }
         public Builder type(Output<String> type) {

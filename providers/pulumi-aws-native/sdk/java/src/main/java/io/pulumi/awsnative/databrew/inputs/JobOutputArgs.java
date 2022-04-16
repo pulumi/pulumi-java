@@ -9,6 +9,7 @@ import io.pulumi.awsnative.databrew.inputs.JobOutputFormatOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,43 +24,43 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compressionFormat")
       private final @Nullable Output<JobOutputCompressionFormat> compressionFormat;
 
-    public Output<JobOutputCompressionFormat> getCompressionFormat() {
-        return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
+    public Output<JobOutputCompressionFormat> compressionFormat() {
+        return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
     }
 
     @Import(name="format")
       private final @Nullable Output<JobOutputFormat> format;
 
-    public Output<JobOutputFormat> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<JobOutputFormat> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     @Import(name="formatOptions")
       private final @Nullable Output<JobOutputFormatOptionsArgs> formatOptions;
 
-    public Output<JobOutputFormatOptionsArgs> getFormatOptions() {
-        return this.formatOptions == null ? Output.empty() : this.formatOptions;
+    public Output<JobOutputFormatOptionsArgs> formatOptions() {
+        return this.formatOptions == null ? Codegen.empty() : this.formatOptions;
     }
 
     @Import(name="location", required=true)
       private final Output<JobS3LocationArgs> location;
 
-    public Output<JobS3LocationArgs> getLocation() {
+    public Output<JobS3LocationArgs> location() {
         return this.location;
     }
 
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
-        return this.overwrite == null ? Output.empty() : this.overwrite;
+    public Output<Boolean> overwrite() {
+        return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     @Import(name="partitionColumns")
       private final @Nullable Output<List<String>> partitionColumns;
 
-    public Output<List<String>> getPartitionColumns() {
-        return this.partitionColumns == null ? Output.empty() : this.partitionColumns;
+    public Output<List<String>> partitionColumns() {
+        return this.partitionColumns == null ? Codegen.empty() : this.partitionColumns;
     }
 
     public JobOutputArgs(
@@ -78,12 +79,12 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobOutputArgs() {
-        this.compressionFormat = Output.empty();
-        this.format = Output.empty();
-        this.formatOptions = Output.empty();
-        this.location = Output.empty();
-        this.overwrite = Output.empty();
-        this.partitionColumns = Output.empty();
+        this.compressionFormat = Codegen.empty();
+        this.format = Codegen.empty();
+        this.formatOptions = Codegen.empty();
+        this.location = Codegen.empty();
+        this.overwrite = Codegen.empty();
+        this.partitionColumns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compressionFormat(@Nullable JobOutputCompressionFormat compressionFormat) {
-            this.compressionFormat = Output.ofNullable(compressionFormat);
+            this.compressionFormat = Codegen.ofNullable(compressionFormat);
             return this;
         }
         public Builder format(@Nullable Output<JobOutputFormat> format) {
@@ -129,7 +130,7 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable JobOutputFormat format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder formatOptions(@Nullable Output<JobOutputFormatOptionsArgs> formatOptions) {
@@ -137,7 +138,7 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder formatOptions(@Nullable JobOutputFormatOptionsArgs formatOptions) {
-            this.formatOptions = Output.ofNullable(formatOptions);
+            this.formatOptions = Codegen.ofNullable(formatOptions);
             return this;
         }
         public Builder location(Output<JobS3LocationArgs> location) {
@@ -153,7 +154,7 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Output.ofNullable(overwrite);
+            this.overwrite = Codegen.ofNullable(overwrite);
             return this;
         }
         public Builder partitionColumns(@Nullable Output<List<String>> partitionColumns) {
@@ -161,7 +162,7 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionColumns(@Nullable List<String> partitionColumns) {
-            this.partitionColumns = Output.ofNullable(partitionColumns);
+            this.partitionColumns = Codegen.ofNullable(partitionColumns);
             return this;
         }
         public Builder partitionColumns(String... partitionColumns) {

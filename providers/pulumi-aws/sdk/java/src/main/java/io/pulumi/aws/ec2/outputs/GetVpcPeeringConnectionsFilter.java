@@ -36,7 +36,7 @@ public final class GetVpcPeeringConnectionsFilter {
      * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcPeeringConnections.html).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -44,7 +44,7 @@ public final class GetVpcPeeringConnectionsFilter {
      * A VPC Peering Connection will be selected if any one of the given values matches.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

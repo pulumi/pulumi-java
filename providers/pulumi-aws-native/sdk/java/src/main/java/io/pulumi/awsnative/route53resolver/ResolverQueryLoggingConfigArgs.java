@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
     @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
-        return this.destinationArn == null ? Output.empty() : this.destinationArn;
+    public Output<String> destinationArn() {
+        return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ResolverQueryLoggingConfigArgs(
@@ -44,8 +45,8 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
     }
 
     private ResolverQueryLoggingConfigArgs() {
-        this.destinationArn = Output.empty();
-        this.name = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Output.ofNullable(destinationArn);
+            this.destinationArn = Codegen.ofNullable(destinationArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -83,7 +84,7 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ResolverQueryLoggingConfigArgs build() {
             return new ResolverQueryLoggingConfigArgs(destinationArn, name);

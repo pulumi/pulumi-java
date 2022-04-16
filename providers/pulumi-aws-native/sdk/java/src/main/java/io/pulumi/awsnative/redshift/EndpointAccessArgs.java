@@ -5,6 +5,7 @@ package io.pulumi.awsnative.redshift;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
-        return this.clusterIdentifier == null ? Output.empty() : this.clusterIdentifier;
+    public Output<String> clusterIdentifier() {
+        return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -44,8 +45,8 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
-    public Output<String> getResourceOwner() {
-        return this.resourceOwner == null ? Output.empty() : this.resourceOwner;
+    public Output<String> resourceOwner() {
+        return this.resourceOwner == null ? Codegen.empty() : this.resourceOwner;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
-    public Output<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
+    public Output<String> subnetGroupName() {
+        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds", required=true)
       private final Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 
@@ -84,11 +85,11 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointAccessArgs() {
-        this.clusterIdentifier = Output.empty();
-        this.endpointName = Output.empty();
-        this.resourceOwner = Output.empty();
-        this.subnetGroupName = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.resourceOwner = Codegen.empty();
+        this.subnetGroupName = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
+            this.clusterIdentifier = Codegen.ofNullable(clusterIdentifier);
             return this;
         }
         public Builder endpointName(Output<String> endpointName) {
@@ -140,7 +141,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Output.ofNullable(resourceOwner);
+            this.resourceOwner = Codegen.ofNullable(resourceOwner);
             return this;
         }
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
@@ -148,7 +149,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Output.ofNullable(subnetGroupName);
+            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
             return this;
         }
         public Builder vpcSecurityGroupIds(Output<List<String>> vpcSecurityGroupIds) {

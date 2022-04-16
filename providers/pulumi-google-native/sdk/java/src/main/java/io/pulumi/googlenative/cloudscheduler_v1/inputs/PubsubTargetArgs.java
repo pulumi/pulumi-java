@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudscheduler_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<Map<String,String>> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<String> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 
@@ -62,9 +63,9 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PubsubTargetArgs() {
-        this.attributes = Output.empty();
-        this.data = Output.empty();
-        this.topicName = Output.empty();
+        this.attributes = Codegen.empty();
+        this.data = Codegen.empty();
+        this.topicName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder data(@Nullable Output<String> data) {
@@ -104,7 +105,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder topicName(Output<String> topicName) {

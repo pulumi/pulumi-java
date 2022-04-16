@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.LiteTopicArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicState;
@@ -60,7 +61,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * @return Name of the topic.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -76,7 +77,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteTopicPartitionConfig> getPartitionConfig() {
+    public Output</* @Nullable */ LiteTopicPartitionConfig> partitionConfig() {
         return this.partitionConfig;
     }
     /**
@@ -92,7 +93,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -106,7 +107,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * @return The region of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -122,7 +123,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteTopicReservationConfig> getReservationConfig() {
+    public Output</* @Nullable */ LiteTopicReservationConfig> reservationConfig() {
         return this.reservationConfig;
     }
     /**
@@ -138,7 +139,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteTopicRetentionConfig> getRetentionConfig() {
+    public Output</* @Nullable */ LiteTopicRetentionConfig> retentionConfig() {
         return this.retentionConfig;
     }
     /**
@@ -152,7 +153,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * @return The zone of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> getZone() {
+    public Output</* @Nullable */ String> zone() {
         return this.zone;
     }
 
@@ -178,7 +179,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LiteTopic(String name, @Nullable LiteTopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/liteTopic:LiteTopic", name, args == null ? LiteTopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/liteTopic:LiteTopic", name, args == null ? LiteTopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LiteTopic(String name, Output<String> id, @Nullable LiteTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

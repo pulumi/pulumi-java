@@ -24,7 +24,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions 
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
     */
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

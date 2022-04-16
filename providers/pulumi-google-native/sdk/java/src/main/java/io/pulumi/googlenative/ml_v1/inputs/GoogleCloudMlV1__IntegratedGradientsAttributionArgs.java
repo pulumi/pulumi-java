@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
     @Import(name="numIntegralSteps")
       private final @Nullable Output<Integer> numIntegralSteps;
 
-    public Output<Integer> getNumIntegralSteps() {
-        return this.numIntegralSteps == null ? Output.empty() : this.numIntegralSteps;
+    public Output<Integer> numIntegralSteps() {
+        return this.numIntegralSteps == null ? Codegen.empty() : this.numIntegralSteps;
     }
 
     public GoogleCloudMlV1__IntegratedGradientsAttributionArgs(@Nullable Output<Integer> numIntegralSteps) {
@@ -34,7 +35,7 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
     }
 
     private GoogleCloudMlV1__IntegratedGradientsAttributionArgs() {
-        this.numIntegralSteps = Output.empty();
+        this.numIntegralSteps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
             return this;
         }
         public Builder numIntegralSteps(@Nullable Integer numIntegralSteps) {
-            this.numIntegralSteps = Output.ofNullable(numIntegralSteps);
+            this.numIntegralSteps = Codegen.ofNullable(numIntegralSteps);
             return this;
         }        public GoogleCloudMlV1__IntegratedGradientsAttributionArgs build() {
             return new GoogleCloudMlV1__IntegratedGradientsAttributionArgs(numIntegralSteps);

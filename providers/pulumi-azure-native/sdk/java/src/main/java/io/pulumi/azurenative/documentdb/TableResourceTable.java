@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class TableResourceTable extends io.pulumi.resources.CustomResource {
      * @return The location of the resource group to which the resource belongs.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -58,19 +59,19 @@ public class TableResourceTable extends io.pulumi.resources.CustomResource {
      * @return The name of the ARM resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="options", type=TableGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ TableGetPropertiesResponseOptions> options;
 
-    public Output</* @Nullable */ TableGetPropertiesResponseOptions> getOptions() {
+    public Output</* @Nullable */ TableGetPropertiesResponseOptions> options() {
         return this.options;
     }
     @Export(name="resource", type=TableGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ TableGetPropertiesResponseResource> resource;
 
-    public Output</* @Nullable */ TableGetPropertiesResponseResource> getResource() {
+    public Output</* @Nullable */ TableGetPropertiesResponseResource> resource() {
         return this.resource;
     }
     /**
@@ -84,7 +85,7 @@ public class TableResourceTable extends io.pulumi.resources.CustomResource {
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +99,7 @@ public class TableResourceTable extends io.pulumi.resources.CustomResource {
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -124,7 +125,7 @@ public class TableResourceTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableResourceTable(String name, TableResourceTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:TableResourceTable", name, args == null ? TableResourceTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:documentdb:TableResourceTable", name, args == null ? TableResourceTableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TableResourceTable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

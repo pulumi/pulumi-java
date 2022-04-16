@@ -9,6 +9,7 @@ import io.pulumi.awsnative.panorama.enums.PackageVersionStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,73 +24,73 @@ public class PackageVersion extends io.pulumi.resources.CustomResource {
     @Export(name="isLatestPatch", type=Boolean.class, parameters={})
     private Output<Boolean> isLatestPatch;
 
-    public Output<Boolean> getIsLatestPatch() {
+    public Output<Boolean> isLatestPatch() {
         return this.isLatestPatch;
     }
     @Export(name="markLatest", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> markLatest;
 
-    public Output</* @Nullable */ Boolean> getMarkLatest() {
+    public Output</* @Nullable */ Boolean> markLatest() {
         return this.markLatest;
     }
     @Export(name="ownerAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerAccount;
 
-    public Output</* @Nullable */ String> getOwnerAccount() {
+    public Output</* @Nullable */ String> ownerAccount() {
         return this.ownerAccount;
     }
     @Export(name="packageArn", type=String.class, parameters={})
     private Output<String> packageArn;
 
-    public Output<String> getPackageArn() {
+    public Output<String> packageArn() {
         return this.packageArn;
     }
     @Export(name="packageId", type=String.class, parameters={})
     private Output<String> packageId;
 
-    public Output<String> getPackageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
     @Export(name="packageName", type=String.class, parameters={})
     private Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName;
     }
     @Export(name="packageVersion", type=String.class, parameters={})
     private Output<String> packageVersion;
 
-    public Output<String> getPackageVersion() {
+    public Output<String> packageVersion() {
         return this.packageVersion;
     }
     @Export(name="patchVersion", type=String.class, parameters={})
     private Output<String> patchVersion;
 
-    public Output<String> getPatchVersion() {
+    public Output<String> patchVersion() {
         return this.patchVersion;
     }
     @Export(name="registeredTime", type=Integer.class, parameters={})
     private Output<Integer> registeredTime;
 
-    public Output<Integer> getRegisteredTime() {
+    public Output<Integer> registeredTime() {
         return this.registeredTime;
     }
     @Export(name="status", type=PackageVersionStatus.class, parameters={})
     private Output<PackageVersionStatus> status;
 
-    public Output<PackageVersionStatus> getStatus() {
+    public Output<PackageVersionStatus> status() {
         return this.status;
     }
     @Export(name="statusDescription", type=String.class, parameters={})
     private Output<String> statusDescription;
 
-    public Output<String> getStatusDescription() {
+    public Output<String> statusDescription() {
         return this.statusDescription;
     }
     @Export(name="updatedLatestPatchVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> updatedLatestPatchVersion;
 
-    public Output</* @Nullable */ String> getUpdatedLatestPatchVersion() {
+    public Output</* @Nullable */ String> updatedLatestPatchVersion() {
         return this.updatedLatestPatchVersion;
     }
 
@@ -115,7 +116,7 @@ public class PackageVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PackageVersion(String name, PackageVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:panorama:PackageVersion", name, args == null ? PackageVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:panorama:PackageVersion", name, args == null ? PackageVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PackageVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

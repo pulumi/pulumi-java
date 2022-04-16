@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     @Import(name="fixedLikelihood")
       private final @Nullable Output<String> fixedLikelihood;
 
-    public Output<String> getFixedLikelihood() {
-        return this.fixedLikelihood == null ? Output.empty() : this.fixedLikelihood;
+    public Output<String> fixedLikelihood() {
+        return this.fixedLikelihood == null ? Codegen.empty() : this.fixedLikelihood;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     @Import(name="relativeLikelihood")
       private final @Nullable Output<Integer> relativeLikelihood;
 
-    public Output<Integer> getRelativeLikelihood() {
-        return this.relativeLikelihood == null ? Output.empty() : this.relativeLikelihood;
+    public Output<Integer> relativeLikelihood() {
+        return this.relativeLikelihood == null ? Codegen.empty() : this.relativeLikelihood;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs(
@@ -51,8 +52,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs() {
-        this.fixedLikelihood = Output.empty();
-        this.relativeLikelihood = Output.empty();
+        this.fixedLikelihood = Codegen.empty();
+        this.relativeLikelihood = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
             return this;
         }
         public Builder fixedLikelihood(@Nullable String fixedLikelihood) {
-            this.fixedLikelihood = Output.ofNullable(fixedLikelihood);
+            this.fixedLikelihood = Codegen.ofNullable(fixedLikelihood);
             return this;
         }
         public Builder relativeLikelihood(@Nullable Output<Integer> relativeLikelihood) {
@@ -90,7 +91,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
             return this;
         }
         public Builder relativeLikelihood(@Nullable Integer relativeLikelihood) {
-            this.relativeLikelihood = Output.ofNullable(relativeLikelihood);
+            this.relativeLikelihood = Codegen.ofNullable(relativeLikelihood);
             return this;
         }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs(fixedLikelihood, relativeLikelihood);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationA
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileTagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ec2SubnetIds", required=true)
       private final Output<List<String>> ec2SubnetIds;
 
-    public Output<List<String>> getEc2SubnetIds() {
+    public Output<List<String>> ec2SubnetIds() {
         return this.ec2SubnetIds;
     }
 
@@ -48,7 +49,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="launchProfileProtocolVersions", required=true)
       private final Output<List<String>> launchProfileProtocolVersions;
 
-    public Output<List<String>> getLaunchProfileProtocolVersions() {
+    public Output<List<String>> launchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
     }
 
@@ -59,14 +60,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="streamConfiguration", required=true)
       private final Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
 
-    public Output<LaunchProfileStreamConfigurationArgs> getStreamConfiguration() {
+    public Output<LaunchProfileStreamConfigurationArgs> streamConfiguration() {
         return this.streamConfiguration;
     }
 
@@ -78,7 +79,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="studioComponentIds", required=true)
       private final Output<List<String>> studioComponentIds;
 
-    public Output<List<String>> getStudioComponentIds() {
+    public Output<List<String>> studioComponentIds() {
         return this.studioComponentIds;
     }
 
@@ -89,15 +90,15 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<LaunchProfileTagsArgs> tags;
 
-    public Output<LaunchProfileTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<LaunchProfileTagsArgs> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LaunchProfileArgs(
@@ -120,14 +121,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LaunchProfileArgs() {
-        this.description = Output.empty();
-        this.ec2SubnetIds = Output.empty();
-        this.launchProfileProtocolVersions = Output.empty();
-        this.name = Output.empty();
-        this.streamConfiguration = Output.empty();
-        this.studioComponentIds = Output.empty();
-        this.studioId = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.ec2SubnetIds = Codegen.empty();
+        this.launchProfileProtocolVersions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.streamConfiguration = Codegen.empty();
+        this.studioComponentIds = Codegen.empty();
+        this.studioId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -169,7 +170,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ec2SubnetIds(Output<List<String>> ec2SubnetIds) {
@@ -199,7 +200,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder streamConfiguration(Output<LaunchProfileStreamConfigurationArgs> streamConfiguration) {
@@ -234,7 +235,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable LaunchProfileTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LaunchProfileArgs build() {
             return new LaunchProfileArgs(description, ec2SubnetIds, launchProfileProtocolVersions, name, streamConfiguration, studioComponentIds, studioId, tags);

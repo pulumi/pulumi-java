@@ -10,6 +10,7 @@ import io.pulumi.azurenative.keyvault.inputs.KeyAttributesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,8 +33,8 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<KeyAttributesArgs> attributes;
 
-    public Output<KeyAttributesArgs> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<KeyAttributesArgs> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -43,15 +44,15 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="curveName")
       private final @Nullable Output<Either<String,JsonWebKeyCurveName>> curveName;
 
-    public Output<Either<String,JsonWebKeyCurveName>> getCurveName() {
-        return this.curveName == null ? Output.empty() : this.curveName;
+    public Output<Either<String,JsonWebKeyCurveName>> curveName() {
+        return this.curveName == null ? Codegen.empty() : this.curveName;
     }
 
     @Import(name="keyOps")
       private final @Nullable Output<List<Either<String,JsonWebKeyOperation>>> keyOps;
 
-    public Output<List<Either<String,JsonWebKeyOperation>>> getKeyOps() {
-        return this.keyOps == null ? Output.empty() : this.keyOps;
+    public Output<List<Either<String,JsonWebKeyOperation>>> keyOps() {
+        return this.keyOps == null ? Codegen.empty() : this.keyOps;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySize")
       private final @Nullable Output<Integer> keySize;
 
-    public Output<Integer> getKeySize() {
-        return this.keySize == null ? Output.empty() : this.keySize;
+    public Output<Integer> keySize() {
+        return this.keySize == null ? Codegen.empty() : this.keySize;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kty")
       private final @Nullable Output<Either<String,JsonWebKeyType>> kty;
 
-    public Output<Either<String,JsonWebKeyType>> getKty() {
-        return this.kty == null ? Output.empty() : this.kty;
+    public Output<Either<String,JsonWebKeyType>> kty() {
+        return this.kty == null ? Codegen.empty() : this.kty;
     }
 
     public KeyPropertiesArgs(
@@ -90,11 +91,11 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPropertiesArgs() {
-        this.attributes = Output.empty();
-        this.curveName = Output.empty();
-        this.keyOps = Output.empty();
-        this.keySize = Output.empty();
-        this.kty = Output.empty();
+        this.attributes = Codegen.empty();
+        this.curveName = Codegen.empty();
+        this.keyOps = Codegen.empty();
+        this.keySize = Codegen.empty();
+        this.kty = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable KeyAttributesArgs attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder curveName(@Nullable Output<Either<String,JsonWebKeyCurveName>> curveName) {
@@ -138,7 +139,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder curveName(@Nullable Either<String,JsonWebKeyCurveName> curveName) {
-            this.curveName = Output.ofNullable(curveName);
+            this.curveName = Codegen.ofNullable(curveName);
             return this;
         }
         public Builder keyOps(@Nullable Output<List<Either<String,JsonWebKeyOperation>>> keyOps) {
@@ -146,7 +147,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyOps(@Nullable List<Either<String,JsonWebKeyOperation>> keyOps) {
-            this.keyOps = Output.ofNullable(keyOps);
+            this.keyOps = Codegen.ofNullable(keyOps);
             return this;
         }
         public Builder keyOps(Either<String,JsonWebKeyOperation>... keyOps) {
@@ -157,7 +158,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keySize(@Nullable Integer keySize) {
-            this.keySize = Output.ofNullable(keySize);
+            this.keySize = Codegen.ofNullable(keySize);
             return this;
         }
         public Builder kty(@Nullable Output<Either<String,JsonWebKeyType>> kty) {
@@ -165,7 +166,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kty(@Nullable Either<String,JsonWebKeyType> kty) {
-            this.kty = Output.ofNullable(kty);
+            this.kty = Codegen.ofNullable(kty);
             return this;
         }        public KeyPropertiesArgs build() {
             return new KeyPropertiesArgs(attributes, curveName, keyOps, keySize, kty);

@@ -13,6 +13,7 @@ import io.pulumi.azurenative.storagecache.inputs.UnknownTargetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobNfs")
       private final @Nullable Output<BlobNfsTargetArgs> blobNfs;
 
-    public Output<BlobNfsTargetArgs> getBlobNfs() {
-        return this.blobNfs == null ? Output.empty() : this.blobNfs;
+    public Output<BlobNfsTargetArgs> blobNfs() {
+        return this.blobNfs == null ? Codegen.empty() : this.blobNfs;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheName", required=true)
       private final Output<String> cacheName;
 
-    public Output<String> getCacheName() {
+    public Output<String> cacheName() {
         return this.cacheName;
     }
 
@@ -52,8 +53,8 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clfs")
       private final @Nullable Output<ClfsTargetArgs> clfs;
 
-    public Output<ClfsTargetArgs> getClfs() {
-        return this.clfs == null ? Output.empty() : this.clfs;
+    public Output<ClfsTargetArgs> clfs() {
+        return this.clfs == null ? Codegen.empty() : this.clfs;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="junctions")
       private final @Nullable Output<List<NamespaceJunctionArgs>> junctions;
 
-    public Output<List<NamespaceJunctionArgs>> getJunctions() {
-        return this.junctions == null ? Output.empty() : this.junctions;
+    public Output<List<NamespaceJunctionArgs>> junctions() {
+        return this.junctions == null ? Codegen.empty() : this.junctions;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nfs3")
       private final @Nullable Output<Nfs3TargetArgs> nfs3;
 
-    public Output<Nfs3TargetArgs> getNfs3() {
-        return this.nfs3 == null ? Output.empty() : this.nfs3;
+    public Output<Nfs3TargetArgs> nfs3() {
+        return this.nfs3 == null ? Codegen.empty() : this.nfs3;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
-    public Output<Either<String,ProvisioningStateType>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningStateType>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,8 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageTargetName")
       private final @Nullable Output<String> storageTargetName;
 
-    public Output<String> getStorageTargetName() {
-        return this.storageTargetName == null ? Output.empty() : this.storageTargetName;
+    public Output<String> storageTargetName() {
+        return this.storageTargetName == null ? Codegen.empty() : this.storageTargetName;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetType", required=true)
       private final Output<Either<String,StorageTargetType>> targetType;
 
-    public Output<Either<String,StorageTargetType>> getTargetType() {
+    public Output<Either<String,StorageTargetType>> targetType() {
         return this.targetType;
     }
 
@@ -129,8 +130,8 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unknown")
       private final @Nullable Output<UnknownTargetArgs> unknown;
 
-    public Output<UnknownTargetArgs> getUnknown() {
-        return this.unknown == null ? Output.empty() : this.unknown;
+    public Output<UnknownTargetArgs> unknown() {
+        return this.unknown == null ? Codegen.empty() : this.unknown;
     }
 
     public StorageTargetArgs(
@@ -157,16 +158,16 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageTargetArgs() {
-        this.blobNfs = Output.empty();
-        this.cacheName = Output.empty();
-        this.clfs = Output.empty();
-        this.junctions = Output.empty();
-        this.nfs3 = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageTargetName = Output.empty();
-        this.targetType = Output.empty();
-        this.unknown = Output.empty();
+        this.blobNfs = Codegen.empty();
+        this.cacheName = Codegen.empty();
+        this.clfs = Codegen.empty();
+        this.junctions = Codegen.empty();
+        this.nfs3 = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageTargetName = Codegen.empty();
+        this.targetType = Codegen.empty();
+        this.unknown = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -212,7 +213,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobNfs(@Nullable BlobNfsTargetArgs blobNfs) {
-            this.blobNfs = Output.ofNullable(blobNfs);
+            this.blobNfs = Codegen.ofNullable(blobNfs);
             return this;
         }
         public Builder cacheName(Output<String> cacheName) {
@@ -228,7 +229,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clfs(@Nullable ClfsTargetArgs clfs) {
-            this.clfs = Output.ofNullable(clfs);
+            this.clfs = Codegen.ofNullable(clfs);
             return this;
         }
         public Builder junctions(@Nullable Output<List<NamespaceJunctionArgs>> junctions) {
@@ -236,7 +237,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder junctions(@Nullable List<NamespaceJunctionArgs> junctions) {
-            this.junctions = Output.ofNullable(junctions);
+            this.junctions = Codegen.ofNullable(junctions);
             return this;
         }
         public Builder junctions(NamespaceJunctionArgs... junctions) {
@@ -247,7 +248,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nfs3(@Nullable Nfs3TargetArgs nfs3) {
-            this.nfs3 = Output.ofNullable(nfs3);
+            this.nfs3 = Codegen.ofNullable(nfs3);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
@@ -255,7 +256,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -271,7 +272,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageTargetName(@Nullable String storageTargetName) {
-            this.storageTargetName = Output.ofNullable(storageTargetName);
+            this.storageTargetName = Codegen.ofNullable(storageTargetName);
             return this;
         }
         public Builder targetType(Output<Either<String,StorageTargetType>> targetType) {
@@ -287,7 +288,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unknown(@Nullable UnknownTargetArgs unknown) {
-            this.unknown = Output.ofNullable(unknown);
+            this.unknown = Codegen.ofNullable(unknown);
             return this;
         }        public StorageTargetArgs build() {
             return new StorageTargetArgs(blobNfs, cacheName, clfs, junctions, nfs3, provisioningState, resourceGroupName, storageTargetName, targetType, unknown);

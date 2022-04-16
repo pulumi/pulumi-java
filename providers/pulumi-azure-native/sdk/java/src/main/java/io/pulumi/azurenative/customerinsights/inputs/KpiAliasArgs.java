@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aliasName", required=true)
       private final Output<String> aliasName;
 
-    public Output<String> getAliasName() {
+    public Output<String> aliasName() {
         return this.aliasName;
     }
 
@@ -35,7 +36,7 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
@@ -47,8 +48,8 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KpiAliasArgs() {
-        this.aliasName = Output.empty();
-        this.expression = Output.empty();
+        this.aliasName = Codegen.empty();
+        this.expression = Codegen.empty();
     }
 
     public static Builder builder() {

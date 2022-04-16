@@ -21,7 +21,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
     @Import(name="queryStringBehavior", required=true)
       private final String queryStringBehavior;
 
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
@@ -32,7 +32,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
     @Import(name="queryStrings", required=true)
       private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> getQueryStrings() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings() {
         return this.queryStrings;
     }
 

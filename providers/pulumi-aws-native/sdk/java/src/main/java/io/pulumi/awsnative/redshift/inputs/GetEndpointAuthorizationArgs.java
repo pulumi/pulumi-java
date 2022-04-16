@@ -19,7 +19,7 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
     @Import(name="account", required=true)
       private final String account;
 
-    public String getAccount() {
+    public String account() {
         return this.account;
     }
 
@@ -30,7 +30,7 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
     @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 

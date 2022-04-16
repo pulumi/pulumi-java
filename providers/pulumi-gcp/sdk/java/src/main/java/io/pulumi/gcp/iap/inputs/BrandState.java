@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationTitle")
       private final @Nullable Output<String> applicationTitle;
 
-    public Output<String> getApplicationTitle() {
-        return this.applicationTitle == null ? Output.empty() : this.applicationTitle;
+    public Output<String> applicationTitle() {
+        return this.applicationTitle == null ? Codegen.empty() : this.applicationTitle;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgInternalOnly")
       private final @Nullable Output<Boolean> orgInternalOnly;
 
-    public Output<Boolean> getOrgInternalOnly() {
-        return this.orgInternalOnly == null ? Output.empty() : this.orgInternalOnly;
+    public Output<Boolean> orgInternalOnly() {
+        return this.orgInternalOnly == null ? Codegen.empty() : this.orgInternalOnly;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
-        return this.supportEmail == null ? Output.empty() : this.supportEmail;
+    public Output<String> supportEmail() {
+        return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 
     public BrandState(
@@ -90,11 +91,11 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BrandState() {
-        this.applicationTitle = Output.empty();
-        this.name = Output.empty();
-        this.orgInternalOnly = Output.empty();
-        this.project = Output.empty();
-        this.supportEmail = Output.empty();
+        this.applicationTitle = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgInternalOnly = Codegen.empty();
+        this.project = Codegen.empty();
+        this.supportEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationTitle(@Nullable String applicationTitle) {
-            this.applicationTitle = Output.ofNullable(applicationTitle);
+            this.applicationTitle = Codegen.ofNullable(applicationTitle);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -138,7 +139,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgInternalOnly(@Nullable Output<Boolean> orgInternalOnly) {
@@ -146,7 +147,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder orgInternalOnly(@Nullable Boolean orgInternalOnly) {
-            this.orgInternalOnly = Output.ofNullable(orgInternalOnly);
+            this.orgInternalOnly = Codegen.ofNullable(orgInternalOnly);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -154,7 +155,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
@@ -162,7 +163,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Output.ofNullable(supportEmail);
+            this.supportEmail = Codegen.ofNullable(supportEmail);
             return this;
         }        public BrandState build() {
             return new BrandState(applicationTitle, name, orgInternalOnly, project, supportEmail);

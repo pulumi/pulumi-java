@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,15 +27,15 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
     @Import(name="metric", required=true)
       private final Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric;
     }
 
     @Import(name="metricDimension")
       private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {
-        return this.metricDimension == null ? Output.empty() : this.metricDimension;
+    public Output<SecurityProfileMetricDimensionArgs> metricDimension() {
+        return this.metricDimension == null ? Codegen.empty() : this.metricDimension;
     }
 
     public SecurityProfileMetricToRetainArgs(
@@ -45,8 +46,8 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
     }
 
     private SecurityProfileMetricToRetainArgs() {
-        this.metric = Output.empty();
-        this.metricDimension = Output.empty();
+        this.metric = Codegen.empty();
+        this.metricDimension = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
             return this;
         }
         public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
-            this.metricDimension = Output.ofNullable(metricDimension);
+            this.metricDimension = Codegen.ofNullable(metricDimension);
             return this;
         }        public SecurityProfileMetricToRetainArgs build() {
             return new SecurityProfileMetricToRetainArgs(metric, metricDimension);

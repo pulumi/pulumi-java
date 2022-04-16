@@ -49,28 +49,28 @@ public final class MetricTarget {
      * averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
      * 
     */
-    public Optional<Integer> getAverageUtilization() {
+    public Optional<Integer> averageUtilization() {
         return Optional.ofNullable(this.averageUtilization);
     }
     /**
      * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
      * 
     */
-    public Optional<String> getAverageValue() {
+    public Optional<String> averageValue() {
         return Optional.ofNullable(this.averageValue);
     }
     /**
      * type represents whether the metric type is Utilization, Value, or AverageValue
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * value is the target value of the metric (as a quantity).
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

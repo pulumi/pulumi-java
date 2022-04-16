@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
       private final @Nullable Output<String> keyPrefix;
 
-    public Output<String> getKeyPrefix() {
-        return this.keyPrefix == null ? Output.empty() : this.keyPrefix;
+    public Output<String> keyPrefix() {
+        return this.keyPrefix == null ? Codegen.empty() : this.keyPrefix;
     }
 
     public DatastoreCustomerManagedS3StorageArgs(
@@ -36,8 +37,8 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
     }
 
     private DatastoreCustomerManagedS3StorageArgs() {
-        this.bucket = Output.empty();
-        this.keyPrefix = Output.empty();
+        this.bucket = Codegen.empty();
+        this.keyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
             return this;
         }
         public Builder keyPrefix(@Nullable String keyPrefix) {
-            this.keyPrefix = Output.ofNullable(keyPrefix);
+            this.keyPrefix = Codegen.ofNullable(keyPrefix);
             return this;
         }        public DatastoreCustomerManagedS3StorageArgs build() {
             return new DatastoreCustomerManagedS3StorageArgs(bucket, keyPrefix);

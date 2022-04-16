@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxDiskSizeInMb")
       private final @Nullable Output<Double> maxDiskSizeInMb;
 
-    public Output<Double> getMaxDiskSizeInMb() {
-        return this.maxDiskSizeInMb == null ? Output.empty() : this.maxDiskSizeInMb;
+    public Output<Double> maxDiskSizeInMb() {
+        return this.maxDiskSizeInMb == null ? Codegen.empty() : this.maxDiskSizeInMb;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxMemoryInMb")
       private final @Nullable Output<Double> maxMemoryInMb;
 
-    public Output<Double> getMaxMemoryInMb() {
-        return this.maxMemoryInMb == null ? Output.empty() : this.maxMemoryInMb;
+    public Output<Double> maxMemoryInMb() {
+        return this.maxMemoryInMb == null ? Codegen.empty() : this.maxMemoryInMb;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPercentageCpu")
       private final @Nullable Output<Double> maxPercentageCpu;
 
-    public Output<Double> getMaxPercentageCpu() {
-        return this.maxPercentageCpu == null ? Output.empty() : this.maxPercentageCpu;
+    public Output<Double> maxPercentageCpu() {
+        return this.maxPercentageCpu == null ? Codegen.empty() : this.maxPercentageCpu;
     }
 
     public SiteLimitsArgs(
@@ -61,9 +62,9 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SiteLimitsArgs() {
-        this.maxDiskSizeInMb = Output.empty();
-        this.maxMemoryInMb = Output.empty();
-        this.maxPercentageCpu = Output.empty();
+        this.maxDiskSizeInMb = Codegen.empty();
+        this.maxMemoryInMb = Codegen.empty();
+        this.maxPercentageCpu = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
-            this.maxDiskSizeInMb = Output.ofNullable(maxDiskSizeInMb);
+            this.maxDiskSizeInMb = Codegen.ofNullable(maxDiskSizeInMb);
             return this;
         }
         public Builder maxMemoryInMb(@Nullable Output<Double> maxMemoryInMb) {
@@ -103,7 +104,7 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
-            this.maxMemoryInMb = Output.ofNullable(maxMemoryInMb);
+            this.maxMemoryInMb = Codegen.ofNullable(maxMemoryInMb);
             return this;
         }
         public Builder maxPercentageCpu(@Nullable Output<Double> maxPercentageCpu) {
@@ -111,7 +112,7 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
-            this.maxPercentageCpu = Output.ofNullable(maxPercentageCpu);
+            this.maxPercentageCpu = Codegen.ofNullable(maxPercentageCpu);
             return this;
         }        public SiteLimitsArgs build() {
             return new SiteLimitsArgs(maxDiskSizeInMb, maxMemoryInMb, maxPercentageCpu);

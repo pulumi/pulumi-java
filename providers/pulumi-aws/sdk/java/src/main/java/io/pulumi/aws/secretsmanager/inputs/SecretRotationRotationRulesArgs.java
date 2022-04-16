@@ -5,6 +5,7 @@ package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class SecretRotationRotationRulesArgs extends io.pulumi.resources.R
     @Import(name="automaticallyAfterDays", required=true)
       private final Output<Integer> automaticallyAfterDays;
 
-    public Output<Integer> getAutomaticallyAfterDays() {
+    public Output<Integer> automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 
@@ -29,7 +30,7 @@ public final class SecretRotationRotationRulesArgs extends io.pulumi.resources.R
     }
 
     private SecretRotationRotationRulesArgs() {
-        this.automaticallyAfterDays = Output.empty();
+        this.automaticallyAfterDays = Codegen.empty();
     }
 
     public static Builder builder() {

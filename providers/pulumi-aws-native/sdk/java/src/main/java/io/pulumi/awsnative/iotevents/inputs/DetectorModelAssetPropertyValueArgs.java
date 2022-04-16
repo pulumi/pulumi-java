@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyTimestampA
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyVariantArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,21 +28,21 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
     @Import(name="quality")
       private final @Nullable Output<String> quality;
 
-    public Output<String> getQuality() {
-        return this.quality == null ? Output.empty() : this.quality;
+    public Output<String> quality() {
+        return this.quality == null ? Codegen.empty() : this.quality;
     }
 
     @Import(name="timestamp")
       private final @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
 
-    public Output<DetectorModelAssetPropertyTimestampArgs> getTimestamp() {
-        return this.timestamp == null ? Output.empty() : this.timestamp;
+    public Output<DetectorModelAssetPropertyTimestampArgs> timestamp() {
+        return this.timestamp == null ? Codegen.empty() : this.timestamp;
     }
 
     @Import(name="value", required=true)
       private final Output<DetectorModelAssetPropertyVariantArgs> value;
 
-    public Output<DetectorModelAssetPropertyVariantArgs> getValue() {
+    public Output<DetectorModelAssetPropertyVariantArgs> value() {
         return this.value;
     }
 
@@ -55,9 +56,9 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
     }
 
     private DetectorModelAssetPropertyValueArgs() {
-        this.quality = Output.empty();
-        this.timestamp = Output.empty();
-        this.value = Output.empty();
+        this.quality = Codegen.empty();
+        this.timestamp = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
             return this;
         }
         public Builder quality(@Nullable String quality) {
-            this.quality = Output.ofNullable(quality);
+            this.quality = Codegen.ofNullable(quality);
             return this;
         }
         public Builder timestamp(@Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp) {
@@ -97,7 +98,7 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
             return this;
         }
         public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestampArgs timestamp) {
-            this.timestamp = Output.ofNullable(timestamp);
+            this.timestamp = Codegen.ofNullable(timestamp);
             return this;
         }
         public Builder value(Output<DetectorModelAssetPropertyVariantArgs> value) {

@@ -65,42 +65,42 @@ public final class ContainerResponse {
      * Container start command arguments.
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * Container start command.
      * 
     */
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * Container environment variables.
      * 
     */
-    public List<EnvironmentVarResponse> getEnv() {
+    public List<EnvironmentVarResponse> env() {
         return this.env == null ? List.of() : this.env;
     }
     /**
      * Container image tag.
      * 
     */
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
      * Custom container name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Container resource requirements.
      * 
     */
-    public Optional<ContainerResourcesResponse> getResources() {
+    public Optional<ContainerResourcesResponse> resources() {
         return Optional.ofNullable(this.resources);
     }
 

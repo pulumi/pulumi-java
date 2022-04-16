@@ -10,6 +10,7 @@ import io.pulumi.awsnative.datasync.outputs.LocationEFSTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
     @Export(name="ec2Config", type=LocationEFSEc2Config.class, parameters={})
     private Output<LocationEFSEc2Config> ec2Config;
 
-    public Output<LocationEFSEc2Config> getEc2Config() {
+    public Output<LocationEFSEc2Config> ec2Config() {
         return this.ec2Config;
     }
     /**
@@ -39,7 +40,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the Amazon EFS file system.
      * 
      */
-    public Output<String> getEfsFilesystemArn() {
+    public Output<String> efsFilesystemArn() {
         return this.efsFilesystemArn;
     }
     /**
@@ -53,7 +54,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -67,7 +68,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * @return The URL of the EFS location that was described.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     /**
@@ -81,7 +82,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * @return A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
      * 
      */
-    public Output</* @Nullable */ String> getSubdirectory() {
+    public Output</* @Nullable */ String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -95,7 +96,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationEFSTag>> getTags() {
+    public Output</* @Nullable */ List<LocationEFSTag>> tags() {
         return this.tags;
     }
 
@@ -121,7 +122,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationEFS(String name, LocationEFSArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:datasync:LocationEFS", name, args == null ? LocationEFSArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:datasync:LocationEFS", name, args == null ? LocationEFSArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocationEFS(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

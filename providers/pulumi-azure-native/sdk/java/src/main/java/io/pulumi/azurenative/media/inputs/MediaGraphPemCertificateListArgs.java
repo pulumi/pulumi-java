@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
     @Import(name="certificates", required=true)
       private final Output<List<String>> certificates;
 
-    public Output<List<String>> getCertificates() {
+    public Output<List<String>> certificates() {
         return this.certificates;
     }
 
@@ -37,7 +38,7 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -49,8 +50,8 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
     }
 
     private MediaGraphPemCertificateListArgs() {
-        this.certificates = Output.empty();
-        this.odataType = Output.empty();
+        this.certificates = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -24,7 +24,7 @@ public final class DataSourceParametersAwsIotAnalytics {
      * The name of the data set to which to connect.
      * 
     */
-    public String getDataSetName() {
+    public String dataSetName() {
         return this.dataSetName;
     }
 

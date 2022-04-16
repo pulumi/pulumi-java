@@ -33,14 +33,14 @@ public final class NetworkPolicyResponse {
      * Whether network policy is enabled on the cluster.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The selected network policy provider.
      * 
     */
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
 

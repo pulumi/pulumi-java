@@ -10,6 +10,7 @@ import io.pulumi.aws.lex.outputs.SlotTypeEnumerationValue;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * not included as an argument because the resource will add it automatically when updating the slot type.
      * 
      */
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum;
     }
     /**
@@ -61,7 +62,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * update. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCreateVersion() {
+    public Output</* @Nullable */ Boolean> createVersion() {
         return this.createVersion;
     }
     /**
@@ -75,7 +76,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @return The date when the slot type version was created.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -89,7 +90,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @return A description of the slot type. Must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -109,7 +110,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * documented under enumeration_value.
      * 
      */
-    public Output<List<SlotTypeEnumerationValue>> getEnumerationValues() {
+    public Output<List<SlotTypeEnumerationValue>> enumerationValues() {
         return this.enumerationValues;
     }
     /**
@@ -123,7 +124,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @return The date when the `$LATEST` version of this slot type was updated.
      * 
      */
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
@@ -137,7 +138,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @return The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +158,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
      * 
      */
-    public Output</* @Nullable */ String> getValueSelectionStrategy() {
+    public Output</* @Nullable */ String> valueSelectionStrategy() {
         return this.valueSelectionStrategy;
     }
     /**
@@ -171,7 +172,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @return The version of the slot type.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -197,7 +198,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SlotType(String name, SlotTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lex/slotType:SlotType", name, args == null ? SlotTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lex/slotType:SlotType", name, args == null ? SlotTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SlotType(String name, Output<String> id, @Nullable SlotTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

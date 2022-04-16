@@ -5,6 +5,7 @@ package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeCredit")
       private final @Nullable Output<Boolean> includeCredit;
 
-    public Output<Boolean> getIncludeCredit() {
-        return this.includeCredit == null ? Output.empty() : this.includeCredit;
+    public Output<Boolean> includeCredit() {
+        return this.includeCredit == null ? Codegen.empty() : this.includeCredit;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeDiscount")
       private final @Nullable Output<Boolean> includeDiscount;
 
-    public Output<Boolean> getIncludeDiscount() {
-        return this.includeDiscount == null ? Output.empty() : this.includeDiscount;
+    public Output<Boolean> includeDiscount() {
+        return this.includeDiscount == null ? Codegen.empty() : this.includeDiscount;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeOtherSubscription")
       private final @Nullable Output<Boolean> includeOtherSubscription;
 
-    public Output<Boolean> getIncludeOtherSubscription() {
-        return this.includeOtherSubscription == null ? Output.empty() : this.includeOtherSubscription;
+    public Output<Boolean> includeOtherSubscription() {
+        return this.includeOtherSubscription == null ? Codegen.empty() : this.includeOtherSubscription;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeRecurring")
       private final @Nullable Output<Boolean> includeRecurring;
 
-    public Output<Boolean> getIncludeRecurring() {
-        return this.includeRecurring == null ? Output.empty() : this.includeRecurring;
+    public Output<Boolean> includeRecurring() {
+        return this.includeRecurring == null ? Codegen.empty() : this.includeRecurring;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeRefund")
       private final @Nullable Output<Boolean> includeRefund;
 
-    public Output<Boolean> getIncludeRefund() {
-        return this.includeRefund == null ? Output.empty() : this.includeRefund;
+    public Output<Boolean> includeRefund() {
+        return this.includeRefund == null ? Codegen.empty() : this.includeRefund;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeSubscription")
       private final @Nullable Output<Boolean> includeSubscription;
 
-    public Output<Boolean> getIncludeSubscription() {
-        return this.includeSubscription == null ? Output.empty() : this.includeSubscription;
+    public Output<Boolean> includeSubscription() {
+        return this.includeSubscription == null ? Codegen.empty() : this.includeSubscription;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeSupport")
       private final @Nullable Output<Boolean> includeSupport;
 
-    public Output<Boolean> getIncludeSupport() {
-        return this.includeSupport == null ? Output.empty() : this.includeSupport;
+    public Output<Boolean> includeSupport() {
+        return this.includeSupport == null ? Codegen.empty() : this.includeSupport;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeTax")
       private final @Nullable Output<Boolean> includeTax;
 
-    public Output<Boolean> getIncludeTax() {
-        return this.includeTax == null ? Output.empty() : this.includeTax;
+    public Output<Boolean> includeTax() {
+        return this.includeTax == null ? Codegen.empty() : this.includeTax;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeUpfront")
       private final @Nullable Output<Boolean> includeUpfront;
 
-    public Output<Boolean> getIncludeUpfront() {
-        return this.includeUpfront == null ? Output.empty() : this.includeUpfront;
+    public Output<Boolean> includeUpfront() {
+        return this.includeUpfront == null ? Codegen.empty() : this.includeUpfront;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useAmortized")
       private final @Nullable Output<Boolean> useAmortized;
 
-    public Output<Boolean> getUseAmortized() {
-        return this.useAmortized == null ? Output.empty() : this.useAmortized;
+    public Output<Boolean> useAmortized() {
+        return this.useAmortized == null ? Codegen.empty() : this.useAmortized;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useBlended")
       private final @Nullable Output<Boolean> useBlended;
 
-    public Output<Boolean> getUseBlended() {
-        return this.useBlended == null ? Output.empty() : this.useBlended;
+    public Output<Boolean> useBlended() {
+        return this.useBlended == null ? Codegen.empty() : this.useBlended;
     }
 
     public BudgetCostTypesArgs(
@@ -161,17 +162,17 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BudgetCostTypesArgs() {
-        this.includeCredit = Output.empty();
-        this.includeDiscount = Output.empty();
-        this.includeOtherSubscription = Output.empty();
-        this.includeRecurring = Output.empty();
-        this.includeRefund = Output.empty();
-        this.includeSubscription = Output.empty();
-        this.includeSupport = Output.empty();
-        this.includeTax = Output.empty();
-        this.includeUpfront = Output.empty();
-        this.useAmortized = Output.empty();
-        this.useBlended = Output.empty();
+        this.includeCredit = Codegen.empty();
+        this.includeDiscount = Codegen.empty();
+        this.includeOtherSubscription = Codegen.empty();
+        this.includeRecurring = Codegen.empty();
+        this.includeRefund = Codegen.empty();
+        this.includeSubscription = Codegen.empty();
+        this.includeSupport = Codegen.empty();
+        this.includeTax = Codegen.empty();
+        this.includeUpfront = Codegen.empty();
+        this.useAmortized = Codegen.empty();
+        this.useBlended = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeCredit(@Nullable Boolean includeCredit) {
-            this.includeCredit = Output.ofNullable(includeCredit);
+            this.includeCredit = Codegen.ofNullable(includeCredit);
             return this;
         }
         public Builder includeDiscount(@Nullable Output<Boolean> includeDiscount) {
@@ -227,7 +228,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeDiscount(@Nullable Boolean includeDiscount) {
-            this.includeDiscount = Output.ofNullable(includeDiscount);
+            this.includeDiscount = Codegen.ofNullable(includeDiscount);
             return this;
         }
         public Builder includeOtherSubscription(@Nullable Output<Boolean> includeOtherSubscription) {
@@ -235,7 +236,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeOtherSubscription(@Nullable Boolean includeOtherSubscription) {
-            this.includeOtherSubscription = Output.ofNullable(includeOtherSubscription);
+            this.includeOtherSubscription = Codegen.ofNullable(includeOtherSubscription);
             return this;
         }
         public Builder includeRecurring(@Nullable Output<Boolean> includeRecurring) {
@@ -243,7 +244,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeRecurring(@Nullable Boolean includeRecurring) {
-            this.includeRecurring = Output.ofNullable(includeRecurring);
+            this.includeRecurring = Codegen.ofNullable(includeRecurring);
             return this;
         }
         public Builder includeRefund(@Nullable Output<Boolean> includeRefund) {
@@ -251,7 +252,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeRefund(@Nullable Boolean includeRefund) {
-            this.includeRefund = Output.ofNullable(includeRefund);
+            this.includeRefund = Codegen.ofNullable(includeRefund);
             return this;
         }
         public Builder includeSubscription(@Nullable Output<Boolean> includeSubscription) {
@@ -259,7 +260,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeSubscription(@Nullable Boolean includeSubscription) {
-            this.includeSubscription = Output.ofNullable(includeSubscription);
+            this.includeSubscription = Codegen.ofNullable(includeSubscription);
             return this;
         }
         public Builder includeSupport(@Nullable Output<Boolean> includeSupport) {
@@ -267,7 +268,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeSupport(@Nullable Boolean includeSupport) {
-            this.includeSupport = Output.ofNullable(includeSupport);
+            this.includeSupport = Codegen.ofNullable(includeSupport);
             return this;
         }
         public Builder includeTax(@Nullable Output<Boolean> includeTax) {
@@ -275,7 +276,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeTax(@Nullable Boolean includeTax) {
-            this.includeTax = Output.ofNullable(includeTax);
+            this.includeTax = Codegen.ofNullable(includeTax);
             return this;
         }
         public Builder includeUpfront(@Nullable Output<Boolean> includeUpfront) {
@@ -283,7 +284,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includeUpfront(@Nullable Boolean includeUpfront) {
-            this.includeUpfront = Output.ofNullable(includeUpfront);
+            this.includeUpfront = Codegen.ofNullable(includeUpfront);
             return this;
         }
         public Builder useAmortized(@Nullable Output<Boolean> useAmortized) {
@@ -291,7 +292,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder useAmortized(@Nullable Boolean useAmortized) {
-            this.useAmortized = Output.ofNullable(useAmortized);
+            this.useAmortized = Codegen.ofNullable(useAmortized);
             return this;
         }
         public Builder useBlended(@Nullable Output<Boolean> useBlended) {
@@ -299,7 +300,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder useBlended(@Nullable Boolean useBlended) {
-            this.useBlended = Output.ofNullable(useBlended);
+            this.useBlended = Codegen.ofNullable(useBlended);
             return this;
         }        public BudgetCostTypesArgs build() {
             return new BudgetCostTypesArgs(includeCredit, includeDiscount, includeOtherSubscription, includeRecurring, includeRefund, includeSubscription, includeSupport, includeTax, includeUpfront, useAmortized, useBlended);

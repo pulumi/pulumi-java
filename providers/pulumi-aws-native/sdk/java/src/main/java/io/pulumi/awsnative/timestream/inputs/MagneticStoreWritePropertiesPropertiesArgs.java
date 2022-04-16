@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
     @Import(name="enableMagneticStoreWrites", required=true)
       private final Output<Boolean> enableMagneticStoreWrites;
 
-    public Output<Boolean> getEnableMagneticStoreWrites() {
+    public Output<Boolean> enableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
     }
 
@@ -37,8 +38,8 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
     @Import(name="magneticStoreRejectedDataLocation")
       private final @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
 
-    public Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> getMagneticStoreRejectedDataLocation() {
-        return this.magneticStoreRejectedDataLocation == null ? Output.empty() : this.magneticStoreRejectedDataLocation;
+    public Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation() {
+        return this.magneticStoreRejectedDataLocation == null ? Codegen.empty() : this.magneticStoreRejectedDataLocation;
     }
 
     public MagneticStoreWritePropertiesPropertiesArgs(
@@ -49,8 +50,8 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
     }
 
     private MagneticStoreWritePropertiesPropertiesArgs() {
-        this.enableMagneticStoreWrites = Output.empty();
-        this.magneticStoreRejectedDataLocation = Output.empty();
+        this.enableMagneticStoreWrites = Codegen.empty();
+        this.magneticStoreRejectedDataLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder magneticStoreRejectedDataLocation(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs magneticStoreRejectedDataLocation) {
-            this.magneticStoreRejectedDataLocation = Output.ofNullable(magneticStoreRejectedDataLocation);
+            this.magneticStoreRejectedDataLocation = Codegen.ofNullable(magneticStoreRejectedDataLocation);
             return this;
         }        public MagneticStoreWritePropertiesPropertiesArgs build() {
             return new MagneticStoreWritePropertiesPropertiesArgs(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);

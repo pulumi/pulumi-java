@@ -17,11 +17,29 @@
         <mainArgs/>
     </properties>
 
+    <profiles>
+      <profile>
+        <id>default-pulumi-java-sdk-dependency</id>
+        <activation>
+          <property>
+            <name>!env.PULUMI_JAVA_SDK_VERSION</name>
+          </property>
+        </activation>
+        <dependencies>
+          <dependency>
+            <groupId>io.pulumi</groupId>
+            <artifactId>pulumi</artifactId>
+            <version>0.0.1</version>
+          </dependency>
+        </dependencies>
+      </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>io.pulumi</groupId>
             <artifactId>pulumi</artifactId>
-            <version>1.0.0</version>
+            <version>${env.PULUMI_JAVA_SDK_VERSION}</version>
         </dependency>
     </dependencies>
 

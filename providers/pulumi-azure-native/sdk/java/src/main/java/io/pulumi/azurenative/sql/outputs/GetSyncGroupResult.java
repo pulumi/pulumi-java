@@ -129,105 +129,105 @@ public final class GetSyncGroupResult {
      * Conflict logging retention period.
      * 
     */
-    public Optional<Integer> getConflictLoggingRetentionInDays() {
+    public Optional<Integer> conflictLoggingRetentionInDays() {
         return Optional.ofNullable(this.conflictLoggingRetentionInDays);
     }
     /**
      * Conflict resolution policy of the sync group.
      * 
     */
-    public Optional<String> getConflictResolutionPolicy() {
+    public Optional<String> conflictResolutionPolicy() {
         return Optional.ofNullable(this.conflictResolutionPolicy);
     }
     /**
      * If conflict logging is enabled.
      * 
     */
-    public Optional<Boolean> getEnableConflictLogging() {
+    public Optional<Boolean> enableConflictLogging() {
         return Optional.ofNullable(this.enableConflictLogging);
     }
     /**
      * User name for the sync group hub database credential.
      * 
     */
-    public Optional<String> getHubDatabaseUserName() {
+    public Optional<String> hubDatabaseUserName() {
         return Optional.ofNullable(this.hubDatabaseUserName);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Sync interval of the sync group.
      * 
     */
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Last sync time of the sync group.
      * 
     */
-    public String getLastSyncTime() {
+    public String lastSyncTime() {
         return this.lastSyncTime;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Private endpoint name of the sync group if use private link connection is enabled.
      * 
     */
-    public String getPrivateEndpointName() {
+    public String privateEndpointName() {
         return this.privateEndpointName;
     }
     /**
      * Sync schema of the sync group.
      * 
     */
-    public Optional<SyncGroupSchemaResponse> getSchema() {
+    public Optional<SyncGroupSchemaResponse> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * The name and capacity of the SKU.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * ARM resource id of the sync database in the sync group.
      * 
     */
-    public Optional<String> getSyncDatabaseId() {
+    public Optional<String> syncDatabaseId() {
         return Optional.ofNullable(this.syncDatabaseId);
     }
     /**
      * Sync state of the sync group.
      * 
     */
-    public String getSyncState() {
+    public String syncState() {
         return this.syncState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * If use private link connection is enabled.
      * 
     */
-    public Optional<Boolean> getUsePrivateLinkConnection() {
+    public Optional<Boolean> usePrivateLinkConnection() {
         return Optional.ofNullable(this.usePrivateLinkConnection);
     }
 

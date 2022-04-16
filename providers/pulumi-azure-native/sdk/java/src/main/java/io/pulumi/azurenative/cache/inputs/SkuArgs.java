@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cache.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
 
@@ -39,7 +40,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
       private final Output<Either<String,SkuFamily>> family;
 
-    public Output<Either<String,SkuFamily>> getFamily() {
+    public Output<Either<String,SkuFamily>> family() {
         return this.family;
     }
 
@@ -50,7 +51,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
 
-    public Output<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 
@@ -64,9 +65,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.capacity = Output.empty();
-        this.family = Output.empty();
-        this.name = Output.empty();
+        this.capacity = Codegen.empty();
+        this.family = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

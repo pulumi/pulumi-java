@@ -7,6 +7,7 @@ import io.pulumi.azurenative.relay.enums.SkuName;
 import io.pulumi.azurenative.relay.enums.SkuTier;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<SkuName> name;
 
-    public Output<SkuName> getName() {
+    public Output<SkuName> name() {
         return this.name;
     }
 
@@ -37,8 +38,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<SkuTier> tier;
 
-    public Output<SkuTier> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<SkuTier> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public SkuArgs(
@@ -49,8 +50,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable SkuTier tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public SkuArgs build() {
             return new SkuArgs(name, tier);

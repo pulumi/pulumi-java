@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @return Uri of the FarmBeats instance.
      * 
      */
-    public Output<String> getInstanceUri() {
+    public Output<String> instanceUri() {
         return this.instanceUri;
     }
     /**
@@ -57,7 +58,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @return FarmBeats instance provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +100,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -113,7 +114,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +128,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -153,7 +154,7 @@ public class FarmBeatsModel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FarmBeatsModel(String name, FarmBeatsModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:agfoodplatform:FarmBeatsModel", name, args == null ? FarmBeatsModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:agfoodplatform:FarmBeatsModel", name, args == null ? FarmBeatsModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FarmBeatsModel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

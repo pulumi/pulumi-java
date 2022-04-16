@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class ResponseHeadersPolicyReferrerPolicyArgs extends io.pulumi.res
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
     @Import(name="referrerPolicy", required=true)
       private final Output<String> referrerPolicy;
 
-    public Output<String> getReferrerPolicy() {
+    public Output<String> referrerPolicy() {
         return this.referrerPolicy;
     }
 
@@ -36,8 +37,8 @@ public final class ResponseHeadersPolicyReferrerPolicyArgs extends io.pulumi.res
     }
 
     private ResponseHeadersPolicyReferrerPolicyArgs() {
-        this.override = Output.empty();
-        this.referrerPolicy = Output.empty();
+        this.override = Codegen.empty();
+        this.referrerPolicy = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,16 +26,16 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="maxPercentUnhealthyServices")
       private final @Nullable Output<Integer> maxPercentUnhealthyServices;
 
-    public Output<Integer> getMaxPercentUnhealthyServices() {
-        return this.maxPercentUnhealthyServices == null ? Output.empty() : this.maxPercentUnhealthyServices;
+    public Output<Integer> maxPercentUnhealthyServices() {
+        return this.maxPercentUnhealthyServices == null ? Codegen.empty() : this.maxPercentUnhealthyServices;
     }
 
     public ServiceTypeHealthPolicyArgs(@Nullable Output<Integer> maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Output.ofNullable(0) : maxPercentUnhealthyServices;
+        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Codegen.ofNullable(0) : maxPercentUnhealthyServices;
     }
 
     private ServiceTypeHealthPolicyArgs() {
-        this.maxPercentUnhealthyServices = Output.empty();
+        this.maxPercentUnhealthyServices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
-            this.maxPercentUnhealthyServices = Output.ofNullable(maxPercentUnhealthyServices);
+            this.maxPercentUnhealthyServices = Codegen.ofNullable(maxPercentUnhealthyServices);
             return this;
         }        public ServiceTypeHealthPolicyArgs build() {
             return new ServiceTypeHealthPolicyArgs(maxPercentUnhealthyServices);

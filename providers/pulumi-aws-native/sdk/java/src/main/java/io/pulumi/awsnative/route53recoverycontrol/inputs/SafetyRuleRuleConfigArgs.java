@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53recoverycontrol.inputs;
 import io.pulumi.awsnative.route53recoverycontrol.enums.SafetyRuleRuleType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
     @Import(name="inverted", required=true)
       private final Output<Boolean> inverted;
 
-    public Output<Boolean> getInverted() {
+    public Output<Boolean> inverted() {
         return this.inverted;
     }
 
@@ -37,14 +38,14 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
     @Import(name="threshold", required=true)
       private final Output<Integer> threshold;
 
-    public Output<Integer> getThreshold() {
+    public Output<Integer> threshold() {
         return this.threshold;
     }
 
     @Import(name="type", required=true)
       private final Output<SafetyRuleRuleType> type;
 
-    public Output<SafetyRuleRuleType> getType() {
+    public Output<SafetyRuleRuleType> type() {
         return this.type;
     }
 
@@ -58,9 +59,9 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
     }
 
     private SafetyRuleRuleConfigArgs() {
-        this.inverted = Output.empty();
-        this.threshold = Output.empty();
-        this.type = Output.empty();
+        this.inverted = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

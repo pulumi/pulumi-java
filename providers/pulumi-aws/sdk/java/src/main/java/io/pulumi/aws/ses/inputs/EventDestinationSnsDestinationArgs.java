@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EventDestinationSnsDestinationArgs extends io.pulumi.resource
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 
@@ -29,7 +30,7 @@ public final class EventDestinationSnsDestinationArgs extends io.pulumi.resource
     }
 
     private EventDestinationSnsDestinationArgs() {
-        this.topicArn = Output.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {

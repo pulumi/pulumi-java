@@ -6,6 +6,7 @@ package io.pulumi.awsnative.transfer.inputs;
 import io.pulumi.awsnative.transfer.inputs.WorkflowS3TagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
     @Import(name="tags")
       private final @Nullable Output<List<WorkflowS3TagArgs>> tags;
 
-    public Output<List<WorkflowS3TagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<WorkflowS3TagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public WorkflowStepTagStepDetailsPropertiesArgs(
@@ -50,8 +51,8 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
     }
 
     private WorkflowStepTagStepDetailsPropertiesArgs() {
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<WorkflowS3TagArgs>> tags) {
@@ -89,7 +90,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder tags(@Nullable List<WorkflowS3TagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(WorkflowS3TagArgs... tags) {

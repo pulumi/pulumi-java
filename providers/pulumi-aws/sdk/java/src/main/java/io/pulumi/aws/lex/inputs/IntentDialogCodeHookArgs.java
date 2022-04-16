@@ -5,6 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class IntentDialogCodeHookArgs extends io.pulumi.resources.Resource
     @Import(name="messageVersion", required=true)
       private final Output<String> messageVersion;
 
-    public Output<String> getMessageVersion() {
+    public Output<String> messageVersion() {
         return this.messageVersion;
     }
 
@@ -33,7 +34,7 @@ public final class IntentDialogCodeHookArgs extends io.pulumi.resources.Resource
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -45,8 +46,8 @@ public final class IntentDialogCodeHookArgs extends io.pulumi.resources.Resource
     }
 
     private IntentDialogCodeHookArgs() {
-        this.messageVersion = Output.empty();
-        this.uri = Output.empty();
+        this.messageVersion = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+    public Output<Boolean> deleteOnTermination() {
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -46,8 +47,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+    public Output<Boolean> encrypted() {
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+    public Output<String> snapshotId() {
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,15 +102,15 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
-    public Output<Integer> getThroughput() {
-        return this.throughput == null ? Output.empty() : this.throughput;
+    public Output<Integer> throughput() {
+        return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
     @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
-        return this.volumeId == null ? Output.empty() : this.volumeId;
+    public Output<String> volumeId() {
+        return this.volumeId == null ? Codegen.empty() : this.volumeId;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+    public Output<Integer> volumeSize() {
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+    public Output<String> volumeType() {
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public SpotInstanceRequestEbsBlockDeviceArgs(
@@ -160,17 +161,17 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
     }
 
     private SpotInstanceRequestEbsBlockDeviceArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.deviceName = Output.empty();
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.snapshotId = Output.empty();
-        this.tags = Output.empty();
-        this.throughput = Output.empty();
-        this.volumeId = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.throughput = Codegen.empty();
+        this.volumeId = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -234,7 +235,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -242,7 +243,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -250,7 +251,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
@@ -258,7 +259,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -266,7 +267,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder throughput(@Nullable Output<Integer> throughput) {
@@ -274,7 +275,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Output.ofNullable(throughput);
+            this.throughput = Codegen.ofNullable(throughput);
             return this;
         }
         public Builder volumeId(@Nullable Output<String> volumeId) {
@@ -282,7 +283,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Output.ofNullable(volumeId);
+            this.volumeId = Codegen.ofNullable(volumeId);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -290,7 +291,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -298,7 +299,7 @@ public final class SpotInstanceRequestEbsBlockDeviceArgs extends io.pulumi.resou
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public SpotInstanceRequestEbsBlockDeviceArgs build() {
             return new SpotInstanceRequestEbsBlockDeviceArgs(deleteOnTermination, deviceName, encrypted, iops, kmsKeyId, snapshotId, tags, throughput, volumeId, volumeSize, volumeType);

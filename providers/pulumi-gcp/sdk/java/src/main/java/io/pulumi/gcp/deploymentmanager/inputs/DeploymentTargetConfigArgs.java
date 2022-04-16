@@ -5,6 +5,7 @@ package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -29,7 +30,7 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
     }
 
     private DeploymentTargetConfigArgs() {
-        this.content = Output.empty();
+        this.content = Codegen.empty();
     }
 
     public static Builder builder() {

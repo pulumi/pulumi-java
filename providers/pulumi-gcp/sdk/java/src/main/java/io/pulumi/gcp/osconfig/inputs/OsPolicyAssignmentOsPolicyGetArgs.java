@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="allowNoResourceGroupMatch")
       private final @Nullable Output<Boolean> allowNoResourceGroupMatch;
 
-    public Output<Boolean> getAllowNoResourceGroupMatch() {
-        return this.allowNoResourceGroupMatch == null ? Output.empty() : this.allowNoResourceGroupMatch;
+    public Output<Boolean> allowNoResourceGroupMatch() {
+        return this.allowNoResourceGroupMatch == null ? Codegen.empty() : this.allowNoResourceGroupMatch;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -57,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 
@@ -68,7 +69,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     @Import(name="resourceGroups", required=true)
       private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
 
-    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> getResourceGroups() {
+    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups() {
         return this.resourceGroups;
     }
 
@@ -86,11 +87,11 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     }
 
     private OsPolicyAssignmentOsPolicyGetArgs() {
-        this.allowNoResourceGroupMatch = Output.empty();
-        this.description = Output.empty();
-        this.id = Output.empty();
-        this.mode = Output.empty();
-        this.resourceGroups = Output.empty();
+        this.allowNoResourceGroupMatch = Codegen.empty();
+        this.description = Codegen.empty();
+        this.id = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.resourceGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
-            this.allowNoResourceGroupMatch = Output.ofNullable(allowNoResourceGroupMatch);
+            this.allowNoResourceGroupMatch = Codegen.ofNullable(allowNoResourceGroupMatch);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -134,7 +135,7 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder id(Output<String> id) {

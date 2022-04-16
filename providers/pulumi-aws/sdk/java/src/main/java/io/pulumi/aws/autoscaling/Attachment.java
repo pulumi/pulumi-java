@@ -9,6 +9,7 @@ import io.pulumi.aws.autoscaling.inputs.AttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return The ARN of an ALB Target Group.
      * 
      */
-    public Output</* @Nullable */ String> getAlbTargetGroupArn() {
+    public Output</* @Nullable */ String> albTargetGroupArn() {
         return this.albTargetGroupArn;
     }
     /**
@@ -54,7 +55,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return Name of ASG to associate with the ELB.
      * 
      */
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
     /**
@@ -68,7 +69,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return The name of the ELB.
      * 
      */
-    public Output</* @Nullable */ String> getElb() {
+    public Output</* @Nullable */ String> elb() {
         return this.elb;
     }
 
@@ -94,7 +95,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Attachment(String name, AttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:autoscaling/attachment:Attachment", name, args == null ? AttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:autoscaling/attachment:Attachment", name, args == null ? AttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Attachment(String name, Output<String> id, @Nullable AttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

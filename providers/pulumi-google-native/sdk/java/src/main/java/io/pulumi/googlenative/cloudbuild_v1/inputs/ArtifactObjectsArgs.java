@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> getPaths() {
-        return this.paths == null ? Output.empty() : this.paths;
+    public Output<List<String>> paths() {
+        return this.paths == null ? Codegen.empty() : this.paths;
     }
 
     public ArtifactObjectsArgs(
@@ -49,8 +50,8 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ArtifactObjectsArgs() {
-        this.location = Output.empty();
-        this.paths = Output.empty();
+        this.location = Codegen.empty();
+        this.paths = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder paths(@Nullable Output<List<String>> paths) {
@@ -88,7 +89,7 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Output.ofNullable(paths);
+            this.paths = Codegen.ofNullable(paths);
             return this;
         }
         public Builder paths(String... paths) {

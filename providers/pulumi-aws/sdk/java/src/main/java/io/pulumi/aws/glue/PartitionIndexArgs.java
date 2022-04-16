@@ -6,6 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -44,7 +45,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionIndex", required=true)
       private final Output<PartitionIndexPartitionIndexArgs> partitionIndex;
 
-    public Output<PartitionIndexPartitionIndexArgs> getPartitionIndex() {
+    public Output<PartitionIndexPartitionIndexArgs> partitionIndex() {
         return this.partitionIndex;
     }
 
@@ -55,7 +56,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -71,10 +72,10 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PartitionIndexArgs() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.partitionIndex = Output.empty();
-        this.tableName = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.partitionIndex = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {

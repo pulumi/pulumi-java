@@ -33,14 +33,14 @@ public final class GoogleCloudChannelV1PeriodResponse {
      * Total duration of Period Type defined.
      * 
     */
-    public Integer getDuration() {
+    public Integer duration() {
         return this.duration;
     }
     /**
      * Period Type.
      * 
     */
-    public String getPeriodType() {
+    public String periodType() {
         return this.periodType;
     }
 

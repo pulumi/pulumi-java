@@ -16,6 +16,7 @@ import io.pulumi.aws.dynamodb.outputs.TableTtl;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -52,7 +53,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The arn of the table
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -66,7 +67,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
      * 
      */
-    public Output<List<TableAttribute>> getAttributes() {
+    public Output<List<TableAttribute>> attributes() {
         return this.attributes;
     }
     /**
@@ -80,7 +81,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
      * 
      */
-    public Output</* @Nullable */ String> getBillingMode() {
+    public Output</* @Nullable */ String> billingMode() {
         return this.billingMode;
     }
     /**
@@ -98,7 +99,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * attributes, etc.
      * 
      */
-    public Output</* @Nullable */ List<TableGlobalSecondaryIndex>> getGlobalSecondaryIndexes() {
+    public Output</* @Nullable */ List<TableGlobalSecondaryIndex>> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes;
     }
     /**
@@ -114,7 +115,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * defined as an attribute in the resource.
      * 
      */
-    public Output<String> getHashKey() {
+    public Output<String> hashKey() {
         return this.hashKey;
     }
     /**
@@ -132,7 +133,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * definition after you have created the resource.
      * 
      */
-    public Output</* @Nullable */ List<TableLocalSecondaryIndex>> getLocalSecondaryIndexes() {
+    public Output</* @Nullable */ List<TableLocalSecondaryIndex>> localSecondaryIndexes() {
         return this.localSecondaryIndexes;
     }
     /**
@@ -146,7 +147,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the index
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +161,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Enable point-in-time recovery options.
      * 
      */
-    public Output<TablePointInTimeRecovery> getPointInTimeRecovery() {
+    public Output<TablePointInTimeRecovery> pointInTimeRecovery() {
         return this.pointInTimeRecovery;
     }
     /**
@@ -174,7 +175,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the range key; must be defined
      * 
      */
-    public Output</* @Nullable */ String> getRangeKey() {
+    public Output</* @Nullable */ String> rangeKey() {
         return this.rangeKey;
     }
     /**
@@ -188,7 +189,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    public Output<Integer> getReadCapacity() {
+    public Output<Integer> readCapacity() {
         return this.readCapacity;
     }
     /**
@@ -202,7 +203,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TableReplica>> getReplicas() {
+    public Output</* @Nullable */ List<TableReplica>> replicas() {
         return this.replicas;
     }
     /**
@@ -216,7 +217,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The time of the point-in-time recovery point to restore.
      * 
      */
-    public Output</* @Nullable */ String> getRestoreDateTime() {
+    public Output</* @Nullable */ String> restoreDateTime() {
         return this.restoreDateTime;
     }
     /**
@@ -230,7 +231,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the table to restore. Must match the name of an existing table.
      * 
      */
-    public Output</* @Nullable */ String> getRestoreSourceName() {
+    public Output</* @Nullable */ String> restoreSourceName() {
         return this.restoreSourceName;
     }
     /**
@@ -244,7 +245,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return If set, restores table to the most recent point-in-time recovery point.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRestoreToLatestTime() {
+    public Output</* @Nullable */ Boolean> restoreToLatestTime() {
         return this.restoreToLatestTime;
     }
     /**
@@ -258,7 +259,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
      * 
      */
-    public Output<TableServerSideEncryption> getServerSideEncryption() {
+    public Output<TableServerSideEncryption> serverSideEncryption() {
         return this.serverSideEncryption;
     }
     /**
@@ -272,7 +273,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Table Stream. Only available when `stream_enabled = true`
      * 
      */
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
     /**
@@ -286,7 +287,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Indicates whether Streams are to be enabled (true) or disabled (false).
      * 
      */
-    public Output</* @Nullable */ Boolean> getStreamEnabled() {
+    public Output</* @Nullable */ Boolean> streamEnabled() {
         return this.streamEnabled;
     }
     /**
@@ -306,7 +307,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * It can be used for creating CloudWatch Alarms. Only available when `stream_enabled = true`
      * 
      */
-    public Output<String> getStreamLabel() {
+    public Output<String> streamLabel() {
         return this.streamLabel;
     }
     /**
@@ -320,7 +321,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
      * 
      */
-    public Output<String> getStreamViewType() {
+    public Output<String> streamViewType() {
         return this.streamViewType;
     }
     /**
@@ -334,7 +335,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The storage class of the table. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`.
      * 
      */
-    public Output</* @Nullable */ String> getTableClass() {
+    public Output</* @Nullable */ String> tableClass() {
         return this.tableClass;
     }
     /**
@@ -348,7 +349,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -362,7 +363,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -376,7 +377,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Defines ttl, has two properties, and can only be specified once:
      * 
      */
-    public Output<TableTtl> getTtl() {
+    public Output<TableTtl> ttl() {
         return this.ttl;
     }
     /**
@@ -390,7 +391,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    public Output<Integer> getWriteCapacity() {
+    public Output<Integer> writeCapacity() {
         return this.writeCapacity;
     }
 
@@ -416,7 +417,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Table(String name, @Nullable TableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/table:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dynamodb/table:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Table(String name, Output<String> id, @Nullable TableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

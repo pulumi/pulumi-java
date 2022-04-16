@@ -7,6 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.FunctionConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.FunctionMetadataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,36 +21,36 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoPublish")
       private final @Nullable Output<Boolean> autoPublish;
 
-    public Output<Boolean> getAutoPublish() {
-        return this.autoPublish == null ? Output.empty() : this.autoPublish;
+    public Output<Boolean> autoPublish() {
+        return this.autoPublish == null ? Codegen.empty() : this.autoPublish;
     }
 
     @Import(name="functionCode")
       private final @Nullable Output<String> functionCode;
 
-    public Output<String> getFunctionCode() {
-        return this.functionCode == null ? Output.empty() : this.functionCode;
+    public Output<String> functionCode() {
+        return this.functionCode == null ? Codegen.empty() : this.functionCode;
     }
 
     @Import(name="functionConfig")
       private final @Nullable Output<FunctionConfigArgs> functionConfig;
 
-    public Output<FunctionConfigArgs> getFunctionConfig() {
-        return this.functionConfig == null ? Output.empty() : this.functionConfig;
+    public Output<FunctionConfigArgs> functionConfig() {
+        return this.functionConfig == null ? Codegen.empty() : this.functionConfig;
     }
 
     @Import(name="functionMetadata")
       private final @Nullable Output<FunctionMetadataArgs> functionMetadata;
 
-    public Output<FunctionMetadataArgs> getFunctionMetadata() {
-        return this.functionMetadata == null ? Output.empty() : this.functionMetadata;
+    public Output<FunctionMetadataArgs> functionMetadata() {
+        return this.functionMetadata == null ? Codegen.empty() : this.functionMetadata;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FunctionArgs(
@@ -66,11 +67,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.autoPublish = Output.empty();
-        this.functionCode = Output.empty();
-        this.functionConfig = Output.empty();
-        this.functionMetadata = Output.empty();
-        this.name = Output.empty();
+        this.autoPublish = Codegen.empty();
+        this.functionCode = Codegen.empty();
+        this.functionConfig = Codegen.empty();
+        this.functionMetadata = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoPublish(@Nullable Boolean autoPublish) {
-            this.autoPublish = Output.ofNullable(autoPublish);
+            this.autoPublish = Codegen.ofNullable(autoPublish);
             return this;
         }
         public Builder functionCode(@Nullable Output<String> functionCode) {
@@ -114,7 +115,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionCode(@Nullable String functionCode) {
-            this.functionCode = Output.ofNullable(functionCode);
+            this.functionCode = Codegen.ofNullable(functionCode);
             return this;
         }
         public Builder functionConfig(@Nullable Output<FunctionConfigArgs> functionConfig) {
@@ -122,7 +123,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionConfig(@Nullable FunctionConfigArgs functionConfig) {
-            this.functionConfig = Output.ofNullable(functionConfig);
+            this.functionConfig = Codegen.ofNullable(functionConfig);
             return this;
         }
         public Builder functionMetadata(@Nullable Output<FunctionMetadataArgs> functionMetadata) {
@@ -130,7 +131,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionMetadata(@Nullable FunctionMetadataArgs functionMetadata) {
-            this.functionMetadata = Output.ofNullable(functionMetadata);
+            this.functionMetadata = Codegen.ofNullable(functionMetadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -138,7 +139,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FunctionArgs build() {
             return new FunctionArgs(autoPublish, functionCode, functionConfig, functionMetadata, name);

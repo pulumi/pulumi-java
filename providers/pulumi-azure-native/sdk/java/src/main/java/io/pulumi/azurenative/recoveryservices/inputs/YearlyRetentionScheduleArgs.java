@@ -11,6 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionFormatArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,8 +33,8 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
     @Import(name="monthsOfYear")
       private final @Nullable Output<List<MonthOfYear>> monthsOfYear;
 
-    public Output<List<MonthOfYear>> getMonthsOfYear() {
-        return this.monthsOfYear == null ? Output.empty() : this.monthsOfYear;
+    public Output<List<MonthOfYear>> monthsOfYear() {
+        return this.monthsOfYear == null ? Codegen.empty() : this.monthsOfYear;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
     @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> getRetentionDuration() {
-        return this.retentionDuration == null ? Output.empty() : this.retentionDuration;
+    public Output<RetentionDurationArgs> retentionDuration() {
+        return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
     @Import(name="retentionScheduleDaily")
       private final @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
 
-    public Output<DailyRetentionFormatArgs> getRetentionScheduleDaily() {
-        return this.retentionScheduleDaily == null ? Output.empty() : this.retentionScheduleDaily;
+    public Output<DailyRetentionFormatArgs> retentionScheduleDaily() {
+        return this.retentionScheduleDaily == null ? Codegen.empty() : this.retentionScheduleDaily;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
     @Import(name="retentionScheduleFormatType")
       private final @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
 
-    public Output<Either<String,RetentionScheduleFormat>> getRetentionScheduleFormatType() {
-        return this.retentionScheduleFormatType == null ? Output.empty() : this.retentionScheduleFormatType;
+    public Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType() {
+        return this.retentionScheduleFormatType == null ? Codegen.empty() : this.retentionScheduleFormatType;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
     @Import(name="retentionScheduleWeekly")
       private final @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
 
-    public Output<WeeklyRetentionFormatArgs> getRetentionScheduleWeekly() {
-        return this.retentionScheduleWeekly == null ? Output.empty() : this.retentionScheduleWeekly;
+    public Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly() {
+        return this.retentionScheduleWeekly == null ? Codegen.empty() : this.retentionScheduleWeekly;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
     @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;
 
-    public Output<List<String>> getRetentionTimes() {
-        return this.retentionTimes == null ? Output.empty() : this.retentionTimes;
+    public Output<List<String>> retentionTimes() {
+        return this.retentionTimes == null ? Codegen.empty() : this.retentionTimes;
     }
 
     public YearlyRetentionScheduleArgs(
@@ -107,12 +108,12 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
     }
 
     private YearlyRetentionScheduleArgs() {
-        this.monthsOfYear = Output.empty();
-        this.retentionDuration = Output.empty();
-        this.retentionScheduleDaily = Output.empty();
-        this.retentionScheduleFormatType = Output.empty();
-        this.retentionScheduleWeekly = Output.empty();
-        this.retentionTimes = Output.empty();
+        this.monthsOfYear = Codegen.empty();
+        this.retentionDuration = Codegen.empty();
+        this.retentionScheduleDaily = Codegen.empty();
+        this.retentionScheduleFormatType = Codegen.empty();
+        this.retentionScheduleWeekly = Codegen.empty();
+        this.retentionTimes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder monthsOfYear(@Nullable List<MonthOfYear> monthsOfYear) {
-            this.monthsOfYear = Output.ofNullable(monthsOfYear);
+            this.monthsOfYear = Codegen.ofNullable(monthsOfYear);
             return this;
         }
         public Builder monthsOfYear(MonthOfYear... monthsOfYear) {
@@ -161,7 +162,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Output.ofNullable(retentionDuration);
+            this.retentionDuration = Codegen.ofNullable(retentionDuration);
             return this;
         }
         public Builder retentionScheduleDaily(@Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily) {
@@ -169,7 +170,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retentionScheduleDaily(@Nullable DailyRetentionFormatArgs retentionScheduleDaily) {
-            this.retentionScheduleDaily = Output.ofNullable(retentionScheduleDaily);
+            this.retentionScheduleDaily = Codegen.ofNullable(retentionScheduleDaily);
             return this;
         }
         public Builder retentionScheduleFormatType(@Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType) {
@@ -177,7 +178,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retentionScheduleFormatType(@Nullable Either<String,RetentionScheduleFormat> retentionScheduleFormatType) {
-            this.retentionScheduleFormatType = Output.ofNullable(retentionScheduleFormatType);
+            this.retentionScheduleFormatType = Codegen.ofNullable(retentionScheduleFormatType);
             return this;
         }
         public Builder retentionScheduleWeekly(@Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly) {
@@ -185,7 +186,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retentionScheduleWeekly(@Nullable WeeklyRetentionFormatArgs retentionScheduleWeekly) {
-            this.retentionScheduleWeekly = Output.ofNullable(retentionScheduleWeekly);
+            this.retentionScheduleWeekly = Codegen.ofNullable(retentionScheduleWeekly);
             return this;
         }
         public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
@@ -193,7 +194,7 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = Output.ofNullable(retentionTimes);
+            this.retentionTimes = Codegen.ofNullable(retentionTimes);
             return this;
         }
         public Builder retentionTimes(String... retentionTimes) {

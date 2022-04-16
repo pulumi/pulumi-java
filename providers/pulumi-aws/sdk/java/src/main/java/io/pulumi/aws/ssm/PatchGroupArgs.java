@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baselineId", required=true)
       private final Output<String> baselineId;
 
-    public Output<String> getBaselineId() {
+    public Output<String> baselineId() {
         return this.baselineId;
     }
 
@@ -31,7 +32,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="patchGroup", required=true)
       private final Output<String> patchGroup;
 
-    public Output<String> getPatchGroup() {
+    public Output<String> patchGroup() {
         return this.patchGroup;
     }
 
@@ -43,8 +44,8 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchGroupArgs() {
-        this.baselineId = Output.empty();
-        this.patchGroup = Output.empty();
+        this.baselineId = Codegen.empty();
+        this.patchGroup = Codegen.empty();
     }
 
     public static Builder builder() {

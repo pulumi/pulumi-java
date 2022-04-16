@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
 
@@ -31,7 +32,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     @Import(name="applicationKey", required=true)
       private final Output<String> applicationKey;
 
-    public Output<String> getApplicationKey() {
+    public Output<String> applicationKey() {
         return this.applicationKey;
     }
 
@@ -43,8 +44,8 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     }
 
     private ConnectorProfileDatadogConnectorProfileCredentialsArgs() {
-        this.apiKey = Output.empty();
-        this.applicationKey = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.applicationKey = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceRepositoryResourceAptRepositoryArchiveType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     @Import(name="archiveType", required=true)
       private final Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
 
-    public Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> getArchiveType() {
+    public Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType() {
         return this.archiveType;
     }
 
@@ -38,7 +39,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     @Import(name="components", required=true)
       private final Output<List<String>> components;
 
-    public Output<List<String>> getComponents() {
+    public Output<List<String>> components() {
         return this.components;
     }
 
@@ -49,7 +50,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
-    public Output<String> getDistribution() {
+    public Output<String> distribution() {
         return this.distribution;
     }
 
@@ -60,8 +61,8 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
-    public Output<String> getGpgKey() {
-        return this.gpgKey == null ? Output.empty() : this.gpgKey;
+    public Output<String> gpgKey() {
+        return this.gpgKey == null ? Codegen.empty() : this.gpgKey;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -89,11 +90,11 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     }
 
     private OSPolicyResourceRepositoryResourceAptRepositoryArgs() {
-        this.archiveType = Output.empty();
-        this.components = Output.empty();
-        this.distribution = Output.empty();
-        this.gpgKey = Output.empty();
-        this.uri = Output.empty();
+        this.archiveType = Codegen.empty();
+        this.components = Codegen.empty();
+        this.distribution = Codegen.empty();
+        this.gpgKey = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
             return this;
         }
         public Builder gpgKey(@Nullable String gpgKey) {
-            this.gpgKey = Output.ofNullable(gpgKey);
+            this.gpgKey = Codegen.ofNullable(gpgKey);
             return this;
         }
         public Builder uri(Output<String> uri) {

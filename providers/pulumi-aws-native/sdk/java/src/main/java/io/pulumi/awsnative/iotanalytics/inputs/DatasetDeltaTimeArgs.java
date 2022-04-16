@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="offsetSeconds", required=true)
       private final Output<Integer> offsetSeconds;
 
-    public Output<Integer> getOffsetSeconds() {
+    public Output<Integer> offsetSeconds() {
         return this.offsetSeconds;
     }
 
     @Import(name="timeExpression", required=true)
       private final Output<String> timeExpression;
 
-    public Output<String> getTimeExpression() {
+    public Output<String> timeExpression() {
         return this.timeExpression;
     }
 
@@ -36,8 +37,8 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatasetDeltaTimeArgs() {
-        this.offsetSeconds = Output.empty();
-        this.timeExpression = Output.empty();
+        this.offsetSeconds = Codegen.empty();
+        this.timeExpression = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) of the extension.
      * 
      */
-    public Output</* @Nullable */ String> getArn() {
+    public Output</* @Nullable */ String> arn() {
         return this.arn;
     }
     /**
@@ -43,7 +44,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return A url to the S3 bucket where logs for the testType run will be available
      * 
      */
-    public Output</* @Nullable */ String> getLogDeliveryBucket() {
+    public Output</* @Nullable */ String> logDeliveryBucket() {
         return this.logDeliveryBucket;
     }
     /**
@@ -57,7 +58,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
      */
-    public Output<String> getPublicTypeArn() {
+    public Output<String> publicTypeArn() {
         return this.publicTypeArn;
     }
     /**
@@ -71,7 +72,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return The version number of a public third-party extension
      * 
      */
-    public Output</* @Nullable */ String> getPublicVersionNumber() {
+    public Output</* @Nullable */ String> publicVersionNumber() {
         return this.publicVersionNumber;
     }
     /**
@@ -85,7 +86,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    public Output<String> getPublisherId() {
+    public Output<String> publisherId() {
         return this.publisherId;
     }
     /**
@@ -99,7 +100,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return The kind of extension
      * 
      */
-    public Output</* @Nullable */ PublicTypeVersionType> getType() {
+    public Output</* @Nullable */ PublicTypeVersionType> type() {
         return this.type;
     }
     /**
@@ -117,7 +118,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
     /**
@@ -131,7 +132,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) of the extension with the versionId.
      * 
      */
-    public Output<String> getTypeVersionArn() {
+    public Output<String> typeVersionArn() {
         return this.typeVersionArn;
     }
 
@@ -157,7 +158,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicTypeVersion(String name, @Nullable PublicTypeVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudformation:PublicTypeVersion", name, args == null ? PublicTypeVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudformation:PublicTypeVersion", name, args == null ? PublicTypeVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublicTypeVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

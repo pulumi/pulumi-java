@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoName")
       private final @Nullable Output<String> repoName;
 
-    public Output<String> getRepoName() {
-        return this.repoName == null ? Output.empty() : this.repoName;
+    public Output<String> repoName() {
+        return this.repoName == null ? Codegen.empty() : this.repoName;
     }
 
     public ProjectRepoIdArgs(
@@ -48,8 +49,8 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectRepoIdArgs() {
-        this.project = Output.empty();
-        this.repoName = Output.empty();
+        this.project = Codegen.empty();
+        this.repoName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder repoName(@Nullable Output<String> repoName) {
@@ -87,7 +88,7 @@ public final class ProjectRepoIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repoName(@Nullable String repoName) {
-            this.repoName = Output.ofNullable(repoName);
+            this.repoName = Codegen.ofNullable(repoName);
             return this;
         }        public ProjectRepoIdArgs build() {
             return new ProjectRepoIdArgs(project, repoName);

@@ -46,28 +46,28 @@ public final class JobStatusResponse {
      * Optional. Output only. Job state details, such as an error description if the state is ERROR.
      * 
     */
-    public String getDetails() {
+    public String details() {
         return this.details;
     }
     /**
      * A state message specifying the overall job state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The time when this state was entered.
      * 
     */
-    public String getStateStartTime() {
+    public String stateStartTime() {
         return this.stateStartTime;
     }
     /**
      * Additional state information, which includes status reported by the agent.
      * 
     */
-    public String getSubstate() {
+    public String substate() {
         return this.substate;
     }
 

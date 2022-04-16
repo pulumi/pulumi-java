@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consoleAccess")
       private final @Nullable Output<Boolean> consoleAccess;
 
-    public Output<Boolean> getConsoleAccess() {
-        return this.consoleAccess == null ? Output.empty() : this.consoleAccess;
+    public Output<Boolean> consoleAccess() {
+        return this.consoleAccess == null ? Codegen.empty() : this.consoleAccess;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
-        return this.groups == null ? Output.empty() : this.groups;
+    public Output<List<String>> groups() {
+        return this.groups == null ? Codegen.empty() : this.groups;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -56,7 +57,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -72,10 +73,10 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BrokerUserGetArgs() {
-        this.consoleAccess = Output.empty();
-        this.groups = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.consoleAccess = Codegen.empty();
+        this.groups = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consoleAccess(@Nullable Boolean consoleAccess) {
-            this.consoleAccess = Output.ofNullable(consoleAccess);
+            this.consoleAccess = Codegen.ofNullable(consoleAccess);
             return this;
         }
         public Builder groups(@Nullable Output<List<String>> groups) {
@@ -117,7 +118,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Output.ofNullable(groups);
+            this.groups = Codegen.ofNullable(groups);
             return this;
         }
         public Builder groups(String... groups) {

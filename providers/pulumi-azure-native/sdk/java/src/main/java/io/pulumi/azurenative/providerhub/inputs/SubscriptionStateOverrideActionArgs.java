@@ -8,6 +8,7 @@ import io.pulumi.azurenative.providerhub.enums.SubscriptionTransitioningState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,14 +20,14 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     @Import(name="action", required=true)
       private final Output<Either<String,SubscriptionNotificationOperation>> action;
 
-    public Output<Either<String,SubscriptionNotificationOperation>> getAction() {
+    public Output<Either<String,SubscriptionNotificationOperation>> action() {
         return this.action;
     }
 
     @Import(name="state", required=true)
       private final Output<Either<String,SubscriptionTransitioningState>> state;
 
-    public Output<Either<String,SubscriptionTransitioningState>> getState() {
+    public Output<Either<String,SubscriptionTransitioningState>> state() {
         return this.state;
     }
 
@@ -38,8 +39,8 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     }
 
     private SubscriptionStateOverrideActionArgs() {
-        this.action = Output.empty();
-        this.state = Output.empty();
+        this.action = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {

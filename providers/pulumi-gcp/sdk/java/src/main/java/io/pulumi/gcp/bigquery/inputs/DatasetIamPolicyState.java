@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+    public Output<String> datasetId() {
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatasetIamPolicyState(
@@ -72,10 +73,10 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetIamPolicyState() {
-        this.datasetId = Output.empty();
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -117,7 +118,7 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -125,7 +126,7 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -133,7 +134,7 @@ public final class DatasetIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatasetIamPolicyState build() {
             return new DatasetIamPolicyState(datasetId, etag, policyData, project);

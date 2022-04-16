@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="countryCode")
       private final @Nullable Output<String> countryCode;
 
-    public Output<String> getCountryCode() {
-        return this.countryCode == null ? Output.empty() : this.countryCode;
+    public Output<String> countryCode() {
+        return this.countryCode == null ? Codegen.empty() : this.countryCode;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locality")
       private final @Nullable Output<String> locality;
 
-    public Output<String> getLocality() {
-        return this.locality == null ? Output.empty() : this.locality;
+    public Output<String> locality() {
+        return this.locality == null ? Codegen.empty() : this.locality;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
-        return this.organization == null ? Output.empty() : this.organization;
+    public Output<String> organization() {
+        return this.organization == null ? Codegen.empty() : this.organization;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
-    public Output<String> getOrganizationalUnit() {
-        return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
+    public Output<String> organizationalUnit() {
+        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
-    public Output<String> getPostalCode() {
-        return this.postalCode == null ? Output.empty() : this.postalCode;
+    public Output<String> postalCode() {
+        return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="province")
       private final @Nullable Output<String> province;
 
-    public Output<String> getProvince() {
-        return this.province == null ? Output.empty() : this.province;
+    public Output<String> province() {
+        return this.province == null ? Codegen.empty() : this.province;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streetAddress")
       private final @Nullable Output<String> streetAddress;
 
-    public Output<String> getStreetAddress() {
-        return this.streetAddress == null ? Output.empty() : this.streetAddress;
+    public Output<String> streetAddress() {
+        return this.streetAddress == null ? Codegen.empty() : this.streetAddress;
     }
 
     public SubjectArgs(
@@ -113,13 +114,13 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubjectArgs() {
-        this.countryCode = Output.empty();
-        this.locality = Output.empty();
-        this.organization = Output.empty();
-        this.organizationalUnit = Output.empty();
-        this.postalCode = Output.empty();
-        this.province = Output.empty();
-        this.streetAddress = Output.empty();
+        this.countryCode = Codegen.empty();
+        this.locality = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.organizationalUnit = Codegen.empty();
+        this.postalCode = Codegen.empty();
+        this.province = Codegen.empty();
+        this.streetAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder countryCode(@Nullable String countryCode) {
-            this.countryCode = Output.ofNullable(countryCode);
+            this.countryCode = Codegen.ofNullable(countryCode);
             return this;
         }
         public Builder locality(@Nullable Output<String> locality) {
@@ -167,7 +168,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locality(@Nullable String locality) {
-            this.locality = Output.ofNullable(locality);
+            this.locality = Codegen.ofNullable(locality);
             return this;
         }
         public Builder organization(@Nullable Output<String> organization) {
@@ -175,7 +176,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder organization(@Nullable String organization) {
-            this.organization = Output.ofNullable(organization);
+            this.organization = Codegen.ofNullable(organization);
             return this;
         }
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
@@ -183,7 +184,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Output.ofNullable(organizationalUnit);
+            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
             return this;
         }
         public Builder postalCode(@Nullable Output<String> postalCode) {
@@ -191,7 +192,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Output.ofNullable(postalCode);
+            this.postalCode = Codegen.ofNullable(postalCode);
             return this;
         }
         public Builder province(@Nullable Output<String> province) {
@@ -199,7 +200,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder province(@Nullable String province) {
-            this.province = Output.ofNullable(province);
+            this.province = Codegen.ofNullable(province);
             return this;
         }
         public Builder streetAddress(@Nullable Output<String> streetAddress) {
@@ -207,7 +208,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streetAddress(@Nullable String streetAddress) {
-            this.streetAddress = Output.ofNullable(streetAddress);
+            this.streetAddress = Codegen.ofNullable(streetAddress);
             return this;
         }        public SubjectArgs build() {
             return new SubjectArgs(countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);

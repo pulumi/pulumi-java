@@ -5,6 +5,7 @@ package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,14 +23,14 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditLogConfigs", required=true)
       private final Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<IamAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
     @Import(name="folder", required=true)
       private final Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
@@ -40,7 +41,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -54,9 +55,9 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IamAuditConfigArgs() {
-        this.auditLogConfigs = Output.empty();
-        this.folder = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

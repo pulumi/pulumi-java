@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
+    public Output<String> privateIpAddress() {
+        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
     public NetworkInterfaceArgs(@Nullable Output<String> privateIpAddress) {
@@ -34,7 +35,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.privateIpAddress = Output.empty();
+        this.privateIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Output.ofNullable(privateIpAddress);
+            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
             return this;
         }        public NetworkInterfaceArgs build() {
             return new NetworkInterfaceArgs(privateIpAddress);

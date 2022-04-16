@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigateway_v1beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayAuditConfigArgs;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBindingArgs;
 import java.lang.Integer;
@@ -21,7 +22,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -32,8 +33,8 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="auditConfigs")
       private final @Nullable Output<List<ApigatewayAuditConfigArgs>> auditConfigs;
 
-    public Output<List<ApigatewayAuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
+    public Output<List<ApigatewayAuditConfigArgs>> auditConfigs() {
+        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
     /**
@@ -43,14 +44,14 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bindings")
       private final @Nullable Output<List<ApigatewayBindingArgs>> bindings;
 
-    public Output<List<ApigatewayBindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+    public Output<List<ApigatewayBindingArgs>> bindings() {
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -61,22 +62,22 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="updateMask")
       private final @Nullable Output<String> updateMask;
 
-    public Output<String> getUpdateMask() {
-        return this.updateMask == null ? Output.empty() : this.updateMask;
+    public Output<String> updateMask() {
+        return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ApiConfigIamPolicyArgs(
@@ -123,15 +124,15 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApiConfigIamPolicyArgs() {
-        this.apiId = Output.empty();
-        this.auditConfigs = Output.empty();
-        this.bindings = Output.empty();
-        this.configId = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.updateMask = Output.empty();
-        this.version = Output.empty();
+        this.apiId = Codegen.empty();
+        this.auditConfigs = Codegen.empty();
+        this.bindings = Codegen.empty();
+        this.configId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.updateMask = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder auditConfigs(@Nullable List<ApigatewayAuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Output.ofNullable(auditConfigs);
+            this.auditConfigs = Codegen.ofNullable(auditConfigs);
             return this;
         }
         public Builder auditConfigs(ApigatewayAuditConfigArgs... auditConfigs) {
@@ -194,7 +195,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder bindings(@Nullable List<ApigatewayBindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(ApigatewayBindingArgs... bindings) {
@@ -213,7 +214,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -221,7 +222,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -229,7 +230,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder updateMask(@Nullable Output<String> updateMask) {
@@ -237,7 +238,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Output.ofNullable(updateMask);
+            this.updateMask = Codegen.ofNullable(updateMask);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -245,7 +246,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ApiConfigIamPolicyArgs build() {
             return new ApiConfigIamPolicyArgs(apiId, auditConfigs, bindings, configId, etag, location, project, updateMask, version);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -36,7 +37,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -47,8 +48,8 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
     @Import(name="rootFolderPath")
       private final @Nullable Output<String> rootFolderPath;
 
-    public Output<String> getRootFolderPath() {
-        return this.rootFolderPath == null ? Output.empty() : this.rootFolderPath;
+    public Output<String> rootFolderPath() {
+        return this.rootFolderPath == null ? Codegen.empty() : this.rootFolderPath;
     }
 
     public ReportDeliveryDestinationArgs(
@@ -61,9 +62,9 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
     }
 
     private ReportDeliveryDestinationArgs() {
-        this.container = Output.empty();
-        this.resourceId = Output.empty();
-        this.rootFolderPath = Output.empty();
+        this.container = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.rootFolderPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder rootFolderPath(@Nullable String rootFolderPath) {
-            this.rootFolderPath = Output.ofNullable(rootFolderPath);
+            this.rootFolderPath = Codegen.ofNullable(rootFolderPath);
             return this;
         }        public ReportDeliveryDestinationArgs build() {
             return new ReportDeliveryDestinationArgs(container, resourceId, rootFolderPath);

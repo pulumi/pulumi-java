@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGet
     @Import(name="replacementStrategy")
       private final @Nullable Output<String> replacementStrategy;
 
-    public Output<String> getReplacementStrategy() {
-        return this.replacementStrategy == null ? Output.empty() : this.replacementStrategy;
+    public Output<String> replacementStrategy() {
+        return this.replacementStrategy == null ? Codegen.empty() : this.replacementStrategy;
     }
 
     public SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs(@Nullable Output<String> replacementStrategy) {
@@ -30,7 +31,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGet
     }
 
     private SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs() {
-        this.replacementStrategy = Output.empty();
+        this.replacementStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGet
             return this;
         }
         public Builder replacementStrategy(@Nullable String replacementStrategy) {
-            this.replacementStrategy = Output.ofNullable(replacementStrategy);
+            this.replacementStrategy = Codegen.ofNullable(replacementStrategy);
             return this;
         }        public SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs build() {
             return new SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs(replacementStrategy);

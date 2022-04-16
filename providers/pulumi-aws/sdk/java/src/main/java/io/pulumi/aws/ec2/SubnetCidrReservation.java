@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.SubnetCidrReservationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * @return The CIDR block for the reservation.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -53,7 +54,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * @return A brief description of the reservation.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -67,7 +68,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * @return ID of the AWS account that owns this CIDR reservation.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -81,7 +82,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * @return The type of reservation to create. Valid values: `explicit`, `prefix`
      * 
      */
-    public Output<String> getReservationType() {
+    public Output<String> reservationType() {
         return this.reservationType;
     }
     /**
@@ -95,7 +96,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * @return The ID of the subnet to create the reservation for.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -121,7 +122,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubnetCidrReservation(String name, SubnetCidrReservationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/subnetCidrReservation:SubnetCidrReservation", name, args == null ? SubnetCidrReservationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/subnetCidrReservation:SubnetCidrReservation", name, args == null ? SubnetCidrReservationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SubnetCidrReservation(String name, Output<String> id, @Nullable SubnetCidrReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

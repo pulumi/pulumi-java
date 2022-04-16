@@ -18,14 +18,14 @@ public final class ListenerRuleTargetGroupTuple extends io.pulumi.resources.Invo
     @Import(name="targetGroupArn")
       private final @Nullable String targetGroupArn;
 
-    public Optional<String> getTargetGroupArn() {
+    public Optional<String> targetGroupArn() {
         return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
     }
 
     @Import(name="weight")
       private final @Nullable Integer weight;
 
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
     }
 

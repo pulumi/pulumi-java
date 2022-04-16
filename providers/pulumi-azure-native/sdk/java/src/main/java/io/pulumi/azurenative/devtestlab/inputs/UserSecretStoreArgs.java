@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
+    public Output<String> keyVaultId() {
+        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyVaultUri")
       private final @Nullable Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
-        return this.keyVaultUri == null ? Output.empty() : this.keyVaultUri;
+    public Output<String> keyVaultUri() {
+        return this.keyVaultUri == null ? Codegen.empty() : this.keyVaultUri;
     }
 
     public UserSecretStoreArgs(
@@ -48,8 +49,8 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UserSecretStoreArgs() {
-        this.keyVaultId = Output.empty();
-        this.keyVaultUri = Output.empty();
+        this.keyVaultId = Codegen.empty();
+        this.keyVaultUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Output.ofNullable(keyVaultId);
+            this.keyVaultId = Codegen.ofNullable(keyVaultId);
             return this;
         }
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
@@ -87,7 +88,7 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = Output.ofNullable(keyVaultUri);
+            this.keyVaultUri = Codegen.ofNullable(keyVaultUri);
             return this;
         }        public UserSecretStoreArgs build() {
             return new UserSecretStoreArgs(keyVaultId, keyVaultUri);

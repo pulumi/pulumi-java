@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.SshKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
      * 
      */
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding;
     }
     /**
@@ -53,7 +54,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The MD5 message digest of the SSH public key.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -67,7 +68,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
      * 
      */
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -81,7 +82,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the SSH public key.
      * 
      */
-    public Output<String> getSshPublicKeyId() {
+    public Output<String> sshPublicKeyId() {
         return this.sshPublicKeyId;
     }
     /**
@@ -95,7 +96,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -109,7 +110,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The name of the IAM user to associate the SSH public key with.
      * 
      */
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -135,7 +136,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SshKey(String name, SshKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/sshKey:SshKey", name, args == null ? SshKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/sshKey:SshKey", name, args == null ? SshKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SshKey(String name, Output<String> id, @Nullable SshKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

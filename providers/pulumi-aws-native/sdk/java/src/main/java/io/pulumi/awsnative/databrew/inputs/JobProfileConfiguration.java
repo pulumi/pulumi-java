@@ -21,28 +21,28 @@ public final class JobProfileConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="columnStatisticsConfigurations")
       private final @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations;
 
-    public List<JobColumnStatisticsConfiguration> getColumnStatisticsConfigurations() {
+    public List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations() {
         return this.columnStatisticsConfigurations == null ? List.of() : this.columnStatisticsConfigurations;
     }
 
     @Import(name="datasetStatisticsConfiguration")
       private final @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration;
 
-    public Optional<JobStatisticsConfiguration> getDatasetStatisticsConfiguration() {
+    public Optional<JobStatisticsConfiguration> datasetStatisticsConfiguration() {
         return this.datasetStatisticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.datasetStatisticsConfiguration);
     }
 
     @Import(name="entityDetectorConfiguration")
       private final @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
 
-    public Optional<JobEntityDetectorConfiguration> getEntityDetectorConfiguration() {
+    public Optional<JobEntityDetectorConfiguration> entityDetectorConfiguration() {
         return this.entityDetectorConfiguration == null ? Optional.empty() : Optional.ofNullable(this.entityDetectorConfiguration);
     }
 
     @Import(name="profileColumns")
       private final @Nullable List<JobColumnSelector> profileColumns;
 
-    public List<JobColumnSelector> getProfileColumns() {
+    public List<JobColumnSelector> profileColumns() {
         return this.profileColumns == null ? List.of() : this.profileColumns;
     }
 

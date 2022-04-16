@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.SubnetTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,67 +24,67 @@ public class Subnet extends io.pulumi.resources.CustomResource {
     @Export(name="assignIpv6AddressOnCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation;
 
-    public Output</* @Nullable */ Boolean> getAssignIpv6AddressOnCreation() {
+    public Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation;
     }
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
-    public Output</* @Nullable */ String> getAvailabilityZone() {
+    public Output</* @Nullable */ String> availabilityZone() {
         return this.availabilityZone;
     }
     @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     @Export(name="ipv6CidrBlock", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv6CidrBlock;
 
-    public Output</* @Nullable */ String> getIpv6CidrBlock() {
+    public Output</* @Nullable */ String> ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     @Export(name="ipv6CidrBlocks", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6CidrBlocks;
 
-    public Output<List<String>> getIpv6CidrBlocks() {
+    public Output<List<String>> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks;
     }
     @Export(name="mapPublicIpOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mapPublicIpOnLaunch;
 
-    public Output</* @Nullable */ Boolean> getMapPublicIpOnLaunch() {
+    public Output</* @Nullable */ Boolean> mapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch;
     }
     @Export(name="networkAclAssociationId", type=String.class, parameters={})
     private Output<String> networkAclAssociationId;
 
-    public Output<String> getNetworkAclAssociationId() {
+    public Output<String> networkAclAssociationId() {
         return this.networkAclAssociationId;
     }
     @Export(name="outpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> outpostArn;
 
-    public Output</* @Nullable */ String> getOutpostArn() {
+    public Output</* @Nullable */ String> outpostArn() {
         return this.outpostArn;
     }
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     @Export(name="tags", type=List.class, parameters={SubnetTag.class})
     private Output</* @Nullable */ List<SubnetTag>> tags;
 
-    public Output</* @Nullable */ List<SubnetTag>> getTags() {
+    public Output</* @Nullable */ List<SubnetTag>> tags() {
         return this.tags;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -109,7 +110,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Subnet(String name, SubnetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:Subnet", name, args == null ? SubnetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:Subnet", name, args == null ? SubnetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Subnet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

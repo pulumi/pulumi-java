@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.inputs.OneTimeScheduleArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.PatchConfigArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.PatchInstanceFilterArgs;
@@ -26,8 +27,8 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<String> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="instanceFilter", required=true)
       private final Output<PatchInstanceFilterArgs> instanceFilter;
 
-    public Output<PatchInstanceFilterArgs> getInstanceFilter() {
+    public Output<PatchInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
     }
 
@@ -59,8 +60,8 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="oneTimeSchedule", required=true)
       private final Output<OneTimeScheduleArgs> oneTimeSchedule;
 
-    public Output<OneTimeScheduleArgs> getOneTimeSchedule() {
+    public Output<OneTimeScheduleArgs> oneTimeSchedule() {
         return this.oneTimeSchedule;
     }
 
@@ -81,22 +82,22 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="patchConfig")
       private final @Nullable Output<PatchConfigArgs> patchConfig;
 
-    public Output<PatchConfigArgs> getPatchConfig() {
-        return this.patchConfig == null ? Output.empty() : this.patchConfig;
+    public Output<PatchConfigArgs> patchConfig() {
+        return this.patchConfig == null ? Codegen.empty() : this.patchConfig;
     }
 
     @Import(name="patchDeploymentId", required=true)
       private final Output<String> patchDeploymentId;
 
-    public Output<String> getPatchDeploymentId() {
+    public Output<String> patchDeploymentId() {
         return this.patchDeploymentId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="recurringSchedule", required=true)
       private final Output<RecurringScheduleArgs> recurringSchedule;
 
-    public Output<RecurringScheduleArgs> getRecurringSchedule() {
+    public Output<RecurringScheduleArgs> recurringSchedule() {
         return this.recurringSchedule;
     }
 
@@ -117,8 +118,8 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rollout")
       private final @Nullable Output<PatchRolloutArgs> rollout;
 
-    public Output<PatchRolloutArgs> getRollout() {
-        return this.rollout == null ? Output.empty() : this.rollout;
+    public Output<PatchRolloutArgs> rollout() {
+        return this.rollout == null ? Codegen.empty() : this.rollout;
     }
 
     public PatchDeploymentArgs(
@@ -145,16 +146,16 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PatchDeploymentArgs() {
-        this.description = Output.empty();
-        this.duration = Output.empty();
-        this.instanceFilter = Output.empty();
-        this.name = Output.empty();
-        this.oneTimeSchedule = Output.empty();
-        this.patchConfig = Output.empty();
-        this.patchDeploymentId = Output.empty();
-        this.project = Output.empty();
-        this.recurringSchedule = Output.empty();
-        this.rollout = Output.empty();
+        this.description = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.instanceFilter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.oneTimeSchedule = Codegen.empty();
+        this.patchConfig = Codegen.empty();
+        this.patchDeploymentId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.recurringSchedule = Codegen.empty();
+        this.rollout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder duration(@Nullable Output<String> duration) {
@@ -208,7 +209,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder instanceFilter(Output<PatchInstanceFilterArgs> instanceFilter) {
@@ -224,7 +225,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder oneTimeSchedule(Output<OneTimeScheduleArgs> oneTimeSchedule) {
@@ -240,7 +241,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder patchConfig(@Nullable PatchConfigArgs patchConfig) {
-            this.patchConfig = Output.ofNullable(patchConfig);
+            this.patchConfig = Codegen.ofNullable(patchConfig);
             return this;
         }
         public Builder patchDeploymentId(Output<String> patchDeploymentId) {
@@ -256,7 +257,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder recurringSchedule(Output<RecurringScheduleArgs> recurringSchedule) {
@@ -272,7 +273,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rollout(@Nullable PatchRolloutArgs rollout) {
-            this.rollout = Output.ofNullable(rollout);
+            this.rollout = Codegen.ofNullable(rollout);
             return this;
         }        public PatchDeploymentArgs build() {
             return new PatchDeploymentArgs(description, duration, instanceFilter, name, oneTimeSchedule, patchConfig, patchDeploymentId, project, recurringSchedule, rollout);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.DeliveryRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     @Import(name="rules", required=true)
       private final Output<List<DeliveryRuleArgs>> rules;
 
-    public Output<List<DeliveryRuleArgs>> getRules() {
+    public Output<List<DeliveryRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -50,8 +51,8 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     }
 
     private EndpointPropertiesUpdateParametersDeliveryPolicyArgs() {
-        this.description = Output.empty();
-        this.rules = Output.empty();
+        this.description = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder rules(Output<List<DeliveryRuleArgs>> rules) {

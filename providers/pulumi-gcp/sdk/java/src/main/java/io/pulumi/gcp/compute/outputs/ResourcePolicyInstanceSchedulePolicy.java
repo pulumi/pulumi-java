@@ -60,14 +60,14 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      * The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
     */
-    public Optional<String> getExpirationTime() {
+    public Optional<String> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
@@ -75,7 +75,7 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
     */
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
     /**
@@ -83,7 +83,7 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ResourcePolicyInstanceSchedulePolicyVmStartSchedule> getVmStartSchedule() {
+    public Optional<ResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedule() {
         return Optional.ofNullable(this.vmStartSchedule);
     }
     /**
@@ -91,7 +91,7 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ResourcePolicyInstanceSchedulePolicyVmStopSchedule> getVmStopSchedule() {
+    public Optional<ResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedule() {
         return Optional.ofNullable(this.vmStopSchedule);
     }
 

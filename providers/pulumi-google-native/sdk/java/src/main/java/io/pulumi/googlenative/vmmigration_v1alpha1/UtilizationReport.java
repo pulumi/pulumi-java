@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.UtilizationReportArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
@@ -33,7 +34,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The time the report was created (this refers to the time of the request, not the time the report creation completed).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +48,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The report display name, as assigned by the user.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -61,7 +62,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Provides details on the state of the report in case of an error.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -75,7 +76,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
      */
-    public Output<String> getFrameEndTime() {
+    public Output<String> frameEndTime() {
         return this.frameEndTime;
     }
     /**
@@ -89,7 +90,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The report unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +104,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Current state of the report.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -117,7 +118,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The time the state was last set.
      * 
      */
-    public Output<String> getStateTime() {
+    public Output<String> stateTime() {
         return this.stateTime;
     }
     /**
@@ -131,7 +132,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Time frame of the report.
      * 
      */
-    public Output<String> getTimeFrame() {
+    public Output<String> timeFrame() {
         return this.timeFrame;
     }
     /**
@@ -145,7 +146,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Total number of VMs included in the report.
      * 
      */
-    public Output<Integer> getVmCount() {
+    public Output<Integer> vmCount() {
         return this.vmCount;
     }
     /**
@@ -159,7 +160,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
-    public Output<List<VmUtilizationInfoResponse>> getVms() {
+    public Output<List<VmUtilizationInfoResponse>> vms() {
         return this.vms;
     }
     /**
@@ -173,7 +174,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Total number of VMs included in the report.
      * 
      */
-    public Output<Integer> getVmsCount() {
+    public Output<Integer> vmsCount() {
         return this.vmsCount;
     }
 
@@ -199,7 +200,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UtilizationReport(String name, UtilizationReportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1alpha1:UtilizationReport", name, args == null ? UtilizationReportArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1alpha1:UtilizationReport", name, args == null ? UtilizationReportArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UtilizationReport(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

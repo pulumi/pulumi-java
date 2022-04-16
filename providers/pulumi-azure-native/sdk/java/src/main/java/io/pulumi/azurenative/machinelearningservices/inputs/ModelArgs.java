@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceReq
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -31,8 +32,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+    public Output<String> createdTime() {
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasets")
       private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Output<List<DatasetReferenceArgs>> getDatasets() {
-        return this.datasets == null ? Output.empty() : this.datasets;
+    public Output<List<DatasetReferenceArgs>> datasets() {
+        return this.datasets == null ? Codegen.empty() : this.datasets;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="derivedModelIds")
       private final @Nullable Output<List<String>> derivedModelIds;
 
-    public Output<List<String>> getDerivedModelIds() {
-        return this.derivedModelIds == null ? Output.empty() : this.derivedModelIds;
+    public Output<List<String>> derivedModelIds() {
+        return this.derivedModelIds == null ? Codegen.empty() : this.derivedModelIds;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
-    public Output<String> getExperimentName() {
-        return this.experimentName == null ? Output.empty() : this.experimentName;
+    public Output<String> experimentName() {
+        return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="framework")
       private final @Nullable Output<String> framework;
 
-    public Output<String> getFramework() {
-        return this.framework == null ? Output.empty() : this.framework;
+    public Output<String> framework() {
+        return this.framework == null ? Codegen.empty() : this.framework;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkVersion")
       private final @Nullable Output<String> frameworkVersion;
 
-    public Output<String> getFrameworkVersion() {
-        return this.frameworkVersion == null ? Output.empty() : this.frameworkVersion;
+    public Output<String> frameworkVersion() {
+        return this.frameworkVersion == null ? Codegen.empty() : this.frameworkVersion;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> getKvTags() {
-        return this.kvTags == null ? Output.empty() : this.kvTags;
+    public Output<Map<String,String>> kvTags() {
+        return this.kvTags == null ? Codegen.empty() : this.kvTags;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mimeType", required=true)
       private final Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType;
     }
 
@@ -141,8 +142,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modifiedTime")
       private final @Nullable Output<String> modifiedTime;
 
-    public Output<String> getModifiedTime() {
-        return this.modifiedTime == null ? Output.empty() : this.modifiedTime;
+    public Output<String> modifiedTime() {
+        return this.modifiedTime == null ? Codegen.empty() : this.modifiedTime;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -163,8 +164,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentModelId")
       private final @Nullable Output<String> parentModelId;
 
-    public Output<String> getParentModelId() {
-        return this.parentModelId == null ? Output.empty() : this.parentModelId;
+    public Output<String> parentModelId() {
+        return this.parentModelId == null ? Codegen.empty() : this.parentModelId;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements;
 
-    public Output<ContainerResourceRequirementsArgs> getResourceRequirements() {
-        return this.resourceRequirements == null ? Output.empty() : this.resourceRequirements;
+    public Output<ContainerResourceRequirementsArgs> resourceRequirements() {
+        return this.resourceRequirements == null ? Codegen.empty() : this.resourceRequirements;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runId")
       private final @Nullable Output<String> runId;
 
-    public Output<String> getRunId() {
-        return this.runId == null ? Output.empty() : this.runId;
+    public Output<String> runId() {
+        return this.runId == null ? Codegen.empty() : this.runId;
     }
 
     /**
@@ -207,8 +208,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sampleInputData")
       private final @Nullable Output<String> sampleInputData;
 
-    public Output<String> getSampleInputData() {
-        return this.sampleInputData == null ? Output.empty() : this.sampleInputData;
+    public Output<String> sampleInputData() {
+        return this.sampleInputData == null ? Codegen.empty() : this.sampleInputData;
     }
 
     /**
@@ -218,8 +219,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sampleOutputData")
       private final @Nullable Output<String> sampleOutputData;
 
-    public Output<String> getSampleOutputData() {
-        return this.sampleOutputData == null ? Output.empty() : this.sampleOutputData;
+    public Output<String> sampleOutputData() {
+        return this.sampleOutputData == null ? Codegen.empty() : this.sampleOutputData;
     }
 
     /**
@@ -229,8 +230,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unpack")
       private final @Nullable Output<Boolean> unpack;
 
-    public Output<Boolean> getUnpack() {
-        return this.unpack == null ? Output.empty() : this.unpack;
+    public Output<Boolean> unpack() {
+        return this.unpack == null ? Codegen.empty() : this.unpack;
     }
 
     /**
@@ -240,7 +241,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -251,8 +252,8 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Double> version;
 
-    public Output<Double> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Double> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ModelArgs(
@@ -301,27 +302,27 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.createdTime = Output.empty();
-        this.datasets = Output.empty();
-        this.derivedModelIds = Output.empty();
-        this.description = Output.empty();
-        this.experimentName = Output.empty();
-        this.framework = Output.empty();
-        this.frameworkVersion = Output.empty();
-        this.id = Output.empty();
-        this.kvTags = Output.empty();
-        this.mimeType = Output.empty();
-        this.modifiedTime = Output.empty();
-        this.name = Output.empty();
-        this.parentModelId = Output.empty();
-        this.properties = Output.empty();
-        this.resourceRequirements = Output.empty();
-        this.runId = Output.empty();
-        this.sampleInputData = Output.empty();
-        this.sampleOutputData = Output.empty();
-        this.unpack = Output.empty();
-        this.url = Output.empty();
-        this.version = Output.empty();
+        this.createdTime = Codegen.empty();
+        this.datasets = Codegen.empty();
+        this.derivedModelIds = Codegen.empty();
+        this.description = Codegen.empty();
+        this.experimentName = Codegen.empty();
+        this.framework = Codegen.empty();
+        this.frameworkVersion = Codegen.empty();
+        this.id = Codegen.empty();
+        this.kvTags = Codegen.empty();
+        this.mimeType = Codegen.empty();
+        this.modifiedTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentModelId = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceRequirements = Codegen.empty();
+        this.runId = Codegen.empty();
+        this.sampleInputData = Codegen.empty();
+        this.sampleOutputData = Codegen.empty();
+        this.unpack = Codegen.empty();
+        this.url = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -389,7 +390,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
@@ -397,7 +398,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
-            this.datasets = Output.ofNullable(datasets);
+            this.datasets = Codegen.ofNullable(datasets);
             return this;
         }
         public Builder datasets(DatasetReferenceArgs... datasets) {
@@ -408,7 +409,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder derivedModelIds(@Nullable List<String> derivedModelIds) {
-            this.derivedModelIds = Output.ofNullable(derivedModelIds);
+            this.derivedModelIds = Codegen.ofNullable(derivedModelIds);
             return this;
         }
         public Builder derivedModelIds(String... derivedModelIds) {
@@ -419,7 +420,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder experimentName(@Nullable Output<String> experimentName) {
@@ -427,7 +428,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Output.ofNullable(experimentName);
+            this.experimentName = Codegen.ofNullable(experimentName);
             return this;
         }
         public Builder framework(@Nullable Output<String> framework) {
@@ -435,7 +436,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder framework(@Nullable String framework) {
-            this.framework = Output.ofNullable(framework);
+            this.framework = Codegen.ofNullable(framework);
             return this;
         }
         public Builder frameworkVersion(@Nullable Output<String> frameworkVersion) {
@@ -443,7 +444,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frameworkVersion(@Nullable String frameworkVersion) {
-            this.frameworkVersion = Output.ofNullable(frameworkVersion);
+            this.frameworkVersion = Codegen.ofNullable(frameworkVersion);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -451,7 +452,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
@@ -459,7 +460,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Output.ofNullable(kvTags);
+            this.kvTags = Codegen.ofNullable(kvTags);
             return this;
         }
         public Builder mimeType(Output<String> mimeType) {
@@ -475,7 +476,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder modifiedTime(@Nullable String modifiedTime) {
-            this.modifiedTime = Output.ofNullable(modifiedTime);
+            this.modifiedTime = Codegen.ofNullable(modifiedTime);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -491,7 +492,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentModelId(@Nullable String parentModelId) {
-            this.parentModelId = Output.ofNullable(parentModelId);
+            this.parentModelId = Codegen.ofNullable(parentModelId);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -499,7 +500,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> resourceRequirements) {
@@ -507,7 +508,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceRequirements(@Nullable ContainerResourceRequirementsArgs resourceRequirements) {
-            this.resourceRequirements = Output.ofNullable(resourceRequirements);
+            this.resourceRequirements = Codegen.ofNullable(resourceRequirements);
             return this;
         }
         public Builder runId(@Nullable Output<String> runId) {
@@ -515,7 +516,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runId(@Nullable String runId) {
-            this.runId = Output.ofNullable(runId);
+            this.runId = Codegen.ofNullable(runId);
             return this;
         }
         public Builder sampleInputData(@Nullable Output<String> sampleInputData) {
@@ -523,7 +524,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sampleInputData(@Nullable String sampleInputData) {
-            this.sampleInputData = Output.ofNullable(sampleInputData);
+            this.sampleInputData = Codegen.ofNullable(sampleInputData);
             return this;
         }
         public Builder sampleOutputData(@Nullable Output<String> sampleOutputData) {
@@ -531,7 +532,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sampleOutputData(@Nullable String sampleOutputData) {
-            this.sampleOutputData = Output.ofNullable(sampleOutputData);
+            this.sampleOutputData = Codegen.ofNullable(sampleOutputData);
             return this;
         }
         public Builder unpack(@Nullable Output<Boolean> unpack) {
@@ -539,7 +540,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unpack(@Nullable Boolean unpack) {
-            this.unpack = Output.ofNullable(unpack);
+            this.unpack = Codegen.ofNullable(unpack);
             return this;
         }
         public Builder url(Output<String> url) {
@@ -555,7 +556,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable Double version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ModelArgs build() {
             return new ModelArgs(createdTime, datasets, derivedModelIds, description, experimentName, framework, frameworkVersion, id, kvTags, mimeType, modifiedTime, name, parentModelId, properties, resourceRequirements, runId, sampleInputData, sampleOutputData, unpack, url, version);

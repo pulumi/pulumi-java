@@ -5,6 +5,7 @@ package io.pulumi.aws.acmpca;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
     @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
 
@@ -32,7 +33,7 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
     @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -43,8 +44,8 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
-        return this.certificateChain == null ? Output.empty() : this.certificateChain;
+    public Output<String> certificateChain() {
+        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
     public CertificateAuthorityCertificateArgs(
@@ -57,9 +58,9 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
     }
 
     private CertificateAuthorityCertificateArgs() {
-        this.certificate = Output.empty();
-        this.certificateAuthorityArn = Output.empty();
-        this.certificateChain = Output.empty();
+        this.certificate = Codegen.empty();
+        this.certificateAuthorityArn = Codegen.empty();
+        this.certificateChain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
             return this;
         }
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Output.ofNullable(certificateChain);
+            this.certificateChain = Codegen.ofNullable(certificateChain);
             return this;
         }        public CertificateAuthorityCertificateArgs build() {
             return new CertificateAuthorityCertificateArgs(certificate, certificateAuthorityArn, certificateChain);

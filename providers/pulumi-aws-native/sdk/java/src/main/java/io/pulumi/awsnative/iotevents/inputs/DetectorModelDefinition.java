@@ -25,7 +25,7 @@ public final class DetectorModelDefinition extends io.pulumi.resources.InvokeArg
     @Import(name="initialStateName", required=true)
       private final String initialStateName;
 
-    public String getInitialStateName() {
+    public String initialStateName() {
         return this.initialStateName;
     }
 
@@ -36,7 +36,7 @@ public final class DetectorModelDefinition extends io.pulumi.resources.InvokeArg
     @Import(name="states", required=true)
       private final List<DetectorModelState> states;
 
-    public List<DetectorModelState> getStates() {
+    public List<DetectorModelState> states() {
         return this.states;
     }
 

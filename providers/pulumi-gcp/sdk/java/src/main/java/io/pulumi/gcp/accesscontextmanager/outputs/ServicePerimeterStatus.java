@@ -100,7 +100,7 @@ public final class ServicePerimeterStatus {
      * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
      * 
     */
-    public List<String> getAccessLevels() {
+    public List<String> accessLevels() {
         return this.accessLevels == null ? List.of() : this.accessLevels;
     }
     /**
@@ -111,7 +111,7 @@ public final class ServicePerimeterStatus {
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimeterStatusEgressPolicy> getEgressPolicies() {
+    public List<ServicePerimeterStatusEgressPolicy> egressPolicies() {
         return this.egressPolicies == null ? List.of() : this.egressPolicies;
     }
     /**
@@ -122,7 +122,7 @@ public final class ServicePerimeterStatus {
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimeterStatusIngressPolicy> getIngressPolicies() {
+    public List<ServicePerimeterStatusIngressPolicy> ingressPolicies() {
         return this.ingressPolicies == null ? List.of() : this.ingressPolicies;
     }
     /**
@@ -133,7 +133,7 @@ public final class ServicePerimeterStatus {
      * the perimeter.
      * 
     */
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
@@ -144,7 +144,7 @@ public final class ServicePerimeterStatus {
      * restrictions.
      * 
     */
-    public List<String> getRestrictedServices() {
+    public List<String> restrictedServices() {
         return this.restrictedServices == null ? List.of() : this.restrictedServices;
     }
     /**
@@ -153,7 +153,7 @@ public final class ServicePerimeterStatus {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimeterStatusVpcAccessibleServices> getVpcAccessibleServices() {
+    public Optional<ServicePerimeterStatusVpcAccessibleServices> vpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
 
-    public Output<Object> getCopyBehavior() {
-        return this.copyBehavior == null ? Output.empty() : this.copyBehavior;
+    public Output<Object> copyBehavior() {
+        return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -76,10 +77,10 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private FileServerWriteSettingsArgs() {
-        this.copyBehavior = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.type = Output.empty();
+        this.copyBehavior = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Output.ofNullable(copyBehavior);
+            this.copyBehavior = Codegen.ofNullable(copyBehavior);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -121,7 +122,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -129,7 +130,7 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder type(Output<String> type) {

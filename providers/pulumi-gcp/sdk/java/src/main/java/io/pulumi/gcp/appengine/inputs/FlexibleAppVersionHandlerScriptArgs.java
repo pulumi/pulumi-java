@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FlexibleAppVersionHandlerScriptArgs extends io.pulumi.resourc
     @Import(name="scriptPath", required=true)
       private final Output<String> scriptPath;
 
-    public Output<String> getScriptPath() {
+    public Output<String> scriptPath() {
         return this.scriptPath;
     }
 
@@ -29,7 +30,7 @@ public final class FlexibleAppVersionHandlerScriptArgs extends io.pulumi.resourc
     }
 
     private FlexibleAppVersionHandlerScriptArgs() {
-        this.scriptPath = Output.empty();
+        this.scriptPath = Codegen.empty();
     }
 
     public static Builder builder() {

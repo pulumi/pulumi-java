@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.enums.MonitoredResourceDescriptorLaunchStage;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     @Import(name="labels", required=true)
       private final Output<List<LabelDescriptorArgs>> labels;
 
-    public Output<List<LabelDescriptorArgs>> getLabels() {
+    public Output<List<LabelDescriptorArgs>> labels() {
         return this.labels;
     }
 
@@ -61,8 +62,8 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     @Import(name="launchStage")
       private final @Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage;
 
-    public Output<MonitoredResourceDescriptorLaunchStage> getLaunchStage() {
-        return this.launchStage == null ? Output.empty() : this.launchStage;
+    public Output<MonitoredResourceDescriptorLaunchStage> launchStage() {
+        return this.launchStage == null ? Codegen.empty() : this.launchStage;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -103,12 +104,12 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     }
 
     private MonitoredResourceDescriptorArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.launchStage = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.launchStage = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -154,7 +155,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(Output<List<LabelDescriptorArgs>> labels) {
@@ -173,7 +174,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder launchStage(@Nullable MonitoredResourceDescriptorLaunchStage launchStage) {
-            this.launchStage = Output.ofNullable(launchStage);
+            this.launchStage = Codegen.ofNullable(launchStage);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -181,7 +182,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(Output<String> type) {

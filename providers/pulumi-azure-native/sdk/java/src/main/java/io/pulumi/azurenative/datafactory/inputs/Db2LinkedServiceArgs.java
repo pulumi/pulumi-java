@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,Db2AuthenticationType>> authenticationType;
 
-    public Output<Either<String,Db2AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<Either<String,Db2AuthenticationType>> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="certificateCommonName")
       private final @Nullable Output<Object> certificateCommonName;
 
-    public Output<Object> getCertificateCommonName() {
-        return this.certificateCommonName == null ? Output.empty() : this.certificateCommonName;
+    public Output<Object> certificateCommonName() {
+        return this.certificateCommonName == null ? Codegen.empty() : this.certificateCommonName;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
-    public Output<Object> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+    public Output<Object> connectionString() {
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="database")
       private final @Nullable Output<Object> database;
 
-    public Output<Object> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<Object> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packageCollection")
       private final @Nullable Output<Object> packageCollection;
 
-    public Output<Object> getPackageCollection() {
-        return this.packageCollection == null ? Output.empty() : this.packageCollection;
+    public Output<Object> packageCollection() {
+        return this.packageCollection == null ? Codegen.empty() : this.packageCollection;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="server")
       private final @Nullable Output<Object> server;
 
-    public Output<Object> getServer() {
-        return this.server == null ? Output.empty() : this.server;
+    public Output<Object> server() {
+        return this.server == null ? Codegen.empty() : this.server;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -178,8 +179,8 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="username")
       private final @Nullable Output<Object> username;
 
-    public Output<Object> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<Object> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public Db2LinkedServiceArgs(
@@ -214,20 +215,20 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private Db2LinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.authenticationType = Output.empty();
-        this.certificateCommonName = Output.empty();
-        this.connectVia = Output.empty();
-        this.connectionString = Output.empty();
-        this.database = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.packageCollection = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.server = Output.empty();
-        this.type = Output.empty();
-        this.username = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.certificateCommonName = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.database = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.packageCollection = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.server = Codegen.empty();
+        this.type = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -281,7 +282,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -292,7 +293,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,Db2AuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder certificateCommonName(@Nullable Output<Object> certificateCommonName) {
@@ -300,7 +301,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder certificateCommonName(@Nullable Object certificateCommonName) {
-            this.certificateCommonName = Output.ofNullable(certificateCommonName);
+            this.certificateCommonName = Codegen.ofNullable(certificateCommonName);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -308,7 +309,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder connectionString(@Nullable Output<Object> connectionString) {
@@ -316,7 +317,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder database(@Nullable Output<Object> database) {
@@ -324,7 +325,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder database(@Nullable Object database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -332,7 +333,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -340,7 +341,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder packageCollection(@Nullable Output<Object> packageCollection) {
@@ -348,7 +349,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder packageCollection(@Nullable Object packageCollection) {
-            this.packageCollection = Output.ofNullable(packageCollection);
+            this.packageCollection = Codegen.ofNullable(packageCollection);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -356,7 +357,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -364,7 +365,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder server(@Nullable Output<Object> server) {
@@ -372,7 +373,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder server(@Nullable Object server) {
-            this.server = Output.ofNullable(server);
+            this.server = Codegen.ofNullable(server);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -388,7 +389,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder username(@Nullable Object username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public Db2LinkedServiceArgs build() {
             return new Db2LinkedServiceArgs(annotations, authenticationType, certificateCommonName, connectVia, connectionString, database, description, encryptedCredential, packageCollection, parameters, password, server, type, username);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InstanceScratchDiskGetArgs extends io.pulumi.resources.Resour
     @Import(name="interface", required=true)
       private final Output<String> interface_;
 
-    public Output<String> getInterface_() {
+    public Output<String> interface_() {
         return this.interface_;
     }
 
@@ -29,7 +30,7 @@ public final class InstanceScratchDiskGetArgs extends io.pulumi.resources.Resour
     }
 
     private InstanceScratchDiskGetArgs() {
-        this.interface_ = Output.empty();
+        this.interface_ = Codegen.empty();
     }
 
     public static Builder builder() {

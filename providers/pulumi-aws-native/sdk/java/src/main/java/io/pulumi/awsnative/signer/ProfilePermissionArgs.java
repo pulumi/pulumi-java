@@ -5,6 +5,7 @@ package io.pulumi.awsnative.signer;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,35 +18,35 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
     @Import(name="profileVersion")
       private final @Nullable Output<String> profileVersion;
 
-    public Output<String> getProfileVersion() {
-        return this.profileVersion == null ? Output.empty() : this.profileVersion;
+    public Output<String> profileVersion() {
+        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
     }
 
     @Import(name="statementId", required=true)
       private final Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 
@@ -63,11 +64,11 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ProfilePermissionArgs() {
-        this.action = Output.empty();
-        this.principal = Output.empty();
-        this.profileName = Output.empty();
-        this.profileVersion = Output.empty();
-        this.statementId = Output.empty();
+        this.action = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.profileVersion = Codegen.empty();
+        this.statementId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Output.ofNullable(profileVersion);
+            this.profileVersion = Codegen.ofNullable(profileVersion);
             return this;
         }
         public Builder statementId(Output<String> statementId) {

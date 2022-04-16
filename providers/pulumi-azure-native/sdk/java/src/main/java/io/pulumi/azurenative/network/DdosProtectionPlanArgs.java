@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ddosProtectionPlanName")
       private final @Nullable Output<String> ddosProtectionPlanName;
 
-    public Output<String> getDdosProtectionPlanName() {
-        return this.ddosProtectionPlanName == null ? Output.empty() : this.ddosProtectionPlanName;
+    public Output<String> ddosProtectionPlanName() {
+        return this.ddosProtectionPlanName == null ? Codegen.empty() : this.ddosProtectionPlanName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DdosProtectionPlanArgs(
@@ -71,10 +72,10 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DdosProtectionPlanArgs() {
-        this.ddosProtectionPlanName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.ddosProtectionPlanName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ddosProtectionPlanName(@Nullable String ddosProtectionPlanName) {
-            this.ddosProtectionPlanName = Output.ofNullable(ddosProtectionPlanName);
+            this.ddosProtectionPlanName = Codegen.ofNullable(ddosProtectionPlanName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -116,7 +117,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -132,7 +133,7 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DdosProtectionPlanArgs build() {
             return new DdosProtectionPlanArgs(ddosProtectionPlanName, location, resourceGroupName, tags);

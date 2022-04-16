@@ -25,7 +25,7 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
     @Import(name="commandId")
       private final @Nullable String commandId;
 
-    public Optional<String> getCommandId() {
+    public Optional<String> commandId() {
         return this.commandId == null ? Optional.empty() : Optional.ofNullable(this.commandId);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
     @Import(name="script")
       private final @Nullable String script;
 
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
     }
 
@@ -47,7 +47,7 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
     @Import(name="scriptUri")
       private final @Nullable String scriptUri;
 
-    public Optional<String> getScriptUri() {
+    public Optional<String> scriptUri() {
         return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
     }
 

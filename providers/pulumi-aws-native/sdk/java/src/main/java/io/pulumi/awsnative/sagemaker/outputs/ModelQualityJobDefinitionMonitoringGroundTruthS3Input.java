@@ -24,7 +24,7 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3Input {
      * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
      * 
     */
-    public String getS3Uri() {
+    public String s3Uri() {
         return this.s3Uri;
     }
 

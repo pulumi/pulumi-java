@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,28 +17,28 @@ public final class TopicRuleCloudwatchAlarmActionArgs extends io.pulumi.resource
     @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stateReason", required=true)
       private final Output<String> stateReason;
 
-    public Output<String> getStateReason() {
+    public Output<String> stateReason() {
         return this.stateReason;
     }
 
     @Import(name="stateValue", required=true)
       private final Output<String> stateValue;
 
-    public Output<String> getStateValue() {
+    public Output<String> stateValue() {
         return this.stateValue;
     }
 
@@ -53,10 +54,10 @@ public final class TopicRuleCloudwatchAlarmActionArgs extends io.pulumi.resource
     }
 
     private TopicRuleCloudwatchAlarmActionArgs() {
-        this.alarmName = Output.empty();
-        this.roleArn = Output.empty();
-        this.stateReason = Output.empty();
-        this.stateValue = Output.empty();
+        this.alarmName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stateReason = Codegen.empty();
+        this.stateValue = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class DataSourceS3PathArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -35,8 +36,8 @@ public final class DataSourceS3PathArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DataSourceS3PathArgs() {
-        this.bucket = Output.empty();
-        this.key = Output.empty();
+        this.bucket = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {

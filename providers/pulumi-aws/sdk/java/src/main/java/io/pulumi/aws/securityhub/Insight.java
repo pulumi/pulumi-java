@@ -10,6 +10,7 @@ import io.pulumi.aws.securityhub.outputs.InsightFilters;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * @return ARN of the insight.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * @return A configuration block including one or more (up to 10 distinct) attributes used to filter the findings included in the insight. The insight only includes findings that match criteria defined in the filters. See filters below for more details.
      * 
      */
-    public Output<InsightFilters> getFilters() {
+    public Output<InsightFilters> filters() {
         return this.filters;
     }
     /**
@@ -68,7 +69,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * @return The attribute used to group the findings for the insight e.g., if an insight is grouped by `ResourceId`, then the insight produces a list of resource identifiers.
      * 
      */
-    public Output<String> getGroupByAttribute() {
+    public Output<String> groupByAttribute() {
         return this.groupByAttribute;
     }
     /**
@@ -82,7 +83,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * @return The name of the custom insight.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -108,7 +109,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Insight(String name, InsightArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/insight:Insight", name, args == null ? InsightArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:securityhub/insight:Insight", name, args == null ? InsightArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Insight(String name, Output<String> id, @Nullable InsightState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

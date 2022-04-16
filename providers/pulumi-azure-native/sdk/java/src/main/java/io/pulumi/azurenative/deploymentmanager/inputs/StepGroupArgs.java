@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.PrePostStepArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependsOnStepGroups")
       private final @Nullable Output<List<String>> dependsOnStepGroups;
 
-    public Output<List<String>> getDependsOnStepGroups() {
-        return this.dependsOnStepGroups == null ? Output.empty() : this.dependsOnStepGroups;
+    public Output<List<String>> dependsOnStepGroups() {
+        return this.dependsOnStepGroups == null ? Codegen.empty() : this.dependsOnStepGroups;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentTargetId", required=true)
       private final Output<String> deploymentTargetId;
 
-    public Output<String> getDeploymentTargetId() {
+    public Output<String> deploymentTargetId() {
         return this.deploymentTargetId;
     }
 
@@ -49,7 +50,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,8 +61,8 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postDeploymentSteps")
       private final @Nullable Output<List<PrePostStepArgs>> postDeploymentSteps;
 
-    public Output<List<PrePostStepArgs>> getPostDeploymentSteps() {
-        return this.postDeploymentSteps == null ? Output.empty() : this.postDeploymentSteps;
+    public Output<List<PrePostStepArgs>> postDeploymentSteps() {
+        return this.postDeploymentSteps == null ? Codegen.empty() : this.postDeploymentSteps;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preDeploymentSteps")
       private final @Nullable Output<List<PrePostStepArgs>> preDeploymentSteps;
 
-    public Output<List<PrePostStepArgs>> getPreDeploymentSteps() {
-        return this.preDeploymentSteps == null ? Output.empty() : this.preDeploymentSteps;
+    public Output<List<PrePostStepArgs>> preDeploymentSteps() {
+        return this.preDeploymentSteps == null ? Codegen.empty() : this.preDeploymentSteps;
     }
 
     public StepGroupArgs(
@@ -89,11 +90,11 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StepGroupArgs() {
-        this.dependsOnStepGroups = Output.empty();
-        this.deploymentTargetId = Output.empty();
-        this.name = Output.empty();
-        this.postDeploymentSteps = Output.empty();
-        this.preDeploymentSteps = Output.empty();
+        this.dependsOnStepGroups = Codegen.empty();
+        this.deploymentTargetId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.postDeploymentSteps = Codegen.empty();
+        this.preDeploymentSteps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dependsOnStepGroups(@Nullable List<String> dependsOnStepGroups) {
-            this.dependsOnStepGroups = Output.ofNullable(dependsOnStepGroups);
+            this.dependsOnStepGroups = Codegen.ofNullable(dependsOnStepGroups);
             return this;
         }
         public Builder dependsOnStepGroups(String... dependsOnStepGroups) {
@@ -156,7 +157,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postDeploymentSteps(@Nullable List<PrePostStepArgs> postDeploymentSteps) {
-            this.postDeploymentSteps = Output.ofNullable(postDeploymentSteps);
+            this.postDeploymentSteps = Codegen.ofNullable(postDeploymentSteps);
             return this;
         }
         public Builder postDeploymentSteps(PrePostStepArgs... postDeploymentSteps) {
@@ -167,7 +168,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preDeploymentSteps(@Nullable List<PrePostStepArgs> preDeploymentSteps) {
-            this.preDeploymentSteps = Output.ofNullable(preDeploymentSteps);
+            this.preDeploymentSteps = Codegen.ofNullable(preDeploymentSteps);
             return this;
         }
         public Builder preDeploymentSteps(PrePostStepArgs... preDeploymentSteps) {

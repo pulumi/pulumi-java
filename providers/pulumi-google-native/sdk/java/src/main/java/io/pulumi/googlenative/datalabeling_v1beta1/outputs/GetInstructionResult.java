@@ -76,56 +76,56 @@ public final class GetInstructionResult {
      * The names of any related resources that are blocking changes to the instruction.
      * 
     */
-    public List<String> getBlockingResources() {
+    public List<String> blockingResources() {
         return this.blockingResources;
     }
     /**
      * Creation time of instruction.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The data type of this instruction.
      * 
     */
-    public String getDataType() {
+    public String dataType() {
         return this.dataType;
     }
     /**
      * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The display name of the instruction. Maximum of 64 characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
      * 
     */
-    public GoogleCloudDatalabelingV1beta1PdfInstructionResponse getPdfInstruction() {
+    public GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction() {
         return this.pdfInstruction;
     }
     /**
      * Last update time of instruction.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

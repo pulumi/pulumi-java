@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,21 +22,21 @@ public final class RuleGroupVisibilityConfigArgs extends io.pulumi.resources.Res
     @Import(name="cloudWatchMetricsEnabled", required=true)
       private final Output<Boolean> cloudWatchMetricsEnabled;
 
-    public Output<Boolean> getCloudWatchMetricsEnabled() {
+    public Output<Boolean> cloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
     @Import(name="sampledRequestsEnabled", required=true)
       private final Output<Boolean> sampledRequestsEnabled;
 
-    public Output<Boolean> getSampledRequestsEnabled() {
+    public Output<Boolean> sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 
@@ -49,9 +50,9 @@ public final class RuleGroupVisibilityConfigArgs extends io.pulumi.resources.Res
     }
 
     private RuleGroupVisibilityConfigArgs() {
-        this.cloudWatchMetricsEnabled = Output.empty();
-        this.metricName = Output.empty();
-        this.sampledRequestsEnabled = Output.empty();
+        this.cloudWatchMetricsEnabled = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.sampledRequestsEnabled = Codegen.empty();
     }
 
     public static Builder builder() {

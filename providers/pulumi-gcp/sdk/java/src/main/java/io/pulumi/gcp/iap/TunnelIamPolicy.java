@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.TunnelIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.TunnelIamPolicyState;
@@ -71,7 +72,7 @@ public class TunnelIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -87,7 +88,7 @@ public class TunnelIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -103,7 +104,7 @@ public class TunnelIamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -129,7 +130,7 @@ public class TunnelIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TunnelIamPolicy(String name, TunnelIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/tunnelIamPolicy:TunnelIamPolicy", name, args == null ? TunnelIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/tunnelIamPolicy:TunnelIamPolicy", name, args == null ? TunnelIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TunnelIamPolicy(String name, Output<String> id, @Nullable TunnelIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

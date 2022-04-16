@@ -5,6 +5,7 @@ package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cardinality")
       private final @Nullable Output<CardinalityArgs> cardinality;
 
-    public Output<CardinalityArgs> getCardinality() {
-        return this.cardinality == null ? Output.empty() : this.cardinality;
+    public Output<CardinalityArgs> cardinality() {
+        return this.cardinality == null ? Codegen.empty() : this.cardinality;
     }
 
     public EndConditionArgs(@Nullable Output<CardinalityArgs> cardinality) {
@@ -34,7 +35,7 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndConditionArgs() {
-        this.cardinality = Output.empty();
+        this.cardinality = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cardinality(@Nullable CardinalityArgs cardinality) {
-            this.cardinality = Output.ofNullable(cardinality);
+            this.cardinality = Codegen.ofNullable(cardinality);
             return this;
         }        public EndConditionArgs build() {
             return new EndConditionArgs(cardinality);

@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationGetArgs e
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -29,7 +30,7 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationGetArgs e
     }
 
     private BucketReplicationConfigRuleExistingObjectReplicationGetArgs() {
-        this.status = Output.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

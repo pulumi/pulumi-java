@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryMultiMeasureAttributeMappingMeasureValueType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,22 +23,22 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pul
     @Import(name="measureValueType", required=true)
       private final Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType;
 
-    public Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> getMeasureValueType() {
+    public Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType() {
         return this.measureValueType;
     }
 
     @Import(name="sourceColumn", required=true)
       private final Output<String> sourceColumn;
 
-    public Output<String> getSourceColumn() {
+    public Output<String> sourceColumn() {
         return this.sourceColumn;
     }
 
     @Import(name="targetMultiMeasureAttributeName")
       private final @Nullable Output<String> targetMultiMeasureAttributeName;
 
-    public Output<String> getTargetMultiMeasureAttributeName() {
-        return this.targetMultiMeasureAttributeName == null ? Output.empty() : this.targetMultiMeasureAttributeName;
+    public Output<String> targetMultiMeasureAttributeName() {
+        return this.targetMultiMeasureAttributeName == null ? Codegen.empty() : this.targetMultiMeasureAttributeName;
     }
 
     public ScheduledQueryMultiMeasureAttributeMappingArgs(
@@ -50,9 +51,9 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pul
     }
 
     private ScheduledQueryMultiMeasureAttributeMappingArgs() {
-        this.measureValueType = Output.empty();
-        this.sourceColumn = Output.empty();
-        this.targetMultiMeasureAttributeName = Output.empty();
+        this.measureValueType = Codegen.empty();
+        this.sourceColumn = Codegen.empty();
+        this.targetMultiMeasureAttributeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pul
             return this;
         }
         public Builder targetMultiMeasureAttributeName(@Nullable String targetMultiMeasureAttributeName) {
-            this.targetMultiMeasureAttributeName = Output.ofNullable(targetMultiMeasureAttributeName);
+            this.targetMultiMeasureAttributeName = Codegen.ofNullable(targetMultiMeasureAttributeName);
             return this;
         }        public ScheduledQueryMultiMeasureAttributeMappingArgs build() {
             return new ScheduledQueryMultiMeasureAttributeMappingArgs(measureValueType, sourceColumn, targetMultiMeasureAttributeName);

@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.ConnectionConfirmationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class ConnectionConfirmation extends io.pulumi.resources.CustomResource {
      * @return The ID of the hosted connection.
      * 
      */
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -57,7 +58,7 @@ public class ConnectionConfirmation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionConfirmation(String name, ConnectionConfirmationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/connectionConfirmation:ConnectionConfirmation", name, args == null ? ConnectionConfirmationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/connectionConfirmation:ConnectionConfirmation", name, args == null ? ConnectionConfirmationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectionConfirmation(String name, Output<String> id, @Nullable ConnectionConfirmationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

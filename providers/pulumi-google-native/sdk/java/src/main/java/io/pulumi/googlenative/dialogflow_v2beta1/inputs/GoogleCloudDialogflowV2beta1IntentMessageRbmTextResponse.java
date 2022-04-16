@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
     @Import(name="rbmSuggestion", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
 
-    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getRbmSuggestion() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion() {
         return this.rbmSuggestion;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

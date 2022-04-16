@@ -24,7 +24,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="keytab", required=true)
       private final SecretResponse keytab;
 
-    public SecretResponse getKeytab() {
+    public SecretResponse keytab() {
         return this.keytab;
     }
 
@@ -35,7 +35,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="krb5ConfigGcsUri", required=true)
       private final String krb5ConfigGcsUri;
 
-    public String getKrb5ConfigGcsUri() {
+    public String krb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
 
@@ -46,7 +46,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="principal", required=true)
       private final String principal;
 
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
 

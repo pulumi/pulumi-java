@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceColumnDefinitionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceSubresourcesArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceValidationArgs;
@@ -30,8 +31,8 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="additionalPrinterColumns")
       private final @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
-    public Output<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
-        return this.additionalPrinterColumns == null ? Output.empty() : this.additionalPrinterColumns;
+    public Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns() {
+        return this.additionalPrinterColumns == null ? Codegen.empty() : this.additionalPrinterColumns;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="deprecated")
       private final @Nullable Output<Boolean> deprecated;
 
-    public Output<Boolean> getDeprecated() {
-        return this.deprecated == null ? Output.empty() : this.deprecated;
+    public Output<Boolean> deprecated() {
+        return this.deprecated == null ? Codegen.empty() : this.deprecated;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="deprecationWarning")
       private final @Nullable Output<String> deprecationWarning;
 
-    public Output<String> getDeprecationWarning() {
-        return this.deprecationWarning == null ? Output.empty() : this.deprecationWarning;
+    public Output<String> deprecationWarning() {
+        return this.deprecationWarning == null ? Codegen.empty() : this.deprecationWarning;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -74,8 +75,8 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="schema")
       private final @Nullable Output<CustomResourceValidationArgs> schema;
 
-    public Output<CustomResourceValidationArgs> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<CustomResourceValidationArgs> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="served", required=true)
       private final Output<Boolean> served;
 
-    public Output<Boolean> getServed() {
+    public Output<Boolean> served() {
         return this.served;
     }
 
@@ -96,7 +97,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="storage", required=true)
       private final Output<Boolean> storage;
 
-    public Output<Boolean> getStorage() {
+    public Output<Boolean> storage() {
         return this.storage;
     }
 
@@ -107,8 +108,8 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="subresources")
       private final @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
-    public Output<CustomResourceSubresourcesArgs> getSubresources() {
-        return this.subresources == null ? Output.empty() : this.subresources;
+    public Output<CustomResourceSubresourcesArgs> subresources() {
+        return this.subresources == null ? Codegen.empty() : this.subresources;
     }
 
     public CustomResourceDefinitionVersionArgs(
@@ -131,14 +132,14 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     }
 
     private CustomResourceDefinitionVersionArgs() {
-        this.additionalPrinterColumns = Output.empty();
-        this.deprecated = Output.empty();
-        this.deprecationWarning = Output.empty();
-        this.name = Output.empty();
-        this.schema = Output.empty();
-        this.served = Output.empty();
-        this.storage = Output.empty();
-        this.subresources = Output.empty();
+        this.additionalPrinterColumns = Codegen.empty();
+        this.deprecated = Codegen.empty();
+        this.deprecationWarning = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.served = Codegen.empty();
+        this.storage = Codegen.empty();
+        this.subresources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
-            this.additionalPrinterColumns = Output.ofNullable(additionalPrinterColumns);
+            this.additionalPrinterColumns = Codegen.ofNullable(additionalPrinterColumns);
             return this;
         }
         public Builder additionalPrinterColumns(CustomResourceColumnDefinitionArgs... additionalPrinterColumns) {
@@ -191,7 +192,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder deprecated(@Nullable Boolean deprecated) {
-            this.deprecated = Output.ofNullable(deprecated);
+            this.deprecated = Codegen.ofNullable(deprecated);
             return this;
         }
         public Builder deprecationWarning(@Nullable Output<String> deprecationWarning) {
@@ -199,7 +200,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder deprecationWarning(@Nullable String deprecationWarning) {
-            this.deprecationWarning = Output.ofNullable(deprecationWarning);
+            this.deprecationWarning = Codegen.ofNullable(deprecationWarning);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -215,7 +216,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder schema(@Nullable CustomResourceValidationArgs schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder served(Output<Boolean> served) {
@@ -239,7 +240,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
-            this.subresources = Output.ofNullable(subresources);
+            this.subresources = Codegen.ofNullable(subresources);
             return this;
         }        public CustomResourceDefinitionVersionArgs build() {
             return new CustomResourceDefinitionVersionArgs(additionalPrinterColumns, deprecated, deprecationWarning, name, schema, served, storage, subresources);

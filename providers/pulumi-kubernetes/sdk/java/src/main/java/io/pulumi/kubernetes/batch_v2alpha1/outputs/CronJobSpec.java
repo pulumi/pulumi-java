@@ -72,49 +72,49 @@ public final class CronJobSpec {
      * Specifies how to treat concurrent executions of a Job. Valid values are: - "Allow" (default): allows CronJobs to run concurrently; - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet; - "Replace": cancels currently running job and replaces it with a new one
      * 
     */
-    public Optional<String> getConcurrencyPolicy() {
+    public Optional<String> concurrencyPolicy() {
         return Optional.ofNullable(this.concurrencyPolicy);
     }
     /**
      * The number of failed finished jobs to retain. This is a pointer to distinguish between explicit zero and not specified.
      * 
     */
-    public Optional<Integer> getFailedJobsHistoryLimit() {
+    public Optional<Integer> failedJobsHistoryLimit() {
         return Optional.ofNullable(this.failedJobsHistoryLimit);
     }
     /**
      * Specifies the job that will be created when executing a CronJob.
      * 
     */
-    public JobTemplateSpec getJobTemplate() {
+    public JobTemplateSpec jobTemplate() {
         return this.jobTemplate;
     }
     /**
      * The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
      * 
     */
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
     /**
      * Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
      * 
     */
-    public Optional<Integer> getStartingDeadlineSeconds() {
+    public Optional<Integer> startingDeadlineSeconds() {
         return Optional.ofNullable(this.startingDeadlineSeconds);
     }
     /**
      * The number of successful finished jobs to retain. This is a pointer to distinguish between explicit zero and not specified.
      * 
     */
-    public Optional<Integer> getSuccessfulJobsHistoryLimit() {
+    public Optional<Integer> successfulJobsHistoryLimit() {
         return Optional.ofNullable(this.successfulJobsHistoryLimit);
     }
     /**
      * This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
      * 
     */
-    public Optional<Boolean> getSuspend() {
+    public Optional<Boolean> suspend() {
         return Optional.ofNullable(this.suspend);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,29 +20,29 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eBSEnabled")
       private final @Nullable Output<Boolean> eBSEnabled;
 
-    public Output<Boolean> getEBSEnabled() {
-        return this.eBSEnabled == null ? Output.empty() : this.eBSEnabled;
+    public Output<Boolean> eBSEnabled() {
+        return this.eBSEnabled == null ? Codegen.empty() : this.eBSEnabled;
     }
 
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+    public Output<Integer> volumeSize() {
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+    public Output<String> volumeType() {
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public DomainEBSOptionsArgs(
@@ -56,10 +57,10 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DomainEBSOptionsArgs() {
-        this.eBSEnabled = Output.empty();
-        this.iops = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.eBSEnabled = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder eBSEnabled(@Nullable Boolean eBSEnabled) {
-            this.eBSEnabled = Output.ofNullable(eBSEnabled);
+            this.eBSEnabled = Codegen.ofNullable(eBSEnabled);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -101,7 +102,7 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -109,7 +110,7 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -117,7 +118,7 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public DomainEBSOptionsArgs build() {
             return new DomainEBSOptionsArgs(eBSEnabled, iops, volumeSize, volumeType);

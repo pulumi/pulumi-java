@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     public AzureStaticWebAppsRegistrationArgs(@Nullable Output<String> clientId) {
@@ -34,7 +35,7 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
     }
 
     private AzureStaticWebAppsRegistrationArgs() {
-        this.clientId = Output.empty();
+        this.clientId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }        public AzureStaticWebAppsRegistrationArgs build() {
             return new AzureStaticWebAppsRegistrationArgs(clientId);

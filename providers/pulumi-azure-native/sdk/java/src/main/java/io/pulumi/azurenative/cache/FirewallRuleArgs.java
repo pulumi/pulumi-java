@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cache;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheName", required=true)
       private final Output<String> cacheName;
 
-    public Output<String> getCacheName() {
+    public Output<String> cacheName() {
         return this.cacheName;
     }
 
@@ -32,7 +33,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endIP", required=true)
       private final Output<String> endIP;
 
-    public Output<String> getEndIP() {
+    public Output<String> endIP() {
         return this.endIP;
     }
 
@@ -43,7 +44,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,8 +55,8 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startIP", required=true)
       private final Output<String> startIP;
 
-    public Output<String> getStartIP() {
+    public Output<String> startIP() {
         return this.startIP;
     }
 
@@ -83,11 +84,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallRuleArgs() {
-        this.cacheName = Output.empty();
-        this.endIP = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.startIP = Output.empty();
+        this.cacheName = Codegen.empty();
+        this.endIP = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.startIP = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder startIP(Output<String> startIP) {

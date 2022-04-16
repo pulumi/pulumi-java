@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.core_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.ConfigMapArgs;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -31,7 +32,7 @@ public class ConfigMap extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -45,7 +46,7 @@ public class ConfigMap extends io.pulumi.resources.CustomResource {
      * @return BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-', '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys stored in BinaryData must not overlap with the ones in the Data field, this is enforced during validation process. Using this field will require 1.10+ apiserver and kubelet.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getBinaryData() {
+    public Output</* @Nullable */ Map<String,String>> binaryData() {
         return this.binaryData;
     }
     /**
@@ -59,7 +60,7 @@ public class ConfigMap extends io.pulumi.resources.CustomResource {
      * @return Data contains the configuration data. Each key must consist of alphanumeric characters, '-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The keys stored in Data must not overlap with the keys in the BinaryData field, this is enforced during validation process.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getData() {
+    public Output</* @Nullable */ Map<String,String>> data() {
         return this.data;
     }
     /**
@@ -73,7 +74,7 @@ public class ConfigMap extends io.pulumi.resources.CustomResource {
      * @return Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
      * 
      */
-    public Output</* @Nullable */ Boolean> getImmutable() {
+    public Output</* @Nullable */ Boolean> immutable() {
         return this.immutable;
     }
     /**
@@ -87,7 +88,7 @@ public class ConfigMap extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -101,7 +102,7 @@ public class ConfigMap extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
 
@@ -127,7 +128,7 @@ public class ConfigMap extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigMap(String name, @Nullable ConfigMapArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:core/v1:ConfigMap", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:core/v1:ConfigMap", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfigMap(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

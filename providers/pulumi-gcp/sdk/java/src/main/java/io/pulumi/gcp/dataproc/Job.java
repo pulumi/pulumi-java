@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.JobArgs;
 import io.pulumi.gcp.dataproc.inputs.JobState;
@@ -51,7 +52,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
      * 
      */
-    public Output<String> getDriverControlsFilesUri() {
+    public Output<String> driverControlsFilesUri() {
         return this.driverControlsFilesUri;
     }
     /**
@@ -65,7 +66,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return A URI pointing to the location of the stdout of the job's driver program.
      * 
      */
-    public Output<String> getDriverOutputResourceUri() {
+    public Output<String> driverOutputResourceUri() {
         return this.driverOutputResourceUri;
     }
     /**
@@ -83,7 +84,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * job is first cancelled before issuing the delete.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDelete() {
+    public Output</* @Nullable */ Boolean> forceDelete() {
         return this.forceDelete;
     }
     /**
@@ -97,7 +98,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The config of Hadoop job
      * 
      */
-    public Output</* @Nullable */ JobHadoopConfig> getHadoopConfig() {
+    public Output</* @Nullable */ JobHadoopConfig> hadoopConfig() {
         return this.hadoopConfig;
     }
     /**
@@ -111,7 +112,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The config of hive job
      * 
      */
-    public Output</* @Nullable */ JobHiveConfig> getHiveConfig() {
+    public Output</* @Nullable */ JobHiveConfig> hiveConfig() {
         return this.hiveConfig;
     }
     /**
@@ -125,7 +126,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The list of labels (key/value pairs) to add to the job.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -139,7 +140,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The config of pag job.
      * 
      */
-    public Output</* @Nullable */ JobPigConfig> getPigConfig() {
+    public Output</* @Nullable */ JobPigConfig> pigConfig() {
         return this.pigConfig;
     }
     /**
@@ -153,7 +154,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The config of job placement.
      * 
      */
-    public Output<JobPlacement> getPlacement() {
+    public Output<JobPlacement> placement() {
         return this.placement;
     }
     /**
@@ -169,7 +170,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * subsequently run against. If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -183,7 +184,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The config of pySpark job.
      * 
      */
-    public Output</* @Nullable */ JobPysparkConfig> getPysparkConfig() {
+    public Output</* @Nullable */ JobPysparkConfig> pysparkConfig() {
         return this.pysparkConfig;
     }
     /**
@@ -197,7 +198,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The reference of the job
      * 
      */
-    public Output<JobReference> getReference() {
+    public Output<JobReference> reference() {
         return this.reference;
     }
     /**
@@ -213,7 +214,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * for this job to be submitted to. If not specified, defaults to `global`.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -227,7 +228,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job scheduling configuration.
      * 
      */
-    public Output</* @Nullable */ JobScheduling> getScheduling() {
+    public Output</* @Nullable */ JobScheduling> scheduling() {
         return this.scheduling;
     }
     /**
@@ -241,7 +242,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The config of the Spark job.
      * 
      */
-    public Output</* @Nullable */ JobSparkConfig> getSparkConfig() {
+    public Output</* @Nullable */ JobSparkConfig> sparkConfig() {
         return this.sparkConfig;
     }
     /**
@@ -255,7 +256,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The config of SparkSql job
      * 
      */
-    public Output</* @Nullable */ JobSparksqlConfig> getSparksqlConfig() {
+    public Output</* @Nullable */ JobSparksqlConfig> sparksqlConfig() {
         return this.sparksqlConfig;
     }
     /**
@@ -269,7 +270,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The status of the job.
      * 
      */
-    public Output<List<JobStatus>> getStatuses() {
+    public Output<List<JobStatus>> statuses() {
         return this.statuses;
     }
 
@@ -295,7 +296,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/job:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/job:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable JobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

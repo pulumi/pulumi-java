@@ -42,21 +42,21 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
      * The total count of the artifacts that were successfully applied.
      * 
     */
-    public Optional<Integer> getArtifactsApplied() {
+    public Optional<Integer> artifactsApplied() {
         return Optional.ofNullable(this.artifactsApplied);
     }
     /**
      * The deployment status of the artifact.
      * 
     */
-    public Optional<String> getDeploymentStatus() {
+    public Optional<String> deploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
     /**
      * The total count of the artifacts that were tentatively applied.
      * 
     */
-    public Optional<Integer> getTotalArtifacts() {
+    public Optional<Integer> totalArtifacts() {
         return Optional.ofNullable(this.totalArtifacts);
     }
 

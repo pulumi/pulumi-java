@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class TriggerBuildOptionsVolumeArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class TriggerBuildOptionsVolumeArgs extends io.pulumi.resources.Res
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public TriggerBuildOptionsVolumeArgs(
@@ -48,8 +49,8 @@ public final class TriggerBuildOptionsVolumeArgs extends io.pulumi.resources.Res
     }
 
     private TriggerBuildOptionsVolumeArgs() {
-        this.name = Output.empty();
-        this.path = Output.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class TriggerBuildOptionsVolumeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -87,7 +88,7 @@ public final class TriggerBuildOptionsVolumeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public TriggerBuildOptionsVolumeArgs build() {
             return new TriggerBuildOptionsVolumeArgs(name, path);

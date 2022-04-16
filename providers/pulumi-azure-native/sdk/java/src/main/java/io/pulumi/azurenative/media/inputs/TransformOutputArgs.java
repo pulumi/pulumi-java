@@ -13,6 +13,7 @@ import io.pulumi.azurenative.media.inputs.VideoAnalyzerPresetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -34,8 +35,8 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="onError")
       private final @Nullable Output<Either<String,OnErrorType>> onError;
 
-    public Output<Either<String,OnErrorType>> getOnError() {
-        return this.onError == null ? Output.empty() : this.onError;
+    public Output<Either<String,OnErrorType>> onError() {
+        return this.onError == null ? Codegen.empty() : this.onError;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="preset", required=true)
       private final Output<Object> preset;
 
-    public Output<Object> getPreset() {
+    public Output<Object> preset() {
         return this.preset;
     }
 
@@ -56,8 +57,8 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="relativePriority")
       private final @Nullable Output<Either<String,Priority>> relativePriority;
 
-    public Output<Either<String,Priority>> getRelativePriority() {
-        return this.relativePriority == null ? Output.empty() : this.relativePriority;
+    public Output<Either<String,Priority>> relativePriority() {
+        return this.relativePriority == null ? Codegen.empty() : this.relativePriority;
     }
 
     public TransformOutputArgs(
@@ -70,9 +71,9 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TransformOutputArgs() {
-        this.onError = Output.empty();
-        this.preset = Output.empty();
-        this.relativePriority = Output.empty();
+        this.onError = Codegen.empty();
+        this.preset = Codegen.empty();
+        this.relativePriority = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder onError(@Nullable Either<String,OnErrorType> onError) {
-            this.onError = Output.ofNullable(onError);
+            this.onError = Codegen.ofNullable(onError);
             return this;
         }
         public Builder preset(Output<Object> preset) {
@@ -120,7 +121,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder relativePriority(@Nullable Either<String,Priority> relativePriority) {
-            this.relativePriority = Output.ofNullable(relativePriority);
+            this.relativePriority = Codegen.ofNullable(relativePriority);
             return this;
         }        public TransformOutputArgs build() {
             return new TransformOutputArgs(onError, preset, relativePriority);

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.cassandra.inputs.TableEncryptionSpecificationArgs;
 import io.pulumi.awsnative.cassandra.inputs.TableTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingMode")
       private final @Nullable Output<TableBillingModeArgs> billingMode;
 
-    public Output<TableBillingModeArgs> getBillingMode() {
-        return this.billingMode == null ? Output.empty() : this.billingMode;
+    public Output<TableBillingModeArgs> billingMode() {
+        return this.billingMode == null ? Codegen.empty() : this.billingMode;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusteringKeyColumns")
       private final @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
-    public Output<List<TableClusteringKeyColumnArgs>> getClusteringKeyColumns() {
-        return this.clusteringKeyColumns == null ? Output.empty() : this.clusteringKeyColumns;
+    public Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns() {
+        return this.clusteringKeyColumns == null ? Codegen.empty() : this.clusteringKeyColumns;
     }
 
     /**
@@ -47,15 +48,15 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultTimeToLive")
       private final @Nullable Output<Integer> defaultTimeToLive;
 
-    public Output<Integer> getDefaultTimeToLive() {
-        return this.defaultTimeToLive == null ? Output.empty() : this.defaultTimeToLive;
+    public Output<Integer> defaultTimeToLive() {
+        return this.defaultTimeToLive == null ? Codegen.empty() : this.defaultTimeToLive;
     }
 
     @Import(name="encryptionSpecification")
       private final @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
 
-    public Output<TableEncryptionSpecificationArgs> getEncryptionSpecification() {
-        return this.encryptionSpecification == null ? Output.empty() : this.encryptionSpecification;
+    public Output<TableEncryptionSpecificationArgs> encryptionSpecification() {
+        return this.encryptionSpecification == null ? Codegen.empty() : this.encryptionSpecification;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyspaceName", required=true)
       private final Output<String> keyspaceName;
 
-    public Output<String> getKeyspaceName() {
+    public Output<String> keyspaceName() {
         return this.keyspaceName;
     }
 
@@ -76,7 +77,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionKeyColumns", required=true)
       private final Output<List<TableColumnArgs>> partitionKeyColumns;
 
-    public Output<List<TableColumnArgs>> getPartitionKeyColumns() {
+    public Output<List<TableColumnArgs>> partitionKeyColumns() {
         return this.partitionKeyColumns;
     }
 
@@ -87,8 +88,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> getPointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Output.empty() : this.pointInTimeRecoveryEnabled;
+    public Output<Boolean> pointInTimeRecoveryEnabled() {
+        return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regularColumns")
       private final @Nullable Output<List<TableColumnArgs>> regularColumns;
 
-    public Output<List<TableColumnArgs>> getRegularColumns() {
-        return this.regularColumns == null ? Output.empty() : this.regularColumns;
+    public Output<List<TableColumnArgs>> regularColumns() {
+        return this.regularColumns == null ? Codegen.empty() : this.regularColumns;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<String> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TableTagArgs>> tags;
 
-    public Output<List<TableTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<TableTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TableArgs(
@@ -148,16 +149,16 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.billingMode = Output.empty();
-        this.clusteringKeyColumns = Output.empty();
-        this.defaultTimeToLive = Output.empty();
-        this.encryptionSpecification = Output.empty();
-        this.keyspaceName = Output.empty();
-        this.partitionKeyColumns = Output.empty();
-        this.pointInTimeRecoveryEnabled = Output.empty();
-        this.regularColumns = Output.empty();
-        this.tableName = Output.empty();
-        this.tags = Output.empty();
+        this.billingMode = Codegen.empty();
+        this.clusteringKeyColumns = Codegen.empty();
+        this.defaultTimeToLive = Codegen.empty();
+        this.encryptionSpecification = Codegen.empty();
+        this.keyspaceName = Codegen.empty();
+        this.partitionKeyColumns = Codegen.empty();
+        this.pointInTimeRecoveryEnabled = Codegen.empty();
+        this.regularColumns = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -203,7 +204,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingMode(@Nullable TableBillingModeArgs billingMode) {
-            this.billingMode = Output.ofNullable(billingMode);
+            this.billingMode = Codegen.ofNullable(billingMode);
             return this;
         }
         public Builder clusteringKeyColumns(@Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
@@ -211,7 +212,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusteringKeyColumns(@Nullable List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
-            this.clusteringKeyColumns = Output.ofNullable(clusteringKeyColumns);
+            this.clusteringKeyColumns = Codegen.ofNullable(clusteringKeyColumns);
             return this;
         }
         public Builder clusteringKeyColumns(TableClusteringKeyColumnArgs... clusteringKeyColumns) {
@@ -222,7 +223,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultTimeToLive(@Nullable Integer defaultTimeToLive) {
-            this.defaultTimeToLive = Output.ofNullable(defaultTimeToLive);
+            this.defaultTimeToLive = Codegen.ofNullable(defaultTimeToLive);
             return this;
         }
         public Builder encryptionSpecification(@Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification) {
@@ -230,7 +231,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionSpecification(@Nullable TableEncryptionSpecificationArgs encryptionSpecification) {
-            this.encryptionSpecification = Output.ofNullable(encryptionSpecification);
+            this.encryptionSpecification = Codegen.ofNullable(encryptionSpecification);
             return this;
         }
         public Builder keyspaceName(Output<String> keyspaceName) {
@@ -257,7 +258,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
+            this.pointInTimeRecoveryEnabled = Codegen.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
         public Builder regularColumns(@Nullable Output<List<TableColumnArgs>> regularColumns) {
@@ -265,7 +266,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regularColumns(@Nullable List<TableColumnArgs> regularColumns) {
-            this.regularColumns = Output.ofNullable(regularColumns);
+            this.regularColumns = Codegen.ofNullable(regularColumns);
             return this;
         }
         public Builder regularColumns(TableColumnArgs... regularColumns) {
@@ -276,7 +277,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder tags(@Nullable Output<List<TableTagArgs>> tags) {
@@ -284,7 +285,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TableTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TableTagArgs... tags) {

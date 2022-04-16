@@ -13,6 +13,7 @@ import io.pulumi.awsnative.imagebuilder.outputs.ContainerRecipeTargetContainerRe
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the container recipe.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +50,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return Components for build and test that are included in the container recipe.
      * 
      */
-    public Output</* @Nullable */ List<ContainerRecipeComponentConfiguration>> getComponents() {
+    public Output</* @Nullable */ List<ContainerRecipeComponentConfiguration>> components() {
         return this.components;
     }
     /**
@@ -63,7 +64,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of container, such as Docker.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipeContainerType> getContainerType() {
+    public Output</* @Nullable */ ContainerRecipeContainerType> containerType() {
         return this.containerType;
     }
     /**
@@ -77,7 +78,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The description of the container recipe.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -91,7 +92,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe.
      * 
      */
-    public Output</* @Nullable */ String> getDockerfileTemplateData() {
+    public Output</* @Nullable */ String> dockerfileTemplateData() {
         return this.dockerfileTemplateData;
     }
     /**
@@ -105,7 +106,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The S3 URI for the Dockerfile that will be used to build your container image.
      * 
      */
-    public Output</* @Nullable */ String> getDockerfileTemplateUri() {
+    public Output</* @Nullable */ String> dockerfileTemplateUri() {
         return this.dockerfileTemplateUri;
     }
     /**
@@ -119,7 +120,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return Specifies the operating system version for the source image.
      * 
      */
-    public Output</* @Nullable */ String> getImageOsVersionOverride() {
+    public Output</* @Nullable */ String> imageOsVersionOverride() {
         return this.imageOsVersionOverride;
     }
     /**
@@ -133,7 +134,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return A group of options that can be used to configure an instance for building and testing container images.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipeInstanceConfiguration> getInstanceConfiguration() {
+    public Output</* @Nullable */ ContainerRecipeInstanceConfiguration> instanceConfiguration() {
         return this.instanceConfiguration;
     }
     /**
@@ -147,7 +148,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return Identifies which KMS key is used to encrypt the container image.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -161,7 +162,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The name of the container recipe.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -175,7 +176,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The source image for the container recipe.
      * 
      */
-    public Output</* @Nullable */ String> getParentImage() {
+    public Output</* @Nullable */ String> parentImage() {
         return this.parentImage;
     }
     /**
@@ -189,7 +190,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return Specifies the operating system platform when you use a custom source image.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipePlatformOverride> getPlatformOverride() {
+    public Output</* @Nullable */ ContainerRecipePlatformOverride> platformOverride() {
         return this.platformOverride;
     }
     /**
@@ -203,7 +204,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return Tags that are attached to the container recipe.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     /**
@@ -217,7 +218,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The destination repository for the container image.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipeTargetContainerRepository> getTargetRepository() {
+    public Output</* @Nullable */ ContainerRecipeTargetContainerRepository> targetRepository() {
         return this.targetRepository;
     }
     /**
@@ -231,7 +232,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The semantic version of the container recipe (<major>.<minor>.<patch>).
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
     /**
@@ -245,7 +246,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @return The working directory to be used during build and test workflows.
      * 
      */
-    public Output</* @Nullable */ String> getWorkingDirectory() {
+    public Output</* @Nullable */ String> workingDirectory() {
         return this.workingDirectory;
     }
 
@@ -271,7 +272,7 @@ public class ContainerRecipe extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ContainerRecipe(String name, @Nullable ContainerRecipeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:imagebuilder:ContainerRecipe", name, args == null ? ContainerRecipeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:imagebuilder:ContainerRecipe", name, args == null ? ContainerRecipeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ContainerRecipe(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

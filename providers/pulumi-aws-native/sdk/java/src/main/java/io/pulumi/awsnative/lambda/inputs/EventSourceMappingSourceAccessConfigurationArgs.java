@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lambda.inputs;
 import io.pulumi.awsnative.lambda.enums.EventSourceMappingSourceAccessConfigurationType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     @Import(name="type")
       private final @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type;
 
-    public Output<EventSourceMappingSourceAccessConfigurationType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<EventSourceMappingSourceAccessConfigurationType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     @Import(name="uRI")
       private final @Nullable Output<String> uRI;
 
-    public Output<String> getURI() {
-        return this.uRI == null ? Output.empty() : this.uRI;
+    public Output<String> uRI() {
+        return this.uRI == null ? Codegen.empty() : this.uRI;
     }
 
     public EventSourceMappingSourceAccessConfigurationArgs(
@@ -49,8 +50,8 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     }
 
     private EventSourceMappingSourceAccessConfigurationArgs() {
-        this.type = Output.empty();
-        this.uRI = Output.empty();
+        this.type = Codegen.empty();
+        this.uRI = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
             return this;
         }
         public Builder type(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder uRI(@Nullable Output<String> uRI) {
@@ -88,7 +89,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
             return this;
         }
         public Builder uRI(@Nullable String uRI) {
-            this.uRI = Output.ofNullable(uRI);
+            this.uRI = Codegen.ofNullable(uRI);
             return this;
         }        public EventSourceMappingSourceAccessConfigurationArgs build() {
             return new EventSourceMappingSourceAccessConfigurationArgs(type, uRI);

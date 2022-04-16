@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.compute_v1.inputs.BindingArgs;
 import io.pulumi.googlenative.compute_v1.inputs.RuleArgs;
@@ -26,8 +27,8 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="auditConfigs")
       private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
+    public Output<List<AuditConfigArgs>> auditConfigs() {
+        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+    public Output<List<BindingArgs>> bindings() {
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -48,14 +49,14 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -66,8 +67,8 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="rules")
       private final @Nullable Output<List<RuleArgs>> rules;
 
-    public Output<List<RuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<RuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public FirewallPolicyIamPolicyArgs(
@@ -97,12 +98,12 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private FirewallPolicyIamPolicyArgs() {
-        this.auditConfigs = Output.empty();
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.resource = Output.empty();
-        this.rules = Output.empty();
-        this.version = Output.empty();
+        this.auditConfigs = Codegen.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Output.ofNullable(auditConfigs);
+            this.auditConfigs = Codegen.ofNullable(auditConfigs);
             return this;
         }
         public Builder auditConfigs(AuditConfigArgs... auditConfigs) {
@@ -151,7 +152,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -162,7 +163,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder resource(Output<String> resource) {
@@ -178,7 +179,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder rules(@Nullable List<RuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RuleArgs... rules) {
@@ -189,7 +190,7 @@ public final class FirewallPolicyIamPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public FirewallPolicyIamPolicyArgs build() {
             return new FirewallPolicyIamPolicyArgs(auditConfigs, bindings, etag, resource, rules, version);

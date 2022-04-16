@@ -39,21 +39,21 @@ public final class GetClusterGatewaySettingsResult {
      * Indicates whether or not the gateway settings based authorization is enabled.
      * 
     */
-    public String getIsCredentialEnabled() {
+    public String isCredentialEnabled() {
         return this.isCredentialEnabled;
     }
     /**
      * The gateway settings user password.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The gateway settings user name.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

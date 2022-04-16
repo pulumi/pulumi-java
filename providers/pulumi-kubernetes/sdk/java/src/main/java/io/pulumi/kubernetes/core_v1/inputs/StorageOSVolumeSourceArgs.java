@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="secretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
-    public Output<LocalObjectReferenceArgs> getSecretRef() {
-        return this.secretRef == null ? Output.empty() : this.secretRef;
+    public Output<LocalObjectReferenceArgs> secretRef() {
+        return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
-        return this.volumeName == null ? Output.empty() : this.volumeName;
+    public Output<String> volumeName() {
+        return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="volumeNamespace")
       private final @Nullable Output<String> volumeNamespace;
 
-    public Output<String> getVolumeNamespace() {
-        return this.volumeNamespace == null ? Output.empty() : this.volumeNamespace;
+    public Output<String> volumeNamespace() {
+        return this.volumeNamespace == null ? Codegen.empty() : this.volumeNamespace;
     }
 
     public StorageOSVolumeSourceArgs(
@@ -89,11 +90,11 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private StorageOSVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.readOnly = Output.empty();
-        this.secretRef = Output.empty();
-        this.volumeName = Output.empty();
-        this.volumeNamespace = Output.empty();
+        this.fsType = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secretRef = Codegen.empty();
+        this.volumeName = Codegen.empty();
+        this.volumeNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -137,7 +138,7 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
@@ -145,7 +146,7 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
-            this.secretRef = Output.ofNullable(secretRef);
+            this.secretRef = Codegen.ofNullable(secretRef);
             return this;
         }
         public Builder volumeName(@Nullable Output<String> volumeName) {
@@ -153,7 +154,7 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Output.ofNullable(volumeName);
+            this.volumeName = Codegen.ofNullable(volumeName);
             return this;
         }
         public Builder volumeNamespace(@Nullable Output<String> volumeNamespace) {
@@ -161,7 +162,7 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder volumeNamespace(@Nullable String volumeNamespace) {
-            this.volumeNamespace = Output.ofNullable(volumeNamespace);
+            this.volumeNamespace = Codegen.ofNullable(volumeNamespace);
             return this;
         }        public StorageOSVolumeSourceArgs build() {
             return new StorageOSVolumeSourceArgs(fsType, readOnly, secretRef, volumeName, volumeNamespace);

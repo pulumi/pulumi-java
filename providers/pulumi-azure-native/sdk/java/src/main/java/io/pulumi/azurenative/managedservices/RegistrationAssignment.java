@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * @return Name of the registration assignment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * @return Properties of a registration assignment.
      * 
      */
-    public Output<RegistrationAssignmentPropertiesResponse> getProperties() {
+    public Output<RegistrationAssignmentPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -70,7 +71,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -96,7 +97,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistrationAssignment(String name, RegistrationAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:managedservices:RegistrationAssignment", name, args == null ? RegistrationAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:managedservices:RegistrationAssignment", name, args == null ? RegistrationAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegistrationAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

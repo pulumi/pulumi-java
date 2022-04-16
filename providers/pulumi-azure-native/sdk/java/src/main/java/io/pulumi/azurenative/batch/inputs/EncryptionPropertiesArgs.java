@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.enums.KeySource;
 import io.pulumi.azurenative.batch.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="keySource")
       private final @Nullable Output<KeySource> keySource;
 
-    public Output<KeySource> getKeySource() {
-        return this.keySource == null ? Output.empty() : this.keySource;
+    public Output<KeySource> keySource() {
+        return this.keySource == null ? Codegen.empty() : this.keySource;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
+        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
     public EncryptionPropertiesArgs(
@@ -49,8 +50,8 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private EncryptionPropertiesArgs() {
-        this.keySource = Output.empty();
-        this.keyVaultProperties = Output.empty();
+        this.keySource = Codegen.empty();
+        this.keyVaultProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder keySource(@Nullable KeySource keySource) {
-            this.keySource = Output.ofNullable(keySource);
+            this.keySource = Codegen.ofNullable(keySource);
             return this;
         }
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
@@ -88,7 +89,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
             return this;
         }        public EncryptionPropertiesArgs build() {
             return new EncryptionPropertiesArgs(keySource, keyVaultProperties);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.AlertChartArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.EmptyArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.LogsPanelArgs;
@@ -32,8 +33,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alertChart")
       private final @Nullable Output<AlertChartArgs> alertChart;
 
-    public Output<AlertChartArgs> getAlertChart() {
-        return this.alertChart == null ? Output.empty() : this.alertChart;
+    public Output<AlertChartArgs> alertChart() {
+        return this.alertChart == null ? Codegen.empty() : this.alertChart;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blank")
       private final @Nullable Output<EmptyArgs> blank;
 
-    public Output<EmptyArgs> getBlank() {
-        return this.blank == null ? Output.empty() : this.blank;
+    public Output<EmptyArgs> blank() {
+        return this.blank == null ? Codegen.empty() : this.blank;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logsPanel")
       private final @Nullable Output<LogsPanelArgs> logsPanel;
 
-    public Output<LogsPanelArgs> getLogsPanel() {
-        return this.logsPanel == null ? Output.empty() : this.logsPanel;
+    public Output<LogsPanelArgs> logsPanel() {
+        return this.logsPanel == null ? Codegen.empty() : this.logsPanel;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scorecard")
       private final @Nullable Output<ScorecardArgs> scorecard;
 
-    public Output<ScorecardArgs> getScorecard() {
-        return this.scorecard == null ? Output.empty() : this.scorecard;
+    public Output<ScorecardArgs> scorecard() {
+        return this.scorecard == null ? Codegen.empty() : this.scorecard;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="text")
       private final @Nullable Output<TextArgs> text;
 
-    public Output<TextArgs> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<TextArgs> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeSeriesTable")
       private final @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
 
-    public Output<TimeSeriesTableArgs> getTimeSeriesTable() {
-        return this.timeSeriesTable == null ? Output.empty() : this.timeSeriesTable;
+    public Output<TimeSeriesTableArgs> timeSeriesTable() {
+        return this.timeSeriesTable == null ? Codegen.empty() : this.timeSeriesTable;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xyChart")
       private final @Nullable Output<XyChartArgs> xyChart;
 
-    public Output<XyChartArgs> getXyChart() {
-        return this.xyChart == null ? Output.empty() : this.xyChart;
+    public Output<XyChartArgs> xyChart() {
+        return this.xyChart == null ? Codegen.empty() : this.xyChart;
     }
 
     public WidgetArgs(
@@ -133,14 +134,14 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WidgetArgs() {
-        this.alertChart = Output.empty();
-        this.blank = Output.empty();
-        this.logsPanel = Output.empty();
-        this.scorecard = Output.empty();
-        this.text = Output.empty();
-        this.timeSeriesTable = Output.empty();
-        this.title = Output.empty();
-        this.xyChart = Output.empty();
+        this.alertChart = Codegen.empty();
+        this.blank = Codegen.empty();
+        this.logsPanel = Codegen.empty();
+        this.scorecard = Codegen.empty();
+        this.text = Codegen.empty();
+        this.timeSeriesTable = Codegen.empty();
+        this.title = Codegen.empty();
+        this.xyChart = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alertChart(@Nullable AlertChartArgs alertChart) {
-            this.alertChart = Output.ofNullable(alertChart);
+            this.alertChart = Codegen.ofNullable(alertChart);
             return this;
         }
         public Builder blank(@Nullable Output<EmptyArgs> blank) {
@@ -190,7 +191,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blank(@Nullable EmptyArgs blank) {
-            this.blank = Output.ofNullable(blank);
+            this.blank = Codegen.ofNullable(blank);
             return this;
         }
         public Builder logsPanel(@Nullable Output<LogsPanelArgs> logsPanel) {
@@ -198,7 +199,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logsPanel(@Nullable LogsPanelArgs logsPanel) {
-            this.logsPanel = Output.ofNullable(logsPanel);
+            this.logsPanel = Codegen.ofNullable(logsPanel);
             return this;
         }
         public Builder scorecard(@Nullable Output<ScorecardArgs> scorecard) {
@@ -206,7 +207,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scorecard(@Nullable ScorecardArgs scorecard) {
-            this.scorecard = Output.ofNullable(scorecard);
+            this.scorecard = Codegen.ofNullable(scorecard);
             return this;
         }
         public Builder text(@Nullable Output<TextArgs> text) {
@@ -214,7 +215,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder text(@Nullable TextArgs text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }
         public Builder timeSeriesTable(@Nullable Output<TimeSeriesTableArgs> timeSeriesTable) {
@@ -222,7 +223,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeSeriesTable(@Nullable TimeSeriesTableArgs timeSeriesTable) {
-            this.timeSeriesTable = Output.ofNullable(timeSeriesTable);
+            this.timeSeriesTable = Codegen.ofNullable(timeSeriesTable);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -230,7 +231,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder xyChart(@Nullable Output<XyChartArgs> xyChart) {
@@ -238,7 +239,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xyChart(@Nullable XyChartArgs xyChart) {
-            this.xyChart = Output.ofNullable(xyChart);
+            this.xyChart = Codegen.ofNullable(xyChart);
             return this;
         }        public WidgetArgs build() {
             return new WidgetArgs(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);

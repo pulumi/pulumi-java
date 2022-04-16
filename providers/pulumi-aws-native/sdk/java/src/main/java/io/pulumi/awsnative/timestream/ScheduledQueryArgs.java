@@ -10,6 +10,7 @@ import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTagArgs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTargetConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,71 +24,71 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientToken")
       private final @Nullable Output<String> clientToken;
 
-    public Output<String> getClientToken() {
-        return this.clientToken == null ? Output.empty() : this.clientToken;
+    public Output<String> clientToken() {
+        return this.clientToken == null ? Codegen.empty() : this.clientToken;
     }
 
     @Import(name="errorReportConfiguration", required=true)
       private final Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration;
 
-    public Output<ScheduledQueryErrorReportConfigurationArgs> getErrorReportConfiguration() {
+    public Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration() {
         return this.errorReportConfiguration;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="notificationConfiguration", required=true)
       private final Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration;
 
-    public Output<ScheduledQueryNotificationConfigurationArgs> getNotificationConfiguration() {
+    public Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration() {
         return this.notificationConfiguration;
     }
 
     @Import(name="queryString", required=true)
       private final Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
 
     @Import(name="scheduleConfiguration", required=true)
       private final Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration;
 
-    public Output<ScheduledQueryScheduleConfigurationArgs> getScheduleConfiguration() {
+    public Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration() {
         return this.scheduleConfiguration;
     }
 
     @Import(name="scheduledQueryExecutionRoleArn", required=true)
       private final Output<String> scheduledQueryExecutionRoleArn;
 
-    public Output<String> getScheduledQueryExecutionRoleArn() {
+    public Output<String> scheduledQueryExecutionRoleArn() {
         return this.scheduledQueryExecutionRoleArn;
     }
 
     @Import(name="scheduledQueryName")
       private final @Nullable Output<String> scheduledQueryName;
 
-    public Output<String> getScheduledQueryName() {
-        return this.scheduledQueryName == null ? Output.empty() : this.scheduledQueryName;
+    public Output<String> scheduledQueryName() {
+        return this.scheduledQueryName == null ? Codegen.empty() : this.scheduledQueryName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ScheduledQueryTagArgs>> tags;
 
-    public Output<List<ScheduledQueryTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ScheduledQueryTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="targetConfiguration")
       private final @Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration;
 
-    public Output<ScheduledQueryTargetConfigurationArgs> getTargetConfiguration() {
-        return this.targetConfiguration == null ? Output.empty() : this.targetConfiguration;
+    public Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration() {
+        return this.targetConfiguration == null ? Codegen.empty() : this.targetConfiguration;
     }
 
     public ScheduledQueryArgs(
@@ -114,16 +115,16 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduledQueryArgs() {
-        this.clientToken = Output.empty();
-        this.errorReportConfiguration = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.notificationConfiguration = Output.empty();
-        this.queryString = Output.empty();
-        this.scheduleConfiguration = Output.empty();
-        this.scheduledQueryExecutionRoleArn = Output.empty();
-        this.scheduledQueryName = Output.empty();
-        this.tags = Output.empty();
-        this.targetConfiguration = Output.empty();
+        this.clientToken = Codegen.empty();
+        this.errorReportConfiguration = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.notificationConfiguration = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.scheduleConfiguration = Codegen.empty();
+        this.scheduledQueryExecutionRoleArn = Codegen.empty();
+        this.scheduledQueryName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -169,7 +170,7 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientToken(@Nullable String clientToken) {
-            this.clientToken = Output.ofNullable(clientToken);
+            this.clientToken = Codegen.ofNullable(clientToken);
             return this;
         }
         public Builder errorReportConfiguration(Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration) {
@@ -185,7 +186,7 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder notificationConfiguration(Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration) {
@@ -225,7 +226,7 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduledQueryName(@Nullable String scheduledQueryName) {
-            this.scheduledQueryName = Output.ofNullable(scheduledQueryName);
+            this.scheduledQueryName = Codegen.ofNullable(scheduledQueryName);
             return this;
         }
         public Builder tags(@Nullable Output<List<ScheduledQueryTagArgs>> tags) {
@@ -233,7 +234,7 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ScheduledQueryTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ScheduledQueryTagArgs... tags) {
@@ -244,7 +245,7 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetConfiguration(@Nullable ScheduledQueryTargetConfigurationArgs targetConfiguration) {
-            this.targetConfiguration = Output.ofNullable(targetConfiguration);
+            this.targetConfiguration = Codegen.ofNullable(targetConfiguration);
             return this;
         }        public ScheduledQueryArgs build() {
             return new ScheduledQueryArgs(clientToken, errorReportConfiguration, kmsKeyId, notificationConfiguration, queryString, scheduleConfiguration, scheduledQueryExecutionRoleArn, scheduledQueryName, tags, targetConfiguration);

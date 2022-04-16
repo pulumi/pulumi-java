@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanIncidentTemplateArgs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,15 +27,15 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<List<ResponsePlanActionArgs>> actions;
 
-    public Output<List<ResponsePlanActionArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+    public Output<List<ResponsePlanActionArgs>> actions() {
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     @Import(name="chatChannel")
       private final @Nullable Output<ResponsePlanChatChannelArgs> chatChannel;
 
-    public Output<ResponsePlanChatChannelArgs> getChatChannel() {
-        return this.chatChannel == null ? Output.empty() : this.chatChannel;
+    public Output<ResponsePlanChatChannelArgs> chatChannel() {
+        return this.chatChannel == null ? Codegen.empty() : this.chatChannel;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -55,14 +56,14 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engagements")
       private final @Nullable Output<List<String>> engagements;
 
-    public Output<List<String>> getEngagements() {
-        return this.engagements == null ? Output.empty() : this.engagements;
+    public Output<List<String>> engagements() {
+        return this.engagements == null ? Codegen.empty() : this.engagements;
     }
 
     @Import(name="incidentTemplate", required=true)
       private final Output<ResponsePlanIncidentTemplateArgs> incidentTemplate;
 
-    public Output<ResponsePlanIncidentTemplateArgs> getIncidentTemplate() {
+    public Output<ResponsePlanIncidentTemplateArgs> incidentTemplate() {
         return this.incidentTemplate;
     }
 
@@ -73,8 +74,8 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ResponsePlanTagArgs>> tags;
 
-    public Output<List<ResponsePlanTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ResponsePlanTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResponsePlanArgs(
@@ -106,13 +107,13 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResponsePlanArgs() {
-        this.actions = Output.empty();
-        this.chatChannel = Output.empty();
-        this.displayName = Output.empty();
-        this.engagements = Output.empty();
-        this.incidentTemplate = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.actions = Codegen.empty();
+        this.chatChannel = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.engagements = Codegen.empty();
+        this.incidentTemplate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actions(@Nullable List<ResponsePlanActionArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(ResponsePlanActionArgs... actions) {
@@ -163,7 +164,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder chatChannel(@Nullable ResponsePlanChatChannelArgs chatChannel) {
-            this.chatChannel = Output.ofNullable(chatChannel);
+            this.chatChannel = Codegen.ofNullable(chatChannel);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -171,7 +172,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder engagements(@Nullable Output<List<String>> engagements) {
@@ -179,7 +180,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engagements(@Nullable List<String> engagements) {
-            this.engagements = Output.ofNullable(engagements);
+            this.engagements = Codegen.ofNullable(engagements);
             return this;
         }
         public Builder engagements(String... engagements) {
@@ -198,7 +199,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<ResponsePlanTagArgs>> tags) {
@@ -206,7 +207,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ResponsePlanTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ResponsePlanTagArgs... tags) {

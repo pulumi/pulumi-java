@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceAnalysisStatus;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceContinuousAnalysis;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.StatusArgs;
@@ -28,8 +29,8 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="analysisStatus")
       private final @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
 
-    public Output<DiscoveryOccurrenceAnalysisStatus> getAnalysisStatus() {
-        return this.analysisStatus == null ? Output.empty() : this.analysisStatus;
+    public Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus() {
+        return this.analysisStatus == null ? Codegen.empty() : this.analysisStatus;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="analysisStatusError")
       private final @Nullable Output<StatusArgs> analysisStatusError;
 
-    public Output<StatusArgs> getAnalysisStatusError() {
-        return this.analysisStatusError == null ? Output.empty() : this.analysisStatusError;
+    public Output<StatusArgs> analysisStatusError() {
+        return this.analysisStatusError == null ? Codegen.empty() : this.analysisStatusError;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="continuousAnalysis")
       private final @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
 
-    public Output<DiscoveryOccurrenceContinuousAnalysis> getContinuousAnalysis() {
-        return this.continuousAnalysis == null ? Output.empty() : this.continuousAnalysis;
+    public Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis() {
+        return this.continuousAnalysis == null ? Codegen.empty() : this.continuousAnalysis;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="cpe")
       private final @Nullable Output<String> cpe;
 
-    public Output<String> getCpe() {
-        return this.cpe == null ? Output.empty() : this.cpe;
+    public Output<String> cpe() {
+        return this.cpe == null ? Codegen.empty() : this.cpe;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="lastScanTime")
       private final @Nullable Output<String> lastScanTime;
 
-    public Output<String> getLastScanTime() {
-        return this.lastScanTime == null ? Output.empty() : this.lastScanTime;
+    public Output<String> lastScanTime() {
+        return this.lastScanTime == null ? Codegen.empty() : this.lastScanTime;
     }
 
     public DiscoveryOccurrenceArgs(
@@ -90,11 +91,11 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     }
 
     private DiscoveryOccurrenceArgs() {
-        this.analysisStatus = Output.empty();
-        this.analysisStatusError = Output.empty();
-        this.continuousAnalysis = Output.empty();
-        this.cpe = Output.empty();
-        this.lastScanTime = Output.empty();
+        this.analysisStatus = Codegen.empty();
+        this.analysisStatusError = Codegen.empty();
+        this.continuousAnalysis = Codegen.empty();
+        this.cpe = Codegen.empty();
+        this.lastScanTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder analysisStatus(@Nullable DiscoveryOccurrenceAnalysisStatus analysisStatus) {
-            this.analysisStatus = Output.ofNullable(analysisStatus);
+            this.analysisStatus = Codegen.ofNullable(analysisStatus);
             return this;
         }
         public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
@@ -138,7 +139,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder analysisStatusError(@Nullable StatusArgs analysisStatusError) {
-            this.analysisStatusError = Output.ofNullable(analysisStatusError);
+            this.analysisStatusError = Codegen.ofNullable(analysisStatusError);
             return this;
         }
         public Builder continuousAnalysis(@Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis) {
@@ -146,7 +147,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder continuousAnalysis(@Nullable DiscoveryOccurrenceContinuousAnalysis continuousAnalysis) {
-            this.continuousAnalysis = Output.ofNullable(continuousAnalysis);
+            this.continuousAnalysis = Codegen.ofNullable(continuousAnalysis);
             return this;
         }
         public Builder cpe(@Nullable Output<String> cpe) {
@@ -154,7 +155,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder cpe(@Nullable String cpe) {
-            this.cpe = Output.ofNullable(cpe);
+            this.cpe = Codegen.ofNullable(cpe);
             return this;
         }
         public Builder lastScanTime(@Nullable Output<String> lastScanTime) {
@@ -162,7 +163,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder lastScanTime(@Nullable String lastScanTime) {
-            this.lastScanTime = Output.ofNullable(lastScanTime);
+            this.lastScanTime = Codegen.ofNullable(lastScanTime);
             return this;
         }        public DiscoveryOccurrenceArgs build() {
             return new DiscoveryOccurrenceArgs(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);

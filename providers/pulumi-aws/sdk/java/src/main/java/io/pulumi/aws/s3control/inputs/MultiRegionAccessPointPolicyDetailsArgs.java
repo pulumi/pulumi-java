@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -31,7 +32,7 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends io.pulumi.res
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -43,8 +44,8 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends io.pulumi.res
     }
 
     private MultiRegionAccessPointPolicyDetailsArgs() {
-        this.name = Output.empty();
-        this.policy = Output.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {

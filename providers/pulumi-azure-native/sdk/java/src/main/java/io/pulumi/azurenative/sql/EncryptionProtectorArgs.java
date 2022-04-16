@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.ServerKeyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="autoRotationEnabled")
       private final @Nullable Output<Boolean> autoRotationEnabled;
 
-    public Output<Boolean> getAutoRotationEnabled() {
-        return this.autoRotationEnabled == null ? Output.empty() : this.autoRotationEnabled;
+    public Output<Boolean> autoRotationEnabled() {
+        return this.autoRotationEnabled == null ? Codegen.empty() : this.autoRotationEnabled;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="encryptionProtectorName")
       private final @Nullable Output<String> encryptionProtectorName;
 
-    public Output<String> getEncryptionProtectorName() {
-        return this.encryptionProtectorName == null ? Output.empty() : this.encryptionProtectorName;
+    public Output<String> encryptionProtectorName() {
+        return this.encryptionProtectorName == null ? Codegen.empty() : this.encryptionProtectorName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,8 +58,8 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverKeyName")
       private final @Nullable Output<String> serverKeyName;
 
-    public Output<String> getServerKeyName() {
-        return this.serverKeyName == null ? Output.empty() : this.serverKeyName;
+    public Output<String> serverKeyName() {
+        return this.serverKeyName == null ? Codegen.empty() : this.serverKeyName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
 
-    public Output<Either<String,ServerKeyType>> getServerKeyType() {
+    public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
     }
 
@@ -79,7 +80,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -99,12 +100,12 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     }
 
     private EncryptionProtectorArgs() {
-        this.autoRotationEnabled = Output.empty();
-        this.encryptionProtectorName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverKeyName = Output.empty();
-        this.serverKeyType = Output.empty();
-        this.serverName = Output.empty();
+        this.autoRotationEnabled = Codegen.empty();
+        this.encryptionProtectorName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverKeyName = Codegen.empty();
+        this.serverKeyType = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder autoRotationEnabled(@Nullable Boolean autoRotationEnabled) {
-            this.autoRotationEnabled = Output.ofNullable(autoRotationEnabled);
+            this.autoRotationEnabled = Codegen.ofNullable(autoRotationEnabled);
             return this;
         }
         public Builder encryptionProtectorName(@Nullable Output<String> encryptionProtectorName) {
@@ -150,7 +151,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encryptionProtectorName(@Nullable String encryptionProtectorName) {
-            this.encryptionProtectorName = Output.ofNullable(encryptionProtectorName);
+            this.encryptionProtectorName = Codegen.ofNullable(encryptionProtectorName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -166,7 +167,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serverKeyName(@Nullable String serverKeyName) {
-            this.serverKeyName = Output.ofNullable(serverKeyName);
+            this.serverKeyName = Codegen.ofNullable(serverKeyName);
             return this;
         }
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {

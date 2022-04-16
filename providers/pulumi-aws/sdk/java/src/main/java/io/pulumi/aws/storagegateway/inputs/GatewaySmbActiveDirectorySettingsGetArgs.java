@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     @Import(name="activeDirectoryStatus")
       private final @Nullable Output<String> activeDirectoryStatus;
 
-    public Output<String> getActiveDirectoryStatus() {
-        return this.activeDirectoryStatus == null ? Output.empty() : this.activeDirectoryStatus;
+    public Output<String> activeDirectoryStatus() {
+        return this.activeDirectoryStatus == null ? Codegen.empty() : this.activeDirectoryStatus;
     }
 
     /**
@@ -31,8 +32,8 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     @Import(name="domainControllers")
       private final @Nullable Output<List<String>> domainControllers;
 
-    public Output<List<String>> getDomainControllers() {
-        return this.domainControllers == null ? Output.empty() : this.domainControllers;
+    public Output<List<String>> domainControllers() {
+        return this.domainControllers == null ? Codegen.empty() : this.domainControllers;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -54,8 +55,8 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
-    public Output<String> getOrganizationalUnit() {
-        return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
+    public Output<String> organizationalUnit() {
+        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -76,8 +77,8 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
+    public Output<Integer> timeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -109,13 +110,13 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
     }
 
     private GatewaySmbActiveDirectorySettingsGetArgs() {
-        this.activeDirectoryStatus = Output.empty();
-        this.domainControllers = Output.empty();
-        this.domainName = Output.empty();
-        this.organizationalUnit = Output.empty();
-        this.password = Output.empty();
-        this.timeoutInSeconds = Output.empty();
-        this.username = Output.empty();
+        this.activeDirectoryStatus = Codegen.empty();
+        this.domainControllers = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.organizationalUnit = Codegen.empty();
+        this.password = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
             return this;
         }
         public Builder activeDirectoryStatus(@Nullable String activeDirectoryStatus) {
-            this.activeDirectoryStatus = Output.ofNullable(activeDirectoryStatus);
+            this.activeDirectoryStatus = Codegen.ofNullable(activeDirectoryStatus);
             return this;
         }
         public Builder domainControllers(@Nullable Output<List<String>> domainControllers) {
@@ -163,7 +164,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
             return this;
         }
         public Builder domainControllers(@Nullable List<String> domainControllers) {
-            this.domainControllers = Output.ofNullable(domainControllers);
+            this.domainControllers = Codegen.ofNullable(domainControllers);
             return this;
         }
         public Builder domainControllers(String... domainControllers) {
@@ -182,7 +183,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
             return this;
         }
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Output.ofNullable(organizationalUnit);
+            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
             return this;
         }
         public Builder password(Output<String> password) {
@@ -198,7 +199,7 @@ public final class GatewaySmbActiveDirectorySettingsGetArgs extends io.pulumi.re
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
             return this;
         }
         public Builder username(Output<String> username) {

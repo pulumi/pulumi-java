@@ -5,6 +5,7 @@ package io.pulumi.googlenative.translate_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceLanguageCode", required=true)
       private final Output<String> sourceLanguageCode;
 
-    public Output<String> getSourceLanguageCode() {
+    public Output<String> sourceLanguageCode() {
         return this.sourceLanguageCode;
     }
 
@@ -35,7 +36,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="targetLanguageCode", required=true)
       private final Output<String> targetLanguageCode;
 
-    public Output<String> getTargetLanguageCode() {
+    public Output<String> targetLanguageCode() {
         return this.targetLanguageCode;
     }
 
@@ -47,8 +48,8 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LanguageCodePairArgs() {
-        this.sourceLanguageCode = Output.empty();
-        this.targetLanguageCode = Output.empty();
+        this.sourceLanguageCode = Codegen.empty();
+        this.targetLanguageCode = Codegen.empty();
     }
 
     public static Builder builder() {

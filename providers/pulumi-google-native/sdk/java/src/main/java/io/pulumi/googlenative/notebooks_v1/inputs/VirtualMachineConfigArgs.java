@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.enums.VirtualMachineConfigNicType;
 import io.pulumi.googlenative.notebooks_v1.inputs.ContainerImageArgs;
 import io.pulumi.googlenative.notebooks_v1.inputs.EncryptionConfigArgs;
@@ -34,8 +35,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="acceleratorConfig")
       private final @Nullable Output<RuntimeAcceleratorConfigArgs> acceleratorConfig;
 
-    public Output<RuntimeAcceleratorConfigArgs> getAcceleratorConfig() {
-        return this.acceleratorConfig == null ? Output.empty() : this.acceleratorConfig;
+    public Output<RuntimeAcceleratorConfigArgs> acceleratorConfig() {
+        return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="containerImages")
       private final @Nullable Output<List<ContainerImageArgs>> containerImages;
 
-    public Output<List<ContainerImageArgs>> getContainerImages() {
-        return this.containerImages == null ? Output.empty() : this.containerImages;
+    public Output<List<ContainerImageArgs>> containerImages() {
+        return this.containerImages == null ? Codegen.empty() : this.containerImages;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="dataDisk", required=true)
       private final Output<LocalDiskArgs> dataDisk;
 
-    public Output<LocalDiskArgs> getDataDisk() {
+    public Output<LocalDiskArgs> dataDisk() {
         return this.dataDisk;
     }
 
@@ -67,8 +68,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="internalIpOnly")
       private final @Nullable Output<Boolean> internalIpOnly;
 
-    public Output<Boolean> getInternalIpOnly() {
-        return this.internalIpOnly == null ? Output.empty() : this.internalIpOnly;
+    public Output<Boolean> internalIpOnly() {
+        return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
 
@@ -111,8 +112,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="nicType")
       private final @Nullable Output<VirtualMachineConfigNicType> nicType;
 
-    public Output<VirtualMachineConfigNicType> getNicType() {
-        return this.nicType == null ? Output.empty() : this.nicType;
+    public Output<VirtualMachineConfigNicType> nicType() {
+        return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<RuntimeShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+    public Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<String> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VirtualMachineConfigArgs(
@@ -200,19 +201,19 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
     }
 
     private VirtualMachineConfigArgs() {
-        this.acceleratorConfig = Output.empty();
-        this.containerImages = Output.empty();
-        this.dataDisk = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.internalIpOnly = Output.empty();
-        this.labels = Output.empty();
-        this.machineType = Output.empty();
-        this.metadata = Output.empty();
-        this.network = Output.empty();
-        this.nicType = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.subnet = Output.empty();
-        this.tags = Output.empty();
+        this.acceleratorConfig = Codegen.empty();
+        this.containerImages = Codegen.empty();
+        this.dataDisk = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.internalIpOnly = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.network = Codegen.empty();
+        this.nicType = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -264,7 +265,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder acceleratorConfig(@Nullable RuntimeAcceleratorConfigArgs acceleratorConfig) {
-            this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
+            this.acceleratorConfig = Codegen.ofNullable(acceleratorConfig);
             return this;
         }
         public Builder containerImages(@Nullable Output<List<ContainerImageArgs>> containerImages) {
@@ -272,7 +273,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder containerImages(@Nullable List<ContainerImageArgs> containerImages) {
-            this.containerImages = Output.ofNullable(containerImages);
+            this.containerImages = Codegen.ofNullable(containerImages);
             return this;
         }
         public Builder containerImages(ContainerImageArgs... containerImages) {
@@ -291,7 +292,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
@@ -299,7 +300,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Output.ofNullable(internalIpOnly);
+            this.internalIpOnly = Codegen.ofNullable(internalIpOnly);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -307,7 +308,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder machineType(Output<String> machineType) {
@@ -323,7 +324,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -331,7 +332,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder nicType(@Nullable Output<VirtualMachineConfigNicType> nicType) {
@@ -339,7 +340,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder nicType(@Nullable VirtualMachineConfigNicType nicType) {
-            this.nicType = Output.ofNullable(nicType);
+            this.nicType = Codegen.ofNullable(nicType);
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable Output<RuntimeShieldedInstanceConfigArgs> shieldedInstanceConfig) {
@@ -347,7 +348,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable RuntimeShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder subnet(@Nullable Output<String> subnet) {
@@ -355,7 +356,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -363,7 +364,7 @@ public final class VirtualMachineConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {

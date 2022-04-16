@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.LicenseArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.LicenseResourceRequirementsResponse;
@@ -30,7 +31,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -44,7 +45,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Type of resource. Always compute#license for licenses.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +73,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return The unique code used to attach this license to images, snapshots, and disks.
      * 
      */
-    public Output<String> getLicenseCode() {
+    public Output<String> licenseCode() {
         return this.licenseCode;
     }
     /**
@@ -86,13 +87,13 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="resourceRequirements", type=LicenseResourceRequirementsResponse.class, parameters={})
     private Output<LicenseResourceRequirementsResponse> resourceRequirements;
 
-    public Output<LicenseResourceRequirementsResponse> getResourceRequirements() {
+    public Output<LicenseResourceRequirementsResponse> resourceRequirements() {
         return this.resourceRequirements;
     }
     /**
@@ -106,7 +107,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -120,7 +121,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -134,7 +135,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
      * 
      */
-    public Output<Boolean> getTransferable() {
+    public Output<Boolean> transferable() {
         return this.transferable;
     }
 
@@ -160,7 +161,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public License(String name, @Nullable LicenseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:License", name, args == null ? LicenseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:License", name, args == null ? LicenseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private License(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

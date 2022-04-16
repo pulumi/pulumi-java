@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class NetworkInterfaceInstanceIpv6AddressArgs extends io.pulumi.res
     @Import(name="ipv6Address", required=true)
       private final Output<String> ipv6Address;
 
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address;
     }
 
@@ -25,7 +26,7 @@ public final class NetworkInterfaceInstanceIpv6AddressArgs extends io.pulumi.res
     }
 
     private NetworkInterfaceInstanceIpv6AddressArgs() {
-        this.ipv6Address = Output.empty();
+        this.ipv6Address = Codegen.empty();
     }
 
     public static Builder builder() {

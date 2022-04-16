@@ -6,6 +6,7 @@ package io.pulumi.googlenative.managedidentities_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1alpha1.DomainArgs;
 import io.pulumi.googlenative.managedidentities_v1alpha1.outputs.TrustResponse;
@@ -33,7 +34,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
      * 
      */
-    public Output<Boolean> getAuditLogsEnabled() {
+    public Output<Boolean> auditLogsEnabled() {
         return this.auditLogsEnabled;
     }
     /**
@@ -47,7 +48,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
      * 
      */
-    public Output<List<String>> getAuthorizedNetworks() {
+    public Output<List<String>> authorizedNetworks() {
         return this.authorizedNetworks;
     }
     /**
@@ -61,7 +62,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The time the instance was created. Synthetic field is populated automatically by CCFE. go/ccfe-synthetic-field-user-guide
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -75,7 +76,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory that is set up on an internal network.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -89,7 +90,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels to represent user provided metadata
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -103,7 +104,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
      */
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations;
     }
     /**
@@ -117,7 +118,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Optional. Name of customer-visible admin used to perform Active Directory operations. If not specified `setupadmin` would be used.
      * 
      */
-    public Output<String> getManagedIdentitiesAdminName() {
+    public Output<String> managedIdentitiesAdminName() {
         return this.managedIdentitiesAdminName;
     }
     /**
@@ -131,7 +132,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Unique name of the domain in this scope including projects and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
      * 
      */
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange;
     }
     /**
@@ -159,7 +160,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The current state of this domain.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -173,7 +174,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Additional information about the current status of this domain, if available.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -187,7 +188,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The current trusts associated with the domain.
      * 
      */
-    public Output<List<TrustResponse>> getTrusts() {
+    public Output<List<TrustResponse>> trusts() {
         return this.trusts;
     }
     /**
@@ -201,7 +202,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Last update time. Synthetic field is populated automatically by CCFE.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -227,7 +228,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:managedidentities/v1alpha1:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:managedidentities/v1alpha1:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Domain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

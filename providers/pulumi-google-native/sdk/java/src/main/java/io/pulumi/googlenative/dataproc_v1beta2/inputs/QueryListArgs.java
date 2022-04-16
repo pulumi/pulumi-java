@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class QueryListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queries", required=true)
       private final Output<List<String>> queries;
 
-    public Output<List<String>> getQueries() {
+    public Output<List<String>> queries() {
         return this.queries;
     }
 
@@ -34,7 +35,7 @@ public final class QueryListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryListArgs() {
-        this.queries = Output.empty();
+        this.queries = Codegen.empty();
     }
 
     public static Builder builder() {

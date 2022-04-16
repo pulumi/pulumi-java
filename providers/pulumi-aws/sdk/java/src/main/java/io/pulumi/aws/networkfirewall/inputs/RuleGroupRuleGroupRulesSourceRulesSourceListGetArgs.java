@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
     @Import(name="generatedRulesType", required=true)
       private final Output<String> generatedRulesType;
 
-    public Output<String> getGeneratedRulesType() {
+    public Output<String> generatedRulesType() {
         return this.generatedRulesType;
     }
 
@@ -32,7 +33,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
     @Import(name="targetTypes", required=true)
       private final Output<List<String>> targetTypes;
 
-    public Output<List<String>> getTargetTypes() {
+    public Output<List<String>> targetTypes() {
         return this.targetTypes;
     }
 
@@ -43,7 +44,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
     @Import(name="targets", required=true)
       private final Output<List<String>> targets;
 
-    public Output<List<String>> getTargets() {
+    public Output<List<String>> targets() {
         return this.targets;
     }
 
@@ -57,9 +58,9 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
     }
 
     private RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs() {
-        this.generatedRulesType = Output.empty();
-        this.targetTypes = Output.empty();
-        this.targets = Output.empty();
+        this.generatedRulesType = Codegen.empty();
+        this.targetTypes = Codegen.empty();
+        this.targets = Codegen.empty();
     }
 
     public static Builder builder() {

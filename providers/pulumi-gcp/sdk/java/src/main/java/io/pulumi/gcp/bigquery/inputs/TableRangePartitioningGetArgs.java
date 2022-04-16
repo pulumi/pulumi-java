@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.TableRangePartitioningRangeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class TableRangePartitioningGetArgs extends io.pulumi.resources.Res
     @Import(name="field", required=true)
       private final Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field;
     }
 
@@ -34,7 +35,7 @@ public final class TableRangePartitioningGetArgs extends io.pulumi.resources.Res
     @Import(name="range", required=true)
       private final Output<TableRangePartitioningRangeGetArgs> range;
 
-    public Output<TableRangePartitioningRangeGetArgs> getRange() {
+    public Output<TableRangePartitioningRangeGetArgs> range() {
         return this.range;
     }
 
@@ -46,8 +47,8 @@ public final class TableRangePartitioningGetArgs extends io.pulumi.resources.Res
     }
 
     private TableRangePartitioningGetArgs() {
-        this.field = Output.empty();
-        this.range = Output.empty();
+        this.field = Codegen.empty();
+        this.range = Codegen.empty();
     }
 
     public static Builder builder() {

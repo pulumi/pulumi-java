@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,22 +23,22 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
     @Import(name="base")
       private final @Nullable Output<Integer> base;
 
-    public Output<Integer> getBase() {
-        return this.base == null ? Output.empty() : this.base;
+    public Output<Integer> base() {
+        return this.base == null ? Codegen.empty() : this.base;
     }
 
     @Import(name="capacityProvider")
       private final @Nullable Output<String> capacityProvider;
 
-    public Output<String> getCapacityProvider() {
-        return this.capacityProvider == null ? Output.empty() : this.capacityProvider;
+    public Output<String> capacityProvider() {
+        return this.capacityProvider == null ? Codegen.empty() : this.capacityProvider;
     }
 
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+    public Output<Integer> weight() {
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public ClusterCapacityProviderStrategyItemArgs(
@@ -50,9 +51,9 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
     }
 
     private ClusterCapacityProviderStrategyItemArgs() {
-        this.base = Output.empty();
-        this.capacityProvider = Output.empty();
-        this.weight = Output.empty();
+        this.base = Codegen.empty();
+        this.capacityProvider = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
             return this;
         }
         public Builder base(@Nullable Integer base) {
-            this.base = Output.ofNullable(base);
+            this.base = Codegen.ofNullable(base);
             return this;
         }
         public Builder capacityProvider(@Nullable Output<String> capacityProvider) {
@@ -92,7 +93,7 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
             return this;
         }
         public Builder capacityProvider(@Nullable String capacityProvider) {
-            this.capacityProvider = Output.ofNullable(capacityProvider);
+            this.capacityProvider = Codegen.ofNullable(capacityProvider);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -100,7 +101,7 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public ClusterCapacityProviderStrategyItemArgs build() {
             return new ClusterCapacityProviderStrategyItemArgs(base, capacityProvider, weight);

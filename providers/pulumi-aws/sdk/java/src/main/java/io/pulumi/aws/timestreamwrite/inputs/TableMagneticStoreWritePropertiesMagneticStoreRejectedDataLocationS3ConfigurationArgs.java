@@ -5,6 +5,7 @@ package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+    public Output<String> bucketName() {
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="encryptionOption")
       private final @Nullable Output<String> encryptionOption;
 
-    public Output<String> getEncryptionOption() {
-        return this.encryptionOption == null ? Output.empty() : this.encryptionOption;
+    public Output<String> encryptionOption() {
+        return this.encryptionOption == null ? Codegen.empty() : this.encryptionOption;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
-    public Output<String> getObjectKeyPrefix() {
-        return this.objectKeyPrefix == null ? Output.empty() : this.objectKeyPrefix;
+    public Output<String> objectKeyPrefix() {
+        return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
     }
 
     public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs(
@@ -70,10 +71,10 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     }
 
     private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs() {
-        this.bucketName = Output.empty();
-        this.encryptionOption = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.objectKeyPrefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.encryptionOption = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.objectKeyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder encryptionOption(@Nullable Output<String> encryptionOption) {
@@ -115,7 +116,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             return this;
         }
         public Builder encryptionOption(@Nullable String encryptionOption) {
-            this.encryptionOption = Output.ofNullable(encryptionOption);
+            this.encryptionOption = Codegen.ofNullable(encryptionOption);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -123,7 +124,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
@@ -131,7 +132,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             return this;
         }
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
-            this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
+            this.objectKeyPrefix = Codegen.ofNullable(objectKeyPrefix);
             return this;
         }        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs build() {
             return new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs(bucketName, encryptionOption, kmsKeyId, objectKeyPrefix);

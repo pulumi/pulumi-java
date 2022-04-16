@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryGroupArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupState;
@@ -45,7 +46,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @return Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @return A short name to identify the entry group, for example, "analytics data - jan 2011".
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +76,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * contain only English letters, numbers and underscores, and be at most 64 characters.
      * 
      */
-    public Output<String> getEntryGroupId() {
+    public Output<String> entryGroupId() {
         return this.entryGroupId;
     }
     /**
@@ -91,7 +92,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * projects/{project}/locations/{location}/entryGroups/{entryGroupId}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -107,7 +108,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -121,7 +122,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @return EntryGroup location region.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -147,7 +148,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntryGroup(String name, EntryGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/entryGroup:EntryGroup", name, args == null ? EntryGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/entryGroup:EntryGroup", name, args == null ? EntryGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EntryGroup(String name, Output<String> id, @Nullable EntryGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

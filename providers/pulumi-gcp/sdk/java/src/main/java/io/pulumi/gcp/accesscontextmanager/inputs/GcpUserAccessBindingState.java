@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="accessLevels")
       private final @Nullable Output<String> accessLevels;
 
-    public Output<String> getAccessLevels() {
-        return this.accessLevels == null ? Output.empty() : this.accessLevels;
+    public Output<String> accessLevels() {
+        return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="groupKey")
       private final @Nullable Output<String> groupKey;
 
-    public Output<String> getGroupKey() {
-        return this.groupKey == null ? Output.empty() : this.groupKey;
+    public Output<String> groupKey() {
+        return this.groupKey == null ? Codegen.empty() : this.groupKey;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
-        return this.organizationId == null ? Output.empty() : this.organizationId;
+    public Output<String> organizationId() {
+        return this.organizationId == null ? Codegen.empty() : this.organizationId;
     }
 
     public GcpUserAccessBindingState(
@@ -72,10 +73,10 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     }
 
     private GcpUserAccessBindingState() {
-        this.accessLevels = Output.empty();
-        this.groupKey = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
+        this.accessLevels = Codegen.empty();
+        this.groupKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accessLevels(@Nullable String accessLevels) {
-            this.accessLevels = Output.ofNullable(accessLevels);
+            this.accessLevels = Codegen.ofNullable(accessLevels);
             return this;
         }
         public Builder groupKey(@Nullable Output<String> groupKey) {
@@ -117,7 +118,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder groupKey(@Nullable String groupKey) {
-            this.groupKey = Output.ofNullable(groupKey);
+            this.groupKey = Codegen.ofNullable(groupKey);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -125,7 +126,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(@Nullable Output<String> organizationId) {
@@ -133,7 +134,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder organizationId(@Nullable String organizationId) {
-            this.organizationId = Output.ofNullable(organizationId);
+            this.organizationId = Codegen.ofNullable(organizationId);
             return this;
         }        public GcpUserAccessBindingState build() {
             return new GcpUserAccessBindingState(accessLevels, groupKey, name, organizationId);

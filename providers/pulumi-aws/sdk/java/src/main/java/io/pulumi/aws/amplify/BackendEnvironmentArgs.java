@@ -5,6 +5,7 @@ package io.pulumi.aws.amplify;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -32,8 +33,8 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="deploymentArtifacts")
       private final @Nullable Output<String> deploymentArtifacts;
 
-    public Output<String> getDeploymentArtifacts() {
-        return this.deploymentArtifacts == null ? Output.empty() : this.deploymentArtifacts;
+    public Output<String> deploymentArtifacts() {
+        return this.deploymentArtifacts == null ? Codegen.empty() : this.deploymentArtifacts;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -54,8 +55,8 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="stackName")
       private final @Nullable Output<String> stackName;
 
-    public Output<String> getStackName() {
-        return this.stackName == null ? Output.empty() : this.stackName;
+    public Output<String> stackName() {
+        return this.stackName == null ? Codegen.empty() : this.stackName;
     }
 
     public BackendEnvironmentArgs(
@@ -70,10 +71,10 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BackendEnvironmentArgs() {
-        this.appId = Output.empty();
-        this.deploymentArtifacts = Output.empty();
-        this.environmentName = Output.empty();
-        this.stackName = Output.empty();
+        this.appId = Codegen.empty();
+        this.deploymentArtifacts = Codegen.empty();
+        this.environmentName = Codegen.empty();
+        this.stackName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder deploymentArtifacts(@Nullable String deploymentArtifacts) {
-            this.deploymentArtifacts = Output.ofNullable(deploymentArtifacts);
+            this.deploymentArtifacts = Codegen.ofNullable(deploymentArtifacts);
             return this;
         }
         public Builder environmentName(Output<String> environmentName) {
@@ -131,7 +132,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder stackName(@Nullable String stackName) {
-            this.stackName = Output.ofNullable(stackName);
+            this.stackName = Codegen.ofNullable(stackName);
             return this;
         }        public BackendEnvironmentArgs build() {
             return new BackendEnvironmentArgs(appId, deploymentArtifacts, environmentName, stackName);

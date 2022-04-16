@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+    public Output<String> subnetwork() {
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public SubnetworkIAMPolicyState(
@@ -88,11 +89,11 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
     }
 
     private SubnetworkIAMPolicyState() {
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.subnetwork = Output.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -136,7 +137,7 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -144,7 +145,7 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -152,7 +153,7 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -160,7 +161,7 @@ public final class SubnetworkIAMPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public SubnetworkIAMPolicyState build() {
             return new SubnetworkIAMPolicyState(etag, policyData, project, region, subnetwork);

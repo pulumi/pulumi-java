@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +57,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the related resource
      * 
      */
-    public Output<String> getRelatedResourceId() {
+    public Output<String> relatedResourceId() {
         return this.relatedResourceId;
     }
     /**
@@ -84,7 +85,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return The resource kind of the related resource
      * 
      */
-    public Output<String> getRelatedResourceKind() {
+    public Output<String> relatedResourceKind() {
         return this.relatedResourceKind;
     }
     /**
@@ -98,7 +99,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return The name of the related resource
      * 
      */
-    public Output<String> getRelatedResourceName() {
+    public Output<String> relatedResourceName() {
         return this.relatedResourceName;
     }
     /**
@@ -112,7 +113,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return The resource type of the related resource
      * 
      */
-    public Output<String> getRelatedResourceType() {
+    public Output<String> relatedResourceType() {
         return this.relatedResourceType;
     }
     /**
@@ -126,7 +127,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -140,7 +141,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -166,7 +167,7 @@ public class IncidentRelation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IncidentRelation(String name, IncidentRelationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:IncidentRelation", name, args == null ? IncidentRelationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:IncidentRelation", name, args == null ? IncidentRelationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IncidentRelation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

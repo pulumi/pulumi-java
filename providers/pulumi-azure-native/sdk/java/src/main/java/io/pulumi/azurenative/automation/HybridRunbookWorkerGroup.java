@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * @return Sets the credential of a worker group.
      * 
      */
-    public Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> getCredential() {
+    public Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> credential() {
         return this.credential;
     }
     /**
@@ -58,7 +59,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * @return Type of the HybridWorkerGroup.
      * 
      */
-    public Output</* @Nullable */ String> getGroupType() {
+    public Output</* @Nullable */ String> groupType() {
         return this.groupType;
     }
     /**
@@ -72,7 +73,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * @return Gets or sets the list of hybrid runbook workers.
      * 
      */
-    public Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> getHybridRunbookWorkers() {
+    public Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> hybridRunbookWorkers() {
         return this.hybridRunbookWorkers;
     }
     /**
@@ -86,7 +87,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * @return Gets or sets the name of the group.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * @return Resource system metadata.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +115,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +141,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public HybridRunbookWorkerGroup(String name, HybridRunbookWorkerGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:HybridRunbookWorkerGroup", name, args == null ? HybridRunbookWorkerGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:automation:HybridRunbookWorkerGroup", name, args == null ? HybridRunbookWorkerGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HybridRunbookWorkerGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

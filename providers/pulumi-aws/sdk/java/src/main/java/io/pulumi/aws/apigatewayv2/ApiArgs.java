@@ -6,6 +6,7 @@ package io.pulumi.aws.apigatewayv2;
 import io.pulumi.aws.apigatewayv2.inputs.ApiCorsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKeySelectionExpression")
       private final @Nullable Output<String> apiKeySelectionExpression;
 
-    public Output<String> getApiKeySelectionExpression() {
-        return this.apiKeySelectionExpression == null ? Output.empty() : this.apiKeySelectionExpression;
+    public Output<String> apiKeySelectionExpression() {
+        return this.apiKeySelectionExpression == null ? Codegen.empty() : this.apiKeySelectionExpression;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<String> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="corsConfiguration")
       private final @Nullable Output<ApiCorsConfigurationArgs> corsConfiguration;
 
-    public Output<ApiCorsConfigurationArgs> getCorsConfiguration() {
-        return this.corsConfiguration == null ? Output.empty() : this.corsConfiguration;
+    public Output<ApiCorsConfigurationArgs> corsConfiguration() {
+        return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialsArn")
       private final @Nullable Output<String> credentialsArn;
 
-    public Output<String> getCredentialsArn() {
-        return this.credentialsArn == null ? Output.empty() : this.credentialsArn;
+    public Output<String> credentialsArn() {
+        return this.credentialsArn == null ? Codegen.empty() : this.credentialsArn;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableExecuteApiEndpoint")
       private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
-    public Output<Boolean> getDisableExecuteApiEndpoint() {
-        return this.disableExecuteApiEndpoint == null ? Output.empty() : this.disableExecuteApiEndpoint;
+    public Output<Boolean> disableExecuteApiEndpoint() {
+        return this.disableExecuteApiEndpoint == null ? Codegen.empty() : this.disableExecuteApiEndpoint;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failOnWarnings")
       private final @Nullable Output<Boolean> failOnWarnings;
 
-    public Output<Boolean> getFailOnWarnings() {
-        return this.failOnWarnings == null ? Output.empty() : this.failOnWarnings;
+    public Output<Boolean> failOnWarnings() {
+        return this.failOnWarnings == null ? Codegen.empty() : this.failOnWarnings;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocolType", required=true)
       private final Output<String> protocolType;
 
-    public Output<String> getProtocolType() {
+    public Output<String> protocolType() {
         return this.protocolType;
     }
 
@@ -127,8 +128,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeKey")
       private final @Nullable Output<String> routeKey;
 
-    public Output<String> getRouteKey() {
-        return this.routeKey == null ? Output.empty() : this.routeKey;
+    public Output<String> routeKey() {
+        return this.routeKey == null ? Codegen.empty() : this.routeKey;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeSelectionExpression")
       private final @Nullable Output<String> routeSelectionExpression;
 
-    public Output<String> getRouteSelectionExpression() {
-        return this.routeSelectionExpression == null ? Output.empty() : this.routeSelectionExpression;
+    public Output<String> routeSelectionExpression() {
+        return this.routeSelectionExpression == null ? Codegen.empty() : this.routeSelectionExpression;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ApiArgs(
@@ -210,20 +211,20 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiArgs() {
-        this.apiKeySelectionExpression = Output.empty();
-        this.body = Output.empty();
-        this.corsConfiguration = Output.empty();
-        this.credentialsArn = Output.empty();
-        this.description = Output.empty();
-        this.disableExecuteApiEndpoint = Output.empty();
-        this.failOnWarnings = Output.empty();
-        this.name = Output.empty();
-        this.protocolType = Output.empty();
-        this.routeKey = Output.empty();
-        this.routeSelectionExpression = Output.empty();
-        this.tags = Output.empty();
-        this.target = Output.empty();
-        this.version = Output.empty();
+        this.apiKeySelectionExpression = Codegen.empty();
+        this.body = Codegen.empty();
+        this.corsConfiguration = Codegen.empty();
+        this.credentialsArn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disableExecuteApiEndpoint = Codegen.empty();
+        this.failOnWarnings = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protocolType = Codegen.empty();
+        this.routeKey = Codegen.empty();
+        this.routeSelectionExpression = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.target = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -277,7 +278,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiKeySelectionExpression(@Nullable String apiKeySelectionExpression) {
-            this.apiKeySelectionExpression = Output.ofNullable(apiKeySelectionExpression);
+            this.apiKeySelectionExpression = Codegen.ofNullable(apiKeySelectionExpression);
             return this;
         }
         public Builder body(@Nullable Output<String> body) {
@@ -285,7 +286,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder corsConfiguration(@Nullable Output<ApiCorsConfigurationArgs> corsConfiguration) {
@@ -293,7 +294,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder corsConfiguration(@Nullable ApiCorsConfigurationArgs corsConfiguration) {
-            this.corsConfiguration = Output.ofNullable(corsConfiguration);
+            this.corsConfiguration = Codegen.ofNullable(corsConfiguration);
             return this;
         }
         public Builder credentialsArn(@Nullable Output<String> credentialsArn) {
@@ -301,7 +302,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentialsArn(@Nullable String credentialsArn) {
-            this.credentialsArn = Output.ofNullable(credentialsArn);
+            this.credentialsArn = Codegen.ofNullable(credentialsArn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -309,7 +310,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disableExecuteApiEndpoint(@Nullable Output<Boolean> disableExecuteApiEndpoint) {
@@ -317,7 +318,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
-            this.disableExecuteApiEndpoint = Output.ofNullable(disableExecuteApiEndpoint);
+            this.disableExecuteApiEndpoint = Codegen.ofNullable(disableExecuteApiEndpoint);
             return this;
         }
         public Builder failOnWarnings(@Nullable Output<Boolean> failOnWarnings) {
@@ -325,7 +326,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failOnWarnings(@Nullable Boolean failOnWarnings) {
-            this.failOnWarnings = Output.ofNullable(failOnWarnings);
+            this.failOnWarnings = Codegen.ofNullable(failOnWarnings);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -333,7 +334,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocolType(Output<String> protocolType) {
@@ -349,7 +350,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeKey(@Nullable String routeKey) {
-            this.routeKey = Output.ofNullable(routeKey);
+            this.routeKey = Codegen.ofNullable(routeKey);
             return this;
         }
         public Builder routeSelectionExpression(@Nullable Output<String> routeSelectionExpression) {
@@ -357,7 +358,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeSelectionExpression(@Nullable String routeSelectionExpression) {
-            this.routeSelectionExpression = Output.ofNullable(routeSelectionExpression);
+            this.routeSelectionExpression = Codegen.ofNullable(routeSelectionExpression);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -365,7 +366,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -373,7 +374,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -381,7 +382,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ApiArgs build() {
             return new ApiArgs(apiKeySelectionExpression, body, corsConfiguration, credentialsArn, description, disableExecuteApiEndpoint, failOnWarnings, name, protocolType, routeKey, routeSelectionExpression, tags, target, version);

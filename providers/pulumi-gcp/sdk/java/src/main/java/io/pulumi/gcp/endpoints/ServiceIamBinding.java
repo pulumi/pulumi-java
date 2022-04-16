@@ -6,6 +6,7 @@ package io.pulumi.gcp.endpoints;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.endpoints.ServiceIamBindingArgs;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamBindingState;
@@ -61,7 +62,7 @@ public class ServiceIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=ServiceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ServiceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ ServiceIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ ServiceIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,13 +76,13 @@ public class ServiceIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -99,13 +100,13 @@ public class ServiceIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -131,7 +132,7 @@ public class ServiceIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceIamBinding(String name, ServiceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:endpoints/serviceIamBinding:ServiceIamBinding", name, args == null ? ServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:endpoints/serviceIamBinding:ServiceIamBinding", name, args == null ? ServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceIamBinding(String name, Output<String> id, @Nullable ServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

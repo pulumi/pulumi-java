@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RecordWeightedRoutingPolicyGetArgs extends io.pulumi.resource
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 
@@ -29,7 +30,7 @@ public final class RecordWeightedRoutingPolicyGetArgs extends io.pulumi.resource
     }
 
     private RecordWeightedRoutingPolicyGetArgs() {
-        this.weight = Output.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {

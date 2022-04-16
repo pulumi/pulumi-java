@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
     @Import(name="publishMibPerSec", required=true)
       private final Output<Integer> publishMibPerSec;
 
-    public Output<Integer> getPublishMibPerSec() {
+    public Output<Integer> publishMibPerSec() {
         return this.publishMibPerSec;
     }
 
@@ -31,7 +32,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
     @Import(name="subscribeMibPerSec", required=true)
       private final Output<Integer> subscribeMibPerSec;
 
-    public Output<Integer> getSubscribeMibPerSec() {
+    public Output<Integer> subscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
 
@@ -43,8 +44,8 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
     }
 
     private LiteTopicPartitionConfigCapacityGetArgs() {
-        this.publishMibPerSec = Output.empty();
-        this.subscribeMibPerSec = Output.empty();
+        this.publishMibPerSec = Codegen.empty();
+        this.subscribeMibPerSec = Codegen.empty();
     }
 
     public static Builder builder() {

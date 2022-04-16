@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapVolumeSourceArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.SecretVolumeSourceArgs;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configMap")
       private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
-    public Output<ConfigMapVolumeSourceArgs> getConfigMap() {
-        return this.configMap == null ? Output.empty() : this.configMap;
+    public Output<ConfigMapVolumeSourceArgs> configMap() {
+        return this.configMap == null ? Codegen.empty() : this.configMap;
     }
 
     /**
@@ -34,15 +35,15 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="secret")
       private final @Nullable Output<SecretVolumeSourceArgs> secret;
 
-    public Output<SecretVolumeSourceArgs> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<SecretVolumeSourceArgs> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public VolumeArgs(
@@ -55,9 +56,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.configMap = Output.empty();
-        this.name = Output.empty();
-        this.secret = Output.empty();
+        this.configMap = Codegen.empty();
+        this.name = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
-            this.configMap = Output.ofNullable(configMap);
+            this.configMap = Codegen.ofNullable(configMap);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -97,7 +98,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder secret(@Nullable Output<SecretVolumeSourceArgs> secret) {
@@ -105,7 +106,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable SecretVolumeSourceArgs secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public VolumeArgs build() {
             return new VolumeArgs(configMap, name, secret);

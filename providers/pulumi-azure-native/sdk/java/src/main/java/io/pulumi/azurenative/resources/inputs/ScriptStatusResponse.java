@@ -26,7 +26,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containerInstanceId", required=true)
       private final String containerInstanceId;
 
-    public String getContainerInstanceId() {
+    public String containerInstanceId() {
         return this.containerInstanceId;
     }
 
@@ -37,7 +37,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -48,7 +48,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="error")
       private final @Nullable ErrorResponseResponse error;
 
-    public Optional<ErrorResponseResponse> getError() {
+    public Optional<ErrorResponseResponse> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -59,7 +59,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
@@ -70,7 +70,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -81,7 +81,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
 

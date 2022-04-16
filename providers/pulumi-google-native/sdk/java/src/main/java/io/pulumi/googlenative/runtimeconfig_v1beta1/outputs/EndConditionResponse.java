@@ -24,7 +24,7 @@ public final class EndConditionResponse {
      * The cardinality of the `EndCondition`.
      * 
     */
-    public CardinalityResponse getCardinality() {
+    public CardinalityResponse cardinality() {
         return this.cardinality;
     }
 

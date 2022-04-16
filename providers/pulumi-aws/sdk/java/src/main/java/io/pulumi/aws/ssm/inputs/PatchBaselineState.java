@@ -8,6 +8,7 @@ import io.pulumi.aws.ssm.inputs.PatchBaselineGlobalFilterGetArgs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineSourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvalRules")
       private final @Nullable Output<List<PatchBaselineApprovalRuleGetArgs>> approvalRules;
 
-    public Output<List<PatchBaselineApprovalRuleGetArgs>> getApprovalRules() {
-        return this.approvalRules == null ? Output.empty() : this.approvalRules;
+    public Output<List<PatchBaselineApprovalRuleGetArgs>> approvalRules() {
+        return this.approvalRules == null ? Codegen.empty() : this.approvalRules;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvedPatches")
       private final @Nullable Output<List<String>> approvedPatches;
 
-    public Output<List<String>> getApprovedPatches() {
-        return this.approvedPatches == null ? Output.empty() : this.approvedPatches;
+    public Output<List<String>> approvedPatches() {
+        return this.approvedPatches == null ? Codegen.empty() : this.approvedPatches;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvedPatchesComplianceLevel")
       private final @Nullable Output<String> approvedPatchesComplianceLevel;
 
-    public Output<String> getApprovedPatchesComplianceLevel() {
-        return this.approvedPatchesComplianceLevel == null ? Output.empty() : this.approvedPatchesComplianceLevel;
+    public Output<String> approvedPatchesComplianceLevel() {
+        return this.approvedPatchesComplianceLevel == null ? Codegen.empty() : this.approvedPatchesComplianceLevel;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvedPatchesEnableNonSecurity")
       private final @Nullable Output<Boolean> approvedPatchesEnableNonSecurity;
 
-    public Output<Boolean> getApprovedPatchesEnableNonSecurity() {
-        return this.approvedPatchesEnableNonSecurity == null ? Output.empty() : this.approvedPatchesEnableNonSecurity;
+    public Output<Boolean> approvedPatchesEnableNonSecurity() {
+        return this.approvedPatchesEnableNonSecurity == null ? Codegen.empty() : this.approvedPatchesEnableNonSecurity;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalFilters")
       private final @Nullable Output<List<PatchBaselineGlobalFilterGetArgs>> globalFilters;
 
-    public Output<List<PatchBaselineGlobalFilterGetArgs>> getGlobalFilters() {
-        return this.globalFilters == null ? Output.empty() : this.globalFilters;
+    public Output<List<PatchBaselineGlobalFilterGetArgs>> globalFilters() {
+        return this.globalFilters == null ? Codegen.empty() : this.globalFilters;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatingSystem")
       private final @Nullable Output<String> operatingSystem;
 
-    public Output<String> getOperatingSystem() {
-        return this.operatingSystem == null ? Output.empty() : this.operatingSystem;
+    public Output<String> operatingSystem() {
+        return this.operatingSystem == null ? Codegen.empty() : this.operatingSystem;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rejectedPatches")
       private final @Nullable Output<List<String>> rejectedPatches;
 
-    public Output<List<String>> getRejectedPatches() {
-        return this.rejectedPatches == null ? Output.empty() : this.rejectedPatches;
+    public Output<List<String>> rejectedPatches() {
+        return this.rejectedPatches == null ? Codegen.empty() : this.rejectedPatches;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rejectedPatchesAction")
       private final @Nullable Output<String> rejectedPatchesAction;
 
-    public Output<String> getRejectedPatchesAction() {
-        return this.rejectedPatchesAction == null ? Output.empty() : this.rejectedPatchesAction;
+    public Output<String> rejectedPatchesAction() {
+        return this.rejectedPatchesAction == null ? Codegen.empty() : this.rejectedPatchesAction;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sources")
       private final @Nullable Output<List<PatchBaselineSourceGetArgs>> sources;
 
-    public Output<List<PatchBaselineSourceGetArgs>> getSources() {
-        return this.sources == null ? Output.empty() : this.sources;
+    public Output<List<PatchBaselineSourceGetArgs>> sources() {
+        return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public PatchBaselineState(
@@ -206,20 +207,20 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchBaselineState() {
-        this.approvalRules = Output.empty();
-        this.approvedPatches = Output.empty();
-        this.approvedPatchesComplianceLevel = Output.empty();
-        this.approvedPatchesEnableNonSecurity = Output.empty();
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.globalFilters = Output.empty();
-        this.name = Output.empty();
-        this.operatingSystem = Output.empty();
-        this.rejectedPatches = Output.empty();
-        this.rejectedPatchesAction = Output.empty();
-        this.sources = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.approvalRules = Codegen.empty();
+        this.approvedPatches = Codegen.empty();
+        this.approvedPatchesComplianceLevel = Codegen.empty();
+        this.approvedPatchesEnableNonSecurity = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.globalFilters = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operatingSystem = Codegen.empty();
+        this.rejectedPatches = Codegen.empty();
+        this.rejectedPatchesAction = Codegen.empty();
+        this.sources = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -273,7 +274,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvalRules(@Nullable List<PatchBaselineApprovalRuleGetArgs> approvalRules) {
-            this.approvalRules = Output.ofNullable(approvalRules);
+            this.approvalRules = Codegen.ofNullable(approvalRules);
             return this;
         }
         public Builder approvalRules(PatchBaselineApprovalRuleGetArgs... approvalRules) {
@@ -284,7 +285,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvedPatches(@Nullable List<String> approvedPatches) {
-            this.approvedPatches = Output.ofNullable(approvedPatches);
+            this.approvedPatches = Codegen.ofNullable(approvedPatches);
             return this;
         }
         public Builder approvedPatches(String... approvedPatches) {
@@ -295,7 +296,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvedPatchesComplianceLevel(@Nullable String approvedPatchesComplianceLevel) {
-            this.approvedPatchesComplianceLevel = Output.ofNullable(approvedPatchesComplianceLevel);
+            this.approvedPatchesComplianceLevel = Codegen.ofNullable(approvedPatchesComplianceLevel);
             return this;
         }
         public Builder approvedPatchesEnableNonSecurity(@Nullable Output<Boolean> approvedPatchesEnableNonSecurity) {
@@ -303,7 +304,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvedPatchesEnableNonSecurity(@Nullable Boolean approvedPatchesEnableNonSecurity) {
-            this.approvedPatchesEnableNonSecurity = Output.ofNullable(approvedPatchesEnableNonSecurity);
+            this.approvedPatchesEnableNonSecurity = Codegen.ofNullable(approvedPatchesEnableNonSecurity);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -311,7 +312,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -319,7 +320,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder globalFilters(@Nullable Output<List<PatchBaselineGlobalFilterGetArgs>> globalFilters) {
@@ -327,7 +328,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder globalFilters(@Nullable List<PatchBaselineGlobalFilterGetArgs> globalFilters) {
-            this.globalFilters = Output.ofNullable(globalFilters);
+            this.globalFilters = Codegen.ofNullable(globalFilters);
             return this;
         }
         public Builder globalFilters(PatchBaselineGlobalFilterGetArgs... globalFilters) {
@@ -338,7 +339,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
@@ -346,7 +347,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operatingSystem(@Nullable String operatingSystem) {
-            this.operatingSystem = Output.ofNullable(operatingSystem);
+            this.operatingSystem = Codegen.ofNullable(operatingSystem);
             return this;
         }
         public Builder rejectedPatches(@Nullable Output<List<String>> rejectedPatches) {
@@ -354,7 +355,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rejectedPatches(@Nullable List<String> rejectedPatches) {
-            this.rejectedPatches = Output.ofNullable(rejectedPatches);
+            this.rejectedPatches = Codegen.ofNullable(rejectedPatches);
             return this;
         }
         public Builder rejectedPatches(String... rejectedPatches) {
@@ -365,7 +366,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rejectedPatchesAction(@Nullable String rejectedPatchesAction) {
-            this.rejectedPatchesAction = Output.ofNullable(rejectedPatchesAction);
+            this.rejectedPatchesAction = Codegen.ofNullable(rejectedPatchesAction);
             return this;
         }
         public Builder sources(@Nullable Output<List<PatchBaselineSourceGetArgs>> sources) {
@@ -373,7 +374,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sources(@Nullable List<PatchBaselineSourceGetArgs> sources) {
-            this.sources = Output.ofNullable(sources);
+            this.sources = Codegen.ofNullable(sources);
             return this;
         }
         public Builder sources(PatchBaselineSourceGetArgs... sources) {
@@ -384,7 +385,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -392,7 +393,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public PatchBaselineState build() {
             return new PatchBaselineState(approvalRules, approvedPatches, approvedPatchesComplianceLevel, approvedPatchesEnableNonSecurity, arn, description, globalFilters, name, operatingSystem, rejectedPatches, rejectedPatchesAction, sources, tags, tagsAll);

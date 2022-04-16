@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -32,8 +33,8 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public UsageExportBucketArgs(
@@ -57,9 +58,9 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
     }
 
     private UsageExportBucketArgs() {
-        this.bucketName = Output.empty();
-        this.prefix = Output.empty();
-        this.project = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -107,7 +108,7 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public UsageExportBucketArgs build() {
             return new UsageExportBucketArgs(bucketName, prefix, project);

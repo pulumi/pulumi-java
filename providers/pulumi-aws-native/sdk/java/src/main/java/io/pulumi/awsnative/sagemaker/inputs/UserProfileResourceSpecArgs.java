@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.UserProfileResourceSpecInstanceType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     @Import(name="instanceType")
       private final @Nullable Output<UserProfileResourceSpecInstanceType> instanceType;
 
-    public Output<UserProfileResourceSpecInstanceType> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<UserProfileResourceSpecInstanceType> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     @Import(name="sageMakerImageArn")
       private final @Nullable Output<String> sageMakerImageArn;
 
-    public Output<String> getSageMakerImageArn() {
-        return this.sageMakerImageArn == null ? Output.empty() : this.sageMakerImageArn;
+    public Output<String> sageMakerImageArn() {
+        return this.sageMakerImageArn == null ? Codegen.empty() : this.sageMakerImageArn;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     @Import(name="sageMakerImageVersionArn")
       private final @Nullable Output<String> sageMakerImageVersionArn;
 
-    public Output<String> getSageMakerImageVersionArn() {
-        return this.sageMakerImageVersionArn == null ? Output.empty() : this.sageMakerImageVersionArn;
+    public Output<String> sageMakerImageVersionArn() {
+        return this.sageMakerImageVersionArn == null ? Codegen.empty() : this.sageMakerImageVersionArn;
     }
 
     public UserProfileResourceSpecArgs(
@@ -58,9 +59,9 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     }
 
     private UserProfileResourceSpecArgs() {
-        this.instanceType = Output.empty();
-        this.sageMakerImageArn = Output.empty();
-        this.sageMakerImageVersionArn = Output.empty();
+        this.instanceType = Codegen.empty();
+        this.sageMakerImageArn = Codegen.empty();
+        this.sageMakerImageVersionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder instanceType(@Nullable UserProfileResourceSpecInstanceType instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder sageMakerImageArn(@Nullable Output<String> sageMakerImageArn) {
@@ -100,7 +101,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
-            this.sageMakerImageArn = Output.ofNullable(sageMakerImageArn);
+            this.sageMakerImageArn = Codegen.ofNullable(sageMakerImageArn);
             return this;
         }
         public Builder sageMakerImageVersionArn(@Nullable Output<String> sageMakerImageVersionArn) {
@@ -108,7 +109,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
-            this.sageMakerImageVersionArn = Output.ofNullable(sageMakerImageVersionArn);
+            this.sageMakerImageVersionArn = Codegen.ofNullable(sageMakerImageVersionArn);
             return this;
         }        public UserProfileResourceSpecArgs build() {
             return new UserProfileResourceSpecArgs(instanceType, sageMakerImageArn, sageMakerImageVersionArn);

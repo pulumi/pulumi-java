@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorVpcArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,14 +26,14 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
     @Import(name="bootstrapServers", required=true)
       private final Output<String> bootstrapServers;
 
-    public Output<String> getBootstrapServers() {
+    public Output<String> bootstrapServers() {
         return this.bootstrapServers;
     }
 
     @Import(name="vpc", required=true)
       private final Output<ConnectorVpcArgs> vpc;
 
-    public Output<ConnectorVpcArgs> getVpc() {
+    public Output<ConnectorVpcArgs> vpc() {
         return this.vpc;
     }
 
@@ -44,8 +45,8 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
     }
 
     private ConnectorApacheKafkaClusterArgs() {
-        this.bootstrapServers = Output.empty();
-        this.vpc = Output.empty();
+        this.bootstrapServers = Codegen.empty();
+        this.vpc = Codegen.empty();
     }
 
     public static Builder builder() {

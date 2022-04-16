@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.MetricArgs;
 import io.pulumi.gcp.logging.inputs.MetricState;
@@ -58,7 +59,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetricBucketOptions> getBucketOptions() {
+    public Output</* @Nullable */ MetricBucketOptions> bucketOptions() {
         return this.bucketOptions;
     }
     /**
@@ -74,7 +75,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * description is 8000 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -90,7 +91,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * is used to match log entries.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -110,7 +111,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * the same as for the valueExtractor field.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabelExtractors() {
+    public Output</* @Nullable */ Map<String,String>> labelExtractors() {
         return this.labelExtractors;
     }
     /**
@@ -126,7 +127,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<MetricMetricDescriptor> getMetricDescriptor() {
+    public Output<MetricMetricDescriptor> metricDescriptor() {
         return this.metricDescriptor;
     }
     /**
@@ -148,7 +149,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * of the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -164,7 +165,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -190,7 +191,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * error to specify a regex that does not include exactly one capture group.
      * 
      */
-    public Output</* @Nullable */ String> getValueExtractor() {
+    public Output</* @Nullable */ String> valueExtractor() {
         return this.valueExtractor;
     }
 
@@ -216,7 +217,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Metric(String name, MetricArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/metric:Metric", name, args == null ? MetricArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/metric:Metric", name, args == null ? MetricArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Metric(String name, Output<String> id, @Nullable MetricState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

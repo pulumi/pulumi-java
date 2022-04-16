@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowHubToRemoteVnetTransit() {
+    public Output</* @Nullable */ Boolean> allowHubToRemoteVnetTransit() {
         return this.allowHubToRemoteVnetTransit;
     }
     /**
@@ -58,7 +59,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
+    public Output</* @Nullable */ Boolean> allowRemoteVnetToUseHubVnetGateways() {
         return this.allowRemoteVnetToUseHubVnetGateways;
     }
     /**
@@ -72,7 +73,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return Enable internet security.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableInternetSecurity() {
+    public Output</* @Nullable */ Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity;
     }
     /**
@@ -86,7 +87,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -100,7 +101,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return The provisioning state of the hub virtual network connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +129,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return Reference to the remote virtual network.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getRemoteVirtualNetwork() {
+    public Output</* @Nullable */ SubResourceResponse> remoteVirtualNetwork() {
         return this.remoteVirtualNetwork;
     }
     /**
@@ -142,7 +143,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    public Output</* @Nullable */ RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration() {
         return this.routingConfiguration;
     }
 
@@ -168,7 +169,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public HubVirtualNetworkConnection(String name, HubVirtualNetworkConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:HubVirtualNetworkConnection", name, args == null ? HubVirtualNetworkConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:HubVirtualNetworkConnection", name, args == null ? HubVirtualNetworkConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HubVirtualNetworkConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

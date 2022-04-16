@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
     @Import(name="exemptionCategory")
       private final @Nullable Output<String> exemptionCategory;
 
-    public Output<String> getExemptionCategory() {
-        return this.exemptionCategory == null ? Output.empty() : this.exemptionCategory;
+    public Output<String> exemptionCategory() {
+        return this.exemptionCategory == null ? Codegen.empty() : this.exemptionCategory;
     }
 
     public AssignmentPropertiesAdditionalDataArgs(@Nullable Output<String> exemptionCategory) {
@@ -34,7 +35,7 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
     }
 
     private AssignmentPropertiesAdditionalDataArgs() {
-        this.exemptionCategory = Output.empty();
+        this.exemptionCategory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
             return this;
         }
         public Builder exemptionCategory(@Nullable String exemptionCategory) {
-            this.exemptionCategory = Output.ofNullable(exemptionCategory);
+            this.exemptionCategory = Codegen.ofNullable(exemptionCategory);
             return this;
         }        public AssignmentPropertiesAdditionalDataArgs build() {
             return new AssignmentPropertiesAdditionalDataArgs(exemptionCategory);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerTriggerFulfillmentGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="event")
       private final @Nullable Output<String> event;
 
-    public Output<String> getEvent() {
-        return this.event == null ? Output.empty() : this.event;
+    public Output<String> event() {
+        return this.event == null ? Codegen.empty() : this.event;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
-    public Output<String> getTargetFlow() {
-        return this.targetFlow == null ? Output.empty() : this.targetFlow;
+    public Output<String> targetFlow() {
+        return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
-    public Output<String> getTargetPage() {
-        return this.targetPage == null ? Output.empty() : this.targetPage;
+    public Output<String> targetPage() {
+        return this.targetPage == null ? Codegen.empty() : this.targetPage;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="triggerFulfillment")
       private final @Nullable Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
 
-    public Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> getTriggerFulfillment() {
-        return this.triggerFulfillment == null ? Output.empty() : this.triggerFulfillment;
+    public Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment() {
+        return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
     }
 
     public CxFlowEventHandlerGetArgs(
@@ -88,11 +89,11 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
     }
 
     private CxFlowEventHandlerGetArgs() {
-        this.event = Output.empty();
-        this.name = Output.empty();
-        this.targetFlow = Output.empty();
-        this.targetPage = Output.empty();
-        this.triggerFulfillment = Output.empty();
+        this.event = Codegen.empty();
+        this.name = Codegen.empty();
+        this.targetFlow = Codegen.empty();
+        this.targetPage = Codegen.empty();
+        this.triggerFulfillment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder event(@Nullable String event) {
-            this.event = Output.ofNullable(event);
+            this.event = Codegen.ofNullable(event);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -136,7 +137,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
@@ -144,7 +145,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Output.ofNullable(targetFlow);
+            this.targetFlow = Codegen.ofNullable(targetFlow);
             return this;
         }
         public Builder targetPage(@Nullable Output<String> targetPage) {
@@ -152,7 +153,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Output.ofNullable(targetPage);
+            this.targetPage = Codegen.ofNullable(targetPage);
             return this;
         }
         public Builder triggerFulfillment(@Nullable Output<CxFlowEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment) {
@@ -160,7 +161,7 @@ public final class CxFlowEventHandlerGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder triggerFulfillment(@Nullable CxFlowEventHandlerTriggerFulfillmentGetArgs triggerFulfillment) {
-            this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
+            this.triggerFulfillment = Codegen.ofNullable(triggerFulfillment);
             return this;
         }        public CxFlowEventHandlerGetArgs build() {
             return new CxFlowEventHandlerGetArgs(event, name, targetFlow, targetPage, triggerFulfillment);

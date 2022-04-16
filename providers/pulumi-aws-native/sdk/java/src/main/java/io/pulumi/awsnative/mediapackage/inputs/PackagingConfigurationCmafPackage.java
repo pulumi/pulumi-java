@@ -25,7 +25,7 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
     @Import(name="encryption")
       private final @Nullable PackagingConfigurationCmafEncryption encryption;
 
-    public Optional<PackagingConfigurationCmafEncryption> getEncryption() {
+    public Optional<PackagingConfigurationCmafEncryption> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -36,7 +36,7 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
     @Import(name="hlsManifests", required=true)
       private final List<PackagingConfigurationHlsManifest> hlsManifests;
 
-    public List<PackagingConfigurationHlsManifest> getHlsManifests() {
+    public List<PackagingConfigurationHlsManifest> hlsManifests() {
         return this.hlsManifests;
     }
 
@@ -47,14 +47,14 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
     @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Boolean includeEncoderConfigurationInSegments;
 
-    public Optional<Boolean> getIncludeEncoderConfigurationInSegments() {
+    public Optional<Boolean> includeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Optional.empty() : Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 

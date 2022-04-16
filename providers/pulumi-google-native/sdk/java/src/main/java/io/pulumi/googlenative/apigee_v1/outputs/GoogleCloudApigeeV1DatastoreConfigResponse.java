@@ -53,35 +53,35 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
      * Name of the Cloud Storage bucket. Required for `gcs` target_type.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * BigQuery dataset name Required for `bigquery` target_type.
      * 
     */
-    public String getDatasetName() {
+    public String datasetName() {
         return this.datasetName;
     }
     /**
      * Path of Cloud Storage bucket Required for `gcs` target_type.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * GCP project in which the datastore exists
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * Prefix of BigQuery table Required for `bigquery` target_type.
      * 
     */
-    public String getTablePrefix() {
+    public String tablePrefix() {
         return this.tablePrefix;
     }
 

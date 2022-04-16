@@ -9,6 +9,7 @@ import io.pulumi.awsnative.frauddetector.inputs.EventTypeLabelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,28 +27,28 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="entityTypes", required=true)
       private final Output<List<EventTypeEntityTypeArgs>> entityTypes;
 
-    public Output<List<EventTypeEntityTypeArgs>> getEntityTypes() {
+    public Output<List<EventTypeEntityTypeArgs>> entityTypes() {
         return this.entityTypes;
     }
 
     @Import(name="eventVariables", required=true)
       private final Output<List<EventTypeEventVariableArgs>> eventVariables;
 
-    public Output<List<EventTypeEventVariableArgs>> getEventVariables() {
+    public Output<List<EventTypeEventVariableArgs>> eventVariables() {
         return this.eventVariables;
     }
 
     @Import(name="labels", required=true)
       private final Output<List<EventTypeLabelArgs>> labels;
 
-    public Output<List<EventTypeLabelArgs>> getLabels() {
+    public Output<List<EventTypeLabelArgs>> labels() {
         return this.labels;
     }
 
@@ -58,8 +59,8 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<EventTypeTagArgs>> tags;
 
-    public Output<List<EventTypeTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<EventTypeTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EventTypeArgs(
@@ -89,12 +90,12 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventTypeArgs() {
-        this.description = Output.empty();
-        this.entityTypes = Output.empty();
-        this.eventVariables = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.entityTypes = Codegen.empty();
+        this.eventVariables = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder entityTypes(Output<List<EventTypeEntityTypeArgs>> entityTypes) {
@@ -173,7 +174,7 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<EventTypeTagArgs>> tags) {
@@ -181,7 +182,7 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(EventTypeTagArgs... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.amplify.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     @Import(name="branchName", required=true)
       private final Output<String> branchName;
 
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName;
     }
 
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
 
@@ -35,8 +36,8 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     }
 
     private DomainSubDomainSettingArgs() {
-        this.branchName = Output.empty();
-        this.prefix = Output.empty();
+        this.branchName = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {

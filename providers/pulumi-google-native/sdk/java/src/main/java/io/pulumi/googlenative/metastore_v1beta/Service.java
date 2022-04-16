@@ -6,6 +6,7 @@ package io.pulumi.googlenative.metastore_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1beta.ServiceArgs;
 import io.pulumi.googlenative.metastore_v1beta.outputs.EncryptionConfigResponse;
@@ -36,7 +37,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
      */
-    public Output<String> getArtifactGcsUri() {
+    public Output<String> artifactGcsUri() {
         return this.artifactGcsUri;
     }
     /**
@@ -50,7 +51,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The time when the metastore service was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -64,7 +65,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Immutable. The database type that the Metastore service stores its data.
      * 
      */
-    public Output<String> getDatabaseType() {
+    public Output<String> databaseType() {
         return this.databaseType;
     }
     /**
@@ -78,7 +79,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
      * 
      */
-    public Output<EncryptionConfigResponse> getEncryptionConfig() {
+    public Output<EncryptionConfigResponse> encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
@@ -92,7 +93,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The URI of the endpoint used to access the metastore service.
      * 
      */
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri;
     }
     /**
@@ -106,7 +107,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Configuration information specific to running Hive metastore software as the metastore service.
      * 
      */
-    public Output<HiveMetastoreConfigResponse> getHiveMetastoreConfig() {
+    public Output<HiveMetastoreConfigResponse> hiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
     }
     /**
@@ -120,7 +121,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return User-defined labels for the metastore service.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -134,7 +135,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
      * 
      */
-    public Output<MaintenanceWindowResponse> getMaintenanceWindow() {
+    public Output<MaintenanceWindowResponse> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -148,7 +149,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The setting that defines how metastore metadata should be integrated with external services and systems.
      * 
      */
-    public Output<MetadataIntegrationResponse> getMetadataIntegration() {
+    public Output<MetadataIntegrationResponse> metadataIntegration() {
         return this.metadataIntegration;
     }
     /**
@@ -162,7 +163,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The metadata management activities of the metastore service.
      * 
      */
-    public Output<MetadataManagementActivityResponse> getMetadataManagementActivity() {
+    public Output<MetadataManagementActivityResponse> metadataManagementActivity() {
         return this.metadataManagementActivity;
     }
     /**
@@ -176,7 +177,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -190,7 +191,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -204,7 +205,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
      * 
      */
-    public Output<NetworkConfigResponse> getNetworkConfig() {
+    public Output<NetworkConfigResponse> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -218,7 +219,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The TCP port at which the metastore service is reached. Default: 9083.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -232,7 +233,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Immutable. The release channel of the service. If unspecified, defaults to STABLE.
      * 
      */
-    public Output<String> getReleaseChannel() {
+    public Output<String> releaseChannel() {
         return this.releaseChannel;
     }
     /**
@@ -246,7 +247,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The current state of the metastore service.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -260,7 +261,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Additional information about the current state of the metastore service, if available.
      * 
      */
-    public Output<String> getStateMessage() {
+    public Output<String> stateMessage() {
         return this.stateMessage;
     }
     /**
@@ -274,7 +275,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The tier of the service.
      * 
      */
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
     /**
@@ -288,7 +289,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The globally unique resource identifier of the metastore service.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -302,7 +303,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The time when the metastore service was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -328,7 +329,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:metastore/v1beta:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:metastore/v1beta:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

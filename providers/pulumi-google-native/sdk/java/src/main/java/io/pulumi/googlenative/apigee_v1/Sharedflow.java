@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.SharedflowArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
@@ -30,7 +31,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return The id of the most recently created revision for this shared flow.
      * 
      */
-    public Output<String> getLatestRevisionId() {
+    public Output<String> latestRevisionId() {
         return this.latestRevisionId;
     }
     /**
@@ -44,7 +45,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return Metadata describing the shared flow.
      * 
      */
-    public Output<GoogleCloudApigeeV1EntityMetadataResponse> getMetaData() {
+    public Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData() {
         return this.metaData;
     }
     /**
@@ -58,7 +59,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return The ID of the shared flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return A list of revisions of this shared flow.
      * 
      */
-    public Output<List<String>> getRevision() {
+    public Output<List<String>> revision() {
         return this.revision;
     }
 
@@ -98,7 +99,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Sharedflow(String name, SharedflowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Sharedflow", name, args == null ? SharedflowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Sharedflow", name, args == null ? SharedflowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Sharedflow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

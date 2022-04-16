@@ -6,6 +6,7 @@ package io.pulumi.gcp.vertex;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vertex.AiDatasetArgs;
 import io.pulumi.gcp.vertex.inputs.AiDatasetState;
@@ -45,7 +46,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * fractional digits.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +60,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @return The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +76,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiDatasetEncryptionSpec> getEncryptionSpec() {
+    public Output</* @Nullable */ AiDatasetEncryptionSpec> encryptionSpec() {
         return this.encryptionSpec;
     }
     /**
@@ -89,7 +90,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this Workflow.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -103,7 +104,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @return Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
      * 
      */
-    public Output<String> getMetadataSchemaUri() {
+    public Output<String> metadataSchemaUri() {
         return this.metadataSchemaUri;
     }
     /**
@@ -117,7 +118,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @return The resource name of the Dataset. This value is set by Google.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +134,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -147,7 +148,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @return The region of the dataset. eg us-central1
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -163,7 +164,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * nine fractional digits.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -189,7 +190,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AiDataset(String name, AiDatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AiDataset(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

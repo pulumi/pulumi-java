@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
     @Import(name="maxValue")
       private final @Nullable Output<String> maxValue;
 
-    public Output<String> getMaxValue() {
-        return this.maxValue == null ? Output.empty() : this.maxValue;
+    public Output<String> maxValue() {
+        return this.maxValue == null ? Codegen.empty() : this.maxValue;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
     @Import(name="minValue")
       private final @Nullable Output<String> minValue;
 
-    public Output<String> getMinValue() {
-        return this.minValue == null ? Output.empty() : this.minValue;
+    public Output<String> minValue() {
+        return this.minValue == null ? Codegen.empty() : this.minValue;
     }
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs(
@@ -44,8 +45,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
     }
 
     private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs() {
-        this.maxValue = Output.empty();
-        this.minValue = Output.empty();
+        this.maxValue = Codegen.empty();
+        this.minValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
             return this;
         }
         public Builder maxValue(@Nullable String maxValue) {
-            this.maxValue = Output.ofNullable(maxValue);
+            this.maxValue = Codegen.ofNullable(maxValue);
             return this;
         }
         public Builder minValue(@Nullable Output<String> minValue) {
@@ -83,7 +84,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
             return this;
         }
         public Builder minValue(@Nullable String minValue) {
-            this.minValue = Output.ofNullable(minValue);
+            this.minValue = Codegen.ofNullable(minValue);
             return this;
         }        public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs(maxValue, minValue);

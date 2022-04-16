@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Whether do auto analyze.
      * 
      */
-    public Output<Boolean> getAutoAnalyze() {
+    public Output<Boolean> autoAnalyze() {
         return this.autoAnalyze;
     }
     /**
@@ -60,7 +61,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Description of the prediction.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDescription() {
+    public Output</* @Nullable */ Map<String,String>> description() {
         return this.description;
     }
     /**
@@ -74,7 +75,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Display name of the prediction.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +89,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return The prediction grades.
      * 
      */
-    public Output</* @Nullable */ List<PredictionResponseGrades>> getGrades() {
+    public Output</* @Nullable */ List<PredictionResponseGrades>> grades() {
         return this.grades;
     }
     /**
@@ -102,7 +103,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Interaction types involved in the prediction.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInvolvedInteractionTypes() {
+    public Output</* @Nullable */ List<String>> involvedInteractionTypes() {
         return this.involvedInteractionTypes;
     }
     /**
@@ -116,7 +117,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return KPI types involved in the prediction.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInvolvedKpiTypes() {
+    public Output</* @Nullable */ List<String>> involvedKpiTypes() {
         return this.involvedKpiTypes;
     }
     /**
@@ -130,7 +131,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Relationships involved in the prediction.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInvolvedRelationships() {
+    public Output</* @Nullable */ List<String>> involvedRelationships() {
         return this.involvedRelationships;
     }
     /**
@@ -144,7 +145,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Definition of the link mapping of prediction.
      * 
      */
-    public Output<PredictionResponseMappings> getMappings() {
+    public Output<PredictionResponseMappings> mappings() {
         return this.mappings;
     }
     /**
@@ -158,7 +159,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -172,7 +173,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Negative outcome expression.
      * 
      */
-    public Output<String> getNegativeOutcomeExpression() {
+    public Output<String> negativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
     /**
@@ -186,7 +187,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Positive outcome expression.
      * 
      */
-    public Output<String> getPositiveOutcomeExpression() {
+    public Output<String> positiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
     /**
@@ -200,7 +201,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Name of the prediction.
      * 
      */
-    public Output</* @Nullable */ String> getPredictionName() {
+    public Output</* @Nullable */ String> predictionName() {
         return this.predictionName;
     }
     /**
@@ -214,7 +215,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Primary profile type.
      * 
      */
-    public Output<String> getPrimaryProfileType() {
+    public Output<String> primaryProfileType() {
         return this.primaryProfileType;
     }
     /**
@@ -228,7 +229,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -242,7 +243,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Scope expression.
      * 
      */
-    public Output<String> getScopeExpression() {
+    public Output<String> scopeExpression() {
         return this.scopeExpression;
     }
     /**
@@ -256,7 +257,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Score label.
      * 
      */
-    public Output<String> getScoreLabel() {
+    public Output<String> scoreLabel() {
         return this.scoreLabel;
     }
     /**
@@ -270,7 +271,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return System generated entities.
      * 
      */
-    public Output<PredictionResponseSystemGeneratedEntities> getSystemGeneratedEntities() {
+    public Output<PredictionResponseSystemGeneratedEntities> systemGeneratedEntities() {
         return this.systemGeneratedEntities;
     }
     /**
@@ -284,7 +285,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -298,7 +299,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -324,7 +325,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Prediction(String name, PredictionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customerinsights:Prediction", name, args == null ? PredictionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customerinsights:Prediction", name, args == null ? PredictionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Prediction(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

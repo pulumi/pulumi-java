@@ -5,6 +5,7 @@ package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="inheritFromParent")
       private final @Nullable Output<Boolean> inheritFromParent;
 
-    public Output<Boolean> getInheritFromParent() {
-        return this.inheritFromParent == null ? Output.empty() : this.inheritFromParent;
+    public Output<Boolean> inheritFromParent() {
+        return this.inheritFromParent == null ? Codegen.empty() : this.inheritFromParent;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="reset")
       private final @Nullable Output<Boolean> reset;
 
-    public Output<Boolean> getReset() {
-        return this.reset == null ? Output.empty() : this.reset;
+    public Output<Boolean> reset() {
+        return this.reset == null ? Codegen.empty() : this.reset;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="rules")
       private final @Nullable Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules;
 
-    public Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public GoogleCloudOrgpolicyV2PolicySpecArgs(
@@ -77,10 +78,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     }
 
     private GoogleCloudOrgpolicyV2PolicySpecArgs() {
-        this.etag = Output.empty();
-        this.inheritFromParent = Output.empty();
-        this.reset = Output.empty();
-        this.rules = Output.empty();
+        this.etag = Codegen.empty();
+        this.inheritFromParent = Codegen.empty();
+        this.reset = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
@@ -122,7 +123,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
             return this;
         }
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
-            this.inheritFromParent = Output.ofNullable(inheritFromParent);
+            this.inheritFromParent = Codegen.ofNullable(inheritFromParent);
             return this;
         }
         public Builder reset(@Nullable Output<Boolean> reset) {
@@ -130,7 +131,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
             return this;
         }
         public Builder reset(@Nullable Boolean reset) {
-            this.reset = Output.ofNullable(reset);
+            this.reset = Codegen.ofNullable(reset);
             return this;
         }
         public Builder rules(@Nullable Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules) {
@@ -138,7 +139,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
             return this;
         }
         public Builder rules(@Nullable List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs... rules) {

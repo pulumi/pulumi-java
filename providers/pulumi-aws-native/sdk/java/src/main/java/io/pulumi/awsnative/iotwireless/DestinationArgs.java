@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import io.pulumi.awsnative.iotwireless.inputs.DestinationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
@@ -46,7 +47,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expressionType", required=true)
       private final Output<DestinationExpressionType> expressionType;
 
-    public Output<DestinationExpressionType> getExpressionType() {
+    public Output<DestinationExpressionType> expressionType() {
         return this.expressionType;
     }
 
@@ -57,8 +58,8 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -79,8 +80,8 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DestinationTagArgs>> tags;
 
-    public Output<List<DestinationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DestinationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DestinationArgs(
@@ -99,12 +100,12 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DestinationArgs() {
-        this.description = Output.empty();
-        this.expression = Output.empty();
-        this.expressionType = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.expressionType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expression(Output<String> expression) {
@@ -166,7 +167,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -182,7 +183,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DestinationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DestinationTagArgs... tags) {

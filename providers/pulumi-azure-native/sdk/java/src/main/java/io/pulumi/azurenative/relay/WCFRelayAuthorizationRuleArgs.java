@@ -6,6 +6,7 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.relay.enums.AccessRights;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
 
-    public Output<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
+    public Output<String> authorizationRuleName() {
+        return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -45,7 +46,7 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="relayName", required=true)
       private final Output<String> relayName;
 
-    public Output<String> getRelayName() {
+    public Output<String> relayName() {
         return this.relayName;
     }
 
@@ -56,7 +57,7 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
     @Import(name="rights", required=true)
       private final Output<List<AccessRights>> rights;
 
-    public Output<List<AccessRights>> getRights() {
+    public Output<List<AccessRights>> rights() {
         return this.rights;
     }
 
@@ -85,11 +86,11 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
     }
 
     private WCFRelayAuthorizationRuleArgs() {
-        this.authorizationRuleName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.relayName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rights = Output.empty();
+        this.authorizationRuleName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.relayName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rights = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class WCFRelayAuthorizationRuleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Codegen.ofNullable(authorizationRuleName);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {

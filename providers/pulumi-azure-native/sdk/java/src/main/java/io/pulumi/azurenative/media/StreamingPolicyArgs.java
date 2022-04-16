@@ -9,6 +9,7 @@ import io.pulumi.azurenative.media.inputs.EnvelopeEncryptionArgs;
 import io.pulumi.azurenative.media.inputs.NoEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,8 +37,8 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="commonEncryptionCbcs")
       private final @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
 
-    public Output<CommonEncryptionCbcsArgs> getCommonEncryptionCbcs() {
-        return this.commonEncryptionCbcs == null ? Output.empty() : this.commonEncryptionCbcs;
+    public Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs() {
+        return this.commonEncryptionCbcs == null ? Codegen.empty() : this.commonEncryptionCbcs;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="commonEncryptionCenc")
       private final @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
 
-    public Output<CommonEncryptionCencArgs> getCommonEncryptionCenc() {
-        return this.commonEncryptionCenc == null ? Output.empty() : this.commonEncryptionCenc;
+    public Output<CommonEncryptionCencArgs> commonEncryptionCenc() {
+        return this.commonEncryptionCenc == null ? Codegen.empty() : this.commonEncryptionCenc;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="defaultContentKeyPolicyName")
       private final @Nullable Output<String> defaultContentKeyPolicyName;
 
-    public Output<String> getDefaultContentKeyPolicyName() {
-        return this.defaultContentKeyPolicyName == null ? Output.empty() : this.defaultContentKeyPolicyName;
+    public Output<String> defaultContentKeyPolicyName() {
+        return this.defaultContentKeyPolicyName == null ? Codegen.empty() : this.defaultContentKeyPolicyName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="envelopeEncryption")
       private final @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
 
-    public Output<EnvelopeEncryptionArgs> getEnvelopeEncryption() {
-        return this.envelopeEncryption == null ? Output.empty() : this.envelopeEncryption;
+    public Output<EnvelopeEncryptionArgs> envelopeEncryption() {
+        return this.envelopeEncryption == null ? Codegen.empty() : this.envelopeEncryption;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="noEncryption")
       private final @Nullable Output<NoEncryptionArgs> noEncryption;
 
-    public Output<NoEncryptionArgs> getNoEncryption() {
-        return this.noEncryption == null ? Output.empty() : this.noEncryption;
+    public Output<NoEncryptionArgs> noEncryption() {
+        return this.noEncryption == null ? Codegen.empty() : this.noEncryption;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,8 +103,8 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="streamingPolicyName")
       private final @Nullable Output<String> streamingPolicyName;
 
-    public Output<String> getStreamingPolicyName() {
-        return this.streamingPolicyName == null ? Output.empty() : this.streamingPolicyName;
+    public Output<String> streamingPolicyName() {
+        return this.streamingPolicyName == null ? Codegen.empty() : this.streamingPolicyName;
     }
 
     public StreamingPolicyArgs(
@@ -126,14 +127,14 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private StreamingPolicyArgs() {
-        this.accountName = Output.empty();
-        this.commonEncryptionCbcs = Output.empty();
-        this.commonEncryptionCenc = Output.empty();
-        this.defaultContentKeyPolicyName = Output.empty();
-        this.envelopeEncryption = Output.empty();
-        this.noEncryption = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.streamingPolicyName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.commonEncryptionCbcs = Codegen.empty();
+        this.commonEncryptionCenc = Codegen.empty();
+        this.defaultContentKeyPolicyName = Codegen.empty();
+        this.envelopeEncryption = Codegen.empty();
+        this.noEncryption = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.streamingPolicyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder commonEncryptionCbcs(@Nullable CommonEncryptionCbcsArgs commonEncryptionCbcs) {
-            this.commonEncryptionCbcs = Output.ofNullable(commonEncryptionCbcs);
+            this.commonEncryptionCbcs = Codegen.ofNullable(commonEncryptionCbcs);
             return this;
         }
         public Builder commonEncryptionCenc(@Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc) {
@@ -191,7 +192,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder commonEncryptionCenc(@Nullable CommonEncryptionCencArgs commonEncryptionCenc) {
-            this.commonEncryptionCenc = Output.ofNullable(commonEncryptionCenc);
+            this.commonEncryptionCenc = Codegen.ofNullable(commonEncryptionCenc);
             return this;
         }
         public Builder defaultContentKeyPolicyName(@Nullable Output<String> defaultContentKeyPolicyName) {
@@ -199,7 +200,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
-            this.defaultContentKeyPolicyName = Output.ofNullable(defaultContentKeyPolicyName);
+            this.defaultContentKeyPolicyName = Codegen.ofNullable(defaultContentKeyPolicyName);
             return this;
         }
         public Builder envelopeEncryption(@Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption) {
@@ -207,7 +208,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder envelopeEncryption(@Nullable EnvelopeEncryptionArgs envelopeEncryption) {
-            this.envelopeEncryption = Output.ofNullable(envelopeEncryption);
+            this.envelopeEncryption = Codegen.ofNullable(envelopeEncryption);
             return this;
         }
         public Builder noEncryption(@Nullable Output<NoEncryptionArgs> noEncryption) {
@@ -215,7 +216,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder noEncryption(@Nullable NoEncryptionArgs noEncryption) {
-            this.noEncryption = Output.ofNullable(noEncryption);
+            this.noEncryption = Codegen.ofNullable(noEncryption);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -231,7 +232,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
-            this.streamingPolicyName = Output.ofNullable(streamingPolicyName);
+            this.streamingPolicyName = Codegen.ofNullable(streamingPolicyName);
             return this;
         }        public StreamingPolicyArgs build() {
             return new StreamingPolicyArgs(accountName, commonEncryptionCbcs, commonEncryptionCenc, defaultContentKeyPolicyName, envelopeEncryption, noEncryption, resourceGroupName, streamingPolicyName);

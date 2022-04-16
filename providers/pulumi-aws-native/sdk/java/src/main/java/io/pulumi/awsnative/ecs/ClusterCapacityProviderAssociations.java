@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ecs.outputs.ClusterCapacityProviderAssociationsCapaci
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -24,19 +25,19 @@ public class ClusterCapacityProviderAssociations extends io.pulumi.resources.Cus
     @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output<List<String>> capacityProviders;
 
-    public Output<List<String>> getCapacityProviders() {
+    public Output<List<String>> capacityProviders() {
         return this.capacityProviders;
     }
     @Export(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     @Export(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderAssociationsCapacityProviderStrategy.class})
     private Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> defaultCapacityProviderStrategy;
 
-    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> getDefaultCapacityProviderStrategy() {
+    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
     }
 
@@ -62,7 +63,7 @@ public class ClusterCapacityProviderAssociations extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterCapacityProviderAssociations(String name, ClusterCapacityProviderAssociationsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ecs:ClusterCapacityProviderAssociations", name, args == null ? ClusterCapacityProviderAssociationsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ecs:ClusterCapacityProviderAssociations", name, args == null ? ClusterCapacityProviderAssociationsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterCapacityProviderAssociations(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

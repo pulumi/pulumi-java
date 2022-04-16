@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wafv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class WebACLAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
     @Import(name="webACLArn", required=true)
       private final Output<String> webACLArn;
 
-    public Output<String> getWebACLArn() {
+    public Output<String> webACLArn() {
         return this.webACLArn;
     }
 
@@ -35,8 +36,8 @@ public final class WebACLAssociationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WebACLAssociationArgs() {
-        this.resourceArn = Output.empty();
-        this.webACLArn = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.webACLArn = Codegen.empty();
     }
 
     public static Builder builder() {

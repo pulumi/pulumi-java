@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return The creation date of scope map.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -57,7 +58,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return The credentials that can be used for authenticating the token.
      * 
      */
-    public Output</* @Nullable */ TokenCredentialsPropertiesResponse> getCredentials() {
+    public Output</* @Nullable */ TokenCredentialsPropertiesResponse> credentials() {
         return this.credentials;
     }
     /**
@@ -71,7 +72,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +100,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the scope map to which the token will be associated with.
      * 
      */
-    public Output</* @Nullable */ String> getScopeMapId() {
+    public Output</* @Nullable */ String> scopeMapId() {
         return this.scopeMapId;
     }
     /**
@@ -113,7 +114,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return The status of the token example enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -127,7 +128,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -141,7 +142,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class Token extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Token(String name, TokenArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:Token", name, args == null ? TokenArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:containerregistry:Token", name, args == null ? TokenArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Token(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

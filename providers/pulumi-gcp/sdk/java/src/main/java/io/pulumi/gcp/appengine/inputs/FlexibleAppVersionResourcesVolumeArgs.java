@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,7 +33,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
     @Import(name="sizeGb", required=true)
       private final Output<Integer> sizeGb;
 
-    public Output<Integer> getSizeGb() {
+    public Output<Integer> sizeGb() {
         return this.sizeGb;
     }
 
@@ -43,7 +44,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
     @Import(name="volumeType", required=true)
       private final Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType;
     }
 
@@ -57,9 +58,9 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
     }
 
     private FlexibleAppVersionResourcesVolumeArgs() {
-        this.name = Output.empty();
-        this.sizeGb = Output.empty();
-        this.volumeType = Output.empty();
+        this.name = Codegen.empty();
+        this.sizeGb = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -37,7 +37,7 @@ public final class SecurityScanConfigSchedule {
      * The duration of time between executions in days
      * 
     */
-    public Integer getIntervalDurationDays() {
+    public Integer intervalDurationDays() {
         return this.intervalDurationDays;
     }
     /**
@@ -46,7 +46,7 @@ public final class SecurityScanConfigSchedule {
      * which means the scan will be scheduled to start immediately.
      * 
     */
-    public Optional<String> getScheduleTime() {
+    public Optional<String> scheduleTime() {
         return Optional.ofNullable(this.scheduleTime);
     }
 

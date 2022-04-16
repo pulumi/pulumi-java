@@ -11,6 +11,7 @@ import io.pulumi.awsnative.appstream.outputs.AppBlockTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -24,49 +25,49 @@ public class AppBlock extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="setupScriptDetails", type=AppBlockScriptDetails.class, parameters={})
     private Output<AppBlockScriptDetails> setupScriptDetails;
 
-    public Output<AppBlockScriptDetails> getSetupScriptDetails() {
+    public Output<AppBlockScriptDetails> setupScriptDetails() {
         return this.setupScriptDetails;
     }
     @Export(name="sourceS3Location", type=AppBlockS3Location.class, parameters={})
     private Output<AppBlockS3Location> sourceS3Location;
 
-    public Output<AppBlockS3Location> getSourceS3Location() {
+    public Output<AppBlockS3Location> sourceS3Location() {
         return this.sourceS3Location;
     }
     @Export(name="tags", type=List.class, parameters={AppBlockTag.class})
     private Output</* @Nullable */ List<AppBlockTag>> tags;
 
-    public Output</* @Nullable */ List<AppBlockTag>> getTags() {
+    public Output</* @Nullable */ List<AppBlockTag>> tags() {
         return this.tags;
     }
 
@@ -92,7 +93,7 @@ public class AppBlock extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppBlock(String name, AppBlockArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appstream:AppBlock", name, args == null ? AppBlockArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:appstream:AppBlock", name, args == null ? AppBlockArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppBlock(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

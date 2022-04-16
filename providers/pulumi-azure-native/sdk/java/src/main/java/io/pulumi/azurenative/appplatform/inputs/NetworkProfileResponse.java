@@ -28,7 +28,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="appNetworkResourceGroup")
       private final @Nullable String appNetworkResourceGroup;
 
-    public Optional<String> getAppNetworkResourceGroup() {
+    public Optional<String> appNetworkResourceGroup() {
         return this.appNetworkResourceGroup == null ? Optional.empty() : Optional.ofNullable(this.appNetworkResourceGroup);
     }
 
@@ -39,7 +39,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="appSubnetId")
       private final @Nullable String appSubnetId;
 
-    public Optional<String> getAppSubnetId() {
+    public Optional<String> appSubnetId() {
         return this.appSubnetId == null ? Optional.empty() : Optional.ofNullable(this.appSubnetId);
     }
 
@@ -50,7 +50,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="outboundIPs", required=true)
       private final NetworkProfileResponseOutboundIPs outboundIPs;
 
-    public NetworkProfileResponseOutboundIPs getOutboundIPs() {
+    public NetworkProfileResponseOutboundIPs outboundIPs() {
         return this.outboundIPs;
     }
 
@@ -61,7 +61,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="requiredTraffics", required=true)
       private final List<RequiredTrafficResponse> requiredTraffics;
 
-    public List<RequiredTrafficResponse> getRequiredTraffics() {
+    public List<RequiredTrafficResponse> requiredTraffics() {
         return this.requiredTraffics;
     }
 
@@ -72,7 +72,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
 
-    public Optional<String> getServiceCidr() {
+    public Optional<String> serviceCidr() {
         return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
     }
 
@@ -83,7 +83,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="serviceRuntimeNetworkResourceGroup")
       private final @Nullable String serviceRuntimeNetworkResourceGroup;
 
-    public Optional<String> getServiceRuntimeNetworkResourceGroup() {
+    public Optional<String> serviceRuntimeNetworkResourceGroup() {
         return this.serviceRuntimeNetworkResourceGroup == null ? Optional.empty() : Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
     }
 
@@ -94,7 +94,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="serviceRuntimeSubnetId")
       private final @Nullable String serviceRuntimeSubnetId;
 
-    public Optional<String> getServiceRuntimeSubnetId() {
+    public Optional<String> serviceRuntimeSubnetId() {
         return this.serviceRuntimeSubnetId == null ? Optional.empty() : Optional.ofNullable(this.serviceRuntimeSubnetId);
     }
 

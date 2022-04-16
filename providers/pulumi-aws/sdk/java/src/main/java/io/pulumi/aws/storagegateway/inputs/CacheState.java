@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskId")
       private final @Nullable Output<String> diskId;
 
-    public Output<String> getDiskId() {
-        return this.diskId == null ? Output.empty() : this.diskId;
+    public Output<String> diskId() {
+        return this.diskId == null ? Codegen.empty() : this.diskId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayArn")
       private final @Nullable Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
-        return this.gatewayArn == null ? Output.empty() : this.gatewayArn;
+    public Output<String> gatewayArn() {
+        return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
     }
 
     public CacheState(
@@ -44,8 +45,8 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CacheState() {
-        this.diskId = Output.empty();
-        this.gatewayArn = Output.empty();
+        this.diskId = Codegen.empty();
+        this.gatewayArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskId(@Nullable String diskId) {
-            this.diskId = Output.ofNullable(diskId);
+            this.diskId = Codegen.ofNullable(diskId);
             return this;
         }
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
@@ -83,7 +84,7 @@ public final class CacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Output.ofNullable(gatewayArn);
+            this.gatewayArn = Codegen.ofNullable(gatewayArn);
             return this;
         }        public CacheState build() {
             return new CacheState(diskId, gatewayArn);

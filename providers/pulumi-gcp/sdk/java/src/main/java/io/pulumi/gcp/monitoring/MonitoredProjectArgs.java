@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metricsScope", required=true)
       private final Output<String> metricsScope;
 
-    public Output<String> getMetricsScope() {
+    public Output<String> metricsScope() {
         return this.metricsScope;
     }
 
@@ -32,8 +33,8 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public MonitoredProjectArgs(
@@ -44,8 +45,8 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MonitoredProjectArgs() {
-        this.metricsScope = Output.empty();
-        this.name = Output.empty();
+        this.metricsScope = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public MonitoredProjectArgs build() {
             return new MonitoredProjectArgs(metricsScope, name);

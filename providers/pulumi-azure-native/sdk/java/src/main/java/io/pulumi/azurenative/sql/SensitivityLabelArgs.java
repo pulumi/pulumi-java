@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.SensitivityLabelRank;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="columnName", required=true)
       private final Output<String> columnName;
 
-    public Output<String> getColumnName() {
+    public Output<String> columnName() {
         return this.columnName;
     }
 
@@ -33,7 +34,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -44,8 +45,8 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="informationType")
       private final @Nullable Output<String> informationType;
 
-    public Output<String> getInformationType() {
-        return this.informationType == null ? Output.empty() : this.informationType;
+    public Output<String> informationType() {
+        return this.informationType == null ? Codegen.empty() : this.informationType;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="informationTypeId")
       private final @Nullable Output<String> informationTypeId;
 
-    public Output<String> getInformationTypeId() {
-        return this.informationTypeId == null ? Output.empty() : this.informationTypeId;
+    public Output<String> informationTypeId() {
+        return this.informationTypeId == null ? Codegen.empty() : this.informationTypeId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labelId")
       private final @Nullable Output<String> labelId;
 
-    public Output<String> getLabelId() {
-        return this.labelId == null ? Output.empty() : this.labelId;
+    public Output<String> labelId() {
+        return this.labelId == null ? Codegen.empty() : this.labelId;
     }
 
     /**
@@ -77,15 +78,15 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labelName")
       private final @Nullable Output<String> labelName;
 
-    public Output<String> getLabelName() {
-        return this.labelName == null ? Output.empty() : this.labelName;
+    public Output<String> labelName() {
+        return this.labelName == null ? Codegen.empty() : this.labelName;
     }
 
     @Import(name="rank")
       private final @Nullable Output<SensitivityLabelRank> rank;
 
-    public Output<SensitivityLabelRank> getRank() {
-        return this.rank == null ? Output.empty() : this.rank;
+    public Output<SensitivityLabelRank> rank() {
+        return this.rank == null ? Codegen.empty() : this.rank;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -106,7 +107,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -117,8 +118,8 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sensitivityLabelSource")
       private final @Nullable Output<String> sensitivityLabelSource;
 
-    public Output<String> getSensitivityLabelSource() {
-        return this.sensitivityLabelSource == null ? Output.empty() : this.sensitivityLabelSource;
+    public Output<String> sensitivityLabelSource() {
+        return this.sensitivityLabelSource == null ? Codegen.empty() : this.sensitivityLabelSource;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -139,7 +140,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -171,18 +172,18 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SensitivityLabelArgs() {
-        this.columnName = Output.empty();
-        this.databaseName = Output.empty();
-        this.informationType = Output.empty();
-        this.informationTypeId = Output.empty();
-        this.labelId = Output.empty();
-        this.labelName = Output.empty();
-        this.rank = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaName = Output.empty();
-        this.sensitivityLabelSource = Output.empty();
-        this.serverName = Output.empty();
-        this.tableName = Output.empty();
+        this.columnName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.informationType = Codegen.empty();
+        this.informationTypeId = Codegen.empty();
+        this.labelId = Codegen.empty();
+        this.labelName = Codegen.empty();
+        this.rank = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.sensitivityLabelSource = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder informationType(@Nullable String informationType) {
-            this.informationType = Output.ofNullable(informationType);
+            this.informationType = Codegen.ofNullable(informationType);
             return this;
         }
         public Builder informationTypeId(@Nullable Output<String> informationTypeId) {
@@ -256,7 +257,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder informationTypeId(@Nullable String informationTypeId) {
-            this.informationTypeId = Output.ofNullable(informationTypeId);
+            this.informationTypeId = Codegen.ofNullable(informationTypeId);
             return this;
         }
         public Builder labelId(@Nullable Output<String> labelId) {
@@ -264,7 +265,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labelId(@Nullable String labelId) {
-            this.labelId = Output.ofNullable(labelId);
+            this.labelId = Codegen.ofNullable(labelId);
             return this;
         }
         public Builder labelName(@Nullable Output<String> labelName) {
@@ -272,7 +273,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labelName(@Nullable String labelName) {
-            this.labelName = Output.ofNullable(labelName);
+            this.labelName = Codegen.ofNullable(labelName);
             return this;
         }
         public Builder rank(@Nullable Output<SensitivityLabelRank> rank) {
@@ -280,7 +281,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder rank(@Nullable SensitivityLabelRank rank) {
-            this.rank = Output.ofNullable(rank);
+            this.rank = Codegen.ofNullable(rank);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -304,7 +305,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sensitivityLabelSource(@Nullable String sensitivityLabelSource) {
-            this.sensitivityLabelSource = Output.ofNullable(sensitivityLabelSource);
+            this.sensitivityLabelSource = Codegen.ofNullable(sensitivityLabelSource);
             return this;
         }
         public Builder serverName(Output<String> serverName) {

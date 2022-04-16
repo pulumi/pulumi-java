@@ -41,14 +41,14 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse {
      * Migration error
      * 
     */
-    public ReportableExceptionResponse getError() {
+    public ReportableExceptionResponse error() {
         return this.error;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -56,7 +56,7 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse {
      * Expected value is 'ErrorOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

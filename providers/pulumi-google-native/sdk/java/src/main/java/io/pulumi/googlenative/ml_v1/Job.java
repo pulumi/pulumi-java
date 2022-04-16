@@ -6,6 +6,7 @@ package io.pulumi.googlenative.ml_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.JobArgs;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__PredictionInputResponse;
@@ -36,7 +37,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return When the job was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -50,7 +51,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return When the job processing was completed.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -64,7 +65,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The details of a failure or a cancellation.
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -78,7 +79,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -92,7 +93,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The user-specified id of the job.
      * 
      */
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
     /**
@@ -106,7 +107,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
      * 
      */
-    public Output<String> getJobPosition() {
+    public Output<String> jobPosition() {
         return this.jobPosition;
     }
     /**
@@ -120,7 +121,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -134,7 +135,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Input parameters to create a prediction job.
      * 
      */
-    public Output<GoogleCloudMlV1__PredictionInputResponse> getPredictionInput() {
+    public Output<GoogleCloudMlV1__PredictionInputResponse> predictionInput() {
         return this.predictionInput;
     }
     /**
@@ -148,7 +149,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The current prediction job result.
      * 
      */
-    public Output<GoogleCloudMlV1__PredictionOutputResponse> getPredictionOutput() {
+    public Output<GoogleCloudMlV1__PredictionOutputResponse> predictionOutput() {
         return this.predictionOutput;
     }
     /**
@@ -162,7 +163,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return When the job processing was started.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -176,7 +177,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The detailed state of a job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -190,7 +191,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Input parameters to create a training job.
      * 
      */
-    public Output<GoogleCloudMlV1__TrainingInputResponse> getTrainingInput() {
+    public Output<GoogleCloudMlV1__TrainingInputResponse> trainingInput() {
         return this.trainingInput;
     }
     /**
@@ -204,7 +205,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The current training job result.
      * 
      */
-    public Output<GoogleCloudMlV1__TrainingOutputResponse> getTrainingOutput() {
+    public Output<GoogleCloudMlV1__TrainingOutputResponse> trainingOutput() {
         return this.trainingOutput;
     }
 
@@ -230,7 +231,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:ml/v1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:ml/v1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

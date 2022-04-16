@@ -6,6 +6,7 @@ package io.pulumi.azurenative.streamanalytics;
 import io.pulumi.azurenative.streamanalytics.inputs.PrivateEndpointPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -33,8 +34,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privateEndpointName")
       private final @Nullable Output<String> privateEndpointName;
 
-    public Output<String> getPrivateEndpointName() {
-        return this.privateEndpointName == null ? Output.empty() : this.privateEndpointName;
+    public Output<String> privateEndpointName() {
+        return this.privateEndpointName == null ? Codegen.empty() : this.privateEndpointName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<PrivateEndpointPropertiesArgs> properties;
 
-    public Output<PrivateEndpointPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<PrivateEndpointPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,10 +72,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PrivateEndpointArgs() {
-        this.clusterName = Output.empty();
-        this.privateEndpointName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.privateEndpointName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
-            this.privateEndpointName = Output.ofNullable(privateEndpointName);
+            this.privateEndpointName = Codegen.ofNullable(privateEndpointName);
             return this;
         }
         public Builder properties(@Nullable Output<PrivateEndpointPropertiesArgs> properties) {
@@ -124,7 +125,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder properties(@Nullable PrivateEndpointPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

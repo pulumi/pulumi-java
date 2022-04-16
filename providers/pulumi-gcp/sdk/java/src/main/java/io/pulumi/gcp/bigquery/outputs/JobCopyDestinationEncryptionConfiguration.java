@@ -37,7 +37,7 @@ public final class JobCopyDestinationEncryptionConfiguration {
      * The BigQuery Service Account associated with your project requires access to this encryption key.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -45,7 +45,7 @@ public final class JobCopyDestinationEncryptionConfiguration {
      * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
      * 
     */
-    public Optional<String> getKmsKeyVersion() {
+    public Optional<String> kmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }
 

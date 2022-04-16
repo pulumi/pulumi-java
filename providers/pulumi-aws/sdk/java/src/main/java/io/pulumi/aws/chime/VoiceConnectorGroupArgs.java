@@ -6,6 +6,7 @@ package io.pulumi.aws.chime;
 import io.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="connectors")
       private final @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
 
-    public Output<List<VoiceConnectorGroupConnectorArgs>> getConnectors() {
-        return this.connectors == null ? Output.empty() : this.connectors;
+    public Output<List<VoiceConnectorGroupConnectorArgs>> connectors() {
+        return this.connectors == null ? Codegen.empty() : this.connectors;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public VoiceConnectorGroupArgs(
@@ -46,8 +47,8 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
     }
 
     private VoiceConnectorGroupArgs() {
-        this.connectors = Output.empty();
-        this.name = Output.empty();
+        this.connectors = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder connectors(@Nullable List<VoiceConnectorGroupConnectorArgs> connectors) {
-            this.connectors = Output.ofNullable(connectors);
+            this.connectors = Codegen.ofNullable(connectors);
             return this;
         }
         public Builder connectors(VoiceConnectorGroupConnectorArgs... connectors) {
@@ -88,7 +89,7 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public VoiceConnectorGroupArgs build() {
             return new VoiceConnectorGroupArgs(connectors, name);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1.enums.ResourceRecordType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rrdata")
       private final @Nullable Output<String> rrdata;
 
-    public Output<String> getRrdata() {
-        return this.rrdata == null ? Output.empty() : this.rrdata;
+    public Output<String> rrdata() {
+        return this.rrdata == null ? Codegen.empty() : this.rrdata;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<ResourceRecordType> type;
 
-    public Output<ResourceRecordType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ResourceRecordType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ResourceRecordArgs(
@@ -62,9 +63,9 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceRecordArgs() {
-        this.name = Output.empty();
-        this.rrdata = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.rrdata = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rrdata(@Nullable Output<String> rrdata) {
@@ -104,7 +105,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rrdata(@Nullable String rrdata) {
-            this.rrdata = Output.ofNullable(rrdata);
+            this.rrdata = Codegen.ofNullable(rrdata);
             return this;
         }
         public Builder type(@Nullable Output<ResourceRecordType> type) {
@@ -112,7 +113,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable ResourceRecordType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ResourceRecordArgs build() {
             return new ResourceRecordArgs(name, rrdata, type);

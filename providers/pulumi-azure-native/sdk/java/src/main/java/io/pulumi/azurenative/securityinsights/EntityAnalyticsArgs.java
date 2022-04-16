@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -33,7 +34,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -44,7 +45,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="settingsName")
       private final @Nullable Output<String> settingsName;
 
-    public Output<String> getSettingsName() {
-        return this.settingsName == null ? Output.empty() : this.settingsName;
+    public Output<String> settingsName() {
+        return this.settingsName == null ? Codegen.empty() : this.settingsName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -84,11 +85,11 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EntityAnalyticsArgs() {
-        this.kind = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.settingsName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.kind = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.settingsName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class EntityAnalyticsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder settingsName(@Nullable String settingsName) {
-            this.settingsName = Output.ofNullable(settingsName);
+            this.settingsName = Codegen.ofNullable(settingsName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

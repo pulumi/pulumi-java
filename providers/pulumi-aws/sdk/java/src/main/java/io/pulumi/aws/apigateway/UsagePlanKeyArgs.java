@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -31,7 +32,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyType", required=true)
       private final Output<String> keyType;
 
-    public Output<String> getKeyType() {
+    public Output<String> keyType() {
         return this.keyType;
     }
 
@@ -42,7 +43,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usagePlanId", required=true)
       private final Output<String> usagePlanId;
 
-    public Output<String> getUsagePlanId() {
+    public Output<String> usagePlanId() {
         return this.usagePlanId;
     }
 
@@ -56,9 +57,9 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UsagePlanKeyArgs() {
-        this.keyId = Output.empty();
-        this.keyType = Output.empty();
-        this.usagePlanId = Output.empty();
+        this.keyId = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.usagePlanId = Codegen.empty();
     }
 
     public static Builder builder() {

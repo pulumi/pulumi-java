@@ -9,6 +9,7 @@ import io.pulumi.aws.codecommit.inputs.ApprovalRuleTemplateAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ApprovalRuleTemplateAssociation extends io.pulumi.resources.CustomR
      * @return The name for the approval rule template.
      * 
      */
-    public Output<String> getApprovalRuleTemplateName() {
+    public Output<String> approvalRuleTemplateName() {
         return this.approvalRuleTemplateName;
     }
     /**
@@ -53,7 +54,7 @@ public class ApprovalRuleTemplateAssociation extends io.pulumi.resources.CustomR
      * @return The name of the repository that you want to associate with the template.
      * 
      */
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -79,7 +80,7 @@ public class ApprovalRuleTemplateAssociation extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public ApprovalRuleTemplateAssociation(String name, ApprovalRuleTemplateAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codecommit/approvalRuleTemplateAssociation:ApprovalRuleTemplateAssociation", name, args == null ? ApprovalRuleTemplateAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codecommit/approvalRuleTemplateAssociation:ApprovalRuleTemplateAssociation", name, args == null ? ApprovalRuleTemplateAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApprovalRuleTemplateAssociation(String name, Output<String> id, @Nullable ApprovalRuleTemplateAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

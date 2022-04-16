@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> getAllowedExitCodes() {
-        return this.allowedExitCodes == null ? Output.empty() : this.allowedExitCodes;
+    public Output<List<Integer>> allowedExitCodes() {
+        return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
     @Import(name="interpreter")
       private final @Nullable Output<String> interpreter;
 
-    public Output<String> getInterpreter() {
-        return this.interpreter == null ? Output.empty() : this.interpreter;
+    public Output<String> interpreter() {
+        return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
     @Import(name="script", required=true)
       private final Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script;
     }
 
@@ -61,9 +62,9 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
     }
 
     private GuestPoliciesRecipeUpdateStepScriptRunArgs() {
-        this.allowedExitCodes = Output.empty();
-        this.interpreter = Output.empty();
-        this.script = Output.empty();
+        this.allowedExitCodes = Codegen.empty();
+        this.interpreter = Codegen.empty();
+        this.script = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
             return this;
         }
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
+            this.allowedExitCodes = Codegen.ofNullable(allowedExitCodes);
             return this;
         }
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
@@ -106,7 +107,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
             return this;
         }
         public Builder interpreter(@Nullable String interpreter) {
-            this.interpreter = Output.ofNullable(interpreter);
+            this.interpreter = Codegen.ofNullable(interpreter);
             return this;
         }
         public Builder script(Output<String> script) {

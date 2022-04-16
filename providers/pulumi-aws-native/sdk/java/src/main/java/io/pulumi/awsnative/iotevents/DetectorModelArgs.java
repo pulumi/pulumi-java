@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotevents.inputs.DetectorModelDefinitionArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelDefinition", required=true)
       private final Output<DetectorModelDefinitionArgs> detectorModelDefinition;
 
-    public Output<DetectorModelDefinitionArgs> getDetectorModelDefinition() {
+    public Output<DetectorModelDefinitionArgs> detectorModelDefinition() {
         return this.detectorModelDefinition;
     }
 
@@ -32,8 +33,8 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelDescription")
       private final @Nullable Output<String> detectorModelDescription;
 
-    public Output<String> getDetectorModelDescription() {
-        return this.detectorModelDescription == null ? Output.empty() : this.detectorModelDescription;
+    public Output<String> detectorModelDescription() {
+        return this.detectorModelDescription == null ? Codegen.empty() : this.detectorModelDescription;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelName")
       private final @Nullable Output<String> detectorModelName;
 
-    public Output<String> getDetectorModelName() {
-        return this.detectorModelName == null ? Output.empty() : this.detectorModelName;
+    public Output<String> detectorModelName() {
+        return this.detectorModelName == null ? Codegen.empty() : this.detectorModelName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluationMethod")
       private final @Nullable Output<DetectorModelEvaluationMethod> evaluationMethod;
 
-    public Output<DetectorModelEvaluationMethod> getEvaluationMethod() {
-        return this.evaluationMethod == null ? Output.empty() : this.evaluationMethod;
+    public Output<DetectorModelEvaluationMethod> evaluationMethod() {
+        return this.evaluationMethod == null ? Codegen.empty() : this.evaluationMethod;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -91,8 +92,8 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DetectorModelTagArgs>> tags;
 
-    public Output<List<DetectorModelTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DetectorModelTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DetectorModelArgs(
@@ -113,13 +114,13 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorModelArgs() {
-        this.detectorModelDefinition = Output.empty();
-        this.detectorModelDescription = Output.empty();
-        this.detectorModelName = Output.empty();
-        this.evaluationMethod = Output.empty();
-        this.key = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.detectorModelDefinition = Codegen.empty();
+        this.detectorModelDescription = Codegen.empty();
+        this.detectorModelName = Codegen.empty();
+        this.evaluationMethod = Codegen.empty();
+        this.key = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detectorModelDescription(@Nullable String detectorModelDescription) {
-            this.detectorModelDescription = Output.ofNullable(detectorModelDescription);
+            this.detectorModelDescription = Codegen.ofNullable(detectorModelDescription);
             return this;
         }
         public Builder detectorModelName(@Nullable Output<String> detectorModelName) {
@@ -175,7 +176,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detectorModelName(@Nullable String detectorModelName) {
-            this.detectorModelName = Output.ofNullable(detectorModelName);
+            this.detectorModelName = Codegen.ofNullable(detectorModelName);
             return this;
         }
         public Builder evaluationMethod(@Nullable Output<DetectorModelEvaluationMethod> evaluationMethod) {
@@ -183,7 +184,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder evaluationMethod(@Nullable DetectorModelEvaluationMethod evaluationMethod) {
-            this.evaluationMethod = Output.ofNullable(evaluationMethod);
+            this.evaluationMethod = Codegen.ofNullable(evaluationMethod);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -191,7 +192,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -207,7 +208,7 @@ public final class DetectorModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DetectorModelTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DetectorModelTagArgs... tags) {

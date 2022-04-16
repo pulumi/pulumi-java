@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedConditionArgs;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigArgs;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetNames")
       private final @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> getAssetNames() {
-        return this.assetNames == null ? Output.empty() : this.assetNames;
+    public Output<List<String>> assetNames() {
+        return this.assetNames == null ? Codegen.empty() : this.assetNames;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetTypes")
       private final @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> getAssetTypes() {
-        return this.assetTypes == null ? Output.empty() : this.assetTypes;
+    public Output<List<String>> assetTypes() {
+        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingProject", required=true)
       private final Output<String> billingProject;
 
-    public Output<String> getBillingProject() {
+    public Output<String> billingProject() {
         return this.billingProject;
     }
 
@@ -71,8 +72,8 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<FolderFeedConditionArgs> condition;
 
-    public Output<FolderFeedConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<FolderFeedConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<String> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedId", required=true)
       private final Output<String> feedId;
 
-    public Output<String> getFeedId() {
+    public Output<String> feedId() {
         return this.feedId;
     }
 
@@ -106,7 +107,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedOutputConfig", required=true)
       private final Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
 
-    public Output<FolderFeedFeedOutputConfigArgs> getFeedOutputConfig() {
+    public Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig() {
         return this.feedOutputConfig;
     }
 
@@ -117,7 +118,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder", required=true)
       private final Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
@@ -141,14 +142,14 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderFeedArgs() {
-        this.assetNames = Output.empty();
-        this.assetTypes = Output.empty();
-        this.billingProject = Output.empty();
-        this.condition = Output.empty();
-        this.contentType = Output.empty();
-        this.feedId = Output.empty();
-        this.feedOutputConfig = Output.empty();
-        this.folder = Output.empty();
+        this.assetNames = Codegen.empty();
+        this.assetTypes = Codegen.empty();
+        this.billingProject = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.feedId = Codegen.empty();
+        this.feedOutputConfig = Codegen.empty();
+        this.folder = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Output.ofNullable(assetNames);
+            this.assetNames = Codegen.ofNullable(assetNames);
             return this;
         }
         public Builder assetNames(String... assetNames) {
@@ -201,7 +202,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Output.ofNullable(assetTypes);
+            this.assetTypes = Codegen.ofNullable(assetTypes);
             return this;
         }
         public Builder assetTypes(String... assetTypes) {
@@ -220,7 +221,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable FolderFeedConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -228,7 +229,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder feedId(Output<String> feedId) {

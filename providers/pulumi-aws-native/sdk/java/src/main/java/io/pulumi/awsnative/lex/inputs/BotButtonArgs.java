@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 
@@ -35,7 +36,7 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -47,8 +48,8 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotButtonArgs() {
-        this.text = Output.empty();
-        this.value = Output.empty();
+        this.text = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

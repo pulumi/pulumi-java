@@ -7,6 +7,7 @@ import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentAllSettingGetArgs;
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="allSettings")
       private final @Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings;
 
-    public Output<List<EnvironmentAllSettingGetArgs>> getAllSettings() {
-        return this.allSettings == null ? Output.empty() : this.allSettings;
+    public Output<List<EnvironmentAllSettingGetArgs>> allSettings() {
+        return this.allSettings == null ? Codegen.empty() : this.allSettings;
     }
 
     /**
@@ -39,15 +40,15 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="application")
       private final @Nullable Output<String> application;
 
-    public Output<String> getApplication() {
-        return this.application == null ? Output.empty() : this.application;
+    public Output<String> application() {
+        return this.application == null ? Codegen.empty() : this.application;
     }
 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroups")
       private final @Nullable Output<List<String>> autoscalingGroups;
 
-    public Output<List<String>> getAutoscalingGroups() {
-        return this.autoscalingGroups == null ? Output.empty() : this.autoscalingGroups;
+    public Output<List<String>> autoscalingGroups() {
+        return this.autoscalingGroups == null ? Codegen.empty() : this.autoscalingGroups;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cname")
       private final @Nullable Output<String> cname;
 
-    public Output<String> getCname() {
-        return this.cname == null ? Output.empty() : this.cname;
+    public Output<String> cname() {
+        return this.cname == null ? Codegen.empty() : this.cname;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cnamePrefix")
       private final @Nullable Output<String> cnamePrefix;
 
-    public Output<String> getCnamePrefix() {
-        return this.cnamePrefix == null ? Output.empty() : this.cnamePrefix;
+    public Output<String> cnamePrefix() {
+        return this.cnamePrefix == null ? Codegen.empty() : this.cnamePrefix;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointUrl")
       private final @Nullable Output<String> endpointUrl;
 
-    public Output<String> getEndpointUrl() {
-        return this.endpointUrl == null ? Output.empty() : this.endpointUrl;
+    public Output<String> endpointUrl() {
+        return this.endpointUrl == null ? Codegen.empty() : this.endpointUrl;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+    public Output<List<String>> instances() {
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="launchConfigurations")
       private final @Nullable Output<List<String>> launchConfigurations;
 
-    public Output<List<String>> getLaunchConfigurations() {
-        return this.launchConfigurations == null ? Output.empty() : this.launchConfigurations;
+    public Output<List<String>> launchConfigurations() {
+        return this.launchConfigurations == null ? Codegen.empty() : this.launchConfigurations;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancers")
       private final @Nullable Output<List<String>> loadBalancers;
 
-    public Output<List<String>> getLoadBalancers() {
-        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
+    public Output<List<String>> loadBalancers() {
+        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformArn")
       private final @Nullable Output<String> platformArn;
 
-    public Output<String> getPlatformArn() {
-        return this.platformArn == null ? Output.empty() : this.platformArn;
+    public Output<String> platformArn() {
+        return this.platformArn == null ? Codegen.empty() : this.platformArn;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pollInterval")
       private final @Nullable Output<String> pollInterval;
 
-    public Output<String> getPollInterval() {
-        return this.pollInterval == null ? Output.empty() : this.pollInterval;
+    public Output<String> pollInterval() {
+        return this.pollInterval == null ? Codegen.empty() : this.pollInterval;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="queues")
       private final @Nullable Output<List<String>> queues;
 
-    public Output<List<String>> getQueues() {
-        return this.queues == null ? Output.empty() : this.queues;
+    public Output<List<String>> queues() {
+        return this.queues == null ? Codegen.empty() : this.queues;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="settings")
       private final @Nullable Output<List<EnvironmentSettingGetArgs>> settings;
 
-    public Output<List<EnvironmentSettingGetArgs>> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+    public Output<List<EnvironmentSettingGetArgs>> settings() {
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -209,8 +210,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="solutionStackName")
       private final @Nullable Output<String> solutionStackName;
 
-    public Output<String> getSolutionStackName() {
-        return this.solutionStackName == null ? Output.empty() : this.solutionStackName;
+    public Output<String> solutionStackName() {
+        return this.solutionStackName == null ? Codegen.empty() : this.solutionStackName;
     }
 
     /**
@@ -220,8 +221,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -231,8 +232,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -243,8 +244,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
-    public Output<String> getTemplateName() {
-        return this.templateName == null ? Output.empty() : this.templateName;
+    public Output<String> templateName() {
+        return this.templateName == null ? Codegen.empty() : this.templateName;
     }
 
     /**
@@ -255,8 +256,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     /**
@@ -266,8 +267,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<List<String>> triggers;
 
-    public Output<List<String>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+    public Output<List<String>> triggers() {
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     /**
@@ -278,8 +279,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -292,8 +293,8 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitForReadyTimeout")
       private final @Nullable Output<String> waitForReadyTimeout;
 
-    public Output<String> getWaitForReadyTimeout() {
-        return this.waitForReadyTimeout == null ? Output.empty() : this.waitForReadyTimeout;
+    public Output<String> waitForReadyTimeout() {
+        return this.waitForReadyTimeout == null ? Codegen.empty() : this.waitForReadyTimeout;
     }
 
     public EnvironmentState(
@@ -348,30 +349,30 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentState() {
-        this.allSettings = Output.empty();
-        this.application = Output.empty();
-        this.arn = Output.empty();
-        this.autoscalingGroups = Output.empty();
-        this.cname = Output.empty();
-        this.cnamePrefix = Output.empty();
-        this.description = Output.empty();
-        this.endpointUrl = Output.empty();
-        this.instances = Output.empty();
-        this.launchConfigurations = Output.empty();
-        this.loadBalancers = Output.empty();
-        this.name = Output.empty();
-        this.platformArn = Output.empty();
-        this.pollInterval = Output.empty();
-        this.queues = Output.empty();
-        this.settings = Output.empty();
-        this.solutionStackName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.templateName = Output.empty();
-        this.tier = Output.empty();
-        this.triggers = Output.empty();
-        this.version = Output.empty();
-        this.waitForReadyTimeout = Output.empty();
+        this.allSettings = Codegen.empty();
+        this.application = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.autoscalingGroups = Codegen.empty();
+        this.cname = Codegen.empty();
+        this.cnamePrefix = Codegen.empty();
+        this.description = Codegen.empty();
+        this.endpointUrl = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.launchConfigurations = Codegen.empty();
+        this.loadBalancers = Codegen.empty();
+        this.name = Codegen.empty();
+        this.platformArn = Codegen.empty();
+        this.pollInterval = Codegen.empty();
+        this.queues = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.solutionStackName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.templateName = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.triggers = Codegen.empty();
+        this.version = Codegen.empty();
+        this.waitForReadyTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -445,7 +446,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allSettings(@Nullable List<EnvironmentAllSettingGetArgs> allSettings) {
-            this.allSettings = Output.ofNullable(allSettings);
+            this.allSettings = Codegen.ofNullable(allSettings);
             return this;
         }
         public Builder allSettings(EnvironmentAllSettingGetArgs... allSettings) {
@@ -460,7 +461,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder autoscalingGroups(@Nullable Output<List<String>> autoscalingGroups) {
@@ -468,7 +469,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingGroups(@Nullable List<String> autoscalingGroups) {
-            this.autoscalingGroups = Output.ofNullable(autoscalingGroups);
+            this.autoscalingGroups = Codegen.ofNullable(autoscalingGroups);
             return this;
         }
         public Builder autoscalingGroups(String... autoscalingGroups) {
@@ -479,7 +480,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cname(@Nullable String cname) {
-            this.cname = Output.ofNullable(cname);
+            this.cname = Codegen.ofNullable(cname);
             return this;
         }
         public Builder cnamePrefix(@Nullable Output<String> cnamePrefix) {
@@ -487,7 +488,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cnamePrefix(@Nullable String cnamePrefix) {
-            this.cnamePrefix = Output.ofNullable(cnamePrefix);
+            this.cnamePrefix = Codegen.ofNullable(cnamePrefix);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -495,7 +496,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endpointUrl(@Nullable Output<String> endpointUrl) {
@@ -503,7 +504,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointUrl(@Nullable String endpointUrl) {
-            this.endpointUrl = Output.ofNullable(endpointUrl);
+            this.endpointUrl = Codegen.ofNullable(endpointUrl);
             return this;
         }
         public Builder instances(@Nullable Output<List<String>> instances) {
@@ -511,7 +512,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(String... instances) {
@@ -522,7 +523,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchConfigurations(@Nullable List<String> launchConfigurations) {
-            this.launchConfigurations = Output.ofNullable(launchConfigurations);
+            this.launchConfigurations = Codegen.ofNullable(launchConfigurations);
             return this;
         }
         public Builder launchConfigurations(String... launchConfigurations) {
@@ -533,7 +534,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancers(@Nullable List<String> loadBalancers) {
-            this.loadBalancers = Output.ofNullable(loadBalancers);
+            this.loadBalancers = Codegen.ofNullable(loadBalancers);
             return this;
         }
         public Builder loadBalancers(String... loadBalancers) {
@@ -544,7 +545,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder platformArn(@Nullable Output<String> platformArn) {
@@ -552,7 +553,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformArn(@Nullable String platformArn) {
-            this.platformArn = Output.ofNullable(platformArn);
+            this.platformArn = Codegen.ofNullable(platformArn);
             return this;
         }
         public Builder pollInterval(@Nullable Output<String> pollInterval) {
@@ -560,7 +561,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pollInterval(@Nullable String pollInterval) {
-            this.pollInterval = Output.ofNullable(pollInterval);
+            this.pollInterval = Codegen.ofNullable(pollInterval);
             return this;
         }
         public Builder queues(@Nullable Output<List<String>> queues) {
@@ -568,7 +569,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queues(@Nullable List<String> queues) {
-            this.queues = Output.ofNullable(queues);
+            this.queues = Codegen.ofNullable(queues);
             return this;
         }
         public Builder queues(String... queues) {
@@ -579,7 +580,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder settings(@Nullable List<EnvironmentSettingGetArgs> settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder settings(EnvironmentSettingGetArgs... settings) {
@@ -590,7 +591,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder solutionStackName(@Nullable String solutionStackName) {
-            this.solutionStackName = Output.ofNullable(solutionStackName);
+            this.solutionStackName = Codegen.ofNullable(solutionStackName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -598,7 +599,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -606,7 +607,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder templateName(@Nullable Output<String> templateName) {
@@ -614,7 +615,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = Output.ofNullable(templateName);
+            this.templateName = Codegen.ofNullable(templateName);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -622,7 +623,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }
         public Builder triggers(@Nullable Output<List<String>> triggers) {
@@ -630,7 +631,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable List<String> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }
         public Builder triggers(String... triggers) {
@@ -641,7 +642,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder waitForReadyTimeout(@Nullable Output<String> waitForReadyTimeout) {
@@ -649,7 +650,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder waitForReadyTimeout(@Nullable String waitForReadyTimeout) {
-            this.waitForReadyTimeout = Output.ofNullable(waitForReadyTimeout);
+            this.waitForReadyTimeout = Codegen.ofNullable(waitForReadyTimeout);
             return this;
         }        public EnvironmentState build() {
             return new EnvironmentState(allSettings, application, arn, autoscalingGroups, cname, cnamePrefix, description, endpointUrl, instances, launchConfigurations, loadBalancers, name, platformArn, pollInterval, queues, settings, solutionStackName, tags, tagsAll, templateName, tier, triggers, version, waitForReadyTimeout);

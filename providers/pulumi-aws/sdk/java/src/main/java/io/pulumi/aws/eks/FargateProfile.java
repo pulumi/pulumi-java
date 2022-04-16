@@ -10,6 +10,7 @@ import io.pulumi.aws.eks.outputs.FargateProfileSelector;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the EKS Fargate Profile.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -70,7 +71,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Name of the EKS Fargate Profile.
      * 
      */
-    public Output<String> getFargateProfileName() {
+    public Output<String> fargateProfileName() {
         return this.fargateProfileName;
     }
     /**
@@ -84,7 +85,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
      * 
      */
-    public Output<String> getPodExecutionRoleArn() {
+    public Output<String> podExecutionRoleArn() {
         return this.podExecutionRoleArn;
     }
     /**
@@ -98,7 +99,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
      * 
      */
-    public Output<List<FargateProfileSelector>> getSelectors() {
+    public Output<List<FargateProfileSelector>> selectors() {
         return this.selectors;
     }
     /**
@@ -112,7 +113,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Status of the EKS Fargate Profile.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -126,7 +127,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
      * 
      */
-    public Output</* @Nullable */ List<String>> getSubnetIds() {
+    public Output</* @Nullable */ List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -140,7 +141,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +155,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -180,7 +181,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FargateProfile(String name, FargateProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:eks/fargateProfile:FargateProfile", name, args == null ? FargateProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:eks/fargateProfile:FargateProfile", name, args == null ? FargateProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FargateProfile(String name, Output<String> id, @Nullable FargateProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

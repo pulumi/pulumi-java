@@ -8,6 +8,7 @@ import io.pulumi.azurenative.digitaltwins.inputs.EventHubArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.ServiceBusArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
-        return this.endpointName == null ? Output.empty() : this.endpointName;
+    public Output<String> endpointName() {
+        return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -47,7 +48,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +59,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -74,10 +75,10 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
     }
 
     private DigitalTwinsEndpointArgs() {
-        this.endpointName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.endpointName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Output.ofNullable(endpointName);
+            this.endpointName = Codegen.ofNullable(endpointName);
             return this;
         }
         public Builder properties(Output<Object> properties) {

@@ -17,6 +17,7 @@ import io.pulumi.azurenative.logic.inputs.X12ValidationOverrideArgs;
 import io.pulumi.azurenative.logic.inputs.X12ValidationSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="acknowledgementSettings", required=true)
       private final Output<X12AcknowledgementSettingsArgs> acknowledgementSettings;
 
-    public Output<X12AcknowledgementSettingsArgs> getAcknowledgementSettings() {
+    public Output<X12AcknowledgementSettingsArgs> acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
 
@@ -48,8 +49,8 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="envelopeOverrides")
       private final @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
 
-    public Output<List<X12EnvelopeOverrideArgs>> getEnvelopeOverrides() {
-        return this.envelopeOverrides == null ? Output.empty() : this.envelopeOverrides;
+    public Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides() {
+        return this.envelopeOverrides == null ? Codegen.empty() : this.envelopeOverrides;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="envelopeSettings", required=true)
       private final Output<X12EnvelopeSettingsArgs> envelopeSettings;
 
-    public Output<X12EnvelopeSettingsArgs> getEnvelopeSettings() {
+    public Output<X12EnvelopeSettingsArgs> envelopeSettings() {
         return this.envelopeSettings;
     }
 
@@ -70,7 +71,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="framingSettings", required=true)
       private final Output<X12FramingSettingsArgs> framingSettings;
 
-    public Output<X12FramingSettingsArgs> getFramingSettings() {
+    public Output<X12FramingSettingsArgs> framingSettings() {
         return this.framingSettings;
     }
 
@@ -81,7 +82,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="messageFilter", required=true)
       private final Output<X12MessageFilterArgs> messageFilter;
 
-    public Output<X12MessageFilterArgs> getMessageFilter() {
+    public Output<X12MessageFilterArgs> messageFilter() {
         return this.messageFilter;
     }
 
@@ -92,8 +93,8 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="messageFilterList")
       private final @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList;
 
-    public Output<List<X12MessageIdentifierArgs>> getMessageFilterList() {
-        return this.messageFilterList == null ? Output.empty() : this.messageFilterList;
+    public Output<List<X12MessageIdentifierArgs>> messageFilterList() {
+        return this.messageFilterList == null ? Codegen.empty() : this.messageFilterList;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="processingSettings", required=true)
       private final Output<X12ProcessingSettingsArgs> processingSettings;
 
-    public Output<X12ProcessingSettingsArgs> getProcessingSettings() {
+    public Output<X12ProcessingSettingsArgs> processingSettings() {
         return this.processingSettings;
     }
 
@@ -114,7 +115,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="schemaReferences", required=true)
       private final Output<List<X12SchemaReferenceArgs>> schemaReferences;
 
-    public Output<List<X12SchemaReferenceArgs>> getSchemaReferences() {
+    public Output<List<X12SchemaReferenceArgs>> schemaReferences() {
         return this.schemaReferences;
     }
 
@@ -125,7 +126,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="securitySettings", required=true)
       private final Output<X12SecuritySettingsArgs> securitySettings;
 
-    public Output<X12SecuritySettingsArgs> getSecuritySettings() {
+    public Output<X12SecuritySettingsArgs> securitySettings() {
         return this.securitySettings;
     }
 
@@ -136,8 +137,8 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="validationOverrides")
       private final @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides;
 
-    public Output<List<X12ValidationOverrideArgs>> getValidationOverrides() {
-        return this.validationOverrides == null ? Output.empty() : this.validationOverrides;
+    public Output<List<X12ValidationOverrideArgs>> validationOverrides() {
+        return this.validationOverrides == null ? Codegen.empty() : this.validationOverrides;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="validationSettings", required=true)
       private final Output<X12ValidationSettingsArgs> validationSettings;
 
-    public Output<X12ValidationSettingsArgs> getValidationSettings() {
+    public Output<X12ValidationSettingsArgs> validationSettings() {
         return this.validationSettings;
     }
 
@@ -158,8 +159,8 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="x12DelimiterOverrides")
       private final @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
 
-    public Output<List<X12DelimiterOverridesArgs>> getX12DelimiterOverrides() {
-        return this.x12DelimiterOverrides == null ? Output.empty() : this.x12DelimiterOverrides;
+    public Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides() {
+        return this.x12DelimiterOverrides == null ? Codegen.empty() : this.x12DelimiterOverrides;
     }
 
     public X12ProtocolSettingsArgs(
@@ -190,18 +191,18 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12ProtocolSettingsArgs() {
-        this.acknowledgementSettings = Output.empty();
-        this.envelopeOverrides = Output.empty();
-        this.envelopeSettings = Output.empty();
-        this.framingSettings = Output.empty();
-        this.messageFilter = Output.empty();
-        this.messageFilterList = Output.empty();
-        this.processingSettings = Output.empty();
-        this.schemaReferences = Output.empty();
-        this.securitySettings = Output.empty();
-        this.validationOverrides = Output.empty();
-        this.validationSettings = Output.empty();
-        this.x12DelimiterOverrides = Output.empty();
+        this.acknowledgementSettings = Codegen.empty();
+        this.envelopeOverrides = Codegen.empty();
+        this.envelopeSettings = Codegen.empty();
+        this.framingSettings = Codegen.empty();
+        this.messageFilter = Codegen.empty();
+        this.messageFilterList = Codegen.empty();
+        this.processingSettings = Codegen.empty();
+        this.schemaReferences = Codegen.empty();
+        this.securitySettings = Codegen.empty();
+        this.validationOverrides = Codegen.empty();
+        this.validationSettings = Codegen.empty();
+        this.x12DelimiterOverrides = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -259,7 +260,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder envelopeOverrides(@Nullable List<X12EnvelopeOverrideArgs> envelopeOverrides) {
-            this.envelopeOverrides = Output.ofNullable(envelopeOverrides);
+            this.envelopeOverrides = Codegen.ofNullable(envelopeOverrides);
             return this;
         }
         public Builder envelopeOverrides(X12EnvelopeOverrideArgs... envelopeOverrides) {
@@ -294,7 +295,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder messageFilterList(@Nullable List<X12MessageIdentifierArgs> messageFilterList) {
-            this.messageFilterList = Output.ofNullable(messageFilterList);
+            this.messageFilterList = Codegen.ofNullable(messageFilterList);
             return this;
         }
         public Builder messageFilterList(X12MessageIdentifierArgs... messageFilterList) {
@@ -332,7 +333,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder validationOverrides(@Nullable List<X12ValidationOverrideArgs> validationOverrides) {
-            this.validationOverrides = Output.ofNullable(validationOverrides);
+            this.validationOverrides = Codegen.ofNullable(validationOverrides);
             return this;
         }
         public Builder validationOverrides(X12ValidationOverrideArgs... validationOverrides) {
@@ -351,7 +352,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder x12DelimiterOverrides(@Nullable List<X12DelimiterOverridesArgs> x12DelimiterOverrides) {
-            this.x12DelimiterOverrides = Output.ofNullable(x12DelimiterOverrides);
+            this.x12DelimiterOverrides = Codegen.ofNullable(x12DelimiterOverrides);
             return this;
         }
         public Builder x12DelimiterOverrides(X12DelimiterOverridesArgs... x12DelimiterOverrides) {

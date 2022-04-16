@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
     @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
-    public Output<String> getKmsKeySelfLink() {
-        return this.kmsKeySelfLink == null ? Output.empty() : this.kmsKeySelfLink;
+    public Output<String> kmsKeySelfLink() {
+        return this.kmsKeySelfLink == null ? Codegen.empty() : this.kmsKeySelfLink;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
     @Import(name="kmsKeyServiceAccount")
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Output<String> getKmsKeyServiceAccount() {
-        return this.kmsKeyServiceAccount == null ? Output.empty() : this.kmsKeyServiceAccount;
+    public Output<String> kmsKeyServiceAccount() {
+        return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
     @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
-    public Output<String> getRawKey() {
-        return this.rawKey == null ? Output.empty() : this.rawKey;
+    public Output<String> rawKey() {
+        return this.rawKey == null ? Codegen.empty() : this.rawKey;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
     @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
-    public Output<String> getSha256() {
-        return this.sha256 == null ? Output.empty() : this.sha256;
+    public Output<String> sha256() {
+        return this.sha256 == null ? Codegen.empty() : this.sha256;
     }
 
     public DiskSourceSnapshotEncryptionKeyArgs(
@@ -78,10 +79,10 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
     }
 
     private DiskSourceSnapshotEncryptionKeyArgs() {
-        this.kmsKeySelfLink = Output.empty();
-        this.kmsKeyServiceAccount = Output.empty();
-        this.rawKey = Output.empty();
-        this.sha256 = Output.empty();
+        this.kmsKeySelfLink = Codegen.empty();
+        this.kmsKeyServiceAccount = Codegen.empty();
+        this.rawKey = Codegen.empty();
+        this.sha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Output.ofNullable(kmsKeySelfLink);
+            this.kmsKeySelfLink = Codegen.ofNullable(kmsKeySelfLink);
             return this;
         }
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
@@ -123,7 +124,7 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Output.ofNullable(kmsKeyServiceAccount);
+            this.kmsKeyServiceAccount = Codegen.ofNullable(kmsKeyServiceAccount);
             return this;
         }
         public Builder rawKey(@Nullable Output<String> rawKey) {
@@ -131,7 +132,7 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Output.ofNullable(rawKey);
+            this.rawKey = Codegen.ofNullable(rawKey);
             return this;
         }
         public Builder sha256(@Nullable Output<String> sha256) {
@@ -139,7 +140,7 @@ public final class DiskSourceSnapshotEncryptionKeyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sha256(@Nullable String sha256) {
-            this.sha256 = Output.ofNullable(sha256);
+            this.sha256 = Codegen.ofNullable(sha256);
             return this;
         }        public DiskSourceSnapshotEncryptionKeyArgs build() {
             return new DiskSourceSnapshotEncryptionKeyArgs(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);

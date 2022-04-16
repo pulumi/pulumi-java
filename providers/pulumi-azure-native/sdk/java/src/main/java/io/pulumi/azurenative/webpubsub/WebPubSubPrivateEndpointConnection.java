@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +59,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @return Private endpoint associated with the private endpoint connection
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +73,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @return Connection state
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +87,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @return Provisioning state of the private endpoint connection
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +101,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +115,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +141,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public WebPubSubPrivateEndpointConnection(String name, WebPubSubPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:webpubsub:WebPubSubPrivateEndpointConnection", name, args == null ? WebPubSubPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:webpubsub:WebPubSubPrivateEndpointConnection", name, args == null ? WebPubSubPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebPubSubPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

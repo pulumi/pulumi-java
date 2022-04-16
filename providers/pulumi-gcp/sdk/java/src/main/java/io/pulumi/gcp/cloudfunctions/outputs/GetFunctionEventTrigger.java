@@ -45,21 +45,21 @@ public final class GetFunctionEventTrigger {
      * for a full reference of accepted triggers.
      * 
     */
-    public String getEventType() {
+    public String eventType() {
         return this.eventType;
     }
     /**
      * Policy for failed executions. Structure is documented below.
      * 
     */
-    public List<GetFunctionEventTriggerFailurePolicy> getFailurePolicies() {
+    public List<GetFunctionEventTriggerFailurePolicy> failurePolicies() {
         return this.failurePolicies;
     }
     /**
      * The name of the resource whose events are being observed, for example, `"myBucket"`
      * 
     */
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

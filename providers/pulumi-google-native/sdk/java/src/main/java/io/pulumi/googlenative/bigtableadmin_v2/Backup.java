@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.BackupArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.EncryptionInfoResponse;
@@ -30,7 +31,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The encryption information for the backup.
      * 
      */
-    public Output<EncryptionInfoResponse> getEncryptionInfo() {
+    public Output<EncryptionInfoResponse> encryptionInfo() {
         return this.encryptionInfo;
     }
     /**
@@ -44,7 +45,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return `end_time` is the time that the backup was finished. The row data in the backup will be no newer than this timestamp.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -58,7 +59,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -72,7 +73,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Size of the backup in bytes.
      * 
      */
-    public Output<String> getSizeBytes() {
+    public Output<String> sizeBytes() {
         return this.sizeBytes;
     }
     /**
@@ -100,7 +101,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
      * 
      */
-    public Output<String> getSourceTable() {
+    public Output<String> sourceTable() {
         return this.sourceTable;
     }
     /**
@@ -114,7 +115,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return `start_time` is the time that the backup was started (i.e. approximately the time the CreateBackup request is received). The row data in this backup will be no older than this timestamp.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -128,7 +129,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The current state of the backup.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -154,7 +155,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backup(String name, BackupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigtableadmin/v2:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigtableadmin/v2:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Backup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

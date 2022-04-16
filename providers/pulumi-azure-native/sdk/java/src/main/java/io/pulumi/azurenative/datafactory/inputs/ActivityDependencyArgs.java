@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.DependencyCondition;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="activity", required=true)
       private final Output<String> activity;
 
-    public Output<String> getActivity() {
+    public Output<String> activity() {
         return this.activity;
     }
 
@@ -38,7 +39,7 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dependencyConditions", required=true)
       private final Output<List<Either<String,DependencyCondition>>> dependencyConditions;
 
-    public Output<List<Either<String,DependencyCondition>>> getDependencyConditions() {
+    public Output<List<Either<String,DependencyCondition>>> dependencyConditions() {
         return this.dependencyConditions;
     }
 
@@ -50,8 +51,8 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ActivityDependencyArgs() {
-        this.activity = Output.empty();
-        this.dependencyConditions = Output.empty();
+        this.activity = Codegen.empty();
+        this.dependencyConditions = Codegen.empty();
     }
 
     public static Builder builder() {

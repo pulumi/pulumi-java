@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     @Import(name="exacts", required=true)
       private final Output<List<String>> exacts;
 
-    public Output<List<String>> getExacts() {
+    public Output<List<String>> exacts() {
         return this.exacts;
     }
 
@@ -30,7 +31,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     }
 
     private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs() {
-        this.exacts = Output.empty();
+        this.exacts = Codegen.empty();
     }
 
     public static Builder builder() {

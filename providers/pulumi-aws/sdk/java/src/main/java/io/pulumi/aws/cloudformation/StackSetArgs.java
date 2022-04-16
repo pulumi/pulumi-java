@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudformation;
 import io.pulumi.aws.cloudformation.inputs.StackSetAutoDeploymentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="administrationRoleArn")
       private final @Nullable Output<String> administrationRoleArn;
 
-    public Output<String> getAdministrationRoleArn() {
-        return this.administrationRoleArn == null ? Output.empty() : this.administrationRoleArn;
+    public Output<String> administrationRoleArn() {
+        return this.administrationRoleArn == null ? Codegen.empty() : this.administrationRoleArn;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoDeployment")
       private final @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
-    public Output<StackSetAutoDeploymentArgs> getAutoDeployment() {
-        return this.autoDeployment == null ? Output.empty() : this.autoDeployment;
+    public Output<StackSetAutoDeploymentArgs> autoDeployment() {
+        return this.autoDeployment == null ? Codegen.empty() : this.autoDeployment;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<List<String>> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleName")
       private final @Nullable Output<String> executionRoleName;
 
-    public Output<String> getExecutionRoleName() {
-        return this.executionRoleName == null ? Output.empty() : this.executionRoleName;
+    public Output<String> executionRoleName() {
+        return this.executionRoleName == null ? Codegen.empty() : this.executionRoleName;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissionModel")
       private final @Nullable Output<String> permissionModel;
 
-    public Output<String> getPermissionModel() {
-        return this.permissionModel == null ? Output.empty() : this.permissionModel;
+    public Output<String> permissionModel() {
+        return this.permissionModel == null ? Codegen.empty() : this.permissionModel;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
-        return this.templateBody == null ? Output.empty() : this.templateBody;
+    public Output<String> templateBody() {
+        return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
-    public Output<String> getTemplateUrl() {
-        return this.templateUrl == null ? Output.empty() : this.templateUrl;
+    public Output<String> templateUrl() {
+        return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
     }
 
     public StackSetArgs(
@@ -164,17 +165,17 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackSetArgs() {
-        this.administrationRoleArn = Output.empty();
-        this.autoDeployment = Output.empty();
-        this.capabilities = Output.empty();
-        this.description = Output.empty();
-        this.executionRoleName = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.permissionModel = Output.empty();
-        this.tags = Output.empty();
-        this.templateBody = Output.empty();
-        this.templateUrl = Output.empty();
+        this.administrationRoleArn = Codegen.empty();
+        this.autoDeployment = Codegen.empty();
+        this.capabilities = Codegen.empty();
+        this.description = Codegen.empty();
+        this.executionRoleName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.permissionModel = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateBody = Codegen.empty();
+        this.templateUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administrationRoleArn(@Nullable String administrationRoleArn) {
-            this.administrationRoleArn = Output.ofNullable(administrationRoleArn);
+            this.administrationRoleArn = Codegen.ofNullable(administrationRoleArn);
             return this;
         }
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
@@ -230,7 +231,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
-            this.autoDeployment = Output.ofNullable(autoDeployment);
+            this.autoDeployment = Codegen.ofNullable(autoDeployment);
             return this;
         }
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
@@ -238,7 +239,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(String... capabilities) {
@@ -249,7 +250,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
@@ -257,7 +258,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionRoleName(@Nullable String executionRoleName) {
-            this.executionRoleName = Output.ofNullable(executionRoleName);
+            this.executionRoleName = Codegen.ofNullable(executionRoleName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -265,7 +266,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -273,7 +274,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder permissionModel(@Nullable Output<String> permissionModel) {
@@ -281,7 +282,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissionModel(@Nullable String permissionModel) {
-            this.permissionModel = Output.ofNullable(permissionModel);
+            this.permissionModel = Codegen.ofNullable(permissionModel);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -289,7 +290,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder templateBody(@Nullable Output<String> templateBody) {
@@ -297,7 +298,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Output.ofNullable(templateBody);
+            this.templateBody = Codegen.ofNullable(templateBody);
             return this;
         }
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
@@ -305,7 +306,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Output.ofNullable(templateUrl);
+            this.templateUrl = Codegen.ofNullable(templateUrl);
             return this;
         }        public StackSetArgs build() {
             return new StackSetArgs(administrationRoleArn, autoDeployment, capabilities, description, executionRoleName, name, parameters, permissionModel, tags, templateBody, templateUrl);

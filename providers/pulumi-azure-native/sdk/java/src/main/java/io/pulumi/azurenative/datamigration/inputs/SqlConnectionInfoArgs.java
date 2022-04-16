@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datamigration.enums.SqlSourcePlatform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="additionalSettings")
       private final @Nullable Output<String> additionalSettings;
 
-    public Output<String> getAdditionalSettings() {
-        return this.additionalSettings == null ? Output.empty() : this.additionalSettings;
+    public Output<String> additionalSettings() {
+        return this.additionalSettings == null ? Codegen.empty() : this.additionalSettings;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="authentication")
       private final @Nullable Output<Either<String,AuthenticationType>> authentication;
 
-    public Output<Either<String,AuthenticationType>> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<Either<String,AuthenticationType>> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
 
@@ -62,8 +63,8 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="encryptConnection")
       private final @Nullable Output<Boolean> encryptConnection;
 
-    public Output<Boolean> getEncryptConnection() {
-        return this.encryptConnection == null ? Output.empty() : this.encryptConnection;
+    public Output<Boolean> encryptConnection() {
+        return this.encryptConnection == null ? Codegen.empty() : this.encryptConnection;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="platform")
       private final @Nullable Output<Either<String,SqlSourcePlatform>> platform;
 
-    public Output<Either<String,SqlSourcePlatform>> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+    public Output<Either<String,SqlSourcePlatform>> platform() {
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="trustServerCertificate")
       private final @Nullable Output<Boolean> trustServerCertificate;
 
-    public Output<Boolean> getTrustServerCertificate() {
-        return this.trustServerCertificate == null ? Output.empty() : this.trustServerCertificate;
+    public Output<Boolean> trustServerCertificate() {
+        return this.trustServerCertificate == null ? Codegen.empty() : this.trustServerCertificate;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -118,8 +119,8 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public SqlConnectionInfoArgs(
@@ -135,24 +136,24 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         this.additionalSettings = additionalSettings;
         this.authentication = authentication;
         this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.encryptConnection = encryptConnection == null ? Output.ofNullable(true) : encryptConnection;
+        this.encryptConnection = encryptConnection == null ? Codegen.ofNullable(true) : encryptConnection;
         this.password = password;
         this.platform = platform;
-        this.trustServerCertificate = trustServerCertificate == null ? Output.ofNullable(false) : trustServerCertificate;
+        this.trustServerCertificate = trustServerCertificate == null ? Codegen.ofNullable(false) : trustServerCertificate;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.userName = userName;
     }
 
     private SqlConnectionInfoArgs() {
-        this.additionalSettings = Output.empty();
-        this.authentication = Output.empty();
-        this.dataSource = Output.empty();
-        this.encryptConnection = Output.empty();
-        this.password = Output.empty();
-        this.platform = Output.empty();
-        this.trustServerCertificate = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.additionalSettings = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.dataSource = Codegen.empty();
+        this.encryptConnection = Codegen.empty();
+        this.password = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.trustServerCertificate = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder additionalSettings(@Nullable String additionalSettings) {
-            this.additionalSettings = Output.ofNullable(additionalSettings);
+            this.additionalSettings = Codegen.ofNullable(additionalSettings);
             return this;
         }
         public Builder authentication(@Nullable Output<Either<String,AuthenticationType>> authentication) {
@@ -204,7 +205,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder authentication(@Nullable Either<String,AuthenticationType> authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder dataSource(Output<String> dataSource) {
@@ -220,7 +221,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder encryptConnection(@Nullable Boolean encryptConnection) {
-            this.encryptConnection = Output.ofNullable(encryptConnection);
+            this.encryptConnection = Codegen.ofNullable(encryptConnection);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -228,7 +229,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder platform(@Nullable Output<Either<String,SqlSourcePlatform>> platform) {
@@ -236,7 +237,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder platform(@Nullable Either<String,SqlSourcePlatform> platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder trustServerCertificate(@Nullable Output<Boolean> trustServerCertificate) {
@@ -244,7 +245,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
-            this.trustServerCertificate = Output.ofNullable(trustServerCertificate);
+            this.trustServerCertificate = Codegen.ofNullable(trustServerCertificate);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -260,7 +261,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public SqlConnectionInfoArgs build() {
             return new SqlConnectionInfoArgs(additionalSettings, authentication, dataSource, encryptConnection, password, platform, trustServerCertificate, type, userName);

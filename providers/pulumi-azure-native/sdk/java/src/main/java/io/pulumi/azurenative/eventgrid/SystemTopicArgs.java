@@ -6,6 +6,7 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.eventgrid.inputs.IdentityInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityInfoArgs> identity;
 
-    public Output<IdentityInfoArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityInfoArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,8 +57,8 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<String> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemTopicName")
       private final @Nullable Output<String> systemTopicName;
 
-    public Output<String> getSystemTopicName() {
-        return this.systemTopicName == null ? Output.empty() : this.systemTopicName;
+    public Output<String> systemTopicName() {
+        return this.systemTopicName == null ? Codegen.empty() : this.systemTopicName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicType")
       private final @Nullable Output<String> topicType;
 
-    public Output<String> getTopicType() {
-        return this.topicType == null ? Output.empty() : this.topicType;
+    public Output<String> topicType() {
+        return this.topicType == null ? Codegen.empty() : this.topicType;
     }
 
     public SystemTopicArgs(
@@ -111,13 +112,13 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SystemTopicArgs() {
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.systemTopicName = Output.empty();
-        this.tags = Output.empty();
-        this.topicType = Output.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.systemTopicName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.topicType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityInfoArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -165,7 +166,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -181,7 +182,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder systemTopicName(@Nullable Output<String> systemTopicName) {
@@ -189,7 +190,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemTopicName(@Nullable String systemTopicName) {
-            this.systemTopicName = Output.ofNullable(systemTopicName);
+            this.systemTopicName = Codegen.ofNullable(systemTopicName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -197,7 +198,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder topicType(@Nullable Output<String> topicType) {
@@ -205,7 +206,7 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topicType(@Nullable String topicType) {
-            this.topicType = Output.ofNullable(topicType);
+            this.topicType = Codegen.ofNullable(topicType);
             return this;
         }        public SystemTopicArgs build() {
             return new SystemTopicArgs(identity, location, resourceGroupName, source, systemTopicName, tags, topicType);

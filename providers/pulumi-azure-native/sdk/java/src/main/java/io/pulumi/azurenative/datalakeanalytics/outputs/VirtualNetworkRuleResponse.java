@@ -53,35 +53,35 @@ public final class VirtualNetworkRuleResponse {
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource identifier for the subnet
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The current state of the VirtualNetwork Rule
      * 
     */
-    public String getVirtualNetworkRuleState() {
+    public String virtualNetworkRuleState() {
         return this.virtualNetworkRuleState;
     }
 

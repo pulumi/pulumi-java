@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Resource Type of Application.
      * 
      */
-    public Output</* @Nullable */ String> getApplicationType() {
+    public Output</* @Nullable */ String> applicationType() {
         return this.applicationType;
     }
     /**
@@ -57,7 +58,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Command Line Arguments for Application.
      * 
      */
-    public Output</* @Nullable */ String> getCommandLineArguments() {
+    public Output</* @Nullable */ String> commandLineArguments() {
         return this.commandLineArguments;
     }
     /**
@@ -71,7 +72,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
      * 
      */
-    public Output<String> getCommandLineSetting() {
+    public Output<String> commandLineSetting() {
         return this.commandLineSetting;
     }
     /**
@@ -85,7 +86,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Description of Application.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -99,7 +100,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Specifies a path for the executable file for the application.
      * 
      */
-    public Output</* @Nullable */ String> getFilePath() {
+    public Output</* @Nullable */ String> filePath() {
         return this.filePath;
     }
     /**
@@ -113,7 +114,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Friendly name of Application.
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -127,7 +128,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return the icon a 64 bit string as a byte array.
      * 
      */
-    public Output<String> getIconContent() {
+    public Output<String> iconContent() {
         return this.iconContent;
     }
     /**
@@ -141,7 +142,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Hash of the icon.
      * 
      */
-    public Output<String> getIconHash() {
+    public Output<String> iconHash() {
         return this.iconHash;
     }
     /**
@@ -155,7 +156,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Index of the icon.
      * 
      */
-    public Output</* @Nullable */ Integer> getIconIndex() {
+    public Output</* @Nullable */ Integer> iconIndex() {
         return this.iconIndex;
     }
     /**
@@ -169,7 +170,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Path to icon.
      * 
      */
-    public Output</* @Nullable */ String> getIconPath() {
+    public Output</* @Nullable */ String> iconPath() {
         return this.iconPath;
     }
     /**
@@ -183,7 +184,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Specifies the package application Id for MSIX applications
      * 
      */
-    public Output</* @Nullable */ String> getMsixPackageApplicationId() {
+    public Output</* @Nullable */ String> msixPackageApplicationId() {
         return this.msixPackageApplicationId;
     }
     /**
@@ -197,7 +198,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Specifies the package family name for MSIX applications
      * 
      */
-    public Output</* @Nullable */ String> getMsixPackageFamilyName() {
+    public Output</* @Nullable */ String> msixPackageFamilyName() {
         return this.msixPackageFamilyName;
     }
     /**
@@ -211,7 +212,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -225,7 +226,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return ObjectId of Application. (internal use)
      * 
      */
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
     /**
@@ -239,7 +240,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Specifies whether to show the RemoteApp program in the RD Web Access server.
      * 
      */
-    public Output</* @Nullable */ Boolean> getShowInPortal() {
+    public Output</* @Nullable */ Boolean> showInPortal() {
         return this.showInPortal;
     }
     /**
@@ -253,7 +254,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -279,7 +280,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:desktopvirtualization:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:desktopvirtualization:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Application(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

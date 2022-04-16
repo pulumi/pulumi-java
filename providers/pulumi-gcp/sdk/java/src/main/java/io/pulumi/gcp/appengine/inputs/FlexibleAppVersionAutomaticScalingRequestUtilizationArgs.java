@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
     @Import(name="targetConcurrentRequests")
       private final @Nullable Output<Double> targetConcurrentRequests;
 
-    public Output<Double> getTargetConcurrentRequests() {
-        return this.targetConcurrentRequests == null ? Output.empty() : this.targetConcurrentRequests;
+    public Output<Double> targetConcurrentRequests() {
+        return this.targetConcurrentRequests == null ? Codegen.empty() : this.targetConcurrentRequests;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
     @Import(name="targetRequestCountPerSecond")
       private final @Nullable Output<String> targetRequestCountPerSecond;
 
-    public Output<String> getTargetRequestCountPerSecond() {
-        return this.targetRequestCountPerSecond == null ? Output.empty() : this.targetRequestCountPerSecond;
+    public Output<String> targetRequestCountPerSecond() {
+        return this.targetRequestCountPerSecond == null ? Codegen.empty() : this.targetRequestCountPerSecond;
     }
 
     public FlexibleAppVersionAutomaticScalingRequestUtilizationArgs(
@@ -45,8 +46,8 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
     }
 
     private FlexibleAppVersionAutomaticScalingRequestUtilizationArgs() {
-        this.targetConcurrentRequests = Output.empty();
-        this.targetRequestCountPerSecond = Output.empty();
+        this.targetConcurrentRequests = Codegen.empty();
+        this.targetRequestCountPerSecond = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
             return this;
         }
         public Builder targetConcurrentRequests(@Nullable Double targetConcurrentRequests) {
-            this.targetConcurrentRequests = Output.ofNullable(targetConcurrentRequests);
+            this.targetConcurrentRequests = Codegen.ofNullable(targetConcurrentRequests);
             return this;
         }
         public Builder targetRequestCountPerSecond(@Nullable Output<String> targetRequestCountPerSecond) {
@@ -84,7 +85,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationArgs exte
             return this;
         }
         public Builder targetRequestCountPerSecond(@Nullable String targetRequestCountPerSecond) {
-            this.targetRequestCountPerSecond = Output.ofNullable(targetRequestCountPerSecond);
+            this.targetRequestCountPerSecond = Codegen.ofNullable(targetRequestCountPerSecond);
             return this;
         }        public FlexibleAppVersionAutomaticScalingRequestUtilizationArgs build() {
             return new FlexibleAppVersionAutomaticScalingRequestUtilizationArgs(targetConcurrentRequests, targetRequestCountPerSecond);

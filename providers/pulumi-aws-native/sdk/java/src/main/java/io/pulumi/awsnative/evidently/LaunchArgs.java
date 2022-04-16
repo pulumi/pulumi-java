@@ -9,6 +9,7 @@ import io.pulumi.awsnative.evidently.inputs.LaunchStepConfigArgs;
 import io.pulumi.awsnative.evidently.inputs.LaunchTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,49 +23,49 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="groups", required=true)
       private final Output<List<LaunchGroupObjectArgs>> groups;
 
-    public Output<List<LaunchGroupObjectArgs>> getGroups() {
+    public Output<List<LaunchGroupObjectArgs>> groups() {
         return this.groups;
     }
 
     @Import(name="metricMonitors")
       private final @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
 
-    public Output<List<LaunchMetricDefinitionObjectArgs>> getMetricMonitors() {
-        return this.metricMonitors == null ? Output.empty() : this.metricMonitors;
+    public Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors() {
+        return this.metricMonitors == null ? Codegen.empty() : this.metricMonitors;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
     @Import(name="randomizationSalt")
       private final @Nullable Output<String> randomizationSalt;
 
-    public Output<String> getRandomizationSalt() {
-        return this.randomizationSalt == null ? Output.empty() : this.randomizationSalt;
+    public Output<String> randomizationSalt() {
+        return this.randomizationSalt == null ? Codegen.empty() : this.randomizationSalt;
     }
 
     @Import(name="scheduledSplitsConfig", required=true)
       private final Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
 
-    public Output<List<LaunchStepConfigArgs>> getScheduledSplitsConfig() {
+    public Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig() {
         return this.scheduledSplitsConfig;
     }
 
@@ -75,8 +76,8 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LaunchTagArgs>> tags;
 
-    public Output<List<LaunchTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<LaunchTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LaunchArgs(
@@ -99,14 +100,14 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LaunchArgs() {
-        this.description = Output.empty();
-        this.groups = Output.empty();
-        this.metricMonitors = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.randomizationSalt = Output.empty();
-        this.scheduledSplitsConfig = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.groups = Codegen.empty();
+        this.metricMonitors = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.randomizationSalt = Codegen.empty();
+        this.scheduledSplitsConfig = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder groups(Output<List<LaunchGroupObjectArgs>> groups) {
@@ -167,7 +168,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricMonitors(@Nullable List<LaunchMetricDefinitionObjectArgs> metricMonitors) {
-            this.metricMonitors = Output.ofNullable(metricMonitors);
+            this.metricMonitors = Codegen.ofNullable(metricMonitors);
             return this;
         }
         public Builder metricMonitors(LaunchMetricDefinitionObjectArgs... metricMonitors) {
@@ -178,7 +179,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(Output<String> project) {
@@ -194,7 +195,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder randomizationSalt(@Nullable String randomizationSalt) {
-            this.randomizationSalt = Output.ofNullable(randomizationSalt);
+            this.randomizationSalt = Codegen.ofNullable(randomizationSalt);
             return this;
         }
         public Builder scheduledSplitsConfig(Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig) {
@@ -213,7 +214,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<LaunchTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LaunchTagArgs... tags) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.AppProfileArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.MultiClusterRoutingUseAnyResponse;
@@ -30,7 +31,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Long form description of the use case for this AppProfile.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -44,7 +45,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Use a multi-cluster routing policy.
      * 
      */
-    public Output<MultiClusterRoutingUseAnyResponse> getMultiClusterRoutingUseAny() {
+    public Output<MultiClusterRoutingUseAnyResponse> multiClusterRoutingUseAny() {
         return this.multiClusterRoutingUseAny;
     }
     /**
@@ -72,7 +73,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Use a single-cluster routing policy.
      * 
      */
-    public Output<SingleClusterRoutingResponse> getSingleClusterRouting() {
+    public Output<SingleClusterRoutingResponse> singleClusterRouting() {
         return this.singleClusterRouting;
     }
 
@@ -112,7 +113,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppProfile(String name, AppProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigtableadmin/v2:AppProfile", name, args == null ? AppProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigtableadmin/v2:AppProfile", name, args == null ? AppProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

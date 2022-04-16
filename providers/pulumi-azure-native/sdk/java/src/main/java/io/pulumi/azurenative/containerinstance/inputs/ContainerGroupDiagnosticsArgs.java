@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.LogAnalyticsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
     @Import(name="logAnalytics")
       private final @Nullable Output<LogAnalyticsArgs> logAnalytics;
 
-    public Output<LogAnalyticsArgs> getLogAnalytics() {
-        return this.logAnalytics == null ? Output.empty() : this.logAnalytics;
+    public Output<LogAnalyticsArgs> logAnalytics() {
+        return this.logAnalytics == null ? Codegen.empty() : this.logAnalytics;
     }
 
     public ContainerGroupDiagnosticsArgs(@Nullable Output<LogAnalyticsArgs> logAnalytics) {
@@ -34,7 +35,7 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
     }
 
     private ContainerGroupDiagnosticsArgs() {
-        this.logAnalytics = Output.empty();
+        this.logAnalytics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder logAnalytics(@Nullable LogAnalyticsArgs logAnalytics) {
-            this.logAnalytics = Output.ofNullable(logAnalytics);
+            this.logAnalytics = Codegen.ofNullable(logAnalytics);
             return this;
         }        public ContainerGroupDiagnosticsArgs build() {
             return new ContainerGroupDiagnosticsArgs(logAnalytics);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.SessionEntityTypeEntityOverrideMode;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1EntityTypeEntityArgs;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entities", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
 
-    public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> getEntities() {
+    public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities() {
         return this.entities;
     }
 
@@ -35,22 +36,22 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="entityOverrideMode", required=true)
       private final Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
-    public Output<SessionEntityTypeEntityOverrideMode> getEntityOverrideMode() {
+    public Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode() {
         return this.entityOverrideMode;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -60,28 +61,28 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="sessionId", required=true)
       private final Output<String> sessionId;
 
-    public Output<String> getSessionId() {
+    public Output<String> sessionId() {
         return this.sessionId;
     }
 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -105,14 +106,14 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SessionEntityTypeArgs() {
-        this.entities = Output.empty();
-        this.entityOverrideMode = Output.empty();
-        this.environmentId = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.sessionId = Output.empty();
-        this.userId = Output.empty();
+        this.entities = Codegen.empty();
+        this.entityOverrideMode = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.sessionId = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -197,7 +198,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder sessionId(Output<String> sessionId) {

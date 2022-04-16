@@ -6,6 +6,7 @@ package io.pulumi.azurenative.operationsmanagement;
 import io.pulumi.azurenative.operationsmanagement.inputs.ManagementConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="managementConfigurationName")
       private final @Nullable Output<String> managementConfigurationName;
 
-    public Output<String> getManagementConfigurationName() {
-        return this.managementConfigurationName == null ? Output.empty() : this.managementConfigurationName;
+    public Output<String> managementConfigurationName() {
+        return this.managementConfigurationName == null ? Codegen.empty() : this.managementConfigurationName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="properties")
       private final @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
 
-    public Output<ManagementConfigurationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ManagementConfigurationPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,10 +72,10 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private ManagementConfigurationArgs() {
-        this.location = Output.empty();
-        this.managementConfigurationName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.location = Codegen.empty();
+        this.managementConfigurationName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managementConfigurationName(@Nullable Output<String> managementConfigurationName) {
@@ -116,7 +117,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder managementConfigurationName(@Nullable String managementConfigurationName) {
-            this.managementConfigurationName = Output.ofNullable(managementConfigurationName);
+            this.managementConfigurationName = Codegen.ofNullable(managementConfigurationName);
             return this;
         }
         public Builder properties(@Nullable Output<ManagementConfigurationPropertiesArgs> properties) {
@@ -124,7 +125,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder properties(@Nullable ManagementConfigurationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

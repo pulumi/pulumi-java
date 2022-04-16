@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="notebookWorkspaceName")
       private final @Nullable Output<String> notebookWorkspaceName;
 
-    public Output<String> getNotebookWorkspaceName() {
-        return this.notebookWorkspaceName == null ? Output.empty() : this.notebookWorkspaceName;
+    public Output<String> notebookWorkspaceName() {
+        return this.notebookWorkspaceName == null ? Codegen.empty() : this.notebookWorkspaceName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,9 +58,9 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NotebookWorkspaceArgs() {
-        this.accountName = Output.empty();
-        this.notebookWorkspaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.notebookWorkspaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder notebookWorkspaceName(@Nullable String notebookWorkspaceName) {
-            this.notebookWorkspaceName = Output.ofNullable(notebookWorkspaceName);
+            this.notebookWorkspaceName = Codegen.ofNullable(notebookWorkspaceName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

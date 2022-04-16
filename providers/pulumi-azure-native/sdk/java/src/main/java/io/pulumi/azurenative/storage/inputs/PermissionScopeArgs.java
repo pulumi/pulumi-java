@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
 
@@ -31,7 +32,7 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -42,7 +43,7 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -56,9 +57,9 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PermissionScopeArgs() {
-        this.permissions = Output.empty();
-        this.resourceName = Output.empty();
-        this.service = Output.empty();
+        this.permissions = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

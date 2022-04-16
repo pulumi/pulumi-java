@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlCredentialGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     @Import(name="credential", required=true)
       private final Output<ConnectionCloudSqlCredentialGetArgs> credential;
 
-    public Output<ConnectionCloudSqlCredentialGetArgs> getCredential() {
+    public Output<ConnectionCloudSqlCredentialGetArgs> credential() {
         return this.credential;
     }
 
@@ -33,7 +34,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -44,7 +45,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -56,7 +57,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -72,10 +73,10 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectionCloudSqlGetArgs() {
-        this.credential = Output.empty();
-        this.database = Output.empty();
-        this.instanceId = Output.empty();
-        this.type = Output.empty();
+        this.credential = Codegen.empty();
+        this.database = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.iam_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> getAllowedAudiences() {
-        return this.allowedAudiences == null ? Output.empty() : this.allowedAudiences;
+    public Output<List<String>> allowedAudiences() {
+        return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuerUri", required=true)
       private final Output<String> issuerUri;
 
-    public Output<String> getIssuerUri() {
+    public Output<String> issuerUri() {
         return this.issuerUri;
     }
 
@@ -49,8 +50,8 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OidcArgs() {
-        this.allowedAudiences = Output.empty();
-        this.issuerUri = Output.empty();
+        this.allowedAudiences = Codegen.empty();
+        this.issuerUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Output.ofNullable(allowedAudiences);
+            this.allowedAudiences = Codegen.ofNullable(allowedAudiences);
             return this;
         }
         public Builder allowedAudiences(String... allowedAudiences) {

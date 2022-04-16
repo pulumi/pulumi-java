@@ -62,16 +62,16 @@ public final class InstanceFromTemplateNetworkInterface {
         this.subnetworkProject = subnetworkProject;
     }
 
-    public List<InstanceFromTemplateNetworkInterfaceAccessConfig> getAccessConfigs() {
+    public List<InstanceFromTemplateNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs == null ? List.of() : this.accessConfigs;
     }
-    public List<InstanceFromTemplateNetworkInterfaceAliasIpRange> getAliasIpRanges() {
+    public List<InstanceFromTemplateNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges == null ? List.of() : this.aliasIpRanges;
     }
-    public List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
+    public List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? List.of() : this.ipv6AccessConfigs;
     }
-    public Optional<String> getIpv6AccessType() {
+    public Optional<String> ipv6AccessType() {
         return Optional.ofNullable(this.ipv6AccessType);
     }
     /**
@@ -79,28 +79,28 @@ public final class InstanceFromTemplateNetworkInterface {
      * Changing this forces a new resource to be created.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getNetwork() {
+    public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
-    public Optional<String> getNetworkIp() {
+    public Optional<String> networkIp() {
         return Optional.ofNullable(this.networkIp);
     }
-    public Optional<String> getNicType() {
+    public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
-    public Optional<Integer> getQueueCount() {
+    public Optional<Integer> queueCount() {
         return Optional.ofNullable(this.queueCount);
     }
-    public Optional<String> getStackType() {
+    public Optional<String> stackType() {
         return Optional.ofNullable(this.stackType);
     }
-    public Optional<String> getSubnetwork() {
+    public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
-    public Optional<String> getSubnetworkProject() {
+    public Optional<String> subnetworkProject() {
         return Optional.ofNullable(this.subnetworkProject);
     }
 

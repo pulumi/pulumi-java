@@ -24,14 +24,14 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
         this.name = name;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The name of the Cloud Run Service.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

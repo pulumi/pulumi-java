@@ -20,42 +20,42 @@ public final class DataSourceWorkDocsConfiguration extends io.pulumi.resources.I
     @Import(name="crawlComments")
       private final @Nullable Boolean crawlComments;
 
-    public Optional<Boolean> getCrawlComments() {
+    public Optional<Boolean> crawlComments() {
         return this.crawlComments == null ? Optional.empty() : Optional.ofNullable(this.crawlComments);
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="useChangeLog")
       private final @Nullable Boolean useChangeLog;
 
-    public Optional<Boolean> getUseChangeLog() {
+    public Optional<Boolean> useChangeLog() {
         return this.useChangeLog == null ? Optional.empty() : Optional.ofNullable(this.useChangeLog);
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class Logging extends io.pulumi.resources.CustomResource {
      * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -43,7 +44,7 @@ public class Logging extends io.pulumi.resources.CustomResource {
      * @return The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
      */
-    public Output<LoggingDefaultLogLevel> getDefaultLogLevel() {
+    public Output<LoggingDefaultLogLevel> defaultLogLevel() {
         return this.defaultLogLevel;
     }
     /**
@@ -57,7 +58,7 @@ public class Logging extends io.pulumi.resources.CustomResource {
      * @return The ARN of the role that allows IoT to write to Cloudwatch logs.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -83,7 +84,7 @@ public class Logging extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Logging(String name, LoggingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:Logging", name, args == null ? LoggingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:Logging", name, args == null ? LoggingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Logging(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

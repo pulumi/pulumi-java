@@ -6,6 +6,7 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.devicefarm.inputs.NetworkProfileTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,85 +21,85 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="downlinkBandwidthBits")
       private final @Nullable Output<Integer> downlinkBandwidthBits;
 
-    public Output<Integer> getDownlinkBandwidthBits() {
-        return this.downlinkBandwidthBits == null ? Output.empty() : this.downlinkBandwidthBits;
+    public Output<Integer> downlinkBandwidthBits() {
+        return this.downlinkBandwidthBits == null ? Codegen.empty() : this.downlinkBandwidthBits;
     }
 
     @Import(name="downlinkDelayMs")
       private final @Nullable Output<Integer> downlinkDelayMs;
 
-    public Output<Integer> getDownlinkDelayMs() {
-        return this.downlinkDelayMs == null ? Output.empty() : this.downlinkDelayMs;
+    public Output<Integer> downlinkDelayMs() {
+        return this.downlinkDelayMs == null ? Codegen.empty() : this.downlinkDelayMs;
     }
 
     @Import(name="downlinkJitterMs")
       private final @Nullable Output<Integer> downlinkJitterMs;
 
-    public Output<Integer> getDownlinkJitterMs() {
-        return this.downlinkJitterMs == null ? Output.empty() : this.downlinkJitterMs;
+    public Output<Integer> downlinkJitterMs() {
+        return this.downlinkJitterMs == null ? Codegen.empty() : this.downlinkJitterMs;
     }
 
     @Import(name="downlinkLossPercent")
       private final @Nullable Output<Integer> downlinkLossPercent;
 
-    public Output<Integer> getDownlinkLossPercent() {
-        return this.downlinkLossPercent == null ? Output.empty() : this.downlinkLossPercent;
+    public Output<Integer> downlinkLossPercent() {
+        return this.downlinkLossPercent == null ? Codegen.empty() : this.downlinkLossPercent;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="projectArn", required=true)
       private final Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<NetworkProfileTagArgs>> tags;
 
-    public Output<List<NetworkProfileTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<NetworkProfileTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="uplinkBandwidthBits")
       private final @Nullable Output<Integer> uplinkBandwidthBits;
 
-    public Output<Integer> getUplinkBandwidthBits() {
-        return this.uplinkBandwidthBits == null ? Output.empty() : this.uplinkBandwidthBits;
+    public Output<Integer> uplinkBandwidthBits() {
+        return this.uplinkBandwidthBits == null ? Codegen.empty() : this.uplinkBandwidthBits;
     }
 
     @Import(name="uplinkDelayMs")
       private final @Nullable Output<Integer> uplinkDelayMs;
 
-    public Output<Integer> getUplinkDelayMs() {
-        return this.uplinkDelayMs == null ? Output.empty() : this.uplinkDelayMs;
+    public Output<Integer> uplinkDelayMs() {
+        return this.uplinkDelayMs == null ? Codegen.empty() : this.uplinkDelayMs;
     }
 
     @Import(name="uplinkJitterMs")
       private final @Nullable Output<Integer> uplinkJitterMs;
 
-    public Output<Integer> getUplinkJitterMs() {
-        return this.uplinkJitterMs == null ? Output.empty() : this.uplinkJitterMs;
+    public Output<Integer> uplinkJitterMs() {
+        return this.uplinkJitterMs == null ? Codegen.empty() : this.uplinkJitterMs;
     }
 
     @Import(name="uplinkLossPercent")
       private final @Nullable Output<Integer> uplinkLossPercent;
 
-    public Output<Integer> getUplinkLossPercent() {
-        return this.uplinkLossPercent == null ? Output.empty() : this.uplinkLossPercent;
+    public Output<Integer> uplinkLossPercent() {
+        return this.uplinkLossPercent == null ? Codegen.empty() : this.uplinkLossPercent;
     }
 
     public NetworkProfileArgs(
@@ -129,18 +130,18 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkProfileArgs() {
-        this.description = Output.empty();
-        this.downlinkBandwidthBits = Output.empty();
-        this.downlinkDelayMs = Output.empty();
-        this.downlinkJitterMs = Output.empty();
-        this.downlinkLossPercent = Output.empty();
-        this.name = Output.empty();
-        this.projectArn = Output.empty();
-        this.tags = Output.empty();
-        this.uplinkBandwidthBits = Output.empty();
-        this.uplinkDelayMs = Output.empty();
-        this.uplinkJitterMs = Output.empty();
-        this.uplinkLossPercent = Output.empty();
+        this.description = Codegen.empty();
+        this.downlinkBandwidthBits = Codegen.empty();
+        this.downlinkDelayMs = Codegen.empty();
+        this.downlinkJitterMs = Codegen.empty();
+        this.downlinkLossPercent = Codegen.empty();
+        this.name = Codegen.empty();
+        this.projectArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uplinkBandwidthBits = Codegen.empty();
+        this.uplinkDelayMs = Codegen.empty();
+        this.uplinkJitterMs = Codegen.empty();
+        this.uplinkLossPercent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder downlinkBandwidthBits(@Nullable Output<Integer> downlinkBandwidthBits) {
@@ -198,7 +199,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder downlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
-            this.downlinkBandwidthBits = Output.ofNullable(downlinkBandwidthBits);
+            this.downlinkBandwidthBits = Codegen.ofNullable(downlinkBandwidthBits);
             return this;
         }
         public Builder downlinkDelayMs(@Nullable Output<Integer> downlinkDelayMs) {
@@ -206,7 +207,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder downlinkDelayMs(@Nullable Integer downlinkDelayMs) {
-            this.downlinkDelayMs = Output.ofNullable(downlinkDelayMs);
+            this.downlinkDelayMs = Codegen.ofNullable(downlinkDelayMs);
             return this;
         }
         public Builder downlinkJitterMs(@Nullable Output<Integer> downlinkJitterMs) {
@@ -214,7 +215,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder downlinkJitterMs(@Nullable Integer downlinkJitterMs) {
-            this.downlinkJitterMs = Output.ofNullable(downlinkJitterMs);
+            this.downlinkJitterMs = Codegen.ofNullable(downlinkJitterMs);
             return this;
         }
         public Builder downlinkLossPercent(@Nullable Output<Integer> downlinkLossPercent) {
@@ -222,7 +223,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder downlinkLossPercent(@Nullable Integer downlinkLossPercent) {
-            this.downlinkLossPercent = Output.ofNullable(downlinkLossPercent);
+            this.downlinkLossPercent = Codegen.ofNullable(downlinkLossPercent);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -230,7 +231,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder projectArn(Output<String> projectArn) {
@@ -246,7 +247,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<NetworkProfileTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(NetworkProfileTagArgs... tags) {
@@ -257,7 +258,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
-            this.uplinkBandwidthBits = Output.ofNullable(uplinkBandwidthBits);
+            this.uplinkBandwidthBits = Codegen.ofNullable(uplinkBandwidthBits);
             return this;
         }
         public Builder uplinkDelayMs(@Nullable Output<Integer> uplinkDelayMs) {
@@ -265,7 +266,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uplinkDelayMs(@Nullable Integer uplinkDelayMs) {
-            this.uplinkDelayMs = Output.ofNullable(uplinkDelayMs);
+            this.uplinkDelayMs = Codegen.ofNullable(uplinkDelayMs);
             return this;
         }
         public Builder uplinkJitterMs(@Nullable Output<Integer> uplinkJitterMs) {
@@ -273,7 +274,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uplinkJitterMs(@Nullable Integer uplinkJitterMs) {
-            this.uplinkJitterMs = Output.ofNullable(uplinkJitterMs);
+            this.uplinkJitterMs = Codegen.ofNullable(uplinkJitterMs);
             return this;
         }
         public Builder uplinkLossPercent(@Nullable Output<Integer> uplinkLossPercent) {
@@ -281,7 +282,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uplinkLossPercent(@Nullable Integer uplinkLossPercent) {
-            this.uplinkLossPercent = Output.ofNullable(uplinkLossPercent);
+            this.uplinkLossPercent = Codegen.ofNullable(uplinkLossPercent);
             return this;
         }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(description, downlinkBandwidthBits, downlinkDelayMs, downlinkJitterMs, downlinkLossPercent, name, projectArn, tags, uplinkBandwidthBits, uplinkDelayMs, uplinkJitterMs, uplinkLossPercent);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataPrivacyPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="childDirected", required=true)
       private final Output<Boolean> childDirected;
 
-    public Output<Boolean> getChildDirected() {
+    public Output<Boolean> childDirected() {
         return this.childDirected;
     }
 
@@ -29,7 +30,7 @@ public final class DataPrivacyPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private DataPrivacyPropertiesArgs() {
-        this.childDirected = Output.empty();
+        this.childDirected = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.notebooks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.RuntimeArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeState;
@@ -64,7 +65,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RuntimeAccessConfig> getAccessConfig() {
+    public Output</* @Nullable */ RuntimeAccessConfig> accessConfig() {
         return this.accessConfig;
     }
     /**
@@ -80,7 +81,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
      * 
      */
-    public Output<String> getHealthState() {
+    public Output<String> healthState() {
         return this.healthState;
     }
     /**
@@ -94,7 +95,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return A reference to the zone where the machine resides.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -108,7 +109,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return Contains Runtime daemon metrics such as Service status and JupyterLab status
      * 
      */
-    public Output<List<RuntimeMetric>> getMetrics() {
+    public Output<List<RuntimeMetric>> metrics() {
         return this.metrics;
     }
     /**
@@ -122,7 +123,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return The name specified for the Notebook instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -138,7 +139,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -154,7 +155,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<RuntimeSoftwareConfig> getSoftwareConfig() {
+    public Output<RuntimeSoftwareConfig> softwareConfig() {
         return this.softwareConfig;
     }
     /**
@@ -168,7 +169,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return The state of this runtime.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -184,7 +185,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RuntimeVirtualMachine> getVirtualMachine() {
+    public Output</* @Nullable */ RuntimeVirtualMachine> virtualMachine() {
         return this.virtualMachine;
     }
 
@@ -210,7 +211,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Runtime(String name, RuntimeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/runtime:Runtime", name, args == null ? RuntimeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:notebooks/runtime:Runtime", name, args == null ? RuntimeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Runtime(String name, Output<String> id, @Nullable RuntimeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

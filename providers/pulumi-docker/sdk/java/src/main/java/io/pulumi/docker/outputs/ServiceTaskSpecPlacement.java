@@ -31,16 +31,16 @@ public final class ServiceTaskSpecPlacement {
         this.prefs = prefs;
     }
 
-    public List<String> getConstraints() {
+    public List<String> constraints() {
         return this.constraints == null ? List.of() : this.constraints;
     }
-    public Optional<Integer> getMaxReplicas() {
+    public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
-    public List<ServiceTaskSpecPlacementPlatform> getPlatforms() {
+    public List<ServiceTaskSpecPlacementPlatform> platforms() {
         return this.platforms == null ? List.of() : this.platforms;
     }
-    public List<String> getPrefs() {
+    public List<String> prefs() {
         return this.prefs == null ? List.of() : this.prefs;
     }
 

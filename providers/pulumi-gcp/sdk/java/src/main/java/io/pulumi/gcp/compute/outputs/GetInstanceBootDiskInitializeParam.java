@@ -49,28 +49,28 @@ public final class GetInstanceBootDiskInitializeParam {
      * The image from which this disk was initialised.
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
     /**
      * A set of key/value label pairs assigned to the instance.
      * 
     */
-    public Map<String,Object> getLabels() {
+    public Map<String,Object> labels() {
         return this.labels;
     }
     /**
      * The size of the image in gigabytes.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

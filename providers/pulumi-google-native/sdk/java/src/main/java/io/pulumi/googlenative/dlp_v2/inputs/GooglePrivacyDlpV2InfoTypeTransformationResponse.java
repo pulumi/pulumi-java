@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends io.p
     @Import(name="infoTypes", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
-    public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
+    public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends io.p
     @Import(name="primitiveTransformation", required=true)
       private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
-    public GooglePrivacyDlpV2PrimitiveTransformationResponse getPrimitiveTransformation() {
+    public GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation() {
         return this.primitiveTransformation;
     }
 

@@ -26,7 +26,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="backupRetentionSettings", required=true)
       private final BackupRetentionSettingsResponse backupRetentionSettings;
 
-    public BackupRetentionSettingsResponse getBackupRetentionSettings() {
+    public BackupRetentionSettingsResponse backupRetentionSettings() {
         return this.backupRetentionSettings;
     }
 
@@ -37,7 +37,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="binaryLogEnabled", required=true)
       private final Boolean binaryLogEnabled;
 
-    public Boolean getBinaryLogEnabled() {
+    public Boolean binaryLogEnabled() {
         return this.binaryLogEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -59,7 +59,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -70,7 +70,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -81,7 +81,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="pointInTimeRecoveryEnabled", required=true)
       private final Boolean pointInTimeRecoveryEnabled;
 
-    public Boolean getPointInTimeRecoveryEnabled() {
+    public Boolean pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
 
@@ -92,7 +92,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="replicationLogArchivingEnabled", required=true)
       private final Boolean replicationLogArchivingEnabled;
 
-    public Boolean getReplicationLogArchivingEnabled() {
+    public Boolean replicationLogArchivingEnabled() {
         return this.replicationLogArchivingEnabled;
     }
 
@@ -103,7 +103,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -114,7 +114,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="transactionLogRetentionDays", required=true)
       private final Integer transactionLogRetentionDays;
 
-    public Integer getTransactionLogRetentionDays() {
+    public Integer transactionLogRetentionDays() {
         return this.transactionLogRetentionDays;
     }
 

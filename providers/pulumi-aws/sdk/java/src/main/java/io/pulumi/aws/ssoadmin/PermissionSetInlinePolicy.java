@@ -9,6 +9,7 @@ import io.pulumi.aws.ssoadmin.inputs.PermissionSetInlinePolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * @return The IAM inline policy to attach to a Permission Set.
      * 
      */
-    public Output<String> getInlinePolicy() {
+    public Output<String> inlinePolicy() {
         return this.inlinePolicy;
     }
     /**
@@ -54,7 +55,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -68,7 +69,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -94,7 +95,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PermissionSetInlinePolicy(String name, PermissionSetInlinePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssoadmin/permissionSetInlinePolicy:PermissionSetInlinePolicy", name, args == null ? PermissionSetInlinePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ssoadmin/permissionSetInlinePolicy:PermissionSetInlinePolicy", name, args == null ? PermissionSetInlinePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PermissionSetInlinePolicy(String name, Output<String> id, @Nullable PermissionSetInlinePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

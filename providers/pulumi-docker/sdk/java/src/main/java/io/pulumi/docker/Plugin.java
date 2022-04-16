@@ -6,6 +6,7 @@ package io.pulumi.docker;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.PluginArgs;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.PluginState;
@@ -73,7 +74,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return Docker Plugin alias
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -87,7 +88,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return HTTP client timeout to enable the plugin
      * 
      */
-    public Output</* @Nullable */ Integer> getEnableTimeout() {
+    public Output</* @Nullable */ Integer> enableTimeout() {
         return this.enableTimeout;
     }
     /**
@@ -101,7 +102,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return If `true` the plugin is enabled. Defaults to `true`
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -115,7 +116,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`
      * 
      */
-    public Output<List<String>> getEnvs() {
+    public Output<List<String>> envs() {
         return this.envs;
     }
     /**
@@ -129,7 +130,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return If true, then the plugin is destroyed forcibly
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -143,7 +144,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return If true, then the plugin is disabled forcibly
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDisable() {
+    public Output</* @Nullable */ Boolean> forceDisable() {
         return this.forceDisable;
     }
     /**
@@ -157,7 +158,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return If true, grant all permissions necessary to run the plugin
      * 
      */
-    public Output</* @Nullable */ Boolean> getGrantAllPermissions() {
+    public Output</* @Nullable */ Boolean> grantAllPermissions() {
         return this.grantAllPermissions;
     }
     /**
@@ -171,7 +172,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return Grant specific permissions only
      * 
      */
-    public Output</* @Nullable */ List<PluginGrantPermission>> getGrantPermissions() {
+    public Output</* @Nullable */ List<PluginGrantPermission>> grantPermissions() {
         return this.grantPermissions;
     }
     /**
@@ -185,7 +186,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return Docker Plugin name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -199,7 +200,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @return Docker Plugin Reference
      * 
      */
-    public Output<String> getPluginReference() {
+    public Output<String> pluginReference() {
         return this.pluginReference;
     }
 
@@ -225,7 +226,7 @@ public class Plugin extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Plugin(String name, @Nullable PluginArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/plugin:Plugin", name, args == null ? PluginArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("docker:index/plugin:Plugin", name, args == null ? PluginArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Plugin(String name, Output<String> id, @Nullable PluginState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

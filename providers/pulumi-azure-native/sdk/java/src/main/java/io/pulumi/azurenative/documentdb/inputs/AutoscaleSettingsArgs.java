@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxThroughput")
       private final @Nullable Output<Integer> maxThroughput;
 
-    public Output<Integer> getMaxThroughput() {
-        return this.maxThroughput == null ? Output.empty() : this.maxThroughput;
+    public Output<Integer> maxThroughput() {
+        return this.maxThroughput == null ? Codegen.empty() : this.maxThroughput;
     }
 
     public AutoscaleSettingsArgs(@Nullable Output<Integer> maxThroughput) {
@@ -30,7 +31,7 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutoscaleSettingsArgs() {
-        this.maxThroughput = Output.empty();
+        this.maxThroughput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxThroughput(@Nullable Integer maxThroughput) {
-            this.maxThroughput = Output.ofNullable(maxThroughput);
+            this.maxThroughput = Codegen.ofNullable(maxThroughput);
             return this;
         }        public AutoscaleSettingsArgs build() {
             return new AutoscaleSettingsArgs(maxThroughput);

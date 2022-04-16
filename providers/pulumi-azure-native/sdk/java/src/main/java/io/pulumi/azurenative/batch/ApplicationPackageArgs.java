@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +33,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -43,7 +44,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,8 +55,8 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
-        return this.versionName == null ? Output.empty() : this.versionName;
+    public Output<String> versionName() {
+        return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 
     public ApplicationPackageArgs(
@@ -70,10 +71,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApplicationPackageArgs() {
-        this.accountName = Output.empty();
-        this.applicationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.versionName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.applicationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Output.ofNullable(versionName);
+            this.versionName = Codegen.ofNullable(versionName);
             return this;
         }        public ApplicationPackageArgs build() {
             return new ApplicationPackageArgs(accountName, applicationName, resourceGroupName, versionName);

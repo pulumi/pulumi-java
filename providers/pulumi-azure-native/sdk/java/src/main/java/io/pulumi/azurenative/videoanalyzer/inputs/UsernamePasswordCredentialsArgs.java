@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -36,7 +37,7 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -47,7 +48,7 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -61,9 +62,9 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
     }
 
     private UsernamePasswordCredentialsArgs() {
-        this.password = Output.empty();
-        this.type = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.type = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationExtractArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationLoadArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationQueryArgs;
@@ -27,8 +28,8 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="copy")
       private final @Nullable Output<JobConfigurationTableCopyArgs> copy;
 
-    public Output<JobConfigurationTableCopyArgs> getCopy() {
-        return this.copy == null ? Output.empty() : this.copy;
+    public Output<JobConfigurationTableCopyArgs> copy() {
+        return this.copy == null ? Codegen.empty() : this.copy;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dryRun")
       private final @Nullable Output<Boolean> dryRun;
 
-    public Output<Boolean> getDryRun() {
-        return this.dryRun == null ? Output.empty() : this.dryRun;
+    public Output<Boolean> dryRun() {
+        return this.dryRun == null ? Codegen.empty() : this.dryRun;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="extract")
       private final @Nullable Output<JobConfigurationExtractArgs> extract;
 
-    public Output<JobConfigurationExtractArgs> getExtract() {
-        return this.extract == null ? Output.empty() : this.extract;
+    public Output<JobConfigurationExtractArgs> extract() {
+        return this.extract == null ? Codegen.empty() : this.extract;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
-    public Output<String> getJobTimeoutMs() {
-        return this.jobTimeoutMs == null ? Output.empty() : this.jobTimeoutMs;
+    public Output<String> jobTimeoutMs() {
+        return this.jobTimeoutMs == null ? Codegen.empty() : this.jobTimeoutMs;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="load")
       private final @Nullable Output<JobConfigurationLoadArgs> load;
 
-    public Output<JobConfigurationLoadArgs> getLoad() {
-        return this.load == null ? Output.empty() : this.load;
+    public Output<JobConfigurationLoadArgs> load() {
+        return this.load == null ? Codegen.empty() : this.load;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="query")
       private final @Nullable Output<JobConfigurationQueryArgs> query;
 
-    public Output<JobConfigurationQueryArgs> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<JobConfigurationQueryArgs> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     public JobConfigurationArgs(
@@ -115,13 +116,13 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private JobConfigurationArgs() {
-        this.copy = Output.empty();
-        this.dryRun = Output.empty();
-        this.extract = Output.empty();
-        this.jobTimeoutMs = Output.empty();
-        this.labels = Output.empty();
-        this.load = Output.empty();
-        this.query = Output.empty();
+        this.copy = Codegen.empty();
+        this.dryRun = Codegen.empty();
+        this.extract = Codegen.empty();
+        this.jobTimeoutMs = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.load = Codegen.empty();
+        this.query = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder copy(@Nullable JobConfigurationTableCopyArgs copy) {
-            this.copy = Output.ofNullable(copy);
+            this.copy = Codegen.ofNullable(copy);
             return this;
         }
         public Builder dryRun(@Nullable Output<Boolean> dryRun) {
@@ -169,7 +170,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dryRun(@Nullable Boolean dryRun) {
-            this.dryRun = Output.ofNullable(dryRun);
+            this.dryRun = Codegen.ofNullable(dryRun);
             return this;
         }
         public Builder extract(@Nullable Output<JobConfigurationExtractArgs> extract) {
@@ -177,7 +178,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder extract(@Nullable JobConfigurationExtractArgs extract) {
-            this.extract = Output.ofNullable(extract);
+            this.extract = Codegen.ofNullable(extract);
             return this;
         }
         public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
@@ -185,7 +186,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
-            this.jobTimeoutMs = Output.ofNullable(jobTimeoutMs);
+            this.jobTimeoutMs = Codegen.ofNullable(jobTimeoutMs);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -193,7 +194,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder load(@Nullable Output<JobConfigurationLoadArgs> load) {
@@ -201,7 +202,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder load(@Nullable JobConfigurationLoadArgs load) {
-            this.load = Output.ofNullable(load);
+            this.load = Codegen.ofNullable(load);
             return this;
         }
         public Builder query(@Nullable Output<JobConfigurationQueryArgs> query) {
@@ -209,7 +210,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder query(@Nullable JobConfigurationQueryArgs query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }        public JobConfigurationArgs build() {
             return new JobConfigurationArgs(copy, dryRun, extract, jobTimeoutMs, labels, load, query);

@@ -9,6 +9,7 @@ import io.pulumi.aws.servicecatalog.inputs.PrincipalPortfolioAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> getAcceptLanguage() {
+    public Output</* @Nullable */ String> acceptLanguage() {
         return this.acceptLanguage;
     }
     /**
@@ -53,7 +54,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Portfolio identifier.
      * 
      */
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId;
     }
     /**
@@ -67,7 +68,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Principal ARN.
      * 
      */
-    public Output<String> getPrincipalArn() {
+    public Output<String> principalArn() {
         return this.principalArn;
     }
     /**
@@ -81,7 +82,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Principal type. Setting this argument empty (e.g., `principal_type = ""`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
-    public Output</* @Nullable */ String> getPrincipalType() {
+    public Output</* @Nullable */ String> principalType() {
         return this.principalType;
     }
 
@@ -107,7 +108,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public PrincipalPortfolioAssociation(String name, PrincipalPortfolioAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation", name, args == null ? PrincipalPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation", name, args == null ? PrincipalPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrincipalPortfolioAssociation(String name, Output<String> id, @Nullable PrincipalPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

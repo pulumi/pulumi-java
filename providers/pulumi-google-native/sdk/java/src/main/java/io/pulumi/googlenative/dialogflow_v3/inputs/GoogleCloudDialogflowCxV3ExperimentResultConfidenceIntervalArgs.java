@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="confidenceLevel")
       private final @Nullable Output<Double> confidenceLevel;
 
-    public Output<Double> getConfidenceLevel() {
-        return this.confidenceLevel == null ? Output.empty() : this.confidenceLevel;
+    public Output<Double> confidenceLevel() {
+        return this.confidenceLevel == null ? Codegen.empty() : this.confidenceLevel;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="lowerBound")
       private final @Nullable Output<Double> lowerBound;
 
-    public Output<Double> getLowerBound() {
-        return this.lowerBound == null ? Output.empty() : this.lowerBound;
+    public Output<Double> lowerBound() {
+        return this.lowerBound == null ? Codegen.empty() : this.lowerBound;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="ratio")
       private final @Nullable Output<Double> ratio;
 
-    public Output<Double> getRatio() {
-        return this.ratio == null ? Output.empty() : this.ratio;
+    public Output<Double> ratio() {
+        return this.ratio == null ? Codegen.empty() : this.ratio;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     @Import(name="upperBound")
       private final @Nullable Output<Double> upperBound;
 
-    public Output<Double> getUpperBound() {
-        return this.upperBound == null ? Output.empty() : this.upperBound;
+    public Output<Double> upperBound() {
+        return this.upperBound == null ? Codegen.empty() : this.upperBound;
     }
 
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs(
@@ -74,10 +75,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     }
 
     private GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs() {
-        this.confidenceLevel = Output.empty();
-        this.lowerBound = Output.empty();
-        this.ratio = Output.empty();
-        this.upperBound = Output.empty();
+        this.confidenceLevel = Codegen.empty();
+        this.lowerBound = Codegen.empty();
+        this.ratio = Codegen.empty();
+        this.upperBound = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
             return this;
         }
         public Builder confidenceLevel(@Nullable Double confidenceLevel) {
-            this.confidenceLevel = Output.ofNullable(confidenceLevel);
+            this.confidenceLevel = Codegen.ofNullable(confidenceLevel);
             return this;
         }
         public Builder lowerBound(@Nullable Output<Double> lowerBound) {
@@ -119,7 +120,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
             return this;
         }
         public Builder lowerBound(@Nullable Double lowerBound) {
-            this.lowerBound = Output.ofNullable(lowerBound);
+            this.lowerBound = Codegen.ofNullable(lowerBound);
             return this;
         }
         public Builder ratio(@Nullable Output<Double> ratio) {
@@ -127,7 +128,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
             return this;
         }
         public Builder ratio(@Nullable Double ratio) {
-            this.ratio = Output.ofNullable(ratio);
+            this.ratio = Codegen.ofNullable(ratio);
             return this;
         }
         public Builder upperBound(@Nullable Output<Double> upperBound) {
@@ -135,7 +136,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
             return this;
         }
         public Builder upperBound(@Nullable Double upperBound) {
-            this.upperBound = Output.ofNullable(upperBound);
+            this.upperBound = Codegen.ofNullable(upperBound);
             return this;
         }        public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs(confidenceLevel, lowerBound, ratio, upperBound);

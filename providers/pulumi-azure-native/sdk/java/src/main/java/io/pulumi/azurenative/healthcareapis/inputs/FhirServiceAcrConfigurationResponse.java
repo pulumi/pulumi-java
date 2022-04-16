@@ -26,7 +26,7 @@ public final class FhirServiceAcrConfigurationResponse extends io.pulumi.resourc
     @Import(name="loginServers")
       private final @Nullable List<String> loginServers;
 
-    public List<String> getLoginServers() {
+    public List<String> loginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
     }
 

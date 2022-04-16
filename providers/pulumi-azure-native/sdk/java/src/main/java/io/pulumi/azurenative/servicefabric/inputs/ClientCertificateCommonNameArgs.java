@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
     @Import(name="certificateCommonName", required=true)
       private final Output<String> certificateCommonName;
 
-    public Output<String> getCertificateCommonName() {
+    public Output<String> certificateCommonName() {
         return this.certificateCommonName;
     }
 
@@ -36,7 +37,7 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
     @Import(name="certificateIssuerThumbprint", required=true)
       private final Output<String> certificateIssuerThumbprint;
 
-    public Output<String> getCertificateIssuerThumbprint() {
+    public Output<String> certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
 
@@ -47,7 +48,7 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
     @Import(name="isAdmin", required=true)
       private final Output<Boolean> isAdmin;
 
-    public Output<Boolean> getIsAdmin() {
+    public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
 
@@ -61,9 +62,9 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
     }
 
     private ClientCertificateCommonNameArgs() {
-        this.certificateCommonName = Output.empty();
-        this.certificateIssuerThumbprint = Output.empty();
-        this.isAdmin = Output.empty();
+        this.certificateCommonName = Codegen.empty();
+        this.certificateIssuerThumbprint = Codegen.empty();
+        this.isAdmin = Codegen.empty();
     }
 
     public static Builder builder() {

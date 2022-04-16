@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.IAMPolicyArgs;
 import io.pulumi.gcp.projects.inputs.IAMPolicyState;
@@ -99,7 +100,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the project's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -117,7 +118,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * merged with any existing policy applied to the project.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -133,7 +134,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * inferred from the provider.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -159,7 +160,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMPolicy(String name, IAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/iAMPolicy:IAMPolicy", name, args == null ? IAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/iAMPolicy:IAMPolicy", name, args == null ? IAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMPolicy(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

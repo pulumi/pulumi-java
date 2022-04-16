@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.AppRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="graphApiVersion")
       private final @Nullable Output<String> graphApiVersion;
 
-    public Output<String> getGraphApiVersion() {
-        return this.graphApiVersion == null ? Output.empty() : this.graphApiVersion;
+    public Output<String> graphApiVersion() {
+        return this.graphApiVersion == null ? Codegen.empty() : this.graphApiVersion;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
 
-    public Output<LoginScopesArgs> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+    public Output<LoginScopesArgs> login() {
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registration")
       private final @Nullable Output<AppRegistrationArgs> registration;
 
-    public Output<AppRegistrationArgs> getRegistration() {
-        return this.registration == null ? Output.empty() : this.registration;
+    public Output<AppRegistrationArgs> registration() {
+        return this.registration == null ? Codegen.empty() : this.registration;
     }
 
     public FacebookArgs(
@@ -77,10 +78,10 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FacebookArgs() {
-        this.enabled = Output.empty();
-        this.graphApiVersion = Output.empty();
-        this.login = Output.empty();
-        this.registration = Output.empty();
+        this.enabled = Codegen.empty();
+        this.graphApiVersion = Codegen.empty();
+        this.login = Codegen.empty();
+        this.registration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder graphApiVersion(@Nullable Output<String> graphApiVersion) {
@@ -122,7 +123,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder graphApiVersion(@Nullable String graphApiVersion) {
-            this.graphApiVersion = Output.ofNullable(graphApiVersion);
+            this.graphApiVersion = Codegen.ofNullable(graphApiVersion);
             return this;
         }
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
@@ -130,7 +131,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder login(@Nullable LoginScopesArgs login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder registration(@Nullable Output<AppRegistrationArgs> registration) {
@@ -138,7 +139,7 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registration(@Nullable AppRegistrationArgs registration) {
-            this.registration = Output.ofNullable(registration);
+            this.registration = Codegen.ofNullable(registration);
             return this;
         }        public FacebookArgs build() {
             return new FacebookArgs(enabled, graphApiVersion, login, registration);

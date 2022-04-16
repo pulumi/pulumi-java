@@ -21,10 +21,10 @@ public final class CisBenchmarkResponse {
         this.severity = severity;
     }
 
-    public Integer getProfileLevel() {
+    public Integer profileLevel() {
         return this.profileLevel;
     }
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 

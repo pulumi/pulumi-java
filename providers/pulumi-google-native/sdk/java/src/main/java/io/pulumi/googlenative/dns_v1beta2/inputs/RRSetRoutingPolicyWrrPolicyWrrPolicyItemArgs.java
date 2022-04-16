@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,15 +24,15 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> getRrdatas() {
-        return this.rrdatas == null ? Output.empty() : this.rrdatas;
+    public Output<List<String>> rrdatas() {
+        return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
 
-    public Output<List<String>> getSignatureRrdatas() {
-        return this.signatureRrdatas == null ? Output.empty() : this.signatureRrdatas;
+    public Output<List<String>> signatureRrdatas() {
+        return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     @Import(name="weight")
       private final @Nullable Output<Double> weight;
 
-    public Output<Double> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+    public Output<Double> weight() {
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs(
@@ -68,10 +69,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     }
 
     private RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs() {
-        this.kind = Output.empty();
-        this.rrdatas = Output.empty();
-        this.signatureRrdatas = Output.empty();
-        this.weight = Output.empty();
+        this.kind = Codegen.empty();
+        this.rrdatas = Codegen.empty();
+        this.signatureRrdatas = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
@@ -113,7 +114,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Output.ofNullable(rrdatas);
+            this.rrdatas = Codegen.ofNullable(rrdatas);
             return this;
         }
         public Builder rrdatas(String... rrdatas) {
@@ -124,7 +125,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
-            this.signatureRrdatas = Output.ofNullable(signatureRrdatas);
+            this.signatureRrdatas = Codegen.ofNullable(signatureRrdatas);
             return this;
         }
         public Builder signatureRrdatas(String... signatureRrdatas) {
@@ -135,7 +136,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder weight(@Nullable Double weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs build() {
             return new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs(kind, rrdatas, signatureRrdatas, weight);

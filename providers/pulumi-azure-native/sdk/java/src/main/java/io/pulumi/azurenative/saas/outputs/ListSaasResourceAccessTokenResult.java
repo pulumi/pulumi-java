@@ -34,14 +34,14 @@ public final class ListSaasResourceAccessTokenResult {
      * The Publisher Offer Base Uri
      * 
     */
-    public Optional<String> getPublisherOfferBaseUri() {
+    public Optional<String> publisherOfferBaseUri() {
         return Optional.ofNullable(this.publisherOfferBaseUri);
     }
     /**
      * The generated token
      * 
     */
-    public Optional<String> getToken() {
+    public Optional<String> token() {
         return Optional.ofNullable(this.token);
     }
 

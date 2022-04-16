@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressLines")
       private final @Nullable Output<List<String>> addressLines;
 
-    public Output<List<String>> getAddressLines() {
-        return this.addressLines == null ? Output.empty() : this.addressLines;
+    public Output<List<String>> addressLines() {
+        return this.addressLines == null ? Codegen.empty() : this.addressLines;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="administrativeArea")
       private final @Nullable Output<String> administrativeArea;
 
-    public Output<String> getAdministrativeArea() {
-        return this.administrativeArea == null ? Output.empty() : this.administrativeArea;
+    public Output<String> administrativeArea() {
+        return this.administrativeArea == null ? Codegen.empty() : this.administrativeArea;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+    public Output<String> languageCode() {
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locality")
       private final @Nullable Output<String> locality;
 
-    public Output<String> getLocality() {
-        return this.locality == null ? Output.empty() : this.locality;
+    public Output<String> locality() {
+        return this.locality == null ? Codegen.empty() : this.locality;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
-        return this.organization == null ? Output.empty() : this.organization;
+    public Output<String> organization() {
+        return this.organization == null ? Codegen.empty() : this.organization;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
-    public Output<String> getPostalCode() {
-        return this.postalCode == null ? Output.empty() : this.postalCode;
+    public Output<String> postalCode() {
+        return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recipients")
       private final @Nullable Output<List<String>> recipients;
 
-    public Output<List<String>> getRecipients() {
-        return this.recipients == null ? Output.empty() : this.recipients;
+    public Output<List<String>> recipients() {
+        return this.recipients == null ? Codegen.empty() : this.recipients;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regionCode", required=true)
       private final Output<String> regionCode;
 
-    public Output<String> getRegionCode() {
+    public Output<String> regionCode() {
         return this.regionCode;
     }
 
@@ -115,8 +116,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+    public Output<Integer> revision() {
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sortingCode")
       private final @Nullable Output<String> sortingCode;
 
-    public Output<String> getSortingCode() {
-        return this.sortingCode == null ? Output.empty() : this.sortingCode;
+    public Output<String> sortingCode() {
+        return this.sortingCode == null ? Codegen.empty() : this.sortingCode;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sublocality")
       private final @Nullable Output<String> sublocality;
 
-    public Output<String> getSublocality() {
-        return this.sublocality == null ? Output.empty() : this.sublocality;
+    public Output<String> sublocality() {
+        return this.sublocality == null ? Codegen.empty() : this.sublocality;
     }
 
     public PostalAddressArgs(
@@ -167,17 +168,17 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PostalAddressArgs() {
-        this.addressLines = Output.empty();
-        this.administrativeArea = Output.empty();
-        this.languageCode = Output.empty();
-        this.locality = Output.empty();
-        this.organization = Output.empty();
-        this.postalCode = Output.empty();
-        this.recipients = Output.empty();
-        this.regionCode = Output.empty();
-        this.revision = Output.empty();
-        this.sortingCode = Output.empty();
-        this.sublocality = Output.empty();
+        this.addressLines = Codegen.empty();
+        this.administrativeArea = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.locality = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.postalCode = Codegen.empty();
+        this.recipients = Codegen.empty();
+        this.regionCode = Codegen.empty();
+        this.revision = Codegen.empty();
+        this.sortingCode = Codegen.empty();
+        this.sublocality = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressLines(@Nullable List<String> addressLines) {
-            this.addressLines = Output.ofNullable(addressLines);
+            this.addressLines = Codegen.ofNullable(addressLines);
             return this;
         }
         public Builder addressLines(String... addressLines) {
@@ -236,7 +237,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administrativeArea(@Nullable String administrativeArea) {
-            this.administrativeArea = Output.ofNullable(administrativeArea);
+            this.administrativeArea = Codegen.ofNullable(administrativeArea);
             return this;
         }
         public Builder languageCode(@Nullable Output<String> languageCode) {
@@ -244,7 +245,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder locality(@Nullable Output<String> locality) {
@@ -252,7 +253,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locality(@Nullable String locality) {
-            this.locality = Output.ofNullable(locality);
+            this.locality = Codegen.ofNullable(locality);
             return this;
         }
         public Builder organization(@Nullable Output<String> organization) {
@@ -260,7 +261,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder organization(@Nullable String organization) {
-            this.organization = Output.ofNullable(organization);
+            this.organization = Codegen.ofNullable(organization);
             return this;
         }
         public Builder postalCode(@Nullable Output<String> postalCode) {
@@ -268,7 +269,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Output.ofNullable(postalCode);
+            this.postalCode = Codegen.ofNullable(postalCode);
             return this;
         }
         public Builder recipients(@Nullable Output<List<String>> recipients) {
@@ -276,7 +277,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recipients(@Nullable List<String> recipients) {
-            this.recipients = Output.ofNullable(recipients);
+            this.recipients = Codegen.ofNullable(recipients);
             return this;
         }
         public Builder recipients(String... recipients) {
@@ -295,7 +296,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }
         public Builder sortingCode(@Nullable Output<String> sortingCode) {
@@ -303,7 +304,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sortingCode(@Nullable String sortingCode) {
-            this.sortingCode = Output.ofNullable(sortingCode);
+            this.sortingCode = Codegen.ofNullable(sortingCode);
             return this;
         }
         public Builder sublocality(@Nullable Output<String> sublocality) {
@@ -311,7 +312,7 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sublocality(@Nullable String sublocality) {
-            this.sublocality = Output.ofNullable(sublocality);
+            this.sublocality = Codegen.ofNullable(sublocality);
             return this;
         }        public PostalAddressArgs build() {
             return new PostalAddressArgs(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);

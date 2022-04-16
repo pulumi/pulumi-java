@@ -5,6 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbClusterIdentifier")
       private final @Nullable Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Output.empty() : this.dbClusterIdentifier;
+    public Output<String> dbClusterIdentifier() {
+        return this.dbClusterIdentifier == null ? Codegen.empty() : this.dbClusterIdentifier;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbInstanceIdentifier")
       private final @Nullable Output<String> dbInstanceIdentifier;
 
-    public Output<String> getDbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Output.empty() : this.dbInstanceIdentifier;
+    public Output<String> dbInstanceIdentifier() {
+        return this.dbInstanceIdentifier == null ? Codegen.empty() : this.dbInstanceIdentifier;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbProxyName", required=true)
       private final Output<String> dbProxyName;
 
-    public Output<String> getDbProxyName() {
+    public Output<String> dbProxyName() {
         return this.dbProxyName;
     }
 
@@ -54,7 +55,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetGroupName", required=true)
       private final Output<String> targetGroupName;
 
-    public Output<String> getTargetGroupName() {
+    public Output<String> targetGroupName() {
         return this.targetGroupName;
     }
 
@@ -70,10 +71,10 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyTargetArgs() {
-        this.dbClusterIdentifier = Output.empty();
-        this.dbInstanceIdentifier = Output.empty();
-        this.dbProxyName = Output.empty();
-        this.targetGroupName = Output.empty();
+        this.dbClusterIdentifier = Codegen.empty();
+        this.dbInstanceIdentifier = Codegen.empty();
+        this.dbProxyName = Codegen.empty();
+        this.targetGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
+            this.dbClusterIdentifier = Codegen.ofNullable(dbClusterIdentifier);
             return this;
         }
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
@@ -115,7 +116,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
+            this.dbInstanceIdentifier = Codegen.ofNullable(dbInstanceIdentifier);
             return this;
         }
         public Builder dbProxyName(Output<String> dbProxyName) {

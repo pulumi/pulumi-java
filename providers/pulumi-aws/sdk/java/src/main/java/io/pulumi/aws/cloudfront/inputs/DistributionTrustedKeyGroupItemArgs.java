@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DistributionTrustedKeyGroupItemArgs extends io.pulumi.resourc
     @Import(name="keyGroupId")
       private final @Nullable Output<String> keyGroupId;
 
-    public Output<String> getKeyGroupId() {
-        return this.keyGroupId == null ? Output.empty() : this.keyGroupId;
+    public Output<String> keyGroupId() {
+        return this.keyGroupId == null ? Codegen.empty() : this.keyGroupId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DistributionTrustedKeyGroupItemArgs extends io.pulumi.resourc
     @Import(name="keyPairIds")
       private final @Nullable Output<List<String>> keyPairIds;
 
-    public Output<List<String>> getKeyPairIds() {
-        return this.keyPairIds == null ? Output.empty() : this.keyPairIds;
+    public Output<List<String>> keyPairIds() {
+        return this.keyPairIds == null ? Codegen.empty() : this.keyPairIds;
     }
 
     public DistributionTrustedKeyGroupItemArgs(
@@ -45,8 +46,8 @@ public final class DistributionTrustedKeyGroupItemArgs extends io.pulumi.resourc
     }
 
     private DistributionTrustedKeyGroupItemArgs() {
-        this.keyGroupId = Output.empty();
-        this.keyPairIds = Output.empty();
+        this.keyGroupId = Codegen.empty();
+        this.keyPairIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DistributionTrustedKeyGroupItemArgs extends io.pulumi.resourc
             return this;
         }
         public Builder keyGroupId(@Nullable String keyGroupId) {
-            this.keyGroupId = Output.ofNullable(keyGroupId);
+            this.keyGroupId = Codegen.ofNullable(keyGroupId);
             return this;
         }
         public Builder keyPairIds(@Nullable Output<List<String>> keyPairIds) {
@@ -84,7 +85,7 @@ public final class DistributionTrustedKeyGroupItemArgs extends io.pulumi.resourc
             return this;
         }
         public Builder keyPairIds(@Nullable List<String> keyPairIds) {
-            this.keyPairIds = Output.ofNullable(keyPairIds);
+            this.keyPairIds = Codegen.ofNullable(keyPairIds);
             return this;
         }
         public Builder keyPairIds(String... keyPairIds) {

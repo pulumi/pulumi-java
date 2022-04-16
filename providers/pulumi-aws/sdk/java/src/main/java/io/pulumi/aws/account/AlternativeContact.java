@@ -9,6 +9,7 @@ import io.pulumi.aws.account.inputs.AlternativeContactState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -45,7 +46,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @return The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
      * 
      */
-    public Output</* @Nullable */ String> getAccountId() {
+    public Output</* @Nullable */ String> accountId() {
         return this.accountId;
     }
     /**
@@ -59,7 +60,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @return The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.
      * 
      */
-    public Output<String> getAlternateContactType() {
+    public Output<String> alternateContactType() {
         return this.alternateContactType;
     }
     /**
@@ -73,7 +74,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @return An email address for the alternate contact.
      * 
      */
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
     /**
@@ -87,7 +88,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @return The name of the alternate contact.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @return A phone number for the alternate contact.
      * 
      */
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
     /**
@@ -115,7 +116,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @return A title for the alternate contact.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -141,7 +142,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AlternativeContact(String name, AlternativeContactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:account/alternativeContact:AlternativeContact", name, args == null ? AlternativeContactArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:account/alternativeContact:AlternativeContact", name, args == null ? AlternativeContactArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AlternativeContact(String name, Output<String> id, @Nullable AlternativeContactState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

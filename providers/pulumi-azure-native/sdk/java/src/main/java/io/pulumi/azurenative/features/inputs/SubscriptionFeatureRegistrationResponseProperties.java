@@ -24,7 +24,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="approvalType", required=true)
       private final String approvalType;
 
-    public String getApprovalType() {
+    public String approvalType() {
         return this.approvalType;
     }
 
@@ -35,7 +35,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="authorizationProfile")
       private final @Nullable AuthorizationProfileResponse authorizationProfile;
 
-    public Optional<AuthorizationProfileResponse> getAuthorizationProfile() {
+    public Optional<AuthorizationProfileResponse> authorizationProfile() {
         return this.authorizationProfile == null ? Optional.empty() : Optional.ofNullable(this.authorizationProfile);
     }
 
@@ -46,7 +46,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -57,7 +57,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -68,7 +68,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="documentationLink", required=true)
       private final String documentationLink;
 
-    public String getDocumentationLink() {
+    public String documentationLink() {
         return this.documentationLink;
     }
 
@@ -79,7 +79,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="featureName", required=true)
       private final String featureName;
 
-    public String getFeatureName() {
+    public String featureName() {
         return this.featureName;
     }
 
@@ -90,7 +90,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
@@ -101,7 +101,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
-    public String getProviderNamespace() {
+    public String providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -112,7 +112,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="registrationDate", required=true)
       private final String registrationDate;
 
-    public String getRegistrationDate() {
+    public String registrationDate() {
         return this.registrationDate;
     }
 
@@ -123,7 +123,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="releaseDate", required=true)
       private final String releaseDate;
 
-    public String getReleaseDate() {
+    public String releaseDate() {
         return this.releaseDate;
     }
 
@@ -134,7 +134,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="shouldFeatureDisplayInPortal")
       private final @Nullable Boolean shouldFeatureDisplayInPortal;
 
-    public Optional<Boolean> getShouldFeatureDisplayInPortal() {
+    public Optional<Boolean> shouldFeatureDisplayInPortal() {
         return this.shouldFeatureDisplayInPortal == null ? Optional.empty() : Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
 
@@ -145,7 +145,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -156,7 +156,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -167,7 +167,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

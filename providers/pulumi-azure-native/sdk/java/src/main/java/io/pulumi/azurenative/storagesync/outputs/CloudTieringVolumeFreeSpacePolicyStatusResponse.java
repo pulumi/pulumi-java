@@ -40,21 +40,21 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
      * Current volume free space percentage.
      * 
     */
-    public Integer getCurrentVolumeFreeSpacePercent() {
+    public Integer currentVolumeFreeSpacePercent() {
         return this.currentVolumeFreeSpacePercent;
     }
     /**
      * In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
      * 
     */
-    public Integer getEffectiveVolumeFreeSpacePolicy() {
+    public Integer effectiveVolumeFreeSpacePolicy() {
         return this.effectiveVolumeFreeSpacePolicy;
     }
     /**
      * Last updated timestamp
      * 
     */
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 

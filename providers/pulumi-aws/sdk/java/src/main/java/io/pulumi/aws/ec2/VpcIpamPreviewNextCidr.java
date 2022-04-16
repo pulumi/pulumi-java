@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcIpamPreviewNextCidrState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * @return The previewed CIDR from the pool.
      * 
      */
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
     /**
@@ -47,7 +48,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * @return Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDisallowedCidrs() {
+    public Output</* @Nullable */ List<String>> disallowedCidrs() {
         return this.disallowedCidrs;
     }
     /**
@@ -61,7 +62,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * @return The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
     /**
@@ -75,7 +76,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * @return The netmask length of the CIDR you would like to preview from the IPAM pool.
      * 
      */
-    public Output</* @Nullable */ Integer> getNetmaskLength() {
+    public Output</* @Nullable */ Integer> netmaskLength() {
         return this.netmaskLength;
     }
 
@@ -101,7 +102,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpamPreviewNextCidr(String name, VpcIpamPreviewNextCidrArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpamPreviewNextCidr:VpcIpamPreviewNextCidr", name, args == null ? VpcIpamPreviewNextCidrArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcIpamPreviewNextCidr:VpcIpamPreviewNextCidr", name, args == null ? VpcIpamPreviewNextCidrArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcIpamPreviewNextCidr(String name, Output<String> id, @Nullable VpcIpamPreviewNextCidrState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -15,6 +15,7 @@ import io.pulumi.awsnative.lex.inputs.BotSlotArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotPriorityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,85 +33,85 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="dialogCodeHook")
       private final @Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook;
 
-    public Output<BotDialogCodeHookSettingArgs> getDialogCodeHook() {
-        return this.dialogCodeHook == null ? Output.empty() : this.dialogCodeHook;
+    public Output<BotDialogCodeHookSettingArgs> dialogCodeHook() {
+        return this.dialogCodeHook == null ? Codegen.empty() : this.dialogCodeHook;
     }
 
     @Import(name="fulfillmentCodeHook")
       private final @Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook;
 
-    public Output<BotFulfillmentCodeHookSettingArgs> getFulfillmentCodeHook() {
-        return this.fulfillmentCodeHook == null ? Output.empty() : this.fulfillmentCodeHook;
+    public Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook() {
+        return this.fulfillmentCodeHook == null ? Codegen.empty() : this.fulfillmentCodeHook;
     }
 
     @Import(name="inputContexts")
       private final @Nullable Output<List<BotInputContextArgs>> inputContexts;
 
-    public Output<List<BotInputContextArgs>> getInputContexts() {
-        return this.inputContexts == null ? Output.empty() : this.inputContexts;
+    public Output<List<BotInputContextArgs>> inputContexts() {
+        return this.inputContexts == null ? Codegen.empty() : this.inputContexts;
     }
 
     @Import(name="intentClosingSetting")
       private final @Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting;
 
-    public Output<BotIntentClosingSettingArgs> getIntentClosingSetting() {
-        return this.intentClosingSetting == null ? Output.empty() : this.intentClosingSetting;
+    public Output<BotIntentClosingSettingArgs> intentClosingSetting() {
+        return this.intentClosingSetting == null ? Codegen.empty() : this.intentClosingSetting;
     }
 
     @Import(name="intentConfirmationSetting")
       private final @Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting;
 
-    public Output<BotIntentConfirmationSettingArgs> getIntentConfirmationSetting() {
-        return this.intentConfirmationSetting == null ? Output.empty() : this.intentConfirmationSetting;
+    public Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting() {
+        return this.intentConfirmationSetting == null ? Codegen.empty() : this.intentConfirmationSetting;
     }
 
     @Import(name="kendraConfiguration")
       private final @Nullable Output<BotKendraConfigurationArgs> kendraConfiguration;
 
-    public Output<BotKendraConfigurationArgs> getKendraConfiguration() {
-        return this.kendraConfiguration == null ? Output.empty() : this.kendraConfiguration;
+    public Output<BotKendraConfigurationArgs> kendraConfiguration() {
+        return this.kendraConfiguration == null ? Codegen.empty() : this.kendraConfiguration;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="outputContexts")
       private final @Nullable Output<List<BotOutputContextArgs>> outputContexts;
 
-    public Output<List<BotOutputContextArgs>> getOutputContexts() {
-        return this.outputContexts == null ? Output.empty() : this.outputContexts;
+    public Output<List<BotOutputContextArgs>> outputContexts() {
+        return this.outputContexts == null ? Codegen.empty() : this.outputContexts;
     }
 
     @Import(name="parentIntentSignature")
       private final @Nullable Output<String> parentIntentSignature;
 
-    public Output<String> getParentIntentSignature() {
-        return this.parentIntentSignature == null ? Output.empty() : this.parentIntentSignature;
+    public Output<String> parentIntentSignature() {
+        return this.parentIntentSignature == null ? Codegen.empty() : this.parentIntentSignature;
     }
 
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
 
-    public Output<List<BotSampleUtteranceArgs>> getSampleUtterances() {
-        return this.sampleUtterances == null ? Output.empty() : this.sampleUtterances;
+    public Output<List<BotSampleUtteranceArgs>> sampleUtterances() {
+        return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
     }
 
     @Import(name="slotPriorities")
       private final @Nullable Output<List<BotSlotPriorityArgs>> slotPriorities;
 
-    public Output<List<BotSlotPriorityArgs>> getSlotPriorities() {
-        return this.slotPriorities == null ? Output.empty() : this.slotPriorities;
+    public Output<List<BotSlotPriorityArgs>> slotPriorities() {
+        return this.slotPriorities == null ? Codegen.empty() : this.slotPriorities;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="slots")
       private final @Nullable Output<List<BotSlotArgs>> slots;
 
-    public Output<List<BotSlotArgs>> getSlots() {
-        return this.slots == null ? Output.empty() : this.slots;
+    public Output<List<BotSlotArgs>> slots() {
+        return this.slots == null ? Codegen.empty() : this.slots;
     }
 
     public BotIntentArgs(
@@ -154,19 +155,19 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotIntentArgs() {
-        this.description = Output.empty();
-        this.dialogCodeHook = Output.empty();
-        this.fulfillmentCodeHook = Output.empty();
-        this.inputContexts = Output.empty();
-        this.intentClosingSetting = Output.empty();
-        this.intentConfirmationSetting = Output.empty();
-        this.kendraConfiguration = Output.empty();
-        this.name = Output.empty();
-        this.outputContexts = Output.empty();
-        this.parentIntentSignature = Output.empty();
-        this.sampleUtterances = Output.empty();
-        this.slotPriorities = Output.empty();
-        this.slots = Output.empty();
+        this.description = Codegen.empty();
+        this.dialogCodeHook = Codegen.empty();
+        this.fulfillmentCodeHook = Codegen.empty();
+        this.inputContexts = Codegen.empty();
+        this.intentClosingSetting = Codegen.empty();
+        this.intentConfirmationSetting = Codegen.empty();
+        this.kendraConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputContexts = Codegen.empty();
+        this.parentIntentSignature = Codegen.empty();
+        this.sampleUtterances = Codegen.empty();
+        this.slotPriorities = Codegen.empty();
+        this.slots = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dialogCodeHook(@Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook) {
@@ -226,7 +227,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dialogCodeHook(@Nullable BotDialogCodeHookSettingArgs dialogCodeHook) {
-            this.dialogCodeHook = Output.ofNullable(dialogCodeHook);
+            this.dialogCodeHook = Codegen.ofNullable(dialogCodeHook);
             return this;
         }
         public Builder fulfillmentCodeHook(@Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook) {
@@ -234,7 +235,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSettingArgs fulfillmentCodeHook) {
-            this.fulfillmentCodeHook = Output.ofNullable(fulfillmentCodeHook);
+            this.fulfillmentCodeHook = Codegen.ofNullable(fulfillmentCodeHook);
             return this;
         }
         public Builder inputContexts(@Nullable Output<List<BotInputContextArgs>> inputContexts) {
@@ -242,7 +243,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputContexts(@Nullable List<BotInputContextArgs> inputContexts) {
-            this.inputContexts = Output.ofNullable(inputContexts);
+            this.inputContexts = Codegen.ofNullable(inputContexts);
             return this;
         }
         public Builder inputContexts(BotInputContextArgs... inputContexts) {
@@ -253,7 +254,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intentClosingSetting(@Nullable BotIntentClosingSettingArgs intentClosingSetting) {
-            this.intentClosingSetting = Output.ofNullable(intentClosingSetting);
+            this.intentClosingSetting = Codegen.ofNullable(intentClosingSetting);
             return this;
         }
         public Builder intentConfirmationSetting(@Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting) {
@@ -261,7 +262,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intentConfirmationSetting(@Nullable BotIntentConfirmationSettingArgs intentConfirmationSetting) {
-            this.intentConfirmationSetting = Output.ofNullable(intentConfirmationSetting);
+            this.intentConfirmationSetting = Codegen.ofNullable(intentConfirmationSetting);
             return this;
         }
         public Builder kendraConfiguration(@Nullable Output<BotKendraConfigurationArgs> kendraConfiguration) {
@@ -269,7 +270,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kendraConfiguration(@Nullable BotKendraConfigurationArgs kendraConfiguration) {
-            this.kendraConfiguration = Output.ofNullable(kendraConfiguration);
+            this.kendraConfiguration = Codegen.ofNullable(kendraConfiguration);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -285,7 +286,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputContexts(@Nullable List<BotOutputContextArgs> outputContexts) {
-            this.outputContexts = Output.ofNullable(outputContexts);
+            this.outputContexts = Codegen.ofNullable(outputContexts);
             return this;
         }
         public Builder outputContexts(BotOutputContextArgs... outputContexts) {
@@ -296,7 +297,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
-            this.parentIntentSignature = Output.ofNullable(parentIntentSignature);
+            this.parentIntentSignature = Codegen.ofNullable(parentIntentSignature);
             return this;
         }
         public Builder sampleUtterances(@Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances) {
@@ -304,7 +305,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
-            this.sampleUtterances = Output.ofNullable(sampleUtterances);
+            this.sampleUtterances = Codegen.ofNullable(sampleUtterances);
             return this;
         }
         public Builder sampleUtterances(BotSampleUtteranceArgs... sampleUtterances) {
@@ -315,7 +316,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slotPriorities(@Nullable List<BotSlotPriorityArgs> slotPriorities) {
-            this.slotPriorities = Output.ofNullable(slotPriorities);
+            this.slotPriorities = Codegen.ofNullable(slotPriorities);
             return this;
         }
         public Builder slotPriorities(BotSlotPriorityArgs... slotPriorities) {
@@ -326,7 +327,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slots(@Nullable List<BotSlotArgs> slots) {
-            this.slots = Output.ofNullable(slots);
+            this.slots = Codegen.ofNullable(slots);
             return this;
         }
         public Builder slots(BotSlotArgs... slots) {

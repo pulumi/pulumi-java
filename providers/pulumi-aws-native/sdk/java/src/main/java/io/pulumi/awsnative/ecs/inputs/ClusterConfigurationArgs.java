@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.inputs.ClusterExecuteCommandConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class ClusterConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="executeCommandConfiguration")
       private final @Nullable Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration;
 
-    public Output<ClusterExecuteCommandConfigurationArgs> getExecuteCommandConfiguration() {
-        return this.executeCommandConfiguration == null ? Output.empty() : this.executeCommandConfiguration;
+    public Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration() {
+        return this.executeCommandConfiguration == null ? Codegen.empty() : this.executeCommandConfiguration;
     }
 
     public ClusterConfigurationArgs(@Nullable Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration) {
@@ -30,7 +31,7 @@ public final class ClusterConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private ClusterConfigurationArgs() {
-        this.executeCommandConfiguration = Output.empty();
+        this.executeCommandConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder executeCommandConfiguration(@Nullable ClusterExecuteCommandConfigurationArgs executeCommandConfiguration) {
-            this.executeCommandConfiguration = Output.ofNullable(executeCommandConfiguration);
+            this.executeCommandConfiguration = Codegen.ofNullable(executeCommandConfiguration);
             return this;
         }        public ClusterConfigurationArgs build() {
             return new ClusterConfigurationArgs(executeCommandConfiguration);

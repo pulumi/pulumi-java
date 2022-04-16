@@ -5,6 +5,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     @Import(name="predefinedMetricType", required=true)
       private final Output<String> predefinedMetricType;
 
-    public Output<String> getPredefinedMetricType() {
+    public Output<String> predefinedMetricType() {
         return this.predefinedMetricType;
     }
 
@@ -32,8 +33,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     @Import(name="resourceLabel")
       private final @Nullable Output<String> resourceLabel;
 
-    public Output<String> getResourceLabel() {
-        return this.resourceLabel == null ? Output.empty() : this.resourceLabel;
+    public Output<String> resourceLabel() {
+        return this.resourceLabel == null ? Codegen.empty() : this.resourceLabel;
     }
 
     public PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(
@@ -44,8 +45,8 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     }
 
     private PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs() {
-        this.predefinedMetricType = Output.empty();
-        this.resourceLabel = Output.empty();
+        this.predefinedMetricType = Codegen.empty();
+        this.resourceLabel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
             return this;
         }
         public Builder resourceLabel(@Nullable String resourceLabel) {
-            this.resourceLabel = Output.ofNullable(resourceLabel);
+            this.resourceLabel = Codegen.ofNullable(resourceLabel);
             return this;
         }        public PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs build() {
             return new PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(predefinedMetricType, resourceLabel);

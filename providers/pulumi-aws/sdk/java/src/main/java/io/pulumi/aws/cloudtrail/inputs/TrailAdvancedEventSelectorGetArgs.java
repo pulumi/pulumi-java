@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 import io.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorFieldSelectorGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
     @Import(name="fieldSelectors", required=true)
       private final Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
 
-    public Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> getFieldSelectors() {
+    public Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors() {
         return this.fieldSelectors;
     }
 
@@ -34,8 +35,8 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public TrailAdvancedEventSelectorGetArgs(
@@ -46,8 +47,8 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
     }
 
     private TrailAdvancedEventSelectorGetArgs() {
-        this.fieldSelectors = Output.empty();
-        this.name = Output.empty();
+        this.fieldSelectors = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public TrailAdvancedEventSelectorGetArgs build() {
             return new TrailAdvancedEventSelectorGetArgs(fieldSelectors, name);

@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.MeshSpecGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+    public Output<String> createdDate() {
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> getLastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Output.empty() : this.lastUpdatedDate;
+    public Output<String> lastUpdatedDate() {
+        return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshOwner")
       private final @Nullable Output<String> meshOwner;
 
-    public Output<String> getMeshOwner() {
-        return this.meshOwner == null ? Output.empty() : this.meshOwner;
+    public Output<String> meshOwner() {
+        return this.meshOwner == null ? Codegen.empty() : this.meshOwner;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
-    public Output<String> getResourceOwner() {
-        return this.resourceOwner == null ? Output.empty() : this.resourceOwner;
+    public Output<String> resourceOwner() {
+        return this.resourceOwner == null ? Codegen.empty() : this.resourceOwner;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<MeshSpecGetArgs> spec;
 
-    public Output<MeshSpecGetArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<MeshSpecGetArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public MeshState(
@@ -137,15 +138,15 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MeshState() {
-        this.arn = Output.empty();
-        this.createdDate = Output.empty();
-        this.lastUpdatedDate = Output.empty();
-        this.meshOwner = Output.empty();
-        this.name = Output.empty();
-        this.resourceOwner = Output.empty();
-        this.spec = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.createdDate = Codegen.empty();
+        this.lastUpdatedDate = Codegen.empty();
+        this.meshOwner = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceOwner = Codegen.empty();
+        this.spec = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdDate(@Nullable Output<String> createdDate) {
@@ -197,7 +198,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
@@ -205,7 +206,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
+            this.lastUpdatedDate = Codegen.ofNullable(lastUpdatedDate);
             return this;
         }
         public Builder meshOwner(@Nullable Output<String> meshOwner) {
@@ -213,7 +214,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder meshOwner(@Nullable String meshOwner) {
-            this.meshOwner = Output.ofNullable(meshOwner);
+            this.meshOwner = Codegen.ofNullable(meshOwner);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
@@ -229,7 +230,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Output.ofNullable(resourceOwner);
+            this.resourceOwner = Codegen.ofNullable(resourceOwner);
             return this;
         }
         public Builder spec(@Nullable Output<MeshSpecGetArgs> spec) {
@@ -237,7 +238,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spec(@Nullable MeshSpecGetArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -245,7 +246,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -253,7 +254,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public MeshState build() {
             return new MeshState(arn, createdDate, lastUpdatedDate, meshOwner, name, resourceOwner, spec, tags, tagsAll);

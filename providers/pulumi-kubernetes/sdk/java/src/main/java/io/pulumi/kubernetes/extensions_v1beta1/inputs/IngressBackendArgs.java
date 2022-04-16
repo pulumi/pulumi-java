@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resource")
       private final @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
-    public Output<TypedLocalObjectReferenceArgs> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+    public Output<TypedLocalObjectReferenceArgs> resource() {
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -50,7 +51,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servicePort", required=true)
       private final Output<Either<Integer,String>> servicePort;
 
-    public Output<Either<Integer,String>> getServicePort() {
+    public Output<Either<Integer,String>> servicePort() {
         return this.servicePort;
     }
 
@@ -64,9 +65,9 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressBackendArgs() {
-        this.resource = Output.empty();
-        this.serviceName = Output.empty();
-        this.servicePort = Output.empty();
+        this.resource = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.servicePort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resource(@Nullable TypedLocalObjectReferenceArgs resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {

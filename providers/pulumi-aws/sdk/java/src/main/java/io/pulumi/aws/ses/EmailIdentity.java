@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.EmailIdentityState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class EmailIdentity extends io.pulumi.resources.CustomResource {
      * @return The ARN of the email identity.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -53,7 +54,7 @@ public class EmailIdentity extends io.pulumi.resources.CustomResource {
      * @return The email address to assign to SES
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -79,7 +80,7 @@ public class EmailIdentity extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EmailIdentity(String name, EmailIdentityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/emailIdentity:EmailIdentity", name, args == null ? EmailIdentityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/emailIdentity:EmailIdentity", name, args == null ? EmailIdentityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EmailIdentity(String name, Output<String> id, @Nullable EmailIdentityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

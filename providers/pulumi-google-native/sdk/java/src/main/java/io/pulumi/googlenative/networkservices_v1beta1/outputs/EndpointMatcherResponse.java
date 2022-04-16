@@ -24,7 +24,7 @@ public final class EndpointMatcherResponse {
      * The matcher is based on node metadata presented by xDS clients.
      * 
     */
-    public MetadataLabelMatcherResponse getMetadataLabelMatcher() {
+    public MetadataLabelMatcherResponse metadataLabelMatcher() {
         return this.metadataLabelMatcher;
     }
 

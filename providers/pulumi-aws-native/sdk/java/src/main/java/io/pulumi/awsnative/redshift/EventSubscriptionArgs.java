@@ -9,6 +9,7 @@ import io.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import io.pulumi.awsnative.redshift.inputs.EventSubscriptionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventCategories")
       private final @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
-    public Output<List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
-        return this.eventCategories == null ? Output.empty() : this.eventCategories;
+    public Output<List<EventSubscriptionEventCategoriesItem>> eventCategories() {
+        return this.eventCategories == null ? Codegen.empty() : this.eventCategories;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="severity")
       private final @Nullable Output<EventSubscriptionSeverity> severity;
 
-    public Output<EventSubscriptionSeverity> getSeverity() {
-        return this.severity == null ? Output.empty() : this.severity;
+    public Output<EventSubscriptionSeverity> severity() {
+        return this.severity == null ? Codegen.empty() : this.severity;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
+    public Output<String> snsTopicArn() {
+        return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceIds")
       private final @Nullable Output<List<String>> sourceIds;
 
-    public Output<List<String>> getSourceIds() {
-        return this.sourceIds == null ? Output.empty() : this.sourceIds;
+    public Output<List<String>> sourceIds() {
+        return this.sourceIds == null ? Codegen.empty() : this.sourceIds;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceType")
       private final @Nullable Output<EventSubscriptionSourceType> sourceType;
 
-    public Output<EventSubscriptionSourceType> getSourceType() {
-        return this.sourceType == null ? Output.empty() : this.sourceType;
+    public Output<EventSubscriptionSourceType> sourceType() {
+        return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subscriptionName", required=true)
       private final Output<String> subscriptionName;
 
-    public Output<String> getSubscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
 
@@ -104,8 +105,8 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<List<EventSubscriptionTagArgs>> tags;
 
-    public Output<List<EventSubscriptionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<EventSubscriptionTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EventSubscriptionArgs(
@@ -128,14 +129,14 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EventSubscriptionArgs() {
-        this.enabled = Output.empty();
-        this.eventCategories = Output.empty();
-        this.severity = Output.empty();
-        this.snsTopicArn = Output.empty();
-        this.sourceIds = Output.empty();
-        this.sourceType = Output.empty();
-        this.subscriptionName = Output.empty();
-        this.tags = Output.empty();
+        this.enabled = Codegen.empty();
+        this.eventCategories = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.snsTopicArn = Codegen.empty();
+        this.sourceIds = Codegen.empty();
+        this.sourceType = Codegen.empty();
+        this.subscriptionName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder eventCategories(@Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories) {
@@ -185,7 +186,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder eventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
-            this.eventCategories = Output.ofNullable(eventCategories);
+            this.eventCategories = Codegen.ofNullable(eventCategories);
             return this;
         }
         public Builder eventCategories(EventSubscriptionEventCategoriesItem... eventCategories) {
@@ -196,7 +197,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder severity(@Nullable EventSubscriptionSeverity severity) {
-            this.severity = Output.ofNullable(severity);
+            this.severity = Codegen.ofNullable(severity);
             return this;
         }
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
@@ -204,7 +205,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Output.ofNullable(snsTopicArn);
+            this.snsTopicArn = Codegen.ofNullable(snsTopicArn);
             return this;
         }
         public Builder sourceIds(@Nullable Output<List<String>> sourceIds) {
@@ -212,7 +213,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sourceIds(@Nullable List<String> sourceIds) {
-            this.sourceIds = Output.ofNullable(sourceIds);
+            this.sourceIds = Codegen.ofNullable(sourceIds);
             return this;
         }
         public Builder sourceIds(String... sourceIds) {
@@ -223,7 +224,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sourceType(@Nullable EventSubscriptionSourceType sourceType) {
-            this.sourceType = Output.ofNullable(sourceType);
+            this.sourceType = Codegen.ofNullable(sourceType);
             return this;
         }
         public Builder subscriptionName(Output<String> subscriptionName) {
@@ -239,7 +240,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable List<EventSubscriptionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(EventSubscriptionTagArgs... tags) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.billing;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamPolicyArgs;
 import io.pulumi.gcp.billing.inputs.AccountIamPolicyState;
@@ -17,19 +18,19 @@ public class AccountIamPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -55,7 +56,7 @@ public class AccountIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountIamPolicy(String name, AccountIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/accountIamPolicy:AccountIamPolicy", name, args == null ? AccountIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:billing/accountIamPolicy:AccountIamPolicy", name, args == null ? AccountIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountIamPolicy(String name, Output<String> id, @Nullable AccountIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

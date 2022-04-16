@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminCluster")
       private final @Nullable Output<Boolean> adminCluster;
 
-    public Output<Boolean> getAdminCluster() {
-        return this.adminCluster == null ? Output.empty() : this.adminCluster;
+    public Output<Boolean> adminCluster() {
+        return this.adminCluster == null ? Codegen.empty() : this.adminCluster;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;
 
-    public Output<String> getResourceLink() {
-        return this.resourceLink == null ? Output.empty() : this.resourceLink;
+    public Output<String> resourceLink() {
+        return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
     }
 
     public OnPremClusterArgs(
@@ -49,8 +50,8 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OnPremClusterArgs() {
-        this.adminCluster = Output.empty();
-        this.resourceLink = Output.empty();
+        this.adminCluster = Codegen.empty();
+        this.resourceLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminCluster(@Nullable Boolean adminCluster) {
-            this.adminCluster = Output.ofNullable(adminCluster);
+            this.adminCluster = Codegen.ofNullable(adminCluster);
             return this;
         }
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
@@ -88,7 +89,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Output.ofNullable(resourceLink);
+            this.resourceLink = Codegen.ofNullable(resourceLink);
             return this;
         }        public OnPremClusterArgs build() {
             return new OnPremClusterArgs(adminCluster, resourceLink);

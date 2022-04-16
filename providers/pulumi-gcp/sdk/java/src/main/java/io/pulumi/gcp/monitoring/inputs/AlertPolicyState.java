@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyCreationRecordGetArgs;
@@ -29,8 +30,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="alertStrategy")
       private final @Nullable Output<AlertPolicyAlertStrategyGetArgs> alertStrategy;
 
-    public Output<AlertPolicyAlertStrategyGetArgs> getAlertStrategy() {
-        return this.alertStrategy == null ? Output.empty() : this.alertStrategy;
+    public Output<AlertPolicyAlertStrategyGetArgs> alertStrategy() {
+        return this.alertStrategy == null ? Codegen.empty() : this.alertStrategy;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="combiner")
       private final @Nullable Output<String> combiner;
 
-    public Output<String> getCombiner() {
-        return this.combiner == null ? Output.empty() : this.combiner;
+    public Output<String> combiner() {
+        return this.combiner == null ? Codegen.empty() : this.combiner;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<AlertPolicyConditionGetArgs>> conditions;
 
-    public Output<List<AlertPolicyConditionGetArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<AlertPolicyConditionGetArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationRecords")
       private final @Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords;
 
-    public Output<List<AlertPolicyCreationRecordGetArgs>> getCreationRecords() {
-        return this.creationRecords == null ? Output.empty() : this.creationRecords;
+    public Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords() {
+        return this.creationRecords == null ? Codegen.empty() : this.creationRecords;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentation")
       private final @Nullable Output<AlertPolicyDocumentationGetArgs> documentation;
 
-    public Output<AlertPolicyDocumentationGetArgs> getDocumentation() {
-        return this.documentation == null ? Output.empty() : this.documentation;
+    public Output<AlertPolicyDocumentationGetArgs> documentation() {
+        return this.documentation == null ? Codegen.empty() : this.documentation;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationChannels")
       private final @Nullable Output<List<String>> notificationChannels;
 
-    public Output<List<String>> getNotificationChannels() {
-        return this.notificationChannels == null ? Output.empty() : this.notificationChannels;
+    public Output<List<String>> notificationChannels() {
+        return this.notificationChannels == null ? Codegen.empty() : this.notificationChannels;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Output.empty() : this.userLabels;
+    public Output<Map<String,String>> userLabels() {
+        return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     public AlertPolicyState(
@@ -202,17 +203,17 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertPolicyState() {
-        this.alertStrategy = Output.empty();
-        this.combiner = Output.empty();
-        this.conditions = Output.empty();
-        this.creationRecords = Output.empty();
-        this.displayName = Output.empty();
-        this.documentation = Output.empty();
-        this.enabled = Output.empty();
-        this.name = Output.empty();
-        this.notificationChannels = Output.empty();
-        this.project = Output.empty();
-        this.userLabels = Output.empty();
+        this.alertStrategy = Codegen.empty();
+        this.combiner = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.creationRecords = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.documentation = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationChannels = Codegen.empty();
+        this.project = Codegen.empty();
+        this.userLabels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -260,7 +261,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alertStrategy(@Nullable AlertPolicyAlertStrategyGetArgs alertStrategy) {
-            this.alertStrategy = Output.ofNullable(alertStrategy);
+            this.alertStrategy = Codegen.ofNullable(alertStrategy);
             return this;
         }
         public Builder combiner(@Nullable Output<String> combiner) {
@@ -268,7 +269,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder combiner(@Nullable String combiner) {
-            this.combiner = Output.ofNullable(combiner);
+            this.combiner = Codegen.ofNullable(combiner);
             return this;
         }
         public Builder conditions(@Nullable Output<List<AlertPolicyConditionGetArgs>> conditions) {
@@ -276,7 +277,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<AlertPolicyConditionGetArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(AlertPolicyConditionGetArgs... conditions) {
@@ -287,7 +288,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationRecords(@Nullable List<AlertPolicyCreationRecordGetArgs> creationRecords) {
-            this.creationRecords = Output.ofNullable(creationRecords);
+            this.creationRecords = Codegen.ofNullable(creationRecords);
             return this;
         }
         public Builder creationRecords(AlertPolicyCreationRecordGetArgs... creationRecords) {
@@ -298,7 +299,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder documentation(@Nullable Output<AlertPolicyDocumentationGetArgs> documentation) {
@@ -306,7 +307,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentation(@Nullable AlertPolicyDocumentationGetArgs documentation) {
-            this.documentation = Output.ofNullable(documentation);
+            this.documentation = Codegen.ofNullable(documentation);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -314,7 +315,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -322,7 +323,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationChannels(@Nullable Output<List<String>> notificationChannels) {
@@ -330,7 +331,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationChannels(@Nullable List<String> notificationChannels) {
-            this.notificationChannels = Output.ofNullable(notificationChannels);
+            this.notificationChannels = Codegen.ofNullable(notificationChannels);
             return this;
         }
         public Builder notificationChannels(String... notificationChannels) {
@@ -341,7 +342,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
@@ -349,7 +350,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Output.ofNullable(userLabels);
+            this.userLabels = Codegen.ofNullable(userLabels);
             return this;
         }        public AlertPolicyState build() {
             return new AlertPolicyState(alertStrategy, combiner, conditions, creationRecords, displayName, documentation, enabled, name, notificationChannels, project, userLabels);

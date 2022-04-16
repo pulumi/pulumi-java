@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53resolver.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ResolverRuleTargetAddressArgs extends io.pulumi.resources.Res
     @Import(name="ip", required=true)
       private final Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip;
     }
 
@@ -32,8 +33,8 @@ public final class ResolverRuleTargetAddressArgs extends io.pulumi.resources.Res
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<String> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ResolverRuleTargetAddressArgs(
@@ -44,8 +45,8 @@ public final class ResolverRuleTargetAddressArgs extends io.pulumi.resources.Res
     }
 
     private ResolverRuleTargetAddressArgs() {
-        this.ip = Output.empty();
-        this.port = Output.empty();
+        this.ip = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ResolverRuleTargetAddressArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ResolverRuleTargetAddressArgs build() {
             return new ResolverRuleTargetAddressArgs(ip, port);

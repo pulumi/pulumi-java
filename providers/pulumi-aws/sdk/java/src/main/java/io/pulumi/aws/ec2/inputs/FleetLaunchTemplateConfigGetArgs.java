@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigLaunchTemplateSpecifica
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigOverrideGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
     @Import(name="launchTemplateSpecification", required=true)
       private final Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
-    public Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
+    public Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
 
@@ -34,8 +35,8 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
     @Import(name="overrides")
       private final @Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
 
-    public Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> getOverrides() {
-        return this.overrides == null ? Output.empty() : this.overrides;
+    public Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides() {
+        return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     public FleetLaunchTemplateConfigGetArgs(
@@ -46,8 +47,8 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
     }
 
     private FleetLaunchTemplateConfigGetArgs() {
-        this.launchTemplateSpecification = Output.empty();
-        this.overrides = Output.empty();
+        this.launchTemplateSpecification = Codegen.empty();
+        this.overrides = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder overrides(@Nullable List<FleetLaunchTemplateConfigOverrideGetArgs> overrides) {
-            this.overrides = Output.ofNullable(overrides);
+            this.overrides = Codegen.ofNullable(overrides);
             return this;
         }
         public Builder overrides(FleetLaunchTemplateConfigOverrideGetArgs... overrides) {

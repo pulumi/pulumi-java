@@ -5,6 +5,7 @@ package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -34,7 +35,7 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
 
@@ -45,8 +46,8 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     @Import(name="subscriberEmailAddresses")
       private final @Nullable Output<List<String>> subscriberEmailAddresses;
 
-    public Output<List<String>> getSubscriberEmailAddresses() {
-        return this.subscriberEmailAddresses == null ? Output.empty() : this.subscriberEmailAddresses;
+    public Output<List<String>> subscriberEmailAddresses() {
+        return this.subscriberEmailAddresses == null ? Codegen.empty() : this.subscriberEmailAddresses;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     @Import(name="subscriberSnsTopicArns")
       private final @Nullable Output<List<String>> subscriberSnsTopicArns;
 
-    public Output<List<String>> getSubscriberSnsTopicArns() {
-        return this.subscriberSnsTopicArns == null ? Output.empty() : this.subscriberSnsTopicArns;
+    public Output<List<String>> subscriberSnsTopicArns() {
+        return this.subscriberSnsTopicArns == null ? Codegen.empty() : this.subscriberSnsTopicArns;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -78,7 +79,7 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     @Import(name="thresholdType", required=true)
       private final Output<String> thresholdType;
 
-    public Output<String> getThresholdType() {
+    public Output<String> thresholdType() {
         return this.thresholdType;
     }
 
@@ -98,12 +99,12 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     }
 
     private BudgetNotificationGetArgs() {
-        this.comparisonOperator = Output.empty();
-        this.notificationType = Output.empty();
-        this.subscriberEmailAddresses = Output.empty();
-        this.subscriberSnsTopicArns = Output.empty();
-        this.threshold = Output.empty();
-        this.thresholdType = Output.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.notificationType = Codegen.empty();
+        this.subscriberEmailAddresses = Codegen.empty();
+        this.subscriberSnsTopicArns = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.thresholdType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
-            this.subscriberEmailAddresses = Output.ofNullable(subscriberEmailAddresses);
+            this.subscriberEmailAddresses = Codegen.ofNullable(subscriberEmailAddresses);
             return this;
         }
         public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
@@ -168,7 +169,7 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subscriberSnsTopicArns(@Nullable List<String> subscriberSnsTopicArns) {
-            this.subscriberSnsTopicArns = Output.ofNullable(subscriberSnsTopicArns);
+            this.subscriberSnsTopicArns = Codegen.ofNullable(subscriberSnsTopicArns);
             return this;
         }
         public Builder subscriberSnsTopicArns(String... subscriberSnsTopicArns) {

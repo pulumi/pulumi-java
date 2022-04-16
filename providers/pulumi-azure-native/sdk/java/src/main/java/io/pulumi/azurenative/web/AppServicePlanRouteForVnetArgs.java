@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.enums.RouteType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="endAddress")
       private final @Nullable Output<String> endAddress;
 
-    public Output<String> getEndAddress() {
-        return this.endAddress == null ? Output.empty() : this.endAddress;
+    public Output<String> endAddress() {
+        return this.endAddress == null ? Codegen.empty() : this.endAddress;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -56,7 +57,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,8 +68,8 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="routeName")
       private final @Nullable Output<String> routeName;
 
-    public Output<String> getRouteName() {
-        return this.routeName == null ? Output.empty() : this.routeName;
+    public Output<String> routeName() {
+        return this.routeName == null ? Codegen.empty() : this.routeName;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="routeType")
       private final @Nullable Output<Either<String,RouteType>> routeType;
 
-    public Output<Either<String,RouteType>> getRouteType() {
-        return this.routeType == null ? Output.empty() : this.routeType;
+    public Output<Either<String,RouteType>> routeType() {
+        return this.routeType == null ? Codegen.empty() : this.routeType;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="startAddress")
       private final @Nullable Output<String> startAddress;
 
-    public Output<String> getStartAddress() {
-        return this.startAddress == null ? Output.empty() : this.startAddress;
+    public Output<String> startAddress() {
+        return this.startAddress == null ? Codegen.empty() : this.startAddress;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     @Import(name="vnetName", required=true)
       private final Output<String> vnetName;
 
-    public Output<String> getVnetName() {
+    public Output<String> vnetName() {
         return this.vnetName;
     }
 
@@ -129,14 +130,14 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
     }
 
     private AppServicePlanRouteForVnetArgs() {
-        this.endAddress = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routeName = Output.empty();
-        this.routeType = Output.empty();
-        this.startAddress = Output.empty();
-        this.vnetName = Output.empty();
+        this.endAddress = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routeName = Codegen.empty();
+        this.routeType = Codegen.empty();
+        this.startAddress = Codegen.empty();
+        this.vnetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder endAddress(@Nullable String endAddress) {
-            this.endAddress = Output.ofNullable(endAddress);
+            this.endAddress = Codegen.ofNullable(endAddress);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -186,7 +187,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -210,7 +211,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder routeName(@Nullable String routeName) {
-            this.routeName = Output.ofNullable(routeName);
+            this.routeName = Codegen.ofNullable(routeName);
             return this;
         }
         public Builder routeType(@Nullable Output<Either<String,RouteType>> routeType) {
@@ -218,7 +219,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder routeType(@Nullable Either<String,RouteType> routeType) {
-            this.routeType = Output.ofNullable(routeType);
+            this.routeType = Codegen.ofNullable(routeType);
             return this;
         }
         public Builder startAddress(@Nullable Output<String> startAddress) {
@@ -226,7 +227,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder startAddress(@Nullable String startAddress) {
-            this.startAddress = Output.ofNullable(startAddress);
+            this.startAddress = Codegen.ofNullable(startAddress);
             return this;
         }
         public Builder vnetName(Output<String> vnetName) {

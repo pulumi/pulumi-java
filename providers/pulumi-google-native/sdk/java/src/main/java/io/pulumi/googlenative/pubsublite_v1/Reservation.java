@@ -6,6 +6,7 @@ package io.pulumi.googlenative.pubsublite_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsublite_v1.ReservationArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -42,7 +43,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
      * 
      */
-    public Output<String> getThroughputCapacity() {
+    public Output<String> throughputCapacity() {
         return this.throughputCapacity;
     }
 
@@ -68,7 +69,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Reservation(String name, ReservationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:pubsublite/v1:Reservation", name, args == null ? ReservationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:pubsublite/v1:Reservation", name, args == null ? ReservationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Reservation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

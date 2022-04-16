@@ -10,6 +10,7 @@ import io.pulumi.azurenative.securityinsights.inputs.RepositoryArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentTypes", required=true)
       private final Output<List<Either<String,ContentType>>> contentTypes;
 
-    public Output<List<Either<String,ContentType>>> getContentTypes() {
+    public Output<List<Either<String,ContentType>>> contentTypes() {
         return this.contentTypes;
     }
 
@@ -38,8 +39,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+    public Output<String> createdBy() {
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> getCreatedByType() {
-        return this.createdByType == null ? Output.empty() : this.createdByType;
+    public Output<Either<String,CreatedByType>> createdByType() {
+        return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -93,8 +94,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
+    public Output<String> lastModifiedAt() {
+        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
+    public Output<String> lastModifiedBy() {
+        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
+    public Output<Either<String,CreatedByType>> lastModifiedByType() {
+        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -148,7 +149,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoType", required=true)
       private final Output<Either<String,RepoType>> repoType;
 
-    public Output<Either<String,RepoType>> getRepoType() {
+    public Output<Either<String,RepoType>> repoType() {
         return this.repoType;
     }
 
@@ -159,7 +160,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repository", required=true)
       private final Output<RepositoryArgs> repository;
 
-    public Output<RepositoryArgs> getRepository() {
+    public Output<RepositoryArgs> repository() {
         return this.repository;
     }
 
@@ -170,7 +171,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -181,8 +182,8 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceControlId")
       private final @Nullable Output<String> sourceControlId;
 
-    public Output<String> getSourceControlId() {
-        return this.sourceControlId == null ? Output.empty() : this.sourceControlId;
+    public Output<String> sourceControlId() {
+        return this.sourceControlId == null ? Codegen.empty() : this.sourceControlId;
     }
 
     /**
@@ -192,7 +193,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -232,22 +233,22 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceControlArgs() {
-        this.contentTypes = Output.empty();
-        this.createdAt = Output.empty();
-        this.createdBy = Output.empty();
-        this.createdByType = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.id = Output.empty();
-        this.lastModifiedAt = Output.empty();
-        this.lastModifiedBy = Output.empty();
-        this.lastModifiedByType = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.repoType = Output.empty();
-        this.repository = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sourceControlId = Output.empty();
-        this.workspaceName = Output.empty();
+        this.contentTypes = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.createdByType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.lastModifiedAt = Codegen.empty();
+        this.lastModifiedBy = Codegen.empty();
+        this.lastModifiedByType = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.repoType = Codegen.empty();
+        this.repository = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sourceControlId = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -316,7 +317,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder createdBy(@Nullable Output<String> createdBy) {
@@ -324,7 +325,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
@@ -332,7 +333,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Output.ofNullable(createdByType);
+            this.createdByType = Codegen.ofNullable(createdByType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -340,7 +341,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -356,7 +357,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
@@ -364,7 +365,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
             return this;
         }
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
@@ -372,7 +373,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
             return this;
         }
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
@@ -380,7 +381,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
             return this;
         }
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
@@ -420,7 +421,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceControlId(@Nullable String sourceControlId) {
-            this.sourceControlId = Output.ofNullable(sourceControlId);
+            this.sourceControlId = Codegen.ofNullable(sourceControlId);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

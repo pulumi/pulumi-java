@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
     @Import(name="maximumExecutionTimeoutInSeconds")
       private final @Nullable Output<Integer> maximumExecutionTimeoutInSeconds;
 
-    public Output<Integer> getMaximumExecutionTimeoutInSeconds() {
-        return this.maximumExecutionTimeoutInSeconds == null ? Output.empty() : this.maximumExecutionTimeoutInSeconds;
+    public Output<Integer> maximumExecutionTimeoutInSeconds() {
+        return this.maximumExecutionTimeoutInSeconds == null ? Codegen.empty() : this.maximumExecutionTimeoutInSeconds;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
     @Import(name="terminationWaitInSeconds")
       private final @Nullable Output<Integer> terminationWaitInSeconds;
 
-    public Output<Integer> getTerminationWaitInSeconds() {
-        return this.terminationWaitInSeconds == null ? Output.empty() : this.terminationWaitInSeconds;
+    public Output<Integer> terminationWaitInSeconds() {
+        return this.terminationWaitInSeconds == null ? Codegen.empty() : this.terminationWaitInSeconds;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
     @Import(name="trafficRoutingConfiguration", required=true)
       private final Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration;
 
-    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> getTrafficRoutingConfiguration() {
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration() {
         return this.trafficRoutingConfiguration;
     }
 
@@ -58,9 +59,9 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
     }
 
     private EndpointDeploymentConfigBlueGreenUpdatePolicyArgs() {
-        this.maximumExecutionTimeoutInSeconds = Output.empty();
-        this.terminationWaitInSeconds = Output.empty();
-        this.trafficRoutingConfiguration = Output.empty();
+        this.maximumExecutionTimeoutInSeconds = Codegen.empty();
+        this.terminationWaitInSeconds = Codegen.empty();
+        this.trafficRoutingConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
             return this;
         }
         public Builder maximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
-            this.maximumExecutionTimeoutInSeconds = Output.ofNullable(maximumExecutionTimeoutInSeconds);
+            this.maximumExecutionTimeoutInSeconds = Codegen.ofNullable(maximumExecutionTimeoutInSeconds);
             return this;
         }
         public Builder terminationWaitInSeconds(@Nullable Output<Integer> terminationWaitInSeconds) {
@@ -100,7 +101,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
             return this;
         }
         public Builder terminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
-            this.terminationWaitInSeconds = Output.ofNullable(terminationWaitInSeconds);
+            this.terminationWaitInSeconds = Codegen.ofNullable(terminationWaitInSeconds);
             return this;
         }
         public Builder trafficRoutingConfiguration(Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration) {

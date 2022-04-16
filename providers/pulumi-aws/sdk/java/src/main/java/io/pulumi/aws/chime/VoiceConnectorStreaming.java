@@ -9,6 +9,7 @@ import io.pulumi.aws.chime.inputs.VoiceConnectorStreamingState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return The retention period, in hours, for the Amazon Kinesis data.
      * 
      */
-    public Output<Integer> getDataRetention() {
+    public Output<Integer> dataRetention() {
         return this.dataRetention;
     }
     /**
@@ -57,7 +58,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return When true, media streaming to Amazon Kinesis is turned off. Default: `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -71,7 +72,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return The streaming notification targets. Valid Values: `EventBridge | SNS | SQS`
      * 
      */
-    public Output</* @Nullable */ List<String>> getStreamingNotificationTargets() {
+    public Output</* @Nullable */ List<String>> streamingNotificationTargets() {
         return this.streamingNotificationTargets;
     }
     /**
@@ -85,7 +86,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return The Amazon Chime Voice Connector ID.
      * 
      */
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 
@@ -111,7 +112,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public VoiceConnectorStreaming(String name, VoiceConnectorStreamingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:chime/voiceConnectorStreaming:VoiceConnectorStreaming", name, args == null ? VoiceConnectorStreamingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:chime/voiceConnectorStreaming:VoiceConnectorStreaming", name, args == null ? VoiceConnectorStreamingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VoiceConnectorStreaming(String name, Output<String> id, @Nullable VoiceConnectorStreamingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

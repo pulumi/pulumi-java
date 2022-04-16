@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SourceScoringConfigSourceImportance;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceImportance")
       private final @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
 
-    public Output<SourceScoringConfigSourceImportance> getSourceImportance() {
-        return this.sourceImportance == null ? Output.empty() : this.sourceImportance;
+    public Output<SourceScoringConfigSourceImportance> sourceImportance() {
+        return this.sourceImportance == null ? Codegen.empty() : this.sourceImportance;
     }
 
     public SourceScoringConfigArgs(@Nullable Output<SourceScoringConfigSourceImportance> sourceImportance) {
@@ -34,7 +35,7 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private SourceScoringConfigArgs() {
-        this.sourceImportance = Output.empty();
+        this.sourceImportance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceImportance(@Nullable SourceScoringConfigSourceImportance sourceImportance) {
-            this.sourceImportance = Output.ofNullable(sourceImportance);
+            this.sourceImportance = Codegen.ofNullable(sourceImportance);
             return this;
         }        public SourceScoringConfigArgs build() {
             return new SourceScoringConfigArgs(sourceImportance);

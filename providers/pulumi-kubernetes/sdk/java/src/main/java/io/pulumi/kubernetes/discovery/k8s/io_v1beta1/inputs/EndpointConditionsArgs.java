@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ready")
       private final @Nullable Output<Boolean> ready;
 
-    public Output<Boolean> getReady() {
-        return this.ready == null ? Output.empty() : this.ready;
+    public Output<Boolean> ready() {
+        return this.ready == null ? Codegen.empty() : this.ready;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serving")
       private final @Nullable Output<Boolean> serving;
 
-    public Output<Boolean> getServing() {
-        return this.serving == null ? Output.empty() : this.serving;
+    public Output<Boolean> serving() {
+        return this.serving == null ? Codegen.empty() : this.serving;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="terminating")
       private final @Nullable Output<Boolean> terminating;
 
-    public Output<Boolean> getTerminating() {
-        return this.terminating == null ? Output.empty() : this.terminating;
+    public Output<Boolean> terminating() {
+        return this.terminating == null ? Codegen.empty() : this.terminating;
     }
 
     public EndpointConditionsArgs(
@@ -61,9 +62,9 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EndpointConditionsArgs() {
-        this.ready = Output.empty();
-        this.serving = Output.empty();
-        this.terminating = Output.empty();
+        this.ready = Codegen.empty();
+        this.serving = Codegen.empty();
+        this.terminating = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ready(@Nullable Boolean ready) {
-            this.ready = Output.ofNullable(ready);
+            this.ready = Codegen.ofNullable(ready);
             return this;
         }
         public Builder serving(@Nullable Output<Boolean> serving) {
@@ -103,7 +104,7 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder serving(@Nullable Boolean serving) {
-            this.serving = Output.ofNullable(serving);
+            this.serving = Codegen.ofNullable(serving);
             return this;
         }
         public Builder terminating(@Nullable Output<Boolean> terminating) {
@@ -111,7 +112,7 @@ public final class EndpointConditionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder terminating(@Nullable Boolean terminating) {
-            this.terminating = Output.ofNullable(terminating);
+            this.terminating = Codegen.ofNullable(terminating);
             return this;
         }        public EndpointConditionsArgs build() {
             return new EndpointConditionsArgs(ready, serving, terminating);

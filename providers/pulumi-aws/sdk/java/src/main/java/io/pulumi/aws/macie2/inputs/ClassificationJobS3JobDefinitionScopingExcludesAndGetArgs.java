@@ -7,6 +7,7 @@ import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExclud
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs ext
     @Import(name="simpleScopeTerm")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermGetArgs> simpleScopeTerm;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermGetArgs> getSimpleScopeTerm() {
-        return this.simpleScopeTerm == null ? Output.empty() : this.simpleScopeTerm;
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermGetArgs> simpleScopeTerm() {
+        return this.simpleScopeTerm == null ? Codegen.empty() : this.simpleScopeTerm;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs ext
     @Import(name="tagScopeTerm")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs> tagScopeTerm;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs> getTagScopeTerm() {
-        return this.tagScopeTerm == null ? Output.empty() : this.tagScopeTerm;
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs> tagScopeTerm() {
+        return this.tagScopeTerm == null ? Codegen.empty() : this.tagScopeTerm;
     }
 
     public ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs(
@@ -45,8 +46,8 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs ext
     }
 
     private ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs() {
-        this.simpleScopeTerm = Output.empty();
-        this.tagScopeTerm = Output.empty();
+        this.simpleScopeTerm = Codegen.empty();
+        this.tagScopeTerm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs ext
             return this;
         }
         public Builder simpleScopeTerm(@Nullable ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermGetArgs simpleScopeTerm) {
-            this.simpleScopeTerm = Output.ofNullable(simpleScopeTerm);
+            this.simpleScopeTerm = Codegen.ofNullable(simpleScopeTerm);
             return this;
         }
         public Builder tagScopeTerm(@Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs> tagScopeTerm) {
@@ -84,7 +85,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs ext
             return this;
         }
         public Builder tagScopeTerm(@Nullable ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermGetArgs tagScopeTerm) {
-            this.tagScopeTerm = Output.ofNullable(tagScopeTerm);
+            this.tagScopeTerm = Codegen.ofNullable(tagScopeTerm);
             return this;
         }        public ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs build() {
             return new ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs(simpleScopeTerm, tagScopeTerm);

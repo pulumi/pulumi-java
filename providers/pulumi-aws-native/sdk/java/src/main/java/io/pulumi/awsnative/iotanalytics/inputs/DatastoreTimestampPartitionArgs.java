@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
     @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
-    public Output<String> getAttributeName() {
+    public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="timestampFormat")
       private final @Nullable Output<String> timestampFormat;
 
-    public Output<String> getTimestampFormat() {
-        return this.timestampFormat == null ? Output.empty() : this.timestampFormat;
+    public Output<String> timestampFormat() {
+        return this.timestampFormat == null ? Codegen.empty() : this.timestampFormat;
     }
 
     public DatastoreTimestampPartitionArgs(
@@ -36,8 +37,8 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
     }
 
     private DatastoreTimestampPartitionArgs() {
-        this.attributeName = Output.empty();
-        this.timestampFormat = Output.empty();
+        this.attributeName = Codegen.empty();
+        this.timestampFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder timestampFormat(@Nullable String timestampFormat) {
-            this.timestampFormat = Output.ofNullable(timestampFormat);
+            this.timestampFormat = Codegen.ofNullable(timestampFormat);
             return this;
         }        public DatastoreTimestampPartitionArgs build() {
             return new DatastoreTimestampPartitionArgs(attributeName, timestampFormat);

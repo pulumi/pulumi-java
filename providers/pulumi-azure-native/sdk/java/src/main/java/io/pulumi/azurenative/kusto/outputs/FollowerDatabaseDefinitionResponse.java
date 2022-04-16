@@ -39,21 +39,21 @@ public final class FollowerDatabaseDefinitionResponse {
      * Resource name of the attached database configuration in the follower cluster.
      * 
     */
-    public String getAttachedDatabaseConfigurationName() {
+    public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
      * Resource id of the cluster that follows a database owned by this cluster.
      * 
     */
-    public String getClusterResourceId() {
+    public String clusterResourceId() {
         return this.clusterResourceId;
     }
     /**
      * The database name owned by this cluster that was followed. * in case following all databases.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 

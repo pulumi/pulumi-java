@@ -12,6 +12,7 @@ import io.pulumi.azurenative.desktopvirtualization.inputs.ScalingScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exclusionTag")
       private final @Nullable Output<String> exclusionTag;
 
-    public Output<String> getExclusionTag() {
-        return this.exclusionTag == null ? Output.empty() : this.exclusionTag;
+    public Output<String> exclusionTag() {
+        return this.exclusionTag == null ? Codegen.empty() : this.exclusionTag;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolReferences")
       private final @Nullable Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences;
 
-    public Output<List<ScalingHostPoolReferenceArgs>> getHostPoolReferences() {
-        return this.hostPoolReferences == null ? Output.empty() : this.hostPoolReferences;
+    public Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences() {
+        return this.hostPoolReferences == null ? Codegen.empty() : this.hostPoolReferences;
     }
 
     /**
@@ -75,15 +76,15 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolType")
       private final @Nullable Output<Either<String,HostPoolType>> hostPoolType;
 
-    public Output<Either<String,HostPoolType>> getHostPoolType() {
-        return this.hostPoolType == null ? Output.empty() : this.hostPoolType;
+    public Output<Either<String,HostPoolType>> hostPoolType() {
+        return this.hostPoolType == null ? Codegen.empty() : this.hostPoolType;
     }
 
     @Import(name="identity")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -115,15 +116,15 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
-    public Output<String> getManagedBy() {
-        return this.managedBy == null ? Output.empty() : this.managedBy;
+    public Output<String> managedBy() {
+        return this.managedBy == null ? Codegen.empty() : this.managedBy;
     }
 
     @Import(name="plan")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Output<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+    public Output<ResourceModelWithAllowedPropertySetPlanArgs> plan() {
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -144,8 +145,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ring")
       private final @Nullable Output<Integer> ring;
 
-    public Output<Integer> getRing() {
-        return this.ring == null ? Output.empty() : this.ring;
+    public Output<Integer> ring() {
+        return this.ring == null ? Codegen.empty() : this.ring;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalingPlanName")
       private final @Nullable Output<String> scalingPlanName;
 
-    public Output<String> getScalingPlanName() {
-        return this.scalingPlanName == null ? Output.empty() : this.scalingPlanName;
+    public Output<String> scalingPlanName() {
+        return this.scalingPlanName == null ? Codegen.empty() : this.scalingPlanName;
     }
 
     /**
@@ -166,15 +167,15 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedules")
       private final @Nullable Output<List<ScalingScheduleArgs>> schedules;
 
-    public Output<List<ScalingScheduleArgs>> getSchedules() {
-        return this.schedules == null ? Output.empty() : this.schedules;
+    public Output<List<ScalingScheduleArgs>> schedules() {
+        return this.schedules == null ? Codegen.empty() : this.schedules;
     }
 
     @Import(name="sku")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Output<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<ResourceModelWithAllowedPropertySetSkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public ScalingPlanArgs(
@@ -237,23 +238,23 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScalingPlanArgs() {
-        this.description = Output.empty();
-        this.exclusionTag = Output.empty();
-        this.friendlyName = Output.empty();
-        this.hostPoolReferences = Output.empty();
-        this.hostPoolType = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.managedBy = Output.empty();
-        this.plan = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ring = Output.empty();
-        this.scalingPlanName = Output.empty();
-        this.schedules = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.timeZone = Output.empty();
+        this.description = Codegen.empty();
+        this.exclusionTag = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.hostPoolReferences = Codegen.empty();
+        this.hostPoolType = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedBy = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ring = Codegen.empty();
+        this.scalingPlanName = Codegen.empty();
+        this.schedules = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -313,7 +314,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder exclusionTag(@Nullable Output<String> exclusionTag) {
@@ -321,7 +322,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exclusionTag(@Nullable String exclusionTag) {
-            this.exclusionTag = Output.ofNullable(exclusionTag);
+            this.exclusionTag = Codegen.ofNullable(exclusionTag);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -329,7 +330,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder hostPoolReferences(@Nullable Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences) {
@@ -337,7 +338,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostPoolReferences(@Nullable List<ScalingHostPoolReferenceArgs> hostPoolReferences) {
-            this.hostPoolReferences = Output.ofNullable(hostPoolReferences);
+            this.hostPoolReferences = Codegen.ofNullable(hostPoolReferences);
             return this;
         }
         public Builder hostPoolReferences(ScalingHostPoolReferenceArgs... hostPoolReferences) {
@@ -348,7 +349,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostPoolType(@Nullable Either<String,HostPoolType> hostPoolType) {
-            this.hostPoolType = Output.ofNullable(hostPoolType);
+            this.hostPoolType = Codegen.ofNullable(hostPoolType);
             return this;
         }
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
@@ -356,7 +357,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -364,7 +365,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -372,7 +373,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedBy(@Nullable Output<String> managedBy) {
@@ -380,7 +381,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Output.ofNullable(managedBy);
+            this.managedBy = Codegen.ofNullable(managedBy);
             return this;
         }
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
@@ -388,7 +389,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -404,7 +405,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ring(@Nullable Integer ring) {
-            this.ring = Output.ofNullable(ring);
+            this.ring = Codegen.ofNullable(ring);
             return this;
         }
         public Builder scalingPlanName(@Nullable Output<String> scalingPlanName) {
@@ -412,7 +413,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scalingPlanName(@Nullable String scalingPlanName) {
-            this.scalingPlanName = Output.ofNullable(scalingPlanName);
+            this.scalingPlanName = Codegen.ofNullable(scalingPlanName);
             return this;
         }
         public Builder schedules(@Nullable Output<List<ScalingScheduleArgs>> schedules) {
@@ -420,7 +421,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedules(@Nullable List<ScalingScheduleArgs> schedules) {
-            this.schedules = Output.ofNullable(schedules);
+            this.schedules = Codegen.ofNullable(schedules);
             return this;
         }
         public Builder schedules(ScalingScheduleArgs... schedules) {
@@ -431,7 +432,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -439,7 +440,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -447,7 +448,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public ScalingPlanArgs build() {
             return new ScalingPlanArgs(description, exclusionTag, friendlyName, hostPoolReferences, hostPoolType, identity, kind, location, managedBy, plan, resourceGroupName, ring, scalingPlanName, schedules, sku, tags, timeZone);

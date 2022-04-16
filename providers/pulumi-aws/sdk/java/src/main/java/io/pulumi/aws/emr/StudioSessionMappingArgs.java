@@ -5,6 +5,7 @@ package io.pulumi.aws.emr;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="identityId")
       private final @Nullable Output<String> identityId;
 
-    public Output<String> getIdentityId() {
-        return this.identityId == null ? Output.empty() : this.identityId;
+    public Output<String> identityId() {
+        return this.identityId == null ? Codegen.empty() : this.identityId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="identityName")
       private final @Nullable Output<String> identityName;
 
-    public Output<String> getIdentityName() {
-        return this.identityName == null ? Output.empty() : this.identityName;
+    public Output<String> identityName() {
+        return this.identityName == null ? Codegen.empty() : this.identityName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="identityType", required=true)
       private final Output<String> identityType;
 
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType;
     }
 
@@ -54,7 +55,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="sessionPolicyArn", required=true)
       private final Output<String> sessionPolicyArn;
 
-    public Output<String> getSessionPolicyArn() {
+    public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
     }
 
@@ -65,7 +66,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -83,11 +84,11 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     }
 
     private StudioSessionMappingArgs() {
-        this.identityId = Output.empty();
-        this.identityName = Output.empty();
-        this.identityType = Output.empty();
-        this.sessionPolicyArn = Output.empty();
-        this.studioId = Output.empty();
+        this.identityId = Codegen.empty();
+        this.identityName = Codegen.empty();
+        this.identityType = Codegen.empty();
+        this.sessionPolicyArn = Codegen.empty();
+        this.studioId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder identityId(@Nullable String identityId) {
-            this.identityId = Output.ofNullable(identityId);
+            this.identityId = Codegen.ofNullable(identityId);
             return this;
         }
         public Builder identityName(@Nullable Output<String> identityName) {
@@ -131,7 +132,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder identityName(@Nullable String identityName) {
-            this.identityName = Output.ofNullable(identityName);
+            this.identityName = Codegen.ofNullable(identityName);
             return this;
         }
         public Builder identityType(Output<String> identityType) {

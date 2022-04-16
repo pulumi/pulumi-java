@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -30,8 +31,8 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<String> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<String> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -52,21 +53,21 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensions")
       private final @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Output<List<Map<String,String>>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+    public Output<List<Map<String,String>>> extensions() {
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -86,12 +87,12 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SharedflowArgs() {
-        this.action = Output.empty();
-        this.contentType = Output.empty();
-        this.data = Output.empty();
-        this.extensions = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
+        this.action = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.data = Codegen.empty();
+        this.extensions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder data(@Nullable Output<String> data) {
@@ -145,7 +146,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
@@ -153,7 +154,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -161,7 +162,7 @@ public final class SharedflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {

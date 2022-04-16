@@ -8,6 +8,7 @@ import io.pulumi.awsnative.athena.PreparedStatementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The description of the prepared statement.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -42,7 +43,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The query string for the prepared statement.
      * 
      */
-    public Output<String> getQueryStatement() {
+    public Output<String> queryStatement() {
         return this.queryStatement;
     }
     /**
@@ -56,7 +57,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The name of the prepared statement.
      * 
      */
-    public Output<String> getStatementName() {
+    public Output<String> statementName() {
         return this.statementName;
     }
     /**
@@ -70,7 +71,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The name of the workgroup to which the prepared statement belongs.
      * 
      */
-    public Output<String> getWorkGroup() {
+    public Output<String> workGroup() {
         return this.workGroup;
     }
 
@@ -96,7 +97,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PreparedStatement(String name, PreparedStatementArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:athena:PreparedStatement", name, args == null ? PreparedStatementArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:athena:PreparedStatement", name, args == null ? PreparedStatementArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PreparedStatement(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networksecurity_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1.ServerTlsPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleCloudNetworksecurityV1CertificateProviderResponse;
@@ -32,7 +33,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
      */
-    public Output<Boolean> getAllowOpen() {
+    public Output<Boolean> allowOpen() {
         return this.allowOpen;
     }
     /**
@@ -46,7 +47,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +61,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Free-text description of the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -74,7 +75,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Set of label tags associated with the resource.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -88,7 +89,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
      * 
      */
-    public Output<MTLSPolicyResponse> getMtlsPolicy() {
+    public Output<MTLSPolicyResponse> mtlsPolicy() {
         return this.mtlsPolicy;
     }
     /**
@@ -102,7 +103,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
      * 
      */
-    public Output<GoogleCloudNetworksecurityV1CertificateProviderResponse> getServerCertificate() {
+    public Output<GoogleCloudNetworksecurityV1CertificateProviderResponse> serverCertificate() {
         return this.serverCertificate;
     }
     /**
@@ -130,7 +131,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -156,7 +157,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerTlsPolicy(String name, ServerTlsPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networksecurity/v1:ServerTlsPolicy", name, args == null ? ServerTlsPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networksecurity/v1:ServerTlsPolicy", name, args == null ? ServerTlsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerTlsPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

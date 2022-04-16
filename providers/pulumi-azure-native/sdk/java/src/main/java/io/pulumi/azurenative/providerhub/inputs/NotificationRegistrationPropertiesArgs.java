@@ -10,6 +10,7 @@ import io.pulumi.azurenative.providerhub.inputs.NotificationEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,36 +24,36 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     @Import(name="includedEvents")
       private final @Nullable Output<List<String>> includedEvents;
 
-    public Output<List<String>> getIncludedEvents() {
-        return this.includedEvents == null ? Output.empty() : this.includedEvents;
+    public Output<List<String>> includedEvents() {
+        return this.includedEvents == null ? Codegen.empty() : this.includedEvents;
     }
 
     @Import(name="messageScope")
       private final @Nullable Output<Either<String,MessageScope>> messageScope;
 
-    public Output<Either<String,MessageScope>> getMessageScope() {
-        return this.messageScope == null ? Output.empty() : this.messageScope;
+    public Output<Either<String,MessageScope>> messageScope() {
+        return this.messageScope == null ? Codegen.empty() : this.messageScope;
     }
 
     @Import(name="notificationEndpoints")
       private final @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
 
-    public Output<List<NotificationEndpointArgs>> getNotificationEndpoints() {
-        return this.notificationEndpoints == null ? Output.empty() : this.notificationEndpoints;
+    public Output<List<NotificationEndpointArgs>> notificationEndpoints() {
+        return this.notificationEndpoints == null ? Codegen.empty() : this.notificationEndpoints;
     }
 
     @Import(name="notificationMode")
       private final @Nullable Output<Either<String,NotificationMode>> notificationMode;
 
-    public Output<Either<String,NotificationMode>> getNotificationMode() {
-        return this.notificationMode == null ? Output.empty() : this.notificationMode;
+    public Output<Either<String,NotificationMode>> notificationMode() {
+        return this.notificationMode == null ? Codegen.empty() : this.notificationMode;
     }
 
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     public NotificationRegistrationPropertiesArgs(
@@ -69,11 +70,11 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     }
 
     private NotificationRegistrationPropertiesArgs() {
-        this.includedEvents = Output.empty();
-        this.messageScope = Output.empty();
-        this.notificationEndpoints = Output.empty();
-        this.notificationMode = Output.empty();
-        this.provisioningState = Output.empty();
+        this.includedEvents = Codegen.empty();
+        this.messageScope = Codegen.empty();
+        this.notificationEndpoints = Codegen.empty();
+        this.notificationMode = Codegen.empty();
+        this.provisioningState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder includedEvents(@Nullable List<String> includedEvents) {
-            this.includedEvents = Output.ofNullable(includedEvents);
+            this.includedEvents = Codegen.ofNullable(includedEvents);
             return this;
         }
         public Builder includedEvents(String... includedEvents) {
@@ -120,7 +121,7 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder messageScope(@Nullable Either<String,MessageScope> messageScope) {
-            this.messageScope = Output.ofNullable(messageScope);
+            this.messageScope = Codegen.ofNullable(messageScope);
             return this;
         }
         public Builder notificationEndpoints(@Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints) {
@@ -128,7 +129,7 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder notificationEndpoints(@Nullable List<NotificationEndpointArgs> notificationEndpoints) {
-            this.notificationEndpoints = Output.ofNullable(notificationEndpoints);
+            this.notificationEndpoints = Codegen.ofNullable(notificationEndpoints);
             return this;
         }
         public Builder notificationEndpoints(NotificationEndpointArgs... notificationEndpoints) {
@@ -139,7 +140,7 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder notificationMode(@Nullable Either<String,NotificationMode> notificationMode) {
-            this.notificationMode = Output.ofNullable(notificationMode);
+            this.notificationMode = Codegen.ofNullable(notificationMode);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
@@ -147,7 +148,7 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }        public NotificationRegistrationPropertiesArgs build() {
             return new NotificationRegistrationPropertiesArgs(includedEvents, messageScope, notificationEndpoints, notificationMode, provisioningState);

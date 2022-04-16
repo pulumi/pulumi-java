@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.enums.AutoHealActionType;
 import io.pulumi.azurenative.web.inputs.AutoHealCustomActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="actionType")
       private final @Nullable Output<AutoHealActionType> actionType;
 
-    public Output<AutoHealActionType> getActionType() {
-        return this.actionType == null ? Output.empty() : this.actionType;
+    public Output<AutoHealActionType> actionType() {
+        return this.actionType == null ? Codegen.empty() : this.actionType;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customAction")
       private final @Nullable Output<AutoHealCustomActionArgs> customAction;
 
-    public Output<AutoHealCustomActionArgs> getCustomAction() {
-        return this.customAction == null ? Output.empty() : this.customAction;
+    public Output<AutoHealCustomActionArgs> customAction() {
+        return this.customAction == null ? Codegen.empty() : this.customAction;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="minProcessExecutionTime")
       private final @Nullable Output<String> minProcessExecutionTime;
 
-    public Output<String> getMinProcessExecutionTime() {
-        return this.minProcessExecutionTime == null ? Output.empty() : this.minProcessExecutionTime;
+    public Output<String> minProcessExecutionTime() {
+        return this.minProcessExecutionTime == null ? Codegen.empty() : this.minProcessExecutionTime;
     }
 
     public AutoHealActionsArgs(
@@ -64,9 +65,9 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AutoHealActionsArgs() {
-        this.actionType = Output.empty();
-        this.customAction = Output.empty();
-        this.minProcessExecutionTime = Output.empty();
+        this.actionType = Codegen.empty();
+        this.customAction = Codegen.empty();
+        this.minProcessExecutionTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder actionType(@Nullable AutoHealActionType actionType) {
-            this.actionType = Output.ofNullable(actionType);
+            this.actionType = Codegen.ofNullable(actionType);
             return this;
         }
         public Builder customAction(@Nullable Output<AutoHealCustomActionArgs> customAction) {
@@ -106,7 +107,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder customAction(@Nullable AutoHealCustomActionArgs customAction) {
-            this.customAction = Output.ofNullable(customAction);
+            this.customAction = Codegen.ofNullable(customAction);
             return this;
         }
         public Builder minProcessExecutionTime(@Nullable Output<String> minProcessExecutionTime) {
@@ -114,7 +115,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
-            this.minProcessExecutionTime = Output.ofNullable(minProcessExecutionTime);
+            this.minProcessExecutionTime = Codegen.ofNullable(minProcessExecutionTime);
             return this;
         }        public AutoHealActionsArgs build() {
             return new AutoHealActionsArgs(actionType, customAction, minProcessExecutionTime);

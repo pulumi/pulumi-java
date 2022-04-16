@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @return The current state of the VirtualHub to Peer.
      * 
      */
-    public Output<String> getConnectionState() {
+    public Output<String> connectionState() {
         return this.connectionState;
     }
     /**
@@ -56,7 +57,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -70,7 +71,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @return Name of the connection.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @return Peer ASN.
      * 
      */
-    public Output</* @Nullable */ Double> getPeerAsn() {
+    public Output</* @Nullable */ Double> peerAsn() {
         return this.peerAsn;
     }
     /**
@@ -98,7 +99,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @return Peer IP.
      * 
      */
-    public Output</* @Nullable */ String> getPeerIp() {
+    public Output</* @Nullable */ String> peerIp() {
         return this.peerIp;
     }
     /**
@@ -112,7 +113,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -126,7 +127,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @return Connection type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -152,7 +153,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualHubBgpConnection(String name, VirtualHubBgpConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualHubBgpConnection", name, args == null ? VirtualHubBgpConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualHubBgpConnection", name, args == null ? VirtualHubBgpConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualHubBgpConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

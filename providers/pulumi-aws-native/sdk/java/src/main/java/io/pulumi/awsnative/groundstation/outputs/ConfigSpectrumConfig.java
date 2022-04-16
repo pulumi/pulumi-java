@@ -27,13 +27,13 @@ public final class ConfigSpectrumConfig {
         this.polarization = polarization;
     }
 
-    public Optional<ConfigFrequencyBandwidth> getBandwidth() {
+    public Optional<ConfigFrequencyBandwidth> bandwidth() {
         return Optional.ofNullable(this.bandwidth);
     }
-    public Optional<ConfigFrequency> getCenterFrequency() {
+    public Optional<ConfigFrequency> centerFrequency() {
         return Optional.ofNullable(this.centerFrequency);
     }
-    public Optional<ConfigPolarization> getPolarization() {
+    public Optional<ConfigPolarization> polarization() {
         return Optional.ofNullable(this.polarization);
     }
 

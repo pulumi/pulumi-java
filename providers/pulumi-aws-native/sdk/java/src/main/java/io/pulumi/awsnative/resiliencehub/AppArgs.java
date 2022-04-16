@@ -7,6 +7,7 @@ import io.pulumi.awsnative.resiliencehub.inputs.AppResourceMappingArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.AppTagMapArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appTemplateBody", required=true)
       private final Output<String> appTemplateBody;
 
-    public Output<String> getAppTemplateBody() {
+    public Output<String> appTemplateBody() {
         return this.appTemplateBody;
     }
 
@@ -35,8 +36,8 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resiliencyPolicyArn")
       private final @Nullable Output<String> resiliencyPolicyArn;
 
-    public Output<String> getResiliencyPolicyArn() {
-        return this.resiliencyPolicyArn == null ? Output.empty() : this.resiliencyPolicyArn;
+    public Output<String> resiliencyPolicyArn() {
+        return this.resiliencyPolicyArn == null ? Codegen.empty() : this.resiliencyPolicyArn;
     }
 
     /**
@@ -68,15 +69,15 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceMappings", required=true)
       private final Output<List<AppResourceMappingArgs>> resourceMappings;
 
-    public Output<List<AppResourceMappingArgs>> getResourceMappings() {
+    public Output<List<AppResourceMappingArgs>> resourceMappings() {
         return this.resourceMappings;
     }
 
     @Import(name="tags")
       private final @Nullable Output<AppTagMapArgs> tags;
 
-    public Output<AppTagMapArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<AppTagMapArgs> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AppArgs(
@@ -95,12 +96,12 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.appTemplateBody = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.resiliencyPolicyArn = Output.empty();
-        this.resourceMappings = Output.empty();
-        this.tags = Output.empty();
+        this.appTemplateBody = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resiliencyPolicyArn = Codegen.empty();
+        this.resourceMappings = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -154,7 +155,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resiliencyPolicyArn(@Nullable Output<String> resiliencyPolicyArn) {
@@ -162,7 +163,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
-            this.resiliencyPolicyArn = Output.ofNullable(resiliencyPolicyArn);
+            this.resiliencyPolicyArn = Codegen.ofNullable(resiliencyPolicyArn);
             return this;
         }
         public Builder resourceMappings(Output<List<AppResourceMappingArgs>> resourceMappings) {
@@ -181,7 +182,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable AppTagMapArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AppArgs build() {
             return new AppArgs(appTemplateBody, description, name, resiliencyPolicyArn, resourceMappings, tags);

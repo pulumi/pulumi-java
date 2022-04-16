@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudsearch.inputs.DomainServiceAccessPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -35,7 +36,7 @@ public class DomainServiceAccessPolicy extends io.pulumi.resources.CustomResourc
      * @return The access rules you want to configure. These rules replace any existing rules. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html) for details.
      * 
      */
-    public Output<String> getAccessPolicy() {
+    public Output<String> accessPolicy() {
         return this.accessPolicy;
     }
     /**
@@ -49,7 +50,7 @@ public class DomainServiceAccessPolicy extends io.pulumi.resources.CustomResourc
      * @return The CloudSearch domain name the policy applies to.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -75,7 +76,7 @@ public class DomainServiceAccessPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainServiceAccessPolicy(String name, DomainServiceAccessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudsearch/domainServiceAccessPolicy:DomainServiceAccessPolicy", name, args == null ? DomainServiceAccessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudsearch/domainServiceAccessPolicy:DomainServiceAccessPolicy", name, args == null ? DomainServiceAccessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainServiceAccessPolicy(String name, Output<String> id, @Nullable DomainServiceAccessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

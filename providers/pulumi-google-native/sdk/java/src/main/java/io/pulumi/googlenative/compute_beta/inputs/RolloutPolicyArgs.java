@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRolloutTime")
       private final @Nullable Output<String> defaultRolloutTime;
 
-    public Output<String> getDefaultRolloutTime() {
-        return this.defaultRolloutTime == null ? Output.empty() : this.defaultRolloutTime;
+    public Output<String> defaultRolloutTime() {
+        return this.defaultRolloutTime == null ? Codegen.empty() : this.defaultRolloutTime;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationRolloutPolicies")
       private final @Nullable Output<Map<String,String>> locationRolloutPolicies;
 
-    public Output<Map<String,String>> getLocationRolloutPolicies() {
-        return this.locationRolloutPolicies == null ? Output.empty() : this.locationRolloutPolicies;
+    public Output<Map<String,String>> locationRolloutPolicies() {
+        return this.locationRolloutPolicies == null ? Codegen.empty() : this.locationRolloutPolicies;
     }
 
     public RolloutPolicyArgs(
@@ -49,8 +50,8 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RolloutPolicyArgs() {
-        this.defaultRolloutTime = Output.empty();
-        this.locationRolloutPolicies = Output.empty();
+        this.defaultRolloutTime = Codegen.empty();
+        this.locationRolloutPolicies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRolloutTime(@Nullable String defaultRolloutTime) {
-            this.defaultRolloutTime = Output.ofNullable(defaultRolloutTime);
+            this.defaultRolloutTime = Codegen.ofNullable(defaultRolloutTime);
             return this;
         }
         public Builder locationRolloutPolicies(@Nullable Output<Map<String,String>> locationRolloutPolicies) {
@@ -88,7 +89,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationRolloutPolicies(@Nullable Map<String,String> locationRolloutPolicies) {
-            this.locationRolloutPolicies = Output.ofNullable(locationRolloutPolicies);
+            this.locationRolloutPolicies = Codegen.ofNullable(locationRolloutPolicies);
             return this;
         }        public RolloutPolicyArgs build() {
             return new RolloutPolicyArgs(defaultRolloutTime, locationRolloutPolicies);

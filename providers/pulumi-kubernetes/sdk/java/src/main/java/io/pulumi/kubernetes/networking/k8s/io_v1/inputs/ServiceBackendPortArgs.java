@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+    public Output<Integer> number() {
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     public ServiceBackendPortArgs(
@@ -49,8 +50,8 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ServiceBackendPortArgs() {
-        this.name = Output.empty();
-        this.number = Output.empty();
+        this.name = Codegen.empty();
+        this.number = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder number(@Nullable Output<Integer> number) {
@@ -88,7 +89,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder number(@Nullable Integer number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }        public ServiceBackendPortArgs build() {
             return new ServiceBackendPortArgs(name, number);

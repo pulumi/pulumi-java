@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
     @Import(name="membership")
       private final @Nullable Output<String> membership;
 
-    public Output<String> getMembership() {
-        return this.membership == null ? Output.empty() : this.membership;
+    public Output<String> membership() {
+        return this.membership == null ? Codegen.empty() : this.membership;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public AzureClusterFleetGetArgs(
@@ -45,8 +46,8 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
     }
 
     private AzureClusterFleetGetArgs() {
-        this.membership = Output.empty();
-        this.project = Output.empty();
+        this.membership = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder membership(@Nullable String membership) {
-            this.membership = Output.ofNullable(membership);
+            this.membership = Codegen.ofNullable(membership);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -84,7 +85,7 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public AzureClusterFleetGetArgs build() {
             return new AzureClusterFleetGetArgs(membership, project);

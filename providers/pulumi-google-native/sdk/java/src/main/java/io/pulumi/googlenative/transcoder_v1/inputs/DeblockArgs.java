@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strength")
       private final @Nullable Output<Double> strength;
 
-    public Output<Double> getStrength() {
-        return this.strength == null ? Output.empty() : this.strength;
+    public Output<Double> strength() {
+        return this.strength == null ? Codegen.empty() : this.strength;
     }
 
     public DeblockArgs(
@@ -49,8 +50,8 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeblockArgs() {
-        this.enabled = Output.empty();
-        this.strength = Output.empty();
+        this.enabled = Codegen.empty();
+        this.strength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder strength(@Nullable Output<Double> strength) {
@@ -88,7 +89,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder strength(@Nullable Double strength) {
-            this.strength = Output.ofNullable(strength);
+            this.strength = Codegen.ofNullable(strength);
             return this;
         }        public DeblockArgs build() {
             return new DeblockArgs(enabled, strength);

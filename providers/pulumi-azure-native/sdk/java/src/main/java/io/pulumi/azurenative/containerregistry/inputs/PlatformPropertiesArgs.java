@@ -9,6 +9,7 @@ import io.pulumi.azurenative.containerregistry.enums.Variant;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="architecture")
       private final @Nullable Output<Either<String,Architecture>> architecture;
 
-    public Output<Either<String,Architecture>> getArchitecture() {
-        return this.architecture == null ? Output.empty() : this.architecture;
+    public Output<Either<String,Architecture>> architecture() {
+        return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="os", required=true)
       private final Output<Either<String,OS>> os;
 
-    public Output<Either<String,OS>> getOs() {
+    public Output<Either<String,OS>> os() {
         return this.os;
     }
 
@@ -51,8 +52,8 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="variant")
       private final @Nullable Output<Either<String,Variant>> variant;
 
-    public Output<Either<String,Variant>> getVariant() {
-        return this.variant == null ? Output.empty() : this.variant;
+    public Output<Either<String,Variant>> variant() {
+        return this.variant == null ? Codegen.empty() : this.variant;
     }
 
     public PlatformPropertiesArgs(
@@ -65,9 +66,9 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PlatformPropertiesArgs() {
-        this.architecture = Output.empty();
-        this.os = Output.empty();
-        this.variant = Output.empty();
+        this.architecture = Codegen.empty();
+        this.os = Codegen.empty();
+        this.variant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder architecture(@Nullable Either<String,Architecture> architecture) {
-            this.architecture = Output.ofNullable(architecture);
+            this.architecture = Codegen.ofNullable(architecture);
             return this;
         }
         public Builder os(Output<Either<String,OS>> os) {
@@ -115,7 +116,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder variant(@Nullable Either<String,Variant> variant) {
-            this.variant = Output.ofNullable(variant);
+            this.variant = Codegen.ofNullable(variant);
             return this;
         }        public PlatformPropertiesArgs build() {
             return new PlatformPropertiesArgs(architecture, os, variant);

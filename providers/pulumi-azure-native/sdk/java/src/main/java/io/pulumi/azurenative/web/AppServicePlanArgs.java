@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.KubeEnvironmentProfileArgs;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="freeOfferExpirationTime")
       private final @Nullable Output<String> freeOfferExpirationTime;
 
-    public Output<String> getFreeOfferExpirationTime() {
-        return this.freeOfferExpirationTime == null ? Output.empty() : this.freeOfferExpirationTime;
+    public Output<String> freeOfferExpirationTime() {
+        return this.freeOfferExpirationTime == null ? Codegen.empty() : this.freeOfferExpirationTime;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostingEnvironmentProfile")
       private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
-    public Output<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
-        return this.hostingEnvironmentProfile == null ? Output.empty() : this.hostingEnvironmentProfile;
+    public Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile() {
+        return this.hostingEnvironmentProfile == null ? Codegen.empty() : this.hostingEnvironmentProfile;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hyperV")
       private final @Nullable Output<Boolean> hyperV;
 
-    public Output<Boolean> getHyperV() {
-        return this.hyperV == null ? Output.empty() : this.hyperV;
+    public Output<Boolean> hyperV() {
+        return this.hyperV == null ? Codegen.empty() : this.hyperV;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isSpot")
       private final @Nullable Output<Boolean> isSpot;
 
-    public Output<Boolean> getIsSpot() {
-        return this.isSpot == null ? Output.empty() : this.isSpot;
+    public Output<Boolean> isSpot() {
+        return this.isSpot == null ? Codegen.empty() : this.isSpot;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isXenon")
       private final @Nullable Output<Boolean> isXenon;
 
-    public Output<Boolean> getIsXenon() {
-        return this.isXenon == null ? Output.empty() : this.isXenon;
+    public Output<Boolean> isXenon() {
+        return this.isXenon == null ? Codegen.empty() : this.isXenon;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeEnvironmentProfile")
       private final @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
 
-    public Output<KubeEnvironmentProfileArgs> getKubeEnvironmentProfile() {
-        return this.kubeEnvironmentProfile == null ? Output.empty() : this.kubeEnvironmentProfile;
+    public Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile() {
+        return this.kubeEnvironmentProfile == null ? Codegen.empty() : this.kubeEnvironmentProfile;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximumElasticWorkerCount")
       private final @Nullable Output<Integer> maximumElasticWorkerCount;
 
-    public Output<Integer> getMaximumElasticWorkerCount() {
-        return this.maximumElasticWorkerCount == null ? Output.empty() : this.maximumElasticWorkerCount;
+    public Output<Integer> maximumElasticWorkerCount() {
+        return this.maximumElasticWorkerCount == null ? Codegen.empty() : this.maximumElasticWorkerCount;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="perSiteScaling")
       private final @Nullable Output<Boolean> perSiteScaling;
 
-    public Output<Boolean> getPerSiteScaling() {
-        return this.perSiteScaling == null ? Output.empty() : this.perSiteScaling;
+    public Output<Boolean> perSiteScaling() {
+        return this.perSiteScaling == null ? Codegen.empty() : this.perSiteScaling;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
-        return this.reserved == null ? Output.empty() : this.reserved;
+    public Output<Boolean> reserved() {
+        return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -171,8 +172,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuDescriptionArgs> sku;
 
-    public Output<SkuDescriptionArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuDescriptionArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spotExpirationTime")
       private final @Nullable Output<String> spotExpirationTime;
 
-    public Output<String> getSpotExpirationTime() {
-        return this.spotExpirationTime == null ? Output.empty() : this.spotExpirationTime;
+    public Output<String> spotExpirationTime() {
+        return this.spotExpirationTime == null ? Codegen.empty() : this.spotExpirationTime;
     }
 
     /**
@@ -193,8 +194,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -204,8 +205,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetWorkerCount")
       private final @Nullable Output<Integer> targetWorkerCount;
 
-    public Output<Integer> getTargetWorkerCount() {
-        return this.targetWorkerCount == null ? Output.empty() : this.targetWorkerCount;
+    public Output<Integer> targetWorkerCount() {
+        return this.targetWorkerCount == null ? Codegen.empty() : this.targetWorkerCount;
     }
 
     /**
@@ -215,8 +216,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetWorkerSizeId")
       private final @Nullable Output<Integer> targetWorkerSizeId;
 
-    public Output<Integer> getTargetWorkerSizeId() {
-        return this.targetWorkerSizeId == null ? Output.empty() : this.targetWorkerSizeId;
+    public Output<Integer> targetWorkerSizeId() {
+        return this.targetWorkerSizeId == null ? Codegen.empty() : this.targetWorkerSizeId;
     }
 
     /**
@@ -226,8 +227,8 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerTierName")
       private final @Nullable Output<String> workerTierName;
 
-    public Output<String> getWorkerTierName() {
-        return this.workerTierName == null ? Output.empty() : this.workerTierName;
+    public Output<String> workerTierName() {
+        return this.workerTierName == null ? Codegen.empty() : this.workerTierName;
     }
 
     public AppServicePlanArgs(
@@ -252,16 +253,16 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> workerTierName) {
         this.freeOfferExpirationTime = freeOfferExpirationTime;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
-        this.hyperV = hyperV == null ? Output.ofNullable(false) : hyperV;
+        this.hyperV = hyperV == null ? Codegen.ofNullable(false) : hyperV;
         this.isSpot = isSpot;
-        this.isXenon = isXenon == null ? Output.ofNullable(false) : isXenon;
+        this.isXenon = isXenon == null ? Codegen.ofNullable(false) : isXenon;
         this.kind = kind;
         this.kubeEnvironmentProfile = kubeEnvironmentProfile;
         this.location = location;
         this.maximumElasticWorkerCount = maximumElasticWorkerCount;
         this.name = name;
-        this.perSiteScaling = perSiteScaling == null ? Output.ofNullable(false) : perSiteScaling;
-        this.reserved = reserved == null ? Output.ofNullable(false) : reserved;
+        this.perSiteScaling = perSiteScaling == null ? Codegen.ofNullable(false) : perSiteScaling;
+        this.reserved = reserved == null ? Codegen.ofNullable(false) : reserved;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.sku = sku;
         this.spotExpirationTime = spotExpirationTime;
@@ -272,25 +273,25 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppServicePlanArgs() {
-        this.freeOfferExpirationTime = Output.empty();
-        this.hostingEnvironmentProfile = Output.empty();
-        this.hyperV = Output.empty();
-        this.isSpot = Output.empty();
-        this.isXenon = Output.empty();
-        this.kind = Output.empty();
-        this.kubeEnvironmentProfile = Output.empty();
-        this.location = Output.empty();
-        this.maximumElasticWorkerCount = Output.empty();
-        this.name = Output.empty();
-        this.perSiteScaling = Output.empty();
-        this.reserved = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.spotExpirationTime = Output.empty();
-        this.tags = Output.empty();
-        this.targetWorkerCount = Output.empty();
-        this.targetWorkerSizeId = Output.empty();
-        this.workerTierName = Output.empty();
+        this.freeOfferExpirationTime = Codegen.empty();
+        this.hostingEnvironmentProfile = Codegen.empty();
+        this.hyperV = Codegen.empty();
+        this.isSpot = Codegen.empty();
+        this.isXenon = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.kubeEnvironmentProfile = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maximumElasticWorkerCount = Codegen.empty();
+        this.name = Codegen.empty();
+        this.perSiteScaling = Codegen.empty();
+        this.reserved = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.spotExpirationTime = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetWorkerCount = Codegen.empty();
+        this.targetWorkerSizeId = Codegen.empty();
+        this.workerTierName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -354,7 +355,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder freeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
-            this.freeOfferExpirationTime = Output.ofNullable(freeOfferExpirationTime);
+            this.freeOfferExpirationTime = Codegen.ofNullable(freeOfferExpirationTime);
             return this;
         }
         public Builder hostingEnvironmentProfile(@Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
@@ -362,7 +363,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
-            this.hostingEnvironmentProfile = Output.ofNullable(hostingEnvironmentProfile);
+            this.hostingEnvironmentProfile = Codegen.ofNullable(hostingEnvironmentProfile);
             return this;
         }
         public Builder hyperV(@Nullable Output<Boolean> hyperV) {
@@ -370,7 +371,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hyperV(@Nullable Boolean hyperV) {
-            this.hyperV = Output.ofNullable(hyperV);
+            this.hyperV = Codegen.ofNullable(hyperV);
             return this;
         }
         public Builder isSpot(@Nullable Output<Boolean> isSpot) {
@@ -378,7 +379,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isSpot(@Nullable Boolean isSpot) {
-            this.isSpot = Output.ofNullable(isSpot);
+            this.isSpot = Codegen.ofNullable(isSpot);
             return this;
         }
         public Builder isXenon(@Nullable Output<Boolean> isXenon) {
@@ -386,7 +387,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isXenon(@Nullable Boolean isXenon) {
-            this.isXenon = Output.ofNullable(isXenon);
+            this.isXenon = Codegen.ofNullable(isXenon);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -394,7 +395,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder kubeEnvironmentProfile(@Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile) {
@@ -402,7 +403,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubeEnvironmentProfile(@Nullable KubeEnvironmentProfileArgs kubeEnvironmentProfile) {
-            this.kubeEnvironmentProfile = Output.ofNullable(kubeEnvironmentProfile);
+            this.kubeEnvironmentProfile = Codegen.ofNullable(kubeEnvironmentProfile);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -410,7 +411,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maximumElasticWorkerCount(@Nullable Output<Integer> maximumElasticWorkerCount) {
@@ -418,7 +419,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
-            this.maximumElasticWorkerCount = Output.ofNullable(maximumElasticWorkerCount);
+            this.maximumElasticWorkerCount = Codegen.ofNullable(maximumElasticWorkerCount);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -426,7 +427,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder perSiteScaling(@Nullable Output<Boolean> perSiteScaling) {
@@ -434,7 +435,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder perSiteScaling(@Nullable Boolean perSiteScaling) {
-            this.perSiteScaling = Output.ofNullable(perSiteScaling);
+            this.perSiteScaling = Codegen.ofNullable(perSiteScaling);
             return this;
         }
         public Builder reserved(@Nullable Output<Boolean> reserved) {
@@ -442,7 +443,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Output.ofNullable(reserved);
+            this.reserved = Codegen.ofNullable(reserved);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -458,7 +459,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuDescriptionArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder spotExpirationTime(@Nullable Output<String> spotExpirationTime) {
@@ -466,7 +467,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spotExpirationTime(@Nullable String spotExpirationTime) {
-            this.spotExpirationTime = Output.ofNullable(spotExpirationTime);
+            this.spotExpirationTime = Codegen.ofNullable(spotExpirationTime);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -474,7 +475,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetWorkerCount(@Nullable Output<Integer> targetWorkerCount) {
@@ -482,7 +483,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetWorkerCount(@Nullable Integer targetWorkerCount) {
-            this.targetWorkerCount = Output.ofNullable(targetWorkerCount);
+            this.targetWorkerCount = Codegen.ofNullable(targetWorkerCount);
             return this;
         }
         public Builder targetWorkerSizeId(@Nullable Output<Integer> targetWorkerSizeId) {
@@ -490,7 +491,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
-            this.targetWorkerSizeId = Output.ofNullable(targetWorkerSizeId);
+            this.targetWorkerSizeId = Codegen.ofNullable(targetWorkerSizeId);
             return this;
         }
         public Builder workerTierName(@Nullable Output<String> workerTierName) {
@@ -498,7 +499,7 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerTierName(@Nullable String workerTierName) {
-            this.workerTierName = Output.ofNullable(workerTierName);
+            this.workerTierName = Codegen.ofNullable(workerTierName);
             return this;
         }        public AppServicePlanArgs build() {
             return new AppServicePlanArgs(freeOfferExpirationTime, hostingEnvironmentProfile, hyperV, isSpot, isXenon, kind, kubeEnvironmentProfile, location, maximumElasticWorkerCount, name, perSiteScaling, reserved, resourceGroupName, sku, spotExpirationTime, tags, targetWorkerCount, targetWorkerSizeId, workerTierName);

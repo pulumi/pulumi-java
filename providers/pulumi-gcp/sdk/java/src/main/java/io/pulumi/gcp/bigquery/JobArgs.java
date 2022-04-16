@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.JobCopyArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractArgs;
 import io.pulumi.gcp.bigquery.inputs.JobLoadArgs;
@@ -27,8 +28,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="copy")
       private final @Nullable Output<JobCopyArgs> copy;
 
-    public Output<JobCopyArgs> getCopy() {
-        return this.copy == null ? Output.empty() : this.copy;
+    public Output<JobCopyArgs> copy() {
+        return this.copy == null ? Codegen.empty() : this.copy;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extract")
       private final @Nullable Output<JobExtractArgs> extract;
 
-    public Output<JobExtractArgs> getExtract() {
-        return this.extract == null ? Output.empty() : this.extract;
+    public Output<JobExtractArgs> extract() {
+        return this.extract == null ? Codegen.empty() : this.extract;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId", required=true)
       private final Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
@@ -61,8 +62,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
-    public Output<String> getJobTimeoutMs() {
-        return this.jobTimeoutMs == null ? Output.empty() : this.jobTimeoutMs;
+    public Output<String> jobTimeoutMs() {
+        return this.jobTimeoutMs == null ? Codegen.empty() : this.jobTimeoutMs;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="load")
       private final @Nullable Output<JobLoadArgs> load;
 
-    public Output<JobLoadArgs> getLoad() {
-        return this.load == null ? Output.empty() : this.load;
+    public Output<JobLoadArgs> load() {
+        return this.load == null ? Codegen.empty() : this.load;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<JobQueryArgs> query;
 
-    public Output<JobQueryArgs> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<JobQueryArgs> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     public JobArgs(
@@ -145,15 +146,15 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.copy = Output.empty();
-        this.extract = Output.empty();
-        this.jobId = Output.empty();
-        this.jobTimeoutMs = Output.empty();
-        this.labels = Output.empty();
-        this.load = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.query = Output.empty();
+        this.copy = Codegen.empty();
+        this.extract = Codegen.empty();
+        this.jobId = Codegen.empty();
+        this.jobTimeoutMs = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.load = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.query = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder copy(@Nullable JobCopyArgs copy) {
-            this.copy = Output.ofNullable(copy);
+            this.copy = Codegen.ofNullable(copy);
             return this;
         }
         public Builder extract(@Nullable Output<JobExtractArgs> extract) {
@@ -205,7 +206,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extract(@Nullable JobExtractArgs extract) {
-            this.extract = Output.ofNullable(extract);
+            this.extract = Codegen.ofNullable(extract);
             return this;
         }
         public Builder jobId(Output<String> jobId) {
@@ -221,7 +222,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
-            this.jobTimeoutMs = Output.ofNullable(jobTimeoutMs);
+            this.jobTimeoutMs = Codegen.ofNullable(jobTimeoutMs);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -229,7 +230,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder load(@Nullable Output<JobLoadArgs> load) {
@@ -237,7 +238,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder load(@Nullable JobLoadArgs load) {
-            this.load = Output.ofNullable(load);
+            this.load = Codegen.ofNullable(load);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -245,7 +246,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -253,7 +254,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder query(@Nullable Output<JobQueryArgs> query) {
@@ -261,7 +262,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder query(@Nullable JobQueryArgs query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }        public JobArgs build() {
             return new JobArgs(copy, extract, jobId, jobTimeoutMs, labels, load, location, project, query);

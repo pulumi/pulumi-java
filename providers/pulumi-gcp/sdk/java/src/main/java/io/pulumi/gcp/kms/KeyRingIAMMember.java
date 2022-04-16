@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingIAMMemberArgs;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMMemberState;
@@ -78,7 +79,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ KeyRingIAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ KeyRingIAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -92,7 +93,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the key ring's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -112,13 +113,13 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getKeyRingId() {
+    public Output<String> keyRingId() {
         return this.keyRingId;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -136,7 +137,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -162,7 +163,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRingIAMMember(String name, KeyRingIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/keyRingIAMMember:KeyRingIAMMember", name, args == null ? KeyRingIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/keyRingIAMMember:KeyRingIAMMember", name, args == null ? KeyRingIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRingIAMMember(String name, Output<String> id, @Nullable KeyRingIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

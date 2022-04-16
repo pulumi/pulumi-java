@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.AudioEncoderAacArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoEncoderH264Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="audioEncoder")
       private final @Nullable Output<AudioEncoderAacArgs> audioEncoder;
 
-    public Output<AudioEncoderAacArgs> getAudioEncoder() {
-        return this.audioEncoder == null ? Output.empty() : this.audioEncoder;
+    public Output<AudioEncoderAacArgs> audioEncoder() {
+        return this.audioEncoder == null ? Codegen.empty() : this.audioEncoder;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -50,8 +51,8 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="videoEncoder")
       private final @Nullable Output<VideoEncoderH264Args> videoEncoder;
 
-    public Output<VideoEncoderH264Args> getVideoEncoder() {
-        return this.videoEncoder == null ? Output.empty() : this.videoEncoder;
+    public Output<VideoEncoderH264Args> videoEncoder() {
+        return this.videoEncoder == null ? Codegen.empty() : this.videoEncoder;
     }
 
     public EncoderCustomPresetArgs(
@@ -64,9 +65,9 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     private EncoderCustomPresetArgs() {
-        this.audioEncoder = Output.empty();
-        this.type = Output.empty();
-        this.videoEncoder = Output.empty();
+        this.audioEncoder = Codegen.empty();
+        this.type = Codegen.empty();
+        this.videoEncoder = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder audioEncoder(@Nullable AudioEncoderAacArgs audioEncoder) {
-            this.audioEncoder = Output.ofNullable(audioEncoder);
+            this.audioEncoder = Codegen.ofNullable(audioEncoder);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -114,7 +115,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder videoEncoder(@Nullable VideoEncoderH264Args videoEncoder) {
-            this.videoEncoder = Output.ofNullable(videoEncoder);
+            this.videoEncoder = Codegen.ofNullable(videoEncoder);
             return this;
         }        public EncoderCustomPresetArgs build() {
             return new EncoderCustomPresetArgs(audioEncoder, type, videoEncoder);

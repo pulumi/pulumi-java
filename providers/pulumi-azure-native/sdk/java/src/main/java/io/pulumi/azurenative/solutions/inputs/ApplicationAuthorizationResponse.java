@@ -23,7 +23,7 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

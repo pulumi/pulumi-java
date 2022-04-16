@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repeatingTimeIntervals", required=true)
       private final Output<List<String>> repeatingTimeIntervals;
 
-    public Output<List<String>> getRepeatingTimeIntervals() {
+    public Output<List<String>> repeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }
 
@@ -34,7 +35,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupScheduleArgs() {
-        this.repeatingTimeIntervals = Output.empty();
+        this.repeatingTimeIntervals = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recaptchaenterprise_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs;
 import io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs;
 import io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs;
@@ -27,8 +28,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> getAndroidSettings() {
-        return this.androidSettings == null ? Output.empty() : this.androidSettings;
+    public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings() {
+        return this.androidSettings == null ? Codegen.empty() : this.androidSettings;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> getIosSettings() {
-        return this.iosSettings == null ? Output.empty() : this.iosSettings;
+    public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings() {
+        return this.iosSettings == null ? Codegen.empty() : this.iosSettings;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -82,15 +83,15 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testingOptions")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> getTestingOptions() {
-        return this.testingOptions == null ? Output.empty() : this.testingOptions;
+    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions() {
+        return this.testingOptions == null ? Codegen.empty() : this.testingOptions;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="wafSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> getWafSettings() {
-        return this.wafSettings == null ? Output.empty() : this.wafSettings;
+    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings() {
+        return this.wafSettings == null ? Codegen.empty() : this.wafSettings;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> getWebSettings() {
-        return this.webSettings == null ? Output.empty() : this.webSettings;
+    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings() {
+        return this.webSettings == null ? Codegen.empty() : this.webSettings;
     }
 
     public KeyArgs(
@@ -150,16 +151,16 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.androidSettings = Output.empty();
-        this.createTime = Output.empty();
-        this.displayName = Output.empty();
-        this.iosSettings = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.testingOptions = Output.empty();
-        this.wafSettings = Output.empty();
-        this.webSettings = Output.empty();
+        this.androidSettings = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.iosSettings = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.testingOptions = Codegen.empty();
+        this.wafSettings = Codegen.empty();
+        this.webSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidSettings(@Nullable GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs androidSettings) {
-            this.androidSettings = Output.ofNullable(androidSettings);
+            this.androidSettings = Codegen.ofNullable(androidSettings);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -213,7 +214,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -221,7 +222,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder iosSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings) {
@@ -229,7 +230,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosSettings(@Nullable GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs iosSettings) {
-            this.iosSettings = Output.ofNullable(iosSettings);
+            this.iosSettings = Codegen.ofNullable(iosSettings);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -237,7 +238,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -245,7 +246,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -253,7 +254,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder testingOptions(@Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions) {
@@ -261,7 +262,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testingOptions(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs testingOptions) {
-            this.testingOptions = Output.ofNullable(testingOptions);
+            this.testingOptions = Codegen.ofNullable(testingOptions);
             return this;
         }
         public Builder wafSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings) {
@@ -269,7 +270,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder wafSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WafSettingsArgs wafSettings) {
-            this.wafSettings = Output.ofNullable(wafSettings);
+            this.wafSettings = Codegen.ofNullable(wafSettings);
             return this;
         }
         public Builder webSettings(@Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings) {
@@ -277,7 +278,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs webSettings) {
-            this.webSettings = Output.ofNullable(webSettings);
+            this.webSettings = Codegen.ofNullable(webSettings);
             return this;
         }        public KeyArgs build() {
             return new KeyArgs(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, wafSettings, webSettings);

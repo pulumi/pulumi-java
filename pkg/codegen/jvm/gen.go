@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"path"
 	"reflect"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -356,7 +357,7 @@ func (mod *modContext) typeStringRecHelper(
 // In general, `outerOptional` <=> `!optionalAsNull`.
 func emptyTypeInitializer(ctx *classFileContext, t schema.Type, optionalAsNull bool) string {
 	if isInputType(t) {
-		return fmt.Sprintf("%s.empty()", ctx.ref(names.Output))
+		return fmt.Sprintf("%s.empty()", ctx.ref(names.Codegen))
 	}
 	if _, ok := t.(*schema.OptionalType); ok && !optionalAsNull {
 		return fmt.Sprintf("%s.empty()", ctx.ref(names.Optional))
@@ -416,7 +417,7 @@ func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nested
 				fmt.Sprintf("%s.ofLeft", ctx.ref(names.Output)),
 				fmt.Sprintf("%s.ofRight", ctx.ref(names.Output)))
 		default:
-			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Output), nested)
+			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Codegen), nested)
 		}
 
 	case *schema.ArrayType:
@@ -630,13 +631,13 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.String(),
+			FieldName: propertyName.AsProperty().Field(),
 		})
 
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -671,13 +672,13 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+					return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 				}
 				if prop.IsRequired() {
 					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
 						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
 				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
@@ -836,13 +837,13 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.String(),
+			FieldName: propertyName.AsProperty().Field(),
 		})
 
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -877,13 +878,13 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+					return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 				}
 				if prop.IsRequired() {
 					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
 						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
 				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
@@ -1086,7 +1087,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.String(),
+			FieldName: propertyName.AsProperty().Field(),
 		})
 
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
@@ -1313,10 +1314,10 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName.String(),
+			FieldName: propertyName.AsProperty().Field(),
 		})
 
-		setterName := names.Ident(prop.Name).AsProperty().Setter()
+		setterName := propertyName.AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -1645,7 +1646,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
 	fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty())%s);\n",
-		tok, argsOverride, ctx.imports.Ref(names.Output), isComponent)
+		tok, argsOverride, ctx.imports.Ref(names.Codegen), isComponent)
 	fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.
@@ -1755,75 +1756,173 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	return nil
 }
 
-func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, argsFQN, resultFQN names.FQN) error {
+type addClassMethod = func(names.FQN, names.Ident, func(*classFileContext) error) error
+
+func (mod *modContext) functionsClassName() (names.Ident, error) {
+	if mod.mod != "" {
+		return names.Ident(names.Title(mod.mod) + "Functions"), nil
+	}
+	if mod.pkg.Name != "" {
+		return names.Ident(names.Title(mod.pkg.Name) + "Functions"), nil
+	}
+	return "", fmt.Errorf("package name empty")
+}
+
+func printCommentFunction(ctx *classFileContext, fun *schema.Function, indent string) {
 	w := ctx.writer
-	className := tokenToFunctionName(fun.Token)
-
-	var typeParameter string
-	if fun.Outputs != nil {
-		typeParameter = ctx.imports.Ref(resultFQN)
-	} else {
-		typeParameter = ctx.imports.Ref(names.Void)
-	}
-
-	var argsParamDef string
-	argsParamRef := "io.pulumi.resources.InvokeArgs.Empty"
-
-	if fun.Inputs != nil {
-		allOptionalInputs := true
-		for _, prop := range fun.Inputs.Properties {
-			allOptionalInputs = allOptionalInputs && !prop.IsRequired()
-		}
-
-		var nullable string
-		if allOptionalInputs {
-			// If the number of required input properties was zero, we can make the args object optional.
-			nullable = fmt.Sprintf("@%s ", ctx.ref(names.Nullable))
-		}
-
-		argsParamDef = fmt.Sprintf("%s%s args, ", nullable, ctx.ref(argsFQN))
-		argsParamRef = fmt.Sprintf("args == null ? %s.Empty : args", ctx.ref(argsFQN))
-	}
-
-	printObsoleteAttribute(ctx, fun.DeprecationMessage, "")
-	// Open the class we'll use for datasources.
-	fprintf(w, "public class %s {\n", className)
-
-	// [pulumi/pulumi-java#197]
-	fprintf(w, "    private %s() {}\n", className)
-
-	indent := "    "
-	// Emit javadoc
 	if fun.Comment != "" || fun.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
-		fprintf(w, "    %s\n", formatBlockComment(fun.Comment, indent))
-		if fun.Inputs != nil && fun.Inputs.Comment != "" {
-			fprintf(w, "     *\n")
-			fprintf(w, "    %s\n", formatBlockComment(fun.Inputs.Comment, indent))
-		}
-		if fun.Outputs != nil && fun.Outputs.Comment != "" {
-			fprintf(w, "     *\n")
-			fprintf(w, "    %s\n", formatBlockComment(fun.Outputs.Comment, indent))
-		}
+		fprintf(w, "%s\n", formatBlockComment(fun.Comment, indent))
 		if fun.DeprecationMessage != "" {
 			fprintf(w, "     * @Deprecated\n")
-			fprintf(w, "    %s\n", formatBlockComment(fun.DeprecationMessage, indent))
+			fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, indent))
 		}
 		fprintf(w, "     */\n")
 	}
-
-	// Emit the datasource method.
 	printObsoleteAttribute(ctx, fun.DeprecationMessage, "    ")
-	fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
-		ctx.ref(names.CompletableFuture), typeParameter, argsParamDef, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
-	fprintf(w,
-		"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(options));\n",
-		ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), typeParameter, argsParamRef, mod.utilitiesRef(ctx))
-	fprintf(w, "    }\n")
+}
 
-	// Close the class.
+func hasAllOptionalInputs(fun *schema.Function) bool {
+	if fun.Inputs == nil {
+		return true
+	}
+	for _, prop := range fun.Inputs.Properties {
+		if prop.IsRequired() {
+			return false
+		}
+	}
+
+	return true
+}
+
+func sortedFunctions(m []*schema.Function) []*schema.Function {
+	idxMap := make(map[string]int, len(m))
+	keyList := make([]string, len(m))
+	for i, fun := range m {
+		idxMap[fun.Token] = i
+		keyList[i] = fun.Token
+	}
+	sort.Strings(keyList)
+
+	sortedList := make([]*schema.Function, len(m))
+	for k := range keyList {
+		sortedList[k] = m[idxMap[keyList[k]]]
+	}
+	return sortedList
+}
+
+func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMethod) error {
+	javaPkg, err := parsePackageName(mod.packageName)
+	if err != nil {
+		return err
+	}
+	w := ctx.writer
+
+	// Open the config class.
+	className, err := mod.functionsClassName()
+	if err != nil {
+		return err
+	}
+	fprintf(w, "public final class %s {\n", className)
+	for _, fun := range sortedFunctions(mod.functions) {
+
+		const indent = "    "
+
+		// TODO[pulumi/pulumi-jvm#262]: Support proper codegen for methods
+		if fun.IsMethod {
+			continue
+		}
+
+		if fun.IsOverlay {
+			// This function code is generated by the provider, so no further action is required.
+			continue
+		}
+
+		outputsPkg := javaPkg.Dot(names.Ident("outputs"))
+		resultClass := names.Ident(tokenToName(fun.Token) + "Result")
+		resultFQN := outputsPkg.Dot(resultClass)
+		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
+		argsClass := names.Ident(tokenToName(fun.Token) + "Args")
+		argsFQN := inputsPkg.Dot(argsClass)
+
+		var argsType string
+		if fun.Inputs == nil {
+			argsType = ctx.ref(names.InvokeArgs)
+		} else {
+			argsType = ctx.ref(argsFQN)
+		}
+
+		var returnType string
+		if fun.Outputs != nil {
+			returnType = ctx.imports.Ref(resultFQN)
+		} else {
+			returnType = ctx.imports.Ref(names.Void)
+		}
+
+		methodName := names.LowerCamelCase(tokenToFunctionName(fun.Token))
+
+		// Emit datasource inputs method
+		invokeOptions := ctx.ref(names.InvokeOptions)
+
+		printCommentFunction(ctx, fun, indent)
+		if hasAllOptionalInputs(fun) {
+			// Add no args invoke
+			fprintf(w, "    public static %s<%s> %s() {\n",
+				ctx.ref(names.CompletableFuture), returnType, methodName)
+			fprintf(w,
+				"        return %s(%s.Empty, %s.Empty);\n",
+				methodName, argsType, invokeOptions)
+			fprintf(w, "    }\n")
+
+		}
+		// Add args only invoke
+		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
+			ctx.ref(names.CompletableFuture), returnType, methodName, argsType)
+		fprintf(w,
+			"        return %s(args, %s.Empty);\n",
+			methodName, invokeOptions)
+		fprintf(w, "    }\n")
+
+		// Add full invoke
+		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
+			ctx.ref(names.CompletableFuture), returnType, methodName, argsType, invokeOptions)
+		fprintf(w,
+			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+		fprintf(w, "    }\n")
+
+		// Emit the args and result types, if any.
+		if fun.Inputs != nil {
+			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
+				args := &plainType{
+					mod:                   mod,
+					name:                  ctx.className.String(),
+					baseClass:             "io.pulumi.resources.InvokeArgs",
+					propertyTypeQualifier: "inputs",
+					properties:            fun.Inputs.Properties,
+				}
+				return args.genInputType(ctx)
+			}); err != nil {
+				return err
+			}
+		}
+
+		if fun.Outputs != nil {
+			if err := addClass(outputsPkg, resultClass, func(ctx *classFileContext) error {
+				res := &plainType{
+					mod:                   mod,
+					name:                  ctx.className.String(),
+					propertyTypeQualifier: "outputs",
+					properties:            fun.Outputs.Properties,
+				}
+				contract.Assert(resultClass.String() == res.name)
+				return res.genOutputType(ctx)
+			}); err != nil {
+				return err
+			}
+		}
+	}
 	fprintf(w, "}\n")
-
 	return nil
 }
 
@@ -2074,7 +2173,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 		}
 
 		propertyType, getFunc := mod.getConfigProperty(ctx, typ, p.Name)
-		propertyName := names.Ident(mod.propertyName(p))
+		getterName := names.Ident(mod.propertyName(p)).AsProperty().Getter()
 		returnStatement := getFunc.String()
 
 		if p.DefaultValue != nil {
@@ -2098,7 +2197,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          "    ",
 			GetterType:      propertyType.ToCode(ctx.imports),
-			GetterName:      propertyName.String(),
+			GetterName:      getterName,
 			ReturnStatement: returnStatement,
 		}); err != nil {
 			return err
@@ -2277,60 +2376,15 @@ func (mod *modContext) gen(fs fs) error {
 	}
 
 	// Functions
-	for _, f := range mod.functions {
-
-		// TODO[pulumi/pulumi-jvm#262]: Support proper codegen for methods
-		if f.IsMethod {
-			continue
-		}
-
-		if f.IsOverlay {
-			// This function code is generated by the provider, so no further action is required.
-			continue
-		}
-
-		outputsPkg := javaPkg.Dot(names.Ident("outputs"))
-		resultClass := names.Ident(tokenToName(f.Token) + "Result")
-		resultFQN := outputsPkg.Dot(resultClass)
-		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
-		argsClass := names.Ident(tokenToName(f.Token) + "Args")
-		argsFQN := inputsPkg.Dot(argsClass)
-
-		if err := addClass(javaPkg, names.Ident(tokenToName(f.Token)), func(ctx *classFileContext) error {
-			return mod.genFunction(ctx, f, argsFQN, resultFQN)
-		}); err != nil {
+	if len(mod.functions) > 0 {
+		className, err := mod.functionsClassName()
+		if err != nil {
 			return err
 		}
-
-		// Emit the args and result types, if any.
-		if f.Inputs != nil {
-			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
-				args := &plainType{
-					mod:                   mod,
-					name:                  ctx.className.String(),
-					baseClass:             "io.pulumi.resources.InvokeArgs",
-					propertyTypeQualifier: "inputs",
-					properties:            f.Inputs.Properties,
-				}
-				return args.genInputType(ctx)
-			}); err != nil {
-				return err
-			}
-		}
-
-		if f.Outputs != nil {
-			if err := addClass(outputsPkg, resultClass, func(ctx *classFileContext) error {
-				res := &plainType{
-					mod:                   mod,
-					name:                  ctx.className.String(),
-					propertyTypeQualifier: "outputs",
-					properties:            f.Outputs.Properties,
-				}
-				contract.Assert(resultClass.String() == res.name)
-				return res.genOutputType(ctx)
-			}); err != nil {
-				return err
-			}
+		if err := addClass(javaPkg, className, func(ctx *classFileContext) error {
+			return mod.genFunctions(ctx, addClass)
+		}); err != nil {
+			return err
 		}
 	}
 
@@ -2701,17 +2755,25 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		}
 	}
 
-	// Finally, emit the package metadata.
-	if err := genGradleProject(
-		pkg,
-		info.BasePackageOrDefault(),
-		packageName(info.Packages, pkg.Name),
-		*info,
-		files,
-	); err != nil {
-		return nil, err
+	switch info.BuildFiles {
+	case "gradle":
+		// Finally, emit the package metadata.
+		if err := genGradleProject(
+			pkg,
+			info.BasePackageOrDefault(),
+			packageName(info.Packages, pkg.Name),
+			*info,
+			files,
+		); err != nil {
+			return nil, err
+		}
+		return files, nil
+	case "":
+		return files, nil
+	default:
+		return nil, fmt.Errorf("Only `gradle` value currently supported for the `buildFiles` setting, given `%s`",
+			info.BuildFiles)
 	}
-	return files, nil
 }
 
 func isInputType(t schema.Type) bool {

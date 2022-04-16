@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1PeriodPeriodType;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
     @Import(name="duration")
       private final @Nullable Output<Integer> duration;
 
-    public Output<Integer> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+    public Output<Integer> duration() {
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
     @Import(name="periodType")
       private final @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType;
 
-    public Output<GoogleCloudChannelV1PeriodPeriodType> getPeriodType() {
-        return this.periodType == null ? Output.empty() : this.periodType;
+    public Output<GoogleCloudChannelV1PeriodPeriodType> periodType() {
+        return this.periodType == null ? Codegen.empty() : this.periodType;
     }
 
     public GoogleCloudChannelV1PeriodArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
     }
 
     private GoogleCloudChannelV1PeriodArgs() {
-        this.duration = Output.empty();
-        this.periodType = Output.empty();
+        this.duration = Codegen.empty();
+        this.periodType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder duration(@Nullable Integer duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder periodType(@Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType) {
@@ -88,7 +89,7 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder periodType(@Nullable GoogleCloudChannelV1PeriodPeriodType periodType) {
-            this.periodType = Output.ofNullable(periodType);
+            this.periodType = Codegen.ofNullable(periodType);
             return this;
         }        public GoogleCloudChannelV1PeriodArgs build() {
             return new GoogleCloudChannelV1PeriodArgs(duration, periodType);

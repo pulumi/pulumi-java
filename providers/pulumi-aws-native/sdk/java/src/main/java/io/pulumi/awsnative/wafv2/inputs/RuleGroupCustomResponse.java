@@ -28,14 +28,14 @@ public final class RuleGroupCustomResponse extends io.pulumi.resources.InvokeArg
     @Import(name="customResponseBodyKey")
       private final @Nullable String customResponseBodyKey;
 
-    public Optional<String> getCustomResponseBodyKey() {
+    public Optional<String> customResponseBodyKey() {
         return this.customResponseBodyKey == null ? Optional.empty() : Optional.ofNullable(this.customResponseBodyKey);
     }
 
     @Import(name="responseCode", required=true)
       private final Integer responseCode;
 
-    public Integer getResponseCode() {
+    public Integer responseCode() {
         return this.responseCode;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupCustomResponse extends io.pulumi.resources.InvokeArg
     @Import(name="responseHeaders")
       private final @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
 
-    public List<RuleGroupCustomHTTPHeader> getResponseHeaders() {
+    public List<RuleGroupCustomHTTPHeader> responseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }
 

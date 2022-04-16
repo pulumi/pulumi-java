@@ -33,14 +33,14 @@ public final class AutoscalingPolicyScaleInControlResponse {
      * Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
      * 
     */
-    public FixedOrPercentResponse getMaxScaledInReplicas() {
+    public FixedOrPercentResponse maxScaledInReplicas() {
         return this.maxScaledInReplicas;
     }
     /**
      * How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
      * 
     */
-    public Integer getTimeWindowSec() {
+    public Integer timeWindowSec() {
         return this.timeWindowSec;
     }
 

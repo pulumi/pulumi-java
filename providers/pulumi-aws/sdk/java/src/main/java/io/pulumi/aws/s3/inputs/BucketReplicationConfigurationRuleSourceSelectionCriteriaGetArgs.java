@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaGetA
     @Import(name="sseKmsEncryptedObjects")
       private final @Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> sseKmsEncryptedObjects;
 
-    public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> getSseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Output.empty() : this.sseKmsEncryptedObjects;
+    public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> sseKmsEncryptedObjects() {
+        return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
     }
 
     public BucketReplicationConfigurationRuleSourceSelectionCriteriaGetArgs(@Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> sseKmsEncryptedObjects) {
@@ -31,7 +32,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaGetA
     }
 
     private BucketReplicationConfigurationRuleSourceSelectionCriteriaGetArgs() {
-        this.sseKmsEncryptedObjects = Output.empty();
+        this.sseKmsEncryptedObjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaGetA
             return this;
         }
         public Builder sseKmsEncryptedObjects(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = Output.ofNullable(sseKmsEncryptedObjects);
+            this.sseKmsEncryptedObjects = Codegen.ofNullable(sseKmsEncryptedObjects);
             return this;
         }        public BucketReplicationConfigurationRuleSourceSelectionCriteriaGetArgs build() {
             return new BucketReplicationConfigurationRuleSourceSelectionCriteriaGetArgs(sseKmsEncryptedObjects);

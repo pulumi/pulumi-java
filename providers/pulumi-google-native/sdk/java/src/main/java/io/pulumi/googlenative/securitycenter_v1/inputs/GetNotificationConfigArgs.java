@@ -15,14 +15,14 @@ public final class GetNotificationConfigArgs extends io.pulumi.resources.InvokeA
     @Import(name="notificationConfigId", required=true)
       private final String notificationConfigId;
 
-    public String getNotificationConfigId() {
+    public String notificationConfigId() {
         return this.notificationConfigId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

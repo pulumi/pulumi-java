@@ -54,35 +54,35 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
      * Type of archive files in this repository.
      * 
     */
-    public String getArchiveType() {
+    public String archiveType() {
         return this.archiveType;
     }
     /**
      * List of components for this repository. Must contain at least one item.
      * 
     */
-    public List<String> getComponents() {
+    public List<String> components() {
         return this.components;
     }
     /**
      * Distribution of this repository.
      * 
     */
-    public String getDistribution() {
+    public String distribution() {
         return this.distribution;
     }
     /**
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
     */
-    public String getGpgKey() {
+    public String gpgKey() {
         return this.gpgKey;
     }
     /**
      * URI for this repository.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

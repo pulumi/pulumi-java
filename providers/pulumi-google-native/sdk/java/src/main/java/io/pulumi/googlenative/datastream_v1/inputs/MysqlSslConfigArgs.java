@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
-        return this.caCertificate == null ? Output.empty() : this.caCertificate;
+    public Output<String> caCertificate() {
+        return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
-    public Output<String> getClientCertificate() {
-        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
+    public Output<String> clientCertificate() {
+        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
-    public Output<String> getClientKey() {
-        return this.clientKey == null ? Output.empty() : this.clientKey;
+    public Output<String> clientKey() {
+        return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
     public MysqlSslConfigArgs(
@@ -61,9 +62,9 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MysqlSslConfigArgs() {
-        this.caCertificate = Output.empty();
-        this.clientCertificate = Output.empty();
-        this.clientKey = Output.empty();
+        this.caCertificate = Codegen.empty();
+        this.clientCertificate = Codegen.empty();
+        this.clientKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Output.ofNullable(caCertificate);
+            this.caCertificate = Codegen.ofNullable(caCertificate);
             return this;
         }
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
@@ -103,7 +104,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Output.ofNullable(clientCertificate);
+            this.clientCertificate = Codegen.ofNullable(clientCertificate);
             return this;
         }
         public Builder clientKey(@Nullable Output<String> clientKey) {
@@ -111,7 +112,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Output.ofNullable(clientKey);
+            this.clientKey = Codegen.ofNullable(clientKey);
             return this;
         }        public MysqlSslConfigArgs build() {
             return new MysqlSslConfigArgs(caCertificate, clientCertificate, clientKey);

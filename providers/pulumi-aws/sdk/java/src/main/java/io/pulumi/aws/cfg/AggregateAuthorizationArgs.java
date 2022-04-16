@@ -5,6 +5,7 @@ package io.pulumi.aws.cfg;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -33,7 +34,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -44,8 +45,8 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AggregateAuthorizationArgs(
@@ -58,9 +59,9 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     }
 
     private AggregateAuthorizationArgs() {
-        this.accountId = Output.empty();
-        this.region = Output.empty();
-        this.tags = Output.empty();
+        this.accountId = Codegen.empty();
+        this.region = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AggregateAuthorizationArgs build() {
             return new AggregateAuthorizationArgs(accountId, region, tags);

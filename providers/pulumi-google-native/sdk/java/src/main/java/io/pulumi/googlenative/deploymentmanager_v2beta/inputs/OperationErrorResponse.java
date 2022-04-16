@@ -24,7 +24,7 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="errors", required=true)
       private final List<OperationErrorErrorsItemResponse> errors;
 
-    public List<OperationErrorErrorsItemResponse> getErrors() {
+    public List<OperationErrorErrorsItemResponse> errors() {
         return this.errors;
     }
 

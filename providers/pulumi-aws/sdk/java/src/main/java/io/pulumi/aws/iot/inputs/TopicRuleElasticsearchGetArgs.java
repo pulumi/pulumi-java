@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TopicRuleElasticsearchGetArgs extends io.pulumi.resources.Res
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -31,7 +32,7 @@ public final class TopicRuleElasticsearchGetArgs extends io.pulumi.resources.Res
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -42,7 +43,7 @@ public final class TopicRuleElasticsearchGetArgs extends io.pulumi.resources.Res
     @Import(name="index", required=true)
       private final Output<String> index;
 
-    public Output<String> getIndex() {
+    public Output<String> index() {
         return this.index;
     }
 
@@ -53,7 +54,7 @@ public final class TopicRuleElasticsearchGetArgs extends io.pulumi.resources.Res
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -64,7 +65,7 @@ public final class TopicRuleElasticsearchGetArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,11 +83,11 @@ public final class TopicRuleElasticsearchGetArgs extends io.pulumi.resources.Res
     }
 
     private TopicRuleElasticsearchGetArgs() {
-        this.endpoint = Output.empty();
-        this.id = Output.empty();
-        this.index = Output.empty();
-        this.roleArn = Output.empty();
-        this.type = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.id = Codegen.empty();
+        this.index = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

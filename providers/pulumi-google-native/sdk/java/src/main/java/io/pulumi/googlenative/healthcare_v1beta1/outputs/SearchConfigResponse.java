@@ -25,7 +25,7 @@ public final class SearchConfigResponse {
      * A list of search parameters in this FHIR store that are used to configure this FHIR store.
      * 
     */
-    public List<SearchParameterResponse> getSearchParameters() {
+    public List<SearchParameterResponse> searchParameters() {
         return this.searchParameters;
     }
 

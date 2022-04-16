@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
     @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
 
@@ -33,8 +34,8 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     public ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs(
@@ -45,8 +46,8 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
     }
 
     private ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs() {
-        this.cidrBlock = Output.empty();
-        this.displayName = Output.empty();
+        this.cidrBlock = Codegen.empty();
+        this.displayName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }        public ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs build() {
             return new ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs(cidrBlock, displayName);

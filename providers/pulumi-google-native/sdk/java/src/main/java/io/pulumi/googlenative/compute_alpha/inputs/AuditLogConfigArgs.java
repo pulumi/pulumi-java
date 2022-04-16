@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.AuditLogConfigLogType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
+    public Output<List<String>> exemptedMembers() {
+        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreChildExemptions")
       private final @Nullable Output<Boolean> ignoreChildExemptions;
 
-    public Output<Boolean> getIgnoreChildExemptions() {
-        return this.ignoreChildExemptions == null ? Output.empty() : this.ignoreChildExemptions;
+    public Output<Boolean> ignoreChildExemptions() {
+        return this.ignoreChildExemptions == null ? Codegen.empty() : this.ignoreChildExemptions;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logType")
       private final @Nullable Output<AuditLogConfigLogType> logType;
 
-    public Output<AuditLogConfigLogType> getLogType() {
-        return this.logType == null ? Output.empty() : this.logType;
+    public Output<AuditLogConfigLogType> logType() {
+        return this.logType == null ? Codegen.empty() : this.logType;
     }
 
     public AuditLogConfigArgs(
@@ -64,9 +65,9 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuditLogConfigArgs() {
-        this.exemptedMembers = Output.empty();
-        this.ignoreChildExemptions = Output.empty();
-        this.logType = Output.empty();
+        this.exemptedMembers = Codegen.empty();
+        this.ignoreChildExemptions = Codegen.empty();
+        this.logType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Output.ofNullable(exemptedMembers);
+            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
             return this;
         }
         public Builder exemptedMembers(String... exemptedMembers) {
@@ -109,7 +110,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreChildExemptions(@Nullable Boolean ignoreChildExemptions) {
-            this.ignoreChildExemptions = Output.ofNullable(ignoreChildExemptions);
+            this.ignoreChildExemptions = Codegen.ofNullable(ignoreChildExemptions);
             return this;
         }
         public Builder logType(@Nullable Output<AuditLogConfigLogType> logType) {
@@ -117,7 +118,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logType(@Nullable AuditLogConfigLogType logType) {
-            this.logType = Output.ofNullable(logType);
+            this.logType = Codegen.ofNullable(logType);
             return this;
         }        public AuditLogConfigArgs build() {
             return new AuditLogConfigArgs(exemptedMembers, ignoreChildExemptions, logType);

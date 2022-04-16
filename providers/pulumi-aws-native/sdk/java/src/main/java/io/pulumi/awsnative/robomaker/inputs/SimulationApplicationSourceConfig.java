@@ -24,7 +24,7 @@ public final class SimulationApplicationSourceConfig extends io.pulumi.resources
     @Import(name="architecture", required=true)
       private final SimulationApplicationSourceConfigArchitecture architecture;
 
-    public SimulationApplicationSourceConfigArchitecture getArchitecture() {
+    public SimulationApplicationSourceConfigArchitecture architecture() {
         return this.architecture;
     }
 
@@ -35,7 +35,7 @@ public final class SimulationApplicationSourceConfig extends io.pulumi.resources
     @Import(name="s3Bucket", required=true)
       private final String s3Bucket;
 
-    public String getS3Bucket() {
+    public String s3Bucket() {
         return this.s3Bucket;
     }
 
@@ -46,7 +46,7 @@ public final class SimulationApplicationSourceConfig extends io.pulumi.resources
     @Import(name="s3Key", required=true)
       private final String s3Key;
 
-    public String getS3Key() {
+    public String s3Key() {
         return this.s3Key;
     }
 

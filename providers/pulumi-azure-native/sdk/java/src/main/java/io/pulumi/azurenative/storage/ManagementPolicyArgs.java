@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicySchemaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,8 +34,8 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="managementPolicyName")
       private final @Nullable Output<String> managementPolicyName;
 
-    public Output<String> getManagementPolicyName() {
-        return this.managementPolicyName == null ? Output.empty() : this.managementPolicyName;
+    public Output<String> managementPolicyName() {
+        return this.managementPolicyName == null ? Codegen.empty() : this.managementPolicyName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policy", required=true)
       private final Output<ManagementPolicySchemaArgs> policy;
 
-    public Output<ManagementPolicySchemaArgs> getPolicy() {
+    public Output<ManagementPolicySchemaArgs> policy() {
         return this.policy;
     }
 
@@ -55,7 +56,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,10 +72,10 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ManagementPolicyArgs() {
-        this.accountName = Output.empty();
-        this.managementPolicyName = Output.empty();
-        this.policy = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.managementPolicyName = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder managementPolicyName(@Nullable String managementPolicyName) {
-            this.managementPolicyName = Output.ofNullable(managementPolicyName);
+            this.managementPolicyName = Codegen.ofNullable(managementPolicyName);
             return this;
         }
         public Builder policy(Output<ManagementPolicySchemaArgs> policy) {

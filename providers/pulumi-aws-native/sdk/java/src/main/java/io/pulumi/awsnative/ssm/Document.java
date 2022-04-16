@@ -13,6 +13,7 @@ import io.pulumi.awsnative.ssm.outputs.DocumentTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A list of key and value pairs that describe attachments to a version of a document.
      * 
      */
-    public Output</* @Nullable */ List<DocumentAttachmentsSource>> getAttachments() {
+    public Output</* @Nullable */ List<DocumentAttachmentsSource>> attachments() {
         return this.attachments;
     }
     /**
@@ -51,7 +52,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The content for the Systems Manager document in JSON, YAML or String format.
      * 
      */
-    public Output<Object> getContent() {
+    public Output<Object> content() {
         return this.content;
     }
     /**
@@ -65,7 +66,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
      * 
      */
-    public Output</* @Nullable */ DocumentFormat> getDocumentFormat() {
+    public Output</* @Nullable */ DocumentFormat> documentFormat() {
         return this.documentFormat;
     }
     /**
@@ -79,7 +80,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The type of document to create.
      * 
      */
-    public Output</* @Nullable */ DocumentType> getDocumentType() {
+    public Output</* @Nullable */ DocumentType> documentType() {
         return this.documentType;
     }
     /**
@@ -93,7 +94,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A name for the Systems Manager document.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -107,7 +108,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
      * 
      */
-    public Output</* @Nullable */ List<DocumentRequires>> getRequires() {
+    public Output</* @Nullable */ List<DocumentRequires>> requires() {
         return this.requires;
     }
     /**
@@ -121,7 +122,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
      * 
      */
-    public Output</* @Nullable */ List<DocumentTag>> getTags() {
+    public Output</* @Nullable */ List<DocumentTag>> tags() {
         return this.tags;
     }
     /**
@@ -135,7 +136,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Specify a target type to define the kinds of resources the document can run on.
      * 
      */
-    public Output</* @Nullable */ String> getTargetType() {
+    public Output</* @Nullable */ String> targetType() {
         return this.targetType;
     }
     /**
@@ -149,7 +150,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
      * 
      */
-    public Output</* @Nullable */ String> getVersionName() {
+    public Output</* @Nullable */ String> versionName() {
         return this.versionName;
     }
 
@@ -175,7 +176,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Document(String name, DocumentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ssm:Document", name, args == null ? DocumentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ssm:Document", name, args == null ? DocumentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Document(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

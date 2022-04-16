@@ -55,35 +55,35 @@ public final class ReplicationControllerCondition {
      * The last time the condition transitioned from one status to another.
      * 
     */
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * A human readable message indicating details about the transition.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The reason for the condition's last transition.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Type of replication controller condition.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

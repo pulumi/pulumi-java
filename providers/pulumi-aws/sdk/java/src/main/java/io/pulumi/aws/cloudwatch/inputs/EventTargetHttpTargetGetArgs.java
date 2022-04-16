@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
     @Import(name="headerParameters")
       private final @Nullable Output<Map<String,String>> headerParameters;
 
-    public Output<Map<String,String>> getHeaderParameters() {
-        return this.headerParameters == null ? Output.empty() : this.headerParameters;
+    public Output<Map<String,String>> headerParameters() {
+        return this.headerParameters == null ? Codegen.empty() : this.headerParameters;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
     @Import(name="pathParameterValues")
       private final @Nullable Output<List<String>> pathParameterValues;
 
-    public Output<List<String>> getPathParameterValues() {
-        return this.pathParameterValues == null ? Output.empty() : this.pathParameterValues;
+    public Output<List<String>> pathParameterValues() {
+        return this.pathParameterValues == null ? Codegen.empty() : this.pathParameterValues;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
     @Import(name="queryStringParameters")
       private final @Nullable Output<Map<String,String>> queryStringParameters;
 
-    public Output<Map<String,String>> getQueryStringParameters() {
-        return this.queryStringParameters == null ? Output.empty() : this.queryStringParameters;
+    public Output<Map<String,String>> queryStringParameters() {
+        return this.queryStringParameters == null ? Codegen.empty() : this.queryStringParameters;
     }
 
     public EventTargetHttpTargetGetArgs(
@@ -59,9 +60,9 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
     }
 
     private EventTargetHttpTargetGetArgs() {
-        this.headerParameters = Output.empty();
-        this.pathParameterValues = Output.empty();
-        this.queryStringParameters = Output.empty();
+        this.headerParameters = Codegen.empty();
+        this.pathParameterValues = Codegen.empty();
+        this.queryStringParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder headerParameters(@Nullable Map<String,String> headerParameters) {
-            this.headerParameters = Output.ofNullable(headerParameters);
+            this.headerParameters = Codegen.ofNullable(headerParameters);
             return this;
         }
         public Builder pathParameterValues(@Nullable Output<List<String>> pathParameterValues) {
@@ -101,7 +102,7 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder pathParameterValues(@Nullable List<String> pathParameterValues) {
-            this.pathParameterValues = Output.ofNullable(pathParameterValues);
+            this.pathParameterValues = Codegen.ofNullable(pathParameterValues);
             return this;
         }
         public Builder pathParameterValues(String... pathParameterValues) {
@@ -112,7 +113,7 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder queryStringParameters(@Nullable Map<String,String> queryStringParameters) {
-            this.queryStringParameters = Output.ofNullable(queryStringParameters);
+            this.queryStringParameters = Codegen.ofNullable(queryStringParameters);
             return this;
         }        public EventTargetHttpTargetGetArgs build() {
             return new EventTargetHttpTargetGetArgs(headerParameters, pathParameterValues, queryStringParameters);

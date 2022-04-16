@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class CodeSigningConfigAllowedPublishersGetArgs extends io.pulumi.r
     @Import(name="signingProfileVersionArns", required=true)
       private final Output<List<String>> signingProfileVersionArns;
 
-    public Output<List<String>> getSigningProfileVersionArns() {
+    public Output<List<String>> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
 
@@ -30,7 +31,7 @@ public final class CodeSigningConfigAllowedPublishersGetArgs extends io.pulumi.r
     }
 
     private CodeSigningConfigAllowedPublishersGetArgs() {
-        this.signingProfileVersionArns = Output.empty();
+        this.signingProfileVersionArns = Codegen.empty();
     }
 
     public static Builder builder() {

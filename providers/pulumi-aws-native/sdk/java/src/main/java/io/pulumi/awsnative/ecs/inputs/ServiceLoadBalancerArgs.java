@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,29 +19,29 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+    public Output<String> containerName() {
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
-        return this.containerPort == null ? Output.empty() : this.containerPort;
+    public Output<Integer> containerPort() {
+        return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
-        return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
+    public Output<String> loadBalancerName() {
+        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
     }
 
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
+    public Output<String> targetGroupArn() {
+        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     public ServiceLoadBalancerArgs(
@@ -55,10 +56,10 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServiceLoadBalancerArgs() {
-        this.containerName = Output.empty();
-        this.containerPort = Output.empty();
-        this.loadBalancerName = Output.empty();
-        this.targetGroupArn = Output.empty();
+        this.containerName = Codegen.empty();
+        this.containerPort = Codegen.empty();
+        this.loadBalancerName = Codegen.empty();
+        this.targetGroupArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
@@ -100,7 +101,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Output.ofNullable(containerPort);
+            this.containerPort = Codegen.ofNullable(containerPort);
             return this;
         }
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
@@ -108,7 +109,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Output.ofNullable(loadBalancerName);
+            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
             return this;
         }
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
@@ -116,7 +117,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Output.ofNullable(targetGroupArn);
+            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
             return this;
         }        public ServiceLoadBalancerArgs build() {
             return new ServiceLoadBalancerArgs(containerName, containerPort, loadBalancerName, targetGroupArn);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.CostAllocationResourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +39,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
     @Import(name="resourceType", required=true)
       private final Output<Either<String,CostAllocationResourceType>> resourceType;
 
-    public Output<Either<String,CostAllocationResourceType>> getPropResourceType() {
+    public Output<Either<String,CostAllocationResourceType>> resourceType() {
         return this.resourceType;
     }
 
@@ -49,7 +50,7 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 
@@ -63,9 +64,9 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
     }
 
     private SourceCostAllocationResourceArgs() {
-        this.name = Output.empty();
-        this.resourceType = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

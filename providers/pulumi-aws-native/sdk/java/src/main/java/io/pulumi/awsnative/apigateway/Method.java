@@ -11,6 +11,7 @@ import io.pulumi.awsnative.apigateway.outputs.MethodResponse;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -34,7 +35,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the method requires clients to submit a valid API key.
      * 
      */
-    public Output</* @Nullable */ Boolean> getApiKeyRequired() {
+    public Output</* @Nullable */ Boolean> apiKeyRequired() {
         return this.apiKeyRequired;
     }
     /**
@@ -48,7 +49,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return A list of authorization scopes configured on the method.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAuthorizationScopes() {
+    public Output</* @Nullable */ List<String>> authorizationScopes() {
         return this.authorizationScopes;
     }
     /**
@@ -62,7 +63,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The method's authorization type.
      * 
      */
-    public Output</* @Nullable */ MethodAuthorizationType> getAuthorizationType() {
+    public Output</* @Nullable */ MethodAuthorizationType> authorizationType() {
         return this.authorizationType;
     }
     /**
@@ -76,7 +77,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The identifier of the authorizer to use on this method.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizerId() {
+    public Output</* @Nullable */ String> authorizerId() {
         return this.authorizerId;
     }
     /**
@@ -90,7 +91,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The backend system that the method calls when it receives a request.
      * 
      */
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -104,7 +105,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The backend system that the method calls when it receives a request.
      * 
      */
-    public Output</* @Nullable */ MethodIntegration> getIntegration() {
+    public Output</* @Nullable */ MethodIntegration> integration() {
         return this.integration;
     }
     /**
@@ -118,7 +119,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The responses that can be sent to the client who calls the method.
      * 
      */
-    public Output</* @Nullable */ List<MethodResponse>> getMethodResponses() {
+    public Output</* @Nullable */ List<MethodResponse>> methodResponses() {
         return this.methodResponses;
     }
     /**
@@ -132,7 +133,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return A friendly operation name for the method.
      * 
      */
-    public Output</* @Nullable */ String> getOperationName() {
+    public Output</* @Nullable */ String> operationName() {
         return this.operationName;
     }
     /**
@@ -146,7 +147,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
-    public Output</* @Nullable */ Object> getRequestModels() {
+    public Output</* @Nullable */ Object> requestModels() {
         return this.requestModels;
     }
     /**
@@ -160,7 +161,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
      * 
      */
-    public Output</* @Nullable */ Object> getRequestParameters() {
+    public Output</* @Nullable */ Object> requestParameters() {
         return this.requestParameters;
     }
     /**
@@ -174,7 +175,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated request validator.
      * 
      */
-    public Output</* @Nullable */ String> getRequestValidatorId() {
+    public Output</* @Nullable */ String> requestValidatorId() {
         return this.requestValidatorId;
     }
     /**
@@ -188,7 +189,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The ID of an API Gateway resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -202,7 +203,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @return The ID of the RestApi resource in which API Gateway creates the method.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -228,7 +229,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Method(String name, MethodArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:Method", name, args == null ? MethodArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:Method", name, args == null ? MethodArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Method(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.TunnelInstanceIAMPolicyArgs;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMPolicyState;
@@ -71,7 +72,7 @@ public class TunnelInstanceIAMPolicy extends io.pulumi.resources.CustomResource 
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -85,7 +86,7 @@ public class TunnelInstanceIAMPolicy extends io.pulumi.resources.CustomResource 
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -101,7 +102,7 @@ public class TunnelInstanceIAMPolicy extends io.pulumi.resources.CustomResource 
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -117,13 +118,13 @@ public class TunnelInstanceIAMPolicy extends io.pulumi.resources.CustomResource 
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -149,7 +150,7 @@ public class TunnelInstanceIAMPolicy extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public TunnelInstanceIAMPolicy(String name, TunnelInstanceIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/tunnelInstanceIAMPolicy:TunnelInstanceIAMPolicy", name, args == null ? TunnelInstanceIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/tunnelInstanceIAMPolicy:TunnelInstanceIAMPolicy", name, args == null ? TunnelInstanceIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TunnelInstanceIAMPolicy(String name, Output<String> id, @Nullable TunnelInstanceIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
     @Import(name="provider")
       private final @Nullable Output<String> provider;
 
-    public Output<String> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<String> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public UserIdentityContractArgs(
@@ -48,8 +49,8 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
     }
 
     private UserIdentityContractArgs() {
-        this.id = Output.empty();
-        this.provider = Output.empty();
+        this.id = Codegen.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder provider(@Nullable Output<String> provider) {
@@ -87,7 +88,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder provider(@Nullable String provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public UserIdentityContractArgs build() {
             return new UserIdentityContractArgs(id, provider);

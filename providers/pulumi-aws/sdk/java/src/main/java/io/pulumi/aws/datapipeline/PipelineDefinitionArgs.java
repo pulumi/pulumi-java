@@ -8,6 +8,7 @@ import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueArgs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parameterObjects")
       private final @Nullable Output<List<PipelineDefinitionParameterObjectArgs>> parameterObjects;
 
-    public Output<List<PipelineDefinitionParameterObjectArgs>> getParameterObjects() {
-        return this.parameterObjects == null ? Output.empty() : this.parameterObjects;
+    public Output<List<PipelineDefinitionParameterObjectArgs>> parameterObjects() {
+        return this.parameterObjects == null ? Codegen.empty() : this.parameterObjects;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parameterValues")
       private final @Nullable Output<List<PipelineDefinitionParameterValueArgs>> parameterValues;
 
-    public Output<List<PipelineDefinitionParameterValueArgs>> getParameterValues() {
-        return this.parameterValues == null ? Output.empty() : this.parameterValues;
+    public Output<List<PipelineDefinitionParameterValueArgs>> parameterValues() {
+        return this.parameterValues == null ? Codegen.empty() : this.parameterValues;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pipelineId", required=true)
       private final Output<String> pipelineId;
 
-    public Output<String> getPipelineId() {
+    public Output<String> pipelineId() {
         return this.pipelineId;
     }
 
@@ -58,7 +59,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pipelineObjects", required=true)
       private final Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects;
 
-    public Output<List<PipelineDefinitionPipelineObjectArgs>> getPipelineObjects() {
+    public Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects() {
         return this.pipelineObjects;
     }
 
@@ -74,10 +75,10 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PipelineDefinitionArgs() {
-        this.parameterObjects = Output.empty();
-        this.parameterValues = Output.empty();
-        this.pipelineId = Output.empty();
-        this.pipelineObjects = Output.empty();
+        this.parameterObjects = Codegen.empty();
+        this.parameterValues = Codegen.empty();
+        this.pipelineId = Codegen.empty();
+        this.pipelineObjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parameterObjects(@Nullable List<PipelineDefinitionParameterObjectArgs> parameterObjects) {
-            this.parameterObjects = Output.ofNullable(parameterObjects);
+            this.parameterObjects = Codegen.ofNullable(parameterObjects);
             return this;
         }
         public Builder parameterObjects(PipelineDefinitionParameterObjectArgs... parameterObjects) {
@@ -122,7 +123,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parameterValues(@Nullable List<PipelineDefinitionParameterValueArgs> parameterValues) {
-            this.parameterValues = Output.ofNullable(parameterValues);
+            this.parameterValues = Codegen.ofNullable(parameterValues);
             return this;
         }
         public Builder parameterValues(PipelineDefinitionParameterValueArgs... parameterValues) {

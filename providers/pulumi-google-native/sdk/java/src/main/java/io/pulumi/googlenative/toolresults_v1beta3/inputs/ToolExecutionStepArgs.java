@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
     @Import(name="toolExecution")
       private final @Nullable Output<ToolExecutionArgs> toolExecution;
 
-    public Output<ToolExecutionArgs> getToolExecution() {
-        return this.toolExecution == null ? Output.empty() : this.toolExecution;
+    public Output<ToolExecutionArgs> toolExecution() {
+        return this.toolExecution == null ? Codegen.empty() : this.toolExecution;
     }
 
     public ToolExecutionStepArgs(@Nullable Output<ToolExecutionArgs> toolExecution) {
@@ -34,7 +35,7 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ToolExecutionStepArgs() {
-        this.toolExecution = Output.empty();
+        this.toolExecution = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
-            this.toolExecution = Output.ofNullable(toolExecution);
+            this.toolExecution = Codegen.ofNullable(toolExecution);
             return this;
         }        public ToolExecutionStepArgs build() {
             return new ToolExecutionStepArgs(toolExecution);

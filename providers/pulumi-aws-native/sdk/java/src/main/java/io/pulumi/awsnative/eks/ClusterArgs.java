@@ -10,6 +10,7 @@ import io.pulumi.awsnative.eks.inputs.ClusterResourcesVpcConfigArgs;
 import io.pulumi.awsnative.eks.inputs.ClusterTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,22 +24,22 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<List<ClusterEncryptionConfigArgs>> encryptionConfig;
 
-    public Output<List<ClusterEncryptionConfigArgs>> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<List<ClusterEncryptionConfigArgs>> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="kubernetesNetworkConfig")
       private final @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
 
-    public Output<ClusterKubernetesNetworkConfigArgs> getKubernetesNetworkConfig() {
-        return this.kubernetesNetworkConfig == null ? Output.empty() : this.kubernetesNetworkConfig;
+    public Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig() {
+        return this.kubernetesNetworkConfig == null ? Codegen.empty() : this.kubernetesNetworkConfig;
     }
 
     @Import(name="logging")
       private final @Nullable Output<ClusterLoggingArgs> logging;
 
-    public Output<ClusterLoggingArgs> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+    public Output<ClusterLoggingArgs> logging() {
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     /**
@@ -48,14 +49,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="resourcesVpcConfig", required=true)
       private final Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig;
 
-    public Output<ClusterResourcesVpcConfigArgs> getResourcesVpcConfig() {
+    public Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig() {
         return this.resourcesVpcConfig;
     }
 
@@ -66,7 +67,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -77,8 +78,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Output<List<ClusterTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ClusterTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ClusterArgs(
@@ -112,14 +113,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.encryptionConfig = Output.empty();
-        this.kubernetesNetworkConfig = Output.empty();
-        this.logging = Output.empty();
-        this.name = Output.empty();
-        this.resourcesVpcConfig = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
-        this.version = Output.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.kubernetesNetworkConfig = Codegen.empty();
+        this.logging = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourcesVpcConfig = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable List<ClusterEncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder encryptionConfig(ClusterEncryptionConfigArgs... encryptionConfig) {
@@ -172,7 +173,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
-            this.kubernetesNetworkConfig = Output.ofNullable(kubernetesNetworkConfig);
+            this.kubernetesNetworkConfig = Codegen.ofNullable(kubernetesNetworkConfig);
             return this;
         }
         public Builder logging(@Nullable Output<ClusterLoggingArgs> logging) {
@@ -180,7 +181,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logging(@Nullable ClusterLoggingArgs logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -188,7 +189,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourcesVpcConfig(Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig) {
@@ -212,7 +213,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ClusterTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ClusterTagArgs... tags) {
@@ -223,7 +224,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(encryptionConfig, kubernetesNetworkConfig, logging, name, resourcesVpcConfig, roleArn, tags, version);

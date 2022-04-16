@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="baselineId")
       private final @Nullable Output<String> baselineId;
 
-    public Output<String> getBaselineId() {
-        return this.baselineId == null ? Output.empty() : this.baselineId;
+    public Output<String> baselineId() {
+        return this.baselineId == null ? Codegen.empty() : this.baselineId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="patchGroup")
       private final @Nullable Output<String> patchGroup;
 
-    public Output<String> getPatchGroup() {
-        return this.patchGroup == null ? Output.empty() : this.patchGroup;
+    public Output<String> patchGroup() {
+        return this.patchGroup == null ? Codegen.empty() : this.patchGroup;
     }
 
     public PatchGroupState(
@@ -44,8 +45,8 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchGroupState() {
-        this.baselineId = Output.empty();
-        this.patchGroup = Output.empty();
+        this.baselineId = Codegen.empty();
+        this.patchGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baselineId(@Nullable String baselineId) {
-            this.baselineId = Output.ofNullable(baselineId);
+            this.baselineId = Codegen.ofNullable(baselineId);
             return this;
         }
         public Builder patchGroup(@Nullable Output<String> patchGroup) {
@@ -83,7 +84,7 @@ public final class PatchGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder patchGroup(@Nullable String patchGroup) {
-            this.patchGroup = Output.ofNullable(patchGroup);
+            this.patchGroup = Codegen.ofNullable(patchGroup);
             return this;
         }        public PatchGroupState build() {
             return new PatchGroupState(baselineId, patchGroup);

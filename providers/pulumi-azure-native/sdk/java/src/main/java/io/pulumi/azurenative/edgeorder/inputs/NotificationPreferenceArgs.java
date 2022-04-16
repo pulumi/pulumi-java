@@ -7,6 +7,7 @@ import io.pulumi.azurenative.edgeorder.enums.NotificationStageName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
     @Import(name="sendNotification", required=true)
       private final Output<Boolean> sendNotification;
 
-    public Output<Boolean> getSendNotification() {
+    public Output<Boolean> sendNotification() {
         return this.sendNotification;
     }
 
@@ -38,7 +39,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
     @Import(name="stageName", required=true)
       private final Output<Either<String,NotificationStageName>> stageName;
 
-    public Output<Either<String,NotificationStageName>> getStageName() {
+    public Output<Either<String,NotificationStageName>> stageName() {
         return this.stageName;
     }
 
@@ -50,8 +51,8 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
     }
 
     private NotificationPreferenceArgs() {
-        this.sendNotification = Output.empty();
-        this.stageName = Output.empty();
+        this.sendNotification = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {

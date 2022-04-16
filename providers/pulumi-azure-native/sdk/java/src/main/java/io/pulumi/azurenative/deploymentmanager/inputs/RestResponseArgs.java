@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseRegexArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regex")
       private final @Nullable Output<RestResponseRegexArgs> regex;
 
-    public Output<RestResponseRegexArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+    public Output<RestResponseRegexArgs> regex() {
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="successStatusCodes")
       private final @Nullable Output<List<String>> successStatusCodes;
 
-    public Output<List<String>> getSuccessStatusCodes() {
-        return this.successStatusCodes == null ? Output.empty() : this.successStatusCodes;
+    public Output<List<String>> successStatusCodes() {
+        return this.successStatusCodes == null ? Codegen.empty() : this.successStatusCodes;
     }
 
     public RestResponseArgs(
@@ -50,8 +51,8 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestResponseArgs() {
-        this.regex = Output.empty();
-        this.successStatusCodes = Output.empty();
+        this.regex = Codegen.empty();
+        this.successStatusCodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regex(@Nullable RestResponseRegexArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }
         public Builder successStatusCodes(@Nullable Output<List<String>> successStatusCodes) {
@@ -89,7 +90,7 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder successStatusCodes(@Nullable List<String> successStatusCodes) {
-            this.successStatusCodes = Output.ofNullable(successStatusCodes);
+            this.successStatusCodes = Codegen.ofNullable(successStatusCodes);
             return this;
         }
         public Builder successStatusCodes(String... successStatusCodes) {

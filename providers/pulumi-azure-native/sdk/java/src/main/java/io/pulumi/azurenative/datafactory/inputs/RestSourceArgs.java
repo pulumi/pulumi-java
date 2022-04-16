@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> getAdditionalColumns() {
-        return this.additionalColumns == null ? Output.empty() : this.additionalColumns;
+    public Output<Object> additionalColumns() {
+        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalHeaders")
       private final @Nullable Output<Object> additionalHeaders;
 
-    public Output<Object> getAdditionalHeaders() {
-        return this.additionalHeaders == null ? Output.empty() : this.additionalHeaders;
+    public Output<Object> additionalHeaders() {
+        return this.additionalHeaders == null ? Codegen.empty() : this.additionalHeaders;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpRequestTimeout")
       private final @Nullable Output<Object> httpRequestTimeout;
 
-    public Output<Object> getHttpRequestTimeout() {
-        return this.httpRequestTimeout == null ? Output.empty() : this.httpRequestTimeout;
+    public Output<Object> httpRequestTimeout() {
+        return this.httpRequestTimeout == null ? Codegen.empty() : this.httpRequestTimeout;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="paginationRules")
       private final @Nullable Output<Object> paginationRules;
 
-    public Output<Object> getPaginationRules() {
-        return this.paginationRules == null ? Output.empty() : this.paginationRules;
+    public Output<Object> paginationRules() {
+        return this.paginationRules == null ? Codegen.empty() : this.paginationRules;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestBody")
       private final @Nullable Output<Object> requestBody;
 
-    public Output<Object> getRequestBody() {
-        return this.requestBody == null ? Output.empty() : this.requestBody;
+    public Output<Object> requestBody() {
+        return this.requestBody == null ? Codegen.empty() : this.requestBody;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestInterval")
       private final @Nullable Output<Object> requestInterval;
 
-    public Output<Object> getRequestInterval() {
-        return this.requestInterval == null ? Output.empty() : this.requestInterval;
+    public Output<Object> requestInterval() {
+        return this.requestInterval == null ? Codegen.empty() : this.requestInterval;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestMethod")
       private final @Nullable Output<Object> requestMethod;
 
-    public Output<Object> getRequestMethod() {
-        return this.requestMethod == null ? Output.empty() : this.requestMethod;
+    public Output<Object> requestMethod() {
+        return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
+    public Output<Object> sourceRetryCount() {
+        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
+    public Output<Object> sourceRetryWait() {
+        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -180,18 +181,18 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestSourceArgs() {
-        this.additionalColumns = Output.empty();
-        this.additionalHeaders = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.httpRequestTimeout = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.paginationRules = Output.empty();
-        this.requestBody = Output.empty();
-        this.requestInterval = Output.empty();
-        this.requestMethod = Output.empty();
-        this.sourceRetryCount = Output.empty();
-        this.sourceRetryWait = Output.empty();
-        this.type = Output.empty();
+        this.additionalColumns = Codegen.empty();
+        this.additionalHeaders = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.httpRequestTimeout = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.paginationRules = Codegen.empty();
+        this.requestBody = Codegen.empty();
+        this.requestInterval = Codegen.empty();
+        this.requestMethod = Codegen.empty();
+        this.sourceRetryCount = Codegen.empty();
+        this.sourceRetryWait = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Output.ofNullable(additionalColumns);
+            this.additionalColumns = Codegen.ofNullable(additionalColumns);
             return this;
         }
         public Builder additionalHeaders(@Nullable Output<Object> additionalHeaders) {
@@ -249,7 +250,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = Output.ofNullable(additionalHeaders);
+            this.additionalHeaders = Codegen.ofNullable(additionalHeaders);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -257,7 +258,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder httpRequestTimeout(@Nullable Output<Object> httpRequestTimeout) {
@@ -265,7 +266,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
-            this.httpRequestTimeout = Output.ofNullable(httpRequestTimeout);
+            this.httpRequestTimeout = Codegen.ofNullable(httpRequestTimeout);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -273,7 +274,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder paginationRules(@Nullable Output<Object> paginationRules) {
@@ -281,7 +282,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder paginationRules(@Nullable Object paginationRules) {
-            this.paginationRules = Output.ofNullable(paginationRules);
+            this.paginationRules = Codegen.ofNullable(paginationRules);
             return this;
         }
         public Builder requestBody(@Nullable Output<Object> requestBody) {
@@ -289,7 +290,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestBody(@Nullable Object requestBody) {
-            this.requestBody = Output.ofNullable(requestBody);
+            this.requestBody = Codegen.ofNullable(requestBody);
             return this;
         }
         public Builder requestInterval(@Nullable Output<Object> requestInterval) {
@@ -297,7 +298,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestInterval(@Nullable Object requestInterval) {
-            this.requestInterval = Output.ofNullable(requestInterval);
+            this.requestInterval = Codegen.ofNullable(requestInterval);
             return this;
         }
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
@@ -305,7 +306,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = Output.ofNullable(requestMethod);
+            this.requestMethod = Codegen.ofNullable(requestMethod);
             return this;
         }
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
@@ -313,7 +314,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
             return this;
         }
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
@@ -321,7 +322,7 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -23,7 +23,7 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lowerBound", required=true)
       private final Double lowerBound;
 
-    public Double getLowerBound() {
+    public Double lowerBound() {
         return this.lowerBound;
     }
 
@@ -34,7 +34,7 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="upperBound", required=true)
       private final Double upperBound;
 
-    public Double getUpperBound() {
+    public Double upperBound() {
         return this.upperBound;
     }
 

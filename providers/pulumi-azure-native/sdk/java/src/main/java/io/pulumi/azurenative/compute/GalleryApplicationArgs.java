@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.enums.OperatingSystemTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> getEndOfLifeDate() {
-        return this.endOfLifeDate == null ? Output.empty() : this.endOfLifeDate;
+    public Output<String> endOfLifeDate() {
+        return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="eula")
       private final @Nullable Output<String> eula;
 
-    public Output<String> getEula() {
-        return this.eula == null ? Output.empty() : this.eula;
+    public Output<String> eula() {
+        return this.eula == null ? Codegen.empty() : this.eula;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="galleryApplicationName")
       private final @Nullable Output<String> galleryApplicationName;
 
-    public Output<String> getGalleryApplicationName() {
-        return this.galleryApplicationName == null ? Output.empty() : this.galleryApplicationName;
+    public Output<String> galleryApplicationName() {
+        return this.galleryApplicationName == null ? Codegen.empty() : this.galleryApplicationName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
 
-    public Output<String> getGalleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -78,8 +79,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privacyStatementUri")
       private final @Nullable Output<String> privacyStatementUri;
 
-    public Output<String> getPrivacyStatementUri() {
-        return this.privacyStatementUri == null ? Output.empty() : this.privacyStatementUri;
+    public Output<String> privacyStatementUri() {
+        return this.privacyStatementUri == null ? Codegen.empty() : this.privacyStatementUri;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="releaseNoteUri")
       private final @Nullable Output<String> releaseNoteUri;
 
-    public Output<String> getReleaseNoteUri() {
-        return this.releaseNoteUri == null ? Output.empty() : this.releaseNoteUri;
+    public Output<String> releaseNoteUri() {
+        return this.releaseNoteUri == null ? Codegen.empty() : this.releaseNoteUri;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -122,7 +123,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="supportedOSType", required=true)
       private final Output<OperatingSystemTypes> supportedOSType;
 
-    public Output<OperatingSystemTypes> getSupportedOSType() {
+    public Output<OperatingSystemTypes> supportedOSType() {
         return this.supportedOSType;
     }
 
@@ -133,8 +134,8 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GalleryApplicationArgs(
@@ -163,17 +164,17 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GalleryApplicationArgs() {
-        this.description = Output.empty();
-        this.endOfLifeDate = Output.empty();
-        this.eula = Output.empty();
-        this.galleryApplicationName = Output.empty();
-        this.galleryName = Output.empty();
-        this.location = Output.empty();
-        this.privacyStatementUri = Output.empty();
-        this.releaseNoteUri = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.supportedOSType = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.endOfLifeDate = Codegen.empty();
+        this.eula = Codegen.empty();
+        this.galleryApplicationName = Codegen.empty();
+        this.galleryName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.privacyStatementUri = Codegen.empty();
+        this.releaseNoteUri = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.supportedOSType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
@@ -229,7 +230,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
+            this.endOfLifeDate = Codegen.ofNullable(endOfLifeDate);
             return this;
         }
         public Builder eula(@Nullable Output<String> eula) {
@@ -237,7 +238,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder eula(@Nullable String eula) {
-            this.eula = Output.ofNullable(eula);
+            this.eula = Codegen.ofNullable(eula);
             return this;
         }
         public Builder galleryApplicationName(@Nullable Output<String> galleryApplicationName) {
@@ -245,7 +246,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder galleryApplicationName(@Nullable String galleryApplicationName) {
-            this.galleryApplicationName = Output.ofNullable(galleryApplicationName);
+            this.galleryApplicationName = Codegen.ofNullable(galleryApplicationName);
             return this;
         }
         public Builder galleryName(Output<String> galleryName) {
@@ -261,7 +262,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder privacyStatementUri(@Nullable Output<String> privacyStatementUri) {
@@ -269,7 +270,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
-            this.privacyStatementUri = Output.ofNullable(privacyStatementUri);
+            this.privacyStatementUri = Codegen.ofNullable(privacyStatementUri);
             return this;
         }
         public Builder releaseNoteUri(@Nullable Output<String> releaseNoteUri) {
@@ -277,7 +278,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
-            this.releaseNoteUri = Output.ofNullable(releaseNoteUri);
+            this.releaseNoteUri = Codegen.ofNullable(releaseNoteUri);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -301,7 +302,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public GalleryApplicationArgs build() {
             return new GalleryApplicationArgs(description, endOfLifeDate, eula, galleryApplicationName, galleryName, location, privacyStatementUri, releaseNoteUri, resourceGroupName, supportedOSType, tags);

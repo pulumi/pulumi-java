@@ -6,6 +6,7 @@ package io.pulumi.plant.tree_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.outputs.Container;
 import io.pulumi.plant.tree_v1.RubberTreeArgs;
@@ -21,31 +22,31 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
     @Export(name="container", type=Container.class, parameters={})
     private Output</* @Nullable */ Container> container;
 
-    public Output</* @Nullable */ Container> getContainer() {
+    public Output</* @Nullable */ Container> container() {
         return this.container;
     }
     @Export(name="diameter", type=Diameter.class, parameters={})
     private Output<Diameter> diameter;
 
-    public Output<Diameter> getDiameter() {
+    public Output<Diameter> diameter() {
         return this.diameter;
     }
     @Export(name="farm", type=String.class, parameters={})
     private Output</* @Nullable */ String> farm;
 
-    public Output</* @Nullable */ String> getFarm() {
+    public Output</* @Nullable */ String> farm() {
         return this.farm;
     }
     @Export(name="size", type=TreeSize.class, parameters={})
     private Output</* @Nullable */ TreeSize> size;
 
-    public Output</* @Nullable */ TreeSize> getSize() {
+    public Output</* @Nullable */ TreeSize> size() {
         return this.size;
     }
     @Export(name="type", type=RubberTreeVariety.class, parameters={})
     private Output<RubberTreeVariety> type;
 
-    public Output<RubberTreeVariety> getType() {
+    public Output<RubberTreeVariety> type() {
         return this.type;
     }
 
@@ -71,7 +72,7 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RubberTree(String name, RubberTreeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RubberTree(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

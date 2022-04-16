@@ -32,14 +32,14 @@ public final class LatLngResponse {
      * The latitude in degrees. It must be in the range [-90.0, +90.0].
      * 
     */
-    public Double getLatitude() {
+    public Double latitude() {
         return this.latitude;
     }
     /**
      * The longitude in degrees. It must be in the range [-180.0, +180.0].
      * 
     */
-    public Double getLongitude() {
+    public Double longitude() {
         return this.longitude;
     }
 

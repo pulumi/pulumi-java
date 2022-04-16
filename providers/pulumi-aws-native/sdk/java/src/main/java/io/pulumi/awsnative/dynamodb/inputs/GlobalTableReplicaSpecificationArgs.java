@@ -11,6 +11,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReplicaSSESpecificationArg
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,50 +25,50 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
     @Import(name="contributorInsightsSpecification")
       private final @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
-    public Output<GlobalTableContributorInsightsSpecificationArgs> getContributorInsightsSpecification() {
-        return this.contributorInsightsSpecification == null ? Output.empty() : this.contributorInsightsSpecification;
+    public Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification() {
+        return this.contributorInsightsSpecification == null ? Codegen.empty() : this.contributorInsightsSpecification;
     }
 
     @Import(name="globalSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes;
 
-    public Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> getGlobalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? Output.empty() : this.globalSecondaryIndexes;
+    public Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes() {
+        return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
     }
 
     @Import(name="pointInTimeRecoverySpecification")
       private final @Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification;
 
-    public Output<GlobalTablePointInTimeRecoverySpecificationArgs> getPointInTimeRecoverySpecification() {
-        return this.pointInTimeRecoverySpecification == null ? Output.empty() : this.pointInTimeRecoverySpecification;
+    public Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification() {
+        return this.pointInTimeRecoverySpecification == null ? Codegen.empty() : this.pointInTimeRecoverySpecification;
     }
 
     @Import(name="readProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
-    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> getReadProvisionedThroughputSettings() {
-        return this.readProvisionedThroughputSettings == null ? Output.empty() : this.readProvisionedThroughputSettings;
+    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings() {
+        return this.readProvisionedThroughputSettings == null ? Codegen.empty() : this.readProvisionedThroughputSettings;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="sSESpecification")
       private final @Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification;
 
-    public Output<GlobalTableReplicaSSESpecificationArgs> getSSESpecification() {
-        return this.sSESpecification == null ? Output.empty() : this.sSESpecification;
+    public Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification() {
+        return this.sSESpecification == null ? Codegen.empty() : this.sSESpecification;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<GlobalTableTagArgs>> tags;
 
-    public Output<List<GlobalTableTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<GlobalTableTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GlobalTableReplicaSpecificationArgs(
@@ -88,13 +89,13 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
     }
 
     private GlobalTableReplicaSpecificationArgs() {
-        this.contributorInsightsSpecification = Output.empty();
-        this.globalSecondaryIndexes = Output.empty();
-        this.pointInTimeRecoverySpecification = Output.empty();
-        this.readProvisionedThroughputSettings = Output.empty();
-        this.region = Output.empty();
-        this.sSESpecification = Output.empty();
-        this.tags = Output.empty();
+        this.contributorInsightsSpecification = Codegen.empty();
+        this.globalSecondaryIndexes = Codegen.empty();
+        this.pointInTimeRecoverySpecification = Codegen.empty();
+        this.readProvisionedThroughputSettings = Codegen.empty();
+        this.region = Codegen.empty();
+        this.sSESpecification = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
-            this.contributorInsightsSpecification = Output.ofNullable(contributorInsightsSpecification);
+            this.contributorInsightsSpecification = Codegen.ofNullable(contributorInsightsSpecification);
             return this;
         }
         public Builder globalSecondaryIndexes(@Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes) {
@@ -142,7 +143,7 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = Output.ofNullable(globalSecondaryIndexes);
+            this.globalSecondaryIndexes = Codegen.ofNullable(globalSecondaryIndexes);
             return this;
         }
         public Builder globalSecondaryIndexes(GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs... globalSecondaryIndexes) {
@@ -153,7 +154,7 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecificationArgs pointInTimeRecoverySpecification) {
-            this.pointInTimeRecoverySpecification = Output.ofNullable(pointInTimeRecoverySpecification);
+            this.pointInTimeRecoverySpecification = Codegen.ofNullable(pointInTimeRecoverySpecification);
             return this;
         }
         public Builder readProvisionedThroughputSettings(@Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
@@ -161,7 +162,7 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
-            this.readProvisionedThroughputSettings = Output.ofNullable(readProvisionedThroughputSettings);
+            this.readProvisionedThroughputSettings = Codegen.ofNullable(readProvisionedThroughputSettings);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -177,7 +178,7 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecificationArgs sSESpecification) {
-            this.sSESpecification = Output.ofNullable(sSESpecification);
+            this.sSESpecification = Codegen.ofNullable(sSESpecification);
             return this;
         }
         public Builder tags(@Nullable Output<List<GlobalTableTagArgs>> tags) {
@@ -185,7 +186,7 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tags(@Nullable List<GlobalTableTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(GlobalTableTagArgs... tags) {

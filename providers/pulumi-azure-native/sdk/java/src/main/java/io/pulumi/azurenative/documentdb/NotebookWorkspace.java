@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
      * @return The name of the database account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -55,7 +56,7 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
      * @return Specifies the endpoint of Notebook server.
      * 
      */
-    public Output<String> getNotebookServerEndpoint() {
+    public Output<String> notebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }
     /**
@@ -69,7 +70,7 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
      * @return Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -83,7 +84,7 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotebookWorkspace(String name, NotebookWorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:NotebookWorkspace", name, args == null ? NotebookWorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:documentdb:NotebookWorkspace", name, args == null ? NotebookWorkspaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotebookWorkspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * @return Content type description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * @return Content type schema.
      * 
      */
-    public Output</* @Nullable */ Object> getSchema() {
+    public Output</* @Nullable */ Object> schema() {
         return this.schema;
     }
     /**
@@ -84,7 +85,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -98,7 +99,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * @return Content type version.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 
@@ -124,7 +125,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ContentType(String name, ContentTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ContentType", name, args == null ? ContentTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:ContentType", name, args == null ? ContentTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ContentType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

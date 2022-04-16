@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FlexibleAppVersionEntrypointArgs extends io.pulumi.resources.
     @Import(name="shell", required=true)
       private final Output<String> shell;
 
-    public Output<String> getShell() {
+    public Output<String> shell() {
         return this.shell;
     }
 
@@ -29,7 +30,7 @@ public final class FlexibleAppVersionEntrypointArgs extends io.pulumi.resources.
     }
 
     private FlexibleAppVersionEntrypointArgs() {
-        this.shell = Output.empty();
+        this.shell = Codegen.empty();
     }
 
     public static Builder builder() {

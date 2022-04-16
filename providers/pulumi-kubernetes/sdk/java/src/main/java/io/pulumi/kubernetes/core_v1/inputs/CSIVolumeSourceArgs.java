@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="driver", required=true)
       private final Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver;
     }
 
@@ -39,8 +40,8 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nodePublishSecretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> nodePublishSecretRef;
 
-    public Output<LocalObjectReferenceArgs> getNodePublishSecretRef() {
-        return this.nodePublishSecretRef == null ? Output.empty() : this.nodePublishSecretRef;
+    public Output<LocalObjectReferenceArgs> nodePublishSecretRef() {
+        return this.nodePublishSecretRef == null ? Codegen.empty() : this.nodePublishSecretRef;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="volumeAttributes")
       private final @Nullable Output<Map<String,String>> volumeAttributes;
 
-    public Output<Map<String,String>> getVolumeAttributes() {
-        return this.volumeAttributes == null ? Output.empty() : this.volumeAttributes;
+    public Output<Map<String,String>> volumeAttributes() {
+        return this.volumeAttributes == null ? Codegen.empty() : this.volumeAttributes;
     }
 
     public CSIVolumeSourceArgs(
@@ -90,11 +91,11 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CSIVolumeSourceArgs() {
-        this.driver = Output.empty();
-        this.fsType = Output.empty();
-        this.nodePublishSecretRef = Output.empty();
-        this.readOnly = Output.empty();
-        this.volumeAttributes = Output.empty();
+        this.driver = Codegen.empty();
+        this.fsType = Codegen.empty();
+        this.nodePublishSecretRef = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.volumeAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder nodePublishSecretRef(@Nullable Output<LocalObjectReferenceArgs> nodePublishSecretRef) {
@@ -146,7 +147,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder nodePublishSecretRef(@Nullable LocalObjectReferenceArgs nodePublishSecretRef) {
-            this.nodePublishSecretRef = Output.ofNullable(nodePublishSecretRef);
+            this.nodePublishSecretRef = Codegen.ofNullable(nodePublishSecretRef);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -154,7 +155,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder volumeAttributes(@Nullable Output<Map<String,String>> volumeAttributes) {
@@ -162,7 +163,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
-            this.volumeAttributes = Output.ofNullable(volumeAttributes);
+            this.volumeAttributes = Codegen.ofNullable(volumeAttributes);
             return this;
         }        public CSIVolumeSourceArgs build() {
             return new CSIVolumeSourceArgs(driver, fsType, nodePublishSecretRef, readOnly, volumeAttributes);

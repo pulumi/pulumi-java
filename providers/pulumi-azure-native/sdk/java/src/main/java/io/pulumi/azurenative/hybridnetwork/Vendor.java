@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the vendor resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -70,7 +71,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * @return A list of IDs of the vendor skus offered by the vendor.
      * 
      */
-    public Output<List<SubResourceResponse>> getSkus() {
+    public Output<List<SubResourceResponse>> skus() {
         return this.skus;
     }
     /**
@@ -84,7 +85,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -110,7 +111,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Vendor(String name, @Nullable VendorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hybridnetwork:Vendor", name, args == null ? VendorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:hybridnetwork:Vendor", name, args == null ? VendorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Vendor(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

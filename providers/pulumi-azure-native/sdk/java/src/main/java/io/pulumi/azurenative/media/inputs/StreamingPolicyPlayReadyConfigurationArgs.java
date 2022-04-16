@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
     @Import(name="customLicenseAcquisitionUrlTemplate")
       private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Output.empty() : this.customLicenseAcquisitionUrlTemplate;
+    public Output<String> customLicenseAcquisitionUrlTemplate() {
+        return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
     @Import(name="playReadyCustomAttributes")
       private final @Nullable Output<String> playReadyCustomAttributes;
 
-    public Output<String> getPlayReadyCustomAttributes() {
-        return this.playReadyCustomAttributes == null ? Output.empty() : this.playReadyCustomAttributes;
+    public Output<String> playReadyCustomAttributes() {
+        return this.playReadyCustomAttributes == null ? Codegen.empty() : this.playReadyCustomAttributes;
     }
 
     public StreamingPolicyPlayReadyConfigurationArgs(
@@ -48,8 +49,8 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
     }
 
     private StreamingPolicyPlayReadyConfigurationArgs() {
-        this.customLicenseAcquisitionUrlTemplate = Output.empty();
-        this.playReadyCustomAttributes = Output.empty();
+        this.customLicenseAcquisitionUrlTemplate = Codegen.empty();
+        this.playReadyCustomAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
+            this.customLicenseAcquisitionUrlTemplate = Codegen.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
         }
         public Builder playReadyCustomAttributes(@Nullable Output<String> playReadyCustomAttributes) {
@@ -87,7 +88,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder playReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
-            this.playReadyCustomAttributes = Output.ofNullable(playReadyCustomAttributes);
+            this.playReadyCustomAttributes = Codegen.ofNullable(playReadyCustomAttributes);
             return this;
         }        public StreamingPolicyPlayReadyConfigurationArgs build() {
             return new StreamingPolicyPlayReadyConfigurationArgs(customLicenseAcquisitionUrlTemplate, playReadyCustomAttributes);

@@ -10,6 +10,7 @@ import io.pulumi.aws.guardduty.outputs.FilterFindingCriteria;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -56,7 +57,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return The ARN of the GuardDuty filter.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +71,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Description of the filter.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,7 +85,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return ID of a GuardDuty detector, attached to your account.
      * 
      */
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
     /**
@@ -98,7 +99,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
      * 
      */
-    public Output<FilterFindingCriteria> getFindingCriteria() {
+    public Output<FilterFindingCriteria> findingCriteria() {
         return this.findingCriteria;
     }
     /**
@@ -112,7 +113,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return The name of your filter.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +127,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
      * 
      */
-    public Output<Integer> getRank() {
+    public Output<Integer> rank() {
         return this.rank;
     }
     /**
@@ -140,7 +141,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return The tags that you want to add to the Filter resource. A tag consists of a key and a value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -154,7 +155,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -180,7 +181,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Filter(String name, FilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:guardduty/filter:Filter", name, args == null ? FilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:guardduty/filter:Filter", name, args == null ? FilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Filter(String name, Output<String> id, @Nullable FilterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.lex.outputs.ResourcePolicyPolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -21,19 +22,19 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
     @Export(name="policy", type=ResourcePolicyPolicy.class, parameters={})
     private Output<ResourcePolicyPolicy> policy;
 
-    public Output<ResourcePolicyPolicy> getPolicy() {
+    public Output<ResourcePolicyPolicy> policy() {
         return this.policy;
     }
     @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
 
@@ -59,7 +60,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourcePolicy(String name, ResourcePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lex:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:lex:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourcePolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

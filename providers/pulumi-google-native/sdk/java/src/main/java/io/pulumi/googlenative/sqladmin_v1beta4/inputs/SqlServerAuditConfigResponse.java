@@ -23,7 +23,7 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

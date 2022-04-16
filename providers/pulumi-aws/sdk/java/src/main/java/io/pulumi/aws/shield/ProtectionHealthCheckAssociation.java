@@ -9,6 +9,7 @@ import io.pulumi.aws.shield.inputs.ProtectionHealthCheckAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -42,7 +43,7 @@ public class ProtectionHealthCheckAssociation extends io.pulumi.resources.Custom
      * @return The ARN (Amazon Resource Name) of the Route53 Health Check resource which will be associated to the protected resource.
      * 
      */
-    public Output<String> getHealthCheckArn() {
+    public Output<String> healthCheckArn() {
         return this.healthCheckArn;
     }
     /**
@@ -56,7 +57,7 @@ public class ProtectionHealthCheckAssociation extends io.pulumi.resources.Custom
      * @return The ID of the protected resource.
      * 
      */
-    public Output<String> getShieldProtectionId() {
+    public Output<String> shieldProtectionId() {
         return this.shieldProtectionId;
     }
 
@@ -82,7 +83,7 @@ public class ProtectionHealthCheckAssociation extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public ProtectionHealthCheckAssociation(String name, ProtectionHealthCheckAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:shield/protectionHealthCheckAssociation:ProtectionHealthCheckAssociation", name, args == null ? ProtectionHealthCheckAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:shield/protectionHealthCheckAssociation:ProtectionHealthCheckAssociation", name, args == null ? ProtectionHealthCheckAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProtectionHealthCheckAssociation(String name, Output<String> id, @Nullable ProtectionHealthCheckAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

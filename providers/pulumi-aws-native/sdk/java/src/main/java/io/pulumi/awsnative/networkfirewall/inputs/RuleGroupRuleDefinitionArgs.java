@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupMatchAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,14 +19,14 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
     @Import(name="matchAttributes", required=true)
       private final Output<RuleGroupMatchAttributesArgs> matchAttributes;
 
-    public Output<RuleGroupMatchAttributesArgs> getMatchAttributes() {
+    public Output<RuleGroupMatchAttributesArgs> matchAttributes() {
         return this.matchAttributes;
     }
 
@@ -37,8 +38,8 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private RuleGroupRuleDefinitionArgs() {
-        this.actions = Output.empty();
-        this.matchAttributes = Output.empty();
+        this.actions = Codegen.empty();
+        this.matchAttributes = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RecordLatencyRoutingPolicyGetArgs extends io.pulumi.resources
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -29,7 +30,7 @@ public final class RecordLatencyRoutingPolicyGetArgs extends io.pulumi.resources
     }
 
     private RecordLatencyRoutingPolicyGetArgs() {
-        this.region = Output.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {

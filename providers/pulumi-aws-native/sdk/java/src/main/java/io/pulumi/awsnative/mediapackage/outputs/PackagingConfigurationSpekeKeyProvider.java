@@ -32,21 +32,21 @@ public final class PackagingConfigurationSpekeKeyProvider {
         this.url = url;
     }
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * The system IDs to include in key requests.
      * 
     */
-    public List<String> getSystemIds() {
+    public List<String> systemIds() {
         return this.systemIds;
     }
     /**
      * The URL of the external key provider service.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

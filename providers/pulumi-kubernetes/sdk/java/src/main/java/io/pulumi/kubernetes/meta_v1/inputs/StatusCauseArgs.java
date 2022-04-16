@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+    public Output<String> field() {
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     public StatusCauseArgs(
@@ -65,9 +66,9 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StatusCauseArgs() {
-        this.field = Output.empty();
-        this.message = Output.empty();
-        this.reason = Output.empty();
+        this.field = Codegen.empty();
+        this.message = Codegen.empty();
+        this.reason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -107,7 +108,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -115,7 +116,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }        public StatusCauseArgs build() {
             return new StatusCauseArgs(field, message, reason);

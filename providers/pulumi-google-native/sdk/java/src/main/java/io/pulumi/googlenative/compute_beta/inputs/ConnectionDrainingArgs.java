@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="drainingTimeoutSec")
       private final @Nullable Output<Integer> drainingTimeoutSec;
 
-    public Output<Integer> getDrainingTimeoutSec() {
-        return this.drainingTimeoutSec == null ? Output.empty() : this.drainingTimeoutSec;
+    public Output<Integer> drainingTimeoutSec() {
+        return this.drainingTimeoutSec == null ? Codegen.empty() : this.drainingTimeoutSec;
     }
 
     public ConnectionDrainingArgs(@Nullable Output<Integer> drainingTimeoutSec) {
@@ -34,7 +35,7 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ConnectionDrainingArgs() {
-        this.drainingTimeoutSec = Output.empty();
+        this.drainingTimeoutSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder drainingTimeoutSec(@Nullable Integer drainingTimeoutSec) {
-            this.drainingTimeoutSec = Output.ofNullable(drainingTimeoutSec);
+            this.drainingTimeoutSec = Codegen.ofNullable(drainingTimeoutSec);
             return this;
         }        public ConnectionDrainingArgs build() {
             return new ConnectionDrainingArgs(drainingTimeoutSec);

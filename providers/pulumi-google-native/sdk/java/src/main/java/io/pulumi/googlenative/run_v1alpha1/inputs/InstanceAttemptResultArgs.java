@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.GoogleRpcStatusArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
     @Import(name="exitCode")
       private final @Nullable Output<Integer> exitCode;
 
-    public Output<Integer> getExitCode() {
-        return this.exitCode == null ? Output.empty() : this.exitCode;
+    public Output<Integer> exitCode() {
+        return this.exitCode == null ? Codegen.empty() : this.exitCode;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
     @Import(name="status")
       private final @Nullable Output<GoogleRpcStatusArgs> status;
 
-    public Output<GoogleRpcStatusArgs> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<GoogleRpcStatusArgs> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public InstanceAttemptResultArgs(
@@ -49,8 +50,8 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
     }
 
     private InstanceAttemptResultArgs() {
-        this.exitCode = Output.empty();
-        this.status = Output.empty();
+        this.exitCode = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder exitCode(@Nullable Integer exitCode) {
-            this.exitCode = Output.ofNullable(exitCode);
+            this.exitCode = Codegen.ofNullable(exitCode);
             return this;
         }
         public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
@@ -88,7 +89,7 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder status(@Nullable GoogleRpcStatusArgs status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public InstanceAttemptResultArgs build() {
             return new InstanceAttemptResultArgs(exitCode, status);

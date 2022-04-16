@@ -9,6 +9,7 @@ import io.pulumi.aws.neptune.inputs.ClusterInstanceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +46,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The hostname of the instance. See also `endpoint` and `port`.
      * 
      */
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
     /**
@@ -61,7 +62,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * are applied immediately, or during the next maintenance window. Default is`false`.
      * 
      */
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately;
     }
     /**
@@ -75,7 +76,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of neptune instance
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -89,7 +90,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoMinorVersionUpgrade() {
+    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade;
     }
     /**
@@ -103,7 +104,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The EC2 Availability Zone that the neptune instance is created in.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -117,7 +118,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The identifier of the `aws.neptune.Cluster` in which to launch this instance.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -131,7 +132,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The region-unique, immutable identifier for the neptune instance.
      * 
      */
-    public Output<String> getDbiResourceId() {
+    public Output<String> dbiResourceId() {
         return this.dbiResourceId;
     }
     /**
@@ -145,7 +146,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The connection endpoint in `address:port` format.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -159,7 +160,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The name of the database engine to be used for the neptune instance. Defaults to `neptune`. Valid Values: `neptune`.
      * 
      */
-    public Output</* @Nullable */ String> getEngine() {
+    public Output</* @Nullable */ String> engine() {
         return this.engine;
     }
     /**
@@ -173,7 +174,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The neptune engine version.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -187,7 +188,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The identifier for the neptune instance, if omitted, this provider will assign a random, unique identifier.
      * 
      */
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier;
     }
     /**
@@ -201,7 +202,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    public Output<String> getIdentifierPrefix() {
+    public Output<String> identifierPrefix() {
         return this.identifierPrefix;
     }
     /**
@@ -215,7 +216,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The instance class to use.
      * 
      */
-    public Output<String> getInstanceClass() {
+    public Output<String> instanceClass() {
         return this.instanceClass;
     }
     /**
@@ -229,7 +230,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The ARN for the KMS encryption key if one is set to the neptune cluster.
      * 
      */
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -243,7 +244,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The name of the neptune parameter group to associate with this instance.
      * 
      */
-    public Output</* @Nullable */ String> getNeptuneParameterGroupName() {
+    public Output</* @Nullable */ String> neptuneParameterGroupName() {
         return this.neptuneParameterGroupName;
     }
     /**
@@ -257,7 +258,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return A subnet group to associate with this neptune instance. **NOTE:** This must match the `neptune_subnet_group_name` of the attached `aws.neptune.Cluster`.
      * 
      */
-    public Output<String> getNeptuneSubnetGroupName() {
+    public Output<String> neptuneSubnetGroupName() {
         return this.neptuneSubnetGroupName;
     }
     /**
@@ -271,7 +272,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The port on which the DB accepts connections. Defaults to `8182`.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -285,7 +286,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The daily time range during which automated backups are created if automated backups are enabled. Eg: "04:00-09:00"
      * 
      */
-    public Output<String> getPreferredBackupWindow() {
+    public Output<String> preferredBackupWindow() {
         return this.preferredBackupWindow;
     }
     /**
@@ -301,7 +302,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
      * 
      */
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
@@ -315,7 +316,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
      * 
      */
-    public Output</* @Nullable */ Integer> getPromotionTier() {
+    public Output</* @Nullable */ Integer> promotionTier() {
         return this.promotionTier;
     }
     /**
@@ -329,7 +330,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Bool to control if instance is publicly accessible. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPubliclyAccessible() {
+    public Output</* @Nullable */ Boolean> publiclyAccessible() {
         return this.publiclyAccessible;
     }
     /**
@@ -343,7 +344,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the neptune cluster is encrypted.
      * 
      */
-    public Output<Boolean> getStorageEncrypted() {
+    public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
@@ -357,7 +358,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -371,7 +372,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -385,7 +386,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
      * 
      */
-    public Output<Boolean> getWriter() {
+    public Output<Boolean> writer() {
         return this.writer;
     }
 
@@ -411,7 +412,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterInstance(String name, ClusterInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:neptune/clusterInstance:ClusterInstance", name, args == null ? ClusterInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:neptune/clusterInstance:ClusterInstance", name, args == null ? ClusterInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterInstance(String name, Output<String> id, @Nullable ClusterInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

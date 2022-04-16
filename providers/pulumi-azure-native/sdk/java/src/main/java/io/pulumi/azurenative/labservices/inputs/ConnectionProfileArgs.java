@@ -6,6 +6,7 @@ package io.pulumi.azurenative.labservices.inputs;
 import io.pulumi.azurenative.labservices.enums.ConnectionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientRdpAccess")
       private final @Nullable Output<ConnectionType> clientRdpAccess;
 
-    public Output<ConnectionType> getClientRdpAccess() {
-        return this.clientRdpAccess == null ? Output.empty() : this.clientRdpAccess;
+    public Output<ConnectionType> clientRdpAccess() {
+        return this.clientRdpAccess == null ? Codegen.empty() : this.clientRdpAccess;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientSshAccess")
       private final @Nullable Output<ConnectionType> clientSshAccess;
 
-    public Output<ConnectionType> getClientSshAccess() {
-        return this.clientSshAccess == null ? Output.empty() : this.clientSshAccess;
+    public Output<ConnectionType> clientSshAccess() {
+        return this.clientSshAccess == null ? Codegen.empty() : this.clientSshAccess;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="webRdpAccess")
       private final @Nullable Output<ConnectionType> webRdpAccess;
 
-    public Output<ConnectionType> getWebRdpAccess() {
-        return this.webRdpAccess == null ? Output.empty() : this.webRdpAccess;
+    public Output<ConnectionType> webRdpAccess() {
+        return this.webRdpAccess == null ? Codegen.empty() : this.webRdpAccess;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="webSshAccess")
       private final @Nullable Output<ConnectionType> webSshAccess;
 
-    public Output<ConnectionType> getWebSshAccess() {
-        return this.webSshAccess == null ? Output.empty() : this.webSshAccess;
+    public Output<ConnectionType> webSshAccess() {
+        return this.webSshAccess == null ? Codegen.empty() : this.webSshAccess;
     }
 
     public ConnectionProfileArgs(
@@ -67,17 +68,17 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         @Nullable Output<ConnectionType> clientSshAccess,
         @Nullable Output<ConnectionType> webRdpAccess,
         @Nullable Output<ConnectionType> webSshAccess) {
-        this.clientRdpAccess = clientRdpAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientRdpAccess;
-        this.clientSshAccess = clientSshAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientSshAccess;
-        this.webRdpAccess = webRdpAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webRdpAccess;
-        this.webSshAccess = webSshAccess == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webSshAccess;
+        this.clientRdpAccess = clientRdpAccess == null ? Codegen.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientRdpAccess;
+        this.clientSshAccess = clientSshAccess == null ? Codegen.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : clientSshAccess;
+        this.webRdpAccess = webRdpAccess == null ? Codegen.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webRdpAccess;
+        this.webSshAccess = webSshAccess == null ? Codegen.ofNullable(io.pulumi.azurenative.labservices.enums.ConnectionType.None) : webSshAccess;
     }
 
     private ConnectionProfileArgs() {
-        this.clientRdpAccess = Output.empty();
-        this.clientSshAccess = Output.empty();
-        this.webRdpAccess = Output.empty();
-        this.webSshAccess = Output.empty();
+        this.clientRdpAccess = Codegen.empty();
+        this.clientSshAccess = Codegen.empty();
+        this.webRdpAccess = Codegen.empty();
+        this.webSshAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder clientRdpAccess(@Nullable ConnectionType clientRdpAccess) {
-            this.clientRdpAccess = Output.ofNullable(clientRdpAccess);
+            this.clientRdpAccess = Codegen.ofNullable(clientRdpAccess);
             return this;
         }
         public Builder clientSshAccess(@Nullable Output<ConnectionType> clientSshAccess) {
@@ -119,7 +120,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder clientSshAccess(@Nullable ConnectionType clientSshAccess) {
-            this.clientSshAccess = Output.ofNullable(clientSshAccess);
+            this.clientSshAccess = Codegen.ofNullable(clientSshAccess);
             return this;
         }
         public Builder webRdpAccess(@Nullable Output<ConnectionType> webRdpAccess) {
@@ -127,7 +128,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder webRdpAccess(@Nullable ConnectionType webRdpAccess) {
-            this.webRdpAccess = Output.ofNullable(webRdpAccess);
+            this.webRdpAccess = Codegen.ofNullable(webRdpAccess);
             return this;
         }
         public Builder webSshAccess(@Nullable Output<ConnectionType> webSshAccess) {
@@ -135,7 +136,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder webSshAccess(@Nullable ConnectionType webSshAccess) {
-            this.webSshAccess = Output.ofNullable(webSshAccess);
+            this.webSshAccess = Codegen.ofNullable(webSshAccess);
             return this;
         }        public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);

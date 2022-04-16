@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.WorkflowTemplateArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateState;
@@ -53,7 +54,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Output only. The time template was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -67,7 +68,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return (Beta only) Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
      * 
      */
-    public Output</* @Nullable */ String> getDagTimeout() {
+    public Output</* @Nullable */ String> dagTimeout() {
         return this.dagTimeout;
     }
     /**
@@ -81,7 +82,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Required. The Directed Acyclic Graph of Jobs to submit.
      * 
      */
-    public Output<List<WorkflowTemplateJob>> getJobs() {
+    public Output<List<WorkflowTemplateJob>> jobs() {
         return this.jobs;
     }
     /**
@@ -95,7 +96,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -109,7 +110,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -123,7 +124,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -137,7 +138,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowTemplateParameter>> getParameters() {
+    public Output</* @Nullable */ List<WorkflowTemplateParameter>> parameters() {
         return this.parameters;
     }
     /**
@@ -151,7 +152,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Required. WorkflowTemplate scheduling information.
      * 
      */
-    public Output<WorkflowTemplatePlacement> getPlacement() {
+    public Output<WorkflowTemplatePlacement> placement() {
         return this.placement;
     }
     /**
@@ -165,7 +166,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -179,7 +180,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Output only. The time template was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -197,7 +198,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 
@@ -223,7 +224,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkflowTemplate(String name, WorkflowTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/workflowTemplate:WorkflowTemplate", name, args == null ? WorkflowTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/workflowTemplate:WorkflowTemplate", name, args == null ? WorkflowTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkflowTemplate(String name, Output<String> id, @Nullable WorkflowTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

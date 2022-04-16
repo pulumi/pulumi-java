@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class EnvironmentConfigDatabaseConfigArgs extends io.pulumi.resourc
     @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
 
@@ -25,7 +26,7 @@ public final class EnvironmentConfigDatabaseConfigArgs extends io.pulumi.resourc
     }
 
     private EnvironmentConfigDatabaseConfigArgs() {
-        this.machineType = Output.empty();
+        this.machineType = Codegen.empty();
     }
 
     public static Builder builder() {

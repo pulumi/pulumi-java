@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
     @Import(name="allowPlaybackInterruption")
       private final @Nullable Output<Boolean> allowPlaybackInterruption;
 
-    public Output<Boolean> getAllowPlaybackInterruption() {
-        return this.allowPlaybackInterruption == null ? Output.empty() : this.allowPlaybackInterruption;
+    public Output<Boolean> allowPlaybackInterruption() {
+        return this.allowPlaybackInterruption == null ? Codegen.empty() : this.allowPlaybackInterruption;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
     @Import(name="texts")
       private final @Nullable Output<List<String>> texts;
 
-    public Output<List<String>> getTexts() {
-        return this.texts == null ? Output.empty() : this.texts;
+    public Output<List<String>> texts() {
+        return this.texts == null ? Codegen.empty() : this.texts;
     }
 
     public CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs(
@@ -47,8 +48,8 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
     }
 
     private CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs() {
-        this.allowPlaybackInterruption = Output.empty();
-        this.texts = Output.empty();
+        this.allowPlaybackInterruption = Codegen.empty();
+        this.texts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
             return this;
         }
         public Builder allowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = Output.ofNullable(allowPlaybackInterruption);
+            this.allowPlaybackInterruption = Codegen.ofNullable(allowPlaybackInterruption);
             return this;
         }
         public Builder texts(@Nullable Output<List<String>> texts) {
@@ -86,7 +87,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
             return this;
         }
         public Builder texts(@Nullable List<String> texts) {
-            this.texts = Output.ofNullable(texts);
+            this.texts = Codegen.ofNullable(texts);
             return this;
         }
         public Builder texts(String... texts) {

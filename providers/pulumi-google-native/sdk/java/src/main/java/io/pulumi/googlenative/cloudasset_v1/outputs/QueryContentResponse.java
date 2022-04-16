@@ -24,7 +24,7 @@ public final class QueryContentResponse {
      * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
      * 
     */
-    public IamPolicyAnalysisQueryResponse getIamPolicyAnalysisQuery() {
+    public IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;
     }
 

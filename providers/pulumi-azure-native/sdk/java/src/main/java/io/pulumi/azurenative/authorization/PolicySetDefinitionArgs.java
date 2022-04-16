@@ -10,6 +10,7 @@ import io.pulumi.azurenative.authorization.inputs.PolicyDefinitionReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Object> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterDefinitionsValueArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyDefinitionGroups")
       private final @Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
 
-    public Output<List<PolicyDefinitionGroupArgs>> getPolicyDefinitionGroups() {
-        return this.policyDefinitionGroups == null ? Output.empty() : this.policyDefinitionGroups;
+    public Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups() {
+        return this.policyDefinitionGroups == null ? Codegen.empty() : this.policyDefinitionGroups;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyDefinitions", required=true)
       private final Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
 
-    public Output<List<PolicyDefinitionReferenceArgs>> getPolicyDefinitions() {
+    public Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions() {
         return this.policyDefinitions;
     }
 
@@ -95,8 +96,8 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="policySetDefinitionName")
       private final @Nullable Output<String> policySetDefinitionName;
 
-    public Output<String> getPolicySetDefinitionName() {
-        return this.policySetDefinitionName == null ? Output.empty() : this.policySetDefinitionName;
+    public Output<String> policySetDefinitionName() {
+        return this.policySetDefinitionName == null ? Codegen.empty() : this.policySetDefinitionName;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Output<Either<String,PolicyType>> getPolicyType() {
-        return this.policyType == null ? Output.empty() : this.policyType;
+    public Output<Either<String,PolicyType>> policyType() {
+        return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 
     public PolicySetDefinitionArgs(
@@ -130,14 +131,14 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     private PolicySetDefinitionArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.metadata = Output.empty();
-        this.parameters = Output.empty();
-        this.policyDefinitionGroups = Output.empty();
-        this.policyDefinitions = Output.empty();
-        this.policySetDefinitionName = Output.empty();
-        this.policyType = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policyDefinitionGroups = Codegen.empty();
+        this.policyDefinitions = Codegen.empty();
+        this.policySetDefinitionName = Codegen.empty();
+        this.policyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -187,7 +188,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -195,7 +196,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters) {
@@ -203,7 +204,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder policyDefinitionGroups(@Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups) {
@@ -211,7 +212,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policyDefinitionGroups(@Nullable List<PolicyDefinitionGroupArgs> policyDefinitionGroups) {
-            this.policyDefinitionGroups = Output.ofNullable(policyDefinitionGroups);
+            this.policyDefinitionGroups = Codegen.ofNullable(policyDefinitionGroups);
             return this;
         }
         public Builder policyDefinitionGroups(PolicyDefinitionGroupArgs... policyDefinitionGroups) {
@@ -233,7 +234,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policySetDefinitionName(@Nullable String policySetDefinitionName) {
-            this.policySetDefinitionName = Output.ofNullable(policySetDefinitionName);
+            this.policySetDefinitionName = Codegen.ofNullable(policySetDefinitionName);
             return this;
         }
         public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
@@ -241,7 +242,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Output.ofNullable(policyType);
+            this.policyType = Codegen.ofNullable(policyType);
             return this;
         }        public PolicySetDefinitionArgs build() {
             return new PolicySetDefinitionArgs(description, displayName, metadata, parameters, policyDefinitionGroups, policyDefinitions, policySetDefinitionName, policyType);

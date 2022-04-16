@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.PollingOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methodMatch")
       private final @Nullable Output<String> methodMatch;
 
-    public Output<String> getMethodMatch() {
-        return this.methodMatch == null ? Output.empty() : this.methodMatch;
+    public Output<String> methodMatch() {
+        return this.methodMatch == null ? Codegen.empty() : this.methodMatch;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pollingOptions")
       private final @Nullable Output<PollingOptionsArgs> pollingOptions;
 
-    public Output<PollingOptionsArgs> getPollingOptions() {
-        return this.pollingOptions == null ? Output.empty() : this.pollingOptions;
+    public Output<PollingOptionsArgs> pollingOptions() {
+        return this.pollingOptions == null ? Codegen.empty() : this.pollingOptions;
     }
 
     public AsyncOptionsArgs(
@@ -49,8 +50,8 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AsyncOptionsArgs() {
-        this.methodMatch = Output.empty();
-        this.pollingOptions = Output.empty();
+        this.methodMatch = Codegen.empty();
+        this.pollingOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methodMatch(@Nullable String methodMatch) {
-            this.methodMatch = Output.ofNullable(methodMatch);
+            this.methodMatch = Codegen.ofNullable(methodMatch);
             return this;
         }
         public Builder pollingOptions(@Nullable Output<PollingOptionsArgs> pollingOptions) {
@@ -88,7 +89,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pollingOptions(@Nullable PollingOptionsArgs pollingOptions) {
-            this.pollingOptions = Output.ofNullable(pollingOptions);
+            this.pollingOptions = Codegen.ofNullable(pollingOptions);
             return this;
         }        public AsyncOptionsArgs build() {
             return new AsyncOptionsArgs(methodMatch, pollingOptions);

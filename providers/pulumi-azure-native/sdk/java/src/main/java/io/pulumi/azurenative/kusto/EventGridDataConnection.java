@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The name of blob storage event type to process.
      * 
      */
-    public Output</* @Nullable */ String> getBlobStorageEventType() {
+    public Output</* @Nullable */ String> blobStorageEventType() {
         return this.blobStorageEventType;
     }
     /**
@@ -56,7 +57,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The event hub consumer group.
      * 
      */
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
     /**
@@ -70,7 +71,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getDataFormat() {
+    public Output</* @Nullable */ String> dataFormat() {
         return this.dataFormat;
     }
     /**
@@ -84,7 +85,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The resource ID where the event grid is configured to send events.
      * 
      */
-    public Output<String> getEventHubResourceId() {
+    public Output<String> eventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
@@ -98,7 +99,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnoreFirstRecord() {
+    public Output</* @Nullable */ Boolean> ignoreFirstRecord() {
         return this.ignoreFirstRecord;
     }
     /**
@@ -114,7 +115,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * Expected value is 'EventGrid'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -128,7 +129,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -142,7 +143,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getMappingRuleName() {
+    public Output</* @Nullable */ String> mappingRuleName() {
         return this.mappingRuleName;
     }
     /**
@@ -156,7 +157,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -170,7 +171,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -184,7 +185,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The resource ID of the storage account where the data resides.
      * 
      */
-    public Output<String> getStorageAccountResourceId() {
+    public Output<String> storageAccountResourceId() {
         return this.storageAccountResourceId;
     }
     /**
@@ -198,7 +199,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> getTableName() {
+    public Output</* @Nullable */ String> tableName() {
         return this.tableName;
     }
     /**
@@ -212,7 +213,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -238,7 +239,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public EventGridDataConnection(String name, EventGridDataConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kusto:EventGridDataConnection", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:kusto:EventGridDataConnection", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventGridDataConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

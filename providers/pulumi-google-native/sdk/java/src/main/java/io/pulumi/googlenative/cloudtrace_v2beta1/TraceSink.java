@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudtrace_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudtrace_v2beta1.TraceSinkArgs;
 import io.pulumi.googlenative.cloudtrace_v2beta1.outputs.OutputConfigResponse;
@@ -29,7 +30,7 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
      * @return The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -43,7 +44,7 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
      * @return The export destination.
      * 
      */
-    public Output<OutputConfigResponse> getOutputConfig() {
+    public Output<OutputConfigResponse> outputConfig() {
         return this.outputConfig;
     }
     /**
@@ -57,7 +58,7 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
      * @return A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and write data this account will need the dataEditor role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: "service-00000001@00000002.iam.gserviceaccount.com"
      * 
      */
-    public Output<String> getWriterIdentity() {
+    public Output<String> writerIdentity() {
         return this.writerIdentity;
     }
 
@@ -83,7 +84,7 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TraceSink(String name, TraceSinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudtrace/v2beta1:TraceSink", name, args == null ? TraceSinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudtrace/v2beta1:TraceSink", name, args == null ? TraceSinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TraceSink(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

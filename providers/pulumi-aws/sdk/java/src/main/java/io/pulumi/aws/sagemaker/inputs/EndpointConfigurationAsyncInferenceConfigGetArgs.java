@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigC
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
     @Import(name="clientConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> getClientConfig() {
-        return this.clientConfig == null ? Output.empty() : this.clientConfig;
+    public Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig() {
+        return this.clientConfig == null ? Codegen.empty() : this.clientConfig;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
     @Import(name="outputConfig", required=true)
       private final Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> getOutputConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig() {
         return this.outputConfig;
     }
 
@@ -45,8 +46,8 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
     }
 
     private EndpointConfigurationAsyncInferenceConfigGetArgs() {
-        this.clientConfig = Output.empty();
-        this.outputConfig = Output.empty();
+        this.clientConfig = Codegen.empty();
+        this.outputConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
             return this;
         }
         public Builder clientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs clientConfig) {
-            this.clientConfig = Output.ofNullable(clientConfig);
+            this.clientConfig = Codegen.ofNullable(clientConfig);
             return this;
         }
         public Builder outputConfig(Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZoneForwardingConfigNameServerTargetArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -30,8 +31,8 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     @Import(name="targetNameServers")
       private final @Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
 
-    public Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> getTargetNameServers() {
-        return this.targetNameServers == null ? Output.empty() : this.targetNameServers;
+    public Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers() {
+        return this.targetNameServers == null ? Codegen.empty() : this.targetNameServers;
     }
 
     public ManagedZoneForwardingConfigArgs(
@@ -42,8 +43,8 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     }
 
     private ManagedZoneForwardingConfigArgs() {
-        this.kind = Output.empty();
-        this.targetNameServers = Output.empty();
+        this.kind = Codegen.empty();
+        this.targetNameServers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder targetNameServers(@Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
@@ -81,7 +82,7 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder targetNameServers(@Nullable List<ManagedZoneForwardingConfigNameServerTargetArgs> targetNameServers) {
-            this.targetNameServers = Output.ofNullable(targetNameServers);
+            this.targetNameServers = Codegen.ofNullable(targetNameServers);
             return this;
         }
         public Builder targetNameServers(ManagedZoneForwardingConfigNameServerTargetArgs... targetNameServers) {

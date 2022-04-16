@@ -24,7 +24,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="acceleratorCount", required=true)
       private final Integer acceleratorCount;
 
-    public Integer getAcceleratorCount() {
+    public Integer acceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -35,7 +35,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
 
-    public String getAcceleratorType() {
+    public String acceleratorType() {
         return this.acceleratorType;
     }
 

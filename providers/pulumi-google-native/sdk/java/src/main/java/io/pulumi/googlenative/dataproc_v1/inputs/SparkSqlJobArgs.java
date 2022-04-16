@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1.inputs.LoggingConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.QueryListArgs;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+    public Output<List<String>> jarFileUris() {
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Output<LoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+    public Output<LoggingConfigArgs> loggingConfig() {
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
-    public Output<String> getQueryFileUri() {
-        return this.queryFileUri == null ? Output.empty() : this.queryFileUri;
+    public Output<String> queryFileUri() {
+        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
 
-    public Output<QueryListArgs> getQueryList() {
-        return this.queryList == null ? Output.empty() : this.queryList;
+    public Output<QueryListArgs> queryList() {
+        return this.queryList == null ? Codegen.empty() : this.queryList;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
-    public Output<Map<String,String>> getScriptVariables() {
-        return this.scriptVariables == null ? Output.empty() : this.scriptVariables;
+    public Output<Map<String,String>> scriptVariables() {
+        return this.scriptVariables == null ? Codegen.empty() : this.scriptVariables;
     }
 
     public SparkSqlJobArgs(
@@ -104,12 +105,12 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SparkSqlJobArgs() {
-        this.jarFileUris = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.properties = Output.empty();
-        this.queryFileUri = Output.empty();
-        this.queryList = Output.empty();
-        this.scriptVariables = Output.empty();
+        this.jarFileUris = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.queryFileUri = Codegen.empty();
+        this.queryList = Codegen.empty();
+        this.scriptVariables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -158,7 +159,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingConfig(@Nullable LoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -166,7 +167,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
@@ -174,7 +175,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Output.ofNullable(queryFileUri);
+            this.queryFileUri = Codegen.ofNullable(queryFileUri);
             return this;
         }
         public Builder queryList(@Nullable Output<QueryListArgs> queryList) {
@@ -182,7 +183,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryList(@Nullable QueryListArgs queryList) {
-            this.queryList = Output.ofNullable(queryList);
+            this.queryList = Codegen.ofNullable(queryList);
             return this;
         }
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
@@ -190,7 +191,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
-            this.scriptVariables = Output.ofNullable(scriptVariables);
+            this.scriptVariables = Codegen.ofNullable(scriptVariables);
             return this;
         }        public SparkSqlJobArgs build() {
             return new SparkSqlJobArgs(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);

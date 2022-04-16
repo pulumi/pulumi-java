@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager;
 import io.pulumi.azurenative.deploymentmanager.inputs.SasAuthenticationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactRoot")
       private final @Nullable Output<String> artifactRoot;
 
-    public Output<String> getArtifactRoot() {
-        return this.artifactRoot == null ? Output.empty() : this.artifactRoot;
+    public Output<String> artifactRoot() {
+        return this.artifactRoot == null ? Codegen.empty() : this.artifactRoot;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactSourceName")
       private final @Nullable Output<String> artifactSourceName;
 
-    public Output<String> getArtifactSourceName() {
-        return this.artifactSourceName == null ? Output.empty() : this.artifactSourceName;
+    public Output<String> artifactSourceName() {
+        return this.artifactSourceName == null ? Codegen.empty() : this.artifactSourceName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication", required=true)
       private final Output<SasAuthenticationArgs> authentication;
 
-    public Output<SasAuthenticationArgs> getAuthentication() {
+    public Output<SasAuthenticationArgs> authentication() {
         return this.authentication;
     }
 
@@ -56,8 +57,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +79,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceType", required=true)
       private final Output<String> sourceType;
 
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType;
     }
 
@@ -89,8 +90,8 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ArtifactSourceArgs(
@@ -111,13 +112,13 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactSourceArgs() {
-        this.artifactRoot = Output.empty();
-        this.artifactSourceName = Output.empty();
-        this.authentication = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sourceType = Output.empty();
-        this.tags = Output.empty();
+        this.artifactRoot = Codegen.empty();
+        this.artifactSourceName = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sourceType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifactRoot(@Nullable String artifactRoot) {
-            this.artifactRoot = Output.ofNullable(artifactRoot);
+            this.artifactRoot = Codegen.ofNullable(artifactRoot);
             return this;
         }
         public Builder artifactSourceName(@Nullable Output<String> artifactSourceName) {
@@ -165,7 +166,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifactSourceName(@Nullable String artifactSourceName) {
-            this.artifactSourceName = Output.ofNullable(artifactSourceName);
+            this.artifactSourceName = Codegen.ofNullable(artifactSourceName);
             return this;
         }
         public Builder authentication(Output<SasAuthenticationArgs> authentication) {
@@ -181,7 +182,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -205,7 +206,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ArtifactSourceArgs build() {
             return new ArtifactSourceArgs(artifactRoot, artifactSourceName, authentication, location, resourceGroupName, sourceType, tags);

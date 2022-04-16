@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+    public Output<String> domain() {
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public UrlDispatchRuleArgs(
@@ -61,9 +62,9 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UrlDispatchRuleArgs() {
-        this.domain = Output.empty();
-        this.path = Output.empty();
-        this.service = Output.empty();
+        this.domain = Codegen.empty();
+        this.path = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -103,7 +104,7 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -111,7 +112,7 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public UrlDispatchRuleArgs build() {
             return new UrlDispatchRuleArgs(domain, path, service);

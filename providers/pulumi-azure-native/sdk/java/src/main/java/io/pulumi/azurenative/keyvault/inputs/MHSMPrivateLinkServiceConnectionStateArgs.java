@@ -8,6 +8,7 @@ import io.pulumi.azurenative.keyvault.enums.PrivateEndpointServiceConnectionStat
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
     @Import(name="actionsRequired")
       private final @Nullable Output<Either<String,ActionsRequired>> actionsRequired;
 
-    public Output<Either<String,ActionsRequired>> getActionsRequired() {
-        return this.actionsRequired == null ? Output.empty() : this.actionsRequired;
+    public Output<Either<String,ActionsRequired>> actionsRequired() {
+        return this.actionsRequired == null ? Codegen.empty() : this.actionsRequired;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
     @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
-    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public MHSMPrivateLinkServiceConnectionStateArgs(
@@ -64,9 +65,9 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
     }
 
     private MHSMPrivateLinkServiceConnectionStateArgs() {
-        this.actionsRequired = Output.empty();
-        this.description = Output.empty();
-        this.status = Output.empty();
+        this.actionsRequired = Codegen.empty();
+        this.description = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
             return this;
         }
         public Builder actionsRequired(@Nullable Either<String,ActionsRequired> actionsRequired) {
-            this.actionsRequired = Output.ofNullable(actionsRequired);
+            this.actionsRequired = Codegen.ofNullable(actionsRequired);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -106,7 +107,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
@@ -114,7 +115,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
             return this;
         }
         public Builder status(@Nullable Either<String,PrivateEndpointServiceConnectionStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public MHSMPrivateLinkServiceConnectionStateArgs build() {
             return new MHSMPrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);

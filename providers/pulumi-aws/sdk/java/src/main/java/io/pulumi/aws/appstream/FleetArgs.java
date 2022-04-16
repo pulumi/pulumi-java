@@ -8,6 +8,7 @@ import io.pulumi.aws.appstream.inputs.FleetDomainJoinInfoArgs;
 import io.pulumi.aws.appstream.inputs.FleetVpcConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeCapacity", required=true)
       private final Output<FleetComputeCapacityArgs> computeCapacity;
 
-    public Output<FleetComputeCapacityArgs> getComputeCapacity() {
+    public Output<FleetComputeCapacityArgs> computeCapacity() {
         return this.computeCapacity;
     }
 
@@ -38,8 +39,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disconnectTimeoutInSeconds")
       private final @Nullable Output<Integer> disconnectTimeoutInSeconds;
 
-    public Output<Integer> getDisconnectTimeoutInSeconds() {
-        return this.disconnectTimeoutInSeconds == null ? Output.empty() : this.disconnectTimeoutInSeconds;
+    public Output<Integer> disconnectTimeoutInSeconds() {
+        return this.disconnectTimeoutInSeconds == null ? Codegen.empty() : this.disconnectTimeoutInSeconds;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainJoinInfo")
       private final @Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo;
 
-    public Output<FleetDomainJoinInfoArgs> getDomainJoinInfo() {
-        return this.domainJoinInfo == null ? Output.empty() : this.domainJoinInfo;
+    public Output<FleetDomainJoinInfoArgs> domainJoinInfo() {
+        return this.domainJoinInfo == null ? Codegen.empty() : this.domainJoinInfo;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDefaultInternetAccess")
       private final @Nullable Output<Boolean> enableDefaultInternetAccess;
 
-    public Output<Boolean> getEnableDefaultInternetAccess() {
-        return this.enableDefaultInternetAccess == null ? Output.empty() : this.enableDefaultInternetAccess;
+    public Output<Boolean> enableDefaultInternetAccess() {
+        return this.enableDefaultInternetAccess == null ? Codegen.empty() : this.enableDefaultInternetAccess;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleetType")
       private final @Nullable Output<String> fleetType;
 
-    public Output<String> getFleetType() {
-        return this.fleetType == null ? Output.empty() : this.fleetType;
+    public Output<String> fleetType() {
+        return this.fleetType == null ? Codegen.empty() : this.fleetType;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
+    public Output<String> iamRoleArn() {
+        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleDisconnectTimeoutInSeconds")
       private final @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
 
-    public Output<Integer> getIdleDisconnectTimeoutInSeconds() {
-        return this.idleDisconnectTimeoutInSeconds == null ? Output.empty() : this.idleDisconnectTimeoutInSeconds;
+    public Output<Integer> idleDisconnectTimeoutInSeconds() {
+        return this.idleDisconnectTimeoutInSeconds == null ? Codegen.empty() : this.idleDisconnectTimeoutInSeconds;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageArn")
       private final @Nullable Output<String> imageArn;
 
-    public Output<String> getImageArn() {
-        return this.imageArn == null ? Output.empty() : this.imageArn;
+    public Output<String> imageArn() {
+        return this.imageArn == null ? Codegen.empty() : this.imageArn;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+    public Output<String> imageName() {
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -159,8 +160,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxUserDurationInSeconds")
       private final @Nullable Output<Integer> maxUserDurationInSeconds;
 
-    public Output<Integer> getMaxUserDurationInSeconds() {
-        return this.maxUserDurationInSeconds == null ? Output.empty() : this.maxUserDurationInSeconds;
+    public Output<Integer> maxUserDurationInSeconds() {
+        return this.maxUserDurationInSeconds == null ? Codegen.empty() : this.maxUserDurationInSeconds;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamView")
       private final @Nullable Output<String> streamView;
 
-    public Output<String> getStreamView() {
-        return this.streamView == null ? Output.empty() : this.streamView;
+    public Output<String> streamView() {
+        return this.streamView == null ? Codegen.empty() : this.streamView;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -203,8 +204,8 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<FleetVpcConfigArgs> vpcConfig;
 
-    public Output<FleetVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
+    public Output<FleetVpcConfigArgs> vpcConfig() {
+        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
     public FleetArgs(
@@ -245,23 +246,23 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.computeCapacity = Output.empty();
-        this.description = Output.empty();
-        this.disconnectTimeoutInSeconds = Output.empty();
-        this.displayName = Output.empty();
-        this.domainJoinInfo = Output.empty();
-        this.enableDefaultInternetAccess = Output.empty();
-        this.fleetType = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.idleDisconnectTimeoutInSeconds = Output.empty();
-        this.imageArn = Output.empty();
-        this.imageName = Output.empty();
-        this.instanceType = Output.empty();
-        this.maxUserDurationInSeconds = Output.empty();
-        this.name = Output.empty();
-        this.streamView = Output.empty();
-        this.tags = Output.empty();
-        this.vpcConfig = Output.empty();
+        this.computeCapacity = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disconnectTimeoutInSeconds = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.domainJoinInfo = Codegen.empty();
+        this.enableDefaultInternetAccess = Codegen.empty();
+        this.fleetType = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.idleDisconnectTimeoutInSeconds = Codegen.empty();
+        this.imageArn = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.maxUserDurationInSeconds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.streamView = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -329,7 +330,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disconnectTimeoutInSeconds(@Nullable Output<Integer> disconnectTimeoutInSeconds) {
@@ -337,7 +338,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disconnectTimeoutInSeconds(@Nullable Integer disconnectTimeoutInSeconds) {
-            this.disconnectTimeoutInSeconds = Output.ofNullable(disconnectTimeoutInSeconds);
+            this.disconnectTimeoutInSeconds = Codegen.ofNullable(disconnectTimeoutInSeconds);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -345,7 +346,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder domainJoinInfo(@Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo) {
@@ -353,7 +354,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainJoinInfo(@Nullable FleetDomainJoinInfoArgs domainJoinInfo) {
-            this.domainJoinInfo = Output.ofNullable(domainJoinInfo);
+            this.domainJoinInfo = Codegen.ofNullable(domainJoinInfo);
             return this;
         }
         public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
@@ -361,7 +362,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = Output.ofNullable(enableDefaultInternetAccess);
+            this.enableDefaultInternetAccess = Codegen.ofNullable(enableDefaultInternetAccess);
             return this;
         }
         public Builder fleetType(@Nullable Output<String> fleetType) {
@@ -369,7 +370,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fleetType(@Nullable String fleetType) {
-            this.fleetType = Output.ofNullable(fleetType);
+            this.fleetType = Codegen.ofNullable(fleetType);
             return this;
         }
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
@@ -377,7 +378,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Output.ofNullable(iamRoleArn);
+            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
             return this;
         }
         public Builder idleDisconnectTimeoutInSeconds(@Nullable Output<Integer> idleDisconnectTimeoutInSeconds) {
@@ -385,7 +386,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleDisconnectTimeoutInSeconds(@Nullable Integer idleDisconnectTimeoutInSeconds) {
-            this.idleDisconnectTimeoutInSeconds = Output.ofNullable(idleDisconnectTimeoutInSeconds);
+            this.idleDisconnectTimeoutInSeconds = Codegen.ofNullable(idleDisconnectTimeoutInSeconds);
             return this;
         }
         public Builder imageArn(@Nullable Output<String> imageArn) {
@@ -393,7 +394,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Output.ofNullable(imageArn);
+            this.imageArn = Codegen.ofNullable(imageArn);
             return this;
         }
         public Builder imageName(@Nullable Output<String> imageName) {
@@ -401,7 +402,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {
@@ -417,7 +418,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxUserDurationInSeconds(@Nullable Integer maxUserDurationInSeconds) {
-            this.maxUserDurationInSeconds = Output.ofNullable(maxUserDurationInSeconds);
+            this.maxUserDurationInSeconds = Codegen.ofNullable(maxUserDurationInSeconds);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -425,7 +426,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder streamView(@Nullable Output<String> streamView) {
@@ -433,7 +434,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamView(@Nullable String streamView) {
-            this.streamView = Output.ofNullable(streamView);
+            this.streamView = Codegen.ofNullable(streamView);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -441,7 +442,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcConfig(@Nullable Output<FleetVpcConfigArgs> vpcConfig) {
@@ -449,7 +450,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConfig(@Nullable FleetVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Output.ofNullable(vpcConfig);
+            this.vpcConfig = Codegen.ofNullable(vpcConfig);
             return this;
         }        public FleetArgs build() {
             return new FleetArgs(computeCapacity, description, disconnectTimeoutInSeconds, displayName, domainJoinInfo, enableDefaultInternetAccess, fleetType, iamRoleArn, idleDisconnectTimeoutInSeconds, imageArn, imageName, instanceType, maxUserDurationInSeconds, name, streamView, tags, vpcConfig);

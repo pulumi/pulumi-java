@@ -16,6 +16,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetVMNetworkProfi
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetVMProtectionPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -33,8 +34,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="additionalCapabilities")
       private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
-    public Output<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
-        return this.additionalCapabilities == null ? Output.empty() : this.additionalCapabilities;
+    public Output<AdditionalCapabilitiesArgs> additionalCapabilities() {
+        return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="availabilitySet")
       private final @Nullable Output<SubResourceArgs> availabilitySet;
 
-    public Output<SubResourceArgs> getAvailabilitySet() {
-        return this.availabilitySet == null ? Output.empty() : this.availabilitySet;
+    public Output<SubResourceArgs> availabilitySet() {
+        return this.availabilitySet == null ? Codegen.empty() : this.availabilitySet;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="diagnosticsProfile")
       private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Output<DiagnosticsProfileArgs> getDiagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Output.empty() : this.diagnosticsProfile;
+    public Output<DiagnosticsProfileArgs> diagnosticsProfile() {
+        return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> getHardwareProfile() {
-        return this.hardwareProfile == null ? Output.empty() : this.hardwareProfile;
+    public Output<HardwareProfileArgs> hardwareProfile() {
+        return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+    public Output<String> instanceId() {
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+    public Output<String> licenseType() {
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> networkProfile() {
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="networkProfileConfiguration")
       private final @Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
 
-    public Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> getNetworkProfileConfiguration() {
-        return this.networkProfileConfiguration == null ? Output.empty() : this.networkProfileConfiguration;
+    public Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration() {
+        return this.networkProfileConfiguration == null ? Codegen.empty() : this.networkProfileConfiguration;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
 
-    public Output<OSProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Output.empty() : this.osProfile;
+    public Output<OSProfileArgs> osProfile() {
+        return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+    public Output<PlanArgs> plan() {
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="protectionPolicy")
       private final @Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
 
-    public Output<VirtualMachineScaleSetVMProtectionPolicyArgs> getProtectionPolicy() {
-        return this.protectionPolicy == null ? Output.empty() : this.protectionPolicy;
+    public Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy() {
+        return this.protectionPolicy == null ? Codegen.empty() : this.protectionPolicy;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -176,8 +177,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> getSecurityProfile() {
-        return this.securityProfile == null ? Output.empty() : this.securityProfile;
+    public Output<SecurityProfileArgs> securityProfile() {
+        return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
     }
 
     /**
@@ -187,8 +188,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Output.empty() : this.storageProfile;
+    public Output<StorageProfileArgs> storageProfile() {
+        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
     /**
@@ -198,8 +199,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -209,8 +210,8 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+    public Output<String> userData() {
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     /**
@@ -220,7 +221,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     @Import(name="vmScaleSetName", required=true)
       private final Output<String> vmScaleSetName;
 
-    public Output<String> getVmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
@@ -264,24 +265,24 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     }
 
     private VirtualMachineScaleSetVMArgs() {
-        this.additionalCapabilities = Output.empty();
-        this.availabilitySet = Output.empty();
-        this.diagnosticsProfile = Output.empty();
-        this.hardwareProfile = Output.empty();
-        this.instanceId = Output.empty();
-        this.licenseType = Output.empty();
-        this.location = Output.empty();
-        this.networkProfile = Output.empty();
-        this.networkProfileConfiguration = Output.empty();
-        this.osProfile = Output.empty();
-        this.plan = Output.empty();
-        this.protectionPolicy = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.securityProfile = Output.empty();
-        this.storageProfile = Output.empty();
-        this.tags = Output.empty();
-        this.userData = Output.empty();
-        this.vmScaleSetName = Output.empty();
+        this.additionalCapabilities = Codegen.empty();
+        this.availabilitySet = Codegen.empty();
+        this.diagnosticsProfile = Codegen.empty();
+        this.hardwareProfile = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkProfile = Codegen.empty();
+        this.networkProfileConfiguration = Codegen.empty();
+        this.osProfile = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.protectionPolicy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.securityProfile = Codegen.empty();
+        this.storageProfile = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userData = Codegen.empty();
+        this.vmScaleSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -343,7 +344,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
-            this.additionalCapabilities = Output.ofNullable(additionalCapabilities);
+            this.additionalCapabilities = Codegen.ofNullable(additionalCapabilities);
             return this;
         }
         public Builder availabilitySet(@Nullable Output<SubResourceArgs> availabilitySet) {
@@ -351,7 +352,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder availabilitySet(@Nullable SubResourceArgs availabilitySet) {
-            this.availabilitySet = Output.ofNullable(availabilitySet);
+            this.availabilitySet = Codegen.ofNullable(availabilitySet);
             return this;
         }
         public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
@@ -359,7 +360,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
-            this.diagnosticsProfile = Output.ofNullable(diagnosticsProfile);
+            this.diagnosticsProfile = Codegen.ofNullable(diagnosticsProfile);
             return this;
         }
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
@@ -367,7 +368,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Output.ofNullable(hardwareProfile);
+            this.hardwareProfile = Codegen.ofNullable(hardwareProfile);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -375,7 +376,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder licenseType(@Nullable Output<String> licenseType) {
@@ -383,7 +384,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -391,7 +392,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
@@ -399,7 +400,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }
         public Builder networkProfileConfiguration(@Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration) {
@@ -407,7 +408,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder networkProfileConfiguration(@Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationArgs networkProfileConfiguration) {
-            this.networkProfileConfiguration = Output.ofNullable(networkProfileConfiguration);
+            this.networkProfileConfiguration = Codegen.ofNullable(networkProfileConfiguration);
             return this;
         }
         public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
@@ -415,7 +416,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder osProfile(@Nullable OSProfileArgs osProfile) {
-            this.osProfile = Output.ofNullable(osProfile);
+            this.osProfile = Codegen.ofNullable(osProfile);
             return this;
         }
         public Builder plan(@Nullable Output<PlanArgs> plan) {
@@ -423,7 +424,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder protectionPolicy(@Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy) {
@@ -431,7 +432,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder protectionPolicy(@Nullable VirtualMachineScaleSetVMProtectionPolicyArgs protectionPolicy) {
-            this.protectionPolicy = Output.ofNullable(protectionPolicy);
+            this.protectionPolicy = Codegen.ofNullable(protectionPolicy);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -447,7 +448,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
-            this.securityProfile = Output.ofNullable(securityProfile);
+            this.securityProfile = Codegen.ofNullable(securityProfile);
             return this;
         }
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
@@ -455,7 +456,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Output.ofNullable(storageProfile);
+            this.storageProfile = Codegen.ofNullable(storageProfile);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -463,7 +464,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -471,7 +472,7 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }
         public Builder vmScaleSetName(Output<String> vmScaleSetName) {

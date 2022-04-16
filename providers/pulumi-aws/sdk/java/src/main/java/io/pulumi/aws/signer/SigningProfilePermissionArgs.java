@@ -5,6 +5,7 @@ package io.pulumi.aws.signer;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -32,7 +33,7 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -43,7 +44,7 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -54,8 +55,8 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
     @Import(name="profileVersion")
       private final @Nullable Output<String> profileVersion;
 
-    public Output<String> getProfileVersion() {
-        return this.profileVersion == null ? Output.empty() : this.profileVersion;
+    public Output<String> profileVersion() {
+        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
     @Import(name="statementId")
       private final @Nullable Output<String> statementId;
 
-    public Output<String> getStatementId() {
-        return this.statementId == null ? Output.empty() : this.statementId;
+    public Output<String> statementId() {
+        return this.statementId == null ? Codegen.empty() : this.statementId;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
     @Import(name="statementIdPrefix")
       private final @Nullable Output<String> statementIdPrefix;
 
-    public Output<String> getStatementIdPrefix() {
-        return this.statementIdPrefix == null ? Output.empty() : this.statementIdPrefix;
+    public Output<String> statementIdPrefix() {
+        return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
     }
 
     public SigningProfilePermissionArgs(
@@ -96,12 +97,12 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
     }
 
     private SigningProfilePermissionArgs() {
-        this.action = Output.empty();
-        this.principal = Output.empty();
-        this.profileName = Output.empty();
-        this.profileVersion = Output.empty();
-        this.statementId = Output.empty();
-        this.statementIdPrefix = Output.empty();
+        this.action = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.profileVersion = Codegen.empty();
+        this.statementId = Codegen.empty();
+        this.statementIdPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Output.ofNullable(profileVersion);
+            this.profileVersion = Codegen.ofNullable(profileVersion);
             return this;
         }
         public Builder statementId(@Nullable Output<String> statementId) {
@@ -171,7 +172,7 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder statementId(@Nullable String statementId) {
-            this.statementId = Output.ofNullable(statementId);
+            this.statementId = Codegen.ofNullable(statementId);
             return this;
         }
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
@@ -179,7 +180,7 @@ public final class SigningProfilePermissionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
+            this.statementIdPrefix = Codegen.ofNullable(statementIdPrefix);
             return this;
         }        public SigningProfilePermissionArgs build() {
             return new SigningProfilePermissionArgs(action, principal, profileName, profileVersion, statementId, statementIdPrefix);

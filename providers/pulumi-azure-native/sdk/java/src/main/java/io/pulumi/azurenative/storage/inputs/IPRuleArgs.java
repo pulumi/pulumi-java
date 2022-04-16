@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.Action;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<Action> action;
 
-    public Output<Action> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<Action> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -37,20 +38,20 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iPAddressOrRange", required=true)
       private final Output<String> iPAddressOrRange;
 
-    public Output<String> getIPAddressOrRange() {
+    public Output<String> iPAddressOrRange() {
         return this.iPAddressOrRange;
     }
 
     public IPRuleArgs(
         @Nullable Output<Action> action,
         Output<String> iPAddressOrRange) {
-        this.action = action == null ? Output.ofNullable(io.pulumi.azurenative.storage.enums.Action.Allow) : action;
+        this.action = action == null ? Codegen.ofNullable(io.pulumi.azurenative.storage.enums.Action.Allow) : action;
         this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
     }
 
     private IPRuleArgs() {
-        this.action = Output.empty();
-        this.iPAddressOrRange = Output.empty();
+        this.action = Codegen.empty();
+        this.iPAddressOrRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable Action action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder iPAddressOrRange(Output<String> iPAddressOrRange) {

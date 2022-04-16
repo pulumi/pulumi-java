@@ -5,6 +5,7 @@ package io.pulumi.aws.ebs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
 
@@ -35,8 +36,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+    public Output<Boolean> encrypted() {
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -46,15 +47,15 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiAttachEnabled")
       private final @Nullable Output<Boolean> multiAttachEnabled;
 
-    public Output<Boolean> getMultiAttachEnabled() {
-        return this.multiAttachEnabled == null ? Output.empty() : this.multiAttachEnabled;
+    public Output<Boolean> multiAttachEnabled() {
+        return this.multiAttachEnabled == null ? Codegen.empty() : this.multiAttachEnabled;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
-        return this.outpostArn == null ? Output.empty() : this.outpostArn;
+    public Output<String> outpostArn() {
+        return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<Integer> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+    public Output<String> snapshotId() {
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
-    public Output<Integer> getThroughput() {
-        return this.throughput == null ? Output.empty() : this.throughput;
+    public Output<Integer> throughput() {
+        return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public VolumeArgs(
@@ -160,17 +161,17 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.availabilityZone = Output.empty();
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.multiAttachEnabled = Output.empty();
-        this.outpostArn = Output.empty();
-        this.size = Output.empty();
-        this.snapshotId = Output.empty();
-        this.tags = Output.empty();
-        this.throughput = Output.empty();
-        this.type = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.multiAttachEnabled = Codegen.empty();
+        this.outpostArn = Codegen.empty();
+        this.size = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.throughput = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -234,7 +235,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -242,7 +243,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder multiAttachEnabled(@Nullable Output<Boolean> multiAttachEnabled) {
@@ -250,7 +251,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multiAttachEnabled(@Nullable Boolean multiAttachEnabled) {
-            this.multiAttachEnabled = Output.ofNullable(multiAttachEnabled);
+            this.multiAttachEnabled = Codegen.ofNullable(multiAttachEnabled);
             return this;
         }
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
@@ -258,7 +259,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Output.ofNullable(outpostArn);
+            this.outpostArn = Codegen.ofNullable(outpostArn);
             return this;
         }
         public Builder size(@Nullable Output<Integer> size) {
@@ -266,7 +267,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable Integer size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
@@ -274,7 +275,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -282,7 +283,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder throughput(@Nullable Output<Integer> throughput) {
@@ -290,7 +291,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Output.ofNullable(throughput);
+            this.throughput = Codegen.ofNullable(throughput);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -298,7 +299,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public VolumeArgs build() {
             return new VolumeArgs(availabilityZone, encrypted, iops, kmsKeyId, multiAttachEnabled, outpostArn, size, snapshotId, tags, throughput, type);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.OsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
-    public Output<String> getAdminPassword() {
-        return this.adminPassword == null ? Output.empty() : this.adminPassword;
+    public Output<String> adminPassword() {
+        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
-        return this.adminUsername == null ? Output.empty() : this.adminUsername;
+    public Output<String> adminUsername() {
+        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
-    public Output<String> getComputerName() {
-        return this.computerName == null ? Output.empty() : this.computerName;
+    public Output<String> computerName() {
+        return this.computerName == null ? Codegen.empty() : this.computerName;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+    public Output<Either<String,OsType>> osType() {
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     public OsProfileArgs(
@@ -76,10 +77,10 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OsProfileArgs() {
-        this.adminPassword = Output.empty();
-        this.adminUsername = Output.empty();
-        this.computerName = Output.empty();
-        this.osType = Output.empty();
+        this.adminPassword = Codegen.empty();
+        this.adminUsername = Codegen.empty();
+        this.computerName = Codegen.empty();
+        this.osType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Output.ofNullable(adminPassword);
+            this.adminPassword = Codegen.ofNullable(adminPassword);
             return this;
         }
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
@@ -121,7 +122,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Output.ofNullable(adminUsername);
+            this.adminUsername = Codegen.ofNullable(adminUsername);
             return this;
         }
         public Builder computerName(@Nullable Output<String> computerName) {
@@ -129,7 +130,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = Output.ofNullable(computerName);
+            this.computerName = Codegen.ofNullable(computerName);
             return this;
         }
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
@@ -137,7 +138,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }        public OsProfileArgs build() {
             return new OsProfileArgs(adminPassword, adminUsername, computerName, osType);

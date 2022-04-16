@@ -5,6 +5,7 @@ package io.pulumi.azurenative.addons;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="planTypeName")
       private final @Nullable Output<String> planTypeName;
 
-    public Output<String> getPlanTypeName() {
-        return this.planTypeName == null ? Output.empty() : this.planTypeName;
+    public Output<String> planTypeName() {
+        return this.planTypeName == null ? Codegen.empty() : this.planTypeName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="providerName", required=true)
       private final Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -44,8 +45,8 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SupportPlanTypeArgs() {
-        this.planTypeName = Output.empty();
-        this.providerName = Output.empty();
+        this.planTypeName = Codegen.empty();
+        this.providerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder planTypeName(@Nullable String planTypeName) {
-            this.planTypeName = Output.ofNullable(planTypeName);
+            this.planTypeName = Codegen.ofNullable(planTypeName);
             return this;
         }
         public Builder providerName(Output<String> providerName) {

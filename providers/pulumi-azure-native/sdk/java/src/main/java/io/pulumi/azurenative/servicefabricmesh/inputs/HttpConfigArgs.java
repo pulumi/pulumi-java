@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hosts", required=true)
       private final Output<List<HttpHostConfigArgs>> hosts;
 
-    public Output<List<HttpHostConfigArgs>> getHosts() {
+    public Output<List<HttpHostConfigArgs>> hosts() {
         return this.hosts;
     }
 
@@ -38,7 +39,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +50,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -63,9 +64,9 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpConfigArgs() {
-        this.hosts = Output.empty();
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.hosts = Codegen.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

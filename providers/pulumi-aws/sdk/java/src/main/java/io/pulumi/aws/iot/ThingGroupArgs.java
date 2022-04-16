@@ -6,6 +6,7 @@ package io.pulumi.aws.iot;
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentGroupName")
       private final @Nullable Output<String> parentGroupName;
 
-    public Output<String> getParentGroupName() {
-        return this.parentGroupName == null ? Output.empty() : this.parentGroupName;
+    public Output<String> parentGroupName() {
+        return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ThingGroupPropertiesArgs> properties;
 
-    public Output<ThingGroupPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ThingGroupPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ThingGroupArgs(
@@ -72,10 +73,10 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingGroupArgs() {
-        this.name = Output.empty();
-        this.parentGroupName = Output.empty();
-        this.properties = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.parentGroupName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
@@ -117,7 +118,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Output.ofNullable(parentGroupName);
+            this.parentGroupName = Codegen.ofNullable(parentGroupName);
             return this;
         }
         public Builder properties(@Nullable Output<ThingGroupPropertiesArgs> properties) {
@@ -125,7 +126,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ThingGroupPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -133,7 +134,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ThingGroupArgs build() {
             return new ThingGroupArgs(name, parentGroupName, properties, tags);

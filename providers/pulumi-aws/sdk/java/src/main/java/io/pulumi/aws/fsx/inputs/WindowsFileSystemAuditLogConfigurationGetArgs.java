@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
     @Import(name="auditLogDestination")
       private final @Nullable Output<String> auditLogDestination;
 
-    public Output<String> getAuditLogDestination() {
-        return this.auditLogDestination == null ? Output.empty() : this.auditLogDestination;
+    public Output<String> auditLogDestination() {
+        return this.auditLogDestination == null ? Codegen.empty() : this.auditLogDestination;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
     @Import(name="fileAccessAuditLogLevel")
       private final @Nullable Output<String> fileAccessAuditLogLevel;
 
-    public Output<String> getFileAccessAuditLogLevel() {
-        return this.fileAccessAuditLogLevel == null ? Output.empty() : this.fileAccessAuditLogLevel;
+    public Output<String> fileAccessAuditLogLevel() {
+        return this.fileAccessAuditLogLevel == null ? Codegen.empty() : this.fileAccessAuditLogLevel;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
     @Import(name="fileShareAccessAuditLogLevel")
       private final @Nullable Output<String> fileShareAccessAuditLogLevel;
 
-    public Output<String> getFileShareAccessAuditLogLevel() {
-        return this.fileShareAccessAuditLogLevel == null ? Output.empty() : this.fileShareAccessAuditLogLevel;
+    public Output<String> fileShareAccessAuditLogLevel() {
+        return this.fileShareAccessAuditLogLevel == null ? Codegen.empty() : this.fileShareAccessAuditLogLevel;
     }
 
     public WindowsFileSystemAuditLogConfigurationGetArgs(
@@ -57,9 +58,9 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
     }
 
     private WindowsFileSystemAuditLogConfigurationGetArgs() {
-        this.auditLogDestination = Output.empty();
-        this.fileAccessAuditLogLevel = Output.empty();
-        this.fileShareAccessAuditLogLevel = Output.empty();
+        this.auditLogDestination = Codegen.empty();
+        this.fileAccessAuditLogLevel = Codegen.empty();
+        this.fileShareAccessAuditLogLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
             return this;
         }
         public Builder auditLogDestination(@Nullable String auditLogDestination) {
-            this.auditLogDestination = Output.ofNullable(auditLogDestination);
+            this.auditLogDestination = Codegen.ofNullable(auditLogDestination);
             return this;
         }
         public Builder fileAccessAuditLogLevel(@Nullable Output<String> fileAccessAuditLogLevel) {
@@ -99,7 +100,7 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
             return this;
         }
         public Builder fileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
-            this.fileAccessAuditLogLevel = Output.ofNullable(fileAccessAuditLogLevel);
+            this.fileAccessAuditLogLevel = Codegen.ofNullable(fileAccessAuditLogLevel);
             return this;
         }
         public Builder fileShareAccessAuditLogLevel(@Nullable Output<String> fileShareAccessAuditLogLevel) {
@@ -107,7 +108,7 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
             return this;
         }
         public Builder fileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
-            this.fileShareAccessAuditLogLevel = Output.ofNullable(fileShareAccessAuditLogLevel);
+            this.fileShareAccessAuditLogLevel = Codegen.ofNullable(fileShareAccessAuditLogLevel);
             return this;
         }        public WindowsFileSystemAuditLogConfigurationGetArgs build() {
             return new WindowsFileSystemAuditLogConfigurationGetArgs(auditLogDestination, fileAccessAuditLogLevel, fileShareAccessAuditLogLevel);

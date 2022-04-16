@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="otherNativeCrash")
       private final @Nullable Output<Boolean> otherNativeCrash;
 
-    public Output<Boolean> getOtherNativeCrash() {
-        return this.otherNativeCrash == null ? Output.empty() : this.otherNativeCrash;
+    public Output<Boolean> otherNativeCrash() {
+        return this.otherNativeCrash == null ? Codegen.empty() : this.otherNativeCrash;
     }
 
     public SuccessDetailArgs(@Nullable Output<Boolean> otherNativeCrash) {
@@ -34,7 +35,7 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SuccessDetailArgs() {
-        this.otherNativeCrash = Output.empty();
+        this.otherNativeCrash = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
-            this.otherNativeCrash = Output.ofNullable(otherNativeCrash);
+            this.otherNativeCrash = Codegen.ofNullable(otherNativeCrash);
             return this;
         }        public SuccessDetailArgs build() {
             return new SuccessDetailArgs(otherNativeCrash);

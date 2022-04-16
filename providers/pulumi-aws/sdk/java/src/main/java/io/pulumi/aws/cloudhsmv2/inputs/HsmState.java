@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudhsmv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+    public Output<String> clusterId() {
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmEniId")
       private final @Nullable Output<String> hsmEniId;
 
-    public Output<String> getHsmEniId() {
-        return this.hsmEniId == null ? Output.empty() : this.hsmEniId;
+    public Output<String> hsmEniId() {
+        return this.hsmEniId == null ? Codegen.empty() : this.hsmEniId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmId")
       private final @Nullable Output<String> hsmId;
 
-    public Output<String> getHsmId() {
-        return this.hsmId == null ? Output.empty() : this.hsmId;
+    public Output<String> hsmId() {
+        return this.hsmId == null ? Codegen.empty() : this.hsmId;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmState")
       private final @Nullable Output<String> hsmState;
 
-    public Output<String> getHsmState() {
-        return this.hsmState == null ? Output.empty() : this.hsmState;
+    public Output<String> hsmState() {
+        return this.hsmState == null ? Codegen.empty() : this.hsmState;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public HsmState(
@@ -109,13 +110,13 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HsmState() {
-        this.availabilityZone = Output.empty();
-        this.clusterId = Output.empty();
-        this.hsmEniId = Output.empty();
-        this.hsmId = Output.empty();
-        this.hsmState = Output.empty();
-        this.ipAddress = Output.empty();
-        this.subnetId = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.hsmEniId = Codegen.empty();
+        this.hsmId = Codegen.empty();
+        this.hsmState = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder clusterId(@Nullable Output<String> clusterId) {
@@ -163,7 +164,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder hsmEniId(@Nullable Output<String> hsmEniId) {
@@ -171,7 +172,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hsmEniId(@Nullable String hsmEniId) {
-            this.hsmEniId = Output.ofNullable(hsmEniId);
+            this.hsmEniId = Codegen.ofNullable(hsmEniId);
             return this;
         }
         public Builder hsmId(@Nullable Output<String> hsmId) {
@@ -179,7 +180,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hsmId(@Nullable String hsmId) {
-            this.hsmId = Output.ofNullable(hsmId);
+            this.hsmId = Codegen.ofNullable(hsmId);
             return this;
         }
         public Builder hsmState(@Nullable Output<String> hsmState) {
@@ -187,7 +188,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hsmState(@Nullable String hsmState) {
-            this.hsmState = Output.ofNullable(hsmState);
+            this.hsmState = Codegen.ofNullable(hsmState);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -195,7 +196,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -203,7 +204,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public HsmState build() {
             return new HsmState(availabilityZone, clusterId, hsmEniId, hsmId, hsmState, ipAddress, subnetId);

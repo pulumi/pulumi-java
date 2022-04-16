@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
      * 
      */
-    public Output</* @Nullable */ String> getApiEntitySetName() {
+    public Output</* @Nullable */ String> apiEntitySetName() {
         return this.apiEntitySetName;
     }
     /**
@@ -59,7 +60,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The attributes for the Type.
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> getAttributes() {
+    public Output</* @Nullable */ Map<String,List<String>>> attributes() {
         return this.attributes;
     }
     /**
@@ -73,7 +74,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Localized descriptions for the property.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDescription() {
+    public Output</* @Nullable */ Map<String,String>> description() {
         return this.description;
     }
     /**
@@ -87,7 +88,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Localized display names for the property.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDisplayName() {
+    public Output</* @Nullable */ Map<String,String>> displayName() {
         return this.displayName;
     }
     /**
@@ -101,7 +102,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Type of entity.
      * 
      */
-    public Output</* @Nullable */ String> getEntityType() {
+    public Output</* @Nullable */ String> entityType() {
         return this.entityType;
     }
     /**
@@ -115,7 +116,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The properties of the Profile.
      * 
      */
-    public Output</* @Nullable */ List<PropertyDefinitionResponse>> getFields() {
+    public Output</* @Nullable */ List<PropertyDefinitionResponse>> fields() {
         return this.fields;
     }
     /**
@@ -129,7 +130,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The instance count.
      * 
      */
-    public Output</* @Nullable */ Integer> getInstancesCount() {
+    public Output</* @Nullable */ Integer> instancesCount() {
         return this.instancesCount;
     }
     /**
@@ -143,7 +144,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Large Image associated with the Property or EntityType.
      * 
      */
-    public Output</* @Nullable */ String> getLargeImage() {
+    public Output</* @Nullable */ String> largeImage() {
         return this.largeImage;
     }
     /**
@@ -157,7 +158,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The last changed time for the type definition.
      * 
      */
-    public Output<String> getLastChangedUtc() {
+    public Output<String> lastChangedUtc() {
         return this.lastChangedUtc;
     }
     /**
@@ -171,7 +172,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Any custom localized attributes for the Type.
      * 
      */
-    public Output</* @Nullable */ Map<String,Map<String,String>>> getLocalizedAttributes() {
+    public Output</* @Nullable */ Map<String,Map<String,String>>> localizedAttributes() {
         return this.localizedAttributes;
     }
     /**
@@ -185,7 +186,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Medium Image associated with the Property or EntityType.
      * 
      */
-    public Output</* @Nullable */ String> getMediumImage() {
+    public Output</* @Nullable */ String> mediumImage() {
         return this.mediumImage;
     }
     /**
@@ -199,7 +200,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -213,7 +214,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -227,7 +228,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The schema org link. This helps ACI identify and suggest semantic models.
      * 
      */
-    public Output</* @Nullable */ String> getSchemaItemTypeLink() {
+    public Output</* @Nullable */ String> schemaItemTypeLink() {
         return this.schemaItemTypeLink;
     }
     /**
@@ -241,7 +242,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Small Image associated with the Property or EntityType.
      * 
      */
-    public Output</* @Nullable */ String> getSmallImage() {
+    public Output</* @Nullable */ String> smallImage() {
         return this.smallImage;
     }
     /**
@@ -255,7 +256,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The strong IDs.
      * 
      */
-    public Output</* @Nullable */ List<StrongIdResponse>> getStrongIds() {
+    public Output</* @Nullable */ List<StrongIdResponse>> strongIds() {
         return this.strongIds;
     }
     /**
@@ -269,7 +270,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The hub name.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -283,7 +284,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The timestamp property name. Represents the time when the interaction or profile update happened.
      * 
      */
-    public Output</* @Nullable */ String> getTimestampFieldName() {
+    public Output</* @Nullable */ String> timestampFieldName() {
         return this.timestampFieldName;
     }
     /**
@@ -297,7 +298,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -311,7 +312,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @return The name of the entity.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
 
@@ -337,7 +338,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Profile(String name, ProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:customerinsights:Profile", name, args == null ? ProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:customerinsights:Profile", name, args == null ? ProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Profile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

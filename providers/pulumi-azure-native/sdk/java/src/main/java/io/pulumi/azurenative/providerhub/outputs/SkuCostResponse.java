@@ -26,13 +26,13 @@ public final class SkuCostResponse {
         this.quantity = quantity;
     }
 
-    public Optional<String> getExtendedUnit() {
+    public Optional<String> extendedUnit() {
         return Optional.ofNullable(this.extendedUnit);
     }
-    public String getMeterId() {
+    public String meterId() {
         return this.meterId;
     }
-    public Optional<Integer> getQuantity() {
+    public Optional<Integer> quantity() {
         return Optional.ofNullable(this.quantity);
     }
 

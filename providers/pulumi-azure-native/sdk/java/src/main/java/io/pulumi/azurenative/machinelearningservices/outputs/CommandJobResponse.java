@@ -185,56 +185,56 @@ public final class CommandJobResponse {
      * ARM resource ID of the code asset.
      * 
     */
-    public Optional<String> getCodeId() {
+    public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
      * The command to execute on startup of the job. eg. "python train.py"
      * 
     */
-    public String getCommand() {
+    public String command() {
         return this.command;
     }
     /**
      * Compute binding for the job.
      * 
     */
-    public ComputeConfigurationResponse getCompute() {
+    public ComputeConfigurationResponse compute() {
         return this.compute;
     }
     /**
      * The asset description text.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
     */
-    public Optional<Object> getDistribution() {
+    public Optional<Object> distribution() {
         return Optional.ofNullable(this.distribution);
     }
     /**
      * The ARM resource ID of the Environment specification for the job.
      * 
     */
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * Environment variables included in the job.
      * 
     */
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
      * 
     */
-    public Optional<String> getExperimentName() {
+    public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
     /**
@@ -242,14 +242,14 @@ public final class CommandJobResponse {
      * Defaults to AmlToken if null.
      * 
     */
-    public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> getIdentity() {
+    public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Mapping of input data bindings used in the job.
      * 
     */
-    public Map<String,InputDataBindingResponse> getInputDataBindings() {
+    public Map<String,InputDataBindingResponse> inputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
     /**
@@ -257,7 +257,7 @@ public final class CommandJobResponse {
      * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
      * 
     */
-    public Map<String,JobEndpointResponse> getInteractionEndpoints() {
+    public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
     /**
@@ -265,28 +265,28 @@ public final class CommandJobResponse {
      * Expected value is 'Command'.
      * 
     */
-    public String getJobType() {
+    public String jobType() {
         return this.jobType;
     }
     /**
      * Location of the job output logs and artifacts.
      * 
     */
-    public JobOutputResponse getOutput() {
+    public JobOutputResponse output() {
         return this.output;
     }
     /**
      * Mapping of output data bindings used in the job.
      * 
     */
-    public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
+    public Map<String,OutputDataBindingResponse> outputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
     /**
      * Input parameters.
      * 
     */
-    public Object getParameters() {
+    public Object parameters() {
         return this.parameters;
     }
     /**
@@ -294,42 +294,42 @@ public final class CommandJobResponse {
      * Private preview feature and only available to users on the allow list.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The asset property dictionary.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Specifies the job provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of the job.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

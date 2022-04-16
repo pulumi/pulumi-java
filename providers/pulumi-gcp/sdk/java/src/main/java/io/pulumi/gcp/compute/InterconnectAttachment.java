@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InterconnectAttachmentArgs;
 import io.pulumi.gcp.compute.inputs.InterconnectAttachmentState;
@@ -58,7 +59,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * PARTNER type this will Pre-Activate the interconnect attachment
      * 
      */
-    public Output</* @Nullable */ Boolean> getAdminEnabled() {
+    public Output</* @Nullable */ Boolean> adminEnabled() {
         return this.adminEnabled;
     }
     /**
@@ -82,7 +83,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
      * 
      */
-    public Output<String> getBandwidth() {
+    public Output<String> bandwidth() {
         return this.bandwidth;
     }
     /**
@@ -108,7 +109,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Google will randomly select an unused /29 from all of link-local space.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCandidateSubnets() {
+    public Output</* @Nullable */ List<String>> candidateSubnets() {
         return this.candidateSubnets;
     }
     /**
@@ -122,7 +123,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @return IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
      * 
      */
-    public Output<String> getCloudRouterIpAddress() {
+    public Output<String> cloudRouterIpAddress() {
         return this.cloudRouterIpAddress;
     }
     /**
@@ -136,7 +137,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -150,7 +151,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @return IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
      * 
      */
-    public Output<String> getCustomerRouterIpAddress() {
+    public Output<String> customerRouterIpAddress() {
         return this.customerRouterIpAddress;
     }
     /**
@@ -164,7 +165,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -188,7 +189,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
      * 
      */
-    public Output<String> getEdgeAvailabilityDomain() {
+    public Output<String> edgeAvailabilityDomain() {
         return this.edgeAvailabilityDomain;
     }
     /**
@@ -226,7 +227,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `IPSEC`.
      * 
      */
-    public Output</* @Nullable */ String> getEncryption() {
+    public Output</* @Nullable */ String> encryption() {
         return this.encryption;
     }
     /**
@@ -242,7 +243,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * issues.
      * 
      */
-    public Output<String> getGoogleReferenceId() {
+    public Output<String> googleReferenceId() {
         return this.googleReferenceId;
     }
     /**
@@ -260,7 +261,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * be set if type is PARTNER.
      * 
      */
-    public Output</* @Nullable */ String> getInterconnect() {
+    public Output</* @Nullable */ String> interconnect() {
         return this.interconnect;
     }
     /**
@@ -304,7 +305,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * allocated from regional external IP address pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIpsecInternalAddresses() {
+    public Output</* @Nullable */ List<String>> ipsecInternalAddresses() {
         return this.ipsecInternalAddresses;
     }
     /**
@@ -320,7 +321,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
      * 
      */
-    public Output<String> getMtu() {
+    public Output<String> mtu() {
         return this.mtu;
     }
     /**
@@ -344,7 +345,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -360,7 +361,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
      * 
      */
-    public Output<String> getPairingKey() {
+    public Output<String> pairingKey() {
         return this.pairingKey;
     }
     /**
@@ -376,7 +377,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * layer 3 Partner if they configured BGP on behalf of the customer.
      * 
      */
-    public Output<String> getPartnerAsn() {
+    public Output<String> partnerAsn() {
         return this.partnerAsn;
     }
     /**
@@ -392,7 +393,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * to is of type DEDICATED.
      * 
      */
-    public Output<List<InterconnectAttachmentPrivateInterconnectInfo>> getPrivateInterconnectInfos() {
+    public Output<List<InterconnectAttachmentPrivateInterconnectInfo>> privateInterconnectInfos() {
         return this.privateInterconnectInfos;
     }
     /**
@@ -408,7 +409,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -422,7 +423,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @return Region where the regional interconnect attachment resides.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -442,7 +443,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Cloud Router is configured.
      * 
      */
-    public Output<String> getRouter() {
+    public Output<String> router() {
         return this.router;
     }
     /**
@@ -456,7 +457,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -470,7 +471,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @return [Output Only] The current state of this attachment's functionality.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -488,7 +489,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -504,7 +505,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * using PARTNER type this will be managed upstream.
      * 
      */
-    public Output<Integer> getVlanTag8021q() {
+    public Output<Integer> vlanTag8021q() {
         return this.vlanTag8021q;
     }
 
@@ -530,7 +531,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InterconnectAttachment(String name, InterconnectAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/interconnectAttachment:InterconnectAttachment", name, args == null ? InterconnectAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/interconnectAttachment:InterconnectAttachment", name, args == null ? InterconnectAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InterconnectAttachment(String name, Output<String> id, @Nullable InterconnectAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

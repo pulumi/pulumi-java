@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,13 +46,13 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource reference to the Azure DNS zone
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> getAzureDnsZone() {
+    public Output</* @Nullable */ ResourceReferenceResponse> azureDnsZone() {
         return this.azureDnsZone;
     }
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -65,7 +66,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
      * 
      */
-    public Output<String> getDomainValidationState() {
+    public Output<String> domainValidationState() {
         return this.domainValidationState;
     }
     /**
@@ -79,7 +80,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The host name of the domain. Must be a domain name.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -93,7 +94,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -107,7 +108,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Provisioning status
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -121,7 +122,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -135,7 +136,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
-    public Output</* @Nullable */ AFDDomainHttpsParametersResponse> getTlsSettings() {
+    public Output</* @Nullable */ AFDDomainHttpsParametersResponse> tlsSettings() {
         return this.tlsSettings;
     }
     /**
@@ -149,7 +150,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -163,7 +164,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Values the customer needs to validate domain ownership
      * 
      */
-    public Output<DomainValidationPropertiesResponse> getValidationProperties() {
+    public Output<DomainValidationPropertiesResponse> validationProperties() {
         return this.validationProperties;
     }
 
@@ -189,7 +190,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AFDCustomDomain(String name, AFDCustomDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:AFDCustomDomain", name, args == null ? AFDCustomDomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:cdn:AFDCustomDomain", name, args == null ? AFDCustomDomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AFDCustomDomain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
-        return this.delimiter == null ? Output.empty() : this.delimiter;
+    public Output<String> delimiter() {
+        return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     public JobCsvOutputOptionsArgs(@Nullable Output<String> delimiter) {
@@ -30,7 +31,7 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     private JobCsvOutputOptionsArgs() {
-        this.delimiter = Output.empty();
+        this.delimiter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Output.ofNullable(delimiter);
+            this.delimiter = Codegen.ofNullable(delimiter);
             return this;
         }        public JobCsvOutputOptionsArgs build() {
             return new JobCsvOutputOptionsArgs(delimiter);

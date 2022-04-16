@@ -6,6 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> extendedLocation() {
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="inventoryItemId")
       private final @Nullable Output<String> inventoryItemId;
 
-    public Output<String> getInventoryItemId() {
-        return this.inventoryItemId == null ? Output.empty() : this.inventoryItemId;
+    public Output<String> inventoryItemId() {
+        return this.inventoryItemId == null ? Codegen.empty() : this.inventoryItemId;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="moRefId")
       private final @Nullable Output<String> moRefId;
 
-    public Output<String> getMoRefId() {
-        return this.moRefId == null ? Output.empty() : this.moRefId;
+    public Output<String> moRefId() {
+        return this.moRefId == null ? Codegen.empty() : this.moRefId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,8 +91,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="vCenterId")
       private final @Nullable Output<String> vCenterId;
 
-    public Output<String> getVCenterId() {
-        return this.vCenterId == null ? Output.empty() : this.vCenterId;
+    public Output<String> vCenterId() {
+        return this.vCenterId == null ? Codegen.empty() : this.vCenterId;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     @Import(name="virtualMachineTemplateName")
       private final @Nullable Output<String> virtualMachineTemplateName;
 
-    public Output<String> getVirtualMachineTemplateName() {
-        return this.virtualMachineTemplateName == null ? Output.empty() : this.virtualMachineTemplateName;
+    public Output<String> virtualMachineTemplateName() {
+        return this.virtualMachineTemplateName == null ? Codegen.empty() : this.virtualMachineTemplateName;
     }
 
     public VirtualMachineTemplateArgs(
@@ -138,15 +139,15 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
     }
 
     private VirtualMachineTemplateArgs() {
-        this.extendedLocation = Output.empty();
-        this.inventoryItemId = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.moRefId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vCenterId = Output.empty();
-        this.virtualMachineTemplateName = Output.empty();
+        this.extendedLocation = Codegen.empty();
+        this.inventoryItemId = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.moRefId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vCenterId = Codegen.empty();
+        this.virtualMachineTemplateName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
@@ -198,7 +199,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
-            this.inventoryItemId = Output.ofNullable(inventoryItemId);
+            this.inventoryItemId = Codegen.ofNullable(inventoryItemId);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -206,7 +207,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -214,7 +215,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder moRefId(@Nullable Output<String> moRefId) {
@@ -222,7 +223,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder moRefId(@Nullable String moRefId) {
-            this.moRefId = Output.ofNullable(moRefId);
+            this.moRefId = Codegen.ofNullable(moRefId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -238,7 +239,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vCenterId(@Nullable Output<String> vCenterId) {
@@ -246,7 +247,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vCenterId(@Nullable String vCenterId) {
-            this.vCenterId = Output.ofNullable(vCenterId);
+            this.vCenterId = Codegen.ofNullable(vCenterId);
             return this;
         }
         public Builder virtualMachineTemplateName(@Nullable Output<String> virtualMachineTemplateName) {
@@ -254,7 +255,7 @@ public final class VirtualMachineTemplateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder virtualMachineTemplateName(@Nullable String virtualMachineTemplateName) {
-            this.virtualMachineTemplateName = Output.ofNullable(virtualMachineTemplateName);
+            this.virtualMachineTemplateName = Codegen.ofNullable(virtualMachineTemplateName);
             return this;
         }        public VirtualMachineTemplateArgs build() {
             return new VirtualMachineTemplateArgs(extendedLocation, inventoryItemId, kind, location, moRefId, resourceGroupName, tags, vCenterId, virtualMachineTemplateName);

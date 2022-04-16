@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceArmResourceId", required=true)
       private final Output<String> sourceArmResourceId;
 
-    public Output<String> getSourceArmResourceId() {
+    public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
@@ -33,7 +34,7 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NsgReferenceArgs() {
-        this.sourceArmResourceId = Output.empty();
+        this.sourceArmResourceId = Codegen.empty();
     }
 
     public static Builder builder() {

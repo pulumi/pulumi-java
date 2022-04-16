@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.CanaryEvaluationArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse;
@@ -32,7 +33,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return The stable version that is serving requests.
      * 
      */
-    public Output<String> getControl() {
+    public Output<String> control() {
         return this.control;
     }
     /**
@@ -46,7 +47,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return Create time of the canary evaluation.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +61,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return End time for the evaluation's analysis.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -74,7 +75,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return Labels used to filter the metrics used for a canary evaluation.
      * 
      */
-    public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse> getMetricLabels() {
+    public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse> metricLabels() {
         return this.metricLabels;
     }
     /**
@@ -88,7 +89,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return Name of the canary evalution.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return Start time for the canary evaluation's analysis.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -116,7 +117,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return The current state of the canary evaluation.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -130,7 +131,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return The newer version that is serving requests.
      * 
      */
-    public Output<String> getTreatment() {
+    public Output<String> treatment() {
         return this.treatment;
     }
     /**
@@ -144,7 +145,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @return The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
      * 
      */
-    public Output<String> getVerdict() {
+    public Output<String> verdict() {
         return this.verdict;
     }
 
@@ -170,7 +171,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CanaryEvaluation(String name, CanaryEvaluationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:CanaryEvaluation", name, args == null ? CanaryEvaluationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:CanaryEvaluation", name, args == null ? CanaryEvaluationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CanaryEvaluation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetInstanceTypeConfigConf
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
     @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
-    public Output<String> getBidPrice() {
-        return this.bidPrice == null ? Output.empty() : this.bidPrice;
+    public Output<String> bidPrice() {
+        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
     @Import(name="bidPriceAsPercentageOfOnDemandPrice")
       private final @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
 
-    public Output<Double> getBidPriceAsPercentageOfOnDemandPrice() {
-        return this.bidPriceAsPercentageOfOnDemandPrice == null ? Output.empty() : this.bidPriceAsPercentageOfOnDemandPrice;
+    public Output<Double> bidPriceAsPercentageOfOnDemandPrice() {
+        return this.bidPriceAsPercentageOfOnDemandPrice == null ? Codegen.empty() : this.bidPriceAsPercentageOfOnDemandPrice;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
     @Import(name="configurations")
       private final @Nullable Output<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations;
 
-    public Output<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> getConfigurations() {
-        return this.configurations == null ? Output.empty() : this.configurations;
+    public Output<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations() {
+        return this.configurations == null ? Codegen.empty() : this.configurations;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
     @Import(name="ebsConfigs")
       private final @Nullable Output<List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs;
 
-    public Output<List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs>> getEbsConfigs() {
-        return this.ebsConfigs == null ? Output.empty() : this.ebsConfigs;
+    public Output<List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs() {
+        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -81,8 +82,8 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
     @Import(name="weightedCapacity")
       private final @Nullable Output<Integer> weightedCapacity;
 
-    public Output<Integer> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+    public Output<Integer> weightedCapacity() {
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public ClusterMasterInstanceFleetInstanceTypeConfigArgs(
@@ -101,12 +102,12 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
     }
 
     private ClusterMasterInstanceFleetInstanceTypeConfigArgs() {
-        this.bidPrice = Output.empty();
-        this.bidPriceAsPercentageOfOnDemandPrice = Output.empty();
-        this.configurations = Output.empty();
-        this.ebsConfigs = Output.empty();
-        this.instanceType = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.bidPrice = Codegen.empty();
+        this.bidPriceAsPercentageOfOnDemandPrice = Codegen.empty();
+        this.configurations = Codegen.empty();
+        this.ebsConfigs = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
             return this;
         }
         public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Output.ofNullable(bidPrice);
+            this.bidPrice = Codegen.ofNullable(bidPrice);
             return this;
         }
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice) {
@@ -152,7 +153,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
             return this;
         }
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
-            this.bidPriceAsPercentageOfOnDemandPrice = Output.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
+            this.bidPriceAsPercentageOfOnDemandPrice = Codegen.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
             return this;
         }
         public Builder configurations(@Nullable Output<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations) {
@@ -160,7 +161,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
             return this;
         }
         public Builder configurations(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs> configurations) {
-            this.configurations = Output.ofNullable(configurations);
+            this.configurations = Codegen.ofNullable(configurations);
             return this;
         }
         public Builder configurations(ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs... configurations) {
@@ -171,7 +172,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
             return this;
         }
         public Builder ebsConfigs(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs> ebsConfigs) {
-            this.ebsConfigs = Output.ofNullable(ebsConfigs);
+            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
             return this;
         }
         public Builder ebsConfigs(ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs... ebsConfigs) {
@@ -190,7 +191,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
             return this;
         }
         public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public ClusterMasterInstanceFleetInstanceTypeConfigArgs build() {
             return new ClusterMasterInstanceFleetInstanceTypeConfigArgs(bidPrice, bidPriceAsPercentageOfOnDemandPrice, configurations, ebsConfigs, instanceType, weightedCapacity);

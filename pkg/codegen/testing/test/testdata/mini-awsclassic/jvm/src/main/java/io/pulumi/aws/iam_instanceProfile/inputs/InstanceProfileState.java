@@ -5,6 +5,7 @@ package io.pulumi.aws.iam_instanceProfile.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public InstanceProfileState(@Nullable Output<String> role) {
@@ -30,7 +31,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceProfileState() {
-        this.role = Output.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {

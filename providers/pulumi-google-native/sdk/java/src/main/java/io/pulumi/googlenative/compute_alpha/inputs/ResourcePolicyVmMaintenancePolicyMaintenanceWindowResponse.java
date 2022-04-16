@@ -19,7 +19,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse ex
     @Import(name="dailyMaintenanceWindow", required=true)
       private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
 
-    public ResourcePolicyDailyCycleResponse getDailyMaintenanceWindow() {
+    public ResourcePolicyDailyCycleResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }
 

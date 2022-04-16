@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class NodePoolNodeConfigEphemeralStorageConfigGetArgs extends io.pu
     @Import(name="localSsdCount", required=true)
       private final Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
+    public Output<Integer> localSsdCount() {
         return this.localSsdCount;
     }
 
@@ -25,7 +26,7 @@ public final class NodePoolNodeConfigEphemeralStorageConfigGetArgs extends io.pu
     }
 
     private NodePoolNodeConfigEphemeralStorageConfigGetArgs() {
-        this.localSsdCount = Output.empty();
+        this.localSsdCount = Codegen.empty();
     }
 
     public static Builder builder() {

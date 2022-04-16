@@ -23,7 +23,7 @@ public final class AliasIpRangeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -34,7 +34,7 @@ public final class AliasIpRangeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetworkRangeName", required=true)
       private final String subnetworkRangeName;
 
-    public String getSubnetworkRangeName() {
+    public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }
 

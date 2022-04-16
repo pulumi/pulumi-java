@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="airflowConfigOverrides")
       private final @Nullable Output<Map<String,String>> airflowConfigOverrides;
 
-    public Output<Map<String,String>> getAirflowConfigOverrides() {
-        return this.airflowConfigOverrides == null ? Output.empty() : this.airflowConfigOverrides;
+    public Output<Map<String,String>> airflowConfigOverrides() {
+        return this.airflowConfigOverrides == null ? Codegen.empty() : this.airflowConfigOverrides;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
-    public Output<Map<String,String>> getEnvVariables() {
-        return this.envVariables == null ? Output.empty() : this.envVariables;
+    public Output<Map<String,String>> envVariables() {
+        return this.envVariables == null ? Codegen.empty() : this.envVariables;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
-    public Output<String> getImageVersion() {
-        return this.imageVersion == null ? Output.empty() : this.imageVersion;
+    public Output<String> imageVersion() {
+        return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pypiPackages")
       private final @Nullable Output<Map<String,String>> pypiPackages;
 
-    public Output<Map<String,String>> getPypiPackages() {
-        return this.pypiPackages == null ? Output.empty() : this.pypiPackages;
+    public Output<Map<String,String>> pypiPackages() {
+        return this.pypiPackages == null ? Codegen.empty() : this.pypiPackages;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
-    public Output<String> getPythonVersion() {
-        return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
+    public Output<String> pythonVersion() {
+        return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulerCount")
       private final @Nullable Output<Integer> schedulerCount;
 
-    public Output<Integer> getSchedulerCount() {
-        return this.schedulerCount == null ? Output.empty() : this.schedulerCount;
+    public Output<Integer> schedulerCount() {
+        return this.schedulerCount == null ? Codegen.empty() : this.schedulerCount;
     }
 
     public SoftwareConfigArgs(
@@ -102,12 +103,12 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SoftwareConfigArgs() {
-        this.airflowConfigOverrides = Output.empty();
-        this.envVariables = Output.empty();
-        this.imageVersion = Output.empty();
-        this.pypiPackages = Output.empty();
-        this.pythonVersion = Output.empty();
-        this.schedulerCount = Output.empty();
+        this.airflowConfigOverrides = Codegen.empty();
+        this.envVariables = Codegen.empty();
+        this.imageVersion = Codegen.empty();
+        this.pypiPackages = Codegen.empty();
+        this.pythonVersion = Codegen.empty();
+        this.schedulerCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder airflowConfigOverrides(@Nullable Map<String,String> airflowConfigOverrides) {
-            this.airflowConfigOverrides = Output.ofNullable(airflowConfigOverrides);
+            this.airflowConfigOverrides = Codegen.ofNullable(airflowConfigOverrides);
             return this;
         }
         public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
@@ -153,7 +154,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
-            this.envVariables = Output.ofNullable(envVariables);
+            this.envVariables = Codegen.ofNullable(envVariables);
             return this;
         }
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
@@ -161,7 +162,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Output.ofNullable(imageVersion);
+            this.imageVersion = Codegen.ofNullable(imageVersion);
             return this;
         }
         public Builder pypiPackages(@Nullable Output<Map<String,String>> pypiPackages) {
@@ -169,7 +170,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pypiPackages(@Nullable Map<String,String> pypiPackages) {
-            this.pypiPackages = Output.ofNullable(pypiPackages);
+            this.pypiPackages = Codegen.ofNullable(pypiPackages);
             return this;
         }
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
@@ -177,7 +178,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Output.ofNullable(pythonVersion);
+            this.pythonVersion = Codegen.ofNullable(pythonVersion);
             return this;
         }
         public Builder schedulerCount(@Nullable Output<Integer> schedulerCount) {
@@ -185,7 +186,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedulerCount(@Nullable Integer schedulerCount) {
-            this.schedulerCount = Output.ofNullable(schedulerCount);
+            this.schedulerCount = Codegen.ofNullable(schedulerCount);
             return this;
         }        public SoftwareConfigArgs build() {
             return new SoftwareConfigArgs(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);

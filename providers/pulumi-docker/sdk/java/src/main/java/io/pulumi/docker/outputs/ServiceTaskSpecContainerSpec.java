@@ -87,64 +87,64 @@ public final class ServiceTaskSpecContainerSpec {
         this.user = user;
     }
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
-    public List<String> getCommands() {
+    public List<String> commands() {
         return this.commands == null ? List.of() : this.commands;
     }
-    public List<ServiceTaskSpecContainerSpecConfig> getConfigs() {
+    public List<ServiceTaskSpecContainerSpecConfig> configs() {
         return this.configs == null ? List.of() : this.configs;
     }
-    public Optional<String> getDir() {
+    public Optional<String> dir() {
         return Optional.ofNullable(this.dir);
     }
-    public Optional<ServiceTaskSpecContainerSpecDnsConfig> getDnsConfig() {
+    public Optional<ServiceTaskSpecContainerSpecDnsConfig> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
-    public Map<String,String> getEnv() {
+    public Map<String,String> env() {
         return this.env == null ? Map.of() : this.env;
     }
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
-    public Optional<ServiceTaskSpecContainerSpecHealthcheck> getHealthcheck() {
+    public Optional<ServiceTaskSpecContainerSpecHealthcheck> healthcheck() {
         return Optional.ofNullable(this.healthcheck);
     }
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
-    public List<ServiceTaskSpecContainerSpecHost> getHosts() {
+    public List<ServiceTaskSpecContainerSpecHost> hosts() {
         return this.hosts == null ? List.of() : this.hosts;
     }
-    public String getImage() {
+    public String image() {
         return this.image;
     }
-    public Optional<String> getIsolation() {
+    public Optional<String> isolation() {
         return Optional.ofNullable(this.isolation);
     }
-    public List<ServiceTaskSpecContainerSpecLabel> getLabels() {
+    public List<ServiceTaskSpecContainerSpecLabel> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
-    public List<ServiceTaskSpecContainerSpecMount> getMounts() {
+    public List<ServiceTaskSpecContainerSpecMount> mounts() {
         return this.mounts == null ? List.of() : this.mounts;
     }
-    public Optional<ServiceTaskSpecContainerSpecPrivileges> getPrivileges() {
+    public Optional<ServiceTaskSpecContainerSpecPrivileges> privileges() {
         return Optional.ofNullable(this.privileges);
     }
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
-    public List<ServiceTaskSpecContainerSpecSecret> getSecrets() {
+    public List<ServiceTaskSpecContainerSpecSecret> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
-    public Optional<String> getStopGracePeriod() {
+    public Optional<String> stopGracePeriod() {
         return Optional.ofNullable(this.stopGracePeriod);
     }
-    public Optional<String> getStopSignal() {
+    public Optional<String> stopSignal() {
         return Optional.ofNullable(this.stopSignal);
     }
-    public Optional<String> getUser() {
+    public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }
 

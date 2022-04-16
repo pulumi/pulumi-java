@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * @return An SSL Negotiation policy attribute. Each has two properties:
      * 
      */
-    public Output</* @Nullable */ List<SslNegotiationPolicyAttribute>> getAttributes() {
+    public Output</* @Nullable */ List<SslNegotiationPolicyAttribute>> attributes() {
         return this.attributes;
     }
     /**
@@ -53,7 +54,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * balancer.
      * 
      */
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
     /**
@@ -69,7 +70,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * should be attached.
      * 
      */
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
     /**
@@ -83,7 +84,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the attribute
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -109,7 +110,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SslNegotiationPolicy(String name, SslNegotiationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elb/sslNegotiationPolicy:SslNegotiationPolicy", name, args == null ? SslNegotiationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elb/sslNegotiationPolicy:SslNegotiationPolicy", name, args == null ? SslNegotiationPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SslNegotiationPolicy(String name, Output<String> id, @Nullable SslNegotiationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

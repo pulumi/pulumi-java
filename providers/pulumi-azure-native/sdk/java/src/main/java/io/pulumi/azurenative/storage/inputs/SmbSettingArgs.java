@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.MultichannelArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationMethods")
       private final @Nullable Output<String> authenticationMethods;
 
-    public Output<String> getAuthenticationMethods() {
-        return this.authenticationMethods == null ? Output.empty() : this.authenticationMethods;
+    public Output<String> authenticationMethods() {
+        return this.authenticationMethods == null ? Codegen.empty() : this.authenticationMethods;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelEncryption")
       private final @Nullable Output<String> channelEncryption;
 
-    public Output<String> getChannelEncryption() {
-        return this.channelEncryption == null ? Output.empty() : this.channelEncryption;
+    public Output<String> channelEncryption() {
+        return this.channelEncryption == null ? Codegen.empty() : this.channelEncryption;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kerberosTicketEncryption")
       private final @Nullable Output<String> kerberosTicketEncryption;
 
-    public Output<String> getKerberosTicketEncryption() {
-        return this.kerberosTicketEncryption == null ? Output.empty() : this.kerberosTicketEncryption;
+    public Output<String> kerberosTicketEncryption() {
+        return this.kerberosTicketEncryption == null ? Codegen.empty() : this.kerberosTicketEncryption;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multichannel")
       private final @Nullable Output<MultichannelArgs> multichannel;
 
-    public Output<MultichannelArgs> getMultichannel() {
-        return this.multichannel == null ? Output.empty() : this.multichannel;
+    public Output<MultichannelArgs> multichannel() {
+        return this.multichannel == null ? Codegen.empty() : this.multichannel;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versions")
       private final @Nullable Output<String> versions;
 
-    public Output<String> getVersions() {
-        return this.versions == null ? Output.empty() : this.versions;
+    public Output<String> versions() {
+        return this.versions == null ? Codegen.empty() : this.versions;
     }
 
     public SmbSettingArgs(
@@ -88,11 +89,11 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmbSettingArgs() {
-        this.authenticationMethods = Output.empty();
-        this.channelEncryption = Output.empty();
-        this.kerberosTicketEncryption = Output.empty();
-        this.multichannel = Output.empty();
-        this.versions = Output.empty();
+        this.authenticationMethods = Codegen.empty();
+        this.channelEncryption = Codegen.empty();
+        this.kerberosTicketEncryption = Codegen.empty();
+        this.multichannel = Codegen.empty();
+        this.versions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationMethods(@Nullable String authenticationMethods) {
-            this.authenticationMethods = Output.ofNullable(authenticationMethods);
+            this.authenticationMethods = Codegen.ofNullable(authenticationMethods);
             return this;
         }
         public Builder channelEncryption(@Nullable Output<String> channelEncryption) {
@@ -136,7 +137,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelEncryption(@Nullable String channelEncryption) {
-            this.channelEncryption = Output.ofNullable(channelEncryption);
+            this.channelEncryption = Codegen.ofNullable(channelEncryption);
             return this;
         }
         public Builder kerberosTicketEncryption(@Nullable Output<String> kerberosTicketEncryption) {
@@ -144,7 +145,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
-            this.kerberosTicketEncryption = Output.ofNullable(kerberosTicketEncryption);
+            this.kerberosTicketEncryption = Codegen.ofNullable(kerberosTicketEncryption);
             return this;
         }
         public Builder multichannel(@Nullable Output<MultichannelArgs> multichannel) {
@@ -152,7 +153,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multichannel(@Nullable MultichannelArgs multichannel) {
-            this.multichannel = Output.ofNullable(multichannel);
+            this.multichannel = Codegen.ofNullable(multichannel);
             return this;
         }
         public Builder versions(@Nullable Output<String> versions) {
@@ -160,7 +161,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versions(@Nullable String versions) {
-            this.versions = Output.ofNullable(versions);
+            this.versions = Codegen.ofNullable(versions);
             return this;
         }        public SmbSettingArgs build() {
             return new SmbSettingArgs(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);

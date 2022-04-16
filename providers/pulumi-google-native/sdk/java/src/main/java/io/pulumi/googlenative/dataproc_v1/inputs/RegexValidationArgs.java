@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="regexes", required=true)
       private final Output<List<String>> regexes;
 
-    public Output<List<String>> getRegexes() {
+    public Output<List<String>> regexes() {
         return this.regexes;
     }
 
@@ -34,7 +35,7 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RegexValidationArgs() {
-        this.regexes = Output.empty();
+        this.regexes = Codegen.empty();
     }
 
     public static Builder builder() {

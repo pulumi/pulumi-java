@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +38,7 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routes", required=true)
       private final Output<List<HttpRouteConfigArgs>> routes;
 
-    public Output<List<HttpRouteConfigArgs>> getRoutes() {
+    public Output<List<HttpRouteConfigArgs>> routes() {
         return this.routes;
     }
 
@@ -49,8 +50,8 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpHostConfigArgs() {
-        this.name = Output.empty();
-        this.routes = Output.empty();
+        this.name = Codegen.empty();
+        this.routes = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -25,7 +25,7 @@ public final class LinkedInterconnectAttachmentsResponse extends io.pulumi.resou
     @Import(name="siteToSiteDataTransfer", required=true)
       private final Boolean siteToSiteDataTransfer;
 
-    public Boolean getSiteToSiteDataTransfer() {
+    public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 
@@ -36,7 +36,7 @@ public final class LinkedInterconnectAttachmentsResponse extends io.pulumi.resou
     @Import(name="uris", required=true)
       private final List<String> uris;
 
-    public List<String> getUris() {
+    public List<String> uris() {
         return this.uris;
     }
 

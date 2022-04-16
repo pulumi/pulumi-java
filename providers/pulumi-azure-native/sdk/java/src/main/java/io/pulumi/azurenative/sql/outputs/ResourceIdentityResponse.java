@@ -50,28 +50,28 @@ public final class ResourceIdentityResponse {
      * The Azure Active Directory principal id.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The Azure Active Directory tenant id.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The resource ids of the user assigned identities to use
      * 
     */
-    public Map<String,UserIdentityResponse> getUserAssignedIdentities() {
+    public Map<String,UserIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

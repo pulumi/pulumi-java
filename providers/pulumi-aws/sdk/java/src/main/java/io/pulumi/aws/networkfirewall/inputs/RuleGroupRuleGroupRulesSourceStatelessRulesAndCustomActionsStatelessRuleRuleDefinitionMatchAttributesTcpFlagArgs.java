@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="flags", required=true)
       private final Output<List<String>> flags;
 
-    public Output<List<String>> getFlags() {
+    public Output<List<String>> flags() {
         return this.flags;
     }
 
@@ -35,8 +36,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="masks")
       private final @Nullable Output<List<String>> masks;
 
-    public Output<List<String>> getMasks() {
-        return this.masks == null ? Output.empty() : this.masks;
+    public Output<List<String>> masks() {
+        return this.masks == null ? Codegen.empty() : this.masks;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs(
@@ -47,8 +48,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs() {
-        this.flags = Output.empty();
-        this.masks = Output.empty();
+        this.flags = Codegen.empty();
+        this.masks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             return this;
         }
         public Builder masks(@Nullable List<String> masks) {
-            this.masks = Output.ofNullable(masks);
+            this.masks = Codegen.ofNullable(masks);
             return this;
         }
         public Builder masks(String... masks) {

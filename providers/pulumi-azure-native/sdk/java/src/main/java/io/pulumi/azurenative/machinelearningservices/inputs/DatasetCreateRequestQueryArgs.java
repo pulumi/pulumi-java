@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
-        return this.datastoreName == null ? Output.empty() : this.datastoreName;
+    public Output<String> datastoreName() {
+        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<String> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     public DatasetCreateRequestQueryArgs(
@@ -44,8 +45,8 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
     }
 
     private DatasetCreateRequestQueryArgs() {
-        this.datastoreName = Output.empty();
-        this.query = Output.empty();
+        this.datastoreName = Codegen.empty();
+        this.query = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Output.ofNullable(datastoreName);
+            this.datastoreName = Codegen.ofNullable(datastoreName);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -83,7 +84,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }        public DatasetCreateRequestQueryArgs build() {
             return new DatasetCreateRequestQueryArgs(datastoreName, query);

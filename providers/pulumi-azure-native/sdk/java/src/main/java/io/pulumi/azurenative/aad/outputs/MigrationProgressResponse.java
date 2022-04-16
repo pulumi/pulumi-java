@@ -35,14 +35,14 @@ public final class MigrationProgressResponse {
      * Completion Percentage
      * 
     */
-    public Optional<Double> getCompletionPercentage() {
+    public Optional<Double> completionPercentage() {
         return Optional.ofNullable(this.completionPercentage);
     }
     /**
      * Progress Message
      * 
     */
-    public Optional<String> getProgressMessage() {
+    public Optional<String> progressMessage() {
         return Optional.ofNullable(this.progressMessage);
     }
 

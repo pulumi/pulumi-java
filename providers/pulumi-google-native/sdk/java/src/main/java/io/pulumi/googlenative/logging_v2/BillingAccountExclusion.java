@@ -6,6 +6,7 @@ package io.pulumi.googlenative.logging_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.logging_v2.BillingAccountExclusionArgs;
 import java.lang.Boolean;
@@ -29,7 +30,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return The creation timestamp of the exclusion.This field may not be present for older exclusions.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +44,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return Optional. A description of this exclusion.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -71,7 +72,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -85,7 +86,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return The last update timestamp of the exclusion.This field may not be present for older exclusions.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -125,7 +126,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public BillingAccountExclusion(String name, BillingAccountExclusionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:logging/v2:BillingAccountExclusion", name, args == null ? BillingAccountExclusionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:logging/v2:BillingAccountExclusion", name, args == null ? BillingAccountExclusionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BillingAccountExclusion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

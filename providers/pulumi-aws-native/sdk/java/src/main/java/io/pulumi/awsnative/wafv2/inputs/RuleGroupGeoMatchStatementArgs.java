@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
     @Import(name="countryCodes")
       private final @Nullable Output<List<String>> countryCodes;
 
-    public Output<List<String>> getCountryCodes() {
-        return this.countryCodes == null ? Output.empty() : this.countryCodes;
+    public Output<List<String>> countryCodes() {
+        return this.countryCodes == null ? Codegen.empty() : this.countryCodes;
     }
 
     @Import(name="forwardedIPConfig")
       private final @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Output<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Output.empty() : this.forwardedIPConfig;
+    public Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig() {
+        return this.forwardedIPConfig == null ? Codegen.empty() : this.forwardedIPConfig;
     }
 
     public RuleGroupGeoMatchStatementArgs(
@@ -38,8 +39,8 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
     }
 
     private RuleGroupGeoMatchStatementArgs() {
-        this.countryCodes = Output.empty();
-        this.forwardedIPConfig = Output.empty();
+        this.countryCodes = Codegen.empty();
+        this.forwardedIPConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder countryCodes(@Nullable List<String> countryCodes) {
-            this.countryCodes = Output.ofNullable(countryCodes);
+            this.countryCodes = Codegen.ofNullable(countryCodes);
             return this;
         }
         public Builder countryCodes(String... countryCodes) {
@@ -80,7 +81,7 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
+            this.forwardedIPConfig = Codegen.ofNullable(forwardedIPConfig);
             return this;
         }        public RuleGroupGeoMatchStatementArgs build() {
             return new RuleGroupGeoMatchStatementArgs(countryCodes, forwardedIPConfig);

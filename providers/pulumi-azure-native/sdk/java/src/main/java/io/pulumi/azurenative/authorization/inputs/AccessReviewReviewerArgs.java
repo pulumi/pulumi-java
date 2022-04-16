@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+    public Output<String> principalId() {
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     public AccessReviewReviewerArgs(@Nullable Output<String> principalId) {
@@ -34,7 +35,7 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
     }
 
     private AccessReviewReviewerArgs() {
-        this.principalId = Output.empty();
+        this.principalId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }        public AccessReviewReviewerArgs build() {
             return new AccessReviewReviewerArgs(principalId);

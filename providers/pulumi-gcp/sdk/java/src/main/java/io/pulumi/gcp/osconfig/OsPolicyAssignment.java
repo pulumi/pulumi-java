@@ -6,6 +6,7 @@ package io.pulumi.gcp.osconfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentState;
@@ -56,7 +57,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * this field.
      * 
      */
-    public Output<Boolean> getBaseline() {
+    public Output<Boolean> baseline() {
         return this.baseline;
     }
     /**
@@ -70,7 +71,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return Output only. Indicates that this revision deletes the OS policy assignment.
      * 
      */
-    public Output<Boolean> getDeleted() {
+    public Output<Boolean> deleted() {
         return this.deleted;
     }
     /**
@@ -84,7 +85,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -98,7 +99,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -112,7 +113,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return Required. Filter to select VMs.
      * 
      */
-    public Output<OsPolicyAssignmentInstanceFilter> getInstanceFilter() {
+    public Output<OsPolicyAssignmentInstanceFilter> instanceFilter() {
         return this.instanceFilter;
     }
     /**
@@ -126,7 +127,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -140,7 +141,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return Required. The name of the repository.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -154,7 +155,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return Required. List of OS policies to be applied to the VMs.
      * 
      */
-    public Output<List<OsPolicyAssignmentOsPolicy>> getOsPolicies() {
+    public Output<List<OsPolicyAssignmentOsPolicy>> osPolicies() {
         return this.osPolicies;
     }
     /**
@@ -168,7 +169,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -184,7 +185,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * `rollout_state` is one of: * IN_PROGRESS * CANCELLING
      * 
      */
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling;
     }
     /**
@@ -198,7 +199,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return Output only. The timestamp that the revision was created.
      * 
      */
-    public Output<String> getRevisionCreateTime() {
+    public Output<String> revisionCreateTime() {
         return this.revisionCreateTime;
     }
     /**
@@ -214,7 +215,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * assignment
      * 
      */
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
     /**
@@ -228,7 +229,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
-    public Output<OsPolicyAssignmentRollout> getRollout() {
+    public Output<OsPolicyAssignmentRollout> rollout() {
         return this.rollout;
     }
     /**
@@ -244,7 +245,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * CANCELLED, SUCCEEDED
      * 
      */
-    public Output<String> getRolloutState() {
+    public Output<String> rolloutState() {
         return this.rolloutState;
     }
     /**
@@ -258,7 +259,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @return Output only. Server generated unique id for the OS policy assignment resource.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
 
@@ -284,7 +285,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OsPolicyAssignment(String name, OsPolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:osconfig/osPolicyAssignment:OsPolicyAssignment", name, args == null ? OsPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:osconfig/osPolicyAssignment:OsPolicyAssignment", name, args == null ? OsPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OsPolicyAssignment(String name, Output<String> id, @Nullable OsPolicyAssignmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

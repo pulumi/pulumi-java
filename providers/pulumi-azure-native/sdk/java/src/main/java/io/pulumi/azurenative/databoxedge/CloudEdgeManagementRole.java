@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * @return Edge Profile of the resource
      * 
      */
-    public Output<EdgeProfileResponse> getEdgeProfile() {
+    public Output<EdgeProfileResponse> edgeProfile() {
         return this.edgeProfile;
     }
     /**
@@ -59,7 +60,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * Expected value is 'CloudEdgeManagement'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -73,7 +74,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * @return Local Edge Management Status
      * 
      */
-    public Output<String> getLocalManagementStatus() {
+    public Output<String> localManagementStatus() {
         return this.localManagementStatus;
     }
     /**
@@ -87,7 +88,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * @return Role status.
      * 
      */
-    public Output<String> getRoleStatus() {
+    public Output<String> roleStatus() {
         return this.roleStatus;
     }
     /**
@@ -115,7 +116,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * @return Role configured on ASE resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +130,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,7 +156,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudEdgeManagementRole(String name, CloudEdgeManagementRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:CloudEdgeManagementRole", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:databoxedge:CloudEdgeManagementRole", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloudEdgeManagementRole(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

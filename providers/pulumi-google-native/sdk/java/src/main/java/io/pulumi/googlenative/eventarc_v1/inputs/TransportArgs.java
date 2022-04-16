@@ -5,6 +5,7 @@ package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.eventarc_v1.inputs.PubsubArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsub")
       private final @Nullable Output<PubsubArgs> pubsub;
 
-    public Output<PubsubArgs> getPubsub() {
-        return this.pubsub == null ? Output.empty() : this.pubsub;
+    public Output<PubsubArgs> pubsub() {
+        return this.pubsub == null ? Codegen.empty() : this.pubsub;
     }
 
     public TransportArgs(@Nullable Output<PubsubArgs> pubsub) {
@@ -34,7 +35,7 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransportArgs() {
-        this.pubsub = Output.empty();
+        this.pubsub = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pubsub(@Nullable PubsubArgs pubsub) {
-            this.pubsub = Output.ofNullable(pubsub);
+            this.pubsub = Codegen.ofNullable(pubsub);
             return this;
         }        public TransportArgs build() {
             return new TransportArgs(pubsub);

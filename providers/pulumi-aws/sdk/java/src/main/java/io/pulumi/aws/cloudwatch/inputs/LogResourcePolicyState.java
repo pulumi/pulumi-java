@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyDocument")
       private final @Nullable Output<String> policyDocument;
 
-    public Output<String> getPolicyDocument() {
-        return this.policyDocument == null ? Output.empty() : this.policyDocument;
+    public Output<String> policyDocument() {
+        return this.policyDocument == null ? Codegen.empty() : this.policyDocument;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+    public Output<String> policyName() {
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     public LogResourcePolicyState(
@@ -44,8 +45,8 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
     }
 
     private LogResourcePolicyState() {
-        this.policyDocument = Output.empty();
-        this.policyName = Output.empty();
+        this.policyDocument = Codegen.empty();
+        this.policyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policyDocument(@Nullable String policyDocument) {
-            this.policyDocument = Output.ofNullable(policyDocument);
+            this.policyDocument = Codegen.ofNullable(policyDocument);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -83,7 +84,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }        public LogResourcePolicyState build() {
             return new LogResourcePolicyState(policyDocument, policyName);

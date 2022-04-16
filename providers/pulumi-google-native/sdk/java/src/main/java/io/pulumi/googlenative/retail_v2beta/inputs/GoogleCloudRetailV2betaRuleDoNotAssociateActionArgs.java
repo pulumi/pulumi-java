@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     @Import(name="doNotAssociateTerms")
       private final @Nullable Output<List<String>> doNotAssociateTerms;
 
-    public Output<List<String>> getDoNotAssociateTerms() {
-        return this.doNotAssociateTerms == null ? Output.empty() : this.doNotAssociateTerms;
+    public Output<List<String>> doNotAssociateTerms() {
+        return this.doNotAssociateTerms == null ? Codegen.empty() : this.doNotAssociateTerms;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     @Import(name="queryTerms")
       private final @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> getQueryTerms() {
-        return this.queryTerms == null ? Output.empty() : this.queryTerms;
+    public Output<List<String>> queryTerms() {
+        return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     @Import(name="terms")
       private final @Nullable Output<List<String>> terms;
 
-    public Output<List<String>> getTerms() {
-        return this.terms == null ? Output.empty() : this.terms;
+    public Output<List<String>> terms() {
+        return this.terms == null ? Codegen.empty() : this.terms;
     }
 
     public GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     }
 
     private GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs() {
-        this.doNotAssociateTerms = Output.empty();
-        this.queryTerms = Output.empty();
-        this.terms = Output.empty();
+        this.doNotAssociateTerms = Codegen.empty();
+        this.queryTerms = Codegen.empty();
+        this.terms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
             return this;
         }
         public Builder doNotAssociateTerms(@Nullable List<String> doNotAssociateTerms) {
-            this.doNotAssociateTerms = Output.ofNullable(doNotAssociateTerms);
+            this.doNotAssociateTerms = Codegen.ofNullable(doNotAssociateTerms);
             return this;
         }
         public Builder doNotAssociateTerms(String... doNotAssociateTerms) {
@@ -107,7 +108,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
             return this;
         }
         public Builder queryTerms(@Nullable List<String> queryTerms) {
-            this.queryTerms = Output.ofNullable(queryTerms);
+            this.queryTerms = Codegen.ofNullable(queryTerms);
             return this;
         }
         public Builder queryTerms(String... queryTerms) {
@@ -118,7 +119,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
             return this;
         }
         public Builder terms(@Nullable List<String> terms) {
-            this.terms = Output.ofNullable(terms);
+            this.terms = Codegen.ofNullable(terms);
             return this;
         }
         public Builder terms(String... terms) {

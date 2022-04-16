@@ -14,6 +14,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Action needs to be taken on rule execution.
      * 
      */
-    public Output<Either<AlertingActionResponse,LogToMetricActionResponse>> getAction() {
+    public Output<Either<AlertingActionResponse,LogToMetricActionResponse>> action() {
         return this.action;
     }
     /**
@@ -62,7 +63,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return The flag that indicates whether the alert should be automatically resolved or not. The default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoMitigate() {
+    public Output</* @Nullable */ Boolean> autoMitigate() {
         return this.autoMitigate;
     }
     /**
@@ -76,7 +77,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return The api-version used when creating this alert rule
      * 
      */
-    public Output<String> getCreatedWithApiVersion() {
+    public Output<String> createdWithApiVersion() {
         return this.createdWithApiVersion;
     }
     /**
@@ -90,7 +91,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return The description of the Log Search rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -104,7 +105,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return The display name of the alert rule
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -118,7 +119,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return The flag which indicates whether the Log Search rule is enabled. Value should be true or false
      * 
      */
-    public Output</* @Nullable */ String> getEnabled() {
+    public Output</* @Nullable */ String> enabled() {
         return this.enabled;
     }
     /**
@@ -132,7 +133,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -146,7 +147,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return True if alert rule is legacy Log Analytic rule
      * 
      */
-    public Output<Boolean> getIsLegacyLogAnalyticsRule() {
+    public Output<Boolean> isLegacyLogAnalyticsRule() {
         return this.isLegacyLogAnalyticsRule;
     }
     /**
@@ -160,7 +161,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -174,7 +175,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Last time the rule was updated in IS08601 format.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -188,7 +189,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -202,7 +203,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -216,7 +217,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the scheduled query rule
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -230,7 +231,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
      * 
      */
-    public Output</* @Nullable */ ScheduleResponse> getSchedule() {
+    public Output</* @Nullable */ ScheduleResponse> schedule() {
         return this.schedule;
     }
     /**
@@ -244,7 +245,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Data Source against which rule will Query Data
      * 
      */
-    public Output<SourceResponse> getSource() {
+    public Output<SourceResponse> source() {
         return this.source;
     }
     /**
@@ -258,7 +259,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -272,7 +273,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -298,7 +299,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScheduledQueryRule(String name, ScheduledQueryRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:ScheduledQueryRule", name, args == null ? ScheduledQueryRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:ScheduledQueryRule", name, args == null ? ScheduledQueryRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScheduledQueryRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

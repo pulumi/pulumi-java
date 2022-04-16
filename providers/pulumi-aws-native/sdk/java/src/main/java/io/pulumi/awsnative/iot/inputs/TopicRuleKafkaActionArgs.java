@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -18,35 +19,35 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     @Import(name="clientProperties", required=true)
       private final Output<Object> clientProperties;
 
-    public Output<Object> getClientProperties() {
+    public Output<Object> clientProperties() {
         return this.clientProperties;
     }
 
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="partition")
       private final @Nullable Output<String> partition;
 
-    public Output<String> getPartition() {
-        return this.partition == null ? Output.empty() : this.partition;
+    public Output<String> partition() {
+        return this.partition == null ? Codegen.empty() : this.partition;
     }
 
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -64,11 +65,11 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     }
 
     private TopicRuleKafkaActionArgs() {
-        this.clientProperties = Output.empty();
-        this.destinationArn = Output.empty();
-        this.key = Output.empty();
-        this.partition = Output.empty();
-        this.topic = Output.empty();
+        this.clientProperties = Codegen.empty();
+        this.destinationArn = Codegen.empty();
+        this.key = Codegen.empty();
+        this.partition = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder partition(@Nullable Output<String> partition) {
@@ -128,7 +129,7 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder partition(@Nullable String partition) {
-            this.partition = Output.ofNullable(partition);
+            this.partition = Codegen.ofNullable(partition);
             return this;
         }
         public Builder topic(Output<String> topic) {

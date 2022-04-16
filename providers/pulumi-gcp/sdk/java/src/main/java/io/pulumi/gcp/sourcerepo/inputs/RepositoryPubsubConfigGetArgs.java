@@ -5,6 +5,7 @@ package io.pulumi.gcp.sourcerepo.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="messageFormat", required=true)
       private final Output<String> messageFormat;
 
-    public Output<String> getMessageFormat() {
+    public Output<String> messageFormat() {
         return this.messageFormat;
     }
 
@@ -38,8 +39,8 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+    public Output<String> serviceAccountEmail() {
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -63,9 +64,9 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private RepositoryPubsubConfigGetArgs() {
-        this.messageFormat = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.topic = Output.empty();
+        this.messageFormat = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder topic(Output<String> topic) {

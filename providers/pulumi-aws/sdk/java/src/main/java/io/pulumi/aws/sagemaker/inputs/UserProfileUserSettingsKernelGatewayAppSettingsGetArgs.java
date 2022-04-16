@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSet
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
     @Import(name="customImages")
       private final @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages;
 
-    public Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> getCustomImages() {
-        return this.customImages == null ? Output.empty() : this.customImages;
+    public Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages() {
+        return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
     @Import(name="defaultResourceSpec", required=true)
       private final Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
@@ -46,8 +47,8 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
     @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> getLifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Output.empty() : this.lifecycleConfigArns;
+    public Output<List<String>> lifecycleConfigArns() {
+        return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 
     public UserProfileUserSettingsKernelGatewayAppSettingsGetArgs(
@@ -60,9 +61,9 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
     }
 
     private UserProfileUserSettingsKernelGatewayAppSettingsGetArgs() {
-        this.customImages = Output.empty();
-        this.defaultResourceSpec = Output.empty();
-        this.lifecycleConfigArns = Output.empty();
+        this.customImages = Codegen.empty();
+        this.defaultResourceSpec = Codegen.empty();
+        this.lifecycleConfigArns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
             return this;
         }
         public Builder customImages(@Nullable List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs> customImages) {
-            this.customImages = Output.ofNullable(customImages);
+            this.customImages = Codegen.ofNullable(customImages);
             return this;
         }
         public Builder customImages(UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs... customImages) {
@@ -113,7 +114,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
             return this;
         }
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
+            this.lifecycleConfigArns = Codegen.ofNullable(lifecycleConfigArns);
             return this;
         }
         public Builder lifecycleConfigArns(String... lifecycleConfigArns) {

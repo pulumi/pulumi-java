@@ -29,7 +29,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -51,7 +51,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="headerAction", required=true)
       private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
 
-    public SecurityPolicyRuleHttpHeaderActionResponse getHeaderAction() {
+    public SecurityPolicyRuleHttpHeaderActionResponse headerAction() {
         return this.headerAction;
     }
 
@@ -62,7 +62,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -73,7 +73,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="match", required=true)
       private final SecurityPolicyRuleMatcherResponse match;
 
-    public SecurityPolicyRuleMatcherResponse getMatch() {
+    public SecurityPolicyRuleMatcherResponse match() {
         return this.match;
     }
 
@@ -84,7 +84,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="preview", required=true)
       private final Boolean preview;
 
-    public Boolean getPreview() {
+    public Boolean preview() {
         return this.preview;
     }
 
@@ -95,7 +95,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -106,7 +106,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="rateLimitOptions", required=true)
       private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
 
-    public SecurityPolicyRuleRateLimitOptionsResponse getRateLimitOptions() {
+    public SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions() {
         return this.rateLimitOptions;
     }
 
@@ -117,7 +117,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="redirectOptions", required=true)
       private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
-    public SecurityPolicyRuleRedirectOptionsResponse getRedirectOptions() {
+    public SecurityPolicyRuleRedirectOptionsResponse redirectOptions() {
         return this.redirectOptions;
     }
 

@@ -39,21 +39,21 @@ public final class InstanceReferenceResponse {
      * The unique identifier of the Compute Engine instance.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
      * The user-friendly name of the Compute Engine instance.
      * 
     */
-    public String getInstanceName() {
+    public String instanceName() {
         return this.instanceName;
     }
     /**
      * The public key used for sharing data with this instance.
      * 
     */
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
 

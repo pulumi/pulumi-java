@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyResource;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return The ARN of the access policy.
      * 
      */
-    public Output<String> getAccessPolicyArn() {
+    public Output<String> accessPolicyArn() {
         return this.accessPolicyArn;
     }
     /**
@@ -44,7 +45,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return The ID of the access policy.
      * 
      */
-    public Output<String> getAccessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
     /**
@@ -58,7 +59,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return The identity for this access policy. Choose either a user or a group but not both.
      * 
      */
-    public Output<AccessPolicyIdentity> getAccessPolicyIdentity() {
+    public Output<AccessPolicyIdentity> accessPolicyIdentity() {
         return this.accessPolicyIdentity;
     }
     /**
@@ -72,7 +73,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
      */
-    public Output<String> getAccessPolicyPermission() {
+    public Output<String> accessPolicyPermission() {
         return this.accessPolicyPermission;
     }
     /**
@@ -86,7 +87,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
      */
-    public Output<AccessPolicyResource> getAccessPolicyResource() {
+    public Output<AccessPolicyResource> accessPolicyResource() {
         return this.accessPolicyResource;
     }
 
@@ -112,7 +113,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPolicy(String name, AccessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotsitewise:AccessPolicy", name, args == null ? AccessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotsitewise:AccessPolicy", name, args == null ? AccessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

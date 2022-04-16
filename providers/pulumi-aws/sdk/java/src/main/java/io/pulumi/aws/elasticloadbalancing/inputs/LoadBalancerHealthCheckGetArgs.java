@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     @Import(name="healthyThreshold", required=true)
       private final Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
+    public Output<Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
 
@@ -32,7 +33,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -46,7 +47,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -57,7 +58,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     @Import(name="timeout", required=true)
       private final Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout;
     }
 
@@ -68,7 +69,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     @Import(name="unhealthyThreshold", required=true)
       private final Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
+    public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
@@ -86,11 +87,11 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
     }
 
     private LoadBalancerHealthCheckGetArgs() {
-        this.healthyThreshold = Output.empty();
-        this.interval = Output.empty();
-        this.target = Output.empty();
-        this.timeout = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.target = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {

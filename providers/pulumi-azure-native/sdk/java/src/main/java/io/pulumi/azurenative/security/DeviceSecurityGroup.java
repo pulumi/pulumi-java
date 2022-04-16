@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return The allow-list custom alert rules.
      * 
      */
-    public Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> getAllowlistRules() {
+    public Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> allowlistRules() {
         return this.allowlistRules;
     }
     /**
@@ -59,7 +60,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return The deny-list custom alert rules.
      * 
      */
-    public Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> getDenylistRules() {
+    public Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> denylistRules() {
         return this.denylistRules;
     }
     /**
@@ -73,7 +74,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return The list of custom alert threshold rules.
      * 
      */
-    public Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> getThresholdRules() {
+    public Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> thresholdRules() {
         return this.thresholdRules;
     }
     /**
@@ -101,7 +102,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return The list of custom alert time-window rules.
      * 
      */
-    public Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> getTimeWindowRules() {
+    public Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> timeWindowRules() {
         return this.timeWindowRules;
     }
     /**
@@ -115,7 +116,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -141,7 +142,7 @@ public class DeviceSecurityGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeviceSecurityGroup(String name, DeviceSecurityGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:security:DeviceSecurityGroup", name, args == null ? DeviceSecurityGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:security:DeviceSecurityGroup", name, args == null ? DeviceSecurityGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeviceSecurityGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

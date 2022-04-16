@@ -5,6 +5,7 @@ package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="backupVaultEvents", required=true)
       private final Output<List<String>> backupVaultEvents;
 
-    public Output<List<String>> getBackupVaultEvents() {
+    public Output<List<String>> backupVaultEvents() {
         return this.backupVaultEvents;
     }
 
@@ -32,7 +33,7 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="backupVaultName", required=true)
       private final Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
 
@@ -43,7 +44,7 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 
@@ -57,9 +58,9 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VaultNotificationsArgs() {
-        this.backupVaultEvents = Output.empty();
-        this.backupVaultName = Output.empty();
-        this.snsTopicArn = Output.empty();
+        this.backupVaultEvents = Codegen.empty();
+        this.backupVaultName = Codegen.empty();
+        this.snsTopicArn = Codegen.empty();
     }
 
     public static Builder builder() {

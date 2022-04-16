@@ -23,7 +23,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
     @Import(name="subType", required=true)
       private final String subType;
 
-    public String getSubType() {
+    public String subType() {
         return this.subType;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

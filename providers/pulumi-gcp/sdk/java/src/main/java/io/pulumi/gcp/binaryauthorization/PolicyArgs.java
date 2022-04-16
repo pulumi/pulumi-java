@@ -5,6 +5,7 @@ package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyAdmissionWhitelistPatternArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyClusterAdmissionRuleArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyDefaultAdmissionRuleArgs;
@@ -28,8 +29,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="admissionWhitelistPatterns")
       private final @Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns;
 
-    public Output<List<PolicyAdmissionWhitelistPatternArgs>> getAdmissionWhitelistPatterns() {
-        return this.admissionWhitelistPatterns == null ? Output.empty() : this.admissionWhitelistPatterns;
+    public Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns() {
+        return this.admissionWhitelistPatterns == null ? Codegen.empty() : this.admissionWhitelistPatterns;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterAdmissionRules")
       private final @Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules;
 
-    public Output<List<PolicyClusterAdmissionRuleArgs>> getClusterAdmissionRules() {
-        return this.clusterAdmissionRules == null ? Output.empty() : this.clusterAdmissionRules;
+    public Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules() {
+        return this.clusterAdmissionRules == null ? Codegen.empty() : this.clusterAdmissionRules;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAdmissionRule", required=true)
       private final Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule;
 
-    public Output<PolicyDefaultAdmissionRuleArgs> getDefaultAdmissionRule() {
+    public Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule() {
         return this.defaultAdmissionRule;
     }
 
@@ -67,8 +68,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalPolicyEvaluationMode")
       private final @Nullable Output<String> globalPolicyEvaluationMode;
 
-    public Output<String> getGlobalPolicyEvaluationMode() {
-        return this.globalPolicyEvaluationMode == null ? Output.empty() : this.globalPolicyEvaluationMode;
+    public Output<String> globalPolicyEvaluationMode() {
+        return this.globalPolicyEvaluationMode == null ? Codegen.empty() : this.globalPolicyEvaluationMode;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public PolicyArgs(
@@ -113,12 +114,12 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.admissionWhitelistPatterns = Output.empty();
-        this.clusterAdmissionRules = Output.empty();
-        this.defaultAdmissionRule = Output.empty();
-        this.description = Output.empty();
-        this.globalPolicyEvaluationMode = Output.empty();
-        this.project = Output.empty();
+        this.admissionWhitelistPatterns = Codegen.empty();
+        this.clusterAdmissionRules = Codegen.empty();
+        this.defaultAdmissionRule = Codegen.empty();
+        this.description = Codegen.empty();
+        this.globalPolicyEvaluationMode = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder admissionWhitelistPatterns(@Nullable List<PolicyAdmissionWhitelistPatternArgs> admissionWhitelistPatterns) {
-            this.admissionWhitelistPatterns = Output.ofNullable(admissionWhitelistPatterns);
+            this.admissionWhitelistPatterns = Codegen.ofNullable(admissionWhitelistPatterns);
             return this;
         }
         public Builder admissionWhitelistPatterns(PolicyAdmissionWhitelistPatternArgs... admissionWhitelistPatterns) {
@@ -167,7 +168,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterAdmissionRules(@Nullable List<PolicyClusterAdmissionRuleArgs> clusterAdmissionRules) {
-            this.clusterAdmissionRules = Output.ofNullable(clusterAdmissionRules);
+            this.clusterAdmissionRules = Codegen.ofNullable(clusterAdmissionRules);
             return this;
         }
         public Builder clusterAdmissionRules(PolicyClusterAdmissionRuleArgs... clusterAdmissionRules) {
@@ -186,7 +187,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder globalPolicyEvaluationMode(@Nullable Output<String> globalPolicyEvaluationMode) {
@@ -194,7 +195,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder globalPolicyEvaluationMode(@Nullable String globalPolicyEvaluationMode) {
-            this.globalPolicyEvaluationMode = Output.ofNullable(globalPolicyEvaluationMode);
+            this.globalPolicyEvaluationMode = Codegen.ofNullable(globalPolicyEvaluationMode);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -202,7 +203,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public PolicyArgs build() {
             return new PolicyArgs(admissionWhitelistPatterns, clusterAdmissionRules, defaultAdmissionRule, description, globalPolicyEvaluationMode, project);

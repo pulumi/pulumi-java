@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamBindingConditionGetArgs> condition;
 
-    public Output<ConsentStoreIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<ConsentStoreIamBindingConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,8 +31,8 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="consentStoreId")
       private final @Nullable Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
-        return this.consentStoreId == null ? Output.empty() : this.consentStoreId;
+    public Output<String> consentStoreId() {
+        return this.consentStoreId == null ? Codegen.empty() : this.consentStoreId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+    public Output<String> dataset() {
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -54,15 +55,15 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public ConsentStoreIamBindingState(
@@ -94,12 +95,12 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     }
 
     private ConsentStoreIamBindingState() {
-        this.condition = Output.empty();
-        this.consentStoreId = Output.empty();
-        this.dataset = Output.empty();
-        this.etag = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.consentStoreId = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder condition(@Nullable ConsentStoreIamBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
@@ -145,7 +146,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder consentStoreId(@Nullable String consentStoreId) {
-            this.consentStoreId = Output.ofNullable(consentStoreId);
+            this.consentStoreId = Codegen.ofNullable(consentStoreId);
             return this;
         }
         public Builder dataset(@Nullable Output<String> dataset) {
@@ -153,7 +154,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -161,7 +162,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -169,7 +170,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -180,7 +181,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public ConsentStoreIamBindingState build() {
             return new ConsentStoreIamBindingState(condition, consentStoreId, dataset, etag, members, role);

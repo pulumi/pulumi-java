@@ -7,6 +7,7 @@ import io.pulumi.azurenative.quantum.inputs.ProviderArgs;
 import io.pulumi.azurenative.quantum.inputs.QuantumWorkspaceIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<QuantumWorkspaceIdentityArgs> identity;
 
-    public Output<QuantumWorkspaceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<QuantumWorkspaceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providers")
       private final @Nullable Output<List<ProviderArgs>> providers;
 
-    public Output<List<ProviderArgs>> getProviders() {
-        return this.providers == null ? Output.empty() : this.providers;
+    public Output<List<ProviderArgs>> providers() {
+        return this.providers == null ? Codegen.empty() : this.providers;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,8 +70,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount")
       private final @Nullable Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
-        return this.storageAccount == null ? Output.empty() : this.storageAccount;
+    public Output<String> storageAccount() {
+        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
-        return this.workspaceName == null ? Output.empty() : this.workspaceName;
+    public Output<String> workspaceName() {
+        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
@@ -113,13 +114,13 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.providers = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccount = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.providers = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccount = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable QuantumWorkspaceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -167,7 +168,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder providers(@Nullable Output<List<ProviderArgs>> providers) {
@@ -175,7 +176,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providers(@Nullable List<ProviderArgs> providers) {
-            this.providers = Output.ofNullable(providers);
+            this.providers = Codegen.ofNullable(providers);
             return this;
         }
         public Builder providers(ProviderArgs... providers) {
@@ -194,7 +195,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = Output.ofNullable(storageAccount);
+            this.storageAccount = Codegen.ofNullable(storageAccount);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -202,7 +203,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
@@ -210,7 +211,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Output.ofNullable(workspaceName);
+            this.workspaceName = Codegen.ofNullable(workspaceName);
             return this;
         }        public WorkspaceArgs build() {
             return new WorkspaceArgs(identity, location, providers, resourceGroupName, storageAccount, tags, workspaceName);

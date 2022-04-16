@@ -36,7 +36,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="activationPolicy", required=true)
       private final String activationPolicy;
 
-    public String getActivationPolicy() {
+    public String activationPolicy() {
         return this.activationPolicy;
     }
 
@@ -47,7 +47,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="activeDirectoryConfig", required=true)
       private final SqlActiveDirectoryConfigResponse activeDirectoryConfig;
 
-    public SqlActiveDirectoryConfigResponse getActiveDirectoryConfig() {
+    public SqlActiveDirectoryConfigResponse activeDirectoryConfig() {
         return this.activeDirectoryConfig;
     }
 
@@ -58,7 +58,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityType", required=true)
       private final String availabilityType;
 
-    public String getAvailabilityType() {
+    public String availabilityType() {
         return this.availabilityType;
     }
 
@@ -69,7 +69,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="backupConfiguration", required=true)
       private final BackupConfigurationResponse backupConfiguration;
 
-    public BackupConfigurationResponse getBackupConfiguration() {
+    public BackupConfigurationResponse backupConfiguration() {
         return this.backupConfiguration;
     }
 
@@ -80,7 +80,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="collation", required=true)
       private final String collation;
 
-    public String getCollation() {
+    public String collation() {
         return this.collation;
     }
 
@@ -91,7 +91,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="crashSafeReplicationEnabled", required=true)
       private final Boolean crashSafeReplicationEnabled;
 
-    public Boolean getCrashSafeReplicationEnabled() {
+    public Boolean crashSafeReplicationEnabled() {
         return this.crashSafeReplicationEnabled;
     }
 
@@ -102,7 +102,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataDiskSizeGb", required=true)
       private final String dataDiskSizeGb;
 
-    public String getDataDiskSizeGb() {
+    public String dataDiskSizeGb() {
         return this.dataDiskSizeGb;
     }
 
@@ -113,7 +113,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataDiskType", required=true)
       private final String dataDiskType;
 
-    public String getDataDiskType() {
+    public String dataDiskType() {
         return this.dataDiskType;
     }
 
@@ -124,7 +124,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="databaseFlags", required=true)
       private final List<DatabaseFlagsResponse> databaseFlags;
 
-    public List<DatabaseFlagsResponse> getDatabaseFlags() {
+    public List<DatabaseFlagsResponse> databaseFlags() {
         return this.databaseFlags;
     }
 
@@ -135,7 +135,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="databaseReplicationEnabled", required=true)
       private final Boolean databaseReplicationEnabled;
 
-    public Boolean getDatabaseReplicationEnabled() {
+    public Boolean databaseReplicationEnabled() {
         return this.databaseReplicationEnabled;
     }
 
@@ -146,7 +146,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="denyMaintenancePeriods", required=true)
       private final List<DenyMaintenancePeriodResponse> denyMaintenancePeriods;
 
-    public List<DenyMaintenancePeriodResponse> getDenyMaintenancePeriods() {
+    public List<DenyMaintenancePeriodResponse> denyMaintenancePeriods() {
         return this.denyMaintenancePeriods;
     }
 
@@ -157,7 +157,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="insightsConfig", required=true)
       private final InsightsConfigResponse insightsConfig;
 
-    public InsightsConfigResponse getInsightsConfig() {
+    public InsightsConfigResponse insightsConfig() {
         return this.insightsConfig;
     }
 
@@ -168,7 +168,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipConfiguration", required=true)
       private final IpConfigurationResponse ipConfiguration;
 
-    public IpConfigurationResponse getIpConfiguration() {
+    public IpConfigurationResponse ipConfiguration() {
         return this.ipConfiguration;
     }
 
@@ -179,7 +179,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -190,7 +190,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locationPreference", required=true)
       private final LocationPreferenceResponse locationPreference;
 
-    public LocationPreferenceResponse getLocationPreference() {
+    public LocationPreferenceResponse locationPreference() {
         return this.locationPreference;
     }
 
@@ -201,7 +201,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceWindow", required=true)
       private final MaintenanceWindowResponse maintenanceWindow;
 
-    public MaintenanceWindowResponse getMaintenanceWindow() {
+    public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
 
@@ -212,7 +212,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="passwordValidationPolicy", required=true)
       private final PasswordValidationPolicyResponse passwordValidationPolicy;
 
-    public PasswordValidationPolicyResponse getPasswordValidationPolicy() {
+    public PasswordValidationPolicyResponse passwordValidationPolicy() {
         return this.passwordValidationPolicy;
     }
 
@@ -223,7 +223,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pricingPlan", required=true)
       private final String pricingPlan;
 
-    public String getPricingPlan() {
+    public String pricingPlan() {
         return this.pricingPlan;
     }
 
@@ -234,7 +234,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="settingsVersion", required=true)
       private final String settingsVersion;
 
-    public String getSettingsVersion() {
+    public String settingsVersion() {
         return this.settingsVersion;
     }
 
@@ -245,7 +245,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sqlServerAuditConfig", required=true)
       private final SqlServerAuditConfigResponse sqlServerAuditConfig;
 
-    public SqlServerAuditConfigResponse getSqlServerAuditConfig() {
+    public SqlServerAuditConfigResponse sqlServerAuditConfig() {
         return this.sqlServerAuditConfig;
     }
 
@@ -256,7 +256,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageAutoResize", required=true)
       private final Boolean storageAutoResize;
 
-    public Boolean getStorageAutoResize() {
+    public Boolean storageAutoResize() {
         return this.storageAutoResize;
     }
 
@@ -267,7 +267,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageAutoResizeLimit", required=true)
       private final String storageAutoResizeLimit;
 
-    public String getStorageAutoResizeLimit() {
+    public String storageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
     }
 
@@ -278,7 +278,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tier", required=true)
       private final String tier;
 
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 
@@ -289,7 +289,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userLabels", required=true)
       private final Map<String,String> userLabels;
 
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels;
     }
 

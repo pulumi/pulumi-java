@@ -7,6 +7,7 @@ import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseKmsArgs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseS3Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
     @Import(name="sseKms")
       private final @Nullable Output<InventoryDestinationBucketEncryptionSseKmsArgs> sseKms;
 
-    public Output<InventoryDestinationBucketEncryptionSseKmsArgs> getSseKms() {
-        return this.sseKms == null ? Output.empty() : this.sseKms;
+    public Output<InventoryDestinationBucketEncryptionSseKmsArgs> sseKms() {
+        return this.sseKms == null ? Codegen.empty() : this.sseKms;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
     @Import(name="sseS3")
       private final @Nullable Output<InventoryDestinationBucketEncryptionSseS3Args> sseS3;
 
-    public Output<InventoryDestinationBucketEncryptionSseS3Args> getSseS3() {
-        return this.sseS3 == null ? Output.empty() : this.sseS3;
+    public Output<InventoryDestinationBucketEncryptionSseS3Args> sseS3() {
+        return this.sseS3 == null ? Codegen.empty() : this.sseS3;
     }
 
     public InventoryDestinationBucketEncryptionArgs(
@@ -45,8 +46,8 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
     }
 
     private InventoryDestinationBucketEncryptionArgs() {
-        this.sseKms = Output.empty();
-        this.sseS3 = Output.empty();
+        this.sseKms = Codegen.empty();
+        this.sseS3 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
             return this;
         }
         public Builder sseKms(@Nullable InventoryDestinationBucketEncryptionSseKmsArgs sseKms) {
-            this.sseKms = Output.ofNullable(sseKms);
+            this.sseKms = Codegen.ofNullable(sseKms);
             return this;
         }
         public Builder sseS3(@Nullable Output<InventoryDestinationBucketEncryptionSseS3Args> sseS3) {
@@ -84,7 +85,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
             return this;
         }
         public Builder sseS3(@Nullable InventoryDestinationBucketEncryptionSseS3Args sseS3) {
-            this.sseS3 = Output.ofNullable(sseS3);
+            this.sseS3 = Codegen.ofNullable(sseS3);
             return this;
         }        public InventoryDestinationBucketEncryptionArgs build() {
             return new InventoryDestinationBucketEncryptionArgs(sseKms, sseS3);

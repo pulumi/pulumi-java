@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabric.inputs.SubResourceArgs;
 import io.pulumi.azurenative.servicefabric.inputs.VaultCertificateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceVault", required=true)
       private final Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> getSourceVault() {
+    public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault;
     }
 
@@ -37,7 +38,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="vaultCertificates", required=true)
       private final Output<List<VaultCertificateArgs>> vaultCertificates;
 
-    public Output<List<VaultCertificateArgs>> getVaultCertificates() {
+    public Output<List<VaultCertificateArgs>> vaultCertificates() {
         return this.vaultCertificates;
     }
 
@@ -49,8 +50,8 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VaultSecretGroupArgs() {
-        this.sourceVault = Output.empty();
-        this.vaultCertificates = Output.empty();
+        this.sourceVault = Codegen.empty();
+        this.vaultCertificates = Codegen.empty();
     }
 
     public static Builder builder() {

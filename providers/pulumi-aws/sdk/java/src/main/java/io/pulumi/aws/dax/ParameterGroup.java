@@ -10,6 +10,7 @@ import io.pulumi.aws.dax.outputs.ParameterGroupParameter;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A description of the parameter group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -55,7 +56,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the parameter group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The parameters of the parameter group.
      * 
      */
-    public Output<List<ParameterGroupParameter>> getParameters() {
+    public Output<List<ParameterGroupParameter>> parameters() {
         return this.parameters;
     }
 
@@ -95,7 +96,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ParameterGroup(String name, @Nullable ParameterGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dax/parameterGroup:ParameterGroup", name, args == null ? ParameterGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dax/parameterGroup:ParameterGroup", name, args == null ? ParameterGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ParameterGroup(String name, Output<String> id, @Nullable ParameterGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

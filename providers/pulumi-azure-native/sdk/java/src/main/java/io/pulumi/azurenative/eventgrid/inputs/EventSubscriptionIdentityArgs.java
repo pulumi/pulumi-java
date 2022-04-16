@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventgrid.enums.EventSubscriptionIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<Either<String,EventSubscriptionIdentityType>> type;
 
-    public Output<Either<String,EventSubscriptionIdentityType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,EventSubscriptionIdentityType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
     @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
+    public Output<String> userAssignedIdentity() {
+        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 
     public EventSubscriptionIdentityArgs(
@@ -50,8 +51,8 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
     }
 
     private EventSubscriptionIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentity = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder type(@Nullable Either<String,EventSubscriptionIdentityType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
@@ -89,7 +90,7 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
             return this;
         }        public EventSubscriptionIdentityArgs build() {
             return new EventSubscriptionIdentityArgs(type, userAssignedIdentity);

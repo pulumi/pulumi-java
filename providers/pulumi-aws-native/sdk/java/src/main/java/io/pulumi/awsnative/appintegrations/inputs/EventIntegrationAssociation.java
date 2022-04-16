@@ -23,7 +23,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
     @Import(name="clientAssociationMetadata")
       private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
 
-    public List<EventIntegrationMetadata> getClientAssociationMetadata() {
+    public List<EventIntegrationMetadata> clientAssociationMetadata() {
         return this.clientAssociationMetadata == null ? List.of() : this.clientAssociationMetadata;
     }
 
@@ -34,7 +34,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -45,7 +45,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
     @Import(name="eventBridgeRuleName")
       private final @Nullable String eventBridgeRuleName;
 
-    public Optional<String> getEventBridgeRuleName() {
+    public Optional<String> eventBridgeRuleName() {
         return this.eventBridgeRuleName == null ? Optional.empty() : Optional.ofNullable(this.eventBridgeRuleName);
     }
 
@@ -56,7 +56,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
     @Import(name="eventIntegrationAssociationArn")
       private final @Nullable String eventIntegrationAssociationArn;
 
-    public Optional<String> getEventIntegrationAssociationArn() {
+    public Optional<String> eventIntegrationAssociationArn() {
         return this.eventIntegrationAssociationArn == null ? Optional.empty() : Optional.ofNullable(this.eventIntegrationAssociationArn);
     }
 
@@ -67,7 +67,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
     @Import(name="eventIntegrationAssociationId")
       private final @Nullable String eventIntegrationAssociationId;
 
-    public Optional<String> getEventIntegrationAssociationId() {
+    public Optional<String> eventIntegrationAssociationId() {
         return this.eventIntegrationAssociationId == null ? Optional.empty() : Optional.ofNullable(this.eventIntegrationAssociationId);
     }
 

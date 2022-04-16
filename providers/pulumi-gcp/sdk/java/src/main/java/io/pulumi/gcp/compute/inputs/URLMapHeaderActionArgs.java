@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionRequestHeadersToAddArgs;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionResponseHeadersToAddArgs;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<URLMapHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
-    public Output<List<URLMapHeaderActionRequestHeadersToAddArgs>> getRequestHeadersToAdds() {
-        return this.requestHeadersToAdds == null ? Output.empty() : this.requestHeadersToAdds;
+    public Output<List<URLMapHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds() {
+        return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="requestHeadersToRemoves")
       private final @Nullable Output<List<String>> requestHeadersToRemoves;
 
-    public Output<List<String>> getRequestHeadersToRemoves() {
-        return this.requestHeadersToRemoves == null ? Output.empty() : this.requestHeadersToRemoves;
+    public Output<List<String>> requestHeadersToRemoves() {
+        return this.requestHeadersToRemoves == null ? Codegen.empty() : this.requestHeadersToRemoves;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="responseHeadersToAdds")
       private final @Nullable Output<List<URLMapHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
-    public Output<List<URLMapHeaderActionResponseHeadersToAddArgs>> getResponseHeadersToAdds() {
-        return this.responseHeadersToAdds == null ? Output.empty() : this.responseHeadersToAdds;
+    public Output<List<URLMapHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds() {
+        return this.responseHeadersToAdds == null ? Codegen.empty() : this.responseHeadersToAdds;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="responseHeadersToRemoves")
       private final @Nullable Output<List<String>> responseHeadersToRemoves;
 
-    public Output<List<String>> getResponseHeadersToRemoves() {
-        return this.responseHeadersToRemoves == null ? Output.empty() : this.responseHeadersToRemoves;
+    public Output<List<String>> responseHeadersToRemoves() {
+        return this.responseHeadersToRemoves == null ? Codegen.empty() : this.responseHeadersToRemoves;
     }
 
     public URLMapHeaderActionArgs(
@@ -77,10 +78,10 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private URLMapHeaderActionArgs() {
-        this.requestHeadersToAdds = Output.empty();
-        this.requestHeadersToRemoves = Output.empty();
-        this.responseHeadersToAdds = Output.empty();
-        this.responseHeadersToRemoves = Output.empty();
+        this.requestHeadersToAdds = Codegen.empty();
+        this.requestHeadersToRemoves = Codegen.empty();
+        this.responseHeadersToAdds = Codegen.empty();
+        this.responseHeadersToRemoves = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder requestHeadersToAdds(@Nullable List<URLMapHeaderActionRequestHeadersToAddArgs> requestHeadersToAdds) {
-            this.requestHeadersToAdds = Output.ofNullable(requestHeadersToAdds);
+            this.requestHeadersToAdds = Codegen.ofNullable(requestHeadersToAdds);
             return this;
         }
         public Builder requestHeadersToAdds(URLMapHeaderActionRequestHeadersToAddArgs... requestHeadersToAdds) {
@@ -125,7 +126,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
-            this.requestHeadersToRemoves = Output.ofNullable(requestHeadersToRemoves);
+            this.requestHeadersToRemoves = Codegen.ofNullable(requestHeadersToRemoves);
             return this;
         }
         public Builder requestHeadersToRemoves(String... requestHeadersToRemoves) {
@@ -136,7 +137,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder responseHeadersToAdds(@Nullable List<URLMapHeaderActionResponseHeadersToAddArgs> responseHeadersToAdds) {
-            this.responseHeadersToAdds = Output.ofNullable(responseHeadersToAdds);
+            this.responseHeadersToAdds = Codegen.ofNullable(responseHeadersToAdds);
             return this;
         }
         public Builder responseHeadersToAdds(URLMapHeaderActionResponseHeadersToAddArgs... responseHeadersToAdds) {
@@ -147,7 +148,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
-            this.responseHeadersToRemoves = Output.ofNullable(responseHeadersToRemoves);
+            this.responseHeadersToRemoves = Codegen.ofNullable(responseHeadersToRemoves);
             return this;
         }
         public Builder responseHeadersToRemoves(String... responseHeadersToRemoves) {

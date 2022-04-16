@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
     @Import(name="adminAccountId")
       private final @Nullable Output<String> adminAccountId;
 
-    public Output<String> getAdminAccountId() {
-        return this.adminAccountId == null ? Output.empty() : this.adminAccountId;
+    public Output<String> adminAccountId() {
+        return this.adminAccountId == null ? Codegen.empty() : this.adminAccountId;
     }
 
     public OrganizationAdminAccountState(@Nullable Output<String> adminAccountId) {
@@ -30,7 +31,7 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
     }
 
     private OrganizationAdminAccountState() {
-        this.adminAccountId = Output.empty();
+        this.adminAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
             return this;
         }
         public Builder adminAccountId(@Nullable String adminAccountId) {
-            this.adminAccountId = Output.ofNullable(adminAccountId);
+            this.adminAccountId = Codegen.ofNullable(adminAccountId);
             return this;
         }        public OrganizationAdminAccountState build() {
             return new OrganizationAdminAccountState(adminAccountId);

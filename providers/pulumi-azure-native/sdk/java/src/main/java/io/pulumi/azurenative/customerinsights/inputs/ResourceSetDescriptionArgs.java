@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="elements")
       private final @Nullable Output<List<String>> elements;
 
-    public Output<List<String>> getElements() {
-        return this.elements == null ? Output.empty() : this.elements;
+    public Output<List<String>> elements() {
+        return this.elements == null ? Codegen.empty() : this.elements;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="exceptions")
       private final @Nullable Output<List<String>> exceptions;
 
-    public Output<List<String>> getExceptions() {
-        return this.exceptions == null ? Output.empty() : this.exceptions;
+    public Output<List<String>> exceptions() {
+        return this.exceptions == null ? Codegen.empty() : this.exceptions;
     }
 
     public ResourceSetDescriptionArgs(
@@ -49,8 +50,8 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     }
 
     private ResourceSetDescriptionArgs() {
-        this.elements = Output.empty();
-        this.exceptions = Output.empty();
+        this.elements = Codegen.empty();
+        this.exceptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder elements(@Nullable List<String> elements) {
-            this.elements = Output.ofNullable(elements);
+            this.elements = Codegen.ofNullable(elements);
             return this;
         }
         public Builder elements(String... elements) {
@@ -91,7 +92,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder exceptions(@Nullable List<String> exceptions) {
-            this.exceptions = Output.ofNullable(exceptions);
+            this.exceptions = Codegen.ofNullable(exceptions);
             return this;
         }
         public Builder exceptions(String... exceptions) {

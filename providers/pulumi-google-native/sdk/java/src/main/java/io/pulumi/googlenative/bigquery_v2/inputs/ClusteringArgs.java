@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+    public Output<List<String>> fields() {
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     public ClusteringArgs(@Nullable Output<List<String>> fields) {
@@ -31,7 +32,7 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusteringArgs() {
-        this.fields = Output.empty();
+        this.fields = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<String> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(String... fields) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class OrganizationRootPolicyTypeArgs extends io.pulumi.resources.Re
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public OrganizationRootPolicyTypeArgs(
@@ -40,8 +41,8 @@ public final class OrganizationRootPolicyTypeArgs extends io.pulumi.resources.Re
     }
 
     private OrganizationRootPolicyTypeArgs() {
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class OrganizationRootPolicyTypeArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -79,7 +80,7 @@ public final class OrganizationRootPolicyTypeArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public OrganizationRootPolicyTypeArgs build() {
             return new OrganizationRootPolicyTypeArgs(status, type);

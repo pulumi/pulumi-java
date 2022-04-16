@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.RepresentationContractArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="headers")
       private final @Nullable Output<List<ParameterContractArgs>> headers;
 
-    public Output<List<ParameterContractArgs>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<ParameterContractArgs>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="queryParameters")
       private final @Nullable Output<List<ParameterContractArgs>> queryParameters;
 
-    public Output<List<ParameterContractArgs>> getQueryParameters() {
-        return this.queryParameters == null ? Output.empty() : this.queryParameters;
+    public Output<List<ParameterContractArgs>> queryParameters() {
+        return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="representations")
       private final @Nullable Output<List<RepresentationContractArgs>> representations;
 
-    public Output<List<RepresentationContractArgs>> getRepresentations() {
-        return this.representations == null ? Output.empty() : this.representations;
+    public Output<List<RepresentationContractArgs>> representations() {
+        return this.representations == null ? Codegen.empty() : this.representations;
     }
 
     public RequestContractArgs(
@@ -77,10 +78,10 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RequestContractArgs() {
-        this.description = Output.empty();
-        this.headers = Output.empty();
-        this.queryParameters = Output.empty();
-        this.representations = Output.empty();
+        this.description = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.queryParameters = Codegen.empty();
+        this.representations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
@@ -122,7 +123,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder headers(@Nullable List<ParameterContractArgs> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(ParameterContractArgs... headers) {
@@ -133,7 +134,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder queryParameters(@Nullable List<ParameterContractArgs> queryParameters) {
-            this.queryParameters = Output.ofNullable(queryParameters);
+            this.queryParameters = Codegen.ofNullable(queryParameters);
             return this;
         }
         public Builder queryParameters(ParameterContractArgs... queryParameters) {
@@ -144,7 +145,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
-            this.representations = Output.ofNullable(representations);
+            this.representations = Codegen.ofNullable(representations);
             return this;
         }
         public Builder representations(RepresentationContractArgs... representations) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,42 +20,42 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="defaultTTL", required=true)
       private final Output<Double> defaultTTL;
 
-    public Output<Double> getDefaultTTL() {
+    public Output<Double> defaultTTL() {
         return this.defaultTTL;
     }
 
     @Import(name="maxTTL", required=true)
       private final Output<Double> maxTTL;
 
-    public Output<Double> getMaxTTL() {
+    public Output<Double> maxTTL() {
         return this.maxTTL;
     }
 
     @Import(name="minTTL", required=true)
       private final Output<Double> minTTL;
 
-    public Output<Double> getMinTTL() {
+    public Output<Double> minTTL() {
         return this.minTTL;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 
@@ -74,12 +75,12 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CachePolicyConfigArgs() {
-        this.comment = Output.empty();
-        this.defaultTTL = Output.empty();
-        this.maxTTL = Output.empty();
-        this.minTTL = Output.empty();
-        this.name = Output.empty();
-        this.parametersInCacheKeyAndForwardedToOrigin = Output.empty();
+        this.comment = Codegen.empty();
+        this.defaultTTL = Codegen.empty();
+        this.maxTTL = Codegen.empty();
+        this.minTTL = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parametersInCacheKeyAndForwardedToOrigin = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder defaultTTL(Output<Double> defaultTTL) {

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -19,29 +20,29 @@ public final class NetworkIpamConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="auxAddress")
       private final @Nullable Output<Map<String,Object>> auxAddress;
 
-    public Output<Map<String,Object>> getAuxAddress() {
-        return this.auxAddress == null ? Output.empty() : this.auxAddress;
+    public Output<Map<String,Object>> auxAddress() {
+        return this.auxAddress == null ? Codegen.empty() : this.auxAddress;
     }
 
     @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
-    public Output<String> getGateway() {
-        return this.gateway == null ? Output.empty() : this.gateway;
+    public Output<String> gateway() {
+        return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
-    public Output<String> getIpRange() {
-        return this.ipRange == null ? Output.empty() : this.ipRange;
+    public Output<String> ipRange() {
+        return this.ipRange == null ? Codegen.empty() : this.ipRange;
     }
 
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<String> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public NetworkIpamConfigGetArgs(
@@ -56,10 +57,10 @@ public final class NetworkIpamConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkIpamConfigGetArgs() {
-        this.auxAddress = Output.empty();
-        this.gateway = Output.empty();
-        this.ipRange = Output.empty();
-        this.subnet = Output.empty();
+        this.auxAddress = Codegen.empty();
+        this.gateway = Codegen.empty();
+        this.ipRange = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class NetworkIpamConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder auxAddress(@Nullable Map<String,Object> auxAddress) {
-            this.auxAddress = Output.ofNullable(auxAddress);
+            this.auxAddress = Codegen.ofNullable(auxAddress);
             return this;
         }
         public Builder gateway(@Nullable Output<String> gateway) {
@@ -101,7 +102,7 @@ public final class NetworkIpamConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = Output.ofNullable(gateway);
+            this.gateway = Codegen.ofNullable(gateway);
             return this;
         }
         public Builder ipRange(@Nullable Output<String> ipRange) {
@@ -109,7 +110,7 @@ public final class NetworkIpamConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Output.ofNullable(ipRange);
+            this.ipRange = Codegen.ofNullable(ipRange);
             return this;
         }
         public Builder subnet(@Nullable Output<String> subnet) {
@@ -117,7 +118,7 @@ public final class NetworkIpamConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public NetworkIpamConfigGetArgs build() {
             return new NetworkIpamConfigGetArgs(auxAddress, gateway, ipRange, subnet);

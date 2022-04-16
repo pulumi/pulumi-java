@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.ConsentState;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1ConsentPolicyArgs;
 import java.lang.String;
@@ -25,21 +26,21 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consentArtifact", required=true)
       private final Output<String> consentArtifact;
 
-    public Output<String> getConsentArtifact() {
+    public Output<String> consentArtifact() {
         return this.consentArtifact;
     }
 
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -50,15 +51,15 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+    public Output<String> expireTime() {
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,15 +91,15 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policies")
       private final @Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies;
 
-    public Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> getPolicies() {
-        return this.policies == null ? Output.empty() : this.policies;
+    public Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies() {
+        return this.policies == null ? Codegen.empty() : this.policies;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
       private final Output<ConsentState> state;
 
-    public Output<ConsentState> getState() {
+    public Output<ConsentState> state() {
         return this.state;
     }
 
@@ -119,8 +120,8 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<String> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -162,18 +163,18 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConsentArgs() {
-        this.consentArtifact = Output.empty();
-        this.consentStoreId = Output.empty();
-        this.datasetId = Output.empty();
-        this.expireTime = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.policies = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
-        this.ttl = Output.empty();
-        this.userId = Output.empty();
+        this.consentArtifact = Codegen.empty();
+        this.consentStoreId = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.expireTime = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policies = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -247,7 +248,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -255,7 +256,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -263,7 +264,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -271,7 +272,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policies(@Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies) {
@@ -279,7 +280,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policies(@Nullable List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs> policies) {
-            this.policies = Output.ofNullable(policies);
+            this.policies = Codegen.ofNullable(policies);
             return this;
         }
         public Builder policies(GoogleCloudHealthcareV1beta1ConsentPolicyArgs... policies) {
@@ -290,7 +291,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(Output<ConsentState> state) {
@@ -306,7 +307,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder userId(Output<String> userId) {

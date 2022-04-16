@@ -19,6 +19,7 @@ import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinatio
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -38,8 +39,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="deadLetterDestination")
       private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
-    public Output<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
-        return this.deadLetterDestination == null ? Output.empty() : this.deadLetterDestination;
+    public Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination() {
+        return this.deadLetterDestination == null ? Codegen.empty() : this.deadLetterDestination;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="deadLetterWithResourceIdentity")
       private final @Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
 
-    public Output<DeadLetterWithResourceIdentityArgs> getDeadLetterWithResourceIdentity() {
-        return this.deadLetterWithResourceIdentity == null ? Output.empty() : this.deadLetterWithResourceIdentity;
+    public Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity() {
+        return this.deadLetterWithResourceIdentity == null ? Codegen.empty() : this.deadLetterWithResourceIdentity;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="deliveryWithResourceIdentity")
       private final @Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
 
-    public Output<DeliveryWithResourceIdentityArgs> getDeliveryWithResourceIdentity() {
-        return this.deliveryWithResourceIdentity == null ? Output.empty() : this.deliveryWithResourceIdentity;
+    public Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity() {
+        return this.deliveryWithResourceIdentity == null ? Codegen.empty() : this.deliveryWithResourceIdentity;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="destination")
       private final @Nullable Output<Object> destination;
 
-    public Output<Object> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<Object> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="eventDeliverySchema")
       private final @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
-    public Output<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
-        return this.eventDeliverySchema == null ? Output.empty() : this.eventDeliverySchema;
+    public Output<Either<String,EventDeliverySchema>> eventDeliverySchema() {
+        return this.eventDeliverySchema == null ? Codegen.empty() : this.eventDeliverySchema;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="eventSubscriptionName")
       private final @Nullable Output<String> eventSubscriptionName;
 
-    public Output<String> getEventSubscriptionName() {
-        return this.eventSubscriptionName == null ? Output.empty() : this.eventSubscriptionName;
+    public Output<String> eventSubscriptionName() {
+        return this.eventSubscriptionName == null ? Codegen.empty() : this.eventSubscriptionName;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="expirationTimeUtc")
       private final @Nullable Output<String> expirationTimeUtc;
 
-    public Output<String> getExpirationTimeUtc() {
-        return this.expirationTimeUtc == null ? Output.empty() : this.expirationTimeUtc;
+    public Output<String> expirationTimeUtc() {
+        return this.expirationTimeUtc == null ? Codegen.empty() : this.expirationTimeUtc;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="filter")
       private final @Nullable Output<EventSubscriptionFilterArgs> filter;
 
-    public Output<EventSubscriptionFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<EventSubscriptionFilterArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -151,8 +152,8 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
+    public Output<RetryPolicyArgs> retryPolicy() {
+        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     @Import(name="systemTopicName", required=true)
       private final Output<String> systemTopicName;
 
-    public Output<String> getSystemTopicName() {
+    public Output<String> systemTopicName() {
         return this.systemTopicName;
     }
 
@@ -194,18 +195,18 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
     }
 
     private SystemTopicEventSubscriptionArgs() {
-        this.deadLetterDestination = Output.empty();
-        this.deadLetterWithResourceIdentity = Output.empty();
-        this.deliveryWithResourceIdentity = Output.empty();
-        this.destination = Output.empty();
-        this.eventDeliverySchema = Output.empty();
-        this.eventSubscriptionName = Output.empty();
-        this.expirationTimeUtc = Output.empty();
-        this.filter = Output.empty();
-        this.labels = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retryPolicy = Output.empty();
-        this.systemTopicName = Output.empty();
+        this.deadLetterDestination = Codegen.empty();
+        this.deadLetterWithResourceIdentity = Codegen.empty();
+        this.deliveryWithResourceIdentity = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.eventDeliverySchema = Codegen.empty();
+        this.eventSubscriptionName = Codegen.empty();
+        this.expirationTimeUtc = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retryPolicy = Codegen.empty();
+        this.systemTopicName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -255,7 +256,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
-            this.deadLetterDestination = Output.ofNullable(deadLetterDestination);
+            this.deadLetterDestination = Codegen.ofNullable(deadLetterDestination);
             return this;
         }
         public Builder deadLetterWithResourceIdentity(@Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity) {
@@ -263,7 +264,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder deadLetterWithResourceIdentity(@Nullable DeadLetterWithResourceIdentityArgs deadLetterWithResourceIdentity) {
-            this.deadLetterWithResourceIdentity = Output.ofNullable(deadLetterWithResourceIdentity);
+            this.deadLetterWithResourceIdentity = Codegen.ofNullable(deadLetterWithResourceIdentity);
             return this;
         }
         public Builder deliveryWithResourceIdentity(@Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity) {
@@ -271,7 +272,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder deliveryWithResourceIdentity(@Nullable DeliveryWithResourceIdentityArgs deliveryWithResourceIdentity) {
-            this.deliveryWithResourceIdentity = Output.ofNullable(deliveryWithResourceIdentity);
+            this.deliveryWithResourceIdentity = Codegen.ofNullable(deliveryWithResourceIdentity);
             return this;
         }
         public Builder destination(@Nullable Output<Object> destination) {
@@ -279,7 +280,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder destination(@Nullable Object destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder eventDeliverySchema(@Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema) {
@@ -287,7 +288,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder eventDeliverySchema(@Nullable Either<String,EventDeliverySchema> eventDeliverySchema) {
-            this.eventDeliverySchema = Output.ofNullable(eventDeliverySchema);
+            this.eventDeliverySchema = Codegen.ofNullable(eventDeliverySchema);
             return this;
         }
         public Builder eventSubscriptionName(@Nullable Output<String> eventSubscriptionName) {
@@ -295,7 +296,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder eventSubscriptionName(@Nullable String eventSubscriptionName) {
-            this.eventSubscriptionName = Output.ofNullable(eventSubscriptionName);
+            this.eventSubscriptionName = Codegen.ofNullable(eventSubscriptionName);
             return this;
         }
         public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
@@ -303,7 +304,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
-            this.expirationTimeUtc = Output.ofNullable(expirationTimeUtc);
+            this.expirationTimeUtc = Codegen.ofNullable(expirationTimeUtc);
             return this;
         }
         public Builder filter(@Nullable Output<EventSubscriptionFilterArgs> filter) {
@@ -311,7 +312,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder filter(@Nullable EventSubscriptionFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder labels(@Nullable Output<List<String>> labels) {
@@ -319,7 +320,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(String... labels) {
@@ -338,7 +339,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Output.ofNullable(retryPolicy);
+            this.retryPolicy = Codegen.ofNullable(retryPolicy);
             return this;
         }
         public Builder systemTopicName(Output<String> systemTopicName) {

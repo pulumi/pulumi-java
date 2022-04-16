@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -34,8 +35,8 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="propId")
       private final @Nullable Output<String> propId;
 
-    public Output<String> getPropId() {
-        return this.propId == null ? Output.empty() : this.propId;
+    public Output<String> propId() {
+        return this.propId == null ? Codegen.empty() : this.propId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,8 +57,8 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<Boolean> secret;
 
-    public Output<Boolean> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<Boolean> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -78,8 +79,8 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -111,13 +112,13 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PropertyArgs() {
-        this.displayName = Output.empty();
-        this.propId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.secret = Output.empty();
-        this.serviceName = Output.empty();
-        this.tags = Output.empty();
-        this.value = Output.empty();
+        this.displayName = Codegen.empty();
+        this.propId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder propId(@Nullable String propId) {
-            this.propId = Output.ofNullable(propId);
+            this.propId = Codegen.ofNullable(propId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -181,7 +182,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable Boolean secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -197,7 +198,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {

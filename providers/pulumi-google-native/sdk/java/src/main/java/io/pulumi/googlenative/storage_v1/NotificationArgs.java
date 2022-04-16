@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -30,8 +31,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> getCustomAttributes() {
-        return this.customAttributes == null ? Output.empty() : this.customAttributes;
+    public Output<Map<String,String>> customAttributes() {
+        return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTypes")
       private final @Nullable Output<List<String>> eventTypes;
 
-    public Output<List<String>> getEventTypes() {
-        return this.eventTypes == null ? Output.empty() : this.eventTypes;
+    public Output<List<String>> eventTypes() {
+        return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectNamePrefix")
       private final @Nullable Output<String> objectNamePrefix;
 
-    public Output<String> getObjectNamePrefix() {
-        return this.objectNamePrefix == null ? Output.empty() : this.objectNamePrefix;
+    public Output<String> objectNamePrefix() {
+        return this.objectNamePrefix == null ? Codegen.empty() : this.objectNamePrefix;
     }
 
     /**
@@ -96,15 +97,15 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payloadFormat")
       private final @Nullable Output<String> payloadFormat;
 
-    public Output<String> getPayloadFormat() {
-        return this.payloadFormat == null ? Output.empty() : this.payloadFormat;
+    public Output<String> payloadFormat() {
+        return this.payloadFormat == null ? Codegen.empty() : this.payloadFormat;
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> getProvisionalUserProject() {
-        return this.provisionalUserProject == null ? Output.empty() : this.provisionalUserProject;
+    public Output<String> provisionalUserProject() {
+        return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -125,15 +126,15 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
-    public Output<String> getUserProject() {
-        return this.userProject == null ? Output.empty() : this.userProject;
+    public Output<String> userProject() {
+        return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 
     public NotificationArgs(
@@ -164,18 +165,18 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationArgs() {
-        this.bucket = Output.empty();
-        this.customAttributes = Output.empty();
-        this.etag = Output.empty();
-        this.eventTypes = Output.empty();
-        this.id = Output.empty();
-        this.kind = Output.empty();
-        this.objectNamePrefix = Output.empty();
-        this.payloadFormat = Output.empty();
-        this.provisionalUserProject = Output.empty();
-        this.selfLink = Output.empty();
-        this.topic = Output.empty();
-        this.userProject = Output.empty();
+        this.bucket = Codegen.empty();
+        this.customAttributes = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.eventTypes = Codegen.empty();
+        this.id = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.objectNamePrefix = Codegen.empty();
+        this.payloadFormat = Codegen.empty();
+        this.provisionalUserProject = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.topic = Codegen.empty();
+        this.userProject = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Output.ofNullable(customAttributes);
+            this.customAttributes = Codegen.ofNullable(customAttributes);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -241,7 +242,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
@@ -249,7 +250,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventTypes(@Nullable List<String> eventTypes) {
-            this.eventTypes = Output.ofNullable(eventTypes);
+            this.eventTypes = Codegen.ofNullable(eventTypes);
             return this;
         }
         public Builder eventTypes(String... eventTypes) {
@@ -260,7 +261,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -268,7 +269,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
@@ -276,7 +277,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
-            this.objectNamePrefix = Output.ofNullable(objectNamePrefix);
+            this.objectNamePrefix = Codegen.ofNullable(objectNamePrefix);
             return this;
         }
         public Builder payloadFormat(@Nullable Output<String> payloadFormat) {
@@ -284,7 +285,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder payloadFormat(@Nullable String payloadFormat) {
-            this.payloadFormat = Output.ofNullable(payloadFormat);
+            this.payloadFormat = Codegen.ofNullable(payloadFormat);
             return this;
         }
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
@@ -292,7 +293,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
+            this.provisionalUserProject = Codegen.ofNullable(provisionalUserProject);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -300,7 +301,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {
@@ -308,7 +309,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }
         public Builder userProject(@Nullable Output<String> userProject) {
@@ -316,7 +317,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = Output.ofNullable(userProject);
+            this.userProject = Codegen.ofNullable(userProject);
             return this;
         }        public NotificationArgs build() {
             return new NotificationArgs(bucket, customAttributes, etag, eventTypes, id, kind, objectNamePrefix, payloadFormat, provisionalUserProject, selfLink, topic, userProject);

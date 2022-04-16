@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.GuestOsFeatureType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<GuestOsFeatureType> type;
 
-    public Output<GuestOsFeatureType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<GuestOsFeatureType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GuestOsFeatureArgs(@Nullable Output<GuestOsFeatureType> type) {
@@ -34,7 +35,7 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GuestOsFeatureArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable GuestOsFeatureType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GuestOsFeatureArgs build() {
             return new GuestOsFeatureArgs(type);

@@ -9,6 +9,7 @@ import io.pulumi.aws.dynamodb.inputs.TagState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -35,7 +36,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return Tag name.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -49,7 +50,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DynamoDB resource to tag.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -63,7 +64,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return Tag value.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -89,7 +90,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Tag(String name, TagArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/tag:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dynamodb/tag:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Tag(String name, Output<String> id, @Nullable TagState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

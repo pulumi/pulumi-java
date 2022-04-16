@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,64 +21,64 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="buildArg")
       private final @Nullable Output<Map<String,String>> buildArg;
 
-    public Output<Map<String,String>> getBuildArg() {
-        return this.buildArg == null ? Output.empty() : this.buildArg;
+    public Output<Map<String,String>> buildArg() {
+        return this.buildArg == null ? Codegen.empty() : this.buildArg;
     }
 
     @Import(name="dockerfile")
       private final @Nullable Output<String> dockerfile;
 
-    public Output<String> getDockerfile() {
-        return this.dockerfile == null ? Output.empty() : this.dockerfile;
+    public Output<String> dockerfile() {
+        return this.dockerfile == null ? Codegen.empty() : this.dockerfile;
     }
 
     @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> getForceRemove() {
-        return this.forceRemove == null ? Output.empty() : this.forceRemove;
+    public Output<Boolean> forceRemove() {
+        return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
     }
 
     @Import(name="label")
       private final @Nullable Output<Map<String,String>> label;
 
-    public Output<Map<String,String>> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<Map<String,String>> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> getNoCache() {
-        return this.noCache == null ? Output.empty() : this.noCache;
+    public Output<Boolean> noCache() {
+        return this.noCache == null ? Codegen.empty() : this.noCache;
     }
 
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
     @Import(name="remove")
       private final @Nullable Output<Boolean> remove;
 
-    public Output<Boolean> getRemove() {
-        return this.remove == null ? Output.empty() : this.remove;
+    public Output<Boolean> remove() {
+        return this.remove == null ? Codegen.empty() : this.remove;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public RemoteImageBuildArgs(
@@ -102,15 +103,15 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RemoteImageBuildArgs() {
-        this.buildArg = Output.empty();
-        this.dockerfile = Output.empty();
-        this.forceRemove = Output.empty();
-        this.label = Output.empty();
-        this.noCache = Output.empty();
-        this.path = Output.empty();
-        this.remove = Output.empty();
-        this.tags = Output.empty();
-        this.target = Output.empty();
+        this.buildArg = Codegen.empty();
+        this.dockerfile = Codegen.empty();
+        this.forceRemove = Codegen.empty();
+        this.label = Codegen.empty();
+        this.noCache = Codegen.empty();
+        this.path = Codegen.empty();
+        this.remove = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder buildArg(@Nullable Map<String,String> buildArg) {
-            this.buildArg = Output.ofNullable(buildArg);
+            this.buildArg = Codegen.ofNullable(buildArg);
             return this;
         }
         public Builder dockerfile(@Nullable Output<String> dockerfile) {
@@ -162,7 +163,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dockerfile(@Nullable String dockerfile) {
-            this.dockerfile = Output.ofNullable(dockerfile);
+            this.dockerfile = Codegen.ofNullable(dockerfile);
             return this;
         }
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
@@ -170,7 +171,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Output.ofNullable(forceRemove);
+            this.forceRemove = Codegen.ofNullable(forceRemove);
             return this;
         }
         public Builder label(@Nullable Output<Map<String,String>> label) {
@@ -178,7 +179,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder label(@Nullable Map<String,String> label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder noCache(@Nullable Output<Boolean> noCache) {
@@ -186,7 +187,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Output.ofNullable(noCache);
+            this.noCache = Codegen.ofNullable(noCache);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -202,7 +203,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder remove(@Nullable Boolean remove) {
-            this.remove = Output.ofNullable(remove);
+            this.remove = Codegen.ofNullable(remove);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -210,7 +211,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -221,7 +222,7 @@ public final class RemoteImageBuildArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public RemoteImageBuildArgs build() {
             return new RemoteImageBuildArgs(buildArg, dockerfile, forceRemove, label, noCache, path, remove, tags, target);

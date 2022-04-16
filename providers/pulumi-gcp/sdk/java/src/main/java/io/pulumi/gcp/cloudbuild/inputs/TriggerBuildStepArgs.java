@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildStepVolumeArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dir")
       private final @Nullable Output<String> dir;
 
-    public Output<String> getDir() {
-        return this.dir == null ? Output.empty() : this.dir;
+    public Output<String> dir() {
+        return this.dir == null ? Codegen.empty() : this.dir;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="entrypoint")
       private final @Nullable Output<String> entrypoint;
 
-    public Output<String> getEntrypoint() {
-        return this.entrypoint == null ? Output.empty() : this.entrypoint;
+    public Output<String> entrypoint() {
+        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
-    public Output<List<String>> getEnvs() {
-        return this.envs == null ? Output.empty() : this.envs;
+    public Output<List<String>> envs() {
+        return this.envs == null ? Codegen.empty() : this.envs;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -111,8 +112,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="secretEnvs")
       private final @Nullable Output<List<String>> secretEnvs;
 
-    public Output<List<String>> getSecretEnvs() {
-        return this.secretEnvs == null ? Output.empty() : this.secretEnvs;
+    public Output<List<String>> secretEnvs() {
+        return this.secretEnvs == null ? Codegen.empty() : this.secretEnvs;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timing")
       private final @Nullable Output<String> timing;
 
-    public Output<String> getTiming() {
-        return this.timing == null ? Output.empty() : this.timing;
+    public Output<String> timing() {
+        return this.timing == null ? Codegen.empty() : this.timing;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="volumes")
       private final @Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes;
 
-    public Output<List<TriggerBuildStepVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<TriggerBuildStepVolumeArgs>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="waitFors")
       private final @Nullable Output<List<String>> waitFors;
 
-    public Output<List<String>> getWaitFors() {
-        return this.waitFors == null ? Output.empty() : this.waitFors;
+    public Output<List<String>> waitFors() {
+        return this.waitFors == null ? Codegen.empty() : this.waitFors;
     }
 
     public TriggerBuildStepArgs(
@@ -200,17 +201,17 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TriggerBuildStepArgs() {
-        this.args = Output.empty();
-        this.dir = Output.empty();
-        this.entrypoint = Output.empty();
-        this.envs = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.secretEnvs = Output.empty();
-        this.timeout = Output.empty();
-        this.timing = Output.empty();
-        this.volumes = Output.empty();
-        this.waitFors = Output.empty();
+        this.args = Codegen.empty();
+        this.dir = Codegen.empty();
+        this.entrypoint = Codegen.empty();
+        this.envs = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.secretEnvs = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.timing = Codegen.empty();
+        this.volumes = Codegen.empty();
+        this.waitFors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -258,7 +259,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -269,7 +270,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dir(@Nullable String dir) {
-            this.dir = Output.ofNullable(dir);
+            this.dir = Codegen.ofNullable(dir);
             return this;
         }
         public Builder entrypoint(@Nullable Output<String> entrypoint) {
@@ -277,7 +278,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Output.ofNullable(entrypoint);
+            this.entrypoint = Codegen.ofNullable(entrypoint);
             return this;
         }
         public Builder envs(@Nullable Output<List<String>> envs) {
@@ -285,7 +286,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder envs(@Nullable List<String> envs) {
-            this.envs = Output.ofNullable(envs);
+            this.envs = Codegen.ofNullable(envs);
             return this;
         }
         public Builder envs(String... envs) {
@@ -296,7 +297,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -312,7 +313,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secretEnvs(@Nullable List<String> secretEnvs) {
-            this.secretEnvs = Output.ofNullable(secretEnvs);
+            this.secretEnvs = Codegen.ofNullable(secretEnvs);
             return this;
         }
         public Builder secretEnvs(String... secretEnvs) {
@@ -323,7 +324,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder timing(@Nullable Output<String> timing) {
@@ -331,7 +332,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timing(@Nullable String timing) {
-            this.timing = Output.ofNullable(timing);
+            this.timing = Codegen.ofNullable(timing);
             return this;
         }
         public Builder volumes(@Nullable Output<List<TriggerBuildStepVolumeArgs>> volumes) {
@@ -339,7 +340,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder volumes(@Nullable List<TriggerBuildStepVolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(TriggerBuildStepVolumeArgs... volumes) {
@@ -350,7 +351,7 @@ public final class TriggerBuildStepArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder waitFors(@Nullable List<String> waitFors) {
-            this.waitFors = Output.ofNullable(waitFors);
+            this.waitFors = Codegen.ofNullable(waitFors);
             return this;
         }
         public Builder waitFors(String... waitFors) {

@@ -20,35 +20,35 @@ public final class OriginRequestPolicyConfig extends io.pulumi.resources.InvokeA
     @Import(name="comment")
       private final @Nullable String comment;
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @Import(name="cookiesConfig", required=true)
       private final OriginRequestPolicyCookiesConfig cookiesConfig;
 
-    public OriginRequestPolicyCookiesConfig getCookiesConfig() {
+    public OriginRequestPolicyCookiesConfig cookiesConfig() {
         return this.cookiesConfig;
     }
 
     @Import(name="headersConfig", required=true)
       private final OriginRequestPolicyHeadersConfig headersConfig;
 
-    public OriginRequestPolicyHeadersConfig getHeadersConfig() {
+    public OriginRequestPolicyHeadersConfig headersConfig() {
         return this.headersConfig;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="queryStringsConfig", required=true)
       private final OriginRequestPolicyQueryStringsConfig queryStringsConfig;
 
-    public OriginRequestPolicyQueryStringsConfig getQueryStringsConfig() {
+    public OriginRequestPolicyQueryStringsConfig queryStringsConfig() {
         return this.queryStringsConfig;
     }
 

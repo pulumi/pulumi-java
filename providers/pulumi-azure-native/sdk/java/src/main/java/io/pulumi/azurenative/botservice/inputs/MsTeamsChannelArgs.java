@@ -6,6 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.inputs.MsTeamsChannelPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelName", required=true)
       private final Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
@@ -38,8 +39,8 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<MsTeamsChannelPropertiesArgs> properties;
 
-    public Output<MsTeamsChannelPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<MsTeamsChannelPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public MsTeamsChannelArgs(
@@ -71,15 +72,15 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<MsTeamsChannelPropertiesArgs> properties) {
         this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
         this.etag = etag;
-        this.location = location == null ? Output.ofNullable("global") : location;
+        this.location = location == null ? Codegen.ofNullable("global") : location;
         this.properties = properties;
     }
 
     private MsTeamsChannelArgs() {
-        this.channelName = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
+        this.channelName = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -129,7 +130,7 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<MsTeamsChannelPropertiesArgs> properties) {
@@ -137,7 +138,7 @@ public final class MsTeamsChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable MsTeamsChannelPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public MsTeamsChannelArgs build() {
             return new MsTeamsChannelArgs(channelName, etag, location, properties);

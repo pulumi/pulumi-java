@@ -6,10 +6,11 @@ import (
 	"testing"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 )
 
-var javaSpecificTests []test.SDKTest = []test.SDKTest{
+var javaSpecificTests []*test.SDKTest = []*test.SDKTest{
 	{
 		Directory:   "mini-azurenative",
 		Description: "Regression tests extracted from trying to codegen azure-natuve",
@@ -28,7 +29,7 @@ var javaSpecificTests []test.SDKTest = []test.SDKTest{
 	},
 }
 
-func adaptTest(t test.SDKTest) test.SDKTest {
+func adaptTest(t *test.SDKTest) *test.SDKTest {
 	switch t.Directory {
 	case "external-resource-schema":
 		// TODO[pulumi/pulumi-java#13]
@@ -65,12 +66,14 @@ func adaptTest(t test.SDKTest) test.SDKTest {
 		t.Skip = codegen.NewStringSet("jvm/any") // TODO
 	case "external-python-same-module-name":
 		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+	case "internal-dependencies-go":
+		t.Skip = codegen.NewStringSet("jvm/any") // go-only
 	}
 	return t
 }
 
-func testCases() []test.SDKTest {
-	var ts []test.SDKTest
+func testCases() []*test.SDKTest {
+	var ts []*test.SDKTest
 	ts = append(ts, javaSpecificTests...)
 	for _, t := range test.PulumiPulumiSDKTests {
 		ts = append(ts, adaptTest(t))
@@ -88,7 +91,7 @@ func testGeneratedPackage(t *testing.T, pwd string) {
 
 func TestGeneratePackage(t *testing.T) {
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
-		GenPackage: GeneratePackage,
+		GenPackage: generatePackage,
 		Language:   "jvm",
 		TestCases:  testCases(),
 		Checks: map[string]test.CodegenCheck{
@@ -96,4 +99,12 @@ func TestGeneratePackage(t *testing.T) {
 			"jvm/test":    testGeneratedPackage,
 		},
 	})
+}
+
+func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
+	pkgInfo := PackageInfo{BuildFiles: "gradle"}
+	pkg.Language = map[string]interface{}{
+		"jvm": pkgInfo,
+	}
+	return GeneratePackage(tool, pkg, extraFiles)
 }

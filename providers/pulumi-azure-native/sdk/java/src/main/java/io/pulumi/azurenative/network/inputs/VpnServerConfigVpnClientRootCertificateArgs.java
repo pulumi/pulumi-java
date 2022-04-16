@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
     @Import(name="publicCertData")
       private final @Nullable Output<String> publicCertData;
 
-    public Output<String> getPublicCertData() {
-        return this.publicCertData == null ? Output.empty() : this.publicCertData;
+    public Output<String> publicCertData() {
+        return this.publicCertData == null ? Codegen.empty() : this.publicCertData;
     }
 
     public VpnServerConfigVpnClientRootCertificateArgs(
@@ -48,8 +49,8 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
     }
 
     private VpnServerConfigVpnClientRootCertificateArgs() {
-        this.name = Output.empty();
-        this.publicCertData = Output.empty();
+        this.name = Codegen.empty();
+        this.publicCertData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publicCertData(@Nullable Output<String> publicCertData) {
@@ -87,7 +88,7 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
             return this;
         }
         public Builder publicCertData(@Nullable String publicCertData) {
-            this.publicCertData = Output.ofNullable(publicCertData);
+            this.publicCertData = Codegen.ofNullable(publicCertData);
             return this;
         }        public VpnServerConfigVpnClientRootCertificateArgs build() {
             return new VpnServerConfigVpnClientRootCertificateArgs(name, publicCertData);

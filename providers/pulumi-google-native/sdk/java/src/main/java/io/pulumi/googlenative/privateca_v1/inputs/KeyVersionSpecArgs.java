@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.enums.KeyVersionSpecAlgorithm;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="algorithm")
       private final @Nullable Output<KeyVersionSpecAlgorithm> algorithm;
 
-    public Output<KeyVersionSpecAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+    public Output<KeyVersionSpecAlgorithm> algorithm() {
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudKmsKeyVersion")
       private final @Nullable Output<String> cloudKmsKeyVersion;
 
-    public Output<String> getCloudKmsKeyVersion() {
-        return this.cloudKmsKeyVersion == null ? Output.empty() : this.cloudKmsKeyVersion;
+    public Output<String> cloudKmsKeyVersion() {
+        return this.cloudKmsKeyVersion == null ? Codegen.empty() : this.cloudKmsKeyVersion;
     }
 
     public KeyVersionSpecArgs(
@@ -49,8 +50,8 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyVersionSpecArgs() {
-        this.algorithm = Output.empty();
-        this.cloudKmsKeyVersion = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.cloudKmsKeyVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder algorithm(@Nullable KeyVersionSpecAlgorithm algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder cloudKmsKeyVersion(@Nullable Output<String> cloudKmsKeyVersion) {
@@ -88,7 +89,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
-            this.cloudKmsKeyVersion = Output.ofNullable(cloudKmsKeyVersion);
+            this.cloudKmsKeyVersion = Codegen.ofNullable(cloudKmsKeyVersion);
             return this;
         }        public KeyVersionSpecArgs build() {
             return new KeyVersionSpecArgs(algorithm, cloudKmsKeyVersion);

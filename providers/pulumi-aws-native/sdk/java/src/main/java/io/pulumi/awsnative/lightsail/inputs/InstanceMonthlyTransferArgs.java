@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
     @Import(name="gbPerMonthAllocated")
       private final @Nullable Output<String> gbPerMonthAllocated;
 
-    public Output<String> getGbPerMonthAllocated() {
-        return this.gbPerMonthAllocated == null ? Output.empty() : this.gbPerMonthAllocated;
+    public Output<String> gbPerMonthAllocated() {
+        return this.gbPerMonthAllocated == null ? Codegen.empty() : this.gbPerMonthAllocated;
     }
 
     public InstanceMonthlyTransferArgs(@Nullable Output<String> gbPerMonthAllocated) {
@@ -34,7 +35,7 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
     }
 
     private InstanceMonthlyTransferArgs() {
-        this.gbPerMonthAllocated = Output.empty();
+        this.gbPerMonthAllocated = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder gbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
-            this.gbPerMonthAllocated = Output.ofNullable(gbPerMonthAllocated);
+            this.gbPerMonthAllocated = Codegen.ofNullable(gbPerMonthAllocated);
             return this;
         }        public InstanceMonthlyTransferArgs build() {
             return new InstanceMonthlyTransferArgs(gbPerMonthAllocated);

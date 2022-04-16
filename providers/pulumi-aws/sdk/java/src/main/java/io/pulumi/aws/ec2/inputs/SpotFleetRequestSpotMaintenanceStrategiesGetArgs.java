@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
     @Import(name="capacityRebalance")
       private final @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
-    public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
+    public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance() {
+        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 
     public SpotFleetRequestSpotMaintenanceStrategiesGetArgs(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
@@ -30,7 +31,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
     }
 
     private SpotFleetRequestSpotMaintenanceStrategiesGetArgs() {
-        this.capacityRebalance = Output.empty();
+        this.capacityRebalance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
             return this;
         }
         public Builder capacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
-            this.capacityRebalance = Output.ofNullable(capacityRebalance);
+            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
             return this;
         }        public SpotFleetRequestSpotMaintenanceStrategiesGetArgs build() {
             return new SpotFleetRequestSpotMaintenanceStrategiesGetArgs(capacityRebalance);

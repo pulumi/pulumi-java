@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<String> height;
 
-    public Output<String> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+    public Output<String> height() {
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -60,8 +61,8 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quality")
       private final @Nullable Output<Integer> quality;
 
-    public Output<Integer> getQuality() {
-        return this.quality == null ? Output.empty() : this.quality;
+    public Output<Integer> quality() {
+        return this.quality == null ? Codegen.empty() : this.quality;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<String> width;
 
-    public Output<String> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+    public Output<String> width() {
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     public JpgLayerArgs(
@@ -89,11 +90,11 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JpgLayerArgs() {
-        this.height = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
-        this.quality = Output.empty();
-        this.width = Output.empty();
+        this.height = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.quality = Codegen.empty();
+        this.width = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder height(@Nullable String height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -137,7 +138,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -153,7 +154,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quality(@Nullable Integer quality) {
-            this.quality = Output.ofNullable(quality);
+            this.quality = Codegen.ofNullable(quality);
             return this;
         }
         public Builder width(@Nullable Output<String> width) {
@@ -161,7 +162,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder width(@Nullable String width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }        public JpgLayerArgs build() {
             return new JpgLayerArgs(height, label, odataType, quality, width);

@@ -24,7 +24,7 @@ public final class EnvironmentStatusResponse extends io.pulumi.resources.InvokeA
     @Import(name="ingress", required=true)
       private final IngressEnvironmentStatusResponse ingress;
 
-    public IngressEnvironmentStatusResponse getIngress() {
+    public IngressEnvironmentStatusResponse ingress() {
         return this.ingress;
     }
 
@@ -35,7 +35,7 @@ public final class EnvironmentStatusResponse extends io.pulumi.resources.InvokeA
     @Import(name="warmStorage", required=true)
       private final WarmStorageEnvironmentStatusResponse warmStorage;
 
-    public WarmStorageEnvironmentStatusResponse getWarmStorage() {
+    public WarmStorageEnvironmentStatusResponse warmStorage() {
         return this.warmStorage;
     }
 

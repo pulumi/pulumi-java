@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -18,56 +19,56 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
     @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Object> authenticationRequestExtraParams;
 
-    public Output<Object> getAuthenticationRequestExtraParams() {
-        return this.authenticationRequestExtraParams == null ? Output.empty() : this.authenticationRequestExtraParams;
+    public Output<Object> authenticationRequestExtraParams() {
+        return this.authenticationRequestExtraParams == null ? Codegen.empty() : this.authenticationRequestExtraParams;
     }
 
     @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
-    public Output<String> getOnUnauthenticatedRequest() {
-        return this.onUnauthenticatedRequest == null ? Output.empty() : this.onUnauthenticatedRequest;
+    public Output<String> onUnauthenticatedRequest() {
+        return this.onUnauthenticatedRequest == null ? Codegen.empty() : this.onUnauthenticatedRequest;
     }
 
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<String> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
-    public Output<String> getSessionCookieName() {
-        return this.sessionCookieName == null ? Output.empty() : this.sessionCookieName;
+    public Output<String> sessionCookieName() {
+        return this.sessionCookieName == null ? Codegen.empty() : this.sessionCookieName;
     }
 
     @Import(name="sessionTimeout")
       private final @Nullable Output<String> sessionTimeout;
 
-    public Output<String> getSessionTimeout() {
-        return this.sessionTimeout == null ? Output.empty() : this.sessionTimeout;
+    public Output<String> sessionTimeout() {
+        return this.sessionTimeout == null ? Codegen.empty() : this.sessionTimeout;
     }
 
     @Import(name="userPoolArn", required=true)
       private final Output<String> userPoolArn;
 
-    public Output<String> getUserPoolArn() {
+    public Output<String> userPoolArn() {
         return this.userPoolArn;
     }
 
     @Import(name="userPoolClientId", required=true)
       private final Output<String> userPoolClientId;
 
-    public Output<String> getUserPoolClientId() {
+    public Output<String> userPoolClientId() {
         return this.userPoolClientId;
     }
 
     @Import(name="userPoolDomain", required=true)
       private final Output<String> userPoolDomain;
 
-    public Output<String> getUserPoolDomain() {
+    public Output<String> userPoolDomain() {
         return this.userPoolDomain;
     }
 
@@ -91,14 +92,14 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
     }
 
     private ListenerAuthenticateCognitoConfigArgs() {
-        this.authenticationRequestExtraParams = Output.empty();
-        this.onUnauthenticatedRequest = Output.empty();
-        this.scope = Output.empty();
-        this.sessionCookieName = Output.empty();
-        this.sessionTimeout = Output.empty();
-        this.userPoolArn = Output.empty();
-        this.userPoolClientId = Output.empty();
-        this.userPoolDomain = Output.empty();
+        this.authenticationRequestExtraParams = Codegen.empty();
+        this.onUnauthenticatedRequest = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.sessionCookieName = Codegen.empty();
+        this.sessionTimeout = Codegen.empty();
+        this.userPoolArn = Codegen.empty();
+        this.userPoolClientId = Codegen.empty();
+        this.userPoolDomain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder authenticationRequestExtraParams(@Nullable Object authenticationRequestExtraParams) {
-            this.authenticationRequestExtraParams = Output.ofNullable(authenticationRequestExtraParams);
+            this.authenticationRequestExtraParams = Codegen.ofNullable(authenticationRequestExtraParams);
             return this;
         }
         public Builder onUnauthenticatedRequest(@Nullable Output<String> onUnauthenticatedRequest) {
@@ -148,7 +149,7 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
-            this.onUnauthenticatedRequest = Output.ofNullable(onUnauthenticatedRequest);
+            this.onUnauthenticatedRequest = Codegen.ofNullable(onUnauthenticatedRequest);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -156,7 +157,7 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder sessionCookieName(@Nullable Output<String> sessionCookieName) {
@@ -164,7 +165,7 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder sessionCookieName(@Nullable String sessionCookieName) {
-            this.sessionCookieName = Output.ofNullable(sessionCookieName);
+            this.sessionCookieName = Codegen.ofNullable(sessionCookieName);
             return this;
         }
         public Builder sessionTimeout(@Nullable Output<String> sessionTimeout) {
@@ -172,7 +173,7 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder sessionTimeout(@Nullable String sessionTimeout) {
-            this.sessionTimeout = Output.ofNullable(sessionTimeout);
+            this.sessionTimeout = Codegen.ofNullable(sessionTimeout);
             return this;
         }
         public Builder userPoolArn(Output<String> userPoolArn) {

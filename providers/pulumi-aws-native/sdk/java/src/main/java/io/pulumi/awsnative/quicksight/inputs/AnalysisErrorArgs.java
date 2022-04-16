@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.AnalysisErrorType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,15 +27,15 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="type")
       private final @Nullable Output<AnalysisErrorType> type;
 
-    public Output<AnalysisErrorType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<AnalysisErrorType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AnalysisErrorArgs(
@@ -45,8 +46,8 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalysisErrorArgs() {
-        this.message = Output.empty();
-        this.type = Output.empty();
+        this.message = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder type(@Nullable Output<AnalysisErrorType> type) {
@@ -84,7 +85,7 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable AnalysisErrorType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AnalysisErrorArgs build() {
             return new AnalysisErrorArgs(message, type);

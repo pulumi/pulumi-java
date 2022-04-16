@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crashed")
       private final @Nullable Output<Boolean> crashed;
 
-    public Output<Boolean> getCrashed() {
-        return this.crashed == null ? Output.empty() : this.crashed;
+    public Output<Boolean> crashed() {
+        return this.crashed == null ? Codegen.empty() : this.crashed;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceOutOfMemory")
       private final @Nullable Output<Boolean> deviceOutOfMemory;
 
-    public Output<Boolean> getDeviceOutOfMemory() {
-        return this.deviceOutOfMemory == null ? Output.empty() : this.deviceOutOfMemory;
+    public Output<Boolean> deviceOutOfMemory() {
+        return this.deviceOutOfMemory == null ? Codegen.empty() : this.deviceOutOfMemory;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failedRoboscript")
       private final @Nullable Output<Boolean> failedRoboscript;
 
-    public Output<Boolean> getFailedRoboscript() {
-        return this.failedRoboscript == null ? Output.empty() : this.failedRoboscript;
+    public Output<Boolean> failedRoboscript() {
+        return this.failedRoboscript == null ? Codegen.empty() : this.failedRoboscript;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notInstalled")
       private final @Nullable Output<Boolean> notInstalled;
 
-    public Output<Boolean> getNotInstalled() {
-        return this.notInstalled == null ? Output.empty() : this.notInstalled;
+    public Output<Boolean> notInstalled() {
+        return this.notInstalled == null ? Codegen.empty() : this.notInstalled;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="otherNativeCrash")
       private final @Nullable Output<Boolean> otherNativeCrash;
 
-    public Output<Boolean> getOtherNativeCrash() {
-        return this.otherNativeCrash == null ? Output.empty() : this.otherNativeCrash;
+    public Output<Boolean> otherNativeCrash() {
+        return this.otherNativeCrash == null ? Codegen.empty() : this.otherNativeCrash;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timedOut")
       private final @Nullable Output<Boolean> timedOut;
 
-    public Output<Boolean> getTimedOut() {
-        return this.timedOut == null ? Output.empty() : this.timedOut;
+    public Output<Boolean> timedOut() {
+        return this.timedOut == null ? Codegen.empty() : this.timedOut;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unableToCrawl")
       private final @Nullable Output<Boolean> unableToCrawl;
 
-    public Output<Boolean> getUnableToCrawl() {
-        return this.unableToCrawl == null ? Output.empty() : this.unableToCrawl;
+    public Output<Boolean> unableToCrawl() {
+        return this.unableToCrawl == null ? Codegen.empty() : this.unableToCrawl;
     }
 
     public FailureDetailArgs(
@@ -113,13 +114,13 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FailureDetailArgs() {
-        this.crashed = Output.empty();
-        this.deviceOutOfMemory = Output.empty();
-        this.failedRoboscript = Output.empty();
-        this.notInstalled = Output.empty();
-        this.otherNativeCrash = Output.empty();
-        this.timedOut = Output.empty();
-        this.unableToCrawl = Output.empty();
+        this.crashed = Codegen.empty();
+        this.deviceOutOfMemory = Codegen.empty();
+        this.failedRoboscript = Codegen.empty();
+        this.notInstalled = Codegen.empty();
+        this.otherNativeCrash = Codegen.empty();
+        this.timedOut = Codegen.empty();
+        this.unableToCrawl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crashed(@Nullable Boolean crashed) {
-            this.crashed = Output.ofNullable(crashed);
+            this.crashed = Codegen.ofNullable(crashed);
             return this;
         }
         public Builder deviceOutOfMemory(@Nullable Output<Boolean> deviceOutOfMemory) {
@@ -167,7 +168,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceOutOfMemory(@Nullable Boolean deviceOutOfMemory) {
-            this.deviceOutOfMemory = Output.ofNullable(deviceOutOfMemory);
+            this.deviceOutOfMemory = Codegen.ofNullable(deviceOutOfMemory);
             return this;
         }
         public Builder failedRoboscript(@Nullable Output<Boolean> failedRoboscript) {
@@ -175,7 +176,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failedRoboscript(@Nullable Boolean failedRoboscript) {
-            this.failedRoboscript = Output.ofNullable(failedRoboscript);
+            this.failedRoboscript = Codegen.ofNullable(failedRoboscript);
             return this;
         }
         public Builder notInstalled(@Nullable Output<Boolean> notInstalled) {
@@ -183,7 +184,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notInstalled(@Nullable Boolean notInstalled) {
-            this.notInstalled = Output.ofNullable(notInstalled);
+            this.notInstalled = Codegen.ofNullable(notInstalled);
             return this;
         }
         public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
@@ -191,7 +192,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
-            this.otherNativeCrash = Output.ofNullable(otherNativeCrash);
+            this.otherNativeCrash = Codegen.ofNullable(otherNativeCrash);
             return this;
         }
         public Builder timedOut(@Nullable Output<Boolean> timedOut) {
@@ -199,7 +200,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timedOut(@Nullable Boolean timedOut) {
-            this.timedOut = Output.ofNullable(timedOut);
+            this.timedOut = Codegen.ofNullable(timedOut);
             return this;
         }
         public Builder unableToCrawl(@Nullable Output<Boolean> unableToCrawl) {
@@ -207,7 +208,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unableToCrawl(@Nullable Boolean unableToCrawl) {
-            this.unableToCrawl = Output.ofNullable(unableToCrawl);
+            this.unableToCrawl = Codegen.ofNullable(unableToCrawl);
             return this;
         }        public FailureDetailArgs build() {
             return new FailureDetailArgs(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);

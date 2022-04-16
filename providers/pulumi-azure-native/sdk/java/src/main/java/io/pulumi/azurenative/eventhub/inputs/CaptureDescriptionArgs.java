@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.EncodingCaptureDescription;
 import io.pulumi.azurenative.eventhub.inputs.DestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destination")
       private final @Nullable Output<DestinationArgs> destination;
 
-    public Output<DestinationArgs> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<DestinationArgs> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="encoding")
       private final @Nullable Output<EncodingCaptureDescription> encoding;
 
-    public Output<EncodingCaptureDescription> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<EncodingCaptureDescription> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
+    public Output<Integer> intervalInSeconds() {
+        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sizeLimitInBytes")
       private final @Nullable Output<Integer> sizeLimitInBytes;
 
-    public Output<Integer> getSizeLimitInBytes() {
-        return this.sizeLimitInBytes == null ? Output.empty() : this.sizeLimitInBytes;
+    public Output<Integer> sizeLimitInBytes() {
+        return this.sizeLimitInBytes == null ? Codegen.empty() : this.sizeLimitInBytes;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="skipEmptyArchives")
       private final @Nullable Output<Boolean> skipEmptyArchives;
 
-    public Output<Boolean> getSkipEmptyArchives() {
-        return this.skipEmptyArchives == null ? Output.empty() : this.skipEmptyArchives;
+    public Output<Boolean> skipEmptyArchives() {
+        return this.skipEmptyArchives == null ? Codegen.empty() : this.skipEmptyArchives;
     }
 
     public CaptureDescriptionArgs(
@@ -103,12 +104,12 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CaptureDescriptionArgs() {
-        this.destination = Output.empty();
-        this.enabled = Output.empty();
-        this.encoding = Output.empty();
-        this.intervalInSeconds = Output.empty();
-        this.sizeLimitInBytes = Output.empty();
-        this.skipEmptyArchives = Output.empty();
+        this.destination = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.encoding = Codegen.empty();
+        this.intervalInSeconds = Codegen.empty();
+        this.sizeLimitInBytes = Codegen.empty();
+        this.skipEmptyArchives = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder destination(@Nullable DestinationArgs destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -154,7 +155,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder encoding(@Nullable Output<EncodingCaptureDescription> encoding) {
@@ -162,7 +163,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder encoding(@Nullable EncodingCaptureDescription encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
@@ -170,7 +171,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
             return this;
         }
         public Builder sizeLimitInBytes(@Nullable Output<Integer> sizeLimitInBytes) {
@@ -178,7 +179,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
-            this.sizeLimitInBytes = Output.ofNullable(sizeLimitInBytes);
+            this.sizeLimitInBytes = Codegen.ofNullable(sizeLimitInBytes);
             return this;
         }
         public Builder skipEmptyArchives(@Nullable Output<Boolean> skipEmptyArchives) {
@@ -186,7 +187,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
-            this.skipEmptyArchives = Output.ofNullable(skipEmptyArchives);
+            this.skipEmptyArchives = Codegen.ofNullable(skipEmptyArchives);
             return this;
         }        public CaptureDescriptionArgs build() {
             return new CaptureDescriptionArgs(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);

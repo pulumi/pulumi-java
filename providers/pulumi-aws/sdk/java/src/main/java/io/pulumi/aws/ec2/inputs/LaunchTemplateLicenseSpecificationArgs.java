@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class LaunchTemplateLicenseSpecificationArgs extends io.pulumi.reso
     @Import(name="licenseConfigurationArn", required=true)
       private final Output<String> licenseConfigurationArn;
 
-    public Output<String> getLicenseConfigurationArn() {
+    public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
 
@@ -29,7 +30,7 @@ public final class LaunchTemplateLicenseSpecificationArgs extends io.pulumi.reso
     }
 
     private LaunchTemplateLicenseSpecificationArgs() {
-        this.licenseConfigurationArn = Output.empty();
+        this.licenseConfigurationArn = Codegen.empty();
     }
 
     public static Builder builder() {

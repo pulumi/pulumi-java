@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devops.enums.AuthorizationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationType", required=true)
       private final Output<Either<String,AuthorizationType>> authorizationType;
 
-    public Output<Either<String,AuthorizationType>> getAuthorizationType() {
+    public Output<Either<String,AuthorizationType>> authorizationType() {
         return this.authorizationType;
     }
 
@@ -39,8 +40,8 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public AuthorizationArgs(
@@ -51,8 +52,8 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorizationArgs() {
-        this.authorizationType = Output.empty();
-        this.parameters = Output.empty();
+        this.authorizationType = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public AuthorizationArgs build() {
             return new AuthorizationArgs(authorizationType, parameters);

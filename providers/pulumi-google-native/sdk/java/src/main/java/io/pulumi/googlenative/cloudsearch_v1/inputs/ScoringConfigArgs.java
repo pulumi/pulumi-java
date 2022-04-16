@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableFreshness")
       private final @Nullable Output<Boolean> disableFreshness;
 
-    public Output<Boolean> getDisableFreshness() {
-        return this.disableFreshness == null ? Output.empty() : this.disableFreshness;
+    public Output<Boolean> disableFreshness() {
+        return this.disableFreshness == null ? Codegen.empty() : this.disableFreshness;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disablePersonalization")
       private final @Nullable Output<Boolean> disablePersonalization;
 
-    public Output<Boolean> getDisablePersonalization() {
-        return this.disablePersonalization == null ? Output.empty() : this.disablePersonalization;
+    public Output<Boolean> disablePersonalization() {
+        return this.disablePersonalization == null ? Codegen.empty() : this.disablePersonalization;
     }
 
     public ScoringConfigArgs(
@@ -48,8 +49,8 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScoringConfigArgs() {
-        this.disableFreshness = Output.empty();
-        this.disablePersonalization = Output.empty();
+        this.disableFreshness = Codegen.empty();
+        this.disablePersonalization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableFreshness(@Nullable Boolean disableFreshness) {
-            this.disableFreshness = Output.ofNullable(disableFreshness);
+            this.disableFreshness = Codegen.ofNullable(disableFreshness);
             return this;
         }
         public Builder disablePersonalization(@Nullable Output<Boolean> disablePersonalization) {
@@ -87,7 +88,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disablePersonalization(@Nullable Boolean disablePersonalization) {
-            this.disablePersonalization = Output.ofNullable(disablePersonalization);
+            this.disablePersonalization = Codegen.ofNullable(disablePersonalization);
             return this;
         }        public ScoringConfigArgs build() {
             return new ScoringConfigArgs(disableFreshness, disablePersonalization);

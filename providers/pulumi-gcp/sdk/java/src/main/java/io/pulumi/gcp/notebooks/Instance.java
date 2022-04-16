@@ -6,6 +6,7 @@ package io.pulumi.gcp.notebooks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.InstanceArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceState;
@@ -72,7 +73,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceAcceleratorConfig> getAcceleratorConfig() {
+    public Output</* @Nullable */ InstanceAcceleratorConfig> acceleratorConfig() {
         return this.acceleratorConfig;
     }
     /**
@@ -90,7 +91,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If not specified, this defaults to 100.
      * 
      */
-    public Output</* @Nullable */ Integer> getBootDiskSizeGb() {
+    public Output</* @Nullable */ Integer> bootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
     /**
@@ -106,7 +107,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
      * 
      */
-    public Output</* @Nullable */ String> getBootDiskType() {
+    public Output</* @Nullable */ String> bootDiskType() {
         return this.bootDiskType;
     }
     /**
@@ -122,7 +123,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceContainerImage> getContainerImage() {
+    public Output</* @Nullable */ InstanceContainerImage> containerImage() {
         return this.containerImage;
     }
     /**
@@ -136,7 +137,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Instance creation time
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -152,7 +153,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If not specified, we'll automatically choose from official GPU drivers.
      * 
      */
-    public Output</* @Nullable */ String> getCustomGpuDriverPath() {
+    public Output</* @Nullable */ String> customGpuDriverPath() {
         return this.customGpuDriverPath;
     }
     /**
@@ -172,7 +173,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If not specified, this defaults to 100.
      * 
      */
-    public Output</* @Nullable */ Integer> getDataDiskSizeGb() {
+    public Output</* @Nullable */ Integer> dataDiskSizeGb() {
         return this.dataDiskSizeGb;
     }
     /**
@@ -188,7 +189,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
      * 
      */
-    public Output</* @Nullable */ String> getDataDiskType() {
+    public Output</* @Nullable */ String> dataDiskType() {
         return this.dataDiskType;
     }
     /**
@@ -204,7 +205,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
      * 
      */
-    public Output</* @Nullable */ String> getDiskEncryption() {
+    public Output</* @Nullable */ String> diskEncryption() {
         return this.diskEncryption;
     }
     /**
@@ -222,7 +223,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * won't be installed. Only applicable to instances with GPUs.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInstallGpuDriver() {
+    public Output</* @Nullable */ Boolean> installGpuDriver() {
         return this.installGpuDriver;
     }
     /**
@@ -244,7 +245,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * your VM instance's service account can use the instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInstanceOwners() {
+    public Output</* @Nullable */ List<String>> instanceOwners() {
         return this.instanceOwners;
     }
     /**
@@ -260,7 +261,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
      * 
      */
-    public Output</* @Nullable */ String> getKmsKey() {
+    public Output</* @Nullable */ String> kmsKey() {
         return this.kmsKey;
     }
     /**
@@ -276,7 +277,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -290,7 +291,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A reference to the zone where the machine resides.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -304,7 +305,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A reference to a machine type which defines VM kind.
      * 
      */
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
     /**
@@ -320,7 +321,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -334,7 +335,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name specified for the Notebook instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -350,7 +351,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}/global/networks/{network_id}
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -366,7 +367,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
      * 
      */
-    public Output</* @Nullable */ String> getNicType() {
+    public Output</* @Nullable */ String> nicType() {
         return this.nicType;
     }
     /**
@@ -380,7 +381,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The notebook instance will not register with the proxy..
      * 
      */
-    public Output</* @Nullable */ Boolean> getNoProxyAccess() {
+    public Output</* @Nullable */ Boolean> noProxyAccess() {
         return this.noProxyAccess;
     }
     /**
@@ -394,7 +395,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return No public IP will be assigned to this instance.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNoPublicIp() {
+    public Output</* @Nullable */ Boolean> noPublicIp() {
         return this.noPublicIp;
     }
     /**
@@ -408,7 +409,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, the data disk will not be auto deleted when deleting the instance.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNoRemoveDataDisk() {
+    public Output</* @Nullable */ Boolean> noRemoveDataDisk() {
         return this.noRemoveDataDisk;
     }
     /**
@@ -426,7 +427,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * or Cloud Storage path (gs://path-to-file/file-name).
      * 
      */
-    public Output</* @Nullable */ String> getPostStartupScript() {
+    public Output</* @Nullable */ String> postStartupScript() {
         return this.postStartupScript;
     }
     /**
@@ -442,7 +443,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -456,7 +457,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The proxy endpoint that is used to access the Jupyter notebook.
      * 
      */
-    public Output<String> getProxyUri() {
+    public Output<String> proxyUri() {
         return this.proxyUri;
     }
     /**
@@ -472,7 +473,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceReservationAffinity> getReservationAffinity() {
+    public Output</* @Nullable */ InstanceReservationAffinity> reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
@@ -494,7 +495,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * the Compute Engine default service account is used.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -514,7 +515,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * - https://www.googleapis.com/auth/userinfo.email
      * 
      */
-    public Output</* @Nullable */ List<String>> getServiceAccountScopes() {
+    public Output</* @Nullable */ List<String>> serviceAccountScopes() {
         return this.serviceAccountScopes;
     }
     /**
@@ -532,7 +533,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<InstanceShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Output<InstanceShieldedInstanceConfig> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
@@ -546,7 +547,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The state of this instance.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -562,7 +563,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
      * 
      */
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet;
     }
     /**
@@ -576,7 +577,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The Compute Engine tags to add to instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
     /**
@@ -590,7 +591,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Instance update time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -606,7 +607,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceVmImage> getVmImage() {
+    public Output</* @Nullable */ InstanceVmImage> vmImage() {
         return this.vmImage;
     }
 
@@ -632,7 +633,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:notebooks/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable InstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

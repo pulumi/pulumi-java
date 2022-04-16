@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.DiskAddOnArgs;
 import io.pulumi.awsnative.lightsail.inputs.DiskTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addOns")
       private final @Nullable Output<List<DiskAddOnArgs>> addOns;
 
-    public Output<List<DiskAddOnArgs>> getAddOns() {
-        return this.addOns == null ? Output.empty() : this.addOns;
+    public Output<List<DiskAddOnArgs>> addOns() {
+        return this.addOns == null ? Codegen.empty() : this.addOns;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
-    public Output<String> getDiskName() {
-        return this.diskName == null ? Output.empty() : this.diskName;
+    public Output<String> diskName() {
+        return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeInGb", required=true)
       private final Output<Integer> sizeInGb;
 
-    public Output<Integer> getSizeInGb() {
+    public Output<Integer> sizeInGb() {
         return this.sizeInGb;
     }
 
@@ -69,8 +70,8 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DiskTagArgs>> tags;
 
-    public Output<List<DiskTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DiskTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DiskArgs(
@@ -87,11 +88,11 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.addOns = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.diskName = Output.empty();
-        this.sizeInGb = Output.empty();
-        this.tags = Output.empty();
+        this.addOns = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.diskName = Codegen.empty();
+        this.sizeInGb = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addOns(@Nullable List<DiskAddOnArgs> addOns) {
-            this.addOns = Output.ofNullable(addOns);
+            this.addOns = Codegen.ofNullable(addOns);
             return this;
         }
         public Builder addOns(DiskAddOnArgs... addOns) {
@@ -138,7 +139,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder diskName(@Nullable Output<String> diskName) {
@@ -146,7 +147,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Output.ofNullable(diskName);
+            this.diskName = Codegen.ofNullable(diskName);
             return this;
         }
         public Builder sizeInGb(Output<Integer> sizeInGb) {
@@ -162,7 +163,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DiskTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DiskTagArgs... tags) {

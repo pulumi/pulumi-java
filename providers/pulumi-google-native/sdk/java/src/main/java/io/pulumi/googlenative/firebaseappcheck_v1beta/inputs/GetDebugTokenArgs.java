@@ -17,21 +17,21 @@ public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId", required=true)
       private final String appId;
 
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
 
     @Import(name="debugTokenId", required=true)
       private final String debugTokenId;
 
-    public String getDebugTokenId() {
+    public String debugTokenId() {
         return this.debugTokenId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

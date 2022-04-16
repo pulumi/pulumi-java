@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkArgs;
 import io.pulumi.gcp.compute.inputs.NetworkState;
@@ -63,7 +64,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * the user can explicitly connect subnetwork resources.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoCreateSubnetworks() {
+    public Output</* @Nullable */ Boolean> autoCreateSubnetworks() {
         return this.autoCreateSubnetworks;
     }
     /**
@@ -79,7 +80,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * immediately after network creation. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeleteDefaultRoutesOnCreate() {
+    public Output</* @Nullable */ Boolean> deleteDefaultRoutesOnCreate() {
         return this.deleteDefaultRoutesOnCreate;
     }
     /**
@@ -95,7 +96,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * recreated to modify this field.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -109,7 +110,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return The gateway address for default routing out of the network. This value is selected by GCP.
      * 
      */
-    public Output<String> getGatewayIpv4() {
+    public Output<String> gatewayIpv4() {
         return this.gatewayIpv4;
     }
     /**
@@ -125,7 +126,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * and the maximum value is 1500 bytes.
      * 
      */
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu;
     }
     /**
@@ -151,7 +152,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -167,7 +168,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -191,7 +192,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Possible values are `REGIONAL` and `GLOBAL`.
      * 
      */
-    public Output<String> getRoutingMode() {
+    public Output<String> routingMode() {
         return this.routingMode;
     }
     /**
@@ -205,7 +206,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -231,7 +232,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Network(String name, @Nullable NetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/network:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/network:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Network(String name, Output<String> id, @Nullable NetworkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

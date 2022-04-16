@@ -17,6 +17,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -50,7 +51,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return The set of aad vpn authentication parameters.
      * 
      */
-    public Output</* @Nullable */ AadAuthenticationParametersResponse> getAadAuthenticationParameters() {
+    public Output</* @Nullable */ AadAuthenticationParametersResponse> aadAuthenticationParameters() {
         return this.aadAuthenticationParameters;
     }
     /**
@@ -64,7 +65,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -78,7 +79,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -92,7 +93,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -106,7 +107,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return List of references to P2SVpnGateways.
      * 
      */
-    public Output<List<P2SVpnGatewayResponse>> getP2SVpnGateways() {
+    public Output<List<P2SVpnGatewayResponse>> p2SVpnGateways() {
         return this.p2SVpnGateways;
     }
     /**
@@ -120,7 +121,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -134,7 +135,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Radius client root certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> getRadiusClientRootCertificates() {
+    public Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> radiusClientRootCertificates() {
         return this.radiusClientRootCertificates;
     }
     /**
@@ -148,7 +149,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return The radius server address property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> getRadiusServerAddress() {
+    public Output</* @Nullable */ String> radiusServerAddress() {
         return this.radiusServerAddress;
     }
     /**
@@ -162,7 +163,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Radius Server root certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> getRadiusServerRootCertificates() {
+    public Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> radiusServerRootCertificates() {
         return this.radiusServerRootCertificates;
     }
     /**
@@ -176,7 +177,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return The radius secret property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> getRadiusServerSecret() {
+    public Output</* @Nullable */ String> radiusServerSecret() {
         return this.radiusServerSecret;
     }
     /**
@@ -190,7 +191,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Multiple Radius Server configuration for VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<RadiusServerResponse>> getRadiusServers() {
+    public Output</* @Nullable */ List<RadiusServerResponse>> radiusServers() {
         return this.radiusServers;
     }
     /**
@@ -204,7 +205,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -218,7 +219,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -232,7 +233,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return VPN authentication types for the VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVpnAuthenticationTypes() {
+    public Output</* @Nullable */ List<String>> vpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes;
     }
     /**
@@ -246,7 +247,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return VpnClientIpsecPolicies for VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> getVpnClientIpsecPolicies() {
+    public Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies;
     }
     /**
@@ -260,7 +261,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return VPN client revoked certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> getVpnClientRevokedCertificates() {
+    public Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> vpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates;
     }
     /**
@@ -274,7 +275,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return VPN client root certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> getVpnClientRootCertificates() {
+    public Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> vpnClientRootCertificates() {
         return this.vpnClientRootCertificates;
     }
     /**
@@ -288,7 +289,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @return VPN protocols for the VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVpnProtocols() {
+    public Output</* @Nullable */ List<String>> vpnProtocols() {
         return this.vpnProtocols;
     }
 
@@ -314,7 +315,7 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnServerConfiguration(String name, VpnServerConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VpnServerConfiguration", name, args == null ? VpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VpnServerConfiguration", name, args == null ? VpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpnServerConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

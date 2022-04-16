@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudasset;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.ProjectFeedArgs;
 import io.pulumi.gcp.cloudasset.inputs.ProjectFeedState;
@@ -62,7 +63,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssetNames() {
+    public Output</* @Nullable */ List<String>> assetNames() {
         return this.assetNames;
     }
     /**
@@ -84,7 +85,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * supported asset types.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssetTypes() {
+    public Output</* @Nullable */ List<String>> assetTypes() {
         return this.assetTypes;
     }
     /**
@@ -104,7 +105,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * project will be used.
      * 
      */
-    public Output</* @Nullable */ String> getBillingProject() {
+    public Output</* @Nullable */ String> billingProject() {
         return this.billingProject;
     }
     /**
@@ -128,7 +129,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ProjectFeedCondition> getCondition() {
+    public Output</* @Nullable */ ProjectFeedCondition> condition() {
         return this.condition;
     }
     /**
@@ -144,7 +145,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -158,7 +159,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * @return This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
      * 
      */
-    public Output<String> getFeedId() {
+    public Output<String> feedId() {
         return this.feedId;
     }
     /**
@@ -174,7 +175,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ProjectFeedFeedOutputConfig> getFeedOutputConfig() {
+    public Output<ProjectFeedFeedOutputConfig> feedOutputConfig() {
         return this.feedOutputConfig;
     }
     /**
@@ -188,7 +189,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * @return The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -204,7 +205,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -230,7 +231,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectFeed(String name, ProjectFeedArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudasset/projectFeed:ProjectFeed", name, args == null ? ProjectFeedArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudasset/projectFeed:ProjectFeed", name, args == null ? ProjectFeedArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectFeed(String name, Output<String> id, @Nullable ProjectFeedState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

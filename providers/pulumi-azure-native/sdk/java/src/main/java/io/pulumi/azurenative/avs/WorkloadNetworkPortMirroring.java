@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return Destination VM Group.
      * 
      */
-    public Output</* @Nullable */ String> getDestination() {
+    public Output</* @Nullable */ String> destination() {
         return this.destination;
     }
     /**
@@ -56,7 +57,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return Direction of port mirroring profile.
      * 
      */
-    public Output</* @Nullable */ String> getDirection() {
+    public Output</* @Nullable */ String> direction() {
         return this.direction;
     }
     /**
@@ -70,7 +71,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return Display name of the port mirroring profile.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -84,7 +85,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return The provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -112,7 +113,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> getRevision() {
+    public Output</* @Nullable */ Double> revision() {
         return this.revision;
     }
     /**
@@ -126,7 +127,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return Source VM Group.
      * 
      */
-    public Output</* @Nullable */ String> getSource() {
+    public Output</* @Nullable */ String> source() {
         return this.source;
     }
     /**
@@ -140,7 +141,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return Port Mirroring Status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -154,7 +155,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -180,7 +181,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkloadNetworkPortMirroring(String name, WorkloadNetworkPortMirroringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:avs:WorkloadNetworkPortMirroring", name, args == null ? WorkloadNetworkPortMirroringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:avs:WorkloadNetworkPortMirroring", name, args == null ? WorkloadNetworkPortMirroringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkloadNetworkPortMirroring(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

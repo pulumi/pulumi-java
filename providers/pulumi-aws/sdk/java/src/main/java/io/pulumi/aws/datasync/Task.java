@@ -12,6 +12,7 @@ import io.pulumi.aws.datasync.outputs.TaskSchedule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DataSync Task.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
      * 
      */
-    public Output</* @Nullable */ String> getCloudwatchLogGroupArn() {
+    public Output</* @Nullable */ String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
     /**
@@ -71,7 +72,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of destination DataSync Location.
      * 
      */
-    public Output<String> getDestinationLocationArn() {
+    public Output<String> destinationLocationArn() {
         return this.destinationLocationArn;
     }
     /**
@@ -85,7 +86,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Filter rules that determines which files to exclude from a task.
      * 
      */
-    public Output</* @Nullable */ TaskExcludes> getExcludes() {
+    public Output</* @Nullable */ TaskExcludes> excludes() {
         return this.excludes;
     }
     /**
@@ -99,7 +100,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Name of the DataSync Task.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
      * 
      */
-    public Output</* @Nullable */ TaskOptions> getOptions() {
+    public Output</* @Nullable */ TaskOptions> options() {
         return this.options;
     }
     /**
@@ -127,7 +128,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Specifies a schedule used to periodically transfer files from a source to a destination location.
      * 
      */
-    public Output</* @Nullable */ TaskSchedule> getSchedule() {
+    public Output</* @Nullable */ TaskSchedule> schedule() {
         return this.schedule;
     }
     /**
@@ -141,7 +142,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of source DataSync Location.
      * 
      */
-    public Output<String> getSourceLocationArn() {
+    public Output<String> sourceLocationArn() {
         return this.sourceLocationArn;
     }
     /**
@@ -155,7 +156,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Task. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -195,7 +196,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Task(String name, TaskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/task:Task", name, args == null ? TaskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:datasync/task:Task", name, args == null ? TaskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Task(String name, Output<String> id, @Nullable TaskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

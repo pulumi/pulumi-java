@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -56,7 +57,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return KeyVault location details of the certificate.
      * 
      */
-    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> getKeyVault() {
+    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault() {
         return this.keyVault;
     }
     /**
@@ -70,7 +71,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Subject attribute of the certificate.
      * 
      */
-    public Output<String> getSubject() {
+    public Output<String> subject() {
         return this.subject;
     }
     /**
@@ -98,7 +99,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Thumbprint of the certificate.
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -112,7 +113,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +139,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Certificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

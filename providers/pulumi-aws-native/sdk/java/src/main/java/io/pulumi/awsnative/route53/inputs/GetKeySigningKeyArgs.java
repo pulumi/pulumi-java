@@ -19,7 +19,7 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="hostedZoneId", required=true)
       private final String hostedZoneId;
 
-    public String getHostedZoneId() {
+    public String hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -30,7 +30,7 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

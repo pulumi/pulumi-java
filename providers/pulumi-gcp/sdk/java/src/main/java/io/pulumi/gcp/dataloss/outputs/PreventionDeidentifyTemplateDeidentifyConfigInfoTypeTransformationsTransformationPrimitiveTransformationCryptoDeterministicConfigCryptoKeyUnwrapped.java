@@ -26,7 +26,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * A base64-encoded string.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

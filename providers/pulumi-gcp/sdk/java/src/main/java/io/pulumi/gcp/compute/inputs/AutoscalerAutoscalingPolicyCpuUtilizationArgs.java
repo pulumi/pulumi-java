@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
     @Import(name="predictiveMethod")
       private final @Nullable Output<String> predictiveMethod;
 
-    public Output<String> getPredictiveMethod() {
-        return this.predictiveMethod == null ? Output.empty() : this.predictiveMethod;
+    public Output<String> predictiveMethod() {
+        return this.predictiveMethod == null ? Codegen.empty() : this.predictiveMethod;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
     @Import(name="target", required=true)
       private final Output<Double> target;
 
-    public Output<Double> getTarget() {
+    public Output<Double> target() {
         return this.target;
     }
 
@@ -49,8 +50,8 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
     }
 
     private AutoscalerAutoscalingPolicyCpuUtilizationArgs() {
-        this.predictiveMethod = Output.empty();
-        this.target = Output.empty();
+        this.predictiveMethod = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
             return this;
         }
         public Builder predictiveMethod(@Nullable String predictiveMethod) {
-            this.predictiveMethod = Output.ofNullable(predictiveMethod);
+            this.predictiveMethod = Codegen.ofNullable(predictiveMethod);
             return this;
         }
         public Builder target(Output<Double> target) {

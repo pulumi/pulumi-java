@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionHealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.RegionHealthCheckState;
@@ -77,7 +78,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getCheckIntervalSec() {
+    public Output</* @Nullable */ Integer> checkIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
@@ -91,7 +92,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -107,7 +108,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -123,7 +124,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckGrpcHealthCheck> getGrpcHealthCheck() {
+    public Output</* @Nullable */ RegionHealthCheckGrpcHealthCheck> grpcHealthCheck() {
         return this.grpcHealthCheck;
     }
     /**
@@ -139,7 +140,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive successes. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getHealthyThreshold() {
+    public Output</* @Nullable */ Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
     /**
@@ -155,7 +156,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckHttp2HealthCheck> getHttp2HealthCheck() {
+    public Output</* @Nullable */ RegionHealthCheckHttp2HealthCheck> http2HealthCheck() {
         return this.http2HealthCheck;
     }
     /**
@@ -171,7 +172,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckHttpHealthCheck> getHttpHealthCheck() {
+    public Output</* @Nullable */ RegionHealthCheckHttpHealthCheck> httpHealthCheck() {
         return this.httpHealthCheck;
     }
     /**
@@ -187,7 +188,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckHttpsHealthCheck> getHttpsHealthCheck() {
+    public Output</* @Nullable */ RegionHealthCheckHttpsHealthCheck> httpsHealthCheck() {
         return this.httpsHealthCheck;
     }
     /**
@@ -203,7 +204,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<RegionHealthCheckLogConfig> getLogConfig() {
+    public Output<RegionHealthCheckLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -229,7 +230,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -245,7 +246,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -261,7 +262,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -275,7 +276,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -291,7 +292,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckSslHealthCheck> getSslHealthCheck() {
+    public Output</* @Nullable */ RegionHealthCheckSslHealthCheck> sslHealthCheck() {
         return this.sslHealthCheck;
     }
     /**
@@ -307,7 +308,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckTcpHealthCheck> getTcpHealthCheck() {
+    public Output</* @Nullable */ RegionHealthCheckTcpHealthCheck> tcpHealthCheck() {
         return this.tcpHealthCheck;
     }
     /**
@@ -325,7 +326,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * greater value than checkIntervalSec.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeoutSec() {
+    public Output</* @Nullable */ Integer> timeoutSec() {
         return this.timeoutSec;
     }
     /**
@@ -339,7 +340,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -355,7 +356,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive failures. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getUnhealthyThreshold() {
+    public Output</* @Nullable */ Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
@@ -381,7 +382,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionHealthCheck(String name, @Nullable RegionHealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionHealthCheck:RegionHealthCheck", name, args == null ? RegionHealthCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionHealthCheck:RegionHealthCheck", name, args == null ? RegionHealthCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionHealthCheck(String name, Output<String> id, @Nullable RegionHealthCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

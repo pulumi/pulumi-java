@@ -24,28 +24,28 @@ public final class StudioComponentConfiguration extends io.pulumi.resources.Invo
     @Import(name="activeDirectoryConfiguration")
       private final @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
 
-    public Optional<StudioComponentActiveDirectoryConfiguration> getActiveDirectoryConfiguration() {
+    public Optional<StudioComponentActiveDirectoryConfiguration> activeDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryConfiguration);
     }
 
     @Import(name="computeFarmConfiguration")
       private final @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
 
-    public Optional<StudioComponentComputeFarmConfiguration> getComputeFarmConfiguration() {
+    public Optional<StudioComponentComputeFarmConfiguration> computeFarmConfiguration() {
         return this.computeFarmConfiguration == null ? Optional.empty() : Optional.ofNullable(this.computeFarmConfiguration);
     }
 
     @Import(name="licenseServiceConfiguration")
       private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
 
-    public Optional<StudioComponentLicenseServiceConfiguration> getLicenseServiceConfiguration() {
+    public Optional<StudioComponentLicenseServiceConfiguration> licenseServiceConfiguration() {
         return this.licenseServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.licenseServiceConfiguration);
     }
 
     @Import(name="sharedFileSystemConfiguration")
       private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
 
-    public Optional<StudioComponentSharedFileSystemConfiguration> getSharedFileSystemConfiguration() {
+    public Optional<StudioComponentSharedFileSystemConfiguration> sharedFileSystemConfiguration() {
         return this.sharedFileSystemConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedFileSystemConfiguration);
     }
 

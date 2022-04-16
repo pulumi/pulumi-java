@@ -11,6 +11,7 @@ import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return The ARN of the PackagingGroup.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return CDN Authorization
      * 
      */
-    public Output</* @Nullable */ PackagingGroupAuthorization> getAuthorization() {
+    public Output</* @Nullable */ PackagingGroupAuthorization> authorization() {
         return this.authorization;
     }
     /**
@@ -60,7 +61,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name for Assets in the PackagingGroup.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -74,7 +75,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ PackagingGroupLogConfiguration> getEgressAccessLogs() {
+    public Output</* @Nullable */ PackagingGroupLogConfiguration> egressAccessLogs() {
         return this.egressAccessLogs;
     }
     /**
@@ -88,7 +89,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<PackagingGroupTag>> getTags() {
+    public Output</* @Nullable */ List<PackagingGroupTag>> tags() {
         return this.tags;
     }
 
@@ -114,7 +115,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PackagingGroup(String name, @Nullable PackagingGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediapackage:PackagingGroup", name, args == null ? PackagingGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediapackage:PackagingGroup", name, args == null ? PackagingGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PackagingGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

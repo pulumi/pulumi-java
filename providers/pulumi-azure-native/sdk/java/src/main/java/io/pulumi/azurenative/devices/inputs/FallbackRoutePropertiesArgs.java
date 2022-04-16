@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.RoutingSource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<String> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="endpointNames", required=true)
       private final Output<List<String>> endpointNames;
 
-    public Output<List<String>> getEndpointNames() {
+    public Output<List<String>> endpointNames() {
         return this.endpointNames;
     }
 
@@ -51,7 +52,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -62,8 +63,8 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="source", required=true)
       private final Output<Either<String,RoutingSource>> source;
 
-    public Output<Either<String,RoutingSource>> getSource() {
+    public Output<Either<String,RoutingSource>> source() {
         return this.source;
     }
 
@@ -91,11 +92,11 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private FallbackRoutePropertiesArgs() {
-        this.condition = Output.empty();
-        this.endpointNames = Output.empty();
-        this.isEnabled = Output.empty();
-        this.name = Output.empty();
-        this.source = Output.empty();
+        this.condition = Codegen.empty();
+        this.endpointNames = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder endpointNames(Output<List<String>> endpointNames) {
@@ -158,7 +159,7 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder source(Output<Either<String,RoutingSource>> source) {

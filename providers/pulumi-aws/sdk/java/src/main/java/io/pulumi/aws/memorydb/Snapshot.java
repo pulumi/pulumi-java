@@ -10,6 +10,7 @@ import io.pulumi.aws.memorydb.outputs.SnapshotClusterConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The ARN of the snapshot.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The configuration of the cluster from which the snapshot was taken.
      * 
      */
-    public Output<List<SnapshotClusterConfiguration>> getClusterConfigurations() {
+    public Output<List<SnapshotClusterConfiguration>> clusterConfigurations() {
         return this.clusterConfigurations;
     }
     /**
@@ -72,7 +73,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Name of the MemoryDB cluster to take a snapshot of.
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -86,7 +87,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return ARN of the KMS key used to encrypt the snapshot at rest.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyArn() {
+    public Output</* @Nullable */ String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -100,7 +101,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Name of the cluster.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -128,7 +129,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the snapshot is from an automatic backup (`automated`) or was created manually (`manual`).
      * 
      */
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
     /**
@@ -142,7 +143,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -182,7 +183,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:memorydb/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:memorydb/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Snapshot(String name, Output<String> id, @Nullable SnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

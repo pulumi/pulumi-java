@@ -11,6 +11,7 @@ import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @return The associations with the event integration.
      * 
      */
-    public Output<List<EventIntegrationAssociation>> getAssociations() {
+    public Output<List<EventIntegrationAssociation>> associations() {
         return this.associations;
     }
     /**
@@ -46,7 +47,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @return The event integration description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @return The Amazon Eventbridge bus for the event integration.
      * 
      */
-    public Output<String> getEventBridgeBus() {
+    public Output<String> eventBridgeBus() {
         return this.eventBridgeBus;
     }
     /**
@@ -74,7 +75,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @return The EventFilter (source) associated with the event integration.
      * 
      */
-    public Output<EventIntegrationEventFilter> getEventFilter() {
+    public Output<EventIntegrationEventFilter> eventFilter() {
         return this.eventFilter;
     }
     /**
@@ -88,7 +89,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the event integration.
      * 
      */
-    public Output<String> getEventIntegrationArn() {
+    public Output<String> eventIntegrationArn() {
         return this.eventIntegrationArn;
     }
     /**
@@ -102,7 +103,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @return The name of the event integration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the event integration.
      * 
      */
-    public Output</* @Nullable */ List<EventIntegrationTag>> getTags() {
+    public Output</* @Nullable */ List<EventIntegrationTag>> tags() {
         return this.tags;
     }
 
@@ -142,7 +143,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventIntegration(String name, EventIntegrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appintegrations:EventIntegration", name, args == null ? EventIntegrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:appintegrations:EventIntegration", name, args == null ? EventIntegrationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventIntegration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

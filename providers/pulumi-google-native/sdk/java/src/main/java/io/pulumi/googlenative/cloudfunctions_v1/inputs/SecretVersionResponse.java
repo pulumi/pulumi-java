@@ -23,7 +23,7 @@ public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -34,7 +34,7 @@ public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

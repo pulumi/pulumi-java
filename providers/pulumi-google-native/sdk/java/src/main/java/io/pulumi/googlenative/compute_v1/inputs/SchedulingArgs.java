@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.SchedulingInstanceTerminationAction;
 import io.pulumi.googlenative.compute_v1.enums.SchedulingOnHostMaintenance;
 import io.pulumi.googlenative.compute_v1.enums.SchedulingProvisioningModel;
@@ -32,8 +33,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> getAutomaticRestart() {
-        return this.automaticRestart == null ? Output.empty() : this.automaticRestart;
+    public Output<Boolean> automaticRestart() {
+        return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceTerminationAction")
       private final @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
 
-    public Output<SchedulingInstanceTerminationAction> getInstanceTerminationAction() {
-        return this.instanceTerminationAction == null ? Output.empty() : this.instanceTerminationAction;
+    public Output<SchedulingInstanceTerminationAction> instanceTerminationAction() {
+        return this.instanceTerminationAction == null ? Codegen.empty() : this.instanceTerminationAction;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
-    public Output<String> getLocationHint() {
-        return this.locationHint == null ? Output.empty() : this.locationHint;
+    public Output<String> locationHint() {
+        return this.locationHint == null ? Codegen.empty() : this.locationHint;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> getMinNodeCpus() {
-        return this.minNodeCpus == null ? Output.empty() : this.minNodeCpus;
+    public Output<Integer> minNodeCpus() {
+        return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeAffinities")
       private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
-        return this.nodeAffinities == null ? Output.empty() : this.nodeAffinities;
+    public Output<List<SchedulingNodeAffinityArgs>> nodeAffinities() {
+        return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onHostMaintenance")
       private final @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
 
-    public Output<SchedulingOnHostMaintenance> getOnHostMaintenance() {
-        return this.onHostMaintenance == null ? Output.empty() : this.onHostMaintenance;
+    public Output<SchedulingOnHostMaintenance> onHostMaintenance() {
+        return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
-        return this.preemptible == null ? Output.empty() : this.preemptible;
+    public Output<Boolean> preemptible() {
+        return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningModel")
       private final @Nullable Output<SchedulingProvisioningModel> provisioningModel;
 
-    public Output<SchedulingProvisioningModel> getProvisioningModel() {
-        return this.provisioningModel == null ? Output.empty() : this.provisioningModel;
+    public Output<SchedulingProvisioningModel> provisioningModel() {
+        return this.provisioningModel == null ? Codegen.empty() : this.provisioningModel;
     }
 
     public SchedulingArgs(
@@ -133,14 +134,14 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchedulingArgs() {
-        this.automaticRestart = Output.empty();
-        this.instanceTerminationAction = Output.empty();
-        this.locationHint = Output.empty();
-        this.minNodeCpus = Output.empty();
-        this.nodeAffinities = Output.empty();
-        this.onHostMaintenance = Output.empty();
-        this.preemptible = Output.empty();
-        this.provisioningModel = Output.empty();
+        this.automaticRestart = Codegen.empty();
+        this.instanceTerminationAction = Codegen.empty();
+        this.locationHint = Codegen.empty();
+        this.minNodeCpus = Codegen.empty();
+        this.nodeAffinities = Codegen.empty();
+        this.onHostMaintenance = Codegen.empty();
+        this.preemptible = Codegen.empty();
+        this.provisioningModel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
-            this.automaticRestart = Output.ofNullable(automaticRestart);
+            this.automaticRestart = Codegen.ofNullable(automaticRestart);
             return this;
         }
         public Builder instanceTerminationAction(@Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction) {
@@ -190,7 +191,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceTerminationAction(@Nullable SchedulingInstanceTerminationAction instanceTerminationAction) {
-            this.instanceTerminationAction = Output.ofNullable(instanceTerminationAction);
+            this.instanceTerminationAction = Codegen.ofNullable(instanceTerminationAction);
             return this;
         }
         public Builder locationHint(@Nullable Output<String> locationHint) {
@@ -198,7 +199,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Output.ofNullable(locationHint);
+            this.locationHint = Codegen.ofNullable(locationHint);
             return this;
         }
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
@@ -206,7 +207,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
-            this.minNodeCpus = Output.ofNullable(minNodeCpus);
+            this.minNodeCpus = Codegen.ofNullable(minNodeCpus);
             return this;
         }
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
@@ -214,7 +215,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
-            this.nodeAffinities = Output.ofNullable(nodeAffinities);
+            this.nodeAffinities = Codegen.ofNullable(nodeAffinities);
             return this;
         }
         public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
@@ -225,7 +226,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onHostMaintenance(@Nullable SchedulingOnHostMaintenance onHostMaintenance) {
-            this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
+            this.onHostMaintenance = Codegen.ofNullable(onHostMaintenance);
             return this;
         }
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
@@ -233,7 +234,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Output.ofNullable(preemptible);
+            this.preemptible = Codegen.ofNullable(preemptible);
             return this;
         }
         public Builder provisioningModel(@Nullable Output<SchedulingProvisioningModel> provisioningModel) {
@@ -241,7 +242,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningModel(@Nullable SchedulingProvisioningModel provisioningModel) {
-            this.provisioningModel = Output.ofNullable(provisioningModel);
+            this.provisioningModel = Codegen.ofNullable(provisioningModel);
             return this;
         }        public SchedulingArgs build() {
             return new SchedulingArgs(automaticRestart, instanceTerminationAction, locationHint, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);

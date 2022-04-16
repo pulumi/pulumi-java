@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsUri")
       private final @Nullable Output<String> gcsUri;
 
-    public Output<String> getGcsUri() {
-        return this.gcsUri == null ? Output.empty() : this.gcsUri;
+    public Output<String> gcsUri() {
+        return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawBytes")
       private final @Nullable Output<String> rawBytes;
 
-    public Output<String> getRawBytes() {
-        return this.rawBytes == null ? Output.empty() : this.rawBytes;
+    public Output<String> rawBytes() {
+        return this.rawBytes == null ? Codegen.empty() : this.rawBytes;
     }
 
     public ImageArgs(
@@ -48,8 +49,8 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.gcsUri = Output.empty();
-        this.rawBytes = Output.empty();
+        this.gcsUri = Codegen.empty();
+        this.rawBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Output.ofNullable(gcsUri);
+            this.gcsUri = Codegen.ofNullable(gcsUri);
             return this;
         }
         public Builder rawBytes(@Nullable Output<String> rawBytes) {
@@ -87,7 +88,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rawBytes(@Nullable String rawBytes) {
-            this.rawBytes = Output.ofNullable(rawBytes);
+            this.rawBytes = Codegen.ofNullable(rawBytes);
             return this;
         }        public ImageArgs build() {
             return new ImageArgs(gcsUri, rawBytes);

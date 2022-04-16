@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ResourcePolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyState;
@@ -54,7 +55,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +71,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ResourcePolicyGroupPlacementPolicy> getGroupPlacementPolicy() {
+    public Output</* @Nullable */ ResourcePolicyGroupPlacementPolicy> groupPlacementPolicy() {
         return this.groupPlacementPolicy;
     }
     /**
@@ -86,7 +87,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ResourcePolicyInstanceSchedulePolicy> getInstanceSchedulePolicy() {
+    public Output</* @Nullable */ ResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
     /**
@@ -112,7 +113,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -142,7 +143,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Region where resource policy resides.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -156,7 +157,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -172,7 +173,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ResourcePolicySnapshotSchedulePolicy> getSnapshotSchedulePolicy() {
+    public Output</* @Nullable */ ResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicy() {
         return this.snapshotSchedulePolicy;
     }
 
@@ -198,7 +199,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourcePolicy(String name, @Nullable ResourcePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/resourcePolicy:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/resourcePolicy:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourcePolicy(String name, Output<String> id, @Nullable ResourcePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,15 +26,15 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="networkInterface")
       private final @Nullable Output<String> networkInterface;
 
-    public Output<String> getNetworkInterface() {
-        return this.networkInterface == null ? Output.empty() : this.networkInterface;
+    public Output<String> networkInterface() {
+        return this.networkInterface == null ? Codegen.empty() : this.networkInterface;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     @Import(name="virtualMachine")
       private final @Nullable Output<String> virtualMachine;
 
-    public Output<String> getVirtualMachine() {
-        return this.virtualMachine == null ? Output.empty() : this.virtualMachine;
+    public Output<String> virtualMachine() {
+        return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
     }
 
     public RouterApplianceInstanceArgs(
@@ -57,9 +58,9 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     }
 
     private RouterApplianceInstanceArgs() {
-        this.ipAddress = Output.empty();
-        this.networkInterface = Output.empty();
-        this.virtualMachine = Output.empty();
+        this.ipAddress = Codegen.empty();
+        this.networkInterface = Codegen.empty();
+        this.virtualMachine = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder networkInterface(@Nullable Output<String> networkInterface) {
@@ -99,7 +100,7 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder networkInterface(@Nullable String networkInterface) {
-            this.networkInterface = Output.ofNullable(networkInterface);
+            this.networkInterface = Codegen.ofNullable(networkInterface);
             return this;
         }
         public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
@@ -107,7 +108,7 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder virtualMachine(@Nullable String virtualMachine) {
-            this.virtualMachine = Output.ofNullable(virtualMachine);
+            this.virtualMachine = Codegen.ofNullable(virtualMachine);
             return this;
         }        public RouterApplianceInstanceArgs build() {
             return new RouterApplianceInstanceArgs(ipAddress, networkInterface, virtualMachine);

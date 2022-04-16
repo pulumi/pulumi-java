@@ -7,6 +7,7 @@ import io.pulumi.awsnative.appstream.inputs.ApplicationS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,85 +21,85 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appBlockArn", required=true)
       private final Output<String> appBlockArn;
 
-    public Output<String> getAppBlockArn() {
+    public Output<String> appBlockArn() {
         return this.appBlockArn;
     }
 
     @Import(name="attributesToDelete")
       private final @Nullable Output<List<String>> attributesToDelete;
 
-    public Output<List<String>> getAttributesToDelete() {
-        return this.attributesToDelete == null ? Output.empty() : this.attributesToDelete;
+    public Output<List<String>> attributesToDelete() {
+        return this.attributesToDelete == null ? Codegen.empty() : this.attributesToDelete;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="iconS3Location", required=true)
       private final Output<ApplicationS3LocationArgs> iconS3Location;
 
-    public Output<ApplicationS3LocationArgs> getIconS3Location() {
+    public Output<ApplicationS3LocationArgs> iconS3Location() {
         return this.iconS3Location;
     }
 
     @Import(name="instanceFamilies", required=true)
       private final Output<List<String>> instanceFamilies;
 
-    public Output<List<String>> getInstanceFamilies() {
+    public Output<List<String>> instanceFamilies() {
         return this.instanceFamilies;
     }
 
     @Import(name="launchParameters")
       private final @Nullable Output<String> launchParameters;
 
-    public Output<String> getLaunchParameters() {
-        return this.launchParameters == null ? Output.empty() : this.launchParameters;
+    public Output<String> launchParameters() {
+        return this.launchParameters == null ? Codegen.empty() : this.launchParameters;
     }
 
     @Import(name="launchPath", required=true)
       private final Output<String> launchPath;
 
-    public Output<String> getLaunchPath() {
+    public Output<String> launchPath() {
         return this.launchPath;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="platforms", required=true)
       private final Output<List<String>> platforms;
 
-    public Output<List<String>> getPlatforms() {
+    public Output<List<String>> platforms() {
         return this.platforms;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ApplicationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
-    public Output<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
+    public Output<String> workingDirectory() {
+        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 
     public ApplicationArgs(
@@ -129,18 +130,18 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.appBlockArn = Output.empty();
-        this.attributesToDelete = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.iconS3Location = Output.empty();
-        this.instanceFamilies = Output.empty();
-        this.launchParameters = Output.empty();
-        this.launchPath = Output.empty();
-        this.name = Output.empty();
-        this.platforms = Output.empty();
-        this.tags = Output.empty();
-        this.workingDirectory = Output.empty();
+        this.appBlockArn = Codegen.empty();
+        this.attributesToDelete = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.iconS3Location = Codegen.empty();
+        this.instanceFamilies = Codegen.empty();
+        this.launchParameters = Codegen.empty();
+        this.launchPath = Codegen.empty();
+        this.name = Codegen.empty();
+        this.platforms = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workingDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributesToDelete(@Nullable List<String> attributesToDelete) {
-            this.attributesToDelete = Output.ofNullable(attributesToDelete);
+            this.attributesToDelete = Codegen.ofNullable(attributesToDelete);
             return this;
         }
         public Builder attributesToDelete(String... attributesToDelete) {
@@ -209,7 +210,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -217,7 +218,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder iconS3Location(Output<ApplicationS3LocationArgs> iconS3Location) {
@@ -244,7 +245,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchParameters(@Nullable String launchParameters) {
-            this.launchParameters = Output.ofNullable(launchParameters);
+            this.launchParameters = Codegen.ofNullable(launchParameters);
             return this;
         }
         public Builder launchPath(Output<String> launchPath) {
@@ -260,7 +261,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder platforms(Output<List<String>> platforms) {
@@ -279,7 +280,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ApplicationTagArgs... tags) {
@@ -290,7 +291,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Output.ofNullable(workingDirectory);
+            this.workingDirectory = Codegen.ofNullable(workingDirectory);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(appBlockArn, attributesToDelete, description, displayName, iconS3Location, instanceFamilies, launchParameters, launchPath, name, platforms, tags, workingDirectory);

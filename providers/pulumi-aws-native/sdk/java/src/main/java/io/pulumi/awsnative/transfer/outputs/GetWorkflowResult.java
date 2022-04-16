@@ -43,21 +43,21 @@ public final class GetWorkflowResult {
      * Specifies the unique Amazon Resource Name (ARN) for the workflow.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
     */
-    public List<WorkflowTag> getTags() {
+    public List<WorkflowTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A unique identifier for the workflow.
      * 
     */
-    public Optional<String> getWorkflowId() {
+    public Optional<String> workflowId() {
         return Optional.ofNullable(this.workflowId);
     }
 

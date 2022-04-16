@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseIAMBindingArgs;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMBindingState;
@@ -64,7 +65,7 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatabaseIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ DatabaseIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ DatabaseIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ DatabaseIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -78,7 +79,7 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner database.
      * 
      */
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
     /**
@@ -92,7 +93,7 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the database's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -106,13 +107,13 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner instance the database belongs to.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -128,7 +129,7 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -146,7 +147,7 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -172,7 +173,7 @@ public class DatabaseIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabaseIAMBinding(String name, DatabaseIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/databaseIAMBinding:DatabaseIAMBinding", name, args == null ? DatabaseIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/databaseIAMBinding:DatabaseIAMBinding", name, args == null ? DatabaseIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatabaseIAMBinding(String name, Output<String> id, @Nullable DatabaseIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

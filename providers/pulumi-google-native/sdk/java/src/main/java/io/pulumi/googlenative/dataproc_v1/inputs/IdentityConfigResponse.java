@@ -24,7 +24,7 @@ public final class IdentityConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="userServiceAccountMapping", required=true)
       private final Map<String,String> userServiceAccountMapping;
 
-    public Map<String,String> getUserServiceAccountMapping() {
+    public Map<String,String> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="attributeMapping")
       private final @Nullable Output<Map<String,String>> attributeMapping;
 
-    public Output<Map<String,String>> getAttributeMapping() {
-        return this.attributeMapping == null ? Output.empty() : this.attributeMapping;
+    public Output<Map<String,String>> attributeMapping() {
+        return this.attributeMapping == null ? Codegen.empty() : this.attributeMapping;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="idpIdentifiers")
       private final @Nullable Output<List<String>> idpIdentifiers;
 
-    public Output<List<String>> getIdpIdentifiers() {
-        return this.idpIdentifiers == null ? Output.empty() : this.idpIdentifiers;
+    public Output<List<String>> idpIdentifiers() {
+        return this.idpIdentifiers == null ? Codegen.empty() : this.idpIdentifiers;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="providerDetails")
       private final @Nullable Output<Map<String,String>> providerDetails;
 
-    public Output<Map<String,String>> getProviderDetails() {
-        return this.providerDetails == null ? Output.empty() : this.providerDetails;
+    public Output<Map<String,String>> providerDetails() {
+        return this.providerDetails == null ? Codegen.empty() : this.providerDetails;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+    public Output<String> providerName() {
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
-    public Output<String> getProviderType() {
-        return this.providerType == null ? Output.empty() : this.providerType;
+    public Output<String> providerType() {
+        return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
-        return this.userPoolId == null ? Output.empty() : this.userPoolId;
+    public Output<String> userPoolId() {
+        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
     }
 
     public IdentityProviderState(
@@ -98,12 +99,12 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     }
 
     private IdentityProviderState() {
-        this.attributeMapping = Output.empty();
-        this.idpIdentifiers = Output.empty();
-        this.providerDetails = Output.empty();
-        this.providerName = Output.empty();
-        this.providerType = Output.empty();
-        this.userPoolId = Output.empty();
+        this.attributeMapping = Codegen.empty();
+        this.idpIdentifiers = Codegen.empty();
+        this.providerDetails = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Output.ofNullable(attributeMapping);
+            this.attributeMapping = Codegen.ofNullable(attributeMapping);
             return this;
         }
         public Builder idpIdentifiers(@Nullable Output<List<String>> idpIdentifiers) {
@@ -149,7 +150,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
-            this.idpIdentifiers = Output.ofNullable(idpIdentifiers);
+            this.idpIdentifiers = Codegen.ofNullable(idpIdentifiers);
             return this;
         }
         public Builder idpIdentifiers(String... idpIdentifiers) {
@@ -160,7 +161,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder providerDetails(@Nullable Map<String,String> providerDetails) {
-            this.providerDetails = Output.ofNullable(providerDetails);
+            this.providerDetails = Codegen.ofNullable(providerDetails);
             return this;
         }
         public Builder providerName(@Nullable Output<String> providerName) {
@@ -168,7 +169,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder providerType(@Nullable Output<String> providerType) {
@@ -176,7 +177,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Output.ofNullable(providerType);
+            this.providerType = Codegen.ofNullable(providerType);
             return this;
         }
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
@@ -184,7 +185,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Output.ofNullable(userPoolId);
+            this.userPoolId = Codegen.ofNullable(userPoolId);
             return this;
         }        public IdentityProviderState build() {
             return new IdentityProviderState(attributeMapping, idpIdentifiers, providerDetails, providerName, providerType, userPoolId);

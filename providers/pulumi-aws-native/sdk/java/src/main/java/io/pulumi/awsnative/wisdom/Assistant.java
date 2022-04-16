@@ -11,6 +11,7 @@ import io.pulumi.awsnative.wisdom.outputs.AssistantTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -24,43 +25,43 @@ public class Assistant extends io.pulumi.resources.CustomResource {
     @Export(name="assistantArn", type=String.class, parameters={})
     private Output<String> assistantArn;
 
-    public Output<String> getAssistantArn() {
+    public Output<String> assistantArn() {
         return this.assistantArn;
     }
     @Export(name="assistantId", type=String.class, parameters={})
     private Output<String> assistantId;
 
-    public Output<String> getAssistantId() {
+    public Output<String> assistantId() {
         return this.assistantId;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="serverSideEncryptionConfiguration", type=AssistantServerSideEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> serverSideEncryptionConfiguration;
 
-    public Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
+    public Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
     @Export(name="tags", type=List.class, parameters={AssistantTag.class})
     private Output</* @Nullable */ List<AssistantTag>> tags;
 
-    public Output</* @Nullable */ List<AssistantTag>> getTags() {
+    public Output</* @Nullable */ List<AssistantTag>> tags() {
         return this.tags;
     }
     @Export(name="type", type=AssistantType.class, parameters={})
     private Output<AssistantType> type;
 
-    public Output<AssistantType> getType() {
+    public Output<AssistantType> type() {
         return this.type;
     }
 
@@ -86,7 +87,7 @@ public class Assistant extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Assistant(String name, AssistantArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:wisdom:Assistant", name, args == null ? AssistantArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:wisdom:Assistant", name, args == null ? AssistantArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Assistant(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

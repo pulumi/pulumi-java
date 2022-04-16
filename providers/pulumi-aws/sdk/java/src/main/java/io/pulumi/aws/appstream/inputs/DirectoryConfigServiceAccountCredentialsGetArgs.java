@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -31,7 +32,7 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
     @Import(name="accountPassword", required=true)
       private final Output<String> accountPassword;
 
-    public Output<String> getAccountPassword() {
+    public Output<String> accountPassword() {
         return this.accountPassword;
     }
 
@@ -43,8 +44,8 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
     }
 
     private DirectoryConfigServiceAccountCredentialsGetArgs() {
-        this.accountName = Output.empty();
-        this.accountPassword = Output.empty();
+        this.accountName = Codegen.empty();
+        this.accountPassword = Codegen.empty();
     }
 
     public static Builder builder() {

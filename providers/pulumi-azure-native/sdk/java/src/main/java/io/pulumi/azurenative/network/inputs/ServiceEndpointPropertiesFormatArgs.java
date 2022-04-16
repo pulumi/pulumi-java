@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+    public Output<List<String>> locations() {
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public ServiceEndpointPropertiesFormatArgs(
@@ -49,8 +50,8 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
     }
 
     private ServiceEndpointPropertiesFormatArgs() {
-        this.locations = Output.empty();
-        this.service = Output.empty();
+        this.locations = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -91,7 +92,7 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public ServiceEndpointPropertiesFormatArgs build() {
             return new ServiceEndpointPropertiesFormatArgs(locations, service);

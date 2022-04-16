@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.enums.InternalCheckerState;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="gcpZone")
       private final @Nullable Output<String> gcpZone;
 
-    public Output<String> getGcpZone() {
-        return this.gcpZone == null ? Output.empty() : this.gcpZone;
+    public Output<String> gcpZone() {
+        return this.gcpZone == null ? Codegen.empty() : this.gcpZone;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="peerProjectId")
       private final @Nullable Output<String> peerProjectId;
 
-    public Output<String> getPeerProjectId() {
-        return this.peerProjectId == null ? Output.empty() : this.peerProjectId;
+    public Output<String> peerProjectId() {
+        return this.peerProjectId == null ? Codegen.empty() : this.peerProjectId;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="state")
       private final @Nullable Output<InternalCheckerState> state;
 
-    public Output<InternalCheckerState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<InternalCheckerState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public InternalCheckerArgs(
@@ -101,12 +102,12 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InternalCheckerArgs() {
-        this.displayName = Output.empty();
-        this.gcpZone = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.peerProjectId = Output.empty();
-        this.state = Output.empty();
+        this.displayName = Codegen.empty();
+        this.gcpZone = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.peerProjectId = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder gcpZone(@Nullable Output<String> gcpZone) {
@@ -152,7 +153,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder gcpZone(@Nullable String gcpZone) {
-            this.gcpZone = Output.ofNullable(gcpZone);
+            this.gcpZone = Codegen.ofNullable(gcpZone);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -160,7 +161,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -168,7 +169,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder peerProjectId(@Nullable Output<String> peerProjectId) {
@@ -176,7 +177,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder peerProjectId(@Nullable String peerProjectId) {
-            this.peerProjectId = Output.ofNullable(peerProjectId);
+            this.peerProjectId = Codegen.ofNullable(peerProjectId);
             return this;
         }
         public Builder state(@Nullable Output<InternalCheckerState> state) {
@@ -184,7 +185,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder state(@Nullable InternalCheckerState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public InternalCheckerArgs build() {
             return new InternalCheckerArgs(displayName, gcpZone, name, network, peerProjectId, state);

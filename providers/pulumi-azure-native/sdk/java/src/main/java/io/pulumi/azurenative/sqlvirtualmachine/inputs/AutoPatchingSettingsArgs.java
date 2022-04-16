@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.DayOfWeek;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="dayOfWeek")
       private final @Nullable Output<DayOfWeek> dayOfWeek;
 
-    public Output<DayOfWeek> getDayOfWeek() {
-        return this.dayOfWeek == null ? Output.empty() : this.dayOfWeek;
+    public Output<DayOfWeek> dayOfWeek() {
+        return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+    public Output<Boolean> enable() {
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="maintenanceWindowDuration")
       private final @Nullable Output<Integer> maintenanceWindowDuration;
 
-    public Output<Integer> getMaintenanceWindowDuration() {
-        return this.maintenanceWindowDuration == null ? Output.empty() : this.maintenanceWindowDuration;
+    public Output<Integer> maintenanceWindowDuration() {
+        return this.maintenanceWindowDuration == null ? Codegen.empty() : this.maintenanceWindowDuration;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="maintenanceWindowStartingHour")
       private final @Nullable Output<Integer> maintenanceWindowStartingHour;
 
-    public Output<Integer> getMaintenanceWindowStartingHour() {
-        return this.maintenanceWindowStartingHour == null ? Output.empty() : this.maintenanceWindowStartingHour;
+    public Output<Integer> maintenanceWindowStartingHour() {
+        return this.maintenanceWindowStartingHour == null ? Codegen.empty() : this.maintenanceWindowStartingHour;
     }
 
     public AutoPatchingSettingsArgs(
@@ -76,10 +77,10 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     }
 
     private AutoPatchingSettingsArgs() {
-        this.dayOfWeek = Output.empty();
-        this.enable = Output.empty();
-        this.maintenanceWindowDuration = Output.empty();
-        this.maintenanceWindowStartingHour = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.maintenanceWindowDuration = Codegen.empty();
+        this.maintenanceWindowStartingHour = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dayOfWeek(@Nullable DayOfWeek dayOfWeek) {
-            this.dayOfWeek = Output.ofNullable(dayOfWeek);
+            this.dayOfWeek = Codegen.ofNullable(dayOfWeek);
             return this;
         }
         public Builder enable(@Nullable Output<Boolean> enable) {
@@ -121,7 +122,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder maintenanceWindowDuration(@Nullable Output<Integer> maintenanceWindowDuration) {
@@ -129,7 +130,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
-            this.maintenanceWindowDuration = Output.ofNullable(maintenanceWindowDuration);
+            this.maintenanceWindowDuration = Codegen.ofNullable(maintenanceWindowDuration);
             return this;
         }
         public Builder maintenanceWindowStartingHour(@Nullable Output<Integer> maintenanceWindowStartingHour) {
@@ -137,7 +138,7 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
-            this.maintenanceWindowStartingHour = Output.ofNullable(maintenanceWindowStartingHour);
+            this.maintenanceWindowStartingHour = Codegen.ofNullable(maintenanceWindowStartingHour);
             return this;
         }        public AutoPatchingSettingsArgs build() {
             return new AutoPatchingSettingsArgs(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);

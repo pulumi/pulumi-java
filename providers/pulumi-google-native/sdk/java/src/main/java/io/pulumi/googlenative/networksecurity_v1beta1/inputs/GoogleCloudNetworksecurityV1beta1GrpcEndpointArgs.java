@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
     @Import(name="targetUri", required=true)
       private final Output<String> targetUri;
 
-    public Output<String> getTargetUri() {
+    public Output<String> targetUri() {
         return this.targetUri;
     }
 
@@ -33,7 +34,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs extends io.
     }
 
     private GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs() {
-        this.targetUri = Output.empty();
+        this.targetUri = Codegen.empty();
     }
 
     public static Builder builder() {

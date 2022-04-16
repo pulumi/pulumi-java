@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="cachingMode")
       private final @Nullable Output<String> cachingMode;
 
-    public Output<String> getCachingMode() {
-        return this.cachingMode == null ? Output.empty() : this.cachingMode;
+    public Output<String> cachingMode() {
+        return this.cachingMode == null ? Codegen.empty() : this.cachingMode;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="diskName", required=true)
       private final Output<String> diskName;
 
-    public Output<String> getDiskName() {
+    public Output<String> diskName() {
         return this.diskName;
     }
 
@@ -48,7 +49,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="diskURI", required=true)
       private final Output<String> diskURI;
 
-    public Output<String> getDiskURI() {
+    public Output<String> diskURI() {
         return this.diskURI;
     }
 
@@ -59,8 +60,8 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     public AzureDiskVolumeSourceArgs(
@@ -101,12 +102,12 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureDiskVolumeSourceArgs() {
-        this.cachingMode = Output.empty();
-        this.diskName = Output.empty();
-        this.diskURI = Output.empty();
-        this.fsType = Output.empty();
-        this.kind = Output.empty();
-        this.readOnly = Output.empty();
+        this.cachingMode = Codegen.empty();
+        this.diskName = Codegen.empty();
+        this.diskURI = Codegen.empty();
+        this.fsType = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.readOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cachingMode(@Nullable String cachingMode) {
-            this.cachingMode = Output.ofNullable(cachingMode);
+            this.cachingMode = Codegen.ofNullable(cachingMode);
             return this;
         }
         public Builder diskName(Output<String> diskName) {
@@ -168,7 +169,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -176,7 +177,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -184,7 +185,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }        public AzureDiskVolumeSourceArgs build() {
             return new AzureDiskVolumeSourceArgs(cachingMode, diskName, diskURI, fsType, kind, readOnly);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.CryptoKeyArgs;
 import io.pulumi.gcp.kms.inputs.CryptoKeyState;
@@ -62,7 +63,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * If not specified at creation time, the default duration is 24 hours.
      * 
      */
-    public Output<String> getDestroyScheduledDuration() {
+    public Output<String> destroyScheduledDuration() {
         return this.destroyScheduledDuration;
     }
     /**
@@ -76,7 +77,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return Whether this key may contain imported versions only.
      * 
      */
-    public Output<Boolean> getImportOnly() {
+    public Output<Boolean> importOnly() {
         return this.importOnly;
     }
     /**
@@ -92,7 +93,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
      * 
      */
-    public Output<String> getKeyRing() {
+    public Output<String> keyRing() {
         return this.keyRing;
     }
     /**
@@ -106,7 +107,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return Labels with user-defined metadata to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -120,7 +121,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return The resource name for the CryptoKey.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
      * 
      */
-    public Output</* @Nullable */ String> getPurpose() {
+    public Output</* @Nullable */ String> purpose() {
         return this.purpose;
     }
     /**
@@ -162,7 +163,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * letter `s` (seconds). It must be greater than a day (ie, 86400).
      * 
      */
-    public Output</* @Nullable */ String> getRotationPeriod() {
+    public Output</* @Nullable */ String> rotationPeriod() {
         return this.rotationPeriod;
     }
     /**
@@ -178,7 +179,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipInitialVersionCreation() {
+    public Output</* @Nullable */ Boolean> skipInitialVersionCreation() {
         return this.skipInitialVersionCreation;
     }
     /**
@@ -194,7 +195,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<CryptoKeyVersionTemplate> getVersionTemplate() {
+    public Output<CryptoKeyVersionTemplate> versionTemplate() {
         return this.versionTemplate;
     }
 
@@ -220,7 +221,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CryptoKey(String name, CryptoKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/cryptoKey:CryptoKey", name, args == null ? CryptoKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/cryptoKey:CryptoKey", name, args == null ? CryptoKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CryptoKey(String name, Output<String> id, @Nullable CryptoKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

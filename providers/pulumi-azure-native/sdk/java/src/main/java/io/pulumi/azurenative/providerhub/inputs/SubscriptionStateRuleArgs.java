@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.SubscriptionState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,15 +21,15 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedActions")
       private final @Nullable Output<List<String>> allowedActions;
 
-    public Output<List<String>> getAllowedActions() {
-        return this.allowedActions == null ? Output.empty() : this.allowedActions;
+    public Output<List<String>> allowedActions() {
+        return this.allowedActions == null ? Codegen.empty() : this.allowedActions;
     }
 
     @Import(name="state")
       private final @Nullable Output<Either<String,SubscriptionState>> state;
 
-    public Output<Either<String,SubscriptionState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,SubscriptionState>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public SubscriptionStateRuleArgs(
@@ -39,8 +40,8 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private SubscriptionStateRuleArgs() {
-        this.allowedActions = Output.empty();
-        this.state = Output.empty();
+        this.allowedActions = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -70,7 +71,7 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = Output.ofNullable(allowedActions);
+            this.allowedActions = Codegen.ofNullable(allowedActions);
             return this;
         }
         public Builder allowedActions(String... allowedActions) {
@@ -81,7 +82,7 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder state(@Nullable Either<String,SubscriptionState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public SubscriptionStateRuleArgs build() {
             return new SubscriptionStateRuleArgs(allowedActions, state);

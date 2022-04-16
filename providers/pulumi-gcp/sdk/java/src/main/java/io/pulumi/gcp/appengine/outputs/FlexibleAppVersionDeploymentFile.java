@@ -41,21 +41,21 @@ public final class FlexibleAppVersionDeploymentFile {
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * SHA1 checksum of the file
      * 
     */
-    public Optional<String> getSha1Sum() {
+    public Optional<String> sha1Sum() {
         return Optional.ofNullable(this.sha1Sum);
     }
     /**
      * Source URL
      * 
     */
-    public String getSourceUrl() {
+    public String sourceUrl() {
         return this.sourceUrl;
     }
 

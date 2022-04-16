@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -37,7 +38,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataFormat", required=true)
       private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
-    public Output<Either<String,AzureContainerDataFormat>> getDataFormat() {
+    public Output<Either<String,AzureContainerDataFormat>> dataFormat() {
         return this.dataFormat;
     }
 
@@ -48,7 +49,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageAccountCredentialId", required=true)
       private final Output<String> storageAccountCredentialId;
 
-    public Output<String> getStorageAccountCredentialId() {
+    public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 
@@ -62,9 +63,9 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AzureContainerInfoArgs() {
-        this.containerName = Output.empty();
-        this.dataFormat = Output.empty();
-        this.storageAccountCredentialId = Output.empty();
+        this.containerName = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.storageAccountCredentialId = Codegen.empty();
     }
 
     public static Builder builder() {

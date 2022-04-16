@@ -9,6 +9,7 @@ import io.pulumi.awsnative.route53.inputs.HostedZoneTagArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneVPCArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneConfig")
       private final @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
 
-    public Output<HostedZoneConfigArgs> getHostedZoneConfig() {
-        return this.hostedZoneConfig == null ? Output.empty() : this.hostedZoneConfig;
+    public Output<HostedZoneConfigArgs> hostedZoneConfig() {
+        return this.hostedZoneConfig == null ? Codegen.empty() : this.hostedZoneConfig;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneTags")
       private final @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
 
-    public Output<List<HostedZoneTagArgs>> getHostedZoneTags() {
-        return this.hostedZoneTags == null ? Output.empty() : this.hostedZoneTags;
+    public Output<List<HostedZoneTagArgs>> hostedZoneTags() {
+        return this.hostedZoneTags == null ? Codegen.empty() : this.hostedZoneTags;
     }
 
     /**
@@ -48,15 +49,15 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="queryLoggingConfig")
       private final @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
 
-    public Output<HostedZoneQueryLoggingConfigArgs> getQueryLoggingConfig() {
-        return this.queryLoggingConfig == null ? Output.empty() : this.queryLoggingConfig;
+    public Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig() {
+        return this.queryLoggingConfig == null ? Codegen.empty() : this.queryLoggingConfig;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vPCs")
       private final @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
 
-    public Output<List<HostedZoneVPCArgs>> getVPCs() {
-        return this.vPCs == null ? Output.empty() : this.vPCs;
+    public Output<List<HostedZoneVPCArgs>> vPCs() {
+        return this.vPCs == null ? Codegen.empty() : this.vPCs;
     }
 
     public HostedZoneArgs(
@@ -84,11 +85,11 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostedZoneArgs() {
-        this.hostedZoneConfig = Output.empty();
-        this.hostedZoneTags = Output.empty();
-        this.name = Output.empty();
-        this.queryLoggingConfig = Output.empty();
-        this.vPCs = Output.empty();
+        this.hostedZoneConfig = Codegen.empty();
+        this.hostedZoneTags = Codegen.empty();
+        this.name = Codegen.empty();
+        this.queryLoggingConfig = Codegen.empty();
+        this.vPCs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostedZoneConfig(@Nullable HostedZoneConfigArgs hostedZoneConfig) {
-            this.hostedZoneConfig = Output.ofNullable(hostedZoneConfig);
+            this.hostedZoneConfig = Codegen.ofNullable(hostedZoneConfig);
             return this;
         }
         public Builder hostedZoneTags(@Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags) {
@@ -132,7 +133,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostedZoneTags(@Nullable List<HostedZoneTagArgs> hostedZoneTags) {
-            this.hostedZoneTags = Output.ofNullable(hostedZoneTags);
+            this.hostedZoneTags = Codegen.ofNullable(hostedZoneTags);
             return this;
         }
         public Builder hostedZoneTags(HostedZoneTagArgs... hostedZoneTags) {
@@ -143,7 +144,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder queryLoggingConfig(@Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig) {
@@ -151,7 +152,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryLoggingConfig(@Nullable HostedZoneQueryLoggingConfigArgs queryLoggingConfig) {
-            this.queryLoggingConfig = Output.ofNullable(queryLoggingConfig);
+            this.queryLoggingConfig = Codegen.ofNullable(queryLoggingConfig);
             return this;
         }
         public Builder vPCs(@Nullable Output<List<HostedZoneVPCArgs>> vPCs) {
@@ -159,7 +160,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vPCs(@Nullable List<HostedZoneVPCArgs> vPCs) {
-            this.vPCs = Output.ofNullable(vPCs);
+            this.vPCs = Codegen.ofNullable(vPCs);
             return this;
         }
         public Builder vPCs(HostedZoneVPCArgs... vPCs) {

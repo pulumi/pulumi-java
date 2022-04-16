@@ -6,6 +6,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 import io.pulumi.awsnative.apprunner.enums.ServiceSourceCodeVersionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<ServiceSourceCodeVersionType> type;
 
-    public Output<ServiceSourceCodeVersionType> getType() {
+    public Output<ServiceSourceCodeVersionType> type() {
         return this.type;
     }
 
@@ -36,7 +37,7 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -48,8 +49,8 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceSourceCodeVersionArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

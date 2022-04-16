@@ -26,7 +26,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -59,7 +59,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -70,7 +70,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
     @Import(name="service")
       private final @Nullable String service;
 
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
     }
 
@@ -92,7 +92,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends io.pulumi.res
     @Import(name="serviceResources")
       private final @Nullable List<String> serviceResources;
 
-    public List<String> getServiceResources() {
+    public List<String> serviceResources() {
         return this.serviceResources == null ? List.of() : this.serviceResources;
     }
 

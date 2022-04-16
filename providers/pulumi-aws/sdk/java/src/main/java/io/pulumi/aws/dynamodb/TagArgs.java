@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -31,7 +32,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -42,7 +43,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -56,9 +57,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.key = Output.empty();
-        this.resourceArn = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.resourceArn = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

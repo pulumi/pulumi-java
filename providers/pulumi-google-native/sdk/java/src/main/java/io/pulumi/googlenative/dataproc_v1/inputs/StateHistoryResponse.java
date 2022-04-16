@@ -23,7 +23,7 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -34,7 +34,7 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stateMessage", required=true)
       private final String stateMessage;
 
-    public String getStateMessage() {
+    public String stateMessage() {
         return this.stateMessage;
     }
 
@@ -45,7 +45,7 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stateStartTime", required=true)
       private final String stateStartTime;
 
-    public String getStateStartTime() {
+    public String stateStartTime() {
         return this.stateStartTime;
     }
 

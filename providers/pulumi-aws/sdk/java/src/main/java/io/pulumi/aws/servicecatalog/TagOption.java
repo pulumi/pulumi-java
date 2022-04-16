@@ -9,6 +9,7 @@ import io.pulumi.aws.servicecatalog.inputs.TagOptionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * @return Whether tag option is active. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getActive() {
+    public Output</* @Nullable */ Boolean> active() {
         return this.active;
     }
     /**
@@ -54,13 +55,13 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * @return Tag option key.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -74,7 +75,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * @return Tag option value.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -100,7 +101,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagOption(String name, TagOptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/tagOption:TagOption", name, args == null ? TagOptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/tagOption:TagOption", name, args == null ? TagOptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagOption(String name, Output<String> id, @Nullable TagOptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.JobValidationMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,15 +27,15 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="rulesetArn", required=true)
       private final Output<String> rulesetArn;
 
-    public Output<String> getRulesetArn() {
+    public Output<String> rulesetArn() {
         return this.rulesetArn;
     }
 
     @Import(name="validationMode")
       private final @Nullable Output<JobValidationMode> validationMode;
 
-    public Output<JobValidationMode> getValidationMode() {
-        return this.validationMode == null ? Output.empty() : this.validationMode;
+    public Output<JobValidationMode> validationMode() {
+        return this.validationMode == null ? Codegen.empty() : this.validationMode;
     }
 
     public JobValidationConfigurationArgs(
@@ -45,8 +46,8 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private JobValidationConfigurationArgs() {
-        this.rulesetArn = Output.empty();
-        this.validationMode = Output.empty();
+        this.rulesetArn = Codegen.empty();
+        this.validationMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder validationMode(@Nullable JobValidationMode validationMode) {
-            this.validationMode = Output.ofNullable(validationMode);
+            this.validationMode = Codegen.ofNullable(validationMode);
             return this;
         }        public JobValidationConfigurationArgs build() {
             return new JobValidationConfigurationArgs(rulesetArn, validationMode);

@@ -35,14 +35,14 @@ public final class WorkflowTemplatePlacementClusterSelector {
      * Required. The cluster labels. Cluster must have all labels to match.
      * 
     */
-    public Map<String,String> getClusterLabels() {
+    public Map<String,String> clusterLabels() {
         return this.clusterLabels;
     }
     /**
      * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
      * 
     */
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

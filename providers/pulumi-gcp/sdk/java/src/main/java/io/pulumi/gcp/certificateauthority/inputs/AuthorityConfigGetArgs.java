@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigGetArgs;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subjectConfig", required=true)
       private final Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig;
 
-    public Output<AuthorityConfigSubjectConfigGetArgs> getSubjectConfig() {
+    public Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig() {
         return this.subjectConfig;
     }
 
@@ -34,7 +35,7 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="x509Config", required=true)
       private final Output<AuthorityConfigX509ConfigGetArgs> x509Config;
 
-    public Output<AuthorityConfigX509ConfigGetArgs> getX509Config() {
+    public Output<AuthorityConfigX509ConfigGetArgs> x509Config() {
         return this.x509Config;
     }
 
@@ -46,8 +47,8 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AuthorityConfigGetArgs() {
-        this.subjectConfig = Output.empty();
-        this.x509Config = Output.empty();
+        this.subjectConfig = Codegen.empty();
+        this.x509Config = Codegen.empty();
     }
 
     public static Builder builder() {

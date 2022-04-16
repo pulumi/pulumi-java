@@ -27,7 +27,7 @@ public final class PeeringPropertiesExchangeResponse extends io.pulumi.resources
     @Import(name="connections")
       private final @Nullable List<ExchangeConnectionResponse> connections;
 
-    public List<ExchangeConnectionResponse> getConnections() {
+    public List<ExchangeConnectionResponse> connections() {
         return this.connections == null ? List.of() : this.connections;
     }
 
@@ -38,7 +38,7 @@ public final class PeeringPropertiesExchangeResponse extends io.pulumi.resources
     @Import(name="peerAsn")
       private final @Nullable SubResourceResponse peerAsn;
 
-    public Optional<SubResourceResponse> getPeerAsn() {
+    public Optional<SubResourceResponse> peerAsn() {
         return this.peerAsn == null ? Optional.empty() : Optional.ofNullable(this.peerAsn);
     }
 

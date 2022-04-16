@@ -6,6 +6,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.ViewArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return The time at which this view was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -42,7 +43,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return The human-readable display name of the view.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -56,7 +57,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return The most recent time at which the view was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -84,7 +85,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @return String with specific view properties.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -110,7 +111,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public View(String name, @Nullable ViewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:contactcenterinsights/v1:View", name, args == null ? ViewArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:contactcenterinsights/v1:View", name, args == null ? ViewArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private View(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

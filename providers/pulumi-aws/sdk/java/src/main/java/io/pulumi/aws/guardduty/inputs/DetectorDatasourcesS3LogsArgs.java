@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DetectorDatasourcesS3LogsArgs extends io.pulumi.resources.Res
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 
@@ -29,7 +30,7 @@ public final class DetectorDatasourcesS3LogsArgs extends io.pulumi.resources.Res
     }
 
     private DetectorDatasourcesS3LogsArgs() {
-        this.enable = Output.empty();
+        this.enable = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datashare.enums.DataSetKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,8 +35,8 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
-        return this.dataSetName == null ? Output.empty() : this.dataSetName;
+    public Output<String> dataSetName() {
+        return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,DataSetKind>> kind;
 
-    public Output<Either<String,DataSetKind>> getKind() {
+    public Output<Either<String,DataSetKind>> kind() {
         return this.kind;
     }
 
@@ -56,7 +57,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -85,11 +86,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSetArgs() {
-        this.accountName = Output.empty();
-        this.dataSetName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Output.ofNullable(dataSetName);
+            this.dataSetName = Codegen.ofNullable(dataSetName);
             return this;
         }
         public Builder kind(Output<Either<String,DataSetKind>> kind) {

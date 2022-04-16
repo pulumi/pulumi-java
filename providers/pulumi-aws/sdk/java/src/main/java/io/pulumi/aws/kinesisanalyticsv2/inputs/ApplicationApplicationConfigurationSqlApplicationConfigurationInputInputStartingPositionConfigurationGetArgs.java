@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputStartingPosition")
       private final @Nullable Output<String> inputStartingPosition;
 
-    public Output<String> getInputStartingPosition() {
-        return this.inputStartingPosition == null ? Output.empty() : this.inputStartingPosition;
+    public Output<String> inputStartingPosition() {
+        return this.inputStartingPosition == null ? Codegen.empty() : this.inputStartingPosition;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs(@Nullable Output<String> inputStartingPosition) {
@@ -30,7 +31,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs() {
-        this.inputStartingPosition = Output.empty();
+        this.inputStartingPosition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder inputStartingPosition(@Nullable String inputStartingPosition) {
-            this.inputStartingPosition = Output.ofNullable(inputStartingPosition);
+            this.inputStartingPosition = Codegen.ofNullable(inputStartingPosition);
             return this;
         }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs(inputStartingPosition);

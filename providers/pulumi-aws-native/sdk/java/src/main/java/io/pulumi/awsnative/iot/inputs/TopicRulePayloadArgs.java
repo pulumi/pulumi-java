@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,42 +21,42 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="actions", required=true)
       private final Output<List<TopicRuleActionArgs>> actions;
 
-    public Output<List<TopicRuleActionArgs>> getActions() {
+    public Output<List<TopicRuleActionArgs>> actions() {
         return this.actions;
     }
 
     @Import(name="awsIotSqlVersion")
       private final @Nullable Output<String> awsIotSqlVersion;
 
-    public Output<String> getAwsIotSqlVersion() {
-        return this.awsIotSqlVersion == null ? Output.empty() : this.awsIotSqlVersion;
+    public Output<String> awsIotSqlVersion() {
+        return this.awsIotSqlVersion == null ? Codegen.empty() : this.awsIotSqlVersion;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="errorAction")
       private final @Nullable Output<TopicRuleActionArgs> errorAction;
 
-    public Output<TopicRuleActionArgs> getErrorAction() {
-        return this.errorAction == null ? Output.empty() : this.errorAction;
+    public Output<TopicRuleActionArgs> errorAction() {
+        return this.errorAction == null ? Codegen.empty() : this.errorAction;
     }
 
     @Import(name="ruleDisabled")
       private final @Nullable Output<Boolean> ruleDisabled;
 
-    public Output<Boolean> getRuleDisabled() {
-        return this.ruleDisabled == null ? Output.empty() : this.ruleDisabled;
+    public Output<Boolean> ruleDisabled() {
+        return this.ruleDisabled == null ? Codegen.empty() : this.ruleDisabled;
     }
 
     @Import(name="sql", required=true)
       private final Output<String> sql;
 
-    public Output<String> getSql() {
+    public Output<String> sql() {
         return this.sql;
     }
 
@@ -75,12 +76,12 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TopicRulePayloadArgs() {
-        this.actions = Output.empty();
-        this.awsIotSqlVersion = Output.empty();
-        this.description = Output.empty();
-        this.errorAction = Output.empty();
-        this.ruleDisabled = Output.empty();
-        this.sql = Output.empty();
+        this.actions = Codegen.empty();
+        this.awsIotSqlVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.errorAction = Codegen.empty();
+        this.ruleDisabled = Codegen.empty();
+        this.sql = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
-            this.awsIotSqlVersion = Output.ofNullable(awsIotSqlVersion);
+            this.awsIotSqlVersion = Codegen.ofNullable(awsIotSqlVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -137,7 +138,7 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder errorAction(@Nullable Output<TopicRuleActionArgs> errorAction) {
@@ -145,7 +146,7 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder errorAction(@Nullable TopicRuleActionArgs errorAction) {
-            this.errorAction = Output.ofNullable(errorAction);
+            this.errorAction = Codegen.ofNullable(errorAction);
             return this;
         }
         public Builder ruleDisabled(@Nullable Output<Boolean> ruleDisabled) {
@@ -153,7 +154,7 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
-            this.ruleDisabled = Output.ofNullable(ruleDisabled);
+            this.ruleDisabled = Codegen.ofNullable(ruleDisabled);
             return this;
         }
         public Builder sql(Output<String> sql) {

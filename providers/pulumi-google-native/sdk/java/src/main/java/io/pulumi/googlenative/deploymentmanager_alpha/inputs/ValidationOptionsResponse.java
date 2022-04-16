@@ -23,7 +23,7 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="schemaValidation", required=true)
       private final String schemaValidation;
 
-    public String getSchemaValidation() {
+    public String schemaValidation() {
         return this.schemaValidation;
     }
 
@@ -34,7 +34,7 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="undeclaredProperties", required=true)
       private final String undeclaredProperties;
 
-    public String getUndeclaredProperties() {
+    public String undeclaredProperties() {
         return this.undeclaredProperties;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     @Import(name="maximumCapacityUnits", required=true)
       private final Output<Integer> maximumCapacityUnits;
 
-    public Output<Integer> getMaximumCapacityUnits() {
+    public Output<Integer> maximumCapacityUnits() {
         return this.maximumCapacityUnits;
     }
 
@@ -33,8 +34,8 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     @Import(name="maximumCoreCapacityUnits")
       private final @Nullable Output<Integer> maximumCoreCapacityUnits;
 
-    public Output<Integer> getMaximumCoreCapacityUnits() {
-        return this.maximumCoreCapacityUnits == null ? Output.empty() : this.maximumCoreCapacityUnits;
+    public Output<Integer> maximumCoreCapacityUnits() {
+        return this.maximumCoreCapacityUnits == null ? Codegen.empty() : this.maximumCoreCapacityUnits;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     @Import(name="maximumOndemandCapacityUnits")
       private final @Nullable Output<Integer> maximumOndemandCapacityUnits;
 
-    public Output<Integer> getMaximumOndemandCapacityUnits() {
-        return this.maximumOndemandCapacityUnits == null ? Output.empty() : this.maximumOndemandCapacityUnits;
+    public Output<Integer> maximumOndemandCapacityUnits() {
+        return this.maximumOndemandCapacityUnits == null ? Codegen.empty() : this.maximumOndemandCapacityUnits;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     @Import(name="minimumCapacityUnits", required=true)
       private final Output<Integer> minimumCapacityUnits;
 
-    public Output<Integer> getMinimumCapacityUnits() {
+    public Output<Integer> minimumCapacityUnits() {
         return this.minimumCapacityUnits;
     }
 
@@ -66,7 +67,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     @Import(name="unitType", required=true)
       private final Output<String> unitType;
 
-    public Output<String> getUnitType() {
+    public Output<String> unitType() {
         return this.unitType;
     }
 
@@ -84,11 +85,11 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
     }
 
     private ManagedScalingPolicyComputeLimitArgs() {
-        this.maximumCapacityUnits = Output.empty();
-        this.maximumCoreCapacityUnits = Output.empty();
-        this.maximumOndemandCapacityUnits = Output.empty();
-        this.minimumCapacityUnits = Output.empty();
-        this.unitType = Output.empty();
+        this.maximumCapacityUnits = Codegen.empty();
+        this.maximumCoreCapacityUnits = Codegen.empty();
+        this.maximumOndemandCapacityUnits = Codegen.empty();
+        this.minimumCapacityUnits = Codegen.empty();
+        this.unitType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
             return this;
         }
         public Builder maximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
-            this.maximumCoreCapacityUnits = Output.ofNullable(maximumCoreCapacityUnits);
+            this.maximumCoreCapacityUnits = Codegen.ofNullable(maximumCoreCapacityUnits);
             return this;
         }
         public Builder maximumOndemandCapacityUnits(@Nullable Output<Integer> maximumOndemandCapacityUnits) {
@@ -140,7 +141,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
             return this;
         }
         public Builder maximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
-            this.maximumOndemandCapacityUnits = Output.ofNullable(maximumOndemandCapacityUnits);
+            this.maximumOndemandCapacityUnits = Codegen.ofNullable(maximumOndemandCapacityUnits);
             return this;
         }
         public Builder minimumCapacityUnits(Output<Integer> minimumCapacityUnits) {

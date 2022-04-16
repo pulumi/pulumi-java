@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
     @Import(name="podAddressCidrBlocks", required=true)
       private final Output<List<String>> podAddressCidrBlocks;
 
-    public Output<List<String>> getPodAddressCidrBlocks() {
+    public Output<List<String>> podAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
 
@@ -32,7 +33,7 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
     @Import(name="serviceAddressCidrBlocks", required=true)
       private final Output<List<String>> serviceAddressCidrBlocks;
 
-    public Output<List<String>> getServiceAddressCidrBlocks() {
+    public Output<List<String>> serviceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
 
@@ -43,7 +44,7 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -57,9 +58,9 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
     }
 
     private AwsClusterNetworkingArgs() {
-        this.podAddressCidrBlocks = Output.empty();
-        this.serviceAddressCidrBlocks = Output.empty();
-        this.vpcId = Output.empty();
+        this.podAddressCidrBlocks = Codegen.empty();
+        this.serviceAddressCidrBlocks = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {

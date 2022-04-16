@@ -17,6 +17,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -52,7 +53,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of A records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<ARecordResponse>> getARecords() {
+    public Output</* @Nullable */ List<ARecordResponse>> aRecords() {
         return this.aRecords;
     }
     /**
@@ -66,7 +67,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of AAAA records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<AaaaRecordResponse>> getAaaaRecords() {
+    public Output</* @Nullable */ List<AaaaRecordResponse>> aaaaRecords() {
         return this.aaaaRecords;
     }
     /**
@@ -80,7 +81,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The CNAME record in the record set.
      * 
      */
-    public Output</* @Nullable */ CnameRecordResponse> getCnameRecord() {
+    public Output</* @Nullable */ CnameRecordResponse> cnameRecord() {
         return this.cnameRecord;
     }
     /**
@@ -94,7 +95,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The ETag of the record set.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -108,7 +109,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return Fully qualified domain name of the record set.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -122,7 +123,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return Is the record set auto-registered in the Private DNS zone through a virtual network link?
      * 
      */
-    public Output<Boolean> getIsAutoRegistered() {
+    public Output<Boolean> isAutoRegistered() {
         return this.isAutoRegistered;
     }
     /**
@@ -136,7 +137,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The metadata attached to the record set.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -150,7 +151,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of MX records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<MxRecordResponse>> getMxRecords() {
+    public Output</* @Nullable */ List<MxRecordResponse>> mxRecords() {
         return this.mxRecords;
     }
     /**
@@ -164,7 +165,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -178,7 +179,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of PTR records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<PtrRecordResponse>> getPtrRecords() {
+    public Output</* @Nullable */ List<PtrRecordResponse>> ptrRecords() {
         return this.ptrRecords;
     }
     /**
@@ -192,7 +193,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The SOA record in the record set.
      * 
      */
-    public Output</* @Nullable */ SoaRecordResponse> getSoaRecord() {
+    public Output</* @Nullable */ SoaRecordResponse> soaRecord() {
         return this.soaRecord;
     }
     /**
@@ -206,7 +207,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of SRV records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<SrvRecordResponse>> getSrvRecords() {
+    public Output</* @Nullable */ List<SrvRecordResponse>> srvRecords() {
         return this.srvRecords;
     }
     /**
@@ -220,7 +221,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The TTL (time-to-live) of the records in the record set.
      * 
      */
-    public Output</* @Nullable */ Double> getTtl() {
+    public Output</* @Nullable */ Double> ttl() {
         return this.ttl;
     }
     /**
@@ -234,7 +235,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The list of TXT records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<TxtRecordResponse>> getTxtRecords() {
+    public Output</* @Nullable */ List<TxtRecordResponse>> txtRecords() {
         return this.txtRecords;
     }
     /**
@@ -248,7 +249,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -274,7 +275,7 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateRecordSet(String name, PrivateRecordSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:PrivateRecordSet", name, args == null ? PrivateRecordSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:PrivateRecordSet", name, args == null ? PrivateRecordSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateRecordSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

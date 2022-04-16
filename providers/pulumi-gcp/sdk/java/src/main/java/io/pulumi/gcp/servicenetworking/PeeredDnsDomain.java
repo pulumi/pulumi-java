@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicenetworking;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicenetworking.PeeredDnsDomainArgs;
 import io.pulumi.gcp.servicenetworking.inputs.PeeredDnsDomainState;
@@ -43,7 +44,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * @return The DNS domain suffix of the peered DNS domain. Make sure to suffix with a `.` (dot).
      * 
      */
-    public Output<String> getDnsSuffix() {
+    public Output<String> dnsSuffix() {
         return this.dnsSuffix;
     }
     /**
@@ -57,7 +58,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * @return Internal name used for the peered DNS domain.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * @return The network in the consumer project.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -85,7 +86,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * @return an identifier for the resource with format `services/{{service}}/projects/{{project}}/global/networks/{{network}}`
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -99,7 +100,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * @return The producer project number. If not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -113,7 +114,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * @return Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
      * 
      */
-    public Output</* @Nullable */ String> getService() {
+    public Output</* @Nullable */ String> service() {
         return this.service;
     }
 
@@ -139,7 +140,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PeeredDnsDomain(String name, PeeredDnsDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicenetworking/peeredDnsDomain:PeeredDnsDomain", name, args == null ? PeeredDnsDomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicenetworking/peeredDnsDomain:PeeredDnsDomain", name, args == null ? PeeredDnsDomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PeeredDnsDomain(String name, Output<String> id, @Nullable PeeredDnsDomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

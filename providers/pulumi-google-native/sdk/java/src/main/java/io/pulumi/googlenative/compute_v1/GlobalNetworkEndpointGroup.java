@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.GlobalNetworkEndpointGroupArgs;
 import io.pulumi.googlenative.compute_v1.outputs.NetworkEndpointGroupAppEngineResponse;
@@ -33,7 +34,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Metadata defined as annotations on the network endpoint group.
      * 
      */
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -47,7 +48,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    public Output<NetworkEndpointGroupAppEngineResponse> getAppEngine() {
+    public Output<NetworkEndpointGroupAppEngineResponse> appEngine() {
         return this.appEngine;
     }
     /**
@@ -61,7 +62,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    public Output<NetworkEndpointGroupCloudFunctionResponse> getCloudFunction() {
+    public Output<NetworkEndpointGroupCloudFunctionResponse> cloudFunction() {
         return this.cloudFunction;
     }
     /**
@@ -75,7 +76,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    public Output<NetworkEndpointGroupCloudRunResponse> getCloudRun() {
+    public Output<NetworkEndpointGroupCloudRunResponse> cloudRun() {
         return this.cloudRun;
     }
     /**
@@ -89,7 +90,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -103,7 +104,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The default port used if the port number is not specified in the network endpoint.
      * 
      */
-    public Output<Integer> getDefaultPort() {
+    public Output<Integer> defaultPort() {
         return this.defaultPort;
     }
     /**
@@ -117,7 +118,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -131,7 +132,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Type of the resource. Always compute#networkEndpointGroup for network endpoint group.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -145,7 +146,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +160,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -173,7 +174,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
-    public Output<String> getNetworkEndpointType() {
+    public Output<String> networkEndpointType() {
         return this.networkEndpointType;
     }
     /**
@@ -187,7 +188,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
      * 
      */
-    public Output<String> getPscTargetService() {
+    public Output<String> pscTargetService() {
         return this.pscTargetService;
     }
     /**
@@ -201,7 +202,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The URL of the region where the network endpoint group is located.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -215,7 +216,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -229,7 +230,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return [Output only] Number of network endpoints in the network endpoint group.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -243,7 +244,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return Optional URL of the subnetwork to which all network endpoints in the NEG belong.
      * 
      */
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
     /**
@@ -257,7 +258,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The URL of the zone where the network endpoint group is located.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -283,7 +284,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public GlobalNetworkEndpointGroup(String name, @Nullable GlobalNetworkEndpointGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:GlobalNetworkEndpointGroup", name, args == null ? GlobalNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/v1:GlobalNetworkEndpointGroup", name, args == null ? GlobalNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GlobalNetworkEndpointGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

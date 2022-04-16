@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudfunctions;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionIamMemberArgs;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberState;
@@ -18,43 +19,43 @@ public class FunctionIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
-    public Output<String> getCloudFunction() {
+    public Output<String> cloudFunction() {
         return this.cloudFunction;
     }
     @Export(name="condition", type=FunctionIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ FunctionIamMemberCondition> condition;
 
-    public Output</* @Nullable */ FunctionIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ FunctionIamMemberCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -80,7 +81,7 @@ public class FunctionIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FunctionIamMember(String name, FunctionIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudfunctions/functionIamMember:FunctionIamMember", name, args == null ? FunctionIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudfunctions/functionIamMember:FunctionIamMember", name, args == null ? FunctionIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FunctionIamMember(String name, Output<String> id, @Nullable FunctionIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -24,7 +24,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="dbs", required=true)
       private final List<FileContentBufferResponse> dbs;
 
-    public List<FileContentBufferResponse> getDbs() {
+    public List<FileContentBufferResponse> dbs() {
         return this.dbs;
     }
 
@@ -35,7 +35,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="dbxs", required=true)
       private final List<FileContentBufferResponse> dbxs;
 
-    public List<FileContentBufferResponse> getDbxs() {
+    public List<FileContentBufferResponse> dbxs() {
         return this.dbxs;
     }
 
@@ -46,7 +46,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="keks", required=true)
       private final List<FileContentBufferResponse> keks;
 
-    public List<FileContentBufferResponse> getKeks() {
+    public List<FileContentBufferResponse> keks() {
         return this.keks;
     }
 
@@ -57,7 +57,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="pk", required=true)
       private final FileContentBufferResponse pk;
 
-    public FileContentBufferResponse getPk() {
+    public FileContentBufferResponse pk() {
         return this.pk;
     }
 

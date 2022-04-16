@@ -37,14 +37,14 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * is 'COUNT', we will retain this many backups.
      * 
     */
-    public Integer getRetainedBackups() {
+    public Integer retainedBackups() {
         return this.retainedBackups;
     }
     /**
      * The unit that 'retained_backups' represents. Defaults to `COUNT`.
      * 
     */
-    public Optional<String> getRetentionUnit() {
+    public Optional<String> retentionUnit() {
         return Optional.ofNullable(this.retentionUnit);
     }
 

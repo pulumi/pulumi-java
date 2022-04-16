@@ -6,6 +6,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 import io.pulumi.awsnative.gamelift.inputs.FleetLocationCapacityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,15 +23,15 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="locationCapacity")
       private final @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
 
-    public Output<FleetLocationCapacityArgs> getLocationCapacity() {
-        return this.locationCapacity == null ? Output.empty() : this.locationCapacity;
+    public Output<FleetLocationCapacityArgs> locationCapacity() {
+        return this.locationCapacity == null ? Codegen.empty() : this.locationCapacity;
     }
 
     public FleetLocationConfigurationArgs(
@@ -41,8 +42,8 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private FleetLocationConfigurationArgs() {
-        this.location = Output.empty();
-        this.locationCapacity = Output.empty();
+        this.location = Codegen.empty();
+        this.locationCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder locationCapacity(@Nullable FleetLocationCapacityArgs locationCapacity) {
-            this.locationCapacity = Output.ofNullable(locationCapacity);
+            this.locationCapacity = Codegen.ofNullable(locationCapacity);
             return this;
         }        public FleetLocationConfigurationArgs build() {
             return new FleetLocationConfigurationArgs(location, locationCapacity);

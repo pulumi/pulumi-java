@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return An HTTP link or Base64-encoded binary data.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -55,7 +56,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
      * 
      */
-    public Output<String> getContentFormat() {
+    public Output<String> contentFormat() {
         return this.contentFormat;
     }
     /**
@@ -69,7 +70,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Filename by which the binary data will be saved.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -97,7 +98,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -123,7 +124,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiIssueAttachment(String name, ApiIssueAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiIssueAttachment", name, args == null ? ApiIssueAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:ApiIssueAttachment", name, args == null ? ApiIssueAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiIssueAttachment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

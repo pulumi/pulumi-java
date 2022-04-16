@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ip", required=true)
       private final Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip;
     }
 
@@ -48,8 +49,8 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
-    public Output<String> getNodeName() {
-        return this.nodeName == null ? Output.empty() : this.nodeName;
+    public Output<String> nodeName() {
+        return this.nodeName == null ? Codegen.empty() : this.nodeName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetRef")
       private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
-    public Output<ObjectReferenceArgs> getTargetRef() {
-        return this.targetRef == null ? Output.empty() : this.targetRef;
+    public Output<ObjectReferenceArgs> targetRef() {
+        return this.targetRef == null ? Codegen.empty() : this.targetRef;
     }
 
     public EndpointAddressArgs(
@@ -75,10 +76,10 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EndpointAddressArgs() {
-        this.hostname = Output.empty();
-        this.ip = Output.empty();
-        this.nodeName = Output.empty();
-        this.targetRef = Output.empty();
+        this.hostname = Codegen.empty();
+        this.ip = Codegen.empty();
+        this.nodeName = Codegen.empty();
+        this.targetRef = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder ip(Output<String> ip) {
@@ -128,7 +129,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Output.ofNullable(nodeName);
+            this.nodeName = Codegen.ofNullable(nodeName);
             return this;
         }
         public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
@@ -136,7 +137,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
-            this.targetRef = Output.ofNullable(targetRef);
+            this.targetRef = Codegen.ofNullable(targetRef);
             return this;
         }        public EndpointAddressArgs build() {
             return new EndpointAddressArgs(hostname, ip, nodeName, targetRef);

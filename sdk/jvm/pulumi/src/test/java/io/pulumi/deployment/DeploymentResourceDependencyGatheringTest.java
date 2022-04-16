@@ -1,7 +1,6 @@
 package io.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.annotations.ResourceType;
@@ -10,6 +9,7 @@ import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;
+import io.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -41,7 +41,7 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @Test
     void testDeploysResourcesWithUnknownDependsOn() {
-        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack.class).join();
+        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack::new).join();
         assertThat(result.exceptions).isNotNull();
         assertThat(result.exceptions).isEmpty();
     }

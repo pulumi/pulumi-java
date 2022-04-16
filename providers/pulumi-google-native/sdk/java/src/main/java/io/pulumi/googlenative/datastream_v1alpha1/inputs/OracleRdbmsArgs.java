@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleSchemaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oracleSchemas")
       private final @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
 
-    public Output<List<OracleSchemaArgs>> getOracleSchemas() {
-        return this.oracleSchemas == null ? Output.empty() : this.oracleSchemas;
+    public Output<List<OracleSchemaArgs>> oracleSchemas() {
+        return this.oracleSchemas == null ? Codegen.empty() : this.oracleSchemas;
     }
 
     public OracleRdbmsArgs(@Nullable Output<List<OracleSchemaArgs>> oracleSchemas) {
@@ -35,7 +36,7 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OracleRdbmsArgs() {
-        this.oracleSchemas = Output.empty();
+        this.oracleSchemas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oracleSchemas(@Nullable List<OracleSchemaArgs> oracleSchemas) {
-            this.oracleSchemas = Output.ofNullable(oracleSchemas);
+            this.oracleSchemas = Codegen.ofNullable(oracleSchemas);
             return this;
         }
         public Builder oracleSchemas(OracleSchemaArgs... oracleSchemas) {

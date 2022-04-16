@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudcontrol.inputs.ResourceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -23,13 +24,13 @@ public class Resource extends io.pulumi.resources.CustomResource {
     @Export(name="desiredState", type=String.class, parameters={})
     private Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState;
     }
     @Export(name="properties", type=String.class, parameters={})
     private Output<String> properties;
 
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties;
     }
     /**
@@ -43,7 +44,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM Role to assume for operations.
      * 
      */
-    public Output</* @Nullable */ String> getRoleArn() {
+    public Output</* @Nullable */ String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -57,7 +58,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return JSON string of the CloudFormation resource type schema which is used for plan time validation where possible. Automatically fetched if not provided. In large scale environments with multiple resources using the same `type_name`, it is recommended to fetch the schema once via the `aws.cloudformation.CloudFormationType` data source and use this argument to reduce `DescribeType` API operation throttling. This value is marked sensitive only to prevent large plan differences from showing.
      * 
      */
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema;
     }
     /**
@@ -71,7 +72,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return CloudFormation resource type name. For example, `AWS::EC2::VPC`.
      * 
      */
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
     /**
@@ -85,7 +86,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Identifier of the CloudFormation resource type version.
      * 
      */
-    public Output</* @Nullable */ String> getTypeVersionId() {
+    public Output</* @Nullable */ String> typeVersionId() {
         return this.typeVersionId;
     }
 
@@ -111,7 +112,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudcontrol/resource:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudcontrol/resource:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resource(String name, Output<String> id, @Nullable ResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

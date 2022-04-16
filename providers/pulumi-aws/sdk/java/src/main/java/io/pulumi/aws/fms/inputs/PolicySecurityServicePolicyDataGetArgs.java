@@ -5,6 +5,7 @@ package io.pulumi.aws.fms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PolicySecurityServicePolicyDataGetArgs extends io.pulumi.reso
     @Import(name="managedServiceData")
       private final @Nullable Output<String> managedServiceData;
 
-    public Output<String> getManagedServiceData() {
-        return this.managedServiceData == null ? Output.empty() : this.managedServiceData;
+    public Output<String> managedServiceData() {
+        return this.managedServiceData == null ? Codegen.empty() : this.managedServiceData;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class PolicySecurityServicePolicyDataGetArgs extends io.pulumi.reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -44,8 +45,8 @@ public final class PolicySecurityServicePolicyDataGetArgs extends io.pulumi.reso
     }
 
     private PolicySecurityServicePolicyDataGetArgs() {
-        this.managedServiceData = Output.empty();
-        this.type = Output.empty();
+        this.managedServiceData = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PolicySecurityServicePolicyDataGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder managedServiceData(@Nullable String managedServiceData) {
-            this.managedServiceData = Output.ofNullable(managedServiceData);
+            this.managedServiceData = Codegen.ofNullable(managedServiceData);
             return this;
         }
         public Builder type(Output<String> type) {

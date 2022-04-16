@@ -9,6 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequest
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
-    public Output<String> getComputeType() {
+    public Output<String> computeType() {
         return this.computeType;
     }
 
@@ -40,8 +41,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
-        return this.environmentImageRequest == null ? Output.empty() : this.environmentImageRequest;
+    public Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest() {
+        return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
-        return this.isDefault == null ? Output.empty() : this.isDefault;
+    public Output<Boolean> isDefault() {
+        return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Output<CreateServiceRequestKeysArgs> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+    public Output<CreateServiceRequestKeysArgs> keys() {
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> getKvTags() {
-        return this.kvTags == null ? Output.empty() : this.kvTags;
+    public Output<Map<String,String>> kvTags() {
+        return this.kvTags == null ? Codegen.empty() : this.kvTags;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,8 +129,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="trafficPercentile")
       private final @Nullable Output<Double> trafficPercentile;
 
-    public Output<Double> getTrafficPercentile() {
-        return this.trafficPercentile == null ? Output.empty() : this.trafficPercentile;
+    public Output<Double> trafficPercentile() {
+        return this.trafficPercentile == null ? Codegen.empty() : this.trafficPercentile;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<Either<String,VariantType>> type;
 
-    public Output<Either<String,VariantType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,VariantType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -195,19 +196,19 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EndpointVariantArgs() {
-        this.computeType = Output.empty();
-        this.description = Output.empty();
-        this.environmentImageRequest = Output.empty();
-        this.isDefault = Output.empty();
-        this.keys = Output.empty();
-        this.kvTags = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.trafficPercentile = Output.empty();
-        this.type = Output.empty();
-        this.workspaceName = Output.empty();
+        this.computeType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.environmentImageRequest = Codegen.empty();
+        this.isDefault = Codegen.empty();
+        this.keys = Codegen.empty();
+        this.kvTags = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.trafficPercentile = Codegen.empty();
+        this.type = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -267,7 +268,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
@@ -275,7 +276,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
-            this.environmentImageRequest = Output.ofNullable(environmentImageRequest);
+            this.environmentImageRequest = Codegen.ofNullable(environmentImageRequest);
             return this;
         }
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
@@ -283,7 +284,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Output.ofNullable(isDefault);
+            this.isDefault = Codegen.ofNullable(isDefault);
             return this;
         }
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
@@ -291,7 +292,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
@@ -299,7 +300,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Output.ofNullable(kvTags);
+            this.kvTags = Codegen.ofNullable(kvTags);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -307,7 +308,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -315,7 +316,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -331,7 +332,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder trafficPercentile(@Nullable Output<Double> trafficPercentile) {
@@ -339,7 +340,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
-            this.trafficPercentile = Output.ofNullable(trafficPercentile);
+            this.trafficPercentile = Codegen.ofNullable(trafficPercentile);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,VariantType>> type) {
@@ -347,7 +348,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable Either<String,VariantType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.route53recoveryreadiness.inputs.RecoveryGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return ARN of the recovery group
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return List of cell arns to add as nested fault domains within this recovery group
      * 
      */
-    public Output</* @Nullable */ List<String>> getCells() {
+    public Output</* @Nullable */ List<String>> cells() {
         return this.cells;
     }
     /**
@@ -69,7 +70,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return A unique name describing the recovery group.
      * 
      */
-    public Output<String> getRecoveryGroupName() {
+    public Output<String> recoveryGroupName() {
         return this.recoveryGroupName;
     }
     /**
@@ -83,7 +84,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -97,7 +98,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -123,7 +124,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RecoveryGroup(String name, RecoveryGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53recoveryreadiness/recoveryGroup:RecoveryGroup", name, args == null ? RecoveryGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53recoveryreadiness/recoveryGroup:RecoveryGroup", name, args == null ? RecoveryGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RecoveryGroup(String name, Output<String> id, @Nullable RecoveryGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

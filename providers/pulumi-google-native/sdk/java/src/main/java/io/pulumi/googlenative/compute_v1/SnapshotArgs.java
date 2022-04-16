@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chainName")
       private final @Nullable Output<String> chainName;
 
-    public Output<String> getChainName() {
-        return this.chainName == null ? Output.empty() : this.chainName;
+    public Output<String> chainName() {
+        return this.chainName == null ? Codegen.empty() : this.chainName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
-    public Output<String> getLocationHint() {
-        return this.locationHint == null ? Output.empty() : this.locationHint;
+    public Output<String> locationHint() {
+        return this.locationHint == null ? Codegen.empty() : this.locationHint;
     }
 
     /**
@@ -68,22 +69,22 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSnapshotEncryptionKey() {
-        return this.snapshotEncryptionKey == null ? Output.empty() : this.snapshotEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey() {
+        return this.snapshotEncryptionKey == null ? Codegen.empty() : this.snapshotEncryptionKey;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
-        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
+    public Output<String> sourceDisk() {
+        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceDiskEncryptionKey() {
-        return this.sourceDiskEncryptionKey == null ? Output.empty() : this.sourceDiskEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey() {
+        return this.sourceDiskEncryptionKey == null ? Codegen.empty() : this.sourceDiskEncryptionKey;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> getStorageLocations() {
-        return this.storageLocations == null ? Output.empty() : this.storageLocations;
+    public Output<List<String>> storageLocations() {
+        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 
     public SnapshotArgs(
@@ -156,17 +157,17 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.chainName = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.locationHint = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.snapshotEncryptionKey = Output.empty();
-        this.sourceDisk = Output.empty();
-        this.sourceDiskEncryptionKey = Output.empty();
-        this.storageLocations = Output.empty();
+        this.chainName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.locationHint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.snapshotEncryptionKey = Codegen.empty();
+        this.sourceDisk = Codegen.empty();
+        this.sourceDiskEncryptionKey = Codegen.empty();
+        this.storageLocations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -214,7 +215,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder chainName(@Nullable String chainName) {
-            this.chainName = Output.ofNullable(chainName);
+            this.chainName = Codegen.ofNullable(chainName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -222,7 +223,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -230,7 +231,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder locationHint(@Nullable Output<String> locationHint) {
@@ -238,7 +239,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Output.ofNullable(locationHint);
+            this.locationHint = Codegen.ofNullable(locationHint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -246,7 +247,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -254,7 +255,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -262,7 +263,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder snapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey) {
@@ -270,7 +271,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs snapshotEncryptionKey) {
-            this.snapshotEncryptionKey = Output.ofNullable(snapshotEncryptionKey);
+            this.snapshotEncryptionKey = Codegen.ofNullable(snapshotEncryptionKey);
             return this;
         }
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
@@ -278,7 +279,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Output.ofNullable(sourceDisk);
+            this.sourceDisk = Codegen.ofNullable(sourceDisk);
             return this;
         }
         public Builder sourceDiskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
@@ -286,7 +287,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = Output.ofNullable(sourceDiskEncryptionKey);
+            this.sourceDiskEncryptionKey = Codegen.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
@@ -294,7 +295,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Output.ofNullable(storageLocations);
+            this.storageLocations = Codegen.ofNullable(storageLocations);
             return this;
         }
         public Builder storageLocations(String... storageLocations) {

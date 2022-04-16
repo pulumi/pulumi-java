@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.enums.RedirectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     @Import(name="customFragment")
       private final @Nullable Output<String> customFragment;
 
-    public Output<String> getCustomFragment() {
-        return this.customFragment == null ? Output.empty() : this.customFragment;
+    public Output<String> customFragment() {
+        return this.customFragment == null ? Codegen.empty() : this.customFragment;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     @Import(name="customHostname")
       private final @Nullable Output<String> customHostname;
 
-    public Output<String> getCustomHostname() {
-        return this.customHostname == null ? Output.empty() : this.customHostname;
+    public Output<String> customHostname() {
+        return this.customHostname == null ? Codegen.empty() : this.customHostname;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     @Import(name="customPath")
       private final @Nullable Output<String> customPath;
 
-    public Output<String> getCustomPath() {
-        return this.customPath == null ? Output.empty() : this.customPath;
+    public Output<String> customPath() {
+        return this.customPath == null ? Codegen.empty() : this.customPath;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     @Import(name="customQueryString")
       private final @Nullable Output<String> customQueryString;
 
-    public Output<String> getCustomQueryString() {
-        return this.customQueryString == null ? Output.empty() : this.customQueryString;
+    public Output<String> customQueryString() {
+        return this.customQueryString == null ? Codegen.empty() : this.customQueryString;
     }
 
     /**
@@ -72,14 +73,14 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     @Import(name="destinationProtocol")
       private final @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol;
 
-    public Output<Either<String,DestinationProtocol>> getDestinationProtocol() {
-        return this.destinationProtocol == null ? Output.empty() : this.destinationProtocol;
+    public Output<Either<String,DestinationProtocol>> destinationProtocol() {
+        return this.destinationProtocol == null ? Codegen.empty() : this.destinationProtocol;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -90,7 +91,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     @Import(name="redirectType", required=true)
       private final Output<Either<String,RedirectType>> redirectType;
 
-    public Output<Either<String,RedirectType>> getRedirectType() {
+    public Output<Either<String,RedirectType>> redirectType() {
         return this.redirectType;
     }
 
@@ -112,13 +113,13 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     }
 
     private UrlRedirectActionParametersArgs() {
-        this.customFragment = Output.empty();
-        this.customHostname = Output.empty();
-        this.customPath = Output.empty();
-        this.customQueryString = Output.empty();
-        this.destinationProtocol = Output.empty();
-        this.odataType = Output.empty();
-        this.redirectType = Output.empty();
+        this.customFragment = Codegen.empty();
+        this.customHostname = Codegen.empty();
+        this.customPath = Codegen.empty();
+        this.customQueryString = Codegen.empty();
+        this.destinationProtocol = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.redirectType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customFragment(@Nullable String customFragment) {
-            this.customFragment = Output.ofNullable(customFragment);
+            this.customFragment = Codegen.ofNullable(customFragment);
             return this;
         }
         public Builder customHostname(@Nullable Output<String> customHostname) {
@@ -166,7 +167,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customHostname(@Nullable String customHostname) {
-            this.customHostname = Output.ofNullable(customHostname);
+            this.customHostname = Codegen.ofNullable(customHostname);
             return this;
         }
         public Builder customPath(@Nullable Output<String> customPath) {
@@ -174,7 +175,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customPath(@Nullable String customPath) {
-            this.customPath = Output.ofNullable(customPath);
+            this.customPath = Codegen.ofNullable(customPath);
             return this;
         }
         public Builder customQueryString(@Nullable Output<String> customQueryString) {
@@ -182,7 +183,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customQueryString(@Nullable String customQueryString) {
-            this.customQueryString = Output.ofNullable(customQueryString);
+            this.customQueryString = Codegen.ofNullable(customQueryString);
             return this;
         }
         public Builder destinationProtocol(@Nullable Output<Either<String,DestinationProtocol>> destinationProtocol) {
@@ -190,7 +191,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder destinationProtocol(@Nullable Either<String,DestinationProtocol> destinationProtocol) {
-            this.destinationProtocol = Output.ofNullable(destinationProtocol);
+            this.destinationProtocol = Codegen.ofNullable(destinationProtocol);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

@@ -23,7 +23,7 @@ public final class PkixPublicKeyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="publicKeyPem", required=true)
       private final String publicKeyPem;
 
-    public String getPublicKeyPem() {
+    public String publicKeyPem() {
         return this.publicKeyPem;
     }
 
@@ -34,7 +34,7 @@ public final class PkixPublicKeyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="signatureAlgorithm", required=true)
       private final String signatureAlgorithm;
 
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 

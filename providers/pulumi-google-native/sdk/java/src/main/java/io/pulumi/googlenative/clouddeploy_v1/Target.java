@@ -6,6 +6,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.TargetArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.AnthosClusterResponse;
@@ -34,7 +35,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -48,7 +49,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Information specifying an Anthos Cluster.
      * 
      */
-    public Output<AnthosClusterResponse> getAnthosCluster() {
+    public Output<AnthosClusterResponse> anthosCluster() {
         return this.anthosCluster;
     }
     /**
@@ -62,7 +63,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Time at which the `Target` was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -76,7 +77,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Optional. Description of the `Target`. Max length is 255 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -90,7 +91,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -104,7 +105,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
      * 
      */
-    public Output<List<ExecutionConfigResponse>> getExecutionConfigs() {
+    public Output<List<ExecutionConfigResponse>> executionConfigs() {
         return this.executionConfigs;
     }
     /**
@@ -118,7 +119,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Information specifying a GKE Cluster.
      * 
      */
-    public Output<GkeClusterResponse> getGke() {
+    public Output<GkeClusterResponse> gke() {
         return this.gke;
     }
     /**
@@ -132,7 +133,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -146,7 +147,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +161,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Optional. Whether or not the `Target` requires approval.
      * 
      */
-    public Output<Boolean> getRequireApproval() {
+    public Output<Boolean> requireApproval() {
         return this.requireApproval;
     }
     /**
@@ -174,7 +175,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Resource id of the `Target`.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
     /**
@@ -188,7 +189,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the `Target`.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -202,7 +203,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Most recent time at which the `Target` was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -228,7 +229,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Target(String name, TargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:clouddeploy/v1:Target", name, args == null ? TargetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:clouddeploy/v1:Target", name, args == null ? TargetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Target(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

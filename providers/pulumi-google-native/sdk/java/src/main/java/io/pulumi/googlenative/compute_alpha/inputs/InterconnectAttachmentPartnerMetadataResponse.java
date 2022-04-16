@@ -23,7 +23,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
     @Import(name="interconnectName", required=true)
       private final String interconnectName;
 
-    public String getInterconnectName() {
+    public String interconnectName() {
         return this.interconnectName;
     }
 
@@ -34,7 +34,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
     @Import(name="partnerName", required=true)
       private final String partnerName;
 
-    public String getPartnerName() {
+    public String partnerName() {
         return this.partnerName;
     }
 
@@ -45,7 +45,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
     @Import(name="portalUrl", required=true)
       private final String portalUrl;
 
-    public String getPortalUrl() {
+    public String portalUrl() {
         return this.portalUrl;
     }
 

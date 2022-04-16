@@ -6,6 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class ReplicationConfigurationReplicationConfigurationGetArgs exten
     @Import(name="rule", required=true)
       private final Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
 
-    public Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> getRule() {
+    public Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule() {
         return this.rule;
     }
 
@@ -29,7 +30,7 @@ public final class ReplicationConfigurationReplicationConfigurationGetArgs exten
     }
 
     private ReplicationConfigurationReplicationConfigurationGetArgs() {
-        this.rule = Output.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {

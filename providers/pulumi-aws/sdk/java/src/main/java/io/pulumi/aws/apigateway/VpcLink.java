@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.VpcLinkState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +50,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return The description of the VPC link.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -63,7 +64,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return The name used to label and identify the VPC link.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -77,7 +78,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -91,7 +92,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -105,7 +106,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @return The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
      * 
      */
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 
@@ -131,7 +132,7 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcLink(String name, VpcLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/vpcLink:VpcLink", name, args == null ? VpcLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/vpcLink:VpcLink", name, args == null ? VpcLinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcLink(String name, Output<String> id, @Nullable VpcLinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

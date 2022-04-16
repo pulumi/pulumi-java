@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
-    public Output<String> getSubscription() {
-        return this.subscription == null ? Output.empty() : this.subscription;
+    public Output<String> subscription() {
+        return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 
     public SubscriptionIAMPolicyState(
@@ -72,10 +73,10 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     }
 
     private SubscriptionIAMPolicyState() {
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.subscription = Output.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.subscription = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -117,7 +118,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -125,7 +126,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder subscription(@Nullable Output<String> subscription) {
@@ -133,7 +134,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subscription(@Nullable String subscription) {
-            this.subscription = Output.ofNullable(subscription);
+            this.subscription = Codegen.ofNullable(subscription);
             return this;
         }        public SubscriptionIAMPolicyState build() {
             return new SubscriptionIAMPolicyState(etag, policyData, project, subscription);

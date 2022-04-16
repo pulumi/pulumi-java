@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     @Import(name="makeSourceDbReadOnly")
       private final @Nullable Output<Boolean> makeSourceDbReadOnly;
 
-    public Output<Boolean> getMakeSourceDbReadOnly() {
-        return this.makeSourceDbReadOnly == null ? Output.empty() : this.makeSourceDbReadOnly;
+    public Output<Boolean> makeSourceDbReadOnly() {
+        return this.makeSourceDbReadOnly == null ? Codegen.empty() : this.makeSourceDbReadOnly;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     @Import(name="tableMap")
       private final @Nullable Output<Map<String,String>> tableMap;
 
-    public Output<Map<String,String>> getTableMap() {
-        return this.tableMap == null ? Output.empty() : this.tableMap;
+    public Output<Map<String,String>> tableMap() {
+        return this.tableMap == null ? Codegen.empty() : this.tableMap;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
-    public Output<String> getTargetDatabaseName() {
-        return this.targetDatabaseName == null ? Output.empty() : this.targetDatabaseName;
+    public Output<String> targetDatabaseName() {
+        return this.targetDatabaseName == null ? Codegen.empty() : this.targetDatabaseName;
     }
 
     public MigrateSqlServerSqlDbDatabaseInputArgs(
@@ -76,10 +77,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     }
 
     private MigrateSqlServerSqlDbDatabaseInputArgs() {
-        this.makeSourceDbReadOnly = Output.empty();
-        this.name = Output.empty();
-        this.tableMap = Output.empty();
-        this.targetDatabaseName = Output.empty();
+        this.makeSourceDbReadOnly = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tableMap = Codegen.empty();
+        this.targetDatabaseName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder makeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
-            this.makeSourceDbReadOnly = Output.ofNullable(makeSourceDbReadOnly);
+            this.makeSourceDbReadOnly = Codegen.ofNullable(makeSourceDbReadOnly);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -121,7 +122,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tableMap(@Nullable Output<Map<String,String>> tableMap) {
@@ -129,7 +130,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
-            this.tableMap = Output.ofNullable(tableMap);
+            this.tableMap = Codegen.ofNullable(tableMap);
             return this;
         }
         public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
@@ -137,7 +138,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = Output.ofNullable(targetDatabaseName);
+            this.targetDatabaseName = Codegen.ofNullable(targetDatabaseName);
             return this;
         }        public MigrateSqlServerSqlDbDatabaseInputArgs build() {
             return new MigrateSqlServerSqlDbDatabaseInputArgs(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);

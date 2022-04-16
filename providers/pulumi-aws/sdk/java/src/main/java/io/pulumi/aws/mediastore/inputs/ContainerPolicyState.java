@@ -5,6 +5,7 @@ package io.pulumi.aws.mediastore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+    public Output<String> containerName() {
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public ContainerPolicyState(
@@ -44,8 +45,8 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     private ContainerPolicyState() {
-        this.containerName = Output.empty();
-        this.policy = Output.empty();
+        this.containerName = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -83,7 +84,7 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public ContainerPolicyState build() {
             return new ContainerPolicyState(containerName, policy);

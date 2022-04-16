@@ -8,6 +8,7 @@ import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingInstanceType
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationSessionStorageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     @Import(name="clipboardMode", required=true)
       private final Output<LaunchProfileStreamingClipboardMode> clipboardMode;
 
-    public Output<LaunchProfileStreamingClipboardMode> getClipboardMode() {
+    public Output<LaunchProfileStreamingClipboardMode> clipboardMode() {
         return this.clipboardMode;
     }
 
@@ -38,7 +39,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     @Import(name="ec2InstanceTypes", required=true)
       private final Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes;
 
-    public Output<List<LaunchProfileStreamingInstanceType>> getEc2InstanceTypes() {
+    public Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes() {
         return this.ec2InstanceTypes;
     }
 
@@ -52,8 +53,8 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     @Import(name="maxSessionLengthInMinutes")
       private final @Nullable Output<Double> maxSessionLengthInMinutes;
 
-    public Output<Double> getMaxSessionLengthInMinutes() {
-        return this.maxSessionLengthInMinutes == null ? Output.empty() : this.maxSessionLengthInMinutes;
+    public Output<Double> maxSessionLengthInMinutes() {
+        return this.maxSessionLengthInMinutes == null ? Codegen.empty() : this.maxSessionLengthInMinutes;
     }
 
     /**
@@ -72,15 +73,15 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     @Import(name="maxStoppedSessionLengthInMinutes")
       private final @Nullable Output<Double> maxStoppedSessionLengthInMinutes;
 
-    public Output<Double> getMaxStoppedSessionLengthInMinutes() {
-        return this.maxStoppedSessionLengthInMinutes == null ? Output.empty() : this.maxStoppedSessionLengthInMinutes;
+    public Output<Double> maxStoppedSessionLengthInMinutes() {
+        return this.maxStoppedSessionLengthInMinutes == null ? Codegen.empty() : this.maxStoppedSessionLengthInMinutes;
     }
 
     @Import(name="sessionStorage")
       private final @Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage;
 
-    public Output<LaunchProfileStreamConfigurationSessionStorageArgs> getSessionStorage() {
-        return this.sessionStorage == null ? Output.empty() : this.sessionStorage;
+    public Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage() {
+        return this.sessionStorage == null ? Codegen.empty() : this.sessionStorage;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     @Import(name="streamingImageIds", required=true)
       private final Output<List<String>> streamingImageIds;
 
-    public Output<List<String>> getStreamingImageIds() {
+    public Output<List<String>> streamingImageIds() {
         return this.streamingImageIds;
     }
 
@@ -111,12 +112,12 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     }
 
     private LaunchProfileStreamConfigurationArgs() {
-        this.clipboardMode = Output.empty();
-        this.ec2InstanceTypes = Output.empty();
-        this.maxSessionLengthInMinutes = Output.empty();
-        this.maxStoppedSessionLengthInMinutes = Output.empty();
-        this.sessionStorage = Output.empty();
-        this.streamingImageIds = Output.empty();
+        this.clipboardMode = Codegen.empty();
+        this.ec2InstanceTypes = Codegen.empty();
+        this.maxSessionLengthInMinutes = Codegen.empty();
+        this.maxStoppedSessionLengthInMinutes = Codegen.empty();
+        this.sessionStorage = Codegen.empty();
+        this.streamingImageIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder maxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
-            this.maxSessionLengthInMinutes = Output.ofNullable(maxSessionLengthInMinutes);
+            this.maxSessionLengthInMinutes = Codegen.ofNullable(maxSessionLengthInMinutes);
             return this;
         }
         public Builder maxStoppedSessionLengthInMinutes(@Nullable Output<Double> maxStoppedSessionLengthInMinutes) {
@@ -181,7 +182,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder maxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
-            this.maxStoppedSessionLengthInMinutes = Output.ofNullable(maxStoppedSessionLengthInMinutes);
+            this.maxStoppedSessionLengthInMinutes = Codegen.ofNullable(maxStoppedSessionLengthInMinutes);
             return this;
         }
         public Builder sessionStorage(@Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage) {
@@ -189,7 +190,7 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder sessionStorage(@Nullable LaunchProfileStreamConfigurationSessionStorageArgs sessionStorage) {
-            this.sessionStorage = Output.ofNullable(sessionStorage);
+            this.sessionStorage = Codegen.ofNullable(sessionStorage);
             return this;
         }
         public Builder streamingImageIds(Output<List<String>> streamingImageIds) {

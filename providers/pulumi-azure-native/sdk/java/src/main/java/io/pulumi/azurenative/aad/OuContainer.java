@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return The list of container accounts
      * 
      */
-    public Output</* @Nullable */ List<ContainerAccountResponse>> getAccounts() {
+    public Output</* @Nullable */ List<ContainerAccountResponse>> accounts() {
         return this.accounts;
     }
     /**
@@ -58,7 +59,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return The OuContainer name
      * 
      */
-    public Output<String> getContainerId() {
+    public Output<String> containerId() {
         return this.containerId;
     }
     /**
@@ -72,7 +73,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return The Deployment id
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -86,7 +87,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Distinguished Name of OuContainer instance
      * 
      */
-    public Output<String> getDistinguishedName() {
+    public Output<String> distinguishedName() {
         return this.distinguishedName;
     }
     /**
@@ -100,7 +101,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return The domain name of Domain Services.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -114,7 +115,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -128,7 +129,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -142,7 +143,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +157,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -170,7 +171,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Status of OuContainer instance
      * 
      */
-    public Output<String> getServiceStatus() {
+    public Output<String> serviceStatus() {
         return this.serviceStatus;
     }
     /**
@@ -184,7 +185,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -198,7 +199,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -212,7 +213,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Azure Active Directory tenant id
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -226,7 +227,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -252,7 +253,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OuContainer(String name, OuContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:aad:OuContainer", name, args == null ? OuContainerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:aad:OuContainer", name, args == null ? OuContainerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OuContainer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

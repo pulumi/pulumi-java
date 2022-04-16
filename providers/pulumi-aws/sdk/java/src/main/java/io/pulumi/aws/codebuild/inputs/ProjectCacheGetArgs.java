@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="modes")
       private final @Nullable Output<List<String>> modes;
 
-    public Output<List<String>> getModes() {
-        return this.modes == null ? Output.empty() : this.modes;
+    public Output<List<String>> modes() {
+        return this.modes == null ? Codegen.empty() : this.modes;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ProjectCacheGetArgs(
@@ -58,9 +59,9 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ProjectCacheGetArgs() {
-        this.location = Output.empty();
-        this.modes = Output.empty();
-        this.type = Output.empty();
+        this.location = Codegen.empty();
+        this.modes = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder modes(@Nullable Output<List<String>> modes) {
@@ -100,7 +101,7 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder modes(@Nullable List<String> modes) {
-            this.modes = Output.ofNullable(modes);
+            this.modes = Codegen.ofNullable(modes);
             return this;
         }
         public Builder modes(String... modes) {
@@ -111,7 +112,7 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ProjectCacheGetArgs build() {
             return new ProjectCacheGetArgs(location, modes, type);

@@ -25,7 +25,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="airflowConfigOverrides", required=true)
       private final Map<String,String> airflowConfigOverrides;
 
-    public Map<String,String> getAirflowConfigOverrides() {
+    public Map<String,String> airflowConfigOverrides() {
         return this.airflowConfigOverrides;
     }
 
@@ -36,7 +36,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="envVariables", required=true)
       private final Map<String,String> envVariables;
 
-    public Map<String,String> getEnvVariables() {
+    public Map<String,String> envVariables() {
         return this.envVariables;
     }
 
@@ -47,7 +47,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="imageVersion", required=true)
       private final String imageVersion;
 
-    public String getImageVersion() {
+    public String imageVersion() {
         return this.imageVersion;
     }
 
@@ -58,7 +58,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="pypiPackages", required=true)
       private final Map<String,String> pypiPackages;
 
-    public Map<String,String> getPypiPackages() {
+    public Map<String,String> pypiPackages() {
         return this.pypiPackages;
     }
 
@@ -69,7 +69,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="pythonVersion", required=true)
       private final String pythonVersion;
 
-    public String getPythonVersion() {
+    public String pythonVersion() {
         return this.pythonVersion;
     }
 
@@ -80,7 +80,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="schedulerCount", required=true)
       private final Integer schedulerCount;
 
-    public Integer getSchedulerCount() {
+    public Integer schedulerCount() {
         return this.schedulerCount;
     }
 

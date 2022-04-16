@@ -25,7 +25,7 @@ public final class TableDataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minAlignmentPeriod", required=true)
       private final String minAlignmentPeriod;
 
-    public String getMinAlignmentPeriod() {
+    public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
 
@@ -36,7 +36,7 @@ public final class TableDataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableDisplayOptions", required=true)
       private final TableDisplayOptionsResponse tableDisplayOptions;
 
-    public TableDisplayOptionsResponse getTableDisplayOptions() {
+    public TableDisplayOptionsResponse tableDisplayOptions() {
         return this.tableDisplayOptions;
     }
 
@@ -47,7 +47,7 @@ public final class TableDataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableTemplate", required=true)
       private final String tableTemplate;
 
-    public String getTableTemplate() {
+    public String tableTemplate() {
         return this.tableTemplate;
     }
 
@@ -58,7 +58,7 @@ public final class TableDataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeSeriesQuery", required=true)
       private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    public TimeSeriesQueryResponse getTimeSeriesQuery() {
+    public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 

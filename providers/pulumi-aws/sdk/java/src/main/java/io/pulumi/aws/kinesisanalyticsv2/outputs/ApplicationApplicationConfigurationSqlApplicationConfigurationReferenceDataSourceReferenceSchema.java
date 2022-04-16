@@ -44,21 +44,21 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
      * 
     */
-    public List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn> getRecordColumns() {
+    public List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn> recordColumns() {
         return this.recordColumns;
     }
     /**
      * Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
      * 
     */
-    public Optional<String> getRecordEncoding() {
+    public Optional<String> recordEncoding() {
         return Optional.ofNullable(this.recordEncoding);
     }
     /**
      * Specifies the format of the records on the streaming source.
      * 
     */
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat getRecordFormat() {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat() {
         return this.recordFormat;
     }
 

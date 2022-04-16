@@ -17,21 +17,21 @@ public final class GetRegionInstanceGroupManagerArgs extends io.pulumi.resources
     @Import(name="instanceGroupManager", required=true)
       private final String instanceGroupManager;
 
-    public String getInstanceGroupManager() {
+    public String instanceGroupManager() {
         return this.instanceGroupManager;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

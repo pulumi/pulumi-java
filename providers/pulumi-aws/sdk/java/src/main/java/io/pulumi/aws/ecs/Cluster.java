@@ -12,6 +12,7 @@ import io.pulumi.aws.ecs.outputs.ClusterSetting;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return ARN that identifies the cluster.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
      */
-    public Output<List<String>> getCapacityProviders() {
+    public Output<List<String>> capacityProviders() {
         return this.capacityProviders;
     }
     /**
@@ -68,7 +69,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The execute command configuration for the cluster. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ClusterConfiguration> getConfiguration() {
+    public Output</* @Nullable */ ClusterConfiguration> configuration() {
         return this.configuration;
     }
     /**
@@ -82,7 +83,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
      * 
      */
-    public Output<List<ClusterDefaultCapacityProviderStrategy>> getDefaultCapacityProviderStrategies() {
+    public Output<List<ClusterDefaultCapacityProviderStrategy>> defaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies;
     }
     /**
@@ -96,7 +97,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Name of the setting to manage. Valid values: `containerInsights`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -110,7 +111,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
      * 
      */
-    public Output<List<ClusterSetting>> getSettings() {
+    public Output<List<ClusterSetting>> settings() {
         return this.settings;
     }
     /**
@@ -124,13 +125,13 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -156,7 +157,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecs/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecs/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupFailoverCriteriaAr
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupMemberArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
     @Import(name="failoverCriteria", required=true)
       private final Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
 
-    public Output<DistributionOriginGroupFailoverCriteriaArgs> getFailoverCriteria() {
+    public Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria() {
         return this.failoverCriteria;
     }
 
@@ -34,7 +35,7 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
     @Import(name="members", required=true)
       private final Output<List<DistributionOriginGroupMemberArgs>> members;
 
-    public Output<List<DistributionOriginGroupMemberArgs>> getMembers() {
+    public Output<List<DistributionOriginGroupMemberArgs>> members() {
         return this.members;
     }
 
@@ -45,7 +46,7 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
     @Import(name="originId", required=true)
       private final Output<String> originId;
 
-    public Output<String> getOriginId() {
+    public Output<String> originId() {
         return this.originId;
     }
 
@@ -59,9 +60,9 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
     }
 
     private DistributionOriginGroupArgs() {
-        this.failoverCriteria = Output.empty();
-        this.members = Output.empty();
-        this.originId = Output.empty();
+        this.failoverCriteria = Codegen.empty();
+        this.members = Codegen.empty();
+        this.originId = Codegen.empty();
     }
 
     public static Builder builder() {

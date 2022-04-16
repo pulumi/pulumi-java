@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.LogDestinationPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string.
      * 
      */
-    public Output<String> getAccessPolicy() {
+    public Output<String> accessPolicy() {
         return this.accessPolicy;
     }
     /**
@@ -54,7 +55,7 @@ public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {
      * @return A name for the subscription filter
      * 
      */
-    public Output<String> getDestinationName() {
+    public Output<String> destinationName() {
         return this.destinationName;
     }
     /**
@@ -68,7 +69,7 @@ public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {
      * @return Specify true if you are updating an existing destination policy to grant permission to an organization ID instead of granting permission to individual AWS accounts.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceUpdate() {
+    public Output</* @Nullable */ Boolean> forceUpdate() {
         return this.forceUpdate;
     }
 
@@ -94,7 +95,7 @@ public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LogDestinationPolicy(String name, LogDestinationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/logDestinationPolicy:LogDestinationPolicy", name, args == null ? LogDestinationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/logDestinationPolicy:LogDestinationPolicy", name, args == null ? LogDestinationPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LogDestinationPolicy(String name, Output<String> id, @Nullable LogDestinationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

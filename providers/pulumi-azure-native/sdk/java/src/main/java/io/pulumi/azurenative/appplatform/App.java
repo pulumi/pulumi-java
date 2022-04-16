@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The Managed Identity type of the app resource
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedIdentityPropertiesResponse> identity() {
         return this.identity;
     }
     /**
@@ -57,7 +58,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The GEO location of the application, always the same with its parent resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Properties of the App resource
      * 
      */
-    public Output<AppResourcePropertiesResponse> getProperties() {
+    public Output<AppResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -99,7 +100,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -125,7 +126,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public App(String name, AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appplatform:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:appplatform:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private App(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

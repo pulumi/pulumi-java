@@ -9,6 +9,7 @@ import io.pulumi.awsnative.evidently.inputs.ExperimentTagArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTreatmentObjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,50 +24,50 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="metricGoals", required=true)
       private final Output<List<ExperimentMetricGoalObjectArgs>> metricGoals;
 
-    public Output<List<ExperimentMetricGoalObjectArgs>> getMetricGoals() {
+    public Output<List<ExperimentMetricGoalObjectArgs>> metricGoals() {
         return this.metricGoals;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="onlineAbConfig", required=true)
       private final Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
 
-    public Output<ExperimentOnlineAbConfigObjectArgs> getOnlineAbConfig() {
+    public Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig() {
         return this.onlineAbConfig;
     }
 
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
     @Import(name="randomizationSalt")
       private final @Nullable Output<String> randomizationSalt;
 
-    public Output<String> getRandomizationSalt() {
-        return this.randomizationSalt == null ? Output.empty() : this.randomizationSalt;
+    public Output<String> randomizationSalt() {
+        return this.randomizationSalt == null ? Codegen.empty() : this.randomizationSalt;
     }
 
     @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> getSamplingRate() {
-        return this.samplingRate == null ? Output.empty() : this.samplingRate;
+    public Output<Integer> samplingRate() {
+        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 
     /**
@@ -76,14 +77,14 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ExperimentTagArgs>> tags;
 
-    public Output<List<ExperimentTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ExperimentTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="treatments", required=true)
       private final Output<List<ExperimentTreatmentObjectArgs>> treatments;
 
-    public Output<List<ExperimentTreatmentObjectArgs>> getTreatments() {
+    public Output<List<ExperimentTreatmentObjectArgs>> treatments() {
         return this.treatments;
     }
 
@@ -109,15 +110,15 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExperimentArgs() {
-        this.description = Output.empty();
-        this.metricGoals = Output.empty();
-        this.name = Output.empty();
-        this.onlineAbConfig = Output.empty();
-        this.project = Output.empty();
-        this.randomizationSalt = Output.empty();
-        this.samplingRate = Output.empty();
-        this.tags = Output.empty();
-        this.treatments = Output.empty();
+        this.description = Codegen.empty();
+        this.metricGoals = Codegen.empty();
+        this.name = Codegen.empty();
+        this.onlineAbConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.randomizationSalt = Codegen.empty();
+        this.samplingRate = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.treatments = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder metricGoals(Output<List<ExperimentMetricGoalObjectArgs>> metricGoals) {
@@ -180,7 +181,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder onlineAbConfig(Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig) {
@@ -204,7 +205,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder randomizationSalt(@Nullable String randomizationSalt) {
-            this.randomizationSalt = Output.ofNullable(randomizationSalt);
+            this.randomizationSalt = Codegen.ofNullable(randomizationSalt);
             return this;
         }
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
@@ -212,7 +213,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Output.ofNullable(samplingRate);
+            this.samplingRate = Codegen.ofNullable(samplingRate);
             return this;
         }
         public Builder tags(@Nullable Output<List<ExperimentTagArgs>> tags) {
@@ -220,7 +221,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ExperimentTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ExperimentTagArgs... tags) {

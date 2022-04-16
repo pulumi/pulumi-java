@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="status")
       private final @Nullable Output<Integer> status;
 
-    public Output<Integer> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Integer> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="subStatus")
       private final @Nullable Output<Integer> subStatus;
 
-    public Output<Integer> getSubStatus() {
-        return this.subStatus == null ? Output.empty() : this.subStatus;
+    public Output<Integer> subStatus() {
+        return this.subStatus == null ? Codegen.empty() : this.subStatus;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
-    public Output<String> getTimeInterval() {
-        return this.timeInterval == null ? Output.empty() : this.timeInterval;
+    public Output<String> timeInterval() {
+        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="win32Status")
       private final @Nullable Output<Integer> win32Status;
 
-    public Output<Integer> getWin32Status() {
-        return this.win32Status == null ? Output.empty() : this.win32Status;
+    public Output<Integer> win32Status() {
+        return this.win32Status == null ? Codegen.empty() : this.win32Status;
     }
 
     public StatusCodesBasedTriggerArgs(
@@ -101,12 +102,12 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     }
 
     private StatusCodesBasedTriggerArgs() {
-        this.count = Output.empty();
-        this.path = Output.empty();
-        this.status = Output.empty();
-        this.subStatus = Output.empty();
-        this.timeInterval = Output.empty();
-        this.win32Status = Output.empty();
+        this.count = Codegen.empty();
+        this.path = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subStatus = Codegen.empty();
+        this.timeInterval = Codegen.empty();
+        this.win32Status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -152,7 +153,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder status(@Nullable Output<Integer> status) {
@@ -160,7 +161,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder status(@Nullable Integer status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subStatus(@Nullable Output<Integer> subStatus) {
@@ -168,7 +169,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder subStatus(@Nullable Integer subStatus) {
-            this.subStatus = Output.ofNullable(subStatus);
+            this.subStatus = Codegen.ofNullable(subStatus);
             return this;
         }
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
@@ -176,7 +177,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Output.ofNullable(timeInterval);
+            this.timeInterval = Codegen.ofNullable(timeInterval);
             return this;
         }
         public Builder win32Status(@Nullable Output<Integer> win32Status) {
@@ -184,7 +185,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder win32Status(@Nullable Integer win32Status) {
-            this.win32Status = Output.ofNullable(win32Status);
+            this.win32Status = Codegen.ofNullable(win32Status);
             return this;
         }        public StatusCodesBasedTriggerArgs build() {
             return new StatusCodesBasedTriggerArgs(count, path, status, subStatus, timeInterval, win32Status);

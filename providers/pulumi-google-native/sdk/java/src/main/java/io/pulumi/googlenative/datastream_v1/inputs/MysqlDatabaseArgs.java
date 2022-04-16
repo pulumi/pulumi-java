@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlTableArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<String> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mysqlTables")
       private final @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
-    public Output<List<MysqlTableArgs>> getMysqlTables() {
-        return this.mysqlTables == null ? Output.empty() : this.mysqlTables;
+    public Output<List<MysqlTableArgs>> mysqlTables() {
+        return this.mysqlTables == null ? Codegen.empty() : this.mysqlTables;
     }
 
     public MysqlDatabaseArgs(
@@ -50,8 +51,8 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MysqlDatabaseArgs() {
-        this.database = Output.empty();
-        this.mysqlTables = Output.empty();
+        this.database = Codegen.empty();
+        this.mysqlTables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder mysqlTables(@Nullable Output<List<MysqlTableArgs>> mysqlTables) {
@@ -89,7 +90,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mysqlTables(@Nullable List<MysqlTableArgs> mysqlTables) {
-            this.mysqlTables = Output.ofNullable(mysqlTables);
+            this.mysqlTables = Codegen.ofNullable(mysqlTables);
             return this;
         }
         public Builder mysqlTables(MysqlTableArgs... mysqlTables) {

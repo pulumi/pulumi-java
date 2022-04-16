@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ReplicationMigrationItem extends io.pulumi.resources.CustomResource
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -56,7 +57,7 @@ public class ReplicationMigrationItem extends io.pulumi.resources.CustomResource
      * @return Resource Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class ReplicationMigrationItem extends io.pulumi.resources.CustomResource
      * @return The migration item properties.
      * 
      */
-    public Output<MigrationItemPropertiesResponse> getProperties() {
+    public Output<MigrationItemPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -84,7 +85,7 @@ public class ReplicationMigrationItem extends io.pulumi.resources.CustomResource
      * @return Resource Type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -110,7 +111,7 @@ public class ReplicationMigrationItem extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationMigrationItem(String name, ReplicationMigrationItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ReplicationMigrationItem", name, args == null ? ReplicationMigrationItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:recoveryservices:ReplicationMigrationItem", name, args == null ? ReplicationMigrationItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationMigrationItem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

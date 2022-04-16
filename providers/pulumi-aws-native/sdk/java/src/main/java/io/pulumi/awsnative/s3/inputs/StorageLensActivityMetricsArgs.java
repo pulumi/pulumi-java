@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+    public Output<Boolean> isEnabled() {
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     public StorageLensActivityMetricsArgs(@Nullable Output<Boolean> isEnabled) {
@@ -34,7 +35,7 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
     }
 
     private StorageLensActivityMetricsArgs() {
-        this.isEnabled = Output.empty();
+        this.isEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }        public StorageLensActivityMetricsArgs build() {
             return new StorageLensActivityMetricsArgs(isEnabled);

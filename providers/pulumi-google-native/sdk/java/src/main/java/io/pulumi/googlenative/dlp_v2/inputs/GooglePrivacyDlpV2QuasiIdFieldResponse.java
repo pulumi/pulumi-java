@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends io.pulumi.reso
     @Import(name="customTag", required=true)
       private final String customTag;
 
-    public String getCustomTag() {
+    public String customTag() {
         return this.customTag;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends io.pulumi.reso
     @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 

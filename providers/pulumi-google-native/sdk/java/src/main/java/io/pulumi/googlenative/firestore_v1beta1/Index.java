@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firestore_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firestore_v1beta1.IndexArgs;
 import io.pulumi.googlenative.firestore_v1beta1.outputs.GoogleFirestoreAdminV1beta1IndexFieldResponse;
@@ -30,7 +31,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The collection ID to which this index applies. Required.
      * 
      */
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
     /**
@@ -44,7 +45,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The fields to index.
      * 
      */
-    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> getFields() {
+    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> fields() {
         return this.fields;
     }
     /**
@@ -58,7 +59,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The resource name of the index. Output only.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The state of the index. Output only.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -98,7 +99,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Index(String name, IndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firestore/v1beta1:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firestore/v1beta1:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Index(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

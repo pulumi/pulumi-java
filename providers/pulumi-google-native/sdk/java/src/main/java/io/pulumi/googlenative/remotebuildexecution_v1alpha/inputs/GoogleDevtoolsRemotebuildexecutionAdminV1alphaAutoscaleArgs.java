@@ -5,6 +5,7 @@ package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     @Import(name="maxSize")
       private final @Nullable Output<String> maxSize;
 
-    public Output<String> getMaxSize() {
-        return this.maxSize == null ? Output.empty() : this.maxSize;
+    public Output<String> maxSize() {
+        return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     @Import(name="minSize")
       private final @Nullable Output<String> minSize;
 
-    public Output<String> getMinSize() {
-        return this.minSize == null ? Output.empty() : this.minSize;
+    public Output<String> minSize() {
+        return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(
@@ -48,8 +49,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     }
 
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs() {
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
             return this;
         }
         public Builder maxSize(@Nullable String maxSize) {
-            this.maxSize = Output.ofNullable(maxSize);
+            this.maxSize = Codegen.ofNullable(maxSize);
             return this;
         }
         public Builder minSize(@Nullable Output<String> minSize) {
@@ -87,7 +88,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
             return this;
         }
         public Builder minSize(@Nullable String minSize) {
-            this.minSize = Output.ofNullable(minSize);
+            this.minSize = Codegen.ofNullable(minSize);
             return this;
         }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(maxSize, minSize);

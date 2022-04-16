@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the eTag for concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -57,7 +58,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the Azure location in which migrate project is created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets the name of the migrate project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the nested properties.
      * 
      */
-    public Output<MigrateProjectPropertiesResponse> getProperties() {
+    public Output<MigrateProjectPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -99,7 +100,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the tags.
      * 
      */
-    public Output</* @Nullable */ MigrateProjectResponseTags> getTags() {
+    public Output</* @Nullable */ MigrateProjectResponseTags> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +114,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -139,7 +140,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MigrateProject(String name, MigrateProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:migrate:MigrateProject", name, args == null ? MigrateProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:migrate:MigrateProject", name, args == null ? MigrateProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MigrateProject(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

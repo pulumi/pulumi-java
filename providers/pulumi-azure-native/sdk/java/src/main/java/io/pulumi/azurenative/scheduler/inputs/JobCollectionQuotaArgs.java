@@ -6,6 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.inputs.JobMaxRecurrenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
     @Import(name="maxJobCount")
       private final @Nullable Output<Integer> maxJobCount;
 
-    public Output<Integer> getMaxJobCount() {
-        return this.maxJobCount == null ? Output.empty() : this.maxJobCount;
+    public Output<Integer> maxJobCount() {
+        return this.maxJobCount == null ? Codegen.empty() : this.maxJobCount;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
     @Import(name="maxJobOccurrence")
       private final @Nullable Output<Integer> maxJobOccurrence;
 
-    public Output<Integer> getMaxJobOccurrence() {
-        return this.maxJobOccurrence == null ? Output.empty() : this.maxJobOccurrence;
+    public Output<Integer> maxJobOccurrence() {
+        return this.maxJobOccurrence == null ? Codegen.empty() : this.maxJobOccurrence;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
     @Import(name="maxRecurrence")
       private final @Nullable Output<JobMaxRecurrenceArgs> maxRecurrence;
 
-    public Output<JobMaxRecurrenceArgs> getMaxRecurrence() {
-        return this.maxRecurrence == null ? Output.empty() : this.maxRecurrence;
+    public Output<JobMaxRecurrenceArgs> maxRecurrence() {
+        return this.maxRecurrence == null ? Codegen.empty() : this.maxRecurrence;
     }
 
     public JobCollectionQuotaArgs(
@@ -58,9 +59,9 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
     }
 
     private JobCollectionQuotaArgs() {
-        this.maxJobCount = Output.empty();
-        this.maxJobOccurrence = Output.empty();
-        this.maxRecurrence = Output.empty();
+        this.maxJobCount = Codegen.empty();
+        this.maxJobOccurrence = Codegen.empty();
+        this.maxRecurrence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxJobCount(@Nullable Integer maxJobCount) {
-            this.maxJobCount = Output.ofNullable(maxJobCount);
+            this.maxJobCount = Codegen.ofNullable(maxJobCount);
             return this;
         }
         public Builder maxJobOccurrence(@Nullable Output<Integer> maxJobOccurrence) {
@@ -100,7 +101,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxJobOccurrence(@Nullable Integer maxJobOccurrence) {
-            this.maxJobOccurrence = Output.ofNullable(maxJobOccurrence);
+            this.maxJobOccurrence = Codegen.ofNullable(maxJobOccurrence);
             return this;
         }
         public Builder maxRecurrence(@Nullable Output<JobMaxRecurrenceArgs> maxRecurrence) {
@@ -108,7 +109,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxRecurrence(@Nullable JobMaxRecurrenceArgs maxRecurrence) {
-            this.maxRecurrence = Output.ofNullable(maxRecurrence);
+            this.maxRecurrence = Codegen.ofNullable(maxRecurrence);
             return this;
         }        public JobCollectionQuotaArgs build() {
             return new JobCollectionQuotaArgs(maxJobCount, maxJobOccurrence, maxRecurrence);

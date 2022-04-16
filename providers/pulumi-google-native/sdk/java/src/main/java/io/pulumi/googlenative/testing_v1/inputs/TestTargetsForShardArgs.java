@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
     @Import(name="testTargets")
       private final @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> getTestTargets() {
-        return this.testTargets == null ? Output.empty() : this.testTargets;
+    public Output<List<String>> testTargets() {
+        return this.testTargets == null ? Codegen.empty() : this.testTargets;
     }
 
     public TestTargetsForShardArgs(@Nullable Output<List<String>> testTargets) {
@@ -35,7 +36,7 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
     }
 
     private TestTargetsForShardArgs() {
-        this.testTargets = Output.empty();
+        this.testTargets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Output.ofNullable(testTargets);
+            this.testTargets = Codegen.ofNullable(testTargets);
             return this;
         }
         public Builder testTargets(String... testTargets) {

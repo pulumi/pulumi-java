@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Flag to enable/disable flow logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -60,7 +61,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -74,7 +75,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Parameters that define the configuration of traffic analytics.
      * 
      */
-    public Output</* @Nullable */ TrafficAnalyticsPropertiesResponse> getFlowAnalyticsConfiguration() {
+    public Output</* @Nullable */ TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration() {
         return this.flowAnalyticsConfiguration;
     }
     /**
@@ -88,7 +89,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Parameters that define the flow log format.
      * 
      */
-    public Output</* @Nullable */ FlowLogFormatParametersResponse> getFormat() {
+    public Output</* @Nullable */ FlowLogFormatParametersResponse> format() {
         return this.format;
     }
     /**
@@ -102,7 +103,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -116,7 +117,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +131,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the flow log.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -144,7 +145,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Parameters that define the retention policy for flow log.
      * 
      */
-    public Output</* @Nullable */ RetentionPolicyParametersResponse> getRetentionPolicy() {
+    public Output</* @Nullable */ RetentionPolicyParametersResponse> retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
@@ -158,7 +159,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return ID of the storage account which is used to store the flow log.
      * 
      */
-    public Output<String> getStorageId() {
+    public Output<String> storageId() {
         return this.storageId;
     }
     /**
@@ -172,7 +173,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +187,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Guid of network security group to which flow log will be applied.
      * 
      */
-    public Output<String> getTargetResourceGuid() {
+    public Output<String> targetResourceGuid() {
         return this.targetResourceGuid;
     }
     /**
@@ -200,7 +201,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return ID of network security group to which flow log will be applied.
      * 
      */
-    public Output<String> getTargetResourceId() {
+    public Output<String> targetResourceId() {
         return this.targetResourceId;
     }
     /**
@@ -214,7 +215,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -240,7 +241,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlowLog(String name, FlowLogArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:FlowLog", name, args == null ? FlowLogArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:FlowLog", name, args == null ? FlowLogArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FlowLog(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

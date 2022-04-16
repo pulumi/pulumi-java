@@ -6,6 +6,7 @@ package io.pulumi.aws.amplify.inputs;
 import io.pulumi.aws.amplify.inputs.DomainAssociationSubDomainGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+    public Output<String> appId() {
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="certificateVerificationDnsRecord")
       private final @Nullable Output<String> certificateVerificationDnsRecord;
 
-    public Output<String> getCertificateVerificationDnsRecord() {
-        return this.certificateVerificationDnsRecord == null ? Output.empty() : this.certificateVerificationDnsRecord;
+    public Output<String> certificateVerificationDnsRecord() {
+        return this.certificateVerificationDnsRecord == null ? Codegen.empty() : this.certificateVerificationDnsRecord;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="subDomains")
       private final @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
 
-    public Output<List<DomainAssociationSubDomainGetArgs>> getSubDomains() {
-        return this.subDomains == null ? Output.empty() : this.subDomains;
+    public Output<List<DomainAssociationSubDomainGetArgs>> subDomains() {
+        return this.subDomains == null ? Codegen.empty() : this.subDomains;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="waitForVerification")
       private final @Nullable Output<Boolean> waitForVerification;
 
-    public Output<Boolean> getWaitForVerification() {
-        return this.waitForVerification == null ? Output.empty() : this.waitForVerification;
+    public Output<Boolean> waitForVerification() {
+        return this.waitForVerification == null ? Codegen.empty() : this.waitForVerification;
     }
 
     public DomainAssociationState(
@@ -99,12 +100,12 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     }
 
     private DomainAssociationState() {
-        this.appId = Output.empty();
-        this.arn = Output.empty();
-        this.certificateVerificationDnsRecord = Output.empty();
-        this.domainName = Output.empty();
-        this.subDomains = Output.empty();
-        this.waitForVerification = Output.empty();
+        this.appId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.certificateVerificationDnsRecord = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.subDomains = Codegen.empty();
+        this.waitForVerification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -150,7 +151,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder certificateVerificationDnsRecord(@Nullable Output<String> certificateVerificationDnsRecord) {
@@ -158,7 +159,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder certificateVerificationDnsRecord(@Nullable String certificateVerificationDnsRecord) {
-            this.certificateVerificationDnsRecord = Output.ofNullable(certificateVerificationDnsRecord);
+            this.certificateVerificationDnsRecord = Codegen.ofNullable(certificateVerificationDnsRecord);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -166,7 +167,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder subDomains(@Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains) {
@@ -174,7 +175,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder subDomains(@Nullable List<DomainAssociationSubDomainGetArgs> subDomains) {
-            this.subDomains = Output.ofNullable(subDomains);
+            this.subDomains = Codegen.ofNullable(subDomains);
             return this;
         }
         public Builder subDomains(DomainAssociationSubDomainGetArgs... subDomains) {
@@ -185,7 +186,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder waitForVerification(@Nullable Boolean waitForVerification) {
-            this.waitForVerification = Output.ofNullable(waitForVerification);
+            this.waitForVerification = Codegen.ofNullable(waitForVerification);
             return this;
         }        public DomainAssociationState build() {
             return new DomainAssociationState(appId, arn, certificateVerificationDnsRecord, domainName, subDomains, waitForVerification);

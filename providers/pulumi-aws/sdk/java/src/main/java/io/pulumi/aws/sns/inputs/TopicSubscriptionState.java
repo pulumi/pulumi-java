@@ -5,6 +5,7 @@ package io.pulumi.aws.sns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="confirmationTimeoutInMinutes")
       private final @Nullable Output<Integer> confirmationTimeoutInMinutes;
 
-    public Output<Integer> getConfirmationTimeoutInMinutes() {
-        return this.confirmationTimeoutInMinutes == null ? Output.empty() : this.confirmationTimeoutInMinutes;
+    public Output<Integer> confirmationTimeoutInMinutes() {
+        return this.confirmationTimeoutInMinutes == null ? Codegen.empty() : this.confirmationTimeoutInMinutes;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="confirmationWasAuthenticated")
       private final @Nullable Output<Boolean> confirmationWasAuthenticated;
 
-    public Output<Boolean> getConfirmationWasAuthenticated() {
-        return this.confirmationWasAuthenticated == null ? Output.empty() : this.confirmationWasAuthenticated;
+    public Output<Boolean> confirmationWasAuthenticated() {
+        return this.confirmationWasAuthenticated == null ? Codegen.empty() : this.confirmationWasAuthenticated;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="deliveryPolicy")
       private final @Nullable Output<String> deliveryPolicy;
 
-    public Output<String> getDeliveryPolicy() {
-        return this.deliveryPolicy == null ? Output.empty() : this.deliveryPolicy;
+    public Output<String> deliveryPolicy() {
+        return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<String> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="endpointAutoConfirms")
       private final @Nullable Output<Boolean> endpointAutoConfirms;
 
-    public Output<Boolean> getEndpointAutoConfirms() {
-        return this.endpointAutoConfirms == null ? Output.empty() : this.endpointAutoConfirms;
+    public Output<Boolean> endpointAutoConfirms() {
+        return this.endpointAutoConfirms == null ? Codegen.empty() : this.endpointAutoConfirms;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="filterPolicy")
       private final @Nullable Output<String> filterPolicy;
 
-    public Output<String> getFilterPolicy() {
-        return this.filterPolicy == null ? Output.empty() : this.filterPolicy;
+    public Output<String> filterPolicy() {
+        return this.filterPolicy == null ? Codegen.empty() : this.filterPolicy;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="pendingConfirmation")
       private final @Nullable Output<Boolean> pendingConfirmation;
 
-    public Output<Boolean> getPendingConfirmation() {
-        return this.pendingConfirmation == null ? Output.empty() : this.pendingConfirmation;
+    public Output<Boolean> pendingConfirmation() {
+        return this.pendingConfirmation == null ? Codegen.empty() : this.pendingConfirmation;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="rawMessageDelivery")
       private final @Nullable Output<Boolean> rawMessageDelivery;
 
-    public Output<Boolean> getRawMessageDelivery() {
-        return this.rawMessageDelivery == null ? Output.empty() : this.rawMessageDelivery;
+    public Output<Boolean> rawMessageDelivery() {
+        return this.rawMessageDelivery == null ? Codegen.empty() : this.rawMessageDelivery;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="redrivePolicy")
       private final @Nullable Output<String> redrivePolicy;
 
-    public Output<String> getRedrivePolicy() {
-        return this.redrivePolicy == null ? Output.empty() : this.redrivePolicy;
+    public Output<String> redrivePolicy() {
+        return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="subscriptionRoleArn")
       private final @Nullable Output<String> subscriptionRoleArn;
 
-    public Output<String> getSubscriptionRoleArn() {
-        return this.subscriptionRoleArn == null ? Output.empty() : this.subscriptionRoleArn;
+    public Output<String> subscriptionRoleArn() {
+        return this.subscriptionRoleArn == null ? Codegen.empty() : this.subscriptionRoleArn;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public TopicSubscriptionState(
@@ -202,20 +203,20 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     }
 
     private TopicSubscriptionState() {
-        this.arn = Output.empty();
-        this.confirmationTimeoutInMinutes = Output.empty();
-        this.confirmationWasAuthenticated = Output.empty();
-        this.deliveryPolicy = Output.empty();
-        this.endpoint = Output.empty();
-        this.endpointAutoConfirms = Output.empty();
-        this.filterPolicy = Output.empty();
-        this.ownerId = Output.empty();
-        this.pendingConfirmation = Output.empty();
-        this.protocol = Output.empty();
-        this.rawMessageDelivery = Output.empty();
-        this.redrivePolicy = Output.empty();
-        this.subscriptionRoleArn = Output.empty();
-        this.topic = Output.empty();
+        this.arn = Codegen.empty();
+        this.confirmationTimeoutInMinutes = Codegen.empty();
+        this.confirmationWasAuthenticated = Codegen.empty();
+        this.deliveryPolicy = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.endpointAutoConfirms = Codegen.empty();
+        this.filterPolicy = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.pendingConfirmation = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.rawMessageDelivery = Codegen.empty();
+        this.redrivePolicy = Codegen.empty();
+        this.subscriptionRoleArn = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -269,7 +270,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder confirmationTimeoutInMinutes(@Nullable Output<Integer> confirmationTimeoutInMinutes) {
@@ -277,7 +278,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
-            this.confirmationTimeoutInMinutes = Output.ofNullable(confirmationTimeoutInMinutes);
+            this.confirmationTimeoutInMinutes = Codegen.ofNullable(confirmationTimeoutInMinutes);
             return this;
         }
         public Builder confirmationWasAuthenticated(@Nullable Output<Boolean> confirmationWasAuthenticated) {
@@ -285,7 +286,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder confirmationWasAuthenticated(@Nullable Boolean confirmationWasAuthenticated) {
-            this.confirmationWasAuthenticated = Output.ofNullable(confirmationWasAuthenticated);
+            this.confirmationWasAuthenticated = Codegen.ofNullable(confirmationWasAuthenticated);
             return this;
         }
         public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
@@ -293,7 +294,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
-            this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
+            this.deliveryPolicy = Codegen.ofNullable(deliveryPolicy);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -301,7 +302,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder endpointAutoConfirms(@Nullable Output<Boolean> endpointAutoConfirms) {
@@ -309,7 +310,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
-            this.endpointAutoConfirms = Output.ofNullable(endpointAutoConfirms);
+            this.endpointAutoConfirms = Codegen.ofNullable(endpointAutoConfirms);
             return this;
         }
         public Builder filterPolicy(@Nullable Output<String> filterPolicy) {
@@ -317,7 +318,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder filterPolicy(@Nullable String filterPolicy) {
-            this.filterPolicy = Output.ofNullable(filterPolicy);
+            this.filterPolicy = Codegen.ofNullable(filterPolicy);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -325,7 +326,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder pendingConfirmation(@Nullable Output<Boolean> pendingConfirmation) {
@@ -333,7 +334,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pendingConfirmation(@Nullable Boolean pendingConfirmation) {
-            this.pendingConfirmation = Output.ofNullable(pendingConfirmation);
+            this.pendingConfirmation = Codegen.ofNullable(pendingConfirmation);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -341,7 +342,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder rawMessageDelivery(@Nullable Output<Boolean> rawMessageDelivery) {
@@ -349,7 +350,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
-            this.rawMessageDelivery = Output.ofNullable(rawMessageDelivery);
+            this.rawMessageDelivery = Codegen.ofNullable(rawMessageDelivery);
             return this;
         }
         public Builder redrivePolicy(@Nullable Output<String> redrivePolicy) {
@@ -357,7 +358,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder redrivePolicy(@Nullable String redrivePolicy) {
-            this.redrivePolicy = Output.ofNullable(redrivePolicy);
+            this.redrivePolicy = Codegen.ofNullable(redrivePolicy);
             return this;
         }
         public Builder subscriptionRoleArn(@Nullable Output<String> subscriptionRoleArn) {
@@ -365,7 +366,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
-            this.subscriptionRoleArn = Output.ofNullable(subscriptionRoleArn);
+            this.subscriptionRoleArn = Codegen.ofNullable(subscriptionRoleArn);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {

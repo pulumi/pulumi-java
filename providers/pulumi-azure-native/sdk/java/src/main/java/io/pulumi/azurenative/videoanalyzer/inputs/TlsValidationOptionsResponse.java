@@ -25,7 +25,7 @@ public final class TlsValidationOptionsResponse extends io.pulumi.resources.Invo
     @Import(name="ignoreHostname")
       private final @Nullable String ignoreHostname;
 
-    public Optional<String> getIgnoreHostname() {
+    public Optional<String> ignoreHostname() {
         return this.ignoreHostname == null ? Optional.empty() : Optional.ofNullable(this.ignoreHostname);
     }
 
@@ -36,7 +36,7 @@ public final class TlsValidationOptionsResponse extends io.pulumi.resources.Invo
     @Import(name="ignoreSignature")
       private final @Nullable String ignoreSignature;
 
-    public Optional<String> getIgnoreSignature() {
+    public Optional<String> ignoreSignature() {
         return this.ignoreSignature == null ? Optional.empty() : Optional.ofNullable(this.ignoreSignature);
     }
 

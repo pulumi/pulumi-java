@@ -23,7 +23,7 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rootPath", required=true)
       private final String rootPath;
 
-    public String getRootPath() {
+    public String rootPath() {
         return this.rootPath;
     }
 

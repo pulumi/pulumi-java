@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.inputs.TagSettingsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+    public Output<List<String>> locations() {
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<List<String>> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="tagSettings")
       private final @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
 
-    public Output<TagSettingsPropertiesArgs> getTagSettings() {
-        return this.tagSettings == null ? Output.empty() : this.tagSettings;
+    public Output<TagSettingsPropertiesArgs> tagSettings() {
+        return this.tagSettings == null ? Codegen.empty() : this.tagSettings;
     }
 
     public AzureQueryPropertiesArgs(
@@ -63,9 +64,9 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private AzureQueryPropertiesArgs() {
-        this.locations = Output.empty();
-        this.scope = Output.empty();
-        this.tagSettings = Output.empty();
+        this.locations = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tagSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -108,7 +109,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder scope(String... scope) {
@@ -119,7 +120,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tagSettings(@Nullable TagSettingsPropertiesArgs tagSettings) {
-            this.tagSettings = Output.ofNullable(tagSettings);
+            this.tagSettings = Codegen.ofNullable(tagSettings);
             return this;
         }        public AzureQueryPropertiesArgs build() {
             return new AzureQueryPropertiesArgs(locations, scope, tagSettings);

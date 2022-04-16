@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends;
 import io.pulumi.googlenative.compute_v1.enums.BackendServiceConnectionTrackingPolicyTrackingMode;
 import java.lang.Integer;
@@ -27,8 +28,8 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     @Import(name="connectionPersistenceOnUnhealthyBackends")
       private final @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
 
-    public Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> getConnectionPersistenceOnUnhealthyBackends() {
-        return this.connectionPersistenceOnUnhealthyBackends == null ? Output.empty() : this.connectionPersistenceOnUnhealthyBackends;
+    public Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends() {
+        return this.connectionPersistenceOnUnhealthyBackends == null ? Codegen.empty() : this.connectionPersistenceOnUnhealthyBackends;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     @Import(name="idleTimeoutSec")
       private final @Nullable Output<Integer> idleTimeoutSec;
 
-    public Output<Integer> getIdleTimeoutSec() {
-        return this.idleTimeoutSec == null ? Output.empty() : this.idleTimeoutSec;
+    public Output<Integer> idleTimeoutSec() {
+        return this.idleTimeoutSec == null ? Codegen.empty() : this.idleTimeoutSec;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     @Import(name="trackingMode")
       private final @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
 
-    public Output<BackendServiceConnectionTrackingPolicyTrackingMode> getTrackingMode() {
-        return this.trackingMode == null ? Output.empty() : this.trackingMode;
+    public Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode() {
+        return this.trackingMode == null ? Codegen.empty() : this.trackingMode;
     }
 
     public BackendServiceConnectionTrackingPolicyArgs(
@@ -63,9 +64,9 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     }
 
     private BackendServiceConnectionTrackingPolicyArgs() {
-        this.connectionPersistenceOnUnhealthyBackends = Output.empty();
-        this.idleTimeoutSec = Output.empty();
-        this.trackingMode = Output.empty();
+        this.connectionPersistenceOnUnhealthyBackends = Codegen.empty();
+        this.idleTimeoutSec = Codegen.empty();
+        this.trackingMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
             return this;
         }
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = Output.ofNullable(connectionPersistenceOnUnhealthyBackends);
+            this.connectionPersistenceOnUnhealthyBackends = Codegen.ofNullable(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
         public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
@@ -105,7 +106,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
             return this;
         }
         public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
-            this.idleTimeoutSec = Output.ofNullable(idleTimeoutSec);
+            this.idleTimeoutSec = Codegen.ofNullable(idleTimeoutSec);
             return this;
         }
         public Builder trackingMode(@Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
@@ -113,7 +114,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
             return this;
         }
         public Builder trackingMode(@Nullable BackendServiceConnectionTrackingPolicyTrackingMode trackingMode) {
-            this.trackingMode = Output.ofNullable(trackingMode);
+            this.trackingMode = Codegen.ofNullable(trackingMode);
             return this;
         }        public BackendServiceConnectionTrackingPolicyArgs build() {
             return new BackendServiceConnectionTrackingPolicyArgs(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);

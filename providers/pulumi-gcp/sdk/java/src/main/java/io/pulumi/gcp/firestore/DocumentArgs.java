@@ -5,6 +5,7 @@ package io.pulumi.gcp.firestore;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collection", required=true)
       private final Output<String> collection;
 
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection;
     }
 
@@ -32,8 +33,8 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<String> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentId", required=true)
       private final Output<String> documentId;
 
-    public Output<String> getDocumentId() {
+    public Output<String> documentId() {
         return this.documentId;
     }
 
@@ -54,7 +55,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields", required=true)
       private final Output<String> fields;
 
-    public Output<String> getFields() {
+    public Output<String> fields() {
         return this.fields;
     }
 
@@ -66,8 +67,8 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DocumentArgs(
@@ -84,11 +85,11 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentArgs() {
-        this.collection = Output.empty();
-        this.database = Output.empty();
-        this.documentId = Output.empty();
-        this.fields = Output.empty();
-        this.project = Output.empty();
+        this.collection = Codegen.empty();
+        this.database = Codegen.empty();
+        this.documentId = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder documentId(Output<String> documentId) {
@@ -156,7 +157,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DocumentArgs build() {
             return new DocumentArgs(collection, database, documentId, fields, project);

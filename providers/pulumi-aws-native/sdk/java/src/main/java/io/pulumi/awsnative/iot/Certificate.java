@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.enums.CertificateStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,37 +23,37 @@ public class Certificate extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="cACertificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> cACertificatePem;
 
-    public Output</* @Nullable */ String> getCACertificatePem() {
+    public Output</* @Nullable */ String> cACertificatePem() {
         return this.cACertificatePem;
     }
     @Export(name="certificateMode", type=CertificateMode.class, parameters={})
     private Output</* @Nullable */ CertificateMode> certificateMode;
 
-    public Output</* @Nullable */ CertificateMode> getCertificateMode() {
+    public Output</* @Nullable */ CertificateMode> certificateMode() {
         return this.certificateMode;
     }
     @Export(name="certificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificatePem;
 
-    public Output</* @Nullable */ String> getCertificatePem() {
+    public Output</* @Nullable */ String> certificatePem() {
         return this.certificatePem;
     }
     @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateSigningRequest;
 
-    public Output</* @Nullable */ String> getCertificateSigningRequest() {
+    public Output</* @Nullable */ String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     @Export(name="status", type=CertificateStatus.class, parameters={})
     private Output<CertificateStatus> status;
 
-    public Output<CertificateStatus> getStatus() {
+    public Output<CertificateStatus> status() {
         return this.status;
     }
 
@@ -78,7 +79,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Certificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

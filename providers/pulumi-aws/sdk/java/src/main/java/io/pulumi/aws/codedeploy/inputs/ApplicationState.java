@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
-    public Output<String> getComputePlatform() {
-        return this.computePlatform == null ? Output.empty() : this.computePlatform;
+    public Output<String> computePlatform() {
+        return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="githubAccountName")
       private final @Nullable Output<String> githubAccountName;
 
-    public Output<String> getGithubAccountName() {
-        return this.githubAccountName == null ? Output.empty() : this.githubAccountName;
+    public Output<String> githubAccountName() {
+        return this.githubAccountName == null ? Codegen.empty() : this.githubAccountName;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedToGithub")
       private final @Nullable Output<Boolean> linkedToGithub;
 
-    public Output<Boolean> getLinkedToGithub() {
-        return this.linkedToGithub == null ? Output.empty() : this.linkedToGithub;
+    public Output<Boolean> linkedToGithub() {
+        return this.linkedToGithub == null ? Codegen.empty() : this.linkedToGithub;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ApplicationState(
@@ -124,14 +125,14 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationState() {
-        this.applicationId = Output.empty();
-        this.arn = Output.empty();
-        this.computePlatform = Output.empty();
-        this.githubAccountName = Output.empty();
-        this.linkedToGithub = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.computePlatform = Codegen.empty();
+        this.githubAccountName = Codegen.empty();
+        this.linkedToGithub = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -181,7 +182,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder computePlatform(@Nullable Output<String> computePlatform) {
@@ -189,7 +190,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computePlatform(@Nullable String computePlatform) {
-            this.computePlatform = Output.ofNullable(computePlatform);
+            this.computePlatform = Codegen.ofNullable(computePlatform);
             return this;
         }
         public Builder githubAccountName(@Nullable Output<String> githubAccountName) {
@@ -197,7 +198,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder githubAccountName(@Nullable String githubAccountName) {
-            this.githubAccountName = Output.ofNullable(githubAccountName);
+            this.githubAccountName = Codegen.ofNullable(githubAccountName);
             return this;
         }
         public Builder linkedToGithub(@Nullable Output<Boolean> linkedToGithub) {
@@ -205,7 +206,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedToGithub(@Nullable Boolean linkedToGithub) {
-            this.linkedToGithub = Output.ofNullable(linkedToGithub);
+            this.linkedToGithub = Codegen.ofNullable(linkedToGithub);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -213,7 +214,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -221,7 +222,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -229,7 +230,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ApplicationState build() {
             return new ApplicationState(applicationId, arn, computePlatform, githubAccountName, linkedToGithub, name, tags, tagsAll);

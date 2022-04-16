@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+    public Output<String> category() {
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+    public Output<Integer> order() {
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public WorkbookTemplateGalleryArgs(
@@ -88,11 +89,11 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     }
 
     private WorkbookTemplateGalleryArgs() {
-        this.category = Output.empty();
-        this.name = Output.empty();
-        this.order = Output.empty();
-        this.resourceType = Output.empty();
-        this.type = Output.empty();
+        this.category = Codegen.empty();
+        this.name = Codegen.empty();
+        this.order = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder category(@Nullable String category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -136,7 +137,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder order(@Nullable Output<Integer> order) {
@@ -144,7 +145,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder order(@Nullable Integer order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -152,7 +153,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -160,7 +161,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public WorkbookTemplateGalleryArgs build() {
             return new WorkbookTemplateGalleryArgs(category, name, order, resourceType, type);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
     @Import(name="bestEffort", required=true)
       private final Output<Boolean> bestEffort;
 
-    public Output<Boolean> getBestEffort() {
+    public Output<Boolean> bestEffort() {
         return this.bestEffort;
     }
 
@@ -36,7 +37,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
     @Import(name="configurationData", required=true)
       private final Output<Integer> configurationData;
 
-    public Output<Integer> getConfigurationData() {
+    public Output<Integer> configurationData() {
         return this.configurationData;
     }
 
@@ -48,8 +49,8 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
     }
 
     private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs() {
-        this.bestEffort = Output.empty();
-        this.configurationData = Output.empty();
+        this.bestEffort = Codegen.empty();
+        this.configurationData = Codegen.empty();
     }
 
     public static Builder builder() {

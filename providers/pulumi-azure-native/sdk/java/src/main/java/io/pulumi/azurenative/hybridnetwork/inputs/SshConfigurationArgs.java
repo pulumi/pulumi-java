@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.SshPublicKeyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="publicKeys")
       private final @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
-    public Output<List<SshPublicKeyArgs>> getPublicKeys() {
-        return this.publicKeys == null ? Output.empty() : this.publicKeys;
+    public Output<List<SshPublicKeyArgs>> publicKeys() {
+        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 
     public SshConfigurationArgs(@Nullable Output<List<SshPublicKeyArgs>> publicKeys) {
@@ -35,7 +36,7 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SshConfigurationArgs() {
-        this.publicKeys = Output.empty();
+        this.publicKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder publicKeys(@Nullable List<SshPublicKeyArgs> publicKeys) {
-            this.publicKeys = Output.ofNullable(publicKeys);
+            this.publicKeys = Codegen.ofNullable(publicKeys);
             return this;
         }
         public Builder publicKeys(SshPublicKeyArgs... publicKeys) {

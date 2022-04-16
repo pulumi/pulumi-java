@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
     @Import(name="certificateThumbprint", required=true)
       private final Output<String> certificateThumbprint;
 
-    public Output<String> getCertificateThumbprint() {
+    public Output<String> certificateThumbprint() {
         return this.certificateThumbprint;
     }
 
@@ -36,7 +37,7 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
     @Import(name="isAdmin", required=true)
       private final Output<Boolean> isAdmin;
 
-    public Output<Boolean> getIsAdmin() {
+    public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
 
@@ -48,8 +49,8 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
     }
 
     private ClientCertificateThumbprintArgs() {
-        this.certificateThumbprint = Output.empty();
-        this.isAdmin = Output.empty();
+        this.certificateThumbprint = Codegen.empty();
+        this.isAdmin = Codegen.empty();
     }
 
     public static Builder builder() {

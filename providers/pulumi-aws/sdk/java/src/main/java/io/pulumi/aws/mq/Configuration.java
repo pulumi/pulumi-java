@@ -9,6 +9,7 @@ import io.pulumi.aws.mq.inputs.ConfigurationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return ARN of the configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
      * 
      */
-    public Output<String> getAuthenticationStrategy() {
+    public Output<String> authenticationStrategy() {
         return this.authenticationStrategy;
     }
     /**
@@ -71,7 +72,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -85,7 +86,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Description of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -99,7 +100,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
      * 
      */
-    public Output<String> getEngineType() {
+    public Output<String> engineType() {
         return this.engineType;
     }
     /**
@@ -113,7 +114,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Version of the broker engine.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -127,7 +128,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Latest revision of the configuration.
      * 
      */
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision;
     }
     /**
@@ -141,7 +142,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Name of the configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +156,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -195,7 +196,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Configuration(String name, ConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mq/configuration:Configuration", name, args == null ? ConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mq/configuration:Configuration", name, args == null ? ConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Configuration(String name, Output<String> id, @Nullable ConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

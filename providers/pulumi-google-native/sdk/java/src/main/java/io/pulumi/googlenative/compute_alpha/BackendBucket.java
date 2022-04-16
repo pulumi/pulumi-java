@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.BackendBucketArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendBucketCdnPolicyResponse;
@@ -31,7 +32,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Cloud Storage bucket name.
      * 
      */
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -45,7 +46,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Cloud CDN configuration for this BackendBucket.
      * 
      */
-    public Output<BackendBucketCdnPolicyResponse> getCdnPolicy() {
+    public Output<BackendBucketCdnPolicyResponse> cdnPolicy() {
         return this.cdnPolicy;
     }
     /**
@@ -59,7 +60,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
      * 
      */
-    public Output<String> getCompressionMode() {
+    public Output<String> compressionMode() {
         return this.compressionMode;
     }
     /**
@@ -73,7 +74,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -87,7 +88,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Headers that the HTTP/S load balancer should add to proxied responses.
      * 
      */
-    public Output<List<String>> getCustomResponseHeaders() {
+    public Output<List<String>> customResponseHeaders() {
         return this.customResponseHeaders;
     }
     /**
@@ -101,7 +102,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -115,7 +116,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return The resource URL for the edge security policy associated with this backend bucket.
      * 
      */
-    public Output<String> getEdgeSecurityPolicy() {
+    public Output<String> edgeSecurityPolicy() {
         return this.edgeSecurityPolicy;
     }
     /**
@@ -129,7 +130,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return If true, enable Cloud CDN for this BackendBucket.
      * 
      */
-    public Output<Boolean> getEnableCdn() {
+    public Output<Boolean> enableCdn() {
         return this.enableCdn;
     }
     /**
@@ -143,7 +144,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -157,7 +158,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -171,7 +172,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -185,7 +186,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
 
@@ -211,7 +212,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendBucket(String name, @Nullable BackendBucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:BackendBucket", name, args == null ? BackendBucketArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:BackendBucket", name, args == null ? BackendBucketArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendBucket(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

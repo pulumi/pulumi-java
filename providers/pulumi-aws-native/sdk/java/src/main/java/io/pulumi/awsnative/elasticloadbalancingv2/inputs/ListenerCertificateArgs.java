@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+    public Output<String> certificateArn() {
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     public ListenerCertificateArgs(@Nullable Output<String> certificateArn) {
@@ -26,7 +27,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     }
 
     private ListenerCertificateArgs() {
-        this.certificateArn = Output.empty();
+        this.certificateArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }        public ListenerCertificateArgs build() {
             return new ListenerCertificateArgs(certificateArn);

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return Key auto rotation opt-in flag. Either true or false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoRotationEnabled() {
+    public Output</* @Nullable */ Boolean> autoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
@@ -56,7 +57,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -70,7 +71,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -84,7 +85,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return The name of the server key.
      * 
      */
-    public Output</* @Nullable */ String> getServerKeyName() {
+    public Output</* @Nullable */ String> serverKeyName() {
         return this.serverKeyName;
     }
     /**
@@ -112,7 +113,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
      * 
      */
-    public Output<String> getServerKeyType() {
+    public Output<String> serverKeyType() {
         return this.serverKeyType;
     }
     /**
@@ -126,7 +127,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return Subregion of the encryption protector.
      * 
      */
-    public Output<String> getSubregion() {
+    public Output<String> subregion() {
         return this.subregion;
     }
     /**
@@ -140,7 +141,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return Thumbprint of the server key.
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -154,7 +155,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -168,7 +169,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @return The URI of the server key.
      * 
      */
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -194,7 +195,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EncryptionProtector(String name, EncryptionProtectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:EncryptionProtector", name, args == null ? EncryptionProtectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:EncryptionProtector", name, args == null ? EncryptionProtectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EncryptionProtector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

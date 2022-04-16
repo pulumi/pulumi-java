@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -19,14 +20,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -37,8 +38,8 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultConsentTtl")
       private final @Nullable Output<String> defaultConsentTtl;
 
-    public Output<String> getDefaultConsentTtl() {
-        return this.defaultConsentTtl == null ? Output.empty() : this.defaultConsentTtl;
+    public Output<String> defaultConsentTtl() {
+        return this.defaultConsentTtl == null ? Codegen.empty() : this.defaultConsentTtl;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableConsentCreateOnUpdate")
       private final @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
-    public Output<Boolean> getEnableConsentCreateOnUpdate() {
-        return this.enableConsentCreateOnUpdate == null ? Output.empty() : this.enableConsentCreateOnUpdate;
+    public Output<Boolean> enableConsentCreateOnUpdate() {
+        return this.enableConsentCreateOnUpdate == null ? Codegen.empty() : this.enableConsentCreateOnUpdate;
     }
 
     /**
@@ -59,15 +60,15 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -77,15 +78,15 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ConsentStoreArgs(
@@ -108,14 +109,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConsentStoreArgs() {
-        this.consentStoreId = Output.empty();
-        this.datasetId = Output.empty();
-        this.defaultConsentTtl = Output.empty();
-        this.enableConsentCreateOnUpdate = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.consentStoreId = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.defaultConsentTtl = Codegen.empty();
+        this.enableConsentCreateOnUpdate = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultConsentTtl(@Nullable String defaultConsentTtl) {
-            this.defaultConsentTtl = Output.ofNullable(defaultConsentTtl);
+            this.defaultConsentTtl = Codegen.ofNullable(defaultConsentTtl);
             return this;
         }
         public Builder enableConsentCreateOnUpdate(@Nullable Output<Boolean> enableConsentCreateOnUpdate) {
@@ -181,7 +182,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
-            this.enableConsentCreateOnUpdate = Output.ofNullable(enableConsentCreateOnUpdate);
+            this.enableConsentCreateOnUpdate = Codegen.ofNullable(enableConsentCreateOnUpdate);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -189,7 +190,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -197,7 +198,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -205,7 +206,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -213,7 +214,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ConsentStoreArgs build() {
             return new ConsentStoreArgs(consentStoreId, datasetId, defaultConsentTtl, enableConsentCreateOnUpdate, labels, location, name, project);

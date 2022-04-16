@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageTtl", required=true)
       private final Output<String> messageTtl;
 
-    public Output<String> getMessageTtl() {
+    public Output<String> messageTtl() {
         return this.messageTtl;
     }
 
@@ -36,8 +37,8 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<String> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncWindow")
       private final @Nullable Output<String> syncWindow;
 
-    public Output<String> getSyncWindow() {
-        return this.syncWindow == null ? Output.empty() : this.syncWindow;
+    public Output<String> syncWindow() {
+        return this.syncWindow == null ? Codegen.empty() : this.syncWindow;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenId", required=true)
       private final Output<String> tokenId;
 
-    public Output<String> getTokenId() {
+    public Output<String> tokenId() {
         return this.tokenId;
     }
 
@@ -74,10 +75,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SyncPropertiesArgs() {
-        this.messageTtl = Output.empty();
-        this.schedule = Output.empty();
-        this.syncWindow = Output.empty();
-        this.tokenId = Output.empty();
+        this.messageTtl = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.syncWindow = Codegen.empty();
+        this.tokenId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder syncWindow(@Nullable Output<String> syncWindow) {
@@ -127,7 +128,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncWindow(@Nullable String syncWindow) {
-            this.syncWindow = Output.ofNullable(syncWindow);
+            this.syncWindow = Codegen.ofNullable(syncWindow);
             return this;
         }
         public Builder tokenId(Output<String> tokenId) {

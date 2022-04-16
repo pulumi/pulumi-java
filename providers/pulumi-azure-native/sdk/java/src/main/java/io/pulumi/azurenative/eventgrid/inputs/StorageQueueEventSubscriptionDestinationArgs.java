@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -37,8 +38,8 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
     @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
-    public Output<String> getQueueName() {
-        return this.queueName == null ? Output.empty() : this.queueName;
+    public Output<String> queueName() {
+        return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public StorageQueueEventSubscriptionDestinationArgs(
@@ -62,9 +63,9 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
     }
 
     private StorageQueueEventSubscriptionDestinationArgs() {
-        this.endpointType = Output.empty();
-        this.queueName = Output.empty();
-        this.resourceId = Output.empty();
+        this.endpointType = Codegen.empty();
+        this.queueName = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Output.ofNullable(queueName);
+            this.queueName = Codegen.ofNullable(queueName);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -112,7 +113,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public StorageQueueEventSubscriptionDestinationArgs build() {
             return new StorageQueueEventSubscriptionDestinationArgs(endpointType, queueName, resourceId);

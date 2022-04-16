@@ -23,7 +23,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="componentConfig", required=true)
       private final LoggingComponentConfigResponse componentConfig;
 
-    public LoggingComponentConfigResponse getComponentConfig() {
+    public LoggingComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
 

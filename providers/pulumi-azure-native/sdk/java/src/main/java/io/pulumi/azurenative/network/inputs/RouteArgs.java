@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.RouteNextHopType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
-    public Output<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
+    public Output<String> addressPrefix() {
+        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hasBgpOverride")
       private final @Nullable Output<Boolean> hasBgpOverride;
 
-    public Output<Boolean> getHasBgpOverride() {
-        return this.hasBgpOverride == null ? Output.empty() : this.hasBgpOverride;
+    public Output<Boolean> hasBgpOverride() {
+        return this.hasBgpOverride == null ? Codegen.empty() : this.hasBgpOverride;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIpAddress")
       private final @Nullable Output<String> nextHopIpAddress;
 
-    public Output<String> getNextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Output.empty() : this.nextHopIpAddress;
+    public Output<String> nextHopIpAddress() {
+        return this.nextHopIpAddress == null ? Codegen.empty() : this.nextHopIpAddress;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopType", required=true)
       private final Output<Either<String,RouteNextHopType>> nextHopType;
 
-    public Output<Either<String,RouteNextHopType>> getNextHopType() {
+    public Output<Either<String,RouteNextHopType>> nextHopType() {
         return this.nextHopType;
     }
 
@@ -94,8 +95,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RouteArgs(
@@ -116,13 +117,13 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.addressPrefix = Output.empty();
-        this.hasBgpOverride = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.nextHopIpAddress = Output.empty();
-        this.nextHopType = Output.empty();
-        this.type = Output.empty();
+        this.addressPrefix = Codegen.empty();
+        this.hasBgpOverride = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nextHopIpAddress = Codegen.empty();
+        this.nextHopType = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Output.ofNullable(addressPrefix);
+            this.addressPrefix = Codegen.ofNullable(addressPrefix);
             return this;
         }
         public Builder hasBgpOverride(@Nullable Output<Boolean> hasBgpOverride) {
@@ -170,7 +171,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
-            this.hasBgpOverride = Output.ofNullable(hasBgpOverride);
+            this.hasBgpOverride = Codegen.ofNullable(hasBgpOverride);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -178,7 +179,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -186,7 +187,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
@@ -194,7 +195,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = Output.ofNullable(nextHopIpAddress);
+            this.nextHopIpAddress = Codegen.ofNullable(nextHopIpAddress);
             return this;
         }
         public Builder nextHopType(Output<Either<String,RouteNextHopType>> nextHopType) {
@@ -210,7 +211,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RouteArgs build() {
             return new RouteArgs(addressPrefix, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, type);

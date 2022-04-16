@@ -7,6 +7,7 @@ import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupDataflowEnd
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSecurityDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
     @Import(name="endpoint")
       private final @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
 
-    public Output<DataflowEndpointGroupDataflowEndpointArgs> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     @Import(name="securityDetails")
       private final @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
 
-    public Output<DataflowEndpointGroupSecurityDetailsArgs> getSecurityDetails() {
-        return this.securityDetails == null ? Output.empty() : this.securityDetails;
+    public Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails() {
+        return this.securityDetails == null ? Codegen.empty() : this.securityDetails;
     }
 
     public DataflowEndpointGroupEndpointDetailsArgs(
@@ -37,8 +38,8 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
     }
 
     private DataflowEndpointGroupEndpointDetailsArgs() {
-        this.endpoint = Output.empty();
-        this.securityDetails = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.securityDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
             return this;
         }
         public Builder endpoint(@Nullable DataflowEndpointGroupDataflowEndpointArgs endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder securityDetails(@Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
@@ -76,7 +77,7 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
             return this;
         }
         public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetailsArgs securityDetails) {
-            this.securityDetails = Output.ofNullable(securityDetails);
+            this.securityDetails = Codegen.ofNullable(securityDetails);
             return this;
         }        public DataflowEndpointGroupEndpointDetailsArgs build() {
             return new DataflowEndpointGroupEndpointDetailsArgs(endpoint, securityDetails);

@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.RuleGroupActivatedRuleActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     @Import(name="action", required=true)
       private final Output<RuleGroupActivatedRuleActionArgs> action;
 
-    public Output<RuleGroupActivatedRuleActionArgs> getAction() {
+    public Output<RuleGroupActivatedRuleActionArgs> action() {
         return this.action;
     }
 
@@ -34,7 +35,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -45,7 +46,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -56,8 +57,8 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RuleGroupActivatedRuleArgs(
@@ -72,10 +73,10 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     }
 
     private RuleGroupActivatedRuleArgs() {
-        this.action = Output.empty();
-        this.priority = Output.empty();
-        this.ruleId = Output.empty();
-        this.type = Output.empty();
+        this.action = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RuleGroupActivatedRuleArgs build() {
             return new RuleGroupActivatedRuleArgs(action, priority, ruleId, type);

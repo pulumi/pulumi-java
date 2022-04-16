@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingArgs;
 import io.pulumi.gcp.kms.inputs.KeyRingState;
@@ -59,7 +60,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * A full list of valid locations can be found by running `gcloud kms locations list`.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +74,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * @return The resource name for the KeyRing.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +90,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -115,7 +116,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRing(String name, KeyRingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/keyRing:KeyRing", name, args == null ? KeyRingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/keyRing:KeyRing", name, args == null ? KeyRingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRing(String name, Output<String> id, @Nullable KeyRingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

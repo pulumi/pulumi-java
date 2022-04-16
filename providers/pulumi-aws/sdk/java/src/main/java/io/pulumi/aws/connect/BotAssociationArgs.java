@@ -6,6 +6,7 @@ package io.pulumi.aws.connect;
 import io.pulumi.aws.connect.inputs.BotAssociationLexBotArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class BotAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -32,7 +33,7 @@ public final class BotAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lexBot", required=true)
       private final Output<BotAssociationLexBotArgs> lexBot;
 
-    public Output<BotAssociationLexBotArgs> getLexBot() {
+    public Output<BotAssociationLexBotArgs> lexBot() {
         return this.lexBot;
     }
 
@@ -44,8 +45,8 @@ public final class BotAssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotAssociationArgs() {
-        this.instanceId = Output.empty();
-        this.lexBot = Output.empty();
+        this.instanceId = Codegen.empty();
+        this.lexBot = Codegen.empty();
     }
 
     public static Builder builder() {

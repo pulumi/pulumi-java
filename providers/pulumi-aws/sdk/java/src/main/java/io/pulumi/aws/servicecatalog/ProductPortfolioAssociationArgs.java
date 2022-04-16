@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+    public Output<String> acceptLanguage() {
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     @Import(name="portfolioId", required=true)
       private final Output<String> portfolioId;
 
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId;
     }
 
@@ -43,7 +44,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
@@ -54,8 +55,8 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     @Import(name="sourcePortfolioId")
       private final @Nullable Output<String> sourcePortfolioId;
 
-    public Output<String> getSourcePortfolioId() {
-        return this.sourcePortfolioId == null ? Output.empty() : this.sourcePortfolioId;
+    public Output<String> sourcePortfolioId() {
+        return this.sourcePortfolioId == null ? Codegen.empty() : this.sourcePortfolioId;
     }
 
     public ProductPortfolioAssociationArgs(
@@ -70,10 +71,10 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     }
 
     private ProductPortfolioAssociationArgs() {
-        this.acceptLanguage = Output.empty();
-        this.portfolioId = Output.empty();
-        this.productId = Output.empty();
-        this.sourcePortfolioId = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.portfolioId = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.sourcePortfolioId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder portfolioId(Output<String> portfolioId) {
@@ -131,7 +132,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
-            this.sourcePortfolioId = Output.ofNullable(sourcePortfolioId);
+            this.sourcePortfolioId = Codegen.ofNullable(sourcePortfolioId);
             return this;
         }        public ProductPortfolioAssociationArgs build() {
             return new ProductPortfolioAssociationArgs(acceptLanguage, portfolioId, productId, sourcePortfolioId);

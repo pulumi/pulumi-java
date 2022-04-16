@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Cloud Tiering.
      * 
      */
-    public Output</* @Nullable */ String> getCloudTiering() {
+    public Output</* @Nullable */ String> cloudTiering() {
         return this.cloudTiering;
     }
     /**
@@ -59,7 +60,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Cloud tiering status. Only populated if cloud tiering is enabled.
      * 
      */
-    public Output<ServerEndpointCloudTieringStatusResponse> getCloudTieringStatus() {
+    public Output<ServerEndpointCloudTieringStatusResponse> cloudTieringStatus() {
         return this.cloudTieringStatus;
     }
     /**
@@ -73,7 +74,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Friendly Name
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -87,7 +88,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Policy for how namespace and files are recalled during FastDr.
      * 
      */
-    public Output</* @Nullable */ String> getInitialDownloadPolicy() {
+    public Output</* @Nullable */ String> initialDownloadPolicy() {
         return this.initialDownloadPolicy;
     }
     /**
@@ -101,7 +102,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Resource Last Operation Name
      * 
      */
-    public Output<String> getLastOperationName() {
+    public Output<String> lastOperationName() {
         return this.lastOperationName;
     }
     /**
@@ -115,7 +116,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return ServerEndpoint lastWorkflowId
      * 
      */
-    public Output<String> getLastWorkflowId() {
+    public Output<String> lastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
@@ -129,7 +130,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
      * 
      */
-    public Output</* @Nullable */ String> getLocalCacheMode() {
+    public Output</* @Nullable */ String> localCacheMode() {
         return this.localCacheMode;
     }
     /**
@@ -143,7 +144,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +158,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Offline data transfer
      * 
      */
-    public Output</* @Nullable */ String> getOfflineDataTransfer() {
+    public Output</* @Nullable */ String> offlineDataTransfer() {
         return this.offlineDataTransfer;
     }
     /**
@@ -171,7 +172,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Offline data transfer share name
      * 
      */
-    public Output</* @Nullable */ String> getOfflineDataTransferShareName() {
+    public Output</* @Nullable */ String> offlineDataTransferShareName() {
         return this.offlineDataTransferShareName;
     }
     /**
@@ -185,7 +186,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Offline data transfer storage account resource ID
      * 
      */
-    public Output<String> getOfflineDataTransferStorageAccountResourceId() {
+    public Output<String> offlineDataTransferStorageAccountResourceId() {
         return this.offlineDataTransferStorageAccountResourceId;
     }
     /**
@@ -199,7 +200,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Offline data transfer storage account tenant ID
      * 
      */
-    public Output<String> getOfflineDataTransferStorageAccountTenantId() {
+    public Output<String> offlineDataTransferStorageAccountTenantId() {
         return this.offlineDataTransferStorageAccountTenantId;
     }
     /**
@@ -213,7 +214,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return ServerEndpoint Provisioning State
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -227,7 +228,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Recall status. Only populated if cloud tiering is enabled.
      * 
      */
-    public Output<ServerEndpointRecallStatusResponse> getRecallStatus() {
+    public Output<ServerEndpointRecallStatusResponse> recallStatus() {
         return this.recallStatus;
     }
     /**
@@ -241,7 +242,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Server Local path.
      * 
      */
-    public Output</* @Nullable */ String> getServerLocalPath() {
+    public Output</* @Nullable */ String> serverLocalPath() {
         return this.serverLocalPath;
     }
     /**
@@ -255,7 +256,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Server Resource Id.
      * 
      */
-    public Output</* @Nullable */ String> getServerResourceId() {
+    public Output</* @Nullable */ String> serverResourceId() {
         return this.serverResourceId;
     }
     /**
@@ -269,7 +270,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Server Endpoint sync status
      * 
      */
-    public Output<ServerEndpointSyncStatusResponse> getSyncStatus() {
+    public Output<ServerEndpointSyncStatusResponse> syncStatus() {
         return this.syncStatus;
     }
     /**
@@ -283,7 +284,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Tier files older than days.
      * 
      */
-    public Output</* @Nullable */ Integer> getTierFilesOlderThanDays() {
+    public Output</* @Nullable */ Integer> tierFilesOlderThanDays() {
         return this.tierFilesOlderThanDays;
     }
     /**
@@ -297,7 +298,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -311,7 +312,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @return Level of free space to be maintained by Cloud Tiering if it is enabled.
      * 
      */
-    public Output</* @Nullable */ Integer> getVolumeFreeSpacePercent() {
+    public Output</* @Nullable */ Integer> volumeFreeSpacePercent() {
         return this.volumeFreeSpacePercent;
     }
 
@@ -337,7 +338,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerEndpoint(String name, ServerEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagesync:ServerEndpoint", name, args == null ? ServerEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storagesync:ServerEndpoint", name, args == null ? ServerEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerEndpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

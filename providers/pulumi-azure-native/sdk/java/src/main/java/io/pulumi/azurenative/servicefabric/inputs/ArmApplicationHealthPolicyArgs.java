@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.inputs.ArmServiceTypeHealthPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
     @Import(name="considerWarningAsError")
       private final @Nullable Output<Boolean> considerWarningAsError;
 
-    public Output<Boolean> getConsiderWarningAsError() {
-        return this.considerWarningAsError == null ? Output.empty() : this.considerWarningAsError;
+    public Output<Boolean> considerWarningAsError() {
+        return this.considerWarningAsError == null ? Codegen.empty() : this.considerWarningAsError;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
     @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
-    public Output<ArmServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
-        return this.defaultServiceTypeHealthPolicy == null ? Output.empty() : this.defaultServiceTypeHealthPolicy;
+    public Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy() {
+        return this.defaultServiceTypeHealthPolicy == null ? Codegen.empty() : this.defaultServiceTypeHealthPolicy;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
     @Import(name="maxPercentUnhealthyDeployedApplications")
       private final @Nullable Output<Integer> maxPercentUnhealthyDeployedApplications;
 
-    public Output<Integer> getMaxPercentUnhealthyDeployedApplications() {
-        return this.maxPercentUnhealthyDeployedApplications == null ? Output.empty() : this.maxPercentUnhealthyDeployedApplications;
+    public Output<Integer> maxPercentUnhealthyDeployedApplications() {
+        return this.maxPercentUnhealthyDeployedApplications == null ? Codegen.empty() : this.maxPercentUnhealthyDeployedApplications;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
     @Import(name="serviceTypeHealthPolicyMap")
       private final @Nullable Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap;
 
-    public Output<Map<String,ArmServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicyMap() {
-        return this.serviceTypeHealthPolicyMap == null ? Output.empty() : this.serviceTypeHealthPolicyMap;
+    public Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap() {
+        return this.serviceTypeHealthPolicyMap == null ? Codegen.empty() : this.serviceTypeHealthPolicyMap;
     }
 
     public ArmApplicationHealthPolicyArgs(
@@ -74,17 +75,17 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
         @Nullable Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy,
         @Nullable Output<Integer> maxPercentUnhealthyDeployedApplications,
         @Nullable Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap) {
-        this.considerWarningAsError = considerWarningAsError == null ? Output.ofNullable(false) : considerWarningAsError;
+        this.considerWarningAsError = considerWarningAsError == null ? Codegen.ofNullable(false) : considerWarningAsError;
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
-        this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications == null ? Output.ofNullable(0) : maxPercentUnhealthyDeployedApplications;
+        this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications == null ? Codegen.ofNullable(0) : maxPercentUnhealthyDeployedApplications;
         this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
     }
 
     private ArmApplicationHealthPolicyArgs() {
-        this.considerWarningAsError = Output.empty();
-        this.defaultServiceTypeHealthPolicy = Output.empty();
-        this.maxPercentUnhealthyDeployedApplications = Output.empty();
-        this.serviceTypeHealthPolicyMap = Output.empty();
+        this.considerWarningAsError = Codegen.empty();
+        this.defaultServiceTypeHealthPolicy = Codegen.empty();
+        this.maxPercentUnhealthyDeployedApplications = Codegen.empty();
+        this.serviceTypeHealthPolicyMap = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder considerWarningAsError(@Nullable Boolean considerWarningAsError) {
-            this.considerWarningAsError = Output.ofNullable(considerWarningAsError);
+            this.considerWarningAsError = Codegen.ofNullable(considerWarningAsError);
             return this;
         }
         public Builder defaultServiceTypeHealthPolicy(@Nullable Output<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
@@ -126,7 +127,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder defaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
-            this.defaultServiceTypeHealthPolicy = Output.ofNullable(defaultServiceTypeHealthPolicy);
+            this.defaultServiceTypeHealthPolicy = Codegen.ofNullable(defaultServiceTypeHealthPolicy);
             return this;
         }
         public Builder maxPercentUnhealthyDeployedApplications(@Nullable Output<Integer> maxPercentUnhealthyDeployedApplications) {
@@ -134,7 +135,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
-            this.maxPercentUnhealthyDeployedApplications = Output.ofNullable(maxPercentUnhealthyDeployedApplications);
+            this.maxPercentUnhealthyDeployedApplications = Codegen.ofNullable(maxPercentUnhealthyDeployedApplications);
             return this;
         }
         public Builder serviceTypeHealthPolicyMap(@Nullable Output<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap) {
@@ -142,7 +143,7 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serviceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyArgs> serviceTypeHealthPolicyMap) {
-            this.serviceTypeHealthPolicyMap = Output.ofNullable(serviceTypeHealthPolicyMap);
+            this.serviceTypeHealthPolicyMap = Codegen.ofNullable(serviceTypeHealthPolicyMap);
             return this;
         }        public ArmApplicationHealthPolicyArgs build() {
             return new ArmApplicationHealthPolicyArgs(considerWarningAsError, defaultServiceTypeHealthPolicy, maxPercentUnhealthyDeployedApplications, serviceTypeHealthPolicyMap);

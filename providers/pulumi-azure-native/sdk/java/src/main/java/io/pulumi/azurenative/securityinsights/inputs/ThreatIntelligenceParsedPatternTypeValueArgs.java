@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     @Import(name="valueType")
       private final @Nullable Output<String> valueType;
 
-    public Output<String> getValueType() {
-        return this.valueType == null ? Output.empty() : this.valueType;
+    public Output<String> valueType() {
+        return this.valueType == null ? Codegen.empty() : this.valueType;
     }
 
     public ThreatIntelligenceParsedPatternTypeValueArgs(
@@ -48,8 +49,8 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     }
 
     private ThreatIntelligenceParsedPatternTypeValueArgs() {
-        this.value = Output.empty();
-        this.valueType = Output.empty();
+        this.value = Codegen.empty();
+        this.valueType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder valueType(@Nullable Output<String> valueType) {
@@ -87,7 +88,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
             return this;
         }
         public Builder valueType(@Nullable String valueType) {
-            this.valueType = Output.ofNullable(valueType);
+            this.valueType = Codegen.ofNullable(valueType);
             return this;
         }        public ThreatIntelligenceParsedPatternTypeValueArgs build() {
             return new ThreatIntelligenceParsedPatternTypeValueArgs(value, valueType);

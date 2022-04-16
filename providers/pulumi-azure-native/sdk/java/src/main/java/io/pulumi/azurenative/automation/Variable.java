@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -56,7 +57,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +71,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the encrypted flag of the variable.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEncrypted() {
+    public Output</* @Nullable */ Boolean> isEncrypted() {
         return this.isEncrypted;
     }
     /**
@@ -84,7 +85,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -98,7 +99,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -126,7 +127,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the value of the variable.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 
@@ -152,7 +153,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Variable(String name, VariableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:automation:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Variable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

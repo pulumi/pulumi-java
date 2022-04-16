@@ -77,56 +77,56 @@ public final class GetSqlServerResult {
      * Cores of the Sql Server.
      * 
     */
-    public Optional<Integer> getCores() {
+    public Optional<Integer> cores() {
         return Optional.ofNullable(this.cores);
     }
     /**
      * Sql Server Edition.
      * 
     */
-    public Optional<String> getEdition() {
+    public Optional<String> edition() {
         return Optional.ofNullable(this.edition);
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Sql Server Json Property Bag.
      * 
     */
-    public Optional<String> getPropertyBag() {
+    public Optional<String> propertyBag() {
         return Optional.ofNullable(this.propertyBag);
     }
     /**
      * ID for Parent Sql Server Registration.
      * 
     */
-    public Optional<String> getRegistrationID() {
+    public Optional<String> registrationID() {
         return Optional.ofNullable(this.registrationID);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Version of the Sql Server.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

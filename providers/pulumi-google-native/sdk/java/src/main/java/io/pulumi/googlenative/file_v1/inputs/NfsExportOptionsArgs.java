@@ -5,6 +5,7 @@ package io.pulumi.googlenative.file_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.file_v1.enums.NfsExportOptionsAccessMode;
 import io.pulumi.googlenative.file_v1.enums.NfsExportOptionsSquashMode;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accessMode")
       private final @Nullable Output<NfsExportOptionsAccessMode> accessMode;
 
-    public Output<NfsExportOptionsAccessMode> getAccessMode() {
-        return this.accessMode == null ? Output.empty() : this.accessMode;
+    public Output<NfsExportOptionsAccessMode> accessMode() {
+        return this.accessMode == null ? Codegen.empty() : this.accessMode;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="anonGid")
       private final @Nullable Output<String> anonGid;
 
-    public Output<String> getAnonGid() {
-        return this.anonGid == null ? Output.empty() : this.anonGid;
+    public Output<String> anonGid() {
+        return this.anonGid == null ? Codegen.empty() : this.anonGid;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="anonUid")
       private final @Nullable Output<String> anonUid;
 
-    public Output<String> getAnonUid() {
-        return this.anonUid == null ? Output.empty() : this.anonUid;
+    public Output<String> anonUid() {
+        return this.anonUid == null ? Codegen.empty() : this.anonUid;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipRanges")
       private final @Nullable Output<List<String>> ipRanges;
 
-    public Output<List<String>> getIpRanges() {
-        return this.ipRanges == null ? Output.empty() : this.ipRanges;
+    public Output<List<String>> ipRanges() {
+        return this.ipRanges == null ? Codegen.empty() : this.ipRanges;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="squashMode")
       private final @Nullable Output<NfsExportOptionsSquashMode> squashMode;
 
-    public Output<NfsExportOptionsSquashMode> getSquashMode() {
-        return this.squashMode == null ? Output.empty() : this.squashMode;
+    public Output<NfsExportOptionsSquashMode> squashMode() {
+        return this.squashMode == null ? Codegen.empty() : this.squashMode;
     }
 
     public NfsExportOptionsArgs(
@@ -90,11 +91,11 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NfsExportOptionsArgs() {
-        this.accessMode = Output.empty();
-        this.anonGid = Output.empty();
-        this.anonUid = Output.empty();
-        this.ipRanges = Output.empty();
-        this.squashMode = Output.empty();
+        this.accessMode = Codegen.empty();
+        this.anonGid = Codegen.empty();
+        this.anonUid = Codegen.empty();
+        this.ipRanges = Codegen.empty();
+        this.squashMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder accessMode(@Nullable NfsExportOptionsAccessMode accessMode) {
-            this.accessMode = Output.ofNullable(accessMode);
+            this.accessMode = Codegen.ofNullable(accessMode);
             return this;
         }
         public Builder anonGid(@Nullable Output<String> anonGid) {
@@ -138,7 +139,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder anonGid(@Nullable String anonGid) {
-            this.anonGid = Output.ofNullable(anonGid);
+            this.anonGid = Codegen.ofNullable(anonGid);
             return this;
         }
         public Builder anonUid(@Nullable Output<String> anonUid) {
@@ -146,7 +147,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder anonUid(@Nullable String anonUid) {
-            this.anonUid = Output.ofNullable(anonUid);
+            this.anonUid = Codegen.ofNullable(anonUid);
             return this;
         }
         public Builder ipRanges(@Nullable Output<List<String>> ipRanges) {
@@ -154,7 +155,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipRanges(@Nullable List<String> ipRanges) {
-            this.ipRanges = Output.ofNullable(ipRanges);
+            this.ipRanges = Codegen.ofNullable(ipRanges);
             return this;
         }
         public Builder ipRanges(String... ipRanges) {
@@ -165,7 +166,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder squashMode(@Nullable NfsExportOptionsSquashMode squashMode) {
-            this.squashMode = Output.ofNullable(squashMode);
+            this.squashMode = Codegen.ofNullable(squashMode);
             return this;
         }        public NfsExportOptionsArgs build() {
             return new NfsExportOptionsArgs(accessMode, anonGid, anonUid, ipRanges, squashMode);

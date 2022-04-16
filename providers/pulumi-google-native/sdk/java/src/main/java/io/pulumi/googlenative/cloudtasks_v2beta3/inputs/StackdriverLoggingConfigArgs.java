@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
     @Import(name="samplingRatio")
       private final @Nullable Output<Double> samplingRatio;
 
-    public Output<Double> getSamplingRatio() {
-        return this.samplingRatio == null ? Output.empty() : this.samplingRatio;
+    public Output<Double> samplingRatio() {
+        return this.samplingRatio == null ? Codegen.empty() : this.samplingRatio;
     }
 
     public StackdriverLoggingConfigArgs(@Nullable Output<Double> samplingRatio) {
@@ -34,7 +35,7 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
     }
 
     private StackdriverLoggingConfigArgs() {
-        this.samplingRatio = Output.empty();
+        this.samplingRatio = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder samplingRatio(@Nullable Double samplingRatio) {
-            this.samplingRatio = Output.ofNullable(samplingRatio);
+            this.samplingRatio = Codegen.ofNullable(samplingRatio);
             return this;
         }        public StackdriverLoggingConfigArgs build() {
             return new StackdriverLoggingConfigArgs(samplingRatio);

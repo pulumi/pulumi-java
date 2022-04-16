@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1SentimentConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="allowMultiLabel")
       private final @Nullable Output<Boolean> allowMultiLabel;
 
-    public Output<Boolean> getAllowMultiLabel() {
-        return this.allowMultiLabel == null ? Output.empty() : this.allowMultiLabel;
+    public Output<Boolean> allowMultiLabel() {
+        return this.allowMultiLabel == null ? Codegen.empty() : this.allowMultiLabel;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
 
-    public Output<String> getAnnotationSpecSet() {
+    public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -49,8 +50,8 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="sentimentConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> getSentimentConfig() {
-        return this.sentimentConfig == null ? Output.empty() : this.sentimentConfig;
+    public Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig() {
+        return this.sentimentConfig == null ? Codegen.empty() : this.sentimentConfig;
     }
 
     public GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     }
 
     private GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs() {
-        this.allowMultiLabel = Output.empty();
-        this.annotationSpecSet = Output.empty();
-        this.sentimentConfig = Output.empty();
+        this.allowMultiLabel = Codegen.empty();
+        this.annotationSpecSet = Codegen.empty();
+        this.sentimentConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
             return this;
         }
         public Builder allowMultiLabel(@Nullable Boolean allowMultiLabel) {
-            this.allowMultiLabel = Output.ofNullable(allowMultiLabel);
+            this.allowMultiLabel = Codegen.ofNullable(allowMultiLabel);
             return this;
         }
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
@@ -113,7 +114,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
             return this;
         }
         public Builder sentimentConfig(@Nullable GoogleCloudDatalabelingV1beta1SentimentConfigArgs sentimentConfig) {
-            this.sentimentConfig = Output.ofNullable(sentimentConfig);
+            this.sentimentConfig = Codegen.ofNullable(sentimentConfig);
             return this;
         }        public GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs(allowMultiLabel, annotationSpecSet, sentimentConfig);

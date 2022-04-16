@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceExecResourceArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileResourceArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourcePackageResourceArgs;
@@ -29,8 +30,8 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="exec")
       private final @Nullable Output<OSPolicyResourceExecResourceArgs> exec;
 
-    public Output<OSPolicyResourceExecResourceArgs> getExec() {
-        return this.exec == null ? Output.empty() : this.exec;
+    public Output<OSPolicyResourceExecResourceArgs> exec() {
+        return this.exec == null ? Codegen.empty() : this.exec;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileResourceArgs> file;
 
-    public Output<OSPolicyResourceFileResourceArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+    public Output<OSPolicyResourceFileResourceArgs> file() {
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -62,8 +63,8 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pkg")
       private final @Nullable Output<OSPolicyResourcePackageResourceArgs> pkg;
 
-    public Output<OSPolicyResourcePackageResourceArgs> getPkg() {
-        return this.pkg == null ? Output.empty() : this.pkg;
+    public Output<OSPolicyResourcePackageResourceArgs> pkg() {
+        return this.pkg == null ? Codegen.empty() : this.pkg;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="repository")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository;
 
-    public Output<OSPolicyResourceRepositoryResourceArgs> getRepository() {
-        return this.repository == null ? Output.empty() : this.repository;
+    public Output<OSPolicyResourceRepositoryResourceArgs> repository() {
+        return this.repository == null ? Codegen.empty() : this.repository;
     }
 
     public OSPolicyResourceArgs(
@@ -91,11 +92,11 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OSPolicyResourceArgs() {
-        this.exec = Output.empty();
-        this.file = Output.empty();
-        this.id = Output.empty();
-        this.pkg = Output.empty();
-        this.repository = Output.empty();
+        this.exec = Codegen.empty();
+        this.file = Codegen.empty();
+        this.id = Codegen.empty();
+        this.pkg = Codegen.empty();
+        this.repository = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder exec(@Nullable OSPolicyResourceExecResourceArgs exec) {
-            this.exec = Output.ofNullable(exec);
+            this.exec = Codegen.ofNullable(exec);
             return this;
         }
         public Builder file(@Nullable Output<OSPolicyResourceFileResourceArgs> file) {
@@ -139,7 +140,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder file(@Nullable OSPolicyResourceFileResourceArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -155,7 +156,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pkg(@Nullable OSPolicyResourcePackageResourceArgs pkg) {
-            this.pkg = Output.ofNullable(pkg);
+            this.pkg = Codegen.ofNullable(pkg);
             return this;
         }
         public Builder repository(@Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository) {
@@ -163,7 +164,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder repository(@Nullable OSPolicyResourceRepositoryResourceArgs repository) {
-            this.repository = Output.ofNullable(repository);
+            this.repository = Codegen.ofNullable(repository);
             return this;
         }        public OSPolicyResourceArgs build() {
             return new OSPolicyResourceArgs(exec, file, id, pkg, repository);

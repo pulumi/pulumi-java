@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionKeyName", required=true)
       private final Output<String> encryptionKeyName;
 
-    public Output<String> getEncryptionKeyName() {
+    public Output<String> encryptionKeyName() {
         return this.encryptionKeyName;
     }
 
@@ -35,7 +36,7 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionKeyVersion", required=true)
       private final Output<String> encryptionKeyVersion;
 
-    public Output<String> getEncryptionKeyVersion() {
+    public Output<String> encryptionKeyVersion() {
         return this.encryptionKeyVersion;
     }
 
@@ -46,7 +47,7 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="keyVaultResourceId", required=true)
       private final Output<String> keyVaultResourceId;
 
-    public Output<String> getKeyVaultResourceId() {
+    public Output<String> keyVaultResourceId() {
         return this.keyVaultResourceId;
     }
 
@@ -60,9 +61,9 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private KeyVaultMetaInfoArgs() {
-        this.encryptionKeyName = Output.empty();
-        this.encryptionKeyVersion = Output.empty();
-        this.keyVaultResourceId = Output.empty();
+        this.encryptionKeyName = Codegen.empty();
+        this.encryptionKeyVersion = Codegen.empty();
+        this.keyVaultResourceId = Codegen.empty();
     }
 
     public static Builder builder() {

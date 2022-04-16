@@ -9,6 +9,7 @@ import io.pulumi.aws.worklink.inputs.WebsiteCertificateAuthorityAssociationState
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -37,7 +38,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return The root certificate of the Certificate Authority.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -51,7 +52,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return The certificate name to display.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -65,7 +66,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return The ARN of the fleet.
      * 
      */
-    public Output<String> getFleetArn() {
+    public Output<String> fleetArn() {
         return this.fleetArn;
     }
     /**
@@ -79,7 +80,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return A unique identifier for the Certificate Authority.
      * 
      */
-    public Output<String> getWebsiteCaId() {
+    public Output<String> websiteCaId() {
         return this.websiteCaId;
     }
 
@@ -105,7 +106,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @param options A bag of options that control this resource's behavior.
      */
     public WebsiteCertificateAuthorityAssociation(String name, WebsiteCertificateAuthorityAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:worklink/websiteCertificateAuthorityAssociation:WebsiteCertificateAuthorityAssociation", name, args == null ? WebsiteCertificateAuthorityAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:worklink/websiteCertificateAuthorityAssociation:WebsiteCertificateAuthorityAssociation", name, args == null ? WebsiteCertificateAuthorityAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebsiteCertificateAuthorityAssociation(String name, Output<String> id, @Nullable WebsiteCertificateAuthorityAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

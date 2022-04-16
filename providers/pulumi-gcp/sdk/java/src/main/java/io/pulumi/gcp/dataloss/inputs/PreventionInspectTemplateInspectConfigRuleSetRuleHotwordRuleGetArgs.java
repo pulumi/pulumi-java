@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs;
@@ -23,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
     @Import(name="hotwordRegex", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> hotwordRegex;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> getHotwordRegex() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> hotwordRegex() {
         return this.hotwordRegex;
     }
 
@@ -35,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
     @Import(name="likelihoodAdjustment", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> likelihoodAdjustment;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> getLikelihoodAdjustment() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> likelihoodAdjustment() {
         return this.likelihoodAdjustment;
     }
 
@@ -51,7 +52,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
     @Import(name="proximity", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> proximity;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> getProximity() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> proximity() {
         return this.proximity;
     }
 
@@ -65,9 +66,9 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs() {
-        this.hotwordRegex = Output.empty();
-        this.likelihoodAdjustment = Output.empty();
-        this.proximity = Output.empty();
+        this.hotwordRegex = Codegen.empty();
+        this.likelihoodAdjustment = Codegen.empty();
+        this.proximity = Codegen.empty();
     }
 
     public static Builder builder() {

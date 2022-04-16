@@ -8,6 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolHttp
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolHttpArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,8 +24,8 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
     @Import(name="grpc")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolGrpcArgs> grpc;
 
-    public Output<VirtualGatewaySpecListenerConnectionPoolGrpcArgs> getGrpc() {
-        return this.grpc == null ? Output.empty() : this.grpc;
+    public Output<VirtualGatewaySpecListenerConnectionPoolGrpcArgs> grpc() {
+        return this.grpc == null ? Codegen.empty() : this.grpc;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
     @Import(name="http")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttpArgs> http;
 
-    public Output<VirtualGatewaySpecListenerConnectionPoolHttpArgs> getHttp() {
-        return this.http == null ? Output.empty() : this.http;
+    public Output<VirtualGatewaySpecListenerConnectionPoolHttpArgs> http() {
+        return this.http == null ? Codegen.empty() : this.http;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
     @Import(name="http2")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttp2Args> http2;
 
-    public Output<VirtualGatewaySpecListenerConnectionPoolHttp2Args> getHttp2() {
-        return this.http2 == null ? Output.empty() : this.http2;
+    public Output<VirtualGatewaySpecListenerConnectionPoolHttp2Args> http2() {
+        return this.http2 == null ? Codegen.empty() : this.http2;
     }
 
     public VirtualGatewaySpecListenerConnectionPoolArgs(
@@ -59,9 +60,9 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
     }
 
     private VirtualGatewaySpecListenerConnectionPoolArgs() {
-        this.grpc = Output.empty();
-        this.http = Output.empty();
-        this.http2 = Output.empty();
+        this.grpc = Codegen.empty();
+        this.http = Codegen.empty();
+        this.http2 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
             return this;
         }
         public Builder grpc(@Nullable VirtualGatewaySpecListenerConnectionPoolGrpcArgs grpc) {
-            this.grpc = Output.ofNullable(grpc);
+            this.grpc = Codegen.ofNullable(grpc);
             return this;
         }
         public Builder http(@Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttpArgs> http) {
@@ -101,7 +102,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
             return this;
         }
         public Builder http(@Nullable VirtualGatewaySpecListenerConnectionPoolHttpArgs http) {
-            this.http = Output.ofNullable(http);
+            this.http = Codegen.ofNullable(http);
             return this;
         }
         public Builder http2(@Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttp2Args> http2) {
@@ -109,7 +110,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
             return this;
         }
         public Builder http2(@Nullable VirtualGatewaySpecListenerConnectionPoolHttp2Args http2) {
-            this.http2 = Output.ofNullable(http2);
+            this.http2 = Codegen.ofNullable(http2);
             return this;
         }        public VirtualGatewaySpecListenerConnectionPoolArgs build() {
             return new VirtualGatewaySpecListenerConnectionPoolArgs(grpc, http, http2);

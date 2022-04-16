@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Specifies the job identity details
      * 
      */
-    public Output</* @Nullable */ IdentityDetailsResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityDetailsResponse> identity() {
         return this.identity;
     }
     /**
@@ -59,7 +60,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Specifies the Azure location where the job is created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,7 +74,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the job.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Specifies the job properties
      * 
      */
-    public Output<JobDetailsResponse> getProperties() {
+    public Output<JobDetailsResponse> properties() {
         return this.properties;
     }
     /**
@@ -101,7 +102,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return SystemData of ImportExport Jobs.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +116,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Specifies the tags that are assigned to the job.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +130,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the job resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,7 +156,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:importexport:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:importexport:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
